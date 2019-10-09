@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import IconCheckmark from 'terra-icon/lib/icon/IconCheckmark';
-import IconMinus from 'terra-icon/lib/icon/IconMinus';
 import styles from './HeaderCheckMarkCell.module.scss';
 import TableUtils from './TableUtils';
 
@@ -119,7 +117,6 @@ const HeaderCheckMarkCell = ({
     attrCheck.style = { marginBottom: `${alignmentPadding}rem` };
   }
 
-  const Component = isIntermediate ? IconMinus : IconCheckmark;
   return (
     <div
       {...customProps}
@@ -135,7 +132,7 @@ const HeaderCheckMarkCell = ({
     >
       <div {...attrCheck} className={cx('container')}>
         <span className={cx('highlight')} />
-        <Component
+        <span
           className={cx(
             'checkmark',
             { 'is-selected': isSelected },

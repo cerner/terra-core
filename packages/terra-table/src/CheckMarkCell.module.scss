@@ -1,3 +1,5 @@
+@import '~terra-mixins/lib/Mixins';
+
 :local {
   .cell {
     border: 0;
@@ -17,8 +19,9 @@
     border: 1px solid transparent;
     border-radius: 3px; // TODO: Need expected sizing
     color: transparent;
+    height: 1rem; // TODO: Need expected sizing
     padding: 1px;
-    position: relative;
+    width: 1rem; // TODO: Need expected sizing
   }
 
   .container {
@@ -33,7 +36,17 @@
   }
 
   .is-selected {
-    color: #000;
+    color: #000; // TODO: themable variable
+    background: var(--terra-table-checkmark-cell-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path id="checkmark" d="M18.4 40.9L0 22.5l4.2-4.2 14.2 14.2L43.8 7.1l4.2 4.2z"/></svg>'));
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    transform: rotate(0deg);
+
+    // flips the icon about its vertical axis, presenting it in its mirrored-image form
+    [dir=rtl] & {
+      transform: scaleX(-1);
+    }
   }
 
   .is-selectable .checkmark {

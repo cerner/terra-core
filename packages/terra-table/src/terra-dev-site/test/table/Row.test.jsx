@@ -20,10 +20,10 @@ const RowTest = () => (
     <Row key="striped-selected-row" isSelectable isSelected isStriped>
       <Cell>Striped Selected Row</Cell>
     </Row>
-    <Row key="selection-checkmark">
+    <Row key="selection-checkmark" isSelectable isSelected selectionStyle="checkmark">
       <Cell>Selection Style Checkmark</Cell>
     </Row>
-    <Row key="selection-chevron">
+    <Row key="selection-chevron" isSelectable isSelected selectionStyle="chevron">
       <Cell>Selection Style Chevron</Cell>
     </Row>
   </Table>

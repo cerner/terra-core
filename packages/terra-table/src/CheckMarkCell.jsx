@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import IconCheckmark from 'terra-icon/lib/icon/IconCheckmark';
 import styles from './CheckMarkCell.module.scss';
 import TableUtils from './TableUtils';
 
@@ -125,7 +124,7 @@ const CheckMarkCell = ({
     >
       <div {...attrCheck} className={cx('container')}>
         <span className={cx('highlight')} />
-        <IconCheckmark
+        <span
           className={cx(
             'checkmark',
             { 'is-selected': isSelected },
