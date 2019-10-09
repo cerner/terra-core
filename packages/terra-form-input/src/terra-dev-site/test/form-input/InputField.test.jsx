@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import InputField from '../../../InputField';
+import styles from './common/Input.test.module.scss';
+
+const cx = classNames.bind(styles);
 
 class InputFieldExample extends React.Component {
   constructor() {
@@ -30,7 +34,7 @@ class InputFieldExample extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={cx('content-wrapper')}>
         <button type="button" id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
         <button type="button" id="incomplete-toggle" onClick={this.toggleIncomplete}>Toggle Incomplete</button>
         <InputField

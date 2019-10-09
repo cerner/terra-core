@@ -1,6 +1,14 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Textarea from '../../../Textarea';
+import styles from './common/Textarea.test.module.scss';
 
-const textarea = () => <Textarea disabled ariaLabel="label" />;
+const cx = classNames.bind(styles);
+
+const textarea = () => (
+    <div className={cx('content-wrapper')}>
+        <Textarea disabled ariaLabel="label" />
+    </div>
+);
 
 export default textarea;

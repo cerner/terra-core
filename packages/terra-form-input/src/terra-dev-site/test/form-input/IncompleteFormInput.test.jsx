@@ -1,6 +1,14 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Input from '../../../Input';
+import styles from './common/Input.test.module.scss';
 
-const IncompleteInput = () => <Input required isIncomplete id="form-input-incomplete" ariaLabel="label" />;
+const cx = classNames.bind(styles);
+
+const IncompleteInput = () => (
+    <div className={cx('content-wrapper')}>
+        <Input required isIncomplete id="form-input-incomplete" ariaLabel="label" />
+    </div>
+);
 
 export default IncompleteInput;

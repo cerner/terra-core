@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import TextareaField from '../../../TextareaField';
+import styles from './common/Textarea.test.module.scss';
+
+const cx = classNames.bind(styles);
 
 class TextareaFieldExample extends React.Component {
   constructor() {
@@ -30,7 +34,7 @@ class TextareaFieldExample extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={cx('content-wrapper')}>
         <button type="button" id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
         <button type="button" id="incomplete-toggle" onClick={this.toggleIncomplete}>Toggle Incomplete</button>
         <TextareaField
