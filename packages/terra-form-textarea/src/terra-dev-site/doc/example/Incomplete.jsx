@@ -1,34 +1,22 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Field from 'terra-form-field';
 import Textarea from 'terra-form-textarea';
 
-class IncompleteExample extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      area: '',
-    };
-    this.handleAreaChange = this.handleAreaChange.bind(this);
-  }
+const IncompleteExample = () => {
+  const [area, setArea] = useState('');
 
-  handleAreaChange(event) {
-    this.setState({ area: event.target.value });
-  }
-
-  render() {
-    return (
-      <Field label="Incomplete Textarea When Empty" htmlFor="incomplete">
-        <Textarea
-          value={this.state.area}
-          required
-          isIncomplete={this.state.area === ''}
-          onChange={this.handleAreaChange}
-          size="small"
-          id="incomplete"
-        />
-      </Field>
-    );
-  }
-}
+  return (
+    <Field label="Incomplete Textarea When Empty" htmlFor="incomplete">
+      <Textarea
+        value={area}
+        required
+        isIncomplete={area === ''}
+        onChange={event => setArea(event.target.value)}
+        size="small"
+        id="incomplete"
+      />
+    </Field>
+  );
+};
 
 export default IncompleteExample;

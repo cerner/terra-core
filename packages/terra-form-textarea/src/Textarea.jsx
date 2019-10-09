@@ -46,11 +46,11 @@ const propTypes = {
    */
   isAutoResizable: PropTypes.bool,
   /**
-   * Whether the form is incomplete. Form must also be required.
+   * Whether the text area displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
   isIncomplete: PropTypes.bool,
   /**
-   * Whether the form is invalid
+   * Whether the text area displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**

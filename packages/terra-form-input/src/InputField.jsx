@@ -46,7 +46,7 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
   /**
-   * Whether the field is incomplete. Field must also be required.
+   * Whether the field and input displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
   isIncomplete: PropTypes.bool,
   /**
@@ -54,7 +54,7 @@ const propTypes = {
    */
   isInline: PropTypes.bool,
   /**
-   * Whether or not the field is invalid.
+   * Whether the field and input displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**

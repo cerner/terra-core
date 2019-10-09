@@ -31,6 +31,8 @@ import UncontrolledDefaultInvalidExample from '../example/uncontrolled/DefaultIn
 import UncontrolledDefaultInvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DefaultInvalidExample';
 import UncontrolledDefaultIncompleteExample from '../example/uncontrolled/DefaultIncompleteExample';
 import UncontrolledDefaultIncompleteExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DefaultIncompleteExample';
+import UncontrolledInvalidWithIncompleteExample from '../example/uncontrolled/InvalidWithIncompleteExample';
+import UncontrolledInvalidWithIncompleteExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/InvalidWithIncompleteExample';
 import UncontrolledDisabledInvalidExample from '../example/uncontrolled/DisabledInvalidExample';
 import UncontrolledDisabledInvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DisabledInvalidExample';
 
@@ -105,6 +107,11 @@ const DocPage = () => (
         title: 'Uncontrolled Example - Incomplete',
         example: <UncontrolledDefaultIncompleteExample />,
         source: UncontrolledDefaultIncompleteExampleSrc,
+      },
+      {
+        title: 'Uncontrolled Example - Invalid And Incomplete With Invalid Taking Precedence',
+        example: <UncontrolledInvalidWithIncompleteExample />,
+        source: UncontrolledInvalidWithIncompleteExampleSrc,
       },
     ]}
     propsTables={[

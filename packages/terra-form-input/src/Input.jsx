@@ -20,11 +20,11 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Whether the input is incomplete. Input must also be required.
+   * Whether the input displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
   isIncomplete: PropTypes.bool,
   /**
-   * Whether the input is invalid.
+   * Whether the input displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**

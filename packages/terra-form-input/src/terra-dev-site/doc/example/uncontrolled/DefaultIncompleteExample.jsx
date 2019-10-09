@@ -10,7 +10,6 @@ const DefaultIncompleteExample = () => (
         id="uncontrolled-default-incomplete"
         required
         isIncomplete
-        isInvalid
       />
     </Field>
   </div>

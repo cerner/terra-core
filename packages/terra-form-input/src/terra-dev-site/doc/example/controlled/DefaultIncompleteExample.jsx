@@ -1,45 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Field from 'terra-form-field';
 import Input from 'terra-form-input';
 
-class DefaultIncompleteExample extends React.Component {
-  constructor(props) {
-    super(props);
+const DefaultIncompleteExample = () => {
+  const [input, setInput] = useState('');
+  const [isIncomplete, setIsIncomplete] = useState(true);
 
-    this.state = {
-      input: '',
-      isIncomplete: true,
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
+  const handleChange = (event) => {
+    setInput(event.target.value);
+    setIsIncomplete(event.target.value.length === 0);
+  };
 
-  handleChange(event) {
-    this.setState({
-      input: event.target.value,
-      isIncomplete: event.target.value.length === 0,
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <Field label="Default" htmlFor="default-controlled-incomplete">
-          <Input
-            name="default incomplete input"
-            id="default-controlled-incomplete"
-            value={this.state.input}
-            onChange={this.handleChange}
-            required
-            isIncomplete={this.state.isIncomplete}
-          />
-        </Field>
-        <p>
+  return (
+    <div>
+      <Field label="Default" htmlFor="default-controlled-incomplete">
+        <Input
+          name="default incomplete input"
+          id="default-controlled-incomplete"
+          value={input}
+          onChange={handleChange}
+          required
+          isIncomplete={isIncomplete}
+        />
+      </Field>
+      <p>
 Input Provided:
-          {this.state.input}
-        </p>
-      </div>
-    );
-  }
-}
+        {input}
+      </p>
+    </div>
+  );
+};
 
 export default DefaultIncompleteExample;
