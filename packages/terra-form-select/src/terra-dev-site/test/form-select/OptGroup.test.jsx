@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const OptGroupExample = () => (
   <div className={cx('content-wrapper')}>
-  	<Select placeholder="Select a color" id="opt-group" defaultValue="green">
+    <Select placeholder="Select a color" id="opt-group" defaultValue="green">
       <Select.OptGroup label="Colors">
         <Select.Option value="blue" display="Blue" />
         <Select.Option value="green" display="Green" />

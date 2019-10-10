@@ -7,22 +7,22 @@ const cx = classNames.bind(styles);
 
 const DisabledTextareaFieldExample = () => (
   <div className={cx('content-wrapper')}>
-      <TextareaField
-        disabled
-        defaultValue="Value"
-        inputId="test-input"
-        error="Error message."
-        help="Help message."
-        hideRequired
-        inputAttrs={{
-          name: 'test',
-        }}
-        label="Label Text"
-        labelAttrs={{
-          className: 'label',
-        }}
-        showOptional
-      />
+    <TextareaField
+      disabled
+      defaultValue="Value"
+      inputId="test-input"
+      error="Error message."
+      help="Help message."
+      hideRequired
+      inputAttrs={{
+        name: 'test',
+      }}
+      label="Label Text"
+      labelAttrs={{
+        className: 'label',
+      }}
+      showOptional
+    />
   </div>
 );
 

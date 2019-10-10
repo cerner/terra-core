@@ -21,12 +21,12 @@ class AllowClear extends React.Component {
     return (
       <div className={cx('content-wrapper')}>
         <Select
-        allowClear
-        id="allowclear"
-        onChange={this.handleChange}
-        placeholder="Select a color"
-        value={this.state.value}
-        variant="combobox"
+          allowClear
+          id="allowclear"
+          onChange={this.handleChange}
+          placeholder="Select a color"
+          value={this.state.value}
+          variant="combobox"
         >
           <Select.Option value="blue" display="Blue" />
           <Select.Option value="green" display="Green" />

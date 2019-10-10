@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const MaxSelectionExample = () => (
   <div className={cx('content-wrapper')}>
-  	<SelectField
+    <SelectField
       id="tag"
       label="Colors"
       maxSelectionCount={2}

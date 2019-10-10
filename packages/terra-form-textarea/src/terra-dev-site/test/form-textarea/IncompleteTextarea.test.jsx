@@ -6,9 +6,9 @@ import styles from './common/Textarea.test.module.scss';
 const cx = classNames.bind(styles);
 
 const textarea = () => (
-    <div className={cx('content-wrapper')}>
-        <Textarea required isIncomplete ariaLabel="label" />
-    </div>
+  <div className={cx('content-wrapper')}>
+    <Textarea required isIncomplete ariaLabel="label" />
+  </div>
 );
 
 export default textarea;

@@ -6,9 +6,9 @@ import styles from './common/Input.test.module.scss';
 const cx = classNames.bind(styles);
 
 const DisabledValueInput = () => (
-    <div className={cx('content-wrapper')}>
-        <Input disabled id="form-input-disabled-value" value="value" ariaLabel="label" />
-    </div>
+  <div className={cx('content-wrapper')}>
+    <Input disabled id="form-input-disabled-value" value="value" ariaLabel="label" />
+  </div>
 );
 
 export default DisabledValueInput;

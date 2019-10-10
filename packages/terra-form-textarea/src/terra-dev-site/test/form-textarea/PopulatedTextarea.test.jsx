@@ -7,12 +7,12 @@ const cx = classNames.bind(styles);
 
 const textarea = () => (
   <div className={cx('content-wrapper')}>
-      <Textarea
-        name="job_experience"
-        defaultValue=""
-        required
-        ariaLabel="label"
-      />
+    <Textarea
+      name="job_experience"
+      defaultValue=""
+      required
+      ariaLabel="label"
+    />
   </div>
 );
 

@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const UncontrolledSearch = () => (
   <div className={cx('content-wrapper')}>
-  	<Select placeholder="Select a color" variant="search" id="search">
+    <Select placeholder="Select a color" variant="search" id="search">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />

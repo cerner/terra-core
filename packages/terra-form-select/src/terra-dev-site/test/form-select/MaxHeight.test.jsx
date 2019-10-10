@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const MaxHeight = () => (
   <div className={cx('content-wrapper')}>
-  	<Select placeholder="Select a number" id="maxHeight" defaultValue="1" maxHeight={300}>
+    <Select placeholder="Select a number" id="maxHeight" defaultValue="1" maxHeight={300}>
       <Select.Option value="1" display="One" />
       <Select.Option value="2" display="Two" />
       <Select.Option value="3" display="Three" />

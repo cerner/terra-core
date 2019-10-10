@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const UncontrolledMultiple = () => (
   <div className={cx('content-wrapper')}>
-  	<Select placeholder="Select a color" variant="multiple" id="multiple">
+    <Select placeholder="Select a color" variant="multiple" id="multiple">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />

@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const UncontrolledCombobox = () => (
   <div className={cx('content-wrapper')}>
-  	<Select placeholder="Select a color" variant="combobox" id="combobox">
+    <Select placeholder="Select a color" variant="combobox" id="combobox">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />

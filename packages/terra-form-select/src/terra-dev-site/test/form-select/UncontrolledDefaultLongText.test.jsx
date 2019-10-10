@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const UncontrolledDefault = () => (
   <div className={cx('content-wrapper')}>
-  	<Select placeholder="Select a color" id="default" defaultValue="lorem">
+    <Select placeholder="Select a color" id="default" defaultValue="lorem">
       <Select.Option value="lorem" display="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor" />
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="purple" display="Purple" />

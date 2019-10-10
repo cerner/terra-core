@@ -14,7 +14,7 @@ const IncompleteMultiple = () => (
       <Select.Option value="red" display="Red" />
       <Select.Option value="violet" display="Violet" />
     </Select>
-  </div>  
+  </div>
 );
 
 export default IncompleteMultiple;
