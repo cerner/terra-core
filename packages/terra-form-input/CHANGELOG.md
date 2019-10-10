@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* File input to show selection in edge.
+
+### Added
+* File input example added.
+
+2.28.0 - (October 3, 2019)
+------------------
 ### Added
 * Added `isIncomplete` prop to show incomplete stylings.
 * Added `placeholder` as a first class property to `<Input />` and `<InputField />`

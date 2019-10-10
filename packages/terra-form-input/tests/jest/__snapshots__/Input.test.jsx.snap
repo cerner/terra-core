@@ -34,7 +34,6 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
         Array [
           <input
             class="form-input"
-            value=""
           />,
         ],
       ],

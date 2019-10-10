@@ -35,6 +35,8 @@ import UncontrolledInvalidWithIncompleteExample from '../example/uncontrolled/In
 import UncontrolledInvalidWithIncompleteExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/InvalidWithIncompleteExample';
 import UncontrolledDisabledInvalidExample from '../example/uncontrolled/DisabledInvalidExample';
 import UncontrolledDisabledInvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/DisabledInvalidExample';
+import UncontrolledFileExample from '../example/uncontrolled/FileExample';
+import UncontrolledFileExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/uncontrolled/FileExample';
 
 const DocPage = () => (
   <DocTemplate
@@ -112,6 +114,11 @@ const DocPage = () => (
         title: 'Uncontrolled Example - Invalid And Incomplete With Invalid Taking Precedence',
         example: <UncontrolledInvalidWithIncompleteExample />,
         source: UncontrolledInvalidWithIncompleteExampleSrc,
+      },
+      {
+        title: 'Uncontrolled Example - File Input',
+        example: <UncontrolledFileExample />,
+        source: UncontrolledFileExampleSrc,
       },
     ]}
     propsTables={[
