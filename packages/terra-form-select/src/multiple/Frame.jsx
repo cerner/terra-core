@@ -535,7 +535,7 @@ class Frame extends React.Component {
   }
 
   renderToggleButton() {
-    const { intl } = this.props;
+    const { intl, isInvalid } = this.props;
 
     const mobileButtonUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.mobileButtonUsageGuidance' });
 
@@ -553,19 +553,29 @@ class Frame extends React.Component {
        * prevents users from ever navigating through the select options.
        */
       if (this.state.isInputFocused) {
+        const toggleClasses = cx([
+          'toggle',
+          { 'is-invalid': isInvalid },
+        ]);
+
         return (
-          <div data-terra-form-select-toggle className={cx('toggle')} onMouseDown={this.handleToggleMouseDown}>
+          <div data-terra-form-select-toggle className={toggleClasses} onMouseDown={this.handleToggleMouseDown}>
             <span className={cx('arrow-icon')} />
           </div>
         );
       }
+      const toggleClasses = cx([
+        'toggle',
+        'toggle-narrow',
+        { 'is-invalid': isInvalid },
+      ]);
 
       /**
        * Toggle button enables shifting focus to dropdown. This allows iOS users that are using
        * VoiceOver the ability to navigate to the select options.
        */
       return (
-        <div className={cx(['toggle', 'toggle-narrow'])}>
+        <div className={toggleClasses}>
           <button
             type="button"
             className={cx('toggle-btn')}
@@ -578,9 +588,13 @@ class Frame extends React.Component {
         </div>
       );
     }
+    const toggleClasses = cx([
+      'toggle',
+      { 'is-invalid': isInvalid },
+    ]);
 
     return (
-      <div data-terra-form-select-toggle className={cx('toggle')} onMouseDown={this.toggleDropdown}>
+      <div data-terra-form-select-toggle className={toggleClasses} onMouseDown={this.toggleDropdown}>
         <span className={cx('arrow-icon')} />
       </div>
     );
