@@ -178,7 +178,7 @@ class Frame extends React.Component {
     this.input = input;
   }
 
-  getDisplay(displayId, ariaDescribedBy) {
+  getDisplay(displayId, ariaDescribedBy, id) {
     const { searchValue, isFocused } = this.state;
     const {
       disabled, display, placeholder, required, value,
@@ -202,6 +202,7 @@ class Frame extends React.Component {
       className: cx('search-input', { 'is-hidden': isHidden }),
       required: required && !display.length ? true : undefined,
       'aria-required': required && !display.length ? 'required' : undefined,
+      id,
     };
 
     return (
@@ -621,6 +622,8 @@ class Frame extends React.Component {
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
+    const { id } = customProps;
+    delete customProps.id;
 
     const menuProps = {
       value,
@@ -661,8 +664,8 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()}>
-          {this.getDisplay(displayId, ariaDescribedBy)}
+        <div className={cx('display')}>
+          {this.getDisplay(displayId, ariaDescribedBy, id)}
         </div>
         {this.renderToggleButton()}
         <span

@@ -999,7 +999,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('multiple should open the dropdown by clicking the toggle', () => {
-        browser.click('#multiple:last-child');
+        browser.click('[class*="multiple"]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1020,7 +1020,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('multiple should open the dropdown by clicking the toggle', () => {
-        browser.click('#multiple:last-child');
+        browser.click('[class*="multiple"]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1047,7 +1047,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('multiple controlled should open the dropdown by clicking the toggle', () => {
-        browser.click('#multiple:last-child');
+        browser.click('[class*="multiple"]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1736,7 +1736,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('tag should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[class*="tag"]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1761,7 +1761,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('tag should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[class*="tag"]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1782,7 +1782,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('tag should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[class*="tag"]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1920,7 +1920,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('tag controlled should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[class*="tag"]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });

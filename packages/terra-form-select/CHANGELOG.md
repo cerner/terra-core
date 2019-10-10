@@ -1,5 +1,7 @@
 ChangeLog
 =========
+### Changed
+* Id moved to input element instead of select div for searchable select fields.
 
 Unreleased
 ----------
