@@ -13,7 +13,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
             class="form-input input"
             placeholder=""
             type="search"
-            value=""
           />,
         ],
       ],
