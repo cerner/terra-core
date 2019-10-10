@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated `isInvalid` prop description.
 
 3.29.0 - (October 3, 2019)
 ------------------
