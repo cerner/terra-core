@@ -2,13 +2,13 @@
 
 exports[`should render a default SelectField component 1`] = `
 <div
-  className="field"
+  className="field-top"
 >
   <div
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="select-id"
     >
       Label
@@ -22,56 +22,60 @@ exports[`should render a default SelectField component 1`] = `
       />
     </div>
   </div>
-  <Select
-    allowClear={false}
-    ariaLabel="Label"
-    defaultValue="blue"
-    disabled={false}
-    id="select-id"
-    isInvalid={false}
-    isTouchAccessible={false}
-    key=".0"
-    required={false}
-    variant="default"
+  <div
+    className="field-content"
   >
-    <Option
+    <Select
+      allowClear={false}
+      ariaLabel="Label"
+      defaultValue="blue"
       disabled={false}
-      display="Blue"
-      value="blue"
-    />
-    <Option
-      disabled={false}
-      display="Green"
-      value="green"
-    />
-    <Option
-      disabled={false}
-      display="Purple"
-      value="purple"
-    />
-    <Option
-      disabled={false}
-      display="Red"
-      value="red"
-    />
-    <Option
-      disabled={false}
-      display="Violet"
-      value="violet"
-    />
-  </Select>
+      id="select-id"
+      isInvalid={false}
+      isTouchAccessible={false}
+      key=".0"
+      required={false}
+      variant="default"
+    >
+      <Option
+        disabled={false}
+        display="Blue"
+        value="blue"
+      />
+      <Option
+        disabled={false}
+        display="Green"
+        value="green"
+      />
+      <Option
+        disabled={false}
+        display="Purple"
+        value="purple"
+      />
+      <Option
+        disabled={false}
+        display="Red"
+        value="red"
+      />
+      <Option
+        disabled={false}
+        display="Violet"
+        value="violet"
+      />
+    </Select>
+  </div>
 </div>
 `;
 
 exports[`should render a default SelectField component with attributes spread onto the select 1`] = `
 <div
-  className="field"
+  className="field-top"
 >
   <div
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="select-id"
     >
       Label
@@ -85,57 +89,61 @@ exports[`should render a default SelectField component with attributes spread on
       />
     </div>
   </div>
-  <Select
-    allowClear={false}
-    ariaLabel="Label"
-    defaultValue="blue"
-    disabled={false}
-    id="select-id"
-    isInvalid={false}
-    isTouchAccessible={false}
-    key=".0"
-    onClick={[Function]}
-    required={false}
-    variant="default"
+  <div
+    className="field-content"
   >
-    <Option
+    <Select
+      allowClear={false}
+      ariaLabel="Label"
+      defaultValue="blue"
       disabled={false}
-      display="Blue"
-      value="blue"
-    />
-    <Option
-      disabled={false}
-      display="Green"
-      value="green"
-    />
-    <Option
-      disabled={false}
-      display="Purple"
-      value="purple"
-    />
-    <Option
-      disabled={false}
-      display="Red"
-      value="red"
-    />
-    <Option
-      disabled={false}
-      display="Violet"
-      value="violet"
-    />
-  </Select>
+      id="select-id"
+      isInvalid={false}
+      isTouchAccessible={false}
+      key=".0"
+      onClick={[Function]}
+      required={false}
+      variant="default"
+    >
+      <Option
+        disabled={false}
+        display="Blue"
+        value="blue"
+      />
+      <Option
+        disabled={false}
+        display="Green"
+        value="green"
+      />
+      <Option
+        disabled={false}
+        display="Purple"
+        value="purple"
+      />
+      <Option
+        disabled={false}
+        display="Red"
+        value="red"
+      />
+      <Option
+        disabled={false}
+        display="Violet"
+        value="violet"
+      />
+    </Select>
+  </div>
 </div>
 `;
 
 exports[`should render a disabled SelectField component 1`] = `
 <div
-  className="field"
+  className="field-top"
 >
   <div
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="select-id"
     >
       Label
@@ -149,56 +157,60 @@ exports[`should render a disabled SelectField component 1`] = `
       />
     </div>
   </div>
-  <Select
-    allowClear={false}
-    ariaLabel="Label"
-    defaultValue="blue"
-    disabled={true}
-    id="select-id"
-    isInvalid={false}
-    isTouchAccessible={false}
-    key=".0"
-    required={false}
-    variant="default"
+  <div
+    className="field-content"
   >
-    <Option
-      disabled={false}
-      display="Blue"
-      value="blue"
-    />
-    <Option
-      disabled={false}
-      display="Green"
-      value="green"
-    />
-    <Option
-      disabled={false}
-      display="Purple"
-      value="purple"
-    />
-    <Option
-      disabled={false}
-      display="Red"
-      value="red"
-    />
-    <Option
-      disabled={false}
-      display="Violet"
-      value="violet"
-    />
-  </Select>
+    <Select
+      allowClear={false}
+      ariaLabel="Label"
+      defaultValue="blue"
+      disabled={true}
+      id="select-id"
+      isInvalid={false}
+      isTouchAccessible={false}
+      key=".0"
+      required={false}
+      variant="default"
+    >
+      <Option
+        disabled={false}
+        display="Blue"
+        value="blue"
+      />
+      <Option
+        disabled={false}
+        display="Green"
+        value="green"
+      />
+      <Option
+        disabled={false}
+        display="Purple"
+        value="purple"
+      />
+      <Option
+        disabled={false}
+        display="Red"
+        value="red"
+      />
+      <Option
+        disabled={false}
+        display="Violet"
+        value="violet"
+      />
+    </Select>
+  </div>
 </div>
 `;
 
 exports[`should render a disabled SelectField component via selectAttrs 1`] = `
 <div
-  className="field"
+  className="field-top"
 >
   <div
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="select-id"
     >
       Label
@@ -212,56 +224,60 @@ exports[`should render a disabled SelectField component via selectAttrs 1`] = `
       />
     </div>
   </div>
-  <Select
-    allowClear={false}
-    ariaLabel="Label"
-    defaultValue="blue"
-    disabled={true}
-    id="select-id"
-    isInvalid={false}
-    isTouchAccessible={false}
-    key=".0"
-    required={false}
-    variant="default"
+  <div
+    className="field-content"
   >
-    <Option
-      disabled={false}
-      display="Blue"
-      value="blue"
-    />
-    <Option
-      disabled={false}
-      display="Green"
-      value="green"
-    />
-    <Option
-      disabled={false}
-      display="Purple"
-      value="purple"
-    />
-    <Option
-      disabled={false}
-      display="Red"
-      value="red"
-    />
-    <Option
-      disabled={false}
-      display="Violet"
-      value="violet"
-    />
-  </Select>
+    <Select
+      allowClear={false}
+      ariaLabel="Label"
+      defaultValue="blue"
+      disabled={true}
+      id="select-id"
+      isInvalid={false}
+      isTouchAccessible={false}
+      key=".0"
+      required={false}
+      variant="default"
+    >
+      <Option
+        disabled={false}
+        display="Blue"
+        value="blue"
+      />
+      <Option
+        disabled={false}
+        display="Green"
+        value="green"
+      />
+      <Option
+        disabled={false}
+        display="Purple"
+        value="purple"
+      />
+      <Option
+        disabled={false}
+        display="Red"
+        value="red"
+      />
+      <Option
+        disabled={false}
+        display="Violet"
+        value="violet"
+      />
+    </Select>
+  </div>
 </div>
 `;
 
 exports[`should render a multiple SelectField component that limits the selection count 1`] = `
 <div
-  className="field"
+  className="field-top"
 >
   <div
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="select-id"
     >
       Label
@@ -275,70 +291,74 @@ exports[`should render a multiple SelectField component that limits the selectio
       />
     </div>
   </div>
-  <Select
-    allowClear={false}
-    aria-describedby="select-id-help"
-    ariaLabel="Label"
-    defaultValue="blue"
-    disabled={false}
-    id="select-id"
-    isInvalid={false}
-    isTouchAccessible={false}
-    key=".0"
-    maxSelectionCount={2}
-    onClick={[Function]}
-    required={false}
-    variant="multiple"
-  >
-    <Option
-      disabled={false}
-      display="Blue"
-      value="blue"
-    />
-    <Option
-      disabled={false}
-      display="Green"
-      value="green"
-    />
-    <Option
-      disabled={false}
-      display="Purple"
-      value="purple"
-    />
-    <Option
-      disabled={false}
-      display="Red"
-      value="red"
-    />
-    <Option
-      disabled={false}
-      display="Violet"
-      value="violet"
-    />
-  </Select>
   <div
-    className="help-text"
-    id="select-id-help"
-    tabIndex="-1"
+    className="field-content"
   >
-    <span>
-      Terra.form.select.maxSelectionHelp
-       
-      Help Text
-    </span>
+    <Select
+      allowClear={false}
+      aria-describedby="select-id-help"
+      ariaLabel="Label"
+      defaultValue="blue"
+      disabled={false}
+      id="select-id"
+      isInvalid={false}
+      isTouchAccessible={false}
+      key=".0"
+      maxSelectionCount={2}
+      onClick={[Function]}
+      required={false}
+      variant="multiple"
+    >
+      <Option
+        disabled={false}
+        display="Blue"
+        value="blue"
+      />
+      <Option
+        disabled={false}
+        display="Green"
+        value="green"
+      />
+      <Option
+        disabled={false}
+        display="Purple"
+        value="purple"
+      />
+      <Option
+        disabled={false}
+        display="Red"
+        value="red"
+      />
+      <Option
+        disabled={false}
+        display="Violet"
+        value="violet"
+      />
+    </Select>
+    <div
+      className="help-text"
+      id="select-id-help"
+      tabIndex="-1"
+    >
+      <span>
+        Terra.form.select.maxSelectionHelp
+         
+        Help Text
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render a required SelectField component 1`] = `
 <div
-  className="field"
+  className="field-top"
 >
   <div
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="select-id"
     >
       <div
@@ -357,43 +377,47 @@ exports[`should render a required SelectField component 1`] = `
       />
     </div>
   </div>
-  <Select
-    allowClear={false}
-    ariaLabel="Label"
-    defaultValue="blue"
-    disabled={false}
-    id="select-id"
-    isInvalid={false}
-    isTouchAccessible={false}
-    key=".0"
-    required={true}
-    variant="default"
+  <div
+    className="field-content"
   >
-    <Option
+    <Select
+      allowClear={false}
+      ariaLabel="Label"
+      defaultValue="blue"
       disabled={false}
-      display="Blue"
-      value="blue"
-    />
-    <Option
-      disabled={false}
-      display="Green"
-      value="green"
-    />
-    <Option
-      disabled={false}
-      display="Purple"
-      value="purple"
-    />
-    <Option
-      disabled={false}
-      display="Red"
-      value="red"
-    />
-    <Option
-      disabled={false}
-      display="Violet"
-      value="violet"
-    />
-  </Select>
+      id="select-id"
+      isInvalid={false}
+      isTouchAccessible={false}
+      key=".0"
+      required={true}
+      variant="default"
+    >
+      <Option
+        disabled={false}
+        display="Blue"
+        value="blue"
+      />
+      <Option
+        disabled={false}
+        display="Green"
+        value="green"
+      />
+      <Option
+        disabled={false}
+        display="Purple"
+        value="purple"
+      />
+      <Option
+        disabled={false}
+        display="Red"
+        value="red"
+      />
+      <Option
+        disabled={false}
+        display="Violet"
+        value="violet"
+      />
+    </Select>
+  </div>
 </div>
 `;

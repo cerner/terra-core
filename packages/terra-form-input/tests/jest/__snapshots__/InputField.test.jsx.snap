@@ -2,6 +2,7 @@
 
 exports[`InputField should render a InputField with props 1`] = `
 <Field
+  alignLabel="top"
   error="Text"
   errorIcon={
     <IconHelp
@@ -15,6 +16,7 @@ exports[`InputField should render a InputField with props 1`] = `
   isInline={true}
   isInvalid={true}
   isLabelHidden={true}
+  isLegendHidden={false}
   label="Label Test"
   labelAttrs={
     Object {
@@ -42,6 +44,7 @@ exports[`InputField should render a InputField with props 1`] = `
 
 exports[`InputField should render a InputField with type specified by type attribute when both type attribute and InputAttributes are given 1`] = `
 <Field
+  alignLabel="top"
   error="Text"
   errorIcon={
     <IconHelp
@@ -55,6 +58,7 @@ exports[`InputField should render a InputField with type specified by type attri
   isInline={true}
   isInvalid={true}
   isLabelHidden={true}
+  isLegendHidden={false}
   label="Label Test"
   labelAttrs={
     Object {
@@ -82,6 +86,7 @@ exports[`InputField should render a InputField with type specified by type attri
 
 exports[`InputField should render a InputField with type specified through InputAttributes 1`] = `
 <Field
+  alignLabel="top"
   error="Text"
   errorIcon={
     <IconHelp
@@ -95,6 +100,7 @@ exports[`InputField should render a InputField with type specified through Input
   isInline={true}
   isInvalid={true}
   isLabelHidden={true}
+  isLegendHidden={false}
   label="Label Test"
   labelAttrs={
     Object {
@@ -122,6 +128,7 @@ exports[`InputField should render a InputField with type specified through Input
 
 exports[`InputField should render a default InputField component 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -135,6 +142,7 @@ exports[`InputField should render a default InputField component 1`] = `
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Label"
   labelAttrs={Object {}}
   required={false}
@@ -152,6 +160,7 @@ exports[`InputField should render a default InputField component 1`] = `
 
 exports[`InputField should render a disabled InputField component 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -165,6 +174,7 @@ exports[`InputField should render a disabled InputField component 1`] = `
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Label"
   labelAttrs={Object {}}
   required={false}
@@ -182,6 +192,7 @@ exports[`InputField should render a disabled InputField component 1`] = `
 
 exports[`InputField should render a disabled InputField component via inputAttrs 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -195,6 +206,7 @@ exports[`InputField should render a disabled InputField component via inputAttrs
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Label"
   labelAttrs={Object {}}
   required={false}
@@ -212,6 +224,7 @@ exports[`InputField should render a disabled InputField component via inputAttrs
 
 exports[`InputField should render a placeholder within the InputField component 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -225,6 +238,7 @@ exports[`InputField should render a placeholder within the InputField component 
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Label"
   labelAttrs={Object {}}
   required={false}
@@ -243,6 +257,7 @@ exports[`InputField should render a placeholder within the InputField component 
 
 exports[`InputField should render a placeholder within the InputField component when passed as an input attribute 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -256,6 +271,7 @@ exports[`InputField should render a placeholder within the InputField component 
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Label"
   labelAttrs={Object {}}
   required={false}
@@ -274,6 +290,7 @@ exports[`InputField should render a placeholder within the InputField component 
 
 exports[`InputField should render a valid InputField with props 1`] = `
 <Field
+  alignLabel="top"
   error="Text"
   errorIcon={
     <IconHelp
@@ -287,6 +304,7 @@ exports[`InputField should render a valid InputField with props 1`] = `
   isInline={true}
   isInvalid={false}
   isLabelHidden={true}
+  isLegendHidden={false}
   label="Label Test"
   labelAttrs={
     Object {

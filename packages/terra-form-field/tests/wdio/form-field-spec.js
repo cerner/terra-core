@@ -58,4 +58,16 @@ Terra.describeViewports('Form-field', ['medium'], () => {
 
     Terra.it.validatesElement();
   });
+
+  describe('Label Left Align', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/left-aligned-label'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Label Left Align Inline', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/left-aligned-label-feild-inline'));
+
+    Terra.it.validatesElement();
+  });
 });

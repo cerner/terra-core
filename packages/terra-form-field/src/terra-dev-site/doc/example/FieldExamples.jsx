@@ -1,5 +1,5 @@
 import React from 'react';
-import Field from 'terra-form-field';
+import Field, { LABEL_ALIGNMENT } from 'terra-form-field';
 import classNames from 'classnames/bind';
 import styles from './FieldExamples.module.scss';
 
@@ -25,6 +25,15 @@ class FieldExamples extends React.Component {
           help="This is a standard, non-required field."
           error="Error Message"
           isInvalid={this.state.isInvalid}
+        >
+          <div className={cx('field-content')}>Control Placeholder</div>
+        </Field>
+        <Field
+          label="Field Left Aligned Label"
+          help="This is a standard, non-required field."
+          error="Error Message"
+          isInvalid={this.state.isInvalid}
+          alignLabel={LABEL_ALIGNMENT.LEFT}
         >
           <div className={cx('field-content')}>Control Placeholder</div>
         </Field>

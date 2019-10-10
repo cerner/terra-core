@@ -7,6 +7,11 @@ import styles from './Field.module.scss';
 
 const cx = classNames.bind(styles);
 
+const LABEL_ALIGNMENT = {
+  LEFT: 'left',
+  TOP: 'top',
+};
+
 const propTypes = {
   /**
    * The form control elements the Field contains.
@@ -71,6 +76,18 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   style: PropTypes.object,
+  /**
+   * Sets Alignment position for field label to one of the alignment values `left` and `top`.
+   */
+  alignLabel: PropTypes.oneOf([LABEL_ALIGNMENT.LEFT, LABEL_ALIGNMENT.TOP]),
+  /**
+   * Legend for the Field.
+   */
+  legend: PropTypes.string,
+  /**
+   * Whether or not the legend is visible. Use this prop to hide a legend while still creating it on the DOM for accessibility.
+   */
+  isLegendHidden: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -87,6 +104,8 @@ const defaultProps = {
   maxWidth: undefined,
   required: false,
   showOptional: false,
+  alignLabel: LABEL_ALIGNMENT.TOP,
+  isLegendHidden: false,
 };
 
 const hasWhiteSpace = s => /\s/g.test(s);
@@ -111,20 +130,24 @@ const Field = (props) => {
     required,
     showOptional,
     style,
+    alignLabel,
+    legend,
+    isLegendHidden,
     ...customProps
   } = props;
 
   const customStyles = maxWidth ? ({ maxWidth, ...style }) : style;
-
-  const fieldClasses = cx([
-    'field',
-    { 'field-inline': isInline },
-    customProps.className,
-  ]);
+  const fieldInline = isInline ? `field-inline-${alignLabel}` : '';
+  const fieldClasses = cx([`field-${alignLabel}`, fieldInline, customProps.className]);
 
   const labelClassNames = cx([
-    'label',
+    `label-${alignLabel}`,
     labelAttrs.className,
+  ]);
+
+  const legendClasses = cx([
+    'legend',
+    { 'visually-hidden-text': isLegendHidden },
   ]);
 
   // Checks to run when not in production
@@ -195,9 +218,12 @@ const Field = (props) => {
   return (
     <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
-      {content}
-      {isInvalid && error && <div aria-live="assertive" tabIndex="-1" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
-      {help && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
+      <div className={cx('field-content')}>
+        {content}
+        {isInvalid && error && <div aria-live="assertive" tabIndex="-1" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
+        {help && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
+        {legend && <legend className={legendClasses}>{legend}</legend>}
+      </div>
     </div>
   );
   /* eslint-enable react/forbid-dom-props */
@@ -207,3 +233,4 @@ Field.propTypes = propTypes;
 Field.defaultProps = defaultProps;
 
 export default Field;
+export { LABEL_ALIGNMENT };

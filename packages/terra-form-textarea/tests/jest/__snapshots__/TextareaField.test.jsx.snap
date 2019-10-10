@@ -2,6 +2,7 @@
 
 exports[`should render a TextareaField with props 1`] = `
 <Field
+  alignLabel="top"
   error="Text"
   errorIcon={
     <IconHelp
@@ -15,6 +16,7 @@ exports[`should render a TextareaField with props 1`] = `
   isInline={true}
   isInvalid={true}
   isLabelHidden={true}
+  isLegendHidden={false}
   label="Label Test"
   labelAttrs={
     Object {
@@ -43,6 +45,7 @@ exports[`should render a TextareaField with props 1`] = `
 
 exports[`should render a default TextareaField component 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -56,6 +59,7 @@ exports[`should render a default TextareaField component 1`] = `
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Label"
   labelAttrs={Object {}}
   required={false}
@@ -76,6 +80,7 @@ exports[`should render a default TextareaField component 1`] = `
 
 exports[`should render a disabled TextareaField component 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -89,6 +94,7 @@ exports[`should render a disabled TextareaField component 1`] = `
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Label"
   labelAttrs={Object {}}
   required={false}
@@ -109,6 +115,7 @@ exports[`should render a disabled TextareaField component 1`] = `
 
 exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -122,6 +129,7 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Label"
   labelAttrs={Object {}}
   required={false}
@@ -142,6 +150,7 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
 
 exports[`should render a valid TextareaField with props 1`] = `
 <Field
+  alignLabel="top"
   error="Text"
   errorIcon={
     <IconHelp
@@ -155,6 +164,7 @@ exports[`should render a valid TextareaField with props 1`] = `
   isInline={true}
   isInvalid={false}
   isLabelHidden={true}
+  isLegendHidden={false}
   label="Label Test"
   labelAttrs={
     Object {

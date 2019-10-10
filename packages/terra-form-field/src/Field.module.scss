@@ -1,13 +1,31 @@
 :local {
-  .field {
+  .field-top {
     border: 0;
     margin-bottom: var(--terra-form-field-margin-bottom, 1.428em);
     max-width: 72.857rem;
     padding: 0;
   }
 
-  .field-inline {
+  .field-left {
+    border: 0;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    margin-bottom: var(--terra-form-field-margin-bottom, 1.428em);
+    max-width: 72.857rem;
+    padding: 0;
+  }
+
+  .field-inline-top {
     display: inline-block;
+    margin-right: var(--terra-form-field-inline-margin-right, 0.7143em);
+    vertical-align: top;
+  }
+
+  .field-inline-left {
+    display: inline-flex;
+    flex: 1 1 auto;
+    flex-direction: row;
     margin-right: var(--terra-form-field-inline-margin-right, 0.7143em);
     vertical-align: top;
   }
@@ -31,7 +49,19 @@
     width: 1px;
   }
 
-  .label {
+  .field-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  .label-left {
+    color: var(--terra-form-field-label-color, #1c1f21);
+    font-weight: var(--terra-form-field-label-font-weight, bold);
+    margin-right: 0.5rem;
+  }
+
+  .label-top {
     color: var(--terra-form-field-label-color, #1c1f21);
     font-weight: var(--terra-form-field-label-font-weight, bold);
   }
@@ -93,5 +123,12 @@
     position: absolute;
     white-space: nowrap; /* Ensures words  are not read one at a time on screen readers*/
     width: 1px;
+  }
+
+  .legend {
+    font-family: inherit;
+    font-size: 0.857rem;
+    font-style: normal;
+    font-weight: normal;
   }
 }

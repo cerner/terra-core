@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `alignLabel` prop to alter display position of label in field.
+* Added `islegendHidden` and `legend` prop to field.
 
 3.26.0 - (October 3, 2019)
 ------------------

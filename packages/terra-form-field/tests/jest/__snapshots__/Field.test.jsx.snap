@@ -2,7 +2,7 @@
 
 exports[`should render a field error message 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -35,7 +35,7 @@ exports[`should render a field error message 1`] = `
     className="label-group label-group-hidden"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -49,12 +49,15 @@ exports[`should render a field error message 1`] = `
       />
     </div>
   </div>
+  <div
+    className="field-content"
+  />
 </div>
 `;
 
 exports[`should render a field help message 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -87,7 +90,7 @@ exports[`should render a field help message 1`] = `
     className="label-group label-group-hidden"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -102,18 +105,22 @@ exports[`should render a field help message 1`] = `
     </div>
   </div>
   <div
-    className="help-text"
-    id="test-help"
-    tabIndex="-1"
+    className="field-content"
   >
-    Help Text
+    <div
+      className="help-text"
+      id="test-help"
+      tabIndex="-1"
+    >
+      Help Text
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render a field in error 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -154,33 +161,37 @@ exports[`should render a field in error 1`] = `
       />
     </div>
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
     </label>
   </div>
   <div
-    aria-live="assertive"
-    className="error-text"
-    id="test-error"
-    tabIndex="-1"
+    className="field-content"
   >
-    Error Text
-  </div>
-  <div
-    className="help-text"
-    id="test-help"
-    tabIndex="-1"
-  >
-    Help Text
+    <div
+      aria-live="assertive"
+      className="error-text"
+      id="test-error"
+      tabIndex="-1"
+    >
+      Error Text
+    </div>
+    <div
+      className="help-text"
+      id="test-help"
+      tabIndex="-1"
+    >
+      Help Text
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render a field label 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -213,7 +224,7 @@ exports[`should render a field label 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -227,12 +238,81 @@ exports[`should render a field label 1`] = `
       />
     </div>
   </div>
+  <div
+    className="field-content"
+  />
+</div>
+`;
+
+exports[`should render a field label with legend 1`] = `
+<div
+  className="field-top"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label-top"
+      htmlFor="test"
+    >
+      <div
+        className="required"
+      >
+        *
+      </div>
+      Field Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+  <div
+    className="field-content"
+  >
+    <legend
+      className="legend"
+    >
+      Feild Label with legend
+    </legend>
+  </div>
 </div>
 `;
 
 exports[`should render a field with a Select 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -265,7 +345,7 @@ exports[`should render a field with a Select 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -310,17 +390,21 @@ exports[`should render a field with a Select 1`] = `
       </IconError>
     </div>
   </div>
-  <Select
-    key=".0"
+  <div
+    className="field-content"
   >
-    <select />
-  </Select>
+    <Select
+      key=".0"
+    >
+      <select />
+    </Select>
+  </div>
 </div>
 `;
 
 exports[`should render a field with a Textarea 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -353,7 +437,7 @@ exports[`should render a field with a Textarea 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -398,17 +482,21 @@ exports[`should render a field with a Textarea 1`] = `
       </IconError>
     </div>
   </div>
-  <Textarea
-    key=".0"
+  <div
+    className="field-content"
   >
-    <textarea />
-  </Textarea>
+    <Textarea
+      key=".0"
+    >
+      <textarea />
+    </Textarea>
+  </div>
 </div>
 `;
 
 exports[`should render a field with a custom error icon 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -441,7 +529,7 @@ exports[`should render a field with a custom error icon 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -455,12 +543,15 @@ exports[`should render a field with a custom error icon 1`] = `
       />
     </div>
   </div>
+  <div
+    className="field-content"
+  />
 </div>
 `;
 
 exports[`should render a field with a hidden label 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -493,7 +584,7 @@ exports[`should render a field with a hidden label 1`] = `
     className="label-group label-group-hidden"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -507,12 +598,15 @@ exports[`should render a field with a hidden label 1`] = `
       />
     </div>
   </div>
+  <div
+    className="field-content"
+  />
 </div>
 `;
 
 exports[`should render a field with a hidden label in error 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -553,33 +647,37 @@ exports[`should render a field with a hidden label in error 1`] = `
       />
     </div>
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
     </label>
   </div>
   <div
-    aria-live="assertive"
-    className="error-text"
-    id="test-error"
-    tabIndex="-1"
+    className="field-content"
   >
-    Error Text
-  </div>
-  <div
-    className="help-text"
-    id="test-help"
-    tabIndex="-1"
-  >
-    Help Text
+    <div
+      aria-live="assertive"
+      className="error-text"
+      id="test-error"
+      tabIndex="-1"
+    >
+      Error Text
+    </div>
+    <div
+      className="help-text"
+      id="test-help"
+      tabIndex="-1"
+    >
+      Help Text
+    </div>
   </div>
 </div>
 `;
 
-exports[`should render a field with an Input 1`] = `
+exports[`should render a field with a hidden legend 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -612,7 +710,68 @@ exports[`should render a field with an Input 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
+      htmlFor="test"
+    >
+      Field Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+  <div
+    className="field-content"
+  >
+    <legend
+      className="legend visually-hidden-text"
+    >
+      Hidden Legend
+    </legend>
+  </div>
+</div>
+`;
+
+exports[`should render a field with an Input 1`] = `
+<div
+  className="field-top"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -657,17 +816,21 @@ exports[`should render a field with an Input 1`] = `
       </IconError>
     </div>
   </div>
-  <Input
-    key=".0"
+  <div
+    className="field-content"
   >
-    <input />
-  </Input>
+    <Input
+      key=".0"
+    >
+      <input />
+    </Input>
+  </div>
 </div>
 `;
 
 exports[`should render a required field in error 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -708,7 +871,7 @@ exports[`should render a required field in error 1`] = `
       />
     </div>
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       <div
@@ -720,26 +883,30 @@ exports[`should render a required field in error 1`] = `
     </label>
   </div>
   <div
-    aria-live="assertive"
-    className="error-text"
-    id="test-error"
-    tabIndex="-1"
+    className="field-content"
   >
-    Error Text
-  </div>
-  <div
-    className="help-text"
-    id="test-help"
-    tabIndex="-1"
-  >
-    Help Text
+    <div
+      aria-live="assertive"
+      className="error-text"
+      id="test-error"
+      tabIndex="-1"
+    >
+      Error Text
+    </div>
+    <div
+      className="help-text"
+      id="test-help"
+      tabIndex="-1"
+    >
+      Help Text
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render a required field label 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -772,7 +939,7 @@ exports[`should render a required field label 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       <div
@@ -791,12 +958,15 @@ exports[`should render a required field label 1`] = `
       />
     </div>
   </div>
+  <div
+    className="field-content"
+  />
 </div>
 `;
 
 exports[`should render a required field label with required hidden 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -829,7 +999,7 @@ exports[`should render a required field label with required hidden 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -848,12 +1018,15 @@ exports[`should render a required field label with required hidden 1`] = `
       />
     </div>
   </div>
+  <div
+    className="field-content"
+  />
 </div>
 `;
 
 exports[`should render a required field with a Select 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -886,7 +1059,7 @@ exports[`should render a required field with a Select 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       <div
@@ -936,20 +1109,24 @@ exports[`should render a required field with a Select 1`] = `
       </IconError>
     </div>
   </div>
-  <Select
-    key=".0"
-    required={true}
+  <div
+    className="field-content"
   >
-    <select
+    <Select
+      key=".0"
       required={true}
-    />
-  </Select>
+    >
+      <select
+        required={true}
+      />
+    </Select>
+  </div>
 </div>
 `;
 
 exports[`should render a required field with a Textarea 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -982,7 +1159,7 @@ exports[`should render a required field with a Textarea 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       <div
@@ -1032,20 +1209,24 @@ exports[`should render a required field with a Textarea 1`] = `
       </IconError>
     </div>
   </div>
-  <Textarea
-    key=".0"
-    required={true}
+  <div
+    className="field-content"
   >
-    <textarea
+    <Textarea
+      key=".0"
       required={true}
-    />
-  </Textarea>
+    >
+      <textarea
+        required={true}
+      />
+    </Textarea>
+  </div>
 </div>
 `;
 
 exports[`should render a required field with a hidden label 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1078,7 +1259,7 @@ exports[`should render a required field with a hidden label 1`] = `
     className="label-group label-group-hidden"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       <div
@@ -1097,12 +1278,15 @@ exports[`should render a required field with a hidden label 1`] = `
       />
     </div>
   </div>
+  <div
+    className="field-content"
+  />
 </div>
 `;
 
 exports[`should render a required field with a hidden label in error 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1143,7 +1327,7 @@ exports[`should render a required field with a hidden label in error 1`] = `
       />
     </div>
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       <div
@@ -1155,26 +1339,30 @@ exports[`should render a required field with a hidden label in error 1`] = `
     </label>
   </div>
   <div
-    aria-live="assertive"
-    className="error-text"
-    id="test-error"
-    tabIndex="-1"
+    className="field-content"
   >
-    Error Text
-  </div>
-  <div
-    className="help-text"
-    id="test-help"
-    tabIndex="-1"
-  >
-    Help Text
+    <div
+      aria-live="assertive"
+      className="error-text"
+      id="test-error"
+      tabIndex="-1"
+    >
+      Error Text
+    </div>
+    <div
+      className="help-text"
+      id="test-help"
+      tabIndex="-1"
+    >
+      Help Text
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render a required field with an Input 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1207,7 +1395,7 @@ exports[`should render a required field with an Input 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       <div
@@ -1257,20 +1445,24 @@ exports[`should render a required field with an Input 1`] = `
       </IconError>
     </div>
   </div>
-  <Input
-    key=".0"
-    required={true}
+  <div
+    className="field-content"
   >
-    <input
+    <Input
+      key=".0"
       required={true}
-    />
-  </Input>
+    >
+      <input
+        required={true}
+      />
+    </Input>
+  </div>
 </div>
 `;
 
 exports[`should render an inline field with most of the possible props are passed into it 1`] = `
 <div
-  className="field field-inline"
+  className="field-top field-inline-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1303,7 +1495,7 @@ exports[`should render an inline field with most of the possible props are passe
     className="label-group"
   >
     <label
-      className="label healtheintent-legend"
+      className="label-top healtheintent-legend"
       htmlFor="test"
     >
       Text
@@ -1317,23 +1509,28 @@ exports[`should render an inline field with most of the possible props are passe
       />
     </div>
   </div>
-  <input
-    id="test"
-    key=".0"
-    type="text"
-  />
   <div
-    className="help-text"
-    id="test-help"
-    tabIndex="-1"
+    className="field-content"
   >
-    This is a test input
+    <input
+      id="test"
+      key=".0"
+      type="text"
+    />
+    <div
+      className="help-text"
+      id="test-help"
+      tabIndex="-1"
+    >
+      This is a test input
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render an invalid and required field with a Select 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -1374,13 +1571,14 @@ exports[`should render an invalid and required field with a Select 1`] = `
   isInline={false}
   isInvalid={true}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Field Label"
   labelAttrs={Object {}}
   required={true}
   showOptional={false}
 >
   <div
-    className="field"
+    className="field-top"
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1452,7 +1650,7 @@ exports[`should render an invalid and required field with a Select 1`] = `
         </IconError>
       </div>
       <label
-        className="label"
+        className="label-top"
         htmlFor="test"
       >
         <div
@@ -1463,22 +1661,27 @@ exports[`should render an invalid and required field with a Select 1`] = `
         Field Label
       </label>
     </div>
-    <Select
-      isInvalid={true}
-      key=".0"
-      required={true}
+    <div
+      className="field-content"
     >
-      <select
-        invalid="true"
+      <Select
+        isInvalid={true}
+        key=".0"
         required={true}
-      />
-    </Select>
+      >
+        <select
+          invalid="true"
+          required={true}
+        />
+      </Select>
+    </div>
   </div>
 </Field>
 `;
 
 exports[`should render an invalid and required field with a Textarea 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -1519,13 +1722,14 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
   isInline={false}
   isInvalid={true}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Field Label"
   labelAttrs={Object {}}
   required={true}
   showOptional={false}
 >
   <div
-    className="field"
+    className="field-top"
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1597,7 +1801,7 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
         </IconError>
       </div>
       <label
-        className="label"
+        className="label-top"
         htmlFor="test"
       >
         <div
@@ -1608,22 +1812,27 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
         Field Label
       </label>
     </div>
-    <Textarea
-      isInvalid={true}
-      key=".0"
-      required={true}
+    <div
+      className="field-content"
     >
-      <textarea
-        invalid="true"
+      <Textarea
+        isInvalid={true}
+        key=".0"
         required={true}
-      />
-    </Textarea>
+      >
+        <textarea
+          invalid="true"
+          required={true}
+        />
+      </Textarea>
+    </div>
   </div>
 </Field>
 `;
 
 exports[`should render an invalid and required field with an Input 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -1664,13 +1873,14 @@ exports[`should render an invalid and required field with an Input 1`] = `
   isInline={false}
   isInvalid={true}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Field Label"
   labelAttrs={Object {}}
   required={true}
   showOptional={false}
 >
   <div
-    className="field"
+    className="field-top"
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1742,7 +1952,7 @@ exports[`should render an invalid and required field with an Input 1`] = `
         </IconError>
       </div>
       <label
-        className="label"
+        className="label-top"
         htmlFor="test"
       >
         <div
@@ -1753,22 +1963,27 @@ exports[`should render an invalid and required field with an Input 1`] = `
         Field Label
       </label>
     </div>
-    <Input
-      isInvalid={true}
-      key=".0"
-      required={true}
+    <div
+      className="field-content"
     >
-      <input
-        invalid="true"
+      <Input
+        isInvalid={true}
+        key=".0"
         required={true}
-      />
-    </Input>
+      >
+        <input
+          invalid="true"
+          required={true}
+        />
+      </Input>
+    </div>
   </div>
 </Field>
 `;
 
 exports[`should render an invalid field with a Select 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -1809,13 +2024,14 @@ exports[`should render an invalid field with a Select 1`] = `
   isInline={false}
   isInvalid={true}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Field Label"
   labelAttrs={Object {}}
   required={false}
   showOptional={false}
 >
   <div
-    className="field"
+    className="field-top"
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1887,26 +2103,31 @@ exports[`should render an invalid field with a Select 1`] = `
         </IconError>
       </div>
       <label
-        className="label"
+        className="label-top"
         htmlFor="test"
       >
         Field Label
       </label>
     </div>
-    <Select
-      isInvalid={true}
-      key=".0"
+    <div
+      className="field-content"
     >
-      <select
-        invalid="true"
-      />
-    </Select>
+      <Select
+        isInvalid={true}
+        key=".0"
+      >
+        <select
+          invalid="true"
+        />
+      </Select>
+    </div>
   </div>
 </Field>
 `;
 
 exports[`should render an invalid field with an Input 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -1947,13 +2168,14 @@ exports[`should render an invalid field with an Input 1`] = `
   isInline={false}
   isInvalid={true}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Field Label"
   labelAttrs={Object {}}
   required={false}
   showOptional={false}
 >
   <div
-    className="field"
+    className="field-top"
     intl={
       Object {
         "defaultFormats": Object {},
@@ -2025,26 +2247,31 @@ exports[`should render an invalid field with an Input 1`] = `
         </IconError>
       </div>
       <label
-        className="label"
+        className="label-top"
         htmlFor="test"
       >
         Field Label
       </label>
     </div>
-    <Input
-      isInvalid={true}
-      key=".0"
+    <div
+      className="field-content"
     >
-      <input
-        invalid="true"
-      />
-    </Input>
+      <Input
+        isInvalid={true}
+        key=".0"
+      >
+        <input
+          invalid="true"
+        />
+      </Input>
+    </div>
   </div>
 </Field>
 `;
 
 exports[`should render an invalid field with an Textarea 1`] = `
 <Field
+  alignLabel="top"
   error={null}
   errorIcon={
     <IconError
@@ -2085,13 +2312,14 @@ exports[`should render an invalid field with an Textarea 1`] = `
   isInline={false}
   isInvalid={true}
   isLabelHidden={false}
+  isLegendHidden={false}
   label="Field Label"
   labelAttrs={Object {}}
   required={false}
   showOptional={false}
 >
   <div
-    className="field"
+    className="field-top"
     intl={
       Object {
         "defaultFormats": Object {},
@@ -2163,27 +2391,31 @@ exports[`should render an invalid field with an Textarea 1`] = `
         </IconError>
       </div>
       <label
-        className="label"
+        className="label-top"
         htmlFor="test"
       >
         Field Label
       </label>
     </div>
-    <Textarea
-      isInvalid={true}
-      key=".0"
+    <div
+      className="field-content"
     >
-      <textarea
-        invalid="true"
-      />
-    </Textarea>
+      <Textarea
+        isInvalid={true}
+        key=".0"
+      >
+        <textarea
+          invalid="true"
+        />
+      </Textarea>
+    </div>
   </div>
 </Field>
 `;
 
 exports[`should render an optional field in error 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -2224,7 +2456,7 @@ exports[`should render an optional field in error 1`] = `
       />
     </div>
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -2237,26 +2469,30 @@ exports[`should render an optional field in error 1`] = `
     </label>
   </div>
   <div
-    aria-live="assertive"
-    className="error-text"
-    id="test-error"
-    tabIndex="-1"
+    className="field-content"
   >
-    Error Text
-  </div>
-  <div
-    className="help-text"
-    id="test-help"
-    tabIndex="-1"
-  >
-    Help Text
+    <div
+      aria-live="assertive"
+      className="error-text"
+      id="test-error"
+      tabIndex="-1"
+    >
+      Error Text
+    </div>
+    <div
+      className="help-text"
+      id="test-help"
+      tabIndex="-1"
+    >
+      Help Text
+    </div>
   </div>
 </div>
 `;
 
 exports[`should render an optional field label 1`] = `
 <div
-  className="field"
+  className="field-top"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -2289,7 +2525,7 @@ exports[`should render an optional field label 1`] = `
     className="label-group"
   >
     <label
-      className="label"
+      className="label-top"
       htmlFor="test"
     >
       Field Label
@@ -2309,5 +2545,8 @@ exports[`should render an optional field label 1`] = `
       />
     </div>
   </div>
+  <div
+    className="field-content"
+  />
 </div>
 `;

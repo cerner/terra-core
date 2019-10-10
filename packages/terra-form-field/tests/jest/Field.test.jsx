@@ -42,6 +42,19 @@ it('should render a required field label', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a field label with legend', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      required
+      legend="Feild Label with legend"
+    />
+  );
+  const wrapper = shallowWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should render a required field label with required hidden', () => {
   const field = (
     <Field
@@ -61,6 +74,19 @@ it('should render a field with a hidden label', () => {
       label="Field Label"
       htmlFor="test"
       isLabelHidden
+    />
+  );
+  const wrapper = shallowWithIntl(field);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a field with a hidden legend', () => {
+  const field = (
+    <Field
+      label="Field Label"
+      htmlFor="test"
+      legend="Hidden Legend"
+      isLegendHidden
     />
   );
   const wrapper = shallowWithIntl(field);
