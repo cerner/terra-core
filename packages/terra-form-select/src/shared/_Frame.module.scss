@@ -282,12 +282,12 @@
       }
 
       &.is-invalid {
-        border: 1px solid #e50000;
-        box-shadow: 0 0 0 1px #e50000;
+        border-color: var(--terra-form-select-toggle-invalid-border-color, #e50000);
+        box-shadow: var(--terra-form-select-toggle-invalid-box-shadow, 0 0 0 1px #e50000);
 
         &:focus {
-          border-color:  #e50000;
-          box-shadow: 0 0 0 1px #e50000, 0 0 4px 3px rgba(229, 0, 0, 0.35);
+          border-color: var(--terra-form-select-toggle-invalid-focus-border-color, #e50000);
+          box-shadow: var(--terra-form-select-toggle-invalid-focus-box-shadow, 0 0 0 1px #e50000, 0 0 4px 3px rgba(229, 0, 0, 0.35));
         }
       }
     }
