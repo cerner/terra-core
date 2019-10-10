@@ -26,7 +26,7 @@ const createRows = data => data.map(childItem => createRow(childItem));
 const FixedWidthTable = () => (
   <Table
     paddingStyle="standard"
-    header={(
+    headerRow={(
       <HeaderRow>
         <HeaderCell isPadded key="cell-0" width={widths[0]}>60px</HeaderCell>
         <HeaderCell isPadded key="cell-1" width={widths[1]}>45px</HeaderCell>

@@ -16,12 +16,12 @@
   }
 
   .checkmark {
+    background-repeat: no-repeat;
+    background-size: contain;
     border: 1px solid transparent;
-    border-radius: 3px;  // TODO: Need expected sizing
-    color: transparent;
+    border-radius: 3px; // TODO: Need expected sizing
     height: 1rem; // TODO: Need expected sizing
     padding: 1px;
-    position: relative;
     width: 1rem; // TODO: Need expected sizing
   }
 
@@ -32,57 +32,46 @@
     position: relative;
   }
 
-  .is-selected {
-    background: var(--terra-table-header-chevron-cell-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path id="checkmark" d="M18.4 40.9L0 22.5l4.2-4.2 14.2 14.2L43.8 7.1l4.2 4.2z"/></svg>'));
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: #000; // TODO: themable variable
-    display: block;
-  }
-
-  .is-selected.is-intermediate {
-    background: var(--terra-table-header-chevron-intermediate-cell-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path id="minus" d="M48 27H0v-6h48v6z"/></svg>'));
-    color: #ccc; // TODO: themable variable
-  }
-
   .is-selectable .checkmark {
-    background-color: #fff;
-    border: 1px solid #000;
+    background-color: #fff; // Clinical Theme Fill Value
+    border: 1px solid #4983d1; // Clinical Theme Border Value
   }
-  
-  /* stylelint-disable selector-max-compound-selectors */
-  .is-selectable:hover,
-  .is-selectable:focus {
-    .container > .highlight {
-      background-color: #c0bdbd; // TODO: Need hover styling
-      border-radius: 100%;
-      content: '';
-      height: 24px; // TODO: Need expected sizing
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      transform: translate3d(-50%, -50%, 0);
-      width: 24px; // TODO: Need expected sizing
-      z-index: 1;
-    }
 
-    .container > .checkmark {
-      z-index: 2;
-    }
+  .is-selectable:hover .checkmark {
+    border: 1px solid #3a67a4; // Clinical Theme Border Value
+  }
+
+  .is-selectable:active .checkmark {
+    background-color: #b5d4fe; // Clinical Theme Fill Value
+    border: 1px solid #3a67a4; // Clinical Theme Border Value
   }
 
   .is-selectable[data-cell-show-focus='true']:focus {
-    &:hover {
-      .container > .highlight {
-        background-color: #e75959; // TODO: Need hover styling
-      }
-    }
-
-    .container > .highlight {
-      background-color: #bbb2f0; // TODO: Need focus styling
-    }
+    outline: 2px dashed #2a4b77;
+    outline-offset: -2px;
   }
-  /* stylelint-enable selector-max-compound-selectors */
+
+  .is-selectable .checkmark.is-selected {
+    background-color: #3a67a4; // Clinical Theme Fill Value
+    background-image: var(--terra-table-header-checkmark-cell-background-image, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>'));
+  }
+
+  .is-selectable .is-selected.is-intermediate {
+    background-image: var(--terra-table-header-checkmark-cell-intermediate-background-image,  inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="indeterminate_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect id="Rectangle" fill="#FFFFFF" x="3" y="6" width="8" height="2"></rect></g></svg>'));
+  }
+
+  .is-selectable:hover .is-selected {
+    background-color: #2a4b77; // Clinical Theme Fill Value
+  }
+
+  .is-selectable:active .is-selected {
+    background-color: #1a2f4b; // Clinical Theme Fill Value
+  }
+
+  .container {
+    padding-left: var(--terra-table-check-cell-default-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-check-cell-default-padding-right, 0.7142857143rem);
+  }
 
   [data-table-padding='standard'] .container {
     padding-bottom: var(--terra-table-header-check-cell-standard-padding-bottom, 0.5rem);
