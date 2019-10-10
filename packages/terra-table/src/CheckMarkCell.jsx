@@ -14,6 +14,10 @@ const propTypes = {
    */
   alignmentPadding: PropTypes.number,
   /**
+   * Whether or not the cell display as disabled.
+   */
+  isDisabled: PropTypes.bool,
+  /**
    * Whether or not the check should be it's own click target.
    */
   isSelectable: PropTypes.bool,
@@ -69,6 +73,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  isDisabled: false,
   isPadded: false,
   isSelected: false,
   isSelectable: false,
@@ -76,6 +81,7 @@ const defaultProps = {
 
 const CheckMarkCell = ({
   alignmentPadding,
+  isDisabled,
   isPadded,
   isSelected,
   isSelectable,
@@ -92,12 +98,16 @@ const CheckMarkCell = ({
   const attrSpread = {};
   const attrCheck = {};
   if (isSelectable) {
-    attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-    attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-    attrSpread.tabIndex = '0';
-    attrSpread['data-cell-show-focus'] = 'true';
-    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
-    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
+    if (isDisabled) {
+      attrCheck['aria-disabled'] = true;
+    } else {
+      attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
+      attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+      attrSpread.tabIndex = '0';
+      attrSpread['data-cell-show-focus'] = 'true';
+      attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
+      attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
+    }
 
     // attributes for checkbox
     attrCheck.role = 'checkbox';
@@ -115,7 +125,7 @@ const CheckMarkCell = ({
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={cx(
         'cell',
-        { 'is-selectable': isSelectable },
+        { 'is-selectable': !isDisabled && isSelectable },
         { 'is-top-align': !!attrCheck.style },
         customProps.className,
       )}
@@ -128,6 +138,7 @@ const CheckMarkCell = ({
           className={cx(
             'checkmark',
             { 'is-selected': isSelected },
+            { 'is-disabled': isDisabled },
           )}
         />
       </div>
