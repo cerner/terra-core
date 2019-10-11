@@ -134,7 +134,7 @@ const HeaderCheckMarkCell = ({
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={cx(
         'header-cell',
-        { 'is-selectable': !isDisabled && isSelectable },
+        { 'is-interactable': !isDisabled && isSelectable },
         customProps.className,
       )}
       ref={refCallback}

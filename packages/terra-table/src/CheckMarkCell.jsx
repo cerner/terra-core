@@ -125,7 +125,7 @@ const CheckMarkCell = ({
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={cx(
         'cell',
-        { 'is-selectable': !isDisabled && isSelectable },
+        { 'is-interactable': !isDisabled && isSelectable },
         { 'is-top-align': !!attrCheck.style },
         customProps.className,
       )}
@@ -136,6 +136,7 @@ const CheckMarkCell = ({
         <span
           className={cx(
             'checkmark',
+            { 'is-selectable': isSelectable },
             { 'is-selected': isSelected },
             { 'is-disabled': isDisabled },
           )}
