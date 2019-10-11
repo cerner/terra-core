@@ -19,6 +19,10 @@ const propTypes = {
    */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
   /**
+   * Whether or not the cell display as disabled.
+   */
+  isDisabled: PropTypes.bool,
+  /**
    * Whether or not row is selected
    */
   isSelected: PropTypes.bool,
@@ -69,6 +73,7 @@ const propTypes = {
 
 const defaultProps = {
   dividerStyle: 'none',
+  isDisabled: false,
   isSelected: false,
   isSelectable: false,
   isStriped: false,
@@ -78,6 +83,7 @@ const defaultProps = {
 const Row = ({
   children,
   dividerStyle,
+  isDisabled,
   isSelected,
   isSelectable,
   isStriped,
@@ -102,13 +108,17 @@ const Row = ({
 
   const attrSpread = {};
   if (isSelectable) {
-    attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-    attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-    attrSpread.tabIndex = '0';
+    if (isDisabled) {
+      attrSpread['aria-disabled'] = true;
+    } else {
+      attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
+      attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+      attrSpread.tabIndex = '0';
+      attrSpread['data-row-show-focus'] = 'true';
+      attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
+      attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
+    }
     attrSpread['aria-selected'] = isSelected;
-    attrSpread['data-row-show-focus'] = 'true';
-    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
-    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
   }
 
   let check;

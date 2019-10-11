@@ -36,6 +36,10 @@
     justify-content: flex-start;
   }
 
+  .is-selectable {
+    cursor: pointer;
+  }
+
   .is-selectable .checkmark {
     background-color: #fff; // Clinical Theme Fill Value
     border: 1px solid #4983d1; // Clinical Theme Border Value
@@ -68,15 +72,30 @@
     background-color: #1a2f4b; // Clinical Theme Fill Value
   }
 
+  .checkmark.is-selected {
+    background-color: transparent; // Clinical Theme Fill Value
+    background-image: var(--terra-table-checkmark-cell-background, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#000000" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>'));
+  }
+
   .checkmark.is-disabled {
+    background-color: rgba(255, 255, 255, 0.5); // Clinical Theme Fill Value
+    background-image: var(--terra-table-checkmark-cell-background, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>'));
+  }
+
+  .checkmark.is-disabled.is-selected {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent; // Clinical Theme Fill Value
+    background-image: var(--terra-table-checkmark-cell-background, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#cccccc" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>'));
+  }
+
+  .is-selectable .checkmark.is-disabled {
     background-color: rgba(255, 255, 255, 0.5); // Clinical Theme Fill Value
     background-image: var(--terra-table-checkmark-cell-background, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>'));
     border: 1px solid rgba(89, 159, 253, 0.5); // Clinical Theme Border Value
   }
 
-  .checkmark.is-disabled.is-selected {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(42, 75, 119, 0.5); // Clinical Theme Fill Value
+  .is-selectable .checkmark.is-disabled.is-selected {
+    background-color: #3a67a4; // Clinical Theme Fill Value
     background-image: var(--terra-table-checkmark-cell-background, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>'));
   }
 

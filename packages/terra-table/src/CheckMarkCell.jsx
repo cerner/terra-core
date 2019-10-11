@@ -133,7 +133,6 @@ const CheckMarkCell = ({
       role={isSelectable ? 'rowheader' : 'none'}
     >
       <div {...attrCheck} className={cx('container')}>
-        <span className={cx('highlight')} />
         <span
           className={cx(
             'checkmark',

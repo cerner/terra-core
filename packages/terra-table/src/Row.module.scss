@@ -43,8 +43,9 @@
       background-color: var(--terra-table-row-striped-selected-background-color, darken(#ebf6fd, 7%));
     }
 
-    &.is-selectable:hover,
-    &.is-selectable:focus {
+    // &.is-selectable:hover,
+    // &.is-selectable:focus {
+      &.is-selectable:hover {
       background-color: var(--terra-table-row-striped-hover-focus-background-color, darken(#ebf6fd, 2%));
 
       &.is-selected {
@@ -69,8 +70,9 @@
     cursor: pointer;
     outline: var(--terra-table-row-focus-outline, none);
 
-    &:hover,
-    &:focus {
+    &:hover {
+    // &:hover,
+    // &:focus {
       background-color: var(--terra-table-row-hover-focus-background-color, lighten(#ebf6fd, 2%));
     }
 
@@ -86,8 +88,9 @@
       }
     }
 
-    &.is-selected:hover,
-    &.is-selected:focus {
+    &.is-selected:hover {
+    // &.is-selected:hover,
+    // &.is-selected:focus {
       background-color: var(--terra-table-row-selected-hover-focus-background-color, darken(#ebf6fd, 7%)) !important;
     }
   }

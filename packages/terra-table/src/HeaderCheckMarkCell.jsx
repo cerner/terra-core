@@ -141,13 +141,12 @@ const HeaderCheckMarkCell = ({
       role={isSelectable ? 'columnheader' : 'none'}
     >
       <div {...attrCheck} className={cx('container')}>
-        <span className={cx('highlight')} />
         <span
           className={cx(
             'checkmark',
-            { 'is-selected': isSelected },
-            { 'is-intermediate': isIntermediate },
-            { 'is-disabled': isDisabled },
+            { 'is-selected': isSelectable && isSelected },
+            { 'is-intermediate': isSelectable && isIntermediate },
+            { 'is-disabled': isSelectable && isDisabled },
           )}
         />
       </div>

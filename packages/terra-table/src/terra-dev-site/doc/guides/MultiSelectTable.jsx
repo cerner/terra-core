@@ -23,7 +23,8 @@ const MultiSelectTable = () => {
   const createRow = rowData => (
     <Row
       key={rowData.key}
-      isSelectable={Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key)}
+      isSelectable
+      isDisabled={!Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key)} // TODO: Rename?
       isSelected={selectedKeys.indexOf(rowData.key) >= 0}
       metaData={{ key: rowData.key }}
       onSelect={handleRowSelection}
