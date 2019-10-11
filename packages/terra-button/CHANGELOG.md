@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added Theme variables for disabled background color
 
 3.25.0 - (October 3, 2019)
 ------------------

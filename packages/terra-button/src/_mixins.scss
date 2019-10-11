@@ -27,6 +27,11 @@
     color: map-get($color-map, active-color);
   }
 
+  &:disabled,
+  &.is-disabled {
+    background-color: map-get($color-map, disabled-background-color);
+  }
+
   &.is-active.is-focused,
   &:active.is-focused {
     background-color: map-get($color-map, active-and-focus-background-color);
