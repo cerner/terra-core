@@ -137,7 +137,7 @@ class Input extends React.Component {
 
     if (value !== undefined) {
       attributes.value = value;
-    } else {
+    } else if (defaultValue !== undefined) {
       attributes.defaultValue = defaultValue;
     }
 
