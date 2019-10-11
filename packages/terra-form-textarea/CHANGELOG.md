@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `placeholder` as a property to `<Textarea />` and `<TextareaField />`
 
 3.28.0 - (October 3, 2019)
 ------------------
