@@ -35,6 +35,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
+   * The id of the input field.
+   */
+  id: PropTypes.string,
+  /**
    * @private
    * The intl object to be injected for translations.
    */
@@ -187,10 +191,10 @@ class Frame extends React.Component {
     this.input = input;
   }
 
-  getDisplay(displayId, ariaDescribedBy, id) {
+  getDisplay(displayId, ariaDescribedBy) {
     const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required, value,
+      disabled, display, placeholder, required, value, id,
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
@@ -611,6 +615,7 @@ class Frame extends React.Component {
       disabled,
       display,
       dropdownAttrs,
+      id,
       intl,
       isTouchAccessible,
       isInvalid,
@@ -643,8 +648,6 @@ class Frame extends React.Component {
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
-    const { id } = customProps;
-    delete customProps.id;
 
     const menuProps = {
       value,
@@ -685,7 +688,7 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')}>
-          {this.getDisplay(displayId, ariaDescribedBy, id)}
+          {this.getDisplay(displayId, ariaDescribedBy)}
         </div>
         {this.renderToggleButton()}
         <span
