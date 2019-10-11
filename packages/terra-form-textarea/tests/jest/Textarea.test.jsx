@@ -42,7 +42,7 @@ it('should render as uncontrolled when just a default value is passed into the T
 });
 
 it('should render as controlled when just a default value is passed into the Textarea', () => {
-  const textarea = <Textarea ariaLabel="label" value="foo" onChange={() => {}} />;
+  const textarea = <Textarea ariaLabel="label" value="foo" onChange={() => { }} />;
   const wrapper = render(textarea);
   expect(wrapper).toMatchSnapshot();
 });
@@ -166,4 +166,10 @@ it('should set the ref when refCallback is passed into the component', () => {
   const wrapper = mount(textarea);
 
   expect(refCallback).toHaveBeenCalledWith(wrapper.find('textarea').instance());
+});
+
+it('should render a placeholder within the textarea', () => {
+  const textarea = <Textarea placeholder="placeholder" />;
+  const wrapper = render(textarea);
+  expect(wrapper).toMatchSnapshot();
 });

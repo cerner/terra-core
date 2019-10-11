@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
+* Added `placeholder` as a property to `<Textarea />` and `<TextareaField />`
 * Added `isIncomplete` prop to show incomplete stylings.
 
 3.28.0 - (October 3, 2019)

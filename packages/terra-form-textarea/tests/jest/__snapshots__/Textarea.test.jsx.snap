@@ -82,6 +82,14 @@ exports[`should render a medium textbox appropriately 1`] = `
 />
 `;
 
+exports[`should render a placeholder within the textarea 1`] = `
+<textarea
+  class="textarea"
+  placeholder="placeholder"
+  rows="2"
+/>
+`;
+
 exports[`should render a small textbox appropriately 1`] = `
 <textarea
   class="textarea"
