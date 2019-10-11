@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated Jest Snapshots of Input-Feild for the new props of Terra-Feild.
+
 ### Fixed
 * File input to show selection in edge.
 

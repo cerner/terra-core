@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated Jest Snapshots of Select-Feild for the new props of Terra-Feild.
 
 5.32.0 - (October 3, 2019)
 ------------------
