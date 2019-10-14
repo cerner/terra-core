@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.29.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * File input to show selection in edge.
 

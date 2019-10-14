@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.31.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * Updated test screenshots to deal with css change in `terra-form-input`.
 
