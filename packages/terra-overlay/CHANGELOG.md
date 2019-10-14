@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Fixed
+* Fixed inert property management during component update lifecycle
+
 3.31.0 - (October 14, 2019)
 ------------------
 ### Changed
