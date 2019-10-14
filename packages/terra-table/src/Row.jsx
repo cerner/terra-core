@@ -99,7 +99,7 @@ const Row = ({
 }) => {
   const rowClassNames = cx([
     { 'is-selected': selectionStyle === 'default' && isSelected && isSelectable },
-    { 'is-selectable': isSelectable },
+    { 'is-selectable': !isDisabled && isSelectable },
     { 'is-striped': isStriped },
     `divider-${dividerStyle}`,
     'row',
