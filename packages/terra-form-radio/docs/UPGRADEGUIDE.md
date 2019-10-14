@@ -1,5 +1,13 @@
 # Terra Form Radio Upgrade Guide
 
+## Changes from version 3 to version 4
+
+### Props
+
+#### Updated
+* `labelText` prop now only accepts string.
+* `legend` prop now only accepts string.
+
 ## Changes from version 2 to version 3
 
 ### Changes to CSS Custom Properties

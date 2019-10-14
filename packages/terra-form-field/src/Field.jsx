@@ -47,7 +47,7 @@ const propTypes = {
   /**
    * The label of the form control children.
    */
-  label: PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
   /**
    * Attributes to attach to the label.
    */

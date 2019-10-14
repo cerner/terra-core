@@ -1,5 +1,12 @@
 # Terra Form Textarea Upgrade Guide
 
+## Changes from version 3 to version 4
+
+### Props
+
+#### Updated
+* `label` prop now only accepts string.
+
 ## Changes from version 2 to version 3
 
 ### Changes to CSS Custom Properties

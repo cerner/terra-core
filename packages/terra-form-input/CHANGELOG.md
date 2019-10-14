@@ -9,6 +9,9 @@ Unreleased
 ### Added
 * File input example added.
 
+### Changed
+* `label` prop's type changed from node to string.
+
 2.28.0 - (October 3, 2019)
 ------------------
 ### Added

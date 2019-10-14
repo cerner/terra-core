@@ -1,5 +1,12 @@
 # Terra Form Input Upgrade Guide
 
+## Changes from version 2 to version 3
+
+### Props
+
+#### Updated
+* `label` prop now only accepts string.
+
 ## Changes from version 1 to version 2
 
 ### Changes to CSS Custom Properties

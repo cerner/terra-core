@@ -1,5 +1,12 @@
 # Terra Form Select Upgrade Guide
 
+## Changes from version 5 to version 6
+
+### Props
+
+#### Updated
+* `label` prop now only accepts string.
+
 ## Changes from version 4 to version 5
 
 ### Changes to CSS Custom Properties

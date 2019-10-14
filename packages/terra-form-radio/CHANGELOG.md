@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* `labelText` and `legend` props' type changed from node to string.
 
 3.29.0 - (October 3, 2019)
 ------------------
