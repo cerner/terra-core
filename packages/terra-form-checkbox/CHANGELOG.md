@@ -8,8 +8,6 @@ Unreleased
 ------------------
 ### Changed
 * Minor dependency version bump
-
-### Changed
 * Updated `isInvalid` prop description.
 
 3.26.0 - (October 3, 2019)

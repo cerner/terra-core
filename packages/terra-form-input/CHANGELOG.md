@@ -14,11 +14,11 @@ Unreleased
 
 ### Added
 * File input example added.
+* Added `isIncomplete` prop to show incomplete stylings.
 
 2.28.0 - (October 3, 2019)
 ------------------
 ### Added
-* Added `isIncomplete` prop to show incomplete stylings.
 * Added `placeholder` as a first class property to `<Input />` and `<InputField />`
 
 2.27.0 - (September 26, 2019)
