@@ -82,6 +82,7 @@ const DocPage = () => (
       },
       {
         title: 'Controlled Example - Incomplete',
+        description: 'Applies theme-specific styling for incomplete, this controlled example shows a simple version of incomplete styling being removed after value is added. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
         example: <ControlledDefaultIncompleteExample />,
         source: ControlledDefaultIncompleteExampleSrc,
       },
