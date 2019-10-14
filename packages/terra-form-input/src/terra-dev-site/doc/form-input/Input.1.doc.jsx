@@ -113,6 +113,7 @@ const DocPage = () => (
       },
       {
         title: 'Uncontrolled Example - Invalid And Incomplete With Invalid Taking Precedence',
+        description: 'Applies theme-specific styling for incomplete and invalid, invalid-only styling displays taking precedence. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
         example: <UncontrolledInvalidWithIncompleteExample />,
         source: UncontrolledInvalidWithIncompleteExampleSrc,
       },
