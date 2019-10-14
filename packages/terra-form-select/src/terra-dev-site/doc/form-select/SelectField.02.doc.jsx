@@ -14,6 +14,8 @@ import SelectFieldExample from '../example/legacy/SelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/SelectField';
 import RequiredSelectFieldExample from '../example/legacy/RequiredSelectField';
 import RequiredSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/RequiredSelectField';
+import IncompleteSelectFieldExample from '../example/legacy/IncompleteSelectField';
+import IncompleteSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/IncompleteSelectField';
 
 const DocPage = () => (
   <DocTemplate
@@ -41,6 +43,11 @@ const DocPage = () => (
       description: 'A multiple selection variant that allows up to a set number of selections. (Not applicable to  \'default\', \'combobox\', and \'search\' variants)',
       example: <MaxSelectionExample />,
       source: MaxSelectionExampleSrc,
+    }, {
+      title: 'Incomplete Select Field Example',
+      description: 'Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
+      example: <IncompleteSelectFieldExample />,
+      source: IncompleteSelectFieldExampleSrc,
     }]}
   />
 );

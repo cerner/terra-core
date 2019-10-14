@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Updated test screenshots to deal with css change in `terra-form-input`.
+
 ### Changed
 * Jest snapshot update due to changes in form input.
 
