@@ -37,6 +37,7 @@ const DocPage = () => (
         source: RequiredTextareaFieldExampleSrc,
       },
       {
+        description: 'Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
         example: <IncompleteTextareaFieldExample />,
         source: IncompleteTextareaFieldExampleSrc,
       },
