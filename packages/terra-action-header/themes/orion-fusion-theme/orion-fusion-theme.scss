@@ -1,0 +1,37 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-action-header-background-color: #f4f4f4;
+  --terra-action-header-border-bottom: 2px solid #9b9fa1;
+  --terra-action-header-border-left: 0 none;
+  --terra-action-header-border-right: 0 none;
+  --terra-action-header-border-top: 0 none;
+  --terra-action-header-box-shadow: none;
+  --terra-action-header-min-height: 3rem;
+  --terra-action-header-padding: 0.25rem;
+
+  --terra-action-header-color: #1c1f21;
+  --terra-action-header-font-size: 1.5rem;
+  --terra-action-header-title-padding: 0;
+  --terra-action-header-title-padding-top: 0;
+
+  --terra-action-header-margin-right: 0.5rem;
+  --terra-action-header-margin-left: 0.5rem;
+
+  --terra-action-header-icon-top: 0.0833rem;
+
+  @include terra-inline-svg-var('--terra-action-header-back-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-close-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-maximize-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M17.7 26.1L6.9 36.9 0 30v18h18l-6.9-6.9 10.8-10.8zM48 0H30l6.9 6.9-10.8 10.8 4.2 4.2 10.8-10.8L48 18z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-minimize-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10.8 32.9L0 43.7 4.2 48l10.9-10.8 6.9 6.9V26H3.9zM48 4.2L43.8 0 32.9 10.8 26 3.9V22h18.1l-6.9-6.9z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-previous-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 10.3l24 23.5-3.8 3.9L24 18 3.8 37.7 0 33.8z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-next-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"></path></svg>');
+  
+  /* -- terra-action-header v2.16 variable names --*/
+  @include terra-inline-svg-var('--terra-action-header-back-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-close-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-maximize-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M17.7 26.1L6.9 36.9 0 30v18h18l-6.9-6.9 10.8-10.8zM48 0H30l6.9 6.9-10.8 10.8 4.2 4.2 10.8-10.8L48 18z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-minimize-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10.8 32.9L0 43.7 4.2 48l10.9-10.8 6.9 6.9V26H3.9zM48 4.2L43.8 0 32.9 10.8 26 3.9V22h18.1l-6.9-6.9z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-previous-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 10.3l24 23.5-3.8 3.9L24 18 3.8 37.7 0 33.8z"></path></svg>');
+  @include terra-inline-svg-var('--terra-action-header-next-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"></path></svg>');
+}
