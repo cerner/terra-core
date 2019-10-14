@@ -70,7 +70,8 @@ const DocPage = () => (
         source: InvalidExampleSrc,
       },
       {
-        description: 'Leaving this as blank makes this input incomplete.',
+        description: 'Applies theme-specific styling for incomplete, this example shows simple version of incomplete styling being removed after value is added. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
+
         example: <IncompleteExample />,
         source: IncompleteExampleSrc,
       },
