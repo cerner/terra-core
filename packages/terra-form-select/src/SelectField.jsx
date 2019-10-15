@@ -39,6 +39,10 @@ const propTypes = {
    */
   hideRequired: PropTypes.bool,
   /**
+   * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
    * Whether the field is displayed inline. Displays block by default.
    */
   isInline: PropTypes.bool,
@@ -114,6 +118,7 @@ const defaultProps = {
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isIncomplete: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
@@ -147,6 +152,7 @@ const SelectField = ({
   error,
   help,
   hideRequired,
+  isIncomplete,
   isInline,
   isInvalid,
   isLabelHidden,
@@ -218,6 +224,7 @@ const SelectField = ({
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
+        isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         defaultValue={defaultValue}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}

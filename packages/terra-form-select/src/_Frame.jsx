@@ -44,6 +44,10 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
@@ -117,6 +121,7 @@ const defaultProps = {
   disabled: false,
   dropdown: undefined,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
@@ -597,7 +602,7 @@ class Frame extends React.Component {
   }
 
   renderToggleButton() {
-    const { intl, variant } = this.props;
+    const { intl, variant, isInvalid } = this.props;
 
     const mobileButtonUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.mobileButtonUsageGuidance' });
 
@@ -616,19 +621,30 @@ class Frame extends React.Component {
          * prevents users from ever navigating through the select options.
          */
         if (this.state.isInputFocused) {
+          const toggleClasses = cx([
+            'toggle',
+            { 'is-invalid': isInvalid },
+          ]);
+
           return (
-            <div data-terra-form-select-toggle className={cx('toggle')} onMouseDown={this.handleToggleMouseDown}>
+            <div data-terra-form-select-toggle className={toggleClasses} onMouseDown={this.handleToggleMouseDown}>
               <span className={cx('arrow-icon')} />
             </div>
           );
         }
+
+        const toggleClasses = cx([
+          'toggle',
+          'toggle-narrow',
+          { 'is-invalid': isInvalid },
+        ]);
 
         /**
          * Toggle button enables shifting focus to dropdown. This allows iOS users that are using
          * VoiceOver the ability to navigate to the select options.
          */
         return (
-          <div className={cx(['toggle', 'toggle-narrow'])}>
+          <div className={toggleClasses}>
             <button
               type="button"
               className={cx('toggle-btn')}
@@ -642,12 +658,17 @@ class Frame extends React.Component {
         );
       }
 
+      const toggleClasses = cx([
+        'toggle',
+        { 'is-invalid': isInvalid },
+      ]);
+
       /**
        * If the variant is default, we don't need to set up any event handlers on the toggle
        * The event handlers on data-terra-select-combobox will handle tap/click events on this element
        */
       return (
-        <div data-terra-form-select-toggle className={cx('toggle')}>
+        <div data-terra-form-select-toggle className={toggleClasses}>
           <span className={cx('arrow-icon')} />
         </div>
       );
@@ -667,6 +688,7 @@ class Frame extends React.Component {
       display,
       dropdown,
       dropdownAttrs,
+      isIncomplete,
       isInvalid,
       maxHeight,
       maxSelectionCount,
@@ -689,6 +711,7 @@ class Frame extends React.Component {
       { 'is-above': this.state.isAbove },
       { 'is-disabled': disabled },
       { 'is-focused': this.state.isFocused },
+      { 'is-incomplete': (isIncomplete && required && !isInvalid) },
       { 'is-invalid': isInvalid },
       { 'is-open': this.state.isOpen },
       customProps.className,

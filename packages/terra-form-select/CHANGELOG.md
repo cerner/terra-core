@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+5.25.0 - (October 15, 2019)
+------------------
+### Changed
+* Added `isIncomplete` prop to show incomplete stylings.
+
 5.25.0 - (July 30, 2019)
 ------------------
 ### Changed

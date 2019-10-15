@@ -32,6 +32,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
    * Whether the select is in an invalid state.
    */
   isInvalid: PropTypes.bool,
@@ -110,6 +114,7 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: undefined,
   isInvalid: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
