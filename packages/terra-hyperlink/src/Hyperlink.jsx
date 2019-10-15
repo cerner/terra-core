@@ -165,23 +165,21 @@ class Hyperlink extends React.Component {
     }
 
     return (
-      <React.Fragment>
-        <ComponentType
-          {...customProps}
-          className={hyperlinkClasses}
-          onKeyDown={this.handleKeyDown}
-          onKeyUp={this.handleKeyUp}
-          onBlur={this.handleOnBlur}
-          onClick={onClick}
-          onFocus={onFocus}
-          href={isDisabled ? null : href}
-          target={target}
-          rel={rel}
-        >
-          {children}
-          {getHyperlinkIcon(variant)}
-        </ComponentType>
-      </React.Fragment>
+      <ComponentType
+        {...customProps}
+        className={hyperlinkClasses}
+        onKeyDown={this.handleKeyDown}
+        onKeyUp={this.handleKeyUp}
+        onBlur={this.handleOnBlur}
+        onClick={onClick}
+        onFocus={onFocus}
+        href={isDisabled ? null : href}
+        target={target}
+        rel={rel}
+      >
+        {children}
+        {getHyperlinkIcon(variant)}
+      </ComponentType>
     );
   }
 }
