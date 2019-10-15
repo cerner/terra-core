@@ -146,6 +146,15 @@ exports[`should set the textarea to disabled when passed into the component 1`] 
 />
 `;
 
+exports[`should set the textarea to incomplete when isIncomplete and required is passed into the component 1`] = `
+<textarea
+  aria-required="true"
+  class="textarea form-incomplete"
+  required=""
+  rows="2"
+/>
+`;
+
 exports[`should set the textarea to invalid when isInvalid is passed into the component 1`] = `
 <textarea
   class="textarea form-error"

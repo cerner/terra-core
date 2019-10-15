@@ -153,6 +153,12 @@ it('should set the textarea to invalid when isInvalid is passed into the compone
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should set the textarea to incomplete when isIncomplete and required is passed into the component', () => {
+  const textarea = <Textarea isIncomplete required />;
+  const wrapper = render(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('should set the ref when refCallback is passed into the component', () => {
   const refCallback = jest.fn();
 

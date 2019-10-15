@@ -3,8 +3,15 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.31.0 - (October 14, 2019)
+------------------
+### Fixed
+* Updated test screenshots to deal with css change in `terra-form-input`.
+
 ### Changed
 * Jest snapshot update due to changes in form input.
+* Minor dependency version bump
 
 3.30.0 - (October 3, 2019)
 ------------------
