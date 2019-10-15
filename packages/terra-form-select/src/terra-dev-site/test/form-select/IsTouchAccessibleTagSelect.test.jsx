@@ -1,8 +1,12 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import TagSelect from '../../../TagSelect';
+import styles from './common/Select.test.module.scss';
+
+const cx = classNames.bind(styles);
 
 const IsTouchAccessibleTagSelect = () => (
-  <div>
+  <div className={cx('content-wrapper')}>
     <TagSelect placeholder="Select a color" id="tag" isTouchAccessible>
       <TagSelect.Option value="blue" display="Blue" />
       <TagSelect.Option value="green" display="Green" />

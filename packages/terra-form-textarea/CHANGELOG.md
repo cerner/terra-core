@@ -6,8 +6,14 @@ Unreleased
 ### Breaking Changes
 * `label` prop's type changed from node to string.
 
+3.29.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Added
 * Added `placeholder` as a property to `<Textarea />` and `<TextareaField />`
+* Added `isIncomplete` prop to show incomplete stylings.
 
 3.28.0 - (October 3, 2019)
 ------------------

@@ -6,6 +6,12 @@ Unreleased
 ### Breaking Changes
 * `label` prop's type changed from node to string.
 
+3.27.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Updated `isInvalid` prop description.
+
 3.26.0 - (October 3, 2019)
 ------------------
 ### Changed

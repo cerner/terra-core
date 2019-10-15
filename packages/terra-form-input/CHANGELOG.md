@@ -3,11 +3,18 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.29.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * File input to show selection in edge.
 
 ### Added
 * File input example added.
+* Added `isIncomplete` prop to show incomplete stylings.
 
 ### Breaking Changes
 * `label` prop's type changed from node to string.
