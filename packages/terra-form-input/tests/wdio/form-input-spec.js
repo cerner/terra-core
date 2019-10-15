@@ -15,6 +15,22 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
     Terra.it.validatesElement();
   });
 
+  describe('Incomplete', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-input/form-input/incomplete-form-input');
+    });
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Invalid With Incomplete', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-input/form-input/invalid-with-incomplete-form-input');
+    });
+
+    Terra.it.validatesElement();
+  });
+
   describe('Enabled', () => {
     describe('Enabled Non-Selected', () => {
       before(() => {
@@ -124,6 +140,15 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
         browser.click('#validity-toggle');
+      });
+
+      Terra.it.validatesElement();
+    });
+
+    describe('Incomplete InputField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
+        browser.click('#incomplete-toggle');
       });
 
       Terra.it.validatesElement();

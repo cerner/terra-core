@@ -46,7 +46,11 @@ const propTypes = {
    */
   isAutoResizable: PropTypes.bool,
   /**
-   * Whether the form is invalid
+   * Whether the text area displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the text area displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -94,6 +98,7 @@ const defaultProps = {
   disabled: false,
   name: null,
   isAutoResizable: false,
+  isIncomplete: false,
   isInvalid: false,
   onChange: undefined,
   placeholder: undefined,
@@ -187,6 +192,7 @@ class Textarea extends React.Component {
       onFocus,
       placeholder,
       isAutoResizable,
+      isIncomplete,
       isInvalid,
       value,
       defaultValue,
@@ -202,6 +208,7 @@ class Textarea extends React.Component {
     const textareaClasses = cx([
       'textarea',
       { 'form-error': isInvalid },
+      { 'form-incomplete': (isIncomplete && required && !isInvalid) },
       { 'full-size': size === 'full' },
       { resizable: isAutoResizable && !this.isMobileDevice },
       additionalTextareaProps.className,

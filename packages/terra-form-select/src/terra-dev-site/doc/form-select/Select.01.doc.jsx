@@ -24,6 +24,8 @@ import IsTouchAccessibleExample from '../example/legacy/IsTouchAccessible';
 import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/IsTouchAccessible';
 import InvalidExample from '../example/legacy/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Invalid';
+import IncompleteExample from '../example/legacy/Incomplete';
+import IncompleteExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/Incomplete';
 import MaxHeightExample from '../example/legacy/MaxHeight';
 import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/legacy/MaxHeight';
 import MultipleExample from '../example/legacy/Multiple';
@@ -97,6 +99,11 @@ const Index = () => (
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',
       example: <InvalidExample />,
       source: InvalidExampleSrc,
+    }, {
+      title: 'Incomplete (applies to all)',
+      description: 'Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
+      example: <IncompleteExample />,
+      source: IncompleteExampleSrc,
     }, {
       title: 'Ability to add Option Groups (applies to all)',
       description: 'An OptGroup provides a way to group options together within the listbox. Can be applied to all select variants (default, search, combobox, multiple, tag).',
