@@ -16,7 +16,7 @@ class OverlayExample extends React.Component {
 
     this.forceUpdateForTest = () => {
       this.forceUpdate();
-    }
+    };
   }
 
   componentDidMount() {
