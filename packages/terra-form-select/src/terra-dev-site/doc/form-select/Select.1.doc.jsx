@@ -19,6 +19,8 @@ import DefaultExample from '../example/Default';
 import DefaultExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Default';
 import DisabledExample from '../example/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Disabled';
+import IncompleteExample from '../example/Incomplete';
+import IncompleteExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Incomplete';
 import InvalidExample from '../example/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/Invalid';
 import MaxHeightExample from '../example/MaxHeight';
@@ -77,6 +79,11 @@ const Index = () => (
       title: 'Disabled (applies to all)',
       example: <DisabledExample />,
       source: DisabledExampleSrc,
+    }, {
+      title: 'Incomplete (applies to all)',
+      description: 'Applies theme-specific styling for incomplete. Will also display error text when used with a Field.',
+      example: <IncompleteExample />,
+      source: IncompleteExampleSrc,
     }, {
       title: 'Invalid (applies to all)',
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',

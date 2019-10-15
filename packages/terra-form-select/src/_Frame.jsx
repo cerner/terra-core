@@ -216,7 +216,7 @@ class Frame extends React.Component {
 
     const multipleInputAttrs = {
       required: required && !display.length ? true : undefined,
-      'aria-required': required && !display.length ? 'required' : undefined,
+      'aria-required': (required && !display.length),
       ...inputAttrs,
     };
     const comboboxInputAttrs = { required, 'aria-required': required, ...inputAttrs };

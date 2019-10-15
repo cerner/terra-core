@@ -87,3 +87,17 @@ it('should render a required SelectField component', () => {
 
   expect(shallowWithIntl(select)).toMatchSnapshot();
 });
+
+it('should render an incomplete SelectField component', () => {
+  const select = (
+    <SelectField label="Label" defaultValue="blue" selectId="select-id" isIncomplete>
+      <SelectField.Option value="blue" display="Blue" />
+      <SelectField.Option value="green" display="Green" />
+      <SelectField.Option value="purple" display="Purple" />
+      <SelectField.Option value="red" display="Red" />
+      <SelectField.Option value="violet" display="Violet" />
+    </SelectField>
+  );
+
+  expect(shallowWithIntl(select)).toMatchSnapshot();
+});

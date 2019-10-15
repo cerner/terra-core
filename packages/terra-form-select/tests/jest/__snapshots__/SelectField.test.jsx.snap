@@ -53,6 +53,7 @@ exports[`should render a default SelectField component 1`] = `
     defaultValue="blue"
     disabled={false}
     id="select-id"
+    isIncomplete={false}
     isInvalid={false}
     required={false}
     variant="default"
@@ -139,6 +140,7 @@ exports[`should render a default SelectField component with attributes spread on
     defaultValue="blue"
     disabled={false}
     id="select-id"
+    isIncomplete={false}
     isInvalid={false}
     onClick={[Function]}
     required={false}
@@ -226,6 +228,7 @@ exports[`should render a disabled SelectField component 1`] = `
     defaultValue="blue"
     disabled={true}
     id="select-id"
+    isIncomplete={false}
     isInvalid={false}
     required={false}
     variant="default"
@@ -312,6 +315,7 @@ exports[`should render a disabled SelectField component via selectAttrs 1`] = `
     defaultValue="blue"
     disabled={true}
     id="select-id"
+    isIncomplete={false}
     isInvalid={false}
     required={false}
     variant="default"
@@ -405,6 +409,7 @@ exports[`should render a multiple SelectField component that limits the selectio
     defaultValue="blue"
     disabled={false}
     id="select-id"
+    isIncomplete={false}
     isInvalid={false}
     maxSelectionCount={2}
     onClick={[Function]}
@@ -493,8 +498,96 @@ exports[`should render a required SelectField component 1`] = `
     defaultValue="blue"
     disabled={false}
     id="select-id"
+    isIncomplete={false}
     isInvalid={false}
     required={true}
+    variant="default"
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </Select>
+</Field>
+`;
+
+exports[`should render an incomplete SelectField component 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="select-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Select
+    allowClear={false}
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={false}
+    id="select-id"
+    isIncomplete={true}
+    isInvalid={false}
+    required={false}
     variant="default"
   >
     <Option

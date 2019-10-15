@@ -1746,4 +1746,16 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement('selected-option');
     });
   });
+
+  describe('Incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Invalid', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid'));
+
+    Terra.it.validatesElement();
+  });
 });
