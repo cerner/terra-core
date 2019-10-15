@@ -90,10 +90,10 @@ class Overlay extends React.Component {
     }
   }
 
-  componentDidUpdate() {
-    if (this.props.isOpen) {
+  componentDidUpdate(prevProps) {
+    if (this.props.isOpen && !prevProps.isOpen) {
       this.disableContainerChildrenFocus();
-    } else {
+    } else if (!this.props.isOpen && prevProps.isOpen) {
       this.enableContainerChildrenFocus();
     }
   }

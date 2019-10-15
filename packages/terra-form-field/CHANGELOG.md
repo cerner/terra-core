@@ -7,6 +7,12 @@ Unreleased
 * Added `alignLabel` prop to alter display position of label in field.
 * Added `islegendHidden` and `legend` prop to field.
 
+3.27.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Updated `isInvalid` prop description.
+
 3.26.0 - (October 3, 2019)
 ------------------
 ### Changed

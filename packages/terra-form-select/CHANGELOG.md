@@ -6,11 +6,17 @@ Unreleased
 ### Changed
 * Updated Jest Snapshots of Select-Feild for the new props of Terra-Feild.
 
+5.33.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 5.32.0 - (October 3, 2019)
 ------------------
 ### Added
 * Added `isTouchAccessible` prop for all variants that have an input (e.g. `combobox`, `multiple`, `search`, and `tag`) to improve mobile accessibility
   * When used, the dropdown menu is no longer portaled: it is rendered in the normal DOM flow with `position: absolute` allowing easier navigation to the list options with the virtual cursor used in mobile screen readers
+* Added `isIncomplete` prop to show incomplete stylings.
 
 5.31.0 - (September 26, 2019)
 ------------------

@@ -32,6 +32,7 @@ exports[`should render a TextareaField with props 1`] = `
     disabled={false}
     id="test-input"
     isAutoResizable={false}
+    isIncomplete={false}
     isInvalid={false}
     name="test"
     onChange={[Function]}
@@ -69,6 +70,7 @@ exports[`should render a default TextareaField component 1`] = `
     disabled={false}
     id="test-input"
     isAutoResizable={false}
+    isIncomplete={false}
     isInvalid={false}
     name={null}
     required={false}
@@ -104,6 +106,7 @@ exports[`should render a disabled TextareaField component 1`] = `
     disabled={true}
     id="test-input"
     isAutoResizable={false}
+    isIncomplete={false}
     isInvalid={false}
     name={null}
     required={false}
@@ -139,8 +142,79 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
     disabled={true}
     id="test-input"
     isAutoResizable={false}
+    isIncomplete={false}
     isInvalid={false}
     name={null}
+    required={false}
+    rows={null}
+    size="small"
+  />
+</Field>
+`;
+
+exports[`should render a placeholder within the textarea field 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test-input"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Textarea
+    disabled={false}
+    id="test-input"
+    isAutoResizable={false}
+    isIncomplete={false}
+    isInvalid={false}
+    name={null}
+    placeholder="placeholder"
+    required={false}
+    rows={null}
+    size="small"
+  />
+</Field>
+`;
+
+exports[`should render a placeholder within the textarea field when passed as an input attribute 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test-input"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Textarea
+    disabled={false}
+    id="test-input"
+    isAutoResizable={false}
+    isIncomplete={false}
+    isInvalid={false}
+    name={null}
+    placeholder="Placeholder"
     required={false}
     rows={null}
     size="small"
@@ -180,6 +254,7 @@ exports[`should render a valid TextareaField with props 1`] = `
     disabled={false}
     id="test-input"
     isAutoResizable={false}
+    isIncomplete={false}
     isInvalid={false}
     name="test"
     onChange={[Function]}

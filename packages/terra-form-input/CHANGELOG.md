@@ -6,11 +6,17 @@ Unreleased
 ### Changed
 * Updated Jest Snapshots of Input-Feild for the new props of Terra-Feild.
 
+2.29.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 ### Fixed
 * File input to show selection in edge.
 
 ### Added
 * File input example added.
+* Added `isIncomplete` prop to show incomplete stylings.
 
 2.28.0 - (October 3, 2019)
 ------------------
