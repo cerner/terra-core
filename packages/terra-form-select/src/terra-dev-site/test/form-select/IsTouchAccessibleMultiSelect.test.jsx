@@ -1,8 +1,12 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import MultiSelect from '../../../MultiSelect';
+import styles from './common/Select.test.module.scss';
+
+const cx = classNames.bind(styles);
 
 const IsTouchAccessibleMultiSelect = () => (
-  <div>
+  <div className={cx('content-wrapper')}>
     <MultiSelect placeholder="Select a color" id="multiple" isTouchAccessible>
       <MultiSelect.Option value="blue" display="Blue" />
       <MultiSelect.Option value="green" display="Green" />

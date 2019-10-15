@@ -12,6 +12,8 @@ import ComboboxFieldExample from '../example/combobox/ComboboxField';
 import ComboboxFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/ComboboxField';
 import RequiredComboboxFieldExample from '../example/combobox/RequiredComboboxField';
 import RequiredComboboxFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/RequiredComboboxField';
+import IncompleteComboboxFieldExample from '../example/combobox/IncompleteComboboxField';
+import IncompleteComboboxFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/combobox/IncompleteComboboxField';
 
 const DocPage = () => (
   <DocTemplate
@@ -27,13 +29,18 @@ const DocPage = () => (
       },
     ]}
     examples={[{
-      title: 'Combobobx Field Example',
+      title: 'Combobox Field Example',
       example: <ComboboxFieldExample />,
       source: ComboboxFieldExampleSrc,
     }, {
-      title: 'Required Combobobx Field Example',
+      title: 'Required Combobox Field Example',
       example: <RequiredComboboxFieldExample />,
       source: RequiredComboboxFieldExampleSrc,
+    }, {
+      title: 'Incomplete Combobox Field Example',
+      description: 'Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
+      example: <IncompleteComboboxFieldExample />,
+      source: IncompleteComboboxFieldExampleSrc,
     }]}
   />
 );

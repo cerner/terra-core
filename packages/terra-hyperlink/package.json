@@ -1,7 +1,7 @@
 {
   "name": "terra-hyperlink",
   "main": "lib/Hyperlink.js",
-  "version": "2.20.0",
+  "version": "2.21.0",
   "description": "The terra hyperlink component allows linking to other web pages, files, locations within the same page, email addresses, or any other URL.",
   "repository": {
     "type": "git",
