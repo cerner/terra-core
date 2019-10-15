@@ -23,7 +23,7 @@
     width: 100%;
 
     &::placeholder {
-      color: var(--terra-form-input-placeholder-color, #70787c);
+      color: var(--terra-form-input-placeholder-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-input-placeholder-font-style);
     }
 
@@ -47,7 +47,7 @@
     }
 
     &[disabled]::placeholder {
-      color: var(--terra-form-input-placeholder-disabled-color, #70787c);
+      color: var(--terra-form-input-placeholder-disabled-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-input-placeholder-disabled-font-style);
     }
 
@@ -55,6 +55,7 @@
       background-color: var(--terra-form-input-focus-background-color, #fff);
       background-size: var(--terra-form-input-focus-background-size);
       border: var(--terra-form-input-focus-border, 1px solid #4cb2e9);
+      box-shadow: var(--terra-form-input-focus-box-shadow);
       color: var(--terra-form-input-focus-color);
       outline: none;
 
@@ -71,32 +72,54 @@
   .form-error {
     background-color: var(--terra-form-input-error-background-color, #fff);
     background-image: var(--terra-form-input-error-background-image);
-    border: var(--terra-form-input-error-border, 1px solid #dedfe0);
+    border: var(--terra-form-input-error-border, 1px solid #e50000);
+    box-shadow: var(--terra-form-input-error-box-shadow, 0 0 0 1px #e50000);
 
     &:hover {
       background-color: var(--terra-form-input-error-hover-background-color, #fff);
-      border: var(--terra-form-input-error-hover-border, 1px solid #dedfe0);
+      border: var(--terra-form-input-error-hover-border, 1px solid #e50000);
     }
 
     &[disabled] {
-      background-color: var(--terra-form-input-error-disabled-background-color, rgba(111, 116, 119, 0.05));
-      border: var(--terra-form-input-error-disabled-border, 1px solid #dedfe0);
-      color: var(--terra-form-input-error-disabled-color, rgba(0, 0, 0, 0.25));
-      opacity: var(--terra-form-input-error-disabled-opacity);
+      background-color: var(--terra-form-input-error-disabled-background-color, rgba(111, 116, 119, 0.2));
+      border: var(--terra-form-input-error-disabled-border, 1px solid #e50000);
+      color: var(--terra-form-input-error-disabled-color, #1c1f21);
+      opacity: var(--terra-form-input-error-disabled-opacity, 0.25);
+    }
+
+    &[required] {
+      box-shadow: var(--terra-form-input-error-box-shadow, 0 0 0 1px #e50000);
     }
 
     &:focus {
       background-color: var(--terra-form-input-error-focus-background-color, #fff);
       background-size: var(--terra-form-input-error-focus-background-size);
-      border: var(--terra-form-input-error-focus-border, 1px solid #4cb2e9);
+      border: var(--terra-form-input-error-focus-border, 1px solid #e50000);
+      box-shadow: var(--terra-form-input-error-focus-box-shadow, 0 0 0 1px #e50000);
 
       [dir=ltr] & {
-        box-shadow: var(--terra-form-input-error-focus-ltr-box-shadow);
+        box-shadow: var(--terra-form-input-error-focus-ltr-box-shadow, 0 0 0 1px #e50000);
       }
 
       [dir=rtl] & {
-        box-shadow: var(--terra-form-input-error-focus-rtl-box-shadow);
+        box-shadow: var(--terra-form-input-error-focus-rtl-box-shadow, 0 0 0 1px #e50000);
       }
+    }
+  }
+
+  .form-incomplete {
+    background-color: var(--terra-form-input-incomplete-background-color, #ffc);
+
+    &:hover {
+      background-color: var(--terra-form-input-incomplete-hover-background-color, #ffc);
+    }
+
+    &[disabled] {
+      background-color: var(--terra-form-input-incomplete-disabled-background-color, #ffc);
+    }
+
+    &:focus {
+      background-color: var(--terra-form-input-incomplete-focus-background-color, #ffc);
     }
   }
 }

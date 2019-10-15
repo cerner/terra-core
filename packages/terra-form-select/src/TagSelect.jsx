@@ -31,7 +31,11 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether the select is in an invalid state.
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the select displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -99,6 +103,7 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
   isTouchAccessible: false,
   maxSelectionCount: undefined,

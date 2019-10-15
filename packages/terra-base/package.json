@@ -1,7 +1,7 @@
 {
   "name": "terra-base",
   "main": "lib/Base.js",
-  "version": "5.21.0",
+  "version": "5.22.0",
   "description": "The base component sets minimal global styles for an application.",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.20.0",
-    "terra-i18n": "^4.17.0"
+    "terra-i18n": "^4.18.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
