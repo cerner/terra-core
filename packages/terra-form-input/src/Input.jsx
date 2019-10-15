@@ -20,7 +20,11 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Whether the input is invalid.
+   * Whether the input displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the input displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -77,6 +81,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   disabled: false,
+  isIncomplete: false,
   isInvalid: false,
   onBlur: undefined,
   onChange: undefined,
@@ -95,6 +100,7 @@ class Input extends React.Component {
     const {
       defaultValue,
       disabled,
+      isIncomplete,
       isInvalid,
       onBlur,
       onChange,
@@ -114,6 +120,7 @@ class Input extends React.Component {
     const formInputClassNames = cx([
       'form-input',
       { 'form-error': isInvalid },
+      { 'form-incomplete': (isIncomplete && required && !isInvalid) },
       attributes.className,
     ]);
 

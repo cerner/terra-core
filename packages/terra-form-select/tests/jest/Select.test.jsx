@@ -106,6 +106,31 @@ describe('Select', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render an incomplete default variant', () => {
+    const wrapper = shallowWithIntl(<Select isIncomplete />).dive();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an incomplete combobox variant', () => {
+    const wrapper = shallowWithIntl(<Select variant="combobox" isIncomplete />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an incomplete multiple variant', () => {
+    const wrapper = shallowWithIntl(<Select variant="multiple" isIncomplete />).dive();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an incomplete search variant', () => {
+    const wrapper = shallowWithIntl(<Select variant="search" isIncomplete />).dive();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an incomplete tag variant', () => {
+    const wrapper = shallowWithIntl(<Select variant="tag" isIncomplete />).dive();
+    expect(wrapper).toMatchSnapshot();
+  });
+
 
   it('should render a select with an option', () => {
     const wrapper = renderWithIntl(
