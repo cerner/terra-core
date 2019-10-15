@@ -3,13 +3,14 @@
 :local {
   .hyperlink {
     background-color: transparent; // Remove the gray background on active links in IE 10
-    color: var(--terra-hyperlink-color, #0059a8);
+    color: var(--terra-hyperlink-color, #006fc3);
     display: inline-block; // prevents variant icon from breaking onto its own line
     outline: none;
     text-decoration: var(--terra-hyperlink-text-decoration, none);
 
-    &:visited {
-      color: var(--terra-hyperlink-visited-color, #0059a8);
+    &:visited,
+    &.is-visited {
+      color: var(--terra-hyperlink-visited-color, #006fc3);
 
       &:focus {
         color: var(--terra-hyperlink-visited-focus-color, #001f67);
@@ -42,15 +43,31 @@
   }
 
   .is-underline-hidden {
+    color: var(--terra-hyperlink-underline-hidden-color, #006fc3);
     text-decoration: none;
 
-    &:focus,
-    &:hover {
+    &:focus {
+      color: var(--terra-hyperlink-underline-hidden-focus-color, #001f67);
       text-decoration: underline;
+    }
+
+    &:hover {
+      color: var(--terra-hyperlink-underline-hidden-hover-color, #001f67);
+      text-decoration: underline;
+    }
+
+    &:visited,
+    &.is-visited {
+      color: var(--terra-hyperlink-underline-hidden-visited-color, #006fc3);
+      text-decoration: underline;
+
+      &:focus {
+        color: var(--terra-hyperlink-underline-hidden-visited-focus-color, #001f67);
+      }
     }
   }
 
   .icon {
-    margin-left: 0.5em;
+    margin-left: var(--terra-hyperlink-icon-margin-left, 0.5em);
   }
 }
