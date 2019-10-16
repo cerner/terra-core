@@ -1,6 +1,4 @@
 const themeConfig = {
-  exclude: [],
-  theme: '',
   scoped: ['orion-fusion-theme'],
 };
 
