@@ -19,11 +19,23 @@ import { SharedUser} from 'terra-avatar';
 <SharedUser alt="Patient 1" />
 ```
 
+```javascript
+import { Avatar} from 'terra-avatar';
+
+<Avatar id="user-avatar" alt="user"/>
+```
+
 #### V3 Code
 ```javascript
 import { Generic } from 'terra-avatar'
 
 <Generic variant="shared-user" alt="Patient 1" />
+```
+
+```javascript
+import { Generic} from 'terra-avatar';
+
+<Generic variant="single-user" alt="Patient 1" />
 ```
 
 ## Changes from version 1 to version 2
