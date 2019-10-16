@@ -159,35 +159,6 @@ exports[`Avatar should render fallback initials when invalid image is passed in 
 </div>
 `;
 
-exports[`Avatar should render fallback user avatar when invalid image is passed in without initials 1`] = `
-<div
-  class="avatar five image"
->
-  <div>
-    <div
-      class="hidden"
-    >
-      <img
-        alt="placeholder"
-        class="image cover default image"
-        src="https://path/to/invalid_image.jpg"
-      />
-    </div>
-    <div>
-      <span
-        alt="placeholder"
-        aria-hidden="false"
-        aria-label="placeholder"
-        class="initials"
-        role="img"
-      >
-        JS
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Avatar should render image avatar when image is passed in 1`] = `
 <div
   class="avatar five image"
