@@ -33,7 +33,7 @@ const propTypes = {
    */
   htmlFor: PropTypes.string,
   /**
-   * Whether or not the field is invalid.
+   * Whether the field displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**

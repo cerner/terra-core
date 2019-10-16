@@ -4,6 +4,17 @@ ChangeLog
 Unreleased
 ----------
 
+3.32.0 - (October 15, 2019)
+------------------
+### Fixed
+* Fixed inert property management during component update lifecycle
+
+3.31.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Move imperative code for handling DOM manipulation for inert and aria-hidden attributes into componentDidUpdate
+
 3.30.0 - (October 3, 2019)
 ------------------
 ### Changed

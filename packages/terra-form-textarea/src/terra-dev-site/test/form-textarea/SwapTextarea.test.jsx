@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Textarea from '../../../Textarea';
+import styles from './common/Textarea.test.module.scss';
+
+const cx = classNames.bind(styles);
 
 class textarea extends React.Component {
   constructor(props) {
@@ -25,7 +29,7 @@ class textarea extends React.Component {
 
     if (this.state.swap) {
       return (
-        <div>
+        <div className={cx('content-wrapper')}>
           {smallTextArea}
           {largeTextArea}
           {button}
@@ -33,7 +37,7 @@ class textarea extends React.Component {
       );
     }
     return (
-      <div>
+      <div className={cx('content-wrapper')}>
         {largeTextArea}
         {smallTextArea}
         {button}
