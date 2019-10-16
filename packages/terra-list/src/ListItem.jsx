@@ -96,7 +96,7 @@ const ListItem = ({
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   } else if (customProps.listrole === 'listbox') {
     attrSpread.role = 'option';
-    attrSpread['aria-selected'] = 'false';
+    attrSpread['aria-selected'] = isSelected;
     attrSpread['aria-disabled'] = 'true';
   }
 
