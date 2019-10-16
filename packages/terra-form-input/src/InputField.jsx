@@ -46,11 +46,15 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
   /**
+   * Whether the field and input displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
    * Whether or not the field is an inline field.
    */
   isInline: PropTypes.bool,
   /**
-   * Whether or not the field is invalid.
+   * Whether the field and input displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -108,6 +112,7 @@ const defaultProps = {
   help: null,
   hideRequired: false,
   inputAttrs: {},
+  isIncomplete: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
@@ -132,6 +137,7 @@ const InputField = (props) => {
     hideRequired,
     inputAttrs,
     inputId,
+    isIncomplete,
     isInline,
     isInvalid,
     isLabelHidden,
@@ -185,6 +191,7 @@ const InputField = (props) => {
         {...inputAttrs}
         disabled={inputAttrs.disabled || disabled}
         id={inputId}
+        isIncomplete={isIncomplete}
         type={inputType}
         onChange={onChange}
         placeholder={placeholder || inputAttrs.placeholder}

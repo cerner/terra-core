@@ -6,9 +6,9 @@ const DefaultTextAreaField = () => (
     inputId="textarea"
     label="Textarea"
     help="Note: This is help text"
+    placeholder="Textarea placeholder"
     inputAttrs={{
       name: 'textarea',
-      placeholder: 'Textarea placeholder',
     }}
   />
 );
