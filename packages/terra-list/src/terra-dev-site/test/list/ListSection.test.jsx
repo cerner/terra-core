@@ -12,7 +12,7 @@ const ListSectionTest = () => (
       </Item>
     </Section>
     <Section
-      key="collapsible-section"
+      key="collapsible-section-1"
       isCollapsible
       title="Collapsible Section"
     >
@@ -21,7 +21,7 @@ const ListSectionTest = () => (
       </Item>
     </Section>
     <Section
-      key="collapsible-section"
+      key="collapsible-section2"
       isCollapsed
       isCollapsible
       title="Collapsed Section"

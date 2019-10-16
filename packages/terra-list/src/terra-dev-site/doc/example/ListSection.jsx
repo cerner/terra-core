@@ -23,7 +23,7 @@ const ListSectionExample = () => (
       </Item>
     </Section>
     <Section
-      key="collapsible-section"
+      key="collapsible-section-1"
       isCollapsible
       title="Collapsible Section"
     >
@@ -38,7 +38,7 @@ const ListSectionExample = () => (
       </Item>
     </Section>
     <Section
-      key="collapsible-section"
+      key="collapsible-section-2"
       isCollapsed
       isCollapsible
       title="Collapsed Section"

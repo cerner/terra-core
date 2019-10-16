@@ -12,7 +12,7 @@ const ListSubsectionTest = () => (
       </Item>
     </Subsection>
     <Subsection
-      key="collapsible-subsection"
+      key="collapsible-subsection-1"
       isCollapsible
       title="Collapsible Subsection"
     >
@@ -21,7 +21,7 @@ const ListSubsectionTest = () => (
       </Item>
     </Subsection>
     <Subsection
-      key="collapsible-subsection"
+      key="collapsible-subsection-2"
       isCollapsed
       isCollapsible
       title="Collapsed Subsection"
