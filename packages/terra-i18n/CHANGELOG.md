@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+* Added reference wdio screenshots for "orion-fusion-theme".
 
 4.18.0 - (October 14, 2019)
 ------------------
