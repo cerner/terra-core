@@ -8,11 +8,6 @@
 * the `generic` subcomponent that replaces the `sharedUser` subcomponent with a new `variant` prop that can be `single-user`, `shared-user`, or `provider`.
 * `variant` prop this will take values for sub-variants `single-user`, `shared-user` and `provider`.
 
-### Changes to CSS Custom Properties
-
-#### Added
-* --terra-avatar-icon-provider-background-image
-
 ### Steps to uplift to V3
 1. Use a named export for Generic variant.
 2. Use variant prop of Generic to set sub-variant icons like `single-user`, `shared-user` and `provider` for Avatar.
