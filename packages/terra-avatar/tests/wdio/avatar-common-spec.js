@@ -1,10 +1,4 @@
 Terra.describeViewports('Avatar', ['huge'], () => {
-  describe('Icon Avatar', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/user-avatar'));
-
-    Terra.it.validatesElement({ selector: '#user-avatar' });
-  });
-
   describe('Image Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-avatar'));
 
