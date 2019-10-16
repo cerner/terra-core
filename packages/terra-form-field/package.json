@@ -1,7 +1,7 @@
 {
   "name": "terra-form-field",
   "main": "lib/Field.js",
-  "version": "3.27.0",
+  "version": "3.28.0",
   "description": "The Form Field component handles the layout of the label, help text and error text associated with a form element.",
   "repository": {
     "type": "git",

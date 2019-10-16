@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+3.32.0 - (October 15, 2019)
+------------------
 ### Fixed
 * Fixed inert property management during component update lifecycle
 
