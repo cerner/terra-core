@@ -140,7 +140,7 @@ class Menu extends React.Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
-    // this.scrollIntoView();
+    this.scrollIntoView();
     /**
      * Without this detection for ontouchstart and the early return, VoiceOver on iOS will read the
      * first option twice when the menu is opened. First due to aria-live update in componentDidMount
@@ -154,7 +154,6 @@ class Menu extends React.Component {
 
   componentDidUpdate() {
     this.updateNoResultsScreenReader();
-    this.scrollIntoView();
   }
 
   componentWillUnmount() {
