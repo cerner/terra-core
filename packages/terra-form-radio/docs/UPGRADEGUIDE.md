@@ -5,7 +5,11 @@
 ### Props
 
 #### Updated
-* To upgrade from 3.0 to 4.0 each existing Radio must be reviewed and updated to ensure only a string is being passed to the `labelText` and `legend ` props. Solutions passing node data types need to be reworked to provide only a string.
+* `labelText` prop's type changed from node to string.
+* `legend` prop's type changed from node to string.
+
+##### Steps to Upgrade
+To upgrade from 3.0 to 4.0 each existing Radio must be reviewed and updated to ensure only a string is being passed to the `labelText` and `legend ` props. Solutions passing node data types need to be reworked to provide only a string.
 
 ## Changes from version 2 to version 3
 

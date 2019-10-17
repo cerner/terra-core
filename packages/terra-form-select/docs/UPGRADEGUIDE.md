@@ -4,7 +4,11 @@
 
 ### Props
 
-* To upgrade from 5.0 to 6.0 each existing Select must be reviewed and updated to ensure only a string is being passed to the `labelText` props. Solutions passing node data types need to be reworked to provide only a string.
+#### Updated
+* `label` prop's type changed from node to string.
+
+##### Steps to Upgrade
+To upgrade from 5.0 to 6.0 each existing Select must be reviewed and updated to ensure only a string is being passed to the `label` props. Solutions passing node data types need to be reworked to provide only a string.
 
 ## Changes from version 4 to version 5
 

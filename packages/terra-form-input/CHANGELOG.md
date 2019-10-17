@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Breaking Changes
+* `label` prop's type changed from node to string.
 
 2.30.0 - (October 15, 2019)
 ------------------
@@ -20,9 +22,6 @@ Unreleased
 ### Added
 * File input example added.
 * Added `isIncomplete` prop to show incomplete stylings.
-
-### Breaking Changes
-* `label` prop's type changed from node to string.
 
 2.28.0 - (October 3, 2019)
 ------------------

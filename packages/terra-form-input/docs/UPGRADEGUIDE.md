@@ -5,7 +5,10 @@
 ### Props
 
 #### Updated
-* To upgrade from 2.0 to 3.0 each existing Input must be reviewed and updated to ensure only a string is being passed to the `labelText` prop. Solutions passing node data types need to be reworked to provide only a string.
+* `label` prop's type changed from node to string.
+
+##### Steps to Upgrade
+To upgrade from 2.0 to 3.0 each existing Input must be reviewed and updated to ensure only a string is being passed to the `label` prop. Solutions passing node data types need to be reworked to provide only a string.
 
 ## Changes from version 1 to version 2
 
