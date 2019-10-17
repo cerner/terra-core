@@ -6,37 +6,36 @@ import Table, {
 } from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
-const rowCount = 5;
-
 const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 const MultiSelectTable = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);
-  const [headerState, setHeaderState] = useState('none');
+  const [allSelected, setAllSelected] = useState(false);
+  const rowCount = mockData.length;
 
   const handleMarkSelection = (event, metaData) => {
     event.preventDefault();
     event.stopPropagation();
 
     const newSelection = Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key);
-    if (newSelection.length === rowCount) {
-      setHeaderState('all');
-    } else if (newSelection.length > 0) {
-      setHeaderState('intermediate');
-    } else {
-      setHeaderState('none');
-    }
-    setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
+    const isMax = newSelection.length === rowCount;
+    setAllSelected(allSelected ? !isMax : isMax);
+    setSelectedKeys(isMax ? [] : newSelection);
   };
 
   const handleHeaderMarkSelection = () => {
-    if (headerState === 'none') {
-      setHeaderState('all');
-    } else {
-      setHeaderState('none');
+    setAllSelected(selectedKeys.length || !allSelected);
+    setSelectedKeys([]);
+  };
+
+  const getIsRowSelected = (key) => {
+    if (selectedKeys.length) {
+      const isPresent = selectedKeys.indexOf(key) >= 0;
+      return allSelected ? !isPresent : isPresent;
     }
+    return allSelected;
   };
 
   const createRow = rowData => (
@@ -44,15 +43,13 @@ const MultiSelectTable = () => {
       key={rowData.key}
       isSelectable
     >
-      {(
-        <CheckMarkCell
-          isPadded
-          isSelectable
-          isSelected={headerState === 'none' ? false : headerState === 'all' || selectedKeys.indexOf(rowData.key) >= 0}
-          metaData={{ key: rowData.key }}
-          onSelect={handleMarkSelection}
-        />
-      )}
+      <CheckMarkCell
+        isPadded
+        isSelectable
+        isSelected={getIsRowSelected(rowData.key)}
+        metaData={{ key: rowData.key }}
+        onSelect={handleMarkSelection}
+      />
       {createCellsForRow(rowData.cells)}
     </Row>
   );
@@ -65,12 +62,12 @@ const MultiSelectTable = () => {
       headerRow={(
         <HeaderRow>
           <HeaderCheckMarkCell
-            isSelected={headerState !== 'none'}
-            isIntermediate={headerState === 'intermediate'}
+            isSelected={allSelected || selectedKeys.length}
+            isIntermediate={selectedKeys.length}
             onSelect={handleHeaderMarkSelection}
             isPadded
             isSelectable
-            key="derp"
+            key="header-check-cell"
           />
           <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>
           <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>
