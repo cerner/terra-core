@@ -10,12 +10,14 @@ const ListSectionExample = () => (
   <List role="listbox" aria-label="example-label">
     <Item
       key="default"
+      isRoleListbox
     >
       <Placeholder title="Default ListItem" className={cx('placeholder')} />
     </Item>
     <Item
       key="chevron"
       hasChevron
+      isRoleListbox
     >
       <Placeholder title="Chevron ListItem" className={cx('placeholder')} />
     </Item>

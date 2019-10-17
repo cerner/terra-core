@@ -6,30 +6,35 @@ exports[`should render with bottom only divided items 1`] = `
 >
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="123"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="124"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="125"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="126"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="127"
@@ -43,30 +48,35 @@ exports[`should render with items 1`] = `
 >
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="123"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="124"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="125"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="126"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="127"
@@ -86,30 +96,35 @@ exports[`should render with standard divided items 1`] = `
 >
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="123"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="124"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="125"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="126"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="127"
@@ -123,30 +138,35 @@ exports[`should render with standard padded items 1`] = `
 >
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="123"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="124"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="125"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="126"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="127"
@@ -160,30 +180,35 @@ exports[`should render with thin padded items 1`] = `
 >
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="123"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="124"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="125"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="126"
   />
   <ListItem
     hasChevron={false}
+    isRoleListbox={false}
     isSelectable={false}
     isSelected={false}
     key="127"

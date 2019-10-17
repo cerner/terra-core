@@ -58,20 +58,10 @@ const List = ({
   if (role && role.length > 0 && role !== 'none') {
     attrSpread.role = role;
   }
-  let allItems = children ? [] : undefined;
-  if (role === 'listbox') {
-    React.Children.forEach(children, (child) => {
-      const cloneChild = child.isSelectable ? child : React.cloneElement(child, {
-        listrole: role,
-      });
-      allItems.push(cloneChild);
-    });
-  } else {
-    allItems = children;
-  }
+
   return (
     <ul {...customProps} {...attrSpread} className={listClassNames} ref={refCallback}>
-      {allItems}
+      {children}
     </ul>
   );
 };

@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Accessibility issue fixed to handle selectable and non-selectable items correctly.
+* `isRoleListbox` prop added to fix accessibility issue to handle selectable and non-selectable items correctly.
 
 4.21.0 - (October 14, 2019)
 ------------------
