@@ -3,7 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
-
+### Fixed
+* Fixed re-renders of scroll after every componentDidUpdate call.
 5.32.0 - (October 15, 2019)
 ------------------
 ### Changed
