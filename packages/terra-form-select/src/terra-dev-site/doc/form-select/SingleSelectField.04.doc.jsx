@@ -12,6 +12,8 @@ import SelectFieldExample from '../example/single/SingleSelectField';
 import SelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/SingleSelectField';
 import RequiredSingleSelectFieldExample from '../example/single/RequiredSingleSelectField';
 import RequiredSingleSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/RequiredSingleSelectField';
+import IncompleteSelectFieldExample from '../example/single/IncompleteSingleSelectField';
+import IncompleteSelectFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/single/IncompleteSingleSelectField';
 
 const DocPage = () => (
   <DocTemplate
@@ -34,6 +36,11 @@ const DocPage = () => (
       title: 'Required Single Select Field Example',
       example: <RequiredSingleSelectFieldExample />,
       source: RequiredSingleSelectFieldExampleSrc,
+    }, {
+      title: 'Incomplete Single Select Field Example',
+      description: 'Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
+      example: <IncompleteSelectFieldExample />,
+      source: IncompleteSelectFieldExampleSrc,
     }]}
   />
 );
