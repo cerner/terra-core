@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed form-select placeholder color text to pass contrast test and added wdio test
 
 5.32.0 - (October 15, 2019)
 ------------------
