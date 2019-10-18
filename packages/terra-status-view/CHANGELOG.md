@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed 
+* `Aria-Label` added to example.
 
 4.10.0 - (October 3, 2019)
 ------------------

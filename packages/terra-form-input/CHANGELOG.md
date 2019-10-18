@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Duplicaye ID changed in example
 
 2.30.0 - (October 15, 2019)
 ------------------

@@ -13,7 +13,7 @@ const ToggleVariants = () => {
       <StatusView variant={variant} />
       <fieldset>
         <legend>Change Variant</legend>
-        <select id="statusViewVariant" name="statusViewVariant" value={variant} onChange={handleOnSelect}>
+        <select aria-label="Change Variant" id="statusViewVariant" name="statusViewVariant" value={variant} onChange={handleOnSelect}>
           <option value="error">Error</option>
           <option value="no-data">No Data</option>
           <option value="no-matching-results">No Matching Results</option>
