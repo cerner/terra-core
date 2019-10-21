@@ -29,7 +29,6 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-button": "^3.25.0",
-    "terra-button-group": "^3.25.0",
     "terra-doc-template": "^2.20.0",
     "terra-icon": "^3.22.0",
     "terra-mixins": "^1.33.0"

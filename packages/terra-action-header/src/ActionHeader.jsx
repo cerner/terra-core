@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Button from 'terra-button';
-import ButtonGroup from 'terra-button-group';
 import { FormattedMessage } from 'react-intl';
 import ActionHeaderContainer from './_ActionHeaderContainer';
 import styles from './ActionHeader.module.scss';
@@ -88,7 +87,14 @@ const ActionHeader = ({
     ? (
       <FormattedMessage id="Terra.actionHeader.close">
         {closeText => (
-          <Button className={cx('header-close-button')} isIconOnly icon={<span className={cx(['header-icon', 'close'])} />} text={closeText} onClick={onClose} />
+          <Button
+            className={cx('header-close-button')}
+            isIconOnly
+            icon={<span className={cx(['header-icon', 'close'])} />}
+            text={closeText}
+            onClick={onClose}
+            variant={Button.Opts.Variants.UTILITY}
+          />
         )}
       </FormattedMessage>
     )
@@ -97,7 +103,14 @@ const ActionHeader = ({
     ? (
       <FormattedMessage id="Terra.actionHeader.back">
         {backText => (
-          <Button className={cx('header-back-button')} isIconOnly icon={<span className={cx(['header-icon', 'back'])} />} text={backText} onClick={onBack} />
+          <Button
+            className={cx('header-back-button')}
+            isIconOnly
+            icon={<span className={cx(['header-icon', 'back'])} />}
+            text={backText}
+            onClick={onBack}
+            variant={Button.Opts.Variants.UTILITY}
+          />
         )}
       </FormattedMessage>
     )
@@ -109,7 +122,13 @@ const ActionHeader = ({
       expandButton = (
         <FormattedMessage id="Terra.actionHeader.maximize">
           {maximizeText => (
-            <Button isIconOnly icon={<span className={cx(['header-icon', 'maximize'])} />} text={maximizeText} onClick={onMaximize} />
+            <Button
+              isIconOnly
+              icon={<span className={cx(['header-icon', 'maximize'])} />}
+              text={maximizeText}
+              onClick={onMaximize}
+              variant={Button.Opts.Variants.UTILITY}
+            />
           )}
         </FormattedMessage>
       );
@@ -117,7 +136,13 @@ const ActionHeader = ({
       expandButton = (
         <FormattedMessage id="Terra.actionHeader.minimize">
           {minimizeText => (
-            <Button isIconOnly icon={<span className={cx(['header-icon', 'minimize'])} />} text={minimizeText} onClick={onMinimize} />
+            <Button
+              isIconOnly
+              icon={<span className={cx(['header-icon', 'minimize'])} />}
+              text={minimizeText}
+              onClick={onMinimize}
+              variant={Button.Opts.Variants.UTILITY}
+            />
           )}
         </FormattedMessage>
       );
@@ -126,31 +151,33 @@ const ActionHeader = ({
 
   const previousNextButtonGroup = (onPrevious || onNext)
     ? (
-      <ButtonGroup>
+      <div className={cx('previous-next-button-group')}>
         <FormattedMessage id="Terra.actionHeader.previous">
           {previousText => (
-            <ButtonGroup.Button
+            <Button
+              isIconOnly
               icon={<span className={cx(['header-icon', 'previous'])} />}
               text={previousText}
               onClick={onPrevious}
-              key="ActionHeaderPrevious"
               isDisabled={onPrevious === undefined}
+              variant={Button.Opts.Variants.UTILITY}
             />
           )}
         </FormattedMessage>
         <FormattedMessage id="Terra.actionHeader.next">
           {nextText => (
-            <ButtonGroup.Button
+            <Button
+              isIconOnly
               icon={<span className={cx(['header-icon', 'next'])} />}
               text={nextText}
               onClick={onNext}
-              key="ActionHeaderNext"
               isDisabled={onNext === undefined}
+              variant={Button.Opts.Variants.UTILITY}
             />
           )}
         </FormattedMessage>
 
-      </ButtonGroup>
+      </div>
     )
     : null;
 

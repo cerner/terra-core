@@ -461,9 +461,8 @@ exports[`ActionHeader should render an action header with next and previous butt
     <div
       className="left-buttons"
     >
-      <ButtonGroup
-        isBlock={false}
-        selectedKeys={Array []}
+      <div
+        className="previous-next-button-group"
       >
         <FormattedMessage
           id="Terra.actionHeader.previous"
@@ -477,7 +476,7 @@ exports[`ActionHeader should render an action header with next and previous butt
         >
           [Function]
         </FormattedMessage>
-      </ButtonGroup>
+      </div>
     </div>
   }
   title="Action Header"
@@ -555,9 +554,8 @@ exports[`ActionHeader should render an action header with title, enabled next bu
     <div
       className="left-buttons"
     >
-      <ButtonGroup
-        isBlock={false}
-        selectedKeys={Array []}
+      <div
+        className="previous-next-button-group"
       >
         <FormattedMessage
           id="Terra.actionHeader.previous"
@@ -571,7 +569,7 @@ exports[`ActionHeader should render an action header with title, enabled next bu
         >
           [Function]
         </FormattedMessage>
-      </ButtonGroup>
+      </div>
     </div>
   }
   title="Action Header"
@@ -613,9 +611,8 @@ exports[`ActionHeader should render an action header with title, enabled previou
     <div
       className="left-buttons"
     >
-      <ButtonGroup
-        isBlock={false}
-        selectedKeys={Array []}
+      <div
+        className="previous-next-button-group"
       >
         <FormattedMessage
           id="Terra.actionHeader.previous"
@@ -629,7 +626,7 @@ exports[`ActionHeader should render an action header with title, enabled previou
         >
           [Function]
         </FormattedMessage>
-      </ButtonGroup>
+      </div>
     </div>
   }
   title="Action Header"

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Changed button variants to `Utility`.
 
 2.30.0 - (October 3, 2019)
 ------------------

@@ -2,11 +2,17 @@
 
 :local {
   .left-buttons > * {
-    margin-right: var(--terra-action-header-margin-right, 1.429rem);
+    margin-right: var(--terra-action-header-margin-right, 0.35714rem);
   }
 
   .right-buttons > * {
-    margin-left: var(--terra-action-header-margin-left, 1.429rem);
+    margin-left: var(--terra-action-header-margin-left, 0.35714rem);
+  }
+
+  .previous-next-button-group {
+    display: inline-flex;
+    position: relative;
+    white-space: nowrap;
   }
 
   .header-icon {
