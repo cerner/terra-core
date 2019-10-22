@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added Theme variables for disabled background color
 
+### Changed
+* Inline SVG aligned for IE and wdio screenshots updated by adding `--terra-button-compact-min-height` variable and updating its value.
+
 3.25.0 - (October 3, 2019)
 ------------------
 ### Changed

@@ -1,10 +1,14 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import InputField from '../../../InputField';
+import styles from './common/Input.test.module.scss';
+
+const cx = classNames.bind(styles);
 
 /* eslint-disable arrow-body-style */
 const InputFieldWidthExample = () => {
   return (
-    <div>
+    <div className={cx('content-wrapper')}>
       <InputField
         inputId="test-input"
         defaultValue="Value"

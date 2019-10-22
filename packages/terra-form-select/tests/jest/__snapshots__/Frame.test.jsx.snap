@@ -31,6 +31,7 @@ exports[`Frame should render a clear option 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   required={false}
 />
@@ -66,6 +67,7 @@ exports[`Frame should render a combobox variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   required={false}
@@ -102,6 +104,7 @@ exports[`Frame should render a combobox variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   placeholder="Placeholder"
@@ -140,6 +143,7 @@ exports[`Frame should render a custom dropdown 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   required={false}
@@ -176,6 +180,7 @@ exports[`Frame should render a default variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   required={false}
 />
@@ -211,6 +216,7 @@ exports[`Frame should render a default variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   placeholder="Placeholder"
   required={false}
@@ -247,6 +253,7 @@ exports[`Frame should render a disabled combobox variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   required={false}
@@ -283,6 +290,7 @@ exports[`Frame should render a disabled default variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   required={false}
 />
@@ -318,6 +326,7 @@ exports[`Frame should render a disabled multiple variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   required={false}
@@ -354,6 +363,7 @@ exports[`Frame should render a disabled search variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   required={false}
@@ -390,6 +400,7 @@ exports[`Frame should render a disabled tag variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   required={false}
@@ -426,6 +437,7 @@ exports[`Frame should render a multiple variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   required={false}
@@ -462,6 +474,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   placeholder="Placeholder"
@@ -499,6 +512,7 @@ exports[`Frame should render a required Frame 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   required={true}
 />
@@ -534,6 +548,7 @@ exports[`Frame should render a required default variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   required={true}
 />
@@ -569,6 +584,7 @@ exports[`Frame should render a search variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   required={false}
@@ -605,6 +621,7 @@ exports[`Frame should render a search variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   placeholder="Placeholder"
@@ -642,6 +659,7 @@ exports[`Frame should render a tag variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   required={false}
@@ -678,9 +696,194 @@ exports[`Frame should render a tag variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   isTouchAccessible={false}
   placeholder="Placeholder"
+  required={false}
+/>
+`;
+
+exports[`Frame should render an incomplete combobox variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  isTouchAccessible={false}
+  required={false}
+/>
+`;
+
+exports[`Frame should render an incomplete default variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  required={false}
+/>
+`;
+
+exports[`Frame should render an incomplete multiple variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  isTouchAccessible={false}
+  required={false}
+/>
+`;
+
+exports[`Frame should render an incomplete search variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  isTouchAccessible={false}
+  required={false}
+/>
+`;
+
+exports[`Frame should render an incomplete tag variant 1`] = `
+<Frame
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -715,6 +918,7 @@ exports[`Frame should render an invalid combobox variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
   isTouchAccessible={false}
   required={false}
@@ -751,6 +955,7 @@ exports[`Frame should render an invalid default variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
   required={false}
 />
@@ -786,6 +991,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
   isTouchAccessible={false}
   required={false}
@@ -822,6 +1028,7 @@ exports[`Frame should render an invalid search variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
   isTouchAccessible={false}
   required={false}
@@ -858,6 +1065,7 @@ exports[`Frame should render an invalid tag variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
   isTouchAccessible={false}
   required={false}
