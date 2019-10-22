@@ -134,7 +134,7 @@
 
     .search-input::placeholder,
     .placeholder {
-      color: var(--terra-form-select-disabled-placeholder-color, rgba(25, 32, 35, 0.53));
+      color: var(--terra-form-select-disabled-placeholder-color, rgba(21, 33, 41, 0.61));
       font-style: var(--terra-form-select-disabled-placeholder-font-style);
     }
   }
@@ -240,7 +240,7 @@
 
   .search-input::placeholder,
   .placeholder {
-    color: var(--terra-form-select-search-placeholder-color, rgba(25, 32, 35, 0.53));
+    color: var(--terra-form-select-search-placeholder-color, rgba(21, 33, 41, 0.61));
     font-size: var(--terra-form-select-search-placeholder-font-size, 1.143rem);
     font-style: var(--terra-form-select-search-placeholder-font-style);
     overflow: hidden;
