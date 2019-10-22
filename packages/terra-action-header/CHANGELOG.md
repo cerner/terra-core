@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+### Changed
+* Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg.
+
 2.30.0 - (October 3, 2019)
 ------------------
 ### Changed

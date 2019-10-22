@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+### Changed
+* Wdio updated for inline svg alignment.
+
 2.24.0 - (October 3, 2019)
 ------------------
 ### Changed

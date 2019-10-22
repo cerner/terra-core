@@ -20,6 +20,9 @@ Unreleased
 * Jest snapshot update due to changes in form input.
 * Minor dependency version bump
 
+### Changed
+* Wdio Update for svg align of  bnutton.
+
 3.30.0 - (October 3, 2019)
 ------------------
 ### Changed

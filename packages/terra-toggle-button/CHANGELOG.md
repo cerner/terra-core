@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added reference wdio screenshots for "orion-fusion-theme".
 
+### Changed
+* Inline SVG aligned for IE and wdio screenshots Updated.
+
 3.24.0 - (October 3, 2019)
 ------------------
 ### Changed
