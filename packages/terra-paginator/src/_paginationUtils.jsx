@@ -1,3 +1,40 @@
+import * as KeyCode from 'keycode-js';
+
+/**
+ * Enables focus styles for the target of the given event. Typically used as an onBlur callback on selectable elements.
+ * See: terra-application-navigation/src/utils/helpers.js
+ */
+const enableFocusActiveStyles = (event) => {
+  if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
+    event.currentTarget.setAttribute('data-active-styles-enabled', 'true');
+  }
+
+  if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
+    event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
+  }
+};
+
+/**
+ * Disables focus styles for the target of the given event. Typically used as an onMouseDown callback on selectable elements.
+ * See: terra-application-navigation/src/utils/helpers.js
+ */
+const disableFocusActiveStyles = (event) => {
+  if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
+    event.currentTarget.setAttribute('data-active-styles-enabled', 'false');
+  }
+
+  if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
+    event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
+  }
+};
+
+/**
+ * Disable focus style on Blur event.
+ */
+const disableFocusOnBlur = (event) => {
+  event.currentTarget.setAttribute('data-focus-styles-enabled', 'false');
+};
+
 const calculatePages = (totalCount, itemCountPerPage) => Math.ceil(totalCount / itemCountPerPage);
 
 const pageSet = (index, totalPages) => {
@@ -37,4 +74,6 @@ const pageSet = (index, totalPages) => {
   return sequence.sort((a, b) => a - b);
 };
 
-export { calculatePages, pageSet };
+export {
+  calculatePages, disableFocusActiveStyles, disableFocusOnBlur, enableFocusActiveStyles, pageSet,
+};
