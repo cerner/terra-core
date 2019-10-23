@@ -31,32 +31,35 @@ class PaginatorButton extends React.Component {
     this.setState({ focused: false });
   }
 
+  /* eslint-disable class-methods-use-this */
   handleOnKeyDown(event) {
     // Add active state to FF browsers
     if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
-      this.setState({ active: true });
+      event.currentTarget.setAttribute('data-active-styles-enabled', 'true');
     }
 
     // Add focus styles for keyboard navigation
     if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ focused: true });
+      event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
     }
   }
 
   handleOnKeyUp(event) {
-    // Remove active state from FF broswers
+    // Remove active state from FF browsers
     if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
-      this.setState({ active: false });
+      event.currentTarget.setAttribute('data-active-styles-enabled', 'false');
     }
 
     // Apply focus styles for keyboard navigation
     if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
-      this.setState({ focused: true });
+      event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
     }
   }
 
-  handleFocus() {
-    if (this.shouldShowFocus) this.setState({ focused: true });
+  /* eslint-enable class-methods-use-this */
+
+  handleFocus(event) {
+    if (this.shouldShowFocus) event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
   }
 
   handleMouseDown() {

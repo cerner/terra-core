@@ -56,21 +56,21 @@
         padding: 0;
       }
 
-      &.is-focused {
-        background-color: var(--terra-paginator-nav-link-focus-background-color, transparent);
-        border: var(--terra-paginator-nav-link-focus-border, none);
-        box-shadow: var(--terra-paginator-nav-link-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25), inset 0 0 0 1px #4cb2e9);
-        color: var(--terra-paginator-nav-link-focus-color, #0059a8);
-        outline: none;
-      }
-
-      &.is-active {
+      &[data-active-styles-enabled='true']:active {
         background-color: var(--terra-paginator-nav-link-active-background-color, rgba(0, 0, 0, 0.07));
         border: var(--terra-paginator-nav-link-active-border, none);
         box-shadow: var(--terra-paginator-nav-link-active-box-shadow);
         color: var(--terra-paginator-nav-link-active-color, #001f67);
         //-webkit-tap-highlight-color: transparent; // TODO - add focus management
         text-decoration: var(--terra-paginator-nav-link-active-text-decoration, none);
+      }
+
+      &[data-focus-styles-enabled='true']:focus {
+        background-color: var(--terra-paginator-nav-link-focus-background-color, transparent);
+        border: var(--terra-paginator-nav-link-focus-border, none);
+        box-shadow: var(--terra-paginator-nav-link-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25), inset 0 0 0 1px #4cb2e9);
+        color: var(--terra-paginator-nav-link-focus-color, #0059a8);
+        outline: none;
       }
     }
 
