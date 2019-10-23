@@ -17,10 +17,15 @@
 
   .header-icon {
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     display: inline-block;
     position: relative;
-    top: var(--terra-action-header-icon-top, 0.1429rem);
+    top: var(--terra-action-header-icon-top, 0);
+    vertical-align: var(--terra-action-header-icon-vertical-align, -0.14285rem);
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      height: var(--terra-action-header-icon-ms-height, 1rem);
+      vertical-align: var(--terra-action-header-icon-ms-vertical-align, -0.17285rem);
+    }
 
     &.back {
       background-image: var(--terra-action-header-back-background-image, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M48 21H10.6L27.3 3.9 23.5.1 0 24l23.5 23.9 3.8-3.8L10.6 27H48z"></path></svg>'));

@@ -22,7 +22,7 @@ class ToggleDefault extends React.Component {
         {/**
         * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
         */}
-        <Toggle id="toggle" isOpen={isOpen}>
+        <Toggle id="default-toggle" isOpen={isOpen}>
           <p>
 Lorem ipsum dolor sit amet,
             <a href="#test">consectetur</a>
