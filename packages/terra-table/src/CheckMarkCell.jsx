@@ -106,7 +106,11 @@ const CheckMarkCell = ({
       attrSpread.tabIndex = '0';
       attrSpread['data-cell-show-focus'] = 'true';
       attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
-      attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
+      attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => {
+        event.preventDefault();
+        event.stopPropagation();
+        event.currentTarget.setAttribute('data-cell-show-focus', 'false');
+      });
     }
 
     // attributes for checkbox

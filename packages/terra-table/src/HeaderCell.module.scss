@@ -46,7 +46,12 @@
     outline: var(--terra-table-header-cell-focus-outline, none);
 
     &:hover {
-      background-color: var(--terra-table-header-cell-hover-background-color, darken(#dedfe0, 5%));
+      // background-color: var(--terra-table-header-cell-hover-background-color, darken(#dedfe0, 5%));
+      background-color: rgba(255, 255, 255, 0.50);
+    }
+
+    &:active {
+      background-color: #fff
     }
 
     &[data-header-show-focus='true']:focus {
