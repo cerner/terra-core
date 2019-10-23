@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+### Changed
+* Updated wdio tests to cover update lifecycle handling
+
 3.32.0 - (October 15, 2019)
 ------------------
 ### Fixed
