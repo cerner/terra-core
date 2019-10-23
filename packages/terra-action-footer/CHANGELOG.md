@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Wdio updated for inline svg alignment.
 
 2.24.0 - (October 3, 2019)
 ------------------
