@@ -3,7 +3,7 @@ import InputField from 'terra-form-input/lib/InputField';
 
 const RequiredInputField = () => (
   <InputField
-    inputId="requiredField"
+    inputId="incompleteField"
     label="Incomplete Input Field"
     help="Note: This is help text"
     type="text"
