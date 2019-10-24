@@ -4,8 +4,8 @@ ChangeLog
 Unreleased
 ----------
 ### Fixed
-* Fixes Primary click button not closing menu, when menu is open
-* Fixes multiple instances of split-button and drop-down opening simultaneously.
+* Primary button click not closing menu, when menu is open issue fixed.
+* Multiple instances of split-button and drop-down cannot be opened simulataneously.
 
 ### Added
 * Added metaData and event to `onSelect` callback.
