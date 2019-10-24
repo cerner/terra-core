@@ -1,7 +1,7 @@
 ChangeLog
 =========
 ### Changed
-* Id moved to input element instead of select div for searchable select fields.
+* Added `inputId` prop to allow an id to be passed to the input element for searchable select fields.
 
 Unreleased
 ----------
