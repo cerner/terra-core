@@ -37,7 +37,7 @@ const propTypes = {
   /**
    * The id of the input field.
    */
-  id: PropTypes.string,
+  inputId: PropTypes.string,
   /**
    * @private
    * The intl object to be injected for translations.
@@ -194,7 +194,7 @@ class Frame extends React.Component {
   getDisplay(displayId, ariaDescribedBy) {
     const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required, value, id,
+      disabled, display, placeholder, required, value, inputId,
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
@@ -215,7 +215,7 @@ class Frame extends React.Component {
       className: cx('search-input', { 'is-hidden': isHidden }),
       required: required && !display.length ? true : undefined,
       'aria-required': required && !display.length ? 'required' : undefined,
-      id,
+      inputId,
     };
 
     return (
@@ -615,7 +615,7 @@ class Frame extends React.Component {
       disabled,
       display,
       dropdownAttrs,
-      id,
+      inputId,
       intl,
       isTouchAccessible,
       isInvalid,
