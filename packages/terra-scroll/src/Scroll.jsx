@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
@@ -21,7 +22,7 @@ const Scroll = ({
   refCallback,
   ...customProps
 }) => (
-  <div {...customProps} className={cx(['scroll', customProps.className])} ref={refCallback}>
+  <div {...customProps} tabIndex="0" className={cx(['scroll', customProps.className])} ref={refCallback}>
     {children}
   </div>
 );
