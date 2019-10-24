@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { parse, resolver } from 'react-docgen';
@@ -133,7 +134,7 @@ const PropsTable = ({
         {' '}
 Props
       </h2>
-      <table {...customProps} className={tableClassNames}>
+      <table tabIndex="0" {...customProps} className={tableClassNames}>
         <thead>
           <tr>
             <th className={cx('prop-table-name')}>Prop Name</th>

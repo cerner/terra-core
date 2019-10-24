@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Axe violation fixed for scrollable content.
 
 2.18.0 - (October 3, 2019)
 ------------------

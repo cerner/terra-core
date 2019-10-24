@@ -21,7 +21,8 @@ const Scroll = ({
   refCallback,
   ...customProps
 }) => (
-  <div {...customProps} className={cx(['scroll', customProps.className])} ref={refCallback}>
+  // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+  <div {...customProps} tabIndex="0" className={cx(['scroll', customProps.className])} ref={refCallback}>
     {children}
   </div>
 );
