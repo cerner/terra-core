@@ -52,6 +52,12 @@ describe('Input', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should set the forminput to incomplete when isIncomplete and required is passed into the component', () => {
+    const input = <Input isIncomplete required />;
+    const wrapper = shallow(input);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should pass in refCallback as the ref prop of the input element', () => {
     const refCallback = jest.fn();
     const wrapper = mount(<Input refCallback={refCallback} />);

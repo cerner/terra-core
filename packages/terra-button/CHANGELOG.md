@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Inline SVG aligned for IE and wdio screenshots updated by adding `--terra-button-compact-min-height` variable and updating its value.
+
+3.25.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.24.0 - (September 19, 2019)
 ------------------

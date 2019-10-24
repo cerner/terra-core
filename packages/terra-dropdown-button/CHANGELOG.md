@@ -10,6 +10,11 @@ Unreleased
 ### Added
 * Added metaData and event to `onSelect` callback.
 
+1.6.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.5.0 - (September 19, 2019)
 ------------------
 ### Changed

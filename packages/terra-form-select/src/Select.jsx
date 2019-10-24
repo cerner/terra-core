@@ -33,9 +33,20 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
-   * Whether the select is in an invalid state.
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the select displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
+  /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices. Only applicable to variants
+   * that include an input (e.g. `combobox`, `multiple`, `search`, and `tag`).
+   */
+  isTouchAccessible: PropTypes.bool,
   /**
    * The max height of the dropdown.
    */
@@ -111,7 +122,9 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
+  isTouchAccessible: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
   onChange: undefined,
@@ -148,12 +161,13 @@ function Select(props) {
     case Variants.DEFAULT:
     default: {
       const {
+        isTouchAccessible,
         maxSelectionCount,
         onSearch,
         optionFilter,
-        ...SingleSelectProps
+        ...singleSelectProps
       } = otherProps;
-      return <SingleSelect {...SingleSelectProps} />;
+      return <SingleSelect {...singleSelectProps} />;
     }
   }
 }

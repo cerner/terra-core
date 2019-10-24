@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Duplicate IDs in example changed.
+
+3.23.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.22.0 - (September 19, 2019)
 ------------------

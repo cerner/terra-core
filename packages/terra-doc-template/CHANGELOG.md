@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.20.0 - (October 3, 2019)
+------------------
+### Removed
+* Removed `overflow: hidden` from ExampleTemplate css
+
 2.19.0 - (September 19, 2019)
 ------------------
 ### Changed

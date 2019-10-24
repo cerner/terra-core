@@ -46,11 +46,15 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
   /**
+   * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
    * Whether or not the field is an inline field.
    */
   isInline: PropTypes.bool,
   /**
-   * Whether or not the field is invalid.
+   * Whether the field displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -71,6 +75,10 @@ const propTypes = {
    * Function to trigger when user changes the input value. Provide a function to create a controlled input.
    */
   onChange: PropTypes.func,
+  /**
+   * Placeholder text.
+   */
+  placeholder: PropTypes.string,
   /**
    * Whether or not the field is required.
    */
@@ -96,12 +104,14 @@ const defaultProps = {
   help: null,
   hideRequired: false,
   inputAttrs: {},
+  isIncomplete: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
   labelAttrs: {},
   maxWidth: undefined,
   onChange: undefined,
+  placeholder: undefined,
   required: false,
   showOptional: false,
   value: undefined,
@@ -117,6 +127,7 @@ const TextareaField = (props) => {
     hideRequired,
     inputAttrs,
     inputId,
+    isIncomplete,
     isInline,
     isInvalid,
     isLabelHidden,
@@ -126,6 +137,7 @@ const TextareaField = (props) => {
     required,
     showOptional,
     onChange,
+    placeholder,
     value,
     ...customProps
   } = props;
@@ -165,7 +177,9 @@ const TextareaField = (props) => {
         {...inputAttrs}
         disabled={inputAttrs.disabled || disabled}
         id={inputId}
+        isIncomplete={isIncomplete}
         onChange={onChange}
+        placeholder={placeholder || inputAttrs.placeholder}
         value={value}
         defaultValue={defaultValue}
         aria-describedby={ariaDescriptionIds}

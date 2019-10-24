@@ -20,6 +20,12 @@ const propTypes = {
    */
   isEnabled: PropTypes.bool,
   /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
+  /**
    * Callback function triggered when the dropdown resizes.
    */
   onResize: PropTypes.func.isRequired,
@@ -36,6 +42,7 @@ const propTypes = {
 
 const defaultProps = {
   isAbove: false,
+  isTouchAccessible: false,
 };
 
 const AboveAttachment = {
@@ -49,21 +56,42 @@ const BelowAttachment = {
 };
 
 const Dropdown = ({
-  children, isAbove, isEnabled, onResize, target, refCallback, ...customProps
+  children,
+  isAbove,
+  isEnabled,
+  isTouchAccessible,
+  onResize,
+  refCallback,
+  target,
+  ...customProps
 }) => {
   /**
    * Prevents default events from removing the focus from the target.
    * @param {event} event - The event invoking the callback.
    */
-  const preventDefault = (event) => {
+  const preventDefault = React.useCallback((event) => {
     event.preventDefault();
-  };
+  }, []);
 
   const dropdownClasses = cx([
     'dropdown',
     { 'is-above': isAbove },
+    { 'is-touch-accessible': isTouchAccessible },
     customProps.className,
   ]);
+
+  if (isTouchAccessible) {
+    return (
+      <div // eslint-disable-line jsx-a11y/no-static-element-interactions
+        {...customProps}
+        className={dropdownClasses}
+        onMouseDown={preventDefault}
+        ref={refCallback}
+      >
+        {children}
+      </div>
+    );
+  }
 
   return (
     <Hookshot

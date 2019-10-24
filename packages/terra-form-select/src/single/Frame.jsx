@@ -44,7 +44,11 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether the select is in an invalid state.
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the select displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -93,6 +97,7 @@ const defaultProps = {
   clearOptionDisplay: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
   noResultContent: undefined,
   onDeselect: undefined,
@@ -230,8 +235,8 @@ class Frame extends React.Component {
     }
 
     const { dropdownAttrs, maxHeight } = this.props;
-    const { select, dropdown } = this;
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, select, dropdown, maxHeight));
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight));
   }
 
   /**
@@ -424,6 +429,7 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
+      isIncomplete,
       isInvalid,
       maxHeight,
       noResultContent,
@@ -443,6 +449,7 @@ class Frame extends React.Component {
       { 'is-disabled': disabled },
       { 'is-focused': this.state.isFocused },
       { 'is-invalid': isInvalid },
+      { 'is-incomplete': (isIncomplete && required && !isInvalid) },
       { 'is-open': this.state.isOpen },
       customProps.className,
     ]);

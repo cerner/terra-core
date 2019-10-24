@@ -3,6 +3,26 @@ ChangeLog
 
 Unreleased
 ----------
+* Duplicate IDs in example changed.
+
+3.30.0 - (October 15, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.29.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Added
+* Added `placeholder` as a property to `<Textarea />` and `<TextareaField />`
+* Added `isIncomplete` prop to show incomplete stylings.
+
+3.28.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.27.0 - (September 26, 2019)
 ------------------

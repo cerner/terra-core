@@ -1,5 +1,9 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import SelectField from '../../../SelectField';
+import styles from './common/Select.test.module.scss';
+
+const cx = classNames.bind(styles);
 
 class SelectFieldMessagesExample extends React.Component {
   constructor() {
@@ -20,7 +24,7 @@ class SelectFieldMessagesExample extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={cx('content-wrapper')}>
         <button type="button" id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
         <SelectField
           label="T-shirt size"

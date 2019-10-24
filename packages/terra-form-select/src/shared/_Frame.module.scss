@@ -8,6 +8,7 @@
     display: flex;
     font-size: var(--terra-form-select-font-size, 1.143rem);
     line-height: var(--terra-form-select-line-height, 1.75);
+    position: relative;
   }
 
   .default {
@@ -67,19 +68,36 @@
       border-color: var(--terra-form-select-focus-hover-border-color, #4cb2e9);
     }
 
+    &.is-incomplete {
+      background-color: var(--terra-form-select-incomplete-background-color, #ffc);
+    }
+
+    &.is-incomplete.is-focused {
+      background-color: var(--terra-form-select-incomplete-focus-background-color, #ffc);
+    }
+
+    &.is-incomplete:hover {
+      background-color: var(--terra-form-select-incomplete-hover-background-color, #ffc);
+    }
+
+    &.is-incomplete.is-disabled {
+      background-color: var(--terra-form-select-incomplete-disabled-background-color, #ffc);
+    }
+
     &.is-invalid {
       background-color: var(--terra-form-select-invalid-background-color, none);
       background-image: var(--terra-form-select-invalid-background-image, none);
-      border-color: var(--terra-form-select-invalid-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-border-color, #e50000);
+      box-shadow: var(--terra-form-select-invalid-box-shadow, 0 0 0 1px #e50000);
     }
 
     &.is-invalid.is-focused {
       background-size: var(--terra-form-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-form-select-invalid-focus-border-color, #4cb2e9);
+      border-color: var(--terra-form-select-invalid-focus-border-color, #e50000);
     }
 
     &.is-invalid:hover {
-      border-color: var(--terra-form-select-invalid-hover-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-hover-border-color, #e50000);
     }
   }
 
@@ -116,7 +134,7 @@
 
     .search-input::placeholder,
     .placeholder {
-      color: var(--terra-form-select-disabled-placeholder-color, #70787c);
+      color: var(--terra-form-select-disabled-placeholder-color, rgba(21, 33, 41, 0.61));
       font-style: var(--terra-form-select-disabled-placeholder-font-style);
     }
   }
@@ -222,7 +240,7 @@
 
   .search-input::placeholder,
   .placeholder {
-    color: var(--terra-form-select-search-placeholder-color, #70787c);
+    color: var(--terra-form-select-search-placeholder-color, rgba(21, 33, 41, 0.61));
     font-size: var(--terra-form-select-search-placeholder-font-size, 1.143rem);
     font-style: var(--terra-form-select-search-placeholder-font-style);
     overflow: hidden;
@@ -261,6 +279,16 @@
 
       &:hover {
         background-color: var(--terra-form-select-toggle-hover-background-color, none);
+      }
+
+      &.is-invalid {
+        border-color: var(--terra-form-select-toggle-invalid-border-color, #e50000);
+        box-shadow: var(--terra-form-select-toggle-invalid-box-shadow, 0 0 0 1px #e50000);
+      }
+
+      &.is-invalid:focus {
+        border-color: var(--terra-form-select-toggle-invalid-focus-border-color, #e50000);
+        box-shadow: var(--terra-form-select-toggle-invalid-focus-box-shadow, 0 0 0 1px #e50000, 0 0 4px 3px rgba(229, 0, 0, 0.35));
       }
     }
 
@@ -306,20 +334,37 @@
       border-color: var(--terra-form-select-focus-hover-border-color, #4cb2e9);
     }
 
+    &.is-incomplete > .display {
+      background-color: var(--terra-form-select-incomplete-background-color, #ffc);
+    }
+
+    &.is-incomplete.is-focused > .display {
+      background-color: var(--terra-form-select-incomplete-focus-background-color, #ffc);
+    }
+
+    &.is-incomplete:hover > .display {
+      background-color: var(--terra-form-select-incomplete-hover-background-color, #ffc);
+    }
+
+    &.is-incomplete.is-disabled > .display {
+      background-color: var(--terra-form-select-incomplete-disabled-background-color, #ffc);
+    }
+
     &.is-invalid > .display {
       background-color: var(--terra-form-select-invalid-background-color, none);
       background-image: var(--terra-form-select-invalid-background-image, none);
-      border-color: var(--terra-form-select-invalid-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-border-color, #e50000);
+      box-shadow: var(--terra-form-select-invalid-box-shadow, 0 0 0 1px #e50000);
     }
 
     &.is-invalid.is-focused > .display {
       background-size: var(--terra-form-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-form-select-invalid-focus-border-color, #4cb2e9);
-      box-shadow: var(--terra-form-select-invalid-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+      border-color: var(--terra-form-select-invalid-focus-border-color, #e50000);
+      box-shadow: var(--terra-form-select-invalid-focus-box-shadow, 0 0 0 1px #e50000);
     }
 
     &.is-invalid:hover > .display {
-      border-color: var(--terra-form-select-invalid-hover-border-color, #dedfe0);
+      border-color: var(--terra-form-select-invalid-hover-border-color, #e50000);
     }
   }
 
