@@ -1,7 +1,7 @@
 # terra-avatar Upgrade Guide
 ## Changes from version 2 to version 3
 
-### Reason for Upgrade
+### Reason for upgrade
 * To group all user avatars in single variant `shared-user` has been replaced with `generic` sub-component
 * To keep adding new user avatars like `provider` easier new `generic` sub-component has been added with all user avatars as variants. 
 
@@ -10,7 +10,8 @@
 
 ### Added
 * The `generic` subcomponent that replaces the `sharedUser` subcomponent with a new `variant` prop that can be `single-user`, `shared-user`, or `provider`.
-* `variant` prop will take values for sub-variants `single-user`, `shared-user` and `provider`..
+* `variant` prop will take values for sub-variants `single-user`, `shared-user` and `provider`.
+* `user` avatar has been moved into `generic` sub-comopnent with varaint name `single-user`.
 
 ### Steps to uplift to V3
 1. Use a named export for Generic variant.

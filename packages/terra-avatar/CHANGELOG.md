@@ -7,7 +7,7 @@ Unreleased
 * To Make all User avatars available in same variant `generic` subcomponent has been added.
 * `generic` subcomponent replaces the `sharedUser` subcomponent.
 * `generic` subcomponent contains a `variant` prop that toggles between `single-user`, `shared-user`, and `provider` user avatar.
-* User icon has been moved from default varaint to `single-user` variant.
+* `user` avatar has been moved into `generic` sub-comopnent with varaint name `single-user`.
 
 2.29.0 - (October 3, 2019)
 ------------------
