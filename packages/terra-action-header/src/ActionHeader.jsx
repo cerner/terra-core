@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
+import Button, { ButtonVariants } from 'terra-button';
 import { FormattedMessage } from 'react-intl';
 import ActionHeaderContainer from './_ActionHeaderContainer';
 import styles from './ActionHeader.module.scss';
@@ -93,7 +93,7 @@ const ActionHeader = ({
             icon={<span className={cx(['header-icon', 'close'])} />}
             text={closeText}
             onClick={onClose}
-            variant={Button.Opts.Variants.UTILITY}
+            variant={ButtonVariants.UTILITY}
           />
         )}
       </FormattedMessage>
@@ -109,7 +109,7 @@ const ActionHeader = ({
             icon={<span className={cx(['header-icon', 'back'])} />}
             text={backText}
             onClick={onBack}
-            variant={Button.Opts.Variants.UTILITY}
+            variant={ButtonVariants.UTILITY}
           />
         )}
       </FormattedMessage>
@@ -127,7 +127,7 @@ const ActionHeader = ({
               icon={<span className={cx(['header-icon', 'maximize'])} />}
               text={maximizeText}
               onClick={onMaximize}
-              variant={Button.Opts.Variants.UTILITY}
+              variant={ButtonVariants.UTILITY}
             />
           )}
         </FormattedMessage>
@@ -141,7 +141,7 @@ const ActionHeader = ({
               icon={<span className={cx(['header-icon', 'minimize'])} />}
               text={minimizeText}
               onClick={onMinimize}
-              variant={Button.Opts.Variants.UTILITY}
+              variant={ButtonVariants.UTILITY}
             />
           )}
         </FormattedMessage>
@@ -160,7 +160,7 @@ const ActionHeader = ({
               text={previousText}
               onClick={onPrevious}
               isDisabled={onPrevious === undefined}
-              variant={Button.Opts.Variants.UTILITY}
+              variant={ButtonVariants.UTILITY}
             />
           )}
         </FormattedMessage>
@@ -172,7 +172,7 @@ const ActionHeader = ({
               text={nextText}
               onClick={onNext}
               isDisabled={onNext === undefined}
-              variant={Button.Opts.Variants.UTILITY}
+              variant={ButtonVariants.UTILITY}
             />
           )}
         </FormattedMessage>
