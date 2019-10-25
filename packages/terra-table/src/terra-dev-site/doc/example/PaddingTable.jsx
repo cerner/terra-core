@@ -29,12 +29,12 @@ const PaddingTable = ({
       <Cell isPadded key="ADDRESS">123 Adams Drive</Cell>
       <Cell isPadded key="PHONE_NUMBER">111-222-3333</Cell>
     </Row>
-    <Row isSelected key="PERSON_1">
+    <Row key="PERSON_1">
       <Cell isPadded key="NAME">Jane Smith</Cell>
       <Cell isPadded key="ADDRESS">321 Drive Street</Cell>
       <Cell isPadded key="PHONE_NUMBER">111-222-3333</Cell>
     </Row>
-    <Row isSelectable key="PERSON_2">
+    <Row key="PERSON_2">
       <Cell isPadded key="NAME">Dave Smith</Cell>
       <Cell isPadded key="ADDRESS">213 Raymond Road</Cell>
       <Cell isPadded key="PHONE_NUMBER">111-222-3333</Cell>
