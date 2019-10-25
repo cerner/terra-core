@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added missing alternative text for example.
 
 3.19.0 - (October 3, 2019)
 ------------------
