@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.32.0 - (October 15, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.31.0 - (October 14, 2019)
 ------------------
 ### Fixed
@@ -12,6 +17,9 @@ Unreleased
 ### Changed
 * Jest snapshot update due to changes in form input.
 * Minor dependency version bump
+
+### Changed
+* Wdio Update for svg align of  bnutton.
 
 3.30.0 - (October 3, 2019)
 ------------------

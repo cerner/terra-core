@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const SingleSelectFieldExample = () => (
-  <SingleSelectField required isIncomplete label="T-shirt size" placeholder="Select a size" selectId="tshirt-size-field" className={cx('form-select')}>
+  <SingleSelectField required isIncomplete label="T-shirt size" placeholder="Select a size" selectId="tshirt-size-field-1" className={cx('form-select')}>
     <SingleSelectField.Option value="xSmall" display="Extra Small" />
     <SingleSelectField.Option value="small" display="Small" />
     <SingleSelectField.Option value="medium" display="Medium" />

@@ -3,6 +3,18 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Duplicate ID in examples changed.
+
+5.35.0 - (October 18, 2019)
+------------------
+### Fixed
+* Fixed form-select placeholder color text to pass contrast test and added wdio test
+
+5.34.0 - (October 15, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 5.33.0 - (October 14, 2019)
 ------------------

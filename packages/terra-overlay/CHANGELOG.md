@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+### Changed
+* Updated wdio tests to cover update lifecycle handling
+
+3.32.0 - (October 15, 2019)
+------------------
 ### Fixed
 * Fixed inert property management during component update lifecycle
 
