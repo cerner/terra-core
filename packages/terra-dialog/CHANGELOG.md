@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added `vertical-align` to align inline-svg
 
 2.27.0 - (October 3, 2019)
 ------------------
