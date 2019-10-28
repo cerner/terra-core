@@ -9,6 +9,9 @@ Unreleased
 * `generic` subcomponent contains a `variant` prop that toggles between `single-user`, `shared-user`, and `provider` user avatar.
 * `user` avatar has been moved into `generic` sub-comopnent with varaint name `single-user`.
 
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
 2.29.0 - (October 3, 2019)
 ------------------
 ### Changed

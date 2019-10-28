@@ -25,7 +25,6 @@ import CardContentCenteredSrc from '!raw-loader!../../../../src/terra-dev-site/d
 import CardVisuallyHiddenText from '../example/CardVisuallyHiddenText';
 import CardVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CardVisuallyHiddenText';
 
-
 const DocPage = () => (
   <DocTemplate
     packageName={name}

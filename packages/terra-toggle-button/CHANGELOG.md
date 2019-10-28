@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+### Changed
+* Inline SVG aligned for IE and wdio screenshots Updated.
 
 3.24.0 - (October 3, 2019)
 ------------------

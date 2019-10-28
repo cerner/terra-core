@@ -9,7 +9,6 @@ import exampleSrc from '!raw-loader!../../../../src/terra-dev-site/test/doc-temp
 import testComponentSrc from '!raw-loader!../../../../src/terra-dev-site/test/doc-template/common/TestComponent';
 /* eslint-enisable import/no-webpack-loader-syntax, import/first */
 
-
 const Index = () => {
   const propsTables = [
     { componentSrc: testComponentSrc, componentName: 'Test Component' },

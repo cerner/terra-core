@@ -1,8 +1,12 @@
 ChangeLog
 =========
+### Fixed
+* Fixed lint warnings for multiple empty lines
 
 Unreleased
 ----------
+### Changed
+* Inline SVG aligned for IE and wdio screenshots updated by adding `--terra-button-compact-min-height` variable and updating its value.
 
 3.25.0 - (October 3, 2019)
 ------------------

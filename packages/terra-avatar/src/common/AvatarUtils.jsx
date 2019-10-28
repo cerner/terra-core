@@ -74,7 +74,6 @@ const generateImage = (image, alt, isAriaHidden, variant, handleFallback) => {
   return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} fit="cover" />;
 };
 
-
 /**
  * Returns true if the given color exists within `COLOR_VARIANTS`.
  */
