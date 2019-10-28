@@ -61,6 +61,10 @@ const propTypes = {
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
+  onFocus: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
   onClick: PropTypes.func,
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
@@ -87,6 +91,7 @@ const CheckMarkCell = ({
   isSelectable,
   metaData,
   onBlur,
+  onFocus,
   onClick,
   onKeyDown,
   onMouseDown,
@@ -105,9 +110,15 @@ const CheckMarkCell = ({
       attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
       attrSpread.tabIndex = '0';
       attrSpread['data-cell-show-focus'] = 'true';
-      attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
+      attrSpread.onFocus = TableUtils.wrappedEventCallback(onFocus, event => {
+        event.currentTarget.setAttribute('tabindex', -1);
+      });
+      attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => {
+        event.stopPropagation();
+        event.currentTarget.setAttribute('data-cell-show-focus', 'true');
+        event.currentTarget.setAttribute('tabindex', 0);
+      });
       attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => {
-        event.preventDefault();
         event.stopPropagation();
         event.currentTarget.setAttribute('data-cell-show-focus', 'false');
       });
