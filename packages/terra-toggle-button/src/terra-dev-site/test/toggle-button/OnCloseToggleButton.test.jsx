@@ -26,5 +26,4 @@ class OnCloseToggleButton extends React.Component {
   }
 }
 
-
 export default OnCloseToggleButton;
