@@ -26,5 +26,4 @@ class OnOpenToggleButton extends React.Component {
   }
 }
 
-
 export default OnOpenToggleButton;

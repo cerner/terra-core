@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added `inputId` prop to allow an id to be passed to the input element for searchable select fields.
 
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
 ### Changed
 * Duplicate ID in examples changed.
 

@@ -10,7 +10,6 @@ describe('generateMarkdown with invalid input', () => {
   });
 });
 
-
 describe('generateMarkdown with valid input', () => {
   it('should generate a markdown table', () => {
     const validInput = {

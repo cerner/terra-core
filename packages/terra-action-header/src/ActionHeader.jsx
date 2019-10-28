@@ -71,7 +71,6 @@ const defaultProps = {
   children: undefined,
 };
 
-
 const ActionHeader = ({
   title,
   level,

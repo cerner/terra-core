@@ -53,5 +53,4 @@ class ToggleDefault extends React.Component {
   }
 }
 
-
 export default ToggleDefault;
