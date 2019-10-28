@@ -3,6 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+2.31.0 - (October 15, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.30.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.29.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.28.0 - (September 26, 2019)
 ------------------

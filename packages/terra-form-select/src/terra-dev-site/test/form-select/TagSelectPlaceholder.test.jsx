@@ -1,8 +1,12 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Select from '../../../Select';
+import styles from './common/Select.test.module.scss';
+
+const cx = classNames.bind(styles);
 
 const TagSelectPlaceholder = () => (
-  <div>
+  <div className={cx('content-wrapper')}>
     <Select placeholder="Select a color" variant="tag" id="tag">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />

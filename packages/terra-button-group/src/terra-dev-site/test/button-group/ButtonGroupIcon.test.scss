@@ -1,7 +1,7 @@
 :local {
   .icon {
-    background-color: #000;
-    height: 1em;
-    width: 1em;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      margin-top: 0;
+    }
   }
 }

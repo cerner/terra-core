@@ -1,6 +1,5 @@
 const generatePropRow = require('../../bin/generateMarkdown/generatePropRow');
 
-
 it('should return a markdown row', () => {
   const propName = 'children';
   const prop = {
@@ -56,7 +55,6 @@ describe('when propName is an empty string', () => {
     expect(generatePropRow(propName, prop)).toMatchSnapshot();
   });
 });
-
 
 describe('when propName is null', () => {
   it('should return a markdown row with an empty propName', () => {

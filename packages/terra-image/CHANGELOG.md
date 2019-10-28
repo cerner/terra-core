@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added missing alternative text for example.
+
+3.19.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.18.0 - (September 19, 2019)
 ------------------

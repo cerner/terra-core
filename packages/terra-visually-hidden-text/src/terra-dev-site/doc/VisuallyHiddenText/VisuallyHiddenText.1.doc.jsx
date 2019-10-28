@@ -12,7 +12,6 @@ import DefaultVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-
 import RefCallbackVisuallyHiddenText from '../example/RefCallbackVisuallyHiddenText';
 import RefCallbackVisuallyHiddenTextSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RefCallbackVisuallyHiddenText.jsx';
 
-
 const DocPage = () => (
   <DocTemplate
     packageName={name}

@@ -33,7 +33,7 @@ const propTypes = {
    */
   htmlFor: PropTypes.string,
   /**
-   * Whether or not the field is invalid.
+   * Whether the field displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -141,7 +141,6 @@ const Field = (props) => {
       console.warn('The htmlFor prop should be a string without white spaces as it will be used as an HTML attribute value. Use - or _ in place of white space characters.');
     }
   }
-
 
   /**
    * IE + JAWS has trouble reading aria-describedby content with our form components.
