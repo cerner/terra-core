@@ -26,5 +26,4 @@ class OpenToggle extends React.Component {
   }
 }
 
-
 export default OpenToggle;

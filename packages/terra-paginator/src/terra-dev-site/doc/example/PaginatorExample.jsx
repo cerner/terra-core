@@ -6,7 +6,6 @@ import styles from './PaginatorExampleCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-
 const totalCount = 450;
 
 const fillArray = (value, len) => {

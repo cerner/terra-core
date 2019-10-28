@@ -117,7 +117,6 @@ const defaultProps = {
   value: undefined,
 };
 
-
 class TagSelect extends React.Component {
   constructor(props) {
     super(props);

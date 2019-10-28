@@ -124,7 +124,6 @@ describe('Badge with icon and text', () => {
   });
 });
 
-
 describe('Badge with additional props', () => {
   // With custom props
   it('should have the class terra-Badge--primary, terra-Badge--small and has-icon with icon followed by text', () => {
