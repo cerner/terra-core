@@ -28,7 +28,6 @@ const templateShape = {
   style: PropTypes.object,
 };
 
-
 const propTypes = {
   /**
   * The child Region components that make up the grid.
@@ -65,7 +64,6 @@ const propTypes = {
   */
   huge: PropTypes.shape(templateShape),
 };
-
 
 const defaultProps = {
   defaultTemplate: {},

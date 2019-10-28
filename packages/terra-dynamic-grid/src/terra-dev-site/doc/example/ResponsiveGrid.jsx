@@ -40,7 +40,6 @@ const region2 = {
   },
 };
 
-
 const region3 = {
   defaultPosition: {
     'grid-column-start': 3,
@@ -88,7 +87,6 @@ const region5 = {
     'grid-column-start': 3,
   },
 };
-
 
 const ResponsiveGrid = () => (
   <DynamicGrid defaultTemplate={template}>

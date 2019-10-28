@@ -3,7 +3,6 @@ import React from 'react';
 import { mountWithIntl } from 'terra-enzyme-intl';
 import ShowHide from '../../src/ShowHide';
 
-
 describe('ShowHide', () => {
   // Snapshot Tests
   it('should render a default show-hide component', () => {
