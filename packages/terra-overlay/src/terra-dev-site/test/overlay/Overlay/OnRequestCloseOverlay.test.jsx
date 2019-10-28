@@ -49,7 +49,6 @@ class OverlayExample extends React.Component {
     );
   }
 
-
   render() {
     return (
       <OverlayContainer className={cx('overlay-container2')} overlay={this.addOverlay()}>

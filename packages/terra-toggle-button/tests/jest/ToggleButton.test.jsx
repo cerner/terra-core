@@ -2,7 +2,6 @@ import React from 'react';
 import IconCaretRight from 'terra-icon/lib/icon/IconCaretRight';
 import ToggleButton from '../../src/ToggleButton';
 
-
 describe('ToggleButton', () => {
   // Snapshot Tests
   it('should render a default toggle-button', () => {

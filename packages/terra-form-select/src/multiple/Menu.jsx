@@ -380,7 +380,6 @@ class Menu extends React.Component {
       input, onDeselect, onSelect, value, intl, visuallyHiddenComponent,
     } = this.props;
 
-
     const shouldUnselectOption = MenuUtil.includes(value, option.props.value);
     const optionATClickText = (shouldUnselectOption
       ? intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: option.props.display })

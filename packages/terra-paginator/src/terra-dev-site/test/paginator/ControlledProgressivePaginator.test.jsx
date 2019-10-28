@@ -6,7 +6,6 @@ import styles from './ControlledPaginatorTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-
 const totalCount = 450;
 
 class ProgressivePaginatorExample extends React.Component {

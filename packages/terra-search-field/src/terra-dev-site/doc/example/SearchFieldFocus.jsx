@@ -29,5 +29,4 @@ const SearchFieldFocus = () => {
   );
 };
 
-
 export default SearchFieldFocus;

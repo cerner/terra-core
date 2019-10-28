@@ -170,7 +170,6 @@ describe('Icon', () => {
     });
   });
 
-
   describe('IconComment', () => {
     it('should shallow IconBase', () => {
       const wrapper = shallow(<IconComment />);
