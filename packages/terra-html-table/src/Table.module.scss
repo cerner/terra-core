@@ -12,11 +12,13 @@
       padding-bottom: 0.5em;
     }
 
+    // Header Row, Row
     tr {
       display: table-row;
       margin-bottom: 0;
     }
 
+    // Row Cell
     td {
       border: 0;
       border-left: var(--terra-html-table-cell-border-left, 0);
@@ -33,6 +35,7 @@
       }
     }
 
+    // Header Cell
     th {
       border: 0;
       border-left: var(--terra-html-table-header-cell-border-left, 0);
@@ -49,26 +52,31 @@
       }
     }
 
+    // Header
     thead {
-      background-color: var(--terra-html-table-thead-background-color, #dedfe0);
+      background-color: var(--terra-html-table-header-background-color, #dedfe0);
       display: table-header-group;
 
+      // Header Row
       tr {
-        border-bottom: var(--terra-html-table-thead-tr-border-bottom, 0);
-        border-top: var(--terra-html-table-thead-tr-border-top, 1px solid #c8cacb);
+        border-bottom: var(--terra-html-table-header-row-border-bottom, 0);
+        border-top: var(--terra-html-table-header-row-border-top, 1px solid #c8cacb);
       }
 
+      // Header Cell
       th {
-        color: var(--terra-html-table-thead-th-color, #1c1f21);
-        font-size: var(--terra-html-table-thead-th-font-size, 1rem);
-        font-weight: var(--terra-html-table-thead-th-font-weight, bold);
+        color: var(--terra-html-table-header-cell-color, #1c1f21);
+        font-size: var(--terra-html-table-header-cell-font-size, 1rem);
+        font-weight: var(--terra-html-table-header-cell-font-weight, bold);
         vertical-align: bottom;
       }
     }
 
+    // Body
     tbody {
-      background-color: var(--terra-html-table-tbody-background-color);
+      background-color: var(--terra-html-table-body-background-color);
 
+      // Row
       tr {
         border-top: var(--terra-html-table-row-border-top, 1px solid #c8cacb);
 
@@ -80,13 +88,14 @@
 
     tfoot {
       tr {
-        border-bottom: var(--terra-html-table-tfoot-tr-border-bottom, 1px solid #c8cacb);
-        border-top: var(--terra-html-table-tfoot-tr-border-top, 0);
+        border-bottom: var(--terra-html-table-footer-row-border-bottom, 1px solid #c8cacb);
+        border-top: var(--terra-html-table-footer-row-border-top, 0);
         text-align: left;
       }
     }
   }
 
+  // Header Cell, Row Cell
   .padding-standard th,
   .padding-standard td {
     padding-bottom: var(--terra-html-table-cell-standard-padding-bottom, 0.5rem);
@@ -95,6 +104,7 @@
     padding-top: var(--terra-html-table-cell-standard-padding-top, 0.5rem);
   }
 
+  // Header Cell, Row Cell
   .padding-compact th,
   .padding-compact td {
     padding-bottom: var(--terra-html-table-cell-compact-padding-bottom, 0.25rem);
