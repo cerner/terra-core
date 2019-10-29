@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
 ### Changed
 * Inline SVG aligned for IE and wdio screenshots Updated.
 

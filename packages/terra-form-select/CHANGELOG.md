@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+* Fixed re-renders of scroll after every componentDidUpdate call.
+
 ### Changed
 * Duplicate ID in examples changed.
 

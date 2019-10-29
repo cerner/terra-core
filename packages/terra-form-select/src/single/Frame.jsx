@@ -264,7 +264,6 @@ class Frame extends React.Component {
       return;
     }
 
-
     this.setState({ isFocused: false });
 
     this.closeDropdown();
