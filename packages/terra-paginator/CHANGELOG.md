@@ -9,6 +9,9 @@ Unreleased
 ### Changed
 * `focused` and `active` pseudo selectors migrated to data attributes
 
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
 2.31.0 - (October 15, 2019)
 ------------------
 ### Changed
