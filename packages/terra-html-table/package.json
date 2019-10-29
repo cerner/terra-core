@@ -26,10 +26,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "keycode-js": "^1.0.4",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.17.0",
-    "terra-icon": "^3.18.0"
+    "terra-doc-template": "^2.17.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

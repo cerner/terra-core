@@ -12,12 +12,12 @@ const propTypes = {
    */
   isPadded: PropTypes.bool,
   /**
-   * Function callback for the ref of the td.
+   * Function callback for the ref of the cell.
    */
   width: PropTypes.shape({
     static: PropTypes.shape({
-      value: PropTypes.number,
-      unit: PropTypes.string,
+      value: PropTypes.number.isRequired,
+      unit: PropTypes.string.isRequired,
     }),
     percentage: PropTypes.number,
     scalar: PropTypes.number,
@@ -36,10 +36,9 @@ const HeaderChevronCell = ({
   <div
     {...customProps}
     style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-    className={cx(
+    className={`${cx(
       'cell',
-      customProps.className,
-    )}
+    )} ${customProps.className}`}
     role="none"
   >
     <div className={cx('container')}>

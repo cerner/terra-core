@@ -15,7 +15,8 @@ const propTypes = {
    */
   isStriped: PropTypes.bool,
   /**
-   * Whether or not the table cells should be padded
+   * Indicates the desired divider styles to apply to a row and its children.
+   * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
    */
   paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
 };

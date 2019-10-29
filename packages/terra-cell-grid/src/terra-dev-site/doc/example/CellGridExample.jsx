@@ -1,7 +1,7 @@
 import React from 'react';
 import CellGrid, {
   Cell,
-} from 'terra-cell-grid'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+} from 'terra-cell-grid';
 
 const CellGridExample = () => (
   <CellGrid>

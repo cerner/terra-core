@@ -48,8 +48,8 @@ const propTypes = {
    */
   width: PropTypes.shape({
     static: PropTypes.shape({
-      value: PropTypes.number,
-      unit: PropTypes.string,
+      value: PropTypes.number.isRequired,
+      unit: PropTypes.string.isRequired,
     }),
     percentage: PropTypes.number,
     scalar: PropTypes.number,
@@ -93,13 +93,6 @@ const HeaderCell = ({
   width,
   ...customProps
 }) => {
-  const contentClassName = cx([
-    'header-cell',
-    { 'is-selectable': isSelectable },
-    { 'is-sortable': sort === 'asc' || sort === 'desc' },
-    customProps.className,
-  ]);
-
   let sortIndicator;
   if (sort !== 'none') {
     sortIndicator = <div className={cx(`sort-indicator-${sort}`)} key="sort" />;
@@ -136,7 +129,11 @@ const HeaderCell = ({
       {...customProps}
       {...attrSpread}
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={contentClassName}
+      className={`${cx(
+        'header-cell',
+        { 'is-selectable': isSelectable },
+        { 'is-sortable': sort === 'asc' || sort === 'desc' },
+      )} ${customProps.className}`}
       ref={refCallback}
       role="columnheader"
     >

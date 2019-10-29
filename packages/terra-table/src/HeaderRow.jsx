@@ -35,11 +35,6 @@ const HeaderRow = ({
   selectionStyle,
   ...customProps
 }) => {
-  const rowClassNames = cx([
-    'header',
-    customProps.className,
-  ]);
-
   let checkmark;
   let chevron;
   if (selectionStyle === 'checkmark') {
@@ -53,7 +48,12 @@ const HeaderRow = ({
   }
 
   return (
-    <div className={rowClassNames} role="rowgroup">
+    <div
+      className={`${cx(
+        'header',
+      )} ${customProps.className}`}
+      role="rowgroup"
+    >
       <div {...customProps} className={cx(['header-content'])} role="row">
         {checkmark}
         {children}

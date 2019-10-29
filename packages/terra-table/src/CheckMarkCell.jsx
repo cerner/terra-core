@@ -48,8 +48,8 @@ const propTypes = {
    */
   width: PropTypes.shape({
     static: PropTypes.shape({
-      value: PropTypes.number,
-      unit: PropTypes.string,
+      value: PropTypes.number.isRequired,
+      unit: PropTypes.string.isRequired,
     }),
     percentage: PropTypes.number,
     scalar: PropTypes.number,
@@ -138,12 +138,11 @@ const CheckMarkCell = ({
       {...customProps}
       {...attrSpread}
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={cx(
+      className={`${cx(
         'cell',
         { 'is-interactable': !isDisabled && isSelectable },
         { 'is-top-align': !!attrCheck.style },
-        customProps.className,
-      )}
+      )} ${customProps.className}`}
       ref={refCallback}
       role={isSelectable ? 'rowheader' : 'none'}
     >

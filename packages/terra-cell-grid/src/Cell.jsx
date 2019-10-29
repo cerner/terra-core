@@ -8,20 +8,20 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Content to be displayed for the row cell
+   * Content to be displayed for the cell
    */
   children: PropTypes.node,
   /**
-   * Function callback for the ref of the td.
+   * Function callback for the ref of the cell.
    */
   refCallback: PropTypes.func,
   /**
-   * Function callback for the ref of the td.
+   * String-formatted width that the HeaderCell should be rendered as. Any valid css width value is supported (i.e. 200px, 3rem).
    */
   width: PropTypes.shape({
     static: PropTypes.shape({
-      value: PropTypes.number,
-      unit: PropTypes.string,
+      value: PropTypes.number.isRequired,
+      unit: PropTypes.string.isRequired,
     }),
     percentage: PropTypes.number,
     scalar: PropTypes.number,

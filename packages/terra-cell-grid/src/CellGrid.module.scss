@@ -18,7 +18,7 @@
   .divider-horizontal,
   .divider-both {
     > * {
-      border-right: var(--terra-cell-grid-cell-border-right, 1px solid #ccc);
+      border-right: var(--terra-cell-grid-child-border-right, 1px solid #ccc);
 
       &:last-of-type {
         border-right: 0;
@@ -28,10 +28,10 @@
 
   .divider-vertical,
   .divider-both {
-    border-top: var(--terra-cell-grid-row-border-top, 1px solid #dedfe0);
+    border-top: var(--terra-cell-grid-divider-border-top, 1px solid #dedfe0);
 
     &:last-of-type {
-      border-bottom: var(--terra-cell-grid-row-border-bottom, 1px solid #dedfe0);
+      border-bottom: var(--terra-cell-grid-divider-border-bottom, 1px solid #dedfe0);
     }
   }
 

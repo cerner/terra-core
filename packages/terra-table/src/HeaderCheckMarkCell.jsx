@@ -137,17 +137,18 @@ const HeaderCheckMarkCell = ({
         { 'is-interactable': !isDisabled && isSelectable },
         customProps.className,
       )}
+
       ref={refCallback}
       role={isSelectable ? 'columnheader' : 'none'}
     >
       <div {...attrCheck} className={cx('container')}>
         <span
-          className={cx(
+          className={`${cx(
             'checkmark',
             { 'is-selected': isSelectable && isSelected },
             { 'is-intermediate': isSelectable && isIntermediate },
             { 'is-disabled': isSelectable && isDisabled },
-          )}
+          )} ${customProps.className}`}
         />
       </div>
     </div>

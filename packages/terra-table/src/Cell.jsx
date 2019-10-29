@@ -45,7 +45,6 @@ const Cell = ({
 }) => {
   const cellClassNames = cx([
     'cell',
-    customProps.className,
   ]);
 
   let content = children;
@@ -61,7 +60,7 @@ const Cell = ({
     <div
       {...customProps}
       style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={cellClassNames}
+      className={`${cellClassNames} ${customProps.className}`}
       ref={refCallback}
       role="gridcell"
     >

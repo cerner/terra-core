@@ -6,7 +6,6 @@ The Terra Table is a structural component used to create standard html tables.
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-table`
-  - `yarn add terra-table`
 
 ## Usage
 

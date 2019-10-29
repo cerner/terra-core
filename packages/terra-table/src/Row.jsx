@@ -14,7 +14,7 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * The children passed to the component.
+   * Indicates the desired divider styles to apply to a row and its children.
    * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
    */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
@@ -97,15 +97,6 @@ const Row = ({
   selectionStyle,
   ...customProps
 }) => {
-  const rowClassNames = cx([
-    { 'is-selected': selectionStyle === 'default' && isSelected && isSelectable },
-    { 'is-selectable': !isDisabled && isSelectable },
-    { 'is-striped': isStriped },
-    `divider-${dividerStyle}`,
-    'row',
-    customProps.className,
-  ]);
-
   const attrSpread = {};
   if (isSelectable) {
     if (isDisabled) {
@@ -134,7 +125,19 @@ const Row = ({
   }
 
   return (
-    <div {...customProps} {...attrSpread} className={rowClassNames} ref={refCallback} role="row">
+    <div
+      {...customProps}
+      {...attrSpread}
+      className={`${cx(
+        { 'is-selected': selectionStyle === 'default' && isSelected && isSelectable },
+        { 'is-selectable': !isDisabled && isSelectable },
+        { 'is-striped': isStriped },
+        `divider-${dividerStyle}`,
+        'row',
+      )} ${customProps.className}`}
+      ref={refCallback}
+      role="row"
+    >
       {check}
       {children}
       {chevron}

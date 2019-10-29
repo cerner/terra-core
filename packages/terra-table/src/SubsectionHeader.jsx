@@ -75,12 +75,6 @@ const SubsectionHeader = ({
   title,
   ...customProps
 }) => {
-  const sectionHeaderClassNames = cx([
-    'subsection-header',
-    { 'is-collapsible': isCollapsible },
-    customProps.className,
-  ]);
-
   const attrSpread = {};
   const Element = `h${level}`;
   let titleElement = <Element className={cx('title')}>{title}</Element>;
@@ -107,7 +101,15 @@ const SubsectionHeader = ({
   }
 
   return (
-    <div {...attrSpread} {...customProps} className={sectionHeaderClassNames} ref={refCallback}>
+    <div
+      {...attrSpread}
+      {...customProps}
+      className={`${cx(
+        'subsection-header',
+        { 'is-collapsible': isCollapsible },
+      )} ${customProps.className}`}
+      ref={refCallback}
+    >
       <div role="heading" aria-level="2" className={cx('subsection-content')}>
         {accordionIcon}
         {titleElement}
