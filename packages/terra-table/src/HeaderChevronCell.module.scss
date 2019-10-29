@@ -6,7 +6,7 @@
   }
 
   .chevron {
-    padding: 1px;
+    padding: var(--terra-table-header-chevron-cell-spacer-padding, 1px);
     position: relative;
   }
 

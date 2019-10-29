@@ -36,7 +36,7 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    outline: var(--terra-table-subsection-header-focus-outline, none);
+    outline: none;
     padding-left: var(--terra-table-subsection-header-collapsible-padding-left, 1rem);
 
     .subsection-content {
@@ -46,8 +46,8 @@
     }
 
     &[data-row-show-focus='true']:focus {
-      outline: 2px solid #2a4b77;
-      outline-offset: -2px;
+      outline: var(--terra-table-subsection-header-focus-outline, 2px solid #2a4b77);
+      outline-offset: var(--terra-table-subsection-header-focus-outline-offset, -2px);
       position: relative;
       z-index: 1;
   
@@ -59,12 +59,10 @@
       // z-index: 1;
     }
   
-    // todo: rescope
     &:hover,
     &:active {
       background-color: var(--terra-table-subsection-header-hover-active-background-color, #d0d1d2);
     }
-    // todo: rescope
   }
 
   .fill {

@@ -33,7 +33,7 @@
 
   .is-collapsible {
     cursor: pointer;
-    outline: var(--terra-table-section-header-focus-outline, none);
+    outline: none;
     padding-left: var(--terra-table-section-header-collapsible-padding-left, 1rem);
 
     .section-content {
@@ -43,8 +43,8 @@
     }
 
     &[data-row-show-focus='true']:focus {
-      outline: 2px solid #2a4b77;
-      outline-offset: -2px;
+      outline: var(--terra-table-section-header-focus-outline, 2px solid #2a4b77);
+      outline-offset: var(--terra-table-section-header-focus-outline-offset, -2px);
       position: relative;
       z-index: 1;
 
@@ -54,12 +54,10 @@
       // box-shadow: var(--terra-table-section-header-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
     }
   
-    // todo: rescope
     &:hover,
     &:active {
       background-color: var(--terra-table-section-header-hover-active-background-color, #d0d1d2);
     }
-    // todo: rescope
   }
 
   .fill {

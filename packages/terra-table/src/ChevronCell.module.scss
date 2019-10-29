@@ -14,11 +14,11 @@
     background-size: contain;
     color: #ccc;
     display: block;
-    height: 1rem; // TODO: Need expected sizing
-    padding: 1px;
+    height: var(--terra-table-chevron-cell-height, 1rem); // TODO: Need expected sizing
+    padding: var(--terra-table-chevron-cell-padding, 1px); // TODO: Need expected sizing
     position: relative;
     transform: rotate(0deg);
-    width: 1rem; // TODO: Need expected sizing
+    width: var(--terra-table-chevron-cell-width, 1rem); // TODO: Need expected sizing
 
     // flips the icon about its vertical axis, presenting it in its mirrored-image form
     [dir=rtl] & {
@@ -27,7 +27,7 @@
   }
 
   .is-visible {
-    background: var(--terra-table-chevron-cell-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path id="chevronRight" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"/></svg>'));
+    background: var(--terra-table-chevron-cell-visible-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path id="chevronRight" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"/></svg>'));
   }
 
   .container {
