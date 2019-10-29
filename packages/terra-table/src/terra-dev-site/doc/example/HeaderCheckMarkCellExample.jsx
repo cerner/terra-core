@@ -9,7 +9,7 @@ const HeaderCheckMarkCellExample = () => (
       <HeaderRow>
         <HeaderCheckMarkCell />
         <HeaderCheckMarkCell isPadded />
-        <HeaderCheckMarkCell isSelectable alignmentPadding="2" />
+        <HeaderCheckMarkCell isSelectable alignmentPadding={2} />
         <HeaderCheckMarkCell isSelectable />
         <HeaderCheckMarkCell isSelectable isSelected />
         <HeaderCheckMarkCell isSelectable isSelected isIntermediate />

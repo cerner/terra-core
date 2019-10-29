@@ -10,7 +10,7 @@ const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-const MultiSelectTable = () => {
+const CheckMarkTable = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);
   const [allSelected, setAllSelected] = useState(false);
   const rowCount = mockData.length;
@@ -62,8 +62,8 @@ const MultiSelectTable = () => {
       headerRow={(
         <HeaderRow>
           <HeaderCheckMarkCell
-            isSelected={allSelected || selectedKeys.length}
-            isIntermediate={selectedKeys.length}
+            isSelected={allSelected || !!selectedKeys.length}
+            isIntermediate={!!selectedKeys.length}
             onSelect={handleHeaderMarkSelection}
             isPadded
             isSelectable
@@ -81,4 +81,4 @@ const MultiSelectTable = () => {
   );
 };
 
-export default MultiSelectTable;
+export default CheckMarkTable;
