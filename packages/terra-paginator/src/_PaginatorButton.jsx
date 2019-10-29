@@ -7,7 +7,29 @@ import styles from './Paginator.module.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Sets aria-current attribute.
+   */
+  ariaCurrent: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.string,
+  ]),
+  /**
+   * Sets aria-disabled attribute.
+   */
+  ariaDisabled: PropTypes.bool,
+  /**
+   * Sets aria-label attribute.
+   */
+  ariaLabel: PropTypes.string,
+  /**
+   * Child elements passed in to buttons.
+   */
   children: PropTypes.node,
+  /**
+   * Passed in CSS className.
+   */
+  className: PropTypes.string,
   /**
    * Callback function triggered when clicked.
    */
@@ -36,14 +58,20 @@ class PaginatorButton extends React.Component {
 
   render() {
     const {
+      ariaCurrent,
+      ariaDisabled,
+      ariaLabel,
       children,
+      className,
       onClick,
-      ...customProps
     } = this.props;
 
     return (
       <button
-        className={cx(customProps.className)}
+        aria-current={ariaCurrent}
+        aria-disabled={ariaDisabled}
+        aria-label={ariaLabel}
+        className={cx(className)}
         onBlur={(e) => disableFocusOnBlur(e)}
         onClick={onClick}
         onFocus={this.handleFocus}

@@ -14,24 +14,22 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
       </div>
       <div>
         <PaginatorButton
-          aria-disabled={true}
-          aria-label="Terra.paginator.first"
+          ariaDisabled={true}
+          ariaLabel="Terra.paginator.first"
           className="nav-link is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
-          type="button"
         >
           Terra.paginator.first
         </PaginatorButton>
         <PaginatorButton
-          aria-disabled={true}
-          aria-label="Terra.paginator.previous"
+          ariaDisabled={true}
+          ariaLabel="Terra.paginator.previous"
           className="nav-link previous is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
-          type="button"
         >
           <span
             className="icon"
@@ -39,13 +37,12 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           Terra.paginator.previous
         </PaginatorButton>
         <PaginatorButton
-          aria-disabled={false}
-          aria-label="Terra.paginator.next"
+          ariaDisabled={false}
+          ariaLabel="Terra.paginator.next"
           className="nav-link next"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
-          type="button"
         >
           Terra.paginator.next
           <span
@@ -53,13 +50,12 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           />
         </PaginatorButton>
         <PaginatorButton
-          aria-disabled={false}
-          aria-label="Terra.paginator.last"
+          ariaDisabled={false}
+          ariaLabel="Terra.paginator.last"
           className="nav-link"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
-          type="button"
         >
           Terra.paginator.last
         </PaginatorButton>
@@ -74,24 +70,22 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
     >
       <div>
         <PaginatorButton
-          aria-disabled={true}
-          aria-label="Terra.paginator.first"
+          ariaDisabled={true}
+          ariaLabel="Terra.paginator.first"
           className="nav-link is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
-          type="button"
         >
           Terra.paginator.first
         </PaginatorButton>
         <PaginatorButton
-          aria-disabled={true}
-          aria-label="Terra.paginator.previous"
+          ariaDisabled={true}
+          ariaLabel="Terra.paginator.previous"
           className="nav-link previous icon-only is-disabled"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex={null}
-          type="button"
         >
           <VisuallyHiddenText
             text="Terra.paginator.previous"
@@ -106,13 +100,12 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
       </div>
       <div>
         <PaginatorButton
-          aria-disabled={false}
-          aria-label="Terra.paginator.next"
+          ariaDisabled={false}
+          ariaLabel="Terra.paginator.next"
           className="nav-link next icon-only"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
-          type="button"
         >
           <VisuallyHiddenText
             text="Terra.paginator.next"
@@ -122,13 +115,12 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] =
           />
         </PaginatorButton>
         <PaginatorButton
-          aria-disabled={false}
-          aria-label="Terra.paginator.last"
+          ariaDisabled={false}
+          ariaLabel="Terra.paginator.last"
           className="nav-link"
           onClick={[Function]}
           onKeyDown={[Function]}
           tabIndex="0"
-          type="button"
         >
           Terra.paginator.last
         </PaginatorButton>

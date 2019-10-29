@@ -95,48 +95,44 @@ class ProgressivePaginator extends React.Component {
         </div>
         <div>
           <PaginatorButton
-            aria-disabled={selectedPage === 1}
-            aria-label={intl.formatMessage({ id: 'Terra.paginator.first' })}
+            ariaDisabled={selectedPage === 1}
+            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
             className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handleOnKeyDown(1)}
-            type="button"
           >
             {intl.formatMessage({ id: 'Terra.paginator.first' })}
           </PaginatorButton>
           <PaginatorButton
-            aria-disabled={selectedPage === 1}
-            aria-label={intl.formatMessage({ id: 'Terra.paginator.previous' })}
+            ariaDisabled={selectedPage === 1}
+            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
             className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(previousPageIndex)}
             onKeyDown={this.handleOnKeyDown(previousPageIndex)}
-            type="button"
           >
             <span className={cx('icon')} />
             {intl.formatMessage({ id: 'Terra.paginator.previous' })}
           </PaginatorButton>
           <PaginatorButton
-            aria-disabled={selectedPage === totalPages}
-            aria-label={intl.formatMessage({ id: 'Terra.paginator.next' })}
+            ariaDisabled={selectedPage === totalPages}
+            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
             className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(nextPageIndex)}
             onKeyDown={this.handleOnKeyDown(nextPageIndex)}
-            type="button"
           >
             {intl.formatMessage({ id: 'Terra.paginator.next' })}
             <span className={cx('icon')} />
           </PaginatorButton>
           <PaginatorButton
-            aria-disabled={selectedPage === totalPages}
-            aria-label={intl.formatMessage({ id: 'Terra.paginator.last' })}
+            ariaDisabled={selectedPage === totalPages}
+            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
             className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handleOnKeyDown(totalPages)}
-            type="button"
           >
             {intl.formatMessage({ id: 'Terra.paginator.last' })}
           </PaginatorButton>
@@ -156,24 +152,22 @@ class ProgressivePaginator extends React.Component {
       <div className={cx(['paginator'])} role="navigation" aria-label="pagination">
         <div>
           <PaginatorButton
-            aria-disabled={selectedPage === 1}
-            aria-label={intl.formatMessage({ id: 'Terra.paginator.first' })}
+            ariaDisabled={selectedPage === 1}
+            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
             className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handleOnKeyDown(1)}
-            type="button"
           >
             {intl.formatMessage({ id: 'Terra.paginator.first' })}
           </PaginatorButton>
           <PaginatorButton
-            aria-disabled={selectedPage === 1}
-            aria-label={intl.formatMessage({ id: 'Terra.paginator.previous' })}
+            ariaDisabled={selectedPage === 1}
+            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
             className={cx(['nav-link', 'previous', 'icon-only', selectedPage === 1 ? 'is-disabled' : null])}
             tabIndex={selectedPage === 1 ? null : '0'}
             onClick={this.handlePageChange(previousPageIndex)}
             onKeyDown={this.handleOnKeyDown(previousPageIndex)}
-            type="button"
           >
             <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.previous' })} />
             <span className={cx('icon')} />
@@ -184,25 +178,23 @@ class ProgressivePaginator extends React.Component {
         </div>
         <div>
           <PaginatorButton
-            aria-disabled={selectedPage === totalPages}
-            aria-label={intl.formatMessage({ id: 'Terra.paginator.next' })}
+            ariaDisabled={selectedPage === totalPages}
+            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
             className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(nextPageIndex)}
             onKeyDown={this.handleOnKeyDown(nextPageIndex)}
-            type="button"
           >
             <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.next' })} />
             <span className={cx('icon')} />
           </PaginatorButton>
           <PaginatorButton
-            aria-disabled={selectedPage === totalPages}
-            aria-label={intl.formatMessage({ id: 'Terra.paginator.last' })}
+            ariaDisabled={selectedPage === totalPages}
+            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
             className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
             tabIndex={selectedPage === totalPages ? null : '0'}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handleOnKeyDown(totalPages)}
-            type="button"
           >
             {intl.formatMessage({ id: 'Terra.paginator.last' })}
           </PaginatorButton>
