@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Changed how cursor looks on specific hyperlinks(ex: a default cursor instead of text selector in disabled hyperlink).
 
 2.21.0 - (October 3, 2019)
 ------------------
