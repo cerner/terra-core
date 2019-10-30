@@ -28,11 +28,11 @@
 
   .divider-vertical,
   .divider-both {
-    border-top: var(--terra-table-row-divider-child-border-top, 1px solid #dedfe0);
+    border-top: var(--terra-table-row-divider-border-top, 1px solid #dedfe0);
 
     &:last-of-type {
-      border-bottom: var(--terra-table-row-divider-child-border-bottom, 1px solid #dedfe0);
-      margin-bottom: var(--terra-table-row-divider-child-last-margin-bottom, -1px);
+      border-bottom: var(--terra-table-row-divider-border-bottom, 1px solid #dedfe0);
+      margin-bottom: var(--terra-table-row-divider-last-margin-bottom, -1px);
     }
   }
 

@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './HeaderCheckMarkCell.module.scss';
-import TableUtils from './TableUtils';
+import {
+  styleFromWidth,
+  wrappedOnClickForItem,
+  wrappedOnKeyDownForItem,
+  wrappedEventCallback,
+} from './TableUtils';
 
 const cx = classNames.bind(styles);
 
@@ -106,12 +111,12 @@ const HeaderCheckMarkCell = ({
     if (isDisabled) {
       attrCheck['aria-disabled'] = true;
     } else {
-      attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-      attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+      attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
+      attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
       attrSpread.tabIndex = '0';
       attrSpread['data-cell-show-focus'] = 'true';
-      attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
-      attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
+      attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
+      attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
     }
 
     // attributes for checkbox
@@ -127,17 +132,17 @@ const HeaderCheckMarkCell = ({
     attrCheck.style = { marginBottom: `${alignmentPadding}rem` };
   }
 
+  const headerCheckMarkCellClasses = cx(
+    'header-cell',
+    { 'is-interactable': !isDisabled && isSelectable },
+  );
+
   return (
     <div
       {...customProps}
       {...attrSpread}
-      style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={cx(
-        'header-cell',
-        { 'is-interactable': !isDisabled && isSelectable },
-        customProps.className,
-      )}
-
+      style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
+      className={customProps.className ? `${headerCheckMarkCellClasses} ${customProps.className}` : headerCheckMarkCellClasses}
       ref={refCallback}
       role={isSelectable ? 'columnheader' : 'none'}
     >

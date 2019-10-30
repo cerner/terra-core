@@ -6,18 +6,15 @@ const shouldBeMultiSelectable = (maxSelectionCount, selectedKeys, key) => (maxSe
  * Returns a new array, updated with the newKey being added or removed from the existing.
  */
 const updatedMultiSelectedKeys = (currentKeys, newKey) => {
-  let newKeys = [];
   if (currentKeys.length) {
     if (currentKeys.indexOf(newKey) >= 0) {
-      newKeys = currentKeys.slice();
+      const newKeys = currentKeys.slice();
       newKeys.splice(newKeys.indexOf(newKey), 1);
-    } else {
-      newKeys = currentKeys.concat([newKey]);
+      return newKeys;
     }
-  } else {
-    newKeys.push(newKey);
+    return currentKeys.concat([newKey]);
   }
-  return newKeys;
+  return [newKey];
 };
 
 /**
@@ -112,3 +109,11 @@ const TableUtils = {
 };
 
 export default TableUtils;
+export {
+  updatedMultiSelectedKeys,
+  shouldBeMultiSelectable,
+  wrappedOnClickForItem,
+  wrappedOnKeyDownForItem,
+  wrappedEventCallback,
+  styleFromWidth,
+};

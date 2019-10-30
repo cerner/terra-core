@@ -49,9 +49,7 @@ const HeaderRow = ({
 
   return (
     <div
-      className={`${cx(
-        'header',
-      )} ${customProps.className}`}
+      className={customProps.className ? `${cx('header')} ${customProps.className}` : cx('header')}
       role="rowgroup"
     >
       <div {...customProps} className={cx(['header-content'])} role="row">

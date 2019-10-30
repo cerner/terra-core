@@ -61,17 +61,18 @@ const Table = ({
   const makeInline = headerRow ? React.Children.toArray(headerRow.props.children).every(cell => (cell.props.width && cell.props.width.static)) : undefined;
   const hasEndNodes = headerNode || footerNode;
 
+  const tableClasses = cx(
+    'table',
+    { fill },
+    { 'is-inline': makeInline },
+    { rounded: !hasEndNodes },
+  );
+
   const rows = (
     <div
       {...customProps}
       {...attrSpread}
-      className={`${cx(
-        'table',
-        { fill },
-        { 'is-inline': makeInline },
-        { rounded: !hasEndNodes },
-        customProps.className,
-      )} ${customProps.className}`}
+      className={customProps.className ? `${tableClasses} ${customProps.className}` : tableClasses}
       role="grid"
     >
       {headerRow}

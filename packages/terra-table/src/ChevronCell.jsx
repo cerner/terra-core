@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './ChevronCell.module.scss';
-import TableUtils from './TableUtils';
+import { styleFromWidth } from './TableUtils';
 
 const cx = classNames.bind(styles);
 
@@ -41,10 +41,8 @@ const ChevronCell = ({
 }) => (
   <div
     {...customProps}
-    style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-    className={`${cx(
-      'cell',
-    )} ${customProps.className}`}
+    style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
+    className={customProps.className ? `${cx('cell')} ${customProps.className}` : cx('cell')}
     role="none"
   >
     <div className={cx('container')}>

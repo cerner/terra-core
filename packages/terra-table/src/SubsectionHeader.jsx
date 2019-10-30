@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import TableUtils from './TableUtils';
+import {
+  wrappedOnClickForItem,
+  wrappedOnKeyDownForItem,
+  wrappedEventCallback,
+} from './TableUtils';
 import styles from './SubsectionHeader.module.scss';
 
 const cx = classNames.bind(styles);
@@ -91,23 +95,25 @@ const SubsectionHeader = ({
       </div>
     );
 
-    attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-    attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
+    attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '0';
     attrSpread['aria-expanded'] = !isCollapsed;
     attrSpread['data-row-show-focus'] = 'true';
-    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
-    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
+    attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
+    attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
   }
+
+  const subsectionHeaderClasses = cx(
+    'subsection-header',
+    { 'is-collapsible': isCollapsible },
+  );
 
   return (
     <div
       {...attrSpread}
       {...customProps}
-      className={`${cx(
-        'subsection-header',
-        { 'is-collapsible': isCollapsible },
-      )} ${customProps.className}`}
+      className={customProps.className ? `${subsectionHeaderClasses} ${customProps.className}` : subsectionHeaderClasses}
       ref={refCallback}
     >
       <div role="heading" aria-level="2" className={cx('subsection-content')}>

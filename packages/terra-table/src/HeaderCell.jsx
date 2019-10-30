@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './HeaderCell.module.scss';
-import TableUtils from './TableUtils';
+import {
+  styleFromWidth,
+  wrappedOnClickForItem,
+  wrappedOnKeyDownForItem,
+  wrappedEventCallback,
+} from './TableUtils';
 
 const cx = classNames.bind(styles);
 
@@ -100,12 +105,12 @@ const HeaderCell = ({
 
   const attrSpread = { 'aria-sort': ariaSortMap[sort] };
   if (isSelectable) {
-    attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-    attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
+    attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '0';
     attrSpread['data-header-show-focus'] = 'true';
-    attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
-    attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
+    attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
+    attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-header-show-focus', 'false'));
     attrSpread['aria-selected'] = false;
   }
 
@@ -124,16 +129,18 @@ const HeaderCell = ({
     );
   }
 
+  const headerCellClasses = cx(
+    'header-cell',
+    { 'is-selectable': isSelectable },
+    { 'is-sortable': sort === 'asc' || sort === 'desc' },
+  );
+
   return (
     <div
       {...customProps}
       {...attrSpread}
-      style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={`${cx(
-        'header-cell',
-        { 'is-selectable': isSelectable },
-        { 'is-sortable': sort === 'asc' || sort === 'desc' },
-      )} ${customProps.className}`}
+      style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
+      className={customProps.className ? `${headerCellClasses} ${customProps.className}` : headerCellClasses}
       ref={refCallback}
       role="columnheader"
     >

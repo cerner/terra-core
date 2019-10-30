@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Row.module.scss';
-import TableUtils from './TableUtils';
+import {
+  wrappedOnClickForItem,
+  wrappedOnKeyDownForItem,
+  wrappedEventCallback,
+} from './TableUtils';
 import CheckMarkCell from './CheckMarkCell';
 import ChevronCell from './ChevronCell';
 
@@ -102,12 +106,12 @@ const Row = ({
     if (isDisabled) {
       attrSpread['aria-disabled'] = true;
     } else {
-      attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-      attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+      attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
+      attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
       attrSpread.tabIndex = '0';
       attrSpread['data-row-show-focus'] = 'true';
-      attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
-      attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
+      attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
+      attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
     }
     attrSpread['aria-selected'] = isSelected;
   }
@@ -124,17 +128,19 @@ const Row = ({
     );
   }
 
+  const headerCellClasses = cx(
+    { 'is-selected': selectionStyle === 'default' && isSelected && isSelectable },
+    { 'is-selectable': !isDisabled && isSelectable },
+    { 'is-striped': isStriped },
+    `divider-${dividerStyle}`,
+    'row',
+  );
+
   return (
     <div
       {...customProps}
       {...attrSpread}
-      className={`${cx(
-        { 'is-selected': selectionStyle === 'default' && isSelected && isSelectable },
-        { 'is-selectable': !isDisabled && isSelectable },
-        { 'is-striped': isStriped },
-        `divider-${dividerStyle}`,
-        'row',
-      )} ${customProps.className}`}
+      className={customProps.className ? `${headerCellClasses} ${customProps.className}` : headerCellClasses}
       ref={refCallback}
       role="row"
     >

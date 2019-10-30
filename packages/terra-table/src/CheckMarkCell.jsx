@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './CheckMarkCell.module.scss';
-import TableUtils from './TableUtils';
+import {
+  styleFromWidth,
+  wrappedOnClickForItem,
+  wrappedOnKeyDownForItem,
+  wrappedEventCallback,
+} from './TableUtils';
 
 const cx = classNames.bind(styles);
 
@@ -106,19 +111,19 @@ const CheckMarkCell = ({
     if (isDisabled) {
       attrCheck['aria-disabled'] = true;
     } else {
-      attrSpread.onClick = TableUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-      attrSpread.onKeyDown = TableUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+      attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
+      attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
       attrSpread.tabIndex = '0';
       attrSpread['data-cell-show-focus'] = 'true';
-      attrSpread.onFocus = TableUtils.wrappedEventCallback(onFocus, event => {
+      attrSpread.onFocus = wrappedEventCallback(onFocus, event => {
         event.currentTarget.setAttribute('tabindex', -1);
       });
-      attrSpread.onBlur = TableUtils.wrappedEventCallback(onBlur, event => {
+      attrSpread.onBlur = wrappedEventCallback(onBlur, event => {
         event.stopPropagation();
         event.currentTarget.setAttribute('data-cell-show-focus', 'true');
         event.currentTarget.setAttribute('tabindex', 0);
       });
-      attrSpread.onMouseDown = TableUtils.wrappedEventCallback(onMouseDown, event => {
+      attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => {
         event.stopPropagation();
         event.currentTarget.setAttribute('data-cell-show-focus', 'false');
       });
@@ -133,16 +138,18 @@ const CheckMarkCell = ({
     attrCheck.style = { marginTop: `${alignmentPadding}rem` };
   }
 
+  const checkMarkClasses = cx(
+    'cell',
+    { 'is-interactable': !isDisabled && isSelectable },
+    { 'is-top-align': !!attrCheck.style },
+  );
+
   return (
     <div
       {...customProps}
       {...attrSpread}
-      style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={`${cx(
-        'cell',
-        { 'is-interactable': !isDisabled && isSelectable },
-        { 'is-top-align': !!attrCheck.style },
-      )} ${customProps.className}`}
+      style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
+      className={customProps.className ? `${checkMarkClasses} ${customProps.className}` : checkMarkClasses}
       ref={refCallback}
       role={isSelectable ? 'rowheader' : 'none'}
     >

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Cell.module.scss';
-import TableUtils from './TableUtils';
+import { styleFromWidth } from './TableUtils';
 
 const cx = classNames.bind(styles);
 
@@ -59,8 +59,8 @@ const Cell = ({
   return (
     <div
       {...customProps}
-      style={TableUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={`${cellClassNames} ${customProps.className}`}
+      style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
+      className={customProps.className ? `${cellClassNames} ${customProps.className}` : cellClassNames}
       ref={refCallback}
       role="gridcell"
     >
