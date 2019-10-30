@@ -9,7 +9,6 @@ it('should render a default component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-
 // Prop Tests
 it('should have the class terra-ContentContainer', () => {
   const wrapper = shallow(defaultVariety);
