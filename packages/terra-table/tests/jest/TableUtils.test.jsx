@@ -1,12 +1,11 @@
-import TableUtils, {
+import {
   shouldBeMultiSelectable,
   updatedMultiSelectedKeys,
   styleFromWidth,
+  wrappedOnClickForItem,
+  wrappedOnKeyDownForItem,
+  wrappedEventCallback,
 } from '../../src/TableUtils';
-
-// wrappedOnClickForItem ?
-// wrappedOnKeyDownForItem ?
-// wrappedEventCallback ?
 
 describe('TableUtils', () => {
   it('shouldBeMultiSelectable return correct values', () => {
@@ -25,31 +24,13 @@ describe('TableUtils', () => {
 
   it('updatedMultiSelectedKeys return correct values', () => {
     let result = updatedMultiSelectedKeys(['1', '2', '3'], '4');
-    expect(result).toEqual(true);
+    expect(result).toEqual(['1', '2', '3', '4']);
 
     result = updatedMultiSelectedKeys(['1', '2', '3'], '2');
-    expect(result).toEqual(true);
+    expect(result).toEqual(['1', '3']);
 
     result = updatedMultiSelectedKeys([], '3');
-    expect(result).toEqual(true);
-  });
-
-  it('staticStyle return correct values', () => {
-    const result = TableUtils.staticStyle('10px');
-    expect(result).toEqual({
-      msFlex: '0 0 0px',
-      flex: '0 0 0px',
-      maxWidth: '10px',
-      minWidth: '10px',
-    });
-  });
-
-  it('scalarStyle return correct values', () => {
-    const result = TableUtils.scalarStyle(2);
-    expect(result).toEqual({
-      msFlex: `${2} ${2} 0px`,
-      flex: `${2} ${2} 0px`,
-    });
+    expect(result).toEqual(['3']);
   });
 
   it('styleFromWidth return correct values', () => {
@@ -72,10 +53,44 @@ describe('TableUtils', () => {
       minWidth: '10%',
     });
 
-    result = styleFromWidth({ scale: 3 });
+    result = styleFromWidth({ scalar: 3 });
     expect(result).toEqual({
       msFlex: `${3} ${3} 0px`,
       flex: `${3} ${3} 0px`,
     });
+  });
+
+  it('should generate wrappedOnClickForItem callback', () => {
+    const mockCallBack = jest.fn();
+    const mockCallBack2 = jest.fn();
+
+    const result = wrappedOnClickForItem(mockCallBack, mockCallBack2, { test: 'click' });
+    result();
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+    expect(mockCallBack2.mock.calls.length).toEqual(1);
+    expect(mockCallBack2.mock.calls[0][1]).toEqual({ test: 'click' });
+  });
+
+  it('should generate wrappedOnKeyDownForItem callback', () => {
+    const mockCallBack = jest.fn();
+    const mockCallBack2 = jest.fn();
+
+    const result = wrappedOnKeyDownForItem(mockCallBack, mockCallBack2, { test: 'keyDown' });
+    result({ nativeEvent: { keyCode: 13 }, preventDefault: mockCallBack });
+    result({ nativeEvent: { keyCode: 13 }, preventDefault: mockCallBack2 });
+    expect(mockCallBack.mock.calls.length).toEqual(2);
+    expect(mockCallBack2.mock.calls.length).toEqual(2);
+    expect(mockCallBack2.mock.calls[0][1]).toEqual({ test: 'keyDown' });
+    expect(mockCallBack2.mock.calls[1][1]).toEqual({ test: 'keyDown' });
+  });
+
+  it('should generate wrappedEventCallback callback', () => {
+    const mockCallBack = jest.fn();
+    const mockCallBack2 = jest.fn();
+
+    const result = wrappedEventCallback(mockCallBack, mockCallBack2);
+    result();
+    expect(mockCallBack.mock.calls.length).toEqual(1);
+    expect(mockCallBack2.mock.calls.length).toEqual(1);
   });
 });

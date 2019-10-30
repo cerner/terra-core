@@ -21,6 +21,7 @@ exports[`should render a subsection with a row 1`] = `
   />
   <Row
     dividerStyle="none"
+    isDisabled={false}
     isSelectable={false}
     isSelected={false}
     isStriped={false}

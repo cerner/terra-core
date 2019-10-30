@@ -10,6 +10,7 @@ exports[`should render a checkmark selectionStyle row 1`] = `
     role="row"
   >
     <HeaderCheckMarkCell
+      isDisabled={false}
       isIntermediate={false}
       isPadded={true}
       isSelectable={false}

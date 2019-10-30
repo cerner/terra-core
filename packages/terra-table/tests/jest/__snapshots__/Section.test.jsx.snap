@@ -21,6 +21,7 @@ exports[`should render a section with a row 1`] = `
   />
   <Row
     dividerStyle="none"
+    isDisabled={false}
     isSelectable={false}
     isSelected={false}
     isStriped={false}
