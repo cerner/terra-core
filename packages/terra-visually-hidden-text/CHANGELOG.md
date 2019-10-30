@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.20.0 - (October 30, 2019)
+------------------
 ### Fixed
 * Fixed lint warnings for multiple empty lines
 
