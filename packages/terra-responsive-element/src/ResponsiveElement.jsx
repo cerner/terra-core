@@ -22,27 +22,27 @@ const propTypes = {
    */
   onResize: PropTypes.func,
   /**
-   * An element to be displayed at tiny breakpoints.
+   * [Deprecated] An element to be displayed at tiny breakpoints.
    */
   tiny: PropTypes.element,
   /**
-   * An element to be displayed at small breakpoints.
+   * [Deprecated] An element to be displayed at small breakpoints.
    */
   small: PropTypes.element,
   /**
-   * An element to be displayed at medium breakpoints.
+   * [Deprecated] An element to be displayed at medium breakpoints.
    */
   medium: PropTypes.element,
   /**
-   * An element to be displayed at large breakpoints.
+   * [Deprecated] An element to be displayed at large breakpoints.
    */
   large: PropTypes.element,
   /**
-   * An element to be displayed at huge breakpoints.
+   * [Deprecated] An element to be displayed at huge breakpoints.
    */
   huge: PropTypes.element,
   /**
-   * An element to be displayed at enormous breakpoints.
+   * [Deprecated] An element to be displayed at enormous breakpoints.
    */
   enormous: PropTypes.element,
   /**
