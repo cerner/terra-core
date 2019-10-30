@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.36.0 - (October 30, 2019)
+------------------
 ### Fixed
 * Fixed IE issue that required two clicks to open the dropdown menu after initial selection.
 * Fixed lint warnings for multiple empty lines
