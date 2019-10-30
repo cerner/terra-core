@@ -91,7 +91,7 @@ class ResponsiveElement extends React.Component {
     if (process.env.NODE_ENV !== 'production'
       && (tiny || small || medium || large || huge || enormous)) {
       // eslint-disable-next-line no-console
-      console.warn('The uncontrolled variant of terra-responsive-element will be deprecated in a future release. To convert to the controlled variant, please review our documentation on terra ui. https://engineering.cerner.com/terra-ui/components/terra-responsive-element/responsive-element/responsive-element')
+      console.warn('The uncontrolled variant of terra-responsive-element will be deprecated in a future release. To convert to the controlled variant, please review our documentation on terra ui. https://engineering.cerner.com/terra-ui/components/terra-responsive-element/responsive-element/responsive-element');
     }
   }
 
