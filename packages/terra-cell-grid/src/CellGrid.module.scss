@@ -7,7 +7,7 @@
     position: relative;
 
     > * {
-      border-right: 1px solid transparent;
+      border-right: var(--terra-cell-grid-child-border-right, 1px solid transparent);
 
       &:last-of-type {
         border-right: 0;
@@ -18,7 +18,7 @@
   .divider-horizontal,
   .divider-both {
     > * {
-      border-right: var(--terra-cell-grid-child-border-right, 1px solid #ccc);
+      border-right: var(--terra-cell-grid-divider-child-border-right, 1px solid #ccc);
 
       &:last-of-type {
         border-right: 0;
