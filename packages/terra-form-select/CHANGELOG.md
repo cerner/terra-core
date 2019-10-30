@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Fixed
+* Fixed IE issue that required two clicks to open the dropdown menu after initial selection.
 * Fixed lint warnings for multiple empty lines
 * Fixed re-renders of scroll after every componentDidUpdate call.
 
