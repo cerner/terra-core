@@ -35,3 +35,6 @@ const CellGridUtils = {
 };
 
 export default CellGridUtils;
+export {
+  styleFromWidth,
+};
