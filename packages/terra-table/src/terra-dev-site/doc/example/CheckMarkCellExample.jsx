@@ -8,11 +8,12 @@ const CheckMarkCellExample = () => (
     <Row>
       <CheckMarkCell />
       <CheckMarkCell isPadded />
-      <CheckMarkCell isSelectable alignmentPadding="2" />
+      <CheckMarkCell isSelectable alignmentPadding={2} />
       <CheckMarkCell isSelected />
       <CheckMarkCell isSelected isDisabled />
       <CheckMarkCell isSelectable />
       <CheckMarkCell isSelectable isSelected />
+      <CheckMarkCell isSelectable isDisabled />
       <CheckMarkCell isSelectable isSelected isDisabled />
     </Row>
   </Table>

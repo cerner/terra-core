@@ -28,7 +28,6 @@
     "classnames": "^2.2.5",
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-cell-grid": "^0.0.0",
     "terra-content-container": "^3.14.0",
     "terra-doc-template": "^2.21.0",
     "terra-mixins": "^1.27.0"
