@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Changed
+* Updating tests to be better isolated from terra-dev-site markup.
+
 3.33.0 - (October 30, 2019)
 ------------------
 ### Fixed
