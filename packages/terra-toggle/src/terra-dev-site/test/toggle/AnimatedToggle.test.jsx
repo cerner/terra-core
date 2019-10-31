@@ -52,5 +52,4 @@ adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali
   }
 }
 
-
 export default AnimatedToggle;
