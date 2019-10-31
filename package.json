@@ -64,7 +64,7 @@
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:build": "lerna ls | cut -d ' ' -f1 | xargs -I {} babel packages/{}/src --out-dir packages/{}/lib --copy-files",
     "compile:clean": "rm -rf packages/**/lib",
-    "compile:prod": "webpack --config webpack.config.js -p",
+    "compile:prod": "rm -rf ./build; webpack -p",
     "compile:fusion": "rm -rf ./build; THEME=orion-fusion-theme webpack -p",
     "danger": "danger ci",
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
