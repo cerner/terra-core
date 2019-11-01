@@ -4,10 +4,11 @@ Changelog
 Unreleased
 ----------
 
-5.11.0 - (October 29, 2019)
+5.11.0 - (October 30, 2019)
 ------------------
 ### Added
 * Added a warning in dev environment about uncontrolled responsive elements being deprecated in the next major release
+* Added deprecated flag to the uncontrolled props descriptions
 
 5.10.0 - (October 3, 2019)
 ------------------
