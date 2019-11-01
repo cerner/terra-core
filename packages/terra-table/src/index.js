@@ -8,9 +8,7 @@ import HeaderCell from './HeaderCell';
 import HeaderChevronCell from './HeaderChevronCell';
 import HeaderCheckMarkCell from './HeaderCheckMarkCell';
 import Section from './Section';
-import Subsection from './Subsection';
 import SectionHeader from './SectionHeader';
-import SubsectionHeader from './SubsectionHeader';
 import Utils from './TableUtils';
 
 export default Table;
@@ -24,8 +22,6 @@ export {
   HeaderChevronCell,
   HeaderCheckMarkCell,
   Section,
-  Subsection,
   SectionHeader,
-  SubsectionHeader,
   Utils,
 };

@@ -46,13 +46,4 @@ Terra.describeViewports('Table', ['medium'], () => {
 
     Terra.it.validatesElement('TableSection-Hover');
   });
-
-  describe('Subsection Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/subsection'));
-    Terra.it.validatesElement('TableSubsection');
-
-    it('Hover', () => browser.moveToObject('#test-header'));
-
-    Terra.it.validatesElement('TableSubsection-Hover');
-  });
 });

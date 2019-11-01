@@ -3,8 +3,6 @@
 Table sections are available in both static and collapsible varieties. A table section that is collapsed will be remove its children rows from the DOM. This improves performance and accessibility, but may remove potential state associated to a mounted row. If your table row content has additional state, it needs to be stored externally and reapplied when thawed for the next render that shows its section open. Since this render occurs at the same time that a collapsible section state changes, for additional optimization, collapsed sections do not necessarily need to be provided with child rows.
 
 ## State Management
-As section and subsection have the same API, we'll be walking through the expectation of a collapsible section in only one pattern.
-
 First defaulting our state to an empty array with the useState hook.
 ```diff
 +  const [collapsedKeys, setCollapsedKeys] = useState([]);
@@ -37,7 +35,7 @@ Setting state will trigger another render. So in the render method we need to ge
 +        key={sectionData.key}
 +        title={sectionData.title}
 +      >
-+        {sectionData.childItems.map(childItem => createSubsection(childItem))}
++        {sectionData.childItems.map(childItem => createRow(childItem))}
 +      </Section>
 +    );
 +  };
@@ -52,7 +50,7 @@ Next we need to set up our metaData object with our key value, and attach the "o
 +       metaData={{ key: sectionData.key }}
 +       onSelect={handleSectionSelection}
       >
-        {sectionData.childItems.map(childItem => createSubsection(childItem))}
+        {sectionData.childItems.map(childItem => createRow(childItem))}
       </Section>
     );
   };
@@ -68,7 +66,7 @@ For rendering the collapsible section we set `isCollapsible` for all sections.
         metaData={{ key: sectionData.key }}
         onSelect={handleSectionSelection}
       >
-        {sectionData.childItems.map(childItem => createSubsection(childItem))}
+        {sectionData.childItems.map(childItem => createRow(childItem))}
       </Section>
     );
   };
@@ -85,7 +83,7 @@ Finally we need to check if the section is collapsed. As we support IE10 & 11, w
         metaData={{ key: sectionData.key }}
         onSelect={handleSectionSelection}
       >
-        {sectionData.childItems.map(childItem => createSubsection(childItem))}
+        {sectionData.childItems.map(childItem => createRow(childItem))}
       </Section>
     );
   };
@@ -156,7 +154,7 @@ This step is only necessarily if you are using collapsible sections, if you are 
         metaData={{ key: sectionData.key }}
         onSelect={handleSectionSelection}
       >
-        {sectionData.childItems.map(childItem => createSubsection(childItem))}
+        {sectionData.childItems.map(childItem => createRow(childItem))}
       </Section>
     );
   };
