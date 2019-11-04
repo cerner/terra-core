@@ -123,7 +123,6 @@ const defaultProps = {
   inputId: undefined,
 };
 
-
 class TagSelect extends React.Component {
   constructor(props) {
     super(props);

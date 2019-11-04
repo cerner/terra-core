@@ -1,10 +1,16 @@
 ChangeLog
 =========
-### Changed
-* Id moved to input element instead of select div for searchable select fields.
 
 Unreleased
 ----------
+### Added
+* Added `inputId` prop to allow an id to be passed to the input element for searchable select fields.
+
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+### Changed
+* Duplicate ID in examples changed.
 
 5.35.0 - (October 18, 2019)
 ------------------

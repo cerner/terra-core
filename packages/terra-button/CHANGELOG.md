@@ -1,5 +1,7 @@
 ChangeLog
 =========
+### Fixed
+* Fixed lint warnings for multiple empty lines
 
 Unreleased
 ----------

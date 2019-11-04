@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Duplicate IDs in example changed.
 
 2.30.0 - (October 15, 2019)
 ------------------

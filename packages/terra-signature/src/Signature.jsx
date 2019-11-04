@@ -167,7 +167,6 @@ class Signature extends React.Component {
     }));
   }
 
-
   draw() {
     const context = this.canvas.getContext('2d');
 

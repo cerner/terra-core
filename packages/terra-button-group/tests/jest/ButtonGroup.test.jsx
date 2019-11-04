@@ -10,7 +10,6 @@ it('should render an empty component', () => {
   expect(buttonGroup).toMatchSnapshot();
 });
 
-
 it('should render a button group with children', () => {
   const buttonGroup = shallow((
     <ButtonGroup>

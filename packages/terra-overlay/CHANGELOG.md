@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+### Changed
+* Updated wdio tests to cover update lifecycle handling
 
 3.32.0 - (October 15, 2019)
 ------------------

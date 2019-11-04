@@ -131,7 +131,6 @@ describe('Select', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
   it('should render a select with an option', () => {
     const wrapper = renderWithIntl(
       <Select>
@@ -173,7 +172,6 @@ describe('Select', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-
 
   it('should call onBlur', () => {
     const mockBlur = jest.fn();
