@@ -105,6 +105,11 @@ const propTypes = {
    * The value of the select. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   * @private
+   * The id of the input field.
+   */
+  inputId: PropTypes.string,
 };
 
 const defaultProps = {
@@ -128,6 +133,7 @@ const defaultProps = {
   selectAttrs: {},
   showOptional: false,
   value: undefined,
+  inputId: 'MultiSelect Input',
 };
 
 const MultiSelectField = ({
@@ -154,6 +160,7 @@ const MultiSelectField = ({
   selectId,
   showOptional,
   value,
+  inputId,
   ...customProps
 }) => {
   let helpText = help;
@@ -200,7 +207,7 @@ const MultiSelectField = ({
       isInvalid={isInvalid}
       isInline={isInline}
       isLabelHidden={isLabelHidden}
-      htmlFor={selectId}
+      htmlFor={inputId}
       maxWidth={maxWidth}
     >
       <MultiSelect
@@ -208,6 +215,7 @@ const MultiSelectField = ({
         ariaLabel={label}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
+        inputId={inputId}
         id={selectId}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}

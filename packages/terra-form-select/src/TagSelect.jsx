@@ -96,6 +96,11 @@ const propTypes = {
    * The selected value. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   * @private
+   * The id of the input field.
+   */
+  inputId: PropTypes.string,
 };
 
 const defaultProps = {
@@ -115,6 +120,7 @@ const defaultProps = {
   placeholder: undefined,
   required: false,
   value: undefined,
+  inputId: undefined,
 };
 
 
@@ -195,7 +201,7 @@ class TagSelect extends React.Component {
 
   render() {
     const {
-      children, defaultValue, onChange, placeholder, required, value, intl, ...otherProps
+      children, defaultValue, onChange, placeholder, required, value, intl, inputId, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
@@ -212,6 +218,7 @@ class TagSelect extends React.Component {
         placeholder={selectPlaceholder}
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
+        inputId={inputId}
       >
         {this.state.tags}
         {children}

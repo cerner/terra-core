@@ -35,6 +35,7 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
   /**
+   * @private
    * The id of the input field.
    */
   inputId: PropTypes.string,
@@ -128,6 +129,7 @@ const defaultProps = {
   required: false,
   totalOptions: undefined,
   value: undefined,
+  inputId: undefined,
 };
 
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
@@ -210,7 +212,7 @@ class Frame extends React.Component {
       type: 'text',
       className: cx('search-input', { 'is-hidden': isHidden }),
       required: required && !display.length ? true : undefined,
-      inputId,
+      id: inputId,
       'aria-required': (required && !display.length),
     };
 
@@ -630,6 +632,7 @@ class Frame extends React.Component {
       value,
       ...customProps
     } = this.props;
+    delete customProps.inputId;
 
     const selectClasses = cx([
       'select',
