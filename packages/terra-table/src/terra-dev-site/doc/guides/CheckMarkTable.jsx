@@ -6,7 +6,7 @@ import Table, {
 } from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
-const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
+const createCell = cell => <Cell key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
@@ -44,7 +44,6 @@ const CheckMarkTable = () => {
       isSelectable
     >
       <CheckMarkCell
-        isPadded
         isSelectable
         isSelected={getIsRowSelected(rowData.key)}
         metaData={{ key: rowData.key }}
@@ -65,14 +64,13 @@ const CheckMarkTable = () => {
             isSelected={allSelected || !!selectedKeys.length}
             isIntermediate={!!selectedKeys.length}
             onSelect={handleHeaderMarkSelection}
-            isPadded
             isSelectable
             key="header-check-cell"
           />
-          <HeaderCell isPadded key="cell-0">Column 0</HeaderCell>
-          <HeaderCell isPadded key="cell-1">Column 1</HeaderCell>
-          <HeaderCell isPadded key="cell-2">Column 2</HeaderCell>
-          <HeaderCell isPadded key="cell-3">Column 3</HeaderCell>
+          <HeaderCell key="cell-0">Column 0</HeaderCell>
+          <HeaderCell key="cell-1">Column 1</HeaderCell>
+          <HeaderCell key="cell-2">Column 2</HeaderCell>
+          <HeaderCell key="cell-3">Column 3</HeaderCell>
         </HeaderRow>
       )}
     >

@@ -10,7 +10,7 @@ const PaddingTest = () => (
       key="table-1"
     >
       <Row>
-        <Cell isPadded>Cell Standard</Cell>
+        <Cell>Cell Standard</Cell>
       </Row>
     </Table>
     <Table

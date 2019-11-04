@@ -8,7 +8,7 @@ import mockData from './mock-data/mock-sort';
 
 const columns = ['column-0', 'column-1', 'column-2'];
 
-const createCell = cell => <Cell isPadded key={cell.key}>{cell.title}</Cell>;
+const createCell = cell => <Cell key={cell.key}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
@@ -62,7 +62,6 @@ const SortedTable = () => {
         onSelect={handleSortClick}
         sort={sort}
         isSelectable
-        isPadded
       >
         {title}
       </HeaderCell>

@@ -11,7 +11,7 @@ const widths = [
   { scalar: 4 },
 ];
 
-const createCell = (cell, index) => <Cell isPadded key={cell.key} width={widths[index]}>{cell.title}</Cell>;
+const createCell = (cell, index) => <Cell key={cell.key} width={widths[index]}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
 
@@ -28,10 +28,10 @@ const ScalarWidthTable = () => (
     paddingStyle="standard"
     headerRow={(
       <HeaderRow>
-        <HeaderCell isPadded key="cell-0" width={widths[0]}>Scalar 2</HeaderCell>
-        <HeaderCell isPadded key="cell-1" width={widths[1]}>Scalar 1</HeaderCell>
-        <HeaderCell isPadded key="cell-2" width={widths[2]}>Scalar 3</HeaderCell>
-        <HeaderCell isPadded key="cell-3" width={widths[3]}>Scalar 4</HeaderCell>
+        <HeaderCell key="cell-0" width={widths[0]}>Scalar 2</HeaderCell>
+        <HeaderCell key="cell-1" width={widths[1]}>Scalar 1</HeaderCell>
+        <HeaderCell key="cell-2" width={widths[2]}>Scalar 3</HeaderCell>
+        <HeaderCell key="cell-3" width={widths[3]}>Scalar 4</HeaderCell>
       </HeaderRow>
     )}
   >

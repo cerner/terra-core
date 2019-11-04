@@ -9,39 +9,39 @@ const TableSectionExample = () => (
   >
     <Section title="Default Section">
       <Row>
-        <Cell isPadded key="cell-0">
+        <Cell key="cell-0">
           Lorem ipsum dolor
         </Cell>
-        <Cell isPadded key="cell-1">
+        <Cell key="cell-1">
           Lorem ipsum dolor
         </Cell>
-        <Cell isPadded key="cell-2">
+        <Cell key="cell-2">
           Lorem ipsum dolor
         </Cell>
       </Row>
     </Section>
     <Section isCollapsible title="Collapsible Section">
       <Row>
-        <Cell isPadded key="cell-0">
+        <Cell key="cell-0">
           Lorem ipsum dolor
         </Cell>
-        <Cell isPadded key="cell-1">
+        <Cell key="cell-1">
           Lorem ipsum dolor
         </Cell>
-        <Cell isPadded key="cell-2">
+        <Cell key="cell-2">
           Lorem ipsum dolor
         </Cell>
       </Row>
     </Section>
     <Section isCollapsible isCollapsed title="Collapsed Section">
       <Row>
-        <Cell isPadded key="cell-0">
+        <Cell key="cell-0">
           Lorem ipsum dolor
         </Cell>
-        <Cell isPadded key="cell-1">
+        <Cell key="cell-1">
           Lorem ipsum dolor
         </Cell>
-        <Cell isPadded key="cell-2">
+        <Cell key="cell-2">
           Lorem ipsum dolor
         </Cell>
       </Row>

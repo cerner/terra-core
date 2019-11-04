@@ -23,10 +23,6 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Whether or not the cell should adhere to the tables paddingStyle.
-   */
-  isPadded: PropTypes.bool,
-  /**
    * Whether or not header cell should appear as a selectable element.
    */
   isSelectable: PropTypes.bool,
@@ -44,6 +40,11 @@ const propTypes = {
    * Function callback returning the html node for the header cell.
    */
   refCallback: PropTypes.func,
+  /**
+   * Whether or not the cell's container responsible for using the table's default padding is removed.
+   * This is useful to optimize the DOM for either a table without padding or to optimize a cell whose content is providing its own padding.
+   */
+  removePadding: PropTypes.bool,
   /**
    * Whether or not data in table is sorted (`'none'`, `'asc'`, `'desc'`)
    */
@@ -95,12 +96,12 @@ const propTypes = {
 const defaultProps = {
   children: [],
   isSelectable: false,
+  removePadding: false,
   sort: 'none',
 };
 
 const HeaderCell = ({
   children,
-  isPadded,
   isSelectable,
   metaData,
   onBlur,
@@ -109,6 +110,7 @@ const HeaderCell = ({
   onMouseDown,
   onSelect,
   refCallback,
+  removePadding,
   sort,
   width,
   ...customProps
@@ -136,7 +138,7 @@ const HeaderCell = ({
     sortIndicator,
   ];
 
-  if (isPadded) {
+  if (!removePadding) {
     content = (
       <div className={cx('container')}>
         {content}

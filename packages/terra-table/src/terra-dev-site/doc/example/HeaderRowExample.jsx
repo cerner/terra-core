@@ -9,8 +9,8 @@ const HeaderRowExample = () => (
       paddingStyle="standard"
       headerRow={(
         <HeaderRow key="default">
-          <HeaderCell isPadded key="key-0">Default Header</HeaderCell>
-          <HeaderCell isPadded key="key-1">Default Header</HeaderCell>
+          <HeaderCell key="key-0">Default Header</HeaderCell>
+          <HeaderCell key="key-1">Default Header</HeaderCell>
         </HeaderRow>
       )}
     />
@@ -18,8 +18,8 @@ const HeaderRowExample = () => (
       paddingStyle="standard"
       headerRow={(
         <HeaderRow selectionStyle="chevron" key="selection-chevron">
-          <HeaderCell isPadded key="key-0">Selection Style Chevron</HeaderCell>
-          <HeaderCell isPadded key="key-1">Selection Style Chevron</HeaderCell>
+          <HeaderCell key="key-0">Selection Style Chevron</HeaderCell>
+          <HeaderCell key="key-1">Selection Style Chevron</HeaderCell>
         </HeaderRow>
       )}
     />
@@ -27,8 +27,8 @@ const HeaderRowExample = () => (
       paddingStyle="standard"
       headerRow={(
         <HeaderRow selectionStyle="checkmark" key="selection-checkmark">
-          <HeaderCell isPadded key="key-0">Selection Style Checkmark</HeaderCell>
-          <HeaderCell isPadded key="key-1">Selection Style Checkmark</HeaderCell>
+          <HeaderCell key="key-0">Selection Style Checkmark</HeaderCell>
+          <HeaderCell key="key-1">Selection Style Checkmark</HeaderCell>
         </HeaderRow>
       )}
     />

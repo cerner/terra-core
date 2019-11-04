@@ -10,9 +10,9 @@ const DefaultTable = () => (
     id="Table"
     headerRow={(
       <HeaderRow>
-        <HeaderCell key="NAME" isPadded>Name</HeaderCell>
-        <HeaderCell key="ADDRESS" isPadded>Address</HeaderCell>
-        <HeaderCell key="PHONE_NUMBER" isPadded>Phone Number</HeaderCell>
+        <HeaderCell key="NAME">Name</HeaderCell>
+        <HeaderCell key="ADDRESS">Address</HeaderCell>
+        <HeaderCell key="PHONE_NUMBER">Phone Number</HeaderCell>
       </HeaderRow>
     )}
   >

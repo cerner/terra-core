@@ -11,7 +11,7 @@ const widths = [
   { percentage: 30 },
 ];
 
-const createCell = (cell, index) => <Cell isPadded key={cell.key} width={widths[index]}>{cell.title}</Cell>;
+const createCell = (cell, index) => <Cell key={cell.key} width={widths[index]}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
 
@@ -28,10 +28,10 @@ const PercentageWidthTable = () => (
     paddingStyle="standard"
     headerRow={(
       <HeaderRow>
-        <HeaderCell isPadded key="cell-0" width={widths[0]}>20%</HeaderCell>
-        <HeaderCell isPadded key="cell-1" width={widths[1]}>40%</HeaderCell>
-        <HeaderCell isPadded key="cell-2" width={widths[2]}>10%</HeaderCell>
-        <HeaderCell isPadded key="cell-3" width={widths[3]}>30%</HeaderCell>
+        <HeaderCell key="cell-0" width={widths[0]}>20%</HeaderCell>
+        <HeaderCell key="cell-1" width={widths[1]}>40%</HeaderCell>
+        <HeaderCell key="cell-2" width={widths[2]}>10%</HeaderCell>
+        <HeaderCell key="cell-3" width={widths[3]}>30%</HeaderCell>
       </HeaderRow>
     )}
   >

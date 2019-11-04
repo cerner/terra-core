@@ -128,11 +128,12 @@ const Row = ({
     );
   }
 
+  const divider = dividerStyle !== 'none' ? `divider-${dividerStyle}` : null;
   const headerCellClasses = cx(
     { 'is-selected': selectionStyle === 'default' && isSelected && isSelectable },
     { 'is-selectable': !isDisabled && isSelectable },
     { 'is-striped': isStriped },
-    `divider-${dividerStyle}`,
+    divider,
     'row',
   );
 

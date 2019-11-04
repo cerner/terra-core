@@ -11,7 +11,7 @@ const widths = [
   { static: { value: 120, unit: 'px' } },
 ];
 
-const createCell = (cell, index) => <Cell isPadded key={cell.key} width={widths[index]}>{cell.title}</Cell>;
+const createCell = (cell, index) => <Cell key={cell.key} width={widths[index]}>{cell.title}</Cell>;
 
 const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
 
@@ -28,10 +28,10 @@ const FixedWidthTable = () => (
     paddingStyle="standard"
     headerRow={(
       <HeaderRow>
-        <HeaderCell isPadded key="cell-0" width={widths[0]}>60px</HeaderCell>
-        <HeaderCell isPadded key="cell-1" width={widths[1]}>45px</HeaderCell>
-        <HeaderCell isPadded key="cell-2" width={widths[2]}>5rem</HeaderCell>
-        <HeaderCell isPadded key="cell-3" width={widths[3]}>120px</HeaderCell>
+        <HeaderCell key="cell-0" width={widths[0]}>60px</HeaderCell>
+        <HeaderCell key="cell-1" width={widths[1]}>45px</HeaderCell>
+        <HeaderCell key="cell-2" width={widths[2]}>5rem</HeaderCell>
+        <HeaderCell key="cell-3" width={widths[3]}>120px</HeaderCell>
       </HeaderRow>
     )}
   >

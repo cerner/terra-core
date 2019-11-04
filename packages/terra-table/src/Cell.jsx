@@ -12,13 +12,14 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Whether or not the cell should adhere to the tables paddingStyle.
-   */
-  isPadded: PropTypes.bool,
-  /**
    * Function callback returning the html node for the cell.
    */
   refCallback: PropTypes.func,
+  /**
+   * Whether or not the cell's container responsible for using the table's default padding is removed.
+   * This is useful to optimize the DOM for either a table without padding or to optimize a cell whose content is providing its own padding.
+   */
+  removePadding: PropTypes.bool,
   /**
    * Width of the cell. Should match header cell counter-part.
    */
@@ -49,13 +50,13 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
-  isPadded: false,
+  removePadding: false,
 };
 
 const Cell = ({
   children,
-  isPadded,
   refCallback,
+  removePadding,
   width,
   ...customProps
 }) => {
@@ -64,7 +65,7 @@ const Cell = ({
   ]);
 
   let content = children;
-  if (isPadded) {
+  if (!removePadding) {
     content = (
       <div className={cx('container')}>
         {content}
