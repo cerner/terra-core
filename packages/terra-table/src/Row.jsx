@@ -14,24 +14,24 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The children passed to the component
+   * The children to be passed as row content.
    */
   children: PropTypes.node.isRequired,
   /**
-   * Indicates the desired divider styles to apply to a row and its children.
+   * Indicates the desired divider style to apply to the row and its children.
    * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
    */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
   /**
-   * Whether or not the cell display as disabled.
+   * Whether or not the rows interaction is disabled.
    */
   isDisabled: PropTypes.bool,
   /**
-   * Whether or not row is selected
+   * Whether or not row is selected. `isSelectable` must be set to `true` in order to be applied.
    */
   isSelected: PropTypes.bool,
   /**
-   * Whether or not row is selectable
+   * Whether or not row can be selected.
    */
   isSelectable: PropTypes.bool,
   /**
@@ -49,7 +49,7 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * Function callback for the ref of the tr.
+   * Function callback returning the html node for the row.
    */
   refCallback: PropTypes.func,
   /**
@@ -120,11 +120,11 @@ const Row = ({
   let chevron;
   if (selectionStyle === 'checkmark') {
     check = (
-      <CheckMarkCell isPadded isSelected={isSelected} />
+      <CheckMarkCell isSelected={isSelected} />
     );
   } else if (selectionStyle === 'chevron') {
     chevron = (
-      <ChevronCell isPadded isVisible={isSelectable} />
+      <ChevronCell isVisible={isSelectable} />
     );
   }
 

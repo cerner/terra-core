@@ -104,15 +104,9 @@
 
   [data-table-padding='standard'] .container {
     padding-bottom: var(--terra-table-header-check-cell-standard-padding-bottom, 0.5rem);
-    padding-left: var(--terra-table-header-check-cell-standard-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-header-check-cell-standard-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-table-header-check-cell-standard-padding-top, 0.5rem);
   }
 
   [data-table-padding='compact'] .container {
     padding-bottom: var(--terra-table-header-check-cell-compact-padding-bottom, 0.35715rem);
-    padding-left: var(--terra-table-header-check-cell-compact-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-header-check-cell-compact-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-table-header-check-cell-compact-padding-top, 0.35715rem);
   }
 }

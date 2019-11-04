@@ -34,7 +34,7 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * Function callback pass-through for the ref of the section li.
+   * Function callback returning the html node of the header.
    */
   refCallback: PropTypes.func,
   /**

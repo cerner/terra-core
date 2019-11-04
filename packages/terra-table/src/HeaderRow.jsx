@@ -39,11 +39,11 @@ const HeaderRow = ({
   let chevron;
   if (selectionStyle === 'checkmark') {
     checkmark = (
-      <HeaderCheckMarkCell isPadded />
+      <HeaderCheckMarkCell />
     );
   } else if (selectionStyle === 'chevron') {
     chevron = (
-      <HeaderChevronCell isPadded />
+      <HeaderChevronCell />
     );
   }
 

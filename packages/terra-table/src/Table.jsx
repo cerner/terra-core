@@ -12,11 +12,11 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The HeaderRow passed to the table, should have widths aligned with the child Rows.
+   * The HeaderRow element containing the header cells used for the table.
    */
   headerRow: PropTypes.element,
   /**
-   * Element to append to the top of the table row. i.e. toolbars etc.
+   * Element to append to the top of the table. i.e. toolbars etc.
    */
   headerNode: PropTypes.node,
   /**
@@ -24,16 +24,16 @@ const propTypes = {
    */
   fill: PropTypes.bool,
   /**
-   * Element to append to the bottom of the table row. i.e. toolbars etc.
+   * Element to append to the bottom of the table. i.e. toolbars etc.
    */
   footerNode: PropTypes.node,
   /**
-   * The padding styling to apply to the child list item content.
+   * The padding styling to apply to the cell content.
    * One of `'none'`, `'standard'`, `'compact'`.
    */
   paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
   /**
-   * Function callback for the ref of the table.
+   * Function callback returning the html node of the table.
    */
   scrollRefCallback: PropTypes.func,
 };

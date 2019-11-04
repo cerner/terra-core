@@ -103,18 +103,4 @@
     padding-left: var(--terra-table-checkmark-cell-default-padding-left, 0.7142857143rem);
     padding-right: var(--terra-table-checkmark-cell-default-padding-right, 0.7142857143rem);
   }
-
-  [data-table-padding='standard'] .container {
-    padding-bottom: var(--terra-table-checkmark-cell-standard-padding-bottom, 0.5rem);
-    padding-left: var(--terra-table-checkmark-cell-standard-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-checkmark-cell-standard-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-table-checkmark-cell-standard-padding-top, 0.5rem);
-  }
-
-  [data-table-padding='compact'] .container {
-    padding-bottom: var(--terra-table-checkmark-cell-compact-padding-bottom, 0.25rem);
-    padding-left: var(--terra-table-checkmark-cell-compact-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-checkmark-cell-compact-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-table-checkmark-cell-compact-padding-top, 0.25rem);
-  }
 }

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './HeaderCheckMarkCell.module.scss';
 import {
-  styleFromWidth,
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
@@ -25,10 +24,6 @@ const propTypes = {
    * Whether or not a selected state should display as partially selected.
    */
   isIntermediate: PropTypes.bool,
-  /**
-   * Whether or not the cell should adhere to the tables paddingStyle.
-   */
-  isPadded: PropTypes.bool,
   /**
    * Whether or not row is selected
    */
@@ -52,17 +47,6 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Function callback for the ref of the td.
-   */
-  width: PropTypes.shape({
-    static: PropTypes.shape({
-      value: PropTypes.number,
-      unit: PropTypes.string,
-    }),
-    percentage: PropTypes.number,
-    scalar: PropTypes.number,
-  }),
-  /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onBlur: PropTypes.func,
@@ -83,7 +67,6 @@ const propTypes = {
 const defaultProps = {
   isDisabled: false,
   isIntermediate: false,
-  isPadded: false,
   isSelected: false,
   isSelectable: false,
 };
@@ -92,7 +75,6 @@ const HeaderCheckMarkCell = ({
   alignmentPadding,
   isDisabled,
   isIntermediate,
-  isPadded,
   isSelected,
   isSelectable,
   metaData,
@@ -102,7 +84,6 @@ const HeaderCheckMarkCell = ({
   onMouseDown,
   onSelect,
   refCallback,
-  width,
   ...customProps
 }) => {
   const attrSpread = {};
@@ -141,7 +122,6 @@ const HeaderCheckMarkCell = ({
     <div
       {...customProps}
       {...attrSpread}
-      style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={customProps.className ? `${headerCheckMarkCellClasses} ${customProps.className}` : headerCheckMarkCellClasses}
       ref={refCallback}
       role={isSelectable ? 'columnheader' : 'none'}

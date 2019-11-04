@@ -41,22 +41,37 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * Function callback for the ref of the th.
+   * Function callback returning the html node for the header cell.
    */
   refCallback: PropTypes.func,
   /**
-   * Whether or not data in table is sorted (none, asc, desc)
+   * Whether or not data in table is sorted (`'none'`, `'asc'`, `'desc'`)
    */
   sort: PropTypes.oneOf(['none', 'asc', 'desc']),
   /**
-   * String-formatted width that the HeaderCell should be rendered as. Any valid css width value is supported (i.e. 200px, 3rem).
+   * Width of the header cell. Should match row cell counter-part.
    */
   width: PropTypes.shape({
+    /**
+     * Static width that for the cell.
+     */
     static: PropTypes.shape({
+      /**
+       * Numerical width value.
+       */
       value: PropTypes.number.isRequired,
+      /**
+       * Valid css units are supported (i.e. 'px', 'rem', etc).
+       */
       unit: PropTypes.string.isRequired,
     }),
+    /**
+     * Percentage width of the row for the header cell.
+     */
     percentage: PropTypes.number,
+    /**
+     * Relative scalar value of the cell's width compared to its sibling cells.
+     */
     scalar: PropTypes.number,
   }),
   /**

@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Content to be displayed for the row cell
+   * Child content to be displayed for the row cell.
    */
   children: PropTypes.node,
   /**
@@ -16,24 +16,40 @@ const propTypes = {
    */
   isPadded: PropTypes.bool,
   /**
-   * Function callback for the ref of the td.
+   * Function callback returning the html node for the cell.
    */
   refCallback: PropTypes.func,
   /**
-   * Function callback for the ref of the td.
+   * Width of the cell. Should match header cell counter-part.
    */
   width: PropTypes.shape({
+    /**
+     * Static width that for the cell.
+     */
     static: PropTypes.shape({
-      value: PropTypes.number,
-      unit: PropTypes.string,
+      /**
+       * Numerical width value.
+       */
+      value: PropTypes.number.isRequired,
+      /**
+       * Valid css units are supported (i.e. 'px', 'rem', etc).
+       */
+      unit: PropTypes.string.isRequired,
     }),
+    /**
+     * Percentage width of the row for the cell.
+     */
     percentage: PropTypes.number,
+    /**
+     * Relative scalar value of the cell's width compared to its sibling cells.
+     */
     scalar: PropTypes.number,
   }),
 };
 
 const defaultProps = {
   children: [],
+  isPadded: false,
 };
 
 const Cell = ({

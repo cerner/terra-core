@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './CheckMarkCell.module.scss';
 import {
-  styleFromWidth,
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
@@ -31,10 +30,6 @@ const propTypes = {
    */
   isSelected: PropTypes.bool,
   /**
-   * Whether or not the cell should adhere to the tables paddingStyle.
-   */
-  isPadded: PropTypes.bool,
-  /**
    * The associated metaData to be provided in the onSelect callback.
    */
   // eslint-disable-next-line react/forbid-prop-types
@@ -45,20 +40,9 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * Function callback for the ref of the td.
+   * Function callback returning the html node of the check mark cell.
    */
   refCallback: PropTypes.func,
-  /**
-   * Function callback for the ref of the td.
-   */
-  width: PropTypes.shape({
-    static: PropTypes.shape({
-      value: PropTypes.number.isRequired,
-      unit: PropTypes.string.isRequired,
-    }),
-    percentage: PropTypes.number,
-    scalar: PropTypes.number,
-  }),
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
@@ -83,7 +67,6 @@ const propTypes = {
 
 const defaultProps = {
   isDisabled: false,
-  isPadded: false,
   isSelected: false,
   isSelectable: false,
 };
@@ -91,7 +74,6 @@ const defaultProps = {
 const CheckMarkCell = ({
   alignmentPadding,
   isDisabled,
-  isPadded,
   isSelected,
   isSelectable,
   metaData,
@@ -102,7 +84,6 @@ const CheckMarkCell = ({
   onMouseDown,
   onSelect,
   refCallback,
-  width,
   ...customProps
 }) => {
   const attrSpread = {};
@@ -148,7 +129,6 @@ const CheckMarkCell = ({
     <div
       {...customProps}
       {...attrSpread}
-      style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={customProps.className ? `${checkMarkClasses} ${customProps.className}` : checkMarkClasses}
       ref={refCallback}
       role={isSelectable ? 'rowheader' : 'none'}
