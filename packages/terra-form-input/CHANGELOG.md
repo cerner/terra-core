@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+2.31.0 - (October 30, 2019)
+------------------
 ### Changed
 * Duplicate IDs in example changed.
 

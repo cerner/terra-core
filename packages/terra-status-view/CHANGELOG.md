@@ -6,8 +6,10 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+4.11.0 - (October 30, 2019)
+------------------
 ### Changed 
-* `Aria-label` added in example.
+* `aria-label` added in example.
 
 4.10.0 - (October 3, 2019)
 ------------------

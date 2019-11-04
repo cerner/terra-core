@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added reference wdio screenshots for "orion-fusion-theme".
 
+4.19.0 - (October 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 4.18.0 - (October 14, 2019)
 ------------------
 ### Changed

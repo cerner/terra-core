@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+3.20.0 - (October 30, 2019)
+------------------
+### Changed
+* Added missing alternative text for example.
+
 3.19.0 - (October 3, 2019)
 ------------------
 ### Changed

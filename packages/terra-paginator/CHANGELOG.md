@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+2.32.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
 2.31.0 - (October 15, 2019)
 ------------------
 ### Changed
