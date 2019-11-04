@@ -39,7 +39,7 @@ const DocPage = () => (
         source: ResizeExampleSrc,
       },
       {
-        title: 'Uncontrolled Example',
+        title: '[Deprecated] Uncontrolled Example',
         description: 'An example of an uncontrolled implementation of the ResponsiveElement.',
         example: <UncontrolledBreakpointExample />,
         source: UncontrolledBreakpointExampleSrc,
