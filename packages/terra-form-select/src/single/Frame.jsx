@@ -248,6 +248,17 @@ class Frame extends React.Component {
       return;
     }
 
+    // eslint-disable-next-line no-underscore-dangle
+    const _onBlur = () => {
+      this.setState({ isFocused: false });
+
+      this.closeDropdown();
+
+      if (this.props.onBlur) {
+        this.props.onBlur(event);
+      }
+    };
+
     /**
      * When the select blur event is triggered with the default variant, this code checks if the focus
      * is shifted to the select menu and if so, suppresses the rest of the blur handler to prevent
@@ -255,21 +266,19 @@ class Frame extends React.Component {
      */
     // event.relatedTarget returns null in IE 10 / IE 11
     if (event.relatedTarget == null) {
-      // IE 11 sets document.activeElement to the next focused element before the blur event is called
-      if (document.querySelector(this.selectMenu) === document.activeElement) {
-        return;
-      }
+      // Allow 10ms timeout hack for the browser to set document.activeElement so that the currently
+      // focused page element is available when the blur event is fired.
+      // See discussion on https://github.com/facebook/react/issues/3751
+      // https://github.com/mui-org/material-ui/blob/v3.9.3/packages/material-ui/src/MenuList/MenuList.js#L27
+
+      setTimeout(() => {
+        if (document.querySelector(this.selectMenu) !== document.activeElement) {
+          _onBlur();
+        }
+      }, 10);
     // Modern browsers support event.relatedTarget
-    } else if (document.querySelector(this.selectMenu) === event.relatedTarget) {
-      return;
-    }
-
-    this.setState({ isFocused: false });
-
-    this.closeDropdown();
-
-    if (this.props.onBlur) {
-      this.props.onBlur(event);
+    } else if (document.querySelector(this.selectMenu) !== event.relatedTarget) {
+      _onBlur();
     }
   }
 
