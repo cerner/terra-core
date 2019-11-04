@@ -79,10 +79,6 @@ class DropdownButtonBase extends React.Component {
       { 'is-compact': isCompact },
       { disabled: isDisabled },
       customProps.className,
-      /* This needs to match terra-hookshot's react-onclickoutside ignore classname or clicking the caret with
-        the dropdown open will cause the dropdown to close and reopen
-      */
-      'ignore-react-onclickoutside',
     ]);
 
     let calcWidth;
