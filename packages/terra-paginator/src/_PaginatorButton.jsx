@@ -36,54 +36,46 @@ const propTypes = {
   onClick: PropTypes.func,
 };
 
-class PaginatorButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleFocus = this.handleFocus.bind(this);
-    this.handleMouseDown = this.handleMouseDown.bind(this);
+function PaginatorButton(props) {
+  let shouldShowFocus = true;
 
-    this.shouldShowFocus = true;
-  }
+  const handleFocus = (event) => {
+    if (shouldShowFocus) event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
+  };
 
-  handleFocus(event) {
-    if (this.shouldShowFocus) event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
-  }
-
-  handleMouseDown() {
+  const handleMouseDown = () => {
     // Prevent button from showing focus styles when clicked
-    this.shouldShowFocus = false;
+    shouldShowFocus = false;
     // Wait until after onFocus has been triggered on browsers where it will get triggered for click
-    setTimeout(() => { this.shouldShowFocus = true; });
-  }
+    setTimeout(() => { shouldShowFocus = true; });
+  };
 
-  render() {
-    const {
-      ariaCurrent,
-      ariaDisabled,
-      ariaLabel,
-      children,
-      className,
-      onClick,
-    } = this.props;
+  const {
+    ariaCurrent,
+    ariaDisabled,
+    ariaLabel,
+    children,
+    className,
+    onClick,
+  } = props;
 
-    return (
-      <button
-        aria-current={ariaCurrent}
-        aria-disabled={ariaDisabled}
-        aria-label={ariaLabel}
-        className={cx(className)}
-        onBlur={(e) => disableFocusOnBlur(e)}
-        onClick={onClick}
-        onFocus={this.handleFocus}
-        onKeyDown={(e) => enableFocusActiveStyles(e)}
-        onKeyUp={(e) => disableFocusActiveStyles(e)}
-        onMouseDown={this.handleMouseDown}
-        type="button"
-      >
-        {children}
-      </button>
-    );
-  }
+  return (
+    <button
+      aria-current={ariaCurrent}
+      aria-disabled={ariaDisabled}
+      aria-label={ariaLabel}
+      className={cx(className)}
+      onBlur={(e) => disableFocusOnBlur(e)}
+      onClick={onClick}
+      onFocus={(e) => handleFocus(e)}
+      onKeyDown={(e) => enableFocusActiveStyles(e)}
+      onKeyUp={(e) => disableFocusActiveStyles(e)}
+      onMouseDown={handleMouseDown}
+      type="button"
+    >
+      {children}
+    </button>
+  );
 }
 
 PaginatorButton.propTypes = propTypes;
