@@ -106,8 +106,8 @@ Terra.describeViewports('Overlay', ['huge'], () => {
 
       it('Clicks on Container Overlay', () => {
         browser.click('#trigger_container');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
       });
 
       it('Container Overlay- Background can scroll when Overlay relative to container is open', () => {
@@ -119,22 +119,22 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       it('closes overlay on escape keydown', () => {
         browser.keys('Escape');
         browser.waitForExist('#terra-Overlay--container', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
       });
 
       it('reopens the overlay', () => {
         browser.click('#trigger_container');
         browser.waitForExist('#terra-Overlay--container');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
       });
 
       it('closes the overlay when clicking inside of the Overlay', () => {
         browser.click('#terra-Overlay--container');
         browser.waitForExist('#terra-Overlay--container', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
       });
     });
   });

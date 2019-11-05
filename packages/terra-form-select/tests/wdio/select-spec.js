@@ -288,6 +288,18 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       Terra.it.validatesElement('selected-option', { selector: '#root' });
     });
+
+    describe('default should open dropdown by click after initial selection', () => {
+      it('default should open the dropdown by clicking the select', () => {
+        browser.click('[data-terra-select]');
+        browser.click('#terra-select-option-blue');
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement('open-dropdown-after-selection', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
   });
 
   describe('Default Variant - controlled', () => {
