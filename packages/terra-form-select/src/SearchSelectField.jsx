@@ -99,11 +99,6 @@ const propTypes = {
    * The value of the select. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
-  /**
-   * @private
-   * The id of the input field.
-   */
-  inputId: PropTypes.string,
 };
 
 const defaultProps = {
@@ -127,7 +122,6 @@ const defaultProps = {
   selectAttrs: {},
   showOptional: false,
   value: undefined,
-  inputId: 'Search Select Input',
 };
 
 const SearchSelectField = ({
@@ -153,7 +147,6 @@ const SearchSelectField = ({
   selectId,
   showOptional,
   value,
-  inputId,
   ...customProps
 }) => {
   let ariaDescriptionIds;
@@ -183,7 +176,7 @@ const SearchSelectField = ({
       isInvalid={isInvalid}
       isInline={isInline}
       isLabelHidden={isLabelHidden}
-      htmlFor={inputId}
+      htmlFor={selectId}
       maxWidth={maxWidth}
     >
       <SearchSelect
@@ -192,8 +185,7 @@ const SearchSelectField = ({
         allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
-        inputId={inputId}
-        id={selectId}
+        inputId={selectId}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         isTouchAccessible={isTouchAccessible}
