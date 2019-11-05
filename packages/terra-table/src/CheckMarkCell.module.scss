@@ -19,10 +19,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     border: 1px solid transparent;
-    border-radius: var(--terra-table-checkmark-cell-border-radius, 3px); // TODO: Need expected sizing
-    height: var(--terra-table-checkmark-cell-height, 1rem); // TODO: Need expected sizing
+    border-radius: var(--terra-table-checkmark-cell-border-radius, 3px);
+    height: var(--terra-table-checkmark-cell-height, 1rem);
     padding: 1px;
-    width: var(--terra-table-checkmark-cell-width, 1rem); // TODO: Need expected sizing
+    width: var(--terra-table-checkmark-cell-width, 1rem);
   }
 
   .container {
@@ -43,58 +43,57 @@
   }
 
   .is-interactable:hover .checkmark {
-    border: var(--terra-table-checkmark-cell-hover-border, 1px solid #3a67a4); // Clinical
+    border: var(--terra-table-checkmark-cell-hover-border, 1px solid #3a67a4);
   }
 
   .is-interactable:active .checkmark {
-    background-color: var(--terra-table-checkmark-cell-active-background-color, #b5d4fe); // Clinical
-    border: var(--terra-table-checkmark-cell-active-border, 1px solid #3a67a4); // Clinical
+    background-color: var(--terra-table-checkmark-cell-active-background-color, #b5d4fe);
+    border: var(--terra-table-checkmark-cell-active-border, 1px solid #3a67a4);
   }
 
   .is-interactable[data-cell-show-focus='true']:focus {
-    outline: var(--terra-table-checkmark-cell-focus-outline, 2px dashed #2a4b77); // Clinical
-    outline-offset: var(--terra-table-checkmark-cell-focus-outline-offset, -2px); // Clinical
+    outline: var(--terra-table-checkmark-cell-focus-outline, 2px dashed #2a4b77);
+    outline-offset: var(--terra-table-checkmark-cell-focus-outline-offset, -2px);
   }
 
   .is-interactable:hover .is-selected {
-    background-color: var(--terra-table-checkmark-cell-selected-hover-background-color, #2a4b77); // Clinical
+    background-color: var(--terra-table-checkmark-cell-selected-hover-background-color, #2a4b77);
   }
 
   .is-interactable:active .is-selected {
-    background-color: var(--terra-table-checkmark-cell-selected-active-background-color, #1a2f4b); // Clinical
+    background-color: var(--terra-table-checkmark-cell-selected-active-background-color, #1a2f4b);
   }
 
   // State Classes
   // -------------
   .checkmark.is-selected {
-    background-color: var(--terra-table-checkmark-cell-selected-background-color, transparent); // Clinical
-    background-image: var(--terra-table-checkmark-cell-selected-background-image, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#000000" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>')); // Clinical
+    background-color: var(--terra-table-checkmark-cell-selected-background-color, transparent);
+    background-image: var(--terra-table-checkmark-cell-selected-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#000" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
   }
 
   .is-disabled.is-selected {
-    background-image: var(--terra-table-checkmark-cell-selected-disabled-background-color, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#000000" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>')); // Clinical
-    color: var(--terra-table-checkmark-cell-selected-disabled-color, rgba(255, 255, 255, 0.8)); // Clinical
+    // TODO: Needs specific dithered color? current #ccc, new rgba(255, 255, 255, 0.8)?
+    background-image: var(--terra-table-checkmark-cell-selected-disabled-background-color, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#ccc" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
   }
 
   .is-selectable.checkmark {
-    background-color: var(--terra-table-checkmark-cell-selectable-background-color, #fff); // Clinical
-    border: var(--terra-table-checkmark-cell-selectable-color, 1px solid #4983d1); // Clinical
+    background-color: var(--terra-table-checkmark-cell-selectable-background-color, #fff);
+    border: var(--terra-table-checkmark-cell-selectable-color, 1px solid #4983d1);
   }
 
   .is-selectable.is-selected {
-    background-color: var(--terra-table-checkmark-cell-selectable-selected-background-color, #3a67a4); // Clinical
-    background-image: var(--terra-table-checkmark-cell-selectable-selected-background-image, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>')); // Clinical
+    background-color: var(--terra-table-checkmark-cell-selectable-selected-background-color, #3a67a4);
+    background-image: var(--terra-table-checkmark-cell-selectable-selected-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#fff" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
   }
 
   .is-selectable.checkmark.is-disabled {
-    background-color: var(--terra-table-checkmark-cell-selectable-disabled-background-color, rgba(255, 255, 255, 0.5)); // Clinical 
-    background-image: var(--terra-table-checkmark-cell-selectable-disabled-background-image, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>')); // Clinical 
-    border: var(--terra-table-checkmark-cell-selectable-selectable-disabled-border, 1px solid rgba(89, 159, 253, 0.5)); // Clinical 
+    background-color: var(--terra-table-checkmark-cell-selectable-disabled-background-color, rgba(255, 255, 255, 0.5));
+    border: var(--terra-table-checkmark-cell-selectable-selectable-disabled-border, 1px solid rgba(89, 159, 253, 0.5));
   }
 
   .is-selectable.checkmark.is-disabled.is-selected {
-    background-color: rgba(42, 75, 119, 0.5); // Clinical
-    background-image: var(--terra-table-checkmark-cell-background, inline-svg('<svg width="1rem" height="1rem" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Checkbox_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="11.125 3.3176286 12.7113282 4.88529412 5.83333333 11.6823714 1.2886718 7.19117647 2.875 5.62351095 5.83333333 8.54704036"></polygon></g></svg>')); // Clinical 
+    background-color: rgba(42, 75, 119, 0.5);
+    background-image: var(--terra-table-checkmark-cell-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="rgba(255, 255, 255, 0.5)" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
   }
 
   // Padding Classes
@@ -102,5 +101,19 @@
   .container {
     padding-left: var(--terra-table-checkmark-cell-default-padding-left, 0.7142857143rem);
     padding-right: var(--terra-table-checkmark-cell-default-padding-right, 0.7142857143rem);
+  }
+
+  [data-table-padding='standard'] .container {
+    padding-bottom: var(--terra-table-checkmark-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-checkmark-cell-standard-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-checkmark-cell-standard-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-checkmark-cell-standard-padding-top, 0.5rem);
+  }
+
+  [data-table-padding='compact'] .container {
+    padding-bottom: var(--terra-table-checkmark-cell-compact-padding-bottom, 0.25rem);
+    padding-left: var(--terra-table-checkmark-cell-compact-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-checkmark-cell-compact-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-checkmark-cell-compact-padding-top, 0.25rem);
   }
 }
