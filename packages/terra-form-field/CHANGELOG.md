@@ -6,6 +6,11 @@ Unreleased
 ### Breaking Changes
 * `label` prop's type changed from node to string.
 
+3.29.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
 3.28.0 - (October 15, 2019)
 ------------------
 ### Changed

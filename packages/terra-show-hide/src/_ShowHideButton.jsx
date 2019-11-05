@@ -5,7 +5,6 @@ import classNames from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
 import styles from './_ShowHideButton.module.scss';
 
-
 const cx = classNames.bind(styles);
 
 const propTypes = {

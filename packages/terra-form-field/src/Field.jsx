@@ -142,7 +142,6 @@ const Field = (props) => {
     }
   }
 
-
   /**
    * IE + JAWS has trouble reading aria-describedby content with our form components.
    * Using feature detect for Microsoft browsers and injecting the help and error messages

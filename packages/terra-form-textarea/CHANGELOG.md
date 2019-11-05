@@ -6,7 +6,9 @@ Unreleased
 ### Breaking Changes
 * `label` prop's type changed from node to string.
 
-### Changed 
+3.31.0 - (October 30, 2019)
+------------------
+### Changed
 * Duplicate IDs in example changed.
 
 3.30.0 - (October 15, 2019)

@@ -6,6 +6,11 @@ Unreleased
 ### Breaking Changes
 * `labelText` and `legend` props' type changed from node to string.
 
+3.32.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
 3.31.0 - (October 15, 2019)
 ------------------
 ### Changed
