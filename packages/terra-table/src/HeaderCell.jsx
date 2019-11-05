@@ -41,10 +41,10 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Whether or not the cell's container responsible for using the table's default padding is removed.
-   * This is useful to optimize the DOM for either a table without padding or to optimize a cell whose content is providing its own padding.
+   * Whether or not the cell's inner containing element responsible for handling table's default padding is removed.
+   * This is useful to optimize the DOM for either a table without padding or to optimize a cell whose custom content is providing its own padding.
    */
-  removePadding: PropTypes.bool,
+  removeInner: PropTypes.bool,
   /**
    * Whether or not data in table is sorted (`'none'`, `'asc'`, `'desc'`)
    */
@@ -96,7 +96,7 @@ const propTypes = {
 const defaultProps = {
   children: [],
   isSelectable: false,
-  removePadding: false,
+  removeInner: false,
   sort: 'none',
 };
 
@@ -110,7 +110,7 @@ const HeaderCell = ({
   onMouseDown,
   onSelect,
   refCallback,
-  removePadding,
+  removeInner,
   sort,
   width,
   ...customProps
@@ -138,7 +138,7 @@ const HeaderCell = ({
     sortIndicator,
   ];
 
-  if (!removePadding) {
+  if (!removeInner) {
     content = (
       <div className={cx('container')}>
         {content}

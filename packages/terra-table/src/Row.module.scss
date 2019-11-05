@@ -15,7 +15,7 @@
     }
   }
 
-  .divider-horizontal,
+  .divider-vertical,
   .divider-both {
     > * {
       border-right: var(--terra-table-row-divider-child-border-right, 1px solid #ccc);
@@ -26,7 +26,7 @@
     }
   }
 
-  .divider-vertical,
+  .divider-horizontal,
   .divider-both {
     border-top: var(--terra-table-row-divider-border-top, 1px solid #dedfe0);
 

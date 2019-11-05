@@ -17,19 +17,19 @@ const DefaultTable = () => (
     )}
   >
     <Row key="PERSON_0">
-      <Cell key="NAME">John Smith</Cell>
-      <Cell key="ADDRESS">123 Adams Drive</Cell>
-      <Cell key="PHONE_NUMBER">111-222-3333</Cell>
+      <Cell removeInner key="NAME">John Smith</Cell>
+      <Cell removeInner key="ADDRESS">123 Adams Drive</Cell>
+      <Cell removeInner key="PHONE_NUMBER">111-222-3333</Cell>
     </Row>
     <Row key="PERSON_1">
-      <Cell key="NAME">Jane Smith</Cell>
-      <Cell key="ADDRESS">321 Drive Street</Cell>
-      <Cell key="PHONE_NUMBER">111-222-3333</Cell>
+      <Cell removeInner key="NAME">Jane Smith</Cell>
+      <Cell removeInner key="ADDRESS">321 Drive Street</Cell>
+      <Cell removeInner key="PHONE_NUMBER">111-222-3333</Cell>
     </Row>
     <Row key="PERSON_2">
-      <Cell key="NAME">Dave Smith</Cell>
-      <Cell key="ADDRESS">213 Raymond Road</Cell>
-      <Cell key="PHONE_NUMBER">111-222-3333</Cell>
+      <Cell removeInner key="NAME">Dave Smith</Cell>
+      <Cell removeInner key="ADDRESS">213 Raymond Road</Cell>
+      <Cell removeInner key="PHONE_NUMBER">111-222-3333</Cell>
     </Row>
   </Table>
 );
