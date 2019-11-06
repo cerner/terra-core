@@ -115,10 +115,10 @@ const SectionHeader = ({
       {...customProps}
       className={customProps.className ? `${sectionHeaderClasses} ${customProps.className}` : sectionHeaderClasses}
       ref={refCallback}
+      role="row"
     >
       <div
-        role="heading"
-        aria-level="1"
+        role="columnheader"
         className={cx('section-content')}
       >
         {accordionIcon}
