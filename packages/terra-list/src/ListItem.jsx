@@ -55,9 +55,9 @@ const propTypes = {
    */
   onMouseDown: PropTypes.func,
   /**
-   * Set to true for non-selectable items in a list having role as listbox.
+   * Whether or not the list item is disabled.
    */
-  isRoleListbox: PropTypes.bool,
+  isDisabled: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -65,7 +65,7 @@ const defaultProps = {
   hasChevron: false,
   isSelected: false,
   isSelectable: false,
-  isRoleListbox: false,
+  isDisabled: false,
 };
 
 const ListItem = ({
@@ -80,7 +80,7 @@ const ListItem = ({
   onMouseDown,
   onSelect,
   refCallback,
-  isRoleListbox,
+  isDisabled,
   ...customProps
 }) => {
   const listItemClassNames = cx([
@@ -92,18 +92,18 @@ const ListItem = ({
 
   const attrSpread = {};
   if (isSelectable) {
-    attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
-    attrSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-    attrSpread.tabIndex = '0';
+    if (isDisabled) {
+      attrSpread['aria-disabled'] = true;
+    } else {
+      attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
+      attrSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+      attrSpread.tabIndex = '0';
+      attrSpread['data-item-show-focus'] = 'true';
+      attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
+      attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
+    }
     attrSpread.role = 'option';
     attrSpread['aria-selected'] = isSelected;
-    attrSpread['data-item-show-focus'] = 'true';
-    attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
-    attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
-  } else if (isRoleListbox) {
-    attrSpread.role = 'option';
-    attrSpread['aria-selected'] = isSelected;
-    attrSpread['aria-disabled'] = 'true';
   }
 
   return (
