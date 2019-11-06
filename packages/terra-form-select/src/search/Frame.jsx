@@ -585,6 +585,7 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
+      inputId,
       isIncomplete,
       isTouchAccessible,
       isInvalid,
@@ -600,7 +601,6 @@ class Frame extends React.Component {
       value,
       ...customProps
     } = this.props;
-    delete customProps.inputId;
 
     const selectClasses = cx([
       'select',

@@ -632,7 +632,6 @@ class Frame extends React.Component {
       value,
       ...customProps
     } = this.props;
-    delete customProps.inputId;
 
     const selectClasses = cx([
       'select',
