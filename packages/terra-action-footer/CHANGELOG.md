@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+2.25.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+### Changed
+* Wdio updated for inline svg alignment.
+
 2.24.0 - (October 3, 2019)
 ------------------
 ### Changed

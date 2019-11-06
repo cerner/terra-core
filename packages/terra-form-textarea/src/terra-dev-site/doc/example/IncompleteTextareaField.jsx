@@ -3,7 +3,7 @@ import TextareaField from '../../../TextareaField';
 
 const DefaultTextAreaField = () => (
   <TextareaField
-    inputId="requiredTextarea"
+    inputId="incompleteTextarea"
     label="Incomplete Textarea"
     help="Note: This is help text"
     required

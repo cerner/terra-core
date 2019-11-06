@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+3.24.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+### Changed
+* Duplicate IDs in example changed.
+
 3.23.0 - (October 3, 2019)
 ------------------
 ### Changed
