@@ -1,7 +1,6 @@
 import React from 'react';
 import Alert from '../../../Alert';
 
-
 export default () => (
   <div>
     <Alert id="alertAlert" type={Alert.Opts.Types.ALERT}>Alert of type Alert</Alert>

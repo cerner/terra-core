@@ -14,7 +14,7 @@ const ImageFitTypes = ({
   ...props
 }) => (
   <div className={cx('image-container')}>
-    <Image className={cx('image')} src={exampleImage} fit={props.fit} variant={props.variant} />
+    <Image alt="Toggle fit image" className={cx('image')} src={exampleImage} fit={props.fit} variant={props.variant} />
   </div>
 );
 

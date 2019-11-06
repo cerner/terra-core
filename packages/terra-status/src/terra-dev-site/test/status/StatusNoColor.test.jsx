@@ -5,7 +5,6 @@ import styles from '../../doc/example/colors.module.scss';
 
 const cx = classNames.bind(styles);
 
-
 const simpleText = <div className={cx('text-wrapper')}>Sample text</div>;
 
 const StatusNoColor = () => (

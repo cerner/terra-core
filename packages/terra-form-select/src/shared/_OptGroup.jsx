@@ -48,7 +48,6 @@ const OptGroup = ({
   </li>
 );
 
-
 OptGroup.propTypes = propTypes;
 OptGroup.defaultProps = defaultProps;
 OptGroup.isOptGroup = true;

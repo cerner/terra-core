@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * `isDisabled` prop added to fix accessibility issue to handle selectable and non-selectable items correctly.
 
+4.22.0 - (October 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 4.21.0 - (October 14, 2019)
 ------------------
 ### Changed

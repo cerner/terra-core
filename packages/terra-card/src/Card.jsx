@@ -12,7 +12,6 @@ const CardVariants = {
   RAISED: 'raised',
 };
 
-
 const propTypes = {
   /**
    * Child Nodes
