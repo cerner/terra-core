@@ -168,6 +168,7 @@ class Hyperlink extends React.Component {
       <ComponentType
         {...customProps}
         className={hyperlinkClasses}
+        aria-disabled={isDisabled}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
