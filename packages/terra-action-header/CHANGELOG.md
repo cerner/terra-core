@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added new theme `--terra-action-header-button-padding-top` variable to set padding value for action buttons.
 
 2.31.0 - (October 30, 2019)
 ------------------

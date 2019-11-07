@@ -9,6 +9,11 @@
     margin-left: var(--terra-action-header-margin-left, 1.429rem);
   }
 
+  .left-buttons,
+  .right-buttons {
+    padding-top: var(--terra-action-header-button-padding-top);
+  }
+
   .header-icon {
     background-repeat: no-repeat;
     background-size: auto;
