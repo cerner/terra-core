@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Changed how cursor looks on specific hyperlinks(ex: a default cursor instead of text selector on disabled hyperlink).
 
+2.23.0 - (November 7, 2019)
+------------------
+### Fixed
+* Fixed the color contrast axe violation for disabled hyperlinks by adding `aria-disabled`.
+
 2.22.0 - (October 30, 2019)
 ------------------
 ### Changed
