@@ -26,7 +26,7 @@ const CheckMarkTable = () => {
   };
 
   const handleHeaderMarkSelection = () => {
-    setAllSelected(selectedKeys.length || !allSelected);
+    setAllSelected(!!selectedKeys.length || !allSelected);
     setSelectedKeys([]);
   };
 
