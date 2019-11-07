@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.23.0 - (November 7, 2019)
+------------------
 ### Fixed
 * Fixed the color contrast axe violation for disabled hyperlinks by adding `aria-disabled`.
 
