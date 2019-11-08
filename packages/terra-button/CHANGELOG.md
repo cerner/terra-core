@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Set focus on button when clicked on Firefox, Safari, and IE.
 
 3.26.0 - (October 30, 2019)
 ------------------

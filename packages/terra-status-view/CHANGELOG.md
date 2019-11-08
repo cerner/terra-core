@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update jest test snapshot
 
 4.11.0 - (October 30, 2019)
 ------------------
