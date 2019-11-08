@@ -1,5 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import IconExternalLink from 'terra-icon/lib/icon/IconExternalLink';
+import IconAudio from 'terra-icon/lib/icon/IconAudio';
+import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
+import IconImage from 'terra-icon/lib/icon/IconImage';
+import IconDocuments from 'terra-icon/lib/icon/IconDocuments';
 import classNames from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
 import styles from './Hyperlink.module.scss';
@@ -13,6 +18,23 @@ const variants = {
   VIDEO: 'video',
   AUDIO: 'audio',
   DOCUMENT: 'document',
+};
+
+const getHyperlinkIcon = (variant) => {
+  switch (variant) {
+    case variants.AUDIO:
+      return (<span className={cx('icon')}><IconAudio /></span>);
+    case variants.DOCUMENT:
+      return (<span className={cx('icon')}><IconDocuments /></span>);
+    case variants.EXTERNAL:
+      return (<span className={cx('icon')}><IconExternalLink /></span>);
+    case variants.IMAGE:
+      return (<span className={cx('icon')}><IconImage /></span>);
+    case variants.VIDEO:
+      return (<span className={cx('icon')}><IconVideoCamera /></span>);
+    default:
+      return null;
+  }
 };
 
 const propTypes = {
@@ -146,6 +168,7 @@ class Hyperlink extends React.Component {
       <ComponentType
         {...customProps}
         className={hyperlinkClasses}
+        aria-disabled={isDisabled}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
@@ -156,6 +179,7 @@ class Hyperlink extends React.Component {
         rel={rel}
       >
         {children}
+        {getHyperlinkIcon(variant)}
       </ComponentType>
     );
   }
