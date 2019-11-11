@@ -124,7 +124,9 @@ const HeaderCheckMarkCell = ({
       {...attrSpread}
       className={customProps.className ? `${headerCheckMarkCellClasses} ${customProps.className}` : headerCheckMarkCellClasses}
       ref={refCallback}
-      role={isSelectable ? 'columnheader' : 'none'}
+      // role={isSelectable ? 'columnheader' : 'none'}
+      role="columnheader"
+      title="select all rows"
     >
       <div {...attrCheck} className={cx('container')}>
         <span

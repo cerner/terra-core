@@ -77,11 +77,12 @@ const SectionHeader = ({
   onSelect,
   refCallback,
   title,
+  id,
   ...customProps
 }) => {
   const attrSpread = {};
-  const Element = `h${level}`;
-  let titleElement = <Element className={cx('title')}>{title}</Element>;
+  // const Element = `h${level}`;
+  let titleElement = <span aria-hidden="true" className={cx('title')}>{title}</span>;
   let accordionIcon;
   if (isCollapsible) {
     accordionIcon = (
@@ -90,7 +91,7 @@ const SectionHeader = ({
       </div>
     );
     titleElement = (
-      <div className={cx('fill')}>
+      <div role="columnheader" className={cx('fill')}>
         {titleElement}
       </div>
     );
@@ -111,19 +112,26 @@ const SectionHeader = ({
 
   return (
     <div
-      {...attrSpread}
       {...customProps}
       className={customProps.className ? `${sectionHeaderClasses} ${customProps.className}` : sectionHeaderClasses}
       ref={refCallback}
       role="row"
     >
       <div
+        {...attrSpread}
+        id={id}
+        colspan={3}
+        headers=""
+        scope="colgroup"
         role="columnheader"
         className={cx('section-content')}
       >
-        {accordionIcon}
-        {titleElement}
+        {/* {accordionIcon} */}
+        {/* {titleElement} */}
+        {title}
       </div>
+      {/* <div role="columnheader" />
+      <div role="columnheader" /> */}
     </div>
   );
 };

@@ -11,9 +11,12 @@ import Table, {
 } from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-section';
 
-const createCell = cell => <Cell key={cell.key}>{cell.title}</Cell>;
+const arId = ['sub1' , 'sub2'];
+const headId = ['header1' , 'header2', 'header3'];
 
-const createCellsForRow = cells => cells.map(cell => createCell(cell));
+const createCell = (cell, sectionIndex, colIndex) => <Cell headers={`${arId[sectionIndex]} ${headId[colIndex]}`} key={cell.key}>{cell.title}</Cell>;
+
+const createCellsForRow = (cells, sectionIndex) => cells.map((cell, colIndex) => createCell(cell, sectionIndex, colIndex));
 
 const SectionTable = () => {
   const [collapsedKeys, setCollapsedKeys] = useState([]);
@@ -24,22 +27,23 @@ const SectionTable = () => {
     setCollapsedKeys(Utils.updatedMultiSelectedKeys(collapsedKeys, metaData.key));
   };
 
-  const createRow = (rowData) => {
+  const createRow = (rowData, sectionIndex) => {
     rowCount += 1;
     return (
       <Row
         key={rowData.key}
         aria-rowindex={rowCount}
       >
-        {createCellsForRow(rowData.cells)}
+        {createCellsForRow(rowData.cells, sectionIndex)}
       </Row>
     );
   };
 
-  const createSection = (sectionData) => {
+  const createSection = (sectionData, sectionIndex) => {
     rowCount += 1;
     return (
       <Section
+        id={arId[sectionIndex]}
         key={sectionData.key}
         aria-rowindex={rowCount}
         title={sectionData.title}
@@ -48,12 +52,12 @@ const SectionTable = () => {
         metaData={{ key: sectionData.key }}
         onSelect={handleSectionSelection}
       >
-        {sectionData.childItems.map(childItem => createRow(childItem))}
+        {sectionData.childItems.map(childItem => createRow(childItem, sectionIndex))}
       </Section>
     );
   };
 
-  const sections = mockData.map(section => createSection(section));
+  const sections = mockData.map((section, index) => createSection(section, index));
 
   return (
     <Table
@@ -61,9 +65,9 @@ const SectionTable = () => {
       paddingStyle="standard"
       headerRow={(
         <HeaderRow aria-rowindex="1">
-          <HeaderCell key="cell-1">Column 0</HeaderCell>
-          <HeaderCell key="cell-2">Column 1</HeaderCell>
-          <HeaderCell key="cell-3">Column 2</HeaderCell>
+          <HeaderCell id={headId[0]} key="cell-1">Column derp</HeaderCell>
+          <HeaderCell id={headId[1]} key="cell-2">Column flerp</HeaderCell>
+          <HeaderCell id={headId[2]} key="cell-3">Column blerp</HeaderCell>
         </HeaderRow>
       )}
     >
