@@ -1,0 +1,26 @@
+:global {
+
+  // ---------------------- Shared ----------------------- //
+  
+  --terra-overlay-content-color: #c5c5c6;
+
+  --terra-overlay-dark-background-image: none;
+  --terra-overlay-dark-content-color: #c5c5c6;
+
+  --terra-overlay-light-background-image: none;
+  --terra-overlay-light-content-color: #c5c5c6;
+
+  // -------------------- Version 3.x -------------------- //
+
+  --terra-overlay-dark-background: rgba(28, 35, 39, 0.8);
+  --terra-overlay-dark-content-text-shadow: none;
+
+  --terra-overlay-light-background: rgba(28, 35, 39, 0.7);
+  --terra-overlay-light-content-text-shadow: none;
+
+  // -------------------- Version 2.x -------------------- //
+
+  --terra-overlay-dark-background-color: rgba(28, 35, 39, 0.8);
+  
+  --terra-overlay-light-background-color: rgba(28, 35, 39, 0.7);
+}

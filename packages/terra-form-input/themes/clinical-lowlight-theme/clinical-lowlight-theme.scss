@@ -1,0 +1,67 @@
+:global {
+  // ---------------------- Shared ----------------------- //
+  --terra-form-input-background-color: #222a2e;
+  --terra-form-input-border: 1px solid #181b1d;
+  --terra-form-input-box-shadow: none;
+  --terra-form-input-color: #b2b5b6;
+  --terra-form-input-hover-border: 1px solid #181b1d;
+
+  --terra-form-input-disabled-background-color: #1d2529;
+  --terra-form-input-disabled-border: 1px solid #242b2b;
+  --terra-form-input-disabled-color: #404344;
+  --terra-form-input-disabled-opacity: 0.25;
+
+  --terra-form-input-focus-background-color: #222a2e;
+  --terra-form-input-focus-border: 1px solid #004c76;
+
+  --terra-form-input-error-border: 1px solid #181b1d;
+  --terra-form-input-error-disabled-background-color: #1d2529;
+  --terra-form-input-error-disabled-border: 1px solid #242b2b;
+  --terra-form-input-error-disabled-color: #404344;
+  --terra-form-input-error-disabled-opacity: 0.25;
+  --terra-form-input-error-focus-background-color: #222a2e;
+  --terra-form-input-error-focus-border: 1px solid #004c76;
+  --terra-form-input-error-hover-border: 1px solid #181b1d;
+
+  --terra-form-input-placeholder-color: #6f7477;
+  --terra-form-input-placeholder-disabled-color: #6f7477;
+
+  // -------------------- Version 2.x -------------------- //
+  --terra-form-input-background-image: none;
+  --terra-form-input-background-size: auto;
+
+  --terra-form-input-focus-background-size: auto;
+  --terra-form-input-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-form-input-focus-color: #b2b5b6;
+  --terra-form-input-focus-ltr-box-shadow: none;
+  --terra-form-input-focus-rtl-box-shadow: none;
+
+  --terra-form-input-hover-background-color: #222a2e;
+  --terra-form-input-hover-color: #b2b5b6;
+
+  --terra-form-input-error-background-color: #222a2e;
+  --terra-form-input-error-background-image: none;
+  --terra-form-input-error-box-shadow: 0 0 0 1px #fb4c4c;
+  --terra-form-input-error-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-form-input-error-focus-background-size: auto;
+  --terra-form-input-error-focus-ltr-box-shadow: 0 0 0 1px #004c76;
+  --terra-form-input-error-focus-rtl-box-shadow: 0 0 0 1px #004c76;
+  --terra-form-input-error-hover-background-color: #222a2e;
+
+  --terra-form-input-incomplete-background-color: #464232;
+  --terra-form-input-incomplete-hover-background-color: #464232;
+  --terra-form-input-incomplete-disabled-background-color: #464232;
+  --terra-form-input-incomplete-focus-background-color: #464232;
+
+  // -------------------- Version 1.x -------------------- //
+  --terra-form-input-focus-animation-background: none;
+  --terra-form-input-focus-background-start: auto;
+  --terra-form-input-focus-keyboard-animation-size: auto;
+  --terra-form-input-focus-keyboard-box-shadow-ltr: none;
+  --terra-form-input-focus-keyboard-box-shadow-rtl: none;
+
+  --terra-form-input-error-focus-animation-background: none;
+  --terra-form-input-error-focus-keyboard-animation-size: auto;
+  --terra-form-input-error-focus-keyboard-box-shadow-ltr: none;
+  --terra-form-input-error-focus-keyboard-box-shadow-rtl: none;
+}

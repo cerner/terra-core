@@ -1,0 +1,18 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  // ---------------------- Shared ----------------------- //
+  --terra-search-field-button-border: #181b1d;
+
+  // -------------------- Version 3.x -------------------- //
+  --terra-search-field-button-box-shadow: none;
+  --terra-search-field-button-icon-color: #b2b5b6;
+  --terra-search-field-button-focus-border-color: #004c76;
+  --terra-search-field-button-focus-box-shadow: #004c76;
+  --terra-search-field-clear-active-background-color: #0c0d0e;
+  
+  @include terra-inline-svg-var('--terra-search-field-clear-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#b2b5b6" d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24S37.3 0 24 0zm13.9 33.8l-2.1 2.1-1.2 1.2-1 .9-9.6-9.7-9.6 9.7-2.2-2.1-1.1-1.1-1-1 9.7-9.8-9.7-9.8 1-1 1.1-1.1 2.2-2.1 9.6 9.7 9.6-9.7 1 .9 1.2 1.2 2.1 2.1-9.7 9.8 9.7 9.8z"/></svg>');
+
+  // -------------------- Version 2.x -------------------- //
+  // there are no version specific variables for this version
+}

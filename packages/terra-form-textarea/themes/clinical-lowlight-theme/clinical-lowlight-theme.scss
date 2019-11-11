@@ -1,0 +1,74 @@
+:global {
+
+  // ---------------------- Shared ----------------------- //
+  --terra-form-textarea-background-color: #222a2e;
+  --terra-form-textarea-border-color: #181b1d;
+  --terra-form-textarea-color: #b2b5b6;
+  --terra-form-textarea-hover-border-color: #181b1d;
+
+  --terra-form-textarea-disabled-background-color: #1d2529;
+  --terra-form-textarea-disabled-border-color: #24282b;
+  --terra-form-textarea-disabled-color: #404344;
+  --terra-form-textarea-disabled-opacity: 0.25;
+
+  --terra-form-textarea-error-border-color: #181b1d;
+  --terra-form-textarea-error-hover-border-color: #181b1d;
+  --terra-form-textarea-error-disabled-background-color: #1d2529;
+  --terra-form-textarea-error-disabled-border-color: #24282b;
+  --terra-form-textarea-error-disabled-color: #404344;
+  --terra-form-textarea-error-opacity: 1;
+  --terra-form-textarea-error-disabled-opacity: 1;
+
+  --terra-form-textarea-placeholder-color: #6f7477;
+  --terra-form-textarea-placeholder-disabled-color: #6f7477;
+
+  // -------------------- Version 3.x -------------------- //
+  --terra-form-textarea-background-image: none;
+  --terra-form-textarea-background-size: auto;
+  --terra-form-textarea-hover-background-color: #222a2e;
+  --terra-form-textarea-hover-color: #b2b5b6;
+
+  --terra-form-textarea-focus-background-color: #222a2e;
+  --terra-form-textarea-focus-background-size: auto;
+  --terra-form-textarea-focus-border-color: #181b1d;
+  --terra-form-textarea-focus-color: #b2b5b6;
+  --terra-form-textarea-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-form-textarea-focus-ltr-box-shadow: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
+  --terra-form-textarea-focus-rtl-box-shadow: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
+  --terra-form-textarea-focus-opacity: 1;
+
+  --terra-form-textarea-error-background-color: #222a2e;
+  --terra-form-textarea-error-background-image: none;
+  --terra-form-textarea-error-box-shadow: 0 0 0 1px #fb4c4c;
+  --terra-form-textarea-error-focus-background-color: #222a2e;
+  --terra-form-textarea-error-focus-background-size: auto;
+  --terra-form-textarea-error-focus-border-color: #181b1d;
+  --terra-form-textarea-error-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-form-textarea-error-focus-color: #b2b5b6;
+  --terra-form-textarea-error-focus-ltr-box-shadow: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
+  --terra-form-textarea-error-focus-rtl-box-shadow: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
+  --terra-form-textarea-error-focus-opacity: 1;
+  --terra-form-textarea-error-hover-background-color: #222a2e;
+  --terra-form-textarea-error-hover-color: #b2b5b6;
+
+  --terra-form-textarea-incomplete-background-color: #464232;
+  --terra-form-textarea-incomplete-hover-background-color: #464232;
+  --terra-form-textarea-incomplete-disabled-background-color: #464232;
+  --terra-form-textarea-incomplete-focus-background-color: #464232;
+
+  // -------------------- Version 2.x -------------------- //
+  --terra-form-textarea-focus-animation-background: none;
+  --terra-form-textarea-focus-keyboard-animation-size: auto;
+  --terra-form-textarea-focus-background-start: auto;
+  --terra-form-textarea-focus-keyboard-border-color: #181b1d;
+  --terra-form-textarea-focus-keyboard-box-shadow-ltr: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
+  --terra-form-textarea-focus-keyboard-box-shadow-rtl: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
+  --terra-form-textarea-focus-keyboard-opacity: 1;
+
+  --terra-form-textarea-error-focus-animation-background: none;
+  --terra-form-textarea-error-focus-keyboard-animation-size: auto;
+  --terra-form-textarea-error-focus-keyboard-border-color: #181b1d;
+  --terra-form-textarea-error-focus-keyboard-opacity: 1;
+  --terra-form-textarea-error-focus-keyboard-box-shadow-ltr: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
+  --terra-form-textarea-error-focus-keyboard-box-shadow-rtl: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
+}

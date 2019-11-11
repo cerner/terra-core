@@ -1,0 +1,116 @@
+@import '~terra-mixins/lib/Mixins';
+
+// To create custom form controls, styles for heights, margins, borders, etc.
+// must be included. While we have removed these types of styles for other files,
+// it is required to keep them for this type of control.
+
+:global {
+  // ---------------------- Shared ----------------------- //
+  --terra-form-radio-font-color: #b2b5b6;
+
+  --terra-form-radio-native-input-clip: rect(0 0 0 0);
+  --terra-form-radio-native-input-cursor: default;
+  --terra-form-radio-native-input-font-size: 0;
+  --terra-form-radio-native-input-height: 1px;
+  --terra-form-radio-native-input-margin-left: -1px;
+  --terra-form-radio-native-input-margin-right: -1px;
+  --terra-form-radio-native-input-overflow: hidden;
+  --terra-form-radio-native-input-padding: 0;
+  --terra-form-radio-native-input-width: 1px;
+
+  --terra-form-radio-outer-ring-background-color: #111;
+  --terra-form-radio-outer-ring-background-image: linear-gradient(to bottom right, #111, #35383b);
+  --terra-form-radio-outer-ring-border: 1px solid #8d8f91;
+  --terra-form-radio-outer-ring-border-radius: 50%;
+  --terra-form-radio-outer-ring-height: 1rem;
+  --terra-form-radio-outer-ring-margin-top: 0.142857rem;
+  --terra-form-radio-outer-ring-width: 1rem;
+  --terra-form-radio-outer-ring-disabled-background-color: rgba(34, 42, 46, 0.5);
+  --terra-form-radio-outer-ring-disabled-background-image: none;
+  --terra-form-radio-outer-ring-disabled-border-color: rgba(178, 181, 182, 0.2);
+
+  --terra-form-radio-outer-ring-checked-background-color: #005887;
+  --terra-form-radio-outer-ring-checked-background-image: none;
+  --terra-form-radio-outer-ring-checked-border: 1px solid #005887;
+  --terra-form-radio-outer-ring-checked-border-radius: 50%;
+  --terra-form-radio-outer-ring-checked-height: 1rem;
+  --terra-form-radio-outer-ring-checked-margin-top: 0.142857rem;
+  --terra-form-radio-outer-ring-checked-width: 1rem;
+  --terra-form-radio-outer-ring-checked-disabled-background-color: rgba(178, 181, 182, 0.2);
+  --terra-form-radio-outer-ring-checked-disabled-background-image: none;
+  --terra-form-radio-outer-ring-checked-disabled-border-color: transparent;
+
+  --terra-form-radio-outer-ring-is-mobile-height: 1rem;
+  --terra-form-radio-outer-ring-is-mobile-margin-top: 2px;
+  --terra-form-radio-outer-ring-is-mobile-width: 1rem;
+  --terra-form-radio-outer-ring-is-mobile-checked-height: 1rem;
+  --terra-form-radio-outer-ring-is-mobile-checked-margin-top: 0.142857rem;
+  --terra-form-radio-outer-ring-is-mobile-checked-width: 1rem;
+
+  --terra-form-radio-inner-ring-background-color: transparent;
+  --terra-form-radio-inner-ring-border: 1px solid transparent;
+  --terra-form-radio-inner-ring-box-shadow: none;
+  --terra-form-radio-inner-ring-height: 0.3571428rem;
+  --terra-form-radio-inner-ring-width: 0.3571428rem;
+  --terra-form-radio-inner-ring-disabled-background-color: transparent;
+  --terra-form-radio-inner-ring-disabled-border-color: transparent;
+
+  --terra-form-radio-inner-ring-checked-background-color: #b2b5b6;
+  --terra-form-radio-inner-ring-checked-border: 1px solid #b2b5b6;
+  --terra-form-radio-inner-ring-checked-box-shadow: 0 1px 1px 1px #002b42;
+  --terra-form-radio-inner-ring-checked-height: 0.3571428rem;
+  --terra-form-radio-inner-ring-checked-width: 0.3571428rem;
+  --terra-form-radio-inner-ring-checked-disabled-background-color: rgba(178, 181, 182, 0.4);
+  --terra-form-radio-inner-ring-checked-disabled-border-color: transparent;
+
+  --terra-form-radio-inner-ring-is-mobile-height: 0.3571428rem;
+  --terra-form-radio-inner-ring-is-mobile-width: 0.3571428rem;
+  --terra-form-radio-inner-ring-is-mobile-checked-height: 0.3571428rem;
+  --terra-form-radio-inner-ring-is-mobile-checked-width: 0.3571428rem;
+
+  --terra-form-radio-label-is-hidden-height: 1rem;
+  --terra-form-radio-label-is-hidden-width: 1rem;
+
+  --terra-form-radio-disabled-font-color: rgba(212, 222, 225, 0.3);
+  --terra-form-radio-disabled-font-opacity: 1;
+
+  --terra-form-radio-focus-border-color: #004c76;
+  --terra-form-radio-focus-border-width: 1px;
+  --terra-form-radio-focus-ring-height: 1.571428rem;
+  --terra-form-radio-focus-ring-left: -0.28571rem;
+  --terra-form-radio-focus-ring-top: -0.142857rem;
+  --terra-form-radio-focus-ring-width: 1.571428rem;
+
+  --terra-form-radio-hover-border-color: #585a5c;
+  --terra-form-radio-hover-border-width: 1px;
+
+  //RadioField
+  --terra-form-radio-field-label-color: #b2b5b6;
+  --terra-form-radio-field-label-required-color: #fb4c4c;
+  --terra-form-radio-field-help-text-color: #6f7477;
+  --terra-form-radio-field-error-text-color: #fb4c4c;
+
+  // -------------------- Version 3.x -------------------- //
+  --terra-form-radio-focus-before-ring-background-color: rgba(0, 76, 118, 0.35);
+  --terra-form-radio-focus-before-ring-height: 1.571428rem;
+  --terra-form-radio-focus-before-ring-left: -0.28571rem;
+  --terra-form-radio-focus-before-ring-top: -0.142857rem;
+  --terra-form-radio-focus-before-ring-width: 1.571428rem;
+  --terra-form-radio-hover-checked-outer-ring-border-color: #005887;
+  --terra-form-radio-hover-checked-outer-ring-border-width: 1px;
+
+  //Inline SVG
+  @include terra-inline-svg-var('--terra-form-radio-field-error-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#fb4c4c" d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"/><path fill="#FFF" d="M7 21.5h34v5H7v-5z"/></svg>');
+
+  // -------------------- Version 2.x -------------------- //
+  --terra-form-radio-focus-ring-background-color: rgba(0, 76, 118, 0.35);
+  --terra-form-radio-focus-ring-height: 1.571428rem;
+  --terra-form-radio-focus-ring-left: -0.28571rem;
+  --terra-form-radio-focus-ring-top: -0.142857rem;
+  --terra-form-radio-focus-ring-width: 1.571428rem;
+  --terra-form-radio-outer-ring-checked-hover-border-color: #005887;
+  --terra-form-radio-outer-ring-checked-hover-border-width: 1px;
+
+  //Inline SVG
+  @include terra-inline-svg-var('--terra-form-radio-field-error-icon', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#fb4c4c" d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"/><path fill="#FFF" d="M7 21.5h34v5H7v-5z"/></svg>');
+}

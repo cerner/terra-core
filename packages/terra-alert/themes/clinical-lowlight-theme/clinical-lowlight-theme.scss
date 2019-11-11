@@ -1,0 +1,43 @@
+:global {
+
+  // ---------------------- Shared ----------------------- //
+
+  --terra-alert-alert-background-color: #332425;
+  --terra-alert-alert-title-color: #fb4c4c;
+
+  --terra-alert-custom-background-color: #1a2226;
+  --terra-alert-custom-text-color: #b2b5b6;
+
+  --terra-alert-error-background-color: #332425;
+  --terra-alert-error-title-color: #fb4c4c;
+
+  --terra-alert-advisory-background-color: #1a2226;
+  --terra-alert-info-background-color: #1a2226;
+  --terra-alert-success-background-color: #1a2226;
+  --terra-alert-warning-background-color: #464232;
+
+  // -------------------- Version 4.x -------------------- //
+  --terra-alert-custom-default-color: #1c1f21;
+
+  // -------------------- Version 3.x -------------------- //
+
+  --terra-alert-color: #b2b5b6;
+
+  --terra-alert-advisory-box-shadow: 2px 0 0 #5a81ff inset;
+  --terra-alert-alert-box-shadow: 2px 0 0 #fb4c4c inset;
+  --terra-alert-custom-box-shadow: 2px 0 0 #9b9fa1 inset;
+  --terra-alert-error-box-shadow: 2px 0 0 #fb4c4c inset;
+  --terra-alert-info-box-shadow: 2px 0 0 #5a81ff inset;
+  --terra-alert-success-box-shadow: 2px 0 0 #407d17 inset;
+  --terra-alert-warning-box-shadow: 2px 0 0 #ffb166 inset;
+
+  // -------------------- Version 2.x -------------------- //
+
+  --terra-alert-advisory-shadow-color: #5a81ff;
+  --terra-alert-alert-shadow-color: #fb4c4c;
+  --terra-alert-custom-shadow-color: #9b9fa1;
+  --terra-alert-error-shadow-color: #fb4c4c;
+  --terra-alert-info-shadow-color: #5a81ff;
+  --terra-alert-success-shadow-color: #407d17;
+  --terra-alert-warning-shadow-color: #ffb166;
+}

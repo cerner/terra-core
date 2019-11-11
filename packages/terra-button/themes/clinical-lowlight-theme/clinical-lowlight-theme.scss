@@ -1,0 +1,132 @@
+:global {
+
+  // ---------------------- Shared ----------------------- //
+
+  --terra-button-disabled-opacity: 0.3;
+
+  // Neutral button
+  --terra-button-background-color-neutral: #2d3539;
+  --terra-button-border-color-neutral: #181b1d;
+  --terra-button-box-shadow-neutral: none;
+  --terra-button-color-neutral: #b2b5b6;
+
+  --terra-button-active-background-color-neutral: #0c0d0e;
+  --terra-button-active-border-color-neutral: #181b1d;
+  --terra-button-active-color-neutral: #9b9b9b;
+
+  --terra-button-active-and-focus-background-color-neutral: #0c0d0e;
+  --terra-button-active-and-focus-border-color-neutral: #181b1d;
+  --terra-button-active-and-focus-box-shadow-neutral: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-focus-background-color-neutral: #2d3539;
+  --terra-button-focus-border-color-neutral: #181b1d;
+  --terra-button-focus-box-shadow-neutral: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-hover-background-color-neutral: #1a2023;
+  --terra-button-hover-color-neutral: #9b9b9b;
+
+  // Emphasis button
+  --terra-button-background-color-emphasis: #004c76;
+  --terra-button-border-color-emphasis: #003f61;
+  --terra-button-box-shadow-emphasis: none;
+  --terra-button-color-emphasis: #b2b5b6;
+
+  --terra-button-active-background-color-emphasis: #001e2e;
+  --terra-button-active-border-color-emphasis: #003f61;
+  --terra-button-active-color-emphasis: #b2b5b6;
+
+  --terra-button-active-and-focus-background-color-emphasis: #001e2e;
+  --terra-button-active-and-focus-border-color-emphasis: #003f61;
+  --terra-button-active-and-focus-box-shadow-emphasis: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-focus-background-color-emphasis: #004c76;
+  --terra-button-focus-border-color-emphasis: #003f61;
+  --terra-button-focus-box-shadow-emphasis: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-hover-background-color-emphasis: #013a5a;
+  --terra-button-hover-color-emphasis: #b2b5b6;
+
+  // De-emphasis button
+  --terra-button-background-color-de-emphasis: transparent;
+  --terra-button-border-color-de-emphasis: transparent;
+  --terra-button-box-shadow-de-emphasis: none;
+  --terra-button-color-de-emphasis: #007ee0;
+
+  --terra-button-active-background-color-de-emphasis: #161e22;
+  --terra-button-active-border-color-de-emphasis: transparent;
+  --terra-button-active-color-de-emphasis: #003f61;
+
+  --terra-button-active-and-focus-background-color-de-emphasis: #161e22;
+  --terra-button-active-and-focus-border-color-de-emphasis: transparent;
+  --terra-button-active-and-focus-box-shadow-de-emphasis: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-focus-background-color-de-emphasis: transparent;
+  --terra-button-focus-border-color-de-emphasis: transparent;
+  --terra-button-focus-box-shadow-de-emphasis: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-hover-background-color-de-emphasis: transparent;
+  --terra-button-hover-color-de-emphasis: #003f61;
+
+  // Action button
+  --terra-button-background-color-action: #004c76;
+  --terra-button-border-color-action: #003f61;
+  --terra-button-box-shadow-action: transparent;
+  --terra-button-color-action: #b2b5b6;
+
+  --terra-button-active-background-color-action: #001e2e;
+  --terra-button-active-border-color-action: #003f61;
+  --terra-button-active-color-action: #b2b5b6;
+
+  --terra-button-active-and-focus-background-color-action: #001e2e;
+  --terra-button-active-and-focus-border-color-action: #003f61;
+  --terra-button-active-and-focus-box-shadow-action: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-focus-background-color-action: #004c76;
+  --terra-button-focus-border-color-action: #003f61;
+  --terra-button-focus-box-shadow-action: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-hover-background-color-action: #013a5a;
+  --terra-button-hover-color-action: #9b9b9b;
+
+  // Utility button
+  --terra-button-background-color-utility: transparent;
+  --terra-button-border-color-utility: transparent;
+  --terra-button-box-shadow-utility: none;
+  --terra-button-color-utility: #b2b5b6;
+
+  --terra-button-active-background-color-utility: #1a2023;
+  --terra-button-active-border-color-utility: transparent;
+  --terra-button-active-color-utility: #b2b5b6;
+
+  --terra-button-active-and-focus-background-color-utility: #1a2023;
+  --terra-button-active-and-focus-border-color-utility: transparent;
+  --terra-button-active-and-focus-box-shadow-utility: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-focus-background-color-utility: transparent;
+  --terra-button-focus-border-color-utility: transparent;
+  --terra-button-focus-box-shadow-utility: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-hover-background-color-utility: transparent;
+  --terra-button-hover-color-utility: #b2b5b6;
+
+  // Ghost Button
+  --terra-button-background-color-ghost: transparent;
+  --terra-button-border-color-ghost: #616668;
+  --terra-button-box-shadow-ghost: none;
+  --terra-button-color-ghost: #b2b5b6;
+
+  --terra-button-active-background-color-ghost: #0c0d0e;
+  --terra-button-active-border-color-ghost: transparent;
+  --terra-button-active-color-ghost: #b2b5b6;
+
+  --terra-button-active-and-focus-background-color-ghost: #0c0d0e;
+  --terra-button-active-and-focus-border-color-ghost: #181b1d;
+  --terra-button-active-and-focus-box-shadow-ghost: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-focus-background-color-ghost: #222a2e;
+  --terra-button-focus-border-color-ghost: #181b1d;
+  --terra-button-focus-box-shadow-ghost: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  --terra-button-hover-background-color-ghost: #1a2023;
+  --terra-button-hover-color-ghost: #9b9b9b;
+}

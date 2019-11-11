@@ -1,0 +1,54 @@
+:global {
+  // ---------------------- Shared ----------------------- //
+  --terra-table-background-color: #383f42;
+  --terra-table-border: 0;
+
+  --terra-table-tfoot-tr-border-bottom: 1px solid #181b1d;
+  --terra-table-tfoot-tr-border-top: 0;
+
+  --terra-table-thead-background-color: #141719;
+  --terra-table-thead-tr-border-bottom: 0;
+  --terra-table-thead-tr-border-top: 1px solid #181b1d;
+  --terra-table-thead-th-color: #b2b5b6;
+
+  --terra-table-sort-indicator-color: #b2b5b6;
+
+  --terra-table-subheader-background-color: #0e1011;
+  --terra-table-subheader-color: #b2b5b6;
+
+  --terra-table-row-hover-background-color: #232a2d;
+  --terra-table-row-selected-background-color: #1e3a49;
+  --terra-table-row-selected-hover-background-color: #1e3a49;
+  --terra-table-row-striped-background-color: #2d3539;
+  --terra-table-row-striped-hover-background-color: #191e1e;
+  --terra-table-row-striped-selected-background-color: #1e3a49;
+  --terra-table-row-striped-selected-hover-background-color: #1e3a49;
+
+  // -------------------- Version 3.x -------------------- //
+  --terra-table-cell-border-left: 0;
+  --terra-table-header-cell-border-left: 0;
+
+  --terra-table-first-cell-border-left: 1px solid #181b1d;
+  --terra-table-first-header-cell-border-left: 1px solid #181b1d;
+  --terra-table-last-cell-border-right: 1px solid #181b1d;
+  --terra-table-last-header-cell-border-right: 1px solid #181b1d;
+  --terra-table-last-row-border-bottom: 1px solid #181b1d;
+
+  --terra-table-row-border-top: 1px solid #181b1d;
+  --terra-table-row-focus-background-color: #232a2d;
+  --terra-table-row-selected-border-top-color: #004c76;
+  --terra-table-row-selected-focus-background-color: #1e3a49;
+  --terra-table-row-striped-focus-background-color: #1e3a49;
+  --terra-table-row-striped-selected-focus-background-color: #1e3a49;
+
+  --terra-table-subheader-border-bottom: none;
+
+  --terra-table-tbody-background-color: #383f42;
+
+
+  // -------------------- Version 2.x -------------------- //
+  --terra-table-cell-border: 0;
+  --terra-table-row-border-vertical: 1px solid #181b1d;
+  --terra-table-row-border-horizontal: 1px solid #181b1d;
+  --terra-table-row-selected-border-color: #004c76;
+}

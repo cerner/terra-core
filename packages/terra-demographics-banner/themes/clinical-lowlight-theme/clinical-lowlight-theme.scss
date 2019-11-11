@@ -1,0 +1,22 @@
+:global {
+  // ---------------------- Shared ----------------------- //
+  // there are no shared variables for these versions
+
+  // -------------------- Version 3.x -------------------- //
+  --terra-demographics-banner-background-color: #004c76;
+  --terra-demographics-banner-background-image: none;
+  --terra-demographics-banner-box-shadow: none;
+  --terra-demographics-banner-color: #b2b5b6;
+  --terra-demographics-banner-large-box-shadow: none;
+
+  --terra-demographics-banner-deceased-background-color: #1c1f21;
+  --terra-demographics-banner-deceased-background-image: none;
+  --terra-demographics-banner-deceased-color: #b2b5b6;
+  --terra-demographics-banner-deceased-profile-photo-opacity: 0.7;
+
+  // -------------------- Version 2.x -------------------- //
+  --terra-demographics-banner-background: #004c76;
+  --terra-demographics-banner-background-deceased: #1c1f21;
+  --terra-demographics-banner-foreground: #b2b5b6;
+  --terra-demographics-banner-foreground-deceased: #b2b5b6;
+}

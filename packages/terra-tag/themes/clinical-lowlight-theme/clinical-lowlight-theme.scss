@@ -1,0 +1,32 @@
+:global {
+
+  // ---------------------- Shared ----------------------- //
+
+  --terra-tag-background-color: #1d2427;
+  --terra-tag-border-color: #181b1d;
+  --terra-tag-box-shadow: none;
+  --terra-tag-color: #c5c5c6;
+
+  // Interactive
+  --terra-tag-interactive-background-color: #1d2427;
+  --terra-tag-interactive-color: #007ee0;
+
+  // Focus
+  --terra-tag-focus-background-color: #2d3539;
+  --terra-tag-focus-border-color: #181b1d;
+  --terra-tag-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  // Hover
+  --terra-tag-hover-background-color: #1d2427;
+  --terra-tag-hover-box-shadow: none;
+  --terra-tag-hover-color: #003f61;
+
+  // -------------------- Version 2.x -------------------- //
+
+  --terra-tag-focus-color: #007ee0;
+  --terra-tag-hover-border-color: #181b1d;
+
+  // -------------------- Version 1.x -------------------- //
+
+  // there are no version specific variables for this version
+}
