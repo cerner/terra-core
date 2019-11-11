@@ -6,6 +6,14 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+### Changed
+* Switched themeable icons provided by CSS to imported `terra-icon` component.
+
+2.23.0 - (November 7, 2019)
+------------------
+### Fixed
+* Fixed the color contrast axe violation for disabled hyperlinks by adding `aria-disabled`.
+
 2.22.0 - (October 30, 2019)
 ------------------
 ### Changed
