@@ -132,7 +132,7 @@ const CheckMarkCell = ({
       className={customProps.className ? `${checkMarkClasses} ${customProps.className}` : checkMarkClasses}
       ref={refCallback}
       // role={isSelectable ? 'cell' : 'none'}
-      // role="gridcell"
+      role="gridcell"
       title="select row cells"
     >
       <div {...attrCheck} className={cx('container')}>

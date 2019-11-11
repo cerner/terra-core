@@ -120,7 +120,7 @@ const SectionHeader = ({
       <div
         {...attrSpread}
         id={id}
-        colspan={3}
+        colSpan={3}
         headers=""
         scope="colgroup"
         role="columnheader"
@@ -130,8 +130,6 @@ const SectionHeader = ({
         {/* {titleElement} */}
         {title}
       </div>
-      {/* <div role="columnheader" />
-      <div role="columnheader" /> */}
     </div>
   );
 };
