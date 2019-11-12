@@ -23,7 +23,6 @@ describe('DocTemplate', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-
   it('should show the readme', () => {
     const wrapper = shallow(<DocTemplate readme={readme} />);
     expect(wrapper).toMatchSnapshot();

@@ -3,8 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.31.0 - (October 30, 2019)
+------------------
 ### Changed
 * Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg .
+
+### Fixed
+* Fixed lint warnings for multiple empty lines
 
 2.30.0 - (October 3, 2019)
 ------------------

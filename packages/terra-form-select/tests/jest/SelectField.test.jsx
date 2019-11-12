@@ -3,7 +3,6 @@ import React from 'react';
 import { shallowWithIntl } from 'terra-enzyme-intl';
 import SelectField from '../../src/SelectField';
 
-
 it('should render a default SelectField component', () => {
   const select = (
     <SelectField label="Label" defaultValue="blue" selectId="select-id">

@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+3.33.0 - (November 7, 2019)
+------------------
+### Changed
+* Updating tests to be better isolated from terra-dev-site markup.
+
+3.33.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
 ### Changed
 * Updated wdio tests to cover update lifecycle handling
 
