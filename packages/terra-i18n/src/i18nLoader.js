@@ -12,7 +12,10 @@ export default (locale, callback, scope) => {
   permitParams(callback);
   
   if (!global.Intl) {
-    require('intl')  
+    require('intl')
+  }
+
+  if (global.IntlPolyfill) {
     loadIntl(locale);
   }
 

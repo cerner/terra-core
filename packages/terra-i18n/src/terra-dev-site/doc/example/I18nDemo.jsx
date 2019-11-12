@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedDate, FormattedNumber } from 'react-intl';
 import { I18nProvider, i18nLoader } from 'terra-i18n';
 
 class Demo extends React.Component {
@@ -30,7 +30,18 @@ class Demo extends React.Component {
         locale={this.state.locale}
         messages={this.state.messages}
       >
-        <FormattedMessage id="Terra.ajax.error" />
+        <div>
+          <span> Example Message Format: </span>
+          <FormattedMessage id="Terra.ajax.error" />
+        </div>
+        <p>
+          <span> Example Number Format: </span>
+          <FormattedNumber value={parseFloat('1123432.123')} />
+        </p>
+        <p>
+          <span>Example Date Format: </span>
+          <FormattedDate value={new Date(1459832991883)} />
+        </p>
         <label htmlFor="locale">
           {' '}
 Current locale:

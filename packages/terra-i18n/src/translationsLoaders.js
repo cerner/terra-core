@@ -35,3 +35,4 @@ const loadTranslations = (locale, callback, scope) => {
 };
 
 export default loadTranslations;
+/* eslint-enable */

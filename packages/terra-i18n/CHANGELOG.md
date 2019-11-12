@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fix Intl data loading logic. Locale data was only loading the initial locale data but did not load locale data for the new local when the locale was switched. This issue was discovered when running in IE 10.
 
 4.19.0 - (October 30, 2019)
 ------------------
