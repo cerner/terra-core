@@ -328,6 +328,7 @@ exports[`Frame should render a disabled multiple variant 1`] = `
   }
   isIncomplete={false}
   isInvalid={false}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   required={false}
 />
@@ -439,6 +440,7 @@ exports[`Frame should render a multiple variant 1`] = `
   }
   isIncomplete={false}
   isInvalid={false}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   required={false}
 />
@@ -476,6 +478,7 @@ exports[`Frame should render a multiple variant with a placeholder 1`] = `
   }
   isIncomplete={false}
   isInvalid={false}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
@@ -809,6 +812,7 @@ exports[`Frame should render an incomplete multiple variant 1`] = `
   }
   isIncomplete={true}
   isInvalid={false}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   required={false}
 />
@@ -993,6 +997,7 @@ exports[`Frame should render an invalid multiple variant 1`] = `
   }
   isIncomplete={false}
   isInvalid={true}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   required={false}
 />

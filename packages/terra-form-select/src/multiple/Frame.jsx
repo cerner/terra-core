@@ -83,6 +83,10 @@ const propTypes = {
    */
   onSearch: PropTypes.func,
   /**
+   * Whether the search input is disabled
+   */
+  isSearchDisabled: PropTypes.bool,
+  /**
    * Callback function triggered when an option is selected.
    */
   onSelect: PropTypes.func,
@@ -124,6 +128,7 @@ const defaultProps = {
   required: false,
   totalOptions: undefined,
   value: undefined,
+  isSearchDisabled: false,
 };
 
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
@@ -223,7 +228,7 @@ class Frame extends React.Component {
             </li>
           ) : null}
         <li className={cx('search-wrapper')}>
-          <input {...inputAttrs} value={searchValue} />
+          {(this.props.isSearchDisabled) ? <div className={cx('placeholder')}>{placeholder || '\xa0'}</div> : <input {...inputAttrs} value={searchValue} /> }
         </li>
       </ul>
     );

@@ -81,6 +81,10 @@ const propTypes = {
    */
   onSearch: PropTypes.func,
   /**
+   * Whether the search input is disabled
+   */
+  isSearchDisabled: PropTypes.bool,
+  /**
    * Callback function triggered when an option is selected. function(value)
    */
   onSelect: PropTypes.func,
@@ -120,6 +124,7 @@ const defaultProps = {
   placeholder: undefined,
   required: false,
   value: undefined,
+  isSearchDisabled: false,
 };
 
 class MultiSelect extends React.Component {
@@ -193,7 +198,7 @@ class MultiSelect extends React.Component {
 
   render() {
     const {
-      children, defaultValue, onChange, placeholder, required, value, intl, ...otherProps
+      children, defaultValue, onChange, placeholder, required, value, intl, isSearchDisabled, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
@@ -210,6 +215,7 @@ class MultiSelect extends React.Component {
         placeholder={selectPlaceholder}
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
+        isSearchDisabled={isSearchDisabled}
       >
         {children}
       </Frame>

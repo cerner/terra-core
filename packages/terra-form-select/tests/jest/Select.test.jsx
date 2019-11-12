@@ -210,4 +210,9 @@ describe('Select', () => {
     const wrapper = shallowWithIntl(<Select required />).dive();
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a search disabled multiple variant', () => {
+    const wrapper = shallowWithIntl(<Select variant="multiple" isSearchDisabled />).dive();
+    expect(wrapper).toMatchSnapshot();
+  });
 });

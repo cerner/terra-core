@@ -295,6 +295,7 @@ exports[`Select should render a disabled multiple variant 1`] = `
   }
   isIncomplete={false}
   isInvalid={false}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   required={false}
 />
@@ -407,6 +408,7 @@ exports[`Select should render a multiple variant 1`] = `
   }
   isIncomplete={false}
   isInvalid={false}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   required={false}
 />
@@ -444,6 +446,7 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
   }
   isIncomplete={false}
   isInvalid={false}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
@@ -484,6 +487,44 @@ exports[`Select should render a required select 1`] = `
   isIncomplete={false}
   isInvalid={false}
   required={true}
+/>
+`;
+
+exports[`Select should render a search disabled multiple variant 1`] = `
+<MultiSelect
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={false}
+  isInvalid={false}
+  isSearchDisabled={true}
+  isTouchAccessible={false}
+  required={false}
 />
 `;
 
@@ -978,6 +1019,7 @@ exports[`Select should render an incomplete multiple variant 1`] = `
   }
   isIncomplete={true}
   isInvalid={false}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   required={false}
 />
@@ -1165,6 +1207,7 @@ exports[`Select should render an invalid multiple variant 1`] = `
   }
   isIncomplete={false}
   isInvalid={true}
+  isSearchDisabled={false}
   isTouchAccessible={false}
   required={false}
 />

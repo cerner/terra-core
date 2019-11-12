@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `isSearchDisabled` prop to `multiple` variant of form-select to allow users to disable search when required.
 
 5.36.0 - (October 30, 2019)
 ------------------
