@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FocusTrap from 'focus-trap-react';
-import Hookshot from 'terra-hookshot';
+import classNames from 'classnames/bind';
 import DropdownList from './_DropdownList';
+import styles from './_Dropdown.module.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
    * Callback to tell the parent it should close the dropdown
    */
   requestClose: PropTypes.func.isRequired,
-  /**
-   * Ref to attach the dropdown to
-   */
-  targetRef: PropTypes.func.isRequired,
   /**
    * Whether or not the dropdown should be open
    */
@@ -35,33 +34,31 @@ const propTypes = {
    */
   buttonRef: PropTypes.func,
 };
-
 const Dropdown = ({
-  requestClose, isOpen, targetRef, children, width, isKeyboardEvent, buttonRef,
-}) => (
-  <Hookshot
-    isOpen={isOpen}
-    isEnabled
-    targetRef={targetRef}
-    attachmentBehavior="flip"
-    contentAttachment={{ vertical: 'top', horizontal: 'start' }}
-    targetAttachment={{ vertical: 'bottom', horizontal: 'start' }}
-  >
-    <Hookshot.Content
-      onEsc={requestClose}
-      onOutsideClick={requestClose}
-    >
-      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, initialFocus: isKeyboardEvent ? '' : buttonRef, clickOutsideDeactivates: true }}>
-        <DropdownList
-          requestClose={requestClose}
-          width={width}
-        >
-          {children}
-        </DropdownList>
-      </FocusTrap>
-    </Hookshot.Content>
-  </Hookshot>
-);
+  requestClose, isOpen, children, width, isKeyboardEvent, buttonRef,
+}) => {
+  const dropdownClasses = cx([
+    'dropdown',
+    { 'is-touch-accessible': isOpen },
+  ]);
+  if (isOpen) {
+    return (
+      <div // eslint-disable-line jsx-a11y/no-static-element-interactions
+        className={dropdownClasses}
+      >
+        <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, initialFocus: isKeyboardEvent ? '' : buttonRef, clickOutsideDeactivates: true }}>
+          <DropdownList
+            requestClose={requestClose}
+            width={width}
+          >
+            {children}
+          </DropdownList>
+        </FocusTrap>
+      </div>
+    );
+  }
+  return null;
+};
 
 Dropdown.propTypes = propTypes;
 
