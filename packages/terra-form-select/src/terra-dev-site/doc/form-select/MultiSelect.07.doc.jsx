@@ -16,6 +16,8 @@ import ControlledExample from '../example/multiple/Controlled';
 import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Controlled';
 import DisabledExample from '../example/multiple/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/Disabled';
+import SearchDisabledExample from '../example/multiple/SearchDisabledMultiSelect';
+import SearchDisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/SearchDisabledMultiSelect';
 import IsTouchAccessibleExample from '../example/multiple/IsTouchAccessible';
 import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/multiple/IsTouchAccessible';
 import InvalidExample from '../example/multiple/Invalid';
@@ -64,6 +66,10 @@ const Index = () => (
       title: 'Disabled',
       example: <DisabledExample />,
       source: DisabledExampleSrc,
+    }, {
+      title: 'Search Disabled',
+      example: <SearchDisabledExample />,
+      source: SearchDisabledExampleSrc,
     }, {
       title: 'Invalid',
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',

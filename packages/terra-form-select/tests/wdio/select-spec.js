@@ -1116,6 +1116,34 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Multiple Variant - Search Disabled', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/search-disabled-multi-select');
+    });
+
+    describe('search disabled multiple shows placeholder initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => browser.click('#searchdisabledmultiple'));
+    });
+
+    describe('search input should be disabled for entering value', () => {
+      it('multiple should select the first option', () => {
+        browser.keys('Enter');
+      });
+
+      it('search input should be disabled', () => {
+        browser.keys('b');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh(); // remove selected option
+      });
+    });
+  });
+
   describe('Multiple Variant - Is Touch Accessible', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-multi-select');

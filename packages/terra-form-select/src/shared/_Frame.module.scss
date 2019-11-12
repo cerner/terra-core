@@ -387,4 +387,8 @@
     white-space: nowrap; /* Ensures words  are not read one at a time on screen readers*/
     width: 1px;
   }
+
+  .is-search-disabled {
+    cursor: pointer;
+  }
 }

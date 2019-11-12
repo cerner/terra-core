@@ -191,7 +191,7 @@ class Frame extends React.Component {
   getDisplay(displayId, ariaDescribedBy) {
     const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required, value,
+      disabled, display, placeholder, required, value, isSearchDisabled,
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
@@ -215,7 +215,7 @@ class Frame extends React.Component {
     };
 
     return (
-      <ul className={cx('content')}>
+      <ul className={cx('content', { 'is-search-disabled': isSearchDisabled })}>
         {display && display.length > 0
           ? (
             <li>
@@ -228,7 +228,7 @@ class Frame extends React.Component {
             </li>
           ) : null}
         <li className={cx('search-wrapper')}>
-          {(this.props.isSearchDisabled) ? <div className={cx('placeholder')}>{placeholder || '\xa0'}</div> : <input {...inputAttrs} value={searchValue} /> }
+          {(isSearchDisabled) ? <div className={cx('placeholder')}>{placeholder || '\xa0'}</div> : <input {...inputAttrs} value={searchValue} /> }
         </li>
       </ul>
     );
