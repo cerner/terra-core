@@ -228,7 +228,7 @@ class Frame extends React.Component {
             </li>
           ) : null}
         <li className={cx('search-wrapper')}>
-          {(isSearchDisabled) ? <div className={cx('placeholder')}>{placeholder || '\xa0'}</div> : <input {...inputAttrs} value={searchValue} /> }
+          <input {...inputAttrs} value={searchValue} readOnly={isSearchDisabled} />
         </li>
       </ul>
     );
@@ -357,9 +357,9 @@ class Frame extends React.Component {
       children, intl, onDeselect, value,
     } = this.props;
 
-    const { keyCode, target } = event;
+    const { keyCode } = event;
 
-    if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
+    if (keyCode === KeyCode.KEY_SPACE) {
       event.preventDefault();
       this.openDropdown(event);
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
