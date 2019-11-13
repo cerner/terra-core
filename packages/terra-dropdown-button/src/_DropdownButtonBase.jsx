@@ -43,6 +43,7 @@ const propTypes = {
    * Callback for reference of the dropdown button
    */
   buttonRef: PropTypes.func,
+  onClickOutside: PropTypes.func,
 };
 
 const defaultProps = {
@@ -58,7 +59,7 @@ class DropdownButtonBase extends React.Component {
 
     this.setButtonWrapperRef = this.setButtonWrapperRef.bind(this);
     this.getButtonWrapperRef = this.getButtonWrapperRef.bind(this);
-
+    this.handleClickOutside = this.handleClickOutside.bind(this);
     this.buttonWrapperRef = null;
   }
 
@@ -68,6 +69,10 @@ class DropdownButtonBase extends React.Component {
 
   getButtonWrapperRef() {
     return this.buttonWrapperRef;
+  }
+
+  handleClickOutside(event) {
+    this.props.onClickOutside(event);
   }
 
   render() {
@@ -81,6 +86,7 @@ class DropdownButtonBase extends React.Component {
       isDisabled,
       isKeyboardEvent,
       buttonRef,
+      onClickOutside,
       ...customProps
     } = this.props;
 
@@ -96,6 +102,14 @@ class DropdownButtonBase extends React.Component {
     if (this.buttonWrapperRef && isBlock) {
       calcWidth = `${this.buttonWrapperRef.getBoundingClientRect().width}px`;
     }
+    // Delete the unnecessary props that come from react-onClickOutside.
+    delete customProps.disableOnClickOutside;
+    delete customProps.enableOnClickOutside;
+    delete customProps.eventTypes;
+    delete customProps.excludeScrollbar;
+    delete customProps.outsideClickIgnoreClass;
+    delete customProps.preventDefault;
+    delete customProps.stopPropagation;
 
     return (
       <div
@@ -111,6 +125,7 @@ class DropdownButtonBase extends React.Component {
           width={calcWidth}
           isKeyboardEvent={isKeyboardEvent}
           buttonRef={buttonRef}
+          onClickOutside={onClickOutside}
         >
           {items}
         </Dropdown>

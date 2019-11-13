@@ -50,6 +50,7 @@ const Dropdown = ({
           <DropdownList
             requestClose={requestClose}
             width={width}
+            onClickOutside={requestClose}
           >
             {children}
           </DropdownList>

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
 import { injectIntl, intlShape } from 'react-intl';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import onClickOutside from 'react-onclickoutside';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './SplitButton.module.scss';
 import Item from './Item';
@@ -14,6 +16,7 @@ const Variants = {
   // EMPHASIS: 'emphasis', // Wait to add in future enhancement
   GHOST: 'ghost',
 };
+const WrappedButtonBase = onClickOutside(DropdownButtonBase);
 
 const propTypes = {
   /**
@@ -70,6 +73,7 @@ class SplitButton extends React.Component {
     this.handleCaretKeyUp = this.handleCaretKeyUp.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
+    this.handleButtonClickOutside = this.handleButtonClickOutside.bind(this);
 
     this.state = {
       isOpen: false, caretIsActive: false, primaryIsActive: false, isKeyboardEvent: false,
@@ -91,6 +95,13 @@ class SplitButton extends React.Component {
   handleDropdownRequestClose(callback) {
     this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
     this.setState({ isKeyboardEvent: false });
+  }
+
+  handleButtonClickOutside(event) {
+    event.preventDefault();
+    this.setState({
+      isOpen: false,
+    });
   }
 
   /*
@@ -162,7 +173,7 @@ class SplitButton extends React.Component {
     );
 
     return (
-      <DropdownButtonBase
+      <WrappedButtonBase
         {...customProps}
         items={children}
         isOpen={isOpen}
@@ -172,6 +183,7 @@ class SplitButton extends React.Component {
         isDisabled={isDisabled}
         isKeyboardEvent={isKeyboardEvent}
         buttonRef={this.getButtonNode}
+        onClickOutside={this.handleButtonClickOutside}
       >
         <button
           type="button"
@@ -201,7 +213,7 @@ class SplitButton extends React.Component {
         >
           <span className={cx('caret-icon')} />
         </button>
-      </DropdownButtonBase>
+      </WrappedButtonBase>
     );
   }
 }

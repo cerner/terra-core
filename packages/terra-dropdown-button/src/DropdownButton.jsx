@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import onClickOutside from 'react-onclickoutside';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
 import Item from './Item';
@@ -48,6 +50,7 @@ const defaultProps = {
   isDisabled: false,
   variant: 'neutral',
 };
+const WrappedButtonBase = onClickOutside(DropdownButtonBase);
 
 class DropdownButton extends React.Component {
   constructor(props) {
@@ -56,10 +59,10 @@ class DropdownButton extends React.Component {
     this.handleDropdownButtonClick = this.handleDropdownButtonClick.bind(this);
     this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleButtonClickOutside = this.handleButtonClickOutside.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
-
 
     this.state = { isOpen: false, isActive: false, isKeyboardEvent: false };
   }
@@ -70,6 +73,13 @@ class DropdownButton extends React.Component {
 
   getButtonNode() {
     return this.buttonNode;
+  }
+
+  handleButtonClickOutside(event) {
+    event.preventDefault();
+    this.setState({
+      isOpen: false,
+    });
   }
 
   handleDropdownButtonClick() {
@@ -123,7 +133,7 @@ class DropdownButton extends React.Component {
     );
 
     return (
-      <DropdownButtonBase
+      <WrappedButtonBase
         {...customProps}
         items={children}
         isOpen={isOpen}
@@ -133,6 +143,7 @@ class DropdownButton extends React.Component {
         requestClose={this.handleDropdownRequestClose}
         isKeyboardEvent={isKeyboardEvent}
         buttonRef={this.getButtonNode}
+        onClickOutside={this.handleButtonClickOutside}
       >
         <button
           type="button"
@@ -150,7 +161,7 @@ class DropdownButton extends React.Component {
           <span className={cx('dropdown-button-text')}>{label}</span>
           <span className={cx('caret-icon')} />
         </button>
-      </DropdownButtonBase>
+      </WrappedButtonBase>
     );
   }
 }
