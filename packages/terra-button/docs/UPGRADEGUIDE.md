@@ -4,15 +4,6 @@
 
 ### Changes to CSS Custom Properties
 
-### Added ~3.25.x
-* --terra-button-disabled-background-color-neutral
-* --terra-button-disabled-background-color-emphasis
-* --terra-button-disabled-background-color-ghost
-* --terra-button-disabled-background-color-de-emphasis
-* --terra-button-disabled-background-color-action
-* --terra-button-disabled-background-color-action
-
-
 #### Removed
 * --terra-button-vertical-padding
 * --terra-button-text-only-horizontal-margin

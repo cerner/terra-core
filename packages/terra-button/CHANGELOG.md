@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added Theme variables for disabled background color
+* Added Theme variables for disabled styles of button.
 
 =======
 

@@ -30,6 +30,9 @@
   &:disabled,
   &.is-disabled {
     background-color: map-get($color-map, disabled-background-color);
+    border-color: map-get($color-map, disabled-border-color);
+    box-shadow: map-get($color-map, disabled-box-shadow);
+    color: map-get($color-map, disabled-color);
   }
 
   &.is-active.is-focused,
