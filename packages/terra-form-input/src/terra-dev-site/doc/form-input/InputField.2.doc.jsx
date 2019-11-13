@@ -11,6 +11,8 @@ import InputFieldExample from '../example/InputField';
 import InputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/InputField';
 import RequiredInputFieldExample from '../example/RequiredInputField';
 import RequiredInputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/RequiredInputField';
+import IncompleteInputFieldExample from '../example/IncompleteInputField';
+import IncompleteInputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/IncompleteInputField';
 import NumberInputFieldExample from '../example/NumberInputField';
 import NumberInputFieldExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NumberInputField';
 
@@ -35,6 +37,11 @@ const DocPage = () => (
       {
         example: <RequiredInputFieldExample />,
         source: RequiredInputFieldExampleSrc,
+      },
+      {
+        description: 'Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
+        example: <IncompleteInputFieldExample />,
+        source: IncompleteInputFieldExampleSrc,
       },
       {
         example: <NumberInputFieldExample />,

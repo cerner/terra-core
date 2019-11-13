@@ -16,9 +16,9 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The default selected value.
+   * The default selected value. Can be a string, number, or array of strings/numbers.
    */
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * Whether the select is disabled.
    */
@@ -34,7 +34,11 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether the select is in an invalid state.
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the select displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -78,7 +82,7 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * The selected value.
+   * The selected value. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
@@ -89,6 +93,7 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
   noResultContent: undefined,
   onChange: undefined,
@@ -100,19 +105,13 @@ const defaultProps = {
 };
 
 class SingleSelect extends React.Component {
-  static defaultValue(props) {
-    if (props.value !== undefined) {
-      return null;
-    }
-
-    return (props.defaultValue !== undefined && props.defaultValue !== null) ? props.defaultValue : '';
-  }
-
   constructor(props) {
     super(props);
 
+    const { defaultValue, value } = props;
+
     this.state = {
-      value: SingleSelect.defaultValue(props),
+      value: SelectUtil.defaultValue({ defaultValue, value }),
     };
 
     this.display = this.display.bind(this);

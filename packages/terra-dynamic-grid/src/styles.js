@@ -16,7 +16,6 @@ const gridTemplate = (prop, layout) => {
   };
 };
 
-
 const gridLineStart = (prop, region) => {
   const start = region[`grid-${prop}-start`];
   if (start === undefined) {
@@ -29,7 +28,6 @@ const gridLineStart = (prop, region) => {
     [`-ms-grid-${prop}`]: `${(start * 2) - 1}`,
   };
 };
-
 
 const gridLineEnd = (prop, region) => {
   if (region[`grid-${prop}-end`] === undefined) {
@@ -48,7 +46,6 @@ const gridLineEnd = (prop, region) => {
     [`-ms-grid-${prop}-span`]: `${span}`,
   };
 };
-
 
 const gridGap = layout => (
   layout['grid-gap']
@@ -84,6 +81,5 @@ const region = position => ({
   ...gridLineEnd('row', position),
   ...(position.style || {}),
 });
-
 
 export { grid, region };

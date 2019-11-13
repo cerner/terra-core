@@ -116,6 +116,10 @@ class DropdownButton extends React.Component {
       { 'is-active': isOpen || isActive },
       { 'is-block': isBlock },
       { 'is-compact': isCompact },
+      /* This needs to match terra-hookshot's react-onclickoutside ignore classname or clicking the caret with
+        the dropdown open will cause the dropdown to close and reopen
+      */
+      { 'ignore-react-onclickoutside': isOpen },
     );
 
     return (

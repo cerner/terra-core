@@ -114,7 +114,7 @@ Finally we need to check if the item is selected. As we support IE10 & 11, we ca
     );
   }
 ```
-Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of `"listbox"` for the list, as it is required for accessibility with selectable list options. In addition, we need to assign the aria role for multiple selections, `aria-multiselectable`.
+Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of `"listbox"` and a string to `aria-label` for the list, as it is required for accessibility with selectable list options. In addition, we need to assign the aria role for multiple selections, `aria-multiselectable`.
 ```diff
 class MyList extends React.Component {
   constructor(props) {
@@ -136,6 +136,7 @@ class MyList extends React.Component {
 +       dividerStyle="standard"
 +       role="listbox"
 +       aria-multiselectable
++       aria-label="MultiSelectList-label"
 +     >
 +       {this.createListItems(mockData)}
 +     </List>

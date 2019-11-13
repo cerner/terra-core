@@ -4,6 +4,54 @@ ChangeLog
 Unreleased
 ----------
 
+5.36.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed IE issue that required two clicks to open the dropdown menu after initial selection.
+* Fixed lint warnings for multiple empty lines
+* Fixed re-renders of scroll after every componentDidUpdate call.
+
+### Changed
+* Duplicate ID in examples changed.
+
+5.35.0 - (October 18, 2019)
+------------------
+### Fixed
+* Fixed form-select placeholder color text to pass contrast test and added wdio test
+
+5.34.0 - (October 15, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.33.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.32.0 - (October 3, 2019)
+------------------
+### Added
+* Added `isTouchAccessible` prop for all variants that have an input (e.g. `combobox`, `multiple`, `search`, and `tag`) to improve mobile accessibility
+  * When used, the dropdown menu is no longer portaled: it is rendered in the normal DOM flow with `position: absolute` allowing easier navigation to the list options with the virtual cursor used in mobile screen readers
+* Added `isIncomplete` prop to show incomplete stylings.
+
+5.31.0 - (September 26, 2019)
+------------------
+### Fixed
+* Fixed keyboard navigation when interacting with clear option on single and combobox variants
+
+5.30.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
+### Fixed
+* Restore passivity with prop-types for all variants
+
+### Added
+* Added en-CA translations.
+
 5.29.0 - (September 6, 2019)
 ------------------
 ### Fixed

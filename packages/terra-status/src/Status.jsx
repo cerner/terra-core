@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Status.module.scss';
 
-
 const cx = classNames.bind(styles);
 
 const propTypes = {

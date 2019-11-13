@@ -4,6 +4,16 @@ Changelog
 Unreleased
 ----------
 
+2.42.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+2.41.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
 2.40.0 - (September 6, 2019)
 ------------------
 ### Added

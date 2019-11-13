@@ -4,6 +4,35 @@ ChangeLog
 Unreleased
 ----------
 
+3.29.0 - (October 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.28.0 - (October 15, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.27.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Updated `isInvalid` prop description.
+
+3.26.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.25.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
+### Added
+* Added en-CA translations.
+
 3.24.0 - (September 6, 2019)
 ------------------
 ### Added

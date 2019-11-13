@@ -1,14 +1,6 @@
 /* eslint-disable */
-import Intl from './intl';
 import loadIntl from './intlLoaders';
 import loadTranslations from './translationsLoaders';
-
-let hasIntl;
-try {
-  hasIntl = typeof (Intl) !== 'undefined' && Intl.DateTimeFormat !== 'undefined';
-} catch (error) {
-  hasIntl = false;
-}
 
 const permitParams = (callback) => {
   if (typeof (callback) !== 'function') {
@@ -18,10 +10,11 @@ const permitParams = (callback) => {
 
 export default (locale, callback, scope) => {
   permitParams(callback);
-  if (!hasIntl) {
+  
+  if (!global.Intl) {
+    require('intl')  
     loadIntl(locale);
-    loadTranslations(locale, callback, scope);
-  } else {
-    loadTranslations(locale, callback, scope);
   }
+
+  loadTranslations(locale, callback, scope);
 };

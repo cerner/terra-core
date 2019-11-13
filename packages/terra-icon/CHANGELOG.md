@@ -4,6 +4,24 @@ ChangeLog
 Unreleased
 ----------
 
+3.23.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+3.22.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.21.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
+### Added
+* Added en-CA translations.
+
 3.20.0 - (September 6, 2019)
 ------------------
 ### Changed

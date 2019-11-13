@@ -6,7 +6,6 @@ import Option from './shared/_Option';
 import OptGroup from './shared/_OptGroup';
 import Tag from './shared/_Tag';
 import SelectUtil from './shared/_SelectUtil';
-import flatten from './shared/flatten';
 
 const propTypes = {
   /**
@@ -14,9 +13,9 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The default selected value.
+   * The default selected value. Can be a string, number, or array of strings/numbers.
    */
-  defaultValue: PropTypes.arrayOf(PropTypes.string),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * Whether the select is disabled.
    */
@@ -32,9 +31,19 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether the select is in an invalid state.
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the select displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
+  /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
   /**
    * The max height of the dropdown.
    */
@@ -88,9 +97,9 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * The selected value.
+   * The selected value. Can be a string, number, or array of strings/numbers.
    */
-  value: PropTypes.arrayOf(PropTypes.string),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 const defaultProps = {
@@ -98,7 +107,9 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
+  isTouchAccessible: false,
   maxSelectionCount: undefined,
   noResultContent: undefined,
   onChange: undefined,
@@ -112,19 +123,13 @@ const defaultProps = {
 };
 
 class MultiSelect extends React.Component {
-  static defaultValue({ value, defaultValue }) {
-    if (value !== undefined) {
-      return null;
-    }
-
-    return flatten(defaultValue);
-  }
-
   constructor(props) {
     super(props);
 
+    const { value, defaultValue } = props;
+
     this.state = {
-      value: MultiSelect.defaultValue(props),
+      value: SelectUtil.defaultValue({ defaultValue, value, multiple: true }),
     };
 
     this.display = this.display.bind(this);

@@ -6,7 +6,6 @@ import styles from './RadioFieldCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-
 export default class extends React.Component {
   constructor(props) {
     super(props);

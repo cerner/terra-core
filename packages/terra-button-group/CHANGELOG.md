@@ -4,6 +4,24 @@ ChangeLog
 Unreleased
 ----------
 
+3.26.0 - (October 30, 2019)
+------------------
+### Changed
+* Inline SVG aligned for IE and wdio screenshots Updated.
+
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+3.25.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.24.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
 3.23.0 - (September 6, 2019)
 ------------------
 ### Added

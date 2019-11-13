@@ -24,16 +24,20 @@
   // stylelint-enable selector-no-qualifying-type
 
   .button {
-    border-radius: var(--terra-button-border-radius, 0.2142rem);
+    align-items: center;
+    border-radius: var(--terra-button-border-radius, 3px);
     border-style: solid;
     border-width: 1px;
+    box-sizing: border-box;
     cursor: pointer;
-    display: inline-block;
+    display: inline-flex;
     font-family: inherit;
     font-size: var(--terra-button-font-size, 1rem);
+    justify-content: center;
     line-height: var(--terra-button-line-height, 1.429);
     margin: 0; /* Reset margin for Safari. Safari defaults to 2px. */
     max-width: 100%; /* Need to help with overflow-wrap */
+    min-height: var(--terra-button-min-height, 2.14285rem);
     outline: none;
     overflow-wrap: break-word; /* Modern browsers */
     padding-bottom: var(--terra-button-padding-bottom, 0.286rem);
@@ -45,6 +49,7 @@
     text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     user-select: none; // Prevent text selection on buttons on mobile devices
+    vertical-align: middle;
     white-space: normal;
     word-wrap: break-word; /* For IE 10 and IE 11 */
 
@@ -73,6 +78,9 @@
 
   .button-label {
     display: inline-block;
+    left: 0; // For IE
+    position: relative; // For IE
+    top: 0; // For IE
   }
 
   // Button variant modifiers
@@ -104,11 +112,12 @@
 
   // Button style modifiers
   .block {
-    display: block;
+    display: flex;
     width: 100%;
   }
 
   .compact {
+    min-height: var(--terra-button-compact-min-height, 1.57142rem);
     padding-bottom: var(--terra-button-compact-padding-bottom, 0);
     padding-top: var(--terra-button-compact-padding-top, 0);
   }

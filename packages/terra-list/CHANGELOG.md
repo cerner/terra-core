@@ -4,6 +4,28 @@ ChangeLog
 Unreleased
 ----------
 
+4.22.0 - (October 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.21.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.20.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.19.0 - (September 19, 2019)
+------------------
+### Changed
+* Updated the example and test to have `aria-label`
+* Updated docs and guides.
+* Removed `details` tag from doc-site
+
 4.18.0 - (September 6, 2019)
 ------------------
 ### Added

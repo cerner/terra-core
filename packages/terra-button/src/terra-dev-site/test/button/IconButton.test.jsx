@@ -10,7 +10,6 @@ const IconNeutralButton = () => <Button id="iconNeutralButton" text="Button with
 const IconOnlyButton = () => <Button id="iconOnlyButton" text="iconOnlyButton" isIconOnly icon={<IconSquare />} />;
 const IconReversedButton = () => <Button id="iconReversedButton" text="Button with Icon and reversed" icon={<IconSquare />} isReversed />;
 
-
 export default () => (
   <div>
     <IconNeutralButton />
