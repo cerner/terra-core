@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
@@ -107,28 +107,15 @@ const Alert = ({
   type,
   ...customProps
 }) => {
+  const [breakpoint, setBreakpoint] = useState();
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
   const attributes = { ...customProps };
-  const narrowAlertClassNames = cx([
-    'alert-base',
-    type,
-    'narrow',
-    attributes.className,
-    { [`${customColorClass}`]: type === AlertTypes.CUSTOM },
-  ]);
-  const wideAlertClassNames = cx([
-    'alert-base',
-    type,
-    'wide',
-    attributes.className,
-    { [`${customColorClass}`]: type === AlertTypes.CUSTOM },
-  ]);
 
   let actionsSection = '';
   let dismissButton = '';
   let alertSectionClassName = cx('section');
   let actionsClassName = cx('actions');
-  let bodyClassNameForNarrowParent = cx(['body', 'body-std']);
+  let bodyClassNameForParent = cx(['body', `alert-parent-${breakpoint}`]);
 
   if (type === AlertTypes.CUSTOM) {
     alertSectionClassName = cx(['section', 'section-custom']);
@@ -145,7 +132,7 @@ const Alert = ({
     );
   }
   if (onDismiss || action) {
-    bodyClassNameForNarrowParent = cx(['body', 'body-narrow']);
+    bodyClassNameForParent = cx(['body', `alert-parent-${breakpoint}`, 'narrow']);
     actionsSection = (
       <div className={actionsClassName}>
         {action}
@@ -163,25 +150,16 @@ const Alert = ({
 
   return (
     <ResponsiveElement
-      tiny={(
-        <div {...attributes} className={narrowAlertClassNames}>
-          <div className={bodyClassNameForNarrowParent}>
-            {getAlertIcon(type, customIcon)}
-            {alertMessageContent}
-          </div>
-          {actionsSection}
+      onChange={value => setBreakpoint(value)}
+    >
+      <div {...attributes} className={cx(['alert-base', type, `alert-${breakpoint}`, attributes.className, { [`${customColorClass}`]: type === AlertTypes.CUSTOM }])}>
+        <div className={bodyClassNameForParent}>
+          {getAlertIcon(type, customIcon)}
+          {alertMessageContent}
         </div>
-      )}
-      small={(
-        <div {...attributes} className={wideAlertClassNames}>
-          <div className={cx(['body', 'body-std'])}>
-            {getAlertIcon(type, customIcon)}
-            {alertMessageContent}
-          </div>
-          {actionsSection}
-        </div>
-      )}
-    />
+        {actionsSection}
+      </div>
+    </ResponsiveElement>
 
   );
 };
