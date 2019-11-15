@@ -81,6 +81,32 @@ class DropdownListUtil {
     const previous = Math.max(index - 1, 0);
     return Math.min(previous, options.length - 1);
   }
+
+  /**
+   * Determines the dropdown position.
+   * @param {Object} props - The component props.
+   * @param {ReactNode} target - The select wrapper.
+   * @param {ReactNode} dropdown - The dropdown.
+   * @param {number} maxHeight - The maxHeight of the dropdown dropdown.
+   * @param {boolean} useSemanticDropdown - If the dropdown should be rendered semantically instead of in a portal
+   * @return {Object} - The calculated dropdown attributes.
+   */
+  static dropdownPosition(target, dropdown) {
+    const { height } = dropdown.getBoundingClientRect();
+    const { bottom, top } = target.getBoundingClientRect();
+
+    const spaceBelow = window.innerHeight - bottom;
+    const canFitBelow = height < spaceBelow || spaceBelow > top;
+    const isAbove = !canFitBelow;
+    const semanticTopWhenAbove = (isAbove
+      ? 'top'
+      : 'bottom'
+    );
+
+    return {
+      semanticTopWhenAbove,
+    };
+  }
 }
 
 export default DropdownListUtil;

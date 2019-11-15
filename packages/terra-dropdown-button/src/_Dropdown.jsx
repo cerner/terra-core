@@ -33,18 +33,31 @@ const propTypes = {
    * Callback for reference of the dropdown button
    */
   buttonRef: PropTypes.func,
+  /**
+   * Callback ref to pass into the dom element.
+   */
+  refCallback: PropTypes.func,
+  /**
+   * Position of the dropdown wrt the button.
+   */
+  position: PropTypes.string,
 };
 const Dropdown = ({
-  requestClose, isOpen, children, width, isKeyboardEvent, buttonRef,
+  requestClose, isOpen, children, width, isKeyboardEvent, buttonRef, refCallback, position,
 }) => {
+  let val = '';
+  if (position === 'top') {
+    val = true;
+  }
   const dropdownClasses = cx([
     'dropdown',
-    { 'is-touch-accessible': isOpen },
+    val ? 'dropdown-top' : 'dropdown-bottom',
   ]);
   if (isOpen) {
     return (
       <div // eslint-disable-line jsx-a11y/no-static-element-interactions
         className={dropdownClasses}
+        ref={refCallback}
       >
         <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, initialFocus: isKeyboardEvent ? '' : buttonRef, clickOutsideDeactivates: true }}>
           <DropdownList

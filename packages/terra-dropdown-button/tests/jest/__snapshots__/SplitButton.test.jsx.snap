@@ -1,10 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown Button should render a block split type 1`] = `
-<DropdownButtonBase
+<OnClickOutside(DropdownButtonBase)
+  buttonRef={[Function]}
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
   isBlock={true}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -12,7 +21,13 @@ exports[`Dropdown Button should render a block split type 1`] = `
       onSelect={[Function]}
     />
   }
+  onClickOutside={[Function]}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  position="bottom"
+  preventDefault={false}
+  refCallback={[Function]}
   requestClose={[Function]}
+  stopPropagation={false}
 >
   <button
     aria-disabled={false}
@@ -27,6 +42,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -40,14 +56,23 @@ exports[`Dropdown Button should render a block split type 1`] = `
       className="caret-icon"
     />
   </button>
-</DropdownButtonBase>
+</OnClickOutside(DropdownButtonBase)>
 `;
 
 exports[`Dropdown Button should render a compact split type 1`] = `
-<DropdownButtonBase
+<OnClickOutside(DropdownButtonBase)
+  buttonRef={[Function]}
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
   isBlock={false}
   isCompact={true}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -55,7 +80,13 @@ exports[`Dropdown Button should render a compact split type 1`] = `
       onSelect={[Function]}
     />
   }
+  onClickOutside={[Function]}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  position="bottom"
+  preventDefault={false}
+  refCallback={[Function]}
   requestClose={[Function]}
+  stopPropagation={false}
 >
   <button
     aria-disabled={false}
@@ -70,6 +101,7 @@ exports[`Dropdown Button should render a compact split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral is-compact"
@@ -83,14 +115,23 @@ exports[`Dropdown Button should render a compact split type 1`] = `
       className="caret-icon"
     />
   </button>
-</DropdownButtonBase>
+</OnClickOutside(DropdownButtonBase)>
 `;
 
 exports[`Dropdown Button should render a default split type 1`] = `
-<DropdownButtonBase
+<OnClickOutside(DropdownButtonBase)
+  buttonRef={[Function]}
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -98,7 +139,13 @@ exports[`Dropdown Button should render a default split type 1`] = `
       onSelect={[Function]}
     />
   }
+  onClickOutside={[Function]}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  position="bottom"
+  preventDefault={false}
+  refCallback={[Function]}
   requestClose={[Function]}
+  stopPropagation={false}
 >
   <button
     aria-disabled={false}
@@ -113,6 +160,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -126,15 +174,24 @@ exports[`Dropdown Button should render a default split type 1`] = `
       className="caret-icon"
     />
   </button>
-</DropdownButtonBase>
+</OnClickOutside(DropdownButtonBase)>
 `;
 
 exports[`Dropdown Button should render a disabled split type 1`] = `
-<DropdownButtonBase
+<OnClickOutside(DropdownButtonBase)
+  buttonRef={[Function]}
   disabled={true}
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -142,7 +199,13 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
       onSelect={[Function]}
     />
   }
+  onClickOutside={[Function]}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  position="bottom"
+  preventDefault={false}
+  refCallback={[Function]}
   requestClose={[Function]}
+  stopPropagation={false}
 >
   <button
     aria-disabled={false}
@@ -157,6 +220,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -170,14 +234,23 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
       className="caret-icon"
     />
   </button>
-</DropdownButtonBase>
+</OnClickOutside(DropdownButtonBase)>
 `;
 
 exports[`Dropdown Button should render a split type with custom attributes 1`] = `
-<DropdownButtonBase
+<OnClickOutside(DropdownButtonBase)
+  buttonRef={[Function]}
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -185,8 +258,14 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
       onSelect={[Function]}
     />
   }
+  onClickOutside={[Function]}
   other-custom-attribute="purple"
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  position="bottom"
+  preventDefault={false}
+  refCallback={[Function]}
   requestClose={[Function]}
+  stopPropagation={false}
   test-custom-attribute={true}
 >
   <button
@@ -202,6 +281,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -215,14 +295,23 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
       className="caret-icon"
     />
   </button>
-</DropdownButtonBase>
+</OnClickOutside(DropdownButtonBase)>
 `;
 
 exports[`Dropdown Button should render a split type with multiple children 1`] = `
-<DropdownButtonBase
+<OnClickOutside(DropdownButtonBase)
+  buttonRef={[Function]}
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     Array [
@@ -240,7 +329,13 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
       />,
     ]
   }
+  onClickOutside={[Function]}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  position="bottom"
+  preventDefault={false}
+  refCallback={[Function]}
   requestClose={[Function]}
+  stopPropagation={false}
 >
   <button
     aria-disabled={false}
@@ -255,6 +350,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -268,14 +364,23 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
       className="caret-icon"
     />
   </button>
-</DropdownButtonBase>
+</OnClickOutside(DropdownButtonBase)>
 `;
 
 exports[`Dropdown Button should render an open split type 1`] = `
-<DropdownButtonBase
+<OnClickOutside(DropdownButtonBase)
+  buttonRef={[Function]}
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -283,7 +388,13 @@ exports[`Dropdown Button should render an open split type 1`] = `
       onSelect={[Function]}
     />
   }
+  onClickOutside={[Function]}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  position="bottom"
+  preventDefault={false}
+  refCallback={[Function]}
   requestClose={[Function]}
+  stopPropagation={false}
 >
   <button
     aria-disabled={false}
@@ -298,6 +409,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -311,5 +423,5 @@ exports[`Dropdown Button should render an open split type 1`] = `
       className="caret-icon"
     />
   </button>
-</DropdownButtonBase>
+</OnClickOutside(DropdownButtonBase)>
 `;

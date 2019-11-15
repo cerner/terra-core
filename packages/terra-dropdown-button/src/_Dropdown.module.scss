@@ -3,16 +3,16 @@
     display: inline-block;
     left: 0;
     position: absolute;
-    top: 100%;
+    // top: 100%;
     width: max-content;
     z-index: 9001;
-  }   
+  }
   
-  .dropdown-classes {
-    display: none;
-    left: 0;
-    position: absolute;
+  .dropdown-top {
+    bottom: 100%;
+  } 
+  
+  .dropdown-bottom {
     top: 100%;
-    z-index: 1;
-  }    
+  }  
 }

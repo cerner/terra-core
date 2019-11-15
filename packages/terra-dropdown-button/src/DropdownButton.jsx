@@ -8,6 +8,7 @@ import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
 import Item from './Item';
 import SplitButton, { Variants as SplitButtonVariants } from './SplitButton';
+import Util from './_DropdownListUtil';
 
 const cx = classNames.bind(styles);
 
@@ -63,8 +64,22 @@ class DropdownButton extends React.Component {
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
+    this.positionDropdown = this.positionDropdown.bind(this);
 
-    this.state = { isOpen: false, isActive: false, isKeyboardEvent: false };
+    this.state = {
+      isOpen: false, isActive: false, isKeyboardEvent: false, position: 'bottom',
+    };
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.isOpen !== this.state.isOpen) {
+      clearTimeout(this.debounceTimer);
+      this.debounceTimer = setTimeout(this.positionDropdown, !prevState.isOpen ? 0 : 100);
+    }
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.debounceTimer);
   }
 
   setButtonNode(node) {
@@ -107,6 +122,16 @@ class DropdownButton extends React.Component {
     }
   }
 
+  positionDropdown() {
+    if (!this.state.isOpen) {
+      return;
+    }
+    const positionValue = Util.dropdownPosition(this.buttonNode, this.dropdown).semanticTopWhenAbove;
+    if (positionValue !== this.state.position) {
+      this.setState({ position: positionValue });
+    }
+  }
+
   render() {
     const {
       children,
@@ -118,7 +143,9 @@ class DropdownButton extends React.Component {
       ...customProps
     } = this.props;
 
-    const { isOpen, isActive, isKeyboardEvent } = this.state;
+    const {
+      isOpen, isActive, isKeyboardEvent, position,
+    } = this.state;
 
     const classnames = cx(
       'dropdown-button',
@@ -144,6 +171,8 @@ class DropdownButton extends React.Component {
         isKeyboardEvent={isKeyboardEvent}
         buttonRef={this.getButtonNode}
         onClickOutside={this.handleButtonClickOutside}
+        refCallback={(ref) => { this.dropdown = ref; }}
+        position={position}
       >
         <button
           type="button"

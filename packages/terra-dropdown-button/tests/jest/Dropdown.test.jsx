@@ -7,8 +7,7 @@ describe('Dropdown', () => {
     const wrapper = shallow(
       <Dropdown
         requestClose={() => {}}
-        targetRef={() => {}}
-        isOpen={false}
+        isOpen
       >
         <Item label="1st Option" onSelect={() => {}} />
       </Dropdown>,
@@ -20,22 +19,7 @@ describe('Dropdown', () => {
     const wrapper = shallow(
       <Dropdown
         requestClose={() => {}}
-        targetRef={() => {}}
         isOpen
-      >
-        <Item label="1st Option" onSelect={() => {}} />
-      </Dropdown>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders a dropdown with a bounding ref', () => {
-    const wrapper = shallow(
-      <Dropdown
-        requestClose={() => {}}
-        targetRef={() => {}}
-        boundingRef={() => {}}
-        isOpen={false}
       >
         <Item label="1st Option" onSelect={() => {}} />
       </Dropdown>,
@@ -47,8 +31,7 @@ describe('Dropdown', () => {
     const wrapper = shallow(
       <Dropdown
         requestClose={() => {}}
-        targetRef={() => {}}
-        isOpen={false}
+        isOpen
         width="470px"
       >
         <Item label="1st Option" onSelect={() => {}} />
@@ -61,8 +44,7 @@ describe('Dropdown', () => {
     const wrapper = shallow(
       <Dropdown
         requestClose={() => {}}
-        targetRef={() => {}}
-        isOpen={false}
+        isOpen
       >
         <Item label="1st Option" onSelect={() => {}} />
         <Item label="2nd Option" onSelect={() => {}} />

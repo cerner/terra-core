@@ -44,6 +44,14 @@ const propTypes = {
    */
   buttonRef: PropTypes.func,
   onClickOutside: PropTypes.func,
+  /**
+   * Callback ref to pass into the dom element.
+   */
+  refCallback: PropTypes.func,
+  /**
+   * Position of the dropdown wrt the button.
+   */
+  position: PropTypes.string,
 };
 
 const defaultProps = {
@@ -51,6 +59,7 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   isKeyboardEvent: false,
+  position: 'bottom',
 };
 
 class DropdownButtonBase extends React.Component {
@@ -87,6 +96,8 @@ class DropdownButtonBase extends React.Component {
       isKeyboardEvent,
       buttonRef,
       onClickOutside,
+      refCallback,
+      position,
       ...customProps
     } = this.props;
 
@@ -126,6 +137,8 @@ class DropdownButtonBase extends React.Component {
           isKeyboardEvent={isKeyboardEvent}
           buttonRef={buttonRef}
           onClickOutside={onClickOutside}
+          refCallback={refCallback}
+          position={position}
         >
           {items}
         </Dropdown>

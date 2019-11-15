@@ -8,6 +8,7 @@ import onClickOutside from 'react-onclickoutside';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './SplitButton.module.scss';
 import Item from './Item';
+import Util from './_DropdownListUtil';
 
 const cx = classNames.bind(styles);
 
@@ -74,10 +75,22 @@ class SplitButton extends React.Component {
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.handleButtonClickOutside = this.handleButtonClickOutside.bind(this);
+    this.positionDropdown = this.positionDropdown.bind(this);
 
     this.state = {
-      isOpen: false, caretIsActive: false, primaryIsActive: false, isKeyboardEvent: false,
+      isOpen: false, caretIsActive: false, primaryIsActive: false, isKeyboardEvent: false, position: 'bottom',
     };
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.isOpen !== this.state.isOpen) {
+      clearTimeout(this.debounceTimer);
+      this.debounceTimer = setTimeout(this.positionDropdown, !prevState.isOpen ? 0 : 100);
+    }
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.debounceTimer);
   }
 
   setButtonNode(node) {
@@ -132,6 +145,16 @@ class SplitButton extends React.Component {
     }
   }
 
+  positionDropdown() {
+    if (!this.state.isOpen) {
+      return;
+    }
+    const positionValue = Util.dropdownPosition(this.buttonNode, this.dropdown).semanticTopWhenAbove;
+    if (positionValue !== this.state.position) {
+      this.setState({ position: positionValue });
+    }
+  }
+
   render() {
     const {
       children,
@@ -150,6 +173,7 @@ class SplitButton extends React.Component {
       primaryIsActive,
       caretIsActive,
       isKeyboardEvent,
+      position,
     } = this.state;
 
     const caretLabel = intl.formatMessage({ id: 'Terra.dropdownButton.moreOptions' });
@@ -184,6 +208,8 @@ class SplitButton extends React.Component {
         isKeyboardEvent={isKeyboardEvent}
         buttonRef={this.getButtonNode}
         onClickOutside={this.handleButtonClickOutside}
+        refCallback={(ref) => { this.dropdown = ref; }}
+        position={position}
       >
         <button
           type="button"
