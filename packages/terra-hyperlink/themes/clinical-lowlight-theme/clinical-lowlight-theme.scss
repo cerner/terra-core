@@ -17,6 +17,15 @@
   --terra-hyperlink-hover-background-color: transparent;
   --terra-hyperlink-hover-color: #007ee0;
   --terra-hyperlink-visited-color: #007ee0;
+  --terra-hyperlink-visited-focus-color: #007ee0;
+
+  --terra-hyperlink-underline-hidden-color: #007ee0;
+  --terra-hyperlink-underline-hidden-focus-color: #007ee0;
+  --terra-hyperlink-underline-hidden-hover-color: #007ee0;
+  --terra-hyperlink-underline-hidden-visited-color: #007ee0;
+  --terra-hyperlink-underline-hidden-visited-focus-color: #007ee0;
+
+  // -------------------- Removed in v2.24.0 -------------------- //
 
   // Inline SVG
   @include terra-inline-svg-var('--terra-hyperlink-external-after-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#007ee0" d="M39 25h6v23H0V3h23v6H6v33h33V25zm-21.4 9.6l24-24L48 17V0H31l6.4 6.4-24 24 4.2 4.2z"></path></svg>');
