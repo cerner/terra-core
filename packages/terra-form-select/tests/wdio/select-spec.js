@@ -64,7 +64,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown menu should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -82,7 +82,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown menu should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -100,7 +100,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown menu should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -181,7 +181,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       it('default should close on toggle icon click', () => {
@@ -202,7 +202,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('opened', { selector: '#root' });
@@ -225,7 +225,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('toggle-icon-opened-dropdown', { selector: '#root' });
@@ -302,6 +302,20 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Default Variant - Multiple Dropdown', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/multiple-default-select'));
+    describe('default should close all dropdown and open the selected dropdown', () => {
+      it('default should open the dropdown by clicking the select and close other dropdown', () => {
+        browser.click('#select-1');
+        browser.click('#select-2');
+      });
+
+      Terra.it.validatesElement('close-and-open-dropdown-after-selection', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
+  });
+
   describe('Default Variant - controlled', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
 
@@ -344,7 +358,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -370,7 +384,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown menu should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('second-option-highlighted', { selector: '#root' });
