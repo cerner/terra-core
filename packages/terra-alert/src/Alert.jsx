@@ -151,7 +151,7 @@ const Alert = ({
   return (
     <ResponsiveElement onChange={value => setBreakpoint(value)}>
       {
-        breakpoint
+        breakpoint // Check for a breakpoint before rendering the alert
         && (
         <div {...attributes} className={cx(['alert-base', type, `alert-${breakpoint}`, attributes.className, { [`${customColorClass}`]: type === AlertTypes.CUSTOM }])}>
           <div className={bodyClassNameForParent}>
