@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* changed css grid styles to flex
 
 4.11.0 - (October 30, 2019)
 ------------------
