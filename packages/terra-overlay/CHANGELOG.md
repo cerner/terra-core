@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
 
+### Fixed
+* Added `aria-live` to `LoadingOverlay` for screenreader AT
+
 3.33.0 - (November 7, 2019)
 ------------------
 ### Changed
