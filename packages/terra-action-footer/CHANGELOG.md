@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+2.27.0 - (November 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.26.0 - (November 7, 2019)
 ------------------
 ### Changed
