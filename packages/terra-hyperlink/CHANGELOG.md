@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
 
+2.24.0 - (November 12, 2019)
+------------------
 ### Changed
 * Switched themeable icons provided by CSS to imported `terra-icon` component.
 
