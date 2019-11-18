@@ -107,7 +107,7 @@ const Alert = ({
   type,
   ...customProps
 }) => {
-  const [breakpoint, setBreakpoint] = useState('tiny');
+  const [breakpoint, setBreakpoint] = useState();
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
   const attributes = { ...customProps };
 
@@ -149,18 +149,19 @@ const Alert = ({
   );
 
   return (
-    <ResponsiveElement
-      onChange={value => setTimeout(() => {
-        setBreakpoint(value);
-      }, 3000)}
-    >
-      <div {...attributes} className={cx(['alert-base', type, `alert-${breakpoint}`, attributes.className, { [`${customColorClass}`]: type === AlertTypes.CUSTOM }])}>
-        <div className={bodyClassNameForParent}>
-          {getAlertIcon(type, customIcon)}
-          {alertMessageContent}
+    <ResponsiveElement onChange={value => setBreakpoint(value)}>
+      {
+        breakpoint
+        && (
+        <div {...attributes} className={cx(['alert-base', type, `alert-${breakpoint}`, attributes.className, { [`${customColorClass}`]: type === AlertTypes.CUSTOM }])}>
+          <div className={bodyClassNameForParent}>
+            {getAlertIcon(type, customIcon)}
+            {alertMessageContent}
+          </div>
+          {actionsSection}
         </div>
-        {actionsSection}
-      </div>
+        )
+      }
     </ResponsiveElement>
 
   );
