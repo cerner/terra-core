@@ -19,34 +19,6 @@ import HeaderCheckMarkCell from './subcomponents/HeaderCheckMarkCell';
 
 const cx = classNames.bind(styles);
 
-// rowStyle: [
-//   none,
-//   disclose,
-//   toggle,
-// ],
-// checkStyle: [
-//   none,
-//   readOnly,
-//   toggle,
-// ],
-// hasChevrons: [true, false],
-// headerData={{
-//   (allowSelectAll, selectAllStatus[empty, checked, indeterminate])
-// }}
-// sectionData={[{
-//   rows: [
-//     {
-//       isVisuallyToggled,
-//       isToggled,
-//       isDisabled:,
-//       onRowAction:,
-//       onCheckAction:,
-//       cells: [{
-//       }],
-//     },
-//   ],
-// }]}
-
 const propTypes = {
   // isSelectable: PropTypes.bool,
   rowStyle: PropTypes.oneOf([
@@ -99,7 +71,6 @@ const defaultProps = {
   dividerStyle: 'none',
   fill: false,
   paddingStyle: 'none',
-  // selectionStyle: 'default',
 };
 
 const createCell = (cell, sectionId, columnId, colWidth) => (

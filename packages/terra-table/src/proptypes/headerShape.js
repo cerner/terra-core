@@ -6,9 +6,8 @@ const headerShape = PropTypes.shape({
   key: PropTypes.string,
   cells: PropTypes.arrayOf(headerCellShape),
   refCallback: PropTypes.func,
-  isCheckboxEnabled: PropTypes.bool,
-  isChecked: PropTypes.bool,
-  isIntermediate: PropTypes.bool,
+  allowSelectAll: PropTypes.bool,
+  selectAllStatus: PropTypes.oneOf(['empty', 'checked', 'intermediate']),
 });
 
 export default headerShape;
