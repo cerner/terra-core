@@ -53,6 +53,17 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: intlShape.isRequired,
+  /**
+   * @private
+   * Callback to tell the parent it should close the dropdown
+   */
+  requestClose: PropTypes.func,
+  /**
+   *  @private
+   * The associated metaData to be provided in the onSelect callback.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  metaData: PropTypes.object,
 };
 
 const defaultProps = {
@@ -76,9 +87,10 @@ class SplitButton extends React.Component {
     this.getButtonNode = this.getButtonNode.bind(this);
     this.handleButtonClickOutside = this.handleButtonClickOutside.bind(this);
     this.positionDropdown = this.positionDropdown.bind(this);
+    this.alignDropdown = this.alignDropdown.bind(this);
 
     this.state = {
-      isOpen: false, caretIsActive: false, primaryIsActive: false, isKeyboardEvent: false, position: 'bottom',
+      isOpen: false, caretIsActive: false, primaryIsActive: false, isKeyboardEvent: false, position: 'bottom', align: false,
     };
   }
 
@@ -86,6 +98,9 @@ class SplitButton extends React.Component {
     if (prevState.isOpen !== this.state.isOpen) {
       clearTimeout(this.debounceTimer);
       this.debounceTimer = setTimeout(this.positionDropdown, !prevState.isOpen ? 0 : 100);
+    }
+    if (prevState.isOpen !== this.state.isOpen) {
+      setTimeout(this.alignDropdown, !prevState.isOpen ? 0 : 100);
     }
   }
 
@@ -155,6 +170,16 @@ class SplitButton extends React.Component {
     }
   }
 
+  alignDropdown() {
+    if (!this.state.isOpen) {
+      return;
+    }
+    const isAligned = ((this.dropdown.getBoundingClientRect().right + this.dropdown.getBoundingClientRect().x) > (document.body.getBoundingClientRect().right + document.body.getBoundingClientRect().x));
+    if (this.state.align !== isAligned) {
+      this.setState({ align: isAligned });
+    }
+  }
+
   render() {
     const {
       children,
@@ -165,6 +190,8 @@ class SplitButton extends React.Component {
       onSelect,
       variant,
       intl,
+      requestClose,
+      metaData,
       ...customProps
     } = this.props;
 
@@ -174,6 +201,7 @@ class SplitButton extends React.Component {
       caretIsActive,
       isKeyboardEvent,
       position,
+      align,
     } = this.state;
 
     const caretLabel = intl.formatMessage({ id: 'Terra.dropdownButton.moreOptions' });
@@ -210,11 +238,16 @@ class SplitButton extends React.Component {
         onClickOutside={this.handleButtonClickOutside}
         refCallback={(ref) => { this.dropdown = ref; }}
         position={position}
+        isAligned={align}
       >
         <button
           type="button"
           className={primaryClassnames}
-          onClick={onSelect}
+          onClick={(event) => {
+            onSelect(event, metaData);
+            this.handleDropdownRequestClose();
+            event.stopPropagation();
+          }}
           onKeyDown={this.handlePrimaryKeyDown}
           onKeyUp={this.handlePrimaryKeyUp}
           disabled={isDisabled}

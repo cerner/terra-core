@@ -2,7 +2,7 @@
 
 exports[`Dropdown renders a default dropdown 1`] = `
 <div
-  className="dropdown dropdown-bottom"
+  className="dropdown dropdown-bottom dropdown-left"
 >
   <FocusTrap
     _createFocusTrap={[Function]}
@@ -31,7 +31,7 @@ exports[`Dropdown renders a default dropdown 1`] = `
 
 exports[`Dropdown renders a dropdown with a set width 1`] = `
 <div
-  className="dropdown dropdown-bottom"
+  className="dropdown dropdown-bottom dropdown-left"
 >
   <FocusTrap
     _createFocusTrap={[Function]}
@@ -61,7 +61,7 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
 
 exports[`Dropdown renders a dropdown with multiple children 1`] = `
 <div
-  className="dropdown dropdown-bottom"
+  className="dropdown dropdown-bottom dropdown-left"
 >
   <FocusTrap
     _createFocusTrap={[Function]}
@@ -98,7 +98,7 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
 
 exports[`Dropdown renders an open dropdown 1`] = `
 <div
-  className="dropdown dropdown-bottom"
+  className="dropdown dropdown-bottom dropdown-left"
 >
   <FocusTrap
     _createFocusTrap={[Function]}

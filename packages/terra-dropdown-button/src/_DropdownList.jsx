@@ -83,7 +83,7 @@ class DropdownList extends React.Component {
         this.changeFocusState(Util.getChildArray(this).length - 1);
       }
       event.preventDefault();
-    } else if (keyCode === KeyCode.KEY_TAB) {
+    } else if (keyCode === KeyCode.KEY_TAB || keyCode === KeyCode.KEY_ESCAPE) {
       this.props.requestClose();
       event.preventDefault();
     } else if (keyCode >= 48 && keyCode <= 90) {

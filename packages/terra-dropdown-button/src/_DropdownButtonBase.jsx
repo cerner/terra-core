@@ -43,6 +43,9 @@ const propTypes = {
    * Callback for reference of the dropdown button
    */
   buttonRef: PropTypes.func,
+  /**
+   * Callback to invoke function when user clicks outside the dropdown.
+   */
   onClickOutside: PropTypes.func,
   /**
    * Callback ref to pass into the dom element.
@@ -52,6 +55,10 @@ const propTypes = {
    * Position of the dropdown wrt the button.
    */
   position: PropTypes.string,
+  /**
+   * Whether or not the dropdown in aligned right.
+   */
+  isAligned: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -60,6 +67,7 @@ const defaultProps = {
   isDisabled: false,
   isKeyboardEvent: false,
   position: 'bottom',
+  isAligned: false,
 };
 
 class DropdownButtonBase extends React.Component {
@@ -98,6 +106,7 @@ class DropdownButtonBase extends React.Component {
       onClickOutside,
       refCallback,
       position,
+      isAligned,
       ...customProps
     } = this.props;
 
@@ -139,6 +148,7 @@ class DropdownButtonBase extends React.Component {
           onClickOutside={onClickOutside}
           refCallback={refCallback}
           position={position}
+          isAligned={isAligned}
         >
           {items}
         </Dropdown>

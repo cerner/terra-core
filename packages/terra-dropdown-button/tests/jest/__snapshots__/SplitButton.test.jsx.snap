@@ -10,6 +10,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
     ]
   }
   excludeScrollbar={false}
+  isAligned={false}
   isBlock={true}
   isCompact={false}
   isDisabled={false}
@@ -69,6 +70,7 @@ exports[`Dropdown Button should render a compact split type 1`] = `
     ]
   }
   excludeScrollbar={false}
+  isAligned={false}
   isBlock={false}
   isCompact={true}
   isDisabled={false}
@@ -128,6 +130,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
     ]
   }
   excludeScrollbar={false}
+  isAligned={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -188,6 +191,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
     ]
   }
   excludeScrollbar={false}
+  isAligned={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -247,6 +251,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     ]
   }
   excludeScrollbar={false}
+  isAligned={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -308,6 +313,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     ]
   }
   excludeScrollbar={false}
+  isAligned={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -377,6 +383,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
     ]
   }
   excludeScrollbar={false}
+  isAligned={false}
   isBlock={false}
   isCompact={false}
   isDisabled={false}

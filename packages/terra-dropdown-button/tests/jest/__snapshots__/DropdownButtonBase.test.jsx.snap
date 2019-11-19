@@ -8,6 +8,7 @@ exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
     test contents
   </div>
   <Dropdown
+    isAligned={false}
     isKeyboardEvent={false}
     isOpen={false}
     position="bottom"
@@ -30,6 +31,7 @@ exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
     test contents
   </div>
   <Dropdown
+    isAligned={false}
     isKeyboardEvent={false}
     isOpen={false}
     position="bottom"
@@ -52,6 +54,7 @@ exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
     test contents
   </div>
   <Dropdown
+    isAligned={false}
     isKeyboardEvent={false}
     isOpen={false}
     position="bottom"
@@ -74,6 +77,7 @@ exports[`Dropdown Button Base renders an open DropdownButtonBase 1`] = `
     test contents
   </div>
   <Dropdown
+    isAligned={false}
     isKeyboardEvent={false}
     isOpen={true}
     position="bottom"

@@ -65,9 +65,10 @@ class DropdownButton extends React.Component {
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.positionDropdown = this.positionDropdown.bind(this);
+    this.alignDropdown = this.alignDropdown.bind(this);
 
     this.state = {
-      isOpen: false, isActive: false, isKeyboardEvent: false, position: 'bottom',
+      isOpen: false, isActive: false, isKeyboardEvent: false, position: 'bottom', align: false,
     };
   }
 
@@ -75,6 +76,9 @@ class DropdownButton extends React.Component {
     if (prevState.isOpen !== this.state.isOpen) {
       clearTimeout(this.debounceTimer);
       this.debounceTimer = setTimeout(this.positionDropdown, !prevState.isOpen ? 0 : 100);
+    }
+    if (prevState.isOpen !== this.state.isOpen) {
+      setTimeout(this.alignDropdown, !prevState.isOpen ? 0 : 100);
     }
   }
 
@@ -132,6 +136,16 @@ class DropdownButton extends React.Component {
     }
   }
 
+  alignDropdown() {
+    if (!this.state.isOpen) {
+      return;
+    }
+    const isAligned = ((this.dropdown.getBoundingClientRect().left + this.dropdown.getBoundingClientRect().x) > (document.body.getBoundingClientRect().right + document.body.getBoundingClientRect().x));
+    if (this.state.align !== isAligned) {
+      this.setState({ align: isAligned });
+    }
+  }
+
   render() {
     const {
       children,
@@ -144,7 +158,7 @@ class DropdownButton extends React.Component {
     } = this.props;
 
     const {
-      isOpen, isActive, isKeyboardEvent, position,
+      isOpen, isActive, isKeyboardEvent, position, align,
     } = this.state;
 
     const classnames = cx(
@@ -173,6 +187,7 @@ class DropdownButton extends React.Component {
         onClickOutside={this.handleButtonClickOutside}
         refCallback={(ref) => { this.dropdown = ref; }}
         position={position}
+        isAligned={align}
       >
         <button
           type="button"

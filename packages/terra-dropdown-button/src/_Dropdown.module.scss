@@ -2,8 +2,8 @@
   .dropdown {
     display: inline-block;
     left: 0;
+    max-width: 100vw;
     position: absolute;
-    // top: 100%;
     width: max-content;
     z-index: 9001;
   }
@@ -14,5 +14,15 @@
   
   .dropdown-bottom {
     top: 100%;
-  }  
+  } 
+
+  .dropdown-right {
+    left: auto;
+    right: 0;
+  } 
+  
+  .dropdown-left {
+    left: 0;
+    right: auto;
+  } 
 }

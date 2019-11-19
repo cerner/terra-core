@@ -41,9 +41,13 @@ const propTypes = {
    * Position of the dropdown wrt the button.
    */
   position: PropTypes.string,
+  /**
+   * Whether or not the dropdown in aligned right.
+   */
+  isAligned: PropTypes.bool,
 };
 const Dropdown = ({
-  requestClose, isOpen, children, width, isKeyboardEvent, buttonRef, refCallback, position,
+  requestClose, isOpen, children, width, isKeyboardEvent, buttonRef, refCallback, position, isAligned,
 }) => {
   let val = '';
   if (position === 'top') {
@@ -52,6 +56,7 @@ const Dropdown = ({
   const dropdownClasses = cx([
     'dropdown',
     val ? 'dropdown-top' : 'dropdown-bottom',
+    isAligned ? 'dropdown-right' : 'dropdown-left',
   ]);
   if (isOpen) {
     return (

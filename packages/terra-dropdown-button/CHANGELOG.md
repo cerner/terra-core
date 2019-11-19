@@ -1,5 +1,7 @@
 ChangeLog
 =========
+### Changed
+* Removed Hookshot to fix accessibility issues in dropdown menu.
 
 Unreleased
 ----------
