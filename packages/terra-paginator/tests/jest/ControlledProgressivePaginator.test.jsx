@@ -7,8 +7,18 @@ describe('Paginator', () => {
   const defaultRender = <ControlledProgressivePaginator onPageChange={e => typeof e} selectedPage={1} totalCount={2234} itemCountPerPage={20} />;
 
   // Snapshot Tests
-  it('should render a Controlled ProgressivePaginator', () => {
+  it('should render a Controlled ProgressivePaginator - Tiny', () => {
     const wrapper = shallowWithIntl(defaultRender).dive();
+    wrapper.setState({ breakpoint: 'tiny' });
+    wrapper.update();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  // Snapshot Tests
+  it('should render a Controlled ProgressivePaginator - LArge', () => {
+    const wrapper = shallowWithIntl(defaultRender).dive();
+    wrapper.setState({ breakpoint: 'large' });
+    wrapper.update();
     expect(wrapper).toMatchSnapshot();
   });
 });

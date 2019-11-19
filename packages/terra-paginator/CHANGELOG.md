@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Changed
+* Updated `uncontrolled responsive-element` to `controlled responsive-element`.
+
 2.32.0 - (October 30, 2019)
 ------------------
 ### Fixed
