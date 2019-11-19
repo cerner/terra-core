@@ -59,7 +59,7 @@ const LoadingOverlay = ({
   delete customProps.onRequestClose;
 
   return (
-    <Overlay {...customProps} className={cx('loading-overlay', customProps.className)} rootSelector={rootSelector}>
+    <Overlay {...customProps} className={cx('loading-overlay', customProps.className)} rootSelector={rootSelector} aria-live="polite">
       <IconSpinner className={cx('icon')} isSpin={isAnimated} height="36" width="36" />
       {message !== undefined
         ? <div className={cx('message')}>{message}</div>
