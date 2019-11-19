@@ -6,8 +6,6 @@ Unreleased
 ### Added
 * Added Theme variables for disabled styles of button.
 
-=======
-
 3.26.0 - (October 30, 2019)
 ------------------
 ### Changed
