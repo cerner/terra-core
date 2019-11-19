@@ -7,6 +7,7 @@ const propTypes = {
    * The children list items passed to the component.
    */
   children: PropTypes.node,
+  colSpan: PropTypes.number,
   /**
    * Whether or not the section is collapsed.
    */

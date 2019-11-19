@@ -113,7 +113,7 @@ const HeaderCheckMarkCellExample = () => (
         }],
       }}
     />
-<Table
+    <Table
       checkStyle="toggle"
       headerData={{
         allowSelectAll: true,
@@ -127,20 +127,6 @@ const HeaderCheckMarkCellExample = () => (
       }}
     />
   </React.Fragment>
-  // <Table
-  //   headerRow={(
-  //     <HeaderRow>
-  //       <HeaderCheckMarkCell />
-  //       <HeaderCheckMarkCell isSelectable alignmentPadding={2} />
-  //       <HeaderCheckMarkCell isSelectable />
-  //       <HeaderCheckMarkCell isSelectable isSelected />
-  //       <HeaderCheckMarkCell isSelectable isSelected isIntermediate />
-  //       <HeaderCheckMarkCell isSelectable isDisabled />
-  //       <HeaderCheckMarkCell isSelectable isDisabled isSelected />
-  //       <HeaderCheckMarkCell isSelectable isDisabled isSelected isIntermediate />
-  //     </HeaderRow>
-  //   )}
-  // />
 );
 
 export default HeaderCheckMarkCellExample;
