@@ -25,6 +25,7 @@
   // Default - Focus
   --terra-form-input-focus-background-color: #fff;
   --terra-form-input-focus-border: 1px solid #4cb2e9;
+  --terra-form-input-focus-box-shadow: 0 0 8px #a6d9f4;
   --terra-form-input-focus-color: #1c1f21;
   --terra-form-input-focus-background-size: auto;
   --terra-form-input-focus-ltr-box-shadow: 0 0 8px #a6d9f4;
@@ -33,22 +34,24 @@
   // Error
   --terra-form-input-error-background-image: none;
   --terra-form-input-error-background-color: #fff;
-  --terra-form-input-error-border: 1px solid #dedfe0;
+  --terra-form-input-error-border: 1px solid #c00;
+  --terra-form-input-error-box-shadow: 0 0 0 0 #c00;
 
   // Error - Hover
   --terra-form-input-error-hover-background-color: #fff;
-  --terra-form-input-error-hover-border: 1px solid #dedfe0;
+  --terra-form-input-error-hover-border: 1px solid #c00;
 
   // Error - Focus
   --terra-form-input-error-focus-background-color: #fff;
-  --terra-form-input-error-focus-border: 1px solid #4cb2e9;
+  --terra-form-input-error-focus-border: 1px solid #c00;
+  --terra-form-input-error-focus-box-shadow: 0 0 0 0 #c00;
   --terra-form-input-error-focus-background-size: auto;
-  --terra-form-input-error-focus-ltr-box-shadow: 0 0 8px #a6d9f4;
-  --terra-form-input-error-focus-rtl-box-shadow: 0 0 8px #a6d9f4;
+  --terra-form-input-error-focus-ltr-box-shadow: 0 0 0 0 #c00;
+  --terra-form-input-error-focus-rtl-box-shadow: 0 0 0 0 #c00;
 
   // Error - Disabled
   --terra-form-input-error-disabled-background-color: rgba(244, 244, 244, 1);
-  --terra-form-input-error-disabled-border: 1px solid #b2b5b6;
+  --terra-form-input-error-disabled-border: 1px solid #c00;
   --terra-form-input-error-disabled-color: #9b9fa1;
   --terra-form-input-error-disabled-opacity: 1;
 
@@ -65,4 +68,10 @@
   // Placeholder - Disabled
   --terra-form-input-placeholder-disabled-color: #c4c6c7;
   --terra-form-input-placeholder-disabled-font-style: normal;
+
+  // Incomplete
+  --terra-form-input-incomplete-background-color: #fefd9a;
+  --terra-form-input-incomplete-hover-background-color: #fefd9a;
+  --terra-form-input-incomplete-disabled-background-color: #fefd9a;
+  --terra-form-input-incomplete-focus-background-color: #fefd9a;
 }
