@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.24.0 - (November 12, 2019)
+------------------
+### Changed
+* Switched themeable icons provided by CSS to imported `terra-icon` component.
+
 2.23.0 - (November 7, 2019)
 ------------------
 ### Fixed
