@@ -33,7 +33,6 @@ const propTypes = {
   ]),
 
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
-  // selectionStyle: PropTypes.oneOf(['default', 'checkmark', 'chevron']),
   columnWidths: PropTypes.arrayOf(widthShape),
   /**
    * The children passed to the component
@@ -88,7 +87,7 @@ const createCell = (cell, sectionId, columnId, colWidth) => (
 const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
   if (checkStyle === 'readOnly' || checkStyle === 'toggle') {
     const isSelected = (checkStyle === 'readOnly' || checkStyle === 'toggle') && rowData.isToggled;
-    return <CheckMarkCell isSelectable={checkStyle === 'toggle'} isSelected={isSelected} />;
+    return <CheckMarkCell isSelectable={checkStyle === 'toggle'} isSelected={isSelected} isDisabled={rowData.isDisabled} />;
   }
   return undefined;
 };

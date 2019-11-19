@@ -7,8 +7,6 @@ const HeaderRowExample = () => (
   <React.Fragment>
     <Table
       paddingStyle="standard"
-      selectionStyle="none"
-      columnWidths={[]}
       headerData={{
         key: 'default',
         id: 'default',
@@ -31,7 +29,8 @@ const HeaderRowExample = () => (
     />
     <Table
       paddingStyle="standard"
-      selectionStyle="chevron"
+      rowStyle="disclose"
+      hasChevrons
       headerData={{
         key: 'selection-chevron',
         id: 'chevron',
@@ -54,7 +53,7 @@ const HeaderRowExample = () => (
     />
     <Table
       paddingStyle="standard"
-      selectionStyle="checkmark"
+      checkStyle="toggle"
       headerData={{
         key: 'selection-checkmark',
         id: 'check',

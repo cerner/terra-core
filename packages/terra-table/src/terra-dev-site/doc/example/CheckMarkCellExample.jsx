@@ -6,47 +6,112 @@ import Table from 'terra-table';
 const CheckMarkCellExample = () => (
   <React.Fragment>
     <Table
-      hasChevrons
-      headerData={{
-        cells: [{
-          children: [
-            'test'
+      rowStyle="disclose"
+      checkStyle="toggle"
+      sectionData={[
+        {
+          rows: [
+            {
+              cells: [{
+                children: [
+                  'test'
+                ],
+              }],
+            },
           ],
-        }],
-      }}
+        }
+      ]}
     />
     <Table
-      rowStyle="selection"
+      rowStyle="toggle"
       checkStyle="readOnly"
-      headerData={{
-        cells: [{
-          children: [
-            'test'
+      sectionData={[
+        {
+          rows: [
+            {
+              cells: [{
+                children: [
+                  'test'
+                ],
+              }],
+            },
           ],
-        }],
-      }}
+        }
+      ]}
     />
     <Table
-      rowStyle="selection"
-      checkStyle="selection"
-      headerData={{
-        cells: [{
-          children: [
-            'test'
+      rowStyle="disclose"
+      checkStyle="toggle"
+      sectionData={[
+        {
+          rows: [
+            {
+              isToggled: true,
+              cells: [{
+                children: [
+                  'test'
+                ],
+              }],
+            },
           ],
-        }],
-      }}
+        }
+      ]}
     />
     <Table
-      rowStyle="disclosure"
-      checkStyle="none"
-      headerData={{
-        cells: [{
-          children: [
-            'test'
+      rowStyle="toggle"
+      checkStyle="readOnly"
+      sectionData={[
+        {
+          rows: [
+            {
+              isToggled: true,
+              cells: [{
+                children: [
+                  'test'
+                ],
+              }],
+            },
           ],
-        }],
-      }}
+        }
+      ]}
+    />
+    <Table
+      rowStyle="disclose"
+      checkStyle="toggle"
+      sectionData={[
+        {
+          rows: [
+            {
+              isDisabled: true,
+              isToggled: true,
+              cells: [{
+                children: [
+                  'test'
+                ],
+              }],
+            },
+          ],
+        }
+      ]}
+    />
+    <Table
+      rowStyle="toggle"
+      checkStyle="readOnly"
+      sectionData={[
+        {
+          rows: [
+            {
+              isDisabled: true,
+              isToggled: true,
+              cells: [{
+                children: [
+                  'test'
+                ],
+              }],
+            },
+          ],
+        }
+      ]}
     />
   </React.Fragment>
   //   <Row>
