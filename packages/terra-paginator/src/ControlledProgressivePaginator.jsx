@@ -42,6 +42,16 @@ class ProgressivePaginator extends React.Component {
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.defaultProgressivePaginator = this.defaultProgressivePaginator.bind(this);
     this.reducedProgressivePaginator = this.reducedProgressivePaginator.bind(this);
+    this.state = {
+      breakpoint: null,
+    };
+  }
+
+  getPaginator() {
+    if (this.state.breakpoint === 'tiny') {
+      return this.defaultProgressivePaginator();
+    }
+    return this.reducedProgressivePaginator();
   }
 
   handlePageChange(index) {
@@ -199,7 +209,12 @@ class ProgressivePaginator extends React.Component {
   }
 
   render() {
-    return <ResponsiveElement defaultElement={this.reducedProgressivePaginator()} tiny={this.defaultProgressivePaginator()} />;
+    return (
+      <ResponsiveElement onChange={value => this.setState({ breakpoint: value })}>
+        { this.state.breakpoint
+        && this.getPaginator()}
+      </ResponsiveElement>
+    );
   }
 }
 
