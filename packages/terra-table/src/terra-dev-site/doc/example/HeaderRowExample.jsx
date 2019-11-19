@@ -1,36 +1,79 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, { HeaderRow, HeaderCell } from 'terra-table';
+import Table from 'terra-table';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const HeaderRowExample = () => (
   <React.Fragment>
     <Table
       paddingStyle="standard"
-      headerRow={(
-        <HeaderRow key="default">
-          <HeaderCell key="key-0">Default Header</HeaderCell>
-          <HeaderCell key="key-1">Default Header</HeaderCell>
-        </HeaderRow>
-      )}
+      selectionStyle="none"
+      columnWidths={[]}
+      headerData={{
+        key: 'default',
+        id: 'default',
+        refCallback: () => {},
+        cells:[
+          {
+            key: 'key-0',
+            children: [
+              'Default Header',
+            ],
+          },
+          {
+            key: 'key-1',
+            children: [
+              'Default Header',
+            ],
+          },
+        ],
+      }}
     />
     <Table
       paddingStyle="standard"
-      headerRow={(
-        <HeaderRow selectionStyle="chevron" key="selection-chevron">
-          <HeaderCell key="key-0">Selection Style Chevron</HeaderCell>
-          <HeaderCell key="key-1">Selection Style Chevron</HeaderCell>
-        </HeaderRow>
-      )}
+      selectionStyle="chevron"
+      headerData={{
+        key: 'selection-chevron',
+        id: 'chevron',
+        refCallback: () => {},
+        cells:[
+          {
+            key: 'key-0',
+            children: [
+              'Selection Style Chevron',
+            ],
+          },
+          {
+            key: 'key-1',
+            children: [
+              'Selection Style Chevron',
+            ],
+          },
+        ],
+      }}
     />
     <Table
       paddingStyle="standard"
-      headerRow={(
-        <HeaderRow selectionStyle="checkmark" key="selection-checkmark">
-          <HeaderCell key="key-0">Selection Style Checkmark</HeaderCell>
-          <HeaderCell key="key-1">Selection Style Checkmark</HeaderCell>
-        </HeaderRow>
-      )}
+      selectionStyle="checkmark"
+      headerData={{
+        key: 'selection-checkmark',
+        id: 'check',
+        refCallback: () => {},
+        cells:[
+          {
+            key: 'key-0',
+            children: [
+              'Selection Style Checkmark',
+            ],
+          },
+          {
+            key: 'key-1',
+            children: [
+              'Selection Style Checkmark',
+            ],
+          },
+        ],
+      }}
     />
   </React.Fragment>
 );

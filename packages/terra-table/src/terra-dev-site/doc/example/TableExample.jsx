@@ -1,37 +1,99 @@
 import React from 'react';
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, {
-  HeaderRow, HeaderCell, Row, Cell,
-} from 'terra-table';
+import Table from 'terra-table';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const DefaultTable = () => (
+const TableExample = () => (
   <Table
-    id="Table"
-    headerRow={(
-      <HeaderRow>
-        <HeaderCell key="NAME">Name</HeaderCell>
-        <HeaderCell key="ADDRESS">Address</HeaderCell>
-        <HeaderCell key="PHONE_NUMBER">Phone Number</HeaderCell>
-      </HeaderRow>
-    )}
-  >
-    <Row key="PERSON_0">
-      <Cell removeInner key="NAME">John Smith</Cell>
-      <Cell removeInner key="ADDRESS">123 Adams Drive</Cell>
-      <Cell removeInner key="PHONE_NUMBER">111-222-3333</Cell>
-    </Row>
-    <Row key="PERSON_1">
-      <Cell removeInner key="NAME">Jane Smith</Cell>
-      <Cell removeInner key="ADDRESS">321 Drive Street</Cell>
-      <Cell removeInner key="PHONE_NUMBER">111-222-3333</Cell>
-    </Row>
-    <Row key="PERSON_2">
-      <Cell removeInner key="NAME">Dave Smith</Cell>
-      <Cell removeInner key="ADDRESS">213 Raymond Road</Cell>
-      <Cell removeInner key="PHONE_NUMBER">111-222-3333</Cell>
-    </Row>
-  </Table>
+    headerData={{
+      cells: [
+        {
+          children: ['Name'],
+        },
+        {
+          children: ['Address'],
+        },
+        {
+          children: ['Phone Number'],
+        },
+      ],
+    }}
+    sectionData={[
+      {
+        rows: [
+          {
+            key: 'row-0',
+            cells: [
+              {
+                key: 'cell-0',
+                children: [
+                  'John Smith',
+                ],
+              },
+              {
+                key: 'cell-1',
+                children: [
+                  '123 Adams Drive',
+                ],
+              },
+              {
+                key: 'cell-2',
+                children: [
+                  '111-222-3333',
+                ],
+              },
+            ],
+          },
+          {
+            key: 'row-1',
+            cells: [
+              {
+                key: 'cell-0',
+                children: [
+                  'Jane Smith',
+                ],
+              },
+              {
+                key: 'cell-1',
+                children: [
+                  '321 Drive Street',
+                ],
+              },
+              {
+                key: 'cell-2',
+                children: [
+                  '111-222-3333',
+                ],
+              },
+            ],
+          },
+          {
+            key: 'row-2',
+            cells: [
+              {
+                key: 'cell-0',
+                children: [
+                  'Dave Smith',
+                ],
+              },
+              {
+                key: 'cell-1',
+                children: [
+                  '213 Raymond Road',
+                ],
+              },
+              {
+                key: 'cell-2',
+                children: [
+                  '111-222-3333',
+                ],
+              },
+            ],
+          },
+        ],
+      }
+    ]}
+  />
 );
 
-export default DefaultTable;
+export default TableExample;

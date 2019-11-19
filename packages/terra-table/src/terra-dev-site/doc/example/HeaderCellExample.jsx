@@ -10,34 +10,33 @@ import Table, {
 
 const TableHeaderCellExample = () => (
   <Table
-    headerRow={(
-      <HeaderRow>
-        <HeaderCell
-          key="cell-0"
-        >
-          Lorem ipsum dolor
-        </HeaderCell>
-        <HeaderCell
-          isSelectable
-          sort="desc"
-          key="cell-1"
-        >
-          Lorem
-        </HeaderCell>
-        <HeaderCell
-          isSelectable
-          sort="asc"
-          key="cell-2"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </HeaderCell>
-      </HeaderRow>
-    )}
-  >
-    <Row>
-      <Cell />
-    </Row>
-  </Table>
+    headerData={{
+      cells:[
+        {
+          key: 'key-0',
+          children: [
+            'Lorem ipsum dolor',
+          ],
+        },
+        {
+          key: 'key-1',
+          isSelectable: true,
+          sort: 'desc',
+          children: [
+            'Lorem',
+          ],
+        },
+        {
+          key: 'key-2',
+          isSelectable: true,
+          sort: 'asc',
+          children: [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          ],
+        },
+      ],
+    }}
+  />
 );
 
 export default TableHeaderCellExample;

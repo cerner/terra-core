@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Cell.module.scss';
-import { styleFromWidth } from './TableUtils';
+import { styleFromWidth } from './utils';
 
 const cx = classNames.bind(styles);
 

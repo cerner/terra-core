@@ -10,6 +10,7 @@
   }
 
   .chevron {
+    background: var(--terra-table-chevron-cell-visible-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path id="chevronRight" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"/></svg>'));
     background-repeat: no-repeat;
     background-size: contain;
     color: #ccc;
@@ -24,10 +25,6 @@
     [dir=rtl] & {
       transform: scaleX(-1);
     }
-  }
-
-  .is-visible {
-    background: var(--terra-table-chevron-cell-visible-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path id="chevronRight" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"/></svg>'));
   }
 
   .container {

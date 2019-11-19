@@ -4,9 +4,16 @@ import Table, { SectionHeader } from 'terra-table';
 /* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableSectionHeaderExample = () => (
-  <Table>
-    <SectionHeader title="Default SectionHeader" key="default" />
-  </Table>
+  <Table
+    sectionData={[
+      {
+        sectionHeader: {
+          title: 'Default SectionHeader',
+          key: 'default',
+        },
+      },
+    ]}
+  />
 );
 
 export default TableSectionHeaderExample;

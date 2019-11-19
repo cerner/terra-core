@@ -7,7 +7,7 @@ import {
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
-} from './TableUtils';
+} from './utils';
 
 const cx = classNames.bind(styles);
 

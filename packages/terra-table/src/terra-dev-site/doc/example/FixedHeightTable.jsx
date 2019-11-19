@@ -9,63 +9,239 @@ import FixedHeight from '../common/FixedHeight';
 const FixedHeightTable = () => (
   <FixedHeight>
     <Table
-      id="Table"
       fill
       paddingStyle="standard"
-      headerRow={(
-        <HeaderRow>
-          <HeaderCell key="NAME">Name</HeaderCell>
-          <HeaderCell key="ADDRESS">Address</HeaderCell>
-          <HeaderCell key="PHONE_NUMBER">Phone Number</HeaderCell>
-        </HeaderRow>
-      )}
-    >
-      <Row key="PERSON_0">
-        <Cell key="NAME">John Smith</Cell>
-        <Cell key="ADDRESS">123 Adams Drive</Cell>
-        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-      </Row>
-      <Row key="PERSON_1" isStriped>
-        <Cell key="NAME">Jane Smith</Cell>
-        <Cell key="ADDRESS">321 Drive Street</Cell>
-        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-      </Row>
-      <Row key="PERSON_2">
-        <Cell key="NAME">Dave Smith</Cell>
-        <Cell key="ADDRESS">213 Raymond Road</Cell>
-        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-      </Row>
-      <Row key="PERSON_3" isStriped>
-        <Cell key="NAME">Bob Smith</Cell>
-        <Cell key="ADDRESS">123 Adams Drive</Cell>
-        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-      </Row>
-      <Row key="PERSON_4">
-        <Cell key="NAME">Wallaby Smith</Cell>
-        <Cell key="ADDRESS">321 Drive Street</Cell>
-        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-      </Row>
-      <Row key="PERSON_5" isStriped>
-        <Cell key="NAME">Potato Smith</Cell>
-        <Cell key="ADDRESS">213 Raymond Road</Cell>
-        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-      </Row>
-      <Row key="PERSON_6">
-        <Cell key="NAME">Dolphin Smith</Cell>
-        <Cell key="ADDRESS">123 Adams Drive</Cell>
-        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-      </Row>
-      <Row key="PERSON_7" isStriped>
-        <Cell key="NAME">Orc Smith</Cell>
-        <Cell key="ADDRESS">321 Drive Street</Cell>
-        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-      </Row>
-      <Row key="PERSON_8">
-        <Cell key="NAME">Lava Smith</Cell>
-        <Cell key="ADDRESS">213 Raymond Road</Cell>
-        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-      </Row>
-    </Table>
+      headerData={{
+        cells: [
+          {
+            children: ['Name'],
+          },
+          {
+            children: ['Address'],
+          },
+          {
+            children: ['Phone Number'],
+          },
+        ],
+      }}
+      sectionData={[
+        {
+          rows: [
+            {
+              key: 'row-0',
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: [
+                    'John Smith',
+                  ],
+                },
+                {
+                  key: 'cell-1',
+                  children: [
+                    '123 Adams Drive',
+                  ],
+                },
+                {
+                  key: 'cell-2',
+                  children: [
+                    '111-222-3333',
+                  ],
+                },
+              ],
+            },
+            {
+              key: 'row-1',
+              isStriped: true,
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: [
+                    'Jane Smith',
+                  ],
+                },
+                {
+                  key: 'cell-1',
+                  children: [
+                    '321 Drive Street',
+                  ],
+                },
+                {
+                  key: 'cell-2',
+                  children: [
+                    '111-222-3333',
+                  ],
+                },
+              ],
+            },
+            {
+              key: 'row-2',
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: [
+                    'Dave Smith',
+                  ],
+                },
+                {
+                  key: 'cell-1',
+                  children: [
+                    '213 Raymond Road',
+                  ],
+                },
+                {
+                  key: 'cell-2',
+                  children: [
+                    '111-222-3333',
+                  ],
+                },
+              ],
+            },
+            {
+              key: 'row-3',
+              isStriped: true,
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: [
+                    'Bob Smith',
+                  ],
+                },
+                {
+                  key: 'cell-1',
+                  children: [
+                    '123 Adams Drive',
+                  ],
+                },
+                {
+                  key: 'cell-2',
+                  children: [
+                    '111-222-3333',
+                  ],
+                },
+              ],
+            },
+            {
+              key: 'row-4',
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: [
+                    'Wallaby Smith',
+                  ],
+                },
+                {
+                  key: 'cell-1',
+                  children: [
+                    '321 Drive Street',
+                  ],
+                },
+                {
+                  key: 'cell-2',
+                  children: [
+                    '111-222-3333',
+                  ],
+                },
+              ],
+            },
+            {
+              key: 'row-5',
+              isStriped: true,
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: [
+                    'Potato Smith',
+                  ],
+                },
+                {
+                  key: 'cell-1',
+                  children: [
+                    '213 Raymond Road',
+                  ],
+                },
+                {
+                  key: 'cell-2',
+                  children: [
+                    '111-222-3333',
+                  ],
+                },
+              ],
+            },
+            {
+              key: 'row-6',
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: [
+                    'Dolphin Smith',
+                  ],
+                },
+                {
+                  key: 'cell-1',
+                  children: [
+                    '123 Adams Drive',
+                  ],
+                },
+                {
+                  key: 'cell-2',
+                  children: [
+                    '111-222-3333',
+                  ],
+                },
+              ],
+            },
+            {
+              key: 'row-7',
+              isStriped: true,
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: [
+                    'Orc Smith',
+                  ],
+                },
+                {
+                  key: 'cell-1',
+                  children: [
+                    '321 Drive Street',
+                  ],
+                },
+                {
+                  key: 'cell-2',
+                  children: [
+                    '111-222-3333',
+                  ],
+                },
+              ],
+            },
+            {
+              key: 'row-8',
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: [
+                    'Lava Smith',
+                  ],
+                },
+                {
+                  key: 'cell-1',
+                  children: [
+                    '213 Raymond Road',
+                  ],
+                },
+                {
+                  key: 'cell-2',
+                  children: [
+                    '111-222-3333',
+                  ],
+                },
+              ],
+            },
+          ],
+        }
+      ]}
+    />
   </FixedHeight>
 );
 

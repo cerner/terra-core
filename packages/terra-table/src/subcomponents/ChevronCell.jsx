@@ -5,19 +5,7 @@ import styles from './ChevronCell.module.scss';
 
 const cx = classNames.bind(styles);
 
-const propTypes = {
-  /**
-   * Whether or not the chevron is visible or a placeholder.
-   */
-  isVisible: PropTypes.bool,
-};
-
-const defaultProps = {
-  isVisible: false,
-};
-
 const ChevronCell = ({
-  isVisible,
   ...customProps
 }) => (
   <div
@@ -29,14 +17,10 @@ const ChevronCell = ({
       <span
         className={cx(
           'chevron',
-          { 'is-visible': isVisible },
         )}
       />
     </div>
   </div>
 );
-
-ChevronCell.propTypes = propTypes;
-ChevronCell.defaultProps = defaultProps;
 
 export default ChevronCell;

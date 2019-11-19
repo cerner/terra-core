@@ -6,7 +6,7 @@ import {
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
-} from './TableUtils';
+} from './utils';
 import CheckMarkCell from './CheckMarkCell';
 import ChevronCell from './ChevronCell';
 
@@ -29,7 +29,8 @@ const propTypes = {
   /**
    * Whether or not row is selected. `isSelectable` must be set to `true` in order to be applied.
    */
-  isSelected: PropTypes.bool,
+  isAriaSelected: PropTypes.bool,
+  isVisiblySelected: PropTypes.bool,
   /**
    * Whether or not row can be selected.
    */
@@ -78,17 +79,19 @@ const propTypes = {
 const defaultProps = {
   dividerStyle: 'none',
   isDisabled: false,
-  isSelected: false,
+  isAriaSelected: false,
+  isVisiblySelected: false,
   isSelectable: false,
   isStriped: false,
-  selectionStyle: 'default',
+  // selectionStyle: 'default',
 };
 
 const Row = ({
   children,
   dividerStyle,
   isDisabled,
-  isSelected,
+  isAriaSelected,
+  isVisiblySelected,
   isSelectable,
   isStriped,
   metaData,
@@ -98,7 +101,7 @@ const Row = ({
   onMouseDown,
   onSelect,
   refCallback,
-  selectionStyle,
+  // selectionStyle,
   ...customProps
 }) => {
   const attrSpread = {};
@@ -113,24 +116,24 @@ const Row = ({
       attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
       attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
     }
-    attrSpread['aria-selected'] = isSelected;
+    attrSpread['aria-selected'] = isAriaSelected;
   }
 
-  let check;
-  let chevron;
-  if (selectionStyle === 'checkmark') {
-    check = (
-      <CheckMarkCell isSelected={isSelected} />
-    );
-  } else if (selectionStyle === 'chevron') {
-    chevron = (
-      <ChevronCell isVisible={isSelectable} />
-    );
-  }
+  // let check;
+  // let chevron;
+  // if (selectionStyle === 'checkmark') {
+  //   check = (
+  //     <CheckMarkCell isSelected={isSelected} />
+  //   );
+  // } else if (selectionStyle === 'chevron') {
+  //   chevron = (
+  //     <ChevronCell isVisible={isSelectable} />
+  //   );
+  // }
 
   const divider = dividerStyle !== 'none' ? `divider-${dividerStyle}` : null;
   const headerCellClasses = cx(
-    { 'is-selected': selectionStyle === 'default' && isSelected && isSelectable },
+    { 'is-selected': isVisiblySelected && isSelectable },
     { 'is-selectable': !isDisabled && isSelectable },
     { 'is-striped': isStriped },
     divider,
@@ -145,9 +148,9 @@ const Row = ({
       ref={refCallback}
       role="row"
     >
-      {check}
+      {/* {check} */}
       {children}
-      {chevron}
+      {/* {chevron} */}
     </div>
   );
 };

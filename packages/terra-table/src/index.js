@@ -1,14 +1,14 @@
 import Table from './Table';
-import Cell from './Cell';
-import Row from './Row';
-import ChevronCell from './ChevronCell';
-import CheckMarkCell from './CheckMarkCell';
-import HeaderRow from './HeaderRow';
-import HeaderCell from './HeaderCell';
-import HeaderChevronCell from './HeaderChevronCell';
-import HeaderCheckMarkCell from './HeaderCheckMarkCell';
-import Section from './Section';
-import SectionHeader from './SectionHeader';
+import Cell from './subcomponents/Cell';
+import Row from './subcomponents/Row';
+import ChevronCell from './subcomponents/ChevronCell';
+import CheckMarkCell from './subcomponents/CheckMarkCell';
+import HeaderRow from './subcomponents/HeaderRow';
+import HeaderCell from './subcomponents/HeaderCell';
+import HeaderChevronCell from './subcomponents/HeaderChevronCell';
+import HeaderCheckMarkCell from './subcomponents/HeaderCheckMarkCell';
+import Section from './subcomponents/Section';
+import SectionHeader from './subcomponents/SectionHeader';
 import Utils from './TableUtils';
 
 export default Table;

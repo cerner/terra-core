@@ -6,16 +6,21 @@
   .section-header {
     background-color: var(--terra-table-section-header-background-color, #e8e9ea);
     border-top: var(--terra-table-section-header-border-top, 1px solid #dedfe0);
-    padding-bottom: var(--terra-table-section-header-padding-bottom, 0.5rem);
-    padding-left: var(--terra-table-section-header-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-section-header-padding-right, 0.7142857143rem);
-    padding-top: var(--terra-table-section-header-padding-top, 0.5rem);
+    overflow: hidden;
+    padding: 0;
     width: 100%;
     z-index: 1;
 
     + div {
       border-top-color: var(--terra-table-section-header-next-border-top-color, #b2b5b6);
     }
+  }
+
+  .section-content {
+    padding-bottom: var(--terra-table-section-header-content-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-section-header-content-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-section-header-content-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-section-header-content-padding-top, 0.5rem);
   }
 
   .title {
@@ -34,15 +39,15 @@
   .is-collapsible {
     cursor: pointer;
     outline: none;
-    padding-left: var(--terra-table-section-header-collapsible-padding-left, 1rem);
 
     .section-content {
       align-items: center;
       display: flex;
       justify-content: space-between;
+      padding-left: var(--terra-table-section-header-collapsible-padding-left, 1rem);
     }
 
-    &[data-row-show-focus='true']:focus {
+    .section-content[data-row-show-focus='true']:focus {
       outline: var(--terra-table-section-header-focus-outline, 2px solid #2a4b77);
       outline-offset: var(--terra-table-section-header-focus-outline-offset, -2px);
       position: relative;

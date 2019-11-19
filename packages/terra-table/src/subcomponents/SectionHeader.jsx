@@ -5,7 +5,7 @@ import {
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
-} from './TableUtils';
+} from './utils';
 import styles from './SectionHeader.module.scss';
 
 const cx = classNames.bind(styles);
@@ -82,16 +82,16 @@ const SectionHeader = ({
 }) => {
   const attrSpread = {};
   // const Element = `h${level}`;
-  let titleElement = <span aria-hidden="true" className={cx('title')}>{title}</span>;
+  let titleElement = <span className={cx('title')}>{title}</span>;
   let accordionIcon;
   if (isCollapsible) {
     accordionIcon = (
-      <div className={cx('start')}>
+      <div aria-hidden={true} className={cx('start')}>
         <span className={cx(['accordion-icon', { 'is-open': !isCollapsed }])} />
       </div>
     );
     titleElement = (
-      <div role="columnheader" className={cx('fill')}>
+      <div className={cx('fill')}>
         {titleElement}
       </div>
     );
@@ -126,9 +126,9 @@ const SectionHeader = ({
         role="columnheader"
         className={cx('section-content')}
       >
-        {/* {accordionIcon} */}
-        {/* {titleElement} */}
-        {title}
+        {accordionIcon}
+        {titleElement}
+        {/* {title} */}
       </div>
     </div>
   );

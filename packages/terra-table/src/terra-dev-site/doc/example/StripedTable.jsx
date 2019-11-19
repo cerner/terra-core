@@ -7,31 +7,96 @@ import Table, {
 
 const StripedTable = () => (
   <Table
-    id="Table"
-    headerRow={(
-      <HeaderRow>
-        <HeaderCell key="NAME">Name</HeaderCell>
-        <HeaderCell key="ADDRESS">Address</HeaderCell>
-        <HeaderCell key="PHONE_NUMBER">Phone Number</HeaderCell>
-      </HeaderRow>
-    )}
-  >
-    <Row key="PERSON_0">
-      <Cell key="NAME">John Smith</Cell>
-      <Cell key="ADDRESS">123 Adams Drive</Cell>
-      <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-    </Row>
-    <Row key="PERSON_1" isStriped>
-      <Cell key="NAME">Jane Smith</Cell>
-      <Cell key="ADDRESS">321 Drive Street</Cell>
-      <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-    </Row>
-    <Row key="PERSON_2">
-      <Cell key="NAME">Dave Smith</Cell>
-      <Cell key="ADDRESS">213 Raymond Road</Cell>
-      <Cell key="PHONE_NUMBER">111-222-3333</Cell>
-    </Row>
-  </Table>
+    headerData={{
+      cells: [
+        {
+          children: ['Name'],
+        },
+        {
+          children: ['Address'],
+        },
+        {
+          children: ['Phone Number'],
+        },
+      ],
+    }}
+    sectionData={[
+      {
+        rows: [
+          {
+            key: 'row-0',
+            cells: [
+              {
+                key: 'cell-0',
+                children: [
+                  'John Smith',
+                ],
+              },
+              {
+                key: 'cell-1',
+                children: [
+                  '123 Adams Drive',
+                ],
+              },
+              {
+                key: 'cell-2',
+                children: [
+                  '111-222-3333',
+                ],
+              },
+            ],
+          },
+          {
+            key: 'row-1',
+            isStriped: true,
+            cells: [
+              {
+                key: 'cell-0',
+                children: [
+                  'Jane Smith',
+                ],
+              },
+              {
+                key: 'cell-1',
+                children: [
+                  '321 Drive Street',
+                ],
+              },
+              {
+                key: 'cell-2',
+                children: [
+                  '111-222-3333',
+                ],
+              },
+            ],
+          },
+          {
+            key: 'row-2',
+            cells: [
+              {
+                key: 'cell-0',
+                children: [
+                  'Dave Smith',
+                ],
+              },
+              {
+                key: 'cell-1',
+                children: [
+                  '213 Raymond Road',
+                ],
+              },
+              {
+                key: 'cell-2',
+                children: [
+                  '111-222-3333',
+                ],
+              },
+            ],
+          },
+        ],
+      }
+    ]}
+  />
 );
 
 export default StripedTable;

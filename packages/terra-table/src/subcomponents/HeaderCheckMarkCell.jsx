@@ -1,20 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './CheckMarkCell.module.scss';
+import styles from './HeaderCheckMarkCell.module.scss';
 import {
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
-} from './TableUtils';
+} from './utils';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The top padding to be used for the CheckMarkCell in rem(s).
+   * The bottom padding to be used for the HeaderCheckMarkCell in rem(s).
    * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.
-   * The presence of this property will also change alignment to a fixed value, rather then centered.
    */
   alignmentPadding: PropTypes.number,
   /**
@@ -22,13 +21,17 @@ const propTypes = {
    */
   isDisabled: PropTypes.bool,
   /**
-   * Whether or not the check should be it's own click target.
+   * Whether or not a selected state should display as partially selected.
    */
-  isSelectable: PropTypes.bool,
+  isIndeterminate: PropTypes.bool,
   /**
-   * Whether or not the cell should display as selected with check mark.
+   * Whether or not row is selected
    */
   isSelected: PropTypes.bool,
+  /**
+   * Whether or not row is selectable
+   */
+  isSelectable: PropTypes.bool,
   /**
    * The associated metaData to be provided in the onSelect callback.
    */
@@ -40,17 +43,13 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * Function callback returning the html node of the check mark cell.
+   * Function callback for the ref of the td.
    */
   refCallback: PropTypes.func,
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onBlur: PropTypes.func,
-  /**
-   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
-   */
-  onFocus: PropTypes.func,
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
@@ -67,18 +66,19 @@ const propTypes = {
 
 const defaultProps = {
   isDisabled: false,
+  isIndeterminate: false,
   isSelected: false,
   isSelectable: false,
 };
 
-const CheckMarkCell = ({
+const HeaderCheckMarkCell = ({
   alignmentPadding,
   isDisabled,
+  isIndeterminate,
   isSelected,
   isSelectable,
   metaData,
   onBlur,
-  onFocus,
   onClick,
   onKeyDown,
   onMouseDown,
@@ -96,60 +96,53 @@ const CheckMarkCell = ({
       attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
       attrSpread.tabIndex = '0';
       attrSpread['data-cell-show-focus'] = 'true';
-      attrSpread.onFocus = wrappedEventCallback(onFocus, event => {
-        event.currentTarget.setAttribute('tabindex', -1);
-      });
-      attrSpread.onBlur = wrappedEventCallback(onBlur, event => {
-        event.stopPropagation();
-        event.currentTarget.setAttribute('data-cell-show-focus', 'true');
-        event.currentTarget.setAttribute('tabindex', 0);
-      });
-      attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => {
-        event.stopPropagation();
-        event.currentTarget.setAttribute('data-cell-show-focus', 'false');
-      });
+      attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
+      attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
     }
 
     // attributes for checkbox
     attrCheck.role = 'checkbox';
-    attrCheck['aria-checked'] = isSelected;
+    if (isSelected) {
+      attrCheck['aria-checked'] = isIndeterminate ? 'mixed' : true;
+    } else {
+      attrCheck['aria-checked'] = false;
+    }
   }
 
   if (alignmentPadding) {
-    attrCheck.style = { marginTop: `${alignmentPadding}rem` };
+    attrCheck.style = { marginBottom: `${alignmentPadding}rem` };
   }
 
-  const checkMarkClasses = cx(
-    'cell',
+  const headerCheckMarkCellClasses = cx(
+    'header-cell',
     { 'is-interactable': !isDisabled && isSelectable },
-    { 'is-top-align': !!attrCheck.style },
   );
 
   return (
     <div
       {...customProps}
       {...attrSpread}
-      className={customProps.className ? `${checkMarkClasses} ${customProps.className}` : checkMarkClasses}
+      className={customProps.className ? `${headerCheckMarkCellClasses} ${customProps.className}` : headerCheckMarkCellClasses}
       ref={refCallback}
-      // role={isSelectable ? 'cell' : 'none'}
-      role="gridcell"
-      title="select row cells"
+      // role={isSelectable ? 'columnheader' : 'none'}
+      role="columnheader"
+      title="select all rows"
     >
       <div {...attrCheck} className={cx('container')}>
         <span
-          className={cx(
+          className={`${cx(
             'checkmark',
-            { 'is-selectable': isSelectable },
-            { 'is-selected': isSelected },
-            { 'is-disabled': isDisabled },
-          )}
+            { 'is-selected': isSelectable && isSelected },
+            { 'is-intermediate': isSelectable && isIndeterminate },
+            { 'is-disabled': isSelectable && isDisabled },
+          )} ${customProps.className}`}
         />
       </div>
     </div>
   );
 };
 
-CheckMarkCell.propTypes = propTypes;
-CheckMarkCell.defaultProps = defaultProps;
+HeaderCheckMarkCell.propTypes = propTypes;
+HeaderCheckMarkCell.defaultProps = defaultProps;
 
-export default CheckMarkCell;
+export default HeaderCheckMarkCell;

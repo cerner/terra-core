@@ -6,33 +6,37 @@
     overflow: hidden;
     position: relative;
 
-    > * {
+    & > * {
       border-right: var(--terra-table-row-child-border-right, 1px solid transparent);
 
       &:last-of-type {
         border-right: 0;
       }
     }
-  }
 
-  .divider-vertical,
-  .divider-both {
-    > * {
-      border-right: var(--terra-table-row-divider-child-border-right, 1px solid #ccc);
-
-      &:last-of-type {
-        border-right: 0;
+    &.divider-vertical,
+    &.divider-both {
+      > * {
+        border-right: var(--terra-table-row-divider-child-border-right, 1px solid #ccc);
+  
+        &:last-of-type {
+          border-right: 0;
+        }
       }
     }
-  }
+  
+    &.divider-horizontal,
+    &.divider-both {
+      border-top: var(--terra-table-row-divider-border-top, 1px solid #dedfe0);
 
-  .divider-horizontal,
-  .divider-both {
-    border-top: var(--terra-table-row-divider-border-top, 1px solid #dedfe0);
+      &:first-of-type {
+        margin-top: var(--terra-table-row-divider-last-margin-top, -1px);
+      }
 
-    &:last-of-type {
-      border-bottom: var(--terra-table-row-divider-border-bottom, 1px solid #dedfe0);
-      margin-bottom: var(--terra-table-row-divider-last-margin-bottom, -1px);
+      &:last-of-type {
+        border-bottom: var(--terra-table-row-divider-border-bottom, 1px solid #dedfe0);
+        margin-bottom: var(--terra-table-row-divider-last-margin-bottom, -1px);
+      }
     }
   }
 

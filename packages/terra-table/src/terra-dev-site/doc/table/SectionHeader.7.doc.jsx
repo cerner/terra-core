@@ -5,8 +5,8 @@ import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import SectionHeaderSrc from '!raw-loader!../../../../src/SectionHeader';
-import SectionHeaderPropsTable from '!terra-props-table-loader!../../../../src/SectionHeader';
+import SectionHeaderSrc from '!raw-loader!../../../../src/subcomponents/SectionHeader';
+import SectionHeaderPropsTable from '!terra-props-table-loader!../../../../src/subcomponents/SectionHeader';
 
 import SectionHeaderExample from '../example/SectionHeaderExample';
 import SectionHeaderExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SectionHeaderExample';

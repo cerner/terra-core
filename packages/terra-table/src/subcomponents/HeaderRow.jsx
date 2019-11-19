@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import HeaderCheckMarkCell from './HeaderCheckMarkCell';
 import HeaderChevronCell from './HeaderChevronCell';
 
-import styles from './Table.module.scss';
+import styles from '../Table.module.scss';
 
 const cx = classNames.bind(styles);
 

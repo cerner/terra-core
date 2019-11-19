@@ -5,8 +5,8 @@ import { name } from '../../../../package.json';
 
 /* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
 // Component Source
-import CheckMarkCellSrc from '!raw-loader!../../../../src/CheckMarkCell';
-import CheckMarkCellPropsTable from '!terra-props-table-loader!../../../../src/CheckMarkCell';
+import CheckMarkCellSrc from '!raw-loader!../../../../src/subcomponents/CheckMarkCell';
+import CheckMarkCellPropsTable from '!terra-props-table-loader!../../../../src/subcomponents/CheckMarkCell';
 
 import CheckMarkCellExample from '../example/CheckMarkCellExample';
 import CheckMarkCellExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CheckMarkCellExample';
