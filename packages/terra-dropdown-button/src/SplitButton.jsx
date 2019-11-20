@@ -173,7 +173,7 @@ class SplitButton extends React.Component {
     if (!this.state.isOpen) {
       return;
     }
-    const isAligned = ((this.dropdown.getBoundingClientRect().right + this.dropdown.getBoundingClientRect().x) > (document.body.getBoundingClientRect().right + document.body.getBoundingClientRect().x));
+    const isAligned = ((this.dropdown.getBoundingClientRect().left + this.dropdown.getBoundingClientRect().x) > (document.body.getBoundingClientRect().right + document.body.getBoundingClientRect().x));
     if (this.state.align !== isAligned) {
       this.setState({ align: isAligned });
     }
