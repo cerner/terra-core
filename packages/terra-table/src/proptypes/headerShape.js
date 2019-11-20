@@ -4,6 +4,7 @@ import headerCellShape from './headerCellShape';
 const headerShape = PropTypes.shape({
   id: PropTypes.string,
   key: PropTypes.string,
+  checkAlignment: PropTypes.number,
   cells: PropTypes.arrayOf(headerCellShape),
   refCallback: PropTypes.func,
   allowSelectAll: PropTypes.bool,

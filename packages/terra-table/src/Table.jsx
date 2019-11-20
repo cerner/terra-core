@@ -90,6 +90,7 @@ const createCheckCell = (rowData, rowStyle, checkStyle, rowLabel) =>  {
   if (checkStyle === 'readOnly' || checkStyle === 'toggle') {
     return (
       <CheckMarkCell
+        alignmentPadding={rowData.checkAlignment} // TODO: determine if by row, section, or table.
         metaData={rowData.metaData}
         onSelect={rowData.onCheckAction}
         label={rowLabel}
@@ -113,6 +114,7 @@ const createHeaderCheckCell = (headerData, checkStyle) =>  {
   if (checkStyle && checkStyle !== 'none') {
     return (
       <HeaderCheckMarkCell
+        alignmentPadding={headerData.checkAlignment}
         isSelectable={checkStyle === 'toggle' && headerData.allowSelectAll}
         isSelected={headerData.selectAllStatus == 'checked' || headerData.selectAllStatus == 'indeterminate'}
         isIndeterminate={headerData.selectAllStatus == 'indeterminate'}

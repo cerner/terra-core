@@ -12,6 +12,24 @@ const CheckMarkCellExample = () => (
         {
           rows: [
             {
+              checkAlignment: 2,
+              cells: [{
+                children: [
+                  'test'
+                ],
+              }],
+            },
+          ],
+        }
+      ]}
+    />
+    <Table
+      rowStyle="disclose"
+      checkStyle="toggle"
+      sectionData={[
+        {
+          rows: [
+            {
               cells: [{
                 children: [
                   'test'

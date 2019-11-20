@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import cellShape from './cellShape';
 
 const rowShape = PropTypes.shape({
+  checkAlignment: PropTypes.number,
   rowLabel: PropTypes.string.isRequired,
   isToggled: PropTypes.bool,
   isVisuallyToggled: PropTypes.bool,

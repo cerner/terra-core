@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 const checkMarkShape = PropTypes.shape({
+    key: PropTypes.string.isRequired,
   /**
      * The top padding to be used for the CheckMarkCell in rem(s).
      * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.

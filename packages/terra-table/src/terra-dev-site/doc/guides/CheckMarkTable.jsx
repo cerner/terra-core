@@ -2,7 +2,7 @@ import React, {
   useState,
 } from 'react';
 import Table, {
-  Row, Cell, HeaderRow, HeaderCell, Utils, CheckMarkCell, HeaderCheckMarkCell,
+  Utils,
 } from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
