@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
 const headerCellShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  key: PropTypes.string.isRequired,
 /**
    * Content to be displayed for the column header.
    */

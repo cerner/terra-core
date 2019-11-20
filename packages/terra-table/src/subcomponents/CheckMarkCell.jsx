@@ -131,12 +131,11 @@ const CheckMarkCell = ({
       {...attrSpread}
       className={customProps.className ? `${checkMarkClasses} ${customProps.className}` : checkMarkClasses}
       ref={refCallback}
-      // role={isSelectable ? 'cell' : 'none'}
       role="gridcell"
-      title="select row cells"
+      aria-label="select row cells" // TODO: needs thing here
     >
       <div {...attrCheck} className={cx('container')}>
-        <span
+        <div
           className={cx(
             'checkmark',
             { 'is-selectable': isSelectable },

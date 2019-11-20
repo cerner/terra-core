@@ -46,9 +46,11 @@ const RowExample = () => (
           rows: [
             {
               key: 'chevron_row',
+              rowLabel: 'test title',
               cells: [
                 {
                   key: 'cell-0',
+                  isLink: true,
                   children: [
                     'Chevron Row',
                   ],

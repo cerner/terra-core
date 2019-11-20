@@ -72,22 +72,24 @@ const defaultProps = {
   paddingStyle: 'none',
 };
 
-const createCell = (cell, sectionId, columnId, colWidth) => (
+const createCell = (cell, sectionId, columnId, colWidth, rowLabel) => (
   <Cell
-    headers={[sectionId, columnId].join(' ')}
+    headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
     key={cell.key}
     refCallback={cell.refCallback}
     removeInner={cell.removeInner}
     width={colWidth}
+    isLink={cell.isLink}
+    label={rowLabel}
   >
     {cell.children}
   </Cell>
 );
 
-const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
+const createCheckCell = (rowData, rowStyle, checkStyle, rowLabel) =>  {
   if (checkStyle === 'readOnly' || checkStyle === 'toggle') {
     const isSelected = (checkStyle === 'readOnly' || checkStyle === 'toggle') && rowData.isToggled;
-    return <CheckMarkCell isSelectable={checkStyle === 'toggle'} isSelected={isSelected} isDisabled={rowData.isDisabled} />;
+    return <CheckMarkCell label={rowLabel} isSelectable={checkStyle === 'toggle'} isSelected={isSelected} isDisabled={rowData.isDisabled} />;
   }
   return undefined;
 };
@@ -127,14 +129,18 @@ const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowSt
     isSelectable={rowStyle === 'toggle' || rowStyle === 'disclose' || checkStyle === 'toggle'}
     isAriaSelected={rowData.isToggled}
     isVisiblySelected={rowData.isVisuallyToggled || (rowData.isToggled && rowStyle === "toggle" && checkStyle !== 'toggle' && checkStyle !== 'readOnly')}
-    metaData={{ key: rowData.key }}
+    metaData={rowData.metaData}
     onSelect={rowData.onRowAction}
     isDisabled={rowData.isDisabled}
     isStriped={rowData.isStriped}
     dividerStyle={dividerStyle}
   >
-    {createCheckCell(rowData, rowStyle, checkStyle, rowData.onCheckAction)}
-    {rowData.cells.map((cell, colIndex) => createCell(cell, sectionId, headerData && headerData.cells ? headerData.cells[colIndex].id : undefined, columnWidths ? columnWidths[colIndex] : undefined))}
+    {createCheckCell(rowData, rowStyle, checkStyle, rowData.onCheckAction, rowData.rowLabel)}
+    {rowData.cells.map((cell, colIndex) => {
+      const columnId = headerData && headerData.cells ? headerData.cells[colIndex].id : undefined;
+      const columnWidth = columnWidths ? columnWidths[colIndex] : undefined;
+      return createCell(cell, sectionId, columnId, columnWidth, rowData.rowLabel);
+    })}
     {createChevronCell(rowStyle, hasChevrons)}
   </Row>
 );
@@ -195,6 +201,7 @@ const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevron
           refCallback={cellData.refCallback}
           metaData={cellData.metaData}
           onSelect={cellData.onSelect}
+          isSelectable={cellData.isSelectable}
           sort={cellData.sort}
           width={columnWidths ? columnWidths[colIndex] : undefined}
         >

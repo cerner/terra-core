@@ -1,18 +1,16 @@
 import React, {
   useState,
 } from 'react';
-import Table, {
-  Row, Cell, HeaderRow, HeaderCell,
-} from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Table from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-sort';
 
 const columns = ['column-0', 'column-1', 'column-2'];
 
-const createCell = cell => <Cell key={cell.key}>{cell.title}</Cell>;
+const createCell = cell => ({ key: cell.key, children: [cell.title] });
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-const createRow = rowData => <Row key={rowData.key}>{createCellsForRow(rowData.cells)}</Row>;
+const createRow = rowData => ({ key: rowData.key, cells: createCellsForRow(rowData.cells) });
 
 const sortData = (data, sortColumn) => {
   if (!sortColumn) {
@@ -56,31 +54,32 @@ const SortedTable = () => {
       sort = sortColumn.direction;
     }
     return (
-      <HeaderCell
-        key={key}
-        metaData={{ key }}
-        onSelect={handleSortClick}
-        sort={sort}
-        isSelectable
-      >
-        {title}
-      </HeaderCell>
+      {
+        key,
+        id: `header-${key}`,
+        metaData: { key },
+        onSelect: handleSortClick,
+        sort,
+        isSelectable: true,
+        children: [title],
+      }
     );
   };
 
   return (
     <Table
       paddingStyle="standard"
-      headerRow={(
-        <HeaderRow>
-          {createHeaderCell('column-0', 'Breakfast')}
-          {createHeaderCell('column-1', 'Animals')}
-          {createHeaderCell('column-2', 'Flatware')}
-        </HeaderRow>
-      )}
-    >
-      {createRows(mockData)}
-    </Table>
+      headerData={{
+        cells: [
+          createHeaderCell(columns[0], 'Breakfast'),
+          createHeaderCell(columns[1], 'Animals'),
+          createHeaderCell(columns[2], 'Flatware'),
+        ],
+      }}
+      sectionData={[{
+        rows: createRows(mockData),
+      }]}
+    />
   );
 };
 

@@ -1,12 +1,10 @@
 import React, {
   useState,
 } from 'react';
-import Table, {
-  Row, Cell, HeaderRow, HeaderCell,
-} from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Table from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
-const createCell = cell => <Cell key={cell.key}>{cell.title}</Cell>;
+const createCell = cell => ({ key: cell.key, children: [cell.title] });
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
@@ -21,15 +19,14 @@ const SingleSelectTable = () => {
   };
 
   const createRow = rowData => (
-    <Row
-      key={rowData.key}
-      isSelectable
-      isSelected={selectedKey === rowData.key}
-      metaData={{ key: rowData.key }}
-      onSelect={handleRowSelection}
-    >
-      {createCellsForRow(rowData.cells)}
-    </Row>
+    {
+      key: rowData.key,
+      onRowAction: handleRowSelection,
+      cells: createCellsForRow(rowData.cells),
+      isToggled: selectedKey === rowData.key,
+      isVisuallyToggled: selectedKey === rowData.key,
+      metaData: { key: rowData.key },
+    }
   );
 
   const createRows = data => data.map(childItem => createRow(childItem));
@@ -37,17 +34,37 @@ const SingleSelectTable = () => {
   return (
     <Table
       paddingStyle="standard"
-      headerRow={(
-        <HeaderRow>
-          <HeaderCell key="cell-0">Column 0</HeaderCell>
-          <HeaderCell key="cell-1">Column 1</HeaderCell>
-          <HeaderCell key="cell-2">Column 2</HeaderCell>
-          <HeaderCell key="cell-3">Column 3</HeaderCell>
-        </HeaderRow>
-      )}
-    >
-      {createRows(mockData)}
-    </Table>
+      rowStyle="toggle"
+      headerData={{
+        cells: [
+          {
+            key: 'cell-0',
+            id: 'toggle-0',
+            children: ['Column 0'],
+          },
+          {
+            key: 'cell-1',
+            id: 'toggle-1',
+            children: ['Column 1'],
+          },
+          {
+            key: 'cell-2',
+            id: 'toggle-2',
+            children: ['Column 2'],
+          },
+          {
+            key: 'cell-3',
+            id: 'toggle-3',
+            children: ['Column 3'],
+          },
+        ],
+      }}
+      sectionData={[
+        {
+          rows: createRows(mockData),
+        },
+      ]}
+    />
   );
 };
 

@@ -1,24 +1,16 @@
 import React from 'react';
-import Table, {
-  Row, Cell, HeaderRow, HeaderCell,
-} from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Table from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
-const widths = [
-  { scalar: 2 },
-  { scalar: 1 },
-  { scalar: 3 },
-  { scalar: 4 },
-];
+const createCell = cell => ({ key: cell.key, children: [cell.title] });
 
-const createCell = (cell, index) => <Cell key={cell.key} width={widths[index]}>{cell.title}</Cell>;
-
-const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
+const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 const createRow = rowData => (
-  <Row key={rowData.key}>
-    {createCellsForRow(rowData.cells)}
-  </Row>
+  {
+    key: rowData.key,
+    cells: createCellsForRow(rowData.cells),
+  }
 );
 
 const createRows = data => data.map(childItem => createRow(childItem));
@@ -26,17 +18,24 @@ const createRows = data => data.map(childItem => createRow(childItem));
 const ScalarWidthTable = () => (
   <Table
     paddingStyle="standard"
-    headerRow={(
-      <HeaderRow>
-        <HeaderCell key="cell-0" width={widths[0]}>Scalar 2</HeaderCell>
-        <HeaderCell key="cell-1" width={widths[1]}>Scalar 1</HeaderCell>
-        <HeaderCell key="cell-2" width={widths[2]}>Scalar 3</HeaderCell>
-        <HeaderCell key="cell-3" width={widths[3]}>Scalar 4</HeaderCell>
-      </HeaderRow>
-    )}
-  >
-    {createRows(mockData)}
-  </Table>
+    columnWidths={[
+      { scalar: 2 },
+      { scalar: 1 },
+      { scalar: 3 },
+      { scalar: 4 },
+    ]}
+    headerData={{
+      cells: [
+        { key: 'cell-0', id: `unique-cell-0`, children: ['Scalar 2'] },
+        { key: 'cell-1', id: `unique-cell-1`, children: ['Scalar 1'] },
+        { key: 'cell-2', id: `unique-cell-2`, children: ['Scalar 3'] },
+        { key: 'cell-3', id: `unique-cell-3`, children: ['Scalar 4'] },
+      ],
+    }}
+    sectionData={[{
+      rows: createRows(mockData),
+    }]}
+  />
 );
 
 export default ScalarWidthTable;

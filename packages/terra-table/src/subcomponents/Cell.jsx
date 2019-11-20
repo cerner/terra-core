@@ -7,6 +7,8 @@ import { styleFromWidth } from './utils';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  label: PropTypes.string,
+  isLink: PropTypes.bool,
   /**
    * Child content to be displayed for the row cell.
    */
@@ -58,17 +60,20 @@ const Cell = ({
   refCallback,
   removeInner,
   width,
+  label,
+  isLink,
   ...customProps
 }) => {
-  const cellClassNames = cx([
-    'cell',
-  ]);
+  const cellClassNames = cx('cell');
+  const contentRole = isLink ? 'link' : undefined;
+  const contentClass = !removeInner ? cx('container') : undefined;
 
   let content = children;
-  if (!removeInner) {
+  if (contentRole || contentClass) {
     content = (
-      <div className={cx('container')}>
+      <div role={contentRole} className={contentClass}>
         {content}
+        <span style={{ height: '0px', width: '0px', position: 'absolute', overflow: 'hidden' }}>{label}</span>
       </div>
     );
   }

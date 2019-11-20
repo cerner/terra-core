@@ -1,24 +1,16 @@
 import React from 'react';
-import Table, {
-  Row, Cell, HeaderRow, HeaderCell,
-} from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Table from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
-const widths = [
-  { static: { value: 80, unit: 'px' } },
-  { static: { value: 55, unit: 'px' } },
-  { static: { value: 5, unit: 'rem' } },
-  { static: { value: 120, unit: 'px' } },
-];
+const createCell = cell => ({ key: cell.key, children: [cell.title] });
 
-const createCell = (cell, index) => <Cell key={cell.key} width={widths[index]}>{cell.title}</Cell>;
-
-const createCellsForRow = cells => cells.map((cell, index) => createCell(cell, index));
+const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 const createRow = rowData => (
-  <Row key={rowData.key}>
-    {createCellsForRow(rowData.cells)}
-  </Row>
+  {
+    key: rowData.key,
+    cells: createCellsForRow(rowData.cells),
+  }
 );
 
 const createRows = data => data.map(childItem => createRow(childItem));
@@ -26,17 +18,24 @@ const createRows = data => data.map(childItem => createRow(childItem));
 const FixedWidthTable = () => (
   <Table
     paddingStyle="standard"
-    headerRow={(
-      <HeaderRow>
-        <HeaderCell key="cell-0" width={widths[0]}>60px</HeaderCell>
-        <HeaderCell key="cell-1" width={widths[1]}>45px</HeaderCell>
-        <HeaderCell key="cell-2" width={widths[2]}>5rem</HeaderCell>
-        <HeaderCell key="cell-3" width={widths[3]}>120px</HeaderCell>
-      </HeaderRow>
-    )}
-  >
-    {createRows(mockData)}
-  </Table>
+    columnWidths={[
+      { static: { value: 80, unit: 'px' } },
+      { static: { value: 55, unit: 'px' } },
+      { static: { value: 5, unit: 'rem' } },
+      { static: { value: 120, unit: 'px' } },
+    ]}
+    headerData={{
+      cells: [
+        { key: 'cell-0', id: `unique-cell-0`, children: ['60px'] },
+        { key: 'cell-1', id: `unique-cell-1`, children: ['45px'] },
+        { key: 'cell-2', id: `unique-cell-2`, children: ['5rem'] },
+        { key: 'cell-3', id: `unique-cell-3`, children: ['120px'] },
+      ],
+    }}
+    sectionData={[{
+      rows: createRows(mockData),
+    }]}
+  />
 );
 
 export default FixedWidthTable;
