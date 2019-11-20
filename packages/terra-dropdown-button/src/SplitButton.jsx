@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
 import { injectIntl, intlShape } from 'react-intl';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import onClickOutside from 'react-onclickoutside';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './SplitButton.module.scss';

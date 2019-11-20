@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import onClickOutside from 'react-onclickoutside';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
