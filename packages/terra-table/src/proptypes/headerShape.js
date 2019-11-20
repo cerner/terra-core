@@ -7,7 +7,7 @@ const headerShape = PropTypes.shape({
   cells: PropTypes.arrayOf(headerCellShape),
   refCallback: PropTypes.func,
   allowSelectAll: PropTypes.bool,
-  selectAllStatus: PropTypes.oneOf(['empty', 'checked', 'intermediate']),
+  selectAllStatus: PropTypes.oneOf(['empty', 'checked', 'indeterminate']),
 });
 
 export default headerShape;
