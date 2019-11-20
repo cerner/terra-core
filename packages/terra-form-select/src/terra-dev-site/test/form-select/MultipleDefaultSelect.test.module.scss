@@ -2,14 +2,16 @@
   .content-wrapper {
     margin: 10px;
   }
+
+  .left-select {
+    float: left;
+    width: 49%;
+  }
+
+  .right-select {
+    float: right;
+    width: 49%;
+  }
 }
 
-#select-1 {
-  float: left;
-  width: 49%;
-}
 
-#select-2 {
-  float: right;
-  width: 49%;
-}

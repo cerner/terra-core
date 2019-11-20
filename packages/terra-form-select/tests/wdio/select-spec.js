@@ -306,8 +306,8 @@ Terra.describeViewports('Select', ['tiny'], () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/multiple-default-select'));
     describe('default should close all dropdown and open the selected dropdown', () => {
       it('default should open the dropdown by clicking the select and close other dropdown', () => {
-        browser.click('#select-1');
-        browser.click('#select-2');
+        browser.click('[class*=left-select]');
+        browser.click('[class*=right-select]');
       });
 
       Terra.it.validatesElement('close-and-open-dropdown-after-selection', { selector: '#root' });

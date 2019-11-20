@@ -7,12 +7,12 @@ const cx = classNames.bind(styles);
 
 const UncontrolledDefault = () => (
   <div className={cx('content-wrapper')}>
-    <Select placeholder="Select a color" id="select-1">
+    <Select placeholder="Select a color" className={cx('left-select')}>
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />
     </Select>
-    <Select placeholder="Select a fruit" id="select-2">
+    <Select placeholder="Select a fruit" className={cx('right-select')}>
       <Select.Option value="apple" display="Apple" />
       <Select.Option value="orange" display="Orange" />
       <Select.Option value="banana" display="Banana" />
