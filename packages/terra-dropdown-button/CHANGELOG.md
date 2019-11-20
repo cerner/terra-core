@@ -1,10 +1,10 @@
 ChangeLog
 =========
-### Changed
-* Removed Hookshot to fix accessibility issues in dropdown menu.
 
 Unreleased
 ----------
+### Changed
+* Removed Hookshot to fix accessibility issues in dropdown menu.
 
 1.7.0 - (October 30, 2019)
 ------------------
