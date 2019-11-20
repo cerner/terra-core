@@ -88,8 +88,16 @@ const createCell = (cell, sectionId, columnId, colWidth, rowLabel) => (
 
 const createCheckCell = (rowData, rowStyle, checkStyle, rowLabel) =>  {
   if (checkStyle === 'readOnly' || checkStyle === 'toggle') {
-    const isSelected = (checkStyle === 'readOnly' || checkStyle === 'toggle') && rowData.isToggled;
-    return <CheckMarkCell label={rowLabel} isSelectable={checkStyle === 'toggle'} isSelected={isSelected} isDisabled={rowData.isDisabled} />;
+    return (
+      <CheckMarkCell
+        metaData={rowData.metaData}
+        onSelect={rowData.onCheckAction}
+        label={rowLabel}
+        isSelectable={checkStyle === 'toggle'}
+        isSelected={rowData.isToggled}
+        isDisabled={rowData.isDisabled}
+      />
+    );
   }
   return undefined;
 };
@@ -109,6 +117,7 @@ const createHeaderCheckCell = (headerData, checkStyle) =>  {
         isSelected={headerData.selectAllStatus == 'checked' || headerData.selectAllStatus == 'indeterminate'}
         isIndeterminate={headerData.selectAllStatus == 'indeterminate'}
         isDisabled={headerData.isDisabled}
+        onSelect={headerData.onSelect}
       />
     );
   }
@@ -135,7 +144,7 @@ const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowSt
     isStriped={rowData.isStriped}
     dividerStyle={dividerStyle}
   >
-    {createCheckCell(rowData, rowStyle, checkStyle, rowData.onCheckAction, rowData.rowLabel)}
+    {createCheckCell(rowData, rowStyle, checkStyle, rowData.rowLabel)}
     {rowData.cells.map((cell, colIndex) => {
       const columnId = headerData && headerData.cells ? headerData.cells[colIndex].id : undefined;
       const columnWidth = columnWidths ? columnWidths[colIndex] : undefined;

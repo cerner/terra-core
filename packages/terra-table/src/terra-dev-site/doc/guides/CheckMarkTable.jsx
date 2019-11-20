@@ -6,7 +6,7 @@ import Table, {
 } from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-select';
 
-const createCell = cell => <Cell key={cell.key}>{cell.title}</Cell>;
+const createCell = cell => ({ key: cell.key, children: [cell.title] });
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
@@ -39,43 +39,43 @@ const CheckMarkTable = () => {
   };
 
   const createRow = rowData => (
-    <Row
-      key={rowData.key}
-      isSelectable
-    >
-      <CheckMarkCell
-        isSelectable
-        isSelected={getIsRowSelected(rowData.key)}
-        metaData={{ key: rowData.key }}
-        onSelect={handleMarkSelection}
-      />
-      {createCellsForRow(rowData.cells)}
-    </Row>
+    {
+      key: rowData.key,
+      onCheckAction: handleMarkSelection,
+      metaData: { key: rowData.key },
+      isToggled: getIsRowSelected(rowData.key),
+      cells: createCellsForRow(rowData.cells),
+    }
   );
 
   const createRows = data => data.map(childItem => createRow(childItem));
 
+  let status = 'empty';
+  if (allSelected) {
+    status = 'checked';
+  } else if (!!selectedKeys.length) {
+    status = 'indeterminate';
+  }
   return (
     <Table
       paddingStyle="standard"
-      headerRow={(
-        <HeaderRow>
-          <HeaderCheckMarkCell
-            isSelected={allSelected || !!selectedKeys.length}
-            isIntermediate={!!selectedKeys.length}
-            onSelect={handleHeaderMarkSelection}
-            isSelectable
-            key="header-check-cell"
-          />
-          <HeaderCell key="cell-0">Column 0</HeaderCell>
-          <HeaderCell key="cell-1">Column 1</HeaderCell>
-          <HeaderCell key="cell-2">Column 2</HeaderCell>
-          <HeaderCell key="cell-3">Column 3</HeaderCell>
-        </HeaderRow>
-      )}
-    >
-      {createRows(mockData)}
-    </Table>
+      rowStyle="disclose"
+      checkStyle="toggle"
+      headerData={{
+        allowSelectAll: true,
+        selectAllStatus: status,
+        onSelect: handleHeaderMarkSelection,
+        cells: [
+          { key: 'cell-0', id: 'toggle-0', children: ['Column 0'] },
+          { key: 'cell-1', id: 'toggle-1', children: ['Column 1'] },
+          { key: 'cell-2', id: 'toggle-2', children: ['Column 2'] },
+          { key: 'cell-3', id: 'toggle-3', children: ['Column 3'] },
+        ],
+      }}
+      sectionData={[{
+        rows: createRows(mockData),
+      }]}
+    />
   );
 };
 
