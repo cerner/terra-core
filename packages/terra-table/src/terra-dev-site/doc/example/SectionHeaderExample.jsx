@@ -8,6 +8,7 @@ const TableSectionHeaderExample = () => (
     sectionData={[
       {
         sectionHeader: {
+          id: 'default',
           title: 'Default SectionHeader',
           key: 'default',
         },

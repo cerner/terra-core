@@ -8,12 +8,18 @@ const TableExample = () => (
     headerData={{
       cells: [
         {
+          id: 'header-name',
+          key: 'name',
           children: ['Name'],
         },
         {
+          id: 'header-address',
+          key: 'address',
           children: ['Address'],
         },
         {
+          id: 'header-phone_number',
+          key: 'phone_number',
           children: ['Phone Number'],
         },
       ],

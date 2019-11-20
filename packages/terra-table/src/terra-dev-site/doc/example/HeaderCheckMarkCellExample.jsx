@@ -11,6 +11,8 @@ const HeaderCheckMarkCellExample = () => (
       hasChevrons
       headerData={{
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],
@@ -22,6 +24,8 @@ const HeaderCheckMarkCellExample = () => (
       checkStyle="none"
       headerData={{
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],
@@ -33,6 +37,8 @@ const HeaderCheckMarkCellExample = () => (
       checkStyle="readOnly"
       headerData={{
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],
@@ -44,6 +50,8 @@ const HeaderCheckMarkCellExample = () => (
       checkStyle="toggle"
       headerData={{
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],
@@ -57,6 +65,8 @@ const HeaderCheckMarkCellExample = () => (
         allowSelectAll: true,
         selectAllStatus: 'empty',
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],
@@ -69,6 +79,8 @@ const HeaderCheckMarkCellExample = () => (
         allowSelectAll: true,
         selectAllStatus: 'checked',
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],
@@ -81,6 +93,8 @@ const HeaderCheckMarkCellExample = () => (
         allowSelectAll: true,
         selectAllStatus: 'indeterminate',
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],
@@ -94,6 +108,8 @@ const HeaderCheckMarkCellExample = () => (
         allowSelectAll: true,
         selectAllStatus: 'empty',
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],
@@ -107,6 +123,8 @@ const HeaderCheckMarkCellExample = () => (
         selectAllStatus: 'checked',
         isDisabled: true,
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],
@@ -120,6 +138,8 @@ const HeaderCheckMarkCellExample = () => (
         selectAllStatus: 'indeterminate',
         isDisabled: true,
         cells: [{
+          id: 'column-0',
+          key: 'key-0',
           children: [
             'test'
           ],

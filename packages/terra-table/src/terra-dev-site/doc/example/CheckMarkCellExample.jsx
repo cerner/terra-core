@@ -12,8 +12,10 @@ const CheckMarkCellExample = () => (
         {
           rows: [
             {
+              key: 'row-0',
               checkAlignment: 2,
               cells: [{
+                key: 'key-0',
                 children: [
                   'test'
                 ],
@@ -30,7 +32,9 @@ const CheckMarkCellExample = () => (
         {
           rows: [
             {
+              key: 'row-0',
               cells: [{
+                key: 'key-0',
                 children: [
                   'test'
                 ],
@@ -47,7 +51,9 @@ const CheckMarkCellExample = () => (
         {
           rows: [
             {
+              key: 'row-0',
               cells: [{
+                key: 'key-0',
                 children: [
                   'test'
                 ],
@@ -64,8 +70,10 @@ const CheckMarkCellExample = () => (
         {
           rows: [
             {
+              key: 'row-0',
               isToggled: true,
               cells: [{
+                key: 'key-0',
                 children: [
                   'test'
                 ],
@@ -82,8 +90,10 @@ const CheckMarkCellExample = () => (
         {
           rows: [
             {
+              key: 'row-0',
               isToggled: true,
               cells: [{
+                key: 'key-0',
                 children: [
                   'test'
                 ],
@@ -100,9 +110,11 @@ const CheckMarkCellExample = () => (
         {
           rows: [
             {
+              key: 'row-0',
               isDisabled: true,
               isToggled: true,
               cells: [{
+                key: 'key-0',
                 children: [
                   'test'
                 ],
@@ -119,9 +131,11 @@ const CheckMarkCellExample = () => (
         {
           rows: [
             {
+              key: 'row-0',
               isDisabled: true,
               isToggled: true,
               cells: [{
+                key: 'key-0',
                 children: [
                   'test'
                 ],
@@ -132,17 +146,6 @@ const CheckMarkCellExample = () => (
       ]}
     />
   </React.Fragment>
-  //   <Row>
-  //     <CheckMarkCell />
-  //     <CheckMarkCell isSelectable alignmentPadding={2} />
-  //     <CheckMarkCell isSelected />
-  //     <CheckMarkCell isSelected isDisabled />
-  //     <CheckMarkCell isSelectable />
-  //     <CheckMarkCell isSelectable isSelected />
-  //     <CheckMarkCell isSelectable isDisabled />
-  //     <CheckMarkCell isSelectable isSelected isDisabled />
-  //   </Row>
-  // </Table>
 );
 
 export default CheckMarkCellExample;
