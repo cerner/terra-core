@@ -17,8 +17,11 @@
   --terra-form-select-background-color: #fff;
   --terra-form-select-background-size: 0 0;
   --terra-form-select-border: 1px solid #dedfe0;
+  --terra-form-select-border-radius: 3px;
   --terra-form-select-border-bottom-left-radius: 3px;
+  --terra-form-select-border-bottom-right-radius: 3px;
   --terra-form-select-border-top-left-radius: 3px;
+  --terra-form-select-border-top-right-radius: 3px;
   --terra-form-select-above-border-bottom-left-radius: 3px;
   --terra-form-select-above-border-bottom-right-radius: 3px;
   --terra-form-select-open-border-top-left-radius: 3px;
@@ -37,7 +40,7 @@
   --terra-form-select-focus-background-image: none;
   --terra-form-select-focus-background-size: 0 0;
   --terra-form-select-focus-border-color: #4cb2e9;
-  --terra-form-select-focus-box-shadow: 0 0 0 2px rgba(76, 178, 233, 0.25);
+  --terra-form-select-focus-box-shadow: 0 0 4px #a6d9f4;
   --terra-form-select-focus-hover-border-color: #4cb2e9;
   --terra-form-select-focus-transition-duration: 0s;
   --terra-form-select-focus-transition-timing-function: ease;
@@ -50,12 +53,12 @@
   --terra-form-select-incomplete-disabled-background-color: #fefd9a;
   --terra-form-select-invalid-background-color: none;
   --terra-form-select-invalid-background-image: none;
-  --terra-form-select-invalid-border-color: #c00;
-  --terra-form-select-invalid-box-shadow: 0 0 0 0 #c00;
+  --terra-form-select-invalid-border-color: #dedfe0;
+  --terra-form-select-invalid-box-shadow: none;
   --terra-form-select-invalid-focus-background-size: 0 0;
-  --terra-form-select-invalid-focus-border-color: #c00;
-  --terra-form-select-invalid-focus-box-shadow: 0 0 0 0 #c00;
-  --terra-form-select-invalid-hover-border-color: #c00;
+  --terra-form-select-invalid-focus-border-color: #4cb2e9;
+  --terra-form-select-invalid-focus-box-shadow: 0 0 4px #a6d9f4;
+  --terra-form-select-invalid-hover-border-color: #4cb2e9;
   --terra-form-select-line-height: 2;
   --terra-form-select-padding-bottom: 0;
   --terra-form-select-padding-left: 0.25rem;
@@ -70,13 +73,10 @@
   --terra-form-select-toggle-border: 1px solid #dedfe0;
   --terra-form-select-toggle-hover-background-color: none;
   --terra-form-select-toggle-padding: 0.5rem;
-  --terra-form-select-toggle-invalid-border-color: #c00;
-  --terra-form-select-toggle-invalid-box-shadow: 0 0 0 0 #c00;
-  --terra-form-select-toggle-invalid-focus-border-color: #c00;
-  --terra-form-select-toggle-invalid-focus-box-shadow: 0 0 0 0 #c00, 0 0 4px 3px rgba(229, 0, 0, 0.35);
-  --terra-form-select-border-radius: 3px;
-  --terra-form-select-border-bottom-right-radius: 3px;
-  --terra-form-select-border-top-right-radius: 3px;
+  --terra-form-select-toggle-invalid-border-color: #dedfe0;
+  --terra-form-select-toggle-invalid-box-shadow: none;
+  --terra-form-select-toggle-invalid-focus-border-color: #dedfe0;
+  --terra-form-select-toggle-invalid-focus-box-shadow: none;
 
   // Menu
   --terra-form-select-menu-margin: 0;
