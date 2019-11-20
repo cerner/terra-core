@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import onClickOutside from 'react-onclickoutside';
 import Dropdown from './_Dropdown';
 import styles from './_DropdownButtonBase.module.scss';
 
@@ -47,7 +46,7 @@ const propTypes = {
   /**
    * Callback to invoke function when user clicks outside the dropdown.
    */
-  onOutsideClick: PropTypes.func,
+  onClickOutside: PropTypes.func,
   /**
    * Callback ref to pass into the dom element.
    */
@@ -90,7 +89,7 @@ class DropdownButtonBase extends React.Component {
   }
 
   handleClickOutside(event) {
-    this.props.onOutsideClick(event);
+    this.props.onClickOutside(event);
   }
 
   render() {
@@ -104,7 +103,7 @@ class DropdownButtonBase extends React.Component {
       isDisabled,
       isKeyboardEvent,
       buttonRef,
-      onOutsideClick,
+      onClickOutside,
       refCallback,
       position,
       isAligned,
@@ -146,7 +145,7 @@ class DropdownButtonBase extends React.Component {
           width={calcWidth}
           isKeyboardEvent={isKeyboardEvent}
           buttonRef={buttonRef}
-          onClickOutside={onOutsideClick}
+          onClickOutside={onClickOutside}
           refCallback={refCallback}
           position={position}
           isAligned={isAligned}
@@ -161,4 +160,4 @@ class DropdownButtonBase extends React.Component {
 DropdownButtonBase.propTypes = propTypes;
 DropdownButtonBase.defaultProps = defaultProps;
 
-export default onClickOutside(DropdownButtonBase);
+export default DropdownButtonBase;

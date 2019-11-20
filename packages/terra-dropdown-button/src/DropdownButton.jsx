@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import onClickOutside from 'react-onclickoutside';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
 import Item from './Item';
@@ -49,6 +51,7 @@ const defaultProps = {
   isDisabled: false,
   variant: 'neutral',
 };
+const WrappedButtonBase = onClickOutside(DropdownButtonBase);
 
 class DropdownButton extends React.Component {
   constructor(props) {
@@ -171,7 +174,7 @@ class DropdownButton extends React.Component {
     );
 
     return (
-      <DropdownButtonBase
+      <WrappedButtonBase
         {...customProps}
         items={children}
         isOpen={isOpen}
@@ -181,7 +184,7 @@ class DropdownButton extends React.Component {
         requestClose={this.handleDropdownRequestClose}
         isKeyboardEvent={isKeyboardEvent}
         buttonRef={this.getButtonNode}
-        onOutsideClick={this.handleButtonClickOutside}
+        onClickOutside={this.handleButtonClickOutside}
         refCallback={(ref) => { this.dropdown = ref; }}
         position={position}
         isAligned={align}
@@ -202,7 +205,7 @@ class DropdownButton extends React.Component {
           <span className={cx('dropdown-button-text')}>{label}</span>
           <span className={cx('caret-icon')} />
         </button>
-      </DropdownButtonBase>
+      </WrappedButtonBase>
     );
   }
 }
