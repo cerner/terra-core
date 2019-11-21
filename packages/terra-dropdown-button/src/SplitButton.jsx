@@ -147,7 +147,7 @@ class SplitButton extends React.Component {
   }
 
   handleCaretKeyDown(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ caretIsActive: true });
       this.setState({ isKeyboardEvent: true });
     }

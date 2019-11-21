@@ -113,7 +113,7 @@ class DropdownButton extends React.Component {
     In FireFox active styles don't get applied on space
    */
   handleKeyDown(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ isActive: true });
       this.setState({ isKeyboardEvent: true });
     }
