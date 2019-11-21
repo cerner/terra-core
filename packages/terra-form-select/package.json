@@ -46,7 +46,7 @@
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
     "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
-    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
     "wdio": "npm run wdio-default && npm run wdio-lowlight"
   }
 }
