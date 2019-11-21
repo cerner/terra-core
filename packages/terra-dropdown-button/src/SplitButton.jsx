@@ -122,6 +122,7 @@ class SplitButton extends React.Component {
   handleDropdownRequestClose(callback) {
     this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
     this.setState({ isKeyboardEvent: false });
+    this.setState({ caretIsActive: false });
   }
 
   handleButtonClickOutside(event) {
@@ -154,7 +155,7 @@ class SplitButton extends React.Component {
   }
 
   handleCaretKeyUp(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ caretIsActive: false });
     }
   }

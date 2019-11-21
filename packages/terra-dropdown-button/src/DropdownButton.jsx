@@ -106,7 +106,7 @@ class DropdownButton extends React.Component {
 
   handleDropdownRequestClose(callback) {
     this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
-    this.setState({ isKeyboardEvent: false });
+    this.setState({ isKeyboardEvent: false, isActive: false });
   }
 
   /*
@@ -120,7 +120,7 @@ class DropdownButton extends React.Component {
   }
 
   handleKeyUp(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ isActive: false });
     }
   }
