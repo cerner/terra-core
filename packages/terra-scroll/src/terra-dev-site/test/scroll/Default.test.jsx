@@ -27,7 +27,7 @@ class DefaultScroll extends React.Component {
       <div>
         <button type="button" id="scroll" onClick={this.toggleScroll}>Scroll</button>
         <div className={cx('scroll-wrapper')}>
-          <Scroll id="scroll-test" refCallback={this.setNode}>
+          <Scroll tabIndex={0} id="scroll-test" refCallback={this.setNode}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,
             eget facilisis nunc ornare in. Vestibulum ut posuere neque. Maecenas nibh lacus, euismod sit amet magna sit amet,
             porttitor sollicitudin sapien. Vivamus nec lacus vel tortor ultrices efficitur vitae sit amet ipsum.

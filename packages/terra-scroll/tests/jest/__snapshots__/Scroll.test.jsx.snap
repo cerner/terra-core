@@ -3,14 +3,12 @@
 exports[`should render a default component 1`] = `
 <div
   className="scroll"
-  tabIndex="0"
 />
 `;
 
 exports[`should render with props 1`] = `
 <div
   className="scroll"
-  tabIndex="0"
 >
   child content
 </div>

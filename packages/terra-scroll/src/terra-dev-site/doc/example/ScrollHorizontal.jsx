@@ -9,7 +9,7 @@ export default () => (
   <div>
     <p>Overflow-X Container</p>
     <div className={cx('overflow-wrapper')}>
-      <Scroll>
+      <Scroll tabIndex={0}>
         <p className={cx('paragraph-x-wrapper')}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis dapibus erat,
           eget facilisis nunc ornare in. Vestibulum ut posuere neque. Maecenas nibh lacus, euismod sit amet magna sit amet,

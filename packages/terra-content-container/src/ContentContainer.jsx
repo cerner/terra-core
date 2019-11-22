@@ -54,7 +54,7 @@ const ContentContainer = ({
     <div {...customProps} className={contentLayoutClassNames}>
       {header && <div className={cx('header')}>{header}</div>}
       <div className={cx('main')}>
-        <Scroll className={cx('normalizer')} refCallback={scrollRefCallback}>
+        <Scroll tabIndex={fill ? 0 : -1} className={cx('normalizer')} refCallback={scrollRefCallback}>
           {children}
         </Scroll>
       </div>
