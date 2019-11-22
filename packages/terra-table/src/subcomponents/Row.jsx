@@ -7,8 +7,8 @@ import {
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
 } from './utils';
-import CheckMarkCell from './CheckMarkCell';
-import ChevronCell from './ChevronCell';
+
+// TODO: should we error/warn without link cell?
 
 const cx = classNames.bind(styles);
 
@@ -83,7 +83,6 @@ const defaultProps = {
   isVisiblySelected: false,
   isSelectable: false,
   isStriped: false,
-  // selectionStyle: 'default',
 };
 
 const Row = ({

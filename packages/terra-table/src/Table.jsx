@@ -20,7 +20,12 @@ import HeaderCheckMarkCell from './subcomponents/HeaderCheckMarkCell';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  // isSelectable: PropTypes.bool,
+  // <figcaption>
+  caption: PropTypes.string,
+  // TODO: Add table description
+  // <table aria-describedby="<need id>">
+  // <p id="<need id>"></p>
+  description: PropTypes.string.isRequired,
   rowStyle: PropTypes.oneOf([
     'none',
     'disclose',
@@ -28,10 +33,9 @@ const propTypes = {
   ]),
   checkStyle: PropTypes.oneOf([
     'none',
-    'readOnly', // TODO: address renaming
+    'readOnly', // TODO: address renaming this, UX ask
     'toggle',
   ]),
-
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
   columnWidths: PropTypes.arrayOf(widthShape),
   /**

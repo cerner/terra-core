@@ -82,7 +82,6 @@ const SectionHeader = ({
   ...customProps
 }) => {
   const attrSpread = {};
-  // const Element = `h${level}`;
   let titleElement = <span className={cx('title')}>{title}</span>;
   let accordionIcon;
   if (isCollapsible) {
