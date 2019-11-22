@@ -116,4 +116,14 @@
     padding-right: var(--terra-table-checkmark-cell-compact-padding-right, 0.7142857143rem);
     padding-top: var(--terra-table-checkmark-cell-compact-padding-top, 0.25rem);
   }
+
+  .checkmark.is-hidden {
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    width: 1px;
+  }
 }

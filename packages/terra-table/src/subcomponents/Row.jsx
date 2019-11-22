@@ -116,20 +116,8 @@ const Row = ({
       attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
       attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
     }
-    attrSpread['aria-selected'] = isAriaSelected;
+    attrSpread['aria-checked'] = isAriaSelected;
   }
-
-  // let check;
-  // let chevron;
-  // if (selectionStyle === 'checkmark') {
-  //   check = (
-  //     <CheckMarkCell isSelected={isSelected} />
-  //   );
-  // } else if (selectionStyle === 'chevron') {
-  //   chevron = (
-  //     <ChevronCell isVisible={isSelectable} />
-  //   );
-  // }
 
   const divider = dividerStyle !== 'none' ? `divider-${dividerStyle}` : null;
   const headerCellClasses = cx(
@@ -148,9 +136,7 @@ const Row = ({
       ref={refCallback}
       role="row"
     >
-      {/* {check} */}
       {children}
-      {/* {chevron} */}
     </div>
   );
 };

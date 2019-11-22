@@ -11,6 +11,7 @@ import {
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  isHidden: PropTypes.bool,
   /**
    * The bottom padding to be used for the HeaderCheckMarkCell in rem(s).
    * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.
@@ -65,6 +66,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  isHidden: false,
   isDisabled: false,
   isIndeterminate: false,
   isSelected: false,
@@ -73,6 +75,7 @@ const defaultProps = {
 
 const HeaderCheckMarkCell = ({
   alignmentPadding,
+  isHidden,
   isDisabled,
   isIndeterminate,
   isSelected,
@@ -88,7 +91,7 @@ const HeaderCheckMarkCell = ({
 }) => {
   const attrSpread = {};
   const attrCheck = {};
-  if (isSelectable) {
+  if (!isHidden && isSelectable) {
     if (isDisabled) {
       attrCheck['aria-disabled'] = true;
     } else {
@@ -124,17 +127,17 @@ const HeaderCheckMarkCell = ({
       {...attrSpread}
       className={customProps.className ? `${headerCheckMarkCellClasses} ${customProps.className}` : headerCheckMarkCellClasses}
       ref={refCallback}
-      // role={isSelectable ? 'columnheader' : 'none'}
       role="columnheader"
-      title="select all rows"
+      aria-label="select all rows" // TODO: replace with label or default?
     >
-      <div {...attrCheck} className={cx('container')}>
-        <span
+      <div {...attrCheck} className={cx({ container: !isHidden })}>
+        <div
           className={`${cx(
             'checkmark',
             { 'is-selected': isSelectable && isSelected },
             { 'is-intermediate': isSelectable && isIndeterminate },
             { 'is-disabled': isSelectable && isDisabled },
+            { 'is-hidden': isHidden },
           )} ${customProps.className}`}
         />
       </div>

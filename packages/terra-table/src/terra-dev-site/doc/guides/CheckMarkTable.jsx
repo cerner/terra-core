@@ -13,11 +13,11 @@ const createCellsForRow = cells => cells.map(cell => createCell(cell));
 const CheckMarkTable = () => {
   const [selectedKeys, setSelectedKeys] = useState([]);
   const [allSelected, setAllSelected] = useState(false);
-  const rowCount = mockData.length;
+  const rowCount = mockData.length; // This value needs to exclude or account for section headers
 
   const handleMarkSelection = (event, metaData) => {
-    event.preventDefault();
-    event.stopPropagation();
+    // event.preventDefault();
+    // event.stopPropagation();
 
     const newSelection = Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key);
     const isMax = newSelection.length === rowCount;
@@ -26,6 +26,9 @@ const CheckMarkTable = () => {
   };
 
   const handleHeaderMarkSelection = () => {
+    // event.preventDefault();
+    // event.stopPropagation();
+
     setAllSelected(!!selectedKeys.length || !allSelected);
     setSelectedKeys([]);
   };

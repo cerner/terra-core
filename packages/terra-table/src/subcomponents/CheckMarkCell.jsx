@@ -11,6 +11,8 @@ import {
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  isReadOnly: PropTypes.bool,
+  isHidden: PropTypes.bool,
   /**
    * The top padding to be used for the CheckMarkCell in rem(s).
    * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.
@@ -66,6 +68,8 @@ const propTypes = {
 };
 
 const defaultProps = {
+  isReadOnly: false,
+  isHidden: false,
   isDisabled: false,
   isSelected: false,
   isSelectable: false,
@@ -73,6 +77,8 @@ const defaultProps = {
 
 const CheckMarkCell = ({
   alignmentPadding,
+  isReadOnly,
+  isHidden,
   isDisabled,
   isSelected,
   isSelectable,
@@ -86,11 +92,14 @@ const CheckMarkCell = ({
   refCallback,
   ...customProps
 }) => {
-  const attrSpread = {};
+  const attrSpread = { 'aria-selected': isSelected };
   const attrCheck = {};
-  if (isSelectable) {
+  if (isHidden || isReadOnly) {
+    attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    attrSpread.tabIndex = '-1';
+  } else if (isSelectable) {
     if (isDisabled) {
-      attrCheck['aria-disabled'] = true;
+      attrSpread['aria-disabled'] = true;
     } else {
       attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
       attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
@@ -109,10 +118,6 @@ const CheckMarkCell = ({
         event.currentTarget.setAttribute('data-cell-show-focus', 'false');
       });
     }
-
-    // attributes for checkbox
-    attrCheck.role = 'checkbox';
-    attrCheck['aria-checked'] = isSelected;
   }
 
   if (alignmentPadding) {
@@ -125,6 +130,7 @@ const CheckMarkCell = ({
     { 'is-top-align': !!attrCheck.style },
   );
 
+  // needs new label
   return (
     <div
       {...customProps}
@@ -132,15 +138,18 @@ const CheckMarkCell = ({
       className={customProps.className ? `${checkMarkClasses} ${customProps.className}` : checkMarkClasses}
       ref={refCallback}
       role="gridcell"
-      aria-label="select row cells" // TODO: needs thing here
+      // aria-label="select row" // TODO: needs thing here, default or required?
     >
-      <div {...attrCheck} className={cx('container')}>
+      <span aria-checked={isSelected} role="checkbox">hamster</span>
+      <div aria-hidden {...attrCheck} className={cx({ container: !isHidden })}>
         <div
+          focusable="false"
           className={cx(
             'checkmark',
             { 'is-selectable': isSelectable },
             { 'is-selected': isSelected },
             { 'is-disabled': isDisabled },
+            { 'is-hidden': isHidden }, // TODO: need way to selectively do this
           )}
         />
       </div>

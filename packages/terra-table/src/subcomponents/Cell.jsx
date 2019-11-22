@@ -85,6 +85,7 @@ const Cell = ({
       className={customProps.className ? `${cellClassNames} ${customProps.className}` : cellClassNames}
       ref={refCallback}
       role="gridcell"
+      tabIndex={ isLink ? '0' : '-1' }
     >
       {content}
     </div>

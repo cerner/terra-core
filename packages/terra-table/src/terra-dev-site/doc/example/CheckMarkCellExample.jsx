@@ -6,6 +6,29 @@ import Table from 'terra-table';
 const CheckMarkCellExample = () => (
   <React.Fragment>
     <Table
+      rowStyle="toggle"
+      checkStyle="none"
+      headerData={{
+        cells: [{ id: 'test1', key: 'test1', children: ['test'] }],
+      }}
+      sectionData={[
+        {
+          rows: [
+            {
+              key: 'row-0',
+              checkAlignment: 2,
+              cells: [{
+                key: 'key-0',
+                children: [
+                  'test'
+                ],
+              }],
+            },
+          ],
+        }
+      ]}
+    />
+    <Table
       rowStyle="disclose"
       checkStyle="toggle"
       sectionData={[
@@ -47,6 +70,9 @@ const CheckMarkCellExample = () => (
     <Table
       rowStyle="toggle"
       checkStyle="readOnly"
+      headerData={{
+        cells: [{ id: 'test2', key: 'test1', children: ['test'] }],
+      }}
       sectionData={[
         {
           rows: [
@@ -86,6 +112,9 @@ const CheckMarkCellExample = () => (
     <Table
       rowStyle="toggle"
       checkStyle="readOnly"
+      headerData={{
+        cells: [{ id: 'test3', key: 'test1', children: ['test'] }],
+      }}
       sectionData={[
         {
           rows: [

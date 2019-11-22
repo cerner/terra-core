@@ -105,4 +105,14 @@
   [data-table-padding='compact'] .container {
     padding-bottom: var(--terra-table-header-check-cell-compact-padding-bottom, 0.35715rem);
   }
+
+  .checkmark.is-hidden {
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    width: 0;
+  }
 }

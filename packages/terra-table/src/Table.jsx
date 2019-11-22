@@ -70,6 +70,8 @@ const defaultProps = {
   dividerStyle: 'none',
   fill: false,
   paddingStyle: 'none',
+  rowStyle: 'none',
+  checkStyle: 'none',
 };
 
 const createCell = (cell, sectionId, columnId, colWidth, rowLabel) => (
@@ -97,6 +99,18 @@ const createCheckCell = (rowData, rowStyle, checkStyle, rowLabel) =>  {
         isSelectable={checkStyle === 'toggle'}
         isSelected={rowData.isToggled}
         isDisabled={rowData.isDisabled}
+        // isHidden // TODO: Conditional?
+        isReadOnly={checkStyle === 'readOnly'}
+      />
+    );
+  } else if (rowStyle === 'toggle' && checkStyle === 'none') {
+    return (
+      <CheckMarkCell
+        metaData={rowData.metaData}
+        onSelect={rowData.onRowAction}
+        label={rowLabel}
+        isSelected={rowData.isToggled}
+        isHidden
       />
     );
   }
@@ -110,8 +124,8 @@ const createChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
-const createHeaderCheckCell = (headerData, checkStyle) =>  {
-  if (checkStyle && checkStyle !== 'none') {
+const createHeaderCheckCell = (headerData, rowStyle, checkStyle) =>  {
+  if (checkStyle !== 'none') {
     return (
       <HeaderCheckMarkCell
         alignmentPadding={headerData.checkAlignment}
@@ -120,6 +134,13 @@ const createHeaderCheckCell = (headerData, checkStyle) =>  {
         isIndeterminate={headerData.selectAllStatus == 'indeterminate'}
         isDisabled={headerData.isDisabled}
         onSelect={headerData.onSelect}
+      />
+    );
+  } else if (rowStyle === 'toggle' && (checkStyle === 'none' || checkStyle === 'readOnly')) {
+    return (
+      <HeaderCheckMarkCell
+        label={headerData.rowLabel}
+        isHidden
       />
     );
   }
@@ -156,15 +177,13 @@ const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowSt
   </Row>
 );
 
-const createSections = (sectionData, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
+const createSections = (headerIndex, sectionData, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
   if (!sectionData) {
-    return;
+    return { sections: undefined, sectionIndex: headerIndex};
   }
 
-  // need style here?
-  let rowIndex = headerData && headerData.cells ? 1 : 0;
-
-  return sectionData.map((section) => {
+  let rowIndex = headerIndex;
+  const sections = sectionData.map((section) => {
     if (section.sectionHeader) {
       const header = section.sectionHeader;
       rowIndex += 1
@@ -194,18 +213,20 @@ const createSections = (sectionData, headerData, columnWidths, rowStyle, checkSt
     }
     return undefined;
   });
+
+  return { sections, sectionIndex: rowIndex};
 };
 
 const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevrons) =>  {
   if (!headerData || !headerData.cells) {
-    return;
+    return { headerIndex: 0, header: undefined };
   }
 
-  return (
+  return { headerIndex: 1, header: (
     <HeaderRow
       aria-rowindex={1}
     >
-      {createHeaderCheckCell(headerData, checkStyle)}
+      {createHeaderCheckCell(headerData, rowStyle, checkStyle)}
       {headerData.cells.map((cellData, colIndex) => (
         <HeaderCell
           key={cellData.key}
@@ -221,14 +242,14 @@ const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevron
       ))}
       {createHeaderChevronCell(rowStyle, hasChevrons)}
     </HeaderRow>
-  );
+  )};
 };
 
 const unpackTableData = (headerData, sectionData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
   // do we create start end elements here?
-  const header = createHeader(headerData, columnWidths, rowStyle, checkStyle, hasChevrons);
-  const sections = createSections(sectionData, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle);
-  return { header, sections };
+  const { headerIndex, header } = createHeader(headerData, columnWidths, rowStyle, checkStyle, hasChevrons);
+  const { sectionIndex, sections } = createSections(headerIndex, sectionData, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle);
+  return { rowCount: sectionIndex, header, sections };
 };
 
 const Table = ({
@@ -261,7 +282,7 @@ const Table = ({
     { rounded: !hasEndNodes },
   );
 
-  const { header, sections } = unpackTableData(headerData, sectionData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle);
+  const { rowCount, header, sections } = unpackTableData(headerData, sectionData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle);
 
   const rows = (
     <div
@@ -269,6 +290,7 @@ const Table = ({
       {...attrSpread}
       className={customProps.className ? `${tableClasses} ${customProps.className}` : tableClasses}
       role="grid"
+      aria-rowcount={rowCount} // TODO: add prop for this as override
     >
       {header}
       {sections ? (
