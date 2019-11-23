@@ -76,6 +76,7 @@ class ResponsiveElement extends React.Component {
     } = this.props;
 
     if (this.container) {
+      this.handleResize(this.container.getBoundingClientRect().width);
       this.resizeObserver = new ResizeObserver((entries) => {
         this.animationFrameID = window.requestAnimationFrame(() => {
           this.animationFrameID = null;
