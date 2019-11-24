@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed jest tests due to ResponsiveElement change
 
 4.14.0 - (October 30, 2019)
 ------------------
