@@ -164,14 +164,14 @@ class Image extends React.Component {
     if (placeholder) {
       if (this.state.isLoading) {
         return (
-          <React.Fragment>
+          <>
             {this.createImage(customProps, imageClasses)}
             {placeholder}
-          </React.Fragment>
+          </>
         );
       }
 
-      return this.state.isError ? placeholder : <React.Fragment>{this.createImage(customProps, imageClasses)}</React.Fragment>;
+      return this.state.isError ? placeholder : <>{this.createImage(customProps, imageClasses)}</>;
     }
 
     return this.createImage(customProps, imageClasses);
