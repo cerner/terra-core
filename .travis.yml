@@ -50,20 +50,20 @@ jobs:
     - name: enormous
       script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci
     - stage: compile - lowlight theme
-      script: travis_wait docker-compose run test-ci npm run compile:lowlight
+      script: travis_wait docker-compose run test-ci-lowlight npm run compile:lowlight
     - stage: wdio - lowlight theme
       name: tiny
-      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=tiny test-ci
+      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=tiny test-ci-lowlight
     - name: small
-      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=small test-ci
+      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=small test-ci-lowlight
     - name: medium
-      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=medium test-ci
+      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=medium test-ci-lowlight
     - name: large
-      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=large test-ci
+      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=large test-ci-lowlight
     - name: huge
-      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=huge test-ci
+      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=huge test-ci-lowlight
     - name: enormous
-      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=enormous test-ci
+      script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=enormous test-ci-lowlight
     - stage: deploy
       script: skip
       before_deploy:
