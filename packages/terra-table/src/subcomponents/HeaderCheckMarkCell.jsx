@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './HeaderCheckMarkCell.module.scss';
 import {
   wrappedOnClickForItem,
@@ -11,6 +12,7 @@ import {
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  label: PropTypes.string.isRequired,
   isHidden: PropTypes.bool,
   /**
    * The bottom padding to be used for the HeaderCheckMarkCell in rem(s).
@@ -74,6 +76,7 @@ const defaultProps = {
 };
 
 const HeaderCheckMarkCell = ({
+  label,
   alignmentPadding,
   isHidden,
   isDisabled,

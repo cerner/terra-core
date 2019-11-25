@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import ContentContainer from 'terra-content-container';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Table.module.scss';
 import sectionShape from './proptypes/sectionShape';
 import headerShape from './proptypes/headerShape';
@@ -20,12 +21,8 @@ import HeaderCheckMarkCell from './subcomponents/HeaderCheckMarkCell';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  // <figcaption>
-  caption: PropTypes.string,
-  // TODO: Add table description
-  // <table aria-describedby="<need id>">
-  // <p id="<need id>"></p>
-  description: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
   rowStyle: PropTypes.oneOf([
     'none',
     'disclose',
@@ -64,6 +61,11 @@ const propTypes = {
    * One of `'none'`, `'standard'`, `'compact'`.
    */
   paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
+  /**
+   * This value is used for accessibility when paged/virtualized rows are used.
+   * By default this value is derived from the number of rows passed within the sectionData.
+   */
+  numberOfRows: PropTypes.number,
   /**
    * Function callback returning the html node of the table.
    */
@@ -257,6 +259,7 @@ const unpackTableData = (headerData, sectionData, columnWidths, rowStyle, checkS
 };
 
 const Table = ({
+  id,
   dividerStyle,
   hasChevrons,
   rowStyle,
@@ -268,7 +271,9 @@ const Table = ({
   footerNode,
   headerNode,
   paddingStyle,
+  numberOfRows,
   scrollRefCallback,
+  summary,
   ...customProps
 }) => {
   const attrSpread = {};
@@ -294,8 +299,10 @@ const Table = ({
       {...attrSpread}
       className={customProps.className ? `${tableClasses} ${customProps.className}` : tableClasses}
       role="grid"
-      aria-rowcount={rowCount} // TODO: add prop for this as override
+      aria-rowcount={numberOfRows || rowCount}
+      aria-describedby={id}
     >
+      <VisuallyHiddenText id={id} text={summary} />
       {header}
       {sections ? (
         <div className={cx(['body'])} role="rowgroup" ref={scrollRefCallback}>
