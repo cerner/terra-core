@@ -21,26 +21,20 @@ exports[`should render a circle image component with fluid behavior 1`] = `
 `;
 
 exports[`should render a hidden src image and a visible placeholder image 1`] = `
-<div>
-  <div
-    className="hidden"
-  >
-    <img
-      alt=" "
-      className="image fill default"
-      height="75"
-      onError={[Function]}
-      onLoad={[Function]}
-      src="profile.jpg"
-      width="75"
-    />
-  </div>
+<Fragment>
+  <img
+    alt=" "
+    className="image fill default hidden"
+    height="75"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="profile.jpg"
+    width="75"
+  />
   <div>
-    <div>
-      placeholder text
-    </div>
+    placeholder text
   </div>
-</div>
+</Fragment>
 `;
 
 exports[`should render a thumbail image component with fluid behavior 1`] = `
@@ -66,13 +60,15 @@ exports[`should render the placeholder image 1`] = `
 `;
 
 exports[`should render the src image 1`] = `
-<img
-  alt="profile"
-  className="image fill default"
-  height="75"
-  onError={[Function]}
-  onLoad={[Function]}
-  src="profile.jpg"
-  width="75"
-/>
+<Fragment>
+  <img
+    alt="profile"
+    className="image fill default"
+    height="75"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="profile.jpg"
+    width="75"
+  />
+</Fragment>
 `;

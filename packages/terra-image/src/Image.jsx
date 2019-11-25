@@ -143,13 +143,20 @@ class Image extends React.Component {
       src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, fit, ...customProps
     } = this.props;
 
-    const imageClasses = cx([
+    const imageClassAttributes = [
       'image',
       fit,
       variant,
       customProps.className,
       { fluid: isFluid },
-    ]);
+    ];
+
+    if (placeholder && this.state.isLoading) {
+      imageClassAttributes.push('hidden');
+    }
+
+    const imageClasses = cx(imageClassAttributes);
+
     delete customProps.className;
     if (!this.state.isLoading) {
       objectFitImages(this.ImageRef.current);
@@ -157,14 +164,14 @@ class Image extends React.Component {
     if (placeholder) {
       if (this.state.isLoading) {
         return (
-          <div>
-            <div className={cx('hidden')}>{this.createImage(customProps, imageClasses)}</div>
-            <div>{placeholder}</div>
-          </div>
+          <React.Fragment>
+            {this.createImage(customProps, imageClasses)}
+            {placeholder}
+          </React.Fragment>
         );
       }
 
-      return this.state.isError ? placeholder : this.createImage(customProps, imageClasses);
+      return this.state.isError ? placeholder : <React.Fragment>{this.createImage(customProps, imageClasses)}</React.Fragment>;
     }
 
     return this.createImage(customProps, imageClasses);
