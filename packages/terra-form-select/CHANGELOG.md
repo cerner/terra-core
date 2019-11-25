@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
 
+### Fixed
+* Multiple instances of default variant select dropdown do not remain open at once on IE.
+
 5.36.0 - (October 30, 2019)
 ------------------
 ### Fixed
