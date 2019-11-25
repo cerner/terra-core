@@ -60,15 +60,13 @@ exports[`should render the placeholder image 1`] = `
 `;
 
 exports[`should render the src image 1`] = `
-<Fragment>
-  <img
-    alt="profile"
-    className="image fill default"
-    height="75"
-    onError={[Function]}
-    onLoad={[Function]}
-    src="profile.jpg"
-    width="75"
-  />
-</Fragment>
+<img
+  alt="profile"
+  className="image fill default"
+  height="75"
+  onError={[Function]}
+  onLoad={[Function]}
+  src="profile.jpg"
+  width="75"
+/>
 `;
