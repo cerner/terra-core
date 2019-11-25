@@ -9,6 +9,7 @@ const headerShape = PropTypes.shape({
   refCallback: PropTypes.func,
   allowSelectAll: PropTypes.bool,
   selectAllStatus: PropTypes.oneOf(['empty', 'checked', 'indeterminate']),
+  selectColumnHeaderLabel: PropTypes.string,
 });
 
 export default headerShape;

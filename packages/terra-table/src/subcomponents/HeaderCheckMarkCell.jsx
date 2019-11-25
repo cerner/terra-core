@@ -89,7 +89,7 @@ const HeaderCheckMarkCell = ({
   refCallback,
   ...customProps
 }) => {
-  const attrSpread = {};
+  const attrSpread = { role: 'none' };
   const attrCheck = {};
   if (!isHidden && isSelectable) {
     if (isDisabled) {
@@ -103,8 +103,6 @@ const HeaderCheckMarkCell = ({
       attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
     }
 
-    // attributes for checkbox
-    attrCheck.role = 'checkbox';
     if (isSelected) {
       attrCheck['aria-checked'] = isIndeterminate ? 'mixed' : true;
     } else {
@@ -112,8 +110,9 @@ const HeaderCheckMarkCell = ({
     }
   }
 
+  let attrPadding;
   if (alignmentPadding) {
-    attrCheck.style = { marginBottom: `${alignmentPadding}rem` };
+    attrPadding = { style: { marginBottom: `${alignmentPadding}rem` } };
   }
 
   const headerCheckMarkCellClasses = cx(
@@ -128,9 +127,9 @@ const HeaderCheckMarkCell = ({
       className={customProps.className ? `${headerCheckMarkCellClasses} ${customProps.className}` : headerCheckMarkCellClasses}
       ref={refCallback}
       role="columnheader"
-      aria-label="select all rows" // TODO: replace with label or default?
     >
-      <div {...attrCheck} className={cx({ container: !isHidden })}>
+      <VisuallyHiddenText aria-checked={isSelected} role="checkbox" {...attrCheck} text={label} />
+      <div {...attrPadding} className={cx({ container: !isHidden })}>
         <div
           className={`${cx(
             'checkmark',

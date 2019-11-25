@@ -103,7 +103,6 @@ const createCheckCell = (rowData, rowStyle, checkStyle, rowLabel) =>  {
         isSelectable={checkStyle === 'toggle'}
         isSelected={rowData.isToggled}
         isDisabled={rowData.isDisabled}
-        // isHidden // TODO: Conditional?
         isReadOnly={checkStyle === 'readOnly'}
       />
     );
@@ -138,12 +137,13 @@ const createHeaderCheckCell = (headerData, rowStyle, checkStyle) =>  {
         isIndeterminate={headerData.selectAllStatus == 'indeterminate'}
         isDisabled={headerData.isDisabled}
         onSelect={headerData.onSelect}
+        label={headerData.selectColumnHeaderLabel}
       />
     );
   } else if (rowStyle === 'toggle' && (checkStyle === 'none' || checkStyle === 'readOnly')) {
     return (
       <HeaderCheckMarkCell
-        label={headerData.rowLabel}
+        label={headerData.selectColumnHeaderLabel}
         isHidden
       />
     );

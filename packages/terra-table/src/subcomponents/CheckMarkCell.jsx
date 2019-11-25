@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './CheckMarkCell.module.scss';
 import {
   wrappedOnClickForItem,
@@ -11,6 +12,7 @@ import {
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  label: PropTypes.string.isRequired,
   isReadOnly: PropTypes.bool,
   isHidden: PropTypes.bool,
   /**
@@ -82,6 +84,7 @@ const CheckMarkCell = ({
   isDisabled,
   isSelected,
   isSelectable,
+  label,
   metaData,
   onBlur,
   onFocus,
@@ -99,7 +102,7 @@ const CheckMarkCell = ({
     attrSpread.tabIndex = '-1';
   } else if (isSelectable) {
     if (isDisabled) {
-      attrSpread['aria-disabled'] = true;
+      attrCheck['aria-disabled'] = true;
     } else {
       attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
       attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
@@ -120,8 +123,9 @@ const CheckMarkCell = ({
     }
   }
 
+  let attrPadding;
   if (alignmentPadding) {
-    attrCheck.style = { marginTop: `${alignmentPadding}rem` };
+    attrPadding = { style: { marginTop: `${alignmentPadding}rem` } };
   }
 
   const checkMarkClasses = cx(
@@ -130,7 +134,6 @@ const CheckMarkCell = ({
     { 'is-top-align': !!attrCheck.style },
   );
 
-  // needs new label
   return (
     <div
       {...customProps}
@@ -138,10 +141,9 @@ const CheckMarkCell = ({
       className={customProps.className ? `${checkMarkClasses} ${customProps.className}` : checkMarkClasses}
       ref={refCallback}
       role="gridcell"
-      // aria-label="select row" // TODO: needs thing here, default or required?
     >
-      <span aria-checked={isSelected} role="checkbox">hamster</span>
-      <div aria-hidden {...attrCheck} className={cx({ container: !isHidden })}>
+      <VisuallyHiddenText aria-checked={isSelected} role="checkbox" {...attrCheck} text={label} />
+      <div aria-hidden {...attrPadding} className={cx({ container: !isHidden })}>
         <div
           focusable="false"
           className={cx(
