@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.34.0 - (November 26, 2019)
+------------------
 ### Fixed
 * Added `aria-live` to `LoadingOverlay` for screenreader AT
 
