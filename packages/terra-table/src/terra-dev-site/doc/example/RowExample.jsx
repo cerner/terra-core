@@ -46,7 +46,7 @@ const RowExample = () => (
           rows: [
             {
               key: 'chevron_row',
-              rowLabel: 'test title',
+              discloseLabel: 'test title',
               cells: [
                 {
                   key: 'cell-0',

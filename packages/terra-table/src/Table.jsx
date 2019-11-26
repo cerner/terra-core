@@ -80,28 +80,28 @@ const defaultProps = {
   checkStyle: 'none',
 };
 
-const createCell = (cell, sectionId, columnId, colWidth, rowLabel) => (
+const createCell = (cell, sectionId, columnId, colWidth, rowData, isPrimary) => (
   <Cell
     headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
     key={cell.key}
     refCallback={cell.refCallback}
     removeInner={cell.removeInner}
     width={colWidth}
-    isLink={cell.isLink}
-    label={rowLabel}
+    isLink={isPrimary}
+    label={isPrimary ? rowData.discloseLabel : undefined}
   >
     {cell.children}
   </Cell>
 );
 
-const createCheckCell = (rowData, rowStyle, checkStyle, rowLabel) =>  {
+const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
   if (checkStyle === 'readOnly' || checkStyle === 'toggle') {
     return (
       <CheckMarkCell
         alignmentPadding={rowData.checkAlignment} // TODO: determine if by row, section, or table.
         metaData={rowData.metaData}
         onSelect={rowData.onCheckAction}
-        label={rowLabel}
+        label={rowData.toggleLabel}
         isSelectable={checkStyle === 'toggle'}
         isSelected={rowData.isToggled}
         isDisabled={rowData.isDisabled}
@@ -113,7 +113,7 @@ const createCheckCell = (rowData, rowStyle, checkStyle, rowLabel) =>  {
       <CheckMarkCell
         metaData={rowData.metaData}
         onSelect={rowData.onRowAction}
-        label={rowLabel}
+        label={rowData.toggleLabel}
         isSelected={rowData.isToggled}
         isHidden
       />
@@ -173,11 +173,11 @@ const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowSt
     isStriped={rowData.isStriped}
     dividerStyle={dividerStyle}
   >
-    {createCheckCell(rowData, rowStyle, checkStyle, rowData.rowLabel)}
+    {createCheckCell(rowData, rowStyle, checkStyle)}
     {rowData.cells.map((cell, colIndex) => {
       const columnId = headerData && headerData.cells ? headerData.cells[colIndex].id : undefined;
       const columnWidth = columnWidths ? columnWidths[colIndex] : undefined;
-      return createCell(cell, sectionId, columnId, columnWidth, rowData.rowLabel);
+      return createCell(cell, sectionId, columnId, columnWidth, rowData, colIndex === rowData.primaryIndex);
     })}
     {createChevronCell(rowStyle, hasChevrons)}
   </Row>

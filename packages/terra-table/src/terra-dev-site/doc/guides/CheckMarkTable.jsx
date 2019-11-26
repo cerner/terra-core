@@ -44,6 +44,9 @@ const CheckMarkTable = () => {
       metaData: { key: rowData.key },
       isToggled: getIsRowSelected(rowData.key),
       cells: createCellsForRow(rowData.cells),
+      toggleLabel: rowData.toggleText,
+      discloseLabel: rowData.discloseText,
+      primaryIndex: rowData.primaryIndex,
     }
   );
 
@@ -57,12 +60,15 @@ const CheckMarkTable = () => {
   }
   return (
     <Table
+      id="check-table"
+      summary="This table has rows that can be batch selected with the checkbox or diclosed for further details."
       paddingStyle="standard"
       rowStyle="disclose"
       checkStyle="toggle"
       headerData={{
         allowSelectAll: true,
         selectAllStatus: status,
+        selectColumnHeaderLabel: 'Batch Selection',
         onSelect: handleHeaderMarkSelection,
         cells: [
           { key: 'cell-0', id: 'toggle-0', children: ['Column 0'] },

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Cell.module.scss';
 import { styleFromWidth } from './utils';
 
@@ -73,7 +74,7 @@ const Cell = ({
     content = (
       <div role={contentRole} className={contentClass}>
         {content}
-        <span style={{ height: '0px', width: '0px', position: 'absolute', overflow: 'hidden' }}>{label}</span>
+        {contentRole && <VisuallyHiddenText text={label} />}
       </div>
     );
   }
@@ -85,7 +86,7 @@ const Cell = ({
       className={customProps.className ? `${cellClassNames} ${customProps.className}` : cellClassNames}
       ref={refCallback}
       role="gridcell"
-      tabIndex={ isLink ? '0' : '-1' }
+      tabIndex={ isLink ? '-1' : undefined }
     >
       {content}
     </div>

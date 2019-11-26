@@ -1,6 +1,9 @@
 const mockData = [
   {
     key: 'unique-0',
+    toggleText: 'Toggle Power Row 0',
+    discloseText: 'Power Row 0 - Details',
+    primaryIndex: 1,
     cells: [
       {
         key: 'unique-0-0',
@@ -22,6 +25,9 @@ const mockData = [
   },
   {
     key: 'unique-1',
+    toggleText: 'Toggle Power Row 1',
+    discloseText: 'Power Row 1 - Details',
+    primaryIndex: 1,
     cells: [
       {
         key: 'unique-1-0',
@@ -43,6 +49,9 @@ const mockData = [
   },
   {
     key: 'unique-2',
+    toggleText: 'Toggle Power Row 2',
+    discloseText: 'Power Row 2 - Details',
+    primaryIndex: 1,
     cells: [
       {
         key: 'unique-2-0',
@@ -64,6 +73,9 @@ const mockData = [
   },
   {
     key: 'unique-3',
+    toggleText: 'Toggle Power Row 3',
+    discloseText: 'Power Row 3 - Details',
+    primaryIndex: 1,
     cells: [
       {
         key: 'unique-3-0',
@@ -85,12 +97,16 @@ const mockData = [
   },
   {
     key: 'unique-4',
+    toggleText: 'Toggle Power Row 4',
+    discloseText: 'Power Row 4 - Details',
+    primaryIndex: 1,
     cells: [
       {
         key: 'unique-4-0',
         title: 'Item 4-0',
       },
       {
+
         key: 'unique-4-1',
         title: 'Item 4-1',
       },

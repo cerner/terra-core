@@ -3,7 +3,8 @@ import cellShape from './cellShape';
 
 const rowShape = PropTypes.shape({
   checkAlignment: PropTypes.number,
-  rowLabel: PropTypes.string.isRequired,
+  toggleLabel: PropTypes.string,
+  discloseLabel: PropTypes.string,
   isToggled: PropTypes.bool,
   isVisuallyToggled: PropTypes.bool,
   /**
