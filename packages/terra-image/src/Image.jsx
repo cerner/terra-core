@@ -143,19 +143,14 @@ class Image extends React.Component {
       src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, fit, ...customProps
     } = this.props;
 
-    const imageClassAttributes = [
+    const imageClasses = cx([
       'image',
       fit,
       variant,
       customProps.className,
       { fluid: isFluid },
-    ];
-
-    if (placeholder && this.state.isLoading) {
-      imageClassAttributes.push('hidden');
-    }
-
-    const imageClasses = cx(imageClassAttributes);
+      { hidden: placeholder && this.state.isLoading },
+    ]);
 
     delete customProps.className;
     if (!this.state.isLoading) {
