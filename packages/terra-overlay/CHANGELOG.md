@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+3.35.0 - (November 26, 2019)
+------------------
+### Fixed
+* Added `aria-live` to `LoadingOverlay` for screenreader AT
+
+3.34.0 - (November 7, 2019)
+------------------
+### Changed
+* Updating tests to be better isolated from terra-dev-site markup.
+
 3.33.0 - (October 30, 2019)
 ------------------
 ### Fixed
