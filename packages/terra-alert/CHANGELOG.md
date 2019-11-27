@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+4.14.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+4.13.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 4.12.0 - (September 19, 2019)
 ------------------
 ### Changed

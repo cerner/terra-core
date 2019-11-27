@@ -45,7 +45,11 @@ const propTypes = {
    */
   isAutoResizable: PropTypes.bool,
   /**
-   * Whether the form is invalid
+   * Whether the text area displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the text area displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -60,6 +64,10 @@ const propTypes = {
    * Function to trigger when user focuses on this textarea.
    */
   onFocus: PropTypes.func,
+  /**
+   * Placeholder text.
+   */
+  placeholder: PropTypes.string,
   /**
    * Whether the input is required or not.
    */
@@ -89,8 +97,10 @@ const defaultProps = {
   disabled: false,
   name: null,
   isAutoResizable: false,
+  isIncomplete: false,
   isInvalid: false,
   onChange: undefined,
+  placeholder: undefined,
   required: false,
   rows: null,
   size: undefined,
@@ -184,7 +194,9 @@ class Textarea extends React.Component {
       required,
       onChange,
       onFocus,
+      placeholder,
       isAutoResizable,
+      isIncomplete,
       isInvalid,
       value,
       defaultValue,
@@ -200,6 +212,7 @@ class Textarea extends React.Component {
     const textareaClasses = cx([
       'textarea',
       { 'form-error': isInvalid },
+      { 'form-incomplete': (isIncomplete && required && !isInvalid) },
       { 'full-size': size === 'full' },
       { resizable: isAutoResizable && !this.isMobileDevice },
       { 'no-resize': (size || rows) },
@@ -247,6 +260,7 @@ class Textarea extends React.Component {
         name={name}
         onFocus={this.onFocus}
         onChange={this.onChange}
+        placeholder={placeholder}
         required={required}
         rows={textareaRows}
         className={textareaClasses}

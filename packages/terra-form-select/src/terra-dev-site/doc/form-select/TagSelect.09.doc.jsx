@@ -16,8 +16,12 @@ import ControlledExample from '../example/tag/Controlled';
 import ControlledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Controlled';
 import DisabledExample from '../example/tag/Disabled';
 import DisabledExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Disabled';
+import IsTouchAccessibleExample from '../example/tag/IsTouchAccessible';
+import IsTouchAccessibleExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/IsTouchAccessible';
 import InvalidExample from '../example/tag/Invalid';
 import InvalidExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Invalid';
+import IncompleteExample from '../example/tag/Incomplete';
+import IncompleteExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/Incomplete';
 import MaxHeightExample from '../example/tag/MaxHeight';
 import MaxHeightExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/tag/MaxHeight';
 import OptGroupExample from '../example/tag/OptGroup';
@@ -52,6 +56,11 @@ const Index = () => (
       example: <TagExample />,
       source: TagExampleSrc,
     }, {
+      title: 'Is Touch Accessible',
+      description: 'Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices.',
+      example: <IsTouchAccessibleExample />,
+      source: IsTouchAccessibleExampleSrc,
+    }, {
       title: 'Disabled',
       example: <DisabledExample />,
       source: DisabledExampleSrc,
@@ -60,6 +69,11 @@ const Index = () => (
       description: 'Applies theme-specific styling for invalid. Will also display error text when used with a Field.',
       example: <InvalidExample />,
       source: InvalidExampleSrc,
+    }, {
+      title: 'Incomplete',
+      description: 'Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***',
+      example: <IncompleteExample />,
+      source: IncompleteExampleSrc,
     }, {
       title: 'Ability to add Option Groups',
       description: 'An OptGroup provides a way to group options together within the listbox.',

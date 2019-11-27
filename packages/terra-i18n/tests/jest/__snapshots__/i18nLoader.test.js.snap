@@ -1,5 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`i18nLoader permitParams - prod environment still throws error when callback is not function 1`] = `"Second argument must be function"`;
-
 exports[`i18nLoader permitParams throws error when callback is not function 1`] = `"Second argument must be function"`;

@@ -50,7 +50,6 @@ const region3 = {
   },
 };
 
-
 const DashboardLayout = () => (
   <DynamicGrid defaultTemplate={template}>
     <DynamicGrid.Region defaultPosition={leftGutter}>

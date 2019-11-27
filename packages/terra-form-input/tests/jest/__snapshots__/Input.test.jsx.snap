@@ -25,6 +25,7 @@ exports[`Input should honor aria-label passed to component 1`] = `
 exports[`Input should pass in refCallback as the ref prop of the input element 1`] = `
 <Input
   disabled={false}
+  isIncomplete={false}
   isInvalid={false}
   name={null}
   refCallback={
@@ -33,7 +34,6 @@ exports[`Input should pass in refCallback as the ref prop of the input element 1
         Array [
           <input
             class="form-input"
-            value=""
           />,
         ],
       ],
@@ -117,6 +117,16 @@ exports[`Input should set the forminput to disabled when passed into the compone
   disabled={true}
   name={null}
   required={false}
+/>
+`;
+
+exports[`Input should set the forminput to incomplete when isIncomplete and required is passed into the component 1`] = `
+<input
+  aria-required="true"
+  className="form-input form-incomplete"
+  disabled={false}
+  name={null}
+  required={true}
 />
 `;
 

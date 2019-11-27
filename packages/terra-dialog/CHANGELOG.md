@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+2.28.0 - (October 30, 2019)
+------------------
+### Changed
+* Added `vertical-align` to align inline-svg
+
+2.27.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.26.0 - (September 19, 2019)
 ------------------
 ### Changed

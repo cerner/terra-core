@@ -5,6 +5,12 @@ Terra.describeViewports('Select', ['tiny'], () => {
     Terra.it.validatesElement();
   });
 
+  describe('should render a placeholder', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-placeholder'));
+
+    Terra.it.validatesElement();
+  });
+
   describe('should open the dropdown and honor the set max height', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/max-height'));
 
@@ -58,7 +64,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown menu should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -76,7 +82,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown menu should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -94,7 +100,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown menu should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -175,7 +181,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       it('default should close on toggle icon click', () => {
@@ -196,7 +202,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('opened', { selector: '#root' });
@@ -219,7 +225,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('toggle-icon-opened-dropdown', { selector: '#root' });
@@ -282,6 +288,32 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       Terra.it.validatesElement('selected-option', { selector: '#root' });
     });
+
+    describe('default should open dropdown by click after initial selection', () => {
+      it('default should open the dropdown by clicking the select', () => {
+        browser.click('[data-terra-select]');
+        browser.click('#terra-select-option-blue');
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement('open-dropdown-after-selection', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
+  });
+
+  describe('Default Variant - Multiple Dropdown', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/multiple-default-select'));
+    describe('default should close all dropdown and open the selected dropdown', () => {
+      it('default should open the dropdown by clicking the select and close other dropdown', () => {
+        browser.click('[class*=left-select]');
+        browser.click('[class*=right-select]');
+      });
+
+      Terra.it.validatesElement('close-and-open-dropdown-after-selection', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
   });
 
   describe('Default Variant - controlled', () => {
@@ -326,7 +358,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -352,7 +384,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('dropdown menu should be focused', async () => {
-        (await browser.hasFocus('#terra-select-menu')).should.be.true;
+        (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
       Terra.it.validatesElement('second-option-highlighted', { selector: '#root' });
@@ -712,6 +744,48 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Combobox Variant - Is Touch Accessible', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-combobox');
+    });
+
+    describe('is touch accessible combobox should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('combobox should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('combobox input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('is touch accessible combobox should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+  });
+
   describe('Multiple Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
@@ -1056,6 +1130,48 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Multiple Variant - Is Touch Accessible', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-multi-select');
+    });
+
+    describe('is touch accessible multiple should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('multiple should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('multiple input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('is touch accessible multiple should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+  });
+
   describe('Search Variant - uncontrolled', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
@@ -1387,6 +1503,48 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Search Variant - Is Touch Accessible', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-search-select');
+    });
+
+    describe('is touch accessible search should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('search should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('search input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('is touch accessible search should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+  });
+
   describe('Tag Variant', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
@@ -1711,6 +1869,48 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
   });
 
+  describe('Tag Variant - Is Touch Accessible', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-tag-select');
+    });
+
+    describe('is touch accessible tag should be closed initially', () => {
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('tag should gain focus when tabbed to', () => {
+      it('should tab focus to the select', () => {
+        browser.keys('Tab');
+      });
+
+      it('tag input should be focused', () => {
+        browser.hasFocus('[data-terra-select] input').should.be.true;
+      });
+
+      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+
+    describe('is touch accessible tag should open when clicking on it', () => {
+      it('should open on click', () => {
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
+    });
+  });
+
   describe('Combobox Variant - clear option', () => {
     describe('combobox should deselect the selected item when clicking on the clear option.', () => {
       before(() => {
@@ -1783,5 +1983,65 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       Terra.it.validatesElement('selected-option');
     });
+  });
+
+  describe('Default variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-default'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Combobox variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-combobox'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Multiple variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-multiple'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Search variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-search'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Tag variant - incomplete', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-tag'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Default variant - invalid', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-default'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Combobox variant - invalid', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-combobox'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Multiple variant - invalid', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-multiple'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Search variant - invalid', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-search'));
+
+    Terra.it.validatesElement();
+  });
+
+  describe('Tag variant - invalid', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-tag'));
+
+    Terra.it.validatesElement();
   });
 });

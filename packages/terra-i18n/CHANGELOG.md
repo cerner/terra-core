@@ -4,6 +4,24 @@ ChangeLog
 Unreleased
 ----------
 
+4.19.0 - (October 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.18.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Fixed
+* Fix Intl Loading and conditionally add the `intl` polyfill when Intl is not provided by the browser. This issue was discovered when running in IE 10.
+
+4.17.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 4.16.0 - (September 26, 2019)
 ------------------
 ### Removed

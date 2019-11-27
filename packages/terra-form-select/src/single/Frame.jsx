@@ -44,7 +44,11 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether the select is in an invalid state.
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the select displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -93,6 +97,7 @@ const defaultProps = {
   clearOptionDisplay: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
   noResultContent: undefined,
   onDeselect: undefined,
@@ -148,7 +153,7 @@ class Frame extends React.Component {
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
-    this.selectMenu = '#terra-select-menu';
+    this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -160,6 +165,10 @@ class Frame extends React.Component {
 
   componentWillUnmount() {
     clearTimeout(this.debounceTimer);
+  }
+
+  setSelectMenuRef(element) {
+    this.selectMenu = element;
   }
 
   getDisplay(displayId, placeholderId) {
@@ -204,8 +213,8 @@ class Frame extends React.Component {
 
       // Allows time for state update to render select menu DOM before shifting focus to it
       setTimeout(() => {
-        if (document.querySelector(this.selectMenu)) {
-          document.querySelector(this.selectMenu).focus();
+        if (this.selectMenu) {
+          this.selectMenu.focus();
         }
       }, 10);
       return;
@@ -213,8 +222,8 @@ class Frame extends React.Component {
 
     // Allows time for state update to render select menu DOM before shifting focus to it
     setTimeout(() => {
-      if (document.querySelector(this.selectMenu)) {
-        document.querySelector(this.selectMenu).focus();
+      if (this.selectMenu) {
+        this.selectMenu.focus();
       }
     }, 10);
 
@@ -230,8 +239,8 @@ class Frame extends React.Component {
     }
 
     const { dropdownAttrs, maxHeight } = this.props;
-    const { select, dropdown } = this;
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, select, dropdown, maxHeight));
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight));
   }
 
   /**
@@ -243,6 +252,17 @@ class Frame extends React.Component {
       return;
     }
 
+    // eslint-disable-next-line no-underscore-dangle
+    const _onBlur = () => {
+      this.setState({ isFocused: false });
+
+      this.closeDropdown();
+
+      if (this.props.onBlur) {
+        this.props.onBlur(event);
+      }
+    };
+
     /**
      * When the select blur event is triggered with the default variant, this code checks if the focus
      * is shifted to the select menu and if so, suppresses the rest of the blur handler to prevent
@@ -250,22 +270,18 @@ class Frame extends React.Component {
      */
     // event.relatedTarget returns null in IE 10 / IE 11
     if (event.relatedTarget == null) {
-      // IE 11 sets document.activeElement to the next focused element before the blur event is called
-      if (document.querySelector(this.selectMenu) === document.activeElement) {
-        return;
-      }
+      // Allow 10ms timeout hack for the browser to set document.activeElement so that the currently
+      // focused page element is available when the blur event is fired.
+      // See discussion on https://github.com/facebook/react/issues/3751
+      // https://github.com/mui-org/material-ui/blob/v3.9.3/packages/material-ui/src/MenuList/MenuList.js#L27
+      setTimeout(() => {
+        if (this.selectMenu !== document.activeElement) {
+          _onBlur();
+        }
+      }, 10);
     // Modern browsers support event.relatedTarget
-    } else if (document.querySelector(this.selectMenu) === event.relatedTarget) {
-      return;
-    }
-
-
-    this.setState({ isFocused: false });
-
-    this.closeDropdown();
-
-    if (this.props.onBlur) {
-      this.props.onBlur(event);
+    } else if (this.selectMenu !== event.relatedTarget) {
+      _onBlur();
     }
   }
 
@@ -424,6 +440,7 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
+      isIncomplete,
       isInvalid,
       maxHeight,
       noResultContent,
@@ -443,6 +460,7 @@ class Frame extends React.Component {
       { 'is-disabled': disabled },
       { 'is-focused': this.state.isFocused },
       { 'is-invalid': isInvalid },
+      { 'is-incomplete': (isIncomplete && required && !isInvalid) },
       { 'is-open': this.state.isOpen },
       customProps.className,
     ]);
@@ -453,8 +471,10 @@ class Frame extends React.Component {
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
+    const selectMenuId = `terra-select-menu-${uniqueid()}`;
 
     const menuProps = {
+      id: selectMenuId,
       value,
       onDeselect,
       noResultContent,
@@ -464,6 +484,7 @@ class Frame extends React.Component {
       input: this.input,
       select: this.select,
       clearOptionDisplay,
+      refCallback: this.setSelectMenuRef,
     };
 
     return (
@@ -472,13 +493,13 @@ class Frame extends React.Component {
         role={this.role()}
         aria-required={required}
         data-terra-select-combobox
-        aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-labelledby={ariaLabelledByIds(labelId, displayId, placeholderId)}
         aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-owns={this.state.isOpen ? selectMenuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}

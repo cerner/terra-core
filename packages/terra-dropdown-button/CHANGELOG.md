@@ -4,6 +4,20 @@ ChangeLog
 Unreleased
 ----------
 
+1.7.0 - (October 30, 2019)
+------------------
+### Fixed
+* Primary button click not closing menu, when menu is open issue fixed.
+* Multiple instances of split-button and drop-down cannot be opened simultaneously.
+
+### Added
+* Added metaData and event to `onSelect` callback.
+
+1.6.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 1.5.0 - (September 19, 2019)
 ------------------
 ### Changed

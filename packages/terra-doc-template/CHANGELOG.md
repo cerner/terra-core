@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+2.21.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+2.20.0 - (October 3, 2019)
+------------------
+### Removed
+* Removed `overflow: hidden` from ExampleTemplate css
+
 2.19.0 - (September 19, 2019)
 ------------------
 ### Changed
