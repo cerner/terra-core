@@ -26,7 +26,6 @@ const TEXTAREA_ROW_SIZES = {
   medium: 5,
   large: 10,
 };
-
 const propTypes = {
   /**
   * String that labels the current element. 'aria-label' must be present,
@@ -94,7 +93,7 @@ const defaultProps = {
   onChange: undefined,
   required: false,
   rows: null,
-  size: 'small',
+  size: undefined,
   value: undefined,
   refCallback: undefined,
 };
@@ -168,7 +167,12 @@ class Textarea extends React.Component {
   }
 
   resizeTextarea() {
-    const minRows = this.props.rows || TEXTAREA_ROW_SIZES[this.props.size];
+    let minRows;
+    if (this.props.size === 'full') {
+      minRows = TEXTAREA_ROW_SIZES.full;
+    } else {
+      minRows = this.props.rows || TEXTAREA_ROW_SIZES[this.props.size] || TEXTAREA_ROW_SIZES.small;
+    }
     this.textarea.rows = minRows;
     const rows = Math.ceil((this.textarea.scrollHeight - this.textarea.baseScrollHeight) / this.textarea.currentLineHeight);
     this.textarea.rows = minRows + rows;
@@ -198,6 +202,7 @@ class Textarea extends React.Component {
       { 'form-error': isInvalid },
       { 'full-size': size === 'full' },
       { resizable: isAutoResizable && !this.isMobileDevice },
+      { 'no-resize': (size || rows) },
       additionalTextareaProps.className,
     ]);
 
@@ -219,7 +224,12 @@ class Textarea extends React.Component {
       additionalTextareaProps['aria-required'] = 'true';
     }
 
-    const textareaRows = rows || TEXTAREA_ROW_SIZES[size];
+    let textareaRows;
+    if (size === 'full') {
+      textareaRows = TEXTAREA_ROW_SIZES.full;
+    } else {
+      textareaRows = rows || TEXTAREA_ROW_SIZES[size] || TEXTAREA_ROW_SIZES.small;
+    }
 
     if (value !== undefined) {
       additionalTextareaProps.value = value;

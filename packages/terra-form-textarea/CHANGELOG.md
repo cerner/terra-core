@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Disallowed resizing of text area if `size` or `rows` props are provided by user.
 
 3.27.0 - (September 26, 2019)
 ------------------

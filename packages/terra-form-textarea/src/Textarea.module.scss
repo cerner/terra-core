@@ -85,6 +85,10 @@
     width: 100%;
   }
 
+  .no-resize {
+    resize: none;
+  }
+
   .resizable {
     box-sizing: padding-box;
     overflow: hidden;

@@ -47,7 +47,7 @@ exports[`should not set the textarea to resizable when viewed on browser with on
 exports[`should render a TextArea when all the possible props are passed into it 1`] = `
 <textarea
   aria-required="true"
-  class="textarea"
+  class="textarea no-resize"
   name="description"
   required=""
   rows="5"
@@ -64,27 +64,27 @@ exports[`should render a default TextArea component 1`] = `
 
 exports[`should render a full size textbox appropriately 1`] = `
 <textarea
-  class="textarea full-size"
+  class="textarea full-size no-resize"
 />
 `;
 
 exports[`should render a large textbox appropriately 1`] = `
 <textarea
-  class="textarea"
+  class="textarea no-resize"
   rows="10"
 />
 `;
 
 exports[`should render a medium textbox appropriately 1`] = `
 <textarea
-  class="textarea"
+  class="textarea no-resize"
   rows="5"
 />
 `;
 
 exports[`should render a small textbox appropriately 1`] = `
 <textarea
-  class="textarea"
+  class="textarea no-resize"
   rows="2"
 />
 `;
@@ -118,7 +118,7 @@ exports[`should set the onChange and onFocus functions appropriately when the te
 
 exports[`should set the rows attribute appropriate when it is passed into the textarea 1`] = `
 <textarea
-  class="textarea"
+  class="textarea no-resize"
   rows="7"
 />
 `;

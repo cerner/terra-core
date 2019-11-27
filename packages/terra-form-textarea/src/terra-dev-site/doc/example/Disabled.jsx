@@ -6,7 +6,6 @@ const DisabledExample = () => (
   <Field label="Disabled Textarea" htmlFor="disabled">
     <Textarea
       disabled
-      size="small"
       value="I'm disabled."
       id="disabled"
     />

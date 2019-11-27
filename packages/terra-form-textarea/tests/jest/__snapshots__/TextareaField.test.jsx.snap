@@ -35,7 +35,6 @@ exports[`should render a TextareaField with props 1`] = `
     onChange={[Function]}
     required={false}
     rows={15}
-    size="small"
     value="Value"
   />
 </Field>
@@ -69,7 +68,6 @@ exports[`should render a default TextareaField component 1`] = `
     name={null}
     required={false}
     rows={null}
-    size="small"
   />
 </Field>
 `;
@@ -102,7 +100,6 @@ exports[`should render a disabled TextareaField component 1`] = `
     name={null}
     required={false}
     rows={null}
-    size="small"
   />
 </Field>
 `;
@@ -135,7 +132,6 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
     name={null}
     required={false}
     rows={null}
-    size="small"
   />
 </Field>
 `;
@@ -175,7 +171,6 @@ exports[`should render a valid TextareaField with props 1`] = `
     onChange={[Function]}
     required={false}
     rows={null}
-    size="small"
     type="number"
     value="Value"
   />

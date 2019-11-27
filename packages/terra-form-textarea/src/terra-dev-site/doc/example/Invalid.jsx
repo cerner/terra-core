@@ -22,7 +22,6 @@ class InvalidExample extends Component {
           value={this.state.area}
           isInvalid={this.state.area === ''}
           onChange={this.handleAreaChange}
-          size="small"
           id="invalid"
         />
       </Field>
