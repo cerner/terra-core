@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
+5.37.0 - (November 26, 2019)
+------------------
 ### Fixed
 * Multiple instances of default variant select dropdown do not remain open at once on IE.
 
