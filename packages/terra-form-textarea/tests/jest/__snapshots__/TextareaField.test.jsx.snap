@@ -170,7 +170,6 @@ exports[`should render a placeholder within the textarea field 1`] = `
     placeholder="placeholder"
     required={false}
     rows={null}
-    size="small"
   />
 </Field>
 `;
@@ -205,7 +204,6 @@ exports[`should render a placeholder within the textarea field when passed as an
     placeholder="Placeholder"
     required={false}
     rows={null}
-    size="small"
   />
 </Field>
 `;
