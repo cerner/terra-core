@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed jest tests due to ResponsiveElement change
+
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 

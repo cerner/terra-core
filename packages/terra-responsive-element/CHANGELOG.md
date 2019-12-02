@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Flicker for responsiveTo parent elements
+
 ### Added
 * Added reference wdio screenshots for "orion-fusion-theme".
 
