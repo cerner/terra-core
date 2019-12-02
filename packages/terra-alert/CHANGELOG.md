@@ -6,6 +6,9 @@ Unreleased
 ### Fixed
 * Fixed jest tests due to ResponsiveElement change
 
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 4.14.0 - (October 30, 2019)
 ------------------
 ### Fixed
