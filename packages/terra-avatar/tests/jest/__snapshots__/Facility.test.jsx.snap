@@ -89,26 +89,18 @@ exports[`Facility should render fallback facility avatar when invalid image is p
 <div
   class="avatar five image"
 >
-  <div>
-    <div
-      class="hidden"
-    >
-      <img
-        alt="London"
-        class="image cover default image"
-        src="https://path/to/invalid_image.jpg"
-      />
-    </div>
-    <div>
-      <span
-        alt="London"
-        aria-hidden="false"
-        aria-label="London"
-        class="icon facility"
-        role="img"
-      />
-    </div>
-  </div>
+  <img
+    alt="London"
+    class="image cover default image hidden"
+    src="https://path/to/invalid_image.jpg"
+  />
+  <span
+    alt="London"
+    aria-hidden="false"
+    aria-label="London"
+    class="icon facility"
+    role="img"
+  />
 </div>
 `;
 
@@ -116,26 +108,18 @@ exports[`Facility should render image facility avatar when image is passed in 1`
 <div
   class="avatar five image"
 >
-  <div>
-    <div
-      class="hidden"
-    >
-      <img
-        alt="London"
-        class="image cover default image"
-        src="test-file-stub"
-      />
-    </div>
-    <div>
-      <span
-        alt="London"
-        aria-hidden="false"
-        aria-label="London"
-        class="icon facility"
-        role="img"
-      />
-    </div>
-  </div>
+  <img
+    alt="London"
+    class="image cover default image hidden"
+    src="test-file-stub"
+  />
+  <span
+    alt="London"
+    aria-hidden="false"
+    aria-label="London"
+    class="icon facility"
+    role="img"
+  />
 </div>
 `;
 

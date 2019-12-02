@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Updated snapshots for terra-image change.
 
 2.30.0 - (October 30, 2019)
 ------------------
