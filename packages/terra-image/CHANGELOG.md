@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* One request made instead of two when image is rendered with a placeholder.
 
 3.20.0 - (October 30, 2019)
 ------------------
