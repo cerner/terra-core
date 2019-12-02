@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
 2.24.0 - (November 12, 2019)
 ------------------
