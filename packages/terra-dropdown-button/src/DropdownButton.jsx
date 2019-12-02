@@ -97,10 +97,14 @@ class DropdownButton extends React.Component {
     event.preventDefault();
     this.setState({
       isOpen: false,
+      isKeyboardEvent: false,
     });
   }
 
   handleDropdownButtonClick() {
+    if (this.state.isOpen) {
+      this.setState({ isKeyboardEvent: false });
+    }
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
   }
 

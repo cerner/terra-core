@@ -116,6 +116,9 @@ class SplitButton extends React.Component {
   }
 
   handleDropdownButtonClick() {
+    if (this.state.isOpen) {
+      this.setState({ isKeyboardEvent: false });
+    }
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
   }
 
@@ -129,6 +132,7 @@ class SplitButton extends React.Component {
     event.preventDefault();
     this.setState({
       isOpen: false,
+      isKeyboardEvent: false,
     });
   }
 
