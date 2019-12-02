@@ -33,7 +33,8 @@
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.21.0",
-    "terra-toggle": "^3.24.0"
+    "terra-toggle": "^3.24.0",
+    "terra-mixins": "^1.33.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -43,6 +44,8 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-fusion"
   }
 }

@@ -1,0 +1,28 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-show-hide-v1-button-color: #0065a3;
+  --terra-show-hide-v1-button-font-size: 1rem;
+  --terra-show-hide-v1-button-line-height: 1.417;
+  --terra-show-hide-v1-button-padding-bottom: 0;
+  --terra-show-hide-v1-button-padding-left: 0;
+  --terra-show-hide-v1-button-padding-right: 0;
+  --terra-show-hide-v1-button-padding-top: 0;
+  --terra-show-hide-v1-button-text-decoration: none;
+  --terra-show-hide-v1-button-icon-height: 0;
+  --terra-show-hide-v1-button-icon-width: 0;
+  --terra-show-hide-v1-button-icon-margin-left: 0;
+  --terra-show-hide-v1-button-focus-background-color: transparent;
+  --terra-show-hide-v1-button-focus-border-radius: 3px;
+  --terra-show-hide-v1-button-focus-box-shadow: 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25);
+  --terra-show-hide-v1-button-focus-color: #004c76;
+  --terra-show-hide-v1-button-focus-text-decoration: underline;
+  --terra-show-hide-v1-button-hover-background-color: transparent;
+  --terra-show-hide-v1-button-hover-color: #004c76;
+  --terra-show-hide-v1-button-hover-text-decoration: underline;
+  --terra-show-hide-v1-button-active-color: #0065a3;
+
+  @include terra-inline-svg-var('--terra-show-hide-v1-button-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg"></svg>');
+  @include terra-inline-svg-var('--terra-show-hide-v1-button-focus-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg"></svg>');
+  @include terra-inline-svg-var('--terra-show-hide-v1-button-hover-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg"></svg>');
+}
