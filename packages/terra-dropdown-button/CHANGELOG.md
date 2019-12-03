@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Moved Focus out of dropdown on opening with mouse.
+
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
