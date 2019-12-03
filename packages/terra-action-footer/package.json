@@ -1,7 +1,7 @@
 {
   "name": "terra-action-footer",
   "main": "lib/ActionFooter.js",
-  "version": "2.26.0",
+  "version": "2.27.0",
   "description": "The terra-action-footer component is a footer bar that contains sockets for placing actionable items such as buttons and hyperlinks. The default variation contains a start and end socket, while the centered variation has only a center socket. If no actions are provided, the footer bar collapses to a themeable height and maintains the top border.",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "prop-types": "^15.5.8",
     "terra-button": "^3.26.0",
     "terra-doc-template": "^2.21.0",
-    "terra-hyperlink": "^2.23.0",
+    "terra-hyperlink": "^2.24.0",
     "terra-spacer": "^3.24.0"
   },
   "scripts": {
@@ -40,6 +40,8 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-fusion"
   }
 }

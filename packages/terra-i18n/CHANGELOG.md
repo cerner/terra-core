@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
 ### Fixed
 * Fix Intl data loading logic. Locale data was only loading the initial locale data but did not load locale data for the new local when the locale was switched. This issue was discovered when running in IE 10.
 

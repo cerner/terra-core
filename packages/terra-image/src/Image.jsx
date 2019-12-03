@@ -149,7 +149,9 @@ class Image extends React.Component {
       variant,
       customProps.className,
       { fluid: isFluid },
+      { hidden: placeholder && this.state.isLoading },
     ]);
+
     delete customProps.className;
     if (!this.state.isLoading) {
       objectFitImages(this.ImageRef.current);
@@ -157,10 +159,10 @@ class Image extends React.Component {
     if (placeholder) {
       if (this.state.isLoading) {
         return (
-          <div>
-            <div className={cx('hidden')}>{this.createImage(customProps, imageClasses)}</div>
-            <div>{placeholder}</div>
-          </div>
+          <>
+            {this.createImage(customProps, imageClasses)}
+            {placeholder}
+          </>
         );
       }
 
