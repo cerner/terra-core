@@ -2,9 +2,11 @@
 
 exports[`Dropdown Button should render a block dropdown type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={true}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -16,12 +18,14 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
 >
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     className="dropdown-button neutral is-block"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
+    tabIndex="0"
     type="button"
   >
     <span
@@ -38,9 +42,11 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
 
 exports[`Dropdown Button should render a compact dropdown type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={true}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -52,12 +58,14 @@ exports[`Dropdown Button should render a compact dropdown type 1`] = `
 >
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     className="dropdown-button neutral is-compact"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
+    tabIndex="0"
     type="button"
   >
     <span
@@ -74,9 +82,11 @@ exports[`Dropdown Button should render a compact dropdown type 1`] = `
 
 exports[`Dropdown Button should render a default dropdown type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -88,12 +98,14 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
 >
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     className="dropdown-button neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
+    tabIndex="0"
     type="button"
   >
     <span
@@ -110,9 +122,11 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
 
 exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={true}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -124,6 +138,7 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 >
   <button
     aria-disabled={true}
+    aria-expanded={false}
     aria-haspopup="menu"
     className="dropdown-button neutral"
     disabled={true}
@@ -147,9 +162,11 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 
 exports[`Dropdown Button should render a split type with custom attributes 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -163,12 +180,14 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
 >
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     className="dropdown-button neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
+    tabIndex="0"
     type="button"
   >
     <span
@@ -185,9 +204,11 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
 
 exports[`Dropdown Button should render a split type with multiple children 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     Array [
@@ -210,12 +231,14 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
 >
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     className="dropdown-button neutral"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
+    tabIndex="0"
     type="button"
   >
     <span
@@ -232,9 +255,11 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
 
 exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -246,12 +271,14 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 >
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     className="dropdown-button emphasis"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
+    tabIndex="0"
     type="button"
   >
     <span
@@ -268,9 +295,11 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 
 exports[`Dropdown Button should render an open dropdown 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={true}
   items={
     <Item
@@ -289,6 +318,7 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
+    tabIndex="0"
     type="button"
   >
     <span

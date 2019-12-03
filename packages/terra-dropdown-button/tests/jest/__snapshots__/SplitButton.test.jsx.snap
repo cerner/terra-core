@@ -2,9 +2,11 @@
 
 exports[`Dropdown Button should render a block split type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={true}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -27,6 +29,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -45,9 +48,11 @@ exports[`Dropdown Button should render a block split type 1`] = `
 
 exports[`Dropdown Button should render a compact split type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={true}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -70,6 +75,7 @@ exports[`Dropdown Button should render a compact split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral is-compact"
@@ -88,9 +94,11 @@ exports[`Dropdown Button should render a compact split type 1`] = `
 
 exports[`Dropdown Button should render a default split type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -113,6 +121,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -131,10 +140,12 @@ exports[`Dropdown Button should render a default split type 1`] = `
 
 exports[`Dropdown Button should render a disabled split type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   disabled={true}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -157,6 +168,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -175,9 +187,11 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
 
 exports[`Dropdown Button should render a split type with custom attributes 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -202,6 +216,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -220,9 +235,11 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
 
 exports[`Dropdown Button should render a split type with multiple children 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     Array [
@@ -255,6 +272,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"
@@ -273,9 +291,11 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
 
 exports[`Dropdown Button should render an open split type 1`] = `
 <DropdownButtonBase
+  buttonRef={[Function]}
   isBlock={false}
   isCompact={false}
   isDisabled={false}
+  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -298,6 +318,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
   </button>
   <button
     aria-disabled={false}
+    aria-expanded={false}
     aria-haspopup="menu"
     aria-label="Terra.dropdownButton.moreOptions"
     className="split-button-caret neutral"

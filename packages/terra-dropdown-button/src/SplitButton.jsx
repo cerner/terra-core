@@ -49,6 +49,17 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: intlShape.isRequired,
+  /**
+   * @private
+   * Callback to tell the parent it should close the dropdown
+   */
+  requestClose: PropTypes.func,
+  /**
+   *  @private
+   * The associated metaData to be provided in the onSelect callback.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  metaData: PropTypes.object,
 };
 
 const defaultProps = {
@@ -85,12 +96,15 @@ class SplitButton extends React.Component {
   }
 
   handleDropdownButtonClick() {
+    if (this.state.isOpen) {
+      this.setState({ isKeyboardEvent: false });
+    }
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
   }
 
   handleDropdownRequestClose(callback) {
     this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
-    this.setState({ isKeyboardEvent: false });
+    this.setState({ isKeyboardEvent: false, caretIsActive: false });
   }
 
   /*
@@ -109,14 +123,14 @@ class SplitButton extends React.Component {
   }
 
   handleCaretKeyDown(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ caretIsActive: true });
       this.setState({ isKeyboardEvent: true });
     }
   }
 
   handleCaretKeyUp(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ caretIsActive: false });
     }
   }
@@ -131,6 +145,8 @@ class SplitButton extends React.Component {
       onSelect,
       variant,
       intl,
+      requestClose,
+      metaData,
       ...customProps
     } = this.props;
 
@@ -155,6 +171,10 @@ class SplitButton extends React.Component {
       variant,
       { 'is-compact': isCompact },
       { 'is-active': isOpen || caretIsActive },
+      /* This needs to match terra-hookshot's react-onclickoutside ignore classname or clicking the caret with
+        the dropdown open will cause the dropdown to close and reopen
+      */
+      { 'ignore-react-onclickoutside': isOpen },
     );
 
     return (
@@ -172,7 +192,11 @@ class SplitButton extends React.Component {
         <button
           type="button"
           className={primaryClassnames}
-          onClick={onSelect}
+          onClick={(event) => {
+            onSelect(event, metaData);
+            this.handleDropdownRequestClose();
+            event.stopPropagation();
+          }}
           onKeyDown={this.handlePrimaryKeyDown}
           onKeyUp={this.handlePrimaryKeyUp}
           disabled={isDisabled}
