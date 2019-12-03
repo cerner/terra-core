@@ -3,6 +3,26 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+4.11.0 - (October 30, 2019)
+------------------
+### Changed 
+* `aria-label` added in example.
+
+4.10.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.9.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
+### Added
+* Added en-CA translations.
 
 4.8.0 - (September 6, 2019)
 ------------------

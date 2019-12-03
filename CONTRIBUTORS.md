@@ -83,6 +83,7 @@ Cerner Corporation
 - Philip Meznar [@prmeznar]
 - Saket Bajaj [@saket2403]
 - Prachi Gotkhindikar [@prachigotkhindikar1]
+- Jeff Merten [@jeffmerten]
 
 Community
 
@@ -192,3 +193,5 @@ Community
 [@avinashg1994]: https://github.com/avinashg1994
 [@prmeznar]: https://github.com/prmeznar
 [@saket2403]:https://github.com/saket2403
+[@vobango]:https://github.com/vobango
+[@jeffmerten]: https://github.com/jeffmerten

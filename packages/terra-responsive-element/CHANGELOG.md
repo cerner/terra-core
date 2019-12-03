@@ -3,6 +3,27 @@ Changelog
 
 Unreleased
 ----------
+### Fixed
+* Flicker for responsiveTo parent elements
+
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
+5.11.0 - (October 30, 2019)
+------------------
+### Added
+* Added a warning in dev environment about uncontrolled responsive elements being deprecated in the next major release
+* Added deprecated flag to the uncontrolled props descriptions
+
+5.10.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.9.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
 
 5.8.0 - (September 6, 2019)
 ------------------

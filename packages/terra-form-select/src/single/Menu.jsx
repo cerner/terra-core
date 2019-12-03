@@ -16,6 +16,10 @@ const cx = classNames.bind(styles);
 /* eslint-disable react/no-unused-prop-types */
 const propTypes = {
   /**
+    * The id of the menu.
+    */
+  id: PropTypes.string,
+  /**
    * The content of the menu.
    */
   children: PropTypes.node,
@@ -47,14 +51,19 @@ const propTypes = {
   /**
    * The value of the selected options.
    */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * @private Visually hidden component designed to feed screen reader text to read.
    */
   visuallyHiddenComponent: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  /**
+   * Ref callback for the select menu DOM element.
+   */
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
+  id: undefined,
   children: undefined,
   clearOptionDisplay: undefined,
   noResultContent: undefined,
@@ -62,6 +71,7 @@ const defaultProps = {
   select: undefined,
   visuallyHiddenComponent: undefined,
   value: undefined,
+  refCallback: undefined,
 };
 
 class Menu extends React.Component {
@@ -74,7 +84,7 @@ class Menu extends React.Component {
       return null;
     }
 
-    if (active && MenuUtil.findByValue(options, active)) {
+    if (active !== null && MenuUtil.findByValue(options, active)) {
       return active;
     }
 
@@ -129,6 +139,7 @@ class Menu extends React.Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
+    this.scrollIntoView();
     /**
      * Without this detection for ontouchstart and the early return, VoiceOver on iOS will read the
      * first option twice when the menu is opened. First due to aria-live update in componentDidMount
@@ -142,7 +153,6 @@ class Menu extends React.Component {
 
   componentDidUpdate() {
     this.updateNoResultsScreenReader();
-    this.scrollIntoView();
   }
 
   componentWillUnmount() {
@@ -290,14 +300,14 @@ class Menu extends React.Component {
     if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: MenuUtil.findPrevious(children, active) });
+      this.setState({ active: MenuUtil.findPrevious(children, active) }, this.scrollIntoView);
       this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCode.KEY_DOWN) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: MenuUtil.findNext(children, active) });
+      this.setState({ active: MenuUtil.findNext(children, active) }, this.scrollIntoView);
       this.updateCurrentActiveScreenReader();
-    } else if (keyCode === KeyCode.KEY_RETURN && active) {
+    } else if (keyCode === KeyCode.KEY_RETURN && active !== null) {
       event.preventDefault();
 
       this.setState({ closedViaKeyEvent: true });
@@ -404,6 +414,11 @@ class Menu extends React.Component {
   }
 
   render() {
+    const {
+      id,
+      intl,
+      refCallback,
+    } = this.props;
     return (
       /**
        * Note: role="listbox" and aria-activedescendant needed for VoiceOver on iOS to properly
@@ -413,11 +428,16 @@ class Menu extends React.Component {
        * is opened.
        */
       <ul
-        id="terra-select-menu"
+        id={id}
         role="listbox"
         className={cx('menu')}
-        aria-label={this.props.intl.formatMessage({ id: 'Terra.form.select.menu' })}
-        ref={(menu) => { this.menu = menu; }}
+        aria-label={intl.formatMessage({ id: 'Terra.form.select.menu' })}
+        ref={(menu) => {
+          if (refCallback) {
+            refCallback(menu);
+          }
+          this.menu = menu;
+        }}
         {...(this.state.active !== null ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
         tabIndex="0"
       >

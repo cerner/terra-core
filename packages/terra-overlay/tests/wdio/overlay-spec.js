@@ -69,13 +69,45 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       });
     });
 
+    describe('OnRequestClose-Full Screen Overlay With Updates', () => {
+      Terra.it.matchesScreenshot('closed');
+
+      it('Clicks on the Full screen overlay button', () => {
+        browser.click('#trigger_fullscreen');
+        expect(browser.getAttribute('#root', 'inert')).to.equal('true');
+        expect(browser.getAttribute('#root', 'aria-hidden')).to.equal('true');
+        expect(browser.getAttribute('#root', 'data-overlay-count')).to.equal('1');
+      });
+
+      it('Background does not scroll when a fullscreen Overlay is open', () => {
+        expect(browser.getAttribute('html', 'style')).contains('overflow: hidden');
+      });
+
+      Terra.it.validatesElement('open', { selector: '#terra-Overlay--fullscreen' });
+
+      it('does not increment overlay count during update', () => {
+        browser.execute('const updateEvent = new CustomEvent("overlay.forceUpdateForTest"); document.dispatchEvent(updateEvent);');
+
+        expect(browser.getAttribute('#root', 'inert')).to.equal('true');
+        expect(browser.getAttribute('#root', 'aria-hidden')).to.equal('true');
+        expect(browser.getAttribute('#root', 'data-overlay-count')).to.equal('1');
+      });
+
+      it('closes the overlay when clicking inside of the Overlay', () => {
+        browser.click('#terra-Overlay--fullscreen');
+        browser.waitForExist('#terra-Overlay--fullscreen', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
+        expect(browser.getAttribute('#root', 'inert')).to.equal('false');
+        expect(browser.getAttribute('#root', 'aria-hidden')).to.equal(null);
+      });
+    });
+
     describe('OnRequestClose-Container Overlay', () => {
       Terra.it.matchesScreenshot('closed');
 
       it('Clicks on Container Overlay', () => {
         browser.click('#trigger_container');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
       });
 
       it('Container Overlay- Background can scroll when Overlay relative to container is open', () => {
@@ -87,22 +119,22 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       it('closes overlay on escape keydown', () => {
         browser.keys('Escape');
         browser.waitForExist('#terra-Overlay--container', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
       });
 
       it('reopens the overlay', () => {
         browser.click('#trigger_container');
         browser.waitForExist('#terra-Overlay--container');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.equal('true');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal('true');
       });
 
       it('closes the overlay when clicking inside of the Overlay', () => {
         browser.click('#terra-Overlay--container');
         browser.waitForExist('#terra-Overlay--container', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
-        expect(browser.getAttribute('[data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.equal('false');
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
       });
     });
   });

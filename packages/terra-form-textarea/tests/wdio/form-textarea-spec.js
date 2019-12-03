@@ -23,6 +23,14 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     Terra.it.validatesElement();
   });
 
+  describe('Incomplete', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/incomplete-textarea');
+    });
+
+    Terra.it.validatesElement();
+  });
+
   describe('Small Textarea Height Resizing', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/small-textarea');
@@ -188,6 +196,15 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
         browser.click('#validity-toggle');
+      });
+
+      Terra.it.validatesElement();
+    });
+
+    describe('Incomplete TextareaField', () => {
+      before(() => {
+        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
+        browser.click('#incomplete-toggle');
       });
 
       Terra.it.validatesElement();

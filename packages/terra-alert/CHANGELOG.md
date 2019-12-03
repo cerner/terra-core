@@ -3,6 +3,29 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed jest tests due to ResponsiveElement change
+
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+4.14.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+4.13.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.12.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
+### Added
+* Added en-CA translations.
 
 4.11.0 - (September 6, 2019)
 ------------------

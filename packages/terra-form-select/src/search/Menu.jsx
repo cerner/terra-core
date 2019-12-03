@@ -59,7 +59,7 @@ const propTypes = {
   /**
    * The value of the selected options.
    */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * @private Visually hidden component designed to feed screen reader text to read.
    */
@@ -133,6 +133,7 @@ class Menu extends React.Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
+    this.scrollIntoView();
     /**
      * Without this detection for ontouchstart and the early return, VoiceOver on iOS will read the
      * first option twice when the menu is opened. First due to aria-live update in componentDidMount
@@ -146,7 +147,6 @@ class Menu extends React.Component {
 
   componentDidUpdate() {
     this.updateNoResultsScreenReader();
-    this.scrollIntoView();
   }
 
   componentWillUnmount() {
@@ -278,12 +278,12 @@ class Menu extends React.Component {
     if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: MenuUtil.findPrevious(children, active) });
+      this.setState({ active: MenuUtil.findPrevious(children, active) }, this.scrollIntoView);
       this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCode.KEY_DOWN) {
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: MenuUtil.findNext(children, active) });
+      this.setState({ active: MenuUtil.findNext(children, active) }, this.scrollIntoView);
       this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCode.KEY_RETURN && active !== null) {
       event.preventDefault();

@@ -5,13 +5,14 @@ import Overlay from '../../../../Overlay';
 import styles from './OverlayTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
+const OverlayComponent = () => (
+  <Overlay isOpen backgroundStyle={Overlay.Opts.BackgroundStyles.DARK} id="dark-overlay" isRelativeToContainer>
+    <h1>Dark Overlay</h1>
+  </Overlay>
+);
 
 const OverlayExample = () => (
-  <OverlayContainer className={cx('overlay-container1')} id="terra-OverlayContainer">
-    <Overlay isOpen backgroundStyle={Overlay.Opts.BackgroundStyles.DARK} id="dark-overlay" isRelativeToContainer>
-      <h1>Dark Overlay</h1>
-    </Overlay>
-  </OverlayContainer>
+  <OverlayContainer className={cx('overlay-container1')} id="terra-OverlayContainer" overlay={<OverlayComponent />} />
 );
 
 export default OverlayExample;

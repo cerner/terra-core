@@ -16,9 +16,9 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The default selected value.
+   * The default selected value. Can be a string, number, or array of strings/numbers.
    */
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * Whether the select is disabled.
    */
@@ -34,9 +34,19 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether the select is in an invalid state.
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the select displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
+  /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
   /**
    * The max height of the dropdown.
    */
@@ -86,9 +96,9 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * The selected value.
+   * The selected value. Can be a string, number, or array of strings/numbers.
    */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 const defaultProps = {
@@ -97,7 +107,9 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
+  isTouchAccessible: false,
   noResultContent: undefined,
   onChange: undefined,
   onDeselect: undefined,
@@ -110,20 +122,14 @@ const defaultProps = {
 };
 
 class Combobox extends React.Component {
-  static defaultValue(props) {
-    if (props.value !== undefined) {
-      return null;
-    }
-
-    return (props.defaultValue !== undefined && props.defaultValue !== null) ? props.defaultValue : '';
-  }
-
   constructor(props) {
     super(props);
 
+    const { value, defaultValue } = props;
+
     this.state = {
       tags: [],
-      value: Combobox.defaultValue(props),
+      value: SelectUtil.defaultValue({ defaultValue, value }),
     };
 
     this.display = this.display.bind(this);

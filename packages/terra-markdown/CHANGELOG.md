@@ -3,6 +3,13 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
+2.35.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
 
 2.34.0 - (September 6, 2019)
 ------------------

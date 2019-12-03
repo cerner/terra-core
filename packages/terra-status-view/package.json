@@ -1,7 +1,7 @@
 {
   "name": "terra-status-view",
   "main": "lib/StatusView.js",
-  "version": "4.8.0",
+  "version": "4.11.0",
   "description": "The status view component provides an icon, title, message, and buttons inside a view.",
   "repository": {
     "type": "git",
@@ -28,7 +28,9 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-fusion"
   },
   "peerDependencies": {
     "react": "^16.8.5",
@@ -39,10 +41,10 @@
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.23.0",
-    "terra-divider": "^3.17.0",
-    "terra-doc-template": "^2.18.0",
-    "terra-icon": "^3.20.0",
+    "terra-button": "^3.26.0",
+    "terra-divider": "^3.20.0",
+    "terra-doc-template": "^2.21.0",
+    "terra-icon": "^3.23.0",
     "terra-mixins": "^1.33.0"
   }
 }

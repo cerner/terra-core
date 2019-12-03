@@ -1,7 +1,7 @@
 {
   "name": "terra-dropdown-button",
   "main": "lib/DropdownButton.js",
-  "version": "1.4.0",
+  "version": "1.7.0",
   "description": "Provides a dropdown button component and split button component for selecting a single option (action) from a list of options.",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "focus-trap-react": "^6.0.0",
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.18.0",
+    "terra-doc-template": "^2.21.0",
     "terra-hookshot": "^5.0.0",
     "terra-mixins": "^1.30.0"
   },
@@ -40,8 +40,10 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
-    "test": "npm run test:jest && npm run test:wdio",
-    "test:jest": "jest --config ../../jestconfig.js",
-    "test:wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "test": "npm run jest && npm run wdio",
+    "jest": "jest --config ../../jestconfig.js",
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-fusion"
   }
 }

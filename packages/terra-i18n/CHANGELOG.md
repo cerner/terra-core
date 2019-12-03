@@ -3,6 +3,39 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
+4.19.0 - (October 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.18.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+### Fixed
+* Fix Intl Loading and conditionally add the `intl` polyfill when Intl is not provided by the browser. This issue was discovered when running in IE 10.
+
+4.17.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.16.0 - (September 26, 2019)
+------------------
+### Removed
+* Removed the Finnish example since we don't officially support Finnish
+
+4.15.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
+### Added
+* Added en-CA translations.
 
 4.14.0 - (September 6, 2019)
 ------------------

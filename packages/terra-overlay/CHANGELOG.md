@@ -3,6 +3,50 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+3.35.0 - (November 26, 2019)
+------------------
+### Fixed
+* Added `aria-live` to `LoadingOverlay` for screenreader AT
+
+3.34.0 - (November 7, 2019)
+------------------
+### Changed
+* Updating tests to be better isolated from terra-dev-site markup.
+
+3.33.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+### Changed
+* Updated wdio tests to cover update lifecycle handling
+
+3.32.0 - (October 15, 2019)
+------------------
+### Fixed
+* Fixed inert property management during component update lifecycle
+
+3.31.0 - (October 14, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+* Move imperative code for handling DOM manipulation for inert and aria-hidden attributes into componentDidUpdate
+
+3.30.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.29.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
+
+### Added
+* Added en-CA translations.
 
 3.28.0 - (September 6, 2019)
 ------------------

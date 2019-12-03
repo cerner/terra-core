@@ -3,6 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+2.25.0 - (October 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.24.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.23.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
 
 2.22.0 - (September 6, 2019)
 ------------------

@@ -3,6 +3,34 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+2.24.0 - (November 12, 2019)
+------------------
+### Changed
+* Changed how cursor looks on specific hyperlinks(ex: a default cursor instead of text selector on disabled hyperlink).
+* Switched themeable icons provided by CSS to imported `terra-icon` component.
+
+2.23.0 - (November 7, 2019)
+------------------
+### Fixed
+* Fixed the color contrast axe violation for disabled hyperlinks by adding `aria-disabled`.
+
+2.22.0 - (October 30, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.21.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.20.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
 
 2.19.0 - (September 6, 2019)
 ------------------

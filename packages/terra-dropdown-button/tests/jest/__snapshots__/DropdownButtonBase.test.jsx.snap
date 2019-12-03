@@ -2,7 +2,7 @@
 
 exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
 <div
-  className="dropdown-button-base is-block ignore-react-onclickoutside"
+  className="dropdown-button-base is-block"
 >
   <div>
     test contents
@@ -23,7 +23,7 @@ exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
 
 exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
 <div
-  className="dropdown-button-base ignore-react-onclickoutside"
+  className="dropdown-button-base"
 >
   <div>
     test contents
@@ -44,7 +44,7 @@ exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
 
 exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
 <div
-  className="dropdown-button-base ignore-react-onclickoutside"
+  className="dropdown-button-base"
 >
   <div>
     test contents
@@ -65,7 +65,7 @@ exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
 
 exports[`Dropdown Button Base renders an open DropdownButtonBase 1`] = `
 <div
-  className="dropdown-button-base ignore-react-onclickoutside"
+  className="dropdown-button-base"
 >
   <div>
     test contents

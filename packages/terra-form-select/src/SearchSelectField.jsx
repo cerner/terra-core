@@ -19,9 +19,9 @@ const propTypes = {
    */
   label: PropTypes.node.isRequired,
   /**
-   * The default value of the select.
+   * The default value of the select. Can be a string, number, or array of strings/numbers.
    */
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
    * Whether the input is disabled.
    */
@@ -39,17 +39,27 @@ const propTypes = {
    */
   hideRequired: PropTypes.bool,
   /**
+   * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
    * Whether the field is displayed inline. Displays block by default.
    */
   isInline: PropTypes.bool,
   /**
-   * Whether the field is invalid.
+   * Whether the field displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
    * Whether the label is hidden. Allows hiding the label while meeting accessibility guidelines.
    */
   isLabelHidden: PropTypes.bool,
+  /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
   /**
    * Additional attributes to spread onto the label.
    */
@@ -86,9 +96,9 @@ const propTypes = {
    */
   showOptional: PropTypes.bool,
   /**
-   * The value of the select.
+   * The value of the select. Can be a string, number, or array of strings/numbers.
    */
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 const defaultProps = {
@@ -99,9 +109,11 @@ const defaultProps = {
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isIncomplete: false,
   isInline: false,
   isInvalid: false,
   isLabelHidden: false,
+  isTouchAccessible: false,
   labelAttrs: {},
   maxWidth: undefined,
   onChange: undefined,
@@ -120,9 +132,11 @@ const SearchSelectField = ({
   error,
   help,
   hideRequired,
+  isIncomplete,
   isInline,
   isInvalid,
   isLabelHidden,
+  isTouchAccessible,
   label,
   labelAttrs,
   maxWidth,
@@ -172,7 +186,9 @@ const SearchSelectField = ({
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
+        isIncomplete={isIncomplete}
         isInvalid={isInvalid}
+        isTouchAccessible={isTouchAccessible}
         defaultValue={defaultValue}
         onChange={onChange}
         placeholder={placeholder}

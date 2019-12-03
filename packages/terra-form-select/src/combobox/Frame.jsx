@@ -43,9 +43,19 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether the select is in an invalid state.
+   * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the select displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
+  /**
+   * Ensure accessibility on touch devices. Will render the dropdown menu in
+   * normal DOM flow with position absolute. By default, the menu renders in a
+   * portal, which is inaccessible on touch devices.
+   */
+  isTouchAccessible: PropTypes.bool,
   /**
    * The max height of the dropdown.
    */
@@ -93,14 +103,16 @@ const propTypes = {
   /**
    * The select value.
    */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 const defaultProps = {
   clearOptionDisplay: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isIncomplete: false,
   isInvalid: false,
+  isTouchAccessible: false,
   noResultContent: undefined,
   onDeselect: undefined,
   onSearch: undefined,
@@ -129,6 +141,7 @@ class Frame extends React.Component {
     super(props);
 
     this.state = {
+      focusedByTouch: false,
       isOpen: false,
       isFocused: false,
       isInputFocused: false,
@@ -157,6 +170,7 @@ class Frame extends React.Component {
     this.handleInputBlur = this.handleInputBlur.bind(this);
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
+    this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.selectMenu = '#terra-select-menu';
@@ -286,21 +300,33 @@ class Frame extends React.Component {
       return;
     }
 
-    const { dropdownAttrs, maxHeight } = this.props;
-    const { select, dropdown } = this;
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, select, dropdown, maxHeight));
+    const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible));
   }
 
   /**
    * Handles the blur event.
    */
   handleBlur(event) {
+    const { relatedTarget } = event;
+    const { focusedByTouch } = this.state;
+
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
     if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
       return;
     }
 
-    this.setState({ isFocused: false });
+    // Don't blur if we dismissed the onscreen keyboard
+    // Determined by if we have have interacted with the frame via onTouchStart
+    // and if the relatedTarget is falsey. The relatedTarget will be null when
+    // dismissing the onscreen keyboard, else set to another element when
+    // tapping elsewhere on the page
+    if (focusedByTouch && !relatedTarget) {
+      return;
+    }
+
+    this.setState({ isFocused: false, focusedByTouch: false });
 
     this.closeDropdown();
 
@@ -395,6 +421,13 @@ class Frame extends React.Component {
         this.input.focus();
       }
     }
+  }
+
+  /**
+   * Handles the touch start events
+   */
+  handleTouchStart() {
+    this.setState({ focusedByTouch: true });
   }
 
   /**
@@ -494,7 +527,7 @@ class Frame extends React.Component {
   }
 
   renderToggleButton() {
-    const { intl } = this.props;
+    const { intl, isInvalid } = this.props;
 
     const mobileButtonUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.mobileButtonUsageGuidance' });
 
@@ -512,19 +545,30 @@ class Frame extends React.Component {
        * prevents users from ever navigating through the select options.
        */
       if (this.state.isInputFocused) {
+        const toggleClasses = cx([
+          'toggle',
+          { 'is-invalid': isInvalid },
+        ]);
+
         return (
-          <div data-terra-form-select-toggle className={cx('toggle')} onMouseDown={this.handleToggleMouseDown}>
+          <div data-terra-form-select-toggle className={toggleClasses} onMouseDown={this.handleToggleMouseDown}>
             <span className={cx('arrow-icon')} />
           </div>
         );
       }
+
+      const toggleClasses = cx([
+        'toggle',
+        'toggle-narrow',
+        { 'is-invalid': isInvalid },
+      ]);
 
       /**
        * Toggle button enables shifting focus to dropdown. This allows iOS users that are using
        * VoiceOver the ability to navigate to the select options.
        */
       return (
-        <div className={cx(['toggle', 'toggle-narrow'])}>
+        <div className={toggleClasses}>
           <button
             type="button"
             className={cx('toggle-btn')}
@@ -538,8 +582,13 @@ class Frame extends React.Component {
       );
     }
 
+    const toggleClasses = cx([
+      'toggle',
+      { 'is-invalid': isInvalid },
+    ]);
+
     return (
-      <div data-terra-form-select-toggle className={cx('toggle')} onMouseDown={this.toggleDropdown}>
+      <div data-terra-form-select-toggle className={toggleClasses} onMouseDown={this.toggleDropdown}>
         <span className={cx('arrow-icon')} />
       </div>
     );
@@ -554,6 +603,8 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
+      isIncomplete,
+      isTouchAccessible,
       isInvalid,
       maxHeight,
       noResultContent,
@@ -575,6 +626,7 @@ class Frame extends React.Component {
       { 'is-disabled': disabled },
       { 'is-focused': this.state.isFocused },
       { 'is-invalid': isInvalid },
+      { 'is-incomplete': (isIncomplete && required && !isInvalid) },
       { 'is-open': this.state.isOpen },
       customProps.className,
     ]);
@@ -614,6 +666,7 @@ class Frame extends React.Component {
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onMouseDown={this.handleMouseDown}
+        onTouchStart={this.handleTouchStart}
         tabIndex="-1"
         ref={(select) => { this.select = select; }}
       >
@@ -640,6 +693,7 @@ class Frame extends React.Component {
             id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
             target={this.select}
             isAbove={this.state.isAbove}
+            isTouchAccessible={isTouchAccessible}
             isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
             refCallback={(ref) => { this.dropdown = ref; }}

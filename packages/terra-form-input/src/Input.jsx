@@ -20,7 +20,11 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Whether the input is invalid.
+   * Whether the input displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
+  isIncomplete: PropTypes.bool,
+  /**
+   * Whether the input displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -44,6 +48,10 @@ const propTypes = {
    * NOTE: The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.
    */
   pattern: PropTypes.string,
+  /**
+   * Placeholder text.
+   */
+  placeholder: PropTypes.string,
   /**
    * Callback ref to pass into the input dom element.
    */
@@ -73,12 +81,14 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   disabled: false,
+  isIncomplete: false,
   isInvalid: false,
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
   name: null,
   pattern: undefined,
+  placeholder: undefined,
   required: false,
   refCallback: undefined,
   type: undefined,
@@ -90,12 +100,14 @@ class Input extends React.Component {
     const {
       defaultValue,
       disabled,
+      isIncomplete,
       isInvalid,
       onBlur,
       onChange,
       onFocus,
       name,
       pattern,
+      placeholder,
       refCallback,
       required,
       type,
@@ -108,6 +120,7 @@ class Input extends React.Component {
     const formInputClassNames = cx([
       'form-input',
       { 'form-error': isInvalid },
+      { 'form-incomplete': (isIncomplete && required && !isInvalid) },
       attributes.className,
     ]);
 
@@ -131,7 +144,7 @@ class Input extends React.Component {
 
     if (value !== undefined) {
       attributes.value = value;
-    } else {
+    } else if (defaultValue !== undefined) {
       attributes.defaultValue = defaultValue;
     }
 
@@ -144,6 +157,7 @@ class Input extends React.Component {
         name={name}
         type={type}
         pattern={pattern}
+        placeholder={placeholder}
         onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}

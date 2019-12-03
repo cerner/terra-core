@@ -31,6 +31,7 @@ exports[`Select should render a clear option 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   required={false}
 />
@@ -67,7 +68,9 @@ exports[`Select should render a combobox variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -103,7 +106,9 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
 />
@@ -140,6 +145,7 @@ exports[`Select should render a default variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   required={false}
 />
@@ -176,6 +182,7 @@ exports[`Select should render a default variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   placeholder="Placeholder"
   required={false}
@@ -212,7 +219,9 @@ exports[`Select should render a disabled combobox variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -248,6 +257,7 @@ exports[`Select should render a disabled default variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   required={false}
 />
@@ -283,7 +293,9 @@ exports[`Select should render a disabled multiple variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -319,7 +331,9 @@ exports[`Select should render a disabled search variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -354,7 +368,9 @@ exports[`Select should render a disabled tag variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -389,7 +405,9 @@ exports[`Select should render a multiple variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -424,7 +442,9 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
 />
@@ -461,6 +481,7 @@ exports[`Select should render a required select 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
   required={true}
 />
@@ -497,7 +518,9 @@ exports[`Select should render a search variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -533,7 +556,9 @@ exports[`Select should render a search variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   placeholder="Placeholder"
   required={false}
 />
@@ -541,11 +566,11 @@ exports[`Select should render a search variant with a placeholder 1`] = `
 
 exports[`Select should render a select with an optgroup and an option 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-12"
+  aria-describedby="terra-select-screen-reader-description-14"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-labelledby="terra-select-screen-reader-label-9 terra-select-screen-reader-display-10 terra-select-screen-reader-placeholder-11"
+  aria-labelledby="terra-select-screen-reader-label-11 terra-select-screen-reader-display-12 terra-select-screen-reader-placeholder-13"
   aria-required="false"
   class="select default"
   data-terra-select="true"
@@ -558,12 +583,12 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-9"
+      id="terra-select-screen-reader-label-11"
     >
       Terra.form.select.ariaLabel
     </span>
     <span
-      id="terra-select-screen-reader-description-12"
+      id="terra-select-screen-reader-description-14"
     >
       Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
     </span>
@@ -575,7 +600,7 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
   >
     <div
       class="placeholder"
-      id="terra-select-screen-reader-placeholder-11"
+      id="terra-select-screen-reader-placeholder-13"
     >
       Terra.form.select.defaultDisplay
     </div>
@@ -599,11 +624,11 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
 
 exports[`Select should render a select with an optgroup and multiple options 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-16"
+  aria-describedby="terra-select-screen-reader-description-19"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-labelledby="terra-select-screen-reader-label-13 terra-select-screen-reader-display-14 terra-select-screen-reader-placeholder-15"
+  aria-labelledby="terra-select-screen-reader-label-16 terra-select-screen-reader-display-17 terra-select-screen-reader-placeholder-18"
   aria-required="false"
   class="select default"
   data-terra-select="true"
@@ -616,12 +641,12 @@ exports[`Select should render a select with an optgroup and multiple options 1`]
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-13"
+      id="terra-select-screen-reader-label-16"
     >
       Terra.form.select.ariaLabel
     </span>
     <span
-      id="terra-select-screen-reader-description-16"
+      id="terra-select-screen-reader-description-19"
     >
       Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
     </span>
@@ -633,7 +658,7 @@ exports[`Select should render a select with an optgroup and multiple options 1`]
   >
     <div
       class="placeholder"
-      id="terra-select-screen-reader-placeholder-15"
+      id="terra-select-screen-reader-placeholder-18"
     >
       Terra.form.select.defaultDisplay
     </div>
@@ -715,11 +740,11 @@ exports[`Select should render a select with an option 1`] = `
 
 exports[`Select should render a select with multiple options 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-8"
+  aria-describedby="terra-select-screen-reader-description-9"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-labelledby="terra-select-screen-reader-label-5 terra-select-screen-reader-display-6 terra-select-screen-reader-placeholder-7"
+  aria-labelledby="terra-select-screen-reader-label-6 terra-select-screen-reader-display-7 terra-select-screen-reader-placeholder-8"
   aria-required="false"
   class="select default"
   data-terra-select="true"
@@ -732,12 +757,12 @@ exports[`Select should render a select with multiple options 1`] = `
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-5"
+      id="terra-select-screen-reader-label-6"
     >
       Terra.form.select.ariaLabel
     </span>
     <span
-      id="terra-select-screen-reader-description-8"
+      id="terra-select-screen-reader-description-9"
     >
       Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
     </span>
@@ -749,7 +774,7 @@ exports[`Select should render a select with multiple options 1`] = `
   >
     <div
       class="placeholder"
-      id="terra-select-screen-reader-placeholder-7"
+      id="terra-select-screen-reader-placeholder-8"
     >
       Terra.form.select.defaultDisplay
     </div>
@@ -801,7 +826,9 @@ exports[`Select should render a tag variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -836,8 +863,197 @@ exports[`Select should render a tag variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={false}
+  isTouchAccessible={false}
   placeholder="Placeholder"
+  required={false}
+/>
+`;
+
+exports[`Select should render an incomplete combobox variant 1`] = `
+<InjectIntl(Combobox)
+  allowClear={false}
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  isTouchAccessible={false}
+  required={false}
+/>
+`;
+
+exports[`Select should render an incomplete default variant 1`] = `
+<SingleSelect
+  allowClear={false}
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  required={false}
+/>
+`;
+
+exports[`Select should render an incomplete multiple variant 1`] = `
+<MultiSelect
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  isTouchAccessible={false}
+  required={false}
+/>
+`;
+
+exports[`Select should render an incomplete search variant 1`] = `
+<SearchSelect
+  allowClear={false}
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  isTouchAccessible={false}
+  required={false}
+/>
+`;
+
+exports[`Select should render an incomplete tag variant 1`] = `
+<TagSelect
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  isInvalid={false}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -873,7 +1089,9 @@ exports[`Select should render an invalid combobox variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -909,6 +1127,7 @@ exports[`Select should render an invalid default variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
   required={false}
 />
@@ -944,7 +1163,9 @@ exports[`Select should render an invalid multiple variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -980,7 +1201,9 @@ exports[`Select should render an invalid search variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
+  isTouchAccessible={false}
   required={false}
 />
 `;
@@ -1015,7 +1238,9 @@ exports[`Select should render an invalid tag variant 1`] = `
       "timeZone": null,
     }
   }
+  isIncomplete={false}
   isInvalid={true}
+  isTouchAccessible={false}
   required={false}
 />
 `;

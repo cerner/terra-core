@@ -13,6 +13,18 @@ class OverlayExample extends React.Component {
     this.handleTriggerOverlay = this.handleTriggerOverlay.bind(this);
     this.handleTriggerFullScreenOverlay = this.handleTriggerFullScreenOverlay.bind(this);
     this.handleOnRequestESC = this.handleOnRequestESC.bind(this);
+
+    this.forceUpdateForTest = () => {
+      this.forceUpdate();
+    };
+  }
+
+  componentDidMount() {
+    document.addEventListener('overlay.forceUpdateForTest', this.forceUpdateForTest);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('overlay.forceUpdateForTest', this.forceUpdateForTest);
   }
 
   handleTriggerOverlay() {
@@ -37,10 +49,9 @@ class OverlayExample extends React.Component {
     );
   }
 
-
   render() {
     return (
-      <OverlayContainer className={cx('overlay-container2')} overlay={this.addOverlay()}>
+      <OverlayContainer className={cx('overlay-container2')} overlay={this.addOverlay()} id="test-overlay-container">
         <button type="button" id="trigger_container" onClick={this.handleTriggerOverlay}>Trigger Container Overlay</button>
         <button type="button" id="trigger_fullscreen" onClick={this.handleTriggerFullScreenOverlay}>Trigger Fullscreen Overlay</button>
       </OverlayContainer>

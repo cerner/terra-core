@@ -64,7 +64,6 @@ const ShowHide = (props) => {
     customProps.className,
   ]);
 
-
   let intlButtonText = '';
 
   if (!buttonText) {

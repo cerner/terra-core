@@ -1,7 +1,7 @@
 {
   "name": "terra-form-select",
   "main": "lib/Select.js",
-  "version": "5.29.0",
+  "version": "5.37.0",
   "description": "Provides a drop down of selectable options.",
   "repository": {
     "type": "git",
@@ -32,8 +32,8 @@
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
     "react-lifecycles-compat": "^3.0.2",
-    "terra-doc-template": "^2.18.0",
-    "terra-form-field": "^3.23.0",
+    "terra-doc-template": "^2.21.0",
+    "terra-form-field": "^3.29.0",
     "terra-hookshot": "^5.0.0",
     "terra-mixins": "^1.33.0"
   },
@@ -45,6 +45,8 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-fusion"
   }
 }

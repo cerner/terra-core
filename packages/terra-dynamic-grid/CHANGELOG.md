@@ -3,6 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
+3.19.0 - (October 30, 2019)
+------------------
+### Fixed
+* Fixed lint warnings for multiple empty lines
+
+3.18.0 - (October 3, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.17.0 - (September 19, 2019)
+------------------
+### Changed
+* Removed `details` tag from doc-site.
 
 3.16.0 - (September 6, 2019)
 ------------------

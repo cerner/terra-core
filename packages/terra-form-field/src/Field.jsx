@@ -33,7 +33,7 @@ const propTypes = {
    */
   htmlFor: PropTypes.string,
   /**
-   * Whether or not the field is invalid.
+   * Whether the field displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
   /**
@@ -142,7 +142,6 @@ const Field = (props) => {
     }
   }
 
-
   /**
    * IE + JAWS has trouble reading aria-describedby content with our form components.
    * Using feature detect for Microsoft browsers and injecting the help and error messages
@@ -196,7 +195,7 @@ const Field = (props) => {
     <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
       {content}
-      {isInvalid && error && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
+      {isInvalid && error && <div aria-live="assertive" tabIndex="-1" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
       {help && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
     </div>
   );
