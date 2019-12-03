@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added `inputId` prop to allow an id to be passed to the input element for searchable select fields.
 
+5.37.0 - (November 26, 2019)
+------------------
+### Fixed
+* Multiple instances of default variant select dropdown do not remain open at once on IE.
+
 5.36.0 - (October 30, 2019)
 ------------------
 ### Fixed
