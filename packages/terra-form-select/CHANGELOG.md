@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added `inputId` prop to allow an id to be passed to the input element for searchable select fields.
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
 5.37.0 - (November 26, 2019)
 ------------------
@@ -13,13 +14,13 @@ Unreleased
 
 5.36.0 - (October 30, 2019)
 ------------------
+### Changed
+* Duplicate ID in examples changed.
+
 ### Fixed
 * Fixed IE issue that required two clicks to open the dropdown menu after initial selection.
 * Fixed lint warnings for multiple empty lines
 * Fixed re-renders of scroll after every componentDidUpdate call.
-
-### Changed
-* Duplicate ID in examples changed.
 
 5.35.0 - (October 18, 2019)
 ------------------
