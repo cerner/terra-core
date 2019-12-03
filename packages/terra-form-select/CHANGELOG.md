@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed 
+* Fixed accessibility issue due to invalid `aria-activedescendant` value.
+
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
