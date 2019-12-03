@@ -1,10 +1,10 @@
-/* eslint-disable */
+/* eslint-disable import/no-unresolved, compat/compat, no-console */
 import intlLoaders from 'intlLoaders';
 
 const hasIntlData = (locale) => {
   const intlConstructors = [
     Intl.DateTimeFormat,
-    Intl.NumberFormat
+    Intl.NumberFormat,
   ].filter((intlConstructor) => intlConstructor);
 
   if (intlConstructors.length === 0) {
@@ -20,7 +20,7 @@ const hasIntlData = (locale) => {
 const loadFallbackIntl = (localeContext) => {
   try {
     if (!hasIntlData('en')) {
-      intlLoaders['en']();
+      intlLoaders.en();
     }
 
     if (process.env.NODE_ENV !== 'production') {
@@ -47,7 +47,7 @@ const loadIntl = (locale) => {
         if (process.env.NODE_ENV !== 'production') {
           console.warn(`Locale data was not supplied for the ${locale} locale. Using ${fallbackLocale} data as the fallback locale data.`);
         }
-      } catch (e) {
+      } catch (error) {
         const localeContext = `${locale} or ${fallbackLocale} locales`;
         loadFallbackIntl(localeContext);
       }
@@ -63,4 +63,4 @@ export default loadIntl;
 export {
   loadIntl,
 };
-/* eslint-enable */
+/* eslint-enable import/no-unresolved, compat/compat, no-console */
