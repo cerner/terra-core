@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Update jest test snapshot
 
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 4.11.0 - (October 30, 2019)
 ------------------
 ### Changed 

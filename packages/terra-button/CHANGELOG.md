@@ -6,6 +6,9 @@ Unreleased
 ### Fixed
 * Set focus on button when clicked on Firefox, Safari, and IE.
 
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 3.26.0 - (October 30, 2019)
 ------------------
 ### Changed

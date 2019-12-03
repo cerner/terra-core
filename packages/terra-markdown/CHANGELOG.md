@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
 
 2.35.0 - (September 19, 2019)
 ------------------
