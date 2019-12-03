@@ -1,17 +1,6 @@
 /* eslint-disable */
 import intlLoaders from 'intlLoaders';
 
-const loadFallbackIntl = (localeContext) => {
-  try {
-    intlLoaders['en']();
-    if (process.env.NODE_ENV !== 'production') {
-      console.warn(`Locale data was not supplied for the ${localeContext}. Using en data as the fallback locale data.`);
-    }
-  } catch (e) {
-    throw new Error(`Locale data was not supplied for the ${localeContext}, or the en fallback locale.`);
-  }
-};
-
 const hasIntlData = (locale) => {
   const intlConstructors = [
     Intl.DateTimeFormat,
@@ -26,6 +15,20 @@ const hasIntlData = (locale) => {
     const supportedLocalesFromProvidedList = intlConstructor.supportedLocalesOf([locale], { localeMatcher: 'lookup' });
     return !!supportedLocalesFromProvidedList.length && supportedLocalesFromProvidedList[0] === locale;
   });
+};
+
+const loadFallbackIntl = (localeContext) => {
+  try {
+    if (!hasIntlData('en')) {
+      intlLoaders['en']();
+    }
+
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(`Locale data was not supplied for the ${localeContext}. Using en data as the fallback locale data.`);
+    }
+  } catch (e) {
+    throw new Error(`Locale data was not supplied for the ${localeContext}, or the en fallback locale.`);
+  }
 };
 
 const loadIntl = (locale) => {
