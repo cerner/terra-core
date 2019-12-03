@@ -5,10 +5,12 @@ Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
 2.24.0 - (November 12, 2019)
 ------------------
 ### Changed
+* Changed how cursor looks on specific hyperlinks(ex: a default cursor instead of text selector on disabled hyperlink).
 * Switched themeable icons provided by CSS to imported `terra-icon` component.
 
 2.23.0 - (November 7, 2019)

@@ -5,6 +5,10 @@ Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+### Fixed
+* Fixed jest tests due to ResponsiveElement change
 
 4.14.0 - (October 30, 2019)
 ------------------

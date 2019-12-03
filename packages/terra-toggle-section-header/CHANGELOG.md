@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added reference wdio screenshots for "clinical-lowlight-theme".
+* Added reference wdio screenshots for "orion-fusion-theme".
 
 2.25.0 - (October 30, 2019)
 ------------------

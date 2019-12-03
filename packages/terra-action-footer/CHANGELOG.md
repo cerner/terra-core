@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
 2.27.0 - (November 12, 2019)
 ------------------
@@ -18,11 +19,11 @@ Unreleased
 
 2.25.0 - (October 30, 2019)
 ------------------
-### Fixed
-* Fixed lint warnings for multiple empty lines
-
 ### Changed
 * Wdio updated for inline svg alignment.
+
+### Fixed
+* Fixed lint warnings for multiple empty lines
 
 2.24.0 - (October 3, 2019)
 ------------------

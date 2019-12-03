@@ -66,6 +66,7 @@
     "compile:clean": "rm -rf packages/**/lib",
     "compile:prod": "rm -rf ./build; webpack -p",
     "compile:lowlight": "rm -rf ./build; THEME=clinical-lowlight-theme webpack -p",
+    "compile:fusion": "rm -rf ./build; THEME=orion-fusion-theme webpack -p",
     "danger": "danger ci",
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
     "docs": "node scripts/root-readme-updater/index.js",
@@ -89,7 +90,8 @@
     "test": "npm run jest && npm run wdio",
     "wdio-default": "NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
     "wdio-lowlight": "NODE_OPTIONS=--max-old-space-size=2048 THEME=clinical-lowlight-theme wdio config/wdio/clinical-lowlight-theme/wdio.conf.js",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight"
+    "wdio-fusion": "NODE_OPTIONS=--max-old-space-size=2048 THEME=orion-fusion-theme wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",

@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
 ### Fixed
 * One request made instead of two when image is rendered with a placeholder.

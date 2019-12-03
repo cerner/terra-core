@@ -64,6 +64,21 @@ jobs:
       script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=huge test-ci-lowlight
     - name: enormous
       script: travis_wait docker-compose run -e THEME=clinical-lowlight-theme -e FORM_FACTOR=enormous test-ci-lowlight
+    - stage: compile - fusion theme
+      script: travis_wait docker-compose run test-ci npm run compile:fusion
+    - stage: wdio - fusion theme
+      name: tiny
+      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=tiny test-ci
+    - name: small
+      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=small test-ci
+    - name: medium
+      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=medium test-ci
+    - name: large
+      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=large test-ci
+    - name: huge
+      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=huge test-ci
+    - name: enormous
+      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=enormous test-ci
     - stage: deploy
       script: skip
       before_deploy:
@@ -90,6 +105,8 @@ stages:
   - wdio - default theme
   - compile - lowlight theme
   - wdio - lowlight theme
+  - compile - fusion theme
+  - wdio - fusion theme
   - name: deploy
     if: type != pull_request
   - clean up cache
