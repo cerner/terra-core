@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+### Fixed
+* Updated snapshots for terra-image change.
 
 2.30.0 - (October 30, 2019)
 ------------------
