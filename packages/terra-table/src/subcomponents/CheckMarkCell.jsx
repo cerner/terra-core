@@ -12,8 +12,17 @@ import {
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Aria label for the check mark.
+   */
   label: PropTypes.string.isRequired,
+  /**
+   * Whether or not the check mark cell should be read only.
+   */
   isReadOnly: PropTypes.bool,
+  /**
+   * Whether or not the check mark cell should be visually hidden.
+   */
   isHidden: PropTypes.bool,
   /**
    * The top padding to be used for the CheckMarkCell in rem(s).
@@ -108,6 +117,7 @@ const CheckMarkCell = ({
       attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
       attrSpread.tabIndex = '0';
       attrSpread['data-cell-show-focus'] = 'true';
+      // This index switching is required for reverse tabbing with the Safari browser.
       attrSpread.onFocus = wrappedEventCallback(onFocus, event => {
         event.currentTarget.setAttribute('tabindex', -1);
       });
@@ -151,7 +161,7 @@ const CheckMarkCell = ({
             { 'is-selectable': isSelectable },
             { 'is-selected': isSelected },
             { 'is-disabled': isDisabled },
-            { 'is-hidden': isHidden }, // TODO: need way to selectively do this
+            { 'is-hidden': isHidden },
           )}
         />
       </div>

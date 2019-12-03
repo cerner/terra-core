@@ -4,7 +4,7 @@ import React, {
 import Table from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
 import mockData from './mock-data/mock-sort';
 
-const columns = ['column-0', 'column-1', 'column-2'];
+const columnKeys = ['column-0', 'column-1', 'column-2'];
 
 const createCell = cell => ({ key: cell.key, children: [cell.title] });
 
@@ -19,8 +19,8 @@ const sortData = (data, sortColumn) => {
 
   const dataCopy = Object.assign([], data);
   dataCopy.sort((a, b) => {
-    const x = a.cells[columns.indexOf(sortColumn.key)].title.toLowerCase();
-    const y = b.cells[columns.indexOf(sortColumn.key)].title.toLowerCase();
+    const x = a.cells[columnKeys.indexOf(sortColumn.key)].title.toLowerCase();
+    const y = b.cells[columnKeys.indexOf(sortColumn.key)].title.toLowerCase();
     if (x < y) { return -1; }
     if (x > y) { return 1; }
     return 0;
@@ -30,16 +30,14 @@ const sortData = (data, sortColumn) => {
 };
 
 const SortedTable = () => {
-  const [sortColumn, setSortColumn] = useState(null);
+  const [sortColumn, setSortColumn] = useState({ key: columnKeys[0], direction: 'asc' });
 
   const handleSortClick = (event, metaData) => {
     event.preventDefault();
-    if (!sortColumn || sortColumn.key !== metaData.key) {
+    if (sortColumn.key !== metaData.key) {
       setSortColumn({ key: metaData.key, direction: 'asc' });
-    } else if (sortColumn.direction === 'asc') {
-      setSortColumn({ key: metaData.key, direction: 'desc' });
     } else {
-      setSortColumn(null);
+      setSortColumn({ key: metaData.key, direction: sortColumn.direction === 'asc' ? 'desc' : 'asc' });
     }
   };
 
@@ -58,9 +56,9 @@ const SortedTable = () => {
         key,
         id: `header-${key}`,
         metaData: { key },
-        onSelect: handleSortClick,
-        sort,
-        isSelectable: true,
+        onSortAction: handleSortClick,
+        isSortDesc: sort === 'desc',
+        isSortActive: !!sort,
         children: [title],
       }
     );
@@ -71,9 +69,9 @@ const SortedTable = () => {
       paddingStyle="standard"
       headerData={{
         cells: [
-          createHeaderCell(columns[0], 'Breakfast'),
-          createHeaderCell(columns[1], 'Animals'),
-          createHeaderCell(columns[2], 'Flatware'),
+          createHeaderCell(columnKeys[0], 'Breakfast'),
+          createHeaderCell(columnKeys[1], 'Animals'),
+          createHeaderCell(columnKeys[2], 'Flatware'),
         ],
       }}
       sectionData={[{

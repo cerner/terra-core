@@ -1,7 +1,5 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table from 'terra-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const HeaderCheckMarkCellExample = () => (
   <React.Fragment>

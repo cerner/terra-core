@@ -12,7 +12,13 @@ import {
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Aria label for the content.
+   */
   label: PropTypes.string.isRequired,
+  /**
+   * Whether or not the check should be visually hidden.
+   */
   isHidden: PropTypes.bool,
   /**
    * The bottom padding to be used for the HeaderCheckMarkCell in rem(s).

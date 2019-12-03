@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 
 const cellShape = PropTypes.shape({
+  /**
+   * The react key to apply to the cell.
+   */
   key: PropTypes.string.isRequired,
   /**
    * Child content to be displayed for the row cell.

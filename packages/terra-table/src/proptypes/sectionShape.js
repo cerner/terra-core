@@ -6,8 +6,17 @@ const headerShape = PropTypes.shape({
     * The children list items passed to the component.
     */
   rows: PropTypes.arrayOf(rowShape),
+  /**
+    * The section header of the provided rows.
+    */
   sectionHeader: PropTypes.shape({
+    /**
+     * The react key to apply to the section header.
+     */
     key: PropTypes.string.isRequired,
+    /**
+     * The id to apply to the header in order to provide structure for AT.
+     */
     id: PropTypes.string.isRequired,
     /**
     * Whether or not the section is collapsed.
@@ -26,7 +35,7 @@ const headerShape = PropTypes.shape({
     * Function callback for when the appropriate click or key action is performed.
     * Callback contains the javascript event and prop metadata, e.g. onSelect(event, metaData)
     */
-    onSelect: PropTypes.func,
+    onToggle: PropTypes.func,
     /**
     * Function callback pass-through for the ref of the section header.
     */

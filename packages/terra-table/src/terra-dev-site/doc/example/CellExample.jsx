@@ -1,10 +1,10 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, { Row, Cell } from 'terra-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
+import Table from 'terra-table';
 
 const TableCellExample = () => (
   <Table
+    summaryId="example-table"
+    summary="This table shows an example cell."
     sectionData={[{
       rows: [{
         key: 'row-0',

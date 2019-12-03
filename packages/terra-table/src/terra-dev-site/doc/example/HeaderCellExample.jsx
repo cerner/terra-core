@@ -1,15 +1,10 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, {
-  HeaderRow,
-  HeaderCell,
-  Row,
-  Cell,
-} from 'terra-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
+import Table from 'terra-table';
 
 const TableHeaderCellExample = () => (
   <Table
+    summaryId="example-header-cell"
+    summary="This a fixed height table."
     headerData={{
       cells:[
         {

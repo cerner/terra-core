@@ -7,6 +7,9 @@ const propTypes = {
    * The children list items passed to the component.
    */
   children: PropTypes.node,
+  /**
+   * The colSpan to be used as a descriptor for assistive technology.
+   */
   colSpan: PropTypes.number,
   /**
    * Whether or not the section is collapsed.

@@ -1,14 +1,12 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, {
-  HeaderRow, HeaderCell, Row, Cell,
-} from 'terra-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
+import Table from 'terra-table';
 import FixedHeight from '../common/FixedHeight';
 
 const FixedHeightTable = () => (
   <FixedHeight>
     <Table
+      summaryId="example-table"
+      summary="This a fixed height table."
       fill
       paddingStyle="standard"
       headerData={{

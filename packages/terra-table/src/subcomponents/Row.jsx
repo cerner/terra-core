@@ -8,8 +8,6 @@ import {
   wrappedEventCallback,
 } from './utils';
 
-// TODO: should we error/warn without link cell?
-
 const cx = classNames.bind(styles);
 
 const propTypes = {
@@ -30,6 +28,9 @@ const propTypes = {
    * Whether or not row is selected. `isSelectable` must be set to `true` in order to be applied.
    */
   isAriaSelected: PropTypes.bool,
+  /**
+   * Whether or not row is visually selected. `aria-selected` will not be set, this is idea for disclosure state.
+   */
   isVisiblySelected: PropTypes.bool,
   /**
    * Whether or not row can be selected.

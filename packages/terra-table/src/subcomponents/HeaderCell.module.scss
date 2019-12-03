@@ -26,28 +26,35 @@
 
   .sort-indicator-asc,
   .sort-indicator-desc {
-    color: var(--terra-table-header-cell-sort-indicator-color, #1c1f21);
+    color: transparent;
     flex: 0 0 auto;
     height: var(--terra-table-header-cell-sort-indicator-height, 0.6429rem);
     padding: 0;
     width: var(--terra-table-header-cell-sort-indicator-width, 0.6429rem); 
   }
 
-  .sort-indicator-asc {
-    background: var(--terra-table-header-cell-sort-asc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>'));
+  .sort-is-active.sort-indicator-asc {
+    background: var(--terra-table-header-cell-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>'));
   }
 
-  .sort-indicator-desc {
-    background: var(--terra-table-header-cell-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>'));
+  .sort-is-active.sort-indicator-desc {
+    background: var(--terra-table-header-cell-sort-asc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>'));
   }
 
-  .is-selectable {
+  .is-interactable {
     cursor: pointer;
     outline: var(--terra-table-header-cell-focus-outline, none);
 
     &:hover {
-      // background-color: var(--terra-table-header-cell-hover-background-color, darken(#dedfe0, 5%));
       background-color: var(--terra-table-header-cell-hover-background-color, rgba(255, 255, 255, 0.50));
+
+      .sort-indicator-asc {
+        background: var(--terra-table-header-cell-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#ccc" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>'));
+      }
+
+      .sort-indicator-desc {
+        background: var(--terra-table-header-cell-sort-asc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#ccc" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>'));
+      }
     }
 
     &:active {
@@ -55,9 +62,6 @@
     }
 
     &[data-header-show-focus='true']:focus {
-      // background-color: var(--terra-table-header-cell-focus-background-color, lighten(#dedfe0, 2%));
-      // border-color: var(--terra-table-header-cell-focus-border-color, #0092e0);
-      // box-shadow: var(--terra-table-header-cell-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       outline: var(--terra-table-header-cell-focus-outline, 2px solid #2a4b77);
       outline-offset: var(--terra-table-header-cell-focus-outline-offset, -2px);
       z-index: 1;

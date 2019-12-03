@@ -47,10 +47,10 @@ const RowExample = () => (
             {
               key: 'chevron_row',
               discloseLabel: 'test title',
+              primaryIndex: 0,
               cells: [
                 {
                   key: 'cell-0',
-                  isLink: true,
                   children: [
                     'Chevron Row',
                   ],

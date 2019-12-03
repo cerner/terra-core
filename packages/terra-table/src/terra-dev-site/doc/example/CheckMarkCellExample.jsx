@@ -1,11 +1,11 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table from 'terra-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const CheckMarkCellExample = () => (
   <React.Fragment>
     <Table
+      summaryId="example-default"
+      summary="This table shows a default cell"
       rowStyle="toggle"
       checkStyle="none"
       headerData={{
@@ -29,6 +29,8 @@ const CheckMarkCellExample = () => (
       ]}
     />
     <Table
+      summaryId="example-alignment"
+      summary="This table shows a cell alignment"
       rowStyle="disclose"
       checkStyle="toggle"
       sectionData={[
@@ -49,6 +51,8 @@ const CheckMarkCellExample = () => (
       ]}
     />
     <Table
+      summaryId="example-disclose"
+      summary="This table shows a disclosure cell"
       rowStyle="disclose"
       checkStyle="toggle"
       sectionData={[
@@ -68,6 +72,8 @@ const CheckMarkCellExample = () => (
       ]}
     />
     <Table
+      summaryId="example-checkstyle"
+      summary="This table shows a read only check cell"
       rowStyle="toggle"
       checkStyle="readOnly"
       headerData={{
@@ -90,6 +96,8 @@ const CheckMarkCellExample = () => (
       ]}
     />
     <Table
+      summaryId="example-toggle"
+      summary="This table shows a toggled check cell"
       rowStyle="disclose"
       checkStyle="toggle"
       sectionData={[
@@ -110,6 +118,8 @@ const CheckMarkCellExample = () => (
       ]}
     />
     <Table
+      summaryId="example-toggle-true"
+      summary="This table shows a toggled check cell that is selected."
       rowStyle="toggle"
       checkStyle="readOnly"
       headerData={{
@@ -133,6 +143,8 @@ const CheckMarkCellExample = () => (
       ]}
     />
     <Table
+      summaryId="example-disabled-toggle"
+      summary="This table shows a disclosure toggled check cell that is disabled."
       rowStyle="disclose"
       checkStyle="toggle"
       sectionData={[
@@ -154,6 +166,8 @@ const CheckMarkCellExample = () => (
       ]}
     />
     <Table
+      summaryId="example-toggle-readonly"
+      summary="This table shows a read only toggled disabled check cell"
       rowStyle="toggle"
       checkStyle="readOnly"
       sectionData={[

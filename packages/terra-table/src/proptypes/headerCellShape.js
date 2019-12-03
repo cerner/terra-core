@@ -1,9 +1,15 @@
 import PropTypes from 'prop-types';
 
 const headerCellShape = PropTypes.shape({
+  /**
+   * The id of the header cell for the row cells to set within their "headers" prop.
+   */
   id: PropTypes.string.isRequired,
+  /**
+   * The react key to apply to the cell.
+   */
   key: PropTypes.string.isRequired,
-/**
+  /**
    * Content to be displayed for the column header.
    */
   children: PropTypes.node,
@@ -30,10 +36,10 @@ const headerCellShape = PropTypes.shape({
    * This is useful to optimize the DOM for either a table without padding or to optimize a cell whose custom content is providing its own padding.
    */
   removeInner: PropTypes.bool,
-  /**
-   * Whether or not data in table is sorted (`'none'`, `'asc'`, `'desc'`)
-   */
-  sort: PropTypes.oneOf(['none', 'asc', 'desc']),
+  isSortDesc: PropTypes.bool,
+  isSortActive: PropTypes.bool,
+  onCellAction: PropTypes.func,
+  onSortAction: PropTypes.func,
 });
 
 export default headerCellShape;

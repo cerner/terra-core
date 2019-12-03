@@ -8,8 +8,14 @@ import { styleFromWidth } from './utils';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Aria label to be applied when the cell is marked as primary.
+   */
   label: PropTypes.string,
-  isLink: PropTypes.bool,
+  /**
+   * Whether or not the cell is the primary means of disclosure messaging.
+   */
+  isPrimary: PropTypes.bool,
   /**
    * Child content to be displayed for the row cell.
    */
@@ -62,11 +68,11 @@ const Cell = ({
   removeInner,
   width,
   label,
-  isLink,
+  isPrimary,
   ...customProps
 }) => {
   const cellClassNames = cx('cell');
-  const contentRole = isLink ? 'link' : undefined;
+  const contentRole = isPrimary ? 'link' : undefined;
   const contentClass = !removeInner ? cx('container') : undefined;
 
   let content = children;
@@ -74,7 +80,7 @@ const Cell = ({
     content = (
       <div role={contentRole} className={contentClass}>
         {content}
-        {contentRole && <VisuallyHiddenText text={label} />}
+        {isPrimary && <VisuallyHiddenText text={label} />}
       </div>
     );
   }
@@ -86,7 +92,7 @@ const Cell = ({
       className={customProps.className ? `${cellClassNames} ${customProps.className}` : cellClassNames}
       ref={refCallback}
       role="gridcell"
-      tabIndex={ isLink ? '-1' : undefined }
+      tabIndex={ isPrimary ? '-1' : undefined }
     >
       {content}
     </div>

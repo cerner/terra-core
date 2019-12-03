@@ -23,19 +23,10 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Whether or not header cell should appear as a selectable element.
-   */
-  isSelectable: PropTypes.bool,
-  /**
    * The associated metaData to be provided in the onSelect callback.
    */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
-  /**
-   * Function callback for when the appropriate click or key action is performed.
-   * Callback contains the javascript event and prop metadata, e.g. onSelect(event, metaData)
-   */
-  onSelect: PropTypes.func,
   /**
    * Function callback returning the html node for the header cell.
    */
@@ -45,10 +36,10 @@ const propTypes = {
    * This is useful to optimize the DOM for either a table without padding or to optimize a cell whose custom content is providing its own padding.
    */
   removeInner: PropTypes.bool,
-  /**
-   * Whether or not data in table is sorted (`'none'`, `'asc'`, `'desc'`)
-   */
-  sort: PropTypes.oneOf(['none', 'asc', 'desc']),
+  isSortDesc: PropTypes.bool,
+  isSortActive: PropTypes.bool,
+  onCellAction: PropTypes.func,
+  onSortAction: PropTypes.func,
   /**
    * Width of the header cell. Should match row cell counter-part.
    */
@@ -95,35 +86,49 @@ const propTypes = {
 
 const defaultProps = {
   children: [],
-  isSelectable: false,
   removeInner: false,
-  sort: 'none',
+  isSortDesc: false,
+  isSortActive: false,
 };
 
 const HeaderCell = ({
   children,
-  isSelectable,
+  isSortDesc,
+  isSortActive,
   metaData,
   onBlur,
   onClick,
   onKeyDown,
   onMouseDown,
-  onSelect,
+  onCellAction,
+  onSortAction,
   refCallback,
   removeInner,
-  sort,
   width,
   ...customProps
 }) => {
   let sortIndicator;
-  if (sort !== 'none') {
-    sortIndicator = <div className={cx(`sort-indicator-${sort}`)} key="sort" />;
+  if (onSortAction || isSortActive) {
+    sortIndicator = (
+      <div
+        key="sort"
+        className={cx(
+          `sort-indicator-${isSortDesc ? 'desc' : 'asc'}`,
+          { 'sort-is-active': isSortActive }
+        )}
+      />
+    );
   }
 
-  const attrSpread = { 'aria-sort': ariaSortMap[sort] };
-  if (isSelectable) {
-    attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
-    attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+  const attrSpread = {};
+  if (isSortActive) {
+    attrSpread['aria-sort'] = isSortDesc ? 'descending' : 'ascending';
+  }
+
+  const onAction = onSortAction || onCellAction;
+  if (onAction) {
+    attrSpread.onClick = wrappedOnClickForItem(onClick, onAction, metaData);
+    attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onAction, metaData);
     attrSpread.tabIndex = '0';
     attrSpread['data-header-show-focus'] = 'true';
     attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-header-show-focus', 'true'));
@@ -148,8 +153,7 @@ const HeaderCell = ({
 
   const headerCellClasses = cx(
     'header-cell',
-    { 'is-selectable': isSelectable },
-    { 'is-sortable': sort === 'asc' || sort === 'desc' },
+    { 'is-interactable': onAction },
   );
 
   return (

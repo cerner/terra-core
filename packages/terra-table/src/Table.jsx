@@ -8,11 +8,11 @@ import sectionShape from './proptypes/sectionShape';
 import headerShape from './proptypes/headerShape';
 import widthShape from './proptypes/widthShape';
 
-import Section from './subcomponents/Section';
 import Row from './subcomponents/Row';
 import Cell from './subcomponents/Cell'
-import HeaderCell from './subcomponents/HeaderCell';
+import Section from './subcomponents/Section';
 import HeaderRow from './subcomponents/HeaderRow';
+import HeaderCell from './subcomponents/HeaderCell';
 import ChevronCell from './subcomponents/ChevronCell';
 import CheckMarkCell from './subcomponents/CheckMarkCell';
 import HeaderChevronCell from './subcomponents/HeaderChevronCell';
@@ -21,28 +21,27 @@ import HeaderCheckMarkCell from './subcomponents/HeaderCheckMarkCell';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  id: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
-  rowStyle: PropTypes.oneOf([
-    'none',
-    'disclose',
-    'toggle',
-  ]),
+  /**
+   * The check mark styling to apply.
+   * One of `'none'`, `'readOnly'`, `'toggle'`.
+   */
   checkStyle: PropTypes.oneOf([
     'none',
     'readOnly', // TODO: address renaming this, UX ask
     'toggle',
   ]),
+  /**
+   * The divider styling to apply to the child rows.
+   * One of `'none'`, `'disclose'`, `'toggle'`.
+   */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
+  /**
+   * The width value structures associated to each column.
+   */
   columnWidths: PropTypes.arrayOf(widthShape),
   /**
-   * The children passed to the component
+   * The data to build header cells and columns.
    */
-  sectionData: PropTypes.arrayOf(sectionShape),
-  /**
-   * The HeaderRow element containing the header cells used for the table.
-   */
-  // columnData: PropTypes.arrayOf(headerCellShape),
   headerData: headerShape,
   /**
    * Element to append to the top of the table. i.e. toolbars etc.
@@ -57,19 +56,40 @@ const propTypes = {
    */
   footerNode: PropTypes.node,
   /**
-   * The padding styling to apply to the cell content.
-   * One of `'none'`, `'standard'`, `'compact'`.
-   */
-  paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
-  /**
    * This value is used for accessibility when paged/virtualized rows are used.
    * By default this value is derived from the number of rows passed within the sectionData.
    */
   numberOfRows: PropTypes.number,
   /**
+   * The padding styling to apply to the cell content.
+   * One of `'none'`, `'standard'`, `'compact'`.
+   */
+  paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
+  /**
+   * The interaction styling to apply to the row.
+   * One of `'none'`, `'disclose'`, `'toggle'`.
+   */
+  rowStyle: PropTypes.oneOf([
+    'none',
+    'disclose',
+    'toggle',
+  ]),
+  /**
    * Function callback returning the html node of the table.
    */
   scrollRefCallback: PropTypes.func,
+  /**
+   * The grouping of rows associated to the table. A section header can also be paired with the rows.
+   */
+  sectionData: PropTypes.arrayOf(sectionShape),
+  /**
+   * The summary text to describe the table's content and interactions.
+   */
+  summary: PropTypes.string.isRequired,
+  /**
+   * The element id to associate to the descriptive text.
+   */
+  summaryId: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
@@ -87,7 +107,7 @@ const createCell = (cell, sectionId, columnId, colWidth, rowData, isPrimary) => 
     refCallback={cell.refCallback}
     removeInner={cell.removeInner}
     width={colWidth}
-    isLink={isPrimary}
+    isPrimary={isPrimary}
     label={isPrimary ? rowData.discloseLabel : undefined}
   >
     {cell.children}
@@ -98,7 +118,7 @@ const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
   if (checkStyle === 'readOnly' || checkStyle === 'toggle') {
     return (
       <CheckMarkCell
-        alignmentPadding={rowData.checkAlignment} // TODO: determine if by row, section, or table.
+        alignmentPadding={rowData.checkAlignment}
         metaData={rowData.metaData}
         onSelect={rowData.onCheckAction}
         label={rowData.toggleLabel}
@@ -129,23 +149,27 @@ const createChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
-const createHeaderCheckCell = (headerData, rowStyle, checkStyle) =>  {
-  if (checkStyle !== 'none') {
+const createHeaderCheckCell = (checkData, rowStyle, checkStyle) =>  {
+  if (!checkData) {
+    return undefined;
+  }
+
+  if (checkStyle === 'toggle') {
     return (
       <HeaderCheckMarkCell
-        alignmentPadding={headerData.checkAlignment}
-        isSelectable={checkStyle === 'toggle' && headerData.allowSelectAll}
-        isSelected={headerData.selectAllStatus == 'checked' || headerData.selectAllStatus == 'indeterminate'}
-        isIndeterminate={headerData.selectAllStatus == 'indeterminate'}
-        isDisabled={headerData.isDisabled}
-        onSelect={headerData.onSelect}
-        label={headerData.selectColumnHeaderLabel}
+        alignmentPadding={checkData.checkAlignment}
+        isSelectable={checkStyle === 'toggle'}
+        isSelected={checkData.status == 'checked' || checkData.status == 'indeterminate'}
+        isIndeterminate={checkData.status == 'indeterminate'}
+        isDisabled={checkData.isDisabled}
+        onSelect={checkData.onToggle}
+        label={checkData.label}
       />
     );
-  } else if (rowStyle === 'toggle' && (checkStyle === 'none' || checkStyle === 'readOnly')) {
+  } else if (rowStyle === 'toggle') {
     return (
       <HeaderCheckMarkCell
-        label={headerData.selectColumnHeaderLabel}
+        label={checkData.label}
         isHidden
       />
     );
@@ -232,15 +256,16 @@ const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevron
     <HeaderRow
       aria-rowindex={1}
     >
-      {createHeaderCheckCell(headerData, rowStyle, checkStyle)}
+      {createHeaderCheckCell(headerData.selectionColumnData, rowStyle, checkStyle)}
       {headerData.cells.map((cellData, colIndex) => (
         <HeaderCell
           key={cellData.key}
           refCallback={cellData.refCallback}
           metaData={cellData.metaData}
-          onSelect={cellData.onSelect}
-          isSelectable={cellData.isSelectable}
-          sort={cellData.sort}
+          isSortDesc={cellData.isSortDesc}
+          isSortActive={cellData.isSortActive}
+          onCellAction={cellData.onCellAction}
+          onSortAction={cellData.onSortAction}
           width={columnWidths ? columnWidths[colIndex] : undefined}
         >
           {cellData.children}
@@ -252,14 +277,12 @@ const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevron
 };
 
 const unpackTableData = (headerData, sectionData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
-  // do we create start end elements here?
   const { headerIndex, header } = createHeader(headerData, columnWidths, rowStyle, checkStyle, hasChevrons);
   const { sectionIndex, sections } = createSections(headerIndex, sectionData, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle);
   return { rowCount: sectionIndex, header, sections };
 };
 
 const Table = ({
-  id,
   dividerStyle,
   hasChevrons,
   rowStyle,
@@ -274,6 +297,7 @@ const Table = ({
   numberOfRows,
   scrollRefCallback,
   summary,
+  summaryId,
   ...customProps
 }) => {
   const attrSpread = {};
@@ -300,9 +324,9 @@ const Table = ({
       className={customProps.className ? `${tableClasses} ${customProps.className}` : tableClasses}
       role="grid"
       aria-rowcount={numberOfRows || rowCount}
-      aria-describedby={id}
+      aria-describedby={summaryId}
     >
-      <VisuallyHiddenText id={id} text={summary} />
+      <VisuallyHiddenText id={summaryId} text={summary} />
       {header}
       {sections ? (
         <div className={cx(['body'])} role="rowgroup" ref={scrollRefCallback}>

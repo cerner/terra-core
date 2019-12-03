@@ -11,6 +11,9 @@ import styles from './SectionHeader.module.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * The colSpan to be used as a descriptor for assistive technology.
+   */
   colSpan: PropTypes.number,
   /**
    * @private Whether or not the section is collapsed.

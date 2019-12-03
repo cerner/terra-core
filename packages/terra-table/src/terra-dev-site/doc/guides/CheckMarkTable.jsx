@@ -66,10 +66,11 @@ const CheckMarkTable = () => {
       rowStyle="disclose"
       checkStyle="toggle"
       headerData={{
-        allowSelectAll: true,
-        selectAllStatus: status,
-        selectColumnHeaderLabel: 'Batch Selection',
-        onSelect: handleHeaderMarkSelection,
+        selectionColumnData: {
+          status,
+          label: 'Batch Selection',
+          onToggle: handleHeaderMarkSelection,
+        },
         cells: [
           { key: 'cell-0', id: 'toggle-0', children: ['Column 0'] },
           { key: 'cell-1', id: 'toggle-1', children: ['Column 1'] },
