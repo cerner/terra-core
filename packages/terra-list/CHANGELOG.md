@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * `isDisabled` prop added to fix accessibility issue to handle selectable and non-selectable items correctly.
 
+4.23.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 4.22.0 - (October 30, 2019)
 ------------------
 ### Changed

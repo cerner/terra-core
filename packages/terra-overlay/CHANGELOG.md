@@ -4,6 +4,18 @@ ChangeLog
 Unreleased
 ----------
 
+3.36.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+3.35.0 - (November 26, 2019)
+------------------
+### Fixed
+* Added `aria-live` to `LoadingOverlay` for screenreader AT
+
+3.34.0 - (November 7, 2019)
+------------------
 ### Changed
 * Updating tests to be better isolated from terra-dev-site markup.
 

@@ -36,6 +36,7 @@ exports[`LoadingOverlay should not render markup when isOpen is not provided 1`]
   rootSelector="#root"
 >
   <Overlay
+    aria-live="polite"
     backgroundStyle="light"
     className="loading-overlay"
     intl={
@@ -111,6 +112,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
   rootSelector="#root"
 >
   <Overlay
+    aria-live="polite"
     backgroundStyle="light"
     className="loading-overlay"
     intl={
@@ -159,6 +161,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
             </div>
             <div>
               <div
+                aria-live="polite"
                 class="overlay fullscreen light loading-overlay layer-100"
                 intl="[object Object]"
                 tabindex="0"
@@ -206,6 +209,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
         >
           <div>
             <div
+              aria-live="polite"
               className="overlay fullscreen light loading-overlay layer-100"
               intl={
                 Object {
@@ -328,6 +332,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
   rootSelector="#root"
 >
   <Overlay
+    aria-live="polite"
     backgroundStyle="light"
     className="loading-overlay"
     intl={
@@ -376,6 +381,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
             </div>
             <div>
               <div
+                aria-live="polite"
                 class="overlay fullscreen light loading-overlay layer-100"
                 intl="[object Object]"
                 tabindex="0"
@@ -423,6 +429,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
         >
           <div>
             <div
+              aria-live="polite"
               className="overlay fullscreen light loading-overlay layer-100"
               intl={
                 Object {
