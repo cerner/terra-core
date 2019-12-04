@@ -3,6 +3,10 @@ import cellShape from './cellShape';
 
 const rowShape = PropTypes.shape({
   /**
+   * The index of the row is derived by default, but in the case of paging and virtualization a different index may be needed as an override.
+   */
+  index: PropTypes.number,
+  /**
    * The index of the cell that provides the accessible link entry point for disclosure style rows.
    */
   primaryCellIndex: PropTypes.number,
