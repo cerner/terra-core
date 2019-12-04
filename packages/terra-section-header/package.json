@@ -1,7 +1,7 @@
 {
   "name": "terra-section-header",
   "main": "lib/SectionHeader.js",
-  "version": "2.26.0",
+  "version": "2.27.0",
   "description": "Section Header component that contains text and can be optionally interacted with.",
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
     "classnames": "^2.2.5",
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^3.24.0",
-    "terra-doc-template": "^2.21.0",
+    "terra-arrange": "^3.25.0",
+    "terra-doc-template": "^2.22.0",
     "terra-mixins": "^1.33.0"
   },
   "scripts": {
