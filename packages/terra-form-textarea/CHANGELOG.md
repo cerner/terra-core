@@ -6,6 +6,11 @@ Unreleased
 ### Breaking Changes
 * `label` prop's type changed from node to string.
 
+3.32.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 3.31.0 - (October 30, 2019)
 ------------------
 ### Changed

@@ -1,0 +1,15 @@
+:global {
+  // Card 
+  --terra-card-background-color: #fff;
+  --terra-card-border: 1px solid #c8cacb;
+  --terra-card-border-radius: 0;
+  --terra-card-box-shadow: none;
+  --terra-card-raised-box-shadow: 2px 2px 0 0 rgba(28, 31, 33, 0.1), -2px 2px 0 0 rgba(28, 31, 33, 0.1), 0 4px 0 0 rgba(28, 31, 33, 0.04), 0 8px 0 -2px rgba(28, 31, 33, 0.03);
+  --terra-card-color: inherit;
+  
+  // Card Body
+  --terra-card-padding-bottom: 0.5rem;
+  --terra-card-padding-left: 0.5rem;
+  --terra-card-padding-right: 0.5rem;
+  --terra-card-padding-top: 0.5rem;
+}

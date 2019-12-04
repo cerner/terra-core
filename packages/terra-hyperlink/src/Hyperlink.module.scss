@@ -4,6 +4,7 @@
   .hyperlink {
     background-color: transparent; // Remove the gray background on active links in IE 10
     color: var(--terra-hyperlink-color, #006fc3);
+    cursor: pointer;
     display: inline-block; // prevents variant icon from breaking onto its own line
     outline: none;
     text-decoration: var(--terra-hyperlink-text-decoration, none);
@@ -38,6 +39,8 @@
 
     &.is-disabled {
       color: var(--terra-hyperlink-disabled-color, rgba(28, 31, 33, 0.2));
+      cursor: default;
+      pointer-events: none;
       text-decoration: var(--terra-hyperlink-disabled-text-decoration, none);
     }
   }

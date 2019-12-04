@@ -6,15 +6,25 @@ Unreleased
 ### Breaking Changes
 * `label` prop's type changed from node to string.
 
+5.38.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+5.37.0 - (November 26, 2019)
+------------------
+### Fixed
+* Multiple instances of default variant select dropdown do not remain open at once on IE.
+
 5.36.0 - (October 30, 2019)
 ------------------
+### Changed
+* Duplicate ID in examples changed.
+
 ### Fixed
 * Fixed IE issue that required two clicks to open the dropdown menu after initial selection.
 * Fixed lint warnings for multiple empty lines
 * Fixed re-renders of scroll after every componentDidUpdate call.
-
-### Changed
-* Duplicate ID in examples changed.
 
 5.35.0 - (October 18, 2019)
 ------------------
