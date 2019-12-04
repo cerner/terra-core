@@ -1,0 +1,25 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-hyperlink-color: #0065a3;
+  --terra-hyperlink-text-decoration: none;
+  --terra-hyperlink-visited-color: #0065a3;
+  --terra-hyperlink-visited-focus-color: #004c76;
+  --terra-hyperlink-hover-background-color: transparent;
+  --terra-hyperlink-hover-color: #004c76;
+  --terra-hyperlink-hover-text-decoration: underline;
+  --terra-hyperlink-focus-background-color: transparent;
+  --terra-hyperlink-focus-border-radius: 3px;
+  --terra-hyperlink-focus-box-shadow: 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25);
+  --terra-hyperlink-focus-color: #004c76;
+  --terra-hyperlink-focus-text-decoration: underline;
+  --terra-hyperlink-active-color: #0065a3;
+  --terra-hyperlink-disabled-color: #9b9fa1;
+  --terra-hyperlink-disabled-text-decoration: none;
+  --terra-hyperlink-underline-hidden-color: #0065a3;
+  --terra-hyperlink-underline-hidden-focus-color: #004c76;
+  --terra-hyperlink-underline-hidden-hover-color: #004c76;
+  --terra-hyperlink-underline-hidden-visited-color: #0065a3;
+  --terra-hyperlink-underline-hidden-visited-focus-color: #004c76;
+  --terra-hyperlink-icon-margin-left: 0.5em;
+}
