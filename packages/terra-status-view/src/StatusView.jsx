@@ -118,9 +118,9 @@ const StatusView = ({
   let messageSection;
   if (message) {
     messageSection = (
-      <div className={cx('message')}>
+      <p className={cx('message')}>
         {message}
-      </div>
+      </p>
     );
   }
 

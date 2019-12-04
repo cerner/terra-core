@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* `<div>` tag replaced with `<p>` in message content.
 
 4.12.0 - (December 3, 2019)
 ------------------
