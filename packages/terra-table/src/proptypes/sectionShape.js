@@ -32,8 +32,12 @@ const headerShape = PropTypes.shape({
     // eslint-disable-next-line react/forbid-prop-types
     metaData: PropTypes.object,
     /**
-    * Function callback for when the appropriate click or key action is performed.
-    * Callback contains the javascript event and prop metadata, e.g. onSelect(event, metaData)
+     * The numberOfColumns to be used as a descriptor for assistive technology.
+     */
+    numberOfColumns: PropTypes.number.isRequired,
+    /**
+    * Function callback for when the appropriate click or key action is performed to expand or collapse the section.
+    * Callback contains the javascript event and prop metadata, e.g. onToggle(event, metaData)
     */
     onToggle: PropTypes.func,
     /**

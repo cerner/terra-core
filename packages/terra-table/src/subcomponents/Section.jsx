@@ -8,9 +8,9 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * The colSpan to be used as a descriptor for assistive technology.
+   * The numberOfColumns to be used as a descriptor for assistive technology.
    */
-  colSpan: PropTypes.number,
+  numberOfColumns: PropTypes.number.isRequired,
   /**
    * Whether or not the section is collapsed.
    */

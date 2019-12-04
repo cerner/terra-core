@@ -26,18 +26,18 @@ const sortData = (data, sortColumn) => {
     return 0;
   });
 
-  return sortColumn.direction === 'asc' ? dataCopy : dataCopy.reverse();
+  return sortColumn.sortDesc ? dataCopy.reverse() : dataCopy;
 };
 
 const SortedTable = () => {
-  const [sortColumn, setSortColumn] = useState({ key: columnKeys[0], direction: 'asc' });
+  const [sortColumn, setSortColumn] = useState({ key: columnKeys[0], sortDesc: false });
 
   const handleSortClick = (event, metaData) => {
     event.preventDefault();
     if (sortColumn.key !== metaData.key) {
-      setSortColumn({ key: metaData.key, direction: 'asc' });
+      setSortColumn({ key: metaData.key, sortDesc: false });
     } else {
-      setSortColumn({ key: metaData.key, direction: sortColumn.direction === 'asc' ? 'desc' : 'asc' });
+      setSortColumn({ key: metaData.key, sortDesc: !sortColumn.sortDesc });
     }
   };
 
@@ -46,23 +46,17 @@ const SortedTable = () => {
     return sortedData.map(childItem => createRow(childItem));
   };
 
-  const createHeaderCell = (key, title) => {
-    let sort;
-    if (sortColumn && sortColumn.key === key) {
-      sort = sortColumn.direction;
+  const createHeaderCell = (key, title) => (
+    {
+      key,
+      id: `header-${key}`,
+      metaData: { key },
+      onSortAction: handleSortClick,
+      isSortDesc: sortColumn.sortDesc,
+      isSortActive: sortColumn.key === key,
+      children: [title],
     }
-    return (
-      {
-        key,
-        id: `header-${key}`,
-        metaData: { key },
-        onSortAction: handleSortClick,
-        isSortDesc: sort === 'desc',
-        isSortActive: !!sort,
-        children: [title],
-      }
-    );
-  };
+  );
 
   return (
     <Table

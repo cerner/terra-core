@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import headerCellShape from './headerCellShape';
 
 const headerShape = PropTypes.shape({
-  id: PropTypes.string,
-  key: PropTypes.string,
   /**
    * The cells to be displayed within the header.
    */
@@ -19,7 +17,7 @@ const headerShape = PropTypes.shape({
     /**
      * The status of the select all checkbox.
      */
-    status: PropTypes.oneOf(['empty', 'checked', 'indeterminate']).isRequired,
+    checkStatus: PropTypes.oneOf(['empty', 'checked', 'indeterminate']).isRequired,
       /**
      * The alignment prop sets the bottom spacing of the check mark in rem values. This is used when providing your own padding.
      */
@@ -27,8 +25,14 @@ const headerShape = PropTypes.shape({
     /**
      * The text label for the column header's interaction.
      */
-    headerCelllabel: PropTypes.string.isRequired,
-    onToggle: PropTypes.func.isRequired,
+    checkLabel: PropTypes.string.isRequired,
+    /**
+     * The text label for the column header's interaction.
+     */
+    onCheckAction: PropTypes.func.isRequired,
+    /**
+     * The text label for the column header's interaction.
+     */
     isDisabled: PropTypes.bool,
   }),
 });

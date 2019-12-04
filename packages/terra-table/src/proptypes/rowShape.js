@@ -23,9 +23,10 @@ const rowShape = PropTypes.shape({
    */
   isToggled: PropTypes.bool,
   /**
-   * Whether or not the row visually displays as in togged state.
+   * Whether or not the row is the currently selected disclosure.
+   * This aria state relates to the primary link cell.
    */
-  isVisuallyToggled: PropTypes.bool,
+  isDisclosed: PropTypes.bool,
   /**
    * The children to be passed as row content.
    */

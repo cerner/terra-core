@@ -9,17 +9,22 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Aria label to be applied when the cell is marked as primary.
-   */
-  label: PropTypes.string,
-  /**
-   * Whether or not the cell is the primary means of disclosure messaging.
-   */
-  isPrimary: PropTypes.bool,
-  /**
    * Child content to be displayed for the row cell.
    */
   children: PropTypes.node,
+  /**
+   * a
+   */
+  disclosureData: PropTypes.shape({
+    /**
+     * Aria label to be applied when the cell is marked as primary.
+     */
+    label: PropTypes.string,
+    /**
+     * Whether or not the link role should be marked as current.
+     */
+    isCurrent: PropTypes.bool,
+  }),
   /**
    * Function callback returning the html node for the cell.
    */
@@ -67,20 +72,28 @@ const Cell = ({
   refCallback,
   removeInner,
   width,
-  label,
-  isPrimary,
+  disclosureData,
   ...customProps
 }) => {
   const cellClassNames = cx('cell');
-  const contentRole = isPrimary ? 'link' : undefined;
   const contentClass = !removeInner ? cx('container') : undefined;
 
+  let ariaAttr;
+  let ariaElement;
+  if (disclosureData) {
+    ariaAttr = {
+      role: 'link',
+      'aria-current': disclosureData.isCurrent,
+    }
+    ariaElement = disclosureData.label ? <VisuallyHiddenText text={disclosureData.label} /> : undefined;
+  } 
+
   let content = children;
-  if (contentRole || contentClass) {
+  if (ariaAttr || contentClass) {
     content = (
-      <div role={contentRole} className={contentClass}>
+      <div {...ariaAttr} className={contentClass}>
         {content}
-        {isPrimary && <VisuallyHiddenText text={label} />}
+        {ariaElement}
       </div>
     );
   }
@@ -92,7 +105,7 @@ const Cell = ({
       className={customProps.className ? `${cellClassNames} ${customProps.className}` : cellClassNames}
       ref={refCallback}
       role="gridcell"
-      tabIndex={ isPrimary ? '-1' : undefined }
+      tabIndex={ disclosureData ? '-1' : undefined }
     >
       {content}
     </div>

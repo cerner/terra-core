@@ -33,6 +33,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
   /**
+   * The numberOfColumns to be used as a descriptor for assistive technology.
+   */
+  numberOfColumns: PropTypes.number.isRequired,
+  /**
    * @private Function callback for when the appropriate click or key action is performed.
    * Callback contains the javascript event and prop metadata, e.g. onSelect(event, metaData)
    */
@@ -74,6 +78,7 @@ const SectionHeader = ({
   isCollapsible,
   level,
   metaData,
+  numberOfColumns,
   onBlur,
   onClick,
   onKeyDown,
@@ -123,7 +128,7 @@ const SectionHeader = ({
       <div
         {...attrSpread}
         id={id}
-        colSpan={3}
+        colSpan={numberOfColumns}
         headers=""
         scope="colgroup"
         role="columnheader"
@@ -131,7 +136,6 @@ const SectionHeader = ({
       >
         {accordionIcon}
         {titleElement}
-        {/* {title} */}
       </div>
     </div>
   );

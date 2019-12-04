@@ -100,19 +100,27 @@ const defaultProps = {
   checkStyle: 'none',
 };
 
-const createCell = (cell, sectionId, columnId, colWidth, rowData, isPrimary) => (
-  <Cell
-    headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
-    key={cell.key}
-    refCallback={cell.refCallback}
-    removeInner={cell.removeInner}
-    width={colWidth}
-    isPrimary={isPrimary}
-    label={isPrimary ? rowData.discloseLabel : undefined}
-  >
-    {cell.children}
-  </Cell>
-);
+const createCell = (cell, sectionId, columnId, colWidth, rowData, isPrimary) => {
+  let disclose;
+  if (isPrimary) {
+    disclose = {
+      label: rowData.discloseLabel,
+      isCurrent: rowData.isDisclosed,
+    };
+  }
+  return (
+    <Cell
+      headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
+      key={cell.key}
+      refCallback={cell.refCallback}
+      removeInner={cell.removeInner}
+      width={colWidth}
+      disclosureData={disclose}
+    >
+      {cell.children}
+    </Cell>
+  )
+};
 
 const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
   if (checkStyle === 'readOnly' || checkStyle === 'toggle') {
@@ -128,7 +136,7 @@ const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
         isReadOnly={checkStyle === 'readOnly'}
       />
     );
-  } else if (rowStyle === 'toggle' && checkStyle === 'none') {
+  } else if (rowStyle === 'toggle') {
     return (
       <CheckMarkCell
         metaData={rowData.metaData}
@@ -149,27 +157,27 @@ const createChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
-const createHeaderCheckCell = (checkData, rowStyle, checkStyle) =>  {
-  if (!checkData) {
+const createHeaderCheckCell = (columnData, rowStyle, checkStyle) =>  {
+  if (!columnData) {
     return undefined;
   }
 
   if (checkStyle === 'toggle') {
     return (
       <HeaderCheckMarkCell
-        alignmentPadding={checkData.checkAlignment}
+        alignmentPadding={columnData.checkAlignment}
         isSelectable={checkStyle === 'toggle'}
-        isSelected={checkData.status == 'checked' || checkData.status == 'indeterminate'}
-        isIndeterminate={checkData.status == 'indeterminate'}
-        isDisabled={checkData.isDisabled}
-        onSelect={checkData.onToggle}
-        label={checkData.label}
+        isSelected={columnData.checkStatus == 'checked' || columnData.checkStatus == 'indeterminate'}
+        isIndeterminate={columnData.checkStatus == 'indeterminate'}
+        isDisabled={columnData.isDisabled}
+        onSelect={columnData.onCheckAction}
+        label={columnData.checkLabel}
       />
     );
   } else if (rowStyle === 'toggle') {
     return (
       <HeaderCheckMarkCell
-        label={checkData.label}
+        label={columnData.checkLabel}
         isHidden
       />
     );
@@ -190,7 +198,7 @@ const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowSt
     aria-rowindex={rowData.index || rowIndex}
     isSelectable={rowStyle === 'toggle' || rowStyle === 'disclose' || checkStyle === 'toggle'}
     isAriaSelected={rowData.isToggled}
-    isVisiblySelected={rowData.isVisuallyToggled || (rowData.isToggled && rowStyle === "toggle" && checkStyle !== 'toggle' && checkStyle !== 'readOnly')}
+    isVisiblySelected={rowData.isDisclosed || (rowData.isToggled && rowStyle === "toggle" && checkStyle !== 'toggle' && checkStyle !== 'readOnly')}
     metaData={rowData.metaData}
     onSelect={rowData.onRowAction}
     isDisabled={rowData.isDisabled}
@@ -226,6 +234,7 @@ const createSections = (headerIndex, sectionData, headerData, columnWidths, rowS
           isCollapsed={header.isCollapsed}
           isCollapsible={header.isCollapsible}
           metaData={header.metaData}
+          numberOfColumns={header.numberOfColumns}
           onSelect={header.onSelect}
         >
           {section.rows ? section.rows.map(rowData => {
@@ -256,7 +265,7 @@ const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevron
     <HeaderRow
       aria-rowindex={1}
     >
-      {createHeaderCheckCell(headerData.selectionColumnData, rowStyle, checkStyle)}
+      {createHeaderCheckCell(headerData.selectAllColumn, rowStyle, checkStyle)}
       {headerData.cells.map((cellData, colIndex) => (
         <HeaderCell
           key={cellData.key}

@@ -101,7 +101,6 @@ const Row = ({
   onMouseDown,
   onSelect,
   refCallback,
-  // selectionStyle,
   ...customProps
 }) => {
   const attrSpread = {};
@@ -116,7 +115,7 @@ const Row = ({
       attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
       attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
     }
-    attrSpread['aria-checked'] = isAriaSelected;
+    attrSpread['aria-checked'] = isAriaSelected; // may need to break this from selectability
   }
 
   const divider = dividerStyle !== 'none' ? `divider-${dividerStyle}` : null;

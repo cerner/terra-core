@@ -14,9 +14,13 @@ const headerCellShape = PropTypes.shape({
    */
   children: PropTypes.node,
   /**
-   * Whether or not header cell should appear as a selectable element.
+   * Whether or not the sort indicator is descending.
    */
-  isSelectable: PropTypes.bool,
+  isSortDesc: PropTypes.bool,
+  /**
+   * Whether or not the column is to be marked as a sorted column.
+   */
+  isSortActive: PropTypes.bool,
   /**
    * The associated metaData to be provided in the onSelect callback.
    */
@@ -24,9 +28,16 @@ const headerCellShape = PropTypes.shape({
   metaData: PropTypes.object,
   /**
    * Function callback for when the appropriate click or key action is performed.
-   * Callback contains the javascript event and prop metadata, e.g. onSelect(event, metaData)
+   * Callback contains the javascript event and prop metadata, e.g. onCellAction(event, metaData)
+   * The presence of this func will indicate that the cell can be interacted with for actions or selections.
    */
-  onSelect: PropTypes.func,
+  onCellAction: PropTypes.func,
+  /**
+   * Function callback for when the appropriate click or key action is performed.
+   * Callback contains the javascript event and prop metadata, e.g. onSortAction(event, metaData)
+   * The presence of this func will indicate that the cell can be interacted with for sorting. 
+   */
+  onSortAction: PropTypes.func,
   /**
    * Function callback returning the html node for the header cell.
    */
@@ -36,10 +47,6 @@ const headerCellShape = PropTypes.shape({
    * This is useful to optimize the DOM for either a table without padding or to optimize a cell whose custom content is providing its own padding.
    */
   removeInner: PropTypes.bool,
-  isSortDesc: PropTypes.bool,
-  isSortActive: PropTypes.bool,
-  onCellAction: PropTypes.func,
-  onSortAction: PropTypes.func,
 });
 
 export default headerCellShape;
