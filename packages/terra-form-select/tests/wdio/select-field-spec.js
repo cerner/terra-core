@@ -139,4 +139,16 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
 
     Terra.it.matchesScreenshot('max-selection-option', { selector: '#root' });
   });
+
+  describe('should be accessible with no results', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/empty-select-field'));
+
+    Terra.it.validatesElement();
+
+    it('should open the dropdown by clicking the toggle', () => {
+      browser.click('#tshirt-size-field-2:last-child');
+    });
+
+    Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+  });
 });

@@ -3,9 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed 
-* Updated eIFU text to be `Instructions for Use` instead of `Information for Use`
-
 ### Added
 * Added reference wdio screenshots for "orion-fusion-theme".
 
