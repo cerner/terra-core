@@ -40,7 +40,7 @@ class Demo extends React.Component {
         </p>
         <p>
           <span>Example Date Format: </span>
-          <FormattedDate value={new Date(1459832991883)} />
+          <FormattedDate value={new Date(2011, 03, 24)} />
         </p>
         <label htmlFor="locale">
           {' '}
