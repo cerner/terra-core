@@ -3,6 +3,10 @@ import cellShape from './cellShape';
 
 const rowShape = PropTypes.shape({
   /**
+   * The index of the cell that provides the accessible link entry point for disclosure style rows.
+   */
+  primaryCellIndex: PropTypes.number,
+  /**
    * The react key to apply to the row.
    */
   key: PropTypes.string.isRequired,

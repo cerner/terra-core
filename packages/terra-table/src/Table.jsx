@@ -100,27 +100,18 @@ const defaultProps = {
   checkStyle: 'none',
 };
 
-const createCell = (cell, sectionId, columnId, colWidth, rowData, isPrimary) => {
-  let disclose;
-  if (isPrimary) {
-    disclose = {
-      label: rowData.discloseLabel,
-      isCurrent: rowData.isDisclosed,
-    };
-  }
-  return (
-    <Cell
-      headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
-      key={cell.key}
-      refCallback={cell.refCallback}
-      removeInner={cell.removeInner}
-      width={colWidth}
-      disclosureData={disclose}
-    >
-      {cell.children}
-    </Cell>
-  )
-};
+const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
+  <Cell
+    headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
+    key={cell.key}
+    refCallback={cell.refCallback}
+    removeInner={cell.removeInner}
+    width={colWidth}
+    disclosureData={discloseData}
+  >
+    {cell.children}
+  </Cell>
+);
 
 const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
   if (checkStyle === 'readOnly' || checkStyle === 'toggle') {
@@ -192,28 +183,36 @@ const createHeaderChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
-const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => (
-  <Row
-    key={rowData.key}
-    aria-rowindex={rowData.index || rowIndex}
-    isSelectable={rowStyle === 'toggle' || rowStyle === 'disclose' || checkStyle === 'toggle'}
-    isAriaSelected={rowData.isToggled}
-    isVisiblySelected={rowData.isDisclosed || (rowData.isToggled && rowStyle === "toggle" && checkStyle !== 'toggle' && checkStyle !== 'readOnly')}
-    metaData={rowData.metaData}
-    onSelect={rowData.onRowAction}
-    isDisabled={rowData.isDisabled}
-    isStriped={rowData.isStriped}
-    dividerStyle={dividerStyle}
-  >
-    {createCheckCell(rowData, rowStyle, checkStyle)}
-    {rowData.cells.map((cell, colIndex) => {
-      const columnId = headerData && headerData.cells ? headerData.cells[colIndex].id : undefined;
-      const columnWidth = columnWidths ? columnWidths[colIndex] : undefined;
-      return createCell(cell, sectionId, columnId, columnWidth, rowData, colIndex === rowData.primaryIndex);
-    })}
-    {createChevronCell(rowStyle, hasChevrons)}
-  </Row>
-);
+const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
+  const isDisclosed = rowData.isDisclosed && rowStyle === 'disclose';
+  const isToggled = rowData.isToggled && rowStyle === "toggle" && checkStyle === 'none';
+
+  return (
+    <Row
+      key={rowData.key}
+      aria-rowindex={rowData.index || rowIndex}
+      metaData={rowData.metaData}
+      isSelectable={rowStyle === 'toggle' || rowStyle === 'disclose' || checkStyle === 'toggle'}
+      isSelected={isDisclosed || isToggled}
+      onSelect={rowData.onRowAction}
+      isDisabled={rowData.isDisabled}
+      isStriped={rowData.isStriped}
+      dividerStyle={dividerStyle}
+    >
+      {createCheckCell(rowData, rowStyle, checkStyle)}
+      {rowData.cells.map((cell, colIndex) => {
+        const columnId = headerData && headerData.cells ? headerData.cells[colIndex].id : undefined;
+        const columnWidth = columnWidths ? columnWidths[colIndex] : undefined;
+        let discloseData;
+        if (colIndex === rowData.primaryCellIndex) {
+          discloseData = { label: rowData.discloseLabel, isCurrent: rowData.isDisclosed };
+        }
+        return createCell(cell, sectionId, columnId, columnWidth, discloseData);
+      })}
+      {createChevronCell(rowStyle, hasChevrons)}
+    </Row>
+  );
+};
 
 const createSections = (headerIndex, sectionData, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
   if (!sectionData) {

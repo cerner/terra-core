@@ -25,13 +25,9 @@ const propTypes = {
    */
   isDisabled: PropTypes.bool,
   /**
-   * Whether or not row is selected. `isSelectable` must be set to `true` in order to be applied.
+   * Whether or not row should display as selected to match the link primary cell or toggle state of the row.
    */
-  isAriaSelected: PropTypes.bool,
-  /**
-   * Whether or not row is visually selected. `aria-selected` will not be set, this is idea for disclosure state.
-   */
-  isVisiblySelected: PropTypes.bool,
+  isSelected: PropTypes.bool,
   /**
    * Whether or not row can be selected.
    */
@@ -55,11 +51,6 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Style of selection for the row.
-   * One of `default`, `checkmark`, `chevron`.
-   */
-  selectionStyle: PropTypes.oneOf(['default', 'checkmark', 'chevron']),
-  /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onBlur: PropTypes.func,
@@ -80,8 +71,7 @@ const propTypes = {
 const defaultProps = {
   dividerStyle: 'none',
   isDisabled: false,
-  isAriaSelected: false,
-  isVisiblySelected: false,
+  isSelected: false,
   isSelectable: false,
   isStriped: false,
 };
@@ -90,8 +80,7 @@ const Row = ({
   children,
   dividerStyle,
   isDisabled,
-  isAriaSelected,
-  isVisiblySelected,
+  isSelected,
   isSelectable,
   isStriped,
   metaData,
@@ -115,12 +104,11 @@ const Row = ({
       attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-row-show-focus', 'true'));
       attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-row-show-focus', 'false'));
     }
-    attrSpread['aria-checked'] = isAriaSelected; // may need to break this from selectability
   }
 
   const divider = dividerStyle !== 'none' ? `divider-${dividerStyle}` : null;
   const headerCellClasses = cx(
-    { 'is-selected': isVisiblySelected && isSelectable },
+    { 'is-selected': isSelected && isSelectable },
     { 'is-selectable': !isDisabled && isSelectable },
     { 'is-striped': isStriped },
     divider,
