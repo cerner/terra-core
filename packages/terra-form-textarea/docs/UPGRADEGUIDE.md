@@ -5,6 +5,7 @@
 ### Props
 
 #### Updated
+* Form Fields allowed the `label` to be a node, which potentially breaks the display when injecting other non-inline-only text elements (terra-text) or has the potential to completely break accessibility if something non-text based would be passed in.
 * `label` prop's type changed from node to string.
 
 ##### Steps to Upgrade
