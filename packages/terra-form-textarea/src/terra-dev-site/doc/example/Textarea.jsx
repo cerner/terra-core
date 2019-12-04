@@ -5,6 +5,7 @@ import Textarea from 'terra-form-textarea';
 const DefaultTextArea = () => (
   <Field label="Default Textarea">
     <Textarea
+      size="small"
       id="default"
       ariaLabel="Default Textarea"
     />

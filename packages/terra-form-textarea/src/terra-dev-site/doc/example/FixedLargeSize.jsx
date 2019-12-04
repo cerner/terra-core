@@ -7,6 +7,7 @@ const FixedLargeSizeExample = () => (
     <Textarea
       size="large"
       id="large"
+      disableResize
     />
   </Field>
 );

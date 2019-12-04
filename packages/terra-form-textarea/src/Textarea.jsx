@@ -90,6 +90,12 @@ const propTypes = {
    * functionality such as managing focus, selection, or animations.
    */
   refCallback: PropTypes.func,
+  /**
+   * Whether or not the textarea is resizable.
+   * `Disabled` textarea and the ones with size `full` are always non-resizable.
+   */
+  disableResize: PropTypes.bool,
+
 };
 
 const defaultProps = {
@@ -103,9 +109,10 @@ const defaultProps = {
   placeholder: undefined,
   required: false,
   rows: null,
-  size: undefined,
+  size: 'small',
   value: undefined,
   refCallback: undefined,
+  disableResize: false,
 };
 
 class Textarea extends React.Component {
@@ -177,12 +184,7 @@ class Textarea extends React.Component {
   }
 
   resizeTextarea() {
-    let minRows;
-    if (this.props.size === 'full') {
-      minRows = TEXTAREA_ROW_SIZES.full;
-    } else {
-      minRows = this.props.rows || TEXTAREA_ROW_SIZES[this.props.size] || TEXTAREA_ROW_SIZES.small;
-    }
+    const minRows = this.props.rows || TEXTAREA_ROW_SIZES[this.props.size];
     this.textarea.rows = minRows;
     const rows = Math.ceil((this.textarea.scrollHeight - this.textarea.baseScrollHeight) / this.textarea.currentLineHeight);
     this.textarea.rows = minRows + rows;
@@ -204,6 +206,7 @@ class Textarea extends React.Component {
       size,
       ariaLabel,
       refCallback,
+      disableResize,
       ...customProps
     } = this.props;
 
@@ -215,7 +218,7 @@ class Textarea extends React.Component {
       { 'form-incomplete': (isIncomplete && required && !isInvalid) },
       { 'full-size': size === 'full' },
       { resizable: isAutoResizable && !this.isMobileDevice },
-      { 'no-resize': (size || rows) },
+      { 'no-resize': disableResize },
       additionalTextareaProps.className,
     ]);
 
@@ -237,12 +240,7 @@ class Textarea extends React.Component {
       additionalTextareaProps['aria-required'] = 'true';
     }
 
-    let textareaRows;
-    if (size === 'full') {
-      textareaRows = TEXTAREA_ROW_SIZES.full;
-    } else {
-      textareaRows = rows || TEXTAREA_ROW_SIZES[size] || TEXTAREA_ROW_SIZES.small;
-    }
+    const textareaRows = rows || TEXTAREA_ROW_SIZES[size];
 
     if (value !== undefined) {
       additionalTextareaProps.value = value;

@@ -7,6 +7,7 @@ const FixedSmallSizeExample = () => (
     <Textarea
       size="small"
       id="small"
+      disableResize
     />
   </Field>
 );

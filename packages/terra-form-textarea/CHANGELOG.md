@@ -4,8 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Disallowed resizing of text area if `size` or `rows` props are provided by user.
-
+* Added `disableResize` prop to disable resizability of text area.
 3.32.0 - (December 3, 2019)
 ------------------
 ### Added

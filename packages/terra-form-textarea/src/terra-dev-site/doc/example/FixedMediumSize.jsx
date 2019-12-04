@@ -7,6 +7,7 @@ const FixedMediumSizeExample = () => (
     <Textarea
       size="medium"
       id="medium"
+      disableResize
     />
   </Field>
 );

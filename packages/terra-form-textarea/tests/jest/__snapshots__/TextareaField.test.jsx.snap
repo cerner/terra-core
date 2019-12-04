@@ -27,6 +27,7 @@ exports[`should render a TextareaField with props 1`] = `
   <Textarea
     aria-describedby="test-input-error test-input-help"
     defaultValue="Value"
+    disableResize={false}
     disabled={false}
     id="test-input"
     isAutoResizable={false}
@@ -36,6 +37,7 @@ exports[`should render a TextareaField with props 1`] = `
     onChange={[Function]}
     required={false}
     rows={15}
+    size="small"
     value="Value"
   />
 </Field>
@@ -62,6 +64,7 @@ exports[`should render a default TextareaField component 1`] = `
   showOptional={false}
 >
   <Textarea
+    disableResize={false}
     disabled={false}
     id="test-input"
     isAutoResizable={false}
@@ -70,6 +73,7 @@ exports[`should render a default TextareaField component 1`] = `
     name={null}
     required={false}
     rows={null}
+    size="small"
   />
 </Field>
 `;
@@ -95,6 +99,7 @@ exports[`should render a disabled TextareaField component 1`] = `
   showOptional={false}
 >
   <Textarea
+    disableResize={false}
     disabled={true}
     id="test-input"
     isAutoResizable={false}
@@ -103,6 +108,7 @@ exports[`should render a disabled TextareaField component 1`] = `
     name={null}
     required={false}
     rows={null}
+    size="small"
   />
 </Field>
 `;
@@ -128,6 +134,7 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
   showOptional={false}
 >
   <Textarea
+    disableResize={false}
     disabled={true}
     id="test-input"
     isAutoResizable={false}
@@ -136,6 +143,7 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
     name={null}
     required={false}
     rows={null}
+    size="small"
   />
 </Field>
 `;
@@ -161,6 +169,7 @@ exports[`should render a placeholder within the textarea field 1`] = `
   showOptional={false}
 >
   <Textarea
+    disableResize={false}
     disabled={false}
     id="test-input"
     isAutoResizable={false}
@@ -170,6 +179,7 @@ exports[`should render a placeholder within the textarea field 1`] = `
     placeholder="placeholder"
     required={false}
     rows={null}
+    size="small"
   />
 </Field>
 `;
@@ -195,6 +205,7 @@ exports[`should render a placeholder within the textarea field when passed as an
   showOptional={false}
 >
   <Textarea
+    disableResize={false}
     disabled={false}
     id="test-input"
     isAutoResizable={false}
@@ -204,6 +215,7 @@ exports[`should render a placeholder within the textarea field when passed as an
     placeholder="Placeholder"
     required={false}
     rows={null}
+    size="small"
   />
 </Field>
 `;
@@ -235,6 +247,7 @@ exports[`should render a valid TextareaField with props 1`] = `
   <Textarea
     aria-describedby="test-input-help"
     defaultValue="Value"
+    disableResize={false}
     disabled={false}
     id="test-input"
     isAutoResizable={false}
@@ -244,6 +257,7 @@ exports[`should render a valid TextareaField with props 1`] = `
     onChange={[Function]}
     required={false}
     rows={null}
+    size="small"
     type="number"
     value="Value"
   />
