@@ -4,144 +4,63 @@ import Table from 'terra-table';
 const HeaderCheckMarkCellExample = () => (
   <React.Fragment>
     <Table
-      rowStyle="none"
-      checkStyle="none"
-      hasChevrons
-      headerData={{
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
-      }}
-    />
-    <Table
-      rowStyle="toggle"
-      checkStyle="none"
-      headerData={{
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
-      }}
-    />
-    <Table
+      summaryId="example-check-cell"
+      summary="This table displaying a default check column."
       rowStyle="toggle"
       checkStyle="readOnly"
       headerData={{
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
+        selectAllColumn: { checkLabel: 'Column Example Title' },
+        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
       }}
     />
     <Table
-      rowStyle="disclose"
-      checkStyle="toggle"
-      headerData={{
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
-      }}
-    />
-    <Table
+      summaryId="empty-check-cell"
+      summary="This table displaying a selectable unchecked column."
       rowStyle="none"
       checkStyle="toggle"
       headerData={{
-        allowSelectAll: true,
-        selectAllStatus: 'empty',
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
+        selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkStatus: 'empty' },
+        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
       }}
     />
     <Table
+      summaryId="checked-check-cell"
+      summary="This table displaying a selectable checked column."
+      rowStyle="none"
       checkStyle="toggle"
       headerData={{
-        allowSelectAll: true,
-        selectAllStatus: 'checked',
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
+        selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkStatus: 'checked' },
+        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
       }}
     />
     <Table
+      summaryId="indeterminate-check-cell"
+      summary="This table displaying a selectable indeterminate column."
+      rowStyle="none"
       checkStyle="toggle"
       headerData={{
-        allowSelectAll: true,
-        selectAllStatus: 'indeterminate',
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
+        selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkStatus: 'indeterminate' },
+        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
       }}
     />
     <Table
+      summaryId="disabled-check-cell"
+      summary="This table displaying a disabled check column."
+      rowStyle="none"
       checkStyle="toggle"
       headerData={{
-        isDisabled: true,
-        allowSelectAll: true,
-        selectAllStatus: 'empty',
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
+        selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, isDisabled: true },
+        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
       }}
     />
     <Table
+      summaryId="alignment-check-cell"
+      summary="This table displaying a vertically aligned check column."
+      rowStyle="none"
       checkStyle="toggle"
       headerData={{
-        allowSelectAll: true,
-        selectAllStatus: 'checked',
-        isDisabled: true,
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
-      }}
-    />
-    <Table
-      checkStyle="toggle"
-      headerData={{
-        allowSelectAll: true,
-        selectAllStatus: 'indeterminate',
-        isDisabled: true,
-        cells: [{
-          id: 'column-0',
-          key: 'key-0',
-          children: [
-            'test'
-          ],
-        }],
+        selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkAlignment: '1rem' },
+        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
       }}
     />
   </React.Fragment>

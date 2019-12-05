@@ -1,0 +1,80 @@
+import { Badge } from 'terra-table/package.json?dev-site-package';
+import Default from 'terra-table/lib/terra-dev-site/doc/example/DefaultTable?dev-site-example';
+import CompactPaddingTable from 'terra-table/lib/terra-dev-site/doc/example/CompactPaddingTable?dev-site-example';
+import StandardPaddingTable from 'terra-table/lib/terra-dev-site/doc/example/StandardPaddingTable?dev-site-example';
+import StripedTable from 'terra-table/lib/terra-dev-site/doc/example/StripedTable?dev-site-example';
+import CustomHeaderFooterNodeTable from 'terra-table/lib/terra-dev-site/doc/example/CustomHeaderFooterNodeTable?dev-site-example';
+import ScrollingTable from 'terra-table/lib/terra-dev-site/doc/example/ScrollingTable?dev-site-example';
+import PropsTable from 'terra-table/src/Table?dev-site-props-table';
+
+<Badge />
+
+# Terra Table
+
+The Terra Table is a structural component used to create data tables. This table also provides means of row selection and hooks for sortable columns.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-table`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import React from 'react';
+import Table from 'terra-table';
+
+<Table
+  headerData={{
+    cells: [
+      { id: 'header-name', key: 'name', children: 'Name' },
+    ],
+  }}
+  sectionData={[
+    {
+      rows: [
+        {
+          key: 'row-0',
+          cells: [
+            { key: 'cell-0', children: 'John Smith' },
+            { key: 'cell-1', children: '123 Adams Drive' },
+            { key: 'cell-2', children: '111-222-3333' },
+          ],
+        },
+      ],
+    }
+  ]}
+/>
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
+ * [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
+ * [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+ * [Internationalization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
+ * [Localization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
+ * [LTR/RTL Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#ltr--rtl-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-table)
+
+# Examples
+
+<DefaultTable />
+
+<StandardPaddingTable />
+
+<CompactPaddingTable />
+
+<StripedTable />
+
+<CustomHeaderFooterNodeTable />
+
+<ScrollingTable />
+
+## Table Props
+
+<PropsTable />

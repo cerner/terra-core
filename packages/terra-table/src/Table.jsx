@@ -114,7 +114,7 @@ const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
 );
 
 const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
-  if (checkStyle === 'readOnly' || checkStyle === 'toggle') {
+  if (checkStyle === 'toggle' || checkStyle === 'readOnly') {
     return (
       <CheckMarkCell
         alignmentPadding={rowData.checkAlignment}
@@ -153,11 +153,11 @@ const createHeaderCheckCell = (columnData, rowStyle, checkStyle) =>  {
     return undefined;
   }
 
-  if (checkStyle === 'toggle') {
+  if (checkStyle === 'toggle' || checkStyle === 'readOnly') {
     return (
       <HeaderCheckMarkCell
         alignmentPadding={columnData.checkAlignment}
-        isSelectable={checkStyle === 'toggle'}
+        isSelectable={checkStyle === 'toggle' && !!columnData.onCheckAction}
         isSelected={columnData.checkStatus == 'checked' || columnData.checkStatus == 'indeterminate'}
         isIndeterminate={columnData.checkStatus == 'indeterminate'}
         isDisabled={columnData.isDisabled}

@@ -21,10 +21,10 @@ const propTypes = {
    */
   isHidden: PropTypes.bool,
   /**
-   * The bottom padding to be used for the HeaderCheckMarkCell in rem(s).
+   * The bottom padding to be used for the HeaderCheckMarkCell.
    * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.
    */
-  alignmentPadding: PropTypes.number,
+  alignmentPadding: PropTypes.string,
   /**
    * Whether or not the cell display as disabled.
    */
@@ -121,7 +121,7 @@ const HeaderCheckMarkCell = ({
 
   let attrPadding;
   if (alignmentPadding) {
-    attrPadding = { style: { marginBottom: `${alignmentPadding}rem` } };
+    attrPadding = { style: { paddingBottom: alignmentPadding } };
   }
 
   const headerCheckMarkCellClasses = cx(

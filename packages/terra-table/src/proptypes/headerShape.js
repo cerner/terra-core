@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import headerCellShape from './headerCellShape';
+import selecAllColumnShape from './selectAllColumnShape';
 
 const headerShape = PropTypes.shape({
   /**
@@ -7,34 +8,13 @@ const headerShape = PropTypes.shape({
    */
   cells: PropTypes.arrayOf(headerCellShape),
   /**
-   * Function callback returning the html node for the cell.
+   * Function callback returning the html node for the header.
    */
   refCallback: PropTypes.func,
   /**
-   * The selection all column header's properties.
+   * The select all column header's properties.
    */
-  selectAllColumn: PropTypes.shape({
-    /**
-     * The status of the select all checkbox.
-     */
-    checkStatus: PropTypes.oneOf(['empty', 'checked', 'indeterminate']).isRequired,
-      /**
-     * The alignment prop sets the bottom spacing of the check mark in rem values. This is used when providing your own padding.
-     */
-    checkAlignment: PropTypes.number,
-    /**
-     * The text label for the column header's interaction.
-     */
-    checkLabel: PropTypes.string.isRequired,
-    /**
-     * The text label for the column header's interaction.
-     */
-    onCheckAction: PropTypes.func.isRequired,
-    /**
-     * The text label for the column header's interaction.
-     */
-    isDisabled: PropTypes.bool,
-  }),
+  selectAllColumn: selecAllColumnShape,
 });
 
 export default headerShape;

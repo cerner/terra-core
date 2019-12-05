@@ -1,8 +1,13 @@
+import React from 'react';
 import PropTypes from 'prop-types';
-import cellShape from './cellShape';
+import cellShape from '../../../../proptypes/cellShape';
 
-const rowShape = PropTypes.shape({
-  /**
+/**
+ * The props table parser continues to have trouble detecting the propTypes of a component that
+ * returns `null`. I've duplicated the propType definition here so that a table could be parsed for it.
+ */
+const propTypes = {
+/**
    * The index of the row is derived by default, but in the case of paging and virtualization a different index may be needed as an override.
    */
   index: PropTypes.number,
@@ -71,6 +76,7 @@ const rowShape = PropTypes.shape({
    */
   // eslint-disable-next-line react/forbid-prop-types
   attrs: PropTypes.object,
-});
-
-export default rowShape;
+};
+const PropTypesExample = ({ ...customProps }) => <div />; // eslint-disable-line no-unused-vars
+PropTypesExample.propTypes = propTypes;
+export default PropTypesExample;

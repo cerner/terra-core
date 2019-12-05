@@ -25,11 +25,11 @@ const propTypes = {
    */
   isHidden: PropTypes.bool,
   /**
-   * The top padding to be used for the CheckMarkCell in rem(s).
+   * The top padding to be used for the CheckMarkCell.
    * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.
    * The presence of this property will also change alignment to a fixed value, rather then centered.
    */
-  alignmentPadding: PropTypes.number,
+  alignmentPadding: PropTypes.string,
   /**
    * Whether or not the cell display as disabled.
    */
@@ -135,13 +135,13 @@ const CheckMarkCell = ({
 
   let attrPadding;
   if (alignmentPadding) {
-    attrPadding = { style: { marginTop: `${alignmentPadding}rem` } };
+    attrPadding = { style: { paddingTop: alignmentPadding } };
   }
 
   const checkMarkClasses = cx(
     'cell',
     { 'is-interactable': !isDisabled && isSelectable },
-    { 'is-top-align': !!attrCheck.style },
+    { 'is-top-align': attrPadding },
   );
 
   return (

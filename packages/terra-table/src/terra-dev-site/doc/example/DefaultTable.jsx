@@ -1,7 +1,9 @@
 import React from 'react';
+/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table from 'terra-table';
+/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const StripedTable = () => (
+const TableExample = () => (
   <Table
     headerData={{
       cells: [
@@ -23,7 +25,6 @@ const StripedTable = () => (
           },
           {
             key: 'row-1',
-            isStriped: true,
             cells: [
               { key: 'cell-0', children: 'Jane Smith' },
               { key: 'cell-1', children: '321 Drive Street' },
@@ -44,4 +45,4 @@ const StripedTable = () => (
   />
 );
 
-export default StripedTable;
+export default TableExample;

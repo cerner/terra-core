@@ -1,8 +1,9 @@
 import React from 'react';
 import Table from 'terra-table';
 
-const StripedTable = () => (
+const PaddingTable = () => (
   <Table
+    paddingStyle="standard"
     headerData={{
       cells: [
         { id: 'header-name', key: 'name', children: 'Name' },
@@ -23,7 +24,6 @@ const StripedTable = () => (
           },
           {
             key: 'row-1',
-            isStriped: true,
             cells: [
               { key: 'cell-0', children: 'Jane Smith' },
               { key: 'cell-1', children: '321 Drive Street' },
@@ -44,4 +44,4 @@ const StripedTable = () => (
   />
 );
 
-export default StripedTable;
+export default PaddingTable;
