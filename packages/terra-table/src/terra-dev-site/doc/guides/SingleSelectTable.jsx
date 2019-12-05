@@ -11,7 +11,7 @@ const createCellsForRow = cells => cells.map(cell => createCell(cell));
 const SingleSelectTable = () => {
   const [selectedKey, setSelectedKey] = useState([]);
 
-  const handleRowToggle = (event, metaData) => {
+  const handleRowSelection = (event, metaData) => {
     event.preventDefault();
     if (selectedKey !== metaData.key) {
       setSelectedKey(metaData.key);

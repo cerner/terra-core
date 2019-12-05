@@ -1,26 +1,175 @@
-import React from 'react';
-import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../../docs/guides/CheckMarkTable.md';
-import { name } from '../../../../../package.json';
+import CheckMarkTable from 'terra-table/lib/terra-dev-site/doc/guides/CheckMarkTable?dev-site-example';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Example Files
-import CheckMarkTable from '../../guides/CheckMarkTable';
-import CheckMarkTableSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/CheckMarkTable';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+# Terra Table - Implementing a CheckMark Table
 
-const DocPage = () => (
-  <DocTemplate
-    packageName={name}
-    readme={ReadMe}
-    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    examples={[
-      {
-        example: <CheckMarkTable />,
-        source: CheckMarkTableSrc,
-      },
-    ]}
-  />
-);
+The terra-table implementation requires controlled state if selections are required. As a result selections are applied at child row generation from HOC state. The following guide show you how to implement that state within a multiple row selection variant of table, as well as implement the additional narrowing requirements of a max selection for rows.
 
-export default DocPage;
+## State Management
+The state of selection needs to be managed for the table in a High Order Component (HOC). In this example we are going to be using a unique key to manage the selection state, but the type of state used is open to the implementor of the HOC. The `selectedKeys` will keep track of the keys that are active given the allSelected state. In the case where `allSelected` is "false" the key values will be the keys that are selected, and in the case of "true" it will be the keys that are not selected. This dual behavior removes the need to copy all keys into state when the "select all" in checked.
+
+ First defaulting our state to an empty array in the constructor. Then 
+```diff
++ const [checkedKeys, setCheckedKeys] = useState([]);
++ const [allChecked, setAllChecked] = useState(false);
+```
+Next creating an event handler callback method to pass to the table row check mark cell's `onCheckAction` prop. The `onCheckAction` will return the metaData prop passed it each check mark cell.
+```diff
++  const handleRowCheckAction = (event, metaData) => {
++
++  }
+```
+As a precaution we can prevent default on the event, in case the table has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
+```diff
+  const handleRowCheckAction = (event, metaData) => {
++   event.preventDefault();
++   event.stopPropagation();
+  }
+```
+Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has selected or unselected the table row key in our state. So we use the utility method `updatedMultiSelectedKeys`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state. Comparing the length of the array returned to the number of selectable rows within your table we can determine if all values are selected. If all values are selected we reset the keys, as there are no exceptions to check for.
+```diff
+  const handleRowCheckAction = (event, metaData) => {
+    event.preventDefault();
+    event.stopPropagation();
+  
++   const newKeys = Utils.updatedMultiSelectedKeys(checkedKeys, metaData.key);
++   const isMax = newKeys.length === rowCount;
++   setAllChecked(allChecked ? !isMax : isMax);
++   setCheckedKeys(isMax ? [] : newKeys);
+  }
+```
+Next in our implementation we'll want to add the ability to select all checkmark values. If keys are present there is an intermediate state. In the case of the intermediate state select all values. If `allSelected` is true then set to false. In either case we will be setting to all or nothing selected, so the intermediate values will be reset to an empty array.
+```diff
++ const handleHeaderCheckAction = () => {
++   setAllChecked(!!checkedKeys.length || !allChecked);
++   setCheckedKeys([]);
++ };
+```
+Before we create our method to populate our row with check mark state, we want to create a method to retrieve a selected value based upon a key and our dual state.
+```diff
++ const getIsRowChecked = (key) => {
++   if (checkedKeys.length) {
++     const isPresent = checkedKeys.indexOf(key) >= 0;
++     return allChecked ? !isPresent : isPresent;
++   }
++   return allChecked;
++ };
+```
+Setting state will trigger another render. So in the render method we need generate our table rows with the updated isToggled props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if they are placed within sections.
+[React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
+```diff
++ const createRow = rowData => (
++   {
++     key: rowData.key,
++     cells: createCellsForRow(rowData.cells),
++   }
++ );
+```
+Next we need to set up our metaData object with our key value, and attach the "onCheckAction" to our handler. The toggleLabel will relate to the row or check style set as "toggle".
+```diff
+  const createRow = rowData => (
+    {
+      key: rowData.key,
+      onCheckAction: handleRowCheckAction,
+      metaData: { key: rowData.key },
+  +   toggleLabel: rowData.toggleText,
+      cells: createCellsForRow(rowData.cells),
+    }
+  );
+```
+Now pass the key from the rowData to our `getIsRowChecked` method.
+```diff
+  const createRow = rowData => (
+    {
+      key: rowData.key,
+      onCheckAction: handleRowCheckAction,
+      metaData: { key: rowData.key },
+      toggleLabel: rowData.toggleText,
++     isToggled: getIsRowChecked(rowData.key),
+      cells: createCellsForRow(rowData.cells),
+    }
+  );
+```
+We also are going to implement disclosure on our rows, so we will need to set out `discloseLabel` and the `primaryCellIndex`. The `primaryCellIndex` relates to the cell that will function as an accessible link element in our row.
+```diff
+  const createRow = rowData => (
+    {
+      key: rowData.key,
+      onCheckAction: handleRowCheckAction,
+      metaData: { key: rowData.key },
+      toggleLabel: rowData.toggleText,
+      isToggled: getIsRowChecked(rowData.key),
+      cells: createCellsForRow(rowData.cells),
++     discloseLabel: rowData.discloseText,
++     primaryCellIndex: rowData.primaryIndex,
+    }
+  );
+```
+We can then implement the unpack of our data into our row cells.
+```diff
++  const createCell = cell => ({ key: cell.key, children: cell.title });
+
++  const createCellsForRow = cells => cells.map(cell => createCell(cell));
+```
+Next can implement a method to loop through our data and create the table with our methods and call it from our render method.
+```diff
++  const createRows = data => data.map(childItem => createRow(childItem));
+
+  return (
++   <Table
++     summaryId="check-table"
++     summary="This table has rows that can be batch selected with the checkbox or disclosed for further details."
++     paddingStyle="standard"
++     rowStyle="disclose"
++     checkStyle="toggle"
++     headerData={{
++       cells: [
++         { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
++         { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },
++         { key: 'cell-2', id: 'toggle-2', children: 'Column 2' },
++         { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
++       ],
++     }}
++     sectionData={[{
++       rows: createRows(mockData),
++     }]}
++   />
+  );
+```
+Finally we need to add an entry to the header for the check mark cell. The `checkStatus` prop will be in either the case of `allChecked` or in the presence of `checkedKeys` the `indeterminate` value will be sent..
+```diff
++ let status = 'empty';
++ if (checkedKeys.length) {
++   status = 'indeterminate';
++ } else if (allChecked) {
++   status = 'checked';
++ }
+
+  return (
+    <Table
+      summaryId="check-table"
+      summary="This table has rows that can be batch selected with the checkbox or disclosed for further details."
+      paddingStyle="standard"
+      rowStyle="disclose"
+      checkStyle="toggle"
+      headerData={{
++       selectAllColumn: {
++         checkStatus: status,
++         checkLabel: 'Batch Selection',
++         onCheckAction: handleHeaderCheckAction,
++       },
+        cells: [
+          { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
+          { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },
+          { key: 'cell-2', id: 'toggle-2', children: 'Column 2' },
+          { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
+        ],
+      }}
+      sectionData={[{
+        rows: createRows(mockData),
+      }]}
+    />
+  );
+```
+Using these steps we get the following example:
+
+<CheckMarkTable />

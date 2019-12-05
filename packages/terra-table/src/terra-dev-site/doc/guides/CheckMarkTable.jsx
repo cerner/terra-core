@@ -3,65 +3,66 @@ import React, {
 } from 'react';
 import Table, {
   Utils,
-} from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+} from 'terra-table';
 import mockData from './mock-data/mock-select';
 
-const createCell = cell => ({ key: cell.key, children: [cell.title] });
+const createCell = cell => ({ key: cell.key, children: cell.title });
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 const CheckMarkTable = () => {
-  const [selectedKeys, setSelectedKeys] = useState([]);
-  const [allSelected, setAllSelected] = useState(false);
+  const [checkedKeys, setCheckedKeys] = useState([]);
+  const [allChecked, setAllChecked] = useState(false);
   const rowCount = mockData.length; // This value needs to exclude or account for section headers
 
-  const handleMarkSelection = (event, metaData) => {
+  const handleRowCheckAction = (event, metaData) => {
     event.preventDefault();
 
-    const newSelection = Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key);
-    const isMax = newSelection.length === rowCount;
-    setAllSelected(allSelected ? !isMax : isMax);
-    setSelectedKeys(isMax ? [] : newSelection);
+    const newKeys = Utils.updatedMultiSelectedKeys(checkedKeys, metaData.key);
+    const isMax = newKeys.length === rowCount;
+    setAllChecked(allChecked ? !isMax : isMax);
+    setCheckedKeys(isMax ? [] : newKeys);
   };
 
-  const handleHeaderMarkSelection = () => {
-    setAllSelected(!!selectedKeys.length || !allSelected);
-    setSelectedKeys([]);
+  const handleHeaderCheckAction = () => {
+    setAllChecked(!!checkedKeys.length || !allChecked);
+    setCheckedKeys([]);
   };
 
-  const getIsRowSelected = (key) => {
-    if (selectedKeys.length) {
-      const isPresent = selectedKeys.indexOf(key) >= 0;
-      return allSelected ? !isPresent : isPresent;
+  const getIsRowChecked = (key) => {
+    if (checkedKeys.length) {
+      const isPresent = checkedKeys.indexOf(key) >= 0;
+      return allChecked ? !isPresent : isPresent;
     }
-    return allSelected;
+    return allChecked;
   };
 
   const createRow = rowData => (
     {
       key: rowData.key,
-      onCheckAction: handleMarkSelection,
+      onCheckAction: handleRowCheckAction,
       metaData: { key: rowData.key },
-      isToggled: getIsRowSelected(rowData.key),
+      isToggled: getIsRowChecked(rowData.key),
       cells: createCellsForRow(rowData.cells),
       toggleLabel: rowData.toggleText,
       discloseLabel: rowData.discloseText,
-      primaryIndex: rowData.primaryIndex,
+      primaryCellIndex: rowData.primaryIndex,
     }
   );
 
   const createRows = data => data.map(childItem => createRow(childItem));
 
   let status = 'empty';
-  if (allSelected) {
-    status = 'checked';
-  } else if (!!selectedKeys.length) {
+  if (checkedKeys.length) {
     status = 'indeterminate';
+  } else if (allChecked) {
+    status = 'checked';
   }
+
   return (
     <Table
-      id="check-table"
-      summary="This table has rows that can be batch selected with the checkbox or diclosed for further details."
+      summaryId="check-table"
+      summary="This table has rows that can be batch selected with the checkbox or disclosed for further details."
       paddingStyle="standard"
       rowStyle="disclose"
       checkStyle="toggle"
@@ -69,13 +70,13 @@ const CheckMarkTable = () => {
         selectAllColumn: {
           checkStatus: status,
           checkLabel: 'Batch Selection',
-          onCheckAction: handleHeaderMarkSelection,
+          onCheckAction: handleHeaderCheckAction,
         },
         cells: [
-          { key: 'cell-0', id: 'toggle-0', children: ['Column 0'] },
-          { key: 'cell-1', id: 'toggle-1', children: ['Column 1'] },
-          { key: 'cell-2', id: 'toggle-2', children: ['Column 2'] },
-          { key: 'cell-3', id: 'toggle-3', children: ['Column 3'] },
+          { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
+          { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },
+          { key: 'cell-2', id: 'toggle-2', children: 'Column 2' },
+          { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
         ],
       }}
       sectionData={[{
