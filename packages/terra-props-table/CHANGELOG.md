@@ -3,11 +3,12 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added reference wdio screenshots for "clinical-lowlight-theme".
 
 2.43.0 - (December 3, 2019)
 ------------------
 ### Added
-* Added reference wdio screenshots for "clinical-lowlight-theme".
 * Added reference wdio screenshots for "orion-fusion-theme".
 
 2.42.0 - (October 30, 2019)
