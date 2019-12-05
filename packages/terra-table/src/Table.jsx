@@ -231,10 +231,10 @@ const createSections = (headerIndex, sectionData, headerData, columnWidths, rowS
           aria-rowindex={header.index || rowIndex}
           title={header.title}
           isCollapsed={header.isCollapsed}
-          isCollapsible={header.isCollapsible}
+          isCollapsible={!!header.onToggle}
           metaData={header.metaData}
           numberOfColumns={header.numberOfColumns}
-          onSelect={header.onSelect}
+          onSelect={header.onToggle}
         >
           {section.rows ? section.rows.map(rowData => {
             rowIndex += 1;

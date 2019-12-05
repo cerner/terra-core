@@ -14,7 +14,7 @@ const SectionTable = () => {
   const [collapsedKeys, setCollapsedKeys] = useState([]);
   let rowCount = 1;
 
-  const handleSectionSelection = (event, metaData) => {
+  const handleSectionToggle = (event, metaData) => {
     event.preventDefault();
     setCollapsedKeys(Utils.updatedMultiSelectedKeys(collapsedKeys, metaData.key));
   };
@@ -26,47 +26,34 @@ const SectionTable = () => {
     }
   );
 
-  const createSection = (sectionData) => (
+  const createSection = sectionData => (
     {
       sectionHeader: {
         id: `sub-${sectionData.key}`,
         key: sectionData.key,
         title: sectionData.title,
+        onToggle: handleSectionToggle,
+        metaData: { key: sectionData.key },
         isCollapsed: collapsedKeys.indexOf(sectionData.key) >= 0,
         isCollapsible: true,
-        metaData: { key: sectionData.key },
-        onSelect: handleSectionSelection,
       },
       rows: sectionData.childItems.map(childItem => createRow(childItem)),
     }
   );
 
-  const sections = mockData.map(section => createSection(section));
-
   return (
     <Table
-      aria-rowcount={rowCount}
+      summaryId="example-sorted-table"
+      summary="This table shows an implementation of table sorting."
       paddingStyle="standard"
       headerData={{
         cells: [
-          {
-            key: 'cell-0',
-            id: 'header-0',
-            children: ['Column 0'],
-          },
-          {
-            key: 'cell-1',
-            id: 'header-1',
-            children: ['Column 1'],
-          },
-          {
-            key: 'cell-2',
-            id: 'header-2',
-            children: ['Column 2'],
-          },
+          { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
+          { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },
+          { key: 'cell-2', id: 'toggle-2', children: 'Column 2' },
         ],
       }}
-      sectionData={sections}
+      sectionData={mockData.map(section => createSection(section))}
     />
   );
 };

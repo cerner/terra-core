@@ -14,10 +14,6 @@ const sectionHeaderShape = PropTypes.shape({
   */
   isCollapsed: PropTypes.bool,
   /**
-  * Whether or not the section can be collapsed.
-  */
-  isCollapsible: PropTypes.bool,
-  /**
   * The associated metaData to be provided in the onSelect callback.
   */
   // eslint-disable-next-line react/forbid-prop-types
@@ -29,6 +25,7 @@ const sectionHeaderShape = PropTypes.shape({
   /**
   * Function callback for when the appropriate click or key action is performed to expand or collapse the section.
   * Callback contains the javascript event and prop metadata, e.g. onToggle(event, metaData)
+  * Is present will enabled the interaction of the header.
   */
   onToggle: PropTypes.func,
   /**

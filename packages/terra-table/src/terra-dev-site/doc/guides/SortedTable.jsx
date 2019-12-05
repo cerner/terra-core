@@ -6,7 +6,7 @@ import mockData from './mock-data/mock-sort';
 
 const columnKeys = ['column-0', 'column-1', 'column-2'];
 
-const createCell = cell => ({ key: cell.key, children: [cell.title] });
+const createCell = cell => ({ key: cell.key, children: cell.title });
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
@@ -54,12 +54,14 @@ const SortedTable = () => {
       onSortAction: handleSortClick,
       isSortDesc: sortColumn.sortDesc,
       isSortActive: sortColumn.key === key,
-      children: [title],
+      children: title,
     }
   );
 
   return (
     <Table
+      summaryId="example-sorted-table"
+      summary="This table shows an implementation of sorted table."
       paddingStyle="standard"
       headerData={{
         cells: [
