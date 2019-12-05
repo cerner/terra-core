@@ -71,12 +71,12 @@ Next we need to set up our metaData object with our key value, and attach the "o
       key: rowData.key,
       onCheckAction: handleRowCheckAction,
       metaData: { key: rowData.key },
-  +   toggleLabel: rowData.toggleText,
++     toggleLabel: rowData.toggleText,
       cells: createCellsForRow(rowData.cells),
     }
   );
 ```
-Now pass the key from the rowData to our `getIsRowChecked` method.
+Now pass the key from the rowData to our `getIsRowChecked` method to set whether or not the row is toggled.
 ```diff
   const createRow = rowData => (
     {
@@ -89,7 +89,7 @@ Now pass the key from the rowData to our `getIsRowChecked` method.
     }
   );
 ```
-We also are going to implement disclosure on our rows, so we will need to set out `discloseLabel` and the `primaryCellIndex`. The `primaryCellIndex` relates to the cell that will function as an accessible link element in our row.
+We also are going to implement disclosure on our rows, so we will need to set the `discloseLabel` and the `primaryCellIndex`. The `primaryCellIndex` relates to the cell that will function as an accessible link element in our row.
 ```diff
   const createRow = rowData => (
     {
