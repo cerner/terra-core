@@ -1,34 +1,54 @@
-import React from 'react';
-import DocTemplate from 'terra-doc-template';
-import ReadMe from '../../../../../docs/guides/StripedTable.md';
-import { name } from '../../../../../package.json';
+import StripedTable from 'terra-table/lib/terra-dev-site/doc/guides/StripedTable?dev-site-example';
+import StripedTableSection from 'terra-table/lib/terra-dev-site/doc/guides/StripedTableSection?dev-site-example';
 
-/* eslint-disable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
-// Example Files
-import StripedTable from '../../guides/StripedTable';
-import StripedTableSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/StripedTable';
-import StripedTableSection from '../../guides/StripedTableSection';
-import StripedTableSectionSrc from '!raw-loader!../../../../../src/terra-dev-site/doc/guides/StripedTableSection';
-/* eslint-enable import/no-webpack-loader-syntax, import/first, import/extensions, import/no-unresolved, import/no-duplicates */
+# Terra Table - Implementing a Striped Table
 
-const DocPage = () => (
-  <DocTemplate
-    packageName={name}
-    readme={ReadMe}
-    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
-    examples={[
-      {
-        title: 'Striped Table',
-        example: <StripedTable />,
-        source: StripedTableSrc,
-      },
-      {
-        title: 'Striped Table Section',
-        example: <StripedTableSection />,
-        source: StripedTableSectionSrc,
-      },
-    ]}
-  />
-);
+With the table the striping pattern for the implementation is responsibility of striping is on the Row itself. The following guide shows how to cleanly implement a striped Table.
 
-export default DocPage;
+## Standard Striped Function
+When striping the table rows the functionality is the same if you are yielding a flat list of items and a section's items.  When mapping your data to table rows capture the index of each row pass it to your createRow method.
+```diff
++ const createRows = data => data.map((childItem, index) => createRow(childItem, index));
+```
+Next within our newly created method for row creation we want to set the striping pattern by the UX approved pattern, on odd array indexed items. This pattern is true for both a flat list and within each section. To accomplish this we check whether or not index modulus 2 yields a non zero value, this will give us the odd values rows.
+```diff
++ const createRow = (rowData, index) => (
++   {
++     key: rowData.key,
++     isStriped: index % 2 !== 0,
++     cells: createCellsForRow(rowData.cells),
++   }
++ );
+```
+We can then implement our additional static methods to populate the cell data.
+```diff
++ const createCell = cell => ({ key: cell.key, children: cell.title });
+
++ const createCellsForRow = cells => cells.map(cell => createCell(cell));
+```
+And finally we call our create row creation method.
+```diff
++ const StripedTable = () => (
++   <Table
++     summaryId="example-striped-table"
++     summary="This table shows an implementation of striped table."
++     paddingStyle="standard"
++     headerData={{
++       cells: [
++         { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
++         { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },
++         { key: 'cell-2', id: 'toggle-2', children: 'Column 2' },
++         { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
++       ],
++     }}
++     sectionData={[{
++       rows: createRows(mockData),
++     }]}
++   />
++ );
+```
+Using these steps we get the following examples:
+
+<StripedTable />
+
+<StripedTableSection />

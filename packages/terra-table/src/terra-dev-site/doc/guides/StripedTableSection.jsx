@@ -32,21 +32,9 @@ const StripedTableSection = () => (
     paddingStyle="standard"
     headerData={{
       cells: [
-        {
-          key: 'cell-0',
-          id: 'toggle-0',
-          children: ['Column 0'],
-        },
-        {
-          key: 'cell-1',
-          id: 'toggle-1',
-          children: ['Column 1'],
-        },
-        {
-          key: 'cell-2',
-          id: 'toggle-2',
-          children: ['Column 2'],
-        },
+        { key: 'cell-0', id: 'toggle-10', children: 'Column 0' },
+        { key: 'cell-1', id: 'toggle-11', children: 'Column 1' },
+        { key: 'cell-2', id: 'toggle-12', children: 'Column 2' },
       ],
     }}
     sectionData={createSections(mockData)}

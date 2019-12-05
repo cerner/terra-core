@@ -8,7 +8,7 @@ import mockData from './mock-data/mock-select';
 
 const maxSectionCount = 3;
 
-const createCell = cell => ({ key: cell.key, children: [cell.title] });
+const createCell = cell => ({ key: cell.key, children: cell.title });
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
