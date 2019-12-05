@@ -82,6 +82,7 @@
   .message {
     color: var(--terra-status-view-message-color, #1c1f21);
     font-size: var(--terra-status-view-message-font-size, 1rem);
+    margin: 0;
     overflow-wrap: break-word;
     padding-top: var(--terra-status-view-message-padding-top, 0.714rem);
     text-align: center;
