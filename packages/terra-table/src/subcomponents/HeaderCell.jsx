@@ -11,12 +11,6 @@ import {
 
 const cx = classNames.bind(styles);
 
-const ariaSortMap = {
-  asc: 'ascending',
-  desc: 'descending',
-  none: 'none',
-};
-
 const propTypes = {
   /**
    * Content to be displayed for the column header.
@@ -114,7 +108,7 @@ const HeaderCell = ({
         key="sort"
         className={cx(
           `sort-indicator-${isSortDesc ? 'desc' : 'asc'}`,
-          { 'sort-is-active': isSortActive }
+          { 'sort-is-active': isSortActive },
         )}
       />
     );

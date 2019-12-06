@@ -8,7 +8,7 @@ const HeaderRowExample = () => (
       summary="This table displays the default layout of table header."
       paddingStyle="standard"
       headerData={{
-        cells:[
+        cells: [
           { id: 'header-key-0', key: 'key-0', children: 'Default Header' },
           { id: 'header-key-1', key: 'key-1', children: 'Default Header' },
         ],
@@ -21,7 +21,7 @@ const HeaderRowExample = () => (
       rowStyle="disclose"
       hasChevrons
       headerData={{
-        cells:[
+        cells: [
           { id: 'header-key-0', key: 'key-0', children: 'Selection Style Chevron' },
           { id: 'header-key-1', key: 'key-1', children: 'Selection Style Chevron' },
         ],
@@ -36,7 +36,7 @@ const HeaderRowExample = () => (
         selectAllColumn: {
           checkLabel: 'Column Title',
         },
-        cells:[
+        cells: [
           { id: 'header-key-0', key: 'key-0', children: 'Selection Style Checkmark' },
           { id: 'header-key-1', key: 'key-1', children: 'Selection Style Checkmark' },
         ],

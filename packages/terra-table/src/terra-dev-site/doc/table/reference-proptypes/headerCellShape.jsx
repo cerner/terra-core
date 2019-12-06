@@ -39,7 +39,7 @@ const propTypes = {
   /**
    * Function callback for when the appropriate click or key action is performed.
    * Callback contains the javascript event and prop metadata, e.g. onSortAction(event, metaData)
-   * The presence of this func will indicate that the cell can be interacted with for sorting. 
+   * The presence of this func will indicate that the cell can be interacted with for sorting.
    */
   onSortAction: PropTypes.func,
   /**

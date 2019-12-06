@@ -20,7 +20,7 @@
     background-size: contain;
     border: var(--terra-table-header-checkmark-cell-border, 1px solid transparent);
     border-radius: var(--terra-table-header-checkmark-cell-border-radius, 3px);
-    height: var(--terra-table-header-checkmark-cell-height, 1rem); 
+    height: var(--terra-table-header-checkmark-cell-height, 1rem);
     padding: var(--terra-table-header-checkmark-cell-padding, 1px);
     width: var(--terra-table-header-checkmark-cell-width, 1rem);
   }
@@ -61,14 +61,14 @@
   }
 
   .is-interactable[data-cell-show-focus='true']:focus {
-    outline: var(--terra-table-header-checkmark-cell-interactable-hover-outline, 2px dashed #2a4b77);
-    outline-offset: var(--terra-table-header-checkmark-cell-interactable-hover-outline-offset, -2px);
+    outline: var(--terra-table-header-checkmark-cell-interactable-focus-outline, 2px dashed #2a4b77);
+    outline-offset: var(--terra-table-header-checkmark-cell-interactable-focus-outline-offset, -2px);
   }
 
   // State Classes
   // -------------
   .checkmark.is-selected {
-    background-color: var(--terra-table-header-checkmark-cell-selected-border, #3a67a4);
+    background-color: var(--terra-table-header-checkmark-cell-selected-background-color, #3a67a4);
     background-image: var(--terra-table-header-checkmark-cell-selected-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#fff" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
   }
 

@@ -73,12 +73,12 @@
 
   .is-disabled.is-selected {
     // TODO: Needs specific dithered color? current #ccc, new rgba(255, 255, 255, 0.8)?
-    background-image: var(--terra-table-checkmark-cell-selected-disabled-background-color, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#ccc" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
+    background-image: var(--terra-table-checkmark-cell-selected-disabled-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#ccc" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
   }
 
   .is-selectable.checkmark {
     background-color: var(--terra-table-checkmark-cell-selectable-background-color, #fff);
-    border: var(--terra-table-checkmark-cell-selectable-color, 1px solid #4983d1);
+    border: var(--terra-table-checkmark-cell-selectable-border, 1px solid #4983d1);
   }
 
   .is-selectable.is-selected {
@@ -93,7 +93,7 @@
 
   .is-selectable.checkmark.is-disabled.is-selected {
     background-color: rgba(42, 75, 119, 0.5);
-    background-image: var(--terra-table-checkmark-cell-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="rgba(255, 255, 255, 0.5)" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
+    background-image: var(--terra-table-checkmark-cell-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="rgba(255, 255, 255, 0.5)" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
   }
 
   // Padding Classes

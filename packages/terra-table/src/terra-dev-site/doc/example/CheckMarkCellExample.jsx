@@ -19,13 +19,11 @@ const CheckMarkCellExample = () => (
               checkAlignment: 2,
               cells: [{
                 key: 'key-0',
-                children: [
-                  'test'
-                ],
+                children: 'test',
               }],
             },
           ],
-        }
+        },
       ]}
     />
     <Table
@@ -41,13 +39,11 @@ const CheckMarkCellExample = () => (
               checkAlignment: 2,
               cells: [{
                 key: 'key-0',
-                children: [
-                  'test'
-                ],
+                children: 'test',
               }],
             },
           ],
-        }
+        },
       ]}
     />
     <Table
@@ -62,13 +58,11 @@ const CheckMarkCellExample = () => (
               key: 'row-0',
               cells: [{
                 key: 'key-0',
-                children: [
-                  'test'
-                ],
+                children: 'test',
               }],
             },
           ],
-        }
+        },
       ]}
     />
     <Table
@@ -86,13 +80,11 @@ const CheckMarkCellExample = () => (
               key: 'row-0',
               cells: [{
                 key: 'key-0',
-                children: [
-                  'test'
-                ],
+                children: 'test',
               }],
             },
           ],
-        }
+        },
       ]}
     />
     <Table
@@ -108,13 +100,11 @@ const CheckMarkCellExample = () => (
               isToggled: true,
               cells: [{
                 key: 'key-0',
-                children: [
-                  'test'
-                ],
+                children: 'test',
               }],
             },
           ],
-        }
+        },
       ]}
     />
     <Table
@@ -123,7 +113,7 @@ const CheckMarkCellExample = () => (
       rowStyle="toggle"
       checkStyle="readOnly"
       headerData={{
-        cells: [{ id: 'test3', key: 'test1', children: ['test'] }],
+        cells: [{ id: 'test3', key: 'test1', children: 'test' }],
       }}
       sectionData={[
         {
@@ -133,13 +123,11 @@ const CheckMarkCellExample = () => (
               isToggled: true,
               cells: [{
                 key: 'key-0',
-                children: [
-                  'test'
-                ],
+                children: 'test',
               }],
             },
           ],
-        }
+        },
       ]}
     />
     <Table
@@ -156,13 +144,11 @@ const CheckMarkCellExample = () => (
               isToggled: true,
               cells: [{
                 key: 'key-0',
-                children: [
-                  'test'
-                ],
+                children: 'test',
               }],
             },
           ],
-        }
+        },
       ]}
     />
     <Table
@@ -179,13 +165,11 @@ const CheckMarkCellExample = () => (
               isToggled: true,
               cells: [{
                 key: 'key-0',
-                children: [
-                  'test'
-                ],
+                children: 'test',
               }],
             },
           ],
-        }
+        },
       ]}
     />
   </React.Fragment>

@@ -30,7 +30,7 @@ const MultiSelectTable = () => {
         onToggle: handleRowToggle,
         isToggled: selectedKeys.indexOf(rowData.key) >= 0,
         toggleLabel: rowData.toggleText,
-      }
+      },
     }
   );
 

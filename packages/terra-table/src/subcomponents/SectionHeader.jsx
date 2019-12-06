@@ -16,6 +16,10 @@ const propTypes = {
    */
   colSpan: PropTypes.number,
   /**
+   * The id to be place on the column header.
+   */
+  id: PropTypes.string,
+  /**
    * @private Whether or not the section is collapsed.
    */
   isCollapsed: PropTypes.bool,
@@ -94,7 +98,7 @@ const SectionHeader = ({
   let accordionIcon;
   if (isCollapsible) {
     accordionIcon = (
-      <div aria-hidden={true} className={cx('start')}>
+      <div aria-hidden className={cx('start')}>
         <span className={cx(['accordion-icon', { 'is-open': !isCollapsed }])} />
       </div>
     );
@@ -130,7 +134,6 @@ const SectionHeader = ({
         id={id}
         colSpan={numberOfColumns}
         headers=""
-        scope="colgroup"
         role="columnheader"
         className={cx('section-content')}
       >

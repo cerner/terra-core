@@ -9,7 +9,7 @@ import headerShape from './proptypes/headerShape';
 import widthShape from './proptypes/widthShape';
 
 import Row from './subcomponents/Row';
-import Cell from './subcomponents/Cell'
+import Cell from './subcomponents/Cell';
 import Section from './subcomponents/Section';
 import HeaderRow from './subcomponents/HeaderRow';
 import HeaderCell from './subcomponents/HeaderCell';
@@ -39,6 +39,10 @@ const propTypes = {
    * The width value structures associated to each column.
    */
   columnWidths: PropTypes.arrayOf(widthShape),
+  /**
+   * Whether or not the rows should have chevrons applied.
+   */
+  hasChevrons: PropTypes.bool,
   /**
    * The data to build header cells and columns.
    */
@@ -114,7 +118,7 @@ const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
   </Cell>
 );
 
-const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
+const createCheckCell = (rowData, rowStyle, checkStyle) => {
   let rowMetaData;
   let rowOnAction;
   let rowActiveState;
@@ -139,7 +143,9 @@ const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
         isReadOnly={checkStyle === 'readOnly'}
       />
     );
-  } else if (rowStyle === 'toggle') {
+  }
+
+  if (rowStyle === 'toggle') {
     return (
       <CheckMarkCell
         metaData={rowMetaData}
@@ -160,7 +166,7 @@ const createChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
-const createHeaderCheckCell = (columnData, rowStyle, checkStyle) =>  {
+const createHeaderCheckCell = (columnData, rowStyle, checkStyle) => {
   if (!columnData) {
     return undefined;
   }
@@ -170,14 +176,16 @@ const createHeaderCheckCell = (columnData, rowStyle, checkStyle) =>  {
       <HeaderCheckMarkCell
         alignmentPadding={columnData.checkAlignment}
         isSelectable={checkStyle === 'toggle' && !!columnData.onCheckAction}
-        isSelected={columnData.checkStatus == 'checked' || columnData.checkStatus == 'indeterminate'}
-        isIndeterminate={columnData.checkStatus == 'indeterminate'}
+        isSelected={columnData.checkStatus === 'checked' || columnData.checkStatus === 'indeterminate'}
+        isIndeterminate={columnData.checkStatus === 'indeterminate'}
         isDisabled={columnData.isDisabled}
         onSelect={columnData.onCheckAction}
         label={columnData.checkLabel}
       />
     );
-  } else if (rowStyle === 'toggle') {
+  }
+
+  if (rowStyle === 'toggle') {
     return (
       <HeaderCheckMarkCell
         label={columnData.checkLabel}
@@ -207,7 +215,7 @@ const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowSt
     rowActiveState = rowData.discloseAction.isDisclosed;
     primaryIndex = rowData.discloseAction.discloseCellIndex;
     primaryData = { label: rowData.discloseAction.discloseLabel, isCurrent: rowData.discloseAction.isDisclosed };
-  } else if (rowStyle === 'toggle'  && rowData.toggleAction) {
+  } else if (rowStyle === 'toggle' && rowData.toggleAction) {
     rowMetaData = rowData.toggleAction.metaData;
     rowOnAction = rowData.toggleAction.onToggle;
     rowActiveState = rowData.toggleAction.isToggled;
@@ -240,14 +248,14 @@ const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowSt
 
 const createSections = (headerIndex, sectionData, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
   if (!sectionData) {
-    return { sections: undefined, sectionIndex: headerIndex};
+    return { sections: undefined, sectionIndex: headerIndex };
   }
 
   let rowIndex = headerIndex;
   const sections = sectionData.map((section) => {
     if (section.sectionHeader) {
       const header = section.sectionHeader;
-      rowIndex += 1
+      rowIndex += 1;
       return (
         <Section
           id={header.id}
@@ -276,37 +284,40 @@ const createSections = (headerIndex, sectionData, headerData, columnWidths, rowS
     return undefined;
   });
 
-  return { sections, sectionIndex: rowIndex};
+  return { sections, sectionIndex: rowIndex };
 };
 
-const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevrons) =>  {
+const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevrons) => {
   if (!headerData || !headerData.cells) {
     return { headerIndex: 0, header: undefined };
   }
 
-  return { headerIndex: 1, header: (
-    <HeaderRow
-      aria-rowindex={1}
-    >
-      {createHeaderCheckCell(headerData.selectAllColumn, rowStyle, checkStyle)}
-      {headerData.cells.map((cellData, colIndex) => (
-        <HeaderCell
-          {...cellData.attrs}
-          key={cellData.key}
-          refCallback={cellData.refCallback}
-          metaData={cellData.metaData}
-          isSortDesc={cellData.isSortDesc}
-          isSortActive={cellData.isSortActive}
-          onCellAction={cellData.onCellAction}
-          onSortAction={cellData.onSortAction}
-          width={columnWidths ? columnWidths[colIndex] : undefined}
-        >
-          {cellData.children}
-        </HeaderCell>
-      ))}
-      {createHeaderChevronCell(rowStyle, hasChevrons)}
-    </HeaderRow>
-  )};
+  return {
+    headerIndex: 1,
+    header: (
+      <HeaderRow
+        aria-rowindex={1}
+      >
+        {createHeaderCheckCell(headerData.selectAllColumn, rowStyle, checkStyle)}
+        {headerData.cells.map((cellData, colIndex) => (
+          <HeaderCell
+            {...cellData.attrs}
+            key={cellData.key}
+            refCallback={cellData.refCallback}
+            metaData={cellData.metaData}
+            isSortDesc={cellData.isSortDesc}
+            isSortActive={cellData.isSortActive}
+            onCellAction={cellData.onCellAction}
+            onSortAction={cellData.onSortAction}
+            width={columnWidths ? columnWidths[colIndex] : undefined}
+          >
+            {cellData.children}
+          </HeaderCell>
+        ))}
+        {createHeaderChevronCell(rowStyle, hasChevrons)}
+      </HeaderRow>
+    ),
+  };
 };
 
 const unpackTableData = (headerData, sectionData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {

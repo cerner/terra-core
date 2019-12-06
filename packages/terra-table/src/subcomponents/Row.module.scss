@@ -6,7 +6,7 @@
     overflow: hidden;
     position: relative;
 
-    & > * {
+    > * {
       border-right: var(--terra-table-row-child-border-right, 1px solid transparent);
 
       &:last-of-type {
@@ -19,9 +19,11 @@
       > * {
         border-right: var(--terra-table-row-divider-child-border-right, 1px solid #ccc);
   
+        /* stylelint-disable max-nesting-depth */
         &:last-of-type {
           border-right: 0;
         }
+        /* stylelint-enable max-nesting-depth */
       }
     }
   
@@ -77,12 +79,12 @@
     }
 
     &[data-row-show-focus='false']:active {
-       background-color: var(--terra-table-row-active-background-color, rgba(89, 159, 253, .40));
+      background-color: var(--terra-table-row-active-background-color, rgba(89, 159, 253, 0.4));
     }
 
     &[data-row-show-focus='true']:focus {
-      outline: var(--terra-table-row-focus-background-color, 2px solid #2a4b77);
-      outline-offset: var(--terra-table-row-focus-background-color, -2px);
+      outline: var(--terra-table-row-focus-outline, 2px solid #2a4b77);
+      outline-offset: var(--terra-table-row-focus-outline-offset, -2px);
       z-index: 1;
 
       &.is-selected {

@@ -28,10 +28,10 @@ const StaticWidthTable = () => (
     ]}
     headerData={{
       cells: [
-        { key: 'cell-0', id: `unique-cell-0`, children: '60px' },
-        { key: 'cell-1', id: `unique-cell-1`, children: '45px' },
-        { key: 'cell-2', id: `unique-cell-2`, children: '5rem' },
-        { key: 'cell-3', id: `unique-cell-3`, children: '120px' },
+        { key: 'cell-0', id: 'unique-cell-0', children: '60px' },
+        { key: 'cell-1', id: 'unique-cell-1', children: '45px' },
+        { key: 'cell-2', id: 'unique-cell-2', children: '5rem' },
+        { key: 'cell-3', id: 'unique-cell-3', children: '120px' },
       ],
     }}
     sectionData={[{

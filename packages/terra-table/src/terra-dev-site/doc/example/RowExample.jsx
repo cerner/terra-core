@@ -2,14 +2,15 @@ import React from 'react';
 import Table from 'terra-table';
 
 const RowExample = () => (
-  <React.Fragment> 
+  <React.Fragment>
     <Table
       summaryId="default-row-table"
       summary="This table displays default rows."
       paddingStyle="standard"
       sectionData={[
         {
-          rows: [{
+          rows: [
+            {
               key: 'default_row"',
               cells: [
                 {
@@ -29,7 +30,7 @@ const RowExample = () => (
               ],
             },
           ],
-        }
+        },
       ]}
     />
     <br />
@@ -74,7 +75,7 @@ const RowExample = () => (
               children: 'Toggle Row',
             }],
             toggleAction: {
-              toggleLabel: 'toggle text'
+              toggleLabel: 'toggle text',
             },
           },
           {
@@ -137,27 +138,31 @@ const RowExample = () => (
       sectionData={[
         {
           rows: [
-            { 
+            {
               key: 'selection_checkmark',
-              cells: [{
+              cells: [
+                {
                   key: 'cell-0',
                   children: 'Toggle Style Checkmark',
-                }],
+                },
+              ],
               toggleAction: {
                 toggleLabel: 'toggle text',
               },
             },
             {
               key: 'selection_chevron',
-              cells: [{
+              cells: [
+                {
                   key: 'cell-0',
                   children: 'Toggled Style Checkmark',
-              }],
+                },
+              ],
               toggleAction: {
                 toggleLabel: 'toggle text',
                 isToggled: true,
               },
-            }
+            },
           ],
         },
       ]}
@@ -216,43 +221,44 @@ const RowExample = () => (
       paddingStyle="standard"
       dividerStyle="horizontal"
       sectionData={[
-      {
-        rows: [
-          {
-            key: 'divider_horizontal-0',
-            cells: [
-              {
-                key: 'cell-0',
-                children: 'Horizontal Divider Row',
-              },
-              {
-                key: 'cell-1',
-                children: 'Horizontal Divider Row',
-              },
-              {
-                key: 'cell-2',
-                children: 'Horizontal Divider Row',
-              },
-            ]
-          },
-          {
-            key: 'divider_horizontal-1',
-            cells: [
-              {
-                key: 'cell-0',
-                children: 'Horizontal Divider Row',
-              },
-              {
-                key: 'cell-1',
-                children: 'Horizontal Divider Row',
-              },
-              {
-                key: 'cell-2',
-                children: 'Horizontal Divider Row',
-              },
-            ]
-          },
-        ]},
+        {
+          rows: [
+            {
+              key: 'divider_horizontal-0',
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: 'Horizontal Divider Row',
+                },
+                {
+                  key: 'cell-1',
+                  children: 'Horizontal Divider Row',
+                },
+                {
+                  key: 'cell-2',
+                  children: 'Horizontal Divider Row',
+                },
+              ],
+            },
+            {
+              key: 'divider_horizontal-1',
+              cells: [
+                {
+                  key: 'cell-0',
+                  children: 'Horizontal Divider Row',
+                },
+                {
+                  key: 'cell-1',
+                  children: 'Horizontal Divider Row',
+                },
+                {
+                  key: 'cell-2',
+                  children: 'Horizontal Divider Row',
+                },
+              ],
+            },
+          ],
+        },
       ]}
     />
     <br />

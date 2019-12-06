@@ -72,7 +72,7 @@ const TableSectionExample = () => (
               },
             ],
           },
-        ]
+        ],
       },
       {
         sectionHeader: {
@@ -106,8 +106,8 @@ const TableSectionExample = () => (
               },
             ],
           },
-        ]
-      }
+        ],
+      },
     ]}
   />
 );

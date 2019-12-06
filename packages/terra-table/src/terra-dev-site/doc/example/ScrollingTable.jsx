@@ -189,7 +189,7 @@ const FixedHeightTable = () => (
               ],
             },
           ],
-        }
+        },
       ]}
     />
   </FixedHeight>

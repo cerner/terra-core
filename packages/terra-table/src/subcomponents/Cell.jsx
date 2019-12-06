@@ -84,9 +84,9 @@ const Cell = ({
     ariaAttr = {
       role: 'link',
       'aria-current': disclosureData.isCurrent,
-    }
+    };
     ariaElement = disclosureData.label ? <VisuallyHiddenText text={disclosureData.label} /> : undefined;
-  } 
+  }
 
   let content = children;
   if (ariaAttr || contentClass) {
@@ -105,7 +105,7 @@ const Cell = ({
       className={customProps.className ? `${cellClassNames} ${customProps.className}` : cellClassNames}
       ref={refCallback}
       role="gridcell"
-      tabIndex={ disclosureData ? '-1' : undefined }
+      tabIndex={disclosureData ? '-1' : undefined}
     >
       {content}
     </div>

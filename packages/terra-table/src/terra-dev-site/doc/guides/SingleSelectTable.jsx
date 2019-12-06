@@ -27,7 +27,7 @@ const SingleSelectTable = () => {
         onToggle: handleRowToggle,
         isToggled: selectedKey === rowData.key,
         toggleLabel: rowData.toggleText,
-      }
+      },
     }
   );
 

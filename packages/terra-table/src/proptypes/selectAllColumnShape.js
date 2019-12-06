@@ -5,7 +5,7 @@ const selectAllColumnShape = PropTypes.shape({
    * The status of the select all checkbox.
    */
   checkStatus: PropTypes.oneOf(['empty', 'checked', 'indeterminate']),
-    /**
+  /**
    * The alignment prop sets the bottom spacing of the check mar, standard units are valid. This is used when providing your own padding.
    */
   checkAlignment: PropTypes.string,

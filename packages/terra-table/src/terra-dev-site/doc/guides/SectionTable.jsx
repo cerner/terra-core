@@ -12,7 +12,6 @@ const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
 const SectionTable = () => {
   const [collapsedKeys, setCollapsedKeys] = useState([]);
-  let rowCount = 1;
 
   const handleSectionToggle = (event, metaData) => {
     event.preventDefault();
