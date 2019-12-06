@@ -4,8 +4,11 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Updated eIFU text to be ` Electronic Instructions for Use Icon`.
+* Updated eIFU text to be `Electronic Instructions for Use Icon`.
 
+
+3.24.0 - (December 3, 2019)
+------------------
 ### Added
 * Added reference wdio screenshots for "orion-fusion-theme".
 

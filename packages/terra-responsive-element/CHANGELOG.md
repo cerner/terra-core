@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+
+5.12.0 - (December 3, 2019)
+------------------
 ### Fixed
 * Flicker for responsiveTo parent elements
 
