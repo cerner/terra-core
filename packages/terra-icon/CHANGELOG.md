@@ -6,7 +6,6 @@ Unreleased
 ### Changed
 * Updated eIFU text to be `Electronic Instructions for Use Icon`.
 
-
 3.24.0 - (December 3, 2019)
 ------------------
 ### Added
