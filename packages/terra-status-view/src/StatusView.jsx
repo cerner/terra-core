@@ -109,9 +109,9 @@ const StatusView = ({
   let titleSection;
   if (title || defaultTitle) {
     titleSection = (
-      <div className={cx('title')}>
+      <p className={cx('title')}>
         {title || defaultTitle}
-      </div>
+      </p>
     );
   }
 

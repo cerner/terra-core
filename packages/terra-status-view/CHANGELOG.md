@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* `<div>` tag replaced with `<p>` in message content.
+* `<div>` tag replaced with `<p>` in message and title section to suffice accessibility.
 
 4.12.0 - (December 3, 2019)
 ------------------

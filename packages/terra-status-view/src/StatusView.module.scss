@@ -72,6 +72,7 @@
   .title {
     color: var(--terra-status-view-title-color, #868a8c);
     font-size: var(--terra-status-view-title-font-size, 1.73rem);
+    margin: 0;
     overflow-wrap: break-word;
     text-align: center;
     width: 100%;
