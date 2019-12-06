@@ -31,6 +31,13 @@ const ListItemTest = () => (
       >
         <p>test selected</p>
       </Item>
+      <Item
+        key="disabled"
+        isSelectable
+        isDisabled
+      >
+        <p>test disabled</p>
+      </Item>
     </List>
   </React.Fragment>
 );

@@ -56,6 +56,7 @@ const propTypes = {
   onMouseDown: PropTypes.func,
   /**
    * Whether or not the list item is disabled.
+   * Set to `true` only for non-selectable items along with `isSelectable` prop.
    */
   isDisabled: PropTypes.bool,
 };
