@@ -24,10 +24,13 @@ const MultiSelectTable = () => {
     {
       key: rowData.key,
       cells: createCellsForRow(rowData.cells),
-      onRowAction: handleRowToggle,
-      metaData: { key: rowData.key },
-      isToggled: selectedKeys.indexOf(rowData.key) >= 0,
       isDisabled: !Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key),
+      toggleAction: {
+        metaData: { key: rowData.key },
+        onToggle: handleRowToggle,
+        isToggled: selectedKeys.indexOf(rowData.key) >= 0,
+        toggleLabel: rowData.toggleText,
+      }
     }
   );
 

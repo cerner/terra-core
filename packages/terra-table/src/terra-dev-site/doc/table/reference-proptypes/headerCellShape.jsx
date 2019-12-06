@@ -51,6 +51,11 @@ const propTypes = {
    * This is useful to optimize the DOM for either a table without padding or to optimize a cell whose custom content is providing its own padding.
    */
   removeInner: PropTypes.bool,
+  /**
+   * Additional attributes to be passed to the cell.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  attrs: PropTypes.object,
 };
 const PropTypesExample = ({ ...customProps }) => <div />; // eslint-disable-line no-unused-vars
 PropTypesExample.propTypes = propTypes;

@@ -40,13 +40,17 @@ const CheckMarkTable = () => {
   const createRow = rowData => (
     {
       key: rowData.key,
-      onCheckAction: handleRowCheckAction,
-      metaData: { key: rowData.key },
-      isToggled: getIsRowChecked(rowData.key),
       cells: createCellsForRow(rowData.cells),
-      toggleLabel: rowData.toggleText,
-      discloseLabel: rowData.discloseText,
-      primaryCellIndex: rowData.primaryIndex,
+      toggleAction: {
+        metaData: { key: rowData.key },
+        toggleLabel: rowData.toggleText,
+        isToggled: getIsRowChecked(rowData.key),
+        onToggle: handleRowCheckAction,
+      },
+      discloseAction: {
+        discloseLabel: rowData.discloseText,
+        discloseCellIndex: rowData.primaryIndex,
+      },
     }
   );
 

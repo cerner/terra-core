@@ -1,49 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cellShape from '../../../../proptypes/cellShape';
+import discloseShape from '../../../../proptypes/discloseShape';
+import toggleShape from '../../../../proptypes/toggleShape';
 
 /**
  * The props table parser continues to have trouble detecting the propTypes of a component that
  * returns `null`. I've duplicated the propType definition here so that a table could be parsed for it.
  */
 const propTypes = {
-/**
-   * The index of the row is derived by default, but in the case of paging and virtualization a different index may be needed as an override.
-   */
-  index: PropTypes.number,
   /**
-   * The index of the cell that provides the accessible link entry point for disclosure style rows.
+   * Additional attributes to be passed to the row.
    */
-  primaryCellIndex: PropTypes.number,
+  // eslint-disable-next-line react/forbid-prop-types
+  attrs: PropTypes.object,
   /**
-   * The react key to apply to the row.
+   * The children to be passed as row content.
    */
-  key: PropTypes.string.isRequired,
+  cells: PropTypes.arrayOf(cellShape),
   /**
    * The check mark is by default vertically centered. The alignment prop sets the top spacing of the check, standard units are valid.
    */
   checkAlignment: PropTypes.string,
   /**
-   * The label associated to the toggle action for the row. Should be set if `'rowStyle'` or `'checkStyle'` are set to `'toggle'`.
+   * Data relating to the `'disclose'` for either rowStyle actions.
    */
-  toggleLabel: PropTypes.string,
+  discloseAction: discloseShape,
   /**
-   * The label associated to the disclose action for the row. Should be set if `'rowStyle'` is set to `'disclose'`.
+   * The aria-rowindex for the row is derived by default, but in the case of paging and virtualization a different index may be needed as an override.
    */
-  discloseLabel: PropTypes.string,
-  /**
-   * Whether or not the row is in a togged state.
-   */
-  isToggled: PropTypes.bool,
-  /**
-   * Whether or not the row is the currently selected disclosure.
-   * This aria state relates to the primary link cell.
-   */
-  isDisclosed: PropTypes.bool,
-  /**
-   * The children to be passed as row content.
-   */
-  cells:  PropTypes.arrayOf(cellShape),
+  index: PropTypes.number,
   /**
    * Whether or not the rows interaction is disabled.
    */
@@ -53,29 +39,17 @@ const propTypes = {
    */
   isStriped: PropTypes.bool,
   /**
-   * The associated metaData to be provided in the onSelect callback.
+   * The react key to apply to the row.
    */
-  // eslint-disable-next-line react/forbid-prop-types
-  metaData: PropTypes.object,
-  /**
-   * Function callback for when the appropriate click or key action is performed.
-   * Callback contains the javascript event and prop metadata, e.g. onRowAction(event, metaData)
-   */
-  onRowAction: PropTypes.func,
-  /**
-   * Function callback for when the appropriate click or key action is performed.
-   * Callback contains the javascript event and prop metadata, e.g. onCheckAction(event, metaData)
-   */
-  onCheckAction: PropTypes.func,
+  key: PropTypes.string.isRequired,
   /**
    * Function callback returning the html node for the row.
    */
   refCallback: PropTypes.func,
   /**
-   * Additional attributes to be passed to the row.
+   * Data relating to the `'toggle'` for either rowStyle or checkStyle row actions.
    */
-  // eslint-disable-next-line react/forbid-prop-types
-  attrs: PropTypes.object,
+  toggleAction: toggleShape,
 };
 const PropTypesExample = ({ ...customProps }) => <div />; // eslint-disable-line no-unused-vars
 PropTypesExample.propTypes = propTypes;

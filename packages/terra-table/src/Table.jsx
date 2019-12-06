@@ -75,7 +75,7 @@ const propTypes = {
     'toggle',
   ]),
   /**
-   * Function callback returning the html node of the table.
+   * Function callback returning the html node of the table's inner body element.
    */
   scrollRefCallback: PropTypes.func,
   /**
@@ -102,6 +102,7 @@ const defaultProps = {
 
 const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
   <Cell
+    {...cell.attrs}
     headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
     key={cell.key}
     refCallback={cell.refCallback}
@@ -114,15 +115,26 @@ const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
 );
 
 const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
+  let rowMetaData;
+  let rowOnAction;
+  let rowActiveState;
+  let rowLabel;
+  if (rowData.toggleAction) {
+    rowMetaData = rowData.toggleAction.metaData;
+    rowOnAction = rowData.toggleAction.onToggle;
+    rowActiveState = rowData.toggleAction.isToggled;
+    rowLabel = rowData.toggleAction.toggleLabel;
+  }
+
   if (checkStyle === 'toggle' || checkStyle === 'readOnly') {
     return (
       <CheckMarkCell
         alignmentPadding={rowData.checkAlignment}
-        metaData={rowData.metaData}
-        onSelect={rowData.onCheckAction}
-        label={rowData.toggleLabel}
+        metaData={rowMetaData}
+        onSelect={rowOnAction}
+        label={rowLabel}
         isSelectable={checkStyle === 'toggle'}
-        isSelected={rowData.isToggled}
+        isSelected={rowActiveState}
         isDisabled={rowData.isDisabled}
         isReadOnly={checkStyle === 'readOnly'}
       />
@@ -130,10 +142,10 @@ const createCheckCell = (rowData, rowStyle, checkStyle) =>  {
   } else if (rowStyle === 'toggle') {
     return (
       <CheckMarkCell
-        metaData={rowData.metaData}
-        onSelect={rowData.onRowAction}
-        label={rowData.toggleLabel}
-        isSelected={rowData.isToggled}
+        metaData={rowMetaData}
+        onSelect={rowOnAction}
+        label={rowLabel}
+        isSelected={rowActiveState}
         isHidden
       />
     );
@@ -184,17 +196,32 @@ const createHeaderChevronCell = (rowStyle, hasChevrons) => {
 };
 
 const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
-  const isDisclosed = rowData.isDisclosed && rowStyle === 'disclose';
-  const isToggled = rowData.isToggled && rowStyle === "toggle" && checkStyle === 'none';
+  let rowMetaData;
+  let rowOnAction;
+  let rowActiveState;
+  let primaryData;
+  let primaryIndex;
+  if (rowStyle === 'disclose' && rowData.discloseAction) {
+    rowMetaData = rowData.discloseAction.metaData;
+    rowOnAction = rowData.discloseAction.onDisclose;
+    rowActiveState = rowData.discloseAction.isDisclosed;
+    primaryIndex = rowData.discloseAction.discloseCellIndex;
+    primaryData = { label: rowData.discloseAction.discloseLabel, isCurrent: rowData.discloseAction.isDisclosed };
+  } else if (rowStyle === 'toggle'  && rowData.toggleAction) {
+    rowMetaData = rowData.toggleAction.metaData;
+    rowOnAction = rowData.toggleAction.onToggle;
+    rowActiveState = rowData.toggleAction.isToggled;
+  }
 
   return (
     <Row
+      {...rowData.attrs}
       key={rowData.key}
       aria-rowindex={rowData.index || rowIndex}
-      metaData={rowData.metaData}
+      metaData={rowMetaData}
       isSelectable={rowStyle === 'toggle' || rowStyle === 'disclose' || checkStyle === 'toggle'}
-      isSelected={isDisclosed || isToggled}
-      onSelect={rowData.onRowAction}
+      isSelected={rowActiveState}
+      onSelect={rowOnAction}
       isDisabled={rowData.isDisabled}
       isStriped={rowData.isStriped}
       dividerStyle={dividerStyle}
@@ -203,10 +230,7 @@ const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowSt
       {rowData.cells.map((cell, colIndex) => {
         const columnId = headerData && headerData.cells ? headerData.cells[colIndex].id : undefined;
         const columnWidth = columnWidths ? columnWidths[colIndex] : undefined;
-        let discloseData;
-        if (colIndex === rowData.primaryCellIndex) {
-          discloseData = { label: rowData.discloseLabel, isCurrent: rowData.isDisclosed };
-        }
+        const discloseData = colIndex === primaryIndex ? primaryData : undefined;
         return createCell(cell, sectionId, columnId, columnWidth, discloseData);
       })}
       {createChevronCell(rowStyle, hasChevrons)}
@@ -267,6 +291,7 @@ const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevron
       {createHeaderCheckCell(headerData.selectAllColumn, rowStyle, checkStyle)}
       {headerData.cells.map((cellData, colIndex) => (
         <HeaderCell
+          {...cellData.attrs}
           key={cellData.key}
           refCallback={cellData.refCallback}
           metaData={cellData.metaData}
