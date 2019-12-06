@@ -69,9 +69,11 @@ Next we need to set up our metaData object with our key value, and attach the "o
   const createRow = rowData => (
     {
       key: rowData.key,
-      onCheckAction: handleRowCheckAction,
-      metaData: { key: rowData.key },
-+     toggleLabel: rowData.toggleText,
++     toggleAction: {
++       metaData: { key: rowData.key },
++       onToggle: handleRowCheckAction,
++       toggleLabel: rowData.toggleText,
++     },
       cells: createCellsForRow(rowData.cells),
     }
   );
@@ -81,10 +83,12 @@ Now pass the key from the rowData to our `getIsRowChecked` method to set whether
   const createRow = rowData => (
     {
       key: rowData.key,
-      onCheckAction: handleRowCheckAction,
-      metaData: { key: rowData.key },
-      toggleLabel: rowData.toggleText,
-+     isToggled: getIsRowChecked(rowData.key),
+      toggleAction: {
+        metaData: { key: rowData.key },
+        onToggle: handleRowCheckAction,
+        toggleLabel: rowData.toggleText,
+        isToggled: getIsRowChecked(rowData.key),
+      },
       cells: createCellsForRow(rowData.cells),
     }
   );
@@ -94,13 +98,17 @@ We also are going to implement disclosure on our rows, so we will need to set th
   const createRow = rowData => (
     {
       key: rowData.key,
-      onCheckAction: handleRowCheckAction,
-      metaData: { key: rowData.key },
-      toggleLabel: rowData.toggleText,
-      isToggled: getIsRowChecked(rowData.key),
+      toggleAction: {
+        metaData: { key: rowData.key },
+        onToggle: handleRowCheckAction,
+        toggleLabel: rowData.toggleText,
+        isToggled: getIsRowChecked(rowData.key),
+      },
       cells: createCellsForRow(rowData.cells),
-+     discloseLabel: rowData.discloseText,
-+     primaryCellIndex: rowData.primaryIndex,
++     discloseAction: {
++       discloseLabel: rowData.discloseText,
++       discloseCellIndex: rowData.primaryIndex,
++     },
     }
   );
 ```

@@ -1,10 +1,10 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table from 'terra-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const TableExample = () => (
   <Table
+    summaryId="default-table"
+    summary="This is a default table structure."
     headerData={{
       cells: [
         { id: 'header-name', key: 'name', children: 'Name' },

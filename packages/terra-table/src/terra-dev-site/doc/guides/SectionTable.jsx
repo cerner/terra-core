@@ -32,10 +32,10 @@ const SectionTable = () => {
         id: `sub-${sectionData.key}`,
         key: sectionData.key,
         title: sectionData.title,
+        numberOfColumns: 3,
         onToggle: handleSectionToggle,
         metaData: { key: sectionData.key },
         isCollapsed: collapsedKeys.indexOf(sectionData.key) >= 0,
-        isCollapsible: true,
       },
       rows: sectionData.childItems.map(childItem => createRow(childItem)),
     }

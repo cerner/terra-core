@@ -3,6 +3,8 @@ import Table from 'terra-table';
 
 const PaddingTable = () => (
   <Table
+    summaryId="compact-table"
+    summary="This table has compact row padding."
     paddingStyle="compact"
     headerData={{
       cells: [

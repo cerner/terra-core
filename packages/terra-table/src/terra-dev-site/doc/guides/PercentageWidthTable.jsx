@@ -17,6 +17,8 @@ const createRows = data => data.map(childItem => createRow(childItem));
 
 const PercentageWidthTable = () => (
   <Table
+    summaryId="example-percentage-table"
+    summary="This table shows an implementation of percentage width table columns."
     paddingStyle="standard"
     columnWidths={[
       { percentage: 20 },

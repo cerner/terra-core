@@ -20,6 +20,7 @@ const createSection = sectionData => (
       key: sectionData.key,
       id: `section-${sectionData.key}`,
       title: sectionData.title,
+      numberOfColumns: 3,
     },
     rows: sectionData.childItems.map((childItem, index) => createRow(childItem, index)),
   }
@@ -29,6 +30,8 @@ const createSections = data => data.map(childItem => createSection(childItem));
 
 const StripedTableSection = () => (
   <Table
+    summaryId="example-striped-section-table"
+    summary="This table shows an implementation of striped section table."
     paddingStyle="standard"
     headerData={{
       cells: [

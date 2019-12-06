@@ -4,6 +4,8 @@ import FixedNode from '../common/FixedNode';
 
 const HeaderFooterExample = () => (
   <Table
+    summaryId="custom-table"
+    summary="This table shows custom header and footer nodes."
     headerNode={<FixedNode title="Header" />}
     footerNode={<FixedNode title="Footer" />}
     paddingStyle="standard"

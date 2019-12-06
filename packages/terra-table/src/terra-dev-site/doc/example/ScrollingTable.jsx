@@ -14,17 +14,17 @@ const FixedHeightTable = () => (
           {
             id: 'header-name',
             key: 'name',
-            children: ['Name'],
+            children: 'Name',
           },
           {
             id: 'header-address',
             key: 'address',
-            children: ['Address'],
+            children: 'Address',
           },
           {
             id: 'header-phone_number',
             key: 'phone_number',
-            children: ['Phone Number'],
+            children: 'Phone Number',
           },
         ],
       }}
@@ -36,21 +36,15 @@ const FixedHeightTable = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'John Smith',
-                  ],
+                  children: 'John Smith',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    '123 Adams Drive',
-                  ],
+                  children: '123 Adams Drive',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    '111-222-3333',
-                  ],
+                  children: '111-222-3333',
                 },
               ],
             },
@@ -60,21 +54,15 @@ const FixedHeightTable = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Jane Smith',
-                  ],
+                  children: 'Jane Smith',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    '321 Drive Street',
-                  ],
+                  children: '321 Drive Street',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    '111-222-3333',
-                  ],
+                  children: '111-222-3333',
                 },
               ],
             },
@@ -83,21 +71,15 @@ const FixedHeightTable = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Dave Smith',
-                  ],
+                  children: 'Dave Smith',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    '213 Raymond Road',
-                  ],
+                  children: '213 Raymond Road',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    '111-222-3333',
-                  ],
+                  children: '111-222-3333',
                 },
               ],
             },
@@ -107,21 +89,15 @@ const FixedHeightTable = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Bob Smith',
-                  ],
+                  children: 'Bob Smith',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    '123 Adams Drive',
-                  ],
+                  children: '123 Adams Drive',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    '111-222-3333',
-                  ],
+                  children: '111-222-3333',
                 },
               ],
             },
@@ -130,21 +106,15 @@ const FixedHeightTable = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Wallaby Smith',
-                  ],
+                  children: 'Wallaby Smith',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    '321 Drive Street',
-                  ],
+                  children: '321 Drive Street',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    '111-222-3333',
-                  ],
+                  children: '111-222-3333',
                 },
               ],
             },
@@ -154,21 +124,15 @@ const FixedHeightTable = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Potato Smith',
-                  ],
+                  children: 'Potato Smith',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    '213 Raymond Road',
-                  ],
+                  children: '213 Raymond Road',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    '111-222-3333',
-                  ],
+                  children: '111-222-3333',
                 },
               ],
             },
@@ -177,21 +141,15 @@ const FixedHeightTable = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Dolphin Smith',
-                  ],
+                  children: 'Dolphin Smith',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    '123 Adams Drive',
-                  ],
+                  children: '123 Adams Drive',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    '111-222-3333',
-                  ],
+                  children: '111-222-3333',
                 },
               ],
             },
@@ -201,21 +159,15 @@ const FixedHeightTable = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Orc Smith',
-                  ],
+                  children: 'Orc Smith',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    '321 Drive Street',
-                  ],
+                  children: '321 Drive Street',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    '111-222-3333',
-                  ],
+                  children: '111-222-3333',
                 },
               ],
             },
@@ -224,21 +176,15 @@ const FixedHeightTable = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Lava Smith',
-                  ],
+                  children: 'Lava Smith',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    '213 Raymond Road',
-                  ],
+                  children: '213 Raymond Road',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    '111-222-3333',
-                  ],
+                  children: '111-222-3333',
                 },
               ],
             },

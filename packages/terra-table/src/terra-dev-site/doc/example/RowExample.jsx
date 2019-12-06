@@ -1,11 +1,11 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table from 'terra-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const RowExample = () => (
   <React.Fragment> 
     <Table
+      summaryId="default-row-table"
+      summary="This table displays default rows."
       paddingStyle="standard"
       sectionData={[
         {
@@ -14,9 +14,7 @@ const RowExample = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Default Row',
-                  ],
+                  children: 'Default Row',
                 },
               ],
             },
@@ -26,9 +24,7 @@ const RowExample = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Striped Row',
-                  ],
+                  children: 'Striped Row',
                 },
               ],
             },
@@ -38,6 +34,8 @@ const RowExample = () => (
     />
     <br />
     <Table
+      summaryId="chevron-row-table"
+      summary="This table displays chevron rows."
       paddingStyle="standard"
       rowStyle="disclose"
       hasChevrons
@@ -46,14 +44,14 @@ const RowExample = () => (
           rows: [
             {
               key: 'chevron_row',
-              discloseLabel: 'test title',
-              primaryCellIndex: 0,
+              discloseAction: {
+                discloseLabel: 'test title',
+                discloseCellIndex: 0,
+              },
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Chevron Row',
-                  ],
+                  children: 'Chevron Row',
                 },
               ],
             },
@@ -63,95 +61,111 @@ const RowExample = () => (
     />
     <br />
     <Table
+      summaryId="toggle-row-table"
+      summary="This table displays toggle rows."
       paddingStyle="standard"
       rowStyle="toggle"
       sectionData={[
         {
           rows: [{
-            key: 'toggle_row',
+            key: 'toggle_row-0',
             cells: [{
               key: 'cell-0',
-              children: [
-                'Toggle Row',
-              ],
+              children: 'Toggle Row',
             }],
+            toggleAction: {
+              toggleLabel: 'toggle text'
+            },
           },
           {
-            key: 'toggled_row',
-            isToggled: true,
+            key: 'toggled_row-1',
             cells: [
               {
                 key: 'cell-0',
-                children: [
-                  'Toggled Row',
-                ],
+                children: 'Toggled Row',
               },
             ],
+            toggleAction: {
+              toggleLabel: 'toggle text',
+              isToggled: true,
+            },
           }],
         },
       ]}
     />
     <br />
     <Table
+      summaryId="check-row-table"
+      summary="This table displays check rows."
       paddingStyle="standard"
       rowStyle="toggle"
       checkStyle="readOnly"
       sectionData={[
         {
           rows: [{
-            key: 'check_row',
+            key: 'check_row-0',
             cells: [{
               key: 'cell-0',
-              children: [
-                'Check Row',
-              ],
+              children: 'Check Row',
             }],
+            toggleAction: {
+              toggleLabel: 'toggle text',
+            },
           },
           {
-            key: 'checked_row',
-            isToggled: true,
+            key: 'checked_row-1',
             cells: [
               {
                 key: 'cell-0',
-                children: [
-                  'Toggled Check Row',
-                ],
+                children: 'Toggled Check Row',
               },
             ],
+            toggleAction: {
+              toggleLabel: 'toggle text',
+              isToggled: true,
+            },
           }],
         },
       ]}
     />
     <br />
     <Table
+      summaryId="checkmark-row-table"
+      summary="This table displays checkmark rows."
       paddingStyle="standard"
       checkStyle="toggle"
       sectionData={[
         {
-          rows: [{ 
-            key: 'selection_checkmark',
-            cells: [{
-                key: 'cell-0',
-                children: [
-                  'Toggle Style Checkmark',
-                ],
-              }],
+          rows: [
+            { 
+              key: 'selection_checkmark',
+              cells: [{
+                  key: 'cell-0',
+                  children: 'Toggle Style Checkmark',
+                }],
+              toggleAction: {
+                toggleLabel: 'toggle text',
+              },
             },
             {
               key: 'selection_chevron',
-              isToggled: true,
               cells: [{
                   key: 'cell-0',
-                  children: [
-                    'Toggled Style Checkmark',
-                  ],
+                  children: 'Toggled Style Checkmark',
               }],
-          }],
+              toggleAction: {
+                toggleLabel: 'toggle text',
+                isToggled: true,
+              },
+            }
+          ],
         },
       ]}
     />
     <br />
     <Table
+      summaryId="vertical-row-table"
+      summary="This table displays vertical divider rows."
       paddingStyle="standard"
       dividerStyle="vertical"
       sectionData={[
@@ -162,21 +176,15 @@ const RowExample = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Vertical Divider Row',
-                  ],
+                  children: 'Vertical Divider Row',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    'Vertical Divider Row',
-                  ],
+                  children: 'Vertical Divider Row',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    'Vertical Divider Row',
-                  ],
+                  children: 'Vertical Divider Row',
                 },
               ],
             },
@@ -185,21 +193,15 @@ const RowExample = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Vertical Divider Row',
-                  ],
+                  children: 'Vertical Divider Row',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    'Vertical Divider Row',
-                  ],
+                  children: 'Vertical Divider Row',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    'Vertical Divider Row',
-                  ],
+                  children: 'Vertical Divider Row',
                 },
               ],
             },
@@ -209,6 +211,8 @@ const RowExample = () => (
     />
     <br />
     <Table
+      summaryId="horizontal-row-table"
+      summary="This table displays horizontal divider rows."
       paddingStyle="standard"
       dividerStyle="horizontal"
       sectionData={[
@@ -219,21 +223,15 @@ const RowExample = () => (
             cells: [
               {
                 key: 'cell-0',
-                children: [
-                  'Horizontal Divider Row',
-                ],
+                children: 'Horizontal Divider Row',
               },
               {
                 key: 'cell-1',
-                children: [
-                  'Horizontal Divider Row',
-                ],
+                children: 'Horizontal Divider Row',
               },
               {
                 key: 'cell-2',
-                children: [
-                  'Horizontal Divider Row',
-                ],
+                children: 'Horizontal Divider Row',
               },
             ]
           },
@@ -242,21 +240,15 @@ const RowExample = () => (
             cells: [
               {
                 key: 'cell-0',
-                children: [
-                  'Horizontal Divider Row',
-                ],
+                children: 'Horizontal Divider Row',
               },
               {
                 key: 'cell-1',
-                children: [
-                  'Horizontal Divider Row',
-                ],
+                children: 'Horizontal Divider Row',
               },
               {
                 key: 'cell-2',
-                children: [
-                  'Horizontal Divider Row',
-                ],
+                children: 'Horizontal Divider Row',
               },
             ]
           },
@@ -265,6 +257,8 @@ const RowExample = () => (
     />
     <br />
     <Table
+      summaryId="both-row-table"
+      summary="This table displays both divider rows."
       paddingStyle="standard"
       dividerStyle="both"
       sectionData={[
@@ -275,21 +269,15 @@ const RowExample = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Both Divider Row',
-                  ],
+                  children: 'Both Divider Row',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    'Both Divider Row',
-                  ],
+                  children: 'Both Divider Row',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    'Both Divider Row',
-                  ],
+                  children: 'Both Divider Row',
                 },
               ],
             },
@@ -298,21 +286,15 @@ const RowExample = () => (
               cells: [
                 {
                   key: 'cell-0',
-                  children: [
-                    'Both Divider Row',
-                  ],
+                  children: 'Both Divider Row',
                 },
                 {
                   key: 'cell-1',
-                  children: [
-                    'Both Divider Row',
-                  ],
+                  children: 'Both Divider Row',
                 },
                 {
                   key: 'cell-2',
-                  children: [
-                    'Both Divider Row',
-                  ],
+                  children: 'Both Divider Row',
                 },
               ],
             },

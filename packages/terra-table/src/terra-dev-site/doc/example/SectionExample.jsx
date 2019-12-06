@@ -1,10 +1,10 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-import Table, { Row, Cell, Section } from 'terra-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
+import Table from 'terra-table';
 
 const TableSectionExample = () => (
   <Table
+    summaryId="section-table"
+    summary="This table displays section grouping."
     paddingStyle="standard"
     sectionData={[
       {
@@ -12,6 +12,7 @@ const TableSectionExample = () => (
           title: 'Default Section',
           id: 'default-id',
           key: 'default',
+          numberOfColumns: 3,
         },
         rows: [
           {
@@ -45,6 +46,7 @@ const TableSectionExample = () => (
           id: 'collapsible-id',
           key: 'collapsible',
           isCollapsible: true,
+          numberOfColumns: 3,
         },
         rows: [
           {
@@ -77,8 +79,8 @@ const TableSectionExample = () => (
           title: 'Collapsed Section',
           id: 'collapsed-id',
           key: 'collapsed',
-          isCollapsible: true,
           isCollapsed: true,
+          numberOfColumns: 3,
         },
         rows: [
           {

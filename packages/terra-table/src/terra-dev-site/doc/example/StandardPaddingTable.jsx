@@ -3,6 +3,8 @@ import Table from 'terra-table';
 
 const PaddingTable = () => (
   <Table
+    summaryId="standard-table"
+    summary="This table has standard padding."
     paddingStyle="standard"
     headerData={{
       cells: [

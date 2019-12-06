@@ -11,28 +11,28 @@ The state of selection needs to be managed for the table in a High Order Compone
 ```diff
 + const [selectedKey, setSelectedKey] = useState([]);
 ```
-Next creating an event handler callback method to pass to the table row's "onSelect" prop. The "onSelect" will return the metaData prop passed it each row.
+Next creating an event handler callback method to pass to the table row's "onToggle" prop. The "onToggle" will return the metaData prop passed it each row.
 ```diff
-+  const handleRowSelection = (event, metaData) => {
++  const handleRowToggle = (event, metaData) => {
 
 +  };
 ```
 As a precaution we can prevent default on the event, in case the table has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
 ```diff
-  const handleRowSelection = (event, metaData) => {
+  const handleRowToggle = (event, metaData) => {
 +   event.preventDefault();
   };
 ```
 A single select table normally doesn't allow deselection, so we'll be using it in our example, but if deselection is desired we could adjust this method. So we compare the key to the current one in state, and if they aren't the same we set this as our state.
 ```diff
-  const handleRowSelection = (event, metaData) => {
+  const handleRowToggle = (event, metaData) => {
     event.preventDefault();
 +   if (selectedKey !== metaData.key) {
 +     setSelectedKey(metaData.key);
 +   }
   };
 ```
-Setting state will trigger another render. So in the render method we need generate our table rows with the updated isSelected and isSelectable props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if they are placed within sections.
+Setting state will trigger another render. So in the render method we need generate our table rows with the updated isToggle and onToggle props. Each item needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if they are placed within sections.
 [React List & Key Documentation](https://reactjs.org/docs/lists-and-keys.html)
 ```diff
 +  const createRow = rowData => (
@@ -42,14 +42,16 @@ Setting state will trigger another render. So in the render method we need gener
 +    }
 +  );
 ```
-Next we need to set up our metaData object with our key value, and attach the "onSelect" to our handler.
+Next we need to set up our metaData object with our key value, and attach the "onToggle" to our handler.
 ```diff
   const createRow = rowData => (
     {
       key: rowData.key,
       cells: createCellsForRow(rowData.cells),
-+     onRowAction: handleRowSelection,
-+     metaData: { key: rowData.key },
++     toggleAction: {
++       metaData: { key: rowData.key },
++       onToggle: handleRowToggle,
++     }
     }
   );
 ```
@@ -59,9 +61,12 @@ Next we need to check if the item matches the selectedKey in state.
     {
       key: rowData.key,
       cells: createCellsForRow(rowData.cells),
-      onRowAction: handleRowSelection,
-      metaData: { key: rowData.key },
-+     isToggled: selectedKey === rowData.key,  
+      toggleAction: {
+        metaData: { key: rowData.key },
+        onToggle: handleRowToggle,
++       isToggled: selectedKeys.indexOf(rowData.key) >= 0,
++       toggleLabel: rowData.toggleText,
+      }
     }
   };
 ```

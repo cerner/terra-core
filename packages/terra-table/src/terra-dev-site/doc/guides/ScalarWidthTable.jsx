@@ -17,6 +17,8 @@ const createRows = data => data.map(childItem => createRow(childItem));
 
 const ScalarWidthTable = () => (
   <Table
+    summaryId="example-scalar-table"
+    summary="This table shows an implementation of scalar width table columns."
     paddingStyle="standard"
     columnWidths={[
       { scalar: 2 },

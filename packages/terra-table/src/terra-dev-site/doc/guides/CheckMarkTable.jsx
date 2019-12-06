@@ -43,9 +43,9 @@ const CheckMarkTable = () => {
       cells: createCellsForRow(rowData.cells),
       toggleAction: {
         metaData: { key: rowData.key },
+        onToggle: handleRowCheckAction,
         toggleLabel: rowData.toggleText,
         isToggled: getIsRowChecked(rowData.key),
-        onToggle: handleRowCheckAction,
       },
       discloseAction: {
         discloseLabel: rowData.discloseText,
