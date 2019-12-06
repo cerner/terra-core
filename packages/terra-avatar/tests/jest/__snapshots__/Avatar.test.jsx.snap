@@ -119,26 +119,18 @@ exports[`Avatar should render fallback user avatar when invalid image is passed 
 <div
   class="avatar five image"
 >
-  <div>
-    <div
-      class="hidden"
-    >
-      <img
-        alt="placeholder"
-        class="image cover default image"
-        src="https://path/to/invalid_image.jpg"
-      />
-    </div>
-    <div>
-      <span
-        alt="placeholder"
-        aria-hidden="false"
-        aria-label="placeholder"
-        class="icon user"
-        role="img"
-      />
-    </div>
-  </div>
+  <img
+    alt="placeholder"
+    class="image cover default image hidden"
+    src="https://path/to/invalid_image.jpg"
+  />
+  <span
+    alt="placeholder"
+    aria-hidden="false"
+    aria-label="placeholder"
+    class="icon user"
+    role="img"
+  />
 </div>
 `;
 
@@ -160,26 +152,18 @@ exports[`Avatar should render image avatar when image is passed in 1`] = `
 <div
   class="avatar five image"
 >
-  <div>
-    <div
-      class="hidden"
-    >
-      <img
-        alt="placeholder"
-        class="image cover default image"
-        src="test-file-stub"
-      />
-    </div>
-    <div>
-      <span
-        alt="placeholder"
-        aria-hidden="false"
-        aria-label="placeholder"
-        class="icon user"
-        role="img"
-      />
-    </div>
-  </div>
+  <img
+    alt="placeholder"
+    class="image cover default image hidden"
+    src="test-file-stub"
+  />
+  <span
+    alt="placeholder"
+    aria-hidden="false"
+    aria-label="placeholder"
+    class="icon user"
+    role="img"
+  />
 </div>
 `;
 

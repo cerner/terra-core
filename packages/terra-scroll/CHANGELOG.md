@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Axe violation fixed for scrollable content.
 
+2.20.0 - (December 3, 2019)
+------------------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
 2.19.0 - (October 30, 2019)
 ------------------
 ### Changed
