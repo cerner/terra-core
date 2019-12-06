@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.38.0 - (December 3, 2019)
+------------------
 ### Added
 * Added `inputId` prop to allow an id to be passed to the input element for searchable select fields.
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
