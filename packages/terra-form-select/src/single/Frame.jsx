@@ -213,6 +213,7 @@ class Frame extends React.Component {
 
     const { dropdownAttrs, maxHeight } = this.props;
 
+    // Sets Focus to dropdown menu after dropdown menu is postioned.
     const moveFocusToDropdown = () => {
       if (this.selectMenu) {
         this.selectMenu.focus();
