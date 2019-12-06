@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Cell.module.scss';
-import CellGridUtils from './_CellGridUtils';
+import { styleFromWidth } from './_CellGridUtils';
 
 const cx = classNames.bind(styles);
 
@@ -46,7 +46,7 @@ const Cell = ({
   return (
     <div
       {...customProps}
-      style={CellGridUtils.styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
+      style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={cellClassNames}
       ref={refCallback}
     >
