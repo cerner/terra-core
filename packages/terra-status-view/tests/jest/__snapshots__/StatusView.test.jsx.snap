@@ -70,7 +70,7 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
     <div
       className="inner-view"
     >
-      <div
+      <p
         className="title"
       >
         <FormattedMessage
@@ -81,7 +81,7 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
             Terra.status-view.no-data
           </span>
         </FormattedMessage>
-      </div>
+      </p>
     </div>
     <div
       className="bottom-space"
@@ -167,7 +167,7 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
           className="no-matching-results"
         />
       </div>
-      <div
+      <p
         className="title"
       >
         <FormattedMessage
@@ -178,7 +178,7 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
             Terra.status-view.no-matching-results
           </span>
         </FormattedMessage>
-      </div>
+      </p>
     </div>
     <div
       className="bottom-space"
@@ -264,7 +264,7 @@ exports[`should render a not-authorized status-view 1`] = `
           className="not-authorized"
         />
       </div>
-      <div
+      <p
         className="title"
       >
         <FormattedMessage
@@ -275,7 +275,7 @@ exports[`should render a not-authorized status-view 1`] = `
             Terra.status-view.not-authorized
           </span>
         </FormattedMessage>
-      </div>
+      </p>
     </div>
     <div
       className="bottom-space"
@@ -407,11 +407,11 @@ exports[`should render a status view with custom glyph, title, message, and two 
           </IconBase>
         </IconDiamond>
       </div>
-      <div
+      <p
         className="title"
       >
         Test Title
-      </div>
+      </p>
       <div
         className="divider"
       >
@@ -584,7 +584,7 @@ exports[`should render an error status-view 1`] = `
           className="error"
         />
       </div>
-      <div
+      <p
         className="title"
       >
         <FormattedMessage
@@ -595,7 +595,7 @@ exports[`should render an error status-view 1`] = `
             Terra.status-view.error
           </span>
         </FormattedMessage>
-      </div>
+      </p>
     </div>
     <div
       className="bottom-space"
