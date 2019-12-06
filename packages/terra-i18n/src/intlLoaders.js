@@ -1,25 +1,15 @@
 /* eslint-disable import/no-unresolved, compat/compat, no-console */
 import intlLoaders from 'intlLoaders';
+import hasIntlData from 'intl-locales-supported';
 
-const hasIntlData = (locale) => {
-  const intlConstructors = [
-    Intl.DateTimeFormat,
-    Intl.NumberFormat,
-  ].filter((intlConstructor) => intlConstructor);
-
-  if (intlConstructors.length === 0) {
-    return false;
-  }
-
-  return intlConstructors.every((intlConstructor) => {
-    const supportedLocalesFromProvidedList = intlConstructor.supportedLocalesOf([locale], { localeMatcher: 'lookup' });
-    return !!supportedLocalesFromProvidedList.length && supportedLocalesFromProvidedList[0] === locale;
-  });
-};
+const supportedIntlConstructors = global.Intl ? [
+  Intl.DateTimeFormat,
+  Intl.NumberFormat,
+] : [];
 
 const loadFallbackIntl = (localeContext) => {
   try {
-    if (!hasIntlData('en')) {
+    if (!hasIntlData(['en'], supportedIntlConstructors)) {
       intlLoaders.en();
     }
 
@@ -34,13 +24,13 @@ const loadFallbackIntl = (localeContext) => {
 const loadIntl = (locale) => {
   const fallbackLocale = locale.split('-').length > 1 ? locale.split('-')[0] : false;
   try {
-    if (!hasIntlData(locale)) {
+    if (!hasIntlData([locale], supportedIntlConstructors)) {
       intlLoaders[locale]();
     }
   } catch (e) {
     if (fallbackLocale) {
       try {
-        if (!hasIntlData(fallbackLocale)) {
+        if (!hasIntlData([fallbackLocale], supportedIntlConstructors)) {
           intlLoaders[fallbackLocale]();
         }
 

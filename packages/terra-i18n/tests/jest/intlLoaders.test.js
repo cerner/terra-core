@@ -1,28 +1,26 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved,no-console, compat/compat */
 import intlLoaders from 'intlLoaders';
+import hasIntlData from 'intl-locales-supported';
+
 import defaultLoadIntl from '../../src/intlLoaders';
 
 jest.mock('intlLoaders');
+jest.mock('intl-locales-supported');
+
+const supportedIntlConstructors = [
+  Intl.DateTimeFormat,
+  Intl.NumberFormat,
+];
 
 describe('intlLoaders', () => {
   beforeAll(() => {
     global.console.warn = jest.fn();
-    window.Intl = {
-      DateTimeFormat: {
-        supportedLocalesOf: jest.fn(() => ([])),
-      },
-      NumberFormat: {
-        supportedLocalesOf: jest.fn(() => ([])),
-      },
-    };
+    hasIntlData.mockReturnValue(false);
   });
 
   afterAll(() => {
     global.console.warn = jest.mockReset();
     window.Intl.mockReset();
-  });
-
-  beforeEach(() => {
   });
 
   describe('dev environment', () => {
@@ -121,47 +119,41 @@ describe('intlLoaders', () => {
 
   describe('loads locale data as needed', () => {
     beforeEach(() => {
-      Intl.DateTimeFormat.supportedLocalesOf.mockClear();
-      Intl.NumberFormat.supportedLocalesOf.mockClear();
+      hasIntlData.mockClear();
       intlLoaders['es-US'] = jest.fn();
       intlLoaders.es = jest.fn();
       intlLoaders.en = jest.fn();
     });
 
     it('loads locale data', () => {
+      hasIntlData.mockReturnValue(false);
       defaultLoadIntl('es');
       expect(intlLoaders.es).toBeCalled();
       expect(intlLoaders.en).not.toBeCalled();
-      expect(Intl.DateTimeFormat.supportedLocalesOf).toBeCalledWith(['es'], { localeMatcher: 'lookup' });
+      expect(hasIntlData).toBeCalledWith(['es'], supportedIntlConstructors);
     });
 
     it('does not re-load locale data when it has already been loaded', () => {
-      Intl.DateTimeFormat.supportedLocalesOf.mockReturnValue(['es']);
-      Intl.NumberFormat.supportedLocalesOf.mockReturnValue(['es']);
+      hasIntlData.mockReturnValue(true);
       defaultLoadIntl('es');
       expect(intlLoaders.es).not.toBeCalled();
       expect(intlLoaders.en).not.toBeCalled();
-      expect(Intl.DateTimeFormat.supportedLocalesOf).toBeCalledWith(['es'], { localeMatcher: 'lookup' });
-      expect(Intl.NumberFormat.supportedLocalesOf).toBeCalledWith(['es'], { localeMatcher: 'lookup' });
+      expect(hasIntlData).toBeCalledWith(['es'], supportedIntlConstructors);
     });
 
     it('does load new locale data', () => {
-      Intl.DateTimeFormat.supportedLocalesOf.mockReturnValue(['es']);
-      Intl.NumberFormat.supportedLocalesOf.mockReturnValue(['es']);
+      hasIntlData.mockReturnValue(false);
       defaultLoadIntl('pt');
       expect(intlLoaders.pt).toBeCalled();
       expect(intlLoaders.en).not.toBeCalled();
-      expect(Intl.DateTimeFormat.supportedLocalesOf).toBeCalledWith(['pt'], { localeMatcher: 'lookup' });
+      expect(hasIntlData).toBeCalledWith(['pt'], supportedIntlConstructors);
     });
 
     it('does not re-load region locale data if regional local has already been loaded', () => {
       intlLoaders['es-US'] = undefined;
-      Intl.DateTimeFormat.supportedLocalesOf.mockReturnValue(['es']);
-      Intl.NumberFormat.supportedLocalesOf.mockReturnValue(['es']);
+      hasIntlData.mockReturnValue(true);
       defaultLoadIntl('es-US');
-      expect(Intl.DateTimeFormat.supportedLocalesOf).toHaveBeenNthCalledWith(1, ['es-US'], { localeMatcher: 'lookup' });
-      expect(Intl.DateTimeFormat.supportedLocalesOf).toHaveBeenNthCalledWith(2, ['es'], { localeMatcher: 'lookup' });
-      expect(Intl.NumberFormat.supportedLocalesOf).toHaveBeenNthCalledWith(1, ['es'], { localeMatcher: 'lookup' });
+      expect(hasIntlData).toHaveBeenNthCalledWith(1, ['es-US'], supportedIntlConstructors);
       expect(intlLoaders.es).not.toBeCalled();
       expect(intlLoaders.en).not.toBeCalled();
     });
@@ -169,13 +161,9 @@ describe('intlLoaders', () => {
     it('does not fallback locale data if fallback has already been loaded', () => {
       intlLoaders['es-US'] = undefined;
       intlLoaders.es = undefined;
-      Intl.DateTimeFormat.supportedLocalesOf.mockReturnValue(['en']);
-      Intl.NumberFormat.supportedLocalesOf.mockReturnValue(['en']);
+      hasIntlData.mockReturnValue(false).mockReturnValueOnce(true);
       defaultLoadIntl('es-US');
-      expect(Intl.DateTimeFormat.supportedLocalesOf).toHaveBeenNthCalledWith(1, ['es-US'], { localeMatcher: 'lookup' });
-      expect(Intl.DateTimeFormat.supportedLocalesOf).toHaveBeenNthCalledWith(2, ['es'], { localeMatcher: 'lookup' });
-      expect(Intl.DateTimeFormat.supportedLocalesOf).toHaveBeenNthCalledWith(3, ['en'], { localeMatcher: 'lookup' });
-      expect(Intl.NumberFormat.supportedLocalesOf).toHaveBeenNthCalledWith(1, ['en'], { localeMatcher: 'lookup' });
+      expect(hasIntlData).toHaveBeenNthCalledWith(1, ['es-US'], supportedIntlConstructors);
       expect(intlLoaders.en).not.toBeCalled();
     });
   });
