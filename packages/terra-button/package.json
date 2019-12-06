@@ -1,7 +1,7 @@
 {
   "name": "terra-button",
   "main": "lib/Button.js",
-  "version": "3.26.0",
+  "version": "3.27.0",
   "description": "The terra-button component provides users a way to trigger actions in the UI.",
   "repository": {
     "type": "git",
@@ -28,7 +28,9 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-fusion"
   },
   "peerDependencies": {
     "react": "^16.8.5",
@@ -38,7 +40,7 @@
     "classnames": "^2.2.5",
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.21.0",
-    "terra-icon": "^3.23.0"
+    "terra-doc-template": "^2.22.0",
+    "terra-icon": "^3.24.0"
   }
 }

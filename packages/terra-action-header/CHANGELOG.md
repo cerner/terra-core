@@ -4,10 +4,15 @@ ChangeLog
 Unreleased
 ----------
 
+2.32.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 2.31.0 - (October 30, 2019)
 ------------------
 ### Changed
-* Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg .
+* Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg.
 
 ### Fixed
 * Fixed lint warnings for multiple empty lines
