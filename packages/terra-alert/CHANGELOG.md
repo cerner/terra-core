@@ -6,6 +6,14 @@ Unreleased
 ### Changed
 * Updated `uncontrolled responsive-element` to `controlled responsive-element`.
 
+4.15.0 - (December 3, 2019)
+------------------
+### Fixed
+* Fixed jest tests due to ResponsiveElement change
+
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 4.14.0 - (October 30, 2019)
 ------------------
 ### Fixed

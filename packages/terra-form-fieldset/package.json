@@ -1,7 +1,7 @@
 {
   "name": "terra-form-fieldset",
   "main": "lib/Fieldset.js",
-  "version": "2.32.0",
+  "version": "2.33.0",
   "description": "Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.",
   "repository": {
     "type": "git",
@@ -28,9 +28,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.21.0",
-    "terra-form-field": "^3.29.0",
-    "terra-form-input": "^2.31.0"
+    "terra-doc-template": "^2.22.0",
+    "terra-form-field": "^3.30.0",
+    "terra-form-input": "^2.32.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -40,6 +40,8 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-fusion"
   }
 }

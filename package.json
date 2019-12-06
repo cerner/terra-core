@@ -64,7 +64,8 @@
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:build": "lerna ls | cut -d ' ' -f1 | xargs -I {} babel packages/{}/src --out-dir packages/{}/lib --copy-files",
     "compile:clean": "rm -rf packages/**/lib",
-    "compile:prod": "webpack --config webpack.config.js -p",
+    "compile:prod": "rm -rf ./build; webpack -p",
+    "compile:fusion": "rm -rf ./build; THEME=orion-fusion-theme webpack -p",
     "danger": "danger ci",
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
     "docs": "node scripts/root-readme-updater/index.js",
@@ -86,7 +87,9 @@
     "start-prod": "tt-serve --env.disableHotReloading -p",
     "start-static": "tt-serve-static --site ./build",
     "test": "npm run jest && npm run wdio",
-    "wdio": "NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js"
+    "wdio-default": "NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
+    "wdio-fusion": "NODE_OPTIONS=--max-old-space-size=2048 THEME=orion-fusion-theme wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-fusion"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
