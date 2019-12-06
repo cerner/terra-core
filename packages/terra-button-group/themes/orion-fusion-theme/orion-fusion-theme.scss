@@ -1,0 +1,41 @@
+:global {
+  --terra-button-group-button-background-color: #dedfe0;
+  --terra-button-group-button-border-color: #6f7477;
+  --terra-button-group-button-box-shadow: inset 0 3rem 1.5rem -2rem #f4f4f4;
+  --terra-button-group-button-color: #000;
+  --terra-button-group-button-font-weight: 400;
+
+  --terra-button-group-button-disabled-opacity: 0.3;
+
+  --terra-button-group-button-focus-background-color: #9b9fa1;
+  --terra-button-group-button-focus-border-color: #6f7477;
+  --terra-button-group-button-focus-box-shadow: inset 0 3rem 1.5rem -2rem #f4f4f4, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
+
+  --terra-button-group-button-hover-background-color: #b2b5b6;
+  --terra-button-group-button-hover-color: #000;
+
+  --terra-button-group-button-selected-and-hover-background-color: #52585b;
+  --terra-button-group-button-selected-and-hover-border-color: #6f7477;
+  --terra-button-group-button-selected-and-hover-box-shadow: none;
+  --terra-button-group-button-selected-and-hover-color: #fff;
+
+  --terra-button-group-button-selected-and-focus-background-color: #52585b;
+  --terra-button-group-button-selected-and-focus-border-color: #6f7477;
+  --terra-button-group-button-selected-and-focus-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
+  --terra-button-group-button-selected-and-focus-color: #fff;
+
+  --terra-button-group-button-selected-background-color: #52585b;
+  --terra-button-group-button-selected-border-color: #6f7477;
+  --terra-button-group-button-selected-box-shadow: inset 0 3rem 1.5rem -2rem #434a4d;
+  --terra-button-group-button-selected-color: #fff;
+
+  --terra-button-group-button-active-background-color: #52585b;
+  --terra-button-group-button-active-border-color: #6f7477;
+  --terra-button-group-button-active-box-shadow: inset 0 3rem 1.5rem -2rem #434a4d;
+  --terra-button-group-button-active-color: #fff;
+
+  --terra-button-group-button-border-bottom-left-radius: 3px;
+  --terra-button-group-button-border-top-left-radius: 3px;
+  --terra-button-group-button-border-bottom-right-radius: 3px;
+  --terra-button-group-button-border-top-right-radius: 3px;
+}

@@ -10,6 +10,11 @@ Unreleased
 * Removed Component `SelectableTableRows` - Selection by index is no longer provided.
 * Removed Component `TableRows` - body element now provided by default within the table.
 
+3.29.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 3.28.0 - (October 30, 2019)
 ------------------
 ### Changed
