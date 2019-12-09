@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   /**
-   * The children passed to the component
+   * The child TableHeaderCells to place within the header.
    */
   children: PropTypes.node,
 };

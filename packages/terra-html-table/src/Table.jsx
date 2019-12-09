@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The children passed to the component
+   * The child content for the table consisting of either a TableHeader and/or a TableBody.
    */
   children: PropTypes.node.isRequired,
   /**

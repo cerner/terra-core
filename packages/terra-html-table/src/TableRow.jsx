@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The children passed to the component
+   * The child TableCells to be placed within the tr.
    */
   children: PropTypes.node,
 };

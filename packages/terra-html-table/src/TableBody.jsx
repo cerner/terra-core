@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   /**
-   * The children passed to the component
+   * The child TableRows to render within the body.
    */
   children: PropTypes.node,
 };
