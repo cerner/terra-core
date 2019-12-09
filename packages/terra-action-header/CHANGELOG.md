@@ -9,6 +9,11 @@ Unreleased
 ### Removed
 * Removed dependency on `terra-button-group`.
 
+2.32.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 2.31.0 - (October 30, 2019)
 ------------------
 * Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg .

@@ -25,6 +25,7 @@ Thanks.
 * Commit locally and push to your fork until you are happy with your contribution.
 * Make sure to add tests and verify all the tests are passing when merging upstream.
 * Please add your name to the [CONTRIBUTORS.md][7] file. Adding your name to the [CONTRIBUTORS.md][7] file signifies agreement to all rights and reservations provided by the [License][4].
+* Add a CHANGELOG entry in the respective package.
 * [Squash related commits together][5].
 * Open a [pull request][6].
 * The pull request will be reviewed by the community and merged by the project committers.

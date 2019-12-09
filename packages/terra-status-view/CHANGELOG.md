@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update jest test snapshot
+* `<div>` tag replaced with `<p>` in message and title section to suffice accessibility.
+
+4.12.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
 4.11.0 - (October 30, 2019)
 ------------------

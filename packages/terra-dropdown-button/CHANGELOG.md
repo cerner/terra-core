@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+1.8.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 1.7.0 - (October 30, 2019)
 ------------------
 ### Fixed
