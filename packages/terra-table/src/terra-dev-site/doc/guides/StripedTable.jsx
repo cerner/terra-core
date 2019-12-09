@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Table from 'terra-table';
 import mockData from './mock-data/mock-select';
 
 const createCell = cell => ({ key: cell.key, children: cell.title });

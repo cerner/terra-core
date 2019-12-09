@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import Table, {
   Utils,
-} from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+} from 'terra-table';
 import mockData from './mock-data/mock-select';
 
 const maxSectionCount = 3;

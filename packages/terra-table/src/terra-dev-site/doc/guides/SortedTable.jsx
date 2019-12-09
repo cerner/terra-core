@@ -1,7 +1,7 @@
 import React, {
   useState,
 } from 'react';
-import Table from 'terra-table'; // eslint-disable-line import/no-extraneous-dependencies, import/no-unresolved, import/extensions
+import Table from 'terra-table';
 import mockData from './mock-data/mock-sort';
 
 const columnKeys = ['column-0', 'column-1', 'column-2'];
