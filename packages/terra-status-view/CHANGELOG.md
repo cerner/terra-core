@@ -3,13 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
-<<<<<<< HEAD
 ### Changed
 * changed css grid styles to flex
-=======
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
->>>>>>> 20ca65bedab2c3d1325a73026f430d6765592a6e
 
 4.11.0 - (October 30, 2019)
 ------------------
