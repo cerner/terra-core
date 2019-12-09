@@ -16,7 +16,7 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * String-formatted width that the HeaderCell should be rendered as. Any valid css width value is supported (i.e. 200px, 3rem).
+   * Composed with for the cell. Handlling static, percentage, and scalar values.
    */
   width: PropTypes.shape({
     static: PropTypes.shape({

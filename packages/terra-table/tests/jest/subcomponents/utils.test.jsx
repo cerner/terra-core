@@ -3,7 +3,7 @@ import {
   wrappedOnClickForItem,
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
-} from '../../src/TableUtils';
+} from '../../../src/subcomponents/utils';
 
 describe('utils', () => {
   it('styleFromWidth return correct values', () => {

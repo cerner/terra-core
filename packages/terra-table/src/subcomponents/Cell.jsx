@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Cell.module.scss';
 import { styleFromWidth } from './utils';
-import widthShape from './proptypes/widthShape';
+import widthShape from '../proptypes/widthShape';
 
 const cx = classNames.bind(styles);
 

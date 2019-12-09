@@ -8,7 +8,7 @@ import {
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
 } from './utils';
-import widthShape from './proptypes/widthShape';
+import widthShape from '../proptypes/widthShape';
 
 const cx = classNames.bind(styles);
 

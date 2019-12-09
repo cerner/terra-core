@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckMarkCell from '../../src/subcomponents/CheckMarkCell';
+import CheckMarkCell from '../../../src/subcomponents/Cell';
 
 // label: PropTypes.string.isRequired,
 // isReadOnly: PropTypes.bool,
@@ -23,7 +23,7 @@ describe('CheckMarkCell', () => {
     const shallowComponent = shallow(
       <CheckMarkCell
         label="test text"
-      />
+      />,
     );
     expect(shallowComponent).toMatchSnapshot();
   });
@@ -94,7 +94,7 @@ describe('CheckMarkCell', () => {
 
   it('should render with callback functions', () => {
     const mockCallBack = jest.fn();
-  
+
     const shallowComponent = shallow(
       <CheckMarkCell
         label="test text"
