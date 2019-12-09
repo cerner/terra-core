@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Set focus on button when clicked on Firefox, Safari, and IE.
+
 ### Added
 * Added Theme variables for disabled styles of button.
 
