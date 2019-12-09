@@ -24,6 +24,15 @@ exports[`Cell should render a Cell with child content 1`] = `
 </div>
 `;
 
+exports[`Cell should render a Cell with child content and remove inner 1`] = `
+<div
+  className="cell"
+  role="gridcell"
+>
+  test text
+</div>
+`;
+
 exports[`Cell should render a Cell with disclosure label 1`] = `
 <div
   className="cell"

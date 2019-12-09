@@ -309,6 +309,7 @@ const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevron
             isSortActive={cellData.isSortActive}
             onCellAction={cellData.onCellAction}
             onSortAction={cellData.onSortAction}
+            removeInner={cellData.removeInner}
             width={columnWidths ? columnWidths[colIndex] : undefined}
           >
             {cellData.children}

@@ -357,6 +357,55 @@ exports[`Table should render a Table with header with chevrons 1`] = `
 </div>
 `;
 
+exports[`Table should render a Table with inners remove despite padding 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={2}
+  className="table rounded"
+  data-table-padding="standard"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <HeaderRow
+    aria-rowindex={1}
+  >
+    <HeaderCell
+      isSortActive={false}
+      isSortDesc={false}
+      key="cell-key"
+      removeInner={true}
+    >
+      content
+    </HeaderCell>
+  </HeaderRow>
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={2}
+      dividerStyle="none"
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        headers="cell-id"
+        key="child-cell-key"
+        removeInner={true}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
 exports[`Table should render a Table with number of rows 1`] = `
 <div
   aria-describedby="test-id"

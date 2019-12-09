@@ -13,6 +13,11 @@ describe('HeaderCell', () => {
     expect(shallowComponent).toMatchSnapshot();
   });
 
+  it('should render a HeaderCell with child content and remove inner', () => {
+    const shallowComponent = shallow(<HeaderCell removeInner>test text</HeaderCell>);
+    expect(shallowComponent).toMatchSnapshot();
+  });
+
   it('should render with callback functions', () => {
     const shallowComponent = shallow(<HeaderCell refCallback={jest.fn()} />);
     expect(shallowComponent).toMatchSnapshot();

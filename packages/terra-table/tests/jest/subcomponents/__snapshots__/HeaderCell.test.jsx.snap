@@ -34,6 +34,20 @@ exports[`HeaderCell should render a HeaderCell with child content 1`] = `
 </div>
 `;
 
+exports[`HeaderCell should render a HeaderCell with child content and remove inner 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <div
+    className="cell-content"
+    key="content"
+  >
+    test text
+  </div>
+</div>
+`;
+
 exports[`HeaderCell should render a HeaderCell with sortActive 1`] = `
 <div
   aria-sort="ascending"

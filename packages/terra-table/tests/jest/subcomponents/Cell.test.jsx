@@ -13,6 +13,11 @@ describe('Cell', () => {
     expect(shallowComponent).toMatchSnapshot();
   });
 
+  it('should render a Cell with child content and remove inner', () => {
+    const shallowComponent = shallow(<Cell removeInner>test text</Cell>);
+    expect(shallowComponent).toMatchSnapshot();
+  });
+
   it('should render a Cell with disclosure label', () => {
     const shallowComponent = shallow(<Cell disclosure={{ label: 'test link label' }} />);
     expect(shallowComponent).toMatchSnapshot();

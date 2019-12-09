@@ -262,7 +262,6 @@ describe('Table', () => {
         sectionData={[{
           rows: [{
             key: 'row-key',
-            
             cells: [{
               key: 'child-cell-key',
               id: 'child-cell-id',
@@ -295,7 +294,7 @@ describe('Table', () => {
           rows: [{
             key: 'row-key',
             toggleAction: {
-              toggleLabel: 'check-toggle-label'
+              toggleLabel: 'check-toggle-label',
             },
             cells: [{
               key: 'child-cell-key',
@@ -329,7 +328,7 @@ describe('Table', () => {
           rows: [{
             key: 'row-key',
             toggleAction: {
-              toggleLabel: 'check-toggle-label'
+              toggleLabel: 'check-toggle-label',
             },
             cells: [{
               key: 'child-cell-key',
@@ -364,7 +363,7 @@ describe('Table', () => {
           rows: [{
             key: 'row-key',
             toggleAction: {
-              toggleLabel: 'check-toggle-label'
+              toggleLabel: 'check-toggle-label',
             },
             cells: [{
               key: 'child-cell-key',
@@ -399,12 +398,42 @@ describe('Table', () => {
           rows: [{
             key: 'row-key',
             toggleAction: {
-              toggleLabel: 'check-toggle-label'
+              toggleLabel: 'check-toggle-label',
             },
             cells: [{
               key: 'child-cell-key',
               id: 'child-cell-id',
               children: 'content',
+            }],
+          }],
+        }]}
+      />,
+    );
+    expect(shallowComponent).toMatchSnapshot();
+  });
+
+  it('should render a Table with inners remove despite padding', () => {
+    const shallowComponent = shallow(
+      <Table
+        summary="Test summary description"
+        summaryId="test-id"
+        paddingStyle="standard"
+        headerData={{
+          cells: [{
+            key: 'cell-key',
+            id: 'cell-id',
+            children: 'content',
+            removeInner: true,
+          }],
+        }}
+        sectionData={[{
+          rows: [{
+            key: 'row-key',
+            cells: [{
+              key: 'child-cell-key',
+              id: 'child-cell-id',
+              children: 'content',
+              removeInner: true,
             }],
           }],
         }]}

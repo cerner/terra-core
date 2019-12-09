@@ -7,7 +7,7 @@ describe('HeaderCheckMarkCell', () => {
     const shallowComponent = shallow(
       <HeaderCheckMarkCell
         label="test text"
-      />
+      />,
     );
     expect(shallowComponent).toMatchSnapshot();
   });
@@ -18,7 +18,7 @@ describe('HeaderCheckMarkCell', () => {
         label="test text"
       >
         test text
-      </HeaderCheckMarkCell>
+      </HeaderCheckMarkCell>,
     );
     expect(shallowComponent).toMatchSnapshot();
   });
@@ -28,7 +28,7 @@ describe('HeaderCheckMarkCell', () => {
       <HeaderCheckMarkCell
         label="test text"
         removeInner
-      />
+      />,
     );
     expect(shallowComponent).toMatchSnapshot();
   });
