@@ -9,6 +9,11 @@ Unreleased
 ### Changed
 * `focused` and `active` pseudo selectors migrated to data attributes
 
+2.33.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 2.32.0 - (October 30, 2019)
 ------------------
 ### Fixed

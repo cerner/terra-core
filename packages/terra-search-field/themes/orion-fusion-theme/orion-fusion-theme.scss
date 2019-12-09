@@ -1,0 +1,20 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-search-field-input-border-bottom-left-radius: 3px;
+  --terra-search-field-input-border-top-left-radius: 3px;
+  --terra-search-field-input-margin-bottom: 0;
+  --terra-search-field-input-margin-left: 0;
+  --terra-search-field-input-margin-right: 0;
+  --terra-search-field-input-margin-top: 0;
+  --terra-search-field-button-border: 1px solid #b7b9bb;
+  --terra-search-field-button-border-bottom-right-radius: 3px;
+  --terra-search-field-button-border-top-right-radius: 3px;
+  --terra-search-field-button-box-shadow: inset 0 3rem 1.5rem -2rem #f4f4f4;
+  --terra-search-field-button-icon-color: #000;
+  --terra-search-field-button-margin-bottom: 0;
+  --terra-search-field-button-margin-left: -1px;
+  --terra-search-field-button-margin-right: 0;
+  --terra-search-field-button-margin-top: 0;
+  --terra-search-field-button-focus-box-shadow: inset 0 3rem 1.5rem -2rem #f4f4f4, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
+}
