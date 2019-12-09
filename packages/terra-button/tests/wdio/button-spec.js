@@ -250,5 +250,14 @@ Terra.describeViewports('Button', ['tiny'], () => {
       browser.keys(['Enter']);
       Terra.validates.screenshot('Button 1 focused programmatically');
     });
+
+    it('focuses button 3', () => {
+      browser.click('#button3');
+      Terra.validates.screenshot('Button 3 clicked without focus styles');
+    });
+
+    browser.execute(() => {
+      expect(document.querySelector('#button3').to.equal(document.activeElement));
+    });
   });
 });
