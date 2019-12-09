@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import HeaderCheckMarkCell from './HeaderCheckMarkCell';
-import HeaderChevronCell from './HeaderChevronCell';
 
 import styles from '../Table.module.scss';
 
@@ -17,49 +15,26 @@ const propTypes = {
    * Function callback for the ref of the tr.
    */
   refCallback: PropTypes.func,
-  /**
-   * Style of selection for the row.
-   * One of `default`, `checkmark`, `chevron`.
-   */
-  selectionStyle: PropTypes.oneOf(['default', 'checkmark', 'chevron']),
 };
 
 const defaultProps = {
   children: [],
-  selectionStyle: 'default',
 };
 
 const HeaderRow = ({
   children,
   refCallback,
-  selectionStyle,
   ...customProps
-}) => {
-  let checkmark;
-  let chevron;
-  if (selectionStyle === 'checkmark') {
-    checkmark = (
-      <HeaderCheckMarkCell />
-    );
-  } else if (selectionStyle === 'chevron') {
-    chevron = (
-      <HeaderChevronCell />
-    );
-  }
-
-  return (
-    <div
-      className={customProps.className ? `${cx('header')} ${customProps.className}` : cx('header')}
-      role="rowgroup"
-    >
-      <div {...customProps} className={cx(['header-content'])} role="row">
-        {checkmark}
-        {children}
-        {chevron}
-      </div>
+}) => (
+  <div
+    className={customProps.className ? `${cx('header')} ${customProps.className}` : cx('header')}
+    role="rowgroup"
+  >
+    <div {...customProps} className={cx(['header-content'])} role="row">
+      {children}
     </div>
-  );
-};
+  </div>
+);
 
 HeaderRow.propTypes = propTypes;
 HeaderRow.defaultProps = defaultProps;

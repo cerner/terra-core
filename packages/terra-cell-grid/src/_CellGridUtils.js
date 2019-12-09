@@ -16,7 +16,7 @@ const scalarStyle = width => (
 
 const styleFromWidth = (width) => {
   if (!width) {
-    return null;
+    return undefined;
   }
   if (width.static) {
     return staticStyle(`${width.static.value}${width.static.unit}`);
@@ -27,7 +27,7 @@ const styleFromWidth = (width) => {
   if (width.scalar) {
     return scalarStyle(width.scalar);
   }
-  return null;
+  return undefined;
 };
 
 const CellGridUtils = {

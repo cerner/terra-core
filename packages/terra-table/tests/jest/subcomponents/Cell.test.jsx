@@ -1,15 +1,6 @@
 import React from 'react';
 import Cell from '../../../src/subcomponents/Cell';
 
-// children: PropTypes.node,
-// disclosureData: PropTypes.shape({
-//   label: PropTypes.string,
-//   isCurrent: PropTypes.bool,
-// }),
-// refCallback: PropTypes.func,
-// removeInner: PropTypes.bool,
-// width: widthShape,
-
 describe('Cell', () => {
   // Snapshot Tests
   it('should render a Cell', () => {

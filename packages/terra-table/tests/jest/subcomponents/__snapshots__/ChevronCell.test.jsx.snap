@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChevronCell should render a ChevronCell 1`] = `
+<div
+  className="cell"
+  role="none"
+>
+  <div
+    className="container"
+  >
+    <span
+      className="chevron"
+    />
+  </div>
+</div>
+`;

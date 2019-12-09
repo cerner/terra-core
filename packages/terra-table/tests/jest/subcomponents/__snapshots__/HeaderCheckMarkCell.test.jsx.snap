@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable 1`] = `
+<div
+  className="header-cell is-interactable"
+  data-cell-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="columnheader"
+  tabIndex="0"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable disabled 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    aria-disabled={true}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark is-disabled undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable with selection 1`] = `
+<div
+  className="header-cell is-interactable"
+  data-cell-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="columnheader"
+  tabIndex="0"
+>
+  <VisuallyHiddenText
+    aria-checked={true}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark is-selected undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable with selection and disabled 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <VisuallyHiddenText
+    aria-checked={true}
+    aria-disabled={true}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark is-selected is-disabled undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable with selection and indeterminate 1`] = `
+<div
+  className="header-cell is-interactable"
+  data-cell-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="columnheader"
+  tabIndex="0"
+>
+  <VisuallyHiddenText
+    aria-checked="mixed"
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark is-selected is-intermediate undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable with selection, indeterminate, and disabled 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <VisuallyHiddenText
+    aria-checked="mixed"
+    aria-disabled={true}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark is-selected is-intermediate is-disabled undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with alignment 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+    style={
+      Object {
+        "paddingBottom": "5px",
+      }
+    }
+  >
+    <div
+      className="checkmark undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with child content 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with width inner container removed 1`] = `
+<div
+  className="header-cell"
+  removeInner={true}
+  role="columnheader"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark undefined"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCheckMarkCell should render with callback functions 1`] = `
+<div
+  className="header-cell is-interactable"
+  data-cell-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="columnheader"
+  tabIndex="0"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    className="container"
+  >
+    <div
+      className="checkmark undefined"
+    />
+  </div>
+</div>
+`;

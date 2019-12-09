@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row should render a Row 1`] = `
+<div
+  className="row"
+  role="row"
+>
+  test content
+</div>
+`;
+
+exports[`Row should render a Row as selectable 1`] = `
+<div
+  className="is-selectable row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="row"
+  tabIndex="0"
+>
+  test content
+</div>
+`;
+
+exports[`Row should render a Row as selectable disabled 1`] = `
+<div
+  aria-disabled={true}
+  className="row"
+  role="row"
+>
+  test content
+</div>
+`;
+
+exports[`Row should render a Row as selectable with selection 1`] = `
+<div
+  className="is-selected is-selectable row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="row"
+  tabIndex="0"
+>
+  test content
+</div>
+`;
+
+exports[`Row should render a Row as selectable with selection and disabled 1`] = `
+<div
+  aria-disabled={true}
+  className="is-selected row"
+  role="row"
+>
+  test content
+</div>
+`;
+
+exports[`Row should render a Row with divider style - both 1`] = `
+<div
+  className="divider-both row"
+  role="row"
+>
+  test content
+</div>
+`;
+
+exports[`Row should render a Row with divider style - horizontal 1`] = `
+<div
+  className="divider-horizontal row"
+  role="row"
+>
+  test content
+</div>
+`;
+
+exports[`Row should render a Row with divider style - vertical 1`] = `
+<div
+  className="divider-vertical row"
+  role="row"
+>
+  test content
+</div>
+`;
+
+exports[`Row should render a Row with stripe 1`] = `
+<div
+  className="is-striped row"
+  role="row"
+>
+  test content
+</div>
+`;
+
+exports[`Row should render with callback functions 1`] = `
+<div
+  className="is-selectable row"
+  data-row-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="row"
+  tabIndex="0"
+>
+  test content
+</div>
+`;

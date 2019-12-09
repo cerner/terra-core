@@ -12,7 +12,7 @@ const rowShape = PropTypes.shape({
   /**
    * The children to be passed as row content.
    */
-  cells: PropTypes.arrayOf(cellShape),
+  cells: PropTypes.arrayOf(cellShape).isRequired,
   /**
    * The check mark is by default vertically centered. The alignment prop sets the top spacing of the check, standard units are valid.
    */

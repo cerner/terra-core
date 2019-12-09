@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell should render a Cell 1`] = `
+<div
+  className="cell"
+  role="gridcell"
+>
+  <div
+    className="container"
+  />
+</div>
+`;
+
+exports[`Cell should render a Cell with child content 1`] = `
+<div
+  className="cell"
+  role="gridcell"
+>
+  <div
+    className="container"
+  >
+    test text
+  </div>
+</div>
+`;
+
+exports[`Cell should render a Cell with disclosure label 1`] = `
+<div
+  className="cell"
+  disclosure={
+    Object {
+      "label": "test link label",
+    }
+  }
+  role="gridcell"
+>
+  <div
+    className="container"
+  />
+</div>
+`;
+
+exports[`Cell should render a Cell with disclosure label and isCurrent 1`] = `
+<div
+  className="cell"
+  disclosure={
+    Object {
+      "isCurrent": true,
+      "label": "test link label",
+    }
+  }
+  role="gridcell"
+>
+  <div
+    className="container"
+  />
+</div>
+`;
+
+exports[`Cell should render a Cell with width inner container removed 1`] = `
+<div
+  className="cell"
+  role="gridcell"
+/>
+`;
+
+exports[`Cell should render a Cell with width set 1`] = `
+<div
+  className="cell"
+  role="gridcell"
+  style={
+    Object {
+      "flex": "2 2 0px",
+      "msFlex": "2 2 0px",
+    }
+  }
+>
+  <div
+    className="container"
+  />
+</div>
+`;
+
+exports[`Cell should render with callback functions 1`] = `
+<div
+  className="cell"
+  role="gridcell"
+>
+  <div
+    className="container"
+  />
+</div>
+`;

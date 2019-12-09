@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderCell should render a HeaderCell 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="cell-content"
+      key="content"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCell should render a HeaderCell with child content 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="cell-content"
+      key="content"
+    >
+      test text
+    </div>
+  </div>
+</div>
+`;
+
+exports[`HeaderCell should render a HeaderCell with sortActive 1`] = `
+<div
+  aria-sort="ascending"
+  className="header-cell"
+  role="columnheader"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="cell-content"
+      key="content"
+    />
+    <div
+      className="sort-indicator-asc sort-is-active"
+      key="sort"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCell should render a HeaderCell with sortDesc 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="cell-content"
+      key="content"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCell should render a HeaderCell with sortDesc and sortActive 1`] = `
+<div
+  aria-sort="descending"
+  className="header-cell"
+  role="columnheader"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="cell-content"
+      key="content"
+    />
+    <div
+      className="sort-indicator-desc sort-is-active"
+      key="sort"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCell should render a HeaderCell with width inner container removed 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <div
+    className="cell-content"
+    key="content"
+  />
+</div>
+`;
+
+exports[`HeaderCell should render a HeaderCell with width set 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+  style={
+    Object {
+      "flex": "2 2 0px",
+      "msFlex": "2 2 0px",
+    }
+  }
+>
+  <div
+    className="container"
+  >
+    <div
+      className="cell-content"
+      key="content"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCell should render with callback functions 1`] = `
+<div
+  className="header-cell"
+  role="columnheader"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="cell-content"
+      key="content"
+    />
+  </div>
+</div>
+`;
+
+exports[`HeaderCell should render with callback functions 2`] = `
+<div
+  aria-selected={false}
+  className="header-cell is-interactable"
+  data-header-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="columnheader"
+  tabIndex="0"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="cell-content"
+      key="content"
+    />
+    <div
+      className="sort-indicator-asc"
+      key="sort"
+    />
+  </div>
+</div>
+`;
