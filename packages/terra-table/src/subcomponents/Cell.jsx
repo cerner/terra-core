@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Cell.module.scss';
 import { styleFromWidth } from './utils';
+import widthShape from './proptypes/widthShape';
 
 const cx = classNames.bind(styles);
 
@@ -13,13 +14,13 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * a
+   * Data to attach with the link role of the cell.
    */
   disclosureData: PropTypes.shape({
     /**
      * Aria label to be applied when the cell is marked as primary.
      */
-    label: PropTypes.string,
+    label: PropTypes.string.isRequired,
     /**
      * Whether or not the link role should be marked as current.
      */
@@ -37,29 +38,7 @@ const propTypes = {
   /**
    * Width of the cell. Should match header cell counter-part.
    */
-  width: PropTypes.shape({
-    /**
-     * Static width that for the cell.
-     */
-    static: PropTypes.shape({
-      /**
-       * Numerical width value.
-       */
-      value: PropTypes.number.isRequired,
-      /**
-       * Valid css units are supported (i.e. 'px', 'rem', etc).
-       */
-      unit: PropTypes.string.isRequired,
-    }),
-    /**
-     * Percentage width of the row for the cell.
-     */
-    percentage: PropTypes.number,
-    /**
-     * Relative scalar value of the cell's width compared to its sibling cells.
-     */
-    scalar: PropTypes.number,
-  }),
+  width: widthShape,
 };
 
 const defaultProps = {

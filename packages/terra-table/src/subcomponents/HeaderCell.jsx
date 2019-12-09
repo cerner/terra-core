@@ -8,6 +8,7 @@ import {
   wrappedOnKeyDownForItem,
   wrappedEventCallback,
 } from './utils';
+import widthShape from './proptypes/widthShape';
 
 const cx = classNames.bind(styles);
 
@@ -30,36 +31,26 @@ const propTypes = {
    * This is useful to optimize the DOM for either a table without padding or to optimize a cell whose custom content is providing its own padding.
    */
   removeInner: PropTypes.bool,
+  /**
+   * Whether or not the sort direction is descending. False indicates ascending.
+   */
   isSortDesc: PropTypes.bool,
+  /**
+   * Whether or not the header cell should display as an actively sorted cell.
+   */
   isSortActive: PropTypes.bool,
+  /**
+   * Function callback associated to a pure cell click/action, potentially for selection, etc.
+   */
   onCellAction: PropTypes.func,
+  /**
+   * Function callback associated to the sort click/action.
+   */
   onSortAction: PropTypes.func,
   /**
    * Width of the header cell. Should match row cell counter-part.
    */
-  width: PropTypes.shape({
-    /**
-     * Static width that for the cell.
-     */
-    static: PropTypes.shape({
-      /**
-       * Numerical width value.
-       */
-      value: PropTypes.number.isRequired,
-      /**
-       * Valid css units are supported (i.e. 'px', 'rem', etc).
-       */
-      unit: PropTypes.string.isRequired,
-    }),
-    /**
-     * Percentage width of the row for the header cell.
-     */
-    percentage: PropTypes.number,
-    /**
-     * Relative scalar value of the cell's width compared to its sibling cells.
-     */
-    scalar: PropTypes.number,
-  }),
+  width: widthShape,
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
