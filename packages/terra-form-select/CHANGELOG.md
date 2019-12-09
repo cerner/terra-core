@@ -4,9 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Fixed 
-* Fixed Page Scroll Issue of form-select.
-* when form-select is used with-in Iframe / Embeded browser clicking on toggle button to open dropdown scrolls page to top of the window.
-* This error was discovered in powerchart application which uses Iframe to render Terra-components.
+* Fixed page scrolling when embedded within an iframe.
 
 5.38.0 - (December 3, 2019)
 ------------------
