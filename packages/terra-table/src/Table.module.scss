@@ -57,6 +57,7 @@
       flex: 1 1 auto;
       height: 100%;
       -webkit-overflow-scrolling: touch;
+      overflow-x: hidden;
       overflow-y: scroll;
       width: 100%;
     }

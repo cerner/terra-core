@@ -3,7 +3,6 @@
 exports[`should render a cell with content 1`] = `
 <div
   className="cell"
-  style={null}
 >
   Content
 </div>
@@ -52,13 +51,11 @@ exports[`should render a cell with width static 1`] = `
 exports[`should render a default cell 1`] = `
 <div
   className="cell"
-  style={null}
 />
 `;
 
 exports[`should render a table cell with refCallback 1`] = `
 <div
   className="cell"
-  style={null}
 />
 `;

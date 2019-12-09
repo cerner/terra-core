@@ -5,7 +5,7 @@ import {
 describe('CellGridUtils', () => {
   it('styleFromWidth return correct values', () => {
     let result = styleFromWidth();
-    expect(result).toEqual(null);
+    expect(result).toEqual(undefined);
 
     result = styleFromWidth({ static: { value: 4, unit: 'px' } });
     expect(result).toEqual({
