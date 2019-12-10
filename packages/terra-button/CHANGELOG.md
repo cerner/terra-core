@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.28.0 - (December 10, 2019)
+------------------
 ### Fixed
 * Set focus on button when clicked on Firefox, Safari, and IE.
 

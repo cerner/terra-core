@@ -3,8 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.33.0 - (December 10, 2019)
+------------------
 ### Changed
 * Added `disableResize` prop to disable resizability of text area.
+
 3.32.0 - (December 3, 2019)
 ------------------
 ### Added
