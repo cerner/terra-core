@@ -62,6 +62,7 @@ const SortedTable = () => {
     <Table
       summaryId="example-sorted-table"
       summary="This table shows an implementation of sorted table."
+      numberOfColumns={3}
       paddingStyle="standard"
       headerData={{
         cells: [

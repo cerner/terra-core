@@ -67,6 +67,7 @@ const CheckMarkTable = () => {
     <Table
       summaryId="check-table"
       summary="This table has rows that can be batch selected with the checkbox or disclosed for further details."
+      numberOfColumns={4}
       paddingStyle="standard"
       rowStyle="disclose"
       checkStyle="toggle"

@@ -19,6 +19,7 @@ const StaticWidthTable = () => (
   <Table
     summaryId="example-static-table"
     summary="This table shows an implementation of static width table columns."
+    numberOfColumns={4}
     paddingStyle="standard"
     columnWidths={[
       { static: { value: 80, unit: 'px' } },

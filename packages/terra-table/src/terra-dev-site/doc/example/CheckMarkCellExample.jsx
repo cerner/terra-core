@@ -8,8 +8,9 @@ const CheckMarkCellExample = () => (
       summary="This table shows a default cell"
       rowStyle="toggle"
       checkStyle="none"
+      numberOfColumns={1}
       headerData={{
-        cells: [{ id: 'test1', key: 'test1', children: ['test'] }],
+        cells: [{ id: 'test1', key: 'test1', children: 'test' }],
       }}
       sectionData={[
         {
@@ -31,6 +32,7 @@ const CheckMarkCellExample = () => (
       summary="This table shows a cell alignment"
       rowStyle="disclose"
       checkStyle="toggle"
+      numberOfColumns={1}
       sectionData={[
         {
           rows: [
@@ -51,6 +53,7 @@ const CheckMarkCellExample = () => (
       summary="This table shows a disclosure cell"
       rowStyle="disclose"
       checkStyle="toggle"
+      numberOfColumns={1}
       sectionData={[
         {
           rows: [
@@ -70,8 +73,9 @@ const CheckMarkCellExample = () => (
       summary="This table shows a read only check cell"
       rowStyle="toggle"
       checkStyle="readOnly"
+      numberOfColumns={1}
       headerData={{
-        cells: [{ id: 'test2', key: 'test1', children: ['test'] }],
+        cells: [{ id: 'test2', key: 'test1', children: 'test' }],
       }}
       sectionData={[
         {
@@ -92,6 +96,7 @@ const CheckMarkCellExample = () => (
       summary="This table shows a toggled check cell"
       rowStyle="disclose"
       checkStyle="toggle"
+      numberOfColumns={1}
       sectionData={[
         {
           rows: [
@@ -112,6 +117,7 @@ const CheckMarkCellExample = () => (
       summary="This table shows a toggled check cell that is selected."
       rowStyle="toggle"
       checkStyle="readOnly"
+      numberOfColumns={1}
       headerData={{
         cells: [{ id: 'test3', key: 'test1', children: 'test' }],
       }}
@@ -135,6 +141,7 @@ const CheckMarkCellExample = () => (
       summary="This table shows a disclosure toggled check cell that is disabled."
       rowStyle="disclose"
       checkStyle="toggle"
+      numberOfColumns={1}
       sectionData={[
         {
           rows: [
@@ -156,6 +163,7 @@ const CheckMarkCellExample = () => (
       summary="This table shows a read only toggled disabled check cell"
       rowStyle="toggle"
       checkStyle="readOnly"
+      numberOfColumns={1}
       sectionData={[
         {
           rows: [

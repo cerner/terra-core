@@ -10,7 +10,8 @@
     outline: none;
     position: relative;
 
-    &:last-of-type {
+    &:last-of-type,
+    &.hide-cell {
       border-right: 0;
     }
   }

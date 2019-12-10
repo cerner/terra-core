@@ -42,8 +42,12 @@ const MultiSelectTable = () => {
       summary="This table shows an implementation of multiple row selection."
       aria-multiselectable
       rowStyle="toggle"
+      numberOfColumns={4}
       paddingStyle="standard"
       headerData={{
+        selectAllColumn: {
+          checkLabel: 'Multi Selection',
+        },
         cells: [
           { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
           { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },

@@ -6,6 +6,7 @@ const RowExample = () => (
     <Table
       summaryId="default-row-table"
       summary="This table displays default rows."
+      numberOfColumns={1}
       paddingStyle="standard"
       sectionData={[
         {
@@ -37,6 +38,7 @@ const RowExample = () => (
     <Table
       summaryId="chevron-row-table"
       summary="This table displays chevron rows."
+      numberOfColumns={1}
       paddingStyle="standard"
       rowStyle="disclose"
       hasChevrons
@@ -64,6 +66,7 @@ const RowExample = () => (
     <Table
       summaryId="toggle-row-table"
       summary="This table displays toggle rows."
+      numberOfColumns={1}
       paddingStyle="standard"
       rowStyle="toggle"
       sectionData={[
@@ -98,6 +101,7 @@ const RowExample = () => (
     <Table
       summaryId="check-row-table"
       summary="This table displays check rows."
+      numberOfColumns={1}
       paddingStyle="standard"
       rowStyle="toggle"
       checkStyle="readOnly"
@@ -133,6 +137,7 @@ const RowExample = () => (
     <Table
       summaryId="checkmark-row-table"
       summary="This table displays checkmark rows."
+      numberOfColumns={1}
       paddingStyle="standard"
       checkStyle="toggle"
       sectionData={[
@@ -171,6 +176,7 @@ const RowExample = () => (
     <Table
       summaryId="vertical-row-table"
       summary="This table displays vertical divider rows."
+      numberOfColumns={1}
       paddingStyle="standard"
       dividerStyle="vertical"
       sectionData={[
@@ -218,6 +224,7 @@ const RowExample = () => (
     <Table
       summaryId="horizontal-row-table"
       summary="This table displays horizontal divider rows."
+      numberOfColumns={1}
       paddingStyle="standard"
       dividerStyle="horizontal"
       sectionData={[
@@ -265,6 +272,7 @@ const RowExample = () => (
     <Table
       summaryId="both-row-table"
       summary="This table displays both divider rows."
+      numberOfColumns={1}
       paddingStyle="standard"
       dividerStyle="both"
       sectionData={[

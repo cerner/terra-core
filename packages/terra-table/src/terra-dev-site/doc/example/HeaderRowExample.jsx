@@ -6,6 +6,7 @@ const HeaderRowExample = () => (
     <Table
       summaryId="default-header-table"
       summary="This table displays the default layout of table header."
+      numberOfColumns={2}
       paddingStyle="standard"
       headerData={{
         cells: [
@@ -17,6 +18,7 @@ const HeaderRowExample = () => (
     <Table
       summaryId="chevron-header-table"
       summary="This table displays the chevron layout of table header."
+      numberOfColumns={2}
       paddingStyle="standard"
       rowStyle="disclose"
       hasChevrons
@@ -30,6 +32,7 @@ const HeaderRowExample = () => (
     <Table
       summaryId="check-header-table"
       summary="This table displays the checkmark layout of table header."
+      numberOfColumns={2}
       paddingStyle="standard"
       checkStyle="toggle"
       headerData={{

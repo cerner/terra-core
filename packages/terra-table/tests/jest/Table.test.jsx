@@ -8,6 +8,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
       />,
     );
     expect(shallowComponent).toMatchSnapshot();
@@ -18,6 +19,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
         fill
       />,
     );
@@ -29,6 +31,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
         fill
         scrollRefCallback={jest.fn()}
       />,
@@ -41,6 +44,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
         paddingStyle="standard"
       />,
     );
@@ -52,6 +56,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
         paddingStyle="compact"
       />,
     );
@@ -63,6 +68,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
         headerNode={<p>asdf</p>}
         footerNode={<p>zxcv</p>}
       />,
@@ -75,6 +81,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
         dividerStyle="vertical"
       />,
     );
@@ -86,6 +93,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
         dividerStyle="horizontal"
       />,
     );
@@ -97,6 +105,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
         dividerStyle="both"
       />,
     );
@@ -108,6 +117,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={0}
         numberOfRows={6}
       />,
     );
@@ -119,6 +129,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         headerData={{
           cells: [{
             key: 'cell-key',
@@ -141,6 +152,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         hasChevrons
         headerData={{
           cells: [{
@@ -164,6 +176,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         sectionData={[{
           rows: [{
             key: 'row-key',
@@ -184,6 +197,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         hasChevrons
         sectionData={[{
           rows: [{
@@ -205,11 +219,11 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         sectionData={[{
           sectionHeader: {
             key: 'row-key',
             id: 'row-id',
-            numberOfColumns: 3,
             title: 'row-title',
           },
         }]}
@@ -223,11 +237,11 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         sectinData={[{
           sectionHeader: {
             key: 'row-key',
             id: 'row-id',
-            numberOfColumns: 3,
             title: 'row-title',
           },
           rows: [{
@@ -249,6 +263,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         columnWidths={[
           { static: { value: 10, unit: 'px' } },
         ]}
@@ -279,6 +294,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         checkStyle="toggle"
         headerData={{
           selectAllColumn: {
@@ -313,6 +329,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         rowStyle="toggle"
         headerData={{
           selectAllColumn: {
@@ -347,6 +364,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         checkStyle="toggle"
         rowStyle="disclose"
         headerData={{
@@ -382,6 +400,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         checkStyle="readOnly"
         rowStyle="toggle"
         headerData={{
@@ -417,6 +436,7 @@ describe('Table', () => {
       <Table
         summary="Test summary description"
         summaryId="test-id"
+        numberOfColumns={1}
         paddingStyle="standard"
         headerData={{
           cells: [{

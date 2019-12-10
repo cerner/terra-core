@@ -28,6 +28,7 @@ And then we define the functional component returning our table.
 +   <Table
 +     summaryId="example-percentage-table"
 +     summary="This table shows an implementation of percentage width table columns."
++     numberOfColumns={4}
 +     paddingStyle="standard"
 +     headerData={{
 +       cells: [
@@ -49,6 +50,7 @@ const ScalarWidthTable = () => (
   <Table
     summaryId="example-percentage-table"
     summary="This table shows an implementation of percentage width table columns."
+    numberOfColumns={4}
     paddingStyle="standard"
 +   columnWidths={[
 +     { percentage: 20 },

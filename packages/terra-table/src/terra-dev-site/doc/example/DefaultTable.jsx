@@ -5,6 +5,7 @@ const TableExample = () => (
   <Table
     summaryId="default-table"
     summary="This is a default table structure."
+    numberOfColumns={3}
     headerData={{
       cells: [
         { id: 'header-name', key: 'name', children: 'Name' },

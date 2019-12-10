@@ -5,6 +5,7 @@ const TableSectionExample = () => (
   <Table
     summaryId="section-table"
     summary="This table displays section grouping."
+    numberOfColumns={3}
     paddingStyle="standard"
     sectionData={[
       {
@@ -12,7 +13,6 @@ const TableSectionExample = () => (
           title: 'Default Section',
           id: 'default-id',
           key: 'default',
-          numberOfColumns: 3,
         },
         rows: [
           {
@@ -46,7 +46,6 @@ const TableSectionExample = () => (
           id: 'collapsible-id',
           key: 'collapsible',
           onToggle: () => {},
-          numberOfColumns: 3,
         },
         rows: [
           {
@@ -81,7 +80,6 @@ const TableSectionExample = () => (
           key: 'collapsed',
           onToggle: () => {},
           isCollapsed: true,
-          numberOfColumns: 3,
         },
         rows: [
           {

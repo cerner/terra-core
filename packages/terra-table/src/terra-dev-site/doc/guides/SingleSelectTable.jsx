@@ -37,9 +37,13 @@ const SingleSelectTable = () => {
     <Table
       summaryId="example-single-select"
       summary="This table shows an implementation of single row selection."
+      numberOfColumns={4}
       paddingStyle="standard"
       rowStyle="toggle"
       headerData={{
+        selectAllColumn: {
+          checkLabel: 'Single Selection',
+        },
         cells: [
           { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
           { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },

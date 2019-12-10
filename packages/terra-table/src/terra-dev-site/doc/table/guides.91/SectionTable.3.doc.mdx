@@ -37,7 +37,6 @@ Setting state will trigger another render. So in the render method we need to ge
 +       id: `sub-${sectionData.key}`,
 +       key: sectionData.key,
 +       title: sectionData.title,
-+       numberOfColumns: 3,
 +     },
 +     rows: sectionData.childItems.map(childItem => createRow(childItem)),
 +   }
@@ -93,6 +92,7 @@ Then we can implement a method to loop through our data and create the section w
 +   <Table
 +     summaryId="example-section-table"
 +     summary="This table shows an implementation of sections."
++     numberOfColumns={3}
 +     paddingStyle="standard"
 +     headerData={{
 +       cells: [

@@ -5,6 +5,7 @@ const PaddingTable = () => (
   <Table
     summaryId="standard-table"
     summary="This table has standard padding."
+    numberOfColumns={3}
     paddingStyle="standard"
     headerData={{
       cells: [

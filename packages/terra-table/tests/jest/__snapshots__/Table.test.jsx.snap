@@ -536,7 +536,7 @@ exports[`Table should render a Table with section header 1`] = `
       isCollapsible={false}
       key="row-key"
       level={2}
-      numberOfColumns={3}
+      numberOfColumns={1}
       title="row-title"
     />
   </div>
@@ -567,7 +567,6 @@ exports[`Table should render a Table with section header and rows 1`] = `
         "sectionHeader": Object {
           "id": "row-id",
           "key": "row-key",
-          "numberOfColumns": 3,
           "title": "row-title",
         },
       },

@@ -31,7 +31,6 @@ const SectionTable = () => {
         id: `sub-${sectionData.key}`,
         key: sectionData.key,
         title: sectionData.title,
-        numberOfColumns: 3,
         onToggle: handleSectionToggle,
         metaData: { key: sectionData.key },
         isCollapsed: collapsedKeys.indexOf(sectionData.key) >= 0,
@@ -44,6 +43,7 @@ const SectionTable = () => {
     <Table
       summaryId="example-sorted-table"
       summary="This table shows an implementation of table sorting."
+      numberOfColumns={3}
       paddingStyle="standard"
       headerData={{
         cells: [

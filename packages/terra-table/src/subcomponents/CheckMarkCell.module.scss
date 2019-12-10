@@ -10,7 +10,8 @@
     outline: none;
     position: relative;
     
-    &:last-of-type {
+    &:last-of-type,
+    &.hide-cell {
       border-right: 0;
     }
   }
@@ -121,9 +122,9 @@
     background-color: transparent;
     background-image: none;
     border: 0;
-    height: 1px;
+    height: 0;
     margin: 0;
     padding: 0;
-    width: 1px;
+    width: 0;
   }
 }

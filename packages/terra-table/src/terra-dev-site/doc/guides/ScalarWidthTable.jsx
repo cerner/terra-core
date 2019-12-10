@@ -19,6 +19,7 @@ const ScalarWidthTable = () => (
   <Table
     summaryId="example-scalar-table"
     summary="This table shows an implementation of scalar width table columns."
+    numberOfColumns={4}
     paddingStyle="standard"
     columnWidths={[
       { scalar: 2 },

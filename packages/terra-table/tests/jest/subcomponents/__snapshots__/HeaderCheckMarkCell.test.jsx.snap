@@ -14,7 +14,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell 1`] = `
     className="container"
   >
     <div
-      className="checkmark undefined"
+      className="checkmark"
     />
   </div>
 </div>
@@ -38,7 +38,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable 1
     className="container"
   >
     <div
-      className="checkmark undefined"
+      className="checkmark"
     />
   </div>
 </div>
@@ -59,7 +59,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable d
     className="container"
   >
     <div
-      className="checkmark is-disabled undefined"
+      className="checkmark is-disabled"
     />
   </div>
 </div>
@@ -83,7 +83,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
     className="container"
   >
     <div
-      className="checkmark is-selected undefined"
+      className="checkmark is-selected"
     />
   </div>
 </div>
@@ -104,7 +104,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
     className="container"
   >
     <div
-      className="checkmark is-selected is-disabled undefined"
+      className="checkmark is-selected is-disabled"
     />
   </div>
 </div>
@@ -128,7 +128,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
     className="container"
   >
     <div
-      className="checkmark is-selected is-intermediate undefined"
+      className="checkmark is-selected is-intermediate"
     />
   </div>
 </div>
@@ -149,7 +149,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
     className="container"
   >
     <div
-      className="checkmark is-selected is-intermediate is-disabled undefined"
+      className="checkmark is-selected is-intermediate is-disabled"
     />
   </div>
 </div>
@@ -174,7 +174,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with alignment 
     }
   >
     <div
-      className="checkmark undefined"
+      className="checkmark"
     />
   </div>
 </div>
@@ -194,7 +194,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with child cont
     className="container"
   >
     <div
-      className="checkmark undefined"
+      className="checkmark"
     />
   </div>
 </div>
@@ -215,7 +215,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with width inne
     className="container"
   >
     <div
-      className="checkmark undefined"
+      className="checkmark"
     />
   </div>
 </div>
@@ -241,7 +241,7 @@ exports[`HeaderCheckMarkCell should render with callback functions 1`] = `
     className="container"
   >
     <div
-      className="checkmark undefined"
+      className="checkmark"
     />
   </div>
 </div>

@@ -126,6 +126,7 @@ const HeaderCheckMarkCell = ({
 
   const headerCheckMarkCellClasses = cx(
     'header-cell',
+    { 'hide-cell': isHidden },
     { 'is-interactable': !isDisabled && isSelectable },
   );
 

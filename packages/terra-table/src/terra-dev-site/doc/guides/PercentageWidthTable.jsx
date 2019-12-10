@@ -19,6 +19,7 @@ const PercentageWidthTable = () => (
   <Table
     summaryId="example-percentage-table"
     summary="This table shows an implementation of percentage width table columns."
+    numberOfColumns={4}
     paddingStyle="standard"
     columnWidths={[
       { percentage: 20 },

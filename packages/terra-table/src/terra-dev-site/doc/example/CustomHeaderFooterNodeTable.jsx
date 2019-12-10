@@ -8,6 +8,7 @@ const HeaderFooterExample = () => (
     summary="This table shows custom header and footer nodes."
     headerNode={<FixedNode title="Header" />}
     footerNode={<FixedNode title="Footer" />}
+    numberOfColumns={3}
     paddingStyle="standard"
     headerData={{
       cells: [

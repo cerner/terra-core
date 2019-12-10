@@ -11,7 +11,7 @@ const propTypes = {
    */
   key: PropTypes.string.isRequired,
   /**
-   * The id to apply to the header in order to provide structure for AT.
+   * The id to apply to the header in order to provide structure for assistive technologies.
    */
   id: PropTypes.string.isRequired,
   /**
@@ -23,14 +23,10 @@ const propTypes = {
   */
   isCollapsible: PropTypes.bool,
   /**
-  * The associated metaData to be provided in the onSelect callback.
+  * The associated metaData to be provided in the onToggle(event, metaData) callback.
   */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
-  /**
-   * The numberOfColumns to be used as a descriptor for assistive technology.
-   */
-  numberOfColumns: PropTypes.number.isRequired,
   /**
   * Function callback for when the appropriate click or key action is performed to expand or collapse the section.
   * Callback contains the javascript event and prop metadata, e.g. onToggle(event, metaData)

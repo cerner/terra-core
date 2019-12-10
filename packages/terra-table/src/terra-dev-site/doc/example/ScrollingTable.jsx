@@ -8,6 +8,7 @@ const FixedHeightTable = () => (
       summaryId="example-table"
       summary="This a fixed height table."
       fill
+      numberOfColumns={3}
       paddingStyle="standard"
       headerData={{
         cells: [

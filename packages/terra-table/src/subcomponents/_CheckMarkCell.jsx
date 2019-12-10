@@ -140,6 +140,7 @@ const CheckMarkCell = ({
 
   const checkMarkClasses = cx(
     'cell',
+    { 'hide-cell': isHidden },
     { 'is-interactable': !isDisabled && isSelectable },
     { 'is-top-align': attrPadding },
   );

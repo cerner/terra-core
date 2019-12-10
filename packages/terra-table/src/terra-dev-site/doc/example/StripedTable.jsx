@@ -5,6 +5,7 @@ const StripedTable = () => (
   <Table
     summaryId="striped-table"
     summary="This table displays striped rows."
+    numberOfColumns={3}
     headerData={{
       cells: [
         { id: 'header-name', key: 'name', children: 'Name' },

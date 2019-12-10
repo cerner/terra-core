@@ -58,6 +58,10 @@ const propTypes = {
    */
   footerNode: PropTypes.node,
   /**
+   * The numberOfColumns to be used as a descriptor for assistive technology.
+   */
+  numberOfColumns: PropTypes.number.isRequired,
+  /**
    * This value is used for accessibility when paged/virtualized rows are used.
    * By default this value is derived from the number of rows passed within the sectionData.
    */
@@ -115,26 +119,26 @@ const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
 );
 
 const createCheckCell = (rowData, rowStyle, checkStyle) => {
-  let rowMetaData;
-  let rowOnAction;
-  let rowActiveState;
-  let rowLabel;
+  let cellMetaData;
+  let cellOnAction;
+  let cellActiveState;
+  let cellLabel;
   if (rowData.toggleAction) {
-    rowMetaData = rowData.toggleAction.metaData;
-    rowOnAction = rowData.toggleAction.onToggle;
-    rowActiveState = rowData.toggleAction.isToggled;
-    rowLabel = rowData.toggleAction.toggleLabel;
+    cellMetaData = rowData.toggleAction.metaData;
+    cellOnAction = rowData.toggleAction.onToggle;
+    cellActiveState = rowData.toggleAction.isToggled;
+    cellLabel = rowData.toggleAction.toggleLabel;
   }
 
   if (checkStyle === 'toggle' || checkStyle === 'readOnly') {
     return (
       <CheckMarkCell
         alignmentPadding={rowData.checkAlignment}
-        metaData={rowMetaData}
-        onSelect={rowOnAction}
-        label={rowLabel}
+        metaData={cellMetaData}
+        onSelect={cellOnAction}
+        label={cellLabel}
         isSelectable={checkStyle === 'toggle'}
-        isSelected={rowActiveState}
+        isSelected={cellActiveState}
         isDisabled={rowData.isDisabled}
         isReadOnly={checkStyle === 'readOnly'}
       />
@@ -144,10 +148,10 @@ const createCheckCell = (rowData, rowStyle, checkStyle) => {
   if (rowStyle === 'toggle') {
     return (
       <CheckMarkCell
-        metaData={rowMetaData}
-        onSelect={rowOnAction}
-        label={rowLabel}
-        isSelected={rowActiveState}
+        metaData={cellMetaData}
+        onSelect={cellOnAction}
+        label={cellLabel}
+        isSelected={cellActiveState}
         isHidden
       />
     );
@@ -163,20 +167,29 @@ const createChevronCell = (rowStyle, hasChevrons) => {
 };
 
 const createHeaderCheckCell = (columnData, rowStyle, checkStyle) => {
-  if (!columnData) {
-    return undefined;
+  let cellAlignment;
+  let cellOnAction;
+  let cellStatus;
+  let cellLabel;
+  let cellDisabled;
+  if (columnData) {
+    cellAlignment = columnData.checkAlignment;
+    cellOnAction = columnData.onCheckAction;
+    cellStatus = columnData.checkStatus;
+    cellLabel = columnData.checkLabel;
+    cellDisabled = columnData.isDisabled;
   }
 
   if (checkStyle === 'toggle' || checkStyle === 'readOnly') {
     return (
       <HeaderCheckMarkCell
-        alignmentPadding={columnData.checkAlignment}
-        isSelectable={checkStyle === 'toggle' && !!columnData.onCheckAction}
-        isSelected={columnData.checkStatus === 'checked' || columnData.checkStatus === 'indeterminate'}
-        isIndeterminate={columnData.checkStatus === 'indeterminate'}
-        isDisabled={columnData.isDisabled}
-        onSelect={columnData.onCheckAction}
-        label={columnData.checkLabel}
+        alignmentPadding={cellAlignment}
+        isSelectable={checkStyle === 'toggle' && !!cellOnAction}
+        isSelected={cellStatus === 'checked' || cellStatus === 'indeterminate'}
+        isIndeterminate={cellStatus === 'indeterminate'}
+        isDisabled={cellDisabled}
+        onSelect={cellOnAction}
+        label={cellLabel}
       />
     );
   }
@@ -184,7 +197,7 @@ const createHeaderCheckCell = (columnData, rowStyle, checkStyle) => {
   if (rowStyle === 'toggle') {
     return (
       <HeaderCheckMarkCell
-        label={columnData.checkLabel}
+        label={cellLabel}
         isHidden
       />
     );
@@ -199,19 +212,19 @@ const createHeaderChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
-const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
+const createRow = (tableData, rowData, rowIndex, sectionId) => {
   let rowMetaData;
   let rowOnAction;
   let rowActiveState;
   let primaryData;
   let primaryIndex;
-  if (rowStyle === 'disclose' && rowData.discloseAction) {
+  if (tableData.rowStyle === 'disclose' && rowData.discloseAction) {
     rowMetaData = rowData.discloseAction.metaData;
     rowOnAction = rowData.discloseAction.onDisclose;
     rowActiveState = rowData.discloseAction.isDisclosed;
     primaryIndex = rowData.discloseAction.discloseCellIndex;
     primaryData = { label: rowData.discloseAction.discloseLabel, isCurrent: rowData.discloseAction.isDisclosed };
-  } else if (rowStyle === 'toggle' && rowData.toggleAction) {
+  } else if (tableData.rowStyle === 'toggle' && rowData.toggleAction) {
     rowMetaData = rowData.toggleAction.metaData;
     rowOnAction = rowData.toggleAction.onToggle;
     rowActiveState = rowData.toggleAction.isToggled;
@@ -223,32 +236,32 @@ const createRow = (rowData, rowIndex, sectionId, headerData, columnWidths, rowSt
       key={rowData.key}
       aria-rowindex={rowData.index || rowIndex}
       metaData={rowMetaData}
-      isSelectable={rowStyle === 'toggle' || rowStyle === 'disclose' || checkStyle === 'toggle'}
+      isSelectable={tableData.rowStyle === 'toggle' || tableData.rowStyle === 'disclose' || tableData.checkStyle === 'toggle'}
       isSelected={rowActiveState}
       onSelect={rowOnAction}
       isDisabled={rowData.isDisabled}
       isStriped={rowData.isStriped}
-      dividerStyle={dividerStyle}
+      dividerStyle={tableData.dividerStyle}
     >
-      {createCheckCell(rowData, rowStyle, checkStyle)}
+      {createCheckCell(rowData, tableData.rowStyle, tableData.checkStyle)}
       {rowData.cells.map((cell, colIndex) => {
-        const columnId = headerData && headerData.cells ? headerData.cells[colIndex].id : undefined;
-        const columnWidth = columnWidths ? columnWidths[colIndex] : undefined;
+        const columnId = tableData.headerData && tableData.headerData.cells ? tableData.headerData.cells[colIndex].id : undefined;
+        const columnWidth = tableData.columnWidths ? tableData.columnWidths[colIndex] : undefined;
         const discloseData = colIndex === primaryIndex ? primaryData : undefined;
         return createCell(cell, sectionId, columnId, columnWidth, discloseData);
       })}
-      {createChevronCell(rowStyle, hasChevrons)}
+      {createChevronCell(tableData.rowStyle, tableData.hasChevrons)}
     </Row>
   );
 };
 
-const createSections = (headerIndex, sectionData, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
-  if (!sectionData) {
+const createSections = (tableData, headerIndex) => {
+  if (!tableData.sectionData) {
     return { sections: undefined, sectionIndex: headerIndex };
   }
 
   let rowIndex = headerIndex;
-  const sections = sectionData.map((section) => {
+  const sections = tableData.sectionData.map((section) => {
     if (section.sectionHeader) {
       const header = section.sectionHeader;
       rowIndex += 1;
@@ -261,12 +274,12 @@ const createSections = (headerIndex, sectionData, headerData, columnWidths, rowS
           isCollapsed={header.isCollapsed}
           isCollapsible={!!header.onToggle}
           metaData={header.metaData}
-          numberOfColumns={header.numberOfColumns}
+          numberOfColumns={tableData.numberOfColumns}
           onSelect={header.onToggle}
         >
           {section.rows ? section.rows.map(rowData => {
             rowIndex += 1;
-            return createRow(rowData, rowIndex, header.id, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle);
+            return createRow(tableData, rowData, rowIndex, header.id);
           }) : undefined}
         </Section>
       );
@@ -274,7 +287,7 @@ const createSections = (headerIndex, sectionData, headerData, columnWidths, rowS
     if (section.rows) {
       return section.rows.map(rowData => {
         rowIndex += 1;
-        return createRow(rowData, rowIndex, null, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle);
+        return createRow(tableData, rowData, rowIndex, null);
       });
     }
     return undefined;
@@ -283,8 +296,8 @@ const createSections = (headerIndex, sectionData, headerData, columnWidths, rowS
   return { sections, sectionIndex: rowIndex };
 };
 
-const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevrons) => {
-  if (!headerData || !headerData.cells) {
+const createHeader = (tableData) => {
+  if (!tableData.headerData || !tableData.headerData.cells) {
     return { headerIndex: 0, header: undefined };
   }
 
@@ -294,8 +307,8 @@ const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevron
       <HeaderRow
         aria-rowindex={1}
       >
-        {createHeaderCheckCell(headerData.selectAllColumn, rowStyle, checkStyle)}
-        {headerData.cells.map((cellData, colIndex) => (
+        {createHeaderCheckCell(tableData.headerData.selectAllColumn, tableData.rowStyle, tableData.checkStyle)}
+        {tableData.headerData.cells.map((cellData, colIndex) => (
           <HeaderCell
             {...cellData.attrs}
             key={cellData.key}
@@ -306,20 +319,20 @@ const createHeader = (headerData, columnWidths, rowStyle, checkStyle, hasChevron
             onCellAction={cellData.onCellAction}
             onSortAction={cellData.onSortAction}
             removeInner={cellData.removeInner}
-            width={columnWidths ? columnWidths[colIndex] : undefined}
+            width={tableData.columnWidths ? tableData.columnWidths[colIndex] : undefined}
           >
             {cellData.children}
           </HeaderCell>
         ))}
-        {createHeaderChevronCell(rowStyle, hasChevrons)}
+        {createHeaderChevronCell(tableData.rowStyle, tableData.hasChevrons)}
       </HeaderRow>
     ),
   };
 };
 
-const unpackTableData = (headerData, sectionData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle) => {
-  const { headerIndex, header } = createHeader(headerData, columnWidths, rowStyle, checkStyle, hasChevrons);
-  const { sectionIndex, sections } = createSections(headerIndex, sectionData, headerData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle);
+const unpackTableData = (tableData) => {
+  const { headerIndex, header } = createHeader(tableData);
+  const { sectionIndex, sections } = createSections(tableData, headerIndex);
   return { rowCount: sectionIndex, header, sections };
 };
 
@@ -335,6 +348,7 @@ const Table = ({
   footerNode,
   headerNode,
   paddingStyle,
+  numberOfColumns,
   numberOfRows,
   scrollRefCallback,
   summary,
@@ -356,7 +370,17 @@ const Table = ({
     { rounded: !hasEndNodes },
   );
 
-  const { rowCount, header, sections } = unpackTableData(headerData, sectionData, columnWidths, rowStyle, checkStyle, hasChevrons, dividerStyle);
+  const tableData = {
+    headerData,
+    sectionData,
+    columnWidths,
+    rowStyle,
+    checkStyle,
+    hasChevrons,
+    dividerStyle,
+    numberOfColumns,
+  };
+  const { rowCount, header, sections } = unpackTableData(tableData);
 
   const rows = (
     <div

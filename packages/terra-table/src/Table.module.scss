@@ -42,6 +42,7 @@
     .header {
       display: flex;
       flex: 0 0 auto;
+      overflow-x: hidden;
       overflow-y: scroll;
       position: relative;
       width: 100%;
@@ -57,7 +58,6 @@
       flex: 1 1 auto;
       height: 100%;
       -webkit-overflow-scrolling: touch;
-      overflow-x: hidden;
       overflow-y: scroll;
       width: 100%;
     }
