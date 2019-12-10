@@ -12,7 +12,7 @@ const cx = classNames.bind(styles);
 
 const FixedSize = () => (
   <div id="fixed-target">
-    <div className={cx('responsive-element-wrapper')}>
+    <div tabIndex="0" className={cx('responsive-element-wrapper')}>
       <ResponsiveElement
         tiny={<div>Tiny</div>}
         small={<div>Small</div>}
