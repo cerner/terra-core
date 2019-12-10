@@ -8,15 +8,15 @@ import sectionShape from './proptypes/sectionShape';
 import headerShape from './proptypes/headerShape';
 import widthShape from './proptypes/widthShape';
 
-import Row from './subcomponents/Row';
-import Cell from './subcomponents/Cell';
-import Section from './subcomponents/Section';
-import HeaderRow from './subcomponents/HeaderRow';
-import HeaderCell from './subcomponents/HeaderCell';
-import ChevronCell from './subcomponents/ChevronCell';
-import CheckMarkCell from './subcomponents/CheckMarkCell';
-import HeaderChevronCell from './subcomponents/HeaderChevronCell';
-import HeaderCheckMarkCell from './subcomponents/HeaderCheckMarkCell';
+import Row from './subcomponents/_Row';
+import Cell from './subcomponents/_Cell';
+import Section from './subcomponents/_Section';
+import HeaderRow from './subcomponents/_HeaderRow';
+import HeaderCell from './subcomponents/_HeaderCell';
+import ChevronCell from './subcomponents/_ChevronCell';
+import CheckMarkCell from './subcomponents/_CheckMarkCell';
+import HeaderChevronCell from './subcomponents/_HeaderChevronCell';
+import HeaderCheckMarkCell from './subcomponents/_HeaderCheckMarkCell';
 
 const cx = classNames.bind(styles);
 

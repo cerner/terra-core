@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   /**
-   * Content to be displayed for the row cell
+   * Content to be displayed for the row cell.
    */
   children: PropTypes.node,
 };

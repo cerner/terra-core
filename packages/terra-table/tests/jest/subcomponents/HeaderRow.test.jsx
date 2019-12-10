@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderRow from '../../../src/subcomponents/HeaderRow';
+import HeaderRow from '../../../src/subcomponents/_HeaderRow';
 
 describe('HeaderRow', () => {
   // Snapshot Tests

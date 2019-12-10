@@ -1,5 +1,5 @@
 import React from 'react';
-import Row from '../../../src/subcomponents/Row';
+import Row from '../../../src/subcomponents/_Row';
 
 describe('Row', () => {
   // Snapshot Tests

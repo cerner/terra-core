@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckMarkCell from '../../../src/subcomponents/CheckMarkCell';
+import CheckMarkCell from '../../../src/subcomponents/_CheckMarkCell';
 
 describe('CheckMarkCell', () => {
   // Snapshot Tests

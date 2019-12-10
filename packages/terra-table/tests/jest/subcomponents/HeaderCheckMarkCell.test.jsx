@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderCheckMarkCell from '../../../src/subcomponents/HeaderCheckMarkCell';
+import HeaderCheckMarkCell from '../../../src/subcomponents/_HeaderCheckMarkCell';
 
 describe('HeaderCheckMarkCell', () => {
   // Snapshot Tests

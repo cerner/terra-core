@@ -1,5 +1,5 @@
 import React from 'react';
-import ChevronCell from '../../../src/subcomponents/ChevronCell';
+import ChevronCell from '../../../src/subcomponents/_ChevronCell';
 
 describe('ChevronCell', () => {
   // Snapshot Tests

@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from '../../../src/subcomponents/Section';
+import Section from '../../../src/subcomponents/_Section';
 
 // Snapshot Tests
 it('should render with content', () => {

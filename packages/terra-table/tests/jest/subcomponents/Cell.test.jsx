@@ -1,5 +1,5 @@
 import React from 'react';
-import Cell from '../../../src/subcomponents/Cell';
+import Cell from '../../../src/subcomponents/_Cell';
 
 describe('Cell', () => {
   // Snapshot Tests

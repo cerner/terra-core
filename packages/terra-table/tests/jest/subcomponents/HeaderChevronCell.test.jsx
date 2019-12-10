@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderChevronCell from '../../../src/subcomponents/HeaderChevronCell';
+import HeaderChevronCell from '../../../src/subcomponents/_HeaderChevronCell';
 
 describe('HeaderChevronCell', () => {
   // Snapshot Tests

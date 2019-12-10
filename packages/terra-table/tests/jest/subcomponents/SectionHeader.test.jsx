@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeader from '../../../src/subcomponents/SectionHeader';
+import SectionHeader from '../../../src/subcomponents/_SectionHeader';
 
 // Snapshot Tests
 it('should render default', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderCell from '../../../src/subcomponents/HeaderCell';
+import HeaderCell from '../../../src/subcomponents/_HeaderCell';
 
 describe('HeaderCell', () => {
   // Snapshot Tests
