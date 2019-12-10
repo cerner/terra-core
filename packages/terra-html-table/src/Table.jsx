@@ -16,7 +16,7 @@ const propTypes = {
   isStriped: PropTypes.bool,
   /**
    * Indicates the desired divider styles to apply to a row and its children.
-   * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
+   * One of `'none'`, `'standard'`, `'compact'`.
    */
   paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
 };
