@@ -80,6 +80,7 @@ const TableSectionExample = () => (
           id: 'collapsed-id',
           key: 'collapsed',
           onToggle: () => {},
+          isCollapsed: true,
           numberOfColumns: 3,
         },
         rows: [
