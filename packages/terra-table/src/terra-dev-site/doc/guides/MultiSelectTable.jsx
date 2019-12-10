@@ -24,7 +24,7 @@ const MultiSelectTable = () => {
     {
       key: rowData.key,
       cells: createCellsForRow(rowData.cells),
-      isDisabled: !Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key),
+      isDisabled: !Utils.canToggleArrayValue(maxSectionCount, selectedKeys, rowData.key),
       toggleAction: {
         metaData: { key: rowData.key },
         onToggle: handleRowToggle,
