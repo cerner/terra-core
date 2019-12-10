@@ -2,7 +2,7 @@
   "name": "terra-html-table",
   "main": "lib/index.js",
   "version": "0.0.0",
-  "description": "The terra-html-table component provides user a way to render data in a semantic html table",
+  "description": "The Terra HTML Table is a structural component to arrange content within a semantic html table.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"

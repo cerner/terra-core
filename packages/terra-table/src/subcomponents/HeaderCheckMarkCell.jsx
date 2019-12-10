@@ -140,13 +140,13 @@ const HeaderCheckMarkCell = ({
       <VisuallyHiddenText aria-checked={isSelected} role="checkbox" {...attrCheck} text={label} />
       <div {...attrPadding} className={cx({ container: !isHidden })}>
         <div
-          className={`${cx(
+          className={cx(
             'checkmark',
             { 'is-selected': isSelectable && isSelected },
             { 'is-intermediate': isSelectable && isIndeterminate },
             { 'is-disabled': isSelectable && isDisabled },
             { 'is-hidden': isHidden },
-          )} ${customProps.className}`}
+          )}
         />
       </div>
     </div>

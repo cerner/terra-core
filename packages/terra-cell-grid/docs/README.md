@@ -1,6 +1,6 @@
 # Terra Cell Grid
 
-The terra-cell-grid is a structural row based layout for aligning columns with 100% of it's parents width.
+The terra-cell-grid is a structural row based layout for aligning columns with 100% of its parents width.
 
 ## Getting Started
 

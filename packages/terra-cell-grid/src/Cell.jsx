@@ -8,15 +8,15 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * Content to be displayed for the cell
+   * Content to be displayed for the cell.
    */
   children: PropTypes.node,
   /**
-   * Function callback for the ref of the cell.
+   * Function callback to get the ref of the cell.
    */
   refCallback: PropTypes.func,
   /**
-   * Composed with for the cell. Handlling static, percentage, and scalar values.
+   * Composed width for the cell. Can be provided as either a static, percentage, or scalar value.
    */
   width: PropTypes.shape({
     static: PropTypes.shape({
@@ -40,7 +40,6 @@ const Cell = ({
 }) => {
   const cellClassNames = cx([
     'cell',
-    customProps.className,
   ]);
 
   return (
@@ -48,6 +47,7 @@ const Cell = ({
       {...customProps}
       style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={cellClassNames}
+      className={customProps.className ? `${cellClassNames} ${customProps.className}` : cellClassNames}
       ref={refCallback}
     >
       {children}

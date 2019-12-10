@@ -3,7 +3,7 @@
 [![NPM version](https://badgen.net/npm/v/terra-cell-grid)](https://www.npmjs.org/package/terra-cell-grid)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-The terra-cell-grid is a structural row based layout for aligning column cells within 100% width of it's parent.
+The terra-cell-grid is a structural row based layout for aligning column cells within 100% width of its parent.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-cell-grid/docs)

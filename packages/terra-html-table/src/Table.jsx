@@ -11,7 +11,7 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * Whether or not the rows should be zebra striped
+   * Whether or not the rows should be zebra striped.
    */
   isStriped: PropTypes.bool,
   /**
@@ -37,11 +37,13 @@ const Table = ({
     { striped: isStriped },
     { 'padding-standard': paddingStyle === 'standard' },
     { 'padding-compact': paddingStyle === 'compact' },
-    customProps.className,
   ]);
 
   return (
-    <table {...customProps} className={tableClassNames}>
+    <table
+      {...customProps}
+      className={customProps.className ? `${tableClassNames} ${customProps.className}` : tableClassNames}
+    >
       {children}
     </table>
   );

@@ -2,10 +2,10 @@ import MultiSelectTable from 'terra-table/lib/terra-dev-site/doc/guides/MultiSel
 
 # Terra Table - Implementing a Multi Select Table
 
-The terra-table implementation requires controlled state if selections are required. As a result selections are applied at child row generation from HOC state. The following guide show you how to implement that state within a single row selection variant of table.
+The terra-table implementation requires controlled state if selections are required. As a result selections are applied at child row generation from the consuming component's state. The following guide show you how to implement that state within a multiple row selection variant of table.
 
 ## State Management
-The state of selection needs to be managed for the table in a High Order Component (HOC). In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
+The state of selection needs to be managed for the table in an ancestor component. In this example we are going to use a unique key, but the type of state used is open to the individual implementation.
 
  First defaulting our state to a null value with the useState hook.
 ```diff

@@ -7,12 +7,11 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The children passed to the component
+   * The child Cells for be passed to the cell grid.
    */
   children: PropTypes.node.isRequired,
   /**
    * Indicates the desired divider styles to apply to a cell grid and its children.
-   * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
    */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
   /**
@@ -35,11 +34,14 @@ const CellGrid = ({
   const cellGridClassNames = cx([
     `divider-${dividerStyle}`,
     'cell-grid',
-    customProps.className,
   ]);
 
   return (
-    <div {...customProps} className={cellGridClassNames} ref={refCallback}>
+    <div
+      {...customProps}
+      className={customProps.className ? `${cellGridClassNames} ${customProps.className}` : cellGridClassNames}
+      ref={refCallback}
+    >
       {children}
     </div>
   );

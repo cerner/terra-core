@@ -2,7 +2,7 @@
   "name": "terra-cell-grid",
   "main": "lib/index.js",
   "version": "0.0.0",
-  "description": "The terra-cell-grid is a structural row based layout for aligning column cells within 100% width of it's parent",
+  "description": "The terra-cell-grid is a structural row based layout for aligning column cells within 100% width of its parent",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
