@@ -46,7 +46,6 @@ const Cell = ({
     <div
       {...customProps}
       style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
-      className={cellClassNames}
       className={customProps.className ? `${cellClassNames} ${customProps.className}` : cellClassNames}
       ref={refCallback}
     >
