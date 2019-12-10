@@ -12,9 +12,9 @@ const propTypes = {
   children: PropTypes.node.isRequired,
   /**
    * Indicates the desired divider styles to apply to a cell grid and its children.
+   * One of 'none', `'vertical'`, `'horizontal'`, `'both'`,
    */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
-  /**
   /**
    * Function callback for the ref of the cell grid.
    */
