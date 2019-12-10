@@ -26,7 +26,6 @@ const TEXTAREA_ROW_SIZES = {
   medium: 5,
   large: 10,
 };
-
 const propTypes = {
   /**
   * String that labels the current element. 'aria-label' must be present,
@@ -91,6 +90,12 @@ const propTypes = {
    * functionality such as managing focus, selection, or animations.
    */
   refCallback: PropTypes.func,
+  /**
+   * Whether or not the textarea is resizable.
+   * `Disabled` textarea and the ones with size `full` are always non-resizable.
+   */
+  disableResize: PropTypes.bool,
+
 };
 
 const defaultProps = {
@@ -107,6 +112,7 @@ const defaultProps = {
   size: 'small',
   value: undefined,
   refCallback: undefined,
+  disableResize: false,
 };
 
 class Textarea extends React.Component {
@@ -200,6 +206,7 @@ class Textarea extends React.Component {
       size,
       ariaLabel,
       refCallback,
+      disableResize,
       ...customProps
     } = this.props;
 
@@ -211,6 +218,7 @@ class Textarea extends React.Component {
       { 'form-incomplete': (isIncomplete && required && !isInvalid) },
       { 'full-size': size === 'full' },
       { resizable: isAutoResizable && !this.isMobileDevice },
+      { 'no-resize': disableResize },
       additionalTextareaProps.className,
     ]);
 
