@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import headerCellShape from './headerCellShape';
-import selecAllColumnShape from './selectAllColumnShape';
+import selectAllColumnShape from './selectAllColumnShape';
 
 const headerShape = PropTypes.shape({
   /**
@@ -14,7 +14,7 @@ const headerShape = PropTypes.shape({
   /**
    * The select all column header's properties.
    */
-  selectAllColumn: selecAllColumnShape,
+  selectAllColumn: selectAllColumnShape,
 });
 
 export default headerShape;

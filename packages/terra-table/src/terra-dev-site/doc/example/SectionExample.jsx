@@ -45,7 +45,7 @@ const TableSectionExample = () => (
           title: 'Collapsible Section',
           id: 'collapsible-id',
           key: 'collapsible',
-          isCollapsible: true,
+          onToggle: () => {},
           numberOfColumns: 3,
         },
         rows: [
@@ -79,7 +79,7 @@ const TableSectionExample = () => (
           title: 'Collapsed Section',
           id: 'collapsed-id',
           key: 'collapsed',
-          isCollapsed: true,
+          onToggle: () => {},
           numberOfColumns: 3,
         },
         rows: [

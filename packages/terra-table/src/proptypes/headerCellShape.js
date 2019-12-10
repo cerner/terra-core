@@ -22,7 +22,7 @@ const headerCellShape = PropTypes.shape({
    */
   isSortActive: PropTypes.bool,
   /**
-   * The associated metaData to be provided in the onSelect callback.
+   * The associated metaData to be provided in the onCellAction and onSortAction callbacks.
    */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,

@@ -10,7 +10,7 @@ const HeaderCheckMarkCellExample = () => (
       checkStyle="readOnly"
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
+        cells: [{ id: 'column-0', key: 'key-0', children: 'Default' }],
       }}
     />
     <Table
@@ -20,7 +20,7 @@ const HeaderCheckMarkCellExample = () => (
       checkStyle="toggle"
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkStatus: 'empty' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
+        cells: [{ id: 'column-0', key: 'key-0', children: 'Selectable Unchecked' }],
       }}
     />
     <Table
@@ -30,7 +30,7 @@ const HeaderCheckMarkCellExample = () => (
       checkStyle="toggle"
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkStatus: 'checked' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
+        cells: [{ id: 'column-0', key: 'key-0', children: 'Selectable Checked' }],
       }}
     />
     <Table
@@ -40,7 +40,7 @@ const HeaderCheckMarkCellExample = () => (
       checkStyle="toggle"
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkStatus: 'indeterminate' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
+        cells: [{ id: 'column-0', key: 'key-0', children: 'Selectable Indeterminate' }],
       }}
     />
     <Table
@@ -50,7 +50,7 @@ const HeaderCheckMarkCellExample = () => (
       checkStyle="toggle"
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, isDisabled: true },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
+        cells: [{ id: 'column-0', key: 'key-0', children: 'Disabled' }],
       }}
     />
     <Table
@@ -60,7 +60,7 @@ const HeaderCheckMarkCellExample = () => (
       checkStyle="toggle"
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkAlignment: '1rem' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'test' }],
+        cells: [{ id: 'column-0', key: 'key-0', children: 'Vertical Alignment 1rem' }],
       }}
     />
   </React.Fragment>
