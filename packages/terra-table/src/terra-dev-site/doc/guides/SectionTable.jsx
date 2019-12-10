@@ -15,7 +15,7 @@ const SectionTable = () => {
 
   const handleSectionToggle = (event, metaData) => {
     event.preventDefault();
-    setCollapsedKeys(Utils.updatedMultiSelectedKeys(collapsedKeys, metaData.key));
+    setCollapsedKeys(Utils.toggleArrayValue(collapsedKeys, metaData.key));
   };
 
   const createRow = rowData => (

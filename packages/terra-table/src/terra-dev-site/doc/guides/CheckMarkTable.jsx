@@ -18,7 +18,7 @@ const CheckMarkTable = () => {
   const handleRowCheckAction = (event, metaData) => {
     event.preventDefault();
 
-    const newKeys = Utils.updatedMultiSelectedKeys(checkedKeys, metaData.key);
+    const newKeys = Utils.toggleArrayValue(checkedKeys, metaData.key);
     const isMax = newKeys.length === rowCount;
     setAllChecked(allChecked ? !isMax : isMax);
     setCheckedKeys(isMax ? [] : newKeys);

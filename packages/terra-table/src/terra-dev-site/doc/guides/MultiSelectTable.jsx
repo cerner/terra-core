@@ -17,7 +17,7 @@ const MultiSelectTable = () => {
 
   const handleRowToggle = (event, metaData) => {
     event.preventDefault();
-    setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
+    setSelectedKeys(Utils.toggleArrayValue(selectedKeys, metaData.key));
   };
 
   const createRow = rowData => (

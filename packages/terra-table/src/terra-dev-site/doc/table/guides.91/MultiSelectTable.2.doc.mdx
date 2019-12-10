@@ -23,11 +23,11 @@ As a precaution we can prevent default on the event, in case the table has an an
 +   event.preventDefault();
   };
 ```
-Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has selected or unselected the table row key in our state. So we use the utility method `updatedMultiSelectedKeys`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state.
+Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has selected or unselected the table row key in our state. So we use the utility method `toggleArrayValue`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state.
 ```diff
   const handleRowToggle = (event, metaData) => {
     event.preventDefault();
-+   setSelectedKeys(Utils.updatedMultiSelectedKeys(selectedKeys, metaData.key));
++   setSelectedKeys(Utils.toggleArrayValue(selectedKeys, metaData.key));
   }
 ```
 ```
@@ -69,7 +69,7 @@ Next we need to check if the row is selected. As we support IE10 & 11, we cannot
     }
   };
 ```
-For multi-select tables we need to set selectability based upon whether or not we have reached our max selection count.  Terra Table provides a helper for this, namely `shouldBeMultiSelectable`, by providing our count, the currently selected key, and the key of the associated item.
+For multi-select tables we need to set selectability based upon whether or not we have reached our max selection count.  Terra Table provides a helper for this, namely `canToggleArrayValue`, by providing our count, the currently selected key, and the key of the associated item.
 ```diff
   const createRow = (rowData) => (
     {
@@ -81,7 +81,7 @@ For multi-select tables we need to set selectability based upon whether or not w
         isToggled: selectedKeys.indexOf(rowData.key) >= 0,
         toggleLabel: rowData.toggleText,
       }
-+     isDisabled: !Utils.shouldBeMultiSelectable(maxSectionCount, selectedKeys, rowData.key),
++     isDisabled: !Utils.canToggleArrayValue(maxSectionCount, selectedKeys, rowData.key),
     }
   };
 ```

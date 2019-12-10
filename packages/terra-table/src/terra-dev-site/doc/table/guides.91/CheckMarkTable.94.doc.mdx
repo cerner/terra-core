@@ -25,13 +25,13 @@ As a precaution we can prevent default on the event, in case the table has an an
 +   event.stopPropagation();
   }
 ```
-Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has selected or unselected the table row key in our state. So we use the utility method `updatedMultiSelectedKeys`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state. Comparing the length of the array returned to the number of selectable rows within your table we can determine if all values are selected. If all values are selected we reset the keys, as there are no exceptions to check for.
+Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has selected or unselected the table row key in our state. So we use the utility method `toggleArrayValue`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state. Comparing the length of the array returned to the number of selectable rows within your table we can determine if all values are selected. If all values are selected we reset the keys, as there are no exceptions to check for.
 ```diff
   const handleRowCheckAction = (event, metaData) => {
     event.preventDefault();
     event.stopPropagation();
   
-+   const newKeys = Utils.updatedMultiSelectedKeys(checkedKeys, metaData.key);
++   const newKeys = Utils.toggleArrayValue(checkedKeys, metaData.key);
 +   const isMax = newKeys.length === rowCount;
 +   setAllChecked(allChecked ? !isMax : isMax);
 +   setCheckedKeys(isMax ? [] : newKeys);

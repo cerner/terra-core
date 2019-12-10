@@ -1,27 +1,32 @@
-const shouldBeMultiSelectable = (maxSelectionCount, selectedKeys, key) => (maxSelectionCount < 0 || selectedKeys.indexOf(key) >= 0 || selectedKeys.length < maxSelectionCount);
+/**
+ * Returns whether or not the provided value can be added or removed from the array given a max key count and presence checks.
+ */
+const canToggleArrayValue = (arrayMaxLength, currentArray, value) => {
+  return arrayMaxLength < 0 || currentArray.indexOf(value) >= 0 || currentArray.length < arrayMaxLength;
+};
 
 /**
- * Returns a new array, updated with the newKey being added or removed from the existing.
+ * Returns a new array, updated with the value being added or removed from the existing key array.
  */
-const updatedMultiSelectedKeys = (currentKeys, newKey) => {
-  if (currentKeys.length) {
-    if (currentKeys.indexOf(newKey) >= 0) {
-      const newKeys = currentKeys.slice();
-      newKeys.splice(newKeys.indexOf(newKey), 1);
-      return newKeys;
+const toggleArrayValue = (currentArray, value) => {
+  if (currentArray.length) {
+    if (currentArray.indexOf(value) >= 0) {
+      const newArray = currentArray.slice();
+      newArray.splice(newKeys.indexOf(value), 1);
+      return newArray;
     }
-    return currentKeys.concat([newKey]);
+    return currentArray.concat([value]);
   }
-  return [newKey];
+  return [value];
 };
 
 const TableUtils = {
-  updatedMultiSelectedKeys,
-  shouldBeMultiSelectable,
+  canToggleArrayValue,
+  toggleArrayValue,
 };
 
 export default TableUtils;
 export {
-  updatedMultiSelectedKeys,
-  shouldBeMultiSelectable,
+  canToggleArrayValue,
+  toggleArrayValue,
 };

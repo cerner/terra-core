@@ -21,11 +21,11 @@ As a precaution we can prevent default on the event, in case the table has an an
 +   event.preventDefault();
   );
 ```
-Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method `updatedMultiSelectedKeys`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state.
+Terra Table comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method `toggleArrayValue`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state.
 ```diff
   const handleSectionToggle = (event, metaData) => (
     event.preventDefault();
-+   setCollapsedKeys(Utils.updatedMultiSelectedKeys(collapsedKeys, metaData.key));
++   setCollapsedKeys(Utils.toggleArrayValue(collapsedKeys, metaData.key));
   );
 ```
 Setting state will trigger another render. So in the render method we need to generate our sections with the updated isCollapsed and isCollapsible props. Each section needs a unique key, not necessarily associated to our own key, but it works as well. The table renders flat, so keys need to be unique even if items are placed within sections structurally.
