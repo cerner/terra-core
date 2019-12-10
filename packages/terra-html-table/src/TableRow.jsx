@@ -22,11 +22,13 @@ const TableRow = ({
 }) => {
   const rowClassNames = cx([
     'row',
-    customProps.className,
   ]);
 
   return (
-    <tr {...customProps} className={rowClassNames}>
+    <tr
+      {...customProps}
+      className={customProps.className ? `${rowClassNames} ${customProps.className}` : rowClassNames}
+    >
       {children}
     </tr>
   );

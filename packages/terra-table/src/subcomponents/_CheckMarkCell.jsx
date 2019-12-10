@@ -31,7 +31,7 @@ const propTypes = {
    */
   alignmentPadding: PropTypes.string,
   /**
-   * Whether or not the cell display as disabled.
+   * Whether or not the cell displays as disabled.
    */
   isDisabled: PropTypes.bool,
   /**

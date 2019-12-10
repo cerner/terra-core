@@ -30,6 +30,7 @@ const propTypes = {
   /**
   * Function callback for when the appropriate click or key action is performed to expand or collapse the section.
   * Callback contains the javascript event and prop metadata, e.g. onToggle(event, metaData)
+  * If present, will enable the interaction of the header.
   */
   onToggle: PropTypes.func,
   /**
