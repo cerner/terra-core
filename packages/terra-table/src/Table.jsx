@@ -23,7 +23,6 @@ const cx = classNames.bind(styles);
 const propTypes = {
   /**
    * The check mark styling to apply.
-   * One of `'none'`, `'readOnly'`, `'toggle'`.
    */
   checkStyle: PropTypes.oneOf([
     'none',
@@ -32,7 +31,6 @@ const propTypes = {
   ]),
   /**
    * The divider styling to apply to the child rows.
-   * One of `'none'`, `'disclose'`, `'toggle'`.
    */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
   /**
@@ -66,12 +64,10 @@ const propTypes = {
   numberOfRows: PropTypes.number,
   /**
    * The padding styling to apply to the cell content.
-   * One of `'none'`, `'standard'`, `'compact'`.
    */
   paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
   /**
    * The interaction styling to apply to the row.
-   * One of `'none'`, `'disclose'`, `'toggle'`.
    */
   rowStyle: PropTypes.oneOf([
     'none',

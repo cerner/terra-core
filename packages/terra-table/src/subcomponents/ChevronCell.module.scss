@@ -15,11 +15,11 @@
     background-size: contain;
     color: #ccc;
     display: block;
-    height: var(--terra-table-chevron-cell-height, 1rem); // TODO: Need expected sizing
-    padding: var(--terra-table-chevron-cell-padding, 1px); // TODO: Need expected sizing
+    height: var(--terra-table-chevron-cell-height, 1rem);
+    padding: var(--terra-table-chevron-cell-padding, 1px);
     position: relative;
     transform: rotate(0deg);
-    width: var(--terra-table-chevron-cell-width, 1rem); // TODO: Need expected sizing
+    width: var(--terra-table-chevron-cell-width, 1rem);
 
     // flips the icon about its vertical axis, presenting it in its mirrored-image form
     [dir=rtl] & {

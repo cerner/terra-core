@@ -1,10 +1,9 @@
 # Terra Table
 
-
 [![NPM version](https://badgen.net/npm/v/terra-table)](https://www.npmjs.org/package/terra-table)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-The terra-table component provides user a way to render data in a tabular format.
+The terra-table component provides users a way to render data in a tabular format.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs)

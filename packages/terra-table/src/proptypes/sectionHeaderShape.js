@@ -6,7 +6,7 @@ const sectionHeaderShape = PropTypes.shape({
    */
   key: PropTypes.string.isRequired,
   /**
-   * The id to apply to the header in order to provide structure for AT.
+   * The id to apply to the header in order to provide structure for assistive technologies.
    */
   id: PropTypes.string.isRequired,
   /**

@@ -17,7 +17,6 @@ const propTypes = {
   children: PropTypes.node.isRequired,
   /**
    * Indicates the desired divider style to apply to the row and its children.
-   * One of `'none'`, `'vertical'`, `'horizontal'`, `'both'`.
    */
   dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
   /**
