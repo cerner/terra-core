@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Fixed axe violation for keyboard accessibility.
 
 3.21.0 - (December 3, 2019)
 ------------------

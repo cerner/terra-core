@@ -12,6 +12,7 @@ const cx = classNames.bind(styles);
 
 const FixedSize = () => (
   <div id="fixed-target">
+    {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
     <div tabIndex="0" className={cx('responsive-element-wrapper')}>
       <ResponsiveElement
         tiny={<div>Tiny</div>}
