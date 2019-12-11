@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
 
+3.28.0 - (December 10, 2019)
+------------------
 ### Fixed
 * Set focus on button when clicked on Firefox, Safari, and IE.
 
