@@ -139,4 +139,19 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
 
     Terra.it.matchesScreenshot('max-selection-option', { selector: '#root' });
   });
+
+  describe('should be accessible with no results', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search'));
+
+    Terra.it.validatesElement();
+
+    it('should open the dropdown by clicking the toggle', () => {
+      browser.click('#search:last-child');
+    });
+    it('select should enter a free text entry', () => {
+      browser.keys(['T', 'a', 'g']);
+    });
+
+    Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+  });
 });
