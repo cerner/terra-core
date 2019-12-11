@@ -395,13 +395,13 @@ describe('Table', () => {
     expect(shallowComponent).toMatchSnapshot();
   });
 
-  it('should render a Table with check style readOnly and row style toggle', () => {
+  it('should render a Table with check style icon and row style toggle', () => {
     const shallowComponent = shallow(
       <Table
         summary="Test summary description"
         summaryId="test-id"
         numberOfColumns={1}
-        checkStyle="readOnly"
+        checkStyle="icon"
         rowStyle="toggle"
         headerData={{
           selectAllColumn: {

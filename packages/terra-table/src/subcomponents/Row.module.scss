@@ -53,7 +53,15 @@
       background-color: var(--terra-table-row-striped-hover-background-color, darken(#ebf6fd, 2%));
 
       &.is-selected {
-        background-color: var(--terra-table-row-striped-selected-hover-background-color, darken(#ebf6fd, 12%));
+        background-color: var(--terra-table-row-striped-selected-hover-background-color, darken(#ebf6fd, 12%)) !important;
+      }
+    }
+
+    &.is-selectable[data-row-show-focus='true']:focus {
+      background-color: var(--terra-table-row-striped-focus-background-color, #f4f4f4);
+
+      &.is-selected {
+        background-color: var(--terra-table-row-striped-selected-focus-background-color, darken(#ebf6fd, 7%));
       }
     }
   }
@@ -83,6 +91,7 @@
     }
 
     &[data-row-show-focus='true']:focus {
+      background-color: var(--terra-table-row-focus-background-color);
       outline: var(--terra-table-row-focus-outline, 2px solid #2a4b77);
       outline-offset: var(--terra-table-row-focus-outline-offset, -2px);
       z-index: 1;

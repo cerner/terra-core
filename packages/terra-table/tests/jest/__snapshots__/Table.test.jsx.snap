@@ -43,7 +43,7 @@ exports[`Table should render a Table header and footer nodes 1`] = `
 </ContentContainer>
 `;
 
-exports[`Table should render a Table with check style readOnly and row style toggle 1`] = `
+exports[`Table should render a Table with check style icon and row style toggle 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={2}
@@ -59,7 +59,7 @@ exports[`Table should render a Table with check style readOnly and row style tog
   >
     <HeaderCheckMarkCell
       isDisabled={false}
-      isHidden={false}
+      isHidden={true}
       isIndeterminate={false}
       isSelectable={false}
       isSelected={false}
@@ -89,8 +89,8 @@ exports[`Table should render a Table with check style readOnly and row style tog
     >
       <CheckMarkCell
         isDisabled={false}
-        isHidden={false}
-        isReadOnly={true}
+        isHidden={true}
+        isIcon={false}
         isSelectable={false}
         isSelected={false}
         label="check-toggle-label"
@@ -154,7 +154,7 @@ exports[`Table should render a Table with check style toggle 1`] = `
       <CheckMarkCell
         isDisabled={false}
         isHidden={false}
-        isReadOnly={false}
+        isIcon={false}
         isSelectable={true}
         isSelected={false}
         label="check-toggle-label"
@@ -218,7 +218,7 @@ exports[`Table should render a Table with check style toggle and row style discl
       <CheckMarkCell
         isDisabled={false}
         isHidden={false}
-        isReadOnly={false}
+        isIcon={false}
         isSelectable={true}
         isSelected={false}
         label="check-toggle-label"
@@ -497,7 +497,7 @@ exports[`Table should render a Table with row style toggle 1`] = `
       <CheckMarkCell
         isDisabled={false}
         isHidden={true}
-        isReadOnly={false}
+        isIcon={false}
         isSelectable={false}
         isSelected={false}
         label="check-toggle-label"

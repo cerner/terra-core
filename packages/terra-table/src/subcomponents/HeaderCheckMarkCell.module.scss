@@ -2,7 +2,7 @@
 
 :local {
   .header-cell {
-    border-right: var(--terra-table-header-check-cell-border-right, 1px solid #ccc);
+    border-right: var(--terra-table-header-checkmark-cell-border-right, 1px solid #ccc);
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
@@ -83,8 +83,8 @@
   }
 
   .is-disabled.is-selected {
-    background-color: var(--terra-table-header-checkmark-cell-cell-disabled-selected-background-color, rgba(42, 75, 119, 0.5));
-    background-image: var(--terra-table-checkmark-cell-disabled-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="rgba(255, 255, 255, 0.5)" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
+    background-color: var(--terra-table-header-checkmark-cell-disabled-selected-background-color, rgba(42, 75, 119, 0.5));
+    background-image: var(--terra-table-header-checkmark-cell-disabled-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="rgba(255, 255, 255, 0.5)" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
   }
 
   .is-disabled.is-selected.is-intermediate {
@@ -95,16 +95,16 @@
   // Padding Classes
   // -------------
   .container {
-    padding-left: var(--terra-table-header-check-cell-default-padding-left, 0.7142857143rem);
-    padding-right: var(--terra-table-header-check-cell-default-padding-right, 0.7142857143rem);
+    padding-left: var(--terra-table-header-checkmark-cell-default-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-header-checkmark-cell-default-padding-right, 0.7142857143rem);
   }
 
   [data-table-padding='standard'] .container {
-    padding-bottom: var(--terra-table-header-check-cell-standard-padding-bottom, 0.5rem);
+    padding-bottom: var(--terra-table-header-checkmark-cell-standard-padding-bottom, 0.5rem);
   }
 
   [data-table-padding='compact'] .container {
-    padding-bottom: var(--terra-table-header-check-cell-compact-padding-bottom, 0.35715rem);
+    padding-bottom: var(--terra-table-header-checkmark-cell-compact-padding-bottom, 0.35715rem);
   }
 
   .checkmark.is-hidden {

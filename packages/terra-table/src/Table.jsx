@@ -26,7 +26,7 @@ const propTypes = {
    */
   checkStyle: PropTypes.oneOf([
     'none',
-    'readOnly', // TODO: address renaming this, UX ask
+    'icon',
     'toggle',
   ]),
   /**
@@ -130,7 +130,7 @@ const createCheckCell = (rowData, rowStyle, checkStyle) => {
     cellLabel = rowData.toggleAction.toggleLabel;
   }
 
-  if (checkStyle === 'toggle' || checkStyle === 'readOnly') {
+  if (checkStyle === 'toggle' || checkStyle === 'icon') {
     return (
       <CheckMarkCell
         alignmentPadding={rowData.checkAlignment}
@@ -140,7 +140,7 @@ const createCheckCell = (rowData, rowStyle, checkStyle) => {
         isSelectable={checkStyle === 'toggle'}
         isSelected={cellActiveState}
         isDisabled={rowData.isDisabled}
-        isReadOnly={checkStyle === 'readOnly'}
+        isIcon={checkStyle === 'icon'}
       />
     );
   }
@@ -180,7 +180,7 @@ const createHeaderCheckCell = (columnData, rowStyle, checkStyle) => {
     cellDisabled = columnData.isDisabled;
   }
 
-  if (checkStyle === 'toggle' || checkStyle === 'readOnly') {
+  if (checkStyle === 'toggle' || checkStyle === 'icon') {
     return (
       <HeaderCheckMarkCell
         alignmentPadding={cellAlignment}

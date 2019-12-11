@@ -7,7 +7,7 @@ const HeaderCheckMarkCellExample = () => (
       summaryId="example-check-cell"
       summary="This table displaying a default check column."
       rowStyle="toggle"
-      checkStyle="readOnly"
+      checkStyle="icon"
       numberOfColumns={1}
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title' },

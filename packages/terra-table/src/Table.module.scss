@@ -2,7 +2,7 @@
   // Standard block display
   // ----------------------
   .table {
-    background-color: var(--terra-table-background-color, rgba(255, 255, 255, 0));
+    background-color: var(--terra-table-background-color, transparent);
     border-bottom: var(--terra-table-border-bottom, 1px solid #dedfe0);
     overflow: hidden;
   }

@@ -104,7 +104,7 @@ const RowExample = () => (
       numberOfColumns={1}
       paddingStyle="standard"
       rowStyle="toggle"
-      checkStyle="readOnly"
+      checkStyle="icon"
       sectionData={[
         {
           rows: [{

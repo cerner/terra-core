@@ -19,7 +19,7 @@ const propTypes = {
   /**
    * Whether or not the check mark cell should be read only.
    */
-  isReadOnly: PropTypes.bool,
+  isIcon: PropTypes.bool,
   /**
    * Whether or not the check mark cell should be visually hidden.
    */
@@ -79,7 +79,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isReadOnly: false,
+  isIcon: false,
   isHidden: false,
   isDisabled: false,
   isSelected: false,
@@ -88,7 +88,7 @@ const defaultProps = {
 
 const CheckMarkCell = ({
   alignmentPadding,
-  isReadOnly,
+  isIcon,
   isHidden,
   isDisabled,
   isSelected,
@@ -106,7 +106,7 @@ const CheckMarkCell = ({
 }) => {
   const attrSpread = { 'aria-selected': isSelected };
   const attrCheck = {};
-  if (isHidden || isReadOnly) {
+  if (isHidden || isIcon) {
     attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '-1';
   } else if (isSelectable) {

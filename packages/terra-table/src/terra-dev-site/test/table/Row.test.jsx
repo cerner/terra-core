@@ -97,7 +97,7 @@ const RowExample = () => (
       summary="This table displays check rows."
       numberOfColumns={1}
       rowStyle="toggle"
-      checkStyle="readOnly"
+      checkStyle="icon"
       sectionData={[
         {
           rows: [{
