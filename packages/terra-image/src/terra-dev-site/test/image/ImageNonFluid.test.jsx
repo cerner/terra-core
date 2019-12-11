@@ -10,15 +10,15 @@ const ImageNonFluid = () => (
   <div>
     <h2>Non Fluid Examples</h2>
     <p>Image width and height are smaller than container.</p>
-    <div id="smaller" className={cx('image-conatiner')}>
+    <div id="smaller" tabIndex="0" className={cx('image-container')}>
       <Image src={placeholder150x150} alt="rounded" variant="rounded" />
     </div>
     <p>Image width is larger than the container. Image height is smaller than the container.</p>
-    <div id="height-smaller" className={cx('image-conatiner-reduced-width')}>
+    <div id="height-smaller" tabIndex="0" className={cx('image-container-reduced-width')}>
       <Image src={placeholder150x150} alt="rounded" variant="rounded" />
     </div>
     <p>Image width is smaller than the container. Image height is larger than the container.</p>
-    <div id="width-smaller" className={cx('image-conatiner-reduced-height')}>
+    <div id="width-smaller" tabIndex="0" className={cx('image-container-reduced-height')}>
       <Image src={placeholder150x150} alt="rounded" variant="rounded" />
     </div>
   </div>

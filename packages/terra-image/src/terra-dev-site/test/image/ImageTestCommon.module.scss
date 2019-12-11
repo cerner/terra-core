@@ -1,21 +1,21 @@
 :local {
-  .image-conatiner,
-  .image-conatiner-reduced-width,
-  .image-conatiner-reduced-height {
+  .image-container,
+  .image-container-reduced-width,
+  .image-container-reduced-height {
     background-color: #ffe4c4;
   }
 
-  .image-conatiner {
+  .image-container {
     height: 200px;
     width: 200px;
   }
 
-  .image-conatiner-reduced-width {
+  .image-container-reduced-width {
     height: 200px;
     width: 100px;
   }
 
-  .image-conatiner-reduced-height {
+  .image-container-reduced-height {
     height: 100px;
     margin-bottom: 100px;
     width: 200px;
