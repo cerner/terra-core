@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable global-require, import/no-named-as-default */
 import loadIntl from './intlLoaders';
 import loadTranslations from './translationsLoaders';
 
@@ -6,15 +6,19 @@ const permitParams = (callback) => {
   if (typeof (callback) !== 'function') {
     throw new Error('Second argument must be function');
   }
-}
+};
 
 export default (locale, callback, scope) => {
   permitParams(callback);
-  
+
   if (!global.Intl) {
-    require('intl')  
+    require('intl');
+  }
+
+  if (global.IntlPolyfill) {
     loadIntl(locale);
   }
 
   loadTranslations(locale, callback, scope);
 };
+/* eslint-enable global-require, import/no-named-as-default */
