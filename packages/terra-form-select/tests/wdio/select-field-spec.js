@@ -68,7 +68,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
     Terra.it.validatesElement();
 
     it('should open the dropdown by clicking the toggle', () => {
-      browser.click('#select-field');
+      browser.click('[data-terra-select-combobox]');
     });
 
     Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -121,7 +121,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
     Terra.it.validatesElement();
 
     it('should open the dropdown by clicking the toggle', () => {
-      browser.click('#select-field');
+      browser.click('[data-terra-select-combobox]');
     });
 
     Terra.it.matchesScreenshot('open-dropdown', { selector: '#root' });
