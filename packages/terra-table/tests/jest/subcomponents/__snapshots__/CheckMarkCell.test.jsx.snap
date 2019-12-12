@@ -23,12 +23,12 @@ exports[`CheckMarkCell should render a CheckMarkCell 1`] = `
 </div>
 `;
 
-exports[`CheckMarkCell should render a CheckMarkCell as read only 1`] = `
+exports[`CheckMarkCell should render a CheckMarkCell as an icon 1`] = `
 <div
   aria-selected={false}
   className="cell"
-  isReadOnly={true}
   role="gridcell"
+  tabIndex="-1"
 >
   <VisuallyHiddenText
     aria-checked={false}

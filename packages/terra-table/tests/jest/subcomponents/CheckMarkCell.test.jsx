@@ -12,7 +12,7 @@ describe('CheckMarkCell', () => {
     expect(shallowComponent).toMatchSnapshot();
   });
 
-  it('should render a CheckMarkCell as read only', () => {
+  it('should render a CheckMarkCell as an icon', () => {
     const shallowComponent = shallow(
       <CheckMarkCell
         label="test text"

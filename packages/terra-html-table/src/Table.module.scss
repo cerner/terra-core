@@ -23,6 +23,7 @@
       border: 0;
       border-left: var(--terra-html-table-cell-border-left, 0);
       display: table-cell;
+      font-size: var(--terra-html-table-cell-font-size, 1rem);
       text-align: left;
       vertical-align: top;
 
@@ -95,8 +96,22 @@
     }
   }
 
-  // Header Cell, Row Cell
-  .padding-standard th,
+  // Header Cell
+  .padding-standard th {
+    padding-bottom: var(--terra-html-table-header-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-html-table-header-cell-standard-padding-left, 0.75rem);
+    padding-right: var(--terra-html-table-header-cell-standard-padding-right, 0.75rem);
+    padding-top: var(--terra-html-table-header-cell-standard-padding-top, 0.5rem);
+  }
+
+  .padding-compact th {
+    padding-bottom: var(--terra-html-table-header-cell-compact-padding-bottom, 0.25rem);
+    padding-left: var(--terra-html-table-header-cell-compact-padding-left, 0.75rem);
+    padding-right: var(--terra-html-table-header-cell-compact-padding-right, 0.75rem);
+    padding-top: var(--terra-html-table-header-cell-compact-padding-top, 0.25rem);
+  }
+
+  // Row Cell
   .padding-standard td {
     padding-bottom: var(--terra-html-table-cell-standard-padding-bottom, 0.5rem);
     padding-left: var(--terra-html-table-cell-standard-padding-left, 0.75rem);
@@ -104,8 +119,6 @@
     padding-top: var(--terra-html-table-cell-standard-padding-top, 0.5rem);
   }
 
-  // Header Cell, Row Cell
-  .padding-compact th,
   .padding-compact td {
     padding-bottom: var(--terra-html-table-cell-compact-padding-bottom, 0.25rem);
     padding-left: var(--terra-html-table-cell-compact-padding-left, 0.75rem);

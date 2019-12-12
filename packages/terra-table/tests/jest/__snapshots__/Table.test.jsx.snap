@@ -59,7 +59,7 @@ exports[`Table should render a Table with check style icon and row style toggle 
   >
     <HeaderCheckMarkCell
       isDisabled={false}
-      isHidden={true}
+      isHidden={false}
       isIndeterminate={false}
       isSelectable={false}
       isSelected={false}
@@ -89,8 +89,8 @@ exports[`Table should render a Table with check style icon and row style toggle 
     >
       <CheckMarkCell
         isDisabled={false}
-        isHidden={true}
-        isIcon={false}
+        isHidden={false}
+        isIcon={true}
         isSelectable={false}
         isSelected={false}
         label="check-toggle-label"
