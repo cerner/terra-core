@@ -19,8 +19,6 @@ import CompactPaddingTable from '../example/CompactPaddingTable';
 import CompactPaddingTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CompactPaddingTable';
 import StandardPaddingTable from '../example/StandardPaddingTable';
 import StandardPaddingTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StandardPaddingTable';
-import StripedTable from '../example/StripedTable';
-import StripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/StripedTable';
 import TableWithLongContent from '../example/TableWithLongContent';
 import TableWithLongContentSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/TableWithLongContent';
 import TableWithCustomCells from '../example/TableWithCustomCells';

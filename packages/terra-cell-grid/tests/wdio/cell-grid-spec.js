@@ -8,4 +8,9 @@ Terra.describeViewports('CellGrid', ['medium'], () => {
     before(() => browser.url('/#/raw/tests/terra-cell-grid/cell-grid/cell-grid'));
     Terra.it.validatesElement();
   });
+
+  describe('CellGridDivider Test', () => {
+    before(() => browser.url('/#/raw/tests/terra-cell-grid/cell-grid/cell-grid-divider'));
+    Terra.it.validatesElement();
+  });
 });

@@ -5,17 +5,18 @@
     margin-bottom: 0;
     overflow: hidden;
     position: relative;
-
-    > * {
-      border-right: var(--terra-cell-grid-child-border-right, 1px solid transparent);
-
-      &:last-of-type {
-        border-right: 0;
-      }
-    }
   }
 
   .divider-horizontal,
+  .divider-both {
+    border-top: var(--terra-cell-grid-divider-border-top, 1px solid #dedfe0);
+
+    &:last-of-type {
+      border-bottom: var(--terra-cell-grid-divider-border-bottom, 1px solid #dedfe0);
+    }
+  }
+
+  .divider-vertical,
   .divider-both {
     > * {
       border-right: var(--terra-cell-grid-divider-child-border-right, 1px solid #ccc);
@@ -23,15 +24,6 @@
       &:last-of-type {
         border-right: 0;
       }
-    }
-  }
-
-  .divider-vertical,
-  .divider-both {
-    border-top: var(--terra-cell-grid-divider-border-top, 1px solid #dedfe0);
-
-    &:last-of-type {
-      border-bottom: var(--terra-cell-grid-divider-border-bottom, 1px solid #dedfe0);
     }
   }
 

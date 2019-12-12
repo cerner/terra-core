@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table, {
   Header,
   HeaderCell,
@@ -8,7 +7,6 @@ import Table, {
   Cell,
   Row,
 } from 'terra-html-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 import classNames from 'classnames/bind';
 import styles from './TableWithCustomCells.module.scss';

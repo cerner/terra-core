@@ -33,7 +33,7 @@ it('should render a default table', () => {
 
 it('should render a table without zebra stripes', () => {
   const shallowComponent = shallow(
-    <Table isStriped={false}>
+    <Table disableStripes>
       <Header>{header}</Header>
       <Body>{rows}</Body>
     </Table>,
@@ -43,7 +43,27 @@ it('should render a table without zebra stripes', () => {
 
 it('should render a table without padding', () => {
   const shallowComponent = shallow(
-    <Table isPadded={false}>
+    <Table paddingStyle="none">
+      <Header>{header}</Header>
+      <Body>{rows}</Body>
+    </Table>,
+  );
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render a table with compact padding', () => {
+  const shallowComponent = shallow(
+    <Table paddingStyle="compact">
+      <Header>{header}</Header>
+      <Body>{rows}</Body>
+    </Table>,
+  );
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render a table with standard padding', () => {
+  const shallowComponent = shallow(
+    <Table paddingStyle="standard">
       <Header>{header}</Header>
       <Body>{rows}</Body>
     </Table>,

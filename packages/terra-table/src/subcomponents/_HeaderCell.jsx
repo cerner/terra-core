@@ -41,10 +41,12 @@ const propTypes = {
   isSortActive: PropTypes.bool,
   /**
    * Function callback associated to a pure cell click/action, potentially for selection, etc.
+   * Callback contains the javascript event and prop metadata, e.g. onCellAction(event, metaData)
    */
   onCellAction: PropTypes.func,
   /**
    * Function callback associated to the sort click/action.
+   * Callback contains the javascript event and prop metadata, e.g. onSortAction(event, metaData)
    */
   onSortAction: PropTypes.func,
   /**

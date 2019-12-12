@@ -8,7 +8,7 @@ import Table, {
 } from '../../../index';
 
 const SingleRowTable = () => (
-  <Table isStriped={false}>
+  <Table>
     <Header>
       <HeaderCell key="NAME">Name</HeaderCell>
       <HeaderCell key="ADDRESS">Address</HeaderCell>

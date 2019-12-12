@@ -13,7 +13,7 @@ const propTypes = {
   /**
    * Whether or not the rows should be zebra striped.
    */
-  isStriped: PropTypes.bool,
+  disableStripes: PropTypes.bool,
   /**
    * Indicates the desired divider styles to apply to a row and its children.
    * One of `'none'`, `'standard'`, `'compact'`.
@@ -22,19 +22,19 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isStriped: true,
+  disableStripes: false,
   paddingStyle: 'none',
 };
 
 const Table = ({
   children,
-  isStriped,
+  disableStripes,
   paddingStyle,
   ...customProps
 }) => {
   const tableClassNames = cx([
     'table',
-    { striped: isStriped },
+    { striped: !disableStripes },
     { 'padding-standard': paddingStyle === 'standard' },
     { 'padding-compact': paddingStyle === 'compact' },
   ]);

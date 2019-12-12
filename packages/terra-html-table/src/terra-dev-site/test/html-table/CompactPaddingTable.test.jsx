@@ -1,15 +1,14 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import Table, {
-  Body,
   Header,
   HeaderCell,
-  Row,
+  Body,
   Cell,
-} from '../../../index';
+  Row,
+} from 'terra-html-table';
 
-const TableWithSortingIndicator = () => (
-  <Table isStriped={false}>
+const CompactPaddingTable = () => (
+  <Table paddingStyle="compact">
     <Header>
       <HeaderCell key="NAME">Name</HeaderCell>
       <HeaderCell key="ADDRESS">Address</HeaderCell>
@@ -35,4 +34,4 @@ const TableWithSortingIndicator = () => (
   </Table>
 );
 
-export default TableWithSortingIndicator;
+export default CompactPaddingTable;

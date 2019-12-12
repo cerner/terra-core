@@ -8,7 +8,7 @@ import Table, {
 } from '../../../index';
 
 const StripedTable = () => (
-  <Table id="Table">
+  <Table>
     <Header>
       <HeaderCell key="NAME">Name</HeaderCell>
       <HeaderCell key="ADDRESS">Address</HeaderCell>

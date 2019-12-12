@@ -1,11 +1,6 @@
 Terra.describeViewports('HTML Table', ['medium'], () => {
-  describe('Non Striped Table', () => {
+  describe('No Striped', () => {
     before(() => browser.url('/#/raw/tests/terra-html-table/html-table/no-striped-table'));
-    Terra.it.validatesElement();
-  });
-
-  describe('Striped', () => {
-    before(() => browser.url('/#/raw/tests/terra-html-table/html-table/striped-table'));
     Terra.it.validatesElement();
   });
 
@@ -14,8 +9,13 @@ Terra.describeViewports('HTML Table', ['medium'], () => {
     Terra.it.validatesElement();
   });
 
-  describe('Sort Indicator', () => {
-    before(() => browser.url('/#/raw/tests/terra-html-table/html-table/table-with-sort-indicator'));
+  describe('Compact Padding', () => {
+    before(() => browser.url('/#/raw/tests/terra-html-table/html-table/compact-padding-table'));
+    Terra.it.validatesElement();
+  });
+
+  describe('Standard Padding', () => {
+    before(() => browser.url('/#/raw/tests/terra-html-table/html-table/standard-padding-table'));
     Terra.it.validatesElement();
   });
 

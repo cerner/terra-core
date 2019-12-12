@@ -1,5 +1,4 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table, {
   Header,
   HeaderCell,
@@ -7,7 +6,6 @@ import Table, {
   Cell,
   Row,
 } from 'terra-html-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const StandardPaddingTable = () => (
   <Table paddingStyle="standard">

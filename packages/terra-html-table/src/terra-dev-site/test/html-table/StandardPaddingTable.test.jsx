@@ -1,5 +1,4 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table, {
   Header,
   HeaderCell,
@@ -7,10 +6,9 @@ import Table, {
   Cell,
   Row,
 } from 'terra-html-table';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
-const StripedTable = () => (
-  <Table>
+const StandardPaddingTable = () => (
+  <Table paddingStyle="standard">
     <Header>
       <HeaderCell key="NAME">Name</HeaderCell>
       <HeaderCell key="ADDRESS">Address</HeaderCell>
@@ -36,4 +34,4 @@ const StripedTable = () => (
   </Table>
 );
 
-export default StripedTable;
+export default StandardPaddingTable;

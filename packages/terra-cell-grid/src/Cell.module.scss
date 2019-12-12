@@ -1,13 +1,8 @@
 :local {
   .cell {
-    border: 0;
     flex: 1 1 0;
     text-align: left;
     vertical-align: top;
     word-break: break-word;
-  
-    &:last-of-type {
-      border-right: 0;
-    }
   }
 }

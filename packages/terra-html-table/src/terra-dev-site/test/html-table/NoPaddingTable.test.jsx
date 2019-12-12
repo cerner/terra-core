@@ -1,5 +1,4 @@
 import React from 'react';
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 import Table, {
   Header,
   HeaderCell,
@@ -7,10 +6,9 @@ import Table, {
   Cell,
   Row,
 } from '../../../index';
-/* eslint-enable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
 
 const NoPaddingTable = () => (
-  <Table isPadded={false}>
+  <Table paddingStyle="none">
     <Header>
       <HeaderCell key="NAME">Name</HeaderCell>
       <HeaderCell key="ADDRESS">Address</HeaderCell>
