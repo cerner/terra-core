@@ -37,6 +37,7 @@
   --terra-button-focus-box-shadow-neutral: inset 0 3rem 1.5rem -2rem #f4f4f4, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
   --terra-button-font-weight-neutral: 400;
   --terra-button-hover-background-color-neutral: #b2b5b6;
+  --terra-button-hover-border-color-neutral: #6f7477;
   --terra-button-hover-color-neutral: #000;
 
   --terra-button-active-and-focus-background-color-emphasis: #26a2e5;
@@ -54,6 +55,7 @@
   --terra-button-focus-box-shadow-emphasis: inset 0 3rem 1.5rem -2rem #ebf6fd, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
   --terra-button-font-weight-emphasis: 400;
   --terra-button-hover-background-color-emphasis: #4cb2e9;
+  --terra-button-hover-border-color-emphasis: #6f7477;
   --terra-button-hover-color-emphasis: #000;
 
   --terra-button-active-and-focus-background-color-ghost: rgba(0, 0, 0, 0.2);
@@ -71,6 +73,7 @@
   --terra-button-focus-box-shadow-ghost: 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
   --terra-button-font-weight-ghost: 400;
   --terra-button-hover-background-color-ghost: rgba(0, 0, 0, 0.1);
+  --terra-button-hover-border-color-ghost: #6f7477;
   --terra-button-hover-color-ghost: #000;
     
   --terra-button-active-and-focus-background-color-de-emphasis: transparent;
@@ -88,6 +91,7 @@
   --terra-button-focus-box-shadow-de-emphasis: 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
   --terra-button-font-weight-de-emphasis: 400;
   --terra-button-hover-background-color-de-emphasis: transparent;
+  --terra-button-hover-border-color-de-emphasis: transparent;
   --terra-button-hover-color-de-emphasis: #003f61;
 
   --terra-button-active-and-focus-background-color-action: #26a2e5;
@@ -105,6 +109,7 @@
   --terra-button-focus-box-shadow-action: inset 0 3rem 1.5rem -2rem #ebf6fd, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
   --terra-button-font-weight-action: 400;
   --terra-button-hover-background-color-action: #4cb2e9;
+  --terra-button-hover-border-color-action: #6f7477;
   --terra-button-hover-color-action: #000;
 
   --terra-button-active-and-focus-background-color-utility: transparent;
@@ -122,5 +127,6 @@
   --terra-button-focus-box-shadow-utility: 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
   --terra-button-font-weight-utility: 400;
   --terra-button-hover-background-color-utility: transparent;
+  --terra-button-hover-border-color-utility: transparent;
   --terra-button-hover-color-utility: #004c76;
 }
