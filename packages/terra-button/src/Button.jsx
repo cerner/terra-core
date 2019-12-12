@@ -121,6 +121,7 @@ class Button extends React.Component {
     this.handleOnBlur = this.handleOnBlur.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.handleClick = this.handleClick.bind(this);
 
     this.shouldShowFocus = true;
   }
@@ -130,6 +131,19 @@ class Button extends React.Component {
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
+    }
+  }
+
+  handleClick(event) {
+    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
+    // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
+    // This will put focus on the button when clicked if it is not currently the active element.
+    if (document.activeElement !== event.currentTarget) {
+      event.currentTarget.focus();
+    }
+
+    if (this.props.onClick) {
+      this.props.onClick(event);
     }
   }
 
@@ -186,11 +200,16 @@ class Button extends React.Component {
     // Prevent button from showing focus styles when clicked
     this.shouldShowFocus = false;
     // Wait until after onFocus has been triggered on browsers where it will get triggered for click
-    setTimeout(() => { this.shouldShowFocus = true; });
+    setTimeout(() => { this.shouldShowFocus = true; }, 300);
 
     if (this.props.onMouseDown) {
       this.props.onMouseDown(event);
     }
+
+    // See https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus#Notes
+    // If you call HTMLElement.focus() from a mousedown event handler, you must call event.preventDefault() to keep the focus from leaving the HTMLElement.
+    // Otherwise, when you click on the button again, focus would leave the button and onBlur would get called causing the document.activeElement would no longer be the focused button.
+    event.preventDefault();
   }
 
   render() {
@@ -284,7 +303,7 @@ class Button extends React.Component {
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
         title={buttonTitle}
-        onClick={onClick}
+        onClick={this.handleClick}
         onMouseDown={this.handleMouseDown}
         onFocus={this.handleFocus}
         href={href}

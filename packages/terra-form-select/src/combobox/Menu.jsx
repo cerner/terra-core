@@ -206,7 +206,7 @@ class Menu extends React.Component {
 
     const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
 
-    if (this.menu !== null) {
+    if (this.menu !== null && this.state.active !== null) {
       this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
     }
 

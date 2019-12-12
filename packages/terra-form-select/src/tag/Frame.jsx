@@ -36,6 +36,11 @@ const propTypes = {
   dropdownAttrs: PropTypes.object,
   /**
    * @private
+   * The id of the input field.
+   */
+  inputId: PropTypes.string,
+  /**
+   * @private
    * The intl object to be injected for translations.
    */
   intl: intlShape.isRequired,
@@ -119,6 +124,7 @@ const defaultProps = {
   required: false,
   totalOptions: undefined,
   value: undefined,
+  inputId: undefined,
 };
 
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
@@ -195,7 +201,7 @@ class Frame extends React.Component {
   getDisplay(displayId, ariaDescribedBy) {
     const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required, value,
+      disabled, display, placeholder, required, value, inputId,
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
@@ -215,6 +221,7 @@ class Frame extends React.Component {
       type: 'text',
       className: cx('search-input', { 'is-hidden': isHidden }),
       required: required && !display.length ? true : undefined,
+      id: inputId,
       'aria-required': (required && !display.length),
     };
 
@@ -630,6 +637,7 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
+      inputId,
       isIncomplete,
       isTouchAccessible,
       isInvalid,
@@ -702,7 +710,7 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()}>
+        <div className={cx('display')}>
           {this.getDisplay(displayId, ariaDescribedBy)}
         </div>
         {this.renderToggleButton()}
