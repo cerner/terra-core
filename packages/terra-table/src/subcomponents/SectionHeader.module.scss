@@ -48,15 +48,19 @@
     }
 
     .section-content[data-row-show-focus='true']:focus {
+      background-color: var(--terra-table-section-header-focus-background-color, transparent);
       outline: var(--terra-table-section-header-focus-outline, 2px solid #2a4b77);
       outline-offset: var(--terra-table-section-header-focus-outline-offset, -2px);
       position: relative;
       z-index: 1;
     }
   
-    &:hover,
+    &:hover {
+      background-color: var(--terra-table-section-header-hover-background-color, #d0d1d2);
+    }
+
     &:active {
-      background-color: var(--terra-table-section-header-hover-active-background-color, #d0d1d2);
+      background-color: var(--terra-table-section-header-active-background-color, #d0d1d2);
     }
   }
 

@@ -153,20 +153,22 @@
   // SectionHeader
   --terra-table-section-header-background-color: #e8e9ea;
   --terra-table-section-header-border-top: 1px solid #dedfe0;
-  --terra-table-section-header-next-border-top-color: #b2b5b6;
-  --terra-table-section-header-content-padding-bottom: 0.5rem;
-  --terra-table-section-header-content-padding-left: 0.7142857143rem;
-  --terra-table-section-header-content-padding-right: 0.7142857143rem;
-  --terra-table-section-header-content-padding-top: 0.5rem;
+  --terra-table-section-header-next-border-top-color: #9b9fa1;
+  --terra-table-section-header-content-padding-bottom: 0.25rem;
+  --terra-table-section-header-content-padding-left: 0.83333rem;
+  --terra-table-section-header-content-padding-right: 0.83333rem;
+  --terra-table-section-header-content-padding-top: 0.25rem;
   --terra-table-section-header-title-color: #1c1f21;
   --terra-table-section-header-title-font-size: 1rem;
-  --terra-table-section-header-title-font-weight: bold;
-  --terra-table-section-header-title-line-height: 1.1428571429;
-  --terra-table-section-header-collapsible-padding-left: 1rem;
-  --terra-table-section-header-focus-outline: 2px solid #2a4b77;
-  --terra-table-section-header-focus-outline-offset: -2px;
-  --terra-table-section-header-hover-active-background-color: #d0d1d2;
-  --terra-table-section-header-start-padding-right: 0.7142857143rem;
+  --terra-table-section-header-title-font-weight: normal;
+  --terra-table-section-header-title-line-height: 1.41667;
+  --terra-table-section-header-collapsible-padding-left: 0.83333rem;
+  --terra-table-section-header-focus-outline: none;
+  --terra-table-section-header-focus-outline-offset: 0;
+  --terra-table-section-header-focus-background-color: transparent;
+  --terra-table-section-header-hover-background-color: #c8cacb;
+  --terra-table-section-header-active-background-color: #c8cacb;
+  --terra-table-section-header-start-padding-right: 0.25rem;
 
   @include terra-inline-svg-var('--terra-table-section-header-accordion-icon-background', '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>');
 }
