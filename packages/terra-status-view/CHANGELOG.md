@@ -3,11 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* replaced css grid with flex-box
 
 4.13.0 - (December 10, 2019)
 ------------------
 ### Changed
-* changed css grid styles to flex
 * Update jest test snapshot
 * `<div>` tag replaced with `<p>` in message and title section to suffice accessibility.
 
