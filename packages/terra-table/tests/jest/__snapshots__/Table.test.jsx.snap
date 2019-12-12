@@ -357,6 +357,41 @@ exports[`Table should render a Table with header with chevrons 1`] = `
 </div>
 `;
 
+exports[`Table should render a Table with indexes overridden 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={10}
+  className="table rounded"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={4}
+      dividerStyle="none"
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
 exports[`Table should render a Table with inners remove despite padding 1`] = `
 <div
   aria-describedby="test-id"

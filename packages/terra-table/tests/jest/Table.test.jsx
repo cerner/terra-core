@@ -461,4 +461,27 @@ describe('Table', () => {
     );
     expect(shallowComponent).toMatchSnapshot();
   });
+
+  it('should render a Table with indexes overridden', () => {
+    const shallowComponent = shallow(
+      <Table
+        summary="Test summary description"
+        summaryId="test-id"
+        numberOfColumns={1}
+        numberOfRows={10}
+        sectionData={[{
+          rows: [{
+            key: 'row-key',
+            index: 4,
+            cells: [{
+              key: 'child-cell-key',
+              id: 'child-cell-id',
+              children: 'content',
+            }],
+          }],
+        }]}
+      />,
+    );
+    expect(shallowComponent).toMatchSnapshot();
+  });
 });
