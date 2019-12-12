@@ -535,7 +535,6 @@ exports[`Table should render a Table with section header 1`] = `
       isCollapsed={false}
       isCollapsible={false}
       key="row-key"
-      level={2}
       numberOfColumns={1}
       title="row-title"
     />
@@ -546,37 +545,46 @@ exports[`Table should render a Table with section header 1`] = `
 exports[`Table should render a Table with section header and rows 1`] = `
 <div
   aria-describedby="test-id"
-  aria-rowcount={0}
+  aria-rowcount={2}
   className="table rounded"
   role="grid"
-  sectinData={
-    Array [
-      Object {
-        "rows": Array [
-          Object {
-            "cells": Array [
-              Object {
-                "children": "content",
-                "id": "child-cell-id",
-                "key": "child-cell-key",
-              },
-            ],
-            "key": "row-key",
-          },
-        ],
-        "sectionHeader": Object {
-          "id": "row-id",
-          "key": "row-key",
-          "title": "row-title",
-        },
-      },
-    ]
-  }
 >
   <VisuallyHiddenText
     id="test-id"
     text="Test summary description"
   />
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Section
+      aria-rowindex={1}
+      id="row-id"
+      isCollapsed={false}
+      isCollapsible={false}
+      key="row-key"
+      numberOfColumns={1}
+      title="row-title"
+    >
+      <Row
+        aria-rowindex={2}
+        dividerStyle="none"
+        isDisabled={false}
+        isSelectable={false}
+        isSelected={false}
+        isStriped={false}
+        key="row-key"
+      >
+        <Cell
+          headers="row-id"
+          key="child-cell-key"
+          removeInner={false}
+        >
+          content
+        </Cell>
+      </Row>
+    </Section>
+  </div>
 </div>
 `;
 

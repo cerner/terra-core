@@ -238,7 +238,7 @@ describe('Table', () => {
         summary="Test summary description"
         summaryId="test-id"
         numberOfColumns={1}
-        sectinData={[{
+        sectionData={[{
           sectionHeader: {
             key: 'row-key',
             id: 'row-id',

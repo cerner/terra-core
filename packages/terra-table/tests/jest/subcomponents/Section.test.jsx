@@ -12,11 +12,6 @@ it('should render with no items', () => {
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render with level', () => {
-  const shallowComponent = shallow(<Section title="test" level={3} numberOfColumns={1} />);
-  expect(shallowComponent).toMatchSnapshot();
-});
-
 it('should render with isCollapsed', () => {
   const shallowComponent = shallow(<Section title="test" isCollapsed numberOfColumns={1} />);
   expect(shallowComponent).toMatchSnapshot();

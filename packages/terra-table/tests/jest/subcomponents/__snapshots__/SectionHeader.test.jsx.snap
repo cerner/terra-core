@@ -115,23 +115,3 @@ exports[`should render with isCollapsible 1`] = `
   </div>
 </div>
 `;
-
-exports[`should render with level 1`] = `
-<div
-  className="section-header"
-  role="row"
->
-  <div
-    className="section-content"
-    colSpan={1}
-    headers=""
-    role="columnheader"
-  >
-    <span
-      className="title"
-    >
-      test
-    </span>
-  </div>
-</div>
-`;

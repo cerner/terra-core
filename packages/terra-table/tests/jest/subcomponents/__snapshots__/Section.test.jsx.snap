@@ -5,7 +5,6 @@ exports[`should render with callback functions 1`] = `
   <SectionHeader
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
     numberOfColumns={1}
     onSelect={[MockFunction]}
     refCallback={[MockFunction]}
@@ -19,7 +18,6 @@ exports[`should render with content 1`] = `
   <SectionHeader
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
     numberOfColumns={1}
     title="test"
   />
@@ -32,7 +30,6 @@ exports[`should render with isCollapsed 1`] = `
   <SectionHeader
     isCollapsed={true}
     isCollapsible={false}
-    level={2}
     numberOfColumns={1}
     title="test"
   />
@@ -44,19 +41,6 @@ exports[`should render with isCollapsible 1`] = `
   <SectionHeader
     isCollapsed={false}
     isCollapsible={true}
-    level={2}
-    numberOfColumns={1}
-    title="test"
-  />
-</Fragment>
-`;
-
-exports[`should render with level 1`] = `
-<Fragment>
-  <SectionHeader
-    isCollapsed={false}
-    isCollapsible={false}
-    level={3}
     numberOfColumns={1}
     title="test"
   />
@@ -68,7 +52,6 @@ exports[`should render with no items 1`] = `
   <SectionHeader
     isCollapsed={false}
     isCollapsible={false}
-    level={2}
     numberOfColumns={1}
     title="test"
   />

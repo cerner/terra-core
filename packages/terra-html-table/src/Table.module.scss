@@ -4,6 +4,7 @@
     background-color: var(--terra-html-table-background-color, transparent);
     border: var(--terra-html-table-border, 0);
     border-collapse: collapse;
+    border-radius: var(--terra-html-table-border-radius, 3px);
     border-spacing: 0;
     max-width: 100%;
     width: 100%;
@@ -22,6 +23,7 @@
     td {
       border: 0;
       border-left: var(--terra-html-table-cell-border-left, 0);
+      color: var(--terra-html-table-cell-color, #1c1f21);
       display: table-cell;
       font-size: var(--terra-html-table-cell-font-size, 1rem);
       text-align: left;
@@ -56,6 +58,7 @@
     // Header
     thead {
       background-color: var(--terra-html-table-header-background-color, #dedfe0);
+      box-shadow: var(--terra-html-table-header-box-shadow, 0 4px 4px -4px rgba(134, 138, 140, 0.75), inset 0 0 0 1px #fff);
       display: table-header-group;
 
       // Header Row
@@ -79,6 +82,7 @@
 
       // Row
       tr {
+        background-color: var(--terra-html-table-row-background-color, transparent);
         border-top: var(--terra-html-table-row-border-top, 1px solid #c8cacb);
 
         &:last-of-type {

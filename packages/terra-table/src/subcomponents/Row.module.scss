@@ -94,18 +94,18 @@
 
     &:active,
     &:hover {
-      border-color: var(--terra-table-row-hover-active-border-color, #ccc);
+      border-color: var(--terra-table-row-active-hover-border-color, #ccc);
 
       &:last-of-type {
-        border-bottom-color: var(--terra-table-row-hover-active-border-bottom-color, #ccc);
+        border-bottom-color: var(--terra-table-row-active-hover-border-bottom-color, #ccc);
       }
 
       > * {
-        border-bottom-color: var(--terra-table-row-hover-active-child-border-color, #ccc);
+        border-bottom-color: var(--terra-table-row-active-hover-child-border-bottom-color, #ccc);
       }
 
       + .row {
-        border-top-color: var(--terra-table-row-hover-active-top-border-color, #ccc);
+        border-top-color: var(--terra-table-row-active-hover-border-top-color, #ccc);
       }
     }
 

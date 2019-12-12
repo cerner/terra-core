@@ -28,10 +28,6 @@ const propTypes = {
    */
   isCollapsible: PropTypes.bool,
   /**
-   * Optionally sets the heading level.
-   */
-  level: PropTypes.oneOf([2, 3, 4, 5, 6]),
-  /**
    * @private The associated metaData to be provided in the onSelect callback.
    */
   // eslint-disable-next-line react/forbid-prop-types
@@ -74,13 +70,11 @@ const propTypes = {
 const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
-  level: 2,
 };
 
 const SectionHeader = ({
   isCollapsed,
   isCollapsible,
-  level,
   metaData,
   numberOfColumns,
   onBlur,

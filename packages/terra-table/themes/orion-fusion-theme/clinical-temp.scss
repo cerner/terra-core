@@ -7,7 +7,7 @@
   --terra-table-body-background-color: transparent;
   --terra-table-header-background-color: rgba(89, 159, 253, 0.05);
   --terra-table-header-border-bottom: 1px solid #3a67a4;
-  --terra-table-header-box-shadow: 0 2px 7px 1px  rgba(17, 22, 25, 0.05), inset 0 0 0 1px #fff;
+  --terra-table-header-box-shadow: 0 2px 7px 1px  rgba(17, 22, 25, 0.05);
   --terra-table-border: 1px solid #dedfe0;
   --terra-table-border-radius: 3px;
 
@@ -145,10 +145,10 @@
   --terra-table-row-focus-outline-offset: -2px;
   --terra-table-row-selected-focus-background-color: #fff;
   --terra-table-row-selected-hover-background-color: #cbe7fa;
-  --terra-table-row-hover-active-border-color: #3a67a4;
-  --terra-table-row-hover-active-border-bottom-color: #3a67a4;
-  --terra-table-row-hover-active-child-border-color: #3a67a4;
-  --terra-table-row-hover-active-top-border-color: #3a67a4;
+  --terra-table-row-active-hover-border-color: #3a67a4;
+  --terra-table-row-active-hover-border-bottom-color: #3a67a4;
+  --terra-table-row-active-hover-child-border-bottom-color: #3a67a4;
+  --terra-table-row-active-hover-border-top-color: #3a67a4;
 
   // SectionHeader
   --terra-table-section-header-background-color: rgba(89, 159, 253, 0.1);

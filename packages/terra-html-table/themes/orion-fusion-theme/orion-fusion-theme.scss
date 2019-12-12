@@ -2,8 +2,8 @@
   // Table
   --terra-html-table-background-color: transparent;
   --terra-html-table-border: 0;
+  --terra-html-table-border-radius: 0;
   --terra-html-table-body-background-color: transparent;
-
 
   // Header Cell
   --terra-html-table-header-cell-color: #64696c;
@@ -15,15 +15,17 @@
   
   // Header
   --terra-html-table-header-background-color: #f4f4f4;
+  --terra-html-table-header-box-shadow: none;
   --terra-html-table-header-row-border-bottom: 2px solid #1c1f21;
   --terra-html-table-header-row-border-top: 1px solid #c9cbcc;
-
+  
   // Footer
   --terra-html-table-footer-row-border-bottom: 1px solid #c8cacb;
   --terra-html-table-footer-row-border-top: 0;
   
   // Cell
   --terra-html-table-cell-border-left: 0;
+  --terra-html-table-cell-color: #1c1f21;
   --terra-html-table-cell-font-size: 0.857142857rem;
   --terra-html-table-first-cell-border-left: 1px solid #c9cbcc;
   --terra-html-table-last-cell-border-right: 1px solid #c9cbcc;
@@ -51,5 +53,6 @@
   // Row
   --terra-html-table-row-border-top: 0;
   --terra-html-table-last-row-border-bottom: 1px solid #c9cbcc;
+  --terra-html-table-row-background-color: transparent;
   --terra-html-table-row-striped-background-color: #f4f4f4;
 }
