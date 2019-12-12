@@ -22,8 +22,8 @@ const StaticWidthTable = () => (
     numberOfColumns={4}
     paddingStyle="standard"
     columnWidths={[
-      { static: { value: 80, unit: 'px' } },
-      { static: { value: 55, unit: 'px' } },
+      { static: { value: 60, unit: 'px' } },
+      { static: { value: 45, unit: 'px' } },
       { static: { value: 5, unit: 'rem' } },
       { static: { value: 120, unit: 'px' } },
     ]}

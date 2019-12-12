@@ -58,10 +58,11 @@
     }
 
     &:active {
-      background-color: #fff;
+      background-color: var(--terra-table-header-cell-active-background-color, #fff);
     }
 
     &[data-header-show-focus='true']:focus {
+      background-color: var(--terra-table-header-cell-focus-background-color);
       outline: var(--terra-table-header-cell-focus-outline, 2px solid #2a4b77);
       outline-offset: var(--terra-table-header-cell-focus-outline-offset, -2px);
       z-index: 1;

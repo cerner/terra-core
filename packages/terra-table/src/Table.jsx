@@ -227,7 +227,7 @@ const createRow = (tableData, rowData, rowIndex, sectionId) => {
   } else if (tableData.rowStyle === 'toggle' && rowData.toggleAction) {
     rowMetaData = rowData.toggleAction.metaData;
     rowOnAction = rowData.toggleAction.onToggle;
-    rowActiveState = rowData.toggleAction.isToggled;
+    rowActiveState = tableData.checkStyle !== 'icon' && rowData.toggleAction.isToggled;
   }
 
   return (
