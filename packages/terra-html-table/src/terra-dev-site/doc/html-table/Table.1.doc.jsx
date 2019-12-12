@@ -37,11 +37,6 @@ const DocPage = () => (
         source: NoStripedTableSrc,
       },
       {
-        title: 'Table with zebra stripes',
-        example: <StripedTable />,
-        source: StripedTableSrc,
-      },
-      {
         title: 'Table with compact padding',
         example: <CompactPaddingTable />,
         source: CompactPaddingTableSrc,
