@@ -72,7 +72,7 @@ const propTypes = {
   paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
   /**
    * The interaction styling to apply to the row.
-   * `'toggle'` relates to toggling the components state as a means of input. `'disclose'` relates to the presentation or disclosure of another component.
+   * `'toggle'` relates to the toggling of state as a means of input. `'disclose'` relates to the presentation or disclosure of another component.
    * Both variants can ultimately display as "selected", but the interaction and structure are different for accessibility.
    */
   rowStyle: PropTypes.oneOf([
@@ -233,6 +233,10 @@ const createRow = (tableData, rowData, rowIndex, sectionId) => {
     rowActiveState = rowData.discloseAction.isDisclosed; // Disclosure will show row selection, but only the link will show to a screen reader as current.
     primaryIndex = rowData.discloseAction.discloseCellIndex; // The index of the cell that will be converted to a link for disclosure.
     primaryData = { label: rowData.discloseAction.discloseLabel, isCurrent: rowData.discloseAction.isDisclosed };
+  } else if (tableData.checkStyle === 'toggle' && rowData.toggleAction) {
+    // If check style is present the row should also be an actionable item, but only trigger the check mark selection state.
+    rowMetaData = rowData.toggleAction.metaData;
+    rowOnAction = rowData.toggleAction.onToggle;
   } else if (tableData.rowStyle === 'toggle' && rowData.toggleAction) {
     rowMetaData = rowData.toggleAction.metaData;
     rowOnAction = rowData.toggleAction.onToggle;
