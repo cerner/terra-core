@@ -72,6 +72,8 @@ const propTypes = {
   paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
   /**
    * The interaction styling to apply to the row.
+   * `'toggle'` relates to toggling the components state as a means of input. `'disclose'` relates to the presentation or disclosure of another component.
+   * Both variants can ultimately display as "selected", but the interaction and structure are different for accessibility.
    */
   rowStyle: PropTypes.oneOf([
     'none',
