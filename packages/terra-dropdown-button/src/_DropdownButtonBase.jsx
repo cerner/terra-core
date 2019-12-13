@@ -43,6 +43,10 @@ const propTypes = {
    * Callback for reference of the dropdown button
    */
   buttonRef: PropTypes.func,
+  /**
+   * Ref callback for the dropdown list DOM element.
+   */
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
@@ -81,6 +85,7 @@ class DropdownButtonBase extends React.Component {
       isDisabled,
       isKeyboardEvent,
       buttonRef,
+      refCallback,
       ...customProps
     } = this.props;
 
@@ -111,6 +116,7 @@ class DropdownButtonBase extends React.Component {
           width={calcWidth}
           isKeyboardEvent={isKeyboardEvent}
           buttonRef={buttonRef}
+          refCallback={refCallback}
         >
           {items}
         </Dropdown>

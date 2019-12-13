@@ -34,10 +34,14 @@ const propTypes = {
    * Callback for reference of the dropdown button
    */
   buttonRef: PropTypes.func,
+  /**
+   * Ref callback for the dropdown list DOM element.
+   */
+  refCallback: PropTypes.func,
 };
 
 const Dropdown = ({
-  requestClose, isOpen, targetRef, children, width, isKeyboardEvent, buttonRef,
+  requestClose, isOpen, targetRef, children, width, isKeyboardEvent, buttonRef, refCallback,
 }) => (
   <Hookshot
     isOpen={isOpen}
@@ -55,6 +59,7 @@ const Dropdown = ({
         <DropdownList
           requestClose={requestClose}
           width={width}
+          refCallback={refCallback}
         >
           {children}
         </DropdownList>

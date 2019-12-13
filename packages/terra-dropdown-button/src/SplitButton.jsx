@@ -74,6 +74,7 @@ class SplitButton extends React.Component {
     super(props);
 
     this.handleDropdownButtonClick = this.handleDropdownButtonClick.bind(this);
+    this.handlePrimaryButtonClick = this.handlePrimaryButtonClick.bind(this);
     this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
     this.handlePrimaryKeyDown = this.handlePrimaryKeyDown.bind(this);
     this.handlePrimaryKeyUp = this.handlePrimaryKeyUp.bind(this);
@@ -81,10 +82,15 @@ class SplitButton extends React.Component {
     this.handleCaretKeyUp = this.handleCaretKeyUp.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
+    this.setListNode = this.setListNode.bind(this);
 
     this.state = {
       isOpen: false, caretIsActive: false, primaryIsActive: false, isKeyboardEvent: false,
     };
+  }
+
+  setListNode(element) {
+    this.dropdownList = element;
   }
 
   setButtonNode(node) {
@@ -100,6 +106,13 @@ class SplitButton extends React.Component {
       this.setState({ isKeyboardEvent: false });
     }
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+  }
+
+  handlePrimaryButtonClick(event) {
+    this.props.onSelect(event, this.props.metaData);
+    this.handleDropdownRequestClose();
+    event.stopPropagation();
+    event.currentTarget.focus();
   }
 
   handleDropdownRequestClose(callback) {
@@ -126,6 +139,15 @@ class SplitButton extends React.Component {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ caretIsActive: true });
       this.setState({ isKeyboardEvent: true });
+    } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.isKeyboardEvent) {
+      // puts focus on first list element on down arrow key press when dropdown is opened by mouse click
+      // the div inside the li is what is actually focusable so need to go 2 layers down
+      this.dropdownList.childNodes[0].childNodes[0].focus();
+    } else if (event.keyCode === KeyCode.KEY_UP && this.state.isOpen && !this.state.isKeyboardEvent) {
+      // puts focus on last list element on up arrow key press when dropdown is opened by mouse click
+      // the div inside the li is what is actually focusable so need to go 2 layers down
+      const lastItemIndex = (this.dropdownList.childNodes.length - 1);
+      this.dropdownList.childNodes[lastItemIndex].childNodes[0].focus();
     }
   }
 
@@ -188,15 +210,12 @@ class SplitButton extends React.Component {
         isDisabled={isDisabled}
         isKeyboardEvent={isKeyboardEvent}
         buttonRef={this.getButtonNode}
+        refCallback={this.setListNode}
       >
         <button
           type="button"
           className={primaryClassnames}
-          onClick={(event) => {
-            onSelect(event, metaData);
-            this.handleDropdownRequestClose();
-            event.stopPropagation();
-          }}
+          onClick={this.handlePrimaryButtonClick}
           onKeyDown={this.handlePrimaryKeyDown}
           onKeyUp={this.handlePrimaryKeyUp}
           disabled={isDisabled}

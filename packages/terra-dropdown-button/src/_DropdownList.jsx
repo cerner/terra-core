@@ -21,6 +21,10 @@ const propTypes = {
    * Width to set the dropdown to. Used when `isBlock` is true. Unset means to autosize.
    */
   width: PropTypes.string,
+  /**
+   * Ref callback for the dropdown list DOM element.
+   */
+  refCallback: PropTypes.func,
 };
 
 class DropdownList extends React.Component {
@@ -150,12 +154,21 @@ class DropdownList extends React.Component {
 
   /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
   render() {
+    const {
+      width,
+      refCallback,
+    } = this.props;
     return (
       <ul
         className={cx('dropdown-list')}
         // eslint-disable-next-line react/forbid-dom-props
-        style={{ width: this.props.width }}
-        ref={(ref) => { this.listRef = ref; }}
+        style={{ width }}
+        ref={(ref) => {
+          if (refCallback) {
+            refCallback(ref);
+          }
+          this.listRef = ref;
+        }}
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}

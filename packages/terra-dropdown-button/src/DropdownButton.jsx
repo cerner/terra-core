@@ -59,7 +59,12 @@ class DropdownButton extends React.Component {
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
+    this.setListNode = this.setListNode.bind(this);
     this.state = { isOpen: false, isActive: false, isKeyboardEvent: false };
+  }
+
+  setListNode(element) {
+    this.dropdownList = element;
   }
 
   setButtonNode(node) {
@@ -89,6 +94,15 @@ class DropdownButton extends React.Component {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ isActive: true });
       this.setState({ isKeyboardEvent: true });
+    } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.isKeyboardEvent) {
+      // puts focus on first list element on down arrow key press when dropdown is opened by mouse click
+      // the div inside the li is what is actually focusable so need to go 2 layers down
+      this.dropdownList.childNodes[0].childNodes[0].focus();
+    } else if (event.keyCode === KeyCode.KEY_UP && this.state.isOpen && !this.state.isKeyboardEvent) {
+      // puts focus on last list element on up arrow key press when dropdown is opened by mouse click
+      // the div inside the li is what is actually focusable so need to go 2 layers down
+      const lastItemIndex = this.dropdownList.childNodes.length - 1;
+      this.dropdownList.childNodes[lastItemIndex].childNodes[0].focus();
     }
   }
 
@@ -134,6 +148,7 @@ class DropdownButton extends React.Component {
         requestClose={this.handleDropdownRequestClose}
         isKeyboardEvent={isKeyboardEvent}
         buttonRef={this.getButtonNode}
+        refCallback={this.setListNode}
       >
         <button
           type="button"
