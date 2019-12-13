@@ -75,9 +75,9 @@ const IconAll = () => (
     <Icon.IconDischargeCompleteLowLight className={cx(['icon'])} />
     <Icon.IconDischargeOverDue className={cx(['icon'])} />
     <Icon.IconDischargeOverDueLowLight className={cx(['icon'])} />
-    <Icon.IconDoNotDisturb className={cx(['icon'])} />
     <Icon.IconDocumentPlus className={cx(['icon'])} />
     <Icon.IconDocuments className={cx(['icon'])} />
+    <Icon.IconDoNotDisturb className={cx(['icon'])} />
     <Icon.IconDoorOpen className={cx(['icon'])} />
     <Icon.IconDoubleChevronLeft className={cx(['icon'])} />
     <Icon.IconDoubleChevronRight className={cx(['icon'])} />
@@ -88,9 +88,11 @@ const IconAll = () => (
     <Icon.IconDue className={cx(['icon'])} />
     <Icon.IconDueSoon className={cx(['icon'])} />
     <Icon.IconDueSoonLowLight className={cx(['icon'])} />
+    <Icon.IconEcRep className={cx(['icon'])} />
     <Icon.IconEdit className={cx(['icon'])} />
     <Icon.IconEllipses className={cx(['icon'])} />
     <Icon.IconEnvelope className={cx(['icon'])} />
+    <Icon.IconEnvelopeFill className={cx(['icon'])} />
     <Icon.IconError className={cx(['icon'])} />
     <Icon.IconErrorDark className={cx(['icon'])} />
     <Icon.IconErrorLowLight className={cx(['icon'])} />
@@ -103,7 +105,9 @@ const IconAll = () => (
     <Icon.IconFeatured className={cx(['icon'])} />
     <Icon.IconFeaturedOff className={cx(['icon'])} />
     <Icon.IconFeaturedOutline className={cx(['icon'])} />
+    <Icon.IconFeaturedOutlineYellow className={cx(['icon'])} />
     <Icon.IconFirst className={cx(['icon'])} />
+    <Icon.IconFitHeight className={cx(['icon'])} />
     <Icon.IconFitScale className={cx(['icon'])} />
     <Icon.IconFitWidth className={cx(['icon'])} />
     <Icon.IconFlag className={cx(['icon'])} />
@@ -129,7 +133,6 @@ const IconAll = () => (
     <Icon.IconHold className={cx(['icon'])} />
     <Icon.IconHospital className={cx(['icon'])} />
     <Icon.IconHouse className={cx(['icon'])} />
-    <Icon.IconIPass className={cx(['icon'])} />
     <Icon.IconImage className={cx(['icon'])} />
     <Icon.IconImplant className={cx(['icon'])} />
     <Icon.IconIncomingCall className={cx(['icon'])} />
@@ -140,6 +143,7 @@ const IconAll = () => (
     <Icon.IconInformationInverse className={cx(['icon', 'icon-inverse'])} />
     <Icon.IconInformationInverseLowLight className={cx(['icon'])} />
     <Icon.IconInformationLowLight className={cx(['icon'])} />
+    <Icon.IconIPass className={cx(['icon'])} />
     <Icon.IconItalicI className={cx(['icon'])} />
     <Icon.IconKnurling className={cx(['icon'])} />
     <Icon.IconLast className={cx(['icon'])} />
@@ -148,6 +152,7 @@ const IconAll = () => (
     <Icon.IconLightbulb className={cx(['icon'])} />
     <Icon.IconLink className={cx(['icon'])} />
     <Icon.IconList className={cx(['icon'])} />
+    <Icon.IconLocationPin className={cx(['icon'])} />
     <Icon.IconLookback className={cx(['icon'])} />
     <Icon.IconLow className={cx(['icon'])} />
     <Icon.IconLowLowLight className={cx(['icon'])} />
@@ -171,11 +176,12 @@ const IconAll = () => (
     <Icon.IconNoRisk className={cx(['icon'])} />
     <Icon.IconNoRiskLowLight className={cx(['icon'])} />
     <Icon.IconNoSignal className={cx(['icon'])} />
-    <Icon.IconNotMet className={cx(['icon'])} />
     <Icon.IconNotification className={cx(['icon'])} />
     <Icon.IconNotificationDisabled className={cx(['icon'])} />
     <Icon.IconNotificationOff className={cx(['icon'])} />
+    <Icon.IconNotMet className={cx(['icon'])} />
     <Icon.IconOutgoingCall className={cx(['icon'])} />
+    <Icon.IconOutOfNetwork className={cx(['icon'])} />
     <Icon.IconOverDue className={cx(['icon'])} />
     <Icon.IconOverDueLowLight className={cx(['icon'])} />
     <Icon.IconPadlock className={cx(['icon'])} />
@@ -187,6 +193,7 @@ const IconAll = () => (
     <Icon.IconPause className={cx(['icon'])} />
     <Icon.IconPending className={cx(['icon'])} />
     <Icon.IconPerson className={cx(['icon'])} />
+    <Icon.IconPersonDoor className={cx(['icon'])} />
     <Icon.IconPersonHospital className={cx(['icon'])} />
     <Icon.IconPersonnelPerson className={cx(['icon'])} />
     <Icon.IconPharmacyReject className={cx(['icon'])} />
@@ -198,6 +205,7 @@ const IconAll = () => (
     <Icon.IconPinDiagonal className={cx(['icon'])} />
     <Icon.IconPinDown className={cx(['icon'])} />
     <Icon.IconPlusSymbol className={cx(['icon'])} />
+    <Icon.IconPlusSymbolLight className={cx(['icon'])} />
     <Icon.IconPrevious className={cx(['icon'])} />
     <Icon.IconPrinter className={cx(['icon'])} />
     <Icon.IconProjects className={cx(['icon'])} />
@@ -209,6 +217,7 @@ const IconAll = () => (
     <Icon.IconRecurringEvent className={cx(['icon'])} />
     <Icon.IconRedo className={cx(['icon'])} />
     <Icon.IconRefresh className={cx(['icon'])} />
+    <Icon.IconRefusedSlot className={cx(['icon'])} />
     <Icon.IconReload className={cx(['icon'])} />
     <Icon.IconReply className={cx(['icon'])} />
     <Icon.IconReplyAll className={cx(['icon'])} />
@@ -231,6 +240,7 @@ const IconAll = () => (
     <Icon.IconSortDescending className={cx(['icon'])} />
     <Icon.IconSpinner className={cx(['icon'])} isSpin={false} />
     <Icon.IconSquareSymbol className={cx(['icon'])} />
+    <Icon.IconSquareSymbolLight className={cx(['icon'])} />
     <Icon.IconSuccess className={cx(['icon'])} />
     <Icon.IconSuccessInverse className={cx(['icon', 'icon-inverse'])} />
     <Icon.IconSuccessInverseLowLight className={cx(['icon'])} />
@@ -239,13 +249,18 @@ const IconAll = () => (
     <Icon.IconTable className={cx(['icon'])} />
     <Icon.IconTag className={cx(['icon'])} />
     <Icon.IconTeardropSymbol className={cx(['icon'])} />
+    <Icon.IconTeardropSymbolLight className={cx(['icon'])} />
     <Icon.IconTeardropUpSymbol className={cx(['icon'])} />
+    <Icon.IconTeardropUpSymbolLight className={cx(['icon'])} />
     <Icon.IconThinDiamondSymbol className={cx(['icon'])} />
+    <Icon.IconThinDiamondSymbolLight className={cx(['icon'])} />
     <Icon.IconTile className={cx(['icon'])} />
     <Icon.IconTrash className={cx(['icon'])} />
     <Icon.IconTreemap className={cx(['icon'])} />
     <Icon.IconTriangleDownSymbol className={cx(['icon'])} />
+    <Icon.IconTriangleDownSymbolLight className={cx(['icon'])} />
     <Icon.IconTriangleSymbol className={cx(['icon'])} />
+    <Icon.IconTriangleSymbolLight className={cx(['icon'])} />
     <Icon.IconTrophy className={cx(['icon'])} />
     <Icon.IconUnavailable className={cx(['icon'])} />
     <Icon.IconUndo className={cx(['icon'])} />

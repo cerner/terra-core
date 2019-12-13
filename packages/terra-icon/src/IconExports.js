@@ -60,15 +60,16 @@ import IconDeviceCheckLowLight from './icon/IconDeviceCheckLowLight';
 import IconDiamond from './icon/IconDiamond';
 import IconDiamondLowLight from './icon/IconDiamondLowLight';
 import IconDiamondSymbol from './icon/IconDiamondSymbol';
+import IconDiamondSymbolLight from './icon/IconDiamondSymbolLight';
 import IconDischargeComingDue from './icon/IconDischargeComingDue';
 import IconDischargeComingDueLowLight from './icon/IconDischargeComingDueLowLight';
 import IconDischargeComplete from './icon/IconDischargeComplete';
 import IconDischargeCompleteLowLight from './icon/IconDischargeCompleteLowLight';
 import IconDischargeOverDue from './icon/IconDischargeOverDue';
 import IconDischargeOverDueLowLight from './icon/IconDischargeOverDueLowLight';
-import IconDoNotDisturb from './icon/IconDoNotDisturb';
 import IconDocumentPlus from './icon/IconDocumentPlus';
 import IconDocuments from './icon/IconDocuments';
+import IconDoNotDisturb from './icon/IconDoNotDisturb';
 import IconDoorOpen from './icon/IconDoorOpen';
 import IconDoubleChevronLeft from './icon/IconDoubleChevronLeft';
 import IconDoubleChevronRight from './icon/IconDoubleChevronRight';
@@ -79,6 +80,7 @@ import IconDrugDrugLowLight from './icon/IconDrugDrugLowLight';
 import IconDue from './icon/IconDue';
 import IconDueSoon from './icon/IconDueSoon';
 import IconDueSoonLowLight from './icon/IconDueSoonLowLight';
+import IconEcRep from './icon/IconEcRep';
 import IconEdit from './icon/IconEdit';
 import IconEllipses from './icon/IconEllipses';
 import IconEnvelope from './icon/IconEnvelope';
@@ -94,7 +96,9 @@ import IconExternalLink from './icon/IconExternalLink';
 import IconFeatured from './icon/IconFeatured';
 import IconFeaturedOff from './icon/IconFeaturedOff';
 import IconFeaturedOutline from './icon/IconFeaturedOutline';
+import IconFeaturedOutlineYellow from './icon/IconFeaturedOutlineYellow';
 import IconFirst from './icon/IconFirst';
+import IconFitHeight from './icon/IconFitHeight';
 import IconFitScale from './icon/IconFitScale';
 import IconFitWidth from './icon/IconFitWidth';
 import IconFlag from './icon/IconFlag';
@@ -120,7 +124,6 @@ import IconHighPriority from './icon/IconHighPriority';
 import IconHold from './icon/IconHold';
 import IconHospital from './icon/IconHospital';
 import IconHouse from './icon/IconHouse';
-import IconIPass from './icon/IconIPass';
 import IconImage from './icon/IconImage';
 import IconImplant from './icon/IconImplant';
 import IconIncomingCall from './icon/IconIncomingCall';
@@ -131,6 +134,7 @@ import IconInformation from './icon/IconInformation';
 import IconInformationInverse from './icon/IconInformationInverse';
 import IconInformationInverseLowLight from './icon/IconInformationInverseLowLight';
 import IconInformationLowLight from './icon/IconInformationLowLight';
+import IconIPass from './icon/IconIPass';
 import IconItalicI from './icon/IconItalicI';
 import IconKnurling from './icon/IconKnurling';
 import IconLast from './icon/IconLast';
@@ -139,6 +143,7 @@ import IconLeftPane from './icon/IconLeftPane';
 import IconLightbulb from './icon/IconLightbulb';
 import IconLink from './icon/IconLink';
 import IconList from './icon/IconList';
+import IconLocationPin from './icon/IconLocationPin';
 import IconLookback from './icon/IconLookback';
 import IconLow from './icon/IconLow';
 import IconLowLowLight from './icon/IconLowLowLight';
@@ -162,11 +167,12 @@ import IconNext from './icon/IconNext';
 import IconNoRisk from './icon/IconNoRisk';
 import IconNoRiskLowLight from './icon/IconNoRiskLowLight';
 import IconNoSignal from './icon/IconNoSignal';
-import IconNotMet from './icon/IconNotMet';
 import IconNotification from './icon/IconNotification';
 import IconNotificationDisabled from './icon/IconNotificationDisabled';
 import IconNotificationOff from './icon/IconNotificationOff';
+import IconNotMet from './icon/IconNotMet';
 import IconOutgoingCall from './icon/IconOutgoingCall';
+import IconOutOfNetwork from './icon/IconOutOfNetwork';
 import IconOverDue from './icon/IconOverDue';
 import IconOverDueLowLight from './icon/IconOverDueLowLight';
 import IconPadlock from './icon/IconPadlock';
@@ -178,17 +184,20 @@ import IconPartiallyMet from './icon/IconPartiallyMet';
 import IconPause from './icon/IconPause';
 import IconPending from './icon/IconPending';
 import IconPerson from './icon/IconPerson';
+import IconPersonDoor from './icon/IconPersonDoor';
 import IconPersonHospital from './icon/IconPersonHospital';
 import IconPersonnelPerson from './icon/IconPersonnelPerson';
 import IconPharmacyReject from './icon/IconPharmacyReject';
 import IconPharmacyRejectLowLight from './icon/IconPharmacyRejectLowLight';
 import IconPharmacyReview from './icon/IconPharmacyReview';
+import IconPharmacyVerification from './icon/IconPharmacyVerification';
 import IconPhone from './icon/IconPhone';
 import IconPhoneDown from './icon/IconPhoneDown';
 import IconPill from './icon/IconPill';
 import IconPinDiagonal from './icon/IconPinDiagonal';
 import IconPinDown from './icon/IconPinDown';
 import IconPlusSymbol from './icon/IconPlusSymbol';
+import IconPlusSymbolLight from './icon/IconPlusSymbolLight';
 import IconPrevious from './icon/IconPrevious';
 import IconPrinter from './icon/IconPrinter';
 import IconProjects from './icon/IconProjects';
@@ -197,9 +206,11 @@ import IconProvider from './icon/IconProvider';
 import IconQuestion from './icon/IconQuestion';
 import IconQuestionOutline from './icon/IconQuestionOutline';
 import IconRectangleSymbol from './icon/IconRectangleSymbol';
+import IconRectangleSymbolLight from './icon/IconRectangleSymbolLight';
 import IconRecurringEvent from './icon/IconRecurringEvent';
 import IconRedo from './icon/IconRedo';
 import IconRefresh from './icon/IconRefresh';
+import IconRefusedSlot from './icon/IconRefusedSlot';
 import IconReload from './icon/IconReload';
 import IconReply from './icon/IconReply';
 import IconReplyAll from './icon/IconReplyAll';
@@ -230,13 +241,18 @@ import IconSwap from './icon/IconSwap';
 import IconTable from './icon/IconTable';
 import IconTag from './icon/IconTag';
 import IconTeardropSymbol from './icon/IconTeardropSymbol';
+import IconTeardropSymbolLight from './icon/IconTeardropSymbolLight';
 import IconTeardropUpSymbol from './icon/IconTeardropUpSymbol';
+import IconTeardropUpSymbolLight from './icon/IconTeardropUpSymbolLight';
 import IconThinDiamondSymbol from './icon/IconThinDiamondSymbol';
+import IconThinDiamondSymbolLight from './icon/IconThinDiamondSymbolLight';
 import IconTile from './icon/IconTile';
 import IconTrash from './icon/IconTrash';
 import IconTreemap from './icon/IconTreemap';
 import IconTriangleDownSymbol from './icon/IconTriangleDownSymbol';
+import IconTriangleDownSymbolLight from './icon/IconTriangleDownSymbolLight';
 import IconTriangleSymbol from './icon/IconTriangleSymbol';
+import IconTriangleSymbolLight from './icon/IconTriangleSymbolLight';
 import IconTrophy from './icon/IconTrophy';
 import IconUnavailable from './icon/IconUnavailable';
 import IconUndo from './icon/IconUndo';
@@ -321,6 +337,7 @@ const Icons = {
   IconDiamond,
   IconDiamondLowLight,
   IconDiamondSymbol,
+  IconDiamondSymbolLight,
   IconDischargeComingDue,
   IconDischargeComingDueLowLight,
   IconDischargeComplete,
@@ -340,6 +357,7 @@ const Icons = {
   IconDue,
   IconDueSoon,
   IconDueSoonLowLight,
+  IconEcRep,
   IconEdit,
   IconEllipses,
   IconEnvelope,
@@ -355,7 +373,9 @@ const Icons = {
   IconFeatured,
   IconFeaturedOff,
   IconFeaturedOutline,
+  IconFeaturedOutlineYellow,
   IconFirst,
+  IconFitHeight,
   IconFitScale,
   IconFitWidth,
   IconFlag,
@@ -400,6 +420,7 @@ const Icons = {
   IconLightbulb,
   IconLink,
   IconList,
+  IconLocationPin,
   IconLookback,
   IconLow,
   IconLowLowLight,
@@ -428,6 +449,7 @@ const Icons = {
   IconNotificationDisabled,
   IconNotificationOff,
   IconOutgoingCall,
+  IconOutOfNetwork,
   IconOverDue,
   IconOverDueLowLight,
   IconPadlock,
@@ -439,17 +461,20 @@ const Icons = {
   IconPause,
   IconPending,
   IconPerson,
+  IconPersonDoor,
   IconPersonHospital,
   IconPersonnelPerson,
   IconPharmacyReject,
   IconPharmacyRejectLowLight,
   IconPharmacyReview,
+  IconPharmacyVerification,
   IconPhone,
   IconPhoneDown,
   IconPill,
   IconPinDiagonal,
   IconPinDown,
   IconPlusSymbol,
+  IconPlusSymbolLight,
   IconPrevious,
   IconPrinter,
   IconProjects,
@@ -458,9 +483,11 @@ const Icons = {
   IconQuestion,
   IconQuestionOutline,
   IconRectangleSymbol,
+  IconRectangleSymbolLight,
   IconRecurringEvent,
   IconRedo,
   IconRefresh,
+  IconRefusedSlot,
   IconReload,
   IconReply,
   IconReplyAll,
@@ -491,13 +518,18 @@ const Icons = {
   IconTable,
   IconTag,
   IconTeardropSymbol,
+  IconTeardropSymbolLight,
   IconTeardropUpSymbol,
+  IconTeardropUpSymbolLight,
   IconThinDiamondSymbol,
+  IconThinDiamondSymbolLight,
   IconTile,
   IconTrash,
   IconTreemap,
   IconTriangleDownSymbol,
+  IconTriangleDownSymbolLight,
   IconTriangleSymbol,
+  IconTriangleSymbolLight,
   IconTrophy,
   IconUnavailable,
   IconUndo,
