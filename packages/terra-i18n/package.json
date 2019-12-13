@@ -28,6 +28,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "intl": "^1.2.5",
+    "intl-locales-supported": "^1.8.4",
     "prop-types": "^15.5.8",
     "terra-doc-template": "^2.22.0"
   },
