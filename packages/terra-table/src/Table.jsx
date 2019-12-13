@@ -107,6 +107,7 @@ const defaultProps = {
 const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
   <Cell
     {...cell.attrs}
+    // The headers attribute is a string that gives the cell a column reading order.
     headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
     key={cell.key}
     refCallback={cell.refCallback}
@@ -130,6 +131,7 @@ const createCheckCell = (rowData, rowStyle, checkStyle) => {
     cellLabel = rowData.toggleAction.toggleLabel;
   }
 
+  // Check style takes priority over the row styling. If a check is set to toggle or icon we know that it is face up.
   if (checkStyle === 'toggle' || checkStyle === 'icon') {
     return (
       <CheckMarkCell
@@ -145,6 +147,8 @@ const createCheckCell = (rowData, rowStyle, checkStyle) => {
     );
   }
 
+  // When the rowstyle is toggle we still to create a checkmark, but a hidden one.
+  // This allows someone with a screenreader to view selection
   if (rowStyle === 'toggle') {
     return (
       <CheckMarkCell
@@ -180,6 +184,7 @@ const createHeaderCheckCell = (columnData, rowStyle, checkStyle) => {
     cellDisabled = columnData.isDisabled;
   }
 
+  // Check style takes priority over the row styling. If a check is set to toggle or icon we know that it is face up.
   if (checkStyle === 'toggle' || checkStyle === 'icon') {
     return (
       <HeaderCheckMarkCell
@@ -194,6 +199,8 @@ const createHeaderCheckCell = (columnData, rowStyle, checkStyle) => {
     );
   }
 
+  // When the row style is toggle we still to create a check mark, but a hidden one.
+  // This allows someone with a screen reader to view selection
   if (rowStyle === 'toggle') {
     return (
       <HeaderCheckMarkCell
@@ -220,13 +227,15 @@ const createRow = (tableData, rowData, rowIndex, sectionId) => {
   let primaryIndex;
   if (tableData.rowStyle === 'disclose' && rowData.discloseAction) {
     rowMetaData = rowData.discloseAction.metaData;
-    rowOnAction = rowData.discloseAction.onDisclose;
-    rowActiveState = rowData.discloseAction.isDisclosed;
-    primaryIndex = rowData.discloseAction.discloseCellIndex;
+    rowOnAction = rowData.discloseAction.onDisclose; // The disclosure action will trigger from the entire row.
+    rowActiveState = rowData.discloseAction.isDisclosed; // Disclosure will show row selection, but only the link will show to a screen reader as current.
+    primaryIndex = rowData.discloseAction.discloseCellIndex; // The index of the cell that will be converted to a link for disclosure.
     primaryData = { label: rowData.discloseAction.discloseLabel, isCurrent: rowData.discloseAction.isDisclosed };
   } else if (tableData.rowStyle === 'toggle' && rowData.toggleAction) {
     rowMetaData = rowData.toggleAction.metaData;
     rowOnAction = rowData.toggleAction.onToggle;
+    // We only want to enable a selected state is check style isn't icon.
+    // If icon a check mark is displayed to show selection rather than row highlight.
     rowActiveState = tableData.checkStyle !== 'icon' && rowData.toggleAction.isToggled;
   }
 
@@ -305,7 +314,7 @@ const createHeader = (tableData) => {
     headerIndex: 1,
     header: (
       <HeaderRow
-        aria-rowindex={1}
+        aria-rowindex={1} // Row count begins with the header.
       >
         {createHeaderCheckCell(tableData.headerData.selectAllColumn, tableData.rowStyle, tableData.checkStyle)}
         {tableData.headerData.cells.map((cellData, colIndex) => (
@@ -360,6 +369,7 @@ const Table = ({
     attrSpread['data-table-padding'] = paddingStyle;
   }
 
+  // If all column widths are using static sizing alter the table style to display inline.
   const makeInline = columnWidths && columnWidths.length ? columnWidths.every(width => !!width.static) : undefined;
   const hasEndNodes = headerNode || footerNode;
 

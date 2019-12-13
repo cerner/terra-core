@@ -107,6 +107,7 @@ const CheckMarkCell = ({
   const attrSpread = { 'aria-selected': isSelected };
   const attrCheck = {};
   if (isHidden || isIcon) {
+    // A user of a screenreader still need a keyboard accessible method of selection, so providing -1 index and kydown.
     attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '-1';
   } else if (isSelectable) {

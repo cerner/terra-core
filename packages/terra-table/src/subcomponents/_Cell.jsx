@@ -67,6 +67,8 @@ const Cell = ({
     ariaElement = disclosureData.label ? <VisuallyHiddenText text={disclosureData.label} /> : undefined;
   }
 
+  // In both the case of disclosure and default presentation we need a containing div.
+  // For disclosure it requires the role of link and for default it's the only way to consistently apply padding.
   let content = children;
   if (ariaAttr || contentClass) {
     content = (

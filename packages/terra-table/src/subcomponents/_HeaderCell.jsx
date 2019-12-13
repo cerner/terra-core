@@ -107,6 +107,7 @@ const HeaderCell = ({
     );
   }
 
+  // Only apply sort if it's an active sort column.
   const attrSpread = {};
   if (isSortActive) {
     attrSpread['aria-sort'] = isSortDesc ? 'descending' : 'ascending';

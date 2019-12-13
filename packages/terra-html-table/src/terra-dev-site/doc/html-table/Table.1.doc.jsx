@@ -13,6 +13,8 @@ import TableRowPropsTable from '!terra-props-table-loader!../../../../src/TableR
 import TableRowSrc from '!raw-loader!../../../../src/TableRow';
 import TableCellPropsTable from '!terra-props-table-loader!../../../../src/TableCell';
 import TableCellSrc from '!raw-loader!../../../../src/TableCell';
+import DefaultTable from '../example/DefaultTable';
+import DefaultTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultTable';
 import NoStripedTable from '../example/NoStripedTable';
 import NoStripedTableSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/NoStripedTable';
 import CompactPaddingTable from '../example/CompactPaddingTable';
@@ -31,6 +33,11 @@ const DocPage = () => (
     readme={ReadMe}
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
+      {
+        title: 'Default Table',
+        example: <DefaultTable />,
+        source: DefaultTableSrc,
+      },
       {
         title: 'Table without zebra stripes',
         example: <NoStripedTable />,

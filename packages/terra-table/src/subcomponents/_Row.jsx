@@ -105,8 +105,8 @@ const Row = ({
     }
   }
 
-  const divider = dividerStyle !== 'none' ? `divider-${dividerStyle}` : null;
-  const headerCellClasses = cx(
+  const divider = dividerStyle !== 'none' ? `divider-${dividerStyle}` : undefined;
+  const rowClasses = cx(
     { 'is-selected': isSelected && isSelectable },
     { 'is-selectable': !isDisabled && isSelectable },
     { 'is-striped': isStriped },
@@ -118,7 +118,7 @@ const Row = ({
     <div
       {...customProps}
       {...attrSpread}
-      className={customProps.className ? `${headerCellClasses} ${customProps.className}` : headerCellClasses}
+      className={customProps.className ? `${rowClasses} ${customProps.className}` : rowClasses}
       ref={refCallback}
       role="row"
     >
