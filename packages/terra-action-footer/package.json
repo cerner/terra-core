@@ -28,7 +28,6 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-button": "^3.28.0",
-    "terra-doc-template": "^2.22.0",
     "terra-hyperlink": "^2.25.0",
     "terra-spacer": "^3.26.0"
   },
