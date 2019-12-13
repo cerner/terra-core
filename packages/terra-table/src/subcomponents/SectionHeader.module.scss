@@ -5,14 +5,22 @@
 :local {
   .section-header {
     background-color: var(--terra-table-section-header-background-color, #e8e9ea);
-    border-top: var(--terra-table-section-header-border-top, 1px solid #dedfe0);
+    border-top: var(--terra-table-section-header-border-top, 1px solid #b2b5b6);
     overflow: hidden;
     padding: 0;
     width: 100%;
     z-index: 1;
 
+    &:first-of-type {
+      margin-top: var(--terra-table-section-header-first-margin-top, -1px);
+    }
+
+    &:last-of-type {
+      margin-bottom: var(--terra-table-section-header-last-margin-bottom, -1px);
+    }
+
     + div {
-      border-top-color: var(--terra-table-section-header-next-border-top-color, #b2b5b6);
+      border-top: var(--terra-table-section-header-next-border-top, 1px solid #b2b5b6) !important;
     }
   }
 
@@ -80,9 +88,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
-    height: 0.8571428571rem;
+    height: 0.7142857143rem;
     transform: rotate(0deg);
-    width: 0.8571428571rem;
+    width: 0.7142857143rem;
 
     // flips the icon about its vertical axis, presenting it in its mirrored-image form
     [dir=rtl] & {

@@ -44,7 +44,7 @@
   .is-interactable {
     cursor: pointer;
     outline: var(--terra-table-header-cell-outline, none);
-
+    
     &:hover {
       background-color: var(--terra-table-header-cell-hover-background-color, rgba(255, 255, 255, 0.5));
 
@@ -54,6 +54,14 @@
 
       .sort-indicator-desc {
         background: var(--terra-table-header-cell-hover-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#ccc" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>'));
+      }
+
+      .sort-is-active.sort-indicator-asc {
+        background: var(--terra-table-header-cell-active-hover-asc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="ccc" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>'));
+      }
+
+      .sort-is-active.sort-indicator-desc {
+        background: var(--terra-table-header-cell-active-hover-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="ccc" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>'));
       }
     }
 

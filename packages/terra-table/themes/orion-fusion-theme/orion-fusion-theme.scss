@@ -80,8 +80,10 @@
 
   @include terra-inline-svg-var('--terra-table-header-cell-desc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>');
   @include terra-inline-svg-var('--terra-table-header-cell-sort-asc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>');
-  @include terra-inline-svg-var('--terra-table-header-cell-hover-asc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#ccc" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>');
-  @include terra-inline-svg-var('--terra-table-header-cell-hover-desc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#ccc" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>');
+  @include terra-inline-svg-var('--terra-table-header-cell-hover-asc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="rgba(17, 22, 25, 0.5)" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>');
+  @include terra-inline-svg-var('--terra-table-header-cell-hover-desc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="rgba(17, 22, 25, 0.5)" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>');
+  @include terra-inline-svg-var('--terra-table-header-cell-active-hover-asc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="rgba(17, 22, 25, 0.75)" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>');
+  @include terra-inline-svg-var('--terra-table-header-cell-active-hover-desc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="rgba(17, 22, 25, 0.75)" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>');
 
   // HeaderCheckMarkCell
   --terra-table-header-checkmark-cell-border-right: 1px solid #ccc;
@@ -121,6 +123,7 @@
   --terra-table-header-chevron-cell-padding-right: 0.7142857143rem;
 
   // Row
+  --terra-table-row-background-color: transparent;
   --terra-table-row-child-border-right: 1px solid transparent;
   --terra-table-row-divider-child-border-right: 1px solid #dedfe0;
   --terra-table-row-divider-border-top: 1px solid #dedfe0;
@@ -152,8 +155,10 @@
 
   // SectionHeader
   --terra-table-section-header-background-color: #e8e9ea;
-  --terra-table-section-header-border-top: 1px solid #dedfe0;
-  --terra-table-section-header-next-border-top-color: #9b9fa1;
+  --terra-table-section-header-border-top: 1px solid #9b9fa1;
+  --terra-table-section-header-next-border-top: 1px solid #9b9fa1;
+  --terra-table-section-header-first-margin-top: -1px;
+  --terra-table-section-header-last-margin-bottom: -1px;
   --terra-table-section-header-content-padding-bottom: 0.25rem;
   --terra-table-section-header-content-padding-left: 0.83333rem;
   --terra-table-section-header-content-padding-right: 0.83333rem;

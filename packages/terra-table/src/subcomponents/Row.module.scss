@@ -33,7 +33,7 @@
       border-top: var(--terra-table-row-divider-border-top, 1px solid #dedfe0);
 
       &:first-of-type {
-        margin-top: var(--terra-table-row-divider-last-margin-top, -1px);
+        margin-top: var(--terra-table-row-divider-first-margin-top, -1px);
       }
 
       &:last-of-type {
