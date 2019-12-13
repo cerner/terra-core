@@ -172,6 +172,8 @@ import IconDocumentPlus from 'terra-icon/lib/icon/IconDocumentPlus';
 import IconRefusedSlot from 'terra-icon/lib/icon/IconRefusedSlot';
 import IconPharmacyVerification from 'terra-icon/lib/icon/IconPharmacyVerification';
 import IconFitHeight from 'terra-icon/lib/icon/IconFitHeight';
+import IconPersonDoor from 'terra-icon/lib/icon/IconPersonDoor';
+import IconLocationPin from 'terra-icon/lib/icon/IconLocationPin';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -1749,6 +1751,24 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconFitHeight from 'terra-icon/lib/icon/IconFitHeight';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconPersonDoor height='2em' width='2em' /></td>
+        <td style={cellStyle}>personDoor</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconPersonDoor from 'terra-icon/lib/icon/IconPersonDoor';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconLocationPin height='2em' width='2em' /></td>
+        <td style={cellStyle}>locationPin</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconLocationPin from 'terra-icon/lib/icon/IconLocationPin';
           </code>
         </td>
       </tr>
