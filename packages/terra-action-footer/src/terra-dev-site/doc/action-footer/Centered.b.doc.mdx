@@ -1,0 +1,29 @@
+import { Badge } from '../../../../package.json?dev-site-package';
+import ReadMe from '../../../../docs/CenteredActionFooter.md';
+
+import SingleActionExample from '../example/centered/SingleAction?dev-site-example';
+import MultipleActionsExample from '../example/centered/MultipleActions?dev-site-example';
+
+import CenteredActionFooterPropsTable from '../../../../src/CenteredActionFooter?dev-site-props-table';
+
+<Badge />
+
+# Terra Centered Action Footer
+
+The centered action footer component is a footer bar that contains a single, centered socket for placing actionable items such as buttons and hyperlinks. If no actions are provided, the footer bar collapses to a themeable height and maintains the top border.
+
+## Usage
+
+```jsx
+import CenteredActionFooter from 'terra-action-footer/lib/CenteredActionFooter';
+```
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer)
+
+
+## Examples
+<SingleActionExample title="Single Action" />
+<MultipleActionsExample title="Multiple Actions" />
+
+## Centered Action Footer Props
+<CenteredActionFooterPropsTable />
