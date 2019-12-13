@@ -14,6 +14,7 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -54,6 +55,7 @@ exports[`Dropdown Button should render a compact dropdown type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -94,6 +96,7 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -134,6 +137,7 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -175,6 +179,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     />
   }
   other-custom-attribute="purple"
+  refCallback={[Function]}
   requestClose={[Function]}
   test-custom-attribute={true}
 >
@@ -227,6 +232,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     ]
   }
   onSelect={[Function]}
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -267,6 +273,7 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -307,6 +314,7 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button

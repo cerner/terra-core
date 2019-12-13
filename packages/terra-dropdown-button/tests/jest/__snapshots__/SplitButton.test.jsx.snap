@@ -14,6 +14,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -60,6 +61,7 @@ exports[`Dropdown Button should render a compact split type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -106,6 +108,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -153,6 +156,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -200,6 +204,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     />
   }
   other-custom-attribute="purple"
+  refCallback={[Function]}
   requestClose={[Function]}
   test-custom-attribute={true}
 >
@@ -257,6 +262,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
       />,
     ]
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
@@ -303,6 +309,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
       onSelect={[Function]}
     />
   }
+  refCallback={[Function]}
   requestClose={[Function]}
 >
   <button
