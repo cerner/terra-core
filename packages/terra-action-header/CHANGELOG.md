@@ -9,6 +9,11 @@ Unreleased
 ### Removed
 * Removed dependency on `terra-button-group`.
 
+2.33.0 - (December 10, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.32.0 - (December 3, 2019)
 ------------------
 ### Added
