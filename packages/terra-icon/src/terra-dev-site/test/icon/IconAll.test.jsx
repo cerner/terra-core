@@ -46,6 +46,7 @@ const IconAll = () => (
     <Icon.IconChevronUp className={cx(['icon'])} />
     <Icon.IconCircleLinesSymbol className={cx(['icon'])} />
     <Icon.IconCircleSymbol className={cx(['icon'])} />
+    <Icon.IconCircleSymbolLight className={cx(['icon'])} />
     <Icon.IconClear className={cx(['icon'])} />
     <Icon.IconClipboard className={cx(['icon'])} />
     <Icon.IconClock className={cx(['icon'])} />
@@ -69,6 +70,7 @@ const IconAll = () => (
     <Icon.IconDiamond className={cx(['icon'])} />
     <Icon.IconDiamondLowLight className={cx(['icon'])} />
     <Icon.IconDiamondSymbol className={cx(['icon'])} />
+    <Icon.IconDiamondSymbolLight className={cx(['icon'])} />
     <Icon.IconDischargeComingDue className={cx(['icon'])} />
     <Icon.IconDischargeComingDueLowLight className={cx(['icon'])} />
     <Icon.IconDischargeComplete className={cx(['icon'])} />
@@ -199,6 +201,7 @@ const IconAll = () => (
     <Icon.IconPharmacyReject className={cx(['icon'])} />
     <Icon.IconPharmacyRejectLowLight className={cx(['icon'])} />
     <Icon.IconPharmacyReview className={cx(['icon'])} />
+    <Icon.IconPharmacyVerification className={cx(['icon'])} />
     <Icon.IconPhone className={cx(['icon'])} />
     <Icon.IconPhoneDown className={cx(['icon'])} />
     <Icon.IconPill className={cx(['icon'])} />
@@ -214,6 +217,7 @@ const IconAll = () => (
     <Icon.IconQuestion className={cx(['icon'])} />
     <Icon.IconQuestionOutline className={cx(['icon'])} />
     <Icon.IconRectangleSymbol className={cx(['icon'])} />
+    <Icon.IconRectangleSymbolLight className={cx(['icon'])} />
     <Icon.IconRecurringEvent className={cx(['icon'])} />
     <Icon.IconRedo className={cx(['icon'])} />
     <Icon.IconRefresh className={cx(['icon'])} />

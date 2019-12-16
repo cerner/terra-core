@@ -37,6 +37,7 @@ import IconChevronRight from './icon/IconChevronRight';
 import IconChevronUp from './icon/IconChevronUp';
 import IconCircleLinesSymbol from './icon/IconCircleLinesSymbol';
 import IconCircleSymbol from './icon/IconCircleSymbol';
+import IconCircleSymbolLight from './icon/IconCircleSymbolLight';
 import IconClear from './icon/IconClear';
 import IconClipboard from './icon/IconClipboard';
 import IconClock from './icon/IconClock';
@@ -84,6 +85,7 @@ import IconEcRep from './icon/IconEcRep';
 import IconEdit from './icon/IconEdit';
 import IconEllipses from './icon/IconEllipses';
 import IconEnvelope from './icon/IconEnvelope';
+import IconEnvelopeFill from './icon/IconEnvelopeFill';
 import IconError from './icon/IconError';
 import IconErrorDark from './icon/IconErrorDark';
 import IconErrorLowLight from './icon/IconErrorLowLight';
@@ -233,6 +235,7 @@ import IconSortAscending from './icon/IconSortAscending';
 import IconSortDescending from './icon/IconSortDescending';
 import IconSpinner from './icon/IconSpinner';
 import IconSquareSymbol from './icon/IconSquareSymbol';
+import IconSquareSymbolLight from './icon/IconSquareSymbolLight';
 import IconSuccess from './icon/IconSuccess';
 import IconSuccessInverse from './icon/IconSuccessInverse';
 import IconSuccessInverseLowLight from './icon/IconSuccessInverseLowLight';
@@ -314,6 +317,7 @@ const Icons = {
   IconChevronUp,
   IconCircleLinesSymbol,
   IconCircleSymbol,
+  IconCircleSymbolLight,
   IconClear,
   IconClipboard,
   IconClock,
@@ -361,6 +365,7 @@ const Icons = {
   IconEdit,
   IconEllipses,
   IconEnvelope,
+  IconEnvelopeFill,
   IconError,
   IconErrorDark,
   IconErrorLowLight,
@@ -510,6 +515,7 @@ const Icons = {
   IconSortDescending,
   IconSpinner,
   IconSquareSymbol,
+  IconSquareSymbolLight,
   IconSuccess,
   IconSuccessInverse,
   IconSuccessInverseLowLight,

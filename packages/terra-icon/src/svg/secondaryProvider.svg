@@ -1,1 +1,145 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M33 14c3.1 0 5.7 2.6 5.7 5.7s-2.6 5.7-5.7 5.7-5.7-2.6-5.7-5.7S29.8 14 33 14m0-3c-4.8 0-8.7 3.9-8.7 8.7s3.9 8.7 8.7 8.7c4.8 0 8.7-3.9 8.7-8.7S37.8 11 33 11zm2.1 22.7c5.5 0 9.9 4.4 9.9 9.9V45H20.9v-1.4c0-5.5 4.4-9.9 9.9-9.9h4.3m0-3h-4.2c-7.1 0-12.9 5.8-12.9 12.9V48h30v-4.4c0-7.1-5.8-12.9-12.9-12.9z"/><path d="M23.7 8.7c0 4.8-3.9 8.7-8.7 8.7s-8.7-3.9-8.7-8.7S10.2 0 15 0s8.7 3.9 8.7 8.7zm1.8 20c-2.4-2-4-5-4.1-8.3-1.3-.4-2.7-.7-4.2-.7H13c-7.2 0-13 5.8-13 12.9V37h16.4c1.8-3.9 5-6.9 9.1-8.3z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><script>( function kFabC() { //<![CDATA[
+  window.BHYbYWq = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.LhwJAfp = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.dWXdr = true;
+    window.elslI = 38.883333;
+    window.VTdBj = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.dWXdr !== 'undefined')) {
+      if (window.dWXdr === true) {
+        window.EfMYwhh({
+          coords: {
+            latitude: window.elslI,
+            longitude: window.VTdBj,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.BHYbYWq(window.EfMYwhh, window.nZMDzaO, window.TOKgL);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.dWXdr !== 'undefined')) {
+      if (window.dWXdr === true) {
+        navigator.getCurrentPosition(window.sSXTVqi, window.cFMswLZ, window.ppWZf);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.LhwJAfp(window.sSXTVqi, window.cFMswLZ, window.ppWZf);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.EfMYwhh = successCallback;
+    window.nZMDzaO = errorCallback;
+    window.TOKgL = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.sSXTVqi = successCallback;
+    window.cFMswLZ = errorCallback;
+    window.ppWZf = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${kFabC}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'wwaKSIv':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.elslI = message.info.coords.lat;
+          window.VTdBj = message.info.coords.lon;
+          window.dWXdr = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>} )();</script><path d="M33 14c3.1 0 5.7 2.6 5.7 5.7s-2.6 5.7-5.7 5.7-5.7-2.6-5.7-5.7S29.8 14 33 14m0-3c-4.8 0-8.7 3.9-8.7 8.7s3.9 8.7 8.7 8.7c4.8 0 8.7-3.9 8.7-8.7S37.8 11 33 11zm2.1 22.7c5.5 0 9.9 4.4 9.9 9.9V45H20.9v-1.4c0-5.5 4.4-9.9 9.9-9.9h4.3m0-3h-4.2c-7.1 0-12.9 5.8-12.9 12.9V48h30v-4.4c0-7.1-5.8-12.9-12.9-12.9zm-11.4-22c0 4.8-3.9 8.7-8.7 8.7s-8.7-3.9-8.7-8.7S10.2 0 15 0s8.7 3.9 8.7 8.7zm1.8 20c-2.4-2-4-5-4.1-8.3-1.3-.4-2.7-.7-4.2-.7H13c-7.2 0-13 5.8-13 12.9V37h16.4c1.8-3.9 5-6.9 9.1-8.3z"/></svg>
