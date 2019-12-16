@@ -1,16 +1,10 @@
 version: '3'
 
 services:
-  dev: &dev
-    image: "terra-core:dev"
-    build:
-      context: ./
-      args:
-        - npm_install=false
+  dev:
+    image: cerner/terra-node-dev:1
     ports:
       - 8080:8080
-    environment:
-      - CI=true
     depends_on:
       - standalone-chrome
     volumes:
@@ -26,14 +20,13 @@ services:
     environment:
       TZ: 'America/Chicago'
 
-  term:
-    <<: *dev
-    command: "/bin/zsh"
-
   test-ci:
     build: ./
-    image: "${DOCKER_IMAGE}-test-standalone-chrome:${TAG:-latest}"
+    image: "${DOCKER_IMAGE}-test:${TAG:-latest}"
     environment:
-      - CI=true
+      - SITE=build
+    volumes:
+      - $HOME/$TRAVIS_BUILD_ID/build:/opt/module/build
     depends_on:
       - standalone-chrome
+    command: 'npm run wdio-default'

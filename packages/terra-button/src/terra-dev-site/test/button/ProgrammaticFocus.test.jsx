@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import Button from '../../../Button';
 
 export default () => {
-  const button1 = useRef(null);
-  const button2 = useRef(null);
+  const button1 = useRef();
+  const button2 = useRef();
 
   return (
     <>
@@ -20,6 +20,12 @@ export default () => {
         text="Button 2 (Press to focus button 1)"
         onClick={() => { button1.current.focus(); }}
         id="button2"
+      />
+      <br />
+      <br />
+      <Button
+        text="Button 3 (Press to focus this button but without focus styles)"
+        id="button3"
       />
     </>
   );
