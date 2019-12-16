@@ -15,7 +15,7 @@ describe('Paginator', () => {
   });
 
   // Snapshot Tests
-  it('should render a Controlled ProgressivePaginator - LArge', () => {
+  it('should render a Controlled ProgressivePaginator - Large', () => {
     const wrapper = shallowWithIntl(defaultRender).dive();
     wrapper.setState({ breakpoint: 'large' });
     wrapper.update();

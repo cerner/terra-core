@@ -76,9 +76,12 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator - Tin
 >
   <div
     aria-label="pagination"
-    className="paginator"
+    className="paginator progressive"
     role="navigation"
   >
+    <div>
+      Terra.paginator.pageCount
+    </div>
     <div>
       <button
         aria-disabled={true}
@@ -94,36 +97,27 @@ exports[`ProgressivePaginator should render a default ProgressivePaginator - Tin
       <button
         aria-disabled={true}
         aria-label="Terra.paginator.previous"
-        className="nav-link previous icon-only is-disabled"
+        className="nav-link previous is-disabled"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex={null}
         type="button"
       >
-        <VisuallyHiddenText
-          text="Terra.paginator.previous"
-        />
         <span
           className="icon"
         />
+        Terra.paginator.previous
       </button>
-    </div>
-    <div>
-      Terra.paginator.pageCount
-    </div>
-    <div>
       <button
         aria-disabled={false}
         aria-label="Terra.paginator.next"
-        className="nav-link next icon-only"
+        className="nav-link next"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
         type="button"
       >
-        <VisuallyHiddenText
-          text="Terra.paginator.next"
-        />
+        Terra.paginator.next
         <span
           className="icon"
         />
