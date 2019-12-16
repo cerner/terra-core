@@ -109,10 +109,10 @@ class SplitButton extends React.Component {
   }
 
   handlePrimaryButtonClick(event) {
-    this.props.onSelect(event, this.props.metaData);
-    this.handleDropdownRequestClose();
     event.stopPropagation();
     event.currentTarget.focus();
+    this.props.onSelect(event, this.props.metaData);
+    this.handleDropdownRequestClose();
   }
 
   handleDropdownRequestClose(callback) {
