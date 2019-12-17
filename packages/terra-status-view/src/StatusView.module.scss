@@ -4,13 +4,8 @@
   .outer-view {
     align-content: center;
     align-items: center;
-    display: grid;
-    /* "Centers" the status view. Give 40% remaining space to top, 60% remaining space to bottom.*/
-    grid-template:
-      'top-space' 1fr
-      'content' auto
-      'bottom-space' 2fr /
-      100%;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     justify-content: center;
     justify-items: center;
@@ -20,22 +15,24 @@
 
   .is-aligned-top {
     align-content: start;
-    grid-template-rows: 0 auto 0;
+    
+    .top-space {
+      flex: 0 0 0;
+    }
   }
 
   .top-space {
-    grid-area: top-space;
+    flex: 1 0 0;
   }
 
   .bottom-space {
-    grid-area: bottom-space;
+    flex: 2 0 0;
   }
 
   .inner-view {
     align-items: center;
     display: flex;
     flex-direction: column;
-    grid-area: content;
     max-height: 100%;
     max-width: 100%;
     overflow: auto;
