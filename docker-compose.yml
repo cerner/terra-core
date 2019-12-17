@@ -33,9 +33,8 @@ services:
 
   test-ci-lowlight:
     build: ./
-    image: "${DOCKER_IMAGE}-test-standalone-chrome:${TAG:-latest}"
+    image: "${DOCKER_IMAGE}-test:${TAG:-latest}"
     environment:
-      - CI=true
       - SITE=build
     volumes:
       - $HOME/$TRAVIS_BUILD_ID/build:/opt/module/build
