@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* replaced css grid with flex-box
+
+4.13.0 - (December 10, 2019)
+------------------
+### Changed
+* Update jest test snapshot
+* `<div>` tag replaced with `<p>` in message and title section to suffice accessibility.
 
 4.12.0 - (December 3, 2019)
 ------------------
@@ -11,7 +19,7 @@ Unreleased
 
 4.11.0 - (October 30, 2019)
 ------------------
-### Changed 
+### Changed
 * `aria-label` added in example.
 
 4.10.0 - (October 3, 2019)
