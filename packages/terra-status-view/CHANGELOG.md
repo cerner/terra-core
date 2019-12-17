@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
 
+### Changed
+* Replaced css grid with flex-box
+
 4.13.0 - (December 10, 2019)
 ------------------
 ### Changed
