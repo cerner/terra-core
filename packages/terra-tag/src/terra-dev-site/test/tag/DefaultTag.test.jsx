@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React from 'react';
 import classNames from 'classnames/bind';
 import Tag from '../../../Tag';

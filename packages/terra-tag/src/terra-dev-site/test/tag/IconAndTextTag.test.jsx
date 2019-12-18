@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React from 'react';
 import IconBookmark from 'terra-icon/lib/icon/IconTile';
 import Tag from '../../../Tag';
