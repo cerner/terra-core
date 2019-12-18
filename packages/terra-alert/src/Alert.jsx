@@ -113,14 +113,10 @@ const Alert = ({
 
   let actionsSection = '';
   let dismissButton = '';
-  let alertSectionClassName = cx('section');
-  let actionsClassName = cx('actions');
-  let bodyClassNameForParent = cx(['body', `alert-parent-${breakpoint}`]);
-
-  if (type === AlertTypes.CUSTOM) {
-    alertSectionClassName = cx(['section', 'section-custom']);
-    actionsClassName = cx(['actions', 'actions-custom']);
-  }
+  const alertSectionClassName = cx(['section', { 'section-custom': type === AlertTypes.CUSTOM }]);
+  const actionsClassName = cx(['actions', { 'actions-custom': type === AlertTypes.CUSTOM }]);
+  // eslint-disable-next-line quote-props
+  const bodyClassNameForParent = cx(['body', `alert-parent-${breakpoint}`, { 'narrow': onDismiss || action }]);
 
   if (onDismiss) {
     dismissButton = (
@@ -132,7 +128,6 @@ const Alert = ({
     );
   }
   if (onDismiss || action) {
-    bodyClassNameForParent = cx(['body', `alert-parent-${breakpoint}`, 'narrow']);
     actionsSection = (
       <div className={actionsClassName}>
         {action}
