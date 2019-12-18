@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* eslint directives for tests
 
 2.26.0 - (December 3, 2019)
 ------------------
