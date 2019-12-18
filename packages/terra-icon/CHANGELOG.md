@@ -5,7 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Updated eIFU text to be `Electronic Instructions for Use Icon`.
-* Bumped `one-cerner-style-icons` to v1.29.1
+* Bumped `one-cerner-style-icons` to v1.29.2
+  * Added Location Pin icon
 * Updated `terra-dev-site` WDIO test for IconAll
 
 3.24.0 - (December 3, 2019)
