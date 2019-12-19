@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* replaced css grid with flex-box
 
 4.13.0 - (December 10, 2019)
 ------------------
