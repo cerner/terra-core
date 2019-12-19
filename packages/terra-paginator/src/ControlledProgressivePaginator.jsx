@@ -42,6 +42,7 @@ class ProgressivePaginator extends React.Component {
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.defaultProgressivePaginator = this.defaultProgressivePaginator.bind(this);
     this.reducedProgressivePaginator = this.reducedProgressivePaginator.bind(this);
+    this.setPaginator = this.setPaginator.bind(this);
     this.state = {
       showReducedPaginator: false,
     };
@@ -211,9 +212,7 @@ class ProgressivePaginator extends React.Component {
   render() {
     return (
       <ResponsiveElement
-        onChange={value => {
-          this.setPaginator(value);
-        }}
+        onChange={this.setPaginator}
       >
         { this.state.showReducedPaginator ? this.reducedProgressivePaginator() : this.defaultProgressivePaginator()}
       </ResponsiveElement>

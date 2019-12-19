@@ -54,10 +54,11 @@ class Paginator extends React.Component {
     this.hasNavContext = this.hasNavContext.bind(this);
     this.buildPageButtons = this.buildPageButtons.bind(this);
     this.reducedPaginator = this.reducedPaginator.bind(this);
+    this.setPaginator = this.setPaginator.bind(this);
   }
 
-  setPaginator(value) {
-    const showReducedPaginator = value === 'tiny';
+  setPaginator(event) {
+    const showReducedPaginator = event === 'tiny';
     if (this.state.showReducedPaginator !== showReducedPaginator) {
       this.setState({ showReducedPaginator });
     }
@@ -286,9 +287,7 @@ class Paginator extends React.Component {
   render() {
     return (
       <ResponsiveElement
-        onChange={value => {
-          this.setPaginator(value);
-        }}
+        onChange={this.setPaginator}
       >
         { this.state.showReducedPaginator ? this.reducedPaginator() : this.defaultPaginator()}
       </ResponsiveElement>
