@@ -7,6 +7,7 @@ Unreleased
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
 
 ### Fixed 
+* Fixed page scrolling when embedded within an iframe.
 * Fixed accessibility issue due to invalid `aria-activedescendant` value.
 
 5.38.0 - (December 3, 2019)
