@@ -3,7 +3,7 @@ const defaultConfig = require('../../../node_modules/terra-toolkit/config/wdio/w
 const config = {
   ...defaultConfig.config,
   axe: {
-    inject: true,
+    ...defaultConfig.config.axe,
     options: {
       rules: [
         { id: 'color-contrast', enabled: false },
