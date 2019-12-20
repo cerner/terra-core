@@ -5,7 +5,7 @@ Unreleased
 ----------
 
 ### Changed
-* Updated `uncontrolled responsive-element` to `controlled responsive-element`.
+* Replaced uncontrolled `<ResponsiveElement>` with controlled `<ResponsiveElement>`.
 
 2.34.0 - (December 10, 2019)
 ------------------
