@@ -28,6 +28,7 @@
   --terra-button-focus-box-shadow-neutral: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
 
   --terra-button-hover-background-color-neutral: #1a2023;
+  --terra-button-hover-border-color-neutral: #1a2023;
   --terra-button-hover-color-neutral: #9b9b9b;
 
   // Emphasis button
@@ -54,6 +55,7 @@
   --terra-button-focus-box-shadow-emphasis: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
 
   --terra-button-hover-background-color-emphasis: #013a5a;
+  --terra-button-hover-border-color-emphasis: #013a5a;
   --terra-button-hover-color-emphasis: #b2b5b6;
 
   // De-emphasis button
@@ -80,6 +82,7 @@
   --terra-button-focus-box-shadow-de-emphasis: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
 
   --terra-button-hover-background-color-de-emphasis: transparent;
+  --terra-button-hover-border-color-de-emphasis: transparent;
   --terra-button-hover-color-de-emphasis: #003f61;
 
   // Action button
@@ -106,6 +109,7 @@
   --terra-button-focus-box-shadow-action: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
 
   --terra-button-hover-background-color-action: #013a5a;
+  --terra-button-hover-border-color-action: #013a5a;
   --terra-button-hover-color-action: #9b9b9b;
 
   // Utility button
@@ -132,6 +136,7 @@
   --terra-button-focus-box-shadow-utility: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
 
   --terra-button-hover-background-color-utility: transparent;
+  --terra-button-hover-border-color-utility: transparent;
   --terra-button-hover-color-utility: #b2b5b6;
 
   // Ghost Button
@@ -158,5 +163,6 @@
   --terra-button-focus-box-shadow-ghost: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
 
   --terra-button-hover-background-color-ghost: #1a2023;
+  --terra-button-hover-border-color-ghost: #1a2023;
   --terra-button-hover-color-ghost: #9b9b9b;
 }
