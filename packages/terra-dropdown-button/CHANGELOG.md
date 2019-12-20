@@ -4,7 +4,10 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Moved Focus out of dropdown on opening with mouse.
+* Moved Focus out of dropdown list on opening with mouse.
+
+### Fixed
+* Fixed primary button issue of not getting focused on click in Firefox, Safari and IE.
 
 1.8.0 - (December 3, 2019)
 ------------------

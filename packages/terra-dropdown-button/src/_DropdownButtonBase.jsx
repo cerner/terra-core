@@ -38,7 +38,7 @@ const propTypes = {
   /**
    * Whether or not dropdown is opened using keyboard.
    */
-  isKeyboardEvent: PropTypes.bool,
+  openedViaKeyboard: PropTypes.bool,
   /**
    * Callback for reference of the dropdown button
    */
@@ -53,7 +53,7 @@ const defaultProps = {
   isBlock: false,
   isCompact: false,
   isDisabled: false,
-  isKeyboardEvent: false,
+  openedViaKeyboard: false,
 };
 
 class DropdownButtonBase extends React.Component {
@@ -83,7 +83,7 @@ class DropdownButtonBase extends React.Component {
       isBlock,
       isCompact,
       isDisabled,
-      isKeyboardEvent,
+      openedViaKeyboard,
       buttonRef,
       refCallback,
       ...customProps
@@ -114,7 +114,7 @@ class DropdownButtonBase extends React.Component {
           isOpen={isOpen}
           requestClose={requestClose}
           width={calcWidth}
-          isKeyboardEvent={isKeyboardEvent}
+          openedViaKeyboard={openedViaKeyboard}
           buttonRef={buttonRef}
           refCallback={refCallback}
         >
