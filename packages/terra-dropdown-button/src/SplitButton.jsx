@@ -101,24 +101,30 @@ class SplitButton extends React.Component {
     return this.buttonNode;
   }
 
-  handleDropdownButtonClick() {
+  handleDropdownButtonClick(event) {
     if (this.state.isOpen) {
       this.setState({ openedViaKeyboard: false });
     }
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
+    // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
+    // This will put focus on the button when clicked.
+    event.currentTarget.focus();
   }
 
   handlePrimaryButtonClick(event) {
     event.stopPropagation();
-    // Clicking on a button does not get focused on Firefox, Safari, and IE. Hence we are setting focus here
+    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
+    // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
+    // This will put focus on the button when clicked.
     event.currentTarget.focus();
     this.props.onSelect(event, this.props.metaData);
     this.handleDropdownRequestClose();
   }
 
   handleDropdownRequestClose(callback) {
-    this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
-    this.setState({ openedViaKeyboard: false, caretIsActive: false });
+    const callbackOnRequestClose = typeof callback === 'function' ? callback : undefined;
+    this.setState({ isOpen: false, openedViaKeyboard: false, caretIsActive: false }, callbackOnRequestClose);
   }
 
   /*
@@ -142,11 +148,11 @@ class SplitButton extends React.Component {
       this.setState({ openedViaKeyboard: true });
     } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.openedViaKeyboard) {
       // puts focus on first list element on down arrow key press when dropdown is opened by mouse click
-      const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item = "true"]');
+      const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item]');
       firstOption.focus();
     } else if (event.keyCode === KeyCode.KEY_UP && this.state.isOpen && !this.state.openedViaKeyboard) {
       // puts focus on last list element on up arrow key press when dropdown is opened by mouse click
-      const lastOption = this.dropdownList.querySelector('[data-terra-dropdown-last-list-item = "true"]');
+      const lastOption = this.dropdownList.querySelector('[data-terra-dropdown-last-list-item]');
       lastOption.focus();
     }
   }
