@@ -6,7 +6,6 @@ exports[`Dropdown Button should render a block split type 1`] = `
   isBlock={true}
   isCompact={false}
   isDisabled={false}
-  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -14,6 +13,7 @@ exports[`Dropdown Button should render a block split type 1`] = `
       onSelect={[Function]}
     />
   }
+  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -53,7 +53,6 @@ exports[`Dropdown Button should render a compact split type 1`] = `
   isBlock={false}
   isCompact={true}
   isDisabled={false}
-  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -61,6 +60,7 @@ exports[`Dropdown Button should render a compact split type 1`] = `
       onSelect={[Function]}
     />
   }
+  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -100,7 +100,6 @@ exports[`Dropdown Button should render a default split type 1`] = `
   isBlock={false}
   isCompact={false}
   isDisabled={false}
-  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -108,6 +107,7 @@ exports[`Dropdown Button should render a default split type 1`] = `
       onSelect={[Function]}
     />
   }
+  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -148,7 +148,6 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
   isBlock={false}
   isCompact={false}
   isDisabled={false}
-  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -156,6 +155,7 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
       onSelect={[Function]}
     />
   }
+  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -195,7 +195,6 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
   isBlock={false}
   isCompact={false}
   isDisabled={false}
-  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -203,6 +202,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
       onSelect={[Function]}
     />
   }
+  openedViaKeyboard={false}
   other-custom-attribute="purple"
   refCallback={[Function]}
   requestClose={[Function]}
@@ -244,7 +244,6 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
   isBlock={false}
   isCompact={false}
   isDisabled={false}
-  isKeyboardEvent={false}
   isOpen={false}
   items={
     Array [
@@ -262,6 +261,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
       />,
     ]
   }
+  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -301,7 +301,6 @@ exports[`Dropdown Button should render an open split type 1`] = `
   isBlock={false}
   isCompact={false}
   isDisabled={false}
-  isKeyboardEvent={false}
   isOpen={false}
   items={
     <Item
@@ -309,6 +308,7 @@ exports[`Dropdown Button should render an open split type 1`] = `
       onSelect={[Function]}
     />
   }
+  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >

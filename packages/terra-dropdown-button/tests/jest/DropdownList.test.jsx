@@ -9,7 +9,12 @@ describe('Dropdown List', () => {
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownList>,
     );
+
     expect(wrapper).toMatchSnapshot();
+    // ensures both data attributes are added when list contains single item
+    const item = wrapper.find('Item');
+    expect(item.props()).toHaveProperty('data-terra-dropdown-first-list-item');
+    expect(item.props()).toHaveProperty('data-terra-dropdown-last-list-item');
   });
 
   it('renders a dropdown list with a set width', () => {
@@ -30,6 +35,11 @@ describe('Dropdown List', () => {
       </DropdownList>,
     );
     expect(wrapper).toMatchSnapshot();
+
+    // ensures appropriate data attributes are added to items in list
+    const item = wrapper.find('Item');
+    expect(item.at(0).props()).toHaveProperty('data-terra-dropdown-first-list-item');
+    expect(item.at(2).props()).toHaveProperty('data-terra-dropdown-last-list-item');
   });
 
   it('renders a dropdown list a non-default focused option', () => {
