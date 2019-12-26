@@ -208,7 +208,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
     it('opens the long option dropdown', () => {
       // closes wide-label dropdown to prevent wide-option dropdown getting hidden by wild-label dropdown list when opened.
-      browser.click('#wide-label [class*=split-button-caret]');
+      browser.keys(['Tab', 'Escape']);
       browser.click('#wide-option [class*=split-button-caret]');
       Terra.validates.element('Long option open');
     });
