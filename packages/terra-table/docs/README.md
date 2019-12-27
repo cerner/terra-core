@@ -6,7 +6,6 @@ The Terra Table is a structural component to arrange content within a table.
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-table`
-  - `yarn add terra-table`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
