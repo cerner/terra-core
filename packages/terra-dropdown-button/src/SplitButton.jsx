@@ -55,7 +55,6 @@ const propTypes = {
    */
   requestClose: PropTypes.func,
   /**
-   *  @private
    * The associated metaData to be provided in the onSelect callback.
    */
   // eslint-disable-next-line react/forbid-prop-types
@@ -113,7 +112,6 @@ class SplitButton extends React.Component {
   }
 
   handlePrimaryButtonClick(event) {
-    event.stopPropagation();
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
     // This will put focus on the button when clicked.
@@ -123,8 +121,8 @@ class SplitButton extends React.Component {
   }
 
   handleDropdownRequestClose(callback) {
-    const callbackOnRequestClose = typeof callback === 'function' ? callback : undefined;
-    this.setState({ isOpen: false, openedViaKeyboard: false, caretIsActive: false }, callbackOnRequestClose);
+    const onSelectCallback = typeof callback === 'function' ? callback : undefined;
+    this.setState({ isOpen: false, openedViaKeyboard: false, caretIsActive: false }, onSelectCallback);
   }
 
   /*

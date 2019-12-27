@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added metaData for primary-button in SplitButton to `onSelect` callback.
+
 ### Changed
 * Moved Focus out of dropdown list on opening with mouse.
 

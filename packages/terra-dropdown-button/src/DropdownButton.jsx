@@ -87,8 +87,8 @@ class DropdownButton extends React.Component {
   }
 
   handleDropdownRequestClose(callback) {
-    const callbackOnRequestClose = typeof callback === 'function' ? callback : undefined;
-    this.setState({ isOpen: false, openedViaKeyboard: false, isActive: false }, callbackOnRequestClose);
+    const onSelectCallback = typeof callback === 'function' ? callback : undefined;
+    this.setState({ isOpen: false, openedViaKeyboard: false, isActive: false }, onSelectCallback);
   }
 
   /*
