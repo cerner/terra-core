@@ -91,13 +91,11 @@ class DropdownButton extends React.Component {
     this.setState({ isOpen: false, openedViaKeyboard: false, isActive: false }, onSelectCallback);
   }
 
-  /*
-    In FireFox active styles don't get applied on space
-   */
   handleKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ isActive: true });
-      this.setState({ openedViaKeyboard: true });
+      // In FireFox active styles don't get applied on space
+      this.setState({ isActive: true, openedViaKeyboard: true });
+      // this.setState({ openedViaKeyboard: true });
     } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.openedViaKeyboard) {
       // puts focus on first list element on down arrow key press when dropdown is opened by mouse click
       const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item]');

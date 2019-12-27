@@ -142,8 +142,8 @@ class SplitButton extends React.Component {
 
   handleCaretKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ caretIsActive: true });
-      this.setState({ openedViaKeyboard: true });
+      // In FireFox active styles don't get applied onKeyDown
+      this.setState({ caretIsActive: true, openedViaKeyboard: true });
     } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.openedViaKeyboard) {
       // puts focus on first list element on down arrow key press when dropdown is opened by mouse click
       const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item]');
