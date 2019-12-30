@@ -103,6 +103,13 @@ class DropdownButton extends React.Component {
       // puts focus on last list element on up arrow key press when dropdown is opened by mouse click
       const lastOption = this.dropdownList.querySelector('[data-terra-dropdown-last-list-item]');
       lastOption.focus();
+    } else if (event.keyCode === KeyCode.KEY_TAB && this.state.isOpen && !this.state.openedViaKeyboard) {
+      // when multiple dropdown buttons are used in same page tab order of dropdown button gets precedence over list item
+      // hence we need handle TAB Key down manually to set focus on first item in list
+      const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item]');
+      firstOption.focus();
+      // required to prevent default focus callback that triggers on TAB key press in DropdownList.
+      event.preventDefault();
     }
   }
 
@@ -156,8 +163,7 @@ class DropdownButton extends React.Component {
           onClick={this.handleDropdownButtonClick}
           onKeyDown={this.handleKeyDown}
           onKeyUp={this.handleKeyUp}
-          disabled={isDisabled}
-          tabIndex="-1"
+          disabled={isDisabled ? '-1' : 0}
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"
