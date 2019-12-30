@@ -148,16 +148,18 @@ class SplitButton extends React.Component {
       // puts focus on first list element on down arrow key press when dropdown is opened by mouse click
       const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item]');
       firstOption.focus();
+      // required to prevent handleFocus() callback of DropdownList.
+      event.preventDefault();
     } else if (event.keyCode === KeyCode.KEY_UP && this.state.isOpen && !this.state.openedViaKeyboard) {
       // puts focus on last list element on up arrow key press when dropdown is opened by mouse click
       const lastOption = this.dropdownList.querySelector('[data-terra-dropdown-last-list-item]');
       lastOption.focus();
+      event.preventDefault();
     } else if (event.keyCode === KeyCode.KEY_TAB && this.state.isOpen && !this.state.openedViaKeyboard) {
       // when multiple dropdown buttons are used in same page tab order of dropdown button gets precedence over list item
       // hence we need handle TAB Key down manually to set focus on first item in list
       const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item]');
       firstOption.focus();
-      // required to prevent default focus callback that triggers on TAB key press in DropdownList.
       event.preventDefault();
     }
   }
