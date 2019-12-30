@@ -1,5 +1,68 @@
 :local {
+  .switch-container {
+    padding: 75px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .label-container {
+    margin-right: 1.45rem;
+  }
+
+  .label-text {
+    font-weight: bold;
+  }
+
   .switch {
-    /* TODO: Add styles */
+    position: relative;
+    width: 6.14285rem;
+    height: 2.92857rem;
+    outline: none;
+  }
+
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #4a4a4a;
+    background-color: rgba(74, 74, 74, 0.2);
+    transition: .4s;
+    border-radius: 1.42857rem;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 2.14285rem;
+    width: 2.14285rem;
+    left: 0.32657rem;
+    bottom: 0.30457rem;
+    border: solid 1px #4a4a4a;
+    background-color: rgba(74, 74, 74, 0.76);
+    transition: .4s;
+    border-radius: 1.42857rem;
+  }
+
+  input:checked + .slider {
+    background-color: white;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(3.17142rem);
   }
 }

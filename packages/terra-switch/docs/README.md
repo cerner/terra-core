@@ -1,6 +1,6 @@
 # Terra Switch
 
-{insert description}
+`terra-switch` indicates whether a setting is on or off and provide users with instantaneous feedback.
 
 ## Getting Started
 
