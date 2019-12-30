@@ -223,7 +223,7 @@ class SplitButton extends React.Component {
           onKeyDown={this.handlePrimaryKeyDown}
           onKeyUp={this.handlePrimaryKeyUp}
           disabled={isDisabled}
-          tabIndex={isDisabled ? '-1' : undefined}
+          tabIndex="-1"
           aria-disabled={isDisabled}
         >
           {primaryOptionLabel}
@@ -235,7 +235,7 @@ class SplitButton extends React.Component {
           onKeyUp={this.handleCaretKeyUp}
           className={caretClassnames}
           disabled={isDisabled}
-          tabIndex={isDisabled ? '-1' : undefined}
+          tabIndex="-1"
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"

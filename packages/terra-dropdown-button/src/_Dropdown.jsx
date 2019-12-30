@@ -55,7 +55,10 @@ const Dropdown = ({
       onEsc={requestClose}
       onOutsideClick={requestClose}
     >
-      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, initialFocus: openedViaKeyboard ? '' : buttonRef, clickOutsideDeactivates: true }}>
+      <FocusTrap focusTrapOptions={{
+        active: isOpen, returnFocusOnDeactivate: true, initialFocus: openedViaKeyboard ? '' : buttonRef, clickOutsideDeactivates: true,
+      }}
+      >
         <DropdownList
           requestClose={requestClose}
           width={width}
