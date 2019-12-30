@@ -163,7 +163,8 @@ class DropdownButton extends React.Component {
           onClick={this.handleDropdownButtonClick}
           onKeyDown={this.handleKeyDown}
           onKeyUp={this.handleKeyUp}
-          disabled={isDisabled ? '-1' : undefined}
+          disabled={isDisabled}
+          tabIndex={isDisabled ? '-1' : undefined}
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"
