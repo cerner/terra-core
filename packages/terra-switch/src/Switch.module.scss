@@ -28,7 +28,7 @@
     visibility: hidden;
   }
 
-  .slider {
+  .tray {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -41,9 +41,8 @@
     border-radius: 1.42857rem;
   }
 
-  .slider:before {
+  .slider {
     position: absolute;
-    content: '';
     height: 2.14285rem;
     width: 2.14285rem;
     left: 0.32657rem;
@@ -54,15 +53,11 @@
     border-radius: 1.42857rem;
   }
 
-  input:checked + .slider {
-    background-color: white;
+  input:checked + .tray {
+    background-color: #fff;
   }
 
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-
-  input:checked + .slider:before {
+  input:checked + .tray > .slider {
     transform: translateX(3.17142rem);
   }
 }

@@ -110,7 +110,9 @@ const Switch = ({
             value={value}
             {...customProps}
           />
-          <span className={cx('slider')} />
+          <span className={cx('tray')}>
+            <span className={cx('slider')} />
+          </span>
         </div>
       </div>
     </label>
