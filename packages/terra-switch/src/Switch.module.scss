@@ -1,12 +1,12 @@
 :local {
   .switch-container {
-    // padding: 10px; // TEMPORARY: NEED TO BE REMOVED.
     position: relative;
     display: flex;
     flex-direction: row;
   }
 
   .label-container {
+    margin-top: 0.28571rem;
     margin-right: 1.45rem;
   }
 
