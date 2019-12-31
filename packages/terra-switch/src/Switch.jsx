@@ -40,7 +40,7 @@ const propTypes = {
   labelText: PropTypes.node.isRequired,
 
   /**
-    * Additional attributes for the text object.
+    * Additional attributes applied to the label.
     */
   // eslint-disable-next-line react/forbid-prop-types
   labelTextAttrs: PropTypes.object,
@@ -125,41 +125,43 @@ class Switch extends React.Component {
     const statusLabelText = isOn ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
 
     return (
-      <label
-        htmlFor={id}
-      >
-        <div className={cx('switch-container')}>
-          <div className={cx('label-container')}>
-            <div {...labelTextAttrs} className={cx('label-text')}>{labelText}</div>
-            <div className={cx('status-text')}>{statusLabelText}</div>
-          </div>
-          <div className={switchClassNames}>
-            <input
-              id={id}
-              checked={isOn}
-              disabled={disabled}
-              onChange={onChange}
-              role="switch"
-              type="checkbox"
-              value={value}
-              {...customProps}
-            />
-            <span className={trayClassNames}>
-              <span
-                aria-checked={isOn}
-                className={sliderClassNames}
+      <div className={cx('switch-wrapper')}>
+        <label
+          htmlFor={id}
+        >
+          <div className={cx('switch-container')}>
+            <div className={cx('label-container')}>
+              <div {...labelTextAttrs} className={cx('label-text')}>{labelText}</div>
+              <div className={cx('status-text')}>{statusLabelText}</div>
+            </div>
+            <div className={switchClassNames}>
+              <input
+                id={id}
+                checked={isOn}
+                disabled={disabled}
+                onChange={onChange}
                 role="switch"
-                tabIndex="0"
-                onKeyDown={this.handleOnKeyDown}
-                onKeyUp={this.handleKeyUp}
-                onBlur={this.handleOnBlur}
-              >
-                <VisuallyHiddenText text={labelText} />
+                type="checkbox"
+                value={value}
+                {...customProps}
+              />
+              <span className={trayClassNames}>
+                <span
+                  aria-checked={isOn}
+                  className={sliderClassNames}
+                  role="switch"
+                  tabIndex="0"
+                  onKeyDown={this.handleOnKeyDown}
+                  onKeyUp={this.handleKeyUp}
+                  onBlur={this.handleOnBlur}
+                >
+                  <VisuallyHiddenText text={labelText} />
+                </span>
               </span>
-            </span>
+            </div>
           </div>
-        </div>
-      </label>
+        </label>
+      </div>
     );
   }
 }

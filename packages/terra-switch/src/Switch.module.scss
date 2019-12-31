@@ -1,4 +1,9 @@
 :local {
+  .switch-wrapper {
+    width: fit-content;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .switch-container {
     position: relative;
     display: flex;
