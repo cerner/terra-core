@@ -8,7 +8,7 @@ export default () => {
     <div className="app">
       <Switch
         isOn={value}
-        labelText="Lorem ipsum dolor sit amet consectetur adipisicing label"
+        labelText="Label"
         onChange={() => setValue(!value)}
       />
     </div>
