@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import * as KeyCode from 'keycode-js';
-import { injectIntl, intlShape } from 'react-intl';
 import styles from './Switch.module.scss';
 
 const cx = classNames.bind(styles);
@@ -55,12 +54,6 @@ const propTypes = {
     * The value of the input element.
     */
   value: PropTypes.string,
-
-  /**
-   * @private
-   * The intl object to be injected for translations.
-   */
-  intl: intlShape.isRequired,
 };
 
 const defaultProps = {
@@ -110,21 +103,12 @@ class Switch extends React.Component {
       labelText,
       labelTextAttrs,
       value,
-      intl,
       ...customProps
     } = this.props;
 
     const switchClassNames = cx([
       'switch',
       customProps.className,
-    ]);
-
-    const labelTextClassNames = cx([
-      'label-text',
-    ]);
-
-    const statusLabelClassNames = cx([
-      'status-text',
     ]);
 
     const trayClassNames = cx([
@@ -146,8 +130,8 @@ class Switch extends React.Component {
       >
         <div className={cx('switch-container')}>
           <div className={cx('label-container')}>
-            <div {...labelTextAttrs} className={labelTextClassNames}>{labelText}</div>
-            <div className={statusLabelClassNames}>{statusLabelText}</div>
+            <div {...labelTextAttrs} className={cx('label-text')}>{labelText}</div>
+            <div className={cx('status-text')}>{statusLabelText}</div>
           </div>
           <div className={switchClassNames}>
             <input
@@ -163,14 +147,14 @@ class Switch extends React.Component {
             <span className={trayClassNames}>
               <span
                 aria-checked={isOn}
+                className={sliderClassNames}
                 role="switch"
                 tabIndex="0"
-                className={sliderClassNames}
                 onKeyDown={this.handleOnKeyDown}
                 onKeyUp={this.handleKeyUp}
                 onBlur={this.handleOnBlur}
               >
-                <VisuallyHiddenText text="needs to be translated" />
+                <VisuallyHiddenText text={labelText} />
               </span>
             </span>
           </div>
@@ -183,4 +167,4 @@ class Switch extends React.Component {
 Switch.propTypes = propTypes;
 Switch.defaultProps = defaultProps;
 
-export default injectIntl(Switch);
+export default Switch;
