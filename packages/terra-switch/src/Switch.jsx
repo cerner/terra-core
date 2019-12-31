@@ -73,86 +73,112 @@ const defaultProps = {
   value: undefined,
 };
 
-const Switch = ({
-  isOn,
-  disabled,
-  id,
-  inputAttrs,
-  onChange,
-  labelText,
-  labelTextAttrs,
-  value,
-  intl,
-  ...customProps
-}) => {
-  const handleOnKeyDown = (event) => {
+class Switch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { focused: false };
+    this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleOnBlur = this.handleOnBlur.bind(this);
+  }
+
+  handleOnKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       event.preventDefault();
-      onChange();
+      this.setState({ focused: true });
+      this.props.onChange();
     }
-  };
+  }
 
-  const switchClassNames = cx([
-    'switch',
-    customProps.className,
-  ]);
+  handleOnBlur() {
+    this.setState({ focused: false });
+  }
 
-  const labelTextClassNames = cx([
-    'label-text',
-  ]);
+  handleKeyUp(event) {
+    if (event.keyCode === KeyCode.KEY_TAB) {
+      this.setState({ focused: true });
+    }
+  }
 
-  const statusLabelClassNames = cx([
-    'status-text',
-  ]);
+  render() {
+    const {
+      isOn,
+      disabled,
+      id,
+      inputAttrs,
+      onChange,
+      labelText,
+      labelTextAttrs,
+      value,
+      intl,
+      ...customProps
+    } = this.props;
 
-  const trayClassNames = cx([
-    'tray',
-    { 'is-disabled': disabled },
-  ]);
+    const switchClassNames = cx([
+      'switch',
+      customProps.className,
+    ]);
 
-  const sliderClassNames = cx([
-    'slider',
-    { 'is-disabled': disabled },
-  ]);
+    const labelTextClassNames = cx([
+      'label-text',
+    ]);
 
-  const statusLabelText = isOn ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
+    const statusLabelClassNames = cx([
+      'status-text',
+    ]);
 
-  return (
-    <label
-      htmlFor={id}
-    >
-      <div className={cx('switch-container')}>
-        <div className={cx('label-container')}>
-          <div {...labelTextAttrs} className={labelTextClassNames}>{labelText}</div>
-          <div className={statusLabelClassNames}>{statusLabelText}</div>
-        </div>
-        <div className={switchClassNames}>
-          <input
-            id={id}
-            checked={isOn}
-            disabled={disabled}
-            onChange={onChange}
-            role="switch"
-            type="checkbox"
-            value={value}
-            {...customProps}
-          />
-          <span className={trayClassNames}>
-            <span
-              aria-checked={isOn}
+    const trayClassNames = cx([
+      'tray',
+      { 'is-disabled': disabled },
+    ]);
+
+    const sliderClassNames = cx([
+      'slider',
+      { 'is-disabled': disabled },
+      { 'is-focused': this.state.focused },
+    ]);
+
+    const statusLabelText = isOn ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
+
+    return (
+      <label
+        htmlFor={id}
+      >
+        <div className={cx('switch-container')}>
+          <div className={cx('label-container')}>
+            <div {...labelTextAttrs} className={labelTextClassNames}>{labelText}</div>
+            <div className={statusLabelClassNames}>{statusLabelText}</div>
+          </div>
+          <div className={switchClassNames}>
+            <input
+              id={id}
+              checked={isOn}
+              disabled={disabled}
+              onChange={onChange}
               role="switch"
-              tabIndex="0"
-              className={sliderClassNames}
-              onKeyDown={handleOnKeyDown}
-            >
-              <VisuallyHiddenText text="needs to be translated" />
+              type="checkbox"
+              value={value}
+              {...customProps}
+            />
+            <span className={trayClassNames}>
+              <span
+                aria-checked={isOn}
+                role="switch"
+                tabIndex="0"
+                className={sliderClassNames}
+                onKeyDown={this.handleOnKeyDown}
+                onKeyUp={this.handleKeyUp}
+                onBlur={this.handleOnBlur}
+              >
+                <VisuallyHiddenText text="needs to be translated" />
+              </span>
             </span>
-          </span>
+          </div>
         </div>
-      </div>
-    </label>
-  );
-};
+      </label>
+    );
+  }
+}
 
 Switch.propTypes = propTypes;
 Switch.defaultProps = defaultProps;

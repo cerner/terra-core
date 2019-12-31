@@ -13,6 +13,7 @@
 
   .label-text {
     font-weight: bold;
+    word-wrap: break-word;
   }
 
   .switch {
@@ -39,6 +40,7 @@
     background-color: rgba(74, 74, 74, 0.2);
     transition: .4s;
     border-radius: 1.42857rem;
+    width: 6.14285rem;
   }
 
   .tray.is-disabled {
@@ -68,6 +70,9 @@
   .slider:focus:not(.is-disabled) {
     outline: none;
     background-color: #000;
+  }
+
+  .slider.is-focused:not(.is-disabled) {
     box-shadow: 0 0 1px 2px #c6dafd;
   }
 
