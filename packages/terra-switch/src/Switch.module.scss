@@ -41,6 +41,11 @@
     border-radius: 1.42857rem;
   }
 
+  .tray.is-disabled {
+    cursor: default;
+    background-color: #efefef;
+  }
+
   .slider {
     position: absolute;
     height: 2.14285rem;
@@ -53,7 +58,13 @@
     border-radius: 1.42857rem;
   }
 
-  input:checked + .tray {
+  .slider.is-disabled {
+    cursor: default;
+    background-color: rgba(74, 74, 74, 0.76);
+    opacity: 0.5;
+  }
+
+  input:checked + .tray:not(.is-disabled) {
     background-color: #fff;
   }
 

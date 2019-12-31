@@ -88,6 +88,16 @@ const Switch = ({
     'status-text',
   ]);
 
+  const trayClassNames = cx([
+    'tray',
+    { 'is-disabled': disabled },
+  ]);
+
+  const sliderClassNames = cx([
+    'slider',
+    { 'is-disabled': disabled },
+  ]);
+
   const statusLabelText = isOn ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
 
   return (
@@ -110,8 +120,8 @@ const Switch = ({
             value={value}
             {...customProps}
           />
-          <span className={cx('tray')}>
-            <span className={cx('slider')} />
+          <span className={trayClassNames}>
+            <span className={sliderClassNames} />
           </span>
         </div>
       </div>
