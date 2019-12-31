@@ -48,13 +48,14 @@
 
   .slider {
     position: absolute;
+    outline: none;
     height: 2.14285rem;
     width: 2.14285rem;
     left: 0.32657rem;
     bottom: 0.30457rem;
     border: solid 1px #4a4a4a;
     background-color: rgba(74, 74, 74, 0.76);
-    transition: .4s;
+    transition: 0.3s ease;
     border-radius: 1.42857rem;
   }
 
@@ -62,6 +63,12 @@
     cursor: default;
     background-color: rgba(74, 74, 74, 0.76);
     opacity: 0.5;
+  }
+
+  .slider:focus:not(.is-disabled) {
+    outline: none;
+    background-color: #000;
+    box-shadow: 0 0 1px 2px #c6dafd;
   }
 
   input:checked + .tray:not(.is-disabled) {

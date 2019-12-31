@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+import * as KeyCode from 'keycode-js';
+import { injectIntl, intlShape } from 'react-intl';
 import styles from './Switch.module.scss';
 
 const cx = classNames.bind(styles);
@@ -52,6 +55,12 @@ const propTypes = {
     * The value of the input element.
     */
   value: PropTypes.string,
+
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: intlShape.isRequired,
 };
 
 const defaultProps = {
@@ -73,8 +82,16 @@ const Switch = ({
   labelText,
   labelTextAttrs,
   value,
+  intl,
   ...customProps
 }) => {
+  const handleOnKeyDown = (event) => {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
+      event.preventDefault();
+      onChange();
+    }
+  };
+
   const switchClassNames = cx([
     'switch',
     customProps.className,
@@ -121,7 +138,15 @@ const Switch = ({
             {...customProps}
           />
           <span className={trayClassNames}>
-            <span className={sliderClassNames} />
+            <span
+              aria-checked={isOn}
+              role="switch"
+              tabIndex="0"
+              className={sliderClassNames}
+              onKeyDown={handleOnKeyDown}
+            >
+              <VisuallyHiddenText text="needs to be translated" />
+            </span>
           </span>
         </div>
       </div>
@@ -132,4 +157,4 @@ const Switch = ({
 Switch.propTypes = propTypes;
 Switch.defaultProps = defaultProps;
 
-export default Switch;
+export default injectIntl(Switch);
