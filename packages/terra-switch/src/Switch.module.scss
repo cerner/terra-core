@@ -75,6 +75,10 @@
     box-shadow: 0 0 1px 2px #c6dafd;
   }
 
+  .slider:active:not(.is-disabled) {
+    box-shadow: none; // pressed state.
+  }
+
   input:checked + .tray:not(.is-disabled) {
     background-color: #fff;
   }
