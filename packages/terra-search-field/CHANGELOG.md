@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated wdio screenshot
 
 3.35.0 - (December 10, 2019)
 ------------------
