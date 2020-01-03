@@ -41,7 +41,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
     responsiveTo="parent"
   >
     <div
-      className="alert-base advisory alert-tiny"
+      className="alert-base advisory narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -71,7 +71,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
       }
     >
       <div
-        className="body alert-parent-tiny"
+        className="body body-std"
       >
         <div
           className="section"
@@ -137,7 +137,7 @@ exports[`Alert of type alert with text content should render an Alert component 
     responsiveTo="parent"
   >
     <div
-      className="alert-base alert alert-tiny"
+      className="alert-base alert narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -167,7 +167,7 @@ exports[`Alert of type alert with text content should render an Alert component 
       }
     >
       <div
-        className="body alert-parent-tiny"
+        className="body body-std"
       >
         <span
           className="icon"
@@ -277,7 +277,7 @@ exports[`Alert of type custom with custom title and text content should render a
     responsiveTo="parent"
   >
     <div
-      className="alert-base custom alert-tiny terra-alert-custom-orange-color"
+      className="alert-base custom narrow terra-alert-custom-orange-color"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -307,7 +307,7 @@ exports[`Alert of type custom with custom title and text content should render a
       }
     >
       <div
-        className="body alert-parent-tiny"
+        className="body body-std"
       >
         <span
           className="icon"
@@ -405,7 +405,7 @@ exports[`Alert of type error with text content should render an Alert component 
     responsiveTo="parent"
   >
     <div
-      className="alert-base error alert-tiny"
+      className="alert-base error narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -435,7 +435,7 @@ exports[`Alert of type error with text content should render an Alert component 
       }
     >
       <div
-        className="body alert-parent-tiny"
+        className="body body-std"
       >
         <span
           className="icon"
@@ -540,7 +540,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
     responsiveTo="parent"
   >
     <div
-      className="alert-base info alert-tiny"
+      className="alert-base info narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -570,7 +570,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
       }
     >
       <div
-        className="body alert-parent-tiny"
+        className="body body-std"
       >
         <span
           className="icon"
@@ -670,7 +670,7 @@ exports[`Alert of type info with text content should render an Alert component o
     responsiveTo="parent"
   >
     <div
-      className="alert-base info alert-tiny"
+      className="alert-base info narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -700,7 +700,7 @@ exports[`Alert of type info with text content should render an Alert component o
       }
     >
       <div
-        className="body alert-parent-tiny"
+        className="body body-std"
       >
         <span
           className="icon"
@@ -817,7 +817,7 @@ exports[`Alert of type success with an action button text content should render 
     responsiveTo="parent"
   >
     <div
-      className="alert-base success alert-tiny"
+      className="alert-base success narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -847,7 +847,7 @@ exports[`Alert of type success with an action button text content should render 
       }
     >
       <div
-        className="body alert-parent-tiny narrow"
+        className="body body-narrow"
       >
         <span
           className="icon"
@@ -990,7 +990,7 @@ exports[`Alert of type success with text content should render an Alert componen
     responsiveTo="parent"
   >
     <div
-      className="alert-base success alert-tiny"
+      className="alert-base success narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -1020,7 +1020,7 @@ exports[`Alert of type success with text content should render an Alert componen
       }
     >
       <div
-        className="body alert-parent-tiny"
+        className="body body-std"
       >
         <span
           className="icon"
@@ -1125,7 +1125,7 @@ exports[`Alert of type warning with text content should render an Alert componen
     responsiveTo="parent"
   >
     <div
-      className="alert-base warning alert-tiny"
+      className="alert-base warning narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -1155,7 +1155,7 @@ exports[`Alert of type warning with text content should render an Alert componen
       }
     >
       <div
-        className="body alert-parent-tiny"
+        className="body body-std"
       >
         <span
           className="icon"
@@ -1260,7 +1260,7 @@ exports[`Alert with no props should render a default component 1`] = `
     responsiveTo="parent"
   >
     <div
-      className="alert-base alert alert-tiny"
+      className="alert-base alert narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -1290,7 +1290,7 @@ exports[`Alert with no props should render a default component 1`] = `
       }
     >
       <div
-        className="body alert-parent-tiny"
+        className="body body-std"
       >
         <span
           className="icon"
@@ -1411,7 +1411,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
     responsiveTo="parent"
   >
     <div
-      className="alert-base custom alert-tiny terra-alert-custom-orange-color"
+      className="alert-base custom narrow terra-alert-custom-orange-color"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -1441,7 +1441,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
       }
     >
       <div
-        className="body alert-parent-tiny narrow"
+        className="body body-narrow"
       >
         <span
           className="icon"
@@ -1616,7 +1616,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
     responsiveTo="parent"
   >
     <div
-      className="alert-base alert alert-tiny"
+      className="alert-base alert narrow"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -1646,7 +1646,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
       }
     >
       <div
-        className="body alert-parent-tiny narrow"
+        className="body body-narrow"
       >
         <span
           className="icon"

@@ -107,16 +107,27 @@ const Alert = ({
   type,
   ...customProps
 }) => {
-  const [breakpoint, setBreakpoint] = useState();
+  const [isNarrow, setIsNarrow] = useState();
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
   const attributes = { ...customProps };
+  const alertClassNames = cx([
+    'alert-base',
+    type,
+    { narrow: isNarrow },
+    { wide: !isNarrow },
+    attributes.className,
+    { [`${customColorClass}`]: type === AlertTypes.CUSTOM },
+  ]);
 
+  const bodyClassNameForParent = cx([
+    'body',
+    { 'body-std': !isNarrow || (isNarrow && !onDismiss && !action) },
+    { 'body-narrow': isNarrow && (onDismiss || action) },
+  ]);
   let actionsSection = '';
   let dismissButton = '';
   const alertSectionClassName = cx(['section', { 'section-custom': type === AlertTypes.CUSTOM }]);
   const actionsClassName = cx(['actions', { 'actions-custom': type === AlertTypes.CUSTOM }]);
-  // eslint-disable-next-line quote-props
-  const bodyClassNameForParent = cx(['body', `alert-parent-${breakpoint}`, { 'narrow': onDismiss || action }]);
 
   if (onDismiss) {
     dismissButton = (
@@ -144,19 +155,21 @@ const Alert = ({
   );
 
   return (
-    <ResponsiveElement onChange={value => setBreakpoint(value)}>
-      {
-        breakpoint // Check for a breakpoint before rendering the alert
-        && (
-        <div {...attributes} className={cx(['alert-base', type, `alert-${breakpoint}`, attributes.className, { [`${customColorClass}`]: type === AlertTypes.CUSTOM }])}>
-          <div className={bodyClassNameForParent}>
-            {getAlertIcon(type, customIcon)}
-            {alertMessageContent}
-          </div>
-          {actionsSection}
+    <ResponsiveElement
+      onChange={(value) => {
+        const showNarrowAlert = value === 'tiny';
+        if (showNarrowAlert !== isNarrow) {
+          setIsNarrow(showNarrowAlert);
+        }
+      }}
+    >
+      <div {...attributes} className={alertClassNames}>
+        <div className={bodyClassNameForParent}>
+          {getAlertIcon(type, customIcon)}
+          {alertMessageContent}
         </div>
-        )
-      }
+        {actionsSection}
+      </div>
     </ResponsiveElement>
 
   );
