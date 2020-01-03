@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* `Preferred First Name` is now displayed within parentheses instead of quotes.
 
 3.28.0 - (December 3, 2019)
 ------------------
