@@ -95,8 +95,10 @@ class DropdownButton extends React.Component {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       // In FireFox active styles don't get applied on space
       this.setState({ isActive: true, openedViaKeyboard: true });
-    } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.openedViaKeyboard) {
-      // puts focus on first list element on down arrow key press when dropdown is opened by mouse click
+    } else if ((event.keyCode === KeyCode.KEY_DOWN || event.keyCode === KeyCode.KEY_TAB) && this.state.isOpen && !this.state.openedViaKeyboard) {
+      // puts focus on first list element on down arrow key press when dropdown is opened by mouse click.
+      /* when multiple dropdown buttons are used in same page tab order of dropdown button gets precedence over list item
+         hence we need handle TAB Key down manually to set focus on first item in list */
       const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item]');
       firstOption.focus();
       // required to prevent handleFocus() callback of DropdownList.
@@ -105,12 +107,6 @@ class DropdownButton extends React.Component {
       // puts focus on last list element on up arrow key press when dropdown is opened by mouse click
       const lastOption = this.dropdownList.querySelector('[data-terra-dropdown-last-list-item]');
       lastOption.focus();
-      event.preventDefault();
-    } else if (event.keyCode === KeyCode.KEY_TAB && this.state.isOpen && !this.state.openedViaKeyboard) {
-      // when multiple dropdown buttons are used in same page tab order of dropdown button gets precedence over list item
-      // hence we need handle TAB Key down manually to set focus on first item in list
-      const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item]');
-      firstOption.focus();
       event.preventDefault();
     }
   }
