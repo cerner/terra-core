@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
-import { disableFocusActiveStyles, disableFocusOnBlur, enableFocusActiveStyles } from './_paginationUtils';
-import styles from './Paginator.module.scss';
-
-const cx = classNames.bind(styles);
+import {
+  disableFocusActiveStyles,
+  disableFocusOnBlur,
+  enableFocusActiveStyles,
+  handleFocus,
+  handleMouseDown,
+} from './_paginationUtils';
 
 const propTypes = {
   /**
    * Sets aria-current attribute.
    */
-  ariaCurrent: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.string,
-  ]),
+  ariaCurrent: PropTypes.bool,
   /**
    * Sets aria-disabled attribute.
    */
@@ -34,22 +33,13 @@ const propTypes = {
    * Callback function triggered when clicked.
    */
   onClick: PropTypes.func,
+  /**
+   * Tab Index of selected button.
+   */
+  tabIndex: PropTypes.string,
 };
 
 function PaginatorButton(props) {
-  let shouldShowFocus = true;
-
-  const handleFocus = (event) => {
-    if (shouldShowFocus) event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
-  };
-
-  const handleMouseDown = () => {
-    // Prevent button from showing focus styles when clicked
-    shouldShowFocus = false;
-    // Wait until after onFocus has been triggered on browsers where it will get triggered for click
-    setTimeout(() => { shouldShowFocus = true; });
-  };
-
   const {
     ariaCurrent,
     ariaDisabled,
@@ -57,6 +47,7 @@ function PaginatorButton(props) {
     children,
     className,
     onClick,
+    tabIndex,
   } = props;
 
   return (
@@ -64,13 +55,14 @@ function PaginatorButton(props) {
       aria-current={ariaCurrent}
       aria-disabled={ariaDisabled}
       aria-label={ariaLabel}
-      className={cx(className)}
+      className={className}
       onBlur={(e) => disableFocusOnBlur(e)}
       onClick={onClick}
       onFocus={(e) => handleFocus(e)}
       onKeyDown={(e) => enableFocusActiveStyles(e)}
       onKeyUp={(e) => disableFocusActiveStyles(e)}
-      onMouseDown={handleMouseDown}
+      onMouseDown={(e) => handleMouseDown(e)}
+      tabIndex={tabIndex}
       type="button"
     >
       {children}

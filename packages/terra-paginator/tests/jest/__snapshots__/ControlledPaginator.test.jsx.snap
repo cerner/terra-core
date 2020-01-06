@@ -12,7 +12,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.first"
         className="nav-link left-controls is-disabled"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex={null}
       >
         Terra.paginator.first
@@ -22,7 +21,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.previous"
         className="nav-link left-controls previous is-disabled"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex={null}
       >
         <span
@@ -31,11 +29,10 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         Terra.paginator.previous
       </PaginatorButton>
       <PaginatorButton
-        ariaCurrent="page"
+        ariaCurrent={true}
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link is-selected"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex={null}
       >
         1
@@ -45,7 +42,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         2
@@ -55,7 +51,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         3
@@ -65,7 +60,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         4
@@ -75,7 +69,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         5
@@ -85,7 +78,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         6
@@ -95,7 +87,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         7
@@ -105,7 +96,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         8
@@ -115,7 +105,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         9
@@ -125,7 +114,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.pageIndex"
         className="nav-link"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         10
@@ -135,7 +123,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.next"
         className="nav-link right-controls next"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         Terra.paginator.next
@@ -148,7 +135,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.last"
         className="nav-link right-controls"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         Terra.paginator.last
@@ -166,7 +152,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.first"
         className="nav-link left-controls is-disabled"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex={null}
       >
         Terra.paginator.first
@@ -176,7 +161,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.previous"
         className="nav-link left-controls previous is-disabled"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex={null}
       >
         <span
@@ -190,7 +174,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.next"
         className="nav-link right-controls next icon-only"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         <VisuallyHiddenText
@@ -205,7 +188,6 @@ exports[`Paginator should render a Controlled Paginator 1`] = `
         ariaLabel="Terra.paginator.last"
         className="nav-link right-controls"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
       >
         Terra.paginator.last

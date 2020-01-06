@@ -35,6 +35,27 @@ const disableFocusOnBlur = (event) => {
   event.currentTarget.setAttribute('data-focus-styles-enabled', 'false');
 };
 
+let shouldShowFocus = true;
+const handleFocus = (event) => {
+  if (shouldShowFocus) {
+    event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
+  }
+};
+
+const handleMouseDown = (event) => {
+  // Prevent button from showing focus styles when clicked
+  shouldShowFocus = false;
+
+  // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
+  // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
+  // This will put focus on the button when clicked if it is not currently the active element.
+  if (document.activeElement !== event.currentTarget) {
+    event.currentTarget.focus();
+  }
+
+  event.preventDefault();
+};
+
 const calculatePages = (totalCount, itemCountPerPage) => Math.ceil(totalCount / itemCountPerPage);
 
 const pageSet = (index, totalPages) => {
@@ -75,5 +96,5 @@ const pageSet = (index, totalPages) => {
 };
 
 export {
-  calculatePages, disableFocusActiveStyles, disableFocusOnBlur, enableFocusActiveStyles, pageSet,
+  calculatePages, disableFocusActiveStyles, disableFocusOnBlur, enableFocusActiveStyles, handleFocus, handleMouseDown, pageSet,
 };
