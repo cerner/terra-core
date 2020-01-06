@@ -6,7 +6,6 @@ Presents an icon, title, message, and/or buttons based on a status type scenario
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-status-view`
-  - `yarn add terra-status-view`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
