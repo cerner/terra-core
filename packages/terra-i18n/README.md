@@ -15,7 +15,6 @@ This component is not intended for direct usage by developers. It is recommended
 
 However, terra-i18n can be installed with [npmjs](https://www.npmjs.com):
   - `npm install terra-i18n`
-  - `yarn add terra-i18n`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

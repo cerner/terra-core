@@ -6,7 +6,6 @@
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-button-group`
-  - `yarn add terra-button-group`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
