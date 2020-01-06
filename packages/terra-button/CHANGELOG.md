@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Button border-color on hover is now themeable.
+
 ### Removed
 * Removed yarn reference in docs
 
