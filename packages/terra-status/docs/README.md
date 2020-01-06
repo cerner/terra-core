@@ -6,7 +6,6 @@ The status component provides a customizable color indictor to signify a specifi
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-status`
-  - `yarn add terra-status`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

@@ -6,7 +6,6 @@ The arrange component provides content containers with a fit (start and/or end r
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-arrange`
-  - `yarn add terra-arrange`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
