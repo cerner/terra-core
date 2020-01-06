@@ -39,6 +39,10 @@
   --terra-button-hover-background-color-neutral: #b2b5b6;
   --terra-button-hover-border-color-neutral: #6f7477;
   --terra-button-hover-color-neutral: #000;
+  --terra-button-disabled-background-color-neutral: #dedfe0;
+  --terra-button-disabled-color-neutral: #000;
+  --terra-button-disabled-border-color-neutral: #6f7477;
+  --terra-button-disabled-box-shadow-neutral: inset 0 3rem 1.5rem -2rem #f4f4f4;
 
   --terra-button-active-and-focus-background-color-emphasis: #26a2e5;
   --terra-button-active-and-focus-border-color-emphasis: #6f7477;
@@ -57,6 +61,10 @@
   --terra-button-hover-background-color-emphasis: #4cb2e9;
   --terra-button-hover-border-color-emphasis: #6f7477;
   --terra-button-hover-color-emphasis: #000;
+  --terra-button-disabled-background-color-emphasis: #a6d9f4;
+  --terra-button-disabled-color-emphasis: #000;
+  --terra-button-disabled-border-color-emphasis: #6f7477;
+  --terra-button-disabled-box-shadow-emphasis: inset 0 3rem 1.5rem -2rem #ebf6fd;
 
   --terra-button-active-and-focus-background-color-ghost: rgba(0, 0, 0, 0.2);
   --terra-button-active-and-focus-border-color-ghost: #6f7477;
@@ -75,6 +83,10 @@
   --terra-button-hover-background-color-ghost: rgba(0, 0, 0, 0.1);
   --terra-button-hover-border-color-ghost: #6f7477;
   --terra-button-hover-color-ghost: #000;
+  --terra-button-disabled-background-color-ghost: transparent;
+  --terra-button-disabled-color-ghost: #000;
+  --terra-button-disabled-border-color-ghost: #6f7477;
+  --terra-button-disabled-box-shadow-ghost: none;
     
   --terra-button-active-and-focus-background-color-de-emphasis: transparent;
   --terra-button-active-and-focus-border-color-de-emphasis: transparent;
@@ -93,6 +105,10 @@
   --terra-button-hover-background-color-de-emphasis: transparent;
   --terra-button-hover-border-color-de-emphasis: transparent;
   --terra-button-hover-color-de-emphasis: #003f61;
+  --terra-button-disabled-background-color-de-emphasis: transparent;
+  --terra-button-disabled-color-de-emphasis: #0065a3;
+  --terra-button-disabled-border-color-de-emphasis: transparent;
+  --terra-button-disabled-box-shadow-de-emphasis: none;
 
   --terra-button-active-and-focus-background-color-action: #26a2e5;
   --terra-button-active-and-focus-border-color-action: #6f7477;
@@ -111,6 +127,10 @@
   --terra-button-hover-background-color-action: #4cb2e9;
   --terra-button-hover-border-color-action: #6f7477;
   --terra-button-hover-color-action: #000;
+  --terra-button-disabled-background-color-action: #a6d9f4;
+  --terra-button-disabled-color-action: #000;
+  --terra-button-disabled-border-color-action: #6f7477;
+  --terra-button-disabled-box-shadow-action: inset 0 3rem 1.5rem -2rem #ebf6fd;
 
   --terra-button-active-and-focus-background-color-utility: transparent;
   --terra-button-active-and-focus-border-color-utility: transparent;
@@ -129,4 +149,8 @@
   --terra-button-hover-background-color-utility: transparent;
   --terra-button-hover-border-color-utility: transparent;
   --terra-button-hover-color-utility: #004c76;
+  --terra-button-disabled-background-color-utility: transparent;
+  --terra-button-disabled-color-utility: #1c1f21;
+  --terra-button-disabled-border-color-utility: transparent;
+  --terra-button-disabled-box-shadow-utility: none;
 }
