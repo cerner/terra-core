@@ -12,6 +12,12 @@ import CellGridSrc from '!raw-loader!../../../../src/CellGrid';
 
 import CellGridExample from '../example/CellGridExample';
 import CellGridExampleSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CellGridExample';
+import CellGridVertical from '../example/CellGridVertical';
+import CellGridVerticalSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CellGridVertical';
+import CellGridHorizontal from '../example/CellGridHorizontal';
+import CellGridHorizontalSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CellGridHorizontal';
+import CellGridBoth from '../example/CellGridBoth';
+import CellGridBothSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/CellGridBoth';
 
 const DocPage = () => (
   <DocTemplate
@@ -21,8 +27,24 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
+        title: 'Default',
         example: <CellGridExample />,
         source: CellGridExampleSrc,
+      },
+      {
+        title: 'Divided Vertically',
+        example: <CellGridVertical />,
+        source: CellGridVerticalSrc,
+      },
+      {
+        title: 'Divided Horizontally',
+        example: <CellGridHorizontal />,
+        source: CellGridHorizontalSrc,
+      },
+      {
+        title: 'Divided Both Directions',
+        example: <CellGridBoth />,
+        source: CellGridBothSrc,
       },
     ]}
     propsTables={[

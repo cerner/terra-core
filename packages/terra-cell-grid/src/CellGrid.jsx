@@ -12,17 +12,13 @@ const propTypes = {
   children: PropTypes.node.isRequired,
   /**
    * Indicates the desired divider styles to apply to a cell grid and its children.
-   * One of 'none', `'vertical'`, `'horizontal'`, `'both'`,
+   * One of `'vertical'`, `'horizontal'`, `'both'`,
    */
-  dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
+  dividerStyle: PropTypes.oneOf(['vertical', 'horizontal', 'both']),
   /**
    * Function callback for the ref of the cell grid.
    */
   refCallback: PropTypes.func,
-};
-
-const defaultProps = {
-  dividerStyle: 'none',
 };
 
 const CellGrid = ({
@@ -31,9 +27,10 @@ const CellGrid = ({
   refCallback,
   ...customProps
 }) => {
+  const divider = dividerStyle ? `divider-${dividerStyle}` : undefined;
   const cellGridClassNames = cx([
-    `divider-${dividerStyle}`,
     'cell-grid',
+    divider,
   ]);
 
   return (
@@ -48,6 +45,5 @@ const CellGrid = ({
 };
 
 CellGrid.propTypes = propTypes;
-CellGrid.defaultProps = defaultProps;
 
 export default CellGrid;
