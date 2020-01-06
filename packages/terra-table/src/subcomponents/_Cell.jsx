@@ -64,7 +64,7 @@ const Cell = ({
       role: 'link',
       'aria-current': disclosureData.isCurrent,
     };
-    ariaElement = disclosureData.label ? <VisuallyHiddenText text={disclosureData.label} /> : undefined;
+    ariaElement = <VisuallyHiddenText text={disclosureData.label} />;
   }
 
   // In both the case of disclosure and default presentation we need a containing div.
