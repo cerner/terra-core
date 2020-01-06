@@ -17,7 +17,6 @@ const HeaderCheckMarkTest = () => (
     <Table
       summaryId="empty-check-cell"
       summary="This table displaying a selectable unchecked column."
-      rowStyle="none"
       checkStyle="toggle"
       numberOfColumns={1}
       headerData={{
@@ -28,7 +27,6 @@ const HeaderCheckMarkTest = () => (
     <Table
       summaryId="checked-check-cell"
       summary="This table displaying a selectable checked column."
-      rowStyle="none"
       checkStyle="toggle"
       numberOfColumns={1}
       headerData={{
@@ -39,7 +37,6 @@ const HeaderCheckMarkTest = () => (
     <Table
       summaryId="indeterminate-check-cell"
       summary="This table displaying a selectable indeterminate column."
-      rowStyle="none"
       checkStyle="toggle"
       numberOfColumns={1}
       headerData={{
@@ -50,7 +47,6 @@ const HeaderCheckMarkTest = () => (
     <Table
       summaryId="disabled-check-cell"
       summary="This table displaying a disabled check column."
-      rowStyle="none"
       checkStyle="toggle"
       numberOfColumns={1}
       headerData={{
@@ -61,7 +57,6 @@ const HeaderCheckMarkTest = () => (
     <Table
       summaryId="alignment-check-cell"
       summary="This table displaying a vertically aligned check column."
-      rowStyle="none"
       checkStyle="toggle"
       numberOfColumns={1}
       headerData={{

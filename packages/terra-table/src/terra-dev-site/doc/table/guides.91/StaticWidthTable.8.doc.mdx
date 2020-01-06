@@ -29,7 +29,7 @@ And then we define the functional component returning our table.
 +     summaryId="example-static-table"
 +     summary="This table shows an implementation of static width table columns."
 +     numberOfColumns={4}
-+     paddingStyle="standard"
++     cellPaddingStyle="standard"
 +     headerData={{
 +       cells: [
 +         { key: 'cell-0', id: `unique-cell-0`, children: '60px' },
@@ -38,7 +38,7 @@ And then we define the functional component returning our table.
 +         { key: 'cell-3', id: `unique-cell-3`, children: '120px' },
 +       ],
 +     }}
-+     sectionData={[{
++     bodyData={[{
 +       rows: createRows(mockData),
 +     }]}
 +   />
@@ -51,7 +51,7 @@ const StaticWidthTable = () => (
     summaryId="example-static-table"
     summary="This table shows an implementation of static width table columns."
     numberOfColumns={4}
-    paddingStyle="standard"
+    cellPaddingStyle="standard"
 +   columnWidths={[
 +     { static: { value: 80, unit: 'px' } },
 +     { static: { value: 55, unit: 'px' } },
@@ -66,7 +66,7 @@ const StaticWidthTable = () => (
         { key: 'cell-3', id: `unique-cell-3`, children: '120px' },
       ],
     }}
-    sectionData={[{
+    bodyData={[{
       rows: createRows(mockData),
     }]}
   />

@@ -18,7 +18,11 @@ const propTypes = {
   /**
    * Indicates the desired divider style to apply to the row and its children.
    */
-  dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
+  dividerStyle: PropTypes.oneOf([
+    'vertical',
+    'horizontal',
+    'both'
+  ]),
   /**
    * Whether or not the rows interaction is disabled.
    */
@@ -68,7 +72,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  dividerStyle: 'none',
   isDisabled: false,
   isSelected: false,
   isSelectable: false,
@@ -105,7 +108,7 @@ const Row = ({
     }
   }
 
-  const divider = dividerStyle !== 'none' ? `divider-${dividerStyle}` : undefined;
+  const divider = dividerStyle ? `divider-${dividerStyle}` : undefined;
   const rowClasses = cx(
     { 'is-selected': isSelected && isSelectable },
     { 'is-selectable': !isDisabled && isSelectable },

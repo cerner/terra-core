@@ -20,7 +20,7 @@ const ScalarWidthTable = () => (
     summaryId="example-scalar-table"
     summary="This table shows an implementation of scalar width table columns."
     numberOfColumns={4}
-    paddingStyle="standard"
+    cellPaddingStyle="standard"
     columnWidths={[
       { scalar: 2 },
       { scalar: 1 },
@@ -35,7 +35,7 @@ const ScalarWidthTable = () => (
         { key: 'cell-3', id: 'unique-cell-3', children: 'Scalar 4' },
       ],
     }}
-    sectionData={[{
+    bodyData={[{
       rows: createRows(mockData),
     }]}
   />

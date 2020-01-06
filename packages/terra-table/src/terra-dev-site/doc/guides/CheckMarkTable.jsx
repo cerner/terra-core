@@ -68,7 +68,7 @@ const CheckMarkTable = () => {
       summaryId="check-table"
       summary="This table has rows that can be batch selected with the checkbox or disclosed for further details."
       numberOfColumns={4}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       rowStyle="disclose"
       checkStyle="toggle"
       headerData={{
@@ -84,7 +84,7 @@ const CheckMarkTable = () => {
           { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
         ],
       }}
-      sectionData={[{
+      bodyData={[{
         rows: createRows(mockData),
       }]}
     />

@@ -20,7 +20,7 @@ const PercentageWidthTable = () => (
     summaryId="example-percentage-table"
     summary="This table shows an implementation of percentage width table columns."
     numberOfColumns={4}
-    paddingStyle="standard"
+    cellPaddingStyle="standard"
     columnWidths={[
       { percentage: 20 },
       { percentage: 40 },
@@ -35,7 +35,7 @@ const PercentageWidthTable = () => (
         { key: 'cell-3', id: 'unique-cell-3', children: '30%' },
       ],
     }}
-    sectionData={[{
+    bodyData={[{
       rows: createRows(mockData),
     }]}
   />

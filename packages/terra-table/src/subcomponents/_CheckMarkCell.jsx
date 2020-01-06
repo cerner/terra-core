@@ -26,7 +26,7 @@ const propTypes = {
   isHidden: PropTypes.bool,
   /**
    * The top padding to be used for the CheckMarkCell.
-   * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.
+   * To used in conjunction with a cellPaddingStyle of none. Allowing for consumers to set their own padding.
    * The presence of this property will also change alignment to a fixed value, rather then centered.
    */
   alignmentPadding: PropTypes.string,

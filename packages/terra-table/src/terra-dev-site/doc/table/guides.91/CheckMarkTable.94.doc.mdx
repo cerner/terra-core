@@ -127,7 +127,7 @@ Next can implement a method to loop through our data and create the table with o
 +     summaryId="check-table"
 +     summary="This table has rows that can be batch selected with the checkbox or disclosed for further details."
 +     numberOfColumns={4}
-+     paddingStyle="standard"
++     cellPaddingStyle="standard"
 +     rowStyle="disclose"
 +     checkStyle="toggle"
 +     headerData={{
@@ -138,7 +138,7 @@ Next can implement a method to loop through our data and create the table with o
 +         { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
 +       ],
 +     }}
-+     sectionData={[{
++     bodyData={[{
 +       rows: createRows(mockData),
 +     }]}
 +   />
@@ -158,7 +158,7 @@ Finally we need to add an entry to the header for the check mark cell. The `chec
       summaryId="check-table"
       summary="This table has rows that can be batch selected with the checkbox or disclosed for further details."
       numberOfColumns={4}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       rowStyle="disclose"
       checkStyle="toggle"
       headerData={{
@@ -174,7 +174,7 @@ Finally we need to add an entry to the header for the check mark cell. The `chec
           { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
         ],
       }}
-      sectionData={[{
+      bodyData={[{
         rows: createRows(mockData),
       }]}
     />

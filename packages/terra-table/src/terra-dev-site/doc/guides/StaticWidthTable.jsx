@@ -20,7 +20,7 @@ const StaticWidthTable = () => (
     summaryId="example-static-table"
     summary="This table shows an implementation of static width table columns."
     numberOfColumns={4}
-    paddingStyle="standard"
+    cellPaddingStyle="standard"
     columnWidths={[
       { static: { value: 60, unit: 'px' } },
       { static: { value: 45, unit: 'px' } },
@@ -35,7 +35,7 @@ const StaticWidthTable = () => (
         { key: 'cell-3', id: 'unique-cell-3', children: '120px' },
       ],
     }}
-    sectionData={[{
+    bodyData={[{
       rows: createRows(mockData),
     }]}
   />

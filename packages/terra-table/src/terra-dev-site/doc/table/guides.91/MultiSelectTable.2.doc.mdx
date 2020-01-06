@@ -102,7 +102,7 @@ Ensuring that we add the appropriate aria label for multiple selections.
 +     summary="This table shows an implementation of multiple row selection."
 +     aria-multiselectable
 +     numberOfColumns={4}
-+     paddingStyle="standard"
++     cellPaddingStyle="standard"
 +     rowStyle="toggle"
 +     headerData={{
 +       cells: [
@@ -112,7 +112,7 @@ Ensuring that we add the appropriate aria label for multiple selections.
 +         { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
 +       ],
 +     }}
-+     sectionData={[
++     bodyData={[
 +       {
 +         rows: createRows(mockData),
 +       },

@@ -43,7 +43,7 @@ const MultiSelectTable = () => {
       aria-multiselectable
       rowStyle="toggle"
       numberOfColumns={4}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       headerData={{
         selectAllColumn: {
           checkLabel: 'Multi Selection',
@@ -55,7 +55,7 @@ const MultiSelectTable = () => {
           { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
         ],
       }}
-      sectionData={[
+      bodyData={[
         {
           rows: createRows(mockData),
         },

@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The child Cells for be passed to the cell grid.
+   * The child Cells to passed to the cell grid.
    */
   children: PropTypes.node.isRequired,
   /**

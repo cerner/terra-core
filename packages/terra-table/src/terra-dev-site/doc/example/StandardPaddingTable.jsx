@@ -6,7 +6,7 @@ const PaddingTable = () => (
     summaryId="standard-table"
     summary="This table has standard padding."
     numberOfColumns={3}
-    paddingStyle="standard"
+    cellPaddingStyle="standard"
     headerData={{
       cells: [
         { id: 'header-name', key: 'name', children: 'Name' },
@@ -14,7 +14,7 @@ const PaddingTable = () => (
         { id: 'header-phone_number', key: 'phone_number', children: 'Phone Number' },
       ],
     }}
-    sectionData={[
+    bodyData={[
       {
         rows: [
           {

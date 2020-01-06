@@ -6,8 +6,8 @@ const TableSectionExample = () => (
     summaryId="section-table"
     summary="This table displays section grouping."
     numberOfColumns={3}
-    paddingStyle="standard"
-    sectionData={[
+    cellPaddingStyle="standard"
+    bodyData={[
       {
         sectionHeader: {
           title: 'Default Section',

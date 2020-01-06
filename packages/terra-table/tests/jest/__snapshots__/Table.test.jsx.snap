@@ -80,7 +80,6 @@ exports[`Table should render a Table with check style icon and row style toggle 
   >
     <Row
       aria-rowindex={2}
-      dividerStyle="none"
       isDisabled={false}
       isSelectable={true}
       isSelected={false}
@@ -144,7 +143,6 @@ exports[`Table should render a Table with check style toggle 1`] = `
   >
     <Row
       aria-rowindex={2}
-      dividerStyle="none"
       isDisabled={false}
       isSelectable={true}
       isSelected={false}
@@ -208,7 +206,6 @@ exports[`Table should render a Table with check style toggle and row style discl
   >
     <Row
       aria-rowindex={2}
-      dividerStyle="none"
       isDisabled={false}
       isSelectable={true}
       isSelected={false}
@@ -374,7 +371,6 @@ exports[`Table should render a Table with indexes overridden 1`] = `
   >
     <Row
       aria-rowindex={4}
-      dividerStyle="none"
       isDisabled={false}
       isSelectable={false}
       isSelected={false}
@@ -422,7 +418,6 @@ exports[`Table should render a Table with inners remove despite padding 1`] = `
   >
     <Row
       aria-rowindex={2}
-      dividerStyle="none"
       isDisabled={false}
       isSelectable={false}
       isSelected={false}
@@ -522,7 +517,6 @@ exports[`Table should render a Table with row style toggle 1`] = `
   >
     <Row
       aria-rowindex={2}
-      dividerStyle="none"
       isDisabled={false}
       isSelectable={true}
       isSelected={false}
@@ -603,7 +597,6 @@ exports[`Table should render a Table with section header and rows 1`] = `
     >
       <Row
         aria-rowindex={2}
-        dividerStyle="none"
         isDisabled={false}
         isSelectable={false}
         isSelected={false}
@@ -640,7 +633,6 @@ exports[`Table should render a Table with section rows 1`] = `
   >
     <Row
       aria-rowindex={1}
-      dividerStyle="none"
       isDisabled={false}
       isSelectable={false}
       isSelected={false}
@@ -675,7 +667,6 @@ exports[`Table should render a Table with section rows width chevrons 1`] = `
   >
     <Row
       aria-rowindex={1}
-      dividerStyle="none"
       isDisabled={false}
       isSelectable={false}
       isSelected={false}
@@ -730,7 +721,6 @@ exports[`Table should render a Table with widths 1`] = `
   >
     <Row
       aria-rowindex={2}
-      dividerStyle="none"
       isDisabled={false}
       isSelectable={false}
       isSelected={false}

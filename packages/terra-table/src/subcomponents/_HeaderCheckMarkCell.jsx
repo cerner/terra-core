@@ -22,7 +22,7 @@ const propTypes = {
   isHidden: PropTypes.bool,
   /**
    * The bottom padding to be used for the HeaderCheckMarkCell.
-   * To used in conjunction with a paddingStyle of none. Allowing for consumers to set their own padding.
+   * To used in conjunction with a cellPaddingStyle of none. Allowing for consumers to set their own padding.
    */
   alignmentPadding: PropTypes.string,
   /**

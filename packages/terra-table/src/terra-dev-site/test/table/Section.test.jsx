@@ -6,7 +6,7 @@ const SectionTest = () => (
     summaryId="section-table"
     summary="This table displays section grouping."
     numberOfColumns={1}
-    sectionData={[
+    bodyData={[
       {
         sectionHeader: {
           title: 'Default Section',

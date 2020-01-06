@@ -21,7 +21,7 @@ const StripedTable = () => (
     summaryId="example-striped-table"
     summary="This table shows an implementation of striped table."
     numberOfColumns={4}
-    paddingStyle="standard"
+    cellPaddingStyle="standard"
     headerData={{
       cells: [
         { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
@@ -30,7 +30,7 @@ const StripedTable = () => (
         { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
       ],
     }}
-    sectionData={[{
+    bodyData={[{
       rows: createRows(mockData),
     }]}
   />

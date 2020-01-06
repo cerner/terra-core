@@ -18,7 +18,7 @@ const FixedTest = () => (
           },
         ],
       }}
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {

@@ -9,7 +9,7 @@ const HeaderFooterExample = () => (
     headerNode={<FixedNode title="Header" />}
     footerNode={<FixedNode title="Footer" />}
     numberOfColumns={3}
-    paddingStyle="standard"
+    cellPaddingStyle="standard"
     headerData={{
       cells: [
         {
@@ -29,7 +29,7 @@ const HeaderFooterExample = () => (
         },
       ],
     }}
-    sectionData={[
+    bodyData={[
       {
         rows: [
           {

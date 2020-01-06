@@ -5,7 +5,7 @@ const PaddingTable = () => (
   <Table
     summaryId="compact-table"
     summary="This table has compact row padding."
-    paddingStyle="compact"
+    cellPaddingStyle="compact"
     numberOfColumns={1}
     headerData={{
       cells: [
@@ -14,7 +14,7 @@ const PaddingTable = () => (
         { id: 'header-phone_number', key: 'phone_number', children: 'Phone Number' },
       ],
     }}
-    sectionData={[
+    bodyData={[
       {
         rows: [
           {

@@ -38,7 +38,7 @@ const SingleSelectTable = () => {
       summaryId="example-single-select"
       summary="This table shows an implementation of single row selection."
       numberOfColumns={4}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       rowStyle="toggle"
       headerData={{
         selectAllColumn: {
@@ -51,7 +51,7 @@ const SingleSelectTable = () => {
           { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
         ],
       }}
-      sectionData={[
+      bodyData={[
         {
           rows: createRows(mockData),
         },

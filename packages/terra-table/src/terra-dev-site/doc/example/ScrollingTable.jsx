@@ -9,7 +9,7 @@ const FixedHeightTable = () => (
       summary="This a fixed height table."
       fill
       numberOfColumns={3}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       headerData={{
         cells: [
           {
@@ -29,7 +29,7 @@ const FixedHeightTable = () => (
           },
         ],
       }}
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {

@@ -93,7 +93,7 @@ Then we can implement a method to loop through our data and create the section w
 +     summaryId="example-section-table"
 +     summary="This table shows an implementation of sections."
 +     numberOfColumns={3}
-+     paddingStyle="standard"
++     cellPaddingStyle="standard"
 +     headerData={{
 +       cells: [
 +         { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
@@ -102,7 +102,7 @@ Then we can implement a method to loop through our data and create the section w
 +         { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
 +       ],
 +     }}
-+     sectionData={mockData.map(section => createSection(section))}
++     bodyData={mockData.map(section => createSection(section))}
 +   </Table>
   );
 ```

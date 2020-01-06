@@ -63,7 +63,7 @@ const SortedTable = () => {
       summaryId="example-sorted-table"
       summary="This table shows an implementation of sorted table."
       numberOfColumns={3}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       headerData={{
         cells: [
           createHeaderCell(columnKeys[0], 'Breakfast'),
@@ -71,7 +71,7 @@ const SortedTable = () => {
           createHeaderCell(columnKeys[2], 'Flatware'),
         ],
       }}
-      sectionData={[{
+      bodyData={[{
         rows: createRows(mockData),
       }]}
     />

@@ -6,14 +6,14 @@ const PaddingTable = () => (
     <Table
       summaryId="compact-table"
       summary="This table has compact row padding."
-      paddingStyle="compact"
+      cellPaddingStyle="compact"
       numberOfColumns={1}
       headerData={{
         cells: [
           { id: 'header-name', key: 'name', children: 'Name' },
         ],
       }}
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -29,14 +29,14 @@ const PaddingTable = () => (
     <Table
       summaryId="standard-table"
       summary="This table has standard row padding."
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       numberOfColumns={1}
       headerData={{
         cells: [
           { id: 'header-name', key: 'name', children: 'Name' },
         ],
       }}
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {

@@ -7,8 +7,8 @@ const RowExample = () => (
       summaryId="default-row-table"
       summary="This table displays default rows."
       numberOfColumns={1}
-      paddingStyle="standard"
-      sectionData={[
+      cellPaddingStyle="standard"
+      bodyData={[
         {
           rows: [
             {
@@ -39,10 +39,10 @@ const RowExample = () => (
       summaryId="chevron-row-table"
       summary="This table displays chevron rows."
       numberOfColumns={1}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       rowStyle="disclose"
       hasChevrons
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -67,9 +67,9 @@ const RowExample = () => (
       summaryId="toggle-row-table"
       summary="This table displays toggle rows."
       numberOfColumns={1}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       rowStyle="toggle"
-      sectionData={[
+      bodyData={[
         {
           rows: [{
             key: 'toggle_row-0',
@@ -102,10 +102,10 @@ const RowExample = () => (
       summaryId="check-row-table"
       summary="This table displays check rows."
       numberOfColumns={1}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       rowStyle="toggle"
       checkStyle="icon"
-      sectionData={[
+      bodyData={[
         {
           rows: [{
             key: 'check_row-0',
@@ -138,9 +138,9 @@ const RowExample = () => (
       summaryId="checkmark-row-table"
       summary="This table displays checkmark rows."
       numberOfColumns={1}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       checkStyle="toggle"
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -177,9 +177,9 @@ const RowExample = () => (
       summaryId="vertical-row-table"
       summary="This table displays vertical divider rows."
       numberOfColumns={1}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       dividerStyle="vertical"
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -225,9 +225,9 @@ const RowExample = () => (
       summaryId="horizontal-row-table"
       summary="This table displays horizontal divider rows."
       numberOfColumns={1}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       dividerStyle="horizontal"
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -273,9 +273,9 @@ const RowExample = () => (
       summaryId="both-row-table"
       summary="This table displays both divider rows."
       numberOfColumns={1}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       dividerStyle="both"
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {

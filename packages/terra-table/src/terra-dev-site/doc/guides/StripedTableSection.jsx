@@ -32,7 +32,7 @@ const StripedTableSection = () => (
     summaryId="example-striped-section-table"
     summary="This table shows an implementation of striped section table."
     numberOfColumns={3}
-    paddingStyle="standard"
+    cellPaddingStyle="standard"
     headerData={{
       cells: [
         { key: 'cell-0', id: 'toggle-10', children: 'Column 0' },
@@ -40,7 +40,7 @@ const StripedTableSection = () => (
         { key: 'cell-2', id: 'toggle-12', children: 'Column 2' },
       ],
     }}
-    sectionData={createSections(mockData)}
+    bodyData={createSections(mockData)}
   />
 );
 

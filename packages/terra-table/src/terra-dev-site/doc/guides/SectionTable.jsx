@@ -44,7 +44,7 @@ const SectionTable = () => {
       summaryId="example-sorted-table"
       summary="This table shows an implementation of table sorting."
       numberOfColumns={3}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       headerData={{
         cells: [
           { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
@@ -52,7 +52,7 @@ const SectionTable = () => {
           { key: 'cell-2', id: 'toggle-2', children: 'Column 2' },
         ],
       }}
-      sectionData={mockData.map(section => createSection(section))}
+      bodyData={mockData.map(section => createSection(section))}
     />
   );
 };

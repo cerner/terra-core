@@ -45,7 +45,7 @@ describe('Table', () => {
         summary="Test summary description"
         summaryId="test-id"
         numberOfColumns={0}
-        paddingStyle="standard"
+        cellPaddingStyle="standard"
       />,
     );
     expect(shallowComponent).toMatchSnapshot();
@@ -57,7 +57,7 @@ describe('Table', () => {
         summary="Test summary description"
         summaryId="test-id"
         numberOfColumns={0}
-        paddingStyle="compact"
+        cellPaddingStyle="compact"
       />,
     );
     expect(shallowComponent).toMatchSnapshot();
@@ -177,7 +177,7 @@ describe('Table', () => {
         summary="Test summary description"
         summaryId="test-id"
         numberOfColumns={1}
-        sectionData={[{
+        bodyData={[{
           rows: [{
             key: 'row-key',
             cells: [{
@@ -199,7 +199,7 @@ describe('Table', () => {
         summaryId="test-id"
         numberOfColumns={1}
         hasChevrons
-        sectionData={[{
+        bodyData={[{
           rows: [{
             key: 'row-key',
             cells: [{
@@ -220,7 +220,7 @@ describe('Table', () => {
         summary="Test summary description"
         summaryId="test-id"
         numberOfColumns={1}
-        sectionData={[{
+        bodyData={[{
           sectionHeader: {
             key: 'row-key',
             id: 'row-id',
@@ -238,7 +238,7 @@ describe('Table', () => {
         summary="Test summary description"
         summaryId="test-id"
         numberOfColumns={1}
-        sectionData={[{
+        bodyData={[{
           sectionHeader: {
             key: 'row-key',
             id: 'row-id',
@@ -274,7 +274,7 @@ describe('Table', () => {
             children: 'content',
           }],
         }}
-        sectionData={[{
+        bodyData={[{
           rows: [{
             key: 'row-key',
             cells: [{
@@ -306,7 +306,7 @@ describe('Table', () => {
             children: 'content',
           }],
         }}
-        sectionData={[{
+        bodyData={[{
           rows: [{
             key: 'row-key',
             toggleAction: {
@@ -341,7 +341,7 @@ describe('Table', () => {
             children: 'content',
           }],
         }}
-        sectionData={[{
+        bodyData={[{
           rows: [{
             key: 'row-key',
             toggleAction: {
@@ -377,7 +377,7 @@ describe('Table', () => {
             children: 'content',
           }],
         }}
-        sectionData={[{
+        bodyData={[{
           rows: [{
             key: 'row-key',
             toggleAction: {
@@ -413,7 +413,7 @@ describe('Table', () => {
             children: 'content',
           }],
         }}
-        sectionData={[{
+        bodyData={[{
           rows: [{
             key: 'row-key',
             toggleAction: {
@@ -437,7 +437,7 @@ describe('Table', () => {
         summary="Test summary description"
         summaryId="test-id"
         numberOfColumns={1}
-        paddingStyle="standard"
+        cellPaddingStyle="standard"
         headerData={{
           cells: [{
             key: 'cell-key',
@@ -446,7 +446,7 @@ describe('Table', () => {
             removeInner: true,
           }],
         }}
-        sectionData={[{
+        bodyData={[{
           rows: [{
             key: 'row-key',
             cells: [{
@@ -469,7 +469,7 @@ describe('Table', () => {
         summaryId="test-id"
         numberOfColumns={1}
         numberOfRows={10}
-        sectionData={[{
+        bodyData={[{
           rows: [{
             key: 'row-key',
             index: 4,

@@ -22,17 +22,24 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * An array of sections containing rows.
+   */
+  bodyData: PropTypes.arrayOf(sectionShape),
+  /**
    * The check mark styling to apply.
    */
   checkStyle: PropTypes.oneOf([
-    'none',
     'icon',
     'toggle',
   ]),
   /**
    * The divider styling to apply to the child rows.
    */
-  dividerStyle: PropTypes.oneOf(['none', 'vertical', 'horizontal', 'both']),
+  dividerStyle: PropTypes.oneOf([
+    'vertical',
+    'horizontal',
+    'both',
+  ]),
   /**
    * The width value structures associated to each column.
    */
@@ -63,20 +70,22 @@ const propTypes = {
   numberOfColumns: PropTypes.number.isRequired,
   /**
    * This value is used for accessibility when paged/virtualized rows are used.
-   * By default this value is derived from the number of rows passed within the sectionData.
+   * By default this value is derived from the number of rows passed within the section.
    */
   numberOfRows: PropTypes.number,
   /**
    * The padding styling to apply to the cell content.
    */
-  paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
+  cellPaddingStyle: PropTypes.oneOf([
+    'standard',
+    'compact',
+  ]),
   /**
    * The interaction styling to apply to the row.
    * `'toggle'` relates to the toggling of state as a means of input. `'disclose'` relates to the presentation or disclosure of another component.
    * Both variants can ultimately display as "selected", but the interaction and structure are different for accessibility.
    */
   rowStyle: PropTypes.oneOf([
-    'none',
     'disclose',
     'toggle',
   ]),
@@ -84,10 +93,6 @@ const propTypes = {
    * Function callback returning the html node of the table's inner body element.
    */
   scrollRefCallback: PropTypes.func,
-  /**
-   * The grouping of rows associated to the table. A section header can also be paired with the rows.
-   */
-  sectionData: PropTypes.arrayOf(sectionShape),
   /**
    * The summary text to describe the table's content and interactions.
    */
@@ -99,11 +104,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  dividerStyle: 'none',
   fill: false,
-  paddingStyle: 'none',
-  rowStyle: 'none',
-  checkStyle: 'none',
 };
 
 const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
@@ -271,12 +272,12 @@ const createRow = (tableData, rowData, rowIndex, sectionId) => {
 };
 
 const createSections = (tableData, headerIndex) => {
-  if (!tableData.sectionData) {
+  if (!tableData.bodyData) {
     return { sections: undefined, sectionIndex: headerIndex };
   }
 
   let rowIndex = headerIndex;
-  const sections = tableData.sectionData.map((section) => {
+  const sections = tableData.bodyData.map((section) => {
     if (section.sectionHeader) {
       const header = section.sectionHeader;
       rowIndex += 1;
@@ -358,11 +359,11 @@ const Table = ({
   checkStyle,
   columnWidths,
   headerData,
-  sectionData,
+  bodyData,
   fill,
   footerNode,
   headerNode,
-  paddingStyle,
+  cellPaddingStyle,
   numberOfColumns,
   numberOfRows,
   scrollRefCallback,
@@ -370,11 +371,6 @@ const Table = ({
   summaryId,
   ...customProps
 }) => {
-  const attrSpread = {};
-  if (paddingStyle !== 'none') {
-    attrSpread['data-table-padding'] = paddingStyle;
-  }
-
   // If all column widths are using static sizing alter the table style to display inline.
   const makeInline = columnWidths && columnWidths.length ? columnWidths.every(width => !!width.static) : undefined;
   const hasEndNodes = headerNode || footerNode;
@@ -388,7 +384,7 @@ const Table = ({
 
   const tableData = {
     headerData,
-    sectionData,
+    bodyData,
     columnWidths,
     rowStyle,
     checkStyle,
@@ -397,6 +393,8 @@ const Table = ({
     numberOfColumns,
   };
   const { rowCount, header, sections } = unpackTableData(tableData);
+
+  const attrSpread = cellPaddingStyle ? { 'data-table-padding': cellPaddingStyle } : {};
 
   const rows = (
     <div

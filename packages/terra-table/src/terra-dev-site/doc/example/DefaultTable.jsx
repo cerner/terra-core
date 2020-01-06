@@ -13,7 +13,7 @@ const TableExample = () => (
         { id: 'header-phone_number', key: 'phone_number', children: 'Phone Number' },
       ],
     }}
-    sectionData={[
+    bodyData={[
       {
         rows: [
           {

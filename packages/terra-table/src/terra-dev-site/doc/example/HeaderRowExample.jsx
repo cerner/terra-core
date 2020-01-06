@@ -7,7 +7,7 @@ const HeaderRowExample = () => (
       summaryId="default-header-table"
       summary="This table displays the default layout of table header."
       numberOfColumns={2}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       headerData={{
         cells: [
           { id: 'header-key-0', key: 'key-0', children: 'Default Header' },
@@ -19,7 +19,7 @@ const HeaderRowExample = () => (
       summaryId="chevron-header-table"
       summary="This table displays the chevron layout of table header."
       numberOfColumns={2}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       rowStyle="disclose"
       hasChevrons
       headerData={{
@@ -33,7 +33,7 @@ const HeaderRowExample = () => (
       summaryId="check-header-table"
       summary="This table displays the checkmark layout of table header."
       numberOfColumns={2}
-      paddingStyle="standard"
+      cellPaddingStyle="standard"
       checkStyle="toggle"
       headerData={{
         selectAllColumn: {

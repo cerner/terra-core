@@ -17,7 +17,7 @@ const HeaderFooterTest = () => (
         },
       ],
     }}
-    sectionData={[
+    bodyData={[
       {
         rows: [
           {

@@ -7,7 +7,7 @@ const RowExample = () => (
       summaryId="default-row-table"
       summary="This table displays default rows."
       numberOfColumns={1}
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -39,7 +39,7 @@ const RowExample = () => (
       numberOfColumns={1}
       rowStyle="disclose"
       hasChevrons
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -64,7 +64,7 @@ const RowExample = () => (
       summary="This table displays toggle rows."
       numberOfColumns={1}
       rowStyle="toggle"
-      sectionData={[
+      bodyData={[
         {
           rows: [{
             key: 'toggle_row-0',
@@ -98,7 +98,7 @@ const RowExample = () => (
       numberOfColumns={1}
       rowStyle="toggle"
       checkStyle="icon"
-      sectionData={[
+      bodyData={[
         {
           rows: [{
             key: 'check_row-0',
@@ -131,7 +131,7 @@ const RowExample = () => (
       summary="This table displays checkmark rows."
       numberOfColumns={1}
       checkStyle="toggle"
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -169,7 +169,7 @@ const RowExample = () => (
       summary="This table displays vertical divider rows."
       numberOfColumns={1}
       dividerStyle="vertical"
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -216,7 +216,7 @@ const RowExample = () => (
       summary="This table displays horizontal divider rows."
       numberOfColumns={1}
       dividerStyle="horizontal"
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
@@ -262,7 +262,7 @@ const RowExample = () => (
       summary="This table displays both divider rows."
       numberOfColumns={1}
       dividerStyle="both"
-      sectionData={[
+      bodyData={[
         {
           rows: [
             {
