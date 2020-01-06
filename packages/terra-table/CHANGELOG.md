@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed yarn reference in docs
+
 ### Breaking Changes
 * terra-table now only provides controlled variants.
 * Removed Component `SingleSelectTableRows` - No longer supported this uncontrolled variant of table.
