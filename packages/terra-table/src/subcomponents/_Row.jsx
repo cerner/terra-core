@@ -21,7 +21,7 @@ const propTypes = {
   dividerStyle: PropTypes.oneOf([
     'vertical',
     'horizontal',
-    'both'
+    'both',
   ]),
   /**
    * Whether or not the rows interaction is disabled.
