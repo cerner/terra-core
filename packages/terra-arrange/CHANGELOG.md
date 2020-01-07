@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed yarn reference in docs
 
 3.25.0 - (December 3, 2019)
 ------------------
