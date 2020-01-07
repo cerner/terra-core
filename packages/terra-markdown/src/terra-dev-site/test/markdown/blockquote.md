@@ -6,7 +6,6 @@ React component to display the content of markdown files.
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-markdown`
-  - `yarn add terra-markdown`
 
 ## Test
 > This is a quote.
