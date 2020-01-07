@@ -26,7 +26,6 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    tabIndex="0"
     type="button"
   >
     <span
@@ -67,7 +66,6 @@ exports[`Dropdown Button should render a compact dropdown type 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    tabIndex="0"
     type="button"
   >
     <span
@@ -108,7 +106,6 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    tabIndex="0"
     type="button"
   >
     <span
@@ -192,7 +189,6 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    tabIndex="0"
     type="button"
   >
     <span
@@ -244,7 +240,6 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    tabIndex="0"
     type="button"
   >
     <span
@@ -285,7 +280,6 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    tabIndex="0"
     type="button"
   >
     <span
@@ -326,7 +320,6 @@ exports[`Dropdown Button should render an open dropdown 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    tabIndex="0"
     type="button"
   >
     <span
