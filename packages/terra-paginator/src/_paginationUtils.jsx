@@ -4,7 +4,9 @@ import * as KeyCode from 'keycode-js';
  * Enables focus styles for the target of the given event. Typically used as an onBlur callback on selectable elements.
  * See: terra-application-navigation/src/utils/helpers.js
  */
-const enableFocusActiveStyles = (event) => {
+const enableFocusActiveStyles = (setShowFocus, event) => {
+  setShowFocus(true);
+
   if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
     event.currentTarget.setAttribute('data-active-styles-enabled', 'true');
   }
@@ -35,16 +37,15 @@ const disableFocusOnBlur = (event) => {
   event.currentTarget.setAttribute('data-focus-styles-enabled', 'false');
 };
 
-let shouldShowFocus = true;
-const handleFocus = (event) => {
+const handleFocus = (shouldShowFocus, event) => {
   if (shouldShowFocus) {
     event.currentTarget.setAttribute('data-focus-styles-enabled', 'true');
   }
 };
 
-const handleMouseDown = (event) => {
+const handleMouseDown = (setShowFocus, event) => {
   // Prevent button from showing focus styles when clicked
-  shouldShowFocus = false;
+  setShowFocus(false);
 
   // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
   // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.

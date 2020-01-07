@@ -1,4 +1,11 @@
-import { pageSet } from '../../src/_paginationUtils';
+import {
+  enableFocusActiveStyles,
+  disableFocusActiveStyles,
+  disableFocusOnBlur,
+  handleFocus,
+  handleMouseDown,
+  pageSet,
+} from '../../src/_paginationUtils';
 
 describe('PaginationUtils', () => {
   describe('when there are 10 pages', () => {

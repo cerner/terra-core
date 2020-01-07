@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   disableFocusActiveStyles,
@@ -40,6 +40,8 @@ const propTypes = {
 };
 
 function PaginatorButton(props) {
+  const [shouldShowFocus, setShowFocus] = useState(false);
+
   const {
     ariaCurrent,
     ariaDisabled,
@@ -56,12 +58,12 @@ function PaginatorButton(props) {
       aria-disabled={ariaDisabled}
       aria-label={ariaLabel}
       className={className}
-      onBlur={(e) => disableFocusOnBlur(e)}
+      onBlur={disableFocusOnBlur}
       onClick={onClick}
-      onFocus={(e) => handleFocus(e)}
-      onKeyDown={(e) => enableFocusActiveStyles(e)}
-      onKeyUp={(e) => disableFocusActiveStyles(e)}
-      onMouseDown={(e) => handleMouseDown(e)}
+      onFocus={(e) => handleFocus(shouldShowFocus, e)}
+      onKeyDown={(e) => enableFocusActiveStyles(setShowFocus, e)}
+      onKeyUp={disableFocusActiveStyles}
+      onMouseDown={(e) => handleMouseDown(setShowFocus, e)}
       tabIndex={tabIndex}
       type="button"
     >
