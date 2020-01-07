@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added reference wdio screenshots for "clinical-lowlight-theme".
 
+### Removed
+* Removed yarn reference in docs
+
 2.20.0 - (December 3, 2019)
 ------------------
 ### Added

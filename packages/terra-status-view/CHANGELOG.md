@@ -1,5 +1,7 @@
 ChangeLog
 =========
+### Removed
+* Removed yarn reference in docs
 
 Unreleased
 ----------
