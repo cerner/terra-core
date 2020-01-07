@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.39.0 - (January 7, 2020)
+------------------
 ### Fixed 
 * Fixed page scrolling when embedded within an iframe.
 * Fixed accessibility issue due to invalid `aria-activedescendant` value.
