@@ -16,7 +16,6 @@ For the uncontrolled version of this component it is not necessary to set each b
 
 * Install with [npmjs](https://www.npmjs.com):
   * `npm install terra-responsive-element`
-  * `yarn add terra-responsive-element`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

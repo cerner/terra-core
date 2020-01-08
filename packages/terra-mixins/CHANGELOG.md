@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 
+1.34.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
 1.33.0 - (July 24, 2019)
 ------------------
 ### Changed

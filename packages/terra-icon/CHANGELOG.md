@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.25.0 - (January 7, 2020)
+------------------
 ### Changed
 * Updated eIFU text to be `Electronic Instructions for Use Icon`.
 * Bumped `one-cerner-style-icons` to v1.29.2
@@ -10,6 +13,9 @@ Unreleased
 
 ### Added
 * Location Pin icon
+
+### Removed
+* Removed yarn reference in docs
 
 3.24.0 - (December 3, 2019)
 ------------------
