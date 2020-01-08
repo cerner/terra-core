@@ -1,12 +1,15 @@
 ChangeLog
 =========
-### Removed
-* Removed yarn reference in docs
 
 Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
+
+4.14.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
 
 ### Changed
 * Replaced css grid with flex-box
