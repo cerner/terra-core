@@ -1031,7 +1031,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('multiple should open the dropdown by clicking the toggle', () => {
-        browser.click('#multiple:last-child');
+        browser.click('[data-terra-select-combobox]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1052,7 +1052,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('multiple should open the dropdown by clicking the toggle', () => {
-        browser.click('#multiple:last-child');
+        browser.click('[data-terra-select-combobox]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1079,7 +1079,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('multiple controlled should open the dropdown by clicking the toggle', () => {
-        browser.click('#multiple:last-child');
+        browser.click('[data-terra-select-combobox]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1768,7 +1768,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('tag should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[data-terra-select-combobox]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1793,7 +1793,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('tag should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[data-terra-select-combobox]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1814,7 +1814,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('tag should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[data-terra-select-combobox]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -1952,7 +1952,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       Terra.it.validatesElement();
 
       it('tag controlled should open the dropdown by clicking the toggle', () => {
-        browser.click('#tag:last-child');
+        browser.click('[data-terra-select-combobox]');
       });
 
       Terra.it.validatesElement('open-dropdown', { selector: '#root' });
@@ -2043,5 +2043,42 @@ Terra.describeViewports('Select', ['tiny'], () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-tag'));
 
     Terra.it.validatesElement();
+  });
+
+  describe('With-Iframe should not cause page jump when', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/select-inside-iframe'));
+
+    it('open the dropdown by clicking the toggle', () => {
+      /* global $ */
+      const frame = $('#frmSelectFrame');
+      frame.waitForVisible();
+      browser.frame(frame.value);
+      browser.click('#frmSelectSingle');
+      browser.moveToObject('#frmSelectSingle');
+    });
+
+    Terra.it.validatesElement('opened form-select', { selector: '#root' });
+
+    it('select the option which is hidden from visible frame of form-select', () => {
+      browser.moveToObject('#terra-select-option-17');
+      browser.click('#terra-select-option-17');
+      browser.click('#frmSelectSingle');
+    });
+
+    Terra.it.validatesElement('opened form-select with selected-option', { selector: '#root' });
+
+    it('navigates to next option of form-select on down arrow key oress', () => {
+      browser.keys('ArrowDown');
+      browser.keys('ArrowDown');
+    });
+
+    Terra.it.validatesElement('navigated to next option using key-board navigation', { selector: '#root' });
+
+    it('navigates to next option of form-select on down arrow key oress', () => {
+      browser.keys('ArrowDown');
+      browser.keys('ArrowUp');
+    });
+
+    Terra.it.validatesElement('navigated to previous option using key-board navigation', { selector: '#root' });
   });
 });

@@ -6,9 +6,16 @@ Unreleased
 ### Breaking Changes
 * `label` prop's type changed from node to string.
 
+5.39.0 - (January 7, 2020)
+------------------
+### Fixed 
+* Fixed page scrolling when embedded within an iframe.
+* Fixed accessibility issue due to invalid `aria-activedescendant` value.
+
 5.38.0 - (December 3, 2019)
 ------------------
 ### Added
+* Added `inputId` prop to allow an id to be passed to the input element for searchable select fields.
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
 
 5.37.0 - (November 26, 2019)

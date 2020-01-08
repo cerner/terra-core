@@ -6,6 +6,16 @@ Unreleased
 ### Breaking Changes
 * `label` prop's type changed from node to string.
 
+3.34.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.33.0 - (December 10, 2019)
+------------------
+### Changed
+* Added `disableResize` prop to disable resizability of text area.
+
 3.32.0 - (December 3, 2019)
 ------------------
 ### Added
