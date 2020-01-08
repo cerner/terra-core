@@ -6,6 +6,8 @@ Unreleased
 ### Changed
 * `Preferred First Name` is now displayed within parentheses instead of quotes.
 
+3.29.0 - (January 7, 2020)
+------------------
 ### Removed
 * Removed yarn reference in docs
 
