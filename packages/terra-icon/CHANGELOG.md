@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated Person Door icon
 
 3.25.0 - (January 7, 2020)
 ------------------
