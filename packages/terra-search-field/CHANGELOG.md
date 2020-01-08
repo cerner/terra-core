@@ -3,13 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Updated wdio screenshots
 
 3.36.0 - (January 7, 2020)
 ------------------
 ### Changed
-* Updated wdio screenshots
+* Updated wdio screenshots.
 
 3.35.0 - (December 10, 2019)
 ------------------
