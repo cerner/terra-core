@@ -22,7 +22,7 @@
   "devDependencies": {
     "csvtojson": "^2.0.8",
     "jsdom": "^15.1.1",
-    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.29.2.tar.gz",
+    "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.29.3.tar.gz",
     "shelljs": "^0.8.2",
     "svgo": "^1.2.2"
   },
