@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.25.0 - (January 7, 2020)
+------------------
 ### Changed
 * Updated eIFU text to be `Electronic Instructions for Use Icon`.
 
