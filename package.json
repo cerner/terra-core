@@ -12,7 +12,7 @@
   },
   "keywords": [
     "Cerner",
-	"Terra",
+    "Terra",
     "Terra Core",
     "terra-core"
   ],
@@ -30,7 +30,7 @@
       {
         "files": [
           "**/*/terra-dev-site/**/*.jsx"
-		],
+        ],
         "rules": {
           "import/no-extraneous-dependencies": "off",
           "import/no-unresolved": "off",
@@ -40,9 +40,9 @@
       {
         "files": [
           "*.doc.jsx"
-		],
+        ],
         "rules": {
-		  "import/no-webpack-loader-syntax": "off",
+          "import/no-webpack-loader-syntax": "off",
           "import/first": "off",
           "import/no-duplicates": "off"
         }
@@ -50,13 +50,13 @@
     ]
   },
   "stylelint": {
-	"extends": "stylelint-config-terra",
+    "extends": "stylelint-config-terra",
     "rules": {
       "scss/at-mixin-pattern": "^(terra-)[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
     }
   },
   "scripts": {
-	"bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
+    "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
     "clean": "lerna clean --yes && rm -rf node_modules",
     "clean:install": "npm run clean && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
