@@ -1,14 +1,14 @@
 {
   "name": "terra-core",
   "private": true,
-  "version": "0.1.0", 
+  "version": "0.1.0",
   "description": "terra-core",
   "engines": {
-	  "node": ">=8.9.2 <12"
+	"node": ">=8.9.2 <12"
   },
   "repository": {
 	"type": "git",
-	"url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git"
   },
   "keywords": [
 	"Cerner",
