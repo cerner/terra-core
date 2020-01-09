@@ -1,136 +1,135 @@
 {
-	"name": "terra-core",
-	"private": true,
-	"version": "0.1.0",
-	"description": "terra-core",
-	"engines": {
+  "name": "terra-core",
+  "private": true,
+  "version": "0.1.0", 
+  "description": "terra-core",
+  "engines": {
 	  "node": ">=8.9.2 <12"
-	},
-	"repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/cerner/terra-core.git"
-	},
-	"keywords": [
-	  "Cerner",
-	  "Terra",
-	  "Terra Core",
-	  "terra-core"
-	],
-	"author": "Cerner Corporation",
-	"license": "Apache-2.0",
-	"bugs": {
-	  "url": "https://github.com/cerner/terra-core/issues"
-	},
-	"browserslist": [
-	  "extends browserslist-config-terra"
-	],
-	"eslintConfig": {
-	  "extends": "terra",
-	  "overrides": [
-		{
-		  "files": [
-			"**/*/terra-dev-site/**/*.jsx"
-		  ],
-		  "rules": {
-			"import/no-extraneous-dependencies": "off",
-			"import/no-unresolved": "off",
-			"import/extensions": "off"
-		  }
-		},
-		{
-		  "files": [
-			"*.doc.jsx"
-		  ],
-		  "rules": {
-			"import/no-webpack-loader-syntax": "off",
-			"import/first": "off",
-			"import/no-duplicates": "off"
-		  }
+  },
+  "repository": {
+	"type": "git",
+	"url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "keywords": [
+	"Cerner",
+	"Terra",
+	"Terra Core",
+	"terra-core"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+	"url": "https://github.com/cerner/terra-core/issues"
+  },
+  "browserslist": [
+	"extends browserslist-config-terra"
+  ],
+  "eslintConfig": {
+    "extends": "terra",
+	"overrides": [
+      {
+	    "files": [
+	      "**/*/terra-dev-site/**/*.jsx"
+	    ],
+	   "rules": {
+	     "import/no-extraneous-dependencies": "off",
+		 "import/no-unresolved": "off",
+		 "import/extensions": "off"
+	   }
+      },
+	  {
+	    "files": [
+		  "*.doc.jsx"
+		],
+		"rules": {
+		  "import/no-webpack-loader-syntax": "off",
+		  "import/first": "off",
+		  "import/no-duplicates": "off"
 		}
-	  ]
-	},
-	"stylelint": {
-	  "extends": "stylelint-config-terra",
-	  "rules": {
-		"scss/at-mixin-pattern": "^(terra-)[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
-	  }
-	},
-	"scripts": {
-	  "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
-	  "clean": "lerna clean --yes && rm -rf node_modules",
-	  "clean:install": "npm run clean && npm install",
-	  "clean:obsolete-snapshots": "npm test -- -u",
-	  "create-props-markdown": "node scripts/props-table-gen/generatePropsTables.js",
-	  "compile": "npm run compile:clean && npm run compile:build",
-	  "compile:build": "lerna ls | cut -d ' ' -f1 | xargs -I {} babel packages/{}/src --out-dir packages/{}/lib --copy-files",
-	  "compile:clean": "rm -rf packages/**/lib",
-	  "compile:prod": "rm -rf ./build; webpack -p",
-	  "compile:fusion": "rm -rf ./build; THEME=orion-fusion-theme webpack -p",
-	  "danger": "danger ci",
-	  "deploy": "webpack --config webpack.config -p && gh-pages -d build",
-	  "docs": "node scripts/root-readme-updater/index.js",
-	  "docs:peerDependencies": "node scripts/peer-dependency-generator/index.js",
-	  "heroku-prebuild": "npx lerna init",
-	  "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
-	  "jest": "jest --config jestconfig.js",
-	  "jest:coverage": "jest --coverage --config jestconfig.js",
-	  "link-parent-bin": "link-parent-bin",
-	  "lint": "npm run lint:js && npm run lint:scss",
-	  "lint:js": "eslint --ext .js,.jsx .",
-	  "lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
-	  "pretest": "npm run lint",
-	  "postinstall": "link-parent-bin && npm run compile && npm run bootstrap:hoist",
-	  "release": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
-	  "postrelease": "npm run docs && git add --all && git commit -m 'Update README.md'",
-	  "start": "tt-serve",
-	  "start-heroku": "tt-serve-static --port $PORT --site './build'",
-	  "start-prod": "tt-serve --env.disableHotReloading -p",
-	  "start-static": "tt-serve-static --site ./build",
-	  "test": "npm run jest && npm run wdio",
-	  "wdio-default": "NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
-	  "wdio-fusion": "NODE_OPTIONS=--max-old-space-size=2048 THEME=orion-fusion-theme wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
-	  "wdio": "npm run wdio-default && npm run wdio-fusion"
-	},
-	"devDependencies": {
-	  "@babel/cli": "^7.5.0",
-	  "@babel/core": "^7.5.0",
-	  "@babel/plugin-proposal-object-rest-spread": "^7.5.0",
-	  "@babel/plugin-transform-object-assign": "^7.2.0",
-	  "@babel/preset-env": "^7.5.0",
-	  "@babel/preset-react": "^7.0.0",
-	  "babel-jest": "^24.8.0",
-	  "browserslist-config-terra": "^1.0.0",
-	  "check-installed-dependencies": "^1.0.0",
-	  "core-js": "^3.1.3",
-	  "danger": "^9.1.0",
-	  "enzyme": "^3.3.0",
-	  "enzyme-adapter-react-16": "^1.1.1",
-	  "enzyme-to-json": "^3.2.2",
-	  "eslint": "^6.1.0",
-	  "eslint-config-terra": "^3.0.0",
-	  "gh-pages": "^2.0.1",
-	  "glob": "^7.1.2",
-	  "identity-obj-proxy": "^3.0.0",
-	  "jest": "^24.8.0",
-	  "lerna": "^3.16.4",
-	  "link-parent-bin": "^1.0.0",
-	  "raf": "^3.4.1",
-	  "react": "^16.8.5",
-	  "react-docgen": "^4.1.1",
-	  "react-dom": "^16.8.5",
-	  "react-test-renderer": "^16.5.2",
-	  "regenerator-runtime": "^0.13.2",
-	  "stylelint": "^11.0.0",
-	  "stylelint-config-terra": "^3.2.0",
-	  "terra-aggregate-translations": "^1.0.0",
-	  "terra-dev-site": "^6.5.0",
-	  "terra-disclosure-manager": "^4.9.0",
-	  "terra-enzyme-intl": "^3.0.0",
-	  "terra-toolkit": "^5.18.0",
-	  "webpack": "^4.30.0",
-	  "webpack-cli": "^3.3.2",
-	  "webpack-dev-server": "^3.3.1",
-	  "webpack-merge": "^4.1.2"
+      }
+	]
+  },
+  "stylelint": {
+	"extends": "stylelint-config-terra",
+	"rules": {
+	  "scss/at-mixin-pattern": "^(terra-)[a-z]+([a-z0-9-]+[a-z0-9]+)?$"
 	}
+  },
+  "scripts": {
+	"bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
+	"clean": "lerna clean --yes && rm -rf node_modules",
+	"clean:install": "npm run clean && npm install",
+	"clean:obsolete-snapshots": "npm test -- -u",
+	"create-props-markdown": "node scripts/props-table-gen/generatePropsTables.js",
+	"compile": "npm run compile:clean && npm run compile:build",
+	"compile:build": "lerna ls | cut -d ' ' -f1 | xargs -I {} babel packages/{}/src --out-dir packages/{}/lib --copy-files",
+	"compile:clean": "rm -rf packages/**/lib",
+	"compile:prod": "rm -rf ./build; webpack -p",
+	"compile:fusion": "rm -rf ./build; THEME=orion-fusion-theme webpack -p",
+	"danger": "danger ci",
+	"deploy": "webpack --config webpack.config -p && gh-pages -d build",
+	"docs": "node scripts/root-readme-updater/index.js",
+	"docs:peerDependencies": "node scripts/peer-dependency-generator/index.js",
+	"heroku-prebuild": "npx lerna init",
+	"heroku-postbuild": "npm install --only=dev && npm run compile:prod",
+	"jest": "jest --config jestconfig.js",
+	"jest:coverage": "jest --coverage --config jestconfig.js",
+	"link-parent-bin": "link-parent-bin",
+	"lint": "npm run lint:js && npm run lint:scss",
+	"lint:js": "eslint --ext .js,.jsx .",
+	"lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
+	"pretest": "npm run lint",
+	"postinstall": "link-parent-bin && npm run compile && npm run bootstrap:hoist",
+	"release": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
+	"postrelease": "npm run docs && git add --all && git commit -m 'Update README.md'",
+	"start": "tt-serve",
+	"start-heroku": "tt-serve-static --port $PORT --site './build'",
+	"start-prod": "tt-serve --env.disableHotReloading -p",
+	"start-static": "tt-serve-static --site ./build",
+	"test": "npm run jest && npm run wdio",
+	"wdio-default": "NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
+	"wdio-fusion": "NODE_OPTIONS=--max-old-space-size=2048 THEME=orion-fusion-theme wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
+	"wdio": "npm run wdio-default && npm run wdio-fusion"
+  },
+  "devDependencies": {
+	"@babel/cli": "^7.5.0",
+	"@babel/core": "^7.5.0",
+	"@babel/plugin-proposal-object-rest-spread": "^7.5.0",
+	"@babel/plugin-transform-object-assign": "^7.2.0",
+	"@babel/preset-env": "^7.5.0",
+	"@babel/preset-react": "^7.0.0",
+	"babel-jest": "^24.8.0",
+	"browserslist-config-terra": "^1.0.0",
+	"check-installed-dependencies": "^1.0.0",
+	"core-js": "^3.1.3",
+	"danger": "^9.1.0",
+	"enzyme": "^3.3.0",
+	"enzyme-adapter-react-16": "^1.1.1",
+	"enzyme-to-json": "^3.2.2",
+	"eslint": "^6.1.0",
+	"eslint-config-terra": "^3.0.0",
+	"gh-pages": "^2.0.1",
+	"glob": "^7.1.2",
+	"identity-obj-proxy": "^3.0.0",
+	"jest": "^24.8.0",
+	"lerna": "^3.16.4",
+	"link-parent-bin": "^1.0.0",
+	"raf": "^3.4.1",
+	"react": "^16.8.5",
+	"react-docgen": "^4.1.1",
+	"react-dom": "^16.8.5",
+	"react-test-renderer": "^16.5.2",
+	"regenerator-runtime": "^0.13.2",
+	"stylelint": "^11.0.0",
+	"stylelint-config-terra": "^3.2.0",
+	"terra-aggregate-translations": "^1.0.0",
+	"terra-dev-site": "^6.5.0",
+	"terra-disclosure-manager": "^4.9.0",
+	"terra-enzyme-intl": "^3.0.0",
+	"terra-toolkit": "^5.18.0",
+	"webpack": "^4.30.0",
+	"webpack-cli": "^3.3.2",
+	"webpack-dev-server": "^3.3.1",
+	"webpack-merge": "^4.1.2"
   }
-  
+}
