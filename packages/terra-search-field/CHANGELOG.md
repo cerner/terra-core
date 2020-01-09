@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed logic error that caused programmatically set values not be saved for searches
+
 ### Changed
 * Updated wdio screenshots
 

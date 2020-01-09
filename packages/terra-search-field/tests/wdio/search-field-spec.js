@@ -134,6 +134,47 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     Terra.it.matchesScreenshot('with too short text');
   });
 
+  describe('Setting Value', () => {
+    before(() => browser.url('/#/raw/tests/terra-search-field/search-field/setting-value-search-field'));
+
+    Terra.it.validatesElement('empty');
+
+    it('should trigger search when entering a long enough search term', () => {
+      browser.setValue('input', 'LoremIpsum');
+    });
+
+    Terra.it.validatesElement('typed');
+
+    it('should trigger search when cutting', () => {
+      //select text
+      browser.addValue('input', ['Shift','Left arrow','Left arrow','Left arrow','Left arrow','NULL']);
+      // cut text
+      browser.addValue('input', ['Control','x','NULL'])
+    });
+    Terra.it.validatesElement('cut');
+
+    it('should trigger search when pasting', () => {
+      // paste value from clipboard
+      browser.addValue('input', ['Control','v']);
+    });
+
+    Terra.it.validatesElement('paste');
+
+    it('should not trigger search when programatticaly setting value', () => {
+      browser.click('#search-field-set-text-button');
+      browser.click('#searchfield');
+      browser.pause(2000);
+    });
+
+    Terra.it.validatesElement('programmatically');
+
+    it('should search with value on search button press', () => {
+      browser.click('#searchfield > button');
+    })
+
+    Terra.it.validatesElement('search');
+  });
+
   describe('On Change', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-on-change'));
 
