@@ -7,7 +7,7 @@ Unreleased
 * Added metaData for primary-button in SplitButton to `onSelect` callback.
 
 ### Changed
-* Moved Focus out of dropdown list on opening with mouse.
+* Changed focus behaviour of DropdownButton and SplitButton such that focus stays on button when dropdown is opened via mouse click.
 
 ### Fixed
 * Fixed primary button issue of not getting focused on click in Firefox, Safari and IE.

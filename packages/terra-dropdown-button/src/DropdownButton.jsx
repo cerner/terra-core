@@ -60,6 +60,7 @@ class DropdownButton extends React.Component {
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.setListNode = this.setListNode.bind(this);
+    this.openDropDown = this.openDropDown.bind(this);
     this.state = { isOpen: false, isActive: false, openedViaKeyboard: false };
   }
 
@@ -75,15 +76,20 @@ class DropdownButton extends React.Component {
     return this.buttonNode;
   }
 
-  handleDropdownButtonClick(event) {
-    if (this.state.isOpen) {
-      this.setState({ openedViaKeyboard: false });
-    }
+  openDropDown(event) {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
     // This will put focus on the button when clicked.
     event.currentTarget.focus();
+  }
+
+  handleDropdownButtonClick(event) {
+    if (this.state.isOpen) {
+      this.setState({ openedViaKeyboard: false });
+    }
+    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+    this.openDropDown(event);
   }
 
   handleDropdownRequestClose(callback) {
@@ -95,18 +101,12 @@ class DropdownButton extends React.Component {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       // In FireFox active styles don't get applied on space
       this.setState({ isActive: true, openedViaKeyboard: true });
-    } else if ((event.keyCode === KeyCode.KEY_DOWN || event.keyCode === KeyCode.KEY_TAB) && this.state.isOpen && !this.state.openedViaKeyboard) {
-      // puts focus on first list element on down arrow key press when dropdown is opened by mouse click.
-      /* when multiple dropdown buttons are used in same page tab order of dropdown button gets precedence over list item
-         hence we need handle TAB Key down manually to set focus on first item in list */
-      const firstOption = this.dropdownList.querySelector('[data-terra-dropdown-first-list-item]');
-      firstOption.focus();
-      // required to prevent handleFocus() callback of DropdownList.
-      event.preventDefault();
-    } else if (event.keyCode === KeyCode.KEY_UP && this.state.isOpen && !this.state.openedViaKeyboard) {
-      // puts focus on last list element on up arrow key press when dropdown is opened by mouse click
-      const lastOption = this.dropdownList.querySelector('[data-terra-dropdown-last-list-item]');
-      lastOption.focus();
+      /*
+        Prevent the callback from being called repeatedly if the RETURN or SPACE key is held down.
+        The keyDown event of native html button triggers Onclick() event on RETURN or SPACE key press.
+        where holding RETURN key for longer time will call dropdownClick() event repeatedly which would cause
+        the dropdown to open and close itself.
+      */
       event.preventDefault();
     }
   }
@@ -114,6 +114,20 @@ class DropdownButton extends React.Component {
   handleKeyUp(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ isActive: false });
+      this.openDropDown(event);
+    } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.openedViaKeyboard) {
+      // set focus to first list element on down arrow key press only when dropdown is opened by mouse click.
+      const listOptions = this.dropdownList.querySelectorAll('[data-terra-dropdown-list-item]');
+      listOptions[0].childNodes[0].focus();
+      // prevent handleFocus() callback of DropdownList.
+      // event.preventDefault();
+    } else if (event.keyCode === KeyCode.KEY_UP && this.state.isOpen && !this.state.openedViaKeyboard) {
+      // set focus to last list element on up arrow key press only when dropdown is opened by mouse click
+      const listOptions = this.dropdownList.querySelectorAll('[data-terra-dropdown-list-item]');
+      listOptions[listOptions.length - 1].focus();
+      event.preventDefault();
+    } else if (event.keyCode === KeyCode.KEY_TAB) {
+      this.handleDropdownRequestClose();
     }
   }
 

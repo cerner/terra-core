@@ -25,6 +25,11 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });
       Terra.validates.screenshot('dropdown button with dropdown open');
     });
+
+    it('prints MetaData of option on click', () => {
+      browser.click('#opt1');
+      Terra.validates.screenshot('MetaData of 1st option', { selector: '#root' });
+    });
   });
 
   describe('Disabled', () => {
@@ -59,7 +64,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('closes dropdown on escape without running a callback', () => {
-      browser.keys(['Tab', 'Escape']);
+      browser.keys(['Escape']);
       Terra.validates.screenshot('escape');
     });
 
@@ -69,7 +74,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('opens the dropdown with space', () => {
-      browser.keys(['Tab', 'Escape', 'Space']);
+      browser.keys(['Escape', 'Space']);
       browser.waitForVisible('[class*=dropdown-list]');
       // Cleanup the open dropdown, after hooks don't work on it blocks
       browser.keys(['Escape']);
@@ -83,17 +88,17 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       });
 
       it('runs callback on space', () => {
-        browser.keys(['Tab', 'Space']);
+        browser.keys(['Space']);
         Terra.validates.screenshot('space');
       });
 
       it('keyboard navigates down and runs callback on space', () => {
-        browser.keys(['Tab', 'ArrowDown', 'Space']);
+        browser.keys(['ArrowDown', 'Space']);
         Terra.validates.screenshot('down arrow');
       });
 
       it('runs callback on enter', () => {
-        browser.keys(['Tab', 'ArrowDown', 'ArrowDown', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'Enter']);
         Terra.validates.screenshot('enter');
       });
 
@@ -103,37 +108,37 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       });
 
       it('will not keyboard navigates down past the last option', () => {
-        browser.keys(['Tab', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
         Terra.validates.screenshot('no down out of bounds');
       });
 
       it('keyboard navigates up and runs callback on enter', () => {
-        browser.keys(['Tab', 'ArrowDown', 'ArrowUp', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowUp', 'Enter']);
         Terra.validates.screenshot('up arrow');
       });
 
       it('will not keyboard navigates up past the first option', () => {
-        browser.keys(['Tab', 'ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
         Terra.validates.screenshot('no up out of bounds');
       });
 
       it('jumps to the last entry', () => {
-        browser.keys(['Tab', 'End', 'Enter']);
+        browser.keys(['End', 'Enter']);
         Terra.validates.screenshot('end');
       });
 
       it('jumps to the first entry', () => {
-        browser.keys(['Tab', 'ArrowDown', 'Home', 'Enter']);
+        browser.keys(['ArrowDown', 'Home', 'Enter']);
         Terra.validates.screenshot('home');
       });
 
       it('jumps when typing', () => {
-        browser.keys(['Tab', 'b', 'Enter']);
+        browser.keys(['b', 'Enter']);
         Terra.validates.screenshot('jumps when typing');
       });
 
       it('closes on tab without running a callback', () => {
-        browser.keys(['Tab', 'Tab']);
+        browser.keys(['Tab']);
         Terra.validates.screenshot('tab');
       });
 
@@ -175,7 +180,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('opens the long option dropdown', () => {
-      browser.keys(['Tab', 'Escape']);
+      browser.keys(['Escape']);
       browser.click('#wide-option');
       Terra.validates.element('Long option open');
     });
@@ -208,19 +213,19 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('opens the top right dropdown', () => {
-      browser.keys('Tab', 'Escape');
+      browser.keys('Escape');
       browser.click('#top-right');
       Terra.validates.element('Top right open');
     });
 
     it('opens the bottom left dropdown', () => {
-      browser.keys('Tab', 'Escape');
+      browser.keys('Escape');
       browser.click('#bottom-left');
       Terra.validates.element('Bottom left open');
     });
 
     it('opens the bottom right dropdown', () => {
-      browser.keys('Tab', 'Escape');
+      browser.keys('Escape');
       browser.click('#bottom-right');
       Terra.validates.element('Bottom right open');
     });

@@ -149,8 +149,7 @@ class DropdownList extends React.Component {
     return React.Children.map(this.props.children, (child, index) => React.cloneElement(child, {
       isActive: index === this.state.active,
       requestClose: this.props.requestClose,
-      ...(index === 0) && { 'data-terra-dropdown-first-list-item': true },
-      ...(index === React.Children.count(this.props.children) - 1) && { 'data-terra-dropdown-last-list-item': true },
+      'data-terra-dropdown-list-item': true,
     }));
   }
 
