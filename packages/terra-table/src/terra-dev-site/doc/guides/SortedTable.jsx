@@ -52,7 +52,7 @@ const SortedTable = () => {
       id: `header-${key}`,
       metaData: { key },
       onSortAction: handleSortClick,
-      isSortDesc: sortColumn.sortDesc,
+      isSortDesc: sortColumn.key === key ? sortColumn.sortDesc : false,
       isSortActive: sortColumn.key === key,
       children: title,
     }
