@@ -42,7 +42,7 @@ const SectionTable = () => {
   return (
     <Table
       summaryId="example-sorted-table"
-      summary="This table shows an implementation of table sorting."
+      summary="This table shows an implementation of sections."
       numberOfColumns={3}
       cellPaddingStyle="standard"
       headerData={{
