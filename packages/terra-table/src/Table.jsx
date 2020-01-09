@@ -408,7 +408,8 @@ const Table = ({
       <VisuallyHiddenText id={summaryId} text={summary} />
       {header}
       {sections ? (
-        <div className={cx(['body'])} role="rowgroup" ref={scrollRefCallback}>
+        /* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */
+        <div className={cx(['body'])} role="rowgroup" ref={scrollRefCallback} tabIndex={fill ? 0 : undefined}>
           {sections}
         </div>
       ) : undefined}

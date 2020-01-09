@@ -277,7 +277,7 @@ exports[`Table should render a Table with divider style - vertical 1`] = `
 exports[`Table should render a Table with fill style 1`] = `
 <div
   aria-describedby="test-id"
-  aria-rowcount={0}
+  aria-rowcount={1}
   className="table fill rounded"
   role="grid"
 >
@@ -285,13 +285,34 @@ exports[`Table should render a Table with fill style 1`] = `
     id="test-id"
     text="Test summary description"
   />
+  <div
+    className="body"
+    role="rowgroup"
+    tabIndex={0}
+  >
+    <Row
+      aria-rowindex={1}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
 </div>
 `;
 
 exports[`Table should render a Table with fill style and scroll ref 1`] = `
 <div
   aria-describedby="test-id"
-  aria-rowcount={0}
+  aria-rowcount={1}
   className="table fill rounded"
   role="grid"
 >
@@ -299,6 +320,27 @@ exports[`Table should render a Table with fill style and scroll ref 1`] = `
     id="test-id"
     text="Test summary description"
   />
+  <div
+    className="body"
+    role="rowgroup"
+    tabIndex={0}
+  >
+    <Row
+      aria-rowindex={1}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
 </div>
 `;
 

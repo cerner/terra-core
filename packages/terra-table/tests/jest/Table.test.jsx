@@ -21,6 +21,16 @@ describe('Table', () => {
         summaryId="test-id"
         numberOfColumns={0}
         fill
+        bodyData={[{
+          rows: [{
+            key: 'row-key',
+            cells: [{
+              key: 'child-cell-key',
+              id: 'child-cell-id',
+              children: 'content',
+            }],
+          }],
+        }]}
       />,
     );
     expect(shallowComponent).toMatchSnapshot();
@@ -34,6 +44,16 @@ describe('Table', () => {
         numberOfColumns={0}
         fill
         scrollRefCallback={jest.fn()}
+        bodyData={[{
+          rows: [{
+            key: 'row-key',
+            cells: [{
+              key: 'child-cell-key',
+              id: 'child-cell-id',
+              children: 'content',
+            }],
+          }],
+        }]}
       />,
     );
     expect(shallowComponent).toMatchSnapshot();
