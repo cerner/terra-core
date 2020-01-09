@@ -147,8 +147,6 @@ class SplitButton extends React.Component {
 
   handleCaretKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      // In FireFox active styles don't get applied onKeyDown
-      this.setState({ caretIsActive: true });
       /*
         Prevent the callback from being called repeatedly if the RETURN or SPACE key is held down.
         The keyDown event of native html button triggers Onclick() event on RETURN or SPACE key press.
@@ -156,13 +154,8 @@ class SplitButton extends React.Component {
         the dropdown to open and close itself.
       */
       event.preventDefault();
-    }
-  }
-
-  handleCaretKeyUp(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ caretIsActive: false, openedViaKeyboard: true });
-      this.openDropDown(event);
+      // In FireFox active styles don't get applied onKeyDown
+      this.setState({ caretIsActive: true });
     } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.openedViaKeyboard) {
       // set focus to first list element on down arrow key press only when dropdown is opened by mouse click.
       const listOptions = this.dropdownList.querySelectorAll('[data-terra-dropdown-list-item]');
@@ -176,6 +169,13 @@ class SplitButton extends React.Component {
       event.preventDefault();
     } else if (event.keyCode === KeyCode.KEY_TAB) {
       this.handleDropdownRequestClose();
+    }
+  }
+
+  handleCaretKeyUp(event) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
+      this.setState({ caretIsActive: false, openedViaKeyboard: true });
+      this.openDropDown(event);
     }
   }
 

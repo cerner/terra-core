@@ -121,17 +121,17 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('runs callback on space', () => {
-        browser.keys(['Space']);
+        browser.keys(['ArrowDown', 'Space']);
         Terra.validates.screenshot('space');
       });
 
       it('keyboard navigates down and runs callback on space', () => {
-        browser.keys(['ArrowDown', 'Space']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'Space']);
         Terra.validates.screenshot('down arrow');
       });
 
       it('runs callback on enter', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'Enter']);
         Terra.validates.screenshot('enter');
       });
 
@@ -141,22 +141,22 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('will not keyboard navigates down past the last option', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
         Terra.validates.screenshot('no down out of bounds');
       });
 
       it('keyboard navigates up and runs callback on enter', () => {
-        browser.keys(['ArrowDown', 'ArrowUp', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'Enter']);
         Terra.validates.screenshot('up arrow');
       });
 
       it('will not keyboard navigates up past the first option', () => {
-        browser.keys(['ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
         Terra.validates.screenshot('no up out of bounds');
       });
 
       it('jumps to the last entry', () => {
-        browser.keys(['End', 'Enter']);
+        browser.keys(['ArrowDown', 'End', 'Enter']);
         Terra.validates.screenshot('end');
       });
 
@@ -166,7 +166,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('jumps when typing', () => {
-        browser.keys(['b', 'Enter']);
+        browser.keys(['ArrowDown', 'b', 'Enter']);
         Terra.validates.screenshot('jumps when typing');
       });
 
@@ -194,7 +194,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     it('does not reopen the dropdown when open and closed with keyboard interactions', () => {
-      browser.keys(['Enter']);
+      browser.keys(['Tab', 'Enter']);
       browser.waitForVisible('[class*=dropdown-list]');
 
       browser.keys(['Enter']);

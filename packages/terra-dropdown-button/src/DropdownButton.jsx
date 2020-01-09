@@ -88,7 +88,6 @@ class DropdownButton extends React.Component {
     if (this.state.isOpen) {
       this.setState({ openedViaKeyboard: false });
     }
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
     this.openDropDown(event);
   }
 
@@ -99,8 +98,6 @@ class DropdownButton extends React.Component {
 
   handleKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      // In FireFox active styles don't get applied on space
-      this.setState({ isActive: true, openedViaKeyboard: true });
       /*
         Prevent the callback from being called repeatedly if the RETURN or SPACE key is held down.
         The keyDown event of native html button triggers Onclick() event on RETURN or SPACE key press.
@@ -108,13 +105,8 @@ class DropdownButton extends React.Component {
         the dropdown to open and close itself.
       */
       event.preventDefault();
-    }
-  }
-
-  handleKeyUp(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ isActive: false });
-      this.openDropDown(event);
+      // In FireFox active styles don't get applied on space
+      this.setState({ isActive: true });
     } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.openedViaKeyboard) {
       // set focus to first list element on down arrow key press only when dropdown is opened by mouse click.
       const listOptions = this.dropdownList.querySelectorAll('[data-terra-dropdown-list-item]');
@@ -128,6 +120,13 @@ class DropdownButton extends React.Component {
       event.preventDefault();
     } else if (event.keyCode === KeyCode.KEY_TAB) {
       this.handleDropdownRequestClose();
+    }
+  }
+
+  handleKeyUp(event) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
+      this.setState({ isActive: false, openedViaKeyboard: true });
+      this.openDropDown(event);
     }
   }
 

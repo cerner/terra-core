@@ -14,8 +14,7 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
   }
 >
   <Item
-    data-terra-dropdown-first-list-item={true}
-    data-terra-dropdown-last-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".0"
     label="1st Option"
@@ -39,7 +38,7 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
   }
 >
   <Item
-    data-terra-dropdown-first-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".0"
     label="1st Option"
@@ -47,6 +46,7 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
     requestClose={[Function]}
   />
   <Item
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".1"
     label="2nd Option"
@@ -54,7 +54,7 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
     requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-last-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".2"
     label="3rd Option"
@@ -78,7 +78,7 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
   }
 >
   <Item
-    data-terra-dropdown-first-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".0"
     label="1st Option"
@@ -86,6 +86,7 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
     requestClose={[Function]}
   />
   <Item
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".1"
     label="2nd Option"
@@ -93,7 +94,7 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
     requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-last-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".2"
     label="3rd Option"
@@ -117,7 +118,7 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
   }
 >
   <Item
-    data-terra-dropdown-first-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".0"
     label="1st Option"
@@ -125,6 +126,7 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
     requestClose={[Function]}
   />
   <Item
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".1"
     label="2nd Option"
@@ -132,7 +134,7 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
     requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-last-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".2"
     label="3rd Option"
@@ -156,8 +158,7 @@ exports[`Dropdown List renders a dropdown list with a set width 1`] = `
   }
 >
   <Item
-    data-terra-dropdown-first-list-item={true}
-    data-terra-dropdown-last-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".0"
     label="1st Option"
@@ -181,7 +182,7 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
   }
 >
   <Item
-    data-terra-dropdown-first-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".0"
     label="1st Option"
@@ -189,6 +190,7 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
     requestClose={[Function]}
   />
   <Item
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".1"
     label="2nd Option"
@@ -196,7 +198,7 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
     requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-last-list-item={true}
+    data-terra-dropdown-list-item={true}
     isActive={false}
     key=".2"
     label="3rd Option"
