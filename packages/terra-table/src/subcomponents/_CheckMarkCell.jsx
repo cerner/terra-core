@@ -63,10 +63,6 @@ const propTypes = {
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
-  onFocus: PropTypes.func,
-  /**
-   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
-   */
   onClick: PropTypes.func,
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
@@ -96,7 +92,6 @@ const CheckMarkCell = ({
   label,
   metaData,
   onBlur,
-  onFocus,
   onClick,
   onKeyDown,
   onMouseDown,
@@ -118,14 +113,9 @@ const CheckMarkCell = ({
       attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
       attrSpread.tabIndex = '0';
       attrSpread['data-cell-show-focus'] = 'true';
-      // This index switching is required for reverse tabbing with the Safari browser.
-      attrSpread.onFocus = wrappedEventCallback(onFocus, event => {
-        event.currentTarget.setAttribute('tabindex', -1);
-      });
       attrSpread.onBlur = wrappedEventCallback(onBlur, event => {
         event.stopPropagation();
         event.currentTarget.setAttribute('data-cell-show-focus', 'true');
-        event.currentTarget.setAttribute('tabindex', 0);
       });
       attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => {
         event.stopPropagation();
