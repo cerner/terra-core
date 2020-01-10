@@ -116,4 +116,23 @@
     padding: 0;
     width: 0;
   }
+
+  // -----------------------
+  // Delete entry after IE support is dropped. IE doesn't support outline-offset, so this mimics it.
+  // -----------------------
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .is-interactable[data-cell-show-focus='true']:focus {
+      outline: none;
+
+      &::before {
+        border: var(--terra-table-header-checkmark-cell-ie-focus-before-border, 2px dashed #2a4b77);
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
 }

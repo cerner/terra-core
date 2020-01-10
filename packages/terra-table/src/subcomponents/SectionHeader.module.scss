@@ -15,10 +15,6 @@
       margin-top: var(--terra-table-section-header-first-margin-top, -1px);
     }
 
-    &:last-of-type {
-      margin-bottom: var(--terra-table-section-header-last-margin-bottom, -1px);
-    }
-
     + div {
       border-top: var(--terra-table-section-header-next-border-top, 1px solid #b2b5b6) !important;
     }
@@ -100,6 +96,29 @@
     // tells the rtl postcss plugin to not transform this by default
     [dir] &.is-open {
       transform: rotate(90deg);
+    }
+  }
+
+  // -----------------------
+  // Delete entry after IE support is dropped. IE doesn't support outline-offset, so this mimics it.
+  // -----------------------
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .is-collapsible {
+      .section-content[data-row-show-focus='true']:focus {
+        outline: none;
+
+        // stylelint-disable-next-line max-nesting-depth
+        &::before {
+          border: var(--terra-table-section-header-ie-focus-before-border, 2px solid #2a4b77);
+          bottom: 0;
+          content: '';
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 2;
+        }
+      }
     }
   }
 }

@@ -1,9 +1,14 @@
 :local {
   // Standard block display
   // ----------------------
+  .rounded {
+    border: var(--terra-table-border, 1px solid #dedfe0);
+    border-radius: var(--terra-table-border-radius, 3px);
+  }
+
   .table {
     background-color: var(--terra-table-background-color, transparent);
-    border-bottom: var(--terra-table-border-bottom, 1px solid #dedfe0);
+    border-bottom: 0;
     overflow: hidden;
   }
 
@@ -25,14 +30,10 @@
     display: flex;
   }
 
-  .rounded {
-    border: var(--terra-table-border, 1px solid #dedfe0);
-    border-radius: var(--terra-table-border-radius, 3px);
-  }
-
   // Modifiers:
   // ----------------------
   .fill { 
+    border-bottom: var(--terra-table-border-bottom, 1px solid #dedfe0);
     display: flex;
     flex-direction: column;
     height: 100%;

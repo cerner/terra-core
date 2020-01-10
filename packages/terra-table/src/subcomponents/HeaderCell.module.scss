@@ -107,4 +107,23 @@
     padding-right: var(--terra-table-header-cell-compact-padding-right, 0.7142857143rem);
     padding-top: var(--terra-table-header-cell-compact-padding-top, 0.35715rem);
   }
+
+  // -----------------------
+  // Delete entry after IE support is dropped. IE doesn't support outline-offset, so this mimics it.
+  // -----------------------
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .is-interactable[data-header-show-focus='true']:focus {
+      outline: none;
+
+      &::before {
+        border: var(--terra-table-header-cell-ie-focus-before-border, 2px solid #2a4b77);
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
 }

@@ -98,6 +98,7 @@ const HeaderCell = ({
   if (onSortAction || isSortActive) {
     sortIndicator = (
       <div
+        aria-hidden="true"
         key="sort"
         className={cx(
           `sort-indicator-${isSortDesc ? 'desc' : 'asc'}`,

@@ -35,11 +35,10 @@
       &:first-of-type {
         margin-top: var(--terra-table-row-divider-first-margin-top, -1px);
       }
+    }
 
-      &:last-of-type {
-        border-bottom: var(--terra-table-row-divider-border-bottom, 1px solid #dedfe0);
-        margin-bottom: var(--terra-table-row-divider-last-margin-bottom, -1px);
-      }
+    &:last-of-type {
+      border-bottom: var(--terra-table-row-divider-border-bottom, 1px solid #dedfe0);
     }
   }
 
@@ -129,6 +128,25 @@
   @media print {
     .row {
       page-break-inside: avoid; // stylelint-disable-line plugin/no-unsupported-browser-features
+    }
+  }
+  
+  // -----------------------
+  // Delete entry after IE support is dropped. IE doesn't support outline-offset, so this mimics it.
+  // -----------------------
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .is-selectable[data-row-show-focus='true']:focus {
+      outline: none;
+
+      &::before {
+        border: var(--terra-table-row-ie-focus-before-border, 2px solid #2a4b77);
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
     }
   }
 }
