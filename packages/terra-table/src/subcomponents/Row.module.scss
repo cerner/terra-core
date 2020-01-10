@@ -69,12 +69,15 @@
   .is-selected {
     background-color: var(--terra-table-row-selected-background-color, darken(#ebf6fd, 2%));
 
-    &.row {
-      border-color: var(--terra-table-row-selected-border-color, #0092e0);
-    }
+    &.divider-horizontal,
+    &.divider-both {
+      &.row {
+        border-color: var(--terra-table-row-selected-border-color, #0092e0);
+      }
 
-    + .row {
-      border-top-color: var(--terra-table-row-selected-border-top-color, #0092e0);
+      + .row {
+        border-top-color: var(--terra-table-row-selected-border-top-color, #0092e0);
+      }
     }
   } 
 
@@ -93,14 +96,12 @@
 
     &:active,
     &:hover {
-      border-color: var(--terra-table-row-active-hover-border-color, #ccc);
+      &.row {
+        border-color: var(--terra-table-row-active-hover-border-color, #ccc);
+      }
 
       &:last-of-type {
         border-bottom-color: var(--terra-table-row-active-hover-border-bottom-color, #ccc);
-      }
-
-      > * {
-        border-bottom-color: var(--terra-table-row-active-hover-child-border-bottom-color, #ccc);
       }
 
       + .row {

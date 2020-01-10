@@ -44,6 +44,7 @@ const MultiSelectTable = () => {
       rowStyle="toggle"
       numberOfColumns={4}
       cellPaddingStyle="standard"
+      dividerStyle="both"
       headerData={{
         selectAllColumn: {
           checkLabel: 'Multi Selection',
