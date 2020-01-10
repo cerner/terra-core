@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
@@ -107,33 +107,27 @@ const Alert = ({
   type,
   ...customProps
 }) => {
+  const [isNarrow, setIsNarrow] = useState();
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
   const attributes = { ...customProps };
-  const narrowAlertClassNames = cx([
+  const alertClassNames = cx([
     'alert-base',
     type,
-    'narrow',
-    attributes.className,
-    { [`${customColorClass}`]: type === AlertTypes.CUSTOM },
-  ]);
-  const wideAlertClassNames = cx([
-    'alert-base',
-    type,
-    'wide',
+    { narrow: isNarrow },
+    { wide: !isNarrow },
     attributes.className,
     { [`${customColorClass}`]: type === AlertTypes.CUSTOM },
   ]);
 
+  const bodyClassNameForParent = cx([
+    'body',
+    { 'body-std': !isNarrow || (isNarrow && !onDismiss && !action) },
+    { 'body-narrow': isNarrow && (onDismiss || action) },
+  ]);
   let actionsSection = '';
   let dismissButton = '';
-  let alertSectionClassName = cx('section');
-  let actionsClassName = cx('actions');
-  let bodyClassNameForNarrowParent = cx(['body', 'body-std']);
-
-  if (type === AlertTypes.CUSTOM) {
-    alertSectionClassName = cx(['section', 'section-custom']);
-    actionsClassName = cx(['actions', 'actions-custom']);
-  }
+  const alertSectionClassName = cx(['section', { 'section-custom': type === AlertTypes.CUSTOM }]);
+  const actionsClassName = cx(['actions', { 'actions-custom': type === AlertTypes.CUSTOM }]);
 
   if (onDismiss) {
     dismissButton = (
@@ -145,7 +139,6 @@ const Alert = ({
     );
   }
   if (onDismiss || action) {
-    bodyClassNameForNarrowParent = cx(['body', 'body-narrow']);
     actionsSection = (
       <div className={actionsClassName}>
         {action}
@@ -163,25 +156,21 @@ const Alert = ({
 
   return (
     <ResponsiveElement
-      tiny={(
-        <div {...attributes} className={narrowAlertClassNames}>
-          <div className={bodyClassNameForNarrowParent}>
-            {getAlertIcon(type, customIcon)}
-            {alertMessageContent}
-          </div>
-          {actionsSection}
+      onChange={(value) => {
+        const showNarrowAlert = value === 'tiny';
+        if (showNarrowAlert !== isNarrow) {
+          setIsNarrow(showNarrowAlert);
+        }
+      }}
+    >
+      <div {...attributes} className={alertClassNames}>
+        <div className={bodyClassNameForParent}>
+          {getAlertIcon(type, customIcon)}
+          {alertMessageContent}
         </div>
-      )}
-      small={(
-        <div {...attributes} className={wideAlertClassNames}>
-          <div className={cx(['body', 'body-std'])}>
-            {getAlertIcon(type, customIcon)}
-            {alertMessageContent}
-          </div>
-          {actionsSection}
-        </div>
-      )}
-    />
+        {actionsSection}
+      </div>
+    </ResponsiveElement>
 
   );
 };
