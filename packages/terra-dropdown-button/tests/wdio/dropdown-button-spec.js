@@ -156,7 +156,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('does not reopen the dropdown when open and closed with keyboard interactions', () => {
-      browser.keys(['Tab', 'Enter']);
+      browser.keys(['Enter']);
       browser.waitForVisible('[class*=dropdown-list]');
 
       browser.keys(['Enter']);
