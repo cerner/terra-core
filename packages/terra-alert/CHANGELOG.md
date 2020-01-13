@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Fixed Inconsistent height and custom color issue in `orion-fusion-theme`.
+
 ### Changed
 * Updated `uncontrolled responsive-element` to `controlled responsive-element`.
 
