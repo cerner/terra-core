@@ -3,8 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
-### Fixed
-* Fixed logic error that caused programmatically set values not be saved for searches
+### Added
+* Added onInput prop.
 
 ### Changed
 * Updated wdio screenshots
