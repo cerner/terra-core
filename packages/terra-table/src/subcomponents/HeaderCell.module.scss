@@ -71,7 +71,7 @@
 
     &[data-header-show-focus='true']:focus {
       background-color: var(--terra-table-header-cell-focus-background-color);
-      outline: var(--terra-table-header-cell-focus-outline, 2px solid #2a4b77);
+      outline: var(--terra-table-header-cell-focus-outline, 2px dashed #000);
       outline-offset: var(--terra-table-header-cell-focus-outline-offset, -2px);
       z-index: 1;
     }
@@ -116,7 +116,7 @@
       outline: none;
 
       &::before {
-        border: var(--terra-table-header-cell-ie-focus-before-border, 2px solid #2a4b77);
+        border: var(--terra-table-header-cell-ie-focus-before-border, 2px dashed #000);
         bottom: 0;
         content: '';
         left: 0;

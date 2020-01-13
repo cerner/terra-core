@@ -148,10 +148,24 @@
   --terra-table-row-focus-outline-offset: -2px;
   --terra-table-row-selected-focus-background-color: #fff;
   --terra-table-row-selected-hover-background-color: #cbe7fa;
-  --terra-table-row-active-hover-border-color: #3a67a4;
-  --terra-table-row-active-hover-border-bottom-color: #3a67a4;
-  --terra-table-row-active-hover-child-border-bottom-color: #3a67a4;
-  --terra-table-row-active-hover-border-top-color: #3a67a4;
+  --terra-table-checkmark-cell-ie-focus-before-border: 0;
+  --terra-table-row-striped-hover-background-image: none;
+  --terra-table-row-striped-hover-box-shadow: none;
+  --terra-table-row-striped-selected-hover-background-image: none;
+  --terra-table-row-striped-selected-hover-box-shadow: none;
+  --terra-table-row-hover-box-shadow: none;
+  --terra-table-row-selected-hover-background-image: none;
+  --terra-table-row-selected-hover-box-shadow: none;
+  --terra-table-row-active-box-shadow: none;
+  --terra-table-row-active-hover-border-top-color: #4983d1;
+  --terra-table-row-active-hover-last-border-bottom-color: #4983d1;
+  --terra-table-row-active-hover-last-border-top-color: #4983d1;
+  --terra-table-row-active-hover-next-border-top-color: #4983d1;
+  --terra-table-row-active-hover-next-selected-border-top-color: #3a67a4;
+  --terra-table-row-selected-active-hover-border-top-color: #3a67a4;
+  --terra-table-row-selected-active-hover-last-border-bottom-color: #3a67a4;
+  --terra-table-row-selected-active-hover-last-border-top-color: #3a67a4;
+  --terra-table-row-selected-active-hover-next-border-top-color: #3a67a4;
 
   // SectionHeader
   --terra-table-section-header-background-color: rgba(89, 159, 253, 0.1);

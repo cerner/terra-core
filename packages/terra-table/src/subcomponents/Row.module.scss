@@ -18,7 +18,7 @@
     &.divider-vertical,
     &.divider-both {
       > * {
-        border-right: var(--terra-table-row-divider-child-border-right, 1px solid #ccc);
+        border-right: var(--terra-table-row-divider-child-border-right, 1px solid #dedfe0);
   
         /* stylelint-disable max-nesting-depth */
         &:last-of-type {
@@ -46,14 +46,18 @@
     background-color: var(--terra-table-row-striped-background-color, #f4f4f4);
 
     &.is-selected {
-      background-color: var(--terra-table-row-striped-selected-background-color, darken(#ebf6fd, 7%));
+      background-color: var(--terra-table-row-striped-selected-background-color, #e1f3fd);
     }
 
     &.is-selectable:hover {
-      background-color: var(--terra-table-row-striped-hover-background-color, darken(#ebf6fd, 2%));
+      background-color: var(--terra-table-row-striped-hover-background-color, #f4fefe);
+      background-image: var(--terra-table-row-striped-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
+      box-shadow: var(--terra-table-row-striped-hover-box-shadow, inset 0 0 0 1px #fff);
 
       &.is-selected {
-        background-color: var(--terra-table-row-striped-selected-hover-background-color, darken(#ebf6fd, 12%)) !important;
+        background-color: var(--terra-table-row-striped-selected-hover-background-color, #d1ebfb);
+        background-image: var(--terra-table-row-striped-selected-hover-background-image, linear-gradient(to bottom, #b3ddf8 2%, #c8e9fe 30%, #d1ebfb 80%));
+        box-shadow: var(--terra-table-row-striped-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
       }
     }
 
@@ -61,13 +65,13 @@
       background-color: var(--terra-table-row-striped-focus-background-color, #f4f4f4);
 
       &.is-selected {
-        background-color: var(--terra-table-row-striped-selected-focus-background-color, darken(#ebf6fd, 7%));
+        background-color: var(--terra-table-row-striped-selected-focus-background-color, #e1f3fd);
       }
     }
   }
 
   .is-selected {
-    background-color: var(--terra-table-row-selected-background-color, darken(#ebf6fd, 2%));
+    background-color: var(--terra-table-row-selected-background-color, #e1f3fd);
 
     &.divider-horizontal,
     &.divider-both {
@@ -86,42 +90,73 @@
     outline: none;
 
     &:hover {
-      background-color: var(--terra-table-row-hover-background-color, lighten(#ebf6fd, 2%));
-      background-image: var(--terra-table-row-hover-background-image);
+      background-color: var(--terra-table-row-hover-background-color, #f4fefe);
+      background-image: var(--terra-table-row-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
+      box-shadow: var(--terra-table-row-hover-box-shadow, inset 0 0 0 1px #fff);
     }
 
     &.is-selected:hover {
-      background-color: var(--terra-table-row-selected-hover-background-color, darken(#ebf6fd, 7%));
+      background-color: var(--terra-table-row-selected-hover-background-color, #d1ebfb);
+      background-image: var(--terra-table-row-selected-hover-background-image, linear-gradient(to bottom, #b3ddf8 2%, #c8e9fe 30%, #d1ebfb 80%));
+      box-shadow: var(--terra-table-row-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
     }
 
     &:active,
     &:hover {
       &.row {
-        border-color: var(--terra-table-row-active-hover-border-color, #ccc);
+        border-top-color: var(--terra-table-row-active-hover-border-top-color, #58b1e0);
       }
 
       &:last-of-type {
-        border-bottom-color: var(--terra-table-row-active-hover-border-bottom-color, #ccc);
+        border-bottom-color: var(--terra-table-row-active-hover-last-border-bottom-color, #dedfe0);
+        border-top-color: var(--terra-table-row-active-hover-last-border-top-color, #58b1e0);
       }
 
+      + .row:not(.is-selected) {
+        border-top-color: var(--terra-table-row-active-hover-next-border-top-color, #97c6df);
+      }
+
+      + .row.is-selected {
+        border-top-color: var(--terra-table-row-active-hover-next-selected-border-top-color, #0092e0);
+      }
+    }
+    
+    &.is-selected:active, 
+    &.is-selected:hover {
+      &.row {
+        border-top-color: var(--terra-table-row-selected-active-hover-border-top-color, #0092e0);
+      }
+  
+      &:last-of-type {
+        border-bottom-color: var(--terra-table-row-selected-active-hover-last-border-bottom-color, #0092e0);
+        border-top-color: var(--terra-table-row-selected-active-hover-last-border-top-color, #0092e0);
+      }
+  
       + .row {
-        border-top-color: var(--terra-table-row-active-hover-border-top-color, #ccc);
+        border-top-color: var(--terra-table-row-selected-active-hover-next-border-top-color, #0092e0);
       }
     }
 
     &[data-row-show-focus='false']:active {
-      background-color: var(--terra-table-row-active-background-color, rgba(89, 159, 253, 0.4));
+      background-color: var(--terra-table-row-active-background-color, #e1f3fd);
       background-image: var(--terra-table-row-active-background-image);
+      box-shadow: var(---terra-table-row-active-box-shadow, inset 0 0 0 1px #fff);
+      
+      &.is-selected {
+        background-color: var(--terra-table-row-selected-active-background-color, #c8e9fe);
+        background-image: var(--terra-table-row-selected-active-background-image);
+        box-shadow: var(---terra-table-row-selected-active-box-shadow, inset 0 0 0 1px #e1f3fd);
+      }
     }
 
     &[data-row-show-focus='true']:focus {
       background-color: var(--terra-table-row-focus-background-color);
-      outline: var(--terra-table-row-focus-outline, 2px solid #2a4b77);
+      outline: var(--terra-table-row-focus-outline, 2px dashed #000);
       outline-offset: var(--terra-table-row-focus-outline-offset, -2px);
       z-index: 1;
 
       &.is-selected {
-        background-color: var(--terra-table-row-selected-focus-background-color, darken(#ebf6fd, 7%));
+        background-color: var(--terra-table-row-selected-focus-background-color, #e1f3fd);
       }
     }
   }
@@ -140,7 +175,7 @@
       outline: none;
 
       &::before {
-        border: var(--terra-table-row-ie-focus-before-border, 2px solid #2a4b77);
+        border: var(--terra-table-row-ie-focus-before-border, 2px dashed #000);
         bottom: 0;
         content: '';
         left: 0;
