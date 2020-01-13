@@ -229,12 +229,12 @@ class Menu extends React.Component {
       }
     }
 
-    const optGroupLabel = MenuUtil.getOptGroupLabel(this.props.children, this.state.active);
+    const optGroupElement = MenuUtil.getOptGroupElement(this.props.children, this.state.active);
     const element = MenuUtil.findByValue(this.props.children, this.state.active);
 
     let displayText;
-    if (optGroupLabel) {
-      displayText = `Group ${optGroupLabel.props.label}, ${element.props.display}`;
+    if (optGroupElement) {
+      displayText = `Group ${optGroupElement.props.label}, ${element.props.display}`;
     } else {
       displayText = element.props.display;
     }

@@ -128,11 +128,11 @@ class MenuUtil {
 
   /**
    * Finds the parent optGroup element matching the requested value.
-   * @param {ReactNode} object - The node being flattened.
+   * @param {ReactNode} object - The node being searched.
    * @param {string} value - The value of the target option.
-   * @return {ReactNode|undefined} - The option. Returns undefined if not found.
+   * @return {ReactNode|undefined} - The optGroup. Returns undefined if not found.
    */
-  static getOptGroupLabel(object, value) {
+  static getOptGroupElement(object, value) {
     return React.Children.toArray(object).find(element => element.type.isOptGroup && element.props.children.find(chidleElement => chidleElement.props.value === value));
   }
 
