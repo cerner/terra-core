@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Fixed axe violation for keyboard accessibility.
 
+3.22.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
 3.21.0 - (December 3, 2019)
 ------------------
 ### Added

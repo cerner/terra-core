@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Axe violation fixed for scrollable content.
 
+2.21.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
 2.20.0 - (December 3, 2019)
 ------------------
 ### Added
