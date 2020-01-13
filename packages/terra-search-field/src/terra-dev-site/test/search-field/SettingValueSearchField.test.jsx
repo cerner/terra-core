@@ -9,12 +9,14 @@ class CallbackSearchField extends React.Component {
     this.state = {
       searchText: '',
       message: '',
-      returnedText: '',
+      text: 'Banana',
     };
 
     this.handleSearch = this.handleSearch.bind(this);
     this.handleInvalidSearch = this.handleInvalidSearch.bind(this);
     this.setTextClick = this.setTextClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleInput = this.handleInput.bind(this);
   }
 
   handleSearch(searchText) {
@@ -25,9 +27,30 @@ class CallbackSearchField extends React.Component {
     this.setState({ searchText, message: 'INVALID Search Text: ' });
   }
 
+  handleChange(event, text) {
+    this.setState({ text });
+  }
+
+  handleInput(event, text) {
+    this.setState({ text });
+  }
+
   setTextClick() {
     if (this.searchInput) {
-      setTimeout(() => { this.searchInput.value = "Set Search Text"; }, 1000);
+      setTimeout(() => {
+        this.searchInput.value = "Set Search Text";
+        let customEvent;
+        if (typeof (Event) === 'function') {
+          customEvent = new Event('input', {
+            bubbles: true,
+            cancelable: false,
+          });
+        } else {
+          customEvent = document.createEvent('Event');
+          customEvent.initEvent('input', true, false);
+        }
+        this.searchInput.dispatchEvent(customEvent);
+      }, 1000);
     }
   }
 
@@ -40,7 +63,10 @@ class CallbackSearchField extends React.Component {
           id="searchfield"
           onSearch={this.handleSearch}
           onInvalidSearch={this.handleInvalidSearch}
+          onChange={this.handleChange}
+          onInput={this.handleInput}
           minimumSearchTextLength={3}
+          value={this.state.text}
           inputRefCallback={(inputRef) => { this.searchInput = inputRef; }}
         />
         <Button text="Set search field text" onClick={this.setTextClick} id="search-field-set-text-button" />

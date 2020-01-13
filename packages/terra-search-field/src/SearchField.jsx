@@ -61,6 +61,11 @@ const propTypes = {
   onChange: PropTypes.func,
 
   /**
+   * Function to trigger when user inputs an value.
+   */
+  onInput: PropTypes.func,
+
+  /**
    * A callback to indicate an invalid search. Sends parameter {String} searchText.
    */
   onInvalidSearch: PropTypes.func,
@@ -84,15 +89,6 @@ const propTypes = {
    * The value of search field.  Use this to create a controlled search field.
    */
   value: PropTypes.string,
-
-  /**
-   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
-   */
-  onBlur: PropTypes.func,
-  /**
-   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
-   */
-  onFocus: PropTypes.func,
 };
 
 const defaultProps = {
@@ -115,13 +111,17 @@ class SearchField extends React.Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.handleFocus = this.handleFocus.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
+    this.handleInput = this.handleInput.bind(this);
     this.setInputRef = this.setInputRef.bind(this);
 
     this.searchTimeout = null;
     this.clearInterval = null;
-    this.state = { clearButton: this.inputRef && this.inputRef.value && !isDisabled };
+    this.state = { searchText: this.props.defaultValue || this.props.value };
+  }
+
+  componentDidUpdate() {
+    // if consumer updates the value prop with onChange, need to update state to match
+    this.updateSearchText(this.props.value);
   }
 
   componentWillUnmount() {
@@ -144,7 +144,7 @@ class SearchField extends React.Component {
     if (this.props.onInvalidSearch) {
       this.props.onInvalidSearch('');
     }
-    this.setState({ clearButton: false });
+    this.setState({ searchText: '' });
 
     // Clear input field
     if (this.inputRef) {
@@ -154,7 +154,9 @@ class SearchField extends React.Component {
   }
 
   handleTextChange(event) {
+    console.log('Change fired');
     const textValue = event.target.value;
+    this.updateSearchText(textValue);
 
     if (this.props.onChange) {
       this.props.onChange(event, textValue);
@@ -162,6 +164,24 @@ class SearchField extends React.Component {
 
     if (!this.searchTimeout && !this.props.disableAutoSearch) {
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
+    }
+  }
+
+  updateSearchText(searchText) {
+    console.log(`searchText ${searchText}`)
+    console.log(`current value ${this.inputRef.value}`)
+    if (searchText !== undefined && searchText !== this.state.searchText) {
+      this.setState({ searchText });
+    }
+  }
+
+  handleInput(event) {
+    console.log('Input fired');
+    const textValue = event.target.value;
+    this.updateSearchText(textValue);
+
+    if (this.props.onInput) {
+      this.props.onInput(event, textValue);
     }
   }
 
@@ -174,40 +194,10 @@ class SearchField extends React.Component {
     }
   }
 
-  handleFocus(event) {
-    this.clearInterval = setInterval(() => {
-      if(this.inputRef && !this.props.isDisabled) {
-        if(this.inputRef.value && !this.state.clearButton) {
-          this.setState({ clearButton: true });
-          this.forceUpdate();
-        }
-        else if(!this.inputRef.value && this.state.clearButton) {
-          this.setState({ clearButton: false });
-          this.forceUpdate();
-        }
-      }
-    }, 200);
-
-    if (this.props.onFocus) {
-      this.props.onFocus(event);
-    }
-  }
-
-  handleBlur(event) {
-    if (this.clearInterval) {
-      clearInterval(this.clearInterval);
-      this.clearInterval = null;
-    }
-
-    if (this.props.onBlur) {
-      this.props.onBlur(event);
-    }
-  }
-
   handleSearch() {
     this.clearSearchTimeout();
 
-    const searchText = (this.inputRef && this.inputRef.value) || '';
+    const searchText = this.state.searchText || '';
 
     if (searchText.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
       this.props.onSearch(searchText);
@@ -233,9 +223,8 @@ class SearchField extends React.Component {
       isBlock,
       isDisabled,
       minimumSearchTextLength,
-      onBlur,
       onChange,
-      onFocus,
+      onInput,
       onInvalidSearch,
       onSearch,
       placeholder,
@@ -263,7 +252,7 @@ class SearchField extends React.Component {
       additionalInputAttributes.defaultValue = defaultValue;
     }
 
-    const clearButton = this.inputRef && this.inputRef.value && !isDisabled
+    const clearButton = this.state.searchText && !isDisabled
       ? (
         <Button
           className={cx('clear')}
@@ -288,8 +277,7 @@ class SearchField extends React.Component {
             ariaLabel={inputText}
             aria-disabled={isDisabled}
             onKeyDown={this.handleKeyDown}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
+            onInput={this.handleInput}
             refCallback={this.setInputRef}
             {...additionalInputAttributes}
           />
