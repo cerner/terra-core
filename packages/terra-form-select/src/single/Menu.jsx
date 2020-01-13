@@ -229,16 +229,25 @@ class Menu extends React.Component {
       }
     }
 
+    const optGroupLabel = MenuUtil.getOptGroupLabel(this.props.children, this.state.active);
     const element = MenuUtil.findByValue(this.props.children, this.state.active);
+
+    let displayText;
+    if (optGroupLabel) {
+      displayText = `Group ${optGroupLabel.props.label}, ${element.props.display}`;
+    } else {
+      displayText = element.props.display;
+    }
+
     if (element) {
       if (element.props.display === '' && element.props.value === '') {
         // Used for case where users selects clear option and opens
         // dropdown again and navigates to clear option
         visuallyHiddenComponent.current.innerText = clearSelectTxt;
       } else if (this.isActiveSelected()) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: element.props.display });
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText });
       } else {
-        visuallyHiddenComponent.current.innerText = element.props.display;
+        visuallyHiddenComponent.current.innerText = displayText;
       }
     }
   }

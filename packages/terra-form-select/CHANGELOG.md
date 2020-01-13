@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed Option Group labels not read on desktop screen readers.
 
 5.39.0 - (January 7, 2020)
 ------------------
