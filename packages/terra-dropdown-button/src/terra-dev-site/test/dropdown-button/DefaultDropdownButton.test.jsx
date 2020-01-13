@@ -10,15 +10,15 @@ const DefaultDropdownButton = () => {
 
   return (
     <div className={cx('container-spacing-wrapper')}>
-      <p>
-        MetaData of :
-        {message}
-      </p>
       <DropdownButton label="Dropdown" id="dropdown">
         <Item id="opt1" label="1st" metaData={{ key: '1st Option' }} onSelect={(event, metaData) => { setMessage(` ${metaData.key}`); }} />
         <Item id="opt2" label="2nd" metaData={{ key: '2nd Option' }} onSelect={(event, metaData) => { setMessage(` ${metaData.key}`); }} />
         <Item id="opt3" label="3rd" metaData={{ key: '3rd Option' }} onSelect={(event, metaData) => { setMessage(` ${metaData.key}`); }} />
       </DropdownButton>
+      <p>
+        MetaData of :
+        {message}
+      </p>
     </div>
   );
 };

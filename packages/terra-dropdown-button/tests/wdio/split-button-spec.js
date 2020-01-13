@@ -10,7 +10,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
     it('validates primary button focus styling', () => {
       // Tab then Shift-Tab to get focus styles to appear on primary button
-      browser.keys(['Tab', 'Shift', 'Tab', 'Shift']);
+      browser.keys(['Tab']);
       Terra.validates.element('primary focus');
     });
 
