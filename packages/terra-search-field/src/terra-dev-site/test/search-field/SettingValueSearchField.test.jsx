@@ -9,7 +9,7 @@ class CallbackSearchField extends React.Component {
     this.state = {
       searchText: '',
       message: '',
-      text: 'Banana',
+      text: '',
     };
 
     this.handleSearch = this.handleSearch.bind(this);
