@@ -144,7 +144,7 @@ class SearchField extends React.Component {
     if (this.props.onInvalidSearch) {
       this.props.onInvalidSearch('');
     }
-    this.setState({ searchText: '' });
+    this.updateSearchText('');
 
     // Clear input field
     if (this.inputRef) {
@@ -154,7 +154,6 @@ class SearchField extends React.Component {
   }
 
   handleTextChange(event) {
-    console.log('Change fired');
     const textValue = event.target.value;
     this.updateSearchText(textValue);
 
@@ -168,15 +167,12 @@ class SearchField extends React.Component {
   }
 
   updateSearchText(searchText) {
-    console.log(`searchText ${searchText}`)
-    console.log(`current value ${this.inputRef.value}`)
     if (searchText !== undefined && searchText !== this.state.searchText) {
       this.setState({ searchText });
     }
   }
 
   handleInput(event) {
-    console.log('Input fired');
     const textValue = event.target.value;
     this.updateSearchText(textValue);
 
