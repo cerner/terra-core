@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated `uncontrolled responsive-element` to `controlled responsive-element`.
 
 4.17.0 - (January 7, 2020)
 ------------------
