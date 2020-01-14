@@ -27,6 +27,7 @@ const PercentageWidthTable = () => (
       { percentage: 10 },
       { percentage: 30 },
     ]}
+    dividerStyle="horizontal"
     headerData={{
       cells: [
         { key: 'cell-0', id: 'unique-cell-0', children: '20%' },

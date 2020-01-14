@@ -4,7 +4,7 @@ import React, {
 import Table, {
   Utils,
 } from 'terra-table';
-import mockData from './mock-data/mock-select';
+import mockData from '../../doc/guides/mock-data/mock-select';
 
 const createCell = cell => ({ key: cell.key, children: cell.title });
 

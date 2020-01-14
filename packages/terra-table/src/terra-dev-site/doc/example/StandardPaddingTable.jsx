@@ -7,6 +7,7 @@ const PaddingTable = () => (
     summary="This table has standard padding."
     numberOfColumns={3}
     cellPaddingStyle="standard"
+    dividerStyle="horizontal"
     headerData={{
       cells: [
         { id: 'header-name', key: 'name', children: 'Name' },

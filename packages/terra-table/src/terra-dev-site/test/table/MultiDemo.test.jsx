@@ -1,31 +1,34 @@
 import React, {
   useState,
 } from 'react';
-import Table from 'terra-table';
-import mockData from './mock-data/mock-select';
+import Table, {
+  Utils,
+} from 'terra-table';
+import mockData from '../../doc/guides/mock-data/mock-select';
+
+const maxSectionCount = 3;
 
 const createCell = cell => ({ key: cell.key, children: cell.title });
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
-const SingleSelectTable = () => {
-  const [selectedKey, setSelectedKey] = useState([]);
+const MultiSelectTable = () => {
+  const [selectedKeys, setSelectedKeys] = useState([]);
 
   const handleRowToggle = (event, metaData) => {
     event.preventDefault();
-    if (selectedKey !== metaData.key) {
-      setSelectedKey(metaData.key);
-    }
+    setSelectedKeys(Utils.toggleArrayValue(selectedKeys, metaData.key));
   };
 
   const createRow = rowData => (
     {
       key: rowData.key,
       cells: createCellsForRow(rowData.cells),
+      isDisabled: !Utils.canToggleArrayValue(maxSectionCount, selectedKeys, rowData.key),
       toggleAction: {
         metaData: { key: rowData.key },
         onToggle: handleRowToggle,
-        isToggled: selectedKey === rowData.key,
+        isToggled: selectedKeys.indexOf(rowData.key) >= 0,
         toggleLabel: rowData.toggleText,
       },
     }
@@ -35,15 +38,16 @@ const SingleSelectTable = () => {
 
   return (
     <Table
-      summaryId="example-single-select"
-      summary="This table shows an implementation of single row selection."
+      summaryId="example-multi-select"
+      summary="This table shows an implementation of multiple row selection."
+      aria-multiselectable
+      rowStyle="toggle"
       numberOfColumns={4}
       cellPaddingStyle="standard"
-      rowStyle="toggle"
-      dividerStyle="horizontal"
+      dividerStyle="both"
       headerData={{
         selectAllColumn: {
-          checkLabel: 'Single Selection',
+          checkLabel: 'Multi Selection',
         },
         cells: [
           { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
@@ -61,4 +65,4 @@ const SingleSelectTable = () => {
   );
 };
 
-export default SingleSelectTable;
+export default MultiSelectTable;

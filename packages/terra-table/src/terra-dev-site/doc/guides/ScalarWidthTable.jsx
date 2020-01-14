@@ -27,6 +27,7 @@ const ScalarWidthTable = () => (
       { scalar: 3 },
       { scalar: 4 },
     ]}
+    dividerStyle="horizontal"
     headerData={{
       cells: [
         { key: 'cell-0', id: 'unique-cell-0', children: 'Scalar 2' },

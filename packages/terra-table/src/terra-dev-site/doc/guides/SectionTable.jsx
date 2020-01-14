@@ -45,6 +45,7 @@ const SectionTable = () => {
       summary="This table shows an implementation of sections."
       numberOfColumns={3}
       cellPaddingStyle="standard"
+      dividerStyle="horizontal"
       headerData={{
         cells: [
           { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },

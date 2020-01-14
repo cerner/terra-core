@@ -7,6 +7,7 @@ const PaddingTable = () => (
     summary="This table has compact row padding."
     cellPaddingStyle="compact"
     numberOfColumns={1}
+    dividerStyle="horizontal"
     headerData={{
       cells: [
         { id: 'header-name', key: 'name', children: 'Name' },

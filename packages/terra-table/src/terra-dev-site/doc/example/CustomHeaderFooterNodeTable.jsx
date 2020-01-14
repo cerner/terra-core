@@ -10,6 +10,7 @@ const HeaderFooterExample = () => (
     footerNode={<FixedNode title="Footer" />}
     numberOfColumns={3}
     cellPaddingStyle="standard"
+    dividerStyle="horizontal"
     headerData={{
       cells: [
         {
