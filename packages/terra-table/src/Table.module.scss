@@ -1,9 +1,9 @@
 :local {
   // Standard block display
   // ----------------------
-  .rounded {
+  .outer {
     border: var(--terra-table-border, 1px solid #dedfe0);
-    border-radius: var(--terra-table-border-radius, 3px);
+    border-radius: var(--terra-table-border-radius, 0);
   }
 
   .table {

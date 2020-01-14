@@ -379,7 +379,7 @@ const Table = ({
     'table',
     { fill },
     { 'is-inline': makeInline },
-    { rounded: !hasEndNodes },
+    { outer: !hasEndNodes },
   );
 
   const tableData = {
@@ -426,7 +426,7 @@ const Table = ({
       footer={footerNode}
       header={headerNode}
       className={cx(
-        'rounded',
+        'outer',
       )}
     >
       {rows}

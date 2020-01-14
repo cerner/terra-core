@@ -4,7 +4,7 @@ exports[`Table should render a Table 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={0}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -16,7 +16,7 @@ exports[`Table should render a Table 1`] = `
 
 exports[`Table should render a Table header and footer nodes 1`] = `
 <ContentContainer
-  className="rounded"
+  className="outer"
   fill={false}
   footer={
     <p>
@@ -47,7 +47,7 @@ exports[`Table should render a Table with check style icon and row style toggle 
 <div
   aria-describedby="test-id"
   aria-rowcount={2}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -110,7 +110,7 @@ exports[`Table should render a Table with check style toggle 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={2}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -173,7 +173,7 @@ exports[`Table should render a Table with check style toggle and row style discl
 <div
   aria-describedby="test-id"
   aria-rowcount={2}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -236,7 +236,7 @@ exports[`Table should render a Table with divider style - both 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={0}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -250,7 +250,7 @@ exports[`Table should render a Table with divider style - horizontal 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={0}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -264,7 +264,7 @@ exports[`Table should render a Table with divider style - vertical 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={0}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -278,7 +278,7 @@ exports[`Table should render a Table with fill style 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={1}
-  className="table fill rounded"
+  className="table fill outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -313,7 +313,7 @@ exports[`Table should render a Table with fill style and scroll ref 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={1}
-  className="table fill rounded"
+  className="table fill outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -348,7 +348,7 @@ exports[`Table should render a Table with header 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={1}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -374,7 +374,7 @@ exports[`Table should render a Table with header with chevrons 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={1}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -400,7 +400,7 @@ exports[`Table should render a Table with indexes overridden 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={10}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -434,7 +434,7 @@ exports[`Table should render a Table with inners remove despite padding 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={2}
-  className="table rounded"
+  className="table outer"
   data-table-padding="standard"
   role="grid"
 >
@@ -482,7 +482,7 @@ exports[`Table should render a Table with number of rows 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={6}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -496,7 +496,7 @@ exports[`Table should render a Table with padding compact 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={0}
-  className="table rounded"
+  className="table outer"
   data-table-padding="compact"
   role="grid"
 >
@@ -511,7 +511,7 @@ exports[`Table should render a Table with padding standard 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={0}
-  className="table rounded"
+  className="table outer"
   data-table-padding="standard"
   role="grid"
 >
@@ -526,7 +526,7 @@ exports[`Table should render a Table with row style toggle 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={2}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -589,7 +589,7 @@ exports[`Table should render a Table with section header 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={1}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -617,7 +617,7 @@ exports[`Table should render a Table with section header and rows 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={2}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -662,7 +662,7 @@ exports[`Table should render a Table with section rows 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={1}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -696,7 +696,7 @@ exports[`Table should render a Table with section rows width chevrons 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={1}
-  className="table rounded"
+  className="table outer"
   role="grid"
 >
   <VisuallyHiddenText
@@ -730,7 +730,7 @@ exports[`Table should render a Table with widths 1`] = `
 <div
   aria-describedby="test-id"
   aria-rowcount={2}
-  className="table is-inline rounded"
+  className="table is-inline outer"
   role="grid"
 >
   <VisuallyHiddenText

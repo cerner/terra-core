@@ -27,7 +27,7 @@ const StaticWidthTable = () => (
       { static: { value: 5, unit: 'rem' } },
       { static: { value: 120, unit: 'px' } },
     ]}
-    dividerStyle="horizontal"
+    dividerStyle="both"
     headerData={{
       cells: [
         { key: 'cell-0', id: 'unique-cell-0', children: '60px' },
