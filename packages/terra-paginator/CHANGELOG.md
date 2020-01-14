@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 
+### Changed
+* Replaced uncontrolled `<ResponsiveElement>` with controlled `<ResponsiveElement>`.
+
 2.35.0 - (January 7, 2020)
 ------------------
 ### Changed
