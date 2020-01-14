@@ -133,7 +133,7 @@ class MenuUtil {
    * @return {ReactNode|undefined} - The optGroup. Returns undefined if not found.
    */
   static getOptGroupElement(object, value) {
-    return React.Children.toArray(object).find(element => element.type.isOptGroup && element.props.children.find(chidleElement => chidleElement.props.value === value));
+    return React.Children.toArray(object).find(element => element.type.isOptGroup && React.Children.toArray(element.props.children).find(chidleElement => chidleElement.props.value === value));
   }
 
   /**
