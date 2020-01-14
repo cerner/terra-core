@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added onInput prop.
 
+3.36.0 - (January 7, 2020)
+------------------
 ### Changed
 * Updated wdio screenshots
 

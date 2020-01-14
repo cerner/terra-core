@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.29.0 - (January 7, 2020)
+------------------
 ### Added
 * Button border-color on hover is now themeable.
 
