@@ -97,7 +97,7 @@ const DocPage = () => (
       {
         title: 'Search Field with setting a value programmatically',
         example: <SearchFieldProgrammaticSet />,
-      source: SearchFieldProgrammaticSetSrc,
+        source: SearchFieldProgrammaticSetSrc,
       },
     ]}
     propsTables={[

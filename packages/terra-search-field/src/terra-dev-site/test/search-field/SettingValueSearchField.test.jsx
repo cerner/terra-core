@@ -19,10 +19,6 @@ class CallbackSearchField extends React.Component {
     this.handleInput = this.handleInput.bind(this);
   }
 
-  handleSearch(searchText) {
-    this.setState({ searchText, message: 'Search Text: ' });
-  }
-
   handleInvalidSearch(searchText) {
     this.setState({ searchText, message: 'INVALID Search Text: ' });
   }
@@ -38,7 +34,7 @@ class CallbackSearchField extends React.Component {
   setTextClick() {
     if (this.searchInput) {
       setTimeout(() => {
-        this.searchInput.value = "IpsumLorem";
+        this.searchInput.value = 'IpsumLorem';
         let customEvent;
         if (typeof (Event) === 'function') {
           customEvent = new Event('input', {
@@ -53,6 +49,10 @@ class CallbackSearchField extends React.Component {
         this.searchInput.dispatchEvent(customEvent);
       }, 1000);
     }
+  }
+
+  handleSearch(searchText) {
+    this.setState({ searchText, message: 'Search Text: ' });
   }
 
   render() {
