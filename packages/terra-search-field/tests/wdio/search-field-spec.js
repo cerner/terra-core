@@ -146,16 +146,16 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     Terra.it.validatesElement('typed');
 
     it('should trigger search when cutting', () => {
-      //select text
-      browser.addValue('input', ['Shift','Left arrow','Left arrow','Left arrow','Left arrow','NULL']);
+      // select text
+      browser.addValue('input', ['Shift', 'Left arrow', 'Left arrow', 'Left arrow', 'Left arrow', 'NULL']);
       // cut text
-      browser.addValue('input', ['Control','x','NULL'])
+      browser.addValue('input', ['Control', 'x', 'NULL']);
     });
     Terra.it.validatesElement('cut');
 
     it('should trigger search when pasting', () => {
       // paste value from clipboard
-      browser.addValue('input', ['Control','v']);
+      browser.addValue('input', ['Control', 'v']);
     });
 
     Terra.it.validatesElement('paste');
@@ -170,7 +170,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should search with value on search button press', () => {
       browser.click('#searchfield > button');
-    })
+    });
 
     Terra.it.validatesElement('search');
   });
