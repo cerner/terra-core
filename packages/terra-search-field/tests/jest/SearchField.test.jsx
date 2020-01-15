@@ -26,14 +26,16 @@ describe('Snapshots', () => {
 
   it('renders a disabled search field with a value', () => {
     const searchField = shallowWithIntl(<SearchField isDisabled />).dive();
-    searchField.setState({ searchText: 'Test' });
+    searchField.instance().updateSearchText('Test');
+    //searchField.setState({ searchText: 'Test' });
 
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field that displays as a block to fill its container', () => {
     const searchField = shallowWithIntl(<SearchField isBlock />).dive();
-    searchField.setState({ searchText: 'Test' });
+    searchField.instance().updateSearchText('Test');
+    //searchField.setState({ searchText: 'Test' });
 
     expect(searchField).toMatchSnapshot();
   });
@@ -57,11 +59,12 @@ describe('Snapshots', () => {
 
   it('clears form with clear method', () => {
     const searchField = shallowWithIntl(<SearchField />).dive();
-    searchField.setState({ searchText: 'amp' });
+    searchField.instance().updateSearchText('amp');
+    //searchField.setState({ searchText: 'amp' });
 
-    expect(searchField.state('searchText')).toBe('amp');
+    expect(searchField.instance().searchText).toBe('amp');
     searchField.instance().handleClear();
-    expect(searchField.state('searchText')).toBe('');
+    expect(searchField.instance().searchText).toBe('');
   });
 });
 
@@ -69,7 +72,7 @@ describe('Manual Search', () => {
   it('triggers search on button click', () => {
     const onSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />).dive();
-    searchField.setState({ searchText: 'Te' });
+    searchField.instance().updateSearchText('Te');
 
     expect(onSearch).not.toBeCalled();
     searchField.childAt(1).simulate('click');
