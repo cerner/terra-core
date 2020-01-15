@@ -37,21 +37,19 @@ class CallbackSearchField extends React.Component {
 
   setTextClick() {
     if (this.searchInput) {
-      setTimeout(() => {
-        this.searchInput.value = "IpsumLorem";
-        let customEvent;
-        if (typeof (Event) === 'function') {
-          customEvent = new Event('input', {
-            bubbles: true,
-            cancelable: false,
-          });
-          customEvent.simulated = true;
-        } else {
-          customEvent = document.createEvent('Event');
-          customEvent.initEvent('input', true, false);
-        }
-        this.searchInput.dispatchEvent(customEvent);
-      }, 1000);
+      this.searchInput.value = "IpsumLorem";
+      let customEvent;
+      if (typeof (Event) === 'function') {
+        customEvent = new Event('input', {
+          bubbles: true,
+          cancelable: false,
+        });
+        customEvent.simulated = true;
+      } else {
+        customEvent = document.createEvent('Event');
+        customEvent.initEvent('input', true, false);
+      }
+      this.searchInput.dispatchEvent(customEvent);
     }
   }
 

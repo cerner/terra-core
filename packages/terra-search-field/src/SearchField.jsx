@@ -115,12 +115,11 @@ class SearchField extends React.Component {
     this.setInputRef = this.setInputRef.bind(this);
 
     this.searchTimeout = null;
-    this.clearInterval = null;
-    this.state = { searchText: this.props.defaultValue || this.props.value };
+    this.searchText = this.props.defaultValue || this.props.value;
   }
 
   componentDidUpdate() {
-    // if consumer updates the value prop with onChange, need to update state to match
+    // if consumer updates the value prop with onChange, need to update variable to match
     this.updateSearchText(this.props.value);
   }
 
@@ -167,8 +166,10 @@ class SearchField extends React.Component {
   }
 
   updateSearchText(searchText) {
-    if (searchText !== undefined && searchText !== this.state.searchText) {
-      this.setState({ searchText });
+    if (searchText !== undefined && searchText !== this.searchText) {
+      this.searchText = searchText;
+      // Forcing update for clearButton rerender.
+      this.forceUpdate();
     }
   }
 
@@ -193,7 +194,7 @@ class SearchField extends React.Component {
   handleSearch() {
     this.clearSearchTimeout();
 
-    const searchText = this.state.searchText || '';
+    const searchText = this.searchText || '';
 
     if (searchText.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
       this.props.onSearch(searchText);
@@ -248,7 +249,7 @@ class SearchField extends React.Component {
       additionalInputAttributes.defaultValue = defaultValue;
     }
 
-    const clearButton = this.state.searchText && !isDisabled
+    const clearButton = this.searchText && !isDisabled
       ? (
         <Button
           className={cx('clear')}

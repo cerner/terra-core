@@ -29,6 +29,8 @@ import SearchFieldFilterNumeric from '../example/SearchFieldFilterNumeric';
 import SearchFieldFilterNumericSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFilterNumeric';
 import SearchFieldFocus from '../example/SearchFieldFocus';
 import SearchFieldFocusSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldFocus';
+import SearchFieldProgrammaticSet from '../example/SearchFieldProgrammaticSet';
+import SearchFieldProgrammaticSetSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/SearchFieldProgrammaticSet';
 
 const DocPage = () => (
   <DocTemplate
@@ -91,6 +93,11 @@ const DocPage = () => (
         title: 'Search Field with Focus',
         example: <SearchFieldFocus />,
         source: SearchFieldFocusSrc,
+      },
+      {
+        title: 'Search Field with setting a value programmatically',
+        example: <SearchFieldProgrammaticSet />,
+      source: SearchFieldProgrammaticSetSrc,
       },
     ]}
     propsTables={[
