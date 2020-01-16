@@ -87,8 +87,8 @@
   }
 
   .simple-footer {
-    background-color: var(--terra-table-blank-footer-background-color, #f4f4f4);
-    box-shadow: var(--terra-table-blank-footer-box-shadow, 0 -4px 4px -4px rgba(134, 138, 140, 0.75), inset 0 0 0 1px #fff);
-    height: var(--terra-table-blank-footer-height, 0.7142857143rem);
+    background-color: var(--terra-table-simple-footer-background-color, #f4f4f4);
+    box-shadow: var(--terra-table-simple-footer-box-shadow, 0 -4px 4px -4px rgba(134, 138, 140, 0.75), inset 0 0 0 1px #fff);
+    height: var(--terra-table-simple-footer-height, 0.7142857143rem);
   }
 }
