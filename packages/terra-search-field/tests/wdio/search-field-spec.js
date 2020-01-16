@@ -160,7 +160,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     Terra.it.validatesElement('paste');
 
-    it('should not trigger search when programatticaly setting value', () => {
+    it('should not trigger search when programmatically setting value', () => {
       browser.click('#search-field-set-text-button');
       browser.click('#searchfield');
       browser.pause(2000);

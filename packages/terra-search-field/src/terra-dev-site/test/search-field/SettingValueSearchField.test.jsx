@@ -33,7 +33,6 @@ class SettingValueSearchField extends React.Component {
             bubbles: true,
             cancelable: false,
           });
-          customEvent.simulated = true;
         } else {
           customEvent = document.createEvent('Event');
           customEvent.initEvent('input', true, false);
