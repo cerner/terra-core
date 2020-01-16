@@ -1,6 +1,4 @@
 :global {
-
-  // ---------------------- Shared ----------------------- //
   --terra-form-textarea-background-color: #222a2e;
   --terra-form-textarea-border-color: #181b1d;
   --terra-form-textarea-color: #b2b5b6;
@@ -22,7 +20,6 @@
   --terra-form-textarea-placeholder-color: #6f7477;
   --terra-form-textarea-placeholder-disabled-color: #6f7477;
 
-  // -------------------- Version 3.x -------------------- //
   --terra-form-textarea-background-image: none;
   --terra-form-textarea-background-size: auto;
   --terra-form-textarea-hover-background-color: #222a2e;
@@ -55,20 +52,4 @@
   --terra-form-textarea-incomplete-hover-background-color: #464232;
   --terra-form-textarea-incomplete-disabled-background-color: #464232;
   --terra-form-textarea-incomplete-focus-background-color: #464232;
-
-  // -------------------- Version 2.x -------------------- //
-  --terra-form-textarea-focus-animation-background: none;
-  --terra-form-textarea-focus-keyboard-animation-size: auto;
-  --terra-form-textarea-focus-background-start: auto;
-  --terra-form-textarea-focus-keyboard-border-color: #181b1d;
-  --terra-form-textarea-focus-keyboard-box-shadow-ltr: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
-  --terra-form-textarea-focus-keyboard-box-shadow-rtl: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
-  --terra-form-textarea-focus-keyboard-opacity: 1;
-
-  --terra-form-textarea-error-focus-animation-background: none;
-  --terra-form-textarea-error-focus-keyboard-animation-size: auto;
-  --terra-form-textarea-error-focus-keyboard-border-color: #181b1d;
-  --terra-form-textarea-error-focus-keyboard-opacity: 1;
-  --terra-form-textarea-error-focus-keyboard-box-shadow-ltr: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
-  --terra-form-textarea-error-focus-keyboard-box-shadow-rtl: 0 0 7px 4px rgba(0, 76, 118, 0.35), 0 0 1px 3px rgba(0, 76, 118, 0.5), 0 0 1px 0 #fff;
 }

@@ -5,7 +5,6 @@
 // it is required to keep them for this type of control.
 
 :global {
-  // ---------------------- Shared ----------------------- //
   //Checkbox
   --terra-form-checkbox-font-color: #b2b5b6;
   --terra-form-checkbox-native-input-clip: rect(0 0 0 0);
@@ -24,7 +23,6 @@
   --terra-form-checkbox-field-label-color: #b2b5b6;
   --terra-form-checkbox-field-label-required-color: #fb4c4c;
 
-  // -------------------- Version 3.x -------------------- //
   --terra-form-checkbox-before-background-color: #111;
   --terra-form-checkbox-before-background-image: linear-gradient(to bottom right, #111, #35383b);
   --terra-form-checkbox-before-border: 1px solid #8d8f91;
@@ -60,8 +58,6 @@
   --terra-form-checkbox-hover-checked-before-border-color: #005887;
   --terra-form-checkbox-hover-checked-before-border-width: 1px;
 
-  --terra-form-checkbox-disabled-before-font-color: rgba(212, 222, 225, 0.3);
-  --terra-form-checkbox-disabled-before-font-opacity: 1;
   --terra-form-checkbox-disabled-before-background-color: rgba(34, 42, 46, 0.5);
   --terra-form-checkbox-disabled-before-background-image: none;
   --terra-form-checkbox-disabled-before-border-color: rgba(178, 181, 182, 0.2);
@@ -81,57 +77,6 @@
   @include terra-inline-svg-var('--terra-form-checkbox-checked-before-content', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#002b42" d="M12.2,44.5L0,32.3v-4.9V22l18.4,18.4L48,10.8l0,5.4l0,4.9l-24,24C20.9,48,16,48.6,12.2,44.5z"/><path fill="#b2b5b6" d="M18.4,40.4L0,22l4.2-4.2L18.4,32L43.8,6.6l4.2,4.2L18.4,40.4z"/></svg>');
   @include terra-inline-svg-var('--terra-form-checkbox-field-error-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#fb4c4c" d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"/><path fill="#FFF" d="M7 21.5h34v5H7v-5z"/></svg>');
 
-  // -------------------- Version 2.x -------------------- //
-  --terra-form-checkbox-background-color: #111;
-  --terra-form-checkbox-background-image: linear-gradient(to bottom right, #111, #35383b);
-  --terra-form-checkbox-border: 1px solid #8d8f91;
-  --terra-form-checkbox-border-radius: 2px;
-  --terra-form-checkbox-height: 1rem;
-  --terra-form-checkbox-margin-top: 0.142857rem;
-  --terra-form-checkbox-width: 1rem;
-
-  --terra-form-checkbox-checked-background-color: #005887;
-  --terra-form-checkbox-checked-background-image: none;
-  --terra-form-checkbox-checked-border: 1px solid #005887;
-  --terra-form-checkbox-checked-border-radius: 2px;
-  --terra-form-checkbox-checked-height: 1rem;
-  --terra-form-checkbox-checked-line-height: 1rem;
-  --terra-form-checkbox-checked-symbol-padding-left: 0;
-  --terra-form-checkbox-checked-symbol-padding-right: 0;
-  --terra-form-checkbox-checked-symbol-padding-top: 0;
-  --terra-form-checkbox-checked-width: 1rem;
-  --terra-form-checkbox-checked-disabled-border-width: 1px;
-
-  --terra-form-checkbox-is-mobile-height: 1rem;
-  --terra-form-checkbox-is-mobile-margin-top: 0.142857rem;
-  --terra-form-checkbox-is-mobile-width: 1rem;
-  --terra-form-checkbox-is-mobile-checked-height: 1rem;
-  --terra-form-checkbox-is-mobile-checked-line-height: 1rem;
-  --terra-form-checkbox-is-mobile-checked-width: 1rem;
-
-  --terra-form-checkbox-hover-border-color: #585a5c;
-  --terra-form-checkbox-hover-border-width: 1px;
-  --terra-form-checkbox-checked-hover-border-color: #005887;
-  --terra-form-checkbox-checked-hover-border-width: 1px;
-
   --terra-form-checkbox-disabled-font-color: rgba(212, 222, 225, 0.3);
   --terra-form-checkbox-disabled-font-opacity: 1;
-  --terra-form-checkbox-disabled-background-color: rgba(34, 42, 46, 0.5);
-  --terra-form-checkbox-disabled-background-image: none;
-  --terra-form-checkbox-disabled-border-color: rgba(178, 181, 182, 0.2);
-  --terra-form-checkbox-disabled-border-width: 1px;
-
-  --terra-form-checkbox-focus-border-color: #004c76;
-  --terra-form-checkbox-focus-border-width: 1px;
-  --terra-form-checkbox-focus-ring-background-color: rgba(0, 76, 118, 0.35);
-  --terra-form-checkbox-focus-ring-border-radius: 4px;
-  --terra-form-checkbox-focus-ring-height: 1.42857rem;
-  --terra-form-checkbox-focus-ring-left: -0.21428rem;
-  --terra-form-checkbox-focus-ring-top: -0.071428rem;
-  --terra-form-checkbox-focus-ring-width: 1.42857rem;
-
-  //Inline SVG
-  @include terra-inline-svg-var('--terra-form-checkbox-disabled-symbol', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="rgba(178,181,182,0.2)" d="M18.4,40.4L0,22l4.2-4.2L18.4,32L43.8,6.6l4.2,4.2L18.4,40.4z"/></svg>');
-  @include terra-inline-svg-var('--terra-form-checkbox-field-error-icon', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#fb4c4c" d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"/><path fill="#FFF" d="M7 21.5h34v5H7v-5z"/></svg>');
-  @include terra-inline-svg-var('--terra-form-checkbox-symbol', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#002b42" d="M12.2,44.5L0,32.3v-4.9V22l18.4,18.4L48,10.8l0,5.4l0,4.9l-24,24C20.9,48,16,48.6,12.2,44.5z"/><path fill="#b2b5b6" d="M18.4,40.4L0,22l4.2-4.2L18.4,32L43.8,6.6l4.2,4.2L18.4,40.4z"/></svg>');
 }

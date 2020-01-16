@@ -5,7 +5,6 @@
 // it is required to keep them for this type of control.
 
 :global {
-  // ---------------------- Shared ----------------------- //
   --terra-form-radio-font-color: #b2b5b6;
 
   --terra-form-radio-native-input-clip: rect(0 0 0 0);
@@ -76,10 +75,6 @@
 
   --terra-form-radio-focus-border-color: #004c76;
   --terra-form-radio-focus-border-width: 1px;
-  --terra-form-radio-focus-ring-height: 1.571428rem;
-  --terra-form-radio-focus-ring-left: -0.28571rem;
-  --terra-form-radio-focus-ring-top: -0.142857rem;
-  --terra-form-radio-focus-ring-width: 1.571428rem;
 
   --terra-form-radio-hover-border-color: #585a5c;
   --terra-form-radio-hover-border-width: 1px;
@@ -90,7 +85,6 @@
   --terra-form-radio-field-help-text-color: #6f7477;
   --terra-form-radio-field-error-text-color: #fb4c4c;
 
-  // -------------------- Version 3.x -------------------- //
   --terra-form-radio-focus-before-ring-background-color: rgba(0, 76, 118, 0.35);
   --terra-form-radio-focus-before-ring-height: 1.571428rem;
   --terra-form-radio-focus-before-ring-left: -0.28571rem;
@@ -101,16 +95,4 @@
 
   //Inline SVG
   @include terra-inline-svg-var('--terra-form-radio-field-error-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#fb4c4c" d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"/><path fill="#FFF" d="M7 21.5h34v5H7v-5z"/></svg>');
-
-  // -------------------- Version 2.x -------------------- //
-  --terra-form-radio-focus-ring-background-color: rgba(0, 76, 118, 0.35);
-  --terra-form-radio-focus-ring-height: 1.571428rem;
-  --terra-form-radio-focus-ring-left: -0.28571rem;
-  --terra-form-radio-focus-ring-top: -0.142857rem;
-  --terra-form-radio-focus-ring-width: 1.571428rem;
-  --terra-form-radio-outer-ring-checked-hover-border-color: #005887;
-  --terra-form-radio-outer-ring-checked-hover-border-width: 1px;
-
-  //Inline SVG
-  @include terra-inline-svg-var('--terra-form-radio-field-error-icon', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#fb4c4c" d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"/><path fill="#FFF" d="M7 21.5h34v5H7v-5z"/></svg>');
 }

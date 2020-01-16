@@ -1,8 +1,6 @@
 @import '~terra-mixins/lib/Mixins';
 
 :global {
-
-  // ---------------------- Shared ----------------------- //
   --terra-paginator-nav-link-active-color: #b2b5b6;
   --terra-paginator-nav-link-border: none;
   --terra-paginator-nav-link-color: #007ee0;
@@ -14,7 +12,6 @@
   --terra-paginator-nav-link-hover-color: #003f61;
   --terra-paginator-nav-link-selected-color: inherit;
 
-  // -------------------- >= Version 2.21 -------------------- //
   --terra-paginator-nav-link-active-background-color: #161e22;
   --terra-paginator-nav-link-active-border: none;
   --terra-paginator-nav-link-active-box-shadow: none;
@@ -33,15 +30,4 @@
   @include terra-inline-svg-var('--terra-paginator-nav-link-icon-previous-disabled-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#6f7477" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
   @include terra-inline-svg-var('--terra-paginator-nav-link-icon-next-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#007ee0" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>');
   @include terra-inline-svg-var('--terra-paginator-nav-link-icon-next-disabled-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#6f7477" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>');
-
-  // -------------------- < Version 2.21 -------------------- //
-  --terra-paginator-nav-link-active-background: #0c0d0e;
-  --terra-paginator-nav-link-background: none;
-  --terra-paginator-nav-link-focus-background: none;
-  --terra-paginator-nav-link-hover-background: none;
-
-  @include terra-inline-svg-var('--terra-paginator-nav-link-icon-previous-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#007ee0" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
-  @include terra-inline-svg-var('--terra-paginator-nav-link-icon-previous-disabled-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#6f7477" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
-  @include terra-inline-svg-var('--terra-paginator-nav-link-icon-next-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#007ee0" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>');
-  @include terra-inline-svg-var('--terra-paginator-nav-link-icon-next-disabled-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#6f7477" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>');
 }

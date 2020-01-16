@@ -1,12 +1,8 @@
 @import '~terra-mixins/lib/Mixins';
 
 :global {
-
-  // -------------------- Shared (All) -------------------- //
-
   --terra-list-item-background-color: #222a2e;
   --terra-list-item-focus-background-color: #1e3a49;
-  --terra-list-item-hover-background-color: #1e3a49;
   --terra-list-item-selected-background-color: #004c76;
   --terra-list-item-selected-hover-background-color: #004064;
   --terra-list-item-hover-active-background-color: #1e3a49;
@@ -15,8 +11,6 @@
   @include terra-inline-svg-var('--terra-list-section-header-accordion-icon-background','<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" fill="#b2b5b6" d="M12,0l24,24L12,48V0z"/></svg>');  
   @include terra-inline-svg-var('--terra-list-subsection-header-accordion-icon-background','<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" fill="#b2b5b6" d="M12,0l24,24L12,48V0z"/></svg>');  
   
-  // -------------------- Version 4.x -------------------- //
-
   --terra-list-item-divider-border-top: 1px solid #181b1d;
   --terra-list-item-last-divider-border-bottom: 1px solid #181b1d;
   --terra-list-item-focus-outline: none;
@@ -39,22 +33,8 @@
   --terra-list-subsection-header-focus-outline: none;
   --terra-list-subsection-header-hover-active-background-color: #000;
 
-  // ----------------- Versions 3.x & 4.x ----------------- //
-
   --terra-list-item-chevron-color: #b2b5b6;
-  --terra-list-item-selected-chevron-color: #b2b5b6;
   --terra-list-item-selected-divider-border-color: #181b1d;
   --terra-list-item-selected-divider-border-top-color: #181b1d;
   --terra-list-item-selected-focus-background-color: #004c76;
-
-  // -------------------- Version 3.x -------------------- //
-
-  --terra-list-divider-border-top: 1px solid #181b1d;
-  --terra-list-last-divider-border-bottom: 1px solid #181b1d;
-
-  // -------------------- Version 2.x -------------------- //
-
-  --terra-list-chevron-color: #bcbfc0;
-  --terra-list-divider-border: 1px solid #181b1d;
-  --terra-list-item-selected-divider-color: #181b1d;
 }

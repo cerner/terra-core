@@ -1,9 +1,6 @@
 @import '~terra-mixins/lib/Mixins';
 
 :global {
-
-  // ---------------------- Shared ----------------------- //
-
   --terra-section-header-background: #141719;
   --terra-section-header-border-bottom: 1px solid #08090a;
   --terra-section-header-border-left: none;
@@ -36,8 +33,6 @@
   --terra-section-header-hover-box-shadow: none;
   --terra-section-header-hover-color: #b2b5b6;
 
-  // -------------------- Version 2.x -------------------- //
-
   --terra-section-header-transparent-active-background: #191d20;
   --terra-section-header-transparent-active-border-bottom: 1px solid #08090a;
   --terra-section-header-transparent-active-border-left: none;
@@ -64,21 +59,4 @@
 
   // accordion icon
   @include terra-inline-svg-var('--terra-section-header-accordion-icon-background','<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" fill="#b2b5b6" d="M12,0l24,24L12,48V0z"/></svg>');
-
-  // -------------------- Version 1.x -------------------- //
-
-  --terra-transparent-section-header-active-background: #191d20;
-  --terra-transparent-section-header-active-box-shadow: none;
-  --terra-transparent-section-header-active-color: #b2b5b6;
-
-  --terra-transparent-section-header-focus-background: #222a2e;
-  --terra-transparent-section-header-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
-  --terra-transparent-section-header-focus-color: #b2b5b6;
-
-  --terra-transparent-section-header-hover-background: #1e272b;
-  --terra-transparent-section-header-hover-box-shadow: none;
-  --terra-transparent-section-header-hover-color: #9b9b9b;
-
-  // accordion icon
-  @include terra-inline-svg-var('--terra-section-header-accordion-icon','<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><title>0023_caretRight_a</title><path id="caretRight" fill="#b2b5b6" d="M12,0l24,24L12,48V0z"/></svg>');
 }

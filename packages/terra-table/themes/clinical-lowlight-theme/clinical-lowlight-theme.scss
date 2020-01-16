@@ -1,5 +1,4 @@
 :global {
-  // ---------------------- Shared ----------------------- //
   --terra-table-background-color: #383f42;
   --terra-table-border: 0;
 
@@ -24,7 +23,6 @@
   --terra-table-row-striped-selected-background-color: #1e3a49;
   --terra-table-row-striped-selected-hover-background-color: #1e3a49;
 
-  // -------------------- Version 3.x -------------------- //
   --terra-table-cell-border-left: 0;
   --terra-table-header-cell-border-left: 0;
 
@@ -45,10 +43,5 @@
 
   --terra-table-tbody-background-color: #383f42;
 
-
-  // -------------------- Version 2.x -------------------- //
-  --terra-table-cell-border: 0;
-  --terra-table-row-border-vertical: 1px solid #181b1d;
-  --terra-table-row-border-horizontal: 1px solid #181b1d;
   --terra-table-row-selected-border-color: #004c76;
 }

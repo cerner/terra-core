@@ -1,8 +1,4 @@
 :global {
-  // ---------------------- Shared ----------------------- //
-  // there are no shared variables for these versions
-
-  // -------------------- Version 2.x -------------------- //
   --terra-doc-template-content-background-color: #383f42;
   --terra-doc-template-doc-card-not-empty-background-color: none;
   --terra-doc-template-footer-background-color: #383f42;
@@ -11,13 +7,4 @@
   --terra-doc-template-examples-header-border-bottom: #181b1d;
   --terra-doc-template-examples-header-color: #b2b5b6;
   --terra-doc-template-examples-header-text-shadow: none;
-
-  // -------------------- Version 1.x -------------------- //
-  --terra-doc-template-v1-content-background-color: #383f42;
-  --terra-doc-template-v1-footer-background-color: #383f42;
-  --terra-doc-template-v1-header-background-color: #141719;
-
-  --terra-doc-template-v1-examples-header-border-bottom: #181b1d;
-  --terra-doc-template-v1-examples-header-color: #b2b5b6;
-  --terra-doc-template-v1-examples-header-text-shadow: none;
 }

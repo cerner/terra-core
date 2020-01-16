@@ -1,5 +1,4 @@
 :global {
-  // ---------------------- Shared ----------------------- //
   --terra-form-input-background-color: #222a2e;
   --terra-form-input-border: 1px solid #181b1d;
   --terra-form-input-box-shadow: none;
@@ -26,7 +25,6 @@
   --terra-form-input-placeholder-color: #6f7477;
   --terra-form-input-placeholder-disabled-color: #6f7477;
 
-  // -------------------- Version 2.x -------------------- //
   --terra-form-input-background-image: none;
   --terra-form-input-background-size: auto;
 
@@ -52,16 +50,4 @@
   --terra-form-input-incomplete-hover-background-color: #464232;
   --terra-form-input-incomplete-disabled-background-color: #464232;
   --terra-form-input-incomplete-focus-background-color: #464232;
-
-  // -------------------- Version 1.x -------------------- //
-  --terra-form-input-focus-animation-background: none;
-  --terra-form-input-focus-background-start: auto;
-  --terra-form-input-focus-keyboard-animation-size: auto;
-  --terra-form-input-focus-keyboard-box-shadow-ltr: none;
-  --terra-form-input-focus-keyboard-box-shadow-rtl: none;
-
-  --terra-form-input-error-focus-animation-background: none;
-  --terra-form-input-error-focus-keyboard-animation-size: auto;
-  --terra-form-input-error-focus-keyboard-box-shadow-ltr: none;
-  --terra-form-input-error-focus-keyboard-box-shadow-rtl: none;
 }

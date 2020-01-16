@@ -1,9 +1,6 @@
 @import '~terra-mixins/lib/Mixins';
 
 :global {
-
-  // ---------------------- Shared ----------------------- //
-
   --terra-dialog-header-background-color: #1e2427;
   --terra-dialog-header-foreground-color: #b2b5b6;
   --terra-dialog-body-background-color: transparent;
@@ -11,16 +8,8 @@
   --terra-dialog-footer-background-color: #1e2427;
   --terra-dialog-footer-foreground-color: #b2b5b6;
 
-  // -------------------- Version 2.x -------------------- //
-
   --terra-dialog-header-border-bottom: 1px solid #181b1d;
   --terra-dialog-footer-border-top: 1px solid #181b1d;
 
   @include terra-inline-svg-var('--terra-dialog-header-close-background', "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path fill='#b2b5b6' d='M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z'/></svg>");
-
-  // -------------------- Version 1.x -------------------- //
-
-  --terra-dialog-header-bottom-border: 1px solid #181b1d;
-  --terra-dialog-header-close-icon: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2048%2048%27%3E%3Cpath%20fill%3D%27rgba%28197%2C%20197%2C%20198%2C%201%29%27%20d%3D%27M28.2%2024L42.9%209.1%2040.8%207l-1.7-1.6-.4-.5L24%2019.7%209.4%204.9%207.2%207%205.6%208.6l-.5.5L19.8%2024%205.1%2038.9%207.2%2041l1.7%201.6.5.5L24%2028.3l14.7%2014.8.4-.5%201.7-1.6%202.1-2.1L28.2%2024z%27%2F%3E%3C%2Fsvg%3E');
-  --terra-dialog-footer-top-border: 1px solid #181b1d;
 }
