@@ -57,7 +57,7 @@ describe('Snapshots', () => {
 
   it('clears form with clear method', () => {
     const searchField = shallowWithIntl(<SearchField />).dive();
-    searchField.instance().updateSearchText('amp');]
+    searchField.instance().updateSearchText('amp');
 
     expect(searchField.instance().searchText).toBe('amp');
     searchField.instance().handleClear();
