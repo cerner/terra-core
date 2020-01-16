@@ -1,8 +1,12 @@
 import React from 'react';
+import classNames from 'classnames/bind';
 import Button from 'terra-button/lib/Button';
 import SearchField from '../../../SearchField';
+import styles from '../../test/search-field/examplestyles.scss';
 
-class CallbackSearchField extends React.Component {
+const cx = classNames.bind(styles);
+
+class SearchFieldProgrammaticSet extends React.Component {
   constructor(props) {
     super(props);
 
@@ -68,7 +72,7 @@ class CallbackSearchField extends React.Component {
           value={this.state.text}
           inputRefCallback={(inputRef) => { this.searchInput = inputRef; }}
         />
-        <Button text="Set search field text" onClick={this.setTextClick} id="search-field-set-text-button" />
+        <Button text="Set search field text" onClick={this.setTextClick} id="search-field-set-text-button" className={cx('programattic-button')} />
         <div id="search-callback-text">
           {this.state.message}
           {this.state.searchText}
@@ -78,4 +82,4 @@ class CallbackSearchField extends React.Component {
   }
 }
 
-export default CallbackSearchField;
+export default SearchFieldProgrammaticSet;

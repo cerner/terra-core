@@ -24,7 +24,7 @@ This component requires the following peer dependencies be installed in your app
 
 ## Implementation Notes:
 
-The Searach-Field component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
+The Search-Field component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
 
 [1]: https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs
 

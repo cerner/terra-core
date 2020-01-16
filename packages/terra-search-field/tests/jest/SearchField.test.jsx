@@ -27,7 +27,6 @@ describe('Snapshots', () => {
   it('renders a disabled search field with a value', () => {
     const searchField = shallowWithIntl(<SearchField isDisabled />).dive();
     searchField.instance().updateSearchText('Test');
-    //searchField.setState({ searchText: 'Test' });
 
     expect(searchField).toMatchSnapshot();
   });
@@ -35,7 +34,6 @@ describe('Snapshots', () => {
   it('renders a search field that displays as a block to fill its container', () => {
     const searchField = shallowWithIntl(<SearchField isBlock />).dive();
     searchField.instance().updateSearchText('Test');
-    //searchField.setState({ searchText: 'Test' });
 
     expect(searchField).toMatchSnapshot();
   });
@@ -59,8 +57,7 @@ describe('Snapshots', () => {
 
   it('clears form with clear method', () => {
     const searchField = shallowWithIntl(<SearchField />).dive();
-    searchField.instance().updateSearchText('amp');
-    //searchField.setState({ searchText: 'amp' });
+    searchField.instance().updateSearchText('amp');]
 
     expect(searchField.instance().searchText).toBe('amp');
     searchField.instance().handleClear();
