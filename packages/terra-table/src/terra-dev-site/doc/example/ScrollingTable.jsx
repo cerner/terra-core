@@ -10,6 +10,7 @@ const FixedHeightTable = () => (
       fill
       numberOfColumns={3}
       cellPaddingStyle="standard"
+      showSimpleFooter
       headerData={{
         cells: [
           {

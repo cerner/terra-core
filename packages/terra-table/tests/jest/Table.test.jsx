@@ -83,6 +83,18 @@ describe('Table', () => {
     expect(shallowComponent).toMatchSnapshot();
   });
 
+  it('should render a Table with simple footer', () => {
+    const shallowComponent = shallow(
+      <Table
+        summary="Test summary description"
+        summaryId="test-id"
+        numberOfColumns={0}
+        showSimpleFooter
+      />,
+    );
+    expect(shallowComponent).toMatchSnapshot();
+  });
+
   it('should render a Table header and footer nodes', () => {
     const shallowComponent = shallow(
       <Table

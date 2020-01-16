@@ -94,6 +94,10 @@ const propTypes = {
    */
   scrollRefCallback: PropTypes.func,
   /**
+   * Whether or not a display only footer should be affixed to the table.
+   */
+  showSimpleFooter: PropTypes.bool,
+  /**
    * The summary text to describe the table's content and interactions.
    */
   summary: PropTypes.string.isRequired,
@@ -105,6 +109,7 @@ const propTypes = {
 
 const defaultProps = {
   fill: false,
+  showSimpleFooter: false,
 };
 
 const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
@@ -367,13 +372,14 @@ const Table = ({
   numberOfColumns,
   numberOfRows,
   scrollRefCallback,
+  showSimpleFooter,
   summary,
   summaryId,
   ...customProps
 }) => {
   // If all column widths are using static sizing alter the table style to display inline.
   const makeInline = columnWidths && columnWidths.length ? columnWidths.every(width => !!width.static) : undefined;
-  const hasEndNodes = headerNode || footerNode;
+  const hasEndNodes = headerNode || footerNode || showSimpleFooter;
 
   const tableClasses = cx(
     'table',
@@ -420,10 +426,18 @@ const Table = ({
     return rows;
   }
 
+  let footerElement = [];
+  if (footerNode) {
+    footerElement.push(footerNode);
+  }
+  if (showSimpleFooter) {
+    footerElement.push(<div className={cx('simple-footer')} />);
+  }
+
   return (
     <ContentContainer
       fill={fill}
-      footer={footerNode}
+      footer={footerElement}
       header={headerNode}
       className={cx(
         'outer',

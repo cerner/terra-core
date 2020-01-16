@@ -9,6 +9,7 @@ const FixedTest = () => (
       summary="This a fixed height table."
       fill
       numberOfColumns={1}
+      showSimpleFooter
       headerData={{
         cells: [
           {

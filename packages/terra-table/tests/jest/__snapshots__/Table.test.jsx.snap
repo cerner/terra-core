@@ -19,9 +19,11 @@ exports[`Table should render a Table header and footer nodes 1`] = `
   className="outer"
   fill={false}
   footer={
-    <p>
-      zxcv
-    </p>
+    Array [
+      <p>
+        zxcv
+      </p>,
+    ]
   }
   header={
     <p>
@@ -724,6 +726,32 @@ exports[`Table should render a Table with section rows width chevrons 1`] = `
     </Row>
   </div>
 </div>
+`;
+
+exports[`Table should render a Table with simple footer 1`] = `
+<ContentContainer
+  className="outer"
+  fill={false}
+  footer={
+    Array [
+      <div
+        className="simple-footer"
+      />,
+    ]
+  }
+>
+  <div
+    aria-describedby="test-id"
+    aria-rowcount={0}
+    className="table"
+    role="grid"
+  >
+    <VisuallyHiddenText
+      id="test-id"
+      text="Test summary description"
+    />
+  </div>
+</ContentContainer>
 `;
 
 exports[`Table should render a Table with widths 1`] = `
