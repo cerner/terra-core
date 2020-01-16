@@ -426,7 +426,7 @@ const Table = ({
     return rows;
   }
 
-  let footerElement = [];
+  const footerElement = [];
   if (footerNode) {
     footerElement.push(footerNode);
   }

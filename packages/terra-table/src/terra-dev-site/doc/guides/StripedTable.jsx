@@ -22,6 +22,7 @@ const StripedTable = () => (
     summary="This table shows an implementation of striped table."
     numberOfColumns={4}
     cellPaddingStyle="standard"
+    dividerStyle="horizontal"
     headerData={{
       cells: [
         { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },

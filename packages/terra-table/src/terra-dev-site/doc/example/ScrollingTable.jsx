@@ -11,6 +11,7 @@ const FixedHeightTable = () => (
       numberOfColumns={3}
       cellPaddingStyle="standard"
       showSimpleFooter
+      dividerStyle="horizontal"
       headerData={{
         cells: [
           {
