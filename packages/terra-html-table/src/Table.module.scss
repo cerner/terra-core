@@ -4,7 +4,7 @@
     background-color: var(--terra-html-table-background-color, transparent);
     border: var(--terra-html-table-border, 0);
     border-collapse: collapse;
-    border-radius: var(--terra-html-table-border-radius, 3px);
+    border-radius: var(--terra-html-table-border-radius, 0);
     border-spacing: 0;
     max-width: 100%;
     width: 100%;
@@ -30,41 +30,41 @@
       vertical-align: top;
 
       &:first-of-type {
-        border-left: var(--terra-html-table-first-cell-border-left, 1px solid #c8cacb);
+        border-left: var(--terra-html-table-first-cell-border-left, 1px solid #dedfe0);
       }
 
       &:last-of-type {
-        border-right: var(--terra-html-table-last-cell-border-right, 1px solid #c8cacb);
+        border-right: var(--terra-html-table-last-cell-border-right, 1px solid #dedfe0);
       }
     }
 
     // Header Cell
     th {
       border: 0;
-      border-left: var(--terra-html-table-header-cell-border-left, 0);
+      border-right: var(--terra-html-table-header-cell-border-right, 1px solid rgba(200, 202, 203, 0.5));
       display: table-cell;
       text-align: left;
       vertical-align: top;
 
       &:first-of-type {
-        border-left: var(--terra-html-table-first-header-cell-border-left, 1px solid #c8cacb);
+        border-left: var(--terra-html-table-first-header-cell-border-left, 1px solid #dedfe0);
       }
 
       &:last-of-type {
-        border-right: var(--terra-html-table-last-header-cell-border-right, 1px solid #c8cacb);
+        border-right: var(--terra-html-table-last-header-cell-border-right, 1px solid #dedfe0);
       }
     }
 
     // Header
     thead {
-      background-color: var(--terra-html-table-header-background-color, #dedfe0);
-      box-shadow: var(--terra-html-table-header-box-shadow, 0 4px 4px -4px rgba(134, 138, 140, 0.75), inset 0 0 0 1px #fff);
+      background-color: var(--terra-html-table-header-background-color, #f1f1f2);
+      box-shadow: var(--terra-html-table-header-box-shadow, 0 4px 4px -3.5px rgba(134, 138, 140, 0.75), inset 0 0 0 1px #fff, inset 0.5px 0.5px 0 2px rgba(255, 255, 255, 0.5));
       display: table-header-group;
 
       // Header Row
       tr {
-        border-bottom: var(--terra-html-table-header-row-border-bottom, 0);
-        border-top: var(--terra-html-table-header-row-border-top, 1px solid #c8cacb);
+        border-bottom: var(--terra-html-table-header-row-border-bottom, 1px solid #b9bbbc);
+        border-top: var(--terra-html-table-header-row-border-top, 1px solid #dedfe0);
       }
 
       // Header Cell
@@ -83,17 +83,21 @@
       // Row
       tr {
         background-color: var(--terra-html-table-row-background-color, transparent);
-        border-top: var(--terra-html-table-row-border-top, 1px solid #c8cacb);
+        border-top: var(--terra-html-table-row-border-top, 1px solid #dedfe0);
+
+        &:first-of-type {
+          border-top: 0;
+        }
 
         &:last-of-type {
-          border-bottom: var(--terra-html-table-last-row-border-bottom, 1px solid #c8cacb);
+          border-bottom: var(--terra-html-table-last-row-border-bottom, 1px solid #dedfe0);
         }
       }
     }
 
     tfoot {
       tr {
-        border-bottom: var(--terra-html-table-footer-row-border-bottom, 1px solid #c8cacb);
+        border-bottom: var(--terra-html-table-footer-row-border-bottom, 1px solid #dedfe0);
         border-top: var(--terra-html-table-footer-row-border-top, 0);
         text-align: left;
       }
@@ -133,7 +137,7 @@
   .striped {
     tbody tr {
       &:nth-of-type(even) {
-        background-color: var(--terra-html-table-row-striped-background-color, #f4f4f4);
+        background-color: var(--terra-html-table-row-striped-background-color, #f6f7f8);
       }
     }
   }

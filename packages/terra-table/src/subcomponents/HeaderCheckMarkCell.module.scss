@@ -41,11 +41,11 @@
 
   .is-interactable .checkmark {
     background-color: var(--terra-table-header-checkmark-cell-interactable-background-color, #fff);
-    border: var(--terra-table-header-checkmark-cell-interactable-border, 1px solid #4983d1);
+    border: var(--terra-table-header-checkmark-cell-interactable-border, 1px solid #9b9c9d);
   }
 
   .is-interactable:hover .checkmark {
-    border: var(--terra-table-header-checkmark-cell-interactable-hover-border, 1px solid #3a67a4);
+    border: var(--terra-table-header-checkmark-cell-interactable-hover-border, 1px solid #2a4b77);
   }
 
   .is-interactable:active .checkmark {
@@ -62,7 +62,7 @@
   }
 
   .is-interactable[data-cell-show-focus='true']:focus {
-    outline: var(--terra-table-header-checkmark-cell-interactable-focus-outline, 2px dashed #2a4b77);
+    outline: var(--terra-table-header-checkmark-cell-interactable-focus-outline, 2px dashed #000);
     outline-offset: var(--terra-table-header-checkmark-cell-interactable-focus-outline-offset, -2px);
   }
 
@@ -78,17 +78,17 @@
   }
 
   .is-disabled {
-    background-color: var(--terra-table-header-checkmark-cell-disabled-background-color, rgba(255, 255, 255, 0.5));
-    border: var(--terra-table-header-checkmark-cell-disabled-border, 1px solid rgba(89, 159, 253, 0.5));
+    background-color: var(--terra-table-header-checkmark-cell-disabled-background-color, rgba(111, 116, 119, 0.07));
+    border: var(--terra-table-header-checkmark-cell-disabled-border, 1px solid rgba(134, 138, 140, 0.35));
   }
 
   .is-disabled.is-selected {
-    background-color: var(--terra-table-header-checkmark-cell-disabled-selected-background-color, rgba(42, 75, 119, 0.5));
+    background-color: var(--terra-table-header-checkmark-cell-disabled-selected-background-color, rgba(134, 138, 140, 0.35));
     background-image: var(--terra-table-header-checkmark-cell-disabled-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="rgba(255, 255, 255, 0.5)" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
   }
 
   .is-disabled.is-selected.is-intermediate {
-    background-color: var(--terra-table-header-checkmark-cell-disabled-intermediate-background-color, rgba(42, 75, 119, 0.5));
+    background-color: var(--terra-table-header-checkmark-cell-disabled-intermediate-background-color, rgba(134, 138, 140, 0.35));
     background-image: var(--terra-table-header-checkmark-cell-disabled-intermediate-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><rect fill="rgba(255, 255, 255, 0.8)" x="3" y="6" width="8" height="2"/></svg>'));
   }
 
@@ -125,7 +125,7 @@
       outline: none;
 
       &::before {
-        border: var(--terra-table-header-checkmark-cell-ie-focus-before-border, 2px dashed #2a4b77);
+        border: var(--terra-table-header-checkmark-cell-ie-focus-before-border, 2px dashed #000);
         bottom: 0;
         content: '';
         left: 0;

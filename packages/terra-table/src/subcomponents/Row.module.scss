@@ -43,7 +43,7 @@
   }
 
   .is-striped {
-    background-color: var(--terra-table-row-striped-background-color, #f4f4f4);
+    background-color: var(--terra-table-row-striped-background-color, #f6f7f8);
 
     &.is-selected {
       background-color: var(--terra-table-row-striped-selected-background-color, #e1f3fd);
@@ -62,7 +62,7 @@
     }
 
     &.is-selectable[data-row-show-focus='true']:focus {
-      background-color: var(--terra-table-row-striped-focus-background-color, #f4f4f4);
+      background-color: var(--terra-table-row-striped-focus-background-color, #f6f7f8);
 
       &.is-selected {
         background-color: var(--terra-table-row-striped-selected-focus-background-color, #e1f3fd);
@@ -72,6 +72,10 @@
 
   .is-selected {
     background-color: var(--terra-table-row-selected-background-color, #e1f3fd);
+
+    &:last-of-type {
+      border-bottom-color: var(--terra-table-row-selected-last-border-bottom-color, #dedfe0);
+    }
 
     &.divider-horizontal,
     &.divider-both {
@@ -128,7 +132,7 @@
       }
   
       &:last-of-type {
-        border-bottom-color: var(--terra-table-row-selected-active-hover-last-border-bottom-color, #0092e0);
+        border-bottom-color: var(--terra-table-row-selected-active-hover-last-border-bottom-color, #dedfe0);
         border-top-color: var(--terra-table-row-selected-active-hover-last-border-top-color, #0092e0);
       }
   

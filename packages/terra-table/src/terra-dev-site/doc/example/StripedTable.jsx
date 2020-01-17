@@ -6,6 +6,7 @@ const StripedTable = () => (
     summaryId="striped-table"
     summary="This table displays striped rows."
     numberOfColumns={3}
+    dividerStyle="horizontal"
     headerData={{
       cells: [
         { id: 'header-name', key: 'name', children: 'Name' },

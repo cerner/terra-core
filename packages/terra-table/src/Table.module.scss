@@ -20,7 +20,7 @@
   }
 
   .header {
-    background-color: var(--terra-table-header-background-color, #f4f4f4);
+    background-color: var(--terra-table-header-background-color, #f1f1f2);
     border-bottom: var(--terra-table-header-border-bottom, 1px solid #868a8c);
     box-shadow: var(--terra-table-header-box-shadow, 0 4px 4px -4px rgba(134, 138, 140, 0.75), inset 0 0 0 1px #fff);
     z-index: 1;
@@ -87,8 +87,9 @@
   }
 
   .simple-footer {
-    background-color: var(--terra-table-simple-footer-background-color, #f4f4f4);
-    box-shadow: var(--terra-table-simple-footer-box-shadow, 0 -4px 4px -4px rgba(134, 138, 140, 0.75), inset 0 0 0 1px #fff);
+    background-color: var(--terra-table-simple-footer-background-color, #f1f1f2);
+    box-shadow: var(--terra-table-simple-footer-box-shadow, 0 -1px 0 0 #9fa2a4, 0 -5px 6px -4px rgba(134, 138, 140, 0.35), inset 0 0 0 1px #fff, inset 0 2px 0 0 rgba(255, 255, 255, 0.35));
     height: var(--terra-table-simple-footer-height, 0.7142857143rem);
+    position: relative;
   }
 }

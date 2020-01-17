@@ -84,6 +84,7 @@
   --terra-table-header-cell-ie-focus-before-border: 2px solid #2a4b77;
   --terra-table-header-cell-hover-background-image: none;
   --terra-table-header-cell-hover-box-shadow: none;
+  --terra-table-header-cell-sort-indicator-margin-bottom: 0.21428rem;
 
   @include terra-inline-svg-var('--terra-table-header-cell-desc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>');
   @include terra-inline-svg-var('--terra-table-header-cell-sort-asc-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>');
@@ -174,6 +175,7 @@
   --terra-table-row-selected-active-hover-last-border-bottom-color: #0092e0;
   --terra-table-row-selected-active-hover-last-border-top-color: #0092e0;
   --terra-table-row-selected-active-hover-next-border-top-color: #0092e0;
+  --terra-table-row-selected-last-border-bottom-color: #0092e0;
 
   // SectionHeader
   --terra-table-section-header-background-color: #e8e9ea;
