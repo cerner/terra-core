@@ -44,6 +44,7 @@
   --terra-table-checkmark-cell-default-padding-left: 0.7142857143rem;
   --terra-table-checkmark-cell-default-padding-right: 0.7142857143rem;
   --terra-table-checkmark-cell-ie-focus-before-border: 2px dashed #2a4b77;
+  --terra-table-checkmark-cell-selectable-selected-border: 1px solid #3a67a4;
 
   @include terra-inline-svg-var('--terra-table-checkmark-cell-selected-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#000" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>');
   @include terra-inline-svg-var('--terra-table-checkmark-cell-selected-disabled-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#ccc" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>');
@@ -176,6 +177,10 @@
   --terra-table-row-selected-active-hover-last-border-top-color: #0092e0;
   --terra-table-row-selected-active-hover-next-border-top-color: #0092e0;
   --terra-table-row-selected-last-border-bottom-color: #0092e0;
+  --terra-table-row-selected-background-box-shadow: none;
+  --terra-table-row-selected-next-selected-box-shadow: none;
+  --terra-table-row-selected-next-selected-hover-box-shadow: none;
+  --terra-table-row-active-hover-next-selected-box-shadow: none;
 
   // SectionHeader
   --terra-table-section-header-background-color: #e8e9ea;
