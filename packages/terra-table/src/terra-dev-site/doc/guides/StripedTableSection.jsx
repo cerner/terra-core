@@ -33,6 +33,7 @@ const StripedTableSection = () => (
     summary="This table shows an implementation of striped section table."
     numberOfColumns={3}
     cellPaddingStyle="standard"
+    dividerStyle="horizontal"
     headerData={{
       cells: [
         { key: 'cell-0', id: 'toggle-10', children: 'Column 0' },

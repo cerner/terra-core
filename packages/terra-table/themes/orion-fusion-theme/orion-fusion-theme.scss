@@ -120,6 +120,7 @@
   --terra-table-header-checkmark-cell-standard-padding-bottom: 0.5rem;
   --terra-table-header-checkmark-cell-compact-padding-bottom: 0.35715rem;
   --terra-table-header-checkmark-cell-ie-focus-before-border: 2px dashed #2a4b77;
+  --terra-table-header-checkmark-cell-selected-border: 1px solid #3a67a4;
 
   @include terra-inline-svg-var('--terra-table-header-checkmark-cell-selected-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#fff" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>');
   @include terra-inline-svg-var('--terra-table-header-checkmark-cell-intermediate-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><rect fill="#fff" x="3" y="6" width="8" height="2"/></svg>');

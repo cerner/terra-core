@@ -74,14 +74,14 @@
     background-color: var(--terra-table-row-selected-background-color, #e1f3fd);
     box-shadow: var(--terra-table-row-selected-background-box-shadow);
 
-    &:last-of-type {
-      border-bottom-color: var(--terra-table-row-selected-last-border-bottom-color, #dedfe0);
-    }
-
     &.divider-horizontal,
     &.divider-both {
       &.row {
         border-color: var(--terra-table-row-selected-border-color, #0092e0);
+      }
+
+      &:last-of-type {
+        border-bottom-color: var(--terra-table-row-selected-last-border-bottom-color, #dedfe0);
       }
 
       + .row {
