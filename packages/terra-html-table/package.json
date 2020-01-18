@@ -1,0 +1,44 @@
+{
+  "name": "terra-html-table",
+  "main": "lib/index.js",
+  "version": "0.0.0",
+  "description": "The Terra HTML Table is a structural component to arrange content within a semantic html table.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git"
+  },
+  "keywords": [
+    "Cerner",
+    "Terra",
+    "terra-html-table",
+    "HTMLTable",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "terra-doc-template": "^2.17.0"
+  },
+  "scripts": {
+    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
+    "precompile": "rm -rf lib",
+    "test": "npm run jest && npm run wdio",
+    "jest": "jest --config ../../jestconfig.js",
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-fusion"
+  }
+}
