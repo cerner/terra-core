@@ -1,7 +1,7 @@
 {
   "name": "terra-html-table",
   "main": "lib/index.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The Terra HTML Table is a structural component to arrange content within a semantic html table.",
   "repository": {
     "type": "git",
