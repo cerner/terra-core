@@ -28,7 +28,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.23.0",
     "terra-i18n": "^4.21.0"
   },
   "scripts": {
