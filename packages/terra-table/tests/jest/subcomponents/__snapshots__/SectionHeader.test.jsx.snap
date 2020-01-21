@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render default 1`] = `
+<div
+  className="section-header"
+  role="row"
+>
+  <div
+    className="section-content"
+    colSpan={1}
+    headers=""
+    role="columnheader"
+  >
+    <span
+      className="title"
+    >
+      test
+    </span>
+  </div>
+</div>
+`;
+
+exports[`should render with callback functions 1`] = `
+<div
+  className="section-header is-collapsible"
+  role="row"
+>
+  <div
+    aria-expanded={true}
+    className="section-content"
+    colSpan={1}
+    data-row-show-focus="true"
+    headers=""
+    onBlur={[Function]}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    role="columnheader"
+    tabIndex="0"
+  >
+    <div
+      aria-hidden={true}
+      className="start"
+    >
+      <span
+        className="accordion-icon is-open"
+      />
+    </div>
+    <div
+      className="fill"
+    >
+      <span
+        className="title"
+      >
+        test
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render with isCollapsed 1`] = `
+<div
+  className="section-header"
+  role="row"
+>
+  <div
+    className="section-content"
+    colSpan={1}
+    headers=""
+    role="columnheader"
+  >
+    <span
+      className="title"
+    >
+      test
+    </span>
+  </div>
+</div>
+`;
+
+exports[`should render with isCollapsible 1`] = `
+<div
+  className="section-header is-collapsible"
+  role="row"
+>
+  <div
+    aria-expanded={true}
+    className="section-content"
+    colSpan={1}
+    data-row-show-focus="true"
+    headers=""
+    onBlur={[Function]}
+    onMouseDown={[Function]}
+    role="columnheader"
+    tabIndex="0"
+  >
+    <div
+      aria-hidden={true}
+      className="start"
+    >
+      <span
+        className="accordion-icon is-open"
+      />
+    </div>
+    <div
+      className="fill"
+    >
+      <span
+        className="title"
+      >
+        test
+      </span>
+    </div>
+  </div>
+</div>
+`;

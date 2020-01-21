@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
 
+4.18.0 - (January 17, 2020)
+------------------
 ### Changed
 * Updated `uncontrolled responsive-element` to `controlled responsive-element`.
 
