@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import TerraImage from 'terra-image';
+import TerraImage, { FitTypes } from 'terra-image';
 import styles from './ProfileImage.module.scss';
 
 const cx = classNames.bind(styles);
@@ -16,6 +16,10 @@ const propTypes = {
    * The text content that specifies an alternative text for an image.
    */
   alt: PropTypes.string,
+  /**
+  * Sets the `fit` prop of terra-image from the following values: `cover`, `contain`, `fill`, `scale-down`, `none`.
+  */
+  fit: PropTypes.oneOf(Object.values(FitTypes)),
   /**
    * Sets the height of the image.
    */
@@ -32,6 +36,10 @@ const propTypes = {
    * Function to be executed when the profile image load errors.
    */
   onError: PropTypes.func,
+};
+
+const defaultProps = {
+  fit: 'cover',
 };
 
 const isOnlyNumbers = toTest => !(/\D/).test(toTest);
@@ -52,11 +60,12 @@ const ProfileImage = (props) => {
   /* eslint-enable react/forbid-dom-props */
 
   if (props.src) {
-    return (<div><TerraImage placeholder={placeholderImage} fit="cover" {...props} /></div>);
+    return (<div><TerraImage placeholder={placeholderImage} {...props} /></div>);
   }
   return placeholderImage;
 };
 
 ProfileImage.propTypes = propTypes;
+ProfileImage.defaultProps = defaultProps;
 
 export default ProfileImage;

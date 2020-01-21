@@ -26,6 +26,32 @@ exports[`should render a Terra image with a placeholder prop 1`] = `
 </div>
 `;
 
+exports[`should render a Terra image with a placeholder prop 2`] = `
+<div>
+  <Image
+    alt="A profile image"
+    fit="contain"
+    height="75"
+    isFluid={false}
+    placeholder={
+      <span
+        className="placeholder-images"
+        style={
+          Object {
+            "height": "75px",
+            "width": "75px",
+          }
+        }
+        title="A profile image"
+      />
+    }
+    src="profile.jpg"
+    variant="default"
+    width="75"
+  />
+</div>
+`;
+
 exports[`should render an avatar image without Source prop 1`] = `
 <span
   className="placeholder-images"

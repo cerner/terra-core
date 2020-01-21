@@ -12,3 +12,9 @@ it('should render an avatar image without Source prop', () => {
   const wrapper = shallow(<ProfileImage alt="Default" height="75" width="75" />);
   expect(wrapper).toMatchSnapshot();
 });
+
+/* Profile Image with fit as contain */
+it('should render a Terra image with a placeholder prop', () => {
+  const wrapper = shallow(<ProfileImage src="profile.jpg" height="75" width="75" fit="contain" alt="A profile image" />);
+  expect(wrapper).toMatchSnapshot();
+});

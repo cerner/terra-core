@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `fit` prop
 
 3.23.0 - (January 7, 2020)
 ------------------
