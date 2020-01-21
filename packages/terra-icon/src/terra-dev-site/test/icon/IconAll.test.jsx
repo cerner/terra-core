@@ -163,6 +163,12 @@ const IconAll = () => (
     <Icon.IconManufacturer className={cx(['icon'])} />
     <Icon.IconMax className={cx(['icon'])} />
     <Icon.IconMaximize className={cx(['icon'])} />
+    <Icon.IconMediaFastForward className={cx(['icon'])} />
+    <Icon.IconMediaPause className={cx(['icon'])} />
+    <Icon.IconMediaPlay className={cx(['icon'])} />
+    <Icon.IconMediaRecord className={cx(['icon'])} />
+    <Icon.IconMediaRewind className={cx(['icon'])} />
+    <Icon.IconMediaStop className={cx(['icon'])} />
     <Icon.IconMenu className={cx(['icon'])} />
     <Icon.IconMerge className={cx(['icon'])} />
     <Icon.IconMicrophone className={cx(['icon'])} />
@@ -192,7 +198,6 @@ const IconAll = () => (
     <Icon.IconPaperFolded className={cx(['icon'])} />
     <Icon.IconPaperPencil className={cx(['icon'])} />
     <Icon.IconPartiallyMet className={cx(['icon'])} />
-    <Icon.IconPause className={cx(['icon'])} />
     <Icon.IconPending className={cx(['icon'])} />
     <Icon.IconPerson className={cx(['icon'])} />
     <Icon.IconPersonDoor className={cx(['icon'])} />

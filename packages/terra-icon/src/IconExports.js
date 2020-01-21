@@ -154,6 +154,12 @@ import IconLowRiskLowLight from './icon/IconLowRiskLowLight';
 import IconManufacturer from './icon/IconManufacturer';
 import IconMax from './icon/IconMax';
 import IconMaximize from './icon/IconMaximize';
+import IconMediaFastForward from './icon/IconMediaFastForward';
+import IconMediaPause from './icon/IconMediaPause';
+import IconMediaPlay from './icon/IconMediaPlay';
+import IconMediaRecord from './icon/IconMediaRecord';
+import IconMediaRewind from './icon/IconMediaRewind';
+import IconMediaStop from './icon/IconMediaStop';
 import IconMenu from './icon/IconMenu';
 import IconMerge from './icon/IconMerge';
 import IconMicrophone from './icon/IconMicrophone';
@@ -183,7 +189,6 @@ import IconPanelRight from './icon/IconPanelRight';
 import IconPaperFolded from './icon/IconPaperFolded';
 import IconPaperPencil from './icon/IconPaperPencil';
 import IconPartiallyMet from './icon/IconPartiallyMet';
-import IconPause from './icon/IconPause';
 import IconPending from './icon/IconPending';
 import IconPerson from './icon/IconPerson';
 import IconPersonDoor from './icon/IconPersonDoor';
@@ -434,6 +439,12 @@ const Icons = {
   IconManufacturer,
   IconMax,
   IconMaximize,
+  IconMediaFastForward,
+  IconMediaPause,
+  IconMediaPlay,
+  IconMediaRecord,
+  IconMediaRewind,
+  IconMediaStop,
   IconMenu,
   IconMerge,
   IconMicrophone,
@@ -463,7 +474,6 @@ const Icons = {
   IconPaperFolded,
   IconPaperPencil,
   IconPartiallyMet,
-  IconPause,
   IconPending,
   IconPerson,
   IconPersonDoor,

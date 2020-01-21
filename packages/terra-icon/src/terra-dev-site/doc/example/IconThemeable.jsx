@@ -149,7 +149,6 @@ import IconIncomingCall from 'terra-icon/lib/icon/IconIncomingCall';
 import IconMissedCall from 'terra-icon/lib/icon/IconMissedCall';
 import IconPinDown from 'terra-icon/lib/icon/IconPinDown';
 import IconPinDiagonal from 'terra-icon/lib/icon/IconPinDiagonal';
-import IconPause from 'terra-icon/lib/icon/IconPause';
 import IconAudio from 'terra-icon/lib/icon/IconAudio';
 import IconExternalLink from 'terra-icon/lib/icon/IconExternalLink';
 import IconBedRequested from 'terra-icon/lib/icon/IconBedRequested';
@@ -174,6 +173,12 @@ import IconPharmacyVerification from 'terra-icon/lib/icon/IconPharmacyVerificati
 import IconFitHeight from 'terra-icon/lib/icon/IconFitHeight';
 import IconPersonDoor from 'terra-icon/lib/icon/IconPersonDoor';
 import IconLocationPin from 'terra-icon/lib/icon/IconLocationPin';
+import IconMediaPlay from 'terra-icon/lib/icon/IconMediaPlay';
+import IconMediaPause from 'terra-icon/lib/icon/IconMediaPause';
+import IconMediaStop from 'terra-icon/lib/icon/IconMediaStop';
+import IconMediaRecord from 'terra-icon/lib/icon/IconMediaRecord';
+import IconMediaFastForward from 'terra-icon/lib/icon/IconMediaFastForward';
+import IconMediaRewind from 'terra-icon/lib/icon/IconMediaRewind';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -1548,15 +1553,6 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPause height='2em' width='2em' /></td>
-        <td style={cellStyle}>pause</td>
-        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
-          <code>
-            import IconPause from 'terra-icon/lib/icon/IconPause';
-          </code>
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconAudio height='2em' width='2em' /></td>
         <td style={cellStyle}>audio</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
@@ -1769,6 +1765,60 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconLocationPin from 'terra-icon/lib/icon/IconLocationPin';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMediaPlay height='2em' width='2em' /></td>
+        <td style={cellStyle}>mediaPlay</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMediaPlay from 'terra-icon/lib/icon/IconMediaPlay';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMediaPause height='2em' width='2em' /></td>
+        <td style={cellStyle}>mediaPause</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMediaPause from 'terra-icon/lib/icon/IconMediaPause';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMediaStop height='2em' width='2em' /></td>
+        <td style={cellStyle}>mediaStop</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMediaStop from 'terra-icon/lib/icon/IconMediaStop';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMediaRecord height='2em' width='2em' /></td>
+        <td style={cellStyle}>mediaRecord</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMediaRecord from 'terra-icon/lib/icon/IconMediaRecord';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMediaFastForward height='2em' width='2em' /></td>
+        <td style={cellStyle}>mediaFastForward</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMediaFastForward from 'terra-icon/lib/icon/IconMediaFastForward';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMediaRewind height='2em' width='2em' /></td>
+        <td style={cellStyle}>mediaRewind</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMediaRewind from 'terra-icon/lib/icon/IconMediaRewind';
           </code>
         </td>
       </tr>

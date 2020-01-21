@@ -1,4 +1,4 @@
-Terra.describeViewports('Icon', ['large'], () => {
+Terra.describeViewports('Icon', ['huge'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-default'));
 
