@@ -1,0 +1,52 @@
+import { Badge } from 'terra-table/package.json?dev-site-package';
+import HeaderRowExample from 'terra-table/lib/terra-dev-site/doc/example/HeaderRowExample?dev-site-example';
+import HeaderCheckMarkCellExample from 'terra-table/lib/terra-dev-site/doc/example/HeaderCheckMarkCellExample?dev-site-example';
+import HeaderProps from 'terra-table/src/terra-dev-site/doc/table/reference-proptypes/headerShape?dev-site-props-table';
+import HeaderCellProps from 'terra-table/src/terra-dev-site/doc/table/reference-proptypes/headerCellShape?dev-site-props-table';
+import SelectAllColumnProps from 'terra-table/src/terra-dev-site/doc/table/reference-proptypes/selectAllColumnShape?dev-site-props-table';
+
+<Badge />
+
+# Terra Table - Header
+
+The table's header is comprised of a cells and an optional selectAllColumn. The checkLabel should be provided if the table has toggle behavior.
+
+## Getting Started
+
+## Usage
+
+```jsx
+import React from 'react';
+import Table from 'terra-table';
+
+<Table
+  headerData={{
+    selectAllColumn: {
+      checkStatus: 'empty',
+      checkAlignment: '2rem',
+      checkLabel: 'Batch Label Example',
+    },
+    cells: [
+      { id: 'header-name', key: 'name', children: 'Name' },
+    ],
+  }}
+/>
+```
+
+# Examples
+
+<HeaderRowExample />
+
+<HeaderCheckMarkCellExample />
+
+## Table Header Props
+
+<HeaderProps />
+
+## Table Header Cell Props
+
+<HeaderCellProps />
+
+## Table Select All Column Props
+
+<SelectAllColumnProps />
