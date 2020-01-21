@@ -61,7 +61,7 @@ const propTypes = {
   onChange: PropTypes.func,
 
   /**
-   * Function to trigger when user inputs a value. Sends parameters {Event} event and {String} searchText
+   * Function to trigger when user inputs a value. Sends parameter {Event} event.
    */
   onInput: PropTypes.func,
 
@@ -179,7 +179,7 @@ class SearchField extends React.Component {
     this.updateSearchText(textValue);
 
     if (this.props.onInput) {
-      this.props.onInput(event, textValue);
+      this.props.onInput(event);
     }
   }
 
