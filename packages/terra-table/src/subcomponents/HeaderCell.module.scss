@@ -1,0 +1,132 @@
+@import '~terra-mixins';
+
+:local {
+  .header-cell {
+    align-items: flex-end;
+    border: 0;
+    border-right: var(--terra-table-header-cell-border-right, 1px solid #ccc);
+    color: var(--terra-table-header-cell-color, #1c1f21);
+    display: flex;
+    flex: 1 1 0;
+    font-size: var(--terra-table-header-cell-font-size, 1rem);
+    font-weight: var(--terra-table-header-cell-font-weight, bold);
+    justify-content: space-between;
+    line-height: var(--terra-table-header-cell-line-height, 1.143);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    vertical-align: bottom;
+    word-break: break-word;
+
+    &:last-of-type {
+      border-right: 0; // Hide last border
+    }
+  }
+
+  .sort-indicator-asc,
+  .sort-indicator-desc {
+    color: transparent;
+    flex: 0 0 auto;
+    height: var(--terra-table-header-cell-sort-indicator-height, 0.6429rem);
+    margin-bottom: var(--terra-table-header-cell-sort-indicator-margin-bottom, 0.21428rem);
+    padding: 0;
+    width: var(--terra-table-header-cell-sort-indicator-width, 0.6429rem); 
+  }
+
+  .sort-is-active.sort-indicator-asc {
+    background: var(--terra-table-header-cell-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>'));
+  }
+
+  .sort-is-active.sort-indicator-desc {
+    background: var(--terra-table-header-cell-sort-asc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>'));
+  }
+
+  .is-interactable {
+    cursor: pointer;
+    outline: var(--terra-table-header-cell-outline, none);
+    
+    &:hover {
+      background-color: var(--terra-table-header-cell-hover-background-color, #f1f1f2);
+      background-image: var(--terra-table-header-cell-hover-background-image, linear-gradient(to bottom, #d1d2d3 2%, #e0e1e2 30%, #ebebeb 80%));
+      box-shadow: var(--terra-table-header-cell-hover-box-shadow, inset 0 0 0 1px #f1f1f2);
+
+      .sort-indicator-asc {
+        background: var(--terra-table-header-cell-hover-asc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="rgba(28,31,33,0.4)" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>'));
+      }
+
+      .sort-indicator-desc {
+        background: var(--terra-table-header-cell-hover-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="rgba(28,31,33,0.4)" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>'));
+      }
+
+      .sort-is-active.sort-indicator-asc {
+        background: var(--terra-table-header-cell-active-hover-asc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M24 0L.1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"/></svg>'));
+      }
+
+      .sort-is-active.sort-indicator-desc {
+        background: var(--terra-table-header-cell-active-hover-desc-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#000" d="M47.9 24.5l-3.8-3.8L27 37.4V0h-6v37.4L3.9 20.7.1 24.5 24 48z"/></svg>'));
+      }
+    }
+
+    &:active {
+      background-color: var(--terra-table-header-cell-active-background-color, #fff);
+    }
+
+    &[data-header-show-focus='true']:focus {
+      background-color: var(--terra-table-header-cell-focus-background-color);
+      outline: var(--terra-table-header-cell-focus-outline, 2px dashed #000);
+      outline-offset: var(--terra-table-header-cell-focus-outline-offset, -2px);
+      z-index: 1;
+    }
+  }
+
+  .cell-content {
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    // stylelint-disable-next-line plugin/no-unsupported-browser-features
+    overflow: hidden;
+    overflow-wrap: break-word; /* Modern browsers */
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  .container {
+    align-items: flex-end;
+    display: flex;
+    width: 100%;
+  }
+
+  [data-table-padding='standard'] .container {
+    padding-bottom: var(--terra-table-header-cell-standard-padding-bottom, 0.5rem);
+    padding-left: var(--terra-table-header-cell-standard-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-header-cell-standard-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-header-cell-standard-padding-top, 0.5rem);
+  }
+
+  [data-table-padding='compact'] .container {
+    padding-bottom: var(--terra-table-header-cell-compact-padding-bottom, 0.35715rem);
+    padding-left: var(--terra-table-header-cell-compact-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-header-cell-compact-padding-right, 0.7142857143rem);
+    padding-top: var(--terra-table-header-cell-compact-padding-top, 0.35715rem);
+  }
+
+  // -----------------------
+  // Delete entry after IE support is dropped. IE doesn't support outline-offset, so this mimics it.
+  // -----------------------
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .is-interactable[data-header-show-focus='true']:focus {
+      outline: none;
+
+      &::before {
+        border: var(--terra-table-header-cell-ie-focus-before-border, 2px dashed #000);
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
