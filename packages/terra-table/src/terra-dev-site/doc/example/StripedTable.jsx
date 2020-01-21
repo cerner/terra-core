@@ -1,31 +1,51 @@
 import React from 'react';
-import Table from 'terra-table/lib/Table';
+import Table from 'terra-table';
 
 const StripedTable = () => (
-  <Table>
-    <Table.Header>
-      <Table.HeaderCell content="Name" key="NAME" minWidth="small" />
-      <Table.HeaderCell content="Address" key="ADDRESS" minWidth="medium" />
-      <Table.HeaderCell content="Phone Number" key="PHONE_NUMBER" minWidth="large" />
-    </Table.Header>
-    <Table.Rows>
-      <Table.Row key="PERSON_0">
-        <Table.Cell content="John Smith" key="NAME" />
-        <Table.Cell content="123 Adams Drive" key="ADDRESS" />
-        <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
-      </Table.Row>
-      <Table.Row key="PERSON_1">
-        <Table.Cell content="Jane Smith" key="NAME" />
-        <Table.Cell content="321 Drive Street" key="ADDRESS" />
-        <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
-      </Table.Row>
-      <Table.Row key="PERSON_2">
-        <Table.Cell content="Dave Smith" key="NAME" />
-        <Table.Cell content="213 Raymond Road" key="ADDRESS" />
-        <Table.Cell content="111-222-3333" key="PHONE_NUMBER" />
-      </Table.Row>
-    </Table.Rows>
-  </Table>
+  <Table
+    summaryId="striped-table"
+    summary="This table displays striped rows."
+    numberOfColumns={3}
+    dividerStyle="horizontal"
+    headerData={{
+      cells: [
+        { id: 'header-name', key: 'name', children: 'Name' },
+        { id: 'header-address', key: 'address', children: 'Address' },
+        { id: 'header-phone_number', key: 'phone_number', children: 'Phone Number' },
+      ],
+    }}
+    bodyData={[
+      {
+        rows: [
+          {
+            key: 'row-0',
+            cells: [
+              { key: 'cell-0', children: 'John Smith' },
+              { key: 'cell-1', children: '123 Adams Drive' },
+              { key: 'cell-2', children: '111-222-3333' },
+            ],
+          },
+          {
+            key: 'row-1',
+            isStriped: true,
+            cells: [
+              { key: 'cell-0', children: 'Jane Smith' },
+              { key: 'cell-1', children: '321 Drive Street' },
+              { key: 'cell-2', children: '111-222-3333' },
+            ],
+          },
+          {
+            key: 'row-2',
+            cells: [
+              { key: 'cell-0', children: 'Dave Smith' },
+              { key: 'cell-1', children: '213 Raymond Road' },
+              { key: 'cell-2', children: '111-222-3333' },
+            ],
+          },
+        ],
+      },
+    ]}
+  />
 );
 
 export default StripedTable;

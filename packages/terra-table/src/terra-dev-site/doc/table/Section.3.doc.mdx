@@ -1,0 +1,41 @@
+import { Badge } from 'terra-table/package.json?dev-site-package';
+import SectionExample from 'terra-table/lib/terra-dev-site/doc/example/SectionExample?dev-site-example';
+import SectionProps from 'terra-table/src/terra-dev-site/doc/table/reference-proptypes/sectionShape?dev-site-props-table';
+import SectionHeaderProps from 'terra-table/src/terra-dev-site/doc/table/reference-proptypes/sectionHeaderShape?dev-site-props-table';
+
+<Badge />
+
+# Terra Table - Section
+
+The Terra Table Section is a sub component that creates a section header based on the given props and groups the child rows beneath it. The section has the ability to toggle the display of its child rows given onToggle and isCollapsed props. For a section to be collapsed both isCollapsible and isCollapsed must be true. Each section handles its collapsible and collapsed state.
+
+## Getting Started
+
+## Usage
+
+```jsx
+import React from 'react';
+import Table from 'terra-table';
+
+<Table
+  bodyData={[{
+    sectionHeader: {
+      title: 'Default Section',
+      id: 'default-id',
+      key: 'default',
+    },
+  }]}
+/>
+```
+
+# Examples
+
+<SectionExample />
+
+## Table Section Props
+
+<SectionProps />
+
+## Table Section Header Props
+
+<SectionHeaderProps />
