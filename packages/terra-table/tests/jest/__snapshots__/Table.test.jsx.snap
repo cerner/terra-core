@@ -1,181 +1,818 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render a default table 1`] = `
-<table
-  className="table striped padded"
+exports[`Table should render a Table 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={0}
+  className="table outer"
+  role="grid"
 >
-  <TableHeader>
-    <TableHeaderCell
-      content="Name"
-      key="NAME"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Address"
-      key="ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key="PHONE_NUMBER"
-      minWidth="small"
-    />
-  </TableHeader>
-  <TableRows>
-    <TableRow
-      isSelected={false}
-      key="PERSON_0"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-    <TableRow
-      isSelected={false}
-      key="PERSON_1"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-  </TableRows>
-</table>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+</div>
 `;
 
-exports[`should render a table without padding 1`] = `
-<table
-  className="table striped"
+exports[`Table should render a Table header and footer nodes 1`] = `
+<ContentContainer
+  className="outer"
+  fill={false}
+  footer={
+    Array [
+      <p>
+        zxcv
+      </p>,
+    ]
+  }
+  header={
+    <p>
+      asdf
+    </p>
+  }
 >
-  <TableHeader>
-    <TableHeaderCell
-      content="Name"
-      key="NAME"
-      minWidth="small"
+  <div
+    aria-describedby="test-id"
+    aria-rowcount={0}
+    className="table"
+    role="grid"
+  >
+    <VisuallyHiddenText
+      id="test-id"
+      text="Test summary description"
     />
-    <TableHeaderCell
-      content="Address"
-      key="ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key="PHONE_NUMBER"
-      minWidth="small"
-    />
-  </TableHeader>
-  <TableRows>
-    <TableRow
-      isSelected={false}
-      key="PERSON_0"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-    <TableRow
-      isSelected={false}
-      key="PERSON_1"
-    >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-  </TableRows>
-</table>
+  </div>
+</ContentContainer>
 `;
 
-exports[`should render a table without zebra stripes 1`] = `
-<table
-  className="table padded"
+exports[`Table should render a Table with check style icon and row style toggle 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={2}
+  className="table outer"
+  role="grid"
 >
-  <TableHeader>
-    <TableHeaderCell
-      content="Name"
-      key="NAME"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Address"
-      key="ADDRESS"
-      minWidth="small"
-    />
-    <TableHeaderCell
-      content="Phone Number"
-      key="PHONE_NUMBER"
-      minWidth="small"
-    />
-  </TableHeader>
-  <TableRows>
-    <TableRow
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <HeaderRow
+    aria-rowindex={1}
+  >
+    <HeaderCheckMarkCell
+      isDisabled={false}
+      isHidden={false}
+      isIndeterminate={false}
+      isSelectable={false}
       isSelected={false}
-      key="PERSON_0"
+      label="test-label"
+    />
+    <HeaderCell
+      isSortActive={false}
+      isSortDesc={false}
+      key="cell-key"
+      removeInner={false}
     >
-      <TableCell
-        content="John Smith"
-        key="NAME"
-      />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
-      />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
-      />
-    </TableRow>
-    <TableRow
+      content
+    </HeaderCell>
+  </HeaderRow>
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={2}
+      isDisabled={false}
+      isSelectable={true}
       isSelected={false}
-      key="PERSON_1"
+      isStriped={false}
+      key="row-key"
     >
-      <TableCell
-        content="John Smith"
-        key="NAME"
+      <CheckMarkCell
+        isDisabled={false}
+        isHidden={false}
+        isIcon={true}
+        isSelectable={false}
+        isSelected={false}
+        label="check-toggle-label"
       />
-      <TableCell
-        content="123 Adams Drive"
-        key="ADDRESS"
+      <Cell
+        headers="cell-id"
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with check style toggle 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={2}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <HeaderRow
+    aria-rowindex={1}
+  >
+    <HeaderCheckMarkCell
+      isDisabled={false}
+      isHidden={false}
+      isIndeterminate={false}
+      isSelectable={false}
+      isSelected={false}
+      label="test-label"
+    />
+    <HeaderCell
+      isSortActive={false}
+      isSortDesc={false}
+      key="cell-key"
+      removeInner={false}
+    >
+      content
+    </HeaderCell>
+  </HeaderRow>
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={2}
+      isDisabled={false}
+      isSelectable={true}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <CheckMarkCell
+        isDisabled={false}
+        isHidden={false}
+        isIcon={false}
+        isSelectable={true}
+        isSelected={false}
+        label="check-toggle-label"
       />
-      <TableCell
-        content="111-222-3333"
-        key="PHONE_NUMBER"
+      <Cell
+        headers="cell-id"
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with check style toggle and row style disclose 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={2}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <HeaderRow
+    aria-rowindex={1}
+  >
+    <HeaderCheckMarkCell
+      isDisabled={false}
+      isHidden={false}
+      isIndeterminate={false}
+      isSelectable={false}
+      isSelected={false}
+      label="test-label"
+    />
+    <HeaderCell
+      isSortActive={false}
+      isSortDesc={false}
+      key="cell-key"
+      removeInner={false}
+    >
+      content
+    </HeaderCell>
+  </HeaderRow>
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={2}
+      isDisabled={false}
+      isSelectable={true}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <CheckMarkCell
+        isDisabled={false}
+        isHidden={false}
+        isIcon={false}
+        isSelectable={true}
+        isSelected={false}
+        label="check-toggle-label"
       />
-    </TableRow>
-  </TableRows>
-</table>
+      <Cell
+        headers="cell-id"
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with divider style - both 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={0}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+</div>
+`;
+
+exports[`Table should render a Table with divider style - horizontal 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={0}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+</div>
+`;
+
+exports[`Table should render a Table with divider style - vertical 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={0}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+</div>
+`;
+
+exports[`Table should render a Table with fill style 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={1}
+  className="table fill outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <div
+    className="body"
+    role="rowgroup"
+    tabIndex={0}
+  >
+    <Row
+      aria-rowindex={1}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with fill style and scroll ref 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={1}
+  className="table fill outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <div
+    className="body"
+    role="rowgroup"
+    tabIndex={0}
+  >
+    <Row
+      aria-rowindex={1}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with header 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={1}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <HeaderRow
+    aria-rowindex={1}
+  >
+    <HeaderCell
+      isSortActive={false}
+      isSortDesc={false}
+      key="cell-key"
+      removeInner={false}
+    >
+      content
+    </HeaderCell>
+  </HeaderRow>
+</div>
+`;
+
+exports[`Table should render a Table with header with chevrons 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={1}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <HeaderRow
+    aria-rowindex={1}
+  >
+    <HeaderCell
+      isSortActive={false}
+      isSortDesc={false}
+      key="cell-key"
+      removeInner={false}
+    >
+      content
+    </HeaderCell>
+  </HeaderRow>
+</div>
+`;
+
+exports[`Table should render a Table with indexes overridden 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={10}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={4}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with inners remove despite padding 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={2}
+  className="table outer"
+  data-table-padding="standard"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <HeaderRow
+    aria-rowindex={1}
+  >
+    <HeaderCell
+      isSortActive={false}
+      isSortDesc={false}
+      key="cell-key"
+      removeInner={true}
+    >
+      content
+    </HeaderCell>
+  </HeaderRow>
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={2}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        headers="cell-id"
+        key="child-cell-key"
+        removeInner={true}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with number of rows 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={6}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+</div>
+`;
+
+exports[`Table should render a Table with padding compact 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={0}
+  className="table outer"
+  data-table-padding="compact"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+</div>
+`;
+
+exports[`Table should render a Table with padding standard 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={0}
+  className="table outer"
+  data-table-padding="standard"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+</div>
+`;
+
+exports[`Table should render a Table with row style toggle 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={2}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <HeaderRow
+    aria-rowindex={1}
+  >
+    <HeaderCheckMarkCell
+      isDisabled={false}
+      isHidden={true}
+      isIndeterminate={false}
+      isSelectable={false}
+      isSelected={false}
+      label="test-label"
+    />
+    <HeaderCell
+      isSortActive={false}
+      isSortDesc={false}
+      key="cell-key"
+      removeInner={false}
+    >
+      content
+    </HeaderCell>
+  </HeaderRow>
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={2}
+      isDisabled={false}
+      isSelectable={true}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <CheckMarkCell
+        isDisabled={false}
+        isHidden={true}
+        isIcon={false}
+        isSelectable={false}
+        isSelected={false}
+        label="check-toggle-label"
+      />
+      <Cell
+        headers="cell-id"
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with section header 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={1}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Section
+      aria-rowindex={1}
+      id="row-id"
+      isCollapsed={false}
+      isCollapsible={false}
+      key="row-key"
+      numberOfColumns={1}
+      title="row-title"
+    />
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with section header and rows 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={2}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Section
+      aria-rowindex={1}
+      id="row-id"
+      isCollapsed={false}
+      isCollapsible={false}
+      key="row-key"
+      numberOfColumns={1}
+      title="row-title"
+    >
+      <Row
+        aria-rowindex={2}
+        isDisabled={false}
+        isSelectable={false}
+        isSelected={false}
+        isStriped={false}
+        key="row-key"
+      >
+        <Cell
+          headers="row-id"
+          key="child-cell-key"
+          removeInner={false}
+        >
+          content
+        </Cell>
+      </Row>
+    </Section>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with section rows 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={1}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={1}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with section rows width chevrons 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={1}
+  className="table outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={1}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
+exports[`Table should render a Table with simple footer 1`] = `
+<ContentContainer
+  className="outer"
+  fill={false}
+  footer={
+    Array [
+      <div
+        className="simple-footer"
+      />,
+    ]
+  }
+>
+  <div
+    aria-describedby="test-id"
+    aria-rowcount={0}
+    className="table"
+    role="grid"
+  >
+    <VisuallyHiddenText
+      id="test-id"
+      text="Test summary description"
+    />
+  </div>
+</ContentContainer>
+`;
+
+exports[`Table should render a Table with widths 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={2}
+  className="table is-inline outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <HeaderRow
+    aria-rowindex={1}
+  >
+    <HeaderCell
+      isSortActive={false}
+      isSortDesc={false}
+      key="cell-key"
+      removeInner={false}
+      width={
+        Object {
+          "static": Object {
+            "unit": "px",
+            "value": 10,
+          },
+        }
+      }
+    >
+      content
+    </HeaderCell>
+  </HeaderRow>
+  <div
+    className="body"
+    role="rowgroup"
+  >
+    <Row
+      aria-rowindex={2}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+    >
+      <Cell
+        headers="cell-id"
+        key="child-cell-key"
+        removeInner={false}
+        width={
+          Object {
+            "static": Object {
+              "unit": "px",
+              "value": 10,
+            },
+          }
+        }
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
 `;

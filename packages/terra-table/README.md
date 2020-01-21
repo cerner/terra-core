@@ -1,10 +1,9 @@
 # Terra Table
 
-
 [![NPM version](https://badgen.net/npm/v/terra-table)](https://www.npmjs.org/package/terra-table)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-The Terra Table is a structural component to arrange content within table.
+The terra-table component provides users a way to render data in a tabular format.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-table/docs)
@@ -13,20 +12,6 @@ The Terra Table is a structural component to arrange content within table.
 ## Getting Started
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-table`
-
-<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
-## Peer Dependencies
-
-This component requires the following peer dependencies be installed in your app for the component to properly function.
-
-| Peer Dependency | Version |
-|-|-|
-| react | ^16.8.5 |
-| react-dom | ^16.8.5 |
-
-
-
-<!-- AUTO-GENERATED-CONTENT:END -->
 
 ## LICENSE
 
