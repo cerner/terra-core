@@ -11,6 +11,8 @@ import LongWrappingTextHeader from '../example/LongWrappingTextHeader?dev-site-e
 
 import ActionHeaderPropsTable from '../../../../src/ActionHeader?dev-site-props-table';
 
+<Badge />
+
 # Terra Action Header
 
 The terra-action-header component is a header bar containing a title and optional actionable items such as links and buttons.
@@ -31,8 +33,6 @@ This component requires the following peer dependencies be installed in your app
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
 
-
-
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Implementation Notes:
@@ -43,19 +43,7 @@ The Action-Header component must be composed inside the [Base][1] component with
 ## Usage
 
 ```jsx
-import React from 'react';
 import ActionHeader from 'terra-action-header';
-import Button from 'terra-button';
-
-<ActionHeader
-  title="Back Close Action Header"
-  onBack={() => alert('You clicked back!')}
-  onClose={() => alert('You clicked close!')}
-/>
-
-<ActionHeader title="Custom Button Action Header" >
-  <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
-</ActionHeader>
 ```
 
 ## Component Features
