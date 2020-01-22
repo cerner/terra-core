@@ -17,7 +17,7 @@ const propTypes = {
    */
   alt: PropTypes.string,
   /**
-  * Sets the `fit` prop of terra-image from the following values: `cover`, `contain`, `fill`, `scale-down`, `none`.
+  * Sets the `object-fit` style of the image from the following values; `cover`, `contain`, `fill`, `scale-down`, `none`.
   */
   fit: PropTypes.oneOf(Object.values(FitTypes)),
   /**
