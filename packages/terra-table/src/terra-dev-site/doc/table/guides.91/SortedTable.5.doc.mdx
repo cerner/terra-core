@@ -1,0 +1,130 @@
+import SortedTable from 'terra-table/lib/terra-dev-site/doc/guides/SortedTable?dev-site-example';
+
+# Terra Table - Implementing a Sorted Table
+
+As table cell content is dynamic and the types of sorting can vary, consumers need to handle the state of their own sorting. The following guide lays out an example of managing sorting and state within a table implementation. There are further optimizations that can be made given an individual implementation of a data set, but this should serve as a framework for that.
+
+## State Management
+The state of the sort column needs to be managed for the table in a HOC. In this example we are going to be an object containing a unique key for the column and current sort direction.
+
+ First defaulting our state to sorting the first column.
+```diff
++ const [sortColumn, setSortColumn] = useState({ key: columnKeys[0], sortDesc: false });
+```
+Next creating an event handler callback method to pass to the table row's `onSelect` prop. The `onSelect` will return the metaData prop passed it each header cell.
+```diff
++  const handleSortClick = (event, metaData) => {
+
++  }
+```
+As a precaution we can prevent default on the event, in case the table has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
+```diff
+  const handleSortClick = (event, metaData) => {
++   event.preventDefault();
+  }
+```
+In this example only one column will be sorted upon, so we'll need to keep track of which column was selected and the current state of sorting for the column. 3 states of column state will be handled, unsorted, sort ascending, and sort descending. A key was sent with the metaData, but an index could have also been used in an implementation where there is no possibility of the columns being rearranged.
+```diff
+  const handleSortClick = (event, metaData) => {
+    event.preventDefault();
++   if (sortColumn.key !== metaData.key) {
++     setSortColumn({ key: metaData.key, sortDesc: false });
++   } else {
++     setSortColumn({ key: metaData.key, sortDesc: !sortColumn.sortDesc });
++   }
+  };
+```
+Settting state will trigger another render. So in the render method we need generate our head cells with the updated sort props. Each header cell while need a unique key.
+```diff
++ const createHeaderCell = (key, title) => (
++   {
++     key,
++     id: `header-${key}`,
++     children: title,
++   }
++ );
+```
+Next we need to set up our metaData object with our key value, and attach the `onSortAction` to our handler.
+```diff
+  const createHeaderCell = (key, title) => (
+    {
+      key,
+      id: `header-${key}`,
++     metaData: { key },
++     onSortAction: handleSortClick,
+      children: title,
+    }
+  );
+```
+Last we need to check if the header cell matches the sortColumn.key in state. The `isSortActive` prop dictates the visual presence of sorting.
+```diff
+  const createHeaderCell = (key, title) => (
+    {
+      key,
+      id: `header-${key}`,
+      metaData: { key },
+      onSortAction: handleSortClick,
++     isSortDesc: sortColumn.key === key ? sortColumn.sortDesc : false,
++     isSortActive: sortColumn.key === key,
+      children: title,
+    }
+  );
+```
+In this example a simple object sort parses the data, followed by a check for reversal.
+```diff
++ const sortData = (data, sortColumn) => {
++   if (!sortColumn) {
++     return data;
++   }
++
++   const dataCopy = Object.assign([], data);
++   dataCopy.sort((a, b) => {
++    const x = a.cells[columns.indexOf(sortColumn.key)].title.toLowerCase();
++    const y = b.cells[columns.indexOf(sortColumn.key)].title.toLowerCase();
++    if (x < y) { return -1; }
++    if (x > y) { return 1; }
++      return 0;
++    });
+
++   return sortColumn.sortDesc ? dataCopy.reverse() : dataCopy;
++ };
+```
+Next we fill in the static methods for the example table rows.
+```diff
++ const columns = ['column-0', 'column-1', 'column-2'];
+
++ const createCell = cell => ({ key: cell.key, children: cell.title });
+
++ const createCellsForRow = cells => cells.map(cell => createCell(cell));
+
++ const createRow = rowData => ({ key: rowData.key, cells: createCellsForRow(rowData.cells) });
+```
+Then we can implement a method to loop through our data and create the table rows with our methods and call it from our render method. 
+```diff
++ const createRows = (data) => {
++   const sortedData = sortData(data, sortColumn);
++   return sortedData.map(childItem => createRow(childItem));
++ };
+
+  return (
++   <Table
++     summaryId="example-sorted-table"
++     summary="This table shows an implementation of sorted table."
++     numberOfColumns={3}
++     cellPaddingStyle="standard"
++     headerData={{
++       cells: [
++         createHeaderCell(columnKeys[0], 'Breakfast'),
++         createHeaderCell(columnKeys[1], 'Animals'),
++         createHeaderCell(columnKeys[2], 'Flatware'),
++       ],
++     }}
++     bodyData={[{
++       rows: createRows(mockData),
++     }]}
++   />
+  );
+```
+Using these steps we get the following example:
+
+<SortedTable />
