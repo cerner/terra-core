@@ -167,7 +167,7 @@ class SearchField extends React.Component {
   }
 
   updateSearchText(searchText) {
-    if (searchText !== undefined && searchText !== this.searchText) {
+    if (typeof searchText !== 'undefined' && searchText !== this.searchText) {
       this.searchText = searchText;
       // Forcing update for clearButton rerender.
       this.forceUpdate();
