@@ -107,7 +107,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.2.2",
     "eslint": "^6.1.0",
-    "eslint-config-terra": "^3.0.0",
+    "eslint-config-terra": "git+https://github.com/cerner/eslint-config-terra.git#tbiethman-patch-1",
     "gh-pages": "^2.0.1",
     "glob": "^7.1.2",
     "identity-obj-proxy": "^3.0.0",
