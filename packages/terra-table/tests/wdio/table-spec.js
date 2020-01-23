@@ -15,10 +15,10 @@ Terra.describeViewports('Table', ['medium'], () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/padding'));
     Terra.it.validatesElement();
   });
-  describe('Row', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/row'));
-    Terra.it.validatesElement();
-  });
+  // describe('Row', () => {
+  //   before(() => browser.url('/#/raw/tests/terra-table/table/row'));
+  //   Terra.it.validatesElement();
+  // });
   describe('Section', () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/section'));
     Terra.it.validatesElement();
