@@ -1,0 +1,202 @@
+:local {
+  .row {
+    background-color: var(--terra-table-row-background-color);
+    display: flex;
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: relative;
+
+    > * {
+      border-right: var(--terra-table-row-child-border-right, 1px solid transparent);
+
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+
+    &.divider-vertical,
+    &.divider-both {
+      > * {
+        border-right: var(--terra-table-row-divider-child-border-right, 1px solid #dedfe0);
+  
+        /* stylelint-disable max-nesting-depth */
+        &:last-of-type {
+          border-right: 0;
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+    }
+  
+    &.divider-horizontal,
+    &.divider-both {
+      border-top: var(--terra-table-row-divider-border-top, 1px solid #dedfe0);
+
+      &:first-of-type {
+        margin-top: var(--terra-table-row-divider-first-margin-top, -1px);
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: var(--terra-table-row-divider-border-bottom, 1px solid #dedfe0);
+    }
+  }
+
+  .is-striped {
+    background-color: var(--terra-table-row-striped-background-color, #f6f7f8);
+
+    &.is-selected {
+      background-color: var(--terra-table-row-striped-selected-background-color, #e1f3fd);
+    }
+
+    &.is-selectable:hover {
+      background-color: var(--terra-table-row-striped-hover-background-color, #f4fefe);
+      background-image: var(--terra-table-row-striped-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
+      box-shadow: var(--terra-table-row-striped-hover-box-shadow, inset 0 0 0 1px #fff);
+
+      &.is-selected {
+        background-color: var(--terra-table-row-striped-selected-hover-background-color, #d1ebfb);
+        background-image: var(--terra-table-row-striped-selected-hover-background-image, linear-gradient(to bottom, #b3ddf8 2%, #c8e9fe 30%, #d1ebfb 80%));
+        box-shadow: var(--terra-table-row-striped-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
+      }
+    }
+
+    &.is-selectable[data-row-show-focus='true']:focus {
+      background-color: var(--terra-table-row-striped-focus-background-color, #f6f7f8);
+
+      &.is-selected {
+        background-color: var(--terra-table-row-striped-selected-focus-background-color, #e1f3fd);
+      }
+    }
+  }
+
+  .is-selected {
+    background-color: var(--terra-table-row-selected-background-color, #e1f3fd);
+    box-shadow: var(--terra-table-row-selected-background-box-shadow);
+
+    &.divider-horizontal,
+    &.divider-both {
+      &.row {
+        border-color: var(--terra-table-row-selected-border-color, #0092e0);
+      }
+
+      &:last-of-type {
+        border-bottom-color: var(--terra-table-row-selected-last-border-bottom-color, #dedfe0);
+      }
+
+      + .row {
+        border-top-color: var(--terra-table-row-selected-border-top-color, #0092e0);
+      }
+
+      + .row.is-selected {
+        box-shadow: var(--terra-table-row-selected-next-selected-box-shadow);
+      }
+
+      + .row.is-selected:hover {
+        box-shadow: var(--terra-table-row-selected-next-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
+      }
+    }
+  } 
+
+  .is-selectable {
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: var(--terra-table-row-hover-background-color, #f4fefe);
+      background-image: var(--terra-table-row-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
+      box-shadow: var(--terra-table-row-hover-box-shadow, inset 0 0 0 1px #fff);
+    }
+
+    &.is-selected:hover {
+      background-color: var(--terra-table-row-selected-hover-background-color, #d1ebfb);
+      background-image: var(--terra-table-row-selected-hover-background-image, linear-gradient(to bottom, #b3ddf8 2%, #c8e9fe 30%, #d1ebfb 80%));
+      box-shadow: var(--terra-table-row-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
+    }
+
+    &:active,
+    &:hover {
+      &.row {
+        border-top-color: var(--terra-table-row-active-hover-border-top-color, #58b1e0);
+      }
+
+      &:last-of-type {
+        border-bottom-color: var(--terra-table-row-active-hover-last-border-bottom-color, #dedfe0);
+        border-top-color: var(--terra-table-row-active-hover-last-border-top-color, #58b1e0);
+      }
+
+      + .row:not(.is-selected) {
+        border-top-color: var(--terra-table-row-active-hover-next-border-top-color, #97c6df);
+      }
+
+      + .row.is-selected {
+        border-top-color: var(--terra-table-row-active-hover-next-selected-border-top-color, #0092e0);
+        box-shadow: var(--terra-table-row-active-hover-next-selected-box-shadow);
+      }
+    }
+
+    &.is-selected:active,
+    &.is-selected:hover {
+      &.row {
+        border-top-color: var(--terra-table-row-selected-active-hover-border-top-color, #0092e0);
+      }
+  
+      &:last-of-type {
+        border-bottom-color: var(--terra-table-row-selected-active-hover-last-border-bottom-color, #dedfe0);
+        border-top-color: var(--terra-table-row-selected-active-hover-last-border-top-color, #0092e0);
+      }
+  
+      + .row {
+        border-top-color: var(--terra-table-row-selected-active-hover-next-border-top-color, #0092e0);
+      }
+    }
+
+    &[data-row-show-focus='false']:active {
+      background-color: var(--terra-table-row-active-background-color, #e1f3fd);
+      background-image: var(--terra-table-row-active-background-image);
+      box-shadow: var(--terra-table-row-active-box-shadow, inset 0 0 0 1px #fff);
+      
+      &.is-selected {
+        background-color: var(--terra-table-row-selected-active-background-color, #c8e9fe);
+        background-image: var(--terra-table-row-selected-active-background-image);
+        box-shadow: var(--terra-table-row-selected-active-box-shadow, inset 0 0 0 1px #e1f3fd);
+      }
+    }
+
+    &[data-row-show-focus='true']:focus {
+      background-color: var(--terra-table-row-focus-background-color);
+      outline: var(--terra-table-row-focus-outline, 2px dashed #000);
+      outline-offset: var(--terra-table-row-focus-outline-offset, -2px);
+      z-index: 1;
+
+      &.is-selected {
+        background-color: var(--terra-table-row-selected-focus-background-color, #e1f3fd);
+      }
+    }
+  }
+
+  @media print {
+    .row {
+      page-break-inside: avoid; // stylelint-disable-line plugin/no-unsupported-browser-features
+    }
+  }
+  
+  // -----------------------
+  // Delete entry after IE support is dropped. IE doesn't support outline-offset, so this mimics it.
+  // -----------------------
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .is-selectable[data-row-show-focus='true']:focus {
+      outline: none;
+
+      &::before {
+        border: var(--terra-table-row-ie-focus-before-border, 2px dashed #000);
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}

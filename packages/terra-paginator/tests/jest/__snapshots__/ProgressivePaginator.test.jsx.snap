@@ -1,131 +1,139 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProgressivePaginator should render a default ProgressivePaginator 1`] = `
+exports[`ProgressivePaginator should render a default ProgressivePaginator - Large 1`] = `
 <ResponsiveElement
+  onChange={[Function]}
   responsiveTo="parent"
-  small={
-    <div
-      aria-label="pagination"
-      className="paginator progressive"
-      role="navigation"
-    >
-      <div>
-        Terra.paginator.pageCount
-      </div>
-      <div>
-        <PaginatorButton
-          ariaDisabled={true}
-          ariaLabel="Terra.paginator.first"
-          className="nav-link is-disabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex={null}
-        >
-          Terra.paginator.first
-        </PaginatorButton>
-        <PaginatorButton
-          ariaDisabled={true}
-          ariaLabel="Terra.paginator.previous"
-          className="nav-link previous is-disabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex={null}
-        >
-          <span
-            className="icon"
-          />
-          Terra.paginator.previous
-        </PaginatorButton>
-        <PaginatorButton
-          ariaDisabled={false}
-          ariaLabel="Terra.paginator.next"
-          className="nav-link next"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex="0"
-        >
-          Terra.paginator.next
-          <span
-            className="icon"
-          />
-        </PaginatorButton>
-        <PaginatorButton
-          ariaDisabled={false}
-          ariaLabel="Terra.paginator.last"
-          className="nav-link"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex="0"
-        >
-          Terra.paginator.last
-        </PaginatorButton>
-      </div>
+>
+  <div
+    aria-label="pagination"
+    className="paginator progressive"
+    role="navigation"
+  >
+    <div>
+      Terra.paginator.pageCount
     </div>
-  }
-  tiny={
-    <div
-      aria-label="pagination"
-      className="paginator"
-      role="navigation"
-    >
-      <div>
-        <PaginatorButton
-          ariaDisabled={true}
-          ariaLabel="Terra.paginator.first"
-          className="nav-link is-disabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex={null}
-        >
-          Terra.paginator.first
-        </PaginatorButton>
-        <PaginatorButton
-          ariaDisabled={true}
-          ariaLabel="Terra.paginator.previous"
-          className="nav-link previous icon-only is-disabled"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex={null}
-        >
-          <VisuallyHiddenText
-            text="Terra.paginator.previous"
-          />
-          <span
-            className="icon"
-          />
-        </PaginatorButton>
-      </div>
-      <div>
-        Terra.paginator.pageCount
-      </div>
-      <div>
-        <PaginatorButton
-          ariaDisabled={false}
-          ariaLabel="Terra.paginator.next"
-          className="nav-link next icon-only"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex="0"
-        >
-          <VisuallyHiddenText
-            text="Terra.paginator.next"
-          />
-          <span
-            className="icon"
-          />
-        </PaginatorButton>
-        <PaginatorButton
-          ariaDisabled={false}
-          ariaLabel="Terra.paginator.last"
-          className="nav-link"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex="0"
-        >
-          Terra.paginator.last
-        </PaginatorButton>
-      </div>
+    <div>
+      <button
+        aria-disabled={true}
+        aria-label="Terra.paginator.first"
+        className="nav-link is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+        type="button"
+      >
+        Terra.paginator.first
+      </button>
+      <button
+        aria-disabled={true}
+        aria-label="Terra.paginator.previous"
+        className="nav-link previous is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+        type="button"
+      >
+        <span
+          className="icon"
+        />
+        Terra.paginator.previous
+      </button>
+      <button
+        aria-disabled={false}
+        aria-label="Terra.paginator.next"
+        className="nav-link next"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        Terra.paginator.next
+        <span
+          className="icon"
+        />
+      </button>
+      <button
+        aria-disabled={false}
+        aria-label="Terra.paginator.last"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        Terra.paginator.last
+      </button>
     </div>
-  }
-/>
+  </div>
+</ResponsiveElement>
+`;
+
+exports[`ProgressivePaginator should render a default ProgressivePaginator - Tiny 1`] = `
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
+>
+  <div
+    aria-label="pagination"
+    className="paginator progressive"
+    role="navigation"
+  >
+    <div>
+      Terra.paginator.pageCount
+    </div>
+    <div>
+      <button
+        aria-disabled={true}
+        aria-label="Terra.paginator.first"
+        className="nav-link is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+        type="button"
+      >
+        Terra.paginator.first
+      </button>
+      <button
+        aria-disabled={true}
+        aria-label="Terra.paginator.previous"
+        className="nav-link previous is-disabled"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={null}
+        type="button"
+      >
+        <span
+          className="icon"
+        />
+        Terra.paginator.previous
+      </button>
+      <button
+        aria-disabled={false}
+        aria-label="Terra.paginator.next"
+        className="nav-link next"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        Terra.paginator.next
+        <span
+          className="icon"
+        />
+      </button>
+      <button
+        aria-disabled={false}
+        aria-label="Terra.paginator.last"
+        className="nav-link"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        Terra.paginator.last
+      </button>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
