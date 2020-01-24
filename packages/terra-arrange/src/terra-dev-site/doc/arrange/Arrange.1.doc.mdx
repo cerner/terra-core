@@ -1,3 +1,14 @@
+import { Badge } from '../../../../package.json?dev-site-package';
+
+import ArrangeAlignAllContainers from '../example/ArrangeAlignAllContainers?dev-site-example';
+import ArrangeAlignFill from '../example/ArrangeAlignFill?dev-site-example';
+import ArrangeAlignFitEnd from '../example/ArrangeAlignFitEnd?dev-site-example';
+import ArrangeAlignFitStart from '../example/ArrangeAlignFitStart?dev-site-example';
+
+import ArrangePropsTable from '../../../../src/Arrange?dev-site-props-table';
+
+<Badge />
+
 # Terra Arrange
 
 The arrange component provides content containers with a fit (start and/or end region) and fill (middle region).
@@ -24,37 +35,19 @@ This component requires the following peer dependencies be installed in your app
 ## Usage
 
 ```jsx
-<Arrange
-  fitStart={<React component>}
-  fill={<React component>}
-/>
-
-<Arrange
-  fill={<React component>}
-  fitEnd={<React component>}
-/>
-
-<Arrange
-  fitStart={<React component>}
-  fill={<React component>}
-  fitEnd={<React component>}
-  align="center"
-/>
-
-<Arrange
-  fitStart={<React component>}
-  fill={<React component>}
-  fitEnd={<React component>}
-  alignFitStart="center"
-  alignFill="bottom"
-  alignFitEnd="stretch"
-  fitStartAttributes={{ style: { maxWidth: '10px' } }}
-  fillAttributes={{ style: { maxWidth: '20px' } }}
-  fitEndAttributes={{ style: { maxWidth: '30%' } }}
-/>
+import Arrange from 'terra-arrange';
 ```
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
 * [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+
+## Examples
+<ArrangeAlignFitStart title="Align Individual Containers - FitStart" />
+<ArrangeAlignFill title="Align Individual Containers - Fill" />
+<ArrangeAlignFitEnd title="Align Individual Containers - FitEnd" />
+<ArrangeAlignAllContainers title="Align All Containers" />
+
+## Arrange Props table
+<ArrangePropsTable />
