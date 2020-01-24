@@ -81,7 +81,7 @@ class ProgressivePaginator extends React.Component {
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
             className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
-            tabIndex={selectedPage === 1 ? null : '0'}
+            disabled={selectedPage === 1}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handlePageChange(1)}
           >
@@ -91,7 +91,7 @@ class ProgressivePaginator extends React.Component {
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
             className={cx(['nav-link', 'previous', selectedPage === 1 ? 'is-disabled' : null])}
-            tabIndex={selectedPage === 1 ? null : '0'}
+            disabled={selectedPage === 1}
             onClick={this.handlePageChange(previousPageIndex)}
             onKeyDown={this.handlePageChange(previousPageIndex)}
           >
@@ -102,7 +102,7 @@ class ProgressivePaginator extends React.Component {
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
             className={cx(['nav-link', 'next', selectedPage === totalPages ? 'is-disabled' : null])}
-            tabIndex={selectedPage === totalPages ? null : '0'}
+            disabled={selectedPage === totalPages}
             onClick={this.handlePageChange(nextPageIndex)}
             onKeyDown={this.handlePageChange(nextPageIndex)}
           >
@@ -113,7 +113,7 @@ class ProgressivePaginator extends React.Component {
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
             className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
-            tabIndex={selectedPage === totalPages ? null : '0'}
+            disabled={selectedPage === totalPages}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handlePageChange(totalPages)}
           >
@@ -137,7 +137,7 @@ class ProgressivePaginator extends React.Component {
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
             className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
-            tabIndex={selectedPage === 1 ? null : '0'}
+            disabled={selectedPage === 1}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handlePageChange(1)}
           >
@@ -147,7 +147,7 @@ class ProgressivePaginator extends React.Component {
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
             className={cx(['nav-link', 'previous', 'icon-only', selectedPage === 1 ? 'is-disabled' : null])}
-            tabIndex={selectedPage === 1 ? null : '0'}
+            disabled={selectedPage === 1}
             onClick={this.handlePageChange(previousPageIndex)}
             onKeyDown={this.handlePageChange(previousPageIndex)}
           >
@@ -163,7 +163,7 @@ class ProgressivePaginator extends React.Component {
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
             className={cx(['nav-link', 'next', 'icon-only', selectedPage === totalPages ? 'is-disabled' : null])}
-            tabIndex={selectedPage === totalPages ? null : '0'}
+            disabled={selectedPage === totalPages}
             onClick={this.handlePageChange(nextPageIndex)}
             onKeyDown={this.handlePageChange(nextPageIndex)}
           >
@@ -174,7 +174,7 @@ class ProgressivePaginator extends React.Component {
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
             className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
-            tabIndex={selectedPage === totalPages ? null : '0'}
+            disabled={selectedPage === totalPages}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handlePageChange(totalPages)}
           >

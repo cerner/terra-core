@@ -18,6 +18,11 @@ const coreConfig = () => {
         'terra-i18n': i18nAlias,
       },
     },
+    devServer: {
+      watchOptions: {
+        ignored: /aggregated-translations/,
+      },
+    },
   };
 };
 

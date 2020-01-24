@@ -1,13 +1,4 @@
-// import React from 'react';
-import {
-  // enableFocusActiveStyles,
-  // disableFocusActiveStyles,
-  // disableFocusOnBlur,
-  // handleFocus,
-  // handleMouseDown,
-  pageSet,
-} from '../../src/_paginationUtils';
-// import PaginatorButton from '../../src/_PaginatorButton';
+import { pageSet } from '../../src/_paginationUtils';
 
 describe('PaginationUtils', () => {
   describe('when there are 10 pages', () => {
@@ -60,6 +51,4 @@ describe('PaginationUtils', () => {
       expect(sequence).toEqual([6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
     });
   });
-
-  // const defaultRender = <PaginatorButton />;
 });

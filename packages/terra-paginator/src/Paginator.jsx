@@ -106,7 +106,7 @@ class Paginator extends React.Component {
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: val })}
           ariaCurrent={val === selectedPage}
           className={paginationLinkClassNames}
-          tabIndex={val === selectedPage ? null : '0'}
+          tabIndex={val === selectedPage ? '-1' : '0'}
           key={`pageButton_${val}`}
           onClick={onClick(val)}
           onKeyDown={onClick(val)}
@@ -138,7 +138,7 @@ class Paginator extends React.Component {
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
-            tabIndex={selectedPage === 1 ? null : '0'}
+            disabled={selectedPage === 1}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handlePageChange(1)}
           >
@@ -150,7 +150,7 @@ class Paginator extends React.Component {
           ariaDisabled={selectedPage === 1}
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
           className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
-          tabIndex={selectedPage === 1 ? null : '0'}
+          disabled={selectedPage === 1}
           onClick={this.handlePageChange(previousPageIndex)}
           onKeyDown={this.handlePageChange(previousPageIndex)}
         >
@@ -162,7 +162,7 @@ class Paginator extends React.Component {
           ariaDisabled={selectedPage === totalPages}
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
           className={cx(['nav-link', 'right-controls', 'next', selectedPage === totalPages && 'is-disabled'])}
-          tabIndex={selectedPage === totalPages ? null : '0'}
+          disabled={selectedPage === totalPages}
           onClick={this.handlePageChange(nextPageIndex)}
           onKeyDown={this.handlePageChange(nextPageIndex)}
         >
@@ -175,7 +175,7 @@ class Paginator extends React.Component {
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
-            tabIndex={selectedPage === totalPages ? null : '0'}
+            disabled={selectedPage === totalPages}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handlePageChange(totalPages)}
           >
@@ -204,7 +204,7 @@ class Paginator extends React.Component {
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
             className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
-            tabIndex={selectedPage === 1 ? null : '0'}
+            disabled={selectedPage === 1}
             onClick={this.handlePageChange(1)}
             onKeyDown={this.handlePageChange(1)}
           >
@@ -216,7 +216,7 @@ class Paginator extends React.Component {
           ariaDisabled={selectedPage === 1}
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
           className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
-          tabIndex={selectedPage === 1 ? null : '0'}
+          disabled={selectedPage === 1}
           onClick={this.handlePageChange(previousPageIndex)}
           onKeyDown={this.handlePageChange(previousPageIndex)}
         >
@@ -228,7 +228,7 @@ class Paginator extends React.Component {
           ariaDisabled={selectedPage === totalPages}
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
           className={cx(['nav-link', 'right-controls', 'next', 'icon-only', selectedPage === totalPages && 'is-disabled'])}
-          tabIndex={selectedPage === totalPages ? null : '0'}
+          disabled={selectedPage === totalPages}
           onClick={this.handlePageChange(nextPageIndex)}
           onKeyDown={this.handlePageChange(nextPageIndex)}
         >
@@ -241,7 +241,7 @@ class Paginator extends React.Component {
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
             className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
-            tabIndex={selectedPage === totalPages ? null : '0'}
+            disabled={selectedPage === totalPages}
             onClick={this.handlePageChange(totalPages)}
             onKeyDown={this.handlePageChange(totalPages)}
           >
