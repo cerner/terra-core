@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+4.22.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 4.21.0 - (December 3, 2019)
 ------------------
 ### Added

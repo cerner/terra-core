@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+4.18.0 - (January 17, 2020)
+------------------
+### Changed
+* Updated `uncontrolled responsive-element` to `controlled responsive-element`.
+
+4.17.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
 4.16.0 - (December 10, 2019)
 ------------------
 ### Changed

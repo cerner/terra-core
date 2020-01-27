@@ -6,7 +6,6 @@ The terra-image component provides styling for visual imagery.
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-image`
-  - `yarn add terra-image`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

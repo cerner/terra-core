@@ -1,0 +1,27 @@
+import { Badge } from '../../../../package.json?dev-site-package';
+
+import SingleActionExample from '../example/block/SingleAction?dev-site-example';
+import MultipleActionsExample from '../example/block/MultipleActions?dev-site-example';
+
+import BlockActionFooterPropsTable from '../../../../src/BlockActionFooter?dev-site-props-table';
+
+<Badge />
+
+# Terra Block Action Footer
+
+The block action footer component is a footer bar that contains a single socket for placing actionable items such as buttons and hyperlinks. If no actions are provided, the footer bar collapses to a themeable height and maintains the top border.
+
+## Usage
+
+```jsx
+import BlockActionFooter from 'terra-action-footer/lib/BlockActionFooter';
+```
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer)
+
+## Examples
+<SingleActionExample title="Single Action" />
+<MultipleActionsExample title="Multiple Actions" />
+
+## Block Action Footer Props
+<BlockActionFooterPropsTable />

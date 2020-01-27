@@ -10,7 +10,6 @@ Two padding variants are provide for list item content, standard and compact. If
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-list`
-  - `yarn add terra-list`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

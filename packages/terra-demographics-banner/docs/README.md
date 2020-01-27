@@ -6,7 +6,6 @@ The demographics component is used to display demographic information about a pe
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-demographics-banner`
-  - `yarn add terra-demographics-banner`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

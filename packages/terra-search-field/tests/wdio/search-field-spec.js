@@ -120,17 +120,18 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     Terra.it.validatesElement('empty');
 
-    it('should enter a short search term', () => {
-      browser.setValue('input', 'Lo');
-    });
-
-    Terra.it.matchesScreenshot('with too short text');
-
     it('should enter a long enough search term', () => {
       browser.setValue('input', 'Lore is spelled correctly');
     });
 
     Terra.it.matchesScreenshot('with long enough text');
+
+    it('should enter a short search term', () => {
+      browser.setValue('input', 'Lo');
+      browser.waitForVisible('#search-callback-text');
+    });
+
+    Terra.it.matchesScreenshot('with too short text');
   });
 
   describe('On Change', () => {

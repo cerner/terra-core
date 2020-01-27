@@ -6,7 +6,6 @@ The divider component is used to visually separate content on a layout.
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-divider`
-  - `yarn add terra-divider`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

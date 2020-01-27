@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a default table row 1`] = `
+<tr
+  className="row"
+>
+  <TableCell
+    key="NAME"
+  >
+    John Smith
+  </TableCell>
+  <TableCell
+    key="ADDRESS"
+  >
+    123 Adams Drive
+  </TableCell>
+  <TableCell
+    key="PHONE_NUMBER"
+  >
+    111-222-3333
+  </TableCell>
+</tr>
+`;

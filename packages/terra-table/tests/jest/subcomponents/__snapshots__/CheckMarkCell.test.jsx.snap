@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckMarkCell should render a CheckMarkCell 1`] = `
+<div
+  aria-selected={false}
+  className="cell"
+  role="gridcell"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    aria-hidden={true}
+    className="container"
+  >
+    <div
+      className="checkmark"
+      focusable="false"
+    />
+  </div>
+</div>
+`;
+
+exports[`CheckMarkCell should render a CheckMarkCell as an icon 1`] = `
+<div
+  aria-selected={false}
+  className="cell"
+  role="gridcell"
+  tabIndex="-1"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    aria-hidden={true}
+    className="container"
+  >
+    <div
+      className="checkmark"
+      focusable="false"
+    />
+  </div>
+</div>
+`;
+
+exports[`CheckMarkCell should render a CheckMarkCell as selectable 1`] = `
+<div
+  aria-selected={false}
+  className="cell is-interactable"
+  data-cell-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="gridcell"
+  tabIndex="0"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    aria-hidden={true}
+    className="container"
+  >
+    <div
+      className="checkmark is-selectable"
+      focusable="false"
+    />
+  </div>
+</div>
+`;
+
+exports[`CheckMarkCell should render a CheckMarkCell as selectable disabled 1`] = `
+<div
+  aria-selected={false}
+  className="cell"
+  role="gridcell"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    aria-disabled={true}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    aria-hidden={true}
+    className="container"
+  >
+    <div
+      className="checkmark is-selectable is-disabled"
+      focusable="false"
+    />
+  </div>
+</div>
+`;
+
+exports[`CheckMarkCell should render a CheckMarkCell as selectable with selection 1`] = `
+<div
+  aria-selected={true}
+  className="cell is-interactable"
+  data-cell-show-focus="true"
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  role="gridcell"
+  tabIndex="0"
+>
+  <VisuallyHiddenText
+    aria-checked={true}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    aria-hidden={true}
+    className="container"
+  >
+    <div
+      className="checkmark is-selectable is-selected"
+      focusable="false"
+    />
+  </div>
+</div>
+`;
+
+exports[`CheckMarkCell should render a CheckMarkCell as selectable with selection and disabled 1`] = `
+<div
+  aria-selected={true}
+  className="cell"
+  role="gridcell"
+>
+  <VisuallyHiddenText
+    aria-checked={true}
+    aria-disabled={true}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    aria-hidden={true}
+    className="container"
+  >
+    <div
+      className="checkmark is-selectable is-selected is-disabled"
+      focusable="false"
+    />
+  </div>
+</div>
+`;
+
+exports[`CheckMarkCell should render a CheckMarkCell with alignment 1`] = `
+<div
+  aria-selected={false}
+  className="cell is-top-align"
+  role="gridcell"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    aria-hidden={true}
+    className="container"
+    style={
+      Object {
+        "paddingTop": "5px",
+      }
+    }
+  >
+    <div
+      className="checkmark"
+      focusable="false"
+    />
+  </div>
+</div>
+`;
+
+exports[`CheckMarkCell should render with callback functions 1`] = `
+<div
+  aria-selected={false}
+  className="cell is-interactable"
+  data-cell-show-focus="true"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="gridcell"
+  tabIndex="0"
+>
+  <VisuallyHiddenText
+    aria-checked={false}
+    role="checkbox"
+    text="test text"
+  />
+  <div
+    aria-hidden={true}
+    className="container"
+  >
+    <div
+      className="checkmark is-selectable"
+      focusable="false"
+    />
+  </div>
+</div>
+`;

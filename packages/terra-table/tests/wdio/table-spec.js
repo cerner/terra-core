@@ -1,49 +1,30 @@
 Terra.describeViewports('Table', ['medium'], () => {
-  describe('Non Striped Table', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/no-striped-table'));
-
+  describe('Fill', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/fill'));
     Terra.it.validatesElement();
   });
-
+  describe('HeaderCheckMark', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/header-check-mark'));
+    Terra.it.validatesElement();
+  });
+  describe('HeaderFooter', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/header-footer'));
+    Terra.it.validatesElement();
+  });
+  describe('Padding', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/padding'));
+    Terra.it.validatesElement();
+  });
+  describe('Row', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/row'));
+    Terra.it.validatesElement();
+  });
+  describe('Section', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/section'));
+    Terra.it.validatesElement();
+  });
   describe('Striped', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/striped-table'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('Non Padded Table', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/no-padding-table'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('Sort Indicator', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-sort-indicator'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('Highlighted Rows', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-highlighted-rows'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('Subheaders', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-with-subheaders'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('Single Row', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/single-row-table'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('No Rows', () => {
-    before(() => browser.url('/#/raw/tests/terra-table/table/table/table-no-rows'));
-
+    before(() => browser.url('/#/raw/tests/terra-table/table/striped'));
     Terra.it.validatesElement();
   });
 });

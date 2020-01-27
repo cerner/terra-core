@@ -10,7 +10,6 @@ The `action` variant is intended for specific solutions in which a non-inline fl
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-button`
-  - `yarn add terra-button`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

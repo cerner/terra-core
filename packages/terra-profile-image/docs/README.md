@@ -6,7 +6,6 @@ The terra-profile-image component displays an avatar image while the profile ima
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-profile-image`
-  - `yarn add terra-profile-image`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

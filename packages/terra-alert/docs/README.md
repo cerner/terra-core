@@ -7,7 +7,6 @@ The Terra Alert component is a notification banner that can be rendered in your 
 
 - Install with [npmjs][3]:
   - `npm install terra-alert`
-  - `yarn add terra-alert`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

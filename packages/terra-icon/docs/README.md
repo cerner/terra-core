@@ -6,7 +6,6 @@ The terra-icon component is used to visually represent a literal or symbolic obj
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-icon`
-  - `yarn add terra-icon`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

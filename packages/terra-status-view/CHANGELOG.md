@@ -3,6 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.14.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
 ### Changed
 * replaced css grid with flex-box
 

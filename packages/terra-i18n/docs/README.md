@@ -6,7 +6,6 @@ This component is not intended for direct usage by developers. It is recommended
 
 However, terra-i18n can be installed with [npmjs](https://www.npmjs.com):
   - `npm install terra-i18n`
-  - `yarn add terra-i18n`
 
 The terra-i18n package provides internationalization for React components by loading translations and locale data on demand and providing the translated messages to the component. It does this by utilizing the [`react-intl`](https://github.com/yahoo/react-intl) dependency to provide the formatted translation messages to the supplied React children. To enable this behavior, terra-i18n provides the `i18nLoader` and `I18nProvider` components.
 

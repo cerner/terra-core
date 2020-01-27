@@ -8,7 +8,6 @@ Note: The progress bar displays fill with respect to percentage (value between 0
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-progress-bar`
-  - `yarn add terra-progress-bar`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
