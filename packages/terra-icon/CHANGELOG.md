@@ -5,16 +5,13 @@ Unreleased
 ----------
 ### Changed
 * Updated Person Door icon
+* Updated eIFU text to be `Electronic Instructions for Use Icon`
 * Bumped `one-cerner-style-icons` to v1.30.1
+* Updated `terra-dev-site` WDIO test for IconAll
 * Changed WDIO tests to use `huge` viewport in order to accomodate the new icons introduced in v1.30.1
 
 3.25.0 - (January 7, 2020)
 ------------------
-### Changed
-* Updated eIFU text to be `Electronic Instructions for Use Icon`
-* Bumped `one-cerner-style-icons` to v1.29.2
-* Updated `terra-dev-site` WDIO test for IconAll
-
 ### Added
 * Location Pin icon
 
