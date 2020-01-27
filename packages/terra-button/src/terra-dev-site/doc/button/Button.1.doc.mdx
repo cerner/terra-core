@@ -1,3 +1,15 @@
+import { Badge } from 'terra-button/package.json?dev-site-package';
+
+import ButtonBlock from '../example/ButtonBlock?dev-site-example';
+import ButtonAnchor from '../example/ButtonAnchor?dev-site-example';
+import ButtonCompact from '../example/ButtonCompact?dev-site-example';
+import ButtonDisabled from '../example/ButtonDisabled?dev-site-example';
+import ButtonOnClick from '../example/ButtonOnClick?dev-site-example';
+import ButtonIcon from '../example/ButtonIcon?dev-site-example';
+import ButtonVariant from '../example/ButtonVariant?dev-site-example';
+
+import ButtonPropsTable from '../../../../src/Button?dev-site-props-table';
+
 # Terra Button
 
 The button component provides users a way to trigger actions in the UI.
@@ -21,20 +33,29 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 
-
-
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Usage
 
 ```jsx
-import React from 'react';
 import Button from 'terra-button';
-
-<Button text="Default" />
 ```
 
 ## Component Features
 * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
 * [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-button)
+
+## Examples
+<ButtonVariant title="Variant" />
+<ButtonBlock title="Block" />
+<ButtonCompact title="Compact" />
+<ButtonAnchor title="Anchor" />
+<ButtonDisabled title="Disabled" />
+<ButtonOnClick title="Click" />
+<ButtonIcon title="Icon" />
+
+## Button Props
+<ButtonPropsTable />
