@@ -30,7 +30,6 @@
     "prop-types": "^15.5.8",
     "terra-button": "^3.29.0",
     "terra-button-group": "^3.29.0",
-    "terra-doc-template": "^2.23.0",
     "terra-icon": "^3.25.0",
     "terra-mixins": "^1.34.0"
   },
