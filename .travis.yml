@@ -50,20 +50,20 @@ jobs:
     - name: enormous
       script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci
     - stage: compile - lowlight theme
-      script: travis_wait docker-compose run test-ci-lowlight npm run compile:lowlight
+      script: travis_wait docker-compose run test-ci npm run compile:lowlight
     - stage: wdio - lowlight theme
       name: tiny
-      script: travis_wait docker-compose run -e FORM_FACTOR=tiny test-ci-lowlight
+      script: travis_wait docker-compose run -e FORM_FACTOR=tiny test-ci -sh 'npm run wdio-lowlight'
     - name: small
-      script: travis_wait docker-compose run -e FORM_FACTOR=small test-ci-lowlight
+      script: travis_wait docker-compose run -e FORM_FACTOR=small test-ci -sh 'npm run wdio-lowlight'
     - name: medium
-      script: travis_wait docker-compose run -e FORM_FACTOR=medium test-ci-lowlight
+      script: travis_wait docker-compose run -e FORM_FACTOR=medium test-ci -sh 'npm run wdio-lowlight'
     - name: large
-      script: travis_wait docker-compose run -e FORM_FACTOR=large test-ci-lowlight
+      script: travis_wait docker-compose run -e FORM_FACTOR=large test-ci -sh 'npm run wdio-lowlight'
     - name: huge
-      script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci-lowlight
+      script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci -sh 'npm run wdio-lowlight'
     - name: enormous
-      script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci-lowlight
+      script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci -sh 'npm run wdio-lowlight'
     - stage: compile - fusion theme
       script: travis_wait docker-compose run test-ci npm run compile:fusion
     - stage: wdio - fusion theme
