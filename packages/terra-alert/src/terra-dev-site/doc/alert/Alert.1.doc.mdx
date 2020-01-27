@@ -1,3 +1,23 @@
+import { Badge } from 'terra-alert/package.json?dev-site-package';
+
+import AlertExample from '../example/AlertExample?dev-site-example';
+import ErrorExample from '../example/ErrorExample?dev-site-example';
+import WarningExample from '../example/WarningExample?dev-site-example';
+import AdvisoryExample from '../example/AdvisoryExample?dev-site-example';
+import InfoExample from '../example/InfoExample?dev-site-example';
+import SuccessExample from '../example/SuccessExample?dev-site-example';
+import CustomExample from '../example/CustomExample?dev-site-example';
+import LongTextExample from '../example/LongTextExample?dev-site-example';
+import ActionExample from '../example/ActionExample?dev-site-example';
+import DismissibleExample from '../example/DismissibleExample?dev-site-example';
+import ActionAndDismissibleExample from '../example/ActionAndDismissibleExample?dev-site-example';
+
+import AlertPropsTable from '../../../../src/Alert?dev-site-props-table';
+
+import ActionAndDismissableExampleDocs from '../../../../docs/action-and-dismissable-example.md';
+
+<Badge />
+
 # Terra Alert
 
 The Terra Alert component is a notification banner that can be rendered in your application when there is information that you want to bring to the user's attention.  The Alert component supports a number of built-in notification types that render with pre-defined colors and icons that help the user understand the severity and meaning of the notification. A custom notification type is also supported that allows your application to customize an alert that may not fit into the pre-defined types.
@@ -36,3 +56,21 @@ The Alert component must be composed inside the [Base][1] component with a local
 * [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
 * [Internationalization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
 * [Localization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-alert)
+
+## Examples
+<AlertExample title="Default Alert" />
+<ErrorExample title="Error Alert" />
+<WarningExample title="Warning Alert" />
+<AdvisoryExample title="Advisory Alert" />
+<InfoExample title="Information Alert" />
+<SuccessExample title="Success Alert" />
+<CustomExample title="Custom Alert" />
+<LongTextExample title="Long Text Alert" />
+<ActionExample title="Alert with Action" />
+<DismissibleExample title="Dismissible Alert" />
+<ActionAndDismissibleExample title="Dismissible Alert with Actions" description= {<Markdown id="action-and-dismissable-example-docs" src={ActionAndDismissableExampleDocs} />}/>
+
+## Alert Props
+<AlertPropsTable />
