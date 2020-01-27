@@ -1,8 +1,3 @@
-/* eslint-disable import/no-webpack-loader-syntax, import/first */
-import { Badge } from 'terra-badge/package.json?dev-site-package';
-
-<Badge />
-
 # Terra Button Group Upgrade Guide
 
 ## Changes from 2 to 3
