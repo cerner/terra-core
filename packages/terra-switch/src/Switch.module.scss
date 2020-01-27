@@ -27,10 +27,18 @@
     outline: none;
   }
 
-  input[type="checkbox"] {
+  .switch-button {
     height: 0;
     width: 0;
     visibility: hidden;
+
+    .is-clicked + .tray:not(.is-disabled) {
+      background-color: #fff;
+    }
+  
+    .is-clicked + .tray > .slider {
+      transform: translateX(3.17142rem);
+    }
   }
 
   .tray {
@@ -82,13 +90,5 @@
 
   .slider:active:not(.is-disabled) {
     box-shadow: none; // pressed state.
-  }
-
-  input:checked + .tray:not(.is-disabled) {
-    background-color: #fff;
-  }
-
-  input:checked + .tray > .slider {
-    transform: translateX(3.17142rem);
   }
 }

@@ -9,7 +9,7 @@ export default () => {
       <Switch
         isOn={value}
         labelText="Label"
-        onChange={() => setValue(!value)}
+        onChange={() => { console.log(value); setValue(!value); }}
       />
     </div>
   );

@@ -116,6 +116,11 @@ class Switch extends React.Component {
       { 'is-disabled': disabled },
     ]);
 
+    const buttonClassNames = cx([
+      'switch-button',
+      { 'is-clicked': isOn },
+    ]);
+
     const sliderClassNames = cx([
       'slider',
       { 'is-disabled': disabled },
@@ -135,13 +140,13 @@ class Switch extends React.Component {
               <div className={cx('status-text')}>{statusLabelText}</div>
             </div>
             <div className={switchClassNames}>
-              <input
+              <button
+                type="button"
                 id={id}
-                checked={isOn}
+                className={buttonClassNames}
+                aria-pressed={isOn}
                 disabled={disabled}
-                onChange={onChange}
-                role="switch"
-                type="checkbox"
+                onClick={onChange}
                 value={value}
                 {...customProps}
               />
