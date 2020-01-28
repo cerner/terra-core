@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
+* eslint directives for tests
 
 2.27.0 - (January 7, 2020)
 ------------------

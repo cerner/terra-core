@@ -13,6 +13,15 @@ const svgoConfig = (csvObject) => {
       {
         removeTitle: true,
       },
+      {
+        removeViewBox: false,
+      },
+      {
+        removeDimensions: true,
+      },
+      {
+        removeScriptElement: true,
+      },
     ],
   };
 
