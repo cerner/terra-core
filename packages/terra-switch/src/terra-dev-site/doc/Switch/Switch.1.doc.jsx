@@ -4,11 +4,14 @@ import ReadMe from '../../../../docs/README.md';
 import { name } from '../../../../package.json';
 
 // Component Source
-import SwitchSrc from '!raw-loader!../../../../src/Switch';
+import SwitchButtonSrc from '!raw-loader!../../../../src/SwitchButton';
+import SwitchCheckBoxSrc from '!raw-loader!../../../../src/SwitchCheckBox';
 
 // Example Files
-import DefaultSwitch from '../example/DefaultSwitch';
-import DefaultSwitchSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSwitch.jsx';
+import DefaultSwitchButton from '../example/DefaultSwitchButton';
+import DefaultSwitchButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSwitchButton.jsx';
+import DefaultSwitchCheckBox from '../example/DeafaultSwitchCheckBox';
+import DefaultSwitchCheckBoxSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSwitchButton.jsx';
 
 const DocPage = () => (
   <DocTemplate
@@ -17,15 +20,25 @@ const DocPage = () => (
     srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
     examples={[
       {
-        title: 'Default Switch',
-        example: <DefaultSwitch />,
-        source: DefaultSwitchSrc,
+        title: 'Switch With Button',
+        example: <DefaultSwitchButton />,
+        source: DefaultSwitchButtonSrc,
+      },
+      {
+        title: 'Switch With Checkbox',
+        example: <DefaultSwitchCheckBox />,
+        source: DefaultSwitchCheckBoxSrc,
       },
     ]}
     propsTables={[
       {
-        componentName: 'Switch',
-        componentSrc: SwitchSrc,
+        componentName: 'Switch-Button',
+        componentSrc: SwitchButtonSrc,
+      },
+
+      {
+        componentName: 'Switch-Checkbox',
+        componentSrc: SwitchCheckBoxSrc,
       },
     ]}
   />

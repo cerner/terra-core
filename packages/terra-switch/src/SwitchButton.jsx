@@ -29,12 +29,6 @@ const propTypes = {
   id: PropTypes.string,
 
   /**
-    * Attributes applied to the `input` element.
-    */
-  // eslint-disable-next-line react/forbid-prop-types
-  inputAttrs: PropTypes.object,
-
-  /**
     * Text of the label.
     */
   labelText: PropTypes.node.isRequired,
@@ -48,7 +42,7 @@ const propTypes = {
   /**
     * Callback fired when the state is changed.
     */
-  onChange: PropTypes.func,
+  onClick: PropTypes.func,
 
   /**
     * The value of the input element.
@@ -60,13 +54,12 @@ const defaultProps = {
   isOn: false,
   disabled: false,
   id: undefined,
-  inputAttrs: {},
   labelTextAttrs: {},
-  onChange: undefined,
+  onClick: undefined,
   value: undefined,
 };
 
-class Switch extends React.Component {
+class SwitchButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { focused: false };
@@ -79,7 +72,7 @@ class Switch extends React.Component {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       event.preventDefault();
       this.setState({ focused: true });
-      this.props.onChange();
+      this.props.onClick();
     }
   }
 
@@ -98,8 +91,7 @@ class Switch extends React.Component {
       isOn,
       disabled,
       id,
-      inputAttrs,
-      onChange,
+      onClick,
       labelText,
       labelTextAttrs,
       value,
@@ -118,7 +110,7 @@ class Switch extends React.Component {
 
     const buttonClassNames = cx([
       'switch-button',
-      { 'is-clicked': isOn },
+      { 'switch-button-clicked': isOn },
     ]);
 
     const sliderClassNames = cx([
@@ -146,7 +138,7 @@ class Switch extends React.Component {
                 className={buttonClassNames}
                 aria-pressed={isOn}
                 disabled={disabled}
-                onClick={onChange}
+                onClick={onClick}
                 value={value}
                 {...customProps}
               />
@@ -171,7 +163,7 @@ class Switch extends React.Component {
   }
 }
 
-Switch.propTypes = propTypes;
-Switch.defaultProps = defaultProps;
+SwitchButton.propTypes = propTypes;
+SwitchButton.defaultProps = defaultProps;
 
-export default Switch;
+export default SwitchButton;

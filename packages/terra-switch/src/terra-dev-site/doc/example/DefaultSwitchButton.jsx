@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-import Switch from '../../../Switch';
+import Switch from '../../../SwitchButton';
 
 export default () => {
   const [value, setValue] = useState(true);
@@ -9,7 +8,7 @@ export default () => {
       <Switch
         isOn={value}
         labelText="Label"
-        onChange={() => { console.log(value); setValue(!value); }}
+        onClick={() => { setValue(!value); }}
       />
     </div>
   );

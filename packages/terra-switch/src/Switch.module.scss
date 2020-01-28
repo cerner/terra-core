@@ -5,14 +5,14 @@
   }
 
   .switch-container {
-    position: relative;
     display: flex;
     flex-direction: row;
+    position: relative;
   }
 
   .label-container {
-    margin-top: 0.28571rem;
     margin-right: 1.45rem;
+    margin-top: 0.28571rem;
   }
 
   .label-text {
@@ -21,26 +21,27 @@
   }
 
   .switch {
-    position: relative;
-    width: 6.14285rem;
     height: 2.92857rem;
     outline: none;
+    position: relative;
+    width: 6.14285rem;
   }
 
   .switch-button {
     height: 0;
-    width: 0;
     visibility: hidden;
-
-    .is-clicked + .tray:not(.is-disabled) {
-      background-color: #fff;
-    }
-  
-    .is-clicked + .tray > .slider {
-      transform: translateX(3.17142rem);
-    }
+    width: 0;
   }
 
+  .switch-button-clicked + .tray:not(.is-disabled) {
+    background-color: #fff;
+  }
+
+  .switch-button-clicked + .tray:not(.is-disabled) > .slider {
+    transform: translateX(3.17142rem);
+  }
+
+  
   .tray {
     position: absolute;
     cursor: pointer;
