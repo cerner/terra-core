@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.26.0 - (January 28, 2020)
+------------------
 ### Changed
 * Updated Person Door icon
 * Updated eIFU text to be `Electronic Instructions for Use Icon`
