@@ -26,7 +26,7 @@ exports[`should render a Terra image with a placeholder prop 1`] = `
 </div>
 `;
 
-exports[`should render a Terra image with a placeholder prop 2`] = `
+exports[`should render a profile image with fit style as contain 1`] = `
 <div>
   <Image
     alt="A profile image"

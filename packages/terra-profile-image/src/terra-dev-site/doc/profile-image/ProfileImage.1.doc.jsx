@@ -9,6 +9,8 @@ import ProfileImagePropsTable from '!terra-props-table-loader!../../../../src/Pr
 import ProfileImageSrc from '!raw-loader!../../../../src/ProfileImage';
 import ProfileImageDefault from '../example/ProfileImageDefault';
 import ProfileImageDefaultSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ProfileImageDefault';
+import ProfileImageFit from '../example/ProfileImageFitTypes';
+import ProfileImageFitSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/ProfileImageFitTypes';
 
 const DocPage = () => (
   <DocTemplate
@@ -21,6 +23,11 @@ const DocPage = () => (
         title: 'Default Profile Image',
         example: <ProfileImageDefault />,
         source: ProfileImageDefaultSrc,
+      },
+      {
+        title: 'Toggle Profile Image Fit',
+        example: <ProfileImageFit />,
+        source: ProfileImageFitSrc,
       },
     ]}
     propsTables={[
