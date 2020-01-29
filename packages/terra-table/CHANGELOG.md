@@ -4,6 +4,15 @@ ChangeLog
 Unreleased
 ----------
 
+4.0.0 - (January 17, 2020)
+------------------
+### Breaking Changes
+* terra-table now only provides controlled variants.
+* Removed Component `SingleSelectTableRows` - No longer supported this uncontrolled variant of table.
+* Removed Component `MultiSelectTableRows` - No longer supported this uncontrolled variant of table.
+* Removed Component `SelectableTableRows` - Selection by index is no longer provided.
+* Removed Component `TableRows` - body element now provided by default within the table.
+
 3.30.0 - (January 7, 2020)
 ------------------
 ### Removed

@@ -1,0 +1,95 @@
+import { Badge } from 'terra-base/package.json?dev-site-package';
+
+import GlobalBaseStylesExample from './GlobalBaseStylesExample?dev-site-example'
+
+import BasePropsTable from '../../../../src/Base?dev-site-props-table';
+
+<Badge />
+
+# Terra Base
+
+The `terra-base` component handles two main concerns, [application internationalization](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/internationalization/internationalization-intro) and global base styles.
+
+This component is designed to manage loading locale information such as translations and locale data, handling locale switching and loading state, and combining customized translation messages from an application with Terra UI component translations.
+
+**Note:** _This component should be your root component and wrap all components in your app. This is to help ensure that the entire application is within the same configured i18n context provided by [react-intl's `<IntlProvider />`](https://github.com/yahoo/react-intl/wiki/Components#intlprovider)._
+
+The `terra-base` component requires the use of our [aggregate-translations pre-build tool](https://github.com/cerner/terra-aggregate-translations) to ensure translations and locale data files are generated accordingly for the app.
+
+You can read more about [setting up Internationalization in your Terra UI app here](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/internationalization/internationalization-intro).
+
+The terra-base component also sets minimal global base styles for the application. Styles include CSS to help normalize box-sizing, global font styles, and HTML background styles.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-base`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+| react-intl | ^2.8.0 |
+
+
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+With custom app translations.
+
+```jsx
+import Base from 'terra-base';
+import App from './App'; // Your custom app component
+import appTranslations from './aggregated-translations/en.js'; // Your aggregated app translations
+
+// This value could be sent from the server as well
+const locale = (navigator.languages && navigator.languages[0])
+               || navigator.language
+               || navigator.userLanguage
+               || 'en';
+
+<Base locale={locale} customMessages={appTranslations}>
+  <App />
+</Base>
+```
+
+Without custom app translations.
+
+```jsx
+import Base from 'terra-base';
+import App from './App'; // Your custom app component
+
+// This value could be sent from the server as well
+const locale = (navigator.languages && navigator.languages[0])
+               || navigator.language
+               || navigator.userLanguage
+               || 'en';
+
+<Base locale={locale}>
+  <App />
+</Base>
+```
+
+## Component Features
+* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
+* [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
+* [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+* [Internationalization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
+* [Localization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
+* [react_on_rails Compatible](https://github.com/shakacode/react_on_rails/blob/8cb06ed35cb5c2c453bcc193282b4c091574c1b7/docs/basics/i18n.md#how-to-add-i18n)
+* [CND Compatible](https://github.com/webpack/docs/wiki/configuration#outputpublicpath)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-base)
+
+## Example
+<GlobalBaseStylesExample />
+
+## Base Props
+<BasePropsTable />

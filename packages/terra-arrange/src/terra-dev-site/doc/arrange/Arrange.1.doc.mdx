@@ -1,0 +1,55 @@
+import { Badge } from 'terra-arrange/package.json?dev-site-package';
+
+import ArrangeAlignAllContainers from '../example/ArrangeAlignAllContainers?dev-site-example';
+import ArrangeAlignFill from '../example/ArrangeAlignFill?dev-site-example';
+import ArrangeAlignFitEnd from '../example/ArrangeAlignFitEnd?dev-site-example';
+import ArrangeAlignFitStart from '../example/ArrangeAlignFitStart?dev-site-example';
+
+import ArrangePropsTable from 'terra-arrange/src/Arrange?dev-site-props-table';
+
+<Badge />
+
+# Terra Arrange
+
+The arrange component provides content containers with a fit (start and/or end region) and fill (middle region).
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-arrange`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import Arrange from 'terra-arrange';
+```
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-arrange)
+
+## Examples
+<ArrangeAlignFitStart title="Align Individual Containers - FitStart" />
+<ArrangeAlignFill title="Align Individual Containers - Fill" />
+<ArrangeAlignFitEnd title="Align Individual Containers - FitEnd" />
+<ArrangeAlignAllContainers title="Align All Containers" />
+
+## Arrange Props
+<ArrangePropsTable />
