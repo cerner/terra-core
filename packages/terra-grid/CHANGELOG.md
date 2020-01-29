@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added reference wdio screenshots for "clinical-lowlight-theme".
+* Added generated-themes to .npmignore
 
 6.14.0 - (January 7, 2020)
 ------------------

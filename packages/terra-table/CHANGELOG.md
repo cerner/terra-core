@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
+* Added clinical-lowlight-theme theming files
 
 4.0.0 - (January 17, 2020)
 ------------------
