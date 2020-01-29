@@ -1,0 +1,47 @@
+import { Badge } from 'terra-avatar/package.json?dev-site-package';
+
+import AvatarUser from '../example/avatar/AvatarUser?dev-site-example';
+import AvatarOneInitial from '../example/avatar/AvatarOneInitial?dev-site-example';
+import AvatarTwoInitials from '../example/avatar/AvatarTwoInitials?dev-site-example';
+import AvatarImage from '../example/avatar/AvatarImage?dev-site-example';
+import AvatarIsDeceased from '../example/avatar/AvatarIsDeceased?dev-site-example';
+import AvatarSize from '../example/avatar/AvatarSize?dev-site-example';
+import AvatarColorVariants from '../example/avatar/AvatarColorVariants?dev-site-example';
+
+import AvatarPropsTable from 'terra-avatar/src/variants/Avatar?dev-site-props-table';
+
+<Badge />
+
+# Terra Avatar
+
+The `Avatar` variant represents a person - it displays an image or initials in a circular frame. If neither are provided, a fallback user icon displays. This is the default export of the `terra-avatar` package.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-avatar`
+
+## Usage
+
+```jsx
+import Avatar from 'terra-avatar';
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+ * [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-avatar)
+
+## Examples
+<AvatarUser title="Default - Fallback Icon" />
+<AvatarOneInitial title="Initials (1)" />
+<AvatarTwoInitials title="Initials (2)" />
+<AvatarIsDeceased title="Is Deceased" />
+<AvatarImage title="Image" />
+<AvatarSize title="Override Size" />
+<AvatarColorVariants title="Toggle Color Variants - Theme Specific" />
+
+## Avatar Props
+<AvatarPropsTable />
