@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme and generated the respective reference wdio screenshots.
 
+3.26.0 - (January 28, 2020)
+------------------
 ### Changed
 * Updated Person Door icon
 * Updated eIFU text to be `Electronic Instructions for Use Icon`
