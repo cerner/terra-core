@@ -61,7 +61,7 @@ const propTypes = {
   onChange: PropTypes.func,
 
   /**
-   * Function to trigger when user inputs a value. Sends parameter {Event} event.
+   * Function to trigger when user inputs a value. Use when programmatically setting a value. Sends parameter {Event} event.
    */
   onInput: PropTypes.func,
 
