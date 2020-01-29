@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.28.0 - (January 28, 2020)
+------------------
 ### Added
 * eslint directives for tests
 
