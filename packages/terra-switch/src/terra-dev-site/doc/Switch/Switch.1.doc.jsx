@@ -10,8 +10,8 @@ import SwitchCheckBoxSrc from '!raw-loader!../../../../src/SwitchCheckBox';
 // Example Files
 import DefaultSwitchButton from '../example/DefaultSwitchButton';
 import DefaultSwitchButtonSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSwitchButton.jsx';
-import DefaultSwitchCheckBox from '../example/DeafaultSwitchCheckBox';
-import DefaultSwitchCheckBoxSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSwitchButton.jsx';
+import DefaultSwitchCheckBox from '../example/DefaultSwitchCheckBox';
+import DefaultSwitchCheckBoxSrc from '!raw-loader!../../../../src/terra-dev-site/doc/example/DefaultSwitchCheckBox.jsx';
 
 const DocPage = () => (
   <DocTemplate

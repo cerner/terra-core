@@ -6,6 +6,7 @@ export default () => {
   return (
     <div className="app">
       <Switch
+        id="switchCheckId"
         isOn={value}
         labelText="Label"
         onChange={() => { setValue(!value); }}

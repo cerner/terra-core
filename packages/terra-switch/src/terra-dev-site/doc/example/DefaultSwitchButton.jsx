@@ -6,6 +6,7 @@ export default () => {
   return (
     <div className="app">
       <Switch
+        id="switchBtnId"
         isOn={value}
         labelText="Label"
         onClick={() => { setValue(!value); }}
