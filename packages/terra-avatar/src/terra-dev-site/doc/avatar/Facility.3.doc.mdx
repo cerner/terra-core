@@ -1,0 +1,46 @@
+import { Badge } from 'terra-avatar/package.json?dev-site-package';
+
+import Facility from '../example/facility/Facility?dev-site-example';
+import FacilityImage from '../example/facility/FacilityImage?dev-site-example';
+import FacilitySize from '../example/facility/FacilitySize?dev-site-example';
+import FacilityColorVariants from '../example/facility/FacilityColorVariants?dev-site-example';
+
+import FacilityPropsTable from 'terra-avatar/src/variants/Facility?dev-site-props-table';
+
+# Facility
+
+The `Facility` variant represents a location - it displays an image in a circular frame. If an image is not provided, a fallback facility icon displays.
+
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-avatar`
+
+## Usage
+
+```jsx
+import React from 'react';
+import { Facility } from 'terra-avatar';
+
+<Facility
+  alt="Lima"
+  image="/path/to/image.jpg"
+/>
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+ * [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-avatar)
+
+## Examples 
+<Facility title="Default - Fallback Icon" />
+<FacilityImage title="Image" />
+<FacilitySize title="Override Size" />
+<FacilityColorVariants title="Toggle Color Variants - Theme Specific" />
+
+## Facility Props
+<FacilityPropsTable />
