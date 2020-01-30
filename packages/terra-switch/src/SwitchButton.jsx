@@ -66,6 +66,13 @@ class SwitchButton extends React.Component {
     this.handleOnKeyDown = this.handleOnKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event) {
+    this.setState({ focused: true });
+    this.sliderRef.focus();
+    this.props.onClick(event);
   }
 
   handleOnKeyDown(event) {
@@ -137,20 +144,24 @@ class SwitchButton extends React.Component {
                 id={id}
                 className={buttonClassNames}
                 aria-pressed={isOn}
+                tabIndex="0"
                 disabled={disabled}
-                onClick={onClick}
+                onClick={this.handleClick}
                 value={value}
                 {...customProps}
               />
-              <span className={trayClassNames}>
+              <span
+                className={trayClassNames}
+              >
                 <span
-                  aria-checked={isOn}
                   className={sliderClassNames}
-                  role="switch"
                   tabIndex="0"
+                  aria-checked={isOn}
+                  role="switch"
                   onKeyDown={this.handleOnKeyDown}
                   onKeyUp={this.handleKeyUp}
                   onBlur={this.handleOnBlur}
+                  ref={(sliderRef) => { this.sliderRef = sliderRef; }}
                 >
                   <VisuallyHiddenText text={labelText} />
                 </span>
