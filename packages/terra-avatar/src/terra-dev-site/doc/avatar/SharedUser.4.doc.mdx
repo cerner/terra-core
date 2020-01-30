@@ -1,0 +1,44 @@
+import { Badge } from 'terra-avatar/package.json?dev-site-package';
+
+import SharedUser from '../example/shared-user/SharedUser?dev-site-example';
+import SharedUserSize from '../example/shared-user/SharedUserSize?dev-site-example';
+import SharedUserColorVariants from '../example/shared-user/SharedUserColorVariants?dev-site-example';
+
+import SharedUserPropsTable from 'terra-avatar/src/variants/SharedUser?dev-site-props-table';
+
+<Badge />
+
+# Shared User
+
+The `SharedUser` variant represents multiple users - it displays a shared user icon in a circular frame.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-avatar`
+
+## Usage
+
+```jsx
+import React from 'react';
+import { SharedUser } from 'terra-avatar';
+
+<SharedUser
+  alt="shared users"
+/>
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+ * [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-avatar)
+
+## Examples
+<SharedUser title="Default" />
+<SharedUserSize title="Override Size" />
+<SharedUserColorVariants title="Toggle Color Variants - Theme Specific" />
+
+## Shared User Props
+<SharedUserPropsTable />

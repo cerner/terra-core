@@ -9,6 +9,7 @@ exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
   </div>
   <Dropdown
     isOpen={false}
+    openedViaKeyboard={false}
     requestClose={[Function]}
     targetRef={[Function]}
   >
@@ -29,6 +30,7 @@ exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
   </div>
   <Dropdown
     isOpen={false}
+    openedViaKeyboard={false}
     requestClose={[Function]}
     targetRef={[Function]}
   >
@@ -49,6 +51,7 @@ exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
   </div>
   <Dropdown
     isOpen={false}
+    openedViaKeyboard={false}
     requestClose={[Function]}
     targetRef={[Function]}
   >
@@ -69,6 +72,7 @@ exports[`Dropdown Button Base renders an open DropdownButtonBase 1`] = `
   </div>
   <Dropdown
     isOpen={true}
+    openedViaKeyboard={false}
     requestClose={[Function]}
     targetRef={[Function]}
   >
