@@ -1,0 +1,53 @@
+import { Badge } from 'terra-button-group/package.json?dev-site-package';
+
+import ButtonGroupWithIcons from '../example/ButtonGroupWithIcons?dev-site-example';
+import ButtonGroupDisabledButtons from '../example/ButtonGroupDisabledButtons?dev-site-example';
+import ButtonGroupSingleSelect from '../example/ButtonGroupSingleSelect?dev-site-example';
+import ButtonGroupMultiSelect from '../example/ButtonGroupMultiSelect?dev-site-example';
+import ButtonGroupIsBlock from '../example/ButtonGroupIsBlock?dev-site-example';
+
+import ButtonGroupPropsTable from 'terra-button-group/src/ButtonGroup?dev-site-props-table';
+import ButtonGroupButtonPropsTable from 'terra-button-group/src/ButtonGroupButton?dev-site-props-table';
+
+<Badge />
+
+# Terra Button Group
+
+ The Terra Button Group component is a controlled component that groups buttons and allows consumers to manage the selection state of each button in the group. By default, the buttons in the Button Group do not remain selected when clicked. Therefore, consumers must manage the selection state of the buttons because the Button Group does not keep track of the selection state. A controlled Button Group gives the consumer the flexibility to compose a single-select button group as well as a multi-select button group. This component is intended to group buttons with similar context or to toggle content, it is not intended to be used as a form element.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-button-group`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-button-group)
+
+## Examples
+<ButtonGroupWithIcons title="Text and Icon - Default, no selected state" />
+<ButtonGroupSingleSelect title="Single Select - Manage single button selection" />
+<ButtonGroupMultiSelect title="Multi Select - Manage multiple button selections" />
+<ButtonGroupDisabledButtons title="Disabled Buttons - Default, no selected state" />
+<ButtonGroupIsBlock title="ButtonGroup Is Block - width stretches to fill container" />
+
+## Button Group Props
+<ButtonGroupPropsTable />
+
+## Button Group Button Props
+<ButtonGroupButtonPropsTable />

@@ -6,6 +6,11 @@ Unreleased
 ### Fixed
 * Fixed Option Group labels not read on desktop screen readers.
 
+5.40.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 5.39.0 - (January 7, 2020)
 ------------------
 ### Fixed 
