@@ -57,30 +57,76 @@ class DropdownButton extends React.Component {
     this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
-
-    this.state = { isOpen: false, isActive: false };
+    this.setButtonNode = this.setButtonNode.bind(this);
+    this.getButtonNode = this.getButtonNode.bind(this);
+    this.setListNode = this.setListNode.bind(this);
+    this.openDropDown = this.openDropDown.bind(this);
+    this.state = { isOpen: false, isActive: false, openedViaKeyboard: false };
   }
 
-  handleDropdownButtonClick() {
+  setListNode(element) {
+    this.dropdownList = element;
+  }
+
+  setButtonNode(node) {
+    this.buttonNode = node;
+  }
+
+  getButtonNode() {
+    return this.buttonNode;
+  }
+
+  openDropDown(event) {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
+    // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
+    // This will put focus on the button when clicked.
+    event.currentTarget.focus();
+  }
+
+  handleDropdownButtonClick(event) {
+    if (this.state.isOpen) {
+      this.setState({ openedViaKeyboard: false });
+    }
+    this.openDropDown(event);
   }
 
   handleDropdownRequestClose(callback) {
-    this.setState({ isOpen: false }, typeof callback === 'function' ? callback : undefined);
+    const onSelectCallback = typeof callback === 'function' ? callback : undefined;
+    this.setState({ isOpen: false, openedViaKeyboard: false, isActive: false }, onSelectCallback);
   }
 
-  /*
-    In FireFox active styles don't get applied on space
-   */
   handleKeyDown(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE) {
-      this.setState({ isActive: true });
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
+      // In FireFox active styles don't get applied on space
+      this.setState({ isActive: true, openedViaKeyboard: true });
+      /*
+        Prevent the callback from being called repeatedly if the RETURN or SPACE key is held down.
+        The keyDown event of native html button triggers Onclick() event on RETURN or SPACE key press.
+        where holding RETURN key for longer time will call dropdownClick() event repeatedly which would cause
+        the dropdown to open and close itself.
+      */
+      event.preventDefault();
+    } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.openedViaKeyboard) {
+      // set focus to first list element on down arrow key press only when dropdown is opened by mouse click.
+      const listOptions = this.dropdownList.querySelectorAll('[data-terra-dropdown-list-item]');
+      listOptions[0].focus();
+      // prevent handleFocus() callback of DropdownList.
+      event.preventDefault();
+    } else if (event.keyCode === KeyCode.KEY_UP && this.state.isOpen && !this.state.openedViaKeyboard) {
+      // set focus to last list element on up arrow key press only when dropdown is opened by mouse click
+      const listOptions = this.dropdownList.querySelectorAll('[data-terra-dropdown-list-item]');
+      listOptions[listOptions.length - 1].focus();
+      event.preventDefault();
+    } else if (event.keyCode === KeyCode.KEY_TAB) {
+      this.handleDropdownRequestClose();
     }
   }
 
   handleKeyUp(event) {
-    if (event.keyCode === KeyCode.KEY_SPACE) {
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       this.setState({ isActive: false });
+      this.openDropDown(event);
     }
   }
 
@@ -95,7 +141,7 @@ class DropdownButton extends React.Component {
       ...customProps
     } = this.props;
 
-    const { isOpen, isActive } = this.state;
+    const { isOpen, isActive, openedViaKeyboard } = this.state;
 
     const classnames = cx(
       'dropdown-button',
@@ -118,6 +164,9 @@ class DropdownButton extends React.Component {
         isCompact={isCompact}
         isDisabled={isDisabled}
         requestClose={this.handleDropdownRequestClose}
+        openedViaKeyboard={openedViaKeyboard}
+        buttonRef={this.getButtonNode}
+        refCallback={this.setListNode}
       >
         <button
           type="button"
@@ -128,8 +177,9 @@ class DropdownButton extends React.Component {
           disabled={isDisabled}
           tabIndex={isDisabled ? '-1' : undefined}
           aria-disabled={isDisabled}
-          aria-expanded={isOpen || undefined}
+          aria-expanded={isOpen}
           aria-haspopup="menu"
+          ref={this.setButtonNode}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
           <span className={cx('caret-icon')} />
