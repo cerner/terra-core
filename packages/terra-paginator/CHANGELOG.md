@@ -5,6 +5,10 @@ Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme theming files
+* Private PaginatorButton component added to separate button focus and active style management
+
+### Changed
+* `focused` and `active` pseudo selectors migrated to data attributes
 
 2.37.0 - (January 28, 2020)
 ------------------
