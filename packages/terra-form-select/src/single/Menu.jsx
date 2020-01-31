@@ -235,7 +235,7 @@ class Menu extends React.Component {
     let displayText;
     if (optGroupElement) {
       displayText = `Group ${optGroupElement.props.label}, ${element.props.display}`;
-    } else {
+    } else if (element) {
       displayText = element.props.display;
     }
 
