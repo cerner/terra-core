@@ -14,56 +14,52 @@ exports[`Paginator should render a Controlled ProgressivePaginator - Large 1`] =
       Terra.paginator.pageCount
     </div>
     <div>
-      <button
-        aria-disabled={true}
-        aria-label="Terra.paginator.first"
+      <PaginatorButton
+        ariaDisabled={true}
+        ariaLabel="Terra.paginator.first"
         className="nav-link is-disabled"
+        disabled={true}
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex={null}
-        type="button"
       >
         Terra.paginator.first
-      </button>
-      <button
-        aria-disabled={true}
-        aria-label="Terra.paginator.previous"
+      </PaginatorButton>
+      <PaginatorButton
+        ariaDisabled={true}
+        ariaLabel="Terra.paginator.previous"
         className="nav-link previous is-disabled"
+        disabled={true}
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex={null}
-        type="button"
       >
         <span
           className="icon"
         />
         Terra.paginator.previous
-      </button>
-      <button
-        aria-disabled={false}
-        aria-label="Terra.paginator.next"
+      </PaginatorButton>
+      <PaginatorButton
+        ariaDisabled={false}
+        ariaLabel="Terra.paginator.next"
         className="nav-link next"
+        disabled={false}
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex="0"
-        type="button"
       >
         Terra.paginator.next
         <span
           className="icon"
         />
-      </button>
-      <button
-        aria-disabled={false}
-        aria-label="Terra.paginator.last"
+      </PaginatorButton>
+      <PaginatorButton
+        ariaDisabled={false}
+        ariaLabel="Terra.paginator.last"
         className="nav-link"
+        disabled={false}
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex="0"
-        type="button"
       >
         Terra.paginator.last
-      </button>
+      </PaginatorButton>
     </div>
   </div>
 </ResponsiveElement>
@@ -83,56 +79,52 @@ exports[`Paginator should render a Controlled ProgressivePaginator - Tiny 1`] = 
       Terra.paginator.pageCount
     </div>
     <div>
-      <button
-        aria-disabled={true}
-        aria-label="Terra.paginator.first"
+      <PaginatorButton
+        ariaDisabled={true}
+        ariaLabel="Terra.paginator.first"
         className="nav-link is-disabled"
+        disabled={true}
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex={null}
-        type="button"
       >
         Terra.paginator.first
-      </button>
-      <button
-        aria-disabled={true}
-        aria-label="Terra.paginator.previous"
+      </PaginatorButton>
+      <PaginatorButton
+        ariaDisabled={true}
+        ariaLabel="Terra.paginator.previous"
         className="nav-link previous is-disabled"
+        disabled={true}
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex={null}
-        type="button"
       >
         <span
           className="icon"
         />
         Terra.paginator.previous
-      </button>
-      <button
-        aria-disabled={false}
-        aria-label="Terra.paginator.next"
+      </PaginatorButton>
+      <PaginatorButton
+        ariaDisabled={false}
+        ariaLabel="Terra.paginator.next"
         className="nav-link next"
+        disabled={false}
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex="0"
-        type="button"
       >
         Terra.paginator.next
         <span
           className="icon"
         />
-      </button>
-      <button
-        aria-disabled={false}
-        aria-label="Terra.paginator.last"
+      </PaginatorButton>
+      <PaginatorButton
+        ariaDisabled={false}
+        ariaLabel="Terra.paginator.last"
         className="nav-link"
+        disabled={false}
         onClick={[Function]}
         onKeyDown={[Function]}
-        tabIndex="0"
-        type="button"
       >
         Terra.paginator.last
-      </button>
+      </PaginatorButton>
     </div>
   </div>
 </ResponsiveElement>
