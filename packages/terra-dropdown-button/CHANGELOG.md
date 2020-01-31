@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update docs to use mdx syntax.
+
 ### Added
 * Added metaData for primary-button in SplitButton to `onSelect` callback.
 
