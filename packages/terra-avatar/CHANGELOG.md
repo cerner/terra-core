@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update docs to use MDX syntax
+
+2.32.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.31.0 - (December 3, 2019)
 ------------------

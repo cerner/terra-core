@@ -407,9 +407,10 @@ class Menu extends React.Component {
     const optionRect = activeOption.getBoundingClientRect();
 
     if (optionRect.top < dropdownRect.top) {
-      activeOption.scrollIntoView();
+      this.menu.parentNode.scrollTop = activeOption.offsetTop;
     } else if (optionRect.bottom > dropdownRect.bottom) {
-      activeOption.scrollIntoView(false);
+      // To scroll to active option to top subtracting active option offsetTop with parent window's height.
+      this.menu.parentNode.scrollTop = (activeOption.offsetTop - dropdownRect.height) + optionRect.height;
     }
   }
 

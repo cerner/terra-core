@@ -3,6 +3,26 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Private PaginatorButton component added to separate button focus and active style management
+
+### Changed
+* `focused` and `active` pseudo selectors migrated to data attributes
+
+2.37.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.36.0 - (January 17, 2020)
+------------------
+### Changed
+* Replaced uncontrolled `<ResponsiveElement>` with controlled `<ResponsiveElement>`.
+
+2.35.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.34.0 - (December 10, 2019)
 ------------------

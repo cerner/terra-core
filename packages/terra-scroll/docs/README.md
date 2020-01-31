@@ -10,7 +10,6 @@ The terra-scroll expands to fill it's parent container, so parent nodes are expe
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-scroll`
-  - `yarn add terra-scroll`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

@@ -3,8 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.26.0 - (January 28, 2020)
+------------------
 ### Changed
-* Updated eIFU text to be `Electronic Instructions for Use Icon`.
+* Updated Person Door icon
+* Updated eIFU text to be `Electronic Instructions for Use Icon`
+* Bumped `one-cerner-style-icons` to v1.30.1
+* Updated `terra-dev-site` WDIO test for IconAll
+* Changed WDIO tests to use `huge` viewport in order to accomodate the new icons introduced in v1.30.1
+
+3.25.0 - (January 7, 2020)
+------------------
+### Added
+* Location Pin icon
+
+### Removed
+* Removed yarn reference in docs
 
 3.24.0 - (December 3, 2019)
 ------------------

@@ -3,11 +3,29 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update docs to use mdx syntax.
+
+3.30.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.29.0 - (January 7, 2020)
+------------------
+### Added
+* Button border-color on hover is now themeable.
+
+### Removed
+* Removed yarn reference in docs
 
 3.28.0 - (December 10, 2019)
 ------------------
 ### Fixed
 * Set focus on button when clicked on Firefox, Safari, and IE.
+
+### Added
+* Added Theme variables for disabled styles of button.
 
 3.27.0 - (December 3, 2019)
 ------------------

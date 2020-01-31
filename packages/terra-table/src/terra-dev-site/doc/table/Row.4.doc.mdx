@@ -1,0 +1,50 @@
+import { Badge } from 'terra-table/package.json?dev-site-package';
+import RowExample from 'terra-table/lib/terra-dev-site/doc/example/RowExample?dev-site-example';
+import RowProps from 'terra-table/src/terra-dev-site/doc/table/reference-proptypes/rowShape?dev-site-props-table';
+import DiscloseActionProps from 'terra-table/src/terra-dev-site/doc/table/reference-proptypes/discloseShape?dev-site-props-table';
+import ToggleActionProps from 'terra-table/src/terra-dev-site/doc/table/reference-proptypes/toggleShape?dev-site-props-table';
+import CellProps from 'terra-table/src/terra-dev-site/doc/table/reference-proptypes/cellShape?dev-site-props-table';
+
+<Badge />
+
+# Terra Table - Row
+
+The Row is a sub component that groups table cells passed through children. Each row handles it's own selection state through props. The onSelect function that can be passed to the row will return the metaData associated to the row. The metaData allows for greater control of state with the ability to associate any indicator or function with the row.
+
+## Usage
+
+```jsx
+import React from 'react';
+import Table from 'terra-table';
+
+<Table
+  bodyData={[
+    rows: [{
+      key: 'chevron_row',
+      cells: [
+        { id: 'header-name', key: 'name', children: 'Name' },
+      ],
+    }],
+  ]}
+/>
+```
+
+# Examples
+
+<RowExample />
+
+## Table Row Props
+
+<RowProps />
+
+## Table Row Toggle Action Props
+
+<ToggleActionProps />
+
+## Table Row Disclose Action Props
+
+<DiscloseActionProps />
+
+## Table Cell Props
+
+<CellProps />

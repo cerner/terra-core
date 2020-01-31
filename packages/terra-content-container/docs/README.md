@@ -8,7 +8,6 @@ The footer is not responsive to mobile keyboard positioning.
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-content-container`
-  - `yarn add terra-content-container`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

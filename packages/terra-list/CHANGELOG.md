@@ -6,6 +6,16 @@ Unreleased
 ### Changed
 * `isDisabled` prop added to fix accessibility issue to handle selectable and non-selectable items correctly.
 
+4.25.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.24.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
 4.23.0 - (December 3, 2019)
 ------------------
 ### Added
