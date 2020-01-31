@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added onInput prop.
 
 3.37.0 - (January 28, 2020)
 ------------------
