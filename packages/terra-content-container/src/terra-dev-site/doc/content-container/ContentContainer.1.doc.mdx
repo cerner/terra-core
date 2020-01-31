@@ -1,0 +1,53 @@
+import { Badge } from 'terra-content-container/package.json?dev-site-package';
+
+import ContentContainerStandard from '../example/ContentContainerStandard?dev-site-example';
+import ContentContainerFill from '../example/ContentContainerFill?dev-site-example';
+import ContentContainerScrollRef from '../example/ContentContainerScrollRef?dev-site-example';
+
+import ContentContainerPropsTable from 'terra-content-container/src/ContentContainer?dev-site-props-table';
+
+<Badge />
+
+# Terra Content Container
+
+The Terra ContentContainer is a structural component for the purpose of arranging content with an optional header and/or footer.
+
+The footer is not responsive to mobile keyboard positioning.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-content-container`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import ContentContainer from 'terra-content-container';
+```
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-content-container)
+
+## Examples
+<ContentContainerStandard title="Standard Container" />
+<ContentContainerFill title="Fill Container" />
+<ContentContainerScrollRef title="Scroll Ref Container" />
+
+## Content Container Props
+<ContentContainerPropsTable />
