@@ -6,7 +6,7 @@
 `terra-breakpoints` contains components and utilities related to Terra's supported responsive breakpoints.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-breakpoints/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-breakpoints/breakpoints/about)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -22,8 +22,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
