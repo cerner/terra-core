@@ -49,6 +49,9 @@ jobs:
       script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci
     - name: enormous
       script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci
+    
+    # This should be enabled once after all the 3 mono repos have been merged with the lowlight theme files and screenshots have been generated.
+
     # - stage: compile - lowlight theme
     #   script: travis_wait docker-compose run test-ci npm run compile:lowlight
     # - stage: wdio - lowlight theme
