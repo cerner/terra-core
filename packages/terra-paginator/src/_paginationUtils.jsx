@@ -37,4 +37,6 @@ const pageSet = (index, totalPages) => {
   return sequence.sort((a, b) => a - b);
 };
 
-export { calculatePages, pageSet };
+export {
+  calculatePages, pageSet,
+};
