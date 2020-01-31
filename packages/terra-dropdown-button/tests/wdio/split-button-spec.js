@@ -10,7 +10,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
     it('validates primary button focus styling', () => {
       // Tab then Shift-Tab to get focus styles to appear on primary button
-      browser.keys(['Tab', 'Shift', 'Tab', 'Shift']);
+      browser.keys(['Tab']);
       Terra.validates.element('primary focus');
     });
 
@@ -42,6 +42,17 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       browser.click('[class*=split-button-caret]');
       Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });
       Terra.validates.screenshot('caret with dropdown open');
+    });
+
+    it('prints MetaData of option on click', () => {
+      browser.click('#opt1');
+      Terra.validates.screenshot('MetaData of 1st option', { selector: '#root' });
+    });
+
+    it('prints MetaData of primary button on click', () => {
+      browser.moveToObject('[class*=split-button-primary]');
+      browser.click('[class*=split-button-primary]');
+      Terra.validates.screenshot('MetaData of Primary Button option', { selector: '#root' });
     });
   });
 
@@ -110,17 +121,17 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('runs callback on space', () => {
-        browser.keys(['Space']);
+        browser.keys(['ArrowDown', 'Space']);
         Terra.validates.screenshot('space');
       });
 
       it('keyboard navigates down and runs callback on space', () => {
-        browser.keys(['ArrowDown', 'Space']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'Space']);
         Terra.validates.screenshot('down arrow');
       });
 
       it('runs callback on enter', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'Enter']);
         Terra.validates.screenshot('enter');
       });
 
@@ -130,22 +141,22 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('will not keyboard navigates down past the last option', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
         Terra.validates.screenshot('no down out of bounds');
       });
 
       it('keyboard navigates up and runs callback on enter', () => {
-        browser.keys(['ArrowDown', 'ArrowUp', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'Enter']);
         Terra.validates.screenshot('up arrow');
       });
 
       it('will not keyboard navigates up past the first option', () => {
-        browser.keys(['ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
         Terra.validates.screenshot('no up out of bounds');
       });
 
       it('jumps to the last entry', () => {
-        browser.keys(['End', 'Enter']);
+        browser.keys(['ArrowDown', 'End', 'Enter']);
         Terra.validates.screenshot('end');
       });
 
@@ -155,7 +166,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('jumps when typing', () => {
-        browser.keys(['b', 'Enter']);
+        browser.keys(['ArrowDown', 'b', 'Enter']);
         Terra.validates.screenshot('jumps when typing');
       });
 

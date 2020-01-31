@@ -3,6 +3,17 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update docs to use mdx syntax.
+
+### Added
+* Added metaData for primary-button in SplitButton to `onSelect` callback.
+
+### Changed
+* Changed focus behaviour of DropdownButton and SplitButton such that focus stays on button when dropdown is opened via mouse click.
+
+### Fixed
+* Fixed primary button issue of not getting focused on click in Firefox, Safari and IE.
 
 1.9.0 - (January 7, 2020)
 ------------------
