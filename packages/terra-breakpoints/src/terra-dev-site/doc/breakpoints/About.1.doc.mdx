@@ -1,3 +1,10 @@
+import { Badge } from 'terra-breakpoints/package.json?dev-site-package';
+
+import ActiveBreakpointProviderExample from '../example/ActiveBreakpointProviderExample?dev-site-example';
+import MixinsExample from '../example/MixinsExample?dev-site-example';
+
+<Badge />
+
 # Terra Breakpoints
 
 `terra-breakpoints` contains components and utilities related to Terra's supported responsive breakpoints.
@@ -16,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -84,47 +89,6 @@ console.log(isBreakpointActiveForSize('enormous', 1500)); // true
 
 A component generator called `withActiveBreakpoint()` is included to provide simple interfacing with the ActiveBreakpointProvider. However, the ActiveBreakpointContext can also be imported and used directly, if needed.
 
-```jsx
-import React from 'react';
-import { ActiveBreakpointProvider, withActiveBreakpoint, ActiveBreakpointContext } from 'terra-breakpoints';
-
-const ActiveBreakpointConsumer1 = withActiveBreakpoint(({ activeBreakpoint }) => (
-  <div>
-    <p>This component uses the withActiveBreakpoint() component generator to interface with the ActiveBreakpointProvider.</p>
-    <p>
-      The active breakpoint is:
-      {' '}
-      {activeBreakpoint}
-    </p>
-  </div>
-));
-
-const ActiveBreakpointConsumer2 = () => (
-  <ActiveBreakpointContext.Consumer>
-    {
-      activeBreakpoint => (
-        <div>
-          <p>This component interfaces with the ActiveBreakpointContext directly.</p>
-          <p>
-            The active breakpoint is:
-            {' '}
-            {activeBreakpoint}
-          </p>
-        </div>
-      )
-    }
-  </ActiveBreakpointContext.Consumer>
-);
-
-const ActiveBreakpointProviderExample = () => (
-  <ActiveBreakpointProvider>
-    <ActiveBreakpointConsumer1 />
-    <hr />
-    <ActiveBreakpointConsumer2 />
-  </ActiveBreakpointProvider>
-);
-```
-
 ### Media Queries
 
 `terra-breakpoints` includes `_media-queries.scss`, which contains a set of Sass mixins that define media queries for the supported breakpoints.
@@ -161,3 +125,9 @@ const ActiveBreakpointProviderExample = () => (
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/features)
 * [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
 * [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-breakpoints)
+
+## Examples
+<ActiveBreakpointProviderExample />
+<MixinsExample />
