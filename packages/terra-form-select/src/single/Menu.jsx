@@ -245,7 +245,7 @@ class Menu extends React.Component {
         // dropdown again and navigates to clear option
         visuallyHiddenComponent.current.innerText = clearSelectTxt;
       } else if (this.isActiveSelected()) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: 'lokesh' });
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText });
       } else {
         visuallyHiddenComponent.current.innerText = displayText;
       }
