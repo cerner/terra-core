@@ -234,7 +234,7 @@ class Menu extends React.Component {
 
     let displayText;
     if (optGroupElement) {
-      displayText = `Group ${optGroupElement.props.label}, ${element.props.display}`;
+      displayText = intl.formatMessage({ id: 'Terra.form.select.optGroup' }, { text: `${optGroupElement.props.label}, ${element.props.display}` });
     } else if (element) {
       displayText = element.props.display;
     }
@@ -245,7 +245,7 @@ class Menu extends React.Component {
         // dropdown again and navigates to clear option
         visuallyHiddenComponent.current.innerText = clearSelectTxt;
       } else if (this.isActiveSelected()) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText });
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: 'lokesh' });
       } else {
         visuallyHiddenComponent.current.innerText = displayText;
       }
