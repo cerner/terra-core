@@ -30,7 +30,6 @@
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
     "terra-button": "^3.30.0",
-    "terra-doc-template": "^2.23.0",
     "terra-mixins": "^1.34.0",
     "terra-visually-hidden-text": "^2.22.0"
   },
