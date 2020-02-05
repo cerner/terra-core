@@ -1,5 +1,7 @@
+const inTestNavConfig = require('./inTestNavigation.config');
 
 const siteConfig = {
+  inTestNavConfig,
   appConfig: {
     themes: {
       'Default Theme': '',
