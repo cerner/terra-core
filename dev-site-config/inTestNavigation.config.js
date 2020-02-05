@@ -1,9 +1,9 @@
 const navConfig = {
   navigation: {
-    index: '/test',
+    index: '/tests',
     links: [{
-      path: '/test',
-      text: 'Test',
+      path: '/tests',
+      text: 'Tests',
       pageTypes: ['test'],
       capabilities: {
         devTools: true,
