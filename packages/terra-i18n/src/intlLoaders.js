@@ -4,8 +4,8 @@ import hasIntlData from 'intl-locales-supported';
 
 const supportedIntlConstructors = () => {
   /**
-   * Use try-catch to check if Intl is provided by the browser. In some instances checking Intl
-   * will throw an error and crash the page with little information.
+   * Use try-catch to check if Intl is provided by the browser. In some instances checking Intl will throw an
+   * error and crash the page with little information.
    *
    * Reference: https://github.com/cerner/terra-core/issues/2820
    */
