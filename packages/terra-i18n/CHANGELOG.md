@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Fixed
-* Add try-catch blocks around the Intl check to ensure errors are correctly handled if an throw is thrown. Fixes https://github.com/cerner/terra-core/issues/2820.
+* Add try-catch blocks around the Intl check to ensure errors are correctly handled if an error is thrown. Fixes https://github.com/cerner/terra-core/issues/2820.
 
 4.21.0 - (January 7, 2020)
 ------------------
