@@ -2,14 +2,31 @@
 import intlLoaders from 'intlLoaders';
 import hasIntlData from 'intl-locales-supported';
 
-const supportedIntlConstructors = global.Intl ? [
-  Intl.DateTimeFormat,
-  Intl.NumberFormat,
-] : [];
+const supportedIntlConstructors = () => {
+  /**
+   * Use try-catch to check if Intl is provided by the browser. In some instances checking Intl
+   * will throw an error and crash the page with little information.
+   *
+   * Reference: https://github.com/cerner/terra-core/issues/2820
+   */
+  let constructors;
+  try {
+    if (typeof (Intl) !== 'undefined' && Intl.DateTimeFormat !== 'undefined' && Intl.NumberFormat !== 'undefined') {
+      constructors = [
+        Intl.DateTimeFormat,
+        Intl.NumberFormat,
+      ];
+    }
+  } catch (error) {
+    constructors = [];
+  }
+
+  return constructors;
+};
 
 const loadFallbackIntl = (localeContext) => {
   try {
-    if (!hasIntlData(['en'], supportedIntlConstructors)) {
+    if (!hasIntlData(['en'], supportedIntlConstructors())) {
       intlLoaders.en();
     }
 
@@ -24,13 +41,13 @@ const loadFallbackIntl = (localeContext) => {
 const loadIntl = (locale) => {
   const fallbackLocale = locale.split('-').length > 1 ? locale.split('-')[0] : false;
   try {
-    if (!hasIntlData([locale], supportedIntlConstructors)) {
+    if (!hasIntlData([locale], supportedIntlConstructors())) {
       intlLoaders[locale]();
     }
   } catch (e) {
     if (fallbackLocale) {
       try {
-        if (!hasIntlData([fallbackLocale], supportedIntlConstructors)) {
+        if (!hasIntlData([fallbackLocale], supportedIntlConstructors())) {
           intlLoaders[fallbackLocale]();
         }
 
