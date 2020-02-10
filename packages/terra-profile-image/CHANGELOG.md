@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added `fit` prop
+* Added `fit` prop to specify the object-fit style
 
 3.23.0 - (January 7, 2020)
 ------------------
