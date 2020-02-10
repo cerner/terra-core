@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme theming files
 
+3.29.0 - (February 4, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.28.0 - (January 28, 2020)
 ------------------
 ### Changed

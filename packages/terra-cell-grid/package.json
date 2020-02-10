@@ -1,7 +1,7 @@
 {
   "name": "terra-cell-grid",
   "main": "lib/index.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The terra-cell-grid is a structural row based layout for aligning column cells within 100% width of its parent",
   "repository": {
     "type": "git",
@@ -26,8 +26,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.17.0"
+    "prop-types": "^15.5.8"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

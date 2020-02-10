@@ -5,6 +5,10 @@ Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme theming files
+
+2.38.0 - (February 4, 2020)
+------------------
+### Added
 * Private PaginatorButton component added to separate button focus and active style management
 
 ### Changed

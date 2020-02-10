@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added generated-themes to .npmignore
 
+2.23.0 - (February 4, 2020)
+------------------
+### Changed
+* Update docs to use MDX syntax
+
 2.22.0 - (January 7, 2020)
 ------------------
 ### Changed
