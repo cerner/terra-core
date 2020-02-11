@@ -37,6 +37,11 @@ const propTypes = {
    * Title text to be placed within the section header.
    */
   title: PropTypes.string.isRequired,
+  /**
+   * Accessibility role of the list, defaults to 'none'. If creating a list with selectable items, pass 'listbox'.
+   */
+  role: PropTypes.string,
+
 };
 
 const defaultProps = {
@@ -44,22 +49,28 @@ const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
   level: 1,
+  role: 'none',
 };
 
 const ListSection = ({
   children,
   isCollapsed,
   isCollapsible,
+  role,
   ...customProps
 }) => {
   let sectionItems;
   if (!isCollapsible || !isCollapsed) {
     sectionItems = children;
   }
+  const attrSpread = {};
+  if (role && role.length > 0 && role !== 'none') {
+    attrSpread.role = role;
+  }
 
   return (
     <React.Fragment>
-      <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
+      <SectionHeader {...attrSpread} {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {sectionItems}
     </React.Fragment>
   );

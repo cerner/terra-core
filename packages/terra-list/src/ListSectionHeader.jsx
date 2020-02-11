@@ -53,12 +53,18 @@ const propTypes = {
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onMouseDown: PropTypes.func,
+  /**
+   * Accessibility role of the list, defaults to 'none'. If creating a list with selectable items, pass 'listbox'.
+   */
+  role: PropTypes.string,
+
 };
 
 const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
   level: 1,
+  role: 'none',
 };
 
 const ListSectionHeader = ({
@@ -73,6 +79,7 @@ const ListSectionHeader = ({
   onSelect,
   refCallback,
   title,
+  role,
   ...customProps
 }) => {
   const sectionHeaderClassNames = cx([
@@ -106,6 +113,9 @@ const ListSectionHeader = ({
     attrSpread['data-item-show-focus'] = 'true';
     attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
+  }
+  if (role === 'option' || role === 'listbox') {
+    attrSpread.role = role;
   }
 
   return (

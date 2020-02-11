@@ -2,12 +2,13 @@ import React from 'react';
 import List, { Item, Subsection } from 'terra-list/lib/index';
 
 const ListSubsectionTest = () => (
-  <List>
+  <List role="listbox" aria-label="list subsection">
     <Subsection
       key="static-subsection"
       title="Static Subsection"
+      role="option"
     >
-      <Item key="123">
+      <Item key="123" isSelectable>
         <p>test static</p>
       </Item>
     </Subsection>
@@ -16,7 +17,7 @@ const ListSubsectionTest = () => (
       isCollapsible
       title="Collapsible Subsection"
     >
-      <Item key="223">
+      <Item key="223" isSelectable isDisabled>
         <p>test collapsible</p>
       </Item>
     </Subsection>
