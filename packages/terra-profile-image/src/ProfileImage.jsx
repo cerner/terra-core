@@ -17,7 +17,8 @@ const propTypes = {
    */
   alt: PropTypes.string,
   /**
-  * Sets the `object-fit` style of the image from the following values; `cover`, `contain`, `fill`, `scale-down`, `none`.
+  * Sets the `object-fit` style of the image from the following values: `cover`, `contain`, `fill`, `scale-down`, `none`.
+  * ![IMPORTANT](https://badgen.net/badge/UX/Design-Standards/blue) Anywhere the terra-profile-image is used to show images of People, _only_ `cover` and `contain` are acceptable, `fill` should _never_ be used.
   */
   fit: PropTypes.oneOf(Object.values(FitTypes)),
   /**
