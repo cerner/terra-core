@@ -63,14 +63,10 @@ const ListSection = ({
   if (!isCollapsible || !isCollapsed) {
     sectionItems = children;
   }
-  const attrSpread = {};
-  if (role && role.length > 0 && role !== 'none') {
-    attrSpread.role = role;
-  }
 
   return (
     <React.Fragment>
-      <SectionHeader {...attrSpread} {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
+      <SectionHeader role={role} {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {sectionItems}
     </React.Fragment>
   );
