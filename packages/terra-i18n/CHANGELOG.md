@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added generated-themes to .npmignore
 
+4.22.0 - (February 11, 2020)
+------------------
 ### Fixed
 * Add try-catch blocks around the Intl check to ensure errors are correctly handled if an error is thrown. Fixes https://github.com/cerner/terra-core/issues/2820.
 
