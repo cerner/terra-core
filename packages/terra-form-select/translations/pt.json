@@ -20,5 +20,6 @@
   "Terra.form.select.clearSelect": "Limpar seleção",
   "Terra.form.select.selectCleared": "Selecionar valor limpo",
   "Terra.form.select.menu": "Menu",
-  "Terra.form.select.option": "Opções"
+  "Terra.form.select.option": "Opções",
+  "Terra.form.select.optGroup": "Grupo {text}"
 }
