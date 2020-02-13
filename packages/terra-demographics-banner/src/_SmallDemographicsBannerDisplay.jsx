@@ -30,9 +30,8 @@ export default (props) => {
   } = props;
 
   const mainClasses = cx([
-    'demographics-banner',
-    { deceased: deceasedDate },
     customProps.className,
+    { deceased: deceasedDate },
   ]);
 
   delete customProps.className;

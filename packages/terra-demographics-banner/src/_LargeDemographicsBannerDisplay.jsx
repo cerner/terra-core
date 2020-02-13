@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import classNames from 'classnames/bind';
 import React from 'react';
+import Avatar from 'terra-avatar';
 import styles from './DemographicsBanner.module.scss';
 import DemographicsBannerUtils from './_sharedObjects';
 
@@ -30,21 +31,16 @@ export default (props) => {
   } = props;
 
   const mainClasses = cx([
-    'demographics-banner',
+    customProps.className,
     'large-demographics-banner',
     { deceased: deceasedDate },
-    customProps.className,
   ]);
 
   delete customProps.className;
 
   return (
     <section className={mainClasses} {...customProps}>
-      {props.photo && (
-        <div className={cx('profile-photo')}>
-          {props.photo}
-        </div>
-      )}
+      <Avatar className={cx('profile-photo')} image={photo} alt={personName} />
       <div className={cx('content')}>
         <div className={cx('row')}>
           <h1 className={cx('person-name')}>

@@ -62,7 +62,7 @@ const propTypes = {
   /**
    * Photo to display in the banner
    */
-  photo: PropTypes.node,
+  photo: PropTypes.string,
   /**
    * The column layout in which to present the displays.
    */
@@ -95,7 +95,7 @@ const defaultProps = {
   gestationalAgeFullText: 'Gestational Age',
   identifiers: {},
   personName: '--',
-  photo: null,
+  photo: undefined,
   postMenstrualAge: null,
   postMenstrualAgeLabel: 'PMA',
   postMenstrualAgeFullText: 'Post Menstrual Age',

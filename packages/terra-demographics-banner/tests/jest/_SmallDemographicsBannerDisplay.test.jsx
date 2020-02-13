@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'terra-image';
 import SmallDemographicsBannerDisplay from '../../src/_SmallDemographicsBannerDisplay';
 
 it('renders small banner that contains all valid information', () => {
@@ -10,7 +9,7 @@ it('renders small banner that contains all valid information', () => {
     dateOfBirth="May 9, 1993"
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
-    photo={<Image alt="My Cat" src="" />}
+    photo=""
     personName="Johnathon Doe"
     preferredFirstName="John"
     dateOfBirthLabel="DOB"

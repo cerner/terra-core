@@ -4,6 +4,7 @@ exports[`renders a blank banner wrapper 1`] = `
 <DemographicsBannerDisplay
   age="Terra.demographicsBanner.noDataProvided"
   applicationContent={null}
+  className="demographics-banner"
   dateOfBirth="Terra.demographicsBanner.noDataProvided"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
@@ -44,6 +45,7 @@ exports[`renders the banner wrapper with all props 1`] = `
       },
     ]
   }
+  className="demographics-banner"
   dateOfBirth="May 9, 1993"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
@@ -60,15 +62,7 @@ exports[`renders the banner wrapper with all props 1`] = `
     }
   }
   personName="Johnathon Doe"
-  photo={
-    <Image
-      alt="My Cat"
-      fit="fill"
-      isFluid={false}
-      src=""
-      variant="default"
-    />
-  }
+  photo=""
   postMenstrualAge="April 7, 2016"
   postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
   postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"

@@ -83,6 +83,7 @@ const DemographicsBanner = ({
   return (
     <DemographicsBannerDisplay
       {...customProps}
+      className="demographics-banner"
       age={age || noDataProvided}
       dateOfBirth={dateOfBirth || noDataProvided}
       gender={gender || noDataProvided}

@@ -13,19 +13,16 @@ exports[`renders large banner that contains all valid information 1`] = `
       },
     ]
   }
-  className="demographics-banner large-demographics-banner"
+  className="large-demographics-banner"
 >
-  <div
+  <Avatar
+    alt="Johnathon Doe"
     className="profile-photo"
-  >
-    <Image
-      alt="My Cat"
-      fit="fill"
-      isFluid={false}
-      src=""
-      variant="default"
-    />
-  </div>
+    color="auto"
+    image=""
+    isAriaHidden={false}
+    isDeceased={false}
+  />
   <div
     className="content"
   >

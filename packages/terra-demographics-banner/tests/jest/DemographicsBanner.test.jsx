@@ -1,7 +1,6 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
-import Image from 'terra-image';
 import DemographicsBanner from '../../src/DemographicsBanner';
 
 it('renders a blank banner wrapper', () => {
@@ -19,7 +18,7 @@ it('renders the banner wrapper with all props', () => {
       gender="Male"
       gestationalAge="April 5, 2016"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      photo={<Image alt="My Cat" src="" />}
+      photo=""
       personName="Johnathon Doe"
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
