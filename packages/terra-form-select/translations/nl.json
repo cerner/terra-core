@@ -20,5 +20,6 @@
   "Terra.form.select.clearSelect": "Selectie wissen",
   "Terra.form.select.selectCleared": "Geselecteerde waarde gewist",
   "Terra.form.select.menu": "Menu",
-  "Terra.form.select.option": "Opties"
+  "Terra.form.select.option": "Opties",
+  "Terra.form.select.optGroup": "Groeperen {text}"
 }
