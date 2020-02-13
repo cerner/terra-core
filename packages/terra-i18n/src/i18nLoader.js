@@ -20,7 +20,7 @@ export default (locale, callback, scope) => {
   let hasIntl;
   try {
     // eslint-disable-next-line compat/compat
-    hasIntl = typeof (Intl) !== 'undefined' && typeof (Intl.DateTimeFormat) !== 'undefined' && typeof (Intl.NumberFormat) !== 'undefined';
+    hasIntl = typeof (Intl) === 'object' && typeof (Intl.DateTimeFormat) === 'function' && typeof (Intl.NumberFormat) === 'function';
   } catch (error) {
     hasIntl = false;
   }

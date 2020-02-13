@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changes
-* Be explict when checking when checking if Intl, Intl.DateTimeFormat and Int.NumberFormat are available on the browser.
+* Be the most explict when checking when checking if Intl, Intl.DateTimeFormat and Int.NumberFormat by checking against expected type instead of check for undefined.
 
 4.23.0 - (February 13, 2020)
 ------------------
