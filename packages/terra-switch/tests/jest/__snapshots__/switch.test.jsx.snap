@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch should render a default component 1`] = `
+<div
+  className="switch-wrapper"
+>
+  <label
+    htmlFor="terra-switch-button-1"
+  >
+    <div
+      className="switch-container"
+    >
+      <div
+        className="label-container"
+      >
+        <span
+          className="label-text"
+        >
+          default
+        </span>
+        <span
+          className="status-label-text"
+        >
+          Off
+        </span>
+      </div>
+      <div
+        className="switch"
+      >
+        <span
+          className="tray unselected"
+        >
+          <button
+            aria-checked={false}
+            aria-label="Off"
+            className="slider"
+            disabled={false}
+            id="terra-switch-button-1"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            role="switch"
+            tabIndex="0"
+            type="button"
+          />
+        </span>
+      </div>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Switch should render as disabled when set 1`] = `
+<div
+  className="switch-wrapper"
+>
+  <label
+    htmlFor="terra-switch-button-2"
+  >
+    <div
+      className="switch-container"
+    >
+      <div
+        className="label-container"
+      >
+        <span
+          className="label-text"
+        >
+          Label
+        </span>
+        <span
+          className="status-label-text"
+        >
+          Off
+        </span>
+      </div>
+      <div
+        className="switch"
+      >
+        <span
+          className="tray unselected is-disabled"
+        >
+          <button
+            aria-checked={false}
+            aria-label="Off"
+            className="slider is-disabled"
+            disabled={true}
+            id="terra-switch-button-2"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            role="switch"
+            tabIndex="0"
+            type="button"
+          />
+        </span>
+      </div>
+    </div>
+  </label>
+</div>
+`;
