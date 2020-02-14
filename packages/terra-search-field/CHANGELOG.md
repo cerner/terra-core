@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.38.0 - (February 4, 2020)
+------------------
 ### Added
 * Added onInput prop.
 

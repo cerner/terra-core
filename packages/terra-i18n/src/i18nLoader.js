@@ -11,7 +11,21 @@ const permitParams = (callback) => {
 export default (locale, callback, scope) => {
   permitParams(callback);
 
-  if (!global.Intl) {
+  /**
+   * Use try-catch to check if Intl is provided by the browser. In some instances checking Intl will throw an
+   * error and crash the page with little information.
+   *
+   * Reference: https://github.com/cerner/terra-core/issues/2820
+   */
+  let hasIntl;
+  try {
+    // eslint-disable-next-line compat/compat
+    hasIntl = typeof (Intl) !== 'undefined' && typeof (Intl.DateTimeFormat) !== 'undefined' && typeof (Intl.NumberFormat) !== 'undefined';
+  } catch (error) {
+    hasIntl = false;
+  }
+
+  if (!hasIntl) {
     require('intl');
   }
 

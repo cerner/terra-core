@@ -24,7 +24,7 @@ describe('i18nLoader', () => {
   describe('when intl is provided by browser', () => {
     beforeAll(() => {
       defaultLoadIntl.mockClear();
-      global.Intl = {};
+      global.Intl = { DateTimeFormat: {}, NumberFormat: {} };
       i18nLoader('en', jest.fn());
     });
     afterAll(() => { global.Intl = undefined; });

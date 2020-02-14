@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.36.0 - (February 4, 2020)
+------------------
+### Changed
+* Updated docs for `level` prop.
+
 2.35.0 - (January 28, 2020)
 ------------------
 ### Changed
