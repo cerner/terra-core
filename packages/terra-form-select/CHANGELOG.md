@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme theming files
 
+5.41.0 - (February 13, 2020)
+------------------
 ### Fixed
 * Fixed Option Group labels not read on desktop screen readers.
 

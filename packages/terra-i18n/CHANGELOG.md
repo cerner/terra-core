@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added generated-themes to .npmignore
 
+4.23.0 - (February 13, 2020)
+------------------
+### Changes
+* Be explict when checking when checking if Intl, Intl.DateTimeFormat and Int.NumberFormat are available on the browser.
+
 4.22.0 - (February 11, 2020)
 ------------------
 ### Fixed
