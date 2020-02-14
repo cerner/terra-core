@@ -11,7 +11,7 @@ const supportedIntlConstructors = () => {
    */
   let constructors;
   try {
-    if (typeof (Intl) !== 'undefined' && typeof (Intl.DateTimeFormat) !== 'undefined' && typeof (Intl.NumberFormat) !== 'undefined') {
+    if (typeof (Intl) === 'object' && typeof (Intl.DateTimeFormat) === 'function' && typeof (Intl.NumberFormat) === 'function') {
       constructors = [
         Intl.DateTimeFormat,
         Intl.NumberFormat,
