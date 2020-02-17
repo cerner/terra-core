@@ -1,0 +1,15 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-show-hide-v1-button-color: #007ee0;
+  --terra-show-hide-v1-button-focus-background-color: transparent;
+  --terra-show-hide-v1-button-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-show-hide-v1-button-focus-color: #007ee0;
+  --terra-show-hide-v1-button-hover-background-color: none;
+  --terra-show-hide-v1-button-hover-color: #003f61;
+  --terra-show-hide-v1-button-active-color: #003f61;
+
+  @include terra-inline-svg-var('--terra-show-hide-v1-button-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#007ee0" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>');
+  @include terra-inline-svg-var('--terra-show-hide-v1-button-focus-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#007ee0" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>');
+  @include terra-inline-svg-var('--terra-show-hide-v1-button-hover-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#003f61" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>');
+}

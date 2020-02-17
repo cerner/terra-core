@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added generated-themes to .npmignore
 
 5.14.0 - (February 4, 2020)
 ------------------
@@ -16,11 +18,11 @@ Unreleased
 
 5.12.0 - (December 3, 2019)
 ------------------
-### Fixed
-* Flicker for responsiveTo parent elements
-
 ### Added
 * Added reference wdio screenshots for "orion-fusion-theme".
+
+### Fixed
+* Flicker for responsiveTo parent elements
 
 5.11.0 - (October 30, 2019)
 ------------------
