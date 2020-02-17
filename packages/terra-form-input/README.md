@@ -7,7 +7,7 @@
 Generic input which represents an HTML input element directly.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-form-input/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-form-input/form-input/input)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -23,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
