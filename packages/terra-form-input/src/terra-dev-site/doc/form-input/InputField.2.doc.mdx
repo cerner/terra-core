@@ -1,0 +1,44 @@
+import { Badge } from 'terra-form-input/package.json?dev-site-package';
+
+import InputFieldExample from '../example/InputField?dev-site-example';
+import RequiredInputFieldExample from '../example/RequiredInputField?dev-site-example';
+import IncompleteInputFieldExample from '../example/IncompleteInputField?dev-site-example';
+import NumberInputFieldExample from '../example/NumberInputField?dev-site-example';
+
+import FormInputFieldPropsTable from 'terra-form-input/src/InputField?dev-site-props-table';
+
+<Badge />
+
+# Terra Form Input Field
+
+[terra-form-input](https://github.com/cerner/terra-core/tree/master/packages/terra-form-input) component that is wrapped inside a
+[terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field) component.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-form-input`
+
+## Usage
+
+```jsx
+import InputField from 'terra-form-input/lib/InputField';
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+ * [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+ * [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+ * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-form-input)
+
+## Examples
+<InputFieldExample />
+<RequiredInputFieldExample />
+<IncompleteInputFieldExample description="Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+<NumberInputFieldExample />
+
+## Form Input Field Props
+<FormInputFieldPropsTable />
