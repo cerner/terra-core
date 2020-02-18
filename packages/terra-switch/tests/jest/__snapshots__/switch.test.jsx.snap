@@ -32,7 +32,6 @@ exports[`Switch should render a default component 1`] = `
         >
           <button
             aria-checked={false}
-            aria-label="Off"
             className="slider"
             disabled={false}
             id="terra-switch-button-1"
@@ -43,6 +42,7 @@ exports[`Switch should render a default component 1`] = `
             role="switch"
             tabIndex="0"
             type="button"
+            value=""
           />
         </span>
       </div>
@@ -83,7 +83,6 @@ exports[`Switch should render as disabled when set 1`] = `
         >
           <button
             aria-checked={false}
-            aria-label="Off"
             className="slider is-disabled"
             disabled={true}
             id="terra-switch-button-2"
@@ -94,6 +93,7 @@ exports[`Switch should render as disabled when set 1`] = `
             role="switch"
             tabIndex="0"
             type="button"
+            value=""
           />
         </span>
       </div>
