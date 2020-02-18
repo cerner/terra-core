@@ -27,7 +27,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.23.0",
     "terra-form-field": "^3.32.0",
     "terra-icon": "^3.26.0",
     "terra-markdown": "^2.37.0"
