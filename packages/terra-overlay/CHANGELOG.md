@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added clinical-lowlight-theme theming files
+
 ### Changed
 * Update dependency `wicg-inert` from `v2` to `v3`.
 
