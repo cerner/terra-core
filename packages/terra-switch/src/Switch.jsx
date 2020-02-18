@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import uniqueid from 'lodash.uniqueid';
@@ -30,7 +29,7 @@ const propTypes = {
   labelText: PropTypes.node.isRequired,
 
   /**
-    * Callback fired when the state is changed.
+    * Callback fired when the state is changed. Parameters are (event).
     */
   onChange: PropTypes.func,
 };
@@ -117,11 +116,11 @@ const Switch = ({
               className={trayClassNames}
             >
               <button
+                {...customProps}
                 type="button"
                 id={switchButtonId}
                 disabled={isDisabled}
                 aria-checked={isOn}
-                aria-label={statusLabelText}
                 className={sliderClassNames}
                 role="switch"
                 tabIndex="0"
@@ -130,7 +129,7 @@ const Switch = ({
                 onKeyUp={handleKeyUp}
                 onBlur={handleOnBlur}
                 ref={sliderButtonRef}
-                {...customProps}
+                value=""
               />
             </span>
           </div>

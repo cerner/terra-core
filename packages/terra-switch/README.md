@@ -4,7 +4,7 @@
 [![NPM version](https://badgen.net/npm/v/terra-switch)](https://www.npmjs.org/package/terra-switch)
 [![Build Status](https://badgen.net/travis/cerner/terra-switch)](https://travis-ci.com/cerner/terra-core)
 
-The terra-switch component are like their real-world counterparts, are used to indicate whether a setting is on or off and provide users with instantaneous feedback. 
+The terra-switch component indicates whether a setting is on or off and provide users with instantaneous feedback.
 
 Switches are used to activate settings immediately, in real time. 
 Switches never require users to press a button to apply their settings. 
@@ -14,7 +14,7 @@ Switch should be used for only one of these set of binary options:
 • On / Off
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-switch/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-switch/switch/switch)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -37,7 +37,7 @@ This component requires the following peer dependencies be installed in your app
 
 ## LICENSE
 
-Copyright 2017 - 2019 Cerner Innovation, Inc.
+Copyright 2019 - 2020 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

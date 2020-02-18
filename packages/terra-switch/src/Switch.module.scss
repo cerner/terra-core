@@ -1,12 +1,13 @@
 :local {
   .switch-wrapper {
+    display: inline-block;
     -webkit-tap-highlight-color: transparent;
+    width: auto;
   }
 
   .switch-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
   }
 
   .label-container {
