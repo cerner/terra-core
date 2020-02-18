@@ -61,6 +61,11 @@ const propTypes = {
   onChange: PropTypes.func,
 
   /**
+   * Function to trigger when user inputs a value. Use when programmatically setting a value. Sends parameter {Event} event.
+   */
+  onInput: PropTypes.func,
+
+  /**
    * A callback to indicate an invalid search. Sends parameter {String} searchText.
    */
   onInvalidSearch: PropTypes.func,
@@ -84,7 +89,6 @@ const propTypes = {
    * The value of search field.  Use this to create a controlled search field.
    */
   value: PropTypes.string,
-
 };
 
 const defaultProps = {
@@ -107,15 +111,16 @@ class SearchField extends React.Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleInput = this.handleInput.bind(this);
     this.setInputRef = this.setInputRef.bind(this);
     this.updateSearchText = this.updateSearchText.bind(this);
 
     this.searchTimeout = null;
-    this.state = { searchText: this.props.defaultValue || this.props.value };
+    this.searchText = this.props.defaultValue || this.props.value;
   }
 
   componentDidUpdate() {
-    // if consumer updates the value prop with onChange, need to update state to match
+    // if consumer updates the value prop with onChange, need to update variable to match
     this.updateSearchText(this.props.value);
   }
 
@@ -139,7 +144,7 @@ class SearchField extends React.Component {
     if (this.props.onInvalidSearch) {
       this.props.onInvalidSearch('');
     }
-    this.setState({ searchText: '' });
+    this.updateSearchText('');
 
     // Clear input field
     if (this.inputRef) {
@@ -162,8 +167,19 @@ class SearchField extends React.Component {
   }
 
   updateSearchText(searchText) {
-    if (searchText !== undefined && searchText !== this.state.searchText) {
-      this.setState({ searchText });
+    if (typeof searchText !== 'undefined' && searchText !== this.searchText) {
+      this.searchText = searchText;
+      // Forcing update for clearButton rerender.
+      this.forceUpdate();
+    }
+  }
+
+  handleInput(event) {
+    const textValue = event.target.value;
+    this.updateSearchText(textValue);
+
+    if (this.props.onInput) {
+      this.props.onInput(event);
     }
   }
 
@@ -179,7 +195,7 @@ class SearchField extends React.Component {
   handleSearch() {
     this.clearSearchTimeout();
 
-    const searchText = this.state.searchText || '';
+    const searchText = this.searchText || '';
 
     if (searchText.length >= this.props.minimumSearchTextLength && this.props.onSearch) {
       this.props.onSearch(searchText);
@@ -206,6 +222,7 @@ class SearchField extends React.Component {
       isDisabled,
       minimumSearchTextLength,
       onChange,
+      onInput,
       onInvalidSearch,
       onSearch,
       placeholder,
@@ -233,7 +250,7 @@ class SearchField extends React.Component {
       additionalInputAttributes.defaultValue = defaultValue;
     }
 
-    const clearButton = this.state.searchText && !isDisabled
+    const clearButton = this.searchText && !isDisabled
       ? (
         <Button
           className={cx('clear')}
@@ -258,6 +275,7 @@ class SearchField extends React.Component {
             ariaLabel={inputText}
             aria-disabled={isDisabled}
             onKeyDown={this.handleKeyDown}
+            onInput={this.handleInput}
             refCallback={this.setInputRef}
             {...additionalInputAttributes}
           />

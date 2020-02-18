@@ -3,6 +3,21 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added generated-themes to .npmignore
+
+### Changes
+* Be the most explicit when checking when checking if Intl, Intl.DateTimeFormat and Int.NumberFormat by checking against expected type instead of check for undefined. Addresses: https://github.com/cerner/terra-core/issues/2841
+
+4.23.0 - (February 13, 2020)
+------------------
+### Changes
+* Be explicit when checking when checking if Intl, Intl.DateTimeFormat and Int.NumberFormat are available on the browser.
+
+4.22.0 - (February 11, 2020)
+------------------
+### Fixed
+* Add try-catch blocks around the Intl check to ensure errors are correctly handled if an error is thrown. Fixes https://github.com/cerner/terra-core/issues/2820.
 
 4.21.0 - (January 7, 2020)
 ------------------

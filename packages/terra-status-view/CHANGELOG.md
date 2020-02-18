@@ -3,6 +3,23 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added clinical-lowlight-theme theming files
+
+4.17.0 - (February 13, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.16.0 - (February 4, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.15.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
 
 4.14.0 - (January 7, 2020)
 ------------------
@@ -10,7 +27,7 @@ Unreleased
 * Removed yarn reference in docs
 
 ### Changed
-* replaced css grid with flex-box
+* Replaced css grid with flex-box
 
 4.13.0 - (December 10, 2019)
 ------------------

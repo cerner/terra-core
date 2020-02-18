@@ -3,6 +3,18 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added clinical-lowlight-theme theming files
+
+3.31.0 - (February 4, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+3.30.0 - (January 21, 2020)
+------------------
+### Changed
+* `Preferred First Name` is now displayed within parentheses instead of quotes.
 
 3.29.0 - (January 7, 2020)
 ------------------

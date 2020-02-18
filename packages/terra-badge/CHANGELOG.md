@@ -3,6 +3,18 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added clinical-lowlight-theme theming files
+
+3.30.0 - (February 4, 2020)
+------------------
+### Changed
+* Update docs to use MDX syntax
+
+3.29.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
 
 3.28.0 - (January 7, 2020)
 ------------------

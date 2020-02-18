@@ -3,6 +3,21 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added clinical-lowlight-theme theming files
+
+2.38.0 - (February 4, 2020)
+------------------
+### Added
+* Private PaginatorButton component added to separate button focus and active style management
+
+### Changed
+* `focused` and `active` pseudo selectors migrated to data attributes
+
+2.37.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
 
 2.36.0 - (January 17, 2020)
 ------------------

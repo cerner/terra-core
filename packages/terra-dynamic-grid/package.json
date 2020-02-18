@@ -27,8 +27,7 @@
   "dependencies": {
     "aphrodite": "^2.2.2",
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.23.0"
+    "prop-types": "^15.5.8"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -38,6 +37,9 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }
