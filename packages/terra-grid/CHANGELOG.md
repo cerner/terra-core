@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update docs to use mdx syntax.
+
 ### Added
 * Added generated-themes to .npmignore
 
