@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.24.0 - (February 18, 2020)
+------------------
 ### Added
 * Added `fit` prop to specify the object-fit style
 * Added clinical-lowlight-theme theming files
