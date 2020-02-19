@@ -43,7 +43,7 @@
   --terra-action-header-icon-ms-height: 1.66667rem;
   --terra-action-header-icon-ms-vertical-align: 0;
 
-  /* -- terra-action-header v2.16 and before variable names --*/
+  /*-- terra-action-header v2.16 and before variable names --*/
   @include terra-inline-svg-var('--terra-action-header-back-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
   @include terra-inline-svg-var('--terra-action-header-close-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M4.2 48L0 43.8 43.8 0 48 4.2zM43.8 48L0 4.2 4.2 0 48 43.8z"></path></svg>');
   @include terra-inline-svg-var('--terra-action-header-maximize-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M17.7 26.1L6.9 36.9 0 30v18h18l-6.9-6.9 10.8-10.8zM48 0H30l6.9 6.9-10.8 10.8 4.2 4.2 10.8-10.8L48 18z"></path></svg>');
@@ -51,7 +51,7 @@
   @include terra-inline-svg-var('--terra-action-header-previous-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M24 10.3l24 23.5-3.8 3.9L24 18 3.8 37.7 0 33.8z"></path></svg>');
   @include terra-inline-svg-var('--terra-action-header-next-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"></path></svg>');
   
-  /* -- terra-action-header v2.17+ variable names --*/
+  /*-- terra-action-header v2.17+ variable names --*/
   @include terra-inline-svg-var('--terra-action-header-back-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
   @include terra-inline-svg-var('--terra-action-header-back-hover-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#004c76" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
   @include terra-inline-svg-var('--terra-action-header-close-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M4.2 48L0 43.8 43.8 0 48 4.2zM43.8 48L0 4.2 4.2 0 48 43.8z"></path></svg>');
