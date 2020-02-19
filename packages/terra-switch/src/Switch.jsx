@@ -106,7 +106,7 @@ const Switch = ({
       >
         <div className={cx('switch-container')}>
           <div className={cx('label-container')}>
-            <span className={cx('label-text')}>{labelText}</span>
+            <span id="switchLabel" className={cx('label-text')}>{labelText}</span>
             <span className={cx('status-label-text')}>{statusLabelText}</span>
           </div>
           <div
@@ -121,6 +121,7 @@ const Switch = ({
                 id={switchButtonId}
                 disabled={isDisabled}
                 aria-checked={isOn}
+                aria-labelledby="switchLabel"
                 className={sliderClassNames}
                 role="switch"
                 tabIndex="0"
@@ -129,7 +130,6 @@ const Switch = ({
                 onKeyUp={handleKeyUp}
                 onBlur={handleOnBlur}
                 ref={sliderButtonRef}
-                value=""
               />
             </span>
           </div>
