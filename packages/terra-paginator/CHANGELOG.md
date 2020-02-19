@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.39.0 - (February 18, 2020)
+------------------
 ### Added
 * Added clinical-lowlight-theme theming files
 
