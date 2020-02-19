@@ -9,6 +9,8 @@ Unreleased
 ### Removed
 * Removed dependency on `terra-button-group`.
 
+2.37.0 - (February 18, 2020)
+------------------
 ### Added
 * Added clinical-lowlight-theme theming files
 
