@@ -88,9 +88,9 @@ const ActionHeader = ({
       <FormattedMessage id="Terra.actionHeader.close">
         {closeText => (
           <Button
-            className={cx('header-close-button')}
+            className={cx(['header-button', 'close-button'])}
             isIconOnly
-            icon={<span className={cx(['header-icon', 'close'])} />}
+            icon={<span className={cx(['header-button-icon', 'close'])} />}
             text={closeText}
             onClick={onClose}
             variant={ButtonVariants.UTILITY}
@@ -104,9 +104,9 @@ const ActionHeader = ({
       <FormattedMessage id="Terra.actionHeader.back">
         {backText => (
           <Button
-            className={cx('header-back-button')}
+            className={cx(['header-button', 'back-button'])}
             isIconOnly
-            icon={<span className={cx(['header-icon', 'back'])} />}
+            icon={<span className={cx(['header-button-icon', 'back'])} />}
             text={backText}
             onClick={onBack}
             variant={ButtonVariants.UTILITY}
@@ -123,8 +123,9 @@ const ActionHeader = ({
         <FormattedMessage id="Terra.actionHeader.maximize">
           {maximizeText => (
             <Button
+              className={cx(['header-button', 'maximize-button'])}
               isIconOnly
-              icon={<span className={cx(['header-icon', 'maximize'])} />}
+              icon={<span className={cx(['header-button-icon', 'maximize'])} />}
               text={maximizeText}
               onClick={onMaximize}
               variant={ButtonVariants.UTILITY}
@@ -137,8 +138,9 @@ const ActionHeader = ({
         <FormattedMessage id="Terra.actionHeader.minimize">
           {minimizeText => (
             <Button
+              className={cx(['header-button', 'minimize-button'])}
               isIconOnly
-              icon={<span className={cx(['header-icon', 'minimize'])} />}
+              icon={<span className={cx(['header-button-icon', 'minimize'])} />}
               text={minimizeText}
               onClick={onMinimize}
               variant={ButtonVariants.UTILITY}
@@ -155,8 +157,9 @@ const ActionHeader = ({
         <FormattedMessage id="Terra.actionHeader.previous">
           {previousText => (
             <Button
+              className={cx(['header-button', 'previous-button'])}
               isIconOnly
-              icon={<span className={cx(['header-icon', 'previous'])} />}
+              icon={<span className={cx(['header-button-icon', 'previous'])} />}
               text={previousText}
               onClick={onPrevious}
               isDisabled={onPrevious === undefined}
@@ -167,8 +170,9 @@ const ActionHeader = ({
         <FormattedMessage id="Terra.actionHeader.next">
           {nextText => (
             <Button
+              className={cx(['header-button', 'next-button'])}
               isIconOnly
-              icon={<span className={cx(['header-icon', 'next'])} />}
+              icon={<span className={cx(['header-button-icon', 'next'])} />}
               text={nextText}
               onClick={onNext}
               isDisabled={onNext === undefined}

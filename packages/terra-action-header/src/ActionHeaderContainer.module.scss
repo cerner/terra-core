@@ -15,21 +15,25 @@
     width: 100%;
 
     .flex-collapse {
+      align-self: var(--terra-action-header-flex-collapse-align-self);
       display: flex;
       flex: 0 0 auto;
       height: 100%;
+      margin: var(--terra-action-header-flex-collapse-margin);
       max-width: 40%;
       position: relative;
     }
   }
 
   .flex-fill {
+    align-self: var(--terra-action-header-flex-fill-align-self);
     flex: 1 1 auto;
     position: relative;
     width: 100%;
   }
 
   .flex-end {
+    align-self: var(--terra-action-header-flex-end-align-self);
     display: flex;
     flex: 0 0 auto;
     position: relative;
@@ -53,4 +57,12 @@
     width: 100%;
     word-wrap: break-word; /* For IE 10 and IE 11 */
   }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  .flex-end + .flex-fill {
+    .title {
+      padding-left: var(--terra-action-header-buttons-plus-title-padding-left, 0.35714rem);
+    }
+  }
+  /* stylelint-enable selector-max-compound-selectors */
 }
