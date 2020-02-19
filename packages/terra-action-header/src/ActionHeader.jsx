@@ -90,7 +90,7 @@ const ActionHeader = ({
           <Button
             className={cx(['header-button', 'close-button'])}
             isIconOnly
-            icon={<span className={cx(['header-button-icon', 'close'])} />}
+            icon={<span className={cx(['header-icon', 'close'])} />}
             text={closeText}
             onClick={onClose}
             variant={ButtonVariants.UTILITY}
@@ -106,7 +106,7 @@ const ActionHeader = ({
           <Button
             className={cx(['header-button', 'back-button'])}
             isIconOnly
-            icon={<span className={cx(['header-button-icon', 'back'])} />}
+            icon={<span className={cx(['header-icon', 'back'])} />}
             text={backText}
             onClick={onBack}
             variant={ButtonVariants.UTILITY}
@@ -125,7 +125,7 @@ const ActionHeader = ({
             <Button
               className={cx(['header-button', 'maximize-button'])}
               isIconOnly
-              icon={<span className={cx(['header-button-icon', 'maximize'])} />}
+              icon={<span className={cx(['header-icon', 'maximize'])} />}
               text={maximizeText}
               onClick={onMaximize}
               variant={ButtonVariants.UTILITY}
@@ -140,7 +140,7 @@ const ActionHeader = ({
             <Button
               className={cx(['header-button', 'minimize-button'])}
               isIconOnly
-              icon={<span className={cx(['header-button-icon', 'minimize'])} />}
+              icon={<span className={cx(['header-icon', 'minimize'])} />}
               text={minimizeText}
               onClick={onMinimize}
               variant={ButtonVariants.UTILITY}
@@ -159,7 +159,7 @@ const ActionHeader = ({
             <Button
               className={cx(['header-button', 'previous-button'])}
               isIconOnly
-              icon={<span className={cx(['header-button-icon', 'previous'])} />}
+              icon={<span className={cx(['header-icon', 'previous'])} />}
               text={previousText}
               onClick={onPrevious}
               isDisabled={onPrevious === undefined}
@@ -172,7 +172,7 @@ const ActionHeader = ({
             <Button
               className={cx(['header-button', 'next-button'])}
               isIconOnly
-              icon={<span className={cx(['header-button-icon', 'next'])} />}
+              icon={<span className={cx(['header-icon', 'next'])} />}
               text={nextText}
               onClick={onNext}
               isDisabled={onNext === undefined}

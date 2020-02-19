@@ -36,18 +36,18 @@
     margin-left: var(--terra-action-header-buttons-plus-previous-next-buttons-margin-left, 0.5rem);
   }
 
-  .header-button-icon {
+  .header-icon {
     background-repeat: no-repeat;
     background-size: auto;
     display: inline-block;
-    height: var(--terra-action-header-button-icon-height, 1rem); // needed for different icon size in alternate themes
+    height: var(--terra-action-header-icon-height, 1rem); // needed for different icon size in alternate themes
     position: relative;
-    top: var(--terra-action-header-button-icon-top, 0);
-    vertical-align: var(--terra-action-header-button-icon-vertical-align, -0.14285rem);
-    width: var(--terra-action-header-button-icon-width, 1rem); // needed for different icon size in alternate themes
+    top: var(--terra-action-header-icon-top, 0);
+    vertical-align: var(--terra-action-header-icon-vertical-align, -0.14285rem);
+    width: var(--terra-action-header-icon-width, 1rem); // needed for different icon size in alternate themes
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      height: var(--terra-action-header-button-icon-ms-height, 1rem);
-      vertical-align: var(--terra-action-header-button-icon-ms-vertical-align, -0.17285rem);
+      height: var(--terra-action-header-icon-ms-height, 1rem);
+      vertical-align: var(--terra-action-header-icon-ms-vertical-align, -0.17285rem);
     }
 
     &.back {

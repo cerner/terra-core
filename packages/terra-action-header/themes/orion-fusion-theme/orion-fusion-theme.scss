@@ -36,12 +36,12 @@
   --terra-action-header-buttons-inner-span-line-height: 0;
   --terra-action-header-buttons-inner-span-margin: 0.5rem;
 
-  --terra-action-header-button-icon-height: 1.66667rem;
-  --terra-action-header-button-icon-width: 1.66667rem;
-  --terra-action-header-button-icon-top: 0;
-  --terra-action-header-button-icon-vertical-align: 0;
-  --terra-action-header-button-icon-ms-height: 1.66667rem;
-  --terra-action-header-button-icon-ms-vertical-align: 0;
+  --terra-action-header-icon-height: 1.66667rem;
+  --terra-action-header-icon-width: 1.66667rem;
+  --terra-action-header-icon-top: 0;
+  --terra-action-header-icon-vertical-align: 0;
+  --terra-action-header-icon-ms-height: 1.66667rem;
+  --terra-action-header-icon-ms-vertical-align: 0;
 
   /* -- terra-action-header v2.16 and before variable names --*/
   @include terra-inline-svg-var('--terra-action-header-back-background', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
