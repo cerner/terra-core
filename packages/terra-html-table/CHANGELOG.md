@@ -1,5 +1,7 @@
 Changelog
 =========
+### Changed
+* Update docs to use mdx syntax.
 
 Unreleased
 ----------
