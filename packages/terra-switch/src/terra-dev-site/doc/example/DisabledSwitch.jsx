@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Switch from 'terra-switch';
 
 export default () => {
-  const [value] = useState(true);
+  const [isOn] = useState(true);
   return (
     <div>
       <Switch
-        isOn={value}
+        isOn={isOn}
         labelText="Label"
         isDisabled
       />
