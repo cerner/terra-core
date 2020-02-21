@@ -1,10 +1,10 @@
 Changelog
 =========
-### Changed
-* Update docs to use mdx syntax.
 
 Unreleased
 ----------
+### Changed
+* Update docs to use mdx syntax.
 
 1.1.0 - (February 18, 2020)
 ------------------
