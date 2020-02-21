@@ -1,3 +1,6 @@
+// Themes
+@import './CardBody.orion-fusion-theme.scss';
+
 :local {
   .vertical-padding {
     padding-bottom: var(--terra-card-padding-bottom, 10px);

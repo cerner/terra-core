@@ -1,3 +1,7 @@
+//Themes
+@import './Card.clinical-lowlight-theme.scss';
+@import './Card.orion-fusion-theme.scss';
+
 :local {
   .card {
     background-color: var(--terra-card-background-color, #fff);
