@@ -29,7 +29,6 @@
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.24.0",
     "terra-mixins": "^1.35.0",
     "terra-visually-hidden-text": "^2.23.0"
   },
