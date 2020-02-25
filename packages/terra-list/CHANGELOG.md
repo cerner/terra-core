@@ -7,6 +7,11 @@ Unreleased
 * `isDisabled` prop added to fix accessibility issue to handle selectable and non-selectable items correctly.
 * `role` prop added to list sections, subsection, sectionHeader and subsectionHeader to fix accessibility issues.
 
+4.26.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
 4.25.0 - (January 28, 2020)
 ------------------
 ### Changed

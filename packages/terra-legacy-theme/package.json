@@ -1,7 +1,7 @@
 {
   "name": "terra-legacy-theme",
   "main": "lib/index.js",
-  "version": "2.30.0",
+  "version": "2.31.0",
   "description": "terra-legacy-theme",
   "repository": {
     "type": "git",
@@ -27,13 +27,16 @@
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
     "test": "npm run wdio",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   },
   "peerDependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5"
   },
   "dependencies": {
-    "terra-mixins": "^1.34.0"
+    "terra-mixins": "^1.35.0"
   }
 }

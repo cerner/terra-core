@@ -1,6 +1,6 @@
 {
   "name": "terra-icon",
-  "version": "3.26.0",
+  "version": "3.27.0",
   "description": "The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.",
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.23.0"
+    "terra-doc-template": "^2.24.0"
   },
   "scripts": {
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
@@ -53,6 +53,9 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

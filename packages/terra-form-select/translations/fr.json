@@ -20,5 +20,6 @@
   "Terra.form.select.clearSelect": "Effacer la sélection",
   "Terra.form.select.selectCleared": "Valeur sélectionnée effacée.",
   "Terra.form.select.menu": "Menu",
-  "Terra.form.select.option": "Options"
+  "Terra.form.select.option": "Options",
+  "Terra.form.select.optGroup": "Groupe {text}"
 }

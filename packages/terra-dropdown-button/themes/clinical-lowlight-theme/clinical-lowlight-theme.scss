@@ -1,0 +1,94 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-dropdown-button-box-shadow: none;
+  --terra-dropdown-button-disabled-opacity: 0.3;
+  --terra-dropdown-button-list-background-color: #222a2e;
+  --terra-dropdown-button-list-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 4px 3px -3px rgba(0, 0, 0, 0.5);
+
+  // menu item
+  --terra-dropdown-button-menu-item-color: #b2b5b6;
+  --terra-dropdown-button-menu-item-focus-background-color: #1e3a49;
+  --terra-dropdown-button-menu-item-focus-box-shadow: none;
+  --terra-dropdown-button-menu-item-focus-outline: none;
+  --terra-dropdown-button-menu-item-focus-outline-offset: 0;
+  --terra-dropdown-button-menu-item-hover-background-color: #1e3a49;
+  --terra-dropdown-button-menu-item-hover-background-image: none;
+  --terra-dropdown-button-menu-item-hover-box-shadow: none;
+  --terra-dropdown-button-menu-item-focus-active-background-color: #1e3a49;
+  --terra-dropdown-button-menu-item-focus-active-background-image: none;
+  --terra-dropdown-button-menu-item-focus-active-box-shadow: none;
+  --terra-dropdown-button-menu-item-focus-active-color: #b2b5b6;
+  
+
+  // neutral
+  --terra-dropdown-button-active-background-color-neutral: #0c0d0e;
+  --terra-dropdown-button-active-border-color-neutral: #181b1d;
+  --terra-dropdown-button-active-color-neutral: #9b9b9b;
+  --terra-dropdown-button-background-color-neutral: #2d3539;
+  --terra-dropdown-button-border-color-neutral: #181b1d;
+  --terra-dropdown-button-color-neutral: #b2b5b6;
+  --terra-dropdown-button-disabled-color-neutral: #b2b5b6;
+  --terra-dropdown-button-dropdown-type-box-shadow-neutral: none;
+  --terra-dropdown-button-dropdown-type-focus-box-shadow-neutral: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-dropdown-button-focus-background-color-neutral: #2d3539;
+  --terra-dropdown-button-focus-border-color-neutral: #181b1d;
+  --terra-dropdown-button-hover-background-color-neutral: #1a2023;
+  --terra-dropdown-button-hover-color-neutral: #9b9b9b;
+
+  --terra-dropdown-button-split-type-box-shadow-neutral: none;
+  --terra-dropdown-button-split-type-caret-active-box-shadow-neutral: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-dropdown-button-split-type-caret-box-shadow-neutral: none;
+  --terra-dropdown-button-split-type-caret-focus-box-shadow-neutral: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-dropdown-button-split-type-caret-hover-box-shadow-neutral: none;
+  --terra-dropdown-button-split-type-focus-box-shadow-neutral: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  @include terra-inline-svg-var('--terra-dropdown-button-caret-active-background-image-neutral','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+  @include terra-inline-svg-var('--terra-dropdown-button-caret-background-image-neutral', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+  @include terra-inline-svg-var('--terra-dropdown-button-caret-disabled-background-image-neutral','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+
+  // emphasis
+  --terra-dropdown-button-active-background-color-emphasis: #001e2e;
+  --terra-dropdown-button-active-border-color-emphasis: #003f61;
+  --terra-dropdown-button-active-color-emphasis: #b2b5b6;
+  --terra-dropdown-button-background-color-emphasis: #004c76;
+  --terra-dropdown-button-border-color-emphasis: #003f61;
+  --terra-dropdown-button-color-emphasis: #b2b5b6;
+  --terra-dropdown-button-disabled-color-emphasis: #b2b5b6;
+  --terra-dropdown-button-dropdown-type-box-shadow-emphasis: none;
+  --terra-dropdown-button-dropdown-type-focus-box-shadow-emphasis: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-dropdown-button-focus-background-color-emphasis: #004c76;
+  --terra-dropdown-button-focus-border-color-emphasis: #003f61;
+  --terra-dropdown-button-hover-background-color-emphasis: #013a5a;
+  --terra-dropdown-button-hover-color-emphasis: #b2b5b6;
+
+  @include terra-inline-svg-var('--terra-dropdown-button-caret-active-background-image-emphasis','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+  @include terra-inline-svg-var('--terra-dropdown-button-caret-background-image-emphasis','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+  @include terra-inline-svg-var('--terra-dropdown-button-caret-disabled-background-image-emphasis','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+
+  // ghost
+  --terra-dropdown-button-active-background-color-ghost: #0c0d0e;
+  --terra-dropdown-button-active-border-color-ghost: transparent;
+  --terra-dropdown-button-active-color-ghost: #b2b5b6;
+  --terra-dropdown-button-background-color-ghost: transparent;
+  --terra-dropdown-button-border-color-ghost: #616668;
+  --terra-dropdown-button-color-ghost: #b2b5b6;
+  --terra-dropdown-button-disabled-color-ghost: #b2b5b6;
+  --terra-dropdown-button-dropdown-type-box-shadow-ghost: none;
+  --terra-dropdown-button-dropdown-type-focus-box-shadow-ghost: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-dropdown-button-focus-background-color-ghost: transparent;
+  --terra-dropdown-button-focus-border-color-ghost: #616668;
+  --terra-dropdown-button-hover-background-color-ghost: #1a2023;
+  --terra-dropdown-button-hover-color-ghost: #9b9b9b;
+
+  --terra-dropdown-button-split-type-box-shadow-ghost: none;
+  --terra-dropdown-button-split-type-caret-active-box-shadow-ghost: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-dropdown-button-split-type-caret-box-shadow-ghost: none;
+  --terra-dropdown-button-split-type-caret-focus-box-shadow-ghost: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+  --terra-dropdown-button-split-type-caret-hover-box-shadow-ghost: none;
+  --terra-dropdown-button-split-type-focus-box-shadow-ghost: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+
+  @include terra-inline-svg-var('--terra-dropdown-button-caret-active-background-image-ghost','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>'); 
+  @include terra-inline-svg-var('--terra-dropdown-button-caret-background-image-ghost','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+  @include terra-inline-svg-var('--terra-dropdown-button-caret-disabled-background-image-ghost','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+}
