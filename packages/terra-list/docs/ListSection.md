@@ -1,6 +1,9 @@
 # List Section
 
-The list section component creates a section header and layouts it out with the passed child list items. The section provides the ability to display and collapse a section within a logical group. The list section will render as a flat list.Both `isSelectable=true` and `isDisabled=true` should be set for a non-selectable item in a list containing a combination of both selectable and non-selectable items to prevent any accessibility issues. Use `role=listbox` if section has selectable items and no parent `List` element. Use `role=option` if section has selectable items and parent `List` element with `role=listbox`.
+The list section component creates a section header and layouts it out with the passed child list items. The section provides the ability to display and collapse a section within a logical group. The list section will render as a flat list.
+- Both `isSelectable=true` and `isDisabled=true` should be set for a non-selectable item in a list containing a combination of both selectable and non-selectable items to prevent any accessibility issues.
+- Use `role=listbox` if section has selectable items and no parent `List` element. 
+- Use `role=option` if section has selectable items and parent `List` element with `role=listbox`.
 
 ## Usage
 
