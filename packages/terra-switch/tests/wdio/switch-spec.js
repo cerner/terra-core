@@ -1,7 +1,7 @@
 Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
   const ignoredDisabledAlly = { 'color-contrast': { enabled: false } };
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-switch/switch/deafult-switch'));
+    before(() => browser.url('/#/raw/tests/terra-switch/switch/default-switch'));
 
     Terra.it.validatesElement({ rules: ignoredDisabledAlly });
 
@@ -16,7 +16,6 @@ Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
     describe('Checked', () => {
       before(() => {
         browser.waitForVisible('#defaultSwitch');
-        browser.click('[for="defaultSwitch"]'); // too make it off
         browser.click('[for="defaultSwitch"]');
       });
 
