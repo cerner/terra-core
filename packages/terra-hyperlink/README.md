@@ -7,7 +7,7 @@
 The terra hyperlink component allows linking to other web pages, files, locations within the same page, email addresses, or any other URL.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-hyperlink/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-hyperlink/hyperlink/hyperlink)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -23,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
