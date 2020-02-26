@@ -7,6 +7,11 @@ Unreleased
 * Fixed long press enabling click focus styles.
 * Fixed button not getting focus after closing of modal.
 
+3.32.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
 3.31.0 - (February 4, 2020)
 ------------------
 ### Changed
