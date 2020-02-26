@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added `fit` prop to specify the object-fit style
 
+3.25.0 - (February 25, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.24.0 - (February 18, 2020)
 ------------------
 ### Added

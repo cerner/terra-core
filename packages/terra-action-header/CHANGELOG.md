@@ -4,6 +4,14 @@ ChangeLog
 Unreleased
 ----------
 
+2.38.0 - (February 25, 2020)
+------------------
+### Changed
+* Changed buttons' variant to `Utility`.
+
+### Removed
+* Removed dependency on `terra-button-group`.
+
 2.37.0 - (February 18, 2020)
 ------------------
 ### Added
@@ -36,8 +44,7 @@ Unreleased
 
 2.31.0 - (October 30, 2019)
 ------------------
-### Changed
-* Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg.
+* Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg .
 
 ### Fixed
 * Fixed lint warnings for multiple empty lines
