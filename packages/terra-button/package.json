@@ -41,5 +41,8 @@
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
     "terra-icon": "^3.26.0"
+  },
+  "devDependencies": {
+    "terra-abstract-modal": "^3.21.0"
   }
 }

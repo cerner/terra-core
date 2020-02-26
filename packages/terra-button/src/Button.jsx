@@ -127,6 +127,10 @@ class Button extends React.Component {
   }
 
   handleOnBlur(event) {
+    this.shouldShowFocus = false;
+    if (event.currentTarget.type === 'button') {
+      this.shouldShowFocus = true;
+    }
     this.setState({ focused: false });
 
     if (this.props.onBlur) {
@@ -199,8 +203,6 @@ class Button extends React.Component {
   handleMouseDown(event) {
     // Prevent button from showing focus styles when clicked
     this.shouldShowFocus = false;
-    // Wait until after onFocus has been triggered on browsers where it will get triggered for click
-    setTimeout(() => { this.shouldShowFocus = true; }, 300);
 
     if (this.props.onMouseDown) {
       this.props.onMouseDown(event);

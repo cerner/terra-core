@@ -260,4 +260,14 @@ Terra.describeViewports('Button', ['tiny'], () => {
       expect(document.querySelector('#button3').to.equal(document.activeElement));
     });
   });
+
+  describe('Dismissing Modal should focus the button', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-button/button/button-modal-focus');
+      browser.click('#modal-open-button');
+      browser.click('#modal-close-button');
+    });
+
+    Terra.it.validatesElement('Button has focus');
+  });
 });

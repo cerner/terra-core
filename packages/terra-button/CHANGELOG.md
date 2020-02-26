@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed long press enabling click focus styles.
+* Fixed button not getting focus after closing of modal.
 
 3.31.0 - (February 4, 2020)
 ------------------
