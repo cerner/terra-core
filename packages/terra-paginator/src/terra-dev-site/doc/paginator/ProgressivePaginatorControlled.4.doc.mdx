@@ -1,0 +1,36 @@
+import { Badge } from 'terra-paginator/package.json?dev-site-package';
+
+import ControlledProgressivePaginatorExample from './example/ControlledProgressivePaginatorExample?dev-site-example';
+
+import ControlledProgressivePaginatorPropsTable from 'terra-paginator/src/ControlledProgressivePaginator?dev-site-props-table';
+
+<Badge />
+
+# Terra Controlled Progressive Paginator
+
+Controlled version of the [Progressive Paginator](https://engineering.cerner.com/terra-core/components/terra-paginator/paginator/progressive-paginator) for when the pagination state needs to be managed by a parent component. To use this component, the selectedPage must be managed through the state of a parent component, and passed into this paginator through props.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-paginator`
+
+## Usage
+
+```jsx
+import ControlledProgressivePaginator from 'terra-paginator/lib/ControlledProgressivePaginator';
+```
+
+## Component Features
+
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-paginator)
+
+## Examples
+<ControlledProgressivePaginatorExample />
+
+## Controlled Progressive Paginator Props
+<ControlledProgressivePaginatorPropsTable />

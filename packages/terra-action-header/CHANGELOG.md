@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.38.0 - (February 25, 2020)
+------------------
 ### Changed
 * Changed buttons' variant to `Utility`.
 
