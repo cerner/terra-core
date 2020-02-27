@@ -7,7 +7,7 @@
 The select component is a form input with a drop down list of options that allows for single selection.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-form-select/form-select/select)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
