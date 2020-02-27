@@ -1,3 +1,13 @@
+import { Badge } from 'terra-responsive-element/package.json?dev-site-package';
+
+import BreakpointExample from '../example/BreakpointExample?dev-site-example';
+import ResizeExample from '../example/ResizeExample?dev-site-example';
+import UncontrolledBreakpointExample from '../example/UncontrolledBreakpointExample?dev-site-example';
+
+import ResponsiveElementPropsTable from 'terra-responsive-element/src/ResponsiveElement?dev-site-props-table';
+
+<Badge />
+
 # Terra Responsive Element
 
 The Responsive Element provides a way to conditionally render components during breakpoint or resize changes.
@@ -27,12 +37,20 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 
-
-
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Component Features
 
-* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
-* [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
-* [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-responsive-element)
+
+## Examples
+<BreakpointExample title="Responsive Breakpoints" />
+<ResizeExample title="Responsive Resizing" />
+<UncontrolledBreakpointExample title="[Deprecated] Uncontrolled Example" />
+
+## Responsive Element Props
+<ResponsiveElementPropsTable />
