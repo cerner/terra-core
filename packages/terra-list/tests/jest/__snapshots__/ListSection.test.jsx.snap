@@ -5,6 +5,7 @@ exports[`should render with callback functions 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
+    isDisabled={false}
     level={1}
     onSelect={[MockFunction]}
     refCallback={[MockFunction]}
@@ -19,6 +20,7 @@ exports[`should render with isCollapsed 1`] = `
   <ListSectionHeader
     isCollapsed={true}
     isCollapsible={false}
+    isDisabled={false}
     level={1}
     role="none"
     title="test"
@@ -31,6 +33,7 @@ exports[`should render with isCollapsible 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={true}
+    isDisabled={false}
     level={1}
     role="none"
     title="test"
@@ -43,6 +46,7 @@ exports[`should render with items 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
+    isDisabled={false}
     level={1}
     role="listbox"
     title="test"
@@ -90,6 +94,7 @@ exports[`should render with level 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
+    isDisabled={false}
     level={3}
     role="none"
     title="test"
@@ -102,6 +107,7 @@ exports[`should render with no items 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
+    isDisabled={false}
     level={1}
     role="none"
     title="test"

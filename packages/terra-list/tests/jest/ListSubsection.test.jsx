@@ -9,7 +9,7 @@ it('should render with items', () => {
   const item4 = <Item isSelectable isDisabled key="126" />;
   const item5 = <Item isSelectable isDisabled key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallow(<Subsection role="listbox" title="test">{items}</Subsection>);
+  const shallowComponent = shallow(<Subsection isDisabled role="listbox" title="test">{items}</Subsection>);
   expect(shallowComponent).toMatchSnapshot();
 });
 

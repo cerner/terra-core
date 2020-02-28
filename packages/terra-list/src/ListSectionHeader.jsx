@@ -57,6 +57,11 @@ const propTypes = {
    * Accessibility role of the list, defaults to 'none'. If creating a list with selectable items, pass 'listbox'.
    */
   role: PropTypes.string,
+  /**
+   * Whether or not the list-section-header item is disabled.
+   * Set to `true` only for non-selectable items along with `isSelectable` prop.
+   */
+  isDisabled: PropTypes.bool,
 
 };
 
@@ -65,6 +70,7 @@ const defaultProps = {
   isCollapsible: false,
   level: 1,
   role: 'none',
+  isDisabled: false,
 };
 
 const ListSectionHeader = ({
@@ -80,6 +86,7 @@ const ListSectionHeader = ({
   refCallback,
   title,
   role,
+  isDisabled,
   ...customProps
 }) => {
   const sectionHeaderClassNames = cx([
@@ -116,6 +123,9 @@ const ListSectionHeader = ({
   }
   if (role && role.length > 0 && role !== 'none') {
     attrSpread.role = role;
+  }
+  if (isDisabled) {
+    attrSpread['aria-disabled'] = true;
   }
 
   return (
