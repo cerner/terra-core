@@ -1,3 +1,11 @@
+import { Badge } from 'terra-profile-image/package.json?dev-site-package';
+
+import ProfileImageDefault from '../example/ProfileImageDefault?dev-site-example';
+
+import ProfileImagePropsTable from 'terra-profile-image/src/ProfileImage?dev-site-props-table';
+
+<Badge />
+
 # Terra Profile Image
 
 The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image.
@@ -17,17 +25,18 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 
-
-
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Usage
 
 ```jsx
-import React from 'react';
 import ProfileImage from 'terra-profile-image';
-
-<ProfileImage
-  src='https://path/to/image.jpg' width="75" height="75" />}
-/>
 ```
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-profile-image)
+
+## Examples
+<ProfileImageDefault />
+
+## Profile Image Props
+<ProfileImagePropsTable />
