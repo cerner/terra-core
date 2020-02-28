@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import TerraImage, { FitTypes } from 'terra-image';
+import TerraImage from 'terra-image';
 import styles from './ProfileImage.module.scss';
 
 const cx = classNames.bind(styles);
@@ -17,10 +17,10 @@ const propTypes = {
    */
   alt: PropTypes.string,
   /**
-  * Sets the `object-fit` style of the image from the following values: `cover`, `contain`, `fill`, `scale-down`, `none`.
-  * ![IMPORTANT](https://badgen.net/badge/UX/Design-Standards/blue) Anywhere the terra-profile-image is used to show images of People, _only_ `cover` and `contain` are acceptable, `fill` should _never_ be used.
+  * Sets the `object-fit` style of the image from the following values: `cover`, `contain`, `scale-down`, `none`.
+  * ![IMPORTANT](https://badgen.net/badge/UX/Design-Standards/blue) Anywhere the terra-profile-image is used to show images of People, _only_ `cover` and `contain` are acceptable.
   */
-  fit: PropTypes.oneOf(Object.values(FitTypes)),
+  fit: PropTypes.oneOf(['cover', 'scale-down', 'contain', 'none']),
   /**
    * Sets the height of the image.
    */
