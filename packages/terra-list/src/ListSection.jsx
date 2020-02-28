@@ -56,7 +56,6 @@ const ListSection = ({
   children,
   isCollapsed,
   isCollapsible,
-  role,
   ...customProps
 }) => {
   let sectionItems;
@@ -66,7 +65,7 @@ const ListSection = ({
 
   return (
     <React.Fragment>
-      <SectionHeader role={role} {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
+      <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {sectionItems}
     </React.Fragment>
   );

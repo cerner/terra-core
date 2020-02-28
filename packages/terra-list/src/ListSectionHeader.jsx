@@ -114,7 +114,7 @@ const ListSectionHeader = ({
     attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
-  if (role === 'option' || role === 'listbox') {
+  if (role && role.length > 0 && role !== 'none') {
     attrSpread.role = role;
   }
 
