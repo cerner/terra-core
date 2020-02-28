@@ -1,3 +1,12 @@
+import { Badge } from 'terra-scroll/package.json?dev-site-package';
+
+import ScrollVertical from '../example/ScrollVertical?dev-site-example';
+import ScrollHorizontal from '../example/ScrollHorizontal?dev-site-example';
+
+import ScrollPropsTable from 'terra-scroll/src/Scroll?dev-site-props-table';
+
+<Badge />
+
 # Terra Scroll
 
 The terra-scroll is a content view that hides data accessible with scrolling and provides a refCallback. The expectation is that any consumer needing to provide a scrollable area within their implementation should be using this component, or one of our other terra components that implements Scroll.
@@ -29,3 +38,10 @@ This component requires the following peer dependencies be installed in your app
 * [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
 
 [View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-scroll)
+
+## Examples
+<ScrollVertical title="Vertical Scroll" />
+<ScrollHorizontal title="Horizontal Scroll"/>
+
+## Scroll Props
+<ScrollPropsTable />
