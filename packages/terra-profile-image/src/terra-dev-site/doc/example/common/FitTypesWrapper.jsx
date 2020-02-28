@@ -18,7 +18,6 @@ function FitTypesWrapper(WrappedComponent) {
           <WrappedComponent fit={this.state.fitType} {...this.props} />
           <p><label htmlFor="fitType">Select a Fit Type:</label></p>
           <select id="fitType" name="fitType" value={this.state.fitType} onChange={this.handleOnSelect}>
-            <option value="fill">fill</option>
             <option value="cover">cover</option>
             <option value="contain">contain</option>
             <option value="scale-down">scale-down</option>
