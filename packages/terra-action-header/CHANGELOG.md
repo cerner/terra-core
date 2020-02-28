@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added data attribute on the header buttons to use as selectors in tests.
 
 2.38.0 - (February 25, 2020)
 ------------------
