@@ -7,7 +7,7 @@
 Paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-paginator/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-paginator/paginator/paginator)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
