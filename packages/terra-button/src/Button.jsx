@@ -141,7 +141,7 @@ class Button extends React.Component {
     if (document.activeElement !== event.currentTarget) {
       this.shouldShowFocus = false;
       event.currentTarget.focus();
-      setTimeout(() => { this.shouldShowFocus = true; });
+      this.shouldShowFocus = true;
     }
 
     if (this.props.onClick) {
@@ -275,8 +275,8 @@ class Button extends React.Component {
 
     const buttonLabel = (
       <span className={buttonLabelClasses}>
-        {isReversed ? buttonText : buttonIcon }
-        {isReversed ? buttonIcon : buttonText }
+        {isReversed ? buttonText : buttonIcon}
+        {isReversed ? buttonIcon : buttonText}
       </span>
     );
 
