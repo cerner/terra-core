@@ -8,7 +8,7 @@ Show Hide Component that will show a preview of content and then expand it with 
 
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-show-hide/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-show-hide/show-hide/show-hide)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -25,8 +25,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
