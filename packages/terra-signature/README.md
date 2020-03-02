@@ -9,7 +9,7 @@ The component can define line width, line color, and optionally display a signat
 already been recorded. Exiting the canvas then re-entering continues the drawing, as long as the pointer does not exit the confines of the browser. For mouse usage, only left click drawing is enabled.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-signature/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-signature/signature/signature)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -25,8 +25,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
