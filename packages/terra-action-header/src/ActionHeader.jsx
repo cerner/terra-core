@@ -89,6 +89,7 @@ const ActionHeader = ({
         {closeText => (
           <Button
             className={cx(['header-button', 'close-button'])}
+            data-terra-action-header="close-button"
             isIconOnly
             icon={<span className={cx(['header-icon', 'close'])} />}
             text={closeText}
@@ -105,6 +106,7 @@ const ActionHeader = ({
         {backText => (
           <Button
             className={cx(['header-button', 'back-button'])}
+            data-terra-action-header="back-button"
             isIconOnly
             icon={<span className={cx(['header-icon', 'back'])} />}
             text={backText}
@@ -124,6 +126,7 @@ const ActionHeader = ({
           {maximizeText => (
             <Button
               className={cx(['header-button', 'maximize-button'])}
+              data-terra-action-header="maximize-button"
               isIconOnly
               icon={<span className={cx(['header-icon', 'maximize'])} />}
               text={maximizeText}
@@ -139,6 +142,7 @@ const ActionHeader = ({
           {minimizeText => (
             <Button
               className={cx(['header-button', 'minimize-button'])}
+              data-terra-action-header="minimize-button"
               isIconOnly
               icon={<span className={cx(['header-icon', 'minimize'])} />}
               text={minimizeText}
@@ -158,6 +162,7 @@ const ActionHeader = ({
           {previousText => (
             <Button
               className={cx(['header-button', 'previous-button'])}
+              data-terra-action-header="previous-button"
               isIconOnly
               icon={<span className={cx(['header-icon', 'previous'])} />}
               text={previousText}
@@ -171,6 +176,7 @@ const ActionHeader = ({
           {nextText => (
             <Button
               className={cx(['header-button', 'next-button'])}
+              data-terra-action-header="next-button"
               isIconOnly
               icon={<span className={cx(['header-icon', 'next'])} />}
               text={nextText}
