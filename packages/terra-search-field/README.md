@@ -7,7 +7,7 @@
 A search component with a field that automatically performs a search callback after user input.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-search-field/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-search-field/search-field/search-field)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
