@@ -5,7 +5,7 @@ exports[`Switch should render a default component 1`] = `
   className="switch-wrapper"
 >
   <label
-    htmlFor="terra-switch-button-1"
+    htmlFor="defaultSwitch"
   >
     <div
       className="switch-container"
@@ -15,7 +15,7 @@ exports[`Switch should render a default component 1`] = `
       >
         <span
           className="label-text"
-          id="switchLabel"
+          id="label1"
         >
           default
         </span>
@@ -33,11 +33,10 @@ exports[`Switch should render a default component 1`] = `
         >
           <button
             aria-checked={false}
-            aria-labelledby="switchLabel"
+            aria-labelledby="label1"
             className="slider"
             disabled={false}
-            id="terra-switch-button-1"
-            onBlur={[Function]}
+            id="defaultSwitch"
             onClick={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
@@ -57,7 +56,7 @@ exports[`Switch should render as disabled when set 1`] = `
   className="switch-wrapper"
 >
   <label
-    htmlFor="terra-switch-button-2"
+    htmlFor="disabledSwitch"
   >
     <div
       className="switch-container"
@@ -67,7 +66,7 @@ exports[`Switch should render as disabled when set 1`] = `
       >
         <span
           className="label-text"
-          id="switchLabel"
+          id="label2"
         >
           Label
         </span>
@@ -81,15 +80,15 @@ exports[`Switch should render as disabled when set 1`] = `
         className="switch"
       >
         <span
-          className="tray unselected is-disabled"
+          className="tray unselected"
         >
           <button
             aria-checked={false}
-            aria-labelledby="switchLabel"
-            className="slider is-disabled"
-            disabled={true}
-            id="terra-switch-button-2"
-            onBlur={[Function]}
+            aria-labelledby="label2"
+            className="slider"
+            disabled={false}
+            id="disabledSwitch"
+            isDisabled={true}
             onClick={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}

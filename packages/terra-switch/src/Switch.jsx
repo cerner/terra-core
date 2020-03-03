@@ -1,12 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import uniqueid from 'lodash.uniqueid';
 import classNames from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
 import styles from './Switch.module.scss';
 
 const cx = classNames.bind(styles);
 
+// Translations Required
 const SWITCH_STATE = Object.freeze({
   ON: 'On',
   OFF: 'Off',
@@ -14,121 +14,111 @@ const SWITCH_STATE = Object.freeze({
 
 const propTypes = {
   /**
-    * Whether or not the Switch is enabled ("ON").
-    */
-  isOn: PropTypes.bool,
-
+   * Id of the Switch button
+   */
+  id: PropTypes.string.isRequired,
   /**
-    * If true, the user won't be able to toggle the switch.
-    */
-  isDisabled: PropTypes.bool,
-
+   * Id of the Switch label
+   */
+  labelId: PropTypes.string.isRequired,
   /**
-    * Text of the label.
-    */
-  labelText: PropTypes.node.isRequired,
-
+   * Whether or not the Switch is checked ("ON").
+   */
+  checked: PropTypes.bool,
   /**
-    * Callback fired when the state is changed. Parameters are (event).
-    */
+   * Whether or not the Switch is disabled ("ON").
+   */
+  disabled: PropTypes.bool,
+  /**
+   * Text of the label.
+   */
+  label: PropTypes.node.isRequired,
+  /**
+   * Callback function when switch value changes from ON / OFF.
+   * Parameters: 1. event 2. switch value
+   */
   onChange: PropTypes.func,
 };
 
 const defaultProps = {
-  isOn: false,
-  isDisabled: false,
+  checked: false,
+  disabled: false,
   onChange: undefined,
 };
 
 const Switch = ({
-  isOn,
-  isDisabled,
+  id,
+  labelId,
+  checked,
+  disabled,
   onChange,
-  labelText,
+  label,
   ...customProps
 }) => {
-  const [focused, setFocus] = useState(false);
   const sliderButtonRef = useRef(null);
 
   const handleClick = (event) => {
-    setFocus(true);
     sliderButtonRef.current.focus();
-    onChange(event);
+    if (onChange) {
+      onChange(event, checked);
+    }
   };
 
   const handleOnKeyDown = (event) => {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       event.preventDefault();
-      setFocus(true);
     }
   };
 
-  const handleOnBlur = () => {
-    setFocus(false);
-  };
-
   const handleKeyUp = (event) => {
-    if (event.keyCode === KeyCode.KEY_TAB) {
-      setFocus(true);
-    } else if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      setFocus(true);
-      onChange(event);
+    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
+      if (onChange) {
+        onChange(event, checked);
+      }
     }
   };
 
   const switchClassNames = cx([
     'switch',
-    customProps.className,
   ]);
 
   const trayClassNames = cx([
     'tray',
-    { selected: isOn },
-    { unselected: !isOn },
-    { 'is-disabled': isDisabled },
+    { selected: checked },
+    { unselected: !checked },
+    { 'is-disabled': disabled },
   ]);
 
   const sliderClassNames = cx([
     'slider',
-    { 'is-disabled': isDisabled },
-    { 'is-focused': focused },
+    { 'is-disabled': disabled },
   ]);
 
-  const statusLabelText = isOn ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
-
-  const attributes = { ...customProps };
-  const switchButtonId = (attributes.id) ? attributes.id : `terra-switch-button-${uniqueid()}`;
+  const statusLabelText = checked ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
 
   return (
     <div className={cx('switch-wrapper')}>
-      <label
-        htmlFor={switchButtonId}
-      >
+      <label htmlFor={id}>
         <div className={cx('switch-container')}>
           <div className={cx('label-container')}>
-            <span id="switchLabel" className={cx('label-text')}>{labelText}</span>
+            <span id={labelId} className={cx('label-text')}>{label}</span>
             <span className={cx('status-label-text')}>{statusLabelText}</span>
           </div>
-          <div
-            className={switchClassNames}
-          >
-            <span
-              className={trayClassNames}
-            >
+          <div className={switchClassNames}>
+            <span className={trayClassNames}>
               <button
                 {...customProps}
                 type="button"
-                id={switchButtonId}
-                disabled={isDisabled}
-                aria-checked={isOn}
-                aria-labelledby="switchLabel"
+                id={id}
+                disabled={disabled}
+                aria-checked={checked}
+                aria-labelledby={labelId}
                 className={sliderClassNames}
                 role="switch"
                 tabIndex="0"
                 onClick={handleClick}
                 onKeyDown={handleOnKeyDown}
                 onKeyUp={handleKeyUp}
-                onBlur={handleOnBlur}
                 ref={sliderButtonRef}
               />
             </span>

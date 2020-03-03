@@ -10,9 +10,11 @@ export default () => {
   return (
     <div className={cx('container')}>
       <Switch
-        isOn={value}
-        labelText="Long Label Text Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label Text"
-        onChange={() => { setValue(!value); }}
+        id="switchWithLongLabel"
+        labelId="label3"
+        checked={value}
+        label="Long Label Text Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label Text"
+        onChange={(event, checked) => { setValue(!checked); }}
       />
     </div>
   );

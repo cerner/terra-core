@@ -11,9 +11,10 @@ export default () => {
     <div className={cx('container')}>
       <Switch
         id="defaultSwitch"
-        isOn={value}
-        labelText="Label"
-        onChange={() => { setValue(!value); }}
+        labelId="label1"
+        checked={value}
+        label="Label"
+        onChange={(event, checked) => { setValue(!checked); }}
       />
     </div>
   );

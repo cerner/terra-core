@@ -49,7 +49,7 @@
     background-color: var(--terra-switch-tray-background-color, rgba(74, 74, 74, 0.2));
   }
 
-  [aria-checked='true'] {
+  .tray > [aria-checked='true'] {
     transform: translateX(3.17142rem);
   }
   
@@ -64,7 +64,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    transition: 0.4s;
+    transition: var(--terra-switch-tray-transition, 0.4s);
     width: var(--terra-switch-tray-width, 6.14285rem);
   }
 
@@ -83,7 +83,7 @@
     outline: none;
     overflow: hidden;
     position: absolute;
-    transition: 0.4s;
+    transition: var(--terra-switch-slider-transition, 0.4s);
     width: var(--terra-switch-slider-width, 2.14285rem);
   }
 
@@ -95,14 +95,16 @@
 
   .slider:focus:not(.is-disabled) {
     background-color: #000;
+    box-shadow: 0 0 2px 4px #c6dafd;
     outline: none;
   }
 
-  .slider.is-focused:not(.is-disabled) {
-    box-shadow: 0 0 1px 2px #c6dafd;
+  .slider:hover:not(.is-disabled) {
+    border: solid 1px #000;
   }
 
   .slider:active:not(.is-disabled) {
+    background-color: #000;
     box-shadow: none; // pressed state.
   }
 }
