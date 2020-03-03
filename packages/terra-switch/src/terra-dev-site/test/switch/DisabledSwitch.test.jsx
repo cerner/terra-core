@@ -12,7 +12,7 @@ export default () => (
       labelId="label2"
       checked
       label="Label"
-      isDisabled
+      disabled
     />
   </div>
 );
