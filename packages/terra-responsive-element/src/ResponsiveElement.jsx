@@ -14,11 +14,11 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * A callback function invoked when the breakpoint size changes. onChange(<string>breakpoint</string>)
+   * A callback function invoked when the breakpoint size changes. ```onChange(<string>breakpoint)```
    */
   onChange: PropTypes.func,
   /**
-   * A callback function invoked when the responsive target resizes. onResize(<number>width</number>)
+   * A callback function invoked when the responsive target resizes. ```onResize(<number>width)```
    */
   onResize: PropTypes.func,
   /**
