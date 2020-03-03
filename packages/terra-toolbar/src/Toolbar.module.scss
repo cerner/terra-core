@@ -1,0 +1,49 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .toolbar {
+    align-items: flex-end;
+    background-color: var(--terra-toolbar-background-color, #f4f4f4);
+    border-bottom-color: var(--terra-toolbar-border-bottom-color, #d3d4d5);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    display: flex;
+    padding-bottom: var(--terra-toolbar-padding-bottom, 0.5rem);
+    padding-left: var(--terra-toolbar-padding-left, 1.0714285714285714rem);
+    padding-right: var(--terra-toolbar-padding-right, 1.0714285714285714rem);
+    padding-top: var(--terra-toolbar-padding-top, 0.5rem);
+    width: 100%;
+  }
+
+  .item {
+    margin-right: var(--terra-toolbar-item-margin-right, 0.7142857142857143rem);
+  }
+
+  .start-align {
+    justify-content: flex-start;
+
+    .item:last-child {
+      @include terra-margin-end(0);
+    }
+  }
+
+  .end-align {
+    justify-content: flex-end;
+
+    .item:first-child {
+      @include terra-margin-start(0);
+    }
+  }
+
+  .center-align {
+    justify-content: center;
+
+    .item:last-child {
+      @include terra-margin-end(0);
+    }
+
+    .item:first-child {
+      @include terra-margin-start(0);
+    }
+  }
+}
