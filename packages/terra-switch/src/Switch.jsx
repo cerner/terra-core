@@ -30,7 +30,7 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Text of the label.
+   * The label of the Switch component.
    */
   label: PropTypes.node.isRequired,
   /**
@@ -72,6 +72,7 @@ const Switch = ({
 
   const handleKeyUp = (event) => {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
+      sliderButtonRef.current.focus();
       if (onChange) {
         onChange(event, checked);
       }
