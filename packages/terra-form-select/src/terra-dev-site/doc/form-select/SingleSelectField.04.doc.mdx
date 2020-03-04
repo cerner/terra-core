@@ -1,0 +1,37 @@
+import { Badge } from 'terra-form-select/package.json?dev-site-package';
+
+import SingleSelectFieldExample from '../example/single/SingleSelectField?dev-site-example';
+import RequiredSingleSelectFieldExample from '../example/single/RequiredSingleSelectField?dev-site-example';
+import IncompleteSingleSelectFieldExample from '../example/single/IncompleteSingleSelectField?dev-site-example';
+
+import SingleSelectFieldPropsTable from 'terra-form-select/src/SingleSelectField?dev-site-props-table';
+
+<Badge />
+
+# Terra Form Single Select Field
+
+A convenience wrapper assembling a [terra-form-select SingleSelect](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/src/SingleSelect.jsx) within a [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field).
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-form-select`
+
+## Component Features
+
+- [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+- [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+- [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+- [Internationalization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [Localization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
+
+## Examples
+<SingleSelectFieldExample title="Single Select Field Example" />
+<RequiredSingleSelectFieldExample title="Required Single Select Field Example" />
+<IncompleteSingleSelectFieldExample title="Incomplete Single Select Field Example" description="Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+
+## Single Select Field Props
+<SingleSelectFieldPropsTable />

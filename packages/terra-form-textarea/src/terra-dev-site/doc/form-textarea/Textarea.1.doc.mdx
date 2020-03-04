@@ -1,0 +1,62 @@
+import { Badge } from 'terra-form-textarea/package.json?dev-site-package';
+
+import ResizableExample from '../example/Resizable?dev-site-example';
+import FixedSmallSizeExample from '../example/FixedSmallSize?dev-site-example';
+import FixedMediumSizeExample from '../example/FixedMediumSize?dev-site-example';
+import FixedLargeSizeExample from '../example/FixedLargeSize?dev-site-example';
+import FillContainerExample from '../example/FillContainer?dev-site-example';
+import InvalidExample from '../example/Invalid?dev-site-example';
+import IncompleteExample from '../example/Incomplete?dev-site-example';
+import DisabledExample from '../example/Disabled?dev-site-example';
+import TextareaExample from '../example/Textarea?dev-site-example';
+
+import FormTextareaPropsTable from 'terra-form-textarea/src/Textarea?dev-site-props-table';
+
+<Badge />
+
+# Terra Form Textarea
+
+Element for building out textareas in a form.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-form-textarea`
+
+## Browser Resizability
+Note - for most browsers, dragging the gripper resizes the text area. Under the hood, the browser applies an inline width and height.
+
+To swap different `terra-form-textarea` components altered by this resize functionality, assign each component a unique key. Otherwise, React reconcilliation will not transfer these inline styles.
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-form-textarea)
+
+## Examples
+<TextareaExample />
+<FixedSmallSizeExample />
+<FixedMediumSizeExample />
+<FixedLargeSizeExample />
+<ResizableExample />
+<FillContainerExample />
+<InvalidExample />
+<IncompleteExample description="Applies theme-specific styling for incomplete, this example shows simple version of incomplete styling being removed after value is added. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+<DisabledExample />
+
+## Form Textarea Props
+<FormTextareaPropsTable />

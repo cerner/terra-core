@@ -4,6 +4,19 @@ ChangeLog
 Unreleased
 ----------
 
+2.39.0 - (March 3, 2020)
+------------------
+### Added
+* Added data attribute on the header buttons to use as selectors in tests.
+
+2.38.0 - (February 25, 2020)
+------------------
+### Changed
+* Changed buttons' variant to `Utility`.
+
+### Removed
+* Removed dependency on `terra-button-group`.
+
 2.37.0 - (February 18, 2020)
 ------------------
 ### Added
@@ -36,8 +49,7 @@ Unreleased
 
 2.31.0 - (October 30, 2019)
 ------------------
-### Changed
-* Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg.
+* Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg .
 
 ### Fixed
 * Fixed lint warnings for multiple empty lines
