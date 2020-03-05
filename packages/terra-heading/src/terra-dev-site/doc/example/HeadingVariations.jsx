@@ -3,6 +3,8 @@ import Heading from 'terra-heading';
 import classNames from 'classnames/bind';
 import styles from './colors.module.scss';
 
+// You can mix and match props on the `<Heading />` component to create various heading styles.
+
 const cx = classNames.bind(styles);
 
 const HeadingVariations = () => (

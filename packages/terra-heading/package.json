@@ -29,7 +29,6 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "terra-arrange": "^3.29.0",
-    "terra-doc-template": "^2.24.0",
     "terra-markdown": "^2.38.0"
   },
   "scripts": {
