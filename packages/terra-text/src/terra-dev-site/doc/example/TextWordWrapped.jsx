@@ -3,6 +3,8 @@ import Text from 'terra-text';
 import classNames from 'classnames/bind';
 import styles from './TextDocCommon.module.scss';
 
+// The `isWordWrapped` prop can be used to apply cross-browser word-wrapping styles.
+
 const cx = classNames.bind(styles);
 
 const TextWordWrapped = () => (
