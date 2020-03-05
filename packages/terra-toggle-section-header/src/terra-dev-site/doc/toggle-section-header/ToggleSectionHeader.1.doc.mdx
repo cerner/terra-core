@@ -1,3 +1,13 @@
+import { Badge } from 'terra-toggle-section-header/package.json?dev-site-package';
+
+import DefaultToggleSectionHeader from '../example/DefaultToggleSectionHeader?dev-site-example';
+import AnimatedToggleSectionHeader from '../example/AnimatedToggleSectionHeader?dev-site-example';
+import TransparentToggleSectionHeader from '../example/TransparentToggleSectionHeader?dev-site-example';
+
+import ToggleSectionHeaderPropsTable from 'terra-toggle-section-header/src/ToggleSectionHeader?dev-site-props-table';
+
+<Badge />
+
 # Terra Toggle Section Header
 
 Toggle section header component that transitions content in and out with a click.
@@ -17,23 +27,12 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 
-
-
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Usage
 
 ```jsx
-import React from 'react';
 import ToggleSectionHeader from 'terra-toggle-section-header';
-
-<ToggleSectionHeader
-  title="Section Header Title"
-  level={3}
-  isInitiallyOpen
->
-  <div>Hello, World!</div>
-</ToggleSectionHeader>
 ```
 
 ## Component Features
@@ -41,10 +40,12 @@ import ToggleSectionHeader from 'terra-toggle-section-header';
  * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
  * [LTR/RTL Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#ltr--rtl-support)
 
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle-section-header)
 
-<!-- Uncomment supported features.
- * [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
- * [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
- * [Internationalization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
- * [Localization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
- -->
+## Examples
+<DefaultToggleSectionHeader title="Default" />
+<AnimatedToggleSectionHeader title="Animated" />
+<TransparentToggleSectionHeader title="Transparent" />
+
+## Toggle Section Header Props
+<ToggleSectionHeaderPropsTable />
