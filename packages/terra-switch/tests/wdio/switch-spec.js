@@ -3,6 +3,7 @@ Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-switch/switch/default-switch'));
 
+    browser.moveToObject('#root', 100, 1);
     Terra.it.validatesElement({ rules: ignoredDisabledAlly });
 
     describe('Focus', () => {
@@ -41,6 +42,7 @@ Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
   describe('Long Label Text', () => {
     before(() => browser.url('/#/raw/tests/terra-switch/switch/label-wrap'));
 
+    browser.moveToObject('#root', 100, 1);
     Terra.it.validatesElement({ rules: ignoredDisabledAlly });
   });
 });
