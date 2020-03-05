@@ -1,3 +1,14 @@
+import { Badge } from 'terra-overlay/package.json?dev-site-package';
+
+import OverlayExample from '../example/OverlayExample?dev-site-example';
+import LoadingOverlayExample from '../example/LoadingOverlayExample?dev-site-example';
+
+import OverlayPropsTable from 'terra-overlay/src/Overlay?dev-site-props-table';
+import OverlayContainerPropsTable from 'terra-overlay/src/OverlayContainer?dev-site-props-table';
+import LoadingOverlayPropsTable from 'terra-overlay/src/LoadingOverlay?dev-site-props-table';
+
+<Badge />
+
 # Terra Overlay
 The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.
 
@@ -44,3 +55,16 @@ import OverlayContainer from 'terra-overlay/lib/OverlayContainer';
 ```
 
 [View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay)
+
+## Examples
+<OverlayExample title="Overlay" />
+<LoadingOverlayExample title="Loading Overlay" />
+
+## Overlay Props
+<OverlayPropsTable />
+
+## Overlay Container Props
+<OverlayContainerPropsTable />
+
+## Loading Overlay Props
+<LoadingOverlayPropsTable />
