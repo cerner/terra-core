@@ -6,7 +6,7 @@
 The status view component provides a customizable icon, message, and buttons in a view.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-status-view/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-status-view/status-view/status-view)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -23,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
