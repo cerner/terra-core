@@ -3,6 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.40.0 - (March 3, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+2.39.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+2.38.0 - (February 4, 2020)
+------------------
 ### Added
 * Private PaginatorButton component added to separate button focus and active style management
 

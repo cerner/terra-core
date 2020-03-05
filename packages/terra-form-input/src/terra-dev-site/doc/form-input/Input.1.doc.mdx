@@ -1,0 +1,76 @@
+import { Badge } from 'terra-form-input/package.json?dev-site-package';
+
+import BlankExample from '../common/BlankExample?dev-site-example';
+import PlaceholderExample from '../common/PlaceholderExample?dev-site-example';
+import NumberInputExample from '../common/NumberInputExample?dev-site-example';
+import ControlledDefaultExample from '../example/controlled/DefaultExample?dev-site-example';
+import ControlledDisabledExample from '../example/controlled/DisabledExample?dev-site-example';
+import ControlledDefaultInvalidExample from '../example/controlled/DefaultInvalidExample?dev-site-example';
+import ControlledDefaultIncompleteExample from '../example/controlled/DefaultIncompleteExample?dev-site-example';
+import ControlledDisabledInvalidExample from '../example/controlled/DisabledInvalidExample?dev-site-example';
+import UncontrolledDefaultExample from '../example/uncontrolled/DefaultExample?dev-site-example';
+import UncontrolledDisabledExample from '../example/uncontrolled/DisabledExample?dev-site-example';
+import UncontrolledDefaultInvalidExample from '../example/uncontrolled/DefaultInvalidExample?dev-site-example';
+import UncontrolledDefaultIncompleteExample from '../example/uncontrolled/DefaultIncompleteExample?dev-site-example';
+import UncontrolledInvalidWithIncompleteExample from '../example/uncontrolled/InvalidWithIncompleteExample?dev-site-example';
+import UncontrolledDisabledInvalidExample from '../example/uncontrolled/DisabledInvalidExample?dev-site-example';
+import UncontrolledFileExample from '../example/uncontrolled/FileExample?dev-site-example';
+
+import FormInputPropsTable from 'terra-form-input/src/Input?dev-site-props-table';
+
+<Badge />
+
+# Terra Form Input
+
+Generic input which represents an HTML input element directly.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-form-input`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import Input from 'terra-form-input';
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+ * [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+ * [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-form-input)
+
+## Examples
+<BlankExample title="Default Input" />
+<PlaceholderExample title="Placeholder Input" />
+<NumberInputExample title="Numeric Input" />
+<ControlledDefaultExample title="Controlled Example - Valid" />
+<ControlledDisabledExample title="Controlled Example - Valid Disabled" />
+<ControlledDefaultInvalidExample title="Controlled Example - Invalid" />
+<ControlledDisabledInvalidExample title="Controlled Example - Invalid Disabled" />
+<ControlledDefaultIncompleteExample title="Controlled Example - Incomplete" description="Applies theme-specific styling for incomplete, this controlled example shows a simple version of incomplete styling being removed after value is added. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+<UncontrolledDefaultExample title="Uncontrolled Example - Valid" />
+<UncontrolledDisabledExample title="Uncontrolled Example - Valid Disabled" />
+<UncontrolledDefaultInvalidExample title="Uncontrolled Example - Invalid" />
+<UncontrolledDisabledInvalidExample title="Uncontrolled Example - Invalid Disabled" />
+<UncontrolledDefaultIncompleteExample title="Uncontrolled Example - Incomplete" description="Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+<UncontrolledInvalidWithIncompleteExample title="Uncontrolled Example - Invalid And Incomplete With Invalid Taking Precedence" description="Applies theme-specific styling for incomplete and invalid, invalid-only styling displays taking precedence. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+<UncontrolledFileExample title="Uncontrolled Example - File Input" />
+
+## Form Input Props
+<FormInputPropsTable />

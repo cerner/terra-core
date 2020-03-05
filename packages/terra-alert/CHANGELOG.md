@@ -3,8 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.21.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+4.20.0 - (February 4, 2020)
+------------------
 ### Changed
-* Update docs to use mdx syntax.
+* Update docs to use mdx syntax
 
 4.19.0 - (January 28, 2020)
 ------------------
@@ -28,11 +36,11 @@ Unreleased
 
 4.15.0 - (December 3, 2019)
 ------------------
-### Fixed
-* Fixed jest tests due to ResponsiveElement change
-
 ### Added
 * Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+### Fixed
+* Fixed jest tests due to ResponsiveElement change
 
 4.14.0 - (October 30, 2019)
 ------------------

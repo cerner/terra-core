@@ -1,0 +1,77 @@
+import { Badge } from 'terra-form-select/package.json?dev-site-package';
+
+import AllowClearExample from '../example/combobox/AllowClear?dev-site-example';
+import ControlledExample from '../example/combobox/Controlled?dev-site-example';
+import ComboboxExample from '../example/combobox/Combobox?dev-site-example';
+import DisabledExample from '../example/combobox/Disabled?dev-site-example';
+import IsTouchAccessibleExample from '../example/combobox/IsTouchAccessible?dev-site-example';
+import InvalidExample from '../example/combobox/Invalid?dev-site-example';
+import IncompleteExample from '../example/combobox/Incomplete?dev-site-example';
+import MaxHeightExample from '../example/combobox/MaxHeight?dev-site-example';
+import OptGroupExample from '../example/combobox/OptGroup?dev-site-example';
+
+import ComboboxPropsTable from 'terra-form-select/src/Combobox?dev-site-props-table';
+import OptionPropsTable from 'terra-form-select/src/shared/_Option?dev-site-props-table';
+import OptGroupPropsTable from 'terra-form-select/src/shared/_OptGroup?dev-site-props-table';
+
+<Badge />
+
+# Terra Form Combobox
+
+The Combobox component allows a user to enter a single free text entry or select a single option from the dropdown of a selectable options.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-form-select`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+| react-intl | ^2.8.0 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Implementation Notes:
+
+The Form-Select component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
+
+[1]: https://engineering.cerner.com/terra-core/components/terra-base/base/base
+
+## Component Features
+
+- [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+- [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+- [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+- [Internationalization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [Localization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
+
+## Examples
+<ComboboxExample description="A Combobox allows a user to enter a single free text entry or select a single option from the the dropdown." />
+<IsTouchAccessibleExample description="Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices." />
+<DisabledExample />
+<InvalidExample description="Applies theme-specific styling for invalid. Will also display error text when used with a Field." />
+<IncompleteExample description="Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+<OptGroupExample title="Ability to add Option Groups" description="An OptGroup provides a way to group options together within the listbox." />
+<MaxHeightExample title="Ability to set a Maximum Height" description="An example of implementing a custom max height of the dropdown." />
+<AllowClearExample title="Ability to Clear Selection" description="An example with an option to clear the selected item." />
+<ControlledExample title="Create a Controlled Combobox" description="An example of implementing a controlled Combobox." />
+
+## Combobox Props
+<ComboboxPropsTable />
+
+## Option Props
+<OptionPropsTable />
+
+## OptGroup Props
+<OptGroupPropsTable />
