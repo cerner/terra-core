@@ -89,6 +89,10 @@ class Image extends React.Component {
     this.handleOnError = this.handleOnError.bind(this);
   }
 
+  componentDidUpdate() {
+    objectFitImages(this.ImageRef.current);
+  }
+
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.src !== prevState.prevPropsSrc) {
       return {
