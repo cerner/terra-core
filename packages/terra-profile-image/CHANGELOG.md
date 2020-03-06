@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added `fit` prop to specify the object-fit style
 
+3.26.0 - (March 3, 2020)
+------------------
 ### Changed
 * Update docs to use mdx syntax.
 
