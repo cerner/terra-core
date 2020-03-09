@@ -7,7 +7,7 @@
 ToggleButton component that transitions content in and out with the click on a button.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle-button/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-toggle-button/toggle-button/toggle-button)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -23,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
