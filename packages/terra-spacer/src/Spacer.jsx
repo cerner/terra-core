@@ -12,7 +12,7 @@ const cx = classNames.bind(styles);
   as defined. Currently, simply putting `Object.values(SpacerSizes)` causes all other `marginX` and `paddingX` props to be recognized as `undefined`
   in the PropsTable.
 */
-const arrayOfSpacerSizes = [...Object.values(SpacerSizes)];
+const arrayOfSpacerSizes = ['none', 'small-2', 'small-1', 'small', 'medium', 'large', 'large+1', 'large+2', 'large+3', 'large+4'];
 
 const propTypes = {
   /**
