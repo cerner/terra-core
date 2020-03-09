@@ -11,7 +11,7 @@ The terra-i18n package provides on-demand internationalization of React componen
 
 ## Getting Started
 
-This component is not intended for direct usage by developers. It is recommended to use the `terra-base` component instead which acts as an abstraction around terra-i18n and react-intl's Intl Provider component. See [`terra-base documentation`](https://github.com/cerner/terra-core/tree/master/packages/terra-base) to get started.
+This component is not intended for direct usage by developers. It is recommended to use the `terra-base` component instead which acts as an abstraction around terra-i18n and react-intl's Intl Provider component. See [`terra-base documentation`](https://engineering.cerner.com/terra-core/components/terra-base/base/base) to get started.
 
 However, terra-i18n can be installed with [npmjs](https://www.npmjs.com):
   - `npm install terra-i18n`
@@ -27,15 +27,13 @@ This component requires the following peer dependencies be installed in your app
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
 
-
-
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Documentation
 
 Documentation for this component is spilt into multiple files.
 
-See the [documentation](docs/).
+See the [documentation](https://engineering.cerner.com/terra-core/components/terra-i-18-n/i-18-n/i-18-n).
 
 ## LICENSE
 
