@@ -1,3 +1,9 @@
+import { Badge } from 'terra-list/package.json?dev-site-package';
+
+import MultiSelectList from '../../guides/MultiSelectList?dev-site-example';
+
+<Badge />
+
 # Terra List - Implementing a Multi Select List
 
 The terra-list implementation requires controlled state if selections are required. As a result, selections are applied when child items are generated from HOC state. The following guide will show you how to implement that state within a multiple items selection variant of list, as well as implement the additional narrowing requirements of a max selection for items.
@@ -144,3 +150,6 @@ class MyList extends React.Component {
 + }
 ```
   Using these steps we get the following example.
+
+## Examples
+<MultiSelectList />
