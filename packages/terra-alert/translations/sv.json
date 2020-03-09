@@ -1,9 +1,9 @@
 {
   "Terra.alert.advisory": "Rådgivning.",
   "Terra.alert.alert": "Avisering.",
-  "Terra.alert.dismiss": "Avfärda",
+  "Terra.alert.dismiss": "Ignorera",
   "Terra.alert.error": "Fel.",
   "Terra.alert.info": "Information.",
   "Terra.alert.success": "Klar.",
-  "Terra.alert.warning": "Varning."
+  "Terra.alert.warning": "Varning!"
 }
