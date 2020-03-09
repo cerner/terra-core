@@ -17,47 +17,17 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 
-
-
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Usage
 
 ```jsx
-import React from 'react';
 import Toggle from 'terra-toggle/lib/Toggle';
-import IconInformation from 'terra-icon/lib/icon/IconInformation';
-
-class ToggleDefault extends React.Component {
-  constructor() {
-    super();
-    this.state = ({ isOpen: false });
-
-    this.handleOnClick = this.handleOnClick.bind(this);
-  }
-
-  handleOnClick() {
-    this.setState({ isOpen: !this.state.isOpen });
-  }
-
-  render() {
-    const { isOpen } = this.state;
-    return (
-      <div>
-        <IconInformation onClick={this.handleOnClick} aria-expanded={isOpen} aria-controls="toggle" />
-        <Toggle id="toggle" isOpen={this.state.isOpen} isAnimated>
-          Hello World
-        </Toggle>
-      </div>
-    );
-  }
-}
-
-
-export default ToggleDefault;
 ```
 
 ## Component Features
-* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
-* [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
-* [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-toggle)

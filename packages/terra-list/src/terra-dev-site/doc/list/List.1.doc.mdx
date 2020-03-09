@@ -1,0 +1,55 @@
+import { Badge } from 'terra-list/package.json?dev-site-package';
+
+import ListExample from '../example/List?dev-site-example';
+import ListDividedExample from '../example/ListDivided?dev-site-example';
+import ListPaddedExample from '../example/ListPadded?dev-site-example';
+
+import ListPropsTable from 'terra-list/src/List?dev-site-props-table';
+
+<Badge />
+
+# Terra List
+
+The Terra List is a structural component to vertically arrange content within list/list items.
+
+If a list implementation contains selectable list options the role prop should be set to "listbox" for accesibility.
+
+Two padding variants are provide for list item content, standard and compact. If different padding is desired use the defaulted style of 'none' and set the padding on the list item's child content with your own css values, preferrably themeable variables.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-list`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import List, { Item } from 'terra-list';
+```
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-list)
+
+## Examples
+<ListExample title="Default List" />
+<ListDividedExample title="Divided List" />
+<ListPaddedExample title="Padded List" />
+
+## List Props
+<ListPropsTable />
