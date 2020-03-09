@@ -12,7 +12,7 @@ const { BackgroundStyles } = Overlay.Opts;
 
 const propTypes = {
   /**
-   * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear' or BackgroundStyles.LIGHT, BackgroundStyles.DARK, and BackgroundStyles.CLEAR.
+   * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear'.
    */
   backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear']),
   /**
