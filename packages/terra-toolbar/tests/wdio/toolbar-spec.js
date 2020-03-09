@@ -28,6 +28,7 @@ Terra.describeViewports('Toolbar', ['tiny'], () => {
     });
   });
 });
+
 Terra.describeViewports('Toolbar', ['tiny', 'medium', 'large'], () => {
   describe('Long Content', () => {
     before(() => browser.url('/#/raw/tests/terra-toolbar/toolbar/long-button-toolbar'));

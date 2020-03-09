@@ -3,7 +3,7 @@
 [![NPM version](https://badgen.net/npm/v/terra-toolbar)](https://www.npmjs.com/package/terra-toolbar)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-{insert description}
+The terra-toolbar component is used to display bar containing items such as buttons, button groups, and links.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://engineering.cerner.com/terra-core/components/terra-toolbar/toolbar/toolbar)

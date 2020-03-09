@@ -11,7 +11,7 @@ const propTypes = {
    */
   align: PropTypes.oneOf(['start', 'end', 'center']),
   /**
-   * Items to be displayed in toolbar.
+   * Items to be displayed in toolbar such as buttons, button groups, and links.
    */
   children: PropTypes.node,
 };
