@@ -1,0 +1,64 @@
+import { Badge } from 'terra-spacer/package.json?dev-site-package';
+
+import Spacer from '../example/SpacerExample?dev-site-example';
+import SpacerShortVsLongHand from '../example/SpacerShortVsLongHandExample?dev-site-example';
+
+import SpacerPropsTable from 'terra-spacer/src/Spacer?dev-site-props-table';
+
+<Badge />
+
+# Terra Spacer
+
+This component is used to provide margin and/or padding space between two components based on the given values.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-spacer`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Naming Convention
+
+| Spacing scale values   | Computed REM Value |
+| --------------------   | ------------------ |
+| none                   | 0                  |
+| small-2                | 0.2142857143rem    |
+| small-1                | 0.3571428571rem    |
+| small                  | 0.5rem             |
+| medium                 | 0.7142857143rem    |
+| large                  | 0.8571428571rem    |
+| large+1                | 1.0714285714rem    |
+| large+2                | 1.4285714286rem    |
+| large+3                | 2.1428571429rem    |
+| large+4                | 3.5714285714rem    |
+
+## Usage
+
+```jsx
+import Spacer from 'terra-spacer';
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+ * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-spacer)
+
+## Examples
+<Spacer title="Spacer" description="Spacing default button with a padding value of large+4 and primary button with padding value of large+2" />
+<SpacerShortVsLongHand title="Spacer Short Vs Long Hand"/>
+
+## Spacer Props
+<SpacerPropsTable />
