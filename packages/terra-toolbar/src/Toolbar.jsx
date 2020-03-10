@@ -23,11 +23,10 @@ const defaultProps = {
 const Toolbar = ({
   align, children, ...customProps
 }) => {
-  const toolbarClassNames = cx([
-    'toolbar',
-    `${align}-align`,
-    customProps.className,
-  ]);
+  let toolbarClassNames = cx('toolbar', `${align}-align`);
+  if (customProps.className) {
+    toolbarClassNames = `${toolbarClassNames} ${customProps.className}`;
+  }
 
   const items = React.Children.map(children, item => (<div className={cx('item')}>{item}</div>));
 
