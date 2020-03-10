@@ -28,7 +28,6 @@
     "classnames": "^2.2.5",
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.24.0",
     "terra-icon": "^3.27.0"
   },
   "scripts": {
