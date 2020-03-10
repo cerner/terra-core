@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Breaking Changes
+* Replaced terra-image with terra-avatar for demographics profile photo.
+
 ### Added 
 * Added selectable demographics banner
 
