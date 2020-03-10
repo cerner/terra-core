@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.27.0 - (March 10, 2020)
+------------------
 ### Added
 * Added `fit` prop to specify the object-fit style
 
