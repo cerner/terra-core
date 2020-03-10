@@ -28,8 +28,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
-    "terra-breakpoints": "^2.24.0",
-    "terra-doc-template": "^2.24.0"
+    "terra-breakpoints": "^2.24.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

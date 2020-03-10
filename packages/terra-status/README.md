@@ -6,7 +6,7 @@
 The status component provides a customizable color indictor to signify a specific condition.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-status/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-status/status/status)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -22,8 +22,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
