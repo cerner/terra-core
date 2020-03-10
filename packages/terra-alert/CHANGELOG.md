@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated incorrect Swedish translations
 
 4.21.0 - (February 18, 2020)
 ------------------

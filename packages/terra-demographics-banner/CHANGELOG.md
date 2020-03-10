@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed overlapping of parenthesis onto the next line by adding `padding-bottom` to person-name and application-content class.
 
 3.33.0 - (February 25, 2020)
 ------------------
