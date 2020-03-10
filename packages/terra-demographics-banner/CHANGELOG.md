@@ -3,7 +3,7 @@ ChangeLog
 
 Unreleased
 ----------
-### Breaking Changes
+### Changed
 * Replaced terra-image with terra-avatar for demographics profile photo.
 
 ### Added 
