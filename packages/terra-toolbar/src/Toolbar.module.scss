@@ -19,6 +19,7 @@
   .item {
     @include terra-padding-end(var(--terra-toolbar-item-padding-end, 0.35714285714285715rem));
     @include terra-padding-start(var(--terra-toolbar-item-padding-start, 0.35714285714285715rem));
+    max-width: 100%;
     padding-bottom: var(--terra-toolbar-item-padding-bottom, 0.35714285714285715rem);
     padding-top: var(--terra-toolbar-item-padding-top, 0.35714285714285715rem);
   }
