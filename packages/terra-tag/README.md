@@ -8,7 +8,7 @@ The tag component is used for tagging and provides users a way to trigger action
 It can optionally display an icon along with the text.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-tag/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-tag/tag/tag)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
