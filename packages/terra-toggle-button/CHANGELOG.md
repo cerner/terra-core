@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+3.32.0 - (March 10, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+3.31.0 - (February 18, 2020)
+------------------
+### Added
+* Added generated-themes to .npmignore
+
 3.30.0 - (February 4, 2020)
 ------------------
 ### Changed
