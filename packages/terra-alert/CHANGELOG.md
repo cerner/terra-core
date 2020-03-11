@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.22.0 - (March 10, 2020)
+------------------
 ### Changed
 * Updated incorrect Swedish translations
 

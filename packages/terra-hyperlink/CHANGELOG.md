@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.30.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.29.0 - (February 25, 2020)
 ------------------
 ### Changed

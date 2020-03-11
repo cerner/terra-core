@@ -61,7 +61,7 @@ const propTypes = {
   /**
   * Sets the `object-fit` style of the image from the following values; `cover`, `contain`, `fill`, `scale-down`, `none`.
   */
-  fit: PropTypes.oneOf(Object.values(FitTypes)),
+  fit: PropTypes.oneOf(['cover', 'scale-down', 'fill', 'contain', 'none']),
 };
 
 /* eslint-disable react/default-props-match-prop-types */
@@ -87,6 +87,10 @@ class Image extends React.Component {
 
     this.handleOnLoad = this.handleOnLoad.bind(this);
     this.handleOnError = this.handleOnError.bind(this);
+  }
+
+  componentDidUpdate() {
+    objectFitImages(this.ImageRef.current);
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {

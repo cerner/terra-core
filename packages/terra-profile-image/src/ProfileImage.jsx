@@ -17,6 +17,11 @@ const propTypes = {
    */
   alt: PropTypes.string,
   /**
+  * Sets the `object-fit` style of the image from the following values: `cover`, `contain`, `scale-down`, `none`.
+  * ![IMPORTANT](https://badgen.net/badge/UX/Design-Standards/blue) Anywhere the terra-profile-image is used to show images of People, _only_ `cover` and `contain` are acceptable.
+  */
+  fit: PropTypes.oneOf(['cover', 'scale-down', 'contain', 'none']),
+  /**
    * Sets the height of the image.
    */
   height: PropTypes.string,
@@ -32,6 +37,10 @@ const propTypes = {
    * Function to be executed when the profile image load errors.
    */
   onError: PropTypes.func,
+};
+
+const defaultProps = {
+  fit: 'cover',
 };
 
 const isOnlyNumbers = toTest => !(/\D/).test(toTest);
@@ -52,11 +61,12 @@ const ProfileImage = (props) => {
   /* eslint-enable react/forbid-dom-props */
 
   if (props.src) {
-    return (<div><TerraImage placeholder={placeholderImage} fit="cover" {...props} /></div>);
+    return (<div><TerraImage placeholder={placeholderImage} {...props} /></div>);
   }
   return placeholderImage;
 };
 
 ProfileImage.propTypes = propTypes;
+ProfileImage.defaultProps = defaultProps;
 
 export default ProfileImage;
