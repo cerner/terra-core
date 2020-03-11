@@ -3,12 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
+### Breaking Change
 * Replaced terra-image with terra-avatar for demographics profile photo.
 
 ### Added 
 * Added selectable demographics banner
 
+3.34.0 - (March 10, 2020)
+------------------
 ### Fixed
 * Fixed overlapping of parenthesis onto the next line by adding `padding-bottom` to person-name and application-content class.
 
