@@ -59,6 +59,31 @@ describe('Table', () => {
     expect(shallowComponent).toMatchSnapshot();
   });
 
+  it('should render a Table with row and refCallback', () => {
+    const refCallback = jest.fn();
+    const shallowComponent = shallow(
+      <Table
+        summary="Test summary description"
+        summaryId="test-id"
+        numberOfColumns={0}
+        fill
+        scrollRefCallback={jest.fn()}
+        bodyData={[{
+          rows: [{
+            key: 'row-key',
+            refCallback,
+            cells: [{
+              key: 'child-cell-key',
+              id: 'child-cell-id',
+              children: 'content',
+            }],
+          }],
+        }]}
+      />,
+    );
+    expect(shallowComponent).toMatchSnapshot();
+  });
+
   it('should render a Table with padding standard', () => {
     const shallowComponent = shallow(
       <Table
