@@ -64,7 +64,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    transition: var(--terra-switch-tray-transition, 0.4s);
+    transition: transform var(--terra-switch-tray-transition, .2s) cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: var(--terra-switch-tray-width, 6.14285rem);
   }
 
@@ -83,7 +83,7 @@
     outline: none;
     overflow: hidden;
     position: absolute;
-    transition: var(--terra-switch-slider-transition, 0.4s);
+    transition: transform var(--terra-switch-slider-transition, .2s) cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: var(--terra-switch-slider-width, 2.14285rem);
   }
 

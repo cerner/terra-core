@@ -1,13 +1,12 @@
 # Terra Switch
 
-
 [![NPM version](https://badgen.net/npm/v/terra-switch)](https://www.npmjs.org/package/terra-switch)
 [![Build Status](https://badgen.net/travis/cerner/terra-switch)](https://travis-ci.com/cerner/terra-core)
 
 The terra-switch component indicates whether a setting is on or off and provide users with instantaneous feedback.
 
-Switches are used to activate settings immediately, in real time. 
-Switches never require users to press a button to apply their settings. 
+Switches are used to activate settings immediately, in real time.
+Switches never require users to press a button to apply their settings.
 A switch is a set of binary options and always has one of the options selected by default.
 
 Switch should be used for only one of these set of binary options:
