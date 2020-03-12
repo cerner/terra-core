@@ -3,6 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.40.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.39.0 - (March 3, 2020)
+------------------
+### Added
+* Added data attribute on the header buttons to use as selectors in tests.
+
+2.38.0 - (February 25, 2020)
+------------------
 ### Changed
 * Changed buttons' variant to `Utility`.
 

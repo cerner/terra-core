@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+2.41.0 - (March 10, 2020)
+------------------
+### Changed
+* Updated incorrect Swedish translations
+
+2.40.0 - (March 3, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
 2.39.0 - (February 18, 2020)
 ------------------
 ### Added
