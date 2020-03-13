@@ -442,7 +442,7 @@ class Frame extends React.Component {
       searchValue: '',
       hasSearchChanged: false,
       isOpen: false,
-      // isAbove: false,
+      isAbove: false,
     });
 
     if (this.props.onSelect) {

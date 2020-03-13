@@ -468,8 +468,6 @@ class Frame extends React.Component {
       isAbove: false,
     });
 
-    this.input.focus();
-
     if (this.props.onSelect) {
       this.props.onSelect(value, option);
     }
