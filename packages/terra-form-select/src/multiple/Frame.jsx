@@ -322,7 +322,7 @@ class Frame extends React.Component {
     // and if the relatedTarget is falsey. The relatedTarget will be null when
     // dismissing the onscreen keyboard, else set to another element when
     // tapping elsewhere on the page
-    if (focusedByTouch && !relatedTarget) {
+    if (focusedByTouch && (relatedTarget === this.input)) {
       return;
     }
 

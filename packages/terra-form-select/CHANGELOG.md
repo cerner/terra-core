@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Fixed `onBlur` event to not trigger when selecting an option
 
 5.44.0 - (March 10, 2020)
 ------------------
