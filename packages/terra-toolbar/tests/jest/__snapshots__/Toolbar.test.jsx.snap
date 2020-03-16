@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar should render a default component 1`] = `
+<div
+  className="toolbar start-align"
+/>
+`;
+
+exports[`Toolbar should render center aligned component 1`] = `
+<div
+  className="toolbar center-align"
+/>
+`;
+
+exports[`Toolbar should render end aligned component 1`] = `
+<div
+  className="toolbar end-align"
+/>
+`;
+
+exports[`Toolbar should render start aligned component 1`] = `
+<div
+  className="toolbar start-align"
+/>
+`;
+
+exports[`Toolbar should render with children 1`] = `
+<div
+  className="toolbar start-align"
+>
+  <div
+    className="item"
+    key=".0"
+  >
+    <div>
+      test
+    </div>
+  </div>
+</div>
+`;
