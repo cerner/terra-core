@@ -13,14 +13,14 @@ const propTypes = {
 };
 
 const defaultProps = {
-  children: '',
+  children: undefined,
 };
 
 const SelectableTile = ({
   children,
   ...customProps
 }) => (
-  <div {...customProps} role="button" tabIndex="0" className={cx('selectable-tile')}>
+  <div {...customProps} role="link" tabIndex="0" className={cx('selectable-tile')}>
     {children}
   </div>
 );

@@ -23,8 +23,8 @@ export default () => {
         identifiers={{ MRN: 12343, REA: '3JSDA' }}
         personName="Johnathon Doe"
         preferredFirstName="John"
-        selectableTileClick={handleDemographicsClick}
-        infoButtonClick={handleInfoButtonClick}
+        selectableTileOnClick={handleDemographicsClick}
+        infoButtonOnClick={handleInfoButtonClick}
       />
       <span>{message}</span>
     </div>

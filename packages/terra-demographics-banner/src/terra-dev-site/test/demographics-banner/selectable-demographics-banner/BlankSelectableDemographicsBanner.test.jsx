@@ -16,8 +16,8 @@ export default () => {
     <div>
       <SelectableDemographicsBanner
         id="blankDemographics"
-        selectableTileClick={handleDemographicsClick}
-        infoButtonClick={handleInfoButtonClick}
+        selectableTileOnClick={handleDemographicsClick}
+        infoButtonOnClick={handleInfoButtonClick}
       />
       <span>{message}</span>
     </div>

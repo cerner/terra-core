@@ -25,8 +25,8 @@ export default () => {
         personName="Johnathon Doe"
         photo={demographicsImage}
         preferredFirstName="John"
-        selectableTileClick={handleDemographicsClick}
-        infoButtonClick={handleInfoButtonClick}
+        selectableTileOnClick={handleDemographicsClick}
+        infoButtonOnClick={handleInfoButtonClick}
         infoButtonId="infoButton"
       />
       <span>{message}</span>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
 import classNames from 'classnames/bind';
-import * as KeyCode from 'keycode-js';
+import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import Button from 'terra-button';
 import IconInfo from 'terra-icon/lib/icon/IconInformation';
 import DemographicsBannerDisplay from '../DemographicsBannerDisplay';
@@ -11,8 +11,6 @@ import SelectableTile from './_SelectableTile';
 import styles from './SelectableDemographicsBanner.module.scss';
 
 const cx = classNames.bind(styles);
-
-const Icon = <IconInfo />;
 
 const propTypes = {
   /**
@@ -68,11 +66,11 @@ const propTypes = {
   /**
    * Callback function triggered when info button is clicked.
    */
-  infoButtonClick: PropTypes.func.isRequired,
+  infoButtonOnClick: PropTypes.func.isRequired,
   /**
    * Callback function triggered when selectable-tile is clicked.
    */
-  selectableTileClick: PropTypes.func.isRequired,
+  selectableTileOnClick: PropTypes.func.isRequired,
   /**
    * Id for Info Button.
    */
@@ -105,8 +103,8 @@ const SelectableDemographicsBanner = ({
   gender,
   intl,
   personName,
-  infoButtonClick,
-  selectableTileClick,
+  infoButtonOnClick,
+  selectableTileOnClick,
   infoButtonId,
   selectableTileId,
   ...customProps
@@ -114,19 +112,23 @@ const SelectableDemographicsBanner = ({
   const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
 
   const handleKeyDown = (event) => {
-    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
+    console.log('keyspace', KEY_SPACE);
+    console.log('keyspace', KEY_RETURN);
+    if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
       event.preventDefault();
     }
   };
 
   const handleKeyUp = (event) => {
-    if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
-      selectableTileClick();
+    if ((event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) && selectableTileOnClick) {
+      selectableTileOnClick();
     }
   };
 
   const handleOnClick = () => {
-    selectableTileClick();
+    if (selectableTileOnClick) {
+      selectableTileOnClick();
+    }
   };
 
   const DemographicsBannerSelectableTile = (
@@ -156,7 +158,7 @@ const SelectableDemographicsBanner = ({
       <div className={cx('info-button')}>
         {/* Needs Translation */}
         <div className={cx('info-text')}>Info</div>
-        <Button id={infoButtonId} icon={Icon} variant="utility" isIconOnly text="info" onClick={infoButtonClick} />
+        <Button id={infoButtonId} icon={<IconInfo />} variant="utility" isIconOnly text="info" onClick={infoButtonOnClick} />
       </div>
     </BackgroundTile>
   );

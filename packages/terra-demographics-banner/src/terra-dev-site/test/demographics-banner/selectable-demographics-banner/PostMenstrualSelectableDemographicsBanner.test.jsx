@@ -26,8 +26,8 @@ export default () => {
         personName="Johnathon Doe"
         postMenstrualAge="43 Weeks"
         preferredFirstName="John"
-        selectableTileClick={handleDemographicsClick}
-        infoButtonClick={handleInfoButtonClick}
+        selectableTileOnClick={handleDemographicsClick}
+        infoButtonOnClick={handleInfoButtonClick}
       />
       <span>{message}</span>
     </div>

@@ -7,7 +7,7 @@ it('renders a blank banner wrapper', () => {
   const tileClick = jest.fn();
   const buttonClick = jest.fn();
 
-  const banner = shallowWithIntl(<SelectableDemographicsBanner selectableTileClick={tileClick} infoButtonClick={buttonClick} />);
+  const banner = shallowWithIntl(<SelectableDemographicsBanner selectableTileOnClick={tileClick} infoButtonOnClick={buttonClick} />);
   expect(banner.dive()).toMatchSnapshot();
 });
 
@@ -28,8 +28,8 @@ it('renders the banner wrapper with all props', () => {
       personName="Johnathon Doe"
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
-      selectableTileClick={tileClick}
-      infoButtonClick={buttonClick}
+      selectableTileOnClick={tileClick}
+      infoButtonOnClick={buttonClick}
       infoButtonId="infoButton"
       selectableTileId="selectableDemographics"
     />

@@ -15,8 +15,8 @@ const SelectableDemographicsBannerWithMissingData = () => {
   return (
     <div>
       <SelectableDemographicsBanner
-        selectableTileClick={handleDemographicsClick}
-        infoButtonClick={handleInfoButtonClick}
+        selectableTileOnClick={handleDemographicsClick}
+        infoButtonOnClick={handleInfoButtonClick}
       />
       <span>{message}</span>
     </div>

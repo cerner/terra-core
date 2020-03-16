@@ -20,8 +20,8 @@ const DefaultSelectableDemographicsBanner = () => {
         gender="Male"
         personName="Johnathon Doe"
         preferredFirstName="John"
-        selectableTileClick={handleDemographicsClick}
-        infoButtonClick={handleInfoButtonClick}
+        selectableTileOnClick={handleDemographicsClick}
+        infoButtonOnClick={handleInfoButtonClick}
       />
       <span>{message}</span>
     </div>

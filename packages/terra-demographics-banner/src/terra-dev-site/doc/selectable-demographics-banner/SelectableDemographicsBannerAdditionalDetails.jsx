@@ -24,8 +24,8 @@ const SelectableDemographicsBannerAdditionalDetails = () => {
         personName="Johnathon Doe"
         photo={demographicsImage}
         preferredFirstName="John"
-        selectableTileClick={handleDemographicsClick}
-        infoButtonClick={handleInfoButtonClick}
+        selectableTileOnClick={handleDemographicsClick}
+        infoButtonOnClick={handleInfoButtonClick}
       />
       <span>{message}</span>
     </div>
