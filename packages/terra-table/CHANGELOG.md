@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed refCallBack not working for table rows.
 
 4.4.0 - (March 10, 2020)
 ------------------
