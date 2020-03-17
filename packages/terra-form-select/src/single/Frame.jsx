@@ -232,6 +232,11 @@ class Frame extends React.Component {
       return;
     }
 
+    // Don't blur while focus is on select.
+    if (event.relatedTarget === this.select) {
+      return;
+    }
+
     // eslint-disable-next-line no-underscore-dangle
     const _onBlur = () => {
       this.setState({ isFocused: false });
@@ -249,7 +254,7 @@ class Frame extends React.Component {
      * the select menu from being closed.
      */
     // event.relatedTarget returns null in IE 10 / IE 11
-    if (event.relatedTarget == null) {
+    if (event.relatedTarget === null) {
       // Allow 10ms timeout hack for the browser to set document.activeElement so that the currently
       // focused page element is available when the blur event is fired.
       // See discussion on https://github.com/facebook/react/issues/3751

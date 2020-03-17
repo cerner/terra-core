@@ -319,9 +319,7 @@ class Frame extends React.Component {
 
     // Don't blur if we dismissed the onscreen keyboard
     // Determined by if we have have interacted with the frame via onTouchStart
-    // and if the relatedTarget is falsey. The relatedTarget will be null when
-    // dismissing the onscreen keyboard, else set to another element when
-    // tapping elsewhere on the page
+    // and if the focus is on input.
     if (focusedByTouch && (relatedTarget === this.input)) {
       return;
     }
