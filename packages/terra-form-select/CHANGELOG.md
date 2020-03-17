@@ -4,6 +4,26 @@ ChangeLog
 Unreleased
 ----------
 
+5.44.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.43.0 - (February 25, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+5.42.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+5.41.0 - (February 13, 2020)
+------------------
+### Fixed
+* Fixed Option Group labels not read on desktop screen readers.
+
 5.40.0 - (January 28, 2020)
 ------------------
 ### Changed

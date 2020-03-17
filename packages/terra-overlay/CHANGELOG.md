@@ -4,6 +4,19 @@ ChangeLog
 Unreleased
 ----------
 
+3.42.0 - (March 10, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+3.41.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+### Changed
+* Update dependency `wicg-inert` from `v2` to `v3`.
+
 3.40.0 - (February 4, 2020)
 ------------------
 ### Changed

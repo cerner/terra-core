@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfileImage from '../../../ProfileImage';
-import exampleProfileImage from '../../doc/example/150x150.jpg';
+import exampleProfileImage from '../../assets/150x150.jpg';
 
 const ProfileImageDefault = () => (
   <div>

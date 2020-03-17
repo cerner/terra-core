@@ -1,7 +1,7 @@
 {
   "name": "terra-i18n",
   "main": "lib/I18n.js",
-  "version": "4.21.0",
+  "version": "4.25.0",
   "description": "The terra-i18n package provides on-demand internationalization of React components.",
   "repository": {
     "type": "git",
@@ -29,8 +29,7 @@
     "classnames": "^2.2.5",
     "intl": "^1.2.5",
     "intl-locales-supported": "^1.8.4",
-    "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.23.0"
+    "prop-types": "^15.5.8"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -38,6 +37,9 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js"
+    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }
