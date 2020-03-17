@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import { SelectableDemographicsBanner } from 'terra-demographics-banner';
+import SelectableDemographicsBanner from 'terra-demographics-banner/lib/SelectableDemographicsBanner';
 import demographicsImage from '../assets/demographicsCat.jpg';
 import styles from '../example/DemographicsBannerSmallContainer.module.scss';
 

@@ -10,6 +10,10 @@ const propTypes = {
    * Child Nodes that are rendered within background tile.
    */
   children: PropTypes.node,
+  /**
+   * boolean value to identify whether banner is deceased or not.
+   */
+  isDeceased: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -18,10 +22,10 @@ const defaultProps = {
 
 const BackgroundTile = ({
   children,
-  ...customProps
+  isDeceased,
 }) => {
   const backgroundTileClassNames = cx([
-    { deceased: customProps.deceasedDate },
+    { deceased: isDeceased },
     'background-tile',
   ]);
 

@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
 import classNames from 'classnames/bind';
 import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
-import Button from 'terra-button';
 import IconInfo from 'terra-icon/lib/icon/IconInformation';
-import DemographicsBannerDisplay from '../DemographicsBannerDisplay';
-import BackgroundTile from './_BackgroundTile';
-import SelectableTile from './_SelectableTile';
-import styles from './SelectableDemographicsBanner.module.scss';
+import DemographicsBannerDisplay from './DemographicsBannerDisplay';
+import BackgroundTile from './selectable-demographics-banner/_BackgroundTile';
+import SelectableTile from './selectable-demographics-banner/_SelectableTile';
+import styles from './selectable-demographics-banner/SelectableDemographicsBanner.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -22,15 +21,15 @@ const propTypes = {
    */
   age: PropTypes.string,
   /**
-   * The persons date of birth
+   * The persons date of birth.
    */
   dateOfBirth: PropTypes.string,
   /**
-   * The person's deceased date. Will display the banner as deceased if this value is provided
+   * The person's deceased date. Will display the banner as deceased if this value is provided.
    */
   deceasedDate: PropTypes.string,
   /**
-   * Gender of the Person
+   * Gender of the Person.
    */
   gender: PropTypes.string,
   /**
@@ -38,7 +37,7 @@ const propTypes = {
    */
   gestationalAge: PropTypes.string,
   /**
-   * Additional key value identifiers of a person's demographic information
+   * Additional key value identifiers of a person's demographic information.
    */
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
@@ -48,11 +47,11 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Full Name of the person
+   * Full Name of the person.
    */
   personName: PropTypes.string,
   /**
-   * URL of Photo to display in the banner
+   * URL of Photo to display in the banner.
    */
   photo: PropTypes.string,
   /**
@@ -76,7 +75,7 @@ const propTypes = {
    */
   infoButtonId: PropTypes.string,
   /**
-  * Id for Selectable Tile.
+   * Id for Selectable Tile.
   */
   selectableTileId: PropTypes.string,
 };
@@ -98,9 +97,16 @@ const defaultProps = {
 };
 
 const SelectableDemographicsBanner = ({
+  applicationContent,
   age,
   dateOfBirth,
+  deceasedDate,
   gender,
+  gestationalAge,
+  identifiers,
+  photo,
+  postMenstrualAge,
+  preferredFirstName,
   intl,
   personName,
   infoButtonOnClick,
@@ -112,8 +118,6 @@ const SelectableDemographicsBanner = ({
   const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
 
   const handleKeyDown = (event) => {
-    console.log('keyspace', KEY_SPACE);
-    console.log('keyspace', KEY_RETURN);
     if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
       event.preventDefault();
     }
@@ -133,7 +137,6 @@ const SelectableDemographicsBanner = ({
 
   const DemographicsBannerSelectableTile = (
     <DemographicsBannerDisplay
-      {...customProps}
       className={cx('selectable-demographics-banner')}
       age={age || noDataProvided}
       dateOfBirth={dateOfBirth || noDataProvided}
@@ -150,16 +153,16 @@ const SelectableDemographicsBanner = ({
   );
 
   return (
-    <BackgroundTile deceasedDate={(customProps.deceasedDate)}>
+    <BackgroundTile {...customProps} isDeceased={!!(deceasedDate)}>
       <SelectableTile id={selectableTileId} onClick={handleOnClick} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
         {DemographicsBannerSelectableTile}
       </SelectableTile>
       <div className={cx('divider')} />
-      <div className={cx('info-button')}>
-        {/* Needs Translation */}
-        <div className={cx('info-text')}>Info</div>
-        <Button id={infoButtonId} icon={<IconInfo />} variant="utility" isIconOnly text="info" onClick={infoButtonOnClick} />
-      </div>
+      {/* Needs Translation */}
+      <button className={cx('info-button')} type="button" role="link" id={infoButtonId} onClick={infoButtonOnClick}>
+        Info
+        <IconInfo />
+      </button>
     </BackgroundTile>
   );
 };

@@ -19,17 +19,6 @@
     flex-direction: row;
   }
 
-  .deceased {
-    background-clip: border-box;
-    background-color: var(--terra-demographics-banner-deceased-selectable-background-color, #1c1f21);
-    background-image: var(--terra-demographics-banner-deceased-selectable-background-image);
-    color: var(--terra-demographics-banner-deceased-selectable-color, #fff);
-
-    .profile-photo {
-      opacity: var(--terra-demographics-banner-deceased-selectable-profile-photo-opacity, 0.7);
-    }
-  }
-
   .selectable-tile {
     border: solid 1px transparent;
     border-radius: 4px;
@@ -46,6 +35,21 @@
     }
   }
 
+  .deceased {
+    background-clip: border-box;
+    background-color: var(--terra-demographics-banner-deceased-selectable-background-color, #1c1f21);
+    background-image: var(--terra-demographics-banner-deceased-selectable-background-image);
+    color: var(--terra-demographics-banner-deceased-selectable-color, #fff);
+
+    .profile-photo {
+      opacity: var(--terra-demographics-banner-deceased-selectable-profile-photo-opacity, 0.7);
+    }
+
+    .selectable-tile {
+      box-shadow: 0 0 3px 1px rgb(0, 0, 0);
+    }
+  }
+
   .divider {
     border: 1px solid #fff;
     border-radius: 1.5rem;
@@ -54,15 +58,12 @@
   }
 
   .info-button {
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    margin: 0.5rem;
-    padding: 0.714em;
-  }
-
-  .info-text {
+    background-color: transparent;
+    border: none;
     color: #fff;
+    cursor: pointer;
     font-size: 1rem;
+    margin: 0.5rem;
+    width: 3.5rem;
   }
 }

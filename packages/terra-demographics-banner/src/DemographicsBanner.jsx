@@ -13,15 +13,15 @@ const propTypes = {
    */
   age: PropTypes.string,
   /**
-   * The persons date of birth
+   * The persons date of birth.
    */
   dateOfBirth: PropTypes.string,
   /**
-   * The person's deceased date. Will display the banner as deceased if this value is provided
+   * The person's deceased date. Will display the banner as deceased if this value is provided.
    */
   deceasedDate: PropTypes.string,
   /**
-   * Gender of the Person
+   * Gender of the Person.
    */
   gender: PropTypes.string,
   /**
@@ -29,7 +29,7 @@ const propTypes = {
    */
   gestationalAge: PropTypes.string,
   /**
-   * Additional key value identifiers of a person's demographic information
+   * Additional key value identifiers of a person's demographic information.
    */
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
@@ -39,11 +39,11 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Full Name of the person
+   * Full Name of the person.
    */
   personName: PropTypes.string,
   /**
-   * Photo to display in the banner
+   * Photo to display in the banner.
    */
   photo: PropTypes.node,
   /**
@@ -83,7 +83,6 @@ const DemographicsBanner = ({
   return (
     <DemographicsBannerDisplay
       {...customProps}
-      className="demographics-banner"
       age={age || noDataProvided}
       dateOfBirth={dateOfBirth || noDataProvided}
       gender={gender || noDataProvided}

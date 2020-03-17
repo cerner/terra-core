@@ -30,6 +30,7 @@ export default (props) => {
   } = props;
 
   const mainClasses = cx([
+    'demographics-banner',
     customProps.className,
     { deceased: deceasedDate },
   ]);

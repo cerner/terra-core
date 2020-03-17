@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SelectableDemographicsBanner from '../../../../selectable-demographics-banner/SelectableDemographicsBanner';
+import SelectableDemographicsBanner from '../../../../SelectableDemographicsBanner';
 import demographicsImage from '../../../doc/assets/demographicsCat.jpg';
 
 export default () => {

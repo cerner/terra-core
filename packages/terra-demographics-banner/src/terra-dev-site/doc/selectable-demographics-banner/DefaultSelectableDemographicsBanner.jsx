@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SelectableDemographicsBanner } from 'terra-demographics-banner';
+import SelectableDemographicsBanner from 'terra-demographics-banner/lib/SelectableDemographicsBanner';
 
 const DefaultSelectableDemographicsBanner = () => {
   const [message, setMessage] = useState('');
