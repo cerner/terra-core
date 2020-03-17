@@ -5,7 +5,7 @@ import styles from './SwitchCommonExample.module.scss';
 
 const cx = classNames.bind(styles);
 
-export default () => (
+const DisabledSwitch = () => (
   <div className={cx('container')}>
     <Switch
       id="disabledSwitch"
@@ -16,3 +16,5 @@ export default () => (
     />
   </div>
 );
+
+export default DisabledSwitch;

@@ -5,7 +5,7 @@ import styles from './SwitchCommonExample.module.scss';
 
 const cx = classNames.bind(styles);
 
-export default () => {
+const DefaultSwitch = () => {
   const [value, setValue] = useState(true);
   return (
     <div className={cx('container')}>
@@ -14,8 +14,10 @@ export default () => {
         labelId="label1"
         checked={value}
         label="Label"
-        onChange={(event, checked) => { setValue(!checked); }}
+        onChange={(checked, event) => { setValue(!checked); }}
       />
     </div>
   );
 };
+
+export default DefaultSwitch;

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import Switch from 'terra-switch';
 
-export default () => {
+const SwitchWithOnChange = () => {
   const [value, setValue] = useState(true); // makes switch on by default
   return (
-    <div>
-      <Switch
-        id="defaultSwitchOn"
-        labelId="label3"
-        checked={value}
-        label="Label"
-        onChange={(event, checked) => { setValue(!checked); }}
-      />
-    </div>
+    <Switch
+      id="defaultSwitchOn"
+      labelId="label3"
+      checked={value}
+      label="Label"
+      onChange={(checked, event) => { setValue(!checked); }}
+    />
   );
 };
+
+export default SwitchWithOnChange;
