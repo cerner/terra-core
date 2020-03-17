@@ -9,7 +9,7 @@ const SwitchWithOnChange = () => {
       labelId="label3"
       checked={value}
       label="Label"
-      onChange={(checked, event) => { setValue(!checked); }}
+      onChange={setValue}
     />
   );
 };

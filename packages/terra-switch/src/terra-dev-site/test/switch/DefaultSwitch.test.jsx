@@ -14,7 +14,7 @@ const DefaultSwitch = () => {
         labelId="label1"
         checked={value}
         label="Label"
-        onChange={(checked, event) => { setValue(!checked); }}
+        onChange={setValue}
       />
     </div>
   );

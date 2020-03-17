@@ -14,7 +14,7 @@ const SwitchWithLongLabelText = () => {
         labelId="label3"
         checked={value}
         label="Long Label Text Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label Text"
-        onChange={(checked, event) => { setValue(!checked); }}
+        onChange={setValue}
       />
     </div>
   );

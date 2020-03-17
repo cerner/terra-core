@@ -65,7 +65,7 @@ const Switch = (props) => {
     // This will set focus on the button when clicked.
     sliderButton.current.focus();
     if (onChange) {
-      onChange(checked, event);
+      onChange(!checked, event);
     }
   };
 
@@ -78,7 +78,7 @@ const Switch = (props) => {
   const handleKeyUp = (event) => {
     if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
       if (onChange) {
-        onChange(checked, event);
+        onChange(!checked, event);
       }
     }
   };
