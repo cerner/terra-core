@@ -1,7 +1,7 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
-import SelectableDemographicsBanner from '../../src/selectable-demographics-banner/SelectableDemographicsBanner';
+import SelectableDemographicsBanner from '../../src/SelectableDemographicsBanner';
 
 it('renders a blank banner wrapper', () => {
   const tileClick = jest.fn();
