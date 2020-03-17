@@ -30,7 +30,7 @@ export default (props) => {
     ...customProps
   } = props;
 
-  let mainClasses = cx('large-demographics-banner', { deceased: deceasedDate });
+  let mainClasses = cx(['demographics-banner', 'large-demographics-banner', { deceased: deceasedDate }]);
   if (customProps.className) {
     mainClasses = `${mainClasses} ${customProps.className}`;
   }
