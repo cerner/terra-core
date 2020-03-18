@@ -3,7 +3,8 @@ import Heading from 'terra-heading';
 import classNames from 'classnames/bind';
 import styles from './colors.module.scss';
 
-import StylesDoc from '../example/colors.module.scss?dev-site-codeblock';
+// eslint-disable-next-line import/order
+import StylesDoc from 'terra-heading/docs/colors.doc.scss?dev-site-codeblock';
 
 const cx = classNames.bind(styles);
 
