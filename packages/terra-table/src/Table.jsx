@@ -263,6 +263,7 @@ const createRow = (tableData, rowData, rowIndex, sectionId) => {
       isDisabled={rowData.isDisabled}
       isStriped={rowData.isStriped}
       dividerStyle={tableData.dividerStyle}
+      refCallback={rowData.refCallback}
     >
       {createCheckCell(rowData, tableData.rowStyle, tableData.checkStyle)}
       {rowData.cells.map((cell, colIndex) => {
