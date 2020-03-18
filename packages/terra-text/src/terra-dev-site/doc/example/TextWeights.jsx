@@ -7,6 +7,12 @@ import Text from 'terra-text';
 
 const TextWeights = () => (
   <div>
+    <p>
+      The `weight` prop can be used to specify the weight or boldness of the `Text` component. Heading components default to a `font-weight` of `700`. The `weight` prop accepts one of the following numbers:
+      <br />
+      <br />
+      `200`, `400`, `700`
+    </p>
     <Text fontSize={18} weight={200}>Font Weight: 200</Text>
     <br />
     <Text fontSize={18} weight={300}>Font Weight: 300</Text>
