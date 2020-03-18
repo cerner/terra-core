@@ -21,7 +21,7 @@ export default function ButtonWithModal() {
   });
 
   return (
-    <>
+    <div>
       <Button
         id="modal-open-button"
         text="Open Modal"
@@ -31,7 +31,7 @@ export default function ButtonWithModal() {
         This is an open dialog window
         <button ref={dialogElement} type="button">Test Button</button>
       </dialog>
-    </>
+    </div>
   );
 }
 
