@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import styles from './Switch.module.scss';
 
 const cx = classNames.bind(styles);
@@ -16,7 +15,7 @@ const propTypes = {
   /**
    * Id of the Switch button.
    */
-  id: PropTypes.string.isRequired,
+  buttonId: PropTypes.string.isRequired,
   /**
    * Id of the Switch label.
    */
@@ -48,7 +47,7 @@ const defaultProps = {
 
 const Switch = (props) => {
   const {
-    id,
+    buttonId,
     labelId,
     checked,
     disabled,
@@ -66,20 +65,6 @@ const Switch = (props) => {
     sliderButton.current.focus();
     if (onChange) {
       onChange(!checked, event);
-    }
-  };
-
-  const handleOnKeyDown = (event) => {
-    if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
-      event.preventDefault();
-    }
-  };
-
-  const handleKeyUp = (event) => {
-    if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
-      if (onChange) {
-        onChange(!checked, event);
-      }
     }
   };
 
@@ -109,8 +94,8 @@ const Switch = (props) => {
   delete customProps.className;
 
   return (
-    <div className={mainClasses} {...customProps}>
-      <label htmlFor={id}>
+    <div {...customProps} className={mainClasses}>
+      <label htmlFor={buttonId}>
         <div className={cx('switch-container')}>
           <div className={cx('label-container')}>
             <span id={labelId} className={cx('label-text')}>{label}</span>
@@ -120,7 +105,7 @@ const Switch = (props) => {
             <span className={trayClassNames}>
               <button
                 type="button"
-                id={id}
+                id={buttonId}
                 disabled={disabled}
                 aria-checked={checked}
                 aria-labelledby={labelId}
@@ -128,8 +113,6 @@ const Switch = (props) => {
                 role="switch"
                 tabIndex="0"
                 onClick={handleClick}
-                onKeyDown={handleOnKeyDown}
-                onKeyUp={handleKeyUp}
                 ref={sliderButton}
               />
             </span>

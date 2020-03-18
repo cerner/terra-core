@@ -38,8 +38,6 @@ exports[`Switch should render a default component 1`] = `
             disabled={false}
             id="defaultSwitch"
             onClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
             role="switch"
             tabIndex="0"
             type="button"
@@ -80,18 +78,15 @@ exports[`Switch should render as disabled when set 1`] = `
         className="switch"
       >
         <span
-          className="tray unselected"
+          className="tray unselected is-disabled"
         >
           <button
             aria-checked={false}
             aria-labelledby="label2"
-            className="slider"
-            disabled={false}
+            className="slider is-disabled"
+            disabled={true}
             id="disabledSwitch"
-            isDisabled={true}
             onClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
             role="switch"
             tabIndex="0"
             type="button"

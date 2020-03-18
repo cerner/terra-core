@@ -2,7 +2,7 @@ import React from 'react';
 import Switch from '../../src/Switch';
 
 describe('Switch', () => {
-  const defaultRender = <Switch id="defaultSwitch" labelId="label1" label="default" />;
+  const defaultRender = <Switch buttonId="defaultSwitch" labelId="label1" label="default" />;
 
   // Snapshot Tests
   it('should render a default component', () => {
@@ -11,8 +11,9 @@ describe('Switch', () => {
   });
 
   it('should render as disabled when set', () => {
-    const button = shallow(<Switch id="disabledSwitch" labelId="label2" label="Label" isDisabled />);
+    const button = shallow(<Switch buttonId="disabledSwitch" labelId="label2" label="Label" disabled />);
     expect(button).toMatchSnapshot();
+    expect(button.find('.slider').prop('disabled')).toBe(true);
   });
 
   // Prop Tests

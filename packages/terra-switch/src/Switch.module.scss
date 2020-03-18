@@ -35,7 +35,7 @@
     flex: 0 0 auto;
     height: 2.5714rem;
     margin: var(--terra-switch-margin, 0.5rem);
-    outline: none;
+    outline: 0;
     position: relative;
     width: 3.4285rem;
   }
@@ -104,12 +104,12 @@
 
   .slider {
     background-color: var(--terra-switch-slider-default-background-color, #fff);
-    border: var(--terra-switch-slider-border, none);
+    border: var(--terra-switch-slider-border, 0);
     border-radius: var(--terra-switch-slider-border-radius, 1.07142rem);
     box-shadow: var(--terra-switch-slider-box-shadow, 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.3));
     height: var(--terra-switch-slider-height, 1.28571rem);
     left: 0.08rem;
-    outline: none;
+    outline: 0;
     overflow: hidden;
     position: absolute;
     top: 0.08rem;
@@ -131,7 +131,7 @@
     }
 
     &:hover:not(.is-disabled) {
-      border: var(--terra-switch-slider-hover-border, none);
+      border: var(--terra-switch-slider-hover-border, 0);
       box-shadow: var(--terra-switch-slider-hover-box-shadow, 2px 0 2px 0 rgba(0, 0, 0, 0.2), -2px 0 2px 0 rgba(0, 0, 0, 0.2), 
       1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.2));
     }
