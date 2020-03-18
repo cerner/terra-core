@@ -265,7 +265,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
     before(() => {
       browser.url('/#/raw/tests/terra-button/button/button-modal-focus');
       browser.click('#modal-open-button');
-      browser.click('#modal-close-button');
+      browser.pause(300);
     });
 
     Terra.it.validatesElement('Button has focus');

@@ -1,38 +1,37 @@
-import React, { useState } from 'react';
-import AbstractModal from 'terra-abstract-modal';
-import classNames from 'classnames/bind';
-import styles from './ButtonTestCommon.module.scss';
+import React, { useState, useRef, useEffect } from 'react';
 import Button from '../../../Button';
 
-const cx = classNames.bind(styles);
-
 export default function ButtonWithModal() {
-  const [isOpen, setModalOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const dialogElement = useRef(null);
 
-  const handleOpenModal = () => {
-    setModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setModalOpen(false);
-  };
+  useEffect(() => {
+    const dialogWindow = document.activeElement;
+    if (dialogElement) {
+      dialogElement.current.focus();
+    }
+    return () => {
+      setTimeout(() => {
+        if (dialogWindow) {
+          dialogWindow.focus();
+          setIsOpen(false);
+        }
+      }, 200);
+    };
+  });
 
   return (
-    <div id="modal">
-      <AbstractModal
-        ariaLabel="Terra Modal"
-        isOpen={isOpen}
-        onRequestClose={handleCloseModal}
-        classNameModal={cx('test-background-class')}
-      >
-        <div>
-          <h1>Terra Modal</h1>
-          <h2>Subtitle</h2>
-          <Button id="modal-close-button" text="Close Modal" onClick={handleCloseModal} />
-        </div>
-      </AbstractModal>
-      <Button id="modal-open-button" text="Open Modal" onClick={handleOpenModal} />
-    </div>
+    <>
+      <Button
+        id="modal-open-button"
+        text="Open Modal"
+        onClick={() => setIsOpen(true)}
+      />
+      <dialog open={isOpen}>
+        This is an open dialog window
+        <button ref={dialogElement} type="button">Test Button</button>
+      </dialog>
+    </>
   );
 }
 
