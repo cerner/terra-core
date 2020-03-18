@@ -13,7 +13,7 @@ exports[`renders large banner that contains all valid information 1`] = `
       },
     ]
   }
-  className="large-demographics-banner"
+  className="demographics-banner large-demographics-banner"
 >
   <Avatar
     alt="Johnathon Doe"

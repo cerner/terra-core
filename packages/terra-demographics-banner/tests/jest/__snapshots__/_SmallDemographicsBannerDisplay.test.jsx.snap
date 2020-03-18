@@ -13,7 +13,7 @@ exports[`renders small banner that contains all valid information 1`] = `
       },
     ]
   }
-  className=""
+  className="demographics-banner"
 >
   <h1
     className="person-name"

@@ -4,7 +4,6 @@ exports[`renders a blank banner wrapper 1`] = `
 <DemographicsBannerDisplay
   age="Terra.demographicsBanner.noDataProvided"
   applicationContent={null}
-  className="demographics-banner"
   dateOfBirth="Terra.demographicsBanner.noDataProvided"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
@@ -45,7 +44,6 @@ exports[`renders the banner wrapper with all props 1`] = `
       },
     ]
   }
-  className="demographics-banner"
   dateOfBirth="May 9, 1993"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"

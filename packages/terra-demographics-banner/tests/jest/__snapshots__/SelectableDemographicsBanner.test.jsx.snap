@@ -2,7 +2,7 @@
 
 exports[`renders a blank banner wrapper 1`] = `
 <BackgroundTile
-  deceasedDate={null}
+  isDeceased={false}
 >
   <SelectableTile
     onClick={[Function]}
@@ -33,38 +33,35 @@ exports[`renders a blank banner wrapper 1`] = `
   <div
     className="divider"
   />
-  <div
+  <button
     className="info-button"
+    onClick={[MockFunction]}
+    role="link"
+    type="button"
   >
-    <div
-      className="info-text"
-    >
-      Info
-    </div>
-    <Button
-      icon={
-        <IconInformation
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
-      onClick={[MockFunction]}
-      text="info"
-      type="button"
-      variant="utility"
+    Info
+    <IconInformation
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
     />
-  </div>
+  </button>
 </BackgroundTile>
 `;
 
 exports[`renders the banner wrapper with all props 1`] = `
 <BackgroundTile
-  deceasedDate={null}
+  applicationRows={
+    Array [
+      Object {
+        "Address": "1501 Walnut St. Apt #123",
+        "City": "Kansas City MO",
+      },
+      Object {
+        "ZIP": 64108,
+      },
+    ]
+  }
+  isDeceased={false}
 >
   <SelectableTile
     id="selectableDemographics"
@@ -74,24 +71,7 @@ exports[`renders the banner wrapper with all props 1`] = `
   >
     <DemographicsBannerDisplay
       age="25 Years"
-      applicationContent={
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      }
-      applicationRows={
-        Array [
-          Object {
-            "Address": "1501 Walnut St. Apt #123",
-            "City": "Kansas City MO",
-          },
-          Object {
-            "ZIP": 64108,
-          },
-        ]
-      }
+      applicationContent={null}
       className="selectable-demographics-banner"
       dateOfBirth="May 9, 1993"
       dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
@@ -99,64 +79,44 @@ exports[`renders the banner wrapper with all props 1`] = `
       deceasedDate={null}
       deceasedDateLabel="Terra.demographicsBanner.deceased"
       gender="Male"
-      gestationalAge="April 5, 2016"
+      gestationalAge={null}
       gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
       gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
-      identifiers={
-        Object {
-          "MRN": 12343,
-          "REA": "3JSDA",
-        }
-      }
+      identifiers={Object {}}
       personName="Johnathon Doe"
-      photo=""
-      postMenstrualAge="April 7, 2016"
+      postMenstrualAge={null}
       postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
       postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
-      preferredFirstName="John"
+      preferredFirstName={null}
     />
   </SelectableTile>
   <div
     className="divider"
   />
-  <div
+  <button
     className="info-button"
+    id="infoButton"
+    onClick={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    role="link"
+    type="button"
   >
-    <div
-      className="info-text"
-    >
-      Info
-    </div>
-    <Button
-      icon={
-        <IconInformation
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      id="infoButton"
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
-      onClick={
-        [MockFunction] {
-          "calls": Array [
-            Array [],
-          ],
-          "results": Array [
-            Object {
-              "type": "return",
-              "value": undefined,
-            },
-          ],
-        }
-      }
-      text="info"
-      type="button"
-      variant="utility"
+    Info
+    <IconInformation
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
     />
-  </div>
+  </button>
 </BackgroundTile>
 `;
