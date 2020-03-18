@@ -524,6 +524,42 @@ exports[`Table should render a Table with padding standard 1`] = `
 </div>
 `;
 
+exports[`Table should render a Table with row and refCallback 1`] = `
+<div
+  aria-describedby="test-id"
+  aria-rowcount={1}
+  className="table fill outer"
+  role="grid"
+>
+  <VisuallyHiddenText
+    id="test-id"
+    text="Test summary description"
+  />
+  <div
+    className="body"
+    role="rowgroup"
+    tabIndex={0}
+  >
+    <Row
+      aria-rowindex={1}
+      isDisabled={false}
+      isSelectable={false}
+      isSelected={false}
+      isStriped={false}
+      key="row-key"
+      refCallback={[MockFunction]}
+    >
+      <Cell
+        key="child-cell-key"
+        removeInner={false}
+      >
+        content
+      </Cell>
+    </Row>
+  </div>
+</div>
+`;
+
 exports[`Table should render a Table with row style toggle 1`] = `
 <div
   aria-describedby="test-id"

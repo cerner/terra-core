@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.25.0 - (March 10, 2020)
+------------------
+### Fixed
+* Fixed inconsistent behavior of `object-fit` prop in IE by calling the `objectFitImages` API in `componentDidUpdate`.
+
 3.24.0 - (February 25, 2020)
 ------------------
 ### Changed
