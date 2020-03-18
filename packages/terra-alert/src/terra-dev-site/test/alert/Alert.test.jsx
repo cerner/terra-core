@@ -34,6 +34,7 @@ class AlertActionButton extends React.Component {
   render() {
     return (
       <div>
+        {/* This Test has been added to test the functionality on JAWS and Voice Over */}
         <Button text="Action" onClick={this.popAlert} />
         {(this.state.showAlert)
           ? this.alert : ''}
