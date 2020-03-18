@@ -3,7 +3,7 @@ import Switch from 'terra-switch';
 
 const DefaultSwitch = () => (
   <Switch
-    id="defaultSwitch"
+    buttonId="defaultSwitch"
     labelId="label1"
     label="Label"
     className="default-switch"

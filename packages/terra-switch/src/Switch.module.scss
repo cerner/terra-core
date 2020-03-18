@@ -20,15 +20,15 @@
     color: var(--terra-switch-label-color, #1c1f21);
     font-size: var(--terra-switch-label-font-size, 1rem);
     font-weight: var(--terra-switch-label-font-weight, normal);
-    padding: var(--terra-switch-label-label-padding);
+    padding: var(--terra-switch-label-padding);
     word-wrap: break-word;
   }
 
   .status-label-text {
-    color: var(--terra-switch-status-label-color, #1c1f21);
+    color: var(--terra-switch-status-label-color, #64696c);
     font-size: var(--terra-switch-status-label-font-size, 1rem);
     font-weight: var(--terra-switch-status-label-font-weight, normal);
-    padding: var(--terra-switch-status-label-label-padding);
+    padding: var(--terra-switch-status-label-padding);
   }
 
   .switch {    
@@ -40,8 +40,10 @@
     width: 3.4285rem;
   }
 
-  .selected {
+  .tray.selected {
     background-color: var(--terra-switch-tray-selected-background-color, #0079be);
+    border: var(--terra-switch-tray-selected-border, 1px solid #01639e);
+    box-shadow: var(--terra-switch-tray-selected-box-shadow, none);
 
     &.is-disabled {
       background-color: var(--terra-switch-tray-selected-disabled-background-color, #434a4d);
@@ -50,11 +52,12 @@
 
     &:hover:not(.is-disabled) {
       background-color: var(--terra-switch-tray-selected-hover-background-color, #0065a3);
+      border: var(--terra-switch-tray-selected-hover-border, 1px solid #01639e);
       box-shadow: var(--terra-switch-tray-selected-hover-box-shadow, inset 0 1px 5px 0 rgba(0, 0, 0, 0.4));
     }
   }
 
-  .unselected {
+  .tray.unselected {
     background-color: var(--terra-switch-tray-default-background-color, #dedfe0);
 
     &.is-disabled {
@@ -64,22 +67,32 @@
 
     &:hover:not(.is-disabled) {
       background-color: var(--terra-switch-tray-default-hover-background-color, #b9bbbc);
+      border: var(--terra-switch-tray-default-hover-border, 1px solid #909496);
       box-shadow: var(--terra-switch-tray-default-hover-box-shadow, inset 0 1px 5px 0 rgba(0, 0, 0, 0.3));
     }
   }
 
   .tray > [aria-checked='true'] {
     box-shadow: var(--terra-switch-slider-selected-box-shadow, 0 0 4px 1px rgba(0, 0, 0, 0.3), -1px 0 0 0 #01639e);
-    transform: translateX(0.8rem);
+    transform: var(--terra-switch-slider-selected-transform, translateX(0.8rem));
 
     &:hover:not(.is-disabled) {
+      background-color: var(--terra-switch-slider-selected-hover-background-color, #fff);
+      border: var(--terra-switch-slider-selected-hover-border, 0);
       box-shadow: var(--terra-switch-slider-selected-hover-box-shadow, 2px 0 2px 0 rgba(0, 0, 0, 0.2), -2px 0 2px 0 rgba(0, 0, 0, 0.2), 
       -1px 0 0 0 #01639e, 0 0 4px 1px rgba(0, 0, 0, 0.2));
     }
 
     &:active:not(.is-disabled) {
+      background-color: var(--terra-switch-slider-selected-active-background-color, #fff);
+      border: var(--terra-switch-slider-selected-active-border, 0);
       box-shadow: var(--terra-switch-slider-selected-active-box-shadow, inset 0 0 0 1px #fff, inset 5px 2px 4px 2px #e6e7e8, 2px 0 2px 0 rgba(0, 0, 0, 0.2),
       -2px 0 2px 0 rgba(0, 0, 0, 0.2), -1px 0 0 0 #01639e, 0 0 4px 1px rgba(0, 0, 0, 0.2)); // pressed state.
+    }
+
+    &:focus:not(.is-disabled) {
+      background-color: var(--terra-switch-slider-selected-focus-background-color, #fff);
+      border: var(--terra-switch-slider-selected-focus-border, 0);
     }
   }
   
@@ -125,12 +138,14 @@
 
     &:focus:not(.is-disabled) {
       background-color: var(--terra-switch-slider-focus-background-color, #fff);
+      border: var(--terra-switch-slider-focus-border, 0);
       box-shadow: var(--terra-switch-slider-focus-box-shadow, 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.3));
       outline: var(--terra-switch-slider-focus-outline, 0.14285rem dashed #000);
-      outline-width: var(--terra-switch-slider-focus-outline-width, 0.14285rem);
+      outline-offset: var(--terra-switch-slider-focus-outline-offset, 0.14285rem);
     }
 
     &:hover:not(.is-disabled) {
+      background-color: var(--terra-switch-slider-hover-background-color, #fff);
       border: var(--terra-switch-slider-hover-border, 0);
       box-shadow: var(--terra-switch-slider-hover-box-shadow, 2px 0 2px 0 rgba(0, 0, 0, 0.2), -2px 0 2px 0 rgba(0, 0, 0, 0.2), 
       1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.2));
@@ -138,6 +153,7 @@
 
     &:active:not(.is-disabled) {
       background-color: var(--terra-switch-slider-active-background-color, #fff);
+      border: var(--terra-switch-slider-active-border, 0);
       box-shadow: var(--terra-switch-slider-active-box-shadow, inset 0 0 0 1px #fff, inset 5px 2px 4px 2px #e6e7e8, 2px 0 2px 0 rgba(0, 0, 0, 0.2),
       -2px 0 2px 0 rgba(0, 0, 0, 0.2), 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.2)); // pressed state.
     }

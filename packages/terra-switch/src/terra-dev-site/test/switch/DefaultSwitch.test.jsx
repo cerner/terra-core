@@ -10,7 +10,7 @@ const DefaultSwitch = () => {
   return (
     <div className={cx('container')}>
       <Switch
-        id="defaultSwitch"
+        buttonId="defaultSwitch"
         labelId="label1"
         checked={value}
         label="Label"

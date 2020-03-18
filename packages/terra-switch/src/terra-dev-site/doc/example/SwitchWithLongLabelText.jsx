@@ -5,7 +5,7 @@ const SwitchWithLongLabelText = () => {
   const [value, setValue] = useState(false);
   return (
     <Switch
-      id="switchWithLongLabel"
+      buttonId="switchWithLongLabel"
       labelId="label4"
       checked={value}
       label="Long Label Text Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label Text"

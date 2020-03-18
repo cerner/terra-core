@@ -5,7 +5,7 @@ const SwitchWithOnChange = () => {
   const [value, setValue] = useState(true); // makes switch on by default
   return (
     <Switch
-      id="defaultSwitchOn"
+      buttonId="defaultSwitch1"
       labelId="label3"
       checked={value}
       label="Label"

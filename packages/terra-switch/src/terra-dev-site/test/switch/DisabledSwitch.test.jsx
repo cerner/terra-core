@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const DisabledSwitch = () => (
   <div className={cx('container')}>
     <Switch
-      id="disabledSwitch"
+      buttonId="disabledSwitch"
       labelId="label2"
       checked
       label="Label"
