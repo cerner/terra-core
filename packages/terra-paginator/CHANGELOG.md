@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed cometic effects of text-wrapping
 
 2.41.0 - (March 10, 2020)
 ------------------
