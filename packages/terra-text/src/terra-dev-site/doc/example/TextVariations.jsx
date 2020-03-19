@@ -3,8 +3,6 @@ import Text from 'terra-text';
 import classNames from 'classnames/bind';
 import styles from './colors.module.scss';
 
-// You can mix and match props on the `<Text />` component to create various text styles.
-
 const cx = classNames.bind(styles);
 
 const TextVariations = () => (
