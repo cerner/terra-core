@@ -3,14 +3,10 @@ import ProgressBar from 'terra-progress-bar';
 import classNames from 'classnames/bind';
 import styles from './colors.module.scss';
 
-// eslint-disable-next-line import/order
-import StylesDoc from 'terra-progress-bar/docs/colors.doc.scss?dev-site-codeblock';
-
 const cx = classNames.bind(styles);
 
 const ProgressBarColor = () => (
   <div>
-    <StylesDoc />
     <ProgressBar valueText="5%" value={5} max={10} colorClass={cx(['color-bar-example-1'])} />
     <br />
     <br />
