@@ -9,7 +9,7 @@ const HeadingVisuallyHidden = () => (
       <code>&lt;Heading /&gt;</code>
       {' '}
       component using the
-      <code>isVisuallyHidden</code>
+      <code> isVisuallyHidden</code>
       {' '}
       prop.
     </p>
