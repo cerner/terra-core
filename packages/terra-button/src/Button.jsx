@@ -199,11 +199,6 @@ class Button extends React.Component {
   }
 
   handleMouseDown(event) {
-    // Prevent button from showing focus styles when clicked
-    this.shouldShowFocus = false;
-    // Wait until after onFocus has been triggered on browsers where it will get triggered for click
-    setTimeout(() => { this.shouldShowFocus = true; });
-
     if (this.props.onMouseDown) {
       this.props.onMouseDown(event);
     }
