@@ -55,7 +55,7 @@ const propTypes = {
    */
   fontSize: PropTypes.oneOf([10, 12, 14, 16, 18, 20, 24, 32, 36, 46, 50, 56, 64, 72, 92, 100]),
   /**
-   * Sets the text size. One of `200`, `300`, `400`, `700`.
+   * The prop can be used to specify the weight or boldness of the Text component. One of `200`, `300`, `400`, `700`.
    */
   weight: PropTypes.oneOf([200, 300, 400, 700]),
   /**
