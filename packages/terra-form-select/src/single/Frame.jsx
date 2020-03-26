@@ -234,6 +234,7 @@ class Frame extends React.Component {
 
     // Don't blur while focus is on select.
     if (event.relatedTarget === this.select) {
+      this.closeDropdown();
       return;
     }
 
