@@ -16,6 +16,7 @@ const ListSectionTest = () => (
       key="collapsible-section-1"
       isCollapsible
       title="Collapsible Section"
+      role="option"
     >
       <Item key="223" isSelectable isDisabled>
         <p>test collapsible</p>
@@ -26,6 +27,7 @@ const ListSectionTest = () => (
       isCollapsed
       isCollapsible
       title="Collapsed Section"
+      role="option"
     >
       <Item key="323">
         <p>test collapsed</p>

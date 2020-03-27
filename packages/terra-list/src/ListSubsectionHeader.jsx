@@ -97,7 +97,7 @@ const ListSubsectionHeader = ({
 
   const attrSpread = {};
   const Element = `h${level}`;
-  let titleElement = <Element className={cx('title')}>{title}</Element>;
+  let titleElement = <Element aria-level={level} role="heading" aria-expanded={!isCollapsed} className={cx('title')}>{title}</Element>;
   let accordionIcon;
   if (isCollapsible) {
     accordionIcon = (
@@ -114,18 +114,16 @@ const ListSubsectionHeader = ({
     attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '0';
-    attrSpread.role = 'heading';
-    attrSpread['aria-expanded'] = !isCollapsed;
-    attrSpread['aria-level'] = 2;
     attrSpread['data-item-show-focus'] = 'true';
     attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
-  if (role && role.length > 0 && role !== 'none') {
-    attrSpread.role = role;
-  }
   if (isDisabled) {
     attrSpread['aria-disabled'] = true;
+  }
+
+  if (role === 'option') {
+    attrSpread.role = role;
   }
 
   return (

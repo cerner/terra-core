@@ -5,7 +5,10 @@ exports[`should render default 1`] = `
   className="section-header"
 >
   <h1
+    aria-expanded={true}
+    aria-level={1}
     className="title"
+    role="heading"
   >
     test
   </h1>
@@ -14,15 +17,12 @@ exports[`should render default 1`] = `
 
 exports[`should render with callback functions 1`] = `
 <li
-  aria-expanded={true}
-  aria-level={1}
   className="section-header is-collapsible"
   data-item-show-focus="true"
   onBlur={[Function]}
   onClick={[Function]}
   onKeyDown={[Function]}
   onMouseDown={[Function]}
-  role="heading"
   tabIndex="0"
 >
   <div
@@ -36,7 +36,10 @@ exports[`should render with callback functions 1`] = `
     className="fill"
   >
     <h1
+      aria-expanded={true}
+      aria-level={1}
       className="title"
+      role="heading"
     >
       test
     </h1>
@@ -49,7 +52,10 @@ exports[`should render with isCollapsed 1`] = `
   className="section-header"
 >
   <h1
+    aria-expanded={false}
+    aria-level={1}
     className="title"
+    role="heading"
   >
     test
   </h1>
@@ -58,13 +64,10 @@ exports[`should render with isCollapsed 1`] = `
 
 exports[`should render with isCollapsible 1`] = `
 <li
-  aria-expanded={true}
-  aria-level={1}
   className="section-header is-collapsible"
   data-item-show-focus="true"
   onBlur={[Function]}
   onMouseDown={[Function]}
-  role="heading"
   tabIndex="0"
 >
   <div
@@ -78,7 +81,10 @@ exports[`should render with isCollapsible 1`] = `
     className="fill"
   >
     <h1
+      aria-expanded={true}
+      aria-level={1}
       className="title"
+      role="heading"
     >
       test
     </h1>
@@ -91,7 +97,10 @@ exports[`should render with level 1`] = `
   className="section-header"
 >
   <h3
+    aria-expanded={true}
+    aria-level={3}
     className="title"
+    role="heading"
   >
     test
   </h3>
