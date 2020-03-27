@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfileImage from 'terra-profile-image';
-import exampleProfileImage from 'terra-profile-image/lib/terra-dev-site/doc/example/150x150.jpg';
+import exampleProfileImage from 'terra-profile-image/lib/terra-dev-site/assets/150x150.jpg';
 
 const ProfileImageDefault = () => (
   <div>

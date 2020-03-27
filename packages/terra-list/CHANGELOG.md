@@ -7,6 +7,11 @@ Unreleased
 * `isDisabled` prop added to fix accessibility issue to handle selectable and non-selectable items correctly.
 * `role` prop added to list sections, subsection, sectionHeader and subsectionHeader to fix accessibility issues.
 
+4.27.0 - (March 10, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
 4.26.0 - (February 18, 2020)
 ------------------
 ### Added
