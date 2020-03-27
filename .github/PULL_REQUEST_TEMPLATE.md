@@ -1,5 +1,6 @@
 ### Summary
-<!--- Summarize the code changes. Please do not skip this step. -->
+<!--- Summarize and explain the reason behind these code changes. What are the changes, and why are they necessary? -->
+
 
 <!--- Include any issue addressed by this pull request. -->
 <!--- Example: Closes #45 -->
@@ -10,12 +11,16 @@ Closes #
 <!--- Example: https://terra-core-deployed-pr-45.herokuapp.com/ -->
 https://terra-core-deployed-pr-#.herokuapp.com/
 
-### Additional Details
-If you have anything else that you think may be relevant to this issue, list it here. Additional information can help us better understand your changes and speed up the review process.
+### Testing
+<!-- Demonstrate that these changes are stable. How have these changes been verified? -->
 
+### Additional Details
+<!-- List anything else that is relevant to this issue. Additional information will help us better understand your changes and speed up the review process. -->
+
+### Contributing
 Please add your name to the [CONTRIBUTORS.md] file. Adding your name to the [CONTRIBUTORS.md] file signifies agreement to all rights and reservations provided by the [License].
 
-Thanks for contributing to Terra.
+Thank you for contributing to Terra.
 @cerner/terra
 
 [CONTRIBUTORS.md]: ../CONTRIBUTORS.md
