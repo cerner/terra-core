@@ -7,7 +7,7 @@
 The Terra List is a structural component to arrange content within list/listitems.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-list/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-list/list/list)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -23,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

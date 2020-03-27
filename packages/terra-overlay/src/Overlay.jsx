@@ -52,7 +52,7 @@ const propTypes = {
   /**
   * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are '100', '6000', '7000', '8000', or '9000'.
   */
-  zIndex: PropTypes.oneOf(zIndexes),
+  zIndex: PropTypes.oneOf(['100', '6000', '7000', '8000', '9000']),
 };
 
 const defaultProps = {

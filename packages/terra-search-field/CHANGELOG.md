@@ -4,6 +4,31 @@ ChangeLog
 Unreleased
 ----------
 
+3.41.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.40.0 - (March 3, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+3.39.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+3.38.0 - (February 4, 2020)
+------------------
+### Added
+* Added onInput prop.
+
+3.37.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.36.0 - (January 7, 2020)
 ------------------
 ### Changed

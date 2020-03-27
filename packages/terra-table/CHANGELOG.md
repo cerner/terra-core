@@ -4,6 +4,40 @@ ChangeLog
 Unreleased
 ----------
 
+4.5.0 - (March 17, 2020)
+------------------
+### Fixed
+* Fixed refCallBack not working for table rows.
+
+4.4.0 - (March 10, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+4.3.0 - (March 3, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.2.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+4.1.0 - (February 4, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.0.0 - (January 17, 2020)
+------------------
+### Breaking Changes
+* terra-table now only provides controlled variants.
+* Removed Component `SingleSelectTableRows` - No longer supported this uncontrolled variant of table.
+* Removed Component `MultiSelectTableRows` - No longer supported this uncontrolled variant of table.
+* Removed Component `SelectableTableRows` - Selection by index is no longer provided.
+* Removed Component `TableRows` - body element now provided by default within the table.
+
 3.30.0 - (January 7, 2020)
 ------------------
 ### Removed

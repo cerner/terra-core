@@ -7,7 +7,7 @@
 Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-form-fieldset/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-form-fieldset/form-fieldset/form-fieldset)
 - [LICENSE](#license)
 
 ## Getting Started

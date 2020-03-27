@@ -48,7 +48,6 @@ const Item = ({
         requestClose(() => {
           onSelect(event, metaData);
         });
-        event.stopPropagation();
       }}
       role="menuitem"
       tabIndex="0"

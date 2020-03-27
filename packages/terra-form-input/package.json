@@ -1,7 +1,7 @@
 {
   "name": "terra-form-input",
   "main": "lib/Input.js",
-  "version": "2.33.0",
+  "version": "2.36.0",
   "description": "Element for building out inputs in a form.",
   "repository": {
     "type": "git",
@@ -27,9 +27,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.23.0",
-    "terra-form-field": "^3.31.0",
-    "terra-icon": "^3.25.0"
+    "terra-form-field": "^3.34.0",
+    "terra-icon": "^3.28.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -40,7 +39,8 @@
     "test": "npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
     "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
     "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
-    "wdio": "npm run wdio-default && npm run wdio-fusion"
+    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

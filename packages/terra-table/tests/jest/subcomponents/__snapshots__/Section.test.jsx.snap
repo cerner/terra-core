@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with callback functions 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    numberOfColumns={1}
+    onSelect={[MockFunction]}
+    refCallback={[MockFunction]}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render with content 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    numberOfColumns={1}
+    title="test"
+  />
+  test content
+</Fragment>
+`;
+
+exports[`should render with isCollapsed 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={true}
+    isCollapsible={false}
+    numberOfColumns={1}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render with isCollapsible 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={true}
+    numberOfColumns={1}
+    title="test"
+  />
+</Fragment>
+`;
+
+exports[`should render with no items 1`] = `
+<Fragment>
+  <SectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    numberOfColumns={1}
+    title="test"
+  />
+</Fragment>
+`;

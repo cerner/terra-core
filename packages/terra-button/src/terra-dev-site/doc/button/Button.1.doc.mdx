@@ -1,0 +1,61 @@
+import { Badge } from 'terra-button/package.json?dev-site-package';
+
+import ButtonBlock from '../example/ButtonBlock?dev-site-example';
+import ButtonAnchor from '../example/ButtonAnchor?dev-site-example';
+import ButtonCompact from '../example/ButtonCompact?dev-site-example';
+import ButtonDisabled from '../example/ButtonDisabled?dev-site-example';
+import ButtonOnClick from '../example/ButtonOnClick?dev-site-example';
+import ButtonIcon from '../example/ButtonIcon?dev-site-example';
+import ButtonVariant from '../example/ButtonVariant?dev-site-example';
+
+import ButtonPropsTable from 'terra-button/src/Button?dev-site-props-table';
+
+# Terra Button
+
+The button component provides users a way to trigger actions in the UI.
+It can be modified in color and type, and can optionally display an icon.
+Submit a request if additional variants not provided are needed.
+
+The `action` variant is intended for specific solutions in which a non-inline floating button sits above the page content in a fixed position.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-button`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import Button from 'terra-button';
+```
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-button)
+
+## Examples
+<ButtonVariant title="Variant" />
+<ButtonBlock title="Block" />
+<ButtonCompact title="Compact" />
+<ButtonAnchor title="Anchor" />
+<ButtonDisabled title="Disabled" />
+<ButtonOnClick title="Click" />
+<ButtonIcon title="Icon" />
+
+## Button Props
+<ButtonPropsTable />
