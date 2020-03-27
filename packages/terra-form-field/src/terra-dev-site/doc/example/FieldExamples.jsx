@@ -19,7 +19,6 @@ class FieldExamples extends React.Component {
   render() {
     return (
       <div>
-        <h2> Field Examples </h2>
         <Field
           label="Field Label"
           help="This is a standard, non-required field."

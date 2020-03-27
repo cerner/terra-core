@@ -4,6 +4,36 @@ ChangeLog
 Unreleased
 ----------
 
+4.26.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.25.0 - (February 18, 2020)
+------------------
+### Added
+* Added generated-themes to .npmignore
+
+4.24.0 - (February 4, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.23.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.22.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.21.0 - (December 3, 2019)
+------------------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
 4.20.0 - (October 30, 2019)
 ------------------
 ### Changed

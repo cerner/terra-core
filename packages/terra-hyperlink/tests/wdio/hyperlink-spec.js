@@ -11,12 +11,7 @@ Terra.describeViewports('Hyperlink', ['tiny'], () => {
   describe('Disabled', () => {
     before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/disabled-hyperlink'));
 
-    // See https://github.com/cerner/terra-core/pull/1562#discussion_r193008539 for more info why this rule is disabled here.
-    const rules = {
-      'color-contrast': { enabled: false },
-    };
-
-    Terra.it.validatesElement({ rules });
+    Terra.it.validatesElement();
   });
 
   describe('Audio', () => {

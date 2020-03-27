@@ -4,6 +4,31 @@ ChangeLog
 Unreleased
 ----------
 
+3.34.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.33.0 - (February 25, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+3.32.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+3.31.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.30.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 3.29.0 - (October 30, 2019)
 ------------------
 ### Changed

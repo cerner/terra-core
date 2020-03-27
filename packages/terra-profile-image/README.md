@@ -7,7 +7,7 @@
 The terra-profile-image component displays an avatar image while the profile image is being loaded. If the profile image successfully loads, the avatar image is replaced with the profile image. Otherwise, the avatar image is left as is. All styling set on the profile image will be applied to the avatar image.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-profile-image/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-profile-image/profile-image/profile-image)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -23,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

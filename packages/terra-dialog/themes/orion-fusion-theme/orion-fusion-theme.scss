@@ -1,0 +1,23 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-dialog-header-background-color: #f4f4f4;
+  --terra-dialog-header-border-bottom: 2px solid #9b9fa1;
+  --terra-dialog-header-foreground-color: #1c1f21;
+  --terra-dialog-header-font-size: 1.5rem;
+  --terra-dialog-header-height: 3rem;
+  --terra-dialog-header-padding: 0.5rem 0.125rem 0.5rem 0.25rem;
+  --terra-dialog-header-close-icon-vertical-align: -0.15rem;
+  --terra-dialog-header-close-icon-height: 1.66667rem;
+  --terra-dialog-header-close-icon-margin-top: 0.08333rem;
+  --terra-dialog-header-close-icon-width: 1.66667rem;
+  --terra-dialog-body-background-color: #fff;
+  --terra-dialog-body-foreground-color: #1c1f21;
+  --terra-dialog-body-padding: 0.5rem;
+  --terra-dialog-footer-background-color: #f4f4f4;
+  --terra-dialog-footer-border-top: 1px solid #9b9fa1;
+  --terra-dialog-footer-foreground-color: #1c1f21;
+  --terra-dialog-footer-padding: 0.5rem;
+  
+  @include terra-inline-svg-var('--terra-dialog-header-close-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="currentColor" d="M4.2 48L0 43.8 43.8 0 48 4.2zM43.8 48L0 4.2 4.2 0 48 43.8z"/></svg>');
+}

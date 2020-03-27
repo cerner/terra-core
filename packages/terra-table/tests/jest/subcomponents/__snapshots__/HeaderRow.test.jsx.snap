@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderRow should render a HeaderRow 1`] = `
+<div
+  className="header"
+  role="rowgroup"
+>
+  <div
+    className="header-content"
+    role="row"
+  />
+</div>
+`;
+
+exports[`HeaderRow should render a HeaderRow with child content 1`] = `
+<div
+  className="header"
+  role="rowgroup"
+>
+  <div
+    className="header-content"
+    role="row"
+  >
+    test text
+  </div>
+</div>
+`;
+
+exports[`HeaderRow should render with callback functions 1`] = `
+<div
+  className="header"
+  role="rowgroup"
+>
+  <div
+    className="header-content"
+    role="row"
+  />
+</div>
+`;

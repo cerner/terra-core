@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render the component defined for tiny 1`] = `
-<div>
-  Tiny
-</div>
+<ResponsiveElement
+  responsiveTo="parent"
+  tiny={
+    <div>
+      Tiny
+    </div>
+  }
+>
+  <div>
+    Tiny
+  </div>
+</ResponsiveElement>
 `;

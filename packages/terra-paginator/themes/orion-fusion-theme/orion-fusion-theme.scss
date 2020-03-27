@@ -1,0 +1,69 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-paginator-nav-link-background-color: transparent;
+  --terra-paginator-nav-link-border: 1px solid #6f7477;
+  --terra-paginator-nav-link-border-radius: 3px;
+  --terra-paginator-nav-link-color: #000;
+  --terra-paginator-nav-link-line-height: 1.5;
+  --terra-paginator-nav-link-margin-left: 0.25rem;
+  --terra-paginator-nav-link-margin-right: 0.25rem;
+  --terra-paginator-nav-link-previous-padding-left: 0.83333rem;
+  --terra-paginator-nav-link-next-padding-right: 0.83333rem;
+  --terra-paginator-nav-link-previous-icon-only-margin-left: 0.25rem;
+  --terra-paginator-nav-link-previous-icon-only-margin-right: 0.5rem;
+  --terra-paginator-nav-link-next-icon-only-margin-left: 0.5rem;
+  --terra-paginator-nav-link-next-icon-only-margin-right: 0.25rem;
+  --terra-paginator-nav-link-min-width: 2rem;
+  --terra-paginator-nav-link-padding: 0.25rem 0.83333rem;
+  --terra-paginator-nav-link-box-shadow: none;
+  --terra-paginator-nav-link-font-size: 1rem;
+  --terra-paginator-nav-link-text-decoration: none;
+
+  --terra-paginator-nav-link-hover-background-color: rgba(0, 0, 0, 0.1);
+  --terra-paginator-nav-link-hover-color: #000;
+  --terra-paginator-nav-link-hover-text-decoration: none;
+  --terra-paginator-nav-link-hover-border: 1px solid #6f7477;
+  --terra-paginator-nav-link-hover-box-shadow: none;
+
+  --terra-paginator-nav-link-focus-background-color: transparent;
+  --terra-paginator-nav-link-focus-border: 1px solid #6f7477; //
+  --terra-paginator-nav-link-focus-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
+  --terra-paginator-nav-link-focus-color: #000;
+
+  --terra-paginator-nav-link-active-background-color: rgba(0, 0, 0, 0.2);
+  --terra-paginator-nav-link-active-color: #000;
+  --terra-paginator-nav-link-active-text-decoration: none;
+  --terra-paginator-nav-link-active-border: 1px solid #6f7477;
+  --terra-paginator-nav-link-active-box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
+
+  --terra-paginator-nav-link-selected-color: inherit;
+
+  --terra-paginator-nav-link-disabled-color: #9b9fa1;
+  --terra-paginator-nav-link-disabled-focus-box-shadow: none;
+  --terra-paginator-nav-link-disabled-background-color: transparent;
+  --terra-paginator-nav-link-disabled-border: 1px solid #b2b5b6;
+  --terra-paginator-nav-link-disabled-box-shadow: none;
+  --terra-paginator-nav-link-disabled-opacity: 1;
+  
+  --terra-paginator-nav-link-left-controls-margin-left: 0.25rem;
+  --terra-paginator-nav-link-left-controls-margin-right: 0.25rem;
+  --terra-paginator-nav-link-right-controls-margin-left: 0.25rem;
+  --terra-paginator-nav-link-right-controls-margin-right: 0.25rem;
+  --terra-paginator-nav-link-icon-height: 1rem;
+  --terra-paginator-nav-link-icon-offset-top: 0.153rem;
+  --terra-paginator-nav-link-icon-width: 1rem;
+
+  --terra-paginator-progressive-nav-link-previous-margin-left: 0.25rem;
+  --terra-paginator-progressive-nav-link-previous-margin-right: 0.25rem;
+  --terra-paginator-progressive-nav-link-next-margin-left: 0.25rem;
+  --terra-paginator-progressive-nav-link-next-margin-right: 0.25rem;
+
+  --terra-paginator-nav-link-icon-previous-margin-right: 0.25rem;
+  --terra-paginator-nav-link-icon-next-margin-left: 0.25rem;
+
+  @include terra-inline-svg-var('--terra-paginator-nav-link-icon-previous-background-image',  '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
+  @include terra-inline-svg-var('--terra-paginator-nav-link-icon-previous-disabled-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#9b9fa1" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
+  @include terra-inline-svg-var('--terra-paginator-nav-link-icon-next-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>');
+  @include terra-inline-svg-var('--terra-paginator-nav-link-icon-next-disabled-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#9b9fa1" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"></path></svg>');
+}

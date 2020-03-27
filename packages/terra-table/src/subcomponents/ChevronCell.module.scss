@@ -1,0 +1,37 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .cell {
+    align-items: center;
+    border: 0;
+    display: flex;
+    flex: 0 0 auto;
+    word-break: break-word;
+  }
+
+  .chevron {
+    background: var(--terra-table-chevron-cell-visible-background, inline-svg('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"><path id="chevronRight" d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"/></svg>'));
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #ccc;
+    display: block;
+    height: var(--terra-table-chevron-cell-height, 1rem);
+    padding: var(--terra-table-chevron-cell-padding, 1px);
+    position: relative;
+    transform: rotate(0deg);
+    width: var(--terra-table-chevron-cell-width, 1rem);
+
+    // flips the icon about its vertical axis, presenting it in its mirrored-image form
+    [dir=rtl] & {
+      transform: scaleX(-1);
+    }
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--terra-table-chevron-cell-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-chevron-cell-padding-right, 0.7142857143rem);
+  }
+}

@@ -9,7 +9,7 @@ The Terra Overlay component is a component that displays an overlay relative to 
 A Loading Overlay is a subcomponent that displays an overlay with a spinner icon and loading message.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-overlay/overlay/overlay)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -26,8 +26,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

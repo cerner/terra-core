@@ -4,13 +4,38 @@ ChangeLog
 Unreleased
 ----------
 
+3.29.0 - (March 10, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+3.28.0 - (February 18, 2020)
+------------------
+### Added
+* Added generated-themes to .npmignore
+
+3.27.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.26.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.25.0 - (December 3, 2019)
+------------------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
 3.24.0 - (October 30, 2019)
 ------------------
-### Fixed
-* Fixed lint warnings for multiple empty lines
-
 ### Changed
 * Duplicate IDs in example changed.
+
+### Fixed
+* Fixed lint warnings for multiple empty lines
 
 3.23.0 - (October 3, 2019)
 ------------------

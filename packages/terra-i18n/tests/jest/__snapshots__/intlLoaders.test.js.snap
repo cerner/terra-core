@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`intlLoaders dev environment throws an error when the locale and en fallback are not provided 1`] = `"Locale data was not supplied for the es locale, or the en fallback locale."`;
+
+exports[`intlLoaders dev environment throws an error when the regional locale and en fallback are not provided 1`] = `"Locale data was not supplied for the es-US or es locales, or the en fallback locale."`;
+
 exports[`intlLoaders production environment still throws an error when the locale and en fallback are not provided 1`] = `"Locale data was not supplied for the es locale, or the en fallback locale."`;
 
 exports[`intlLoaders production environment still throws an error when the regional locale and en fallback are not provided 1`] = `"Locale data was not supplied for the es-US or es locales, or the en fallback locale."`;
-
-exports[`intlLoaders throws an error when the locale and en fallback are not provided 1`] = `"Locale data was not supplied for the es locale, or the en fallback locale."`;
-
-exports[`intlLoaders throws an error when the regional locale and en fallback are not provided 1`] = `"Locale data was not supplied for the es-US or es locales, or the en fallback locale."`;

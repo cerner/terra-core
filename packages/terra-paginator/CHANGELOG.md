@@ -4,6 +4,54 @@ ChangeLog
 Unreleased
 ----------
 
+2.41.0 - (March 10, 2020)
+------------------
+### Changed
+* Updated incorrect Swedish translations
+
+2.40.0 - (March 3, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+2.39.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+2.38.0 - (February 4, 2020)
+------------------
+### Added
+* Private PaginatorButton component added to separate button focus and active style management
+
+### Changed
+* `focused` and `active` pseudo selectors migrated to data attributes
+
+2.37.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.36.0 - (January 17, 2020)
+------------------
+### Changed
+* Replaced uncontrolled `<ResponsiveElement>` with controlled `<ResponsiveElement>`.
+
+2.35.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.34.0 - (December 10, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.33.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 2.32.0 - (October 30, 2019)
 ------------------
 ### Fixed

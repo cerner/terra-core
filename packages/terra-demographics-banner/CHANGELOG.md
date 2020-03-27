@@ -4,6 +4,41 @@ ChangeLog
 Unreleased
 ----------
 
+3.34.0 - (March 10, 2020)
+------------------
+### Fixed
+* Fixed overlapping of parenthesis onto the next line by adding `padding-bottom` to person-name and application-content class.
+
+3.33.0 - (February 25, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.32.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+3.31.0 - (February 4, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+3.30.0 - (January 21, 2020)
+------------------
+### Changed
+* `Preferred First Name` is now displayed within parentheses instead of quotes.
+
+3.29.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
+3.28.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
 3.27.0 - (October 30, 2019)
 ------------------
 ### Changed

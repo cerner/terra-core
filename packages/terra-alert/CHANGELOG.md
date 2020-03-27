@@ -4,6 +4,49 @@ ChangeLog
 Unreleased
 ----------
 
+4.22.0 - (March 10, 2020)
+------------------
+### Changed
+* Updated incorrect Swedish translations
+
+4.21.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+4.20.0 - (February 4, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax
+
+4.19.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.18.0 - (January 17, 2020)
+------------------
+### Changed
+* Updated `uncontrolled responsive-element` to `controlled responsive-element`.
+
+4.17.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
+4.16.0 - (December 10, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.15.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+### Fixed
+* Fixed jest tests due to ResponsiveElement change
+
 4.14.0 - (October 30, 2019)
 ------------------
 ### Fixed

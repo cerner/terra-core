@@ -9,6 +9,39 @@ Unreleased
 * `generic` subcomponent contains a `variant` prop that toggles between `single-user`, `shared-user`, and `provider` user avatar.
 * `user` avatar has been moved into `generic` sub-comopnent with varaint name `single-user`.
 
+2.36.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.35.0 - (February 25, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.34.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+2.33.0 - (February 4, 2020)
+------------------
+### Changed
+* Update docs to use MDX syntax
+
+2.32.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.31.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+### Fixed
+* Updated snapshots for terra-image change.
+
 2.30.0 - (October 30, 2019)
 ------------------
 ### Fixed

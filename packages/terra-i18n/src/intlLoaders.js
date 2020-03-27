@@ -1,29 +1,60 @@
-/* eslint-disable */
+/* eslint-disable import/no-unresolved, compat/compat, no-console */
 import intlLoaders from 'intlLoaders';
+import hasIntlData from 'intl-locales-supported';
+
+const supportedIntlConstructors = () => {
+  /**
+   * Use try-catch to check if Intl is provided by the browser. In some instances checking Intl will throw an
+   * error and crash the page with little information.
+   *
+   * Reference: https://github.com/cerner/terra-core/issues/2820
+   */
+  let constructors;
+  try {
+    if (typeof (Intl) === 'object' && typeof (Intl.DateTimeFormat) === 'function' && typeof (Intl.NumberFormat) === 'function') {
+      constructors = [
+        Intl.DateTimeFormat,
+        Intl.NumberFormat,
+      ];
+    }
+  } catch (error) {
+    constructors = [];
+  }
+
+  return constructors;
+};
 
 const loadFallbackIntl = (localeContext) => {
   try {
-    intlLoaders['en']();
+    if (!hasIntlData(['en'], supportedIntlConstructors())) {
+      intlLoaders.en();
+    }
+
     if (process.env.NODE_ENV !== 'production') {
       console.warn(`Locale data was not supplied for the ${localeContext}. Using en data as the fallback locale data.`);
     }
   } catch (e) {
     throw new Error(`Locale data was not supplied for the ${localeContext}, or the en fallback locale.`);
   }
-}
+};
 
 const loadIntl = (locale) => {
   const fallbackLocale = locale.split('-').length > 1 ? locale.split('-')[0] : false;
   try {
-     intlLoaders[locale]();
+    if (!hasIntlData([locale], supportedIntlConstructors())) {
+      intlLoaders[locale]();
+    }
   } catch (e) {
-    if(fallbackLocale) {
+    if (fallbackLocale) {
       try {
-        intlLoaders[fallbackLocale]();
+        if (!hasIntlData([fallbackLocale], supportedIntlConstructors())) {
+          intlLoaders[fallbackLocale]();
+        }
+
         if (process.env.NODE_ENV !== 'production') {
           console.warn(`Locale data was not supplied for the ${locale} locale. Using ${fallbackLocale} data as the fallback locale data.`);
         }
-      } catch (e) {
+      } catch (error) {
         const localeContext = `${locale} or ${fallbackLocale} locales`;
         loadFallbackIntl(localeContext);
       }
@@ -37,5 +68,6 @@ const loadIntl = (locale) => {
 export default loadIntl;
 
 export {
-  loadIntl
+  loadIntl,
 };
+/* eslint-enable import/no-unresolved, compat/compat, no-console */

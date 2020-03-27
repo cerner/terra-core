@@ -53,7 +53,7 @@ const propTypes = {
    * Sets the glyph and title using a pre-baked variant. One of the following: `no-data`,
    * `no-matching-results`, `not-authorized`, or `error`
    */
-  variant: PropTypes.oneOf(Object.values(StatusViewVariants)),
+  variant: PropTypes.oneOf(['no-data', 'no-matching-results', 'not-authorized', 'error']),
 };
 /* eslint-enable react/forbid-foreign-prop-types */
 
@@ -109,18 +109,18 @@ const StatusView = ({
   let titleSection;
   if (title || defaultTitle) {
     titleSection = (
-      <div className={cx('title')}>
+      <p className={cx('title')}>
         {title || defaultTitle}
-      </div>
+      </p>
     );
   }
 
   let messageSection;
   if (message) {
     messageSection = (
-      <div className={cx('message')}>
+      <p className={cx('message')}>
         {message}
-      </div>
+      </p>
     );
   }
 

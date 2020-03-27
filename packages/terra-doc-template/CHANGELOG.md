@@ -4,6 +4,21 @@ ChangeLog
 Unreleased
 ----------
 
+2.24.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+2.23.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
+2.22.0 - (December 3, 2019)
+------------------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
 2.21.0 - (October 30, 2019)
 ------------------
 ### Fixed

@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`should render a default table row content 1`] = `
-<td
-  data-terra-table-cell={true}
->
-  Table Data
-</td>
-`;

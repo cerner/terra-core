@@ -7,7 +7,7 @@
 The Terra Form Radio is a responsive input component rendered as a radio button next to label text. When activated, a dot shall appear. Use the `name` attribute to group radio buttons together. Tabbing switches focus between radio button groups; arrow keys switch between radio buttons of the same group. The checked state can be activated with a space.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-form-radio/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-form-radio/form-radio/radio)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

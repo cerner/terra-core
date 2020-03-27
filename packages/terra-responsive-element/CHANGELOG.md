@@ -4,6 +4,34 @@ Changelog
 Unreleased
 ----------
 
+5.16.0 - (March 10, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+5.15.0 - (February 18, 2020)
+------------------
+### Added
+* Added generated-themes to .npmignore
+
+5.14.0 - (February 4, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.13.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
+5.12.0 - (December 3, 2019)
+------------------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
+### Fixed
+* Flicker for responsiveTo parent elements
+
 5.11.0 - (October 30, 2019)
 ------------------
 ### Added

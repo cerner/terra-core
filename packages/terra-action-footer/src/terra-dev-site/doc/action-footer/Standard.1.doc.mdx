@@ -1,0 +1,59 @@
+import { Badge } from '../../../../package.json?dev-site-package';
+
+import SingleStartActionExample from '../example/standard/SingleStartAction?dev-site-example';
+import SingleEndActionExample from '../example/standard/SingleEndAction?dev-site-example';
+import MultipleStartEndActionsExample from '../example/standard/MultipleStartEndActions?dev-site-example';
+
+import ActionFooterPropsTable from '../../../../src/ActionFooter?dev-site-props-table';
+
+<Badge />
+
+# Terra Action Footer
+
+The `terra-action-footer` component is a footer bar that contains two sockets, start and end, for placing actionable items such as buttons and hyperlinks. If no actions are provided, the footer bar collapses to a themeable height and maintains the top border.
+
+Terra provides a Standard, Centered, and Block-style variations for Action Footer:
+* [Standard Action Footer](#usage)
+* [Centered Action Footer](/components/terra-action-footer/action-footer/centered)
+* [Block Action Footer](/components/terra-action-footer/action-footer/block/)
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-action-footer`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Component Features
+
+ * [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
+ * [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
+ * [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+ * [LTR/RTL Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#ltr--rtl-support)
+
+
+## Usage
+
+```jsx
+import ActionFooter from 'terra-action-footer';
+```
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-action-footer)
+
+## Examples
+<SingleStartActionExample title="Single Start Action" />
+<SingleEndActionExample title="Single End Action" />
+<MultipleStartEndActionsExample title="Multiple Start and End Actions" />
+
+## Standard Action Footer Props
+<ActionFooterPropsTable />

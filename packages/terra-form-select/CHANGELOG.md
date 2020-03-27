@@ -3,16 +3,60 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Fixed `onBlur` event for mobile to not be triggered when selecting an option
+
+5.44.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.43.0 - (February 25, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+5.42.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+5.41.0 - (February 13, 2020)
+------------------
+### Fixed
+* Fixed Option Group labels not read on desktop screen readers.
+
+5.40.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+5.39.0 - (January 7, 2020)
+------------------
+### Fixed 
+* Fixed page scrolling when embedded within an iframe.
+* Fixed accessibility issue due to invalid `aria-activedescendant` value.
+
+5.38.0 - (December 3, 2019)
+------------------
+### Added
+* Added `inputId` prop to allow an id to be passed to the input element for searchable select fields.
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+5.37.0 - (November 26, 2019)
+------------------
+### Fixed
+* Multiple instances of default variant select dropdown do not remain open at once on IE.
 
 5.36.0 - (October 30, 2019)
 ------------------
+### Changed
+* Duplicate ID in examples changed.
+
 ### Fixed
 * Fixed IE issue that required two clicks to open the dropdown menu after initial selection.
 * Fixed lint warnings for multiple empty lines
 * Fixed re-renders of scroll after every componentDidUpdate call.
-
-### Changed
-* Duplicate ID in examples changed.
 
 5.35.0 - (October 18, 2019)
 ------------------

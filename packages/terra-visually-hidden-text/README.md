@@ -6,7 +6,7 @@
 Text that is designed to only be read by a screen reader.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-visually-hidden-text/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-visually-hidden-text/visually-hidden-text/visually-hidden-text)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -22,8 +22,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

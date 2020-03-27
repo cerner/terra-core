@@ -8,13 +8,13 @@ import styles from './Overlay.module.scss';
 
 const cx = classNames.bind(styles);
 
-const { BackgroundStyles, zIndexes } = Overlay.Opts;
+const { BackgroundStyles } = Overlay.Opts;
 
 const propTypes = {
   /**
-   * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear' or BackgroundStyles.LIGHT, BackgroundStyles.DARK, and BackgroundStyles.CLEAR.
+   * The visual theme to be applied to the overlay background. Accepts 'light', 'dark', and 'clear'.
    */
-  backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear', BackgroundStyles]),
+  backgroundStyle: PropTypes.oneOf(['light', 'dark', 'clear']),
   /**
    * Indicates if the icon spinner should be animated.
    */
@@ -38,7 +38,7 @@ const propTypes = {
   /**
   * Z-Index layer to apply to the ModalContent and ModalOverlay. Valid values are '100', '6000', '7000', '8000', or '9000'.
   */
-  zIndex: PropTypes.oneOf(zIndexes),
+  zIndex: PropTypes.oneOf(['100', '6000', '7000', '8000', '9000']),
 };
 
 const defaultProps = {
@@ -59,7 +59,7 @@ const LoadingOverlay = ({
   delete customProps.onRequestClose;
 
   return (
-    <Overlay {...customProps} className={cx('loading-overlay', customProps.className)} rootSelector={rootSelector}>
+    <Overlay {...customProps} className={cx('loading-overlay', customProps.className)} rootSelector={rootSelector} aria-live="polite">
       <IconSpinner className={cx('icon')} isSpin={isAnimated} height="36" width="36" />
       {message !== undefined
         ? <div className={cx('message')}>{message}</div>
