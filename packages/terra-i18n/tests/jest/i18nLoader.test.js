@@ -23,7 +23,8 @@ describe('i18nLoader', () => {
 
   describe('when intl is provided by browser', () => {
     beforeAll(() => {
-      global.Intl = {};
+      defaultLoadIntl.mockClear();
+      global.Intl = { DateTimeFormat: jest.fn(), NumberFormat: jest.fn() };
       i18nLoader('en', jest.fn());
     });
     afterAll(() => { global.Intl = undefined; });
@@ -39,23 +40,115 @@ describe('i18nLoader', () => {
 
   describe('when intl is not defined', () => {
     beforeAll(() => {
+      defaultLoadIntl.mockClear();
+      loadTranslations.mockClear();
       global.Intl = undefined;
-      i18nLoader('en', jest.fn());
     });
     afterAll(() => { global.Intl = undefined; });
 
-    it('adds the intl polyfill ', () => {
+    it('loads en locale', () => {
+      i18nLoader('en', jest.fn());
+    });
+
+    it('adds the intl polyfill', () => {
       expect(global.Intl).toBeDefined();
       expect(global.IntlPolyfill).toBeDefined();
     });
 
     it('loads the locale data ', () => {
-      expect(defaultLoadIntl).toHaveBeenCalled();
+      expect(defaultLoadIntl).toHaveBeenNthCalledWith(1, 'en');
+    });
+
+    it('loads translations', () => {
+      expect(loadTranslations).toHaveBeenNthCalledWith(1, 'en', expect.anything(), undefined);
+    });
+
+    it('loads es locale', () => {
+      i18nLoader('es', jest.fn());
+    });
+
+    it('loads the new locale data on sequential load ', () => {
+      expect(defaultLoadIntl).toHaveBeenNthCalledWith(2, 'es');
+    });
+
+    it('loads the new translation data on sequential load ', () => {
+      expect(loadTranslations).toHaveBeenNthCalledWith(2, 'es', expect.anything(), undefined);
     });
   });
 
-  it('loads translations', () => {
-    i18nLoader('en', jest.fn());
-    expect(loadTranslations).toHaveBeenCalled();
+  describe('when Intl.DataTimeFormat is not defined', () => {
+    beforeAll(() => {
+      defaultLoadIntl.mockClear();
+      loadTranslations.mockClear();
+      global.Intl = { DateTimeFormat: undefined };
+    });
+    afterAll(() => { global.Intl = undefined; });
+
+    it('loads en locale', () => {
+      i18nLoader('en', jest.fn());
+    });
+
+    it('adds the intl polyfill', () => {
+      expect(global.Intl).toBeDefined();
+      expect(global.IntlPolyfill).toBeDefined();
+    });
+
+    it('loads the locale data ', () => {
+      expect(defaultLoadIntl).toHaveBeenNthCalledWith(1, 'en');
+    });
+
+    it('loads translations', () => {
+      expect(loadTranslations).toHaveBeenNthCalledWith(1, 'en', expect.anything(), undefined);
+    });
+
+    it('loads es locale', () => {
+      i18nLoader('es', jest.fn());
+    });
+
+    it('loads the new locale data on sequential load ', () => {
+      expect(defaultLoadIntl).toHaveBeenNthCalledWith(2, 'es');
+    });
+
+    it('loads the new translation data on sequential load ', () => {
+      expect(loadTranslations).toHaveBeenNthCalledWith(2, 'es', expect.anything(), undefined);
+    });
+  });
+
+  describe('when Intl.NumberFormat is not defined', () => {
+    beforeAll(() => {
+      defaultLoadIntl.mockClear();
+      loadTranslations.mockClear();
+      global.Intl = { DateTimeFormat: jest.fn() };
+    });
+    afterAll(() => { global.Intl = undefined; });
+
+    it('loads en locale', () => {
+      i18nLoader('en', jest.fn());
+    });
+
+    it('adds the intl polyfill', () => {
+      expect(global.Intl).toBeDefined();
+      expect(global.IntlPolyfill).toBeDefined();
+    });
+
+    it('loads the locale data ', () => {
+      expect(defaultLoadIntl).toHaveBeenNthCalledWith(1, 'en');
+    });
+
+    it('loads translations', () => {
+      expect(loadTranslations).toHaveBeenNthCalledWith(1, 'en', expect.anything(), undefined);
+    });
+
+    it('loads es locale', () => {
+      i18nLoader('es', jest.fn());
+    });
+
+    it('loads the new locale data on sequential load ', () => {
+      expect(defaultLoadIntl).toHaveBeenNthCalledWith(2, 'es');
+    });
+
+    it('loads the new translation data on sequential load ', () => {
+      expect(loadTranslations).toHaveBeenNthCalledWith(2, 'es', expect.anything(), undefined);
+    });
   });
 });

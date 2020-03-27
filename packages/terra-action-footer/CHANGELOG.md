@@ -4,13 +4,71 @@ ChangeLog
 Unreleased
 ----------
 
+2.36.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.35.0 - (February 25, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.34.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+2.33.0 - (February 4, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.32.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.31.0 - (January 17, 2020)
+------------------
+### Changes
+* Update docs to use mdx syntax
+
+### Removed
+* Removed empty examples from doc examples
+
+2.30.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.29.0 - (December 10, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.28.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+2.27.0 - (November 12, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.26.0 - (November 7, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.25.0 - (October 30, 2019)
 ------------------
-### Fixed
-* Fixed lint warnings for multiple empty lines
-
 ### Changed
 * Wdio updated for inline svg alignment.
+
+### Fixed
+* Fixed lint warnings for multiple empty lines
 
 2.24.0 - (October 3, 2019)
 ------------------

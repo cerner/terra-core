@@ -4,6 +4,26 @@ ChangeLog
 Unreleased
 ----------
 
+2.24.0 - (March 10, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+2.23.0 - (February 18, 2020)
+------------------
+### Added
+* Added generated-themes to .npmignore
+
+2.22.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.21.0 - (December 3, 2019)
+------------------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
 2.20.0 - (October 30, 2019)
 ------------------
 ### Fixed

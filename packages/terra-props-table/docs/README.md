@@ -6,7 +6,6 @@ React component to render a table view for the props metadata of another react c
 
 - Install with [npmjs](https://www.npmjs.com):
   - `npm install terra-props-table`
-  - `yarn add terra-props-table`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies

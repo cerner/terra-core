@@ -4,9 +4,61 @@ ChangeLog
 Unreleased
 ----------
 
-2.31.0 - (October 30, 2019)
+2.41.0 - (March 17, 2020)
 ------------------
 ### Changed
+* Update docs to fix broken links.
+
+2.40.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.39.0 - (March 3, 2020)
+------------------
+### Added
+* Added data attribute on the header buttons to use as selectors in tests.
+
+2.38.0 - (February 25, 2020)
+------------------
+### Changed
+* Changed buttons' variant to `Utility`.
+
+### Removed
+* Removed dependency on `terra-button-group`.
+
+2.37.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+2.36.0 - (February 4, 2020)
+------------------
+### Changed
+* Updated docs for `level` prop.
+
+2.35.0 - (January 28, 2020)
+------------------
+### Changed
+* Updated docs to use mdx syntax
+
+2.34.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.33.0 - (December 10, 2019)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.32.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+2.31.0 - (October 30, 2019)
+------------------
 * Updated `--terra-action-header-icon-top` variable and added `vertical-align` to align inline svg .
 
 ### Fixed

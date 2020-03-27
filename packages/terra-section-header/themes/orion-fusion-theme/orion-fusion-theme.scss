@@ -1,0 +1,52 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-section-header-accordion-icon-height: 0.6666666667rem;
+  --terra-section-header-accordion-icon-margin-end: 0.5rem;
+  --terra-section-header-accordion-icon-padding-top: 0.357142857rem;
+  --terra-section-header-accordion-icon-width: 0.6666666667rem;
+  --terra-section-header-accordion-padding-start: 0.5rem;
+  --terra-section-header-active-background: #c8cacb;
+  --terra-section-header-active-border-bottom: 1px solid #9b9fa1;
+  --terra-section-header-active-color: #1c1f21;
+  --terra-section-header-transparent-hover-background: rgba(0, 0, 0, 0.07);
+  --terra-section-header-transparent-hover-border-bottom: 0;
+  --terra-section-header-transparent-hover-border-left: 0;
+  --terra-section-header-transparent-hover-border-right: 0;
+  --terra-section-header-transparent-hover-border-top: 0;
+  --terra-section-header-transparent-hover-box-shadow: none;
+  --terra-section-header-transparent-hover-color: #1c1f21;
+  --terra-section-header-transparent-focus-background: rgba(0, 0, 0, 0.07);
+  --terra-section-header-transparent-focus-border-bottom: 0;
+  --terra-section-header-transparent-focus-border-left: 0;
+  --terra-section-header-transparent-focus-border-right: 0;
+  --terra-section-header-transparent-focus-border-top: 0;
+  --terra-section-header-transparent-focus-box-shadow: 0 0 1px 3px #4cb2e980, 0 0 7px 4px #4cb2e959;
+  --terra-section-header-transparent-focus-color: #1c1f21;
+  --terra-section-header-transparent-active-background: rgba(0, 0, 0, 0.07);
+  --terra-section-header-transparent-active-border-bottom: 0;
+  --terra-section-header-transparent-active-border-left: 0;
+  --terra-section-header-transparent-active-border-right: 0;
+  --terra-section-header-transparent-active-border-top: 0;
+  --terra-section-header-transparent-active-box-shadow: none;
+  --terra-section-header-transparent-active-color: #1c1f21;
+  --terra-section-header-background: #dedfe0;
+  --terra-section-header-border-bottom: 1px solid #9b9fa1;
+  --terra-section-header-color: #1c1f21;
+  --terra-section-header-focus-background: #dedfe0;
+  --terra-section-header-focus-border-bottom: 1px solid #9b9fa1;
+  --terra-section-header-focus-box-shadow: 0 0 1px 3px #4cb2e980, 0 0 7px 4px #4cb2e959;
+  --terra-section-header-focus-color: #1c1f21;
+  --terra-section-header-font-size: 1rem;
+  --terra-section-header-font-weight: normal;
+  --terra-section-header-hover-background: #c8cacb;
+  --terra-section-header-hover-border-bottom: 1px solid #9b9fa1;
+  --terra-section-header-hover-color: #1c1f21;
+  --terra-section-header-line-height: 1.1666666667;
+  --terra-section-header-padding-bottom: 0.5rem;
+  --terra-section-header-padding-end: 0.75rem;
+  --terra-section-header-padding-start: 0.75rem;
+  --terra-section-header-padding-top: 0.5rem;
+
+  @include terra-inline-svg-var('--terra-section-header-accordion-icon-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="currentColor" d="M12,0l24,24L12,48V0z"/></svg>');
+}

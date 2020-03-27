@@ -4,6 +4,36 @@ ChangeLog
 Unreleased
 ----------
 
+3.27.0 - (March 10, 2020)
+------------------
+### Added
+* Added `fit` prop to specify the object-fit style
+
+3.26.0 - (March 3, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+3.25.0 - (February 25, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.24.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+3.23.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
+3.22.0 - (December 3, 2019)
+------------------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
 3.21.0 - (October 30, 2019)
 ------------------
 ### Changed

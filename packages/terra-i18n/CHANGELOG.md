@@ -4,6 +4,42 @@ ChangeLog
 Unreleased
 ----------
 
+4.25.0 - (March 10, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+4.24.0 - (February 18, 2020)
+------------------
+### Added
+* Added generated-themes to .npmignore
+
+### Changes
+* Be the most explicit when checking when checking if Intl, Intl.DateTimeFormat and Int.NumberFormat by checking against expected type instead of check for undefined. Addresses: https://github.com/cerner/terra-core/issues/2841
+
+4.23.0 - (February 13, 2020)
+------------------
+### Changes
+* Be explicit when checking when checking if Intl, Intl.DateTimeFormat and Int.NumberFormat are available on the browser.
+
+4.22.0 - (February 11, 2020)
+------------------
+### Fixed
+* Add try-catch blocks around the Intl check to ensure errors are correctly handled if an error is thrown. Fixes https://github.com/cerner/terra-core/issues/2820.
+
+4.21.0 - (January 7, 2020)
+------------------
+### Removed
+* Removed yarn reference in docs
+
+4.20.0 - (December 3, 2019)
+------------------
+### Added
+* Added reference wdio screenshots for "orion-fusion-theme".
+
+### Fixed
+* Fix Intl data loading logic. Locale data was only loading the initial locale data but did not load locale data for the new local when the locale was switched. This issue was discovered when running in IE 10.
+
 4.19.0 - (October 30, 2019)
 ------------------
 ### Changed

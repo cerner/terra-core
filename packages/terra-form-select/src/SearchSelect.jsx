@@ -99,6 +99,11 @@ const propTypes = {
    * The selected value. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   * @private
+   * The id of the input field.
+   */
+  inputId: PropTypes.string,
 };
 
 const defaultProps = {
@@ -119,6 +124,7 @@ const defaultProps = {
   required: false,
   isTouchAccessible: false,
   value: undefined,
+  inputId: undefined,
 };
 
 class SearchSelect extends React.Component {
@@ -187,7 +193,7 @@ class SearchSelect extends React.Component {
 
   render() {
     const {
-      allowClear, children, defaultValue, onChange, placeholder, required, value, intl, ...otherProps
+      allowClear, children, defaultValue, onChange, placeholder, required, value, intl, inputId, ...otherProps
     } = this.props;
 
     const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
@@ -214,6 +220,7 @@ class SearchSelect extends React.Component {
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
         clearOptionDisplay={clearOptionDisplay}
+        inputId={inputId}
       >
         {children}
       </Frame>

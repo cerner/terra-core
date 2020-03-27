@@ -1,0 +1,24 @@
+@import '~terra-mixins/lib/Mixins';
+
+:global {
+  --terra-status-view-padding-bottom: 5rem;
+  --terra-status-view-padding-top: 2.66667rem;
+  --terra-status-view-title-font-size: 1.5rem;
+  --terra-status-view-title-color: #6f7477;
+  --terra-status-view-message-color: #6f7477;
+  --terra-status-view-message-font-size: 1.33333rem;
+  --terra-status-view-message-padding-top: 1rem;
+  --terra-status-view-divider-display: none;
+  --terra-status-view-divider-padding-top: 0;
+  --terra-status-view-actions-small-width-flex-direction: row;
+  --terra-status-view-actions-padding-top: 1rem;
+  --terra-status-view-actions-button-flex: 0 1 auto;
+  --terra-status-view-actions-button-margin-left: 0.25rem;
+  --terra-status-view-actions-button-margin-right: 0.25rem;
+  --terra-status-view-actions-button-margin-top: 0;
+  
+  @include terra-inline-svg-var('--terra-status-view-glyph-no-data-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#c8cacb" d="M39.7,22.1c0.9,0,1.6,0.7,1.6,1.6v19.2c0,0.9-0.7,1.6-1.6,1.6H8.3c-0.9-0.1-1.6-0.8-1.6-1.7V18.6 c0-0.9,0.7-1.6,1.6-1.6h9.2c1,0.1,1.9,0.4,2.7,1.2l2.7,2.8c0.7,0.7,1.7,1.1,2.7,1.2l14-0.1H39.7z"/></svg>');
+  @include terra-inline-svg-var('--terra-status-view-glyph-no-matching-results-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#c8cacb" d="M40.8,44.5l-9.4-9.4c1.7-2.4,2.6-5.2,2.6-8.1c0-7.6-6.1-13.7-13.7-13.7c-7.6,0-13.7,6.1-13.7,13.7 c0,7.6,6.1,13.7,13.7,13.7c2.9,0,5.7-0.9,8-2.6l9.4,9.4c0.6,0.6,1.5,0.6,2.1,0c0,0,0,0,0,0l1-1C41.4,46,41.4,45.2,40.8,44.5 C40.9,44.6,40.9,44.6,40.8,44.5z M8.9,27.1c0-6.4,5.2-11.5,11.5-11.5s11.5,5.2,11.5,11.5s-5.2,11.5-11.5,11.5S8.9,33.5,8.9,27.1z"/></svg>');
+  @include terra-inline-svg-var('--terra-status-view-glyph-not-authorized-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#c8cacb" d="M34.7,27.8h-2.7v-6.5c0-4.4-3.5-7.9-7.9-7.9s-7.9,3.5-7.9,7.9v6.5h-2.7c-0.9,0-1.6,0.7-1.6,1.6v17.1 c0,0.8,0.7,1.5,1.6,1.5h21.4c0.9,0,1.6-0.7,1.6-1.6v-17C36.2,28.6,35.5,27.9,34.7,27.8z M25.4,37.6v4.7h-2.9v-4.7 c-0.5-0.4-0.7-1-0.7-1.7c0-1.2,1-2.2,2.2-2.2c1.2,0,2.1,1,2.2,2.2C26.2,36.5,25.9,37.1,25.4,37.6z M29.8,26.8v1H18.2v-6.5 c0-3.2,2.6-5.8,5.8-5.8s5.8,2.6,5.8,5.8V26.8z"/></svg>');
+  @include terra-inline-svg-var('--terra-status-view-glyph-error-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#c8cacb" d="M24,13.4L24,13.4c-9.6,0-17.3,7.8-17.3,17.3C6.7,40.3,14.4,48,24,48s17.3-7.7,17.3-17.3S33.6,13.4,24,13.4z M11.8,32.5v-3.6h24.5v3.6H11.8z"/></svg>');
+}

@@ -1,0 +1,39 @@
+import { Badge } from 'terra-form-select/package.json?dev-site-package';
+
+import MaxSelectionExample from '../example/legacy/MaxSelection?dev-site-example';
+import SelectFieldExample from '../example/legacy/SelectField?dev-site-example';
+import RequiredSelectFieldExample from '../example/legacy/RequiredSelectField?dev-site-example';
+import IncompleteSelectFieldExample from '../example/legacy/IncompleteSelectField?dev-site-example';
+
+import SelectFieldPropsTable from 'terra-form-select/src/SelectField?dev-site-props-table';
+
+<Badge />
+
+# Terra Form Select Field
+
+A convenience wrapper assembling a [terra-form-select](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select) within a [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field).
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-form-select`
+
+## Component Features
+
+- [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+- [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+- [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+- [Internationalization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [Localization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
+
+## Examples
+<SelectFieldExample title="Select Field Example" />
+<RequiredSelectFieldExample title="Required Select Field Example" />
+<MaxSelectionExample title="Maximum Selection (applies to only 'multiple' and 'tag')" description="A multiple selection variant that allows up to a set number of selections. (Not applicable to 'default', 'combobox', and 'search' variants)" />
+<IncompleteSelectFieldExample title="Incomplete Select Field Example" description="Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+
+## Select Field Props
+<SelectFieldPropsTable />

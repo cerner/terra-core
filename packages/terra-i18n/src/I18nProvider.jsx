@@ -1,5 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider } from 'react-intl';
@@ -16,7 +14,7 @@ const propTypes = {
   /**
    * Translations messages object.
    */
-  messages: PropTypes.object.isRequired,
+  messages: PropTypes.shape({}).isRequired,
 };
 
 const I18nProvider = ({ children, locale, messages }) => (

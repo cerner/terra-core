@@ -1,0 +1,135 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .cell {
+    border: 0;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    outline: none;
+    position: relative;
+    
+    &:last-of-type,
+    &.hide-cell {
+      border-right: 0;
+    }
+  }
+
+  .checkmark {
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid transparent;
+    border-radius: var(--terra-table-checkmark-cell-border-radius, 3px);
+    height: var(--terra-table-checkmark-cell-height, 1rem);
+    padding: 1px;
+    width: var(--terra-table-checkmark-cell-width, 1rem);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .is-top-align {
+    justify-content: flex-start;
+  }
+
+  // Interaction Classes
+  // -------------
+  .is-interactable {
+    cursor: pointer;
+  }
+
+  .is-interactable:hover .checkmark {
+    border: var(--terra-table-checkmark-cell-hover-border, 1px solid #2a4b77);
+  }
+
+  .is-interactable:active .checkmark {
+    background-color: var(--terra-table-checkmark-cell-active-background-color, #b5d4fe);
+    border: var(--terra-table-checkmark-cell-active-border, 1px solid #3a67a4);
+  }
+
+  .is-interactable[data-cell-show-focus='true']:focus {
+    outline: var(--terra-table-checkmark-cell-focus-outline, 2px dashed #000);
+    outline-offset: var(--terra-table-checkmark-cell-focus-outline-offset, -2px);
+  }
+
+  .is-interactable:hover .is-selected {
+    background-color: var(--terra-table-checkmark-cell-selected-hover-background-color, #2a4b77);
+  }
+
+  .is-interactable:active .is-selected {
+    background-color: var(--terra-table-checkmark-cell-selected-active-background-color, #1a2f4b);
+  }
+
+  // State Classes
+  // -------------
+  .checkmark.is-selected {
+    background-color: var(--terra-table-checkmark-cell-selected-background-color, transparent);
+    background-image: var(--terra-table-checkmark-cell-selected-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#000" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
+  }
+
+  .is-disabled.is-selected {
+    background-image: var(--terra-table-checkmark-cell-selected-disabled-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#ccc" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
+  }
+
+  .is-selectable.checkmark {
+    background-color: var(--terra-table-checkmark-cell-selectable-background-color, #fff);
+    border: var(--terra-table-checkmark-cell-selectable-border, 1px solid #a4a5a6);
+  }
+
+  .is-selectable.is-selected {
+    background-color: var(--terra-table-checkmark-cell-selectable-selected-background-color, #3a67a4);
+    background-image: var(--terra-table-checkmark-cell-selectable-selected-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#fff" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
+    border: var(--terra-table-checkmark-cell-selectable-selected-border, 1px solid #3a67a4);
+  }
+
+  .is-selectable.checkmark.is-disabled {
+    background-color: var(--terra-table-checkmark-cell-selectable-disabled-background-color, rgba(111, 116, 119, 0.05));
+    border: var(--terra-table-checkmark-cell-selectable-selectable-disabled-border, 1px solid rgba(134, 138, 140, 0.25));
+  }
+
+  .is-selectable.checkmark.is-disabled.is-selected {
+    background-color: rgba(134, 138, 140, 0.25);
+    background-image: var(--terra-table-checkmark-cell-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="rgba(255, 255, 255, 0.5)" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>'));
+  }
+
+  // Padding Classes
+  // -------------
+  .container {
+    padding-left: var(--terra-table-checkmark-cell-default-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-checkmark-cell-default-padding-right, 0.7142857143rem);
+  }
+
+  .checkmark.is-hidden {
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    width: 0;
+  }
+
+  // -----------------------
+  // Delete entry after IE support is dropped. IE doesn't support outline-offset, so this mimics it.
+  // -----------------------
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .is-interactable[data-cell-show-focus='true']:focus {
+      outline: none;
+
+      &::before {
+        border: var(--terra-table-checkmark-cell-ie-focus-before-border, 2px dashed #000);
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}

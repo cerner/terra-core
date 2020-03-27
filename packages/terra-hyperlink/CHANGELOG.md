@@ -4,6 +4,47 @@ ChangeLog
 Unreleased
 ----------
 
+2.30.0 - (March 10, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.29.0 - (February 25, 2020)
+------------------
+### Changed
+* Update docs to use mdx syntax.
+
+2.28.0 - (February 18, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme theming files
+
+2.27.0 - (January 28, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.26.0 - (January 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.25.0 - (December 3, 2019)
+------------------
+### Added
+* Added orion-fusion-theme and generated the respective reference wdio screenshots.
+
+2.24.0 - (November 12, 2019)
+------------------
+### Changed
+* Changed how cursor looks on specific hyperlinks(ex: a default cursor instead of text selector on disabled hyperlink).
+* Switched themeable icons provided by CSS to imported `terra-icon` component.
+
+2.23.0 - (November 7, 2019)
+------------------
+### Fixed
+* Fixed the color contrast axe violation for disabled hyperlinks by adding `aria-disabled`.
+
 2.22.0 - (October 30, 2019)
 ------------------
 ### Changed

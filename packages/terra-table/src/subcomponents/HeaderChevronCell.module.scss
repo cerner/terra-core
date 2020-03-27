@@ -1,0 +1,18 @@
+:local {
+  .cell {
+    border: 0;
+    flex: 0 0 auto;
+    word-break: break-word;
+  }
+
+  .chevron {
+    padding: var(--terra-table-header-chevron-cell-spacer-padding, 1px);
+    position: relative;
+    width: var(--terra-table-header-chevron-cell-width, 1rem);
+  }
+
+  .container {
+    padding-left: var(--terra-table-header-chevron-cell-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-header-chevron-cell-padding-right, 0.7142857143rem);
+  }
+}

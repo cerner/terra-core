@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the selectId to the input field in ComboboxField component 1`] = `
+<div
+  className="field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+      htmlFor="select-id"
+    >
+      Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+  <InjectIntl(Combobox)
+    allowClear={false}
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={false}
+    inputId="select-id"
+    isIncomplete={false}
+    isInvalid={false}
+    isTouchAccessible={false}
+    key=".0"
+    required={false}
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </InjectIntl(Combobox)>
+</div>
+`;
+
+exports[`should render the selectId to the input field in MultiSelectField component 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+      htmlFor="select-id"
+    >
+      Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+  <InjectIntl(MultiSelect)
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={false}
+    inputId="select-id"
+    isIncomplete={false}
+    isInvalid={false}
+    isTouchAccessible={false}
+    key=".0"
+    required={false}
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </InjectIntl(MultiSelect)>
+</div>
+`;
+
+exports[`should render the selectId to the input field in SearchSelectField component 1`] = `
+<div
+  className="field"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+      htmlFor="select-id"
+    >
+      Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+  <InjectIntl(SearchSelect)
+    allowClear={false}
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={false}
+    inputId="select-id"
+    isIncomplete={false}
+    isInvalid={false}
+    isTouchAccessible={false}
+    key=".0"
+    required={false}
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </InjectIntl(SearchSelect)>
+</div>
+`;
+
+exports[`should render the selectId to the input field in TagSelectField component 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+      htmlFor="select-id"
+    >
+      Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+  <InjectIntl(TagSelect)
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={false}
+    inputId="select-id"
+    isIncomplete={false}
+    isInvalid={false}
+    isTouchAccessible={false}
+    key=".0"
+    required={false}
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </InjectIntl(TagSelect)>
+</div>
+`;

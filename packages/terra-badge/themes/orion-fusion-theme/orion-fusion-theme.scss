@@ -1,0 +1,44 @@
+:global {
+  --terra-badge-border: none;
+  --terra-badge-border-radius: 0.25rem;
+  --terra-badge-display: inline-block;
+  --terra-badge-font-size: 0.85rem;
+  --terra-badge-font-weight: 700;
+  --terra-badge-line-height: 1.45;
+  --terra-badge-min-width: 1.5rem;
+  --terra-badge-padding-bottom: 0.25rem;
+  --terra-badge-padding-left: 0.5rem;
+  --terra-badge-padding-right: 0.5rem;
+  --terra-badge-padding-top: 0.25rem;
+  --terra-badge-text-transform: none;
+
+  --terra-badge-child-margin-right: 0.5rem;
+  --terra-badge-child-margin-left: 0.5rem;
+
+  --terra-badge-tiny-font-size: 0.85rem;
+  --terra-badge-small-font-size: 0.85rem;
+  --terra-badge-medium-font-size: 1rem;
+  --terra-badge-large-font-size: 1.25rem;
+  --terra-badge-huge-font-size: 1.25rem;
+
+  --terra-badge-background-color-default: #dedfe0;
+  --terra-badge-color-default: #1c1f21;
+
+  --terra-badge-background-color-primary: #0064a5;
+  --terra-badge-color-primary: #fff;
+
+  --terra-badge-background-color-secondary: #4c8424;
+  --terra-badge-color-secondary: #fff;
+
+  --terra-badge-background-color-positive: #4c8424;
+  --terra-badge-color-positive: #fff;
+
+  --terra-badge-background-color-negative: #ab0406;
+  --terra-badge-color-negative: #fff;
+
+  --terra-badge-background-color-warning: #da3b03;
+  --terra-badge-color-warning: #fff;
+
+  --terra-badge-background-color-info: #0064a5;
+  --terra-badge-color-info: #fff;
+}

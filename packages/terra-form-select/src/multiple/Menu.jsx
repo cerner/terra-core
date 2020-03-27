@@ -251,7 +251,7 @@ class Menu extends React.Component {
 
     const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
 
-    if (this.menu !== null) {
+    if (this.menu !== null && this.state.active !== null) {
       this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
     }
 
@@ -260,16 +260,25 @@ class Menu extends React.Component {
       return;
     }
 
+    const optGroupElement = MenuUtil.getOptGroupElement(this.props.children, this.state.active);
     const element = MenuUtil.findByValue(this.props.children, this.state.active);
+
+    let displayText;
+    if (optGroupElement) {
+      displayText = intl.formatMessage({ id: 'Terra.form.select.optGroup' }, { text: `${optGroupElement.props.label}, ${element.props.display}` });
+    } else if (element) {
+      displayText = element.props.display;
+    }
+
     if (element) {
       if (element.props.display === '' && element.props.value === '') {
         // Used for case where users selects clear option and opens
         // dropdown again and navigates to clear option
         visuallyHiddenComponent.current.innerText = clearSelectTxt;
       } else if (this.isActiveSelected()) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: element.props.display });
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText });
       } else {
-        visuallyHiddenComponent.current.innerText = element.props.display;
+        visuallyHiddenComponent.current.innerText = displayText;
       }
     }
   }
@@ -440,9 +449,10 @@ class Menu extends React.Component {
     const optionRect = activeOption.getBoundingClientRect();
 
     if (optionRect.top < dropdownRect.top) {
-      activeOption.scrollIntoView();
+      this.menu.parentNode.scrollTop = activeOption.offsetTop;
     } else if (optionRect.bottom > dropdownRect.bottom) {
-      activeOption.scrollIntoView(false);
+      // To scroll to active option to top subtracting active option offsetTop with parent window's height.
+      this.menu.parentNode.scrollTop = (activeOption.offsetTop - dropdownRect.height) + optionRect.height;
     }
   }
 

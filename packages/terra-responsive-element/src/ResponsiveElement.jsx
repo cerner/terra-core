@@ -14,11 +14,11 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
-   * A callback function invoked when the breakpoint size changes. onChange(<string>breakpoint)
+   * A callback function invoked when the breakpoint size changes. ```onChange(<string>breakpoint)```
    */
   onChange: PropTypes.func,
   /**
-   * A callback function invoked when the responsive target resizes. onResize(<number>width)
+   * A callback function invoked when the responsive target resizes. ```onResize(<number>width)```
    */
   onResize: PropTypes.func,
   /**
@@ -76,6 +76,7 @@ class ResponsiveElement extends React.Component {
     } = this.props;
 
     if (this.container) {
+      this.handleResize(this.container.getBoundingClientRect().width);
       this.resizeObserver = new ResizeObserver((entries) => {
         this.animationFrameID = window.requestAnimationFrame(() => {
           this.animationFrameID = null;

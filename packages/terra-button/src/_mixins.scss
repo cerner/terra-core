@@ -17,6 +17,7 @@
 
   &:hover {
     background-color: map-get($color-map, hover-background-color);
+    border-color: map-get($color-map, hover-border-color);
     color: map-get($color-map, hover-color);
   }
 
@@ -25,6 +26,14 @@
     background-color: map-get($color-map, active-background-color);
     border-color: map-get($color-map, active-border-color);
     color: map-get($color-map, active-color);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: map-get($color-map, disabled-background-color);
+    border-color: map-get($color-map, disabled-border-color);
+    box-shadow: map-get($color-map, disabled-box-shadow);
+    color: map-get($color-map, disabled-color);
   }
 
   &.is-active.is-focused,
