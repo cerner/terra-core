@@ -1,5 +1,14 @@
 ### Summary
-Summarize the contents of the code changes in your pull request. Tag any open issues you believe to be resolved by this pull request.
+<!--- Summarize the code changes. Please do not skip this step. -->
+
+<!--- Include any issue addressed by this pull request. -->
+<!--- Example: Closes #45 -->
+Closes #
+
+### Deployment Link
+<!---Include the deployment link, if applicable. -->
+<!--- Example: https://terra-core-deployed-pr-45.herokuapp.com/ -->
+https://terra-core-deployed-pr-#.herokuapp.com/
 
 ### Additional Details
 If you have anything else that you think may be relevant to this issue, list it here. Additional information can help us better understand your changes and speed up the review process.
