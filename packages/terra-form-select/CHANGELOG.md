@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Breaking Changes
+* `label` prop's type changed from node to string.
 
 5.45.0 - (March 31, 2020)
 ------------------
