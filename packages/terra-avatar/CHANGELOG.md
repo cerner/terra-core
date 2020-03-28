@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Breaking Changes
+* Changed the fallback behavior of Avatar. Such that if the image fails to load, the avatar falls back to the initials display instead of default user icon.
 * To Make all User avatars available in same variant `generic` subcomponent has been added.
 * `generic` subcomponent replaces the `sharedUser` subcomponent.
 * `generic` subcomponent contains a `variant` prop that toggles between `single-user`, `shared-user`, and `provider` user avatar.

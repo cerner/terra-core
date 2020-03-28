@@ -1,10 +1,4 @@
 Terra.describeViewports('Avatar', ['huge'], () => {
-  describe('Icon Avatar', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/user-avatar'));
-
-    Terra.it.validatesElement({ selector: '#user-avatar' });
-  });
-
   describe('Image Avatar', () => {
     before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-avatar'));
 
@@ -25,8 +19,8 @@ Terra.describeViewports('Avatar', ['huge'], () => {
     Terra.it.matchesScreenshot({ selector: '#image-avatar' });
   });
 
-  describe('Invalid Image Avatar', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/invalid-image-avatar'));
+  describe('Invalid Image Avatar With Initials', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/invalid-image-avatar-with-initials'));
 
     Terra.it.validatesElement({ selector: '#invalid-image-avatar' });
   });

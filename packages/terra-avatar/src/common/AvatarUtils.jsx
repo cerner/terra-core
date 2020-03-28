@@ -60,17 +60,33 @@ const getColorVariant = (hashValue) => {
 /**
  * Render placeholder.
  */
-const generateImagePlaceholder = (alt, isAriaHidden, variant) => {
+const generateImagePlaceholder = (avatarParams) => {
+  const {
+    alt, variant, isAriaHidden,
+  } = avatarParams;
   const avatarIconClassNames = cx(['icon', variant]);
-
   return <span className={avatarIconClassNames} role="img" aria-label={alt} alt={alt} aria-hidden={isAriaHidden} />;
+};
+
+/**
+ * Render placeholder.
+ */
+const generateInitials = (avatarParams) => {
+  const {
+    alt, initials, isAriaHidden,
+  } = avatarParams;
+  const avatarTextClassNames = cx('initials');
+  return <span className={avatarTextClassNames} role="img" alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
 };
 
 /**
  * Render image with placeholder.
  */
-const generateImage = (image, alt, isAriaHidden, variant, handleFallback) => {
-  const icon = generateImagePlaceholder(alt, isAriaHidden, variant);
+const generateImage = (avatarParams) => {
+  const {
+    alt, image, variant, handleFallback,
+  } = avatarParams;
+  const icon = (variant === AVATAR_VARIANTS.USER) ? generateInitials(avatarParams) : generateImagePlaceholder(avatarParams);
   return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} fit="cover" />;
 };
 
@@ -110,6 +126,7 @@ export {
   getColorVariant,
   generateImagePlaceholder,
   generateImage,
+  generateInitials,
   validateColor,
   setColor,
 };
