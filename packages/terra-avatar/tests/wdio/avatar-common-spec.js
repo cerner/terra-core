@@ -87,10 +87,22 @@ describe('Facility', () => {
   });
 });
 
-describe('Shared User', () => {
+describe('Generic', () => {
+  describe('Icon Single User', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/generic/single-user'));
+
+    Terra.it.validatesElement({ selector: '#single-user' });
+  });
+
   describe('Icon Shared User', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/shared-user/default-shared-user'));
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/generic/shared-user'));
 
     Terra.it.validatesElement({ selector: '#shared-user' });
+  });
+
+  describe('Icon Provider', () => {
+    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/generic/provider'));
+
+    Terra.it.validatesElement({ selector: '#provider' });
   });
 });
