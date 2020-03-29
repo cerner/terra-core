@@ -1,6 +1,6 @@
 import Avatar from './variants/Avatar';
 import Facility from './variants/Facility';
-import SharedUser from './variants/SharedUser';
+import Generic from './variants/Generic';
 
 export default Avatar;
-export { Facility, SharedUser };
+export { Facility, Generic };
