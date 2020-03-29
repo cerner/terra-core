@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from '../common/Avatar.module.scss';
 import {
-  AVATAR_VARIANTS, generateImagePlaceholder, generateImage, setColor,
+  AVATAR_VARIANTS, generateInitials, generateImage, setColor,
 } from '../common/AvatarUtils';
 
 const cx = classNames.bind(styles);
@@ -30,7 +30,7 @@ const propTypes = {
   /**
    * One or two letters to display.
    */
-  initials: PropTypes.string,
+  initials: PropTypes.string.isRequired,
   /**
    * Whether to hide avatar from the accessibility tree.
    */
@@ -49,7 +49,6 @@ const defaultProps = {
   color: 'auto',
   hashValue: undefined,
   image: undefined,
-  initials: undefined,
   isAriaHidden: false,
   isDeceased: false,
   size: undefined,
@@ -84,14 +83,19 @@ class Avatar extends React.Component {
     } = this.props;
 
     let avatarContent;
+    const avatarParams = {
+      image,
+      alt,
+      isAriaHidden,
+      variant: AVATAR_VARIANTS.USER,
+      handleFallback: this.handleFallback,
+      initials: (initials.length > 2) ? initials.slice(0, 2) : initials,
+    };
 
     if (image) {
-      avatarContent = generateImage(image, alt, isAriaHidden, AVATAR_VARIANTS.USER, this.handleFallback);
-    } else if (initials && (initials.length === 1 || initials.length === 2)) {
-      const avatarTextClassNames = cx('initials');
-      avatarContent = <span className={avatarTextClassNames} alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
+      avatarContent = generateImage(avatarParams);
     } else {
-      avatarContent = generateImagePlaceholder(alt, isAriaHidden, AVATAR_VARIANTS.USER);
+      avatarContent = generateInitials(avatarParams);
     }
 
     const attributes = { ...customProps };
