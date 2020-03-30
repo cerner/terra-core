@@ -16,7 +16,7 @@ const supportedIntlConstructors = () => {
        * intl-locales-supported accesses the 'supportedLocalesOf' property of each of these constructors.
        * When certain polyfills are used, the polyfill may not have the 'supportedLocalesOf' property.
        * For example, when using the date-time-format-timezone Intl.DateTimeFormat becomes Intl.DateTimeFormatPolyfill which does not support this property.
-       * 
+       *
        * Reference: https://github.com/cerner/terra-core/issues/2914
        */
       if (Object.prototype.hasOwnProperty.call(Intl.DateTimeFormat, 'supportedLocalesOf') && Object.prototype.hasOwnProperty.call(Intl.NumberFormat, 'supportedLocalesOf')) {
