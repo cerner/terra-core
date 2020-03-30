@@ -12,10 +12,19 @@ const supportedIntlConstructors = () => {
   let constructors;
   try {
     if (typeof (Intl) === 'object' && typeof (Intl.DateTimeFormat) === 'function' && typeof (Intl.NumberFormat) === 'function') {
-      constructors = [
-        Intl.DateTimeFormat,
-        Intl.NumberFormat,
-      ];
+      /**
+       * intl-locales-supported accesses the 'supportedLocalesOf' property of each of these constructors.
+       * When certain polyfills are used, the polyfill may not have the 'supportedLocalesOf' property.
+       * For example, when using the date-time-format-timezone Intl.DateTimeFormat becomes Intl.DateTimeFormatPolyfill which does not support this property.
+       */
+      if (Object.prototype.hasOwnProperty.call(Intl.DateTimeFormat, 'supportedLocalesOf') && Object.prototype.hasOwnProperty.call(Intl.NumberFormat, 'supportedLocalesOf')) {
+        constructors = [
+          Intl.DateTimeFormat,
+          Intl.NumberFormat,
+        ];
+      } else {
+        constructors = [];
+      }
     }
   } catch (error) {
     constructors = [];
