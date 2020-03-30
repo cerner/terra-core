@@ -16,6 +16,7 @@ Cerner Corporation
 - Nikhil Agrawal [@nagrawal3]
 - Emily Rohrbough [@emilyrohrbough]
 - Neil Pfeiffer [@neilpfeiffer]
+- Jeremy Fuksa [@jeremyfuksa]
 - David Schoonover [@dkschoonover]
 - Christian Alten [@cwalten]
 - Viren Sawant [@viren140290]
