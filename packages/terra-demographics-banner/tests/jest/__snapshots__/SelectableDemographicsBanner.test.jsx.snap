@@ -50,17 +50,6 @@ exports[`renders a blank banner wrapper 1`] = `
 
 exports[`renders the banner wrapper with all props 1`] = `
 <BackgroundTile
-  applicationRows={
-    Array [
-      Object {
-        "Address": "1501 Walnut St. Apt #123",
-        "City": "Kansas City MO",
-      },
-      Object {
-        "ZIP": 64108,
-      },
-    ]
-  }
   isDeceased={false}
 >
   <SelectableTile
@@ -71,7 +60,24 @@ exports[`renders the banner wrapper with all props 1`] = `
   >
     <DemographicsBannerDisplay
       age="25 Years"
-      applicationContent={null}
+      applicationContent={
+        <span
+          className="risk-score"
+        >
+          5%
+        </span>
+      }
+      applicationRows={
+        Array [
+          Object {
+            "Address": "1501 Walnut St. Apt #123",
+            "City": "Kansas City MO",
+          },
+          Object {
+            "ZIP": 64108,
+          },
+        ]
+      }
       className="selectable-demographics-banner"
       dateOfBirth="May 9, 1993"
       dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
@@ -79,15 +85,21 @@ exports[`renders the banner wrapper with all props 1`] = `
       deceasedDate={null}
       deceasedDateLabel="Terra.demographicsBanner.deceased"
       gender="Male"
-      gestationalAge={null}
+      gestationalAge="April 5, 2016"
       gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
       gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
-      identifiers={Object {}}
+      identifiers={
+        Object {
+          "MRN": 12343,
+          "REA": "3JSDA",
+        }
+      }
       personName="Johnathon Doe"
-      postMenstrualAge={null}
+      photo=""
+      postMenstrualAge="April 7, 2016"
       postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
       postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
-      preferredFirstName={null}
+      preferredFirstName="John"
     />
   </SelectableTile>
   <div

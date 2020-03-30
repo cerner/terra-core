@@ -97,16 +97,10 @@ const defaultProps = {
 };
 
 const SelectableDemographicsBanner = ({
-  applicationContent,
   age,
   dateOfBirth,
   deceasedDate,
   gender,
-  gestationalAge,
-  identifiers,
-  photo,
-  postMenstrualAge,
-  preferredFirstName,
   intl,
   personName,
   infoButtonOnClick,
@@ -137,6 +131,7 @@ const SelectableDemographicsBanner = ({
 
   const DemographicsBannerSelectableTile = (
     <DemographicsBannerDisplay
+      {...customProps}
       className={cx('selectable-demographics-banner')}
       age={age || noDataProvided}
       dateOfBirth={dateOfBirth || noDataProvided}
@@ -153,7 +148,7 @@ const SelectableDemographicsBanner = ({
   );
 
   return (
-    <BackgroundTile {...customProps} isDeceased={!!(deceasedDate)}>
+    <BackgroundTile isDeceased={!!(deceasedDate)}>
       <SelectableTile id={selectableTileId} onClick={handleOnClick} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
         {DemographicsBannerSelectableTile}
       </SelectableTile>

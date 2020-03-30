@@ -31,6 +31,7 @@
     "keycode-js": "^2.0.1",
     "terra-avatar": "^2.33.0",
     "terra-icon": "^3.27.0",
+    "terra-image": "^3.25.0",
     "terra-responsive-element": "^5.16.0",
     "terra-visually-hidden-text": "^2.24.0"
   },

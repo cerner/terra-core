@@ -13,7 +13,7 @@ const propTypes = {
    */
   age: PropTypes.string,
   /**
-   * The persons date of birth.
+   * The person's date of birth.
    */
   dateOfBirth: PropTypes.string,
   /**
@@ -25,7 +25,7 @@ const propTypes = {
    */
   gender: PropTypes.string,
   /**
-   * The persons gestational age.
+   * The person's gestational age.
    */
   gestationalAge: PropTypes.string,
   /**
@@ -43,7 +43,7 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
-   * Photo to display in the banner.
+   * Image Node to display photo in the banner OR URL of Photo to display in the banner.
    */
   photo: PropTypes.node,
   /**
@@ -51,7 +51,7 @@ const propTypes = {
    */
   postMenstrualAge: PropTypes.string,
   /**
-   * The persons preferred first name if they have one.
+   * The person's preferred first name if they have one.
    */
   preferredFirstName: PropTypes.string,
 };
