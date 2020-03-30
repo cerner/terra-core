@@ -166,5 +166,12 @@ describe('intlLoaders', () => {
       expect(hasIntlData).toHaveBeenNthCalledWith(1, ['es-US'], supportedIntlConstructors);
       expect(intlLoaders.en).not.toBeCalled();
     });
+
+    it('does not add supported Intl constructors if supportedLocalesOf property does not exist', () => {
+      delete Intl.DateTimeFormat.supportedLocalesOf;
+      delete Intl.NumberFormat.supportedLocalesOf;
+      defaultLoadIntl('en');
+      expect(hasIntlData).toHaveBeenNthCalledWith(1, ['en'], []);
+    });
   });
 });
