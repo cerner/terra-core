@@ -4,6 +4,17 @@ import { Badge } from 'terra-form-input/package.json?dev-site-package';
 
 # Terra Form Input Upgrade Guide
 
+## Changes from version 2 to version 3
+
+### Props
+
+#### Updated
+* Form Fields allowed the `label` to be a node, which potentially breaks the display when injecting other non-inline-only text elements (terra-text) or has the potential to completely break accessibility if something non-text based would be passed in.
+* `label` prop's type changed from node to string.
+
+##### Steps to Upgrade
+To upgrade from 2.0 to 3.0 each existing Input must be reviewed and updated to ensure only a string is being passed to the `label` prop. Solutions passing node data types need to be reworked to provide only a string.
+
 ## Changes from version 1 to version 2
 
 ### Changes to CSS Custom Properties
