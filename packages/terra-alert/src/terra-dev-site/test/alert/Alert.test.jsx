@@ -11,16 +11,6 @@ class AlertActionButton extends React.Component {
     };
     this.actionFunc = this.actionFunc.bind(this);
     this.popAlert = this.popAlert.bind(this);
-    this.alert = (
-      <Alert id="actionAlert" type="warning" action={<Button text="Action" onClick={this.actionFunc} />}>
-    This is a warning. It is configured with a custom Action button. Action button has been
-    clicked
-        {' '}
-        <span id="actionButtonClickCount">{this.state.actionButtonClickCount}</span>
-        {' '}
-    times.
-      </Alert>
-    );
   }
 
   actionFunc() {
@@ -32,12 +22,21 @@ class AlertActionButton extends React.Component {
   }
 
   render() {
+    this.alert = (
+      <Alert id="actionAlert" type="warning" action={<Button text="Action" onClick={this.actionFunc} />}>
+    This is a warning. It is configured with a custom Action button. Action button has been
+    clicked
+        {' '}
+        <span id="actionButtonClickCount">{this.state.actionButtonClickCount}</span>
+        {' '}
+    times.
+      </Alert>
+    );
     return (
       <div>
         {/* This Test has been added to test the functionality on JAWS and Voice Over */}
         <Button text="Action" onClick={this.popAlert} />
-        {(this.state.showAlert)
-          ? this.alert : ''}
+        {this.state.showAlert && this.alert }
       </div>
     );
   }
