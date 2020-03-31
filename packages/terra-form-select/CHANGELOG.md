@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+5.45.0 - (March 31, 2020)
+------------------
 ### Changed
 * Fixed `onBlur` event for mobile to not be triggered when selecting an option
 

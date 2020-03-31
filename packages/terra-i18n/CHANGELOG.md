@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.26.0 - (March 31, 2020)
+------------------
 ### Fixed
 * Check if Intl.DateTimeFormat and Int.NumberFormat have the `supportedLocalesOf` property before adding as constructors for intl-locales-supported. 
 
