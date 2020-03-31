@@ -14,7 +14,7 @@ const propTypes = {
   /**
    * The field label.
    */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   /**
    * The default value of the select. Can be a string, number, or array of strings/numbers.
    */

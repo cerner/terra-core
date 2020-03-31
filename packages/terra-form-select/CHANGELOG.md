@@ -3,9 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-### Breaking Changes
-* `label` prop's type changed from node to string.
-
 ### Changed
 * Fixed `onBlur` event for mobile to not be triggered when selecting an option
 

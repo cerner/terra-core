@@ -40,7 +40,7 @@ const propTypes = {
   /**
    * The legend of the form control children.
    */
-  legend: PropTypes.string.isRequired,
+  legend: PropTypes.node.isRequired,
   /**
    * Attributes to attach to the legend.
    */

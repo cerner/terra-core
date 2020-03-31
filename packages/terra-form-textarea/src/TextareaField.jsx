@@ -12,7 +12,7 @@ const propTypes = {
   /**
    * The label of the form control children.
    */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   /**
    * The defaultValue of the input field. Use this to create an uncontrolled input.
    */
