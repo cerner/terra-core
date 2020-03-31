@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+### Changed
+* Update docs to use mdx syntax.
+
 4.26.0 - (March 10, 2020)
 ------------------
 ### Changed
