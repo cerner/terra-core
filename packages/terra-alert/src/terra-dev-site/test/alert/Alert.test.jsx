@@ -15,6 +15,7 @@ class AlertActionButton extends React.Component {
 
   actionFunc() {
     this.setState(prevState => ({ actionButtonClickCount: prevState.actionButtonClickCount + 1 }));
+    this.setState({ showAlert: false });
   }
 
   popAlert() {
@@ -34,8 +35,8 @@ class AlertActionButton extends React.Component {
     );
     return (
       <div>
-        {/* This Test has been added to test the functionality on JAWS and Voice Over */}
-        <Button text="Action" onClick={this.popAlert} />
+        <p> This Test has been added to test the functionality on JAWS and Voice Over </p>
+        <Button text="Trigger Alert" onClick={this.popAlert} />
         {this.state.showAlert && this.alert }
       </div>
     );
