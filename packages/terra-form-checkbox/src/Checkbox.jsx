@@ -39,7 +39,7 @@ const propTypes = {
   /**
     * Text of the label.
     */
-  labelText: PropTypes.node.isRequired,
+  labelText: PropTypes.string.isRequired,
   /**
     * Additional attributes for the text object.
     */
