@@ -123,7 +123,7 @@
     "react-test-renderer": "^16.5.2",
     "regenerator-runtime": "^0.13.2",
     "stylelint": "^11.0.0",
-    "stylelint-config-terra": "cerner/stylelint-config-terra#remove-rule",
+    "stylelint-config-terra": "^3.4.0",
     "terra-aggregate-translations": "^1.0.0",
     "terra-dev-site": "^6.5.0",
     "terra-disclosure-manager": "^4.9.0",
