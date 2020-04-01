@@ -5,7 +5,7 @@ Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
 
     browser.moveToObject('#root', 100, 1);
     Terra.it.validatesElement({ rules: ignoredDisabledAlly });
-    
+
     describe('Focus', () => {
       before(() => {
         browser.keys('Tab');

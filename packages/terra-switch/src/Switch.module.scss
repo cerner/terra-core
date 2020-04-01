@@ -20,7 +20,7 @@
     color: var(--terra-switch-label-color, #1c1f21);
     font-size: var(--terra-switch-label-font-size, 1rem);
     font-weight: var(--terra-switch-label-font-weight, normal);
-    padding: var(--terra-switch-label-padding);
+    padding-bottom: var(--terra-switch-label-padding-bottom, 0.2142rem);
     word-wrap: break-word;
   }
 
@@ -28,7 +28,6 @@
     color: var(--terra-switch-status-label-color, #64696c);
     font-size: var(--terra-switch-status-label-font-size, 1rem);
     font-weight: var(--terra-switch-status-label-font-weight, normal);
-    padding: var(--terra-switch-status-label-padding);
   }
 
   .switch {    
