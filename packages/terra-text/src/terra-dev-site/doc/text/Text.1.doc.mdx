@@ -48,6 +48,35 @@ This component requires the following peer dependencies be installed in your app
 import Text from 'terra-text';
 ```
 
+### Color Class
+
+```css
+:root {
+  --my-app-text-attention-color: rgb(220, 20, 60);
+  --my-app-text-success-color: rgb(46, 125, 50);
+  --my-app-text-info-color: #304ffe;
+  --my-app-text-default-color: #333;
+}
+
+:local {
+  .default {
+    color: var(--my-app-text-default-color, #333);
+  }
+
+  .attention {
+    color: var(--my-app-text-attention-color, rgb(220, 20, 60));
+  }
+
+  .success {
+    color: var(--my-app-text-success-color, rgb(46, 125, 50));
+  }
+
+  .info {
+    color: var(--my-app-text-info-color, #304ffe);
+  }
+}
+```
+
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
 * [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
