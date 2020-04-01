@@ -4,7 +4,6 @@ Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
     before(() => browser.url('/#/raw/tests/terra-switch/switch/default-switch'));
 
     browser.moveToObject('#root', 100, 1);
-    Terra.it.validatesElement({ rules: ignoredDisabledAlly });
 
     describe('Focus', () => {
       before(() => {
