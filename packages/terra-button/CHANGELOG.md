@@ -3,9 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
-
 ### Changed
 * Directly include packaged themes
+
+3.34.0 - (March 31, 2020)
+------------------
+### Fixed
+* Fixed long press enabling click focus styles.
+* Fixed button not getting focus after closing of modal.
 
 3.33.0 - (March 10, 2020)
 ------------------

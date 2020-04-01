@@ -139,7 +139,9 @@ class Button extends React.Component {
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
     // This will put focus on the button when clicked if it is not currently the active element.
     if (document.activeElement !== event.currentTarget) {
+      this.shouldShowFocus = false;
       event.currentTarget.focus();
+      this.shouldShowFocus = true;
     }
 
     if (this.props.onClick) {
@@ -197,11 +199,6 @@ class Button extends React.Component {
   }
 
   handleMouseDown(event) {
-    // Prevent button from showing focus styles when clicked
-    this.shouldShowFocus = false;
-    // Wait until after onFocus has been triggered on browsers where it will get triggered for click
-    setTimeout(() => { this.shouldShowFocus = true; }, 300);
-
     if (this.props.onMouseDown) {
       this.props.onMouseDown(event);
     }
@@ -278,8 +275,8 @@ class Button extends React.Component {
 
     const buttonLabel = (
       <span className={buttonLabelClasses}>
-        {isReversed ? buttonText : buttonIcon }
-        {isReversed ? buttonIcon : buttonText }
+        {isReversed ? buttonText : buttonIcon}
+        {isReversed ? buttonIcon : buttonText}
       </span>
     );
 
