@@ -6,9 +6,13 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+6.0.0 - (March 31, 2020)
+------------------
 ### Breaking Changes
 * `label` prop's type changed from node to string.
 
+5.45.0 - (March 31, 2020)
+------------------
 ### Changed
 * Fixed `onBlur` event for mobile to not be triggered when selecting an option
 

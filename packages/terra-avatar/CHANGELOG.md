@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+3.0.0 - (March 31, 2020)
+------------------
 ### Breaking Changes
 * Changed the fallback behavior of Avatar. Such that if the image fails to load, the avatar falls back to the initials display instead of default user icon.
 * To Make all User avatars available in same variant `generic` subcomponent has been added.
