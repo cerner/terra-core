@@ -163,7 +163,7 @@ const Alert = ({
         }
       }}
     >
-      <div {...attributes} className={alertClassNames}>
+      <div role="alert" {...attributes} className={alertClassNames}>
         <div className={bodyClassNameForParent}>
           {getAlertIcon(type, customIcon)}
           {alertMessageContent}
