@@ -1,6 +1,7 @@
 :local {
   .switch-wrapper {
     display: inline-block;
+    max-width: 100%; // added to fix IE Wrapping issue
     -webkit-tap-highlight-color: transparent;
     width: auto;
   }
@@ -11,8 +12,6 @@
   }
 
   .label-container {
-    display: flex;
-    flex-direction: column;
     margin-right: var(--terra-switch-label-margin-right, 1.42857rem);
   }
 
@@ -155,6 +154,11 @@
       border: var(--terra-switch-slider-active-border, 0);
       box-shadow: var(--terra-switch-slider-active-box-shadow, inset 0 0 0 1px #fff, inset 5px 2px 4px 2px #e6e7e8, 2px 0 2px 0 rgba(0, 0, 0, 0.2),
       -2px 0 2px 0 rgba(0, 0, 0, 0.2), 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.2)); // pressed state.
+    }
+
+    // Removes dotted border of button on focus that shows up in Firefox
+    &::-moz-focus-inner {
+      border: 0;
     }
   }
 }

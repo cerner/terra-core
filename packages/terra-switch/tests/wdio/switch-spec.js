@@ -1,8 +1,9 @@
 Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
   const ignoredDisabledAlly = { 'color-contrast': { enabled: false } };
+
   describe('DefaultSwitch', () => {
     before(() => browser.url('/#/raw/tests/terra-switch/switch/default-switch'));
-    browser.refresh();
+
     Terra.it.validatesElement('', { rules: ignoredDisabledAlly });
 
     describe('Focus', () => {

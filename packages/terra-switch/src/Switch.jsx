@@ -98,8 +98,8 @@ const Switch = (props) => {
       <label htmlFor={buttonId}>
         <div className={cx('switch-container')}>
           <div className={cx('label-container')}>
-            <span id={labelId} className={cx('label-text')}>{label}</span>
-            <span className={cx('status-label-text')}>{statusLabelText}</span>
+            <div id={labelId} className={cx('label-text')}>{label}</div>
+            <div className={cx('status-label-text')}>{statusLabelText}</div>
           </div>
           <div className={switchClassNames}>
             <span className={trayClassNames}>
