@@ -53,9 +53,10 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
-   * Ensure accessibility on touch devices. Will render the dropdown menu in
-   * normal DOM flow with position absolute. By default, the menu renders in a
-   * portal, which is inaccessible on touch devices.
+   * Ensures touch accessibility by rendering the dropdown inline without a portal.
+   *
+   * Note: When enabled the dropdown will clip if rendered within a container that has an overflow: hidden ancestor.
+   * The dropdown may also appear beneath content if rendered within a container that has an overflow: auto ancestor.
    */
   isTouchAccessible: PropTypes.bool,
   /**
