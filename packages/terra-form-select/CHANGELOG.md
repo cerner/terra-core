@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+### Changed
+* Updated the `isTouchAccessible` prop descriptions to include information about overflow behavior
+
 6.0.0 - (March 31, 2020)
 ------------------
 ### Breaking Changes

@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+### Changed
+* Added `role="alert"` for JAWS to function properly. 
+
 4.23.0 - (March 31, 2020)
 ------------------
 ### Changed
