@@ -3,6 +3,18 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated the `isTouchAccessible` prop descriptions to include information about overflow behavior
+
+6.0.0 - (March 31, 2020)
+------------------
+### Breaking Changes
+* `label` prop's type changed from node to string.
+
+5.45.0 - (March 31, 2020)
+------------------
+### Changed
+* Fixed `onBlur` event for mobile to not be triggered when selecting an option
 
 5.44.0 - (March 10, 2020)
 ------------------

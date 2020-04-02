@@ -7,7 +7,7 @@
 Terra includes styling for all standard headings `h1` through `h6`, as well as styles that match the size of their respective heading.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-heading/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-heading/heading/heading)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -23,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

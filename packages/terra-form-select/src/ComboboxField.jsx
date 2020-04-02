@@ -17,7 +17,7 @@ const propTypes = {
   /**
    * The field label.
    */
-  label: PropTypes.node.isRequired,
+  label: PropTypes.string.isRequired,
   /**
    * The default value of the select. Can be a string, number, or array of strings/numbers.
    */
@@ -55,9 +55,10 @@ const propTypes = {
    */
   isLabelHidden: PropTypes.bool,
   /**
-   * Ensure accessibility on touch devices. Will render the dropdown menu in
-   * normal DOM flow with position absolute. By default, the menu renders in a
-   * portal, which is inaccessible on touch devices.
+   * Ensures touch accessibility by rendering the dropdown inline without a portal.
+   *
+   * Note: When enabled the dropdown will clip if rendered within a container that has an overflow: hidden ancestor.
+   * The dropdown may also appear beneath content if rendered within a container that has an overflow: auto ancestor.
    */
   isTouchAccessible: PropTypes.bool,
   /**

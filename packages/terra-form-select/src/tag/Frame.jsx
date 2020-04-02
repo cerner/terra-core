@@ -53,9 +53,10 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
-   * Ensure accessibility on touch devices. Will render the dropdown menu in
-   * normal DOM flow with position absolute. By default, the menu renders in a
-   * portal, which is inaccessible on touch devices.
+   * Ensures touch accessibility by rendering the dropdown inline without a portal.
+   *
+   * Note: When enabled the dropdown will clip if rendered within a container that has an overflow: hidden ancestor.
+   * The dropdown may also appear beneath content if rendered within a container that has an overflow: auto ancestor.
    */
   isTouchAccessible: PropTypes.bool,
   /**
@@ -341,10 +342,8 @@ class Frame extends React.Component {
 
     // Don't blur if we dismissed the onscreen keyboard
     // Determined by if we have have interacted with the frame via onTouchStart
-    // and if the relatedTarget is falsey. The relatedTarget will be null when
-    // dismissing the onscreen keyboard, else set to another element when
-    // tapping elsewhere on the page
-    if (focusedByTouch && !relatedTarget) {
+    // and if the focus is on input.
+    if (focusedByTouch && (relatedTarget === this.input)) {
       return;
     }
 
