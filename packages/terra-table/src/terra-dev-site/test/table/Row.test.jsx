@@ -1,12 +1,8 @@
 import React from 'react';
 import Table from 'terra-table';
-import classNames from 'classnames/bind';
-import styles from './RowTest.module.scss';
-
-const cx = classNames.bind(styles);
 
 const RowExample = () => (
-  <div className={cx('content-wrapper')}>
+  <React.Fragment>
     <Table
       summaryId="default-row-table"
       summary="This table displays default rows."
@@ -307,7 +303,7 @@ const RowExample = () => (
         },
       ]}
     />
-  </div>
+  </React.Fragment>
 );
 
 export default RowExample;
