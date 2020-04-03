@@ -13,17 +13,17 @@ exports[`Switch should render a default component 1`] = `
       <div
         className="label-container"
       >
-        <span
+        <div
           className="label-text"
           id="label1"
         >
           default
-        </span>
-        <span
+        </div>
+        <div
           className="status-label-text"
         >
           Off
-        </span>
+        </div>
       </div>
       <div
         className="switch"
@@ -62,17 +62,17 @@ exports[`Switch should render as disabled when set 1`] = `
       <div
         className="label-container"
       >
-        <span
+        <div
           className="label-text"
           id="label2"
         >
           Label
-        </span>
-        <span
+        </div>
+        <div
           className="status-label-text"
         >
           Off
-        </span>
+        </div>
       </div>
       <div
         className="switch"
