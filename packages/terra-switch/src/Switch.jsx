@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Switch.module.scss';
+import { enableFocusStyles, disableFocusStyles } from './_SwitchUtils';
 
 const cx = classNames.bind(styles);
 
@@ -58,15 +59,18 @@ const Switch = (props) => {
 
   const sliderButton = useRef();
 
-  const handleClick = (event) => {
+  const handleOnClick = useCallback(
+    (event) => {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
     // This will set focus on the button when clicked.
-    sliderButton.current.focus();
-    if (onChange) {
-      onChange(!checked, event);
-    }
-  };
+      sliderButton.current.focus();
+      if (onChange) {
+        onChange(!checked, event);
+      }
+    },
+    [checked, onChange],
+  );
 
   const switchClassNames = cx([
     'switch',
@@ -92,10 +96,10 @@ const Switch = (props) => {
   }
 
   delete customProps.className;
-
   return (
     <div {...customProps} className={mainClasses}>
-      <label htmlFor={buttonId}>
+      {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
+      <label htmlFor={buttonId} onMouseDown={disableFocusStyles} onKeyDown={enableFocusStyles}>
         <div className={cx('switch-container')}>
           <div className={cx('label-container')}>
             <div id={labelId} className={cx('label-text')}>{label}</div>
@@ -112,7 +116,8 @@ const Switch = (props) => {
                 className={sliderClassNames}
                 role="switch"
                 tabIndex="0"
-                onClick={handleClick}
+                onClick={handleOnClick}
+                data-focus-styles-enabled
                 ref={sliderButton}
               />
             </span>

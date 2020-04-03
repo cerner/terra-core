@@ -6,6 +6,8 @@ exports[`Switch should render a default component 1`] = `
 >
   <label
     htmlFor="defaultSwitch"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
   >
     <div
       className="switch-container"
@@ -35,6 +37,7 @@ exports[`Switch should render a default component 1`] = `
             aria-checked={false}
             aria-labelledby="label1"
             className="slider"
+            data-focus-styles-enabled={true}
             disabled={false}
             id="defaultSwitch"
             onClick={[Function]}
@@ -55,6 +58,8 @@ exports[`Switch should render as disabled when set 1`] = `
 >
   <label
     htmlFor="disabledSwitch"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
   >
     <div
       className="switch-container"
@@ -84,6 +89,7 @@ exports[`Switch should render as disabled when set 1`] = `
             aria-checked={false}
             aria-labelledby="label2"
             className="slider is-disabled"
+            data-focus-styles-enabled={true}
             disabled={true}
             id="disabledSwitch"
             onClick={[Function]}

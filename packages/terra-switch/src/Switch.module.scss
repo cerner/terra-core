@@ -88,7 +88,7 @@
       -2px 0 2px 0 rgba(0, 0, 0, 0.2), -1px 0 0 0 #01639e, 0 0 4px 1px rgba(0, 0, 0, 0.2)); // pressed state.
     }
 
-    &:focus:not(.is-disabled) {
+    &:focus[data-focus-styles-enabled='true']:not(.is-disabled) {
       background-color: var(--terra-switch-slider-selected-focus-background-color, #fff);
       border: var(--terra-switch-slider-selected-focus-border, 0);
     }
@@ -134,7 +134,7 @@
       opacity: var(--terra-switch-slider-disabled-opacity, 1);
     }
 
-    &:focus:not(.is-disabled) {
+    &:focus[data-focus-styles-enabled='true']:not(.is-disabled) {
       background-color: var(--terra-switch-slider-focus-background-color, #fff);
       border: var(--terra-switch-slider-focus-border, 0);
       box-shadow: var(--terra-switch-slider-focus-box-shadow, 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.3));
