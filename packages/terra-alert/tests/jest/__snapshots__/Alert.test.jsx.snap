@@ -69,6 +69,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-std"
@@ -165,6 +166,7 @@ exports[`Alert of type alert with text content should render an Alert component 
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-std"
@@ -305,6 +307,7 @@ exports[`Alert of type custom with custom title and text content should render a
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-std"
@@ -433,6 +436,7 @@ exports[`Alert of type error with text content should render an Alert component 
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-std"
@@ -568,6 +572,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-std"
@@ -698,6 +703,7 @@ exports[`Alert of type info with text content should render an Alert component o
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-std"
@@ -845,6 +851,7 @@ exports[`Alert of type success with an action button text content should render 
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-narrow"
@@ -1018,6 +1025,7 @@ exports[`Alert of type success with text content should render an Alert componen
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-std"
@@ -1153,6 +1161,7 @@ exports[`Alert of type warning with text content should render an Alert componen
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-std"
@@ -1288,6 +1297,7 @@ exports[`Alert with no props should render a default component 1`] = `
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-std"
@@ -1439,6 +1449,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-narrow"
@@ -1644,6 +1655,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           "timeZone": null,
         }
       }
+      role="alert"
     >
       <div
         className="body body-narrow"
