@@ -35,7 +35,8 @@
   },
   "peerDependencies": {
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react-dom": "^16.8.5",
+    "terra-theme-context": "^1.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",

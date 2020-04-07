@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
+import ThemeContext from 'terra-theme-context';
 import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
@@ -232,6 +233,8 @@ class Button extends React.Component {
       ...customProps
     } = this.props;
 
+    const theme = this.context;
+
     const buttonClasses = cx([
       'button',
       variant,
@@ -241,6 +244,7 @@ class Button extends React.Component {
       { 'is-active': this.state.active },
       { 'is-focused': this.state.focused },
       customProps.className,
+      theme.className,
     ]);
 
     const buttonLabelClasses = cx([
@@ -314,6 +318,7 @@ class Button extends React.Component {
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
+Button.contextType = ThemeContext;
 
 Button.Opts = {};
 Button.Opts.Types = ButtonTypes;

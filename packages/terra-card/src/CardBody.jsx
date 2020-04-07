@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './CardBody.module.scss';
 
 const cx = classNames.bind(styles);
@@ -37,11 +38,13 @@ const CardBody = ({
   isContentCentered,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
   const cardBodyClasses = cx([
     { 'vertical-padding': hasPaddingVertical },
     { 'horizontal-padding': hasPaddingHorizontal },
     { 'center-content': isContentCentered },
     customProps.className,
+    theme.className,
   ]);
   return <div {...customProps} className={cardBodyClasses}>{children}</div>;
 };

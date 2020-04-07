@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
+import ThemeContext from 'terra-theme-context';
 import styles from './Card.module.scss';
 import CardBody from './CardBody';
 
@@ -39,10 +40,12 @@ const Card = ({
   visuallyHiddenText,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
   const cardClassNames = cx([
     'card',
     variant,
     customProps.className,
+    theme.className,
   ]);
 
   const visuallyHiddenTextContent = visuallyHiddenText ? <VisuallyHiddenText text={visuallyHiddenText} /> : null;
