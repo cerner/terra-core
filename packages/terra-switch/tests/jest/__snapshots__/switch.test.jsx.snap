@@ -10,7 +10,7 @@ exports[`Switch should render a default component 1`] = `
     onMouseDown={[Function]}
   >
     <div
-      className="switch-container"
+      className="switch"
     >
       <div
         className="label-container"
@@ -28,24 +28,20 @@ exports[`Switch should render a default component 1`] = `
         </div>
       </div>
       <div
-        className="switch"
+        className="tray unselected"
       >
-        <span
-          className="tray unselected"
-        >
-          <button
-            aria-checked={false}
-            aria-labelledby="label1"
-            className="slider"
-            data-focus-styles-enabled={true}
-            disabled={false}
-            id="defaultSwitch"
-            onClick={[Function]}
-            role="switch"
-            tabIndex="0"
-            type="button"
-          />
-        </span>
+        <button
+          aria-checked={false}
+          aria-labelledby="label1"
+          className="slider"
+          data-focus-styles-enabled={true}
+          disabled={false}
+          id="defaultSwitch"
+          onClick={[Function]}
+          role="switch"
+          tabIndex="0"
+          type="button"
+        />
       </div>
     </div>
   </label>
@@ -62,7 +58,7 @@ exports[`Switch should render as disabled when set 1`] = `
     onMouseDown={[Function]}
   >
     <div
-      className="switch-container"
+      className="switch is-disabled"
     >
       <div
         className="label-container"
@@ -80,24 +76,20 @@ exports[`Switch should render as disabled when set 1`] = `
         </div>
       </div>
       <div
-        className="switch"
+        className="tray unselected is-disabled"
       >
-        <span
-          className="tray unselected is-disabled"
-        >
-          <button
-            aria-checked={false}
-            aria-labelledby="label2"
-            className="slider is-disabled"
-            data-focus-styles-enabled={true}
-            disabled={true}
-            id="disabledSwitch"
-            onClick={[Function]}
-            role="switch"
-            tabIndex="0"
-            type="button"
-          />
-        </span>
+        <button
+          aria-checked={false}
+          aria-labelledby="label2"
+          className="slider is-disabled"
+          data-focus-styles-enabled={true}
+          disabled={true}
+          id="disabledSwitch"
+          onClick={[Function]}
+          role="switch"
+          tabIndex="0"
+          type="button"
+        />
       </div>
     </div>
   </label>

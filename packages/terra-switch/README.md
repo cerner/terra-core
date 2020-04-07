@@ -5,11 +5,7 @@
 
 The terra-switch component indicates whether a setting is on or off and provide users with instantaneous feedback.
 
-Switches are used to activate settings immediately, in real time.
-Switches never require users to press a button to apply their settings.
-A switch is a set of binary options and always has one of the options selected by default.
-
-Switch should be used for only one of these set of binary options:
+Switch can be used for only one of these set of binary options:
 • On / Off
 
 - [Getting Started](#getting-started)
@@ -36,7 +32,7 @@ This component requires the following peer dependencies be installed in your app
 
 ## LICENSE
 
-Copyright 2019 - 2020 Cerner Innovation, Inc.
+Copyright 2020 Cerner Innovation, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

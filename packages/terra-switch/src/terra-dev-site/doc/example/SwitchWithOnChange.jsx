@@ -8,7 +8,7 @@ const SwitchWithOnChange = () => {
       buttonId="defaultSwitch1"
       labelId="label3"
       checked={value}
-      label="Label"
+      labelText="Label"
       onChange={setValue}
     />
   );

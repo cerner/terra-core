@@ -5,7 +5,7 @@ const DefaultSwitch = () => (
   <Switch
     buttonId="defaultSwitch"
     labelId="label1"
-    label="Label"
+    labelText="Label"
     className="default-switch"
   />
 );

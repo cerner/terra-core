@@ -1,9 +1,6 @@
 @import '~terra-mixins/lib/Mixins';
 
 :global {
-  // switch variables
-  --terra-switch-margin: 0.5rem;
-
   // switch label variables
   --terra-switch-label-margin-right: 1.4285rem;
   --terra-switch-label-color: #b7b7b8;
@@ -20,6 +17,7 @@
   --terra-switch-tray-border: 1px solid #16191b;
   --terra-switch-tray-border-radius: 1.57142rem;
   --terra-switch-tray-height: 1.57142rem;
+  --terra-switch-tray-margin: 0.5rem;
   --terra-switch-tray-width: 2.42857rem;
   --terra-switch-tray-transition: 0.2s, cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -28,7 +26,9 @@
   --terra-switch-tray-default-hover-border: 1px solid #16191b;
   --terra-switch-tray-default-hover-box-shadow: none;
   --terra-switch-tray-default-disabled-background-color: #1d2022;
-  --terra-switch-tray-disabled-opacity: 0.5;
+  --terra-switch-tray-default-disabled-border: 1px solid #16191b;
+  --terra-switch-tray-default-disabled-box-shadow: none;
+  --terra-switch-tray-default-disabled-opacity: 0.5;
 
   --terra-switch-tray-selected-background-color: #104767;
   --terra-switch-tray-selected-border: 1px solid #053754;
@@ -38,6 +38,11 @@
   --terra-switch-tray-selected-hover-box-shadow: none;
   --terra-switch-tray-selected-disabled-background-color: #104767;
   --terra-switch-tray-selected-disabled-border: 1px solid #053754;
+  --terra-switch-tray-selected-disabled-box-shadow: none;
+  --terra-switch-tray-selected-disabled-opacity: 0.4;
+  --terra-switch-tray-selected-active-background-color: #1c587c;
+  --terra-switch-tray-selected-active-border: 1px solid #053754;
+  --terra-switch-tray-selected-active-box-shadow: none;
 
   // switch slider variables
   --terra-switch-slider-default-background-color: #262b2e;
@@ -48,14 +53,19 @@
   --terra-switch-slider-width: 1.28571rem;
   --terra-switch-slider-transition: 0.2s, cubic-bezier(0.175, 0.885, 0.32, 1.275);
   --terra-switch-slider-disabled-background-color: #262b2e;
-  --terra-switch-slider-disabled-opacity: 0.5;
+  --terra-switch-slider-disabled-box-shadow: none;
+  --terra-switch-slider-disabled-opacity: 1;
 
   --terra-switch-slider-selected-box-shadow: none;
+  --terra-switch-slider-selected-background-color: #202326;
   --terra-switch-slider-selected-hover-box-shadow: inset 5px 2px 5px 0 #093047, inset 0 0 0 1.5px #053754;
   --terra-switch-slider-selected-active-box-shadow: inset 5px 2px 5px 0 #0b212f, inset 0 0 0 1.5px #0c293b;
   --terra-switch-slider-selected-focus-background-color: #053754;
   --terra-switch-slider-selected-focus-border: none;
-  --terra-switch-slider-selected-transform: translateX(1rem);
+  --terra-switch-slider-selected-transform: translateX(0.9rem);
+  --terra-switch-slider-selected-disabled-background-color: #202326;
+  --terra-switch-slider-selected-disabled-box-shadow: none;
+  --terra-switch-slider-selected-disabled-opacity: 1;
 
   --terra-switch-slider-focus-background-color: #053754;
   --terra-switch-slider-focus-border: none;

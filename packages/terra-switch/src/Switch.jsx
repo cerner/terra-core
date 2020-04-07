@@ -18,10 +18,6 @@ const propTypes = {
    */
   buttonId: PropTypes.string.isRequired,
   /**
-   * Id of the Switch label.
-   */
-  labelId: PropTypes.string.isRequired,
-  /**
    * Whether or not the Switch is checked ("ON").
    */
   checked: PropTypes.bool,
@@ -30,9 +26,13 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * The label of the Switch component.
+   * The label text of the Switch component.
    */
-  label: PropTypes.node.isRequired,
+  labelText: PropTypes.string.isRequired,
+  /**
+   * Id of the Switch label.
+   */
+  labelId: PropTypes.string.isRequired,
   /**
    * Callback function when switch value changes from ON / OFF.
    * Parameters: 1. switch value 2. event.
@@ -53,7 +53,7 @@ const Switch = (props) => {
     checked,
     disabled,
     onChange,
-    label,
+    labelText,
     ...customProps
   } = props;
 
@@ -74,6 +74,7 @@ const Switch = (props) => {
 
   const switchClassNames = cx([
     'switch',
+    { 'is-disabled': disabled },
   ]);
 
   const trayClassNames = cx([
@@ -90,37 +91,35 @@ const Switch = (props) => {
 
   const statusLabelText = checked ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
 
-  let mainClasses = cx('switch-wrapper');
-  if (customProps.className) {
-    mainClasses = `${mainClasses} ${customProps.className}`;
-  }
+  const mainClasses = cx([
+    'switch-wrapper',
+    customProps.className,
+  ]);
 
   delete customProps.className;
   return (
     <div {...customProps} className={mainClasses}>
       {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
       <label htmlFor={buttonId} onMouseDown={disableFocusStyles} onKeyDown={enableFocusStyles}>
-        <div className={cx('switch-container')}>
+        <div className={switchClassNames}>
           <div className={cx('label-container')}>
-            <div id={labelId} className={cx('label-text')}>{label}</div>
+            <div id={labelId} className={cx('label-text')}>{labelText}</div>
             <div className={cx('status-label-text')}>{statusLabelText}</div>
           </div>
-          <div className={switchClassNames}>
-            <span className={trayClassNames}>
-              <button
-                type="button"
-                id={buttonId}
-                disabled={disabled}
-                aria-checked={checked}
-                aria-labelledby={labelId}
-                className={sliderClassNames}
-                role="switch"
-                tabIndex="0"
-                onClick={handleOnClick}
-                data-focus-styles-enabled
-                ref={sliderButton}
-              />
-            </span>
+          <div className={trayClassNames}>
+            <button
+              type="button"
+              id={buttonId}
+              disabled={disabled}
+              aria-checked={checked}
+              aria-labelledby={labelId}
+              className={sliderClassNames}
+              role="switch"
+              tabIndex="0"
+              onClick={handleOnClick}
+              data-focus-styles-enabled
+              ref={sliderButton}
+            />
           </div>
         </div>
       </label>

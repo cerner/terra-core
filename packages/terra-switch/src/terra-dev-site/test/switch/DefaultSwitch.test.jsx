@@ -13,7 +13,7 @@ const DefaultSwitch = () => {
         buttonId="defaultSwitch"
         labelId="label1"
         checked={value}
-        label="Label"
+        labelText="Label"
         onChange={setValue}
       />
     </div>

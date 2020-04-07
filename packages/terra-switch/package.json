@@ -26,7 +26,7 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
-    "test": "npm run jest && npm run wdio",
+    "test": "npm run jest && npm run lint && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
     "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
     "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
@@ -40,7 +40,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "keycode-js": "^2.0.1",
-    "prop-types": "^15.5.8",
-    "lodash.uniqueid": "^4.0.1"
+    "prop-types": "^15.5.8"
   }
 }

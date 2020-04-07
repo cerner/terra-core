@@ -11,7 +11,7 @@ const DisabledSwitch = () => (
       buttonId="disabledSwitch"
       labelId="label2"
       checked
-      label="Label"
+      labelText="Label"
       disabled
     />
   </div>
