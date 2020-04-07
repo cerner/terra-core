@@ -25,19 +25,22 @@ class FrameUtil {
    * @param {ReactNode} target - The select wrapper.
    * @param {ReactNode} dropdown - The dropdown.
    * @param {number} maxHeight - The maxHeight of the dropdown dropdown.
+   * @param {Object} currentState - The current component state.
    * @param {boolean} useSemanticDropdown - If the dropdown should be rendered semantically instead of in a portal
    * @return {Object} - The calculated dropdown attributes.
    */
-  static dropdownPosition(props, target, dropdown, maxHeight, useSemanticDropdown = false) {
+  static dropdownPosition(props, target, dropdown, maxHeight, currentState, useSemanticDropdown = false) {
     const style = ({ ...props }).style || {};
     const { height } = dropdown.getBoundingClientRect();
     const { bottom, width, top } = target.getBoundingClientRect();
 
     const spaceBelow = window.innerHeight - bottom;
     const maximumHeight = parseInt(style.maxHeight || maxHeight, 10) || Infinity;
-    const canFitBelow = maximumHeight < spaceBelow || height < spaceBelow || spaceBelow > top;
+    let canFitBelow = (maximumHeight < spaceBelow || height < spaceBelow || spaceBelow > top);
+    if (useSemanticDropdown && currentState !== undefined && currentState.resizeOnSearch && currentState.isAbove && canFitBelow) {
+      canFitBelow = false;
+    }
     const availableSpace = canFitBelow ? spaceBelow : top;
-
     const availableMaxHeight = Math.min(maximumHeight, availableSpace - 10);
     const isAbove = !canFitBelow;
     const semanticTopWhenAbove = (useSemanticDropdown && isAbove
@@ -51,6 +54,7 @@ class FrameUtil {
       isAbove,
       isPositioned: true,
       top: semanticTopWhenAbove,
+      resizeOnSearch: false,
     };
   }
 
@@ -96,13 +100,13 @@ class FrameUtil {
    * @param {ReactNode} dropdown - The component dropdown.
    * @return {boolean} - True if the dropdown should be positioned.
    */
-  static shouldPositionDropdown(previousState, currentState, dropdown) {
+  static shouldPositionDropdown(previousState, currentState, dropdown, isTouchAccessible) {
     if (!currentState.isOpen) {
       return false;
     }
 
     const { bottom } = dropdown.getBoundingClientRect();
-    return previousState.isOpen === false || bottom > window.innerHeight;
+    return previousState.isOpen === false || bottom > window.innerHeight || (!previousState.resizeOnSearch && currentState.resizeOnSearch && isTouchAccessible);
   }
 
   /**

@@ -2081,4 +2081,16 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     Terra.it.validatesElement('navigated to previous option using key-board navigation', { selector: '#root' });
   });
+
+  describe('dropdown should not detach on search', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-bottom'));
+    Terra.it.validatesElement();
+
+    it('Tag should open and search', () => {
+      browser.click('[data-terra-select-combobox]');
+      browser.keys(['T', 'a', 'g']);
+    });
+
+    Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+  });
 });

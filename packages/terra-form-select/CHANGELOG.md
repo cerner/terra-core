@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed detach issue of dropdown of `search` variants with `isTouchAccessible` prop.
+
 ### Changed
 * Updated the `isTouchAccessible` prop descriptions to include information about overflow behavior
 
