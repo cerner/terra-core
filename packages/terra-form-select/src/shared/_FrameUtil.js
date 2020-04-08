@@ -106,7 +106,7 @@ class FrameUtil {
     }
 
     const { bottom } = dropdown.getBoundingClientRect();
-    return previousState.isOpen === false || bottom > window.innerHeight || (!previousState.resizeOnSearch && currentState.resizeOnSearch && isTouchAccessible);
+    return previousState.isOpen === false || bottom > window.innerHeight || (currentState.resizeOnSearch && isTouchAccessible);
   }
 
   /**
