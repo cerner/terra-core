@@ -31,13 +31,16 @@
       margin-left: var(--terra-paginator-nav-link-margin-left, 0.14285rem);
       margin-right: var(--terra-paginator-nav-link-margin-right, 0.14285rem);
       max-width: 100%; /* Need to help with overflow-wrap */
+      min-width: var(--terra-paginator-nav-link-min-width, 2rem); // Helps ensure limited resizing as you page through large numbers.
       outline: none;
+      overflow-wrap: break-word; /* Modern browsers */
       padding: var(--terra-paginator-nav-link-padding, 0.35714rem 0.5rem);
       text-align: center;
       text-decoration: var(--terra-paginator-nav-link-text-decoration, none);
       touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
       user-select: none; // Keeps user from highlighting and text selection
-      white-space: nowrap;
+      white-space: normal;
+      word-wrap: break-word; /* For IE 10 and IE 11 */
 
       &:hover {
         background-color: var(--terra-paginator-nav-link-hover-background-color, transparent);
@@ -152,7 +155,7 @@
 
   .icon {
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     display: inline-block; // IE 10
     height: var(--terra-paginator-nav-link-icon-height, 1rem);
     position: relative;
