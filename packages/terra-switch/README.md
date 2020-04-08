@@ -3,10 +3,7 @@
 [![NPM version](https://badgen.net/npm/v/terra-switch)](https://www.npmjs.org/package/terra-switch)
 [![Build Status](https://badgen.net/travis/cerner/terra-switch)](https://travis-ci.com/cerner/terra-core)
 
-The terra-switch component indicates whether a setting is on or off and provide users with instantaneous feedback.
-
-Switch can be used for only one of these set of binary options:
-• On / Off
+The terra-switch component, like its real-world counterpart, is used to indicate whether a setting is ON or OFF and provide users with instantaneous feedback.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://engineering.cerner.com/terra-core/components/terra-switch/switch/switch)
