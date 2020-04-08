@@ -1,6 +1,6 @@
 //Themes
-@import './Card.clinical-lowlight-theme.module';
-@import './Card.orion-fusion-theme.module';
+@import './clinical-lowlight-theme/Card.module';
+@import './orion-fusion-theme/Card.module';
 
 :local {
   .card {

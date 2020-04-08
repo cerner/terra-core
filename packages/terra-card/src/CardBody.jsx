@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './CardBody.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -39,13 +40,15 @@ const CardBody = ({
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
-  const cardBodyClasses = cx([
-    { 'vertical-padding': hasPaddingVertical },
-    { 'horizontal-padding': hasPaddingHorizontal },
-    { 'center-content': isContentCentered },
+  const cardBodyClasses = classNames(
+    cx([
+      { 'vertical-padding': hasPaddingVertical },
+      { 'horizontal-padding': hasPaddingHorizontal },
+      { 'center-content': isContentCentered },
+      theme.className,
+    ]),
     customProps.className,
-    theme.className,
-  ]);
+  );
   return <div {...customProps} className={cardBodyClasses}>{children}</div>;
 };
 

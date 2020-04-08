@@ -2,8 +2,8 @@
 @import './mixins';
 
 // Themes
-@import './Button.clinical-lowlight-theme.module';
-@import './Button.orion-fusion-theme.module';
+@import './clinical-lowlight-theme/Button.module';
+@import './orion-fusion-theme/Button.module';
 
 :local {
   // html input[type='button'].terra-Button selector used to

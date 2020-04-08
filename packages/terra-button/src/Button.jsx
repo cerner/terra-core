@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
 import ThemeContext from 'terra-theme-context';
 import styles from './Button.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const ButtonVariants = {
   NEUTRAL: 'neutral',
@@ -235,17 +236,19 @@ class Button extends React.Component {
 
     const theme = this.context;
 
-    const buttonClasses = cx([
-      'button',
-      variant,
-      { 'is-disabled': isDisabled },
-      { block: isBlock },
-      { compact: isCompact },
-      { 'is-active': this.state.active },
-      { 'is-focused': this.state.focused },
+    const buttonClasses = classNames(
+      cx([
+        'button',
+        variant,
+        { 'is-disabled': isDisabled },
+        { block: isBlock },
+        { compact: isCompact },
+        { 'is-active': this.state.active },
+        { 'is-focused': this.state.focused },
+        theme.className,
+      ]),
       customProps.className,
-      theme.className,
-    ]);
+    );
 
     const buttonLabelClasses = cx([
       'button-label',
