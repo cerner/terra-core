@@ -6,6 +6,8 @@ Unreleased
 ### Fixed
 * Fixed detach issue of dropdown of `search` variants with `isTouchAccessible` prop.
 
+6.1.0 - (April 7, 2020)
+------------------
 ### Changed
 * Updated the `isTouchAccessible` prop descriptions to include information about overflow behavior
 
