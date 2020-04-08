@@ -3,8 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.24.0 - (April 7, 2020)
+------------------
 ### Changed
-* Added `role="alert"` for JAWS to function properly. 
+* Added `role="alert"` for JAWS to function properly.
 
 4.23.0 - (March 31, 2020)
 ------------------
