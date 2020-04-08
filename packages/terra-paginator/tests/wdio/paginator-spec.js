@@ -69,4 +69,16 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
 
     Terra.it.matchesScreenshot('3');
   });
+
+  describe('Paginator in a Container', () => {
+    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/paginator-container'));
+
+    Terra.it.validatesElement(('before-click', { selector: '#dialog' }));
+
+    it('should not wrap page numbers when the right arrow is clicked', () => {
+      browser.click('[aria-label="Last"]');
+    });
+
+    Terra.it.matchesScreenshot('Page no. does not wrap', { selector: '#dialog' });
+  });
 });
