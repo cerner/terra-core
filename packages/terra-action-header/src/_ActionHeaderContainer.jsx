@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './ActionHeaderContainer.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -43,6 +45,7 @@ const defaultProps = {
 const ActionHeaderContainer = ({
   children, title, startContent, endContent, level, ...customProps
 }) => {
+  const theme = useContext(ThemeContext);
   const HeaderElement = `h${level}`;
 
   const content = React.Children.map(children, child => (
@@ -58,7 +61,7 @@ const ActionHeaderContainer = ({
   ) : undefined;
 
   return (
-    <div {...customProps} className={cx(['flex-header', customProps.className])}>
+    <div {...customProps} className={classNames(cx(['flex-header', theme.className]), customProps.className)}>
       {startContent && <div className={cx('flex-end')}>{startContent}</div>}
       <div className={cx('flex-fill')}>
         {titleElement}

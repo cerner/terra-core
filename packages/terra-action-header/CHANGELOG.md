@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Changes
+* Updated to consumer terra-theme-context 
+
+### Fixed
+* Fix bottom border style in orion-fusion theme
 
 2.42.0 - (March 31, 2020)
 ------------------
