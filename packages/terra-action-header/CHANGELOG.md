@@ -8,6 +8,7 @@ Unreleased
 
 ### Fixed
 * Fix bottom border style in orion-fusion theme
+* Fix flex-end style in orion-fusion theme
 
 2.42.0 - (March 31, 2020)
 ------------------
