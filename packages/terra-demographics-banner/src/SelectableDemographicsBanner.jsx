@@ -4,7 +4,7 @@ import { injectIntl, intlShape } from 'react-intl';
 import classNames from 'classnames/bind';
 import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import IconInfo from 'terra-icon/lib/icon/IconInformation';
-import DemographicsBannerDisplay from './DemographicsBannerDisplay';
+import DemographicsBanner from './DemographicsBanner';
 import BackgroundTile from './selectable-demographics-banner/_BackgroundTile';
 import SelectableTile from './selectable-demographics-banner/_SelectableTile';
 import styles from './selectable-demographics-banner/SelectableDemographicsBanner.module.scss';
@@ -42,6 +42,14 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
+   * Id for Info Button.
+   */
+  infoButtonId: PropTypes.string,
+  /**
+   * Callback function triggered when info button is clicked.
+   */
+  infoButtonOnClick: PropTypes.func.isRequired,
+  /**
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
@@ -63,21 +71,13 @@ const propTypes = {
    */
   preferredFirstName: PropTypes.string,
   /**
-   * Callback function triggered when info button is clicked.
-   */
-  infoButtonOnClick: PropTypes.func.isRequired,
+   * Id for Selectable Tile.
+  */
+ selectableTileId: PropTypes.string,
   /**
    * Callback function triggered when selectable-tile is clicked.
    */
   selectableTileOnClick: PropTypes.func.isRequired,
-  /**
-   * Id for Info Button.
-   */
-  infoButtonId: PropTypes.string,
-  /**
-   * Id for Selectable Tile.
-  */
-  selectableTileId: PropTypes.string,
 };
 
 const defaultProps = {
@@ -88,29 +88,35 @@ const defaultProps = {
   gender: undefined,
   gestationalAge: null,
   identifiers: {},
+  infoButtonId: undefined,
+  infoButtonOnClick: undefined,
   personName: undefined,
   photo: undefined,
   postMenstrualAge: null,
   preferredFirstName: null,
-  infoButtonId: undefined,
   selectableTileId: undefined,
+  selectableTileOnClick: undefined,
 };
 
 const SelectableDemographicsBanner = ({
+  applicationContent,
   age,
   dateOfBirth,
   deceasedDate,
   gender,
+  gestationalAge,
+  identifiers,
+  infoButtonId,
+  infoButtonOnClick,
   intl,
   personName,
-  infoButtonOnClick,
-  selectableTileOnClick,
-  infoButtonId,
+  photo,
+  postMenstrualAge,
+  preferredFirstName,
   selectableTileId,
+  selectableTileOnClick,
   ...customProps
 }) => {
-  const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
-
   const handleKeyDown = (event) => {
     if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
       event.preventDefault();
@@ -130,32 +136,33 @@ const SelectableDemographicsBanner = ({
   };
 
   const DemographicsBannerSelectableTile = (
-    <DemographicsBannerDisplay
-      {...customProps}
+    <DemographicsBanner
+      applicationContent={applicationContent}
+      age={age}
       className={cx('selectable-demographics-banner')}
-      age={age || noDataProvided}
-      dateOfBirth={dateOfBirth || noDataProvided}
-      gender={gender || noDataProvided}
-      personName={personName || noDataProvided}
-      dateOfBirthLabel={intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirth' })}
-      dateOfBirthFullText={intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirthFullText' })}
-      deceasedDateLabel={intl.formatMessage({ id: 'Terra.demographicsBanner.deceased' })}
-      gestationalAgeLabel={intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAge' })}
-      gestationalAgeFullText={intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAgeFullText' })}
-      postMenstrualAgeLabel={intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAge' })}
-      postMenstrualAgeFullText={intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAgeFullText' })}
+      dateOfBirth={dateOfBirth}
+      deceasedDate={deceasedDate}
+      gender={gender}
+      gestationalAge={gestationalAge}
+      identifiers={identifiers}
+      personName={personName}
+      photo={photo}
+      postMenstrualAge={postMenstrualAge}
+      preferredFirstName={preferredFirstName}
     />
   );
 
+  const infoText = intl.formatMessage({ id: 'Terra.demographicsBanner.info' });
+
   return (
-    <BackgroundTile isDeceased={!!(deceasedDate)}>
+    <BackgroundTile {...customProps} isDeceased={!!(deceasedDate)}>
       <SelectableTile id={selectableTileId} onClick={handleOnClick} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
         {DemographicsBannerSelectableTile}
       </SelectableTile>
       <div className={cx('divider')} />
       {/* Needs Translation */}
       <button className={cx('info-button')} type="button" role="link" id={infoButtonId} onClick={infoButtonOnClick}>
-        Info
+        {infoText}
         <IconInfo />
       </button>
     </BackgroundTile>

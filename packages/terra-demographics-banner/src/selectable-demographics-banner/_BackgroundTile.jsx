@@ -23,14 +23,16 @@ const defaultProps = {
 const BackgroundTile = ({
   children,
   isDeceased,
+  ...customProps
 }) => {
   const backgroundTileClassNames = cx([
     { deceased: isDeceased },
     'background-tile',
+    customProps.className,
   ]);
 
   return (
-    <div className={backgroundTileClassNames}>
+    <div {...customProps} className={backgroundTileClassNames}>
       {children}
     </div>
   );
