@@ -43,7 +43,7 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
-   * Image Node to display photo in the banner OR URL of Photo to display in the banner.
+   * Image Node to display photo in the banner or URL of photo to display in the banner.
    */
   photo: PropTypes.node,
   /**
