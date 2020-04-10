@@ -1,0 +1,13 @@
+on:
+  issues:
+    types: [milestoned]
+jobs:
+  Move_Milestoned_Issue_On_Project_Board:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.MOVING_ISSUES_TOKEN }}"
+        project-url: "https://github.com/orgs/cerner/projects/3"
+        column-name: "To Do"
+        milestone-name: "Terra Application 2.0.0"
