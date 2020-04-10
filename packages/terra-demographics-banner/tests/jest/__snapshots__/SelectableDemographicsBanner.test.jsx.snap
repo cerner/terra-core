@@ -9,24 +9,13 @@ exports[`renders a blank banner wrapper 1`] = `
     onKeyDown={[Function]}
     onKeyUp={[Function]}
   >
-    <DemographicsBannerDisplay
-      age="Terra.demographicsBanner.noDataProvided"
+    <InjectIntl(DemographicsBanner)
       applicationContent={null}
       className="selectable-demographics-banner"
-      dateOfBirth="Terra.demographicsBanner.noDataProvided"
-      dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
-      dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
       deceasedDate={null}
-      deceasedDateLabel="Terra.demographicsBanner.deceased"
-      gender="Terra.demographicsBanner.noDataProvided"
       gestationalAge={null}
-      gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
-      gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
       identifiers={Object {}}
-      personName="Terra.demographicsBanner.noDataProvided"
       postMenstrualAge={null}
-      postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
-      postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
       preferredFirstName={null}
     />
   </SelectableTile>
@@ -39,7 +28,7 @@ exports[`renders a blank banner wrapper 1`] = `
     role="link"
     type="button"
   >
-    Info
+    Terra.demographicsBanner.info
     <IconInformation
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
@@ -50,6 +39,17 @@ exports[`renders a blank banner wrapper 1`] = `
 
 exports[`renders the banner wrapper with all props 1`] = `
 <BackgroundTile
+  applicationRows={
+    Array [
+      Object {
+        "Address": "1501 Walnut St. Apt #123",
+        "City": "Kansas City MO",
+      },
+      Object {
+        "ZIP": 64108,
+      },
+    ]
+  }
   isDeceased={false}
 >
   <SelectableTile
@@ -58,7 +58,7 @@ exports[`renders the banner wrapper with all props 1`] = `
     onKeyDown={[Function]}
     onKeyUp={[Function]}
   >
-    <DemographicsBannerDisplay
+    <InjectIntl(DemographicsBanner)
       age="25 Years"
       applicationContent={
         <span
@@ -67,27 +67,11 @@ exports[`renders the banner wrapper with all props 1`] = `
           5%
         </span>
       }
-      applicationRows={
-        Array [
-          Object {
-            "Address": "1501 Walnut St. Apt #123",
-            "City": "Kansas City MO",
-          },
-          Object {
-            "ZIP": 64108,
-          },
-        ]
-      }
       className="selectable-demographics-banner"
       dateOfBirth="May 9, 1993"
-      dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
-      dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
       deceasedDate={null}
-      deceasedDateLabel="Terra.demographicsBanner.deceased"
       gender="Male"
       gestationalAge="April 5, 2016"
-      gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
-      gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
       identifiers={
         Object {
           "MRN": 12343,
@@ -97,8 +81,6 @@ exports[`renders the banner wrapper with all props 1`] = `
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge="April 7, 2016"
-      postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
-      postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
       preferredFirstName="John"
     />
   </SelectableTile>
@@ -124,7 +106,7 @@ exports[`renders the banner wrapper with all props 1`] = `
     role="link"
     type="button"
   >
-    Info
+    Terra.demographicsBanner.info
     <IconInformation
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
