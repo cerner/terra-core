@@ -73,7 +73,7 @@ const propTypes = {
   /**
    * Id for Selectable Tile.
   */
- selectableTileId: PropTypes.string,
+  selectableTileId: PropTypes.string,
   /**
    * Callback function triggered when selectable-tile is clicked.
    */
@@ -89,13 +89,11 @@ const defaultProps = {
   gestationalAge: null,
   identifiers: {},
   infoButtonId: undefined,
-  infoButtonOnClick: undefined,
   personName: undefined,
   photo: undefined,
   postMenstrualAge: null,
   preferredFirstName: null,
   selectableTileId: undefined,
-  selectableTileOnClick: undefined,
 };
 
 const SelectableDemographicsBanner = ({
