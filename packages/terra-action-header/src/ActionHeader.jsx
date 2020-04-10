@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Button, { ButtonVariants } from 'terra-button';
@@ -84,7 +84,7 @@ const ActionHeader = ({
   children,
   ...customProps
 }) => {
-  const theme = useContext(ThemeContext);
+  const theme = React.useContext(ThemeContext);
 
   const closeButton = onClose
     ? (

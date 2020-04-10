@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -45,7 +45,7 @@ const defaultProps = {
 const ActionHeaderContainer = ({
   children, title, startContent, endContent, level, ...customProps
 }) => {
-  const theme = useContext(ThemeContext);
+  const theme = React.useContext(ThemeContext);
   const HeaderElement = `h${level}`;
 
   const content = React.Children.map(children, child => (
