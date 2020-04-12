@@ -1,0 +1,23 @@
+:local {
+  .test-shell {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    radial-gradient(50% 50% at 50% 0%, rgba(90, 231, 253, 0.7), rgba(90, 231, 253, 0)),
+    radial-gradient(60% 60% at 50% 50%, rgba(157, 202, 253, 1), rgba(157, 202, 253, 0)),
+    radial-gradient(50% 50% at 50% 100%, rgba(55, 105, 190, 0.7), rgba(55, 105, 190, 0)),
+    radial-gradient(100% 100% at 0% 0%, rgba(29, 175, 236, 0.7), rgba(29, 175, 236, 0)),
+    radial-gradient(100% 100% at 0% 50%, rgba(35, 119, 186, 0.7), rgba(35, 119, 186, 0)),
+    radial-gradient(100% 100% at 0% 100%, rgba(41, 77, 211, 0.7), rgba(41, 77, 211, 0)),
+    radial-gradient(100% 100% at 100% 0%, rgba(148, 179, 252, 0.7), rgba(148, 179, 252, 0.7)),
+    radial-gradient(100% 100% at 100% 50%, rgba(123, 91, 200, 0.7), rgba(123, 91, 200, 0)),
+    radial-gradient(100% 100% at 100% 100%, rgba(32, 79, 185, 0.7), rgba(32, 79, 185, 0)),
+    linear-gradient(rgba(154, 208, 255, 0.7), rgba(154, 208, 255, 0.7));
+    position: relative;
+    width: 300px;
+  }
+
+  .test-inner {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    width: 100%;
+  }
+}
