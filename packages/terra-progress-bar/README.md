@@ -8,7 +8,7 @@ The progress bar component provides users a way to display the progress of proce
 Note: The progress bar displays fill with respect to percentage (value between 0 and 100). If `max` isn't specified in the input to the component, then `value` corresponds to a percentage value.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-progress-bar/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-progress-bar/progress-bar/progress-bar)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,9 +24,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-| terra-markdown | ^2.20.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
