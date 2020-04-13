@@ -6,8 +6,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
 import {
-  createOptions,
-  createPlaceholder,
+  defaultPlaceholderValue,
   isCurrentPlaceholder,
   getDisplay,
   getFirstValue,
@@ -18,38 +17,101 @@ import styles from './NativeSelect.module.scss';
 const cx = classNames.bind(styles);
 
 const optionPropType = PropTypes.shape({
+  /**
+   * The option display.
+   */
   display: PropTypes.string.isRequired,
+  /**
+   * Whether the option is disabled.
+   */
   disabled: PropTypes.bool,
+  /**
+   * The option value.
+   */
   value: PropTypes.string.isRequired,
 });
 
 const optGroupPropType = PropTypes.shape({
+  /**
+   * The option display.
+   */
   display: PropTypes.string.isRequired,
+  /**
+   * Whether the optgroup is disabled.
+   */
   disabled: PropTypes.bool,
+  /**
+   * The array of select options.
+   */
   childOptions: PropTypes.arrayOf(optionPropType).isRequired,
 });
 
 const propTypes = {
+  /**
+   * The string containing ids for elements to describe the select.
+   */
   ariaDescribedBy: PropTypes.string,
+  /**
+   * The aria label string value for the select.
+   */
   ariaLabel: PropTypes.string,
-  defaultValue: PropTypes.string,
+  /**
+   * The default value of the select. Can be a string, or number.
+   */
+  defaultValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  /**
+   * Whether the input is disabled.
+   */
   disabled: PropTypes.bool,
+  /**
+   * The Select identifier. Links the htmlFor of the field to the select identifier.
+   */
   id: PropTypes.string.isRequired,
   /**
    * @private
    * The intl object to be injected for translations.
    */
   intl: intlShape.isRequired,
+  /**
+   * Whether the input is invalid.
+   */
   invalid: PropTypes.bool,
+  /**
+   * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
+   */
   isIncomplete: PropTypes.bool,
+  /**
+   * Callback function triggered when the select value changes. function(value)
+   */
   onChange: PropTypes.func,
+  /**
+   * The array of select options and opt groups.
+   */
   options: PropTypes.arrayOf(PropTypes.oneOf([optGroupPropType, optGroupPropType])),
+  /**
+   * Placeholder data.
+   */
   placeholder: PropTypes.shape({
+    /**
+     * Whether a clear option is available to clear the selection.
+     */
     allowClear: PropTypes.bool,
-    display: PropTypes.string, // Optional with default
-    value: PropTypes.string, // Optional with default
+    /**
+     * Optional override of the default placeholder display.
+     */
+    display: PropTypes.string,
+    /**
+     * Optional override of the default placeholder value.
+     */
+    value: PropTypes.string,
   }),
+  /**
+   * Whether the field is required.
+   */
   required: PropTypes.bool,
+  /**
+   * The value of the select. Can be a string or number.
+   */
   value: PropTypes.string,
 };
 
@@ -60,6 +122,27 @@ const defaultProps = {
   options: [],
   required: false,
 };
+
+const createPlaceholder = (placeholder, intl) => {
+  if (!placeholder) {
+    return undefined;
+  }
+  const display = placeholder.display ? placeholder.display : intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
+  const value = placeholder.value ? placeholder.value : defaultPlaceholderValue;
+  const attrs = placeholder.allowClear ? {} : { disabled: true, hidden: true };
+  return <option value={value} {...attrs}>{display}</option>;
+};
+
+const createOptions = options => options.map(current => {
+  if (current.childOptions) {
+    return (
+      <optgroup label={current.display}>
+        {createOptions(current.childOptions)}
+      </optgroup>
+    );
+  }
+  return <option value={current.value}>{current.display}</option>;
+});
 
 const NativeSelect = ({
   disabled,
@@ -77,14 +160,14 @@ const NativeSelect = ({
   const refSelect = useRef();
 
   const handleOnMouseDown = () => {
-    refSelect.current.setAttribute('data-focus-styles-enabled', 'mouse');
+    refSelect.current.setAttribute('data-focus-interaction', 'mouse');
   };
   const handleOnBlur = () => {
-    refSelect.current.setAttribute('data-focus-styles-enabled', 'none');
+    refSelect.current.setAttribute('data-focus-interaction', 'none');
   };
   const handleOnFocus = () => {
-    if (refSelect.current.getAttribute('data-focus-styles-enabled') !== 'mouse') {
-      refSelect.current.setAttribute('data-focus-styles-enabled', 'keyboard');
+    if (refSelect.current.getAttribute('data-focus-interaction') !== 'mouse') {
+      refSelect.current.setAttribute('data-focus-interaction', 'keyboard');
     }
   };
   const handleOnChange = event => {
@@ -114,11 +197,11 @@ const NativeSelect = ({
         { placeholder: isCurrentPlaceholder(selectAttrs.value, placeholder) },
       )}
       ref={refSelect}
-      data-focus-styles-enabled="none"
+      data-focus-interaction="none"
     >
       <div aria-hidden className={cx('frame')}>
         <div className={cx('display')}>
-          {getDisplay(selectAttrs.value, options, placeholder)}
+          {getDisplay(selectAttrs.value, options, placeholder, intl)}
         </div>
         <div className={cx('arrow')}>
           <div className={cx('arrow-icon')} />
@@ -132,7 +215,7 @@ const NativeSelect = ({
         onFocus={handleOnFocus}
         onBlur={handleOnBlur}
       >
-        {createPlaceholder(placeholder)}
+        {createPlaceholder(placeholder, intl)}
         {createOptions(options)}
       </select>
     </div>

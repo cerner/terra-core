@@ -74,14 +74,26 @@ const propTypes = {
    * Callback function triggered when the select value changes. function(value)
    */
   onChange: PropTypes.func,
+  /**
+   * The array of select options and opt groups.
+   */
   options: PropTypes.arrayOf(PropTypes.oneOf([optGroupPropType, optGroupPropType])),
   /**
    * Placeholder data.
    */
   placeholder: PropTypes.shape({
+    /**
+     * Whether a clear option is available to clear the selection.
+     */
     allowClear: PropTypes.bool,
-    display: PropTypes.string, // Optional with default
-    value: PropTypes.string, // Optional with default
+    /**
+     * Optional override of the default placeholder display.
+     */
+    display: PropTypes.string,
+    /**
+     * Optional override of the default placeholder value.
+     */
+    value: PropTypes.string,
   }),
   /**
    * Whether the field is required.

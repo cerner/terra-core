@@ -1,30 +1,9 @@
-import React from 'react';
+const defaultPlaceholderValue = '-invalid-value-';
 
-const createPlaceholder = placeholder => {
-  if (!placeholder) {
-    return undefined;
-  }
-  const display = placeholder.display ? placeholder.display : '- Select -';
-  const value = placeholder.value ? placeholder.value : '-invalid-value-';
-  const attrs = placeholder.allowClear ? {} : { disabled: true, hidden: true };
-  return <option value={value} {...attrs}>{display}</option>;
-};
-
-const createOptions = options => options.map(current => {
-  if (current.childOptions) {
-    return (
-      <optgroup label={current.display}>
-        {createOptions(current.childOptions)}
-      </optgroup>
-    );
-  }
-  return <option value={current.value}>{current.display}</option>;
-});
-
-const getDisplay = (findValue, options, placeholder) => {
+const getDisplay = (findValue, options, placeholder, intl) => {
   if (placeholder) {
-    if ((placeholder.value && findValue === placeholder.value) || (!placeholder.value && findValue === '-invalid-value-')) {
-      return placeholder.display || '- Select -';
+    if ((placeholder.value && findValue === placeholder.value) || (!placeholder.value && findValue === defaultPlaceholderValue)) {
+      return placeholder.display || intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
     }
   }
   if (!options || !options.length) {
@@ -49,7 +28,7 @@ const getDisplay = (findValue, options, placeholder) => {
 
 const getFirstValue = (options, placeholder) => {
   if (placeholder) {
-    return placeholder.value || '-invalid-value-';
+    return placeholder.value || defaultPlaceholderValue;
   }
   if (!options || !options.length) {
     return undefined;
@@ -74,20 +53,18 @@ const isCurrentPlaceholder = (value, placeholder) => {
   if (placeholder.value) {
     return value === placeholder.value;
   }
-  return value === '-invalid-value-'; // default value of placeholder
+  return value === defaultPlaceholderValue;
 };
 
 export default {
-  createOptions,
-  createPlaceholder,
+  defaultPlaceholderValue,
   isCurrentPlaceholder,
   getDisplay,
   getFirstValue,
 };
 
 export {
-  createOptions,
-  createPlaceholder,
+  defaultPlaceholderValue,
   isCurrentPlaceholder,
   getDisplay,
   getFirstValue,
