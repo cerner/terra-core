@@ -108,11 +108,6 @@ describe('ActionHeader', () => {
     );
     const wrapper = shallowWithIntl(actionHeader);
     const headerContainer = wrapper.dive();
-
-    expect(headerContainer.find('.flex-header').hasClass('orion-fusion-theme')).toBeTruthy();
-    expect(headerContainer.find('.left-buttons').hasClass('orion-fusion-theme')).toBeTruthy();
-    expect(headerContainer.find('.right-buttons').hasClass('orion-fusion-theme')).toBeTruthy();
-
     expect(headerContainer).toMatchSnapshot();
   });
 });
