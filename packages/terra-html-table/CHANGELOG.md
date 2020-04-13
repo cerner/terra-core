@@ -4,7 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
-* Update docs that were missed during mdx upgrade
+* Removed details tag from README
 
 1.2.0 - (February 25, 2020)
 ------------------

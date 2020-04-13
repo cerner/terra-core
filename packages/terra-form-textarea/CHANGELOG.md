@@ -4,7 +4,8 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Update docs that were missed during mdx upgrade
+* Added Usage section in docs
+* Updated imports for `RextareaField` examples
 
 4.0.0 - (March 31, 2020)
 ------------------

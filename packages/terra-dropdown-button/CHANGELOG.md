@@ -4,7 +4,8 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Update docs that were missed during mdx upgrade
+* Updated docs for documentation link and expanded `PropTypes` for Props Table
+* Removed extra lines from README
 
 1.11.0 - (February 18, 2020)
 ------------------

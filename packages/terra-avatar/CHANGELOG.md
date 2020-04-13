@@ -4,7 +4,8 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Update docs that were missed during mdx upgrade
+* Updated docs for documentation link
+* Removed extra lines from README
 
 3.0.0 - (March 31, 2020)
 ------------------

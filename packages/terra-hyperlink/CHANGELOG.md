@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Update docs that were missed during mdx upgrade
+* Added Usage section in docs
 
 2.30.0 - (March 10, 2020)
 ------------------
