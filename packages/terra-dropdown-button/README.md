@@ -7,7 +7,7 @@ The Terra Dropdown Button is a button that, when pressed, opens a dropdown with 
 Has the option to show a single button outside the dropdown as well with the `SplitButton`.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-dropdown-button/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-dropdown-button/dropdown-button/dropdown-button)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update docs that were missed during mdx upgrade
 
 2.38.0 - (March 31, 2020)
 ------------------

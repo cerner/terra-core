@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* Update docs that were missed during mdx upgrade
 
 1.2.0 - (February 18, 2020)
 ------------------

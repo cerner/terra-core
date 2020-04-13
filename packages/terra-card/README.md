@@ -7,7 +7,7 @@
 Card is a basic container with some base styling to help separate elements with different content
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-card/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-card/card/card)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -23,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

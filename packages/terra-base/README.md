@@ -6,7 +6,7 @@
 The `terra-base` component is a core feature for any apps built with Terra UI. The base component handles two concerns, application internationalization and global styles. Read the [terra-base docs]((https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs)) to learn more about the component.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-base/base/base)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

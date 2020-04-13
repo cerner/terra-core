@@ -7,7 +7,7 @@
 The terra-action-header component is a header bar containing a title and optional actionable items such as links and buttons.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-action-header/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-action-header/action-header/action-header)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

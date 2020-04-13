@@ -7,7 +7,7 @@
 The Terra Button Group component groups buttons and can maintain a toggle selection state. This component is intended to group buttons with similar context or to toggle content, it is not intended to be used as a form element.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-button-group/docs)
+- [Documentation](https://engineering.cerner.com/terra-core/components/terra-button-group/button-group/button-group)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -23,8 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
