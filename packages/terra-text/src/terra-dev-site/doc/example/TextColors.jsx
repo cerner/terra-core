@@ -7,6 +7,8 @@ const cx = classNames.bind(styles);
 
 const TextColors = () => (
   <div>
+    <Text fontSize={18}>{'Font Color: \'default\' class'}</Text>
+    <br />
     <Text fontSize={18} colorClass={cx(['attention'])}>{'Font Color: \'attention\' class'}</Text>
     <br />
     <Text fontSize={18} colorClass={cx(['success'])}>{'Font Color: \'success\' class'}</Text>
