@@ -92,7 +92,7 @@ const propTypes = {
   /**
    * The array of select options and opt groups.
    */
-  options: PropTypes.arrayOf(PropTypes.oneOfType([optGroupPropType, optGroupPropType])),
+  options: PropTypes.arrayOf(PropTypes.oneOfType([optionPropType, optGroupPropType])),
   /**
    * Placeholder data.
    */

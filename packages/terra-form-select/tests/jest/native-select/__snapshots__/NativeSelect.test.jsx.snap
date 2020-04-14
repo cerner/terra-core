@@ -455,6 +455,63 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
 />
 `;
 
+exports[`NativeSelect should render a NativeSelect with options 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={
+    Array [
+      Object {
+        "display": "Volvo",
+        "value": "volvo",
+      },
+      Object {
+        "display": "Saab",
+        "value": "saab",
+      },
+      Object {
+        "display": "Mercedes",
+        "value": "mercedes",
+      },
+      Object {
+        "display": "Audi",
+        "value": "audi",
+      },
+    ]
+  }
+  required={false}
+/>
+`;
+
 exports[`NativeSelect should render a NativeSelect with options and defaultValue 1`] = `
 <NativeSelect
   defaultValue="saab"
