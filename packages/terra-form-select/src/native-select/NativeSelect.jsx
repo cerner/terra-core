@@ -145,9 +145,12 @@ const createOptions = options => options.map(current => {
 });
 
 const NativeSelect = ({
+  ariaDescribedBy,
+  ariaLabel,
   disabled,
   defaultValue,
   id,
+  intl,
   invalid,
   isIncomplete,
   onChange,
