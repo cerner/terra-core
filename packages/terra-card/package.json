@@ -5,7 +5,8 @@
   "description": "Card is a basic container with some base styling to help seperate elements with different content",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-card"
   },
   "keywords": [
     "Cerner",

@@ -5,7 +5,7 @@ Unreleased
 ----------
 
 ### Changed
-* Directly include packaged themes
+* Apply themes by context and directly include packaged themes.
 
 3.26.0 - (March 10, 2020)
 ------------------

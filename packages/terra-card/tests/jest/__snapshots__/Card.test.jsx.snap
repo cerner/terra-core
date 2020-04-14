@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Card correctly applies the theme context className 1`] = `
+<article
+  className="card default orion-fusion-theme"
+/>
+`;
+
 exports[`Card it should pass in visually hidden text 1`] = `
 <article
   className="card default"
