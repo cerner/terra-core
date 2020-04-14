@@ -3,7 +3,7 @@
     border: 0;
     flex: 1 1 0;
     outline: none;
-    overflow: hidden; // My Changes
+    overflow: hidden;
     text-align: left;
     vertical-align: top;
     word-break: break-word;
@@ -28,7 +28,7 @@
   }
 
   .container,
-  .widthclass {
-    width: 100%; // my changes
+  .content-width {
+    width: 100%;
   }
 }
