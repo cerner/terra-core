@@ -12,19 +12,19 @@ const mockIntl = {
 const testOptions = [
   {
     display: '1',
-    value: 'value-1'
+    value: 'value-1',
   },
   {
     display: '2',
-    value: 'value-2'
+    value: 'value-2',
   },
   {
     display: '3',
-    value: 'value-3'
+    value: 'value-3',
   },
   {
     display: '4',
-    value: 'value-4'
+    value: 'value-4',
   },
 ];
 
@@ -34,11 +34,11 @@ const testOptGroups = [
     childOptions: [
       {
         display: '1',
-        value: 'value-1'
+        value: 'value-1',
       },
       {
         display: '2',
-        value: 'value-2'
+        value: 'value-2',
       },
     ],
   },
@@ -47,11 +47,11 @@ const testOptGroups = [
     childOptions: [
       {
         display: '3',
-        value: 'value-3'
+        value: 'value-3',
       },
       {
         display: '4',
-        value: 'value-4'
+        value: 'value-4',
       },
     ],
   },

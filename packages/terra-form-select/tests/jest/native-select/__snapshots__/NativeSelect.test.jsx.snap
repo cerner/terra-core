@@ -1,0 +1,610 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={Array []}
+  placeholder={Object {}}
+  required={false}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
+<NativeSelect
+  ariaDescribedBy="test-described-id"
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={Array []}
+  required={false}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
+<NativeSelect
+  disabled={true}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={Array []}
+  required={false}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={true}
+  isIncomplete={false}
+  options={Array []}
+  required={false}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={true}
+  options={Array []}
+  placeholder={Object {}}
+  required={true}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect required 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={true}
+  options={Array []}
+  placeholder={Object {}}
+  required={true}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={true}
+  options={Array []}
+  placeholder={Object {}}
+  required={true}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect with a placeholder 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={Array []}
+  placeholder={Object {}}
+  required={false}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect with an aria label 1`] = `
+<NativeSelect
+  ariaLabel="test-label"
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={Array []}
+  required={false}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  onChange={[MockFunction]}
+  options={Array []}
+  required={false}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={
+    Array [
+      Object {
+        "childOptions": Array [
+          Object {
+            "display": "Volvo",
+            "value": "volvo",
+          },
+          Object {
+            "display": "Saab",
+            "value": "saab",
+          },
+        ],
+        "display": "Swedish Cars",
+      },
+      Object {
+        "childOptions": Array [
+          Object {
+            "display": "Mercedes",
+            "value": "mercedes",
+          },
+          Object {
+            "display": "Audi",
+            "value": "audi",
+          },
+        ],
+        "display": "German Cars",
+      },
+    ]
+  }
+  required={false}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect with options and defaultValue 1`] = `
+<NativeSelect
+  defaultValue="saab"
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={
+    Array [
+      Object {
+        "display": "Volvo",
+        "value": "volvo",
+      },
+      Object {
+        "display": "Saab",
+        "value": "saab",
+      },
+      Object {
+        "display": "Mercedes",
+        "value": "mercedes",
+      },
+      Object {
+        "display": "Audi",
+        "value": "audi",
+      },
+    ]
+  }
+  required={false}
+/>
+`;
+
+exports[`NativeSelect should render a NativeSelect with options and value 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={
+    Array [
+      Object {
+        "display": "Volvo",
+        "value": "volvo",
+      },
+      Object {
+        "display": "Saab",
+        "value": "saab",
+      },
+      Object {
+        "display": "Mercedes",
+        "value": "mercedes",
+      },
+      Object {
+        "display": "Audi",
+        "value": "audi",
+      },
+    ]
+  }
+  required={false}
+  value="audi"
+/>
+`;
+
+exports[`NativeSelect should render a default NativeSelect 1`] = `
+<NativeSelect
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  invalid={false}
+  isIncomplete={false}
+  options={Array []}
+  required={false}
+/>
+`;

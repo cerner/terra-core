@@ -8,7 +8,7 @@ describe('NativeSelect', () => {
     const wrapper = shallowWithIntl(
       <NativeSelect
         id="test-id"
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -18,7 +18,7 @@ describe('NativeSelect', () => {
       <NativeSelect
         id="test-id"
         ariaLabel="test-label"
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -28,7 +28,7 @@ describe('NativeSelect', () => {
       <NativeSelect
         id="test-id"
         ariaDescribedBy="test-described-id"
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -43,7 +43,7 @@ describe('NativeSelect', () => {
           { value: 'mercedes', display: 'Mercedes' },
           { value: 'audi', display: 'Audi' },
         ]}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -59,7 +59,7 @@ describe('NativeSelect', () => {
           { value: 'mercedes', display: 'Mercedes' },
           { value: 'audi', display: 'Audi' },
         ]}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -75,7 +75,7 @@ describe('NativeSelect', () => {
           { value: 'mercedes', display: 'Mercedes' },
           { value: 'audi', display: 'Audi' },
         ]}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -85,7 +85,7 @@ describe('NativeSelect', () => {
       <NativeSelect
         id="test-id"
         onChange={jest.fn()}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -95,7 +95,7 @@ describe('NativeSelect', () => {
       <NativeSelect
         id="test-id"
         placeholder={{}}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -105,7 +105,7 @@ describe('NativeSelect', () => {
       <NativeSelect
         id="test-id"
         placeholder={{}}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -115,7 +115,7 @@ describe('NativeSelect', () => {
       <NativeSelect
         id="test-id"
         invalid
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -125,7 +125,7 @@ describe('NativeSelect', () => {
       <NativeSelect
         id="test-id"
         disabled
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -150,7 +150,7 @@ describe('NativeSelect', () => {
             ],
           },
         ]}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -162,7 +162,7 @@ describe('NativeSelect', () => {
         required
         isIncomplete
         placeholder={{}}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -174,7 +174,7 @@ describe('NativeSelect', () => {
         required
         isIncomplete
         placeholder={{}}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -186,7 +186,7 @@ describe('NativeSelect', () => {
         required
         isIncomplete
         placeholder={{}}
-      />
+      />,
     );
     expect(wrapper).toMatchSnapshot();
   });

@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import NativeSelect from '../../../../native-select/NativeSelectField';
+import NativeSelectField from '../../../../native-select/NativeSelectField';
 import styles from './NativeSelectTest.module.scss';
 
 const cx = classNames.bind(styles);

@@ -56,6 +56,11 @@ const propTypes = {
    */
   ariaLabel: PropTypes.string,
   /**
+   * Additional attributes to spread onto the select.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  attrs: PropTypes.object,
+  /**
    * The default value of the select. Can be a string, or number.
    */
   defaultValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -87,7 +92,7 @@ const propTypes = {
   /**
    * The array of select options and opt groups.
    */
-  options: PropTypes.arrayOf(PropTypes.oneOf([optGroupPropType, optGroupPropType])),
+  options: PropTypes.arrayOf(PropTypes.oneOfType([optGroupPropType, optGroupPropType])),
   /**
    * Placeholder data.
    */
@@ -147,6 +152,7 @@ const createOptions = options => options.map(current => {
 const NativeSelect = ({
   ariaDescribedBy,
   ariaLabel,
+  attrs,
   disabled,
   defaultValue,
   id,
@@ -213,6 +219,7 @@ const NativeSelect = ({
         </div>
       </div>
       <select
+        {...attrs}
         {...selectAttrs}
         className={cx('select')}
         onChange={handleOnChange}

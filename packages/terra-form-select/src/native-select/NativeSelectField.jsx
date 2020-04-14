@@ -77,7 +77,7 @@ const propTypes = {
   /**
    * The array of select options and opt groups.
    */
-  options: PropTypes.arrayOf(PropTypes.oneOf([optGroupPropType, optGroupPropType])),
+  options: PropTypes.arrayOf(PropTypes.oneOfType([optGroupPropType, optGroupPropType])),
   /**
    * Placeholder data.
    */
@@ -189,7 +189,7 @@ const NativeSelectField = ({
       maxWidth={maxWidth}
     >
       <NativeSelect
-        {...selectAttrs}
+        attrs={selectAttrs}
         id={selectId}
         ariaDescribedBy={ariaDescriptionIds}
         ariaLabel={label}
