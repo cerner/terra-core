@@ -55,7 +55,12 @@ const Cell = ({
   ...customProps
 }) => {
   const cellClassNames = cx('cell');
-  const contentClass = !removeInner ? cx('container') : undefined;
+
+  // Previous Code
+  // const contentClass = !removeInner ? cx('container') : undefined;
+
+  // My Changes
+  const contentClass = !removeInner ? cx('container') : cx('widthclass');
 
   let ariaAttr;
   let ariaElement;
