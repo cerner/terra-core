@@ -5,7 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Added Usage section in docs
-* Updated imports for `RextareaField` examples
+* Updated imports for `TextareaField` examples
+* Updated documentation link in README
 
 4.0.0 - (March 31, 2020)
 ------------------

@@ -6,7 +6,7 @@
 The terra-badge component displays content classification.
 
 - [Getting Started](#getting-started)
-- [Documentation](/components/terra-badge/badge/badge)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-badge/badge/badge)
 - [LICENSE](#license)
 
 ## Getting Started

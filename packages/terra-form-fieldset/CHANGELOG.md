@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
+* Updated documentation link in README
 * Removed extra lines from README
 
 2.38.0 - (March 31, 2020)

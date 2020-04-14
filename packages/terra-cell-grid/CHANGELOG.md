@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Added
 * Added Section `Peer Dependencies` for docsite
+* Updated documentation link in README
 
 1.2.0 - (February 18, 2020)
 ------------------

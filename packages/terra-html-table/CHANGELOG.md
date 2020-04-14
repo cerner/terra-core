@@ -4,6 +4,7 @@ Changelog
 Unreleased
 ----------
 ### Changed
+* Updated documentation link in README
 * Removed details tag from README
 
 1.2.0 - (February 25, 2020)

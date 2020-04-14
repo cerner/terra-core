@@ -7,7 +7,7 @@ The Terra Dropdown Button is a button that, when pressed, opens a dropdown with 
 Has the option to show a single button outside the dropdown as well with the `SplitButton`.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-dropdown-button/dropdown-button/dropdown-button)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-dropdown-button/dropdown-button/dropdown-button)
 - [LICENSE](#license)
 
 ## Getting Started

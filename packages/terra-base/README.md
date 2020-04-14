@@ -6,7 +6,7 @@
 The `terra-base` component is a core feature for any apps built with Terra UI. The base component handles two concerns, application internationalization and global styles. Read the [terra-base docs]((https://github.com/cerner/terra-core/tree/master/packages/terra-base/docs)) to learn more about the component.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-base/base/base)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-base/base/base)
 - [LICENSE](#license)
 
 ## Getting Started

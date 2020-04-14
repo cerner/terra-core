@@ -6,7 +6,7 @@
 The terra-cell-grid is a structural row based layout for aligning column cells within 100% width of its parent.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-cell-grid/cell-grid/cell-grid)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-cell-grid/cell-grid/cell-grid)
 - [LICENSE](#license)
 
 ## Getting Started

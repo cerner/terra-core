@@ -9,7 +9,7 @@ The Terra ContentContainer is a structural component for the purpose of arrangin
 The footer is not responsive to mobile keyboard positioning.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-content-container/content-container/content-container)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-content-container/content-container/content-container)
 - [LICENSE](#license)
 
 ## Getting Started
