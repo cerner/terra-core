@@ -474,7 +474,7 @@ class Menu extends React.Component {
         {...(this.state.active !== null ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
         tabIndex="0"
       >
-        {this.clone(this.state.children)}
+        {this.state.children}
       </ul>
     );
   }

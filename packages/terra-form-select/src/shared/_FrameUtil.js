@@ -1,3 +1,4 @@
+import React from 'react';
 import Variants from './_variants';
 
 class FrameUtil {
@@ -136,6 +137,30 @@ class FrameUtil {
       return '0';
     }
     return '-1';
+  }
+
+  /**
+   * Returns the initial number of options to be rendered.
+   * @param {number} frameHeight - The max height of the dropdown.
+   * @param {ReactNode} select - The select component.
+   * @param {array} children - The form-select options.
+   * @return {array} - A Initial set of options to render.
+   */
+  static getInitialOptions(frameHeight, select, children) {
+    const initialOptions = [];
+    const optionHeight = select.getBoundingClientRect().height;
+    // to enable scroll extra optionHeight is added to frameHeight
+    const contentNodeHeight = (frameHeight) ? (frameHeight + optionHeight) : (select.parentNode.getBoundingClientRect().bottom);
+    let totalHeight = 0;
+    React.Children.forEach(children, (option) => {
+      if (contentNodeHeight <= totalHeight) {
+        return;
+      }
+      initialOptions.push(option);
+      totalHeight += optionHeight;
+    });
+
+    return initialOptions;
   }
 }
 

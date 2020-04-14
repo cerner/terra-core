@@ -154,6 +154,13 @@ class Frame extends React.Component {
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    this.options = FrameUtil.getInitialOptions(this.props.maxHeight, this.select, this.props.children);
+    this.initialOptionCount = React.Children.count(this.options);
+    this.lastOptioinIndex = this.initialOptionCount;
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -345,6 +352,17 @@ class Frame extends React.Component {
     }
   }
 
+  handleScroll() {
+    if (this.lastOptioinIndex < this.props.totalOptions) {
+      const newLastOptionIndex = this.lastOptioinIndex + this.initialOptionCount;
+      const tempArray = React.Children.toArray(this.props.children).slice(this.lastOptioinIndex, newLastOptionIndex);
+      React.Children.forEach(tempArray, (option) => {
+        this.options.push(option);
+      });
+      this.lastOptioinIndex = React.Children.count(this.options);
+    }
+  }
+
   /**
    * Toggles the dropdown open or closed.
    */
@@ -517,11 +535,12 @@ class Frame extends React.Component {
             isAbove={this.state.isAbove}
             isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
+            onScroll={this.handleScroll}
             refCallback={(ref) => { this.dropdown = ref; }}
             style={FrameUtil.dropdownStyle(dropdownAttrs, this.state)} // eslint-disable-line react/forbid-component-props
           >
             <Menu {...menuProps}>
-              {children}
+              {this.options}
             </Menu>
           </Dropdown>
         )}
