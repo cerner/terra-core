@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import NativeSelect from 'terra-form-select/lib/native-select/NativeSelect';
 
 const ControlledExample = () => {
-  const [value, setValue] = useState(['volvo']);
+  const [value, setValue] = useState('volvo');
 
   return (
     <NativeSelect
       id="controlled-example"
       value={value}
-      onChange={setValue}
+      onChange={event => setValue(event.currentTarget.value)}
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },

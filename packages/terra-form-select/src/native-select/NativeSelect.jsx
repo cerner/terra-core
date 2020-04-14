@@ -177,7 +177,9 @@ const NativeSelect = ({
     if (onChange) {
       onChange(event);
     }
-    setCurrentValue(event.currentTarget.value);
+    if (!value) {
+      setCurrentValue(event.currentTarget.value);
+    }
   };
 
   const selectAttrs = {
