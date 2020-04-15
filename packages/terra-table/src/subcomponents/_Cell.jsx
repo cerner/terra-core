@@ -55,7 +55,7 @@ const Cell = ({
   ...customProps
 }) => {
   const cellClassNames = cx('cell');
-  const contentClass = !removeInner ? cx('container') : cx('content-width');
+  const contentClass = !removeInner ? cx('container') : undefined;
 
   let ariaAttr;
   let ariaElement;
@@ -72,7 +72,7 @@ const Cell = ({
   let content = children;
   if (ariaAttr || contentClass) {
     content = (
-      <div {...ariaAttr} className={contentClass}>
+      <div {...ariaAttr} className={contentClass || cx('content-width')}>
         {content}
         {ariaElement}
       </div>
