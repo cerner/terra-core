@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.27.0 - (April 14, 2020)
+------------------
 ### Changed
 * Updated documentation link in README
 
