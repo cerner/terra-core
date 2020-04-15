@@ -29,7 +29,11 @@ exports[`Cell should render a Cell with child content and remove inner 1`] = `
   className="cell"
   role="gridcell"
 >
-  test text
+  <div
+    className="content-width"
+  >
+    test text
+  </div>
 </div>
 `;
 
@@ -70,7 +74,11 @@ exports[`Cell should render a Cell with width inner container removed 1`] = `
 <div
   className="cell"
   role="gridcell"
-/>
+>
+  <div
+    className="content-width"
+  />
+</div>
 `;
 
 exports[`Cell should render a Cell with width set 1`] = `
