@@ -1,12 +1,16 @@
 import React from 'react';
 import Table from 'terra-table';
+import classNames from 'classnames/bind';
+import styles from './TableStylesCommon.modules.scss';
+
+const cx = classNames.bind(styles);
 
 const CustomCell = () => (
   <Table
     summaryId="example-table"
-    summary="This a fixed height table."
+    summary="Custom Cell Content"
     dividerStyle="both"
-    numberOfColumns={4}
+    numberOfColumns={3}
     rowStyle="disclose"
     headerData={{
       cells: [
@@ -25,11 +29,6 @@ const CustomCell = () => (
           key: 'name2',
           children: 'Column 2',
         },
-        {
-          id: 'header-name',
-          key: 'name3',
-          children: 'Column 3',
-        },
       ],
     }}
     bodyData={[
@@ -40,19 +39,16 @@ const CustomCell = () => (
             cells: [
               {
                 key: 'cell-0',
-                children: 'John Smith',
+                children: <div className={cx('truncation')}>Normal Content. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sunt tempora magnam vitae atque nostrum sequi quibusdam veniam deserunt, non itaque tenetur, temporibus repellat repellendus. Commodi non repellat nihil molestiae!</div>,
               },
               {
                 key: 'cell-1',
-                children: <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sunt tempora magnam vitae atque nostrum sequi quibusdam veniam deserunt, non itaque tenetur, temporibus repellat repellendus. Commodi non repellat nihil molestiae!</div>,
+                children: <div className={cx('truncation')}>Content with Disclose Action. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sunt tempora magnam vitae atque nostrum sequi quibusdam veniam deserunt, non itaque tenetur, temporibus repellat repellendus. Commodi non repellat nihil molestiae!</div>,
               },
               {
                 key: 'cell-2',
-                children: 'John Smith',
-              },
-              {
-                key: 'cell-3',
-                children: 'John Smith',
+                children: <div className={cx('truncation')}>Content with removeInner. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sunt tempora magnam vitae atque nostrum sequi quibusdam veniam deserunt, non itaque tenetur, temporibus repellat repellendus. Commodi non repellat nihil molestiae!</div>,
+                removeInner: true,
               },
             ],
             discloseAction: {
@@ -66,22 +62,16 @@ const CustomCell = () => (
             cells: [
               {
                 key: 'cell-0',
-                children: 'Jane Smith',
-                removeInner: true,
+                children: <div className={cx('truncation')}>Normal Content. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sunt tempora magnam vitae atque nostrum sequi quibusdam veniam deserunt, non itaque tenetur, temporibus repellat repellendus. Commodi non repellat nihil molestiae!</div>,
               },
               {
                 key: 'cell-1',
-                children: 'Jane Smith',
+                children: <div className={cx('truncation')}>Content with Disclose and removeInner. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sunt tempora magnam vitae atque nostrum sequi quibusdam veniam deserunt, non itaque tenetur, temporibus repellat repellendus. Commodi non repellat nihil molestiae!</div>,
                 removeInner: true,
               },
               {
                 key: 'cell-2',
-                children: 'John Smith',
-                removeInner: true,
-              },
-              {
-                key: 'cell-3',
-                children: 'John Smith',
+                children: <div className={cx('truncation')}>Content with removeInner. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sunt tempora magnam vitae atque nostrum sequi quibusdam veniam deserunt, non itaque tenetur, temporibus repellat repellendus. Commodi non repellat nihil molestiae!</div>,
                 removeInner: true,
               },
             ],
