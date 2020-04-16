@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated wdio snapshots due to changes in button.
 
 3.33.0 - (March 31, 2020)
 ------------------

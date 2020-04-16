@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added an interaction media query to apply `hover` styles only on non-touch devices.
 
 3.34.0 - (March 31, 2020)
 ------------------
