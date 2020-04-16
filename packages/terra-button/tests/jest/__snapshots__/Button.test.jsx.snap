@@ -1,5 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Button
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    text="neutral"
+    type="button"
+    variant="neutral"
+  >
+    <button
+      aria-disabled={false}
+      className="button neutral orion-fusion-theme"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      type="button"
+    >
+      <span
+        className="button-label text-only"
+      >
+        <span
+          className=""
+        >
+          neutral
+        </span>
+      </span>
+    </button>
+  </Button>
+</ThemeContextProvider>
+`;
+
 exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 <Button
   isBlock={false}
