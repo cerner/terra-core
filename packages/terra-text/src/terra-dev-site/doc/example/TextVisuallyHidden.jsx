@@ -5,10 +5,10 @@ const TextVisuallyHidden = () => (
   <div>
     <p>
 The example below includes a
-      <code>&lt;Text /&gt;</code>
+      <code> &lt;Text /&gt;</code>
       {' '}
 component using the
-      <code>isVisuallyHidden</code>
+      <code> isVisuallyHidden</code>
       {' '}
 prop.
     </p>
