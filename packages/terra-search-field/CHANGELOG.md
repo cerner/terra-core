@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated wdio snapshots due to changes in button.
+* Updated documentation link in README
 
 3.43.0 - (March 31, 2020)
 ------------------

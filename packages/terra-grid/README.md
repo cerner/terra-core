@@ -6,7 +6,7 @@
 The terra-grid component provides a flexbox based grid system.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-grid/grid/grid)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-grid/grid/grid)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -22,8 +22,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

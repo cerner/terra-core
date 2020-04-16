@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Button from '../../src/Button';
 
 // Snapshot Tests
@@ -223,6 +225,15 @@ it('should render a utility button with a custom accessible label', () => {
 
 it('should render a button with accessible label', () => {
   const button = shallow(<Button text="Button" aria-label="Custom Accessible Label" />);
+  expect(button).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const button = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Button text="neutral" />
+    </ThemeContextProvider>,
+  );
   expect(button).toMatchSnapshot();
 });
 /* eslint-enable react/forbid-dom-props */
