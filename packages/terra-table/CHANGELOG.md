@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `overflow: hidden` style to cell.
 
 4.5.0 - (March 17, 2020)
 ------------------
