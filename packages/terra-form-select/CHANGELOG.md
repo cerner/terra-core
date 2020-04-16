@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `maxHeight` as first class prop to all select fields (Multi select field, Tag select Field, Search select field, Combobox select field, Single select field)
+
 ### Changed
 * Updated documentation link in README
 * Added Usage section in docs

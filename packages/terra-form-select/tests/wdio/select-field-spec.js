@@ -154,4 +154,76 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
 
     Terra.it.validatesElement('open-dropdown', { selector: '#root' });
   });
+
+  describe('should open the Combobox field and honor the set max height', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/combobox-field-max-height'));
+
+    Terra.it.validatesElement();
+
+    it('default should open the dropdown by clicking the toggle', () => {
+      browser.click('#comboboxField:last-child');
+    });
+
+    Terra.it.validatesElement('combobox-field-dropdown-max-height', { selector: '#root' });
+  });
+
+  describe('should open the Multi select field and honor the set max height', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/multi-select-field-maxheight'));
+
+    Terra.it.validatesElement();
+
+    it('default should open the dropdown by clicking the toggle', () => {
+      browser.click('[data-terra-form-select-toggle]');
+    });
+
+    Terra.it.validatesElement('multi-select-dropdown-max-height', { selector: '#root' });
+  });
+
+  describe('should open the  search select and honor the set max height', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/search-select-field-maxheight'));
+
+    Terra.it.validatesElement();
+
+    it('default should open the dropdown by clicking the toggle', () => {
+      browser.click('#searchSelectField:last-child');
+    });
+
+    Terra.it.validatesElement('search-select-dropdown-max-height', { selector: '#root' });
+  });
+
+  describe('should open the  Select field and honor the set max height', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/select-field-maxheight'));
+
+    Terra.it.validatesElement();
+
+    it('default should open the dropdown by clicking the toggle', () => {
+      browser.click('#selectField:last-child');
+    });
+
+    Terra.it.validatesElement('select-field-dropdown-max-height', { selector: '#root' });
+  });
+
+  describe('should open the  Single select field and honor the set max height', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/single-select-field-maxheight'));
+
+    Terra.it.validatesElement();
+
+    it('default should open the dropdown by clicking the toggle', () => {
+      browser.click('#singleSelectField:last-child');
+    });
+
+    Terra.it.validatesElement('single-select-dropdown-max-height', { selector: '#root' });
+  });
+
+  describe('should open the  Tag select field and honor the set max height', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/tag-select-field-maxheight'));
+
+    Terra.it.validatesElement();
+
+    it('default should open the dropdown by clicking the toggle', () => {
+      browser.click('[data-terra-form-select-toggle]');
+    });
+
+    Terra.it.validatesElement('tag-select-dropdown-max-height', { selector: '#root' });
+  });
 });
