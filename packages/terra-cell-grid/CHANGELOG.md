@@ -3,6 +3,10 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added Section `Peer Dependencies` for docsite
+* Updated documentation links
+* Added Usage section
 
 1.2.0 - (February 18, 2020)
 ------------------

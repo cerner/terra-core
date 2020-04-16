@@ -8,7 +8,7 @@ Show Hide Component that will show a preview of content and then expand it with 
 
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-show-hide/show-hide/show-hide)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-show-hide/show-hide/show-hide)
 - [LICENSE](#license)
 
 ## Getting Started

@@ -72,7 +72,7 @@ const Cell = ({
   let content = children;
   if (ariaAttr || contentClass) {
     content = (
-      <div {...ariaAttr} className={contentClass}>
+      <div {...ariaAttr} className={contentClass || cx('content-width')}>
         {content}
         {ariaElement}
       </div>

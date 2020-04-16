@@ -7,6 +7,9 @@ Unreleased
 4.27.0 - (April 14, 2020)
 ------------------
 ### Changed
+* Updated documentation link in README
+
+### Changed
 * Update docs to use mdx syntax.
 
 4.26.0 - (March 10, 2020)
