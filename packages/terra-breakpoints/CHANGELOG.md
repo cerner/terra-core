@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Updated documentation link in README
+* Updated documentation links
 
 2.24.0 - (February 18, 2020)
 ------------------
