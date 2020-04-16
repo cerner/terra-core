@@ -9,7 +9,7 @@ The component can define line width, line color, and optionally display a signat
 already been recorded. Exiting the canvas then re-entering continues the drawing, as long as the pointer does not exit the confines of the browser. For mouse usage, only left click drawing is enabled.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-signature/signature/signature)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-signature/signature/signature)
 - [LICENSE](#license)
 
 ## Getting Started

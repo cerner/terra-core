@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated documentation link in README
+
 ### Added
 * Added `overflow: hidden` style to cell.
 

@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated documentation link in README
 
 3.29.0 - (March 10, 2020)
 ------------------

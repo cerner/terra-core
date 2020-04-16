@@ -1,5 +1,5 @@
 import React from 'react';
-import TextareaField from '../../../TextareaField';
+import TextareaField from 'terra-form-textarea/lib/TextareaField';
 
 const DefaultTextAreaField = () => (
   <TextareaField
