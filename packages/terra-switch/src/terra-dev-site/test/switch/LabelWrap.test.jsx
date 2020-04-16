@@ -10,7 +10,7 @@ const SwitchWithLongLabelText = () => {
   return (
     <div className={cx('container')}>
       <Switch
-        buttonId="switchWithLongLabel"
+        switchId="switchWithLongLabel"
         labelId="label3"
         checked={value}
         labelText="Long Label Text Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label Text"

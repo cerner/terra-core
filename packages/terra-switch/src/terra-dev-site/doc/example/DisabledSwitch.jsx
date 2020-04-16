@@ -3,7 +3,7 @@ import Switch from 'terra-switch';
 
 const DisabledSwitch = () => (
   <Switch
-    buttonId="disabledSwitch"
+    switchId="disabledSwitch"
     labelId="label2"
     checked
     labelText="Label"

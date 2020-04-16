@@ -1,6 +1,7 @@
 import React, { useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import { FormattedMessage } from 'react-intl';
 import styles from './Switch.module.scss';
 import { enableFocusStyles, disableFocusStyles } from './_SwitchUtils';
 
@@ -8,15 +9,15 @@ const cx = classNames.bind(styles);
 
 // Translations Required
 const SWITCH_STATE = Object.freeze({
-  ON: 'On',
-  OFF: 'Off',
+  ON: <FormattedMessage id="Terra.switch.switchstatuslabel.on" />,
+  OFF: <FormattedMessage id="Terra.switch.switchstatuslabel.off" />,
 });
 
 const propTypes = {
   /**
    * Id of the Switch button.
    */
-  buttonId: PropTypes.string.isRequired,
+  switchId: PropTypes.string.isRequired,
   /**
    * Whether or not the Switch is checked ("ON").
    */
@@ -48,7 +49,7 @@ const defaultProps = {
 
 const Switch = (props) => {
   const {
-    buttonId,
+    switchId,
     labelId,
     checked,
     disabled,
@@ -100,7 +101,7 @@ const Switch = (props) => {
   return (
     <div {...customProps} className={mainClasses}>
       {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
-      <label htmlFor={buttonId} onMouseDown={disableFocusStyles} onKeyDown={enableFocusStyles}>
+      <label htmlFor={switchId} onMouseDown={disableFocusStyles} onKeyDown={enableFocusStyles}>
         <div className={switchClassNames}>
           <div className={cx('label-container')}>
             <div id={labelId} className={cx('label-text')}>{labelText}</div>
@@ -109,7 +110,7 @@ const Switch = (props) => {
           <div className={trayClassNames}>
             <button
               type="button"
-              id={buttonId}
+              id={switchId}
               disabled={disabled}
               aria-checked={checked}
               aria-labelledby={labelId}
