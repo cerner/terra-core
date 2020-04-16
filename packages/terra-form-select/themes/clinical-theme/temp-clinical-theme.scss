@@ -1,40 +1,59 @@
 @import '~terra-mixins/lib/Mixins';
 
 :global {
+  // native
   --terra-form-select-native-background-color: rgba(255, 255, 255, 0.8);
-  --terra-form-select-native-outer-background-image: linear-gradient(#599ffd, #599ffd);
-  --terra-form-select-native-outer-background-size: 0 0.142857rem;
-  --terra-form-select-native-outer-border: 1px solid rgba(89, 159, 253, 0.6);
-  --terra-form-select-native-outer-border-radius: 3px;
-  --terra-form-select-native-outer-height: 2.142857rem;
-  --terra-form-select-native-outer-focus-box-shadow: none;
-  --terra-form-select-native-outer-focus-background-size: 100% 0.142857rem;
-  --terra-form-select-native-outer-focus-border-color: #4cb2e9;
-  --terra-form-select-native-outer-focus-transition-duration: 0.33s;
-  --terra-form-select-native-outer-hover-border-color: #4cb2e9;
-  --terra-form-select-native-display-hover-color: #4cb2e9;
-  --terra-form-select-native-incomplete-background-color: #ffc;
-  --terra-form-select-native-invalid-background-color: rgba(255, 255, 255, 0.8);
-  --terra-form-select-native-outer-invalid-background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
-  --terra-form-select-native-invalid-border-color: #e50000;
-  --terra-form-select-native-invalid-box-shadow: none;
-  --terra-form-select-native-disabled-background-color: rgba(17, 22, 25, 0.05);
-  --terra-form-select-disabled-border-color: rgba(89, 159, 253, 0.3);
-  --terra-form-select-disabled-opacity: 1;
-  --terra-form-select-native-display-disabled-color: rgba(17, 22, 25, 0.3);
-  --terra-form-select-native-placeholder-display-color: #1521299c;
-  --terra-form-select-search-placeholder-font-size: 1rem;
-  --terra-form-select-native-placeholder-display-font-style: italic;
+  --terra-form-select-native-background-image: linear-gradient(#599ffd, #599ffd);
+  --terra-form-select-native-background-size: 0 0.142857rem;
+  --terra-form-select-native-border: 1px solid rgba(89, 159, 253, 0.6);
+  --terra-form-select-native-border-radius: 3px;
+  --terra-form-select-native-height: 2.142857rem;
   --terra-form-select-native-display-color: rgba(17, 22, 25, 0.75);
   --terra-form-select-native-display-font-size: 1rem;
   --terra-form-select-native-display-line-height: 1.75;
-  --terra-form-select-native-frame-padding-left: 0.5rem;
+  --terra-form-select-native-placeholder-display-color: #1521299c;
+  --terra-form-select-native-placeholder-display-font-style: italic;
+  --terra-form-select-native-placeholder-display-font-size: 1rem;
   --terra-form-select-native-select-line-height: 1.75;
+  --terra-form-select-native-frame-padding-left: 0.5rem;
   --terra-form-select-native-arrow-padding: 0 0.786rem;
   --terra-form-select-native-arrow-icon-height: 0.714rem;
   --terra-form-select-native-arrow-icon-width: 0.714rem;
 
-  @include terra-inline-svg-var(--terra-form-select-native-invalid-arrow-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#e50000" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
-  @include terra-inline-svg-var(--terra-form-select-native-disabled-arrow-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="rgba(17, 22, 25, .5)" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
-  @include terra-inline-svg-var(--terra-form-select-native-arrow-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#4983d1" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+  // focus
+  --terra-form-select-native-focus-background-size: 100% 0.142857rem;
+  --terra-form-select-native-focus-border-color: #4cb2e9;
+  --terra-form-select-native-focus-transition-duration: 0.33s;
+
+  // focus - keyboard
+  --terra-form-select-native-focus-keyboard-box-shadow: none;
+
+  // hover
+  --terra-form-select-native-hover-border-color: #4cb2e9;
+  --terra-form-select-native-hover-display-color: #111619;
+
+  // focus + hover
+  --terra-form-select-native-focus-hover-border-color: #4cb2e9;
+
+  // incomplete
+  --terra-form-select-native-incomplete-background-color: #ffc;
+
+  // invalid
+  --terra-form-select-native-invalid-background-color: rgba(255, 255, 255, 0.8);
+  --terra-form-select-native-invalid-background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  --terra-form-select-native-invalid-border-color: #e50000;
+  --terra-form-select-native-invalid-box-shadow: none;
+  --terra-form-select-native-invalid-focus-border-color: #e50000;
+  --terra-form-select-native-invalid-focus-box-shadow: none;
+  --terra-form-select-native-invalid-hover-border-color: #e50000;
+
+  // disabled
+  --terra-form-select-native-disabled-background-color: rgba(17, 22, 25, 0.05);
+  --terra-form-select-native-disabled-border-color: rgba(89, 159, 253, 0.3);
+  --terra-form-select-native-disabled-display-color: rgba(17, 22, 25, 0.3);
+  --terra-form-select-native-disabled-opacity: 1;
+
+  @include terra-inline-svg-var('--terra-form-select-native-arrow-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#4983d1" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>');
+  @include terra-inline-svg-var('--terra-form-select-native-invalid-arrow-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#e50000" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>');
+  @include terra-inline-svg-var('--terra-form-select-native-disabled-arrow-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="rgba(17, 22, 25, .5)" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>');
 }

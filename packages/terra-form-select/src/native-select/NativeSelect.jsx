@@ -201,7 +201,7 @@ const NativeSelect = ({
   return (
     <div
       className={cx(
-        'outer',
+        'native',
         { disabled },
         { invalid },
         { incomplete: required && isIncomplete },

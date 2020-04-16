@@ -1,17 +1,17 @@
 @import '~terra-mixins/lib/Mixins';
 
 :local {
-  .outer {
+  .native {
     align-items: center;
     background-color: var(--terra-form-select-native-background-color, #fff);
-    background-image: var(--terra-form-select-native-outer-background-image, none);
+    background-image: var(--terra-form-select-native-background-image, none);
     background-position: 0 100%;
     background-repeat: no-repeat;
-    background-size: var(--terra-form-select-native-outer-background-size, 0 0);
-    border: var(--terra-form-select-native-outer-border, 1px solid #dedfe0);
-    border-radius: var(--terra-form-select-native-outer-border-radius, 3px);
+    background-size: var(--terra-form-select-native-background-size, 0 0);
+    border: var(--terra-form-select-native-border, 1px solid #dedfe0);
+    border-radius: var(--terra-form-select-native-border-radius, 3px);
     display: flex;
-    height: var(--terra-form-select-native-outer-height, 2.142857rem);
+    height: var(--terra-form-select-native-height, 2.142857rem);
     position: relative;
     transition-duration: 0s;
     transition-property: background-size;
@@ -19,21 +19,25 @@
     width: 100%;
 
     &[data-focus-interaction='keyboard'] {
-      box-shadow: var(--terra-form-select-native-outer-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
+      box-shadow: var(--terra-form-select-native-focus-keyboard-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
     }
 
     &[data-focus-interaction='keyboard'],
     &[data-focus-interaction='mouse'], {
-      background-size: var(--terra-form-select-native-outer-focus-background-size, 0 0);
-      border-color: var(--terra-form-select-native-outer-focus-border-color, #4cb2e9);
-      transition-duration: var(--terra-form-select-native-outer-focus-transition-duration, 0);
+      background-size: var(--terra-form-select-native-focus-background-size, 0 0);
+      border-color: var(--terra-form-select-native-focus-border-color, #4cb2e9);
+      transition-duration: var(--terra-form-select-native-focus-transition-duration, 0);
+
+      &:hover {
+        border-color: var(--terra-form-select-native-focus-hover-border-color, #4cb2e9);
+      }
     }
 
     &:hover {
-      border-color: var(--terra-form-select-native-outer-hover-border-color, #4cb2e9);
+      border-color: var(--terra-form-select-native-hover-border-color, #4cb2e9);
 
       .display {
-        color: var(--terra-form-select-native-display-hover-color, #1c1f21);
+        color: var(--terra-form-select-native-hover-display-color, #1c1f21);
       }
     }
 
@@ -43,34 +47,47 @@
 
     &.invalid {
       background-color: var(--terra-form-select-native-invalid-background-color, none);
-      background-image: var(--terra-form-select-native-outer-invalid-background-image, none);
+      background-image: var(--terra-form-select-native-invalid-background-image, none);
       border-color: var(--terra-form-select-native-invalid-border-color, #e50000);
       box-shadow: var(--terra-form-select-native-invalid-box-shadow, 0 0 0 1px #e50000);
 
       .arrow-icon {
-        background-image: var(--terra-form-select-native-invalid-arrow-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#e50000" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+        background-image: var(--terra-form-select-native-invalid-arrow-icon-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#e50000" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+      }
+
+      &[data-focus-interaction='keyboard'] {
+        box-shadow: var(--terra-form-select-native-invalid-focus-keyboard-box-shadow, 0 0 0 1px #e50000);
+      }
+  
+      &[data-focus-interaction='keyboard'],
+      &[data-focus-interaction='mouse'], {
+        border-color: var(--terra-form-select-native-invalid-focus-border-color, #e50000);
+      }
+  
+      &:hover {
+        border-color: var(--terra-form-select-native-invalid-hover-border-color, #e50000);
       }
     }
 
     &.disabled {
       background-color: var(--terra-form-select-native-disabled-background-color, rgba(111, 116, 119, 0.2));
       background-image: none;
-      border-color: var(--terra-form-select-disabled-border-color, #dedfe0);
-      opacity: var(--terra-form-select-disabled-opacity, 0.4);
+      border-color: var(--terra-form-select-native-disabled-border-color, #dedfe0);
+      opacity: var(--terra-form-select-native-disabled-opacity, 0.4);
 
       .display {
-        color: var(--terra-form-select-native-display-disabled-color, #1c1f21);
+        color: var(--terra-form-select-native-disabled-display-color, #1c1f21);
       }
 
       .arrow-icon {
-        background-image: var(--terra-form-select-native-disabled-arrow-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="rgba(17, 22, 25, .5)" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+        background-image: var(--terra-form-select-native-disabled-arrow-icon-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="rgba(17, 22, 25, .5)" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
       }
     }
 
     &.placeholder {
       .display {
         color: var(--terra-form-select-native-placeholder-display-color, rgba(21, 33, 41, 0.61));
-        font-size: var(--terra-form-select-search-placeholder-font-size, 1.143rem);
+        font-size: var(--terra-form-select-native-placeholder-display-font-size, 1.143rem);
         font-style: var(--terra-form-select-native-placeholder-display-font-style);
       }
     }
@@ -151,7 +168,7 @@
   }
 
   .arrow-icon {
-    background-image: var(--terra-form-select-native-arrow-icon, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#1c1f21" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
+    background-image: var(--terra-form-select-native-arrow-icon-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#1c1f21" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
