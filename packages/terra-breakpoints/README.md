@@ -6,7 +6,7 @@
 `terra-breakpoints` contains components and utilities related to Terra's supported responsive breakpoints.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-breakpoints/breakpoints/about)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-breakpoints/breakpoints/about)
 - [LICENSE](#license)
 
 ## Getting Started

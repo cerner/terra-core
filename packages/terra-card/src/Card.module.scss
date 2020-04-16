@@ -1,3 +1,7 @@
+//Themes
+@import './clinical-lowlight-theme/Card.module';
+@import './orion-fusion-theme/Card.module';
+
 :local {
   .card {
     background-color: var(--terra-card-background-color, #fff);

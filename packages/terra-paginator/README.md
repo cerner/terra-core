@@ -7,7 +7,7 @@
 Paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-paginator/paginator/paginator)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-paginator/paginator/paginator)
 - [LICENSE](#license)
 
 ## Getting Started

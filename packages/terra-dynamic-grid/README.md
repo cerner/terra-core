@@ -7,7 +7,7 @@
 The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-dynamic-grid/dynamic-grid/dynamic-grid)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-dynamic-grid/dynamic-grid/dynamic-grid)
 - [LICENSE](#license)
 
 ## Getting Started
