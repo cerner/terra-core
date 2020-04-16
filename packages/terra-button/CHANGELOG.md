@@ -5,6 +5,8 @@ Unreleased
 ----------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Updated docs for documentation link
+* Removed extra lines from README
 
 3.34.0 - (March 31, 2020)
 ------------------

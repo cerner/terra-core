@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Added Usage section
+* Updated docs for documentation link and expanded `PropTypes` for Props Table
+* Removed extra lines from README
 
 ### Changed
 * Apply themes by context and directly include packaged themes.

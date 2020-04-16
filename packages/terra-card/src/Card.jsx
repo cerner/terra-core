@@ -22,7 +22,7 @@ const propTypes = {
   /**
    * Sets the card variant to change the style for different use cases. One of `default`,  `raised`.
    */
-  variant: PropTypes.oneOf([...Object.values(CardVariants)]),
+  variant: PropTypes.oneOf(['default', 'raised']),
   /**
    * Text that describes the badge to a screen reader. Use this
    * if more information is needed to accurately describe
