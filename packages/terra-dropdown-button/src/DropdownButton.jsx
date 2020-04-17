@@ -39,7 +39,7 @@ const propTypes = {
   /**
    * Sets the styles of the component, one of `neutral`, `emphasis`, or `ghost`.
    */
-  variant: PropTypes.oneOf(Object.values(Variants)),
+  variant: PropTypes.oneOf(['neutral', 'emphasis', 'ghost']),
 };
 
 const defaultProps = {

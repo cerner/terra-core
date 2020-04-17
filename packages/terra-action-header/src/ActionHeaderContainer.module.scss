@@ -1,6 +1,10 @@
+// import themes
+@import './clinical-lowlight-theme/ActionHeaderContainer.module';
+@import './orion-fusion-theme/ActionHeaderContainer.module';
+
 :local {
   .flex-header {
-    align-items: flex-start;
+    align-items: var(--terra-action-header-align-items, flex-start);
     background-color: var(--terra-action-header-background-color, #f9f9f9);
     border-bottom: var(--terra-action-header-border-bottom, 1px solid #d3d4d5);
     border-left: var(--terra-action-header-border-left);

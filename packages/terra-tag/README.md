@@ -8,7 +8,7 @@ The tag component is used for tagging and provides users a way to trigger action
 It can optionally display an icon along with the text.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-tag/tag/tag)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-tag/tag/tag)
 - [LICENSE](#license)
 
 ## Getting Started

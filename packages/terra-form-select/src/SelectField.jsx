@@ -75,6 +75,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
+   * The max height of the dropdown.
+   */
+  maxHeight: PropTypes.number,
+  /**
    * The maximum number of options that can be selected. A value less than 2 will be ignored.
    * Only applicable to variants allowing multiple selections (e.g.; `multiple`; `tag`).
    */
@@ -140,6 +144,7 @@ const defaultProps = {
   isTouchAccessible: false,
   labelAttrs: {},
   maxSelectionCount: undefined,
+  maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
   placeholder: undefined,
@@ -167,6 +172,7 @@ const SelectField = ({
   label,
   labelAttrs,
   maxSelectionCount,
+  maxHeight,
   maxWidth,
   onChange,
   placeholder,
@@ -236,6 +242,7 @@ const SelectField = ({
         isInvalid={isInvalid}
         isTouchAccessible={isTouchAccessible}
         defaultValue={defaultValue}
+        maxHeight={maxHeight || selectAttrs.maxHeight}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
         placeholder={placeholder}
