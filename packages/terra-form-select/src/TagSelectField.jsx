@@ -73,6 +73,10 @@ const propTypes = {
    */
   maxSelectionCount: PropTypes.number,
   /**
+   * The max height of the dropdown.
+   */
+  maxHeight: PropTypes.number,
+  /**
    * Set the max-width of a field using `length` or `%`.  Best practice recommendation to never exceed
    * a rendered value of 1020px. _(Note: Providing custom inline styles will take precedence.)_
    */
@@ -122,6 +126,7 @@ const defaultProps = {
   isTouchAccessible: false,
   labelAttrs: {},
   maxSelectionCount: undefined,
+  maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
   placeholder: undefined,
@@ -147,6 +152,7 @@ const TagSelectField = ({
   label,
   labelAttrs,
   maxSelectionCount,
+  maxHeight,
   maxWidth,
   onChange,
   placeholder,
@@ -214,6 +220,7 @@ const TagSelectField = ({
         isInvalid={isInvalid}
         isTouchAccessible={isTouchAccessible}
         defaultValue={defaultValue}
+        maxHeight={maxHeight || selectAttrs.maxHeight}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
         placeholder={placeholder}

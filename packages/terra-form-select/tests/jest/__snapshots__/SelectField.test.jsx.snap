@@ -257,6 +257,71 @@ exports[`should render a disabled SelectField component via selectAttrs 1`] = `
 </div>
 `;
 
+exports[`should render a max height SelectField component 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+      htmlFor="select-id"
+    >
+      Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+  <Select
+    allowClear={false}
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={false}
+    id="select-id"
+    isIncomplete={false}
+    isInvalid={false}
+    isTouchAccessible={false}
+    key=".0"
+    maxHeight={100}
+    required={false}
+    variant="default"
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </Select>
+</div>
+`;
+
 exports[`should render a multiple SelectField component that limits the selection count 1`] = `
 <div
   className="field"
