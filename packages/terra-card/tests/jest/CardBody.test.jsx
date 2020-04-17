@@ -25,4 +25,13 @@ describe('CardBody', () => {
   it('should not contain the class to center content when prop to center content is not passed', () => {
     expect(shallowRender.prop('className')).not.toContain('center-content');
   });
+
+  it('correctly applies the theme context className', () => {
+    jest.spyOn(React, 'useContext')
+      .mockReturnValue({
+        className: 'orion-fusion-theme',
+      });
+    const component = shallow(<CardBody />);
+    expect(component).toMatchSnapshot();
+  });
 });

@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CardBody correctly applies the theme context className 1`] = `
+<div
+  className="vertical-padding horizontal-padding orion-fusion-theme"
+/>
+`;
+
 exports[`CardBody should render a default component 1`] = `
 <div
   className="vertical-padding horizontal-padding"

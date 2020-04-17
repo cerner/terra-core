@@ -7,7 +7,7 @@
 Generic input which represents an HTML input element directly.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-form-input/form-input/input)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-form-input/form-input/input)
 - [LICENSE](#license)
 
 ## Getting Started

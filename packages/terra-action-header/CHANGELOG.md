@@ -3,7 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+
 ### Changes
+* Updated docs for documentation link and usage section
+* Removed extra lines from README
 * Updated to consumer terra-theme-context 
 
 ### Fixed
