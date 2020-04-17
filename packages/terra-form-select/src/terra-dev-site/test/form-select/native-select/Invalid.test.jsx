@@ -9,7 +9,7 @@ const InvalidTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       id="select-id"
-      invalid
+      isInvalid
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },

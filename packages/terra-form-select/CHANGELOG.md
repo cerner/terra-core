@@ -4,6 +4,9 @@ ChangeLog
 Unreleased
 ----------
 ### Added
+* Added `NativeSelect` implementation to replace the default select variant.
+
+### Added
 * Added `maxHeight` as first class prop to all select fields (Multi select field, Tag select Field, Search select field, Combobox select field, Single select field)
 
 ### Changed

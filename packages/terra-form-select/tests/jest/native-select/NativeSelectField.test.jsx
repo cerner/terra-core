@@ -163,7 +163,7 @@ describe('NativeSelectField', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a NativeSelectField with a placeholder', () => {
+  it('should render a NativeSelectField with a default placeholder', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
         selectId="test-id"
@@ -174,12 +174,23 @@ describe('NativeSelectField', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render a NativeSelectField with a custom  placeholder', () => {
+    const wrapper = shallowWithIntl(
+      <NativeSelectField
+        selectId="test-id"
+        label="test-label"
+        placeholder={{ display: 'test-placeholder-display', value: 'test-placeholder-value' }}
+      />,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render a NativeSelectField allowing clear', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
         selectId="test-id"
         label="test-label"
-        placeholder={{}}
+        placeholder={{ allowClear: true }}
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -240,7 +251,6 @@ describe('NativeSelectField', () => {
         label="test-label"
         required
         isIncomplete
-        placeholder={{}}
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -254,7 +264,6 @@ describe('NativeSelectField', () => {
         required
         hideRequired
         isIncomplete
-        placeholder={{}}
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -267,7 +276,6 @@ describe('NativeSelectField', () => {
         label="test-label"
         required
         isIncomplete
-        placeholder={{}}
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -280,7 +288,6 @@ describe('NativeSelectField', () => {
         label="test-label"
         required
         isIncomplete
-        placeholder={{}}
       />,
     );
     expect(wrapper).toMatchSnapshot();

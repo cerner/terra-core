@@ -80,7 +80,7 @@ const propTypes = {
   /**
    * Whether the input is invalid.
    */
-  invalid: PropTypes.bool,
+  isInvalid: PropTypes.bool,
   /**
    * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
@@ -122,8 +122,8 @@ const propTypes = {
 
 const defaultProps = {
   disabled: false,
-  invalid: false,
   isIncomplete: false,
+  isInvalid: false,
   options: [],
   required: false,
 };
@@ -141,12 +141,12 @@ const createPlaceholder = (placeholder, intl) => {
 const createOptions = options => options.map(current => {
   if (current.childOptions) {
     return (
-      <optgroup label={current.display}>
+      <optgroup key={`${current.display} ${current.childOptions.length}`} label={current.display}>
         {createOptions(current.childOptions)}
       </optgroup>
     );
   }
-  return <option value={current.value}>{current.display}</option>;
+  return <option key={current.value} value={current.value}>{current.display}</option>;
 });
 
 const NativeSelect = ({
@@ -157,7 +157,7 @@ const NativeSelect = ({
   defaultValue,
   id,
   intl,
-  invalid,
+  isInvalid,
   isIncomplete,
   onChange,
   options,
@@ -190,19 +190,19 @@ const NativeSelect = ({
   };
 
   const selectAttrs = {
-    ariaDescribedBy,
-    ariaLabel,
+    'aria-describedby': ariaDescribedBy,
+    'aria-label': ariaLabel,
     id,
     disabled,
-    invalid,
+    'aria-invalid': isInvalid || undefined,
     required,
     value: value || currentValue,
   };
 
-  const nativeClassNames =cx(
+  const nativeClassNames = cx(
     'native',
     { disabled },
-    { invalid },
+    { invalid: isInvalid },
     { incomplete: required && isIncomplete },
     { placeholder: isCurrentPlaceholder(selectAttrs.value, placeholder) },
   );

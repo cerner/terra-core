@@ -1,11 +1,11 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { mountWithIntl } from 'terra-enzyme-intl';
 import NativeSelect from '../../../src/native-select/NativeSelect';
 
 describe('NativeSelect', () => {
   it('should render a default NativeSelect', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
       />,
@@ -14,7 +14,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with an aria label', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         ariaLabel="test-label"
@@ -24,7 +24,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect aria described by', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         ariaDescribedBy="test-described-id"
@@ -34,7 +34,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with options', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         options={[
@@ -49,7 +49,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with options and defaultValue', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         defaultValue="saab"
@@ -65,7 +65,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with options and value', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         value="audi"
@@ -81,7 +81,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with onChange', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         onChange={jest.fn()}
@@ -90,38 +90,48 @@ describe('NativeSelect', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a NativeSelect with a placeholder', () => {
-    const wrapper = shallowWithIntl(
+  it('should render a NativeSelect with a default placeholder', () => {
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         placeholder={{}}
+      />,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a NativeSelect with a custom placeholder', () => {
+    const wrapper = mountWithIntl(
+      <NativeSelect
+        id="test-id"
+        placeholder={{ display: 'test-placeholder-display', value: 'test-placeholder-value' }}
       />,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a NativeSelect allowing clear', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
-        placeholder={{}}
+        placeholder={{ allowClear: true }}
       />,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a NativeSelect as invalid', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
-        invalid
+        isInvalid
       />,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a NativeSelect as disabled', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         disabled
@@ -131,7 +141,7 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect with opt groups', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         options={[
@@ -156,36 +166,33 @@ describe('NativeSelect', () => {
   });
 
   it('should render a NativeSelect required', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         required
         isIncomplete
-        placeholder={{}}
       />,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a NativeSelect isIncomplete', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         required
         isIncomplete
-        placeholder={{}}
       />,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a NativeSelect required and isIncomplete', () => {
-    const wrapper = shallowWithIntl(
+    const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
         required
         isIncomplete
-        placeholder={{}}
       />,
     );
     expect(wrapper).toMatchSnapshot();

@@ -53,13 +53,13 @@ const propTypes = {
    */
   isInline: PropTypes.bool,
   /**
-   * Whether the field displays as Invalid. Use when value does not meet validation pattern.
-   */
-  isInvalid: PropTypes.bool,
-  /**
    * Whether the label is hidden. Allows hiding the label while meeting accessibility guidelines.
    */
   isLabelHidden: PropTypes.bool,
+  /**
+   * Whether the field displays as Invalid. Use when value does not meet validation pattern.
+   */
+  isInvalid: PropTypes.bool,
   /**
    * Additional attributes to spread onto the label.
    */
@@ -138,8 +138,8 @@ const NativeSelectField = ({
   hideRequired,
   isIncomplete,
   isInline,
-  isInvalid,
   isLabelHidden,
+  isInvalid,
   label,
   labelAttrs,
   maxWidth,

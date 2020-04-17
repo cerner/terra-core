@@ -5,18 +5,18 @@ import styles from '../FormSelectDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const InvalidExample = () => (
+const PlaceholderExample = () => (
   <NativeSelect
-    id="invalid-example"
-    isInvalid
+    id="placeholder-example"
     options={[
       { value: 'volvo', display: 'Volvo' },
       { value: 'saab', display: 'Saab' },
       { value: 'mercedes', display: 'Mercedes' },
       { value: 'audi', display: 'Audi' },
     ]}
+    placeholder={{ display: 'Pick A Car', value: 'my-custom-blank-value' }}
     className={cx('form-select')}
   />
 );
 
-export default InvalidExample;
+export default PlaceholderExample;

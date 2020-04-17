@@ -7,6 +7,7 @@ import IncompleteExample from '../example/native-select/Incomplete?dev-site-exam
 import InvalidExample from '../example/native-select/Invalid?dev-site-example';
 import OptGroupExample from '../example/native-select/OptGroup?dev-site-example';
 import PlaceholderExample from '../example/native-select/Placeholder?dev-site-example';
+import CustomPlaceholderExample from '../example/native-select/CustomPlaceholder?dev-site-example';
 import UncontrolledExample from '../example/native-select/Uncontrolled?dev-site-example';
 
 import NativeSelectPropsTable from 'terra-form-select/src/native-select/NativeSelect?dev-site-props-table';
@@ -15,7 +16,9 @@ import NativeSelectPropsTable from 'terra-form-select/src/native-select/NativeSe
 
 # Terra Form Native Select
 
-Add documentation here
+The NativeSelect component provides a visually-masked browser native select control to align closer with theme styles.
+
+Accessibility issues exist with custom select implementations, so the NativeSelect should be the used exclusively instead of the current default select implementation.
 
 ## Getting Started
 
@@ -34,14 +37,15 @@ Add documentation here
 [View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
 
 ## Examples
-<UncontrolledExample title="Uncontrolled Select Example" />
-<ControlledExample title="Controlled Select Example" />
-<PlaceholderExample title="Placeholder Select Example" />
-<AllowClearExample title="Allow Clear Select Example" />
-<OptGroupExample title="OptGroup Select Example" />
-<DisabledExample title="Disabled Select Example" />
-<IncompleteExample title="Incomplete Select Example" />
-<InvalidExample title="Invalid Select Example" />
+<UncontrolledExample title="Create an Uncontrolled Select" description="An example of implementing an uncontrolled Select." />
+<ControlledExample title="Create a Controlled Select" description="An example of implementing a controlled Select." />
+<PlaceholderExample title="Placeholder" description="An example of implementing a placeholder with default text and value." />
+<CustomPlaceholderExample title="Custom Placeholder" description="An example of implementing a placeholder with custom text and value." />
+<AllowClearExample title="Allow Clear" description="An example with an option to clear the selected options. Uses the placeholder display." />
+<OptGroupExample title="OptGroup" description="An OptGroup provides a way to group options together." />
+<DisabledExample title="Disabled" />
+<IncompleteExample title="Incomplete" description="Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+<InvalidExample title="Invalid" description="Applies theme-specific styling for invalid. Will also display error text when used with a Field." />
 
 ## Select Field Props
 <NativeSelectPropsTable />
