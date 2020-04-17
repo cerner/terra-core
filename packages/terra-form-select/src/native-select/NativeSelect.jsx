@@ -164,6 +164,7 @@ const NativeSelect = ({
   placeholder,
   required,
   value,
+  ...customProps
 }) => {
   const [currentValue, setCurrentValue] = useState(defaultValue || getFirstValue(options, placeholder));
   const refSelect = useRef();
@@ -198,15 +199,18 @@ const NativeSelect = ({
     value: value || currentValue,
   };
 
+  const nativeClassNames =cx(
+    'native',
+    { disabled },
+    { invalid },
+    { incomplete: required && isIncomplete },
+    { placeholder: isCurrentPlaceholder(selectAttrs.value, placeholder) },
+  );
+
   return (
     <div
-      className={cx(
-        'native',
-        { disabled },
-        { invalid },
-        { incomplete: required && isIncomplete },
-        { placeholder: isCurrentPlaceholder(selectAttrs.value, placeholder) },
-      )}
+      {...customProps}
+      className={customProps.className ? `${nativeClassNames} ${customProps.className}` : nativeClassNames}
       ref={refSelect}
       data-focus-interaction="none"
     >

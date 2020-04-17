@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
+import classNames from 'classnames/bind';
 import NativeSelect from 'terra-form-select/lib/native-select/NativeSelect';
+import styles from '../FormSelectDocCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const ControlledExample = () => {
   const [value, setValue] = useState('volvo');
@@ -15,6 +19,7 @@ const ControlledExample = () => {
         { value: 'mercedes', display: 'Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
+      className={cx('form-select')}
     />
   );
 };
