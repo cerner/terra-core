@@ -130,14 +130,14 @@
     border-radius: var(--terra-switch-slider-border-radius, 1.07142rem);
     box-shadow: var(--terra-switch-slider-box-shadow, 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.3));
     cursor: pointer;
-    height: var(--terra-switch-slider-height, 1.28571rem);
-    left: 0.08rem;
+    height: var(--terra-switch-slider-height, 1.357142rem);
+    left: var(--terra-switch-slider-left, 0.1rem);
     outline: 0;
     overflow: hidden;
     position: absolute;
-    top: 0.08rem;
+    top: var(--terra-switch-slider-top, 0);
     transition: transform var(--terra-switch-slider-transition, 0.2s) cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    width: var(--terra-switch-slider-width, 1.28571rem);
+    width: var(--terra-switch-slider-width, 1.357142rem);
 
     &.is-disabled {
       background-color: var(--terra-switch-slider-disabled-background-color, #fff);
