@@ -5,10 +5,11 @@ import styles from './NativeSelectTest.module.scss';
 
 const cx = classNames.bind(styles);
 
-const LongTextTest = () => (
+const IncompleteTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       id="select-id"
+      ariaLabel="select-label"
       required
       isIncomplete
       options={[
@@ -22,4 +23,4 @@ const LongTextTest = () => (
   </div>
 );
 
-export default LongTextTest;
+export default IncompleteTest;

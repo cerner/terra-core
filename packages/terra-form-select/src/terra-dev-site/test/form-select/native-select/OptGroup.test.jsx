@@ -9,6 +9,7 @@ const OptGroupTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       id="select-id"
+      ariaLabel="select-label"
       options={[
         {
           display: 'Swedish Cars',

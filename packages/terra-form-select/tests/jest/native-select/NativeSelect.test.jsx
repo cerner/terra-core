@@ -8,15 +8,6 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should render a NativeSelect with an aria label', () => {
-    const wrapper = mountWithIntl(
-      <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
       />,
     );
@@ -27,6 +18,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         ariaDescribedBy="test-described-id"
       />,
     );
@@ -37,6 +29,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         options={[
           { value: 'volvo', display: 'Volvo' },
           { value: 'saab', display: 'Saab' },
@@ -52,6 +45,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         defaultValue="saab"
         options={[
           { value: 'volvo', display: 'Volvo' },
@@ -68,6 +62,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         value="audi"
         options={[
           { value: 'volvo', display: 'Volvo' },
@@ -84,6 +79,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         onChange={jest.fn()}
       />,
     );
@@ -94,6 +90,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         placeholder={{}}
       />,
     );
@@ -104,6 +101,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         placeholder={{ display: 'test-placeholder-display', value: 'test-placeholder-value' }}
       />,
     );
@@ -114,6 +112,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         placeholder={{ allowClear: true }}
       />,
     );
@@ -124,6 +123,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         isInvalid
       />,
     );
@@ -134,6 +134,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         disabled
       />,
     );
@@ -144,6 +145,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         options={[
           {
             display: 'Swedish Cars',
@@ -169,6 +171,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         required
         isIncomplete
       />,
@@ -180,6 +183,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         required
         isIncomplete
       />,
@@ -191,6 +195,7 @@ describe('NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         id="test-id"
+        ariaLabel="test-label"
         required
         isIncomplete
       />,

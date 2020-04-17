@@ -1,141 +1,182 @@
 Terra.describeViewports('Native Select', ['tiny'], () => {
+  browser.addCommand('focus', function () {
+    browser.execute(function (domElement) {
+        domElement.focus();
+    }, this);
+  }, true);
+
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/default'));
+    browser.url('/#/raw/tests/terra-form-select/form-select/native-select/default');
 
-    describe('initially unfocused', () => {
-      Terra.it.validatesElement('no-focus');
+    Terra.it.validatesElement('initial');
+
+    it('should apply hover to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
     });
 
-    describe('default should gain focus when tabbed to', () => {
-      it('should tab focus to the select', () => {
-        browser.keys('Tab');
-      });
+    Terra.it.validatesElement('hover');
 
-      it('should be focused', async () => {
-        (await browser.hasFocus('#select-id')).should.be.true;
-      });
-
-      Terra.it.validatesElement('tab-focus');
+    it('should set focus to the select', () => {
+      browser.click('#root', 0, 0);
+      browser.keys('Tab');
     });
+
+    Terra.it.validatesElement('focus');
+
+    it('should apply hover and focus to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
+    });
+
+    Terra.it.validatesElement('hover-and-focus');
   });
 
   describe('Disabled', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/disabled'));
 
-    describe('initially unfocused', () => {
-      Terra.it.validatesElement('no-focus');
+    Terra.it.validatesElement('initial');
+
+    it('should apply hover to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
     });
 
-    describe('default should gain focus when tabbed to', () => {
-      it('should tab focus to the select', () => {
-        browser.keys('Tab');
-      });
+    Terra.it.validatesElement('hover');
 
-      it('should not be focused', async () => {
-        (await browser.hasFocus('#select-id')).should.be.false;
-      });
-
-      Terra.it.validatesElement('tab-focus');
+    it('should set focus to the select', () => {
+      browser.click('#root', 0, 0);
+      browser.keys('Tab');
     });
+
+    Terra.it.validatesElement('focus');
+
+    it('should not apply hover or focus to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
+    });
+
+    Terra.it.validatesElement('hover-and-focus');
   });
 
   describe('Incomplete', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/incomplete'));
 
-    describe('initially unfocused', () => {
-      Terra.it.validatesElement('no-focus');
+    Terra.it.validatesElement('initial');
+
+    it('should apply hover to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
     });
 
-    describe('default should gain focus when tabbed to', () => {
-      it('should tab focus to the select', () => {
-        browser.keys('Tab');
-      });
+    Terra.it.validatesElement('hover');
 
-      it('should be focused', async () => {
-        (await browser.hasFocus('#select-id')).should.be.true;
-      });
-
-      Terra.it.validatesElement('tab-focus');
+    it('should set focus to the select', () => {
+      browser.click('#root', 0, 0);
+      browser.keys('Tab');
     });
+
+    Terra.it.validatesElement('focus');
+
+    it('should apply hover and focus to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
+    });
+
+    Terra.it.validatesElement('hover-and-focus');
   });
 
   describe('Invalid', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/invalid'));
 
-    describe('initially unfocused', () => {
-      Terra.it.validatesElement('no-focus');
+    Terra.it.validatesElement('initial');
+
+    it('should apply hover to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
     });
 
-    describe('default should gain focus when tabbed to', () => {
-      it('should tab focus to the select', () => {
-        browser.keys('Tab');
-      });
+    Terra.it.validatesElement('hover');
 
-      it('should be focused', async () => {
-        (await browser.hasFocus('#select-id')).should.be.true;
-      });
-
-      Terra.it.validatesElement('tab-focus');
+    it('should set focus to the select', () => {
+      browser.click('#root', 0, 0);
+      browser.keys('Tab');
     });
+
+    Terra.it.validatesElement('focus');
+
+    it('should apply hover and focus to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
+    });
+
+    Terra.it.validatesElement('hover-and-focus');
   });
 
   describe('LongText', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/long-text'));
 
-    describe('initially unfocused', () => {
-      Terra.it.validatesElement('no-focus');
+    Terra.it.validatesElement('initial');
+
+    it('should apply hover to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
     });
 
-    describe('default should gain focus when tabbed to', () => {
-      it('should tab focus to the select', () => {
-        browser.keys('Tab');
-      });
+    Terra.it.validatesElement('hover');
 
-      it('should be focused', async () => {
-        (await browser.hasFocus('#select-id')).should.be.true;
-      });
-
-      Terra.it.validatesElement('tab-focus');
+    it('should set focus to the select', () => {
+      browser.click('#root', 0, 0);
+      browser.keys('Tab');
     });
+
+    Terra.it.validatesElement('focus');
+
+    it('should apply hover and focus to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
+    });
+
+    Terra.it.validatesElement('hover-and-focus');
   });
 
   describe('OptGroup', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/opt-group'));
 
-    describe('initially unfocused', () => {
-      Terra.it.validatesElement('no-focus');
+    Terra.it.validatesElement('initial');
+
+    it('should apply hover to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
     });
 
-    describe('default should gain focus when tabbed to', () => {
-      it('should tab focus to the select', () => {
-        browser.keys('Tab');
-      });
+    Terra.it.validatesElement('hover');
 
-      it('should be focused', async () => {
-        (await browser.hasFocus('#select-id')).should.be.true;
-      });
-
-      Terra.it.validatesElement('tab-focus');
+    it('should set focus to the select', () => {
+      browser.click('#root', 0, 0);
+      browser.keys('Tab');
     });
+
+    Terra.it.validatesElement('focus');
+
+    it('should apply hover and focus to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
+    });
+
+    Terra.it.validatesElement('hover-and-focus');
   });
 
   describe('Placeholder', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/placeholder'));
 
-    describe('initially unfocused', () => {
-      Terra.it.validatesElement('no-focus');
+    Terra.it.validatesElement('initial');
+
+    it('should apply hover to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
     });
 
-    describe('default should gain focus when tabbed to', () => {
-      it('should tab focus to the select', () => {
-        browser.keys('Tab');
-      });
+    Terra.it.validatesElement('hover');
 
-      it('should be focused', async () => {
-        (await browser.hasFocus('#select-id')).should.be.true;
-      });
-
-      Terra.it.validatesElement('tab-focus');
+    it('should set focus to the select', () => {
+      browser.click('#root', 0, 0);
+      browser.keys('Tab');
     });
+
+    Terra.it.validatesElement('focus');
+
+    it('should apply hover and focus to the select', () => {
+      browser.moveToObject('#select-id', 5, 5);
+    });
+
+    Terra.it.validatesElement('hover-and-focus');
   });
 });

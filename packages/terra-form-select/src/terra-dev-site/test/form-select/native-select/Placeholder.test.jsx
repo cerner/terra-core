@@ -9,6 +9,7 @@ const PlaceholderTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       id="select-id"
+      ariaLabel="select-label"
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },

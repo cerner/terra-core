@@ -54,7 +54,7 @@ const propTypes = {
   /**
    * The aria label string value for the select.
    */
-  ariaLabel: PropTypes.string,
+  ariaLabel: PropTypes.string.isRequired,
   /**
    * Additional attributes to spread onto the select.
    */

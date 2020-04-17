@@ -9,6 +9,7 @@ const LongTextTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       id="select-id"
+      ariaLabel="select-label"
       value="mercedes"
       options={[
         { value: 'volvo', display: 'Volvo' },
