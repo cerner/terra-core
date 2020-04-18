@@ -1,0 +1,62 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .orion-fusion-theme {
+    // .left-buttons > button
+    --terra-action-header-left-buttons-margin-left: 0;
+    --terra-action-header-left-buttons-margin-right: 0;
+
+    // .right-buttons > button
+    --terra-action-header-right-buttons-margin-left: 0;
+
+    // .header-button 
+    --terra-action-header-buttons-min-height: 100%;
+    --terra-action-header-buttons-padding-bottom: 0;
+    --terra-action-header-buttons-padding-top: 0;
+
+    // .header-button > span
+    --terra-action-header-buttons-inner-span-line-height: 0;
+    --terra-action-header-buttons-inner-span-margin: 0.5rem;
+
+    // .previous-next-button-group
+    --terra-action-header-previous-next-button-group-margin-left: 0;
+    --terra-action-header-previous-next-button-group-margin-right: 0.5rem;
+
+    // .back-button/.maximize-button/.minimize-button + .previous-next-button-group
+    --terra-action-header-buttons-plus-previous-next-buttons-margin-left: 0.5rem;
+
+    // .header-icon
+    --terra-action-header-icon-height: 1.66667rem;
+    --terra-action-header-icon-top: 0;
+    --terra-action-header-icon-vertical-align: 0;
+    --terra-action-header-icon-width: 1.66667rem;
+
+    // .header-icon @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+    --terra-action-header-icon-ms-height: 1.66667rem;
+    --terra-action-header-icon-ms-vertical-align: 0;
+
+    // .header-icon &.back
+    @include terra-inline-svg-var('--terra-action-header-back-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
+    @include terra-inline-svg-var('--terra-action-header-back-hover-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#004c76" d="M10.3 24L33.8 0l3.9 3.8L18 24l19.7 20.2-3.9 3.8z"></path></svg>');
+
+    // .header-icon &.close
+    @include terra-inline-svg-var('--terra-action-header-close-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M4.2 48L0 43.8 43.8 0 48 4.2zM43.8 48L0 4.2 4.2 0 48 43.8z"></path></svg>');
+    @include terra-inline-svg-var('--terra-action-header-close-hover-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#004c76" d="M4.2 48L0 43.8 43.8 0 48 4.2zM43.8 48L0 4.2 4.2 0 48 43.8z"></path></svg>');
+
+    // .header-icon &.maximize
+    @include terra-inline-svg-var('--terra-action-header-maximize-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M17.7 26.1L6.9 36.9 0 30v18h18l-6.9-6.9 10.8-10.8zM48 0H30l6.9 6.9-10.8 10.8 4.2 4.2 10.8-10.8L48 18z"></path></svg>');
+    @include terra-inline-svg-var('--terra-action-header-maximize-hover-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#004c76" d="M17.7 26.1L6.9 36.9 0 30v18h18l-6.9-6.9 10.8-10.8zM48 0H30l6.9 6.9-10.8 10.8 4.2 4.2 10.8-10.8L48 18z"></path></svg>');
+
+    // .header-icon &.minimize
+    @include terra-inline-svg-var('--terra-action-header-minimize-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M10.8 32.9L0 43.7 4.2 48l10.9-10.8 6.9 6.9V26H3.9zM48 4.2L43.8 0 32.9 10.8 26 3.9V22h18.1l-6.9-6.9z"></path></svg>');
+    @include terra-inline-svg-var('--terra-action-header-minimize-hover-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#004c76" d="M10.8 32.9L0 43.7 4.2 48l10.9-10.8 6.9 6.9V26H3.9zM48 4.2L43.8 0 32.9 10.8 26 3.9V22h18.1l-6.9-6.9z"></path></svg>');
+
+    // .header-icon &.previous
+    @include terra-inline-svg-var('--terra-action-header-previous-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M24 10.3l24 23.5-3.8 3.9L24 18 3.8 37.7 0 33.8z"></path></svg>');
+    @include terra-inline-svg-var('--terra-action-header-previous-hover-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#004c76" d="M24 10.3l24 23.5-3.8 3.9L24 18 3.8 37.7 0 33.8z"></path></svg>');
+
+    // .header-icon &.next
+    @include terra-inline-svg-var('--terra-action-header-next-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#1c1f21" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"></path></svg>');
+    @include terra-inline-svg-var('--terra-action-header-next-hover-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#004c76" d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"></path></svg>');
+  }
+}
