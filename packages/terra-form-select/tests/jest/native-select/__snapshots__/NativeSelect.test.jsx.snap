@@ -2,6 +2,7 @@
 
 exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
 <InjectIntl(NativeSelect)
+  ariaLabel="test-label"
   id="test-id"
   intl={
     Object {
@@ -37,6 +38,7 @@ exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
   }
 >
   <NativeSelect
+    ariaLabel="test-label"
     disabled={false}
     id="test-id"
     intl={
@@ -98,6 +100,7 @@ exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
         </div>
       </div>
       <select
+        aria-label="test-label"
         className="select"
         disabled={false}
         id="test-id"
@@ -122,6 +125,7 @@ exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
 exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
 <InjectIntl(NativeSelect)
   ariaDescribedBy="test-described-id"
+  ariaLabel="test-label"
   id="test-id"
   intl={
     Object {
@@ -153,6 +157,7 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
 >
   <NativeSelect
     ariaDescribedBy="test-described-id"
+    ariaLabel="test-label"
     disabled={false}
     id="test-id"
     intl={
@@ -208,6 +213,7 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
       </div>
       <select
         aria-describedby="test-described-id"
+        aria-label="test-label"
         className="select"
         disabled={false}
         id="test-id"
@@ -224,6 +230,7 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
 
 exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
 <InjectIntl(NativeSelect)
+  ariaLabel="test-label"
   disabled={true}
   id="test-id"
   intl={
@@ -255,6 +262,7 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
   }
 >
   <NativeSelect
+    ariaLabel="test-label"
     disabled={true}
     id="test-id"
     intl={
@@ -309,6 +317,7 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
         </div>
       </div>
       <select
+        aria-label="test-label"
         className="select"
         disabled={true}
         id="test-id"
@@ -325,6 +334,7 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
 
 exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
 <InjectIntl(NativeSelect)
+  ariaLabel="test-label"
   id="test-id"
   intl={
     Object {
@@ -356,6 +366,7 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
   isInvalid={true}
 >
   <NativeSelect
+    ariaLabel="test-label"
     disabled={false}
     id="test-id"
     intl={
@@ -411,6 +422,7 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
       </div>
       <select
         aria-invalid={true}
+        aria-label="test-label"
         className="select"
         disabled={false}
         id="test-id"
@@ -427,6 +439,7 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
 
 exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
 <InjectIntl(NativeSelect)
+  ariaLabel="test-label"
   id="test-id"
   intl={
     Object {
@@ -459,6 +472,7 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
   required={true}
 >
   <NativeSelect
+    ariaLabel="test-label"
     disabled={false}
     id="test-id"
     intl={
@@ -513,6 +527,7 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
         </div>
       </div>
       <select
+        aria-label="test-label"
         className="select"
         disabled={false}
         id="test-id"
@@ -529,6 +544,7 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
 
 exports[`NativeSelect should render a NativeSelect required 1`] = `
 <InjectIntl(NativeSelect)
+  ariaLabel="test-label"
   id="test-id"
   intl={
     Object {
@@ -561,6 +577,7 @@ exports[`NativeSelect should render a NativeSelect required 1`] = `
   required={true}
 >
   <NativeSelect
+    ariaLabel="test-label"
     disabled={false}
     id="test-id"
     intl={
@@ -615,6 +632,7 @@ exports[`NativeSelect should render a NativeSelect required 1`] = `
         </div>
       </div>
       <select
+        aria-label="test-label"
         className="select"
         disabled={false}
         id="test-id"
@@ -631,6 +649,7 @@ exports[`NativeSelect should render a NativeSelect required 1`] = `
 
 exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`] = `
 <InjectIntl(NativeSelect)
+  ariaLabel="test-label"
   id="test-id"
   intl={
     Object {
@@ -663,6 +682,7 @@ exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`]
   required={true}
 >
   <NativeSelect
+    ariaLabel="test-label"
     disabled={false}
     id="test-id"
     intl={
@@ -717,6 +737,7 @@ exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`]
         </div>
       </div>
       <select
+        aria-label="test-label"
         className="select"
         disabled={false}
         id="test-id"
@@ -733,6 +754,7 @@ exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`]
 
 exports[`NativeSelect should render a NativeSelect with a custom placeholder 1`] = `
 <InjectIntl(NativeSelect)
+  ariaLabel="test-label"
   id="test-id"
   intl={
     Object {
@@ -769,6 +791,7 @@ exports[`NativeSelect should render a NativeSelect with a custom placeholder 1`]
   }
 >
   <NativeSelect
+    ariaLabel="test-label"
     disabled={false}
     id="test-id"
     intl={
@@ -831,6 +854,7 @@ exports[`NativeSelect should render a NativeSelect with a custom placeholder 1`]
         </div>
       </div>
       <select
+        aria-label="test-label"
         className="select"
         disabled={false}
         id="test-id"
@@ -856,6 +880,7 @@ exports[`NativeSelect should render a NativeSelect with a custom placeholder 1`]
 
 exports[`NativeSelect should render a NativeSelect with a default placeholder 1`] = `
 <InjectIntl(NativeSelect)
+  ariaLabel="test-label"
   id="test-id"
   intl={
     Object {
@@ -887,6 +912,7 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
   placeholder={Object {}}
 >
   <NativeSelect
+    ariaLabel="test-label"
     disabled={false}
     id="test-id"
     intl={
@@ -944,6 +970,7 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
         </div>
       </div>
       <select
+        aria-label="test-label"
         className="select"
         disabled={false}
         id="test-id"
@@ -967,7 +994,826 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
 </InjectIntl(NativeSelect)>
 `;
 
-exports[`NativeSelect should render a NativeSelect with an aria label 1`] = `
+exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
+<InjectIntl(NativeSelect)
+  ariaLabel="test-label"
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  onChange={[MockFunction]}
+>
+  <NativeSelect
+    ariaLabel="test-label"
+    disabled={false}
+    id="test-id"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isIncomplete={false}
+    isInvalid={false}
+    onChange={[MockFunction]}
+    options={Array []}
+    required={false}
+  >
+    <div
+      className="native"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        />
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        id="test-id"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={false}
+      />
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
+exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
+<InjectIntl(NativeSelect)
+  ariaLabel="test-label"
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  options={
+    Array [
+      Object {
+        "childOptions": Array [
+          Object {
+            "display": "Volvo",
+            "value": "volvo",
+          },
+          Object {
+            "display": "Saab",
+            "value": "saab",
+          },
+        ],
+        "display": "Swedish Cars",
+      },
+      Object {
+        "childOptions": Array [
+          Object {
+            "display": "Mercedes",
+            "value": "mercedes",
+          },
+          Object {
+            "display": "Audi",
+            "value": "audi",
+          },
+        ],
+        "display": "German Cars",
+      },
+    ]
+  }
+>
+  <NativeSelect
+    ariaLabel="test-label"
+    disabled={false}
+    id="test-id"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isIncomplete={false}
+    isInvalid={false}
+    options={
+      Array [
+        Object {
+          "childOptions": Array [
+            Object {
+              "display": "Volvo",
+              "value": "volvo",
+            },
+            Object {
+              "display": "Saab",
+              "value": "saab",
+            },
+          ],
+          "display": "Swedish Cars",
+        },
+        Object {
+          "childOptions": Array [
+            Object {
+              "display": "Mercedes",
+              "value": "mercedes",
+            },
+            Object {
+              "display": "Audi",
+              "value": "audi",
+            },
+          ],
+          "display": "German Cars",
+        },
+      ]
+    }
+    required={false}
+  >
+    <div
+      className="native"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        >
+          Volvo
+        </div>
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        id="test-id"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={false}
+        value="volvo"
+      >
+        <optgroup
+          key="Swedish Cars 2"
+          label="Swedish Cars"
+        >
+          <option
+            key="volvo"
+            value="volvo"
+          >
+            Volvo
+          </option>
+          <option
+            key="saab"
+            value="saab"
+          >
+            Saab
+          </option>
+        </optgroup>
+        <optgroup
+          key="German Cars 2"
+          label="German Cars"
+        >
+          <option
+            key="mercedes"
+            value="mercedes"
+          >
+            Mercedes
+          </option>
+          <option
+            key="audi"
+            value="audi"
+          >
+            Audi
+          </option>
+        </optgroup>
+      </select>
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
+exports[`NativeSelect should render a NativeSelect with options 1`] = `
+<InjectIntl(NativeSelect)
+  ariaLabel="test-label"
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  options={
+    Array [
+      Object {
+        "display": "Volvo",
+        "value": "volvo",
+      },
+      Object {
+        "display": "Saab",
+        "value": "saab",
+      },
+      Object {
+        "display": "Mercedes",
+        "value": "mercedes",
+      },
+      Object {
+        "display": "Audi",
+        "value": "audi",
+      },
+    ]
+  }
+>
+  <NativeSelect
+    ariaLabel="test-label"
+    disabled={false}
+    id="test-id"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isIncomplete={false}
+    isInvalid={false}
+    options={
+      Array [
+        Object {
+          "display": "Volvo",
+          "value": "volvo",
+        },
+        Object {
+          "display": "Saab",
+          "value": "saab",
+        },
+        Object {
+          "display": "Mercedes",
+          "value": "mercedes",
+        },
+        Object {
+          "display": "Audi",
+          "value": "audi",
+        },
+      ]
+    }
+    required={false}
+  >
+    <div
+      className="native"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        >
+          Volvo
+        </div>
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        id="test-id"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={false}
+        value="volvo"
+      >
+        <option
+          key="volvo"
+          value="volvo"
+        >
+          Volvo
+        </option>
+        <option
+          key="saab"
+          value="saab"
+        >
+          Saab
+        </option>
+        <option
+          key="mercedes"
+          value="mercedes"
+        >
+          Mercedes
+        </option>
+        <option
+          key="audi"
+          value="audi"
+        >
+          Audi
+        </option>
+      </select>
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
+exports[`NativeSelect should render a NativeSelect with options and defaultValue 1`] = `
+<InjectIntl(NativeSelect)
+  ariaLabel="test-label"
+  defaultValue="saab"
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  options={
+    Array [
+      Object {
+        "display": "Volvo",
+        "value": "volvo",
+      },
+      Object {
+        "display": "Saab",
+        "value": "saab",
+      },
+      Object {
+        "display": "Mercedes",
+        "value": "mercedes",
+      },
+      Object {
+        "display": "Audi",
+        "value": "audi",
+      },
+    ]
+  }
+>
+  <NativeSelect
+    ariaLabel="test-label"
+    defaultValue="saab"
+    disabled={false}
+    id="test-id"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isIncomplete={false}
+    isInvalid={false}
+    options={
+      Array [
+        Object {
+          "display": "Volvo",
+          "value": "volvo",
+        },
+        Object {
+          "display": "Saab",
+          "value": "saab",
+        },
+        Object {
+          "display": "Mercedes",
+          "value": "mercedes",
+        },
+        Object {
+          "display": "Audi",
+          "value": "audi",
+        },
+      ]
+    }
+    required={false}
+  >
+    <div
+      className="native"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        >
+          Saab
+        </div>
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        id="test-id"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={false}
+        value="saab"
+      >
+        <option
+          key="volvo"
+          value="volvo"
+        >
+          Volvo
+        </option>
+        <option
+          key="saab"
+          value="saab"
+        >
+          Saab
+        </option>
+        <option
+          key="mercedes"
+          value="mercedes"
+        >
+          Mercedes
+        </option>
+        <option
+          key="audi"
+          value="audi"
+        >
+          Audi
+        </option>
+      </select>
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
+exports[`NativeSelect should render a NativeSelect with options and value 1`] = `
+<InjectIntl(NativeSelect)
+  ariaLabel="test-label"
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  options={
+    Array [
+      Object {
+        "display": "Volvo",
+        "value": "volvo",
+      },
+      Object {
+        "display": "Saab",
+        "value": "saab",
+      },
+      Object {
+        "display": "Mercedes",
+        "value": "mercedes",
+      },
+      Object {
+        "display": "Audi",
+        "value": "audi",
+      },
+    ]
+  }
+  value="audi"
+>
+  <NativeSelect
+    ariaLabel="test-label"
+    disabled={false}
+    id="test-id"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isIncomplete={false}
+    isInvalid={false}
+    options={
+      Array [
+        Object {
+          "display": "Volvo",
+          "value": "volvo",
+        },
+        Object {
+          "display": "Saab",
+          "value": "saab",
+        },
+        Object {
+          "display": "Mercedes",
+          "value": "mercedes",
+        },
+        Object {
+          "display": "Audi",
+          "value": "audi",
+        },
+      ]
+    }
+    required={false}
+    value="audi"
+  >
+    <div
+      className="native"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        >
+          Audi
+        </div>
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        id="test-id"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={false}
+        value="audi"
+      >
+        <option
+          key="volvo"
+          value="volvo"
+        >
+          Volvo
+        </option>
+        <option
+          key="saab"
+          value="saab"
+        >
+          Saab
+        </option>
+        <option
+          key="mercedes"
+          value="mercedes"
+        >
+          Mercedes
+        </option>
+        <option
+          key="audi"
+          value="audi"
+        >
+          Audi
+        </option>
+      </select>
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
+exports[`NativeSelect should render a default NativeSelect 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
   id="test-id"
@@ -1056,910 +1902,6 @@ exports[`NativeSelect should render a NativeSelect with an aria label 1`] = `
       </div>
       <select
         aria-label="test-label"
-        className="select"
-        disabled={false}
-        id="test-id"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={false}
-      />
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
-exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
-<InjectIntl(NativeSelect)
-  id="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onChange={[MockFunction]}
->
-  <NativeSelect
-    disabled={false}
-    id="test-id"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
-    isInvalid={false}
-    onChange={[MockFunction]}
-    options={Array []}
-    required={false}
-  >
-    <div
-      className="native"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        />
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        className="select"
-        disabled={false}
-        id="test-id"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={false}
-      />
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
-exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
-<InjectIntl(NativeSelect)
-  id="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  options={
-    Array [
-      Object {
-        "childOptions": Array [
-          Object {
-            "display": "Volvo",
-            "value": "volvo",
-          },
-          Object {
-            "display": "Saab",
-            "value": "saab",
-          },
-        ],
-        "display": "Swedish Cars",
-      },
-      Object {
-        "childOptions": Array [
-          Object {
-            "display": "Mercedes",
-            "value": "mercedes",
-          },
-          Object {
-            "display": "Audi",
-            "value": "audi",
-          },
-        ],
-        "display": "German Cars",
-      },
-    ]
-  }
->
-  <NativeSelect
-    disabled={false}
-    id="test-id"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
-    isInvalid={false}
-    options={
-      Array [
-        Object {
-          "childOptions": Array [
-            Object {
-              "display": "Volvo",
-              "value": "volvo",
-            },
-            Object {
-              "display": "Saab",
-              "value": "saab",
-            },
-          ],
-          "display": "Swedish Cars",
-        },
-        Object {
-          "childOptions": Array [
-            Object {
-              "display": "Mercedes",
-              "value": "mercedes",
-            },
-            Object {
-              "display": "Audi",
-              "value": "audi",
-            },
-          ],
-          "display": "German Cars",
-        },
-      ]
-    }
-    required={false}
-  >
-    <div
-      className="native"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        >
-          Volvo
-        </div>
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        className="select"
-        disabled={false}
-        id="test-id"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={false}
-        value="volvo"
-      >
-        <optgroup
-          key="Swedish Cars 2"
-          label="Swedish Cars"
-        >
-          <option
-            key="volvo"
-            value="volvo"
-          >
-            Volvo
-          </option>
-          <option
-            key="saab"
-            value="saab"
-          >
-            Saab
-          </option>
-        </optgroup>
-        <optgroup
-          key="German Cars 2"
-          label="German Cars"
-        >
-          <option
-            key="mercedes"
-            value="mercedes"
-          >
-            Mercedes
-          </option>
-          <option
-            key="audi"
-            value="audi"
-          >
-            Audi
-          </option>
-        </optgroup>
-      </select>
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
-exports[`NativeSelect should render a NativeSelect with options 1`] = `
-<InjectIntl(NativeSelect)
-  id="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  options={
-    Array [
-      Object {
-        "display": "Volvo",
-        "value": "volvo",
-      },
-      Object {
-        "display": "Saab",
-        "value": "saab",
-      },
-      Object {
-        "display": "Mercedes",
-        "value": "mercedes",
-      },
-      Object {
-        "display": "Audi",
-        "value": "audi",
-      },
-    ]
-  }
->
-  <NativeSelect
-    disabled={false}
-    id="test-id"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
-    isInvalid={false}
-    options={
-      Array [
-        Object {
-          "display": "Volvo",
-          "value": "volvo",
-        },
-        Object {
-          "display": "Saab",
-          "value": "saab",
-        },
-        Object {
-          "display": "Mercedes",
-          "value": "mercedes",
-        },
-        Object {
-          "display": "Audi",
-          "value": "audi",
-        },
-      ]
-    }
-    required={false}
-  >
-    <div
-      className="native"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        >
-          Volvo
-        </div>
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        className="select"
-        disabled={false}
-        id="test-id"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={false}
-        value="volvo"
-      >
-        <option
-          key="volvo"
-          value="volvo"
-        >
-          Volvo
-        </option>
-        <option
-          key="saab"
-          value="saab"
-        >
-          Saab
-        </option>
-        <option
-          key="mercedes"
-          value="mercedes"
-        >
-          Mercedes
-        </option>
-        <option
-          key="audi"
-          value="audi"
-        >
-          Audi
-        </option>
-      </select>
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
-exports[`NativeSelect should render a NativeSelect with options and defaultValue 1`] = `
-<InjectIntl(NativeSelect)
-  defaultValue="saab"
-  id="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  options={
-    Array [
-      Object {
-        "display": "Volvo",
-        "value": "volvo",
-      },
-      Object {
-        "display": "Saab",
-        "value": "saab",
-      },
-      Object {
-        "display": "Mercedes",
-        "value": "mercedes",
-      },
-      Object {
-        "display": "Audi",
-        "value": "audi",
-      },
-    ]
-  }
->
-  <NativeSelect
-    defaultValue="saab"
-    disabled={false}
-    id="test-id"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
-    isInvalid={false}
-    options={
-      Array [
-        Object {
-          "display": "Volvo",
-          "value": "volvo",
-        },
-        Object {
-          "display": "Saab",
-          "value": "saab",
-        },
-        Object {
-          "display": "Mercedes",
-          "value": "mercedes",
-        },
-        Object {
-          "display": "Audi",
-          "value": "audi",
-        },
-      ]
-    }
-    required={false}
-  >
-    <div
-      className="native"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        >
-          Saab
-        </div>
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        className="select"
-        disabled={false}
-        id="test-id"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={false}
-        value="saab"
-      >
-        <option
-          key="volvo"
-          value="volvo"
-        >
-          Volvo
-        </option>
-        <option
-          key="saab"
-          value="saab"
-        >
-          Saab
-        </option>
-        <option
-          key="mercedes"
-          value="mercedes"
-        >
-          Mercedes
-        </option>
-        <option
-          key="audi"
-          value="audi"
-        >
-          Audi
-        </option>
-      </select>
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
-exports[`NativeSelect should render a NativeSelect with options and value 1`] = `
-<InjectIntl(NativeSelect)
-  id="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  options={
-    Array [
-      Object {
-        "display": "Volvo",
-        "value": "volvo",
-      },
-      Object {
-        "display": "Saab",
-        "value": "saab",
-      },
-      Object {
-        "display": "Mercedes",
-        "value": "mercedes",
-      },
-      Object {
-        "display": "Audi",
-        "value": "audi",
-      },
-    ]
-  }
-  value="audi"
->
-  <NativeSelect
-    disabled={false}
-    id="test-id"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
-    isInvalid={false}
-    options={
-      Array [
-        Object {
-          "display": "Volvo",
-          "value": "volvo",
-        },
-        Object {
-          "display": "Saab",
-          "value": "saab",
-        },
-        Object {
-          "display": "Mercedes",
-          "value": "mercedes",
-        },
-        Object {
-          "display": "Audi",
-          "value": "audi",
-        },
-      ]
-    }
-    required={false}
-    value="audi"
-  >
-    <div
-      className="native"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        >
-          Audi
-        </div>
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        className="select"
-        disabled={false}
-        id="test-id"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={false}
-        value="audi"
-      >
-        <option
-          key="volvo"
-          value="volvo"
-        >
-          Volvo
-        </option>
-        <option
-          key="saab"
-          value="saab"
-        >
-          Saab
-        </option>
-        <option
-          key="mercedes"
-          value="mercedes"
-        >
-          Mercedes
-        </option>
-        <option
-          key="audi"
-          value="audi"
-        >
-          Audi
-        </option>
-      </select>
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
-exports[`NativeSelect should render a default NativeSelect 1`] = `
-<InjectIntl(NativeSelect)
-  id="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
->
-  <NativeSelect
-    disabled={false}
-    id="test-id"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
-    isInvalid={false}
-    options={Array []}
-    required={false}
-  >
-    <div
-      className="native"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        />
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
         className="select"
         disabled={false}
         id="test-id"
