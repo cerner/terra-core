@@ -5,7 +5,7 @@ import NativeSelect from './NativeSelect';
 import {
   optionPropType,
   optGroupPropType,
-} from './NativePropTypes'
+} from './NativePropTypes';
 
 const propTypes = {
   /**

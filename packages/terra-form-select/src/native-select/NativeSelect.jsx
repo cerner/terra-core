@@ -14,7 +14,7 @@ import {
 import {
   optionPropType,
   optGroupPropType,
-} from './NativePropTypes'
+} from './NativePropTypes';
 
 import styles from './NativeSelect.module.scss';
 
@@ -91,7 +91,7 @@ const propTypes = {
   /**
    * The value of the select. Can be a string or number.
    */
-  defaultValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 const defaultProps = {

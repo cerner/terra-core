@@ -1,10 +1,4 @@
 Terra.describeViewports('Native Select', ['tiny'], () => {
-  browser.addCommand('focus', function () {
-    browser.execute(function (domElement) {
-        domElement.focus();
-    }, this);
-  }, true);
-
   describe('Default', () => {
     browser.url('/#/raw/tests/terra-form-select/form-select/native-select/default');
 
