@@ -53,6 +53,10 @@ class ButtonGroupButton extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+
+    this.shouldShowFocus = true;
   }
 
   handleOnBlur(event) {
@@ -60,6 +64,19 @@ class ButtonGroupButton extends React.Component {
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
+    }
+  }
+
+  handleClick(event) {
+    console.log("click");
+    if (document.activeElement !== event.currentTarget) {
+      this.shouldShowFocus = false;
+      event.currentTarget.focus();
+      this.shouldShowFocus = true;
+    }
+
+    if (this.props.onClick) {
+      this.props.onClick(event);
     }
   }
 
@@ -87,6 +104,17 @@ class ButtonGroupButton extends React.Component {
     }
   }
 
+  handleFocus(event) {
+    console.log("focus");
+    if (this.shouldShowFocus) {
+      this.setState({ focused: true });
+    }
+
+    if (this.props.onFocus) {
+      this.props.onFocus(event);
+    }
+  }
+
   render() {
     const {
       icon,
@@ -110,6 +138,13 @@ class ButtonGroupButton extends React.Component {
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
+        onFocus={this.handleFocus}
+        onClick={this.handleClick}
+        onMouseDown={(e) => {
+          console.log("onMouseDown:  ", e);
+          e.preventDefault();
+          e.stopPropagation();
+        }}
         variant={Button.Opts.Variants.NEUTRAL}
         className={buttonClassName}
       />
