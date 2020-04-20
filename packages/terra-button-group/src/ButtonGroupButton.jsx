@@ -40,6 +40,7 @@ const propTypes = {
    * Sets the button text. If an icon is provided, it will be an icon only button and this text is set as the aria-label for accessibility.
    */
   text: PropTypes.string.isRequired,
+  onMouseDown: PropTypes.func,
 };
 
 const defaultProps = {
@@ -68,7 +69,7 @@ class ButtonGroupButton extends React.Component {
   }
 
   handleClick(event) {
-    if (document.activeElement !== event.currentTarget) {
+    if (document.activeElement === event.currentTarget) {
       event.currentTarget.focus();
       this.shouldShowFocus = true;
     }
@@ -95,6 +96,7 @@ class ButtonGroupButton extends React.Component {
     // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
     if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
       this.setState({ focused: true });
+      this.shouldShowFocus = true;
     }
 
     if (this.props.onKeyUp) {

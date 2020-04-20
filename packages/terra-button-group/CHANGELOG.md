@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed focus being removed from button when switching between windows
+
 ### Changed
 * Updated docs for documentation link and usage section
 * Removed extra lines from README
