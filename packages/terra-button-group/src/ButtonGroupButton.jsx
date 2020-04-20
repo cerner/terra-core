@@ -40,7 +40,6 @@ const propTypes = {
    * Sets the button text. If an icon is provided, it will be an icon only button and this text is set as the aria-label for accessibility.
    */
   text: PropTypes.string.isRequired,
-  onMouseDown: PropTypes.func,
 };
 
 const defaultProps = {
