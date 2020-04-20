@@ -10,8 +10,11 @@
     background-size: var(--terra-form-select-native-background-size, 0 0);
     border: var(--terra-form-select-native-border, 1px solid #dedfe0);
     border-radius: var(--terra-form-select-native-border-radius, 3px);
+    color: var(--terra-form-select-native-color, #1c1f21);
     display: flex;
+    font-size: var(--terra-form-select-native-font-size, 1.143rem);
     height: var(--terra-form-select-native-height, 2.142857rem);
+    line-height: var(--terra-form-select-native-line-height, 1.75);
     position: relative;
     transition-duration: 0s;
     transition-property: background-size;
@@ -35,10 +38,7 @@
 
     &:hover {
       border-color: var(--terra-form-select-native-hover-border-color, #4cb2e9);
-
-      .display {
-        color: var(--terra-form-select-native-hover-display-color, #1c1f21);
-      }
+      color: var(--terra-form-select-native-hover-color, #1c1f21);
     }
 
     &.incomplete {
@@ -73,11 +73,8 @@
       background-color: var(--terra-form-select-native-disabled-background-color, rgba(111, 116, 119, 0.2));
       background-image: none;
       border-color: var(--terra-form-select-native-disabled-border-color, #dedfe0);
+      color: var(--terra-form-select-native-disabled-color, #1c1f21);
       opacity: var(--terra-form-select-native-disabled-opacity, 0.4);
-
-      .display {
-        color: var(--terra-form-select-native-disabled-display-color, #1c1f21);
-      }
 
       .arrow-icon {
         background-image: var(--terra-form-select-native-disabled-arrow-icon-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="rgba(17, 22, 25, .5)" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>'));
@@ -85,11 +82,9 @@
     }
 
     &.placeholder {
-      .display {
-        color: var(--terra-form-select-native-placeholder-display-color, rgba(21, 33, 41, 0.61));
-        font-size: var(--terra-form-select-native-placeholder-display-font-size, 1.143rem);
-        font-style: var(--terra-form-select-native-placeholder-display-font-style);
-      }
+      color: var(--terra-form-select-native-placeholder-color, rgba(21, 33, 41, 0.62));
+      font-size: var(--terra-form-select-native-placeholder-font-size, 1.143rem);
+      font-style: var(--terra-form-select-native-placeholder-font-style);
     }
   }
 
@@ -97,10 +92,7 @@
 
   .display {
     align-items: center;
-    color: var(--terra-form-select-native-display-color, #1c1f21);
     flex: 1 1 auto;
-    font-size: var(--terra-form-select-native-display-font-size, 1.143rem);
-    line-height: var(--terra-form-select-native-display-line-height, 1.75);
     min-width: 0;
     overflow: hidden;
     position: relative;

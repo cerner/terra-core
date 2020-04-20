@@ -7,13 +7,13 @@
   --terra-form-select-native-background-size: 0 0.142857rem;
   --terra-form-select-native-border: 1px solid rgba(89, 159, 253, 0.6);
   --terra-form-select-native-border-radius: 3px;
+  --terra-form-select-native-color: rgba(17, 22, 25, 0.75);
+  --terra-form-select-native-font-size: 1rem;
   --terra-form-select-native-height: 2.142857rem;
-  --terra-form-select-native-display-color: rgba(17, 22, 25, 0.75);
-  --terra-form-select-native-display-font-size: 1rem;
-  --terra-form-select-native-display-line-height: 1.75;
-  --terra-form-select-native-placeholder-display-color: #1521299c;
-  --terra-form-select-native-placeholder-display-font-style: italic;
-  --terra-form-select-native-placeholder-display-font-size: 1rem;
+  --terra-form-select-native-line-height: 1.75;
+  --terra-form-select-native-placeholder-color: #1521299c;
+  --terra-form-select-native-placeholder-font-style: italic;
+  --terra-form-select-native-placeholder-font-size: 1rem;
   --terra-form-select-native-select-line-height: 1.75;
   --terra-form-select-native-frame-padding-left: 0.5rem;
   --terra-form-select-native-arrow-padding: 0 0.786rem;
@@ -30,7 +30,7 @@
 
   // hover
   --terra-form-select-native-hover-border-color: #4cb2e9;
-  --terra-form-select-native-hover-display-color: #111619;
+  --terra-form-select-native-hover-color: #111619;
 
   // focus + hover
   --terra-form-select-native-focus-hover-border-color: #4cb2e9;
@@ -50,7 +50,7 @@
   // disabled
   --terra-form-select-native-disabled-background-color: rgba(17, 22, 25, 0.05);
   --terra-form-select-native-disabled-border-color: rgba(89, 159, 253, 0.3);
-  --terra-form-select-native-disabled-display-color: rgba(17, 22, 25, 0.3);
+  --terra-form-select-native-disabled-color: rgba(17, 22, 25, 0.3);
   --terra-form-select-native-disabled-opacity: 1;
 
   @include terra-inline-svg-var('--terra-form-select-native-arrow-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#4983d1" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>');
