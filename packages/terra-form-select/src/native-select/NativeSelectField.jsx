@@ -75,15 +75,15 @@ const propTypes = {
    */
   placeholder: PropTypes.shape({
     /**
-     * Whether a clear option is available to clear the selection.
+     * Whether the placeholder is included as an option to clear selection.
      */
     allowClear: PropTypes.bool,
     /**
-     * Optional override of the default placeholder display.
+     * Optional override of the default display.
      */
     display: PropTypes.string,
     /**
-     * Optional override of the default placeholder value.
+     * Optional override of the default value.
      */
     value: PropTypes.string,
   }),

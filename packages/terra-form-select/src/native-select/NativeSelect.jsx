@@ -72,15 +72,15 @@ const propTypes = {
    */
   placeholder: PropTypes.shape({
     /**
-     * Whether a clear option is available to clear the selection.
+     * Whether the placeholder is included as an option to clear selection.
      */
     allowClear: PropTypes.bool,
     /**
-     * Optional override of the default placeholder display.
+     * Optional override of the default display.
      */
     display: PropTypes.string,
     /**
-     * Optional override of the default placeholder value.
+     * Optional override of the default value.
      */
     value: PropTypes.string,
   }),
@@ -91,7 +91,7 @@ const propTypes = {
   /**
    * The value of the select. Can be a string or number.
    */
-  value: PropTypes.string,
+  defaultValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 const defaultProps = {
@@ -120,7 +120,7 @@ const createOptions = options => options.map(current => {
       </optgroup>
     );
   }
-  return <option key={current.value} value={current.value}>{current.display}</option>;
+  return <option key={`${current.value}`} value={current.value}>{current.display}</option>;
 });
 
 const NativeSelect = ({
