@@ -41,7 +41,12 @@
       z-index: 1;
     }
 
-    &.section-header:hover,
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &.section-header:hover {
+        background-color: var(--terra-list-section-header-hover-active-background-color, #d0d1d2);
+      }
+    }
+
     &.section-header:active {
       background-color: var(--terra-list-section-header-hover-active-background-color, #d0d1d2);
     }

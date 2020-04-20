@@ -42,9 +42,10 @@
   .is-interactable {
     cursor: pointer;
   }
-
-  .is-interactable:hover .checkmark {
-    border: var(--terra-table-checkmark-cell-hover-border, 1px solid #2a4b77);
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+    .is-interactable:hover .checkmark {
+      border: var(--terra-table-checkmark-cell-hover-border, 1px solid #2a4b77);
+    }
   }
 
   .is-interactable:active .checkmark {
@@ -57,8 +58,10 @@
     outline-offset: var(--terra-table-checkmark-cell-focus-outline-offset, -2px);
   }
 
-  .is-interactable:hover .is-selected {
-    background-color: var(--terra-table-checkmark-cell-selected-hover-background-color, #2a4b77);
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+    .is-interactable:hover .is-selected {
+      background-color: var(--terra-table-checkmark-cell-selected-hover-background-color, #2a4b77);
+    }
   }
 
   .is-interactable:active .is-selected {

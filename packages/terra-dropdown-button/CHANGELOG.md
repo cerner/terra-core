@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added an interaction media query to apply `hover` styles only on non-touch devices.
+
 ### Changed
 * Updated docs for documentation link and expanded `PropTypes` for Props Table
 * Removed extra lines from README
