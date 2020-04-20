@@ -8,6 +8,7 @@ const cx = classNames.bind(styles);
 const AllowClearExample = () => (
   <NativeSelect
     id="allow-clear-example"
+    ariaLabel="Allow Clear Example"
     options={[
       { value: 'volvo', display: 'Volvo' },
       { value: 'saab', display: 'Saab' },

@@ -8,6 +8,7 @@ const cx = classNames.bind(styles);
 const InvalidExample = () => (
   <NativeSelect
     id="invalid-example"
+    ariaLabel="Invalid Example"
     isInvalid
     options={[
       { value: 'volvo', display: 'Volvo' },

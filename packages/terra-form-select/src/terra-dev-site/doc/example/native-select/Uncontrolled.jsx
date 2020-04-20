@@ -8,6 +8,7 @@ const cx = classNames.bind(styles);
 const UncontrolledExample = () => (
   <NativeSelect
     id="uncontrolled-example"
+    ariaLabel="Uncontrolled Example"
     options={[
       { value: 'volvo', display: 'Volvo' },
       { value: 'saab', display: 'Saab' },

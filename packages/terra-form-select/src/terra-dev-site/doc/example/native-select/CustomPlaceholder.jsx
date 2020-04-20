@@ -7,7 +7,8 @@ const cx = classNames.bind(styles);
 
 const PlaceholderExample = () => (
   <NativeSelect
-    id="placeholder-example"
+    id="custom-placeholder-example"
+    ariaLabel="Custom Placeholder Example"
     options={[
       { value: 'volvo', display: 'Volvo' },
       { value: 'saab', display: 'Saab' },

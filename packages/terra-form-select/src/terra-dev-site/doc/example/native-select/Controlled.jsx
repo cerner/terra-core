@@ -11,6 +11,7 @@ const ControlledExample = () => {
   return (
     <NativeSelect
       id="controlled-example"
+      ariaLabel="Controlled Select Example"
       value={value}
       onChange={event => setValue(event.currentTarget.value)}
       options={[

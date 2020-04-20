@@ -189,7 +189,10 @@ const NativeSelect = ({
       data-focus-interaction="none"
     >
       <div aria-hidden className={cx('frame')}>
-        <div className={cx('display')}>
+        <div
+          className={cx('display')}
+          aria-disabled={disabled || undefined}
+        >
           {getDisplay(selectAttrs.value, options, placeholder, intl)}
         </div>
         <div className={cx('arrow')}>

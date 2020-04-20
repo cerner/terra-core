@@ -306,6 +306,7 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
         className="frame"
       >
         <div
+          aria-disabled={true}
           className="display"
         />
         <div
