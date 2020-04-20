@@ -2,18 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Field from 'terra-form-field';
 import NativeSelect from './NativeSelect';
-
-const optionPropType = PropTypes.shape({
-  display: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
-  value: PropTypes.string.isRequired,
-});
-
-const optGroupPropType = PropTypes.shape({
-  display: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
-  childOptions: PropTypes.arrayOf(optionPropType).isRequired,
-});
+import {
+  optionPropType,
+  optGroupPropType,
+} from './NativePropTypes'
 
 const propTypes = {
   /**
@@ -79,7 +71,7 @@ const propTypes = {
    */
   options: PropTypes.arrayOf(PropTypes.oneOfType([optionPropType, optGroupPropType])),
   /**
-   * Placeholder data.
+   * Placeholder data. The presence of this data object is used as the indicator for whether or not a placeholder is used.
    */
   placeholder: PropTypes.shape({
     /**

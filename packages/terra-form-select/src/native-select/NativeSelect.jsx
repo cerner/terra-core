@@ -11,40 +11,14 @@ import {
   getDisplay,
   getFirstValue,
 } from './NativeUtils';
+import {
+  optionPropType,
+  optGroupPropType,
+} from './NativePropTypes'
 
 import styles from './NativeSelect.module.scss';
 
 const cx = classNames.bind(styles);
-
-const optionPropType = PropTypes.shape({
-  /**
-   * The option display.
-   */
-  display: PropTypes.string.isRequired,
-  /**
-   * Whether the option is disabled.
-   */
-  disabled: PropTypes.bool,
-  /**
-   * The option value.
-   */
-  value: PropTypes.string.isRequired,
-});
-
-const optGroupPropType = PropTypes.shape({
-  /**
-   * The option display.
-   */
-  display: PropTypes.string.isRequired,
-  /**
-   * Whether the optgroup is disabled.
-   */
-  disabled: PropTypes.bool,
-  /**
-   * The array of select options.
-   */
-  childOptions: PropTypes.arrayOf(optionPropType).isRequired,
-});
 
 const propTypes = {
   /**
@@ -94,7 +68,7 @@ const propTypes = {
    */
   options: PropTypes.arrayOf(PropTypes.oneOfType([optionPropType, optGroupPropType])),
   /**
-   * Placeholder data.
+   * Placeholder data. The presence of this data object is used as the indicator for whether or not a placeholder is used.
    */
   placeholder: PropTypes.shape({
     /**
