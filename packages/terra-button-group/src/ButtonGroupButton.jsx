@@ -70,7 +70,7 @@ class ButtonGroupButton extends React.Component {
   handleClick(event) {
     if (document.activeElement === event.currentTarget) {
       event.currentTarget.focus();
-      this.shouldShowFocus = true;
+      this.shouldShowFocus = false;
     }
 
     if (this.props.onClick) {
