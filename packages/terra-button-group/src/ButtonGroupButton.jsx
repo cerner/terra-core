@@ -53,7 +53,6 @@ class ButtonGroupButton extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
-    this.handleClick = this.handleClick.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
 
     this.shouldShowFocus = false;
@@ -62,21 +61,13 @@ class ButtonGroupButton extends React.Component {
   handleOnBlur(event) {
     if (document.activeElement === event.currentTarget && this.state.focused) {
       this.shouldShowFocus = true;
+    } else {
+      this.shouldShowFocus = false;
+      this.setState({ focused: false });
     }
-    this.setState({ focused: false });
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
-    }
-  }
-
-  handleClick(event) {
-    if (document.activeElement === event.currentTarget) {
-      this.shouldShowFocus = false;
-    }
-
-    if (this.props.onClick) {
-      this.props.onClick(event);
     }
   }
 
@@ -139,7 +130,6 @@ class ButtonGroupButton extends React.Component {
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
-        onClick={this.handleClick}
         onFocus={this.handleFocus}
         variant={Button.Opts.Variants.NEUTRAL}
         className={buttonClassName}
