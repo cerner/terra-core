@@ -46,4 +46,13 @@ describe('Card', () => {
     const wrapper = shallow(<Card visuallyHiddenText="This is screen reader only text" />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('correctly applies the theme context className', () => {
+    jest.spyOn(React, 'useContext')
+      .mockReturnValue({
+        className: 'orion-fusion-theme',
+      });
+    const wrapper = shallow(defaultRender);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -6,6 +6,15 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+### Changes
+* Updated docs for documentation link and usage section
+* Removed extra lines from README
+* Updated to consumer terra-theme-context 
+
+### Fixed
+* Fix bottom border style in orion-fusion theme
+* Fix flex-end style in orion-fusion theme
+
 2.42.0 - (March 31, 2020)
 ------------------
 ### Changed

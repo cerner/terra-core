@@ -5,6 +5,10 @@ Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
+* Added `overflow: hidden` style to cell.
+
+### Changed
+* Updated documentation link in README
 
 4.5.0 - (March 17, 2020)
 ------------------

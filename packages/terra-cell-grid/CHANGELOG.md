@@ -5,6 +5,9 @@ Unreleased
 ----------
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
+* Added Section `Peer Dependencies` for docsite
+* Updated documentation links
+* Added Usage section
 
 1.2.0 - (February 18, 2020)
 ------------------

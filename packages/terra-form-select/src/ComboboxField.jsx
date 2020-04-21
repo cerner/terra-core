@@ -67,6 +67,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   labelAttrs: PropTypes.object,
   /**
+   * The max height of the dropdown.
+   */
+  maxHeight: PropTypes.number,
+  /**
    * Set the max-width of a field using `length` or `%`.  Best practice recommendation to never exceed
    * a rendered value of 1020px. _(Note: Providing custom inline styles will take precedence.)_
    */
@@ -116,6 +120,7 @@ const defaultProps = {
   isTouchAccessible: false,
   isLabelHidden: false,
   labelAttrs: {},
+  maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
   placeholder: undefined,
@@ -140,6 +145,7 @@ const ComboboxField = ({
   isTouchAccessible,
   label,
   labelAttrs,
+  maxHeight,
   maxWidth,
   onChange,
   placeholder,
@@ -191,6 +197,7 @@ const ComboboxField = ({
         isInvalid={isInvalid}
         isTouchAccessible={isTouchAccessible}
         defaultValue={defaultValue}
+        maxHeight={maxHeight || selectAttrs.maxHeight}
         onChange={onChange}
         placeholder={placeholder}
         required={required}
