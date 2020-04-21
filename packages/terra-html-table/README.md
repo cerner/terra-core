@@ -7,7 +7,7 @@
 The Terra HTML Table is a structural component to arrange content within a semantic html table.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-html-table/html-table/table)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-html-table/html-table/table)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -17,9 +17,6 @@ The Terra HTML Table is a structural component to arrange content within a seman
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
 
-<details>
-<summary>View information on this component's peer dependencies.</summary>
-
 This component requires the following peer dependencies be installed in your app for the component to properly function.
 
 | Peer Dependency | Version |
@@ -27,7 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 
-</details>
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## LICENSE

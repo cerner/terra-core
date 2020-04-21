@@ -6,7 +6,7 @@
 Element for building out textareas in a form.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-form-textarea/form-textarea/textarea)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-form-textarea/form-textarea/textarea)
 - [LICENSE](#license)
 
 ## Getting Started

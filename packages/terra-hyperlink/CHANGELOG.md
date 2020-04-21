@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated documentation link in README
+* Added Usage section in docs
 
 2.30.0 - (March 10, 2020)
 ------------------

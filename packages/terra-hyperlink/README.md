@@ -7,7 +7,7 @@
 The terra hyperlink component allows linking to other web pages, files, locations within the same page, email addresses, or any other URL.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-hyperlink/hyperlink/hyperlink)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-hyperlink/hyperlink/hyperlink)
 - [LICENSE](#license)
 
 ## Getting Started

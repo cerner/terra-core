@@ -35,7 +35,7 @@ jobs:
     - stage: danger lint and jest
       script: travis_wait docker-compose run -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test-ci sh -c 'npm run danger && npm run lint && npm run jest'
     - stage: compile - default theme
-      script: travis_wait docker-compose run test-ci npm run compile:prod
+      script: travis_wait docker-compose run test-ci npm run compile:prod -- --env.disableAggregateThemes
     - stage: wdio - default theme
       name: tiny
       script: travis_wait docker-compose run -e FORM_FACTOR=tiny test-ci
@@ -49,7 +49,7 @@ jobs:
       script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci
     - name: enormous
       script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci
-    
+
     # This should be enabled once after all the 3 mono repos have been merged with the lowlight theme files and screenshots have been generated.
 
     # - stage: compile - lowlight theme

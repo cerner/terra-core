@@ -7,7 +7,7 @@
 A search component with a field that automatically performs a search callback after user input.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-search-field/search-field/search-field)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-search-field/search-field/search-field)
 - [LICENSE](#license)
 
 ## Getting Started

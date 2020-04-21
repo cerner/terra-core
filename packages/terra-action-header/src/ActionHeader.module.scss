@@ -1,5 +1,9 @@
 @import '~terra-mixins/lib/Mixins';
 
+// import themes
+@import './clinical-lowlight-theme/ActionHeader.module';
+@import './orion-fusion-theme/ActionHeader.module';
+
 :local {
   .left-buttons > button {
     margin-left: var(--terra-action-header-left-buttons-margin-left, 0.35714rem);
@@ -45,6 +49,7 @@
     top: var(--terra-action-header-icon-top, 0);
     vertical-align: var(--terra-action-header-icon-vertical-align, -0.14285rem);
     width: var(--terra-action-header-icon-width, 1rem); // needed for different icon size in alternate themes
+
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       height: var(--terra-action-header-icon-ms-height, 1rem);
       vertical-align: var(--terra-action-header-icon-ms-vertical-align, -0.17285rem);

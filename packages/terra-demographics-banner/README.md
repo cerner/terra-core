@@ -7,7 +7,7 @@
 The demographics component is used to display demographic information about a person in a condensed, easy to read format.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-demographics-banner/demographics-banner/demographics-banner)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-demographics-banner/demographics-banner/demographics-banner)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

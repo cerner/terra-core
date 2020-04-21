@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated documentation links
+* Removed extra lines from README
 
 5.31.0 - (March 31, 2020)
 ------------------

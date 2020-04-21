@@ -4,6 +4,8 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
+* Updated documentation link in README
+* Removed extra lines from README
 * Replaced terra-image with terra-avatar for demographics profile photo.
 
 ### Added 

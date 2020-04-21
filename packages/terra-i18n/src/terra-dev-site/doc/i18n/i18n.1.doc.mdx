@@ -62,6 +62,11 @@ The `i18nLoader` loads internationalized information from the translationLoader 
 
 **Note:** This fallback strategy is only applied when an aggregated translation file does not exist. For example if the 'es' locale is loaded and the translation for `Terra.button.close` is missing, `react-intl` will display the `Terra.button.close` message name, not the english translation, because locale data was only loaded for 'es'. The `terra-i18n` package does not support loading multiple locales at once. This ensures an application will never have a mix of 'es' and 'en' translations.
 
+## Usage
+
+```jsx
+import { I18nProvider, i18nLoader } from 'terra-i18n';
+```
 
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)

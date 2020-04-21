@@ -7,7 +7,7 @@
 Toggle section header component that transitions content in and out with a click.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-toggle-section-header/toggle-section-header/toggle-section-header)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-toggle-section-header/toggle-section-header/toggle-section-header)
 - [LICENSE](#license)
 
 ## Getting Started
