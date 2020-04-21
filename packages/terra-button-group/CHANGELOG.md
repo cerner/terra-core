@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Fixed
-* Fixed button loosing focus when switching between windows
+* Fixed button losing focus when switching between windows
 
 ### Changed
 * Updated docs for documentation link and usage section
