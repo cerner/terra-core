@@ -60,6 +60,9 @@ class ButtonGroupButton extends React.Component {
   }
 
   handleOnBlur(event) {
+    if (document.activeElement === event.currentTarget && this.state.focused) {
+      this.shouldShowFocus = true;
+    }
     this.setState({ focused: false });
 
     if (this.props.onBlur) {
@@ -116,6 +119,7 @@ class ButtonGroupButton extends React.Component {
     const {
       icon,
       isDisabled,
+      onFocus,
       ...customProps
     } = this.props;
 
