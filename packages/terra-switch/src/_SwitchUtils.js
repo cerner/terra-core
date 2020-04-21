@@ -1,9 +1,9 @@
-import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
+import { KEY_SPACE, KEY_RETURN, KEY_TAB } from 'keycode-js';
 /**
  * Enables focus styles for the slider button. used to enable focus on keyboard events for switch.
  */
 const enableFocusStyles = (event) => {
-  if (event.nativeEvent.keyCode === KEY_RETURN || event.nativeEvent.keyCode === KEY_SPACE) {
+  if (event.nativeEvent.keyCode === KEY_RETURN || event.nativeEvent.keyCode === KEY_SPACE || event.nativeEvent.keyCode === KEY_TAB) {
     event.currentTarget.querySelector('button').setAttribute('data-focus-styles-enabled', 'true');
   }
 };
