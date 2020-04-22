@@ -1,5 +1,9 @@
 import PropTypes from 'prop-types';
 
+/**
+ * NOTE: Changes to this file should be mirrored in the `terra-dev-site/doc/example/propTypes` folder
+ */
+
 const optionPropType = PropTypes.shape({
   /**
    * The option display.
@@ -12,7 +16,7 @@ const optionPropType = PropTypes.shape({
   /**
    * The option value.
    */
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
 });
 
 const optGroupPropType = PropTypes.shape({
