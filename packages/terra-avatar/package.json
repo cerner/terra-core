@@ -1,7 +1,7 @@
 {
   "name": "terra-avatar",
   "main": "lib/index.js",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Contains components that represent a person, location or entity. Variants include Avatar, Facility, and Generic.",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-image": "^3.25.0",
+    "terra-image": "^3.26.0",
     "terra-mixins": "^1.35.0"
   },
   "scripts": {
