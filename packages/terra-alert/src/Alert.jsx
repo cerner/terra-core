@@ -22,11 +22,11 @@ const AlertTypes = {
   ALERT: 'alert',
   ERROR: 'error',
   WARNING: 'warning',
+  SUCCESS: 'success',
   UNSATISFIED: 'unsatisfied',
   UNVERIFIED: 'unverified',
   ADVISORY: 'advisory',
   INFO: 'info',
-  SUCCESS: 'success',
   CUSTOM: 'custom',
 };
 
