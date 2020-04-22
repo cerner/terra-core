@@ -2,7 +2,6 @@
 import classNames from 'classnames/bind';
 import React from 'react';
 import Avatar from 'terra-avatar';
-import Image from 'terra-image';
 import styles from './DemographicsBanner.module.scss';
 import DemographicsBannerUtils from './_sharedObjects';
 
@@ -11,7 +10,9 @@ const cx = classNames.bind(styles);
 export default (props) => {
   const {
     age,
+    alt,
     applicationContent,
+    color,
     dateOfBirth,
     dateOfBirthFullText,
     dateOfBirthLabel,
@@ -21,7 +22,10 @@ export default (props) => {
     gestationalAge,
     gestationalAgeFullText,
     gestationalAgeLabel,
+    hashValue,
     identifiers,
+    initials,
+    isAriaHidden,
     personName,
     photo,
     postMenstrualAge,
@@ -40,22 +44,30 @@ export default (props) => {
 
   let profilePhoto;
 
-  /*
-   * This condition is added to keep the profile photo changes passive to Demographics banner.
-   * Should be removed with next MVB.
-   */
-  if (photo && photo.type === Image) {
+  if (alt && initials) {
+    const avatarImage = photo && photo.type === String ? photo : undefined;
+    profilePhoto = (
+      <Avatar
+        className={cx('profile-photo')}
+        alt={alt}
+        color={color}
+        hashValue={hashValue}
+        image={avatarImage}
+        initials={initials}
+        isAriaHidden={isAriaHidden}
+        isDeceased={!!deceasedDate}
+      />
+    );
+  } else if (photo) {
+    /*
+     * This condition is added to keep the profile photo changes passive to Demographics banner.
+     * Should be removed with next MVB.
+     */
     profilePhoto = (
       <div className={cx('profile-photo')}>
         {photo}
       </div>
     );
-  /*
-   * else if check is added to ensure that default fallback avatar is not displayed when no value is provided for profile photo.
-   * So that it will passive change to existing demographics banner. Should be removed with next MVB.
-   */
-  } else if (photo) {
-    profilePhoto = (<Avatar className={cx('profile-photo')} image={photo} alt={personName} initials={personName} />);
   }
 
   return (

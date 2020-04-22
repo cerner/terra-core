@@ -13,7 +13,6 @@ it('renders the banner wrapper with all props', () => {
     <DemographicsBanner
       applicationContent={<span className="risk-score">5%</span>}
       age="25 Years"
-      applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
       dateOfBirth="May 9, 1993"
       gender="Male"
       gestationalAge="April 5, 2016"

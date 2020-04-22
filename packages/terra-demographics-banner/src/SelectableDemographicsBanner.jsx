@@ -13,13 +13,24 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * Age of the person.
+   */
+  age: PropTypes.string,
+  /**
+   * Specifies the alternative text for the photo.
+   * CAN WE JUST TREAT personName AS ALT AND NOT NEED THIS PROP???
+   */
+  alt: PropTypes.string,
+  /**
    * Application content to display in the banner.
    */
   applicationContent: PropTypes.node,
   /**
-   * Age of the person.
+   * Sets the background color of the photo. Defaults to `auto`. Accepted color variants are theme specific.
+   * One of: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
    */
-  age: PropTypes.string,
+  color: PropTypes.oneOf(['auto', 'neutral', 'one', 'two', 'three', 'four',
+    'five', 'six', 'seven', 'eight', 'nine', 'ten']),
   /**
    * The person's date of birth.
    */
@@ -37,6 +48,10 @@ const propTypes = {
    */
   gestationalAge: PropTypes.string,
   /**
+   * Value used for the hash function when color is set to `auto`. If not provided, hash function utilizes alt.
+   */
+  hashValue: PropTypes.string,
+  /**
    * Additional key value identifiers of a person's demographic information.
    */
   // eslint-disable-next-line react/forbid-prop-types
@@ -50,10 +65,18 @@ const propTypes = {
    */
   infoButtonOnClick: PropTypes.func.isRequired,
   /**
+   * One or two letters to display the initials in the photo.
+   */
+  initials: PropTypes.string,
+  /**
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: intlShape.isRequired,
+  /**
+   * Whether to hide photo from the accessibility tree.
+   */
+  isAriaHidden: PropTypes.bool,
   /**
    * Full Name of the person.
    */
@@ -81,14 +104,19 @@ const propTypes = {
 };
 
 const defaultProps = {
-  applicationContent: null,
   age: undefined,
+  alt: undefined,
+  applicationContent: null,
+  color: 'auto',
   dateOfBirth: undefined,
   deceasedDate: null,
   gender: undefined,
   gestationalAge: null,
+  hashValue: undefined,
   identifiers: {},
   infoButtonId: undefined,
+  initials: undefined,
+  isAriaHidden: false,
   personName: undefined,
   photo: undefined,
   postMenstrualAge: null,
@@ -97,16 +125,21 @@ const defaultProps = {
 };
 
 const SelectableDemographicsBanner = ({
-  applicationContent,
   age,
+  alt,
+  applicationContent,
+  color,
   dateOfBirth,
   deceasedDate,
   gender,
   gestationalAge,
+  hashValue,
   identifiers,
   infoButtonId,
   infoButtonOnClick,
+  initials,
   intl,
+  isAriaHidden,
   personName,
   photo,
   postMenstrualAge,
@@ -135,14 +168,19 @@ const SelectableDemographicsBanner = ({
 
   const DemographicsBannerSelectableTile = (
     <DemographicsBanner
-      applicationContent={applicationContent}
       age={age}
+      alt={alt}
+      applicationContent={applicationContent}
       className={cx('selectable-demographics-banner')}
+      color={color}
       dateOfBirth={dateOfBirth}
       deceasedDate={deceasedDate}
       gender={gender}
       gestationalAge={gestationalAge}
+      hashValue={hashValue}
       identifiers={identifiers}
+      initials={initials}
+      isAriaHidden={isAriaHidden}
       personName={personName}
       photo={photo}
       postMenstrualAge={postMenstrualAge}
@@ -158,7 +196,6 @@ const SelectableDemographicsBanner = ({
         {DemographicsBannerSelectableTile}
       </SelectableTile>
       <div className={cx('divider')} />
-      {/* Needs Translation */}
       <button className={cx('info-button')} type="button" role="link" id={infoButtonId} onClick={infoButtonOnClick}>
         {infoText}
         <IconInfo />

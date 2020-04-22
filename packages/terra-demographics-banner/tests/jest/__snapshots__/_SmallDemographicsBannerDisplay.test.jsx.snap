@@ -2,17 +2,6 @@
 
 exports[`renders small banner that contains all valid information 1`] = `
 <section
-  applicationRows={
-    Array [
-      Object {
-        "Address": "1501 Walnut St. Apt #123",
-        "City": "Kansas City MO",
-      },
-      Object {
-        "ZIP": 64108,
-      },
-    ]
-  }
   className="demographics-banner"
 >
   <h1

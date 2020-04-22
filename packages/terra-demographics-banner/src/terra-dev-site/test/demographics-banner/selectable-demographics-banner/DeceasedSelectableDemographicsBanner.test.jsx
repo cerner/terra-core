@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SelectableDemographicsBanner from '../../../../SelectableDemographicsBanner';
+import demographicsImage from '../../../doc/assets/demographicsCat.jpg';
 
 export default () => {
   const [message, setMessage] = useState('');
@@ -17,10 +18,13 @@ export default () => {
       <SelectableDemographicsBanner
         id="deceasedDemographics"
         age="25 Years"
+        alt="Johnathon Doe"
         dateOfBirth="May 9, 1992"
         deceasedDate="March 12, 2017"
         gender="True Male"
         identifiers={{ MRN: 12343, REA: '3JSDA' }}
+        initials="JD"
+        photo={demographicsImage}
         personName="Johnathon Doe"
         preferredFirstName="John"
         selectableTileOnClick={handleDemographicsClick}

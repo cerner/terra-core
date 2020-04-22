@@ -17,21 +17,26 @@ it('renders the banner wrapper with all props', () => {
 
   const banner = shallowWithIntl((
     <SelectableDemographicsBanner
-      applicationContent={<span className="risk-score">5%</span>}
       age="25 Years"
-      applicationRows={[{ Address: '1501 Walnut St. Apt #123', City: 'Kansas City MO' }, { ZIP: 64108 }]}
+      alt="JD"
+      applicationContent={<span className="risk-score">5%</span>}
+      color="neutral"
       dateOfBirth="May 9, 1993"
+      deceasedDate="January 10, 2020"
       gender="Male"
       gestationalAge="April 5, 2016"
+      hashValue="alternative hash"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      photo=""
+      infoButtonId="infoButton"
+      infoButtonOnClick={buttonClick}
+      initials="JD"
+      isAriaHidden={false}
       personName="Johnathon Doe"
+      photo=""
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
-      selectableTileOnClick={tileClick}
-      infoButtonOnClick={buttonClick}
-      infoButtonId="infoButton"
       selectableTileId="selectableDemographics"
+      selectableTileOnClick={tileClick}
     />
   ));
 

@@ -4,6 +4,7 @@ exports[`renders a blank banner wrapper 1`] = `
 <DemographicsBannerDisplay
   age="Terra.demographicsBanner.noDataProvided"
   applicationContent={null}
+  color="auto"
   dateOfBirth="Terra.demographicsBanner.noDataProvided"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
@@ -14,6 +15,7 @@ exports[`renders a blank banner wrapper 1`] = `
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={Object {}}
+  isAriaHidden={false}
   personName="Terra.demographicsBanner.noDataProvided"
   photo={null}
   postMenstrualAge={null}
@@ -33,17 +35,7 @@ exports[`renders the banner wrapper with all props 1`] = `
       5%
     </span>
   }
-  applicationRows={
-    Array [
-      Object {
-        "Address": "1501 Walnut St. Apt #123",
-        "City": "Kansas City MO",
-      },
-      Object {
-        "ZIP": 64108,
-      },
-    ]
-  }
+  color="auto"
   dateOfBirth="May 9, 1993"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
@@ -59,6 +51,7 @@ exports[`renders the banner wrapper with all props 1`] = `
       "REA": "3JSDA",
     }
   }
+  isAriaHidden={false}
   personName="Johnathon Doe"
   photo=""
   postMenstrualAge="April 7, 2016"
