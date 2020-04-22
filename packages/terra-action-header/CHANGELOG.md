@@ -4,6 +4,8 @@ ChangeLog
 Unreleased
 ----------
 
+2.43.0 - (April 22, 2020)
+------------------
 ### Changes
 * Updated docs for documentation link and usage section
 * Removed extra lines from README

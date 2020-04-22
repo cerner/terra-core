@@ -3,12 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.27.0 - (April 22, 2020)
+------------------
 ### Changed
 * Added Usage section
 * Updated docs for documentation link and expanded `PropTypes` for Props Table
 * Removed extra lines from README
-
-### Changed
 * Apply themes by context and directly include packaged themes.
 
 3.26.0 - (March 10, 2020)

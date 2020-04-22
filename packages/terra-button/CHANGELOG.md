@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Converted terra-theme-context from a peer depenency to a dependency.
+
+3.35.0 - (April 22, 2020)
+------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
 * Updated docs for documentation link

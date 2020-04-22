@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+6.2.0 - (April 22, 2020)
+------------------
 ### Added
 * Added `NativeSelect` implementation to replace the default select variant.
 
