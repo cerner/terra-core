@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+1.2.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated documentation links
 * Added Usage Section
