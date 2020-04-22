@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+3.35.0 - (April 22, 2020)
+------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
 * Updated docs for documentation link

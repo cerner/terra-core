@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+3.27.0 - (April 22, 2020)
+------------------
 ### Changed
 * Added Usage section
 * Updated docs for documentation link and expanded `PropTypes` for Props Table

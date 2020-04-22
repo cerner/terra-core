@@ -6,6 +6,8 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+4.28.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated documentation link in README
 
