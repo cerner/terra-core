@@ -5,5 +5,7 @@
   "Terra.alert.error": "Fehler.",
   "Terra.alert.info": "Informationen.",
   "Terra.alert.success": "Erfolg.",
+  "Terra.alert.unsatisfied": "Required Action.",
+  "Terra.alert.unverified": "Outside Records.",
   "Terra.alert.warning": "Achtung."
 }
