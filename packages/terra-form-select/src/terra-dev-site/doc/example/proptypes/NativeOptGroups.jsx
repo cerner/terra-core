@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { optionPropType } from '../../../../native-select/NativePropTypes';
+
+/* eslint-disable react/no-unused-prop-types */
 
 const propTypes = {
   /**

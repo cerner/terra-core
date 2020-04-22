@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/* eslint-disable react/no-unused-prop-types */
+
 const propTypes = {
   /**
    * The option display.
