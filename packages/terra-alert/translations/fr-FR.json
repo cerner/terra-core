@@ -5,7 +5,7 @@
   "Terra.alert.error": "Erreur.",
   "Terra.alert.info": "Information.",
   "Terra.alert.success": "Opération réussie.",
-  "Terra.alert.unsatisfied": "Required Action.",
-  "Terra.alert.unverified": "Outside Records.",
+  "Terra.alert.unsatisfied": "Action requise.",
+  "Terra.alert.unverified": "Dossiers extérieurs.",
   "Terra.alert.warning": "Avertissement."
 }

@@ -5,7 +5,7 @@
   "Terra.alert.error": "Fehler.",
   "Terra.alert.info": "Informationen.",
   "Terra.alert.success": "Erfolg.",
-  "Terra.alert.unsatisfied": "Required Action.",
-  "Terra.alert.unverified": "Outside Records.",
+  "Terra.alert.unsatisfied": "Erforderliche Aktion.",
+  "Terra.alert.unverified": "Externe Datensätze",
   "Terra.alert.warning": "Achtung."
 }

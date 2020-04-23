@@ -5,7 +5,7 @@
   "Terra.alert.error": "Error.",
   "Terra.alert.info": "Información.",
   "Terra.alert.success": "Correcto.",
-  "Terra.alert.unsatisfied": "Required Action.",
-  "Terra.alert.unverified": "Outside Records.",
+  "Terra.alert.unsatisfied": "Acción obligatoria.",
+  "Terra.alert.unverified": "Historias clínicas externas.",
   "Terra.alert.warning": "Advertencia."
 }
