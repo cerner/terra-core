@@ -3,13 +3,10 @@ module.exports = {
     'packages/**/src/*.js',
     'packages/**/src/*.jsx',
   ],
-  // globalSetup: './jestglobalsetup.js',
+  globalSetup: './jestglobalsetup.js',
   setupFiles: [
     'raf/polyfill',
     './jestsetup.js',
-  ],
-  setupFilesAfterEnv: [
-    './jest-utils',
   ],
   testMatch: [
     '**/jest/**/(*.)(spec|test).js?(x)',
