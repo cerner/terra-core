@@ -107,6 +107,10 @@ const propTypes = {
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
   /**
+   *  Enables lazy loading options when set to true.
+   */
+  isLazyLoadEnabled: PropTypes.bool,
+  /**
    * The behavior of the select. One of `default`, `combobox`, `multiple`, `tag`, or `search`.
    */
   variant: PropTypes.oneOf([

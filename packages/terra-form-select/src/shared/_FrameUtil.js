@@ -149,8 +149,8 @@ class FrameUtil {
   static getInitialOptions(frameHeight, select, children) {
     const initialOptions = [];
     const optionHeight = select.getBoundingClientRect().height;
-    // to enable scroll extra optionHeight is added to frameHeight
-    const contentNodeHeight = (frameHeight) ? (frameHeight + optionHeight) : (select.parentNode.getBoundingClientRect().bottom);
+    // Adding optionHeight to ContentNodeHeight to add space for extra options. extra options are needed to enable scrollbar
+    const contentNodeHeight = (frameHeight) ? (frameHeight + (optionHeight * 2)) : (window.innerHeight + (optionHeight * 2));
     let totalHeight = 0;
     React.Children.forEach(children, (option) => {
       if (contentNodeHeight <= totalHeight) {

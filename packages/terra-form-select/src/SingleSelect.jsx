@@ -85,6 +85,10 @@ const propTypes = {
    * The selected value. Can be a string, number, or array of strings/numbers.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   *  Enables lazy loading options when set to true.
+   */
+  isLazyLoadEnabled: PropTypes.bool,
 };
 
 const defaultProps = {

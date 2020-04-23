@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `isLazyLoadEnabled` to enable lazy loading of options in default form-select
 
 6.2.0 - (April 22, 2020)
 ------------------

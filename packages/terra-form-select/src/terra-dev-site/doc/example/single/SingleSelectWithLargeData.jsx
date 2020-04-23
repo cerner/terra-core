@@ -13,7 +13,7 @@ const SingleSelectWithLargeData = () => {
   }
 
   return (
-    <SingleSelect placeholder="Select a number" className={cx('form-select')}>
+    <SingleSelect placeholder="Select a number" isLazyLoadEnabled className={cx('form-select')}>
       {options}
     </SingleSelect>
   );

@@ -91,6 +91,10 @@ const propTypes = {
    * The select value.
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  /**
+   *  Enables lazy loading options when set to true.
+   */
+  isLazyLoadEnabled: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -158,9 +162,11 @@ class Frame extends React.Component {
   }
 
   componentDidMount() {
-    this.options = FrameUtil.getInitialOptions(this.props.maxHeight, this.select, this.props.children);
-    this.initialOptionCount = React.Children.count(this.options);
-    this.lastOptioinIndex = this.initialOptionCount;
+    if (this.props.isLazyLoadEnabled) {
+      this.options = FrameUtil.getInitialOptions(this.props.maxHeight, this.select, this.props.children);
+      this.initialOptionCount = React.Children.count(this.options);
+      this.lastOptioinIndex = this.initialOptionCount;
+    }
   }
 
   componentDidUpdate(previousProps, previousState) {
@@ -535,12 +541,12 @@ class Frame extends React.Component {
             isAbove={this.state.isAbove}
             isEnabled={this.state.isPositioned}
             onResize={this.positionDropdown}
-            onScroll={this.handleScroll}
+            onScroll={(this.props.isLazyLoadEnabled) ? this.handleScroll : undefined}
             refCallback={(ref) => { this.dropdown = ref; }}
             style={FrameUtil.dropdownStyle(dropdownAttrs, this.state)} // eslint-disable-line react/forbid-component-props
           >
             <Menu {...menuProps}>
-              {this.options}
+              {(this.props.isLazyLoadEnabled) ? this.options : this.props.children}
             </Menu>
           </Dropdown>
         )}
