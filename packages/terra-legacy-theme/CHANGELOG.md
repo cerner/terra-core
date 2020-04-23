@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
+### Changed
+* Update terra-toolkit link references to terra-toolkit-boneyard.
+
 2.31.0 - (February 18, 2020)
 ------------------
 ### Added
