@@ -3,7 +3,7 @@ import Button from 'terra-button';
 import Alert from '../../../Alert';
 
 const AlertDismissible = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   if (!isOpen) {
     return (
@@ -20,7 +20,7 @@ const AlertDismissible = () => {
   }
 
   return (
-    <Alert id="dismissibleAlert" type="success" onDismiss={() => setIsOpen(!isOpen)}>
+    <Alert id="dismissibleAlert" type="success" onDismiss={() => setIsOpen(false)}>
       This is a dismissable Alert.
     </Alert>
   );

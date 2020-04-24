@@ -12,7 +12,7 @@ const AlertActionButton = () => {
       action={(
         <Button
           text="Action"
-          variant="emphasis"
+          id="actionButtonClickCount"
           onClick={() => {
             const updatedCount = actionButtonClickCount + 1;
             setActionButtonClickCount(updatedCount);
