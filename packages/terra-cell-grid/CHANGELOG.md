@@ -4,6 +4,11 @@ Changelog
 Unreleased
 ----------
 ### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+1.3.0 - (April 22, 2020)
+------------------
+### Added
 * Added Section `Peer Dependencies` for docsite
 * Updated documentation links
 * Added Usage section
