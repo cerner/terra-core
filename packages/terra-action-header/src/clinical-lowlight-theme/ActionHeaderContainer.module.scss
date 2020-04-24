@@ -1,0 +1,16 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .clinical-lowlight-theme {
+    // .flex-header
+    --terra-action-header-background-color: #141719;
+    --terra-action-header-border-bottom: 1px solid #181d1b;
+    --terra-action-header-border-left: none;
+    --terra-action-header-border-right: none;
+    --terra-action-header-border-top: none;
+    --terra-action-header-box-shadow: none;
+    
+    // .title
+    --terra-action-header-color: #b2b5b6;
+  }
+}

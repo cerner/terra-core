@@ -1,11 +1,12 @@
 {
   "name": "terra-button",
   "main": "lib/Button.js",
-  "version": "3.34.0",
+  "version": "3.36.0",
   "description": "The terra-button component provides users a way to trigger actions in the UI.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-button"
   },
   "keywords": [
     "Button",
@@ -41,6 +42,7 @@
     "classnames": "^2.2.5",
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-icon": "^3.28.0"
+    "terra-icon": "^3.29.0",
+    "terra-theme-context": "^1.0.0"
   }
 }

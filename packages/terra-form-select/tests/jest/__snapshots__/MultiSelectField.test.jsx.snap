@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render MultiSelectField component with max height 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="label-group"
+  >
+    <label
+      className="label"
+      htmlFor="select-id"
+    >
+      Label
+    </label>
+    <div
+      className="error-icon-hidden"
+    >
+      <IconError
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </div>
+  </div>
+  <InjectIntl(MultiSelect)
+    ariaLabel="Label"
+    defaultValue="blue"
+    disabled={false}
+    inputId="select-id"
+    isIncomplete={false}
+    isInvalid={false}
+    isTouchAccessible={false}
+    key=".0"
+    maxHeight={100}
+    required={false}
+  >
+    <Option
+      disabled={false}
+      display="Blue"
+      value="blue"
+    />
+    <Option
+      disabled={false}
+      display="Green"
+      value="green"
+    />
+    <Option
+      disabled={false}
+      display="Purple"
+      value="purple"
+    />
+    <Option
+      disabled={false}
+      display="Red"
+      value="red"
+    />
+    <Option
+      disabled={false}
+      display="Violet"
+      value="violet"
+    />
+  </InjectIntl(MultiSelect)>
+</div>
+`;
