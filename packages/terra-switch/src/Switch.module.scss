@@ -150,8 +150,8 @@
       background-color: var(--terra-switch-slider-focus-background-color, #fff);
       border: var(--terra-switch-slider-focus-border, 0);
       box-shadow: var(--terra-switch-slider-focus-box-shadow, 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.3));
-      outline: var(--terra-switch-slider-focus-outline, 0.14285rem dashed #000);
-      outline-offset: var(--terra-switch-slider-focus-outline-offset, 0.14285rem);
+      outline: var(--terra-switch-slider-focus-outline, 2px dashed #000);
+      outline-offset: var(--terra-switch-slider-focus-outline-offset, 2px);
     }
 
     &:hover:not(.is-disabled) {

@@ -2,12 +2,11 @@ import React, { useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { FormattedMessage } from 'react-intl';
+import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import styles from './Switch.module.scss';
-import { enableFocusStyles, disableFocusStyles } from './_SwitchUtils';
 
 const cx = classNames.bind(styles);
 
-// Translations Required
 const SWITCH_STATE = Object.freeze({
   ON: <FormattedMessage id="Terra.switch.switchstatuslabel.on" />,
   OFF: <FormattedMessage id="Terra.switch.switchstatuslabel.off" />,
@@ -36,7 +35,7 @@ const propTypes = {
   labelId: PropTypes.string.isRequired,
   /**
    * Callback function when switch value changes from ON / OFF.
-   * Parameters: 1. switch value 2. event.
+   * Returns Parameters: 1. switch value 2. event.
    */
   onChange: PropTypes.func,
 };
@@ -62,15 +61,45 @@ const Switch = (props) => {
 
   const handleOnClick = useCallback(
     (event) => {
-    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
-    // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
-    // This will set focus on the button when clicked.
+      // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
+      // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
+      // This will set focus on the button when clicked.
       sliderButton.current.focus();
+      sliderButton.current.setAttribute('data-focus-styles-enabled', 'false');
       if (onChange) {
         onChange(!checked, event);
       }
     },
     [checked, onChange],
+  );
+
+  const handleKeyDown = useCallback(
+    (event) => {
+      if (event.nativeEvent.keyCode === KEY_RETURN || event.nativeEvent.keyCode === KEY_SPACE) {
+        sliderButton.current.setAttribute('data-focus-styles-enabled', 'true');
+        if (onChange) {
+          onChange(!checked, event);
+        }
+        // To prevent onclick that gets triggred on return and space key press
+        event.preventDefault();
+      }
+    },
+    [checked, onChange],
+  );
+
+  const handleMouseDown = useCallback(
+    (event) => {
+      sliderButton.current.setAttribute('data-focus-styles-enabled', 'false');
+      event.preventDefault();
+    },
+    [],
+  );
+
+  const handleFocus = useCallback(
+    () => {
+      sliderButton.current.setAttribute('data-focus-styles-enabled', 'true');
+    },
+    [],
   );
 
   const switchClassNames = cx([
@@ -101,7 +130,12 @@ const Switch = (props) => {
   return (
     <div {...customProps} className={mainClasses}>
       {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
-      <label htmlFor={switchId} onMouseDown={disableFocusStyles} onKeyDown={enableFocusStyles}>
+      <label
+        htmlFor={switchId}
+        onMouseDown={handleMouseDown}
+        onKeyDown={handleKeyDown}
+        onFocus={handleFocus}
+      >
         <div className={switchClassNames}>
           <div className={cx('label-container')}>
             <div id={labelId} className={cx('label-text')}>{labelText}</div>
