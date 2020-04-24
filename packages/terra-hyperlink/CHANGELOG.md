@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
