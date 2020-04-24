@@ -22,11 +22,11 @@ const AlertTypes = {
   ALERT: 'alert',
   ERROR: 'error',
   WARNING: 'warning',
-  SUCCESS: 'success',
   UNSATISFIED: 'unsatisfied',
   UNVERIFIED: 'unverified',
   ADVISORY: 'advisory',
   INFO: 'info',
+  SUCCESS: 'success',
   CUSTOM: 'custom',
 };
 
@@ -100,7 +100,7 @@ const getAlertIcon = (type, customIcon) => {
     case AlertTypes.SUCCESS:
       return (<span className={cx('icon')}><IconSuccess /></span>);
     case AlertTypes.CUSTOM:
-      return customIcon ? (<span className={cx('icon')}>{customIcon}</span>) : null;
+      return (<span className={cx('icon')}>{customIcon}</span>);
     default:
       return null;
   }
