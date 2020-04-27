@@ -3,6 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
 
 4.27.0 - (April 22, 2020)
 ------------------
@@ -13,7 +17,7 @@ Unreleased
 4.26.0 - (March 31, 2020)
 ------------------
 ### Fixed
-* Check if Intl.DateTimeFormat and Int.NumberFormat have the `supportedLocalesOf` property before adding as constructors for intl-locales-supported. 
+* Check if Intl.DateTimeFormat and Int.NumberFormat have the `supportedLocalesOf` property before adding as constructors for intl-locales-supported.
 
 4.25.0 - (March 10, 2020)
 ------------------

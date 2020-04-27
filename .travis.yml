@@ -49,24 +49,21 @@ jobs:
       script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci
     - name: enormous
       script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci
-
-    # This should be enabled once after all the 3 mono repos have been merged with the lowlight theme files and screenshots have been generated.
-
-    # - stage: compile - lowlight theme
-    #   script: travis_wait docker-compose run test-ci npm run compile:lowlight
-    # - stage: wdio - lowlight theme
-    #   name: tiny
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=tiny test-ci sh -c 'npm run wdio-lowlight'
-    # - name: small
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=small test-ci sh -c 'npm run wdio-lowlight'
-    # - name: medium
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=medium test-ci sh -c 'npm run wdio-lowlight'
-    # - name: large
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=large test-ci sh -c 'npm run wdio-lowlight'
-    # - name: huge
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci sh -c 'npm run wdio-lowlight'
-    # - name: enormous
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci sh -c 'npm run wdio-lowlight'
+    - stage: compile - lowlight theme
+      script: travis_wait docker-compose run test-ci npm run compile:lowlight
+    - stage: wdio - lowlight theme
+      name: tiny
+      script: travis_wait docker-compose run -e FORM_FACTOR=tiny test-ci sh -c 'npm run wdio-lowlight'
+    - name: small
+      script: travis_wait docker-compose run -e FORM_FACTOR=small test-ci sh -c 'npm run wdio-lowlight'
+    - name: medium
+      script: travis_wait docker-compose run -e FORM_FACTOR=medium test-ci sh -c 'npm run wdio-lowlight'
+    - name: large
+      script: travis_wait docker-compose run -e FORM_FACTOR=large test-ci sh -c 'npm run wdio-lowlight'
+    - name: huge
+      script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci sh -c 'npm run wdio-lowlight'
+    - name: enormous
+      script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci sh -c 'npm run wdio-lowlight'
     - stage: compile - fusion theme
       script: travis_wait docker-compose run test-ci npm run compile:fusion
     - stage: wdio - fusion theme
@@ -106,8 +103,8 @@ stages:
   - danger lint and jest
   - compile - default theme
   - wdio - default theme
-  # - compile - lowlight theme
-  # - wdio - lowlight theme
+  - compile - lowlight theme
+  - wdio - lowlight theme
   - compile - fusion theme
   - wdio - fusion theme
   - name: deploy

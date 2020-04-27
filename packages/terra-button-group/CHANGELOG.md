@@ -6,6 +6,12 @@ Unreleased
 ### Fixed
 * Fixed button losing focus when switching between windows
 
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
 3.36.0 - (April 22, 2020)
 ------------------
 ### Changed
