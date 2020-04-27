@@ -5,7 +5,8 @@
   "description": "The Terra List is a structural component to arrange content within list/listitems.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-list"
   },
   "keywords": [
     "Cerner",
