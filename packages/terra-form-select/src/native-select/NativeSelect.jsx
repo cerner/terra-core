@@ -5,6 +5,7 @@ import React, {
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
+import { ThemeContext } from 'terra-application/lib/theme';
 import {
   defaultPlaceholderValue,
   isCurrentPlaceholder,
@@ -142,6 +143,7 @@ const NativeSelect = ({
 }) => {
   const [currentValue, setCurrentValue] = useState(defaultValue || getFirstValue(options, placeholder));
   const refSelect = useRef();
+  const theme = React.useContext(ThemeContext);
 
   const handleOnMouseDown = () => {
     refSelect.current.setAttribute('data-focus-interaction', 'mouse');
@@ -175,6 +177,7 @@ const NativeSelect = ({
 
   const nativeClassNames = cx(
     'native',
+    theme.className,
     { disabled },
     { invalid: isInvalid },
     { incomplete: required && isIncomplete },
