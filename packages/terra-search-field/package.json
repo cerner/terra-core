@@ -5,7 +5,8 @@
   "description": "A search component with a field that automatically performs a search callback after user input.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-search-field"
   },
   "keywords": [
     "Cerner",
