@@ -3,6 +3,17 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+4.1.0 - (April 22, 2020)
+------------------
+### Changed
+* Added Usage section in docs
+* Updated imports for `TextareaField` examples
+* Updated documentation link in README
 
 4.0.0 - (March 31, 2020)
 ------------------

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Button, { ButtonVariants } from 'terra-button';
 import { FormattedMessage } from 'react-intl';
+import ThemeContext from 'terra-theme-context';
 import ActionHeaderContainer from './_ActionHeaderContainer';
 import styles from './ActionHeader.module.scss';
 
@@ -83,6 +84,8 @@ const ActionHeader = ({
   children,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
+
   const closeButton = onClose
     ? (
       <FormattedMessage id="Terra.actionHeader.close">
@@ -186,14 +189,13 @@ const ActionHeader = ({
             />
           )}
         </FormattedMessage>
-
       </div>
     )
     : null;
 
   const leftButtons = (backButton || expandButton || previousNextButtonGroup)
     ? (
-      <div className={cx('left-buttons')}>
+      <div className={cx('left-buttons', theme.className)}>
         {backButton}
         {expandButton}
         {previousNextButtonGroup}
@@ -201,7 +203,7 @@ const ActionHeader = ({
     )
     : null;
 
-  const rightButtons = closeButton ? <div className={cx('right-buttons')}>{closeButton}</div> : null;
+  const rightButtons = closeButton ? <div className={cx('right-buttons', theme.className)}>{closeButton}</div> : null;
 
   return (
     <ActionHeaderContainer

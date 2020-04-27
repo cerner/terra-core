@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+
+5.32.0 - (April 22, 2020)
+------------------
+### Changed
+* Updated documentation links
+* Removed extra lines from README
 
 5.31.0 - (March 31, 2020)
 ------------------

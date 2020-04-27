@@ -27,4 +27,8 @@ Terra.describeViewports('Table', ['medium'], () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/striped'));
     Terra.it.validatesElement();
   });
+  describe('Custom Cell Content', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/custom-cell'));
+    Terra.it.validatesElement();
+  });
 });

@@ -3,6 +3,26 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+2.44.0 - (April 22, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.43.0 - (April 22, 2020)
+------------------
+### Changes
+* Updated docs for documentation link and usage section
+* Removed extra lines from README
+* Updated to consumer terra-theme-context 
+
+### Fixed
+* Fix bottom border style in orion-fusion theme
+* Fix flex-end style in orion-fusion theme
 
 2.42.0 - (March 31, 2020)
 ------------------

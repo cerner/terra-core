@@ -91,4 +91,23 @@ describe('ActionHeader', () => {
     const wrapper = shallowWithIntl(actionHeader);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('correctly applies the theme context className', () => {
+    jest.spyOn(React, 'useContext')
+      .mockReturnValue({
+        className: 'orion-fusion-theme',
+      });
+
+    const actionHeader = (
+      <ActionHeader
+        title="Action Header"
+        className="customClassName"
+        onMaximize={() => {}}
+        onClose={() => {}}
+      />
+    );
+    const wrapper = shallowWithIntl(actionHeader);
+    const headerContainer = wrapper.dive();
+    expect(headerContainer).toMatchSnapshot();
+  });
 });

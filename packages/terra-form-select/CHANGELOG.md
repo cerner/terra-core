@@ -6,6 +6,20 @@ Unreleased
 ### Fixed
 * Fixed detach issue of dropdown of `search` variants with `isTouchAccessible` prop.
 
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+6.2.0 - (April 22, 2020)
+------------------
+### Added
+* Added `maxHeight` as first class prop to all select fields (Multi select field, Tag select Field, Search select field, Combobox select field, Single select field)
+
+### Changed
+* Updated documentation link in README
+* Added Usage section in docs
+
 6.1.0 - (April 7, 2020)
 ------------------
 ### Changed

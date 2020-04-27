@@ -2,7 +2,7 @@ import { Badge } from 'terra-base/package.json?dev-site-package';
 
 import GlobalBaseStylesExample from './GlobalBaseStylesExample?dev-site-example'
 
-import BasePropsTable from '../../../../src/Base?dev-site-props-table';
+import BasePropsTable from 'terra-base/src/Base?dev-site-props-table';
 
 <Badge />
 
@@ -12,7 +12,7 @@ The `terra-base` component handles two main concerns, [application international
 
 This component is designed to manage loading locale information such as translations and locale data, handling locale switching and loading state, and combining customized translation messages from an application with Terra UI component translations.
 
-**Note:** _This component should be your root component and wrap all components in your app. This is to help ensure that the entire application is within the same configured i18n context provided by [react-intl's `<IntlProvider />`](https://github.com/yahoo/react-intl/wiki/Components#intlprovider)._
+**Note:** _This component should be your root component and wrap all components in your app. This is to help ensure that the entire application is within the same configured i18n context provided by [react-intl's `<IntlProvider />`](https://github.com/formatjs/react-intl/blob/master/docs/Components.md)._
 
 The `terra-base` component requires the use of our [aggregate-translations pre-build tool](https://github.com/cerner/terra-aggregate-translations) to ensure translations and locale data files are generated accordingly for the app.
 
@@ -35,8 +35,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -78,15 +76,13 @@ const locale = (navigator.languages && navigator.languages[0])
 ```
 
 ## Component Features
-* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
-* [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
-* [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
-* [Internationalization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
-* [Localization Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#internationalization-i18n-support)
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+* [Internationalization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+* [Localization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
 * [react_on_rails Compatible](https://github.com/shakacode/react_on_rails/blob/8cb06ed35cb5c2c453bcc193282b4c091574c1b7/docs/basics/i18n.md#how-to-add-i18n)
 * [CND Compatible](https://github.com/webpack/docs/wiki/configuration#outputpublicpath)
-
-[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-base)
 
 ## Example
 <GlobalBaseStylesExample />

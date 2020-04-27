@@ -1,6 +1,10 @@
 @import './variables';
 @import './mixins';
 
+// Themes
+@import './clinical-lowlight-theme/Button.module';
+@import './orion-fusion-theme/Button.module';
+
 :local {
   // html input[type='button'].terra-Button selector used to
   // prevent a WebKit bug destroys native `audio` and `video` controls

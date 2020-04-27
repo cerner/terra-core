@@ -62,6 +62,11 @@ The `i18nLoader` loads internationalized information from the translationLoader 
 
 **Note:** This fallback strategy is only applied when an aggregated translation file does not exist. For example if the 'es' locale is loaded and the translation for `Terra.button.close` is missing, `react-intl` will display the `Terra.button.close` message name, not the english translation, because locale data was only loaded for 'es'. The `terra-i18n` package does not support loading multiple locales at once. This ensures an application will never have a mix of 'es' and 'en' translations.
 
+## Usage
+
+```jsx
+import { I18nProvider, i18nLoader } from 'terra-i18n';
+```
 
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
@@ -69,8 +74,6 @@ The `i18nLoader` loads internationalized information from the translationLoader 
 * [Localization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
 * [react_on_rails Compatible](https://github.com/shakacode/react_on_rails/blob/8cb06ed35cb5c2c453bcc193282b4c091574c1b7/docs/basics/i18n.md#how-to-add-i18n)
 * [CND Compatible](https://github.com/webpack/docs/wiki/configuration#outputpublicpath)
-
-[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-i18n)
 
 ## Examples
 <I18nDemo title="I18nProvider Example" description="Note: This is an example of a nested I18nProvider. The site overall is an example of using an application-level I18nProvider implemented through the terra-base component." />

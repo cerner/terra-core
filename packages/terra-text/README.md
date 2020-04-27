@@ -11,7 +11,7 @@ In these cases, the text component may be helpful. Using terra-text, you can cre
 However, there are drawbacks to be aware of with this component. The styles set with this component are not themable and will be static. If this is a concern for your usage, we recommend building a custom component that handles your font styles that need to differ from the base font styles so you can control the themability of them.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-text/docs)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-text/text/text)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -27,8 +27,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

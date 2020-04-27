@@ -1,11 +1,12 @@
 {
   "name": "terra-form-fieldset",
   "main": "lib/Fieldset.js",
-  "version": "2.38.0",
+  "version": "2.39.0",
   "description": "Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-form-fieldset"
   },
   "keywords": [
     "Cerner",
@@ -28,8 +29,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-form-field": "^4.0.0",
-    "terra-form-input": "^3.0.0"
+    "terra-form-field": "^4.1.0",
+    "terra-form-input": "^3.1.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

@@ -7,7 +7,7 @@
 Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-form-fieldset/form-fieldset/form-fieldset)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-form-fieldset/form-fieldset/form-fieldset)
 - [LICENSE](#license)
 
 ## Getting Started
@@ -24,8 +24,6 @@ This component requires the following peer dependencies be installed in your app
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
 | react-intl | ^2.8.0 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
