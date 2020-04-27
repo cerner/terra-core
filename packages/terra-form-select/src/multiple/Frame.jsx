@@ -148,7 +148,6 @@ class Frame extends React.Component {
       hasSearchChanged: false,
       searchValue: '',
       isAbove: false,
-      resizeOnSearch: false,
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);
@@ -178,7 +177,7 @@ class Frame extends React.Component {
   }
 
   componentDidUpdate(previousProps, previousState) {
-    if (FrameUtil.shouldPositionDropdown(previousState, this.state, this.dropdown, this.props.isTouchAccessible)) {
+    if (FrameUtil.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
       clearTimeout(this.debounceTimer);
       this.debounceTimer = setTimeout(this.positionDropdown, !previousState.isOpen ? 0 : 100);
     }
@@ -305,7 +304,7 @@ class Frame extends React.Component {
 
     const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
 
-    this.setState(prevState => (FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, prevState, isTouchAccessible)));
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible));
   }
 
   /**
@@ -458,7 +457,6 @@ class Frame extends React.Component {
       isOpen: true,
       hasSearchChanged: true,
       searchValue,
-      resizeOnSearch: true,
     });
 
     if (this.props.onSearch) {

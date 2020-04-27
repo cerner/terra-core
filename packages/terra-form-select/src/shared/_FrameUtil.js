@@ -9,12 +9,15 @@ class FrameUtil {
    */
   static dropdownStyle(props = {}, state = {}) {
     const { style } = props;
-    const { maxHeight, width, top } = state;
+    const {
+      maxHeight, width, bottom, top,
+    } = state;
 
     return {
       ...style,
       maxHeight,
       width,
+      bottom,
       top,
     };
   }
@@ -29,32 +32,28 @@ class FrameUtil {
    * @param {boolean} useSemanticDropdown - If the dropdown should be rendered semantically instead of in a portal
    * @return {Object} - The calculated dropdown attributes.
    */
-  static dropdownPosition(props, target, dropdown, maxHeight, currentState, useSemanticDropdown = false) {
+  static dropdownPosition(props, target, dropdown, maxHeight, useSemanticDropdown = false) {
     const style = ({ ...props }).style || {};
     const { height } = dropdown.getBoundingClientRect();
     const { bottom, width, top } = target.getBoundingClientRect();
+    const { height: targetHeight } = target.getBoundingClientRect();
 
     const spaceBelow = window.innerHeight - bottom;
     const maximumHeight = parseInt(style.maxHeight || maxHeight, 10) || Infinity;
-    let canFitBelow = (maximumHeight < spaceBelow || height < spaceBelow || spaceBelow > top);
-    if (useSemanticDropdown && currentState !== undefined && currentState.resizeOnSearch && currentState.isAbove && canFitBelow) {
-      canFitBelow = false;
-    }
+    const canFitBelow = (maximumHeight < spaceBelow || height < spaceBelow || spaceBelow > top);
     const availableSpace = canFitBelow ? spaceBelow : top;
     const availableMaxHeight = Math.min(maximumHeight, availableSpace - 10);
     const isAbove = !canFitBelow;
-    const semanticTopWhenAbove = (useSemanticDropdown && isAbove
-      ? -1 * Math.min(availableMaxHeight, height)
-      : undefined
-    );
+    const semanticBottomWhenAbove = (useSemanticDropdown && isAbove ? targetHeight : undefined);
+    const semanticTopWhenAbove = (useSemanticDropdown && !isAbove ? '100%' : undefined);
 
     return {
       width,
       maxHeight: availableMaxHeight,
       isAbove,
       isPositioned: true,
+      bottom: semanticBottomWhenAbove,
       top: semanticTopWhenAbove,
-      resizeOnSearch: false,
     };
   }
 
@@ -100,13 +99,13 @@ class FrameUtil {
    * @param {ReactNode} dropdown - The component dropdown.
    * @return {boolean} - True if the dropdown should be positioned.
    */
-  static shouldPositionDropdown(previousState, currentState, dropdown, isTouchAccessible) {
+  static shouldPositionDropdown(previousState, currentState, dropdown) {
     if (!currentState.isOpen) {
       return false;
     }
 
     const { bottom } = dropdown.getBoundingClientRect();
-    return previousState.isOpen === false || bottom > window.innerHeight || (currentState.resizeOnSearch && isTouchAccessible);
+    return previousState.isOpen === false || bottom > window.innerHeight;
   }
 
   /**
