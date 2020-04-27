@@ -155,7 +155,6 @@ class Frame extends React.Component {
       isPositioned: false,
       hasSearchChanged: false,
       searchValue: '',
-      isAbove: false,
     };
 
     this.ariaLabel = this.ariaLabel.bind(this);

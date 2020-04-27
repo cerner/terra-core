@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Fixed
-* Fixed detach issue of dropdown of `search` variants with `isTouchAccessible` prop.
+* Fixed issue when using `isTouchAccessible` that could cause the dropdown to detach from the input
 
 ### Changed
 * Removed "View Component Source Code" from docs in favour of source code badge
