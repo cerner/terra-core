@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed invalid theme variables.
+
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
