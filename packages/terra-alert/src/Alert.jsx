@@ -32,7 +32,7 @@ const AlertTypes = {
 
 const propTypes = {
   /**
-   * An action element to be added to the action section of the alert to give the user an easy ways
+   * An action element to be added to the action section of the alert to give the user an easy way
    * to accomplish a task to resolve the notification.
    */
   action: PropTypes.element,
