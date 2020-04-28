@@ -5,7 +5,7 @@ import React, {
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
-import { ThemeContext } from 'terra-application/lib/theme';
+import ThemeContext from 'terra-theme-context';
 import {
   defaultPlaceholderValue,
   isCurrentPlaceholder,
