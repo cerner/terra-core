@@ -33,7 +33,7 @@ exports[`Switch should render a default component 1`] = `
 >
   <label
     htmlFor="defaultSwitch"
-    onFocus={[Function]}
+    onBlur={[Function]}
     onKeyDown={[Function]}
     onMouseDown={[Function]}
   >
@@ -112,7 +112,7 @@ exports[`Switch should render as disabled when set 1`] = `
 >
   <label
     htmlFor="disabledSwitch"
-    onFocus={[Function]}
+    onBlur={[Function]}
     onKeyDown={[Function]}
     onMouseDown={[Function]}
   >

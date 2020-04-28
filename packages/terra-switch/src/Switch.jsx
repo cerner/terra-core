@@ -2,7 +2,7 @@ import React, { useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { FormattedMessage } from 'react-intl';
-import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
+import { enableFocusStyles, disableFocusStyles, restoreFocusStyles } from './_SwitchUtils';
 import styles from './Switch.module.scss';
 
 const cx = classNames.bind(styles);
@@ -65,41 +65,11 @@ const Switch = (props) => {
       // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
       // This will set focus on the button when clicked.
       sliderButton.current.focus();
-      sliderButton.current.setAttribute('data-focus-styles-enabled', 'false');
       if (onChange) {
         onChange(!checked, event);
       }
     },
     [checked, onChange],
-  );
-
-  const handleKeyDown = useCallback(
-    (event) => {
-      if (event.nativeEvent.keyCode === KEY_RETURN || event.nativeEvent.keyCode === KEY_SPACE) {
-        sliderButton.current.setAttribute('data-focus-styles-enabled', 'true');
-        if (onChange) {
-          onChange(!checked, event);
-        }
-        // To prevent onclick that gets triggred on return and space key press
-        event.preventDefault();
-      }
-    },
-    [checked, onChange],
-  );
-
-  const handleMouseDown = useCallback(
-    (event) => {
-      sliderButton.current.setAttribute('data-focus-styles-enabled', 'false');
-      event.preventDefault();
-    },
-    [],
-  );
-
-  const handleFocus = useCallback(
-    () => {
-      sliderButton.current.setAttribute('data-focus-styles-enabled', 'true');
-    },
-    [],
   );
 
   const switchClassNames = cx([
@@ -132,9 +102,9 @@ const Switch = (props) => {
       {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
       <label
         htmlFor={switchId}
-        onMouseDown={handleMouseDown}
-        onKeyDown={handleKeyDown}
-        onFocus={handleFocus}
+        onMouseDown={disableFocusStyles}
+        onKeyDown={enableFocusStyles}
+        onBlur={restoreFocusStyles}
       >
         <div className={switchClassNames}>
           <div className={cx('label-container')}>
