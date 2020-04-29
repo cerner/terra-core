@@ -1,11 +1,12 @@
 {
   "name": "terra-overlay",
   "main": "lib/Overlay.js",
-  "version": "3.45.0",
+  "version": "3.46.0",
   "description": "The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-overlay"
   },
   "keywords": [
     "Cerner",
@@ -32,8 +33,8 @@
     "mutationobserver-shim": "0.3.3",
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
-    "terra-button": "^3.36.0",
-    "terra-icon": "^3.29.0",
+    "terra-button": "^3.37.0",
+    "terra-icon": "^3.30.0",
     "wicg-inert": "^3.0.0"
   },
   "scripts": {
