@@ -3,7 +3,8 @@ import React, {
   useRef,
 } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
 import { injectIntl, intlShape } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import {
@@ -19,7 +20,7 @@ import {
 
 import styles from './NativeSelect.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -175,19 +176,22 @@ const NativeSelect = ({
     value: value || currentValue,
   };
 
-  const nativeClassNames = cx(
-    'native',
-    theme.className,
-    { disabled },
-    { invalid: isInvalid },
-    { incomplete: required && isIncomplete },
-    { placeholder: isCurrentPlaceholder(selectAttrs.value, placeholder) },
+  const nativeClassNames = classNames(
+    cx(
+      'native',
+      theme.className,
+      { disabled },
+      { invalid: isInvalid },
+      { incomplete: required && isIncomplete },
+      { placeholder: isCurrentPlaceholder(selectAttrs.value, placeholder) },
+    ),
+    customProps.className,
   );
 
   return (
     <div
       {...customProps}
-      className={customProps.className ? `${nativeClassNames} ${customProps.className}` : nativeClassNames}
+      className={nativeClassNames}
       ref={refSelect}
       data-focus-interaction="none"
     >
