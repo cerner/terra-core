@@ -6,6 +6,20 @@ Unreleased
 ### Added
 * Added an interaction media query to apply `hover` styles only on non-touch devices.
 
+3.37.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+3.36.0 - (April 22, 2020)
+------------------
+### Fixed
+* Converted terra-theme-context from a peer depenency to a dependency.
+
+3.35.0 - (April 22, 2020)
+------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
 * Updated docs for documentation link

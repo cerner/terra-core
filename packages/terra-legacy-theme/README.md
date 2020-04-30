@@ -61,7 +61,7 @@ The postcss-assets-webpack-plugin gets css, extracted by [ExtractTextPlugin](htt
 
 This means you should also have extract-text-webpack-plugin setup in your webpack config. We recommend setting up the ExtractTextPlugin as outlined in the [Terra Getting Started Guide](https://terra-ui.herokuapp.com/getting-started#configuring-webpack) which includes a sample webpack config.
 
-Alternatively, if you use [terra-toolkit's provided default webpack config](https://github.com/cerner/terra-toolkit/blob/master/config/webpack/webpack.config.js), it has all of this configured.
+Alternatively, if you use [terra-toolkit's provided default webpack config](https://github.com/cerner/terra-toolkit-boneyard/blob/master/config/webpack/webpack.config.js), it has all of this configured.
 
 
 #### PostCSS Assets Plugin Webpack Config

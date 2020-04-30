@@ -1,11 +1,12 @@
 {
   "name": "terra-show-hide",
   "main": "lib/ShowHide.js",
-  "version": "2.31.0",
+  "version": "2.33.0",
   "description": "Show/Hide component that previews a small section of content or shows the full content with the click of a button",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-show-hide"
   },
   "keywords": [
     "Cerner",
@@ -33,7 +34,7 @@
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
     "terra-mixins": "^1.35.0",
-    "terra-toggle": "^3.29.0"
+    "terra-toggle": "^3.31.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

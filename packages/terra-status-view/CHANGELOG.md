@@ -3,6 +3,21 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.23.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+4.22.0 - (April 22, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.21.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated documentation link in README
 
