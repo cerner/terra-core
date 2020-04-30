@@ -184,6 +184,15 @@ class Frame extends React.Component {
     this.selectMenu = '#terra-select-menu';
   }
 
+  componentDidMount() {
+    // eslint-disable-next-line no-prototype-builtins
+    if (!Element.prototype.hasOwnProperty('inert')) {
+      // IE10 throws an error if wicg-inert is imported too early, as wicg-inert tries to set an observer on document.body which may not exist on import
+      // eslint-disable-next-line global-require
+      require('wicg-inert/dist/inert');
+    }
+  }
+
   componentDidUpdate(previousProps, previousState) {
     if (FrameUtil.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
       clearTimeout(this.debounceTimer);
@@ -290,7 +299,7 @@ class Frame extends React.Component {
      */
     if (event && event.target
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
-      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
+        || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
 
       // Allows time for state update to render select menu DOM before shifting focus to it
@@ -731,21 +740,21 @@ class Frame extends React.Component {
         />
         {this.state.isOpen
           && (
-          <Dropdown
-            {...dropdownAttrs}
-            id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
-            target={this.select}
-            isAbove={this.state.isAbove}
-            isTouchAccessible={isTouchAccessible}
-            isEnabled={this.state.isPositioned}
-            onResize={this.positionDropdown}
-            refCallback={(ref) => { this.dropdown = ref; }}
-            style={FrameUtil.dropdownStyle(dropdownAttrs, this.state)} // eslint-disable-line react/forbid-component-props
-          >
-            <Menu {...menuProps}>
-              {children}
-            </Menu>
-          </Dropdown>
+            <Dropdown
+              {...dropdownAttrs}
+              id={this.state.isOpen ? 'terra-select-dropdown' : undefined}
+              target={this.select}
+              isAbove={this.state.isAbove}
+              isTouchAccessible={isTouchAccessible}
+              isEnabled={this.state.isPositioned}
+              onResize={this.positionDropdown}
+              refCallback={(ref) => { this.dropdown = ref; }}
+              style={FrameUtil.dropdownStyle(dropdownAttrs, this.state)} // eslint-disable-line react/forbid-component-props
+            >
+              <Menu {...menuProps}>
+                {children}
+              </Menu>
+            </Dropdown>
           )}
       </div>
     );
