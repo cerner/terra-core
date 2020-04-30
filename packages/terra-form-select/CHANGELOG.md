@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed inconsistent hover interaction styles across all variants of select.
 
 6.3.0 - (April 28, 2020)
 ------------------
