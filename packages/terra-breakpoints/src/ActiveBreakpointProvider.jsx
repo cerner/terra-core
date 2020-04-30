@@ -23,10 +23,12 @@ class ActiveBreakpointProvider extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.setActiveBreakpoint);
+    window.addEventListener('orientationchange', this.setActiveBreakpoint);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.setActiveBreakpoint);
+    window.removeEventListener('orientationchange', this.setActiveBreakpoint);
   }
 
   setActiveBreakpoint() {
