@@ -159,6 +159,7 @@ class Frame extends React.Component {
   componentDidUpdate(previousProps, previousState) {
     if (FrameUtil.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
       clearTimeout(this.debounceTimer);
+      this.dropdown.setAttribute('inert', '');
       this.debounceTimer = setTimeout(this.positionDropdown, !previousState.isOpen ? 0 : 100);
     }
   }
@@ -215,6 +216,11 @@ class Frame extends React.Component {
 
     // Sets Focus to dropdown menu after dropdown menu is postioned.
     const moveFocusToDropdown = () => {
+      if (this.state.isPositioned) {
+        this.dropdown.removeAttribute('inert');
+        this.dropdown.removeAttribute('aria-hidden');
+        this.selectMenu.setAttribute('tabIndex', '0');
+      }
       if (this.selectMenu) {
         this.selectMenu.focus();
       }
@@ -265,7 +271,7 @@ class Frame extends React.Component {
           _onBlur();
         }
       }, 10);
-    // Modern browsers support event.relatedTarget
+      // Modern browsers support event.relatedTarget
     } else if (this.selectMenu !== event.relatedTarget) {
       _onBlur();
     }

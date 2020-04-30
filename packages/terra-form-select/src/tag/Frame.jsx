@@ -187,6 +187,7 @@ class Frame extends React.Component {
   componentDidUpdate(previousProps, previousState) {
     if (FrameUtil.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
       clearTimeout(this.debounceTimer);
+      this.dropdown.setAttribute('inert', '');
       this.debounceTimer = setTimeout(this.positionDropdown, !previousState.isOpen ? 0 : 100);
     }
   }
@@ -325,7 +326,15 @@ class Frame extends React.Component {
 
     const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
 
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible));
+    const updateDropdownAttributes = () => {
+      if (this.state.isPositioned) {
+        this.dropdown.removeAttribute('inert');
+        this.dropdown.removeAttribute('aria-hidden');
+        document.querySelector(this.selectMenu).setAttribute('tabIndex', '0');
+      }
+    };
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible), updateDropdownAttributes);
   }
 
   /**
