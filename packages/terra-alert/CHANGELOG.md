@@ -4,8 +4,12 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added clinical-lowlight-theme wdio screenshots
 * Added `unsatisfied` and `unverified` types
+
+4.27.0 - (April 28, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme wdio screenshots
 
 ### Changed
 * Removed "View Component Source Code" from docs in favour of source code badge
