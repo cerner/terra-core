@@ -15,10 +15,12 @@
     box-shadow: map-get($color-map, focus-box-shadow);
   }
 
-  &:hover {
-    background-color: map-get($color-map, hover-background-color);
-    border-color: map-get($color-map, hover-border-color);
-    color: map-get($color-map, hover-color);
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: map-get($color-map, hover-background-color);
+      border-color: map-get($color-map, hover-border-color);
+      color: map-get($color-map, hover-color);
+    }
   }
 
   &.is-active,
