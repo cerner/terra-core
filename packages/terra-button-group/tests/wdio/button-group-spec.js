@@ -106,18 +106,21 @@ Terra.describeViewports('Button Group', ['huge'], () => {
 
     Terra.it.validatesElement('button3-unselected');
   });
-  describe('Button', () => {
+  describe('Button Focus', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-button-group/button-group/button-group-multi-select');
     });
-    it('should not lose focus when switching between windows', () => {
+    it('should focus and select second button', () => {
       browser.keys('Tab');
       browser.keys('Tab');
       browser.keys('Space');
+    });
+    Terra.it.validatesElement('before switching window');
+    it('should switch window', () => {
       browser.newWindow('https://engineering.cerner.com/terra-core/raw/tests/terra-button-group/button-group/button-group-is-block', 'terra-core');
       browser.switchTab();
     });
-    Terra.it.validatesElement('should not lose focus when switching between windows');
+    Terra.it.validatesElement('after switching window');
   });
 });
 
