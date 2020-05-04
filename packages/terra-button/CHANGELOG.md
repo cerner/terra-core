@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added an interaction media query to apply `hover` styles only on non-touch devices.
+
+3.37.0 - (April 28, 2020)
+------------------
 ### Changed
 * Removed "View Component Source Code" from docs in favour of source code badge
 ### Added
