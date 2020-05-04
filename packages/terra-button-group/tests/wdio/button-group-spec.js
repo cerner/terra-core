@@ -106,6 +106,19 @@ Terra.describeViewports('Button Group', ['huge'], () => {
 
     Terra.it.validatesElement('button3-unselected');
   });
+  describe('Button', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-multi-select');
+    });
+    it('should not lose focus when switching between windows', () => {
+      browser.keys('Tab');
+      browser.keys('Tab');
+      browser.keys('Space');
+      browser.newWindow('https://engineering.cerner.com/terra-core/raw/tests/terra-button-group/button-group/button-group-is-block', 'terra-core');
+      browser.switchTab();
+    });
+    Terra.it.validatesElement('should not lose focus when switching between windows');
+  });
 });
 
 Terra.describeViewports('Button Group', ['tiny', 'huge'], () => {
