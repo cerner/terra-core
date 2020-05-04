@@ -27,10 +27,6 @@ const propTypes = {
    * A list of keys of the buttons that should be selected.
    */
   selectedKeys: PropTypes.arrayOf(PropTypes.string),
-  /**
-   * Callback function triggered when button gains focus.
-   */
-  onFocus: PropTypes.func,
 };
 
 const defaultProps = {
@@ -68,7 +64,6 @@ class ButtonGroup extends React.Component {
       isBlock,
       onChange,
       selectedKeys,
-      onFocus,
       ...customProps
     } = this.props;
 
