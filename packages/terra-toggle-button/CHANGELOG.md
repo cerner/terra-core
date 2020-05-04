@@ -19,6 +19,7 @@ Unreleased
 3.34.0 - (April 22, 2020)
 ------------------
 ### Changed
+* Updated wdio snapshots due to changes in button.
 * Updated documentation link in README
 
 3.33.0 - (March 31, 2020)
