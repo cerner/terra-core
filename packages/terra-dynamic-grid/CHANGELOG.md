@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated syntax for props description
 
 3.24.0 - (April 28, 2020)
 ------------------
