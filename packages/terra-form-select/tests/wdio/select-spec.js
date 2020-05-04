@@ -725,7 +725,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
     });
 
-    describe('combobox should open close and open dropdown by clicking root and hover first option', () => {
+    describe('combobox should hover first option after reopening while clicking root to close', () => {
       it('default should open the dropdown by clicking the select', () => {
         browser.click('[data-terra-select]');
         browser.click('#root');
@@ -1086,7 +1086,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
     });
 
-    describe('multiple should open close and open dropdown by clicking root and hover first option', () => {
+    describe('multiple should hover first option after reopening while clicking root to close', () => {
       it('default should open the dropdown by clicking the select', () => {
         browser.click('[data-terra-select]');
         browser.click('#root');
@@ -1512,7 +1512,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
     });
 
-    describe('search should open close and open dropdown by clicking root and hover first option', () => {
+    describe('search should hover first option after reopening while clicking root to close', () => {
       it('default should open the dropdown by clicking the select', () => {
         browser.click('[data-terra-select]');
         browser.click('#root');
@@ -1879,7 +1879,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
     });
 
-    describe('tag should open close and open dropdown by clicking root and hover first option', () => {
+    describe('tag should hover first option after reopening while clicking root to close', () => {
       it('default should open the dropdown by clicking the select', () => {
         browser.click('[data-terra-select]');
         browser.click('#root');
@@ -2146,7 +2146,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Default Variant Hover- uncontrolled', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-hover'));
 
-    describe('default should open close and open dropdown by clicking root and hover first option', () => {
+    describe('default should hover first option after reopening while clicking root to close', () => {
       it('default should open the dropdown by clicking the select', () => {
         browser.click('[data-terra-select]');
         browser.click('#root');
