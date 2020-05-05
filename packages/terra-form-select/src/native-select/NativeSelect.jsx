@@ -143,6 +143,7 @@ const NativeSelect = ({
   ...customProps
 }) => {
   const [currentValue, setCurrentValue] = useState(defaultValue || getFirstValue(options, placeholder));
+  const refIsControlled = useRef(!defaultValue && value);
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
 
@@ -161,10 +162,15 @@ const NativeSelect = ({
     if (onChange) {
       onChange(event);
     }
-    if (!value) {
+    if (!refIsControlled.current) {
       setCurrentValue(event.currentTarget.value);
     }
   };
+
+  let controlledValue;
+  if (refIsControlled.current) {
+    controlledValue = value || getFirstValue(options, placeholder);
+  }
 
   const selectAttrs = {
     'aria-describedby': ariaDescribedBy,
@@ -173,7 +179,7 @@ const NativeSelect = ({
     disabled,
     'aria-invalid': isInvalid || undefined,
     required,
-    value: value || currentValue,
+    value: controlledValue || currentValue,
   };
 
   const nativeClassNames = classNames(
