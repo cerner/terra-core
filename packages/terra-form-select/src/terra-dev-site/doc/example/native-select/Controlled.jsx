@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const ControlledExample = () => {
-  const [value, setValue] = useState('mercedes');
+  const [value, setValue] = useState('volvo');
 
   return (
     <>
@@ -23,8 +23,8 @@ const ControlledExample = () => {
         ]}
         className={cx('form-select')}
       />
-      <button onClick={() => setValue()}>Clear</button>
-      <button onClick={() => setValue('volvo')}>Set Volvo</button>
+      <button type="button" onClick={() => setValue()}>Clear</button>
+      <button type="button" onClick={() => setValue('mercedes')}>Set Mercedes</button>
     </>
   );
 };
