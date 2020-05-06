@@ -1,7 +1,7 @@
 {
   "name": "terra-dynamic-grid",
   "main": "lib/DynamicGrid.js",
-  "version": "3.24.0",
+  "version": "3.25.0",
   "description": "The terra-dynamic-grid component provides users a way to build dynamic layouts using CSS Grids.",
   "repository": {
     "type": "git",

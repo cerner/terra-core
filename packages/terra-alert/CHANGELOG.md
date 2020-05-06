@@ -6,6 +6,11 @@ Unreleased
 ### Added
 * Added `unsatisfied` and `unverified` types
 
+4.28.0 - (May 5, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 4.27.0 - (April 28, 2020)
 ------------------
 ### Added
