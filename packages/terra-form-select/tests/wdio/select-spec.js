@@ -300,6 +300,18 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       after(() => browser.click('#root'));
     });
+
+    describe('default should open dropdown and ensure selected option is hovered', () => {
+      it('default should open the dropdown by clicking the select', () => {
+        browser.click('[data-terra-select]');
+        browser.click('#root');
+        browser.click('[data-terra-select]');
+      });
+
+      Terra.it.validatesElement('default-selected-and-hovered', { selector: '#root' });
+
+      after(() => browser.click('#root'));
+    });
   });
 
   describe('Default Variant - Multiple Dropdown', () => {
