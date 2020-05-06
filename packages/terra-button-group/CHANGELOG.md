@@ -4,8 +4,10 @@ ChangeLog
 Unreleased
 ----------
 ### Fixed
-* Fixed button losing focus when switching between windows
+* Fixed button losing focus when switching window
 
+3.38.0 - (May 5, 2020)
+------------------
 ### Added
 * Added an interaction media query to apply `hover` styles only on non-touch devices.
 
