@@ -3,11 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+### Added 
+* Added selectable demographics banner
+* Support terra-avatar to replace profile photo prop.
+* Added flag icon to denote confidentiality.
 
 3.36.0 - (April 28, 2020)
 ------------------
 ### Changed
 * Removed "View Component Source Code" from docs in favour of source code badge
+
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
@@ -16,10 +21,6 @@ Unreleased
 ### Changed
 * Updated documentation link in README
 * Removed extra lines from README
-* Replaced terra-image with terra-avatar for demographics profile photo.
-
-### Added 
-* Added selectable demographics banner
 
 3.34.0 - (March 10, 2020)
 ------------------
