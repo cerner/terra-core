@@ -173,9 +173,19 @@ class Frame extends React.Component {
     this.selectMenu = '#terra-select-menu';
   }
 
+  componentDidMount() {
+    // eslint-disable-next-line no-prototype-builtins
+    if (!Element.prototype.hasOwnProperty('inert')) {
+      // IE10 throws an error if wicg-inert is imported too early, as wicg-inert tries to set an observer on document.body which may not exist on import
+      // eslint-disable-next-line global-require
+      require('wicg-inert/dist/inert');
+    }
+  }
+
   componentDidUpdate(previousProps, previousState) {
     if (FrameUtil.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
       clearTimeout(this.debounceTimer);
+      this.dropdown.setAttribute('inert', '');
       this.debounceTimer = setTimeout(this.positionDropdown, !previousState.isOpen ? 0 : 100);
     }
   }
@@ -287,7 +297,15 @@ class Frame extends React.Component {
 
     const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
 
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible));
+    const updateDropdownAttributes = () => {
+      if (this.state.isPositioned) {
+        this.dropdown.removeAttribute('inert');
+        this.dropdown.removeAttribute('aria-hidden');
+        document.querySelector(this.selectMenu).setAttribute('tabIndex', '0');
+      }
+    };
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible), updateDropdownAttributes);
   }
 
   /**
