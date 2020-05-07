@@ -8,6 +8,42 @@ jobs:
     - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
       with:
         action-token: "${{ secrets.MOVING_ISSUES_TOKEN }}"
-        project-url: "https://github.com/orgs/cerner/projects/3"
-        column-name: "To Do"
-        milestone-name: "Terra Application 2.0.0"
+        project-url: "https://github.com/orgs/cerner/projects/4"
+        column-name: "Planned"
+        milestone-name: "2020 Q2"
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.MOVING_ISSUES_TOKEN }}"
+        project-url: "https://github.com/orgs/cerner/projects/4"
+        column-name: "Planned"
+        milestone-name: "2020 Q3"
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.MOVING_ISSUES_TOKEN }}"
+        project-url: "https://github.com/orgs/cerner/projects/4"
+        column-name: "Planned"
+        milestone-name: "2020 Q4"
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.MOVING_ISSUES_TOKEN }}"
+        project-url: "https://github.com/orgs/cerner/projects/4"
+        column-name: "Planned"
+        milestone-name: "2021 Q1"
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.MOVING_ISSUES_TOKEN }}"
+        project-url: "https://github.com/orgs/cerner/projects/4"
+        column-name: "Planned"
+        milestone-name: "2021 Q2"
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.MOVING_ISSUES_TOKEN }}"
+        project-url: "https://github.com/orgs/cerner/projects/4"
+        column-name: "Planned"
+        milestone-name: "2021 Q3"
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.MOVING_ISSUES_TOKEN }}"
+        project-url: "https://github.com/orgs/cerner/projects/4"
+        column-name: "Planned"
+        milestone-name: "2021 Q4"
