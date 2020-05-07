@@ -74,7 +74,7 @@
     &.placeholder {
       color: var(--terra-form-select-native-placeholder-color, rgba(21, 33, 41, 0.62));
       font-size: var(--terra-form-select-native-placeholder-font-size, 1.143rem);
-      font-style: var(--terra-form-select-native-placeholder-font-style);
+      font-style: var(--terra-form-select-native-placeholder-font-style, normal);
     }
 
     &.disabled {
