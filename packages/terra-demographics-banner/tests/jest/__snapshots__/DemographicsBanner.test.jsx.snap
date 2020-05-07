@@ -4,7 +4,6 @@ exports[`renders a blank banner wrapper 1`] = `
 <DemographicsBannerDisplay
   age="Terra.demographicsBanner.noDataProvided"
   applicationContent={null}
-  color="auto"
   dateOfBirth="Terra.demographicsBanner.noDataProvided"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
@@ -15,7 +14,7 @@ exports[`renders a blank banner wrapper 1`] = `
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={Object {}}
-  isAriaHidden={false}
+  isConfidential={false}
   personName="Terra.demographicsBanner.noDataProvided"
   photo={null}
   postMenstrualAge={null}
@@ -35,7 +34,16 @@ exports[`renders the banner wrapper with all props 1`] = `
       5%
     </span>
   }
-  color="auto"
+  avatar={
+    Object {
+      "alt": "Johnathon Doe",
+      "color": "neutral",
+      "hashValue": "alternative hash",
+      "image": "",
+      "initials": "JD",
+      "isAriaHidden": true,
+    }
+  }
   dateOfBirth="May 9, 1993"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
@@ -51,7 +59,7 @@ exports[`renders the banner wrapper with all props 1`] = `
       "REA": "3JSDA",
     }
   }
-  isAriaHidden={false}
+  isConfidential={false}
   personName="Johnathon Doe"
   photo=""
   postMenstrualAge="April 7, 2016"

@@ -12,11 +12,10 @@ exports[`renders a blank banner wrapper 1`] = `
     <InjectIntl(DemographicsBanner)
       applicationContent={null}
       className="selectable-demographics-banner"
-      color="auto"
       deceasedDate={null}
       gestationalAge={null}
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       postMenstrualAge={null}
       preferredFirstName={null}
     />
@@ -41,6 +40,7 @@ exports[`renders a blank banner wrapper 1`] = `
 
 exports[`renders the banner wrapper with all props 1`] = `
 <BackgroundTile
+  hashValue="alternative hash"
   isDeceased={true}
 >
   <SelectableTile
@@ -51,7 +51,6 @@ exports[`renders the banner wrapper with all props 1`] = `
   >
     <InjectIntl(DemographicsBanner)
       age="25 Years"
-      alt="JD"
       applicationContent={
         <span
           className="risk-score"
@@ -59,21 +58,28 @@ exports[`renders the banner wrapper with all props 1`] = `
           5%
         </span>
       }
+      avatar={
+        Object {
+          "alt": "Johnathon Doe",
+          "color": "neutral",
+          "hashValue": "alternative hash",
+          "image": "",
+          "initials": "JD",
+          "isAriaHidden": true,
+        }
+      }
       className="selectable-demographics-banner"
-      color="neutral"
       dateOfBirth="May 9, 1993"
       deceasedDate="January 10, 2020"
       gender="Male"
       gestationalAge="April 5, 2016"
-      hashValue="alternative hash"
       identifiers={
         Object {
           "MRN": 12343,
           "REA": "3JSDA",
         }
       }
-      initials="JD"
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge="April 7, 2016"

@@ -4,18 +4,22 @@ exports[`renders small banner that contains all valid information 1`] = `
 <section
   className="demographics-banner"
 >
-  <h1
-    className="person-name"
+  <div
+    className="row"
   >
-    <span>
-      Johnathon Doe
-      <span
-        className="preferred-first-name"
-      >
-        John
+    <h1
+      className="person-name"
+    >
+      <span>
+        Johnathon Doe
+        <span
+          className="preferred-first-name"
+        >
+          John
+        </span>
       </span>
-    </span>
-  </h1>
+    </h1>
+  </div>
   <div
     className="person-details"
   >

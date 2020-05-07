@@ -19,12 +19,16 @@ export default () => {
         id="postMenstrualDemographics"
         applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
         age="10 Weeks"
-        alt="Johnathon Doe"
+        avatar={{
+          alt: 'Johnathon Doe',
+          color: 'neutral',
+          image: demographicsImage,
+          initials: 'JD',
+          isAriaHidden: true,
+        }}
         dateOfBirth="October 25, 2018"
         gender="Male"
         identifiers={{ MRN: 12343, REA: '3JSDA' }}
-        initials="JD"
-        photo={demographicsImage}
         personName="Johnathon Doe"
         postMenstrualAge="43 Weeks"
         preferredFirstName="John"

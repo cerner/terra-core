@@ -31,6 +31,13 @@
     margin-right: 0.357em;
   }
 
+  .confidential-icon {
+    display: flex;
+    flex-shrink: 0;
+    font-size: 1.143rem;
+    margin-right: 0.5rem;
+  }
+
   .person-name {
     flex: 2;
     font-size: 1.143rem;

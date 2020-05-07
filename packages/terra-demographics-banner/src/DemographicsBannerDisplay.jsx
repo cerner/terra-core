@@ -4,6 +4,7 @@ import ResponsiveElement from 'terra-responsive-element';
 import './DemographicsBanner.module.scss';
 import SmallDemographicsBannerDisplay from './_SmallDemographicsBannerDisplay';
 import LargeDemographicsBannerDisplay from './_LargeDemographicsBannerDisplay';
+import DemographicsBannerUtils from './_sharedObjects';
 
 const propTypes = {
   /**
@@ -11,20 +12,13 @@ const propTypes = {
    */
   age: PropTypes.string,
   /**
-   * Specifies the alternative text for the photo.
-   * CAN WE JUST TREAT personName AS ALT AND NOT NEED THIS PROP???
-   */
-  alt: PropTypes.string,
-  /**
    * Application content to display in the banner.
    */
   applicationContent: PropTypes.node,
   /**
-   * Sets the background color of the photo. Defaults to `auto`. Accepted color variants are theme specific.
-   * One of: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
+   * Avatar to display in the banner. `photo` prop will be ignored if avatar is used.
    */
-  color: PropTypes.oneOf(['auto', 'neutral', 'one', 'two', 'three', 'four',
-    'five', 'six', 'seven', 'eight', 'nine', 'ten']),
+  avatar: PropTypes.shape(DemographicsBannerUtils.avatarShape),
   /**
    * The persons date of birth
    */
@@ -62,22 +56,14 @@ const propTypes = {
    */
   gestationalAgeFullText: PropTypes.string,
   /**
-   * Value used for the hash function when color is set to `auto`. If not provided, hash function utilizes alt.
-   */
-  hashValue: PropTypes.string,
-  /**
    * Additional key value identifiers of a person's demographic information
    */
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
-   * One or two letters to display the initials in the photo.
+   * Whether to display an icon to confidentiality.
    */
-  initials: PropTypes.string,
-  /**
-   * Whether to hide photo from the accessibility tree.
-   */
-  isAriaHidden: PropTypes.bool,
+  isConfidential: PropTypes.bool,
   /**
    * Full Name of the person
    */
@@ -106,9 +92,8 @@ const propTypes = {
 
 const defaultProps = {
   age: '--',
-  alt: undefined,
   applicationContent: null,
-  color: 'auto',
+  avatar: undefined,
   dateOfBirth: '--',
   dateOfBirthLabel: 'DOB',
   dateOfBirthFullText: 'Date of Birth',
@@ -118,9 +103,8 @@ const defaultProps = {
   gestationalAge: null,
   gestationalAgeLabel: 'GA',
   gestationalAgeFullText: 'Gestational Age',
-  hashValue: undefined,
   identifiers: {},
-  isAriaHidden: false,
+  isConfidential: false,
   personName: '--',
   postMenstrualAge: null,
   postMenstrualAgeLabel: 'PMA',

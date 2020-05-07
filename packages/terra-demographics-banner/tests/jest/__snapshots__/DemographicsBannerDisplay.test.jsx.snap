@@ -7,7 +7,6 @@ exports[`renders a banner that has basic information 1`] = `
     <_default
       age="24"
       applicationContent={null}
-      color="auto"
       dateOfBirth="March 30, 2017"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -18,7 +17,7 @@ exports[`renders a banner that has basic information 1`] = `
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Terra Demographics Banner"
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -30,7 +29,6 @@ exports[`renders a banner that has basic information 1`] = `
     <_default
       age="24"
       applicationContent={null}
-      color="auto"
       dateOfBirth="March 30, 2017"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -41,7 +39,7 @@ exports[`renders a banner that has basic information 1`] = `
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Terra Demographics Banner"
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -59,7 +57,6 @@ exports[`renders a blank banner properly 1`] = `
     <_default
       age="--"
       applicationContent={null}
-      color="auto"
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -70,7 +67,7 @@ exports[`renders a blank banner properly 1`] = `
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="--"
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -82,7 +79,6 @@ exports[`renders a blank banner properly 1`] = `
     <_default
       age="--"
       applicationContent={null}
-      color="auto"
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -93,7 +89,7 @@ exports[`renders a blank banner properly 1`] = `
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="--"
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -111,7 +107,6 @@ exports[`renders gestational date with a default label when the label is not pro
     <_default
       age="--"
       applicationContent={null}
-      color="auto"
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -122,7 +117,7 @@ exports[`renders gestational date with a default label when the label is not pro
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="--"
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -134,7 +129,6 @@ exports[`renders gestational date with a default label when the label is not pro
     <_default
       age="--"
       applicationContent={null}
-      color="auto"
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -145,7 +139,7 @@ exports[`renders gestational date with a default label when the label is not pro
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="--"
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -163,7 +157,6 @@ exports[`renders post menstrural date with a default label when the label is not
     <_default
       age="--"
       applicationContent={null}
-      color="auto"
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -174,7 +167,7 @@ exports[`renders post menstrural date with a default label when the label is not
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="--"
       postMenstrualAge="April 5, 2016"
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -186,7 +179,6 @@ exports[`renders post menstrural date with a default label when the label is not
     <_default
       age="--"
       applicationContent={null}
-      color="auto"
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -197,7 +189,7 @@ exports[`renders post menstrural date with a default label when the label is not
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="--"
       postMenstrualAge="April 5, 2016"
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -215,7 +207,6 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
     <_default
       age="24"
       applicationContent={null}
-      color="auto"
       dateOfBirth="June 15, 2014"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -226,7 +217,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Old Terra Demographics Banner"
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -238,7 +229,6 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
     <_default
       age="24"
       applicationContent={null}
-      color="auto"
       dateOfBirth="June 15, 2014"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -249,7 +239,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
       identifiers={Object {}}
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Old Terra Demographics Banner"
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -273,7 +263,6 @@ exports[`renders the banner appropriately for a person with gestational and post
           5%
         </span>
       }
-      color="auto"
       dateOfBirth="May 9, 1993"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -289,7 +278,7 @@ exports[`renders the banner appropriately for a person with gestational and post
           "REA": "3JSDA",
         }
       }
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge="April 7, 2016"
@@ -308,7 +297,6 @@ exports[`renders the banner appropriately for a person with gestational and post
           5%
         </span>
       }
-      color="auto"
       dateOfBirth="May 9, 1993"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -324,7 +312,7 @@ exports[`renders the banner appropriately for a person with gestational and post
           "REA": "3JSDA",
         }
       }
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge="April 7, 2016"
@@ -349,7 +337,6 @@ exports[`renders the banner properly for a deceased person with additional appli
           5%
         </span>
       }
-      color="auto"
       dateOfBirth="May 9, 1993"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -365,7 +352,7 @@ exports[`renders the banner properly for a deceased person with additional appli
           "REA": "3JSDA",
         }
       }
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge={null}
@@ -384,7 +371,6 @@ exports[`renders the banner properly for a deceased person with additional appli
           5%
         </span>
       }
-      color="auto"
       dateOfBirth="May 9, 1993"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -400,7 +386,7 @@ exports[`renders the banner properly for a deceased person with additional appli
           "REA": "3JSDA",
         }
       }
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge={null}
@@ -425,7 +411,16 @@ exports[`renders the banner that contains additional information 1`] = `
           5%
         </span>
       }
-      color="auto"
+      avatar={
+        Object {
+          "alt": "Johnathon Doe",
+          "color": "neutral",
+          "hashValue": "alternative hash",
+          "image": "",
+          "initials": "JD",
+          "isAriaHidden": true,
+        }
+      }
       dateOfBirth="May 9, 1993"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -441,7 +436,7 @@ exports[`renders the banner that contains additional information 1`] = `
           "REA": "3JSDA",
         }
       }
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge={null}
@@ -460,7 +455,16 @@ exports[`renders the banner that contains additional information 1`] = `
           5%
         </span>
       }
-      color="auto"
+      avatar={
+        Object {
+          "alt": "Johnathon Doe",
+          "color": "neutral",
+          "hashValue": "alternative hash",
+          "image": "",
+          "initials": "JD",
+          "isAriaHidden": true,
+        }
+      }
       dateOfBirth="May 9, 1993"
       dateOfBirthFullText="Date of Birth"
       dateOfBirthLabel="DOB"
@@ -476,7 +480,7 @@ exports[`renders the banner that contains additional information 1`] = `
           "REA": "3JSDA",
         }
       }
-      isAriaHidden={false}
+      isConfidential={false}
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge={null}

@@ -34,4 +34,10 @@ Terra.describeViewports('Demographics Banner', ['tiny', 'large'], () => {
 
     Terra.it.validatesElement();
   });
+
+  describe('Avatar', () => {
+    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/avatar-demographics-banner'));
+
+    Terra.it.validatesElement();
+  });
 });

@@ -2,6 +2,7 @@
 import classNames from 'classnames/bind';
 import React from 'react';
 import Avatar from 'terra-avatar';
+import IconFlag from 'terra-icon/lib/icon/IconFlag';
 import styles from './DemographicsBanner.module.scss';
 import DemographicsBannerUtils from './_sharedObjects';
 
@@ -10,9 +11,8 @@ const cx = classNames.bind(styles);
 export default (props) => {
   const {
     age,
-    alt,
     applicationContent,
-    color,
+    avatar,
     dateOfBirth,
     dateOfBirthFullText,
     dateOfBirthLabel,
@@ -22,10 +22,8 @@ export default (props) => {
     gestationalAge,
     gestationalAgeFullText,
     gestationalAgeLabel,
-    hashValue,
     identifiers,
-    initials,
-    isAriaHidden,
+    isConfidential,
     personName,
     photo,
     postMenstrualAge,
@@ -44,17 +42,16 @@ export default (props) => {
 
   let profilePhoto;
 
-  if (alt && initials) {
-    const avatarImage = photo && photo.type === String ? photo : undefined;
+  if (avatar && avatar.alt && avatar.initials) {
     profilePhoto = (
       <Avatar
         className={cx('profile-photo')}
-        alt={alt}
-        color={color}
-        hashValue={hashValue}
-        image={avatarImage}
-        initials={initials}
-        isAriaHidden={isAriaHidden}
+        alt={avatar.alt}
+        color={avatar.color}
+        hashValue={avatar.hashValue}
+        image={avatar.image}
+        initials={avatar.initials}
+        isAriaHidden={avatar.isAriaHidden}
         isDeceased={!!deceasedDate}
       />
     );
@@ -75,6 +72,7 @@ export default (props) => {
       {profilePhoto}
       <div className={cx('content')}>
         <div className={cx('row')}>
+          { isConfidential ? <span className={cx('confidential-icon')}><IconFlag /></span> : null }
           <h1 className={cx('person-name')}>
             { personName }
             { preferredFirstName && <span className={cx('preferred-first-name')}>{ preferredFirstName }</span> }

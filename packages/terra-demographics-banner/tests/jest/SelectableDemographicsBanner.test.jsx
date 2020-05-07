@@ -18,9 +18,15 @@ it('renders the banner wrapper with all props', () => {
   const banner = shallowWithIntl((
     <SelectableDemographicsBanner
       age="25 Years"
-      alt="JD"
       applicationContent={<span className="risk-score">5%</span>}
-      color="neutral"
+      avatar={{
+        alt: 'Johnathon Doe',
+        color: 'neutral',
+        hashValue: 'alternative hash',
+        image: '',
+        initials: 'JD',
+        isAriaHidden: true,
+      }}
       dateOfBirth="May 9, 1993"
       deceasedDate="January 10, 2020"
       gender="Male"
@@ -29,8 +35,6 @@ it('renders the banner wrapper with all props', () => {
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
       infoButtonId="infoButton"
       infoButtonOnClick={buttonClick}
-      initials="JD"
-      isAriaHidden={false}
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge="April 7, 2016"

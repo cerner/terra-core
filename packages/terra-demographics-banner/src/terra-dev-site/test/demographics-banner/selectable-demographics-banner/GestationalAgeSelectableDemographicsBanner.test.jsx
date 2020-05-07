@@ -19,13 +19,17 @@ export default () => {
         id="gestationalDemographics"
         applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
         age="10 Weeks"
-        alt="Johnathon Doe"
+        avatar={{
+          alt: 'Johnathon Doe',
+          color: 'neutral',
+          image: demographicsImage,
+          initials: 'JD',
+          isAriaHidden: true,
+        }}
         color="two"
         dateOfBirth="October 25, 2018"
         gender="Male"
         gestationalAge="33 Weeks"
-        initials="JD"
-        photo={demographicsImage}
         personName="Johnathon Doe"
         preferredFirstName="John"
         selectableTileOnClick={handleDemographicsClick}

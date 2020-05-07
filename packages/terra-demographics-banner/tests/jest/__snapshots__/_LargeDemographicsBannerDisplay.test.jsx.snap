@@ -4,6 +4,16 @@ exports[`renders large banner that contains all valid information 1`] = `
 <section
   className="demographics-banner large-demographics-banner"
 >
+  <Avatar
+    alt="Johnathon Doe"
+    className="profile-photo"
+    color="neutral"
+    hashValue="alternative hash"
+    image=""
+    initials="JD"
+    isAriaHidden={true}
+    isDeceased={false}
+  />
   <div
     className="content"
   >
