@@ -120,23 +120,23 @@ const Alert = ({
   const [isNarrow, setIsNarrow] = useState();
 
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
-  const alertClassNames = classNames([
-    cx([
+  const alertClassNames = classNames(
+    cx(
       'alert-base',
       type,
       { narrow: isNarrow },
       { wide: !isNarrow },
       theme.className,
-    ]),
+    ),
     customProps.className,
     { [`${customColorClass}`]: customColorClass && type === AlertTypes.CUSTOM },
-  ]);
+  );
 
-  const bodyClassNameForParent = cx([
+  const bodyClassNameForParent = cx(
     'body',
     { 'body-std': !isNarrow || (isNarrow && !onDismiss && !action) },
     { 'body-narrow': isNarrow && (onDismiss || action) },
-  ]);
+  );
 
   let dismissButton;
   if (onDismiss) {
@@ -151,7 +151,7 @@ const Alert = ({
 
   let actionsSection;
   if (onDismiss || action) {
-    const actionsClassName = cx(['actions', { 'actions-custom': type === AlertTypes.CUSTOM }]);
+    const actionsClassName = cx('actions', { 'actions-custom': type === AlertTypes.CUSTOM });
     actionsSection = (
       <div className={actionsClassName}>
         {action}
@@ -160,7 +160,7 @@ const Alert = ({
     );
   }
 
-  const alertSectionClassName = cx(['section', { 'section-custom': type === AlertTypes.CUSTOM }]);
+  const alertSectionClassName = cx('section', { 'section-custom': type === AlertTypes.CUSTOM });
   const alertMessageContent = (
     <div className={alertSectionClassName}>
       {(title || defaultTitle) && <strong className={cx('title')}>{title || defaultTitle}</strong>}
