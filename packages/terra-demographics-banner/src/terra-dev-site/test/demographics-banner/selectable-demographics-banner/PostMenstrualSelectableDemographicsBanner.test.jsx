@@ -16,9 +16,9 @@ export default () => {
   return (
     <div>
       <SelectableDemographicsBanner
-        id="postMenstrualDemographics"
-        applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
-        age="10 Weeks"
+        id="post-menstrual-demographics-banner"
+        applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
+        age="27 Years"
         avatar={{
           alt: 'Johnathon Doe',
           color: 'neutral',
@@ -26,11 +26,11 @@ export default () => {
           initials: 'JD',
           isAriaHidden: true,
         }}
-        dateOfBirth="October 25, 2018"
+        dateOfBirth="May 9, 1993"
         gender="Male"
         identifiers={{ MRN: 12343, REA: '3JSDA' }}
         personName="Johnathon Doe"
-        postMenstrualAge="43 Weeks"
+        postMenstrualAge="May 13, 2020"
         preferredFirstName="John"
         selectableTileOnClick={handleDemographicsClick}
         infoButtonOnClick={handleInfoButtonClick}

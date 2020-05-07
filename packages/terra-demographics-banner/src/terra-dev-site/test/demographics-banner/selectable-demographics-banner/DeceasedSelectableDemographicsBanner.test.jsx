@@ -16,8 +16,9 @@ export default () => {
   return (
     <div>
       <SelectableDemographicsBanner
-        id="deceasedDemographics"
-        age="25 Years"
+        id="deceased-demographics-banner"
+        applicationContent={<span className="risk-score">5%</span>}
+        age="27 Years"
         avatar={{
           alt: 'Johnathon Doe',
           color: 'neutral',
@@ -25,9 +26,9 @@ export default () => {
           initials: 'JD',
           isAriaHidden: true,
         }}
-        dateOfBirth="May 9, 1992"
-        deceasedDate="March 12, 2017"
-        gender="True Male"
+        dateOfBirth="May 9, 1993"
+        deceasedDate="March 12, 2020"
+        gender="Male"
         identifiers={{ MRN: 12343, REA: '3JSDA' }}
         personName="Johnathon Doe"
         preferredFirstName="John"

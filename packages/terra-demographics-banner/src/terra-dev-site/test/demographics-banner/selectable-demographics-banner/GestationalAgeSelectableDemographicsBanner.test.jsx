@@ -16,9 +16,9 @@ export default () => {
   return (
     <div>
       <SelectableDemographicsBanner
-        id="gestationalDemographics"
+        id="gestational-demographics-banner"
         applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
-        age="10 Weeks"
+        age="27 Years"
         avatar={{
           alt: 'Johnathon Doe',
           color: 'neutral',
@@ -27,9 +27,9 @@ export default () => {
           isAriaHidden: true,
         }}
         color="two"
-        dateOfBirth="October 25, 2018"
+        dateOfBirth="May 9, 1993"
         gender="Male"
-        gestationalAge="33 Weeks"
+        gestationalAge="April 11, 2020"
         personName="Johnathon Doe"
         preferredFirstName="John"
         selectableTileOnClick={handleDemographicsClick}
