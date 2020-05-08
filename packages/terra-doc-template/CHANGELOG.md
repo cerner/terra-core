@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+Moved linter ignores to the files in this package rather than at the root package.json level
 
 2.25.0 - (April 28, 2020)
 ------------------
