@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed inconsistent hover interaction styles across all variants of select.
+
+6.3.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
