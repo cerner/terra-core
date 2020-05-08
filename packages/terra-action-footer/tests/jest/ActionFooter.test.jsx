@@ -159,4 +159,18 @@ describe('ActionFooter', () => {
       ));
     });
   });
+
+  it('correctly applies the theme context className', () => {
+    jest.spyOn(React, 'useContext')
+      .mockReturnValue({
+        className: 'orion-fusion-theme',
+      });
+    const component = mount(
+      <ActionFooter
+        start={<button type="button">Start Button</button>}
+        end={<button type="button">End Button</button>}
+      />,
+    );
+    expect(component).toMatchSnapshot();
+  });
 });
