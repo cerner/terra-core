@@ -2140,14 +2140,14 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     Terra.it.validatesElement('opened form-select with selected-option', { selector: '#root' });
 
-    it('navigates to next option of form-select on down arrow key oress', () => {
+    it('navigates to next option of form-select on down arrow key press', () => {
       browser.keys('ArrowDown');
       browser.keys('ArrowDown');
     });
 
     Terra.it.validatesElement('navigated to next option using key-board navigation', { selector: '#root' });
 
-    it('navigates to next option of form-select on down arrow key oress', () => {
+    it('navigates to next option of form-select on down arrow key press', () => {
       browser.keys('ArrowDown');
       browser.keys('ArrowUp');
     });
