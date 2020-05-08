@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Badge.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const BadgeIntent = {
   DEFAULT: 'default',
@@ -75,12 +77,16 @@ const Badge = ({
   visuallyHiddenText,
   ...customProps
 }) => {
-  const badgeClassNames = cx(
-    'badge',
-    { 'has-icon': icon },
-    { 'is-reversed': isReversed },
-    size,
-    intent,
+  const theme = React.useContext(ThemeContext);
+  const badgeClassNames = classNames(
+    cx(
+      'badge',
+      { 'has-icon': icon },
+      { 'is-reversed': isReversed },
+      size,
+      intent,
+      theme.className,
+    ),
     customProps.className,
   );
 
