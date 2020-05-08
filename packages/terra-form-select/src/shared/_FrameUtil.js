@@ -28,7 +28,6 @@ class FrameUtil {
    * @param {ReactNode} target - The select wrapper.
    * @param {ReactNode} dropdown - The dropdown.
    * @param {number} maxHeight - The maxHeight of the dropdown dropdown.
-   * @param {Object} currentState - The current component state.
    * @param {boolean} useSemanticDropdown - If the dropdown should be rendered semantically instead of in a portal
    * @return {Object} - The calculated dropdown attributes.
    */
