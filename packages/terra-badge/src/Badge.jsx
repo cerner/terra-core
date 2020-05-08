@@ -79,14 +79,14 @@ const Badge = ({
 }) => {
   const theme = React.useContext(ThemeContext);
   const badgeClassNames = classNames(
-    cx([
+    cx(
       'badge',
       { 'has-icon': icon },
       { 'is-reversed': isReversed },
       size,
       intent,
       theme.className,
-    ]),
+    ),
     customProps.className,
   );
 
