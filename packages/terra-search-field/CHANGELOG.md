@@ -3,8 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
-### Fixed
-* Fixed invalid theme variables.
+### Changed
+* Removed `--terra-search-field-clear-right` and `--terra-search-field-clear-top` theme variables. 
 
 3.47.0 - (May 5, 2020)
 ------------------
