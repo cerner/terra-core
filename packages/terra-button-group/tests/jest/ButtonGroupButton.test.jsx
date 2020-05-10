@@ -45,10 +45,10 @@ it('should render with onKeyUp', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const buttonGroup = mount(
+  const button = mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Button text="Default Button" />
     </ThemeContextProvider>,
   );
-  expect(buttonGroup).toMatchSnapshot();
+  expect(button).toMatchSnapshot();
 });
