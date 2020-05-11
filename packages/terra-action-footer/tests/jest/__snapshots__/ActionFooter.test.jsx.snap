@@ -186,3 +186,49 @@ exports[`ActionFooter Snapshot Tests should render an empty footer 1`] = `
   className="action-footer-end"
 />
 `;
+
+exports[`ActionFooter correctly applies the theme context className 1`] = `
+<ActionFooter
+  end={
+    <button
+      type="button"
+    >
+      End Button
+    </button>
+  }
+  start={
+    <button
+      type="button"
+    >
+      Start Button
+    </button>
+  }
+>
+  <BlockActionFooter
+    className="action-footer"
+  >
+    <div
+      className="block-action-footer with-actions orion-fusion-theme action-footer"
+    >
+      <div
+        className="start-actions"
+      >
+        <button
+          type="button"
+        >
+          Start Button
+        </button>
+      </div>
+      <div
+        className="end-actions"
+      >
+        <button
+          type="button"
+        >
+          End Button
+        </button>
+      </div>
+    </div>
+  </BlockActionFooter>
+</ActionFooter>
+`;
