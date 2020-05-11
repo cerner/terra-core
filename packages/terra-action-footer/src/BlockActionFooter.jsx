@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './BlockActionFooter.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   children: PropTypes.node,
@@ -17,13 +19,17 @@ const BlockActionFooter = ({
   children,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
   const isEmpty = !React.Children.toArray(children).length;
 
-  const blockActionFooterClassNames = cx([
-    'block-action-footer',
-    { 'with-actions': !isEmpty },
+  const blockActionFooterClassNames = classNames(
+    cx([
+      'block-action-footer',
+      { 'with-actions': !isEmpty },
+      theme.className,
+    ]),
     customProps.className,
-  ]);
+  );
 
   return (
     <div {...customProps} className={blockActionFooterClassNames}>

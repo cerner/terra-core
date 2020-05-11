@@ -1,6 +1,10 @@
 @import './variables';
 @import './mixins';
 
+// Themes
+@import './clinical-lowlight-theme/Badge.module';
+@import './orion-fusion-theme/Badge.module';
+
 :local {
   .badge {
     border: var(--terra-badge-border);
