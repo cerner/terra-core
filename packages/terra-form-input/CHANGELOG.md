@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Set placeholders opacity to 1 to make firefox color-contrast consistent with other browsers
 
 3.2.0 - (April 28, 2020)
 ------------------
