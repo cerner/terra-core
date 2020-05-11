@@ -64,3 +64,19 @@ exports[`CenteredActionFooter Snapshot Tests should render an empty footer 1`] =
   className="centered-action-footer"
 />
 `;
+
+exports[`CenteredActionFooter correctly applies the theme context className 1`] = `
+<CenteredActionFooter
+  center="Center Action"
+>
+  <BlockActionFooter
+    className="centered-action-footer"
+  >
+    <div
+      className="block-action-footer with-actions orion-fusion-theme centered-action-footer"
+    >
+      Center Action
+    </div>
+  </BlockActionFooter>
+</CenteredActionFooter>
+`;

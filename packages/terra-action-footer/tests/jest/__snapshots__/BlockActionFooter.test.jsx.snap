@@ -31,3 +31,40 @@ exports[`BlockActionFooter Snapshot Tests should render an empty footer 1`] = `
   className="block-action-footer"
 />
 `;
+
+exports[`BlockActionFooter correctly applies the theme context className 1`] = `
+<BlockActionFooter
+  end={
+    <button
+      type="button"
+    >
+      End Button
+    </button>
+  }
+  start={
+    <button
+      type="button"
+    >
+      Start Button
+    </button>
+  }
+>
+  <div
+    className="block-action-footer orion-fusion-theme"
+    end={
+      <button
+        type="button"
+      >
+        End Button
+      </button>
+    }
+    start={
+      <button
+        type="button"
+      >
+        Start Button
+      </button>
+    }
+  />
+</BlockActionFooter>
+`;
