@@ -72,10 +72,11 @@ class ButtonGroup extends React.Component {
     const theme = this.context;
 
     const buttonGroupClassNames = classNames(
-      cx(['button-group',
+      cx(
+        'button-group',
         { 'is-block': isBlock },
         theme.className,
-      ]),
+      ),
       customProps.className,
     );
 
