@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Divider correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Divider>
+    <hr
+      aria-hidden="true"
+      className="divider orion-fusion-theme"
+    />
+  </Divider>
+</ThemeContextProvider>
+`;
+
 exports[`Divider it should pass in a custom prop 1`] = `
 <hr
   aria-hidden="true"
