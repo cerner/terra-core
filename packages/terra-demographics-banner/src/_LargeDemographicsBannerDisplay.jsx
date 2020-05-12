@@ -34,12 +34,12 @@ export default (props) => {
   const theme = React.useContext(ThemeContext);
 
   const mainClasses = classNames(
-    cx([
+    cx(
       'demographics-banner',
       'large-demographics-banner',
       { deceased: deceasedDate },
       theme.className,
-    ]),
+    ),
     customProps.className,
   );
 
