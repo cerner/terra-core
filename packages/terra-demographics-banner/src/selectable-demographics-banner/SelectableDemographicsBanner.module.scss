@@ -1,20 +1,6 @@
 :local {
-  .selectable-demographics-banner {
-    background-clip: border-box;
-    background-color: var(--terra-demographics-banner-selectable-background-color, transparent);
-    background-image: var(--terra-demographics-banner-selectable-background-image);
-    box-shadow: var(--terra-demographics-banner-selectable-box-shadow);
-    color: var(--terra-demographics-banner-selectable-color, #fff);
-    line-height: 1;
-    padding: var(--terra-demographics-banner-selectable-padding, 0.714em);
-  }
-
-  .profile-photo {
-    margin: var(--terra-demographics-banner-selectable-profile-photo-margin);
-  }
-
   .background-tile {
-    background-color: #004c76;
+    background-color: var(--terra-demographics-banner-background-color, #004c76);
     display: flex;
     flex-direction: row;
   }
@@ -36,15 +22,6 @@
   }
 
   .deceased {
-    background-clip: border-box;
-    background-color: var(--terra-demographics-banner-deceased-selectable-background-color, #1c1f21);
-    background-image: var(--terra-demographics-banner-deceased-selectable-background-image);
-    color: var(--terra-demographics-banner-deceased-selectable-color, #fff);
-
-    .profile-photo {
-      opacity: var(--terra-demographics-banner-deceased-selectable-profile-photo-opacity, 0.7);
-    }
-
     .selectable-tile {
       box-shadow: 0 0 3px 1px rgb(0, 0, 0);
     }
