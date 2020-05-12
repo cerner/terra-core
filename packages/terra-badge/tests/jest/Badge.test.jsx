@@ -133,4 +133,13 @@ describe('Badge with additional props', () => {
     expect(wrapper.childAt(0).is('img')).toEqual(true);
     expect(wrapper.find('.text').text()).toEqual('Test value');
   });
+
+  it('correctly applies the theme context className', () => {
+    jest.spyOn(React, 'useContext')
+      .mockReturnValue({
+        className: 'orion-fusion-theme',
+      });
+    const wrapper = mount(<Badge text="Test value" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
