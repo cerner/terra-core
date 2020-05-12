@@ -25,6 +25,7 @@
     &::placeholder {
       color: var(--terra-form-input-placeholder-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-input-placeholder-font-style);
+      opacity: 1;
     }
 
     &:hover {

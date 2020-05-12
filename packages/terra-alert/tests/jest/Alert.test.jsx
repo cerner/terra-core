@@ -1,7 +1,6 @@
-/* eslint-disable no-console */
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { mountWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import Button from 'terra-button';
 import Alert from '../../src/Alert';
@@ -54,6 +53,20 @@ describe('Alert of type advisory with text content', () => {
   });
 });
 
+describe('Alert of type unsatisfied', () => {
+  it('should render an unsatisfied Alert', () => {
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.UNSATISFIED}>This is an unsatisfied alert.</Alert>);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Alert of type unverified', () => {
+  it('should render an unverified Alert', () => {
+    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.UNVERIFIED}>This is an unverified alert.</Alert>);
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
 describe('Alert of type info with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type info', () => {
@@ -100,4 +113,15 @@ describe('Dismissable Alert of type custom with action button, custom title and 
     const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => { }} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a custom alert.</Alert>);
     expect(wrapper).toMatchSnapshot();
   });
+});
+
+it('correctly applies the theme context className', () => {
+  jest.spyOn(React, 'useContext')
+    .mockReturnValue({
+      className: 'orion-fusion-theme',
+    });
+
+  const wrapper = shallowWithIntl(<Alert type="success" />);
+  const headerContainer = wrapper.dive();
+  expect(headerContainer).toMatchSnapshot();
 });
