@@ -1,29 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Button from 'terra-button';
 import Alert from 'terra-alert';
 
-class DismissibleExample extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isDismissed: false,
-    };
-    this.handleDismiss = this.handleDismiss.bind(this);
+const AlertDismissible = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  if (!isOpen) {
+    return (
+      <>
+        <div id="dismissed">Alert was dismissed</div>
+        <Button
+          text="Trigger Alert"
+          onClick={() => {
+            setIsOpen(true);
+          }}
+        />
+      </>
+    );
   }
 
-  handleDismiss() {
-    const newState = this.state;
-    newState.isDismissed = true;
-    this.setState(newState);
-  }
+  return (
+    <Alert id="dismissibleAlert" type="success" onDismiss={() => setIsOpen(false)}>
+      This is a dismissable Alert.
+    </Alert>
+  );
+};
 
-  render() {
-    const alertText = 'This is a success alert. It is configured to be dismissible. Click on the Dismiss button to dismiss the alert.';
-    let alertElem = '';
-    if (!this.state.isDismissed) {
-      alertElem = <Alert type="success" onDismiss={this.handleDismiss}>{alertText}</Alert>;
-    }
-    return alertElem;
-  }
-}
-
-export default DismissibleExample;
+export default AlertDismissible;

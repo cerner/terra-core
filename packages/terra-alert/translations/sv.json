@@ -5,5 +5,7 @@
   "Terra.alert.error": "Fel.",
   "Terra.alert.info": "Information.",
   "Terra.alert.success": "Klar.",
+  "Terra.alert.unsatisfied": "Nödvändig åtgärd krävs.",
+  "Terra.alert.unverified": "Externa journaler.",
   "Terra.alert.warning": "Varning!"
 }
