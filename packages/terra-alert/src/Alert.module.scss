@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/Alert.module';
+@import './orion-fusion-theme/Alert.module';
+
 :local {
   /* stylelint-disable  property-no-unknown */
   .alert-base {
@@ -5,6 +9,7 @@
     color: var(--terra-alert-color);
     display: flex;
     justify-content: space-between;
+    margin: 0 0 1px;
     min-height: var(--terra-alert-min-height);
     overflow: hidden;
     width: 100%;
@@ -54,7 +59,7 @@
     margin-bottom: 0;
     margin-top: 0;
     padding-bottom: var(--terra-alert-section-padding-bottom, 0.142857rem);
-    padding-top: var(--terra-alert-section-padding-top, 0.142857rem);
+    padding-top: var(--terra-alert-section-padding-top, 0.21429rem);
   }
 
   .section-custom {
@@ -107,6 +112,16 @@
     box-shadow: var(--terra-alert-warning-box-shadow, 2px 0 0 #ffc20a inset);
   }
 
+  .unsatisfied {
+    background-color: var(--terra-alert-unsatisfied-background-color, #f4f4f4);
+    box-shadow: var(--terra-alert-unsatisfied-box-shadow, 2px 0 0 #fa0000 inset);
+  }
+
+  .unverified {
+    background-color: var(--terra-alert-unverified-background-color, #f4f4f4);
+    box-shadow: var(--terra-alert-unverified-box-shadow, 2px 0 0 #78288c inset);
+  }
+
   .advisory {
     background-color: var(--terra-alert-advisory-background-color, #f4f4f4);
     box-shadow: var(--terra-alert-advisory-box-shadow, 2px 0 0 #9b9fa1 inset);
@@ -135,6 +150,14 @@
 
   .error .title {
     color: var(--terra-alert-error-title-color, #c00);
+  }
+
+  .unsatisfied-icon {
+    color: var(--terra-alert-unsatisfied-icon-color, #fa0000);
+  }
+
+  .unverified-icon {
+    color: var(--terra-alert-unverified-icon-color, #78288c);
   }
 
   .custom-default-color {
