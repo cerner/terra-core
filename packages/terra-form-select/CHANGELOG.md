@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Fixed
+* Fixed issue when using `isTouchAccessible` that could cause the dropdown to detach from the input
 * Fixed inconsistent hover interaction styles across all variants of select.
 
 6.3.0 - (April 28, 2020)
