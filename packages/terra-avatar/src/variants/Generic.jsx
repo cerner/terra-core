@@ -65,11 +65,11 @@ const Generic = ({
   const attributes = { ...customProps };
   const customStyles = size ? ({ fontSize: size, ...attributes.style }) : attributes.style;
   const GenericUserClassNames = classNames(
-    cx([
+    cx(
       'avatar',
       `${colorVariant}`,
       theme.className,
-    ]),
+    ),
     attributes.className,
   );
 

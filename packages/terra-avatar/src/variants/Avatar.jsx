@@ -105,14 +105,14 @@ class Avatar extends React.Component {
     const attributes = { ...customProps };
     const customStyles = size ? ({ fontSize: size, ...attributes.style }) : attributes.style;
     const avatarClassNames = classNames(
-      cx([
+      cx(
         'avatar',
         setColor(alt, color, hashValue),
         { 'fallback-icon': this.state.fallback },
         { image: Boolean(image) },
         { 'is-deceased': isDeceased },
         theme.className,
-      ]),
+      ),
       attributes.className,
     );
 
