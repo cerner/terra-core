@@ -6,17 +6,24 @@ import { FormattedMessage } from 'react-intl';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
+import IconGapChecking from 'terra-icon/lib/icon/IconGapChecking';
+import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
+
 import styles from './Alert.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const AlertTypes = {
   ALERT: 'alert',
   ERROR: 'error',
   WARNING: 'warning',
+  UNSATISFIED: 'unsatisfied',
+  UNVERIFIED: 'unverified',
   ADVISORY: 'advisory',
   INFO: 'info',
   SUCCESS: 'success',
@@ -25,7 +32,8 @@ const AlertTypes = {
 
 const propTypes = {
   /**
-   * An action element to be added to the action section of the alert.
+   * An action element to be added to the action section of the alert to give the user an easy way
+   * to accomplish a task to resolve the notification.
    */
   action: PropTypes.element,
   /**
@@ -52,13 +60,15 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
-   * The type of alert to be rendered. One of `alert`, `error`, `warning`, `advisory`,
-   * `info`, `success`, `custom`.
+   * The type of alert to be rendered. One of `alert`, `error`, `warning`, `unsatisfied`, `unverified`, `advisory`,
+   * `info`, `success`, or `custom`.
    */
   type: PropTypes.oneOf([
     AlertTypes.ALERT,
     AlertTypes.ERROR,
     AlertTypes.WARNING,
+    AlertTypes.UNSATISFIED,
+    AlertTypes.UNVERIFIED,
     AlertTypes.ADVISORY,
     AlertTypes.INFO,
     AlertTypes.SUCCESS,
@@ -67,12 +77,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  action: null,
-  children: '',
-  customIcon: null,
   customColorClass: 'custom-default-color',
-  onDismiss: null,
-  title: '',
   type: AlertTypes.ALERT,
 };
 
@@ -84,6 +89,10 @@ const getAlertIcon = (type, customIcon) => {
       return (<span className={cx('icon')}><IconError /></span>);
     case AlertTypes.WARNING:
       return (<span className={cx('icon')}><IconWarning /></span>);
+    case AlertTypes.UNSATISFIED:
+      return (<span className={cx('icon', 'unsatisfied-icon')}><IconGapChecking /></span>);
+    case AlertTypes.UNVERIFIED:
+      return (<span className={cx('icon', 'unverified-icon')}><IconDiamondSymbol /></span>);
     case AlertTypes.ADVISORY:
       return null;
     case AlertTypes.INFO:
@@ -107,28 +116,29 @@ const Alert = ({
   type,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
   const [isNarrow, setIsNarrow] = useState();
-  const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
-  const attributes = { ...customProps };
-  const alertClassNames = cx([
-    'alert-base',
-    type,
-    { narrow: isNarrow },
-    { wide: !isNarrow },
-    attributes.className,
-    { [`${customColorClass}`]: type === AlertTypes.CUSTOM },
-  ]);
 
-  const bodyClassNameForParent = cx([
+  const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
+  const alertClassNames = classNames(
+    cx(
+      'alert-base',
+      type,
+      { narrow: isNarrow },
+      { wide: !isNarrow },
+      theme.className,
+    ),
+    customProps.className,
+    { [`${customColorClass}`]: customColorClass && type === AlertTypes.CUSTOM },
+  );
+
+  const bodyClassNameForParent = cx(
     'body',
     { 'body-std': !isNarrow || (isNarrow && !onDismiss && !action) },
     { 'body-narrow': isNarrow && (onDismiss || action) },
-  ]);
-  let actionsSection = '';
-  let dismissButton = '';
-  const alertSectionClassName = cx(['section', { 'section-custom': type === AlertTypes.CUSTOM }]);
-  const actionsClassName = cx(['actions', { 'actions-custom': type === AlertTypes.CUSTOM }]);
+  );
 
+  let dismissButton;
   if (onDismiss) {
     dismissButton = (
       <FormattedMessage id="Terra.alert.dismiss">
@@ -138,7 +148,10 @@ const Alert = ({
       </FormattedMessage>
     );
   }
+
+  let actionsSection;
   if (onDismiss || action) {
+    const actionsClassName = cx('actions', { 'actions-custom': type === AlertTypes.CUSTOM });
     actionsSection = (
       <div className={actionsClassName}>
         {action}
@@ -147,6 +160,7 @@ const Alert = ({
     );
   }
 
+  const alertSectionClassName = cx('section', { 'section-custom': type === AlertTypes.CUSTOM });
   const alertMessageContent = (
     <div className={alertSectionClassName}>
       {(title || defaultTitle) && <strong className={cx('title')}>{title || defaultTitle}</strong>}
@@ -163,7 +177,7 @@ const Alert = ({
         }
       }}
     >
-      <div role="alert" {...attributes} className={alertClassNames}>
+      <div role="alert" {...customProps} className={alertClassNames}>
         <div className={bodyClassNameForParent}>
           {getAlertIcon(type, customIcon)}
           {alertMessageContent}
@@ -174,6 +188,7 @@ const Alert = ({
 
   );
 };
+
 Alert.propTypes = propTypes;
 Alert.defaultProps = defaultProps;
 Alert.Opts = {};

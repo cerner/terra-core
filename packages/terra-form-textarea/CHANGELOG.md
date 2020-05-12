@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+4.3.0 - (May 12, 2020)
+------------------
+### Changed
+* Set placeholders opacity to 1 to make firefox color-contrast consistent with other browsers
+
 4.2.0 - (April 28, 2020)
 ------------------
 ### Changed

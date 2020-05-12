@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.48.0 - (May 12, 2020)
+------------------
+### Changed
+* Removed `--terra-search-field-clear-right` and `--terra-search-field-clear-top` theme variables. 
+
 3.47.0 - (May 5, 2020)
 ------------------
 ### Changed
@@ -13,6 +18,7 @@ Unreleased
 ------------------
 ### Changed
 * Removed "View Component Source Code" from docs in favour of source code badge
+
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
