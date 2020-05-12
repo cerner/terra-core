@@ -15,6 +15,7 @@ import IconAway from './icon/IconAway';
 import IconBedAssigned from './icon/IconBedAssigned';
 import IconBedAssignedLowLight from './icon/IconBedAssignedLowLight';
 import IconBedRequested from './icon/IconBedRequested';
+import IconBluetooth from './icon/IconBluetooth';
 import IconBookmark from './icon/IconBookmark';
 import IconBriefcase from './icon/IconBriefcase';
 import IconBusy from './icon/IconBusy';
@@ -300,6 +301,7 @@ const Icons = {
   IconBedAssigned,
   IconBedAssignedLowLight,
   IconBedRequested,
+  IconBluetooth,
   IconBookmark,
   IconBriefcase,
   IconBusy,
