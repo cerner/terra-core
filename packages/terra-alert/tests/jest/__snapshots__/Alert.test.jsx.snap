@@ -2,9 +2,7 @@
 
 exports[`Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
 <Alert
-  action={null}
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -32,8 +30,6 @@ exports[`Alert of type advisory with text content should render an Alert compone
       "timeZone": null,
     }
   }
-  onDismiss={null}
-  title=""
   type="advisory"
 >
   <ResponsiveElement
@@ -99,9 +95,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
 
 exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
 <Alert
-  action={null}
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -129,8 +123,6 @@ exports[`Alert of type alert with text content should render an Alert component 
       "timeZone": null,
     }
   }
-  onDismiss={null}
-  title=""
   type="alert"
 >
   <ResponsiveElement
@@ -235,7 +227,6 @@ exports[`Alert of type alert with text content should render an Alert component 
 
 exports[`Alert of type custom with custom title and text content should render an Alert component of type custom 1`] = `
 <Alert
-  action={null}
   customColorClass="terra-alert-custom-orange-color"
   customIcon={
     <IconHelp
@@ -270,7 +261,6 @@ exports[`Alert of type custom with custom title and text content should render a
       "timeZone": null,
     }
   }
-  onDismiss={null}
   title="Help!"
   type="custom"
 >
@@ -369,9 +359,7 @@ exports[`Alert of type custom with custom title and text content should render a
 
 exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
 <Alert
-  action={null}
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -399,8 +387,6 @@ exports[`Alert of type error with text content should render an Alert component 
       "timeZone": null,
     }
   }
-  onDismiss={null}
-  title=""
   type="error"
 >
   <ResponsiveElement
@@ -505,9 +491,7 @@ exports[`Alert of type error with text content should render an Alert component 
 
 exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
 <Alert
-  action={null}
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -535,7 +519,6 @@ exports[`Alert of type info with custom title and HTML content should render an 
       "timeZone": null,
     }
   }
-  onDismiss={null}
   title="Gettysburg Address"
   type="info"
 >
@@ -636,9 +619,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
 
 exports[`Alert of type info with text content should render an Alert component of type info 1`] = `
 <Alert
-  action={null}
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -666,8 +647,6 @@ exports[`Alert of type info with text content should render an Alert component o
       "timeZone": null,
     }
   }
-  onDismiss={null}
-  title=""
   type="info"
 >
   <ResponsiveElement
@@ -786,7 +765,6 @@ exports[`Alert of type success with an action button text content should render 
     />
   }
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -814,8 +792,6 @@ exports[`Alert of type success with an action button text content should render 
       "timeZone": null,
     }
   }
-  onDismiss={null}
-  title=""
   type="success"
 >
   <ResponsiveElement
@@ -958,9 +934,7 @@ exports[`Alert of type success with an action button text content should render 
 
 exports[`Alert of type success with text content should render an Alert component of type success 1`] = `
 <Alert
-  action={null}
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -988,8 +962,6 @@ exports[`Alert of type success with text content should render an Alert componen
       "timeZone": null,
     }
   }
-  onDismiss={null}
-  title=""
   type="success"
 >
   <ResponsiveElement
@@ -1092,11 +1064,9 @@ exports[`Alert of type success with text content should render an Alert componen
 </Alert>
 `;
 
-exports[`Alert of type warning with text content should render an Alert component of type warning 1`] = `
+exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
 <Alert
-  action={null}
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1124,8 +1094,258 @@ exports[`Alert of type warning with text content should render an Alert componen
       "timeZone": null,
     }
   }
-  onDismiss={null}
-  title=""
+  type="unsatisfied"
+>
+  <ResponsiveElement
+    onChange={[Function]}
+    responsiveTo="parent"
+  >
+    <div
+      className="alert-base unsatisfied narrow"
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      role="alert"
+    >
+      <div
+        className="body body-std"
+      >
+        <span
+          className="icon unsatisfied-icon"
+        >
+          <IconGapChecking
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <IconBase
+              ariaLabel={null}
+              focusable="false"
+              height="1em"
+              isBidi={false}
+              isSpin={false}
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <svg
+                aria-hidden="true"
+                className="tui-Icon icon"
+                focusable="false"
+                height="1em"
+                viewBox="0 0 48 48"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M46 15.1l-2.7-5.5-16.5 9.6V0h-5.5v19.2L4.8 9.6l-2.7 5.5L17.8 24 2 32.9l2.7 5.5 16.5-9.6V48h5.5V28.8l16.5 9.6 2.7-5.5L30.2 24 46 15.1z"
+                />
+              </svg>
+            </IconBase>
+          </IconGapChecking>
+        </span>
+        <div
+          className="section"
+        >
+          <strong
+            className="title"
+          >
+            <FormattedMessage
+              id="Terra.alert.unsatisfied"
+              values={Object {}}
+            >
+              <span>
+                Terra.alert.unsatisfied
+              </span>
+            </FormattedMessage>
+          </strong>
+          This is an unsatisfied alert.
+        </div>
+      </div>
+    </div>
+  </ResponsiveElement>
+</Alert>
+`;
+
+exports[`Alert of type unverified should render an unverified Alert 1`] = `
+<Alert
+  customColorClass="custom-default-color"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  type="unverified"
+>
+  <ResponsiveElement
+    onChange={[Function]}
+    responsiveTo="parent"
+  >
+    <div
+      className="alert-base unverified narrow"
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      role="alert"
+    >
+      <div
+        className="body body-std"
+      >
+        <span
+          className="icon unverified-icon"
+        >
+          <IconDiamondSymbol
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <IconBase
+              ariaLabel={null}
+              focusable="false"
+              height="1em"
+              isBidi={false}
+              isSpin={false}
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <svg
+                aria-hidden="true"
+                className="tui-Icon icon"
+                focusable="false"
+                height="1em"
+                viewBox="0 0 48 48"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24 0l24 24-24 24L0 24 24 0z"
+                />
+              </svg>
+            </IconBase>
+          </IconDiamondSymbol>
+        </span>
+        <div
+          className="section"
+        >
+          <strong
+            className="title"
+          >
+            <FormattedMessage
+              id="Terra.alert.unverified"
+              values={Object {}}
+            >
+              <span>
+                Terra.alert.unverified
+              </span>
+            </FormattedMessage>
+          </strong>
+          This is an unverified alert.
+        </div>
+      </div>
+    </div>
+  </ResponsiveElement>
+</Alert>
+`;
+
+exports[`Alert of type warning with text content should render an Alert component of type warning 1`] = `
+<Alert
+  customColorClass="custom-default-color"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   type="warning"
 >
   <ResponsiveElement
@@ -1230,9 +1450,7 @@ exports[`Alert of type warning with text content should render an Alert componen
 
 exports[`Alert with no props should render a default component 1`] = `
 <Alert
-  action={null}
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1260,8 +1478,6 @@ exports[`Alert with no props should render a default component 1`] = `
       "timeZone": null,
     }
   }
-  onDismiss={null}
-  title=""
   type="alert"
 >
   <ResponsiveElement
@@ -1588,9 +1804,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
 
 exports[`Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
 <Alert
-  action={null}
   customColorClass="custom-default-color"
-  customIcon={null}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1619,7 +1833,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
     }
   }
   onDismiss={[Function]}
-  title=""
   type="alert"
 >
   <ResponsiveElement
@@ -1763,4 +1976,66 @@ exports[`Dismissible Alert that includes actions section should render an alert 
     </div>
   </ResponsiveElement>
 </Alert>
+`;
+
+exports[`correctly applies the theme context className 1`] = `
+<Fragment>
+  <div />
+  <div
+    className="alert-base success wide orion-fusion-theme"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    role="alert"
+  >
+    <div
+      className="body body-std"
+    >
+      <span
+        className="icon"
+      >
+        <IconSuccess
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </span>
+      <div
+        className="section"
+      >
+        <strong
+          className="title"
+        >
+          <FormattedMessage
+            id="Terra.alert.success"
+            values={Object {}}
+          />
+        </strong>
+      </div>
+    </div>
+  </div>
+</Fragment>
 `;
