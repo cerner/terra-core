@@ -5,5 +5,7 @@
   "Terra.alert.error": "Erro.",
   "Terra.alert.info": "Informações.",
   "Terra.alert.success": "Êxito.",
+  "Terra.alert.unsatisfied": "Ação exigida.",
+  "Terra.alert.unverified": "Registros externos.",
   "Terra.alert.warning": "Aviso."
 }
