@@ -1,5 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dialog correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Dialog
+    footer="Footer Content"
+    header="Header Content"
+    onClose={null}
+  >
+    <div
+      className="dialog orion-fusion-theme"
+    >
+      <ContentContainer
+        fill={true}
+        footer={
+          <div
+            className="dialog-footer"
+          >
+            Footer Content
+          </div>
+        }
+        header={
+          <div
+            className="dialog-header"
+          >
+            <div
+              className="dialog-header-title"
+            >
+              Header Content
+            </div>
+          </div>
+        }
+      >
+        <div
+          className="content-container-fill"
+        >
+          <div
+            className="header"
+          >
+            <div
+              className="dialog-header"
+            >
+              <div
+                className="dialog-header-title"
+              >
+                Header Content
+              </div>
+            </div>
+          </div>
+          <div
+            className="main"
+          >
+            <Scroll
+              className="normalizer"
+            >
+              <div
+                className="scroll normalizer"
+              >
+                <div
+                  className="dialog-body"
+                >
+                  some body content
+                </div>
+              </div>
+            </Scroll>
+          </div>
+          <div
+            className="footer"
+          >
+            <div
+              className="dialog-footer"
+            >
+              Footer Content
+            </div>
+          </div>
+        </div>
+      </ContentContainer>
+    </div>
+  </Dialog>
+</ThemeContextProvider>
+`;
+
 exports[`Dialog should render a Dialog with merged attributes 1`] = `
 <div
   className="dialog TestClass"
