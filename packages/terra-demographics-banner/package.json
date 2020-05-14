@@ -32,7 +32,7 @@
     "terra-image": "^3.27.0",
     "terra-responsive-element": "^5.18.0",
     "terra-visually-hidden-text": "^2.26.0",
-    "terra-theme-context": "^1.2.0"
+    "terra-theme-context": "^1.0.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
