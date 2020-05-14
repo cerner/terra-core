@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from '../common/Avatar.module.scss';
 import {
   AVATAR_VARIANTS, generateImagePlaceholder, generateImage, setColor,
 } from '../common/AvatarUtils';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -70,7 +72,7 @@ class Facility extends React.Component {
       size,
       ...customProps
     } = this.props;
-
+    const theme = this.context;
     let facilityContent;
 
     const facilityParams = {
@@ -88,13 +90,16 @@ class Facility extends React.Component {
     }
     const attributes = { ...customProps };
     const customStyles = size ? ({ fontSize: size, ...attributes.style }) : attributes.style;
-    const facilityClassNames = cx([
-      'avatar',
-      setColor(alt, color, hashValue),
-      { 'fallback-icon': this.state.fallback },
-      { image: Boolean(image) },
+    const facilityClassNames = classNames(
+      cx(
+        'avatar',
+        setColor(alt, color, hashValue),
+        { 'fallback-icon': this.state.fallback },
+        { image: Boolean(image) },
+        theme.className,
+      ),
       attributes.className,
-    ]);
+    );
 
     /* eslint-disable react/forbid-dom-props */
     return (
@@ -108,5 +113,6 @@ class Facility extends React.Component {
 
 Facility.propTypes = propTypes;
 Facility.defaultProps = defaultProps;
+Facility.contextType = ThemeContext;
 
 export default Facility;
