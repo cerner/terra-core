@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import ButtonGroup from '../../src/ButtonGroup';
 
 const button1 = <ButtonGroup.Button text="Button 1" key="1" />;
@@ -68,5 +70,17 @@ it('should select a button', () => {
   expect(buttonGroup).toMatchSnapshot();
 
   buttonGroup.childAt(1).simulate('click', { preventDefault() {} });
+  expect(buttonGroup).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const buttonGroup = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <ButtonGroup>
+        {button1}
+        {button2}
+      </ButtonGroup>
+    </ThemeContextProvider>,
+  );
   expect(buttonGroup).toMatchSnapshot();
 });

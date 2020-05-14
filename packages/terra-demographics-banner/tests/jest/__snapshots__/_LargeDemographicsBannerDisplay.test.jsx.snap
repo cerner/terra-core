@@ -1,5 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <_default>
+    <section
+      className="demographics-banner large-demographics-banner orion-fusion-theme"
+    >
+      <div
+        className="content"
+      >
+        <div
+          className="row"
+        >
+          <h1
+            className="person-name"
+          />
+          <div
+            className="application-content"
+          />
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="person-details"
+          >
+            <DemographicsBannerValue
+              key="age"
+            >
+              <span
+                className="value"
+              >
+                <span
+                  className="value-text"
+                />
+              </span>
+            </DemographicsBannerValue>
+            <DemographicsBannerValue
+              key="gender"
+            >
+              <span
+                className="value"
+              >
+                <span
+                  className="value-text"
+                />
+              </span>
+            </DemographicsBannerValue>
+            <DemographicsBannerValue
+              key="dob"
+            >
+              <span
+                className="value"
+              >
+                <span
+                  className="value-text"
+                />
+              </span>
+            </DemographicsBannerValue>
+          </div>
+          <div
+            className="identifiers"
+          />
+        </div>
+      </div>
+    </section>
+  </_default>
+</ThemeContextProvider>
+`;
+
 exports[`renders large banner that contains all valid information 1`] = `
 <section
   applicationRows={
