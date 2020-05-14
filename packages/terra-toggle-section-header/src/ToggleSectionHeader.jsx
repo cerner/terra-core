@@ -47,7 +47,6 @@ const propTypes = {
    * Programmatically toggle the toggle-section-header component.
    */
   isOpen: PropTypes.bool,
-
 };
 
 const defaultProps = {
@@ -64,7 +63,7 @@ class ToggleSectionHeader extends React.Component {
     super(props);
 
     const { isInitiallyOpen = false } = this.props;
-    this.state = { isOpen: isInitiallyOpen };
+    this.state = { isOpen: isInitiallyOpen || this.props.isOpen };
 
     this.handleOnClick = this.handleOnClick.bind(this);
     this.wrapOnClick = this.wrapOnClick.bind(this);
