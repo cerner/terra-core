@@ -71,13 +71,6 @@ class ToggleSectionHeader extends React.Component {
 
   componentDidUpdate(previousProps, previousState) {
     if (previousProps.isOpen !== this.props.isOpen) {
-      const { onOpen, onClose } = this.props;
-
-      if (onOpen && !previousState.isOpen) {
-        onOpen();
-      } else if (onClose && previousState.isOpen) {
-        onClose();
-      }
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({ isOpen: !previousState.isOpen });
     }
