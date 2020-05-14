@@ -42,7 +42,7 @@ exports[`correctly applies the theme context className 1`] = `
           <button
             aria-disabled={false}
             aria-pressed={null}
-            className="button neutral button-group-button orion-fusion-theme"
+            className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -91,7 +91,7 @@ exports[`correctly applies the theme context className 1`] = `
           <button
             aria-disabled={false}
             aria-pressed={null}
-            className="button neutral button-group-button orion-fusion-theme"
+            className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
