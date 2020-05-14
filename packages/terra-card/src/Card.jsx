@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
+import ThemeContext from 'terra-theme-context';
 import styles from './Card.module.scss';
 import CardBody from './CardBody';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const CardVariants = {
   DEFAULT: 'default',
@@ -20,7 +22,7 @@ const propTypes = {
   /**
    * Sets the card variant to change the style for different use cases. One of `default`,  `raised`.
    */
-  variant: PropTypes.oneOf([...Object.values(CardVariants)]),
+  variant: PropTypes.oneOf(['default', 'raised']),
   /**
    * Text that describes the badge to a screen reader. Use this
    * if more information is needed to accurately describe
@@ -39,11 +41,15 @@ const Card = ({
   visuallyHiddenText,
   ...customProps
 }) => {
-  const cardClassNames = cx([
-    'card',
-    variant,
+  const theme = React.useContext(ThemeContext);
+  const cardClassNames = classNames(
+    cx([
+      'card',
+      variant,
+      theme.className,
+    ]),
     customProps.className,
-  ]);
+  );
 
   const visuallyHiddenTextContent = visuallyHiddenText ? <VisuallyHiddenText text={visuallyHiddenText} /> : null;
 

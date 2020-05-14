@@ -4,6 +4,31 @@ ChangeLog
 Unreleased
 ----------
 
+6.4.0 - (May 12, 2020)
+------------------
+### Fixed
+* Fixed issue when using `isTouchAccessible` that could cause the dropdown to detach from the input
+* Fixed inconsistent hover interaction styles across all variants of select.
+
+### Changed
+* Set placeholders opacity to 1 to make firefox color-contrast consistent with other browsers
+
+6.3.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+6.2.0 - (April 22, 2020)
+------------------
+### Added
+* Added `maxHeight` as first class prop to all select fields (Multi select field, Tag select Field, Search select field, Combobox select field, Single select field)
+
+### Changed
+* Updated documentation link in README
+* Added Usage section in docs
+
 6.1.0 - (April 7, 2020)
 ------------------
 ### Changed

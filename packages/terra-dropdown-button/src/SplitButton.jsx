@@ -43,7 +43,7 @@ const propTypes = {
   /**
    * Sets the styles of the component, one of `neutral`, or `ghost`.
    */
-  variant: PropTypes.oneOf(Object.values(Variants)),
+  variant: PropTypes.oneOf(['neutral', 'ghost']),
   /**
    * @private
    * The intl object to be injected for translations.

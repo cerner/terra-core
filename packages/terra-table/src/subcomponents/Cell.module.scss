@@ -3,6 +3,7 @@
     border: 0;
     flex: 1 1 0;
     outline: none;
+    overflow: hidden;
     text-align: left;
     vertical-align: top;
     word-break: break-word;
@@ -24,5 +25,10 @@
     padding-left: var(--terra-table-cell-compact-padding-left, 0.7142857143rem);
     padding-right: var(--terra-table-cell-compact-padding-right, 0.7142857143rem);
     padding-top: var(--terra-table-cell-compact-padding-top, 0.25rem);
+  }
+
+  .container,
+  .content-width {
+    width: 100%;
   }
 }

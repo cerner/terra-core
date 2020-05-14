@@ -5,5 +5,7 @@
   "Terra.alert.error": "Fout.",
   "Terra.alert.info": "Informatie.",
   "Terra.alert.success": "Succes.",
+  "Terra.alert.unsatisfied": "Vereiste actie.",
+  "Terra.alert.unverified": "Externe records.",
   "Terra.alert.warning": "Waarschuwing."
 }

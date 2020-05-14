@@ -33,33 +33,27 @@ const propTypes = {
   * The child Region components that make up the grid.
   */
   children: PropTypes.node,
-
-  /*
+  /**
   * The default grid layout template to use.
   */
   defaultTemplate: PropTypes.shape(templateShape),
-
-  /*
+  /**
   *  The template to be used at tiny breakpoints
   */
   tiny: PropTypes.shape(templateShape),
-
-  /*
+  /**
   *  The template to be used at small breakpoints
   */
   small: PropTypes.shape(templateShape),
-
-  /*
+  /**
   *  The template to be used at medium breakpoints
   */
   medium: PropTypes.shape(templateShape),
-
-  /*
+  /**
   *  The template to be used at large breakpoints
   */
   large: PropTypes.shape(templateShape),
-
-  /*
+  /**
   *  The template to be used at huge breakpoints
   */
   huge: PropTypes.shape(templateShape),

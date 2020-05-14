@@ -4,6 +4,24 @@ ChangeLog
 Unreleased
 ----------
 
+3.35.0 - (May 12, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
+3.34.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+3.33.0 - (April 22, 2020)
+------------------
+### Changed
+* Updated docs for documentation link
+* Removed extra lines from README
+
 3.32.0 - (March 10, 2020)
 ------------------
 ### Changed

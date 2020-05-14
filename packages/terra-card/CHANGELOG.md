@@ -4,6 +4,26 @@ ChangeLog
 Unreleased
 ----------
 
+3.29.0 - (May 12, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.28.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+3.27.0 - (April 22, 2020)
+------------------
+### Changed
+* Added Usage section
+* Updated docs for documentation link and expanded `PropTypes` for Props Table
+* Removed extra lines from README
+* Apply themes by context and directly include packaged themes.
+
 3.26.0 - (March 10, 2020)
 ------------------
 ### Changed
