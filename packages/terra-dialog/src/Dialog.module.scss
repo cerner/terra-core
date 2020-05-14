@@ -1,5 +1,9 @@
 @import '~terra-mixins/lib/Mixins';
 
+// Themes
+@import './clinical-lowlight-theme/Dialog.module';
+@import './orion-fusion-theme/Dialog.module';
+
 :local {
   .dialog {
     height: 100%;
