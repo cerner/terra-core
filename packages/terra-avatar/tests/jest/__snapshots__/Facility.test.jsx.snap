@@ -1,5 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Facility correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Facility
+    alt="London"
+    color="auto"
+    isAriaHidden={false}
+  >
+    <div
+      className="avatar five orion-fusion-theme"
+    >
+      <span
+        alt="London"
+        aria-hidden={false}
+        aria-label="London"
+        className="icon facility"
+        role="img"
+      />
+    </div>
+  </Facility>
+</ThemeContextProvider>
+`;
+
 exports[`Facility should render a default facility avatar 1`] = `
 <div
   class="avatar five"

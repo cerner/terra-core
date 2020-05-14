@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'terra-button';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
 import styles from './ButtonGroup.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -94,12 +96,17 @@ class ButtonGroupButton extends React.Component {
       ...customProps
     } = this.props;
 
-    const buttonClassName = cx([
-      'button-group-button',
-      { 'is-disabled': isDisabled },
-      { 'is-focused': this.state.focused },
+    const theme = this.context;
+
+    const buttonClassName = classNames(
+      cx(
+        'button-group-button',
+        { 'is-disabled': isDisabled },
+        { 'is-focused': this.state.focused },
+        theme.className,
+      ),
       customProps.className,
-    ]);
+    );
 
     return (
       <Button
@@ -119,5 +126,6 @@ class ButtonGroupButton extends React.Component {
 
 ButtonGroupButton.propTypes = propTypes;
 ButtonGroupButton.defaultProps = defaultProps;
+ButtonGroupButton.contextType = ThemeContext;
 
 export default ButtonGroupButton;
