@@ -1,5 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dropdown List correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <DropdownList
+    requestClose={[Function]}
+  >
+    <ul
+      className="dropdown-list orion-fusion-theme"
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      role="menu"
+      style={
+        Object {
+          "width": undefined,
+        }
+      }
+    >
+      <Item
+        data-terra-dropdown-list-item={true}
+        isActive={false}
+        key=".0"
+        label="1st Option"
+        onSelect={[Function]}
+        requestClose={[Function]}
+      >
+        <li
+          role="presentation"
+          tabIndex="-1"
+        >
+          <div
+            className="item orion-fusion-theme"
+            data-terra-dropdown-list-item={true}
+            onClick={[Function]}
+            role="menuitem"
+            tabIndex="0"
+          >
+            1st Option
+          </div>
+        </li>
+      </Item>
+      <Item
+        data-terra-dropdown-list-item={true}
+        isActive={false}
+        key=".1"
+        label="2nd Option"
+        onSelect={[Function]}
+        requestClose={[Function]}
+      >
+        <li
+          role="presentation"
+          tabIndex="-1"
+        >
+          <div
+            className="item orion-fusion-theme"
+            data-terra-dropdown-list-item={true}
+            onClick={[Function]}
+            role="menuitem"
+            tabIndex="0"
+          >
+            2nd Option
+          </div>
+        </li>
+      </Item>
+      <Item
+        data-terra-dropdown-list-item={true}
+        isActive={false}
+        key=".2"
+        label="3rd Option"
+        onSelect={[Function]}
+        requestClose={[Function]}
+      >
+        <li
+          role="presentation"
+          tabIndex="-1"
+        >
+          <div
+            className="item orion-fusion-theme"
+            data-terra-dropdown-list-item={true}
+            onClick={[Function]}
+            role="menuitem"
+            tabIndex="0"
+          >
+            3rd Option
+          </div>
+        </li>
+      </Item>
+    </ul>
+  </DropdownList>
+</ThemeContextProvider>
+`;
+
 exports[`Dropdown List renders a default dropdown list 1`] = `
 <ul
   className="dropdown-list"
