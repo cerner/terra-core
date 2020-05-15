@@ -1,5 +1,9 @@
 @import '~terra-mixins/lib/Mixins';
 
+// Themes
+@import '../clinical-lowlight-theme/Avatar.module';
+@import '../orion-fusion-theme/Avatar.module';
+
 :local {
   .avatar {
     align-items: center;

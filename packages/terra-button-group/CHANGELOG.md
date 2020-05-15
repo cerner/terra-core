@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
 ### Fixed
 * Fixed button losing focus when switching window
 
