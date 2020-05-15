@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Avatar from '../../src/variants/Avatar';
 import exampleProfilePhoto from '../../src/terra-dev-site/assets/150x150.jpg';
 
@@ -80,5 +82,14 @@ describe('Avatar', () => {
     const avatar = <Avatar alt="user" id="custom props avatar" initials="JS" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const avatar = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Avatar alt="user" initials="JS" />
+      </ThemeContextProvider>,
+    );
+    expect(avatar).toMatchSnapshot();
   });
 });

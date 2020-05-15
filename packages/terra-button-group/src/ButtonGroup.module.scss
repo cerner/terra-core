@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/ButtonGroup.module';
+@import './orion-fusion-theme/ButtonGroup.module';
+
 :local {
   .button-group {
     display: inline-flex;
