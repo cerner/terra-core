@@ -179,6 +179,7 @@ import IconMediaStop from 'terra-icon/lib/icon/IconMediaStop';
 import IconMediaRecord from 'terra-icon/lib/icon/IconMediaRecord';
 import IconMediaFastForward from 'terra-icon/lib/icon/IconMediaFastForward';
 import IconMediaRewind from 'terra-icon/lib/icon/IconMediaRewind';
+import IconBluetooth from 'terra-icon/lib/icon/IconBluetooth';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -1819,6 +1820,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconMediaRewind from 'terra-icon/lib/icon/IconMediaRewind';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconBluetooth height='2em' width='2em' /></td>
+        <td style={cellStyle}>bluetooth</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconBluetooth from 'terra-icon/lib/icon/IconBluetooth';
           </code>
         </td>
       </tr>
