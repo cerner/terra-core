@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Button from '../../src/ButtonGroupButton';
 
 it('should render a default component', () => {
@@ -39,5 +41,14 @@ it('should render with onKeyDown', () => {
 
 it('should render with onKeyUp', () => {
   const button = shallow(<Button text="onKeyUp" onKeyUp={() => {}} />);
+  expect(button).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const button = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Button text="Default Button" />
+    </ThemeContextProvider>,
+  );
   expect(button).toMatchSnapshot();
 });

@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from '../common/Avatar.module.scss';
 import { setColor } from '../common/AvatarUtils';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const GENERIC_VARIANTS = {
   SINGLE_USER: 'single-user',
@@ -58,14 +60,18 @@ const Generic = ({
   variant,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
   const colorVariant = setColor(alt, color, hashValue);
   const attributes = { ...customProps };
   const customStyles = size ? ({ fontSize: size, ...attributes.style }) : attributes.style;
-  const GenericUserClassNames = cx([
-    'avatar',
-    `${colorVariant}`,
+  const GenericUserClassNames = classNames(
+    cx(
+      'avatar',
+      `${colorVariant}`,
+      theme.className,
+    ),
     attributes.className,
-  ]);
+  );
 
   let genericIconClassNames = cx(['icon', 'user']);
 

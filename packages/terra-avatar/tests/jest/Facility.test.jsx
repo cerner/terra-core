@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Facility from '../../src/variants/Facility';
 import exampleProfilePhoto from '../../src/terra-dev-site/assets/150x150.jpg';
 
@@ -55,5 +57,14 @@ describe('Facility', () => {
     const avatar = <Facility alt="London" id="custom props facility" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const avatar = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Facility alt="London" />
+      </ThemeContextProvider>,
+    );
+    expect(avatar).toMatchSnapshot();
   });
 });

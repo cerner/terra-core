@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Generic from '../../src/variants/Generic';
 
 describe('Generic', () => {
@@ -110,5 +111,14 @@ describe('Generic', () => {
     const avatar = <Generic variant="provider" alt="provider" id="custom props provider user" />;
     const wrapper = render(avatar);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    jest.spyOn(React, 'useContext')
+      .mockReturnValue({
+        className: 'orion-fusion-theme',
+      });
+    const avatar = mount(<Generic variant="provider" alt="provider" />);
+    expect(avatar).toMatchSnapshot();
   });
 });
