@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from '../common/Avatar.module.scss';
 import {
   AVATAR_VARIANTS, generateInitials, generateImage, setColor,
 } from '../common/AvatarUtils';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -82,6 +84,8 @@ class Avatar extends React.Component {
       ...customProps
     } = this.props;
 
+    const theme = this.context;
+
     let avatarContent;
     const avatarParams = {
       image,
@@ -100,14 +104,17 @@ class Avatar extends React.Component {
 
     const attributes = { ...customProps };
     const customStyles = size ? ({ fontSize: size, ...attributes.style }) : attributes.style;
-    const avatarClassNames = cx([
-      'avatar',
-      setColor(alt, color, hashValue),
-      { 'fallback-icon': this.state.fallback },
-      { image: Boolean(image) },
-      { 'is-deceased': isDeceased },
+    const avatarClassNames = classNames(
+      cx(
+        'avatar',
+        setColor(alt, color, hashValue),
+        { 'fallback-icon': this.state.fallback },
+        { image: Boolean(image) },
+        { 'is-deceased': isDeceased },
+        theme.className,
+      ),
       attributes.className,
-    ]);
+    );
 
     /* eslint-disable react/forbid-dom-props */
     return (
@@ -121,5 +128,6 @@ class Avatar extends React.Component {
 
 Avatar.propTypes = propTypes;
 Avatar.defaultProps = defaultProps;
+Avatar.contextType = ThemeContext;
 
 export default Avatar;
