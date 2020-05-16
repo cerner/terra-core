@@ -12,6 +12,8 @@ import {
   isCurrentPlaceholder,
   getDisplay,
   getFirstValue,
+  getOptGroupKey,
+  geOptGroupKeyIndex,
 } from './NativeUtils';
 import {
   optionPropType,
@@ -114,16 +116,24 @@ const createPlaceholder = (placeholder, intl) => {
   return <option value={value} {...attrs}>{display}</option>;
 };
 
-const createOptions = options => options.map(current => {
-  if (current.childOptions) {
-    return (
-      <optgroup key={`${current.display} ${current.childOptions.length}`} label={current.display}>
-        {createOptions(current.childOptions)}
-      </optgroup>
-    );
-  }
-  return <option key={`${current.value}`} value={current.value}>{current.display}</option>;
-});
+const createOptions = options => {
+  const currentOptGroupKeys = [];
+
+  return options.map(current => {
+    if (current.options) {
+      const optGroupKeyIndex = geOptGroupKeyIndex(current.display, currentOptGroupKeys);
+      const optGroupKey = getOptGroupKey(current.display, optGroupKeyIndex);
+      currentOptGroupKeys.push(optGroupKey);
+
+      return (
+        <optgroup key={optGroupKey} label={current.display}>
+          {createOptions(current.options)}
+        </optgroup>
+      );
+    }
+    return <option key={`${current.value}`} value={current.value}>{current.display}</option>;
+  });
+};
 
 const NativeSelect = ({
   ariaDescribedBy,

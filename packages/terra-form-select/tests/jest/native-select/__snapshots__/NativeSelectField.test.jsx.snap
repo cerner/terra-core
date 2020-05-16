@@ -1156,7 +1156,8 @@ exports[`NativeSelectField should render a NativeSelectField with opt groups 1`]
     options={
       Array [
         Object {
-          "childOptions": Array [
+          "display": "Swedish Cars",
+          "options": Array [
             Object {
               "display": "Volvo",
               "value": "volvo",
@@ -1166,10 +1167,10 @@ exports[`NativeSelectField should render a NativeSelectField with opt groups 1`]
               "value": "saab",
             },
           ],
-          "display": "Swedish Cars",
         },
         Object {
-          "childOptions": Array [
+          "display": "German Cars",
+          "options": Array [
             Object {
               "display": "Mercedes",
               "value": "mercedes",
@@ -1179,7 +1180,6 @@ exports[`NativeSelectField should render a NativeSelectField with opt groups 1`]
               "value": "audi",
             },
           ],
-          "display": "German Cars",
         },
       ]
     }

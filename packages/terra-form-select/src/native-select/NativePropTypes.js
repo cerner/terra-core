@@ -31,7 +31,7 @@ const optGroupPropType = PropTypes.shape({
   /**
    * The array of select options.
    */
-  childOptions: PropTypes.arrayOf(optionPropType).isRequired,
+  options: PropTypes.arrayOf(optionPropType).isRequired,
 });
 
 export default {

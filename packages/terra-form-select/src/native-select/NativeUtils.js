@@ -16,8 +16,8 @@ const getDisplay = (findValue, options, placeholder, intl) => {
       if (current.value === findValue) {
         return current.display;
       }
-    } else if (current.childOptions) {
-      const foundValue = getDisplay(findValue, current.childOptions);
+    } else if (current.options) {
+      const foundValue = getDisplay(findValue, current.options);
       if (foundValue) {
         return foundValue;
       }
@@ -38,7 +38,7 @@ const getFirstValue = (options, placeholder) => {
     if (current.value) {
       return current.value;
     }
-    const firstValue = getFirstValue(current.childOptions);
+    const firstValue = getFirstValue(current.options);
     if (firstValue) {
       return firstValue;
     }
@@ -56,11 +56,22 @@ const isCurrentPlaceholder = (value, placeholder) => {
   return value === defaultPlaceholderValue;
 };
 
+const getOptGroupKey = (display, index) => `${display}-${index}`;
+
+const geOptGroupKeyIndex = (display, currentKeys, index=0) => {
+  if (currentKeys.indexOf(getOptGroupKey(display, index)) >= 0) {
+    return geOptGroupKeyIndex(display, currentKeys, index + 1);
+  }
+  return index;
+};
+
 export default {
   defaultPlaceholderValue,
   isCurrentPlaceholder,
   getDisplay,
   getFirstValue,
+  getOptGroupKey,
+  geOptGroupKeyIndex,
 };
 
 export {
@@ -68,4 +79,6 @@ export {
   isCurrentPlaceholder,
   getDisplay,
   getFirstValue,
+  getOptGroupKey,
+  geOptGroupKeyIndex,
 };

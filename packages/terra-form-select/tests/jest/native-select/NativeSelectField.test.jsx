@@ -226,14 +226,14 @@ describe('NativeSelectField', () => {
         options={[
           {
             display: 'Swedish Cars',
-            childOptions: [
+            options: [
               { value: 'volvo', display: 'Volvo' },
               { value: 'saab', display: 'Saab' },
             ],
           },
           {
             display: 'German Cars',
-            childOptions: [
+            options: [
               { value: 'mercedes', display: 'Mercedes' },
               { value: 'audi', display: 'Audi' },
             ],

@@ -16,7 +16,7 @@ const propTypes = {
   /**
    * The array of select options.
    */
-  childOptions: PropTypes.arrayOf(optionPropType).isRequired,
+  options: PropTypes.arrayOf(optionPropType).isRequired,
 };
 
 const NativeOptionsProps = () => (

@@ -1134,7 +1134,8 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
   options={
     Array [
       Object {
-        "childOptions": Array [
+        "display": "Swedish Cars",
+        "options": Array [
           Object {
             "display": "Volvo",
             "value": "volvo",
@@ -1144,10 +1145,10 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
             "value": "saab",
           },
         ],
-        "display": "Swedish Cars",
       },
       Object {
-        "childOptions": Array [
+        "display": "German Cars",
+        "options": Array [
           Object {
             "display": "Mercedes",
             "value": "mercedes",
@@ -1157,7 +1158,6 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
             "value": "audi",
           },
         ],
-        "display": "German Cars",
       },
     ]
   }
@@ -1198,7 +1198,8 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
     options={
       Array [
         Object {
-          "childOptions": Array [
+          "display": "Swedish Cars",
+          "options": Array [
             Object {
               "display": "Volvo",
               "value": "volvo",
@@ -1208,10 +1209,10 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
               "value": "saab",
             },
           ],
-          "display": "Swedish Cars",
         },
         Object {
-          "childOptions": Array [
+          "display": "German Cars",
+          "options": Array [
             Object {
               "display": "Mercedes",
               "value": "mercedes",
@@ -1221,7 +1222,6 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
               "value": "audi",
             },
           ],
-          "display": "German Cars",
         },
       ]
     }
@@ -1261,7 +1261,7 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
         value="volvo"
       >
         <optgroup
-          key="Swedish Cars 2"
+          key="Swedish Cars-0"
           label="Swedish Cars"
         >
           <option
@@ -1278,7 +1278,7 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
           </option>
         </optgroup>
         <optgroup
-          key="German Cars 2"
+          key="German Cars-0"
           label="German Cars"
         >
           <option

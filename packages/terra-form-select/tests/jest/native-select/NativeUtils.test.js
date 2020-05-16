@@ -3,6 +3,8 @@ import {
   isCurrentPlaceholder,
   getDisplay,
   getFirstValue,
+  getOptGroupKey,
+  geOptGroupKeyIndex,
 } from '../../../src/native-select/NativeUtils';
 
 const mockIntl = {
@@ -31,7 +33,7 @@ const testOptions = [
 const testOptGroups = [
   {
     display: 'Group 1',
-    childOptions: [
+    options: [
       {
         display: '1',
         value: 'value-1',
@@ -44,7 +46,7 @@ const testOptGroups = [
   },
   {
     display: 'Group 2',
-    childOptions: [
+    options: [
       {
         display: '3',
         value: 'value-3',
@@ -100,5 +102,21 @@ describe('NativeUtils', () => {
     expect(isCurrentPlaceholder(defaultPlaceholderValue, {})).toEqual(true);
     expect(isCurrentPlaceholder('custom-test-value', { value: 'custom-test-value' })).toEqual(true);
     expect(isCurrentPlaceholder('custom-false-value', { value: 'custom-test-value' })).toEqual(false);
+  });
+
+  // getOptGroupKey
+  it('should return the correct string for geOptGroupKey', () => {
+    expect(getOptGroupKey('zero', 0)).toEqual('zero-0');
+    expect(getOptGroupKey('one', 3)).toEqual('one-3');
+  });
+
+  // geOptGroupKeyIndex
+  it('should return the correct index for geOptGroupKeyIndex', () => {
+    const testSet = ['one-0', 'two-0', 'two-1', 'three-0', 'three-1', 'three-2'];
+
+    expect(geOptGroupKeyIndex('zero', testSet)).toEqual(0);
+    expect(geOptGroupKeyIndex('one', testSet)).toEqual(1);
+    expect(geOptGroupKeyIndex('two', testSet)).toEqual(2);
+    expect(geOptGroupKeyIndex('three', testSet)).toEqual(3);
   });
 });
