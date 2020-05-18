@@ -95,7 +95,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
         >
           <button
             aria-disabled={false}
-            className="split-button-primary neutral"
+            className="split-button-primary neutral orion-fusion-theme"
             disabled={false}
             onClick={[Function]}
             onKeyDown={[Function]}
@@ -109,7 +109,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             aria-expanded={false}
             aria-haspopup="menu"
             aria-label="Terra.dropdownButton.moreOptions"
-            className="split-button-caret neutral"
+            className="split-button-caret neutral orion-fusion-theme"
             disabled={false}
             onClick={[Function]}
             onKeyDown={[Function]}
