@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Checkbox from '../../src/Checkbox';
 
 window.matchMedia = () => ({ matches: true });
@@ -46,5 +48,21 @@ it('should render a ChoiceField with a checkbox', () => {
   );
 
   const wrapper = shallow(choiceField);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Checkbox
+        labelText="Do you have any Children?"
+        labelTextAttrs={{ className: 'healtheintent-label-text' }}
+        name="children_present"
+        value="children_present"
+        inputAttrs={{ className: 'healtheintent-application' }}
+        isInline={false}
+      />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });
