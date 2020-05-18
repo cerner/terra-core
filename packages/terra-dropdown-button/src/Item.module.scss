@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/Item.module';
+@import './orion-fusion-theme/Item.module';
+
 :local {
   .item {
     color: var(--terra-dropdown-button-menu-item-color, #1c1f21);
