@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Item.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -36,30 +37,34 @@ const propTypes = {
 // Keyboard events are handled in _DropdownList.jsx
 const Item = ({
   label, onSelect, isActive, metaData, requestClose, ...customProps
-}) => (
+}) => {
+  const theme = React.useContext(ThemeContext);
   /*
     Having the li element with tabIndex -1 is important for VoiceOver in Safari, without it pressing VO + left/right will
     navigate outside the dropdown with the dropdown still open if nothing else is pressed after opening the menu.
   */
-  <li tabIndex="-1" role="presentation">
-    <div
-      {...customProps}
-      onClick={(event) => {
-        requestClose(() => {
-          onSelect(event, metaData);
-        });
-      }}
-      role="menuitem"
-      tabIndex="0"
-      className={cx([
-        'item',
-        { active: isActive },
-      ])}
-    >
-      {label}
-    </div>
-  </li>
-);
+  return (
+    <li tabIndex="-1" role="presentation">
+      <div
+        {...customProps}
+        onClick={(event) => {
+          requestClose(() => {
+            onSelect(event, metaData);
+          });
+        }}
+        role="menuitem"
+        tabIndex="0"
+        className={cx(
+          'item',
+          { active: isActive },
+          theme.className,
+        )}
+      >
+        {label}
+      </div>
+    </li>
+  );
+};
 
 Item.propTypes = propTypes;
 

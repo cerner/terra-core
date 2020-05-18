@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import DropdownList from '../../src/_DropdownList';
 import { Item } from '../../src/DropdownButton';
 
@@ -72,6 +74,19 @@ describe('Dropdown List', () => {
     );
     wrapper.setState({ focused: '2nd Option', active: '2nd Option' });
 
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const wrapper = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <DropdownList requestClose={() => {}}>
+          <Item label="1st Option" onSelect={() => {}} />
+          <Item label="2nd Option" onSelect={() => {}} />
+          <Item label="3rd Option" onSelect={() => {}} />
+        </DropdownList>
+      </ThemeContextProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
