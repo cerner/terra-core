@@ -3,6 +3,10 @@
 @import './variables';
 @import './mixins';
 
+// Themes
+@import './orion-fusion-theme/SplitButton.module';
+@import './clinical-lowlight-theme/SplitButton.module';
+
 :local {
   .split-button-primary {
     border-radius: inherit;
