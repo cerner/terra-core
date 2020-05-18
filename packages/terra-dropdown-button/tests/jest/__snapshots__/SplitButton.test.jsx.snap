@@ -1,5 +1,172 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dropdown Button correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <InjectIntl(SplitButton)
+    onSelect={[Function]}
+    primaryOptionLabel="Primary Option"
+  >
+    <SplitButton
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      onSelect={[Function]}
+      primaryOptionLabel="Primary Option"
+      variant="neutral"
+    >
+      <DropdownButtonBase
+        buttonRef={[Function]}
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isOpen={false}
+        items={
+          <Item
+            label="1st Option"
+            onSelect={[Function]}
+          />
+        }
+        openedViaKeyboard={false}
+        refCallback={[Function]}
+        requestClose={[Function]}
+      >
+        <div
+          className="dropdown-button-base orion-fusion-theme"
+        >
+          <button
+            aria-disabled={false}
+            className="split-button-primary neutral orion-fusion-theme"
+            disabled={false}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            Primary Option
+          </button>
+          <button
+            aria-disabled={false}
+            aria-expanded={false}
+            aria-haspopup="menu"
+            aria-label="Terra.dropdownButton.moreOptions"
+            className="split-button-caret neutral orion-fusion-theme"
+            disabled={false}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            type="button"
+          >
+            <span
+              className="caret-icon"
+            />
+          </button>
+          <Dropdown
+            buttonRef={[Function]}
+            isOpen={false}
+            openedViaKeyboard={false}
+            refCallback={[Function]}
+            requestClose={[Function]}
+            targetRef={[Function]}
+          >
+            <Hookshot
+              attachmentBehavior="flip"
+              attachmentMargin={0}
+              contentAttachment={
+                Object {
+                  "horizontal": "start",
+                  "vertical": "top",
+                }
+              }
+              contentOffset={
+                Object {
+                  "horizontal": 0,
+                  "vertical": 0,
+                }
+              }
+              isEnabled={true}
+              isOpen={false}
+              targetAttachment={
+                Object {
+                  "horizontal": "start",
+                  "vertical": "bottom",
+                }
+              }
+              targetOffset={
+                Object {
+                  "horizontal": 0,
+                  "vertical": 0,
+                }
+              }
+              targetRef={[Function]}
+            />
+          </Dropdown>
+        </div>
+      </DropdownButtonBase>
+    </SplitButton>
+  </InjectIntl(SplitButton)>
+</ThemeContextProvider>
+`;
+
 exports[`Dropdown Button should render a block split type 1`] = `
 <DropdownButtonBase
   buttonRef={[Function]}

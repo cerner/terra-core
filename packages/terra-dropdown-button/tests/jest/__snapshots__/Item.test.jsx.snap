@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Item correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Item
+    label="1st Option"
+    onSelect={[Function]}
+    requestClose={[Function]}
+  >
+    <li
+      role="presentation"
+      tabIndex="-1"
+    >
+      <div
+        className="item orion-fusion-theme"
+        onClick={[Function]}
+        role="menuitem"
+        tabIndex="0"
+      >
+        1st Option
+      </div>
+    </li>
+  </Item>
+</ThemeContextProvider>
+`;
+
 exports[`Item renders a default item 1`] = `
 <li
   role="presentation"
