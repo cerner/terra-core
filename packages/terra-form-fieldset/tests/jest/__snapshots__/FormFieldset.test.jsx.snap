@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Fieldset
+    isLegendHidden={false}
+    legendAttrs={Object {}}
+    required={false}
+  >
+    <fieldset
+      className="fieldset orion-fusion-theme"
+    >
+      <div
+        className="fieldset-children"
+      />
+    </fieldset>
+  </Fieldset>
+</ThemeContextProvider>
+`;
+
 exports[`should render a Fieldset when all the possible props are passed into it 1`] = `
 <fieldset
   className="fieldset fieldset-required fieldset-custom"
