@@ -20,6 +20,7 @@ exports[`correctly applies the theme context className 1`] = `
       isIconOnly={false}
       isReversed={false}
       onBlur={[Function]}
+      onFocus={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
       text="Default Button"
