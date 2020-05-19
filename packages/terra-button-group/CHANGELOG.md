@@ -6,6 +6,9 @@ Unreleased
 ### Changed
 * Apply themes by context and directly include packaged themes.
 
+### Fixed
+* Fixed button losing focus when switching window
+
 3.38.0 - (May 5, 2020)
 ------------------
 ### Added
@@ -15,6 +18,7 @@ Unreleased
 ------------------
 ### Changed
 * Removed "View Component Source Code" from docs in favour of source code badge
+
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 
