@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
 ### Changes
 * Update wdio tests to move cursor to fix inconsistent hover styles in internal themes
 
