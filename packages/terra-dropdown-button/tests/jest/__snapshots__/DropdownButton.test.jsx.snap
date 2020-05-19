@@ -1,5 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dropdown Button correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <DropdownButton
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    label="Primary Option"
+    variant="neutral"
+  >
+    <DropdownButtonBase
+      buttonRef={[Function]}
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isOpen={false}
+      items={
+        <Item
+          label="1st Option"
+          onSelect={[Function]}
+        />
+      }
+      openedViaKeyboard={false}
+      refCallback={[Function]}
+      requestClose={[Function]}
+    >
+      <div
+        className="dropdown-button-base orion-fusion-theme"
+      >
+        <button
+          aria-disabled={false}
+          aria-expanded={false}
+          aria-haspopup="menu"
+          className="dropdown-button neutral orion-fusion-theme"
+          disabled={false}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          type="button"
+        >
+          <span
+            className="dropdown-button-text"
+          >
+            Primary Option
+          </span>
+          <span
+            className="caret-icon"
+          />
+        </button>
+        <Dropdown
+          buttonRef={[Function]}
+          isOpen={false}
+          openedViaKeyboard={false}
+          refCallback={[Function]}
+          requestClose={[Function]}
+          targetRef={[Function]}
+        >
+          <Hookshot
+            attachmentBehavior="flip"
+            attachmentMargin={0}
+            contentAttachment={
+              Object {
+                "horizontal": "start",
+                "vertical": "top",
+              }
+            }
+            contentOffset={
+              Object {
+                "horizontal": 0,
+                "vertical": 0,
+              }
+            }
+            isEnabled={true}
+            isOpen={false}
+            targetAttachment={
+              Object {
+                "horizontal": "start",
+                "vertical": "bottom",
+              }
+            }
+            targetOffset={
+              Object {
+                "horizontal": 0,
+                "vertical": 0,
+              }
+            }
+            targetRef={[Function]}
+          />
+        </Dropdown>
+      </div>
+    </DropdownButtonBase>
+  </DropdownButton>
+</ThemeContextProvider>
+`;
+
 exports[`Dropdown Button should render a block dropdown type 1`] = `
 <DropdownButtonBase
   buttonRef={[Function]}

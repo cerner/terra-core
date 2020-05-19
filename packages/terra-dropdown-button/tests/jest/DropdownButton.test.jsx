@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import DropdownButton, { Item, Variants } from '../../src/DropdownButton';
 
 describe('Dropdown Button', () => {
@@ -74,6 +76,17 @@ describe('Dropdown Button', () => {
       <DropdownButton label="Primary Option" test-custom-attribute other-custom-attribute="purple">
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const wrapper = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <DropdownButton label="Primary Option">
+          <Item label="1st Option" onSelect={() => {}} />
+        </DropdownButton>
+      </ThemeContextProvider>,
     );
     expect(wrapper).toMatchSnapshot();
   });

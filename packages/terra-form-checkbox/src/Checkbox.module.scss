@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/Checkbox.module';
+@import './orion-fusion-theme/Checkbox.module';
+
 :local {
   .checkbox {
     color: var(--terra-form-checkbox-font-color, rgb(0, 0, 0));

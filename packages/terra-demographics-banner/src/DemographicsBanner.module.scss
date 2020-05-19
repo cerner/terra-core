@@ -1,3 +1,7 @@
+//Themes
+@import './clinical-lowlight-theme/DemographicsBanner.module';
+@import './orion-fusion-theme/DemographicsBanner.module';
+
 :local {
   .demographics-banner {
     background-clip: border-box;

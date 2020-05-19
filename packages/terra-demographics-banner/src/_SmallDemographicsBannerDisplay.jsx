@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
-import classNames from 'classnames/bind';
 import React from 'react';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import IconFlag from 'terra-icon/lib/icon/IconFlag';
 import styles from './DemographicsBanner.module.scss';
 import DemographicsBannerUtils from './_sharedObjects';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 export default (props) => {
   const {
@@ -32,11 +34,16 @@ export default (props) => {
     ...customProps
   } = props;
 
-  const mainClasses = cx([
-    'demographics-banner',
+  const theme = React.useContext(ThemeContext);
+
+  const mainClasses = classNames(
+    cx(
+      'demographics-banner',
+      { deceased: deceasedDate },
+      theme.className,
+    ),
     customProps.className,
-    { deceased: deceasedDate },
-  ]);
+  );
 
   delete customProps.className;
 

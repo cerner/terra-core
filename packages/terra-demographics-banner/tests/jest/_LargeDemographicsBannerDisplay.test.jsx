@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import LargeDemographicsBannerDisplay from '../../src/_LargeDemographicsBannerDisplay';
 
 it('renders large banner that contains all valid information', () => {
@@ -27,3 +28,13 @@ it('renders large banner that contains all valid information', () => {
 
   expect(banner).toMatchSnapshot();
 });
+
+it('correctly applies the theme context className', () => {
+  const banner = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <LargeDemographicsBannerDisplay />
+    </ThemeContextProvider>,
+  );
+  expect(banner).toMatchSnapshot();
+});
+

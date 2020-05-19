@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.29.0 - (May 12, 2020)
+------------------
 ### Added
 * Added `unsatisfied` and `unverified` types
 

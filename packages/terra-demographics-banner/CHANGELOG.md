@@ -8,6 +8,9 @@ Unreleased
 * Support terra-avatar to replace profile photo prop.
 * Added flag icon to denote confidentiality.
 
+### Changed
+* Apply themes by context and directly include packaged themes.
+
 3.36.0 - (April 28, 2020)
 ------------------
 ### Changed

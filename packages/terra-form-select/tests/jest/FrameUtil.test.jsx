@@ -43,6 +43,8 @@ describe('FrameUtil', () => {
         maxHeight: 100,
         isAbove: false,
         isPositioned: true,
+        top: undefined,
+        bottom: undefined,
       };
 
       expect(FrameUtil.dropdownPosition(props, target, dropdown)).toEqual(expected);

@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import SmallDemographicsBannerDisplay from '../../src/_SmallDemographicsBannerDisplay';
 
 it('renders small banner that contains all valid information', () => {
@@ -25,5 +26,13 @@ it('renders small banner that contains all valid information', () => {
     postMenstrualAgeLabel="PMA"
   />);
 
+  expect(banner).toMatchSnapshot();
+});
+it('correctly applies the theme context className', () => {
+  const banner = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <SmallDemographicsBannerDisplay />
+    </ThemeContextProvider>,
+  );
   expect(banner).toMatchSnapshot();
 });

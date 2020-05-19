@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/DropdownButtonBase.module';
+@import './orion-fusion-theme/DropdownButtonBase.module';
+
 :local {
   .dropdown-button-base {
     border-radius: var(--terra-dropdown-button-border-radius, 3px);
