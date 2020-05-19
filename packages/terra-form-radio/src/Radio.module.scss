@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/Radio.module';
+@import './orion-fusion-theme/Radio.module';
+
 :local {
   .radio {
     color: var(--terra-form-radio-font-color, rgb(0, 0, 0));
