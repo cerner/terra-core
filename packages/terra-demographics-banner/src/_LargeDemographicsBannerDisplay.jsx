@@ -46,7 +46,7 @@ export default (props) => {
     ),
     customProps.className,
   );
-  
+
   if (customProps.className) {
     mainClasses = `${mainClasses} ${customProps.className}`;
   }
