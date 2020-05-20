@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.4.0 - (May 19, 2020)
+------------------
 ### Changes
 * Update wdio tests to move cursor to fix inconsistent hover styles in internal themes
 

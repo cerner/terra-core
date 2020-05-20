@@ -1,4 +1,6 @@
-@import '~terra-mixins/lib/Mixins';
+// Themes
+@import './clinical-lowlight-theme/RadioField.module';
+@import './orion-fusion-theme/RadioField.module';
 
 :local {
   .radio-field {

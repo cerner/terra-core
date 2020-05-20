@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Radio from '../../src/Radio';
 
 window.matchMedia = () => ({ matches: true });
@@ -46,5 +48,14 @@ it('should render a ChoiceField with a radio', () => {
   );
 
   const wrapper = shallow(choiceField);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Radio labelText="Radio" />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });
