@@ -7,8 +7,14 @@ const ActiveBreakpointConsumer = withActiveBreakpoint(({ activeBreakpoint }) => 
       The active breakpoint is:
       {' '}
       {activeBreakpoint.activeBreakpoint}
+      <br></br>
+      <br></br>
+      The event ('resize'/'orientationchange'):
       {' '}
       {activeBreakpoint.source}
+      <br></br>
+      <br></br>
+      The innerWidth:
       {' '}
       {activeBreakpoint.innerWidth}
     </p>
