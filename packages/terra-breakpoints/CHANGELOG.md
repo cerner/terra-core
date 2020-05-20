@@ -7,7 +7,7 @@ Unreleased
 2.26.0 - (April 28, 2020)
 ------------------
 ### Changed
-* Removed "View Component Source Code" from docs in favour of source code badge
+* Removed "View Component Source Code" from docs in favour of source code badge.
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 

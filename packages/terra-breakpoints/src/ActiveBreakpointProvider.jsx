@@ -15,18 +15,23 @@ class ActiveBreakpointProvider extends React.Component {
     super(props);
 
     this.setActiveBreakpoint = this.setActiveBreakpoint.bind(this);
+    this.setActiveBreakpointFromOrientationchange = this.setActiveBreakpointFromOrientationchange.bind(this);
 
     this.state = {
       activeBreakpoint: activeBreakpointForSize(window.innerWidth),
+      innerWidth: window.innerWidth,
+      source: 'unknown',
     };
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.setActiveBreakpoint);
+    // window.addEventListener('orientationchange', this.setActiveBreakpointFromOrientationchange);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.setActiveBreakpoint);
+    // window.removeEventListener('orientationchange', this.setActiveBreakpointFromOrientationchange);
   }
 
   setActiveBreakpoint() {
@@ -36,16 +41,36 @@ class ActiveBreakpointProvider extends React.Component {
     if (activeBreakpoint !== newBreakpoint) {
       this.setState({
         activeBreakpoint: newBreakpoint,
+        innerWidth: window.innerWidth,
+        source: 'resize',
+      });
+    }
+  }
+
+  setActiveBreakpointFromOrientationchange() {
+    const { activeBreakpoint } = this.state;
+    const newBreakpoint = activeBreakpointForSize(window.innerWidth);
+
+    if (activeBreakpoint !== newBreakpoint) {
+      this.setState({
+        activeBreakpoint: newBreakpoint,
+        innerWidth: window.innerWidth,
+        source: 'orientationchange',
       });
     }
   }
 
   render() {
     const { children } = this.props;
-    const { activeBreakpoint } = this.state;
+    const { activeBreakpoint, innerWidth, source } = this.state;
+    const stateValue = {
+      activeBreakpoint,
+      innerWidth,
+      source,
+    };
 
     return (
-      <ActiveBreakpointContext.Provider value={activeBreakpoint}>
+      <ActiveBreakpointContext.Provider value={stateValue}>
         {children}
       </ActiveBreakpointContext.Provider>
     );
