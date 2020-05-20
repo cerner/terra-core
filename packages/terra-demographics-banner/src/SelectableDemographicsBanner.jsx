@@ -90,21 +90,13 @@ const propTypes = {
 };
 
 const defaultProps = {
-  age: undefined,
   applicationContent: null,
-  avatar: undefined,
-  dateOfBirth: undefined,
   deceasedDate: null,
-  gender: undefined,
   gestationalAge: null,
   identifiers: {},
-  infoButtonId: undefined,
   isConfidential: false,
-  personName: undefined,
-  photo: undefined,
   postMenstrualAge: null,
   preferredFirstName: null,
-  selectableTileId: undefined,
 };
 
 const SelectableDemographicsBanner = ({
@@ -168,14 +160,28 @@ const SelectableDemographicsBanner = ({
   const infoText = intl.formatMessage({ id: 'Terra.demographicsBanner.info' });
 
   return (
-    <BackgroundTile {...customProps} isDeceased={!!(deceasedDate)}>
-      <SelectableTile id={selectableTileId} onClick={handleOnClick} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp}>
+    <BackgroundTile
+      {...customProps}
+      isDeceased={!!(deceasedDate)}
+    >
+      <SelectableTile
+        id={selectableTileId}
+        onClick={handleOnClick}
+        onKeyDown={handleKeyDown}
+        onKeyUp={handleKeyUp}
+      >
         {DemographicsBannerSelectableTile}
       </SelectableTile>
       <div className={cx('divider')} />
-      <button className={cx('info-button')} type="button" role="link" id={infoButtonId} onClick={infoButtonOnClick}>
-        {infoText}
-        <IconInfo />
+      <button
+        className={cx('info-button')}
+        type="button"
+        role="link"
+        id={infoButtonId}
+        onClick={infoButtonOnClick}
+      >
+        <span className={cx('info-text')}>{infoText}</span>
+        <span className={cx('info-icon')}>{<IconInfo />}</span>
       </button>
     </BackgroundTile>
   );

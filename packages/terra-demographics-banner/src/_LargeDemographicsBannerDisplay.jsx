@@ -37,7 +37,7 @@ export default (props) => {
 
   const theme = React.useContext(ThemeContext);
 
-  let mainClasses = classNames(
+  const mainClasses = classNames(
     cx(
       'demographics-banner',
       'large-demographics-banner',
@@ -46,10 +46,6 @@ export default (props) => {
     ),
     customProps.className,
   );
-
-  if (customProps.className) {
-    mainClasses = `${mainClasses} ${customProps.className}`;
-  }
 
   delete customProps.className;
 
