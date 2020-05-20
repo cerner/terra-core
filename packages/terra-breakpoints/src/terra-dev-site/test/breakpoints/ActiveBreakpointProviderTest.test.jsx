@@ -6,7 +6,11 @@ const ActiveBreakpointConsumer = withActiveBreakpoint(({ activeBreakpoint }) => 
     <p>
       The active breakpoint is:
       {' '}
-      {activeBreakpoint}
+      {activeBreakpoint.activeBreakpoint}
+      {' '}
+      {activeBreakpoint.source}
+      {' '}
+      {activeBreakpoint.innerWidth}
     </p>
   </div>
 ));
