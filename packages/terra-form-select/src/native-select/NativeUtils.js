@@ -1,4 +1,4 @@
-const defaultPlaceholderValue = '-invalid-value-';
+const defaultPlaceholderValue = '';
 
 const getDisplay = (findValue, options, placeholder, intl) => {
   if (placeholder) {

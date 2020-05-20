@@ -1,6 +1,6 @@
 Terra.describeViewports('Native Select', ['tiny'], () => {
   describe('Default', () => {
-    browser.url('/#/raw/tests/terra-form-select/form-select/native-select/default');
+    browser.url('/raw/tests/terra-form-select/form-select/native-select/default');
 
     Terra.it.validatesElement('initial');
 
@@ -25,7 +25,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('Disabled', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/disabled'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/disabled'));
 
     Terra.it.validatesElement('initial');
 
@@ -50,7 +50,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('Incomplete', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/incomplete'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/incomplete'));
 
     Terra.it.validatesElement('initial');
 
@@ -75,7 +75,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('Invalid', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/invalid'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/invalid'));
 
     Terra.it.validatesElement('initial');
 
@@ -100,7 +100,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('LongText', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/long-text'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/long-text'));
 
     Terra.it.validatesElement('initial');
 
@@ -125,7 +125,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('OptGroup', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/opt-group'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/opt-group'));
 
     Terra.it.validatesElement('initial');
 
@@ -150,7 +150,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('Placeholder', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/native-select/placeholder'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/placeholder'));
 
     Terra.it.validatesElement('initial');
 

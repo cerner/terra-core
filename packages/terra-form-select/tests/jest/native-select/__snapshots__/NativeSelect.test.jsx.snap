@@ -109,10 +109,10 @@ exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
         onFocus={[Function]}
         onMouseDown={[Function]}
         required={false}
-        value="-invalid-value-"
+        value=""
       >
         <option
-          value="-invalid-value-"
+          value=""
         >
           Terra.form.select.defaultDisplay
         </option>
@@ -980,12 +980,12 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
         onFocus={[Function]}
         onMouseDown={[Function]}
         required={false}
-        value="-invalid-value-"
+        value=""
       >
         <option
           disabled={true}
           hidden={true}
-          value="-invalid-value-"
+          value=""
         >
           Terra.form.select.defaultDisplay
         </option>
