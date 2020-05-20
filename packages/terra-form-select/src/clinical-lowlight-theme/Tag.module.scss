@@ -1,0 +1,26 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .clinical-lowlight-theme {
+    --terra-form-select-tag-background: #1d2427;
+    --terra-form-select-tag-border-radius: 3px;
+    --terra-form-select-tag-font-size: 1rem;
+    --terra-form-select-tag-height: auto;
+    --terra-form-select-tag-line-height: 1.143;
+    --terra-form-select-tag-margin-right: 0.42857rem;
+    --terra-form-select-tag-margin-top: 0.21428571428571427rem;
+    --terra-form-select-tag-display-border-bottom: 1px solid #181b1d;
+    --terra-form-select-tag-display-color: #b2b5b6;
+    --terra-form-select-tag-display-padding: 0.14285714285714285rem 0.571429rem;
+    --terra-form-select-tag-deselect-background: #2d3539;
+    --terra-form-select-tag-deselect-border-bottom: 1px solid #181b1d;
+    --terra-form-select-tag-deselect-font-size: 1rem;
+    --terra-form-select-tag-deselect-padding: 0.2142857rem 0.5rem;
+    --terra-form-select-tag-deselect-hover-background: #1a2023;
+    --terra-form-select-tag-deselect-hover-border-bottom: 1px solid #181b1d;
+    --terra-form-select-tag-icon-height: 0.7142857142857143rem;
+    --terra-form-select-tag-icon-width: 0.7142857142857143rem;
+
+    @include terra-inline-svg-var('--terra-form-select-tag-icon-background' , '<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#c5c5c6" d="M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z"/></svg>');
+  }
+}
