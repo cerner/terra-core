@@ -1,5 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <RadioField
+    error={null}
+    help={null}
+    hideRequired={false}
+    isInline={false}
+    isInvalid={false}
+    isLegendHidden={false}
+    legend="Default RadioField"
+    legendAttrs={Object {}}
+    required={false}
+    showOptional={false}
+  >
+    <fieldset
+      aria-required={false}
+      className="radio-field orion-fusion-theme"
+      required={false}
+    >
+      <legend
+        className="legend-group"
+        id="terra-radio-field-description-13"
+      >
+        <div
+          className="legend"
+        >
+          Default RadioField
+          <span
+            className="error-icon-hidden"
+          />
+        </div>
+      </legend>
+    </fieldset>
+  </RadioField>
+</ThemeContextProvider>
+`;
+
 exports[`should display the required icon for fields with hideRequired, but have a state of invalid 1`] = `
 <fieldset
   aria-required={true}

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.31.0 - (May 19, 2020)
+------------------
 ### Changed
 * Updated wdio screenshot tests to accommodate Bluetooth icon
 ### Added

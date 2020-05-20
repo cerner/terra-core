@@ -6,6 +6,8 @@ Unreleased
 ### Changed
 * Apply themes by context and directly include packaged themes.
 
+4.4.0 - (May 19, 2020)
+------------------
 ### Changes
 * Update wdio tests to move cursor to fix inconsistent hover styles in internal themes
 
