@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
 import { injectIntl, intlShape } from 'react-intl';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './SplitButton.module.scss';
 import Item from './Item';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const Variants = {
   NEUTRAL: 'neutral',
@@ -201,6 +202,8 @@ class SplitButton extends React.Component {
       openedViaKeyboard,
     } = this.state;
 
+    const theme = this.context;
+
     const caretLabel = intl.formatMessage({ id: 'Terra.dropdownButton.moreOptions' });
 
     const primaryClassnames = cx(
@@ -209,6 +212,7 @@ class SplitButton extends React.Component {
       { 'is-block': isBlock },
       { 'is-compact': isCompact },
       { 'is-active': primaryIsActive },
+      theme.className,
     );
     const caretClassnames = cx(
       'split-button-caret',
@@ -219,6 +223,7 @@ class SplitButton extends React.Component {
         the dropdown open will cause the dropdown to close and reopen
       */
       { 'ignore-react-onclickoutside': isOpen },
+      theme.className,
     );
 
     return (
@@ -269,6 +274,7 @@ class SplitButton extends React.Component {
 
 SplitButton.propTypes = propTypes;
 SplitButton.defaultProps = defaultProps;
+SplitButton.contextType = ThemeContext;
 
 export default injectIntl(SplitButton);
 export { Item, Variants };

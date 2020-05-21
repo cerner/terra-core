@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Generic correctly applies the theme context className 1`] = `
+<Generic
+  alt="provider"
+  color="auto"
+  isAriaHidden={false}
+  variant="provider"
+>
+  <div
+    className="avatar six orion-fusion-theme"
+  >
+    <span
+      alt="provider"
+      aria-hidden={false}
+      aria-label="provider"
+      className="icon provider"
+      role="img"
+    />
+  </div>
+</Generic>
+`;
+
 exports[`Generic should render a default single-user generic avatar 1`] = `
 <div
   class="avatar seven"

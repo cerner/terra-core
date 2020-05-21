@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.37.0 - (May 19, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
+3.36.0 - (April 28, 2020)
+------------------
 ### Changed
 * Removed "View Component Source Code" from docs in favour of source code badge
 ### Added

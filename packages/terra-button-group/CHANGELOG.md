@@ -3,8 +3,25 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.39.0 - (May 19, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
+### Fixed
+* Fixed button losing focus when switching window
+
+3.38.0 - (May 5, 2020)
+------------------
+### Added
+* Added an interaction media query to apply `hover` styles only on non-touch devices.
+
+3.37.0 - (April 28, 2020)
+------------------
 ### Changed
 * Removed "View Component Source Code" from docs in favour of source code badge
+
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 

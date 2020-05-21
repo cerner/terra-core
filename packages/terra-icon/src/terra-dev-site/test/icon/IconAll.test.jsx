@@ -24,6 +24,7 @@ const IconAll = () => (
     <Icon.IconBedAssigned className={cx(['icon'])} />
     <Icon.IconBedAssignedLowLight className={cx(['icon'])} />
     <Icon.IconBedRequested className={cx(['icon'])} />
+    <Icon.IconBluetooth className={cx(['icon'])} />
     <Icon.IconBookmark className={cx(['icon'])} />
     <Icon.IconBriefcase className={cx(['icon'])} />
     <Icon.IconBusy className={cx(['icon'])} />

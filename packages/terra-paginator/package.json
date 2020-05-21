@@ -1,7 +1,7 @@
 {
   "name": "terra-paginator",
   "main": "lib/Paginator.js",
-  "version": "2.45.0",
+  "version": "2.49.0",
   "description": "Paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
   "devDependencies": {
-    "terra-props-table": "^2.45.0"
+    "terra-props-table": "^2.46.0"
   },
   "peerDependencies": {
     "react": "^16.8.5",
@@ -33,13 +33,13 @@
     "classnames": "^2.2.5",
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.36.0",
-    "terra-dialog": "^2.39.0",
-    "terra-form-input": "^3.1.0",
-    "terra-icon": "^3.29.0",
+    "terra-button": "^3.39.0",
+    "terra-dialog": "^2.42.0",
+    "terra-form-input": "^3.4.0",
+    "terra-icon": "^3.31.0",
     "terra-mixins": "^1.35.0",
-    "terra-responsive-element": "^5.17.0",
-    "terra-visually-hidden-text": "^2.25.0"
+    "terra-responsive-element": "^5.18.0",
+    "terra-visually-hidden-text": "^2.26.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

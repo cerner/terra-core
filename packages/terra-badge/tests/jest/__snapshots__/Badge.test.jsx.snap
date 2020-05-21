@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Badge with additional props correctly applies the theme context className 1`] = `
+<Badge
+  icon={null}
+  intent="default"
+  isReversed={false}
+  size="small"
+  text="Test value"
+>
+  <span
+    className="badge small default orion-fusion-theme"
+  >
+    <span
+      aria-hidden="true"
+      className="text"
+    >
+      Test value
+    </span>
+  </span>
+</Badge>
+`;
+
 exports[`should render a badge component in the order, icon and text with medium size 1`] = `
 <span
   className="badge has-icon medium default"
