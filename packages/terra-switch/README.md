@@ -3,7 +3,11 @@
 [![NPM version](https://badgen.net/npm/v/terra-switch)](https://www.npmjs.org/package/terra-switch)
 [![Build Status](https://badgen.net/travis/cerner/terra-switch)](https://travis-ci.com/cerner/terra-core)
 
-The terra-switch component, like its real-world counterpart, is used to indicate whether a setting is ON or OFF and provide users with instantaneous feedback.
+The terra-switch component, like its real-world counterpart, is used to indicate whether a setting is ON or OFF and provide users with instantaneous feedback of switch state (ON/OFF).
+
+Switches are used to activate settings immediately, in real time. It would be usefull when you need to represent the switching between only two states like on-off state.
+
+The difference between Switch and Checkbox is that Switch has only two states which change directly when you toggle it, while Checkbox has three states and has intermediate state initial value along with checked and unchecked state.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://engineering.cerner.com/terra-core/components/terra-switch/switch/switch)
@@ -22,8 +26,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-
-
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

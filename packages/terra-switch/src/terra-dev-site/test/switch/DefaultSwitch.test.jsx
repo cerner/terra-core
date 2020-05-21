@@ -1,22 +1,16 @@
 import React, { useState } from 'react';
-import classNames from 'classnames/bind';
 import Switch from '../../../Switch';
-import styles from './SwitchCommonExample.module.scss';
-
-const cx = classNames.bind(styles);
 
 const DefaultSwitch = () => {
-  const [value, setValue] = useState(true);
+  const [value, setValue] = useState(false);
   return (
-    <div className={cx('container')}>
-      <Switch
-        switchId="defaultSwitch"
-        labelId="label1"
-        checked={value}
-        labelText="Label"
-        onChange={setValue}
-      />
-    </div>
+    <Switch
+      switchId="defaultSwitch"
+      labelId="label1"
+      isChecked={value}
+      labelText="Label"
+      onChange={setValue}
+    />
   );
 };
 

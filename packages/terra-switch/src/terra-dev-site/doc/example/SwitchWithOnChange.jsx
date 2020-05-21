@@ -7,7 +7,7 @@ const SwitchWithOnChange = () => {
     <Switch
       switchId="defaultSwitch1"
       labelId="label3"
-      checked={value}
+      isChecked={value}
       labelText="Label"
       onChange={setValue}
     />

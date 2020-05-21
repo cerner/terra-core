@@ -1,20 +1,14 @@
 import React from 'react';
-import classNames from 'classnames/bind';
 import Switch from '../../../Switch';
-import styles from './SwitchCommonExample.module.scss';
-
-const cx = classNames.bind(styles);
 
 const DisabledSwitch = () => (
-  <div className={cx('container')}>
-    <Switch
-      switchId="disabledSwitch"
-      labelId="label2"
-      checked
-      labelText="Label"
-      disabled
-    />
-  </div>
+  <Switch
+    switchId="disabledSwitch"
+    labelId="label2"
+    isChecked
+    labelText="Label"
+    isDisabled
+  />
 );
 
 export default DisabledSwitch;

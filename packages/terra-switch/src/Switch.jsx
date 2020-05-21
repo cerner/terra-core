@@ -1,11 +1,13 @@
 import React, { useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import { FormattedMessage } from 'react-intl';
-import { enableFocusStyles, disableFocusStyles, restoreFocusStyles } from './_SwitchUtils';
+import { enableFocusStyles, removeFocusStyles, restoreFocusStyles } from './_SwitchUtils';
 import styles from './Switch.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const SWITCH_STATE = Object.freeze({
   ON: <FormattedMessage id="Terra.switch.switchstatuslabel.on" />,
@@ -20,11 +22,11 @@ const propTypes = {
   /**
    * Whether or not the Switch is checked ("ON").
    */
-  checked: PropTypes.bool,
+  isChecked: PropTypes.bool,
   /**
    * Whether or not the Switch is disabled.
    */
-  disabled: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   /**
    * The label text of the Switch component.
    */
@@ -41,8 +43,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  checked: false,
-  disabled: false,
+  isChecked: false,
+  isDisabled: false,
   onChange: undefined,
 };
 
@@ -50,13 +52,13 @@ const Switch = (props) => {
   const {
     switchId,
     labelId,
-    checked,
-    disabled,
+    isChecked,
+    isDisabled,
     onChange,
     labelText,
     ...customProps
   } = props;
-
+  const theme = React.useContext(ThemeContext);
   const sliderButton = useRef();
 
   const handleOnClick = useCallback(
@@ -66,35 +68,35 @@ const Switch = (props) => {
       // This will set focus on the button when clicked.
       sliderButton.current.focus();
       if (onChange) {
-        onChange(!checked, event);
+        onChange(!isChecked, event);
       }
     },
-    [checked, onChange],
+    [isChecked, onChange],
   );
 
   const switchClassNames = cx([
     'switch',
-    { 'is-disabled': disabled },
+    { 'is-disabled': isDisabled },
   ]);
 
   const trayClassNames = cx([
     'tray',
-    { selected: checked },
-    { unselected: !checked },
-    { 'is-disabled': disabled },
+    { 'is-selected': isChecked },
+    { 'is-disabled': isDisabled },
   ]);
 
   const sliderClassNames = cx([
     'slider',
-    { 'is-disabled': disabled },
+    { 'is-disabled': isDisabled },
   ]);
 
-  const statusLabelText = checked ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
+  const statusLabelText = isChecked ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
 
-  const mainClasses = cx([
+  const mainClasses = classNames(cx(
     'switch-wrapper',
-    customProps.className,
-  ]);
+    theme.className,
+  ),
+  customProps.className);
 
   delete customProps.className;
   return (
@@ -102,7 +104,7 @@ const Switch = (props) => {
       {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
       <label
         htmlFor={switchId}
-        onMouseDown={disableFocusStyles}
+        onMouseDown={removeFocusStyles}
         onKeyDown={enableFocusStyles}
         onBlur={restoreFocusStyles}
       >
@@ -115,8 +117,8 @@ const Switch = (props) => {
             <button
               type="button"
               id={switchId}
-              disabled={disabled}
-              aria-checked={checked}
+              disabled={isDisabled}
+              aria-checked={isChecked}
               aria-labelledby={labelId}
               className={sliderClassNames}
               role="switch"

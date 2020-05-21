@@ -5,9 +5,8 @@ const DisabledSwitch = () => (
   <Switch
     switchId="disabledSwitch"
     labelId="label2"
-    checked
     labelText="Label"
-    disabled
+    isDisabled
   />
 );
 

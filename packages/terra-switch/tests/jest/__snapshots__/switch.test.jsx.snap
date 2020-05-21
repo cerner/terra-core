@@ -59,13 +59,13 @@ exports[`Switch should render a default component 1`] = `
         </div>
       </div>
       <div
-        className="tray unselected"
+        className="tray"
       >
         <button
           aria-checked={false}
           aria-labelledby="label1"
           className="slider"
-          data-focus-styles-enabled={true}
+          data-focus-styles-enabled={false}
           disabled={false}
           id="defaultSwitch"
           onClick={[Function]}
@@ -138,13 +138,13 @@ exports[`Switch should render as disabled when set 1`] = `
         </div>
       </div>
       <div
-        className="tray unselected is-disabled"
+        className="tray is-disabled"
       >
         <button
           aria-checked={false}
           aria-labelledby="label2"
           className="slider is-disabled"
-          data-focus-styles-enabled={true}
+          data-focus-styles-enabled={false}
           disabled={true}
           id="disabledSwitch"
           onClick={[Function]}

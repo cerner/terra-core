@@ -13,7 +13,7 @@ describe('Switch', () => {
   });
 
   it('should render as disabled when set', () => {
-    const button = shallowWithIntl(<Switch switchId="disabledSwitch" labelId="label2" labelText="Label" disabled />);
+    const button = shallowWithIntl(<Switch switchId="disabledSwitch" labelId="label2" labelText="Label" isDisabled />);
     expect(button).toMatchSnapshot();
     expect(button.find('.slider').prop('disabled')).toBe(true);
   });

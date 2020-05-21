@@ -1,4 +1,4 @@
-Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
+Terra.describeViewports('Switch', ['tiny'], () => {
   describe('DefaultSwitch', () => {
     before(() => browser.url('/#/raw/tests/terra-switch/switch/default-switch'));
 
@@ -14,7 +14,6 @@ Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
 
     describe('Checked', () => {
       before(() => {
-        browser.waitForVisible('#defaultSwitch');
         browser.click('[for="defaultSwitch"]');
       });
 
@@ -36,7 +35,9 @@ Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
       Terra.it.validatesElement();
     });
   });
+});
 
+Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
   describe('Long Label Text', () => {
     before(() => browser.url('/#/raw/tests/terra-switch/switch/label-wrap'));
 
