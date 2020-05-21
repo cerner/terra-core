@@ -4,6 +4,21 @@ ChangeLog
 Unreleased
 ----------
 
+2.49.0 - (May 19, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.48.0 - (May 12, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.47.0 - (May 5, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.46.0 - (April 28, 2020)
 ------------------
 ### Changed
@@ -19,6 +34,7 @@ Unreleased
 2.44.0 - (April 22, 2020)
 ------------------
 ### Changed
+* Updated wdio snapshots due to changes in button.
 * Updated documentation link in README
 
 2.43.0 - (March 31, 2020)

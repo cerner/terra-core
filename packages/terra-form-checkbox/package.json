@@ -1,7 +1,7 @@
 {
   "name": "terra-form-checkbox",
   "main": "lib/Checkbox.js",
-  "version": "4.2.0",
+  "version": "4.3.0",
   "description": "The Terra Form Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.",
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.5.8",
     "terra-mixins": "^1.35.0",
+    "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.26.0"
   },
   "scripts": {

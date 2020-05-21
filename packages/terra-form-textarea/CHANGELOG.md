@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+4.4.0 - (May 19, 2020)
+------------------
+### Changes
+* Update wdio tests to move cursor to fix inconsistent hover styles in internal themes
+
+4.3.0 - (May 12, 2020)
+------------------
+### Changed
+* Set placeholders opacity to 1 to make firefox color-contrast consistent with other browsers
+
 4.2.0 - (April 28, 2020)
 ------------------
 ### Changed

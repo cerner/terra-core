@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Radio.module.scss';
 import RadioUtil from './_RadioUtil';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -100,6 +102,8 @@ const Radio = ({
   value,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
+
   const controlInputAttrs = { ...inputAttrs };
 
   if (checked !== undefined) {
@@ -108,11 +112,14 @@ const Radio = ({
     controlInputAttrs.defaultChecked = defaultChecked;
   }
 
-  const radioClasses = cx([
-    'radio',
-    { 'is-inline': isInline },
+  const radioClasses = classNames(
+    cx(
+      'radio',
+      { 'is-inline': isInline },
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   const labelClasses = cx([
     'label',

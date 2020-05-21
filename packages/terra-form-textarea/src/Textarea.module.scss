@@ -36,6 +36,7 @@
     &::placeholder {
       color: var(--terra-form-textarea-placeholder-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-textarea-placeholder-font-style);
+      opacity: 1;
     }
 
     &[required] {

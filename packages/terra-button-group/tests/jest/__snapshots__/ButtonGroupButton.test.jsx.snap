@@ -1,5 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <ButtonGroupButton
+    isDisabled={false}
+    text="Default Button"
+  >
+    <Button
+      className="button-group-button orion-fusion-theme"
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isIconOnly={false}
+      isReversed={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      text="Default Button"
+      type="button"
+      variant="neutral"
+    >
+      <button
+        aria-disabled={false}
+        className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        type="button"
+      >
+        <span
+          className="button-label text-only"
+        >
+          <span
+            className=""
+          >
+            Default Button
+          </span>
+        </span>
+      </button>
+    </Button>
+  </ButtonGroupButton>
+</ThemeContextProvider>
+`;
+
 exports[`should render a default component 1`] = `
 <Button
   className="button-group-button"
@@ -9,6 +63,7 @@ exports[`should render a default component 1`] = `
   isIconOnly={false}
   isReversed={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="Default Button"
@@ -26,6 +81,7 @@ exports[`should render as disabled 1`] = `
   isIconOnly={false}
   isReversed={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="Disabled"
@@ -48,6 +104,7 @@ exports[`should render with icon only 1`] = `
   isIconOnly={true}
   isReversed={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="Icon Only"
@@ -65,6 +122,7 @@ exports[`should render with onBlur 1`] = `
   isIconOnly={false}
   isReversed={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="onBlur"
@@ -83,6 +141,7 @@ exports[`should render with onClick 1`] = `
   isReversed={false}
   onBlur={[Function]}
   onClick={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="onClick"
@@ -118,6 +177,7 @@ exports[`should render with onKeyDown 1`] = `
   isIconOnly={false}
   isReversed={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="onKeyDown"
@@ -135,6 +195,7 @@ exports[`should render with onKeyUp 1`] = `
   isIconOnly={false}
   isReversed={false}
   onBlur={[Function]}
+  onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   text="onKeyUp"

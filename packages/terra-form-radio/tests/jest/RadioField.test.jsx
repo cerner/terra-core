@@ -1,6 +1,8 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import RadioField from '../../src/RadioField';
 
 window.matchMedia = () => ({ matches: true });
@@ -63,5 +65,14 @@ it('should display the required icon for fields with hideRequired, but have a st
 it('should hide the legend when requested', () => {
   const radioField = (<RadioField legend="Hidden Legend legend" legendAttrs={{ class: 'application-legend' }} isLegendHidden />);
   const wrapper = shallowWithIntl(radioField);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mountWithIntl(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <RadioField legend="Default RadioField" />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });

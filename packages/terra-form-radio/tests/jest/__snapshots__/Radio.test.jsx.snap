@@ -1,5 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Radio
+    disabled={false}
+    inputAttrs={Object {}}
+    isInline={false}
+    isLabelHidden={false}
+    labelText="Radio"
+    labelTextAttrs={Object {}}
+    name={null}
+  >
+    <div
+      className="radio orion-fusion-theme"
+    >
+      <label
+        className="label"
+      >
+        <input
+          className="native-input"
+          disabled={false}
+          name={null}
+          type="radio"
+        />
+        <span
+          className="outer-ring"
+        >
+          <span
+            className="inner-ring"
+          />
+        </span>
+        <span
+          className="label-text"
+        >
+          Radio
+        </span>
+      </label>
+    </div>
+  </Radio>
+</ThemeContextProvider>
+`;
+
 exports[`should render a ChoiceField with a radio 1`] = `
 <div
   className="radio"

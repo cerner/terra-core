@@ -4,6 +4,20 @@ ChangeLog
 Unreleased
 ----------
 
+6.5.0 - (May 19, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+6.4.0 - (May 12, 2020)
+------------------
+### Fixed
+* Fixed issue when using `isTouchAccessible` that could cause the dropdown to detach from the input
+* Fixed inconsistent hover interaction styles across all variants of select.
+
+### Changed
+* Set placeholders opacity to 1 to make firefox color-contrast consistent with other browsers
+
 6.3.0 - (April 28, 2020)
 ------------------
 ### Changed
