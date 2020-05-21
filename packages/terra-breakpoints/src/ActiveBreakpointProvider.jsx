@@ -23,6 +23,8 @@ class ActiveBreakpointProvider extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.setActiveBreakpoint);
+
+    // This event is needed to handle mobile device rotation since the resize event is not triggered.
     window.addEventListener('orientationchange', this.setActiveBreakpoint);
   }
 
