@@ -122,7 +122,7 @@ class ButtonGroupButton extends React.Component {
       cx(
         'button-group-button',
         { 'is-disabled': isDisabled },
-        { 'is-focused': this.state.focused },
+        { 'is-focused': this.state.focused && !isDisabled },
         theme.className,
       ),
       customProps.className,
