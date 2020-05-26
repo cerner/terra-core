@@ -34,7 +34,8 @@ const propTypes = {
    */
   ariaLabel: PropTypes.string.isRequired,
   /**
-   * Additional attributes to spread onto the select.
+   * Additional attributes to spread directly onto the html select node.
+   * This prop is provided as standard customProps are spread onto the outer containing element which is not the html select in this case.
    */
   // eslint-disable-next-line react/forbid-prop-types
   attrs: PropTypes.object,

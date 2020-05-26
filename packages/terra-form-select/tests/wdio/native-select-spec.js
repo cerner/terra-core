@@ -35,7 +35,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
 
     Terra.it.validatesElement('hover');
 
-    it('should set focus to the select', () => {
+    it('should not set focus to the select', () => {
       browser.click('#root', 0, 0);
       browser.keys('Tab');
     });
