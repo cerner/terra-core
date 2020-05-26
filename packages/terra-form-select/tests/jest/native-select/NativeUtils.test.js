@@ -69,6 +69,9 @@ describe('NativeUtils', () => {
   });
 
   it('should return valid displays for getDisplay with options', () => {
+    expect(getDisplay(null, testOptions, {})).toEqual(undefined);
+    expect(getDisplay(undefined, testOptions, {})).toEqual(undefined);
+    expect(getDisplay('value-0', testOptions, {})).toEqual(undefined);
     expect(getDisplay('value-1', testOptions, {})).toEqual('1');
     expect(getDisplay('value-2', testOptions, {})).toEqual('2');
     expect(getDisplay('value-3', testOptions, {})).toEqual('3');
@@ -76,6 +79,9 @@ describe('NativeUtils', () => {
   });
 
   it('should return valid displays for getDisplay with optGroups', () => {
+    expect(getDisplay(null, testOptGroups, {})).toEqual(undefined);
+    expect(getDisplay(undefined, testOptGroups, {})).toEqual(undefined);
+    expect(getDisplay('value-0', testOptGroups, {})).toEqual(undefined);
     expect(getDisplay('value-1', testOptGroups, {})).toEqual('1');
     expect(getDisplay('value-2', testOptGroups, {})).toEqual('2');
     expect(getDisplay('value-3', testOptGroups, {})).toEqual('3');

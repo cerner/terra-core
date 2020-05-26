@@ -153,8 +153,8 @@ const NativeSelect = ({
   value,
   ...customProps
 }) => {
-  const [currentValue, setCurrentValue] = useState(defaultValue || getFirstValue(options, placeholder));
-  const refIsControlled = useRef(!defaultValue && value);
+  const [uncontrolledValue, setUncontrolledValue] = useState(!value ? defaultValue || getFirstValue(options, placeholder) : undefined);
+  const refIsControlled = useRef(!uncontrolledValue);
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
 
@@ -174,13 +174,15 @@ const NativeSelect = ({
       onChange(event);
     }
     if (!refIsControlled.current) {
-      setCurrentValue(event.currentTarget.value);
+      setUncontrolledValue(event.currentTarget.value);
     }
   };
 
-  let controlledValue;
-  if (refIsControlled.current) {
-    controlledValue = value || getFirstValue(options, placeholder);
+  let currentValue = refIsControlled.current ? value : uncontrolledValue;
+  let currentDisplay = getDisplay(currentValue, options, placeholder, intl);
+  if (!currentDisplay) {
+    currentValue = getFirstValue(options, placeholder);
+    currentDisplay = getDisplay(currentValue, options, placeholder, intl);
   }
 
   const selectAttrs = {
@@ -190,7 +192,7 @@ const NativeSelect = ({
     disabled,
     'aria-invalid': isInvalid || undefined,
     required,
-    value: controlledValue || currentValue,
+    value: currentValue,
   };
 
   const nativeClassNames = classNames(
@@ -217,7 +219,7 @@ const NativeSelect = ({
           className={cx('display')}
           aria-disabled={disabled || undefined}
         >
-          {getDisplay(selectAttrs.value, options, placeholder, intl)}
+          {currentDisplay}
         </div>
         <div className={cx('arrow')}>
           <div className={cx('arrow-icon')} />
