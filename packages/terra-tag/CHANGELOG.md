@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Corrected typo in 'Terra-Tag' example doc.
 
 2.33.0 - (May 19, 2020)
 ------------------
