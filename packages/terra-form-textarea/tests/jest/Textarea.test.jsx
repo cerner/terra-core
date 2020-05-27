@@ -1,5 +1,7 @@
 /* globals spyOn */
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Textarea from '../../src/Textarea';
 
 window.matchMedia = () => ({ matches: true });
@@ -171,5 +173,14 @@ it('should set the ref when refCallback is passed into the component', () => {
 it('should render a placeholder within the textarea', () => {
   const textarea = <Textarea placeholder="placeholder" />;
   const wrapper = render(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Textarea ariaLabel="label" />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.27.0 - (May 26, 2020)
+------------------
 ### Fixed
 * Handle the `orientationchange` event on mobile device rotation since the `resize` event is not triggered.
 
