@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <ListSubsection
+    isCollapsed={false}
+    isCollapsible={false}
+    level={2}
+    title="test"
+  >
+    <ListSubsectionHeader
+      isCollapsed={false}
+      isCollapsible={false}
+      level={2}
+      title="test"
+    >
+      <li
+        className="subsection-header orion-fusion-theme"
+      >
+        <h2
+          className="title"
+        >
+          test
+        </h2>
+      </li>
+    </ListSubsectionHeader>
+  </ListSubsection>
+</ThemeContextProvider>
+`;
+
 exports[`should render with callback functions 1`] = `
 <Fragment>
   <ListSubsectionHeader
