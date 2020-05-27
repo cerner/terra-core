@@ -2,7 +2,6 @@
 
 exports[`NativeSelectField should render a NativeSelectField allowing clear 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -66,7 +65,6 @@ exports[`NativeSelectField should render a NativeSelectField allowing clear 1`] 
 
 exports[`NativeSelectField should render a NativeSelectField aria described by 1`] = `
 <Field
-  allowClear={false}
   ariaDescribedBy="test-described-id"
   error={null}
   errorIcon={
@@ -126,7 +124,6 @@ exports[`NativeSelectField should render a NativeSelectField aria described by 1
 
 exports[`NativeSelectField should render a NativeSelectField as disabled 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -185,7 +182,6 @@ exports[`NativeSelectField should render a NativeSelectField as disabled 1`] = `
 
 exports[`NativeSelectField should render a NativeSelectField as invalid 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -245,7 +241,6 @@ exports[`NativeSelectField should render a NativeSelectField as invalid 1`] = `
 
 exports[`NativeSelectField should render a NativeSelectField as optional 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -304,7 +299,6 @@ exports[`NativeSelectField should render a NativeSelectField as optional 1`] = `
 
 exports[`NativeSelectField should render a NativeSelectField isIncomplete 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -363,7 +357,6 @@ exports[`NativeSelectField should render a NativeSelectField isIncomplete 1`] = 
 
 exports[`NativeSelectField should render a NativeSelectField required 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -422,7 +415,6 @@ exports[`NativeSelectField should render a NativeSelectField required 1`] = `
 
 exports[`NativeSelectField should render a NativeSelectField required 2`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -481,7 +473,6 @@ exports[`NativeSelectField should render a NativeSelectField required 2`] = `
 
 exports[`NativeSelectField should render a NativeSelectField required and isIncomplete 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -540,7 +531,6 @@ exports[`NativeSelectField should render a NativeSelectField required and isInco
 
 exports[`NativeSelectField should render a NativeSelectField with a custom  placeholder 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -605,7 +595,6 @@ exports[`NativeSelectField should render a NativeSelectField with a custom  plac
 
 exports[`NativeSelectField should render a NativeSelectField with a default placeholder 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -665,7 +654,6 @@ exports[`NativeSelectField should render a NativeSelectField with a default plac
 
 exports[`NativeSelectField should render a NativeSelectField with a labelAttrs 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -728,7 +716,6 @@ exports[`NativeSelectField should render a NativeSelectField with a labelAttrs 1
 
 exports[`NativeSelectField should render a NativeSelectField with a maxWidth 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -788,7 +775,6 @@ exports[`NativeSelectField should render a NativeSelectField with a maxWidth 1`]
 
 exports[`NativeSelectField should render a NativeSelectField with a selectAttrs 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -852,7 +838,6 @@ exports[`NativeSelectField should render a NativeSelectField with a selectAttrs 
 
 exports[`NativeSelectField should render a NativeSelectField with an aria label 1`] = `
 <Field
-  allowClear={false}
   ariaLabel="test-label"
   error={null}
   errorIcon={
@@ -912,7 +897,6 @@ exports[`NativeSelectField should render a NativeSelectField with an aria label 
 
 exports[`NativeSelectField should render a NativeSelectField with error 1`] = `
 <Field
-  allowClear={false}
   error={
     <p>
       test error
@@ -975,7 +959,6 @@ exports[`NativeSelectField should render a NativeSelectField with error 1`] = `
 
 exports[`NativeSelectField should render a NativeSelectField with help 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -1041,7 +1024,6 @@ exports[`NativeSelectField should render a NativeSelectField with help 1`] = `
 
 exports[`NativeSelectField should render a NativeSelectField with onChange 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -1101,7 +1083,6 @@ exports[`NativeSelectField should render a NativeSelectField with onChange 1`] =
 
 exports[`NativeSelectField should render a NativeSelectField with opt groups 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -1190,7 +1171,6 @@ exports[`NativeSelectField should render a NativeSelectField with opt groups 1`]
 
 exports[`NativeSelectField should render a NativeSelectField with options 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -1269,7 +1249,6 @@ exports[`NativeSelectField should render a NativeSelectField with options 1`] = 
 
 exports[`NativeSelectField should render a NativeSelectField with options and defaultValue 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -1349,7 +1328,6 @@ exports[`NativeSelectField should render a NativeSelectField with options and de
 
 exports[`NativeSelectField should render a NativeSelectField with options and value 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError
@@ -1429,7 +1407,6 @@ exports[`NativeSelectField should render a NativeSelectField with options and va
 
 exports[`NativeSelectField should render a default NativeSelectField 1`] = `
 <Field
-  allowClear={false}
   error={null}
   errorIcon={
     <IconError

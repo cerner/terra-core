@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const IncompleteFieldTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelectField
-      select-id="test-id"
+      selectId="test-id"
       label="Incomplete Field Text"
       required
       isIncomplete

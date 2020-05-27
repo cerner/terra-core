@@ -111,7 +111,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  allowClear: false,
   disabled: false,
   hideRequired: false,
   isIncomplete: false,
