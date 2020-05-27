@@ -1,40 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonGroup from '../../../ButtonGroup';
 
-let returnButtonProps = {
-  text: 'Click to Disable',
+const ProgrammaticDisabled = () => {
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  return (
+    <ButtonGroup id="programmaticDisabledButtonGroup">
+      <ButtonGroup.Button
+        isDisabled={isDisabled}
+        text={isDisabled ? 'Disabled' : 'Click to Disable'}
+        id="programmaticDisabledButton"
+        key="test-example-button"
+        onClick={() => { setIsDisabled(!isDisabled); }}
+      />
+    </ButtonGroup>
+  );
 };
-
-const returnDisabledDefaultProps = () => {
-  returnButtonProps = {
-    isDisabled: true,
-    text: 'Disabled',
-  };
-};
-
-class ProgrammaticDisabled extends React.Component {
-  constructor() {
-    super();
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    returnDisabledDefaultProps();
-    this.forceUpdate();
-  }
-
-  render() {
-    return (
-      <ButtonGroup id="programmaticDisabledButtonGroup">
-        <ButtonGroup.Button
-          {...returnButtonProps}
-          id="programmaticDisabledButton"
-          key="1"
-          onClick={this.handleClick}
-        />
-      </ButtonGroup>
-    );
-  }
-}
 
 export default ProgrammaticDisabled;
