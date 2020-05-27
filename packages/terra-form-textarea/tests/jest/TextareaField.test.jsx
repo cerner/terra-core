@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import TextareaField from '../../src/TextareaField';
 
@@ -88,5 +90,14 @@ it('should render a placeholder within the textarea field', () => {
 it('should render a placeholder within the textarea field when passed as an input attribute', () => {
   const textarea = <TextareaField inputId="test-input" label="Label" inputAttrs={{ placeholder: 'Placeholder' }} />;
   const wrapper = shallow(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <TextareaField inputId="test-input" label="Label" />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });
