@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './List.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -45,14 +47,18 @@ const List = ({
   role,
   ...customProps
 }) => {
-  const listClassNames = cx([
-    'list',
-    { 'padding-standard': paddingStyle === 'standard' },
-    { 'padding-compact': paddingStyle === 'compact' },
-    { 'divider-standard': dividerStyle === 'standard' },
-    { 'divider-bottom-only': dividerStyle === 'bottom-only' },
+  const theme = React.useContext(ThemeContext);
+  const listClassNames = classNames(
+    cx(
+      'list',
+      { 'padding-standard': paddingStyle === 'standard' },
+      { 'padding-compact': paddingStyle === 'compact' },
+      { 'divider-standard': dividerStyle === 'standard' },
+      { 'divider-bottom-only': dividerStyle === 'bottom-only' },
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   const attrSpread = {};
   if (role && role.length > 0 && role !== 'none') {
