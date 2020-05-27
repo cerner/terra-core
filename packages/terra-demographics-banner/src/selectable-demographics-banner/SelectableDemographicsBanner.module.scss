@@ -10,42 +10,22 @@
     border-radius: 4px;
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.33);
     flex: 1 1 auto;
-    margin: 0.5rem;
+    margin: 0.1rem;
 
     &:focus {
-      border-color: #c8cacb;
+      border-color: var(--terra-demographics-banner-focus-border-color, #c8cacb);
+      box-shadow: var(--terra-demographics-banner-focus-box-shadow, 0 0 1px 3px rgba(76, 178, 233, 0.5), 0 0 7px 4px rgba(76, 178, 233, 0.35));
     }
 
     &:hover {
-      border-color: #c8cacb;
+      background-color: var(--terra-demographics-banner-hover-background-color, #b9bbbc);
+      border-color: var(--terra-demographics-banner-hover-border-color, #c8cacb);
     }
   }
 
   .deceased {
     .selectable-tile {
       box-shadow: 0 0 3px 1px rgb(0, 0, 0);
-    }
-  }
-
-  .divider {
-    border: 1px solid #fff;
-    border-radius: 1.5rem;
-    flex: 0 0 auto;
-    margin: 0.75rem 0.1rem;
-  }
-
-  .info-button {
-    background-color: transparent;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1rem;
-    margin: 0.5rem;
-
-    .info-text,
-    .info-icon {
-      display: block;
-      margin: 0.5rem;
     }
   }
 }

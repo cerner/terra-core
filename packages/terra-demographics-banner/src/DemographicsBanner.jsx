@@ -44,9 +44,14 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether to display an icon to confidentiality.
+   * Whether or not to display an icon to indicate confidentiality.
    */
   isConfidential: PropTypes.bool,
+  /**
+   * @private
+   * Whether or not the banner should have additional styles and to indicate it is selectable.
+   */
+  isSelectable: PropTypes.bool,
   /**
    * Full Name of the person.
    */
@@ -75,6 +80,7 @@ const defaultProps = {
   gestationalAge: null,
   identifiers: {},
   isConfidential: false,
+  isSelectable: false,
   personName: undefined,
   photo: null,
   postMenstrualAge: null,

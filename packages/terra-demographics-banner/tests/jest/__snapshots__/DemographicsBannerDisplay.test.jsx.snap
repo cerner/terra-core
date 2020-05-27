@@ -1,493 +1,455 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a banner that has basic information 1`] = `
-<ResponsiveElement
-  responsiveTo="parent"
-  small={
-    <_default
-      age="24"
-      applicationContent={null}
-      dateOfBirth="March 30, 2017"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="F"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="Terra Demographics Banner"
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
+<DemographicsBannerDisplay
+  age="24"
+  applicationContent={null}
+  dateOfBirth="March 30, 2017"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate={null}
+  deceasedDateLabel="Deceased"
+  gender="F"
+  gestationalAge={null}
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={Object {}}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
   }
-  tiny={
-    <_default
-      age="24"
-      applicationContent={null}
-      dateOfBirth="March 30, 2017"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="F"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="Terra Demographics Banner"
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
-  }
+  isConfidential={false}
+  isSelectable={false}
+  personName="Terra Demographics Banner"
+  postMenstrualAge={null}
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName={null}
 />
 `;
 
 exports[`renders a blank banner properly 1`] = `
-<ResponsiveElement
-  responsiveTo="parent"
-  small={
-    <_default
-      age="--"
-      applicationContent={null}
-      dateOfBirth="--"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="--"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="--"
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
+<DemographicsBannerDisplay
+  age="--"
+  applicationContent={null}
+  dateOfBirth="--"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate={null}
+  deceasedDateLabel="Deceased"
+  gender="--"
+  gestationalAge={null}
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={Object {}}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
   }
-  tiny={
-    <_default
-      age="--"
-      applicationContent={null}
-      dateOfBirth="--"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="--"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="--"
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
-  }
+  isConfidential={false}
+  isSelectable={false}
+  personName="--"
+  postMenstrualAge={null}
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName={null}
 />
 `;
 
 exports[`renders gestational date with a default label when the label is not provided 1`] = `
-<ResponsiveElement
-  responsiveTo="parent"
-  small={
-    <_default
-      age="--"
-      applicationContent={null}
-      dateOfBirth="--"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="--"
-      gestationalAge="April 5, 2016"
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="--"
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
+<DemographicsBannerDisplay
+  age="--"
+  applicationContent={null}
+  dateOfBirth="--"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate={null}
+  deceasedDateLabel="Deceased"
+  gender="--"
+  gestationalAge="April 5, 2016"
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={Object {}}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
   }
-  tiny={
-    <_default
-      age="--"
-      applicationContent={null}
-      dateOfBirth="--"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="--"
-      gestationalAge="April 5, 2016"
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="--"
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
-  }
+  isConfidential={false}
+  isSelectable={false}
+  personName="--"
+  postMenstrualAge={null}
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName={null}
 />
 `;
 
 exports[`renders post menstrural date with a default label when the label is not provided 1`] = `
-<ResponsiveElement
-  responsiveTo="parent"
-  small={
-    <_default
-      age="--"
-      applicationContent={null}
-      dateOfBirth="--"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="--"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="--"
-      postMenstrualAge="April 5, 2016"
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
+<DemographicsBannerDisplay
+  age="--"
+  applicationContent={null}
+  dateOfBirth="--"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate={null}
+  deceasedDateLabel="Deceased"
+  gender="--"
+  gestationalAge={null}
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={Object {}}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
   }
-  tiny={
-    <_default
-      age="--"
-      applicationContent={null}
-      dateOfBirth="--"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="--"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="--"
-      postMenstrualAge="April 5, 2016"
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
-  }
+  isConfidential={false}
+  isSelectable={false}
+  personName="--"
+  postMenstrualAge="April 5, 2016"
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName={null}
 />
 `;
 
 exports[`renders the banner appropriately for a deceased person 1`] = `
-<ResponsiveElement
-  responsiveTo="parent"
-  small={
-    <_default
-      age="24"
-      applicationContent={null}
-      dateOfBirth="June 15, 2014"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate="March 30, 2017"
-      deceasedDateLabel="Deceased"
-      gender="F"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="Old Terra Demographics Banner"
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
+<DemographicsBannerDisplay
+  age="24"
+  applicationContent={null}
+  dateOfBirth="June 15, 2014"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate="March 30, 2017"
+  deceasedDateLabel="Deceased"
+  gender="F"
+  gestationalAge={null}
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={Object {}}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
   }
-  tiny={
-    <_default
-      age="24"
-      applicationContent={null}
-      dateOfBirth="June 15, 2014"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate="March 30, 2017"
-      deceasedDateLabel="Deceased"
-      gender="F"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={Object {}}
-      isConfidential={false}
-      personName="Old Terra Demographics Banner"
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName={null}
-    />
-  }
+  isConfidential={false}
+  isSelectable={false}
+  personName="Old Terra Demographics Banner"
+  postMenstrualAge={null}
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName={null}
 />
 `;
 
 exports[`renders the banner appropriately for a person with gestational and post menstrual dates 1`] = `
-<ResponsiveElement
-  responsiveTo="parent"
-  small={
-    <_default
-      age="25 Years"
-      applicationContent={
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      }
-      dateOfBirth="May 9, 1993"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="Male"
-      gestationalAge="April 5, 2016"
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={
-        Object {
-          "MRN": 12343,
-          "REA": "3JSDA",
-        }
-      }
-      isConfidential={false}
-      personName="Johnathon Doe"
-      photo=""
-      postMenstrualAge="April 7, 2016"
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName="John"
-    />
+<DemographicsBannerDisplay
+  age="25 Years"
+  applicationContent={
+    <span
+      className="risk-score"
+    >
+      5%
+    </span>
   }
-  tiny={
-    <_default
-      age="25 Years"
-      applicationContent={
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      }
-      dateOfBirth="May 9, 1993"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="Male"
-      gestationalAge="April 5, 2016"
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={
-        Object {
-          "MRN": 12343,
-          "REA": "3JSDA",
-        }
-      }
-      isConfidential={false}
-      personName="Johnathon Doe"
-      photo=""
-      postMenstrualAge="April 7, 2016"
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName="John"
-    />
+  dateOfBirth="May 9, 1993"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate={null}
+  deceasedDateLabel="Deceased"
+  gender="Male"
+  gestationalAge="April 5, 2016"
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={
+    Object {
+      "MRN": 12343,
+      "REA": "3JSDA",
+    }
   }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isConfidential={false}
+  isSelectable={false}
+  personName="Johnathon Doe"
+  photo=""
+  postMenstrualAge="April 7, 2016"
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName="John"
 />
 `;
 
 exports[`renders the banner properly for a deceased person with additional application content 1`] = `
-<ResponsiveElement
-  responsiveTo="parent"
-  small={
-    <_default
-      age="25 Years"
-      applicationContent={
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      }
-      dateOfBirth="May 9, 1993"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate="March 5, 2016"
-      deceasedDateLabel="Deceased"
-      gender="Male"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={
-        Object {
-          "MRN": 12343,
-          "REA": "3JSDA",
-        }
-      }
-      isConfidential={false}
-      personName="Johnathon Doe"
-      photo=""
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName="John"
-    />
+<DemographicsBannerDisplay
+  age="25 Years"
+  applicationContent={
+    <span
+      className="risk-score"
+    >
+      5%
+    </span>
   }
-  tiny={
-    <_default
-      age="25 Years"
-      applicationContent={
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      }
-      dateOfBirth="May 9, 1993"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate="March 5, 2016"
-      deceasedDateLabel="Deceased"
-      gender="Male"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={
-        Object {
-          "MRN": 12343,
-          "REA": "3JSDA",
-        }
-      }
-      isConfidential={false}
-      personName="Johnathon Doe"
-      photo=""
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName="John"
-    />
+  dateOfBirth="May 9, 1993"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate="March 5, 2016"
+  deceasedDateLabel="Deceased"
+  gender="Male"
+  gestationalAge={null}
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={
+    Object {
+      "MRN": 12343,
+      "REA": "3JSDA",
+    }
   }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isConfidential={false}
+  isSelectable={false}
+  personName="Johnathon Doe"
+  photo=""
+  postMenstrualAge={null}
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName="John"
 />
 `;
 
 exports[`renders the banner that contains additional information 1`] = `
-<ResponsiveElement
-  responsiveTo="parent"
-  small={
-    <_default
-      age="25 Years"
-      applicationContent={
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      }
-      avatar={
-        Object {
-          "alt": "Johnathon Doe",
-          "color": "neutral",
-          "hashValue": "alternative hash",
-          "image": "",
-          "initials": "JD",
-          "isAriaHidden": true,
-        }
-      }
-      dateOfBirth="May 9, 1993"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="Male"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={
-        Object {
-          "MRN": 12343,
-          "REA": "3JSDA",
-        }
-      }
-      isConfidential={false}
-      personName="Johnathon Doe"
-      photo=""
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName="John"
-    />
+<DemographicsBannerDisplay
+  age="25 Years"
+  applicationContent={
+    <span
+      className="risk-score"
+    >
+      5%
+    </span>
   }
-  tiny={
-    <_default
-      age="25 Years"
-      applicationContent={
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      }
-      avatar={
-        Object {
-          "alt": "Johnathon Doe",
-          "color": "neutral",
-          "hashValue": "alternative hash",
-          "image": "",
-          "initials": "JD",
-          "isAriaHidden": true,
-        }
-      }
-      dateOfBirth="May 9, 1993"
-      dateOfBirthFullText="Date of Birth"
-      dateOfBirthLabel="DOB"
-      deceasedDate={null}
-      deceasedDateLabel="Deceased"
-      gender="Male"
-      gestationalAge={null}
-      gestationalAgeFullText="Gestational Age"
-      gestationalAgeLabel="GA"
-      identifiers={
-        Object {
-          "MRN": 12343,
-          "REA": "3JSDA",
-        }
-      }
-      isConfidential={false}
-      personName="Johnathon Doe"
-      photo=""
-      postMenstrualAge={null}
-      postMenstrualAgeFullText="Post Menstrual Age"
-      postMenstrualAgeLabel="PMA"
-      preferredFirstName="John"
-    />
+  avatar={
+    Object {
+      "alt": "Johnathon Doe",
+      "color": "neutral",
+      "hashValue": "alternative hash",
+      "image": "",
+      "initials": "JD",
+      "isAriaHidden": true,
+    }
   }
+  dateOfBirth="May 9, 1993"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate={null}
+  deceasedDateLabel="Deceased"
+  gender="Male"
+  gestationalAge={null}
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={
+    Object {
+      "MRN": 12343,
+      "REA": "3JSDA",
+    }
+  }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isConfidential={false}
+  isSelectable={false}
+  personName="Johnathon Doe"
+  photo=""
+  postMenstrualAge={null}
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName="John"
 />
 `;

@@ -8,15 +8,10 @@ const SelectableDemographicsBannerWithMissingData = () => {
     setMessage('Demographics banner clicked');
   };
 
-  const handleInfoButtonClick = () => {
-    setMessage('Info Button clicked');
-  };
-
   return (
     <div>
       <SelectableDemographicsBanner
-        selectableTileOnClick={handleDemographicsClick}
-        infoButtonOnClick={handleInfoButtonClick}
+        onClick={handleDemographicsClick}
       />
       <span>{message}</span>
     </div>

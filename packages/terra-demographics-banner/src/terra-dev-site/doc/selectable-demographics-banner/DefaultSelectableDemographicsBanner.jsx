@@ -8,10 +8,6 @@ const DefaultSelectableDemographicsBanner = () => {
     setMessage('Demographics banner clicked');
   };
 
-  const handleInfoButtonClick = () => {
-    setMessage('Info Button clicked');
-  };
-
   return (
     <div>
       <SelectableDemographicsBanner
@@ -20,8 +16,7 @@ const DefaultSelectableDemographicsBanner = () => {
         gender="Male"
         personName="Johnathon Doe"
         preferredFirstName="John"
-        selectableTileOnClick={handleDemographicsClick}
-        infoButtonOnClick={handleInfoButtonClick}
+        onClick={handleDemographicsClick}
       />
       <span>{message}</span>
     </div>

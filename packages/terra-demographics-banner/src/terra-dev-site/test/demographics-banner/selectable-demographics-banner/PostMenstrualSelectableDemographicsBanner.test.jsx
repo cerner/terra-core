@@ -9,10 +9,6 @@ export default () => {
     setMessage('Demographics Banner Clicked');
   };
 
-  const handleInfoButtonClick = () => {
-    setMessage('Info Button clicked');
-  };
-
   return (
     <div>
       <SelectableDemographicsBanner
@@ -32,8 +28,7 @@ export default () => {
         personName="Johnathon Doe"
         postMenstrualAge="May 13, 2020"
         preferredFirstName="John"
-        selectableTileOnClick={handleDemographicsClick}
-        infoButtonOnClick={handleInfoButtonClick}
+        onClick={handleDemographicsClick}
       />
       <span>{message}</span>
     </div>

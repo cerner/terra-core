@@ -1,16 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import Avatar from 'terra-avatar';
 import IconFlag from 'terra-icon/lib/icon/IconFlag';
+import IconInfo from 'terra-icon/lib/icon/IconInformation';
 import styles from './DemographicsBanner.module.scss';
 import DemographicsBannerUtils from './_sharedObjects';
 
 const cx = classNamesBind.bind(styles);
 
-export default (props) => {
+const LargeDemographicsBannerDisplay = (props) => {
   const {
     age,
     applicationContent,
@@ -25,7 +27,9 @@ export default (props) => {
     gestationalAgeFullText,
     gestationalAgeLabel,
     identifiers,
+    intl,
     isConfidential,
+    isSelectable,
     personName,
     photo,
     postMenstrualAge,
@@ -42,6 +46,7 @@ export default (props) => {
       'demographics-banner',
       'large-demographics-banner',
       { deceased: deceasedDate },
+      { 'is-selectable': isSelectable },
       theme.className,
     ),
     customProps.className,
@@ -62,6 +67,7 @@ export default (props) => {
         initials={avatar.initials}
         isAriaHidden={avatar.isAriaHidden}
         isDeceased={!!deceasedDate}
+        size="1.15em"
       />
     );
   } else if (photo) {
@@ -75,6 +81,8 @@ export default (props) => {
       </div>
     );
   }
+
+  const infoText = intl.formatMessage({ id: 'Terra.demographicsBanner.info' });
 
   return (
     <section className={mainClasses} {...customProps}>
@@ -99,6 +107,17 @@ export default (props) => {
           </div>
         </div>
       </div>
+      {isSelectable && (
+        <div className={cx('info-tile-container')}>
+          <div className={cx('divider')} />
+          <div className={cx('info-tile')}>
+            <span className={cx('info-text')}>{infoText}</span>
+            <span className={cx('info-icon')}>{<IconInfo />}</span>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
+
+export default injectIntl(LargeDemographicsBannerDisplay);

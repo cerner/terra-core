@@ -5,18 +5,17 @@ import SelectableDemographicsBanner from '../../src/SelectableDemographicsBanner
 
 it('renders a blank banner wrapper', () => {
   const tileClick = jest.fn();
-  const buttonClick = jest.fn();
 
-  const banner = shallowWithIntl(<SelectableDemographicsBanner selectableTileOnClick={tileClick} infoButtonOnClick={buttonClick} />);
+  const banner = shallowWithIntl(<SelectableDemographicsBanner onClick={tileClick} />);
   expect(banner.dive()).toMatchSnapshot();
 });
 
 it('renders the banner wrapper with all props', () => {
   const tileClick = jest.fn();
-  const buttonClick = jest.fn();
 
   const banner = shallowWithIntl((
     <SelectableDemographicsBanner
+      id="selectableDemographics"
       age="25 Years"
       applicationContent={<span className="risk-score">5%</span>}
       avatar={{
@@ -33,21 +32,15 @@ it('renders the banner wrapper with all props', () => {
       gestationalAge="April 5, 2016"
       hashValue="alternative hash"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      infoButtonId="infoButton"
-      infoButtonOnClick={buttonClick}
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
-      selectableTileId="selectableDemographics"
-      selectableTileOnClick={tileClick}
+      onClick={tileClick}
     />
   ));
 
-  banner.dive().find('#selectableDemographics').simulate('click');
+  banner.dive().find('#selectableDemographics').childAt(0).simulate('click');
   expect(tileClick).toHaveBeenCalled();
-
-  banner.dive().find('#infoButton').simulate('click');
-  expect(buttonClick).toHaveBeenCalled();
   expect(banner.dive()).toMatchSnapshot();
 });

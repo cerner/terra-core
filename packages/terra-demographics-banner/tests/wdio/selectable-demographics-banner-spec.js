@@ -28,16 +28,10 @@ Terra.describeViewports('Selectable Demographics Banner', ['tiny', 'large'], () 
 
     Terra.it.validatesElement();
 
-    it('Selectable-Tile-OnClick', () => {
-      browser.click('#selectable-tile');
+    it('click banner', () => {
+      browser.click('#populated-demographics-banner');
     });
 
-    Terra.it.validatesElement('selectable-tile-onclick', { selector: '#root' });
-
-    it('Info-Button-OnClick', () => {
-      browser.click('#info-tile');
-    });
-
-    Terra.it.validatesElement('info-button-onclick', { selector: '#root' });
+    Terra.it.validatesElement('banner clicked', { selector: '#root' });
   });
 });

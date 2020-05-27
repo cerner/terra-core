@@ -9,17 +9,12 @@ export default () => {
     setMessage('Demographics Banner Clicked');
   };
 
-  const handleInfoButtonClick = () => {
-    setMessage('Info Button clicked');
-  };
-
   return (
     <div>
       <SelectableDemographicsBanner
         id="populated-demographics-banner"
-        selectableTileId="selectable-tile"
-        applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
-        age="27 Years"
+        applicationContent={<span>BW12N / RAD1232</span>}
+        age="28 years"
         avatar={{
           alt: 'Johnathon Doe',
           color: 'neutral',
@@ -27,17 +22,13 @@ export default () => {
           initials: 'JD',
           isAriaHidden: true,
         }}
-        dateOfBirth="May 9, 1993"
-        gestationalAge="April 11, 2020"
-        postMenstrualAge="May 13, 2020"
-        gender="Male"
-        identifiers={{ MRN: 12343, REA: '3JSDA' }}
+        dateOfBirth="07/12/1989"
+        gender="F"
+        identifiers={{ MRN: '00019837', FIN: '1000254085' }}
         isConfidential
-        personName="Johnathon Doe"
-        preferredFirstName="John"
-        selectableTileOnClick={handleDemographicsClick}
-        infoButtonOnClick={handleInfoButtonClick}
-        infoButtonId="info-tile"
+        personName="BARSTOWE, GEORGIA"
+        preferredFirstName="Geo"
+        onClick={handleDemographicsClick}
       />
       <span>{message}</span>
     </div>

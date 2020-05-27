@@ -13,10 +13,6 @@ const SelectableDemoGraphicsBannerSmallContainer = () => {
     setMessage('Demographics Banner Clicked');
   };
 
-  const handleInfoButtonClick = () => {
-    setMessage('Info Button clicked');
-  };
-
   return (
     <div className={cx('content-wrapper')}>
       <SelectableDemographicsBanner
@@ -34,8 +30,7 @@ const SelectableDemoGraphicsBannerSmallContainer = () => {
         identifiers={{ MRN: 12343, REA: '3JSDA' }}
         personName="Johnathon Doe"
         preferredFirstName="John"
-        selectableTileOnClick={handleDemographicsClick}
-        infoButtonOnClick={handleInfoButtonClick}
+        onClick={handleDemographicsClick}
       />
       <span>{message}</span>
     </div>

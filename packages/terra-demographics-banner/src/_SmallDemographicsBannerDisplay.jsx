@@ -1,15 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import IconFlag from 'terra-icon/lib/icon/IconFlag';
+import IconInfo from 'terra-icon/lib/icon/IconInformation';
 import styles from './DemographicsBanner.module.scss';
 import DemographicsBannerUtils from './_sharedObjects';
 
 const cx = classNamesBind.bind(styles);
 
-export default (props) => {
+const SmallDemographicsBannerDisplay = (props) => {
   const {
     age,
     applicationContent,
@@ -24,7 +26,9 @@ export default (props) => {
     gestationalAgeFullText,
     gestationalAgeLabel,
     identifiers,
+    intl,
     isConfidential,
+    isSelectable,
     personName,
     photo,
     postMenstrualAge,
@@ -40,31 +44,46 @@ export default (props) => {
     cx(
       'demographics-banner',
       { deceased: deceasedDate },
+      { 'is-selectable': isSelectable },
       theme.className,
     ),
     customProps.className,
   );
 
   delete customProps.className;
+  const infoText = intl.formatMessage({ id: 'Terra.demographicsBanner.info' });
 
   return (
     <section className={mainClasses} {...customProps}>
-      <div className={cx('row')}>
-        { isConfidential ? <span className={cx('confidential-icon')}><IconFlag /></span> : null }
-        <h1 className={cx('person-name')}>
-          <span>
-            { personName }
-            { preferredFirstName && <span className={cx('preferred-first-name')}>{ preferredFirstName }</span> }
-          </span>
-        </h1>
+      <div className={cx('small-content')}>
+        <div className={cx('row')}>
+          { isConfidential ? <span className={cx('confidential-icon')}><IconFlag /></span> : null }
+          <h1 className={cx('person-name')}>
+            <span>
+              { personName }
+              { preferredFirstName && <span className={cx('preferred-first-name')}>{ preferredFirstName }</span> }
+            </span>
+          </h1>
+        </div>
+        <div className={cx('person-details')}>
+          {DemographicsBannerUtils.personDetails(props)}
+          {DemographicsBannerUtils.applicationIdentifiers(props)}
+        </div>
+        <div className={cx('application-content')}>
+          {applicationContent}
+        </div>
       </div>
-      <div className={cx('person-details')}>
-        {DemographicsBannerUtils.personDetails(props)}
-        {DemographicsBannerUtils.applicationIdentifiers(props)}
-      </div>
-      <div className={cx('application-content')}>
-        {applicationContent}
-      </div>
+      {isSelectable && (
+        <div className={cx('info-tile-container')}>
+          <div className={cx('divider')} />
+          <div className={cx('info-tile')}>
+            <span className={cx('info-text')}>{infoText}</span>
+            <span className={cx('info-icon')}>{<IconInfo />}</span>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
+
+export default injectIntl(SmallDemographicsBannerDisplay);

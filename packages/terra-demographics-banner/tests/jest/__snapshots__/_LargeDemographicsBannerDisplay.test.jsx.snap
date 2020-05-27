@@ -2,154 +2,197 @@
 
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   theme={
     Object {
       "className": "orion-fusion-theme",
     }
   }
 >
-  <_default>
-    <section
-      className="demographics-banner large-demographics-banner orion-fusion-theme"
+  <InjectIntl(LargeDemographicsBannerDisplay)>
+    <LargeDemographicsBannerDisplay
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
     >
-      <div
-        className="content"
+      <section
+        className="demographics-banner large-demographics-banner orion-fusion-theme"
       >
         <div
-          className="row"
-        >
-          <h1
-            className="person-name"
-          />
-          <div
-            className="application-content"
-          />
-        </div>
-        <div
-          className="row"
+          className="content"
         >
           <div
-            className="person-details"
+            className="row"
           >
-            <DemographicsBannerValue
-              key="age"
-            >
-              <span
-                className="value"
-              >
-                <span
-                  className="value-text"
-                />
-              </span>
-            </DemographicsBannerValue>
-            <DemographicsBannerValue
-              key="gender"
-            >
-              <span
-                className="value"
-              >
-                <span
-                  className="value-text"
-                />
-              </span>
-            </DemographicsBannerValue>
-            <DemographicsBannerValue
-              key="dob"
-            >
-              <span
-                className="value"
-              >
-                <span
-                  className="value-text"
-                />
-              </span>
-            </DemographicsBannerValue>
+            <h1
+              className="person-name"
+            />
+            <div
+              className="application-content"
+            />
           </div>
           <div
-            className="identifiers"
-          />
+            className="row"
+          >
+            <div
+              className="person-details"
+            >
+              <DemographicsBannerValue
+                key="age"
+              >
+                <span
+                  className="value"
+                >
+                  <span
+                    className="value-text"
+                  />
+                </span>
+              </DemographicsBannerValue>
+              <DemographicsBannerValue
+                key="gender"
+              >
+                <span
+                  className="value"
+                >
+                  <span
+                    className="value-text"
+                  />
+                </span>
+              </DemographicsBannerValue>
+              <DemographicsBannerValue
+                key="dob"
+              >
+                <span
+                  className="value"
+                >
+                  <span
+                    className="value-text"
+                  />
+                </span>
+              </DemographicsBannerValue>
+            </div>
+            <div
+              className="identifiers"
+            />
+          </div>
         </div>
-      </div>
-    </section>
-  </_default>
+      </section>
+    </LargeDemographicsBannerDisplay>
+  </InjectIntl(LargeDemographicsBannerDisplay)>
 </ThemeContextProvider>
 `;
 
 exports[`renders large banner that contains all valid information 1`] = `
-<section
-  className="demographics-banner large-demographics-banner"
->
-  <Avatar
-    alt="Johnathon Doe"
-    className="profile-photo"
-    color="neutral"
-    hashValue="alternative hash"
-    image=""
-    initials="JD"
-    isAriaHidden={true}
-    isDeceased={false}
-  />
-  <div
-    className="content"
-  >
-    <div
-      className="row"
+<LargeDemographicsBannerDisplay
+  age="25 Years"
+  applicationContent={
+    <span
+      className="risk-score"
     >
-      <h1
-        className="person-name"
-      >
-        Johnathon Doe
-        <span
-          className="preferred-first-name"
-        >
-          John
-        </span>
-      </h1>
-      <div
-        className="application-content"
-      >
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      </div>
-    </div>
-    <div
-      className="row"
-    >
-      <div
-        className="person-details"
-      >
-        <DemographicsBannerValue
-          key="age"
-          value="25 Years"
-        />
-        <DemographicsBannerValue
-          key="gender"
-          value="Male"
-        />
-        <DemographicsBannerValue
-          key="dob"
-          label="DOB"
-          value="May 9, 1993"
-        />
-      </div>
-      <div
-        className="identifiers"
-      >
-        <DemographicsBannerValue
-          key="identifier-MRN"
-          label="MRN"
-          value={12343}
-        />
-        <DemographicsBannerValue
-          key="identifier-REA"
-          label="REA"
-          value="3JSDA"
-        />
-      </div>
-    </div>
-  </div>
-</section>
+      5%
+    </span>
+  }
+  avatar={
+    Object {
+      "alt": "Johnathon Doe",
+      "color": "neutral",
+      "hashValue": "alternative hash",
+      "image": "",
+      "initials": "JD",
+      "isAriaHidden": true,
+    }
+  }
+  dateOfBirth="May 9, 1993"
+  dateOfBirthLabel="DOB"
+  deceasedDateLabel="Deceased"
+  gender="Male"
+  gestationalAgeLabel="GA"
+  identifiers={
+    Object {
+      "MRN": 12343,
+      "REA": "3JSDA",
+    }
+  }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  personName="Johnathon Doe"
+  photo=""
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName="John"
+/>
 `;

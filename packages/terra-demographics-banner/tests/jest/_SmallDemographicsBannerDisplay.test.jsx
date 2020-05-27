@@ -1,9 +1,11 @@
 import React from 'react';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import SmallDemographicsBannerDisplay from '../../src/_SmallDemographicsBannerDisplay';
 
 it('renders small banner that contains all valid information', () => {
-  const banner = shallow(<SmallDemographicsBannerDisplay
+  const banner = shallowWithIntl(<SmallDemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
     avatar={{
@@ -29,7 +31,7 @@ it('renders small banner that contains all valid information', () => {
   expect(banner).toMatchSnapshot();
 });
 it('correctly applies the theme context className', () => {
-  const banner = mount(
+  const banner = mountWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <SmallDemographicsBannerDisplay />
     </ThemeContextProvider>,

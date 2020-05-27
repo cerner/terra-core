@@ -9,10 +9,6 @@ const SelectableDemographicsBannerAdditionalAges = () => {
     setMessage('Demographics Banner Clicked');
   };
 
-  const handleInfoButtonClick = () => {
-    setMessage('Info Button clicked');
-  };
-
   return (
     <div>
       <SelectableDemographicsBanner
@@ -32,8 +28,7 @@ const SelectableDemographicsBannerAdditionalAges = () => {
         personName="Johnathon Doe"
         postMenstrualAge="43 Weeks"
         preferredFirstName="John"
-        selectableTileOnClick={handleDemographicsClick}
-        infoButtonOnClick={handleInfoButtonClick}
+        onClick={handleDemographicsClick}
       />
       <span>{message}</span>
     </div>

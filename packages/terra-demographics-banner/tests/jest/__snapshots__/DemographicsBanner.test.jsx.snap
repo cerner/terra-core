@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a blank banner wrapper 1`] = `
-<DemographicsBannerDisplay
+<InjectIntl(DemographicsBannerDisplay)
   age="Terra.demographicsBanner.noDataProvided"
   applicationContent={null}
   dateOfBirth="Terra.demographicsBanner.noDataProvided"
@@ -15,6 +15,7 @@ exports[`renders a blank banner wrapper 1`] = `
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={Object {}}
   isConfidential={false}
+  isSelectable={false}
   personName="Terra.demographicsBanner.noDataProvided"
   photo={null}
   postMenstrualAge={null}
@@ -25,7 +26,7 @@ exports[`renders a blank banner wrapper 1`] = `
 `;
 
 exports[`renders the banner wrapper with all props 1`] = `
-<DemographicsBannerDisplay
+<InjectIntl(DemographicsBannerDisplay)
   age="25 Years"
   applicationContent={
     <span
@@ -60,6 +61,7 @@ exports[`renders the banner wrapper with all props 1`] = `
     }
   }
   isConfidential={false}
+  isSelectable={false}
   personName="Johnathon Doe"
   photo=""
   postMenstrualAge="April 7, 2016"

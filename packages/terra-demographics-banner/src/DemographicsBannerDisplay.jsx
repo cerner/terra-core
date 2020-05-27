@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl, intlShape } from 'react-intl';
 import ResponsiveElement from 'terra-responsive-element';
 import './DemographicsBanner.module.scss';
 import SmallDemographicsBannerDisplay from './_SmallDemographicsBannerDisplay';
@@ -61,9 +62,19 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: intlShape.isRequired,
+  /**
    * Whether to display an icon to confidentiality.
    */
   isConfidential: PropTypes.bool,
+  /**
+   * @private
+   * Whether or not the banner should have additional styles and to indicate it is selectable.
+   */
+  isSelectable: PropTypes.bool,
   /**
    * Full Name of the person
    */
@@ -105,6 +116,7 @@ const defaultProps = {
   gestationalAgeFullText: 'Gestational Age',
   identifiers: {},
   isConfidential: false,
+  isSelectable: false,
   personName: '--',
   postMenstrualAge: null,
   postMenstrualAgeLabel: 'PMA',
@@ -122,4 +134,4 @@ const DemographicsBannerDisplay = props => (
 DemographicsBannerDisplay.propTypes = propTypes;
 DemographicsBannerDisplay.defaultProps = defaultProps;
 
-export default DemographicsBannerDisplay;
+export default injectIntl(DemographicsBannerDisplay);
