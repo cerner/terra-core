@@ -283,7 +283,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
     Terra.it.validatesElement('Button has focus', { selector: '#root' });
 
     it('disables button', () => {
-      browser.click('#programmaticDisabled');
+      browser.click('#programmaticDisabledButton');
     });
 
     Terra.it.validatesElement('Button is Disabled', { selector: '#root' });
