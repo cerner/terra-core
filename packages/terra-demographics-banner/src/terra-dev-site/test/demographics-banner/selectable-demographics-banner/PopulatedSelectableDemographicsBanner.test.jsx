@@ -16,13 +16,15 @@ export default () => {
         applicationContent={<span>BW12N / RAD1232</span>}
         age="28 years"
         avatar={{
-          alt: 'Johnathon Doe',
+          alt: 'BARSTOWE, GEORGIA',
           color: 'neutral',
           image: demographicsImage,
-          initials: 'JD',
+          initials: 'GB',
           isAriaHidden: true,
         }}
         dateOfBirth="07/12/1989"
+        gestationalAge="April 11, 2020"
+        postMenstrualAge="May 13, 2020"
         gender="F"
         identifiers={{ MRN: '00019837', FIN: '1000254085' }}
         isConfidential
