@@ -1,4 +1,6 @@
-@import '~terra-mixins/lib/Mixins';
+// Themes
+@import './clinical-lowlight-theme/ProfileImage.module';
+@import './orion-fusion-theme/ProfileImage.module';
 
 :local {
   .placeholder-images {
