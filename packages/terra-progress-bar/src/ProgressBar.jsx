@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './ProgressBar.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const ProgressBarHeightSize = {
   TINY: 'tiny',
@@ -55,12 +57,17 @@ const ProgressBar = ({
   colorClass,
   ...customProps
 }) => {
-  const classes = cx([
-    'progress-bar',
-    heightSize,
-    colorClass,
+  const theme = React.useContext(ThemeContext);
+
+  const classes = classNames(
+    cx(
+      'progress-bar',
+      heightSize,
+      colorClass,
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   const normalizedValue = (value / max) * 100;
 

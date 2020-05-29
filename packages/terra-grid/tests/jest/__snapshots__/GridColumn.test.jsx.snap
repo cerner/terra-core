@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <GridColumn>
+    <div
+      className="column orion-fusion-theme"
+    >
+      Test
+    </div>
+  </GridColumn>
+</ThemeContextProvider>
+`;
+
 exports[`should render a default Column 1`] = `
 <div
   className="column"
