@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Hookshot from 'terra-hookshot';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './_Dropdown.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -66,6 +68,7 @@ const Dropdown = ({
   target,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
   /**
    * Prevents default events from removing the focus from the target.
    * @param {event} event - The event invoking the callback.
@@ -74,12 +77,15 @@ const Dropdown = ({
     event.preventDefault();
   }, []);
 
-  const dropdownClasses = cx([
-    'dropdown',
-    { 'is-above': isAbove },
-    { 'is-touch-accessible': isTouchAccessible },
+  const dropdownClasses = classNames(
+    cx([
+      'dropdown',
+      { 'is-above': isAbove },
+      { 'is-touch-accessible': isTouchAccessible },
+      theme.className,
+    ]),
     customProps.className,
-  ]);
+  );
 
   if (isTouchAccessible) {
     return (
