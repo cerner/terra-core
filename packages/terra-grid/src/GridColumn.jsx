@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Grid.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const columnRange = (props, propName) => {
   if (props[propName]) {
@@ -61,17 +63,22 @@ const GridColumn = ({
   enormous,
   ...customProps
 }) => {
-  const colClassNames = cx([
-    'column', {
-      [`column-tiny-${tiny}`]: tiny,
-      [`column-small-${small}`]: small,
-      [`column-medium-${medium}`]: medium,
-      [`column-large-${large}`]: large,
-      [`column-huge-${huge}`]: huge,
-      [`column-enormous-${enormous}`]: enormous,
-    },
+  const theme = React.useContext(ThemeContext);
+
+  const colClassNames = classNames(
+    cx([
+      'column', {
+        [`column-tiny-${tiny}`]: tiny,
+        [`column-small-${small}`]: small,
+        [`column-medium-${medium}`]: medium,
+        [`column-large-${large}`]: large,
+        [`column-huge-${huge}`]: huge,
+        [`column-enormous-${enormous}`]: enormous,
+      },
+      theme.className,
+    ]),
     className,
-  ]);
+  );
 
   return (
     <div {...customProps} className={colClassNames}>

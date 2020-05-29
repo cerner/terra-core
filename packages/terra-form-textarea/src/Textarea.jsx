@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Textarea.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const isMobileDevice = () => window.matchMedia('(max-width: 1024px)').matches
   && (
@@ -210,17 +212,22 @@ class Textarea extends React.Component {
       ...customProps
     } = this.props;
 
+    const theme = this.context;
+
     const additionalTextareaProps = { ...customProps };
 
-    const textareaClasses = cx([
-      'textarea',
-      { 'form-error': isInvalid },
-      { 'form-incomplete': (isIncomplete && required && !isInvalid) },
-      { 'full-size': size === 'full' },
-      { resizable: isAutoResizable && !this.isMobileDevice },
-      { 'no-resize': disableResize },
+    const textareaClasses = classNames(
+      cx(
+        'textarea',
+        { 'form-error': isInvalid },
+        { 'form-incomplete': (isIncomplete && required && !isInvalid) },
+        { 'full-size': size === 'full' },
+        { resizable: isAutoResizable && !this.isMobileDevice },
+        { 'no-resize': disableResize },
+        theme.className,
+      ),
       additionalTextareaProps.className,
-    ]);
+    );
 
     let ariaLabelText;
 
@@ -270,6 +277,7 @@ class Textarea extends React.Component {
 Textarea.propTypes = propTypes;
 Textarea.defaultProps = defaultProps;
 Textarea.isTextarea = true;
+Textarea.contextType = ThemeContext;
 
 export default Textarea;
 export { TextareaSize };
