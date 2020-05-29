@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import { injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import * as KeyCode from 'keycode-js';
@@ -10,7 +12,7 @@ import FrameUtil from '../shared/_FrameUtil';
 import SharedUtil from '../shared/_SharedUtil';
 import styles from '../shared/_Frame.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -453,17 +455,22 @@ class Frame extends React.Component {
       ...customProps
     } = this.props;
 
-    const selectClasses = cx([
-      'select',
-      'default',
-      { 'is-above': this.state.isAbove },
-      { 'is-disabled': disabled },
-      { 'is-focused': this.state.isFocused },
-      { 'is-invalid': isInvalid },
-      { 'is-incomplete': (isIncomplete && required && !isInvalid) },
-      { 'is-open': this.state.isOpen },
+    const theme = this.context;
+
+    const selectClasses = classNames(
+      cx(
+        'select',
+        'default',
+        { 'is-above': this.state.isAbove },
+        { 'is-disabled': disabled },
+        { 'is-focused': this.state.isFocused },
+        { 'is-invalid': isInvalid },
+        { 'is-incomplete': (isIncomplete && required && !isInvalid) },
+        { 'is-open': this.state.isOpen },
+        theme.className,
+      ),
       customProps.className,
-    ]);
+    );
 
     const labelId = `terra-select-screen-reader-label-${uniqueid()}`;
     const displayId = `terra-select-screen-reader-display-${uniqueid()}`;
@@ -547,5 +554,6 @@ class Frame extends React.Component {
 
 Frame.propTypes = propTypes;
 Frame.defaultProps = defaultProps;
+Frame.contextType = ThemeContext;
 
 export default injectIntl(Frame);
