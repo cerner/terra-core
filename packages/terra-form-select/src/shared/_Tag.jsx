@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './_Tag.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -21,16 +22,19 @@ const propTypes = {
 };
 
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-const Tag = ({ children, onDeselect, value }) => (
-  <li className={cx('tag')}>
-    <span className={cx('display')}>
-      {children}
-    </span>
-    <span className={cx('deselect')} onClick={() => { onDeselect(value); }} role="presentation">
-      <span className={cx('icon')} />
-    </span>
-  </li>
-);
+const Tag = ({ children, onDeselect, value }) => {
+  const theme = React.useContext(ThemeContext);
+  return (
+    <li className={cx('tag', theme.className)}>
+      <span className={cx('display')}>
+        {children}
+      </span>
+      <span className={cx('deselect')} onClick={() => { onDeselect(value); }} role="presentation">
+        <span className={cx('icon')} />
+      </span>
+    </li>
+  );
+};
 
 Tag.propTypes = propTypes;
 
