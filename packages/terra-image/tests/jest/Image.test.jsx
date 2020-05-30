@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Image from '../../src/Image';
 
 const imagecontainerStyle1 = {
@@ -92,5 +94,14 @@ it('should render the src image', () => {
 it('should render the placeholder image', () => {
   const wrapper = shallow(<Image src="profile.jpg" alt="avatar" height="75" width="75" placeholder={<div>placeholder text</div>} />);
   wrapper.setState({ isLoading: false, isError: true });
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Image src="" alt=" " />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });

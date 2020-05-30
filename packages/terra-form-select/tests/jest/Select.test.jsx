@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, renderWithIntl } from 'terra-enzyme-intl';
 import Select from '../../src/Select';
@@ -208,6 +210,15 @@ describe('Select', () => {
 
   it('should render a required select', () => {
     const wrapper = shallowWithIntl(<Select required />).dive();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className for default variant', () => {
+    const wrapper = renderWithIntl(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Select />
+      </ThemeContextProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
