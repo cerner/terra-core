@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import { polyfill } from 'react-lifecycles-compat';
 import { injectIntl, intlShape } from 'react-intl';
 import * as KeyCode from 'keycode-js';
@@ -10,7 +11,7 @@ import MenuUtil from '../shared/_MenuUtil';
 import SharedUtil from '../shared/_SharedUtil';
 import styles from '../shared/_Menu.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 /* Disabling this rule because props used in getDerivedStateFromProps return false positives. */
 /* eslint-disable react/no-unused-prop-types */
@@ -429,6 +430,7 @@ class Menu extends React.Component {
       intl,
       refCallback,
     } = this.props;
+    const theme = this.context;
     return (
       /**
        * Note: role="listbox" and aria-activedescendant needed for VoiceOver on iOS to properly
@@ -440,7 +442,7 @@ class Menu extends React.Component {
       <ul
         id={id}
         role="listbox"
-        className={cx('menu')}
+        className={cx('menu', theme.className)}
         aria-label={intl.formatMessage({ id: 'Terra.form.select.menu' })}
         ref={(menu) => {
           if (refCallback) {
@@ -459,6 +461,7 @@ class Menu extends React.Component {
 
 Menu.propTypes = propTypes;
 Menu.defaultProps = defaultProps;
+Menu.contextType = ThemeContext;
 
 /**
  * This polyfill enables backwards compatibility of features added in React 16.3.0.

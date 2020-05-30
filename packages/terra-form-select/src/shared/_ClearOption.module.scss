@@ -1,3 +1,7 @@
+// Themes
+@import '../clinical-lowlight-theme/ClearOption.module';
+@import '../orion-fusion-theme/ClearOption.module';
+
 :local {
   .clear-option {
     color: var(--terra-form-select-clear-option-color, rgba(28, 31, 33, 0.62));

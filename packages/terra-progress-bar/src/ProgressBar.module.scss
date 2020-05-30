@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/ProgressBar.module';
+@import './orion-fusion-theme/ProgressBar.module';
+
 :local {
   .progress-bar {
     border-radius: var(--terra-progress-bar-border-radius, 0.5em);
