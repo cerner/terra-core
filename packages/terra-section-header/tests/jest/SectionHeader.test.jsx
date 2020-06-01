@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import SectionHeader from '../../src/SectionHeader';
 
 describe('SectionHeader', () => {
@@ -26,5 +28,14 @@ describe('SectionHeader', () => {
     const sectionHeader = <SectionHeader title="foo" onClick={() => {}} isOpen />;
     const wrapper = render(sectionHeader);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const tabs = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <SectionHeader title="foo" />
+      </ThemeContextProvider>,
+    );
+    expect(tabs).toMatchSnapshot();
   });
 });
