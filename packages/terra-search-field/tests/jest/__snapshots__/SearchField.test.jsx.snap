@@ -1,5 +1,196 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Snapshots correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <InjectIntl(SearchField)>
+    <SearchField
+      disableAutoSearch={false}
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      isBlock={false}
+      isDisabled={false}
+      minimumSearchTextLength={2}
+      placeholder=""
+      searchDelay={250}
+    >
+      <div
+        className="search-field orion-fusion-theme"
+      >
+        <div
+          className="input-group"
+        >
+          <Input
+            aria-disabled={false}
+            ariaLabel="Terra.searchField.search"
+            className="input"
+            disabled={false}
+            isIncomplete={false}
+            isInvalid={false}
+            name={null}
+            onChange={[Function]}
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            placeholder=""
+            refCallback={[Function]}
+            required={false}
+            type="search"
+          >
+            <input
+              aria-disabled={false}
+              aria-label="Terra.searchField.search"
+              className="form-input input"
+              disabled={false}
+              name={null}
+              onChange={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              placeholder=""
+              required={false}
+              type="search"
+            />
+          </Input>
+        </div>
+        <Button
+          className="button"
+          icon={
+            <IconSearch
+              data-name="Layer 1"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          }
+          isBlock={false}
+          isCompact={true}
+          isDisabled={false}
+          isIconOnly={true}
+          isReversed={false}
+          onClick={[Function]}
+          text="Terra.searchField.submit-search"
+          type="button"
+          variant="neutral"
+        >
+          <button
+            aria-disabled={false}
+            aria-label="Terra.searchField.submit-search"
+            className="button neutral compact orion-fusion-theme button"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            title="Terra.searchField.submit-search"
+            type="button"
+          >
+            <span
+              className="button-label icon-only"
+            >
+              <span
+                className="icon"
+              >
+                <IconSearch
+                  className="icon-svg"
+                  data-name="Layer 1"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <IconBase
+                    ariaLabel={null}
+                    className="icon-svg"
+                    data-name="Layer 1"
+                    focusable="false"
+                    height="1em"
+                    isBidi={false}
+                    isSpin={false}
+                    viewBox="0 0 48 48"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="tui-Icon icon icon-svg"
+                      data-name="Layer 1"
+                      focusable="false"
+                      height="1em"
+                      viewBox="0 0 48 48"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M47.4 43.2l-13-13A19.66 19.66 0 0038 19a19 19 0 10-7.9 15.4l13 13a2.05 2.05 0 002.9 0l1.4-1.4a1.93 1.93 0 000-2.8zM3 19a16 16 0 1116 16A16 16 0 013 19z"
+                      />
+                    </svg>
+                  </IconBase>
+                </IconSearch>
+              </span>
+            </span>
+          </button>
+        </Button>
+      </div>
+    </SearchField>
+  </InjectIntl(SearchField)>
+</ThemeContextProvider>
+`;
+
 exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Input component 1`] = `
 <SearchField
   disableAutoSearch={false}
