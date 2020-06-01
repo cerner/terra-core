@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -62,16 +64,20 @@ const Option = ({
   isAddOption,
   ...customProps
 }) => {
-  const optionClassNames = cx([
-    'option',
-    { 'is-active': isActive },
-    { 'is-checkable': isCheckable && !isAddOption },
-    { 'is-default': !isCheckable && !isAddOption },
-    { 'is-disabled': disabled },
-    { 'is-selected': isSelected },
-    { 'is-add-option': isAddOption },
+  const theme = React.useContext(ThemeContext);
+  const optionClassNames = classNames(
+    cx(
+      'option',
+      { 'is-active': isActive },
+      { 'is-checkable': isCheckable && !isAddOption },
+      { 'is-default': !isCheckable && !isAddOption },
+      { 'is-disabled': disabled },
+      { 'is-selected': isSelected },
+      { 'is-add-option': isAddOption },
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   let role = 'option'; // Used for JAWs and VoiceOver on iOS
 

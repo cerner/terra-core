@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tag correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Tag
+    onDeselect={[Function]}
+    value="value"
+  >
+    <li
+      className="tag orion-fusion-theme"
+    >
+      <span
+        className="display"
+      >
+        Content
+      </span>
+      <span
+        className="deselect"
+        onClick={[Function]}
+        role="presentation"
+      >
+        <span
+          className="icon"
+        />
+      </span>
+    </li>
+  </Tag>
+</ThemeContextProvider>
+`;
+
 exports[`Tag should render a default Tag 1`] = `
 <li
   className="tag"

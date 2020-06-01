@@ -1,0 +1,27 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .orion-fusion-theme {
+    --terra-form-select-option-color: #1c1f21;
+    --terra-form-select-option-font-size: 1rem;
+    --terra-form-select-option-line-height: 1.41667;
+    --terra-form-select-option-padding: 0.5rem 1rem;
+    --terra-form-select-default-option-active-background-color: #0079be;
+    --terra-form-select-default-option-active-color: #fff;
+    --terra-form-select-default-option-active-font-weight: normal;
+    --terra-form-select-default-option-selected-background-color: #0079be;
+    --terra-form-select-default-option-selected-color: #fff;
+    --terra-form-select-default-option-selected-font-weight: normal;
+    --terra-form-select-default-option-selected-active-background-color: #0065a3;
+    --terra-form-select-option-icon-height: 1rem;
+    --terra-form-select-option-icon-margin-right: 0.75rem;
+    --terra-form-select-option-icon-width: 1rem;
+    --terra-form-select-option-active-background-color: #ebf6fd;
+    --terra-form-select-option-disabled-color: rgba(28, 31, 33, 0.25);
+
+    @include terra-inline-svg-var('--terra-form-select-option-icon-active-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.5"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>');
+    @include terra-inline-svg-var('--terra-form-select-option-checkable-active-icon-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#a3dcfd" opacity="0.8"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0079be"/></svg>');
+    @include terra-inline-svg-var('--terra-form-select-option-icon-add-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#0079be" d="M48 21H27V0h-6v21H0v6h21v21h6V27h21z"/></svg>');
+    @include terra-inline-svg-var('--terra-form-select-option-icon-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#1c1f21" opacity="0.12"/><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0087d1"/></svg>');
+  }
+}

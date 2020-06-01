@@ -1,6 +1,8 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import Paginator from '../../src/Paginator';
 
 describe('Paginator', () => {
@@ -36,6 +38,16 @@ describe('Paginator', () => {
     const wrapper = shallowWithIntl(noPagesRender).dive();
     wrapper.setState({ breakpoint: 'large' });
     wrapper.update();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  // Snapshot Tests
+  it('correctly applies the theme context className', () => {
+    const wrapper = mountWithIntl(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        {noPagesRender}
+      </ThemeContextProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
