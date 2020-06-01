@@ -1,9 +1,20 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Overlay from '../../src/Overlay';
 
 describe('Overlay', () => {
   it('should render a null component when isOpen is not provided', () => {
     const wrapper = shallow(<Overlay />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const wrapper = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Overlay isOpen />
+      </ThemeContextProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 

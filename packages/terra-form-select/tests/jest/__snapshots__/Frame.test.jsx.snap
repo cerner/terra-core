@@ -1,5 +1,308 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Frame correctly applies the theme context className for combobox variant 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-7"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select combobox orion-fusion-theme"
+  data-terra-select-combobox="true"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-6"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-7"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.searchUsageGuidance
+    </span>
+  </div>
+  <div
+    class="display"
+  >
+    <div
+      class="content"
+    >
+      <input
+        aria-describedby="terra-select-screen-reader-description-7"
+        aria-disabled="false"
+        aria-label="Terra.form.select.ariaLabel"
+        aria-required="false"
+        class="search-input"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Frame correctly applies the theme context className for default variant 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-4"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-labelledby="terra-select-screen-reader-label-1 terra-select-screen-reader-display-2 terra-select-screen-reader-placeholder-3"
+  aria-required="false"
+  class="select default orion-fusion-theme"
+  data-terra-select-combobox="true"
+  role="combobox"
+  tabindex="0"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-1"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-4"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
+    </span>
+  </div>
+  <div
+    aria-label="Terra.form.select.ariaLabel"
+    class="display"
+    role="textbox"
+  >
+    <div
+      class="placeholder"
+      id="terra-select-screen-reader-placeholder-3"
+    >
+       
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Frame correctly applies the theme context className for multiple variant 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-10"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select multiple orion-fusion-theme"
+  data-terra-select-combobox="true"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-8"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-10"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.multiSelectUsageGuidance
+    </span>
+  </div>
+  <div
+    class="display"
+  >
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-display-9 terra-select-screen-reader-description-10"
+          aria-disabled="false"
+          aria-label="Terra.form.select.ariaLabel"
+          aria-required="false"
+          class="search-input"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Frame correctly applies the theme context className for search variant 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-12"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select search orion-fusion-theme"
+  data-terra-select-combobox="true"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-11"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-12"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.searchUsageGuidance
+    </span>
+  </div>
+  <div
+    class="display"
+  >
+    <div
+      class="content"
+    >
+      <input
+        aria-describedby="terra-select-screen-reader-description-12"
+        aria-disabled="false"
+        aria-label="Terra.form.select.ariaLabel"
+        aria-required="false"
+        class="search-input"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
+exports[`Frame correctly applies the theme context className for tag variant 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-15"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  class="select tag orion-fusion-theme"
+  data-terra-select-combobox="true"
+  role="application"
+  tabindex="-1"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-13"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-15"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.multiSelectUsageGuidance
+    </span>
+  </div>
+  <div
+    class="display"
+  >
+    <ul
+      class="content"
+    >
+      <li
+        class="search-wrapper"
+      >
+        <input
+          aria-describedby="terra-select-screen-reader-display-14 terra-select-screen-reader-description-15"
+          aria-disabled="false"
+          aria-label="Terra.form.select.ariaLabel"
+          aria-required="false"
+          class="search-input"
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
 exports[`Frame should render a clear option 1`] = `
 <Frame
   clearOptionDisplay="-Select-"

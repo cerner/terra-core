@@ -1,5 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Option correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Option
+    disabled={false}
+    display="display"
+    value="value"
+  >
+    <li
+      aria-disabled={false}
+      className="option is-default orion-fusion-theme"
+      data-terra-select-option={true}
+      disabled={false}
+      role="option"
+      tabIndex="0"
+    >
+      <span
+        className="display"
+      >
+        display
+      </span>
+    </li>
+  </Option>
+</ThemeContextProvider>
+`;
+
 exports[`Option should render a default Option 1`] = `
 <li
   aria-disabled={false}

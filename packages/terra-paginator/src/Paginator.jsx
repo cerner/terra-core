@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import { injectIntl, intlShape } from 'react-intl';
 import ResponsiveElement from 'terra-responsive-element';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
@@ -9,7 +10,7 @@ import styles from './Paginator.module.scss';
 import { calculatePages, pageSet } from './_paginationUtils';
 import PaginatorButton from './_PaginatorButton';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -124,6 +125,7 @@ class Paginator extends React.Component {
   }
 
   defaultPaginator() {
+    const theme = this.context;
     const { intl } = this.props;
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
@@ -131,7 +133,7 @@ class Paginator extends React.Component {
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     const fullView = (
-      <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])}>
+      <div className={cx('paginator', !this.hasNavContext() && 'pageless', theme.className)}>
         {
           this.hasNavContext() && (
           <PaginatorButton
@@ -190,6 +192,7 @@ class Paginator extends React.Component {
   }
 
   reducedPaginator() {
+    const theme = this.context;
     const { intl } = this.props;
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage } = this.state;
@@ -197,7 +200,7 @@ class Paginator extends React.Component {
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     const reducedView = (
-      <div className={cx(['paginator', !this.hasNavContext() && 'pageless'])} role="navigation" aria-label="pagination">
+      <div className={cx('paginator', !this.hasNavContext() && 'pageless', theme.className)} role="navigation" aria-label="pagination">
         {
           this.hasNavContext() && (
           <PaginatorButton
@@ -267,5 +270,6 @@ class Paginator extends React.Component {
 }
 
 Paginator.propTypes = propTypes;
+Paginator.contextType = ThemeContext;
 
 export default injectIntl(Paginator);
