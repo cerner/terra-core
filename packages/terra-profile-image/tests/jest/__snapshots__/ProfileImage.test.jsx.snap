@@ -39,7 +39,7 @@ exports[`correctly applies the theme context className 1`] = `
       >
         <img
           alt="A profile image"
-          className="image cover default hidden"
+          className="image cover default orion-fusion-theme hidden"
           height="75"
           onError={[Function]}
           onLoad={[Function]}
