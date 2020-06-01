@@ -59,7 +59,7 @@ const LargeDemographicsBannerDisplay = (props) => {
   if (avatar && avatar.alt && avatar.initials) {
     profilePhoto = (
       <Avatar
-        className={cx('profile-photo')}
+        className={cx('profile-avatar')}
         alt={avatar.alt}
         color={avatar.color}
         hashValue={avatar.hashValue}
@@ -67,13 +67,13 @@ const LargeDemographicsBannerDisplay = (props) => {
         initials={avatar.initials}
         isAriaHidden={avatar.isAriaHidden}
         isDeceased={!!deceasedDate}
-        size="1.15em"
       />
     );
   } else if (photo) {
     /*
      * This condition is added to keep the profile photo changes passive to Demographics banner.
      * Should be removed with next MVB.
+     * Reference: https://github.com/cerner/terra-core/issues/3002
      */
     profilePhoto = (
       <div className={cx('profile-photo')}>

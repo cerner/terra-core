@@ -13,9 +13,12 @@
     padding: var(--terra-demographics-banner-padding, 0.714em);
   }
 
-  .profile-photo {
+  .profile-photo,
+  .profile-avatar {
     flex-shrink: 0;
+    height: var(--terra-demographics-banner-profile-photo-height, 3.5714em);
     margin: var(--terra-demographics-banner-profile-photo-margin);
+    width: var(--terra-demographics-banner-profile-photo-width, 3.5714em);
   }
 
   .value {
@@ -134,18 +137,16 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    border-radius: 4px;
   }
 
   .info-tile-container {
     display: flex;
 
     .divider {
-      border-bottom-width: 0;
       border-color: var(--terra-demographics-banner-divider-border-color, #dedfe0);
-      border-left-width: var(--terra-demographics-banner-divider-border-left-width, 1px);
-      border-right-width: 0;
       border-style: solid;
-      border-top-width: 0;
+      border-width: var(--terra-demographics-banner-divider-border-width, 0 0 0 1px);
     }
   
     .info-tile {
@@ -157,8 +158,7 @@
     .info-icon {
       color: var(--terra-demographics-banner-color, #fff);
       display: block;
-      padding-bottom: 0.3rem;
-      padding-top: 0.3rem;
+      padding: var(--terra-demographics-banner-info-tile-content-padding, 0.3rem 0);
       text-align: center;
     }
   }

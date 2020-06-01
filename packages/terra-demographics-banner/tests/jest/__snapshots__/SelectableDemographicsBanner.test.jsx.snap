@@ -34,6 +34,19 @@ exports[`renders the banner wrapper with all props 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
+    onMouseDown={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
   >
     <InjectIntl(DemographicsBanner)
       age="25 Years"

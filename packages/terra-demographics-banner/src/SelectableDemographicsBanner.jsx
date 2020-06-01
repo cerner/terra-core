@@ -59,6 +59,10 @@ const propTypes = {
    */
   onClick: PropTypes.func.isRequired,
   /**
+   * Callback function triggered when mouse is pressed.
+   */
+  onMouseDown: PropTypes.func,
+  /**
    * Full Name of the person.
    */
   personName: PropTypes.string,
@@ -98,6 +102,7 @@ const SelectableDemographicsBanner = ({
   intl,
   isConfidential,
   onClick,
+  onMouseDown,
   personName,
   photo,
   postMenstrualAge,
@@ -131,6 +136,7 @@ const SelectableDemographicsBanner = ({
         onClick={handleOnClick}
         onKeyDown={handleKeyDown}
         onKeyUp={handleKeyUp}
+        onMouseDown={onMouseDown}
       >
         <DemographicsBanner
           age={age}

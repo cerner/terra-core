@@ -12,6 +12,7 @@ it('renders a blank banner wrapper', () => {
 
 it('renders the banner wrapper with all props', () => {
   const tileClick = jest.fn();
+  const tileMouseDown = jest.fn();
 
   const banner = shallowWithIntl((
     <SelectableDemographicsBanner
@@ -37,8 +38,12 @@ it('renders the banner wrapper with all props', () => {
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
       onClick={tileClick}
+      onMouseDown={tileMouseDown}
     />
   ));
+
+  banner.dive().find('#selectableDemographics').childAt(0).simulate('mousedown');
+  expect(tileMouseDown).toHaveBeenCalled();
 
   banner.dive().find('#selectableDemographics').childAt(0).simulate('click');
   expect(tileClick).toHaveBeenCalled();
