@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Apply themes by context and directly include packaged themes.
 
 3.29.0 - (April 28, 2020)
 ------------------
