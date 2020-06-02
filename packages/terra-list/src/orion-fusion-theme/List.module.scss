@@ -1,0 +1,31 @@
+:local {
+  .orion-fusion-theme {
+    --terra-list-item-background-color: none;
+    --terra-list-item-min-height: 0;
+    --terra-list-item-divider-border-top: 1px solid #c8cacb;
+    --terra-list-item-last-divider-border-bottom: 1px solid #c8cacb;
+    --terra-list-item-selected-divider-border-color: #0092e0;
+    --terra-list-item-selected-divider-border-top-color: #0092e0;
+    --terra-list-standard-item-fill-line-height: 1.41667;
+    --terra-list-standard-item-fill-padding-bottom: 0.5rem;
+    --terra-list-standard-item-fill-padding-left: 0.83333rem;
+    --terra-list-standard-item-fill-padding-right: 0.83333rem;
+    --terra-list-standard-item-fill-padding-top: 0.5rem;
+    --terra-list-compact-item-fill-line-height: 1.16667;
+    --terra-list-compact-item-fill-padding-bottom: 0.25rem;
+    --terra-list-compact-item-fill-padding-left: 0.83333rem;
+    --terra-list-compact-item-fill-padding-right: 0.83333rem;
+    --terra-list-compact-item-fill-padding-top: 0.25rem;
+    --terra-list-item-chevron-padding-right: 0.83333rem;
+    --terra-list-item-chevron-color: #1c1f21;
+    --terra-list-item-chevron-height: 1.333rem;
+    --terra-list-item-chevron-width: 1.333rem;
+    --terra-list-item-selected-background-color: #e2f2fc;
+    --terra-list-item-focus-outline: none;
+    --terra-list-item-hover-active-background-color: #f4fafe;
+    --terra-list-item-focus-background-color: #f4fafe;
+    --terra-list-item-focus-box-shadow: inset 0 0 2px 0 #f4fafe, inset 0 0 2px 1px #cbe7fa, inset 0 0 2px 2px #5e9ed6, inset 0 0 2px 3px #5e9ed6, inset 0 0 2px 4px #cbe7fa;
+    --terra-list-item-selected-focus-background-color: #cbe7fa;
+    --terra-list-item-selected-hover-background-color: #cbe7fa;
+  }
+}
