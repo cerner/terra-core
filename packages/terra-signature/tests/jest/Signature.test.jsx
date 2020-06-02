@@ -29,11 +29,11 @@ describe('Signature', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const time = render(
+    const wrapper = render(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <Signature id="foo" />
       </ThemeContextProvider>,
     );
-    expect(time).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
