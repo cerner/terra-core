@@ -107,11 +107,11 @@ describe('ShowHide', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const time = mountWithIntl(
+    const wrapper = mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <ShowHide preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>
       </ThemeContextProvider>,
     );
-    expect(time).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
