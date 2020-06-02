@@ -1,6 +1,10 @@
 ---
-name: 🐛 Bug Report
+name: "\U0001F41B Bug Report"
 about: If something isn't working as expected
+title: ''
+labels: ":construction: Blocked: Accessibility Input, :construction: Blocked: Engineering
+  Input, :construction: Blocked: Functional Input, :construction: Blocked: UX Input"
+assignees: ''
 
 ---
 

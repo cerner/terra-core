@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
-import classNames from 'classnames/bind';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './_OptGroup.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -35,18 +36,21 @@ const OptGroup = ({
   disabled,
   intl,
   label,
-}) => (
-  <li className={cx('opt-group', { 'is-disabled': disabled })} role="group">
-    <div className={cx('label')}>
-      {label}
-    </div>
-    <ul className={cx('options')} role="listbox" aria-label={intl.formatMessage({ id: 'Terra.form.select.option' })}>
-      {React.Children.map(children, child => (
-        React.cloneElement(child, { disabled: disabled || !!child.props.disabled })
-      ))}
-    </ul>
-  </li>
-);
+}) => {
+  const theme = React.useContext(ThemeContext);
+  return (
+    <li className={cx('opt-group', { 'is-disabled': disabled }, theme.className)} role="group">
+      <div className={cx('label')}>
+        {label}
+      </div>
+      <ul className={cx('options')} role="listbox" aria-label={intl.formatMessage({ id: 'Terra.form.select.option' })}>
+        {React.Children.map(children, child => (
+          React.cloneElement(child, { disabled: disabled || !!child.props.disabled })
+        ))}
+      </ul>
+    </li>
+  );
+};
 
 OptGroup.propTypes = propTypes;
 OptGroup.defaultProps = defaultProps;

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
 import Util from './_DropdownListUtil';
 import styles from './_DropdownList.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -159,9 +160,12 @@ class DropdownList extends React.Component {
       width,
       refCallback,
     } = this.props;
+
+    const theme = this.context;
+
     return (
       <ul
-        className={cx('dropdown-list')}
+        className={cx('dropdown-list', theme.className)}
         // eslint-disable-next-line react/forbid-dom-props
         style={{ width }}
         ref={(ref) => {
@@ -182,5 +186,6 @@ class DropdownList extends React.Component {
 }
 
 DropdownList.propTypes = propTypes;
+DropdownList.contextType = ThemeContext;
 
 export default DropdownList;

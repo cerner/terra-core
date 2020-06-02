@@ -1,5 +1,201 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dropdown Button Base correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <DropdownButtonBase
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isOpen={true}
+    items={
+      <Item
+        label="1st option"
+        onSelect={[Function]}
+      />
+    }
+    openedViaKeyboard={false}
+    requestClose={[Function]}
+  >
+    <div
+      className="dropdown-button-base orion-fusion-theme"
+    >
+      <div>
+        test contents
+      </div>
+      <Dropdown
+        isOpen={true}
+        openedViaKeyboard={false}
+        requestClose={[Function]}
+        targetRef={[Function]}
+      >
+        <Hookshot
+          attachmentBehavior="flip"
+          attachmentMargin={0}
+          contentAttachment={
+            Object {
+              "horizontal": "start",
+              "vertical": "top",
+            }
+          }
+          contentOffset={
+            Object {
+              "horizontal": 0,
+              "vertical": 0,
+            }
+          }
+          isEnabled={true}
+          isOpen={true}
+          targetAttachment={
+            Object {
+              "horizontal": "start",
+              "vertical": "bottom",
+            }
+          }
+          targetOffset={
+            Object {
+              "horizontal": 0,
+              "vertical": 0,
+            }
+          }
+          targetRef={[Function]}
+        >
+          <Portal
+            isOpened={true}
+          >
+            <Portal
+              containerInfo={
+                <div>
+                  <div
+                    class="content"
+                  >
+                    <ul
+                      class="dropdown-list orion-fusion-theme"
+                      role="menu"
+                    >
+                      <li
+                        role="presentation"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="item orion-fusion-theme"
+                          data-terra-dropdown-list-item="true"
+                          role="menuitem"
+                          tabindex="0"
+                        >
+                          1st option
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              }
+            >
+              <OnClickOutside(HookshotContent)
+                disableOnClickOutside={false}
+                eventTypes={
+                  Array [
+                    "mousedown",
+                    "touchstart",
+                  ]
+                }
+                excludeScrollbar={false}
+                onEsc={[Function]}
+                onOutsideClick={[Function]}
+                outsideClickIgnoreClass="ignore-react-onclickoutside"
+                preventDefault={false}
+                refCallback={[Function]}
+                stopPropagation={false}
+              >
+                <HookshotContent
+                  disableOnClickOutside={[Function]}
+                  enableOnClickOutside={[Function]}
+                  eventTypes={
+                    Array [
+                      "mousedown",
+                      "touchstart",
+                    ]
+                  }
+                  onEsc={[Function]}
+                  onOutsideClick={[Function]}
+                  outsideClickIgnoreClass="ignore-react-onclickoutside"
+                  preventDefault={false}
+                  refCallback={[Function]}
+                  stopPropagation={false}
+                >
+                  <div
+                    className="content"
+                  >
+                    <FocusTrap
+                      _createFocusTrap={[Function]}
+                      active={true}
+                      focusTrapOptions={
+                        Object {
+                          "clickOutsideDeactivates": true,
+                          "initialFocus": undefined,
+                          "returnFocusOnDeactivate": true,
+                        }
+                      }
+                      paused={false}
+                    >
+                      <DropdownList
+                        requestClose={[Function]}
+                      >
+                        <ul
+                          className="dropdown-list orion-fusion-theme"
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          onKeyUp={[Function]}
+                          role="menu"
+                          style={
+                            Object {
+                              "width": undefined,
+                            }
+                          }
+                        >
+                          <Item
+                            data-terra-dropdown-list-item={true}
+                            isActive={false}
+                            key=".0"
+                            label="1st option"
+                            onSelect={[Function]}
+                            requestClose={[Function]}
+                          >
+                            <li
+                              role="presentation"
+                              tabIndex="-1"
+                            >
+                              <div
+                                className="item orion-fusion-theme"
+                                data-terra-dropdown-list-item={true}
+                                onClick={[Function]}
+                                role="menuitem"
+                                tabIndex="0"
+                              >
+                                1st option
+                              </div>
+                            </li>
+                          </Item>
+                        </ul>
+                      </DropdownList>
+                    </FocusTrap>
+                  </div>
+                </HookshotContent>
+              </OnClickOutside(HookshotContent)>
+            </Portal>
+          </Portal>
+        </Hookshot>
+      </Dropdown>
+    </div>
+  </DropdownButtonBase>
+</ThemeContextProvider>
+`;
+
 exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
 <div
   className="dropdown-button-base is-block"

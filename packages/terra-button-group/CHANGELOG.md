@@ -3,8 +3,17 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed `ButtonGroup.Button` not losing `focus` styles when made disabled via user interaction
+* Fixed `ButtonGroup.Button` not losing `is-selected` styles when made disabled via user interaction
+
+3.39.0 - (May 19, 2020)
+------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+
+### Fixed
+* Fixed button losing focus when switching window
 
 3.38.0 - (May 5, 2020)
 ------------------
@@ -15,6 +24,7 @@ Unreleased
 ------------------
 ### Changed
 * Removed "View Component Source Code" from docs in favour of source code badge
+
 ### Added
 * Added clinical-lowlight-theme wdio screenshots
 

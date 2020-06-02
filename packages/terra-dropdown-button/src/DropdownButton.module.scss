@@ -3,6 +3,9 @@
 @import './variables';
 @import './mixins';
 
+@import './clinical-lowlight-theme/DropdownButton.module';
+@import './orion-fusion-theme/DropdownButton.module';
+
 :local {
   .dropdown-button {
     border-radius: inherit;

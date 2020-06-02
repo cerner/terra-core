@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import DropdownButtonBase from '../../src/_DropdownButtonBase';
 import { Item } from '../../src/DropdownButton';
 
@@ -61,6 +63,23 @@ describe('Dropdown Button Base', () => {
       >
         <div>test contents</div>
       </DropdownButtonBase>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const wrapper = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <DropdownButtonBase
+          items={
+            <Item label="1st option" onSelect={() => {}} />
+          }
+          isOpen
+          requestClose={() => {}}
+        >
+          <div>test contents</div>
+        </DropdownButtonBase>
+      </ThemeContextProvider>,
     );
     expect(wrapper).toMatchSnapshot();
   });

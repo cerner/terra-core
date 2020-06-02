@@ -1,0 +1,75 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .clinical-lowlight-theme {
+    --terra-form-select-background-color: #222a2e;
+    --terra-form-select-border-radius: 3px;
+    --terra-form-select-color: #b2b5b6;
+    --terra-form-select-font-size: 1.143rem;
+    --terra-form-select-line-height: 1.75;
+    --terra-form-select-background-size: 0 0;
+    --terra-form-select-border: 1px solid #181b1d;
+    --terra-form-select-padding-bottom: 0;
+    --terra-form-select-padding-left: 0.42857rem;
+    --terra-form-select-padding-right: 0;
+    --terra-form-select-padding-top: 0;
+    --terra-form-select-focus-background-image: none;
+    --terra-form-select-focus-background-size: 0 0;
+    --terra-form-select-focus-border-color: #004c76;
+    --terra-form-select-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+    --terra-form-select-focus-transition-duration: 0s;
+    --terra-form-select-focus-transition-timing-function: ease;
+    --terra-form-select-open-border-top-left-radius: 3px;
+    --terra-form-select-open-border-top-right-radius: 3px;
+    --terra-form-select-above-border-bottom-left-radius: 3px;
+    --terra-form-select-above-border-bottom-right-radius: 3px;
+    --terra-form-select-hover-border-color: #004c76;
+    --terra-form-select-hover-color: #b2b5b6;
+    --terra-form-select-focus-hover-border-color: #004c76;
+    --terra-form-select-incomplete-background-color: #464232;
+    --terra-form-select-incomplete-focus-background-color: #464232;
+    --terra-form-select-incomplete-hover-background-color: #464232;
+    --terra-form-select-incomplete-disabled-background-color: #464232;
+    --terra-form-select-invalid-background-color: #222a2e;
+    --terra-form-select-invalid-background-image: none;
+    --terra-form-select-invalid-border-color: #fb4c4c;
+    --terra-form-select-invalid-box-shadow: 0 0 0 1px #fb4c4c;
+    --terra-form-select-invalid-focus-background-size: 0 0;
+    --terra-form-select-invalid-focus-border-color: #fb4c4c;
+    --terra-form-select-invalid-focus-box-shadow: 0 0 0 1px #fb4c4c, 0 0 0 1px #fb4c4c;
+    --terra-form-select-invalid-hover-border-color: #fb4c4c;
+    --terra-form-select-arrow-height: 0.715rem;
+    --terra-form-select-arrow-width: 1rem;
+    --terra-form-select-disabled-background-color: #222a2e;
+    --terra-form-select-disabled-border-color: #202427;
+    --terra-form-select-disabled-color: #b2b5b6;
+    --terra-form-select-disabled-opacity: 0.3;
+    --terra-form-select-disabled-placeholder-color: #6f7477;
+    --terra-form-select-disabled-placeholder-font-style: normal;
+    --terra-form-select-toggle-padding: 0 0.42857rem;
+    --terra-form-select-content-padding-bottom: 0.21428571428571427rem;
+    --terra-form-select-content-padding-left: 0;
+    --terra-form-select-content-padding-right: 0;
+    --terra-form-select-content-padding-top: 0;
+    --terra-form-select-search-focus-font-size: 1.143rem;
+    --terra-form-select-search-focus-height: 1.5715rem;
+    --terra-form-select-search-focus-margin-top: 0.21428571428571427rem;
+    --terra-form-select-search-placeholder-color: #6f7477;
+    --terra-form-select-search-placeholder-font-size: 1.143rem;
+    --terra-form-select-search-placeholder-font-style: normal;
+    --terra-form-select-border-bottom-left-radius: 3px;
+    --terra-form-select-border-top-left-radius: 3px;
+    --terra-form-select-toggle-border: 1px solid #181b1d;
+    --terra-form-select-border-bottom-right-radius: 3px;
+    --terra-form-select-border-top-right-radius: 3px;
+    --terra-form-select-toggle-hover-background-color: #222a2e;
+    --terra-form-select-toggle-invalid-border-color: #fb4c4c;
+    --terra-form-select-toggle-invalid-box-shadow: 0 0 0 1px #fb4c4c;
+    --terra-form-select-toggle-invalid-focus-border-color: #004c76;
+    --terra-form-select-toggle-invalid-focus-box-shadow: 0 0 0 1px #004c76, 0 0 0 1px #004c76;
+
+    @include terra-inline-svg-var('--terra-form-select-arrow-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+    @include terra-inline-svg-var('--terra-form-select-disabled-arrow-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+    @include terra-inline-svg-var('--terra-form-select-invalid-arrow-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path fill="#b2b5b6" d="M48 12L24 36 0 12h48z"/></svg>');
+  }
+}

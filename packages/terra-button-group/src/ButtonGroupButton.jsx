@@ -55,10 +55,18 @@ class ButtonGroupButton extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+
+    this.shouldShowFocus = false;
   }
 
   handleOnBlur(event) {
-    this.setState({ focused: false });
+    if (document.activeElement === event.currentTarget && this.state.focused) {
+      this.shouldShowFocus = true;
+    } else {
+      this.shouldShowFocus = false;
+      this.setState({ focused: false });
+    }
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
@@ -82,6 +90,7 @@ class ButtonGroupButton extends React.Component {
     // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
     if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
       this.setState({ focused: true });
+      this.shouldShowFocus = true;
     }
 
     if (this.props.onKeyUp) {
@@ -89,10 +98,21 @@ class ButtonGroupButton extends React.Component {
     }
   }
 
+  handleFocus(event) {
+    if (this.shouldShowFocus) {
+      this.setState({ focused: true });
+    }
+
+    if (this.props.onFocus) {
+      this.props.onFocus(event);
+    }
+  }
+
   render() {
     const {
       icon,
       isDisabled,
+      onFocus,
       ...customProps
     } = this.props;
 
@@ -102,7 +122,7 @@ class ButtonGroupButton extends React.Component {
       cx(
         'button-group-button',
         { 'is-disabled': isDisabled },
-        { 'is-focused': this.state.focused },
+        { 'is-focused': this.state.focused && !isDisabled },
         theme.className,
       ),
       customProps.className,
@@ -117,6 +137,7 @@ class ButtonGroupButton extends React.Component {
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
+        onFocus={this.handleFocus}
         variant={Button.Opts.Variants.NEUTRAL}
         className={buttonClassName}
       />

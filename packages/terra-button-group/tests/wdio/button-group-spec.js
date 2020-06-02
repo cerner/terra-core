@@ -106,6 +106,22 @@ Terra.describeViewports('Button Group', ['huge'], () => {
 
     Terra.it.validatesElement('button3-unselected');
   });
+  describe('Button Focus', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-multi-select');
+    });
+    it('should focus and select second button', () => {
+      browser.keys('Tab');
+      browser.keys('Tab');
+      browser.keys('Space');
+    });
+    Terra.it.validatesElement('before switching window');
+    it('should switch window', () => {
+      browser.newWindow('https://engineering.cerner.com/terra-core/raw/tests/terra-button-group/button-group/button-group-is-block', 'terra-core');
+      browser.switchTab();
+    });
+    Terra.it.validatesElement('after switching window');
+  });
 });
 
 Terra.describeViewports('Button Group', ['tiny', 'huge'], () => {
@@ -125,5 +141,23 @@ Terra.describeViewports('Button Group', ['tiny', 'huge'], () => {
     });
 
     Terra.it.validatesElement();
+  });
+
+  describe('Programmatic Disabled', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/programmatic-disabled');
+    });
+
+    it('focuses button', () => {
+      browser.keys(['Tab']);
+    });
+
+    Terra.it.validatesElement('Button has focus', { selector: '#root' });
+
+    it('disables button', () => {
+      browser.click('#programmaticDisabledButton');
+    });
+
+    Terra.it.validatesElement('Button is Disabled', { selector: '#root' });
   });
 });

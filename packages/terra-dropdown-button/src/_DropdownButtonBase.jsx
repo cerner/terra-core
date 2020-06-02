@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import Dropdown from './_Dropdown';
 import styles from './_DropdownButtonBase.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -89,13 +91,18 @@ class DropdownButtonBase extends React.Component {
       ...customProps
     } = this.props;
 
-    const DropdownButtonClassNames = cx([
-      'dropdown-button-base',
-      { 'is-block': isBlock },
-      { 'is-compact': isCompact },
-      { disabled: isDisabled },
+    const theme = this.context;
+
+    const DropdownButtonClassNames = classNames(
+      cx(
+        'dropdown-button-base',
+        { 'is-block': isBlock },
+        { 'is-compact': isCompact },
+        { disabled: isDisabled },
+        theme.className,
+      ),
       customProps.className,
-    ]);
+    );
 
     let calcWidth;
     if (this.buttonWrapperRef && isBlock) {
@@ -127,5 +134,6 @@ class DropdownButtonBase extends React.Component {
 
 DropdownButtonBase.propTypes = propTypes;
 DropdownButtonBase.defaultProps = defaultProps;
+DropdownButtonBase.contextType = ThemeContext;
 
 export default DropdownButtonBase;

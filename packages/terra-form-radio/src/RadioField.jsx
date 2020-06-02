@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import uniqueid from 'lodash.uniqueid';
 import VisualyHiddenText from 'terra-visually-hidden-text';
 import styles from './RadioField.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -85,11 +87,16 @@ const RadioField = (props) => {
     ...customProps
   } = props;
 
-  const radioFieldClasses = cx([
-    'radio-field',
-    { 'is-inline': isInline },
+  const theme = React.useContext(ThemeContext);
+
+  const radioFieldClasses = classNames(
+    cx(
+      'radio-field',
+      { 'is-inline': isInline },
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   const legendClassNames = cx([
     'legend',

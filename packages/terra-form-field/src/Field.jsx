@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import IconError from 'terra-icon/lib/icon/IconError';
 import styles from './Field.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -114,13 +116,18 @@ const Field = (props) => {
     ...customProps
   } = props;
 
+  const theme = React.useContext(ThemeContext);
+
   const customStyles = maxWidth ? ({ maxWidth, ...style }) : style;
 
-  const fieldClasses = cx([
-    'field',
-    { 'field-inline': isInline },
+  const fieldClasses = classNames(
+    cx([
+      'field',
+      { 'field-inline': isInline },
+      theme.className,
+    ]),
     customProps.className,
-  ]);
+  );
 
   const labelClassNames = cx([
     'label',

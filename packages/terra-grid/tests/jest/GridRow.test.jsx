@@ -1,5 +1,7 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Row from '../../src/GridRow';
 import Col from '../../src/GridColumn';
 
@@ -24,3 +26,13 @@ it('should throw error for required children', () => {
     expect(e.message).toContain('The prop `children` is marked as required');
   }
 });
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Row className="test"><Col>Test</Col></Row>
+    </ThemeContextProvider>,
+  );
+  expect(wrapper).toMatchSnapshot();
+});
+

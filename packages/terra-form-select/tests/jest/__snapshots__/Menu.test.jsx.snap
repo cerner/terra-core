@@ -1,5 +1,137 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Menu correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <InjectIntl(Menu)
+    onSelect={[Function]}
+    searchValue="asdf"
+    value="value"
+    visuallyHiddenComponent={
+      Object {
+        "current": <div />,
+      }
+    }
+  >
+    <Menu
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      onSelect={[Function]}
+      searchValue="asdf"
+      value="value"
+      visuallyHiddenComponent={
+        Object {
+          "current": <div />,
+        }
+      }
+    >
+      <ul
+        aria-activedescendant="terra-select-option-value"
+        aria-label="Terra.form.select.menu"
+        className="menu orion-fusion-theme"
+        role="listbox"
+        tabIndex="0"
+      >
+        <Option
+          data-select-active={true}
+          disabled={false}
+          display="display"
+          id="terra-select-option-value"
+          isActive={true}
+          isCheckable={false}
+          isSelected={true}
+          key=".$.$.0"
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseUp={[Function]}
+          value="value"
+          variant="default"
+        >
+          <li
+            aria-checked={true}
+            aria-disabled={false}
+            aria-selected={true}
+            className="option is-active is-default is-selected orion-fusion-theme"
+            data-select-active={true}
+            data-terra-select-option={true}
+            disabled={false}
+            id="terra-select-option-value"
+            onMouseDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseUp={[Function]}
+            role="option"
+            tabIndex="0"
+          >
+            <span
+              className="display"
+            >
+              display
+            </span>
+          </li>
+        </Option>
+      </ul>
+    </Menu>
+  </InjectIntl(Menu)>
+</ThemeContextProvider>
+`;
+
 exports[`Menu should render a Menu with no results and update the live region appropriately 1`] = `
 <Menu
   intl={

@@ -1,6 +1,8 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import CheckboxField from '../../src/CheckboxField';
 
 window.matchMedia = () => ({ matches: true });
@@ -63,5 +65,14 @@ it('should render the legend with custom attributes properly', () => {
 it('should hide the legend when requested', () => {
   const checkBox = (<CheckboxField legend="Hidden Legend legend" legendAttrs={{ class: 'application-legend' }} isLegendHidden />);
   const wrapper = shallowWithIntl(checkBox);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mountWithIntl(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <CheckboxField legend="Hidden Legend legend" />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });
