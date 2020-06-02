@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import { Item, Subsection } from '../../src/index';
 
 // Snapshot Tests
@@ -36,4 +38,13 @@ it('should render with isCollapsible', () => {
 it('should render with callback functions', () => {
   const shallowComponent = shallow(<Subsection title="test" refCallback={jest.fn()} onSelect={jest.fn()} />);
   expect(shallowComponent).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Subsection title="test" />
+    </ThemeContextProvider>,
+  );
+  expect(wrapper).toMatchSnapshot();
 });
