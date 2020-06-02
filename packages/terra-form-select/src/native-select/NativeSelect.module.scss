@@ -1,6 +1,6 @@
 @import '~terra-mixins/lib/Mixins';
-@import './clinical-lowlight-theme/NativeSelect.module';
-@import './orion-fusion-theme/NativeSelect.module';
+@import '../clinical-lowlight-theme/NativeSelect.module';
+@import '../orion-fusion-theme/NativeSelect.module';
 
 :local {
   .native {
