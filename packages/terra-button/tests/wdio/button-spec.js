@@ -2,7 +2,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
   describe('Neutral', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-button/button/variants/neutral-button');
-      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+      browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
     });
 
     Terra.it.validatesElement({ selector: '#neutral' });
