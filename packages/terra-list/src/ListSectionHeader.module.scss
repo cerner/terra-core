@@ -1,5 +1,9 @@
 @import '~terra-mixins/lib/Mixins';
 
+// Themes
+@import './clinical-lowlight-theme/ListSectionHeader.module';
+@import './orion-fusion-theme/ListSectionHeader.module';
+
 // Section Header
 // ========================================================
 :local {

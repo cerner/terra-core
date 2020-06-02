@@ -1,5 +1,9 @@
 /* stylelint-disable selector-max-compound-selectors */
 
+// Themes
+@import './clinical-lowlight-theme/List.module';
+@import './orion-fusion-theme/List.module';
+
 :local {
   // List Component
   // ========================================================
