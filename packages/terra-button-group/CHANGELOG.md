@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.40.0 - (June 2, 2020)
+------------------
 ### Fixed
 * Fixed `ButtonGroup.Button` not losing `focus` styles when made disabled via user interaction
 * Fixed `ButtonGroup.Button` not losing `is-selected` styles when made disabled via user interaction
