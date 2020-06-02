@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <List
+    dividerStyle="none"
+    paddingStyle="none"
+    role="none"
+  >
+    <ul
+      className="list orion-fusion-theme"
+    />
+  </List>
+</ThemeContextProvider>
+`;
+
 exports[`should render with bottom only divided items 1`] = `
 <ul
   className="list divider-bottom-only"
