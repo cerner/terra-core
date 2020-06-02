@@ -90,7 +90,7 @@
       background-color: var(--terra-switch-slider-selected-disabled-background-color, #fff);
       box-shadow: var(--terra-switch-slider-selected-disabled-box-shadow, none);
       cursor: default;
-      opacity: var(--terra-switch-slider-selected-disabled-opacity, 30%);
+      opacity: var(--terra-switch-slider-selected-disabled-opacity, 0.8);
     }
   }
   
@@ -144,7 +144,7 @@
       background-color: var(--terra-switch-slider-disabled-background-color, #fff);
       box-shadow: var(--terra-switch-slider-disabled-box-shadow, 0 0 0 1.5px #64696c);
       cursor: default;
-      opacity: var(--terra-switch-slider-disabled-opacity, 30%);
+      opacity: var(--terra-switch-slider-disabled-opacity, 0.8);
     }
 
     &:focus[data-focus-styles-enabled='true']:not(.is-disabled) {
