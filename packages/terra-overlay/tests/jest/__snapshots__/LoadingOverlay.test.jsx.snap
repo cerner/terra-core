@@ -162,7 +162,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
             <div>
               <div
                 aria-live="polite"
-                class="overlay fullscreen light loading-overlay layer-100"
+                class="overlay fullscreen light layer-100 loading-overlay"
                 intl="[object Object]"
                 tabindex="0"
               >
@@ -210,7 +210,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
           <div>
             <div
               aria-live="polite"
-              className="overlay fullscreen light loading-overlay layer-100"
+              className="overlay fullscreen light layer-100 loading-overlay"
               intl={
                 Object {
                   "defaultFormats": Object {},
@@ -382,7 +382,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
             <div>
               <div
                 aria-live="polite"
-                class="overlay fullscreen light loading-overlay layer-100"
+                class="overlay fullscreen light layer-100 loading-overlay"
                 intl="[object Object]"
                 tabindex="0"
               >
@@ -430,7 +430,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
           <div>
             <div
               aria-live="polite"
-              className="overlay fullscreen light loading-overlay layer-100"
+              className="overlay fullscreen light layer-100 loading-overlay"
               intl={
                 Object {
                   "defaultFormats": Object {},
