@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Updated jest snapshots for terra-image change.
 
 3.3.0 - (May 19, 2020)
 ------------------

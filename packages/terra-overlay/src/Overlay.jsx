@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import FocusTrap from 'focus-trap-react';
 import { Portal } from 'react-portal';
 import * as KeyCode from 'keycode-js';
@@ -10,7 +12,7 @@ import './_matches-polyfill';
 import styles from './Overlay.module.scss';
 import Container from './OverlayContainer';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const BackgroundStyles = {
   LIGHT: 'light',
@@ -180,6 +182,8 @@ class Overlay extends React.Component {
     const {
       children, isOpen, backgroundStyle, isScrollable, isRelativeToContainer, onRequestClose, rootSelector, zIndex, ...customProps
     } = this.props;
+    const theme = this.context;
+
     const type = isRelativeToContainer ? 'container' : 'fullscreen';
 
     if (!isOpen) {
@@ -191,14 +195,17 @@ class Overlay extends React.Component {
       zIndexLayer = zIndex;
     }
 
-    const OverlayClassNames = cx([
-      'overlay',
-      type,
-      backgroundStyle,
-      { scrollable: isScrollable },
+    const OverlayClassNames = classNames(
+      cx([
+        'overlay',
+        type,
+        backgroundStyle,
+        { scrollable: isScrollable },
+        `layer-${zIndexLayer}`,
+        theme.className,
+      ]),
       customProps.className,
-      `layer-${zIndexLayer}`,
-    ]);
+    );
 
     /*
       tabIndex set to 0 allows screen readers like VoiceOver to read overlay content when its displayed.
@@ -242,6 +249,7 @@ const Opts = { BackgroundStyles, zIndexes };
 
 Overlay.propTypes = propTypes;
 Overlay.defaultProps = defaultProps;
+Overlay.contextType = ThemeContext;
 Overlay.Opts = Opts;
 Overlay.Container = Container;
 

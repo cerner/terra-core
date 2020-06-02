@@ -1,5 +1,202 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Paginator correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <InjectIntl(Paginator)
+    itemCountPerPage={20}
+    onPageChange={[Function]}
+    selectedPage={1}
+    totalCount={2234}
+  >
+    <Paginator
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      itemCountPerPage={20}
+      onPageChange={[Function]}
+      selectedPage={1}
+      totalCount={2234}
+    >
+      <ResponsiveElement
+        onChange={[Function]}
+        responsiveTo="parent"
+      >
+        <div
+          aria-label="pagination"
+          className="paginator orion-fusion-theme"
+          role="navigation"
+        >
+          <PaginatorButton
+            ariaDisabled={true}
+            ariaLabel="Terra.paginator.first"
+            className="nav-link left-controls is-disabled"
+            disabled={true}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            <button
+              aria-disabled={true}
+              aria-label="Terra.paginator.first"
+              className="nav-link left-controls is-disabled"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              type="button"
+            >
+              Terra.paginator.first
+            </button>
+          </PaginatorButton>
+          <PaginatorButton
+            ariaDisabled={true}
+            ariaLabel="Terra.paginator.previous"
+            className="nav-link left-controls previous is-disabled"
+            disabled={true}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            <button
+              aria-disabled={true}
+              aria-label="Terra.paginator.previous"
+              className="nav-link left-controls previous is-disabled"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              type="button"
+            >
+              <span
+                className="icon"
+              />
+              Terra.paginator.previous
+            </button>
+          </PaginatorButton>
+          Terra.paginator.pageIndex
+          <PaginatorButton
+            ariaDisabled={false}
+            ariaLabel="Terra.paginator.next"
+            className="nav-link right-controls next icon-only"
+            disabled={false}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            <button
+              aria-disabled={false}
+              aria-label="Terra.paginator.next"
+              className="nav-link right-controls next icon-only"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              type="button"
+            >
+              <VisuallyHiddenText
+                text="Terra.paginator.next"
+              >
+                <span
+                  className="visually-hidden-text"
+                >
+                  Terra.paginator.next
+                </span>
+              </VisuallyHiddenText>
+              <span
+                className="icon"
+              />
+            </button>
+          </PaginatorButton>
+          <PaginatorButton
+            ariaDisabled={false}
+            ariaLabel="Terra.paginator.last"
+            className="nav-link right-controls"
+            disabled={false}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            <button
+              aria-disabled={false}
+              aria-label="Terra.paginator.last"
+              className="nav-link right-controls"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              type="button"
+            >
+              Terra.paginator.last
+            </button>
+          </PaginatorButton>
+        </div>
+      </ResponsiveElement>
+    </Paginator>
+  </InjectIntl(Paginator)>
+</ThemeContextProvider>
+`;
+
 exports[`Paginator should render a Controlled Paginator - Large 1`] = `
 <ResponsiveElement
   onChange={[Function]}
