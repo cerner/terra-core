@@ -194,14 +194,6 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     Terra.it.validatesElement();
   });
 
-  describe('Block', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/block-dropdown-button');
-    });
-
-    Terra.it.validatesElement();
-  });
-
   describe('Bounded', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/bounded-dropdown-button');

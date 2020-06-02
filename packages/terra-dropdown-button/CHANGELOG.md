@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed duplicate test
 
 1.14.0 - (May 19, 2020)
 ------------------
