@@ -138,6 +138,17 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
+
+    &:focus {
+      box-shadow: var(--terra-demographics-banner-focus-box-shadow, none);
+      outline: var(--terra-demographics-banner-focus-outline, 2px dashed #fff);
+      outline-offset: var(--terra-demographics-banner-focus-outline-offset, -5px);
+    }
+
+    &:hover {
+      background-color: var(--terra-demographics-banner--hover-background-color, #0065a3);
+      color: var(--terra-demographics-banner--hover-color, #fff);
+    }
   }
 
   .info-tile-container {

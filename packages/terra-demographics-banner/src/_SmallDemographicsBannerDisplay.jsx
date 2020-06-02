@@ -54,7 +54,11 @@ const SmallDemographicsBannerDisplay = (props) => {
   const infoText = intl.formatMessage({ id: 'Terra.demographicsBanner.info' });
 
   return (
-    <section className={mainClasses} {...customProps}>
+    <section
+      {...customProps}
+      className={mainClasses}
+      tabIndex={isSelectable ? '0' : undefined} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
+    >
       <div className={cx('small-content')}>
         <div className={cx('row')}>
           { isConfidential ? <span className={cx('confidential-icon')}><IconFlag /></span> : null }

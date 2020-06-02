@@ -85,7 +85,11 @@ const LargeDemographicsBannerDisplay = (props) => {
   const infoText = intl.formatMessage({ id: 'Terra.demographicsBanner.info' });
 
   return (
-    <section className={mainClasses} {...customProps}>
+    <section
+      {...customProps}
+      className={mainClasses}
+      tabIndex={isSelectable ? '0' : undefined} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
+    >
       {profilePhoto}
       <div className={cx('content')}>
         <div className={cx('row')}>

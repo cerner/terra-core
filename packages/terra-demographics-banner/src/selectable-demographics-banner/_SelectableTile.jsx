@@ -20,7 +20,7 @@ const SelectableTile = ({
   children,
   ...customProps
 }) => (
-  <div {...customProps} role="button" tabIndex="0" className={cx('selectable-tile')}>
+  <div {...customProps} role="button" className={cx('selectable-tile')}>
     {children}
   </div>
 );
