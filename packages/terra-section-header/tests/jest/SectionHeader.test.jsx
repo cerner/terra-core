@@ -31,11 +31,11 @@ describe('SectionHeader', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const tabs = mount(
+    const wrapper = mount(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <SectionHeader title="foo" />
       </ThemeContextProvider>,
     );
-    expect(tabs).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
