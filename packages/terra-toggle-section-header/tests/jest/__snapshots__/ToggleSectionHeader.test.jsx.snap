@@ -183,7 +183,6 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
 <ToggleSectionHeader
   isAnimated={false}
   isInitiallyOpen={false}
-  isOpen={false}
   isTransparent={false}
   level={2}
   sectionHeaderAttrs={Object {}}

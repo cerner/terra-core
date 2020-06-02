@@ -55,7 +55,7 @@ const defaultProps = {
   isAnimated: false,
   isInitiallyOpen: false,
   isTransparent: false,
-  isOpen: false,
+  isOpen: undefined,
 };
 
 class ToggleSectionHeader extends React.Component {
@@ -63,33 +63,34 @@ class ToggleSectionHeader extends React.Component {
     super(props);
 
     const { isInitiallyOpen = false } = this.props;
-    this.state = { isOpen: isInitiallyOpen || this.props.isOpen };
+    this.state = { isOpen: isInitiallyOpen };
 
     this.handleOnClick = this.handleOnClick.bind(this);
     this.wrapOnClick = this.wrapOnClick.bind(this);
   }
 
-  componentDidUpdate(previousProps, previousState) {
-    if (previousProps.isOpen !== this.props.isOpen) {
-      // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({ isOpen: !previousState.isOpen });
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.isOpen !== undefined && prevState.isOpen !== nextProps.isOpen) {
+      return { isOpen: nextProps.isOpen };
     }
+    return { isOpen: prevState.isOpen };
   }
 
   handleOnClick(event) {
     event.preventDefault();
 
-    const { onOpen, onClose } = this.props;
+    const { onOpen, onClose, isOpen } = this.props;
+    if (isOpen === undefined) {
+      if (onOpen && !this.state.isOpen) {
+        onOpen();
+      } else if (onClose && this.state.isOpen) {
+        onClose();
+      }
 
-    if (onOpen && !this.state.isOpen) {
-      onOpen();
-    } else if (onClose && this.state.isOpen) {
-      onClose();
+      this.setState(prevState => ({
+        isOpen: !prevState.isOpen,
+      }));
     }
-
-    this.setState(prevState => ({
-      isOpen: !prevState.isOpen,
-    }));
   }
 
   wrapOnClick(onClick) {
@@ -111,9 +112,9 @@ class ToggleSectionHeader extends React.Component {
       isAnimated,
       isInitiallyOpen,
       isTransparent,
+      isOpen,
       onOpen,
       onClose,
-      isOpen,
       ...customProps
     } = this.props;
 
