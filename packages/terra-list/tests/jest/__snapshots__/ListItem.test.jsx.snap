@@ -1,5 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+  >
+    <li
+      className="list-item orion-fusion-theme"
+    >
+      <div
+        className="item-fill"
+        key="item-fill"
+      />
+    </li>
+  </ListItem>
+</ThemeContextProvider>
+`;
+
 exports[`should render with callback functions 1`] = `
 <li
   aria-selected={false}
