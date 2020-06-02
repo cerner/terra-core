@@ -13,7 +13,7 @@ import {
   getDisplay,
   getFirstValue,
   getOptGroupKey,
-  geOptGroupKeyIndex,
+  getOptGroupKeyIndex,
 } from './NativeUtils';
 import {
   optionPropType,
@@ -122,7 +122,7 @@ const createOptions = options => {
 
   return options.map(current => {
     if (current.options) {
-      const optGroupKeyIndex = geOptGroupKeyIndex(current.display, currentOptGroupKeys);
+      const optGroupKeyIndex = getOptGroupKeyIndex(current.display, currentOptGroupKeys);
       const optGroupKey = getOptGroupKey(current.display, optGroupKeyIndex);
       currentOptGroupKeys.push(optGroupKey);
 

@@ -58,9 +58,9 @@ const isCurrentPlaceholder = (value, placeholder) => {
 
 const getOptGroupKey = (display, index) => `${display}-${index}`;
 
-const geOptGroupKeyIndex = (display, currentKeys, index = 0) => {
+const getOptGroupKeyIndex = (display, currentKeys, index = 0) => {
   if (currentKeys.indexOf(getOptGroupKey(display, index)) >= 0) {
-    return geOptGroupKeyIndex(display, currentKeys, index + 1);
+    return getOptGroupKeyIndex(display, currentKeys, index + 1);
   }
   return index;
 };
@@ -71,7 +71,7 @@ export default {
   getDisplay,
   getFirstValue,
   getOptGroupKey,
-  geOptGroupKeyIndex,
+  getOptGroupKeyIndex,
 };
 
 export {
@@ -80,5 +80,5 @@ export {
   getDisplay,
   getFirstValue,
   getOptGroupKey,
-  geOptGroupKeyIndex,
+  getOptGroupKeyIndex,
 };
