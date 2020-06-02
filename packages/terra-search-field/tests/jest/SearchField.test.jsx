@@ -67,12 +67,12 @@ describe('Snapshots', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const time = mountWithIntl(
+    const searchField = mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <SearchField />
       </ThemeContextProvider>,
     );
-    expect(time).toMatchSnapshot();
+    expect(searchField).toMatchSnapshot();
   });
 });
 
