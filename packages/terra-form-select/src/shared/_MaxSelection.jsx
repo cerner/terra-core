@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import classNames from 'classnames/bind';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './_MaxSelection.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -13,11 +14,14 @@ const propTypes = {
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
-const MaxSelection = ({ value }) => (
-  <div className={cx('max-selection')}>
-    <FormattedMessage id="Terra.form.select.maxSelectionOption" values={{ text: value }} />
-  </div>
-);
+const MaxSelection = ({ value }) => {
+  const theme = React.useContext(ThemeContext);
+  return (
+    <div className={cx('max-selection', theme.className)}>
+      <FormattedMessage id="Terra.form.select.maxSelectionOption" values={{ text: value }} />
+    </div>
+  );
+};
 
 MaxSelection.propTypes = propTypes;
 
