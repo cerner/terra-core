@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import ProgressBar from '../../src/ProgressBar';
 
 // Snapshot Tests
@@ -25,6 +27,15 @@ it('should render a ProgressBar component with default heightSize and 50% fill a
 it('should render a ProgressBar component with default heightSize 50% fill and custom props and style', () => {
   const wrapper = shallow(<ProgressBar value={6} valueText="6%" max={12} dir="rtl" />);
   expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const tabs = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <ProgressBar value={15} />
+    </ThemeContextProvider>,
+  );
+  expect(tabs).toMatchSnapshot();
 });
 
 // Prop Tests

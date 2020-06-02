@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import ListUtils from './ListUtils';
 import styles from './List.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -77,12 +79,17 @@ const ListItem = ({
   refCallback,
   ...customProps
 }) => {
-  const listItemClassNames = cx([
-    'list-item',
-    { selected: isSelected && isSelectable },
-    { 'is-selectable': isSelectable },
+  const theme = React.useContext(ThemeContext);
+
+  const listItemClassNames = classNames(
+    cx(
+      'list-item',
+      { selected: isSelected && isSelectable },
+      { 'is-selectable': isSelectable },
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   const attrSpread = {};
   if (isSelectable) {
