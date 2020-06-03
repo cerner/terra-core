@@ -71,14 +71,18 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     it('opens the dropdown with enter', () => {
       browser.keys(['Enter']);
       browser.waitForVisible('[class*=dropdown-list]');
+      browser.keys('Escape');
     });
 
-    it('opens the dropdown with space', () => {
-      browser.keys(['Escape', 'Space']);
-      browser.waitForVisible('[class*=dropdown-list]');
-      // Cleanup the open dropdown, after hooks don't work on it blocks
-      browser.keys(['Escape']);
-    });
+    // TODO: remove browserName check when is resolved: https://github.com/cerner/terra-core/issues/3008
+    if (browser.desiredCapabilities.browserName !== 'firefox') {
+      it('opens the dropdown with space', () => {
+        browser.keys('Space');
+        browser.waitForVisible('[class*=dropdown-list]');
+        // Cleanup the open dropdown, after hooks don't work on it blocks
+        browser.keys(['Escape']);
+      });
+    }
 
     describe('Callback in menu', () => {
       beforeEach(() => {

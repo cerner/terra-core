@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changes
+* Disabled wdio test which opens dropdown menu with enter key for firefox testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/3008 is resolved.
+
 ### Removed
 * Removed duplicate test
 
