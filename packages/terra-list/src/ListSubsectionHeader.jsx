@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import ListUtils from './ListUtils';
 import styles from './ListSubsectionHeader.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -75,11 +77,16 @@ const ListSubsectionHeader = ({
   title,
   ...customProps
 }) => {
-  const sectionHeaderClassNames = cx([
-    'subsection-header',
-    { 'is-collapsible': isCollapsible },
+  const theme = React.useContext(ThemeContext);
+
+  const sectionHeaderClassNames = classNames(
+    cx(
+      'subsection-header',
+      { 'is-collapsible': isCollapsible },
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   const attrSpread = {};
   const Element = `h${level}`;

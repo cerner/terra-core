@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import List, { Item } from '../../src/index';
 
 // Snapshot Tests
@@ -60,4 +62,13 @@ it('should render with thin padded items', () => {
   const items = [item1, item2, item3, item4, item5];
   const shallowComponent = shallow(<List paddingStyle="compact">{items}</List>);
   expect(shallowComponent).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <List />
+    </ThemeContextProvider>,
+  );
+  expect(wrapper).toMatchSnapshot();
 });

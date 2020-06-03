@@ -1,6 +1,10 @@
 @import '~terra-mixins/lib/Mixins';
 /* stylelint-disable selector-max-compound-selectors */
 
+// Themes
+@import './clinical-lowlight-theme/ListSubsectionHeader.module';
+@import './orion-fusion-theme/ListSubsectionHeader.module';
+
 // Subsection Header
 // ========================================================
 :local {
