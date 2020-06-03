@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Text in footer not wrapping in IE 10
 
 2.44.0 - (June 2, 2020)
 ------------------
