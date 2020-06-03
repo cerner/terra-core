@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Updated wdio test to support testing against firefox
 
 6.5.0 - (May 19, 2020)
 ------------------
