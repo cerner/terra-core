@@ -1,6 +1,7 @@
 import {
   defaultPlaceholderValue,
   isCurrentPlaceholder,
+  isValuePresent,
   getDisplay,
   getFirstValue,
   getOptGroupKey,
@@ -125,4 +126,20 @@ describe('NativeUtils', () => {
     expect(getOptGroupKeyIndex('two', testSet)).toEqual(2);
     expect(getOptGroupKeyIndex('three', testSet)).toEqual(3);
   });
+
+    // isValuePresent
+    it('should return the correct bool for isValuePresent', () => {
+      // string
+      expect(isValuePresent('test')).toEqual(true);
+      expect(isValuePresent('')).toEqual(true);
+      // empty
+      expect(isValuePresent(undefined)).toEqual(false);
+      expect(isValuePresent(null)).toEqual(false);
+      expect(isValuePresent()).toEqual(false);
+      //number
+      expect(isValuePresent(-1)).toEqual(true);
+      expect(isValuePresent(0)).toEqual(true);
+      expect(isValuePresent(1)).toEqual(true);
+      expect(isValuePresent(1.1)).toEqual(true);
+    });
 });

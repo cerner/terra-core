@@ -14,6 +14,7 @@ import {
   getFirstValue,
   getOptGroupKey,
   getOptGroupKeyIndex,
+  isValuePresent,
 } from './NativeUtils';
 import {
   optionPropType,
@@ -173,8 +174,8 @@ const NativeSelect = ({
   value,
   ...customProps
 }) => {
-  const [uncontrolledValue, setUncontrolledValue] = useState(!value ? defaultValue || getFirstValue(options, placeholder) : undefined);
-  const refIsControlled = useRef(!!value);
+  const [uncontrolledValue, setUncontrolledValue] = useState(!isValuePresent(value) ? defaultValue || getFirstValue(options, placeholder) : undefined);
+  const refIsControlled = useRef(isValuePresent(value));
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
 

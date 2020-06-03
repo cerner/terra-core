@@ -56,6 +56,8 @@ const isCurrentPlaceholder = (value, placeholder) => {
   return value === defaultPlaceholderValue;
 };
 
+const isValuePresent = value => value !== undefined && value !== null;
+
 const getOptGroupKey = (display, index) => `${display}-${index}`;
 
 const getOptGroupKeyIndex = (display, currentKeys, index = 0) => {
@@ -68,6 +70,7 @@ const getOptGroupKeyIndex = (display, currentKeys, index = 0) => {
 export default {
   defaultPlaceholderValue,
   isCurrentPlaceholder,
+  isValuePresent,
   getDisplay,
   getFirstValue,
   getOptGroupKey,
@@ -77,6 +80,7 @@ export default {
 export {
   defaultPlaceholderValue,
   isCurrentPlaceholder,
+  isValuePresent,
   getDisplay,
   getFirstValue,
   getOptGroupKey,

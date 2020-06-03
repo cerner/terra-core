@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `NativeSelect` implementation to replace the default select variant.
 
 6.6.0 - (June 2, 2020)
 ------------------
@@ -32,9 +34,6 @@ Unreleased
 
 6.2.0 - (April 22, 2020)
 ------------------
-### Added
-* Added `NativeSelect` implementation to replace the default select variant.
-
 ### Added
 * Added `maxHeight` as first class prop to all select fields (Multi select field, Tag select Field, Search select field, Combobox select field, Single select field)
 
