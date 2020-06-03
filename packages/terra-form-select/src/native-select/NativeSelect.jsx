@@ -10,11 +10,11 @@ import ThemeContext from 'terra-theme-context';
 import {
   defaultPlaceholderValue,
   isCurrentPlaceholder,
+  isValuePresent,
   getDisplay,
   getFirstValue,
   getOptGroupKey,
   getOptGroupKeyIndex,
-  isValuePresent,
 } from './NativeUtils';
 import {
   optionPropType,
@@ -49,9 +49,9 @@ const propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * The Select identifier. Links the htmlFor of the field to the select identifier.
+   * The Select identifier to be applied to the html select node.
    */
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   /**
    * @private
    * The intl object to be injected for translations.
