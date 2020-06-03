@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
-* Update wdio test to support testing against firefox
+* Updated wdio test to support testing against firefox
 
 ### Fixed
 * Fixed `ButtonGroup.Button` not losing `focus` styles when made disabled via user interaction
