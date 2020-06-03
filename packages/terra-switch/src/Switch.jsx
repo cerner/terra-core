@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import { FormattedMessage } from 'react-intl';
+import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import { enableFocusStyles, removeFocusStyles, restoreFocusStyles } from './_SwitchUtils';
 import styles from './Switch.module.scss';
 
@@ -61,18 +62,30 @@ const Switch = (props) => {
   const theme = React.useContext(ThemeContext);
   const sliderButton = useRef();
 
-  const handleOnClick = useCallback(
-    (event) => {
-      // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
-      // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
-      // This will set focus on the button when clicked.
-      sliderButton.current.focus();
-      if (onChange) {
-        onChange(!isChecked, event);
-      }
-    },
-    [isChecked, onChange],
-  );
+  const handleOnClick = useCallback((event) => {
+    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
+    // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
+    // This will set focus on the button when clicked.
+    sliderButton.current.focus();
+    if (onChange) {
+      onChange(!isChecked, event);
+    }
+  }, [isChecked, onChange]);
+
+  const handleOnMouseDown = useCallback((event) => {
+    event.preventDefault();
+    removeFocusStyles(sliderButton.current);
+  }, []);
+
+  const handleOnKeyDown = useCallback((event) => {
+    if (event.nativeEvent.keyCode === KEY_RETURN || event.nativeEvent.keyCode === KEY_SPACE) {
+      enableFocusStyles(sliderButton.current);
+    }
+  }, []);
+
+  const handleOnBlur = useCallback(() => {
+    restoreFocusStyles(sliderButton.current);
+  }, []);
 
   const switchClassNames = cx([
     'switch',
@@ -101,35 +114,38 @@ const Switch = (props) => {
   delete customProps.className;
   return (
     <div {...customProps} className={mainClasses}>
-      {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
-      <label
-        htmlFor={switchId}
-        onMouseDown={removeFocusStyles}
-        onKeyDown={enableFocusStyles}
-        onBlur={restoreFocusStyles}
-      >
-        <div className={switchClassNames}>
+      <div className={switchClassNames}>
+        {' '}
+        {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
+        <label
+          htmlFor={switchId}
+          onMouseDown={handleOnMouseDown}
+          onBlur={handleOnBlur}
+        >
           <div className={cx('label-container')}>
             <div id={labelId} className={cx('label-text')}>{labelText}</div>
             <div className={cx('status-label-text')}>{statusLabelText}</div>
           </div>
-          <div className={trayClassNames}>
-            <button
-              type="button"
-              id={switchId}
-              disabled={isDisabled}
-              aria-checked={isChecked}
-              aria-labelledby={labelId}
-              className={sliderClassNames}
-              role="switch"
-              tabIndex="0"
-              onClick={handleOnClick}
-              data-focus-styles-enabled
-              ref={sliderButton}
-            />
-          </div>
+        </label>
+        <div className={trayClassNames}>
+          <button
+            type="button"
+            id={switchId}
+            disabled={isDisabled}
+            aria-checked={isChecked}
+            aria-labelledby={labelId}
+            className={sliderClassNames}
+            role="switch"
+            tabIndex="0"
+            onClick={handleOnClick}
+            onKeyDown={handleOnKeyDown}
+            onMouseDown={handleOnMouseDown}
+            onBlur={handleOnBlur}
+            data-terra-switch-show-focus-styles
+            ref={sliderButton}
+          />
         </div>
-      </label>
+      </div>
     </div>
   );
 };

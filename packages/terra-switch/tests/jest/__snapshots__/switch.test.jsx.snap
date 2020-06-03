@@ -31,14 +31,14 @@ exports[`Switch should render a default component 1`] = `
     }
   }
 >
-  <label
-    htmlFor="defaultSwitch"
-    onBlur={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={[Function]}
+  <div
+    className="switch"
   >
-    <div
-      className="switch"
+     
+    <label
+      htmlFor="defaultSwitch"
+      onBlur={[Function]}
+      onMouseDown={[Function]}
     >
       <div
         className="label-container"
@@ -58,24 +58,27 @@ exports[`Switch should render a default component 1`] = `
           />
         </div>
       </div>
-      <div
-        className="tray"
-      >
-        <button
-          aria-checked={false}
-          aria-labelledby="label1"
-          className="slider"
-          data-focus-styles-enabled={true}
-          disabled={false}
-          id="defaultSwitch"
-          onClick={[Function]}
-          role="switch"
-          tabIndex="0"
-          type="button"
-        />
-      </div>
+    </label>
+    <div
+      className="tray"
+    >
+      <button
+        aria-checked={false}
+        aria-labelledby="label1"
+        className="slider"
+        data-terra-switch-show-focus-styles={true}
+        disabled={false}
+        id="defaultSwitch"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="switch"
+        tabIndex="0"
+        type="button"
+      />
     </div>
-  </label>
+  </div>
 </div>
 `;
 
@@ -110,14 +113,14 @@ exports[`Switch should render as disabled when set 1`] = `
     }
   }
 >
-  <label
-    htmlFor="disabledSwitch"
-    onBlur={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={[Function]}
+  <div
+    className="switch is-disabled"
   >
-    <div
-      className="switch is-disabled"
+     
+    <label
+      htmlFor="disabledSwitch"
+      onBlur={[Function]}
+      onMouseDown={[Function]}
     >
       <div
         className="label-container"
@@ -137,23 +140,26 @@ exports[`Switch should render as disabled when set 1`] = `
           />
         </div>
       </div>
-      <div
-        className="tray is-disabled"
-      >
-        <button
-          aria-checked={false}
-          aria-labelledby="label2"
-          className="slider is-disabled"
-          data-focus-styles-enabled={true}
-          disabled={true}
-          id="disabledSwitch"
-          onClick={[Function]}
-          role="switch"
-          tabIndex="0"
-          type="button"
-        />
-      </div>
+    </label>
+    <div
+      className="tray is-disabled"
+    >
+      <button
+        aria-checked={false}
+        aria-labelledby="label2"
+        className="slider is-disabled"
+        data-terra-switch-show-focus-styles={true}
+        disabled={true}
+        id="disabledSwitch"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="switch"
+        tabIndex="0"
+        type="button"
+      />
     </div>
-  </label>
+  </div>
 </div>
 `;

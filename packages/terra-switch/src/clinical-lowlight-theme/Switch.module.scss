@@ -57,7 +57,7 @@
     --terra-switch-slider-transition: 0.2s, cubic-bezier(0.175, 0.885, 0.32, 1.275);
     --terra-switch-slider-disabled-background-color: #262b2e;
     --terra-switch-slider-disabled-box-shadow: none;
-    --terra-switch-slider-disabled-opacity: 1;
+    --terra-switch-slider-disabled-opacity: 0.5;
 
     --terra-switch-slider-selected-box-shadow: none;
     --terra-switch-slider-selected-background-color: #202326;
@@ -68,7 +68,7 @@
     --terra-switch-slider-selected-transform: translateX(0.9rem);
     --terra-switch-slider-selected-disabled-background-color: #202326;
     --terra-switch-slider-selected-disabled-box-shadow: none;
-    --terra-switch-slider-selected-disabled-opacity: 1;
+    --terra-switch-slider-selected-disabled-opacity: 0.4;
 
     --terra-switch-slider-focus-background-color: #053754;
     --terra-switch-slider-focus-border: none;
