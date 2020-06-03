@@ -995,6 +995,46 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
 </InjectIntl(NativeSelect)>
 `;
 
+exports[`NativeSelect should render a NativeSelect with a refCallback 1`] = `
+<NativeSelect
+  ariaLabel="test-label"
+  disabled={false}
+  id="test-id"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={false}
+  isInvalid={false}
+  options={Array []}
+  refCallback={[MockFunction]}
+  required={false}
+/>
+`;
+
 exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"

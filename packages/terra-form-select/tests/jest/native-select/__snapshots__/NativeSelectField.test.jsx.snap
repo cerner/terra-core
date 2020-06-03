@@ -9,7 +9,7 @@ exports[`NativeSelectField should render a NativeSelectField allowing clear 1`] 
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -73,7 +73,7 @@ exports[`NativeSelectField should render a NativeSelectField aria described by 1
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -131,7 +131,7 @@ exports[`NativeSelectField should render a NativeSelectField as disabled 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -189,7 +189,7 @@ exports[`NativeSelectField should render a NativeSelectField as invalid 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -248,7 +248,7 @@ exports[`NativeSelectField should render a NativeSelectField as optional 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -306,7 +306,7 @@ exports[`NativeSelectField should render a NativeSelectField isIncomplete 1`] = 
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -364,7 +364,7 @@ exports[`NativeSelectField should render a NativeSelectField required 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -422,7 +422,7 @@ exports[`NativeSelectField should render a NativeSelectField required 2`] = `
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={true}
   htmlFor="test-id"
   intl={
@@ -480,7 +480,7 @@ exports[`NativeSelectField should render a NativeSelectField required and isInco
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -538,7 +538,7 @@ exports[`NativeSelectField should render a NativeSelectField with a custom  plac
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -602,7 +602,7 @@ exports[`NativeSelectField should render a NativeSelectField with a default plac
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -661,7 +661,7 @@ exports[`NativeSelectField should render a NativeSelectField with a labelAttrs 1
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -723,7 +723,7 @@ exports[`NativeSelectField should render a NativeSelectField with a maxWidth 1`]
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -782,7 +782,7 @@ exports[`NativeSelectField should render a NativeSelectField with a selectAttrs 
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -846,7 +846,7 @@ exports[`NativeSelectField should render a NativeSelectField with an aria label 
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -908,7 +908,7 @@ exports[`NativeSelectField should render a NativeSelectField with error 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -1031,7 +1031,7 @@ exports[`NativeSelectField should render a NativeSelectField with onChange 1`] =
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -1090,7 +1090,7 @@ exports[`NativeSelectField should render a NativeSelectField with opt groups 1`]
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -1178,7 +1178,7 @@ exports[`NativeSelectField should render a NativeSelectField with options 1`] = 
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -1256,7 +1256,7 @@ exports[`NativeSelectField should render a NativeSelectField with options and de
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -1335,7 +1335,7 @@ exports[`NativeSelectField should render a NativeSelectField with options and va
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={
@@ -1414,7 +1414,7 @@ exports[`NativeSelectField should render a default NativeSelectField 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  help={<span />}
+  help={null}
   hideRequired={false}
   htmlFor="test-id"
   intl={

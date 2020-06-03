@@ -65,7 +65,7 @@ const propTypes = {
    */
   isIncomplete: PropTypes.bool,
   /**
-   * Callback function triggered when the select value changes. function(value)
+   * Callback function triggered when the select value changes. function(event)
    */
   onChange: PropTypes.func,
   /**
@@ -90,6 +90,10 @@ const propTypes = {
     value: PropTypes.string,
   }),
   /**
+   * Callback ref to pass into the select input component.
+   */
+  refCallback: PropTypes.func,
+  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -97,6 +101,18 @@ const propTypes = {
    * The value of the select. Can be a string or number.
    */
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onBlur: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onFocus: PropTypes.func,
+  /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onMouseDown: PropTypes.func
 };
 
 const defaultProps = {
@@ -146,35 +162,48 @@ const NativeSelect = ({
   intl,
   isInvalid,
   isIncomplete,
+  onBlur,
   onChange,
+  onFocus,
+  onMouseDown,
   options,
   placeholder,
+  refCallback,
   required,
   value,
   ...customProps
 }) => {
   const [uncontrolledValue, setUncontrolledValue] = useState(!value ? defaultValue || getFirstValue(options, placeholder) : undefined);
-  const refIsControlled = useRef(!uncontrolledValue);
+  const refIsControlled = useRef(!!value);
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
 
-  const handleOnMouseDown = () => {
+  const handleOnMouseDown = (event) => {
     refSelect.current.setAttribute('data-focus-interaction', 'mouse');
+    if (onMouseDown) {
+      onMouseDown(event);
+    }
   };
-  const handleOnBlur = () => {
+  const handleOnBlur = (event) => {
     refSelect.current.setAttribute('data-focus-interaction', 'none');
+    if (onBlur) {
+      onBlur(event);
+    }
   };
-  const handleOnFocus = () => {
+  const handleOnFocus = (event) => {
     if (refSelect.current.getAttribute('data-focus-interaction') !== 'mouse') {
       refSelect.current.setAttribute('data-focus-interaction', 'keyboard');
     }
+    if (onFocus) {
+      onFocus(event);
+    }
   };
   const handleOnChange = event => {
-    if (onChange) {
-      onChange(event);
-    }
     if (!refIsControlled.current) {
       setUncontrolledValue(event.currentTarget.value);
+    }
+    if (onChange) {
+      onChange(event);
     }
   };
 
@@ -233,6 +262,7 @@ const NativeSelect = ({
         onMouseDown={handleOnMouseDown}
         onFocus={handleOnFocus}
         onBlur={handleOnBlur}
+        ref={refCallback}
       >
         {createPlaceholder(placeholder, intl)}
         {createOptions(options)}

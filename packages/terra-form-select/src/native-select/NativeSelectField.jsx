@@ -63,7 +63,7 @@ const propTypes = {
    */
   maxWidth: PropTypes.string,
   /**
-   * Callback function triggered when the select value changes. function(value)
+   * Callback function triggered when the select value changes. function(event)
    */
   onChange: PropTypes.func,
   /**
@@ -144,11 +144,7 @@ const NativeSelectField = ({
   value,
   ...customProps
 }) => {
-  const helpText = (
-    <span>
-      {help}
-    </span>
-  );
+  const helpText = help ? <span>{help}</span> : undefined;
 
   let ariaDescriptionIds;
   if (help && error && isInvalid) {

@@ -4,7 +4,7 @@ import {
   getDisplay,
   getFirstValue,
   getOptGroupKey,
-  geOptGroupKeyIndex,
+  getOptGroupKeyIndex,
 } from '../../../src/native-select/NativeUtils';
 
 const mockIntl = {
@@ -116,13 +116,13 @@ describe('NativeUtils', () => {
     expect(getOptGroupKey('one', 3)).toEqual('one-3');
   });
 
-  // geOptGroupKeyIndex
-  it('should return the correct index for geOptGroupKeyIndex', () => {
+  // getOptGroupKeyIndex
+  it('should return the correct index for getOptGroupKeyIndex', () => {
     const testSet = ['one-0', 'two-0', 'two-1', 'three-0', 'three-1', 'three-2'];
 
-    expect(geOptGroupKeyIndex('zero', testSet)).toEqual(0);
-    expect(geOptGroupKeyIndex('one', testSet)).toEqual(1);
-    expect(geOptGroupKeyIndex('two', testSet)).toEqual(2);
-    expect(geOptGroupKeyIndex('three', testSet)).toEqual(3);
+    expect(getOptGroupKeyIndex('zero', testSet)).toEqual(0);
+    expect(getOptGroupKeyIndex('one', testSet)).toEqual(1);
+    expect(getOptGroupKeyIndex('two', testSet)).toEqual(2);
+    expect(getOptGroupKeyIndex('three', testSet)).toEqual(3);
   });
 });

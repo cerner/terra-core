@@ -1,6 +1,6 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { mountWithIntl } from 'terra-enzyme-intl';
+import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
 import NativeSelect from '../../../src/native-select/NativeSelect';
 
 describe('NativeSelect', () => {
@@ -198,6 +198,17 @@ describe('NativeSelect', () => {
         ariaLabel="test-label"
         required
         isIncomplete
+      />,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a NativeSelect with a refCallback', () => {
+    const wrapper = shallowWithIntl(
+      <NativeSelect
+        id="test-id"
+        ariaLabel="test-label"
+        refCallback={jest.fn()}
       />,
     );
     expect(wrapper).toMatchSnapshot();
