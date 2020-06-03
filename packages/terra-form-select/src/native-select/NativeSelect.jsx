@@ -113,7 +113,7 @@ const propTypes = {
   /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
-  onMouseDown: PropTypes.func
+  onMouseDown: PropTypes.func,
 };
 
 const defaultProps = {
