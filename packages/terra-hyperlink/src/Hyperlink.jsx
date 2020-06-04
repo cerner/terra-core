@@ -5,6 +5,7 @@ import IconAudio from 'terra-icon/lib/icon/IconAudio';
 import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
 import IconImage from 'terra-icon/lib/icon/IconImage';
 import IconDocuments from 'terra-icon/lib/icon/IconDocuments';
+import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
@@ -142,14 +143,16 @@ class Hyperlink extends React.Component {
 
     const theme = this.context;
 
-    const hyperlinkClasses = cx(
-      'hyperlink',
-      variant,
-      { 'is-disabled': isDisabled },
-      { 'is-underline-hidden': isUnderlineHidden },
-      { 'is-active': this.state.active },
-      { 'is-focused': this.state.focused },
-      theme.className,
+    const hyperlinkClasses = classNames(
+      cx(
+        'hyperlink',
+        variant,
+        { 'is-disabled': isDisabled },
+        { 'is-underline-hidden': isUnderlineHidden },
+        { 'is-active': this.state.active },
+        { 'is-focused': this.state.focused },
+        theme.className,
+      ),
       customProps.className,
     );
 
