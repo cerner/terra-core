@@ -27,7 +27,7 @@ const Toolbar = ({
 }) => {
   const theme = React.useContext(ThemeContext);
 
-  let toolbarClassNames = classNames(
+  const toolbarClassNames = classNames(
     cx(
       'toolbar',
       `${align}-align`,
@@ -35,9 +35,6 @@ const Toolbar = ({
     ),
     customProps.className,
   );
-  if (customProps.className) {
-    toolbarClassNames = `${toolbarClassNames} ${customProps.className}`;
-  }
 
   const items = React.Children.map(children, item => (<div className={cx('item')}>{item}</div>));
 
