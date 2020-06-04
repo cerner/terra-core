@@ -43,6 +43,10 @@ const propTypes = {
    * Sets the background of the section header to transparent.
    */
   isTransparent: PropTypes.bool,
+  /**
+   * Programmatically toggle the toggle-section-header component.
+   */
+  isOpen: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -51,6 +55,7 @@ const defaultProps = {
   isAnimated: false,
   isInitiallyOpen: false,
   isTransparent: false,
+  isOpen: undefined,
 };
 
 class ToggleSectionHeader extends React.Component {
@@ -64,20 +69,28 @@ class ToggleSectionHeader extends React.Component {
     this.wrapOnClick = this.wrapOnClick.bind(this);
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.isOpen !== undefined && prevState.isOpen !== nextProps.isOpen) {
+      return { isOpen: nextProps.isOpen };
+    }
+    return { isOpen: prevState.isOpen };
+  }
+
   handleOnClick(event) {
     event.preventDefault();
 
-    const { onOpen, onClose } = this.props;
+    const { onOpen, onClose, isOpen } = this.props;
+    if (isOpen === undefined) {
+      if (onOpen && !this.state.isOpen) {
+        onOpen();
+      } else if (onClose && this.state.isOpen) {
+        onClose();
+      }
 
-    if (onOpen && !this.state.isOpen) {
-      onOpen();
-    } else if (onClose && this.state.isOpen) {
-      onClose();
+      this.setState(prevState => ({
+        isOpen: !prevState.isOpen,
+      }));
     }
-
-    this.setState(prevState => ({
-      isOpen: !prevState.isOpen,
-    }));
   }
 
   wrapOnClick(onClick) {
@@ -99,6 +112,7 @@ class ToggleSectionHeader extends React.Component {
       isAnimated,
       isInitiallyOpen,
       isTransparent,
+      isOpen,
       onOpen,
       onClose,
       ...customProps

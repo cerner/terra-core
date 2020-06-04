@@ -33,4 +33,15 @@ Terra.describeViewports('ToggleSectionHeader', ['huge'], () => {
       Terra.validates.element('open');
     });
   });
+
+  describe('Programmatic Toggle', () => {
+    before(() => browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/programmatic-toggle'));
+
+    Terra.it.validatesElement();
+
+    it('Toggles on button click', () => {
+      browser.click('#toggle');
+      Terra.validates.element('programmatically toggles the toggle-section-header');
+    });
+  });
 });
