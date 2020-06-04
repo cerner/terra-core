@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import ListSectionHeader from '../../src/ListSectionHeader';
 
 // Snapshot Tests
@@ -33,4 +35,13 @@ it('should render with callback functions', () => {
   shallowComponent.find('li').simulate('keydown', { nativeEvent: { keyCode: 13 } });
   shallowComponent.find('li').simulate('keydown', { nativeEvent: { keyCode: 32 } });
   expect(mockCallBack.mock.calls.length).toEqual(3);
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <ListSectionHeader title="test" />
+    </ThemeContextProvider>,
+  );
+  expect(wrapper).toMatchSnapshot();
 });

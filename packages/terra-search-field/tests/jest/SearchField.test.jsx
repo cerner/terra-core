@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import SearchField from '../../src/SearchField';
@@ -62,6 +64,15 @@ describe('Snapshots', () => {
     expect(searchField.instance().searchText).toBe('amp');
     searchField.instance().handleClear();
     expect(searchField.instance().searchText).toBe('');
+  });
+
+  it('correctly applies the theme context className', () => {
+    const searchField = mountWithIntl(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <SearchField />
+      </ThemeContextProvider>,
+    );
+    expect(searchField).toMatchSnapshot();
   });
 });
 
