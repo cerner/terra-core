@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import SectionHeader from '../../src/SectionHeader';
 
 describe('SectionHeader', () => {
@@ -25,6 +27,15 @@ describe('SectionHeader', () => {
   it("should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed", () => {
     const sectionHeader = <SectionHeader title="foo" onClick={() => {}} isOpen />;
     const wrapper = render(sectionHeader);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const wrapper = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <SectionHeader title="foo" />
+      </ThemeContextProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
