@@ -128,7 +128,6 @@ const SelectableDemographicsBanner = ({
   };
 
   const handleMouseDown = (event) => {
-    debugger;
     event.currentTarget.firstChild.setAttribute('data-focus-styles-enabled', 'false');
 
     if (onMouseDown) {
