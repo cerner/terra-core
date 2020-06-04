@@ -86,7 +86,13 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       Terra.it.validatesElement('open', { selector: '#terra-Overlay--fullscreen' });
 
       it('does not increment overlay count during update', () => {
-        browser.execute('const updateEvent = new CustomEvent("overlay.forceUpdateForTest"); document.dispatchEvent(updateEvent);');
+        /* If IE support is removed, convert below to use event constructors. */
+        // eslint-disable-next-line prefer-arrow-callback
+        browser.execute(function forceUpdateForTest() {
+          const updateEvent = document.createEvent('Event');
+          updateEvent.initEvent('overlay.forceUpdateForTest', true, true);
+          window.dispatchEvent(updateEvent);
+        });
 
         expect(browser.getAttribute('#root', 'inert')).to.be.oneOf(['', 'true']); // chrome returns true, firefox returns ''
         expect(browser.getAttribute('#root', 'aria-hidden')).to.equal('true');
@@ -150,11 +156,12 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       Terra.it.validatesElement('fullscreen', { selector: '#terra-Overlay--fullscreen' });
 
       it('Custom Content under overlay is not clickable when Overlay is open', () => {
-        expect(browser.click.bind(browser, '#random_button')).to.throw(Error);
+        expect(() => browser.click('#random_button')).to.throw('not clickable');
       });
 
-      it('waits for fullscreen overlay to close', () => {
-        browser.waitForExist('#terra-Overlay--fullscreen', 5000, SHOULD_NOT_EXIST);
+      it('closes fullscreen overlay', () => {
+        browser.click('#close_overlay');
+        browser.waitForExist('#terra-Overlay--fullscreen', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
       });
     });
 
