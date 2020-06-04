@@ -1,7 +1,7 @@
 {
   "name": "terra-progress-bar",
   "main": "lib/ProgressBar.js",
-  "version": "4.22.0",
+  "version": "4.23.0",
   "description": "The progress bar component provides users a way to display the progress of process or activity in a graphical manner.",
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "terra-theme-context": "^1.0.0"
   }
 }

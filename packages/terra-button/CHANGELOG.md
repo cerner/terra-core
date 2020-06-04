@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.40.0 - (June 2, 2020)
+------------------
+### Fixed
+* Fixed button not losing `focus` and `active` styles when made disabled via user interaction.
+
 3.39.0 - (May 19, 2020)
 ------------------
 ### Changed

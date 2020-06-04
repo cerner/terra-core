@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Spacer from '../../src/Spacer';
 
 describe('Spacer', () => {
@@ -96,6 +98,14 @@ describe('Spacer', () => {
 
   it('should render a spacer component with vertical top padding set to large, right padding set to medium, bottom padding set to small, and left padding set to small-1 ', () => {
     const wrapper = render(<Spacer padding="large medium small small-1"><p>Test</p></Spacer>);
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('correctly applies the theme context className', () => {
+    const wrapper = render(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Spacer><div>Test Component</div></Spacer>
+      </ThemeContextProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

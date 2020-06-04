@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Signature.module.scss';
+
+const cx = classNamesBind.bind(styles);
 
 const LINEWIDTHS = {
   EXTRA_FINE: 1,
@@ -227,18 +231,21 @@ class Signature extends React.Component {
   }
 
   render() {
+    const theme = this.context;
+
     const {
       lineSegments, lineWidth, onChange, ...custProps
     } = this.props;
 
     return (
-      <canvas {...custProps} className={styles.signature} ref={(node) => { this.canvas = node; }} />
+      <canvas {...custProps} className={cx('signature', theme.className)} ref={(node) => { this.canvas = node; }} />
     );
   }
 }
 
 Signature.propTypes = propTypes;
 Signature.defaultProps = defaultProps;
+Signature.contextType = ThemeContext;
 Signature.Opts = {};
 Signature.Opts.Width = LINEWIDTHS;
 

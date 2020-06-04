@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Grid.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -16,11 +18,15 @@ const propTypes = {
   className: PropTypes.string,
 };
 
-const GridRow = ({ className, children, ...customProps }) => (
-  <div {...customProps} className={cx('grid', className)}>
-    {children}
-  </div>
-);
+const GridRow = ({ className, children, ...customProps }) => {
+  const theme = React.useContext(ThemeContext);
+
+  return (
+    <div {...customProps} className={classNames(cx('grid', theme.className), className)}>
+      {children}
+    </div>
+  );
+};
 
 GridRow.propTypes = propTypes;
 

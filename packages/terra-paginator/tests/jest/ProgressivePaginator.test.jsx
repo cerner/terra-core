@@ -1,6 +1,8 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import ProgressivePaginator from '../../src/ProgressivePaginator';
 
 describe('ProgressivePaginator', () => {
@@ -19,6 +21,16 @@ describe('ProgressivePaginator', () => {
     const wrapper = shallowWithIntl(defaultRender).dive();
     wrapper.setState({ breakpoint: 'large' });
     wrapper.update();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  // Snapshot Tests
+  it('correctly applies the theme context className', () => {
+    const wrapper = mountWithIntl(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        {defaultRender}
+      </ThemeContextProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });

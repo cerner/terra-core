@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <ListSubsectionHeader
+    isCollapsed={false}
+    isCollapsible={false}
+    level={2}
+    title="test"
+  >
+    <li
+      className="subsection-header orion-fusion-theme"
+    >
+      <h2
+        className="title"
+      >
+        test
+      </h2>
+    </li>
+  </ListSubsectionHeader>
+</ThemeContextProvider>
+`;
+
 exports[`should render default 1`] = `
 <li
   className="subsection-header"

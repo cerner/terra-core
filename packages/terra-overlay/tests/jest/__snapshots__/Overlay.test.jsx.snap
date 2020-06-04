@@ -1,5 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Overlay correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Overlay
+    backgroundStyle="light"
+    isOpen={true}
+    isRelativeToContainer={false}
+    isScrollable={false}
+    rootSelector="#root"
+    zIndex="100"
+  >
+    <Portal>
+      <Portal
+        containerInfo={
+          <div>
+            <div
+              class="background-scroll-content"
+            >
+              <div
+                class="inner"
+              />
+            </div>
+            <div>
+              <div
+                class="overlay fullscreen light layer-100 orion-fusion-theme"
+                tabindex="0"
+              >
+                <div
+                  class="content"
+                />
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <div
+          className="background-scroll-content"
+        >
+          <div
+            className="inner"
+          />
+        </div>
+        <FocusTrap
+          _createFocusTrap={[Function]}
+          active={true}
+          focusTrapOptions={Object {}}
+          paused={false}
+        >
+          <div>
+            <div
+              className="overlay fullscreen light layer-100 orion-fusion-theme"
+              onClick={[Function]}
+              tabIndex="0"
+            >
+              <div
+                className="content"
+              />
+            </div>
+          </div>
+        </FocusTrap>
+      </Portal>
+    </Portal>
+  </Overlay>
+</ThemeContextProvider>
+`;
+
 exports[`Overlay should render a null component when isOpen is not provided 1`] = `""`;
 
 exports[`Overlay when isOpen is provided -backgroundStyle- should render with the clear backgroundStyle 1`] = `

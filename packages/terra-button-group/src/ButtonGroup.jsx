@@ -86,7 +86,7 @@ class ButtonGroup extends React.Component {
       const isSelected = selectedKeys.indexOf(child.key) > -1;
       const cloneChild = React.cloneElement(child, {
         onClick: this.wrapOnClick(child),
-        className: cx([{ 'is-selected': isSelected }, child.props.className]),
+        className: cx([{ 'is-selected': isSelected && !child.props.isDisabled }, child.props.className]),
         'aria-pressed': isSelected || null,
       });
       allButtons.push(cloneChild);

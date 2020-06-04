@@ -142,4 +142,22 @@ Terra.describeViewports('Button Group', ['tiny', 'huge'], () => {
 
     Terra.it.validatesElement();
   });
+
+  describe('Programmatic Disabled', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-button-group/button-group/programmatic-disabled');
+    });
+
+    it('focuses button', () => {
+      browser.keys(['Tab']);
+    });
+
+    Terra.it.validatesElement('Button has focus', { selector: '#root' });
+
+    it('disables button', () => {
+      browser.click('#programmaticDisabledButton');
+    });
+
+    Terra.it.validatesElement('Button is Disabled', { selector: '#root' });
+  });
 });

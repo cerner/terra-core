@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import objectFitImages from 'object-fit-images'; // Added polyfill for IE.
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Image.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const ImageVariant = {
   DEFAULT: 'default',
@@ -147,14 +149,19 @@ class Image extends React.Component {
       src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, fit, ...customProps
     } = this.props;
 
-    const imageClasses = cx([
-      'image',
-      fit,
-      variant,
+    const theme = this.context;
+
+    const imageClasses = classNames(
+      cx(
+        'image',
+        fit,
+        variant,
+        theme.className,
+        { fluid: isFluid },
+        { hidden: placeholder && this.state.isLoading },
+      ),
       customProps.className,
-      { fluid: isFluid },
-      { hidden: placeholder && this.state.isLoading },
-    ]);
+    );
 
     delete customProps.className;
     if (!this.state.isLoading) {
@@ -179,6 +186,7 @@ class Image extends React.Component {
 
 Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;
+Image.contextType = ThemeContext;
 
 export default Image;
 export { ImageVariant, FitTypes };
