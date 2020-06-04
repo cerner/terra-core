@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed unused theme variables.
 
 4.32.0 - (June 2, 2020)
 ------------------
