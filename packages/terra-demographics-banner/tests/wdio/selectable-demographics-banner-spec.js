@@ -40,7 +40,9 @@ Terra.describeViewports('Selectable Demographics Banner', ['tiny', 'large'], () 
 
     Terra.it.validatesElement();
 
-    it('tab to focus', () => {
+    it('tab 3 times to set focus on banner', () => {
+      browser.keys('Tab');
+      browser.keys('Tab');
       browser.keys('Tab');
     });
 
