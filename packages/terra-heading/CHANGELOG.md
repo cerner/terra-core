@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Minor file changes to comply with eslint rules
 
 4.30.0 - (May 19, 2020)
 ------------------

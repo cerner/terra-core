@@ -177,12 +177,11 @@ const Field = (props) => {
   const labelGroup = (
     <div className={cx(['label-group', { 'label-group-hidden': isLabelHidden }])}>
       {isInvalid && <div className={cx('error-icon')}>{errorIcon}</div>}
-      {
-        <label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
-          {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
-          {label}
-          {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
-          {showOptional && !required
+      <label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
+        {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
+        {label}
+        {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
+        {showOptional && !required
             && (
               <FormattedMessage id="Terra.form.field.optional">
                 {optionalText => (
@@ -190,9 +189,8 @@ const Field = (props) => {
                 )}
               </FormattedMessage>
             )}
-          {IEDescriptionText}
-        </label>
-      }
+        {IEDescriptionText}
+      </label>
       {!isInvalid && <div className={cx('error-icon-hidden')}>{errorIcon}</div>}
     </div>
   );

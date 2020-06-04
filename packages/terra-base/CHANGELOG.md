@@ -3,6 +3,7 @@ ChangeLog
 
 Unreleased
 ----------
+* Minor file changes to comply with eslint rules
 
 5.33.0 - (April 28, 2020)
 ------------------
