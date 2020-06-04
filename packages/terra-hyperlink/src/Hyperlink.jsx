@@ -5,11 +5,13 @@ import IconAudio from 'terra-icon/lib/icon/IconAudio';
 import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
 import IconImage from 'terra-icon/lib/icon/IconImage';
 import IconDocuments from 'terra-icon/lib/icon/IconDocuments';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
 import styles from './Hyperlink.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const variants = {
   DEFAULT: 'default',
@@ -139,15 +141,20 @@ class Hyperlink extends React.Component {
       ...customProps
     } = this.props;
 
-    const hyperlinkClasses = cx([
-      'hyperlink',
-      variant,
-      { 'is-disabled': isDisabled },
-      { 'is-underline-hidden': isUnderlineHidden },
-      { 'is-active': this.state.active },
-      { 'is-focused': this.state.focused },
+    const theme = this.context;
+
+    const hyperlinkClasses = classNames(
+      cx(
+        'hyperlink',
+        variant,
+        { 'is-disabled': isDisabled },
+        { 'is-underline-hidden': isUnderlineHidden },
+        { 'is-active': this.state.active },
+        { 'is-focused': this.state.focused },
+        theme.className,
+      ),
       customProps.className,
-    ]);
+    );
 
     const ComponentType = isDisabled ? 'span' : 'a';
 
@@ -187,6 +194,7 @@ class Hyperlink extends React.Component {
 
 Hyperlink.propTypes = propTypes;
 Hyperlink.defaultProps = defaultProps;
+Hyperlink.contextType = ThemeContext;
 
 export { variants as HyperlinkVariants };
 export default Hyperlink;

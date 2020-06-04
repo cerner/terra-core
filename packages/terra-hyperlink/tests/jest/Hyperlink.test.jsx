@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Hyperlink from '../../src/Hyperlink';
 
 describe('Hyperlink', () => {
@@ -50,6 +52,15 @@ describe('Hyperlink', () => {
 
   it('should render with custom props with external variant', () => {
     const wrapper = render(<Hyperlink href="https://www.cerner.com" target="_parent" rel="external" variant="external">Custom target and rel props external hyperlink</Hyperlink>);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const wrapper = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Hyperlink href="https://www.cerner.com">Default hyperlink</Hyperlink>
+      </ThemeContextProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
