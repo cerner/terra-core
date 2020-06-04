@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tag correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Tag
+    text="Normal"
+  >
+    <span
+      className="tag orion-fusion-theme"
+      onBlur={[Function]}
+      onKeyUp={[Function]}
+    >
+      Normal
+    </span>
+  </Tag>
+</ThemeContextProvider>
+`;
+
 exports[`Tag should render a tag 1`] = `
 <span
   className="tag"
