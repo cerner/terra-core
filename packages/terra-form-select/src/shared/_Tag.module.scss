@@ -1,4 +1,7 @@
-@import '~terra-mixins/lib/Mixins';
+// Themes
+@import '../clinical-lowlight-theme/Tag.module';
+@import '../orion-fusion-theme/Tag.module';
+
 
 :local {
   .tag {

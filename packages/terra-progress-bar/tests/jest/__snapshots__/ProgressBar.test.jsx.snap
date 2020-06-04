@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <ProgressBar
+    colorClass="default-color"
+    heightSize="small"
+    max={100}
+    value={15}
+  >
+    <progress
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={15}
+      className="progress-bar small default-color orion-fusion-theme"
+      max={100}
+      tabIndex="-1"
+      value={15}
+    />
+  </ProgressBar>
+</ThemeContextProvider>
+`;
+
 exports[`should render a ProgressBar component with default heightSize 50% fill and custom props and style 1`] = `
 <progress
   aria-valuemax={100}

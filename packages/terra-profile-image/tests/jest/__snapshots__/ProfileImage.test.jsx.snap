@@ -1,5 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <ProfileImage
+    alt="A profile image"
+    fit="cover"
+    height="75"
+    src="profile.jpg"
+    width="75"
+  >
+    <div>
+      <Image
+        alt="A profile image"
+        fit="cover"
+        height="75"
+        isFluid={false}
+        placeholder={
+          <span
+            className="placeholder-images orion-fusion-theme"
+            style={
+              Object {
+                "height": "75px",
+                "width": "75px",
+              }
+            }
+            title="A profile image"
+          />
+        }
+        src="profile.jpg"
+        variant="default"
+        width="75"
+      >
+        <img
+          alt="A profile image"
+          className="image cover default orion-fusion-theme hidden"
+          height="75"
+          onError={[Function]}
+          onLoad={[Function]}
+          src="profile.jpg"
+          width="75"
+        />
+        <span
+          className="placeholder-images orion-fusion-theme"
+          style={
+            Object {
+              "height": "75px",
+              "width": "75px",
+            }
+          }
+          title="A profile image"
+        />
+      </Image>
+    </div>
+  </ProfileImage>
+</ThemeContextProvider>
+`;
+
 exports[`should render a Terra image with a placeholder prop 1`] = `
 <div>
   <Image

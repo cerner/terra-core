@@ -1,3 +1,7 @@
+// Themes
+@import '../clinical-lowlight-theme/Dropdown.module';
+@import '../orion-fusion-theme/Dropdown.module';
+
 :local {
   .dropdown {
     background-color: var(--terra-form-select-dropdown-background-color, #fff);

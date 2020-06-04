@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import { injectIntl, intlShape } from 'react-intl';
 import ResponsiveElement from 'terra-responsive-element';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
@@ -9,7 +10,7 @@ import styles from './Paginator.module.scss';
 import { calculatePages } from './_paginationUtils';
 import PaginatorButton from './_PaginatorButton';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -66,13 +67,14 @@ class ProgressivePaginator extends React.Component {
   }
 
   defaultProgressivePaginator() {
+    const theme = this.context;
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage, intl } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     return (
-      <div className={cx(['paginator', 'progressive'])} role="navigation" aria-label="pagination">
+      <div className={cx('paginator', 'progressive', theme.className)} role="navigation" aria-label="pagination">
         <div>
           {intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })}
         </div>
@@ -125,13 +127,14 @@ class ProgressivePaginator extends React.Component {
   }
 
   reducedProgressivePaginator() {
+    const theme = this.context;
     const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
     const { selectedPage, intl } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     return (
-      <div className={cx(['paginator'])} role="navigation" aria-label="pagination">
+      <div className={cx('paginator', theme.className)} role="navigation" aria-label="pagination">
         <div>
           <PaginatorButton
             ariaDisabled={selectedPage === 1}
@@ -197,5 +200,6 @@ class ProgressivePaginator extends React.Component {
 }
 
 ProgressivePaginator.propTypes = propTypes;
+ProgressivePaginator.contextType = ThemeContext;
 
 export default injectIntl(ProgressivePaginator);

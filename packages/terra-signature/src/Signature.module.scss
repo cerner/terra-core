@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/Signature.module';
+@import './orion-fusion-theme/Signature.module';
+
 :local {
   .signature {
     background-color: var(--terra-signature-background-color, #fff);
