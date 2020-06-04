@@ -45,7 +45,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('tries to click the button', () => {
-      expect(() => browser.click('[class*=dropdown-button]')).to.throw('is not clickable');
+      expect(() => browser.click('[class*=dropdown-button]')).to.throw('not clickable');
     });
   });
 

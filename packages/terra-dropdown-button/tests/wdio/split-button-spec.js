@@ -69,11 +69,11 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     it('tries to click the primary button', () => {
-      expect(() => browser.click('[class*=split-button-primary]')).to.throw('is not clickable');
+      expect(() => browser.click('[class*=split-button-primary]')).to.throw('not clickable');
     });
 
     it('tries to click the caret', () => {
-      expect(() => browser.click('[class*=split-button-caret]')).to.throw('is not clickable');
+      expect(() => browser.click('[class*=split-button-caret]')).to.throw('not clickable');
     });
   });
 
