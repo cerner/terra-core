@@ -140,9 +140,18 @@
     flex-direction: row;
 
     &:focus {
+      outline: none;
+    }
+    
+    &:focus[data-focus-styles-enabled=true] {
       box-shadow: var(--terra-demographics-banner-focus-box-shadow, none);
       outline: var(--terra-demographics-banner-focus-outline, 2px dashed #fff);
       outline-offset: var(--terra-demographics-banner-focus-outline-offset, -5px);
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
     }
 
     &:hover {

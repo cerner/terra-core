@@ -34,4 +34,16 @@ Terra.describeViewports('Selectable Demographics Banner', ['tiny', 'large'], () 
 
     Terra.it.validatesElement('banner clicked', { selector: '#root' });
   });
+
+  describe('Keyboard Focus', () => {
+    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/selectable-demographics-banner/populated-selectable-demographics-banner'));
+
+    Terra.it.validatesElement();
+
+    it('tab to focus', () => {
+      browser.keys('Tab');
+    });
+
+    Terra.it.validatesElement('focus style', { selector: '#root' });
+  });
 });

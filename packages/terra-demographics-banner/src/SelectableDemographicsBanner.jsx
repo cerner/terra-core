@@ -117,13 +117,30 @@ const SelectableDemographicsBanner = ({
 
   const handleKeyUp = (event) => {
     if ((event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) && onClick) {
-      onClick();
+      onClick(event);
     }
   };
 
-  const handleOnClick = () => {
+  const handleClick = (event) => {
     if (onClick) {
-      onClick();
+      onClick(event);
+    }
+  };
+
+  const handleMouseDown = (event) => {
+    debugger;
+    event.currentTarget.firstChild.setAttribute('data-focus-styles-enabled', 'false');
+
+    if (onMouseDown) {
+      onMouseDown(event);
+    }
+  };
+
+  const handleBlur = (event) => {
+    event.currentTarget.firstChild.setAttribute('data-focus-styles-enabled', 'true');
+
+    if (customProps.onBlur) {
+      customProps.onBlur(event);
     }
   };
 
@@ -133,10 +150,11 @@ const SelectableDemographicsBanner = ({
       isDeceased={!!(deceasedDate)}
     >
       <SelectableTile
-        onClick={handleOnClick}
+        onClick={handleClick}
         onKeyDown={handleKeyDown}
         onKeyUp={handleKeyUp}
-        onMouseDown={onMouseDown}
+        onMouseDown={handleMouseDown}
+        onBlur={handleBlur}
       >
         <DemographicsBanner
           age={age}

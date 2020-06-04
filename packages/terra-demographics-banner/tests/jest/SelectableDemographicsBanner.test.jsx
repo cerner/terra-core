@@ -4,15 +4,12 @@ import { shallowWithIntl } from 'terra-enzyme-intl';
 import SelectableDemographicsBanner from '../../src/SelectableDemographicsBanner';
 
 it('renders a blank banner wrapper', () => {
-  const tileClick = jest.fn();
-
-  const banner = shallowWithIntl(<SelectableDemographicsBanner onClick={tileClick} />);
+  const banner = shallowWithIntl(<SelectableDemographicsBanner onClick={jest.fn()} />);
   expect(banner.dive()).toMatchSnapshot();
 });
 
 it('renders the banner wrapper with all props', () => {
-  const tileClick = jest.fn();
-  const tileMouseDown = jest.fn();
+  const onClickMock = jest.fn();
 
   const banner = shallowWithIntl((
     <SelectableDemographicsBanner
@@ -37,15 +34,12 @@ it('renders the banner wrapper with all props', () => {
       photo=""
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
-      onClick={tileClick}
-      onMouseDown={tileMouseDown}
+      onClick={onClickMock}
+      onMouseDown={jest.fn()}
     />
   ));
 
-  banner.dive().find('#selectableDemographics').childAt(0).simulate('mousedown');
-  expect(tileMouseDown).toHaveBeenCalled();
-
   banner.dive().find('#selectableDemographics').childAt(0).simulate('click');
-  expect(tileClick).toHaveBeenCalled();
+  expect(onClickMock).toHaveBeenCalled();
   expect(banner.dive()).toMatchSnapshot();
 });
