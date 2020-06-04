@@ -54,7 +54,8 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       browser.setValue('input', 'Lorem');
     });
 
-    Terra.it.matchesScreenshot('with text');
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement('with text', { rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('With Default Value', () => {

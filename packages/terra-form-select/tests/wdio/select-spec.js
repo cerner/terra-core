@@ -2063,25 +2063,29 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Combobox variant - incomplete', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-combobox'));
 
-    Terra.it.validatesElement();
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('Multiple variant - incomplete', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-multiple'));
 
-    Terra.it.validatesElement();
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('Search variant - incomplete', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-search'));
 
-    Terra.it.validatesElement();
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('Tag variant - incomplete', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-tag'));
 
-    Terra.it.validatesElement();
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('Default variant - invalid', () => {
