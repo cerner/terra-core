@@ -8,5 +8,4 @@ if (process.env.npm_package_name !== 'terra-core') {
   wdioConfig.specs = [path.join(__dirname, 'packages', process.env.npm_package_name, 'tests', 'wdio', '**', '*-spec.js')];
 }
 
-console.log(wdioConfig.specs)
 exports.config = wdioConfig;
