@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
+* Apply themes by context and directly include packaged themes.
 * Minor file changes to comply with eslint rules
 
 2.34.0 - (May 19, 2020)

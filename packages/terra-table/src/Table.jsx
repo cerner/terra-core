@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import ContentContainer from 'terra-content-container';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Table.module.scss';
@@ -18,7 +20,7 @@ import CheckMarkCell from './subcomponents/_CheckMarkCell';
 import HeaderChevronCell from './subcomponents/_HeaderChevronCell';
 import HeaderCheckMarkCell from './subcomponents/_HeaderCheckMarkCell';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -378,15 +380,21 @@ const Table = ({
   summaryId,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
+
   // If all column widths are using static sizing alter the table style to display inline.
   const makeInline = columnWidths && columnWidths.length ? columnWidths.every(width => !!width.static) : undefined;
   const hasEndNodes = headerNode || footerNode || showSimpleFooter;
 
-  const tableClasses = cx(
-    'table',
-    { fill },
-    { 'is-inline': makeInline },
-    { outer: !hasEndNodes },
+  const tableClasses = classNames(
+    cx(
+      'table',
+      { fill },
+      { 'is-inline': makeInline },
+      { outer: !hasEndNodes },
+      theme.className,
+    ),
+    customProps.className,
   );
 
   const tableData = {
@@ -407,7 +415,7 @@ const Table = ({
     <div
       {...customProps}
       {...attrSpread}
-      className={customProps.className ? `${tableClasses} ${customProps.className}` : tableClasses}
+      className={tableClasses}
       role="grid"
       aria-rowcount={numberOfRows || rowCount}
       aria-describedby={summaryId}
