@@ -6,6 +6,9 @@ Unreleased
 ### Added
 * Added `isOpen` prop for programmatic toggle.
 
+### Changed
+* Minor file changes to comply with eslint rules
+
 2.35.0 - (May 19, 2020)
 ------------------
 ### Changed
