@@ -1,0 +1,46 @@
+:local {
+  .clinical-lowlight-theme {
+    --terra-tag-background-color: #1d2427;
+    --terra-tag-border-color: #181b1d;
+    --terra-tag-border-style: solid;
+    --terra-tag-box-shadow: none;
+    --terra-tag-color: #c5c5c6;
+    --terra-tag-font-size: 1rem;
+    --terra-tag-font-weight: 400;
+    --terra-tag-line-height: 1.1428571429;
+    --terra-tag-margin-bottom: 0.3571398571rem;
+    --terra-tag-margin-left: 0;
+    --terra-tag-margin-right: 0.7142957143rem;
+    --terra-tag-margin-top: 0.3571398571rem;
+    --terra-tag-padding-bottom: 0.1428611429rem;
+    --terra-tag-padding-left: 0.5rem;
+    --terra-tag-padding-right: 0.5rem;
+    --terra-tag-padding-bottom: 0.1428611429rem;
+    --terra-tag-text-decoration: none;
+
+    // Interactive
+    --terra-tag-interactive-background-color: #1d2427;
+    --terra-tag-interactive-color: #007ee0;
+    --terra-tag-interactive-text-decoration: none;
+
+    // Focus
+    --terra-tag-focus-background-color: #2d3539;
+    --terra-tag-focus-border-color: #181b1d;
+    --terra-tag-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+    --terra-tag-focus-color: #007ee0;
+    --terra-tag-focus-text-decoration: none;
+
+    // Hover
+    --terra-tag-hover-background-color: #1d2427;
+    --terra-tag-hover-border-color: #181b1d;
+    --terra-tag-hover-box-shadow: none;
+    --terra-tag-hover-color: #003f61;
+    --terra-tag-hover-text-decoration: underline;
+
+    // Icon
+    --terra-tag-icon-margin-right: 0.3571398571rem;
+    --terra-tag-icon-margin-top: 0;
+    --terra-tag-icon-height: 1rem;
+    --terra-tag-icon-width: 1rem;
+  }
+}
