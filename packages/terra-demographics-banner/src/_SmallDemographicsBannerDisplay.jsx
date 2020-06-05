@@ -80,7 +80,7 @@ const SmallDemographicsBannerDisplay = (props) => {
         <div className={cx('info-tile-container')}>
           <div className={cx('info-tile')}>
             <span className={cx('info-text')}>{infoText}</span>
-            <span className={cx('info-icon')}/>
+            <span className={cx('info-icon')} />
           </div>
         </div>
       )}

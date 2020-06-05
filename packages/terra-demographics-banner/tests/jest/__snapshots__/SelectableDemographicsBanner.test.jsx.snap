@@ -69,7 +69,7 @@ exports[`renders the banner wrapper with all props 1`] = `
           "REA": "3JSDA",
         }
       }
-      isConfidential={false}
+      isConfidential={true}
       isSelectable={true}
       personName="Johnathon Doe"
       photo=""

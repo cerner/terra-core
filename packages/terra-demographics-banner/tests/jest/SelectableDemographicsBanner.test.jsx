@@ -30,6 +30,7 @@ it('renders the banner wrapper with all props', () => {
       gestationalAge="April 5, 2016"
       hashValue="alternative hash"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
+      isConfidential
       personName="Johnathon Doe"
       photo=""
       postMenstrualAge="April 7, 2016"

@@ -4,9 +4,10 @@ ChangeLog
 Unreleased
 ----------
 ### Added 
-* Added selectable demographics banner
+* Added selectable demographics banner.
 * Support terra-avatar to replace profile photo prop.
 * Added flag icon to denote confidentiality.
+* Removed `--` as the fallback display when demographic details are not provided.
 
 3.39.0 - (June 2, 2020)
 ------------------

@@ -53,14 +53,14 @@ exports[`renders a banner that has basic information 1`] = `
 
 exports[`renders a blank banner properly 1`] = `
 <DemographicsBannerDisplay
-  age="--"
+  age=""
   applicationContent={null}
-  dateOfBirth="--"
+  dateOfBirth=""
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}
   deceasedDateLabel="Deceased"
-  gender="--"
+  gender=""
   gestationalAge={null}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
@@ -94,7 +94,7 @@ exports[`renders a blank banner properly 1`] = `
   }
   isConfidential={false}
   isSelectable={false}
-  personName="--"
+  personName=""
   postMenstrualAge={null}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
@@ -104,14 +104,14 @@ exports[`renders a blank banner properly 1`] = `
 
 exports[`renders gestational date with a default label when the label is not provided 1`] = `
 <DemographicsBannerDisplay
-  age="--"
+  age=""
   applicationContent={null}
-  dateOfBirth="--"
+  dateOfBirth=""
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}
   deceasedDateLabel="Deceased"
-  gender="--"
+  gender=""
   gestationalAge="April 5, 2016"
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
@@ -145,7 +145,7 @@ exports[`renders gestational date with a default label when the label is not pro
   }
   isConfidential={false}
   isSelectable={false}
-  personName="--"
+  personName=""
   postMenstrualAge={null}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
@@ -155,14 +155,14 @@ exports[`renders gestational date with a default label when the label is not pro
 
 exports[`renders post menstrural date with a default label when the label is not provided 1`] = `
 <DemographicsBannerDisplay
-  age="--"
+  age=""
   applicationContent={null}
-  dateOfBirth="--"
+  dateOfBirth=""
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}
   deceasedDateLabel="Deceased"
-  gender="--"
+  gender=""
   gestationalAge={null}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
@@ -196,7 +196,7 @@ exports[`renders post menstrural date with a default label when the label is not
   }
   isConfidential={false}
   isSelectable={false}
-  personName="--"
+  personName=""
   postMenstrualAge="April 5, 2016"
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
@@ -391,12 +391,75 @@ exports[`renders the banner that contains additional information 1`] = `
       5%
     </span>
   }
+  dateOfBirth="May 9, 1993"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate={null}
+  deceasedDateLabel="Deceased"
+  gender="Male"
+  gestationalAge={null}
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={
+    Object {
+      "MRN": 12343,
+      "REA": "3JSDA",
+    }
+  }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isConfidential={false}
+  isSelectable={false}
+  personName="Johnathon Doe"
+  photo=""
+  postMenstrualAge={null}
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName="John"
+/>
+`;
+
+exports[`renders the banner with avatar 1`] = `
+<DemographicsBannerDisplay
+  age="25 Years"
+  applicationContent={
+    <span
+      className="risk-score"
+    >
+      5%
+    </span>
+  }
   avatar={
     Object {
       "alt": "Johnathon Doe",
       "color": "neutral",
       "hashValue": "alternative hash",
-      "image": "",
+      "image": "avatar",
       "initials": "JD",
       "isAriaHidden": true,
     }
@@ -446,7 +509,68 @@ exports[`renders the banner that contains additional information 1`] = `
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
-  photo=""
+  postMenstrualAge={null}
+  postMenstrualAgeFullText="Post Menstrual Age"
+  postMenstrualAgeLabel="PMA"
+  preferredFirstName="John"
+/>
+`;
+
+exports[`renders the banner with confidential icon 1`] = `
+<DemographicsBannerDisplay
+  age="25 Years"
+  applicationContent={
+    <span
+      className="risk-score"
+    >
+      5%
+    </span>
+  }
+  dateOfBirth="May 9, 1993"
+  dateOfBirthFullText="Date of Birth"
+  dateOfBirthLabel="DOB"
+  deceasedDate={null}
+  deceasedDateLabel="Deceased"
+  gender="Male"
+  gestationalAge={null}
+  gestationalAgeFullText="Gestational Age"
+  gestationalAgeLabel="GA"
+  identifiers={
+    Object {
+      "MRN": 12343,
+      "REA": "3JSDA",
+    }
+  }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isConfidential={true}
+  isSelectable={false}
+  personName="Johnathon Doe"
   postMenstrualAge={null}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"

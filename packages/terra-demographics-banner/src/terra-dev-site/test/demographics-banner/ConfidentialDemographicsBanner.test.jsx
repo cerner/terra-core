@@ -1,6 +1,5 @@
 import React from 'react';
 import DemographicsBanner from '../../../DemographicsBanner';
-import demographicsImage from '../../doc/assets/demographicsCat.jpg';
 
 export default () => (
   <DemographicsBanner
@@ -10,7 +9,6 @@ export default () => (
     avatar={{
       alt: 'Johnathon Doe',
       color: 'neutral',
-      image: demographicsImage,
       initials: 'JD',
       isAriaHidden: true,
     }}
@@ -19,6 +17,7 @@ export default () => (
     postMenstrualAge="May 13, 2020"
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    isConfidential
     personName="Johnathon Doe"
     preferredFirstName="John"
   />

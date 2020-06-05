@@ -2,21 +2,17 @@
 
 exports[`renders a blank banner wrapper 1`] = `
 <InjectIntl(DemographicsBannerDisplay)
-  age="Terra.demographicsBanner.noDataProvided"
   applicationContent={null}
-  dateOfBirth="Terra.demographicsBanner.noDataProvided"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
   deceasedDate={null}
   deceasedDateLabel="Terra.demographicsBanner.deceased"
-  gender="Terra.demographicsBanner.noDataProvided"
   gestationalAge={null}
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={Object {}}
   isConfidential={false}
   isSelectable={false}
-  personName="Terra.demographicsBanner.noDataProvided"
   photo={null}
   postMenstrualAge={null}
   postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
@@ -60,7 +56,7 @@ exports[`renders the banner wrapper with all props 1`] = `
       "REA": "3JSDA",
     }
   }
-  isConfidential={false}
+  isConfidential={true}
   isSelectable={false}
   personName="Johnathon Doe"
   photo=""

@@ -23,14 +23,6 @@ it('renders the banner that contains additional information', () => {
   const banner = shallowWithIntl(<DemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
-    avatar={{
-      alt: 'Johnathon Doe',
-      color: 'neutral',
-      hashValue: 'alternative hash',
-      image: '',
-      initials: 'JD',
-      isAriaHidden: true,
-    }}
     dateOfBirth="May 9, 1993"
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
@@ -93,6 +85,43 @@ it('renders the banner properly for a deceased person with additional applicatio
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
     personName="Johnathon Doe"
     photo=""
+    preferredFirstName="John"
+  />);
+
+  expect(banner).toMatchSnapshot();
+});
+
+it('renders the banner with avatar', () => {
+  const banner = shallowWithIntl(<DemographicsBannerDisplay
+    applicationContent={<span className="risk-score">5%</span>}
+    age="25 Years"
+    avatar={{
+      alt: 'Johnathon Doe',
+      color: 'neutral',
+      hashValue: 'alternative hash',
+      image: 'avatar',
+      initials: 'JD',
+      isAriaHidden: true,
+    }}
+    dateOfBirth="May 9, 1993"
+    gender="Male"
+    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    personName="Johnathon Doe"
+    preferredFirstName="John"
+  />);
+
+  expect(banner).toMatchSnapshot();
+});
+
+it('renders the banner with confidential icon', () => {
+  const banner = shallowWithIntl(<DemographicsBannerDisplay
+    applicationContent={<span className="risk-score">5%</span>}
+    age="25 Years"
+    dateOfBirth="May 9, 1993"
+    gender="Male"
+    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    isConfidential
+    personName="Johnathon Doe"
     preferredFirstName="John"
   />);
 

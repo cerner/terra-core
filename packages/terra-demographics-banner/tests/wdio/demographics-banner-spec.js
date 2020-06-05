@@ -40,4 +40,10 @@ Terra.describeViewports('Demographics Banner', ['tiny', 'large'], () => {
 
     Terra.it.validatesElement();
   });
+
+  describe('Confidential Icon', () => {
+    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/confidential-demographics-banner'));
+
+    Terra.it.validatesElement();
+  });
 });
