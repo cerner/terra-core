@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import IconFlag from 'terra-icon/lib/icon/IconFlag';
-import IconInfo from 'terra-icon/lib/icon/IconInformation';
 import styles from './DemographicsBanner.module.scss';
 import DemographicsBannerUtils from './_sharedObjects';
 
@@ -79,10 +78,9 @@ const SmallDemographicsBannerDisplay = (props) => {
       </div>
       {isSelectable && (
         <div className={cx('info-tile-container')}>
-          <div className={cx('divider')} />
           <div className={cx('info-tile')}>
             <span className={cx('info-text')}>{infoText}</span>
-            <span className={cx('info-icon')}>{<IconInfo />}</span>
+            <span className={cx('info-icon')}/>
           </div>
         </div>
       )}

@@ -1,11 +1,11 @@
-//Themes
+@import '~terra-mixins/lib/Mixins';
 @import './clinical-lowlight-theme/DemographicsBanner.module';
 @import './orion-fusion-theme/DemographicsBanner.module';
 
 :local {
   .demographics-banner {
     background-clip: border-box;
-    background-color: var(--terra-demographics-banner-background-color, #004c76);
+    background-color: var(--terra-demographics-banner-background-color, #0065a3);
     background-image: var(--terra-demographics-banner-background-image);
     box-shadow: var(--terra-demographics-banner-box-shadow);
     color: var(--terra-demographics-banner-color, #fff);
@@ -78,7 +78,7 @@
 
   .deceased {
     background-clip: border-box;
-    background-color: var(--terra-demographics-banner-deceased-background-color, #1c1f21);
+    background-color: var(--terra-demographics-banner-deceased-background-color, #2d3539);
     background-image: var(--terra-demographics-banner-deceased-background-image);
     color: var(--terra-demographics-banner-deceased-color, #fff);
 
@@ -134,7 +134,6 @@
   }
 
   .is-selectable {
-    border-radius: 4px;
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -155,31 +154,48 @@
     }
 
     &:hover {
-      background-color: var(--terra-demographics-banner--hover-background-color, #0065a3);
+      background-color: var(--terra-demographics-banner--hover-background-color, #007bbd);
       color: var(--terra-demographics-banner--hover-color, #fff);
+    }
+
+    &.deceased:hover {
+      background-color: var(--terra-demographics-banner-deceased-hover-background-color, #595f62);
+      color: var(--terra-demographics-banner-deceased-hover-color, #fff);
     }
   }
 
   .info-tile-container {
+    align-items: center;
+    box-shadow: var(--terra-demographics-banner-info-tile-container-box-shadow, inset 1px 0 0 0 #014a79, inset 2px 0 0 0 rgba(59, 156, 213, 0.6));
     display: flex;
-
-    .divider {
-      border-color: var(--terra-demographics-banner-divider-border-color, #dedfe0);
-      border-style: solid;
-      border-width: var(--terra-demographics-banner-divider-border-width, 0 0 0 1px);
-    }
+    justify-content: center;  
   
     .info-tile {
-      border: 0;
-      margin: var(--terra-demographics-banner-info-tile-margin, auto 0 auto 0.714em);
+      margin: var(--terra-demographics-banner-info-tile-margin, auto 0 auto 0.714rem);
+      padding: var(--terra-demographics-banner-info-tile-padding, 0.14285rem 0.35714rem);
     }
 
     .info-text,
     .info-icon {
       color: var(--terra-demographics-banner-color, #fff);
       display: block;
-      padding: var(--terra-demographics-banner-info-tile-content-padding, 0.3rem 0);
       text-align: center;
+    }
+
+    .info-icon {
+      background-image: var(--terra-demographics-banner-info-icon-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#FFF" d="M24 0C10.7 0 0 10.8 0 24c0 13.3 10.7 24 24 24s24-10.7 24-24S37.3 0 24 0zm2.7 36.8l-.2 1.7c-4.4 3-10.7 2.1-8.1-5.1 1-2.7 4.5-7.8 3.5-10.7-.4-1.2-1.8-1.2-3.2-.7l.2-1.6c2.4-1.7 5.4-2.6 7.6-1.2 3.9 2.5-1.7 11.7-2.4 13.5-1.4 3.8.3 4.7 2.6 4.1zM26.5 15c-1.9 0-3.5-1.6-3.5-3.5S24.6 8 26.5 8 30 9.6 30 11.5 28.4 15 26.5 15z"/></svg>'));
+      background-repeat: no-repeat;
+      height: var(--terra-demographics-banner-info-icon-width, 1.28571rem);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: var(--terra-demographics-banner-info-icon-margin-top, 0.35714rem);
+      width: var(--terra-demographics-banner-info-icon-height, 1.28571rem);
+    }
+
+    .deceased {
+      .info-tile-container {
+        box-shadow: var(--terra-demographics-banner-deceased-info-tile-container-box-shadow, inset 1px 0 0 0 rgba(0, 0, 0, 0.8), inset 2px 0 0 0 rgba(255, 255, 255, 0.3));
+      }
     }
   }
 }
