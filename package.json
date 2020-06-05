@@ -78,9 +78,9 @@
     "start-prod": "tt-serve --env.disableHotReloading -p",
     "start-static": "tt-serve-static --site ./build",
     "test": "npm run lint && npm run jest && npm run wdio",
-    "wdio-default": "NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
-    "wdio-lowlight": "NODE_OPTIONS=--max-old-space-size=2048 THEME=clinical-lowlight-theme wdio config/wdio/clinical-lowlight-theme/wdio.conf.js",
-    "wdio-fusion": "NODE_OPTIONS=--max-old-space-size=2048 THEME=orion-fusion-theme wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
+    "wdio-default": "wdio",
+    "wdio-lowlight": "THEME=clinical-lowlight-theme wdio",
+    "wdio-fusion": "THEME=orion-fusion-theme wdio",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   },
   "devDependencies": {
