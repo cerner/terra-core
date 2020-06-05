@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added `isOpen` prop for programmatic toggle.
 
 2.35.0 - (May 19, 2020)
 ------------------

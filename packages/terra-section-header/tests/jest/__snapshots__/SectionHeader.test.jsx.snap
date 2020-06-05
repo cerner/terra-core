@@ -1,5 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SectionHeader correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <SectionHeader
+    isOpen={false}
+    isTransparent={false}
+    level={2}
+    title="foo"
+  >
+    <div
+      className="section-header orion-fusion-theme"
+    >
+      <Arrange
+        fill={
+          <h2
+            className="title"
+          >
+            foo
+          </h2>
+        }
+      >
+        <div
+          className="arrange"
+        >
+          <div
+            className="fit"
+          />
+          <div
+            className="fill"
+          >
+            <h2
+              className="title"
+            >
+              foo
+            </h2>
+          </div>
+          <div
+            className="fit"
+          />
+        </div>
+      </Arrange>
+    </div>
+  </SectionHeader>
+</ThemeContextProvider>
+`;
+
 exports[`SectionHeader should render a default component 1`] = `
 <div
   className="section-header"
