@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl } from 'terra-enzyme-intl';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
@@ -53,5 +55,14 @@ it('should render an error status-view', () => {
   const statusView = (<StatusView variant={StatusViewVariants.ERROR} />);
 
   const wrapper = mountWithIntl(statusView);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mountWithIntl(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <StatusView />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });
