@@ -114,38 +114,35 @@ const Switch = (props) => {
   delete customProps.className;
   return (
     <div {...customProps} className={mainClasses}>
-      <div className={switchClassNames}>
-        {' '}
-        {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
-        <label
-          htmlFor={switchId}
-          onMouseDown={handleOnMouseDown}
-          onBlur={handleOnBlur}
-        >
+      {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
+      <label
+        htmlFor={switchId}
+        onKeyDown={handleOnKeyDown}
+        onMouseDown={handleOnMouseDown}
+        onBlur={handleOnBlur}
+      >
+        <div className={switchClassNames}>
           <div className={cx('label-container')}>
             <div id={labelId} className={cx('label-text')}>{labelText}</div>
             <div className={cx('status-label-text')}>{statusLabelText}</div>
           </div>
-        </label>
-        <div className={trayClassNames}>
-          <button
-            type="button"
-            id={switchId}
-            disabled={isDisabled}
-            aria-checked={isChecked}
-            aria-labelledby={labelId}
-            className={sliderClassNames}
-            role="switch"
-            tabIndex="0"
-            onClick={handleOnClick}
-            onKeyDown={handleOnKeyDown}
-            onMouseDown={handleOnMouseDown}
-            onBlur={handleOnBlur}
-            data-terra-switch-show-focus-styles
-            ref={sliderButton}
-          />
+          <div className={trayClassNames}>
+            <button
+              type="button"
+              id={switchId}
+              disabled={isDisabled}
+              aria-checked={isChecked}
+              aria-labelledby={labelId}
+              className={sliderClassNames}
+              role="switch"
+              tabIndex="0"
+              onClick={handleOnClick}
+              data-terra-switch-show-focus-styles
+              ref={sliderButton}
+            />
+          </div>
         </div>
-      </div>
+      </label>
     </div>
   );
 };
