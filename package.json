@@ -77,7 +77,7 @@
     "start-heroku": "tt-serve-static --port $PORT --site './build'",
     "start-prod": "tt-serve --env.disableHotReloading -p",
     "start-static": "tt-serve-static --site ./build",
-    "test": "npm run jest && npm run wdio",
+    "test": "npm run lint && npm run jest && npm run wdio",
     "wdio-default": "NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
     "wdio-lowlight": "NODE_OPTIONS=--max-old-space-size=2048 THEME=clinical-lowlight-theme wdio config/wdio/clinical-lowlight-theme/wdio.conf.js",
     "wdio-fusion": "NODE_OPTIONS=--max-old-space-size=2048 THEME=orion-fusion-theme wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
