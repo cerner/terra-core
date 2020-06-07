@@ -1,0 +1,30 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .clinical-lowlight-theme {
+    --terra-show-hide-v1-button-color: #007ee0;
+    --terra-show-hide-v1-button-font-size: 1rem;
+    --terra-show-hide-v1-button-line-height: 1.429;
+    --terra-show-hide-v1-button-padding-bottom: 0.21428rem;
+    --terra-show-hide-v1-button-padding-left: 0;
+    --terra-show-hide-v1-button-padding-right: 0;
+    --terra-show-hide-v1-button-padding-top: 0.21428rem;
+    --terra-show-hide-v1-button-text-decoration: none;
+    --terra-show-hide-v1-button-icon-height: 0.7143em;
+    --terra-show-hide-v1-button-icon-width: 0.7143em;
+    --terra-show-hide-v1-button-icon-margin-left: 0.28571em;
+    --terra-show-hide-v1-button-focus-background-color: transparent;
+    --terra-show-hide-v1-button-focus-border-radius: 0.2142rem;
+    --terra-show-hide-v1-button-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+    --terra-show-hide-v1-button-focus-color: #007ee0;
+    --terra-show-hide-v1-button-focus-text-decoration: underline;
+    --terra-show-hide-v1-button-hover-background-color: none;
+    --terra-show-hide-v1-button-hover-color: #003f61;
+    --terra-show-hide-v1-button-hover-text-decoration: underline;
+    --terra-show-hide-v1-button-active-color: #003f61;
+
+    @include terra-inline-svg-var('--terra-show-hide-v1-button-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#007ee0" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>');
+    @include terra-inline-svg-var('--terra-show-hide-v1-button-focus-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#007ee0" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>');
+    @include terra-inline-svg-var('--terra-show-hide-v1-button-hover-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#003f61" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>');
+  }
+}
