@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Tag from '../../src/Tag';
 
 describe('Tag', () => {
@@ -34,6 +36,15 @@ describe('Tag', () => {
 
   it('should render as an button tag when href is not provided', () => {
     const tag = shallow(<Tag text="text" onClick={() => {}} />);
+    expect(tag).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const tag = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Tag text="Normal" />
+      </ThemeContextProvider>,
+    );
     expect(tag).toMatchSnapshot();
   });
 });
