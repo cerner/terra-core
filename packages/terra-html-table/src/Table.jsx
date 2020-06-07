@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Table.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -32,17 +34,22 @@ const Table = ({
   paddingStyle,
   ...customProps
 }) => {
-  const tableClassNames = cx([
-    'table',
-    { striped: !disableStripes },
-    { 'padding-standard': paddingStyle === 'standard' },
-    { 'padding-compact': paddingStyle === 'compact' },
-  ]);
+  const theme = React.useContext(ThemeContext);
+  const tableClassNames = classNames(
+    cx(
+      'table',
+      { striped: !disableStripes },
+      { 'padding-standard': paddingStyle === 'standard' },
+      { 'padding-compact': paddingStyle === 'compact' },
+      theme.className,
+    ),
+    customProps.className,
+  );
 
   return (
     <table
       {...customProps}
-      className={customProps.className ? `${tableClassNames} ${customProps.className}` : tableClassNames}
+      className={tableClassNames}
     >
       {children}
     </table>
