@@ -3,6 +3,11 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Added clinical-lowlight-theme theming files
+
+### Changed
+* Apply themes by context and directly include packaged themes.
 
 1.4.0 - (April 28, 2020)
 ------------------
