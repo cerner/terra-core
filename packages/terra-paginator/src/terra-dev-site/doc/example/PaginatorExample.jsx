@@ -53,7 +53,7 @@ class PaginatorExample extends React.Component {
         <Dialog
           header={(
             <h1>
-Page
+              Page
               {this.state.currentPage}
             </h1>
 )}
