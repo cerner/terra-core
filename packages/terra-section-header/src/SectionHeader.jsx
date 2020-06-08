@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
 import Arrange from 'terra-arrange';
 import styles from './SectionHeader.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -87,6 +89,8 @@ class SectionHeader extends React.Component {
       ...customProps
     } = this.props;
 
+    const theme = this.context;
+
     if ((process.env.NODE_ENV !== 'production') && (!onClick && isOpen)) {
       // eslint-disable-next-line no-console
       console.warn('\'isOpen\' are intended to be used only when \'onClick\' is provided.');
@@ -112,13 +116,16 @@ class SectionHeader extends React.Component {
       </div>
     );
 
-    const sectionHeaderClassNames = cx([
-      'section-header',
-      { 'is-interactable': onClick },
-      { 'is-active': this.state.isActive },
-      { 'is-transparent': isTransparent },
+    const sectionHeaderClassNames = classNames(
+      cx(
+        'section-header',
+        { 'is-interactable': onClick },
+        { 'is-active': this.state.isActive },
+        { 'is-transparent': isTransparent },
+        theme.className,
+      ),
       customProps.className,
-    ]);
+    );
 
     const Element = `h${level}`;
 
@@ -141,5 +148,6 @@ class SectionHeader extends React.Component {
 
 SectionHeader.propTypes = propTypes;
 SectionHeader.defaultProps = defaultProps;
+SectionHeader.contextType = ThemeContext;
 
 export default SectionHeader;
