@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Spacer correctly applies the theme context className 1`] = `
+<div
+  class="margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none orion-fusion-theme"
+>
+  <div>
+    Test Component
+  </div>
+</div>
+`;
+
 exports[`Spacer it should pass in a custom prop 1`] = `
 <div
   class="margin-top-none margin-bottom-none margin-left-none margin-right-none padding-top-none padding-bottom-none padding-left-none padding-right-none spacer"
