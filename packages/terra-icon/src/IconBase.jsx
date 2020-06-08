@@ -83,11 +83,12 @@ const IconBase = ({
   // append to existing classNames
   const classes = classNames(
     cx(
-    'tui-Icon',
-    'icon',
-    { 'is-bidi': isBidi },
-    { 'is-spin': isSpin },
-    theme.className,),
+      'tui-Icon',
+      'icon',
+      { 'is-bidi': isBidi },
+      { 'is-spin': isSpin },
+      theme.className,
+    ),
     attributes.className,
   );
 
