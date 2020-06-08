@@ -30,11 +30,11 @@ class OpenCloseEventToggleButton extends React.Component {
       <div>
         <div id="on-open-event">
           <p>
-Times Opened:
+            Times Opened:
             <span className={cx('times-wrapper')}>{this.state.timesOpened}</span>
           </p>
           <p>
-Times Closed:
+            Times Closed:
             <span className={cx('times-wrapper')}>{this.state.timesClosed}</span>
           </p>
         </div>

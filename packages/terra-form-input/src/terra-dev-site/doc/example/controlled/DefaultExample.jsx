@@ -26,7 +26,7 @@ class DefaultExample extends React.Component {
           />
         </Field>
         <p>
-Input Provided:
+          Input Provided:
           {this.state.input}
         </p>
       </div>

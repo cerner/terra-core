@@ -56,7 +56,7 @@ class FieldsetExamples extends React.Component {
         </Fieldset>
         <hr />
         <p>
-Full Name Provided:
+          Full Name Provided:
           <span className={cx('fieldset-wrapper')}>
             {this.state.first}
             {' '}
