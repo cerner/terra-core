@@ -86,7 +86,7 @@ exports[`correctly applies the theme context className 1`] = `
             >
               <svg
                 aria-hidden="true"
-                className="tui-Icon icon IconError"
+                className="tui-Icon icon orion-fusion-theme IconError"
                 focusable="false"
                 height="1em"
                 viewBox="0 0 48 48"

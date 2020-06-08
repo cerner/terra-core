@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated jest due to icon theme context.
 
 4.3.0 - (May 19, 2020)
 ------------------
