@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Update wdio test configuration to use root wdio config
 
 4.7.0 - (April 28, 2020)
 ------------------
