@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
 import styles from './Tag.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -76,12 +78,17 @@ class Tag extends React.Component {
       ...customProps
     } = this.props;
 
-    const tagClasses = cx([
-      'tag',
-      { 'is-focused': this.state.focused },
-      { 'is-interactive': href || onClick },
+    const theme = this.context;
+
+    const tagClasses = classNames(
+      cx(
+        'tag',
+        { 'is-focused': this.state.focused },
+        { 'is-interactive': href || onClick },
+        theme.className,
+      ),
       customProps.className,
-    ]);
+    );
 
     const iconClass = cx('icon');
 
@@ -108,4 +115,6 @@ class Tag extends React.Component {
 }
 
 Tag.propTypes = propTypes;
+Tag.contextType = ThemeContext;
+
 export default Tag;

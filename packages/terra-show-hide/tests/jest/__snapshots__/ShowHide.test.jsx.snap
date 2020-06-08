@@ -1,5 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ShowHide correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <InjectIntl(ShowHide)
+    onChange={[Function]}
+    preview={
+      <p>
+        Test
+      </p>
+    }
+  >
+    <ShowHide
+      buttonAlign="start"
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      isOpen={false}
+      onChange={[Function]}
+      preview={
+        <p>
+          Test
+        </p>
+      }
+    >
+      <div>
+        <p>
+          Test
+        </p>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+        <div
+          className="show-hide"
+        >
+          <Button
+            aria-expanded={false}
+            className="show-hide button start"
+            onClick={[Function]}
+            text="Terra.showhide.showmore"
+          >
+            <button
+              aria-expanded={false}
+              className="button orion-fusion-theme show-hide button start"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              type="button"
+            >
+              <span
+                className="inner"
+              >
+                <span
+                  className="text"
+                >
+                  Terra.showhide.showmore
+                </span>
+                <span
+                  className="icon-holder"
+                >
+                  <span
+                    className="icon"
+                  />
+                </span>
+              </span>
+            </button>
+          </Button>
+        </div>
+      </div>
+    </ShowHide>
+  </InjectIntl(ShowHide)>
+</ThemeContextProvider>
+`;
+
 exports[`ShowHide should append data passed in with attributes 1`] = `
 <InjectIntl(ShowHide)
   data-terra-text-mock="MockData"
