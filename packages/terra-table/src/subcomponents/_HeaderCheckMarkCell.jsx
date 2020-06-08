@@ -117,6 +117,15 @@ const HeaderCheckMarkCell = ({
     } else {
       attrCheck['aria-checked'] = false;
     }
+  } else {
+    if (isDisabled) {
+      attrCheck['aria-disabled'] = true;
+    }
+    if (isSelected) {
+      attrCheck['aria-checked'] = isIndeterminate ? 'mixed' : true;
+    } else {
+      attrCheck['aria-checked'] = false;
+    }
   }
 
   let attrPadding;

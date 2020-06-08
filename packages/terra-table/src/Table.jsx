@@ -165,6 +165,7 @@ const createCheckCell = (rowData, rowStyle, checkStyle) => {
         label={cellLabel}
         isSelected={cellActiveState}
         isHidden
+        isDisabled={rowData.isDisabled}
       />
     );
   }
@@ -214,6 +215,9 @@ const createHeaderCheckCell = (columnData, rowStyle, checkStyle) => {
       <HeaderCheckMarkCell
         label={cellLabel}
         isHidden
+        isDisabled={cellDisabled}
+        isSelected={cellStatus === 'checked' || cellStatus === 'indeterminate'}
+        isIndeterminate={cellStatus === 'indeterminate'}
       />
     );
   }
