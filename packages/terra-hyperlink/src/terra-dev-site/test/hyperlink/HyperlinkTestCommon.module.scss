@@ -6,4 +6,26 @@
   .hyperlink-states {
     padding: 0 10px;
   }
+
+  .is-visited {
+    color: var(--terra-hyperlink-visited-color, #006fc3);
+  }
+
+  .is-hovered {
+    background-color: var(--terra-hyperlink-hover-background-color);
+    color: var(--terra-hyperlink-hover-color, #001f67);
+    text-decoration: var(--terra-hyperlink-hover-text-decoration, underline);
+  }
+
+  .is-focused {
+    background-color: var(--terra-hyperlink-focus-background-color, transparent);
+    border-radius: var(--terra-hyperlink-focus-border-radius, 0.2142rem);
+    box-shadow: var(--terra-hyperlink-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
+    color: var(--terra-hyperlink-focus-color, #001f67);
+    text-decoration: var(--terra-hyperlink-focus-text-decoration, underline);
+  }
+
+  .is-active {
+    color: var(--terra-hyperlink-active-color, #001f67);
+  }
 }

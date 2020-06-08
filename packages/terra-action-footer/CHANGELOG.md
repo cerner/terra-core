@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update wdio test configuration to use root wdio config
+
 ### Fixed
 * Text in footer not wrapping in IE 10
 

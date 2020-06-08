@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import { FormattedMessage } from 'react-intl';
 import Button from 'terra-button';
 import Divider from 'terra-divider';
 import styles from './StatusView.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const StatusViewVariants = {
   NODATA: 'no-data',
@@ -85,6 +87,8 @@ const StatusView = ({
   variant,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
+
   let glyphSection;
   if (customGlyph && !isGlyphHidden) {
     glyphSection = (
@@ -143,11 +147,14 @@ const StatusView = ({
     );
   }
 
-  const outerViewClassNames = cx([
-    'outer-view',
-    { 'is-aligned-top': isAlignedTop },
+  const outerViewClassNames = classNames(
+    cx(
+      'outer-view',
+      { 'is-aligned-top': isAlignedTop },
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   const innerViewClassNames = cx([
     'inner-view',
