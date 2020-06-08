@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Minor file changes to comply with eslint rules
+* Update wdio test configuration to use root wdio config
 
 3.25.0 - (May 5, 2020)
 ------------------
