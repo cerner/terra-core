@@ -1,11 +1,13 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
 import styles from './_ShowHideButton.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -101,12 +103,17 @@ class Button extends React.Component {
       ...customProps
     } = this.props;
 
-    const buttonClasses = cx([
-      'button',
-      { 'is-active': this.state.active },
-      { 'is-focused': this.state.focused },
+    const theme = this.context;
+
+    const buttonClasses = classNames(
+      cx([
+        'button',
+        { 'is-active': this.state.active },
+        { 'is-focused': this.state.focused },
+        theme.className,
+      ]),
       customProps.className,
-    ]);
+    );
 
     return (
       <button
@@ -135,5 +142,6 @@ class Button extends React.Component {
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
+Button.contextType = ThemeContext;
 
 export default Button;
