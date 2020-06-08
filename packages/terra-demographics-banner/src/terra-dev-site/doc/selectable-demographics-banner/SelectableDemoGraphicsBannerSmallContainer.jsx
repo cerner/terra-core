@@ -7,12 +7,6 @@ import styles from '../example/DemographicsBannerSmallContainer.module.scss';
 const cx = classNames.bind(styles);
 
 const SelectableDemoGraphicsBannerSmallContainer = () => {
-  const [message, setMessage] = useState('');
-
-  const handleDemographicsClick = () => {
-    setMessage('Demographics Banner Clicked');
-  };
-
   return (
     <div className={cx('content-wrapper')}>
       <SelectableDemographicsBanner
@@ -30,9 +24,8 @@ const SelectableDemoGraphicsBannerSmallContainer = () => {
         identifiers={{ MRN: 12343, REA: '3JSDA' }}
         personName="Johnathon Doe"
         preferredFirstName="John"
-        onClick={handleDemographicsClick}
+        onClick={() => alert('Demographics banner clicked!')}
       />
-      <span>{message}</span>
     </div>
   );
 };
