@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Toolbar from '../../src/Toolbar';
 
 describe('Toolbar', () => {
@@ -36,5 +38,14 @@ describe('Toolbar', () => {
   it('should apply custom class', () => {
     const wrapper = shallow(<Toolbar className="testing" />);
     expect(wrapper.hasClass('testing'));
+  });
+
+  it('correctly applies the theme context className', () => {
+    const wrapper = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        {defaultRender}
+      </ThemeContextProvider>,
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 });
