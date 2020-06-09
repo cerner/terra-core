@@ -1,5 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Signature correctly applies the theme context className 1`] = `
+<canvas
+  class="signature orion-fusion-theme"
+  id="foo"
+/>
+`;
+
 exports[`Signature should have custom props 1`] = `
 <canvas
   class="signature"

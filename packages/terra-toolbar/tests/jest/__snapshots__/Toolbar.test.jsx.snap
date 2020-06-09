@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Toolbar correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Toolbar
+    align="start"
+  >
+    <div
+      className="toolbar start-align orion-fusion-theme"
+    />
+  </Toolbar>
+</ThemeContextProvider>
+`;
+
 exports[`Toolbar should render a default component 1`] = `
 <div
   className="toolbar start-align"

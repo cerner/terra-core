@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Signature from '../../src/Signature';
 
 describe('Signature', () => {
@@ -24,5 +26,14 @@ describe('Signature', () => {
     const singleLine = <Signature id="foo" />;
     const signature = render(singleLine);
     expect(signature).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const wrapper = render(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Signature id="foo" />
+      </ThemeContextProvider>,
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 });
