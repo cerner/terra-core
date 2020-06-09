@@ -1,5 +1,9 @@
 // Icon Component
 // ====================================================
+// Themes
+@import './clinical-lowlight-theme/Icon.module';
+@import './orion-fusion-theme/Icon.module';
+
 :local {
   .icon {
     display: inline-block;
