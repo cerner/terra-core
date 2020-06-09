@@ -254,4 +254,13 @@ describe('Icon', () => {
       });
     });
   });
+
+  it('correctly applies the theme context className', () => {
+    jest.spyOn(React, 'useContext')
+      .mockReturnValue({
+        className: 'clinical-lowlight-theme',
+      });
+    const wrapper = mount(<IconAdd />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
