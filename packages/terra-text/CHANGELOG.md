@@ -4,6 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Changed
+* Minor changes to comply with eslint rules
 * Update wdio test configuration to use root wdio config
 
 4.30.0 - (May 19, 2020)
