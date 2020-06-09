@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Text from '../../src/Text';
 
 describe('Text', () => {
@@ -108,5 +110,14 @@ describe('Text', () => {
     } catch (e) {
       expect(e.message).toContain('The prop `children` is marked as required');
     }
+  });
+
+  it('correctly applies the theme context className', () => {
+    const tag = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Text>Test</Text>
+      </ThemeContextProvider>,
+    );
+    expect(tag).toMatchSnapshot();
   });
 });
