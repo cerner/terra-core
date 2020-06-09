@@ -100,32 +100,23 @@ const HeaderCheckMarkCell = ({
 }) => {
   const attrSpread = { role: 'none' };
   const attrCheck = {};
-  if (!isHidden && isSelectable) {
-    if (isDisabled) {
-      attrCheck['aria-disabled'] = true;
-    } else {
-      attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
-      attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-      attrSpread.tabIndex = '0';
-      attrSpread['data-cell-show-focus'] = 'true';
-      attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
-      attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
-    }
+  if (!isHidden && isSelectable && !isDisabled) {
+    attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
+    attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    attrSpread.tabIndex = '0';
+    attrSpread['data-cell-show-focus'] = 'true';
+    attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
+    attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
+  }
 
-    if (isSelected) {
-      attrCheck['aria-checked'] = isIndeterminate ? 'mixed' : true;
-    } else {
-      attrCheck['aria-checked'] = false;
-    }
+  if (isDisabled) {
+    attrCheck['aria-disabled'] = true;
+  }
+
+  if (isSelected) {
+    attrCheck['aria-checked'] = isIndeterminate ? 'mixed' : true;
   } else {
-    if (isDisabled) {
-      attrCheck['aria-disabled'] = true;
-    }
-    if (isSelected) {
-      attrCheck['aria-checked'] = isIndeterminate ? 'mixed' : true;
-    } else {
-      attrCheck['aria-checked'] = false;
-    }
+    attrCheck['aria-checked'] = false;
   }
 
   let attrPadding;
@@ -147,7 +138,7 @@ const HeaderCheckMarkCell = ({
       ref={refCallback}
       role="columnheader"
     >
-      <VisuallyHiddenText aria-checked={isSelected} role="checkbox" {...attrCheck} text={label} />
+      <VisuallyHiddenText role="checkbox" {...attrCheck} text={label} />
       <div {...attrPadding} className={cx({ container: !isHidden })}>
         <div
           className={cx(

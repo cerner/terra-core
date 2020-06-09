@@ -101,31 +101,27 @@ const CheckMarkCell = ({
 }) => {
   const attrSpread = { 'aria-selected': isSelected };
   const attrCheck = {};
-  if (isHidden || isIcon) {
-    if (isDisabled) {
-      attrCheck['aria-disabled'] = true;
-    } else {
-      // A user of a screenreader still need a keyboard accessible method of selection, so providing -1 index and kydown.
-      attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-      attrSpread.tabIndex = '-1';
-    }
-  } else if (isSelectable) {
-    if (isDisabled) {
-      attrCheck['aria-disabled'] = true;
-    } else {
-      attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
-      attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-      attrSpread.tabIndex = '0';
-      attrSpread['data-cell-show-focus'] = 'true';
-      attrSpread.onBlur = wrappedEventCallback(onBlur, event => {
-        event.stopPropagation();
-        event.currentTarget.setAttribute('data-cell-show-focus', 'true');
-      });
-      attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => {
-        event.stopPropagation();
-        event.currentTarget.setAttribute('data-cell-show-focus', 'false');
-      });
-    }
+  if ((isHidden || isIcon) && !isDisabled) {
+    // A user of a screenreader still need a keyboard accessible method of selection, so providing -1 index and kydown.
+    attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    attrSpread.tabIndex = '-1';
+  } else if (isSelectable && !isDisabled) {
+    attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
+    attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
+    attrSpread.tabIndex = '0';
+    attrSpread['data-cell-show-focus'] = 'true';
+    attrSpread.onBlur = wrappedEventCallback(onBlur, event => {
+      event.stopPropagation();
+      event.currentTarget.setAttribute('data-cell-show-focus', 'true');
+    });
+    attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => {
+      event.stopPropagation();
+      event.currentTarget.setAttribute('data-cell-show-focus', 'false');
+    });
+  }
+
+  if (isDisabled) {
+    attrCheck['aria-disabled'] = true;
   }
 
   let attrPadding;
