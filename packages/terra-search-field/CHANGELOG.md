@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Update jest due to form-input theme context.
 * Update wdio test configuration to use root wdio config
 
 3.50.0 - (June 2, 2020)
