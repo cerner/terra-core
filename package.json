@@ -25,7 +25,7 @@
     "extends browserslist-config-terra"
   ],
   "eslintConfig": {
-    "extends": "terra",
+    "extends": "@cerner/terra",
     "overrides": [
       {
         "files": [
@@ -77,10 +77,10 @@
     "start-heroku": "tt-serve-static --port $PORT --site './build'",
     "start-prod": "tt-serve --env.disableHotReloading -p",
     "start-static": "tt-serve-static --site ./build",
-    "test": "npm run jest && npm run wdio",
-    "wdio-default": "NODE_OPTIONS=--max-old-space-size=2048 wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
-    "wdio-lowlight": "NODE_OPTIONS=--max-old-space-size=2048 THEME=clinical-lowlight-theme wdio config/wdio/clinical-lowlight-theme/wdio.conf.js",
-    "wdio-fusion": "NODE_OPTIONS=--max-old-space-size=2048 THEME=orion-fusion-theme wdio node_modules/terra-toolkit/config/wdio/wdio.conf.js",
+    "test": "npm run lint && npm run jest && npm run wdio",
+    "wdio-default": "wdio",
+    "wdio-lowlight": "THEME=clinical-lowlight-theme wdio",
+    "wdio-fusion": "THEME=orion-fusion-theme wdio",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   },
   "devDependencies": {
@@ -90,6 +90,7 @@
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
+    "@cerner/eslint-config-terra": "^4.0.0",
     "babel-jest": "^24.8.0",
     "browserslist-config-terra": "^1.0.0",
     "check-installed-dependencies": "^1.0.0",
@@ -99,7 +100,6 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.2.2",
     "eslint": "^6.1.0",
-    "eslint-config-terra": "^3.0.0",
     "gh-pages": "^2.0.1",
     "glob": "^7.1.2",
     "identity-obj-proxy": "^3.0.0",

@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './CellGrid.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -27,16 +29,22 @@ const CellGrid = ({
   refCallback,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
+
   const divider = dividerStyle ? `divider-${dividerStyle}` : undefined;
-  const cellGridClassNames = cx([
-    'cell-grid',
-    divider,
-  ]);
+  const cellGridClassNames = classNames(
+    cx(
+      'cell-grid',
+      divider,
+      theme.className,
+    ),
+    customProps.className,
+  );
 
   return (
     <div
       {...customProps}
-      className={customProps.className ? `${cellGridClassNames} ${customProps.className}` : cellGridClassNames}
+      className={cellGridClassNames}
       ref={refCallback}
     >
       {children}
