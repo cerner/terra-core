@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Text.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 /* eslint-disable quote-props */
 const TextFontSize = {
@@ -76,18 +78,23 @@ const defaultProps = {
 const Text = ({
   children, isVisuallyHidden, isItalic, fontSize, weight, isWordWrapped, colorClass, ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
+
   const attributes = { ...customProps };
-  const TextClassNames = cx([
-    'text',
-    { 'inherit-color': !colorClass }, // set `color: inherit` via class if colorClass is not provided
-    { italic: isItalic },
-    { 'word-wrap': isWordWrapped },
-    { 'visually-hidden': isVisuallyHidden },
-    { [`font-size-${fontSize}`]: fontSize },
-    { [`font-weight-${weight}`]: weight },
-    colorClass,
+  const TextClassNames = classNames(
+    cx([
+      'text',
+      { 'inherit-color': !colorClass }, // set `color: inherit` via class if colorClass is not provided
+      { italic: isItalic },
+      { 'word-wrap': isWordWrapped },
+      { 'visually-hidden': isVisuallyHidden },
+      { [`font-size-${fontSize}`]: fontSize },
+      { [`font-weight-${weight}`]: weight },
+      colorClass,
+      theme.className,
+    ]),
     attributes.className,
-  ]);
+  );
 
   return (
     <span {...attributes} className={TextClassNames}>
