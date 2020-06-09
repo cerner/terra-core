@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Changed
 * Updated jest due to icon theme context.
+* Update wdio test configuration to use root wdio config
 
 4.5.0 - (May 26, 2020)
 ------------------

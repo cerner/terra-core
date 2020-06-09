@@ -24,7 +24,7 @@ const DefaultIncompleteExample = () => {
         />
       </Field>
       <p>
-Input Provided:
+        Input Provided:
         {input}
       </p>
     </div>

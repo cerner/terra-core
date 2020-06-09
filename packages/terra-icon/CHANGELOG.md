@@ -5,11 +5,13 @@ Unreleased
 ----------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Update wdio test configuration to use root wdio config
 
 3.31.0 - (May 19, 2020)
 ------------------
 ### Changed
 * Updated wdio screenshot tests to accommodate Bluetooth icon
+
 ### Added
 * Added Bluetooth icon
 
