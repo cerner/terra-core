@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import Input from '../../src/Input';
 
 describe('Input', () => {
@@ -75,5 +76,14 @@ describe('Input', () => {
     const input = <Input defaultValue="foo" ariaLabel="ariaLabel" aria-label="aria-label" />;
     const wrapper = shallow(input);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const input = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        {defaultRender}
+      </ThemeContextProvider>,
+    );
+    expect(input).toMatchSnapshot();
   });
 });

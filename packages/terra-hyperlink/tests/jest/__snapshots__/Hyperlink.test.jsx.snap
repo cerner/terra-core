@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Hyperlink correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Hyperlink
+    href="https://www.cerner.com"
+    isDisabled={false}
+    variant="default"
+  >
+    <a
+      aria-disabled={false}
+      className="hyperlink default orion-fusion-theme"
+      href="https://www.cerner.com"
+      onBlur={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+    >
+      Default hyperlink
+    </a>
+  </Hyperlink>
+</ThemeContextProvider>
+`;
+
 exports[`Hyperlink should render a audio hyperlink 1`] = `
 <a
   aria-disabled="false"

@@ -72,3 +72,38 @@ exports[`Icon IconSpinner should shallow IconBase 1`] = `
   />
 </IconBase>
 `;
+
+exports[`Icon correctly applies the theme context className 1`] = `
+<IconAdd
+  data-name="Layer 1"
+  viewBox="0 0 48 48"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <IconBase
+    ariaLabel={null}
+    data-name="Layer 1"
+    focusable="false"
+    height="1em"
+    isBidi={false}
+    isSpin={false}
+    viewBox="0 0 48 48"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <svg
+      aria-hidden="true"
+      className="tui-Icon icon clinical-lowlight-theme"
+      data-name="Layer 1"
+      focusable="false"
+      height="1em"
+      viewBox="0 0 48 48"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M48 21H27V0h-6v21H0v6h21v21h6V27h21z"
+      />
+    </svg>
+  </IconBase>
+</IconAdd>
+`;

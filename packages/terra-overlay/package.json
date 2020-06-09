@@ -1,7 +1,7 @@
 {
   "name": "terra-overlay",
   "main": "lib/Overlay.js",
-  "version": "3.48.0",
+  "version": "3.50.0",
   "description": "The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.",
   "repository": {
     "type": "git",
@@ -33,10 +33,10 @@
     "mutationobserver-shim": "0.3.3",
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
-    "terra-button": "^3.39.0",
-    "terra-icon": "^3.31.0",
-    "wicg-inert": "^3.0.0",
-    "terra-theme-context": "^1.0.0"
+    "terra-button": "^3.41.0",
+    "terra-icon": "^3.32.0",
+    "terra-theme-context": "^1.0.0",
+    "wicg-inert": "^3.0.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -44,11 +44,11 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
-    "test": "npm run jest && npm run wdio",
+    "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
-    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
-    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-default": "cd ../.. && npx wdio",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

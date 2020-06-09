@@ -4,6 +4,17 @@ ChangeLog
 Unreleased
 ----------
 
+3.40.0 - (June 9, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+* Update wdio test configuration to use root wdio config
+
+3.39.0 - (June 2, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.38.0 - (May 19, 2020)
 ------------------
 ### Changed

@@ -3,6 +3,15 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.32.0 - (June 9, 2020)
+------------------
+### Changed
+* Minor file changes to comply with eslint rules
+* Update wdio test configuration to use root wdio config
+
+4.31.0 - (June 2, 2020)
+------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
 

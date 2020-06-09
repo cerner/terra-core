@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/CellGrid.module';
+@import './orion-fusion-theme/CellGrid.module';
+
 :local {
   .cell-grid {
     display: flex;

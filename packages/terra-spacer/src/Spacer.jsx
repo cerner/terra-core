@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Spacer.module.scss';
 import { mapShorthandToObject, shorthandValidator } from './_spacerShorthandUtils';
 import { SpacerSizes, SpacerClassMappings } from './_spacerConstants';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 /*
   NOTE: this is needed in order to ensure that the types `marginTop`, `marginRight`, `paddingTop`, `paddingRight`, etc. are recognized by terra-props-table
@@ -94,6 +96,7 @@ const Spacer = ({
   children,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
   const marginShorthand = margin ? mapShorthandToObject('margin', margin) : {};
   const paddingShorthand = padding ? mapShorthandToObject('padding', padding) : {};
 
@@ -113,18 +116,21 @@ const Spacer = ({
     ...paddingShorthand,
   };
 
-  const SpacerClassNames = cx([
-    `margin-top-${SpacerClassMappings[marginAttributes.marginTop]}`,
-    `margin-bottom-${SpacerClassMappings[marginAttributes.marginBottom]}`,
-    `margin-left-${SpacerClassMappings[marginAttributes.marginLeft]}`,
-    `margin-right-${SpacerClassMappings[marginAttributes.marginRight]}`,
-    `padding-top-${SpacerClassMappings[paddingAttributes.paddingTop]}`,
-    `padding-bottom-${SpacerClassMappings[paddingAttributes.paddingBottom]}`,
-    `padding-left-${SpacerClassMappings[paddingAttributes.paddingLeft]}`,
-    `padding-right-${SpacerClassMappings[paddingAttributes.paddingRight]}`,
-    { 'is-inline-block': isInlineBlock },
+  const SpacerClassNames = classNames(
+    cx(
+      `margin-top-${SpacerClassMappings[marginAttributes.marginTop]}`,
+      `margin-bottom-${SpacerClassMappings[marginAttributes.marginBottom]}`,
+      `margin-left-${SpacerClassMappings[marginAttributes.marginLeft]}`,
+      `margin-right-${SpacerClassMappings[marginAttributes.marginRight]}`,
+      `padding-top-${SpacerClassMappings[paddingAttributes.paddingTop]}`,
+      `padding-bottom-${SpacerClassMappings[paddingAttributes.paddingBottom]}`,
+      `padding-left-${SpacerClassMappings[paddingAttributes.paddingLeft]}`,
+      `padding-right-${SpacerClassMappings[paddingAttributes.paddingRight]}`,
+      { 'is-inline-block': isInlineBlock },
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   return <div {...customProps} className={SpacerClassNames}>{children}</div>;
 };

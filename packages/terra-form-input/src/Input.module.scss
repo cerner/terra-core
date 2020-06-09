@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/Input.module';
+@import './orion-fusion-theme/Input.module';
+
 :local {
   .form-input {
     background-color: var(--terra-form-input-background-color, #fff);

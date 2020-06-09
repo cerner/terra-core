@@ -6,6 +6,14 @@ Unreleased
 ### Changed
 * Updated wdio test to support testing against firefox
 
+
+3.41.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
+3.40.0 - (June 2, 2020)
+------------------
 ### Fixed
 * Fixed `ButtonGroup.Button` not losing `focus` styles when made disabled via user interaction
 * Fixed `ButtonGroup.Button` not losing `is-selected` styles when made disabled via user interaction

@@ -1,5 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Table correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Table
+    fill={false}
+    numberOfColumns={0}
+    showSimpleFooter={false}
+    summary="Test summary description"
+    summaryId="test-id"
+  >
+    <div
+      aria-describedby="test-id"
+      aria-rowcount={0}
+      className="table outer orion-fusion-theme"
+      role="grid"
+    >
+      <VisuallyHiddenText
+        id="test-id"
+        text="Test summary description"
+      >
+        <span
+          className="visually-hidden-text"
+          id="test-id"
+        >
+          Test summary description
+        </span>
+      </VisuallyHiddenText>
+    </div>
+  </Table>
+</ThemeContextProvider>
+`;
+
 exports[`Table should render a Table 1`] = `
 <div
   aria-describedby="test-id"

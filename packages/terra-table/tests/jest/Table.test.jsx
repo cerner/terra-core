@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Table from '../../src/Table';
 
 describe('Table', () => {
@@ -540,5 +542,18 @@ describe('Table', () => {
       />,
     );
     expect(shallowComponent).toMatchSnapshot();
+  });
+
+  it('correctly applies the theme context className', () => {
+    const searchField = mount(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <Table
+          summary="Test summary description"
+          summaryId="test-id"
+          numberOfColumns={0}
+        />
+      </ThemeContextProvider>,
+    );
+    expect(searchField).toMatchSnapshot();
   });
 });

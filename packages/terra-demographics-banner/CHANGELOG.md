@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+3.40.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
+3.39.0 - (June 2, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.38.0 - (May 26, 2020)
 ------------------
 ### Changed
