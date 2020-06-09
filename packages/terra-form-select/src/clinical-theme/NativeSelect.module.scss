@@ -3,10 +3,10 @@
 :local {
   .clinical-theme {
     // native
-    --terra-form-select-native-background-color: rgba(255, 255, 255, 0.8);
+    --terra-form-select-native-background-color: #eef5fe;
     --terra-form-select-native-background-image: linear-gradient(#599ffd, #599ffd);
     --terra-form-select-native-background-size: 0 0.142857rem;
-    --terra-form-select-native-border: 1px solid rgba(89, 159, 253, 0.6);
+    --terra-form-select-native-border: 1px solid #96c2fe;
     --terra-form-select-native-border-radius: 3px;
     --terra-form-select-native-color: rgba(17, 22, 25, 0.75);
     --terra-form-select-native-font-size: 1rem;
@@ -40,8 +40,8 @@
     --terra-form-select-native-incomplete-background-color: #ffc;
 
     // invalid
-    --terra-form-select-native-invalid-background-color: rgba(255, 255, 255, 0.8);
-    --terra-form-select-native-invalid-background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    --terra-form-select-native-invalid-background-color: #eef5fe;
+    --terra-form-select-native-invalid-background-image: none;
     --terra-form-select-native-invalid-border-color: #e50000;
     --terra-form-select-native-invalid-box-shadow: none;
     --terra-form-select-native-invalid-focus-border-color: #e50000;
@@ -49,8 +49,8 @@
     --terra-form-select-native-invalid-hover-border-color: #e50000;
 
     // disabled
-    --terra-form-select-native-disabled-background-color: rgba(17, 22, 25, 0.05);
-    --terra-form-select-native-disabled-border-color: rgba(89, 159, 253, 0.3);
+    --terra-form-select-native-disabled-background-color: #e7e8e8;
+    --terra-form-select-native-disabled-border-color: #d3e5Fff;
     --terra-form-select-native-disabled-color: rgba(17, 22, 25, 0.3);
     --terra-form-select-native-disabled-opacity: 1;
 
