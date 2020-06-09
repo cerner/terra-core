@@ -14,7 +14,7 @@ const HeadingLevels = () => (
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={1}>
-Level 1 Heading
+            Level 1 Heading
             <span className={cx('heading-content')}>32px (2.286rem)</span>
           </Heading>
         </div>
@@ -26,7 +26,7 @@ Level 1 Heading
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={2}>
-Level 2 Heading
+            Level 2 Heading
             <span className={cx('heading-content')}>24px (1.714rem)</span>
           </Heading>
         </div>
@@ -38,7 +38,7 @@ Level 2 Heading
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={3}>
-Level 3 Heading
+            Level 3 Heading
             <span className={cx('heading-content')}>20px (1.429rem)</span>
           </Heading>
         </div>
@@ -50,7 +50,7 @@ Level 3 Heading
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={4}>
-Level 4 Heading
+            Level 4 Heading
             <span className={cx('heading-content')}>18px (1.286rem)</span>
           </Heading>
         </div>
@@ -62,7 +62,7 @@ Level 4 Heading
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={5}>
-Level 5 Heading
+            Level 5 Heading
             <span className={cx('heading-content')}>16px (1.143rem)</span>
           </Heading>
         </div>
@@ -74,7 +74,7 @@ Level 5 Heading
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={6}>
-Level 6 Heading
+            Level 6 Heading
             <span className={cx('heading-content')}>14px (1rem)</span>
           </Heading>
         </div>

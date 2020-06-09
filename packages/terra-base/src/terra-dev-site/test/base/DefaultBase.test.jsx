@@ -20,7 +20,7 @@ const BaseDefault = () => (
     <ol>
       <li>Ordered list item</li>
       <li>
-Ordered list item
+        Ordered list item
         <ol>
           <li>Nested ordered list item</li>
           <li>Nested ordered list item</li>
@@ -31,7 +31,7 @@ Ordered list item
     <ul id="bottom-section">
       <li>Unordered list item</li>
       <li>
-Unordered list item
+        Unordered list item
         <ol>
           <li>Nested unordered list item</li>
           <li>Nested unordered list item</li>

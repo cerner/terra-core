@@ -3,8 +3,10 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
+### Changes
 * Apply themes by context and directly include packaged themes.
+* Minor file changes to comply with eslint rules
+* Update wdio test configuration to use root wdio config
 
 3.4.0 - (May 19, 2020)
 ------------------
