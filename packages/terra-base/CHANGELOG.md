@@ -3,11 +3,12 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Directly include packaged themes.
 
 5.34.0 - (June 9, 2020)
 ------------------
 ### Changed
-* Directly include packaged themes.
 * Minor file changes to comply with eslint rules
 * Update wdio test configuration to use root wdio config
 
