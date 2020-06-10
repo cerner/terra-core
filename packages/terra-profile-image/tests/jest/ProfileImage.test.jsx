@@ -22,10 +22,10 @@ it('should render a profile image with fit style as contain', () => {
 });
 
 it('correctly applies the theme context className', () => {
-  const tabs = mount(
+  const wrapper = mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <ProfileImage src="profile.jpg" height="75" width="75" alt="A profile image" />
     </ThemeContextProvider>,
   );
-  expect(tabs).toMatchSnapshot();
+  expect(wrapper).toMatchSnapshot();
 });

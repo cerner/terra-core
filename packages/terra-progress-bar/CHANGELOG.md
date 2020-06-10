@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update jest test variable name
 
 4.24.0 - (June 9, 2020)
 ------------------

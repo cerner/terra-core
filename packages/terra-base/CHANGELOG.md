@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Directly include packaged themes.
 
 5.34.0 - (June 9, 2020)
 ------------------
