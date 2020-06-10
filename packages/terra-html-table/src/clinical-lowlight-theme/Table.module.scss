@@ -1,0 +1,56 @@
+:local {
+  .clinical-lowlight-theme {
+    // Table
+    --terra-html-table-background-color: #383f42;
+    --terra-html-table-border: 1px solid #181b1d;
+    --terra-html-table-border-radius: 0;
+    --terra-html-table-body-background-color: none;
+
+    // Header Cell
+    --terra-html-table-header-cell-color: #1c1f21;
+    --terra-html-table-header-cell-font-size: 1rem;
+    --terra-html-table-header-cell-font-weight: bold;
+    --terra-html-table-header-cell-border-right: 1px solid #ccc;
+    --terra-html-table-first-header-cell-border-left: 1px solid #dedfe0;
+    --terra-html-table-last-header-cell-border-right: 1px solid #dedfe0;
+
+    // Header
+    --terra-html-table-header-background-color: #f1f1f2;
+    --terra-html-table-header-box-shadow: 0 4px 4px -3.5px rgba(134, 138, 140, 0.75), inset 0 0 0 1px #fff;
+    --terra-html-table-header-row-border-bottom: 1px solid #b9bbbc;
+    --terra-html-table-header-row-border-top: 1px solid #dedfe0;
+
+    // Cell
+    --terra-html-table-cell-border-left: 0;
+    --terra-html-table-cell-color: #b2b5b6;
+    --terra-html-table-cell-font-size: 1rem;
+    --terra-html-table-first-cell-border-left: 1px solid #dedfe0;
+    --terra-html-table-last-cell-border-right: 1px solid #dedfe0;
+
+    // Header Cell
+    --terra-html-table-header-cell-standard-padding-bottom: 0.5rem;
+    --terra-html-table-header-cell-standard-padding-left: 0.7142857143rem;
+    --terra-html-table-header-cell-standard-padding-right: 0.7142857143rem;
+    --terra-html-table-header-cell-standard-padding-top: 0.5rem;
+    --terra-html-table-header-cell-compact-padding-bottom: 0.25rem;
+    --terra-html-table-header-cell-compact-padding-left: 0.7142857143rem;
+    --terra-html-table-header-cell-compact-padding-right: 0.7142857143rem;
+    --terra-html-table-header-cell-compact-padding-top: 0.25rem;
+
+    // Row Cell
+    --terra-html-table-cell-standard-padding-bottom: 0.5rem;
+    --terra-html-table-cell-standard-padding-left: 0.7142857143rem;
+    --terra-html-table-cell-standard-padding-right: 0.7142857143rem;
+    --terra-html-table-cell-standard-padding-top: 0.5rem;
+    --terra-html-table-cell-compact-padding-bottom: 0.25rem;
+    --terra-html-table-cell-compact-padding-left: 0.7142857143rem;
+    --terra-html-table-cell-compact-padding-right: 0.7142857143rem;
+    --terra-html-table-cell-compact-padding-top: 0.25rem;
+
+    // Row
+    --terra-html-table-row-border-top: 1px solid #dedfe0;
+    --terra-html-table-last-row-border-bottom: 1px solid #dedfe0;
+    --terra-html-table-row-background-color: transparent;
+    --terra-html-table-row-striped-background-color: #2d3539;
+  }
+}
