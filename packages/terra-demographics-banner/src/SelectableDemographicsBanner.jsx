@@ -109,9 +109,8 @@ const SelectableDemographicsBanner = ({
   preferredFirstName,
   ...customProps
 }) => {
-
   const [isActive, setActive] = useState(false);
-  
+
   const handleKeyDown = (event) => {
     if (event.nativeEvent.keyCode === KEY_SPACE || event.nativeEvent.keyCode === KEY_RETURN) {
       setActive(true);
