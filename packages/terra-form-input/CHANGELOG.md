@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Disabled wdio axe color-contrast testing on placeholder examples for IE testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/2992 is resolved.
 
 3.5.0 - (June 9, 2020)
 ------------------
@@ -13,7 +15,7 @@ Unreleased
 
 3.4.0 - (May 19, 2020)
 ------------------
-### Changes
+### Changed
 * Update wdio tests to move cursor to fix inconsistent hover styles in internal themes
 
 3.3.0 - (May 12, 2020)

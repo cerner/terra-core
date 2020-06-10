@@ -14,6 +14,8 @@ Unreleased
 ------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Updated wdio test to support testing against firefox
+* Update Custom Content test examples to remove timeouts that executed faster than IE tests
 
 3.48.0 - (May 19, 2020)
 ------------------
