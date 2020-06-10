@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.6.0 - (June 9, 2020)
+------------------
 ### Changed
 * Updated jest due to icon theme context.
 * Update wdio test configuration to use root wdio config
