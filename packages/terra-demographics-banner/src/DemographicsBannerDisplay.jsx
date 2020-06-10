@@ -67,6 +67,11 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
+   * @private
+   * Whether or not the banner should show active styles
+   */
+  isActive: PropTypes.bool,
+  /**
    * Whether to display an icon to confidentiality.
    */
   isConfidential: PropTypes.bool,
@@ -115,6 +120,7 @@ const defaultProps = {
   gestationalAgeLabel: 'GA',
   gestationalAgeFullText: 'Gestational Age',
   identifiers: {},
+  isActive: false,
   isConfidential: false,
   isSelectable: false,
   personName: '',

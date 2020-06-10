@@ -44,6 +44,11 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
+   * @private
+   * Whether or not the banner should show active styles
+   */
+  isActive: PropTypes.bool,
+  /**
    * Whether or not to display an icon to indicate confidentiality.
    */
   isConfidential: PropTypes.bool,
@@ -79,6 +84,7 @@ const defaultProps = {
   gender: undefined,
   gestationalAge: null,
   identifiers: {},
+  isActive: false,
   isConfidential: false,
   isSelectable: false,
   personName: undefined,

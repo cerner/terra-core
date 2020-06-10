@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
 import classNames from 'classnames/bind';
@@ -109,15 +109,22 @@ const SelectableDemographicsBanner = ({
   preferredFirstName,
   ...customProps
 }) => {
+
+  const [isActive, setActive] = useState(false);
+  
   const handleKeyDown = (event) => {
-    if (event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) {
+    if (event.nativeEvent.keyCode === KEY_SPACE || event.nativeEvent.keyCode === KEY_RETURN) {
+      setActive(true);
       event.preventDefault();
     }
   };
 
   const handleKeyUp = (event) => {
-    if ((event.keyCode === KEY_SPACE || event.keyCode === KEY_RETURN) && onClick) {
-      onClick(event);
+    if (event.nativeEvent.keyCode === KEY_SPACE || event.nativeEvent.keyCode === KEY_RETURN) {
+      setActive(false);
+      if (onClick) {
+        onClick(event);
+      }
     }
   };
 
@@ -167,6 +174,7 @@ const SelectableDemographicsBanner = ({
           identifiers={identifiers}
           isConfidential={isConfidential}
           isSelectable
+          isActive={isActive}
           personName={personName}
           photo={photo}
           postMenstrualAge={postMenstrualAge}
