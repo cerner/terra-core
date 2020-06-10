@@ -139,7 +139,7 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       it('closes the overlay when clicking inside of the Overlay', () => {
         browser.click('#terra-Overlay--container');
         browser.waitForExist('#terra-Overlay--container', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
-        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.be.oneOf([null, 'false']); // chrome returns false, firefox returns ''
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.be.oneOf([null, 'false']); // chrome returns false, firefox returns null
         expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
       });
     });
