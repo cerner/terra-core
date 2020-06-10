@@ -22,7 +22,7 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
   describe('Controlled Paginator', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-paginator/paginator/controlled-paginator');
-      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+      browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
     });
 
     Terra.it.validatesElement('0');

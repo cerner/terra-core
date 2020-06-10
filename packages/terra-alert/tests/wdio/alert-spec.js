@@ -42,7 +42,7 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
       expect(browser.getText('#actionAlert')).to.have.string('clicked 1 times');
     });
 
-    after(() => browser.moveToObject('#root', 0, 900));
+    after(() => browser.moveToObject('#root', 0, 700));
   });
 
   describe('Dismissible', () => {
@@ -59,6 +59,6 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
 
     Terra.it.validatesElement('dismissed');
 
-    after(() => browser.moveToObject('#root', 0, 900));
+    after(() => browser.moveToObject('#root', 0, 700));
   });
 });
