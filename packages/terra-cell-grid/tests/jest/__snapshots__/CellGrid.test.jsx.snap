@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <CellGrid>
+    <div
+      className="cell-grid orion-fusion-theme"
+    >
+      <Cell>
+        <div
+          className="cell"
+        />
+      </Cell>
+    </div>
+  </CellGrid>
+</ThemeContextProvider>
+`;
+
 exports[`should render a both divider cell grid 1`] = `
 <div
   className="cell-grid divider-both"

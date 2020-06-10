@@ -6,6 +6,11 @@ Unreleased
 ### Changed
 * Fixed dropdown not opening on pressing space in firefox.
 
+1.15.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
 1.14.0 - (May 19, 2020)
 ------------------
 ### Changed

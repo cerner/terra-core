@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 
 // eslint-disable-next-line import/no-unresolved, import/no-webpack-loader-syntax
 import styles from './Icon.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -60,6 +62,7 @@ const IconBase = ({
   ...customProps
 }) => {
   const attributes = { ...customProps };
+  const theme = React.useContext(ThemeContext);
 
   const addAnimationStyles = () => {
     if (isSpin) {
@@ -78,11 +81,14 @@ const IconBase = ({
   addAnimationStyles();
 
   // append to existing classNames
-  const classes = cx(
-    'tui-Icon',
-    'icon',
-    { 'is-bidi': isBidi },
-    { 'is-spin': isSpin },
+  const classes = classNames(
+    cx(
+      'tui-Icon',
+      'icon',
+      { 'is-bidi': isBidi },
+      { 'is-spin': isSpin },
+      theme.className,
+    ),
     attributes.className,
   );
 
