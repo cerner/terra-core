@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.51.0 - (June 9, 2020)
+------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
 * Updated jest due to icon theme context.
