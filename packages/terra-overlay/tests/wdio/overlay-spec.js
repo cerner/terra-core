@@ -125,7 +125,7 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       it('closes overlay on escape keydown', () => {
         browser.keys('Escape');
         browser.waitForExist('#terra-Overlay--container', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
-        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.be.oneOf([null, 'false']); // chrome returns false, firefox returns ''
+        expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'inert')).to.be.oneOf([null, 'false']); // chrome returns false, firefox returns null
         expect(browser.getAttribute('#test-overlay-container > [data-terra-overlay-container-content="true"]', 'aria-hidden')).to.equal(null);
       });
 
