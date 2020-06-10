@@ -50,7 +50,7 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       it('closes overlay on escape keydown', () => {
         browser.keys('Escape');
         browser.waitForExist('#terra-Overlay--fullscreen', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
-        expect(browser.getAttribute('#root', 'inert')).to.be.oneOf([null, 'false']); // chrome returns false, firefox returns ''
+        expect(browser.getAttribute('#root', 'inert')).to.be.oneOf([null, 'false']); // chrome returns false, firefox returns null
         expect(browser.getAttribute('#root', 'aria-hidden')).to.equal(null);
       });
 
