@@ -29,6 +29,7 @@
 
     &[data-focus-interaction='keyboard'],
     &[data-focus-interaction='mouse'], {
+      background-color: var(--terra-form-select-native-focus-background-color, #fff);
       background-size: var(--terra-form-select-native-focus-background-size, 0 0);
       border-color: var(--terra-form-select-native-focus-border-color, #4cb2e9);
       transition-duration: var(--terra-form-select-native-focus-transition-duration, 0);
@@ -39,6 +40,7 @@
     }
 
     &:hover {
+      background-color: var(--terra-form-select-native-hover-background-color, #fff);
       border-color: var(--terra-form-select-native-hover-border-color, #4cb2e9);
       color: var(--terra-form-select-native-hover-color, #1c1f21);
     }
@@ -48,7 +50,7 @@
     }
 
     &.invalid {
-      background-color: var(--terra-form-select-native-invalid-background-color, none);
+      background-color: var(--terra-form-select-native-invalid-background-color, #fff);
       background-image: var(--terra-form-select-native-invalid-background-image, none);
       border-color: var(--terra-form-select-native-invalid-border-color, #e50000);
       box-shadow: var(--terra-form-select-native-invalid-box-shadow, 0 0 0 1px #e50000);
@@ -63,10 +65,12 @@
   
       &[data-focus-interaction='keyboard'],
       &[data-focus-interaction='mouse'], {
+        background-color: var(--terra-form-select-native-invalid-focus-background-color, #fff);
         border-color: var(--terra-form-select-native-invalid-focus-border-color, #e50000);
       }
   
       &:hover {
+        background-color: var(--terra-form-select-native-invalid-hover-background-color, #fff);
         border-color: var(--terra-form-select-native-invalid-hover-border-color, #e50000);
       }
     }
