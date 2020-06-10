@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Fixed dropdown not opening on pressing space in firefox.
 
 1.14.0 - (May 19, 2020)
 ------------------
