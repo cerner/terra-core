@@ -64,7 +64,7 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       it('closes the overlay when clicking inside of the Overlay', () => {
         browser.click('#terra-Overlay--fullscreen');
         browser.waitForExist('#terra-Overlay--fullscreen', DEFAULT_TIMEOUT, SHOULD_NOT_EXIST);
-        expect(browser.getAttribute('#root', 'inert')).to.be.oneOf([null, 'false']); // chrome returns false, firefox returns ''
+        expect(browser.getAttribute('#root', 'inert')).to.be.oneOf([null, 'false']); // chrome returns false, firefox returns null
         expect(browser.getAttribute('#root', 'aria-hidden')).to.equal(null);
       });
     });
