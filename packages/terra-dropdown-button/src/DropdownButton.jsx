@@ -100,7 +100,7 @@ class DropdownButton extends React.Component {
   handleKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       // In FireFox active styles don't get applied on space
-      this.setState({ isActive: true, openedViaKeyboard: true });
+      this.setState(prevState => ({ isActive: true, openedViaKeyboard: true, isOpen: !prevState.isOpen }));
       /*
         Prevent the callback from being called repeatedly if the RETURN or SPACE key is held down.
         The keyDown event of native html button triggers Onclick() event on RETURN or SPACE key press.

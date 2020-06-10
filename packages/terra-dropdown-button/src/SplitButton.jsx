@@ -149,7 +149,7 @@ class SplitButton extends React.Component {
   handleCaretKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       // In FireFox active styles don't get applied onKeyDown
-      this.setState({ caretIsActive: true, openedViaKeyboard: true });
+      this.setState(prevState => ({ caretIsActive: true, openedViaKeyboard: true, isOpen: !prevState.isOpen }));
       /*
         Prevent the callback from being called repeatedly if the RETURN or SPACE key is held down.
         The keyDown event of native html button triggers Onclick() event on RETURN or SPACE key press.
