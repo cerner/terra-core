@@ -3,8 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.6.0 - (June 11, 2020)
+------------------
 ### Changed
 * Disabled wdio axe color-contrast testing on placeholder examples for IE testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/2992 is resolved.
+
+### Fixed
+* renamed orion-fusion-theme/Input.module.scss.scss to orion-fusion-theme/Input.module.scss
 
 3.5.0 - (June 9, 2020)
 ------------------

@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.28.0 - (June 11, 2020)
+------------------
 ### Changed
 * Updated wrong import in `StatusView.module.scss`
 
