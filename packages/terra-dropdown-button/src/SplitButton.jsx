@@ -83,7 +83,7 @@ class SplitButton extends React.Component {
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.setListNode = this.setListNode.bind(this);
-    this.openDropDown = this.openDropDown.bind(this);
+    this.toggleDropDown = this.toggleDropDown.bind(this);
 
     this.state = {
       isOpen: false, caretIsActive: false, primaryIsActive: false, openedViaKeyboard: false,
@@ -102,7 +102,7 @@ class SplitButton extends React.Component {
     return this.buttonNode;
   }
 
-  openDropDown(event) {
+  toggleDropDown(event) {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
@@ -114,7 +114,7 @@ class SplitButton extends React.Component {
     if (this.state.isOpen) {
       this.setState({ openedViaKeyboard: false });
     }
-    this.openDropDown(event);
+    this.toggleDropDown(event);
   }
 
   handlePrimaryButtonClick(event) {
@@ -149,7 +149,7 @@ class SplitButton extends React.Component {
   handleCaretKeyDown(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       // In FireFox active styles don't get applied onKeyDown
-      this.setState(prevState => ({ caretIsActive: true, openedViaKeyboard: true, isOpen: !prevState.isOpen }));
+      this.setState({ caretIsActive: true, openedViaKeyboard: true });
       /*
         Prevent the callback from being called repeatedly if the RETURN or SPACE key is held down.
         The keyDown event of native html button triggers Onclick() event on RETURN or SPACE key press.
@@ -175,8 +175,9 @@ class SplitButton extends React.Component {
 
   handleCaretKeyUp(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
+      event.preventDefault();
       this.setState({ caretIsActive: false });
-      this.openDropDown(event);
+      this.toggleDropDown(event);
     }
   }
 

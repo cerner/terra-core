@@ -102,15 +102,12 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       browser.keys('Escape');
     });
 
-    // TODO: remove browserName check when is resolved: https://github.com/cerner/terra-core/issues/3008
-    if (browser.desiredCapabilities.browserName !== 'firefox') {
-      it('opens the dropdown with space', () => {
-        browser.keys('Space');
-        browser.waitForVisible('[class*=dropdown-list]');
-        // Cleanup the open dropdown, after hooks don't work on it blocks
-        browser.keys(['Escape']);
-      });
-    }
+    it('opens the dropdown with space', () => {
+      browser.keys('Space');
+      browser.waitForVisible('[class*=dropdown-list]');
+      // Cleanup the open dropdown, after hooks don't work on it blocks
+      browser.keys(['Escape']);
+    });
 
     it('calls primary split button callback', () => {
       browser.click('[class*=split-button-primary]');
