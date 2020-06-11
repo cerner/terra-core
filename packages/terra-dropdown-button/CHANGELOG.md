@@ -5,6 +5,10 @@ Unreleased
 ----------
 ### Changed
 * Fixed dropdown not opening on pressing space in firefox, and reverted disabled tests for firefox.
+
+1.16.0 - (June 11, 2020)
+------------------
+### Changes
 * Disabled wdio test which opens dropdown menu with space key for firefox testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/3008 is resolved.
 
 ### Removed
