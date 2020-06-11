@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Input correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Input
+    ariaLabel="label"
+    disabled={false}
+    isIncomplete={false}
+    isInvalid={false}
+    name={null}
+    required={false}
+  >
+    <input
+      aria-label="label"
+      className="form-input orion-fusion-theme"
+      disabled={false}
+      name={null}
+      required={false}
+    />
+  </Input>
+</ThemeContextProvider>
+`;
+
 exports[`Input should favor ariaLabel prop over aria-label if both props passed to component 1`] = `
 <input
   aria-label="ariaLabel"

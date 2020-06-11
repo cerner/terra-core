@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Table, {
   Cell,
   Row,
@@ -70,3 +72,16 @@ it('should render a table with standard padding', () => {
   );
   expect(shallowComponent).toMatchSnapshot();
 });
+
+it('correctly applies the theme context className', () => {
+  const input = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Table>
+        <Header>{header}</Header>
+        <Body>{rows}</Body>
+      </Table>
+    </ThemeContextProvider>,
+  );
+  expect(input).toMatchSnapshot();
+});
+
