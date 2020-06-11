@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Disabled wdio axe color-contrast testing on placeholder examples for IE testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/2992 is resolved.
+
+4.6.0 - (June 9, 2020)
+------------------
+### Changed
+* Updated jest due to icon theme context.
+* Update wdio test configuration to use root wdio config
 
 4.5.0 - (May 26, 2020)
 ------------------

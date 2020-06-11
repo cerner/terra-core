@@ -4,10 +4,17 @@ ChangeLog
 Unreleased
 ----------
 
+2.52.0 - (June 9, 2020)
+------------------
+### Changed
+* Minor file changes to comply with eslint rules
+* Update wdio test configuration to use root wdio config
+
 2.51.0 - (June 2, 2020)
 ------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Updated wdio test to support testing against firefox
 
 2.50.0 - (May 26, 2020)
 ------------------

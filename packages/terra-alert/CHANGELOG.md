@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated wdio test to support testing against firefox
+
+4.33.0 - (June 9, 2020)
+------------------
+### Changed
+* Minor file changes to comply with eslint rules
+* Update wdio test configuration to use root wdio config
 
 4.32.0 - (June 2, 2020)
 ------------------

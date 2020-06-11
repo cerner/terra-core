@@ -17,18 +17,10 @@ class OverlayExample extends React.Component {
 
   handleTriggerOverlay() {
     this.setState({ show: true, relative: true, id: 'terra-Overlay--container' });
-
-    setTimeout(() => {
-      this.setState({ show: false });
-    }, 5000);
   }
 
   handleTriggerFullScreenOverlay() {
     this.setState({ show: true, relative: false, id: 'terra-Overlay--fullscreen' });
-
-    setTimeout(() => {
-      this.setState({ show: false });
-    }, 5000);
   }
 
   handleRandomClick() {
@@ -42,7 +34,8 @@ class OverlayExample extends React.Component {
   addOverlay() {
     return (
       <Overlay isOpen={this.state.show} isRelativeToContainer={this.state.relative} id={this.state.id}>
-        <h3>Overlay will timeout in 5 seconds.</h3>
+        <h3>Overlay with custom content.</h3>
+        <button type="button" id="close_overlay" onClick={() => { this.setState({ show: false }); }}>Close Overlay</button>
       </Overlay>
     );
   }

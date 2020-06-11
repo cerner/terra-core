@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.49.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
 2.48.0 - (June 2, 2020)
 ------------------
 ### Changed

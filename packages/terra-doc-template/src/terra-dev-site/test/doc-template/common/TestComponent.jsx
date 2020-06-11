@@ -20,7 +20,7 @@ const defaultProps = {
 const TestComponent = props => (
   <p>
     {props.text}
-,
+    ,
     {' '}
     {props.otherText}
   </p>
