@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
 
-    label:not(.is-disabled) {
+    &:not(.is-disabled) {
       cursor: pointer;
     }
   }
@@ -130,7 +130,6 @@
     border: var(--terra-switch-slider-border, 0);
     border-radius: var(--terra-switch-slider-border-radius, 1.07142rem);
     box-shadow: var(--terra-switch-slider-box-shadow, 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.3));
-    cursor: pointer;
     height: var(--terra-switch-slider-height, 1.357142rem);
     left: var(--terra-switch-slider-left, 0.06rem);
     outline: 0;
