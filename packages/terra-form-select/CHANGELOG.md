@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+6.8.0 - (June 11, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 6.7.0 - (June 9, 2020)
 ------------------
 ### Changed
@@ -14,6 +19,8 @@ Unreleased
 ------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Updated wdio test to support testing against firefox
+* Disabled wdio axe color-contrast testing on placeholder examples for IE testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/2992 is resolved.
 
 6.5.0 - (May 19, 2020)
 ------------------

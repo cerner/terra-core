@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.53.0 - (June 11, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 2.52.0 - (June 9, 2020)
 ------------------
 ### Changed
@@ -14,6 +19,7 @@ Unreleased
 ------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Updated wdio test to support testing against firefox
 
 2.50.0 - (May 26, 2020)
 ------------------

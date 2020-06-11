@@ -1,5 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Table
+    disableStripes={false}
+    paddingStyle="none"
+  >
+    <table
+      className="table striped orion-fusion-theme"
+    >
+      <TableHeader>
+        <thead>
+          <tr>
+            <TableHeaderCell
+              key="NAME"
+            >
+              <th>
+                Name
+              </th>
+            </TableHeaderCell>
+            <TableHeaderCell
+              key="ADDRESS"
+            >
+              <th>
+                Address
+              </th>
+            </TableHeaderCell>
+            <TableHeaderCell
+              key="PHONE_NUMBER"
+            >
+              <th>
+                Phone Number
+              </th>
+            </TableHeaderCell>
+          </tr>
+        </thead>
+      </TableHeader>
+      <TableBody>
+        <tbody>
+          <TableRow
+            key="PERSON_0"
+          >
+            <tr
+              className="row"
+            >
+              <TableCell
+                key="NAME"
+              >
+                <td>
+                  John Smith
+                </td>
+              </TableCell>
+              <TableCell
+                key="ADDRESS"
+              >
+                <td>
+                  123 Adams Drive
+                </td>
+              </TableCell>
+              <TableCell
+                key="PHONE_NUMBER"
+              >
+                <td>
+                  111-222-3333
+                </td>
+              </TableCell>
+            </tr>
+          </TableRow>
+          <TableRow
+            key="PERSON_1"
+          >
+            <tr
+              className="row"
+            >
+              <TableCell
+                key="NAME"
+              >
+                <td>
+                  John Smith
+                </td>
+              </TableCell>
+              <TableCell
+                key="ADDRESS"
+              >
+                <td>
+                  123 Adams Drive
+                </td>
+              </TableCell>
+              <TableCell
+                key="PHONE_NUMBER"
+              >
+                <td>
+                  111-222-3333
+                </td>
+              </TableCell>
+            </tr>
+          </TableRow>
+        </tbody>
+      </TableBody>
+    </table>
+  </Table>
+</ThemeContextProvider>
+`;
+
 exports[`should render a default table 1`] = `
 <table
   className="table striped"

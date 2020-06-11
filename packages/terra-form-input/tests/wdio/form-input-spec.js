@@ -60,7 +60,8 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
         browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
-      Terra.it.validatesElement();
+      // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+      Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
     });
 
     describe('Enabled Value', () => {
