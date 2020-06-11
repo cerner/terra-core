@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.25.0 - (June 11, 2020)
+------------------
+### Changed
+* Update jest test variable name
+
+4.24.0 - (June 9, 2020)
+------------------
 ### Changed
 * Update wdio test configuration to use root wdio config
 
