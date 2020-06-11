@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.32.0 - (June 11, 2020)
+------------------
 ### Changed
 * Update jest test variable name
 
