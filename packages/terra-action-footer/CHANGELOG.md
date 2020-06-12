@@ -14,6 +14,9 @@ Unreleased
 ### Changed
 * Update wdio test configuration to use root wdio config
 
+### Fixed
+* Text in footer not wrapping in IE 10
+
 2.44.0 - (June 2, 2020)
 ------------------
 ### Changed
