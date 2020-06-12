@@ -86,6 +86,7 @@ Cerner Corporation
 - Prachi Gotkhindikar [@prachigotkhindikar1]
 - Jeff Merten [@jeffmerten]
 - Dianna McGinn [@DMcginn]
+- Jackson Nowotny [@JacksonJN]
 
 Community
 
@@ -198,3 +199,4 @@ Community
 [@vobango]:https://github.com/vobango
 [@jeffmerten]: https://github.com/jeffmerten
 [@DMcginn]: https://github.com/DMcginn
+[@JacksonJN]: https://github.com/JacksonJN
