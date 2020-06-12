@@ -72,20 +72,20 @@ const Switch = (props) => {
     }
   }, [isChecked, onChange]);
 
-  const handleOnMouseDown = useCallback((event) => {
+  const handleOnMouseDown = (event) => {
     event.preventDefault();
     removeFocusStyles(sliderButton.current);
-  }, []);
+  };
 
-  const handleOnKeyDown = useCallback((event) => {
+  const handleOnKeyDown = (event) => {
     if (event.nativeEvent.keyCode === KEY_RETURN || event.nativeEvent.keyCode === KEY_SPACE) {
       enableFocusStyles(sliderButton.current);
     }
-  }, []);
+  };
 
-  const handleOnBlur = useCallback(() => {
+  const handleOnBlur = () => {
     restoreFocusStyles(sliderButton.current);
-  }, []);
+  };
 
   const switchClassNames = cx([
     'switch',
