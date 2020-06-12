@@ -3,8 +3,18 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.52.0 - (June 11, 2020)
+------------------
+### Changed
+* Disabled wdio axe color-contrast testing on placeholder examples for IE testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/2992 is resolved.
+
+3.51.0 - (June 9, 2020)
+------------------
 ### Changed
 * Apply themes by context and directly include packaged themes.
+* Updated jest due to icon theme context.
+* Update jest due to form-input theme context.
 * Update wdio test configuration to use root wdio config
 
 3.50.0 - (June 2, 2020)
@@ -20,7 +30,7 @@ Unreleased
 3.48.0 - (May 12, 2020)
 ------------------
 ### Changed
-* Removed `--terra-search-field-clear-right` and `--terra-search-field-clear-top` theme variables. 
+* Removed `--terra-search-field-clear-right` and `--terra-search-field-clear-top` theme variables.
 
 3.47.0 - (May 5, 2020)
 ------------------

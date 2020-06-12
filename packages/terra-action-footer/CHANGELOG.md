@@ -3,8 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.46.0 - (June 11, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.45.0 - (June 9, 2020)
+------------------
 ### Changed
 * Update wdio test configuration to use root wdio config
+
+### Fixed
+* Text in footer not wrapping in IE 10
 
 2.44.0 - (June 2, 2020)
 ------------------

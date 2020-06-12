@@ -30,7 +30,7 @@ describe('OverlayContainer', () => {
     const overlayContainer = (
       <OverlayContainer overlay={overlay}>
         <div>
-         Some Text Content
+          Some Text Content
         </div>
       </OverlayContainer>
     );

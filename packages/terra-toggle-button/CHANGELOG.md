@@ -3,7 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.41.0 - (June 11, 2020)
+------------------
 ### Changed
+* Minor dependency version bump
+
+3.40.0 - (June 9, 2020)
+------------------
+### Changed
+* Minor file changes to comply with eslint rules
 * Update wdio test configuration to use root wdio config
 
 3.39.0 - (June 2, 2020)

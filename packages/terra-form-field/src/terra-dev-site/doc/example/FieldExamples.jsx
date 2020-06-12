@@ -62,7 +62,7 @@ class FieldExamples extends React.Component {
         </Field>
         <hr />
         <p>
-If a field is invalid, an error icon will be displayed.
+          If a field is invalid, an error icon will be displayed.
           <button type="button" onClick={this.toggleIsInvalid}>Toggle Invalid State</button>
         </p>
       </div>

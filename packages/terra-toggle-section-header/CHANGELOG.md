@@ -3,10 +3,19 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.37.0 - (June 11, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.36.0 - (June 9, 2020)
+------------------
 ### Added
 * Added `isOpen` prop for programmatic toggle.
 
 ### Changed
+* Minor file changes to comply with eslint rules
 * Update wdio test configuration to use root wdio config
 
 2.35.0 - (May 19, 2020)

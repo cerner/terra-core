@@ -1140,8 +1140,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     describe('multiple placeholder should be shown initially', () => {
       Terra.it.validatesElement();
-
-      after(() => browser.click('#root'));
     });
 
     describe('multiple placeholder should disappear after selection and blur', () => {
@@ -1911,8 +1909,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     describe('tag placeholder should be shown initially', () => {
       Terra.it.validatesElement();
-
-      after(() => browser.click('#root'));
     });
 
     describe('tag placeholder should disappear after selection and blur', () => {
@@ -2067,25 +2063,29 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Combobox variant - incomplete', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-combobox'));
 
-    Terra.it.validatesElement();
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('Multiple variant - incomplete', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-multiple'));
 
-    Terra.it.validatesElement();
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('Search variant - incomplete', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-search'));
 
-    Terra.it.validatesElement();
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('Tag variant - incomplete', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-tag'));
 
-    Terra.it.validatesElement();
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('Default variant - invalid', () => {
@@ -2126,6 +2126,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       const frame = $('#frmSelectFrame');
       frame.waitForVisible();
       browser.frame(frame.value);
+      browser.scroll(0, 700);
       browser.click('#frmSelectSingle');
       browser.moveToObject('#frmSelectSingle');
     });
@@ -2133,6 +2134,10 @@ Terra.describeViewports('Select', ['tiny'], () => {
     Terra.it.validatesElement('opened form-select', { selector: '#root' });
 
     it('select the option which is hidden from visible frame of form-select', () => {
+      // eslint-disable-next-line prefer-arrow-callback
+      browser.execute(function scrollOptionIntoView() {
+        document.getElementById('terra-select-option-17').scrollIntoView();
+      });
       browser.moveToObject('#terra-select-option-17');
       browser.click('#terra-select-option-17');
       browser.click('#frmSelectSingle');

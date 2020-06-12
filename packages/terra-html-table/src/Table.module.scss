@@ -1,4 +1,9 @@
 /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+
+// Themes
+@import './clinical-lowlight-theme/Table.module';
+@import './orion-fusion-theme/Table.module';
+
 :local {
   .table {
     background-color: var(--terra-html-table-background-color, transparent);
@@ -92,14 +97,6 @@
         &:last-of-type {
           border-bottom: var(--terra-html-table-last-row-border-bottom, 1px solid #dedfe0);
         }
-      }
-    }
-
-    tfoot {
-      tr {
-        border-bottom: var(--terra-html-table-footer-row-border-bottom, 1px solid #dedfe0);
-        border-top: var(--terra-html-table-footer-row-border-top, 0);
-        text-align: left;
       }
     }
   }

@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/Base';
+@import './orion-fusion-theme/Base';
+
 html {
   background-attachment: var(--terra-base-background-attachment);
   background-color: var(--terra-base-background-color, #fff);

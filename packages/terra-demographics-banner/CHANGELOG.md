@@ -9,6 +9,8 @@ Unreleased
 * Added flag icon to denote confidentiality.
 * Removed `--` as the fallback display when demographic details are not provided.
 
+3.40.0 - (June 9, 2020)
+------------------
 ### Changed
 * Update wdio test configuration to use root wdio config
 

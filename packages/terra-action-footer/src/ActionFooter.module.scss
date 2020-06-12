@@ -17,5 +17,6 @@
   .start-actions,
   .end-actions {
     align-self: center;
+    flex: 0 1 auto; // Needed for IE 10 to wrap things properly
   }
 }

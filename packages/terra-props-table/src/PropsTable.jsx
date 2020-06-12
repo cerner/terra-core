@@ -40,7 +40,7 @@ function determineType(type) {
       typeName = (
         <span>
           {' '}
-array of objects structured like:
+          array of objects structured like:
           <pre className={cx('props-table-pre')}>
             {' '}
             {formatShape(type.value.value)}
@@ -56,7 +56,7 @@ array of objects structured like:
       const name = option.name === 'shape' ? ((
         <span key={option.value}>
           {' '}
-an object structured like:
+          an object structured like:
           <pre className={cx('props-table-pre')}>
             {' '}
             {formatShape(option.value)}
@@ -76,7 +76,7 @@ an object structured like:
     typeName = (
       <span>
         {' '}
-an object structured like:
+        an object structured like:
         <pre className={cx('props-table-pre')}>
           {' '}
           {formatShape(type.value)}
@@ -131,7 +131,7 @@ const PropsTable = ({
       <h2>
         {componentName}
         {' '}
-Props
+        Props
       </h2>
       <table {...customProps} className={tableClassNames}>
         <thead>

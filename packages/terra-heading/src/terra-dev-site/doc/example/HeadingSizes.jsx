@@ -14,7 +14,7 @@ const HeadingSizes = () => (
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={3} size="huge">
-Huge
+            Huge
             <span className={cx('heading-content')}>32px (2.286rem)</span>
           </Heading>
         </div>
@@ -26,7 +26,7 @@ Huge
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={3} size="large">
-Large
+            Large
             <span className={cx('heading-content')}>24px (1.714rem)</span>
           </Heading>
         </div>
@@ -38,7 +38,7 @@ Large
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={3} size="medium">
-Medium
+            Medium
             <span className={cx('heading-content')}>20px (1.429rem)</span>
           </Heading>
         </div>
@@ -50,7 +50,7 @@ Medium
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={3} size="small">
-Small
+            Small
             <span className={cx('heading-content')}>18px (1.286rem)</span>
           </Heading>
         </div>
@@ -62,7 +62,7 @@ Small
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={3} size="tiny">
-Tiny
+            Tiny
             <span className={cx('heading-content')}>16px (1.143rem)</span>
           </Heading>
         </div>
@@ -74,7 +74,7 @@ Tiny
       fill={(
         <div className={cx('heading-wrapper')}>
           <Heading level={3} size="mini">
-Mini
+            Mini
             <span className={cx('heading-content')}>14px (1rem)</span>
           </Heading>
         </div>

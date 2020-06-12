@@ -85,6 +85,8 @@ Cerner Corporation
 - Saket Bajaj [@saket2403]
 - Prachi Gotkhindikar [@prachigotkhindikar1]
 - Jeff Merten [@jeffmerten]
+- Dianna McGinn [@DMcginn]
+- Jackson Nowotny [@JacksonJN]
 
 Community
 
@@ -196,3 +198,5 @@ Community
 [@saket2403]:https://github.com/saket2403
 [@vobango]:https://github.com/vobango
 [@jeffmerten]: https://github.com/jeffmerten
+[@DMcginn]: https://github.com/DMcginn
+[@JacksonJN]: https://github.com/JacksonJN

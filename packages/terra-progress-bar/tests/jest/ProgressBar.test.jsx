@@ -30,12 +30,12 @@ it('should render a ProgressBar component with default heightSize 50% fill and c
 });
 
 it('correctly applies the theme context className', () => {
-  const tabs = mount(
+  const wrapper = mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <ProgressBar value={15} />
     </ThemeContextProvider>,
   );
-  expect(tabs).toMatchSnapshot();
+  expect(wrapper).toMatchSnapshot();
 });
 
 // Prop Tests
