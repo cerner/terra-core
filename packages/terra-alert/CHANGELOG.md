@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.35.0 - (June 13, 2020)
+------------------
 ### Removed
 * Removed unused variable and themes folder.
 
