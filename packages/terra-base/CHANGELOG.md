@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+5.36.0 - (June 13, 2020)
+------------------
+### Changed
+* Updated `--terra-base-line-height` value in orion-fusion-theme.
+
 5.35.0 - (June 11, 2020)
 ------------------
 ### Changed
