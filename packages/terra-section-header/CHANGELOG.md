@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.38.0 - (June 11, 2020)
+------------------
+### Changed
+* Updated wdio test to support testing against firefox
+
 2.37.0 - (June 9, 2020)
 ------------------
 ### Changed

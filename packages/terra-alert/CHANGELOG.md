@@ -4,6 +4,16 @@ ChangeLog
 Unreleased
 ----------
 
+4.35.0 - (June 13, 2020)
+------------------
+### Removed
+* Removed unused variable and themes folder.
+
+4.34.0 - (June 11, 2020)
+------------------
+### Changed
+* Updated wdio test to support testing against firefox
+
 4.33.0 - (June 9, 2020)
 ------------------
 ### Changed
