@@ -11,6 +11,7 @@ exports[`renders a blank banner wrapper 1`] = `
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={Object {}}
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   photo={null}
@@ -56,6 +57,7 @@ exports[`renders the banner wrapper with all props 1`] = `
       "REA": "3JSDA",
     }
   }
+  isActive={false}
   isConfidential={true}
   isSelectable={false}
   personName="Johnathon Doe"

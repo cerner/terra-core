@@ -41,6 +41,7 @@ exports[`renders a banner that has basic information 1`] = `
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   personName="Terra Demographics Banner"
@@ -92,6 +93,7 @@ exports[`renders a blank banner properly 1`] = `
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   personName=""
@@ -143,6 +145,7 @@ exports[`renders gestational date with a default label when the label is not pro
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   personName=""
@@ -194,6 +197,7 @@ exports[`renders post menstrural date with a default label when the label is not
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   personName=""
@@ -245,6 +249,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   personName="Old Terra Demographics Banner"
@@ -307,6 +312,7 @@ exports[`renders the banner appropriately for a person with gestational and post
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
@@ -370,6 +376,7 @@ exports[`renders the banner properly for a deceased person with additional appli
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
@@ -433,6 +440,7 @@ exports[`renders the banner that contains additional information 1`] = `
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
@@ -506,6 +514,7 @@ exports[`renders the banner with avatar 1`] = `
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
@@ -568,6 +577,7 @@ exports[`renders the banner with confidential icon 1`] = `
       "timeZone": null,
     }
   }
+  isActive={false}
   isConfidential={true}
   isSelectable={false}
   personName="Johnathon Doe"

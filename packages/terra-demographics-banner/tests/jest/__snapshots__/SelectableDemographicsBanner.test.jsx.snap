@@ -17,6 +17,7 @@ exports[`renders a blank banner wrapper 1`] = `
       deceasedDate={null}
       gestationalAge={null}
       identifiers={Object {}}
+      isActive={false}
       isConfidential={false}
       isSelectable={true}
       postMenstrualAge={null}
@@ -69,6 +70,7 @@ exports[`renders the banner wrapper with all props 1`] = `
           "REA": "3JSDA",
         }
       }
+      isActive={false}
       isConfidential={true}
       isSelectable={true}
       personName="Johnathon Doe"
