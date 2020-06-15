@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import * as KeyCode from 'keycode-js';
@@ -10,7 +12,7 @@ import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
 import MenuUtil from '../shared/_MenuUtil';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -175,9 +177,19 @@ class Frame extends React.Component {
     this.selectMenu = '#terra-select-menu';
   }
 
+  componentDidMount() {
+    // eslint-disable-next-line no-prototype-builtins
+    if (!Element.prototype.hasOwnProperty('inert')) {
+      // IE10 throws an error if wicg-inert is imported too early, as wicg-inert tries to set an observer on document.body which may not exist on import
+      // eslint-disable-next-line global-require
+      require('wicg-inert/dist/inert');
+    }
+  }
+
   componentDidUpdate(previousProps, previousState) {
     if (FrameUtil.shouldPositionDropdown(previousState, this.state, this.dropdown)) {
       clearTimeout(this.debounceTimer);
+      this.dropdown.setAttribute('inert', '');
       this.debounceTimer = setTimeout(this.positionDropdown, !previousState.isOpen ? 0 : 100);
     }
   }
@@ -303,7 +315,15 @@ class Frame extends React.Component {
 
     const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
 
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible));
+    const updateDropDownAttributes = () => {
+      if (this.state.isPositioned) {
+        this.dropdown.removeAttribute('inert');
+        this.dropdown.removeAttribute('aria-hidden');
+        document.querySelector(this.selectMenu).setAttribute('tabIndex', '0');
+      }
+    };
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible), updateDropDownAttributes);
   }
 
   /**
@@ -632,17 +652,22 @@ class Frame extends React.Component {
       ...customProps
     } = this.props;
 
-    const selectClasses = cx([
-      'select',
-      'multiple',
-      { 'is-above': this.state.isAbove },
-      { 'is-disabled': disabled },
-      { 'is-focused': this.state.isFocused },
-      { 'is-invalid': isInvalid },
-      { 'is-incomplete': (isIncomplete && required && !isInvalid) },
-      { 'is-open': this.state.isOpen },
+    const theme = this.context;
+
+    const selectClasses = classNames(
+      cx([
+        'select',
+        'multiple',
+        { 'is-above': this.state.isAbove },
+        { 'is-disabled': disabled },
+        { 'is-focused': this.state.isFocused },
+        { 'is-invalid': isInvalid },
+        { 'is-incomplete': (isIncomplete && required && !isInvalid) },
+        { 'is-open': this.state.isOpen },
+        theme.className,
+      ]),
       customProps.className,
-    ]);
+    );
 
     const labelId = `terra-select-screen-reader-label-${uniqueid()}`;
     const displayId = `terra-select-screen-reader-display-${uniqueid()}`;
@@ -725,5 +750,6 @@ class Frame extends React.Component {
 
 Frame.propTypes = propTypes;
 Frame.defaultProps = defaultProps;
+Frame.contextType = ThemeContext;
 
 export default injectIntl(Frame);

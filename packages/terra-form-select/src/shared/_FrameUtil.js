@@ -9,12 +9,15 @@ class FrameUtil {
    */
   static dropdownStyle(props = {}, state = {}) {
     const { style } = props;
-    const { maxHeight, width, top } = state;
+    const {
+      maxHeight, width, bottom, top,
+    } = state;
 
     return {
       ...style,
       maxHeight,
       width,
+      bottom,
       top,
     };
   }
@@ -32,24 +35,23 @@ class FrameUtil {
     const style = ({ ...props }).style || {};
     const { height } = dropdown.getBoundingClientRect();
     const { bottom, width, top } = target.getBoundingClientRect();
+    const { height: targetHeight } = target.getBoundingClientRect();
 
     const spaceBelow = window.innerHeight - bottom;
     const maximumHeight = parseInt(style.maxHeight || maxHeight, 10) || Infinity;
-    const canFitBelow = maximumHeight < spaceBelow || height < spaceBelow || spaceBelow > top;
+    const canFitBelow = (maximumHeight < spaceBelow || height < spaceBelow || spaceBelow > top);
     const availableSpace = canFitBelow ? spaceBelow : top;
-
     const availableMaxHeight = Math.min(maximumHeight, availableSpace - 10);
     const isAbove = !canFitBelow;
-    const semanticTopWhenAbove = (useSemanticDropdown && isAbove
-      ? -1 * Math.min(availableMaxHeight, height)
-      : undefined
-    );
+    const semanticBottomWhenAbove = (useSemanticDropdown && isAbove ? targetHeight : undefined);
+    const semanticTopWhenAbove = (useSemanticDropdown && !isAbove ? '100%' : undefined);
 
     return {
       width,
       maxHeight: availableMaxHeight,
       isAbove,
       isPositioned: true,
+      bottom: semanticBottomWhenAbove,
       top: semanticTopWhenAbove,
     };
   }

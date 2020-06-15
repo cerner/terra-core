@@ -1,3 +1,7 @@
+// Themes
+@import '../clinical-lowlight-theme/Dropdown.module';
+@import '../orion-fusion-theme/Dropdown.module';
+
 :local {
   .dropdown {
     background-color: var(--terra-form-select-dropdown-background-color, #fff);
@@ -24,7 +28,6 @@
   .is-touch-accessible {
     left: 0;
     position: absolute;
-    top: 100%;
     z-index: 9001; // use same z-index as hookshot
   }
 }

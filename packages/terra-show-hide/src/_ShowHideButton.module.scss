@@ -1,5 +1,9 @@
 @import '~terra-mixins/lib/Mixins';
 
+// Themes
+@import './clinical-lowlight-theme/ShowHideButton.module';
+@import './orion-fusion-theme/ShowHideButton.module';
+
 :local {
   // appearance: button; set to correct the inability to style
   // clickable types in iOS and Safari.
@@ -9,7 +13,7 @@
   // https://github.com/necolas/normalize.css/issues/566
   // https://github.com/necolas/normalize.css/commit/1be44f3b2a79af5d463c7ea0264fee0e6fa464ca
   // stylelint-disable selector-no-qualifying-type
-  button.button, {
+  button.button {
     appearance: button;  // autoprefix fix into -webkit-appearance
   }
   // stylelint-enable selector-no-qualifying-type

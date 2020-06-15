@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/Textarea.module';
+@import './orion-fusion-theme/Textarea.module';
+
 :local {
   .textarea {
     background-color: var(--terra-form-textarea-background-color, #fff);
@@ -36,6 +40,7 @@
     &::placeholder {
       color: var(--terra-form-textarea-placeholder-color, rgba(25, 32, 35, 0.53));
       font-style: var(--terra-form-textarea-placeholder-font-style);
+      opacity: 1;
     }
 
     &[required] {

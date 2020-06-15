@@ -1,4 +1,3 @@
-
 export default function flatten(list = []) {
   if (!Array.isArray(list)) {
     return list;

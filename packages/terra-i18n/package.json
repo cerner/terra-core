@@ -1,11 +1,12 @@
 {
   "name": "terra-i18n",
   "main": "lib/I18n.js",
-  "version": "4.26.0",
+  "version": "4.29.0",
   "description": "The terra-i18n package provides on-demand internationalization of React components.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-i18n"
   },
   "keywords": [
     "Cerner",
@@ -35,11 +36,11 @@
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
     "lint": "npm run lint:js",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "test": "npm run jest && npm run wdio",
+    "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
-    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
-    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-default": "cd ../.. && npx wdio",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

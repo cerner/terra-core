@@ -3,6 +3,47 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.28.0 - (June 11, 2020)
+------------------
+### Changed
+* Updated wrong import in `StatusView.module.scss`
+
+4.27.0 - (June 9, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+* Update wdio test configuration to use root wdio config
+
+4.26.0 - (June 2, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.25.0 - (May 19, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.24.0 - (May 5, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.23.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+4.22.0 - (April 22, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.21.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated documentation link in README
 

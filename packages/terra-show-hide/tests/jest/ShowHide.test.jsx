@@ -1,4 +1,6 @@
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl } from 'terra-enzyme-intl';
 import ShowHide from '../../src/ShowHide';
@@ -102,5 +104,14 @@ describe('ShowHide', () => {
     } catch (e) {
       expect(e.message).toContain('[React Intl] Could not find required `intl` object. <IntlProvider> needs to exist in the component ancestry.');
     }
+  });
+
+  it('correctly applies the theme context className', () => {
+    const wrapper = mountWithIntl(
+      <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+        <ShowHide preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>
+      </ThemeContextProvider>,
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 });

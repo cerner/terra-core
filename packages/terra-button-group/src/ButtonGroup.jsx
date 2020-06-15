@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import ButtonGroupButton from './ButtonGroupButton';
 import ButtonGroupUtils from './ButtonGroupUtils';
 import styles from './ButtonGroup.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -67,10 +69,16 @@ class ButtonGroup extends React.Component {
       ...customProps
     } = this.props;
 
-    const buttonGroupClassNames = cx(['button-group',
-      { 'is-block': isBlock },
+    const theme = this.context;
+
+    const buttonGroupClassNames = classNames(
+      cx(
+        'button-group',
+        { 'is-block': isBlock },
+        theme.className,
+      ),
       customProps.className,
-    ]);
+    );
 
     const allButtons = children ? [] : undefined;
 
@@ -78,7 +86,7 @@ class ButtonGroup extends React.Component {
       const isSelected = selectedKeys.indexOf(child.key) > -1;
       const cloneChild = React.cloneElement(child, {
         onClick: this.wrapOnClick(child),
-        className: cx([{ 'is-selected': isSelected }, child.props.className]),
+        className: cx([{ 'is-selected': isSelected && !child.props.isDisabled }, child.props.className]),
         'aria-pressed': isSelected || null,
       });
       allButtons.push(cloneChild);
@@ -96,5 +104,6 @@ ButtonGroup.propTypes = propTypes;
 ButtonGroup.defaultProps = defaultProps;
 ButtonGroup.Button = ButtonGroupButton;
 ButtonGroup.Utils = ButtonGroupUtils;
+ButtonGroup.contextType = ThemeContext;
 
 export default ButtonGroup;

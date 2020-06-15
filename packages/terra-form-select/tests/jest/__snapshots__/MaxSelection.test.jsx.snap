@@ -1,5 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MaxSelection correctly applies the theme context className to tag variant 1`] = `
+<ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <MaxSelection
+    value="3"
+  >
+    <div
+      className="max-selection orion-fusion-theme"
+    >
+      <FormattedMessage
+        id="Terra.form.select.maxSelectionOption"
+        values={
+          Object {
+            "text": "3",
+          }
+        }
+      >
+        <span>
+          Terra.form.select.maxSelectionOption
+        </span>
+      </FormattedMessage>
+    </div>
+  </MaxSelection>
+</ThemeContextProvider>
+`;
+
 exports[`MaxSelection should render a default MaxSelection 1`] = `
 <div
   className="max-selection"

@@ -1,6 +1,10 @@
 @import '~terra-breakpoints/lib/variables';
 @import './mixins';
 
+// Themes
+@import './clinical-lowlight-theme/Grid.module';
+@import './orion-fusion-theme/Grid.modules';
+
 // Grid Component
 // ========================================================
 :local {

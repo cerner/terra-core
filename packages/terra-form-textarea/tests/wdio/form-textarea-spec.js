@@ -2,6 +2,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('default', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/default-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
     Terra.it.validatesElement();
@@ -10,6 +11,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('Props Populated', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/populated-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
     Terra.it.validatesElement();
@@ -18,6 +20,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('Invalid', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/invalid-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
     Terra.it.validatesElement();
@@ -26,6 +29,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('Incomplete', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/incomplete-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
     Terra.it.validatesElement();
@@ -34,6 +38,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('Small Textarea Height Resizing', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/small-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
     Terra.it.validatesElement();
@@ -42,6 +47,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('Medium Textarea Height Resizing', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
     Terra.it.validatesElement();
@@ -50,6 +56,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('Large Textarea Height Resizing', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/large-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
     Terra.it.validatesElement();
@@ -58,6 +65,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('Full Size Textarea Height Resizing', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/full-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
     Terra.it.validatesElement();
@@ -66,14 +74,17 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   describe('Enabled Placeholder', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/placeholder-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
-    Terra.it.validatesElement();
+    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
   });
 
   describe('Disabled Placeholder', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-placeholder-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
     Terra.it.validatesElement();
@@ -83,7 +94,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Resizes when given several rows of input', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea');
-        browser.moveToObject('#root', 0, 0);
+        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
       Terra.it.validatesElement('0');
@@ -98,6 +109,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Does not resize textareas that are non-resizable', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
+        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
       Terra.it.validatesElement('0');
@@ -112,7 +124,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Blocks autoresizing for when ontouch exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-on-touch-start');
-        browser.moveToObject('#root', 0, 0);
+        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
       Terra.it.validatesElement('0');
@@ -127,8 +139,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Blocks autoresizing for when DocumentTouch exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-document-touch');
-
-        browser.moveToObject('#root', 0, 0);
+        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
       Terra.it.validatesElement('0');
@@ -143,7 +154,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Blocks autoresizing for when maxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-max-touch-points');
-        browser.moveToObject('#root', 0, 0);
+        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
       Terra.it.validatesElement('0');
@@ -158,7 +169,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Blocks autoresizing for when msMaxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-ms-max-touch-points');
-        browser.moveToObject('#root', 0, 0);
+        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
       Terra.it.validatesElement('0');
@@ -173,8 +184,6 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Swapping two textareas with different size', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/swap-textarea');
-        // Removes the blinking cursor to prevent screenshot mismatches.
-        browser.execute('document.querySelector("textarea").style.caretColor = "transparent";');
         browser.click('#swap-button');
       });
 
@@ -186,7 +195,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Valid TextareaField', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
-        browser.moveToObject('#root', 0, 0);
+        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
       Terra.it.validatesElement();
@@ -213,6 +222,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     describe('Disabled TextareaField', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-textarea-field');
+        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
       Terra.it.validatesElement();

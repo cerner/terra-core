@@ -3,6 +3,49 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.51.0 - (June 11, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.50.0 - (June 9, 2020)
+------------------
+### Changed
+* Minor file changes to comply with eslint rules
+* Update wdio test configuration to use root wdio config
+
+3.49.0 - (June 2, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+* Updated wdio test to support testing against firefox
+* Update Custom Content test examples to remove timeouts that executed faster than IE tests
+
+3.48.0 - (May 19, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.47.0 - (May 5, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.46.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+3.45.0 - (April 22, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.44.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated documentation link in README
 

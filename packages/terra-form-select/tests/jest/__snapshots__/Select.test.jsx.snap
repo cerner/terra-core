@@ -1,5 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Select correctly applies the theme context className for default variant 1`] = `
+<div
+  aria-describedby="terra-select-screen-reader-description-24"
+  aria-disabled="false"
+  aria-expanded="false"
+  aria-haspopup="true"
+  aria-labelledby="terra-select-screen-reader-label-21 terra-select-screen-reader-display-22 terra-select-screen-reader-placeholder-23"
+  aria-required="false"
+  class="select default orion-fusion-theme"
+  data-terra-select="true"
+  data-terra-select-combobox="true"
+  role="combobox"
+  tabindex="0"
+>
+  <div
+    class="visually-hidden-component"
+    hidden=""
+  >
+    <span
+      id="terra-select-screen-reader-label-21"
+    >
+      Terra.form.select.ariaLabel
+    </span>
+    <span
+      id="terra-select-screen-reader-description-24"
+    >
+      Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
+    </span>
+  </div>
+  <div
+    aria-label="Terra.form.select.ariaLabel"
+    class="display"
+    role="textbox"
+  >
+    <div
+      class="placeholder"
+      id="terra-select-screen-reader-placeholder-23"
+    >
+      Terra.form.select.defaultDisplay
+    </div>
+  </div>
+  <div
+    class="toggle"
+    data-terra-form-select-toggle="true"
+  >
+    <span
+      class="arrow-icon"
+    />
+  </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="additions text"
+    class="visually-hidden-component"
+  />
+</div>
+`;
+
 exports[`Select should render a clear option 1`] = `
 <SingleSelect
   allowClear={true}

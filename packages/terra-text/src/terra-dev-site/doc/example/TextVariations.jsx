@@ -8,18 +8,18 @@ const cx = classNames.bind(styles);
 const TextVariations = () => (
   <div>
     <Text fontSize={18} colorClass={cx(['success'])} isItalic>
-Text with color set to
+      Text with color set to
       <code>{'\'success\' class'}</code>
       {' '}
-and
+      and
       <code>isItalic</code>
     </Text>
     <br />
     <Text fontSize={24} weight={200}>
-Text with font-size set to
+      Text with font-size set to
       <code>24</code>
       {' '}
-and weight set to
+      and weight set to
       <code>200</code>
     </Text>
   </div>

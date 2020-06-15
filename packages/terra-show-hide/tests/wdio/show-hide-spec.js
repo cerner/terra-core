@@ -119,7 +119,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
   describe('Long button text', () => {
     before(() => {
       browser.url('/#/raw/tests/terra-show-hide/show-hide/long-button-text-show-hide');
-      browser.moveToObject('#root', 0, 900); // move cursor to remove focus styles
+      browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
     });
 
     Terra.it.validatesElement('collapsed');

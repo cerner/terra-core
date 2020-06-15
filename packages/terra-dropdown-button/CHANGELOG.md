@@ -6,6 +6,33 @@ Unreleased
 ### Added
 * Added an interaction media query to apply `hover` styles only on non-touch devices.
 
+1.16.0 - (June 11, 2020)
+------------------
+### Changes
+* Disabled wdio test which opens dropdown menu with space key for firefox testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/3008 is resolved.
+
+### Removed
+* Removed duplicate test
+
+1.15.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
+1.14.0 - (May 19, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
+1.13.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+1.12.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated docs for documentation link and expanded `PropTypes` for Props Table
 * Removed extra lines from README

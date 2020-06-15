@@ -1,5 +1,9 @@
 @import '~terra-mixins/lib/Mixins';
 
+// Themes
+@import './clinical-lowlight-theme/SearchField.module';
+@import './orion-fusion-theme/SearchField.module';
+
 :local {
   .search-field {
     display: inline-flex;
@@ -50,8 +54,8 @@
       flex: 0 0 auto;
       margin: 0;
       position: absolute;
-      right: var(-terra-search-field-clear-right, 0);
-      top: var(-terra-search-field-clear-top, 0);
+      right: 0;
+      top: 0;
 
       &:active {
         background-color: var(--terra-search-field-clear-active-background-color, transparent);

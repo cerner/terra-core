@@ -1,11 +1,12 @@
 {
   "name": "terra-dialog",
   "main": "lib/Dialog.js",
-  "version": "2.37.0",
+  "version": "2.45.0",
   "description": "Dialogs are temporary views that can be used in a myriad of ways. Dialogs have the ability to alert users to act on critical information. In doing so, Dialogs may allow users to avoid destructive decisions, and also extend user workflows without disorienting the user.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerner/terra-core.git"
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-dialog"
   },
   "keywords": [
     "Cerner",
@@ -28,10 +29,11 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.34.0",
-    "terra-content-container": "^3.25.0",
-    "terra-icon": "^3.28.0",
-    "terra-mixins": "^1.35.0"
+    "terra-button": "^3.42.0",
+    "terra-content-container": "^3.28.0",
+    "terra-icon": "^3.32.0",
+    "terra-mixins": "^1.35.0",
+    "terra-theme-context": "^1.0.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -39,11 +41,11 @@
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
-    "test": "npm run jest && npm run wdio",
+    "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio-default": "cd ../.. && npx wdio ./packages/$npm_package_name/wdio.conf.js",
-    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio ./packages/$npm_package_name/clinical-lowlight-wdio.conf.js",
-    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio ./packages/$npm_package_name/wdio.conf.js",
+    "wdio-default": "cd ../.. && npx wdio",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

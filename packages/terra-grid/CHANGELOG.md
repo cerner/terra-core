@@ -3,6 +3,31 @@ ChangeLog
 
 Unreleased
 ----------
+
+6.22.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
+6.21.0 - (June 2, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
+6.20.0 - (May 26, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+6.19.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+6.18.0 - (April 22, 2020)
+------------------
 ### Changed
 * Added Usage section in docs
 * Removed extra lines from README

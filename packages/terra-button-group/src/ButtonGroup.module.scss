@@ -1,3 +1,7 @@
+// Themes
+@import './clinical-lowlight-theme/ButtonGroup.module';
+@import './orion-fusion-theme/ButtonGroup.module';
+
 :local {
   .button-group {
     display: inline-flex;
@@ -30,17 +34,18 @@
       // A z-index needs to be added on focus so that the focus ring does not get hidden behind adjacent buttons
       z-index: 1000;
     }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: var(--terra-button-group-button-hover-background-color, #b9bbbc);
+        color: var(--terra-button-group-button-hover-color, #000);
+      }
 
-    &:hover {
-      background-color: var(--terra-button-group-button-hover-background-color, #b9bbbc);
-      color: var(--terra-button-group-button-hover-color, #000);
-    }
-
-    &:hover.is-selected {
-      background-color: var(--terra-button-group-button-selected-and-hover-background-color, #40474a);
-      border-color: var(--terra-button-group-button-selected-and-hover-border-color, #40474a);
-      box-shadow: var(--terra-button-group-button-selected-and-hover-box-shadow);
-      color: var(--terra-button-group-button-selected-and-hover-color, #fff);
+      &:hover.is-selected {
+        background-color: var(--terra-button-group-button-selected-and-hover-background-color, #40474a);
+        border-color: var(--terra-button-group-button-selected-and-hover-border-color, #40474a);
+        box-shadow: var(--terra-button-group-button-selected-and-hover-box-shadow);
+        color: var(--terra-button-group-button-selected-and-hover-color, #fff);
+      }
     }
 
     &.is-selected.is-focused {

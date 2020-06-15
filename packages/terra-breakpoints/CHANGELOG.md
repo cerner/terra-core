@@ -3,6 +3,26 @@ ChangeLog
 
 Unreleased
 ----------
+
+2.28.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
+2.27.0 - (May 26, 2020)
+------------------
+### Fixed
+* Handle the `orientationchange` event on mobile device rotation since the `resize` event is not triggered.
+
+2.26.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+2.25.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated documentation links
 

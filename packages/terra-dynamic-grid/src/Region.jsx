@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, css } from 'aphrodite';
@@ -26,7 +25,6 @@ const positionShape = {
   * The ending row line for the region. See https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end.
   */
   'grid-row-end': PropTypes.number,
-
   /**
   * Additional CSS properties to apply to the region.
   */
@@ -39,33 +37,27 @@ const propTypes = {
    * The children of the region.
    */
   children: PropTypes.node,
-
-  /*
+  /**
   * The default position to use.
   */
   defaultPosition: PropTypes.shape(positionShape),
-
-  /*
+  /**
   *  The template to be used at tiny breakpoints
   */
   tiny: PropTypes.shape(positionShape),
-
-  /*
+  /**
   *  The template to be used at small breakpoints
   */
   small: PropTypes.shape(positionShape),
-
-  /*
+  /**
   *  The template to be used at medium breakpoints
   */
   medium: PropTypes.shape(positionShape),
-
-  /*
+  /**
   *  The template to be used at large breakpoints
   */
   large: PropTypes.shape(positionShape),
-
-  /*
+  /**
   *  The template to be used at huge breakpoints
   */
   huge: PropTypes.shape(positionShape),

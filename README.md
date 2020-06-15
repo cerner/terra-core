@@ -139,7 +139,8 @@ Components in beta stage may include breaking changes, new features, and bug fix
 <h2 id="internationalization-i18n">
   Internationalization (I18n)
 </h2>
-Please review [Terra's Internationalization documentation](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/internationalization) for more information. Included are directions on consumption and how internationalization is setup.
+
+Please review [Terra\'s Internationalization documentation](https://engineering.cerner.com/terra-ui/guides/terra-ui/internationalization/internationalization-intro) for more information. Included are directions on consumption and how internationalization is setup.
 
 <h3 id="packages-requiring-i18n">
   Packages Requiring I18n
@@ -153,7 +154,7 @@ Please review [Terra's Internationalization documentation](https://engineering.c
 - [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field)
 - [terra-form-radio](https://github.com/cerner/terra-core/tree/master/packages/terra-form-radio)
 - [terra-form-select](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
-- [terra-i18n](https://github.com/cerner/terra-core/tree/master/packages/terra-form-i18n)
+- [terra-i18n](https://github.com/cerner/terra-core/tree/master/packages/terra-i18n)
 - [terra-overlay](https://github.com/cerner/terra-core/tree/master/packages/terra-overlay)
 - [terra-search-field](https://github.com/cerner/terra-core/tree/master/packages/terra-search-field)
 - [terra-show-hide](https://github.com/cerner/terra-core/tree/master/packages/terra-show-hide)

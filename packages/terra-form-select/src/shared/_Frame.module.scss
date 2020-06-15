@@ -1,4 +1,6 @@
-@import '~terra-mixins/lib/Mixins';
+// Themes
+@import '../clinical-lowlight-theme/Frame.module';
+@import '../orion-fusion-theme/Frame.module';
 
 :local {
   .select {
@@ -243,6 +245,7 @@
     color: var(--terra-form-select-search-placeholder-color, rgba(21, 33, 41, 0.61));
     font-size: var(--terra-form-select-search-placeholder-font-size, 1.143rem);
     font-style: var(--terra-form-select-search-placeholder-font-style);
+    opacity: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

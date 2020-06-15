@@ -1,5 +1,125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <ButtonGroup
+    isBlock={false}
+    selectedKeys={Array []}
+  >
+    <div
+      className="button-group orion-fusion-theme"
+    >
+      <ButtonGroupButton
+        aria-pressed={null}
+        className=""
+        isDisabled={false}
+        key="1"
+        onClick={[Function]}
+        text="Button 1"
+      >
+        <Button
+          aria-pressed={null}
+          className="button-group-button orion-fusion-theme"
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isIconOnly={false}
+          isReversed={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          text="Button 1"
+          type="button"
+          variant="neutral"
+        >
+          <button
+            aria-disabled={false}
+            aria-pressed={null}
+            className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            type="button"
+          >
+            <span
+              className="button-label text-only"
+            >
+              <span
+                className=""
+              >
+                Button 1
+              </span>
+            </span>
+          </button>
+        </Button>
+      </ButtonGroupButton>
+      <ButtonGroupButton
+        aria-pressed={null}
+        className=""
+        isDisabled={false}
+        key="2"
+        onClick={[Function]}
+        text="Button 2"
+      >
+        <Button
+          aria-pressed={null}
+          className="button-group-button orion-fusion-theme"
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isIconOnly={false}
+          isReversed={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          text="Button 2"
+          type="button"
+          variant="neutral"
+        >
+          <button
+            aria-disabled={false}
+            aria-pressed={null}
+            className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            type="button"
+          >
+            <span
+              className="button-label text-only"
+            >
+              <span
+                className=""
+              >
+                Button 2
+              </span>
+            </span>
+          </button>
+        </Button>
+      </ButtonGroupButton>
+    </div>
+  </ButtonGroup>
+</ThemeContextProvider>
+`;
+
 exports[`should render a block button group with children 1`] = `
 <div
   className="button-group is-block"

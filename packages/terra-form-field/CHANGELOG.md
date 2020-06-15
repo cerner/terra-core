@@ -3,6 +3,28 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.4.0 - (June 9, 2020)
+------------------
+### Changed
+* Updated jest due to icon theme context.
+* Minor file changes to comply with eslint rules
+* Update wdio test configuration to use root wdio config
+
+4.3.0 - (May 19, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
+4.2.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+4.1.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated documentation link in README
 

@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-boolean-value, import/no-extraneous-dependencies */
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import Input from './mocks/Input';
@@ -375,5 +376,17 @@ it('should render a field with a Textarea', () => {
     </Field>
   );
   const wrapper = mountWithIntl(field).children();
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mountWithIntl(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Field
+        label="Field Label"
+        htmlFor="test"
+      />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });

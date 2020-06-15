@@ -1,5 +1,9 @@
 @import '~terra-mixins/lib/Mixins';
 
+// Themes
+@import './clinical-lowlight-theme/SectionHeader.module';
+@import './orion-fusion-theme/SectionHeader.module';
+
 :local {
   .section-header {
     @include terra-padding-end(var(--terra-section-header-padding-end, 0.7142857143rem));

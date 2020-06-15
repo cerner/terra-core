@@ -3,6 +3,63 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.35.0 - (June 13, 2020)
+------------------
+### Removed
+* Removed unused variable and themes folder.
+
+4.34.0 - (June 11, 2020)
+------------------
+### Changed
+* Updated wdio test to support testing against firefox
+
+4.33.0 - (June 9, 2020)
+------------------
+### Changed
+* Minor file changes to comply with eslint rules
+* Update wdio test configuration to use root wdio config
+
+4.32.0 - (June 2, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.31.0 - (May 26, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.30.0 - (May 19, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.29.0 - (May 12, 2020)
+------------------
+### Added
+* Added `unsatisfied` and `unverified` types
+
+4.28.0 - (May 5, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.27.0 - (April 28, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+
+4.26.0 - (April 22, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+4.25.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated docs for documentation link
 * Removed extra lines from README

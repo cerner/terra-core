@@ -1,26 +1,31 @@
 Terra.describeViewports('Alert', ['tiny', 'large'], () => {
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-alert/alert/default-alert'));
+    before(() => { browser.url('/#/raw/tests/terra-alert/alert/default-alert'); });
     Terra.it.validatesElement();
   });
 
   describe('Types', () => {
-    before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-type'));
+    before(() => { browser.url('/#/raw/tests/terra-alert/alert/alert-type'); });
     Terra.it.validatesElement();
   });
 
-  describe('Padding', () => {
-    before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-padding'));
+  describe('Wrapped Content', () => {
+    before(() => { browser.url('/#/raw/tests/terra-alert/alert/alert-with-wrapped-content'); });
+    Terra.it.validatesElement();
+  });
+
+  describe('Responsive', () => {
+    before(() => { browser.url('/#/raw/tests/terra-alert/alert/responsive-example'); });
     Terra.it.validatesElement();
   });
 
   describe('Titles', () => {
-    before(() => browser.url('/#/raw/tests/terra-alert/alert/alert-title'));
+    before(() => { browser.url('/#/raw/tests/terra-alert/alert/alert-title'); });
     Terra.it.validatesElement();
   });
 
   describe('Custom', () => {
-    before(() => browser.url('/#/raw/tests/terra-alert/alert/custom-alert'));
+    before(() => { browser.url('/#/raw/tests/terra-alert/alert/custom-alert'); });
     Terra.it.validatesElement();
   });
 
@@ -32,12 +37,12 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
     Terra.it.validatesElement();
 
     it('should be register actions', () => {
-      expect(browser.getText('#actionButtonClickCount')).to.equal('0');
+      expect(browser.getText('#actionAlert')).to.have.string('clicked 0 times');
       browser.click('#actionAlert button');
-      expect(browser.getText('#actionButtonClickCount')).to.equal('1');
+      expect(browser.getText('#actionAlert')).to.have.string('clicked 1 times');
     });
 
-    after(() => browser.moveToObject('#root', 0, 900));
+    after(() => browser.moveToObject('#root', 0, 700));
   });
 
   describe('Dismissible', () => {
@@ -52,6 +57,8 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
       expect(browser.getText('#dismissed')).to.equal('Alert was dismissed');
     });
 
-    after(() => browser.moveToObject('#root', 0, 900));
+    Terra.it.validatesElement('dismissed');
+
+    after(() => browser.moveToObject('#root', 0, 700));
   });
 });

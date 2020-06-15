@@ -3,6 +3,48 @@ ChangeLog
 
 Unreleased
 ----------
+
+6.8.0 - (June 11, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+6.7.0 - (June 9, 2020)
+------------------
+### Changed
+* Minor file changes to comply with eslint rules
+* Update wdio test configuration to use root wdio config
+
+6.6.0 - (June 2, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+* Updated wdio test to support testing against firefox
+* Disabled wdio axe color-contrast testing on placeholder examples for IE testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/2992 is resolved.
+
+6.5.0 - (May 19, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+6.4.0 - (May 12, 2020)
+------------------
+### Fixed
+* Fixed issue when using `isTouchAccessible` that could cause the dropdown to detach from the input
+* Fixed inconsistent hover interaction styles across all variants of select.
+
+### Changed
+* Set placeholders opacity to 1 to make firefox color-contrast consistent with other browsers
+
+6.3.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+6.2.0 - (April 22, 2020)
+------------------
 ### Added
 * Added `maxHeight` as first class prop to all select fields (Multi select field, Tag select Field, Search select field, Combobox select field, Single select field)
 

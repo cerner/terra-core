@@ -4,10 +4,54 @@ ChangeLog
 Unreleased
 ----------
 
+2.51.0 - (June 13, 2020)
+------------------
+### Removed
+* Removed unused variables and themes folder.
+
+2.50.0 - (June 11, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.49.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
+2.48.0 - (June 2, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.47.0 - (May 19, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.46.0 - (May 5, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.45.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+2.44.0 - (April 22, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+2.43.0 - (April 22, 2020)
+------------------
 ### Changes
 * Updated docs for documentation link and usage section
 * Removed extra lines from README
-* Updated to consumer terra-theme-context 
+* Updated to consumer terra-theme-context
 
 ### Fixed
 * Fix bottom border style in orion-fusion theme

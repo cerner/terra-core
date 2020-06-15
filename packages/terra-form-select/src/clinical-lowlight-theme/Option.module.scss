@@ -1,0 +1,28 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .clinical-lowlight-theme {
+    --terra-form-select-option-color: #b2b5b6;
+    --terra-form-select-option-font-size: 1.143rem;
+    --terra-form-select-option-line-height: 1.125;
+    --terra-form-select-option-padding: 0.286rem 0.714rem;
+    --terra-form-select-default-option-active-background-color: #004c76;
+    --terra-form-select-default-option-active-color: #b2b5b6;
+    --terra-form-select-default-option-active-font-weight: normal;
+    --terra-form-select-default-option-selected-background-color: #004c76;
+    --terra-form-select-default-option-selected-color: #b2b5b6;
+    --terra-form-select-default-option-selected-font-weight: normal;
+    --terra-form-select-default-option-selected-active-background-color: #004165;
+    --terra-form-select-option-icon-height: 1.143rem;
+    --terra-form-select-option-icon-margin-right: 0.714rem;
+    --terra-form-select-option-icon-width: 1.143rem;
+    --terra-form-select-option-active-background-color: #1e3a49;
+    --terra-form-select-option-disabled-color: #404344;
+
+
+    @include terra-inline-svg-var('--terra-form-select-option-icon-add-background', '<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#0092e0" d="M48 21H27V0h-6v21H0v6h21v21h6V27h21z"/></svg>');
+    @include terra-inline-svg-var('--terra-form-select-option-icon-active-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#003450" /><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0092e0"/></svg>');
+    @include terra-inline-svg-var('--terra-form-select-option-icon-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#2d3539" /><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0092e0"/></svg>');
+    @include terra-inline-svg-var('--terra-form-select-option-checkable-active-icon-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="6" ry="6" fill="#004c76" /><path d="M20,36.4,6.7,23.1l3.6-3.6L20,29.4,37.7,11.5l3.6,3.6Z" fill="#0092e0"/></svg>');
+  }
+}

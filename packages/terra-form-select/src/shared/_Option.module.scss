@@ -1,4 +1,6 @@
-@import '~terra-mixins/lib/Mixins';
+// Themes
+@import '../clinical-lowlight-theme/Option.module';
+@import '../orion-fusion-theme/Option.module';
 
 :local {
   .option {

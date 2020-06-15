@@ -3,6 +3,26 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.34.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
+3.33.0 - (May 19, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
+3.32.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+3.31.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated docs for documentation link
 * Removed extra lines from README

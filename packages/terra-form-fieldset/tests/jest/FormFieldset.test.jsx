@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-boolean-value */
-
 import React from 'react';
+import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+
 import Fieldset from '../../src/Fieldset';
 
 it('should render a default component', () => {
@@ -23,5 +24,14 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   );
 
   const wrapper = shallow(input);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Fieldset />
+    </ThemeContextProvider>,
+  );
   expect(wrapper).toMatchSnapshot();
 });

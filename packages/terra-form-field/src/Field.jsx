@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import IconError from 'terra-icon/lib/icon/IconError';
 import styles from './Field.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -114,13 +116,18 @@ const Field = (props) => {
     ...customProps
   } = props;
 
+  const theme = React.useContext(ThemeContext);
+
   const customStyles = maxWidth ? ({ maxWidth, ...style }) : style;
 
-  const fieldClasses = cx([
-    'field',
-    { 'field-inline': isInline },
+  const fieldClasses = classNames(
+    cx([
+      'field',
+      { 'field-inline': isInline },
+      theme.className,
+    ]),
     customProps.className,
-  ]);
+  );
 
   const labelClassNames = cx([
     'label',
@@ -170,12 +177,11 @@ const Field = (props) => {
   const labelGroup = (
     <div className={cx(['label-group', { 'label-group-hidden': isLabelHidden }])}>
       {isInvalid && <div className={cx('error-icon')}>{errorIcon}</div>}
-      {
-        <label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
-          {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
-          {label}
-          {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
-          {showOptional && !required
+      <label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
+        {required && (isInvalid || !hideRequired) && <div className={cx('required')}>*</div>}
+        {label}
+        {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
+        {showOptional && !required
             && (
               <FormattedMessage id="Terra.form.field.optional">
                 {optionalText => (
@@ -183,9 +189,8 @@ const Field = (props) => {
                 )}
               </FormattedMessage>
             )}
-          {IEDescriptionText}
-        </label>
-      }
+        {IEDescriptionText}
+      </label>
       {!isInvalid && <div className={cx('error-icon-hidden')}>{errorIcon}</div>}
     </div>
   );

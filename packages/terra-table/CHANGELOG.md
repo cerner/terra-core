@@ -6,11 +6,26 @@ Unreleased
 ### Added
 * Added an interaction media query to apply `hover` styles only on non-touch devices.
 
+4.8.0 - (June 9, 2020)
+------------------
 ### Changed
-* Updated documentation link in README
+* Apply themes by context and directly include packaged themes.
+* Update wdio test configuration to use root wdio config
 
+4.7.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+4.6.0 - (April 22, 2020)
+------------------
 ### Added
 * Added `overflow: hidden` style to cell.
+
+### Changed
+* Updated documentation link in README
 
 4.5.0 - (March 17, 2020)
 ------------------

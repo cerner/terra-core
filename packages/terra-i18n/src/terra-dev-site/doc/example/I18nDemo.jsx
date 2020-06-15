@@ -44,7 +44,7 @@ class Demo extends React.Component {
         </p>
         <label htmlFor="locale">
           {' '}
-Current locale:
+          Current locale:
           {this.state.locale}
           {' '}
 

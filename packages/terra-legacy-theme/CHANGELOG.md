@@ -4,6 +4,19 @@ Changelog
 Unreleased
 ----------
 
+2.33.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
+2.32.0 - (April 28, 2020)
+------------------
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+### Changed
+* Update terra-toolkit link references to terra-toolkit-boneyard.
+
 2.31.0 - (February 18, 2020)
 ------------------
 ### Added

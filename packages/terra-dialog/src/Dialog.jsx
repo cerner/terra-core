@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import Button from 'terra-button';
 import ContentContainer from 'terra-content-container';
 import { FormattedMessage } from 'react-intl';
 import styles from './Dialog.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -37,10 +39,15 @@ const defaultProps = {
 const Dialog = ({
   children, footer, header, onClose, ...customProps
 }) => {
-  const dialogClassNames = cx([
-    'dialog',
+  const theme = React.useContext(ThemeContext);
+
+  const dialogClassNames = classNames(
+    cx(
+      'dialog',
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   const closeButton = onClose
     ? (

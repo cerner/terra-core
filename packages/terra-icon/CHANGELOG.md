@@ -3,6 +3,30 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.32.0 - (June 9, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+* Update wdio test configuration to use root wdio config
+
+3.31.0 - (May 19, 2020)
+------------------
+### Changed
+* Updated wdio screenshot tests to accommodate Bluetooth icon
+
+### Added
+* Added Bluetooth icon
+
+3.30.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+3.29.0 - (April 22, 2020)
+------------------
 ### Changed
 * Updated documentation link in README
 

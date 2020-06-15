@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-boolean-value, jsx-a11y/label-has-for */
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Fieldset.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -43,11 +45,15 @@ const defaultProps = {
 const Fieldset = ({
   children, help, legend, legendAttrs, isLegendHidden, required, ...customProps
 }) => {
-  const fieldsetClasses = cx([
-    'fieldset',
-    { 'fieldset-required': required },
+  const theme = React.useContext(ThemeContext);
+  const fieldsetClasses = classNames(
+    cx([
+      'fieldset',
+      { 'fieldset-required': required },
+      theme.className,
+    ]),
     customProps.className,
-  ]);
+  );
 
   const legendClasses = cx([
     'legend',

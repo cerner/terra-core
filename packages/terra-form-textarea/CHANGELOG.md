@@ -3,6 +3,42 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.7.0 - (June 11, 2020)
+------------------
+### Changed
+* Disabled wdio axe color-contrast testing on placeholder examples for IE testing. This will be re-enabled when https://github.com/cerner/terra-core/issues/2992 is resolved.
+
+4.6.0 - (June 9, 2020)
+------------------
+### Changed
+* Updated jest due to icon theme context.
+* Update wdio test configuration to use root wdio config
+
+4.5.0 - (May 26, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
+4.4.0 - (May 19, 2020)
+------------------
+### Changes
+* Update wdio tests to move cursor to fix inconsistent hover styles in internal themes
+
+4.3.0 - (May 12, 2020)
+------------------
+### Changed
+* Set placeholders opacity to 1 to make firefox color-contrast consistent with other browsers
+
+4.2.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+4.1.0 - (April 22, 2020)
+------------------
 ### Changed
 * Added Usage section in docs
 * Updated imports for `TextareaField` examples

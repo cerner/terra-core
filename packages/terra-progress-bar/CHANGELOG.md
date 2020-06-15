@@ -4,12 +4,37 @@ ChangeLog
 Unreleased
 ----------
 
+4.25.0 - (June 11, 2020)
+------------------
+### Changed
+* Update jest test variable name
+
+4.24.0 - (June 9, 2020)
+------------------
+### Changed
+* Update wdio test configuration to use root wdio config
+
+4.23.0 - (June 2, 2020)
+------------------
+### Changed
+* Apply themes by context and directly include packaged themes.
+
+4.22.0 - (April 28, 2020)
+------------------
+### Changed
+* Removed "View Component Source Code" from docs in favour of source code badge
+### Added
+* Added clinical-lowlight-theme wdio screenshots
+
+4.21.0 - (April 22, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 4.20.0 - (April 14, 2020)
 ------------------
 ### Changed
 * Updated documentation link in README
-
-### Changed
 * Update docs to use mdx syntax.
 
 4.19.0 - (February 18, 2020)

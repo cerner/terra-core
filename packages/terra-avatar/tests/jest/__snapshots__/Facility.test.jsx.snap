@@ -1,5 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Facility correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Facility
+    alt="London"
+    color="auto"
+    isAriaHidden={false}
+  >
+    <div
+      className="avatar five orion-fusion-theme"
+    >
+      <span
+        alt="London"
+        aria-hidden={false}
+        aria-label="London"
+        className="icon facility"
+        role="img"
+      />
+    </div>
+  </Facility>
+</ThemeContextProvider>
+`;
+
 exports[`Facility should render a default facility avatar 1`] = `
 <div
   class="avatar five"
@@ -91,7 +119,7 @@ exports[`Facility should render fallback facility avatar when invalid image is p
 >
   <img
     alt="London"
-    class="image cover default image hidden"
+    class="image cover default hidden image"
     src="https://path/to/invalid_image.jpg"
   />
   <span
@@ -110,7 +138,7 @@ exports[`Facility should render image facility avatar when image is passed in 1`
 >
   <img
     alt="London"
-    class="image cover default image hidden"
+    class="image cover default hidden image"
     src="test-file-stub"
   />
   <span

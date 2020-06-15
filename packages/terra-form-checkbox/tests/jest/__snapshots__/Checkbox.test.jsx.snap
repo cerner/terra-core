@@ -1,5 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Checkbox
+    disabled={false}
+    inputAttrs={
+      Object {
+        "className": "healtheintent-application",
+      }
+    }
+    isInline={false}
+    isLabelHidden={false}
+    labelText="Do you have any Children?"
+    labelTextAttrs={
+      Object {
+        "className": "healtheintent-label-text",
+      }
+    }
+    name="children_present"
+    value="children_present"
+  >
+    <div
+      className="checkbox orion-fusion-theme"
+    >
+      <label
+        className="label healtheintent-label-text"
+      >
+        <input
+          className="native-input healtheintent-application"
+          disabled={false}
+          name="children_present"
+          type="checkbox"
+          value="children_present"
+        />
+        <span
+          className="label-text"
+        >
+          Do you have any Children?
+        </span>
+      </label>
+    </div>
+  </Checkbox>
+</ThemeContextProvider>
+`;
+
 exports[`should render a ChoiceField with a checkbox 1`] = `
 <div
   className="checkbox"
