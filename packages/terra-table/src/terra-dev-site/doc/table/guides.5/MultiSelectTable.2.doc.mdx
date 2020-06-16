@@ -92,6 +92,8 @@ We can then implement the unpack of our data into our row cells.
 ```
 Finally we can implement a method to loop through our data and create the table row with our methods and call it from our render method.
 Ensuring that we add the appropriate aria label for multiple selections.
+Additionally whenever the table is rendered without a `check mark`, for instance when rowStyle="toggle" it is recommended to set isDisabled=true
+property provided by the `selectAllColumn` object.
 ```diff
 + const createRows = data => data.map(childItem => createRow(childItem));
 
@@ -105,6 +107,10 @@ Ensuring that we add the appropriate aria label for multiple selections.
 +     cellPaddingStyle="standard"
 +     rowStyle="toggle"
 +     headerData={{
++       selectAllColumn: {
++         checkLabel: 'Multi Selection',
++         isDisabled: true,
++       },
 +       cells: [
 +         { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
 +         { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },
