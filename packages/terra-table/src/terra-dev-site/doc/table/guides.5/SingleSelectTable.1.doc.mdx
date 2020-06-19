@@ -77,7 +77,7 @@ We can then implement the unpack of our data into our row cells.
 + const createCellsForRow = cells => cells.map(cell => createCell(cell));
 ```
 Finally we can implement a method to loop through our data and create the table with our methods and call it from our render method.
-Additionally whenever the table is rendered without a `check mark`, for instance when rowStyle="toggle" it is recommended to set isDisabled=true
+Additionally, set `isDisabled=true` within the `selectAllColumn` property whenever the table is rendered without a checkmark. An example is when `rowStyle="toggle"`.
 property provided by the `selectAllColumn` object.
 
 ```diff
