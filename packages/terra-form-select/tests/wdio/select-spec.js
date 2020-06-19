@@ -1140,6 +1140,10 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     describe('multiple placeholder should be shown initially', () => {
       Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
     });
 
     describe('multiple placeholder should disappear after selection and blur', () => {
@@ -1909,6 +1913,10 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     describe('tag placeholder should be shown initially', () => {
       Terra.it.validatesElement();
+
+      after(() => {
+        browser.refresh();
+      });
     });
 
     describe('tag placeholder should disappear after selection and blur', () => {
