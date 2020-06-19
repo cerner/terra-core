@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Change media query for hover to use `ontouchstart`.
 
 3.42.0 - (June 11, 2020)
 ------------------

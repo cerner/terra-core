@@ -99,7 +99,7 @@ function PaginatorButton(props) {
       aria-current={ariaCurrent}
       aria-disabled={ariaDisabled}
       aria-label={ariaLabel}
-      className={cx([buttonActive, buttonFocused, className])}
+      className={cx([buttonActive, buttonFocused, { 'is-touch-device': ('ontouchstart' in window) }, className])}
       disabled={disabled}
       onBlur={() => handleOnBlur(setActive, setFocused)}
       onClick={onClick}
