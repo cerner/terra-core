@@ -151,6 +151,7 @@ class Hyperlink extends React.Component {
         { 'is-underline-hidden': isUnderlineHidden },
         { 'is-active': this.state.active },
         { 'is-focused': this.state.focused },
+        { 'is-touch-device': ('ontouchstart' in window) },
         theme.className,
       ),
       customProps.className,

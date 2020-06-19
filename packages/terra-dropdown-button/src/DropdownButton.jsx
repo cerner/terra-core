@@ -156,6 +156,7 @@ class DropdownButton extends React.Component {
         the dropdown open will cause the dropdown to close and reopen
       */
       { 'ignore-react-onclickoutside': isOpen },
+      { 'is-touch-device': ('ontouchstart' in window) },
       theme.className,
     );
 
