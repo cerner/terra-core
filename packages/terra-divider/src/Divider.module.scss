@@ -14,6 +14,7 @@
 
   .divider {
     @include terra-divider;
+    display: block;
     margin: 0; // remove browser default margin
   }
 

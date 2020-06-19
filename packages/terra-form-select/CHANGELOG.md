@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+6.9.0 - (June 16, 2020)
+------------------
 ### Fixed
 * Fixed build issues for clinical theme.
 
