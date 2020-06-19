@@ -12,7 +12,7 @@
     --terra-form-select-native-font-size: 1rem;
     --terra-form-select-native-height: 2rem;
     --terra-form-select-native-line-height: 1.75;
-    --terra-form-select-native-placeholder-color: #6f6e6e; // #767676; old color doesn't pass contrast
+    --terra-form-select-native-placeholder-color: #707070;
     --terra-form-select-native-placeholder-font-style: normal;
     --terra-form-select-native-placeholder-font-size: 1rem;
     --terra-form-select-native-select-line-height: 1.75;
@@ -42,7 +42,7 @@
     --terra-form-select-native-incomplete-background-color: #fefd9a;
 
     // invalid
-    --terra-form-select-native-invalid-background-color: transparent;
+    --terra-form-select-native-invalid-background-color: #fff;
     --terra-form-select-native-invalid-background-image: none;
     --terra-form-select-native-invalid-border-color: #dedfe0;
     --terra-form-select-native-invalid-box-shadow: none;
@@ -53,7 +53,7 @@
     --terra-form-select-native-invalid-hover-border-color: #4cb2e9;
 
     // disabled
-    --terra-form-select-native-disabled-background-color: rgba(111, 116, 119, 0.2);
+    --terra-form-select-native-disabled-background-color: #e2e3e4;
     --terra-form-select-native-disabled-border-color: #dedfe0;
     --terra-form-select-native-disabled-color: #1c1f21;
     --terra-form-select-native-disabled-opacity: 0.4;
