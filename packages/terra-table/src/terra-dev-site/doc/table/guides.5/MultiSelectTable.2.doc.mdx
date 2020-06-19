@@ -92,7 +92,6 @@ We can then implement the unpack of our data into our row cells.
 ```
 Finally we can implement a method to loop through our data and create the table row with our methods and call it from our render method.
 Ensuring that we add the appropriate aria label for multiple selections.
-```suggestion
 Additionally, set `isDisabled=true` within the `selectAllColumn` property whenever the table is rendered without a checkmark. An example is when `rowStyle="toggle"`.
 ```diff
 + const createRows = data => data.map(childItem => createRow(childItem));
