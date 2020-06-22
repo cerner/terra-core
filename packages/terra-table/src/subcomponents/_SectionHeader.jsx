@@ -114,6 +114,7 @@ const SectionHeader = ({
   const sectionHeaderClasses = cx(
     'section-header',
     { 'is-collapsible': isCollapsible },
+    { 'is-touch-device': ('ontouchstart' in window) },
   );
 
   return (

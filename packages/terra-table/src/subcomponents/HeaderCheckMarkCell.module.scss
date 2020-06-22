@@ -43,20 +43,18 @@
     background-color: var(--terra-table-header-checkmark-cell-interactable-background-color, #fff);
     border: var(--terra-table-header-checkmark-cell-interactable-border, 1px solid #9b9c9d);
   }
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
-    .is-interactable:hover .checkmark {
-      border: var(--terra-table-header-checkmark-cell-interactable-hover-border, 1px solid #2a4b77);
-    }
+
+  .is-interactable:hover:not(.is-touch-device) .checkmark {
+    border: var(--terra-table-header-checkmark-cell-interactable-hover-border, 1px solid #2a4b77);
   }
 
   .is-interactable:active .checkmark {
     background-color: var(--terra-table-header-checkmark-cell-interactable-active-background-color, #b5d4fe);
     border: var(--terra-table-header-checkmark-cell-interactable-active-border, 1px solid #3a67a4);
   }
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
-    .is-interactable:hover .is-selected {
-      background-color: var(--terra-table-header-checkmark-cell-interactable-hover-selected-background-color, #2a4b77);
-    }
+
+  .is-interactable:hover:not(.is-touch-device) .is-selected {
+    background-color: var(--terra-table-header-checkmark-cell-interactable-hover-selected-background-color, #2a4b77);
   }
 
   .is-interactable:active .is-selected {

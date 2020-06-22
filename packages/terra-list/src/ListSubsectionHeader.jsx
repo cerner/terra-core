@@ -83,6 +83,7 @@ const ListSubsectionHeader = ({
     cx(
       'subsection-header',
       { 'is-collapsible': isCollapsible },
+      { 'is-touch-device': ('ontouchstart' in window) },
       theme.className,
     ),
     customProps.className,
