@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Update Usage Section in dev-site doc page
 
 2.27.0 - (June 9, 2020)
 ------------------
