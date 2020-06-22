@@ -61,7 +61,7 @@ exports[`Switch should render a default component 1`] = `
       <div
         className="tray"
       >
-        <button
+        <input
           aria-checked={false}
           aria-labelledby="label1"
           className="slider"
@@ -140,7 +140,7 @@ exports[`Switch should render as disabled when set 1`] = `
       <div
         className="tray is-disabled"
       >
-        <button
+        <input
           aria-checked={false}
           aria-labelledby="label2"
           className="slider is-disabled"

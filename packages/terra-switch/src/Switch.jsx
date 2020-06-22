@@ -127,7 +127,7 @@ const Switch = (props) => {
             <div className={cx('status-label-text')}>{statusLabelText}</div>
           </div>
           <div className={trayClassNames}>
-            <button
+            <input
               type="button"
               id={switchId}
               disabled={isDisabled}
