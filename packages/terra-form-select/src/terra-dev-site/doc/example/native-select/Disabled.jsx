@@ -7,7 +7,6 @@ const cx = classNames.bind(styles);
 
 const DisabledExample = () => (
   <NativeSelect
-    id="disabled-example"
     ariaLabel="Disabled Example"
     disabled
     options={[

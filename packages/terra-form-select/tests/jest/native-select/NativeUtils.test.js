@@ -63,36 +63,32 @@ const testOptGroups = [
 describe('NativeUtils', () => {
   // getDisplay
   it('should return valid displays for getDisplay with placeholder', () => {
-    expect(getDisplay(defaultPlaceholderValue, [], {}, mockIntl)).toEqual('mock-test-display');
-    expect(getDisplay(defaultPlaceholderValue, [], { display: 'custom-test-display' }, mockIntl)).toEqual('custom-test-display');
-    expect(getDisplay('custom-test-value', [], { value: 'custom-test-value' }, mockIntl)).toEqual('mock-test-display');
-    expect(getDisplay('custom-test-value', [], { value: 'custom-test-value', display: 'custom-test-display' }, mockIntl)).toEqual('custom-test-display');
+    expect(getDisplay(defaultPlaceholderValue, [], true, mockIntl)).toEqual('mock-test-display');
   });
 
   it('should return valid displays for getDisplay with options', () => {
-    expect(getDisplay(null, testOptions, {})).toEqual(undefined);
-    expect(getDisplay(undefined, testOptions, {})).toEqual(undefined);
-    expect(getDisplay('value-0', testOptions, {})).toEqual(undefined);
-    expect(getDisplay('value-1', testOptions, {})).toEqual('1');
-    expect(getDisplay('value-2', testOptions, {})).toEqual('2');
-    expect(getDisplay('value-3', testOptions, {})).toEqual('3');
-    expect(getDisplay('value-4', testOptions, {})).toEqual('4');
+    expect(getDisplay(null, testOptions, true)).toEqual(undefined);
+    expect(getDisplay(undefined, testOptions, true)).toEqual(undefined);
+    expect(getDisplay('value-0', testOptions, true)).toEqual(undefined);
+    expect(getDisplay('value-1', testOptions, true)).toEqual('1');
+    expect(getDisplay('value-2', testOptions, true)).toEqual('2');
+    expect(getDisplay('value-3', testOptions, true)).toEqual('3');
+    expect(getDisplay('value-4', testOptions, true)).toEqual('4');
   });
 
   it('should return valid displays for getDisplay with optGroups', () => {
-    expect(getDisplay(null, testOptGroups, {})).toEqual(undefined);
-    expect(getDisplay(undefined, testOptGroups, {})).toEqual(undefined);
-    expect(getDisplay('value-0', testOptGroups, {})).toEqual(undefined);
-    expect(getDisplay('value-1', testOptGroups, {})).toEqual('1');
-    expect(getDisplay('value-2', testOptGroups, {})).toEqual('2');
-    expect(getDisplay('value-3', testOptGroups, {})).toEqual('3');
-    expect(getDisplay('value-4', testOptGroups, {})).toEqual('4');
+    expect(getDisplay(null, testOptGroups, true)).toEqual(undefined);
+    expect(getDisplay(undefined, testOptGroups, true)).toEqual(undefined);
+    expect(getDisplay('value-0', testOptGroups, true)).toEqual(undefined);
+    expect(getDisplay('value-1', testOptGroups, true)).toEqual('1');
+    expect(getDisplay('value-2', testOptGroups, true)).toEqual('2');
+    expect(getDisplay('value-3', testOptGroups, true)).toEqual('3');
+    expect(getDisplay('value-4', testOptGroups, true)).toEqual('4');
   });
 
   // getFirstValue
   it('should return valid values for getFirstValue with placeholder', () => {
-    expect(getFirstValue([], {})).toEqual(defaultPlaceholderValue);
-    expect(getFirstValue([], { value: 'custom-test-value' })).toEqual('custom-test-value');
+    expect(getFirstValue([], true)).toEqual(defaultPlaceholderValue);
   });
 
   it('should return valid values for getFirstValue with options', () => {
@@ -104,11 +100,10 @@ describe('NativeUtils', () => {
   });
 
   // isCurrentPlaceholder
-  it('should return valid displays for getDisplay with optGroups', () => {
+  it('should return the correct bool for isCurrentPlaceholder', () => {
+    expect(isCurrentPlaceholder('value-1', true)).toEqual(false);
     expect(isCurrentPlaceholder(defaultPlaceholderValue)).toEqual(false);
-    expect(isCurrentPlaceholder(defaultPlaceholderValue, {})).toEqual(true);
-    expect(isCurrentPlaceholder('custom-test-value', { value: 'custom-test-value' })).toEqual(true);
-    expect(isCurrentPlaceholder('custom-false-value', { value: 'custom-test-value' })).toEqual(false);
+    expect(isCurrentPlaceholder(defaultPlaceholderValue, true)).toEqual(true);
   });
 
   // getOptGroupKey

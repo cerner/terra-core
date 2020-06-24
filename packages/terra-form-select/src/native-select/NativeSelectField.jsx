@@ -9,7 +9,8 @@ import {
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection.
+   * Whether the placeholder is included as an option to clear selection.
+   * Dependent on the `'hasPlaceholder'` property.
    */
   allowClear: PropTypes.bool,
   /**
@@ -28,6 +29,10 @@ const propTypes = {
    * Error message displayed when the select is invalid.
    */
   error: PropTypes.node,
+  /**
+   * Whether a placeholder value should be included as an option.
+   */
+  hasPlaceholder: PropTypes.bool,
   /**
    * Help message to display with the select.
    */
@@ -71,23 +76,6 @@ const propTypes = {
    */
   options: PropTypes.arrayOf(PropTypes.oneOfType([optionPropType, optGroupPropType])),
   /**
-   * Placeholder data. The presence of this data object is used as the indicator for whether or not a placeholder is used.
-   */
-  placeholder: PropTypes.shape({
-    /**
-     * Whether the placeholder is included as an option to clear selection.
-     */
-    allowClear: PropTypes.bool,
-    /**
-     * Optional override of the default display.
-     */
-    display: PropTypes.string,
-    /**
-     * Optional override of the default value.
-     */
-    value: PropTypes.string,
-  }),
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -111,7 +99,9 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   disabled: false,
+  hasPlaceholder: false,
   hideRequired: false,
   isIncomplete: false,
   isInline: false,
@@ -122,9 +112,11 @@ const defaultProps = {
 };
 
 const NativeSelectField = ({
+  allowClear,
   defaultValue,
   disabled,
   error,
+  hasPlaceholder,
   help,
   hideRequired,
   isIncomplete,
@@ -136,7 +128,6 @@ const NativeSelectField = ({
   maxWidth,
   onChange,
   options,
-  placeholder,
   required,
   selectAttrs,
   selectId,
@@ -178,9 +169,11 @@ const NativeSelectField = ({
       <NativeSelect
         attrs={selectAttrs}
         id={selectId}
+        allowClear={allowClear}
         ariaDescribedBy={ariaDescriptionIds}
         ariaLabel={label}
         disabled={disabled}
+        hasPlaceholder={hasPlaceholder}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         defaultValue={defaultValue}
@@ -188,7 +181,6 @@ const NativeSelectField = ({
         onChange={onChange}
         options={options}
         value={value}
-        placeholder={placeholder}
       />
     </Field>
   );

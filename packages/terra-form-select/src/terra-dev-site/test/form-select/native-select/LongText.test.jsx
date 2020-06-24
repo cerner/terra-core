@@ -8,15 +8,15 @@ const cx = classNames.bind(styles);
 const LongTextTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
-      id="select-id"
       ariaLabel="select-label"
-      value="mercedes"
+      id="select-id"
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },
         { value: 'mercedes', display: 'Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
+      value="mercedes"
     />
   </div>
 );

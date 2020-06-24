@@ -7,8 +7,8 @@ describe('NativeSelectField', () => {
   it('should render a default NativeSelectField', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -17,20 +17,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField as optional', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
+        selectId="test-id"
         showOptional
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should render a NativeSelectField with an aria label', () => {
-    const wrapper = shallowWithIntl(
-      <NativeSelectField
-        selectId="test-id"
-        label="test-label"
-        ariaLabel="test-label"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -39,9 +28,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField aria described by', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
-        label="test-label"
         ariaDescribedBy="test-described-id"
+        label="test-label"
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -50,9 +39,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with help', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
-        label="test-label"
         help={<p>test help</p>}
+        label="test-label"
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -61,9 +50,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with error', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
-        label="test-label"
         error={<p>test error</p>}
+        label="test-label"
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -72,9 +61,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with a maxWidth', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
         maxWidth="100px"
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -83,9 +72,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with a labelAttrs', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
         labelAttrs={{ 'data-test-attr': 'label' }}
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -94,9 +83,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with a selectAttrs', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
         selectAttrs={{ 'data-test-attr': 'select' }}
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -105,7 +94,6 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with options', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
         options={[
           { value: 'volvo', display: 'Volvo' },
@@ -113,6 +101,7 @@ describe('NativeSelectField', () => {
           { value: 'mercedes', display: 'Mercedes' },
           { value: 'audi', display: 'Audi' },
         ]}
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -121,15 +110,15 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with options and defaultValue', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
-        label="test-label"
         defaultValue="saab"
+        label="test-label"
         options={[
           { value: 'volvo', display: 'Volvo' },
           { value: 'saab', display: 'Saab' },
           { value: 'mercedes', display: 'Mercedes' },
           { value: 'audi', display: 'Audi' },
         ]}
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -138,15 +127,15 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with options and value', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
-        value="audi"
         options={[
           { value: 'volvo', display: 'Volvo' },
           { value: 'saab', display: 'Saab' },
           { value: 'mercedes', display: 'Mercedes' },
           { value: 'audi', display: 'Audi' },
         ]}
+        selectId="test-id"
+        value="audi"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -155,9 +144,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with onChange', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
         onChange={jest.fn()}
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -166,20 +155,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with a default placeholder', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
+        hasPlaceholder
         label="test-label"
-        placeholder={{}}
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should render a NativeSelectField with a custom  placeholder', () => {
-    const wrapper = shallowWithIntl(
-      <NativeSelectField
         selectId="test-id"
-        label="test-label"
-        placeholder={{ display: 'test-placeholder-display', value: 'test-placeholder-value' }}
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -188,9 +166,10 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField allowing clear', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
+        allowClear
+        hasPlaceholder
         label="test-label"
-        placeholder={{ allowClear: true }}
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -199,9 +178,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField as invalid', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
         invalid
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -210,9 +189,9 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField as disabled', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
-        label="test-label"
         disabled
+        label="test-label"
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -221,7 +200,6 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField with opt groups', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
         label="test-label"
         options={[
           {
@@ -239,6 +217,7 @@ describe('NativeSelectField', () => {
             ],
           },
         ]}
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -247,10 +226,10 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField required', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
-        label="test-label"
-        required
         isIncomplete
+        label="test-label"
+        required
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -259,11 +238,11 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField required', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
-        label="test-label"
-        required
         hideRequired
         isIncomplete
+        label="test-label"
+        required
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -272,10 +251,10 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField isIncomplete', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
+        isIncomplete
         label="test-label"
         required
-        isIncomplete
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -284,10 +263,10 @@ describe('NativeSelectField', () => {
   it('should render a NativeSelectField required and isIncomplete', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField
-        selectId="test-id"
+        isIncomplete
         label="test-label"
         required
-        isIncomplete
+        selectId="test-id"
       />,
     );
     expect(wrapper).toMatchSnapshot();

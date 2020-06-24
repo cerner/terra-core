@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const DefaultFieldTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelectField
-      selectId="test-id"
+      hasPlaceholder
       label="Default Field Text"
       options={[
         { value: 'volvo', display: 'Volvo' },
@@ -16,7 +16,7 @@ const DefaultFieldTest = () => (
         { value: 'mercedes', display: 'Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
-      placeholder={{}}
+      selectId="test-id"
     />
   </div>
 );

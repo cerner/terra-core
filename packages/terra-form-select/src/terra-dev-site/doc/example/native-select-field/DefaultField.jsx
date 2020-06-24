@@ -7,7 +7,6 @@ const cx = classNames.bind(styles);
 
 const DefaultFieldExample = () => (
   <NativeSelectField
-    selectId="default-example"
     label="Default Field Text"
     options={[
       { value: 'volvo', display: 'Volvo' },
@@ -15,6 +14,7 @@ const DefaultFieldExample = () => (
       { value: 'mercedes', display: 'Mercedes' },
       { value: 'audi', display: 'Audi' },
     ]}
+    selectId="default-example"
     className={cx('form-select')}
   />
 );

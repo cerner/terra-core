@@ -1,10 +1,8 @@
 const defaultPlaceholderValue = '';
 
-const getDisplay = (findValue, options, placeholder, intl) => {
-  if (placeholder) {
-    if ((placeholder.value && findValue === placeholder.value) || (!placeholder.value && findValue === defaultPlaceholderValue)) {
-      return placeholder.display || intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-    }
+const getDisplay = (findValue, options, hasPlaceholder, intl) => {
+  if (hasPlaceholder && findValue === defaultPlaceholderValue) {
+    return intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
   }
   if (!options || !options.length) {
     return undefined;
@@ -26,9 +24,9 @@ const getDisplay = (findValue, options, placeholder, intl) => {
   return undefined;
 };
 
-const getFirstValue = (options, placeholder) => {
-  if (placeholder) {
-    return placeholder.value || defaultPlaceholderValue;
+const getFirstValue = (options, hasPlaceholder = false) => {
+  if (hasPlaceholder) {
+    return defaultPlaceholderValue;
   }
   if (!options || !options.length) {
     return undefined;
@@ -46,15 +44,7 @@ const getFirstValue = (options, placeholder) => {
   return undefined;
 };
 
-const isCurrentPlaceholder = (value, placeholder) => {
-  if (!placeholder) {
-    return false;
-  }
-  if (placeholder.value) {
-    return value === placeholder.value;
-  }
-  return value === defaultPlaceholderValue;
-};
+const isCurrentPlaceholder = (value, hasPlaceholder = false) => hasPlaceholder && value === defaultPlaceholderValue;
 
 const isValuePresent = value => value !== undefined && value !== null;
 

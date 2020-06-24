@@ -7,6 +7,15 @@ describe('NativeSelect', () => {
   it('should render a default NativeSelect', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
+        ariaLabel="test-label"
+      />,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a NativeSelect with an id', () => {
+    const wrapper = mountWithIntl(
+      <NativeSelect
         id="test-id"
         ariaLabel="test-label"
       />,
@@ -17,7 +26,6 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect aria described by', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
         ariaDescribedBy="test-described-id"
       />,
@@ -28,7 +36,6 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect with options', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
         options={[
           { value: 'volvo', display: 'Volvo' },
@@ -44,7 +51,6 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect with options and defaultValue', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
         defaultValue="saab"
         options={[
@@ -61,15 +67,14 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect with options and value', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
-        value="audi"
         options={[
           { value: 'volvo', display: 'Volvo' },
           { value: 'saab', display: 'Saab' },
           { value: 'mercedes', display: 'Mercedes' },
           { value: 'audi', display: 'Audi' },
         ]}
+        value="audi"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -78,7 +83,6 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect with onChange', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
         onChange={jest.fn()}
       />,
@@ -89,20 +93,8 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect with a default placeholder', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
-        placeholder={{}}
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should render a NativeSelect with a custom placeholder', () => {
-    const wrapper = mountWithIntl(
-      <NativeSelect
-        id="test-id"
-        ariaLabel="test-label"
-        placeholder={{ display: 'test-placeholder-display', value: 'test-placeholder-value' }}
+        hasPlaceholder
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -111,9 +103,9 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect allowing clear', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
+        allowClear
         ariaLabel="test-label"
-        placeholder={{ allowClear: true }}
+        hasPlaceholder
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -122,7 +114,6 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect as invalid', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
         isInvalid
       />,
@@ -133,7 +124,6 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect as disabled', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
         disabled
       />,
@@ -144,7 +134,6 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect with opt groups', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
         options={[
           {
@@ -170,10 +159,8 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect required', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
         required
-        isIncomplete
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -182,9 +169,7 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect isIncomplete', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
-        required
         isIncomplete
       />,
     );
@@ -194,10 +179,9 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect required and isIncomplete', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
-        required
         isIncomplete
+        required
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -206,7 +190,6 @@ describe('NativeSelect', () => {
   it('should render a NativeSelect with a refCallback', () => {
     const wrapper = shallowWithIntl(
       <NativeSelect
-        id="test-id"
         ariaLabel="test-label"
         refCallback={jest.fn()}
       />,

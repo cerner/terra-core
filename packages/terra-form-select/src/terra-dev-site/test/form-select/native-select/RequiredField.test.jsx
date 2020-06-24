@@ -8,16 +8,16 @@ const cx = classNames.bind(styles);
 const RequiredFieldTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelectField
-      selectId="test-id"
+      hasPlaceholder
       label="Required Field Text"
-      required
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },
         { value: 'mercedes', display: 'Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
-      placeholder={{}}
+      required
+      selectId="test-id"
     />
   </div>
 );

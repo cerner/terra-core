@@ -8,9 +8,9 @@ const cx = classNames.bind(styles);
 const InvalidTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
-      id="select-id"
       ariaLabel="select-label"
       disabled
+      id="select-id"
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },

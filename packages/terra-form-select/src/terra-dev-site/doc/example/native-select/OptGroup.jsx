@@ -7,7 +7,6 @@ const cx = classNames.bind(styles);
 
 const OptGroupExample = () => (
   <NativeSelect
-    id="opt-group-example"
     ariaLabel="OptGroup Example"
     options={[
       {

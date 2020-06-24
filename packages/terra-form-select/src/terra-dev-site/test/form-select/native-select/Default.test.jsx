@@ -8,8 +8,8 @@ const cx = classNames.bind(styles);
 const DefaultTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
-      id="select-id"
       ariaLabel="select-label"
+      id="select-id"
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },

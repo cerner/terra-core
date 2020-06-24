@@ -8,15 +8,15 @@ const cx = classNames.bind(styles);
 const PlaceholderTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
-      id="select-id"
       ariaLabel="select-label"
+      hasPlaceholder
+      id="select-id"
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },
         { value: 'mercedes', display: 'Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
-      placeholder={{}}
     />
   </div>
 );

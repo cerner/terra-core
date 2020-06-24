@@ -2,8 +2,9 @@
 
 exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
 <InjectIntl(NativeSelect)
+  allowClear={true}
   ariaLabel="test-label"
-  id="test-id"
+  hasPlaceholder={true}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -31,16 +32,12 @@ exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
       "timeZone": null,
     }
   }
-  placeholder={
-    Object {
-      "allowClear": true,
-    }
-  }
 >
   <NativeSelect
+    allowClear={true}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={true}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -71,11 +68,6 @@ exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
     isIncomplete={false}
     isInvalid={false}
     options={Array []}
-    placeholder={
-      Object {
-        "allowClear": true,
-      }
-    }
     required={false}
   >
     <div
@@ -103,7 +95,6 @@ exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -126,7 +117,6 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
 <InjectIntl(NativeSelect)
   ariaDescribedBy="test-described-id"
   ariaLabel="test-label"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -156,10 +146,11 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
   }
 >
   <NativeSelect
+    allowClear={false}
     ariaDescribedBy="test-described-id"
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -216,7 +207,6 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -232,7 +222,6 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
   disabled={true}
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -262,9 +251,10 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
   }
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={true}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -321,7 +311,6 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
         aria-label="test-label"
         className="select"
         disabled={true}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -336,7 +325,6 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
 exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -367,9 +355,10 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
   isInvalid={true}
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -426,7 +415,6 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -441,7 +429,6 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
 exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -470,12 +457,12 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
     }
   }
   isIncomplete={true}
-  required={true}
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -506,10 +493,10 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
     isIncomplete={true}
     isInvalid={false}
     options={Array []}
-    required={true}
+    required={false}
   >
     <div
-      className="native incomplete"
+      className="native"
       data-focus-interaction="none"
     >
       <div
@@ -531,12 +518,11 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={true}
+        required={false}
       />
     </div>
   </NativeSelect>
@@ -546,7 +532,6 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
 exports[`NativeSelect should render a NativeSelect required 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -574,13 +559,13 @@ exports[`NativeSelect should render a NativeSelect required 1`] = `
       "timeZone": null,
     }
   }
-  isIncomplete={true}
   required={true}
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -608,13 +593,13 @@ exports[`NativeSelect should render a NativeSelect required 1`] = `
         "timeZone": null,
       }
     }
-    isIncomplete={true}
+    isIncomplete={false}
     isInvalid={false}
     options={Array []}
     required={true}
   >
     <div
-      className="native incomplete"
+      className="native"
       data-focus-interaction="none"
     >
       <div
@@ -636,7 +621,6 @@ exports[`NativeSelect should render a NativeSelect required 1`] = `
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -651,7 +635,6 @@ exports[`NativeSelect should render a NativeSelect required 1`] = `
 exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -683,9 +666,10 @@ exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`]
   required={true}
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -741,7 +725,6 @@ exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`]
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -753,136 +736,10 @@ exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`]
 </InjectIntl(NativeSelect)>
 `;
 
-exports[`NativeSelect should render a NativeSelect with a custom placeholder 1`] = `
-<InjectIntl(NativeSelect)
-  ariaLabel="test-label"
-  id="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  placeholder={
-    Object {
-      "display": "test-placeholder-display",
-      "value": "test-placeholder-value",
-    }
-  }
->
-  <NativeSelect
-    ariaLabel="test-label"
-    disabled={false}
-    id="test-id"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
-    isInvalid={false}
-    options={Array []}
-    placeholder={
-      Object {
-        "display": "test-placeholder-display",
-        "value": "test-placeholder-value",
-      }
-    }
-    required={false}
-  >
-    <div
-      className="native placeholder"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        >
-          test-placeholder-display
-        </div>
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        aria-label="test-label"
-        className="select"
-        disabled={false}
-        id="test-id"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={false}
-        value="test-placeholder-value"
-      >
-        <option
-          disabled={true}
-          hidden={true}
-          value="test-placeholder-value"
-        >
-          test-placeholder-display
-        </option>
-      </select>
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
 exports[`NativeSelect should render a NativeSelect with a default placeholder 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  id="test-id"
+  hasPlaceholder={true}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -910,12 +767,12 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
       "timeZone": null,
     }
   }
-  placeholder={Object {}}
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={true}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -946,7 +803,6 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
     isIncomplete={false}
     isInvalid={false}
     options={Array []}
-    placeholder={Object {}}
     required={false}
   >
     <div
@@ -974,7 +830,6 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -997,9 +852,10 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
 
 exports[`NativeSelect should render a NativeSelect with a refCallback 1`] = `
 <NativeSelect
+  allowClear={false}
   ariaLabel="test-label"
   disabled={false}
-  id="test-id"
+  hasPlaceholder={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1035,7 +891,7 @@ exports[`NativeSelect should render a NativeSelect with a refCallback 1`] = `
 />
 `;
 
-exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
+exports[`NativeSelect should render a NativeSelect with an id 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
   id="test-id"
@@ -1066,12 +922,117 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
       "timeZone": null,
     }
   }
+>
+  <NativeSelect
+    allowClear={false}
+    ariaLabel="test-label"
+    disabled={false}
+    hasPlaceholder={false}
+    id="test-id"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isIncomplete={false}
+    isInvalid={false}
+    options={Array []}
+    required={false}
+  >
+    <div
+      className="native"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        />
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        id="test-id"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={false}
+      />
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
+exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
+<InjectIntl(NativeSelect)
+  ariaLabel="test-label"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   onChange={[MockFunction]}
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1128,7 +1089,6 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -1143,7 +1103,6 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
 exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1203,9 +1162,10 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
   }
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1292,7 +1252,6 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -1343,7 +1302,6 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
 exports[`NativeSelect should render a NativeSelect with options 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1393,9 +1351,10 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
   }
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1472,7 +1431,6 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -1514,7 +1472,6 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
   defaultValue="saab"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1564,10 +1521,11 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
   }
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     defaultValue="saab"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1644,7 +1602,6 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -1685,7 +1642,6 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
 exports[`NativeSelect should render a NativeSelect with options and value 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1736,9 +1692,10 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
   value="audi"
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1816,7 +1773,6 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -1857,7 +1813,6 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
 exports[`NativeSelect should render a default NativeSelect 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  id="test-id"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1887,9 +1842,10 @@ exports[`NativeSelect should render a default NativeSelect 1`] = `
   }
 >
   <NativeSelect
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    id="test-id"
+    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1945,7 +1901,6 @@ exports[`NativeSelect should render a default NativeSelect 1`] = `
         aria-label="test-label"
         className="select"
         disabled={false}
-        id="test-id"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}

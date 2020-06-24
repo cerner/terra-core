@@ -8,17 +8,17 @@ const cx = classNames.bind(styles);
 const IncompleteFieldTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelectField
-      selectId="test-id"
-      label="Incomplete Field Text"
-      required
+      hasPlaceholder
       isIncomplete
+      label="Incomplete Field Text"
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },
         { value: 'mercedes', display: 'Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
-      placeholder={{}}
+      required
+      selectId="test-id"
     />
   </div>
 );

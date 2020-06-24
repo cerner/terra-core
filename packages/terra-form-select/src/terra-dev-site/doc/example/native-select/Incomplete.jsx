@@ -7,9 +7,8 @@ const cx = classNames.bind(styles);
 
 const IncompleteExample = () => (
   <NativeSelect
-    id="incomplete-example"
     ariaLabel="Incomplete Example"
-    required
+    hasPlaceholder
     isIncomplete
     options={[
       { value: 'volvo', display: 'Volvo' },
@@ -17,7 +16,7 @@ const IncompleteExample = () => (
       { value: 'mercedes', display: 'Mercedes' },
       { value: 'audi', display: 'Audi' },
     ]}
-    placeholder={{}}
+    required
     className={cx('form-select')}
   />
 );

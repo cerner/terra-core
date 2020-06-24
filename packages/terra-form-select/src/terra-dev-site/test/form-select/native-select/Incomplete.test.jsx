@@ -8,9 +8,9 @@ const cx = classNames.bind(styles);
 const IncompleteTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
-      id="select-id"
       ariaLabel="select-label"
-      required
+      hasPlaceholder
+      id="select-id"
       isIncomplete
       options={[
         { value: 'volvo', display: 'Volvo' },
@@ -18,7 +18,7 @@ const IncompleteTest = () => (
         { value: 'mercedes', display: 'Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
-      placeholder={{}}
+      required
     />
   </div>
 );

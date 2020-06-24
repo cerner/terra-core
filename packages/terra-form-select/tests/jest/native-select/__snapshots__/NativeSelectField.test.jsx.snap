@@ -48,16 +48,13 @@ exports[`NativeSelectField should render a NativeSelectField allowing clear 1`] 
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={true}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={true}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
-    placeholder={
-      Object {
-        "allowClear": true,
-      }
-    }
     required={false}
   />
 </Field>
@@ -112,8 +109,10 @@ exports[`NativeSelectField should render a NativeSelectField aria described by 1
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -170,8 +169,10 @@ exports[`NativeSelectField should render a NativeSelectField as disabled 1`] = `
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={true}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -229,8 +230,10 @@ exports[`NativeSelectField should render a NativeSelectField as invalid 1`] = `
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -287,8 +290,10 @@ exports[`NativeSelectField should render a NativeSelectField as optional 1`] = `
   showOptional={true}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -345,8 +350,10 @@ exports[`NativeSelectField should render a NativeSelectField isIncomplete 1`] = 
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={true}
     isInvalid={false}
@@ -403,8 +410,10 @@ exports[`NativeSelectField should render a NativeSelectField required 1`] = `
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={true}
     isInvalid={false}
@@ -461,8 +470,10 @@ exports[`NativeSelectField should render a NativeSelectField required 2`] = `
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={true}
     isInvalid={false}
@@ -519,76 +530,14 @@ exports[`NativeSelectField should render a NativeSelectField required and isInco
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={true}
     isInvalid={false}
     required={true}
-  />
-</Field>
-`;
-
-exports[`NativeSelectField should render a NativeSelectField with a custom  placeholder 1`] = `
-<Field
-  error={null}
-  errorIcon={
-    <IconError
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  }
-  help={null}
-  hideRequired={false}
-  htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLabelHidden={false}
-  label="test-label"
-  labelAttrs={Object {}}
-  required={false}
-  showOptional={false}
->
-  <InjectIntl(NativeSelect)
-    ariaLabel="test-label"
-    disabled={false}
-    id="test-id"
-    isIncomplete={false}
-    isInvalid={false}
-    placeholder={
-      Object {
-        "display": "test-placeholder-display",
-        "value": "test-placeholder-value",
-      }
-    }
-    required={false}
   />
 </Field>
 `;
@@ -641,12 +590,13 @@ exports[`NativeSelectField should render a NativeSelectField with a default plac
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={true}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
-    placeholder={Object {}}
     required={false}
   />
 </Field>
@@ -704,8 +654,10 @@ exports[`NativeSelectField should render a NativeSelectField with a labelAttrs 1
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -763,8 +715,10 @@ exports[`NativeSelectField should render a NativeSelectField with a maxWidth 1`]
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -821,6 +775,7 @@ exports[`NativeSelectField should render a NativeSelectField with a selectAttrs 
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     attrs={
       Object {
@@ -828,65 +783,7 @@ exports[`NativeSelectField should render a NativeSelectField with a selectAttrs 
       }
     }
     disabled={false}
-    id="test-id"
-    isIncomplete={false}
-    isInvalid={false}
-    required={false}
-  />
-</Field>
-`;
-
-exports[`NativeSelectField should render a NativeSelectField with an aria label 1`] = `
-<Field
-  ariaLabel="test-label"
-  error={null}
-  errorIcon={
-    <IconError
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  }
-  help={null}
-  hideRequired={false}
-  htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLabelHidden={false}
-  label="test-label"
-  labelAttrs={Object {}}
-  required={false}
-  showOptional={false}
->
-  <InjectIntl(NativeSelect)
-    ariaLabel="test-label"
-    disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -947,8 +844,10 @@ exports[`NativeSelectField should render a NativeSelectField with error 1`] = `
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -1011,9 +910,11 @@ exports[`NativeSelectField should render a NativeSelectField with help 1`] = `
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaDescribedBy="test-id-help"
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -1070,8 +971,10 @@ exports[`NativeSelectField should render a NativeSelectField with onChange 1`] =
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -1129,8 +1032,10 @@ exports[`NativeSelectField should render a NativeSelectField with opt groups 1`]
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -1217,8 +1122,10 @@ exports[`NativeSelectField should render a NativeSelectField with options 1`] = 
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -1295,9 +1202,11 @@ exports[`NativeSelectField should render a NativeSelectField with options and de
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     defaultValue="saab"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -1374,8 +1283,10 @@ exports[`NativeSelectField should render a NativeSelectField with options and va
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}
@@ -1453,8 +1364,10 @@ exports[`NativeSelectField should render a default NativeSelectField 1`] = `
   showOptional={false}
 >
   <InjectIntl(NativeSelect)
+    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
+    hasPlaceholder={false}
     id="test-id"
     isIncomplete={false}
     isInvalid={false}

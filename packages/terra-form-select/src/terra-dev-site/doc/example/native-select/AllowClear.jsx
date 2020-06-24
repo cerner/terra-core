@@ -7,15 +7,15 @@ const cx = classNames.bind(styles);
 
 const AllowClearExample = () => (
   <NativeSelect
-    id="allow-clear-example"
+    allowClear
     ariaLabel="Allow Clear Example"
+    hasPlaceholder
     options={[
       { value: 'volvo', display: 'Volvo' },
       { value: 'saab', display: 'Saab' },
       { value: 'mercedes', display: 'Mercedes' },
       { value: 'audi', display: 'Audi' },
     ]}
-    placeholder={{ allowClear: true }}
     className={cx('form-select')}
   />
 );

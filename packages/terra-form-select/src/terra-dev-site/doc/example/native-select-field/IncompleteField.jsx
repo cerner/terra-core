@@ -7,17 +7,17 @@ const cx = classNames.bind(styles);
 
 const IncompleteFieldExample = () => (
   <NativeSelectField
-    selectId="incomplete-example"
-    label="Incomplete Field Text"
-    required
+    hasPlaceholder
     isIncomplete
+    label="Incomplete Field Text"
     options={[
       { value: 'volvo', display: 'Volvo' },
       { value: 'saab', display: 'Saab' },
       { value: 'mercedes', display: 'Mercedes' },
       { value: 'audi', display: 'Audi' },
     ]}
-    placeholder={{}}
+    required
+    selectId="incomplete-example"
     className={cx('form-select')}
   />
 );

@@ -8,8 +8,8 @@ const cx = classNames.bind(styles);
 const InvalidTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
-      id="select-id"
       ariaLabel="select-label"
+      id="select-id"
       isInvalid
       options={[
         { value: 'volvo', display: 'Volvo' },

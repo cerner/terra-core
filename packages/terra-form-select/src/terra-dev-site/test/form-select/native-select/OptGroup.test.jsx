@@ -8,8 +8,8 @@ const cx = classNames.bind(styles);
 const OptGroupTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
-      id="select-id"
       ariaLabel="select-label"
+      id="select-id"
       options={[
         {
           display: 'Swedish Cars',

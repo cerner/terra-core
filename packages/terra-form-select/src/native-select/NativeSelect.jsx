@@ -27,6 +27,11 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
+   * Whether the placeholder is included as an option to clear selection.
+   * Dependent on the `'hasPlaceholder'` property.
+   */
+  allowClear: PropTypes.bool,
+  /**
    * The string containing ids for elements to describe the select.
    */
   ariaDescribedBy: PropTypes.string,
@@ -48,6 +53,10 @@ const propTypes = {
    * Whether the input is disabled.
    */
   disabled: PropTypes.bool,
+  /**
+   * Whether a placeholder value should be included as an option.
+   */
+  hasPlaceholder: PropTypes.bool,
   /**
    * The Select identifier to be applied to the html select node.
    */
@@ -73,23 +82,6 @@ const propTypes = {
    * The array of select options and opt groups.
    */
   options: PropTypes.arrayOf(PropTypes.oneOfType([optionPropType, optGroupPropType])),
-  /**
-   * Placeholder data. The presence of this data object is used as the indicator for whether or not a placeholder is used.
-   */
-  placeholder: PropTypes.shape({
-    /**
-     * Whether the placeholder is included as an option to clear selection.
-     */
-    allowClear: PropTypes.bool,
-    /**
-     * Optional override of the default display.
-     */
-    display: PropTypes.string,
-    /**
-     * Optional override of the default value.
-     */
-    value: PropTypes.string,
-  }),
   /**
    * Callback ref to pass into the select input component.
    */
@@ -117,21 +109,29 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   disabled: false,
+  hasPlaceholder: false,
   isIncomplete: false,
   isInvalid: false,
   options: [],
   required: false,
 };
 
-const createPlaceholder = (placeholder, intl) => {
-  if (!placeholder) {
+const createPlaceholder = (hasPlaceholder, allowClear, intl) => {
+  if (!hasPlaceholder) {
     return undefined;
   }
-  const display = placeholder.display ? placeholder.display : intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-  const value = placeholder.value ? placeholder.value : defaultPlaceholderValue;
-  const attrs = placeholder.allowClear ? {} : { disabled: true, hidden: true };
-  return <option value={value} {...attrs}>{display}</option>;
+
+  const attrs = allowClear ? undefined : { disabled: true, hidden: true };
+  return (
+    <option
+      {...attrs}
+      value={defaultPlaceholderValue}
+    >
+      {intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })}
+    </option>
+  );
 };
 
 const createOptions = options => {
@@ -154,11 +154,13 @@ const createOptions = options => {
 };
 
 const NativeSelect = ({
+  allowClear,
   ariaDescribedBy,
   ariaLabel,
   attrs,
   disabled,
   defaultValue,
+  hasPlaceholder,
   id,
   intl,
   isInvalid,
@@ -168,13 +170,12 @@ const NativeSelect = ({
   onFocus,
   onMouseDown,
   options,
-  placeholder,
   refCallback,
   required,
   value,
   ...customProps
 }) => {
-  const [uncontrolledValue, setUncontrolledValue] = useState(!isValuePresent(value) ? defaultValue || getFirstValue(options, placeholder) : undefined);
+  const [uncontrolledValue, setUncontrolledValue] = useState(!isValuePresent(value) ? defaultValue || getFirstValue(options, hasPlaceholder) : undefined);
   const refIsControlled = useRef(isValuePresent(value));
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
@@ -209,10 +210,10 @@ const NativeSelect = ({
   };
 
   let currentValue = refIsControlled.current ? value : uncontrolledValue;
-  let currentDisplay = getDisplay(currentValue, options, placeholder, intl);
+  let currentDisplay = getDisplay(currentValue, options, hasPlaceholder, intl);
   if (!currentDisplay) {
-    currentValue = getFirstValue(options, placeholder);
-    currentDisplay = getDisplay(currentValue, options, placeholder, intl);
+    currentValue = getFirstValue(options, hasPlaceholder);
+    currentDisplay = getDisplay(currentValue, options, hasPlaceholder, intl);
   }
 
   const selectAttrs = {
@@ -232,7 +233,7 @@ const NativeSelect = ({
       { disabled },
       { invalid: isInvalid },
       { incomplete: required && isIncomplete },
-      { placeholder: isCurrentPlaceholder(selectAttrs.value, placeholder) },
+      { placeholder: isCurrentPlaceholder(selectAttrs.value, hasPlaceholder) },
     ),
     customProps.className,
   );
@@ -265,7 +266,7 @@ const NativeSelect = ({
         onBlur={handleOnBlur}
         ref={refCallback}
       >
-        {createPlaceholder(placeholder, intl)}
+        {createPlaceholder(hasPlaceholder, allowClear, intl)}
         {createOptions(options)}
       </select>
     </div>
