@@ -44,7 +44,6 @@ const SingleSelectTable = () => {
       headerData={{
         selectAllColumn: {
           checkLabel: 'Single Selection',
-          isDisabled: true,
         },
         cells: [
           { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },

@@ -144,9 +144,10 @@ const CheckMarkCell = ({
       ref={refCallback}
       role="gridcell"
     >
-      <VisuallyHiddenText aria-checked={isSelected} role="checkbox" {...attrCheck} text={label} />
-      <div aria-hidden {...attrPadding} className={cx({ container: !isHidden })}>
+      <div {...attrPadding} className={cx({ container: !isHidden })}>
+        <VisuallyHiddenText aria-checked={isSelected} role="checkbox" {...attrCheck} text={label} />
         <div
+          aria-hidden
           focusable="false"
           className={cx(
             'checkmark',
