@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-# Component
+# <Component>
 
 ##  Known Aliases
 Document any known aliases of the component, decide if another name makes more sense.
