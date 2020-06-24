@@ -61,7 +61,7 @@ class DropdownButton extends React.Component {
     this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
     this.setListNode = this.setListNode.bind(this);
-    this.openDropDown = this.openDropDown.bind(this);
+    this.toggleDropDown = this.toggleDropDown.bind(this);
     this.state = { isOpen: false, isActive: false, openedViaKeyboard: false };
   }
 
@@ -77,7 +77,7 @@ class DropdownButton extends React.Component {
     return this.buttonNode;
   }
 
-  openDropDown(event) {
+  toggleDropDown(event) {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
@@ -89,7 +89,7 @@ class DropdownButton extends React.Component {
     if (this.state.isOpen) {
       this.setState({ openedViaKeyboard: false });
     }
-    this.openDropDown(event);
+    this.toggleDropDown(event);
   }
 
   handleDropdownRequestClose(callback) {
@@ -126,8 +126,9 @@ class DropdownButton extends React.Component {
 
   handleKeyUp(event) {
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
+      event.preventDefault();
       this.setState({ isActive: false });
-      this.openDropDown(event);
+      this.toggleDropDown(event);
     }
   }
 
