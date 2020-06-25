@@ -1,5 +1,5 @@
 ---
-name: UX Audit
+name: "\U0001F52C UX Audit"
 about: Create a UX audit of an existing component
 title: "<Component> UX Audit"
 labels: UX Audit
