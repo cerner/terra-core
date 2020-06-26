@@ -120,10 +120,10 @@ const HeaderCheckMarkCell = ({
     attrCheck = {
       role: 'checkbox',
       'aria-checked': isSelected && isIndeterminate ? 'mixed' : isSelected,
-    }
+    };
     if (isDisabled) {
       attrCheck['aria-disabled'] = true;
-    }  
+    }
   }
 
   const headerCheckMarkCellClasses = cx(
