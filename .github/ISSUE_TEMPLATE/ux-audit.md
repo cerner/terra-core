@@ -42,4 +42,3 @@ Any guides needed to be added to terra-ui describing the usage of this component
 ## Related Issues
 
 ## Other Considerations
-Checkboxes that are baked into components should not use this (e.g. checkboxes in a table column with indeterminate states, etc.)
