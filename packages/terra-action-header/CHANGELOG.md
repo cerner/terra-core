@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+2.51.0 - (June 13, 2020)
+------------------
+### Removed
+* Removed unused variables and themes folder.
+
 2.50.0 - (June 11, 2020)
 ------------------
 ### Changed
@@ -46,7 +51,7 @@ Unreleased
 ### Changes
 * Updated docs for documentation link and usage section
 * Removed extra lines from README
-* Updated to consumer terra-theme-context 
+* Updated to consumer terra-theme-context
 
 ### Fixed
 * Fix bottom border style in orion-fusion theme

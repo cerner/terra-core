@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+3.38.0 - (June 23, 2020)
+------------------
+### Changed
+* Update Usage Section in dev-site doc page
+
 2.27.0 - (June 9, 2020)
 ------------------
 ### Changed

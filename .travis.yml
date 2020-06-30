@@ -90,7 +90,7 @@ jobs:
         provider: pages
         skip_cleanup: true
         github_token: $GITHUB_TOKEN # Set in travis-ci.com dashboard
-        local_dir: build
+        local_dir: $TRAVIS_BUILD_DIR/build
         on:
           branch: master
     - stage: clean up cache

@@ -9,6 +9,11 @@ Unreleased
 * Added flag icon to denote confidentiality.
 * Removed `--` as the fallback display when demographic details are not provided.
 
+3.41.0 - (June 23, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 3.40.0 - (June 9, 2020)
 ------------------
 ### Changed
