@@ -302,7 +302,7 @@ const createSections = (tableData, headerIndex) => {
           isCollapsed={header.isCollapsed}
           isCollapsible={!!header.onToggle}
           metaData={header.metaData}
-          numberOfColumns={tableData.numberOfColumns}
+          numberOfColumns={tableData.checkStyle !== 'toggle' && tableData.rowStyle === 'toggle' ? tableData.numberOfColumns + 1 : tableData.numberOfColumns}
           onSelect={header.onToggle}
         >
           {section.rows ? section.rows.map(rowData => {

@@ -48,7 +48,6 @@ const MultiSelectTable = () => {
       headerData={{
         selectAllColumn: {
           checkLabel: 'Multi Selection',
-          isDisabled: true,
         },
         cells: [
           { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
