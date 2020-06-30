@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Relocate themeable variables to individual files so that they only get included if the individual variable is included
 
 3.32.0 - (June 9, 2020)
 ------------------
