@@ -121,7 +121,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 |--------------------|---------|--------|--------------|
 | terra-form | [![NPM version](https://badgen.net/npm/v/terra-form)](https://www.npmjs.org/package/terra-form) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-form](https://badgen.net/badge/dependencies/n%2Fa/grey) |
 | terra-i18n-plugin | [![NPM version](https://badgen.net/npm/v/terra-i18n-plugin)](https://www.npmjs.org/package/terra-i18n-plugin) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-i18n-plugin](https://badgen.net/badge/dependencies/n%2Fa/grey) |
-| [terra-legacy-theme](https://github.com/cerner/terra-core/tree/master/packages/terra-legacy-theme) | [![NPM version](https://badgen.net/npm/v/terra-legacy-theme)](https://www.npmjs.org/package/terra-legacy-theme) | ![Stable](https://badgen.net/badge/status/Stable/green) | [![terra-legacy-theme](https://badgen.net/david/dep/cerner/terra-core/packages/terra-legacy-theme)](https://david-dm.org/cerner/terra-core?path=packages/terra-legacy-theme) |
+| terra-legacy-theme | [![NPM version](https://badgen.net/npm/v/terra-legacy-theme)](https://www.npmjs.org/package/terra-legacy-theme) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-legacy-theme](https://badgen.net/badge/dependencies/n%2Fa/grey) |
 | terra-modal | [![NPM version](https://badgen.net/npm/v/terra-modal)](https://www.npmjs.org/package/terra-modal) | ![Deprecated](https://badgen.net/badge/status/Deprecated/grey) | ![terra-application](https://badgen.net/badge/dependencies/n%2Fa/grey) |
 
 <h2 id="supported-browsers">
