@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 import { grid } from '../../src/styles';
 
 describe('Styles', () => {
