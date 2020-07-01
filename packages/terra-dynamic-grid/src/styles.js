@@ -58,12 +58,14 @@ const gridDisplay = (layout) => {
     return {};
   }
 
+  /* eslint-disable compat/compat */
   const isCSSGridsEnabled = window.CSS
     && window.CSS.supports
     && window.CSS.supports('display', 'grid');
   return {
     display: isCSSGridsEnabled ? 'grid' : '-ms-grid',
   };
+  /* eslint-enable compat/compat */
 };
 
 const grid = template => ({
