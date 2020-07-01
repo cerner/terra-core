@@ -163,18 +163,6 @@ describe('NativeSelectField', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a NativeSelectField allowing clear', () => {
-    const wrapper = shallowWithIntl(
-      <NativeSelectField
-        allowClear
-        hasPlaceholder
-        label="test-label"
-        selectId="test-id"
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should render a NativeSelectField as invalid', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField

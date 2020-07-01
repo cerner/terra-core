@@ -9,15 +9,6 @@ import {
 
 const propTypes = {
   /**
-   * Whether the placeholder is included as an option to clear selection.
-   * Dependent on the `'hasPlaceholder'` property.
-   */
-  allowClear: PropTypes.bool,
-  /**
-   * The field label.
-   */
-  label: PropTypes.node.isRequired,
-  /**
    * The default value of the select. Can be a string, or number.
    */
   defaultValue: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -57,6 +48,10 @@ const propTypes = {
    * Whether the field displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
+  /**
+   * The field label.
+   */
+  label: PropTypes.node.isRequired,
   /**
    * Additional attributes to spread onto the label.
    */
@@ -99,7 +94,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  allowClear: false,
   disabled: false,
   hasPlaceholder: false,
   hideRequired: false,
@@ -112,7 +106,6 @@ const defaultProps = {
 };
 
 const NativeSelectField = ({
-  allowClear,
   defaultValue,
   disabled,
   error,
@@ -169,7 +162,6 @@ const NativeSelectField = ({
       <NativeSelect
         attrs={selectAttrs}
         id={selectId}
-        allowClear={allowClear}
         ariaDescribedBy={ariaDescriptionIds}
         ariaLabel={label}
         disabled={disabled}

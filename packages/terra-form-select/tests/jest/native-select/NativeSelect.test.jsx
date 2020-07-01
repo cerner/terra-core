@@ -100,17 +100,6 @@ describe('NativeSelect', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a NativeSelect allowing clear', () => {
-    const wrapper = mountWithIntl(
-      <NativeSelect
-        allowClear
-        ariaLabel="test-label"
-        hasPlaceholder
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should render a NativeSelect as invalid', () => {
     const wrapper = mountWithIntl(
       <NativeSelect

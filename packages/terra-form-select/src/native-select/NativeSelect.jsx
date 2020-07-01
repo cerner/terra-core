@@ -27,11 +27,6 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
-   * Whether the placeholder is included as an option to clear selection.
-   * Dependent on the `'hasPlaceholder'` property.
-   */
-  allowClear: PropTypes.bool,
-  /**
    * The string containing ids for elements to describe the select.
    */
   ariaDescribedBy: PropTypes.string,
@@ -53,10 +48,6 @@ const propTypes = {
    * Whether the input is disabled.
    */
   disabled: PropTypes.bool,
-  /**
-   * Whether a placeholder value should be included as an option.
-   */
-  hasPlaceholder: PropTypes.bool,
   /**
    * The Select identifier to be applied to the html select node.
    */
@@ -109,7 +100,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  allowClear: false,
   disabled: false,
   hasPlaceholder: false,
   isIncomplete: false,
@@ -118,15 +108,15 @@ const defaultProps = {
   required: false,
 };
 
-const createPlaceholder = (hasPlaceholder, allowClear, intl) => {
+const createPlaceholder = (hasPlaceholder, intl) => {
   if (!hasPlaceholder) {
     return undefined;
   }
 
-  const attrs = allowClear ? undefined : { disabled: true, hidden: true };
   return (
     <option
-      {...attrs}
+      disabled
+      hidden
       value={defaultPlaceholderValue}
     >
       {intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })}
@@ -154,7 +144,6 @@ const createOptions = options => {
 };
 
 const NativeSelect = ({
-  allowClear,
   ariaDescribedBy,
   ariaLabel,
   attrs,
@@ -180,6 +169,8 @@ const NativeSelect = ({
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
 
+  // The native select's presentation is masked to allow for better customization of the inputs display.
+  // In order to facilitate this, the mouseDown, blur, and focus events need to be mapped mapped to the mask.
   const handleOnMouseDown = (event) => {
     refSelect.current.setAttribute('data-focus-interaction', 'mouse');
     if (onMouseDown) {
@@ -266,7 +257,7 @@ const NativeSelect = ({
         onBlur={handleOnBlur}
         ref={refCallback}
       >
-        {createPlaceholder(hasPlaceholder, allowClear, intl)}
+        {createPlaceholder(hasPlaceholder, intl)}
         {createOptions(options)}
       </select>
     </div>

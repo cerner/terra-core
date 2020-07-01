@@ -14,7 +14,7 @@
     --terra-form-select-native-line-height: 1.75;
     --terra-form-select-native-placeholder-color: #6f7477;
     --terra-form-select-native-placeholder-font-size: 1.143rem;
-    --terra-form-select-native-placeholder-font-style: normal;
+    --terra-form-select-native-placeholder-font-style: italic;
     --terra-form-select-native-select-line-height: 1.75;
     --terra-form-select-native-frame-padding-left: 0.5rem;
     --terra-form-select-native-arrow-padding: 0 0.786rem;
@@ -28,7 +28,9 @@
     --terra-form-select-native-focus-transition-duration: 0;
 
     // focus - keyboard
-    --terra-form-select-native-focus-keyboard-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+    --terra-form-select-native-focus-keyboard-box-shadow: none;
+    --terra-form-select-native-focus-keyboard-outline: 2px dashed #b2b5b6;
+    --terra-form-select-native-focus-keyboard-outline-offset: 1px;
 
     // hover
     --terra-form-select-native-hover-background-color: #222a2e;
@@ -45,10 +47,13 @@
     --terra-form-select-native-invalid-background-color: #222a2e;
     --terra-form-select-native-invalid-background-image: none;
     --terra-form-select-native-invalid-border-color: #fb4c4c;
-    --terra-form-select-native-invalid-box-shadow: 0 0 0 1px #fb4c4c, 0 0 0 1px #fb4c4c;
+    --terra-form-select-native-invalid-box-shadow: 0 0 0 1px #fb4c4c;
     --terra-form-select-native-invalid-focus-background-color: #222a2e;
     --terra-form-select-native-invalid-focus-border-color: #fb4c4c;
     --terra-form-select-native-invalid-focus-box-shadow: 0 0 0 1px #fb4c4c, 0 0 0 1px #fb4c4c;
+    --terra-form-select-native-invalid-focus-keyboard-box-shadow: 0 0 0 1px #fb4c4c;
+    --terra-form-select-native-invalid-focus-keyboard-outline: 2px dashed #b2b5b6;
+    --terra-form-select-native-invalid-focus-keyboard-outline-offset: 1px;
     --terra-form-select-native-invalid-hover-background-color: #222a2e;
     --terra-form-select-native-invalid-hover-border-color: #fb4c4c;
 

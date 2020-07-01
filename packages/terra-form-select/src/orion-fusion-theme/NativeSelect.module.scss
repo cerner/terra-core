@@ -29,6 +29,8 @@
 
     // focus - keyboard
     --terra-form-select-native-focus-keyboard-box-shadow: 0 0 4px #a6d9f4;
+    --terra-form-select-native-focus-keyboard-outline: none;
+    --terra-form-select-native-focus-keyboard-outline-offset: 0;
 
     // hover
     --terra-form-select-native-hover-background-color: #fff;
@@ -49,6 +51,9 @@
     --terra-form-select-native-invalid-focus-background-color: #fff;
     --terra-form-select-native-invalid-focus-border-color: #4cb2e9;
     --terra-form-select-native-invalid-focus-box-shadow: 0 0 4px #a6d9f4;
+    --terra-form-select-native-invalid-focus-keyboard-box-shadow: 0 0 4px #a6d9f4;
+    --terra-form-select-native-invalid-focus-keyboard-outline: none;
+    --terra-form-select-native-invalid-focus-keyboard-outline-offset: 0;
     --terra-form-select-native-invalid-hover-background-color: #fff;
     --terra-form-select-native-invalid-hover-border-color: #4cb2e9;
 
