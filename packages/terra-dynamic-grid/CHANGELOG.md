@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed linter error
 
 3.26.0 - (June 9, 2020)
 ------------------
