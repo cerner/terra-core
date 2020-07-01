@@ -6,7 +6,6 @@ const SwitchWithOnChange = () => {
   return (
     <Switch
       switchId="defaultSwitch1"
-      labelId="label3"
       isChecked={value}
       labelText="Label"
       onChange={setValue}

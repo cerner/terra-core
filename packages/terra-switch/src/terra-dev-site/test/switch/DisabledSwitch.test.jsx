@@ -4,7 +4,6 @@ import Switch from '../../../Switch';
 const DisabledSwitch = () => (
   <Switch
     switchId="disabledSwitch"
-    labelId="label2"
     isChecked
     labelText="Label"
     isDisabled

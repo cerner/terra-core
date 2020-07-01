@@ -4,7 +4,7 @@ Terra.describeViewports('Switch', ['tiny'], () => {
 
     Terra.it.validatesElement();
 
-    describe('Focus', () => {
+    describe('should focus', () => {
       before(() => {
         browser.keys('Tab');
       });
@@ -12,9 +12,9 @@ Terra.describeViewports('Switch', ['tiny'], () => {
       Terra.it.validatesElement();
     });
 
-    describe('Checked', () => {
+    describe('should check on click', () => {
       before(() => {
-        browser.click('[for="defaultSwitch"]');
+        browser.click('#defaultSwitch');
       });
 
       Terra.it.validatesElement();
@@ -26,10 +26,10 @@ Terra.describeViewports('Switch', ['tiny'], () => {
 
     Terra.it.validatesElement();
 
-    describe('Disabled Click', () => {
+    describe('should not change on click', () => {
       before(() => {
         browser.moveToObject('#disabledSwitch');
-        browser.click('[for="disabledSwitch"]');
+        browser.click('#disabledSwitch');
       });
 
       Terra.it.validatesElement();
@@ -39,8 +39,9 @@ Terra.describeViewports('Switch', ['tiny'], () => {
 
 Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
   describe('Long Label Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-switch/switch/label-wrap'));
-
-    Terra.it.validatesElement();
+    it('renders switch with long label text', () => {
+      browser.url('/#/raw/tests/terra-switch/switch/label-wrap');
+      Terra.validates.element();
+    });
   });
 });

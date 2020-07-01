@@ -6,7 +6,6 @@ const SwitchWithLongLabelText = () => {
   return (
     <Switch
       switchId="switchWithLongLabel"
-      labelId="label3"
       isChecked={value}
       labelText="Long Label Text Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label Text  Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label TextLong Label Text Long Label Text"
       onChange={setValue}

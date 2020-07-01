@@ -3,16 +3,70 @@
 @import './orion-fusion-theme/Switch.module';
 
 :local {
-  .switch-wrapper {
-    display: inline-block;
-    max-width: 100%; // added to fix IE Wrapping issue
-    -webkit-tap-highlight-color: transparent;
-    width: auto;
-  }
-
   .switch {
+    background-color: transparent;
+    border: 0;
     display: flex;
     flex-direction: row;
+
+    &:hover {
+      background-color: transparent;
+      border: 0;
+
+      .slider:not(.is-disabled) {
+        background-color: var(--terra-switch-slider-hover-background-color, #fff);
+        border: var(--terra-switch-slider-hover-border, 0);
+        box-shadow: var(--terra-switch-slider-hover-box-shadow, 2px 0 2px 0 rgba(0, 0, 0, 0.2), -2px 0 2px 0 rgba(0, 0, 0, 0.2), 
+        1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.2));
+      }
+
+      .slider.is-selected:not(.is-disabled) {
+        background-color: var(--terra-switch-slider-selected-hover-background-color, #fff);
+        border: var(--terra-switch-slider-selected-hover-border, 0);
+        box-shadow: var(--terra-switch-slider-selected-hover-box-shadow, 2px 0 2px 0 rgba(0, 0, 0, 0.2), -2px 0 2px 0 rgba(0, 0, 0, 0.2), 
+        -1px 0 0 0 #01639e, 0 0 4px 1px rgba(0, 0, 0, 0.2));
+      }
+    }
+
+    &:active {
+      .slider:not(.is-disabled) {
+        background-color: var(--terra-switch-slider-active-background-color, #fff);
+        border: var(--terra-switch-slider-active-border, 0);
+        box-shadow: var(--terra-switch-slider-active-box-shadow, inset 0 0 0 1px #fff, inset 5px 2px 4px 2px #e6e7e8, 2px 0 2px 0 rgba(0, 0, 0, 0.2),
+        -2px 0 2px 0 rgba(0, 0, 0, 0.2), 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.2)); // pressed state.
+      }
+
+      .slider.is-selected:not(.is-disabled) {
+        background-color: var(--terra-switch-slider-selected-active-background-color, #fff);
+        border: var(--terra-switch-slider-selected-active-border, 0);
+        box-shadow: var(--terra-switch-slider-selected-active-box-shadow, inset 0 0 0 1px #fff, inset 5px 2px 4px 2px #e6e7e8, 2px 0 2px 0 rgba(0, 0, 0, 0.2),
+        -2px 0 2px 0 rgba(0, 0, 0, 0.2), -1px 0 0 0 #01639e, 0 0 4px 1px rgba(0, 0, 0, 0.2)); // pressed state.
+      }
+    }
+
+    &:focus {
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+
+      &[data-terra-switch-show-focus-styles='true'] .slider:not(.is-disabled) {
+        background-color: var(--terra-switch-slider-focus-background-color, #fff);
+        border: var(--terra-switch-slider-focus-border, 0);
+        box-shadow: var(--terra-switch-slider-focus-box-shadow, 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.3));
+        outline: var(--terra-switch-slider-focus-outline, 2px dashed #000);
+        outline-offset: var(--terra-switch-slider-focus-outline-offset, 2px);
+      }
+
+      &[data-terra-switch-show-focus-styles='true'] .slider.is-selected:not(.is-disabled) {
+        background-color: var(--terra-switch-slider-selected-focus-background-color, #fff);
+        border: var(--terra-switch-slider-selected-focus-border, 0);
+      }
+    }
+
+    // Removes dotted border of button on focus that shows up in Firefox
+    &::-moz-focus-inner {
+      border: 0;
+    }
 
     &:not(.is-disabled) {
       cursor: pointer;
@@ -20,6 +74,7 @@
   }
 
   .label-container {
+    flex: 0 1 auto;
     margin-right: var(--terra-switch-label-margin-right, 1.42857rem);
   }
 
@@ -28,13 +83,27 @@
     font-size: var(--terra-switch-label-font-size, 1rem);
     font-weight: var(--terra-switch-label-font-weight, normal);
     padding-bottom: var(--terra-switch-label-padding-bottom, 0.2142rem);
+    text-align: left;
     word-wrap: break-word;
+
+    &.is-disabled {
+      color: #9b9fa1;
+      cursor: default;
+      opacity: 1;
+    }
   }
 
   .status-label-text {
     color: var(--terra-switch-status-label-color, #64696c);
     font-size: var(--terra-switch-status-label-font-size, 1rem);
     font-weight: var(--terra-switch-status-label-font-weight, normal);
+    text-align: left;
+    
+    &.is-disabled {
+      color: #9b9fa1;
+      cursor: default;
+      opacity: 1;
+    }
   }
 
   .tray.is-selected {
@@ -59,38 +128,6 @@
       background-color: var(--terra-switch-tray-selected-active-background-color, #0065a3);
       border: var(--terra-switch-tray-selected-active-border, 1px solid #004164);
       box-shadow: var(--terra-switch-tray-selected-active-box-shadow, inset 0 1px 5px 0 rgba(0, 0, 0, 0.4));
-    }
-  }
-
-  .tray > [aria-checked='true'] {
-    background-color: var(--terra-switch-slider-selected-background-color, #fff);
-    box-shadow: var(--terra-switch-slider-selected-box-shadow, 0 0 4px 1px rgba(0, 0, 0, 0.3), -1px 0 0 0 #01639e);
-    transform: var(--terra-switch-slider-selected-transform, translateX(0.8rem));
-
-    &:hover:not(.is-disabled) {
-      background-color: var(--terra-switch-slider-selected-hover-background-color, #fff);
-      border: var(--terra-switch-slider-selected-hover-border, 0);
-      box-shadow: var(--terra-switch-slider-selected-hover-box-shadow, 2px 0 2px 0 rgba(0, 0, 0, 0.2), -2px 0 2px 0 rgba(0, 0, 0, 0.2), 
-      -1px 0 0 0 #01639e, 0 0 4px 1px rgba(0, 0, 0, 0.2));
-    }
-
-    &:active:not(.is-disabled) {
-      background-color: var(--terra-switch-slider-selected-active-background-color, #fff);
-      border: var(--terra-switch-slider-selected-active-border, 0);
-      box-shadow: var(--terra-switch-slider-selected-active-box-shadow, inset 0 0 0 1px #fff, inset 5px 2px 4px 2px #e6e7e8, 2px 0 2px 0 rgba(0, 0, 0, 0.2),
-      -2px 0 2px 0 rgba(0, 0, 0, 0.2), -1px 0 0 0 #01639e, 0 0 4px 1px rgba(0, 0, 0, 0.2)); // pressed state.
-    }
-
-    &:focus[data-terra-switch-show-focus-styles='true']:not(.is-disabled) {
-      background-color: var(--terra-switch-slider-selected-focus-background-color, #fff);
-      border: var(--terra-switch-slider-selected-focus-border, 0);
-    }
-
-    &.is-disabled {
-      background-color: var(--terra-switch-slider-selected-disabled-background-color, #fff);
-      box-shadow: var(--terra-switch-slider-selected-disabled-box-shadow, none);
-      cursor: default;
-      opacity: var(--terra-switch-slider-selected-disabled-opacity, 0.8);
     }
   }
   
@@ -146,31 +183,17 @@
       opacity: var(--terra-switch-slider-disabled-opacity, 0.8);
     }
 
-    &:focus[data-terra-switch-show-focus-styles='true']:not(.is-disabled) {
-      background-color: var(--terra-switch-slider-focus-background-color, #fff);
-      border: var(--terra-switch-slider-focus-border, 0);
-      box-shadow: var(--terra-switch-slider-focus-box-shadow, 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.3));
-      outline: var(--terra-switch-slider-focus-outline, 2px dashed #000);
-      outline-offset: var(--terra-switch-slider-focus-outline-offset, 2px);
-    }
-
-    &:hover:not(.is-disabled) {
-      background-color: var(--terra-switch-slider-hover-background-color, #fff);
-      border: var(--terra-switch-slider-hover-border, 0);
-      box-shadow: var(--terra-switch-slider-hover-box-shadow, 2px 0 2px 0 rgba(0, 0, 0, 0.2), -2px 0 2px 0 rgba(0, 0, 0, 0.2), 
-      1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.2));
-    }
-
-    &:active:not(.is-disabled) {
-      background-color: var(--terra-switch-slider-active-background-color, #fff);
-      border: var(--terra-switch-slider-active-border, 0);
-      box-shadow: var(--terra-switch-slider-active-box-shadow, inset 0 0 0 1px #fff, inset 5px 2px 4px 2px #e6e7e8, 2px 0 2px 0 rgba(0, 0, 0, 0.2),
-      -2px 0 2px 0 rgba(0, 0, 0, 0.2), 1px 0 0 0 #909496, 0 0 4px 1px rgba(0, 0, 0, 0.2)); // pressed state.
-    }
-
-    // Removes dotted border of button on focus that shows up in Firefox
-    &::-moz-focus-inner {
-      border: 0;
+    &.is-selected {
+      background-color: var(--terra-switch-slider-selected-background-color, #fff);
+      box-shadow: var(--terra-switch-slider-selected-box-shadow, 0 0 4px 1px rgba(0, 0, 0, 0.3), -1px 0 0 0 #01639e);
+      transform: var(--terra-switch-slider-selected-transform, translateX(0.8rem));
+  
+      &.is-disabled {
+        background-color: var(--terra-switch-slider-selected-disabled-background-color, #fff);
+        box-shadow: var(--terra-switch-slider-selected-disabled-box-shadow, none);
+        cursor: default;
+        opacity: var(--terra-switch-slider-selected-disabled-opacity, 0.8);
+      }
     }
   }
 }

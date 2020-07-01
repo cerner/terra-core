@@ -33,10 +33,6 @@ const propTypes = {
    */
   labelText: PropTypes.string.isRequired,
   /**
-   * Id of the Switch label.
-   */
-  labelId: PropTypes.string.isRequired,
-  /**
    * Callback function when switch value changes from ON / OFF.
    * Returns Parameters: 1. switch value 2. event.
    */
@@ -52,7 +48,6 @@ const defaultProps = {
 const Switch = (props) => {
   const {
     switchId,
-    labelId,
     isChecked,
     isDisabled,
     onChange,
@@ -72,23 +67,32 @@ const Switch = (props) => {
     }
   }, [isChecked, onChange]);
 
+  const handleOnKeyDown = (event) => {
+    if (event.nativeEvent.keyCode === KEY_RETURN || event.nativeEvent.keyCode === KEY_SPACE) {
+      event.preventDefault();
+      enableFocusStyles(sliderButton.current);
+      if (onChange) {
+        onChange(!isChecked, event);
+      }
+    }
+  };
+
   const handleOnMouseDown = (event) => {
     event.preventDefault();
     removeFocusStyles(sliderButton.current);
-  };
-
-  const handleOnKeyDown = (event) => {
-    if (event.nativeEvent.keyCode === KEY_RETURN || event.nativeEvent.keyCode === KEY_SPACE) {
-      enableFocusStyles(sliderButton.current);
-    }
   };
 
   const handleOnBlur = () => {
     restoreFocusStyles(sliderButton.current);
   };
 
-  const switchClassNames = cx([
-    'switch',
+  const labelClassNames = cx([
+    'label-text',
+    { 'is-disabled': isDisabled },
+  ]);
+
+  const statusLabelClassNames = cx([
+    'status-label-text',
     { 'is-disabled': isDisabled },
   ]);
 
@@ -100,50 +104,45 @@ const Switch = (props) => {
 
   const sliderClassNames = cx([
     'slider',
+    { 'is-selected': isChecked },
     { 'is-disabled': isDisabled },
   ]);
 
   const statusLabelText = isChecked ? SWITCH_STATE.ON : SWITCH_STATE.OFF;
 
-  const mainClasses = classNames(cx(
-    'switch-wrapper',
+  const switchClassNames = classNames(cx(
+    'switch',
+    { 'is-disabled': isDisabled },
     theme.className,
   ),
   customProps.className);
 
   delete customProps.className;
   return (
-    <div {...customProps} className={mainClasses}>
-      {/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */}
-      <label
-        htmlFor={switchId}
-        onKeyDown={handleOnKeyDown}
-        onMouseDown={handleOnMouseDown}
-        onBlur={handleOnBlur}
-      >
-        <div className={switchClassNames}>
-          <div className={cx('label-container')}>
-            <div id={labelId} className={cx('label-text')}>{labelText}</div>
-            <div className={cx('status-label-text')}>{statusLabelText}</div>
-          </div>
-          <div className={trayClassNames}>
-            <input
-              type="button"
-              id={switchId}
-              disabled={isDisabled}
-              aria-checked={isChecked}
-              aria-labelledby={labelId}
-              className={sliderClassNames}
-              role="switch"
-              tabIndex="0"
-              onClick={handleOnClick}
-              data-terra-switch-show-focus-styles
-              ref={sliderButton}
-            />
-          </div>
-        </div>
-      </label>
-    </div>
+    <button
+      {...customProps}
+      type="button"
+      id={switchId}
+      disabled={isDisabled}
+      aria-checked={isChecked}
+      role="switch"
+      tabIndex="0"
+      onBlur={handleOnBlur}
+      onClick={handleOnClick}
+      onMouseDown={handleOnMouseDown}
+      onKeyDown={handleOnKeyDown}
+      className={switchClassNames}
+      data-terra-switch-show-focus-styles
+      ref={sliderButton}
+    >
+      <div className={cx('label-container')}>
+        <div className={labelClassNames}>{labelText}</div>
+        <div className={statusLabelClassNames}>{statusLabelText}</div>
+      </div>
+      <div className={trayClassNames}>
+        <div className={sliderClassNames} />
+      </div>
+    </button>
   );
 };
 

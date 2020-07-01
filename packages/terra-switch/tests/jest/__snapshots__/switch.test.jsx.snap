@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Switch should render a default component 1`] = `
-<div
-  className="switch-wrapper"
+<button
+  aria-checked={false}
+  className="switch"
+  data-terra-switch-show-focus-styles={true}
+  disabled={false}
+  id="defaultSwitch"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -30,58 +34,48 @@ exports[`Switch should render a default component 1`] = `
       "timeZone": null,
     }
   }
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="switch"
+  tabIndex="0"
+  type="button"
 >
-  <label
-    htmlFor="defaultSwitch"
-    onBlur={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={[Function]}
+  <div
+    className="label-container"
   >
     <div
-      className="switch"
+      className="label-text"
     >
-      <div
-        className="label-container"
-      >
-        <div
-          className="label-text"
-          id="label1"
-        >
-          default
-        </div>
-        <div
-          className="status-label-text"
-        >
-          <FormattedMessage
-            id="Terra.switch.switchstatuslabel.off"
-            values={Object {}}
-          />
-        </div>
-      </div>
-      <div
-        className="tray"
-      >
-        <input
-          aria-checked={false}
-          aria-labelledby="label1"
-          className="slider"
-          data-terra-switch-show-focus-styles={true}
-          disabled={false}
-          id="defaultSwitch"
-          onClick={[Function]}
-          role="switch"
-          tabIndex="0"
-          type="button"
-        />
-      </div>
+      default
     </div>
-  </label>
-</div>
+    <div
+      className="status-label-text"
+    >
+      <FormattedMessage
+        id="Terra.switch.switchstatuslabel.off"
+        values={Object {}}
+      />
+    </div>
+  </div>
+  <div
+    className="tray"
+  >
+    <div
+      className="slider"
+    />
+  </div>
+</button>
 `;
 
 exports[`Switch should render as disabled when set 1`] = `
-<div
-  className="switch-wrapper"
+<button
+  aria-checked={false}
+  className="switch is-disabled"
+  data-terra-switch-show-focus-styles={true}
+  disabled={true}
+  id="disabledSwitch"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -109,51 +103,37 @@ exports[`Switch should render as disabled when set 1`] = `
       "timeZone": null,
     }
   }
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  role="switch"
+  tabIndex="0"
+  type="button"
 >
-  <label
-    htmlFor="disabledSwitch"
-    onBlur={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={[Function]}
+  <div
+    className="label-container"
   >
     <div
-      className="switch is-disabled"
+      className="label-text is-disabled"
     >
-      <div
-        className="label-container"
-      >
-        <div
-          className="label-text"
-          id="label2"
-        >
-          Label
-        </div>
-        <div
-          className="status-label-text"
-        >
-          <FormattedMessage
-            id="Terra.switch.switchstatuslabel.off"
-            values={Object {}}
-          />
-        </div>
-      </div>
-      <div
-        className="tray is-disabled"
-      >
-        <input
-          aria-checked={false}
-          aria-labelledby="label2"
-          className="slider is-disabled"
-          data-terra-switch-show-focus-styles={true}
-          disabled={true}
-          id="disabledSwitch"
-          onClick={[Function]}
-          role="switch"
-          tabIndex="0"
-          type="button"
-        />
-      </div>
+      Label
     </div>
-  </label>
-</div>
+    <div
+      className="status-label-text is-disabled"
+    >
+      <FormattedMessage
+        id="Terra.switch.switchstatuslabel.off"
+        values={Object {}}
+      />
+    </div>
+  </div>
+  <div
+    className="tray is-disabled"
+  >
+    <div
+      className="slider is-disabled"
+    />
+  </div>
+</button>
 `;
