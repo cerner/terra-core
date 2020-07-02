@@ -59,7 +59,7 @@ const Switch = (props) => {
 
   const handleOnClick = useCallback((event) => {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
-    // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
+    // Button on IE running on OS X does not receive focus when clicked.
     // This will set focus on the button when clicked.
     sliderButton.current.focus();
     if (onChange) {
