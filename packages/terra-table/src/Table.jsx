@@ -167,6 +167,7 @@ const createCheckCell = (rowData, rowStyle, checkStyle) => {
         label={cellLabel}
         isSelected={cellActiveState}
         isHidden
+        isDisabled={rowData.isDisabled}
       />
     );
   }
@@ -216,6 +217,9 @@ const createHeaderCheckCell = (columnData, rowStyle, checkStyle) => {
       <HeaderCheckMarkCell
         label={cellLabel}
         isHidden
+        isDisabled={cellDisabled}
+        isSelected={cellStatus === 'checked' || cellStatus === 'indeterminate'}
+        isIndeterminate={cellStatus === 'indeterminate'}
       />
     );
   }
@@ -298,7 +302,7 @@ const createSections = (tableData, headerIndex) => {
           isCollapsed={header.isCollapsed}
           isCollapsible={!!header.onToggle}
           metaData={header.metaData}
-          numberOfColumns={tableData.numberOfColumns}
+          numberOfColumns={tableData.checkStyle !== 'toggle' && tableData.rowStyle === 'toggle' ? tableData.numberOfColumns + 1 : tableData.numberOfColumns}
           onSelect={header.onToggle}
         >
           {section.rows ? section.rows.map(rowData => {

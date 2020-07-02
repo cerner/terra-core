@@ -1,7 +1,7 @@
 {
   "name": "terra-paginator",
   "main": "lib/Paginator.js",
-  "version": "2.53.0",
+  "version": "2.54.0",
   "description": "Paginator to be used for data sets of known and unknown size. Provides first, last, previous, next, and paged functionality.",
   "repository": {
     "type": "git",
@@ -40,7 +40,7 @@
     "terra-mixins": "^1.35.0",
     "terra-responsive-element": "^5.20.0",
     "terra-theme-context": "^1.0.0",
-    "terra-visually-hidden-text": "^2.27.0"
+    "terra-visually-hidden-text": "^2.28.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

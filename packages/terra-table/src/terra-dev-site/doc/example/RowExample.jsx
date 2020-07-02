@@ -316,6 +316,42 @@ const RowExample = () => (
         },
       ]}
     />
+    <br />
+    <Table
+      summaryId="disabled-row-table"
+      summary="This table displays a disabled row."
+      numberOfColumns={1}
+      cellPaddingStyle="standard"
+      checkStyle="toggle"
+      rowStyle="toggle"
+      bodyData={[
+        {
+          rows: [{
+            key: 'disabled_row-0',
+            cells: [{
+              key: 'cell-0',
+              children: 'Disabled Row',
+            }],
+            toggleAction: {
+              toggleLabel: 'toggle text',
+            },
+            isDisabled: true,
+          },
+          {
+            key: 'enabled_row-1',
+            cells: [
+              {
+                key: 'cell-0',
+                children: 'Toggle Row',
+              },
+            ],
+            toggleAction: {
+              toggleLabel: 'toggle text',
+            },
+          }],
+        },
+      ]}
+    />
   </React.Fragment>
 );
 
