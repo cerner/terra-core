@@ -1,0 +1,26 @@
+{
+  "startDate": "7/3/2020, 12:27:33 AM",
+  "locale": "",
+  "theme": "",
+  "formFactor": "",
+  "output": [
+    [
+      "------------------------------------------------------------------",
+      "[chrome #0-0] Session ID: 6dee47260f1ae7a33e7c29db1c1aa812",
+      "[chrome #0-0] Spec: /Users/sm051274/Documents/GitHub/terra-core/packages/terra-switch/tests/wdio/switch-spec.js",
+      "[chrome #0-0] Running: chrome",
+      "[chrome #0-0]",
+      "[chrome #0-0] [large]",
+      "[chrome #0-0]",
+      "[chrome #0-0]     Switch",
+      "[chrome #0-0]",
+      "[chrome #0-0]         Long Label Text",
+      "[chrome #0-0]           ✓ renders switch with long label text",
+      "[chrome #0-0]",
+      "[chrome #0-0]",
+      "[chrome #0-0] 1 passing (4s)",
+      "[chrome #0-0]"
+    ]
+  ],
+  "endDate": "7/3/2020, 12:29:54 AM"
+}

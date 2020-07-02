@@ -4,15 +4,10 @@
 
 :local {
   .switch {
-    background-color: transparent;
-    border: 0;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
 
     &:hover {
-      background-color: transparent;
-      border: 0;
-
       .slider:not(.is-disabled) {
         background-color: var(--terra-switch-slider-hover-background-color, #fff);
         border: var(--terra-switch-slider-hover-border, 0);
@@ -45,7 +40,6 @@
     }
 
     &:focus {
-      background-color: transparent;
       border: 0;
       outline: 0;
 
@@ -63,11 +57,6 @@
       }
     }
 
-    // Removes dotted border of button on focus that shows up in Firefox
-    &::-moz-focus-inner {
-      border: 0;
-    }
-
     &:not(.is-disabled) {
       cursor: pointer;
     }
@@ -76,6 +65,10 @@
   .label-container {
     flex: 0 1 auto;
     margin-right: var(--terra-switch-label-margin-right, 1.42857rem);
+
+    .is-disabled {
+      cursor: default;
+    }
   }
 
   .label-text {
@@ -85,12 +78,6 @@
     padding-bottom: var(--terra-switch-label-padding-bottom, 0.2142rem);
     text-align: left;
     word-wrap: break-word;
-
-    &.is-disabled {
-      color: #9b9fa1;
-      cursor: default;
-      opacity: 1;
-    }
   }
 
   .status-label-text {
@@ -98,12 +85,6 @@
     font-size: var(--terra-switch-status-label-font-size, 1rem);
     font-weight: var(--terra-switch-status-label-font-weight, normal);
     text-align: left;
-    
-    &.is-disabled {
-      color: #9b9fa1;
-      cursor: default;
-      opacity: 1;
-    }
   }
 
   .tray.is-selected {

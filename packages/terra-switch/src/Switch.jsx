@@ -118,19 +118,25 @@ const Switch = (props) => {
   customProps.className);
 
   delete customProps.className;
+  let switchAttrs;
+  if (!isDisabled) {
+    switchAttrs = {
+      tabIndex: '0',
+      onBlur: handleOnBlur,
+      onClick: handleOnClick,
+      onMouseDown: handleOnMouseDown,
+      onKeyDown: handleOnKeyDown,
+    };
+  }
+
   return (
-    <button
+    <div
       {...customProps}
-      type="button"
+      {...switchAttrs}
       id={switchId}
       disabled={isDisabled}
       aria-checked={isChecked}
       role="switch"
-      tabIndex="0"
-      onBlur={handleOnBlur}
-      onClick={handleOnClick}
-      onMouseDown={handleOnMouseDown}
-      onKeyDown={handleOnKeyDown}
       className={switchClassNames}
       data-terra-switch-show-focus-styles
       ref={sliderButton}
@@ -142,7 +148,7 @@ const Switch = (props) => {
       <div className={trayClassNames}>
         <div className={sliderClassNames} />
       </div>
-    </button>
+    </div>
   );
 };
 
