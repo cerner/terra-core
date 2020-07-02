@@ -149,8 +149,8 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
     Terra.it.validatesElement('hover-and-focus');
   });
 
-  describe('Placeholder', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/placeholder'));
+  describe('Filter Style', () => {
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/filter-style'));
 
     Terra.it.validatesElement('initial');
 

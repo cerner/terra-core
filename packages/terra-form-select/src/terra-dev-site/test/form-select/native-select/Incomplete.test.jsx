@@ -9,7 +9,6 @@ const IncompleteTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       ariaLabel="select-label"
-      hasPlaceholder
       id="select-id"
       isIncomplete
       options={[

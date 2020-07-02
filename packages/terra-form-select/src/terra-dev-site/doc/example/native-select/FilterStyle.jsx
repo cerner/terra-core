@@ -5,10 +5,10 @@ import styles from '../FormSelectDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const PlaceholderExample = () => (
+const FilterStyleExample = () => (
   <NativeSelect
     ariaLabel="Default Placeholder Example"
-    hasPlaceholder
+    isFilterStyle
     options={[
       { value: 'volvo', display: 'Volvo' },
       { value: 'saab', display: 'Saab' },
@@ -19,4 +19,4 @@ const PlaceholderExample = () => (
   />
 );
 
-export default PlaceholderExample;
+export default FilterStyleExample;

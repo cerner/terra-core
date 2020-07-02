@@ -152,17 +152,6 @@ describe('NativeSelectField', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a NativeSelectField with a default placeholder', () => {
-    const wrapper = shallowWithIntl(
-      <NativeSelectField
-        hasPlaceholder
-        label="test-label"
-        selectId="test-id"
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should render a NativeSelectField as invalid', () => {
     const wrapper = shallowWithIntl(
       <NativeSelectField

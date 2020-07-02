@@ -8,7 +8,6 @@ const cx = classNames.bind(styles);
 const DefaultFieldTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelectField
-      hasPlaceholder
       label="Default Field Text"
       options={[
         { value: 'volvo', display: 'Volvo' },

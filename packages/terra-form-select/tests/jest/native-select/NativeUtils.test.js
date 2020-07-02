@@ -6,7 +6,7 @@ import {
   getFirstValue,
   getOptGroupKey,
   getOptGroupKeyIndex,
-} from '../../../src/native-select/NativeUtils';
+} from '../../../src/native-select/_NativeUtils';
 
 const mockIntl = {
   formatMessage: () => 'mock-test-display',
@@ -62,48 +62,52 @@ const testOptGroups = [
 
 describe('NativeUtils', () => {
   // getDisplay
-  it('should return valid displays for getDisplay with placeholder', () => {
-    expect(getDisplay(defaultPlaceholderValue, [], true, mockIntl)).toEqual('mock-test-display');
+  it('should return valid placeholder display for getDisplay with default', () => {
+    expect(getDisplay(defaultPlaceholderValue, [], false, mockIntl)).toEqual('mock-test-display');
+  });
+
+  it('should return invalid placehodler display for getDisplay with filter style', () => {
+    expect(getDisplay(defaultPlaceholderValue, testOptions, true, mockIntl)).toEqual(undefined);
   });
 
   it('should return valid displays for getDisplay with options', () => {
-    expect(getDisplay(null, testOptions, true)).toEqual(undefined);
-    expect(getDisplay(undefined, testOptions, true)).toEqual(undefined);
-    expect(getDisplay('value-0', testOptions, true)).toEqual(undefined);
-    expect(getDisplay('value-1', testOptions, true)).toEqual('1');
-    expect(getDisplay('value-2', testOptions, true)).toEqual('2');
-    expect(getDisplay('value-3', testOptions, true)).toEqual('3');
-    expect(getDisplay('value-4', testOptions, true)).toEqual('4');
+    expect(getDisplay(null, testOptions, false)).toEqual(undefined);
+    expect(getDisplay(undefined, testOptions, false)).toEqual(undefined);
+    expect(getDisplay('value-0', testOptions, false)).toEqual(undefined);
+    expect(getDisplay('value-1', testOptions, false)).toEqual('1');
+    expect(getDisplay('value-2', testOptions, false)).toEqual('2');
+    expect(getDisplay('value-3', testOptions, false)).toEqual('3');
+    expect(getDisplay('value-4', testOptions, false)).toEqual('4');
   });
 
   it('should return valid displays for getDisplay with optGroups', () => {
-    expect(getDisplay(null, testOptGroups, true)).toEqual(undefined);
-    expect(getDisplay(undefined, testOptGroups, true)).toEqual(undefined);
-    expect(getDisplay('value-0', testOptGroups, true)).toEqual(undefined);
+    expect(getDisplay(null, testOptGroups, false)).toEqual(undefined);
+    expect(getDisplay(undefined, testOptGroups, false)).toEqual(undefined);
+    expect(getDisplay('value-0', testOptGroups, false)).toEqual(undefined);
     expect(getDisplay('value-1', testOptGroups, true)).toEqual('1');
-    expect(getDisplay('value-2', testOptGroups, true)).toEqual('2');
-    expect(getDisplay('value-3', testOptGroups, true)).toEqual('3');
-    expect(getDisplay('value-4', testOptGroups, true)).toEqual('4');
+    expect(getDisplay('value-2', testOptGroups, false)).toEqual('2');
+    expect(getDisplay('value-3', testOptGroups, false)).toEqual('3');
+    expect(getDisplay('value-4', testOptGroups, false)).toEqual('4');
   });
 
   // getFirstValue
   it('should return valid values for getFirstValue with placeholder', () => {
-    expect(getFirstValue([], true)).toEqual(defaultPlaceholderValue);
+    expect(getFirstValue([])).toEqual(defaultPlaceholderValue);
   });
 
-  it('should return valid values for getFirstValue with options', () => {
-    expect(getFirstValue(testOptions)).toEqual('value-1');
+  it('should return valid value for getFirstValue with options', () => {
+    expect(getFirstValue(testOptions, true)).toEqual('value-1');
   });
 
-  it('should return valid values for getFirstValue with optGroups', () => {
-    expect(getFirstValue(testOptGroups)).toEqual('value-1');
+  it('should return valid value for getFirstValue with optGroups', () => {
+    expect(getFirstValue(testOptGroups, true)).toEqual('value-1');
   });
 
   // isCurrentPlaceholder
   it('should return the correct bool for isCurrentPlaceholder', () => {
-    expect(isCurrentPlaceholder('value-1', true)).toEqual(false);
-    expect(isCurrentPlaceholder(defaultPlaceholderValue)).toEqual(false);
-    expect(isCurrentPlaceholder(defaultPlaceholderValue, true)).toEqual(true);
+    expect(isCurrentPlaceholder('value-1', false)).toEqual(false);
+    expect(isCurrentPlaceholder(defaultPlaceholderValue, true)).toEqual(false);
+    expect(isCurrentPlaceholder(defaultPlaceholderValue)).toEqual(true);
   });
 
   // getOptGroupKey

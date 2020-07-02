@@ -1,118 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NativeSelect should render a NativeSelect allowing clear 1`] = `
-<InjectIntl(NativeSelect)
-  allowClear={true}
-  ariaLabel="test-label"
-  hasPlaceholder={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
->
-  <NativeSelect
-    allowClear={true}
-    ariaLabel="test-label"
-    disabled={false}
-    hasPlaceholder={true}
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
-    isInvalid={false}
-    options={Array []}
-    required={false}
-  >
-    <div
-      className="native placeholder"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        >
-          Terra.form.select.defaultDisplay
-        </div>
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        aria-label="test-label"
-        className="select"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={false}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Terra.form.select.defaultDisplay
-        </option>
-      </select>
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
 exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
 <InjectIntl(NativeSelect)
   ariaDescribedBy="test-described-id"
@@ -146,11 +33,9 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
   }
 >
   <NativeSelect
-    allowClear={false}
     ariaDescribedBy="test-described-id"
     ariaLabel="test-label"
     disabled={false}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -178,13 +63,14 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={false}
     options={Array []}
     required={false}
   >
     <div
-      className="native"
+      className="native placeholder"
       data-focus-interaction="none"
     >
       <div
@@ -193,7 +79,9 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
       >
         <div
           className="display"
-        />
+        >
+          Terra.form.select.defaultDisplay
+        </div>
         <div
           className="arrow"
         >
@@ -212,7 +100,16 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
         onFocus={[Function]}
         onMouseDown={[Function]}
         required={false}
-      />
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
+      </select>
     </div>
   </NativeSelect>
 </InjectIntl(NativeSelect)>
@@ -251,10 +148,8 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
   }
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     disabled={true}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -282,13 +177,14 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={false}
     options={Array []}
     required={false}
   >
     <div
-      className="native disabled"
+      className="native disabled placeholder"
       data-focus-interaction="none"
     >
       <div
@@ -298,7 +194,9 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
         <div
           aria-disabled={true}
           className="display"
-        />
+        >
+          Terra.form.select.defaultDisplay
+        </div>
         <div
           className="arrow"
         >
@@ -316,7 +214,16 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
         onFocus={[Function]}
         onMouseDown={[Function]}
         required={false}
-      />
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
+      </select>
     </div>
   </NativeSelect>
 </InjectIntl(NativeSelect)>
@@ -355,10 +262,8 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
   isInvalid={true}
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -386,13 +291,128 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={true}
     options={Array []}
     required={false}
   >
     <div
-      className="native invalid"
+      className="native invalid placeholder"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        >
+          Terra.form.select.defaultDisplay
+        </div>
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-invalid={true}
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={false}
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
+      </select>
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
+exports[`NativeSelect should render a NativeSelect in filter style 1`] = `
+<InjectIntl(NativeSelect)
+  ariaLabel="test-label"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isFilterStyle={true}
+>
+  <NativeSelect
+    ariaLabel="test-label"
+    disabled={false}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isFilterStyle={true}
+    isIncomplete={false}
+    isInvalid={false}
+    options={Array []}
+    required={false}
+  >
+    <div
+      className="native"
       data-focus-interaction="none"
     >
       <div
@@ -411,7 +431,6 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
         </div>
       </div>
       <select
-        aria-invalid={true}
         aria-label="test-label"
         className="select"
         disabled={false}
@@ -459,10 +478,8 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
   isIncomplete={true}
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -490,317 +507,8 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={true}
-    isInvalid={false}
-    options={Array []}
-    required={false}
-  >
-    <div
-      className="native"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        />
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        aria-label="test-label"
-        className="select"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={false}
-      />
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
-exports[`NativeSelect should render a NativeSelect required 1`] = `
-<InjectIntl(NativeSelect)
-  ariaLabel="test-label"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  required={true}
->
-  <NativeSelect
-    allowClear={false}
-    ariaLabel="test-label"
-    disabled={false}
-    hasPlaceholder={false}
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
-    isInvalid={false}
-    options={Array []}
-    required={true}
-  >
-    <div
-      className="native"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        />
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        aria-label="test-label"
-        className="select"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={true}
-      />
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
-exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`] = `
-<InjectIntl(NativeSelect)
-  ariaLabel="test-label"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isIncomplete={true}
-  required={true}
->
-  <NativeSelect
-    allowClear={false}
-    ariaLabel="test-label"
-    disabled={false}
-    hasPlaceholder={false}
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={true}
-    isInvalid={false}
-    options={Array []}
-    required={true}
-  >
-    <div
-      className="native incomplete"
-      data-focus-interaction="none"
-    >
-      <div
-        aria-hidden={true}
-        className="frame"
-      >
-        <div
-          className="display"
-        />
-        <div
-          className="arrow"
-        >
-          <div
-            className="arrow-icon"
-          />
-        </div>
-      </div>
-      <select
-        aria-label="test-label"
-        className="select"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        required={true}
-      />
-    </div>
-  </NativeSelect>
-</InjectIntl(NativeSelect)>
-`;
-
-exports[`NativeSelect should render a NativeSelect with a default placeholder 1`] = `
-<InjectIntl(NativeSelect)
-  ariaLabel="test-label"
-  hasPlaceholder={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
->
-  <NativeSelect
-    allowClear={false}
-    ariaLabel="test-label"
-    disabled={false}
-    hasPlaceholder={true}
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    isIncomplete={false}
     isInvalid={false}
     options={Array []}
     required={false}
@@ -850,12 +558,9 @@ exports[`NativeSelect should render a NativeSelect with a default placeholder 1`
 </InjectIntl(NativeSelect)>
 `;
 
-exports[`NativeSelect should render a NativeSelect with a refCallback 1`] = `
-<NativeSelect
-  allowClear={false}
+exports[`NativeSelect should render a NativeSelect required 1`] = `
+<InjectIntl(NativeSelect)
   ariaLabel="test-label"
-  disabled={false}
-  hasPlaceholder={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -883,6 +588,235 @@ exports[`NativeSelect should render a NativeSelect with a refCallback 1`] = `
       "timeZone": null,
     }
   }
+  required={true}
+>
+  <NativeSelect
+    ariaLabel="test-label"
+    disabled={false}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isFilterStyle={false}
+    isIncomplete={false}
+    isInvalid={false}
+    options={Array []}
+    required={true}
+  >
+    <div
+      className="native placeholder"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        >
+          Terra.form.select.defaultDisplay
+        </div>
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={true}
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
+      </select>
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
+exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`] = `
+<InjectIntl(NativeSelect)
+  ariaLabel="test-label"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isIncomplete={true}
+  required={true}
+>
+  <NativeSelect
+    ariaLabel="test-label"
+    disabled={false}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isFilterStyle={false}
+    isIncomplete={true}
+    isInvalid={false}
+    options={Array []}
+    required={true}
+  >
+    <div
+      className="native incomplete placeholder"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        >
+          Terra.form.select.defaultDisplay
+        </div>
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={true}
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
+      </select>
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
+exports[`NativeSelect should render a NativeSelect with a refCallback 1`] = `
+<NativeSelect
+  ariaLabel="test-label"
+  disabled={false}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isFilterStyle={false}
   isIncomplete={false}
   isInvalid={false}
   options={Array []}
@@ -924,10 +858,8 @@ exports[`NativeSelect should render a NativeSelect with an id 1`] = `
   }
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    hasPlaceholder={false}
     id="test-id"
     intl={
       Object {
@@ -956,13 +888,14 @@ exports[`NativeSelect should render a NativeSelect with an id 1`] = `
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={false}
     options={Array []}
     required={false}
   >
     <div
-      className="native"
+      className="native placeholder"
       data-focus-interaction="none"
     >
       <div
@@ -971,7 +904,9 @@ exports[`NativeSelect should render a NativeSelect with an id 1`] = `
       >
         <div
           className="display"
-        />
+        >
+          Terra.form.select.defaultDisplay
+        </div>
         <div
           className="arrow"
         >
@@ -990,7 +925,16 @@ exports[`NativeSelect should render a NativeSelect with an id 1`] = `
         onFocus={[Function]}
         onMouseDown={[Function]}
         required={false}
-      />
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
+      </select>
     </div>
   </NativeSelect>
 </InjectIntl(NativeSelect)>
@@ -1029,10 +973,8 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
   onChange={[MockFunction]}
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1060,6 +1002,7 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={false}
     onChange={[MockFunction]}
@@ -1067,7 +1010,7 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
     required={false}
   >
     <div
-      className="native"
+      className="native placeholder"
       data-focus-interaction="none"
     >
       <div
@@ -1076,7 +1019,9 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
       >
         <div
           className="display"
-        />
+        >
+          Terra.form.select.defaultDisplay
+        </div>
         <div
           className="arrow"
         >
@@ -1094,7 +1039,16 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
         onFocus={[Function]}
         onMouseDown={[Function]}
         required={false}
-      />
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
+      </select>
     </div>
   </NativeSelect>
 </InjectIntl(NativeSelect)>
@@ -1162,10 +1116,8 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
   }
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1193,6 +1145,7 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={false}
     options={
@@ -1228,7 +1181,7 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
     required={false}
   >
     <div
-      className="native"
+      className="native placeholder"
       data-focus-interaction="none"
     >
       <div
@@ -1238,7 +1191,7 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
         <div
           className="display"
         >
-          Volvo
+          Terra.form.select.defaultDisplay
         </div>
         <div
           className="arrow"
@@ -1257,8 +1210,15 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
         onFocus={[Function]}
         onMouseDown={[Function]}
         required={false}
-        value="volvo"
+        value=""
       >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
         <optgroup
           key="Swedish Cars-0"
           label="Swedish Cars"
@@ -1351,10 +1311,8 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
   }
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1382,6 +1340,7 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={false}
     options={
@@ -1407,7 +1366,7 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
     required={false}
   >
     <div
-      className="native"
+      className="native placeholder"
       data-focus-interaction="none"
     >
       <div
@@ -1417,7 +1376,7 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
         <div
           className="display"
         >
-          Volvo
+          Terra.form.select.defaultDisplay
         </div>
         <div
           className="arrow"
@@ -1436,8 +1395,15 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
         onFocus={[Function]}
         onMouseDown={[Function]}
         required={false}
-        value="volvo"
+        value=""
       >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
         <option
           key="volvo"
           value="volvo"
@@ -1521,11 +1487,9 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
   }
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     defaultValue="saab"
     disabled={false}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1553,6 +1517,7 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={false}
     options={
@@ -1609,6 +1574,13 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
         required={false}
         value="saab"
       >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
         <option
           key="volvo"
           value="volvo"
@@ -1692,10 +1664,8 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
   value="audi"
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1723,6 +1693,7 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={false}
     options={
@@ -1780,6 +1751,13 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
         required={false}
         value="audi"
       >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
         <option
           key="volvo"
           value="volvo"
@@ -1842,10 +1820,8 @@ exports[`NativeSelect should render a default NativeSelect 1`] = `
   }
 >
   <NativeSelect
-    allowClear={false}
     ariaLabel="test-label"
     disabled={false}
-    hasPlaceholder={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1873,13 +1849,14 @@ exports[`NativeSelect should render a default NativeSelect 1`] = `
         "timeZone": null,
       }
     }
+    isFilterStyle={false}
     isIncomplete={false}
     isInvalid={false}
     options={Array []}
     required={false}
   >
     <div
-      className="native"
+      className="native placeholder"
       data-focus-interaction="none"
     >
       <div
@@ -1888,7 +1865,9 @@ exports[`NativeSelect should render a default NativeSelect 1`] = `
       >
         <div
           className="display"
-        />
+        >
+          Terra.form.select.defaultDisplay
+        </div>
         <div
           className="arrow"
         >
@@ -1906,7 +1885,16 @@ exports[`NativeSelect should render a default NativeSelect 1`] = `
         onFocus={[Function]}
         onMouseDown={[Function]}
         required={false}
-      />
+        value=""
+      >
+        <option
+          disabled={true}
+          hidden={true}
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
+      </select>
     </div>
   </NativeSelect>
 </InjectIntl(NativeSelect)>

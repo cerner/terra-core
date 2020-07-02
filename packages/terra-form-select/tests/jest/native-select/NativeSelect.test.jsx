@@ -90,11 +90,11 @@ describe('NativeSelect', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a NativeSelect with a default placeholder', () => {
+  it('should render a NativeSelect in filter style', () => {
     const wrapper = mountWithIntl(
       <NativeSelect
         ariaLabel="test-label"
-        hasPlaceholder
+        isFilterStyle
       />,
     );
     expect(wrapper).toMatchSnapshot();

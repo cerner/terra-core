@@ -5,7 +5,7 @@ import NativeSelect from './NativeSelect';
 import {
   optionPropType,
   optGroupPropType,
-} from './NativePropTypes';
+} from './_NativePropTypes';
 
 const propTypes = {
   /**
@@ -20,10 +20,6 @@ const propTypes = {
    * Error message displayed when the select is invalid.
    */
   error: PropTypes.node,
-  /**
-   * Whether a placeholder value should be included as an option.
-   */
-  hasPlaceholder: PropTypes.bool,
   /**
    * Help message to display with the select.
    */
@@ -95,7 +91,6 @@ const propTypes = {
 
 const defaultProps = {
   disabled: false,
-  hasPlaceholder: false,
   hideRequired: false,
   isIncomplete: false,
   isInline: false,
@@ -109,7 +104,6 @@ const NativeSelectField = ({
   defaultValue,
   disabled,
   error,
-  hasPlaceholder,
   help,
   hideRequired,
   isIncomplete,
@@ -165,7 +159,6 @@ const NativeSelectField = ({
         ariaDescribedBy={ariaDescriptionIds}
         ariaLabel={label}
         disabled={disabled}
-        hasPlaceholder={hasPlaceholder}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         defaultValue={defaultValue}

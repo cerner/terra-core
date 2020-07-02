@@ -8,7 +8,6 @@ const cx = classNames.bind(styles);
 const IncompleteExample = () => (
   <NativeSelect
     ariaLabel="Incomplete Example"
-    hasPlaceholder
     isIncomplete
     options={[
       { value: 'volvo', display: 'Volvo' },

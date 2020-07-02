@@ -7,7 +7,6 @@ const cx = classNames.bind(styles);
 
 const RequiredFieldExample = () => (
   <NativeSelectField
-    hasPlaceholder
     label="Required Field Text"
     options={[
       { value: 'volvo', display: 'Volvo' },

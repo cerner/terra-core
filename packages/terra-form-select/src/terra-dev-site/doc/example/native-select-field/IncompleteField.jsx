@@ -7,7 +7,6 @@ const cx = classNames.bind(styles);
 
 const IncompleteFieldExample = () => (
   <NativeSelectField
-    hasPlaceholder
     isIncomplete
     label="Incomplete Field Text"
     options={[

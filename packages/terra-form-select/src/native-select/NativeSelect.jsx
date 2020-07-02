@@ -15,11 +15,11 @@ import {
   getFirstValue,
   getOptGroupKey,
   getOptGroupKeyIndex,
-} from './NativeUtils';
+} from './_NativeUtils';
 import {
   optionPropType,
   optGroupPropType,
-} from './NativePropTypes';
+} from './_NativePropTypes';
 
 import styles from './NativeSelect.module.scss';
 
@@ -57,6 +57,10 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: intlShape.isRequired,
+  /**
+   * Whether the select input should use the filter style display, forcing a value to be selected.
+   */
+  isFilterStyle: PropTypes.bool,
   /**
    * Whether the input is invalid.
    */
@@ -101,15 +105,15 @@ const propTypes = {
 
 const defaultProps = {
   disabled: false,
-  hasPlaceholder: false,
+  isFilterStyle: false,
   isIncomplete: false,
   isInvalid: false,
   options: [],
   required: false,
 };
 
-const createPlaceholder = (hasPlaceholder, intl) => {
-  if (!hasPlaceholder) {
+const createPlaceholder = (isFilterStyle, intl) => {
+  if (isFilterStyle) {
     return undefined;
   }
 
@@ -149,9 +153,9 @@ const NativeSelect = ({
   attrs,
   disabled,
   defaultValue,
-  hasPlaceholder,
   id,
   intl,
+  isFilterStyle,
   isInvalid,
   isIncomplete,
   onBlur,
@@ -164,7 +168,7 @@ const NativeSelect = ({
   value,
   ...customProps
 }) => {
-  const [uncontrolledValue, setUncontrolledValue] = useState(!isValuePresent(value) ? defaultValue || getFirstValue(options, hasPlaceholder) : undefined);
+  const [uncontrolledValue, setUncontrolledValue] = useState(!isValuePresent(value) ? defaultValue || getFirstValue(options, isFilterStyle) : undefined);
   const refIsControlled = useRef(isValuePresent(value));
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
@@ -201,10 +205,10 @@ const NativeSelect = ({
   };
 
   let currentValue = refIsControlled.current ? value : uncontrolledValue;
-  let currentDisplay = getDisplay(currentValue, options, hasPlaceholder, intl);
+  let currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
   if (!currentDisplay) {
-    currentValue = getFirstValue(options, hasPlaceholder);
-    currentDisplay = getDisplay(currentValue, options, hasPlaceholder, intl);
+    currentValue = getFirstValue(options, isFilterStyle);
+    currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
   }
 
   const selectAttrs = {
@@ -224,7 +228,7 @@ const NativeSelect = ({
       { disabled },
       { invalid: isInvalid },
       { incomplete: required && isIncomplete },
-      { placeholder: isCurrentPlaceholder(selectAttrs.value, hasPlaceholder) },
+      { placeholder: isCurrentPlaceholder(selectAttrs.value, isFilterStyle) },
     ),
     customProps.className,
   );
@@ -257,7 +261,7 @@ const NativeSelect = ({
         onBlur={handleOnBlur}
         ref={refCallback}
       >
-        {createPlaceholder(hasPlaceholder, intl)}
+        {createPlaceholder(isFilterStyle, intl)}
         {createOptions(options)}
       </select>
     </div>

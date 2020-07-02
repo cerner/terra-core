@@ -5,11 +5,11 @@ import styles from './NativeSelectTest.module.scss';
 
 const cx = classNames.bind(styles);
 
-const PlaceholderTest = () => (
+const FilterStyleTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       ariaLabel="select-label"
-      hasPlaceholder
+      isFilterStyle
       id="select-id"
       options={[
         { value: 'volvo', display: 'Volvo' },
@@ -21,4 +21,4 @@ const PlaceholderTest = () => (
   </div>
 );
 
-export default PlaceholderTest;
+export default FilterStyleTest;
