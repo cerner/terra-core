@@ -103,8 +103,6 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -217,8 +215,6 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -331,8 +327,6 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -546,8 +540,6 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -659,8 +651,6 @@ exports[`NativeSelect should render a NativeSelect required 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -773,8 +763,6 @@ exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`]
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -928,8 +916,6 @@ exports[`NativeSelect should render a NativeSelect with an id 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -1042,8 +1028,6 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -1213,8 +1197,6 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -1398,8 +1380,6 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -1575,8 +1555,6 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
         value="saab"
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -1752,8 +1730,6 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
         value="audi"
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay
@@ -1888,8 +1864,6 @@ exports[`NativeSelect should render a default NativeSelect 1`] = `
         value=""
       >
         <option
-          disabled={true}
-          hidden={true}
           value=""
         >
           Terra.form.select.defaultDisplay

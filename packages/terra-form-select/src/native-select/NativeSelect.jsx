@@ -119,8 +119,6 @@ const createPlaceholder = (isFilterStyle, intl) => {
 
   return (
     <option
-      disabled
-      hidden
       value={defaultPlaceholderValue}
     >
       {intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })}
