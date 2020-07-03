@@ -4,7 +4,7 @@ import { shallowWithIntl } from 'terra-enzyme-intl';
 import Switch from '../../src/Switch';
 
 describe('Switch', () => {
-  const defaultRender = <Switch switchId="defaultSwitch" labelText="default" />;
+  const defaultRender = <Switch labelText="default" />;
 
   // Snapshot Tests
   it('should render a default component', () => {
@@ -13,9 +13,9 @@ describe('Switch', () => {
   });
 
   it('should render as disabled when set', () => {
-    const button = shallowWithIntl(<Switch switchId="disabledSwitch" labelText="Label" isDisabled />);
+    const button = shallowWithIntl(<Switch labelText="Label" isDisabled />);
     expect(button).toMatchSnapshot();
-    expect(button.prop('disabled')).toBe(true);
+    expect(button.prop('aria-disabled')).toBe(true);
   });
 
   // Prop Tests

@@ -1,12 +1,12 @@
 {
-  "startDate": "7/3/2020, 12:27:33 AM",
+  "startDate": "7/3/2020, 11:22:06 PM",
   "locale": "",
   "theme": "",
   "formFactor": "",
   "output": [
     [
       "------------------------------------------------------------------",
-      "[chrome #0-0] Session ID: 6dee47260f1ae7a33e7c29db1c1aa812",
+      "[chrome #0-0] Session ID: 2cfe41fcc2e009321795cce1e60fc3ab",
       "[chrome #0-0] Spec: /Users/sm051274/Documents/GitHub/terra-core/packages/terra-switch/tests/wdio/switch-spec.js",
       "[chrome #0-0] Running: chrome",
       "[chrome #0-0]",
@@ -22,5 +22,5 @@
       "[chrome #0-0]"
     ]
   ],
-  "endDate": "7/3/2020, 12:29:54 AM"
+  "endDate": "7/3/2020, 11:24:33 PM"
 }

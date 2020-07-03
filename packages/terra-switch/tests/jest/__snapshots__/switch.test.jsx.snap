@@ -3,10 +3,9 @@
 exports[`Switch should render a default component 1`] = `
 <div
   aria-checked={false}
-  className="switch"
+  aria-label="default"
+  className="switch is-enabled"
   data-terra-switch-show-focus-styles={true}
-  disabled={false}
-  id="defaultSwitch"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -42,6 +41,7 @@ exports[`Switch should render a default component 1`] = `
   tabIndex="0"
 >
   <div
+    aria-hidden={true}
     className="label-container"
   >
     <div
@@ -59,6 +59,7 @@ exports[`Switch should render a default component 1`] = `
     </div>
   </div>
   <div
+    aria-hidden={true}
     className="tray"
   >
     <div
@@ -71,10 +72,10 @@ exports[`Switch should render a default component 1`] = `
 exports[`Switch should render as disabled when set 1`] = `
 <div
   aria-checked={false}
+  aria-disabled={true}
+  aria-label="Label"
   className="switch is-disabled"
   data-terra-switch-show-focus-styles={true}
-  disabled={true}
-  id="disabledSwitch"
   intl={
     Object {
       "defaultFormats": Object {},
@@ -105,15 +106,16 @@ exports[`Switch should render as disabled when set 1`] = `
   role="switch"
 >
   <div
+    aria-hidden={true}
     className="label-container"
   >
     <div
-      className="label-text is-disabled"
+      className="label-text"
     >
       Label
     </div>
     <div
-      className="status-label-text is-disabled"
+      className="status-label-text"
     >
       <FormattedMessage
         id="Terra.switch.switchstatuslabel.off"
@@ -122,10 +124,11 @@ exports[`Switch should render as disabled when set 1`] = `
     </div>
   </div>
   <div
-    className="tray is-disabled"
+    aria-hidden={true}
+    className="tray"
   >
     <div
-      className="slider is-disabled"
+      className="slider"
     />
   </div>
 </div>
