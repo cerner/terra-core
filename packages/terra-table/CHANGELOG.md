@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Rows and Header checkbox when disabled are now accessible for screenreaders to read out accordingly.
 
 4.9.0 - (June 23, 2020)
 ------------------
