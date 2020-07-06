@@ -292,8 +292,8 @@ class Frame extends React.Component {
      */
     if (event && event.target
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
-      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
-      this.setState({ isOpen: true, isPositioned: false });
+        || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
+      this.setState({ isOpen: true, isPositioned: false, isFocused: true });
 
       // Allows time for state update to render select menu DOM before shifting focus to it
       setTimeout(() => {
