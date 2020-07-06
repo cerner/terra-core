@@ -58,7 +58,8 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * Whether the select input should use the filter style display, forcing a value to be selected.
+   * Whether the select input should use the filter style display, forcing a value to always be selected.
+   * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
    */
   isFilterStyle: PropTypes.bool,
   /**
