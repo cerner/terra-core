@@ -599,6 +599,10 @@ class Frame extends React.Component {
         ]);
 
         return (
+          /**
+           * The toggle does not receive keyboard focus and cannot respond to key press events.
+           * Key press events will be caught and evaluated by the frame.
+           */
           // eslint-disable-next-line jsx-a11y/click-events-have-key-events
           <div data-terra-form-select-toggle className={toggleClasses} onClick={this.handleToggleClick}>
             <span className={cx('arrow-icon')} />
@@ -635,6 +639,10 @@ class Frame extends React.Component {
     ]);
 
     return (
+      /**
+       * The toggle does not receive keyboard focus and cannot respond to key press events.
+       * Key press events will be caught and evaluated by the frame.
+       */
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events
       <div data-terra-form-select-toggle className={toggleClasses} onClick={this.toggleDropdown}>
         <span className={cx('arrow-icon')} />
