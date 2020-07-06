@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed issue on mobile that prevented the tag and multi-select variants to shift focus onto to input when opened via the dropdown arrow
 
 6.9.0 - (June 16, 2020)
 ------------------
