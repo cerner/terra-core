@@ -23,7 +23,7 @@ const DocPage = () => (
     packageName={name}
     packageVersion={version}
     readme={ReadMe}
-    srcPath={`https://github.com/cerner/terra-core/tree/master/packages/${name}`}
+    srcPath={`https://github.com/cerner/terra-core/tree/main/packages/${name}`}
     examples={[
       {
         title: 'Dark Placeholder',

@@ -6,6 +6,11 @@ Unreleased
 ### Fixed
 * Fixed an issue on mobile that prevented the tag and multi-select variants from shifting focus onto the input when opened via the dropdown arrow
 
+6.10.0 - (July 7, 2020)
+------------------
+### Changed
+* Minor dependency version bump
+
 6.9.0 - (June 16, 2020)
 ------------------
 ### Fixed
@@ -101,7 +106,7 @@ Unreleased
 
 5.39.0 - (January 7, 2020)
 ------------------
-### Fixed 
+### Fixed
 * Fixed page scrolling when embedded within an iframe.
 * Fixed accessibility issue due to invalid `aria-activedescendant` value.
 
@@ -572,7 +577,7 @@ Unreleased
 
 4.0.0 - (May 23, 2018)
 ------------------
-### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select/docs/UPGRADEGUIDE.md)
+### Breaking Changes - [Upgrade Guide](https://github.com/cerner/terra-core/tree/main/packages/terra-form-select/docs/UPGRADEGUIDE.md)
 * Removed `boundingRef`
 * Removed `isPlaceholderHidden` - A placeholder option is no longer added by default.
 * Removed `name` - Terra recommends handling validations with [react-final-form](https://github.com/final-form/react-final-form).

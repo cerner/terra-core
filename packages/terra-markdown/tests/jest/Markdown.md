@@ -137,7 +137,7 @@ There are two ways to create links.
 
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+[I'm a relative reference to a repository file](../blob/main/LICENSE)
 
 [You can use numbers for reference-style link definitions][1]
 
@@ -160,7 +160,7 @@ Some text to show that the reference links can follow later.
 
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+[I'm a relative reference to a repository file](../blob/main/LICENSE)
 
 [You can use numbers for reference-style link definitions][1]
 
@@ -184,23 +184,23 @@ Some text to show that the reference links can follow later.
 Here's our logo (hover to see the title text):
 
 Inline-style:
-![alt text](https://github.com/cerner/terra-core/raw/master/terra.png "Logo Title Text 1")
+![alt text](https://github.com/cerner/terra-core/raw/main/terra.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: https://github.com/cerner/terra-core/raw/master/terra.png "Logo Title Text 2"
+[logo]: https://github.com/cerner/terra-core/raw/main/terra.png "Logo Title Text 2"
 ```
 
 Here's our logo (hover to see the title text):
 
 Inline-style:
-![alt text](https://github.com/cerner/terra-core/raw/master/terra.png "Logo Title Text 1")
+![alt text](https://github.com/cerner/terra-core/raw/main/terra.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: https://github.com/cerner/terra-core/raw/master/terra.png "Logo Title Text 2"
+[logo]: https://github.com/cerner/terra-core/raw/main/terra.png "Logo Title Text 2"
 
 <a name="code"/>
 
