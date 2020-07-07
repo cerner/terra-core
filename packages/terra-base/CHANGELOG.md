@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* updated `master` references to `main`.
 
 5.36.0 - (June 13, 2020)
 ------------------

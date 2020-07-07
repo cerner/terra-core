@@ -3,6 +3,8 @@ Changelog
 
 Unreleased
 ----------
+### Changed
+* updated `master` references to `main`.
 
 1.35.0 - (February 18, 2020)
 ------------------
