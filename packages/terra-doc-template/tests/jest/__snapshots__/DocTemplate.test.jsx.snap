@@ -269,7 +269,7 @@ exports[`DocTemplate should show the version, readme, source link, examples, and
       src="test-file-stub"
     />
     <a
-      href="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
+      href="https://github.com/cerner/terra-core/tree/main/packages/terra-doc-template"
     >
       View component source code
     </a>

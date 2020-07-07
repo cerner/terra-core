@@ -7,7 +7,7 @@
 The terra-doc-template component provides an adjustable template for documentation pages.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/main/packages/terra-doc-template/docs)
 - [LICENSE](#license)
 
 ## Getting Started

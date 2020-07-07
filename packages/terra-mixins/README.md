@@ -7,7 +7,7 @@
 The terra-mixins component supplies global mixins for use throughout the Terra ecosystem.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-mixins/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/main/packages/terra-mixins/docs)
 - [LICENSE](#license)
 
 ## Getting Started
