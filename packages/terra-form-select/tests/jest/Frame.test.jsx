@@ -150,6 +150,24 @@ describe('Frame', () => {
     expect(mockBlur).toBeCalled();
   });
 
+  it('should call custom onClick for multi-select frame', () => {
+    const mockClick = jest.fn();
+    const wrapper = shallowWithIntl(<MultipleFrame onClick={mockClick} />);
+
+    wrapper.simulate('click');
+
+    expect(mockClick).toBeCalled();
+  });
+
+  it('should call custom on click for tag frame', () => {
+    const mockClick = jest.fn();
+    const wrapper = shallowWithIntl(<TagFrame onClick={mockClick} />);
+
+    wrapper.simulate('click');
+
+    expect(mockClick).toBeCalled();
+  });
+
   it('should render a clear option', () => {
     const wrapper = shallowWithIntl(<SingleSelectFrame clearOptionDisplay="-Select-" />);
     expect(wrapper).toMatchSnapshot();
