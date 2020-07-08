@@ -48,6 +48,7 @@ exports[`renders the banner wrapper with all props 1`] = `
   deceasedDate={null}
   deceasedDateLabel="Terra.demographicsBanner.deceased"
   gender="Male"
+  genderAria="Male"
   gestationalAge="April 5, 2016"
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"

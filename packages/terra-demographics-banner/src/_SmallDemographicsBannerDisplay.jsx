@@ -21,6 +21,7 @@ const SmallDemographicsBannerDisplay = (props) => {
     deceasedDate,
     deceasedDateLabel,
     gender,
+    genderAria,
     gestationalAge,
     gestationalAgeFullText,
     gestationalAgeLabel,
@@ -52,18 +53,17 @@ const SmallDemographicsBannerDisplay = (props) => {
   );
 
   delete customProps.className;
-  const infoText = intl.formatMessage({ id: 'Terra.demographicsBanner.info' });
 
   return (
     <section
       {...customProps}
       className={mainClasses}
-      tabIndex={isSelectable ? '0' : undefined} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
+      tabIndex={-1}
     >
       <div className={cx('small-content')}>
-        <div className={cx('row')}>
-          { isConfidential ? <span className={cx('confidential-icon')}><IconFlag /></span> : null }
+        <div className={cx('column')}>
           <h1 className={cx('person-name')}>
+            { isConfidential ? <span className={cx('confidential-icon')}><IconFlag /></span> : null }
             <span>
               { personName }
               { preferredFirstName && <span className={cx('preferred-first-name')}>{ preferredFirstName }</span> }
@@ -72,6 +72,8 @@ const SmallDemographicsBannerDisplay = (props) => {
         </div>
         <div className={cx('person-details')}>
           {DemographicsBannerUtils.personDetails(props)}
+        </div>
+        <div className={cx('identifiers')}>
           {DemographicsBannerUtils.applicationIdentifiers(props)}
         </div>
         <div className={cx('application-content')}>
@@ -79,11 +81,11 @@ const SmallDemographicsBannerDisplay = (props) => {
         </div>
       </div>
       {isSelectable && (
-        <div className={cx('info-tile-container')}>
-          <div className={cx('info-tile')}>
-            <span className={cx('info-text')}>{infoText}</span>
-            <span className={cx('info-icon')} />
-          </div>
+        <div
+          className={cx('info-tile-container')}
+          tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
+        >
+          {DemographicsBannerUtils.infoTile(props)}
         </div>
       )}
     </section>

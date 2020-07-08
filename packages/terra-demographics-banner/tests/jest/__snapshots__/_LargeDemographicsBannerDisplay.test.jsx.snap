@@ -67,23 +67,17 @@ exports[`correctly applies the theme context className 1`] = `
     >
       <section
         className="demographics-banner large-demographics-banner orion-fusion-theme"
+        tabIndex={-1}
       >
         <div
           className="content"
         >
           <div
-            className="row"
+            className="column"
           >
             <h1
               className="person-name"
             />
-            <div
-              className="application-content"
-            />
-          </div>
-          <div
-            className="row"
-          >
             <div
               className="person-details"
             >
@@ -94,17 +88,20 @@ exports[`correctly applies the theme context className 1`] = `
                   className="value"
                 >
                   <span
+                    aria-hidden={false}
                     className="value-text"
                   />
                 </span>
               </DemographicsBannerValue>
               <DemographicsBannerValue
                 key="gender"
+                valueAriaHidden={false}
               >
                 <span
                   className="value"
                 >
                   <span
+                    aria-hidden={false}
                     className="value-text"
                   />
                 </span>
@@ -116,11 +113,19 @@ exports[`correctly applies the theme context className 1`] = `
                   className="value"
                 >
                   <span
+                    aria-hidden={false}
                     className="value-text"
                   />
                 </span>
               </DemographicsBannerValue>
             </div>
+          </div>
+          <div
+            className="column"
+          >
+            <div
+              className="application-content"
+            />
             <div
               className="identifiers"
             />

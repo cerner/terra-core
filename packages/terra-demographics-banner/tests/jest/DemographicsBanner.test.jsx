@@ -23,6 +23,7 @@ it('renders the banner wrapper with all props', () => {
       }}
       dateOfBirth="May 9, 1993"
       gender="Male"
+      genderAria="Male"
       gestationalAge="April 5, 2016"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
       isConfidential

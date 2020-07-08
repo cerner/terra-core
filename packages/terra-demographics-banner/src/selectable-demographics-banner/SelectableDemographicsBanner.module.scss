@@ -7,11 +7,6 @@
     flex-direction: row;
     padding: var(--terra-demographics-banner-background-tile-padding, 0.21428rem 0.42857rem 0.28571rem);
 
-    @media screen and (min-width: 992px) {
-      box-shadow: var(--terra-demographics-banner-background-tile-large-box-shadow, inset 0 1px 0 0 #006aa8, inset 0 2px 2px 0 #032b46, inset 0 5px 4px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 2px 0 #014979);
-      padding: var(--terra-demographics-banner-background-tile-large-padding, 0.42857rem 0.42857rem 0.28571rem);
-    }
-
     .selectable-tile {
       border-radius: var(--terra-demographics-banner-selectable-tile-border-radius, 4px);
       box-shadow: var(--terra-demographics-banner-selectable-tile-box-shadow, 1px 0 3px 1px rgba(0, 0, 0, 0.33));

@@ -26,6 +26,7 @@ export default () => {
         gestationalAge="April 11, 2020"
         postMenstrualAge="May 13, 2020"
         gender="F"
+        genderAria="Female"
         identifiers={{ MRN: '00019837', FIN: '1000254085' }}
         isConfidential
         personName="BARSTOWE, GEORGIA"

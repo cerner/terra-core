@@ -41,9 +41,13 @@ const propTypes = {
    */
   deceasedDateLabel: PropTypes.string,
   /**
-   * Gender of the Person
+   * Gender of the Person. This will be displayed on the demographics banner.
    */
   gender: PropTypes.string,
+  /**
+   * The gender label used for accessibility. Unlike the `Gender` prop, this label will not be displayed. It will be read in screen readers if provided.
+   */
+  genderAria: PropTypes.string,
   /**
    * The persons gestational age.
    */

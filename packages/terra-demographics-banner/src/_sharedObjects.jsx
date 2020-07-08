@@ -6,8 +6,10 @@ import styles from './DemographicsBanner.module.scss';
 
 const cx = classNames.bind(styles);
 
-// eslint-disable-next-line react/prop-types
-const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
+/* eslint-disable react/prop-types */
+const DemographicsBannerValue = ({
+  label, value, valueAriaHidden = false, abbrTitle,
+}) => {
   let valueLabelContent;
 
   if (label && abbrTitle) {
@@ -30,7 +32,7 @@ const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
     <span className={cx('value')}>
       {abbrTitle && (<VisuallyHiddenText text={abbrTitle} />)}
       {valueLabelContent}
-      <span className={cx('value-text')}>{value}</span>
+      <span className={cx('value-text')} aria-hidden={valueAriaHidden}>{value}</span>
     </span>
   );
 };
@@ -38,7 +40,12 @@ const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
 const personDetails = (props) => {
   const elements = [
     <DemographicsBannerValue key="age" value={props.age} />,
-    <DemographicsBannerValue key="gender" value={props.gender} />,
+    <DemographicsBannerValue
+      key="gender"
+      abbrTitle={props.genderAria}
+      valueAriaHidden={!!props.genderAria}
+      value={props.gender}
+    />,
     <DemographicsBannerValue
       key="dob"
       abbrTitle={props.dateOfBirthFullText}
@@ -92,6 +99,18 @@ const applicationIdentifiers = (props) => {
   return null;
 };
 
+const infoTile = (props) => {
+  const infoText = props.intl.formatMessage({ id: 'Terra.demographicsBanner.info' });
+
+  return (
+    <div className={cx('info-tile')}>
+      <VisuallyHiddenText text={props.personName} />
+      <span className={cx('info-text')} aria-hidden="true">{infoText}</span>
+      <span className={cx('info-icon')} />
+    </div>
+  );
+};
+
 const avatarShape = {
   /**
    * Specifies the alternative text for the photo.
@@ -124,6 +143,7 @@ const DemographicsBannerUtils = {
   personDetails,
   applicationIdentifiers,
   avatarShape,
+  infoTile,
 };
 
 export default DemographicsBannerUtils;

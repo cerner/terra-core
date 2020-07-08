@@ -15,7 +15,8 @@ export default () => (
     dateOfBirth="May 9, 1993"
     gestationalAge="April 11, 2020"
     postMenstrualAge="May 13, 2020"
-    gender="Male"
+    gender="M"
+    genderAria="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
     isConfidential
     personName="Johnathon Doe"

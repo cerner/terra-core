@@ -24,7 +24,8 @@ export default () => {
         }}
         dateOfBirth="May 9, 1993"
         deceasedDate="March 12, 2020"
-        gender="Male"
+        gender="M"
+        genderAria="Male"
         identifiers={{ MRN: 12343, REA: '3JSDA' }}
         personName="Johnathon Doe"
         preferredFirstName="John"

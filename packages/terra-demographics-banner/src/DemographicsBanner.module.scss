@@ -10,7 +10,7 @@
     box-shadow: var(--terra-demographics-banner-box-shadow);
     color: var(--terra-demographics-banner-color, #fff);
     line-height: 1;
-    padding: var(--terra-demographics-banner-padding, 0.714em);
+    padding: var(--terra-demographics-banner-padding, 0.714em 0 0.714em 0.714em);
   }
 
   .profile-photo,
@@ -40,7 +40,7 @@
   }
 
   .confidential-icon {
-    display: flex;
+    display: inline-flex;
     flex-shrink: 0;
     font-size: 1.143rem;
     margin-right: 0.5rem;
@@ -95,11 +95,8 @@
     text-decoration: none;
   }
 
-  .row {
-    display: flex;
-  }
-
   .content {
+    display: flex;
     flex-grow: 1;
     margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
   }
@@ -108,6 +105,11 @@
     flex-grow: 1;
     margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
     margin-left: 0;
+  }
+
+  .column {
+    display: inline-block;
+    flex-grow: 1;
   }
 
   .application-content {
@@ -121,9 +123,10 @@
     box-shadow: var(--terra-demographics-banner-large-box-shadow);
     display: flex;
     flex-direction: row;
-    padding: var(--terra-demographics-banner-large-padding, 0.714em);
+    padding: var(--terra-demographics-banner-large-padding, 0.714em 0 0.714em 0.714em);
 
     .application-content {
+      margin-left: 0.714em;
       margin-top: 0;
       text-align: right;
     }
@@ -133,6 +136,7 @@
     }
 
     .identifiers {
+      margin-left: 0.714em;
       text-align: right;
     }
   }
@@ -144,17 +148,6 @@
 
     &:focus {
       outline: none;
-    }
-    
-    &:focus[data-focus-styles-enabled=true] {
-      box-shadow: var(--terra-demographics-banner-focus-box-shadow, none);
-      outline: var(--terra-demographics-banner-focus-outline, 2px dashed #fff);
-      outline-offset: var(--terra-demographics-banner-focus-outline-offset, -5px);
-    }
-
-    &::-moz-focus-inner {
-      border: 0;
-      padding: 0;
     }
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
@@ -189,8 +182,19 @@
     display: flex;
     justify-content: center;
 
+    &:focus {
+      box-shadow: var(--terra-demographics-banner-focus-box-shadow, none);
+      outline: var(--terra-demographics-banner-focus-outline, 2px dashed #fff);
+      outline-offset: var(--terra-demographics-banner-focus-outline-offset, -5px);
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+
     .info-tile {
-      margin: var(--terra-demographics-banner-info-tile-margin, auto 0 auto 0.714rem);
+      margin: var(--terra-demographics-banner-info-tile-margin, auto 0.714rem auto 0.714rem);
       padding: var(--terra-demographics-banner-info-tile-padding, 0.14285rem 0.35714rem);
     }
 

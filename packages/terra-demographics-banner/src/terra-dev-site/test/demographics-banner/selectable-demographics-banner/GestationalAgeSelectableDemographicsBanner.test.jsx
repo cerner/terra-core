@@ -24,7 +24,8 @@ export default () => {
         }}
         color="two"
         dateOfBirth="May 9, 1993"
-        gender="Male"
+        gender="M"
+        genderAria="Male"
         gestationalAge="April 11, 2020"
         personName="Johnathon Doe"
         preferredFirstName="John"

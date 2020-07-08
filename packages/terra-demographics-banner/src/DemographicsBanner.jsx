@@ -26,9 +26,13 @@ const propTypes = {
    */
   deceasedDate: PropTypes.string,
   /**
-   * Gender of the Person.
+   * Gender of the Person. This will be displayed on the demographics banner.
    */
   gender: PropTypes.string,
+  /**
+   * The gender label used for accessibility. Unlike the `Gender` prop, this label will not be displayed. It will be read in screen readers if provided.
+   */
+  genderAria: PropTypes.string,
   /**
    * The person's gestational age.
    */
@@ -97,6 +101,7 @@ const DemographicsBanner = ({
   age,
   dateOfBirth,
   gender,
+  genderAria,
   intl,
   personName,
   ...customProps
@@ -106,6 +111,7 @@ const DemographicsBanner = ({
     age={age}
     dateOfBirth={dateOfBirth}
     gender={gender}
+    genderAria={genderAria}
     personName={personName}
     dateOfBirthLabel={intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirth' })}
     dateOfBirthFullText={intl.formatMessage({ id: 'Terra.demographicsBanner.dateOfBirthFullText' })}

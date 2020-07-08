@@ -27,6 +27,7 @@ it('renders the banner wrapper with all props', () => {
       dateOfBirth="May 9, 1993"
       deceasedDate="January 10, 2020"
       gender="Male"
+      genderAria="Male"
       gestationalAge="April 5, 2016"
       hashValue="alternative hash"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
