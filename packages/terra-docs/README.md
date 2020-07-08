@@ -13,9 +13,6 @@
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-docs`
 
-<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
-<!-- AUTO-GENERATED-CONTENT:END -->
-
 ## LICENSE
 
 Copyright 2020 Cerner Innovation, Inc.
