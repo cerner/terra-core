@@ -83,6 +83,10 @@ const propTypes = {
    */
   onBlur: PropTypes.func,
   /**
+   * Callback function triggered when the frame is clicked.
+   */
+  onClick: PropTypes.func,
+  /**
    * Callback function triggered when the frame gains focus.
    */
   onFocus: PropTypes.func,
@@ -138,6 +142,15 @@ const defaultProps = {
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 class Frame extends React.Component {
+  /**
+   * Handles the mouse down events.
+   * @param {event} event - The mouse down event.
+   */
+  static handleMouseDown(event) {
+    // Preventing default events stops the search input from losing focus.
+    event.preventDefault();
+  }
+
   constructor(props) {
     super(props);
 
@@ -161,16 +174,16 @@ class Frame extends React.Component {
     this.toggleDropdown = this.toggleDropdown.bind(this);
     this.positionDropdown = this.positionDropdown.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleInputMouseDown = this.handleInputMouseDown.bind(this);
     this.handleInputFocus = this.handleInputFocus.bind(this);
     this.handleInputBlur = this.handleInputBlur.bind(this);
-    this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
-    this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
+    this.handleToggleClick = this.handleToggleClick.bind(this);
+    this.handleToggleButtonClick = this.handleToggleButtonClick.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
@@ -279,8 +292,8 @@ class Frame extends React.Component {
      */
     if (event && event.target
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
-      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
-      this.setState({ isOpen: true, isPositioned: false });
+        || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
+      this.setState({ isOpen: true, isPositioned: false, isFocused: true });
 
       // Allows time for state update to render select menu DOM before shifting focus to it
       setTimeout(() => {
@@ -355,6 +368,18 @@ class Frame extends React.Component {
   }
 
   /**
+   * Handles the click events.
+   * @param {event} event - The click event.
+   */
+  handleClick(event) {
+    this.openDropdown(event);
+
+    if (this.props.onClick) {
+      this.props.onClick(event);
+    }
+  }
+
+  /**
    * Handles the focus event.
    */
   handleFocus(event) {
@@ -404,17 +429,6 @@ class Frame extends React.Component {
   }
 
   /**
-   * Handles the mouse down events.
-   * @param {event} event - The mouse down event.
-   */
-  handleMouseDown(event) {
-    // Preventing default events stops the search input from losing focus.
-    // The default variant has no search input therefore the mouse down gives the component focus.
-    event.preventDefault();
-    this.openDropdown(event);
-  }
-
-  /**
    * Handles the input mouse down events.
    * @param {event} event - The mouse down event.
    */
@@ -438,18 +452,18 @@ class Frame extends React.Component {
   }
 
   /**
-   * Handles the toggle mouse down events.
+   * Handles the toggle click event.
    */
-  handleToggleMouseDown() {
+  handleToggleClick() {
     if (this.state.isOpen) {
       this.closeDropdown();
     }
   }
 
   /**
-   * Handles the toggle button mouse down events.
+   * Handles the toggle button click event.
    */
-  handleToggleButtonMouseDown() {
+  handleToggleButtonClick() {
     if (this.state.isOpen) {
       this.closeDropdown();
       if (this.input) {
@@ -585,7 +599,12 @@ class Frame extends React.Component {
         ]);
 
         return (
-          <div data-terra-form-select-toggle className={toggleClasses} onMouseDown={this.handleToggleMouseDown}>
+          /**
+           * The toggle does not receive keyboard focus and cannot respond to key press events.
+           * Key press events will be caught and evaluated by the frame.
+           */
+          // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+          <div data-terra-form-select-toggle className={toggleClasses} onClick={this.handleToggleClick}>
             <span className={cx('arrow-icon')} />
           </div>
         );
@@ -607,7 +626,7 @@ class Frame extends React.Component {
             className={cx('toggle-btn')}
             aria-label={mobileButtonUsageGuidanceTxt}
             data-terra-form-select-toggle-button
-            onMouseDown={this.handleToggleButtonMouseDown}
+            onClick={this.handleToggleClick}
           >
             <span className={cx('arrow-icon')} data-terra-form-select-toggle-button-icon />
           </button>
@@ -620,7 +639,12 @@ class Frame extends React.Component {
     ]);
 
     return (
-      <div data-terra-form-select-toggle className={toggleClasses} onMouseDown={this.toggleDropdown}>
+      /**
+       * The toggle does not receive keyboard focus and cannot respond to key press events.
+       * Key press events will be caught and evaluated by the frame.
+       */
+      // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+      <div data-terra-form-select-toggle className={toggleClasses} onClick={this.toggleDropdown}>
         <span className={cx('arrow-icon')} />
       </div>
     );
@@ -702,9 +726,10 @@ class Frame extends React.Component {
         aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
+        onClick={this.handleClick}
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
-        onMouseDown={this.handleMouseDown}
+        onMouseDown={Frame.handleMouseDown}
         onTouchStart={this.handleTouchStart}
         tabIndex="-1"
         ref={(select) => { this.select = select; }}

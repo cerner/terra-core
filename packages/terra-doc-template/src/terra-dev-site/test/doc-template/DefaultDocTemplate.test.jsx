@@ -30,7 +30,7 @@ const Index = () => {
         packageName={name}
         packageVersion={version}
         readme={readme}
-        srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
+        srcPath="https://github.com/cerner/terra-core/tree/main/packages/terra-doc-template"
         propsTables={propsTables}
         examples={examples}
       >

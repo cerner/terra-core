@@ -3,6 +3,13 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Corrected themeable variable duplicates and missing variables.
+
+4.10.0 - (July 7, 2020)
+------------------
+### Changed
+* Rows and Header checkbox when disabled are now accessible for screenreaders to read out accordingly.
 
 4.9.0 - (June 23, 2020)
 ------------------

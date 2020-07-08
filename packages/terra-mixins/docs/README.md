@@ -23,7 +23,7 @@ import 'terra-mixins';
 ```
 
 ## Component Features
-* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
+* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/main/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
 
 
 ### Bidirectionality (bidi) Mixins
