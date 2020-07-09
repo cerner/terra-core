@@ -10,6 +10,7 @@ before_install:
 jobs:
   include:
     - stage: install
+      script: ''
     - stage: danger lint and jest
       before_install: skip
       install: skip
