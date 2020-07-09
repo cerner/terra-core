@@ -9,7 +9,10 @@ before_install:
   - npm run clean
 jobs:
   include:
+    - stage: install
     - stage: danger lint and jest
+      before_install: skip
+      install: skip
       script: npm run danger && npm run lint && npm run jest
     # - stage: compile - default theme
     #   script: travis_wait docker-compose run test-ci npm run compile:prod -- --env.disableAggregateThemes
