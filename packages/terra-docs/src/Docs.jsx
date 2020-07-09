@@ -23,7 +23,6 @@ const Docs = ({ name, ...customProps }) => {
   const DocsClassNames = classNames(
     cx([
       'docs',
-      customProps.className,
       theme.className,
     ]),
     customProps.className,
