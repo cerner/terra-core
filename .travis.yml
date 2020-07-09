@@ -79,7 +79,7 @@ jobs:
     #     - sudo chown -R travis:travis $HOME/docker
     #     - 'rm -f $HOME/docker/*.tar.gz'
 stages:
-  - build
+  - install
   - danger lint and jest
   # - compile - default theme
   # - wdio - default theme
