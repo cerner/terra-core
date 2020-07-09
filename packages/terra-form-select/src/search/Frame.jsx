@@ -172,7 +172,7 @@ class Frame extends React.Component {
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
-    this.selectMenu = '#terra-select-menu';
+    this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
   }
 
   componentDidMount() {
@@ -200,7 +200,11 @@ class Frame extends React.Component {
     this.input = input;
   }
 
-  getDisplay(ariaDescribedBy) {
+  setSelectMenuRef(element) {
+    this.selectMenu = element;
+  }
+
+  getDisplay(ariaDescribedBy, selectMenuId) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
       disabled, display, placeholder, required, inputId,
@@ -217,7 +221,7 @@ class Frame extends React.Component {
       'aria-label': this.ariaLabel(),
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
-      'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
+      'aria-owns': this.state.isOpen ? selectMenuId : undefined,
       type: 'text',
       className: cx('search-input', { 'is-hidden': FrameUtil.shouldHideSearch(this.props, this.state) }),
       required,
@@ -268,8 +272,8 @@ class Frame extends React.Component {
 
       // Allows time for state update to render select menu DOM before shifting focus to it
       setTimeout(() => {
-        if (document.querySelector(this.selectMenu)) {
-          document.querySelector(this.selectMenu).focus();
+        if (this.selectMenu) {
+          this.selectMenu.focus();
         }
       }, 10);
       return;
@@ -280,8 +284,8 @@ class Frame extends React.Component {
     } else {
       // Allows time for state update to render select menu DOM before shifting focus to it
       setTimeout(() => {
-        if (document.querySelector(this.selectMenu)) {
-          document.querySelector(this.selectMenu).focus();
+        if (this.selectMenu) {
+          this.selectMenu.focus();
         }
       }, 10);
     }
@@ -303,7 +307,7 @@ class Frame extends React.Component {
       if (this.state.isPositioned) {
         this.dropdown.removeAttribute('inert');
         this.dropdown.removeAttribute('aria-hidden');
-        document.querySelector(this.selectMenu).setAttribute('tabIndex', '0');
+        this.selectMenu.setAttribute('tabIndex', '0');
       }
     };
 
@@ -642,8 +646,10 @@ class Frame extends React.Component {
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
+    const selectMenuId = `terra-select-menu-${uniqueid()}`;
 
     const menuProps = {
+      id: selectMenuId,
       value,
       onDeselect,
       optionFilter,
@@ -655,6 +661,7 @@ class Frame extends React.Component {
       input: this.input,
       select: this.select,
       clearOptionDisplay,
+      refCallback: this.setSelectMenuRef,
     };
 
     return (
@@ -662,12 +669,12 @@ class Frame extends React.Component {
         {...customProps}
         role={this.role()}
         data-terra-select-combobox
-        aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-owns={this.state.isOpen ? selectMenuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
@@ -683,7 +690,7 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')}>
-          {this.getDisplay(ariaDescribedBy)}
+          {this.getDisplay(ariaDescribedBy, selectMenuId)}
         </div>
         {this.renderToggleButton()}
         <span
