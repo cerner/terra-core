@@ -5,14 +5,10 @@ services:
 branches:
   only:
     - main
-before_cache:
-  - sudo chown -R travis:travis $HOME/docker
-  - if [ $TRAVIS_TEST_RESULT == 1 ]; then rm -f $HOME/docker/*.tar.gz; fi
+before_install:
+  - npm run clean
 jobs:
   include:
-    - stage: build
-      script:
-        - npm run clean:install
     - stage: danger lint and jest
       script: npm run danger && npm run lint && npm run jest
     # - stage: compile - default theme
