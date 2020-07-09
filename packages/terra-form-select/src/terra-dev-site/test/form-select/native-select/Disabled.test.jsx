@@ -18,6 +18,19 @@ const InvalidTest = () => (
         { value: 'audi', display: 'Audi' },
       ]}
     />
+    <br />
+    <NativeSelect
+      ariaLabel="select-value-label"
+      disabled
+      id="select-value-id"
+      options={[
+        { value: 'volvo', display: 'Volvo' },
+        { value: 'saab', display: 'Saab' },
+        { value: 'mercedes', display: 'Mercedes' },
+        { value: 'audi', display: 'Audi' },
+      ]}
+      value="saab"
+    />
   </div>
 );
 

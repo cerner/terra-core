@@ -61,7 +61,7 @@
     --terra-form-select-native-disabled-background-color: #222a2e;
     --terra-form-select-native-disabled-border-color: #202427;
     --terra-form-select-native-disabled-color: #b2b5b6;
-    --terra-form-select-native-disabled-opacity: 1;
+    --terra-form-select-native-disabled-opacity: 0.3;
 
     @include terra-inline-svg-var('--terra-form-select-native-arrow-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#b2b5b6" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>');
     @include terra-inline-svg-var('--terra-form-select-native-invalid-arrow-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#b2b5b6" class="is-bidi"><path d="M48 12L24 36 0 12h48z"/></svg>');
