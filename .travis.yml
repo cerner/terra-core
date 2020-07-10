@@ -27,10 +27,10 @@ jobs:
       before_install: skip
       name: default theme
       script: npm run compile:prod -- --env.disableAggregateThemes
-      - name: lowlight theme
-      script: npm run compile:lowlight -- --env.disableAggregateThemes
-      - name: fusion theme
-      script: npm run compile:fusion -- --env.disableAggregateThemes
+      # - name: lowlight theme
+      # script: npm run compile:lowlight -- --env.disableAggregateThemes
+      # - name: fusion theme
+      # script: npm run compile:fusion -- --env.disableAggregateThemes
     # - stage: compile - default theme
     #   script: travis_wait docker-compose run test-ci npm run compile:prod -- --env.disableAggregateThemes
     # - stage: wdio - default theme
