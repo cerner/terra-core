@@ -34,6 +34,7 @@ jobs:
         - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/default
         # - npm run compile:lowlight -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/lowlight
         # - npm run compile:fusion -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/fusion
+        - ls ./travis-build -al
     # - stage: compile
     #   name: default theme
     #   before_install: skip
