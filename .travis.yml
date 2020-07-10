@@ -24,12 +24,12 @@ jobs:
       script: ''
     - stage: danger lint and jest
       before_install: skip
-      install: false
+      install: skip
       script: npm run danger && npm run lint && npm run jest
     - stage: compile
       -name: default theme
       before_install: skip
-      instal: false
+      instal: skip
       script: npm run compile:prod -- --env.disableAggregateThemes
       # - name: lowlight theme
       # script: npm run compile:lowlight -- --env.disableAggregateThemes
