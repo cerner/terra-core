@@ -65,23 +65,21 @@ jobs:
       name: tiny
       before_install: skip
       install: skip
-      # env:
-      #   - WDIO_BAIL=TRUE
-      #   - SITE=$TRAVIS_BUILD_DIR/travis-build/default
-      #   - FORM_FACTOR=tiny
       script:
-        - ls ./travis-build -al
-        # - ls ./node_modules -al
-        - travis_wait docker-compose up -d standalone-chrome
-        # - unset CI
+        - docker-compose up -d standalone-chrome
         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=tiny npm run wdio-default
     - name: small
       before_install: skip
       install: skip
       script:
-        - ls ./travis-build -al
-        # - ls ./node_modules -al
-        - CI= WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=tiny npm run wdio-default
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=small npm run wdio-default
+    - name: medium
+      before_install: skip
+      install: skip
+      script:
+        - travis_wait docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=medium npm run wdio-default
     # - name: medium
     #   script: FORM_FACTOR=medium test-ci
     # - name: large
@@ -120,25 +118,17 @@ jobs:
     #   script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=huge test-ci
     # - name: enormous
     #   script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=enormous test-ci
-    # - stage: deploy
-    #   script: skip
-    #   before_deploy:
-    #     - sudo chown -R travis:travis $HOME/docker
-    #     # Load cached docker images
-    #     - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
-    #     - "travis_wait docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/opt/module/build -e TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' -e TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' -e TERRA_DEV_SITE_PUBLIC_PATH='/terra-core/' test-ci npm run compile:prod"
-    #   deploy:
-    #     provider: pages
-    #     skip_cleanup: true
-    #     github_token: $GITHUB_TOKEN # Set in travis-ci.com dashboard
-    #     local_dir: $TRAVIS_BUILD_DIR/build
-    #     on:
-    #       branch: main
-    # - stage: clean up cache
-    #   before_install: true
-    #   script:
-    #     - sudo chown -R travis:travis $HOME/docker
-    #     - 'rm -f $HOME/docker/*.tar.gz'
+    - stage: deploy
+      script: skip
+      before_deploy:
+        - TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' TERRA_DEV_SITE_PUBLIC_PATH='/terra-core/' npm run compile:prod
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN # Set in travis-ci.com dashboard
+        local_dir: $TRAVIS_BUILD_DIR/build
+        on:
+          branch: main
 stages:
   # - install
   - danger lint jest and compile
@@ -149,6 +139,6 @@ stages:
   # - wdio - lowlight theme
   # - compile - fusion theme
   # - wdio - fusion theme
-  # - name: deploy
-  #   if: type != pull_request
+  - name: deploy
+    if: type != pull_request
   # - clean up cache
