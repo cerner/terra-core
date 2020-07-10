@@ -78,8 +78,8 @@ jobs:
       before_install: skip
       install: skip
       script:
-        - travis_wait docker-compose up -d standalone-chrome
-        - CI=TRUE WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=medium npm run wdio-default
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=medium npm run wdio-default
     # - name: medium
     #   script: FORM_FACTOR=medium test-ci
     # - name: large
