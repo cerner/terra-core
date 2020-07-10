@@ -5,10 +5,10 @@ services:
 branches:
   only:
     - main
-cache:
-  directories:
-    - packages/*/node_modules
-    - packages/*/lib
+# cache:
+#   directories:
+#     - packages/*/node_modules
+#     - packages/*/lib
   #   - $TRAVIS_BUILD_DIR/.github
   #   - $TRAVIS_BUILD_DIR/aggregated-translations
   #   - $TRAVIS_BUILD_DIR/packages
@@ -26,16 +26,15 @@ jobs:
       before_install: skip
       install: skip
       script:
-        - ls -al
-        - ls packages/terra-alert -al
-        - ls packages/terra-alert/node_modules -al
-        - ls packages/terra-alert/lib -al
+        - npm run bootstrap:hoist
         - npm run danger && npm run lint && npm run jest
     - stage: compile
       -name: default theme
       before_install: skip
       instal: skip
-      script: npm run compile:prod -- --env.disableAggregateThemes
+      script:
+        - npm run postinstall
+        - npm run compile:prod -- --env.disableAggregateThemes
       # - name: lowlight theme
       # script: npm run compile:lowlight -- --env.disableAggregateThemes
       # - name: fusion theme
