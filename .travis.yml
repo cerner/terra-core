@@ -45,13 +45,25 @@ jobs:
       script:
         - npm run postinstall
         - npm run compile:fusion -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/fusion
+    - stage: compile lump
+      before_install: skip
+      install: skip
+      script:
+        - npm run postinstall
+        - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/default
+        - npm run compile:lowlight -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/lowlight
+        - npm run compile:fusion -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/fusion
     # - stage: compile - default theme
     #   script: travis_wait docker-compose run test-ci npm run compile:prod -- --env.disableAggregateThemes
     - stage: wdio - default theme
       name: tiny
-      script: SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=tiny test-ci
+      before_install: skip
+      install: skip
+      script: WDIO_BAIL= TRUE SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=tiny test-ci
     - name: small
-      script: SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=small test-ci
+      before_install: skip
+      install: skip
+      script: WDIO_BAIL= TRUE SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=small test-ci
     # - name: medium
     #   script: FORM_FACTOR=medium test-ci
     # - name: large
@@ -113,6 +125,7 @@ stages:
   # - install
   - danger lint and jest
   - compile
+  - compile lump
   # - compile - default theme
   - wdio - default theme
   # - compile - lowlight theme
