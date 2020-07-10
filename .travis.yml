@@ -72,7 +72,7 @@ jobs:
       script:
         - ls ./travis-build -al
         # - ls ./node_modules -al
-        - travis_wait docker-compose up standalone-chrome -d
+        - travis_wait docker-compose -d up standalone-chrome
         # - unset CI
         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=tiny npm run wdio-default
     - name: small
