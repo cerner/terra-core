@@ -67,6 +67,7 @@ jobs:
       install: skip
       script:
         - docker-compose up -d standalone-chrome
+        - sleep 4
         - CI=TRUE WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=tiny npm run wdio-default
     - name: small
       before_install: skip
@@ -80,6 +81,7 @@ jobs:
       script:
         - docker pull selenium/standalone-chrome:3.14.0-helium
         - docker run -v /dev/shm:/dev/shm -e TZ=America/Chicago -d -p 4444:4444 selenium/standalone-chrome:3.14.0-helium
+        - sleep 4
         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=medium npm run wdio-default
     # - name: medium
     #   script: FORM_FACTOR=medium test-ci
