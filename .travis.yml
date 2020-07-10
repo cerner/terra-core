@@ -20,25 +20,31 @@ before_install:
   - npm run clean
 jobs:
   include:
-    - stage: install
-      script: ''
+    # - stage: install
+    #   script: ''
     - stage: danger lint and jest
+      # before_install: skip
+      # install: skip
+      script: npm run danger && npm run lint && npm run jest
+    - stage: compile
+      - name: default theme
       before_install: skip
       install: skip
       script:
-        - npm run bootstrap:hoist
-        - npm run danger && npm run lint && npm run jest
-    - stage: compile
-      -name: default theme
-      before_install: skip
-      instal: skip
-      script:
         - npm run postinstall
         - npm run compile:prod -- --env.disableAggregateThemes
-      # - name: lowlight theme
-      # script: npm run compile:lowlight -- --env.disableAggregateThemes
-      # - name: fusion theme
-      # script: npm run compile:fusion -- --env.disableAggregateThemes
+      - name: lowlight theme
+      before_install: skip
+      install: skip
+      script:
+        - npm run postinstall
+        - npm run compile:lowlight -- --env.disableAggregateThemes
+      - name: fusion theme
+      before_install: skip
+      install: skip
+      script:
+        - npm run postinstall
+        - npm run compile:fusion -- --env.disableAggregateThemes
     # - stage: compile - default theme
     #   script: travis_wait docker-compose run test-ci npm run compile:prod -- --env.disableAggregateThemes
     # - stage: wdio - default theme
@@ -104,7 +110,7 @@ jobs:
     #     - sudo chown -R travis:travis $HOME/docker
     #     - 'rm -f $HOME/docker/*.tar.gz'
 stages:
-  - install
+  # - install
   - danger lint and jest
   - compile
   # - compile - default theme
