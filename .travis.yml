@@ -5,8 +5,6 @@ services:
 branches:
   only:
     - main
-env:
-  - WDIO_BAIL=TRUE
 cache:
   directories:
     - travis-build
@@ -65,13 +63,20 @@ jobs:
       name: tiny
       before_install: skip
       install: skip
+      env:
+        - CI=FALSE
+        - WDIO_BAIL=TRUE
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/default
+        - FORM_FACTOR=tiny
       script:
         - ls ./travis-build -al
-        - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=tiny npm run wdio-default
+        - npm run wdio-default
     - name: small
       before_install: skip
       install: skip
       env:
+        - CI=FALSE
+        - WDIO_BAIL=TRUE
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default
         - FORM_FACTOR=small
       script: npm run wdio-default
