@@ -9,6 +9,12 @@ Unreleased
 ### Changed
 * Updated UpgradeGuide
 
+### Removed
+* Removed themeable variable --terra-form-input-placeholder-color
+* Removed themeable variable --terra-form-input-placeholder-font-style
+* Removed themeable variable --terra-form-input-placeholder-disabled-color
+* Removed themeable variable --terra-form-input-placeholder-disabled-font-style
+
 3.7.0 - (July 7, 2020)
 ------------------
 ### Changed

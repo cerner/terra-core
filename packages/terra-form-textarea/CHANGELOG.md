@@ -3,6 +3,17 @@ ChangeLog
 
 Unreleased
 ----------
+### Breaking Changes
+* `placeholder` prop has been deprecated.
+
+### Changed
+* Updated UpgradeGuide
+
+### Removed
+* Removed themeable variable --terra-form-textarea-placeholder-color
+* Removed themeable variable --terra-form-textarea-placeholder-font-style
+* Removed themeable variable --terra-form-textarea-placeholder-disabled-color
+* Removed themeable variable --terra-form-textarea-placeholder-disabled-font-style
 
 4.8.0 - (July 7, 2020)
 ------------------
