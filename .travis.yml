@@ -65,13 +65,14 @@ jobs:
       name: tiny
       before_install: skip
       install: skip
-      env:
-        - WDIO_BAIL=TRUE
-        - SITE=$TRAVIS_BUILD_DIR/travis-build/default
-        - FORM_FACTOR=tiny
+      # env:
+      #   - WDIO_BAIL=TRUE
+      #   - SITE=$TRAVIS_BUILD_DIR/travis-build/default
+      #   - FORM_FACTOR=tiny
       script:
         - ls ./travis-build -al
-        - CI=FALSE npm run wdio-default
+        - ls ./node_modules -al
+        - CI=FALSE WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=tiny npm run wdio-default
     - name: small
       before_install: skip
       install: skip
@@ -79,7 +80,10 @@ jobs:
         - WDIO_BAIL=TRUE
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default
         - FORM_FACTOR=small
-      script: CI=FALSE npm run wdio-default
+      script:
+        - ls ./travis-build -al
+        - ls ./node_modules -al
+        - CI=FALSE npm run wdio-default
     # - name: medium
     #   script: FORM_FACTOR=medium test-ci
     # - name: large
