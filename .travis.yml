@@ -25,7 +25,9 @@ jobs:
     - stage: danger lint and jest
       before_install: skip
       install: skip
-      script: npm run danger && npm run lint && npm run jest
+      script:
+        - ls -al
+        - npm run danger && npm run lint && npm run jest
     - stage: compile
       -name: default theme
       before_install: skip
