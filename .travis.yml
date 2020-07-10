@@ -5,11 +5,11 @@ services:
 branches:
   only:
     - main
+env:
+  - WDIO_BAIL= TRUE
 cache:
   directories:
-    - build/default
-    - build/lowlight
-    - build/fusion
+    - travis-build
 #     - packages/*/node_modules
 #     - packages/*/lib
   #   - $TRAVIS_BUILD_DIR/.github
@@ -29,41 +29,43 @@ jobs:
       # before_install: skip
       # install: skip
       script: npm run danger && npm run lint && npm run jest
+    # - stage: compile
+    #   name: default theme
+    #   before_install: skip
+    #   install: skip
+    #   script:
+    #     - npm run postinstall
+    #     - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/default
+    # - name: lowlight theme
+    #   before_install: skip
+    #   script: npm run compile:lowlight -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/lowlight
+    # - name: fusion theme
+    #   before_install: skip
+    #   install: skip
+    #   script:
+    #     - npm run postinstall
+    #     - npm run compile:fusion -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/fusion
     - stage: compile
-      name: default theme
       before_install: skip
       install: skip
       script:
         - npm run postinstall
-        - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/default
-    - name: lowlight theme
-      before_install: skip
-      script: npm run compile:lowlight -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/lowlight
-    - name: fusion theme
-      before_install: skip
-      install: skip
-      script:
-        - npm run postinstall
-        - npm run compile:fusion -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/fusion
-    - stage: compile lump
-      before_install: skip
-      install: skip
-      script:
-        - npm run postinstall
-        - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/default
-        - npm run compile:lowlight -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/lowlight
-        - npm run compile:fusion -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/fusion
+        - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/default
+        - npm run compile:lowlight -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/lowlight
+        - npm run compile:fusion -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/fusion
     # - stage: compile - default theme
     #   script: travis_wait docker-compose run test-ci npm run compile:prod -- --env.disableAggregateThemes
     - stage: wdio - default theme
       name: tiny
       before_install: skip
       install: skip
-      script: WDIO_BAIL= TRUE SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=tiny test-ci
+      script:
+        - ls ./travis-build -al
+        - SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=tiny npm run wdio-default
     - name: small
       before_install: skip
       install: skip
-      script: WDIO_BAIL= TRUE SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=small test-ci
+      script: SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=small npm run wdio-default
     # - name: medium
     #   script: FORM_FACTOR=medium test-ci
     # - name: large
@@ -125,7 +127,6 @@ stages:
   # - install
   - danger lint and jest
   - compile
-  - compile lump
   # - compile - default theme
   - wdio - default theme
   # - compile - lowlight theme
