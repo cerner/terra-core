@@ -26,12 +26,6 @@
     transition-timing-function: var(--terra-form-input-transition-timing-function, ease);
     width: 100%;
 
-    &::placeholder {
-      color: var(--terra-form-input-placeholder-color, rgba(25, 32, 35, 0.53));
-      font-style: var(--terra-form-input-placeholder-font-style);
-      opacity: 1;
-    }
-
     &:hover {
       background-color: var(--terra-form-input-hover-background-color, #fff);
       border: var(--terra-form-input-hover-border, 1px solid #dedfe0);
@@ -49,11 +43,6 @@
       cursor: default;
       opacity: var(--terra-form-input-disabled-opacity, 0.25);
       pointer-events: none;
-    }
-
-    &[disabled]::placeholder {
-      color: var(--terra-form-input-placeholder-disabled-color, rgba(25, 32, 35, 0.53));
-      font-style: var(--terra-form-input-placeholder-disabled-font-style);
     }
 
     &:focus {

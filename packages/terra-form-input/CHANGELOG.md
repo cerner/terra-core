@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Breaking Changes
+* `placeholder` prop has been deprecated.
+
+### Changed
+* Updated UpgradeGuide
 
 3.7.0 - (July 7, 2020)
 ------------------
