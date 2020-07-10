@@ -27,19 +27,19 @@ jobs:
       # install: skip
       script: npm run danger && npm run lint && npm run jest
     - stage: compile
-      - name: default theme
+      name: default theme
       before_install: skip
       install: skip
       script:
         - npm run postinstall
         - npm run compile:prod -- --env.disableAggregateThemes
-      - name: lowlight theme
+    - name: lowlight theme
       before_install: skip
       install: skip
       script:
         - npm run postinstall
         - npm run compile:lowlight -- --env.disableAggregateThemes
-      - name: fusion theme
+    - name: fusion theme
       before_install: skip
       install: skip
       script:
