@@ -27,6 +27,9 @@ jobs:
       install: skip
       script:
         - ls -al
+        - ls packages/terra-alert -al
+        - ls packages/terra-alert/node_modules -al
+        - ls packages/terra-alert/lib -al
         - npm run danger && npm run lint && npm run jest
     - stage: compile
       -name: default theme
