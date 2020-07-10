@@ -5,8 +5,10 @@ services:
 branches:
   only:
     - main
-# cache:
-  # directories:
+cache:
+  directories:
+    - packages/*/node_modules
+    - packages/*/lib
   #   - $TRAVIS_BUILD_DIR/.github
   #   - $TRAVIS_BUILD_DIR/aggregated-translations
   #   - $TRAVIS_BUILD_DIR/packages
@@ -18,14 +20,16 @@ before_install:
   - npm run clean
 jobs:
   include:
-    # - stage: install
-    #   script: ''
+    - stage: install
+      script: ''
     - stage: danger lint and jest
-      # before_install: skip
+      before_install: skip
+      install: false
       script: npm run danger && npm run lint && npm run jest
     - stage: compile
+      -name: default theme
       before_install: skip
-      name: default theme
+      instal: false
       script: npm run compile:prod -- --env.disableAggregateThemes
       # - name: lowlight theme
       # script: npm run compile:lowlight -- --env.disableAggregateThemes
@@ -96,7 +100,7 @@ jobs:
     #     - sudo chown -R travis:travis $HOME/docker
     #     - 'rm -f $HOME/docker/*.tar.gz'
 stages:
-  # - install
+  - install
   - danger lint and jest
   - compile
   # - compile - default theme
