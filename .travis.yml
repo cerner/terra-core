@@ -30,6 +30,7 @@ jobs:
         # - npm run danger
         # - npm run lint
         # - npm run jest
+        - rm -rf ./travis-build
         - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/default
         # - npm run compile:lowlight -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/lowlight
         # - npm run compile:fusion -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/fusion
@@ -64,22 +65,20 @@ jobs:
       before_install: skip
       install: skip
       env:
-        - CI=FALSE
         - WDIO_BAIL=TRUE
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default
         - FORM_FACTOR=tiny
       script:
         - ls ./travis-build -al
-        - npm run wdio-default
+        - CI=FALSE npm run wdio-default
     - name: small
       before_install: skip
       install: skip
       env:
-        - CI=FALSE
         - WDIO_BAIL=TRUE
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default
         - FORM_FACTOR=small
-      script: npm run wdio-default
+      script: CI=FALSE npm run wdio-default
     # - name: medium
     #   script: FORM_FACTOR=medium test-ci
     # - name: large
