@@ -5,7 +5,7 @@ services:
 branches:
   only:
     - main
-cache:
+# cache:
   # directories:
   #   - $TRAVIS_BUILD_DIR/.github
   #   - $TRAVIS_BUILD_DIR/aggregated-translations
