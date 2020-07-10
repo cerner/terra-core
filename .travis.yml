@@ -5,8 +5,11 @@ services:
 branches:
   only:
     - main
-# cache:
-#   directories:
+cache:
+  directories:
+    - build/default
+    - build/lowlight
+    - build/fusion
 #     - packages/*/node_modules
 #     - packages/*/lib
   #   - $TRAVIS_BUILD_DIR/.github
@@ -32,32 +35,29 @@ jobs:
       install: skip
       script:
         - npm run postinstall
-        - npm run compile:prod -- --env.disableAggregateThemes
+        - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/default
     - name: lowlight theme
       before_install: skip
-      install: skip
-      script:
-        - npm run postinstall
-        - npm run compile:lowlight -- --env.disableAggregateThemes
+      script: npm run compile:lowlight -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/lowlight
     - name: fusion theme
       before_install: skip
       install: skip
       script:
         - npm run postinstall
-        - npm run compile:fusion -- --env.disableAggregateThemes
+        - npm run compile:fusion -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/build/fusion
     # - stage: compile - default theme
     #   script: travis_wait docker-compose run test-ci npm run compile:prod -- --env.disableAggregateThemes
-    # - stage: wdio - default theme
-    #   name: tiny
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=tiny test-ci
-    # - name: small
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=small test-ci
+    - stage: wdio - default theme
+      name: tiny
+      script: SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=tiny test-ci
+    - name: small
+      script: SITE=$TRAVIS_BUILD_DIR/build/default FORM_FACTOR=small test-ci
     # - name: medium
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=medium test-ci
+    #   script: FORM_FACTOR=medium test-ci
     # - name: large
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=large test-ci
+    #   script: FORM_FACTOR=large test-ci
     # - name: huge
-    #   script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci
+    #   script: FORM_FACTOR=huge test-ci
     # - name: enormous
     #   script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci
     # - stage: compile - lowlight theme
@@ -114,7 +114,7 @@ stages:
   - danger lint and jest
   - compile
   # - compile - default theme
-  # - wdio - default theme
+  - wdio - default theme
   # - compile - lowlight theme
   # - wdio - lowlight theme
   # - compile - fusion theme
