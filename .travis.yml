@@ -59,82 +59,82 @@ jobs:
       script:
         - docker-compose up -d standalone-chrome
         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=enormous npm run wdio-default
-# # Lowlight
-#    - stage: wdio - lowlight theme
-#       name: tiny
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=tiny npm run wdio-lowlight
-#     - name: small
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=small npm run wdio-lowlight
-#     - name: medium
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=medium npm run wdio-lowlight
-#     - name: large
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=large npm run wdio-lowlight
-#     - name: huge
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=huge npm run wdio-lowlight
-#     - name: enormous
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=enormous npm run wdio-lowlight
-# # Fusion
-#     - stage: wdio - fusion theme
-#       name: tiny
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=tiny npm run wdio-fusion
-#     - name: small
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=small npm run wdio-fusion
-#     - name: medium
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=medium npm run wdio-fusion
-#     - name: large
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=large npm run wdio-fusion
-#     - name: huge
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=huge npm run wdio-fusion
-#     - name: enormous
-#       before_install: skip
-#       install: skip
-#       script:
-#         - docker-compose up -d standalone-chrome
-#         - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=enormous npm run wdio-fusion
+# Lowlight
+    - stage: wdio - lowlight theme
+      name: tiny
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=tiny npm run wdio-lowlight
+    - name: small
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=small npm run wdio-lowlight
+    - name: medium
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=medium npm run wdio-lowlight
+    - name: large
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=large npm run wdio-lowlight
+    - name: huge
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=huge npm run wdio-lowlight
+    - name: enormous
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=enormous npm run wdio-lowlight
+# Fusion
+    - stage: wdio - fusion theme
+      name: tiny
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=tiny npm run wdio-fusion
+    - name: small
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=small npm run wdio-fusion
+    - name: medium
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=medium npm run wdio-fusion
+    - name: large
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=large npm run wdio-fusion
+    - name: huge
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=huge npm run wdio-fusion
+    - name: enormous
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome
+        - WDIO_BAIL=TRUE SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=enormous npm run wdio-fusion
     - stage: deploy
       script: skip
       before_deploy:
