@@ -1,0 +1,36 @@
+import { Badge } from 'terra-docs/package.json?dev-site-package';
+
+import DefaultDocs from '../example/DefaultDocs?dev-site-example';
+
+import PropsTable from 'terra-docs/src/Docs?dev-site-props-table';
+
+<Badge />
+
+# Terra Docs
+
+{insert description}
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-docs`
+
+## Usage
+
+```jsx
+import React from 'react';
+import Docs from 'terra-docs';
+
+<Docs {props...} />
+```
+
+## Component Features
+
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+## Examples
+<DefaultDocs />
+
+## Divider Props
+<PropsTable />
