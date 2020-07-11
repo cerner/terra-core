@@ -8,9 +8,9 @@ if (process.env.npm_package_name !== 'terra-core') {
   wdioConfig.specs = [path.join(__dirname, 'packages', process.env.npm_package_name, 'tests', 'wdio', '**', '*-spec.js')];
 }
 
-const ci = process.env.CI;
+const travis = process.env.TRAVIS;
 
-if (ci) {
+if (travis) {
   wdioConfig.host = 'localhost';
 }
 
