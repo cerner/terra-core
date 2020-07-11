@@ -14,6 +14,4 @@ if (ci) {
   wdioConfig.host = 'localhost';
 }
 
-// console.log(wdioConfig);
-
 exports.config = wdioConfig;
