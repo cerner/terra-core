@@ -14,9 +14,7 @@ jobs:
   include:
     - stage: danger lint jest and compile
       script:
-        - npm run danger
-        - npm run lint
-        - npm run jest
+        - npm run danger && npm run lint && npm run jest
         - rm -rf ./travis-build
         - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/default
         - npm run compile:lowlight -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/lowlight
