@@ -71,25 +71,6 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     Terra.it.validatesElement();
   });
 
-  describe('Enabled Placeholder', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/placeholder-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
-
-    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
-    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
-  });
-
-  describe('Disabled Placeholder', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-placeholder-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
-
-    Terra.it.validatesElement();
-  });
-
   describe('AutoResizable Textarea', () => {
     describe('Resizes when given several rows of input', () => {
       before(() => {

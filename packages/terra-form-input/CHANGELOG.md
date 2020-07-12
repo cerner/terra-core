@@ -8,12 +8,14 @@ Unreleased
 
 ### Changed
 * Updated UpgradeGuide
+* Updated tests and examples to not use `placeholder prop
 
 ### Removed
 * Removed themeable variable --terra-form-input-placeholder-color
 * Removed themeable variable --terra-form-input-placeholder-font-style
 * Removed themeable variable --terra-form-input-placeholder-disabled-color
 * Removed themeable variable --terra-form-input-placeholder-disabled-font-style
+* Removed tests and examples specifically for `placeholder` prop
 
 3.7.0 - (July 7, 2020)
 ------------------

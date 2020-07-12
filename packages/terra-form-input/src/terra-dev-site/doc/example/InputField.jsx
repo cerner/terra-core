@@ -7,7 +7,6 @@ const DefaultInputField = () => (
     label="Profile Name"
     help="Note: This can not be changed in the future"
     type="text"
-    placeholder="Profile Name"
     inputAttrs={{
       name: 'profile',
     }}

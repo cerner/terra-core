@@ -54,16 +54,6 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
       Terra.it.validatesElement();
     });
 
-    describe('Enabled Placeholder', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/placeholder-form-input');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
-
-      // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
-      Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
-    });
-
     describe('Enabled Value', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/value-form-input');
@@ -88,15 +78,6 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
     describe('Disabled Non-Selected', () => {
       before(() => {
         browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
-
-      Terra.it.validatesElement();
-    });
-
-    describe('Disabled Placeholder', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-placeholder-input');
         browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
