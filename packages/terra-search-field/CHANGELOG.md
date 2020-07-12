@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated wdio snapshots due to changes in form-input.
 
 3.53.0 - (July 7, 2020)
 ------------------
