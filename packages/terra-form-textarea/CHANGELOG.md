@@ -4,6 +4,11 @@ ChangeLog
 Unreleased
 ----------
 
+4.8.0 - (July 7, 2020)
+------------------
+### Changed
+* updated `master` references to `main`.
+
 4.7.0 - (June 11, 2020)
 ------------------
 ### Changed

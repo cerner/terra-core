@@ -3,8 +3,8 @@
 This project is hosted on NPM.  You can find the terra packages [here][project-url].
 
 Below is a guide for releasing packages:
-- Checkout the master branch and run `git pull` to ensure you have the latest changes in master.
-- Run `npm run clean:install` to ensure you have npm packages updated for the master branch.
+- Checkout the main branch and run `git pull` to ensure you have the latest changes in main.
+- Run `npm run clean:install` to ensure you have npm packages updated for the main branch.
 - Run `lerna updated` to view all packages that have updates to be released.
 - Be sure to check the changelogs of all packages that have updates and ensure the changelogs are updated accordingly.
 
@@ -39,7 +39,7 @@ More specifically, this command will:
 ## Releasing a new package
 If you are publishing a new package, e.g. a v1.0.0 release, the package will be listed with only you as the collaborator.
 You'll need to move the package into the terra-ui team under the Cerner org on npm.
-- Log into npm's website 
+- Log into npm's website
 - Navigate to the terra-ui package page: https://www.npmjs.com/settings/cerner/teams/team/terra-ui/access
 - At the top of this page, there should be an input labeled, "Package". Type in the full package name and press enter.
 - This will add the package to ther terra-ui team's packages under the Cerner org on npm and then all team members on the terra-ui team in npm will have access to publish in future releases.
