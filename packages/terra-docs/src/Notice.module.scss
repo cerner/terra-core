@@ -1,0 +1,14 @@
+:local {
+
+  .deprecation {
+    background-color: var(--terra-dev-site-themed-component-block-background-color, #FFF9E7);
+    border-color: #FFC413;
+  }
+
+  .notice {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1.0714285714rem;
+  }
+}
