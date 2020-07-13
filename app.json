@@ -4,7 +4,7 @@
   "keywords": [
     "productivity"
   ],
-  "website": "https://engineering.cerner.com/terra-core/#/site",
+  "website": "https://engineering.cerner.com/terra-core",
   "repository": "https://github.com/cerner/terra-core",
   "success_url": "/",
   "scripts": {},
@@ -12,10 +12,6 @@
     "NODE_ENV": {
       "description": "node environment",
       "value": "production"
-    },
-    "HEROKU": {
-      "description": "Heroku environment",
-      "value": "true"
     },
     "NPM_CONFIG_PRODUCTION": {
       "description": "development environment",
@@ -32,7 +28,5 @@
       "size": "free"
     }
   },
-  "stack": "heroku-16",
-  "addons": [],
-  "buildpacks": []
+  "stack": "heroku-18"
 }
