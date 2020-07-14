@@ -32,7 +32,6 @@ const LargeDemographicsBannerDisplay = (props) => {
     isConfidential,
     isSelectable,
     personName,
-    photo,
     postMenstrualAge,
     postMenstrualAgeFullText,
     postMenstrualAgeLabel,
@@ -56,10 +55,10 @@ const LargeDemographicsBannerDisplay = (props) => {
 
   delete customProps.className;
 
-  let profilePhoto;
+  let profileAvatar;
 
   if (avatar && avatar.alt && avatar.initials) {
-    profilePhoto = (
+    profileAvatar = (
       <Avatar
         className={cx('profile-avatar')}
         alt={avatar.alt}
@@ -71,17 +70,6 @@ const LargeDemographicsBannerDisplay = (props) => {
         isDeceased={!!deceasedDate}
       />
     );
-  } else if (photo) {
-    /*
-     * This condition is added to keep the profile photo changes passive to Demographics banner.
-     * Should be removed with next MVB.
-     * Reference: https://github.com/cerner/terra-core/issues/3002
-     */
-    profilePhoto = (
-      <div className={cx('profile-photo')}>
-        {photo}
-      </div>
-    );
   }
 
   return (
@@ -90,7 +78,7 @@ const LargeDemographicsBannerDisplay = (props) => {
       className={mainClasses}
       tabIndex={-1}
     >
-      {profilePhoto}
+      {profileAvatar}
       <div className={cx('content')}>
         <div className={cx('column')}>
           <h1 className={cx('person-name')}>

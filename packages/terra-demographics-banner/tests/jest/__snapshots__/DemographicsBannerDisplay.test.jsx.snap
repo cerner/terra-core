@@ -316,7 +316,6 @@ exports[`renders the banner appropriately for a person with gestational and post
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
-  photo=""
   postMenstrualAge="April 7, 2016"
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
@@ -380,7 +379,6 @@ exports[`renders the banner properly for a deceased person with additional appli
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
-  photo=""
   postMenstrualAge={null}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
@@ -444,7 +442,6 @@ exports[`renders the banner that contains additional information 1`] = `
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
-  photo=""
   postMenstrualAge={null}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"

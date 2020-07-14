@@ -89,10 +89,6 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
-   * Photo to display in the banner
-   */
-  photo: PropTypes.node,
-  /**
    * The column layout in which to present the displays.
    */
   postMenstrualAge: PropTypes.string,

@@ -66,10 +66,6 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
-   * Image Node to display photo in the banner or URL of photo to display in the banner.
-   */
-  photo: PropTypes.node,
-  /**
    * The column layout in which to present the displays.
    */
   postMenstrualAge: PropTypes.string,
@@ -92,7 +88,6 @@ const defaultProps = {
   isConfidential: false,
   isSelectable: false,
   personName: undefined,
-  photo: null,
   postMenstrualAge: null,
   preferredFirstName: null,
 };

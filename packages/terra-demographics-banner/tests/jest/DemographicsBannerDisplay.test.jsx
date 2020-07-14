@@ -26,7 +26,6 @@ it('renders the banner that contains additional information', () => {
     dateOfBirth="May 9, 1993"
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
-    photo=""
     personName="Johnathon Doe"
     preferredFirstName="John"
   />);
@@ -55,7 +54,6 @@ it('renders the banner appropriately for a person with gestational and post mens
     gestationalAge="April 5, 2016"
     gestationalAgeLabel="GA"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
-    photo=""
     personName="Johnathon Doe"
     postMenstrualAge="April 7, 2016"
     postMenstrualAgeLabel="PMA"
@@ -84,7 +82,6 @@ it('renders the banner properly for a deceased person with additional applicatio
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
     personName="Johnathon Doe"
-    photo=""
     preferredFirstName="John"
   />);
 

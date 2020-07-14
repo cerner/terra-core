@@ -196,7 +196,6 @@ exports[`renders large banner that contains all valid information 1`] = `
     }
   }
   personName="Johnathon Doe"
-  photo=""
   postMenstrualAgeLabel="PMA"
   preferredFirstName="John"
 />

@@ -31,7 +31,6 @@ const SmallDemographicsBannerDisplay = (props) => {
     isConfidential,
     isSelectable,
     personName,
-    photo,
     postMenstrualAge,
     postMenstrualAgeFullText,
     postMenstrualAgeLabel,

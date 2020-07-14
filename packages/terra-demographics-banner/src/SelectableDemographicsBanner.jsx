@@ -71,10 +71,6 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
-   * URL of photo to display in the banner.
-   */
-  photo: PropTypes.string,
-  /**
    * The column layout in which to present the displays.
    */
   postMenstrualAge: PropTypes.string,
@@ -109,7 +105,6 @@ const SelectableDemographicsBanner = ({
   onClick,
   onMouseDown,
   personName,
-  photo,
   postMenstrualAge,
   preferredFirstName,
   ...customProps
@@ -181,7 +176,6 @@ const SelectableDemographicsBanner = ({
           isSelectable
           isActive={isActive}
           personName={personName}
-          photo={photo}
           postMenstrualAge={postMenstrualAge}
           preferredFirstName={preferredFirstName}
         />

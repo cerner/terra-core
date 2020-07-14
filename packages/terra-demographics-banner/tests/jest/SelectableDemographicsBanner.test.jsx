@@ -33,7 +33,6 @@ it('renders the banner wrapper with all props', () => {
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
       isConfidential
       personName="Johnathon Doe"
-      photo=""
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
       onClick={onClickMock}

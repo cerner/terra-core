@@ -75,7 +75,6 @@ exports[`renders the banner wrapper with all props 1`] = `
       isConfidential={true}
       isSelectable={true}
       personName="Johnathon Doe"
-      photo=""
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
     />

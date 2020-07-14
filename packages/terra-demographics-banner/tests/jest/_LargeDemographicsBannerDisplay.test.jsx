@@ -19,7 +19,6 @@ it('renders large banner that contains all valid information', () => {
     dateOfBirth="May 9, 1993"
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
-    photo=""
     personName="Johnathon Doe"
     preferredFirstName="John"
     dateOfBirthLabel="DOB"

@@ -27,7 +27,6 @@ it('renders the banner wrapper with all props', () => {
       gestationalAge="April 5, 2016"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
       isConfidential
-      photo=""
       personName="Johnathon Doe"
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
