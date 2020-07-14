@@ -47,7 +47,10 @@ This component requires the following peer dependencies be installed in your app
 
 The Form-Select component must be composed inside the [Base][1] component with a locale in order for it to load the correct translation strings.
 
+As a result of accessibility issues, the default implementation of select should not be used. It will be fully removed in a future major version bump. To achieve the same functionality the [Native Select][2] should be consumed.
+
 [1]: https://engineering.cerner.com/terra-core/components/terra-base/base/base
+[2]: /components/terra-form-select/form-select/native-select
 
 ## Usage
 
@@ -65,7 +68,7 @@ import Select from 'terra-form-select';
 - [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
 
 ## Examples
-<DefaultExample description="A default variant allows selecting a single option." />
+<DefaultExample title="Default - Marked For Deprecation" description="The default variant should no longer be used. It remains for passivity until the next major version bump. Please refer to the Native Select component." />
 <SearchExample description="A search variant provides a searchable single select." />
 <ComboboxExample description="A combobox variant allows a user to enter a single free text entry or select a single option from the the dropdown." />
 <MultipleExample description="A multiple variant allows searching and selecting multiple options." />

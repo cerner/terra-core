@@ -27,6 +27,9 @@ Unreleased
 * Minor file changes to comply with eslint rules
 * Update wdio test configuration to use root wdio config
 
+### Added
+* Added `NativeSelect` implementation to replace the default select variant.
+
 6.6.0 - (June 2, 2020)
 ------------------
 ### Changed

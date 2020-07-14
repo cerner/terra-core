@@ -1,0 +1,46 @@
+import { Badge } from 'terra-form-select/package.json?dev-site-package';
+
+import DefaultFieldExample from '../example/native-select-field/DefaultField?dev-site-example';
+import RequiredFieldExample from '../example/native-select-field/RequiredField?dev-site-example';
+import IncompleteFieldExample from '../example/native-select-field/IncompleteField?dev-site-example';
+
+import NativeSelectFieldPropsTable from 'terra-form-select/src/native-select/NativeSelectField?dev-site-props-table';
+import NativeOptionsPropsTable from 'terra-form-select/src/terra-dev-site/doc/example/proptypes/NativeOptions?dev-site-props-table';
+import NativeOptGroupsPropsTable from 'terra-form-select/src/terra-dev-site/doc/example/proptypes/NativeOptGroups?dev-site-props-table';
+
+<Badge />
+
+# Terra Form Native Select Field
+
+A convenience wrapper assembling a [terra-form-select](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select) within a [terra-form-field](https://github.com/cerner/terra-core/tree/master/packages/terra-form-field).
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-form-select`
+
+## Component Features
+
+- [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+- [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+- [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+- [Internationalization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [Localization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
+
+## Examples
+<DefaultFieldExample title="Select Field Example" />
+<RequiredFieldExample title="Required Select Field Example" />
+<IncompleteFieldExample title="Incomplete Select Field Example" />
+
+## Props
+### Native Select Option
+<NativeOptionsPropsTable />
+
+### Native Select OptGroup
+<NativeOptGroupsPropsTable />
+
+### Native Select Field
+<NativeSelectFieldPropsTable />
