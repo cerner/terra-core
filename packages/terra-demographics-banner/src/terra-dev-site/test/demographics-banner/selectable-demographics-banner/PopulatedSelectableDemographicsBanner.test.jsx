@@ -27,7 +27,18 @@ export default () => {
         postMenstrualAge="May 13, 2020"
         gender="F"
         genderAria="Female"
-        identifiers={{ MRN: '00019837', FIN: '1000254085' }}
+        identifiers={[
+          {
+            label: 'MRN',
+            value: '00019837',
+            identifierAria: 'MRN 0 0 0 1 9 8 3 7',
+          },
+          {
+            label: 'FIN',
+            value: '1000254085',
+            identifierAria: 'FIN 1 0 0 0 2 5 4 0 8 5',
+          },
+        ]}
         isConfidential
         personName="BARSTOWE, GEORGIA"
         preferredFirstName="Geo"

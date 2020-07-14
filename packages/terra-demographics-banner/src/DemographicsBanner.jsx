@@ -38,10 +38,18 @@ const propTypes = {
    */
   gestationalAge: PropTypes.string,
   /**
-   * Additional key value identifiers of a person's demographic information.
+   * Additional array of label value identifiers of a person's demographic information.
+   * ```
+   * identifierAria: The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
+   * label: The label of the identifier: i.e.: `SSN`
+   * value: The value to display for the identifier. i.e.: `111-22-3333`
+   * ```
    */
-  // eslint-disable-next-line react/forbid-prop-types
-  identifiers: PropTypes.object,
+  identifiers: PropTypes.arrayOf(PropTypes.shape({
+    identifierAria: PropTypes.string,
+    label: PropTypes.string,
+    value: PropTypes.string,
+  })),
   /**
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
@@ -83,7 +91,7 @@ const defaultProps = {
   deceasedDate: null,
   gender: undefined,
   gestationalAge: null,
-  identifiers: {},
+  identifiers: undefined,
   isActive: false,
   isConfidential: false,
   isSelectable: false,

@@ -25,7 +25,18 @@ it('renders the banner that contains additional information', () => {
     age="25 Years"
     dateOfBirth="May 9, 1993"
     gender="Male"
-    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifiers={[
+      {
+        label: 'MRN',
+        value: '12345',
+        identifierAria: 'MRN 1 2 3 4 5',
+      },
+      {
+        label: 'REA',
+        value: '3JSDA',
+        identifierAria: 'R E A 3JSDA',
+      },
+    ]}
     personName="Johnathon Doe"
     preferredFirstName="John"
   />);
@@ -53,7 +64,18 @@ it('renders the banner appropriately for a person with gestational and post mens
     gender="Male"
     gestationalAge="April 5, 2016"
     gestationalAgeLabel="GA"
-    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifiers={[
+      {
+        label: 'MRN',
+        value: '12345',
+        identifierAria: 'MRN 1 2 3 4 5',
+      },
+      {
+        label: 'REA',
+        value: '3JSDA',
+        identifierAria: 'R E A 3JSDA',
+      },
+    ]}
     personName="Johnathon Doe"
     postMenstrualAge="April 7, 2016"
     postMenstrualAgeLabel="PMA"
@@ -80,7 +102,18 @@ it('renders the banner properly for a deceased person with additional applicatio
     dateOfBirth="May 9, 1993"
     deceasedDate="March 5, 2016"
     gender="Male"
-    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifiers={[
+      {
+        label: 'MRN',
+        value: '12345',
+        identifierAria: 'MRN 1 2 3 4 5',
+      },
+      {
+        label: 'REA',
+        value: '3JSDA',
+        identifierAria: 'R E A 3JSDA',
+      },
+    ]}
     personName="Johnathon Doe"
     preferredFirstName="John"
   />);
@@ -102,7 +135,18 @@ it('renders the banner with avatar', () => {
     }}
     dateOfBirth="May 9, 1993"
     gender="Male"
-    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifiers={[
+      {
+        label: 'MRN',
+        value: '12345',
+        identifierAria: 'MRN 1 2 3 4 5',
+      },
+      {
+        label: 'REA',
+        value: '3JSDA',
+        identifierAria: 'R E A 3JSDA',
+      },
+    ]}
     personName="Johnathon Doe"
     preferredFirstName="John"
   />);
@@ -116,7 +160,18 @@ it('renders the banner with confidential icon', () => {
     age="25 Years"
     dateOfBirth="May 9, 1993"
     gender="Male"
-    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifiers={[
+      {
+        label: 'MRN',
+        value: '12345',
+        identifierAria: 'MRN 1 2 3 4 5',
+      },
+      {
+        label: 'REA',
+        value: '3JSDA',
+        identifierAria: 'R E A 3JSDA',
+      },
+    ]}
     isConfidential
     personName="Johnathon Doe"
     preferredFirstName="John"

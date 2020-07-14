@@ -16,7 +16,6 @@ exports[`renders a blank banner wrapper 1`] = `
       className="selectable-demographics-banner"
       deceasedDate={null}
       gestationalAge={null}
-      identifiers={Object {}}
       isActive={false}
       isConfidential={false}
       isSelectable={true}
@@ -66,10 +65,18 @@ exports[`renders the banner wrapper with all props 1`] = `
       genderAria="Male"
       gestationalAge="April 5, 2016"
       identifiers={
-        Object {
-          "MRN": 12343,
-          "REA": "3JSDA",
-        }
+        Array [
+          Object {
+            "identifierAria": "MRN 1 2 3 4 5",
+            "label": "MRN",
+            "value": "12345",
+          },
+          Object {
+            "identifierAria": "R E A 3JSDA",
+            "label": "REA",
+            "value": "3JSDA",
+          },
+        ]
       }
       isActive={false}
       isConfidential={true}

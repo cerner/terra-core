@@ -13,7 +13,6 @@ exports[`renders a banner that has basic information 1`] = `
   gestationalAge={null}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
-  identifiers={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -65,7 +64,6 @@ exports[`renders a blank banner properly 1`] = `
   gestationalAge={null}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
-  identifiers={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -117,7 +115,6 @@ exports[`renders gestational date with a default label when the label is not pro
   gestationalAge="April 5, 2016"
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
-  identifiers={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -169,7 +166,6 @@ exports[`renders post menstrural date with a default label when the label is not
   gestationalAge={null}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
-  identifiers={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -221,7 +217,6 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
   gestationalAge={null}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
-  identifiers={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -280,10 +275,18 @@ exports[`renders the banner appropriately for a person with gestational and post
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   identifiers={
-    Object {
-      "MRN": 12343,
-      "REA": "3JSDA",
-    }
+    Array [
+      Object {
+        "identifierAria": "MRN 1 2 3 4 5",
+        "label": "MRN",
+        "value": "12345",
+      },
+      Object {
+        "identifierAria": "R E A 3JSDA",
+        "label": "REA",
+        "value": "3JSDA",
+      },
+    ]
   }
   intl={
     Object {
@@ -343,10 +346,18 @@ exports[`renders the banner properly for a deceased person with additional appli
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   identifiers={
-    Object {
-      "MRN": 12343,
-      "REA": "3JSDA",
-    }
+    Array [
+      Object {
+        "identifierAria": "MRN 1 2 3 4 5",
+        "label": "MRN",
+        "value": "12345",
+      },
+      Object {
+        "identifierAria": "R E A 3JSDA",
+        "label": "REA",
+        "value": "3JSDA",
+      },
+    ]
   }
   intl={
     Object {
@@ -406,10 +417,18 @@ exports[`renders the banner that contains additional information 1`] = `
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   identifiers={
-    Object {
-      "MRN": 12343,
-      "REA": "3JSDA",
-    }
+    Array [
+      Object {
+        "identifierAria": "MRN 1 2 3 4 5",
+        "label": "MRN",
+        "value": "12345",
+      },
+      Object {
+        "identifierAria": "R E A 3JSDA",
+        "label": "REA",
+        "value": "3JSDA",
+      },
+    ]
   }
   intl={
     Object {
@@ -479,10 +498,18 @@ exports[`renders the banner with avatar 1`] = `
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   identifiers={
-    Object {
-      "MRN": 12343,
-      "REA": "3JSDA",
-    }
+    Array [
+      Object {
+        "identifierAria": "MRN 1 2 3 4 5",
+        "label": "MRN",
+        "value": "12345",
+      },
+      Object {
+        "identifierAria": "R E A 3JSDA",
+        "label": "REA",
+        "value": "3JSDA",
+      },
+    ]
   }
   intl={
     Object {
@@ -542,10 +569,18 @@ exports[`renders the banner with confidential icon 1`] = `
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   identifiers={
-    Object {
-      "MRN": 12343,
-      "REA": "3JSDA",
-    }
+    Array [
+      Object {
+        "identifierAria": "MRN 1 2 3 4 5",
+        "label": "MRN",
+        "value": "12345",
+      },
+      Object {
+        "identifierAria": "R E A 3JSDA",
+        "label": "REA",
+        "value": "3JSDA",
+      },
+    ]
   }
   intl={
     Object {

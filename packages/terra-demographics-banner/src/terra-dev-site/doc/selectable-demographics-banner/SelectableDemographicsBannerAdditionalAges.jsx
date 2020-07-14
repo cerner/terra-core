@@ -16,7 +16,18 @@ const SelectableDemographicsBannerAdditionalAges = () => (
     dateOfBirth="October 25, 2018"
     gender="Male"
     gestationalAge="33 Weeks"
-    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifiers={[
+      {
+        label: 'MRN',
+        value: '12345',
+        identifierAria: 'MRN 1 2 3 4 5',
+      },
+      {
+        label: 'REA',
+        value: '3JSDA',
+        identifierAria: 'R E A 3JSDA',
+      },
+    ]}
     personName="Johnathon Doe"
     postMenstrualAge="43 Weeks"
     preferredFirstName="John"

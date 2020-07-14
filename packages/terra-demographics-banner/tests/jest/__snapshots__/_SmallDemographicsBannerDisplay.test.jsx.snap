@@ -161,10 +161,18 @@ exports[`renders small banner that contains all valid information 1`] = `
   gender="Male"
   gestationalAgeLabel="GA"
   identifiers={
-    Object {
-      "MRN": 12343,
-      "REA": "3JSDA",
-    }
+    Array [
+      Object {
+        "identifierAria": "MRN 1 2 3 4 5",
+        "label": "MRN",
+        "value": "12345",
+      },
+      Object {
+        "identifierAria": "R E A 3JSDA",
+        "label": "REA",
+        "value": "3JSDA",
+      },
+    ]
   }
   intl={
     Object {

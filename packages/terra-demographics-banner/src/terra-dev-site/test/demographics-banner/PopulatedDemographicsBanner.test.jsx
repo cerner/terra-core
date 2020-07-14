@@ -19,7 +19,18 @@ export default () => (
     postMenstrualAge="May 13, 2020"
     gender="M"
     genderAria="Male"
-    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifiers={[
+      {
+        label: 'MRN',
+        value: '12345',
+        identifierAria: 'MRN 1 2 3 4 5',
+      },
+      {
+        label: 'REA',
+        value: '3JSDA',
+        identifierAria: 'R E A 3JSDA',
+      },
+    ]}
     isConfidential
     personName="Johnathon Doe"
     preferredFirstName="John"
