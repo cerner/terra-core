@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Breaking Changes
-* `placeholder` prop has been deprecated.
+* Removed `placeholder` prop.
 
 ### Changed
 * Updated UpgradeGuide

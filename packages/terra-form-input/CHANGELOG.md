@@ -4,11 +4,11 @@ ChangeLog
 Unreleased
 ----------
 ### Breaking Changes
-* `placeholder` prop has been deprecated.
+* Removed `placeholder` prop.
 
 ### Changed
 * Updated UpgradeGuide
-* Updated tests and examples to not use `placeholder prop
+* Updated tests and examples to not use `placeholder` prop
 
 ### Removed
 * Removed themeable variable --terra-form-input-placeholder-color
