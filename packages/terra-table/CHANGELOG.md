@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.11.0 - (July 14, 2020)
+------------------
 ### Fixed
 * Corrected themeable variable duplicates and missing variables.
 

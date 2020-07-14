@@ -1,0 +1,56 @@
+import { Badge } from 'terra-form-select/package.json?dev-site-package';
+
+import ControlledExample from '../example/native-select/Controlled?dev-site-example';
+import DisabledExample from '../example/native-select/Disabled?dev-site-example';
+import IncompleteExample from '../example/native-select/Incomplete?dev-site-example';
+import InvalidExample from '../example/native-select/Invalid?dev-site-example';
+import OptGroupExample from '../example/native-select/OptGroup?dev-site-example';
+import FilterStyleExample from '../example/native-select/FilterStyle?dev-site-example';
+import UncontrolledExample from '../example/native-select/Uncontrolled?dev-site-example';
+
+import NativeSelectPropsTable from 'terra-form-select/src/native-select/NativeSelect?dev-site-props-table';
+import NativeOptionsPropsTable from 'terra-form-select/src/terra-dev-site/doc/example/proptypes/NativeOptions?dev-site-props-table';
+import NativeOptGroupsPropsTable from 'terra-form-select/src/terra-dev-site/doc/example/proptypes/NativeOptGroups?dev-site-props-table';
+
+<Badge />
+
+# Terra Form Native Select
+
+The NativeSelect component provides a visually-masked browser native select control to align closer with theme styles.
+
+Accessibility issues exist with custom select implementations, so the NativeSelect should be the used exclusively instead of the current default select implementation.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-form-select`
+
+## Component Features
+
+- [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+- [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
+- [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+- [Internationalization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [Localization Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#internationalization-i18n-support)
+- [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+[View component source code](https://github.com/cerner/terra-core/tree/master/packages/terra-form-select)
+
+## Examples
+<UncontrolledExample title="Create an Uncontrolled Select" description="An example of implementing an uncontrolled Select." />
+<ControlledExample title="Create a Controlled Select" description="An example of implementing a controlled Select." />
+<OptGroupExample title="OptGroup" description="An OptGroup provides a way to group options together." />
+<DisabledExample title="Disabled" />
+<IncompleteExample title="Incomplete" description="Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
+<InvalidExample title="Invalid" description="Applies theme-specific styling for invalid. Will also display error text when used with a Field." />
+<FilterStyleExample title="Filter Style" description="For special use: an example of implementing a select outside of form fields (e.g. in a filter bar), which removes the placeholder, prevents the ability to be cleared, and forces a value to always be selected." />
+
+## Props
+### Native Select Option
+<NativeOptionsPropsTable />
+
+### Native Select OptGroup
+<NativeOptGroupsPropsTable />
+
+### Native Select
+<NativeSelectPropsTable />
