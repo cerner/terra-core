@@ -1,0 +1,48 @@
+{
+  "name": "terra-switch",
+  "main": "lib/Switch.js",
+  "version": "1.0.0",
+  "description": "The terra-switch component provides users a way to toggle between state ON and OFF.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerner/terra-core.git",
+    "directory": "packages/terra-switch"
+  },
+  "keywords": [
+    "switch",
+    "Cerner",
+    "Terra",
+    "terra-switch",
+    "UI"
+  ],
+  "author": "Cerner Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cerner/terra-core/issues"
+  },
+  "homepage": "https://github.com/cerner/terra-core#readme",
+  "scripts": {
+    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:scss": "stylelint src/**/*.scss",
+    "precompile": "rm -rf lib",
+    "test": "npm run jest && npm run lint && npm run wdio",
+    "jest": "jest --config ../../jestconfig.js",
+    "wdio-default": "cd ../.. && npx wdio",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio",
+    "wdio": "npm run wdio-default && npm run wdio-fusion && npm run wdio-lowlight"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-intl": "^2.8.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "keycode-js": "^2.0.1",
+    "prop-types": "^15.5.8",
+    "terra-theme-context": "^1.0.0"
+  }
+}
