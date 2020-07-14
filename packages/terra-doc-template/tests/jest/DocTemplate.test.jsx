@@ -80,7 +80,7 @@ describe('DocTemplate', () => {
     const wrapper = shallow(<DocTemplate
       packageName={packageName}
       readme={readme}
-      srcPath="https://github.com/cerner/terra-core/tree/master/packages/terra-doc-template"
+      srcPath="https://github.com/cerner/terra-core/tree/main/packages/terra-doc-template"
       examples={[{
         title: 'Test Example 1', description: 'Describing the test', example: exampleElement, source: exampleSrc,
       },

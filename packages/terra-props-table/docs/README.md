@@ -33,6 +33,6 @@ import ComponentSrc from '!raw-loader!../src/Component.jsx';
 > Any prop that includes the string `@private` in its description will not be included in the PropsTable output.
 
 ## Component Features
-* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
-* [Responsive Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
-* [Mobile Support](https://github.com/cerner/terra-ui/blob/master/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)
+* [Cross-Browser Support](https://github.com/cerner/terra-ui/blob/main/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#cross-browser-support)
+* [Responsive Support](https://github.com/cerner/terra-ui/blob/main/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#responsive-support)
+* [Mobile Support](https://github.com/cerner/terra-ui/blob/main/src/terra-dev-site/contributing/ComponentStandards.e.contributing.md#mobile-support)

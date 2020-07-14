@@ -1,7 +1,7 @@
 {
   "name": "terra-card",
   "main": "lib/Card.js",
-  "version": "3.31.0",
+  "version": "3.32.0",
   "description": "Card is a basic container with some base styling to help seperate elements with different content",
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.27.0",
+    "terra-doc-template": "^2.28.0",
     "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.28.0"
   },
