@@ -3,8 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+6.11.0 - (July 14, 2020)
+------------------
 ### Fixed
 * Fixed an issue on mobile that prevented the tag and multi-select variants from shifting focus onto the input when opened via the dropdown arrow
+
+### Added
+* Added `NativeSelect` implementation to replace the default select variant.
 
 6.10.0 - (July 7, 2020)
 ------------------
@@ -26,9 +32,6 @@ Unreleased
 ### Changed
 * Minor file changes to comply with eslint rules
 * Update wdio test configuration to use root wdio config
-
-### Added
-* Added `NativeSelect` implementation to replace the default select variant.
 
 6.6.0 - (June 2, 2020)
 ------------------
