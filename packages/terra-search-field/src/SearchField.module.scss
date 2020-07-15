@@ -18,22 +18,6 @@
       position: relative;
     }
 
-    .input {
-      appearance: none;
-      border-bottom-left-radius: var(--terra-search-field-input-border-bottom-left-radius, 3px);
-      border-bottom-right-radius: 0;
-      border-top-left-radius: var(--terra-search-field-input-border-top-left-radius, 3px);
-      border-top-right-radius: 0;
-      flex: 1 1 auto;
-      margin-bottom: var(--terra-search-field-input-margin-bottom, 0);
-      margin-left: var(--terra-search-field-input-margin-left, 0);
-      margin-right: var(--terra-search-field-input-margin-right, 0);
-      margin-top: var(--terra-search-field-input-margin-top, 0);
-      min-width: 0;
-      outline-offset: -0.143em;  // Adjust the outline offset for search input in Safari.
-      padding-right: var(--terra-search-field-input-padding-right, 2.28571rem); // Match the padding to width of the clear button
-    }
-
     .input::-ms-clear,
     .input::-ms-reveal {
       display: none;
@@ -103,6 +87,83 @@
       display: flex;
       width: 100%;
     }
+  }
 
+  .input {
+    appearance: none;
+    background-color: var(--terra-search-field-input-background-color, #fff);
+    background-image: var(--terra-search-field-input-background-image);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: var(--terra-search-field-input-background-size);
+    border: var(--terra-search-field-input-border, 1px solid #dedfe0);
+    border-bottom-left-radius: var(--terra-search-field-input-border-bottom-left-radius, 3px);
+    border-bottom-right-radius: 0;
+    border-top-left-radius: var(--terra-search-field-input-border-top-left-radius, 3px);
+    border-top-right-radius: 0;
+    box-shadow: var(--terra-search-field-input-box-shadow);
+    color: var(--terra-search-field-input-color, #1c1f21);
+    flex: 1 1 auto;
+    font-family: inherit;
+    font-size: var(--terra-search-field-input-font-size, 1.142857rem);
+    height: var(--terra-search-field-input-height, 2.142857rem);
+    line-height: var(--terra-search-field-input-line-height, 1.25);
+    margin-bottom: var(--terra-search-field-input-margin-bottom, 0);
+    margin-left: var(--terra-search-field-input-margin-left, 0);
+    margin-right: var(--terra-search-field-input-margin-right, 0);
+    margin-top: var(--terra-search-field-input-margin-top, 0);
+    min-width: 0;
+    outline-offset: -0.143em;  // Adjust the outline offset for search input in Safari.
+    padding-bottom: var(--terra-search-field-input-padding-bottom, 0.28571rem);
+    padding-left: var(--terra-search-field-input-padding-left, 0.28571rem);
+    padding-right: var(--terra-search-field-input-padding-right, 2.28571rem); // Match the padding to width of the clear button
+    padding-top: var(--terra-search-field-input-padding-top, 0.28571rem);
+    transition-duration: var(--terra-search-field-input-transition-duration, 0s);
+    transition-property: background-size;
+    transition-timing-function: var(--terra-search-field-input-transition-timing-function, ease);
+    width: 100%;
+
+    &::placeholder {
+      color: var(--terra-search-field-input-placeholder-color, rgba(25, 32, 35, 0.53));
+      font-style: var(--terra-search-field-input-placeholder-font-style);
+      opacity: 1;
+    }
+
+    &:hover {
+      background-color: var(--terra-search-field-input-hover-background-color, #fff);
+      border: var(--terra-search-field-input-hover-border, 1px solid #dedfe0);
+      color: var(--terra-search-field-input-hover-color);
+    }
+
+    &[disabled] {
+      background-color: var(--terra-search-field-input-disabled-background-color, rgba(111, 116, 119, 0.2));
+      border: var(--terra-search-field-input-disabled-border, 1px solid #868a8c);
+      color: var(--terra-search-field-input-disabled-color, #1c1f21);
+      cursor: default;
+      opacity: var(--terra-search-field-input-disabled-opacity, 0.25);
+      pointer-events: none;
+    }
+
+    &[disabled]::placeholder {
+      color: var(--terra-search-field-input-placeholder-disabled-color, rgba(25, 32, 35, 0.53));
+      font-style: var(--terra-search-field-input-placeholder-disabled-font-style);
+    }
+
+    &:focus {
+      background-color: var(--terra-search-field-input-focus-background-color, #fff);
+      background-size: var(--terra-search-field-input-focus-background-size);
+      border: var(--terra-search-field-input-focus-border, 1px solid #4cb2e9);
+      box-shadow: var(--terra-search-field-input-focus-box-shadow);
+      color: var(--terra-search-field-input-focus-color);
+      outline: none;
+
+      [dir=ltr] & {
+        box-shadow: var(--terra-search-field-input-focus-ltr-box-shadow);
+      }
+
+      [dir=rtl] & {
+        box-shadow: var(--terra-search-field-input-focus-rtl-box-shadow);
+      }
+    }
   }
 }

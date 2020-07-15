@@ -25,7 +25,47 @@
     --terra-search-field-button-margin-right: 0;
     --terra-search-field-button-margin-top: 0;
     --terra-search-field-button-focus-box-shadow: #004c76;
-    
+
+    --terra-search-field-input-background-color: #222a2e;
+    --terra-search-field-input-background-image: none;
+    --terra-search-field-input-background-size: auto;
+    --terra-search-field-input-border: 1px solid #181b1d;
+    --terra-search-field-input-box-shadow: none;
+    --terra-search-field-input-color: #b2b5b6;
+    --terra-search-field-input-font-size: 1.14285714rem;
+    --terra-search-field-input-height: 2.14285714rem;
+    --terra-search-field-input-line-height: 1.25;
+    --terra-search-field-input-padding-bottom: 0.28571rem;
+    --terra-search-field-input-padding-left: 0.28571rem;
+    --terra-search-field-input-padding-top: 0.28571rem;
+    --terra-search-field-input-transition-duration: 0s;
+    --terra-search-field-input-transition-timing-function: ease;
+
+    --terra-search-field-input-hover-background-color: #222a2e;
+    --terra-search-field-input-hover-color: #b2b5b6;
+    --terra-search-field-input-hover-border: 1px solid #181b1d;
+
+    --terra-search-field-input-placeholder-color: #6f7477;
+    --terra-search-field-input-placeholder-font-style: normal;
+
+    --terra-search-field-input-disabled-background-color: #1d2529;
+    --terra-search-field-input-disabled-border: 1px solid #242b2b;
+    --terra-search-field-input-disabled-color: #404344;
+    --terra-search-field-input-disabled-opacity: 0.25;
+
+    --terra-search-field-input-placeholder-disabled-color: #6f7477;
+    --terra-search-field-input-placeholder-disabled-font-style: normal;
+
+    --terra-search-field-input-focus-background-color: #222a2e;
+    --terra-search-field-input-focus-border: 1px solid #004c76;
+    --terra-search-field-input-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+    --terra-search-field-input-focus-color: #b2b5b6;
+    --terra-search-field-input-focus-background-size: auto;
+
+
+    --terra-search-field-input-focus-ltr-box-shadow: none;
+    --terra-search-field-input-focus-rtl-box-shadow: none;
+
     @include terra-inline-svg-var('--terra-search-field-clear-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#b2b5b6" d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24S37.3 0 24 0zm13.9 33.8l-2.1 2.1-1.2 1.2-1 .9-9.6-9.7-9.6 9.7-2.2-2.1-1.1-1.1-1-1 9.7-9.8-9.7-9.8 1-1 1.1-1.1 2.2-2.1 9.6 9.7 9.6-9.7 1 .9 1.2 1.2 2.1 2.1-9.7 9.8 9.7 9.8z"/></svg>');
   }
 }
