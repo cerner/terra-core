@@ -3,6 +3,11 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed `terra-form-input` from dependencies.
+
+### Changed
+* Updated `terra-form-input` to `native input`. 
 
 3.53.0 - (July 7, 2020)
 ------------------
