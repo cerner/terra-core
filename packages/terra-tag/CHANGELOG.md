@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Added
+* Added missing themeable variable.
 
 2.36.0 - (July 7, 2020)
 ------------------
