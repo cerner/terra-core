@@ -28,7 +28,7 @@ it('renders the banner that contains additional information', () => {
     identifiers={[
       {
         label: 'MRN',
-        value: '12345',
+        value: '12343',
         identifierAria: 'MRN 1 2 3 4 5',
       },
       {
@@ -67,7 +67,7 @@ it('renders the banner appropriately for a person with gestational and post mens
     identifiers={[
       {
         label: 'MRN',
-        value: '12345',
+        value: '12343',
         identifierAria: 'MRN 1 2 3 4 5',
       },
       {
@@ -105,7 +105,7 @@ it('renders the banner properly for a deceased person with additional applicatio
     identifiers={[
       {
         label: 'MRN',
-        value: '12345',
+        value: '12343',
         identifierAria: 'MRN 1 2 3 4 5',
       },
       {
@@ -138,7 +138,7 @@ it('renders the banner with avatar', () => {
     identifiers={[
       {
         label: 'MRN',
-        value: '12345',
+        value: '12343',
         identifierAria: 'MRN 1 2 3 4 5',
       },
       {
@@ -163,7 +163,7 @@ it('renders the banner with confidential icon', () => {
     identifiers={[
       {
         label: 'MRN',
-        value: '12345',
+        value: '12343',
         identifierAria: 'MRN 1 2 3 4 5',
       },
       {

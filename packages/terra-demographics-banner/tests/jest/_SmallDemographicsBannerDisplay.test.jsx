@@ -21,7 +21,7 @@ it('renders small banner that contains all valid information', () => {
     identifiers={[
       {
         label: 'MRN',
-        value: '12345',
+        value: '12343',
         identifierAria: 'MRN 1 2 3 4 5',
       },
       {

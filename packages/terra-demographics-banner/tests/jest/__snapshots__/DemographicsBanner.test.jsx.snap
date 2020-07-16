@@ -55,7 +55,7 @@ exports[`renders the banner wrapper with all props 1`] = `
       Object {
         "identifierAria": "MRN 1 2 3 4 5",
         "label": "MRN",
-        "value": "12345",
+        "value": "12343",
       },
       Object {
         "identifierAria": "R E A 3JSDA",

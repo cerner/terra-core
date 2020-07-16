@@ -167,7 +167,7 @@ exports[`renders large banner that contains all valid information 1`] = `
       Object {
         "identifierAria": "MRN 1 2 3 4 5",
         "label": "MRN",
-        "value": "12345",
+        "value": "12343",
       },
       Object {
         "identifierAria": "R E A 3JSDA",
