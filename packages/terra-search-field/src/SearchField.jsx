@@ -6,7 +6,6 @@ import ThemeContext from 'terra-theme-context';
 import Button from 'terra-button';
 import * as KeyCode from 'keycode-js';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
-// import Input from 'terra-form-input';
 import { injectIntl, intlShape } from 'react-intl';
 import styles from './SearchField.module.scss';
 
