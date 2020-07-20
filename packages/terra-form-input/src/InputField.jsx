@@ -164,6 +164,10 @@ const InputField = (props) => {
 
   const inputType = type || inputAttrs.type;
 
+  if (customProps.placeholder) {
+    customProps.placeholder = null;
+  }
+
   return (
     <Field
       label={label}

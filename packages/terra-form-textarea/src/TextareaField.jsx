@@ -150,6 +150,10 @@ const TextareaField = (props) => {
     }
   }
 
+  if (customProps.placeholder) {
+    customProps.placeholder = null;
+  }
+
   return (
     <Field
       {...customProps}
