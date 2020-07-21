@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Align column and rows for selectable tables.
 
 4.11.0 - (July 14, 2020)
 ------------------
