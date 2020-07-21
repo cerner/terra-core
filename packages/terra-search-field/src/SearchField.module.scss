@@ -92,10 +92,10 @@
   .input {
     appearance: none;
     background-color: var(--terra-search-field-input-background-color, #fff);
-    background-image: var(--terra-search-field-input-background-image);
+    background-image: none;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    background-size: var(--terra-search-field-input-background-size);
+    background-size: auto;
     border: var(--terra-search-field-input-border, 1px solid #dedfe0);
     border-bottom-left-radius: var(--terra-search-field-input-border-bottom-left-radius, 3px);
     border-bottom-right-radius: 0;
@@ -124,8 +124,8 @@
     width: 100%;
 
     &::placeholder {
-      color: var(--terra-search-field-input-placeholder-color, rgba(25, 32, 35, 0.53));
-      font-style: var(--terra-search-field-input-placeholder-font-style);
+      color: var(--terra-search-field-input-placeholder-color, rgba(21, 33, 41, 0.62));
+      font-style: var(--terra-search-field-input-placeholder-font-style, italic);
       opacity: 1;
     }
 
@@ -145,8 +145,8 @@
     }
 
     &[disabled]::placeholder {
-      color: var(--terra-search-field-input-placeholder-disabled-color, rgba(25, 32, 35, 0.53));
-      font-style: var(--terra-search-field-input-placeholder-disabled-font-style);
+      color: var(--terra-search-field-input-placeholder-disabled-color, rgba(21, 33, 41, 0.62));
+      font-style: var(--terra-search-field-input-placeholder-disabled-font-style, italic);
     }
 
     &:focus {
