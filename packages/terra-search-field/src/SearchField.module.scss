@@ -101,13 +101,13 @@
     border-bottom-right-radius: 0;
     border-top-left-radius: var(--terra-search-field-input-border-top-left-radius, 3px);
     border-top-right-radius: 0;
-    box-shadow: var(--terra-search-field-input-box-shadow);
+    box-shadow: none;
     color: var(--terra-search-field-input-color, #1c1f21);
     flex: 1 1 auto;
     font-family: inherit;
     font-size: var(--terra-search-field-input-font-size, 1.142857rem);
     height: var(--terra-search-field-input-height, 2.142857rem);
-    line-height: var(--terra-search-field-input-line-height, 1.25);
+    line-height: 1.25;
     margin-bottom: var(--terra-search-field-input-margin-bottom, 0);
     margin-left: var(--terra-search-field-input-margin-left, 0);
     margin-right: var(--terra-search-field-input-margin-right, 0);
@@ -118,9 +118,9 @@
     padding-left: var(--terra-search-field-input-padding-left, 0.28571rem);
     padding-right: var(--terra-search-field-input-padding-right, 2.28571rem); // Match the padding to width of the clear button
     padding-top: var(--terra-search-field-input-padding-top, 0.28571rem);
-    transition-duration: var(--terra-search-field-input-transition-duration, 0s);
+    transition-duration: 0s;
     transition-property: background-size;
-    transition-timing-function: var(--terra-search-field-input-transition-timing-function, ease);
+    transition-timing-function: ease;
     width: 100%;
 
     &::placeholder {
@@ -151,7 +151,7 @@
 
     &:focus {
       background-color: var(--terra-search-field-input-focus-background-color, #fff);
-      background-size: var(--terra-search-field-input-focus-background-size);
+      background-size: auto;
       border: var(--terra-search-field-input-focus-border, 1px solid #4cb2e9);
       box-shadow: var(--terra-search-field-input-focus-box-shadow);
       color: var(--terra-search-field-input-focus-color);
