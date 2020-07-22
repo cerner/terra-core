@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import { ThemeContext } from 'terra-theme-context';
+import ThemeContext from 'terra-theme-context';
 
 import styles from './Notice.module.scss';
 
@@ -16,27 +16,36 @@ const getTitle = (variant) => {
 };
 
 const propTypes = {
+  /**
+  * The main body text of the notice.
+  */
   children: PropTypes.string,
+  /**
+  * The type of notice.
+  */
   variant: PropTypes.oneOf(['deprecation']),
 };
 
-const MenuButton = ({
+const defaultProps = {
+  variant: 'deprecation',
+};
+
+const Notice = ({
   variant,
   children,
 }) => {
   const theme = React.useContext(ThemeContext);
   return (
-    <div className={cx('notice', variant, theme.className)}>
-      <h2>
-        {getTitle()}
-      </h2>
-      <p>
+    <h2 className={cx('notice', variant, theme.className)}>
+      {getTitle(variant)}
+      <p className={cx('paragraph')}>
         {children}
       </p>
-    </div>
+    </h2>
   );
 };
 
-MenuButton.propTypes = propTypes;
+Notice.propTypes = propTypes;
+Notice.defaultProps = defaultProps;
 
-export default MenuButton;
+export default Notice;
