@@ -1,13 +1,14 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Select from '../../../Select';
+import Variants from '../../../shared/_variants';
+import Select from '../../../SingleSelect';
 import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);
 
 const EmptyPlaceholder = () => (
   <div className={cx('content-wrapper')}>
-    <Select placeholder="" id="default">
+    <Select placeholder="njjjjj" id="default">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />

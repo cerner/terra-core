@@ -8,10 +8,6 @@ import SelectUtil from './shared/_SelectUtil';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
-   */
-  allowClear: PropTypes.bool,
-  /**
    * The dropdown menu options.
    */
   children: PropTypes.node,
@@ -74,10 +70,6 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -88,7 +80,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
@@ -99,7 +90,6 @@ const defaultProps = {
   onChange: undefined,
   onDeselect: undefined,
   onSelect: undefined,
-  placeholder: undefined,
   required: false,
   value: undefined,
 };
@@ -170,28 +160,14 @@ class SingleSelect extends React.Component {
 
   render() {
     const {
-      allowClear,
       children,
       defaultValue,
       onChange,
-      placeholder,
       required,
       value,
       intl,
       ...otherProps
     } = this.props;
-
-    const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-    const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
-    let clearOptionDisplay;
-
-    if (allowClear) {
-      if (selectPlaceholder.length === 0) {
-        clearOptionDisplay = defaultPlaceholder;
-      } else {
-        clearOptionDisplay = selectPlaceholder;
-      }
-    }
 
     return (
       <Frame
@@ -201,10 +177,9 @@ class SingleSelect extends React.Component {
         display={this.display()}
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
-        placeholder={selectPlaceholder}
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
-        clearOptionDisplay={clearOptionDisplay}
+        clearOptionDisplay={intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })}
       >
         {children}
       </Frame>

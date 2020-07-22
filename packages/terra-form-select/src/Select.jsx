@@ -11,11 +11,6 @@ import Tag from './TagSelect';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
-   * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
-   */
-  allowClear: PropTypes.bool,
-  /**
    * The dropdown menu options.
    */
   children: PropTypes.node,
@@ -95,10 +90,6 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -119,7 +110,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
@@ -134,7 +124,6 @@ const defaultProps = {
   onSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
-  placeholder: undefined,
   required: false,
   value: undefined,
   variant: 'default',
@@ -149,7 +138,7 @@ function Select(props) {
       return <Combobox {...comboboxProps} />;
     }
     case Variants.MULTIPLE: {
-      const { allowClear, ...multipleProps } = otherProps;
+      const { ...multipleProps } = otherProps;
       return <MultiSelect {...multipleProps} />;
     }
     case Variants.SEARCH: {
@@ -157,7 +146,7 @@ function Select(props) {
       return <Search {...searchProps} />;
     }
     case Variants.TAG: {
-      const { noResultContent, allowClear, ...tagProps } = otherProps;
+      const { noResultContent, ...tagProps } = otherProps;
       return <Tag {...tagProps} />;
     }
     case Variants.DEFAULT:

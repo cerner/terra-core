@@ -86,10 +86,6 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -129,7 +125,6 @@ const defaultProps = {
   maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
-  placeholder: undefined,
   required: false,
   selectAttrs: {},
   showOptional: false,
@@ -155,7 +150,6 @@ const TagSelectField = ({
   maxHeight,
   maxWidth,
   onChange,
-  placeholder,
   required,
   selectAttrs,
   selectId,
@@ -194,6 +188,11 @@ const TagSelectField = ({
     }
   }
 
+  if (customProps.placeholder) {
+    // eslint-disable-next-line no-param-reassign
+    customProps.placeholder = null;
+  }
+
   return (
     <Field
       {...customProps}
@@ -223,7 +222,6 @@ const TagSelectField = ({
         maxHeight={maxHeight || selectAttrs.maxHeight}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
-        placeholder={placeholder}
         required={required}
         value={value}
       >

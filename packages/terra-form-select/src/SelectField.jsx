@@ -7,11 +7,6 @@ import Variants from './shared/_variants';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection.
-   * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
-   */
-  allowClear: PropTypes.bool,
-  /**
    * The select options.
    */
   children: PropTypes.node,
@@ -93,10 +88,6 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -130,7 +121,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
@@ -147,7 +137,6 @@ const defaultProps = {
   maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
-  placeholder: undefined,
   required: false,
   selectAttrs: {},
   showOptional: false,
@@ -156,7 +145,6 @@ const defaultProps = {
 };
 
 const SelectField = ({
-  allowClear,
   children,
   defaultValue,
   disabled,
@@ -175,7 +163,6 @@ const SelectField = ({
   maxHeight,
   maxWidth,
   onChange,
-  placeholder,
   required,
   selectAttrs,
   selectId,
@@ -215,6 +202,11 @@ const SelectField = ({
     }
   }
 
+  if (customProps.placeholder) {
+    // eslint-disable-next-line no-param-reassign
+    customProps.placeholder = null;
+  }
+
   return (
     <Field
       {...customProps}
@@ -234,7 +226,6 @@ const SelectField = ({
       <Select
         {...selectAttrs}
         ariaLabel={label}
-        allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
@@ -245,7 +236,6 @@ const SelectField = ({
         maxHeight={maxHeight || selectAttrs.maxHeight}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
-        placeholder={placeholder}
         required={required}
         value={value}
         variant={variant}

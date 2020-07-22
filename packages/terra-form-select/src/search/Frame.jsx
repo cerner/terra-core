@@ -97,10 +97,6 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -126,7 +122,6 @@ const defaultProps = {
   onSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
-  placeholder: undefined,
   required: false,
   totalOptions: undefined,
   value: undefined,
@@ -203,12 +198,11 @@ class Frame extends React.Component {
   getDisplay(ariaDescribedBy) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
-      disabled, display, placeholder, required, inputId,
+      disabled, display, required, inputId, intl,
     } = this.props;
 
     const inputAttrs = {
       disabled,
-      placeholder,
       ref: this.setInput,
       onChange: this.handleSearch,
       onFocus: this.handleInputFocus,
@@ -228,7 +222,7 @@ class Frame extends React.Component {
 
     return (
       <div className={cx('content')}>
-        <input {...inputAttrs} value={value} />
+        <input {...inputAttrs} placeholder={intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })} value={value} />
       </div>
     );
   }
@@ -614,7 +608,6 @@ class Frame extends React.Component {
       onSearch,
       onSelect,
       optionFilter,
-      placeholder,
       required,
       totalOptions,
       value,
@@ -656,6 +649,10 @@ class Frame extends React.Component {
       select: this.select,
       clearOptionDisplay,
     };
+
+    if (customProps.placeholder) {
+      customProps.placeholder = undefined;
+    }
 
     return (
       <div

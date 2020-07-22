@@ -78,10 +78,6 @@ const propTypes = {
    */
   onSelect: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -104,7 +100,6 @@ const defaultProps = {
   noResultContent: undefined,
   onDeselect: undefined,
   onSelect: undefined,
-  placeholder: undefined,
   required: false,
   totalOptions: undefined,
   value: undefined,
@@ -184,11 +179,11 @@ class Frame extends React.Component {
   }
 
   getDisplay(displayId, placeholderId) {
-    const { display, placeholder } = this.props;
+    const { display, intl } = this.props;
 
     return (display
       ? <span id={displayId}>{display}</span>
-      : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>
+      : <div id={placeholderId} className={cx('placeholder')}>{intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' }) || '\xa0'}</div>
     );
   }
 
@@ -448,7 +443,6 @@ class Frame extends React.Component {
       noResultContent,
       onDeselect,
       onSelect,
-      placeholder,
       required,
       totalOptions,
       value,
@@ -493,6 +487,10 @@ class Frame extends React.Component {
       clearOptionDisplay,
       refCallback: this.setSelectMenuRef,
     };
+
+    if (customProps.placeholder) {
+      customProps.placeholder = null;
+    }
 
     return (
       <div

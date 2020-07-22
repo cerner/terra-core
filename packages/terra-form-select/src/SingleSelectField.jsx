@@ -7,10 +7,6 @@ import Option from './shared/_Option';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection.
-   */
-  allowClear: PropTypes.bool,
-  /**
    * The select options.
    */
   children: PropTypes.node,
@@ -73,10 +69,6 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -100,7 +92,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
@@ -115,7 +106,6 @@ const defaultProps = {
   maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
-  placeholder: undefined,
   required: false,
   selectAttrs: {},
   showOptional: false,
@@ -123,7 +113,6 @@ const defaultProps = {
 };
 
 const SingleSelectField = ({
-  allowClear,
   children,
   defaultValue,
   disabled,
@@ -139,7 +128,6 @@ const SingleSelectField = ({
   maxHeight,
   maxWidth,
   onChange,
-  placeholder,
   required,
   selectAttrs,
   selectId,
@@ -161,6 +149,11 @@ const SingleSelectField = ({
     }
   }
 
+  if (customProps.placeholder) {
+    // eslint-disable-next-line no-param-reassign
+    customProps.placeholder = null;
+  }
+
   return (
     <Field
       {...customProps}
@@ -180,7 +173,6 @@ const SingleSelectField = ({
       <SingleSelect
         {...selectAttrs}
         ariaLabel={label}
-        allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
@@ -189,7 +181,6 @@ const SingleSelectField = ({
         defaultValue={defaultValue}
         maxHeight={maxHeight || selectAttrs.maxHeight}
         onChange={onChange}
-        placeholder={placeholder}
         required={required}
         value={value}
       >
