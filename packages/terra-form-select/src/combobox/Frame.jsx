@@ -290,7 +290,9 @@ class Frame extends React.Component {
      */
     if (event && event.target
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
-      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
+      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon')
+      || event.target.hasAttribute('data-terra-form-select-toggle')
+      || event.target.className.includes('arrow-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
 
       // Allows time for state update to render select menu DOM before shifting focus to it
@@ -298,7 +300,7 @@ class Frame extends React.Component {
         if (this.selectMenu) {
           this.selectMenu.focus();
         }
-      }, 10);
+      }, 100);
       return;
     }
 
@@ -310,7 +312,7 @@ class Frame extends React.Component {
         if (this.selectMenu) {
           this.selectMenu.focus();
         }
-      }, 10);
+      }, 100);
     }
 
     this.setState({ isOpen: true, isPositioned: false });
@@ -342,7 +344,6 @@ class Frame extends React.Component {
    */
   handleBlur(event) {
     const { relatedTarget } = event;
-    const { focusedByTouch } = this.state;
 
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
     if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
@@ -352,7 +353,7 @@ class Frame extends React.Component {
     // Don't blur if we dismissed the onscreen keyboard
     // Determined by if we have have interacted with the frame via onTouchStart
     // and if the focus is on input.
-    if (focusedByTouch && (relatedTarget === this.input)) {
+    if (relatedTarget === this.input) {
       return;
     }
 
