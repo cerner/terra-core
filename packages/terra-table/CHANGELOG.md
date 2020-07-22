@@ -4,6 +4,21 @@ ChangeLog
 Unreleased
 ----------
 
+4.12.0 - (July 21, 2020)
+------------------
+### Changed
+* Align column and rows for selectable tables.
+
+4.11.0 - (July 14, 2020)
+------------------
+### Fixed
+* Corrected themeable variable duplicates and missing variables.
+
+4.10.0 - (July 7, 2020)
+------------------
+### Changed
+* Rows and Header checkbox when disabled are now accessible for screenreaders to read out accordingly.
+
 4.9.0 - (June 23, 2020)
 ------------------
 ### Changed

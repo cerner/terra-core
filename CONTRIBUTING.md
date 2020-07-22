@@ -9,7 +9,7 @@ Thanks.
 ## Issue Reporting
 
 * Please browse our [existing issues][1] before logging new issues.
-* Check that the issue has not already been fixed in the `master` branch.
+* Check that the issue has not already been fixed in the `main` branch.
 * Open an issue with a descriptive title and a summary.
 * Please be as clear and explicit as you can in your description of the problem.
 * Please state the version of Operating System, Browser, and terra-core you are using in the description.
@@ -31,7 +31,7 @@ Thanks.
 * The pull request will be reviewed by the community and merged by the project committers.
 
 ## Project Governance
-* This project is maintained and governed following the [terra governance document](https://github.com/cerner/terra-ui/blob/master/GOVERNANCE.md).
+* This project is maintained and governed following the [terra governance document](https://github.com/cerner/terra-ui/blob/main/GOVERNANCE.md).
 
 [1]: https://github.com/cerner/terra-core/issues
 [2]: http://gun.io/blog/how-to-github-fork-branch-and-pull-request

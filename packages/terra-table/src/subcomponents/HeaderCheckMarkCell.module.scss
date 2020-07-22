@@ -16,6 +16,12 @@
     }
   }
 
+  .label {
+    font-size: 0.5rem;
+    line-height: 0;
+    text-overflow: ellipsis;
+  }
+
   .checkmark {
     background-repeat: no-repeat;
     background-size: contain;
@@ -112,10 +118,12 @@
     background-color: transparent;
     background-image: none;
     border: 0;
-    height: 0;
-    margin: 0;
+    left: 50%;
+    margin: -1px;
     padding: 0;
-    width: 0;
+    position: absolute;
+    top: 50%;
+    width: 1px;
   }
 
   // -----------------------
