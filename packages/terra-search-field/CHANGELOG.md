@@ -3,8 +3,16 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed `terra-form-input` from dependencies.
+
 ### Changed
-* Updated wdio snapshots due to changes in form-input.
+* Removed the terra-form-input and replaced it with a native input
+* Updated wdio snapshots
+
+### Added
+* Added new theme variables
+* Added test for disabled search-field with placeholder
 
 3.53.0 - (July 7, 2020)
 ------------------
