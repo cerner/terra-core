@@ -115,17 +115,6 @@ exports[`Input should render as uncontrolled when just a default value is passed
 />
 `;
 
-exports[`Input should render w/ placeholder text when just a placeholder prop is passed into the Input 1`] = `
-<input
-  aria-label="label"
-  className="form-input"
-  disabled={false}
-  name={null}
-  placeholder="foo"
-  required={false}
-/>
-`;
-
 exports[`Input should render with a type of password and pattern prop value 1`] = `
 <input
   aria-label="label"

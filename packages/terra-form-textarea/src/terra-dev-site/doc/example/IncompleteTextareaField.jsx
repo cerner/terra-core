@@ -10,7 +10,6 @@ const DefaultTextAreaField = () => (
     isIncomplete
     inputAttrs={{
       name: 'requiredTextarea',
-      placeholder: 'Textarea placeholder',
     }}
   />
 );

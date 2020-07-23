@@ -3,6 +3,15 @@ ChangeLog
 
 Unreleased
 ----------
+### Breaking Changes
+* Removed `placeholder` prop.
+
+### Changed
+* Updated examples to not use `placeholder` prop
+
+### Removed
+* Removed theme variables - see UPGRADEGUIDE.md
+* Removed tests specifically for `placeholder` prop
 
 4.8.0 - (July 7, 2020)
 ------------------
