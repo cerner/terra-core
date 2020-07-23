@@ -1,6 +1,8 @@
 @import './clinical-lowlight-theme/Button.module';
 @import './orion-fusion-theme/Button.module';
 
+/* stylelint-disable terra/custom-property-namespace */
+
 :local {
   .button {
     align-items: center;
@@ -37,3 +39,5 @@
     outline-offset: -2px;
   }
 }
+
+/* stylelint-enable terra/custom-property-namespace */

@@ -2,6 +2,8 @@
 @import './clinical-lowlight-theme/Placeholder.module';
 @import './orion-fusion-theme/Placeholder.module';
 
+/* stylelint-disable terra/custom-property-namespace */
+
 :local {
   .placeholder,
   .inner {
@@ -18,9 +20,10 @@
   .inner {
     align-items: center;
     border: 3px dashed;
+    border-color: var(--terra-docs-placeholder-inner-border-color, #d1d1d1);
+    color: var(--terra-docs-placeholder-inner-color, #787575);
     display: flex;
     justify-content: center;
-    border-color: var(--terra-placeholder-inner-border-color, #d1d1d1);
-    color: var(--terra-placeholder-inner-color, #787575);
   }
 }
+/* stylelint-enable terra/custom-property-namespace */

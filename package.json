@@ -52,7 +52,7 @@
     "clean:obsolete-snapshots": "npm test -- -u",
     "create-props-markdown": "node scripts/props-table-gen/generatePropsTables.js",
     "compile": "npm run compile:clean && npm run compile:build",
-    "compile:build": "lerna ls | sed 's/@cerner\\\///g' | cut -d ' ' -f1 | xargs -I {} babel packages/{}/src --out-dir packages/{}/lib --copy-files",
+    "compile:build": "lerna ls | sed 's/@cerner\\///g' | cut -d ' ' -f1 | xargs -I {} babel packages/{}/src --out-dir packages/{}/lib --copy-files",
     "compile:clean": "rm -rf packages/**/lib",
     "compile:prod": "rm -rf ./build; webpack -p",
     "compile:lowlight": "rm -rf ./build; THEME=clinical-lowlight-theme webpack -p",
