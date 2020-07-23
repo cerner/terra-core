@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from 'terra-docs';
+import { Button } from '@cerner/terra-docs';
 
 export default () => {
   const [clickCount, setClickCount] = useState(0);

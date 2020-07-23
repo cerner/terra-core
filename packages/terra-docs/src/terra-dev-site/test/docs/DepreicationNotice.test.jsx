@@ -1,5 +1,5 @@
 import React from 'react';
-import { Notice } from 'terra-docs';
+import { Notice } from '@cerner/terra-docs';
 
 export default () => (
   <Notice variant="deprecation">
