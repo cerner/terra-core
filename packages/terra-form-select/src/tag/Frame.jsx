@@ -381,7 +381,7 @@ class Frame extends React.Component {
     // Don't blur if we dismissed the onscreen keyboard
     // Determined by if we have have interacted with the frame via onTouchStart
     // and if the focus is on input.
-    if (relatedTarget === this.input) {
+    if (relatedTarget === this.input || relatedTarget === this.selectMenu) {
       return;
     }
 
@@ -560,6 +560,7 @@ class Frame extends React.Component {
    */
   toggleDropdown(event) {
     if (this.state.isOpen) {
+      this.input.focus();
       this.closeDropdown();
     } else {
       this.openDropdown(event);

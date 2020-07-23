@@ -554,6 +554,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('combobox input should not be focused', async () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+        browser.keys('Tab');
       });
 
       Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
@@ -944,6 +945,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('multiple input should not be focused', async () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+        browser.keys('Tab');
       });
 
       Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
@@ -1328,6 +1330,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('toggle-closed-dropdown', { selector: '#root' });
+      after(() => browser.click('#root'));
     });
 
     describe('search should close when pressing tab key to shift focus away from select', () => {
@@ -1342,6 +1345,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('search input should not be focused', async () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+        browser.keys('Tab');
       });
 
       Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
@@ -1380,7 +1384,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     describe('search should select an option by keyboard interaction', () => {
       it('search should select the first option', () => {
-        browser.keys('Tab');
         browser.keys('Space');
         browser.keys('Enter');
       });
@@ -1398,6 +1401,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     describe('search should select an option by click after clicking on toggle icon', () => {
       it('search should select the first option', () => {
+        browser.click('[data-terra-select]');
         browser.click('#terra-select-option-blue');
       });
 
@@ -1693,6 +1697,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      after(() => browser.click('#root'));
     });
 
     describe('tag should close when pressing tab key to shift focus away from select', () => {
@@ -1707,6 +1712,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('tag input should not be focused', async () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
+        browser.keys('Tab');
       });
 
       Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
