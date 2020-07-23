@@ -6,7 +6,7 @@ Unreleased
 ### Removed
 * Removed unused themeable variables
 ### Added
-* Added missing variables
+* Added missing themeable variables
 
 4.6.0 - (July 7, 2020)
 ------------------
