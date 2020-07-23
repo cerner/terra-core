@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Placeholder should render a default component 1`] = `
+<button
+  className="button"
+  data-focus-styles-enabled={true}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  type="button"
+/>
+`;
+
+exports[`Placeholder should show with text 1`] = `
+<button
+  className="button"
+  data-focus-styles-enabled={true}
+  onBlur={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  type="button"
+>
+  title
+</button>
+`;

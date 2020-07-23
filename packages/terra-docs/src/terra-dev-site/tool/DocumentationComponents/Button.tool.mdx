@@ -1,15 +1,15 @@
 import { Badge } from '@cerner/terra-docs/package.json?dev-site-package';
 import { Notice } from '@cerner/terra-docs';
 
-import DeprecationNoticeVariant from '../example/DeprecationNotice?dev-site-example';
+import Button from '../example/Button?dev-site-example';
 
-import PropsTable from '@cerner/terra-docs/src/Notice?dev-site-props-table';
+import PropsTable from '@cerner/terra-docs/src/Button?dev-site-props-table';
 
 <Badge />
 
-# terra-docs Notice
+# terra-docs Button
 
-A documentation component intended to provide a "notice" of various types at the top of the document just after the h1 element.
+A a simple button for documentation examples and tests.
 
 ## Getting Started
 
@@ -20,9 +20,9 @@ A documentation component intended to provide a "notice" of various types at the
 
 ```jsx
 import React from 'react';
-import { Notice } from '@cerner/terra-docs';
+import { Button } from '@cerner/terra-docs';
 
-<Notice {props...} />
+<Button {props...} />
 ```
 
 ## Component Features
@@ -31,7 +31,7 @@ import { Notice } from '@cerner/terra-docs';
 * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
 
 ## Examples
-<DeprecationNoticeVariant title="Deprecation Notice Variant"/>
+<Button title="Button Example"/>
 
 ## Props
 <PropsTable />

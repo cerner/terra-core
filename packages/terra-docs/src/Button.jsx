@@ -26,10 +26,11 @@ const disableFocusStyles = (event) => {
 
 const propTypes = {
   /**
-  * The main body text of the notice.
+  * The button text.
   */
   children: PropTypes.string,
   /**
+   * @private
    * Callback function triggered when key is pressed.
    */
   onKeyDown: PropTypes.func,

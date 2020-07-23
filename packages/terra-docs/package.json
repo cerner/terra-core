@@ -2,7 +2,6 @@
   "name": "@cerner/terra-docs",
   "main": "lib/index.js",
   "version": "0.0.0",
-  "private": true,
   "description": "{insert description}",
   "repository": {
     "type": "git",

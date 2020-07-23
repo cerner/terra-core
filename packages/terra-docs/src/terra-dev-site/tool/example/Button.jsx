@@ -5,7 +5,7 @@ export default () => {
   const [clickCount, setClickCount] = useState(0);
   return (
     <>
-      <Button id="button" onClick={() => { setClickCount(clickCount + 1); }}>
+      <Button onClick={() => { setClickCount(clickCount + 1); }}>
         Text
       </Button>
 
