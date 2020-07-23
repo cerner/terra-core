@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Placeholder should adds the onclick 1`] = `
+<button
+  className="button"
+  data-focus-styles-enabled={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  type="button"
+>
+  title
+</button>
+`;
+
 exports[`Placeholder should render a default component 1`] = `
 <button
   className="button"
