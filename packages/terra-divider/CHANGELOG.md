@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+
+3.29.0 - (June 23, 2020)
+------------------
 ### Added
 * Added display to `block` on hr element in the divider component
 

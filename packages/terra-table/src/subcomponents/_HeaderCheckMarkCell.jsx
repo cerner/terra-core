@@ -26,7 +26,7 @@ const propTypes = {
    */
   alignmentPadding: PropTypes.string,
   /**
-   * Whether or not the cell display as disabled.
+   * Whether or not the checkmark displays as disabled. Dependent on `'isSelectable'`.
    */
   isDisabled: PropTypes.bool,
   /**
@@ -38,7 +38,7 @@ const propTypes = {
    */
   isSelected: PropTypes.bool,
   /**
-   * Whether or not row is selectable
+   * Whether or not row is selectable, this will dictate whether or not a checkmark is present.
    */
   isSelectable: PropTypes.bool,
   /**
@@ -98,30 +98,32 @@ const HeaderCheckMarkCell = ({
   refCallback,
   ...customProps
 }) => {
-  const attrSpread = { role: 'none' };
-  const attrCheck = {};
-  if (!isHidden && isSelectable) {
-    if (isDisabled) {
-      attrCheck['aria-disabled'] = true;
-    } else {
-      attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
-      attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-      attrSpread.tabIndex = '0';
-      attrSpread['data-cell-show-focus'] = 'true';
-      attrSpread.onBlur = wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true'));
-      attrSpread.onMouseDown = wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false'));
-    }
-
-    if (isSelected) {
-      attrCheck['aria-checked'] = isIndeterminate ? 'mixed' : true;
-    } else {
-      attrCheck['aria-checked'] = false;
-    }
-  }
-
+  let attrSpread;
+  let attrCheck;
   let attrPadding;
   if (alignmentPadding) {
     attrPadding = { style: { paddingBottom: alignmentPadding } };
+  }
+
+  if (isSelectable) {
+    if (!isHidden) {
+      attrSpread = {
+        onClick: wrappedOnClickForItem(onClick, onSelect, metaData),
+        onKeyDown: wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData),
+        onBlur: wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true')),
+        onMouseDown: wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false')),
+        tabIndex: '0',
+        'data-cell-show-focus': true,
+      };
+    }
+
+    attrCheck = {
+      role: 'checkbox',
+      'aria-checked': isSelected && isIndeterminate ? 'mixed' : isSelected,
+    };
+    if (isDisabled) {
+      attrCheck['aria-disabled'] = true;
+    }
   }
 
   const headerCheckMarkCellClasses = cx(
@@ -138,9 +140,11 @@ const HeaderCheckMarkCell = ({
       ref={refCallback}
       role="columnheader"
     >
-      <VisuallyHiddenText aria-checked={isSelected} role="checkbox" {...attrCheck} text={label} />
       <div {...attrPadding} className={cx({ container: !isHidden })}>
+        <VisuallyHiddenText className={cx('label')} {...attrCheck} text={label} />
         <div
+          aria-hidden
+          focusable="false"
           className={cx(
             'checkmark',
             { 'is-selected': isSelectable && isSelected },

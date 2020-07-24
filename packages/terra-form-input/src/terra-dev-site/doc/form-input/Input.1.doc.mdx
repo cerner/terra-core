@@ -1,7 +1,6 @@
 import { Badge } from 'terra-form-input/package.json?dev-site-package';
 
 import BlankExample from '../common/BlankExample?dev-site-example';
-import PlaceholderExample from '../common/PlaceholderExample?dev-site-example';
 import NumberInputExample from '../common/NumberInputExample?dev-site-example';
 import ControlledDefaultExample from '../example/controlled/DefaultExample?dev-site-example';
 import ControlledDisabledExample from '../example/controlled/DisabledExample?dev-site-example';
@@ -23,6 +22,8 @@ import FormInputPropsTable from 'terra-form-input/src/Input?dev-site-props-table
 # Terra Form Input
 
 Generic input which represents an HTML input element directly.
+
+**Note:** To follow [UX Best Practices](https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research), this component does not allow `placeholder`.
 
 ## Getting Started
 
@@ -55,7 +56,6 @@ import Input from 'terra-form-input';
 
 ## Examples
 <BlankExample title="Default Input" />
-<PlaceholderExample title="Placeholder Input" />
 <NumberInputExample title="Numeric Input" />
 <ControlledDefaultExample title="Controlled Example - Valid" />
 <ControlledDisabledExample title="Controlled Example - Valid Disabled" />

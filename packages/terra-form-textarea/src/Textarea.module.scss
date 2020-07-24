@@ -37,12 +37,6 @@
       color: var(--terra-form-textarea-hover-color);
     }
 
-    &::placeholder {
-      color: var(--terra-form-textarea-placeholder-color, rgba(25, 32, 35, 0.53));
-      font-style: var(--terra-form-textarea-placeholder-font-style);
-      opacity: 1;
-    }
-
     &[required] {
       box-shadow: unset;
     }
@@ -57,11 +51,6 @@
       opacity: var(--terra-form-textarea-disabled-opacity, 0.25);
       pointer-events: none;
       resize: none;
-    }
-
-    &[disabled]::placeholder {
-      color: var(--terra-form-textarea-placeholder-disabled-color, rgba(25, 32, 35, 0.53));
-      font-style: var(--terra-form-textarea-placeholder-disabled-font-style);
     }
 
     &:focus {

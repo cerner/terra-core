@@ -7,7 +7,7 @@
 React component to display the content of markdown files.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/master/packages/terra-markdown/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/main/packages/terra-markdown/docs)
 - [LICENSE](#license)
 
 ## Getting Started

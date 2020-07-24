@@ -1,112 +1,165 @@
-language: generic
+language: node_js
 sudo: required
 services:
   - docker
 branches:
   only:
-    - master
+    - main
 cache:
   directories:
-    - $HOME/$TRAVIS_BUILD_ID
-    - $HOME/docker
-env:
-  global:
-    - DOCKER_IMAGE='cerner/terra-core'
-    - TAG="${TRAVIS_PULL_REQUEST_SHA:=latest}"
+    - travis-build
 before_install:
-  - sudo chown -R travis:travis $HOME/docker
-  # Load cached docker images
-  - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
-before_cache:
-  - sudo chown -R travis:travis $HOME/docker
-  - if [ $TRAVIS_TEST_RESULT == 1 ]; then rm -f $HOME/docker/*.tar.gz; fi
+  # Clean install on any new build
+  - npm run clean
 jobs:
   include:
-    - stage: build
-      before_install: true
+    - stage: danger lint jest and compile
       script:
-        - sudo chown -R travis:travis $HOME/docker
-        - 'rm -f $HOME/docker/*.tar.gz'
-        - travis_wait docker-compose build test-ci
-        - travis_wait docker-compose --verbose pull standalone-chrome
-        - >
-          mkdir -p $HOME/docker && docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}} {{.ID}}'
-          | xargs -n 2 -t sh -c 'test -e $HOME/docker/$1.tar.gz || docker save $0 | gzip -2 > $HOME/docker/$1.tar.gz'
-    - stage: danger lint and jest
-      script: travis_wait docker-compose run -e DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN -e HAS_JOSH_K_SEAL_OF_APPROVAL=$HAS_JOSH_K_SEAL_OF_APPROVAL -e TRAVIS_PULL_REQUEST=$TRAVIS_PULL_REQUEST -e TRAVIS_REPO_SLUG=$TRAVIS_REPO_SLUG test-ci sh -c 'npm run danger && npm run lint && npm run jest'
-    - stage: compile - default theme
-      script: travis_wait docker-compose run test-ci npm run compile:prod -- --env.disableAggregateThemes
-    - stage: wdio - default theme
-      name: tiny
-      script: travis_wait docker-compose run -e FORM_FACTOR=tiny test-ci
-    - name: small
-      script: travis_wait docker-compose run -e FORM_FACTOR=small test-ci
-    - name: medium
-      script: travis_wait docker-compose run -e FORM_FACTOR=medium test-ci
-    - name: large
-      script: travis_wait docker-compose run -e FORM_FACTOR=large test-ci
-    - name: huge
-      script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci
-    - name: enormous
-      script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci
-    - stage: compile - lowlight theme
-      script: travis_wait docker-compose run test-ci npm run compile:lowlight
-    - stage: wdio - lowlight theme
-      name: tiny
-      script: travis_wait docker-compose run -e FORM_FACTOR=tiny test-ci sh -c 'npm run wdio-lowlight'
-    - name: small
-      script: travis_wait docker-compose run -e FORM_FACTOR=small test-ci sh -c 'npm run wdio-lowlight'
-    - name: medium
-      script: travis_wait docker-compose run -e FORM_FACTOR=medium test-ci sh -c 'npm run wdio-lowlight'
-    - name: large
-      script: travis_wait docker-compose run -e FORM_FACTOR=large test-ci sh -c 'npm run wdio-lowlight'
-    - name: huge
-      script: travis_wait docker-compose run -e FORM_FACTOR=huge test-ci sh -c 'npm run wdio-lowlight'
-    - name: enormous
-      script: travis_wait docker-compose run -e FORM_FACTOR=enormous test-ci sh -c 'npm run wdio-lowlight'
-    - stage: compile - fusion theme
-      script: travis_wait docker-compose run test-ci npm run compile:fusion
-    - stage: wdio - fusion theme
-      name: tiny
-      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=tiny test-ci
-    - name: small
-      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=small test-ci
-    - name: medium
-      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=medium test-ci
-    - name: large
-      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=large test-ci
-    - name: huge
-      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=huge test-ci
-    - name: enormous
-      script: travis_wait docker-compose run -e THEME=orion-fusion-theme -e FORM_FACTOR=enormous test-ci
+        # clear the cache of any old build artifacts
+        - rm -rf ./travis-build
+        - npm run danger
+        - npm run lint
+        - npm run jest
+        # These can't be built in parallel because the cache is a single object and you can't add to it in parallel
+        - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/default
+        - npm run compile:lowlight -- --output-path $TRAVIS_BUILD_DIR/travis-build/lowlight
+        - npm run compile:fusion -- --output-path $TRAVIS_BUILD_DIR/travis-build/fusion
+    # Default - Split out all the themes to not eat up all the travis executors at once.
+
+    - stage: tiny & medium
+      name: tiny default-theme
+      # Don't clean install
+      before_install: skip
+      # Rely on the cache for node_modules.. this won't work for any node modules in the packages dir but works for running wdio
+      install: skip
+      script:
+        # we start up our own standalone chrome instance because the Selenium Docker Service doesn't seem to work here.
+        - docker-compose up -d standalone-chrome-travis
+        # using the travis env section to set env variables seems to break cache
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=tiny npm run wdio-default
+    - name: tiny lowlight-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=tiny npm run wdio-lowlight
+    - name: tiny fusion-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=tiny npm run wdio-fusion
+    - name: medium default-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=medium npm run wdio-default
+    - name: medium lowlight-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=medium npm run wdio-lowlight
+    - name: medium fusion-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=medium npm run wdio-fusion
+
+    - stage: small & enormous
+      name: small default-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=small npm run wdio-default
+    - name: small lowlight-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=small npm run wdio-lowlight
+    - name: small fusion-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=small npm run wdio-fusion
+    - name: enormous default-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=enormous npm run wdio-default
+    - name: enormous lowlight-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=enormous npm run wdio-lowlight
+    - name: enormous fusion-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=enormous npm run wdio-fusion
+
+    - stage: large & huge
+      name: large default-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=large npm run wdio-default
+    - name: large lowlight-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=large npm run wdio-lowlight
+    - name: large fusion-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=large npm run wdio-fusion
+    - name: huge default-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=huge npm run wdio-default
+    - name: huge lowlight-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=huge npm run wdio-lowlight
+    - name: huge fusion-theme
+      before_install: skip
+      install: skip
+      script:
+        - docker-compose up -d standalone-chrome-travis
+        - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=huge npm run wdio-fusion
+
     - stage: deploy
       script: skip
       before_deploy:
-        - sudo chown -R travis:travis $HOME/docker
-        # Load cached docker images
-        - if [[ -d $HOME/docker ]]; then ls $HOME/docker/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
-        - "travis_wait docker-compose run --volume=$TRAVIS_BUILD_DIR/build:/opt/module/build -e TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' -e TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' -e TERRA_DEV_SITE_PUBLIC_PATH='/terra-core/' test-ci npm run compile:prod"
+        # Build again for deployment because we need the Public path to be updated.
+        - TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' TERRA_DEV_SITE_PUBLIC_PATH='/terra-core/' npm run compile:prod
       deploy:
         provider: pages
         skip_cleanup: true
         github_token: $GITHUB_TOKEN # Set in travis-ci.com dashboard
-        local_dir: build
+        local_dir: $TRAVIS_BUILD_DIR/build
         on:
-          branch: master
-    - stage: clean up cache
-      before_install: true
-      script:
-        - sudo chown -R travis:travis $HOME/docker
-        - 'rm -f $HOME/docker/*.tar.gz'
+          branch: main
 stages:
-  - build
-  - danger lint and jest
-  - compile - default theme
-  - wdio - default theme
-  - compile - lowlight theme
-  - wdio - lowlight theme
-  - compile - fusion theme
-  - wdio - fusion theme
+  - danger lint jest and compile
+  - tiny & medium
+  - small & enormous
+  - large & huge
   - name: deploy
     if: type != pull_request
-  - clean up cache
