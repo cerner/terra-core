@@ -170,12 +170,6 @@ it('should set the ref when refCallback is passed into the component', () => {
   expect(refCallback).toHaveBeenCalledWith(wrapper.find('textarea').instance());
 });
 
-it('should render a placeholder within the textarea', () => {
-  const textarea = <Textarea placeholder="placeholder" />;
-  const wrapper = render(textarea);
-  expect(wrapper).toMatchSnapshot();
-});
-
 it('correctly applies the theme context className', () => {
   const wrapper = mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>

@@ -4,6 +4,28 @@ import { Badge } from 'terra-form-textarea/package.json?dev-site-package';
 
 # Terra Form Textarea Upgrade Guide
 
+## Changes from version 4 to version 5
+
+### Props
+
+#### Removed
+* Removed `placeholder` prop from `Textarea` and  `TextareaField`.
+
+### Changes to CSS Custom Properties
+
+#### Removed
+* --terra-form-textarea-placeholder-color
+* --terra-form-textarea-placeholder-font-style
+* --terra-form-textarea-placeholder-disabled-color
+* --terra-form-textarea-placeholder-disabled-font-style
+
+##### Steps to Upgrade
+To upgrade from 4.0 to 5.0 each existing Textarea and TextareaField must be reviewed and updated to ensure no `placeholder` prop is passed to it. This is done to follow WCAG ([for more info](https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research)).
+
+* `Textarea` component will not be supporting `placeholder` prop and `native placeholder`. If consumers want to provide a detailed text guidance they can upgrade to `TextareaField`.
+
+* `TextareaField` component will not be supporting `placeholder` prop and `native placeholder`. But consumers may utilize the `help` text field properties to provide similar guidance to the user using `help` prop.
+
 ## Changes from version 3 to version 4
 
 ### Props

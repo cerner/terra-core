@@ -67,10 +67,6 @@ const propTypes = {
    */
   onFocus: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the input is required or not.
    */
   required: PropTypes.bool,
@@ -108,7 +104,6 @@ const defaultProps = {
   isIncomplete: false,
   isInvalid: false,
   onChange: undefined,
-  placeholder: undefined,
   required: false,
   rows: null,
   size: 'small',
@@ -198,7 +193,6 @@ class Textarea extends React.Component {
       required,
       onChange,
       onFocus,
-      placeholder,
       isAutoResizable,
       isIncomplete,
       isInvalid,
@@ -255,6 +249,10 @@ class Textarea extends React.Component {
       additionalTextareaProps.defaultValue = defaultValue;
     }
 
+    if (additionalTextareaProps.placeholder) {
+      additionalTextareaProps.placeholder = null;
+    }
+
     return (
       <textarea
         {...additionalTextareaProps}
@@ -265,7 +263,6 @@ class Textarea extends React.Component {
         name={name}
         onFocus={this.onFocus}
         onChange={this.onChange}
-        placeholder={placeholder}
         required={required}
         rows={textareaRows}
         className={textareaClasses}
