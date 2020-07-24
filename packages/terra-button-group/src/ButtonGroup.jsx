@@ -75,7 +75,6 @@ class ButtonGroup extends React.Component {
       cx(
         'button-group',
         { 'is-block': isBlock },
-        { 'is-touch-device': ('ontouchstart' in window) },
         theme.className,
       ),
       customProps.className,

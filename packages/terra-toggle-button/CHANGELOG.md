@@ -3,8 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-### Changed
-* Revert wdio to apply hover style.
 
 3.41.0 - (June 11, 2020)
 ------------------

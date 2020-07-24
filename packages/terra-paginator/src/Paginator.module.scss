@@ -46,12 +46,15 @@
       white-space: normal;
       word-wrap: break-word; /* For IE 10 and IE 11 */
 
-      &:hover:not(.is-touch-device) {
-        background-color: var(--terra-paginator-nav-link-hover-background-color, transparent);
-        border: var(--terra-paginator-nav-link-hover-border, none);
-        box-shadow: var(--terra-paginator-nav-link-hover-box-shadow);
-        color: var(--terra-paginator-nav-link-hover-color, #001f67);
-        text-decoration: var(--terra-paginator-nav-link-hover-text-decoration, underline);
+      /* stylelint-disable max-nesting-depth */
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: var(--terra-paginator-nav-link-hover-background-color, transparent);
+          border: var(--terra-paginator-nav-link-hover-border, none);
+          box-shadow: var(--terra-paginator-nav-link-hover-box-shadow);
+          color: var(--terra-paginator-nav-link-hover-color, #001f67);
+          text-decoration: var(--terra-paginator-nav-link-hover-text-decoration, underline);
+        }
       }
 
       // Remove the inner border and padding in Firefox.
@@ -83,8 +86,10 @@
       cursor: auto;
       pointer-events: none;
 
-      &:hover:not(.is-touch-device) {
-        text-decoration: none;
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+        &:hover {
+          text-decoration: none;
+        }
       }
 
       &:focus {

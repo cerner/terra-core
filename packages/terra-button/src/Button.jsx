@@ -245,7 +245,6 @@ class Button extends React.Component {
         { compact: isCompact },
         { 'is-active': this.state.active && !isDisabled },
         { 'is-focused': this.state.focused && !isDisabled },
-        { 'is-touch-device': ('ontouchstart' in window) },
         theme.className,
       ]),
       customProps.className,
