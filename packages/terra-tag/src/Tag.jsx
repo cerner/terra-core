@@ -85,7 +85,6 @@ class Tag extends React.Component {
         'tag',
         { 'is-focused': this.state.focused },
         { 'is-interactive': href || onClick },
-        { 'is-touch-device': ('ontouchstart' in window) },
         theme.className,
       ),
       customProps.className,

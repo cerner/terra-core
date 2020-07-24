@@ -50,15 +50,17 @@
     }
 
     /* stylelint-disable max-nesting-depth*/
-    &.is-selectable:hover:not(.is-touch-device) {
-      background-color: var(--terra-table-row-striped-hover-background-color, #f4fefe);
-      background-image: var(--terra-table-row-striped-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
-      box-shadow: var(--terra-table-row-striped-hover-box-shadow, inset 0 0 0 1px #fff);
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &.is-selectable:hover {
+        background-color: var(--terra-table-row-striped-hover-background-color, #f4fefe);
+        background-image: var(--terra-table-row-striped-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
+        box-shadow: var(--terra-table-row-striped-hover-box-shadow, inset 0 0 0 1px #fff);
       
-      &.is-selected {
-        background-color: var(--terra-table-row-striped-selected-hover-background-color, #d1ebfb);
-        background-image: var(--terra-table-row-striped-selected-hover-background-image, linear-gradient(to bottom, #b3ddf8 2%, #c8e9fe 30%, #d1ebfb 80%));
-        box-shadow: var(--terra-table-row-striped-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
+        &.is-selected {
+          background-color: var(--terra-table-row-striped-selected-hover-background-color, #d1ebfb);
+          background-image: var(--terra-table-row-striped-selected-hover-background-image, linear-gradient(to bottom, #b3ddf8 2%, #c8e9fe 30%, #d1ebfb 80%));
+          box-shadow: var(--terra-table-row-striped-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
+        }
       }
     }
 
@@ -92,9 +94,10 @@
       + .row.is-selected {
         box-shadow: var(--terra-table-row-selected-next-selected-box-shadow);
       }
-
-      + .row.is-selected:hover:not(.is-touch-device) {
-        box-shadow: var(--terra-table-row-selected-next-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+        + .row.is-selected:hover {
+          box-shadow: var(--terra-table-row-selected-next-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
+        }
       }
     }
   } 
@@ -103,16 +106,18 @@
     cursor: pointer;
     outline: none;
 
-    &:hover :not(.is-touch-device) {
-      background-color: var(--terra-table-row-hover-background-color, #f4fefe);
-      background-image: var(--terra-table-row-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
-      box-shadow: var(--terra-table-row-hover-box-shadow, inset 0 0 0 1px #fff);
-    }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: var(--terra-table-row-hover-background-color, #f4fefe);
+        background-image: var(--terra-table-row-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
+        box-shadow: var(--terra-table-row-hover-box-shadow, inset 0 0 0 1px #fff);
+      }
 
-    &.is-selected:hover:not(.is-touch-device) {
-      background-color: var(--terra-table-row-selected-hover-background-color, #d1ebfb);
-      background-image: var(--terra-table-row-selected-hover-background-image, linear-gradient(to bottom, #b3ddf8 2%, #c8e9fe 30%, #d1ebfb 80%));
-      box-shadow: var(--terra-table-row-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
+      &.is-selected:hover {
+        background-color: var(--terra-table-row-selected-hover-background-color, #d1ebfb);
+        background-image: var(--terra-table-row-selected-hover-background-image, linear-gradient(to bottom, #b3ddf8 2%, #c8e9fe 30%, #d1ebfb 80%));
+        box-shadow: var(--terra-table-row-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
+      }
     }
     
     &:active,

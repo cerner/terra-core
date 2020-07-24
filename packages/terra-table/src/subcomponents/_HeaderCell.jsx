@@ -143,7 +143,6 @@ const HeaderCell = ({
   const headerCellClasses = cx(
     'header-cell',
     { 'is-interactable': onAction },
-    { 'is-touch-device': ('ontouchstart' in window) },
   );
 
   return (

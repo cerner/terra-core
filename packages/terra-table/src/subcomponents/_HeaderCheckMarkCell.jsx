@@ -128,7 +128,6 @@ const HeaderCheckMarkCell = ({
     'header-cell',
     { 'hide-cell': isHidden },
     { 'is-interactable': !isDisabled && isSelectable },
-    { 'is-touch-device': ('ontouchstart' in window) },
   );
 
   return (

@@ -46,10 +46,12 @@
     cursor: pointer;
     outline: var(--terra-table-header-cell-outline, none);
 
-    &:hover:not(.is-touch-device) {
-      background-color: var(--terra-table-header-cell-hover-background-color, #f1f1f2);
-      background-image: var(--terra-table-header-cell-hover-background-image, linear-gradient(to bottom, #d1d2d3 2%, #e0e1e2 30%, #ebebeb 80%));
-      box-shadow: var(--terra-table-header-cell-hover-box-shadow, inset 0 0 0 1px #f1f1f2);
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: var(--terra-table-header-cell-hover-background-color, #f1f1f2);
+        background-image: var(--terra-table-header-cell-hover-background-image, linear-gradient(to bottom, #d1d2d3 2%, #e0e1e2 30%, #ebebeb 80%));
+        box-shadow: var(--terra-table-header-cell-hover-box-shadow, inset 0 0 0 1px #f1f1f2);
+      }
     }
       
     &:hover {

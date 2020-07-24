@@ -134,7 +134,6 @@ const CheckMarkCell = ({
     { 'hide-cell': isHidden },
     { 'is-interactable': !isDisabled && isSelectable },
     { 'is-top-align': attrPadding },
-    { 'is-touch-device': ('ontouchstart' in window) },
   );
 
   return (

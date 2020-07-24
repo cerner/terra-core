@@ -115,7 +115,6 @@ const Row = ({
     { 'is-striped': isStriped },
     divider,
     'row',
-    { 'is-touch-device': ('ontouchstart' in window) },
   );
 
   return (

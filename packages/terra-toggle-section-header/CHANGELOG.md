@@ -3,8 +3,6 @@ ChangeLog
 
 Unreleased
 ----------
-## Changed
-* Update wdio screenshot to re-apply button hover styles.
 
 2.37.0 - (June 11, 2020)
 ------------------

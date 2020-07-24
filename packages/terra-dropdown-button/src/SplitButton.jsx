@@ -212,7 +212,6 @@ class SplitButton extends React.Component {
       { 'is-block': isBlock },
       { 'is-compact': isCompact },
       { 'is-active': primaryIsActive },
-      { 'is-touch-device': ('ontouchstart' in window) },
       theme.className,
     );
     const caretClassnames = cx(
@@ -224,7 +223,6 @@ class SplitButton extends React.Component {
         the dropdown open will cause the dropdown to close and reopen
       */
       { 'ignore-react-onclickoutside': isOpen },
-      { 'is-touch-device': ('ontouchstart' in window) },
       theme.className,
     );
 
