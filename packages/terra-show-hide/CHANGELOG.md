@@ -4,7 +4,7 @@ ChangeLog
 Unreleased
 ----------
 ### Added
-* Added an interaction media query to apply `hover` styles only on non-touch devices.
+* Added an interaction media query to apply `hover` styles only on non-touch devices and removed hover wdio tests.
 
 2.37.0 - (July 7, 2020)
 ------------------

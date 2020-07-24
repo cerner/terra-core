@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Remove wdio tests and screenshots for checking hover style.
 
 3.43.0 - (July 7, 2020)
 ------------------
