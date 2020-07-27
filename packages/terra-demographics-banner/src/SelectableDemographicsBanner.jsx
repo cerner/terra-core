@@ -4,7 +4,6 @@ import { injectIntl, intlShape } from 'react-intl';
 import classNames from 'classnames/bind';
 import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import DemographicsBanner from './DemographicsBanner';
-import DemographicsBannerUtils from './_sharedObjects';
 import BackgroundTile from './selectable-demographics-banner/_BackgroundTile';
 import SelectableTile from './selectable-demographics-banner/_SelectableTile';
 import styles from './selectable-demographics-banner/SelectableDemographicsBanner.module.scss';
@@ -20,10 +19,6 @@ const propTypes = {
    * Application content to display in the banner.
    */
   applicationContent: PropTypes.node,
-  /**
-   * Avatar to display in the banner. `photo` prop will be ignored if avatar is used.
-   */
-  avatar: PropTypes.shape(DemographicsBannerUtils.avatarShape),
   /**
    * The person's date of birth.
    */
@@ -79,6 +74,10 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
+   * URL of photo to display in the banner.
+   */
+  photo: PropTypes.string,
+  /**
    * The column layout in which to present the displays.
    */
   postMenstrualAge: PropTypes.string,
@@ -100,7 +99,6 @@ const defaultProps = {
 const SelectableDemographicsBanner = ({
   age,
   applicationContent,
-  avatar,
   dateOfBirth,
   deceasedDate,
   gender,
@@ -112,6 +110,7 @@ const SelectableDemographicsBanner = ({
   onClick,
   onMouseDown,
   personName,
+  photo,
   postMenstrualAge,
   preferredFirstName,
   ...customProps
@@ -171,7 +170,6 @@ const SelectableDemographicsBanner = ({
         <DemographicsBanner
           age={age}
           applicationContent={applicationContent}
-          avatar={avatar}
           className={cx('selectable-demographics-banner')}
           dateOfBirth={dateOfBirth}
           deceasedDate={deceasedDate}
@@ -183,6 +181,7 @@ const SelectableDemographicsBanner = ({
           isSelectable
           isActive={isActive}
           personName={personName}
+          photo={photo}
           postMenstrualAge={postMenstrualAge}
           preferredFirstName={preferredFirstName}
         />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'terra-image';
 import SelectableDemographicsBanner from '../../../../SelectableDemographicsBanner';
 import demographicsImage from '../../../doc/assets/demographicsCat.jpg';
 
@@ -15,13 +16,6 @@ export default () => {
         id="populated-demographics-banner"
         applicationContent={<span>BW12N / RAD1232</span>}
         age="28 years"
-        avatar={{
-          alt: 'BARSTOWE, GEORGIA',
-          color: 'neutral',
-          image: demographicsImage,
-          initials: 'GB',
-          isAriaHidden: true,
-        }}
         dateOfBirth="07/12/1989"
         gestationalAge="April 11, 2020"
         postMenstrualAge="May 13, 2020"
@@ -41,6 +35,7 @@ export default () => {
         ]}
         isConfidential
         personName="BARSTOWE, GEORGIA"
+        photo={<Image alt="My Cat" src={demographicsImage} />}
         preferredFirstName="Geo"
         onClick={handleDemographicsClick}
       />

@@ -8,14 +8,6 @@ it('renders large banner that contains all valid information', () => {
   const banner = shallowWithIntl(<LargeDemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
-    avatar={{
-      alt: 'Johnathon Doe',
-      color: 'neutral',
-      hashValue: 'alternative hash',
-      image: '',
-      initials: 'JD',
-      isAriaHidden: true,
-    }}
     dateOfBirth="May 9, 1993"
     gender="Male"
     identifiers={[
@@ -30,6 +22,7 @@ it('renders large banner that contains all valid information', () => {
         identifierAria: 'R E A 3JSDA',
       },
     ]}
+    photo=""
     personName="Johnathon Doe"
     preferredFirstName="John"
     dateOfBirthLabel="DOB"

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'terra-image';
 import DemographicsBanner from '../../../DemographicsBanner';
 import demographicsImage from '../../doc/assets/demographicsCat.jpg';
 
@@ -7,13 +8,6 @@ export default () => (
     id="populated-demographics"
     applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
     age="27 Years"
-    avatar={{
-      alt: 'Johnathon Doe',
-      color: 'neutral',
-      image: demographicsImage,
-      initials: 'JD',
-      isAriaHidden: true,
-    }}
     dateOfBirth="May 9, 1993"
     gestationalAge="April 11, 2020"
     postMenstrualAge="May 13, 2020"
@@ -33,6 +27,7 @@ export default () => (
     ]}
     isConfidential
     personName="Johnathon Doe"
+    photo={<Image alt="My Cat" src={demographicsImage} />}
     preferredFirstName="John"
   />
 );

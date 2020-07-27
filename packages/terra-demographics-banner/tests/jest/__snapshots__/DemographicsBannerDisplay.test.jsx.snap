@@ -319,6 +319,7 @@ exports[`renders the banner appropriately for a person with gestational and post
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
+  photo=""
   postMenstrualAge="April 7, 2016"
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
@@ -390,6 +391,7 @@ exports[`renders the banner properly for a deceased person with additional appli
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
+  photo=""
   postMenstrualAge={null}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
@@ -461,87 +463,7 @@ exports[`renders the banner that contains additional information 1`] = `
   isConfidential={false}
   isSelectable={false}
   personName="Johnathon Doe"
-  postMenstrualAge={null}
-  postMenstrualAgeFullText="Post Menstrual Age"
-  postMenstrualAgeLabel="PMA"
-  preferredFirstName="John"
-/>
-`;
-
-exports[`renders the banner with avatar 1`] = `
-<DemographicsBannerDisplay
-  age="25 Years"
-  applicationContent={
-    <span
-      className="risk-score"
-    >
-      5%
-    </span>
-  }
-  avatar={
-    Object {
-      "alt": "Johnathon Doe",
-      "color": "neutral",
-      "hashValue": "alternative hash",
-      "image": "avatar",
-      "initials": "JD",
-      "isAriaHidden": true,
-    }
-  }
-  dateOfBirth="May 9, 1993"
-  dateOfBirthFullText="Date of Birth"
-  dateOfBirthLabel="DOB"
-  deceasedDate={null}
-  deceasedDateLabel="Deceased"
-  gender="Male"
-  gestationalAge={null}
-  gestationalAgeFullText="Gestational Age"
-  gestationalAgeLabel="GA"
-  identifiers={
-    Array [
-      Object {
-        "identifierAria": "MRN 1 2 3 4 5",
-        "label": "MRN",
-        "value": "12343",
-      },
-      Object {
-        "identifierAria": "R E A 3JSDA",
-        "label": "REA",
-        "value": "3JSDA",
-      },
-    ]
-  }
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isActive={false}
-  isConfidential={false}
-  isSelectable={false}
-  personName="Johnathon Doe"
+  photo=""
   postMenstrualAge={null}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"

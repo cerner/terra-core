@@ -13,7 +13,7 @@
     padding: var(--terra-demographics-banner-padding, 0.714em 0 0.714em 0.714em);
   }
 
-  .profile-avatar {
+  .profile-photo {
     flex-shrink: 0;
     height: var(--terra-demographics-banner-profile-photo-height, 3.5714em);
     margin: var(--terra-demographics-banner-profile-photo-margin);
@@ -81,6 +81,10 @@
     background-image: var(--terra-demographics-banner-deceased-background-image);
     color: var(--terra-demographics-banner-deceased-color, #fff);
 
+    .profile-photo {
+      opacity: var(--terra-demographics-banner-deceased-profile-photo-opacity, 0.7);
+    }
+    
     .info-tile-container {
       box-shadow: var(--terra-demographics-banner-deceased-info-tile-container-box-shadow, inset 1px 0 0 0 rgba(0, 0, 0, 0.8), inset 2px 0 0 0 rgba(255, 255, 255, 0.3));
     }

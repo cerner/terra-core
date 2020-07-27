@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'terra-image';
 import SelectableDemographicsBanner from '../../../../SelectableDemographicsBanner';
 import demographicsImage from '../../../doc/assets/demographicsCat.jpg';
 
@@ -15,13 +16,6 @@ export default () => {
         id="post-menstrual-demographics-banner"
         applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
         age="27 Years"
-        avatar={{
-          alt: 'Johnathon Doe',
-          color: 'neutral',
-          image: demographicsImage,
-          initials: 'JD',
-          isAriaHidden: true,
-        }}
         dateOfBirth="May 9, 1993"
         gender="M"
         genderAria="Male"
@@ -38,6 +32,7 @@ export default () => {
           },
         ]}
         personName="Johnathon Doe"
+        photo={<Image alt="My Cat" src={demographicsImage} />}
         postMenstrualAge="May 13, 2020"
         preferredFirstName="John"
         onClick={handleDemographicsClick}

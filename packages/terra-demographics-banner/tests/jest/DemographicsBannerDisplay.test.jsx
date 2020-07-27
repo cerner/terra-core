@@ -37,6 +37,7 @@ it('renders the banner that contains additional information', () => {
         identifierAria: 'R E A 3JSDA',
       },
     ]}
+    photo=""
     personName="Johnathon Doe"
     preferredFirstName="John"
   />);
@@ -76,6 +77,7 @@ it('renders the banner appropriately for a person with gestational and post mens
         identifierAria: 'R E A 3JSDA',
       },
     ]}
+    photo=""
     personName="Johnathon Doe"
     postMenstrualAge="April 7, 2016"
     postMenstrualAgeLabel="PMA"
@@ -115,39 +117,7 @@ it('renders the banner properly for a deceased person with additional applicatio
       },
     ]}
     personName="Johnathon Doe"
-    preferredFirstName="John"
-  />);
-
-  expect(banner).toMatchSnapshot();
-});
-
-it('renders the banner with avatar', () => {
-  const banner = shallowWithIntl(<DemographicsBannerDisplay
-    applicationContent={<span className="risk-score">5%</span>}
-    age="25 Years"
-    avatar={{
-      alt: 'Johnathon Doe',
-      color: 'neutral',
-      hashValue: 'alternative hash',
-      image: 'avatar',
-      initials: 'JD',
-      isAriaHidden: true,
-    }}
-    dateOfBirth="May 9, 1993"
-    gender="Male"
-    identifiers={[
-      {
-        label: 'MRN',
-        value: '12343',
-        identifierAria: 'MRN 1 2 3 4 5',
-      },
-      {
-        label: 'REA',
-        value: '3JSDA',
-        identifierAria: 'R E A 3JSDA',
-      },
-    ]}
-    personName="Johnathon Doe"
+    photo=""
     preferredFirstName="John"
   />);
 

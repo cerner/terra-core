@@ -5,7 +5,6 @@ import ResponsiveElement from 'terra-responsive-element';
 import './DemographicsBanner.module.scss';
 import SmallDemographicsBannerDisplay from './_SmallDemographicsBannerDisplay';
 import LargeDemographicsBannerDisplay from './_LargeDemographicsBannerDisplay';
-import DemographicsBannerUtils from './_sharedObjects';
 
 const propTypes = {
   /**
@@ -16,10 +15,6 @@ const propTypes = {
    * Application content to display in the banner.
    */
   applicationContent: PropTypes.node,
-  /**
-   * Avatar to display in the banner. `photo` prop will be ignored if avatar is used.
-   */
-  avatar: PropTypes.shape(DemographicsBannerUtils.avatarShape),
   /**
    * The persons date of birth
    */
@@ -97,6 +92,10 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
+   * Photo to display in the banner
+   */
+  photo: PropTypes.node,
+  /**
    * The column layout in which to present the displays.
    */
   postMenstrualAge: PropTypes.string,
@@ -117,7 +116,6 @@ const propTypes = {
 const defaultProps = {
   age: '',
   applicationContent: null,
-  avatar: undefined,
   dateOfBirth: '',
   dateOfBirthLabel: 'DOB',
   dateOfBirthFullText: 'Date of Birth',

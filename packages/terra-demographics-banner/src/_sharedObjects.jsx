@@ -1,6 +1,5 @@
 import classNames from 'classnames/bind';
 import React from 'react';
-import PropTypes from 'prop-types';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './DemographicsBanner.module.scss';
 
@@ -113,38 +112,9 @@ const infoTile = (props) => {
   );
 };
 
-const avatarShape = {
-  /**
-   * Specifies the alternative text for the photo.
-   */
-  alt: PropTypes.string.isRequired,
-  /**
-   * Sets the background color of the photo. Defaults to `auto`. Accepted color variants are theme specific.
-   * One of: `'auto'`, `'neutral'`, `'one'`, `'two'`, `'three'`, `'four'`, `'five'`, `'six'`, `'seven'`, `'eight'`, `'nine'`, `'ten'`.
-   */
-  color: PropTypes.oneOf(['auto', 'neutral', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']),
-  /**
-   * Value used for the hash function when color is set to `auto`. If not provided, hash function utilizes alt.
-   */
-  hashValue: PropTypes.string,
-  /**
-   * The image to display.
-   */
-  image: PropTypes.string,
-  /**
-   * One or two letters to display the initials in the photo.
-   */
-  initials: PropTypes.string.isRequired,
-  /**
-   * Whether to hide photo from the accessibility tree.
-   */
-  isAriaHidden: PropTypes.bool,
-};
-
 const DemographicsBannerUtils = {
   personDetails,
   applicationIdentifiers,
-  avatarShape,
   infoTile,
 };
 

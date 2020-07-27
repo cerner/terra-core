@@ -16,14 +16,6 @@ it('renders the banner wrapper with all props', () => {
       id="selectableDemographics"
       age="25 Years"
       applicationContent={<span className="risk-score">5%</span>}
-      avatar={{
-        alt: 'Johnathon Doe',
-        color: 'neutral',
-        hashValue: 'alternative hash',
-        image: '',
-        initials: 'JD',
-        isAriaHidden: true,
-      }}
       dateOfBirth="May 9, 1993"
       deceasedDate="January 10, 2020"
       gender="Male"
@@ -44,6 +36,7 @@ it('renders the banner wrapper with all props', () => {
       ]}
       isConfidential
       personName="Johnathon Doe"
+      photo=""
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
       onClick={onClickMock}

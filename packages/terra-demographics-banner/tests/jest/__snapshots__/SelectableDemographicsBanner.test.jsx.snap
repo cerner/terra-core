@@ -48,16 +48,6 @@ exports[`renders the banner wrapper with all props 1`] = `
           5%
         </span>
       }
-      avatar={
-        Object {
-          "alt": "Johnathon Doe",
-          "color": "neutral",
-          "hashValue": "alternative hash",
-          "image": "",
-          "initials": "JD",
-          "isAriaHidden": true,
-        }
-      }
       className="selectable-demographics-banner"
       dateOfBirth="May 9, 1993"
       deceasedDate="January 10, 2020"
@@ -82,6 +72,7 @@ exports[`renders the banner wrapper with all props 1`] = `
       isConfidential={true}
       isSelectable={true}
       personName="Johnathon Doe"
+      photo=""
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
     />

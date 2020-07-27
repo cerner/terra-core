@@ -6,12 +6,6 @@ export default () => (
     id="populated-demographics"
     applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
     age="27 Years"
-    avatar={{
-      alt: 'Johnathon Doe',
-      color: 'neutral',
-      initials: 'JD',
-      isAriaHidden: true,
-    }}
     dateOfBirth="May 9, 1993"
     gestationalAge="April 11, 2020"
     postMenstrualAge="May 13, 2020"

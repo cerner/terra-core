@@ -145,16 +145,6 @@ exports[`renders small banner that contains all valid information 1`] = `
       5%
     </span>
   }
-  avatar={
-    Object {
-      "alt": "Johnathon Doe",
-      "color": "neutral",
-      "hashValue": "alternative hash",
-      "image": "",
-      "initials": "JD",
-      "isAriaHidden": true,
-    }
-  }
   dateOfBirth="May 9, 1993"
   dateOfBirthLabel="DOB"
   deceasedDateLabel="Deceased"
@@ -202,6 +192,7 @@ exports[`renders small banner that contains all valid information 1`] = `
     }
   }
   personName="Johnathon Doe"
+  photo=""
   postMenstrualAgeLabel="PMA"
   preferredFirstName="John"
 />

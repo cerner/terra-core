@@ -14,7 +14,6 @@ const SmallDemographicsBannerDisplay = (props) => {
   const {
     age,
     applicationContent,
-    avatar,
     dateOfBirth,
     dateOfBirthFullText,
     dateOfBirthLabel,
@@ -31,6 +30,7 @@ const SmallDemographicsBannerDisplay = (props) => {
     isConfidential,
     isSelectable,
     personName,
+    photo,
     postMenstrualAge,
     postMenstrualAgeFullText,
     postMenstrualAgeLabel,

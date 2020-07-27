@@ -1,16 +1,12 @@
 import React from 'react';
+import Image from 'terra-image';
 import DemographicsBanner from 'terra-demographics-banner';
+import demographicsImage from '../assets/demographicsCat.jpg';
 
 const DemographicsBannerConfidential = () => (
   <DemographicsBanner
     applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
     age="25 Years"
-    avatar={{
-      alt: 'Johnathon Doe',
-      color: 'neutral',
-      initials: 'JD',
-      isAriaHidden: true,
-    }}
     dateOfBirth="May 9, 1993"
     gender="Male"
     identifiers={[
@@ -27,6 +23,7 @@ const DemographicsBannerConfidential = () => (
     ]}
     isConfidential
     personName="Johnathon Doe"
+    photo={<Image alt="My Cat" src={demographicsImage} />}
     preferredFirstName="John"
   />
 );

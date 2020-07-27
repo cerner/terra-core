@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
 import DemographicsBannerDisplay from './DemographicsBannerDisplay';
-import DemographicsBannerUtils from './_sharedObjects';
 
 const propTypes = {
   /**
@@ -13,10 +12,6 @@ const propTypes = {
    * Application content to display in the banner.
    */
   applicationContent: PropTypes.node,
-  /**
-   * Avatar to display in the banner. `photo` prop will be ignored if avatar is used.
-   */
-  avatar: PropTypes.shape(DemographicsBannerUtils.avatarShape),
   /**
    * The person's date of birth.
    */
@@ -74,6 +69,10 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
+   * Image Node to display photo in the banner or URL of photo to display in the banner.
+   */
+  photo: PropTypes.node,
+  /**
    * The column layout in which to present the displays.
    */
   postMenstrualAge: PropTypes.string,
@@ -86,7 +85,6 @@ const propTypes = {
 const defaultProps = {
   age: undefined,
   applicationContent: null,
-  avatar: undefined,
   dateOfBirth: undefined,
   deceasedDate: null,
   gender: undefined,
@@ -96,6 +94,7 @@ const defaultProps = {
   isConfidential: false,
   isSelectable: false,
   personName: undefined,
+  photo: null,
   postMenstrualAge: null,
   preferredFirstName: null,
 };

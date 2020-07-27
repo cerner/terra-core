@@ -13,14 +13,6 @@ it('renders the banner wrapper with all props', () => {
     <DemographicsBanner
       applicationContent={<span className="risk-score">5%</span>}
       age="25 Years"
-      avatar={{
-        alt: 'Johnathon Doe',
-        color: 'neutral',
-        hashValue: 'alternative hash',
-        image: '',
-        initials: 'JD',
-        isAriaHidden: true,
-      }}
       dateOfBirth="May 9, 1993"
       gender="Male"
       genderAria="Male"
@@ -38,6 +30,7 @@ it('renders the banner wrapper with all props', () => {
         },
       ]}
       isConfidential
+      photo=""
       personName="Johnathon Doe"
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"

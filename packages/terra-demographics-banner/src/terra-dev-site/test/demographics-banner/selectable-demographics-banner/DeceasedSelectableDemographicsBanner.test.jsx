@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'terra-image';
 import SelectableDemographicsBanner from '../../../../SelectableDemographicsBanner';
 import demographicsImage from '../../../doc/assets/demographicsCat.jpg';
 
@@ -15,13 +16,6 @@ export default () => {
         id="deceased-demographics-banner"
         applicationContent={<span className="risk-score">5%</span>}
         age="27 Years"
-        avatar={{
-          alt: 'Johnathon Doe',
-          color: 'neutral',
-          image: demographicsImage,
-          initials: 'JD',
-          isAriaHidden: true,
-        }}
         dateOfBirth="May 9, 1993"
         deceasedDate="March 12, 2020"
         gender="M"
@@ -39,6 +33,7 @@ export default () => {
           },
         ]}
         personName="Johnathon Doe"
+        photo={<Image alt="My Cat" src={demographicsImage} />}
         preferredFirstName="John"
         onClick={handleDemographicsClick}
       />

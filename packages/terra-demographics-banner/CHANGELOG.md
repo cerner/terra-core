@@ -4,13 +4,10 @@ ChangeLog
 Unreleased
 ----------
 ### Breaking Changes
-* `photo` prop is removed. It is replaced by the `avatar` prop.
 * `gender` prop is removed. It is replaced by the `sex` prop.
-* `--terra-demographics-banner-deceased-profile-photo-opacity` removed.
 
 ### Added 
 * Added selectable demographics banner.
-* Support terra-avatar to replace the `photo` prop.
 * Added flag icon to denote confidentiality.
 * Removed `--` as the fallback display when demographic details are not provided.
 

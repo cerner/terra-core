@@ -13,6 +13,7 @@ exports[`renders a blank banner wrapper 1`] = `
   isActive={false}
   isConfidential={false}
   isSelectable={false}
+  photo={null}
   postMenstrualAge={null}
   postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
   postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
@@ -29,16 +30,6 @@ exports[`renders the banner wrapper with all props 1`] = `
     >
       5%
     </span>
-  }
-  avatar={
-    Object {
-      "alt": "Johnathon Doe",
-      "color": "neutral",
-      "hashValue": "alternative hash",
-      "image": "",
-      "initials": "JD",
-      "isAriaHidden": true,
-    }
   }
   dateOfBirth="May 9, 1993"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
@@ -68,6 +59,7 @@ exports[`renders the banner wrapper with all props 1`] = `
   isConfidential={true}
   isSelectable={false}
   personName="Johnathon Doe"
+  photo=""
   postMenstrualAge="April 7, 2016"
   postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
   postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"

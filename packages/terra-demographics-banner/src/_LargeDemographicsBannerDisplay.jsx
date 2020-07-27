@@ -4,7 +4,6 @@ import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import Avatar from 'terra-avatar';
 import IconFlag from 'terra-icon/lib/icon/IconFlag';
 import styles from './DemographicsBanner.module.scss';
 import DemographicsBannerUtils from './_sharedObjects';
@@ -15,7 +14,6 @@ const LargeDemographicsBannerDisplay = (props) => {
   const {
     age,
     applicationContent,
-    avatar,
     dateOfBirth,
     dateOfBirthFullText,
     dateOfBirthLabel,
@@ -32,6 +30,7 @@ const LargeDemographicsBannerDisplay = (props) => {
     isConfidential,
     isSelectable,
     personName,
+    photo,
     postMenstrualAge,
     postMenstrualAgeFullText,
     postMenstrualAgeLabel,
@@ -55,30 +54,17 @@ const LargeDemographicsBannerDisplay = (props) => {
 
   delete customProps.className;
 
-  let profileAvatar;
-
-  if (avatar && avatar.alt && avatar.initials) {
-    profileAvatar = (
-      <Avatar
-        className={cx('profile-avatar')}
-        alt={avatar.alt}
-        color={avatar.color}
-        hashValue={avatar.hashValue}
-        image={avatar.image}
-        initials={avatar.initials}
-        isAriaHidden={avatar.isAriaHidden}
-        isDeceased={!!deceasedDate}
-      />
-    );
-  }
-
   return (
     <section
       {...customProps}
       className={mainClasses}
       tabIndex={-1}
     >
-      {profileAvatar}
+      {props.photo && (
+        <div className={cx('profile-photo')}>
+          {props.photo}
+        </div>
+      )}
       <div className={cx('content')}>
         <div className={cx('column')}>
           <h1 className={cx('person-name')}>
