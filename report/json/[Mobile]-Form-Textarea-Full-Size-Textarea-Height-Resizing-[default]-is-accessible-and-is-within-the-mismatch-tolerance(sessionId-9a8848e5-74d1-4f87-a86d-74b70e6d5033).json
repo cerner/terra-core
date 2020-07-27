@@ -1,0 +1,2098 @@
+{
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/84.0.4147.89 Safari/537.36",
+  "environment": {
+    "networkUserAgent": "",
+    "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/84.0.4147.89 Safari/537.36",
+    "benchmarkIndex": 1614
+  },
+  "lighthouseVersion": "6.1.1",
+  "fetchTime": "2020-07-24T13:54:48.575Z",
+  "requestedUrl": "http://192.168.225.234:8080/raw/tests/terra-form-textarea/form-textarea/full-textarea",
+  "finalUrl": "http://192.168.225.234:8080/raw/tests/terra-form-textarea/form-textarea/full-textarea",
+  "runWarnings": [
+    "Something went wrong with recording the trace over your page load. Please run Lighthouse again. (NO_FCP)"
+  ],
+  "runtimeError": {
+    "code": "NO_FCP",
+    "message": "Something went wrong with recording the trace over your page load. Please run Lighthouse again. (NO_FCP)"
+  },
+  "audits": {
+    "first-contentful-paint": {
+      "id": "first-contentful-paint",
+      "title": "First Contentful Paint",
+      "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more](https://web.dev/first-contentful-paint/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "largest-contentful-paint": {
+      "id": "largest-contentful-paint",
+      "title": "Largest Contentful Paint",
+      "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn More](https://web.dev/lighthouse-largest-contentful-paint/)",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "first-meaningful-paint": {
+      "id": "first-meaningful-paint",
+      "title": "First Meaningful Paint",
+      "description": "First Meaningful Paint measures when the primary content of a page is visible. [Learn more](https://web.dev/first-meaningful-paint/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "speed-index": {
+      "id": "speed-index",
+      "title": "Speed Index",
+      "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more](https://web.dev/speed-index/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "screenshot-thumbnails": {
+      "id": "screenshot-thumbnails",
+      "title": "Screenshot Thumbnails",
+      "description": "This is what the load of your site looked like.",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "final-screenshot": {
+      "id": "final-screenshot",
+      "title": "Final Screenshot",
+      "description": "The last screenshot captured of the pageload.",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "estimated-input-latency": {
+      "id": "estimated-input-latency",
+      "title": "Estimated Input Latency",
+      "description": "Estimated Input Latency is an estimate of how long your app takes to respond to user input, in milliseconds, during the busiest 5s window of page load. If your latency is higher than 50 ms, users may perceive your app as laggy. [Learn more](https://web.dev/estimated-input-latency/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "total-blocking-time": {
+      "id": "total-blocking-time",
+      "title": "Total Blocking Time",
+      "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more](https://web.dev/lighthouse-total-blocking-time/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "max-potential-fid": {
+      "id": "max-potential-fid",
+      "title": "Max Potential First Input Delay",
+      "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more](https://web.dev/lighthouse-max-potential-fid/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "cumulative-layout-shift": {
+      "id": "cumulative-layout-shift",
+      "title": "Cumulative Layout Shift",
+      "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more](https://web.dev/cls/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "server-response-time": {
+      "id": "server-response-time",
+      "title": "Initial server response time was short",
+      "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more](https://web.dev/time-to-first-byte/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "first-cpu-idle": {
+      "id": "first-cpu-idle",
+      "title": "First CPU Idle",
+      "description": "First CPU Idle marks the first time at which the page's main thread is quiet enough to handle input.  [Learn more](https://web.dev/first-cpu-idle/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "interactive": {
+      "id": "interactive",
+      "title": "Time to Interactive",
+      "description": "Time to interactive is the amount of time it takes for the page to become fully interactive. [Learn more](https://web.dev/interactive/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "user-timings": {
+      "id": "user-timings",
+      "title": "User Timing marks and measures",
+      "description": "Consider instrumenting your app with the User Timing API to measure your app's real-world performance during key user experiences. [Learn more](https://web.dev/user-timings/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "critical-request-chains": {
+      "id": "critical-request-chains",
+      "title": "Avoid chaining critical requests",
+      "description": "The Critical Request Chains below show you what resources are loaded with a high priority. Consider reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load. [Learn more](https://web.dev/critical-request-chains/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "redirects": {
+      "id": "redirects",
+      "title": "Avoid multiple page redirects",
+      "description": "Redirects introduce additional delays before the page can be loaded. [Learn more](https://web.dev/redirects/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "mainthread-work-breakdown": {
+      "id": "mainthread-work-breakdown",
+      "title": "Minimizes main-thread work",
+      "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn more](https://web.dev/mainthread-work-breakdown/)",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "bootup-time": {
+      "id": "bootup-time",
+      "title": "JavaScript execution time",
+      "description": "Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. [Learn more](https://web.dev/bootup-time/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "uses-rel-preload": {
+      "id": "uses-rel-preload",
+      "title": "Preload key requests",
+      "description": "Consider using `<link rel=preload>` to prioritize fetching resources that are currently requested later in page load. [Learn more](https://web.dev/uses-rel-preload/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "uses-rel-preconnect": {
+      "id": "uses-rel-preconnect",
+      "title": "Preconnect to required origins",
+      "description": "Consider adding `preconnect` or `dns-prefetch` resource hints to establish early connections to important third-party origins. [Learn more](https://web.dev/uses-rel-preconnect/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "font-display": {
+      "id": "font-display",
+      "title": "All text remains visible during webfont loads",
+      "description": "Leverage the font-display CSS feature to ensure text is user-visible while webfonts are loading. [Learn more](https://web.dev/font-display/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "diagnostics": {
+      "id": "diagnostics",
+      "title": "Diagnostics",
+      "description": "Collection of useful page vitals.",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "network-requests": {
+      "id": "network-requests",
+      "title": "Network Requests",
+      "description": "Lists the network requests that were made during page load.",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "network-rtt": {
+      "id": "network-rtt",
+      "title": "Network Round Trip Times",
+      "description": "Network round trip times (RTT) have a large impact on performance. If the RTT to an origin is high, it's an indication that servers closer to the user could improve performance. [Learn more](https://hpbn.co/primer-on-latency-and-bandwidth/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "network-server-latency": {
+      "id": "network-server-latency",
+      "title": "Server Backend Latencies",
+      "description": "Server latencies can impact web performance. If the server latency of an origin is high, it's an indication the server is overloaded or has poor backend performance. [Learn more](https://hpbn.co/primer-on-web-performance/#analyzing-the-resource-waterfall).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "main-thread-tasks": {
+      "id": "main-thread-tasks",
+      "title": "Tasks",
+      "description": "Lists the toplevel main thread tasks that executed during page load.",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "metrics": {
+      "id": "metrics",
+      "title": "Metrics",
+      "description": "Collects all available metrics.",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "performance-budget": {
+      "id": "performance-budget",
+      "title": "Performance budget",
+      "description": "Keep the quantity and size of network requests under the targets set by the provided performance budget. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/budgets).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "timing-budget": {
+      "id": "timing-budget",
+      "title": "Timing budget",
+      "description": "Set a timing budget to help you keep an eye on the performance of your site. Performant sites load fast and respond to user input events quickly. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/budgets).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "resource-summary": {
+      "id": "resource-summary",
+      "title": "Keep request counts low and transfer sizes small",
+      "description": "To set budgets for the quantity and size of page resources, add a budget.json file. [Learn more](https://web.dev/use-lighthouse-for-performance-budgets/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "third-party-summary": {
+      "id": "third-party-summary",
+      "title": "Minimize third-party usage",
+      "description": "Third-party code can significantly impact load performance. Limit the number of redundant third-party providers and try to load third-party code after your page has primarily finished loading. [Learn more](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "largest-contentful-paint-element": {
+      "id": "largest-contentful-paint-element",
+      "title": "Largest Contentful Paint element",
+      "description": "This is the largest contentful element painted within the viewport. [Learn More](https://web.dev/lighthouse-largest-contentful-paint/)",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "layout-shift-elements": {
+      "id": "layout-shift-elements",
+      "title": "Avoid large layout shifts",
+      "description": "These DOM elements contribute most to the CLS of the page.",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required TraceElements gatherer did not run."
+    },
+    "long-tasks": {
+      "id": "long-tasks",
+      "title": "Avoid long main-thread tasks",
+      "description": "Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. [Learn more](https://web.dev/long-tasks-devtools/)",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required traces gatherer did not run."
+    },
+    "uses-long-cache-ttl": {
+      "id": "uses-long-cache-ttl",
+      "title": "Uses efficient cache policy on static assets",
+      "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "total-byte-weight": {
+      "id": "total-byte-weight",
+      "title": "Avoids enormous network payloads",
+      "description": "Large network payloads cost users real money and are highly correlated with long load times. [Learn more](https://web.dev/total-byte-weight/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "offscreen-images": {
+      "id": "offscreen-images",
+      "title": "Defer offscreen images",
+      "description": "Consider lazy-loading offscreen and hidden images after all critical resources have finished loading to lower time to interactive. [Learn more](https://web.dev/offscreen-images/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required ImageElements gatherer did not run."
+    },
+    "render-blocking-resources": {
+      "id": "render-blocking-resources",
+      "title": "Eliminate render-blocking resources",
+      "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn more](https://web.dev/render-blocking-resources/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required TagsBlockingFirstPaint gatherer did not run."
+    },
+    "unminified-css": {
+      "id": "unminified-css",
+      "title": "Minify CSS",
+      "description": "Minifying CSS files can reduce network payload sizes. [Learn more](https://web.dev/unminified-css/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required CSSUsage gatherer did not run."
+    },
+    "unminified-javascript": {
+      "id": "unminified-javascript",
+      "title": "Minify JavaScript",
+      "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn more](https://web.dev/unminified-javascript/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required ScriptElements gatherer did not run."
+    },
+    "unused-css-rules": {
+      "id": "unused-css-rules",
+      "title": "Remove unused CSS",
+      "description": "Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity. [Learn more](https://web.dev/unused-css-rules/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required CSSUsage gatherer did not run."
+    },
+    "unused-javascript": {
+      "id": "unused-javascript",
+      "title": "Remove unused JavaScript",
+      "description": "Remove unused JavaScript to reduce bytes consumed by network activity. [Learn more](https://web.dev/remove-unused-code/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required JsUsage gatherer did not run."
+    },
+    "uses-webp-images": {
+      "id": "uses-webp-images",
+      "title": "Serve images in next-gen formats",
+      "description": "Image formats like JPEG 2000, JPEG XR, and WebP often provide better compression than PNG or JPEG, which means faster downloads and less data consumption. [Learn more](https://web.dev/uses-webp-images/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required OptimizedImages gatherer did not run."
+    },
+    "uses-optimized-images": {
+      "id": "uses-optimized-images",
+      "title": "Efficiently encode images",
+      "description": "Optimized images load faster and consume less cellular data. [Learn more](https://web.dev/uses-optimized-images/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required OptimizedImages gatherer did not run."
+    },
+    "uses-text-compression": {
+      "id": "uses-text-compression",
+      "title": "Enable text compression",
+      "description": "Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes. [Learn more](https://web.dev/uses-text-compression/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required ResponseCompression gatherer did not run."
+    },
+    "uses-responsive-images": {
+      "id": "uses-responsive-images",
+      "title": "Properly size images",
+      "description": "Serve images that are appropriately-sized to save cellular data and improve load time. [Learn more](https://web.dev/uses-responsive-images/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required ImageElements gatherer did not run."
+    },
+    "efficient-animated-content": {
+      "id": "efficient-animated-content",
+      "title": "Use video formats for animated content",
+      "description": "Large GIFs are inefficient for delivering animated content. Consider using MPEG4/WebM videos for animations and PNG/WebP for static images instead of GIF to save network bytes. [Learn more](https://web.dev/efficient-animated-content/)",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required devtoolsLogs gatherer did not run."
+    },
+    "dom-size": {
+      "id": "dom-size",
+      "title": "Avoids an excessive DOM size",
+      "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn more](https://web.dev/dom-size/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required DOMStats gatherer did not run."
+    },
+    "no-document-write": {
+      "id": "no-document-write",
+      "title": "Avoids `document.write()`",
+      "description": "For users on slow connections, external scripts dynamically injected via `document.write()` can delay page load by tens of seconds. [Learn more](https://web.dev/no-document-write/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required ConsoleMessages gatherer did not run."
+    },
+    "uses-passive-event-listeners": {
+      "id": "uses-passive-event-listeners",
+      "title": "Uses passive listeners to improve scrolling performance",
+      "description": "Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more](https://web.dev/uses-passive-event-listeners/).",
+      "score": null,
+      "scoreDisplayMode": "error",
+      "errorMessage": "Required ConsoleMessages gatherer did not run."
+    }
+  },
+  "configSettings": {
+    "output": "html",
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "throttlingMethod": "simulate",
+    "throttling": {
+      "rttMs": 40,
+      "throughputKbps": 10240,
+      "requestLatencyMs": 0,
+      "downloadThroughputKbps": 0,
+      "uploadThroughputKbps": 0,
+      "cpuSlowdownMultiplier": 1
+    },
+    "auditMode": false,
+    "gatherMode": false,
+    "disableStorageReset": false,
+    "emulatedFormFactor": "mobile",
+    "internalDisableDeviceScreenEmulation": false,
+    "channel": "node",
+    "budgets": null,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance"
+    ],
+    "skipAudits": [
+      "uses-http2"
+    ],
+    "useThrottling": true,
+    "recordTrace": true
+  },
+  "categories": {
+    "performance": {
+      "title": "Performance",
+      "auditRefs": [
+        {
+          "id": "first-contentful-paint",
+          "weight": 15,
+          "group": "metrics"
+        },
+        {
+          "id": "speed-index",
+          "weight": 15,
+          "group": "metrics"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "weight": 25,
+          "group": "metrics"
+        },
+        {
+          "id": "interactive",
+          "weight": 15,
+          "group": "metrics"
+        },
+        {
+          "id": "total-blocking-time",
+          "weight": 25,
+          "group": "metrics"
+        },
+        {
+          "id": "cumulative-layout-shift",
+          "weight": 5,
+          "group": "metrics"
+        },
+        {
+          "id": "first-cpu-idle",
+          "weight": 0
+        },
+        {
+          "id": "max-potential-fid",
+          "weight": 0
+        },
+        {
+          "id": "first-meaningful-paint",
+          "weight": 0
+        },
+        {
+          "id": "estimated-input-latency",
+          "weight": 0
+        },
+        {
+          "id": "render-blocking-resources",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "uses-responsive-images",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "offscreen-images",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "unminified-css",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "unminified-javascript",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "unused-css-rules",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "unused-javascript",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "uses-optimized-images",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "uses-webp-images",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "uses-text-compression",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "uses-rel-preconnect",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "server-response-time",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "redirects",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "uses-rel-preload",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "efficient-animated-content",
+          "weight": 0,
+          "group": "load-opportunities"
+        },
+        {
+          "id": "total-byte-weight",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "uses-long-cache-ttl",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "dom-size",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "critical-request-chains",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "user-timings",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "bootup-time",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "mainthread-work-breakdown",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "font-display",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "performance-budget",
+          "weight": 0,
+          "group": "budgets"
+        },
+        {
+          "id": "timing-budget",
+          "weight": 0,
+          "group": "budgets"
+        },
+        {
+          "id": "resource-summary",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "third-party-summary",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "largest-contentful-paint-element",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "layout-shift-elements",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "uses-passive-event-listeners",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "no-document-write",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "long-tasks",
+          "weight": 0,
+          "group": "diagnostics"
+        },
+        {
+          "id": "network-requests",
+          "weight": 0
+        },
+        {
+          "id": "network-rtt",
+          "weight": 0
+        },
+        {
+          "id": "network-server-latency",
+          "weight": 0
+        },
+        {
+          "id": "main-thread-tasks",
+          "weight": 0
+        },
+        {
+          "id": "diagnostics",
+          "weight": 0
+        },
+        {
+          "id": "metrics",
+          "weight": 0
+        },
+        {
+          "id": "screenshot-thumbnails",
+          "weight": 0
+        },
+        {
+          "id": "final-screenshot",
+          "weight": 0
+        }
+      ],
+      "id": "performance",
+      "score": null
+    }
+  },
+  "categoryGroups": {
+    "metrics": {
+      "title": "Metrics"
+    },
+    "load-opportunities": {
+      "title": "Opportunities",
+      "description": "These suggestions can help your page load faster. They don't [directly affect](https://web.dev/performance-scoring/) the Performance score."
+    },
+    "budgets": {
+      "title": "Budgets",
+      "description": "Performance budgets set standards for the performance of your site."
+    },
+    "diagnostics": {
+      "title": "Diagnostics",
+      "description": "More information about the performance of your application. These numbers don't [directly affect](https://web.dev/performance-scoring/) the Performance score."
+    },
+    "pwa-fast-reliable": {
+      "title": "Fast and reliable"
+    },
+    "pwa-installable": {
+      "title": "Installable"
+    },
+    "pwa-optimized": {
+      "title": "PWA Optimized"
+    },
+    "a11y-best-practices": {
+      "title": "Best practices",
+      "description": "These items highlight common accessibility best practices."
+    },
+    "a11y-color-contrast": {
+      "title": "Contrast",
+      "description": "These are opportunities to improve the legibility of your content."
+    },
+    "a11y-names-labels": {
+      "title": "Names and labels",
+      "description": "These are opportunities to improve the semantics of the controls in your application. This may enhance the experience for users of assistive technology, like a screen reader."
+    },
+    "a11y-navigation": {
+      "title": "Navigation",
+      "description": "These are opportunities to improve keyboard navigation in your application."
+    },
+    "a11y-aria": {
+      "title": "ARIA",
+      "description": "These are opportunities to improve the usage of ARIA in your application which may enhance the experience for users of assistive technology, like a screen reader."
+    },
+    "a11y-language": {
+      "title": "Internationalization and localization",
+      "description": "These are opportunities to improve the interpretation of your content by users in different locales."
+    },
+    "a11y-audio-video": {
+      "title": "Audio and video",
+      "description": "These are opportunities to provide alternative content for audio and video. This may improve the experience for users with hearing or vision impairments."
+    },
+    "a11y-tables-lists": {
+      "title": "Tables and lists",
+      "description": "These are opportunities to to improve the experience of reading tabular or list data using assistive technology, like a screen reader."
+    },
+    "seo-mobile": {
+      "title": "Mobile Friendly",
+      "description": "Make sure your pages are mobile friendly so users don’t have to pinch or zoom in order to read the content pages. [Learn more](https://developers.google.com/search/mobile-sites/)."
+    },
+    "seo-content": {
+      "title": "Content Best Practices",
+      "description": "Format your HTML in a way that enables crawlers to better understand your app’s content."
+    },
+    "seo-crawl": {
+      "title": "Crawling and Indexing",
+      "description": "To appear in search results, crawlers need access to your app."
+    },
+    "best-practices-trust-safety": {
+      "title": "Trust and Safety"
+    },
+    "best-practices-ux": {
+      "title": "User Experience"
+    },
+    "best-practices-browser-compat": {
+      "title": "Browser Compatibility"
+    },
+    "best-practices-general": {
+      "title": "General"
+    }
+  },
+  "timing": {
+    "entries": [
+      {
+        "startTime": 235943.49,
+        "name": "lh:init:config",
+        "duration": 28.51,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 235944.6,
+        "name": "lh:config:requireGatherers",
+        "duration": 1.05,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 235945.67,
+        "name": "lh:config:requireAudits",
+        "duration": 20.57,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 235972.06,
+        "name": "lh:runner:run",
+        "duration": 30803.36,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 235972.32,
+        "name": "lh:init:connect",
+        "duration": 6.72,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 235979.05,
+        "name": "lh:gather:loadBlank",
+        "duration": 70.65,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236049.71,
+        "name": "lh:gather:getVersion",
+        "duration": 0.26,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236050,
+        "name": "lh:gather:getBenchmarkIndex",
+        "duration": 503.76,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236553.77,
+        "name": "lh:gather:setupDriver",
+        "duration": 35.87,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236589.69,
+        "name": "lh:gather:runPass-defaultPass",
+        "duration": 30154.64,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236589.72,
+        "name": "lh:gather:loadBlank",
+        "duration": 8.11,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236597.85,
+        "name": "lh:gather:setupPassNetwork",
+        "duration": 1.16,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236599.03,
+        "name": "lh:driver:cleanBrowserCaches",
+        "duration": 12.25,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236611.29,
+        "name": "lh:gather:beforePass",
+        "duration": 7.37,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236611.32,
+        "name": "lh:gather:beforePass:CSSUsage",
+        "duration": 0.03,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236611.36,
+        "name": "lh:gather:beforePass:JsUsage",
+        "duration": 5.64,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236617.01,
+        "name": "lh:gather:beforePass:ViewportDimensions",
+        "duration": 0.03,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236617.04,
+        "name": "lh:gather:beforePass:ConsoleMessages",
+        "duration": 0.94,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618,
+        "name": "lh:gather:beforePass:ImageElements",
+        "duration": 0.02,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.02,
+        "name": "lh:gather:beforePass:LinkElements",
+        "duration": 0.01,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.04,
+        "name": "lh:gather:beforePass:ScriptElements",
+        "duration": 0.02,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.06,
+        "name": "lh:gather:beforePass:DOMStats",
+        "duration": 0.01,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.08,
+        "name": "lh:gather:beforePass:OptimizedImages",
+        "duration": 0.01,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.09,
+        "name": "lh:gather:beforePass:ResponseCompression",
+        "duration": 0.01,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.1,
+        "name": "lh:gather:beforePass:TagsBlockingFirstPaint",
+        "duration": 0.47,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.58,
+        "name": "lh:gather:beforePass:TraceElements",
+        "duration": 0.02,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.6,
+        "name": "lh:gather:beforePass:SourceMaps",
+        "duration": 0.05,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.66,
+        "name": "lh:gather:beginRecording",
+        "duration": 46.75,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236618.69,
+        "name": "lh:gather:getVersion",
+        "duration": 0.27,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 236665.43,
+        "name": "lh:gather:loadPage-defaultPass",
+        "duration": 30002.78,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266668.24,
+        "name": "lh:gather:pass",
+        "duration": 0.24,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266668.5,
+        "name": "lh:gather:getTrace",
+        "duration": 74.12,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266742.62,
+        "name": "lh:gather:getDevtoolsLog",
+        "duration": 0.42,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266744.34,
+        "name": "lh:gather:disconnect",
+        "duration": 11.85,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266756.23,
+        "name": "lh:runner:auditing",
+        "duration": 19.03,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266756.49,
+        "name": "lh:audit:first-contentful-paint",
+        "duration": 0.22,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266756.85,
+        "name": "lh:audit:largest-contentful-paint",
+        "duration": 0.17,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266757.19,
+        "name": "lh:audit:first-meaningful-paint",
+        "duration": 0.14,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266757.44,
+        "name": "lh:audit:speed-index",
+        "duration": 0.13,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266757.58,
+        "name": "lh:audit:screenshot-thumbnails",
+        "duration": 0.04,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266757.64,
+        "name": "lh:audit:final-screenshot",
+        "duration": 0.04,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266757.8,
+        "name": "lh:audit:estimated-input-latency",
+        "duration": 0.13,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266758.06,
+        "name": "lh:audit:total-blocking-time",
+        "duration": 0.14,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266758.32,
+        "name": "lh:audit:max-potential-fid",
+        "duration": 0.14,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266758.57,
+        "name": "lh:audit:cumulative-layout-shift",
+        "duration": 0.15,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266758.87,
+        "name": "lh:audit:server-response-time",
+        "duration": 0.99,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266760.05,
+        "name": "lh:audit:first-cpu-idle",
+        "duration": 0.18,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266760.35,
+        "name": "lh:audit:interactive",
+        "duration": 0.14,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266760.62,
+        "name": "lh:audit:user-timings",
+        "duration": 0.14,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266760.87,
+        "name": "lh:audit:critical-request-chains",
+        "duration": 0.14,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266761.13,
+        "name": "lh:audit:redirects",
+        "duration": 0.15,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266761.41,
+        "name": "lh:audit:mainthread-work-breakdown",
+        "duration": 0.18,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266761.71,
+        "name": "lh:audit:bootup-time",
+        "duration": 0.17,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266762,
+        "name": "lh:audit:uses-rel-preload",
+        "duration": 1.24,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266763.42,
+        "name": "lh:audit:uses-rel-preconnect",
+        "duration": 0.19,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266763.8,
+        "name": "lh:audit:font-display",
+        "duration": 0.25,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266764.06,
+        "name": "lh:audit:diagnostics",
+        "duration": 0.06,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266764.13,
+        "name": "lh:audit:network-requests",
+        "duration": 0.06,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266764.35,
+        "name": "lh:audit:network-rtt",
+        "duration": 0.17,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266764.66,
+        "name": "lh:audit:network-server-latency",
+        "duration": 0.17,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266764.84,
+        "name": "lh:audit:main-thread-tasks",
+        "duration": 0.05,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266764.89,
+        "name": "lh:audit:metrics",
+        "duration": 0.05,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266765.07,
+        "name": "lh:audit:performance-budget",
+        "duration": 0.16,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266765.35,
+        "name": "lh:audit:timing-budget",
+        "duration": 0.16,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266765.67,
+        "name": "lh:audit:resource-summary",
+        "duration": 0.16,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266765.97,
+        "name": "lh:audit:third-party-summary",
+        "duration": 0.2,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266766.64,
+        "name": "lh:audit:largest-contentful-paint-element",
+        "duration": 0.17,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266766.95,
+        "name": "lh:audit:layout-shift-elements",
+        "duration": 0.18,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266767.25,
+        "name": "lh:audit:long-tasks",
+        "duration": 0.15,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266767.57,
+        "name": "lh:audit:uses-long-cache-ttl",
+        "duration": 0.22,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266767.94,
+        "name": "lh:audit:total-byte-weight",
+        "duration": 0.5,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266768.66,
+        "name": "lh:audit:offscreen-images",
+        "duration": 0.23,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266769.2,
+        "name": "lh:audit:render-blocking-resources",
+        "duration": 0.3,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266769.65,
+        "name": "lh:audit:unminified-css",
+        "duration": 0.2,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266770,
+        "name": "lh:audit:unminified-javascript",
+        "duration": 0.59,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266770.73,
+        "name": "lh:audit:unused-css-rules",
+        "duration": 0.21,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266771.07,
+        "name": "lh:audit:unused-javascript",
+        "duration": 0.2,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266771.41,
+        "name": "lh:audit:uses-webp-images",
+        "duration": 0.2,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266771.74,
+        "name": "lh:audit:uses-optimized-images",
+        "duration": 0.19,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266772.06,
+        "name": "lh:audit:uses-text-compression",
+        "duration": 0.21,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266772.52,
+        "name": "lh:audit:uses-responsive-images",
+        "duration": 0.19,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266772.86,
+        "name": "lh:audit:efficient-animated-content",
+        "duration": 0.34,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266773.88,
+        "name": "lh:audit:dom-size",
+        "duration": 0.27,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266774.57,
+        "name": "lh:audit:no-document-write",
+        "duration": 0.27,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266775,
+        "name": "lh:audit:uses-passive-event-listeners",
+        "duration": 0.26,
+        "entryType": "measure"
+      },
+      {
+        "startTime": 266775.27,
+        "name": "lh:runner:generate",
+        "duration": 0.14,
+        "entryType": "measure"
+      }
+    ],
+    "total": 30803.36
+  },
+  "i18n": {
+    "rendererFormattedStrings": {
+      "auditGroupExpandTooltip": "Show audits",
+      "calculatorLink": "See calculator.",
+      "crcInitialNavigation": "Initial Navigation",
+      "crcLongestDurationLabel": "Maximum critical path latency:",
+      "dropdownCopyJSON": "Copy JSON",
+      "dropdownDarkTheme": "Toggle Dark Theme",
+      "dropdownPrintExpanded": "Print Expanded",
+      "dropdownPrintSummary": "Print Summary",
+      "dropdownSaveGist": "Save as Gist",
+      "dropdownSaveHTML": "Save as HTML",
+      "dropdownSaveJSON": "Save as JSON",
+      "dropdownViewer": "Open in Viewer",
+      "errorLabel": "Error!",
+      "errorMissingAuditInfo": "Report error: no audit information",
+      "footerIssue": "File an issue",
+      "labDataTitle": "Lab Data",
+      "lsPerformanceCategoryDescription": "[Lighthouse](https://developers.google.com/web/tools/lighthouse/) analysis of the current page on an emulated mobile network. Values are estimated and may vary.",
+      "manualAuditsGroupTitle": "Additional items to manually check",
+      "notApplicableAuditsGroupTitle": "Not applicable",
+      "opportunityResourceColumnLabel": "Opportunity",
+      "opportunitySavingsColumnLabel": "Estimated Savings",
+      "passedAuditsGroupTitle": "Passed audits",
+      "runtimeDesktopEmulation": "Emulated Desktop",
+      "runtimeMobileEmulation": "Emulated Moto G4",
+      "runtimeNoEmulation": "No emulation",
+      "runtimeSettingsBenchmark": "CPU/Memory Power",
+      "runtimeSettingsChannel": "Channel",
+      "runtimeSettingsCPUThrottling": "CPU throttling",
+      "runtimeSettingsDevice": "Device",
+      "runtimeSettingsFetchTime": "Fetch Time",
+      "runtimeSettingsNetworkThrottling": "Network throttling",
+      "runtimeSettingsTitle": "Runtime Settings",
+      "runtimeSettingsUA": "User agent (host)",
+      "runtimeSettingsUANetwork": "User agent (network)",
+      "runtimeSettingsUrl": "URL",
+      "runtimeUnknown": "Unknown",
+      "snippetCollapseButtonLabel": "Collapse snippet",
+      "snippetExpandButtonLabel": "Expand snippet",
+      "thirdPartyResourcesLabel": "Show 3rd-party resources",
+      "throttlingProvided": "Provided by environment",
+      "toplevelWarningsMessage": "There were issues affecting this run of Lighthouse:",
+      "varianceDisclaimer": "Values are estimated and may vary. The [performance score is calculated](https://web.dev/performance-scoring/) directly from these metrics.",
+      "warningAuditsGroupTitle": "Passed audits but with warnings",
+      "warningHeader": "Warnings: "
+    },
+    "icuMessagePaths": {
+      "lighthouse-core/lib/lh-error.js | badTraceRecording": [
+        {
+          "values": {
+            "errorCode": "NO_FCP"
+          },
+          "path": "runWarnings[0]"
+        },
+        {
+          "values": {
+            "errorCode": "NO_FCP"
+          },
+          "path": "runtimeError.message"
+        }
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | firstContentfulPaintMetric": [
+        "audits[first-contentful-paint].title"
+      ],
+      "lighthouse-core/audits/metrics/first-contentful-paint.js | description": [
+        "audits[first-contentful-paint].description"
+      ],
+      "lighthouse-core/lib/lh-error.js | missingRequiredArtifact": [
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[first-contentful-paint].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[largest-contentful-paint].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[first-meaningful-paint].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[speed-index].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[screenshot-thumbnails].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[final-screenshot].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[estimated-input-latency].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[total-blocking-time].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[max-potential-fid].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[cumulative-layout-shift].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[server-response-time].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[first-cpu-idle].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits.interactive.errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[user-timings].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[critical-request-chains].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits.redirects.errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[mainthread-work-breakdown].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[bootup-time].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[uses-rel-preload].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[uses-rel-preconnect].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[font-display].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits.diagnostics.errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[network-requests].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[network-rtt].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[network-server-latency].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[main-thread-tasks].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits.metrics.errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[performance-budget].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[timing-budget].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[resource-summary].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[third-party-summary].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[largest-contentful-paint-element].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "TraceElements"
+          },
+          "path": "audits[layout-shift-elements].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "traces"
+          },
+          "path": "audits[long-tasks].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[uses-long-cache-ttl].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[total-byte-weight].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "ImageElements"
+          },
+          "path": "audits[offscreen-images].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "TagsBlockingFirstPaint"
+          },
+          "path": "audits[render-blocking-resources].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "CSSUsage"
+          },
+          "path": "audits[unminified-css].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "ScriptElements"
+          },
+          "path": "audits[unminified-javascript].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "CSSUsage"
+          },
+          "path": "audits[unused-css-rules].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "JsUsage"
+          },
+          "path": "audits[unused-javascript].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "OptimizedImages"
+          },
+          "path": "audits[uses-webp-images].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "OptimizedImages"
+          },
+          "path": "audits[uses-optimized-images].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "ResponseCompression"
+          },
+          "path": "audits[uses-text-compression].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "ImageElements"
+          },
+          "path": "audits[uses-responsive-images].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "devtoolsLogs"
+          },
+          "path": "audits[efficient-animated-content].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "DOMStats"
+          },
+          "path": "audits[dom-size].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "ConsoleMessages"
+          },
+          "path": "audits[no-document-write].errorMessage"
+        },
+        {
+          "values": {
+            "errorCode": "MISSING_REQUIRED_ARTIFACT",
+            "artifactName": "ConsoleMessages"
+          },
+          "path": "audits[uses-passive-event-listeners].errorMessage"
+        }
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | largestContentfulPaintMetric": [
+        "audits[largest-contentful-paint].title"
+      ],
+      "lighthouse-core/audits/metrics/largest-contentful-paint.js | description": [
+        "audits[largest-contentful-paint].description"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | firstMeaningfulPaintMetric": [
+        "audits[first-meaningful-paint].title"
+      ],
+      "lighthouse-core/audits/metrics/first-meaningful-paint.js | description": [
+        "audits[first-meaningful-paint].description"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | speedIndexMetric": [
+        "audits[speed-index].title"
+      ],
+      "lighthouse-core/audits/metrics/speed-index.js | description": [
+        "audits[speed-index].description"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | estimatedInputLatencyMetric": [
+        "audits[estimated-input-latency].title"
+      ],
+      "lighthouse-core/audits/metrics/estimated-input-latency.js | description": [
+        "audits[estimated-input-latency].description"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | totalBlockingTimeMetric": [
+        "audits[total-blocking-time].title"
+      ],
+      "lighthouse-core/audits/metrics/total-blocking-time.js | description": [
+        "audits[total-blocking-time].description"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | maxPotentialFIDMetric": [
+        "audits[max-potential-fid].title"
+      ],
+      "lighthouse-core/audits/metrics/max-potential-fid.js | description": [
+        "audits[max-potential-fid].description"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | cumulativeLayoutShiftMetric": [
+        "audits[cumulative-layout-shift].title"
+      ],
+      "lighthouse-core/audits/metrics/cumulative-layout-shift.js | description": [
+        "audits[cumulative-layout-shift].description"
+      ],
+      "lighthouse-core/audits/server-response-time.js | title": [
+        "audits[server-response-time].title"
+      ],
+      "lighthouse-core/audits/server-response-time.js | description": [
+        "audits[server-response-time].description"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | firstCPUIdleMetric": [
+        "audits[first-cpu-idle].title"
+      ],
+      "lighthouse-core/audits/metrics/first-cpu-idle.js | description": [
+        "audits[first-cpu-idle].description"
+      ],
+      "lighthouse-core/lib/i18n/i18n.js | interactiveMetric": [
+        "audits.interactive.title"
+      ],
+      "lighthouse-core/audits/metrics/interactive.js | description": [
+        "audits.interactive.description"
+      ],
+      "lighthouse-core/audits/user-timings.js | title": [
+        "audits[user-timings].title"
+      ],
+      "lighthouse-core/audits/user-timings.js | description": [
+        "audits[user-timings].description"
+      ],
+      "lighthouse-core/audits/critical-request-chains.js | title": [
+        "audits[critical-request-chains].title"
+      ],
+      "lighthouse-core/audits/critical-request-chains.js | description": [
+        "audits[critical-request-chains].description"
+      ],
+      "lighthouse-core/audits/redirects.js | title": [
+        "audits.redirects.title"
+      ],
+      "lighthouse-core/audits/redirects.js | description": [
+        "audits.redirects.description"
+      ],
+      "lighthouse-core/audits/mainthread-work-breakdown.js | title": [
+        "audits[mainthread-work-breakdown].title"
+      ],
+      "lighthouse-core/audits/mainthread-work-breakdown.js | description": [
+        "audits[mainthread-work-breakdown].description"
+      ],
+      "lighthouse-core/audits/bootup-time.js | title": [
+        "audits[bootup-time].title"
+      ],
+      "lighthouse-core/audits/bootup-time.js | description": [
+        "audits[bootup-time].description"
+      ],
+      "lighthouse-core/audits/uses-rel-preload.js | title": [
+        "audits[uses-rel-preload].title"
+      ],
+      "lighthouse-core/audits/uses-rel-preload.js | description": [
+        "audits[uses-rel-preload].description"
+      ],
+      "lighthouse-core/audits/uses-rel-preconnect.js | title": [
+        "audits[uses-rel-preconnect].title"
+      ],
+      "lighthouse-core/audits/uses-rel-preconnect.js | description": [
+        "audits[uses-rel-preconnect].description"
+      ],
+      "lighthouse-core/audits/font-display.js | title": [
+        "audits[font-display].title"
+      ],
+      "lighthouse-core/audits/font-display.js | description": [
+        "audits[font-display].description"
+      ],
+      "lighthouse-core/audits/network-rtt.js | title": [
+        "audits[network-rtt].title"
+      ],
+      "lighthouse-core/audits/network-rtt.js | description": [
+        "audits[network-rtt].description"
+      ],
+      "lighthouse-core/audits/network-server-latency.js | title": [
+        "audits[network-server-latency].title"
+      ],
+      "lighthouse-core/audits/network-server-latency.js | description": [
+        "audits[network-server-latency].description"
+      ],
+      "lighthouse-core/audits/performance-budget.js | title": [
+        "audits[performance-budget].title"
+      ],
+      "lighthouse-core/audits/performance-budget.js | description": [
+        "audits[performance-budget].description"
+      ],
+      "lighthouse-core/audits/timing-budget.js | title": [
+        "audits[timing-budget].title"
+      ],
+      "lighthouse-core/audits/timing-budget.js | description": [
+        "audits[timing-budget].description"
+      ],
+      "lighthouse-core/audits/resource-summary.js | title": [
+        "audits[resource-summary].title"
+      ],
+      "lighthouse-core/audits/resource-summary.js | description": [
+        "audits[resource-summary].description"
+      ],
+      "lighthouse-core/audits/third-party-summary.js | title": [
+        "audits[third-party-summary].title"
+      ],
+      "lighthouse-core/audits/third-party-summary.js | description": [
+        "audits[third-party-summary].description"
+      ],
+      "lighthouse-core/audits/largest-contentful-paint-element.js | title": [
+        "audits[largest-contentful-paint-element].title"
+      ],
+      "lighthouse-core/audits/largest-contentful-paint-element.js | description": [
+        "audits[largest-contentful-paint-element].description"
+      ],
+      "lighthouse-core/audits/layout-shift-elements.js | title": [
+        "audits[layout-shift-elements].title"
+      ],
+      "lighthouse-core/audits/layout-shift-elements.js | description": [
+        "audits[layout-shift-elements].description"
+      ],
+      "lighthouse-core/audits/long-tasks.js | title": [
+        "audits[long-tasks].title"
+      ],
+      "lighthouse-core/audits/long-tasks.js | description": [
+        "audits[long-tasks].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-long-cache-ttl.js | title": [
+        "audits[uses-long-cache-ttl].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-long-cache-ttl.js | description": [
+        "audits[uses-long-cache-ttl].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/total-byte-weight.js | title": [
+        "audits[total-byte-weight].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/total-byte-weight.js | description": [
+        "audits[total-byte-weight].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/offscreen-images.js | title": [
+        "audits[offscreen-images].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/offscreen-images.js | description": [
+        "audits[offscreen-images].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/render-blocking-resources.js | title": [
+        "audits[render-blocking-resources].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/render-blocking-resources.js | description": [
+        "audits[render-blocking-resources].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/unminified-css.js | title": [
+        "audits[unminified-css].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/unminified-css.js | description": [
+        "audits[unminified-css].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/unminified-javascript.js | title": [
+        "audits[unminified-javascript].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/unminified-javascript.js | description": [
+        "audits[unminified-javascript].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/unused-css-rules.js | title": [
+        "audits[unused-css-rules].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/unused-css-rules.js | description": [
+        "audits[unused-css-rules].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/unused-javascript.js | title": [
+        "audits[unused-javascript].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/unused-javascript.js | description": [
+        "audits[unused-javascript].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-webp-images.js | title": [
+        "audits[uses-webp-images].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-webp-images.js | description": [
+        "audits[uses-webp-images].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-optimized-images.js | title": [
+        "audits[uses-optimized-images].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-optimized-images.js | description": [
+        "audits[uses-optimized-images].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-text-compression.js | title": [
+        "audits[uses-text-compression].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-text-compression.js | description": [
+        "audits[uses-text-compression].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-responsive-images.js | title": [
+        "audits[uses-responsive-images].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/uses-responsive-images.js | description": [
+        "audits[uses-responsive-images].description"
+      ],
+      "lighthouse-core/audits/byte-efficiency/efficient-animated-content.js | title": [
+        "audits[efficient-animated-content].title"
+      ],
+      "lighthouse-core/audits/byte-efficiency/efficient-animated-content.js | description": [
+        "audits[efficient-animated-content].description"
+      ],
+      "lighthouse-core/audits/dobetterweb/dom-size.js | title": [
+        "audits[dom-size].title"
+      ],
+      "lighthouse-core/audits/dobetterweb/dom-size.js | description": [
+        "audits[dom-size].description"
+      ],
+      "lighthouse-core/audits/dobetterweb/no-document-write.js | title": [
+        "audits[no-document-write].title"
+      ],
+      "lighthouse-core/audits/dobetterweb/no-document-write.js | description": [
+        "audits[no-document-write].description"
+      ],
+      "lighthouse-core/audits/dobetterweb/uses-passive-event-listeners.js | title": [
+        "audits[uses-passive-event-listeners].title"
+      ],
+      "lighthouse-core/audits/dobetterweb/uses-passive-event-listeners.js | description": [
+        "audits[uses-passive-event-listeners].description"
+      ],
+      "lighthouse-core/config/default-config.js | performanceCategoryTitle": [
+        "categories.performance.title"
+      ],
+      "lighthouse-core/config/default-config.js | metricGroupTitle": [
+        "categoryGroups.metrics.title"
+      ],
+      "lighthouse-core/config/default-config.js | loadOpportunitiesGroupTitle": [
+        "categoryGroups[load-opportunities].title"
+      ],
+      "lighthouse-core/config/default-config.js | loadOpportunitiesGroupDescription": [
+        "categoryGroups[load-opportunities].description"
+      ],
+      "lighthouse-core/config/default-config.js | budgetsGroupTitle": [
+        "categoryGroups.budgets.title"
+      ],
+      "lighthouse-core/config/default-config.js | budgetsGroupDescription": [
+        "categoryGroups.budgets.description"
+      ],
+      "lighthouse-core/config/default-config.js | diagnosticsGroupTitle": [
+        "categoryGroups.diagnostics.title"
+      ],
+      "lighthouse-core/config/default-config.js | diagnosticsGroupDescription": [
+        "categoryGroups.diagnostics.description"
+      ],
+      "lighthouse-core/config/default-config.js | pwaFastReliableGroupTitle": [
+        "categoryGroups[pwa-fast-reliable].title"
+      ],
+      "lighthouse-core/config/default-config.js | pwaInstallableGroupTitle": [
+        "categoryGroups[pwa-installable].title"
+      ],
+      "lighthouse-core/config/default-config.js | pwaOptimizedGroupTitle": [
+        "categoryGroups[pwa-optimized].title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yBestPracticesGroupTitle": [
+        "categoryGroups[a11y-best-practices].title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yBestPracticesGroupDescription": [
+        "categoryGroups[a11y-best-practices].description"
+      ],
+      "lighthouse-core/config/default-config.js | a11yColorContrastGroupTitle": [
+        "categoryGroups[a11y-color-contrast].title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yColorContrastGroupDescription": [
+        "categoryGroups[a11y-color-contrast].description"
+      ],
+      "lighthouse-core/config/default-config.js | a11yNamesLabelsGroupTitle": [
+        "categoryGroups[a11y-names-labels].title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yNamesLabelsGroupDescription": [
+        "categoryGroups[a11y-names-labels].description"
+      ],
+      "lighthouse-core/config/default-config.js | a11yNavigationGroupTitle": [
+        "categoryGroups[a11y-navigation].title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yNavigationGroupDescription": [
+        "categoryGroups[a11y-navigation].description"
+      ],
+      "lighthouse-core/config/default-config.js | a11yAriaGroupTitle": [
+        "categoryGroups[a11y-aria].title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yAriaGroupDescription": [
+        "categoryGroups[a11y-aria].description"
+      ],
+      "lighthouse-core/config/default-config.js | a11yLanguageGroupTitle": [
+        "categoryGroups[a11y-language].title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yLanguageGroupDescription": [
+        "categoryGroups[a11y-language].description"
+      ],
+      "lighthouse-core/config/default-config.js | a11yAudioVideoGroupTitle": [
+        "categoryGroups[a11y-audio-video].title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yAudioVideoGroupDescription": [
+        "categoryGroups[a11y-audio-video].description"
+      ],
+      "lighthouse-core/config/default-config.js | a11yTablesListsVideoGroupTitle": [
+        "categoryGroups[a11y-tables-lists].title"
+      ],
+      "lighthouse-core/config/default-config.js | a11yTablesListsVideoGroupDescription": [
+        "categoryGroups[a11y-tables-lists].description"
+      ],
+      "lighthouse-core/config/default-config.js | seoMobileGroupTitle": [
+        "categoryGroups[seo-mobile].title"
+      ],
+      "lighthouse-core/config/default-config.js | seoMobileGroupDescription": [
+        "categoryGroups[seo-mobile].description"
+      ],
+      "lighthouse-core/config/default-config.js | seoContentGroupTitle": [
+        "categoryGroups[seo-content].title"
+      ],
+      "lighthouse-core/config/default-config.js | seoContentGroupDescription": [
+        "categoryGroups[seo-content].description"
+      ],
+      "lighthouse-core/config/default-config.js | seoCrawlingGroupTitle": [
+        "categoryGroups[seo-crawl].title"
+      ],
+      "lighthouse-core/config/default-config.js | seoCrawlingGroupDescription": [
+        "categoryGroups[seo-crawl].description"
+      ],
+      "lighthouse-core/config/default-config.js | bestPracticesTrustSafetyGroupTitle": [
+        "categoryGroups[best-practices-trust-safety].title"
+      ],
+      "lighthouse-core/config/default-config.js | bestPracticesUXGroupTitle": [
+        "categoryGroups[best-practices-ux].title"
+      ],
+      "lighthouse-core/config/default-config.js | bestPracticesBrowserCompatGroupTitle": [
+        "categoryGroups[best-practices-browser-compat].title"
+      ],
+      "lighthouse-core/config/default-config.js | bestPracticesGeneralGroupTitle": [
+        "categoryGroups[best-practices-general].title"
+      ]
+    }
+  },
+  "stackPacks": []
+}
