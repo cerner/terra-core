@@ -31,4 +31,8 @@ Terra.describeViewports('Table', ['medium'], () => {
     before(() => browser.url('/#/raw/tests/terra-table/table/custom-cell'));
     Terra.it.validatesElement();
   });
+  describe('Multi Demo', () => {
+    before(() => browser.url('/#/raw/tests/terra-table/table/multi-demo'));
+    Terra.it.validatesElement();
+  });
 });

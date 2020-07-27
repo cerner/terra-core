@@ -3,6 +3,14 @@ ChangeLog
 
 Unreleased
 ----------
+
+4.12.0 - (July 21, 2020)
+------------------
+### Changed
+* Align column and rows for selectable tables.
+
+4.11.0 - (July 14, 2020)
+------------------
 ### Fixed
 * Corrected themeable variable duplicates and missing variables.
 

@@ -20,13 +20,12 @@ services:
     environment:
       TZ: 'America/Chicago'
 
-  test-ci:
-    build: ./
-    image: "${DOCKER_IMAGE}-test:${TAG:-latest}"
-    environment:
-      - SITE=build
+  standalone-chrome-travis:
+    image: selenium/standalone-chrome:3.14.0-helium
+    ports:
+      - 4444:4444
+    # Necessary due to some issues with chrome in docker.  See https://github.com/SeleniumHQ/docker-selenium#running-the-images
     volumes:
-      - $HOME/$TRAVIS_BUILD_ID/build:/opt/module/build
-    depends_on:
-      - standalone-chrome
-    command: 'npm run wdio-default'
+      - '/dev/shm:/dev/shm'
+    environment:
+      TZ: 'America/Chicago'
