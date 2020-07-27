@@ -76,10 +76,6 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Ref callback to pass into the ref attribute of the html input element.
    */
   refCallback: PropTypes.func,
@@ -118,7 +114,6 @@ const defaultProps = {
   isLabelHidden: false,
   labelAttrs: {},
   onChange: undefined,
-  placeholder: undefined,
   maxWidth: undefined,
   refCallback: undefined,
   required: false,
@@ -145,7 +140,6 @@ const InputField = (props) => {
     labelAttrs,
     maxWidth,
     onChange,
-    placeholder,
     refCallback,
     required,
     showOptional,
@@ -169,6 +163,10 @@ const InputField = (props) => {
   }
 
   const inputType = type || inputAttrs.type;
+
+  if (customProps.placeholder) {
+    customProps.placeholder = null;
+  }
 
   return (
     <Field
@@ -194,7 +192,6 @@ const InputField = (props) => {
         isIncomplete={isIncomplete}
         type={inputType}
         onChange={onChange}
-        placeholder={placeholder || inputAttrs.placeholder}
         value={value}
         defaultValue={defaultValue}
         refCallback={refCallback}

@@ -3,6 +3,27 @@ import { Badge } from 'terra-form-input/package.json?dev-site-package';
 <Badge />
 
 # Terra Form Input Upgrade Guide
+## Changes from version 3 to version 4
+
+### Props
+
+#### Removed
+* Removed `placeholder` prop from `Input` and  `InputField`.
+
+### Changes to CSS Custom Properties
+
+#### Removed
+* --terra-form-input-placeholder-color
+* --terra-form-input-placeholder-font-style
+* --terra-form-input-placeholder-disabled-color
+* --terra-form-input-placeholder-disabled-font-style
+
+##### Steps to Upgrade
+To upgrade from 3.0 to 4.0 each existing Input and InputField must be reviewed and updated to ensure no `placeholder` prop is passed to it. This is done to follow WCAG ([for more info](https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research)).
+
+* `Input` component will not be supporting `placeholder` prop and `native placeholder`. If consumers want to provide a detailed text guidance they can upgrade to `InputField`.
+
+* `InputField` component will not be supporting `placeholder` prop and `native placeholder`. But consumers may utilize the `help` text field properties to provide similar guidance to the user using `help` prop.
 
 ## Changes from version 2 to version 3
 
