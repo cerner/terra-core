@@ -17,12 +17,12 @@ const DemographicsBannerSmallContainer = () => (
         {
           label: 'MRN',
           value: '12343',
-          identifierAria: 'MRN 1 2 3 4 5',
+          ariaLabel: 'MRN 1 2 3 4 5',
         },
         {
           label: 'REA',
           value: '3JSDA',
-          identifierAria: 'R E A 3JSDA',
+          ariaLabel: 'R E A 3JSDA',
         },
       ]}
       photo={<Image alt="My Cat" src={demographicsImage} />}

@@ -35,15 +35,15 @@ const propTypes = {
   /**
    * Additional array of label value identifiers of a person's demographic information.
    * ```
-   * identifierAria: The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
    * label: The label of the identifier: i.e.: `SSN`
    * value: The value to display for the identifier. i.e.: `111-22-3333`
+   * ariaLabel: The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
    * ```
    */
   identifiers: PropTypes.arrayOf(PropTypes.shape({
-    identifierAria: PropTypes.string,
     label: PropTypes.string,
     value: PropTypes.string,
+    ariaLabel: PropTypes.string,
   })),
   /**
    * @private

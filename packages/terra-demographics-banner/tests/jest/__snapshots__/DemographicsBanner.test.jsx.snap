@@ -44,12 +44,12 @@ exports[`renders the banner wrapper with all props 1`] = `
   identifiers={
     Array [
       Object {
-        "identifierAria": "MRN 1 2 3 4 5",
+        "ariaLabel": "MRN 1 2 3 4 5",
         "label": "MRN",
         "value": "12343",
       },
       Object {
-        "identifierAria": "R E A 3JSDA",
+        "ariaLabel": "R E A 3JSDA",
         "label": "REA",
         "value": "3JSDA",
       },

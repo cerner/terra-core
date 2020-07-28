@@ -29,12 +29,12 @@ it('renders the banner that contains additional information', () => {
       {
         label: 'MRN',
         value: '12343',
-        identifierAria: 'MRN 1 2 3 4 5',
+        ariaLabel: 'MRN 1 2 3 4 5',
       },
       {
         label: 'REA',
         value: '3JSDA',
-        identifierAria: 'R E A 3JSDA',
+        ariaLabel: 'R E A 3JSDA',
       },
     ]}
     photo=""
@@ -69,12 +69,12 @@ it('renders the banner appropriately for a person with gestational and post mens
       {
         label: 'MRN',
         value: '12343',
-        identifierAria: 'MRN 1 2 3 4 5',
+        ariaLabel: 'MRN 1 2 3 4 5',
       },
       {
         label: 'REA',
         value: '3JSDA',
-        identifierAria: 'R E A 3JSDA',
+        ariaLabel: 'R E A 3JSDA',
       },
     ]}
     photo=""
@@ -108,12 +108,12 @@ it('renders the banner properly for a deceased person with additional applicatio
       {
         label: 'MRN',
         value: '12343',
-        identifierAria: 'MRN 1 2 3 4 5',
+        ariaLabel: 'MRN 1 2 3 4 5',
       },
       {
         label: 'REA',
         value: '3JSDA',
-        identifierAria: 'R E A 3JSDA',
+        ariaLabel: 'R E A 3JSDA',
       },
     ]}
     personName="Johnathon Doe"
@@ -134,12 +134,12 @@ it('renders the banner with confidential icon', () => {
       {
         label: 'MRN',
         value: '12343',
-        identifierAria: 'MRN 1 2 3 4 5',
+        ariaLabel: 'MRN 1 2 3 4 5',
       },
       {
         label: 'REA',
         value: '3JSDA',
-        identifierAria: 'R E A 3JSDA',
+        ariaLabel: 'R E A 3JSDA',
       },
     ]}
     isConfidential

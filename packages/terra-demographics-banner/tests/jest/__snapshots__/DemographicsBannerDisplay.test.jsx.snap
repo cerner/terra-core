@@ -277,12 +277,12 @@ exports[`renders the banner appropriately for a person with gestational and post
   identifiers={
     Array [
       Object {
-        "identifierAria": "MRN 1 2 3 4 5",
+        "ariaLabel": "MRN 1 2 3 4 5",
         "label": "MRN",
         "value": "12343",
       },
       Object {
-        "identifierAria": "R E A 3JSDA",
+        "ariaLabel": "R E A 3JSDA",
         "label": "REA",
         "value": "3JSDA",
       },
@@ -349,12 +349,12 @@ exports[`renders the banner properly for a deceased person with additional appli
   identifiers={
     Array [
       Object {
-        "identifierAria": "MRN 1 2 3 4 5",
+        "ariaLabel": "MRN 1 2 3 4 5",
         "label": "MRN",
         "value": "12343",
       },
       Object {
-        "identifierAria": "R E A 3JSDA",
+        "ariaLabel": "R E A 3JSDA",
         "label": "REA",
         "value": "3JSDA",
       },
@@ -421,12 +421,12 @@ exports[`renders the banner that contains additional information 1`] = `
   identifiers={
     Array [
       Object {
-        "identifierAria": "MRN 1 2 3 4 5",
+        "ariaLabel": "MRN 1 2 3 4 5",
         "label": "MRN",
         "value": "12343",
       },
       Object {
-        "identifierAria": "R E A 3JSDA",
+        "ariaLabel": "R E A 3JSDA",
         "label": "REA",
         "value": "3JSDA",
       },
@@ -493,12 +493,12 @@ exports[`renders the banner with confidential icon 1`] = `
   identifiers={
     Array [
       Object {
-        "identifierAria": "MRN 1 2 3 4 5",
+        "ariaLabel": "MRN 1 2 3 4 5",
         "label": "MRN",
         "value": "12343",
       },
       Object {
-        "identifierAria": "R E A 3JSDA",
+        "ariaLabel": "R E A 3JSDA",
         "label": "REA",
         "value": "3JSDA",
       },

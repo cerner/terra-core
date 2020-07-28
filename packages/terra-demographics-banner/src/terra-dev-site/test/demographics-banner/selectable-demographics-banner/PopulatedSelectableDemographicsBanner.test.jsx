@@ -25,12 +25,12 @@ export default () => {
           {
             label: 'MRN',
             value: '00019837',
-            identifierAria: 'MRN 0 0 0 1 9 8 3 7',
+            ariaLabel: 'MRN 0 0 0 1 9 8 3 7',
           },
           {
             label: 'FIN',
             value: '1000254085',
-            identifierAria: 'FIN 1 0 0 0 2 5 4 0 8 5',
+            ariaLabel: 'FIN 1 0 0 0 2 5 4 0 8 5',
           },
         ]}
         isConfidential

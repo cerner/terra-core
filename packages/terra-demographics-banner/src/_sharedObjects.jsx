@@ -89,8 +89,8 @@ const applicationIdentifiers = (props) => {
     return identifiers.map((identifier) => (
       <DemographicsBannerValue
         key={`identifier-${identifier.label}`}
-        abbrTitle={identifier.identifierAria}
-        valueAriaHidden={!!identifier.identifierAria}
+        abbrTitle={identifier.ariaLabel}
+        valueAriaHidden={!!identifier.ariaLabel}
         label={identifier.label}
         value={identifier.value}
       />
