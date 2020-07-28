@@ -4,6 +4,16 @@ import { Badge } from 'terra-form-select/package.json?dev-site-package';
 
 # Terra Form Select Upgrade Guide
 
+## Changes from version 6 to version 7
+
+### Props
+* Removed prop `placeholder` from all the variants of select.
+* Removed prop `allowClear` from single select.
+* Added new prop `isFilterStyle` to single select.
+
+##### Steps to Upgrade
+To upgrade from 6.0 to 7.0 each existing Select must be reviewed and updated to ensure no `placeholder` prop is being passed.
+
 ## Changes from version 5 to version 6
 
 ### Props
