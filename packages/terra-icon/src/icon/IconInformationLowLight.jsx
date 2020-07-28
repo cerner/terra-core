@@ -1,17 +1,23 @@
 /* eslint-disable */
 import React from 'react';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import IconBase from '../IconBase';
 import styles from '../IconInformationLowLight.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
-  const iconClassNames = cx([
-    'IconInformationLowLight',
+  const theme = React.useContext(ThemeContext);
+  const iconClassNames = classNames(
+    cx(
+      'IconInformationLowLight',
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   return (
     <IconBase className={iconClassNames} {...attributes}>

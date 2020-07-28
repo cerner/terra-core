@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Fixed
+* Fixed how class names are identified with css modules to support themes properly
 
 3.33.0 - (July 7, 2020)
 ------------------
