@@ -1,4 +1,13 @@
 language: node_js
+node_js: v12
+addons:
+  chrome: stable
+before_install:
+  - npm install -g @lhci/cli@0.4.x
+script:
+  - npm run build
+  - lhci autorun
+
 sudo: required
 services:
   - docker
