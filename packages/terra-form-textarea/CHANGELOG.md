@@ -8,6 +8,7 @@ Unreleased
 
 ### Changed
 * Updated examples to not use `placeholder` prop
+* Updated jest tests due to icon changes
 
 ### Removed
 * Removed theme variables - see UPGRADEGUIDE.md
