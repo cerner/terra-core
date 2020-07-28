@@ -24,7 +24,6 @@ class AllowClear extends React.Component {
           allowClear
           id="allowclear"
           onChange={this.handleChange}
-          placeholder="Select a color"
           value={this.state.value}
           variant="combobox"
         >

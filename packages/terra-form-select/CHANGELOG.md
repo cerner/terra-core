@@ -11,6 +11,7 @@ Unreleased
 ### Changed
 * Updated color for placeholder.
 * Updated default text in all variants for placeholder to be `- Select -`
+* Updated test and example to remove the use of placeholder. 
 
 6.11.0 - (July 14, 2020)
 ------------------

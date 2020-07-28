@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const MaxHeightExample = () => (
-  <TagSelect placeholder="Select a color" maxHeight={150} className={cx('form-select')}>
+  <TagSelect maxHeight={150} className={cx('form-select')}>
     <TagSelect.Option value="black" display="Black" />
     <TagSelect.Option value="blue" display="Blue" />
     <TagSelect.Option value="brown" display="Brown" />

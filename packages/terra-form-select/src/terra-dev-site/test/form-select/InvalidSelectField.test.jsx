@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const InvalidSelectFieldExample = () => (
   <div className={cx('content-wrapper')}>
-    <SelectField isInvalid label="T-shirt size" placeholder="Select a size" selectId="select-field" defaultValue="small">
+    <SelectField isInvalid label="T-shirt size" selectId="select-field" defaultValue="small">
       <SelectField.Option value="small" display="Small" />
     </SelectField>
   </div>

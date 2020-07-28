@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const MaxHeightExample = () => (
-  <MultiSelect placeholder="Select a color" maxHeight={150} className={cx('form-select')}>
+  <MultiSelect maxHeight={150} className={cx('form-select')}>
     <MultiSelect.Option value="black" display="Black" />
     <MultiSelect.Option value="blue" display="Blue" />
     <MultiSelect.Option value="brown" display="Brown" />

@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const AllowClearExample = () => (
-  <Select placeholder="Select a color" allowClear variant="combobox" className={cx('form-select')}>
+  <Select allowClear variant="combobox" className={cx('form-select')}>
     <Select.Option value="blue" display="Blue" />
     <Select.Option value="green" display="Green" />
     <Select.Option value="purple" display="Purple" />

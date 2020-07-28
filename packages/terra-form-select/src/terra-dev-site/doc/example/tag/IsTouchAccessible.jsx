@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const IsTouchAccessibleExample = () => (
-  <TagSelect placeholder="Select a color" className={cx('form-select')} isTouchAccessible>
+  <TagSelect className={cx('form-select')} isTouchAccessible>
     <TagSelect.Option value="blue" display="Blue" />
     <TagSelect.Option value="green" display="Green" />
     <TagSelect.Option value="purple" display="Purple" />

@@ -9,7 +9,7 @@ const ControlledExample = () => {
   const [value, setValue] = useState('blue');
 
   return (
-    <SearchSelect placeholder="Select a color" value={value} onChange={setValue} className={cx('form-select')}>
+    <SearchSelect value={value} onChange={setValue} className={cx('form-select')}>
       <SearchSelect.Option value="blue" display="Blue" />
       <SearchSelect.Option value="green" display="Green" />
       <SearchSelect.Option value="purple" display="Purple" />

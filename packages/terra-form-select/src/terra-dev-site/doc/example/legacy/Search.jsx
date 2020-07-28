@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const SearchExample = () => (
-  <Select placeholder="Select a color" variant="search" className={cx('form-select')}>
+  <Select variant="search" className={cx('form-select')}>
     <Select.Option value="blue" display="Blue" />
     <Select.Option value="green" display="Green" />
     <Select.Option value="purple" display="Purple" />
