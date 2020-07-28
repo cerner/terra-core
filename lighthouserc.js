@@ -10,6 +10,11 @@ module.exports = {
         skipAudits: ['uses-http2'],
       },
       startServerCommand: 'npm start -p',
+      url: [
+        'http://localhost:8080/raw/tests/terra-action-header/action-header/back-action-header',
+        'http://localhost:8080/raw/tests/terra-button/button/active-variant-buttons',
+        'http://localhost:8080/raw/tests/terra-form-select/form-select/select-inside-iframe',
+      ],
     },
     assert: {
       preset: 'lighthouse:recommended',
