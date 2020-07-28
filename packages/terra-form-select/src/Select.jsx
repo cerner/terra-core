@@ -11,6 +11,12 @@ import Tag from './TagSelect';
 
 const propTypes = {
   /**
+   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
+   * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
+   * This is not applicable to the `default` in place of this prop `isFilterStyle` can be used.
+   */
+  allowClear: PropTypes.bool,
+  /**
    * The dropdown menu options.
    */
   children: PropTypes.node,
@@ -27,6 +33,12 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   dropdownAttrs: PropTypes.object,
+  /**
+   * Whether the select input should use the filter style display, forcing a value to always be selected.
+   * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
+   * This is only applicable to the `default` variant.
+   */
+  isFilterStyle: PropTypes.bool,
   /**
    * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
@@ -110,10 +122,12 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isFilterStyle: false,
   isIncomplete: false,
   isInvalid: false,
   isTouchAccessible: false,
@@ -134,24 +148,27 @@ function Select(props) {
 
   switch (variant) {
     case Variants.COMBOBOX: {
-      const { maxSelectionCount, ...comboboxProps } = otherProps;
+      const { maxSelectionCount, isFilterStyle, ...comboboxProps } = otherProps;
       return <Combobox {...comboboxProps} />;
     }
     case Variants.MULTIPLE: {
-      const { ...multipleProps } = otherProps;
+      const { allowClear, isFilterStyle, ...multipleProps } = otherProps;
       return <MultiSelect {...multipleProps} />;
     }
     case Variants.SEARCH: {
-      const { maxSelectionCount, ...searchProps } = otherProps;
+      const { maxSelectionCount, isFilterStyle, ...searchProps } = otherProps;
       return <Search {...searchProps} />;
     }
     case Variants.TAG: {
-      const { noResultContent, ...tagProps } = otherProps;
+      const {
+        noResultContent, allowClear, isFilterStyle, ...tagProps
+      } = otherProps;
       return <Tag {...tagProps} />;
     }
     case Variants.DEFAULT:
     default: {
       const {
+        allowClear,
         isTouchAccessible,
         maxSelectionCount,
         onSearch,

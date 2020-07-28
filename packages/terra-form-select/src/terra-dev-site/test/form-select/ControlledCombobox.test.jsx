@@ -23,7 +23,6 @@ class ControlledCombobox extends React.Component {
         <Select
           id="combobox"
           onChange={this.handleChange}
-          placeholder="Select a color"
           value={this.state.value}
           variant="combobox"
         >

@@ -8,6 +8,10 @@ import SelectUtil from './shared/_SelectUtil';
 
 const propTypes = {
   /**
+   * Whether a clear option is available to clear the selection, will use placeholder text.
+   */
+  allowClear: PropTypes.bool,
+  /**
    * The dropdown menu options.
    */
   children: PropTypes.node,
@@ -100,6 +104,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
@@ -184,7 +189,7 @@ class SearchSelect extends React.Component {
 
   render() {
     const {
-      children, defaultValue, onChange, required, value, intl, inputId, ...otherProps
+      allowClear, children, defaultValue, onChange, required, value, intl, inputId, ...otherProps
     } = this.props;
 
     return (
@@ -197,7 +202,7 @@ class SearchSelect extends React.Component {
         onSelect={this.handleSelect}
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
-        clearOptionDisplay={intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })}
+        clearOptionDisplay={allowClear ? intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' }) : undefined}
         inputId={inputId}
       >
         {children}

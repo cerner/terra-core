@@ -20,7 +20,7 @@ class ControlledDefault extends React.Component {
   render() {
     return (
       <div className={cx('content-wrapper')}>
-        <Select placeholder="Select a color" onChange={this.handleChange} id="default" value={this.state.value}>
+        <Select onChange={this.handleChange} id="default" value={this.state.value}>
           <Select.Option value="blue" display="Blue" />
           <Select.Option value="green" display="Green" />
           <Select.Option value="purple" display="Purple" />

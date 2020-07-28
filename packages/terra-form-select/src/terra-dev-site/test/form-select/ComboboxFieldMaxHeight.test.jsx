@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const ComboboxFieldMaxHeight = () => (
   <div className={cx('content-wrapper')}>
-    <ComboboxField label="Combobox Field" placeholder="Select a number" selectId="comboboxField" defaultValue="3" maxHeight={300}>
+    <ComboboxField label="Combobox Field" selectId="comboboxField" defaultValue="3" maxHeight={300}>
       <ComboboxField.Option value="1" display="One" />
       <ComboboxField.Option value="2" display="Two" />
       <ComboboxField.Option value="3" display="Three" />

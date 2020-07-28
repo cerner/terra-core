@@ -1,10 +1,4 @@
 Terra.describeViewports('Select', ['tiny'], () => {
-  describe('should render an empty placeholder', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/empty-placeholder'));
-
-    Terra.it.validatesElement();
-  });
-
   describe('should render a placeholder', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-placeholder'));
 
@@ -27,6 +21,18 @@ Terra.describeViewports('Select', ['tiny'], () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-value-zero'));
 
     Terra.it.validatesElement();
+  });
+
+  describe('default should not display clear option', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/filter-style'));
+
+    Terra.it.validatesElement();
+
+    it('should open the dropdown by clicking the toggle', () => {
+      browser.click('#filterstyle:last-child');
+    });
+
+    Terra.it.validatesElement('open-dropdown', { selector: '#root' });
   });
 
   describe('default should truncate and wrap long text', () => {

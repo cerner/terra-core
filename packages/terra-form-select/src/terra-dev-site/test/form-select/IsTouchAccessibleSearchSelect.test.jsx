@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const IsTouchAccessibleSearchSelect = () => (
   <div className={cx('content-wrapper')}>
-    <SearchSelect placeholder="Select a color" id="search" isTouchAccessible>
+    <SearchSelect id="search" isTouchAccessible>
       <SearchSelect.Option value="blue" display="Blue" />
       <SearchSelect.Option value="green" display="Green" />
       <SearchSelect.Option value="purple" display="Purple" />

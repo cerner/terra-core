@@ -23,7 +23,6 @@ class ControlledMultiple extends React.Component {
         <Select
           id="multiple"
           onChange={this.handleChange}
-          placeholder="Select a color"
           required
           value={this.state.value}
           variant="multiple"

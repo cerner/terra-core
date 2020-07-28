@@ -7,6 +7,10 @@ import Option from './shared/_Option';
 
 const propTypes = {
   /**
+   * Whether a clear option is available to clear the selection.
+   */
+  allowClear: PropTypes.bool,
+  /**
    * The select options.
    */
   children: PropTypes.node,
@@ -99,6 +103,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
@@ -121,6 +126,7 @@ const defaultProps = {
 };
 
 const ComboboxField = ({
+  allowClear,
   children,
   defaultValue,
   disabled,
@@ -182,6 +188,7 @@ const ComboboxField = ({
       <Combobox
         {...selectAttrs}
         ariaLabel={label}
+        allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         inputId={selectId}

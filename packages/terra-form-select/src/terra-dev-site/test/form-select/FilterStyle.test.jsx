@@ -5,7 +5,7 @@ import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-class ControlledCombobox extends React.Component {
+class FilterStyle extends React.Component {
   constructor() {
     super();
 
@@ -21,9 +21,9 @@ class ControlledCombobox extends React.Component {
     return (
       <div className={cx('content-wrapper')}>
         <Select
-          id="combobox"
+          isFilterStyle
+          id="filterstyle"
           onChange={this.handleChange}
-          required
           value={this.state.value}
           variant="combobox"
         >
@@ -38,4 +38,4 @@ class ControlledCombobox extends React.Component {
   }
 }
 
-export default ControlledCombobox;
+export default FilterStyle;

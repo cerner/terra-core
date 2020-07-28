@@ -5,7 +5,7 @@ import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-const IncompleteTag = () => (
+const InvalidTag = () => (
   <div className={cx('content-wrapper')}>
     <Select isInvalid placeholder="Select a color" variant="tag" id="tag">
       <Select.Option value="blue" display="Blue" />
@@ -17,4 +17,4 @@ const IncompleteTag = () => (
   </div>
 );
 
-export default IncompleteTag;
+export default InvalidTag;

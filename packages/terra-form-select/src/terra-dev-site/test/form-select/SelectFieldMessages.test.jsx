@@ -28,7 +28,6 @@ class SelectFieldMessagesExample extends React.Component {
         <button type="button" id="validity-toggle" onClick={this.toggleInvalid}>Toggle Validity</button>
         <SelectField
           label="T-shirt size"
-          placeholder="Select a size"
           selectId="select-field"
           defaultValue="small"
           error="Error message."

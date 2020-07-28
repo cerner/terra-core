@@ -35,6 +35,11 @@ const propTypes = {
    */
   hideRequired: PropTypes.bool,
   /**
+   * Whether the select input should use the filter style display, forcing a value to always be selected.
+   * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
+   */
+  isFilterStyle: PropTypes.bool,
+  /**
    * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
   isIncomplete: PropTypes.bool,
@@ -98,6 +103,7 @@ const defaultProps = {
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isFilterStyle: false,
   isIncomplete: false,
   isInline: false,
   isInvalid: false,
@@ -119,6 +125,7 @@ const SingleSelectField = ({
   error,
   help,
   hideRequired,
+  isFilterStyle,
   isIncomplete,
   isInline,
   isInvalid,
@@ -176,6 +183,7 @@ const SingleSelectField = ({
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
+        isFilterStyle={isFilterStyle}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         defaultValue={defaultValue}

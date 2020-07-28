@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const SearchSelectFieldMaxheight = () => (
   <div className={cx('content-wrapper')}>
-    <SearchSelectField label="Select Field" placeholder="Select a number" selectId="searchSelectField" defaultValue="2" maxHeight={300}>
+    <SearchSelectField label="Select Field" selectId="searchSelectField" defaultValue="2" maxHeight={300}>
       <SearchSelectField.Option value="1" display="One" />
       <SearchSelectField.Option value="2" display="Two" />
       <SearchSelectField.Option value="3" display="Three" />

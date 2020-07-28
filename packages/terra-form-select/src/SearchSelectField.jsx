@@ -7,6 +7,9 @@ import Option from './shared/_Option';
 
 const propTypes = {
   /**
+   * Whether a clear option is available to clear the selection.
+   */
+  allowClear: PropTypes.bool,
   /**
    * The select options.
    */
@@ -100,6 +103,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
@@ -122,6 +126,7 @@ const defaultProps = {
 };
 
 const SearchSelectField = ({
+  allowClear,
   children,
   defaultValue,
   disabled,
@@ -183,6 +188,7 @@ const SearchSelectField = ({
       <SearchSelect
         {...selectAttrs}
         ariaLabel={label}
+        allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         inputId={selectId}

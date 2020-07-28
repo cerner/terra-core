@@ -5,9 +5,9 @@ import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-const EmptyPlaceholder = () => (
+const DefaultPlaceholder = () => (
   <div className={cx('content-wrapper')}>
-    <Select placeholder="Select a color" id="default">
+    <Select id="default">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />
@@ -17,4 +17,4 @@ const EmptyPlaceholder = () => (
   </div>
 );
 
-export default EmptyPlaceholder;
+export default DefaultPlaceholder;

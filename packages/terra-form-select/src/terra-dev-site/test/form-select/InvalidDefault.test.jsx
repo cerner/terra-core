@@ -5,9 +5,9 @@ import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-const IncompleteDefault = () => (
+const InvalidDefault = () => (
   <div className={cx('content-wrapper')}>
-    <Select isInvalid placeholder="Select a color" id="default" defaultValue="green">
+    <Select isInvalid id="default" defaultValue="green">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />
@@ -17,4 +17,4 @@ const IncompleteDefault = () => (
   </div>
 );
 
-export default IncompleteDefault;
+export default InvalidDefault;

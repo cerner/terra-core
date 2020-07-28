@@ -7,6 +7,11 @@ import Variants from './shared/_variants';
 
 const propTypes = {
   /**
+   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
+   * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
+   */
+  allowClear: PropTypes.bool,
+  /**
    * The select options.
    */
   children: PropTypes.node,
@@ -39,6 +44,11 @@ const propTypes = {
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: intlShape.isRequired,
+  /**
+   * Whether the select input should use the filter style display, forcing a value to always be selected.
+   * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
+   */
+  isFilterStyle: PropTypes.bool,
   /**
    * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
@@ -121,12 +131,14 @@ const propTypes = {
 };
 
 const defaultProps = {
+  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isFilterStyle: false,
   isIncomplete: false,
   isInline: false,
   isInvalid: false,
@@ -145,6 +157,7 @@ const defaultProps = {
 };
 
 const SelectField = ({
+  allowClear,
   children,
   defaultValue,
   disabled,
@@ -152,6 +165,7 @@ const SelectField = ({
   help,
   hideRequired,
   intl,
+  isFilterStyle,
   isIncomplete,
   isInline,
   isInvalid,
@@ -226,9 +240,11 @@ const SelectField = ({
       <Select
         {...selectAttrs}
         ariaLabel={label}
+        allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
+        isFilterStyle={isFilterStyle}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         isTouchAccessible={isTouchAccessible}
