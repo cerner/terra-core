@@ -3,6 +3,9 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Moved `additionalInputAttributes` to the top of the attributes list.
+
 ### Removed
 * Removed `terra-form-input` from dependencies.
 

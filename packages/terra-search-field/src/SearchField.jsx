@@ -273,6 +273,7 @@ class SearchField extends React.Component {
       <div {...customProps} className={searchFieldClassNames}>
         <div className={cx('input-group')}>
           <input
+            {...additionalInputAttributes}
             className={cx('input')}
             type="search"
             placeholder={placeholder}
@@ -283,7 +284,6 @@ class SearchField extends React.Component {
             onKeyDown={this.handleKeyDown}
             onInput={this.handleInput}
             ref={this.setInputRef}
-            {...additionalInputAttributes}
           />
           {clearButton}
         </div>
