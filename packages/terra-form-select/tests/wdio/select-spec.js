@@ -574,7 +574,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('select-closed', { selector: '#root' });
-      after(() => browser.click('#root'));
     });
 
     describe('combobox should open and close the dropdown by clicking on toggle icon', () => {
@@ -965,7 +964,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('select-closed', { selector: '#root' });
-      after(() => browser.click('#root'));
     });
 
     describe('multiple should open and close the dropdown by clicking on toggle icon', () => {
@@ -1330,7 +1328,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('toggle-closed-dropdown', { selector: '#root' });
-      after(() => browser.click('#root'));
     });
 
     describe('search should close when pressing tab key to shift focus away from select', () => {
@@ -1365,7 +1362,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('select-closed', { selector: '#root' });
-      after(() => browser.click('#root'));
     });
 
     describe('search should open and close the dropdown by clicking on toggle icon', () => {
@@ -1697,7 +1693,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
-      after(() => browser.click('#root'));
     });
 
     describe('tag should close when pressing tab key to shift focus away from select', () => {
@@ -1732,7 +1727,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('select-closed', { selector: '#root' });
-      after(() => browser.click('#root'));
     });
 
     describe('tag should open and close the dropdown by clicking on toggle icon', () => {
