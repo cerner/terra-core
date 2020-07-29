@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Changed
+* Updated jest tests due to icon changes
 
 4.5.0 - (July 7, 2020)
 ------------------
