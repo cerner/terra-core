@@ -6,6 +6,32 @@ import './DemographicsBanner.module.scss';
 import SmallDemographicsBannerDisplay from './_SmallDemographicsBannerDisplay';
 import LargeDemographicsBannerDisplay from './_LargeDemographicsBannerDisplay';
 
+const identifierShape = {
+  /**
+  * The label of the identifier: i.e.: `SSN`
+  */
+  label: PropTypes.string,
+  /**
+  * The value to display for the identifier. i.e.: `111-22-3333`
+  */
+  value: PropTypes.string,
+  /**
+  * The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
+  */
+  ariaLabel: PropTypes.string,
+};
+
+const stringShape = {
+  /**
+  * The value to display. i.e.: `03/15/2020`
+  */
+  value: PropTypes.string,
+  /**
+  * The aria-label for the value. i.e.: `March 15th, 2020`
+  */
+  ariaLabel: PropTypes.string,
+};
+
 const propTypes = {
   /**
    * Age of the person.
@@ -18,7 +44,7 @@ const propTypes = {
   /**
    * The persons date of birth
    */
-  dateOfBirth: PropTypes.string,
+  dateOfBirth: PropTypes.shape(stringShape),
   /**
    * Label to display for the date of birth
    */
@@ -57,17 +83,8 @@ const propTypes = {
   gestationalAgeFullText: PropTypes.string,
   /**
    * Additional array of label value identifiers of a person's demographic information.
-   * ```
-   * label: The label of the identifier: i.e.: `SSN`
-   * value: The value to display for the identifier. i.e.: `111-22-3333`
-   * ariaLabel: The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
-   * ```
    */
-  identifiers: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.string,
-    ariaLabel: PropTypes.string,
-  })),
+  identifiers: PropTypes.arrayOf(PropTypes.shape(identifierShape)),
   /**
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
@@ -116,7 +133,7 @@ const propTypes = {
 const defaultProps = {
   age: '',
   applicationContent: null,
-  dateOfBirth: '',
+  dateOfBirth: {},
   dateOfBirthLabel: 'DOB',
   dateOfBirthFullText: 'Date of Birth',
   deceasedDate: null,

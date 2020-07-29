@@ -6,7 +6,7 @@ import demographicsImage from '../assets/demographicsCat.jpg';
 const SelectableDemographicsBannerDeceased = () => (
   <SelectableDemographicsBanner
     age="25 Years"
-    dateOfBirth="May 9, 1992"
+    dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     deceasedDate="March 12, 2017"
     gender="True Male"
     identifiers={[

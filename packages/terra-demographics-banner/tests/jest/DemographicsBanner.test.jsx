@@ -13,7 +13,7 @@ it('renders the banner wrapper with all props', () => {
     <DemographicsBanner
       applicationContent={<span className="risk-score">5%</span>}
       age="25 Years"
-      dateOfBirth="May 9, 1993"
+      dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
       gender="Male"
       genderAria="Male"
       gestationalAge="April 5, 2016"

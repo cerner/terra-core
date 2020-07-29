@@ -10,6 +10,32 @@ import styles from './selectable-demographics-banner/SelectableDemographicsBanne
 
 const cx = classNames.bind(styles);
 
+const identifierShape = {
+  /**
+  * The label of the identifier: i.e.: `SSN`
+  */
+  label: PropTypes.string,
+  /**
+  * The value to display for the identifier. i.e.: `111-22-3333`
+  */
+  value: PropTypes.string,
+  /**
+  * The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
+  */
+  ariaLabel: PropTypes.string,
+};
+
+const stringShape = {
+  /**
+  * The value to display. i.e.: `03/15/2020`
+  */
+  value: PropTypes.string,
+  /**
+  * The aria-label for the value. i.e.: `March 15th, 2020`
+  */
+  ariaLabel: PropTypes.string,
+};
+
 const propTypes = {
   /**
    * Age of the person.
@@ -22,7 +48,7 @@ const propTypes = {
   /**
    * The person's date of birth.
    */
-  dateOfBirth: PropTypes.string,
+  dateOfBirth: PropTypes.shape(stringShape),
   /**
    * The person's deceased date. Will display the banner as deceased if this value is provided.
    */
@@ -41,17 +67,8 @@ const propTypes = {
   gestationalAge: PropTypes.string,
   /**
    * Additional array of label value identifiers of a person's demographic information.
-   * ```
-   * label: The label of the identifier: i.e.: `SSN`
-   * value: The value to display for the identifier. i.e.: `111-22-3333`
-   * ariaLabel: The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
-   * ```
    */
-  identifiers: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.string,
-    ariaLabel: PropTypes.string,
-  })),
+  identifiers: PropTypes.arrayOf(PropTypes.shape(identifierShape)),
   /**
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
@@ -89,6 +106,7 @@ const propTypes = {
 
 const defaultProps = {
   applicationContent: null,
+  dateOfBirth: {},
   deceasedDate: null,
   gestationalAge: null,
   isConfidential: false,

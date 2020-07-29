@@ -11,7 +11,7 @@ const DemographicsBannerSmallContainer = () => (
   <div className={cx('content-wrapper')}>
     <DemographicsBanner
       age="25 Years"
-      dateOfBirth="May 9, 1992"
+      dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
       gender="True Male"
       identifiers={[
         {

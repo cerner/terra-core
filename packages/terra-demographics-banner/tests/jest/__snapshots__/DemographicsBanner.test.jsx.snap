@@ -3,6 +3,7 @@
 exports[`renders a blank banner wrapper 1`] = `
 <InjectIntl(DemographicsBannerDisplay)
   applicationContent={null}
+  dateOfBirth={Object {}}
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
   deceasedDate={null}
@@ -31,7 +32,12 @@ exports[`renders the banner wrapper with all props 1`] = `
       5%
     </span>
   }
-  dateOfBirth="May 9, 1993"
+  dateOfBirth={
+    Object {
+      "ariaLabel": "May 9, 1993",
+      "value": "05/09/1993",
+    }
+  }
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
   deceasedDate={null}

@@ -111,6 +111,8 @@ exports[`correctly applies the theme context className 1`] = `
             </DemographicsBannerValue>
             <DemographicsBannerValue
               key="dob"
+              value=""
+              valueAriaHidden={false}
             >
               <span
                 className="value"
@@ -145,7 +147,12 @@ exports[`renders small banner that contains all valid information 1`] = `
       5%
     </span>
   }
-  dateOfBirth="May 9, 1993"
+  dateOfBirth={
+    Object {
+      "ariaLabel": "May 9, 1993",
+      "value": "05/09/1993",
+    }
+  }
   dateOfBirthLabel="DOB"
   deceasedDateLabel="Deceased"
   gender="Male"

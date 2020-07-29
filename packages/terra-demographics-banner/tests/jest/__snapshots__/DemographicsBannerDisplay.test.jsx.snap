@@ -4,7 +4,12 @@ exports[`renders a banner that has basic information 1`] = `
 <DemographicsBannerDisplay
   age="24"
   applicationContent={null}
-  dateOfBirth="March 30, 2017"
+  dateOfBirth={
+    Object {
+      "ariaLabel": "March 30, 2017",
+      "value": "March 30, 2017",
+    }
+  }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}
@@ -55,7 +60,7 @@ exports[`renders a blank banner properly 1`] = `
 <DemographicsBannerDisplay
   age=""
   applicationContent={null}
-  dateOfBirth=""
+  dateOfBirth={Object {}}
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}
@@ -106,7 +111,7 @@ exports[`renders gestational date with a default label when the label is not pro
 <DemographicsBannerDisplay
   age=""
   applicationContent={null}
-  dateOfBirth=""
+  dateOfBirth={Object {}}
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}
@@ -157,7 +162,7 @@ exports[`renders post menstrural date with a default label when the label is not
 <DemographicsBannerDisplay
   age=""
   applicationContent={null}
-  dateOfBirth=""
+  dateOfBirth={Object {}}
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}
@@ -208,7 +213,12 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
 <DemographicsBannerDisplay
   age="24"
   applicationContent={null}
-  dateOfBirth="June 15, 2014"
+  dateOfBirth={
+    Object {
+      "ariaLabel": "June 15, 2014",
+      "value": "June 15, 2014",
+    }
+  }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate="March 30, 2017"
@@ -265,7 +275,12 @@ exports[`renders the banner appropriately for a person with gestational and post
       5%
     </span>
   }
-  dateOfBirth="May 9, 1993"
+  dateOfBirth={
+    Object {
+      "ariaLabel": "May 9, 1993",
+      "value": "05/09/1993",
+    }
+  }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}
@@ -337,7 +352,12 @@ exports[`renders the banner properly for a deceased person with additional appli
       5%
     </span>
   }
-  dateOfBirth="May 9, 1993"
+  dateOfBirth={
+    Object {
+      "ariaLabel": "May 9, 1993",
+      "value": "05/09/1993",
+    }
+  }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate="March 5, 2016"
@@ -409,7 +429,12 @@ exports[`renders the banner that contains additional information 1`] = `
       5%
     </span>
   }
-  dateOfBirth="May 9, 1993"
+  dateOfBirth={
+    Object {
+      "ariaLabel": "May 9, 1993",
+      "value": "05/09/1993",
+    }
+  }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}
@@ -481,7 +506,12 @@ exports[`renders the banner with confidential icon 1`] = `
       5%
     </span>
   }
-  dateOfBirth="May 9, 1993"
+  dateOfBirth={
+    Object {
+      "ariaLabel": "May 9, 1993",
+      "value": "05/09/1993",
+    }
+  }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={null}

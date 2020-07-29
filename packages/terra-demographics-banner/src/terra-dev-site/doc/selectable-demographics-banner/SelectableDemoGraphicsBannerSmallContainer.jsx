@@ -10,7 +10,7 @@ const SelectableDemoGraphicsBannerSmallContainer = () => (
     <SelectableDemographicsBanner
       applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
       age="25 Years"
-      dateOfBirth="May 9, 1993"
+      dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
       gender="Male"
       identifiers={[
         {

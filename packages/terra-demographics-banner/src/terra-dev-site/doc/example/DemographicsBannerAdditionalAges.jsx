@@ -7,7 +7,7 @@ const DemographicsBannerAdditionalAges = () => (
   <DemographicsBanner
     applicationContent={<span className="risk-score">5%</span>}
     age="10 Weeks"
-    dateOfBirth="October 25, 2018"
+    dateOfBirth={{ value: 'October 25, 2018', ariaLabel: 'October 25, 2018' }}
     gender="Male"
     gestationalAge="33 Weeks"
     identifiers={[

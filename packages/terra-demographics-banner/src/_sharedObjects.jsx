@@ -45,13 +45,29 @@ const personDetails = (props) => {
       valueAriaHidden={!!props.genderAria}
       value={props.gender}
     />,
-    <DemographicsBannerValue
-      key="dob"
-      abbrTitle={props.dateOfBirthFullText}
-      label={props.dateOfBirthLabel}
-      value={props.dateOfBirth}
-    />,
   ];
+
+  let dobAriaLabel = props.dateOfBirthFullText;
+  let dobValue = '';
+  let dobValueAriaHidden = false;
+  if (props.dateOfBirth) {
+    if (props.dateOfBirth.value) {
+      dobValue = props.dateOfBirth.value;
+    }
+
+    if (props.dateOfBirth.ariaLabel) {
+      dobValueAriaHidden = true;
+      dobAriaLabel = dobAriaLabel.concat(' ', props.dateOfBirth.ariaLabel);
+    }
+  }
+
+  elements.push(<DemographicsBannerValue
+    key="dob"
+    abbrTitle={dobAriaLabel}
+    label={props.dateOfBirthLabel}
+    value={dobValue}
+    valueAriaHidden={dobValueAriaHidden}
+  />);
 
   if (props.gestationalAge) {
     elements.push(<DemographicsBannerValue

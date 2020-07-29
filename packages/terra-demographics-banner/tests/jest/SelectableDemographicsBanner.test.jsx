@@ -16,7 +16,7 @@ it('renders the banner wrapper with all props', () => {
       id="selectableDemographics"
       age="25 Years"
       applicationContent={<span className="risk-score">5%</span>}
-      dateOfBirth="May 9, 1993"
+      dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
       deceasedDate="January 10, 2020"
       gender="Male"
       genderAria="Male"

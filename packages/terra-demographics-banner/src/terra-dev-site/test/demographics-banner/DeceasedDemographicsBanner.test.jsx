@@ -6,7 +6,7 @@ export default () => (
     id="deceased-demographics"
     applicationContent={<span className="risk-score">5%</span>}
     age="28 Years"
-    dateOfBirth="May 9, 1992"
+    dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     deceasedDate="March 12, 2020"
     gender="M"
     genderAria="Male"

@@ -8,7 +8,7 @@ it('renders small banner that contains all valid information', () => {
   const banner = shallowWithIntl(<SmallDemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
-    dateOfBirth="May 9, 1993"
+    dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     gender="Male"
     identifiers={[
       {

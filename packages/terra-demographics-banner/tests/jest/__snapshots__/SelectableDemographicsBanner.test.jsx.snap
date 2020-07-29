@@ -14,6 +14,7 @@ exports[`renders a blank banner wrapper 1`] = `
     <InjectIntl(DemographicsBanner)
       applicationContent={null}
       className="selectable-demographics-banner"
+      dateOfBirth={Object {}}
       deceasedDate={null}
       gestationalAge={null}
       isActive={false}
@@ -49,7 +50,12 @@ exports[`renders the banner wrapper with all props 1`] = `
         </span>
       }
       className="selectable-demographics-banner"
-      dateOfBirth="May 9, 1993"
+      dateOfBirth={
+        Object {
+          "ariaLabel": "May 9, 1993",
+          "value": "05/09/1993",
+        }
+      }
       deceasedDate="January 10, 2020"
       gender="Male"
       genderAria="Male"

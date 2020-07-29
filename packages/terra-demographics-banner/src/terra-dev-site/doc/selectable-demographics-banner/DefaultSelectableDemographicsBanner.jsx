@@ -4,7 +4,7 @@ import SelectableDemographicsBanner from 'terra-demographics-banner/lib/Selectab
 const DefaultSelectableDemographicsBanner = () => (
   <SelectableDemographicsBanner
     age="25 Years"
-    dateOfBirth="May 9, 1993"
+    dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     gender="Male"
     personName="Johnathon Doe"
     preferredFirstName="John"
