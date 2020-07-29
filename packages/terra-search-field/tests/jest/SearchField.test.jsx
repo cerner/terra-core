@@ -57,6 +57,11 @@ describe('Snapshots', () => {
     expect(searchField).toMatchSnapshot();
   });
 
+  it('renders a search field such that terra styles is not overridden by custom class', () => {
+    const searchField = shallowWithIntl(<SearchField inputAttributes={{ className: 'test-class' }} />).dive();
+    expect(searchField).toMatchSnapshot();
+  });
+
   it('clears form with clear method', () => {
     const searchField = shallowWithIntl(<SearchField />).dive();
     searchField.instance().updateSearchText('amp');

@@ -411,6 +411,47 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
 </div>
 `;
 
+exports[`Snapshots renders a search field such that terra styles is not overridden by custom class 1`] = `
+<div
+  className="search-field"
+>
+  <div
+    className="input-group"
+  >
+    <input
+      aria-disabled={false}
+      aria-label="Terra.searchField.search"
+      className="input"
+      disabled={false}
+      onChange={[Function]}
+      onInput={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      type="search"
+    />
+  </div>
+  <Button
+    className="button"
+    icon={
+      <IconSearch
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    isBlock={false}
+    isCompact={true}
+    isDisabled={false}
+    isIconOnly={true}
+    isReversed={false}
+    onClick={[Function]}
+    text="Terra.searchField.submit-search"
+    type="button"
+    variant="neutral"
+  />
+</div>
+`;
+
 exports[`Snapshots renders a search field that displays as a block to fill its container 1`] = `
 <div
   className="search-field block"
