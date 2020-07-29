@@ -301,24 +301,14 @@ class Frame extends React.Component {
       || event.target.className.includes('arrow-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
 
-      // Allows time for state update to render select menu DOM before shifting focus to it
-      setTimeout(() => {
-        if (this.selectMenu) {
-          this.selectMenu.focus();
-        }
-      }, 100);
+      FrameUtil.shiftFocusToMenu(this);
       return;
     }
 
     if (this.input) {
       this.input.focus();
     } else {
-      // Allows time for state update to render select menu DOM before shifting focus to it
-      setTimeout(() => {
-        if (this.selectMenu) {
-          this.selectMenu.focus();
-        }
-      }, 100);
+      FrameUtil.shiftFocusToMenu(this);
     }
 
     this.setState({ isOpen: true, isPositioned: false });
