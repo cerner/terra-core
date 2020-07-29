@@ -9,7 +9,7 @@ module.exports = {
         // Skip the h2 audit so it doesn't lie to us. See https://github.com/GoogleChrome/lighthouse/issues/6539
         skipAudits: ['uses-http2'],
       },
-      startServerCommand: 'npm start -p',
+      startServerCommand: 'npm start',
       url: [
         'http://localhost:8080/raw/tests/terra-action-header/action-header/back-action-header',
         'http://localhost:8080/raw/tests/terra-button/button/active-variant-buttons',
