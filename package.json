@@ -71,8 +71,6 @@
     "lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
     "pretest": "npm run lint",
     "postinstall": "link-parent-bin && npm run compile && npm run bootstrap:hoist",
-    "release": "npm whoami && check-installed-dependencies && npm run compile && npm test && lerna publish",
-    "postrelease": "npm run docs && git add --all && git commit -m 'Update README.md'",
     "start": "tt-serve",
     "start-heroku": "tt-serve-static --port $PORT --site './build'",
     "start-prod": "tt-serve --env.disableHotReloading -p",
@@ -81,7 +79,8 @@
     "wdio-default": "wdio",
     "wdio-lowlight": "THEME=clinical-lowlight-theme wdio",
     "wdio-fusion": "THEME=orion-fusion-theme wdio",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
+    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion",
+    "version": "lerna version --no-git-tag-version"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
