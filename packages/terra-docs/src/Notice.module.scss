@@ -2,8 +2,6 @@
 @import './clinical-lowlight-theme/Notice.module';
 @import './orion-fusion-theme/Notice.module';
 
-/* stylelint-disable terra/custom-property-namespace */
-
 :local {
   .deprecation {
     background-color: var(--terra-docs-notice-deprecation-background-color, #fff9e7);
@@ -28,4 +26,3 @@
     padding: 1.0714285714rem;
   }
 }
-/* stylelint-enable terra/custom-property-namespace */

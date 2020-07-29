@@ -2,8 +2,6 @@
 @import './clinical-lowlight-theme/Placeholder.module';
 @import './orion-fusion-theme/Placeholder.module';
 
-/* stylelint-disable terra/custom-property-namespace */
-
 :local {
   .placeholder,
   .inner {
@@ -26,4 +24,3 @@
     justify-content: center;
   }
 }
-/* stylelint-enable terra/custom-property-namespace */
