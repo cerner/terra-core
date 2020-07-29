@@ -6,7 +6,6 @@ const DefaultTextAreaField = () => (
     inputId="requiredTextarea"
     label="Required Textarea"
     help="Note: This is help text"
-    placeholder="Textarea placeholder"
     required
     inputAttrs={{
       name: 'requiredTextarea',

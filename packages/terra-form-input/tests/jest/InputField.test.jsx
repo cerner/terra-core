@@ -145,16 +145,4 @@ describe('InputField', () => {
     const wrapper = shallow(textarea);
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('should render a placeholder within the InputField component', () => {
-    const textarea = <InputField inputId="test-input" label="Label" placeholder="Placeholder" />;
-    const wrapper = shallow(textarea);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should render a placeholder within the InputField component when passed as an input attribute', () => {
-    const textarea = <InputField inputId="test-input" label="Label" inputAttrs={{ placeholder: 'Placeholder' }} />;
-    const wrapper = shallow(textarea);
-    expect(wrapper).toMatchSnapshot();
-  });
 });
