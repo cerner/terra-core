@@ -1,7 +1,7 @@
 module.exports = {
   ci: {
     collect: {
-      numberOfRuns: 5,
+      numberOfRuns: 3,
       settings: {
         onlyCategories: ['performance'],
         useThrottling: true,
@@ -24,7 +24,8 @@ module.exports = {
       },
     },
     upload: {
-      target: 'temporary-public-storage',
+      target: 'filesystem',
+      outputDir: '../lhci',
     },
   },
 };
