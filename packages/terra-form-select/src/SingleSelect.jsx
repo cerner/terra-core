@@ -176,15 +176,15 @@ class SingleSelect extends React.Component {
       ...otherProps
     } = this.props;
 
-    let frameValue;
+    let selectValue;
 
     if (!isFilterStyle || this.state.value || value) {
-      frameValue = SelectUtil.value(this.props, this.state);
+      selectValue = SelectUtil.value(this.props, this.state);
     } else if (children) {
       if (children[0].props.children) {
-        frameValue = children[0].props.children[0].props.value;
+        selectValue = children[0].props.children[0].props.value;
       } else {
-        frameValue = children[0].props.value;
+        selectValue = children[0].props.value;
       }
     }
 
@@ -192,7 +192,7 @@ class SingleSelect extends React.Component {
       <Frame
         {...otherProps}
         data-terra-select
-        value={frameValue}
+        value={selectValue}
         display={this.display()}
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
