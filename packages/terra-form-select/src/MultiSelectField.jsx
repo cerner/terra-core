@@ -190,7 +190,7 @@ const MultiSelectField = ({
 
   if (customProps.placeholder) {
     // eslint-disable-next-line no-param-reassign
-    customProps.placeholder = null;
+    delete customProps.placeholder;
   }
 
   return (

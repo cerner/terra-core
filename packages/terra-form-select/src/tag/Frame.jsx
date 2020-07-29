@@ -727,7 +727,7 @@ class Frame extends React.Component {
     };
 
     if (customProps.placeholder) {
-      customProps.placeholder = null;
+      delete customProps.placeholder;
     }
 
     return (
