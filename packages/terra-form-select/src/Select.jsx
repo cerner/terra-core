@@ -11,9 +11,9 @@ import Tag from './TagSelect';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
+   * Whether a clear option is available to clear the selection, will use placeholder text.
    * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
-   * This is not applicable to the `default` in place of this prop `isFilterStyle` can be used.
+   * This is not applicable to the `default` variant since this has been made the default behavior.
    */
   allowClear: PropTypes.bool,
   /**
