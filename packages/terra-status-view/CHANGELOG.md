@@ -3,6 +3,8 @@ ChangeLog
 
 Unreleased
 ----------
+### Removed
+* Removed references of deprecated `size` attribute of terra-button.
 
 4.30.0 - (July 7, 2020)
 ------------------
