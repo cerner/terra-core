@@ -9,6 +9,7 @@ Unreleased
 ### Changed
 * Removed the terra-form-input and replaced it with a native input
 * Updated wdio snapshots
+* Updated jest tests due to icon changes
 
 ### Added
 * Added new theme variables
