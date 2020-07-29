@@ -60,7 +60,6 @@ exports[`Select correctly applies the theme context className for default varian
 
 exports[`Select should render a clear option 1`] = `
 <SingleSelect
-  allowClear={true}
   disabled={false}
   intl={
     Object {
@@ -89,6 +88,7 @@ exports[`Select should render a clear option 1`] = `
       "timeZone": null,
     }
   }
+  isFilterStyle={false}
   isIncomplete={false}
   isInvalid={false}
   required={false}
@@ -174,7 +174,6 @@ exports[`Select should render a combobox variant with a placeholder 1`] = `
 
 exports[`Select should render a default variant 1`] = `
 <SingleSelect
-  allowClear={false}
   disabled={false}
   intl={
     Object {
@@ -203,6 +202,7 @@ exports[`Select should render a default variant 1`] = `
       "timeZone": null,
     }
   }
+  isFilterStyle={false}
   isIncomplete={false}
   isInvalid={false}
   required={false}
@@ -211,7 +211,6 @@ exports[`Select should render a default variant 1`] = `
 
 exports[`Select should render a default variant with a placeholder 1`] = `
 <SingleSelect
-  allowClear={false}
   disabled={false}
   intl={
     Object {
@@ -240,6 +239,7 @@ exports[`Select should render a default variant with a placeholder 1`] = `
       "timeZone": null,
     }
   }
+  isFilterStyle={false}
   isIncomplete={false}
   isInvalid={false}
   placeholder="Placeholder"
@@ -286,7 +286,6 @@ exports[`Select should render a disabled combobox variant 1`] = `
 
 exports[`Select should render a disabled default variant 1`] = `
 <SingleSelect
-  allowClear={false}
   disabled={true}
   intl={
     Object {
@@ -315,6 +314,7 @@ exports[`Select should render a disabled default variant 1`] = `
       "timeZone": null,
     }
   }
+  isFilterStyle={false}
   isIncomplete={false}
   isInvalid={false}
   required={false}
@@ -510,7 +510,6 @@ exports[`Select should render a multiple variant with a placeholder 1`] = `
 
 exports[`Select should render a required select 1`] = `
 <SingleSelect
-  allowClear={false}
   disabled={false}
   intl={
     Object {
@@ -539,6 +538,7 @@ exports[`Select should render a required select 1`] = `
       "timeZone": null,
     }
   }
+  isFilterStyle={false}
   isIncomplete={false}
   isInvalid={false}
   required={true}
@@ -969,7 +969,6 @@ exports[`Select should render an incomplete combobox variant 1`] = `
 
 exports[`Select should render an incomplete default variant 1`] = `
 <SingleSelect
-  allowClear={false}
   disabled={false}
   intl={
     Object {
@@ -998,6 +997,7 @@ exports[`Select should render an incomplete default variant 1`] = `
       "timeZone": null,
     }
   }
+  isFilterStyle={false}
   isIncomplete={true}
   isInvalid={false}
   required={false}
@@ -1156,7 +1156,6 @@ exports[`Select should render an invalid combobox variant 1`] = `
 
 exports[`Select should render an invalid default variant 1`] = `
 <SingleSelect
-  allowClear={false}
   disabled={false}
   intl={
     Object {
@@ -1185,6 +1184,7 @@ exports[`Select should render an invalid default variant 1`] = `
       "timeZone": null,
     }
   }
+  isFilterStyle={false}
   isIncomplete={false}
   isInvalid={true}
   required={false}
