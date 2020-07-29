@@ -207,7 +207,6 @@ class TagSelect extends React.Component {
         display={this.display()}
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
-        placeholder={intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })}
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
         inputId={inputId}
