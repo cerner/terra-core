@@ -16,9 +16,9 @@ before_install:
 jobs:
   include:
     - stage: lighthouse run
-    script:
-      - npm run build
-      - lhci autorun
+      script:
+        - npm run build
+        - lhci autorun
 
     - stage: danger lint jest and compile
       script:
