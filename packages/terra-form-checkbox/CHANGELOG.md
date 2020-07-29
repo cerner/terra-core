@@ -5,6 +5,7 @@ Unreleased
 ----------
 ### Removed
 * Removed unused themeable variables
+
 ### Added
 * Added missing themeable variables
 
