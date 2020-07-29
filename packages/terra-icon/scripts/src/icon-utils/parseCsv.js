@@ -16,6 +16,7 @@ const parseCsv = () => new Promise((resolve) => {
       jsonObj.filepath = `${TerraIcon.iconDir}${jsonObj.componentName}.jsx`;
       jsonObj.themeable = !!jsonObj.themeable;
       jsonObj.deprecated = !!jsonObj.deprecated;
+      jsonObj.isOldLowlight = jsonObj.name.includes('low_light');
       jsonObj.bidi = (jsonObj.bidi === 'bi-directional');
       jsonObj.spinner = (jsonObj.name === 'IconSpinner');
       jsonObj.syntaxComponent = `<${jsonObj.componentName} height='2em' width='2em' />`;

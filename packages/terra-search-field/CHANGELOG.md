@@ -11,6 +11,7 @@ Changed
 * Removed the terra-form-input and replaced it with a native input
 * Updated wdio snapshots
 * Update changelog formatting
+* Updated jest tests due to icon changes
 
 Added
 

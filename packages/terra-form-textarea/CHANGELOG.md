@@ -10,6 +10,7 @@ Changed
 
 * Updated examples to not use `placeholder` prop
 * Update changelog formatting
+* Updated jest tests due to icon changes
 
 Removed
 

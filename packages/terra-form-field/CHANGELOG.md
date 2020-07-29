@@ -4,6 +4,7 @@
 
 Changed
 
+* Updated jest tests due to icon changes
 * Update changelog formatting
 
 ## 4.5.0 - (July 7, 2020)
