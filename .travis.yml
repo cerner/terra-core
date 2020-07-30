@@ -1,6 +1,4 @@
 language: node_js
-addons:
-  chrome: stable
 services:
   - docker
 branches:
@@ -12,14 +10,8 @@ cache:
 before_install:
   # Clean install on any new build
   - npm run clean
-  - npm install -g @lhci/cli@0.4.x
 jobs:
   include:
-    - stage: lighthouse run
-      script:
-        - npm run build
-        - lhci autorun
-
     - stage: danger lint jest and compile
       script:
         # clear the cache of any old build artifacts
