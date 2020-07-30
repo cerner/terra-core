@@ -70,7 +70,7 @@ exports[`correctly applies the theme context className 1`] = `
             >
               <IconBase
                 ariaLabel={null}
-                className="IconError"
+                className="IconError orion-fusion-theme"
                 focusable="false"
                 height="1em"
                 isBidi={false}
@@ -81,7 +81,7 @@ exports[`correctly applies the theme context className 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="tui-Icon icon orion-fusion-theme IconError"
+                  className="tui-Icon icon IconError orion-fusion-theme"
                   focusable="false"
                   height="1em"
                   viewBox="0 0 48 48"
