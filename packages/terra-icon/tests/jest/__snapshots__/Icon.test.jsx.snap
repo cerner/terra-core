@@ -92,7 +92,7 @@ exports[`Icon correctly applies the theme context className 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="tui-Icon icon clinical-lowlight-theme"
+      className="tui-Icon icon"
       data-name="Layer 1"
       focusable="false"
       height="1em"
