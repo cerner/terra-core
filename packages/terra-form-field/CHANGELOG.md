@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.6.0 - (July 29, 2020)
+
 Changed
 
 * Updated jest tests due to icon changes

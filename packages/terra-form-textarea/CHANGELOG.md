@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 5.0.0 - (July 29, 2020)
+
 Breaking Change
 
 * Removed `placeholder` prop.

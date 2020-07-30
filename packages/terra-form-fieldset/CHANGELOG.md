@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.46.0 - (July 29, 2020)
+
 Changed
 
 * Update changelog formatting

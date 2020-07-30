@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.35.0 - (July 29, 2020)
+
 Changed
 
 * Update changelog formatting

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.54.0 - (July 29, 2020)
+
 Removed
 
 * Removed `terra-form-input` from dependencies.

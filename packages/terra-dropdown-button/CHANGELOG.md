@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.19.0 - (July 29, 2020)
+
 Changed
 
 * Update changelog formatting
