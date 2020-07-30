@@ -6,7 +6,7 @@ const NumberInputField = () => (
     inputId="numeric-input"
     label="Numeric Value"
     type="number"
-    placeholder="Enter Digits"
+    help="Enter Digits"
     inputAttrs={{
       name: 'numeric',
     }}

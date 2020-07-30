@@ -26,6 +26,38 @@
     --terra-search-field-button-margin-top: 0;
     --terra-search-field-button-focus-box-shadow: inset 0 3rem 1.5rem -2rem #f4f4f4, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(76, 178, 233, 0.5), 0 0 6px 4px rgba(76, 178, 233, 0.3);
 
+    --terra-search-field-input-background-color: #fff;
+    --terra-search-field-input-border: 1px solid #dedfe0;
+    --terra-search-field-input-color: #1c1f21;
+    --terra-search-field-input-font-size: 1rem;
+    --terra-search-field-input-height: 2.16667rem;
+    --terra-search-field-input-padding-bottom: 0.25rem;
+    --terra-search-field-input-padding-left: 0.25rem;
+    --terra-search-field-input-padding-top: 0.25rem;
+
+    --terra-search-field-input-hover-background-color: #fff;
+    --terra-search-field-input-hover-border: 1px solid #dedfe0;
+    --terra-search-field-input-hover-color: #1c1f21;
+
+    --terra-search-field-input-placeholder-color: #707070;
+    --terra-search-field-input-placeholder-font-style: normal;
+
+    --terra-search-field-input-disabled-background-color: #f4f4f4;
+    --terra-search-field-input-disabled-border: 1px solid #b2b5b6;
+    --terra-search-field-input-disabled-color: #9b9fa1;
+    --terra-search-field-input-disabled-opacity: 1;
+
+    --terra-search-field-input-placeholder-disabled-color: #c4c6c7;
+    --terra-search-field-input-placeholder-disabled-font-style: normal;
+
+    --terra-search-field-input-focus-background-color: #fff;
+    --terra-search-field-input-focus-border: 1px solid #4cb2e9;
+    --terra-search-field-input-focus-box-shadow: 0 0 8px #a6d9f4;
+    --terra-search-field-input-focus-color: #1c1f21;
+
+    --terra-search-field-input-focus-ltr-box-shadow: 0 0 8px #a6d9f4;
+    --terra-search-field-input-focus-rtl-box-shadow: 0 0 8px #a6d9f4;
+
     @include terra-inline-svg-var('--terra-search-field-clear-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#909496" d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24S37.3 0 24 0zm13.9 33.8l-2.1 2.1-1.2 1.2-1 .9-9.6-9.7-9.6 9.7-2.2-2.1-1.1-1.1-1-1 9.7-9.8-9.7-9.8 1-1 1.1-1.1 2.2-2.1 9.6 9.7 9.6-9.7 1 .9 1.2 1.2 2.1 2.1-9.7 9.8 9.7 9.8z"/></svg>');
   }
 }

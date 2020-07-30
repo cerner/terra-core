@@ -48,14 +48,19 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   describe('With Placeholder', () => {
     before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-with-placeholder'));
 
-    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
-    Terra.it.validatesElement('placeholder', { rules: { 'color-contrast': { enabled: false } } });
+    Terra.it.validatesElement('placeholder');
 
     it('should enter a search term', () => {
       browser.setValue('input', 'Lorem');
     });
 
     Terra.it.validatesElement('with text');
+  });
+
+  describe('With Placeholder Disabled', () => {
+    before(() => browser.url('/#/raw/tests/terra-search-field/search-field/search-field-with-placeholder-disabled'));
+
+    Terra.it.validatesElement('placeholder');
   });
 
   describe('With Default Value', () => {

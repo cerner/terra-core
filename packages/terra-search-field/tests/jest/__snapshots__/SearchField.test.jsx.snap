@@ -77,36 +77,17 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
         <div
           className="input-group"
         >
-          <Input
+          <input
             aria-disabled={false}
-            ariaLabel="Terra.searchField.search"
+            aria-label="Terra.searchField.search"
             className="input"
             disabled={false}
-            isIncomplete={false}
-            isInvalid={false}
-            name={null}
             onChange={[Function]}
             onInput={[Function]}
             onKeyDown={[Function]}
             placeholder=""
-            refCallback={[Function]}
-            required={false}
             type="search"
-          >
-            <input
-              aria-disabled={false}
-              aria-label="Terra.searchField.search"
-              className="form-input orion-fusion-theme input"
-              disabled={false}
-              name={null}
-              onChange={[Function]}
-              onInput={[Function]}
-              onKeyDown={[Function]}
-              placeholder=""
-              required={false}
-              type="search"
-            />
-          </Input>
+          />
         </div>
         <Button
           className="button"
@@ -167,7 +148,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      className="tui-Icon icon orion-fusion-theme icon-svg"
+                      className="tui-Icon icon icon-svg"
                       data-name="Layer 1"
                       focusable="false"
                       height="1em"
@@ -201,9 +182,10 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
           <input
             aria-disabled="false"
             aria-label="Terra.searchField.search"
-            class="form-input input"
+            class="input"
             placeholder=""
             type="search"
+            value=""
           />,
         ],
       ],
@@ -254,36 +236,17 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
     <div
       className="input-group"
     >
-      <Input
+      <input
         aria-disabled={false}
-        ariaLabel="Terra.searchField.search"
+        aria-label="Terra.searchField.search"
         className="input"
         disabled={false}
-        isIncomplete={false}
-        isInvalid={false}
-        name={null}
         onChange={[Function]}
         onInput={[Function]}
         onKeyDown={[Function]}
         placeholder=""
-        refCallback={[Function]}
-        required={false}
         type="search"
-      >
-        <input
-          aria-disabled={false}
-          aria-label="Terra.searchField.search"
-          className="form-input input"
-          disabled={false}
-          name={null}
-          onChange={[Function]}
-          onInput={[Function]}
-          onKeyDown={[Function]}
-          placeholder=""
-          required={false}
-          type="search"
-        />
-      </Input>
+      />
     </div>
     <Button
       className="button"
@@ -373,20 +336,15 @@ exports[`Snapshots renders a basic search field 1`] = `
   <div
     className="input-group"
   >
-    <Input
+    <input
       aria-disabled={false}
-      ariaLabel="Terra.searchField.search"
+      aria-label="Terra.searchField.search"
       className="input"
       disabled={false}
-      isIncomplete={false}
-      isInvalid={false}
-      name={null}
       onChange={[Function]}
       onInput={[Function]}
       onKeyDown={[Function]}
       placeholder=""
-      refCallback={[Function]}
-      required={false}
       type="search"
     />
   </div>
@@ -419,20 +377,15 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
   <div
     className="input-group"
   >
-    <Input
+    <input
       aria-disabled={true}
-      ariaLabel="Terra.searchField.search"
+      aria-label="Terra.searchField.search"
       className="input"
       disabled={true}
-      isIncomplete={false}
-      isInvalid={false}
-      name={null}
       onChange={[Function]}
       onInput={[Function]}
       onKeyDown={[Function]}
       placeholder=""
-      refCallback={[Function]}
-      required={false}
       type="search"
     />
   </div>
@@ -465,20 +418,15 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
   <div
     className="input-group"
   >
-    <Input
+    <input
       aria-disabled={false}
-      ariaLabel="Terra.searchField.search"
+      aria-label="Terra.searchField.search"
       className="input"
       disabled={false}
-      isIncomplete={false}
-      isInvalid={false}
-      name={null}
       onChange={[Function]}
       onInput={[Function]}
       onKeyDown={[Function]}
       placeholder=""
-      refCallback={[Function]}
-      required={false}
       type="search"
     />
     <Button
@@ -528,21 +476,16 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
   <div
     className="input-group"
   >
-    <Input
+    <input
       aria-disabled={false}
-      ariaLabel="Terra.searchField.search"
+      aria-label="Terra.searchField.search"
       className="input"
       defaultValue="Default"
       disabled={false}
-      isIncomplete={false}
-      isInvalid={false}
-      name={null}
       onChange={[Function]}
       onInput={[Function]}
       onKeyDown={[Function]}
       placeholder=""
-      refCallback={[Function]}
-      required={false}
       type="search"
     />
     <Button
@@ -592,20 +535,15 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
   <div
     className="input-group"
   >
-    <Input
+    <input
       aria-disabled={false}
-      ariaLabel="Terra.searchField.search"
+      aria-label="Terra.searchField.search"
       className="input"
       disabled={false}
-      isIncomplete={false}
-      isInvalid={false}
-      name={null}
       onChange={[Function]}
       onInput={[Function]}
       onKeyDown={[Function]}
       placeholder="Test"
-      refCallback={[Function]}
-      required={false}
       type="search"
     />
   </div>
@@ -638,20 +576,15 @@ exports[`Snapshots renders a search field with a value 1`] = `
   <div
     className="input-group"
   >
-    <Input
+    <input
       aria-disabled={false}
-      ariaLabel="Terra.searchField.search"
+      aria-label="Terra.searchField.search"
       className="input"
       disabled={false}
-      isIncomplete={false}
-      isInvalid={false}
-      name={null}
       onChange={[Function]}
       onInput={[Function]}
       onKeyDown={[Function]}
       placeholder=""
-      refCallback={[Function]}
-      required={false}
       type="search"
       value="Test"
     />
@@ -702,21 +635,15 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
   <div
     className="input-group"
   >
-    <Input
+    <input
       aria-disabled={false}
       aria-label="Search Field"
-      ariaLabel="Search Field"
       className="input"
       disabled={false}
-      isIncomplete={false}
-      isInvalid={false}
-      name={null}
       onChange={[Function]}
       onInput={[Function]}
       onKeyDown={[Function]}
       placeholder=""
-      refCallback={[Function]}
-      required={false}
       type="search"
     />
   </div>
@@ -749,20 +676,16 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
   <div
     className="input-group"
   >
-    <Input
+    <input
       aria-disabled={false}
+      aria-label="Terra.searchField.search"
       ariaLabel="Search Field"
       className="input"
       disabled={false}
-      isIncomplete={false}
-      isInvalid={false}
-      name={null}
       onChange={[Function]}
       onInput={[Function]}
       onKeyDown={[Function]}
       placeholder=""
-      refCallback={[Function]}
-      required={false}
       type="search"
     />
   </div>

@@ -70,7 +70,7 @@ exports[`correctly applies the theme context className 1`] = `
             >
               <IconBase
                 ariaLabel={null}
-                className="IconError"
+                className="IconError orion-fusion-theme"
                 focusable="false"
                 height="1em"
                 isBidi={false}
@@ -81,7 +81,7 @@ exports[`correctly applies the theme context className 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="tui-Icon icon orion-fusion-theme IconError"
+                  className="tui-Icon icon IconError orion-fusion-theme"
                   focusable="false"
                   height="1em"
                   viewBox="0 0 48 48"
@@ -272,78 +272,6 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
     isIncomplete={false}
     isInvalid={false}
     name={null}
-    required={false}
-    rows={null}
-    size="small"
-  />
-</Field>
-`;
-
-exports[`should render a placeholder within the textarea field 1`] = `
-<Field
-  error={null}
-  errorIcon={
-    <IconError
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  }
-  help={null}
-  hideRequired={false}
-  htmlFor="test-input"
-  isInline={false}
-  isInvalid={false}
-  isLabelHidden={false}
-  label="Label"
-  labelAttrs={Object {}}
-  required={false}
-  showOptional={false}
->
-  <Textarea
-    disableResize={false}
-    disabled={false}
-    id="test-input"
-    isAutoResizable={false}
-    isIncomplete={false}
-    isInvalid={false}
-    name={null}
-    placeholder="placeholder"
-    required={false}
-    rows={null}
-    size="small"
-  />
-</Field>
-`;
-
-exports[`should render a placeholder within the textarea field when passed as an input attribute 1`] = `
-<Field
-  error={null}
-  errorIcon={
-    <IconError
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  }
-  help={null}
-  hideRequired={false}
-  htmlFor="test-input"
-  isInline={false}
-  isInvalid={false}
-  isLabelHidden={false}
-  label="Label"
-  labelAttrs={Object {}}
-  required={false}
-  showOptional={false}
->
-  <Textarea
-    disableResize={false}
-    disabled={false}
-    id="test-input"
-    isAutoResizable={false}
-    isIncomplete={false}
-    isInvalid={false}
-    name={null}
-    placeholder="Placeholder"
     required={false}
     rows={null}
     size="small"

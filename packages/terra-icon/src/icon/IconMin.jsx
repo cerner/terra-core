@@ -1,20 +1,26 @@
 /* eslint-disable */
 import React from 'react';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import IconBase from '../IconBase';
 import styles from '../IconMin.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
-  const iconClassNames = cx([
-    'IconMin',
+  const theme = React.useContext(ThemeContext);
+  const iconClassNames = classNames(
+    cx(
+      'IconMin',
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   return (
-    <IconBase className={iconClassNames} {...attributes}>
+    <IconBase {...attributes} className={iconClassNames} >
       <path d="M27 32V0h-6v32H8.5L24 48l15.5-16z" ></path>
     </IconBase>
   );
