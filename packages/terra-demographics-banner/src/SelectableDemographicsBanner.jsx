@@ -52,7 +52,7 @@ const propTypes = {
   /**
    * The person's deceased date. Will display the banner as deceased if this value is provided.
    */
-  deceasedDate: PropTypes.string,
+  deceasedDate: PropTypes.shape(stringShape),
   /**
    * Gender of the Person. This will be displayed on the demographics banner.
    */
@@ -91,9 +91,9 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
-   * URL of photo to display in the banner.
+   * Photo to display in the banner.
    */
-  photo: PropTypes.string,
+  photo: PropTypes.node,
   /**
    * The column layout in which to present the displays.
    */
@@ -107,7 +107,7 @@ const propTypes = {
 const defaultProps = {
   applicationContent: null,
   dateOfBirth: {},
-  deceasedDate: null,
+  deceasedDate: {},
   gestationalAge: null,
   isConfidential: false,
   postMenstrualAge: null,
@@ -176,7 +176,7 @@ const SelectableDemographicsBanner = ({
   return (
     <BackgroundTile
       {...customProps}
-      isDeceased={!!(deceasedDate)}
+      isDeceased={!!(deceasedDate.value)}
     >
       <SelectableTile
         onClick={handleClick}

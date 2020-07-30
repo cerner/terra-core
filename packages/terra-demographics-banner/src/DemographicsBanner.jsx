@@ -45,7 +45,7 @@ const propTypes = {
   /**
    * The person's deceased date. Will display the banner as deceased if this value is provided.
    */
-  deceasedDate: PropTypes.string,
+  deceasedDate: PropTypes.shape(stringShape),
   /**
    * Gender of the Person. This will be displayed on the demographics banner.
    */
@@ -86,7 +86,7 @@ const propTypes = {
    */
   personName: PropTypes.string,
   /**
-   * Image Node to display photo in the banner or URL of photo to display in the banner.
+   * Photo to display in the banner.
    */
   photo: PropTypes.node,
   /**
@@ -103,7 +103,7 @@ const defaultProps = {
   age: undefined,
   applicationContent: null,
   dateOfBirth: {},
-  deceasedDate: null,
+  deceasedDate: {},
   gender: undefined,
   gestationalAge: null,
   identifiers: undefined,

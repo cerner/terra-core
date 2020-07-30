@@ -56,7 +56,7 @@ const propTypes = {
   /**
    * The person's deceased date. Will display the banner as deceased if this value is provided
    */
-  deceasedDate: PropTypes.string,
+  deceasedDate: PropTypes.shape(stringShape),
   /**
    * Label to display for the deceased date
    */
@@ -136,7 +136,7 @@ const defaultProps = {
   dateOfBirth: {},
   dateOfBirthLabel: 'DOB',
   dateOfBirthFullText: 'Date of Birth',
-  deceasedDate: null,
+  deceasedDate: {},
   deceasedDateLabel: 'Deceased',
   gender: '',
   gestationalAge: null,

@@ -17,7 +17,7 @@ export default () => {
         applicationContent={<span className="risk-score">5%</span>}
         age="27 Years"
         dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-        deceasedDate="March 12, 2020"
+        deceasedDate={{ value: 'March 12, 2020', ariaLabel: 'March 12, 2020' }}
         gender="M"
         genderAria="Male"
         identifiers={[

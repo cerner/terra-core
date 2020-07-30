@@ -87,11 +87,13 @@ const personDetails = (props) => {
     />);
   }
 
-  if (props.deceasedDate) {
+  if (props.deceasedDate && props.deceasedDate.value) {
     elements.push(<DemographicsBannerValue
       key="deceased"
+      abbrTitle={props.deceasedDate.ariaLabel ? props.deceasedDateLabel.concat(' ', props.deceasedDate.ariaLabel) : undefined}
       label={props.deceasedDateLabel}
-      value={props.deceasedDate}
+      value={props.deceasedDate.value}
+      valueAriaHidden={!!props.deceasedDate.ariaLabel}
     />);
   }
 

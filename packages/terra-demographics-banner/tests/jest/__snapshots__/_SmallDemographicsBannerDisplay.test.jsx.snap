@@ -150,7 +150,7 @@ exports[`renders small banner that contains all valid information 1`] = `
   dateOfBirth={
     Object {
       "ariaLabel": "May 9, 1993",
-      "value": "05/09/1993",
+      "value": "May 9, 1993",
     }
   }
   dateOfBirthLabel="DOB"

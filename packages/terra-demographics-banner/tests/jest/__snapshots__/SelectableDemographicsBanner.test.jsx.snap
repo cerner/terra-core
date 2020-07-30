@@ -15,7 +15,7 @@ exports[`renders a blank banner wrapper 1`] = `
       applicationContent={null}
       className="selectable-demographics-banner"
       dateOfBirth={Object {}}
-      deceasedDate={null}
+      deceasedDate={Object {}}
       gestationalAge={null}
       isActive={false}
       isConfidential={false}
@@ -53,10 +53,15 @@ exports[`renders the banner wrapper with all props 1`] = `
       dateOfBirth={
         Object {
           "ariaLabel": "May 9, 1993",
-          "value": "05/09/1993",
+          "value": "May 9, 1993",
         }
       }
-      deceasedDate="January 10, 2020"
+      deceasedDate={
+        Object {
+          "ariaLabel": "January 10, 2020",
+          "value": "January 10, 2020",
+        }
+      }
       gender="Male"
       genderAria="Male"
       gestationalAge="April 5, 2016"

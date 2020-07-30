@@ -43,7 +43,7 @@ const SmallDemographicsBannerDisplay = (props) => {
   const mainClasses = classNames(
     cx(
       'demographics-banner',
-      { deceased: deceasedDate },
+      { deceased: deceasedDate && deceasedDate.value },
       { 'is-selectable': isSelectable },
       { 'is-active': isActive },
       theme.className,

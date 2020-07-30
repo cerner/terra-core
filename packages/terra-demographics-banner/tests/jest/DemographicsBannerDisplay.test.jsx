@@ -50,7 +50,7 @@ it('renders the banner appropriately for a deceased person', () => {
     age="24"
     gender="F"
     dateOfBirth={{ value: 'June 15, 2014', ariaLabel: 'June 15, 2014' }}
-    deceasedDate="March 30, 2017"
+    deceasedDate={{ value: 'March 30, 2017', ariaLabel: 'March 30, 2017' }}
     personName="Old Terra Demographics Banner"
   />);
 
@@ -102,7 +102,7 @@ it('renders the banner properly for a deceased person with additional applicatio
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-    deceasedDate="March 5, 2016"
+    deceasedDate={{ value: 'March 5, 2016', ariaLabel: 'March 5, 2016' }}
     gender="Male"
     identifiers={[
       {

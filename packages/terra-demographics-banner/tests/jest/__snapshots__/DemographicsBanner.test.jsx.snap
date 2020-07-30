@@ -6,7 +6,7 @@ exports[`renders a blank banner wrapper 1`] = `
   dateOfBirth={Object {}}
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
-  deceasedDate={null}
+  deceasedDate={Object {}}
   deceasedDateLabel="Terra.demographicsBanner.deceased"
   gestationalAge={null}
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
@@ -35,12 +35,12 @@ exports[`renders the banner wrapper with all props 1`] = `
   dateOfBirth={
     Object {
       "ariaLabel": "May 9, 1993",
-      "value": "05/09/1993",
+      "value": "May 9, 1993",
     }
   }
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
-  deceasedDate={null}
+  deceasedDate={Object {}}
   deceasedDateLabel="Terra.demographicsBanner.deceased"
   gender="Male"
   genderAria="Male"

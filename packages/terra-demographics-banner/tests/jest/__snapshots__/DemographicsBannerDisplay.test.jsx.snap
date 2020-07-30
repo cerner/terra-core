@@ -12,7 +12,7 @@ exports[`renders a banner that has basic information 1`] = `
   }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
-  deceasedDate={null}
+  deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
   gender="F"
   gestationalAge={null}
@@ -63,7 +63,7 @@ exports[`renders a blank banner properly 1`] = `
   dateOfBirth={Object {}}
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
-  deceasedDate={null}
+  deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
   gender=""
   gestationalAge={null}
@@ -114,7 +114,7 @@ exports[`renders gestational date with a default label when the label is not pro
   dateOfBirth={Object {}}
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
-  deceasedDate={null}
+  deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
   gender=""
   gestationalAge="April 5, 2016"
@@ -165,7 +165,7 @@ exports[`renders post menstrural date with a default label when the label is not
   dateOfBirth={Object {}}
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
-  deceasedDate={null}
+  deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
   gender=""
   gestationalAge={null}
@@ -221,7 +221,12 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
   }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
-  deceasedDate="March 30, 2017"
+  deceasedDate={
+    Object {
+      "ariaLabel": "March 30, 2017",
+      "value": "March 30, 2017",
+    }
+  }
   deceasedDateLabel="Deceased"
   gender="F"
   gestationalAge={null}
@@ -278,12 +283,12 @@ exports[`renders the banner appropriately for a person with gestational and post
   dateOfBirth={
     Object {
       "ariaLabel": "May 9, 1993",
-      "value": "05/09/1993",
+      "value": "May 9, 1993",
     }
   }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
-  deceasedDate={null}
+  deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
   gender="Male"
   gestationalAge="April 5, 2016"
@@ -355,12 +360,17 @@ exports[`renders the banner properly for a deceased person with additional appli
   dateOfBirth={
     Object {
       "ariaLabel": "May 9, 1993",
-      "value": "05/09/1993",
+      "value": "May 9, 1993",
     }
   }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
-  deceasedDate="March 5, 2016"
+  deceasedDate={
+    Object {
+      "ariaLabel": "March 5, 2016",
+      "value": "March 5, 2016",
+    }
+  }
   deceasedDateLabel="Deceased"
   gender="Male"
   gestationalAge={null}
@@ -432,12 +442,12 @@ exports[`renders the banner that contains additional information 1`] = `
   dateOfBirth={
     Object {
       "ariaLabel": "May 9, 1993",
-      "value": "05/09/1993",
+      "value": "May 9, 1993",
     }
   }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
-  deceasedDate={null}
+  deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
   gender="Male"
   gestationalAge={null}
@@ -509,12 +519,12 @@ exports[`renders the banner with confidential icon 1`] = `
   dateOfBirth={
     Object {
       "ariaLabel": "May 9, 1993",
-      "value": "05/09/1993",
+      "value": "May 9, 1993",
     }
   }
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
-  deceasedDate={null}
+  deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
   gender="Male"
   gestationalAge={null}

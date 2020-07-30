@@ -7,7 +7,7 @@ const DemographicsBannerDeceased = () => (
   <DemographicsBanner
     age="25 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-    deceasedDate="March 12, 2017"
+    deceasedDate={{ value: 'March 12, 2017', ariaLabel: 'March 12, 2017' }}
     gender="True Male"
     identifiers={[
       {

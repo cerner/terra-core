@@ -44,7 +44,7 @@ const LargeDemographicsBannerDisplay = (props) => {
     cx(
       'demographics-banner',
       'large-demographics-banner',
-      { deceased: deceasedDate },
+      { deceased: deceasedDate && deceasedDate.value },
       { 'is-selectable': isSelectable },
       { 'is-active': isActive },
       theme.className,
