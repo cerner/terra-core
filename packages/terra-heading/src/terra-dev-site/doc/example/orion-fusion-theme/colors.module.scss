@@ -1,8 +1,9 @@
 :local {
   .orion-fusion-theme {
-    --terra-heading-attention-color: rgb(220, 20, 60);
-    --terra-heading-success-color: rgb(46, 125, 50);
-    --terra-heading-info-color: #304ffe;
-    --terra-heading-default-color: #333;
+    // Used for docsite custom color examples only 
+    --terra-heading-attention-color: #c00;
+    --terra-heading-default-color: #1c1f21;
+    --terra-heading-info-color: #0065a3;
+    --terra-heading-success-color: #2e7d32;
   }
 }

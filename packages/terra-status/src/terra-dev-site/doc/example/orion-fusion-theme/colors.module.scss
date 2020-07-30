@@ -1,7 +1,8 @@
 :local {
   .orion-fusion-theme {
-    --terra-status-attention-border-left-color: #f00;
-    --terra-status-success-border-left-color: #0f0;
-    --terra-status-info-border-left-color: rgb(0, 0, 255);
+    // Used for docsite custom color examples only 
+    --terra-status-attention-border-left-color: #c00;
+    --terra-status-info-border-left-color: #007cc3;
+    --terra-status-success-border-left-color: #78c346;
   }
 }

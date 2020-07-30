@@ -1,7 +1,8 @@
 :local {
   .clinical-lowlight-theme {
-    --terra-alert-attention-example-color: #fa0000;
-    --terra-alert-help-example-color: #b961cf;
-    --terra-alert-dismiss-example-color: #ffa500;
+    // Used for docsite custom color examples only 
+    --terra-alert-attention-example-color: #f94e4e;
+    --terra-alert-dismiss-example-color: #ff049b;
+    --terra-alert-help-example-color: #0addff;
   }
 }

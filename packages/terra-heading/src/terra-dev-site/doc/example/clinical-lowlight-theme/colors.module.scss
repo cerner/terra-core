@@ -1,8 +1,9 @@
 :local {
   .clinical-lowlight-theme {
-    --terra-heading-attention-color: rgb(220, 20, 60);
-    --terra-heading-success-color: rgb(46, 125, 50);
-    --terra-heading-info-color: #304ffe;
-    --terra-heading-default-color: #333;
+    // Used for docsite custom color examples only 
+    --terra-heading-attention-color: #fb4c4c;
+    --terra-heading-default-color: #6f7477;
+    --terra-heading-info-color: #5a81ff;
+    --terra-heading-success-color: #78c346;
   }
 }

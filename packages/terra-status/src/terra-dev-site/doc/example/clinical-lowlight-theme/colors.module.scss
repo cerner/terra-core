@@ -1,7 +1,8 @@
 :local {
   .clinical-lowlight-theme {
-    --terra-status-attention-border-left-color: #f00;
-    --terra-status-success-border-left-color: #0f0;
-    --terra-status-info-border-left-color: rgb(0, 0, 255);
+    // Used for docsite custom color examples only 
+    --terra-status-attention-border-left-color: #f94e4e;
+    --terra-status-info-border-left-color: #5a81ff;
+    --terra-status-success-border-left-color: #42af00;
   }
 }
