@@ -411,7 +411,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
 </div>
 `;
 
-exports[`Snapshots renders a search field such that terra styles is not overridden by custom class 1`] = `
+exports[`Snapshots renders a search field such that custom styles are applied 1`] = `
 <div
   className="search-field"
 >
@@ -421,7 +421,7 @@ exports[`Snapshots renders a search field such that terra styles is not overridd
     <input
       aria-disabled={false}
       aria-label="Terra.searchField.search"
-      className="input"
+      className="input test-class"
       disabled={false}
       onChange={[Function]}
       onInput={[Function]}
