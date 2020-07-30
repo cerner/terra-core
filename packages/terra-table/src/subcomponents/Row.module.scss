@@ -49,13 +49,13 @@
       background-color: var(--terra-table-row-striped-selected-background-color, #e1f3fd);
     }
 
-    /* stylelint-disable max-nesting-depth*/
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
       &.is-selectable:hover {
         background-color: var(--terra-table-row-striped-hover-background-color, #f4fefe);
         background-image: var(--terra-table-row-striped-hover-background-image, linear-gradient(to bottom, #e1f2fd 2%, #ebf6fe 30%, #f4fafe 80%));
         box-shadow: var(--terra-table-row-striped-hover-box-shadow, inset 0 0 0 1px #fff);
-      
+
+        /* stylelint-disable-next-line max-nesting-depth */
         &.is-selected {
           background-color: var(--terra-table-row-striped-selected-hover-background-color, #d1ebfb);
           background-image: var(--terra-table-row-striped-selected-hover-background-image, linear-gradient(to bottom, #b3ddf8 2%, #c8e9fe 30%, #d1ebfb 80%));
@@ -95,6 +95,7 @@
         box-shadow: var(--terra-table-row-selected-next-selected-box-shadow);
       }
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+        /* stylelint-disable-next-line max-nesting-depth */
         + .row.is-selected:hover {
           box-shadow: var(--terra-table-row-selected-next-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
         }
@@ -119,7 +120,7 @@
         box-shadow: var(--terra-table-row-selected-hover-box-shadow, inset 0 0 0 1px #e1f3fd);
       }
     }
-    
+
     &:active,
     &:hover {
       &.row {

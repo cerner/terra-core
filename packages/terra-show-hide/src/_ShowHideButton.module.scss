@@ -66,7 +66,6 @@
       }
     }
 
-    /* stylelint-disable max-nesting-depth */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
       &:hover,
       &.is-hovered {
@@ -74,6 +73,7 @@
         color: var(--terra-show-hide-v1-button-hover-color, #001f67);
         text-decoration: var(--terra-show-hide-v1-button-hover-text-decoration, underline);
 
+        /* stylelint-disable-next-line max-nesting-depth */
         .icon {
           background-image: var(--terra-show-hide-v1-button-hover-icon-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><polygon fill="#001f67" points="40.8,8.6 24,25 7.2,8.6 0,15.9 24,39.4 48,15.9 "/></svg>'));
         }

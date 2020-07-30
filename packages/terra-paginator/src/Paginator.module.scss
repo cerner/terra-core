@@ -46,8 +46,8 @@
       white-space: normal;
       word-wrap: break-word; /* For IE 10 and IE 11 */
 
-      /* stylelint-disable max-nesting-depth */
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+        /* stylelint-disable-next-line max-nesting-depth */
         &:hover {
           background-color: var(--terra-paginator-nav-link-hover-background-color, transparent);
           border: var(--terra-paginator-nav-link-hover-border, none);
@@ -87,6 +87,7 @@
       pointer-events: none;
 
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+        /* stylelint-disable-next-line max-nesting-depth */
         &:hover {
           text-decoration: none;
         }

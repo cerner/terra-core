@@ -109,9 +109,9 @@
   .is-enabled {
     cursor: pointer;
     
-    /* stylelint-disable max-nesting-depth */
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
       &:hover {
+        /* stylelint-disable max-nesting-depth */
         .slider {
           background-color: var(--terra-switch-slider-hover-background-color, #fff);
           border: var(--terra-switch-slider-hover-border, 0);
@@ -124,6 +124,7 @@
           border: var(--terra-switch-tray-default-hover-border, 1px solid #909496);
           box-shadow: var(--terra-switch-tray-default-hover-box-shadow, inset 0 1px 5px 0 rgba(0, 0, 0, 0.3));
         }
+        /* stylelint-enable max-nesting-depth */
       }
     }
 
