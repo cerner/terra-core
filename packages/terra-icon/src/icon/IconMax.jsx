@@ -1,20 +1,26 @@
 /* eslint-disable */
 import React from 'react';
-import classNames from 'classnames/bind';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import IconBase from '../IconBase';
 import styles from '../IconMax.module.scss';
 
-const cx = classNames.bind(styles);
+const cx = classNamesBind.bind(styles);
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
-  const iconClassNames = cx([
-    'IconMax',
+  const theme = React.useContext(ThemeContext);
+  const iconClassNames = classNames(
+    cx(
+      'IconMax',
+      theme.className,
+    ),
     customProps.className,
-  ]);
+  );
 
   return (
-    <IconBase className={iconClassNames} {...attributes}>
+    <IconBase {...attributes} className={iconClassNames} >
       <path d="M39.5 16L24 0 8.5 16H21v32h6V16z" ></path>
     </IconBase>
   );
