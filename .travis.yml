@@ -38,6 +38,7 @@ jobs:
       script:
         - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=huge npm run wdio-default
+        - ECHO $TRAVIS_BUILD_DIR/travis-build/
 
     - stage: deploy
       script: skip
