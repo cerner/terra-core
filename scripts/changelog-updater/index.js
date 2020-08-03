@@ -11,7 +11,7 @@ exec('npx lerna changed', (error, stdout) => {
   }
 
   // Clean up lerna updated output and convert to an array
-  const updatedPackages = stdout.split('\n').map(x => `packages/${x}`);
+  const updatedPackages = stdout.split('\n').map(x => `packages/${x.replace('@cerner/', '')}`);
   updatedPackages.pop(); // Remove last item as it is an empty string
 
   // Update release version in changelog files
@@ -41,9 +41,8 @@ exec('npx lerna changed', (error, stdout) => {
 
         // Default message
         let releaseContent = [
-          'Changed',
-          '',
-          '* Minor dependency version bump',
+          '* Changed',
+          '  * Minor dependency version bump',
           '',
           '',
         ].join('\n');
