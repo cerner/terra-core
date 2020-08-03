@@ -22,7 +22,7 @@ const propTypes = {
   /**
    * An array of objects containing terra-button properties. A key attribute is required for each object.
    * This array is used to render buttons in the bottom section.
-   * Example:`[{ text: 'Button 1', key: 1, size: 'medium', variant: 'action', onClick: onClickFunction}]`
+   * Example:`[{ text: 'Button 1', key: 1, variant: 'neutral', onClick: onClickFunction}]`
    */
   buttonAttrs: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)),
 
