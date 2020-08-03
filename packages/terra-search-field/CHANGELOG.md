@@ -2,9 +2,8 @@
 
 ## Unreleased
 
-Changed
-
-* Moved custom input attributes to be spread first on the input element.
+* Changed
+  * Moved custom input attributes to be spread first on the input element.
 
 ## 3.54.0 - (July 29, 2020)
 
