@@ -9,7 +9,6 @@ const StatusViewButtons = [
   }, {
     text: 'Cancel',
     key: 2,
-    size: 'medium',
     id: 'button2',
   },
 ];
