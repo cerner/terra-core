@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+* Removed
+  * Removed unused themeable variables
+
+* Added
+  * Added missing themeable variables
+
 ## 4.7.0 - (July 29, 2020)
 
 * Changed
@@ -459,4 +465,4 @@
 
 ## 1.0.0 - (January 5, 2018)
 
-Initial release
+* Initial release
