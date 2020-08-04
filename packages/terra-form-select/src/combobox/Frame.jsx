@@ -180,7 +180,7 @@ class Frame extends React.Component {
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
-    this.id = `terra-select-menu-${uniqueid()}`;
+    this.menuId = `terra-select-menu-${uniqueid()}`;
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
@@ -303,7 +303,7 @@ class Frame extends React.Component {
     if (this.input) {
       this.input.focus();
     } else {
-      FrameUtil.shiftFocusToMenu(this.selectMenu);
+      FrameUtil.shiftFocusToMenu(this);
     }
 
     this.setState({ isOpen: true, isPositioned: false });
@@ -665,7 +665,7 @@ class Frame extends React.Component {
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
 
     const menuProps = {
-      id: this.id,
+      id: this.menuId,
       value,
       onDeselect,
       optionFilter,
@@ -685,12 +685,12 @@ class Frame extends React.Component {
         {...customProps}
         role={this.role()}
         data-terra-select-combobox
-        aria-controls={!disabled && this.state.isOpen ? this.id : undefined}
+        aria-controls={!disabled && this.state.isOpen ? this.menuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? this.id : undefined}
+        aria-owns={this.state.isOpen ? this.menuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
@@ -706,7 +706,7 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')}>
-          {this.getDisplay(ariaDescribedBy, this.id)}
+          {this.getDisplay(ariaDescribedBy, this.menuId)}
         </div>
         {this.renderToggleButton()}
         <span

@@ -195,7 +195,7 @@ class Frame extends React.Component {
     this.handleToggleButtonClick = this.handleToggleButtonClick.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
-    this.id = `terra-select-menu-${uniqueid()}`;
+    this.menuId = `terra-select-menu-${uniqueid()}`;
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
   }
@@ -717,7 +717,7 @@ class Frame extends React.Component {
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
 
     const menuProps = {
-      id: this.id,
+      id: this.menuId,
       value,
       onDeselect,
       optionFilter,
@@ -736,12 +736,12 @@ class Frame extends React.Component {
         {...customProps}
         role={this.role()}
         data-terra-select-combobox
-        aria-controls={!disabled && this.state.isOpen ? this.id : undefined}
+        aria-controls={!disabled && this.state.isOpen ? this.menuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? this.id : undefined}
+        aria-owns={this.state.isOpen ? this.menuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onClick={this.handleClick}
@@ -758,7 +758,7 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')}>
-          {this.getDisplay(displayId, ariaDescribedBy, this.id)}
+          {this.getDisplay(displayId, ariaDescribedBy, this.menuId)}
         </div>
         {this.renderToggleButton()}
         <span
