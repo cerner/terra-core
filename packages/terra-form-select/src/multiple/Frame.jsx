@@ -186,6 +186,7 @@ class Frame extends React.Component {
     this.handleToggleButtonClick = this.handleToggleButtonClick.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
+    this.id = `terra-select-menu-${uniqueid()}`;
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
   }
@@ -219,7 +220,7 @@ class Frame extends React.Component {
     this.selectMenu = element;
   }
 
-  getDisplay(displayId, ariaDescribedBy, selectMenuId) {
+  getDisplay(displayId, ariaDescribedBy, id) {
     const { searchValue, isFocused } = this.state;
     const {
       disabled, display, placeholder, required, value, inputId,
@@ -238,7 +239,7 @@ class Frame extends React.Component {
       'aria-label': this.ariaLabel(),
       'aria-describedby': `${displayId} ${ariaDescribedBy}`,
       'aria-disabled': disabled,
-      'aria-owns': this.state.isOpen ? selectMenuId : undefined,
+      'aria-owns': this.state.isOpen ? id : undefined,
       type: 'text',
       className: cx('search-input', { 'is-hidden': isHidden }),
       required: required && !display.length ? true : undefined,
@@ -424,20 +425,6 @@ class Frame extends React.Component {
   }
 
   /**
-   * Handles the mouse down events.
-   * @param {event} event - The mouse down event.
-   */
-  handleMouseDown(event) {
-    // Preventing default events stops the search input from losing focus.
-    // The default variant has no search input therefore the mouse down gives the component focus.
-    event.preventDefault();
-    if (event.target.hasAttribute('data-terra-form-select-input')) {
-      this.input.focus();
-    }
-    this.openDropdown(event);
-  }
-
-  /**
    * Handles the input mouse down events.
    * @param {event} event - The mouse down event.
    */
@@ -528,7 +515,6 @@ class Frame extends React.Component {
    */
   toggleDropdown(event) {
     if (this.state.isOpen) {
-      this.input.focus();
       this.closeDropdown();
     } else {
       this.openDropdown(event);
@@ -708,10 +694,9 @@ class Frame extends React.Component {
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
-    const selectMenuId = `terra-select-menu-${uniqueid()}`;
 
     const menuProps = {
-      id: selectMenuId,
+      id: this.id,
       value,
       onDeselect,
       optionFilter,
@@ -731,12 +716,12 @@ class Frame extends React.Component {
         {...customProps}
         role={this.role()}
         data-terra-select-combobox
-        aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
+        aria-controls={!disabled && this.state.isOpen ? this.id : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? selectMenuId : undefined}
+        aria-owns={this.state.isOpen ? this.id : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onClick={this.handleClick}
@@ -753,7 +738,7 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')}>
-          {this.getDisplay(displayId, ariaDescribedBy, selectMenuId)}
+          {this.getDisplay(displayId, ariaDescribedBy, this.id)}
         </div>
         {this.renderToggleButton()}
         <span

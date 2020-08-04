@@ -2,9 +2,8 @@
 
 ## Unreleased
 
-Fixed
- 
-* Fixed an issue to prevent multiple dropdowns from opening in mobile and move focus to select menu when opened via toggle button.
+* Fixed
+  * Fixed an issue to prevent multiple dropdowns from opening in mobile and move focus to select menu when opened via toggle button.
 
 ## 6.12.0 - (July 29, 2020)
 

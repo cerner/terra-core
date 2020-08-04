@@ -144,7 +144,6 @@ class FrameUtil {
    * Allows time for state update to render select menu DOM before shifting focus to it
    * @param {Object} frame - The frame object.
    */
-
   static shiftFocusToMenu(frame) {
     setTimeout(() => {
       if (frame.selectMenu) {

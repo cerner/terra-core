@@ -1380,6 +1380,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     describe('search should select an option by keyboard interaction', () => {
       it('search should select the first option', () => {
+        browser.keys('Tab');
         browser.keys('Space');
         browser.keys('Enter');
       });

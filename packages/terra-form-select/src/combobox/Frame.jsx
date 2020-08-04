@@ -180,6 +180,7 @@ class Frame extends React.Component {
     this.handleToggleMouseDown = this.handleToggleMouseDown.bind(this);
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
+    this.id = `terra-select-menu-${uniqueid()}`;
     this.role = this.role.bind(this);
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
@@ -214,7 +215,7 @@ class Frame extends React.Component {
     this.selectMenu = element;
   }
 
-  getDisplay(ariaDescribedBy, selectMenuId) {
+  getDisplay(ariaDescribedBy, id) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
       disabled, display, placeholder, required, inputId,
@@ -231,7 +232,7 @@ class Frame extends React.Component {
       'aria-label': this.ariaLabel(),
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
-      'aria-owns': this.state.isOpen ? selectMenuId : undefined,
+      'aria-owns': this.state.isOpen ? id : undefined,
       type: 'text',
       className: cx('search-input'),
       required,
@@ -492,7 +493,6 @@ class Frame extends React.Component {
    */
   toggleDropdown(event) {
     if (this.state.isOpen) {
-      this.input.focus();
       this.closeDropdown();
     } else {
       this.openDropdown(event);
@@ -663,10 +663,9 @@ class Frame extends React.Component {
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
-    const selectMenuId = `terra-select-menu-${uniqueid()}`;
 
     const menuProps = {
-      id: selectMenuId,
+      id: this.id,
       value,
       onDeselect,
       optionFilter,
@@ -686,12 +685,12 @@ class Frame extends React.Component {
         {...customProps}
         role={this.role()}
         data-terra-select-combobox
-        aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
+        aria-controls={!disabled && this.state.isOpen ? this.id : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? selectMenuId : undefined}
+        aria-owns={this.state.isOpen ? this.id : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
@@ -707,7 +706,7 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')}>
-          {this.getDisplay(ariaDescribedBy, selectMenuId)}
+          {this.getDisplay(ariaDescribedBy, this.id)}
         </div>
         {this.renderToggleButton()}
         <span
