@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 6.13.0 - (August 4, 2020)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.12.0 - (July 29, 2020)
 
 * Changed
