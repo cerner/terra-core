@@ -57,6 +57,11 @@ describe('Snapshots', () => {
     expect(searchField).toMatchSnapshot();
   });
 
+  it('renders a search field such that custom styles are applied', () => {
+    const searchField = shallowWithIntl(<SearchField inputAttributes={{ className: 'test-class' }} />).dive();
+    expect(searchField).toMatchSnapshot();
+  });
+
   it('clears form with clear method', () => {
     const searchField = shallowWithIntl(<SearchField />).dive();
     searchField.instance().updateSearchText('amp');
