@@ -249,6 +249,12 @@ class SearchField extends React.Component {
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = { ...inputAttributes };
     const clearIcon = <span className={cx('clear-icon')} />;
+    const inputClass = classNames(
+      cx(
+        'input',
+      ),
+      additionalInputAttributes.className,
+    );
 
     if (value !== undefined) {
       additionalInputAttributes.value = value;
@@ -273,7 +279,8 @@ class SearchField extends React.Component {
       <div {...customProps} className={searchFieldClassNames}>
         <div className={cx('input-group')}>
           <input
-            className={cx('input')}
+            {...additionalInputAttributes}
+            className={inputClass}
             type="search"
             placeholder={placeholder}
             onChange={this.handleTextChange}
@@ -283,7 +290,6 @@ class SearchField extends React.Component {
             onKeyDown={this.handleKeyDown}
             onInput={this.handleInput}
             ref={this.setInputRef}
-            {...additionalInputAttributes}
           />
           {clearButton}
         </div>
