@@ -16,6 +16,10 @@ const cx = classNamesBind.bind(styles);
 /* eslint-disable react/no-unused-prop-types */
 const propTypes = {
   /**
+    * The id of the menu.
+    */
+  id: PropTypes.string,
+  /**
    * The content of the menu.
    */
   children: PropTypes.node,
@@ -61,9 +65,14 @@ const propTypes = {
    * @private Visually hidden component designed to feed screen reader text to read.
    */
   visuallyHiddenComponent: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  /**
+   * Ref callback for the select menu DOM element.
+   */
+  refCallback: PropTypes.func,
 };
 
 const defaultProps = {
+  id: undefined,
   children: undefined,
   input: undefined,
   maxSelectionCount: undefined,
@@ -73,6 +82,7 @@ const defaultProps = {
   select: undefined,
   visuallyHiddenComponent: undefined,
   value: undefined,
+  refCallback: undefined,
 };
 
 class Menu extends React.Component {
@@ -430,6 +440,11 @@ class Menu extends React.Component {
   }
 
   render() {
+    const {
+      id,
+      intl,
+      refCallback,
+    } = this.props;
     const theme = this.context;
 
     return (
@@ -441,11 +456,16 @@ class Menu extends React.Component {
        * is opened.
        */
       <ul
-        id="terra-select-menu"
+        id={id}
         role="listbox"
         className={cx('menu', theme.className)}
-        aria-label={this.props.intl.formatMessage({ id: 'Terra.form.select.menu' })}
-        ref={(menu) => { this.menu = menu; }}
+        aria-label={intl.formatMessage({ id: 'Terra.form.select.menu' })}
+        ref={(menu) => {
+          if (refCallback) {
+            refCallback(menu);
+          }
+          this.menu = menu;
+        }}
         {...(this.state.active !== null ? { 'aria-activedescendant': `terra-select-option-${this.state.active}` } : {})}
         tabIndex="0"
       >
