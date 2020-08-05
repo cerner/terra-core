@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.8.0 - (August 4, 2020)
+
 * Removed
   * Removed unused themeable variables
 

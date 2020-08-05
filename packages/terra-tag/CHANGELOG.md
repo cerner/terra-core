@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.38.0 - (August 4, 2020)
+
 * Added
   * Added missing themeable variable.
 
