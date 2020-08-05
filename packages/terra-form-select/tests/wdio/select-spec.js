@@ -1376,6 +1376,8 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       Terra.it.validatesElement('toggle-icon-closed-dropdown', { selector: '#root' });
+
+      after(() => browser.click('#root'));
     });
 
     describe('search should select an option by keyboard interaction', () => {

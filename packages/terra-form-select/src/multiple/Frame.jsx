@@ -297,13 +297,15 @@ class Frame extends React.Component {
      */
     if (event && event.target
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
-      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon')
-      || event.target.hasAttribute('data-terra-form-select-toggle')
-      || event.target.className.includes('arrow-icon'))) {
+      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
 
       FrameUtil.shiftFocusToMenu(this);
       return;
+    }
+    if (event.target.hasAttribute('data-terra-form-select-toggle')
+    || event.target.className.includes('arrow-icon')) {
+      this.input.focus();
     }
 
     if (this.input) {
