@@ -180,6 +180,14 @@ import IconMediaRecord from 'terra-icon/lib/icon/IconMediaRecord';
 import IconMediaFastForward from 'terra-icon/lib/icon/IconMediaFastForward';
 import IconMediaRewind from 'terra-icon/lib/icon/IconMediaRewind';
 import IconBluetooth from 'terra-icon/lib/icon/IconBluetooth';
+import IconStartPresenting from 'terra-icon/lib/icon/IconStartPresenting';
+import IconStopPresenting from 'terra-icon/lib/icon/IconStopPresenting';
+import IconPager from 'terra-icon/lib/icon/IconPager';
+import IconAutoText from 'terra-icon/lib/icon/IconAutoText';
+import IconKeyboard from 'terra-icon/lib/icon/IconKeyboard';
+import IconSharedSchedules from 'terra-icon/lib/icon/IconSharedSchedules';
+import IconPatientSearch from 'terra-icon/lib/icon/IconPatientSearch';
+import IconGroup from 'terra-icon/lib/icon/IconGroup';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -1829,6 +1837,78 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconBluetooth from 'terra-icon/lib/icon/IconBluetooth';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconStartPresenting height='2em' width='2em' /></td>
+        <td style={cellStyle}>startPresenting</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconStartPresenting from 'terra-icon/lib/icon/IconStartPresenting';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconStopPresenting height='2em' width='2em' /></td>
+        <td style={cellStyle}>stopPresenting</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconStopPresenting from 'terra-icon/lib/icon/IconStopPresenting';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconPager height='2em' width='2em' /></td>
+        <td style={cellStyle}>pager</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconPager from 'terra-icon/lib/icon/IconPager';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconAutoText height='2em' width='2em' /></td>
+        <td style={cellStyle}>autoText</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconAutoText from 'terra-icon/lib/icon/IconAutoText';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconKeyboard height='2em' width='2em' /></td>
+        <td style={cellStyle}>keyboard</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconKeyboard from 'terra-icon/lib/icon/IconKeyboard';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconSharedSchedules height='2em' width='2em' /></td>
+        <td style={cellStyle}>sharedSchedules</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconSharedSchedules from 'terra-icon/lib/icon/IconSharedSchedules';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconPatientSearch height='2em' width='2em' /></td>
+        <td style={cellStyle}>patientSearch</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconPatientSearch from 'terra-icon/lib/icon/IconPatientSearch';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconGroup height='2em' width='2em' /></td>
+        <td style={cellStyle}>group</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconGroup from 'terra-icon/lib/icon/IconGroup';
           </code>
         </td>
       </tr>
