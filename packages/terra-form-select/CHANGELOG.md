@@ -2,17 +2,23 @@
 
 ## Unreleased
 
-Breaking Changes
+* Breaking Changes
+  * Removed prop `placeholder` from all the variants of select.
+  * Removed prop `allowClear` from single select.
+  * Added new prop `isFilterStyle` to single select.
 
-* Removed prop `placeholder` from all the variants of select.
-* Removed prop `allowClear` from single select.
-* Added new prop `isFilterStyle` to single select.
+* Changed
+  * Updated color for placeholder.
+  * Updated default text in all variants for placeholder to be `- Select -`
+  * Updated test and example to remove the use of placeholder. 
 
-Changed
+* Fixed
+  * Fixed an issue to prevent multiple dropdowns from opening in mobile and move focus to select menu when opened via toggle button.
 
-* Updated color for placeholder.
-* Updated default text in all variants for placeholder to be `- Select -`
-* Updated test and example to remove the use of placeholder. 
+## 6.13.0 - (August 4, 2020)
+
+* Changed
+  * Minor dependency version bump
 
 ## 6.12.0 - (July 29, 2020)
 

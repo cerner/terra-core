@@ -2,7 +2,7 @@
 
 exports[`Frame correctly applies the theme context className for combobox variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-7"
+  aria-describedby="terra-select-screen-reader-description-8"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
@@ -16,12 +16,12 @@ exports[`Frame correctly applies the theme context className for combobox varian
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-6"
+      id="terra-select-screen-reader-label-7"
     >
       Terra.form.select.ariaLabel
     </span>
     <span
-      id="terra-select-screen-reader-description-7"
+      id="terra-select-screen-reader-description-8"
     >
       Terra.form.select.listOfTotalOptions Terra.form.select.searchUsageGuidance
     </span>
@@ -33,7 +33,7 @@ exports[`Frame correctly applies the theme context className for combobox varian
       class="content"
     >
       <input
-        aria-describedby="terra-select-screen-reader-description-7"
+        aria-describedby="terra-select-screen-reader-description-8"
         aria-disabled="false"
         aria-label="Terra.form.select.ariaLabel"
         aria-required="false"
@@ -119,7 +119,7 @@ exports[`Frame correctly applies the theme context className for default variant
 
 exports[`Frame correctly applies the theme context className for multiple variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-10"
+  aria-describedby="terra-select-screen-reader-description-12"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
@@ -133,12 +133,12 @@ exports[`Frame correctly applies the theme context className for multiple varian
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-8"
+      id="terra-select-screen-reader-label-10"
     >
       Terra.form.select.ariaLabel
     </span>
     <span
-      id="terra-select-screen-reader-description-10"
+      id="terra-select-screen-reader-description-12"
     >
       Terra.form.select.listOfTotalOptions Terra.form.select.multiSelectUsageGuidance
     </span>
@@ -148,12 +148,13 @@ exports[`Frame correctly applies the theme context className for multiple varian
   >
     <ul
       class="content"
+      data-terra-form-select-input="true"
     >
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-display-9 terra-select-screen-reader-description-10"
+          aria-describedby="terra-select-screen-reader-display-11 terra-select-screen-reader-description-12"
           aria-disabled="false"
           aria-label="Terra.form.select.ariaLabel"
           aria-required="false"
@@ -184,7 +185,7 @@ exports[`Frame correctly applies the theme context className for multiple varian
 
 exports[`Frame correctly applies the theme context className for search variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-12"
+  aria-describedby="terra-select-screen-reader-description-15"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
@@ -198,12 +199,12 @@ exports[`Frame correctly applies the theme context className for search variant 
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-11"
+      id="terra-select-screen-reader-label-14"
     >
       Terra.form.select.ariaLabel
     </span>
     <span
-      id="terra-select-screen-reader-description-12"
+      id="terra-select-screen-reader-description-15"
     >
       Terra.form.select.listOfTotalOptions Terra.form.select.searchUsageGuidance
     </span>
@@ -215,7 +216,7 @@ exports[`Frame correctly applies the theme context className for search variant 
       class="content"
     >
       <input
-        aria-describedby="terra-select-screen-reader-description-12"
+        aria-describedby="terra-select-screen-reader-description-15"
         aria-disabled="false"
         aria-label="Terra.form.select.ariaLabel"
         aria-required="false"
@@ -244,7 +245,7 @@ exports[`Frame correctly applies the theme context className for search variant 
 
 exports[`Frame correctly applies the theme context className for tag variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-15"
+  aria-describedby="terra-select-screen-reader-description-19"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
@@ -258,12 +259,12 @@ exports[`Frame correctly applies the theme context className for tag variant 1`]
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-13"
+      id="terra-select-screen-reader-label-17"
     >
       Terra.form.select.ariaLabel
     </span>
     <span
-      id="terra-select-screen-reader-description-15"
+      id="terra-select-screen-reader-description-19"
     >
       Terra.form.select.listOfTotalOptions Terra.form.select.multiSelectUsageGuidance
     </span>
@@ -273,12 +274,13 @@ exports[`Frame correctly applies the theme context className for tag variant 1`]
   >
     <ul
       class="content"
+      data-terra-form-select-input="true"
     >
       <li
         class="search-wrapper"
       >
         <input
-          aria-describedby="terra-select-screen-reader-display-14 terra-select-screen-reader-description-15"
+          aria-describedby="terra-select-screen-reader-display-18 terra-select-screen-reader-description-19"
           aria-disabled="false"
           aria-label="Terra.form.select.ariaLabel"
           aria-required="false"
