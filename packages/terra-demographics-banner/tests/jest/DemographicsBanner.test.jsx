@@ -14,8 +14,7 @@ it('renders the banner wrapper with all props', () => {
       applicationContent={<span className="risk-score">5%</span>}
       age="25 Years"
       dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-      gender="Male"
-      genderAria="Male"
+      administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
       gestationalAge="April 5, 2016"
       identifiers={[
         {

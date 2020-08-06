@@ -12,6 +12,8 @@ const cx = classNamesBind.bind(styles);
 
 const SmallDemographicsBannerDisplay = (props) => {
   const {
+    administrativeSex,
+    administrativeSexFullText,
     age,
     applicationContent,
     dateOfBirth,
@@ -19,8 +21,6 @@ const SmallDemographicsBannerDisplay = (props) => {
     dateOfBirthLabel,
     deceasedDate,
     deceasedDateLabel,
-    gender,
-    genderAria,
     gestationalAge,
     gestationalAgeFullText,
     gestationalAgeLabel,
@@ -35,6 +35,7 @@ const SmallDemographicsBannerDisplay = (props) => {
     postMenstrualAgeFullText,
     postMenstrualAgeLabel,
     preferredFirstName,
+    sexMismatchFullText,
     ...customProps
   } = props;
 

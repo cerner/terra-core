@@ -17,8 +17,7 @@ export default () => {
         applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
         age="27 Years"
         dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-        gender="M"
-        genderAria="Male"
+        administrativeSex={{ value: 'M', ariaLabel: 'Male', isBirthSexMismatch: false }}
         identifiers={[
           {
             label: 'MRN',

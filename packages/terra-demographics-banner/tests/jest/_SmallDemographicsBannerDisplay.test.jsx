@@ -9,7 +9,8 @@ it('renders small banner that contains all valid information', () => {
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-    gender="Male"
+    administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: true }}
+    administrativeSexFullText="Administrative Sex"
     identifiers={[
       {
         label: 'MRN',
@@ -29,6 +30,7 @@ it('renders small banner that contains all valid information', () => {
     deceasedDateLabel="Deceased"
     gestationalAgeLabel="GA"
     postMenstrualAgeLabel="PMA"
+    sexMismatchFullText="Sex Mismatch"
   />);
 
   expect(banner).toMatchSnapshot();

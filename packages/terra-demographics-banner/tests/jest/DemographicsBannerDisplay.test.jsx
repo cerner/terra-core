@@ -12,7 +12,7 @@ it('renders a banner that has basic information', () => {
   const banner = shallowWithIntl(<DemographicsBannerDisplay
     age="24"
     dateOfBirth={{ value: 'March 30, 2017', ariaLabel: 'March 30, 2017' }}
-    gender="F"
+    administrativeSex={{ value: 'F', ariaLabel: 'Female', isBirthSexMismatch: false }}
     personName="Terra Demographics Banner"
   />);
 
@@ -24,7 +24,7 @@ it('renders the banner that contains additional information', () => {
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-    gender="Male"
+    administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
     identifiers={[
       {
         label: 'MRN',
@@ -48,7 +48,7 @@ it('renders the banner that contains additional information', () => {
 it('renders the banner appropriately for a deceased person', () => {
   const banner = shallowWithIntl(<DemographicsBannerDisplay
     age="24"
-    gender="F"
+    administrativeSex={{ value: 'F', ariaLabel: 'Female', isBirthSexMismatch: false }}
     dateOfBirth={{ value: 'June 15, 2014', ariaLabel: 'June 15, 2014' }}
     deceasedDate={{ value: 'March 30, 2017', ariaLabel: 'March 30, 2017' }}
     personName="Old Terra Demographics Banner"
@@ -62,7 +62,7 @@ it('renders the banner appropriately for a person with gestational and post mens
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-    gender="Male"
+    administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
     gestationalAge="April 5, 2016"
     gestationalAgeLabel="GA"
     identifiers={[
@@ -103,7 +103,7 @@ it('renders the banner properly for a deceased person with additional applicatio
     age="25 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     deceasedDate={{ value: 'March 5, 2016', ariaLabel: 'March 5, 2016' }}
-    gender="Male"
+    administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
     identifiers={[
       {
         label: 'MRN',
@@ -129,7 +129,7 @@ it('renders the banner with confidential icon', () => {
     applicationContent={<span className="risk-score">5%</span>}
     age="25 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-    gender="Male"
+    administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
     identifiers={[
       {
         label: 'MRN',

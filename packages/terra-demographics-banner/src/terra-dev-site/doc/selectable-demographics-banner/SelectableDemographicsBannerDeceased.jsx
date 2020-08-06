@@ -8,7 +8,7 @@ const SelectableDemographicsBannerDeceased = () => (
     age="25 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     deceasedDate={{ value: 'March 12, 2017', ariaLabel: 'March 12, 2017' }}
-    gender="True Male"
+    administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
     identifiers={[
       {
         label: 'MRN',

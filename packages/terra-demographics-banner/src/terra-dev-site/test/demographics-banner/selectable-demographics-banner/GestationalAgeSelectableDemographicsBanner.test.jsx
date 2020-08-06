@@ -18,8 +18,7 @@ export default () => {
         age="27 Years"
         color="two"
         dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-        gender="M"
-        genderAria="Male"
+        administrativeSex={{ value: 'M', ariaLabel: 'Male', isBirthSexMismatch: false }}
         gestationalAge="April 11, 2020"
         personName="Johnathon Doe"
         photo={<Image alt="My Cat" src={demographicsImage} />}

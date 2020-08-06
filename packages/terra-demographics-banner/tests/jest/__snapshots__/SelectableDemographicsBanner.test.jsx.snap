@@ -12,6 +12,7 @@ exports[`renders a blank banner wrapper 1`] = `
     onMouseDown={[Function]}
   >
     <InjectIntl(DemographicsBanner)
+      administrativeSex={Object {}}
       applicationContent={null}
       className="selectable-demographics-banner"
       dateOfBirth={Object {}}
@@ -41,6 +42,13 @@ exports[`renders the banner wrapper with all props 1`] = `
     onMouseDown={[Function]}
   >
     <InjectIntl(DemographicsBanner)
+      administrativeSex={
+        Object {
+          "ariaLabel": "Male",
+          "isBirthSexMismatch": false,
+          "value": "Male",
+        }
+      }
       age="25 Years"
       applicationContent={
         <span
@@ -62,8 +70,6 @@ exports[`renders the banner wrapper with all props 1`] = `
           "value": "January 10, 2020",
         }
       }
-      gender="Male"
-      genderAria="Male"
       gestationalAge="April 5, 2016"
       identifiers={
         Array [

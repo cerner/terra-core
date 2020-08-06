@@ -97,7 +97,8 @@ exports[`correctly applies the theme context className 1`] = `
               </span>
             </DemographicsBannerValue>
             <DemographicsBannerValue
-              key="gender"
+              key="adminSex"
+              value=""
               valueAriaHidden={false}
             >
               <span
@@ -139,6 +140,14 @@ exports[`correctly applies the theme context className 1`] = `
 
 exports[`renders small banner that contains all valid information 1`] = `
 <SmallDemographicsBannerDisplay
+  administrativeSex={
+    Object {
+      "ariaLabel": "Male",
+      "isBirthSexMismatch": true,
+      "value": "Male",
+    }
+  }
+  administrativeSexFullText="Administrative Sex"
   age="25 Years"
   applicationContent={
     <span
@@ -155,7 +164,6 @@ exports[`renders small banner that contains all valid information 1`] = `
   }
   dateOfBirthLabel="DOB"
   deceasedDateLabel="Deceased"
-  gender="Male"
   gestationalAgeLabel="GA"
   identifiers={
     Array [
@@ -202,5 +210,6 @@ exports[`renders small banner that contains all valid information 1`] = `
   photo=""
   postMenstrualAgeLabel="PMA"
   preferredFirstName="John"
+  sexMismatchFullText="Sex Mismatch"
 />
 `;

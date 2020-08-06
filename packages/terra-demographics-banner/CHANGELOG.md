@@ -4,7 +4,7 @@
 
 Breaking Changes
 
-* `gender` prop is removed. It is replaced by the `sex` prop.
+* `gender` prop is removed. It is replaced by the `administrativeSex` prop.
 
 Added
 

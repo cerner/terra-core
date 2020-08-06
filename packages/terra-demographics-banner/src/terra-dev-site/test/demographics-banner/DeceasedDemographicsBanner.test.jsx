@@ -8,8 +8,7 @@ export default () => (
     age="28 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     deceasedDate={{ value: 'March 12, 2020', ariaLabel: 'March 12, 2020' }}
-    gender="M"
-    genderAria="Male"
+    administrativeSex={{ value: 'M', ariaLabel: 'Male', isBirthSexMismatch: false }}
     identifiers={[
       {
         label: 'MRN',

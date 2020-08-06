@@ -12,31 +12,50 @@ const cx = classNames.bind(styles);
 
 const identifierShape = {
   /**
-  * The label of the identifier: i.e.: `SSN`
-  */
+   * The label of the identifier: i.e.: `SSN`
+   */
   label: PropTypes.string,
   /**
-  * The value to display for the identifier. i.e.: `111-22-3333`
-  */
+   * The value to display for the identifier. i.e.: `111-22-3333`
+   */
   value: PropTypes.string,
   /**
-  * The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
-  */
+   * The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
+   */
   ariaLabel: PropTypes.string,
 };
 
 const stringShape = {
   /**
-  * The value to display. i.e.: `03/15/2020`
-  */
+   * The value to display. i.e.: `03/15/2020`
+   */
   value: PropTypes.string,
   /**
-  * The aria-label for the value. i.e.: `March 15th, 2020`
-  */
+   * The aria-label for the value. i.e.: `March 15th, 2020`
+   */
   ariaLabel: PropTypes.string,
 };
 
+const administrativeSexShape = {
+  /**
+   * The sex to display. i.e.: `M`
+   */
+  value: PropTypes.string,
+  /**
+   * The aria-label for the sex. i.e.: `Male`
+   */
+  ariaLabel: PropTypes.string,
+  /**
+   * Whether or not the administrative sex is different from the birth sex. If different, an icon will be displayed to denote the mismatch in sex.
+   */
+  isBirthSexMismatch: PropTypes.bool,
+};
+
 const propTypes = {
+  /**
+   * Administrative sex of the Person. This will be displayed on the demographics banner.
+   */
+  administrativeSex: PropTypes.shape(administrativeSexShape),
   /**
    * Age of the person.
    */
@@ -53,14 +72,6 @@ const propTypes = {
    * The person's deceased date. Will display the banner as deceased if this value is provided.
    */
   deceasedDate: PropTypes.shape(stringShape),
-  /**
-   * Gender of the Person. This will be displayed on the demographics banner.
-   */
-  gender: PropTypes.string,
-  /**
-   * The gender label used for accessibility. Unlike the `Gender` prop, this label will not be displayed. It will be read in screen readers if provided.
-   */
-  genderAria: PropTypes.string,
   /**
    * The person's gestational age.
    */
@@ -105,6 +116,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  administrativeSex: {},
   applicationContent: null,
   dateOfBirth: {},
   deceasedDate: {},
@@ -115,12 +127,11 @@ const defaultProps = {
 };
 
 const SelectableDemographicsBanner = ({
+  administrativeSex,
   age,
   applicationContent,
   dateOfBirth,
   deceasedDate,
-  gender,
-  genderAria,
   gestationalAge,
   identifiers,
   intl,
@@ -186,13 +197,12 @@ const SelectableDemographicsBanner = ({
         onBlur={handleBlur}
       >
         <DemographicsBanner
+          administrativeSex={administrativeSex}
           age={age}
           applicationContent={applicationContent}
           className={cx('selectable-demographics-banner')}
           dateOfBirth={dateOfBirth}
           deceasedDate={deceasedDate}
-          gender={gender}
-          genderAria={genderAria}
           gestationalAge={gestationalAge}
           identifiers={identifiers}
           isConfidential={isConfidential}

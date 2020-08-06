@@ -12,7 +12,7 @@ const DemographicsBannerSmallContainer = () => (
     <DemographicsBanner
       age="25 Years"
       dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-      gender="True Male"
+      administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
       identifiers={[
         {
           label: 'MRN',

@@ -5,7 +5,7 @@ const BasicDemographicsBanner = () => (
   <DemographicsBanner
     age="25 Years"
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-    gender="Male"
+    administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
     personName="Johnathon Doe"
     preferredFirstName="John"
   />

@@ -18,8 +18,7 @@ it('renders the banner wrapper with all props', () => {
       applicationContent={<span className="risk-score">5%</span>}
       dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
       deceasedDate={{ value: 'January 10, 2020', ariaLabel: 'January 10, 2020' }}
-      gender="Male"
-      genderAria="Male"
+      administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
       gestationalAge="April 5, 2016"
       hashValue="alternative hash"
       identifiers={[

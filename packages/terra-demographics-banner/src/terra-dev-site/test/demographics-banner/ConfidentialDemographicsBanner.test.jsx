@@ -9,8 +9,7 @@ export default () => (
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     gestationalAge="April 11, 2020"
     postMenstrualAge="May 13, 2020"
-    gender="M"
-    genderAria="Male"
+    administrativeSex={{ value: 'M', ariaLabel: 'Male', isBirthSexMismatch: false }}
     identifiers={[
       {
         label: 'MRN',

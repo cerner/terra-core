@@ -14,13 +14,12 @@ export default () => {
     <div>
       <SelectableDemographicsBanner
         id="populated-demographics-banner"
+        administrativeSex={{ value: 'F', ariaLabel: 'Female', isBirthSexMismatch: true }}
         applicationContent={<span>BW12N / RAD1232</span>}
         age="28 years"
         dateOfBirth={{ value: 'July 12, 1989', ariaLabel: 'July 12, 1989' }}
         gestationalAge="April 11, 2020"
         postMenstrualAge="May 13, 2020"
-        gender="F"
-        genderAria="Female"
         identifiers={[
           {
             label: 'MRN',

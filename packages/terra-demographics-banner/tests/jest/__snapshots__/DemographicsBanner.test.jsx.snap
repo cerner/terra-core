@@ -2,6 +2,8 @@
 
 exports[`renders a blank banner wrapper 1`] = `
 <InjectIntl(DemographicsBannerDisplay)
+  administrativeSex={Object {}}
+  administrativeSexFullText="Terra.demographicsBanner.administrativeSexFullText"
   applicationContent={null}
   dateOfBirth={Object {}}
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
@@ -19,11 +21,20 @@ exports[`renders a blank banner wrapper 1`] = `
   postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
   postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
   preferredFirstName={null}
+  sexMismatchFullText="Terra.demographicsBanner.sexNotIdentical"
 />
 `;
 
 exports[`renders the banner wrapper with all props 1`] = `
 <InjectIntl(DemographicsBannerDisplay)
+  administrativeSex={
+    Object {
+      "ariaLabel": "Male",
+      "isBirthSexMismatch": false,
+      "value": "Male",
+    }
+  }
+  administrativeSexFullText="Terra.demographicsBanner.administrativeSexFullText"
   age="25 Years"
   applicationContent={
     <span
@@ -42,8 +53,6 @@ exports[`renders the banner wrapper with all props 1`] = `
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
   deceasedDate={Object {}}
   deceasedDateLabel="Terra.demographicsBanner.deceased"
-  gender="Male"
-  genderAria="Male"
   gestationalAge="April 5, 2016"
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
@@ -70,5 +79,6 @@ exports[`renders the banner wrapper with all props 1`] = `
   postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
   postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
   preferredFirstName="John"
+  sexMismatchFullText="Terra.demographicsBanner.sexNotIdentical"
 />
 `;

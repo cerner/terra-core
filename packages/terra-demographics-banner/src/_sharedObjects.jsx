@@ -36,16 +36,47 @@ const DemographicsBannerValue = ({
   );
 };
 
+const SexMismatchIcon = ({
+  ariaLabel,
+}) => (
+  <span className={cx('sex-mismatch')}>
+    <VisuallyHiddenText text={ariaLabel} />
+    <span className={cx('sex-mismatch-icon')} aria-hidden />
+  </span>
+);
+
 const personDetails = (props) => {
   const elements = [
     <DemographicsBannerValue key="age" value={props.age} />,
-    <DemographicsBannerValue
-      key="gender"
-      abbrTitle={props.genderAria}
-      valueAriaHidden={!!props.genderAria}
-      value={props.gender}
-    />,
   ];
+
+  let adminSexAriaLabel = props.administrativeSexFullText;
+  let sexValue = '';
+  let sexValueAriaHidden = false;
+  if (props.administrativeSex) {
+    if (props.administrativeSex.value) {
+      sexValue = props.administrativeSex.value;
+    }
+
+    if (props.administrativeSex.ariaLabel) {
+      sexValueAriaHidden = true;
+      adminSexAriaLabel = adminSexAriaLabel.concat(' ', props.administrativeSex.ariaLabel);
+    }
+  }
+
+  elements.push(<DemographicsBannerValue
+    key="adminSex"
+    abbrTitle={adminSexAriaLabel}
+    value={sexValue}
+    valueAriaHidden={sexValueAriaHidden}
+  />);
+
+  if (props.administrativeSex && props.administrativeSex.isBirthSexMismatch) {
+    elements.push(<SexMismatchIcon
+      key="sexMismatchIcon"
+      ariaLabel={props.sexMismatchFullText}
+    />);
+  }
 
   let dobAriaLabel = props.dateOfBirthFullText;
   let dobValue = '';
