@@ -171,8 +171,9 @@ class Frame extends React.Component {
     this.handleToggleButtonMouseDown = this.handleToggleButtonMouseDown.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.role = this.role.bind(this);
+    this.menuId = `terra-select-menu-${uniqueid()}`;
     this.visuallyHiddenComponent = React.createRef();
-    this.selectMenu = '#terra-select-menu';
+    this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
   }
 
   componentDidMount() {
@@ -200,7 +201,11 @@ class Frame extends React.Component {
     this.input = input;
   }
 
-  getDisplay(ariaDescribedBy) {
+  setSelectMenuRef(element) {
+    this.selectMenu = element;
+  }
+
+  getDisplay(ariaDescribedBy, id) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
       disabled, display, placeholder, required, inputId,
@@ -217,7 +222,7 @@ class Frame extends React.Component {
       'aria-label': this.ariaLabel(),
       'aria-describedby': ariaDescribedBy,
       'aria-disabled': disabled,
-      'aria-owns': this.state.isOpen ? 'terra-select-menu' : undefined,
+      'aria-owns': this.state.isOpen ? id : undefined,
       type: 'text',
       className: cx('search-input', { 'is-hidden': FrameUtil.shouldHideSearch(this.props, this.state) }),
       required,
@@ -266,24 +271,18 @@ class Frame extends React.Component {
       || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
 
-      // Allows time for state update to render select menu DOM before shifting focus to it
-      setTimeout(() => {
-        if (document.querySelector(this.selectMenu)) {
-          document.querySelector(this.selectMenu).focus();
-        }
-      }, 10);
+      FrameUtil.shiftFocusToMenu(this);
       return;
+    }
+    if (event.target.hasAttribute('data-terra-form-select-toggle')
+    || event.target.className.includes('arrow-icon')) {
+      this.input.focus();
     }
 
     if (this.input) {
       this.input.focus();
     } else {
-      // Allows time for state update to render select menu DOM before shifting focus to it
-      setTimeout(() => {
-        if (document.querySelector(this.selectMenu)) {
-          document.querySelector(this.selectMenu).focus();
-        }
-      }, 10);
+      FrameUtil.shiftFocusToMenu(this);
     }
 
     this.setState({ isOpen: true, isPositioned: false });
@@ -303,7 +302,7 @@ class Frame extends React.Component {
       if (this.state.isPositioned) {
         this.dropdown.removeAttribute('inert');
         this.dropdown.removeAttribute('aria-hidden');
-        document.querySelector(this.selectMenu).setAttribute('tabIndex', '0');
+        this.selectMenu.setAttribute('tabIndex', '0');
       }
     };
 
@@ -315,7 +314,6 @@ class Frame extends React.Component {
    */
   handleBlur(event) {
     const { relatedTarget } = event;
-    const { focusedByTouch } = this.state;
 
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
     if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
@@ -325,7 +323,7 @@ class Frame extends React.Component {
     // Don't blur if we dismissed the onscreen keyboard
     // Determined by if we have have interacted with the frame via onTouchStart
     // and if the focus is on input.
-    if (focusedByTouch && (relatedTarget === this.input)) {
+    if (relatedTarget === this.input || relatedTarget === this.selectMenu) {
       return;
     }
 
@@ -644,6 +642,7 @@ class Frame extends React.Component {
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
 
     const menuProps = {
+      id: this.menuId,
       value,
       onDeselect,
       optionFilter,
@@ -655,6 +654,7 @@ class Frame extends React.Component {
       input: this.input,
       select: this.select,
       clearOptionDisplay,
+      refCallback: this.setSelectMenuRef,
     };
 
     return (
@@ -662,12 +662,12 @@ class Frame extends React.Component {
         {...customProps}
         role={this.role()}
         data-terra-select-combobox
-        aria-controls={!disabled && this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-controls={!disabled && this.state.isOpen ? this.menuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!!disabled && !!this.state.isOpen}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
-        aria-owns={this.state.isOpen ? 'terra-select-menu' : undefined}
+        aria-owns={this.state.isOpen ? this.menuId : undefined}
         className={selectClasses}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}
@@ -683,7 +683,7 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         <div className={cx('display')}>
-          {this.getDisplay(ariaDescribedBy)}
+          {this.getDisplay(ariaDescribedBy, this.menuId)}
         </div>
         {this.renderToggleButton()}
         <span
