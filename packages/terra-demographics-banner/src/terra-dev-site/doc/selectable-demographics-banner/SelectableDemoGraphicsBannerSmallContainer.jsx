@@ -9,7 +9,7 @@ const SelectableDemoGraphicsBannerSmallContainer = () => (
   <div className={cx('content-wrapper')}>
     <SelectableDemographicsBanner
       applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
-      age="25 Years"
+      age={{ value: '25 Years', ariaLabel: '25 years old.' }}
       dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
       administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
       identifiers={[

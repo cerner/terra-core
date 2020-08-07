@@ -5,10 +5,10 @@ export default () => (
   <DemographicsBanner
     id="populated-demographics"
     applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
-    age="27 Years"
+    age={{ value: '27 Years', ariaLabel: '27 years old.' }}
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
-    gestationalAge="April 11, 2020"
-    postMenstrualAge="May 13, 2020"
+    gestationalAge={{ value: 'April 11, 2020', ariaLabel: 'April 11, 2020' }}
+    postMenstrualAge={{ value: 'May 13, 2020', ariaLabel: 'May 13, 2020' }}
     administrativeSex={{ value: 'M', ariaLabel: 'Male', isBirthSexMismatch: false }}
     identifiers={[
       {

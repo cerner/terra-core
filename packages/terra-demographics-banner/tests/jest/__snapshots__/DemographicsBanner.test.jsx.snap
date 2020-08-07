@@ -4,20 +4,21 @@ exports[`renders a blank banner wrapper 1`] = `
 <InjectIntl(DemographicsBannerDisplay)
   administrativeSex={Object {}}
   administrativeSexFullText="Terra.demographicsBanner.administrativeSexFullText"
+  age={Object {}}
   applicationContent={null}
   dateOfBirth={Object {}}
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
   deceasedDate={Object {}}
   deceasedDateLabel="Terra.demographicsBanner.deceased"
-  gestationalAge={null}
+  gestationalAge={Object {}}
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   isActive={false}
   isConfidential={false}
   isSelectable={false}
   photo={null}
-  postMenstrualAge={null}
+  postMenstrualAge={Object {}}
   postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
   postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
   preferredFirstName={null}
@@ -35,7 +36,12 @@ exports[`renders the banner wrapper with all props 1`] = `
     }
   }
   administrativeSexFullText="Terra.demographicsBanner.administrativeSexFullText"
-  age="25 Years"
+  age={
+    Object {
+      "ariaLabel": "25 Years Old.",
+      "value": "25 Years",
+    }
+  }
   applicationContent={
     <span
       className="risk-score"
@@ -53,7 +59,12 @@ exports[`renders the banner wrapper with all props 1`] = `
   dateOfBirthLabel="Terra.demographicsBanner.dateOfBirth"
   deceasedDate={Object {}}
   deceasedDateLabel="Terra.demographicsBanner.deceased"
-  gestationalAge="April 5, 2016"
+  gestationalAge={
+    Object {
+      "ariaLabel": "April 5, 2016",
+      "value": "April 5, 2016",
+    }
+  }
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={
@@ -75,7 +86,12 @@ exports[`renders the banner wrapper with all props 1`] = `
   isSelectable={false}
   personName="Johnathon Doe"
   photo=""
-  postMenstrualAge="April 7, 2016"
+  postMenstrualAge={
+    Object {
+      "ariaLabel": "April 7, 2016",
+      "value": "April 7, 2016",
+    }
+  }
   postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
   postMenstrualAgeLabel="Terra.demographicsBanner.postMenstrualAge"
   preferredFirstName="John"

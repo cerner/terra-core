@@ -14,12 +14,12 @@ it('renders the banner wrapper with all props', () => {
   const banner = shallowWithIntl((
     <SelectableDemographicsBanner
       id="selectableDemographics"
-      age="25 Years"
+      age={{ value: '25 Years', ariaLabel: '25 Years Old.' }}
       applicationContent={<span className="risk-score">5%</span>}
       dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
       deceasedDate={{ value: 'January 10, 2020', ariaLabel: 'January 10, 2020' }}
       administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
-      gestationalAge="April 5, 2016"
+      gestationalAge={{ value: 'April 5, 2016', ariaLabel: 'April 5, 2016' }}
       hashValue="alternative hash"
       identifiers={[
         {
@@ -36,7 +36,7 @@ it('renders the banner wrapper with all props', () => {
       isConfidential
       personName="Johnathon Doe"
       photo=""
-      postMenstrualAge="April 7, 2016"
+      postMenstrualAge={{ value: 'April 7, 2016', ariaLabel: 'April 7, 2016' }}
       preferredFirstName="John"
       onClick={onClickMock}
       onMouseDown={jest.fn()}

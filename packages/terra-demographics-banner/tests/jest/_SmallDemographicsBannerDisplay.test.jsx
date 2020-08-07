@@ -7,7 +7,7 @@ import SmallDemographicsBannerDisplay from '../../src/_SmallDemographicsBannerDi
 it('renders small banner that contains all valid information', () => {
   const banner = shallowWithIntl(<SmallDemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
-    age="25 Years"
+    age={{ value: '25 Years', ariaLabel: '25 Years Old.' }}
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: true }}
     administrativeSexFullText="Administrative Sex"

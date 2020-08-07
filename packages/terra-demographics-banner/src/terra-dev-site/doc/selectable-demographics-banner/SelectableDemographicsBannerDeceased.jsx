@@ -5,7 +5,7 @@ import demographicsImage from '../assets/demographicsCat.jpg';
 
 const SelectableDemographicsBannerDeceased = () => (
   <SelectableDemographicsBanner
-    age="25 Years"
+    age={{ value: '25 Years', ariaLabel: '25 years old.' }}
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     deceasedDate={{ value: 'March 12, 2017', ariaLabel: 'March 12, 2017' }}
     administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}

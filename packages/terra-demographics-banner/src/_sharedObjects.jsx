@@ -46,9 +46,16 @@ const SexMismatchIcon = ({
 );
 
 const personDetails = (props) => {
-  const elements = [
-    <DemographicsBannerValue key="age" value={props.age} />,
-  ];
+  const elements = [];
+
+  if (props.age && props.age.value) {
+    elements.push(<DemographicsBannerValue
+      key="age"
+      abbrTitle={props.age.ariaLabel ? props.age.ariaLabel : undefined}
+      value={props.age.value}
+      valueAriaHidden={!!props.age.ariaLabel}
+    />);
+  }
 
   let adminSexAriaLabel = props.administrativeSexFullText;
   let sexValue = '';
@@ -78,43 +85,48 @@ const personDetails = (props) => {
     />);
   }
 
-  let dobAriaLabel = props.dateOfBirthFullText;
-  let dobValue = '';
-  let dobValueAriaHidden = false;
-  if (props.dateOfBirth) {
-    if (props.dateOfBirth.value) {
-      dobValue = props.dateOfBirth.value;
-    }
-
+  if (props.dateOfBirth && props.dateOfBirth.value) {
+    let dobAriaLabel = props.dateOfBirthFullText;
     if (props.dateOfBirth.ariaLabel) {
-      dobValueAriaHidden = true;
       dobAriaLabel = dobAriaLabel.concat(' ', props.dateOfBirth.ariaLabel);
     }
-  }
 
-  elements.push(<DemographicsBannerValue
-    key="dob"
-    abbrTitle={dobAriaLabel}
-    label={props.dateOfBirthLabel}
-    value={dobValue}
-    valueAriaHidden={dobValueAriaHidden}
-  />);
-
-  if (props.gestationalAge) {
     elements.push(<DemographicsBannerValue
-      key="ga"
-      abbrTitle={props.gestationalAgeFullText}
-      label={props.gestationalAgeLabel}
-      value={props.gestationalAge}
+      key="dob"
+      abbrTitle={dobAriaLabel}
+      label={props.dateOfBirthLabel}
+      value={props.dateOfBirth.value}
+      valueAriaHidden={!!props.dateOfBirth.ariaLabel}
     />);
   }
 
-  if (props.postMenstrualAge) {
+  if (props.gestationalAge && props.gestationalAge.value) {
+    let gaAriaLabel = props.gestationalAgeFullText;
+    if (props.gestationalAge.ariaLabel) {
+      gaAriaLabel = gaAriaLabel.concat(' ', props.gestationalAge.ariaLabel);
+    }
+
+    elements.push(<DemographicsBannerValue
+      key="ga"
+      abbrTitle={gaAriaLabel}
+      label={props.gestationalAgeLabel}
+      value={props.gestationalAge.value}
+      valueAriaHidden={!!props.gestationalAge.ariaLabel}
+    />);
+  }
+
+  if (props.postMenstrualAge && props.postMenstrualAge.value) {
+    let pmaAriaLabel = props.postMenstrualAgeFullText;
+    if (props.postMenstrualAge.ariaLabel) {
+      pmaAriaLabel = pmaAriaLabel.concat(' ', props.postMenstrualAge.ariaLabel);
+    }
+
     elements.push(<DemographicsBannerValue
       key="pma"
-      abbrTitle={props.postMenstrualAgeFullText}
+      abbrTitle={pmaAriaLabel}
       label={props.postMenstrualAgeLabel}
-      value={props.postMenstrualAge}
+      value={props.postMenstrualAge.value}
+      valueAriaHidden={!!props.postMenstrualAge.ariaLabel}
     />);
   }
 

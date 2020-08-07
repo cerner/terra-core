@@ -6,10 +6,10 @@ import demographicsImage from '../assets/demographicsCat.jpg';
 const SelectableDemographicsBannerAdditionalAges = () => (
   <SelectableDemographicsBanner
     applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
-    age="10 Weeks"
+    age={{ value: '10 Weeks', ariaLabel: '10 weeks old.' }}
     dateOfBirth={{ value: 'October 25, 2018', ariaLabel: 'October 25, 2018' }}
     administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
-    gestationalAge="33 Weeks"
+    gestationalAge={{ value: '33 Weeks', ariaLabel: '33 Weeks' }}
     identifiers={[
       {
         label: 'MRN',
@@ -24,7 +24,7 @@ const SelectableDemographicsBannerAdditionalAges = () => (
     ]}
     personName="Johnathon Doe"
     photo={<Image alt="My Cat" src={demographicsImage} />}
-    postMenstrualAge="43 Weeks"
+    postMenstrualAge={{ value: '43 Weeks', ariaLabel: '43 Weeks' }}
     preferredFirstName="John"
     // eslint-disable-next-line no-alert
     onClick={() => alert('Demographics banner clicked!')}

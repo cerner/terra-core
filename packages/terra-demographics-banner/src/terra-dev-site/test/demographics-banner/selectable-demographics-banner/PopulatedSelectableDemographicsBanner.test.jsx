@@ -16,10 +16,10 @@ export default () => {
         id="populated-demographics-banner"
         administrativeSex={{ value: 'F', ariaLabel: 'Female', isBirthSexMismatch: true }}
         applicationContent={<span>BW12N / RAD1232</span>}
-        age="28 years"
+        age={{ value: '28 years', ariaLabel: '28 years old.' }}
         dateOfBirth={{ value: 'July 12, 1989', ariaLabel: 'July 12, 1989' }}
-        gestationalAge="April 11, 2020"
-        postMenstrualAge="May 13, 2020"
+        gestationalAge={{ value: 'April 11, 2020', ariaLabel: 'April 11, 2020' }}
+        postMenstrualAge={{ value: 'May 13, 2020', ariaLabel: 'May 13, 2020' }}
         identifiers={[
           {
             label: 'MRN',

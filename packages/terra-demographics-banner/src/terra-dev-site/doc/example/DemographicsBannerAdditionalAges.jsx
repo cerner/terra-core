@@ -6,10 +6,10 @@ import demographicsImage from '../assets/demographicsCat.jpg';
 const DemographicsBannerAdditionalAges = () => (
   <DemographicsBanner
     applicationContent={<span className="risk-score">5%</span>}
-    age="10 Weeks"
+    age={{ value: '10 Weeks', ariaLabel: '10 weeks old.' }}
     dateOfBirth={{ value: 'October 25, 2018', ariaLabel: 'October 25, 2018' }}
     administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
-    gestationalAge="33 Weeks"
+    gestationalAge={{ value: '33 Weeks', ariaLabel: '33 Weeks' }}
     identifiers={[
       {
         label: 'MRN',
@@ -24,7 +24,7 @@ const DemographicsBannerAdditionalAges = () => (
     ]}
     photo={<Image alt="My Cat" src={demographicsImage} />}
     personName="Johnathon Doe"
-    postMenstrualAge="43 Weeks"
+    postMenstrualAge={{ value: '43 Weeks', ariaLabel: '43 Weeks' }}
     preferredFirstName="John"
   />
 );

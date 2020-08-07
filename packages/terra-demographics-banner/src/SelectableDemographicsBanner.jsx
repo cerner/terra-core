@@ -59,7 +59,7 @@ const propTypes = {
   /**
    * Age of the person.
    */
-  age: PropTypes.string,
+  age: PropTypes.shape(stringShape),
   /**
    * Application content to display in the banner.
    */
@@ -75,7 +75,7 @@ const propTypes = {
   /**
    * The person's gestational age.
    */
-  gestationalAge: PropTypes.string,
+  gestationalAge: PropTypes.shape(stringShape),
   /**
    * Additional array of label value identifiers of a person's demographic information.
    */
@@ -106,9 +106,9 @@ const propTypes = {
    */
   photo: PropTypes.node,
   /**
-   * The column layout in which to present the displays.
+   * The person's postmenstrual age.
    */
-  postMenstrualAge: PropTypes.string,
+  postMenstrualAge: PropTypes.shape(stringShape),
   /**
    * The person's preferred first name if they have one.
    */
@@ -117,12 +117,13 @@ const propTypes = {
 
 const defaultProps = {
   administrativeSex: {},
+  age: {},
   applicationContent: null,
   dateOfBirth: {},
   deceasedDate: {},
-  gestationalAge: null,
+  gestationalAge: {},
   isConfidential: false,
-  postMenstrualAge: null,
+  postMenstrualAge: {},
   preferredFirstName: null,
 };
 

@@ -13,15 +13,16 @@ exports[`renders a blank banner wrapper 1`] = `
   >
     <InjectIntl(DemographicsBanner)
       administrativeSex={Object {}}
+      age={Object {}}
       applicationContent={null}
       className="selectable-demographics-banner"
       dateOfBirth={Object {}}
       deceasedDate={Object {}}
-      gestationalAge={null}
+      gestationalAge={Object {}}
       isActive={false}
       isConfidential={false}
       isSelectable={true}
-      postMenstrualAge={null}
+      postMenstrualAge={Object {}}
       preferredFirstName={null}
     />
   </SelectableTile>
@@ -49,7 +50,12 @@ exports[`renders the banner wrapper with all props 1`] = `
           "value": "Male",
         }
       }
-      age="25 Years"
+      age={
+        Object {
+          "ariaLabel": "25 Years Old.",
+          "value": "25 Years",
+        }
+      }
       applicationContent={
         <span
           className="risk-score"
@@ -70,7 +76,12 @@ exports[`renders the banner wrapper with all props 1`] = `
           "value": "January 10, 2020",
         }
       }
-      gestationalAge="April 5, 2016"
+      gestationalAge={
+        Object {
+          "ariaLabel": "April 5, 2016",
+          "value": "April 5, 2016",
+        }
+      }
       identifiers={
         Array [
           Object {
@@ -90,7 +101,12 @@ exports[`renders the banner wrapper with all props 1`] = `
       isSelectable={true}
       personName="Johnathon Doe"
       photo=""
-      postMenstrualAge="April 7, 2016"
+      postMenstrualAge={
+        Object {
+          "ariaLabel": "April 7, 2016",
+          "value": "April 7, 2016",
+        }
+      }
       preferredFirstName="John"
     />
   </SelectableTile>

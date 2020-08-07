@@ -12,10 +12,10 @@ it('renders the banner wrapper with all props', () => {
   const banner = shallowWithIntl((
     <DemographicsBanner
       applicationContent={<span className="risk-score">5%</span>}
-      age="25 Years"
+      age={{ value: '25 Years', ariaLabel: '25 Years Old.' }}
       dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
       administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
-      gestationalAge="April 5, 2016"
+      gestationalAge={{ value: 'April 5, 2016', ariaLabel: 'April 5, 2016' }}
       identifiers={[
         {
           label: 'MRN',
@@ -31,7 +31,7 @@ it('renders the banner wrapper with all props', () => {
       isConfidential
       photo=""
       personName="Johnathon Doe"
-      postMenstrualAge="April 7, 2016"
+      postMenstrualAge={{ value: 'April 7, 2016', ariaLabel: 'April 7, 2016' }}
       preferredFirstName="John"
     />
   ));

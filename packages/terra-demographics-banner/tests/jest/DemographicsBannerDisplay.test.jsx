@@ -10,7 +10,7 @@ it('renders a blank banner properly', () => {
 
 it('renders a banner that has basic information', () => {
   const banner = shallowWithIntl(<DemographicsBannerDisplay
-    age="24"
+    age={{ value: '24', ariaLabel: '24 Years Old.' }}
     dateOfBirth={{ value: 'March 30, 2017', ariaLabel: 'March 30, 2017' }}
     administrativeSex={{ value: 'F', ariaLabel: 'Female', isBirthSexMismatch: false }}
     personName="Terra Demographics Banner"
@@ -22,7 +22,7 @@ it('renders a banner that has basic information', () => {
 it('renders the banner that contains additional information', () => {
   const banner = shallowWithIntl(<DemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
-    age="25 Years"
+    age={{ value: '25 Years', ariaLabel: '25 Years Old.' }}
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
     identifiers={[
@@ -47,7 +47,7 @@ it('renders the banner that contains additional information', () => {
 
 it('renders the banner appropriately for a deceased person', () => {
   const banner = shallowWithIntl(<DemographicsBannerDisplay
-    age="24"
+    age={{ value: '24', ariaLabel: '24 Years Old.' }}
     administrativeSex={{ value: 'F', ariaLabel: 'Female', isBirthSexMismatch: false }}
     dateOfBirth={{ value: 'June 15, 2014', ariaLabel: 'June 15, 2014' }}
     deceasedDate={{ value: 'March 30, 2017', ariaLabel: 'March 30, 2017' }}
@@ -60,10 +60,10 @@ it('renders the banner appropriately for a deceased person', () => {
 it('renders the banner appropriately for a person with gestational and post menstrual dates', () => {
   const banner = shallowWithIntl(<DemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
-    age="25 Years"
+    age={{ value: '25 Years', ariaLabel: '25 Years Old.' }}
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
-    gestationalAge="April 5, 2016"
+    gestationalAge={{ value: 'April 5, 2016', ariaLabel: 'April 5, 2016' }}
     gestationalAgeLabel="GA"
     identifiers={[
       {
@@ -79,7 +79,7 @@ it('renders the banner appropriately for a person with gestational and post mens
     ]}
     photo=""
     personName="Johnathon Doe"
-    postMenstrualAge="April 7, 2016"
+    postMenstrualAge={{ value: 'April 7, 2016', ariaLabel: 'April 7, 2016' }}
     postMenstrualAgeLabel="PMA"
     preferredFirstName="John"
   />);
@@ -88,19 +88,19 @@ it('renders the banner appropriately for a person with gestational and post mens
 });
 
 it('renders gestational date with a default label when the label is not provided', () => {
-  const banner = shallowWithIntl(<DemographicsBannerDisplay gestationalAge="April 5, 2016" />);
+  const banner = shallowWithIntl(<DemographicsBannerDisplay gestationalAge={{ value: 'April 5, 2016', ariaLabel: 'April 5, 2016' }} />);
   expect(banner).toMatchSnapshot();
 });
 
 it('renders post menstrural date with a default label when the label is not provided', () => {
-  const banner = shallowWithIntl(<DemographicsBannerDisplay postMenstrualAge="April 5, 2016" />);
+  const banner = shallowWithIntl(<DemographicsBannerDisplay postMenstrualAge={{ value: 'April 5, 2016', ariaLabel: 'April 5, 2016' }} />);
   expect(banner).toMatchSnapshot();
 });
 
 it('renders the banner properly for a deceased person with additional application content', () => {
   const banner = shallowWithIntl(<DemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
-    age="25 Years"
+    age={{ value: '25 Years', ariaLabel: '25 Years Old.' }}
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     deceasedDate={{ value: 'March 5, 2016', ariaLabel: 'March 5, 2016' }}
     administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
@@ -127,7 +127,7 @@ it('renders the banner properly for a deceased person with additional applicatio
 it('renders the banner with confidential icon', () => {
   const banner = shallowWithIntl(<DemographicsBannerDisplay
     applicationContent={<span className="risk-score">5%</span>}
-    age="25 Years"
+    age={{ value: '25 Years', ariaLabel: '25 Years Old.' }}
     dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
     administrativeSex={{ value: 'Male', ariaLabel: 'Male', isBirthSexMismatch: false }}
     identifiers={[

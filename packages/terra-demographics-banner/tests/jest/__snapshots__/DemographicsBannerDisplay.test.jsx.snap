@@ -10,7 +10,12 @@ exports[`renders a banner that has basic information 1`] = `
     }
   }
   administrativeSexFullText="Administrative Sex"
-  age="24"
+  age={
+    Object {
+      "ariaLabel": "24 Years Old.",
+      "value": "24",
+    }
+  }
   applicationContent={null}
   dateOfBirth={
     Object {
@@ -22,7 +27,7 @@ exports[`renders a banner that has basic information 1`] = `
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
-  gestationalAge={null}
+  gestationalAge={Object {}}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   intl={
@@ -56,7 +61,7 @@ exports[`renders a banner that has basic information 1`] = `
   isConfidential={false}
   isSelectable={false}
   personName="Terra Demographics Banner"
-  postMenstrualAge={null}
+  postMenstrualAge={Object {}}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName={null}
@@ -68,14 +73,14 @@ exports[`renders a blank banner properly 1`] = `
 <DemographicsBannerDisplay
   administrativeSex={Object {}}
   administrativeSexFullText="Administrative Sex"
-  age=""
+  age={Object {}}
   applicationContent={null}
   dateOfBirth={Object {}}
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
-  gestationalAge={null}
+  gestationalAge={Object {}}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   intl={
@@ -109,7 +114,7 @@ exports[`renders a blank banner properly 1`] = `
   isConfidential={false}
   isSelectable={false}
   personName=""
-  postMenstrualAge={null}
+  postMenstrualAge={Object {}}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName={null}
@@ -121,14 +126,19 @@ exports[`renders gestational date with a default label when the label is not pro
 <DemographicsBannerDisplay
   administrativeSex={Object {}}
   administrativeSexFullText="Administrative Sex"
-  age=""
+  age={Object {}}
   applicationContent={null}
   dateOfBirth={Object {}}
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
-  gestationalAge="April 5, 2016"
+  gestationalAge={
+    Object {
+      "ariaLabel": "April 5, 2016",
+      "value": "April 5, 2016",
+    }
+  }
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   intl={
@@ -162,7 +172,7 @@ exports[`renders gestational date with a default label when the label is not pro
   isConfidential={false}
   isSelectable={false}
   personName=""
-  postMenstrualAge={null}
+  postMenstrualAge={Object {}}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName={null}
@@ -174,14 +184,14 @@ exports[`renders post menstrural date with a default label when the label is not
 <DemographicsBannerDisplay
   administrativeSex={Object {}}
   administrativeSexFullText="Administrative Sex"
-  age=""
+  age={Object {}}
   applicationContent={null}
   dateOfBirth={Object {}}
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
-  gestationalAge={null}
+  gestationalAge={Object {}}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   intl={
@@ -215,7 +225,12 @@ exports[`renders post menstrural date with a default label when the label is not
   isConfidential={false}
   isSelectable={false}
   personName=""
-  postMenstrualAge="April 5, 2016"
+  postMenstrualAge={
+    Object {
+      "ariaLabel": "April 5, 2016",
+      "value": "April 5, 2016",
+    }
+  }
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName={null}
@@ -233,7 +248,12 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
     }
   }
   administrativeSexFullText="Administrative Sex"
-  age="24"
+  age={
+    Object {
+      "ariaLabel": "24 Years Old.",
+      "value": "24",
+    }
+  }
   applicationContent={null}
   dateOfBirth={
     Object {
@@ -250,7 +270,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
     }
   }
   deceasedDateLabel="Deceased"
-  gestationalAge={null}
+  gestationalAge={Object {}}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   intl={
@@ -284,7 +304,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
   isConfidential={false}
   isSelectable={false}
   personName="Old Terra Demographics Banner"
-  postMenstrualAge={null}
+  postMenstrualAge={Object {}}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName={null}
@@ -302,7 +322,12 @@ exports[`renders the banner appropriately for a person with gestational and post
     }
   }
   administrativeSexFullText="Administrative Sex"
-  age="25 Years"
+  age={
+    Object {
+      "ariaLabel": "25 Years Old.",
+      "value": "25 Years",
+    }
+  }
   applicationContent={
     <span
       className="risk-score"
@@ -320,7 +345,12 @@ exports[`renders the banner appropriately for a person with gestational and post
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
-  gestationalAge="April 5, 2016"
+  gestationalAge={
+    Object {
+      "ariaLabel": "April 5, 2016",
+      "value": "April 5, 2016",
+    }
+  }
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   identifiers={
@@ -369,7 +399,12 @@ exports[`renders the banner appropriately for a person with gestational and post
   isSelectable={false}
   personName="Johnathon Doe"
   photo=""
-  postMenstrualAge="April 7, 2016"
+  postMenstrualAge={
+    Object {
+      "ariaLabel": "April 7, 2016",
+      "value": "April 7, 2016",
+    }
+  }
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName="John"
@@ -387,7 +422,12 @@ exports[`renders the banner properly for a deceased person with additional appli
     }
   }
   administrativeSexFullText="Administrative Sex"
-  age="25 Years"
+  age={
+    Object {
+      "ariaLabel": "25 Years Old.",
+      "value": "25 Years",
+    }
+  }
   applicationContent={
     <span
       className="risk-score"
@@ -410,7 +450,7 @@ exports[`renders the banner properly for a deceased person with additional appli
     }
   }
   deceasedDateLabel="Deceased"
-  gestationalAge={null}
+  gestationalAge={Object {}}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   identifiers={
@@ -459,7 +499,7 @@ exports[`renders the banner properly for a deceased person with additional appli
   isSelectable={false}
   personName="Johnathon Doe"
   photo=""
-  postMenstrualAge={null}
+  postMenstrualAge={Object {}}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName="John"
@@ -477,7 +517,12 @@ exports[`renders the banner that contains additional information 1`] = `
     }
   }
   administrativeSexFullText="Administrative Sex"
-  age="25 Years"
+  age={
+    Object {
+      "ariaLabel": "25 Years Old.",
+      "value": "25 Years",
+    }
+  }
   applicationContent={
     <span
       className="risk-score"
@@ -495,7 +540,7 @@ exports[`renders the banner that contains additional information 1`] = `
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
-  gestationalAge={null}
+  gestationalAge={Object {}}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   identifiers={
@@ -544,7 +589,7 @@ exports[`renders the banner that contains additional information 1`] = `
   isSelectable={false}
   personName="Johnathon Doe"
   photo=""
-  postMenstrualAge={null}
+  postMenstrualAge={Object {}}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName="John"
@@ -562,7 +607,12 @@ exports[`renders the banner with confidential icon 1`] = `
     }
   }
   administrativeSexFullText="Administrative Sex"
-  age="25 Years"
+  age={
+    Object {
+      "ariaLabel": "25 Years Old.",
+      "value": "25 Years",
+    }
+  }
   applicationContent={
     <span
       className="risk-score"
@@ -580,7 +630,7 @@ exports[`renders the banner with confidential icon 1`] = `
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
   deceasedDateLabel="Deceased"
-  gestationalAge={null}
+  gestationalAge={Object {}}
   gestationalAgeFullText="Gestational Age"
   gestationalAgeLabel="GA"
   identifiers={
@@ -628,7 +678,7 @@ exports[`renders the banner with confidential icon 1`] = `
   isConfidential={true}
   isSelectable={false}
   personName="Johnathon Doe"
-  postMenstrualAge={null}
+  postMenstrualAge={Object {}}
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName="John"

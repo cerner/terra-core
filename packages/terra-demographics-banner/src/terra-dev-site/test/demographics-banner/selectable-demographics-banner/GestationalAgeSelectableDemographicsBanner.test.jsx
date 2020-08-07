@@ -15,11 +15,11 @@ export default () => {
       <SelectableDemographicsBanner
         id="gestational-demographics-banner"
         applicationContent={<span>St. Johns Kansas City West Wing Room Cardiac Arrest Unit 253</span>}
-        age="27 Years"
+        age={{ value: '27 Years', ariaLabel: '27 years old.' }}
         color="two"
         dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
         administrativeSex={{ value: 'M', ariaLabel: 'Male', isBirthSexMismatch: false }}
-        gestationalAge="April 11, 2020"
+        gestationalAge={{ value: 'April 11, 2020', ariaLabel: 'April 11, 2020' }}
         personName="Johnathon Doe"
         photo={<Image alt="My Cat" src={demographicsImage} />}
         preferredFirstName="John"

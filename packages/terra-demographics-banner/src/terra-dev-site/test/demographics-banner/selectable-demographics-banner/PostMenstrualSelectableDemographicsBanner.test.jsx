@@ -15,7 +15,7 @@ export default () => {
       <SelectableDemographicsBanner
         id="post-menstrual-demographics-banner"
         applicationContent={<span>St. Johns West Wing Room Cardiac Unit 253</span>}
-        age="27 Years"
+        age={{ value: '27 Years', ariaLabel: '27 years old.' }}
         dateOfBirth={{ value: 'May 9, 1993', ariaLabel: 'May 9, 1993' }}
         administrativeSex={{ value: 'M', ariaLabel: 'Male', isBirthSexMismatch: false }}
         identifiers={[
@@ -32,7 +32,7 @@ export default () => {
         ]}
         personName="Johnathon Doe"
         photo={<Image alt="My Cat" src={demographicsImage} />}
-        postMenstrualAge="May 13, 2020"
+        postMenstrualAge={{ value: 'May 13, 2020', ariaLabel: 'May 13, 2020' }}
         preferredFirstName="John"
         onClick={handleDemographicsClick}
       />
