@@ -29,9 +29,9 @@
     "precompile": "rm -rf lib",
     "test": "npm run jest && npm run lint && npm run wdio",
     "jest": "jest --config ../../jestconfig.js",
-    "wdio-default": "cd ../.. && FORM_FACTOR=large npx wdio",
-    "wdio-lowlight": "cd ../.. && FORM_FACTOR=large THEME=clinical-lowlight-theme npx wdio",
-    "wdio-fusion": "cd ../.. && FORM_FACTOR=large THEME=orion-fusion-theme npx wdio",
+    "wdio-default": "cd ../.. && npx wdio",
+    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio",
+    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio",
     "wdio": "npm run wdio-default && npm run wdio-fusion && npm run wdio-lowlight"
   },
   "peerDependencies": {
