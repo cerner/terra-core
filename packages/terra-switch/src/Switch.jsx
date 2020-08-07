@@ -29,6 +29,10 @@ const propTypes = {
    */
   labelText: PropTypes.string.isRequired,
   /**
+   * renders switch as block element when specified.
+   */
+  isBlock: PropTypes.bool,
+  /**
    * Callback function when switch value changes from ON / OFF.
    * Returns Parameters: 1. switch value 2. event.
    */
@@ -38,6 +42,7 @@ const propTypes = {
 const defaultProps = {
   isChecked: false,
   isDisabled: false,
+  isBlock: false,
   onChange: undefined,
 };
 
@@ -45,6 +50,7 @@ const Switch = (props) => {
   const {
     isChecked,
     isDisabled,
+    isBlock,
     onChange,
     labelText,
     ...customProps
@@ -86,9 +92,15 @@ const Switch = (props) => {
     { 'is-enabled': !isDisabled },
     { 'is-disabled': isDisabled },
     { 'is-selected': isChecked },
+    { 'is-block': isBlock},
     theme.className,
   ),
   customProps.className);
+
+  const labelContainerClassNames = cx([
+    'label-container',
+    { 'is-block': isBlock},
+  ]);
 
   let switchAttrs;
   if (!isDisabled) {
@@ -116,7 +128,7 @@ const Switch = (props) => {
       data-terra-switch-show-focus-styles
       ref={sliderButton}
     >
-      <div aria-hidden className={cx('label-container')}>
+      <div aria-hidden className={labelContainerClassNames}>
         <div className={cx('label-text')}>{labelText}</div>
         <div className={cx('status-label-text')}>{statusLabelText}</div>
       </div>
