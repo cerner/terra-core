@@ -92,14 +92,14 @@ const Switch = (props) => {
     { 'is-enabled': !isDisabled },
     { 'is-disabled': isDisabled },
     { 'is-selected': isChecked },
-    { 'is-block': isBlock},
+    { 'is-block': isBlock },
     theme.className,
   ),
   customProps.className);
 
   const labelContainerClassNames = cx([
     'label-container',
-    { 'is-block': isBlock},
+    { 'is-block': isBlock },
   ]);
 
   let switchAttrs;
