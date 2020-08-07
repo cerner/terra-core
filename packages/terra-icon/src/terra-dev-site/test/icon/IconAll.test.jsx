@@ -19,6 +19,7 @@ const IconAll = () => (
     <Icon.IconArchive className={cx(['icon'])} />
     <Icon.IconAttachment className={cx(['icon'])} />
     <Icon.IconAudio className={cx(['icon'])} />
+    <Icon.IconAutoText className={cx(['icon'])} />
     <Icon.IconAvailable className={cx(['icon'])} />
     <Icon.IconAway className={cx(['icon'])} />
     <Icon.IconBedAssigned className={cx(['icon'])} />
@@ -122,6 +123,7 @@ const IconAll = () => (
     <Icon.IconFunnel className={cx(['icon'])} />
     <Icon.IconGapChecking className={cx(['icon'])} />
     <Icon.IconGlasses className={cx(['icon'])} />
+    <Icon.IconGroup className={cx(['icon'])} />
     <Icon.IconHalfRating className={cx(['icon'])} />
     <Icon.IconHelp className={cx(['icon'])} />
     <Icon.IconHelpInverse className={cx(['icon', 'icon-inverse'])} />
@@ -148,6 +150,7 @@ const IconAll = () => (
     <Icon.IconInformationLowLight className={cx(['icon'])} />
     <Icon.IconIPass className={cx(['icon'])} />
     <Icon.IconItalicI className={cx(['icon'])} />
+    <Icon.IconKeyboard className={cx(['icon'])} />
     <Icon.IconKnurling className={cx(['icon'])} />
     <Icon.IconLast className={cx(['icon'])} />
     <Icon.IconLeft className={cx(['icon'])} />
@@ -194,11 +197,13 @@ const IconAll = () => (
     <Icon.IconOverDue className={cx(['icon'])} />
     <Icon.IconOverDueLowLight className={cx(['icon'])} />
     <Icon.IconPadlock className={cx(['icon'])} />
+    <Icon.IconPager className={cx(['icon'])} />
     <Icon.IconPanelLeft className={cx(['icon'])} />
     <Icon.IconPanelRight className={cx(['icon'])} />
     <Icon.IconPaperFolded className={cx(['icon'])} />
     <Icon.IconPaperPencil className={cx(['icon'])} />
     <Icon.IconPartiallyMet className={cx(['icon'])} />
+    <Icon.IconPatientSearch className={cx(['icon'])} />
     <Icon.IconPending className={cx(['icon'])} />
     <Icon.IconPerson className={cx(['icon'])} />
     <Icon.IconPersonDoor className={cx(['icon'])} />
@@ -245,12 +250,15 @@ const IconAll = () => (
     <Icon.IconSend className={cx(['icon'])} />
     <Icon.IconSeparate className={cx(['icon'])} />
     <Icon.IconSettings className={cx(['icon'])} />
+    <Icon.IconSharedSchedules className={cx(['icon'])} />
     <Icon.IconSimulation className={cx(['icon'])} />
     <Icon.IconSortAscending className={cx(['icon'])} />
     <Icon.IconSortDescending className={cx(['icon'])} />
     <Icon.IconSpinner className={cx(['icon'])} isSpin={false} />
     <Icon.IconSquareSymbol className={cx(['icon'])} />
     <Icon.IconSquareSymbolLight className={cx(['icon'])} />
+    <Icon.IconStartPresenting className={cx(['icon'])} />
+    <Icon.IconStopPresenting className={cx(['icon'])} />
     <Icon.IconSuccess className={cx(['icon'])} />
     <Icon.IconSuccessInverse className={cx(['icon', 'icon-inverse'])} />
     <Icon.IconSuccessInverseLowLight className={cx(['icon'])} />

@@ -10,6 +10,7 @@ import IconAnnouncement from './icon/IconAnnouncement';
 import IconArchive from './icon/IconArchive';
 import IconAttachment from './icon/IconAttachment';
 import IconAudio from './icon/IconAudio';
+import IconAutoText from './icon/IconAutoText';
 import IconAvailable from './icon/IconAvailable';
 import IconAway from './icon/IconAway';
 import IconBedAssigned from './icon/IconBedAssigned';
@@ -113,6 +114,7 @@ import IconForward from './icon/IconForward';
 import IconFunnel from './icon/IconFunnel';
 import IconGapChecking from './icon/IconGapChecking';
 import IconGlasses from './icon/IconGlasses';
+import IconGroup from './icon/IconGroup';
 import IconHalfRating from './icon/IconHalfRating';
 import IconHelp from './icon/IconHelp';
 import IconHelpInverse from './icon/IconHelpInverse';
@@ -139,6 +141,7 @@ import IconInformationInverseLowLight from './icon/IconInformationInverseLowLigh
 import IconInformationLowLight from './icon/IconInformationLowLight';
 import IconIPass from './icon/IconIPass';
 import IconItalicI from './icon/IconItalicI';
+import IconKeyboard from './icon/IconKeyboard';
 import IconKnurling from './icon/IconKnurling';
 import IconLast from './icon/IconLast';
 import IconLeft from './icon/IconLeft';
@@ -185,11 +188,13 @@ import IconOutOfNetwork from './icon/IconOutOfNetwork';
 import IconOverDue from './icon/IconOverDue';
 import IconOverDueLowLight from './icon/IconOverDueLowLight';
 import IconPadlock from './icon/IconPadlock';
+import IconPager from './icon/IconPager';
 import IconPanelLeft from './icon/IconPanelLeft';
 import IconPanelRight from './icon/IconPanelRight';
 import IconPaperFolded from './icon/IconPaperFolded';
 import IconPaperPencil from './icon/IconPaperPencil';
 import IconPartiallyMet from './icon/IconPartiallyMet';
+import IconPatientSearch from './icon/IconPatientSearch';
 import IconPending from './icon/IconPending';
 import IconPerson from './icon/IconPerson';
 import IconPersonDoor from './icon/IconPersonDoor';
@@ -236,12 +241,15 @@ import IconSecondaryProvider from './icon/IconSecondaryProvider';
 import IconSend from './icon/IconSend';
 import IconSeparate from './icon/IconSeparate';
 import IconSettings from './icon/IconSettings';
+import IconSharedSchedules from './icon/IconSharedSchedules';
 import IconSimulation from './icon/IconSimulation';
 import IconSortAscending from './icon/IconSortAscending';
 import IconSortDescending from './icon/IconSortDescending';
 import IconSpinner from './icon/IconSpinner';
 import IconSquareSymbol from './icon/IconSquareSymbol';
 import IconSquareSymbolLight from './icon/IconSquareSymbolLight';
+import IconStartPresenting from './icon/IconStartPresenting';
+import IconStopPresenting from './icon/IconStopPresenting';
 import IconSuccess from './icon/IconSuccess';
 import IconSuccessInverse from './icon/IconSuccessInverse';
 import IconSuccessInverseLowLight from './icon/IconSuccessInverseLowLight';
@@ -296,6 +304,7 @@ const Icons = {
   IconArchive,
   IconAttachment,
   IconAudio,
+  IconAutoText,
   IconAvailable,
   IconAway,
   IconBedAssigned,
@@ -399,6 +408,7 @@ const Icons = {
   IconFunnel,
   IconGapChecking,
   IconGlasses,
+  IconGroup,
   IconHalfRating,
   IconHelp,
   IconHelpInverse,
@@ -425,6 +435,7 @@ const Icons = {
   IconInformationInverseLowLight,
   IconInformationLowLight,
   IconItalicI,
+  IconKeyboard,
   IconKnurling,
   IconLast,
   IconLeft,
@@ -471,11 +482,13 @@ const Icons = {
   IconOverDue,
   IconOverDueLowLight,
   IconPadlock,
+  IconPager,
   IconPanelLeft,
   IconPanelRight,
   IconPaperFolded,
   IconPaperPencil,
   IconPartiallyMet,
+  IconPatientSearch,
   IconPending,
   IconPerson,
   IconPersonDoor,
@@ -522,12 +535,15 @@ const Icons = {
   IconSend,
   IconSeparate,
   IconSettings,
+  IconSharedSchedules,
   IconSimulation,
   IconSortAscending,
   IconSortDescending,
   IconSpinner,
   IconSquareSymbol,
   IconSquareSymbolLight,
+  IconStartPresenting,
+  IconStopPresenting,
   IconSuccess,
   IconSuccessInverse,
   IconSuccessInverseLowLight,
