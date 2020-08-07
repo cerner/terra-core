@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Add missing theme variables
+  
 ## 4.39.0 - (August 6, 2020)
 
 * Changed
@@ -11,6 +14,7 @@
 
 * Changed
   * Minor dependency version bump
+
 
 ## 4.37.0 - (July 29, 2020)
 
