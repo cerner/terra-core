@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fix click interactions on Header check mark when disabled.
+
 ## 4.14.0 - (August 4, 2020)
 
 * Changed
