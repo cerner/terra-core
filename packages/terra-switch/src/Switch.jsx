@@ -29,7 +29,7 @@ const propTypes = {
    */
   labelText: PropTypes.string.isRequired,
   /**
-   * renders switch as block element when specified.
+   * Whether or not to render the switch as block element when specified.
    */
   isBlock: PropTypes.bool,
   /**
