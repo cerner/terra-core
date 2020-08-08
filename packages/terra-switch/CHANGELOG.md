@@ -2,7 +2,7 @@
 
 ## Unreleased
 * Added
-  * Added `isBlock` prop to render switch as block element when specified.
+  * Added `isBlock` prop to render the switch as block element when specified.
 
 ## 1.2.0 - (August 4, 2020)
 
