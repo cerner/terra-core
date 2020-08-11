@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.40.0 - (August 11, 2020)
+
 * Changed
   * Add missing theme variables
   
