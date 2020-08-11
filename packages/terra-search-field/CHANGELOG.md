@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 3.56.0 - (August 6, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.55.0 - (August 4, 2020)
+
+* Changed
+  * Moved custom input attributes to be spread first on the input element.
+
 ## 3.54.0 - (July 29, 2020)
 
 * Removed

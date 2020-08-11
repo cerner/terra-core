@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 4.33.0 - (August 6, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.32.0 - (August 4, 2020)
+
+* Removed
+  * Removed references of the removed `size` attribute of terra-button that would be passed via `buttonAttrs`.
+
 ## 4.31.0 - (July 29, 2020)
 
 * Changed

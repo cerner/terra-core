@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 6.14.0 - (August 6, 2020)
+
+* Fixed
+  * Fixed an issue to prevent multiple dropdowns from opening in mobile and move focus to select menu when opened via toggle button.
+
+## 6.13.0 - (August 4, 2020)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.12.0 - (July 29, 2020)
 
 * Changed

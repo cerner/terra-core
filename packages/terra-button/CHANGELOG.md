@@ -2,9 +2,18 @@
 
 ## Unreleased
 
-Changed
+* Changed
+  * Remove wdio tests and screenshots for checking hover style.
+  
+## 3.46.0 - (August 6, 2020)
 
-* Remove wdio tests and screenshots for checking hover style.
+* Changed
+  * Minor dependency version bump
+
+## 3.45.0 - (August 4, 2020)
+
+* Changed
+  * Minor dependency version bump
 
 ## 3.44.0 - (July 29, 2020)
 
