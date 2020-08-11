@@ -4,10 +4,21 @@
 
 * Breaking Changes
   * `gender` prop is removed. It is replaced by the `administrativeSex` prop.
+  * `age` prop type is changed to a shape.
+  * `dateOfBirth` prop type is changed from a string to a shape.
+  * `deceasedDate` prop type is changed from a string to a shape.
+  * `gestationalAge` prop type is changed from a string to a shape.
+  * `identifiers` prop type is changed from an object to an array of shapes.
+  * `postMenstrualAge` prop type is changed to a shape.
+  * `age` prop type is changed to a shape.
+  * `age` prop type is changed to a shape.
 
 * Added
+  * Added `administrativeSex` prop to replace the `gender` prop.
+  * Added `isConfidential` prop to display an icon to denote confidentiality.
   * Added selectable demographics banner.
-  * Added flag icon to denote confidentiality.
+  
+* Changed
   * Removed `--` as the fallback display when demographic details are not provided.
 
 ## 3.44.0 - (August 4, 2020)
