@@ -4,6 +4,8 @@
 
 * Fixed 
   * Fixed focus to stay on select when escape is pressed to close dropdown.
+  
+## 6.14.0 - (August 6, 2020)
 
 * Fixed
   * Fixed an issue to prevent multiple dropdowns from opening in mobile and move focus to select menu when opened via toggle button.
