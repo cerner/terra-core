@@ -44,4 +44,11 @@ Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
       Terra.validates.element();
     });
   });
+
+  describe('Block Switch', () => {
+    it('renders switch as block element', () => {
+      browser.url('/#/raw/tests/terra-switch/switch/block-switch');
+      Terra.validates.element();
+    });
+  });
 });
