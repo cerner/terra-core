@@ -8,14 +8,13 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell 1`] = `
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      className="label"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-label="test text"
       className="checkmark"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      tabIndex="0"
     />
   </div>
 </div>
@@ -28,21 +27,19 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable 1
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="columnheader"
-  tabIndex="0"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      aria-checked={false}
-      className="label"
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked={false}
+      aria-label="test text"
       className="checkmark"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -55,22 +52,20 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable d
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="columnheader"
-  tabIndex="0"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
+    <div
       aria-checked={false}
       aria-disabled={true}
-      className="label"
-      role="checkbox"
-      text="test text"
-    />
-    <div
-      aria-hidden={true}
+      aria-label="test text"
       className="checkmark is-disabled"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -83,21 +78,19 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="columnheader"
-  tabIndex="0"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      aria-checked={true}
-      className="label"
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked={true}
+      aria-label="test text"
       className="checkmark is-selected"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -110,22 +103,20 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="columnheader"
-  tabIndex="0"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
+    <div
       aria-checked={true}
       aria-disabled={true}
-      className="label"
-      role="checkbox"
-      text="test text"
-    />
-    <div
-      aria-hidden={true}
+      aria-label="test text"
       className="checkmark is-selected is-disabled"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -138,21 +129,19 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="columnheader"
-  tabIndex="0"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      aria-checked="mixed"
-      className="label"
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked="mixed"
+      aria-label="test text"
       className="checkmark is-selected is-intermediate"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -165,22 +154,20 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="columnheader"
-  tabIndex="0"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
+    <div
       aria-checked="mixed"
       aria-disabled={true}
-      className="label"
-      role="checkbox"
-      text="test text"
-    />
-    <div
-      aria-hidden={true}
+      aria-label="test text"
       className="checkmark is-selected is-intermediate is-disabled"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -199,14 +186,13 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with alignment 
       }
     }
   >
-    <VisuallyHiddenText
-      className="label"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-label="test text"
       className="checkmark"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      tabIndex="0"
     />
   </div>
 </div>
@@ -220,14 +206,13 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with child cont
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      className="label"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-label="test text"
       className="checkmark"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      tabIndex="0"
     />
   </div>
 </div>
@@ -242,14 +227,13 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with width inne
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      className="label"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-label="test text"
       className="checkmark"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      tabIndex="0"
     />
   </div>
 </div>
@@ -264,21 +248,19 @@ exports[`HeaderCheckMarkCell should render with callback functions 1`] = `
   onKeyDown={[Function]}
   onMouseDown={[Function]}
   role="columnheader"
-  tabIndex="0"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      aria-checked={false}
-      className="label"
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked={false}
+      aria-label="test text"
       className="checkmark"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>

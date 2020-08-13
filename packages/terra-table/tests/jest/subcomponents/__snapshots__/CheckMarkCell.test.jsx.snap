@@ -5,19 +5,20 @@ exports[`CheckMarkCell should render a CheckMarkCell 1`] = `
   aria-selected={false}
   className="cell"
   role="gridcell"
+  tabIndex="-1"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      aria-checked={false}
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked={false}
+      aria-label="test text"
       className="checkmark"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -33,15 +34,15 @@ exports[`CheckMarkCell should render a CheckMarkCell as an icon 1`] = `
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      aria-checked={false}
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked={false}
+      aria-label="test text"
       className="checkmark"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -55,20 +56,20 @@ exports[`CheckMarkCell should render a CheckMarkCell as selectable 1`] = `
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="gridcell"
-  tabIndex="0"
+  tabIndex="-1"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      aria-checked={false}
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked={false}
+      aria-label="test text"
       className="checkmark is-selectable"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -79,20 +80,21 @@ exports[`CheckMarkCell should render a CheckMarkCell as selectable disabled 1`] 
   aria-selected={false}
   className="cell"
   role="gridcell"
+  tabIndex="-1"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
+    <div
       aria-checked={false}
       aria-disabled={true}
-      role="checkbox"
-      text="test text"
-    />
-    <div
-      aria-hidden={true}
+      aria-label="test text"
       className="checkmark is-selectable is-disabled"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="-1"
     />
   </div>
 </div>
@@ -106,20 +108,20 @@ exports[`CheckMarkCell should render a CheckMarkCell as selectable with selectio
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="gridcell"
-  tabIndex="0"
+  tabIndex="-1"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      aria-checked={true}
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked={true}
+      aria-label="test text"
       className="checkmark is-selectable is-selected"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -130,20 +132,21 @@ exports[`CheckMarkCell should render a CheckMarkCell as selectable with selectio
   aria-selected={true}
   className="cell"
   role="gridcell"
+  tabIndex="-1"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
+    <div
       aria-checked={true}
       aria-disabled={true}
-      role="checkbox"
-      text="test text"
-    />
-    <div
-      aria-hidden={true}
+      aria-label="test text"
       className="checkmark is-selectable is-selected is-disabled"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="-1"
     />
   </div>
 </div>
@@ -154,6 +157,7 @@ exports[`CheckMarkCell should render a CheckMarkCell with alignment 1`] = `
   aria-selected={false}
   className="cell is-top-align"
   role="gridcell"
+  tabIndex="-1"
 >
   <div
     className="container"
@@ -163,15 +167,15 @@ exports[`CheckMarkCell should render a CheckMarkCell with alignment 1`] = `
       }
     }
   >
-    <VisuallyHiddenText
-      aria-checked={false}
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked={false}
+      aria-label="test text"
       className="checkmark"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
@@ -187,20 +191,20 @@ exports[`CheckMarkCell should render with callback functions 1`] = `
   onKeyDown={[Function]}
   onMouseDown={[Function]}
   role="gridcell"
-  tabIndex="0"
+  tabIndex="-1"
 >
   <div
     className="container"
   >
-    <VisuallyHiddenText
-      aria-checked={false}
-      role="checkbox"
-      text="test text"
-    />
     <div
-      aria-hidden={true}
+      aria-checked={false}
+      aria-label="test text"
       className="checkmark is-selectable"
-      focusable="false"
+      hidden={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      role="checkbox"
+      tabIndex="0"
     />
   </div>
 </div>
