@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed jaws to announce state change for Rows and Header checkbox.
+
 ## 4.14.0 - (August 4, 2020)
 
 * Changed

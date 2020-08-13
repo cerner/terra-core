@@ -74,7 +74,7 @@ const propTypes = {
 
 const defaultProps = {
   isHidden: false,
-  isDisabled: true,
+  isDisabled: false,
   isIndeterminate: false,
   isSelected: false,
   isSelectable: false,
@@ -130,7 +130,7 @@ const HeaderCheckMarkCell = ({
     'header-cell',
     { 'hide-cell': isHidden },
     { 'is-interactable': !isDisabled && isSelectable },
-    { 'is-focused': isDisabled && isFocused },
+    { 'is-focused': isFocused && !isDisabled },
   );
 
   return (
