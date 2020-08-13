@@ -14,7 +14,6 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell 1`] = `
       hidden={false}
       onBlur={[Function]}
       onFocus={[Function]}
-      tabIndex="0"
     />
   </div>
 </div>
@@ -192,7 +191,6 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with alignment 
       hidden={false}
       onBlur={[Function]}
       onFocus={[Function]}
-      tabIndex="0"
     />
   </div>
 </div>
@@ -212,7 +210,6 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with child cont
       hidden={false}
       onBlur={[Function]}
       onFocus={[Function]}
-      tabIndex="0"
     />
   </div>
 </div>
@@ -233,7 +230,6 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell with width inne
       hidden={false}
       onBlur={[Function]}
       onFocus={[Function]}
-      tabIndex="0"
     />
   </div>
 </div>
