@@ -15,10 +15,12 @@
       background-color: map-get($color-map, focus-background-color);
       border-color: map-get($color-map, focus-border-color);
     }
-
-    &:hover {
-      background-color: map-get($color-map, hover-background-color);
-      color: map-get($color-map, hover-color);
+    
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: map-get($color-map, hover-background-color);
+        color: map-get($color-map, hover-color);
+      }
     }
 
     &.is-active,
@@ -64,13 +66,15 @@
       font-weight: map-get($color-map, active-split-font-weight);
     }
     
-    &:hover {
-      border-right-color: map-get($color-map, border-color);
-    }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &:hover {
+        border-right-color: map-get($color-map, border-color);
+      }
 
-    &:hover + .split-button-caret {
-      border-left-color: transparent;
-      box-shadow: map-get($color-map, hover-split-caret-box-shadow);
+      &:hover + .split-button-caret {
+        border-left-color: transparent;
+        box-shadow: map-get($color-map, hover-split-caret-box-shadow);
+      }
     }
   }
 
@@ -80,9 +84,10 @@
     &:focus {
       box-shadow: map-get($color-map, focus-split-caret-box-shadow);
     }
-    
-    &:hover {
-      box-shadow: map-get($color-map, hover-split-caret-box-shadow);
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &:hover {
+        box-shadow: map-get($color-map, hover-split-caret-box-shadow);
+      }
     }
 
     &.is-active,
