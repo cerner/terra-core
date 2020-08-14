@@ -29,4 +29,10 @@ describe('Switch', () => {
     const wrapper = shallowWithIntl(defaultRender);
     expect(wrapper.prop('className')).toContain('switch');
   });
+
+  it('should render block switch element when isBlock is specified', () => {
+    const wrapper = shallowWithIntl(<Switch labelText="default" isBlock />);
+    expect(wrapper.prop('className')).toContain('is-block');
+    expect(wrapper).toMatchSnapshot();
+  });
 });
