@@ -19,12 +19,14 @@
         color: var(--terra-hyperlink-visited-focus-color, #001f67);
       }
     }
-
-    &:hover,
-    &.is-hovered {
-      background-color: var(--terra-hyperlink-hover-background-color);
-      color: var(--terra-hyperlink-hover-color, #001f67);
-      text-decoration: var(--terra-hyperlink-hover-text-decoration, underline);
+    
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+      &:hover,
+      &.is-hovered {
+        background-color: var(--terra-hyperlink-hover-background-color);
+        color: var(--terra-hyperlink-hover-color, #001f67);
+        text-decoration: var(--terra-hyperlink-hover-text-decoration, underline);
+      }
     }
 
     &.is-focused {

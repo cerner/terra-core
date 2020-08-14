@@ -15,18 +15,6 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
       browser.click('#root');
     });
 
-    describe('Hover', () => {
-      it('is hovered', () => {
-        browser.moveToObject('button');
-      });
-
-      Terra.it.validatesElement();
-
-      it('removes hover', () => {
-        browser.moveToObject('#root');
-      });
-    });
-
     describe('Focus', () => {
       it('has focus', () => {
         browser.keys(['Tab']);
