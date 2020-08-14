@@ -9,11 +9,19 @@
     display: inline-flex;
     flex-direction: row;
     outline: 0;
+    
+    &.is-block {
+      width: 100%;
+    }
   }
 
   .label-container {
     flex: 0 1 auto;
     margin-right: var(--terra-switch-label-margin-right, 1.42857rem);
+    
+    &.is-block {
+      flex: 1 1 auto;
+    }
   }
 
   .label-text {

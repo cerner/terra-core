@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added `isBlock` prop to render the switch as block element when specified.
 
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices.
