@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Removed usage of `terra-form-field` from the examples of `<textarea />`.
+
 ## 4.2.0 - (August 6, 2020)
 
 * Changed
