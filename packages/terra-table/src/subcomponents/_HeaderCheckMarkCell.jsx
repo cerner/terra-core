@@ -119,7 +119,7 @@ const HeaderCheckMarkCell = ({
     attrCheck = {
       role: 'checkbox',
       'aria-checked': isSelected && isIndeterminate ? 'mixed' : isSelected,
-      tabIndex: '0',
+      tabIndex: isDisabled ? '-1' : '0',
     };
     if (isDisabled) {
       attrCheck['aria-disabled'] = true;

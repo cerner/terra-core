@@ -142,7 +142,6 @@ const CheckMarkCell = ({
     <div
       {...customProps}
       {...attrSpread}
-      tabIndex="-1"
       className={customProps.className ? `${checkMarkClasses} ${customProps.className}` : checkMarkClasses}
       ref={refCallback}
       role="gridcell"
