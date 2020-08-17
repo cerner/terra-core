@@ -31,19 +31,11 @@ Terra.describeViewports('List', ['medium'], () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-section-header'));
 
     Terra.it.validatesElement('ListSectionHeader');
-
-    it('Hover', () => browser.moveToObject('#test-header'));
-
-    Terra.it.matchesScreenshot('ListSubsection-Hover');
   });
 
   describe('ListSubsectionHeader Test', () => {
     before(() => browser.url('/#/raw/tests/terra-list/list/list-subsection-header'));
 
     Terra.it.validatesElement('ListSubsection');
-
-    it('Hover', () => browser.moveToObject('#test-header'));
-
-    Terra.it.matchesScreenshot('ListSubsection-Hover');
   });
 });
