@@ -106,7 +106,7 @@ const HeaderCheckMarkCell = ({
   }
 
   if (isSelectable) {
-    if (!isHidden) {
+    if (!isHidden && !isDisabled) {
       attrSpread = {
         onClick: wrappedOnClickForItem(onClick, onSelect, metaData),
         onKeyDown: wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData),

@@ -47,9 +47,6 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable 1
 exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable disabled 1`] = `
 <div
   className="header-cell"
-  data-cell-show-focus={true}
-  onBlur={[Function]}
-  onMouseDown={[Function]}
   role="columnheader"
 >
   <div
@@ -98,9 +95,6 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
 exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable with selection and disabled 1`] = `
 <div
   className="header-cell"
-  data-cell-show-focus={true}
-  onBlur={[Function]}
-  onMouseDown={[Function]}
   role="columnheader"
 >
   <div
@@ -149,9 +143,6 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
 exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable with selection, indeterminate, and disabled 1`] = `
 <div
   className="header-cell"
-  data-cell-show-focus={true}
-  onBlur={[Function]}
-  onMouseDown={[Function]}
   role="columnheader"
 >
   <div

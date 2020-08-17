@@ -8,6 +8,9 @@
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices.
 
+* Fixed
+  * Fix click interactions on Header check mark when disabled.
+
 ## 4.14.0 - (August 4, 2020)
 
 * Changed
