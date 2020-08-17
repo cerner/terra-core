@@ -15,11 +15,6 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       browser.keys('Tab');
     });
 
-    it('validates hover styling', () => {
-      browser.moveToObject('[class*=dropdown-button]');
-      Terra.validates.element('hover');
-    });
-
     it('opens and validates dropdown with click', () => {
       browser.click('[class*=dropdown-button]');
       Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });

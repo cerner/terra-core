@@ -30,11 +30,6 @@ Terra.describeViewports('Tag', ['tiny'], () => {
       expect(browser.hasFocus('#on-click')).to.be.true;
       Terra.validates.element('focus');
     });
-
-    it('hovers the tag', () => {
-      browser.moveToObject('button');
-      Terra.validates.element('hover');
-    });
   });
 });
 
