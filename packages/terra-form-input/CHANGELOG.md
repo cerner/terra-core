@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added onInput prop.
+
 ## 4.2.0 - (August 6, 2020)
 
 * Changed
