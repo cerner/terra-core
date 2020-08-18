@@ -7,8 +7,8 @@ import styles from './Divider.module.scss';
 
 const propTypes = {
   /**
-  * String to be displayed inline with the divider.
-  */
+   * String to be displayed inline with the divider.
+   */
   text: PropTypes.string,
 };
 
@@ -21,7 +21,8 @@ const Divider = (props) => {
 
   const dividerClassNames = classNames(
     cx([
-      'divider',
+      { divider: !text },
+      { 'divider-container': text },
       theme.className,
     ]),
     customProps.className,
@@ -30,8 +31,9 @@ const Divider = (props) => {
   if (!text) {
     return <hr {...customProps} className={dividerClassNames} aria-hidden="true" />;
   }
+
   return (
-    <div className={cx(['divider-container', theme.className])}>
+    <div {...customProps} className={dividerClassNames}>
       <span className={cx(['divider-text'])}>{text}</span>
     </div>
   );
