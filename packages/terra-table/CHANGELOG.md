@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed jaws to announce state change for Rows and Header checkbox.
+
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices.
 
