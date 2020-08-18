@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed 
+  * Fixed focus to stay on select when escape is pressed to close dropdown.
+  
 ## 6.14.0 - (August 6, 2020)
 
 * Fixed
