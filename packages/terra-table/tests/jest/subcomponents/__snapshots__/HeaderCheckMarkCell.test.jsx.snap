@@ -61,7 +61,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable d
       onBlur={[Function]}
       onFocus={[Function]}
       role="checkbox"
-      tabIndex="0"
+      tabIndex="-1"
     />
   </div>
 </div>
@@ -109,7 +109,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
       onBlur={[Function]}
       onFocus={[Function]}
       role="checkbox"
-      tabIndex="0"
+      tabIndex="-1"
     />
   </div>
 </div>
@@ -157,7 +157,7 @@ exports[`HeaderCheckMarkCell should render a HeaderCheckMarkCell as selectable w
       onBlur={[Function]}
       onFocus={[Function]}
       role="checkbox"
-      tabIndex="0"
+      tabIndex="-1"
     />
   </div>
 </div>

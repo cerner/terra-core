@@ -5,7 +5,6 @@ exports[`CheckMarkCell should render a CheckMarkCell 1`] = `
   aria-selected={false}
   className="cell"
   role="gridcell"
-  tabIndex="-1"
 >
   <div
     className="container"
@@ -29,7 +28,6 @@ exports[`CheckMarkCell should render a CheckMarkCell as an icon 1`] = `
   aria-selected={false}
   className="cell"
   role="gridcell"
-  tabIndex="-1"
 >
   <div
     className="container"
@@ -56,7 +54,6 @@ exports[`CheckMarkCell should render a CheckMarkCell as selectable 1`] = `
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="gridcell"
-  tabIndex="-1"
 >
   <div
     className="container"
@@ -80,7 +77,6 @@ exports[`CheckMarkCell should render a CheckMarkCell as selectable disabled 1`] 
   aria-selected={false}
   className="cell"
   role="gridcell"
-  tabIndex="-1"
 >
   <div
     className="container"
@@ -108,7 +104,6 @@ exports[`CheckMarkCell should render a CheckMarkCell as selectable with selectio
   onBlur={[Function]}
   onMouseDown={[Function]}
   role="gridcell"
-  tabIndex="-1"
 >
   <div
     className="container"
@@ -132,7 +127,6 @@ exports[`CheckMarkCell should render a CheckMarkCell as selectable with selectio
   aria-selected={true}
   className="cell"
   role="gridcell"
-  tabIndex="-1"
 >
   <div
     className="container"
@@ -157,7 +151,6 @@ exports[`CheckMarkCell should render a CheckMarkCell with alignment 1`] = `
   aria-selected={false}
   className="cell is-top-align"
   role="gridcell"
-  tabIndex="-1"
 >
   <div
     className="container"
@@ -191,7 +184,6 @@ exports[`CheckMarkCell should render with callback functions 1`] = `
   onKeyDown={[Function]}
   onMouseDown={[Function]}
   role="gridcell"
-  tabIndex="-1"
 >
   <div
     className="container"
