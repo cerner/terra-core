@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-* Changed
-  * Updated examples of solo components to not use `terra-form-field`.
+* Removed
+  * Removed the use of `terra-form-field` from doc site examples.
 
 ## 4.2.0 - (August 6, 2020)
 

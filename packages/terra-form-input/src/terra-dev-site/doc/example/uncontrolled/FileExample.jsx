@@ -2,13 +2,11 @@ import React from 'react';
 import Input from 'terra-form-input';
 
 const FileExample = () => (
-  <div>
-    <Input
-      name="file input"
-      type="file"
-      ariaLabel="File"
-    />
-  </div>
+  <Input
+    name="file input"
+    type="file"
+    ariaLabel="File"
+  />
 );
 
 export default FileExample;

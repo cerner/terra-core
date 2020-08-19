@@ -2,14 +2,12 @@ import React from 'react';
 import Input from 'terra-form-input';
 
 const DisabledExample = () => (
-  <div>
-    <Input
-      disabled
-      defaultValue="Disabled Example input – Uncontrolled"
-      name="disabled input"
-      id="uncontrolled-disabled"
-    />
-  </div>
+  <Input
+    disabled
+    defaultValue="Disabled Example input – Uncontrolled"
+    name="disabled input"
+    id="uncontrolled-disabled"
+  />
 );
 
 export default DisabledExample;
