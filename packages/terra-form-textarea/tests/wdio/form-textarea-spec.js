@@ -209,4 +209,16 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       Terra.it.validatesElement();
     });
   });
+
+  describe('Setting Value', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-textarea/form-textarea/setting-value-textarea'));
+
+    Terra.it.validatesElement('empty');
+
+    it('should not trigger onInput when programmatically setting value', () => {
+      browser.click('#textarea-set-text-button');
+    });
+
+    Terra.it.validatesElement('programmatically');
+  });
 });
