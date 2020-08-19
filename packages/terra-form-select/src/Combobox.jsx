@@ -8,7 +8,7 @@ import SelectUtil from './shared/_SelectUtil';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use placeholder text.
+   * Whether a clear option is available to clear the selection, will use **`- Select -`** as the clear option.
    */
   allowClear: PropTypes.bool,
   /**

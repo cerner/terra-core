@@ -7,7 +7,7 @@ import Option from './shared/_Option';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection.
+   * Whether a clear option is available to clear the selection, will use **`- Select -`** as the clear option.
    */
   allowClear: PropTypes.bool,
   /**
