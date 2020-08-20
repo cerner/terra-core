@@ -12,6 +12,11 @@
   * Updated default text in all variants for placeholder to be `- Select -`
   * Updated test and example to remove the use of placeholder.
 
+## 6.15.0 - (August 18, 2020)
+
+* Fixed 
+  * Fixed focus to stay on select when escape is pressed to close dropdown.
+  
 ## 6.14.0 - (August 6, 2020)
 
 * Fixed

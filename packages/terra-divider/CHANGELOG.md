@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.32.0 - (August 18, 2020)
+
+* Fixed
+  * Fixed custom props spread on the text divider
+
 ## 3.31.0 - (August 4, 2020)
 
 * Changed
