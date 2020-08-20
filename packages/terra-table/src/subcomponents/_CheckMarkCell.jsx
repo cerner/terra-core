@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './CheckMarkCell.module.scss';
 import {
   wrappedOnClickForItem,
@@ -100,15 +99,17 @@ const CheckMarkCell = ({
   ...customProps
 }) => {
   const attrSpread = { 'aria-selected': isSelected };
-  const attrCheck = {};
+  const [isFocused, setFocus] = useState(false);
+  const attrCheck = {
+    role: 'checkbox',
+    'aria-checked': isSelected,
+  };
   if ((isHidden || isIcon) && !isDisabled) {
     // A user of a screenreader still need a keyboard accessible method of selection, so providing -1 index and kydown.
     attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-    attrSpread.tabIndex = '-1';
   } else if (isSelectable && !isDisabled) {
     attrSpread.onClick = wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
-    attrSpread.tabIndex = '0';
     attrSpread['data-cell-show-focus'] = 'true';
     attrSpread.onBlur = wrappedEventCallback(onBlur, event => {
       event.stopPropagation();
@@ -134,6 +135,7 @@ const CheckMarkCell = ({
     { 'hide-cell': isHidden },
     { 'is-interactable': !isDisabled && isSelectable },
     { 'is-top-align': attrPadding },
+    { 'is-focused': isFocused && !isDisabled },
   );
 
   return (
@@ -145,10 +147,11 @@ const CheckMarkCell = ({
       role="gridcell"
     >
       <div {...attrPadding} className={cx({ container: !isHidden })}>
-        <VisuallyHiddenText aria-checked={isSelected} role="checkbox" {...attrCheck} text={label} />
         <div
-          aria-hidden
-          focusable="false"
+          {...attrCheck}
+          tabIndex={isDisabled ? '-1' : '0'}
+          aria-label={label}
+          hidden={isHidden}
           className={cx(
             'checkmark',
             { 'is-selectable': isSelectable },
@@ -156,6 +159,8 @@ const CheckMarkCell = ({
             { 'is-disabled': isDisabled },
             { 'is-hidden': isHidden },
           )}
+          onFocus={() => { setFocus(true); }}
+          onBlur={() => { setFocus(false); }}
         />
       </div>
     </div>

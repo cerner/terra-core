@@ -53,7 +53,7 @@
     border: var(--terra-table-checkmark-cell-active-border, 1px solid #3a67a4);
   }
 
-  .is-interactable[data-cell-show-focus='true']:focus {
+  .is-interactable[data-cell-show-focus='true'].is-focused {
     outline: var(--terra-table-checkmark-cell-focus-outline, 2px dashed #000);
     outline-offset: var(--terra-table-checkmark-cell-focus-outline-offset, -2px);
   }
@@ -119,11 +119,15 @@
     width: 1px;
   }
 
+  .checkmark:focus {
+    outline: none;
+  }
+
   // -----------------------
   // Delete entry after IE support is dropped. IE doesn't support outline-offset, so this mimics it.
   // -----------------------
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .is-interactable[data-cell-show-focus='true']:focus {
+    .is-interactable[data-cell-show-focus='true'].is-focused {
       outline: none;
 
       &::before {
