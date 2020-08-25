@@ -26,10 +26,10 @@ exports[`renders a banner that has basic information 1`] = `
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
-  deceasedDateLabel="Deceased"
+  deceasedDateLabel=""
   gestationalAge={Object {}}
-  gestationalAgeFullText="Gestational Age"
-  gestationalAgeLabel="GA"
+  gestationalAgeFullText=""
+  gestationalAgeLabel=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -62,27 +62,27 @@ exports[`renders a banner that has basic information 1`] = `
   isSelectable={false}
   personName="Terra Demographics Banner"
   postMenstrualAge={Object {}}
-  postMenstrualAgeFullText="Post Menstrual Age"
-  postMenstrualAgeLabel="PMA"
+  postMenstrualAgeFullText=""
+  postMenstrualAgeLabel=""
   preferredFirstName={null}
-  sexMismatchFullText="The documented sex values are not identical."
+  sexMismatchFullText=""
 />
 `;
 
 exports[`renders a blank banner properly 1`] = `
 <DemographicsBannerDisplay
   administrativeSex={Object {}}
-  administrativeSexFullText="Administrative Sex"
+  administrativeSexFullText=""
   age={Object {}}
   applicationContent={null}
   dateOfBirth={Object {}}
-  dateOfBirthFullText="Date of Birth"
-  dateOfBirthLabel="DOB"
+  dateOfBirthFullText=""
+  dateOfBirthLabel=""
   deceasedDate={Object {}}
-  deceasedDateLabel="Deceased"
+  deceasedDateLabel=""
   gestationalAge={Object {}}
-  gestationalAgeFullText="Gestational Age"
-  gestationalAgeLabel="GA"
+  gestationalAgeFullText=""
+  gestationalAgeLabel=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -115,24 +115,24 @@ exports[`renders a blank banner properly 1`] = `
   isSelectable={false}
   personName=""
   postMenstrualAge={Object {}}
-  postMenstrualAgeFullText="Post Menstrual Age"
-  postMenstrualAgeLabel="PMA"
+  postMenstrualAgeFullText=""
+  postMenstrualAgeLabel=""
   preferredFirstName={null}
-  sexMismatchFullText="The documented sex values are not identical."
+  sexMismatchFullText=""
 />
 `;
 
-exports[`renders gestational date with a default label when the label is not provided 1`] = `
+exports[`renders gestational date with a default label 1`] = `
 <DemographicsBannerDisplay
   administrativeSex={Object {}}
-  administrativeSexFullText="Administrative Sex"
+  administrativeSexFullText=""
   age={Object {}}
   applicationContent={null}
   dateOfBirth={Object {}}
-  dateOfBirthFullText="Date of Birth"
-  dateOfBirthLabel="DOB"
+  dateOfBirthFullText=""
+  dateOfBirthLabel=""
   deceasedDate={Object {}}
-  deceasedDateLabel="Deceased"
+  deceasedDateLabel=""
   gestationalAge={
     Object {
       "ariaLabel": "April 5, 2016",
@@ -173,27 +173,27 @@ exports[`renders gestational date with a default label when the label is not pro
   isSelectable={false}
   personName=""
   postMenstrualAge={Object {}}
-  postMenstrualAgeFullText="Post Menstrual Age"
-  postMenstrualAgeLabel="PMA"
+  postMenstrualAgeFullText=""
+  postMenstrualAgeLabel=""
   preferredFirstName={null}
-  sexMismatchFullText="The documented sex values are not identical."
+  sexMismatchFullText=""
 />
 `;
 
-exports[`renders post menstrural date with a default label when the label is not provided 1`] = `
+exports[`renders post menstrual date with a default label 1`] = `
 <DemographicsBannerDisplay
   administrativeSex={Object {}}
-  administrativeSexFullText="Administrative Sex"
+  administrativeSexFullText=""
   age={Object {}}
   applicationContent={null}
   dateOfBirth={Object {}}
-  dateOfBirthFullText="Date of Birth"
-  dateOfBirthLabel="DOB"
+  dateOfBirthFullText=""
+  dateOfBirthLabel=""
   deceasedDate={Object {}}
-  deceasedDateLabel="Deceased"
+  deceasedDateLabel=""
   gestationalAge={Object {}}
-  gestationalAgeFullText="Gestational Age"
-  gestationalAgeLabel="GA"
+  gestationalAgeFullText=""
+  gestationalAgeLabel=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -234,7 +234,7 @@ exports[`renders post menstrural date with a default label when the label is not
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName={null}
-  sexMismatchFullText="The documented sex values are not identical."
+  sexMismatchFullText=""
 />
 `;
 
@@ -271,8 +271,8 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
   }
   deceasedDateLabel="Deceased"
   gestationalAge={Object {}}
-  gestationalAgeFullText="Gestational Age"
-  gestationalAgeLabel="GA"
+  gestationalAgeFullText=""
+  gestationalAgeLabel=""
   intl={
     Object {
       "defaultFormats": Object {},
@@ -305,10 +305,10 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
   isSelectable={false}
   personName="Old Terra Demographics Banner"
   postMenstrualAge={Object {}}
-  postMenstrualAgeFullText="Post Menstrual Age"
-  postMenstrualAgeLabel="PMA"
+  postMenstrualAgeFullText=""
+  postMenstrualAgeLabel=""
   preferredFirstName={null}
-  sexMismatchFullText="The documented sex values are not identical."
+  sexMismatchFullText=""
 />
 `;
 
@@ -344,7 +344,7 @@ exports[`renders the banner appropriately for a person with gestational and post
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
-  deceasedDateLabel="Deceased"
+  deceasedDateLabel=""
   gestationalAge={
     Object {
       "ariaLabel": "April 5, 2016",
@@ -408,7 +408,7 @@ exports[`renders the banner appropriately for a person with gestational and post
   postMenstrualAgeFullText="Post Menstrual Age"
   postMenstrualAgeLabel="PMA"
   preferredFirstName="John"
-  sexMismatchFullText="The documented sex values are not identical."
+  sexMismatchFullText=""
 />
 `;
 
@@ -451,8 +451,8 @@ exports[`renders the banner properly for a deceased person with additional appli
   }
   deceasedDateLabel="Deceased"
   gestationalAge={Object {}}
-  gestationalAgeFullText="Gestational Age"
-  gestationalAgeLabel="GA"
+  gestationalAgeFullText=""
+  gestationalAgeLabel=""
   identifiers={
     Array [
       Object {
@@ -500,10 +500,10 @@ exports[`renders the banner properly for a deceased person with additional appli
   personName="Johnathon Doe"
   photo=""
   postMenstrualAge={Object {}}
-  postMenstrualAgeFullText="Post Menstrual Age"
-  postMenstrualAgeLabel="PMA"
+  postMenstrualAgeFullText=""
+  postMenstrualAgeLabel=""
   preferredFirstName="John"
-  sexMismatchFullText="The documented sex values are not identical."
+  sexMismatchFullText=""
 />
 `;
 
@@ -512,7 +512,7 @@ exports[`renders the banner that contains additional information 1`] = `
   administrativeSex={
     Object {
       "ariaLabel": "Male",
-      "isBirthSexMismatch": false,
+      "isBirthSexMismatch": true,
       "value": "Male",
     }
   }
@@ -539,10 +539,10 @@ exports[`renders the banner that contains additional information 1`] = `
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
-  deceasedDateLabel="Deceased"
+  deceasedDateLabel=""
   gestationalAge={Object {}}
-  gestationalAgeFullText="Gestational Age"
-  gestationalAgeLabel="GA"
+  gestationalAgeFullText=""
+  gestationalAgeLabel=""
   identifiers={
     Array [
       Object {
@@ -590,8 +590,8 @@ exports[`renders the banner that contains additional information 1`] = `
   personName="Johnathon Doe"
   photo=""
   postMenstrualAge={Object {}}
-  postMenstrualAgeFullText="Post Menstrual Age"
-  postMenstrualAgeLabel="PMA"
+  postMenstrualAgeFullText=""
+  postMenstrualAgeLabel=""
   preferredFirstName="John"
   sexMismatchFullText="The documented sex values are not identical."
 />
@@ -629,10 +629,10 @@ exports[`renders the banner with confidential icon 1`] = `
   dateOfBirthFullText="Date of Birth"
   dateOfBirthLabel="DOB"
   deceasedDate={Object {}}
-  deceasedDateLabel="Deceased"
+  deceasedDateLabel=""
   gestationalAge={Object {}}
-  gestationalAgeFullText="Gestational Age"
-  gestationalAgeLabel="GA"
+  gestationalAgeFullText=""
+  gestationalAgeLabel=""
   identifiers={
     Array [
       Object {
@@ -679,9 +679,9 @@ exports[`renders the banner with confidential icon 1`] = `
   isSelectable={false}
   personName="Johnathon Doe"
   postMenstrualAge={Object {}}
-  postMenstrualAgeFullText="Post Menstrual Age"
-  postMenstrualAgeLabel="PMA"
+  postMenstrualAgeFullText=""
+  postMenstrualAgeLabel=""
   preferredFirstName="John"
-  sexMismatchFullText="The documented sex values are not identical."
+  sexMismatchFullText=""
 />
 `;
