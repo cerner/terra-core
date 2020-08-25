@@ -1,10 +1,14 @@
 {
+  "Terra.demographicsBanner.administrativeSexFullText": "Sexo para fines administrativos",
+  "Terra.demographicsBanner.birthSexFullText": "Sexo biológico",
   "Terra.demographicsBanner.dateOfBirth": "Fecha de nacimiento",
   "Terra.demographicsBanner.dateOfBirthFullText": "Fecha de nacimiento",
   "Terra.demographicsBanner.deceased": "Fallecido/a",
+  "Terra.demographicsBanner.genderIdentity": "Identidad de género",
   "Terra.demographicsBanner.gestationalAge": "EG",
   "Terra.demographicsBanner.gestationalAgeFullText": "Edad gestacional",
   "Terra.demographicsBanner.info": "Información",
   "Terra.demographicsBanner.postMenstrualAge": "EPM",
-  "Terra.demographicsBanner.postMenstrualAgeFullText": "Edad postmenstrual"
+  "Terra.demographicsBanner.postMenstrualAgeFullText": "Edad postmenstrual",
+  "Terra.demographicsBanner.sexNotIdentical": "Los valores de sexo documentados no son idénticos."
 }

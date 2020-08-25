@@ -1,10 +1,14 @@
 {
+  "Terra.demographicsBanner.administrativeSexFullText": "Administratief geslacht",
+  "Terra.demographicsBanner.birthSexFullText": "Geslacht bij geboorte",
   "Terra.demographicsBanner.dateOfBirth": "Geboortedatum",
   "Terra.demographicsBanner.dateOfBirthFullText": "Geboortedatum",
   "Terra.demographicsBanner.deceased": "Overleden",
+  "Terra.demographicsBanner.genderIdentity": "Genderidentiteit",
   "Terra.demographicsBanner.gestationalAge": "Zwangerschapsduur",
   "Terra.demographicsBanner.gestationalAgeFullText": "Zwangerschapsduur",
   "Terra.demographicsBanner.info": "Informatie",
   "Terra.demographicsBanner.postMenstrualAge": "Postmenstruele leeftijd",
-  "Terra.demographicsBanner.postMenstrualAgeFullText": "Postmenstruele leeftijd"
+  "Terra.demographicsBanner.postMenstrualAgeFullText": "Postmenstruele leeftijd",
+  "Terra.demographicsBanner.sexNotIdentical": "De gedocumenteerde waarden voor geslacht zijn niet gelijk."
 }

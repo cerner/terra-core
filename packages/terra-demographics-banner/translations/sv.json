@@ -1,10 +1,14 @@
 {
+  "Terra.demographicsBanner.administrativeSexFullText": "Juridiskt kön",
+  "Terra.demographicsBanner.birthSexFullText": "Biologiskt kön",
   "Terra.demographicsBanner.dateOfBirth": "Födelsedatum",
   "Terra.demographicsBanner.dateOfBirthFullText": "Födelsedatum",
   "Terra.demographicsBanner.deceased": "Avliden",
+  "Terra.demographicsBanner.genderIdentity": "Könsidentitet",
   "Terra.demographicsBanner.gestationalAge": "GA",
   "Terra.demographicsBanner.gestationalAgeFullText": "Graviditetstid",
   "Terra.demographicsBanner.info": "Information",
   "Terra.demographicsBanner.postMenstrualAge": "PMA",
-  "Terra.demographicsBanner.postMenstrualAgeFullText": "Tid enligt senaste mens"
+  "Terra.demographicsBanner.postMenstrualAgeFullText": "Tid enligt senaste mens",
+  "Terra.demographicsBanner.sexNotIdentical": "De dokumenterade värdena för kön är inte identiska."
 }
