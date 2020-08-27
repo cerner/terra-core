@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Field from 'terra-form-field';
 import Input from 'terra-form-input';
 
 const DefaultIncompleteExample = () => {
@@ -13,16 +12,14 @@ const DefaultIncompleteExample = () => {
 
   return (
     <div>
-      <Field label="Default" htmlFor="default-controlled-incomplete">
-        <Input
-          name="default incomplete input"
-          id="default-controlled-incomplete"
-          value={input}
-          onChange={handleChange}
-          required
-          isIncomplete={isIncomplete}
-        />
-      </Field>
+      <Input
+        name="default incomplete input"
+        id="default-controlled-incomplete"
+        value={input}
+        onChange={handleChange}
+        required
+        isIncomplete={isIncomplete}
+      />
       <p>
         Input Provided:
         {input}
