@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
 import Textarea from '../../../Textarea';
 import styles from './common/Textarea.test.module.scss';
 
@@ -51,7 +50,9 @@ const SettingValueTextarea = () => {
         ariaLabel="label"
         refCallback={(ref) => { inputRef.current = ref; }}
       />
-      <Button text="Set textarea text" onClick={setTextClick} id="textarea-set-text-button" />
+      <button type="button" onClick={setTextClick} id="textarea-set-text-button">
+        Set textarea text
+      </button>
     </div>
   );
 };

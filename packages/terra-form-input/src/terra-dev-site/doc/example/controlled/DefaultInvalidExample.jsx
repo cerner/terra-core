@@ -1,5 +1,4 @@
 import React from 'react';
-import Field from 'terra-form-field';
 import Input from 'terra-form-input';
 
 class DefaultInvalidExample extends React.Component {
@@ -17,15 +16,13 @@ class DefaultInvalidExample extends React.Component {
   render() {
     return (
       <div>
-        <Field label="Default" htmlFor="default-controlled-invalid">
-          <Input
-            name="default error input"
-            id="default-controlled-invalid"
-            value={this.state.input}
-            onChange={this.handleChange}
-            isInvalid
-          />
-        </Field>
+        <Input
+          name="default error input"
+          id="default-controlled-invalid"
+          value={this.state.input}
+          onChange={this.handleChange}
+          isInvalid
+        />
         <p>
           Input Provided:
           {this.state.input}

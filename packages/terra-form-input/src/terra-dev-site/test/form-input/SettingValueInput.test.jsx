@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
 import Input from '../../../Input';
 import Styles from './common/Input.test.module.scss';
 
@@ -51,7 +50,9 @@ const SettingValueInput = () => {
         ariaLabel="label"
         refCallback={(ref) => { inputRef.current = ref; }}
       />
-      <Button text="Set input text" onClick={setTextClick} id="input-set-text-button" className={cx('programattic-button')} />
+      <button type="button" onClick={setTextClick} id="input-set-text-button" className={cx('programmatic-button')}>
+        Set input text
+      </button>
     </div>
   );
 };

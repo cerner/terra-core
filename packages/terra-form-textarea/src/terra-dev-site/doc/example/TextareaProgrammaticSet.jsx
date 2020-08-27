@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import Button from 'terra-button';
 import Textarea from 'terra-form-textarea';
 
 const TextareaProgrammaticSet = () => {
@@ -39,7 +38,9 @@ const TextareaProgrammaticSet = () => {
         value={text}
         refCallback={(ref) => { inputRef.current = ref; }}
       />
-      <Button text="Set textarea text" onClick={setTextClick} id="textarea-set-text-button" />
+      <button type="button" onClick={setTextClick} id="textarea-set-text-button">
+        Set textarea text
+      </button>
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import Field from 'terra-form-field';
 import Input from 'terra-form-input';
 
 class DisabledInvalidExample extends React.Component {
@@ -17,16 +16,14 @@ class DisabledInvalidExample extends React.Component {
   render() {
     return (
       <div>
-        <Field label="Disabled" htmlFor="controlled-disabled-invalid">
-          <Input
-            disabled
-            value={this.state.input}
-            name="disabled input"
-            id="controlled-disabled-invalid"
-            onChange={this.handleChange}
-            isInvalid
-          />
-        </Field>
+        <Input
+          disabled
+          value={this.state.input}
+          name="disabled input"
+          id="controlled-disabled-invalid"
+          onChange={this.handleChange}
+          isInvalid
+        />
         <p>
           Input Provided:
           {this.state.input}

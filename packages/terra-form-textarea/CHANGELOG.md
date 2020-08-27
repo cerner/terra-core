@@ -3,7 +3,10 @@
 ## Unreleased
 
 * Added
-  * Added onInput prop.
+  * Prop `onInput` - Callback for when user inputs a value.
+
+* Removed
+  * Removed the use of `terra-form-field` from doc site examples.
 
 ## 5.2.0 - (August 6, 2020)
 
