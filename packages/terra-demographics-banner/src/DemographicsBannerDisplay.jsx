@@ -162,7 +162,6 @@ const defaultProps = {
   gestationalAge: {},
   gestationalAgeLabel: '',
   gestationalAgeFullText: '',
-  identifiers: undefined,
   isActive: false,
   isConfidential: false,
   isSelectable: false,

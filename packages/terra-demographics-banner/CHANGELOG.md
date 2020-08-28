@@ -10,8 +10,6 @@
   * `gestationalAge` prop type is changed from a string to a shape.
   * `identifiers` prop type is changed from an object to an array of shapes.
   * `postMenstrualAge` prop type is changed to a shape.
-  * `age` prop type is changed to a shape.
-  * `age` prop type is changed to a shape.
 
 * Added
   * Added `administrativeSex` prop to replace the `gender` prop.

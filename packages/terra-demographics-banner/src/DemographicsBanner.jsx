@@ -117,7 +117,6 @@ const defaultProps = {
   dateOfBirth: {},
   deceasedDate: {},
   gestationalAge: {},
-  identifiers: undefined,
   isActive: false,
   isConfidential: false,
   isSelectable: false,
