@@ -50,10 +50,10 @@ const MultiSelectTable = () => {
           checkLabel: 'Multi Selection',
         },
         cells: [
-          { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
-          { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },
-          { key: 'cell-2', id: 'toggle-2', children: 'Column 2' },
-          { key: 'cell-3', id: 'toggle-3', children: 'Column 3' },
+          { key: 'cell-0', id: 'toggle-0', children: 'Name' },
+          { key: 'cell-1', id: 'toggle-1', children: 'Address' },
+          { key: 'cell-2', id: 'toggle-2', children: 'Phone  Number' },
+          { key: 'cell-3', id: 'toggle-3', children: 'Symptom' },
         ],
       }}
       bodyData={[
