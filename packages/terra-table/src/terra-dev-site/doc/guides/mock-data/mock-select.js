@@ -19,7 +19,7 @@ const mockData = [
       },
       {
         key: 'unique-0-3',
-        title: 'Cough',
+        title: 'dave.smith@gmail.com',
       },
     ],
   },
@@ -43,7 +43,7 @@ const mockData = [
       },
       {
         key: 'unique-1-3',
-        title: 'Sore Throat',
+        title: 'michael.smith@gmail.com',
       },
     ],
   },
@@ -67,7 +67,7 @@ const mockData = [
       },
       {
         key: 'unique-2-3',
-        title: 'Headache',
+        title: 'jack.smith@gmail.com',
       },
     ],
   },
@@ -91,7 +91,7 @@ const mockData = [
       },
       {
         key: 'unique-3-3',
-        title: 'Fever',
+        title: 'tom.smith@gmail.com',
       },
     ],
   },
@@ -106,7 +106,6 @@ const mockData = [
         title: 'Paul Smith',
       },
       {
-
         key: 'unique-4-1',
         title: '123 Adams Drive',
       },
@@ -116,7 +115,7 @@ const mockData = [
       },
       {
         key: 'unique-4-3',
-        title: 'Fever',
+        title: 'paul.smith@gmail.com',
       },
     ],
   },
