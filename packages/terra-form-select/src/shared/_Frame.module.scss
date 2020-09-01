@@ -232,6 +232,10 @@
     width: auto;
   }
 
+  .search-input:invalid {
+    box-shadow: none;
+  }
+
   // Hides the clear buttons in IE.
   .select ::-ms-clear {
     display: none;
