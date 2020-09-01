@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.58.0 - (September 1, 2020)
+
 * Updated
   * Updated fusion theme screenshots to fix master build
 
