@@ -12,16 +12,10 @@ const InputProgrammaticSet = () => {
   const setTextClick = () => {
     if (inputRef.current) {
       inputRef.current.value = 'IpsumLorem';
-      let customEvent;
-      if (typeof (Event) === 'function') {
-        customEvent = new Event('input', {
-          bubbles: true,
-          cancelable: false,
-        });
-      } else {
-        customEvent = document.createEvent('Event');
-        customEvent.initEvent('input', true, false);
-      }
+      const customEvent = new Event('input', {
+        bubbles: true,
+        cancelable: false,
+      });
       inputRef.current.dispatchEvent(customEvent);
     }
   };
