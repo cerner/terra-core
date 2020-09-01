@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './HeaderCheckMarkCell.module.scss';
 import {
   wrappedOnClickForItem,
@@ -99,6 +98,7 @@ const HeaderCheckMarkCell = ({
   ...customProps
 }) => {
   let attrSpread;
+  const [isFocused, setFocus] = useState(false);
   let attrCheck;
   let attrPadding;
   if (alignmentPadding) {
@@ -106,13 +106,12 @@ const HeaderCheckMarkCell = ({
   }
 
   if (isSelectable) {
-    if (!isHidden) {
+    if (!isHidden && !isDisabled) {
       attrSpread = {
         onClick: wrappedOnClickForItem(onClick, onSelect, metaData),
         onKeyDown: wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData),
         onBlur: wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-cell-show-focus', 'true')),
         onMouseDown: wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-cell-show-focus', 'false')),
-        tabIndex: '0',
         'data-cell-show-focus': true,
       };
     }
@@ -120,6 +119,7 @@ const HeaderCheckMarkCell = ({
     attrCheck = {
       role: 'checkbox',
       'aria-checked': isSelected && isIndeterminate ? 'mixed' : isSelected,
+      tabIndex: isDisabled ? '-1' : '0',
     };
     if (isDisabled) {
       attrCheck['aria-disabled'] = true;
@@ -130,6 +130,7 @@ const HeaderCheckMarkCell = ({
     'header-cell',
     { 'hide-cell': isHidden },
     { 'is-interactable': !isDisabled && isSelectable },
+    { 'is-focused': isFocused && !isDisabled },
   );
 
   return (
@@ -141,10 +142,10 @@ const HeaderCheckMarkCell = ({
       role="columnheader"
     >
       <div {...attrPadding} className={cx({ container: !isHidden })}>
-        <VisuallyHiddenText className={cx('label')} {...attrCheck} text={label} />
         <div
-          aria-hidden
-          focusable="false"
+          {...attrCheck}
+          aria-label={label}
+          hidden={isHidden}
           className={cx(
             'checkmark',
             { 'is-selected': isSelectable && isSelected },
@@ -152,6 +153,8 @@ const HeaderCheckMarkCell = ({
             { 'is-disabled': isSelectable && isDisabled },
             { 'is-hidden': isHidden },
           )}
+          onFocus={() => { setFocus(true); }}
+          onBlur={() => { setFocus(false); }}
         />
       </div>
     </div>

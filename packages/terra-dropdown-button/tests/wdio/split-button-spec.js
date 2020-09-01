@@ -21,16 +21,6 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       browser.keys('Tab');
     });
 
-    it('validates primary button hover styling', () => {
-      browser.moveToObject('[class*=split-button-primary]');
-      Terra.validates.element('primary hover');
-    });
-
-    it('validates caret button hover styling', () => {
-      browser.moveToObject('[class*=split-button-caret]');
-      Terra.validates.element('caret hover');
-    });
-
     it('validates primary button active styling', () => {
       browser.moveToObject('[class*=split-button-primary]');
       browser.buttonDown();

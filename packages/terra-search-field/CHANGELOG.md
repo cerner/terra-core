@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+* Updated
+  * Updated fusion theme screenshots to fix master build
+
+## 3.57.0 - (August 18, 2020)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.56.0 - (August 6, 2020)
 
 * Changed

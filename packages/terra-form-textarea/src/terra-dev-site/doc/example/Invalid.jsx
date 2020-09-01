@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Field from 'terra-form-field';
 import Textarea from 'terra-form-textarea';
 
 class InvalidExample extends Component {
@@ -17,15 +16,13 @@ class InvalidExample extends Component {
 
   render() {
     return (
-      <Field label="Invalid Textarea When Empty" htmlFor="invalid">
-        <Textarea
-          value={this.state.area}
-          isInvalid={this.state.area === ''}
-          onChange={this.handleAreaChange}
-          size="small"
-          id="invalid"
-        />
-      </Field>
+      <Textarea
+        value={this.state.area}
+        isInvalid={this.state.area === ''}
+        onChange={this.handleAreaChange}
+        size="small"
+        id="invalid"
+      />
     );
   }
 }

@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## 4.15.0 - (August 18, 2020)
+
+* Fixed
+  * Fixed jaws to announce state change for Rows and Header checkbox.
+  * Fix click interactions on Header check mark when disabled.
+
+* Added
+  * Added an interaction media query to apply `hover` styles only on non-touch devices.
+
 ## 4.14.0 - (August 4, 2020)
 
 * Changed
