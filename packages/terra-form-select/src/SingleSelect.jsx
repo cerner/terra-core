@@ -5,6 +5,7 @@ import Frame from './single/Frame';
 import OptGroup from './shared/_OptGroup';
 import Option from './shared/_Option';
 import SelectUtil from './shared/_SelectUtil';
+import MenuUtil from './shared/_MenuUtil';
 
 const propTypes = {
   /**
@@ -177,15 +178,10 @@ class SingleSelect extends React.Component {
     } = this.props;
 
     let selectValue;
-
-    if (!isFilterStyle || this.state.value || value) {
+    if (!isFilterStyle || (this.state.value && MenuUtil.findByValue(children, this.state.value)) || (value && MenuUtil.findByValue(children, value))) {
       selectValue = SelectUtil.value(this.props, this.state);
     } else if (children) {
-      if (children[0].props.children) {
-        selectValue = children[0].props.children[0].props.value;
-      } else {
-        selectValue = children[0].props.value;
-      }
+      selectValue = MenuUtil.findFirst(children);
     }
 
     return (

@@ -10,6 +10,7 @@ import Dropdown from '../shared/_Dropdown';
 import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import SharedUtil from '../shared/_SharedUtil';
+import MenuUtil from '../shared/_MenuUtil';
 import styles from '../shared/_Frame.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -193,13 +194,11 @@ class Frame extends React.Component {
       return (<div id={placeholderId} className={cx('placeholder')}>{intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' }) || '\xa0'}</div>);
     }
 
-    if (display) {
+    if (display && MenuUtil.findByDisplay(children, display)) {
       return (<span id={displayId}>{display}</span>);
-    } if (children) {
-      if (children[0].props.children) {
-        return (<span id={displayId}>{children[0].props.children[0].props.display}</span>);
-      }
-      return (<span id={displayId}>{children[0].props.display}</span>);
+    }
+    if (children) {
+      return (<span id={displayId}>{MenuUtil.findFirstDisplay(children)}</span>);
     }
     return null;
   }

@@ -23,7 +23,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
     Terra.it.validatesElement();
   });
 
-  describe('default should not display clear option', () => {
+  describe('Filter Style', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/filter-style'));
 
     Terra.it.validatesElement();
