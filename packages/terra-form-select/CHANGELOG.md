@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.16.0 - (September 1, 2020)
+
 * Fixed
   * Fix to remove red glow for invalid selects in firefox.
 
