@@ -31,10 +31,11 @@ const Toggle = ({
 }) => {
   const height = isOpen ? 'auto' : 0;
   let body;
+  const easing = "ease-out";
 
   if (isAnimated) {
     body = (
-      <AnimateHeight duration={250} height={height} easing="ease-out">
+      <AnimateHeight duration={250} height={height} easing={easing}>
         {children}
       </AnimateHeight>
     );
