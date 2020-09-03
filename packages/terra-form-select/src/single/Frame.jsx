@@ -190,7 +190,7 @@ class Frame extends React.Component {
       children, display, intl, isFilterStyle,
     } = this.props;
 
-    if (!isFilterStyle && !display) {
+    if (!isFilterStyle && !(display && MenuUtil.findByDisplay(children, display))) {
       return (<div id={placeholderId} className={cx('placeholder')}>{intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' }) || '\xa0'}</div>);
     }
 
