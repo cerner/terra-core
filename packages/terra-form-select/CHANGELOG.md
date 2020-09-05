@@ -12,6 +12,11 @@
   * Updated default text in all variants for placeholder to be `- Select -`
   * Updated test and example to remove the use of placeholder.
 
+## 6.16.0 - (September 1, 2020)
+
+* Fixed
+  * Fix to remove red glow for invalid selects in firefox.
+
 ## 6.15.0 - (August 18, 2020)
 
 * Fixed 
