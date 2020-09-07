@@ -209,7 +209,9 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
       Terra.it.validatesElement();
     });
   });
+});
 
+Terra.describeViewports('Form-Textarea', ['large'], () => {
   describe('Setting Value', () => {
     before(() => browser.url('/#/raw/tests/terra-form-textarea/form-textarea/setting-value-textarea'));
 
