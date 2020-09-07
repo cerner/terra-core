@@ -222,6 +222,7 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
       >
         <svg
           className="no-matching-results"
+          focusable={false}
         />
       </div>
       <p
@@ -319,6 +320,7 @@ exports[`should render a not-authorized status-view 1`] = `
       >
         <svg
           className="not-authorized"
+          focusable={false}
         />
       </div>
       <p
@@ -641,6 +643,7 @@ exports[`should render an error status-view 1`] = `
       >
         <svg
           className="error"
+          focusable={false}
         />
       </div>
       <p
