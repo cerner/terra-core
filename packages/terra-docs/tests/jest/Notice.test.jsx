@@ -16,4 +16,13 @@ describe('Placeholder', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a maintenance notice with text', () => {
+    const wrapper = shallow(
+      <Notice variant="maintenance">
+        notice text
+      </Notice>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });

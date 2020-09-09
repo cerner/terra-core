@@ -12,6 +12,10 @@ const getTitle = (variant) => {
     return 'Deprecation Notice';
   }
 
+  if (variant === 'maintenance') {
+    return 'Component in Maintenance';
+  }
+
   return 'error';
 };
 
@@ -23,7 +27,7 @@ const propTypes = {
   /**
   * The type of notice.
   */
-  variant: PropTypes.oneOf(['deprecation']),
+  variant: PropTypes.oneOf(['deprecation', 'maintenance']),
 };
 
 const defaultProps = {

@@ -23,3 +23,16 @@ exports[`Placeholder should render a deprecation notice with text 1`] = `
   </p>
 </h2>
 `;
+
+exports[`Placeholder should render a maintenance notice with text 1`] = `
+<h2
+  className="notice maintenance"
+>
+  Component in Maintenance
+  <p
+    className="paragraph"
+  >
+    notice text
+  </p>
+</h2>
+`;

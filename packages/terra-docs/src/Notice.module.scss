@@ -9,6 +9,12 @@
     color: var(--terra-docs-notice-deprecation-color, #1c1f21);
   }
 
+  .maintenance {
+    background-color: var(--terra-docs-notice-maintenance-background-color, #f6ffe7);
+    border-color: var(--terra-docs-notice-maintenance-border-color, #a5ff13);
+    color: var(--terra-docs-notice-maintenance-color, #1c1f21);
+  }
+
   .paragraph {
     display: block;
     font-size: 1rem;

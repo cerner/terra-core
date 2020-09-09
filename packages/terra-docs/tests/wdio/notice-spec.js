@@ -5,4 +5,11 @@ Terra.describeViewports('Notice', ['medium'], () => {
       Terra.validates.element();
     });
   });
+
+  describe('Maintenance notice', () => {
+    it('checks accessibility', () => {
+      browser.url('/raw/tests/terra-docs/docs/maintenance-notice');
+      Terra.validates.element();
+    });
+  });
 });
