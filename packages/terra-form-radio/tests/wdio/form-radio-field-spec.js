@@ -22,6 +22,14 @@ Terra.describeViewports('RadioField', ['tiny', 'large'], () => {
 
     Terra.it.validatesElement();
   });
+
+  describe('RadioField Long Text Legend', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/long-text-legend');
+    });
+
+    Terra.it.validatesElement();
+  });
 });
 
 Terra.describeViewports('RadioField Interactions', ['tiny'], () => {
