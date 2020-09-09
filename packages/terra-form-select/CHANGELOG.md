@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 6.16.0 - (September 1, 2020)
+
+* Fixed
+  * Fix to remove red glow for invalid selects in firefox.
+
+## 6.15.0 - (August 18, 2020)
+
+* Fixed 
+  * Fixed focus to stay on select when escape is pressed to close dropdown.
+  
 ## 6.14.0 - (August 6, 2020)
 
 * Fixed

@@ -7,17 +7,6 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
     Terra.it.validatesElement({ selector: '#neutral' });
 
-    describe('Neutral-Hovered', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-button/button/variants/neutral-button');
-        browser.moveToObject('#neutralButton');
-      });
-
-      Terra.it.validatesElement({ selector: '#neutral' });
-
-      after(() => browser.moveToObject('#root'));
-    });
-
     describe('Neutral-Keyboard Focus', () => {
       before(() => {
         browser.keys('Tab');
@@ -39,14 +28,6 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
     Terra.it.validatesElement({ selector: '#emphasis' });
 
-    describe('Emphasis-Hovered', () => {
-      before(() => browser.moveToObject('#emphasisButton'));
-
-      Terra.it.validatesElement({ selector: '#emphasis' });
-
-      after(() => browser.moveToObject('#root'));
-    });
-
     describe('Emphasis-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));
 
@@ -65,14 +46,6 @@ Terra.describeViewports('Button', ['tiny'], () => {
     before(() => browser.url('/#/raw/tests/terra-button/button/variants/ghost-button'));
 
     Terra.it.validatesElement({ selector: '#ghost' });
-
-    describe('Ghost-Hovered', () => {
-      before(() => browser.moveToObject('#ghostButton'));
-
-      Terra.it.validatesElement({ selector: '#ghost' });
-
-      after(() => browser.moveToObject('#root'));
-    });
 
     describe('Ghost-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));
@@ -93,14 +66,6 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
     Terra.it.validatesElement({ selector: '#de-emphasis' });
 
-    describe('De-emphasis-Hovered', () => {
-      before(() => browser.moveToObject('#de-emphasisButton'));
-
-      Terra.it.validatesElement({ selector: '#de-emphasis' });
-
-      after(() => browser.moveToObject('#root'));
-    });
-
     describe('De-emphasis-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));
 
@@ -120,14 +85,6 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
     Terra.it.validatesElement({ selector: '#action' });
 
-    describe('Action-Hovered', () => {
-      before(() => browser.moveToObject('#actionButton'));
-
-      Terra.it.validatesElement({ selector: '#action' });
-
-      after(() => browser.moveToObject('#root'));
-    });
-
     describe('Action-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));
 
@@ -146,14 +103,6 @@ Terra.describeViewports('Button', ['tiny'], () => {
     before(() => browser.url('/#/raw/tests/terra-button/button/variants/utility-button'));
 
     Terra.it.validatesElement({ selector: '#utility' });
-
-    describe('Utility-Hovered', () => {
-      before(() => browser.moveToObject('#utilityButton'));
-
-      Terra.it.validatesElement({ selector: '#utility' });
-
-      after(() => browser.moveToObject('#root'));
-    });
 
     describe('Utility-Keyboard Focus', () => {
       before(() => browser.keys('Tab'));

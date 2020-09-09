@@ -42,9 +42,10 @@
   .is-interactable {
     cursor: pointer;
   }
-
-  .is-interactable:hover .checkmark {
-    border: var(--terra-table-checkmark-cell-hover-border, 1px solid #2a4b77);
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+    .is-interactable:hover .checkmark {
+      border: var(--terra-table-checkmark-cell-hover-border, 1px solid #2a4b77);
+    }
   }
 
   .is-interactable:active .checkmark {
@@ -52,13 +53,15 @@
     border: var(--terra-table-checkmark-cell-active-border, 1px solid #3a67a4);
   }
 
-  .is-interactable[data-cell-show-focus='true']:focus {
+  .is-interactable[data-cell-show-focus='true'].is-focused {
     outline: var(--terra-table-checkmark-cell-focus-outline, 2px dashed #000);
     outline-offset: var(--terra-table-checkmark-cell-focus-outline-offset, -2px);
   }
 
-  .is-interactable:hover .is-selected {
-    background-color: var(--terra-table-checkmark-cell-selected-hover-background-color, #2a4b77);
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+    .is-interactable:hover .is-selected {
+      background-color: var(--terra-table-checkmark-cell-selected-hover-background-color, #2a4b77);
+    }
   }
 
   .is-interactable:active .is-selected {
@@ -116,11 +119,15 @@
     width: 1px;
   }
 
+  .checkmark:focus {
+    outline: none;
+  }
+
   // -----------------------
   // Delete entry after IE support is dropped. IE doesn't support outline-offset, so this mimics it.
   // -----------------------
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .is-interactable[data-cell-show-focus='true']:focus {
+    .is-interactable[data-cell-show-focus='true'].is-focused {
       outline: none;
 
       &::before {

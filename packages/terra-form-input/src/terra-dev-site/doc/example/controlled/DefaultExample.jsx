@@ -1,5 +1,4 @@
 import React from 'react';
-import Field from 'terra-form-field';
 import Input from 'terra-form-input';
 
 class DefaultExample extends React.Component {
@@ -17,14 +16,12 @@ class DefaultExample extends React.Component {
   render() {
     return (
       <div>
-        <Field label="Default">
-          <Input
-            name="default input"
-            value={this.state.input}
-            onChange={this.handleChange}
-            ariaLabel="Default"
-          />
-        </Field>
+        <Input
+          name="default input"
+          value={this.state.input}
+          onChange={this.handleChange}
+          ariaLabel="Default"
+        />
         <p>
           Input Provided:
           {this.state.input}
