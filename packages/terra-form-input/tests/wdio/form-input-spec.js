@@ -162,3 +162,17 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
     });
   });
 });
+
+Terra.describeViewports('Form-Input', ['large'], () => {
+  describe('Setting Value', () => {
+    before(() => browser.url('/#/raw/tests/terra-form-input/form-input/setting-value-input'));
+
+    Terra.it.validatesElement('empty');
+
+    it('should not trigger onInput when programmatically setting value', () => {
+      browser.click('#input-set-text-button');
+    });
+
+    Terra.it.validatesElement('programmatically');
+  });
+});
