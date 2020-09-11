@@ -1,5 +1,4 @@
 import React from 'react';
-import Field from 'terra-form-field';
 import Input from 'terra-form-input';
 
 class DisabledExample extends React.Component {
@@ -17,15 +16,13 @@ class DisabledExample extends React.Component {
   render() {
     return (
       <div>
-        <Field label="Disabled" htmlFor="controlled-disabled">
-          <Input
-            disabled
-            value={this.state.input}
-            name="disabled input"
-            id="controlled-disabled"
-            onChange={this.handleChange}
-          />
-        </Field>
+        <Input
+          disabled
+          value={this.state.input}
+          name="disabled input"
+          id="controlled-disabled"
+          onChange={this.handleChange}
+        />
         <p>
           Input Provided:
           {this.state.input}
