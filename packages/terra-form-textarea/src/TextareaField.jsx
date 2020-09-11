@@ -76,6 +76,10 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * Function to trigger when user inputs a value. Use when programmatically setting a value. Sends parameter {Event} event.
+   */
+  onInput: PropTypes.func,
+  /**
    * Whether or not the field is required.
    */
   required: PropTypes.bool,
@@ -107,6 +111,7 @@ const defaultProps = {
   labelAttrs: {},
   maxWidth: undefined,
   onChange: undefined,
+  onInput: undefined,
   required: false,
   showOptional: false,
   value: undefined,
@@ -132,6 +137,7 @@ const TextareaField = (props) => {
     required,
     showOptional,
     onChange,
+    onInput,
     value,
     ...customProps
   } = props;
@@ -177,6 +183,7 @@ const TextareaField = (props) => {
         id={inputId}
         isIncomplete={isIncomplete}
         onChange={onChange}
+        onInput={onInput}
         value={value}
         defaultValue={defaultValue}
         aria-describedby={ariaDescriptionIds}

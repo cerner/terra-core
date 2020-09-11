@@ -76,6 +76,10 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * Function to trigger when user inputs a value. Use when programmatically setting a value. Sends parameter {Event} event.
+   */
+  onInput: PropTypes.func,
+  /**
    * Ref callback to pass into the ref attribute of the html input element.
    */
   refCallback: PropTypes.func,
@@ -114,6 +118,7 @@ const defaultProps = {
   isLabelHidden: false,
   labelAttrs: {},
   onChange: undefined,
+  onInput: undefined,
   maxWidth: undefined,
   refCallback: undefined,
   required: false,
@@ -140,6 +145,7 @@ const InputField = (props) => {
     labelAttrs,
     maxWidth,
     onChange,
+    onInput,
     refCallback,
     required,
     showOptional,
@@ -192,6 +198,7 @@ const InputField = (props) => {
         isIncomplete={isIncomplete}
         type={inputType}
         onChange={onChange}
+        onInput={onInput}
         value={value}
         defaultValue={defaultValue}
         refCallback={refCallback}
