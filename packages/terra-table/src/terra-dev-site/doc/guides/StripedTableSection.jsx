@@ -36,9 +36,9 @@ const StripedTableSection = () => (
     dividerStyle="horizontal"
     headerData={{
       cells: [
-        { key: 'cell-0', id: 'toggle-10', children: 'Column 0' },
-        { key: 'cell-1', id: 'toggle-11', children: 'Column 1' },
-        { key: 'cell-2', id: 'toggle-12', children: 'Column 2' },
+        { key: 'cell-0', id: 'toggle-10', children: 'Cars' },
+        { key: 'cell-1', id: 'toggle-11', children: 'Flatware' },
+        { key: 'cell-2', id: 'toggle-12', children: 'Food' },
       ],
     }}
     bodyData={createSections(mockData)}
