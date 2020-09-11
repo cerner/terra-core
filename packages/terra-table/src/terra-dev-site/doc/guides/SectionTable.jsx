@@ -48,9 +48,9 @@ const SectionTable = () => {
       dividerStyle="horizontal"
       headerData={{
         cells: [
-          { key: 'cell-0', id: 'toggle-0', children: 'Column 0' },
-          { key: 'cell-1', id: 'toggle-1', children: 'Column 1' },
-          { key: 'cell-2', id: 'toggle-2', children: 'Column 2' },
+          { key: 'cell-0', id: 'toggle-0', children: 'Cars' },
+          { key: 'cell-1', id: 'toggle-1', children: 'Flatware' },
+          { key: 'cell-2', id: 'toggle-2', children: 'Food' },
         ],
       }}
       bodyData={mockData.map(section => createSection(section))}
