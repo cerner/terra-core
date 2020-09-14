@@ -28,6 +28,7 @@ const propTypes = {
 
   /**
    * Display a custom glyph. Overrides a variant's default glyph.
+   * Set `focusable=false` for svg element used as `customGlyph`.
    */
   customGlyph: PropTypes.node,
 
