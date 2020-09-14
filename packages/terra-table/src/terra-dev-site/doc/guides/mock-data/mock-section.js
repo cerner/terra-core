@@ -8,15 +8,15 @@ const mockData = [
         cells: [
           {
             key: 'unique-0-0-0',
-            title: 'Item 0-0-0',
+            title: 'Mercedes',
           },
           {
             key: 'unique-0-0-1',
-            title: 'Item 0-0-1',
+            title: 'Spoon',
           },
           {
             key: 'unique-0-0-2',
-            title: 'Item 0-0-2',
+            title: 'Chips',
           },
         ],
       },
@@ -25,15 +25,15 @@ const mockData = [
         cells: [
           {
             key: 'unique-0-1-0',
-            title: 'Item 0-1-0',
+            title: 'Audi',
           },
           {
             key: 'unique-0-1-1',
-            title: 'Item 0-1-1',
+            title: 'Forks',
           },
           {
             key: 'unique-0-1-2',
-            title: 'Item 0-1-2',
+            title: 'Cake',
           },
         ],
       },
@@ -42,15 +42,15 @@ const mockData = [
         cells: [
           {
             key: 'unique-0-2-0',
-            title: 'Item 0-2-0',
+            title: 'Toyota',
           },
           {
             key: 'unique-0-2-1',
-            title: 'Item 0-2-1',
+            title: 'Bowl',
           },
           {
             key: 'unique-0-2-2',
-            title: 'Item 0-2-2',
+            title: 'Ice Cream',
           },
         ],
       },
@@ -65,15 +65,15 @@ const mockData = [
         cells: [
           {
             key: 'unique-1-0-0',
-            title: 'Item 1-0-0',
+            title: 'BMW',
           },
           {
             key: 'unique-1-0-1',
-            title: 'Item 1-0-1',
+            title: 'Plate',
           },
           {
             key: 'unique-1-0-2',
-            title: 'Item 1-0-2',
+            title: 'Pizza',
           },
         ],
       },
@@ -82,15 +82,15 @@ const mockData = [
         cells: [
           {
             key: 'unique-1-1-0',
-            title: 'Item 1-1-0',
+            title: 'Honda',
           },
           {
             key: 'unique-1-1-1',
-            title: 'Item 1-1-1',
+            title: 'Knife',
           },
           {
             key: 'unique-1-1-2',
-            title: 'Item 1-1-2',
+            title: 'Burger',
           },
         ],
       },
@@ -99,15 +99,15 @@ const mockData = [
         cells: [
           {
             key: 'unique-1-2-0',
-            title: 'Item 1-2-0',
+            title: 'Renault',
           },
           {
             key: 'unique-1-2-1',
-            title: 'Item 1-2-1',
+            title: 'Pot',
           },
           {
             key: 'unique-1-2-2',
-            title: 'Item 1-2-2',
+            title: 'Noodles',
           },
         ],
       },

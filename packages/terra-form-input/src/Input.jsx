@@ -42,6 +42,10 @@ const propTypes = {
    */
   onFocus: PropTypes.func,
   /**
+   * Function to trigger when user inputs a value. Use when programmatically setting a value. Sends parameter {Event} event.
+   */
+  onInput: PropTypes.func,
+  /**
    * Content to be displayed as the name.
    */
   name: PropTypes.string,
@@ -84,6 +88,7 @@ const defaultProps = {
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
+  onInput: undefined,
   name: null,
   pattern: undefined,
   required: false,
@@ -102,6 +107,7 @@ class Input extends React.Component {
       onBlur,
       onChange,
       onFocus,
+      onInput,
       name,
       pattern,
       refCallback,
@@ -164,6 +170,7 @@ class Input extends React.Component {
         onBlur={onBlur}
         onChange={onChange}
         onFocus={onFocus}
+        onInput={onInput}
         disabled={disabled}
         required={required}
         className={formInputClassNames}
