@@ -823,6 +823,7 @@ exports[`should render a required field in error 1`] = `
       htmlFor="test"
     >
       <div
+        aria-hidden="true"
         className="required"
       >
         *
@@ -887,6 +888,7 @@ exports[`should render a required field label 1`] = `
       htmlFor="test"
     >
       <div
+        aria-hidden="true"
         className="required"
       >
         *
@@ -1001,6 +1003,7 @@ exports[`should render a required field with a Select 1`] = `
       htmlFor="test"
     >
       <div
+        aria-hidden="true"
         className="required"
       >
         *
@@ -1097,6 +1100,7 @@ exports[`should render a required field with a Textarea 1`] = `
       htmlFor="test"
     >
       <div
+        aria-hidden="true"
         className="required"
       >
         *
@@ -1193,6 +1197,7 @@ exports[`should render a required field with a hidden label 1`] = `
       htmlFor="test"
     >
       <div
+        aria-hidden="true"
         className="required"
       >
         *
@@ -1258,6 +1263,7 @@ exports[`should render a required field with a hidden label in error 1`] = `
       htmlFor="test"
     >
       <div
+        aria-hidden="true"
         className="required"
       >
         *
@@ -1322,6 +1328,7 @@ exports[`should render a required field with an Input 1`] = `
       htmlFor="test"
     >
       <div
+        aria-hidden="true"
         className="required"
       >
         *
@@ -1567,6 +1574,7 @@ exports[`should render an invalid and required field with a Select 1`] = `
         htmlFor="test"
       >
         <div
+          aria-hidden="true"
           className="required"
         >
           *
@@ -1712,6 +1720,7 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
         htmlFor="test"
       >
         <div
+          aria-hidden="true"
           className="required"
         >
           *
@@ -1857,6 +1866,7 @@ exports[`should render an invalid and required field with an Input 1`] = `
         htmlFor="test"
       >
         <div
+          aria-hidden="true"
           className="required"
         >
           *
