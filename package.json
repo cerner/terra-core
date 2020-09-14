@@ -22,7 +22,7 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "browserslist": [
-    "extends browserslist-config-terra"
+    "extends @cerner/browserslist-config-terra"
   ],
   "eslintConfig": {
     "extends": "@cerner/terra",
@@ -89,9 +89,9 @@
     "@babel/plugin-transform-object-assign": "^7.2.0",
     "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
+    "@cerner/browserslist-config-terra": "^3.1.0",
     "@cerner/eslint-config-terra": "^4.0.0",
     "babel-jest": "^24.8.0",
-    "browserslist-config-terra": "^1.0.0",
     "check-installed-dependencies": "^1.0.0",
     "core-js": "^3.1.3",
     "danger": "^9.1.0",
