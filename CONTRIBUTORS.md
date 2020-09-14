@@ -87,6 +87,7 @@ Cerner Corporation
 - Jeff Merten [@jeffmerten]
 - Dianna McGinn [@DMcginn]
 - Jackson Nowotny [@JacksonJN]
+- Manjuraghavendra Sathrasala [@manjusr]
 
 Community
 
@@ -200,3 +201,4 @@ Community
 [@jeffmerten]: https://github.com/jeffmerten
 [@DMcginn]: https://github.com/DMcginn
 [@JacksonJN]: https://github.com/JacksonJN
+[@manjusr]: https://github.com/manjusr
