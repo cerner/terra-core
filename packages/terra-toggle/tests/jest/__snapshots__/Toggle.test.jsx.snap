@@ -24,7 +24,7 @@ exports[`Toggle should have all props set correctly 1`] = `
     applyInlineTransitions={true}
     delay={0}
     duration={250}
-    easing="ease"
+    easing="ease-out"
     height="auto"
     style={Object {}}
   >

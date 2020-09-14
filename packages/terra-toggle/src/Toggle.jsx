@@ -34,7 +34,7 @@ const Toggle = ({
 
   if (isAnimated) {
     body = (
-      <AnimateHeight duration={250} height={height}>
+      <AnimateHeight duration={250} height={height} easing="ease-out">
         {children}
       </AnimateHeight>
     );
