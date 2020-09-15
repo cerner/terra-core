@@ -64,7 +64,7 @@ const Button = ({
       {...customProps}
       type="button"
       className={buttonClassNames}
-      onKeyDown={event => handleKeyDown(event)}
+      onKeyDown={handleKeyDown}
       onBlur={enableFocusStyles}
       onMouseDown={disableFocusStyles}
       data-focus-styles-enabled

@@ -1,7 +1,7 @@
 import React from 'react';
 import Notice from '../../src/Notice';
 
-describe('Placeholder', () => {
+describe('Notice', () => {
   // Snapshot Tests
   it('should render a default component', () => {
     const wrapper = shallow(<Notice />);

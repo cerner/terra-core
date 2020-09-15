@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../src/Button';
 
-describe('Placeholder', () => {
+describe('Button', () => {
   // Snapshot Tests
   it('should render a default component', () => {
     const wrapper = shallow(<Button />);
