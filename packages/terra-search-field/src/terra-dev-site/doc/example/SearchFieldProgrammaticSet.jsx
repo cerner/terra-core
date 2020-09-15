@@ -45,7 +45,8 @@ const SearchFieldProgrammaticSet = () => {
 
   return (
     <div>
-      <div> Minimum Search Length is 3 </div>
+      <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" />
+      <p>Minimum Search Length is 3</p>
       <SearchField
         inputRef
         id="searchfield"
@@ -57,7 +58,6 @@ const SearchFieldProgrammaticSet = () => {
         value={text}
         inputRefCallback={(ref) => { inputRef.current = ref; }}
       />
-      <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" />
       <div id="search-callback-text">
         {message}
         {searchText}
