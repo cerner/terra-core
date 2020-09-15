@@ -1,10 +1,6 @@
 import React, { useState, useRef } from 'react';
-import classNames from 'classnames/bind';
 import Button from 'terra-button/lib/Button';
 import SearchField from '../../../SearchField';
-import styles from '../../test/search-field/examplestyles.scss';
-
-const cx = classNames.bind(styles);
 
 const SearchFieldProgrammaticSet = () => {
   const [searchText, setSearchText] = useState('');
@@ -61,7 +57,7 @@ const SearchFieldProgrammaticSet = () => {
         value={text}
         inputRefCallback={(ref) => { inputRef.current = ref; }}
       />
-      <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" className={cx('programattic-button')} />
+      <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" />
       <div id="search-callback-text">
         {message}
         {searchText}

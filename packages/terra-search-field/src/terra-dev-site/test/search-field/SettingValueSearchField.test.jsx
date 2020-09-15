@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import classNames from 'classnames/bind';
 import Button from 'terra-button/lib/Button';
 import SearchField from '../../../SearchField';
 
