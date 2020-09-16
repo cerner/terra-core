@@ -100,7 +100,7 @@ const StatusView = ({
   } else if (variant && !isGlyphHidden) {
     glyphSection = (
       <div className={cx('glyph')}>
-        <svg focusable={false} className={cx(variant)} />
+        <div className={cx(variant, 'bg-common')} />
       </div>
     );
   }

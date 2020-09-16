@@ -220,9 +220,8 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
       <div
         className="glyph"
       >
-        <svg
-          className="no-matching-results"
-          focusable={false}
+        <div
+          className="no-matching-results bg-common"
         />
       </div>
       <p
@@ -318,9 +317,8 @@ exports[`should render a not-authorized status-view 1`] = `
       <div
         className="glyph"
       >
-        <svg
-          className="not-authorized"
-          focusable={false}
+        <div
+          className="not-authorized bg-common"
         />
       </div>
       <p
@@ -641,9 +639,8 @@ exports[`should render an error status-view 1`] = `
       <div
         className="glyph"
       >
-        <svg
-          className="error"
-          focusable={false}
+        <div
+          className="error bg-common"
         />
       </div>
       <p

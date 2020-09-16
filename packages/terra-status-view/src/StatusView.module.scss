@@ -46,7 +46,8 @@
   .glyph {
     padding-bottom: 0.714rem;
 
-    > svg {
+    > svg,
+    .bg-common {
       background-repeat: no-repeat;
       background-size: contain;
       display: block;
