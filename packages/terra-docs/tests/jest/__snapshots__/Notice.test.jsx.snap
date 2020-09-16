@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Placeholder should render a default component 1`] = `
+exports[`Notice should render a default component 1`] = `
 <h2
   className="notice deprecation"
 >
@@ -11,7 +11,7 @@ exports[`Placeholder should render a default component 1`] = `
 </h2>
 `;
 
-exports[`Placeholder should render a deprecation notice with text 1`] = `
+exports[`Notice should render a deprecation notice with text 1`] = `
 <h2
   className="notice deprecation"
 >
@@ -24,7 +24,7 @@ exports[`Placeholder should render a deprecation notice with text 1`] = `
 </h2>
 `;
 
-exports[`Placeholder should render a maintenance notice with text 1`] = `
+exports[`Notice should render a maintenance notice with text 1`] = `
 <h2
   className="notice maintenance"
 >

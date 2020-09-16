@@ -5,9 +5,6 @@ import ThemeContext from 'terra-theme-context';
 
 import styles from './Button.module.scss';
 
-const KEY_RETURN = 13;
-const KEY_SPACE = 32;
-
 const cx = classNames.bind(styles);
 
 /**
@@ -29,15 +26,9 @@ const propTypes = {
   * The button text.
   */
   children: PropTypes.string,
-  /**
-   * @private
-   * Callback function triggered when key is pressed.
-   */
-  onKeyDown: PropTypes.func,
 };
 
 const Button = ({
-  onKeyDown,
   children,
   ...customProps
 }) => {
@@ -51,20 +42,11 @@ const Button = ({
     customProps.className,
   );
 
-  const handleKeyDown = (event) => {
-    if (event.nativeEvent.keyCode === KEY_SPACE || event.nativeEvent.keyCode === KEY_RETURN) {
-      if (onKeyDown) {
-        onKeyDown(event);
-      }
-    }
-  };
-
   return (
     <button
       {...customProps}
       type="button"
       className={buttonClassNames}
-      onKeyDown={handleKeyDown}
       onBlur={enableFocusStyles}
       onMouseDown={disableFocusStyles}
       data-focus-styles-enabled

@@ -1,9 +1,9 @@
 Terra.describeViewports('Button', ['medium'], () => {
   describe('Default Button', () => {
-    it('checks accessibility', () => {
+    it('is valid', () => {
       browser.url('/raw/tests/terra-docs/docs/button');
       browser.moveToObject('#root', 700, 700);
-      Terra.validates.element('checks accessibility-default', { selector: '#site' });
+      Terra.validates.element('is valid-default', { selector: '#site' });
     });
 
     it('checks keyboard focus', () => {
