@@ -67,6 +67,10 @@ const propTypes = {
    */
   onFocus: PropTypes.func,
   /**
+   * Function to trigger when user inputs a value. Use when programmatically setting a value. Sends parameter {Event} event.
+   */
+  onInput: PropTypes.func,
+  /**
    * Whether the input is required or not.
    */
   required: PropTypes.bool,
@@ -104,6 +108,7 @@ const defaultProps = {
   isIncomplete: false,
   isInvalid: false,
   onChange: undefined,
+  onInput: undefined,
   required: false,
   rows: null,
   size: 'small',
@@ -193,6 +198,7 @@ class Textarea extends React.Component {
       required,
       onChange,
       onFocus,
+      onInput,
       isAutoResizable,
       isIncomplete,
       isInvalid,
@@ -263,6 +269,7 @@ class Textarea extends React.Component {
         name={name}
         onFocus={this.onFocus}
         onChange={this.onChange}
+        onInput={onInput}
         required={required}
         rows={textareaRows}
         className={textareaClasses}
