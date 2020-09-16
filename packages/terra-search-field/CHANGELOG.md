@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.59.0 - (September 16, 2020)
+
 * Fixed
   * Updated vertical-alignment with buttons
 
