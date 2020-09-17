@@ -17,7 +17,7 @@ const getTitle = (variant) => {
   }
 
   if (variant === 'deprecation') {
-    return 'Deprecation Notice';
+    return 'Deprecated';
   }
 
   if (variant === 'maintenance') {
