@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.4.0 - (September 16, 2020)
+
 * Added
   * Prop `onInput` - Callback for when user inputs a value.
 
