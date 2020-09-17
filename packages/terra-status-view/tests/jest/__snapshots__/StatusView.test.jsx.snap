@@ -221,7 +221,7 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
         className="glyph"
       >
         <div
-          className="no-matching-results bg-common"
+          className="no-matching-results glyph-icon"
         />
       </div>
       <p
@@ -318,7 +318,7 @@ exports[`should render a not-authorized status-view 1`] = `
         className="glyph"
       >
         <div
-          className="not-authorized bg-common"
+          className="not-authorized glyph-icon"
         />
       </div>
       <p
@@ -640,7 +640,7 @@ exports[`should render an error status-view 1`] = `
         className="glyph"
       >
         <div
-          className="error bg-common"
+          className="error glyph-icon"
         />
       </div>
       <p
