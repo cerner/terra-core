@@ -3,6 +3,19 @@
 @import './orion-fusion-theme/Notice.module';
 
 :local {
+
+  .best-practice {
+    background-color: var(--terra-docs-notice-best-practice-background-color, #e0e3f5);
+    border-color: var(--terra-docs-notice-best-practice-border-color, #848cd7);
+    color: var(--terra-docs-notice-best-practice-color, #1c1f21);
+  }
+
+  .caution {
+    background-color: var(--terra-docs-notice-caution-background-color, #fff9e7);
+    border-color: var(--terra-docs-notice-caution-border-color, #ffc413);
+    color: var(--terra-docs-notice-caution-color, #1c1f21);
+  }
+
   .deprecation {
     background-color: var(--terra-docs-notice-deprecation-background-color, #fff9e7);
     border-color: var(--terra-docs-notice-deprecation-border-color, #ffc413);
@@ -10,9 +23,20 @@
   }
 
   .maintenance {
-    background-color: var(--terra-docs-notice-maintenance-background-color, #e9f5e0);
-    border-color: var(--terra-docs-notice-maintenance-border-color, #a5d784);
+    background-color: var(--terra-docs-notice-maintenance-background-color, #ebf0e7);
+    border-color: var(--terra-docs-notice-maintenance-border-color, #6f706f);
     color: var(--terra-docs-notice-maintenance-color, #1c1f21);
+  }
+
+  .note {
+    background-color: var(--terra-docs-notice-note-background-color, #e9f5e0);
+    border-color: var(--terra-docs-notice-note-border-color, #a5d784);
+    color: var(--terra-docs-notice-note-color, #1c1f21);
+  }
+
+  .title {
+    font-size: 1.3rem;
+    font-weight: 600;
   }
 
   .paragraph {

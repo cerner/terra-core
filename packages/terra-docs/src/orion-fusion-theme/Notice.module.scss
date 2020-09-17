@@ -1,11 +1,23 @@
 :local {
   .orion-fusion-theme {
+    --terra-docs-notice-best-practice-background-color: #e0e3f5;
+    --terra-docs-notice-best-practice-border-color: #848cd7;
+    --terra-docs-notice-best-practice-color: #1c1f21;
+
+    --terra-docs-notice-caution-background-color: #fff9e7;
+    --terra-docs-notice-caution-border-color: #ffc413;
+    --terra-docs-notice-caution-color: #1c1f21;
+
     --terra-docs-notice-deprecation-background-color: #fff9e7;
     --terra-docs-notice-deprecation-border-color: #ffc413;
     --terra-docs-notice-deprecation-color: #1c1f21;
 
-    --terra-docs-notice-maintenance-background-color: #e9f5e0;
-    --terra-docs-notice-maintenance-border-color: #a5d784;
+    --terra-docs-notice-maintenance-background-color: #ebf0e7;
+    --terra-docs-notice-maintenance-border-color: #6f706f;
     --terra-docs-notice-maintenance-color: #1c1f21;
+
+    --terra-docs-notice-note-background-color: #e9f5e0;
+    --terra-docs-notice-note-border-color: #a5d784;
+    --terra-docs-notice-note-color: #1c1f21;
   }
 }

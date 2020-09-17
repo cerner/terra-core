@@ -8,12 +8,24 @@ import styles from './Notice.module.scss';
 const cx = classNames.bind(styles);
 
 const getTitle = (variant) => {
+  if (variant === 'best-practice') {
+    return 'Best Practice';
+  }
+
+  if (variant === 'caution') {
+    return 'Caution';
+  }
+
   if (variant === 'deprecation') {
     return 'Deprecation Notice';
   }
 
   if (variant === 'maintenance') {
-    return 'Component in Maintenance';
+    return 'In Maintenance';
+  }
+
+  if (variant === 'note') {
+    return 'Note';
   }
 
   return 'error';
@@ -21,31 +33,53 @@ const getTitle = (variant) => {
 
 const propTypes = {
   /**
+   * The aria-level attribute specifies the heading level of the notice. If no level is present, a value of 2 is the default.
+   */
+  ariaLevel: PropTypes.oneOf([
+    2,
+    3,
+    4,
+    5,
+    6,
+  ]),
+  /**
   * The main body text of the notice.
   */
   children: PropTypes.string,
   /**
   * The type of notice.
   */
-  variant: PropTypes.oneOf(['deprecation', 'maintenance']),
+  variant: PropTypes.oneOf([
+    'best-practice',
+    'caution',
+    'deprecation',
+    'maintenance',
+    'note',
+  ]),
 };
 
 const defaultProps = {
+  ariaLevel: 2,
   variant: 'deprecation',
 };
 
 const Notice = ({
+  ariaLevel,
   variant,
   children,
 }) => {
   const theme = React.useContext(ThemeContext);
   return (
-    <h2 className={cx('notice', variant, theme.className)}>
-      {getTitle(variant)}
+    <div className={cx('notice', variant, theme.className)}>
+      <div role="heading" className={cx('title')} aria-level={ariaLevel}>
+        <span>
+          {getTitle(variant)}
+        </span>
+      </div>
       <p className={cx('paragraph')}>
         {children}
       </p>
-    </h2>
+    </div>
   );
 };
 

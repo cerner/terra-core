@@ -1,5 +1,13 @@
 :local {
   .clinical-lowlight-theme {
+    --terra-docs-notice-best-practice-background-color: #483f31;
+    --terra-docs-notice-best-practice-border-color: #a36529;
+    --terra-docs-notice-best-practice-color: #b2b5b6;
+
+    --terra-docs-notice-caution-background-color: #483f31;
+    --terra-docs-notice-caution-border-color: #a36529;
+    --terra-docs-notice-caution-color: #b2b5b6;
+
     --terra-docs-notice-deprecation-background-color: #483f31;
     --terra-docs-notice-deprecation-border-color: #a36529;
     --terra-docs-notice-deprecation-color: #b2b5b6;
@@ -7,5 +15,9 @@
     --terra-docs-notice-maintenance-background-color: #223225;
     --terra-docs-notice-maintenance-border-color: #406c23;
     --terra-docs-notice-maintenance-color: #b2b5b6;
+
+    --terra-docs-notice-note-background-color: #223225;
+    --terra-docs-notice-note-border-color: #406c23;
+    --terra-docs-notice-note-color: #b2b5b6;
   }
 }

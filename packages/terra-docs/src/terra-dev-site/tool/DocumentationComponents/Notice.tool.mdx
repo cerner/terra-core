@@ -1,8 +1,11 @@
 import { Badge } from '@cerner/terra-docs/package.json?dev-site-package';
 import { Notice } from '@cerner/terra-docs';
 
+import BestPracticeNoticeVariant from '../example/BestPracticeNotice?dev-site-example';
+import CautionNoticeVariant from '../example/CautionNotice?dev-site-example';
 import DeprecationNoticeVariant from '../example/DeprecationNotice?dev-site-example';
 import MaintenanceNoticeVariant from '../example/MaintenanceNotice?dev-site-example';
+import NoteNoticeVariant from '../example/NoteNotice?dev-site-example';
 
 import PropsTable from '@cerner/terra-docs/src/Notice?dev-site-props-table';
 
@@ -10,7 +13,7 @@ import PropsTable from '@cerner/terra-docs/src/Notice?dev-site-props-table';
 
 # terra-docs Notice
 
-A documentation component intended to provide a "notice" of various types at the top of the document just after the h1 element.
+A documentation component intended to provide a "notice" of various types to be used throughout the document.
 
 ## Getting Started
 
@@ -29,10 +32,15 @@ import { Notice } from '@cerner/terra-docs';
 * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
 
 ## Examples
+<BestPracticeNoticeVariant title="Best Practice Notice Variant"/>
+
+<CautionNoticeVariant title="Caution Notice Variant"/>
 
 <DeprecationNoticeVariant title="Deprecation Notice Variant"/>
 
 <MaintenanceNoticeVariant title="Maintenance Notice Variant"/>
+
+<NoteNoticeVariant title="Note Notice Variant"/>
 
 ## Props
 
