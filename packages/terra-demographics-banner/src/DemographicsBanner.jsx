@@ -5,7 +5,7 @@ import DemographicsBannerDisplay from './DemographicsBannerDisplay';
 
 const identifierShape = {
   /**
-   * The label of the identifier: i.e.: `SSN`
+   * The label of the identifier: e.g.: `SSN`
    */
   label: PropTypes.string,
   /**
