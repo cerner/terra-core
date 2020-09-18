@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.15.0 - (September 16, 2020)
+
+* Changed
+  * Updated legend styles in `RadioField` for long text.
+
 ## 4.14.0 - (August 18, 2020)
 
 * Changed

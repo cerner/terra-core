@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.16.0 - (September 16, 2020)
+
+* Changed
+  * Updated guides with realistic data.
+
 ## 4.15.0 - (August 18, 2020)
 
 * Fixed
