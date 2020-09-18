@@ -63,7 +63,7 @@ const LargeDemographicsBannerDisplay = (props) => {
     >
       {props.photo && (
         <div className={cx('profile-photo')}>
-          {props.photo}
+          {photo}
         </div>
       )}
       <div className={cx('content')}>
