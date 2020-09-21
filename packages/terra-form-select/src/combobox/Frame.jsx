@@ -381,17 +381,14 @@ class Frame extends React.Component {
   handleKeyDown(event) {
     const { keyCode, target } = event;
 
-    if (this.state.isOpen) {
-      event.stopPropagation();
-    }
-
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
       event.preventDefault();
       this.openDropdown(event);
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
       event.preventDefault();
       this.openDropdown(event);
-    } else if (keyCode === KeyCode.KEY_ESCAPE) {
+    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
+      event.stopPropagation();
       this.closeDropdown();
     }
   }

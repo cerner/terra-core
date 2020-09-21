@@ -403,10 +403,6 @@ class Frame extends React.Component {
 
     const { keyCode, target } = event;
 
-    if (this.state.isOpen) {
-      event.stopPropagation();
-    }
-
     if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
       event.preventDefault();
       this.openDropdown(event);
@@ -425,7 +421,8 @@ class Frame extends React.Component {
       if (onDeselect) {
         onDeselect(lastOptionValue);
       }
-    } else if (keyCode === KeyCode.KEY_ESCAPE) {
+    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
+      event.stopPropagation();
       this.closeDropdown();
     }
   }
