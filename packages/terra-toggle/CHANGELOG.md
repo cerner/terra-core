@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.38.0 - (September 16, 2020)
+
 * Changed
   * Update the toggle animation from `ease` to `ease-out`
 

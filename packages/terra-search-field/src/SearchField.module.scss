@@ -8,6 +8,7 @@
   .search-field {
     display: inline-flex;
     min-width: 0;
+    vertical-align: middle;
     width: var(--terra-search-field-max-width, 16.5rem);
 
     .input-group {
