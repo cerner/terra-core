@@ -81,6 +81,12 @@ class Overlay extends React.Component {
   componentDidMount() {
     // eslint-disable-next-line no-prototype-builtins
     if (!Element.prototype.hasOwnProperty('inert')) {
+      const { head } = document;
+      if (!head.querySelector('link#inert-style')) {
+        const link = document.createElement('link');
+        link.id = 'inert-style';
+        head.appendChild(link);
+      }
       // IE10 throws an error if wicg-inert is imported too early, as wicg-inert tries to set an observer on document.body which may not exist on import
       // eslint-disable-next-line global-require
       require('wicg-inert/dist/inert');

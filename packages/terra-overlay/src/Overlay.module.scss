@@ -132,3 +132,19 @@
     }
   }
 }
+
+:global {
+  [inert] {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  [inert],
+  [inert] * {
+    /* stylelint-disable property-no-vendor-prefix */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
