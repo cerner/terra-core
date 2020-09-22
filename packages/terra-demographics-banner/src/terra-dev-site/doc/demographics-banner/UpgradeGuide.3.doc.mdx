@@ -8,9 +8,53 @@ import { Badge } from 'terra-demographics-banner/package.json?dev-site-package';
 
 ### Breaking Changes
 * Removed `gender`. Replaced by `administrativeSex`
+* `age` prop type is changed to a shape.
+* `dateOfBirth` prop type is changed from a string to a shape.
+* `deceasedDate` prop type is changed from a string to a shape.
+* `gestationalAge` prop type is changed from a string to a shape.
+* `identifiers` prop type is changed from an object to an array of shapes.
+* `postMenstrualAge` prop type is changed to a shape.
 
 ### New props
 * Added `administrativeSex`
+* Added `isConfidential`
+
+### Changes to CSS Custom Properties
+#### Added
+* --terra-demographics-banner-active-background-color
+* --terra-demographics-banner-active-color
+* --terra-demographics-banner-background-tile-background-color
+* --terra-demographics-banner-background-tile-background-image
+* --terra-demographics-banner-background-tile-box-shadow
+* --terra-demographics-banner-background-tile-padding
+* --terra-demographics-banner-deceased-active-background-color
+* --terra-demographics-banner-deceased-hover-background-color
+* --terra-demographics-banner-deceased-hover-color
+* --terra-demographics-banner-deceased-info-tile-container-box-shadow
+* --terra-demographics-banner-deceased-selectable-tile-box-shadow
+* --terra-demographics-banner-focus-box-shadow
+* --terra-demographics-banner-focus-outline
+* --terra-demographics-banner-focus-outline-offset
+* --terra-demographics-banner-hover-background-color
+* --terra-demographics-banner-hover-color
+* --terra-demographics-banner-info-icon-active-background-image
+* --terra-demographics-banner-info-icon-background-image
+* --terra-demographics-banner-info-icon-height
+* --terra-demographics-banner-info-icon-hover-background-image
+* --terra-demographics-banner-info-icon-margin-top
+* --terra-demographics-banner-info-icon-width
+* --terra-demographics-banner-info-tile-container-box-shadow
+* --terra-demographics-banner-info-tile-margin
+* --terra-demographics-banner-info-tile-padding
+* --terra-demographics-banner-selectable-tile-border-radius
+* --terra-demographics-banner-selectable-tile-box-shadow
+* --terra-demographics-banner-sex-mismatch-icon-active-background-image
+* --terra-demographics-banner-sex-mismatch-icon-background-image
+* --terra-demographics-banner-sex-mismatch-icon-height
+* --terra-demographics-banner-sex-mismatch-icon-hover-background-image
+* --terra-demographics-banner-sex-mismatch-icon-margin-right
+* --terra-demographics-banner-sex-mismatch-icon-margin-top
+* --terra-demographics-banner-sex-mismatch-icon-width
 
 ## Changes from version 2 to version 3
 

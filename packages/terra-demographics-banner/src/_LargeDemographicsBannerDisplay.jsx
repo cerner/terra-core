@@ -101,7 +101,7 @@ const LargeDemographicsBannerDisplay = (props) => {
           role="button"
           aria-label={personName || intl.formatMessage({ id: 'Terra.demographicsBanner.info' })}
           className={cx('info-tile-container')}
-          tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
+          tabIndex={0}
           ref={infoTile}
           onMouseDown={handleInfoTileMouseDown}
           onBlur={handleInfoTileBlur}
