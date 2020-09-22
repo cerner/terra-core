@@ -28,6 +28,7 @@ const propTypes = {
 
   /**
    * Display a custom glyph. Overrides a variant's default glyph.
+   * Set `focusable=false` for svg element used as `customGlyph`.
    */
   customGlyph: PropTypes.node,
 
@@ -99,7 +100,7 @@ const StatusView = ({
   } else if (variant && !isGlyphHidden) {
     glyphSection = (
       <div className={cx('glyph')}>
-        <svg className={cx(variant)} />
+        <div className={cx(variant, 'glyph-icon')} />
       </div>
     );
   }
