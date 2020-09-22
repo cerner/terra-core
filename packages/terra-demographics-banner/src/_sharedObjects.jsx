@@ -166,7 +166,6 @@ const infoTile = (props) => {
 
   return (
     <div className={cx('info-tile')}>
-      <VisuallyHiddenText text={props.personName} />
       <span className={cx('info-text')} aria-hidden="true">{infoText}</span>
       <span className={cx('info-icon')} />
     </div>

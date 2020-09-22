@@ -9,33 +9,33 @@ const identifierShape = {
    */
   label: PropTypes.string,
   /**
-   * The value to display for the identifier. i.e.: `111-22-3333`
+   * The value to display for the identifier. e.g.: `111-22-3333`
    */
   value: PropTypes.string,
   /**
-   * The aria-label for the identifier. i.e.: `Social Security Number 1 1 1 2 2 3 3 3 3`
+   * The aria-label for the identifier. e.g.: `Social Security Number 1 1 1 2 2 3 3 3 3`
    */
   ariaLabel: PropTypes.string,
 };
 
 const stringShape = {
   /**
-   * The value to display. i.e.: `03/15/2020`
+   * The value to display. e.g.: `03/15/2020`
    */
   value: PropTypes.string,
   /**
-   * The aria-label for the value. i.e.: `March 15th, 2020`
+   * The aria-label for the value. e.g.: `March 15th, 2020`
    */
   ariaLabel: PropTypes.string,
 };
 
 const administrativeSexShape = {
   /**
-   * The sex to display. i.e.: `M`
+   * The sex to display. e.g.: `M`
    */
   value: PropTypes.string,
   /**
-   * The aria-label for the sex. i.e.: `Male`
+   * The aria-label for the sex. e.g.: `Male`
    */
   ariaLabel: PropTypes.string,
   /**

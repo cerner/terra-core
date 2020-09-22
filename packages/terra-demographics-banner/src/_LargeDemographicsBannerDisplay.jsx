@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useRef } from 'react';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -40,6 +40,15 @@ const LargeDemographicsBannerDisplay = (props) => {
   } = props;
 
   const theme = React.useContext(ThemeContext);
+  const infoTile = useRef(null);
+
+  const handleInfoTileMouseDown = () => {
+    infoTile.current.setAttribute('data-focus-styles-enabled', 'false');
+  };
+
+  const handleInfoTileBlur = () => {
+    infoTile.current.setAttribute('data-focus-styles-enabled', 'true');
+  };
 
   const mainClasses = classNames(
     cx(
@@ -61,7 +70,7 @@ const LargeDemographicsBannerDisplay = (props) => {
       className={mainClasses}
       tabIndex={-1}
     >
-      {props.photo && (
+      {photo && (
         <div className={cx('profile-photo')}>
           {photo}
         </div>
@@ -88,8 +97,14 @@ const LargeDemographicsBannerDisplay = (props) => {
       </div>
       {isSelectable && (
         <div
+          data-focus-styles-enabled
+          role="button"
+          aria-label={personName || intl.formatMessage({ id: 'Terra.demographicsBanner.info' })}
           className={cx('info-tile-container')}
           tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
+          ref={infoTile}
+          onMouseDown={handleInfoTileMouseDown}
+          onBlur={handleInfoTileBlur}
         >
           {DemographicsBannerUtils.infoTile(props)}
         </div>

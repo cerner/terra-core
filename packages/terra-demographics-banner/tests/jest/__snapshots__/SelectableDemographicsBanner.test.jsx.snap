@@ -5,11 +5,9 @@ exports[`renders a blank banner wrapper 1`] = `
   isDeceased={false}
 >
   <SelectableTile
-    onBlur={[Function]}
-    onClick={[Function]}
+    onClick={[MockFunction]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    onMouseDown={[Function]}
   >
     <InjectIntl(DemographicsBanner)
       administrativeSex={Object {}}
@@ -36,11 +34,22 @@ exports[`renders the banner wrapper with all props 1`] = `
   isDeceased={true}
 >
   <SelectableTile
-    onBlur={[Function]}
-    onClick={[Function]}
+    onClick={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    onMouseDown={[Function]}
+    onMouseDown={[MockFunction]}
   >
     <InjectIntl(DemographicsBanner)
       administrativeSex={
