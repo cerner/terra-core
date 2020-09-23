@@ -17,6 +17,7 @@
   }
 
   .legend-group {
+    display: inline-block;
     font-size: var(--terra-form-checkbox-field-label-font-size, 1rem);
     line-height: 1.29;
     margin-bottom: var(--terra-form-checkbox-field-label-margin-bottom, 0.357em);
