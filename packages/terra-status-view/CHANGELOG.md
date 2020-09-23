@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.35.0 - (September 22, 2020)
+
+* Fixed
+  * Removed focus from glyphs in IE10 .
+
 ## 4.34.0 - (August 18, 2020)
 
 * Changed
