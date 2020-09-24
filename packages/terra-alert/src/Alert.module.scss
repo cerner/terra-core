@@ -69,6 +69,8 @@
 
   .title {
     display: var(--terra-alert-title-display);
+    // The following line is necessary for browsers that don't support Flexbox.
+    float: var(--terra-alert-title-float, left);
     margin-bottom: var(--terra-alert-title-margin-bottom);
     margin-right: var(--terra-alert-title-margin-right, 0.5833rem);
   }
