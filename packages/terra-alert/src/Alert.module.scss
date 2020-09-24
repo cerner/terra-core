@@ -55,6 +55,7 @@
   }
 
   .section {
+    display: flex;
     flex: 1;
     margin-bottom: 0;
     margin-top: 0;
@@ -68,7 +69,6 @@
 
   .title {
     display: var(--terra-alert-title-display);
-    float: var(--terra-alert-title-float, left);
     margin-bottom: var(--terra-alert-title-margin-bottom);
     margin-right: var(--terra-alert-title-margin-right, 0.5833rem);
   }
