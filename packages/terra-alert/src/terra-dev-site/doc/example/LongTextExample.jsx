@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 const LongTextExample = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const previewText = "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.";
+  const previewText = 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.';
 
   return (
     <Alert type="info" title="Gettysburg Address:">
