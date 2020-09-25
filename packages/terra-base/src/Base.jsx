@@ -26,10 +26,14 @@ const propTypes = {
    */
   strictMode: PropTypes.bool,
   /**
-   * The component(s) that will be wrapped by `<Base />` ONLY
-   * in the event that translations have not been loaded yet.
-   * NOTE: Absolutely no locale-dependent logic should be
-   * utilized in this placeholder.
+   * Whether or not the error should be thrown if something goes wrong. When false, the error will be logged to the
+   * console an error. This can be used when an ErrorBoundary is provided around terra-base to prevent app crashes.
+  * NOTE: Absolutely no locale-dependent logic should be utilized in the ErrorBoundary wrapping it.
+   */
+  throwOnI18nLoadError: PropTypes.bool,
+  /**
+   * The component(s) that will be wrapped by `<Base />` ONLY in the event that translations have not been loaded yet.
+   * NOTE: Absolutely no locale-dependent logic should be utilized in this placeholder.
    */
   translationsLoadingPlaceholder: PropTypes.node,
 };
@@ -37,6 +41,7 @@ const propTypes = {
 const defaultProps = {
   customMessages: {},
   strictMode: false,
+  throwOnI18nLoadError: false,
 };
 
 class Base extends React.Component {
@@ -54,8 +59,12 @@ class Base extends React.Component {
       try {
         i18nLoader(this.props.locale, this.setState, this);
       } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error(e);
+        if (this.props.throwOnI18nLoadError) {
+          throw e;
+        } else {
+          // eslint-disable-next-line no-console
+          console.error(e);
+        }
       }
     }
   }
@@ -65,8 +74,12 @@ class Base extends React.Component {
       try {
         i18nLoader(this.props.locale, this.setState, this);
       } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error(e);
+        if (this.props.throwOnI18nLoadError) {
+          throw e;
+        } else {
+          // eslint-disable-next-line no-console
+          console.error(e);
+        }
       }
     }
   }

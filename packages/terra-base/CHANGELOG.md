@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added `throwOnI18nLoadError` prop to opt into throwing the error when i18n data fails to load instead of logging the error to the console
+
 ## 5.39.0 - (August 4, 2020)
 
 * Changed
