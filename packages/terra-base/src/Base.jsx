@@ -28,7 +28,7 @@ const propTypes = {
   /**
    * Whether or not the error should be thrown if something goes wrong. When false, the error will be logged to the
    * console an error. This can be used when an ErrorBoundary is provided around terra-base to prevent app crashes.
-  * NOTE: Absolutely no locale-dependent logic should be utilized in the ErrorBoundary wrapping it.
+   * NOTE: Absolutely no locale-dependent logic should be utilized in the ErrorBoundary wrapping it.
    */
   throwOnI18nLoadError: PropTypes.bool,
   /**
