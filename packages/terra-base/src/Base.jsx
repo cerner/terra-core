@@ -26,9 +26,8 @@ const propTypes = {
    */
   strictMode: PropTypes.bool,
   /**
-   * Whether or not the error should be thrown if something goes wrong. When false, the error will be logged to the
-   * console an error. This can be used when an ErrorBoundary is provided around terra-base to prevent app crashes.
-   * NOTE: Absolutely no locale-dependent logic should be utilized in the ErrorBoundary wrapping it.
+   * Whether or not the error should be logged and thrown if something goes wrong. When false, the error will only be logged to the
+   * console an error.
    */
   throwOnI18nLoadError: PropTypes.bool,
   /**
@@ -59,11 +58,11 @@ class Base extends React.Component {
       try {
         i18nLoader(this.props.locale, this.setState, this);
       } catch (e) {
+        // eslint-disable-next-line no-console
+        console.error(e);
+
         if (this.props.throwOnI18nLoadError) {
           throw e;
-        } else {
-          // eslint-disable-next-line no-console
-          console.error(e);
         }
       }
     }
@@ -74,11 +73,11 @@ class Base extends React.Component {
       try {
         i18nLoader(this.props.locale, this.setState, this);
       } catch (e) {
+        // eslint-disable-next-line no-console
+        console.error(e);
+
         if (this.props.throwOnI18nLoadError) {
           throw e;
-        } else {
-          // eslint-disable-next-line no-console
-          console.error(e);
         }
       }
     }

@@ -70,6 +70,6 @@ describe('base handles i18n data loading', () => {
     expect(() => shallow(<Base locale="en" throwOnI18nLoadError>String</Base>)).toThrowError();
     expect(terraI18n.i18nLoader).toHaveBeenCalled();
     // eslint-disable-next-line no-console
-    expect(console.error).not.toHaveBeenCalled();
+    expect(console.error).toHaveBeenCalled();
   });
 });
