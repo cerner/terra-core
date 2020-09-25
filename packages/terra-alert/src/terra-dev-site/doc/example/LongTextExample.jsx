@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import ShowHide from 'terra-show-hide';
 import Alert from 'terra-alert';
-import classNames from 'classnames';
-import classNamesBind from 'classnames/bind';
+import classNames from 'classnames/bind';
 
 import styles from './LongTextExample.module.scss';
 
-const cx = classNamesBind.bind(styles);
+const cx = classNames.bind(styles);
 
 const LongTextExample = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,12 +15,13 @@ const LongTextExample = () => {
     <Alert type="info" title="Gettysburg Address:">
       <ShowHide
         preview={previewText}
-        isOpen={isOpen} 
+        isOpen={isOpen}
         onChange={() => {
           setIsOpen(!isOpen);
         }}
         className={cx('long-text-example')}
       >
+        <p>{previewText}</p>
         <p>
           Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
         </p>
