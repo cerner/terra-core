@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Disable the regex cached maintained by the Intl Polyfill that can result in regex syntax errors.
+
 ## 4.32.0 - (August 4, 2020)
 
 * Changed
