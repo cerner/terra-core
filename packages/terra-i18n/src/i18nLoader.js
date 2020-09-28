@@ -30,6 +30,16 @@ export default (locale, callback, scope) => {
   }
 
   if (global.IntlPolyfill) {
+    /**
+     * Intl polyfill attempts to cache and restore static RegExp properties before executing any regular expressions in order
+     * to comply with ECMA-402. There are times this results in regex syntax error so we are disabling this feature.
+     * 
+     * Reference: https://github.com/andyearnshaw/Intl.js#regexp-cache--restore
+     */
+    if (Intl.__disableRegExpRestore && typeof Intl.__disableRegExpRestore === 'function') {
+      Intl.__disableRegExpRestore(); 
+     }
+
     loadIntl(locale);
   }
 
