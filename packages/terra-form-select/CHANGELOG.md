@@ -5,6 +5,9 @@
 * Fixed
   * Fix to prevent modal from closing on pressing escape to close select.
 
+* Changed
+  * Updated jest snapshots due to changes in form-field.
+
 ## 6.16.0 - (September 1, 2020)
 
 * Fixed
