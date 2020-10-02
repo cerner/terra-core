@@ -1,5 +1,3 @@
-@import '~terra-mixins/lib/Mixins';
-
 :local {
   .clinical-lowlight-theme {
     --terra-docs-notice-best-practice-background-color: #1c2e39;
@@ -14,6 +12,7 @@
 
     --terra-docs-notice-deprecation-background-color: #3d3c31;
     --terra-docs-notice-deprecation-border-color: #70593f;
+    --terra-docs-notice-deprecation-accessory-background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDggNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2IyYjViNiIgZD0iTTI1LjMgMjUuOWwtNS4yLTUuMnYtOC41Yy4xLS43LS40LTEuMy0xLTEuNC0uNy0uMS0xLjMuNC0xLjQgMVYyMWMwIC41LjIuOS41IDEuMmw1LjMgNS4zYy41LjUgMS4yLjYgMS44LjIuNS0uNC42LTEuMS4zLTEuNi0uMSAwLS4yLS4xLS4zLS4yem03LjItMTVsMS43LTEuN2MuNi0uNi42LTEuNyAwLTIuM2wtMS4xLTEuMWMtLjYtLjYtMS43LS42LTIuMyAwTDI5IDcuNmMtMS41LTEuMS0zLjMtMi01LjEtMi42LS45LS4zLTEuOC0uNS0yLjctLjZWMS42YzAtLjktLjctMS42LTEuNi0xLjZoLTEuNWMtLjkgMC0xLjYuNy0xLjYgMS42djIuN0M3LjIgNS43LjkgMTQuNCAyLjMgMjMuNyAzLjYgMzIgMTAuNyAzOC4xIDE5IDM4LjFjMSAwIDEuOS0uMSAyLjktLjNsLTEuNC0xLjRjLS4yLS4yLS40LS41LS41LS44LS4zIDAtLjcuMS0xIC4xLTguMSAwLTE0LjYtNi41LTE0LjYtMTQuNlMxMC45IDYuNSAxOSA2LjVjMS41IDAgMi45LjIgNC4zLjcgNS45IDEuOCA5LjkgNy4xIDEwLjIgMTMuMi43LS41IDEuNi0uNiAyLjQtLjItLjItMy40LTEuNC02LjYtMy40LTkuM3oiPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZiMTY2IiBkPSJNMzQuOSAyMS44Yy0uMyAwLS42LjEtLjguM2wtMTIgMTJjLS41LjQtLjUgMS4yLS4xIDEuNiAwIDAgMCAuMS4xLjFMMzQgNDcuNmMuNS40IDEuMS40IDEuNiAwbDExLjktMTEuOWMuNS0uNC41LTEuMi4xLTEuNiAwIDAgMC0uMS0uMS0uMUwzNS43IDIyLjJjLS4yLS4yLS41LS40LS44LS40eiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMxQzFGMjEiIGQ9Ik0zNC45IDIyLjlsMTIgMTEuOXYuMkwzNSA0Ni45aC0uMkwyMi45IDM1di0uMmwxMS45LTExLjloLjFtMC0xLjFjLS4zIDAtLjYuMS0uOC4zbC0xMiAxMmMtLjUuNC0uNSAxLjItLjEgMS42IDAgMCAwIC4xLjEuMUwzNCA0Ny42Yy41LjQgMS4xLjQgMS42IDBsMTEuOS0xMS45Yy41LS40LjUtMS4yLjEtMS42IDAgMCAwLS4xLS4xLS4xTDM1LjcgMjIuMmMtLjItLjItLjUtLjQtLjgtLjR6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzFDMUYyMSIgZD0iTTM0IDM5aDJ2MmgtMnYtMnptMC0xMWgydjloLTJ2LTl6Ij48L3BhdGg+PC9zdmc+");
     --terra-docs-notice-deprecation-accessory-height: 2.14285rem;
     --terra-docs-notice-deprecation-accessory-width: 2.14285rem;
     --terra-docs-notice-deprecation-title-color: #b2b5b6;
@@ -22,6 +21,7 @@
 
     --terra-docs-notice-maintenance-background-color: #30373b;
     --terra-docs-notice-maintenance-border-color: #565c60;
+    --terra-docs-notice-maintenance-accessory-background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDggNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2IyYjViNiIgZD0iTTMxLjEgMzEuNGExLjUxIDEuNTEgMCAxMS0yLjEgMi4xbC02LjEtNi4xYTMgMyAwIDAxLS41LS43LjMxLjMxIDAgMDAtLjEtLjJjMC0uMS0uMS0uMy0uMS0uNFYxNS4zYTEuNjkgMS42OSAwIDAxMS41LTEuOCAxLjY5IDEuNjkgMCAwMTEuNSAxLjh2MTAuM3ptMTQuMy00LjhhMjEuMjYgMjEuMjYgMCAwMS00LjYgMTMuM0EyMS40MiAyMS40MiAwIDExMjAuOSA1LjRWMmEyIDIgMCAwMTItMmgyYTIgMiAwIDAxMiAydjMuNGExOC42MyAxOC42MyAwIDAxMy40LjcgMjQuMjUgMjQuMjUgMCAwMTYuNCAzLjNsMi4yLTIuMmEyLjA1IDIuMDUgMCAwMTIuOSAwbDEuNCAxLjRhMi4wNSAyLjA1IDAgMDEwIDIuOWwtMi4xIDIuMWEyMiAyMiAwIDAxNC4zIDEzem0tMyAwQTE4LjM0IDE4LjM0IDAgMDAyOS41IDlhMjAuMzIgMjAuMzIgMCAwMC01LjUtLjhBMTguNCAxOC40IDAgMTAzOC40IDM4YTE4LjE2IDE4LjE2IDAgMDA0LTExLjR6Ij48L3BhdGg+PC9zdmc+");
     --terra-docs-notice-maintenance-accessory-height: 1.71428rem;
     --terra-docs-notice-maintenance-accessory-width: 1.71428rem;
     --terra-docs-notice-maintenance-title-color: #b2b5b6;
@@ -36,8 +36,5 @@
     --terra-docs-notice-paragraph-color: #b2b5b6;
     --terra-docs-notice-accessory-vertical-align: -0.15rem;
     --terra-docs-notice-accessory-ms-vertical-align: -0.15rem;
-
-    @include terra-inline-svg-var('--terra-docs-notice-deprecation-accessory-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path color="#b2b5b6" d="M25.3 25.9l-5.2-5.2v-8.5c.1-.7-.4-1.3-1-1.4-.7-.1-1.3.4-1.4 1V21c0 .5.2.9.5 1.2l5.3 5.3c.5.5 1.2.6 1.8.2.5-.4.6-1.1.3-1.6-.1 0-.2-.1-.3-.2zm7.2-15l1.7-1.7c.6-.6.6-1.7 0-2.3l-1.1-1.1c-.6-.6-1.7-.6-2.3 0L29 7.6c-1.5-1.1-3.3-2-5.1-2.6-.9-.3-1.8-.5-2.7-.6V1.6c0-.9-.7-1.6-1.6-1.6h-1.5c-.9 0-1.6.7-1.6 1.6v2.7C7.2 5.7.9 14.4 2.3 23.7 3.6 32 10.7 38.1 19 38.1c1 0 1.9-.1 2.9-.3l-1.4-1.4c-.2-.2-.4-.5-.5-.8-.3 0-.7.1-1 .1-8.1 0-14.6-6.5-14.6-14.6S10.9 6.5 19 6.5c1.5 0 2.9.2 4.3.7 5.9 1.8 9.9 7.1 10.2 13.2.7-.5 1.6-.6 2.4-.2-.2-3.4-1.4-6.6-3.4-9.3z"></path><path fill="#ffb166" d="M34.9 21.8c-.3 0-.6.1-.8.3l-12 12c-.5.4-.5 1.2-.1 1.6 0 0 0 .1.1.1L34 47.6c.5.4 1.1.4 1.6 0l11.9-11.9c.5-.4.5-1.2.1-1.6 0 0 0-.1-.1-.1L35.7 22.2c-.2-.2-.5-.4-.8-.4z"></path><path fill="#1C1F21" d="M34.9 22.9l12 11.9v.2L35 46.9h-.2L22.9 35v-.2l11.9-11.9h.1m0-1.1c-.3 0-.6.1-.8.3l-12 12c-.5.4-.5 1.2-.1 1.6 0 0 0 .1.1.1L34 47.6c.5.4 1.1.4 1.6 0l11.9-11.9c.5-.4.5-1.2.1-1.6 0 0 0-.1-.1-.1L35.7 22.2c-.2-.2-.5-.4-.8-.4z"></path><path fill="#1C1F21" d="M34 39h2v2h-2v-2zm0-11h2v9h-2v-9z"></path></svg>');
-    @include terra-inline-svg-var('--terra-docs-notice-maintenance-accessory-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path color="#b2b5b6" d="M31.1 31.4a1.51 1.51 0 11-2.1 2.1l-6.1-6.1a3 3 0 01-.5-.7.31.31 0 00-.1-.2c0-.1-.1-.3-.1-.4V15.3a1.69 1.69 0 011.5-1.8 1.69 1.69 0 011.5 1.8v10.3zm14.3-4.8a21.26 21.26 0 01-4.6 13.3A21.42 21.42 0 1120.9 5.4V2a2 2 0 012-2h2a2 2 0 012 2v3.4a18.63 18.63 0 013.4.7 24.25 24.25 0 016.4 3.3l2.2-2.2a2.05 2.05 0 012.9 0l1.4 1.4a2.05 2.05 0 010 2.9l-2.1 2.1a22 22 0 014.3 13zm-3 0A18.34 18.34 0 0029.5 9a20.32 20.32 0 00-5.5-.8A18.4 18.4 0 1038.4 38a18.16 18.16 0 004-11.4z"></path></svg>');
   }
 }
