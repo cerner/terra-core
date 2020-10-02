@@ -5,7 +5,6 @@
 @import './orion-fusion-theme/Notice.module';
 
 :local {
-
   .best-practice {
     background-color: var(--terra-docs-notice-best-practice-background-color, #ebf6fd);
     border-color: var(--terra-docs-notice-best-practice-border-color, #d0eaf9);
@@ -13,6 +12,7 @@
     .title {
       color: var(--terra-docs-notice-best-practice-title-color, #00538e);
 
+      /* stylelint-disable-next-line selector-max-compound-selectors */
       > span {
         border-color: var(--terra-docs-notice-best-practice-title-border-color, #7fc8ef);
       }
@@ -26,6 +26,7 @@
     .title {
       color: var(--terra-docs-notice-caution-title-color, #3d4243);
 
+      /* stylelint-disable-next-line selector-max-compound-selectors */
       > span {
         border-color: var(--terra-docs-notice-caution-title-border-color, #ffc20a);
       }
@@ -46,6 +47,7 @@
       color: var(--terra-docs-notice-deprecation-title-color, #3d4243);
       margin-left: var(--terra-docs-notice-deprecation-title-margin-left, 2.42857rem);
 
+      /* stylelint-disable-next-line selector-max-compound-selectors */
       > span {
         border-color: var(--terra-docs-notice-deprecation-title-border-color, #ffc413);
       }
@@ -66,6 +68,7 @@
       color: var(--terra-docs-notice-maintenance-title-color, #343b3f);
       margin-left: var(--terra-docs-notice-maintenance-title-margin-left, 2.14285rem);
 
+      /* stylelint-disable-next-line selector-max-compound-selectors */
       > span {
         border-color: var(--terra-docs-notice-maintenance-title-border-color, #adb8be);
       }
@@ -79,15 +82,16 @@
     .title {
       color: var(--terra-docs-notice-note-title-color, #2a4a04);
 
+      /* stylelint-disable-next-line selector-max-compound-selectors */
       > span {
         border-color: var(--terra-docs-notice-note-title-border-color, #a5d784);
-      } 
+      }
     }
   }
 
   .accessory {
-    background-repeat: no-repeat;
     background-position: 0 0;
+    background-repeat: no-repeat;
     background-size: auto;
     float: left;
     height: 0;
@@ -96,7 +100,7 @@
     width: 0;
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       vertical-align: var(--terra-docs-notice-accessory-ms-vertical-align, -0.15rem);
-    } 
+    }
   }
 
   .title {
@@ -109,7 +113,7 @@
 
     > span {
       border-style: solid;
-      border-width: 0 0 2px 0;
+      border-width: 0 0 2px;
       display: inline-block;
       margin-bottom: 0.57142rem;
       padding-bottom: 0.28571rem;
@@ -117,29 +121,33 @@
     }
   }
 
-  .paragraph {
-    color: var(--terra-docs-notice-paragraph-color, #343b3f);
-    display: block;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.42857rem;
-    margin-block-end: 0;
-    margin-block-start: 0.5rem;
-    margin-inline-end: 0.714285rem;
-    margin-inline-start: 0.07142rem;
-  }
-
   .notice {
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
     font-size: 0.92857rem;
+    margin-bottom: 1.143rem;
     padding: 0.64285rem 1.42857rem 0.85714rem 0.85714rem;
 
-    ::after {
-      content: "";
-      clear: both;
-      display: table;
+    > p {
+      color: var(--terra-docs-notice-notice-p-color, #343b3f);
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.42857rem;
+      margin-block-end: 0;
+      margin-block-start: 0.5rem;
+      margin-bottom: 0;
+      margin-inline-end: 0.714285rem;
+      margin-inline-start: 0.07142rem;
+      margin-top: 0.5rem;
     }
+
+
+    // ::after {
+    //   content: "";
+    //   clear: both;
+    //   display: table;
+    // }
   }
 }

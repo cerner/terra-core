@@ -13,6 +13,16 @@ import PropsTable from '@cerner/terra-docs/src/Notice?dev-site-props-table';
 
 # terra-docs Notice
 
+<Notice>
+
+This component was created for this express purpose and caution should be used when exceeding those parameters. Go to [google](https://www.google.com) for more information.
+
+</Notice>
+
+<Notice>
+This component was created for this express purpose and caution should be used when exceeding those parameters. Go to [google](https://www.google.com) for more information.
+</Notice>
+
 A documentation component intended to provide a "notice" of various types to be used throughout the document.
 
 ## Getting Started
@@ -24,6 +34,25 @@ A documentation component intended to provide a "notice" of various types to be 
 
 ```jsx
 import { Notice } from '@cerner/terra-docs';
+```
+
+## Usage in MDX
+
+MDX, where we generally assume this component is being used, has an interesting concept called interleaving. interleaving is where you can replace child components passed to other react components with an MDX component, see the example below.
+
+```jsx
+
+// This example will render the children as a string.
+<Notice>
+This component was created for this express purpose and caution should be used when exceeding those parameters. Go to [google](https://www.google.com) for more information.
+</Notice>
+
+// This example will render the children an MDX component that will convert the string to markdown, links to be rendered in the notice.
+<Notice>
+
+This component was created for this express purpose and caution should be used when exceeding those parameters. Go to [google](https://www.google.com) for more information.
+
+</Notice>
 ```
 
 ## Component Features

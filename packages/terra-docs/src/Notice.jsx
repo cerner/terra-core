@@ -43,9 +43,9 @@ const propTypes = {
     6,
   ]),
   /**
-  * The main body text of the notice.
+  * The main body text of the notice. Generally a string or a p tag.
   */
-  children: PropTypes.string,
+  children: PropTypes.node,
   /**
   * The type of notice.
   */
@@ -77,9 +77,15 @@ const Notice = ({
           {getTitle(variant)}
         </span>
       </div>
-      <p className={cx('paragraph')}>
-        {children}
-      </p>
+      {
+        // Wrap any string children in a p tag.
+        React.Children.map(children, element => {
+          if (typeof element === 'string') {
+            return <p>{element}</p>;
+          }
+          return element;
+        })
+      }
     </div>
   );
 };
