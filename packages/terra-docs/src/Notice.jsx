@@ -17,7 +17,7 @@ const getTitle = (variant) => {
   }
 
   if (variant === 'deprecation') {
-    return 'Deprecated';
+    return 'Deprecation Notice';
   }
 
   if (variant === 'maintenance') {
@@ -71,6 +71,7 @@ const Notice = ({
   const theme = React.useContext(ThemeContext);
   return (
     <div className={cx('notice', variant, theme.className)}>
+      <div className={cx('accessory')} aria-hidden="true" focusable="false" />
       <div role="heading" className={cx('title')} aria-level={ariaLevel}>
         <span>
           {getTitle(variant)}

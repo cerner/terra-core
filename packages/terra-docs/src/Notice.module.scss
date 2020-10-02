@@ -1,3 +1,5 @@
+@import '~terra-mixins/lib/Mixins';
+
 // Themes
 @import './clinical-lowlight-theme/Notice.module';
 @import './orion-fusion-theme/Notice.module';
@@ -5,54 +7,139 @@
 :local {
 
   .best-practice {
-    background-color: var(--terra-docs-notice-best-practice-background-color, #e0e3f5);
-    border-color: var(--terra-docs-notice-best-practice-border-color, #848cd7);
-    color: var(--terra-docs-notice-best-practice-color, #1c1f21);
+    background-color: var(--terra-docs-notice-best-practice-background-color, #ebf6fd);
+    border-color: var(--terra-docs-notice-best-practice-border-color, #d0eaf9);
+
+    .title {
+      color: var(--terra-docs-notice-best-practice-title-color, #00538e);
+
+      > span {
+        border-color: var(--terra-docs-notice-best-practice-title-border-color, #7fc8ef);
+      }
+    }
   }
 
   .caution {
-    background-color: var(--terra-docs-notice-caution-background-color, #fff9e7);
-    border-color: var(--terra-docs-notice-caution-border-color, #ffc413);
-    color: var(--terra-docs-notice-caution-color, #1c1f21);
+    background-color: var(--terra-docs-notice-caution-background-color, #fff9e6);
+    border-color: var(--terra-docs-notice-caution-border-color, #ffeaaf);
+
+    .title {
+      color: var(--terra-docs-notice-caution-title-color, #3d4243);
+
+      > span {
+        border-color: var(--terra-docs-notice-caution-title-border-color, #ffc20a);
+      }
+    }
   }
 
   .deprecation {
-    background-color: var(--terra-docs-notice-deprecation-background-color, #fff9e7);
-    border-color: var(--terra-docs-notice-deprecation-border-color, #ffc413);
-    color: var(--terra-docs-notice-deprecation-color, #1c1f21);
+    background-color: var(--terra-docs-notice-deprecation-background-color, #fff9e6);
+    border-color: var(--terra-docs-notice-deprecation-border-color, #ffeaaf);
+
+    .accessory {
+      background-image: var(--terra-docs-notice-deprecation-accessory-background-image, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path color="#3d4243" d="M25.3 25.9l-5.2-5.2v-8.5c.1-.7-.4-1.3-1-1.4-.7-.1-1.3.4-1.4 1V21c0 .5.2.9.5 1.2l5.3 5.3c.5.5 1.2.6 1.8.2.5-.4.6-1.1.3-1.6-.1 0-.2-.1-.3-.2zm7.2-15l1.7-1.7c.6-.6.6-1.7 0-2.3l-1.1-1.1c-.6-.6-1.7-.6-2.3 0L29 7.6c-1.5-1.1-3.3-2-5.1-2.6-.9-.3-1.8-.5-2.7-.6V1.6c0-.9-.7-1.6-1.6-1.6h-1.5c-.9 0-1.6.7-1.6 1.6v2.7C7.2 5.7.9 14.4 2.3 23.7 3.6 32 10.7 38.1 19 38.1c1 0 1.9-.1 2.9-.3l-1.4-1.4c-.2-.2-.4-.5-.5-.8-.3 0-.7.1-1 .1-8.1 0-14.6-6.5-14.6-14.6S10.9 6.5 19 6.5c1.5 0 2.9.2 4.3.7 5.9 1.8 9.9 7.1 10.2 13.2.7-.5 1.6-.6 2.4-.2-.2-3.4-1.4-6.6-3.4-9.3z"></path><path fill="#FFC20A" d="M34.9 21.8c-.3 0-.6.1-.8.3l-12 12c-.5.4-.5 1.2-.1 1.6 0 0 0 .1.1.1L34 47.6c.5.4 1.1.4 1.6 0l11.9-11.9c.5-.4.5-1.2.1-1.6 0 0 0-.1-.1-.1L35.7 22.2c-.2-.2-.5-.4-.8-.4z"></path><path fill="#1C1F21" d="M34.9 22.9l12 11.9v.2L35 46.9h-.2L22.9 35v-.2l11.9-11.9h.1m0-1.1c-.3 0-.6.1-.8.3l-12 12c-.5.4-.5 1.2-.1 1.6 0 0 0 .1.1.1L34 47.6c.5.4 1.1.4 1.6 0l11.9-11.9c.5-.4.5-1.2.1-1.6 0 0 0-.1-.1-.1L35.7 22.2c-.2-.2-.5-.4-.8-.4z"></path><path fill="#1C1F21" d="M34 39h2v2h-2v-2zm0-11h2v9h-2v-9z"></path></svg>'));
+      height: var(--terra-docs-notice-deprecation-accessory-height, 2.14285rem);
+      width: var(--terra-docs-notice-deprecation-accessory-width, 2.14285rem);
+    }
+
+    .title {
+      color: var(--terra-docs-notice-deprecation-title-color, #3d4243);
+      margin-left: var(--terra-docs-notice-deprecation-title-margin-left, 2.42857rem);
+
+      > span {
+        border-color: var(--terra-docs-notice-deprecation-title-border-color, #ffc413);
+      }
+    }
   }
 
   .maintenance {
-    background-color: var(--terra-docs-notice-maintenance-background-color, #ebf0e7);
-    border-color: var(--terra-docs-notice-maintenance-border-color, #6f706f);
-    color: var(--terra-docs-notice-maintenance-color, #1c1f21);
+    background-color: var(--terra-docs-notice-maintenance-background-color, #f4f4f4);
+    border-color: var(--terra-docs-notice-maintenance-border-color, #e8e8e9);
+
+    .accessory {
+      background-image: var(--terra-docs-notice-maintenance-accessory-background-image, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path color="#3b4145" d="M31.1 31.4a1.51 1.51 0 11-2.1 2.1l-6.1-6.1a3 3 0 01-.5-.7.31.31 0 00-.1-.2c0-.1-.1-.3-.1-.4V15.3a1.69 1.69 0 011.5-1.8 1.69 1.69 0 011.5 1.8v10.3zm14.3-4.8a21.26 21.26 0 01-4.6 13.3A21.42 21.42 0 1120.9 5.4V2a2 2 0 012-2h2a2 2 0 012 2v3.4a18.63 18.63 0 013.4.7 24.25 24.25 0 016.4 3.3l2.2-2.2a2.05 2.05 0 012.9 0l1.4 1.4a2.05 2.05 0 010 2.9l-2.1 2.1a22 22 0 014.3 13zm-3 0A18.34 18.34 0 0029.5 9a20.32 20.32 0 00-5.5-.8A18.4 18.4 0 1038.4 38a18.16 18.16 0 004-11.4z"></path></svg>'));
+      height: var(--terra-docs-notice-maintenance-accessory-height, 1.71428rem);
+      width: var(--terra-docs-notice-maintenance-accessory-width, 1.71428rem);
+    }
+
+    .title {
+      color: var(--terra-docs-notice-maintenance-title-color, #343b3f);
+      margin-left: var(--terra-docs-notice-maintenance-title-margin-left, 2.14285rem);
+
+      > span {
+        border-color: var(--terra-docs-notice-maintenance-title-border-color, #adb8be);
+      }
+    }
   }
 
   .note {
     background-color: var(--terra-docs-notice-note-background-color, #e9f5e0);
-    border-color: var(--terra-docs-notice-note-border-color, #a5d784);
-    color: var(--terra-docs-notice-note-color, #1c1f21);
+    border-color: var(--terra-docs-notice-note-border-color, #d7edc8);
+
+    .title {
+      color: var(--terra-docs-notice-note-title-color, #2a4a04);
+
+      > span {
+        border-color: var(--terra-docs-notice-note-title-border-color, #a5d784);
+      } 
+    }
+  }
+
+  .accessory {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto;
+    float: left;
+    height: 0;
+    margin: 0;
+    vertical-align: var(--terra-docs-notice-accessory-vertical-align, -0.15rem);
+    width: 0;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      vertical-align: var(--terra-docs-notice-accessory-ms-vertical-align, -0.15rem);
+    } 
   }
 
   .title {
-    font-size: 1.3rem;
+    font-size: 0.92857rem;
     font-weight: 600;
+    line-height: 1.38461;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    > span {
+      border-style: solid;
+      border-width: 0 0 2px 0;
+      display: inline-block;
+      margin-bottom: 0.57142rem;
+      padding-bottom: 0.28571rem;
+      width: 100%;
+    }
   }
 
   .paragraph {
+    color: var(--terra-docs-notice-paragraph-color, #343b3f);
     display: block;
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.42857rem;
     margin-block-end: 0;
     margin-block-start: 0.5rem;
+    margin-inline-end: 0.714285rem;
+    margin-inline-start: 0.07142rem;
   }
 
   .notice {
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    font-size: 1.143rem;
-    padding: 1.0714285714rem;
+    font-size: 0.92857rem;
+    padding: 0.64285rem 1.42857rem 0.85714rem 0.85714rem;
+
+    ::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
   }
 }
