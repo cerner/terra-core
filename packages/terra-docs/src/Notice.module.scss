@@ -102,7 +102,6 @@
   }
 
   .title {
-    clear: both;
     font-size: 0.92857rem;
     font-weight: 600;
     line-height: 1.38461;
@@ -111,6 +110,7 @@
     text-transform: uppercase;
 
     > span {
+      clear: both;
       border-style: solid;
       border-width: 0 0 2px;
       display: inline-block;
