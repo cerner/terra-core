@@ -135,10 +135,14 @@
       line-height: 1.42857rem;
       margin-block-end: 0;
       margin-block-start: 0.5rem;
-      margin-bottom: 0;
+      margin-bottom: 1.143rem;
       margin-inline-end: 0.714285rem;
       margin-inline-start: 0.07142rem;
-      margin-top: 0.5rem;
+      margin-top: 0;
+    }
+
+    >:last-child {
+      margin-bottom: 0;
     }
 
 
