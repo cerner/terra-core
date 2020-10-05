@@ -127,24 +127,25 @@
     margin-bottom: 1.143rem;
     padding: 0.64285rem 1.42857rem 0.85714rem 0.85714rem;
 
-    > p {
-      color: var(--terra-docs-notice-notice-p-color, #343b3f);
-      display: block;
-      font-size: 1rem;
-      font-weight: normal;
-      line-height: 1.42857rem;
-      margin-block-end: 0;
-      margin-block-start: 0.5rem;
-      margin-bottom: 1.143rem;
-      margin-inline-end: 0.714285rem;
-      margin-inline-start: 0.07142rem;
-      margin-top: 0;
-    }
+    .children {
+      >* {
+        color: var(--terra-docs-notice-notice-p-color, #343b3f);
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.42857rem;
+        margin-block-end: 0;
+        margin-block-start: 0.5rem;
+        margin-bottom: 0.57142rem;
+        margin-inline-end: 0.714285rem;
+        margin-inline-start: 0.07142rem;
+        margin-top: 0;
+      }
 
-    >:last-child {
-      margin-bottom: 0;
+      >:last-child {
+        margin-bottom: 0;
+      }
     }
-
 
     // ::after {
     //   content: "";

@@ -77,15 +77,17 @@ const Notice = ({
           {getTitle(variant)}
         </span>
       </div>
-      {
-        // Wrap any string children in a p tag.
-        React.Children.map(children, element => {
-          if (typeof element === 'string') {
-            return <p>{element}</p>;
-          }
-          return element;
-        })
-      }
+      <div className={cx('children')}>
+        {
+          // Wrap any string children in a p tag.
+          React.Children.map(children, element => {
+            if (typeof element === 'string') {
+              return <p>{element}</p>;
+            }
+            return element;
+          })
+        }
+      </div>
     </div>
   );
 };
