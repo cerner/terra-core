@@ -1,0 +1,47 @@
+import { Notice } from '@cerner/terra-docs';
+
+<Notice variant="deprecation">
+
+This component was created for this express purpose and caution should be used when exceeding those parameters. Go to [google](https://www.google.com) for more information.
+
+* list
+* content
+* here
+
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+
+| Tables        | Are           | Cool |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+```jsx
+var ExampleApplication = React.createClass({
+    render: function() {
+      var elapsed = Math.round(this.props.elapsed  / 100);
+      var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
+      var message =
+        'React has been successfully running for ' + seconds + ' seconds.';
+
+      return <p>{message}</p>;
+    }
+  });
+  var start = new Date().getTime();
+  setInterval(function() {
+    React.render(
+      <ExampleApplication elapsed={new Date().getTime() - start} />,
+      document.getElementById('container')
+    );
+  }, 50);
+```
+
+> Blockquotes are very handy in email to emulate reply text.
+
+</Notice>

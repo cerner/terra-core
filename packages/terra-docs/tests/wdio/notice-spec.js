@@ -33,4 +33,11 @@ Terra.describeViewports('Notice', ['medium'], () => {
       Terra.validates.element();
     });
   });
+
+  describe('MDX notice', () => {
+    it('checks accessibility', () => {
+      browser.url('/raw/tests/terra-docs/docs/mdx-notice');
+      Terra.validates.element();
+    });
+  });
 });
