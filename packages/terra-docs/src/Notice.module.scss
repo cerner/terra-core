@@ -102,6 +102,7 @@
   }
 
   .title {
+    clear: both;
     font-size: 0.92857rem;
     font-weight: 600;
     line-height: 1.38461;
@@ -148,11 +149,5 @@
         margin-bottom: 0;
       }
     }
-
-    // ::after {
-    //   content: "";
-    //   clear: both;
-    //   display: table;
-    // }
   }
 }
