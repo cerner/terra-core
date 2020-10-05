@@ -28,7 +28,7 @@ describe('Notice', () => {
 
   it('should render a best practice notice with text', () => {
     const wrapper = shallow(
-      <Notice variant="best-practice">
+      <Notice variant="ux-recommendation">
         notice text
       </Notice>,
     );
@@ -44,9 +44,9 @@ describe('Notice', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render a note notice with text', () => {
+  it('should render a important notice with text', () => {
     const wrapper = shallow(
-      <Notice variant="note">
+      <Notice variant="important">
         notice text
       </Notice>,
     );

@@ -2,7 +2,7 @@
 
 exports[`Notice should render a best practice notice with text 1`] = `
 <div
-  className="notice best-practice"
+  className="notice ux-recommendation"
 >
   <div
     aria-hidden="true"
@@ -15,14 +15,18 @@ exports[`Notice should render a best practice notice with text 1`] = `
     role="heading"
   >
     <span>
-      Best Practice
+      UX Recommendation
     </span>
   </div>
-  <p
-    key=".0"
+  <div
+    className="children"
   >
-    notice text
-  </p>
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
 </div>
 `;
 
@@ -44,17 +48,21 @@ exports[`Notice should render a caution notice with text 1`] = `
       Caution
     </span>
   </div>
-  <p
-    key=".0"
+  <div
+    className="children"
   >
-    notice text
-  </p>
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
 </div>
 `;
 
 exports[`Notice should render a default component 1`] = `
 <div
-  className="notice note"
+  className="notice important"
 >
   <div
     aria-hidden="true"
@@ -67,9 +75,12 @@ exports[`Notice should render a default component 1`] = `
     role="heading"
   >
     <span>
-      Note
+      Important
     </span>
   </div>
+  <div
+    className="children"
+  />
 </div>
 `;
 
@@ -91,11 +102,45 @@ exports[`Notice should render a deprecation notice with text 1`] = `
       Deprecation Notice
     </span>
   </div>
-  <p
-    key=".0"
+  <div
+    className="children"
   >
-    notice text
-  </p>
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Notice should render a important notice with text 1`] = `
+<div
+  className="notice important"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level={2}
+    className="title"
+    role="heading"
+  >
+    <span>
+      Important
+    </span>
+  </div>
+  <div
+    className="children"
+  >
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
 </div>
 `;
 
@@ -117,36 +162,14 @@ exports[`Notice should render a maintenance notice with text 1`] = `
       In Maintenance
     </span>
   </div>
-  <p
-    key=".0"
-  >
-    notice text
-  </p>
-</div>
-`;
-
-exports[`Notice should render a note notice with text 1`] = `
-<div
-  className="notice note"
->
   <div
-    aria-hidden="true"
-    className="accessory"
-    focusable="false"
-  />
-  <div
-    aria-level={2}
-    className="title"
-    role="heading"
+    className="children"
   >
-    <span>
-      Note
-    </span>
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
   </div>
-  <p
-    key=".0"
-  >
-    notice text
-  </p>
 </div>
 `;

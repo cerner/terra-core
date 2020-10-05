@@ -8,8 +8,8 @@ import styles from './Notice.module.scss';
 const cx = classNames.bind(styles);
 
 const getTitle = (variant) => {
-  if (variant === 'best-practice') {
-    return 'Best Practice';
+  if (variant === 'ux-recommendation') {
+    return 'UX Recommendation';
   }
 
   if (variant === 'caution') {
@@ -24,8 +24,8 @@ const getTitle = (variant) => {
     return 'In Maintenance';
   }
 
-  if (variant === 'note') {
-    return 'Note';
+  if (variant === 'important') {
+    return 'Important';
   }
 
   return 'error';
@@ -50,17 +50,17 @@ const propTypes = {
   * The type of notice.
   */
   variant: PropTypes.oneOf([
-    'best-practice',
+    'ux-recommendation',
     'caution',
     'deprecation',
     'maintenance',
-    'note',
+    'important',
   ]),
 };
 
 const defaultProps = {
   ariaLevel: 2,
-  variant: 'note',
+  variant: 'important',
 };
 
 const Notice = ({

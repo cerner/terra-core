@@ -15,14 +15,14 @@ Terra.describeViewports('Notice', ['medium'], () => {
 
   describe('Note notice', () => {
     it('checks accessibility', () => {
-      browser.url('/raw/tests/terra-docs/docs/note-notice');
+      browser.url('/raw/tests/terra-docs/docs/important-notice');
       Terra.validates.element();
     });
   });
 
   describe('Best Practice notice', () => {
     it('checks accessibility', () => {
-      browser.url('/raw/tests/terra-docs/docs/best-practice-notice');
+      browser.url('/raw/tests/terra-docs/docs/ux-recommendation-notice');
       Terra.validates.element();
     });
   });

@@ -3,16 +3,16 @@
 @import './orion-fusion-theme/Notice.module';
 
 :local {
-  .best-practice {
-    background-color: var(--terra-docs-notice-best-practice-background-color, #ebf6fd);
-    border-color: var(--terra-docs-notice-best-practice-border-color, #d0eaf9);
+  .ux-recommendation {
+    background-color: var(--terra-docs-notice-ux-recommendation-background-color, #ebf6fd);
+    border-color: var(--terra-docs-notice-ux-recommendation-border-color, #d0eaf9);
 
     .title {
-      color: var(--terra-docs-notice-best-practice-title-color, #00538e);
+      color: var(--terra-docs-notice-ux-recommendation-title-color, #00538e);
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
       > span {
-        border-color: var(--terra-docs-notice-best-practice-title-border-color, #7fc8ef);
+        border-color: var(--terra-docs-notice-ux-recommendation-title-border-color, #7fc8ef);
       }
     }
   }
@@ -73,16 +73,16 @@
     }
   }
 
-  .note {
-    background-color: var(--terra-docs-notice-note-background-color, #e9f5e0);
-    border-color: var(--terra-docs-notice-note-border-color, #d7edc8);
+  .important {
+    background-color: var(--terra-docs-notice-important-background-color, #e9f5e0);
+    border-color: var(--terra-docs-notice-important-border-color, #d7edc8);
 
     .title {
-      color: var(--terra-docs-notice-note-title-color, #2a4a04);
+      color: var(--terra-docs-notice-important-title-color, #2a4a04);
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
       > span {
-        border-color: var(--terra-docs-notice-note-title-border-color, #a5d784);
+        border-color: var(--terra-docs-notice-important-title-border-color, #a5d784);
       }
     }
   }
@@ -136,11 +136,9 @@
         font-size: 1rem;
         font-weight: normal;
         line-height: 1.42857rem;
-        margin-block-end: 0;
-        margin-block-start: 0.5rem;
         margin-bottom: 0.57142rem;
-        margin-inline-end: 0.714285rem;
-        margin-inline-start: 0.07142rem;
+        margin-left: 0.07142rem;
+        margin-right: 0.714285rem;
         margin-top: 0;
       }
 
