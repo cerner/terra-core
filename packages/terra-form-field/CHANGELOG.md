@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.9.0 - (September 29, 2020)
+
+* Fixed
+  * Fixed voiceover issues in label-group.
+
 ## 4.8.0 - (August 6, 2020)
 
 * Changed
