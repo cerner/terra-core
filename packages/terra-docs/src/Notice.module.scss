@@ -12,8 +12,12 @@
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
       > span {
-        border-color: var(--terra-docs-notice-ux-recommendation-title-border-color, #7fc8ef);
+        border-color: var(--terra-docs-notice-ux-recommendation-title-border-color, #5ac5ff);
       }
+    }
+
+    pre {
+      border-color: var(--terra-docs-notice-ux-recommendation-pre-border-color, #26a2e5);
     }
   }
 
@@ -28,6 +32,10 @@
       > span {
         border-color: var(--terra-docs-notice-caution-title-border-color, #ffc20a);
       }
+    }
+
+    pre {
+      border-color: var(--terra-docs-notice-caution-pre-border-color, #ffc20a);
     }
   }
 
@@ -50,6 +58,10 @@
         border-color: var(--terra-docs-notice-deprecation-title-border-color, #ffc413);
       }
     }
+
+    pre {
+      border-color: var(--terra-docs-notice-deprecation-pre-border-color, #ffc413);
+    }
   }
 
   .maintenance {
@@ -71,6 +83,10 @@
         border-color: var(--terra-docs-notice-maintenance-title-border-color, #adb8be);
       }
     }
+
+    pre {
+      border-color: var(--terra-docs-notice-maintenance-pre-border-color, #adb8be);
+    }
   }
 
   .important {
@@ -82,8 +98,12 @@
 
       /* stylelint-disable-next-line selector-max-compound-selectors */
       > span {
-        border-color: var(--terra-docs-notice-important-title-border-color, #a5d784);
+        border-color: var(--terra-docs-notice-important-title-border-color, #81dd44);
       }
+    }
+    
+    pre {
+      border-color: var(--terra-docs-notice-important-pre-border-color, #81dd44);
     }
   }
 
@@ -131,15 +151,28 @@
     .children {
       /* stylelint-disable-next-line selector-max-compound-selectors */
       >* {
-        color: var(--terra-docs-notice-notice-children-color, #343b3f);
+        color: var(--terra-docs-notice-children-color, #343b3f);
         display: block;
         font-size: 1rem;
         font-weight: normal;
-        line-height: 1.42857rem;
+        line-height: 1.42857;
         margin-bottom: 0.57142rem;
         margin-left: 0.07142rem;
         margin-right: 0.714285rem;
         margin-top: 0;
+      }
+
+      /* stylelint-disable-next-line selector-max-compound-selectors */
+      >pre {
+        border-radius: 0;
+        border-style: solid;
+        border-width: 1px 1px 1px 10px;
+        box-shadow: var(--terra-docs-notice-pre-box-shadow, 0 5px 2px -3px rgba(100, 100, 100, 0.1), 2px 4px 5px 2px rgba(100, 100, 100, 0.05));
+        font-size: 85%;
+        line-height: 1.45;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 7px;
       }
 
       /* stylelint-disable-next-line selector-max-compound-selectors */

@@ -4,11 +4,13 @@
     --terra-docs-notice-ux-recommendation-border-color: #084263;
     --terra-docs-notice-ux-recommendation-title-color: #b2b5b6;
     --terra-docs-notice-ux-recommendation-title-border-color: #004c76;
+    --terra-docs-notice-ux-recommendation-pre-border-color: #004c76;
 
     --terra-docs-notice-caution-background-color: #3d3c31;
     --terra-docs-notice-caution-border-color: #70593f;
     --terra-docs-notice-caution-title-color: #b2b5b6;
     --terra-docs-notice-caution-title-border-color: #ffb166;
+    --terra-docs-notice-caution-pre-border-color: #ffb166;
 
     --terra-docs-notice-deprecation-background-color: #3d3c31;
     --terra-docs-notice-deprecation-border-color: #70593f;
@@ -18,6 +20,7 @@
     --terra-docs-notice-deprecation-title-color: #b2b5b6;
     --terra-docs-notice-deprecation-title-margin-left: 2.42857rem;
     --terra-docs-notice-deprecation-title-border-color: #ffb166;
+    --terra-docs-notice-deprecation-pre-border-color: #ffb166;
 
     --terra-docs-notice-maintenance-background-color: #30373b;
     --terra-docs-notice-maintenance-border-color: #565c60;
@@ -27,13 +30,16 @@
     --terra-docs-notice-maintenance-title-color: #b2b5b6;
     --terra-docs-notice-maintenance-title-margin-left: 2.14285rem;
     --terra-docs-notice-maintenance-title-border-color: #8b8f90;
+    --terra-docs-notice-maintenance-pre-border-color: #8b8f90;
 
     --terra-docs-notice-important-background-color: #232d2c;
     --terra-docs-notice-important-border-color: #2f4d23;
     --terra-docs-notice-important-title-color: #b2b5b6;
     --terra-docs-notice-important-title-border-color: #37651d;
+    --terra-docs-notice-important-pre-border-color: #37651d;
 
-    --terra-docs-notice-notice-children-color: #b2b5b6;
+    --terra-docs-notice-children-color: #b2b5b6;
+    --terra-docs-notice-pre-box-shadow: none;
     --terra-docs-notice-accessory-vertical-align: -0.15rem;
     --terra-docs-notice-accessory-ms-vertical-align: -0.15rem;
   }
