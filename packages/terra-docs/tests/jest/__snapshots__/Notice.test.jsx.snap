@@ -1,38 +1,152 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Notice should render a default component 1`] = `
-<h2
-  className="notice deprecation"
+exports[`Notice should render a best practice notice with text 1`] = `
+<div
+  className="notice best-practice"
 >
-  Deprecation Notice
-  <p
-    className="paragraph"
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
   />
-</h2>
+  <div
+    aria-level={2}
+    className="title"
+    role="heading"
+  >
+    <span>
+      Best Practice
+    </span>
+  </div>
+  <p
+    key=".0"
+  >
+    notice text
+  </p>
+</div>
+`;
+
+exports[`Notice should render a caution notice with text 1`] = `
+<div
+  className="notice caution"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level={2}
+    className="title"
+    role="heading"
+  >
+    <span>
+      Caution
+    </span>
+  </div>
+  <p
+    key=".0"
+  >
+    notice text
+  </p>
+</div>
+`;
+
+exports[`Notice should render a default component 1`] = `
+<div
+  className="notice note"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level={2}
+    className="title"
+    role="heading"
+  >
+    <span>
+      Note
+    </span>
+  </div>
+</div>
 `;
 
 exports[`Notice should render a deprecation notice with text 1`] = `
-<h2
+<div
   className="notice deprecation"
 >
-  Deprecation Notice
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level={2}
+    className="title"
+    role="heading"
+  >
+    <span>
+      Deprecation Notice
+    </span>
+  </div>
   <p
-    className="paragraph"
+    key=".0"
   >
     notice text
   </p>
-</h2>
+</div>
 `;
 
 exports[`Notice should render a maintenance notice with text 1`] = `
-<h2
+<div
   className="notice maintenance"
 >
-  Component in Maintenance
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level={2}
+    className="title"
+    role="heading"
+  >
+    <span>
+      In Maintenance
+    </span>
+  </div>
   <p
-    className="paragraph"
+    key=".0"
   >
     notice text
   </p>
-</h2>
+</div>
+`;
+
+exports[`Notice should render a note notice with text 1`] = `
+<div
+  className="notice note"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level={2}
+    className="title"
+    role="heading"
+  >
+    <span>
+      Note
+    </span>
+  </div>
+  <p
+    key=".0"
+  >
+    notice text
+  </p>
+</div>
 `;

@@ -60,7 +60,7 @@ const propTypes = {
 
 const defaultProps = {
   ariaLevel: 2,
-  variant: 'deprecation',
+  variant: 'note',
 };
 
 const Notice = ({

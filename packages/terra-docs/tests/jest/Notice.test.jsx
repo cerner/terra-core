@@ -25,4 +25,31 @@ describe('Notice', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a best practice notice with text', () => {
+    const wrapper = shallow(
+      <Notice variant="best-practice">
+        notice text
+      </Notice>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a caution notice with text', () => {
+    const wrapper = shallow(
+      <Notice variant="caution">
+        notice text
+      </Notice>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a note notice with text', () => {
+    const wrapper = shallow(
+      <Notice variant="note">
+        notice text
+      </Notice>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });
