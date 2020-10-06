@@ -1,4 +1,9 @@
+const navConfig = require('./navigation.config');
+
 const siteConfig = {
+  /* The navigation configuration.  */
+  navConfig,
+
   appConfig: {
     themes: {
       'Default Theme': '',
