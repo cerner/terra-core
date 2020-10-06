@@ -1,0 +1,39 @@
+@import './clinical-lowlight-theme/Button.module';
+@import './orion-fusion-theme/Button.module';
+
+:local {
+  .button {
+    align-items: center;
+    background-color: var(--terra-docs-button-background-color, #dedfe0);
+    border-color: var(--terra-docs-button-border-color, #c8cacb);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    color: var(--terra-docs-button-color, #1c1f21);
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    padding-bottom: 0.286rem;
+    padding-left: 0.714rem;
+    padding-right: 0.714rem;
+    padding-top: 0.286rem;
+
+    &:hover {
+      background-color: var(--terra-docs-button-hover-toggle-background-color, #b9bbbc);
+      border-color: var(--terra-docs-button-hover-border-color, #c8cacb);
+      color: var(--terra-docs-button-hover-color, #000);
+    }
+
+    &.is-active,
+    &:active {
+      background-color: var(--terra-docs-button-active-toggle-background-color, #6f7477);
+      border-color: var(--terra-docs-button-active-border-color, #52585b);
+      color: var(--terra-docs-button-active-color, #fff);
+    }
+  }
+
+  .button[data-focus-styles-enabled='true']:focus {
+    outline: 2px dashed var(--terra-docs-button-keyboard-focus-outline, #000);
+    outline-offset: -2px;
+  }
+}

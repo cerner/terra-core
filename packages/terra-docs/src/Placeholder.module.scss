@@ -1,0 +1,26 @@
+// Themes
+@import './clinical-lowlight-theme/Placeholder.module';
+@import './orion-fusion-theme/Placeholder.module';
+
+:local {
+  .placeholder,
+  .inner {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .placeholder {
+    padding: 10px;
+  }
+
+  .inner {
+    align-items: center;
+    border: 3px dashed;
+    border-color: var(--terra-docs-placeholder-inner-border-color, #d1d1d1);
+    color: var(--terra-docs-placeholder-inner-color, #787575);
+    display: flex;
+    justify-content: center;
+  }
+}
