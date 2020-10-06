@@ -24,11 +24,11 @@ const propTypes = {
   /**
    * Total number of all items being paginated.
    */
-  totalCount: PropTypes.number.isRequired,
+  totalCount: PropTypes.number,
   /**
    * Total number of items per page.
    */
-  itemCountPerPage: PropTypes.number.isRequired,
+  itemCountPerPage: PropTypes.number,
   /**
    * @private
    * The intl object to be injected for translations.
@@ -36,7 +36,7 @@ const propTypes = {
   intl: intlShape.isRequired,
 };
 
-class ProgressivePaginator extends React.Component {
+class ControlledProgressivePaginator extends React.Component {
   constructor(props) {
     super(props);
 
@@ -44,6 +44,7 @@ class ProgressivePaginator extends React.Component {
     this.defaultProgressivePaginator = this.defaultProgressivePaginator.bind(this);
     this.reducedProgressivePaginator = this.reducedProgressivePaginator.bind(this);
     this.setPaginator = this.setPaginator.bind(this);
+    this.hasNavContext = this.hasNavContext.bind(this);
     this.state = {
       showReducedPaginator: false,
     };
@@ -66,9 +67,13 @@ class ProgressivePaginator extends React.Component {
     };
   }
 
+  hasNavContext() {
+    return this.props.totalCount && this.props.itemCountPerPage;
+  }
+
   defaultProgressivePaginator() {
     const theme = this.context;
-    const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
+    const totalPages = (this.hasNavContext()) ? calculatePages(this.props.totalCount, this.props.itemCountPerPage) : undefined;
     const { selectedPage, intl } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
@@ -76,19 +81,23 @@ class ProgressivePaginator extends React.Component {
     return (
       <div className={cx('paginator', 'progressive', theme.className)} role="navigation" aria-label="pagination">
         <div>
-          {intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })}
+          {(this.hasNavContext()) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
+            : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
         </div>
         <div>
-          <PaginatorButton
-            ariaDisabled={selectedPage === 1}
-            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
-            className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
-            disabled={selectedPage === 1}
-            onClick={this.handlePageChange(1)}
-            onKeyDown={this.handlePageChange(1)}
-          >
-            {intl.formatMessage({ id: 'Terra.paginator.first' })}
-          </PaginatorButton>
+          { 
+            this.hasNavContext() &&
+            <PaginatorButton
+              ariaDisabled={selectedPage === 1}
+              ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
+              className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
+              disabled={selectedPage === 1}
+              onClick={this.handlePageChange(1)}
+              onKeyDown={this.handlePageChange(1)}
+            >
+              {intl.formatMessage({ id: 'Terra.paginator.first' })}
+            </PaginatorButton>
+          }
           <PaginatorButton
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
@@ -111,16 +120,19 @@ class ProgressivePaginator extends React.Component {
             {intl.formatMessage({ id: 'Terra.paginator.next' })}
             <span className={cx('icon')} />
           </PaginatorButton>
-          <PaginatorButton
-            ariaDisabled={selectedPage === totalPages}
-            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
-            className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
-            disabled={selectedPage === totalPages}
-            onClick={this.handlePageChange(totalPages)}
-            onKeyDown={this.handlePageChange(totalPages)}
-          >
-            {intl.formatMessage({ id: 'Terra.paginator.last' })}
-          </PaginatorButton>
+          {
+            (this.hasNavContext()) &&
+            <PaginatorButton
+              ariaDisabled={selectedPage === totalPages}
+              ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
+              className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
+              disabled={selectedPage === totalPages}
+              onClick={this.handlePageChange(totalPages)}
+              onKeyDown={this.handlePageChange(totalPages)}
+            >
+              {intl.formatMessage({ id: 'Terra.paginator.last' })}
+            </PaginatorButton>
+          }
         </div>
       </div>
     );
@@ -128,7 +140,7 @@ class ProgressivePaginator extends React.Component {
 
   reducedProgressivePaginator() {
     const theme = this.context;
-    const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
+    const totalPages = (this.hasNavContext()) ? calculatePages(this.props.totalCount, this.props.itemCountPerPage) : undefined;
     const { selectedPage, intl } = this.props;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
@@ -136,16 +148,19 @@ class ProgressivePaginator extends React.Component {
     return (
       <div className={cx('paginator', theme.className)} role="navigation" aria-label="pagination">
         <div>
-          <PaginatorButton
-            ariaDisabled={selectedPage === 1}
-            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
-            className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
-            disabled={selectedPage === 1}
-            onClick={this.handlePageChange(1)}
-            onKeyDown={this.handlePageChange(1)}
-          >
-            {intl.formatMessage({ id: 'Terra.paginator.first' })}
-          </PaginatorButton>
+          {
+            (this.hasNavContext()) &&
+            <PaginatorButton
+              ariaDisabled={selectedPage === 1}
+              ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
+              className={cx(['nav-link', selectedPage === 1 ? 'is-disabled' : null])}
+              disabled={selectedPage === 1}
+              onClick={this.handlePageChange(1)}
+              onKeyDown={this.handlePageChange(1)}
+            >
+              {intl.formatMessage({ id: 'Terra.paginator.first' })}
+            </PaginatorButton>
+          }
           <PaginatorButton
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
@@ -159,7 +174,8 @@ class ProgressivePaginator extends React.Component {
           </PaginatorButton>
         </div>
         <div>
-          {intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })}
+          {(this.hasNavContext()) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
+            : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
         </div>
         <div>
           <PaginatorButton
@@ -173,16 +189,19 @@ class ProgressivePaginator extends React.Component {
             <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.next' })} />
             <span className={cx('icon')} />
           </PaginatorButton>
-          <PaginatorButton
-            ariaDisabled={selectedPage === totalPages}
-            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
-            className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
-            disabled={selectedPage === totalPages}
-            onClick={this.handlePageChange(totalPages)}
-            onKeyDown={this.handlePageChange(totalPages)}
-          >
-            {intl.formatMessage({ id: 'Terra.paginator.last' })}
-          </PaginatorButton>
+          {
+            (this.hasNavContext()) && 
+            <PaginatorButton
+              ariaDisabled={selectedPage === totalPages}
+              ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
+              className={cx(['nav-link', selectedPage === totalPages ? 'is-disabled' : null])}
+              disabled={selectedPage === totalPages}
+              onClick={this.handlePageChange(totalPages)}
+              onKeyDown={this.handlePageChange(totalPages)}
+            >
+              {intl.formatMessage({ id: 'Terra.paginator.last' })}
+            </PaginatorButton>
+          }
         </div>
       </div>
     );
@@ -199,7 +218,7 @@ class ProgressivePaginator extends React.Component {
   }
 }
 
-ProgressivePaginator.propTypes = propTypes;
-ProgressivePaginator.contextType = ThemeContext;
+ControlledProgressivePaginator.propTypes = propTypes;
+ControlledProgressivePaginator.contextType = ThemeContext;
 
-export default injectIntl(ProgressivePaginator);
+export default injectIntl(ControlledProgressivePaginator);
