@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should adds the onclick 1`] = `
+<button
+  className="button"
+  data-focus-styles-enabled={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  type="button"
+>
+  title
+</button>
+`;
+
+exports[`Button should render a default component 1`] = `
+<button
+  className="button"
+  data-focus-styles-enabled={true}
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  type="button"
+/>
+`;
+
+exports[`Button should show with text 1`] = `
+<button
+  className="button"
+  data-focus-styles-enabled={true}
+  onBlur={[Function]}
+  onMouseDown={[Function]}
+  type="button"
+>
+  title
+</button>
+`;

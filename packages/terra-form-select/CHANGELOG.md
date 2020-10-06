@@ -9,8 +9,13 @@
 
 * Changed
   * Updated color for placeholder.
-  * Updated default text in all variants for placeholder to be `- Select -`
+  * Updated default text in all variants for placeholder to be `- Select -`.
   * Updated test and example to remove the use of placeholder.
+
+## 6.17.0 - (September 29, 2020)
+
+* Changed
+  * Updated jest snapshots due to changes in form-field.
 
 ## 6.16.0 - (September 1, 2020)
 

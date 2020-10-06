@@ -22,6 +22,14 @@ Terra.describeViewports('CheckboxField', ['tiny', 'large'], () => {
 
     Terra.it.validatesElement();
   });
+
+  describe('CheckboxField Long Text Legend', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/long-text-legend');
+    });
+
+    Terra.it.validatesElement();
+  });
 });
 
 Terra.describeViewports('CheckboxField', ['tiny'], () => {

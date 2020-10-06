@@ -1,9 +1,11 @@
 {
-  "name": "terra-docs",
-  "main": "lib/Docs.js",
-  "version": "0.0.0",
-  "private": true,
-  "description": "{insert description}",
+  "name": "@cerner/terra-docs",
+  "main": "lib/index.js",
+  "version": "1.0.0",
+  "description": "A set of components to use in documentation.",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",

@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notice should render a best practice notice with text 1`] = `
+<div
+  className="notice ux-recommendation"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level="2"
+    className="title"
+    role="heading"
+  >
+    <span>
+      UX Recommendation
+    </span>
+  </div>
+  <div
+    className="children"
+  >
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Notice should render a caution notice with text 1`] = `
+<div
+  className="notice caution"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level="2"
+    className="title"
+    role="heading"
+  >
+    <span>
+      Caution
+    </span>
+  </div>
+  <div
+    className="children"
+  >
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Notice should render a default component 1`] = `
+<div
+  className="notice important"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level="2"
+    className="title"
+    role="heading"
+  >
+    <span>
+      Important
+    </span>
+  </div>
+  <div
+    className="children"
+  />
+</div>
+`;
+
+exports[`Notice should render a deprecation notice with text 1`] = `
+<div
+  className="notice deprecation"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level="2"
+    className="title"
+    role="heading"
+  >
+    <span>
+      Deprecation Notice
+    </span>
+  </div>
+  <div
+    className="children"
+  >
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Notice should render a higher aria-level 1`] = `
+<div
+  className="notice important"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level="6"
+    className="title"
+    role="heading"
+  >
+    <span>
+      Important
+    </span>
+  </div>
+  <div
+    className="children"
+  />
+</div>
+`;
+
+exports[`Notice should render a important notice with text 1`] = `
+<div
+  className="notice important"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level="2"
+    className="title"
+    role="heading"
+  >
+    <span>
+      Important
+    </span>
+  </div>
+  <div
+    className="children"
+  >
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Notice should render a maintenance notice with text 1`] = `
+<div
+  className="notice maintenance"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level="2"
+    className="title"
+    role="heading"
+  >
+    <span>
+      In Maintenance
+    </span>
+  </div>
+  <div
+    className="children"
+  >
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
+</div>
+`;
