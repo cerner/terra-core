@@ -244,7 +244,7 @@ class Button extends React.Component {
         { block: isBlock },
         { compact: isCompact },
         { 'is-active': this.state.active && !isDisabled },
-        { 'is-focused': this.state.focused && !isDisabled },
+        { 'is-focused': this.state.focused && !isDisabled && document.activeElement === this.buttonRef },
         theme.className,
       ]),
       customProps.className,
@@ -311,7 +311,7 @@ class Button extends React.Component {
         onMouseDown={this.handleMouseDown}
         onFocus={this.handleFocus}
         href={href}
-        ref={refCallback}
+        ref={(element) => { this.buttonRef = element; if (refCallback) { refCallback(element); } }}
       >
         {buttonLabel}
       </ComponentType>
