@@ -10,7 +10,7 @@ exports[`Notice should render a best practice notice with text 1`] = `
     focusable="false"
   />
   <div
-    aria-level={2}
+    aria-level="2"
     className="title"
     role="heading"
   >
@@ -40,7 +40,7 @@ exports[`Notice should render a caution notice with text 1`] = `
     focusable="false"
   />
   <div
-    aria-level={2}
+    aria-level="2"
     className="title"
     role="heading"
   >
@@ -70,7 +70,7 @@ exports[`Notice should render a default component 1`] = `
     focusable="false"
   />
   <div
-    aria-level={2}
+    aria-level="2"
     className="title"
     role="heading"
   >
@@ -94,7 +94,7 @@ exports[`Notice should render a deprecation notice with text 1`] = `
     focusable="false"
   />
   <div
-    aria-level={2}
+    aria-level="2"
     className="title"
     role="heading"
   >
@@ -114,6 +114,30 @@ exports[`Notice should render a deprecation notice with text 1`] = `
 </div>
 `;
 
+exports[`Notice should render a higher aria-level 1`] = `
+<div
+  className="notice important"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level="6"
+    className="title"
+    role="heading"
+  >
+    <span>
+      Important
+    </span>
+  </div>
+  <div
+    className="children"
+  />
+</div>
+`;
+
 exports[`Notice should render a important notice with text 1`] = `
 <div
   className="notice important"
@@ -124,7 +148,7 @@ exports[`Notice should render a important notice with text 1`] = `
     focusable="false"
   />
   <div
-    aria-level={2}
+    aria-level="2"
     className="title"
     role="heading"
   >
@@ -154,7 +178,7 @@ exports[`Notice should render a maintenance notice with text 1`] = `
     focusable="false"
   />
   <div
-    aria-level={2}
+    aria-level="2"
     className="title"
     role="heading"
   >

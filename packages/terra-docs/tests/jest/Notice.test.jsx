@@ -8,6 +8,11 @@ describe('Notice', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render a higher aria-level', () => {
+    const wrapper = shallow(<Notice ariaLevel="6" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render a deprecation notice with text', () => {
     const wrapper = shallow(
       <Notice variant="deprecation">

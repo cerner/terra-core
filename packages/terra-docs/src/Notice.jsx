@@ -36,11 +36,11 @@ const propTypes = {
    * The aria-level attribute specifies the heading level of the notice. If no level is present, a value of 2 is the default.
    */
   ariaLevel: PropTypes.oneOf([
-    2,
-    3,
-    4,
-    5,
-    6,
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
   ]),
   /**
   * The main body text of the notice. Generally a string or a p tag.
@@ -59,7 +59,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  ariaLevel: 2,
+  ariaLevel: '2',
   variant: 'important',
 };
 
