@@ -1,0 +1,46 @@
+:local {
+  .clinical-lowlight-theme {
+    --terra-docs-notice-ux-recommendation-background-color: #1c2e39;
+    --terra-docs-notice-ux-recommendation-border-color: #084263;
+    --terra-docs-notice-ux-recommendation-title-color: #b2b5b6;
+    --terra-docs-notice-ux-recommendation-title-border-color: #004c76;
+    --terra-docs-notice-ux-recommendation-pre-border-color: #004c76;
+
+    --terra-docs-notice-caution-background-color: #3d3c31;
+    --terra-docs-notice-caution-border-color: #70593f;
+    --terra-docs-notice-caution-title-color: #b2b5b6;
+    --terra-docs-notice-caution-title-border-color: #ffb166;
+    --terra-docs-notice-caution-pre-border-color: #ffb166;
+
+    --terra-docs-notice-deprecation-background-color: #3d3c31;
+    --terra-docs-notice-deprecation-border-color: #70593f;
+    --terra-docs-notice-deprecation-accessory-background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDggNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2IyYjViNiIgZD0iTTI1LjMgMjUuOWwtNS4yLTUuMnYtOC41Yy4xLS43LS40LTEuMy0xLTEuNC0uNy0uMS0xLjMuNC0xLjQgMVYyMWMwIC41LjIuOS41IDEuMmw1LjMgNS4zYy41LjUgMS4yLjYgMS44LjIuNS0uNC42LTEuMS4zLTEuNi0uMSAwLS4yLS4xLS4zLS4yem03LjItMTVsMS43LTEuN2MuNi0uNi42LTEuNyAwLTIuM2wtMS4xLTEuMWMtLjYtLjYtMS43LS42LTIuMyAwTDI5IDcuNmMtMS41LTEuMS0zLjMtMi01LjEtMi42LS45LS4zLTEuOC0uNS0yLjctLjZWMS42YzAtLjktLjctMS42LTEuNi0xLjZoLTEuNWMtLjkgMC0xLjYuNy0xLjYgMS42djIuN0M3LjIgNS43LjkgMTQuNCAyLjMgMjMuNyAzLjYgMzIgMTAuNyAzOC4xIDE5IDM4LjFjMSAwIDEuOS0uMSAyLjktLjNsLTEuNC0xLjRjLS4yLS4yLS40LS41LS41LS44LS4zIDAtLjcuMS0xIC4xLTguMSAwLTE0LjYtNi41LTE0LjYtMTQuNlMxMC45IDYuNSAxOSA2LjVjMS41IDAgMi45LjIgNC4zLjcgNS45IDEuOCA5LjkgNy4xIDEwLjIgMTMuMi43LS41IDEuNi0uNiAyLjQtLjItLjItMy40LTEuNC02LjYtMy40LTkuM3oiPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZiMTY2IiBkPSJNMzQuOSAyMS44Yy0uMyAwLS42LjEtLjguM2wtMTIgMTJjLS41LjQtLjUgMS4yLS4xIDEuNiAwIDAgMCAuMS4xLjFMMzQgNDcuNmMuNS40IDEuMS40IDEuNiAwbDExLjktMTEuOWMuNS0uNC41LTEuMi4xLTEuNiAwIDAgMC0uMS0uMS0uMUwzNS43IDIyLjJjLS4yLS4yLS41LS40LS44LS40eiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMxQzFGMjEiIGQ9Ik0zNC45IDIyLjlsMTIgMTEuOXYuMkwzNSA0Ni45aC0uMkwyMi45IDM1di0uMmwxMS45LTExLjloLjFtMC0xLjFjLS4zIDAtLjYuMS0uOC4zbC0xMiAxMmMtLjUuNC0uNSAxLjItLjEgMS42IDAgMCAwIC4xLjEuMUwzNCA0Ny42Yy41LjQgMS4xLjQgMS42IDBsMTEuOS0xMS45Yy41LS40LjUtMS4yLjEtMS42IDAgMCAwLS4xLS4xLS4xTDM1LjcgMjIuMmMtLjItLjItLjUtLjQtLjgtLjR6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzFDMUYyMSIgZD0iTTM0IDM5aDJ2MmgtMnYtMnptMC0xMWgydjloLTJ2LTl6Ij48L3BhdGg+PC9zdmc+');
+    --terra-docs-notice-deprecation-accessory-height: 2.14285rem;
+    --terra-docs-notice-deprecation-accessory-width: 2.14285rem;
+    --terra-docs-notice-deprecation-title-color: #b2b5b6;
+    --terra-docs-notice-deprecation-title-margin-left: 2.42857rem;
+    --terra-docs-notice-deprecation-title-border-color: #ffb166;
+    --terra-docs-notice-deprecation-pre-border-color: #ffb166;
+
+    --terra-docs-notice-maintenance-background-color: #30373b;
+    --terra-docs-notice-maintenance-border-color: #565c60;
+    --terra-docs-notice-maintenance-accessory-background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDggNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2IyYjViNiIgZD0iTTMxLjEgMzEuNGExLjUxIDEuNTEgMCAxMS0yLjEgMi4xbC02LjEtNi4xYTMgMyAwIDAxLS41LS43LjMxLjMxIDAgMDAtLjEtLjJjMC0uMS0uMS0uMy0uMS0uNFYxNS4zYTEuNjkgMS42OSAwIDAxMS41LTEuOCAxLjY5IDEuNjkgMCAwMTEuNSAxLjh2MTAuM3ptMTQuMy00LjhhMjEuMjYgMjEuMjYgMCAwMS00LjYgMTMuM0EyMS40MiAyMS40MiAwIDExMjAuOSA1LjRWMmEyIDIgMCAwMTItMmgyYTIgMiAwIDAxMiAydjMuNGExOC42MyAxOC42MyAwIDAxMy40LjcgMjQuMjUgMjQuMjUgMCAwMTYuNCAzLjNsMi4yLTIuMmEyLjA1IDIuMDUgMCAwMTIuOSAwbDEuNCAxLjRhMi4wNSAyLjA1IDAgMDEwIDIuOWwtMi4xIDIuMWEyMiAyMiAwIDAxNC4zIDEzem0tMyAwQTE4LjM0IDE4LjM0IDAgMDAyOS41IDlhMjAuMzIgMjAuMzIgMCAwMC01LjUtLjhBMTguNCAxOC40IDAgMTAzOC40IDM4YTE4LjE2IDE4LjE2IDAgMDA0LTExLjR6Ij48L3BhdGg+PC9zdmc+');
+    --terra-docs-notice-maintenance-accessory-height: 1.71428rem;
+    --terra-docs-notice-maintenance-accessory-width: 1.71428rem;
+    --terra-docs-notice-maintenance-title-color: #b2b5b6;
+    --terra-docs-notice-maintenance-title-margin-left: 2.14285rem;
+    --terra-docs-notice-maintenance-title-border-color: #8b8f90;
+    --terra-docs-notice-maintenance-pre-border-color: #8b8f90;
+
+    --terra-docs-notice-important-background-color: #232d2c;
+    --terra-docs-notice-important-border-color: #2f4d23;
+    --terra-docs-notice-important-title-color: #b2b5b6;
+    --terra-docs-notice-important-title-border-color: #37651d;
+    --terra-docs-notice-important-pre-border-color: #37651d;
+
+    --terra-docs-notice-children-color: #b2b5b6;
+    --terra-docs-notice-pre-box-shadow: none;
+    --terra-docs-notice-accessory-vertical-align: -0.15rem;
+    --terra-docs-notice-accessory-ms-vertical-align: -0.15rem;
+  }
+}
