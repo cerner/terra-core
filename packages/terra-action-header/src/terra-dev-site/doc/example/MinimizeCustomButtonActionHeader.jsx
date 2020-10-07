@@ -2,7 +2,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import ActionHeader from 'terra-action-header';
-import {Placeholder} from '@cerner/terra-docs';
+import { Placeholder } from '@cerner/terra-docs';
 import styles from './ActionHeaderDocCommon.scss';
 
 const cx = classNames.bind(styles);

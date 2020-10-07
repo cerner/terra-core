@@ -6,7 +6,7 @@ import List, {
   Utils,
 } from 'terra-list';
 
-import {Placeholder} from '@cerner/terra-docs';
+import { Placeholder } from '@cerner/terra-docs';
 import classNames from 'classnames/bind';
 import mockData from './mock-data/mock-section-sub';
 import styles from '../example/ListDocCommon.module.scss';
