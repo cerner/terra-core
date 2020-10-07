@@ -26,6 +26,7 @@
     "react-dom": "^16.8.5"
   },
   "dependencies": {
+    "@cerner/terra-docs": "^1.0.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
