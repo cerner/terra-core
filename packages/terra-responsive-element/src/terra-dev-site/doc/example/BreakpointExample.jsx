@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Placeholder from 'terra-doc-template/lib/Placeholder';
+import { Placeholder } from '@cerner/terra-docs';
 import ResponsiveElement from 'terra-responsive-element';
 
 const BreakpointExample = () => {
