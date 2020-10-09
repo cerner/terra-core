@@ -412,6 +412,7 @@ exports[`should render a required SelectField component 1`] = `
       htmlFor="select-id"
     >
       <div
+        aria-hidden="true"
         className="required"
       >
         *

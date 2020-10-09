@@ -28,7 +28,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-doc-template": "^2.30.0",
     "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.30.0"
   },

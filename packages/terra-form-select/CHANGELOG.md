@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 6.17.0 - (September 29, 2020)
+
+* Changed
+  * Updated jest snapshots due to changes in form-field.
+
 ## 6.16.0 - (September 1, 2020)
 
 * Fixed
