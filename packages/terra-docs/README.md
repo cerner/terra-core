@@ -1,6 +1,6 @@
 # Terra Docs
 
-[![NPM version](https://badgen.net/npm/v/terra-docs)](https://www.npmjs.com/package/terra-docs)
+[![NPM version](https://badgen.net/npm/v/@cerner/terra-docs)](https://www.npmjs.com/package/@cerner/terra-docs)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 {insert description}
@@ -11,7 +11,7 @@
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-docs`
+- Install from [npmjs](https://www.npmjs.com): `npm install @cerner/terra-docs`
 
 ## LICENSE
 

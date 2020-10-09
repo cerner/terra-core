@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.9.0 - (September 29, 2020)
+
 * Changed
   * Updated legend styles in `CheckboxField` for long text.
 

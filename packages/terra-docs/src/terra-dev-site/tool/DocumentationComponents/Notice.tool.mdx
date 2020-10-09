@@ -1,0 +1,69 @@
+import { Badge } from '@cerner/terra-docs/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
+
+import UXRecommendationNoticeVariant from '../example/UXRecommendationNotice?dev-site-example';
+import CautionNoticeVariant from '../example/CautionNotice?dev-site-example';
+import DeprecationNoticeVariant from '../example/DeprecationNotice?dev-site-example';
+import MaintenanceNoticeVariant from '../example/MaintenanceNotice?dev-site-example';
+import ImportantNoticeVariant from '../example/ImportantNotice?dev-site-example';
+
+import PropsTable from '@cerner/terra-docs/src/Notice?dev-site-props-table';
+
+<Badge />
+
+# terra-docs Notice
+
+A documentation component intended to provide a "notice" of various types to be used throughout the document.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install @cerner/terra-docs`
+
+## Usage
+
+```jsx
+import { Notice } from '@cerner/terra-docs';
+```
+
+## Usage in MDX
+
+MDX, where we generally assume this component is being used, has an interesting concept called interleaving. interleaving is where you can replace child components passed to other react components with an MDX component, see the example below.
+
+```jsx
+
+// This example will render the children as a string.
+<Notice>
+This component was created for this express purpose and caution should be used when exceeding those parameters. Go to [google](https://www.google.com) for more information.
+</Notice>
+
+// This example will render the children an MDX component that will convert the string to markdown, links to be rendered in the notice.
+<Notice>
+
+This component was created for this express purpose and caution should be used when exceeding those parameters. Go to [google](https://www.google.com) for more information.
+
+</Notice>
+```
+
+## Component Features
+
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+## Notices for Implementation Suggestions
+
+<ImportantNoticeVariant title="Important Notice Variant" description="This notice type will be used most often. It should be used for any kind of tip, helpful note, suggestion, reminder and example for how to implement accessibility correctly, reminder to add a prop, etc."/>
+
+<CautionNoticeVariant title="Caution Notice Variant" description="This notice type should be used very rarely when we need to list a warning for when a prop (or combination or props) are used incorrectly and will cause instability, throw warnings, or outright break."/>
+
+<UXRecommendationNoticeVariant title="UX Recommendation Notice Variant" description="This notice type should be used very rarely to point out something extremely important as a usage recommendation. It should not to be used on every page. The messaging should be UX or Human Factors focused, and not more than paragraph or two, sometimes with links to other industry resources."/>
+
+## Notices for Development Support Status
+
+<MaintenanceNoticeVariant title="Maintenance Notice Variant" description="This notice type should be used for components that will be deprecated at some future time. This notice should be placed directly under the component title in documentation."/>
+
+<DeprecationNoticeVariant title="Deprecation Notice Variant"description="This notice type should be used for components that is deprecated and will receive no further updates. This notice should be placed directly under the component title in documentation." />
+
+## Props
+
+<PropsTable />
