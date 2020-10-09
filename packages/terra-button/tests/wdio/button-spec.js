@@ -237,4 +237,24 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
     Terra.it.validatesElement('Button is Disabled', { selector: '#root' });
   });
+
+  describe('Programmatically Re-enable a disabled button', () => {
+    before(() => {
+      browser.url('/#/raw/tests/terra-button/button/programmatic-disable-enable');
+    });
+
+    it('disables button', () => {
+      browser.keys(['Tab']);
+      browser.click('#programmaticDisabledButton1');
+    });
+
+    Terra.it.validatesElement('Button is disabled', { selector: '#root' });
+
+    it('enables button', () => {
+      browser.keys(['Tab']);
+      browser.click('#programmaticDisabledButton2');
+    });
+
+    Terra.it.validatesElement('Enabled Button is not focused', { selector: '#root' });
+  });
 });

@@ -128,6 +128,13 @@ class Button extends React.Component {
     this.shouldShowFocus = true;
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (prevState.focused && nextProps.isDisabled) {
+      return { focused: false };
+    }
+    return null;
+  }
+
   handleOnBlur(event) {
     this.setState({ focused: false });
 
@@ -244,7 +251,7 @@ class Button extends React.Component {
         { block: isBlock },
         { compact: isCompact },
         { 'is-active': this.state.active && !isDisabled },
-        { 'is-focused': this.state.focused && !isDisabled && document.activeElement === this.buttonRef },
+        { 'is-focused': this.state.focused && !isDisabled },
         theme.className,
       ]),
       customProps.className,
@@ -311,7 +318,7 @@ class Button extends React.Component {
         onMouseDown={this.handleMouseDown}
         onFocus={this.handleFocus}
         href={href}
-        ref={(element) => { this.buttonRef = element; if (refCallback) { refCallback(element); } }}
+        ref={refCallback}
       >
         {buttonLabel}
       </ComponentType>
