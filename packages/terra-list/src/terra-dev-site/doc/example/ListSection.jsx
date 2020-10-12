@@ -1,6 +1,6 @@
 import React from 'react';
 import List, { Item, Section } from 'terra-list/lib/index';
-import Placeholder from 'terra-doc-template/lib/Placeholder';
+import { Placeholder } from '@cerner/terra-docs';
 import classNames from 'classnames/bind';
 import styles from './ListDocCommon.module.scss';
 

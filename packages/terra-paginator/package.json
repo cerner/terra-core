@@ -21,9 +21,6 @@
     "url": "https://github.com/cerner/terra-core/issues"
   },
   "homepage": "https://github.com/cerner/terra-core#readme",
-  "devDependencies": {
-    "terra-props-table": "^2.50.0"
-  },
   "peerDependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5",

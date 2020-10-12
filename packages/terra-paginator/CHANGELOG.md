@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Removed reference to terra-props-table.
+
 ## 2.62.0 - (September 29, 2020)
 
 * Changed
@@ -21,7 +24,7 @@
 
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices.
-  
+
 ## 2.58.0 - (August 6, 2020)
 
 * Changed
