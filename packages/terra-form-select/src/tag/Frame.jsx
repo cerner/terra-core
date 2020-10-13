@@ -443,7 +443,8 @@ class Frame extends React.Component {
       if (onDeselect) {
         onDeselect(lastOptionValue);
       }
-    } else if (keyCode === KeyCode.KEY_ESCAPE) {
+    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
+      event.stopPropagation();
       this.closeDropdown();
     }
   }
