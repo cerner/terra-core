@@ -1,7 +1,7 @@
 {
   "name": "terra-form-textarea",
   "main": "lib/Textarea.js",
-  "version": "5.5.0",
+  "version": "5.6.0",
   "description": "Element for building out textareas in a form.",
   "repository": {
     "type": "git",

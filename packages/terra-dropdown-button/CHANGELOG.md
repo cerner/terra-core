@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.22.0 - (October 13, 2020)
+
 * Fixed
   * Fix to prevent modal from closing on pressing escape to close dropdown.
 
