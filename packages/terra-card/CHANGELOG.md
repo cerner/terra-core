@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.35.0 - (October 13, 2020)
+
 * Changed
   * Remove reference to terra-doc-template
 

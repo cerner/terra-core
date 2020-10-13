@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 5.6.0 - (October 13, 2020)
+
 * Changed
   * Removed reference to terra-markdown
 
