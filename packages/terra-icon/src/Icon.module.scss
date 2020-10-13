@@ -23,64 +23,32 @@
 }
 
 :global {
-  /* stylelint-disable at-rule-no-vendor-prefix */
-  /* stylelint-disable property-no-vendor-prefix */
-  @-webkit-keyframes tui-spin-ltr {
-    0% { 
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      -webkit-transform: rotate(359deg);
-      transform: rotate(359deg);
-    }
-  }
-  
   @keyframes tui-spin-ltr {
     0% {
-      -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     
     100% {
-      -webkit-transform: rotate(359deg);
       transform: rotate(359deg);
     }
   }
-  
-  @-webkit-keyframes tui-spin-rtl {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    
-    100% {
-      -webkit-transform: rotate(-359deg);
-      transform: rotate(-359deg);
-    }
-  }
-  
+
   @keyframes tui-spin-rtl {
     0% {
-      -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     
     100% {
-      -webkit-transform: rotate(-359deg);
       transform: rotate(-359deg);
     }
   }
 
   /* stylelint-disable selector-class-pattern */
   [dir=ltr] .tui-Icon.is-spin {
-    -webkit-animation: tui-spin-ltr 2s infinite linear;
-    animation: tui-spin-ltr 2s infinite linear;
+    animation: tui-spin-ltr 3s infinite linear;
   }
-  
+
   [dir=rtl] .tui-Icon.is-spin {
-    -webkit-animation: tui-spin-rtl 2s infinite linear;
     animation: tui-spin-rtl 2s infinite linear;
   }
 }
