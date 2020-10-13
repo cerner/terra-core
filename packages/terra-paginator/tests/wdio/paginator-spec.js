@@ -69,4 +69,42 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
 
     Terra.it.matchesScreenshot('3');
   });
+
+  describe('Controlled Progressive Paginator without total count', () => {
+    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/controlled-progressive-paginator-without-total-count'));
+
+    Terra.it.validatesElement('0');
+
+    it('should toggle page change when the props are updated', () => {
+      browser.click('#button-9');
+    });
+
+    Terra.it.matchesScreenshot('1');
+
+    it('should toggle the pages when the right arrow is clicked', () => {
+      browser.click('[class*="next"]');
+    });
+
+    Terra.it.matchesScreenshot('2');
+
+    it('should toggle the pages when the left arrow is clicked', () => {
+      browser.click('[class*="previous"]');
+    });
+
+    Terra.it.matchesScreenshot('3');
+  });
+  
+  describe('Progressive paginator without total count', () => {
+    it('renders without total count', () => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/progressive-paginator-without-total-count');
+      Terra.validates.element();
+    });
+  });
+
+  describe('Paginator without item count', () => {
+    it('renders without item count', () => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/paginator-without-item-count');
+      Terra.validates.element();
+    });
+  });
 });

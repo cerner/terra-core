@@ -1,6 +1,11 @@
 # Changelog
 
 ## Unreleased
+* Changed
+  * Changed progressive paginator to support unknown total page count.
+
+* Fixed
+  * Fixed paginator not considering `totalCount` when `itemCountPerPage` was not provided.
 
 ## 2.62.0 - (September 29, 2020)
 
