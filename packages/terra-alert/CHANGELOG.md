@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.43.0 - (October 13, 2020)
+
 * Changed
   * Fixed text alignment at ultrawide browser widths
 
