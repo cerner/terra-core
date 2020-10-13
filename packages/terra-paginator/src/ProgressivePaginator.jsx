@@ -43,7 +43,7 @@ class ProgressivePaginator extends React.Component {
     const { selectedPage } = this.props;
 
     this.state = {
-      selectedPage: selectedPage ? selectedPage : 1,
+      selectedPage: selectedPage || 1,
       showReducedPaginator: false,
     };
 
@@ -86,7 +86,7 @@ class ProgressivePaginator extends React.Component {
             : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
         </div>
         <div>
-          { 
+          {
             this.props.totalCount && (
               <PaginatorButton
                 ariaDisabled={selectedPage === 1}

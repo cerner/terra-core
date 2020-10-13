@@ -93,7 +93,7 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
 
     Terra.it.matchesScreenshot('3');
   });
-  
+
   describe('Progressive paginator without total count', () => {
     it('renders without total count', () => {
       browser.url('/#/raw/tests/terra-paginator/paginator/progressive-paginator-without-total-count');

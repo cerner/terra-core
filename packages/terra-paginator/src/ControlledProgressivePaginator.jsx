@@ -80,7 +80,7 @@ class ControlledProgressivePaginator extends React.Component {
             : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
         </div>
         <div>
-          { 
+          {
             this.props.totalCount && (
               <PaginatorButton
                 ariaDisabled={selectedPage === 1}
