@@ -20,9 +20,7 @@
   [dir=rtl] .icon.is-bidi {
     transform: scaleX(-1);
   }
-}
 
-:global {
   @keyframes tui-spin-ltr {
     0% {
       transform: rotate(0deg);
@@ -42,13 +40,13 @@
       transform: rotate(-359deg);
     }
   }
+}
 
-  /* stylelint-disable selector-class-pattern */
-  [dir=ltr] .tui-Icon.is-spin {
-    animation: tui-spin-ltr 3s infinite linear;
-  }
+/* stylelint-disable selector-class-pattern */
+:local([dir=ltr] .tui-Icon.is-spin) {
+  animation: tui-spin-ltr 3s infinite linear;
+}
 
-  [dir=rtl] .tui-Icon.is-spin {
-    animation: tui-spin-rtl 2s infinite linear;
-  }
+:local([dir=rtl] .tui-Icon.is-spin) {
+  animation: tui-spin-rtl 2s infinite linear;
 }
