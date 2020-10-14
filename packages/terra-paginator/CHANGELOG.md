@@ -7,6 +7,11 @@
 * Fixed
   * Fixed paginator not considering `totalCount` when `itemCountPerPage` was not provided.
 
+## 2.63.0 - (October 13, 2020)
+
+* Changed
+  * Removed reference to terra-props-table.
+
 ## 2.62.0 - (September 29, 2020)
 
 * Changed
@@ -26,7 +31,7 @@
 
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices.
-  
+
 ## 2.58.0 - (August 6, 2020)
 
 * Changed

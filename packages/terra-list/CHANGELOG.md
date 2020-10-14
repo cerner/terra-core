@@ -2,11 +2,16 @@
 
 ## Unreleased
 
+## 4.38.0 - (October 13, 2020)
+
+* Changed
+  * Replaced references to terra-doc-template with terra-docs
+
 ## 4.37.0 - (August 18, 2020)
 
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices and removed hover wdio.
-  
+
 ## 4.36.0 - (August 6, 2020)
 
 * Changed

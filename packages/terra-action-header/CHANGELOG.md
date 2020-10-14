@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.57.0 - (October 13, 2020)
+
+* Changed
+  * Replaced references to terra-doc-template with terra-docs
+
 ## 2.56.0 - (August 18, 2020)
 
 * Changed
