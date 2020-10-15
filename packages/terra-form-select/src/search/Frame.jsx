@@ -367,7 +367,8 @@ class Frame extends React.Component {
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
       event.preventDefault();
       this.openDropdown(event);
-    } else if (keyCode === KeyCode.KEY_ESCAPE) {
+    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
+      event.stopPropagation();
       this.closeDropdown();
     }
   }

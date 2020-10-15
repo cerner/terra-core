@@ -1,0 +1,15 @@
+:local {
+  .long-text-example {
+    p {
+      margin: 0.71428rem 0;
+      
+      &:first-child {
+        margin-top: 0;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

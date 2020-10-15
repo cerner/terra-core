@@ -147,6 +147,9 @@ class SplitButton extends React.Component {
   }
 
   handleCaretKeyDown(event) {
+    if (this.state.isOpen && event.keyCode === KeyCode.KEY_ESCAPE) {
+      event.stopPropagation();
+    }
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       // In FireFox active styles don't get applied onKeyDown
       this.setState({ caretIsActive: true, openedViaKeyboard: true });

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.43.0 - (October 13, 2020)
+
 * Changed
   * Reference terra-theme-context 1.0.0 to enable hoisting.
 
