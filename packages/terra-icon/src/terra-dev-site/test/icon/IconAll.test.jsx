@@ -173,6 +173,8 @@ const IconAll = () => (
     <Icon.IconMediaRecord className={cx(['icon'])} />
     <Icon.IconMediaRewind className={cx(['icon'])} />
     <Icon.IconMediaStop className={cx(['icon'])} />
+    <Icon.IconMedicationTablet className={cx(['icon'])} />
+    <Icon.IconMedicationTabletOutline className={cx(['icon'])} />
     <Icon.IconMenu className={cx(['icon'])} />
     <Icon.IconMerge className={cx(['icon'])} />
     <Icon.IconMicrophone className={cx(['icon'])} />
