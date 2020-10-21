@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated animation styles to be passed as global in order to remove CSP violation.
+
 ## 3.36.0 - (August 6, 2020)
 
 * Changed
