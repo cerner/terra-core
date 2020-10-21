@@ -246,15 +246,13 @@ Terra.describeViewports('Button', ['tiny'], () => {
     it('disables button', () => {
       browser.keys(['Tab']);
       browser.click('#programmaticDisabledButton1');
+      Terra.validates.element('Button is disabled', { selector: '#root' });
     });
-
-    Terra.it.validatesElement('Button is disabled', { selector: '#root' });
 
     it('enables button', () => {
       browser.keys(['Tab']);
       browser.click('#programmaticDisabledButton2');
+      Terra.validates.element('Enabled Button is not focused', { selector: '#root' });
     });
-
-    Terra.it.validatesElement('Enabled Button is not focused', { selector: '#root' });
   });
 });
