@@ -10,6 +10,9 @@ import Dropdown from '../shared/_Dropdown';
 import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
+import 'mutationobserver-shim';
+import '../shared/_contains-polyfill';
+import '../shared/_matches-polyfill';
 
 const cx = classNamesBind.bind(styles);
 
