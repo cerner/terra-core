@@ -6,7 +6,7 @@ import ThemeContext from 'terra-theme-context';
 import Button from 'terra-button';
 import * as KeyCode from 'keycode-js';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
-import { injectIntl, intlShape } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import styles from './SearchField.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -39,7 +39,7 @@ const propTypes = {
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
-  intl: intlShape.isRequired,
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 
   /**
    * Whether or not the field should display as a block.

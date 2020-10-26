@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
-import { injectIntl, intlShape } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
 import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
@@ -16,7 +16,7 @@ const propTypes = {
   /**
    * The intl object to be injected for translations. Provided by the injectIntl function.
    */
-  intl: intlShape.isRequired,
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * Callback function triggered when the component is expanded or collapsed.
    */
