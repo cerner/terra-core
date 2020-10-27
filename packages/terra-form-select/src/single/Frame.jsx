@@ -12,6 +12,9 @@ import FrameUtil from '../shared/_FrameUtil';
 import SharedUtil from '../shared/_SharedUtil';
 import MenuUtil from '../shared/_MenuUtil';
 import styles from '../shared/_Frame.module.scss';
+import 'mutationobserver-shim';
+import '../shared/_contains-polyfill';
+import '../shared/_matches-polyfill';
 
 const cx = classNamesBind.bind(styles);
 

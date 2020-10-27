@@ -12,6 +12,14 @@
   * Updated default text in all variants for placeholder to be `- Select -`.
   * Updated test and example to remove the use of placeholder.
 
+* Added
+  * Added mutation observer-shim to better support inert in IE10.
+
+## 6.18.0 - (October 13, 2020)
+
+* Fixed
+  * Fix to prevent modal from closing on pressing escape to close select.
+
 ## 6.17.0 - (September 29, 2020)
 
 * Changed

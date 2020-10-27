@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.37.0 - (October 20, 2020)
+
+* Removed
+  * Removed incorrect documentation.
+
 ## 4.36.0 - (August 11, 2020)
 
 * Changed

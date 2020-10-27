@@ -164,6 +164,8 @@ import IconMediaPlay from './icon/IconMediaPlay';
 import IconMediaRecord from './icon/IconMediaRecord';
 import IconMediaRewind from './icon/IconMediaRewind';
 import IconMediaStop from './icon/IconMediaStop';
+import IconMedicationTablet from './icon/IconMedicationTablet';
+import IconMedicationTabletOutline from './icon/IconMedicationTabletOutline';
 import IconMenu from './icon/IconMenu';
 import IconMerge from './icon/IconMerge';
 import IconMicrophone from './icon/IconMicrophone';
@@ -458,6 +460,8 @@ const Icons = {
   IconMediaRecord,
   IconMediaRewind,
   IconMediaStop,
+  IconMedicationTablet,
+  IconMedicationTabletOutline,
   IconMenu,
   IconMerge,
   IconMicrophone,
