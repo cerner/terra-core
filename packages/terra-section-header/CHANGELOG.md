@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `terra-dev-site` examples to use react hooks.
+
 ## 2.43.0 - (October 27, 2020)
 
 * Changed
