@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added `data-attribute` for the Clear button.
+
 ## 3.60.0 - (October 27, 2020)
 
 * Changed
