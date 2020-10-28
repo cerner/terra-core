@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * Added `data-attribute` for the Clear button.
+  * Added data-attribute `data-terra-search-field-button-attribute` for the search and clear button.
 
 ## 3.60.0 - (October 27, 2020)
 

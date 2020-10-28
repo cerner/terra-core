@@ -295,6 +295,7 @@ class SearchField extends React.Component {
           {clearButton}
         </div>
         <Button
+          data-terra-search-field-button="Search"
           className={cx('button')}
           text={buttonText}
           onClick={this.handleSearch}

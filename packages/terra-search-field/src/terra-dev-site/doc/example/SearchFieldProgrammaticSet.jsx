@@ -48,7 +48,6 @@ const SearchFieldProgrammaticSet = () => {
       <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" />
       <p>Minimum Search Length is 3</p>
       <SearchField
-        inputRef
         id="searchfield"
         onSearch={handleSearch}
         onInvalidSearch={handleInvalidSearch}
