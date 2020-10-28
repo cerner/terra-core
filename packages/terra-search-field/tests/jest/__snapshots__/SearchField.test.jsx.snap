@@ -472,6 +472,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     />
     <Button
       className="clear"
+      data-terra-search-field-button="Clear"
       icon={
         <span
           className="clear-icon"
@@ -531,6 +532,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     />
     <Button
       className="clear"
+      data-terra-search-field-button="Clear"
       icon={
         <span
           className="clear-icon"
@@ -631,6 +633,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     />
     <Button
       className="clear"
+      data-terra-search-field-button="Clear"
       icon={
         <span
           className="clear-icon"

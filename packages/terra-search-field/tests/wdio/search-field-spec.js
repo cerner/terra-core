@@ -68,12 +68,13 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     Terra.it.validatesElement('default value');
 
-    it('should enter a new search term', () => {
-      browser.click('input');
-      for (let i = 0; i < 7; i += 1) {
-        browser.keys('Backspace');
-      }
+    it('should clear the value', () => {
+      browser.click('#searchfield [data-terra-search-field-button="Clear"]');
+    });
 
+    Terra.it.validatesElement('Clear');
+
+    it('should enter a new search term', () => {
       browser.addValue('input', 'Lorem');
     });
 
