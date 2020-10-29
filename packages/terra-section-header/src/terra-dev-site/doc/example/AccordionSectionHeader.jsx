@@ -1,29 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionHeaderExampleTemplate from 'terra-section-header/lib/terra-dev-site/doc/example/SectionHeaderExampleTemplate';
 
-class AccordionSectionHeader extends React.Component {
-  constructor(props) {
-    super(props);
+const AccordionSectionHeader = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    this.state = { isOpen: false };
-    this.handleClick = this.handleClick.bind(this);
-  }
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
 
-  handleClick() {
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
-  }
+  const sectionHeaderProps = {
+    title: 'I can accordion, click me',
+    isOpen,
+    onClick: handleClick,
+  };
 
-  render() {
-    const sectionHeaderProps = {
-      title: 'I can accordion, click me',
-      isOpen: this.state.isOpen,
-      onClick: this.handleClick,
-    };
-
-    return (
-      <SectionHeaderExampleTemplate title="Accordion Section Header" exampleProps={sectionHeaderProps} />
-    );
-  }
-}
+  return (
+    <SectionHeaderExampleTemplate title="Accordion Section Header" exampleProps={sectionHeaderProps} />
+  );
+};
 
 export default AccordionSectionHeader;

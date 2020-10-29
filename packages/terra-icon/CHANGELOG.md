@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.37.0 - (October 27, 2020)
+
 * Changed
   * Updated animation styles to be passed as global in order to remove CSP violation.
   * Bumped `one-cerner-style-icons` to v1.33.0
