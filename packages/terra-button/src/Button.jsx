@@ -128,6 +128,13 @@ class Button extends React.Component {
     this.shouldShowFocus = true;
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (prevState.focused && nextProps.isDisabled) {
+      return { focused: false };
+    }
+    return null;
+  }
+
   handleOnBlur(event) {
     this.setState({ focused: false });
 

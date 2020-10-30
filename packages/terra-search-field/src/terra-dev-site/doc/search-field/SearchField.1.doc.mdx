@@ -72,3 +72,25 @@ import SearchField from 'terra-search-field';
 
 ## SearchField Props
 <SearchFieldPropsTable />
+
+## Testing
+
+The Search Field has the following data attributes available for browser tests:
+
+- The data attribute, `data-terra-search-field-button` can be used to select the search and clear button
+  - use `data-terra-search-field-button="Search"` to select the search button
+  - use `data-terra-search-field-button="Clear"` to select the clear button
+
+```js
+describe('SearchField', () => {
+  it('searches the text in search field', () => {
+    browser.click('#Search_Field_Id > [data-terra-search-field-button="Search"]');
+    Terra.validates.element('open', { selector: '#root' });
+  });
+
+  it('clears the text in search field', () => {
+    browser.click('#Search_Field_Id [data-terra-search-field-button="Clear"]');
+    Terra.validates.element('closed', { selector: '#root' });
+  });
+});
+```

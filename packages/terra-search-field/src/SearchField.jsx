@@ -265,6 +265,7 @@ class SearchField extends React.Component {
     const clearButton = this.searchText && !isDisabled
       ? (
         <Button
+          data-terra-search-field-button="Clear"
           className={cx('clear')}
           onClick={this.handleClear}
           text={clearText}
@@ -294,6 +295,7 @@ class SearchField extends React.Component {
           {clearButton}
         </div>
         <Button
+          data-terra-search-field-button="Search"
           className={cx('button')}
           text={buttonText}
           onClick={this.handleSearch}

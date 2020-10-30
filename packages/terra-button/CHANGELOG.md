@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed focus styles issue after re-enabling a disabled button.
+
 ## 3.48.0 - (October 27, 2020)
 
 * Changed
