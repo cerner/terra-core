@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fix the internationalization setup url in the terra-base doc to point to the correct link.
+
 ## 5.40.0 - (September 29, 2020)
 
 * Added

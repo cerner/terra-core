@@ -12,6 +12,8 @@
   * Updated default text in all variants for placeholder to be `- Select -`.
   * Updated test and example to remove the use of placeholder.
 
+## 6.19.0 - (October 27, 2020)
+
 * Added
   * Added mutation observer-shim to better support inert in IE10.
 
