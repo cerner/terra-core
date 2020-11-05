@@ -7,20 +7,24 @@ const {
 
 const WebpackConfigTerra = require('@cerner/webpack-config-terra');
 
-const coreConfig = () => {
+console.log(path.resolve(path.join(process.cwd(), 'packages', 'terra-i18n')));
+
+const coreConfig = (env = {}) => {
   const processPath = process.cwd();
 
-  const i18nAlias = path.resolve(path.join(processPath, 'packages', 'terra-i18n'));
+  // const i18nAlias = path.resolve(path.join(processPath, 'packages', 'terra-i18n'));
   return {
     entry: TerraDevSiteEntrypoints,
     plugins: [
-      new TerraDevSite(),
+      new TerraDevSite({
+        // defaultLocale: env.defaultLocale,
+      }),
     ],
-    resolve: {
-      alias: {
-        'terra-i18n': i18nAlias,
-      },
-    },
+    // resolve: {
+    //   alias: {
+    //     'terra-i18n': i18nAlias,
+    //   },
+    // },
   };
 };
 
