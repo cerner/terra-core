@@ -3,6 +3,7 @@
 ## Unreleased
 * Changed
   * Changed progressive paginator to support unknown total page count.
+  * Replaced `Terra.it()` with `Terra.validates.element()`.
 
 * Fixed
   * Fixed paginator not considering `totalCount` when `itemCountPerPage` was not provided.

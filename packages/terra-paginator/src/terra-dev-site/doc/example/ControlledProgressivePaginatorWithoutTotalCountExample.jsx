@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dialog from 'terra-dialog';
 import Button from 'terra-button';
 import ControlledProgressivePaginator from 'terra-paginator/lib/ControlledProgressivePaginator';
@@ -30,44 +30,34 @@ const buildPage = () => {
   );
 };
 
-class ControlledInfiniteProgressivePaginatorExample extends React.Component {
-  constructor(props) {
-    super(props);
+const ControlledInfiniteProgressivePaginatorExample = () => {
+  const [content] = useState(buildPage());
+  const [currentPage, setCurrentPage] = useState(1);
 
-    this.state = {
-      content: buildPage(),
-      currentPage: 1,
-    };
+  const changePages = (index) => {
+    setCurrentPage(index);
+  };
 
-    this.changePages = this.changePages.bind(this);
-  }
-
-  changePages(index) {
-    this.setState({ currentPage: index });
-  }
-
-  render() {
-    return (
-      <div className={cx('paginator-wrapper')}>
-        <Dialog
-          header={(
-            <h1>
-              Page
-              {this.state.currentPage}
-            </h1>
-          )}
-          footer={<ControlledProgressivePaginator onPageChange={this.changePages} selectedPage={this.state.currentPage} />}
-        >
-          <div>
-            <Button text="Set Page to 9" onClick={() => { this.setState({ currentPage: 9 }); }} />
-            <Button text="Set Page to 15" onClick={() => { this.setState({ currentPage: 15 }); }} />
-            <Button text="Set Page to 45" onClick={() => { this.setState({ currentPage: 45 }); }} />
-          </div>
-          {this.state.content}
-        </Dialog>
-      </div>
-    );
-  }
-}
+  return (
+    <div className={cx('paginator-wrapper')}>
+      <Dialog
+        header={(
+          <h1>
+            Page
+            {currentPage}
+          </h1>
+        )}
+        footer={<ControlledProgressivePaginator onPageChange={changePages} selectedPage={currentPage} />}
+      >
+        <div>
+          <Button text="Set Page to 9" onClick={() => { setCurrentPage(9); }} />
+          <Button text="Set Page to 15" onClick={() => { setCurrentPage(15); }} />
+          <Button text="Set Page to 45" onClick={() => { setCurrentPage(45); }} />
+        </div>
+        {content}
+      </Dialog>
+    </div>
+  );
+};
 
 export default ControlledInfiniteProgressivePaginatorExample;

@@ -73,8 +73,12 @@ class ProgressivePaginator extends React.Component {
 
   defaultProgressivePaginator() {
     const theme = this.context;
-    const { intl } = this.props;
-    const totalPages = (this.props.totalCount) ? calculatePages(this.props.totalCount, this.props.itemCountPerPage) : 0;
+    const {
+      intl,
+      totalCount,
+      itemCountPerPage,
+    } = this.props;
+    const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
@@ -82,12 +86,12 @@ class ProgressivePaginator extends React.Component {
     return (
       <div className={cx('paginator', 'progressive', theme.className)} role="navigation" aria-label="pagination">
         <div>
-          {(this.props.totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
+          {(totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
             : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
         </div>
         <div>
           {
-            this.props.totalCount && (
+            totalCount && (
               <PaginatorButton
                 ariaDisabled={selectedPage === 1}
                 ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
@@ -123,7 +127,7 @@ class ProgressivePaginator extends React.Component {
             <span className={cx('icon')} />
           </PaginatorButton>
           {
-            (this.props.totalCount) && (
+            (totalCount) && (
               <PaginatorButton
                 ariaDisabled={selectedPage === totalPages}
                 ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
@@ -143,8 +147,12 @@ class ProgressivePaginator extends React.Component {
 
   reducedProgressivePaginator() {
     const theme = this.context;
-    const { intl } = this.props;
-    const totalPages = (this.props.totalCount) ? calculatePages(this.props.totalCount, this.props.itemCountPerPage) : 0;
+    const {
+      intl,
+      totalCount,
+      itemCountPerPage,
+    } = this.props;
+    const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
@@ -153,7 +161,7 @@ class ProgressivePaginator extends React.Component {
       <div className={cx('paginator', theme.className)} role="navigation" aria-label="pagination">
         <div>
           {
-            (this.props.totalCount) && (
+            (totalCount) && (
               <PaginatorButton
                 ariaDisabled={selectedPage === 1}
                 ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
@@ -179,7 +187,7 @@ class ProgressivePaginator extends React.Component {
           </PaginatorButton>
         </div>
         <div>
-          {(this.props.totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
+          {(totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
             : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
         </div>
         <div>
@@ -195,7 +203,7 @@ class ProgressivePaginator extends React.Component {
             <span className={cx('icon')} />
           </PaginatorButton>
           {
-            (this.props.totalCount) && (
+            (totalCount) && (
               <PaginatorButton
                 ariaDisabled={selectedPage === totalPages}
                 ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}

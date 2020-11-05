@@ -121,16 +121,20 @@ class Paginator extends React.Component {
 
   defaultPaginator() {
     const theme = this.context;
-    const { intl } = this.props;
-    const totalPages = (this.props.totalCount) ? calculatePages(this.props.totalCount, this.props.itemCountPerPage) : 0;
+    const {
+      intl,
+      totalCount,
+      itemCountPerPage,
+    } = this.props;
+    const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     const fullView = (
-      <div className={cx('paginator', !this.props.totalCount && 'pageless', theme.className)}>
+      <div className={cx('paginator', !totalCount && 'pageless', theme.className)}>
         {
-          this.props.totalCount && (
+          totalCount && (
           <PaginatorButton
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
@@ -154,7 +158,7 @@ class Paginator extends React.Component {
           <span className={cx('icon')} />
           {intl.formatMessage({ id: 'Terra.paginator.previous' })}
         </PaginatorButton>
-        {this.props.totalCount && this.buildPageButtons(totalPages, this.handlePageChange)}
+        {totalCount && this.buildPageButtons(totalPages, this.handlePageChange)}
         <PaginatorButton
           ariaDisabled={selectedPage === totalPages}
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
@@ -167,7 +171,7 @@ class Paginator extends React.Component {
           <span className={cx('icon')} />
         </PaginatorButton>
         {
-          this.props.totalCount && (
+          totalCount && (
           <PaginatorButton
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
@@ -188,16 +192,20 @@ class Paginator extends React.Component {
 
   reducedPaginator() {
     const theme = this.context;
-    const { intl } = this.props;
-    const totalPages = (this.props.totalCount) ? calculatePages(this.props.totalCount, this.props.itemCountPerPage) : 0;
+    const {
+      intl,
+      totalCount,
+      itemCountPerPage,
+    } = this.props;
+    const totalPages = (this.props.totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     const reducedView = (
-      <div className={cx('paginator', !this.props.totalCount && 'pageless', theme.className)} role="navigation" aria-label="pagination">
+      <div className={cx('paginator', !totalCount && 'pageless', theme.className)} role="navigation" aria-label="pagination">
         {
-          this.props.totalCount && (
+          totalCount && (
           <PaginatorButton
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
@@ -221,7 +229,7 @@ class Paginator extends React.Component {
           <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.previous' })} />
           <span className={cx('icon')} />
         </PaginatorButton>
-        {this.props.totalCount && intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
+        {totalCount && intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
         <PaginatorButton
           ariaDisabled={selectedPage === totalPages}
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
@@ -234,7 +242,7 @@ class Paginator extends React.Component {
           <span className={cx('icon')} />
         </PaginatorButton>
         {
-          this.props.totalCount && (
+          totalCount && (
           <PaginatorButton
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}

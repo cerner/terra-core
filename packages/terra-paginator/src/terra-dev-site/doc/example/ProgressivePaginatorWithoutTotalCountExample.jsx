@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dialog from 'terra-dialog';
 import ProgressivePaginator from 'terra-paginator/lib/ProgressivePaginator';
 import classNames from 'classnames/bind';
@@ -29,39 +29,29 @@ const buildPage = () => {
   );
 };
 
-class InfiniteProgressivePaginatorExample extends React.Component {
-  constructor(props) {
-    super(props);
+const InfiniteProgressivePaginatorExample = () => {
+  const [content] = useState(buildPage());
+  const [currentPage, setCurrentPage] = useState(1);
 
-    this.state = {
-      content: buildPage(),
-      currentPage: 1,
-    };
+  const changePages = (index) => {
+    setCurrentPage(index);
+  };
 
-    this.changePages = this.changePages.bind(this);
-  }
-
-  changePages(index) {
-    this.setState({ currentPage: index });
-  }
-
-  render() {
-    return (
-      <div className={cx('paginator-wrapper')}>
-        <Dialog
-          header={(
-            <h1>
-              Page
-              {this.state.currentPage}
-            </h1>
-           )}
-          footer={<ProgressivePaginator onPageChange={this.changePages} />}
-        >
-          {this.state.content}
-        </Dialog>
-      </div>
-    );
-  }
-}
+  return (
+    <div className={cx('paginator-wrapper')}>
+      <Dialog
+        header={(
+          <h1>
+            Page
+            {currentPage}
+          </h1>
+          )}
+        footer={<ProgressivePaginator onPageChange={changePages} />}
+      >
+        {content}
+      </Dialog>
+    </div>
+  );
+};
 
 export default InfiniteProgressivePaginatorExample;

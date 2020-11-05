@@ -1,97 +1,92 @@
 Terra.describeViewports('Paginator', ['tiny', 'medium', 'large'], () => {
   describe('Paginator', () => {
-    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/paginator'));
-
-    Terra.it.validatesElement();
+    it('default', () => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/paginator');
+      Terra.validates.element();
+    });
   });
 
   describe('PaginatorNoPages', () => {
-    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/paginator-no-pages'));
-
-    Terra.it.validatesElement();
+    it('default', () => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/paginator-no-pages');
+      Terra.validates.element();
+    });
   });
 
   describe('ProgressivePaginator', () => {
-    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/progressive-paginator'));
-
-    Terra.it.validatesElement();
+    it('default', () => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/progressive-paginator');
+      Terra.validates.element();
+    });
   });
 });
 
 Terra.describeViewports('Controlled Paginator', ['large'], () => {
   describe('Controlled Paginator', () => {
-    before(() => {
+    it('displays initial selected page', () => {
       browser.url('/#/raw/tests/terra-paginator/paginator/controlled-paginator');
       browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
+      Terra.validates.element('0');
     });
-
-    Terra.it.validatesElement('0');
 
     it('should toggle page change when the props are updated', () => {
       browser.click('#button-9');
+      Terra.validates.element('1');
     });
-
-    Terra.it.matchesScreenshot('1');
 
     it('should toggle the pages when the right arrow is clicked', () => {
       browser.click('[class*="next"]');
+      Terra.validates.element('2');
     });
-
-    Terra.it.matchesScreenshot('2');
 
     it('should toggle the pages when the left arrow is clicked', () => {
       browser.click('[class*="previous"]');
+      Terra.validates.element('3');
     });
-
-    Terra.it.matchesScreenshot('3');
   });
 
   describe('Controlled Progressive Paginator', () => {
-    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/controlled-progressive-paginator'));
-
-    Terra.it.validatesElement('0');
+    it('displays initial selected page', () => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/controlled-progressive-paginator');
+      Terra.validates.element('0');
+    });
 
     it('should toggle page change when the props are updated', () => {
       browser.click('#button-9');
+      Terra.validates.element('1');
     });
-
-    Terra.it.matchesScreenshot('1');
 
     it('should toggle the pages when the right arrow is clicked', () => {
       browser.click('[class*="next"]');
+      Terra.validates.element('2');
     });
-
-    Terra.it.matchesScreenshot('2');
 
     it('should toggle the pages when the left arrow is clicked', () => {
       browser.click('[class*="previous"]');
+      Terra.validates.element('3');
     });
-
-    Terra.it.matchesScreenshot('3');
   });
 
   describe('Controlled Progressive Paginator without total count', () => {
-    before(() => browser.url('/#/raw/tests/terra-paginator/paginator/controlled-progressive-paginator-without-total-count'));
-
-    Terra.it.validatesElement('0');
+    it('displays the initial selected page', () => {
+      browser.url('/#/raw/tests/terra-paginator/paginator/controlled-progressive-paginator-without-total-count');
+      Terra.validates.element('0');
+    });
 
     it('should toggle page change when the props are updated', () => {
       browser.click('#button-9');
+      Terra.validates.element('1');
     });
-
-    Terra.it.matchesScreenshot('1');
 
     it('should toggle the pages when the right arrow is clicked', () => {
       browser.click('[class*="next"]');
+      Terra.validates.element('2');
     });
-
-    Terra.it.matchesScreenshot('2');
 
     it('should toggle the pages when the left arrow is clicked', () => {
       browser.click('[class*="previous"]');
+      Terra.validates.element('3');
     });
-
-    Terra.it.matchesScreenshot('3');
   });
 
   describe('Progressive paginator without total count', () => {
