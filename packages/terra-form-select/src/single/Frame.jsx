@@ -82,6 +82,8 @@ const propTypes = {
   onSelect: PropTypes.func,
   /**
    * [Deprecated] Placeholder text.
+   *
+   * This is `dead code` and will not get used at all.
    */
   placeholder: PropTypes.string,
   /**

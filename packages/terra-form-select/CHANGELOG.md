@@ -5,6 +5,7 @@
 * Changed
   * Updated color for placeholder.
   * Updated default text in all variants for placeholder to be `- Select -`.
+  * `placeholder` prop is deprecated and will be removed in a future MVB.
 
 ## 6.19.0 - (October 27, 2020)
 
