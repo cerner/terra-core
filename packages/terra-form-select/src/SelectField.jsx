@@ -7,7 +7,7 @@ import Variants from './shared/_variants';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection.
+   * Whether a clear option is available to clear the selection, will use **`- Select -`** as the clear option.
    * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
    */
   allowClear: PropTypes.bool,
@@ -93,10 +93,6 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -147,7 +143,6 @@ const defaultProps = {
   maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
-  placeholder: undefined,
   required: false,
   selectAttrs: {},
   showOptional: false,
@@ -175,7 +170,6 @@ const SelectField = ({
   maxHeight,
   maxWidth,
   onChange,
-  placeholder,
   required,
   selectAttrs,
   selectId,
@@ -245,7 +239,6 @@ const SelectField = ({
         maxHeight={maxHeight || selectAttrs.maxHeight}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
-        placeholder={placeholder}
         required={required}
         value={value}
         variant={variant}

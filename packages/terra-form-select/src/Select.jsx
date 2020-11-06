@@ -11,7 +11,7 @@ import Tag from './TagSelect';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
+   * Whether a clear option is available to clear the selection, will use **`- Select -`** as the clear option.
    * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
    */
   allowClear: PropTypes.bool,
@@ -95,10 +95,6 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -134,7 +130,6 @@ const defaultProps = {
   onSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
-  placeholder: undefined,
   required: false,
   value: undefined,
   variant: 'default',

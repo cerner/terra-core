@@ -102,10 +102,6 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -130,7 +126,6 @@ const defaultProps = {
   onSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
-  placeholder: undefined,
   required: false,
   totalOptions: undefined,
   value: undefined,
@@ -235,14 +230,13 @@ class Frame extends React.Component {
   getDisplay(displayId, ariaDescribedBy, id) {
     const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required, value, inputId,
+      disabled, display, required, value, inputId, intl,
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
 
     const inputAttrs = {
       disabled,
-      placeholder,
       ref: this.setInput,
       onChange: this.handleSearch,
       onFocus: this.handleInputFocus,
@@ -273,7 +267,7 @@ class Frame extends React.Component {
             </li>
           ) : null}
         <li className={cx('search-wrapper')}>
-          <input {...inputAttrs} value={searchValue} />
+          <input {...inputAttrs} placeholder={intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })} value={searchValue} />
         </li>
       </ul>
     );
@@ -693,7 +687,6 @@ class Frame extends React.Component {
       onSearch,
       onSelect,
       optionFilter,
-      placeholder,
       required,
       totalOptions,
       value,
@@ -737,6 +730,10 @@ class Frame extends React.Component {
       maxSelectionCount,
       refCallback: this.setSelectMenuRef,
     };
+
+    if (customProps.placeholder) {
+      delete customProps.placeholder;
+    }
 
     return (
       <div

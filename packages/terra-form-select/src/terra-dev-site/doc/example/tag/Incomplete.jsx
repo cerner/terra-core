@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const IncompleteExample = () => (
-  <TagSelect placeholder="Select a color" required isIncomplete className={cx('form-select')}>
+  <TagSelect required isIncomplete className={cx('form-select')}>
     <TagSelect.Option value="blue" display="Blue" />
     <TagSelect.Option value="green" display="Green" />
     <TagSelect.Option value="purple" display="Purple" />

@@ -7,7 +7,7 @@ import Option from './shared/_Option';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection.
+   * Whether a clear option is available to clear the selection, will use **`- Select -`** as the clear option.
    */
   allowClear: PropTypes.bool,
   /**
@@ -80,10 +80,6 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
-   * Placeholder text.
-   */
-  placeholder: PropTypes.string,
-  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -123,7 +119,6 @@ const defaultProps = {
   maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
-  placeholder: undefined,
   required: false,
   selectAttrs: {},
   showOptional: false,
@@ -148,7 +143,6 @@ const SearchSelectField = ({
   maxHeight,
   maxWidth,
   onChange,
-  placeholder,
   required,
   selectAttrs,
   selectId,
@@ -168,6 +162,11 @@ const SearchSelectField = ({
     if (error && isInvalid) {
       ariaDescriptionIds = `${selectId}-error`;
     }
+  }
+
+  if (customProps.placeholder) {
+    // eslint-disable-next-line no-param-reassign
+    delete customProps.placeholder;
   }
 
   return (
@@ -199,7 +198,6 @@ const SearchSelectField = ({
         defaultValue={defaultValue}
         maxHeight={maxHeight || selectAttrs.maxHeight}
         onChange={onChange}
-        placeholder={placeholder}
         required={required}
         value={value}
       >

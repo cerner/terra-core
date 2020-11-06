@@ -9,7 +9,7 @@ const ControlledExample = () => {
   const [value, setValue] = useState('blue');
 
   return (
-    <Combobox placeholder="Select a color" value={value} onChange={setValue} className={cx('form-select')}>
+    <Combobox value={value} onChange={setValue} className={cx('form-select')}>
       <Combobox.Option value="blue" display="Blue" />
       <Combobox.Option value="green" display="Green" />
       <Combobox.Option value="purple" display="Purple" />

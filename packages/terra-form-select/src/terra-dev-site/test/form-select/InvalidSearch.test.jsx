@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const IncompleteSearch = () => (
   <div className={cx('content-wrapper')}>
-    <Select isInvalid placeholder="Select a color" variant="search" id="search">
+    <Select isInvalid variant="search" id="search">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />

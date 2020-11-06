@@ -9,7 +9,7 @@ const ControlledExample = () => {
   const [value, setValue] = useState('blue');
 
   return (
-    <SingleSelect placeholder="Select a color" value={value} onChange={setValue} className={cx('form-select')}>
+    <SingleSelect value={value} onChange={setValue} className={cx('form-select')}>
       <SingleSelect.Option value="blue" display="Blue" />
       <SingleSelect.Option value="green" display="Green" />
       <SingleSelect.Option value="purple" display="Purple" />

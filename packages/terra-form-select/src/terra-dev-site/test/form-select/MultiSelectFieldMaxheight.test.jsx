@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const MultiSelectFieldMaxheight = () => (
   <div className={cx('content-wrapper')}>
-    <MultiSelectField label="Multi select Field" placeholder="Select a number" selectId="multiSelectField" maxHeight={300}>
+    <MultiSelectField label="Multi select Field" selectId="multiSelectField" maxHeight={300}>
       <MultiSelectField.Option value="1" display="One" />
       <MultiSelectField.Option value="2" display="Two" />
       <MultiSelectField.Option value="3" display="Three" />
