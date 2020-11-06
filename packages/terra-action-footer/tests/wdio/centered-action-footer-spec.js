@@ -1,13 +1,13 @@
 Terra.describeViewports('CenteredActionFooter', ['small', 'medium'], () => {
-  describe('Multiple Actions', () => {
-    beforeEach(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-action-centered-action-footer'));
+  it('displays CenteredActionFooter with multiple actions', () => {
+    browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-action-centered-action-footer');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('multiple actions');
   });
 
-  describe('Single Action', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/single-action-centered-action-footer'));
+  it('displays CenteredActionFooter with single action', () => {
+    browser.url('/#/raw/tests/terra-action-footer/action-footer/single-action-centered-action-footer');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('single action');
   });
 });
