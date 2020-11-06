@@ -38,6 +38,7 @@ exports[`Frame correctly applies the theme context className for combobox varian
         aria-label="Terra.form.select.ariaLabel"
         aria-required="false"
         class="search-input"
+        placeholder="Terra.form.select.defaultDisplay"
         type="text"
       />
     </div>
@@ -96,7 +97,7 @@ exports[`Frame correctly applies the theme context className for default variant
       class="placeholder"
       id="terra-select-screen-reader-placeholder-3"
     >
-       
+      Terra.form.select.defaultDisplay
     </div>
   </div>
   <div
@@ -158,6 +159,7 @@ exports[`Frame correctly applies the theme context className for multiple varian
           aria-label="Terra.form.select.ariaLabel"
           aria-required="false"
           class="search-input"
+          placeholder="Terra.form.select.defaultDisplay"
           type="text"
           value=""
         />
@@ -219,6 +221,7 @@ exports[`Frame correctly applies the theme context className for search variant 
         aria-label="Terra.form.select.ariaLabel"
         aria-required="false"
         class="search-input"
+        placeholder="Terra.form.select.defaultDisplay"
         type="text"
       />
     </div>
@@ -282,6 +285,7 @@ exports[`Frame correctly applies the theme context className for tag variant 1`]
           aria-label="Terra.form.select.ariaLabel"
           aria-required="false"
           class="search-input"
+          placeholder="Terra.form.select.defaultDisplay"
           type="text"
           value=""
         />

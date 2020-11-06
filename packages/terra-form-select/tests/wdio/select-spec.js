@@ -1,10 +1,4 @@
 Terra.describeViewports('Select', ['tiny'], () => {
-  describe('should render an empty placeholder', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/empty-placeholder'));
-
-    Terra.it.validatesElement();
-  });
-
   describe('should render a placeholder', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-placeholder'));
 
