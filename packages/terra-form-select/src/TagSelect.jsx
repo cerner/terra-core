@@ -86,6 +86,10 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
+   * [Deprecated] Placeholder text.
+   */
+  placeholder: PropTypes.string,
+  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,

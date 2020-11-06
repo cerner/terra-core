@@ -23,6 +23,7 @@ class AllowClear extends React.Component {
         <Select
           allowClear
           id="allowclear"
+          placeholder="adcvfds"
           onChange={this.handleChange}
           value={this.state.value}
           variant="combobox"

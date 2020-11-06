@@ -7,7 +7,7 @@ import Variants from './shared/_variants';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use **`- Select -`** as the clear option.
+   * Whether an option is available to clear the selection, will use **`- Select -`** by default.
    * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
    */
   allowClear: PropTypes.bool,
@@ -92,6 +92,10 @@ const propTypes = {
    * Callback function triggered when the select value changes. function(value)
    */
   onChange: PropTypes.func,
+  /**
+   * [Deprecated] Placeholder text.
+   */
+  placeholder: PropTypes.string,
   /**
    * Whether the field is required.
    */

@@ -86,6 +86,10 @@ const propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * [Deprecated] Placeholder text.
+   */
+  placeholder: PropTypes.string,
+  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -189,6 +193,8 @@ const MultiSelectField = ({
   }
 
   if (customProps.placeholder) {
+    // eslint-disable-next-line no-console
+    console.warn('[WARN] Prop placeholder has been deprecated');
     // eslint-disable-next-line no-param-reassign
     delete customProps.placeholder;
   }

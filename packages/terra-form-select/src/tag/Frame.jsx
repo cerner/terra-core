@@ -102,6 +102,10 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
+   * [Deprecated] Placeholder text.
+   */
+  placeholder: PropTypes.string,
+  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,
@@ -732,6 +736,8 @@ class Frame extends React.Component {
     };
 
     if (customProps.placeholder) {
+      // eslint-disable-next-line no-console
+      console.warn('[WARN] Prop placeholder has been deprecated');
       delete customProps.placeholder;
     }
 

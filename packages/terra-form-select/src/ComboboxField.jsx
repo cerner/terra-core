@@ -7,7 +7,7 @@ import Option from './shared/_Option';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use **`- Select -`** as the clear option.
+   * Whether an option is available to clear the selection, will use **`- Select -`** by default.
    */
   allowClear: PropTypes.bool,
   /**
@@ -79,6 +79,10 @@ const propTypes = {
    * Callback function triggered when the select value changes. function(value)
    */
   onChange: PropTypes.func,
+  /**
+   * [Deprecated] Placeholder text.
+   */
+  placeholder: PropTypes.string,
   /**
    * Whether the field is required.
    */
@@ -165,6 +169,8 @@ const ComboboxField = ({
   }
 
   if (customProps.placeholder) {
+    // eslint-disable-next-line no-console
+    console.warn('[WARN] Prop placeholder has been deprecated');
     // eslint-disable-next-line no-param-reassign
     delete customProps.placeholder;
   }

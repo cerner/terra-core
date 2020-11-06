@@ -8,7 +8,7 @@ import SelectUtil from './shared/_SelectUtil';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use **`- Select -`** as the clear option.
+   * Whether an option is available to clear the selection, will use **`- Select -`** by default.
    */
   allowClear: PropTypes.bool,
   /**
@@ -88,6 +88,10 @@ const propTypes = {
    * Callback function invoked for each option on search change. function(searchValue, option)
    */
   optionFilter: PropTypes.func,
+  /**
+   * [Deprecated] Placeholder text.
+   */
+  placeholder: PropTypes.string,
   /**
    * Whether the field is required.
    */
