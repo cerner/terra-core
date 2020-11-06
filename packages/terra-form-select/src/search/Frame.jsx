@@ -102,7 +102,7 @@ const propTypes = {
   /**
    * [Deprecated] Placeholder text.
    *
-   * This is `dead code` and will not get used at all.
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -662,7 +662,7 @@ class Frame extends React.Component {
 
     if (customProps.placeholder) {
       // eslint-disable-next-line no-console
-      console.warn('[WARN] Prop placeholder has been deprecated');
+      console.warn('[WARN] The placeholder prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern');
       delete customProps.placeholder;
     }
 

@@ -97,7 +97,7 @@ const propTypes = {
   /**
    * [Deprecated] Placeholder text.
    *
-   * This is `dead code` and will not get used at all.
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**

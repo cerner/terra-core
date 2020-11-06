@@ -88,7 +88,7 @@ const propTypes = {
   /**
    * [Deprecated] Placeholder text.
    *
-   * This is `dead code` and will not get used at all.
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -196,7 +196,7 @@ const MultiSelectField = ({
 
   if (customProps.placeholder) {
     // eslint-disable-next-line no-console
-    console.warn('[WARN] Prop placeholder has been deprecated');
+    console.warn('[WARN] The placeholder prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern');
     // eslint-disable-next-line no-param-reassign
     delete customProps.placeholder;
   }
