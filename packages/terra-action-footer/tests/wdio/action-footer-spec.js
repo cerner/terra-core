@@ -1,31 +1,31 @@
-Terra.describeViewports('ActionFooter', ['small', 'medium'], () => {
-  describe('Multiple End Actions', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-end-action-footer'));
+Terra.describeViewports('actionFooter', ['small', 'medium'], () => {
+  it('displays ActionFooter with multiple end actions', () => {
+    browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-end-action-footer');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('multiple end actions');
   });
 
-  describe('Multiple Start Actions', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-start-action-footer'));
+  it('displays ActionFooter with multiple start actions', () => {
+    browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-start-action-footer');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('multiple start actions');
   });
 
-  describe('Single End Action', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/single-end-action-footer'));
+  it('displays ActionFooter with single end action', () => {
+    browser.url('/#/raw/tests/terra-action-footer/action-footer/single-end-action-footer');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('single end action');
   });
 
-  describe('Single Start Action', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/single-start-action-footer'));
+  it('displays ActionFooter with single start action', () => {
+    browser.url('/#/raw/tests/terra-action-footer/action-footer/single-start-action-footer');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('single start action');
   });
 
-  describe('Single Start and End Action', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-footer/action-footer/single-start-end-action-footer'));
+  it('displays ActionFooter with single start and end action', () => {
+    browser.url('/#/raw/tests/terra-action-footer/action-footer/single-start-end-action-footer');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('single start and end action');
   });
 });
