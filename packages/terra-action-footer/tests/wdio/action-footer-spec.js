@@ -1,4 +1,4 @@
-Terra.describeViewports('actionFooter', ['small', 'medium'], () => {
+Terra.describeViewports('ActionFooter', ['small', 'medium'], () => {
   it('displays ActionFooter with multiple end actions', () => {
     browser.url('/#/raw/tests/terra-action-footer/action-footer/multiple-end-action-footer');
 
