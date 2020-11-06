@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Removed
-  * Removed prop `placeholder` from all the variants of select.
-
 * Changed
   * Updated color for placeholder.
   * Updated default text in all variants for placeholder to be `- Select -`.
