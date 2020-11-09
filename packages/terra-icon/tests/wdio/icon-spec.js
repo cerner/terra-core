@@ -8,9 +8,9 @@ Terra.describeViewports('Icon', ['huge'], () => {
   });
 
   describe('HeightWidth', () => {
-    before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-height-width'));
 
     it('checks element', () => {
+      browser.url('/#/raw/tests/terra-icon/icon/icon-height-width');
       Terra.validates.element();
     });
   });
