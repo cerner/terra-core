@@ -11,7 +11,7 @@ import Tag from './TagSelect';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use **`- Select -`** as the clear option.
+   * The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.
    * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
    * This is not applicable to the `default` variant since this has been made the default behavior.
    */
@@ -101,6 +101,13 @@ const propTypes = {
    * Callback function invoked for each option on search change. function(searchValue, option)
    */
   optionFilter: PropTypes.func,
+  /**
+   * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
+   */
+  placeholder: PropTypes.string,
   /**
    * Whether the field is required.
    */

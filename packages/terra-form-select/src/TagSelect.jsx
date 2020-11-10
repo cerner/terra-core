@@ -86,6 +86,13 @@ const propTypes = {
    */
   optionFilter: PropTypes.func,
   /**
+   * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
+   */
+  placeholder: PropTypes.string,
+  /**
    * Whether the field is required.
    */
   required: PropTypes.bool,

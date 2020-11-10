@@ -1,10 +1,4 @@
 Terra.describeViewports('Select', ['tiny'], () => {
-  describe('should render a placeholder', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-placeholder'));
-
-    Terra.it.validatesElement();
-  });
-
   describe('should open the dropdown and honor the set max height', () => {
     before(() => browser.url('/#/raw/tests/terra-form-select/form-select/max-height'));
 
