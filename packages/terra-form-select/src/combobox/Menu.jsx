@@ -177,6 +177,110 @@ class Menu extends React.Component {
     document.removeEventListener('keydown', this.handleKeyDown);
   }
 
+  /**
+   * Handles keyboard interactions within the dropdown.
+   * @param {event} event - The key down event.
+   */
+  handleKeyDown(event) {
+    const { keyCode } = event;
+    const { active, children } = this.state;
+    const {
+      intl,
+      onSelect,
+      visuallyHiddenComponent,
+    } = this.props;
+
+    const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
+
+    if (keyCode === KeyCode.KEY_UP) {
+      this.clearScrollTimeout();
+      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
+      this.setState({ active: MenuUtil.findPrevious(children, active) }, this.scrollIntoView);
+      this.updateCurrentActiveScreenReader();
+    } else if (keyCode === KeyCode.KEY_DOWN) {
+      this.clearScrollTimeout();
+      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
+      this.setState({ active: MenuUtil.findNext(children, active) }, this.scrollIntoView);
+      this.updateCurrentActiveScreenReader();
+    } else if (keyCode === KeyCode.KEY_RETURN && active !== null) {
+      event.preventDefault();
+      this.setState({ closedViaKeyEvent: true });
+
+      const option = MenuUtil.findByValue(children, active);
+      if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
+        // Handles communicating the case where a clear option is selected to screen readers
+        if (this.props.clearOptionDisplay) {
+          const activeOption = this.menu.querySelector('[data-select-active]');
+          if (activeOption && activeOption.hasAttribute('data-terra-select-clear-option')) {
+            this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectCleared' });
+          }
+        }
+        // Handles communicating the case where a regular option is selected to screen readers.
+        /*
+        Detecting if browser is not Safari before updating aria-live as there is some odd behaivor
+        with VoiceOver on desktop, that causes the selected option to be read twice when this is
+        is added to aria-live container.
+        When we shift focus back to select, VoiceOver automatically reads the display text.
+        Using aria-hidden on the display does not prevent VO from reading the display text and so it
+        results in reading the display text followed by reading the aria-live message which is
+        the display text + 'selected'
+        */
+        if (!SharedUtil.isSafari()) {
+          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
+        }
+      }
+
+      onSelect(option.props.value, option);
+    } else if (keyCode === KeyCode.KEY_HOME) {
+      event.preventDefault();
+      this.setState({ active: MenuUtil.findFirst(children) });
+    } else if (keyCode === KeyCode.KEY_END) {
+      event.preventDefault();
+      this.setState({ active: MenuUtil.findLast(children) });
+    }
+  }
+
+  /**
+   * Communicates the selection or deselection of an option.
+   * @param {event} event - The click event triggering the callback.
+   * @param {ReactNode} option - The option that was clicked.
+   */
+  handleOptionClick(event, option) {
+    if (option.props.disabled || option !== this.downOption) {
+      return;
+    }
+
+    const { input, onSelect } = this.props;
+
+    if (onSelect) {
+      onSelect(option.props.value, option);
+    }
+
+    if (input) {
+      input.focus();
+    }
+  }
+
+  /**
+   * Sets the hovered option as the active value.
+   * @param {event} event - The mouse enter event.
+   * @param {ReactNode} option - The option that received the mouse enter event.
+   */
+  handleMouseEnter(event, option) {
+    // Prevents setting the active option on mouse enter if the keyboard scrolled the view.
+    if (this.scrollTimeout) {
+      return;
+    }
+
+    if (!option.props.disabled) {
+      this.setState({ active: option.props.value });
+    }
+
+    if (option.props.onMouseEnter) {
+      option.props.onMouseEnter(event);
+    }
+  }
+
   isActiveSelected() {
     return this.state.active === this.props.value;
   }
@@ -296,110 +400,6 @@ class Menu extends React.Component {
       }
       return option;
     });
-  }
-
-  /**
-   * Handles keyboard interactions within the dropdown.
-   * @param {event} event - The key down event.
-   */
-  handleKeyDown(event) {
-    const { keyCode } = event;
-    const { active, children } = this.state;
-    const {
-      intl,
-      onSelect,
-      visuallyHiddenComponent,
-    } = this.props;
-
-    const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
-
-    if (keyCode === KeyCode.KEY_UP) {
-      this.clearScrollTimeout();
-      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: MenuUtil.findPrevious(children, active) }, this.scrollIntoView);
-      this.updateCurrentActiveScreenReader();
-    } else if (keyCode === KeyCode.KEY_DOWN) {
-      this.clearScrollTimeout();
-      this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
-      this.setState({ active: MenuUtil.findNext(children, active) }, this.scrollIntoView);
-      this.updateCurrentActiveScreenReader();
-    } else if (keyCode === KeyCode.KEY_RETURN && active !== null) {
-      event.preventDefault();
-      this.setState({ closedViaKeyEvent: true });
-
-      const option = MenuUtil.findByValue(children, active);
-      if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
-        // Handles communicating the case where a clear option is selected to screen readers
-        if (this.props.clearOptionDisplay) {
-          const activeOption = this.menu.querySelector('[data-select-active]');
-          if (activeOption && activeOption.hasAttribute('data-terra-select-clear-option')) {
-            this.props.visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectCleared' });
-          }
-        }
-        // Handles communicating the case where a regular option is selected to screen readers.
-        /*
-        Detecting if browser is not Safari before updating aria-live as there is some odd behaivor
-        with VoiceOver on desktop, that causes the selected option to be read twice when this is
-        is added to aria-live container.
-        When we shift focus back to select, VoiceOver automatically reads the display text.
-        Using aria-hidden on the display does not prevent VO from reading the display text and so it
-        results in reading the display text followed by reading the aria-live message which is
-        the display text + 'selected'
-        */
-        if (!SharedUtil.isSafari()) {
-          this.props.visuallyHiddenComponent.current.innerText = `${option.props.display} ${selectedTxt}`;
-        }
-      }
-
-      onSelect(option.props.value, option);
-    } else if (keyCode === KeyCode.KEY_HOME) {
-      event.preventDefault();
-      this.setState({ active: MenuUtil.findFirst(children) });
-    } else if (keyCode === KeyCode.KEY_END) {
-      event.preventDefault();
-      this.setState({ active: MenuUtil.findLast(children) });
-    }
-  }
-
-  /**
-   * Communicates the selection or deselection of an option.
-   * @param {event} event - The click event triggering the callback.
-   * @param {ReactNode} option - The option that was clicked.
-   */
-  handleOptionClick(event, option) {
-    if (option.props.disabled || option !== this.downOption) {
-      return;
-    }
-
-    const { input, onSelect } = this.props;
-
-    if (onSelect) {
-      onSelect(option.props.value, option);
-    }
-
-    if (input) {
-      input.focus();
-    }
-  }
-
-  /**
-   * Sets the hovered option as the active value.
-   * @param {event} event - The mouse enter event.
-   * @param {ReactNode} option - The option that received the mouse enter event.
-   */
-  handleMouseEnter(event, option) {
-    // Prevents setting the active option on mouse enter if the keyboard scrolled the view.
-    if (this.scrollTimeout) {
-      return;
-    }
-
-    if (!option.props.disabled) {
-      this.setState({ active: option.props.value });
-    }
-
-    if (option.props.onMouseEnter) {
-      option.props.onMouseEnter(event);
-    }
   }
 
   /**
