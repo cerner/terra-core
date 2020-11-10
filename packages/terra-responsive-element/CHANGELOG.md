@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 5.25.0 - (November 10, 2020)
+
 * Fixed
   * Fixed build failures due to the react/sort-comp rule
 
