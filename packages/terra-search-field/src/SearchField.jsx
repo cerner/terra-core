@@ -129,13 +129,6 @@ class SearchField extends React.Component {
     this.clearSearchTimeout();
   }
 
-  setInputRef(node) {
-    this.inputRef = node;
-    if (this.props.inputRefCallback) {
-      this.props.inputRefCallback(node);
-    }
-  }
-
   handleClear(event) {
     // Pass along changes to consuming components using associated props
     if (this.props.onChange) {
@@ -167,14 +160,6 @@ class SearchField extends React.Component {
     }
   }
 
-  updateSearchText(searchText) {
-    if (typeof searchText !== 'undefined' && searchText !== this.searchText) {
-      this.searchText = searchText;
-      // Forcing update for clearButton rerender.
-      this.forceUpdate();
-    }
-  }
-
   handleInput(event) {
     const textValue = event.target.value;
     this.updateSearchText(textValue);
@@ -202,6 +187,21 @@ class SearchField extends React.Component {
       this.props.onSearch(searchText);
     } else if (this.props.onInvalidSearch) {
       this.props.onInvalidSearch(searchText);
+    }
+  }
+
+  setInputRef(node) {
+    this.inputRef = node;
+    if (this.props.inputRefCallback) {
+      this.props.inputRefCallback(node);
+    }
+  }
+
+  updateSearchText(searchText) {
+    if (typeof searchText !== 'undefined' && searchText !== this.searchText) {
+      this.searchText = searchText;
+      // Forcing update for clearButton rerender.
+      this.forceUpdate();
     }
   }
 

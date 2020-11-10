@@ -218,116 +218,6 @@ class Menu extends React.Component {
     document.removeEventListener('keydown', this.handleKeyDown);
   }
 
-  isActiveSelected() {
-    return this.props.value.includes(this.state.active);
-  }
-
-  updateNoResultsScreenReader() {
-    if (this.liveRegionTimeOut) {
-      clearTimeout(this.liveRegionTimeOut);
-    }
-
-    this.liveRegionTimeOut = setTimeout(() => {
-      const {
-        hasMaxSelection,
-        hasNoResults,
-      } = this.state;
-
-      const {
-        intl,
-        visuallyHiddenComponent,
-        searchValue,
-      } = this.props;
-
-      // Race condition can occur between calling timeout and unmounting this component.
-      if (!visuallyHiddenComponent || !visuallyHiddenComponent.current) {
-        return;
-      }
-
-      if (hasNoResults) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
-      } else if (hasMaxSelection) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.maxSelectionOption' }, { text: this.props.maxSelectionCount });
-      } else {
-        visuallyHiddenComponent.current.innerText = '';
-      }
-    }, 1000);
-  }
-
-  updateCurrentActiveScreenReader() {
-    const {
-      intl,
-      visuallyHiddenComponent,
-    } = this.props;
-
-    const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
-
-    if (this.menu !== null && this.state.active !== null) {
-      this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
-    }
-
-    // Announces options to screen readers as user navigates through them via keyboard
-    if (!visuallyHiddenComponent || !visuallyHiddenComponent.current) {
-      return;
-    }
-
-    const optGroupElement = MenuUtil.getOptGroupElement(this.props.children, this.state.active);
-    const element = MenuUtil.findByValue(this.props.children, this.state.active);
-
-    let displayText;
-    if (optGroupElement) {
-      displayText = intl.formatMessage({ id: 'Terra.form.select.optGroup' }, { text: `${optGroupElement.props.label}, ${element.props.display}` });
-    } else if (element) {
-      displayText = element.props.display;
-    }
-
-    if (element) {
-      if (element.props.display === '' && element.props.value === '') {
-        // Used for case where users selects clear option and opens
-        // dropdown again and navigates to clear option
-        visuallyHiddenComponent.current.innerText = clearSelectTxt;
-      } else if (this.isActiveSelected()) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText });
-      } else {
-        visuallyHiddenComponent.current.innerText = displayText;
-      }
-    }
-  }
-
-  /**
-   * Clears the scroll timeout.
-   */
-  clearScrollTimeout() {
-    clearTimeout(this.scrollTimeout);
-    this.scrollTimeout = null;
-  }
-
-  /**
-   * Clones the menu content with the necessary events.
-   * @param {ReactNode} object - The node being cloned.
-   * @return {array} - A cloned copy of the object.
-   */
-  clone(object) {
-    return React.Children.map(object, (option) => {
-      if (option.type.isOption) {
-        return React.cloneElement(option, {
-          id: `terra-select-option-${option.props.value}`,
-          isActive: option.props.value === this.state.active,
-          isCheckable: true,
-          isSelected: MenuUtil.isSelected(this.props.value, option.props.value),
-          variant: 'multiple',
-          onMouseDown: () => { this.downOption = option; },
-          onMouseUp: event => this.handleOptionClick(event, option),
-          onMouseEnter: event => this.handleMouseEnter(event, option),
-          ...(option.props.value === this.state.active) && { 'data-select-active': true },
-        });
-      } if (option.type.isOptGroup) {
-        return React.cloneElement(option, {}, this.clone(option.props.children));
-      }
-      return option;
-    });
-  }
-
   /**
    * Handles keyboard interactions within the dropdown.
    * @param {event} event - The key down event.
@@ -442,6 +332,116 @@ class Menu extends React.Component {
     if (option.props.onMouseEnter) {
       option.props.onMouseEnter(event);
     }
+  }
+
+  isActiveSelected() {
+    return this.props.value.includes(this.state.active);
+  }
+
+  updateNoResultsScreenReader() {
+    if (this.liveRegionTimeOut) {
+      clearTimeout(this.liveRegionTimeOut);
+    }
+
+    this.liveRegionTimeOut = setTimeout(() => {
+      const {
+        hasMaxSelection,
+        hasNoResults,
+      } = this.state;
+
+      const {
+        intl,
+        visuallyHiddenComponent,
+        searchValue,
+      } = this.props;
+
+      // Race condition can occur between calling timeout and unmounting this component.
+      if (!visuallyHiddenComponent || !visuallyHiddenComponent.current) {
+        return;
+      }
+
+      if (hasNoResults) {
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.noResults' }, { text: searchValue });
+      } else if (hasMaxSelection) {
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.maxSelectionOption' }, { text: this.props.maxSelectionCount });
+      } else {
+        visuallyHiddenComponent.current.innerText = '';
+      }
+    }, 1000);
+  }
+
+  updateCurrentActiveScreenReader() {
+    const {
+      intl,
+      visuallyHiddenComponent,
+    } = this.props;
+
+    const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
+
+    if (this.menu !== null && this.state.active !== null) {
+      this.menu.setAttribute('aria-activedescendant', `terra-select-option-${this.state.active}`);
+    }
+
+    // Announces options to screen readers as user navigates through them via keyboard
+    if (!visuallyHiddenComponent || !visuallyHiddenComponent.current) {
+      return;
+    }
+
+    const optGroupElement = MenuUtil.getOptGroupElement(this.props.children, this.state.active);
+    const element = MenuUtil.findByValue(this.props.children, this.state.active);
+
+    let displayText;
+    if (optGroupElement) {
+      displayText = intl.formatMessage({ id: 'Terra.form.select.optGroup' }, { text: `${optGroupElement.props.label}, ${element.props.display}` });
+    } else if (element) {
+      displayText = element.props.display;
+    }
+
+    if (element) {
+      if (element.props.display === '' && element.props.value === '') {
+        // Used for case where users selects clear option and opens
+        // dropdown again and navigates to clear option
+        visuallyHiddenComponent.current.innerText = clearSelectTxt;
+      } else if (this.isActiveSelected()) {
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText });
+      } else {
+        visuallyHiddenComponent.current.innerText = displayText;
+      }
+    }
+  }
+
+  /**
+   * Clears the scroll timeout.
+   */
+  clearScrollTimeout() {
+    clearTimeout(this.scrollTimeout);
+    this.scrollTimeout = null;
+  }
+
+  /**
+   * Clones the menu content with the necessary events.
+   * @param {ReactNode} object - The node being cloned.
+   * @return {array} - A cloned copy of the object.
+   */
+  clone(object) {
+    return React.Children.map(object, (option) => {
+      if (option.type.isOption) {
+        return React.cloneElement(option, {
+          id: `terra-select-option-${option.props.value}`,
+          isActive: option.props.value === this.state.active,
+          isCheckable: true,
+          isSelected: MenuUtil.isSelected(this.props.value, option.props.value),
+          variant: 'multiple',
+          onMouseDown: () => { this.downOption = option; },
+          onMouseUp: event => this.handleOptionClick(event, option),
+          onMouseEnter: event => this.handleMouseEnter(event, option),
+          ...(option.props.value === this.state.active) && { 'data-select-active': true },
+        });
+      } if (option.type.isOptGroup) {
+        return React.cloneElement(option, {}, this.clone(option.props.children));
+      }
+      return option;
+    });
   }
 
   /**
