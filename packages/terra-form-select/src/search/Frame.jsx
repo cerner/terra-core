@@ -662,7 +662,7 @@ class Frame extends React.Component {
 
     if (customProps.placeholder) {
       // eslint-disable-next-line no-console
-      console.warn('[WARN] The placeholder prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern');
+      console.warn('[WARN] The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.');
       delete customProps.placeholder;
     }
 
