@@ -1,41 +1,41 @@
 Terra.describeViewports('Arrange', ['tiny', 'medium'], () => {
-  describe('Aligned All', () => {
-    before(() => browser.url('/#/raw/tests/terra-arrange/arrange/aligned-all-arrange'));
-    Terra.it.validatesElement();
+  it('displays Arrange with aligned all', () => {
+    browser.url('/#/raw/tests/terra-arrange/arrange/aligned-all-arrange');
+    Terra.validates.element('default');
   });
 
-  describe('Aligned All Fit End Fill', () => {
-    before(() => browser.url('/#/raw/tests/terra-arrange/arrange/aligned-fit-end-fill-arrange'));
-    Terra.it.validatesElement();
+  it('displays Arrange with aligned all fit end fill', () => {
+    browser.url('/#/raw/tests/terra-arrange/arrange/aligned-fit-end-fill-arrange');
+    Terra.validates.element('aligned all fit end fill');
   });
 
-  describe('Aligned All Fit Start Fill', () => {
-    before(() => browser.url('/#/raw/tests/terra-arrange/arrange/aligned-fit-start-fill-arrange'));
-    Terra.it.validatesElement();
+  it('displays Arrange with aligned all fit start fill', () => {
+    browser.url('/#/raw/tests/terra-arrange/arrange/aligned-fit-start-fill-arrange');
+    Terra.validates.element('aligned all fit start fill');
   });
 
-  describe('Aligned Individually Fit Start', () => {
-    before(() => browser.url('/#/raw/tests/terra-arrange/arrange/individually-aligned-fit-start'));
-    Terra.it.validatesElement();
+  it('displays Arrange with aligned individually fit start', () => {
+    browser.url('/#/raw/tests/terra-arrange/arrange/individually-aligned-fit-start');
+    Terra.validates.element('aligned individually fit start');
   });
 
-  describe('Aligned Individually Fill', () => {
-    before(() => browser.url('/#/raw/tests/terra-arrange/arrange/individually-aligned-fill'));
-    Terra.it.validatesElement();
+  it('displays Arrange with aligned individually fill', () => {
+    browser.url('/#/raw/tests/terra-arrange/arrange/individually-aligned-fill');
+    Terra.validates.element('aligned individually fill');
   });
 
-  describe('Aligned Individually Fit End', () => {
-    before(() => browser.url('/#/raw/tests/terra-arrange/arrange/individually-aligned-fit-end'));
-    Terra.it.validatesElement();
+  it('displays Arrange with aligned individually fit end', () => {
+    browser.url('/#/raw/tests/terra-arrange/arrange/individually-aligned-fit-end');
+    Terra.validates.element('aligned individually fit end');
   });
 
-  describe('Aligned All Arrange Long Words', () => {
-    before(() => browser.url('/#/raw/tests/terra-arrange/arrange/aligned-all-long-words'));
-    Terra.it.validatesElement();
+  it('displays Arrange with aligned all long words', () => {
+    browser.url('/#/raw/tests/terra-arrange/arrange/aligned-all-long-words');
+    Terra.validates.element('aligned all long words');
   });
 
-  describe('Align stretch with 20% max-widths on containers using attribute props', () => {
-    before(() => browser.url('/#/raw/tests/terra-arrange/arrange/aligned-stretch-max-width'));
-    Terra.it.validatesElement();
+  it('displays Arrange with align stretch with 20% max-widths on containers using attribute props', () => {
+    browser.url('/#/raw/tests/terra-arrange/arrange/aligned-stretch-max-width');
+    Terra.validates.element('align stretch with 20% max-widths on containers using attribute props');
   });
 });
