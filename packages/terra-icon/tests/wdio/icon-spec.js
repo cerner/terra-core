@@ -8,7 +8,6 @@ Terra.describeViewports('Icon', ['huge'], () => {
   });
 
   describe('HeightWidth', () => {
-
     it('checks element', () => {
       browser.url('/#/raw/tests/terra-icon/icon/icon-height-width');
       Terra.validates.element();
