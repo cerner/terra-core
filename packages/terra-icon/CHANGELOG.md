@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-* Bumped `one-cerner-style-icons` to v1.34.0
+* Changed
+  * Bumped `one-cerner-style-icons` to v1.34.0
 
 ## 3.37.0 - (October 27, 2020)
 
