@@ -1,5 +1,5 @@
 Terra.describeViewports('ActionHeader', ['tiny', 'medium', 'large'], () => {
-  it('Displays default ActionHeader', () => {
+  it('displays default ActionHeader', () => {
     browser.url('/raw/tests/terra-action-header/action-header/default-action-header');
 
     Terra.validates.element('default');
