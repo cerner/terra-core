@@ -106,11 +106,6 @@ class ResponsiveElement extends React.Component {
     }
   }
 
-  setContainer(node) {
-    if (node === null) { return; } // Ref callbacks happen on mount and unmount, element will be null on unmount
-    this.container = this.props.responsiveTo === 'parent' ? node.parentNode : null;
-  }
-
   handleResize(width) {
     const {
       onChange,
@@ -159,6 +154,11 @@ class ResponsiveElement extends React.Component {
 
   handleWindowResize() {
     this.handleResize(window.innerWidth);
+  }
+
+  setContainer(node) {
+    if (node === null) { return; } // Ref callbacks happen on mount and unmount, element will be null on unmount
+    this.container = this.props.responsiveTo === 'parent' ? node.parentNode : null;
   }
 
   render() {
