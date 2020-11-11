@@ -46,13 +46,6 @@ class DropdownList extends React.Component {
     this.listRef = null;
   }
 
-  changeFocusState(index) {
-    // the div inside the li is what is actually focusable so need to go 2 layers down
-    this.listRef.childNodes[index].childNodes[0].focus();
-
-    this.setState({ focused: index });
-  }
-
   handleKeyDown(event) {
     const { keyCode } = event;
     const { focused } = this.state;
@@ -131,6 +124,13 @@ class DropdownList extends React.Component {
     if (index !== -1) {
       this.setState({ focused: index });
     }
+  }
+
+  changeFocusState(index) {
+    // the div inside the li is what is actually focusable so need to go 2 layers down
+    this.listRef.childNodes[index].childNodes[0].focus();
+
+    this.setState({ focused: index });
   }
 
   /**
