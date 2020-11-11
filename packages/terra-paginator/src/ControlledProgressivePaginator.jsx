@@ -49,13 +49,6 @@ class ControlledProgressivePaginator extends React.Component {
     };
   }
 
-  setPaginator(value) {
-    const showReducedPaginator = value === 'tiny';
-    if (this.state.showReducedPaginator !== showReducedPaginator) {
-      this.setState({ showReducedPaginator });
-    }
-  }
-
   handlePageChange(index) {
     return (event) => {
       if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
@@ -64,6 +57,13 @@ class ControlledProgressivePaginator extends React.Component {
 
       this.props.onPageChange(index);
     };
+  }
+
+  setPaginator(value) {
+    const showReducedPaginator = value === 'tiny';
+    if (this.state.showReducedPaginator !== showReducedPaginator) {
+      this.setState({ showReducedPaginator });
+    }
   }
 
   defaultProgressivePaginator() {

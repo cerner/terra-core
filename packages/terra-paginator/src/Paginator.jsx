@@ -57,13 +57,6 @@ class Paginator extends React.Component {
     this.setPaginator = this.setPaginator.bind(this);
   }
 
-  setPaginator(event) {
-    const showReducedPaginator = event === 'tiny';
-    if (this.state.showReducedPaginator !== showReducedPaginator) {
-      this.setState({ showReducedPaginator });
-    }
-  }
-
   handlePageChange(index) {
     return (event) => {
       if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
@@ -84,6 +77,13 @@ class Paginator extends React.Component {
 
       return false;
     };
+  }
+
+  setPaginator(event) {
+    const showReducedPaginator = event === 'tiny';
+    if (this.state.showReducedPaginator !== showReducedPaginator) {
+      this.setState({ showReducedPaginator });
+    }
   }
 
   buildPageButtons(totalPages, onClick) {

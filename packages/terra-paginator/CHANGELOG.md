@@ -8,6 +8,11 @@
 * Fixed
   * Fixed paginator not considering `totalCount` when `itemCountPerPage` was not provided.
 
+## 2.65.0 - (November 10, 2020)
+
+* Fixed
+  * Fixed build failures due to the react/sort-comp rule
+
 ## 2.64.0 - (October 27, 2020)
 
 * Changed
