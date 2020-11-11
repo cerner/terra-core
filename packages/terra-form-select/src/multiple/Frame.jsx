@@ -518,6 +518,18 @@ class Frame extends React.Component {
   }
 
   /**
+   * Toggles the dropdown open or closed.
+   */
+  toggleDropdown(event) {
+    if (this.state.isOpen) {
+      this.closeDropdown();
+    } else {
+      this.openDropdown(event);
+    }
+  }
+
+
+  /**
    * Determines compatible aria-label string based on if one is provided via props
    * Falls back to the string 'Search' if no label is provided
    */
