@@ -6,7 +6,7 @@ Terra.describeViewports('ActionHeader', ['tiny', 'medium', 'large'], () => {
   });
 
   it('displays ActionHeader with back', () => {
-    before(() => browser.url('/raw/tests/terra-action-header/action-header/back-action-header'));
+    browser.url('/raw/tests/terra-action-header/action-header/back-action-header');
 
     Terra.validates.element('back');
   });
@@ -14,7 +14,7 @@ Terra.describeViewports('ActionHeader', ['tiny', 'medium', 'large'], () => {
   it('displays ActionHeader with back and close', () => {
     browser.url('/raw/tests/terra-action-header/action-header/back-close-action-header');
 
-    Terra.validates.element('back close ');
+    Terra.validates.element('back close');
   });
 
   it('displays ActionHeader with close', () => {
