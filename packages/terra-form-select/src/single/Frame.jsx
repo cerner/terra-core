@@ -191,76 +191,6 @@ class Frame extends React.Component {
     clearTimeout(this.debounceTimer);
   }
 
-  setSelectMenuRef(element) {
-    this.selectMenu = element;
-  }
-
-  getDisplay(displayId, placeholderId) {
-    const {
-      children, display, intl, isFilterStyle,
-    } = this.props;
-
-    if (!isFilterStyle && !(display && MenuUtil.findByDisplay(children, display))) {
-      return (<div id={placeholderId} className={cx('placeholder')}>{intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' }) || '\xa0'}</div>);
-    }
-
-    if (display && MenuUtil.findByDisplay(children, display)) {
-      return (<span id={displayId}>{display}</span>);
-    }
-    if (children) {
-      return (<span id={displayId}>{MenuUtil.findFirstDisplay(children)}</span>);
-    }
-    return null;
-  }
-
-  /**
-   * Closes the dropdown.
-   */
-  closeDropdown() {
-    this.setState({
-      isAbove: false,
-      isFocused: document.activeElement === this.select,
-      isOpen: false,
-      isPositioned: false,
-    });
-  }
-
-  /**
-   * Opens the dropdown.
-   */
-  openDropdown() {
-    if (this.state.isOpen || this.props.disabled) {
-      return;
-    }
-
-    this.setState({ isOpen: true, isPositioned: false });
-  }
-
-  /**
-   * Positions the dropdown to utilize the most available space.
-   */
-  positionDropdown() {
-    if (!this.state.isOpen) {
-      return;
-    }
-
-    const { dropdownAttrs, maxHeight } = this.props;
-
-    // Sets Focus to dropdown menu after dropdown menu is postioned.
-    const moveFocusToDropdown = () => {
-      if (this.state.isPositioned) {
-        this.dropdown.removeAttribute('inert');
-        this.dropdown.removeAttribute('aria-hidden');
-        this.selectMenu.setAttribute('tabIndex', '0');
-      }
-      if (this.selectMenu) {
-        this.selectMenu.focus();
-      }
-    };
-
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight), moveFocusToDropdown);
-  }
-
   /**
    * Handles the blur event.
    */
@@ -382,6 +312,76 @@ class Frame extends React.Component {
     if (this.props.onSelect) {
       this.props.onSelect(value, option);
     }
+  }
+
+  setSelectMenuRef(element) {
+    this.selectMenu = element;
+  }
+
+  getDisplay(displayId, placeholderId) {
+    const {
+      children, display, intl, isFilterStyle,
+    } = this.props;
+
+    if (!isFilterStyle && !(display && MenuUtil.findByDisplay(children, display))) {
+      return (<div id={placeholderId} className={cx('placeholder')}>{intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' }) || '\xa0'}</div>);
+    }
+
+    if (display && MenuUtil.findByDisplay(children, display)) {
+      return (<span id={displayId}>{display}</span>);
+    }
+    if (children) {
+      return (<span id={displayId}>{MenuUtil.findFirstDisplay(children)}</span>);
+    }
+    return null;
+  }
+
+  /**
+   * Closes the dropdown.
+   */
+  closeDropdown() {
+    this.setState({
+      isAbove: false,
+      isFocused: document.activeElement === this.select,
+      isOpen: false,
+      isPositioned: false,
+    });
+  }
+
+  /**
+   * Opens the dropdown.
+   */
+  openDropdown() {
+    if (this.state.isOpen || this.props.disabled) {
+      return;
+    }
+
+    this.setState({ isOpen: true, isPositioned: false });
+  }
+
+  /**
+   * Positions the dropdown to utilize the most available space.
+   */
+  positionDropdown() {
+    if (!this.state.isOpen) {
+      return;
+    }
+
+    const { dropdownAttrs, maxHeight } = this.props;
+
+    // Sets Focus to dropdown menu after dropdown menu is positioned.
+    const moveFocusToDropdown = () => {
+      if (this.state.isPositioned) {
+        this.dropdown.removeAttribute('inert');
+        this.dropdown.removeAttribute('aria-hidden');
+        this.selectMenu.setAttribute('tabIndex', '0');
+      }
+      if (this.selectMenu) {
+        this.selectMenu.focus();
+      }
+    };
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight), moveFocusToDropdown);
   }
 
   /**

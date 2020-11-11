@@ -212,130 +212,6 @@ class Frame extends React.Component {
     clearTimeout(this.debounceTimer);
   }
 
-  setInput(input) {
-    this.input = input;
-  }
-
-  setSelectMenuRef(element) {
-    this.selectMenu = element;
-  }
-
-  getDisplay(ariaDescribedBy, id) {
-    const { hasSearchChanged, searchValue } = this.state;
-    const {
-      disabled, display, required, inputId, intl,
-    } = this.props;
-
-    const inputAttrs = {
-      disabled,
-      ref: this.setInput,
-      onChange: this.handleSearch,
-      onFocus: this.handleInputFocus,
-      onBlur: this.handleInputBlur,
-      onMouseDown: this.handleInputMouseDown,
-      'aria-label': this.ariaLabel(),
-      'aria-describedby': ariaDescribedBy,
-      'aria-disabled': disabled,
-      'aria-owns': this.state.isOpen ? id : undefined,
-      type: 'text',
-      className: cx('search-input'),
-      required,
-      'aria-required': required,
-      id: inputId,
-    };
-    const value = hasSearchChanged ? searchValue : display;
-
-    return (
-      <div className={cx('content')}>
-        <input {...inputAttrs} placeholder={intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })} value={value} />
-      </div>
-    );
-  }
-
-  /**
-   * Closes the dropdown.
-   */
-  closeDropdown() {
-    this.setState({
-      isAbove: false,
-      isFocused: document.activeElement === this.input || document.activeElement === this.select,
-      isOpen: false,
-      isPositioned: false,
-      hasSearchChanged: false,
-      searchValue: '',
-    });
-
-    // 'Tag' and 'Combobox' variants select the current search value when the component loses focus.
-    const { searchValue } = this.state;
-    if (Frame.shouldAddOptionOnBlur(this.props, this.state)) {
-      // NOTE: Since 'Combobox' does not allow blank strings to be created within the options dropdown,
-      // a blank input string should be explicitly converted into an empty string. This ensures that
-      // on blur, Combobox updates the search field to be an empty string when the user inputs a blank string.
-      // Upon failing to do so, Combobox resets the search field back to a previously selected value.
-      const freeText = searchValue.trim().length === 0 ? '' : searchValue;
-      if (this.props.onSelect) {
-        this.props.onSelect(freeText);
-      }
-    }
-  }
-
-  /**
-   * Opens the dropdown.
-   */
-  openDropdown(event) {
-    if (this.state.isOpen || this.props.disabled) {
-      return;
-    }
-
-    /**
-     * Avoids focusing the input if the toggle button is used to open the select menu.
-     * This is to avoid an issue with VoiceOver on iOS where shifting to toggle button while the
-     * input is focused / onScreen keyboard is open unexpected focus shift when the onScreen
-     * keyboard is closed
-     */
-    if (event && event.target
-      && (event.target.hasAttribute('data-terra-form-select-toggle-button')
-      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
-      this.setState({ isOpen: true, isPositioned: false });
-
-      FrameUtil.shiftFocusToMenu(this);
-      return;
-    }
-    if (event.target.hasAttribute('data-terra-form-select-toggle')
-    || event.target.className.includes('arrow-icon')) {
-      this.input.focus();
-    }
-
-    if (this.input) {
-      this.input.focus();
-    } else {
-      FrameUtil.shiftFocusToMenu(this);
-    }
-
-    this.setState({ isOpen: true, isPositioned: false });
-  }
-
-  /**
-   * Positions the dropdown to utilize the most available space.
-   */
-  positionDropdown() {
-    if (!this.state.isOpen) {
-      return;
-    }
-
-    const updateDropdownAttributes = () => {
-      if (this.state.isPositioned) {
-        this.dropdown.removeAttribute('inert');
-        this.dropdown.removeAttribute('aria-hidden');
-        this.selectMenu.setAttribute('tabIndex', '0');
-      }
-    };
-
-    const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
-
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible), updateDropdownAttributes);
-  }
-
   /**
    * Handles the blur event.
    */
@@ -493,6 +369,130 @@ class Frame extends React.Component {
     if (this.props.onSelect) {
       this.props.onSelect(value, option);
     }
+  }
+
+  setInput(input) {
+    this.input = input;
+  }
+
+  setSelectMenuRef(element) {
+    this.selectMenu = element;
+  }
+
+  getDisplay(ariaDescribedBy, id) {
+    const { hasSearchChanged, searchValue } = this.state;
+    const {
+      disabled, display, required, inputId, intl,
+    } = this.props;
+
+    const inputAttrs = {
+      disabled,
+      ref: this.setInput,
+      onChange: this.handleSearch,
+      onFocus: this.handleInputFocus,
+      onBlur: this.handleInputBlur,
+      onMouseDown: this.handleInputMouseDown,
+      'aria-label': this.ariaLabel(),
+      'aria-describedby': ariaDescribedBy,
+      'aria-disabled': disabled,
+      'aria-owns': this.state.isOpen ? id : undefined,
+      type: 'text',
+      className: cx('search-input'),
+      required,
+      'aria-required': required,
+      id: inputId,
+    };
+    const value = hasSearchChanged ? searchValue : display;
+
+    return (
+      <div className={cx('content')}>
+        <input {...inputAttrs} placeholder={intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })} value={value} />
+      </div>
+    );
+  }
+
+  /**
+   * Closes the dropdown.
+   */
+  closeDropdown() {
+    this.setState({
+      isAbove: false,
+      isFocused: document.activeElement === this.input || document.activeElement === this.select,
+      isOpen: false,
+      isPositioned: false,
+      hasSearchChanged: false,
+      searchValue: '',
+    });
+
+    // 'Tag' and 'Combobox' variants select the current search value when the component loses focus.
+    const { searchValue } = this.state;
+    if (Frame.shouldAddOptionOnBlur(this.props, this.state)) {
+      // NOTE: Since 'Combobox' does not allow blank strings to be created within the options dropdown,
+      // a blank input string should be explicitly converted into an empty string. This ensures that
+      // on blur, Combobox updates the search field to be an empty string when the user inputs a blank string.
+      // Upon failing to do so, Combobox resets the search field back to a previously selected value.
+      const freeText = searchValue.trim().length === 0 ? '' : searchValue;
+      if (this.props.onSelect) {
+        this.props.onSelect(freeText);
+      }
+    }
+  }
+
+  /**
+   * Opens the dropdown.
+   */
+  openDropdown(event) {
+    if (this.state.isOpen || this.props.disabled) {
+      return;
+    }
+
+    /**
+     * Avoids focusing the input if the toggle button is used to open the select menu.
+     * This is to avoid an issue with VoiceOver on iOS where shifting to toggle button while the
+     * input is focused / onScreen keyboard is open unexpected focus shift when the onScreen
+     * keyboard is closed
+     */
+    if (event && event.target
+      && (event.target.hasAttribute('data-terra-form-select-toggle-button')
+      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
+      this.setState({ isOpen: true, isPositioned: false });
+
+      FrameUtil.shiftFocusToMenu(this);
+      return;
+    }
+    if (event.target.hasAttribute('data-terra-form-select-toggle')
+    || event.target.className.includes('arrow-icon')) {
+      this.input.focus();
+    }
+
+    if (this.input) {
+      this.input.focus();
+    } else {
+      FrameUtil.shiftFocusToMenu(this);
+    }
+
+    this.setState({ isOpen: true, isPositioned: false });
+  }
+
+  /**
+   * Positions the dropdown to utilize the most available space.
+   */
+  positionDropdown() {
+    if (!this.state.isOpen) {
+      return;
+    }
+
+    const updateDropdownAttributes = () => {
+      if (this.state.isPositioned) {
+        this.dropdown.removeAttribute('inert');
+        this.dropdown.removeAttribute('aria-hidden');
+        this.selectMenu.setAttribute('tabIndex', '0');
+      }
+    };
+
+    const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible), updateDropdownAttributes);
   }
 
   /**

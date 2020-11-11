@@ -12,6 +12,11 @@
   * Updated default placeholder text for all variants to be `- Select -`.
   * Updated test and example to remove the use of placeholder.
 
+## 6.20.0 - (November 10, 2020)
+
+* Fixed
+  * Fixed build failures due to the react/sort-comp rule
+
 ## 6.19.0 - (October 27, 2020)
 
 * Added

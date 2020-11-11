@@ -10,14 +10,14 @@ class SearchFieldFocus extends React.Component {
     this.state = { searchText: '' };
   }
 
-  onChange(event, text) {
-    this.setState({ searchText: text });
-  }
-
   handleButtonClick() {
     if (this.searchInput) {
       this.searchInput.focus();
     }
+  }
+
+  onChange(event, text) {
+    this.setState({ searchText: text });
   }
 
   render() {
