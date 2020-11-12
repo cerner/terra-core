@@ -1,0 +1,16 @@
+@import './orion-fusion-theme/IconHazardLow.module';
+@import './clinical-lowlight-theme/IconHazardLow.module';
+
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconHazardLow {
+    circle {
+      fill: var(--terra-icon-hazard-low-circle-fill, #0092e0);
+    }
+
+    path {
+      fill: var(--terra-icon-hazard-low-path-fill, #fff);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */
