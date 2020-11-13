@@ -1,208 +1,202 @@
 Terra.describeViewports('Button', ['tiny'], () => {
   describe('Neutral', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-button/button/variants/neutral-button');
+    it('displays default neutral Button', () => {
+      browser.url('/raw/tests/terra-button/button/variants/neutral-button');
       browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
+
+      Terra.validates.element('default', { selector: '#neutral' });
     });
 
-    Terra.it.validatesElement({ selector: '#neutral' });
+    it('displays neutral Button with keyboard focus', () => {
+      browser.keys('Tab');
 
-    describe('Neutral-Keyboard Focus', () => {
-      before(() => {
-        browser.keys('Tab');
-      });
-
-      Terra.it.validatesElement({ selector: '#neutral' });
+      Terra.validates.element('neutral-keyboard focus', { selector: '#neutral' });
     });
 
-    describe('Neutral-Active', () => {
-      before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
+    it('displays Neutral-Active Button', () => {
+      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
 
-      Terra.it.validatesElement('active', { selector: '#neutralActive' });
-      Terra.it.validatesElement('active and focused', { selector: '#neutralActiveFocusSpan' });
+      Terra.validates.element('active', { selector: '#neutralActive' });
+      Terra.validates.element('active and focused', { selector: '#neutralActiveFocusSpan' });
     });
   });
 
   describe('Emphasis', () => {
-    before(() => browser.url('/#/raw/tests/terra-button/button/variants/emphasis-button'));
+    it('displays default emphasis Button', () => {
+      browser.url('/raw/tests/terra-button/button/variants/emphasis-button');
 
-    Terra.it.validatesElement({ selector: '#emphasis' });
-
-    describe('Emphasis-Keyboard Focus', () => {
-      before(() => browser.keys('Tab'));
-
-      Terra.it.validatesElement({ selector: '#emphasis' });
+      Terra.validates.element('default', { selector: '#emphasis' });
     });
 
-    describe('Emphasis-Active', () => {
-      before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
+    it('displays emphasis Button with keyboard focus', () => {
+      browser.keys('Tab');
 
-      Terra.it.validatesElement('active', { selector: '#emphasisActive' });
-      Terra.it.validatesElement('active and focused', { selector: '#emphasisActiveFocusSpan' });
+      Terra.validates.element('emphasis-keyboard focus', { selector: '#emphasis' });
+    });
+
+    it('displays emphasis-active Button', () => {
+      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+
+      Terra.validates.element('active', { selector: '#emphasisActive' });
+      Terra.validates.element('active and focused', { selector: '#emphasisActiveFocusSpan' });
     });
   });
 
   describe('Ghost', () => {
-    before(() => browser.url('/#/raw/tests/terra-button/button/variants/ghost-button'));
+    it('displays default ghost Button', () => {
+      browser.url('/raw/tests/terra-button/button/variants/ghost-button');
 
-    Terra.it.validatesElement({ selector: '#ghost' });
-
-    describe('Ghost-Keyboard Focus', () => {
-      before(() => browser.keys('Tab'));
-
-      Terra.it.validatesElement({ selector: '#ghost' });
+      Terra.validates.element('default', { selector: '#ghost' });
     });
 
-    describe('Ghost-Active', () => {
-      before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
+    it('displays ghost Button with keyboard focus', () => {
+      browser.keys('Tab');
 
-      Terra.it.validatesElement('active', { selector: '#ghostActive' });
-      Terra.it.validatesElement('active and focused', { selector: '#ghostActiveFocusSpan' });
+      Terra.validates.element('ghost-keyboard focus', { selector: '#ghost' });
+    });
+
+    it('displays ghost-active Button', () => {
+      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+
+      Terra.validates.element('active', { selector: '#ghostActive' });
+      Terra.validates.element('active and focused', { selector: '#ghostActiveFocusSpan' });
     });
   });
 
   describe('De-emphasis', () => {
-    before(() => browser.url('/#/raw/tests/terra-button/button/variants/deemphasis-button'));
+    it('displays default de-emphasis Button', () => {
+      browser.url('/raw/tests/terra-button/button/variants/deemphasis-button');
 
-    Terra.it.validatesElement({ selector: '#de-emphasis' });
-
-    describe('De-emphasis-Keyboard Focus', () => {
-      before(() => browser.keys('Tab'));
-
-      Terra.it.validatesElement({ selector: '#de-emphasis' });
+      Terra.validates.element('default', { selector: '#de-emphasis' });
     });
 
-    describe('De-emphasis-Active', () => {
-      before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
+    it('displays de-emphasis Button with keyboard focus', () => {
+      browser.keys('Tab');
 
-      Terra.it.validatesElement('active', { selector: '#de-emphasisActive' });
-      Terra.it.validatesElement('active and focused', { selector: '#de-emphasisActiveFocusSpan' });
+      Terra.validates.element('de-emphasis-keyboard focus', { selector: '#de-emphasis' });
+    });
+
+    it('displays de-emphasis-active Button', () => {
+      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+
+      Terra.validates.element('active', { selector: '#de-emphasisActive' });
+      Terra.validates.element('active and focused', { selector: '#de-emphasisActiveFocusSpan' });
     });
   });
 
   describe('Action', () => {
-    before(() => browser.url('/#/raw/tests/terra-button/button/variants/action-button'));
+    it('displays default action Button', () => {
+      browser.url('/raw/tests/terra-button/button/variants/action-button');
 
-    Terra.it.validatesElement({ selector: '#action' });
-
-    describe('Action-Keyboard Focus', () => {
-      before(() => browser.keys('Tab'));
-
-      Terra.it.validatesElement({ selector: '#action' });
+      Terra.validates.element('default', { selector: '#action' });
     });
 
-    describe('Action-Active', () => {
-      before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
+    it('displays action Button with keyboard focus', () => {
+      browser.keys('Tab');
 
-      Terra.it.validatesElement('active', { selector: '#actionActive' });
-      Terra.it.validatesElement('active and focused', { selector: '#actionActiveFocusSpan' });
+      Terra.validates.element('action-keyboard focus', { selector: '#action' });
+    });
+
+    it('displays action-active Button', () => {
+      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+
+      Terra.validates.element('active', { selector: '#actionActive' });
+      Terra.validates.element('active and focused', { selector: '#actionActiveFocusSpan' });
     });
   });
 
   describe('Utility', () => {
-    before(() => browser.url('/#/raw/tests/terra-button/button/variants/utility-button'));
+    it('displays default utility Button', () => {
+      browser.url('/raw/tests/terra-button/button/variants/utility-button');
 
-    Terra.it.validatesElement({ selector: '#utility' });
-
-    describe('Utility-Keyboard Focus', () => {
-      before(() => browser.keys('Tab'));
-
-      Terra.it.validatesElement({ selector: '#utility' });
+      Terra.validates.element({ selector: '#utility' });
     });
 
-    describe('Utility-Active', () => {
-      before(() => browser.url('/#/raw/tests/terra-button/button/active-variant-buttons'));
+    it('displays utility Button with keyboard focus', () => {
+      browser.keys('Tab');
 
-      Terra.it.validatesElement('active', { selector: '#utilityActive' });
-      Terra.it.validatesElement('active and focused', { selector: '#utilityActiveFocusSpan' });
+      Terra.validates.element('utility-keyboard focus', { selector: '#utility' });
+    });
+
+    it('displays utility-active Button', () => {
+      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+
+      Terra.validates.element('active', { selector: '#utilityActive' });
+      Terra.validates.element('active and focused', { selector: '#utilityActiveFocusSpan' });
     });
   });
 
-  describe('Long Text', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-button/button/long-text-button');
-      browser.moveToObject('#root');
-    });
+  it('displays Button with long text', () => {
+    browser.url('/raw/tests/terra-button/button/long-text-button');
+    browser.moveToObject('#root');
 
-    Terra.it.validatesElement({ selector: '#long-text' });
-  });
-
-  describe('Block', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-button/button/long-text-button');
-      browser.moveToObject('#root');
-    });
-
-    Terra.it.validatesElement({ selector: '#long-text' });
+    Terra.validates.element('long text', { selector: '#long-text' });
   });
 
   describe('Button Types', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-button/button/button-types');
+      browser.url('/raw/tests/terra-button/button/button-types');
       browser.moveToObject('#root');
     });
 
-    Terra.it.isAccessible();
-
-    describe('Type reset', () => {
-      Terra.it.validatesElement({ selector: '#buttonWithTypeReset' });
+    it('displays type reset', () => {
+      Terra.validates.element('type reset', { selector: '#buttonWithTypeReset' });
     });
 
-    describe('Type submit', () => {
-      Terra.it.matchesScreenshot({ selector: '#buttonWithTypeSubmit' });
+    it('displays type submit', () => {
+      Terra.validates.element('type submit', { selector: '#buttonWithTypeSubmit' });
     });
 
-    describe('Type button', () => {
-      Terra.it.matchesScreenshot({ selector: '#buttonWithTypeButton' });
+    it('displays type button', () => {
+      Terra.validates.element('type button', { selector: '#buttonWithTypeButton' });
     });
   });
 
-  describe('Button with Icon', () => {
+  describe('displays Button with Icon', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-button/button/icon-button');
+      browser.url('/raw/tests/terra-button/button/icon-button');
       browser.moveToObject('#root');
     });
 
-    Terra.it.isAccessible();
-
-    describe('Icon and Text', () => {
-      Terra.it.matchesScreenshot({ selector: '#iconNeutralButton' });
+    it('displays icon and text', () => {
+      Terra.validates.element('icon and text', { selector: '#iconNeutralButton' });
     });
 
-    describe('Icon and Text Reversed', () => {
-      Terra.it.matchesScreenshot({ selector: '#iconReversedButton' });
+    it('displays icon and text reversed', () => {
+      Terra.validates.element('icon and text reversed', { selector: '#iconReversedButton' });
     });
 
-    describe('Icon only', () => {
-      Terra.it.matchesScreenshot({ selector: '#iconOnlyButton' });
+    it('displays icon only', () => {
+      Terra.validates.element('icon only', { selector: '#iconOnlyButton' });
     });
   });
 
-  describe('Compact Button', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-button/button/compact-button');
-      browser.moveToObject('#root');
-    });
+  it('displays compact Button', () => {
+    browser.url('/raw/tests/terra-button/button/compact-button');
+    browser.moveToObject('#root');
 
-    Terra.it.validatesElement({ selector: '#compactButton' });
+    Terra.validates.element('compact', { selector: '#compactButton' });
   });
 
   describe('Programmatic Focus', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-button/button/programmatic-focus');
+      browser.url('/raw/tests/terra-button/button/programmatic-focus');
+    });
+
+    it('displays programmatic focus on Button 2', () => {
       browser.click('#button1');
+
+      Terra.validates.element('focused Button 2');
     });
 
-    Terra.it.matchesScreenshot('Button 2 focused programmatically');
-
-    it('focuses button 1', () => {
+    it('displays programmatic focus on Button 1', () => {
       browser.keys(['Enter']);
-      Terra.validates.screenshot('Button 1 focused programmatically');
+      Terra.validates.element('focused Button 1');
     });
 
-    it('focuses button 3', () => {
+    it('displays programmatic focus on Button 2', () => {
       browser.click('#button3');
-      Terra.validates.screenshot('Button 3 clicked without focus styles');
+      Terra.validates.element('Button 3 clicked without focus styles');
     });
 
     browser.execute(() => {
@@ -211,36 +205,36 @@ Terra.describeViewports('Button', ['tiny'], () => {
   });
 
   describe('Dismissing Modal should focus the button', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-button/button/button-modal-focus');
+    it('displays Button with focus', () => {
+      browser.url('/raw/tests/terra-button/button/button-modal-focus');
       browser.click('#modal-open-button');
       browser.pause(300);
-    });
 
-    Terra.it.validatesElement('Button has focus');
+      Terra.validates.element('Button has focus');
+    });
   });
 
   describe('Programmatic Disabled', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-button/button/programmatic-disabled');
+      browser.url('/raw/tests/terra-button/button/programmatic-disabled');
     });
 
     it('focuses button', () => {
       browser.keys(['Tab']);
-    });
 
-    Terra.it.validatesElement('Button has focus', { selector: '#root' });
+      Terra.validates.element('Button has focus', { selector: '#root' });
+    });
 
     it('disables button', () => {
       browser.click('#programmaticDisabledButton');
-    });
 
-    Terra.it.validatesElement('Button is Disabled', { selector: '#root' });
+      Terra.validates.element('Button is Disabled', { selector: '#root' });
+    });
   });
 
   describe('Programmatically Re-enable a disabled button', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-button/button/programmatic-disable-enable');
+      browser.url('/raw/tests/terra-button/button/programmatic-disable-enable');
     });
 
     it('disables button', () => {
