@@ -43,6 +43,29 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
       browser.click('[class*="previous"]');
       Terra.validates.element('3');
     });
+  }); 
+
+  describe('Controlled Paginator without Total count', () => {
+    it('displays initial selected page', () => {
+      browser.url('/raw/tests/terra-paginator/paginator/controlled-paginator-no-pages');
+      browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
+      Terra.validates.element('0');
+    });
+
+    it('should toggle page change when the props are updated', () => {
+      browser.click('#button-9');
+      Terra.validates.element('1');
+    });
+
+    it('should toggle the pages when the right arrow is clicked', () => {
+      browser.click('[class*="next"]');
+      Terra.validates.element('2');
+    });
+
+    it('should toggle the pages when the left arrow is clicked', () => {
+      browser.click('[class*="previous"]');
+      Terra.validates.element('3');
+    });
   });
 
   describe('Controlled Progressive Paginator', () => {

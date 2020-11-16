@@ -26,12 +26,12 @@ const propTypes = {
    * Total number of all items being paginated.
    * Required when using itemCountPerPage and selectedPage.
    */
-  totalCount: PropTypes.number.isRequired,
+  totalCount: PropTypes.number,
   /**
    * Total number of items per page.
    * Required when using selectedPage and totalCount.
    */
-  itemCountPerPage: PropTypes.number.isRequired,
+  itemCountPerPage: PropTypes.number,
   /**
    * @private
    * The intl object to be injected for translations.
