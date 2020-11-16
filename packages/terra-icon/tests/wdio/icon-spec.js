@@ -2,30 +2,39 @@ Terra.describeViewports('Icon', ['huge'], () => {
   describe('Default', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-default'));
 
-    Terra.it.validatesElement();
+    it('checks element', () => {
+      Terra.validates.element();
+    });
   });
 
   describe('HeightWidth', () => {
-    before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-height-width'));
-
-    Terra.it.validatesElement();
+    it('checks element', () => {
+      browser.url('/#/raw/tests/terra-icon/icon/icon-height-width');
+      Terra.validates.element();
+    });
   });
 
   describe('Bidi', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-bidi'));
 
-    Terra.it.validatesElement();
+    it('checks element', () => {
+      Terra.validates.element();
+    });
   });
 
   describe('AriaLabel', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-aria-label'));
 
-    Terra.it.isAccessible();
+    it('is accessible', () => {
+      Terra.validates.accessibility();
+    });
   });
 
   describe('AllIcons', () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-all'));
 
-    Terra.it.validatesElement();
+    it('checks element', () => {
+      Terra.validates.element();
+    });
   });
 });

@@ -1,102 +1,101 @@
 Terra.describeViewports('Avatar', ['huge'], () => {
-  describe('Image Avatar', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-avatar'));
+  it('displays image Avatar', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/image-avatar');
 
-    Terra.it.validatesElement({ selector: '#image-avatar' });
+    Terra.validates.element('image', { selector: '#image-avatar' });
   });
 
-  describe('Image Avatar short and wide', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-avatar-short-and-wide'));
+  it('displays image Avatar short and wide', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/image-avatar-short-and-wide');
 
-    Terra.it.isAccessible({ selector: '#image-avatar' });
-    Terra.it.matchesScreenshot({ selector: '#image-avatar' });
+    Terra.validates.element('image short and wide', { selector: '#image-avatar' });
   });
 
-  describe('Image Avatar tall and narrow', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-avatar-tall-and-narrow'));
+  it('displays image Avatar tall and narrow', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/image-avatar-tall-and-narrow');
 
-    Terra.it.isAccessible({ selector: '#image-avatar' });
-    Terra.it.matchesScreenshot({ selector: '#image-avatar' });
+    Terra.validates.element('image tall and narrow', { selector: '#image-avatar' });
   });
 
-  describe('Invalid Image Avatar With Initials', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/invalid-image-avatar-with-initials'));
+  it('displays invalid image Avatar with initials', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/invalid-image-avatar-with-initials');
 
-    Terra.it.validatesElement({ selector: '#invalid-image-avatar' });
+    Terra.validates.element('invalid image with initials', { selector: '#invalid-image-avatar' });
   });
 
-  describe('Image Avatar Spacing', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/image-gap'));
-    Terra.it.validatesElement();
+  it('displays image Avatar with spacing', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/image-gap');
+
+    Terra.validates.element('image with spacing');
   });
 
-  describe('One Initial Avatar', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/one-initial-avatar'));
+  it('displays Avatar with one initial', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/one-initial-avatar');
 
-    Terra.it.validatesElement({ selector: '#one-initial-avatar' });
+    Terra.validates.element('one initial', { selector: '#one-initial-avatar' });
   });
 
-  describe('Two Initials Avatar', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/two-initials-avatar'));
+  it('displays Avatar with two initials', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/two-initials-avatar');
 
-    Terra.it.validatesElement({ selector: '#two-initials-avatar' });
+    Terra.validates.element('two initials', { selector: '#two-initials-avatar' });
   });
 
-  describe('Deceased Avatar', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-avatar'));
+  it('displays deceased Avatar', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/is-deceased-avatar');
 
-    Terra.it.validatesElement({ selector: '#is-deceased-avatar' });
+    Terra.validates.element('deceased', { selector: '#is-deceased-avatar' });
   });
 
-  describe('Deceased Initials Avatar', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-initials-avatar'));
+  it('displays deceased Avatar with initials', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/is-deceased-initials-avatar');
 
-    Terra.it.validatesElement({ selector: '#is-deceased-initials-avatar' });
+    Terra.validates.element('deceased with initials', { selector: '#is-deceased-initials-avatar' });
   });
 
-  describe('Deceased Image Avatar', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/avatar/is-deceased-image-avatar'));
+  it('displays deceased image Avatar', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/avatar/is-deceased-image-avatar');
 
-    Terra.it.validatesElement({ selector: '#is-deceased-image-avatar' });
+    Terra.validates.element('deceased avatar', { selector: '#is-deceased-image-avatar' });
   });
 });
 
 describe('Facility', () => {
-  describe('Icon Facility', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility/default-facility'));
+  it('displays icon Facility', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/facility/default-facility');
 
-    Terra.it.validatesElement({ selector: '#default-facility' });
+    Terra.validates.element('icon', { selector: '#default-facility' });
   });
 
-  describe('Image Facility', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility/image-facility'));
+  it('displays image Facility', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/facility/image-facility');
 
-    Terra.it.validatesElement({ selector: '#image-facility' });
+    Terra.validates.element('image', { selector: '#image-facility' });
   });
 
-  describe('Invalid Image Facility', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/facility/invalid-image-facility'));
+  it('displays invalid image Facility', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/facility/invalid-image-facility');
 
-    Terra.it.validatesElement({ selector: '#invalid-image-facility' });
+    Terra.validates.element('invalid image', { selector: '#invalid-image-facility' });
   });
 });
 
 describe('Generic', () => {
-  describe('Icon Single User', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/generic/single-user'));
+  it('displays icon single user', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/generic/single-user');
 
-    Terra.it.validatesElement({ selector: '#single-user' });
+    Terra.validates.element('icon single user', { selector: '#single-user' });
   });
 
-  describe('Icon Shared User', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/generic/shared-user'));
+  it('displays icon shared user', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/generic/shared-user');
 
-    Terra.it.validatesElement({ selector: '#shared-user' });
+    Terra.validates.element('icon shared user', { selector: '#shared-user' });
   });
 
-  describe('Icon Provider', () => {
-    before(() => browser.url('/#/raw/tests/terra-avatar/avatar/generic/provider'));
+  it('displays icon provider', () => {
+    browser.url('/raw/tests/terra-avatar/avatar/generic/provider');
 
-    Terra.it.validatesElement({ selector: '#provider' });
+    Terra.validates.element('icon provider', { selector: '#provider' });
   });
 });
