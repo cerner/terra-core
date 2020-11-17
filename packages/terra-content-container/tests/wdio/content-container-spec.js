@@ -1,13 +1,13 @@
 Terra.describeViewports('Content Container', ['medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-content-container/content-container/default-content-container'));
+  it('displays default Content Container', () => {
+    browser.url('/raw/tests/terra-content-container/content-container/default-content-container');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Fill', () => {
-    before(() => browser.url('/#/raw/tests/terra-content-container/content-container/fill-content-container'));
+  it('displays Content Container with fill', () => {
+    browser.url('/raw/tests/terra-content-container/content-container/fill-content-container');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('fill');
   });
 });
