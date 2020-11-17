@@ -1,43 +1,43 @@
 Terra.describeViewports('Card', ['tiny'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-card/card/default-card'));
+  it('displays default Card', () => {
+    browser.url('/raw/tests/terra-card/card/default-card');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Raised', () => {
-    before(() => browser.url('/#/raw/tests/terra-card/card/raised-card'));
+  it('displays raised Card', () => {
+    browser.url('/raw/tests/terra-card/card/raised-card');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('raised');
   });
 
-  describe('Card Body Padding Horizontal', () => {
-    before(() => browser.url('/#/raw/tests/terra-card/card/card-padding-horizontal'));
+  it('displays Card with body padding horizontal', () => {
+    browser.url('/raw/tests/terra-card/card/card-padding-horizontal');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('body padding horizontal');
   });
 
-  describe('Card Body Padding Vertical', () => {
-    before(() => browser.url('/#/raw/tests/terra-card/card/card-padding-vertical'));
+  it('displays Card with body padding vertical', () => {
+    browser.url('/raw/tests/terra-card/card/card-padding-vertical');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('body padding vertical');
   });
 
-  describe('Card Body Padded', () => {
-    before(() => browser.url('/#/raw/tests/terra-card/card/card-padding'));
+  it('displays Card with body padded', () => {
+    browser.url('/raw/tests/terra-card/card/card-padding');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('body padded');
   });
 
-  describe('Card Body Centered', () => {
-    before(() => browser.url('/#/raw/tests/terra-card/card/card-content-center'));
+  it('displays Card with body centered', () => {
+    browser.url('/raw/tests/terra-card/card/card-content-center');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('body centered');
   });
 
-  describe('Card Visually Hidden Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-card/card/card-visually-hidden-text'));
+  it('displays Card with visually hidden text', () => {
+    browser.url('/raw/tests/terra-card/card/card-visually-hidden-text');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('visually hidden text');
   });
 });
