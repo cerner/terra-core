@@ -147,7 +147,7 @@ jobs:
     - stage: publish & deploy
       script:
         - rm -rf ./travis-build
-        - npx -p @cerner/terra-cli@^1.0.0 terra release
+        - npx terra release
       before_deploy:
         # Build again for deployment because we need the Public path to be updated.
         - TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY='c494ac44c8' TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID='142450088' TERRA_DEV_SITE_PUBLIC_PATH='/terra-core/' npm run compile:prod
