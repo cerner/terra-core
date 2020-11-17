@@ -5,7 +5,7 @@ Terra.describeViewports('Content Container', ['medium'], () => {
     Terra.validates.element('default');
   });
 
-  it(' displays Content Container with fill', () => {
+  it('displays Content Container with fill', () => {
     browser.url('/raw/tests/terra-content-container/content-container/fill-content-container');
 
     Terra.validates.element('fill');
