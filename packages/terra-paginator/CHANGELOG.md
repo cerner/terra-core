@@ -8,6 +8,11 @@
 * Fixed
   * Fixed paginator not considering `totalCount` when `itemCountPerPage` was not provided.
 
+## 2.66.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.65.0 - (November 10, 2020)
 
 * Fixed

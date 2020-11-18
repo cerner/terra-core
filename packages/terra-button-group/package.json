@@ -1,7 +1,7 @@
 {
   "name": "terra-button-group",
   "main": "lib/ButtonGroup.js",
-  "version": "3.49.0",
+  "version": "3.50.0",
   "description": "The Terra Button Group component groups buttons and can maintain a toggle selection state.",
   "repository": {
     "type": "git",
@@ -29,8 +29,8 @@
     "classnames": "^2.2.5",
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.49.0",
-    "terra-icon": "^3.37.0",
+    "terra-button": "^3.50.0",
+    "terra-icon": "^3.38.0",
     "terra-theme-context": "^1.0.0"
   },
   "scripts": {
