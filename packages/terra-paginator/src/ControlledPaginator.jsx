@@ -26,12 +26,12 @@ const propTypes = {
    * Total number of all items being paginated.
    * Required when using itemCountPerPage and selectedPage.
    */
-  totalCount: PropTypes.number.isRequired,
+  totalCount: PropTypes.number,
   /**
    * Total number of items per page.
    * Required when using selectedPage and totalCount.
    */
-  itemCountPerPage: PropTypes.number.isRequired,
+  itemCountPerPage: PropTypes.number,
   /**
    * @private
    * The intl object to be injected for translations.
@@ -44,7 +44,6 @@ class Paginator extends React.Component {
     super(props);
 
     this.handlePageChange = this.handlePageChange.bind(this);
-    this.hasNavContext = this.hasNavContext.bind(this);
     this.buildPageButtons = this.buildPageButtons.bind(this);
     this.reducedPaginator = this.reducedPaginator.bind(this);
     this.setPaginator = this.setPaginator.bind(this);
@@ -114,21 +113,22 @@ class Paginator extends React.Component {
     return pageButtons;
   }
 
-  hasNavContext() {
-    return this.props.totalCount && this.props.itemCountPerPage;
-  }
-
   defaultPaginator() {
     const theme = this.context;
-    const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage, intl } = this.props;
+    const {
+      selectedPage,
+      intl,
+      totalCount,
+      itemCountPerPage,
+    } = this.props;
+    const totalPages = calculatePages(totalCount, itemCountPerPage);
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     const fullView = (
-      <div className={cx('paginator', !this.hasNavContext() && 'pageless', theme.className)}>
+      <div className={cx('paginator', !totalCount && 'pageless', theme.className)}>
         {
-          this.hasNavContext() && (
+          totalCount && (
           <PaginatorButton
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
@@ -152,7 +152,7 @@ class Paginator extends React.Component {
           <span className={cx('icon')} />
           {intl.formatMessage({ id: 'Terra.paginator.previous' })}
         </PaginatorButton>
-        {this.hasNavContext() && this.buildPageButtons(totalPages, this.handlePageChange)}
+        {totalCount && this.buildPageButtons(totalPages, this.handlePageChange)}
         <PaginatorButton
           ariaDisabled={selectedPage === totalPages}
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
@@ -165,7 +165,7 @@ class Paginator extends React.Component {
           <span className={cx('icon')} />
         </PaginatorButton>
         {
-          this.hasNavContext() && (
+          totalCount && (
           <PaginatorButton
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
@@ -186,15 +186,20 @@ class Paginator extends React.Component {
 
   reducedPaginator() {
     const theme = this.context;
-    const totalPages = calculatePages(this.props.totalCount, this.props.itemCountPerPage);
-    const { selectedPage, intl } = this.props;
+    const {
+      selectedPage,
+      intl,
+      totalCount,
+      itemCountPerPage,
+    } = this.props;
+    const totalPages = calculatePages(totalCount, itemCountPerPage);
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     const reducedView = (
-      <div className={cx('paginator', !this.hasNavContext() && 'pageless', theme.className)} role="navigation" aria-label="pagination">
+      <div className={cx('paginator', !totalCount && 'pageless', theme.className)} role="navigation" aria-label="pagination">
         {
-          this.hasNavContext() && (
+          totalCount && (
           <PaginatorButton
             ariaDisabled={selectedPage === 1}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
@@ -218,7 +223,7 @@ class Paginator extends React.Component {
           <span className={cx('icon')} />
           {intl.formatMessage({ id: 'Terra.paginator.previous' })}
         </PaginatorButton>
-        {this.hasNavContext() && intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
+        {totalCount && intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
         <PaginatorButton
           ariaDisabled={selectedPage === totalPages}
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
@@ -231,7 +236,7 @@ class Paginator extends React.Component {
           <span className={cx('icon')} />
         </PaginatorButton>
         {
-          this.hasNavContext() && (
+          totalCount && (
           <PaginatorButton
             ariaDisabled={selectedPage === totalPages}
             ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
