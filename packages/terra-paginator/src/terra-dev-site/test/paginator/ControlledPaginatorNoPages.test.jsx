@@ -11,16 +11,16 @@ const ControlledPaginatorExample = () => {
 
   const changePages = (index) => {
     setCurrentPage(index);
-  }
+  };
 
   return (
     <div className={cx('paginator-wrapper')}>
-       <Button id="button-9" text="Set Page to 9" onClick={() => { setCurrentPage(9); }} />
-       <Button id="button-15" text="Set Page to 15" onClick={() => { setCurrentPage(15); }} />
-       <Button id="button-45" text="Set Page to 45" onClick={() => { setCurrentPage(45); }} />
-       <ControlledPaginator onPageChange={changePages} selectedPage={currentPage} />
+      <Button id="button-9" text="Set Page to 9" onClick={() => { setCurrentPage(9); }} />
+      <Button id="button-15" text="Set Page to 15" onClick={() => { setCurrentPage(15); }} />
+      <Button id="button-45" text="Set Page to 45" onClick={() => { setCurrentPage(45); }} />
+      <ControlledPaginator onPageChange={changePages} selectedPage={currentPage} />
     </div>
-   );
-}
+  );
+};
 
 export default ControlledPaginatorExample;

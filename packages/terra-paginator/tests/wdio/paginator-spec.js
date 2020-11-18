@@ -43,7 +43,7 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
       browser.click('[class*="previous"]');
       Terra.validates.element('3');
     });
-  }); 
+  });
 
   describe('Controlled Paginator without Total count', () => {
     it('displays initial selected page', () => {

@@ -31,33 +31,33 @@ const buildPage = () => {
 };
 
 const ControlledPaginatorExample = () => {
-  const [content, setContent] = useState(buildPage());
+  const content = buildPage();
   const [currentPage, setCurrentPage] = useState(1);
 
   const changePages = (index) => {
     setCurrentPage(index);
-  }
+  };
 
   return (
     <div className={cx('paginator-wrapper')}>
-        <Dialog
-          header={(
-            <h1>
-              Page
-              {currentPage}
-            </h1>
-            )}
-          footer={<ControlledPaginator onPageChange={changePages} selectedPage={currentPage} />}
-        >
-          <div>
-            <Button text="Set Page to 9" onClick={() => { setCurrentPage(9); }} />
-            <Button text="Set Page to 15" onClick={() => { setCurrentPage(15); }} />
-            <Button text="Set Page to 45" onClick={() => { setCurrentPage(45); }} />
-          </div>
-          {content}
-        </Dialog>
+      <Dialog
+        header={(
+          <h1>
+            Page
+            {currentPage}
+          </h1>
+        )}
+        footer={<ControlledPaginator onPageChange={changePages} selectedPage={currentPage} />}
+      >
+        <div>
+          <Button text="Set Page to 9" onClick={() => { setCurrentPage(9); }} />
+          <Button text="Set Page to 15" onClick={() => { setCurrentPage(15); }} />
+          <Button text="Set Page to 45" onClick={() => { setCurrentPage(45); }} />
+        </div>
+        {content}
+      </Dialog>
     </div>
   );
-}
+};
 
 export default ControlledPaginatorExample;
