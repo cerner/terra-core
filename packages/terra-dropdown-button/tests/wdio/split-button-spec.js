@@ -1,29 +1,29 @@
 Terra.describeViewports('Split Button', ['medium'], () => {
   describe('Default', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/default-split-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/default-split-button');
       // avoid hover styles
       browser.moveToObject('#root', 100, 1);
     });
 
-    it('displays default Split Button', () => {
+    it('should display default Split Button', () => {
       Terra.validates.element('default');
     });
 
-    it('validates primary button focus styling', () => {
+    it('should validate primary button focus styling', () => {
       // Tab then Shift-Tab to get focus styles to appear on primary button
       browser.keys(['Tab']);
       Terra.validates.element('primary focus');
     });
 
-    it('validates caret button focus styling', () => {
+    it('should validate caret button focus styling', () => {
       browser.keys('Tab');
       Terra.validates.element('caret focus');
       // tab away from the button so focus is not in later screenshots
       browser.keys('Tab');
     });
 
-    it('validates primary button active styling', () => {
+    it('should validate primary button active styling', () => {
       browser.moveToObject('[class*=split-button-primary]');
       browser.buttonDown();
       Terra.validates.element('primary active');
@@ -36,12 +36,12 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       Terra.validates.element('caret with dropdown open');
     });
 
-    it('prints MetaData of option on click', () => {
+    it('should print MetaData of option on click', () => {
       browser.click('#opt1');
       Terra.validates.element('MetaData of 1st option', { selector: '#root' });
     });
 
-    it('prints MetaData of primary button on click', () => {
+    it('should print MetaData of primary button on click', () => {
       browser.moveToObject('[class*=split-button-primary]');
       browser.click('[class*=split-button-primary]');
       Terra.validates.element('MetaData of Primary Button option', { selector: '#root' });
@@ -50,16 +50,16 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Disabled', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/disabled-split-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/disabled-split-button');
     });
 
-    it('displays disabled Dropdown Button', () => {
+    it('should display disabled Dropdown Button', () => {
       Terra.validates.element('default');
     });
 
     it('tries to tab to the button', () => {
       browser.keys(['Tab']);
-      Terra.validates.element('tab attempted');
+      Terra.validates.screenshot('tab attempted');
     });
 
     it('tries to click the primary button', () => {
@@ -73,12 +73,12 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Interactions', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/callback-split-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/callback-split-button');
       // avoid hover styles
       browser.moveToObject('#root', 100, 1);
     });
 
-    it('displays Dropdown Button with interactions', () => {
+    it('should display Dropdown Button with interactions', () => {
       Terra.validates.element('default');
     });
 
@@ -117,7 +117,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
         browser.waitForVisible('[class*=dropdown-list]');
       });
 
-      it('runs callback on space', () => {
+      it('should run callback on space', () => {
         browser.keys(['ArrowDown', 'Space']);
         Terra.validates.element('space');
       });
@@ -127,17 +127,17 @@ Terra.describeViewports('Split Button', ['medium'], () => {
         Terra.validates.element('down arrow');
       });
 
-      it('runs callback on enter', () => {
+      it('should runs callback on enter', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'Enter']);
         Terra.validates.element('enter');
       });
 
-      it('runs callback on click', () => {
+      it('should run callback on click', () => {
         browser.click('#red');
         Terra.validates.element('click');
       });
 
-      it('will not keyboard navigates down past the last option', () => {
+      it('keyboard navigates down past the last option', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
         Terra.validates.element('no down out of bounds');
       });
@@ -147,7 +147,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
         Terra.validates.element('up arrow');
       });
 
-      it('will not keyboard navigates up past the first option', () => {
+      it('keyboard navigates up past the first option', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
         Terra.validates.element('no up out of bounds');
       });
@@ -202,12 +202,12 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Wide Contents', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/wide-split-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/wide-split-button');
       // avoid hover styles
       browser.moveToObject('#root', 1, 300);
     });
 
-    it('displays wide contents Dropdown Button both closed', () => {
+    it('should display wide contents Dropdown Button both closed', () => {
       Terra.validates.element('Both closed');
     });
 
@@ -223,15 +223,15 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
   });
 
-  it('displays block Split Button', () => {
-    browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/block-split-button');
+  it('should display block Split Button', () => {
+    browser.url('/raw/tests/terra-dropdown-button/dropdown-button/block-split-button');
 
     Terra.validates.element('block');
   });
 
   describe('Bounded', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/bounded-split-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/bounded-split-button');
     });
 
     it('opens the top left dropdown', () => {
@@ -260,10 +260,10 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Focus in callback', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/split-focus');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/split-focus');
     });
 
-    it('runs primary callback that focuses an element', () => {
+    it('should run primary callback that focuses an element', () => {
       browser.click('[class*=split-button-primary]');
       Terra.validates.element('first button clicked');
     });
@@ -273,14 +273,14 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       browser.waitForVisible('[class*=dropdown-list]');
     });
 
-    it('runs callback in dropdown that focuses an element', () => {
+    it('should run callback in dropdown that focuses an element', () => {
       browser.click('#second');
       Terra.validates.element('second button clicked');
     });
   });
 
-  it('displays variants of Dropdown Button', () => {
-    browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/variant-split-buttons');
+  it('displays variants of Split Button', () => {
+    browser.url('/raw/tests/terra-dropdown-button/dropdown-button/variant-split-buttons');
     browser.moveToObject('#root', 1, 100);
 
     Terra.validates.element('variants');
