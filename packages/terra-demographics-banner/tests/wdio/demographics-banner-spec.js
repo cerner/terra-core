@@ -1,37 +1,37 @@
 Terra.describeViewports('Demographics Banner', ['tiny', 'large'], () => {
-  describe('Blank', () => {
-    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/blank-demographics-banner'));
+  it('displays blank Demographics Banner', () => {
+    browser.url('/raw/tests/terra-demographics-banner/demographics-banner/blank-demographics-banner');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('blank');
   });
 
-  describe('Deceased', () => {
-    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/deceased-demographics-banner'));
+  it('displays deceased Demographics Banner', () => {
+    browser.url('/raw/tests/terra-demographics-banner/demographics-banner/deceased-demographics-banner');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('deceased');
   });
 
-  describe('Deceased - No Label', () => {
-    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/deceased-demographics-banner-no-label'));
+  it('displays deceased Demographics Banner with no label', () => {
+    browser.url('/raw/tests/terra-demographics-banner/demographics-banner/deceased-demographics-banner-no-label');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('deceased - no label');
   });
 
-  describe('Gestational Age - No Label', () => {
-    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/gestational-age-demographics-banner-no-label'));
+  it('displays gestational age Demographics Banner with no label', () => {
+    browser.url('/raw/tests/terra-demographics-banner/demographics-banner/gestational-age-demographics-banner-no-label');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('gestational age - no label');
   });
 
-  describe('Post Menstrual - No Label', () => {
-    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/post-menstrual-age-demographics-banner-no-label'));
+  it('displays post menstrual Demographics Banner with no label', () => {
+    browser.url('/raw/tests/terra-demographics-banner/demographics-banner/post-menstrual-age-demographics-banner-no-label');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('post menstrual - no label');
   });
 
-  describe('Populated', () => {
-    before(() => browser.url('/#/raw/tests/terra-demographics-banner/demographics-banner/populated-demographics-banner'));
+  it('displays populated Demographics Banner', () => {
+    browser.url('/raw/tests/terra-demographics-banner/demographics-banner/populated-demographics-banner');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('populated');
   });
 });
