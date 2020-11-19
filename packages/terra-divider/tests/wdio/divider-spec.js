@@ -1,13 +1,13 @@
 Terra.describeViewports('Divider', ['medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-divider/divider/default-divider'));
+  it('displays default Divider', () => {
+    browser.url('/raw/tests/terra-divider/divider/default-divider');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Custom Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-divider/divider/divider-with-text'));
+  it('displays Divider with custom text', () => {
+    browser.url('/raw/tests/terra-divider/divider/divider-with-text');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('custom text');
   });
 });

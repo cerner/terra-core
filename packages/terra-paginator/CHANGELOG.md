@@ -1,6 +1,17 @@
 # Changelog
 
 ## Unreleased
+* Changed
+  * Changed progressive paginator to support unknown total page count.
+  * Replaced `Terra.it()` with `Terra.validates.element()`.
+
+* Fixed
+  * Fixed paginator not considering `totalCount` when `itemCountPerPage` was not provided.
+
+## 2.66.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
 
 ## 2.65.0 - (November 10, 2020)
 
