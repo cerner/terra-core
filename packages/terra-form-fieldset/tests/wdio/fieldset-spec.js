@@ -1,13 +1,13 @@
 Terra.describeViewports('Fieldset', ['tiny', 'medium'], () => {
-  describe('Populated', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-fieldset/form-fieldset/populated-fieldset'));
+  it('should display populated Fieldset', () => {
+    browser.url('/raw/tests/terra-form-fieldset/form-fieldset/populated-fieldset');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('populated');
   });
 
-  describe('Fieldset Populated with Hidden Legend', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-fieldset/form-fieldset/fieldset-with-hidden-legend'));
+  it('should display populated Fieldset with hidden legend', () => {
+    browser.url('/raw/tests/terra-form-fieldset/form-fieldset/fieldset-with-hidden-legend');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('populated Fieldset with hidden legend');
   });
 });
