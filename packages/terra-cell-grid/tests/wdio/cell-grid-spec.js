@@ -1,16 +1,16 @@
 Terra.describeViewports('CellGrid', ['medium'], () => {
-  describe('Cell Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-cell-grid/cell-grid/cell'));
-    Terra.it.validatesElement();
+  it('should render grid cell', () => {
+    browser.url('/raw/tests/terra-cell-grid/cell-grid/cell');
+    Terra.validates.element('cell');
   });
 
-  describe('CellGrid Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-cell-grid/cell-grid/cell-grid'));
-    Terra.it.validatesElement();
+  it('should render a cell-grid', () => {
+    browser.url('/raw/tests/terra-cell-grid/cell-grid/cell-grid');
+    Terra.validates.element('cell-grid');
   });
 
-  describe('CellGridDivider Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-cell-grid/cell-grid/cell-grid-divider'));
-    Terra.it.validatesElement();
+  it('should render cell-grid divider', () => {
+    browser.url('/raw/tests/terra-cell-grid/cell-grid/cell-grid-divider');
+    Terra.validates.element('cell-grid-divider');
   });
 });
