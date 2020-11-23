@@ -1,61 +1,61 @@
-Terra.describeViewports('Form-field', ['medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/default-field'));
+Terra.describeViewports('Form Field', ['medium'], () => {
+  it('should display default Form Field', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/default-field');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Label', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label'));
+  it('should display Form Field with label', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-label');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('label');
   });
 
-  describe('Label Optional', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-optional'));
+  it('should display Form Field with optional label', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-label-optional');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('optional label');
   });
 
-  describe('Label Required', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-required'));
+  it('should display Form Field with required label ', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-label-required');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('required label');
   });
 
-  describe('Error Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-error-text'));
+  it('should display Form Field with error text', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-error-text');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('error text');
   });
 
-  describe('Help Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-help-text'));
+  it('should display Form Field with help text', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-help-text');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('help text');
   });
 
-  describe('Label Required Error Help Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-label-required-error-help-text'));
+  it('should display Form Field with label required error help text', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-label-required-error-help-text');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('label required error help text');
   });
 
-  describe('Hidden Label', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-hidden-label'));
+  it('should display Form Field with hidden label', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-hidden-label');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('hidden label');
   });
 
-  describe('Text Wrap', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-text-wrap'));
+  it('should display Form Field with text wrap', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-text-wrap');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('text wrap');
   });
 
-  describe('Inline', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-field/form-field/field-inline'));
+  it('should display inline Form Field', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-inline');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('inline');
   });
 });
