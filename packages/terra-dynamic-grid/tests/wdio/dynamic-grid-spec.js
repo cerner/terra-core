@@ -1,13 +1,13 @@
 Terra.describeViewports('Dynamic Grid', ['tiny', 'huge'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-dynamic-grid/dynamic-grid/default-dynamic-grid'));
+  it('displays default Dynamic Grid', () => {
+    browser.url('/#/raw/tests/terra-dynamic-grid/dynamic-grid/default-dynamic-grid');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Large Template', () => {
-    before(() => browser.url('/#/raw/tests/terra-dynamic-grid/dynamic-grid/large-dynamic-grid'));
+  it('displays Dynamic Grid with large template', () => {
+    browser.url('/#/raw/tests/terra-dynamic-grid/dynamic-grid/large-dynamic-grid');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('large template');
   });
 });
