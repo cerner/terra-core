@@ -1,72 +1,58 @@
 Terra.describeViewports('RadioField', ['tiny', 'large'], () => {
-  describe('RadioField Valid', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
-    });
+  it('should display valid RadioField', () => {
+    browser.url('/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('valid');
   });
 
-  describe('RadioField Optional', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/optional-radio-field');
-    });
+  it('should display optional RadioField', () => {
+    browser.url('/raw/tests/terra-form-radio/form-radio/field/optional-radio-field');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('optional');
   });
 
-  describe('RadioField Hidden Legend', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hidden-legend');
-    });
+  it('should display RadioField with hidden legend', () => {
+    browser.url('/raw/tests/terra-form-radio/form-radio/field/hidden-legend');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('hidden legend');
   });
 
-  describe('RadioField Long Text Legend', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/long-text-legend');
-    });
+  it('should display RadioField with long text legend', () => {
+    browser.url('/raw/tests/terra-form-radio/form-radio/field/long-text-legend');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('long text legend');
   });
 });
 
 Terra.describeViewports('RadioField Interactions', ['tiny'], () => {
-  describe('RadioField Interactions - Valid State', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
-      browser.waitForVisible('#testing-radio-field');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
-    });
+  it('should display RadioField interactions - valid state', () => {
+    browser.url('/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
+    browser.waitForVisible('#testing-radio-field');
+    browser.click('[for="website-dept"]');
+    browser.click('[for="ux-dept"]');
+    browser.click('[for="website-dept"]');
+    browser.click('[for="ux-dept"]');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('valid state');
   });
 
-  describe('RadioField Interactions - Valid State with hideRequired', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
-      browser.waitForVisible('#testing-radio-field');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
-    });
+  it('should display RadioField interactions - valid state with hideRequired', () => {
+    browser.url('/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
+    browser.waitForVisible('#testing-radio-field');
+    browser.click('[for="website-dept"]');
+    browser.click('[for="ux-dept"]');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('valid state with hideRequired');
   });
 
-  describe('RadioField Interactions - Invalid State with hideRequired', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
-      browser.waitForVisible('#testing-radio-field');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
-    });
+  it('should display RadioField Interactions - invalid state with hideRequired', () => {
+    browser.url('/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
+    browser.waitForVisible('#testing-radio-field');
+    browser.click('[for="website-dept"]');
+    browser.click('[for="ux-dept"]');
+    browser.click('[for="website-dept"]');
+    browser.click('[for="ux-dept"]');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('invalid state with hideRequired');
   });
 });
