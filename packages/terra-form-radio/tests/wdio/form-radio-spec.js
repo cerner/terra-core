@@ -1,46 +1,40 @@
 Terra.describeViewports('Radio', ['medium'], () => {
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/default-radio'));
+    before(() => browser.url('/raw/tests/terra-form-radio/form-radio/radio/default-radio'));
 
-    Terra.it.validatesElement();
-
-    describe('Hover', () => {
-      before(() => {
-        browser.moveToObject('#default');
-      });
-
-      Terra.it.validatesElement();
+    it('should display default Radio', () => {
+      Terra.validates.element();
     });
 
-    describe('Checked', () => {
-      before(() => {
-        browser.click('[for="default"]');
-        browser.click('#site');
-      });
+    it('should display hover on Radio', () => {
+      browser.moveToObject('#default');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('hover');
     });
 
-    describe('Focus', () => {
-      before(() => {
-        browser.keys(['Tab']);
-      });
+    it('should display checked Radio', () => {
+      browser.click('[for="default"]');
+      browser.click('#site');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('checked');
+    });
+
+    it('should display focus on Radio', () => {
+      browser.keys(['Tab']);
+
+      Terra.validates.element('focus');
     });
   });
 
-  describe('Disabled', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/disabled-radio');
-    });
+  it('should display disabled Radio', () => {
+    browser.url('/raw/tests/terra-form-radio/form-radio/radio/disabled-radio');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('disabled');
   });
 
-  describe('Hidden Label', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-radio/form-radio/radio/hidden-radio'));
+  it('should display Radio with hidden label', () => {
+    browser.url('/raw/tests/terra-form-radio/form-radio/radio/hidden-radio');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('hidden label');
   });
 });
