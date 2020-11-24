@@ -1,53 +1,43 @@
 Terra.describeViewports('StatusView', ['tiny', 'medium'], () => {
-  describe('Displays an error status view with all props given', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-error-all-props'));
-
-    Terra.it.validatesElement();
+  it('Displays an error status view with all props given', () => {
+    browser.url('/raw/tests/terra-status-view/status-view/status-view-error-all-props');
+    Terra.validates.element('error with all props');
   });
 
-  describe('Displays an error status view with the glyph being hidden', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-glyph-hidden'));
-
-    Terra.it.validatesElement();
+  it('Displays an error status view with the glyph being hidden', () => {
+    browser.url('/raw/tests/terra-status-view/status-view/status-view-glyph-hidden');
+    Terra.validates.element('error with glyph hidden');
   });
 
-  describe('Displays a no-data status view with the content centered in its container', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-center'));
-
-    Terra.it.validatesElement();
+  it('Displays a no-data status view with the content centered in its container', () => {
+    browser.url('/raw/tests/terra-status-view/status-view/status-view-center');
+    Terra.validates.element('no data');
   });
 
-  describe('Displays a no-matching-results status view with the content aligned at the top in its container', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-align-top'));
-
-    Terra.it.validatesElement();
+  it('Displays a no-matching-results status view with the content aligned at the top in its container', () => {
+    browser.url('/raw/tests/terra-status-view/status-view/status-view-align-top');
+    Terra.validates.element('no matching results');
   });
 
-  describe('Displays a not-authorized status view', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-not-authorized'));
-
-    Terra.it.validatesElement();
+  it('Displays a not-authorized status view', () => {
+    browser.url('/raw/tests/terra-status-view/status-view/status-view-not-authorized');
+    Terra.validates.element('not authorized');
   });
 
-  describe('Displays a custom status view', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-custom'));
-
-    Terra.it.validatesElement();
+  it('Displays a custom status view', () => {
+    browser.url('/raw/tests/terra-status-view/status-view/status-view-custom');
+    Terra.validates.element('custom');
   });
 
-  describe('Displays an error status view that displays wrapping text', () => {
-    before(() => browser.url('/#/raw/tests/terra-status-view/status-view/status-view-text-wrapping'));
-
-    Terra.it.validatesElement();
+  it('Displays an error status view that displays wrapping text', () => {
+    browser.url('/raw/tests/terra-status-view/status-view/status-view-text-wrapping');
+    Terra.validates.element('error with wrapping text');
   });
 });
 
 Terra.describeViewports('StatusView', ['medium'], () => {
-  describe('Displays an error status view that is too thin for a glyph', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-status-view/status-view/status-view-thin-constraint');
-    });
-
-    Terra.it.validatesElement();
+  it('Displays an error status view that is too thin for a glyph', () => {
+    browser.url('/raw/tests/terra-status-view/status-view/status-view-thin-constraint');
+    Terra.validates.element('error too thin for glyph');
   });
 });
