@@ -1,87 +1,77 @@
 Terra.describeViewports('Toggle Button', ['medium'], () => {
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/default-toggle-button'));
-
-    Terra.it.validatesElement('closed');
+    it('should display closed button', () => {
+      browser.url('/#/raw/tests/terra-toggle-button/toggle-button/default-toggle-button');
+      Terra.validates.element('closed');
+    });
 
     it('should open the button', () => {
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
       browser.click('p*=Lorem');
+      Terra.validates.element('opened');
     });
-
-    Terra.it.validatesElement('opened');
   });
 
   describe('Icon Only', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/icon-only'));
-
     it('should open the button', () => {
+      browser.url('/#/raw/tests/terra-toggle-button/toggle-button/icon-only');
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
       browser.click('p*=Lorem');
+      Terra.validates.element('opened');
     });
-
-    Terra.it.validatesElement('opened');
   });
 
   describe('Custom Icon', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/custom-icon'));
-
     it('should open the button', () => {
+      browser.url('/#/raw/tests/terra-toggle-button/toggle-button/custom-icon');
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
       browser.click('p*=Lorem');
+      Terra.validates.element('opened');
     });
-
-    Terra.it.validatesElement('opened');
   });
 
   describe('Customized Button', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/customized-button-toggle-button'));
-
     it('should open the button', () => {
+      browser.url('/#/raw/tests/terra-toggle-button/toggle-button/customized-button-toggle-button');
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
       browser.click('p*=Lorem');
+      Terra.validates.element('opened');
     });
-
-    Terra.it.validatesElement('opened');
   });
 
-  describe('Closed Button Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/closed-button-text'));
+  it('displays Closed Button Text', () => {
+    browser.url('/#/raw/tests/terra-toggle-button/toggle-button/closed-button-text');
 
-    Terra.it.validatesElement('closed');
+    Terra.validates.element('closed button text');
   });
 
   describe('Opened Button Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/opened-button-text'));
-
     it('should open the button', () => {
+      browser.url('/#/raw/tests/terra-toggle-button/toggle-button/opened-button-text');
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
       browser.click('p*=Lorem');
+      Terra.validates.element('opened');
     });
-
-    Terra.it.validatesElement('opened');
   });
 
-  describe('Initially open', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/initially-open'));
-
-    Terra.it.validatesElement('opened');
+  it('displays Initially open toggle button', () => {
+    browser.url('/#/raw/tests/terra-toggle-button/toggle-button/initially-open');
+    Terra.validates.element('initially opened');
   });
 
   describe('Animated', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/animated'));
-
     it('should open the button', () => {
+      browser.url('/#/raw/tests/terra-toggle-button/toggle-button/animated');
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
@@ -89,15 +79,13 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
 
       // Let the animation complete
       browser.pause(100);
+      Terra.validates.element('opened');
     });
-
-    Terra.it.validatesElement('opened');
   });
 
   describe('Icon Animated', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/icon-animated'));
-
     it('should open the button', () => {
+      browser.url('/#/raw/tests/terra-toggle-button/toggle-button/icon-animated');
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
@@ -105,52 +93,45 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
 
       // Let the animation complete
       browser.pause(100);
+      Terra.validates.element('opened');
     });
-
-    Terra.it.validatesElement('opened');
   });
 
   describe('On Close Toggle Button', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/on-close-toggle-button'));
-
     it('should not increment', () => {
+      browser.url('/#/raw/tests/terra-toggle-button/toggle-button/on-close-toggle-button');
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
       browser.click('div*=Times');
+      Terra.validates.element('opened');
     });
-
-    Terra.it.validatesElement('opened');
 
     it('should increment', () => {
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
       browser.click('div*=Times');
+      Terra.validates.element('closed');
     });
-
-    Terra.it.validatesElement('closed');
   });
 
   describe('On Open Toggle Button', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-button/toggle-button/on-open-toggle-button'));
-
     it('should increment', () => {
+      browser.url('/#/raw/tests/terra-toggle-button/toggle-button/on-open-toggle-button');
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
       browser.click('div*=Times');
+      Terra.validates.element('opened');
     });
-
-    Terra.it.validatesElement('opened');
 
     it('should not increment', () => {
       browser.click('button');
 
       // Ensures the on hover button styling is not displayed
       browser.click('div*=Times');
+      Terra.validates.element('closed');
     });
-
-    Terra.it.validatesElement('closed');
   });
 });
