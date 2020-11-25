@@ -1,113 +1,96 @@
 Terra.describeViewports('SectionHeader', ['huge'], () => {
-  describe('Default Section Header', () => {
-    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/default-section-header'));
+  it('should display default Section Header', () => {
+    browser.url('/raw/tests/terra-section-header/section-header/default-section-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Long Title Default Section Header', () => {
-    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/long-title-section-header'));
+  it('should display long title Section Header', () => {
+    browser.url('/raw/tests/terra-section-header/section-header/long-title-section-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('long title');
   });
 
-  describe('Long Title Accordion Section Header', () => {
+  describe('Long Title Accordion', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
+      browser.url('/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
       browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
     });
 
-    Terra.it.validatesElement();
-
-    describe('Hovered - Long Title Accordion Section Header', () => {
-      before(() => {
-        browser.moveToObject('.accordionContent');
-      });
-
-      Terra.it.validatesElement();
+    it('should display long title accordion Section Header', () => {
+      Terra.validates.element('default');
     });
 
-    describe('Keyboard Focus - Long Title Accordion Section Header', () => {
-      before(() => {
-        browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
-        browser.keys('Tab');
-      });
+    it('should display long title accordion Section Header with hover', () => {
+      browser.moveToObject('.accordionContent');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('hover');
     });
 
-    describe('Active - Long Title Accordion Section Header', () => {
-      before(() => {
-        browser.moveToObject('.accordionContent');
-        browser.buttonDown();
-      });
-
-      Terra.it.validatesElement();
-
-      after(() => browser.buttonUp());
-    });
-  });
-
-  describe('Closed Section Header', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-section-header/section-header/closed-section-header');
+    it('should display keyboard focused long title accordion Section Header', () => {
       browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
+      browser.keys('Tab');
+
+      Terra.validates.element('keyboard focus');
     });
 
-    Terra.it.validatesElement();
-  });
+    it('should display active long title accordion Section Header', () => {
+      browser.moveToObject('.accordionContent');
+      browser.buttonDown();
 
-  describe('Open Section Header', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-section-header/section-header/open-section-header');
-      browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
+      Terra.validates.element('active');
     });
-
-    Terra.it.validatesElement();
+    after(() => browser.buttonUp());
   });
 
-  describe('On Click Section Header', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-section-header/section-header/on-click-section-header');
-      browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
-    });
+  it('should display closed Section Header', () => {
+    browser.url('/raw/tests/terra-section-header/section-header/closed-section-header');
+    browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('closed');
   });
 
-  describe('Transparent Section Header', () => {
-    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/transparent-section-header'));
+  it('should display open Section Header', () => {
+    browser.url('/raw/tests/terra-section-header/section-header/open-section-header');
+    browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('open');
+  });
+
+  it('should display onClick Section Header', () => {
+    browser.url('/raw/tests/terra-section-header/section-header/on-click-section-header');
+    browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
+
+    Terra.validates.element('onClick');
+  });
+
+  it('should display transparent Section Header', () => {
+    browser.url('/raw/tests/terra-section-header/section-header/transparent-section-header');
+
+    Terra.validates.element('transparent');
   });
 
   describe('Interactable Transparent Section Header', () => {
-    before(() => browser.url('/#/raw/tests/terra-section-header/section-header/transparent-on-click-section-header'));
+    before(() => browser.url('/raw/tests/terra-section-header/section-header/transparent-on-click-section-header'));
 
-    describe('Hovered - Interactable Transparent Section Header', () => {
-      it('hovers section header', () => {
-        browser.moveToObject('[data-id="section-header"]');
-      });
+    it('should display hovered interactable transparent Section Header', () => {
+      browser.moveToObject('[data-id="section-header"]');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('hover');
     });
 
-    describe('Keyboard Focus - Interactable Transparent Section Header', () => {
-      it('focuses section header', () => {
-        browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
-        browser.keys('Tab');
-      });
+    it('should display keyboard focused interactable transparent Section Header', () => {
+      browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
+      browser.keys('Tab');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('keyboard focus');
     });
 
-    describe('Active - Interactable Transparent Section Header', () => {
-      it('clicks section header', () => {
-        browser.moveToObject('[data-id="section-header"]');
-        browser.buttonDown();
-      });
+    it('should display active interactable transparent Section Header', () => {
+      browser.moveToObject('[data-id="section-header"]');
+      browser.buttonDown();
 
-      Terra.it.validatesElement();
+      Terra.validates.element('active');
     });
   });
 });
