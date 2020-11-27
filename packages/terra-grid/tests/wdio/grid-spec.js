@@ -1,49 +1,61 @@
 Terra.describeViewports('Grid', ['medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-default'));
+  it('should display default Grid', () => {
+    browser.url('/raw/tests/terra-grid/grid/grid-default');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Responsive', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-responsive'));
+  it('should display responsive Grid', () => {
+    browser.url('/raw/tests/terra-grid/grid/grid-responsive');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('responsive');
   });
 
-  describe('Nested', () => {
-    before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-nested'));
+  it('should display nested Grid', () => {
+    browser.url('/raw/tests/terra-grid/grid/grid-nested');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('nested');
   });
 });
 
-Terra.describeViewports('Tiny', ['tiny', 'huge'], () => {
-  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-tiny'));
-  Terra.it.validatesElement();
+Terra.describeViewports('Grid', ['tiny', 'huge'], () => {
+  it('should display tiny Grid', () => {
+    browser.url('/raw/tests/terra-grid/grid/grid-tiny');
+    Terra.validates.element('tiny');
+  });
 });
 
-Terra.describeViewports('Small', ['tiny', 'medium'], () => {
-  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-small'));
-  Terra.it.validatesElement();
+Terra.describeViewports('Grid', ['tiny', 'medium'], () => {
+  it('should display small Grid', () => {
+    browser.url('/raw/tests/terra-grid/grid/grid-small');
+    Terra.validates.element('small');
+  });
 });
 
-Terra.describeViewports('Medium', ['small', 'large'], () => {
-  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-medium'));
-  Terra.it.validatesElement();
+Terra.describeViewports('Grid', ['small', 'large'], () => {
+  it('should display medium Grid', () => {
+    browser.url('/raw/tests/terra-grid/grid/grid-medium');
+    Terra.validates.element('medium');
+  });
 });
 
-Terra.describeViewports('Large', ['medium', 'huge'], () => {
-  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-large'));
-  Terra.it.validatesElement();
+Terra.describeViewports('Grid', ['medium', 'huge'], () => {
+  it('should display large Grid', () => {
+    browser.url('/raw/tests/terra-grid/grid/grid-large');
+    Terra.validates.element('large');
+  });
 });
 
-Terra.describeViewports('Huge', ['large', 'enormous'], () => {
-  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-huge'));
-  Terra.it.validatesElement();
+Terra.describeViewports('Grid', ['large', 'enormous'], () => {
+  it('should display huge Grid', () => {
+    browser.url('/raw/tests/terra-grid/grid/grid-huge');
+    Terra.validates.element('huge');
+  });
 });
 
-Terra.describeViewports('Enormous', ['huge', 'enormous'], () => {
-  before(() => browser.url('/#/raw/tests/terra-grid/grid/grid-enormous'));
-  Terra.it.validatesElement();
+Terra.describeViewports('Grid', ['huge', 'enormous'], () => {
+  it('should display enormous Grid', () => {
+    browser.url('/raw/tests/terra-grid/grid/grid-enormous');
+    Terra.validates.element('enormous');
+  });
 });
