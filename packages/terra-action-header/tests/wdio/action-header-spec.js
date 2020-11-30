@@ -1,67 +1,67 @@
 Terra.describeViewports('ActionHeader', ['tiny', 'medium', 'large'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/default-action-header'));
+  it('displays default ActionHeader', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/default-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Back', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-action-header'));
+  it('displays ActionHeader with back', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/back-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('back');
   });
 
-  describe('Back Close', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-close-action-header'));
+  it('displays ActionHeader with back and close', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/back-close-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('back close');
   });
 
-  describe('Close', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/close-action-header'));
+  it('displays ActionHeader with close', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/close-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('close');
   });
 
-  describe('Minimize Custom Button', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/minimize-custom-button-action-header'));
+  it('displays ActionHeader with minimize custom button', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/minimize-custom-button-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('minimize custom button');
   });
 
-  describe('Maximize Close', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/maximize-close-action-header'));
+  it('displays ActionHeader with maximize close', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/maximize-close-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('maximize close');
   });
 
-  describe('Back Close Previous Next', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/back-close-previous-next-action-header'));
+  it('displays ActionHeader with back close previous next', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/back-close-previous-next-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('back close previous next');
   });
 
-  describe('Next Enabled Previous Disabled', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/next-enabled-previous-disabled-action-header'));
+  it('displays ActionHeader with next enabled previous disabled', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/next-enabled-previous-disabled-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('next enabled previous disabled');
   });
 
-  describe('Previous Enabled Next Disabled', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/previous-enabled-next-disabled-action-header'));
+  it('displays ActionHeader with previous enabled next disabled', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/previous-enabled-next-disabled-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('previous enabled next disabled');
   });
 
-  describe('Wrapped Title', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/wrapped-title-action-header'));
+  it('displays ActionHeader with wrapped title', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/wrapped-title-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('wrapped title');
   });
 
-  describe('End Element Only', () => {
-    before(() => browser.url('/#/raw/tests/terra-action-header/action-header/end-element-action-header'));
+  it('displays ActionHeader with end element only', () => {
+    browser.url('/raw/tests/terra-action-header/action-header/end-element-action-header');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('end element only');
   });
 });

@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 6.21.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.20.0 - (November 10, 2020)
+
+* Fixed
+  * Fixed build failures due to the react/sort-comp rule
+
 ## 6.19.0 - (October 27, 2020)
 
 * Added

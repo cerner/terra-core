@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 3.62.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.61.0 - (November 10, 2020)
+
+* Fixed
+  * Fixed build failures due to the react/sort-comp rule
+
 * Added
   * Added data-attribute `data-terra-search-field-button-attribute` for the search and clear button.
 

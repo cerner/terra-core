@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 3.47.0 - (November 17, 2020)
+
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
+## 3.46.0 - (November 10, 2020)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.45.0 - (October 13, 2020)
 
 * Changed

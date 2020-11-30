@@ -1,75 +1,68 @@
 Terra.describeViewports('Checkbox', ['medium'], () => {
   describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/default-checkbox'));
+    before(() => browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/default-checkbox'));
 
-    Terra.it.validatesElement();
-
-    describe('Hover', () => {
-      before(() => {
-        browser.moveToObject('#default');
-      });
-
-      Terra.it.validatesElement();
-
-      after(() => {
-        browser.moveToObject('#root', 0, 0);
-      });
+    it('should display default Checkbox', () => {
+      Terra.validates.element('default');
     });
 
-    describe('Focus', () => {
-      before(() => {
-        browser.keys('Tab');
-      });
+    it('should hover on Checkbox', () => {
+      browser.moveToObject('#default');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('hover');
     });
 
-    describe('Checked', () => {
-      before(() => {
-        browser.waitForVisible('#default');
-        browser.click('[for="default"]');
-        browser.click('#site');
-      });
+    it('should display focus on Checkbox', () => {
+      browser.moveToObject('#root', 0, 0);
+      browser.keys('Tab');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('focus');
+    });
+
+    it('should display checked Checkbox', () => {
+      browser.waitForVisible('#default');
+      browser.click('[for="default"]');
+      browser.click('#site');
+
+      Terra.validates.element('checked');
     });
   });
 
   describe('Disabled', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/disabled-checkbox'));
+    before(() => browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/disabled-checkbox'));
 
-    Terra.it.validatesElement();
+    it('should display disabled Checkbox', () => {
+      Terra.validates.element('disabled');
+    });
 
-    describe('Disabled Hover', () => {
-      before(() => {
-        browser.moveToObject('#disabled');
-      });
+    it('should hover on disabled Checkbox', () => {
+      browser.moveToObject('#disabled');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('hover');
     });
   });
 
-  describe('Hidden Label', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/hidden-label-checkbox'));
+  it('should display Checkbox with hidden label', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/hidden-label-checkbox');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('hidden label');
   });
 
-  describe('Populated', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/populated-checkbox'));
+  it('should display populated Checkbox', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/populated-checkbox');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('populated');
   });
 
-  describe('Long Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/long-text-checkbox'));
+  it('should display Checkbox with long text', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/long-text-checkbox');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('long text');
   });
 
-  describe('Three Checkboxes, First Defaulted to Checked', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox/multiple-checkboxes'));
+  it('should display three Checkboxes, first defaulted to checked', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/multiple-checkboxes');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('three Checkboxes, first defaulted to checked');
   });
 });
