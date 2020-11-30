@@ -12,21 +12,37 @@ console.log(path.resolve(path.join(process.cwd(), 'packages', 'terra-i18n')));
 const coreConfig = (env = {}) => {
   const processPath = process.cwd();
 
-  // const i18nAlias = path.resolve(path.join(processPath, 'packages', 'terra-i18n'));
-  return {
-    entry: TerraDevSiteEntrypoints,
-    plugins: [
-      new TerraDevSite({
-        // defaultLocale: env.defaultLocale,
-      }),
-    ],
-    // resolve: {
-    //   alias: {
-    //     'terra-i18n': i18nAlias,
-    //   },
-    // },
-  };
-};
+const coreConfig = (env = {}) => ({
+  entry: TerraDevSiteEntrypoints,
+  plugins: [
+    new TerraDevSite({
+      defaultLocale: env.defaultLocale,
+      primaryNavigationItems: [{
+        path: '/home',
+        label: 'Home',
+        contentExtension: 'home',
+        additionalContent: [
+          {
+            title: 'Home',
+            filePath: path.resolve(process.cwd(), 'README.md'),
+          },
+        ],
+      }, {
+        path: '/components',
+        label: 'Components',
+        contentExtension: 'doc',
+      }, {
+        path: '/dev_tools',
+        label: 'Developer Tools',
+        contentExtension: 'tool',
+      }, {
+        path: '/tests',
+        label: 'Tests',
+        contentExtension: 'test',
+      }],
+    }),
+  ],
+});
 
 const mergedConfig = (env, argv) => (
   merge(WebpackConfigTerra(env, argv), coreConfig())
