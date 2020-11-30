@@ -1,34 +1,40 @@
 Terra.describeViewports('Image', ['medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-image/image/image-default'));
+  it('should display default Image', () => {
+    browser.url('/raw/tests/terra-image/image/image-default');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
   describe('Non Fluid', () => {
-    before(() => browser.url('/#/raw/tests/terra-image/image/image-non-fluid'));
+    before(() => browser.url('/raw/tests/terra-image/image/image-non-fluid'));
 
-    Terra.it.validatesElement('smaller than container', { selector: '#smaller' });
-    Terra.it.matchesScreenshot('height smaller than container', { selector: '#height-smaller' });
-    Terra.it.matchesScreenshot('width smaller than container', { selector: '#width-smaller' });
+    it('should display non fluid image', () => {
+      Terra.validates.element('smaller than container', { selector: '#smaller' });
+      Terra.validates.element('height smaller than container', { selector: '#height-smaller' });
+      Terra.validates.element('width smaller than container', { selector: '#width-smaller' });
+    });
   });
 
   describe('Fluid', () => {
     before(() => browser.url('/#/raw/tests/terra-image/image/image-fluid'));
 
-    Terra.it.validatesElement('smaller than container', { selector: '#smaller' });
-    Terra.it.matchesScreenshot('height smaller than container', { selector: '#height-smaller' });
-    Terra.it.matchesScreenshot('width smaller than container', { selector: '#width-smaller' });
+    it('should display non fluid image', () => {
+      Terra.validates.element('smaller than container', { selector: '#smaller' });
+      Terra.validates.element('height smaller than container', { selector: '#height-smaller' });
+      Terra.validates.element('width smaller than container', { selector: '#width-smaller' });
+    });
   });
 
   describe('Loading', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-image/image/image-loading');
+      browser.url('/raw/tests/terra-image/image/image-loading');
       browser.waitForExist('#loadedImage');
       browser.waitForExist('#errorImage');
     });
 
-    Terra.it.validatesElement('successful load', { selector: '#loadedImage' });
-    Terra.it.matchesScreenshot('failed load', { selector: '#errorImage' });
+    it('should display loading Image', () => {
+      Terra.validates.element('successful load', { selector: '#loadedImage' });
+      Terra.validates.element('failed load', { selector: '#errorImage' });
+    });
   });
 });
