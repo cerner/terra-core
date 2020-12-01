@@ -2,23 +2,19 @@
 const testLocales = ['en', 'en-GB', 'pt', 'pt-GW', 'zu', 'zu-ZA'];
 
 Terra.describeViewports('I18n', ['medium'], () => {
-  describe('Initial Load', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-i-18-n/i-18-n/default-i-18-n');
-      browser.waitForVisible('select');
-    });
+  it('should display tests initial load', () => {
+    browser.url('/raw/tests/terra-i-18-n/i-18-n/default-i-18-n');
+    browser.waitForVisible('select');
 
-    Terra.it.matchesScreenshot();
+    Terra.validates.element('initial load');
   });
 
   testLocales.forEach((locale) => {
-    describe(`${locale} Locale`, () => {
-      before(() => {
-        browser.waitForVisible('select');
-        browser.element('select').selectByValue(locale);
-      });
+    it(`should display message in ${locale}`, () => {
+      browser.waitForVisible('select');
+      browser.element('select').selectByValue(locale);
 
-      Terra.it.matchesScreenshot();
+      Terra.validates.screenshot(`${locale} locale`);
     });
   });
 });
