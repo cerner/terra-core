@@ -72,7 +72,7 @@
     "prepare-for-release": "terra prepare-for-release",
     "pretest": "npm run lint",
     "postinstall": "link-parent-bin && npm run compile && npm run bootstrap:hoist",
-    "start": "tt-serve --progress",
+    "start": "tt-serve",
     "start-heroku": "tt-serve-static --port $PORT --site './build'",
     "start-prod": "tt-serve --env.disableHotReloading -p",
     "start-static": "tt-serve-static --site ./build",
