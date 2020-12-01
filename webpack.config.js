@@ -7,11 +7,6 @@ const {
 
 const WebpackConfigTerra = require('@cerner/webpack-config-terra');
 
-console.log(path.resolve(path.join(process.cwd(), 'packages', 'terra-i18n')));
-
-const coreConfig = (env = {}) => {
-  const processPath = process.cwd();
-
 const coreConfig = (env = {}) => ({
   entry: TerraDevSiteEntrypoints,
   plugins: [
