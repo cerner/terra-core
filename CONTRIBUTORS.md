@@ -88,6 +88,7 @@ Cerner Corporation
 - Dianna McGinn [@DMcginn]
 - Jackson Nowotny [@JacksonJN]
 - Manjuraghavendra Sathrasala [@manjusr]
+- Saurabh Khare [@saurabhkhare86]
 
 Community
 
@@ -202,3 +203,4 @@ Community
 [@DMcginn]: https://github.com/DMcginn
 [@JacksonJN]: https://github.com/JacksonJN
 [@manjusr]: https://github.com/manjusr
+[@saurabhkhare86]: https://github.com/SaurabhKhare86
