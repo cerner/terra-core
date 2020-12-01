@@ -5,6 +5,8 @@
 * Changed
   * Update wdio tests to remove deprecated Terra.it helpers
 
+  * Fixed broken hyperlinks in Table documentation
+
 ## 4.18.0 - (November 17, 2020)
 
 * Changed

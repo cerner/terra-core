@@ -1,226 +1,212 @@
 Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
-  describe('default', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/default-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display default Textarea', () => {
+    browser.url('/raw/tests/terra-form-textarea/form-textarea/default-textarea');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Props Populated', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/populated-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display Textarea with props populated', () => {
+    browser.url('/raw/tests/terra-form-textarea/form-textarea/populated-textarea');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('props populated');
   });
 
-  describe('Invalid', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/invalid-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display invalid Textarea', () => {
+    browser.url('/raw/tests/terra-form-textarea/form-textarea/invalid-textarea');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('invalid');
   });
 
-  describe('Incomplete', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/incomplete-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display incomplete Textarea', () => {
+    browser.url('/raw/tests/terra-form-textarea/form-textarea/incomplete-textarea');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('incomplete');
   });
 
-  describe('Small Textarea Height Resizing', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/small-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display small Textarea with height resizing', () => {
+    browser.url('/raw/tests/terra-form-textarea/form-textarea/small-textarea');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('small textarea with height resizing');
   });
 
-  describe('Medium Textarea Height Resizing', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display medium Textarea with height resizing', () => {
+    browser.url('/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('medium textarea with height resizing');
   });
 
-  describe('Large Textarea Height Resizing', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/large-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display large Textarea with height resizing', () => {
+    browser.url('/raw/tests/terra-form-textarea/form-textarea/large-textarea');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('large Textarea with height resizing');
   });
 
-  describe('Full Size Textarea Height Resizing', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-textarea/form-textarea/full-textarea');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display full size Textarea with height resizing', () => {
+    browser.url('/raw/tests/terra-form-textarea/form-textarea/full-textarea');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('full size Textarea with height resizing');
   });
 
   describe('AutoResizable Textarea', () => {
-    describe('Resizes when given several rows of input', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
-
-      Terra.it.validatesElement('0');
-
-      it('should resize appropriately', () => {
-        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
-      });
-
-      Terra.it.matchesScreenshot('1');
+    before(() => {
+      browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
     });
 
-    describe('Does not resize textareas that are non-resizable', () => {
+    it('should display auto-resizable Textarea', () => {
+      Terra.validates.element('0');
+    });
+
+    it('should resize when given several rows of input', () => {
+      browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+      Terra.validates.element('1');
+    });
+
+    describe('Non-Resizable Textarea', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
+        browser.url('/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
         browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
-      Terra.it.validatesElement('0');
-
-      it('should resize appropriately', () => {
-        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+      it('should display non-resizable Textarea', () => {
+        Terra.validates.element('0');
       });
 
-      Terra.it.matchesScreenshot('1');
+      it('should not resize when given several rows of input', () => {
+        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+        Terra.validates.element('1');
+      });
     });
 
     describe('Blocks autoresizing for when ontouch exists and browser screen is not desktop size', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-on-touch-start');
+        browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-on-touch-start');
         browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
-      Terra.it.validatesElement('0');
-
-      it('should resize appropriately', () => {
-        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+      it('should display auto-resizable Textarea', () => {
+        Terra.validates.element('0');
       });
 
-      Terra.it.matchesScreenshot('1');
+      it('should not resize when ontouch exists and browser screen is not desktop size', () => {
+        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+        Terra.validates.element('1');
+      });
     });
 
     describe('Blocks autoresizing for when DocumentTouch exists and browser screen is not desktop size', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-document-touch');
+        browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-document-touch');
         browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
-      Terra.it.validatesElement('0');
-
-      it('should resize appropriately', () => {
-        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+      it('should display auto-resizable Textarea', () => {
+        Terra.validates.element('0');
       });
 
-      Terra.it.matchesScreenshot('1');
+      it('should not resize when DocumentTouch exists and browser screen is not desktop size', () => {
+        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+        Terra.validates.element('1');
+      });
     });
 
     describe('Blocks autoresizing for when maxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-max-touch-points');
+        browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-max-touch-points');
         browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
-      Terra.it.validatesElement('0');
-
-      it('should resize appropriately', () => {
-        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+      it('should display auto-resizable Textarea', () => {
+        Terra.validates.element('0');
       });
 
-      Terra.it.matchesScreenshot('1');
+      it('should not resize when maxTouchPoints exists and browser screen is not desktop size', () => {
+        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+        Terra.validates.element('1');
+      });
     });
 
     describe('Blocks autoresizing for when msMaxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-ms-max-touch-points');
+        browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-ms-max-touch-points');
         browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
-      Terra.it.validatesElement('0');
-
-      it('should resize appropriately', () => {
-        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+      it('should display auto-resizable Textarea', () => {
+        Terra.validates.element('0');
       });
 
-      Terra.it.matchesScreenshot('1');
+      it('should not resize when msMaxTouchPoints exists and browser screen is not desktop size', () => {
+        browser.setValue('textarea', 'New input New Input\n \n \n \n \n \n \n \n \n');
+
+        Terra.validates.element('1');
+      });
     });
 
-    describe('Swapping two textareas with different size', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/swap-textarea');
-        browser.click('#swap-button');
-      });
+    it('should swap two Textareas with different size', () => {
+      browser.url('/raw/tests/terra-form-textarea/form-textarea/swap-textarea');
+      browser.click('#swap-button');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('swapping');
     });
   });
 
   describe('TextareaField', () => {
-    describe('Valid TextareaField', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display valid TextareaField', () => {
+      browser.url('/raw/tests/terra-form-textarea/form-textarea/textarea-field');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('valid');
     });
 
-    describe('Invalid TextareaField', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
-        browser.click('#validity-toggle');
-      });
+    it('should display invalid TextareaField', () => {
+      browser.url('/raw/tests/terra-form-textarea/form-textarea/textarea-field');
+      browser.click('#validity-toggle');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('invalid');
     });
 
-    describe('Incomplete TextareaField', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/textarea-field');
-        browser.click('#incomplete-toggle');
-      });
+    it('should display incomplete TextareaField', () => {
+      browser.url('/raw/tests/terra-form-textarea/form-textarea/textarea-field');
+      browser.click('#incomplete-toggle');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('incomplete');
     });
 
-    describe('Disabled TextareaField', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-textarea/form-textarea/disabled-textarea-field');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display Disabled TextareaField', () => {
+      browser.url('/raw/tests/terra-form-textarea/form-textarea/disabled-textarea-field');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('disabled');
     });
   });
 });
 
 Terra.describeViewports('Form-Textarea', ['large'], () => {
   describe('Setting Value', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-textarea/form-textarea/setting-value-textarea'));
+    before(() => browser.url('/raw/tests/terra-form-textarea/form-textarea/setting-value-textarea'));
 
-    Terra.it.validatesElement('empty');
-
-    it('should not trigger onInput when programmatically setting value', () => {
-      browser.click('#textarea-set-text-button');
+    it('should display empty Textarea', () => {
+      Terra.validates.element('empty');
     });
 
-    Terra.it.validatesElement('programmatically');
+    it('should trigger onInput when programmatically setting value', () => {
+      browser.click('#textarea-set-text-button');
+
+      Terra.validates.element('programmatically');
+    });
   });
 });
