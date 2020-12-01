@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
 
   * Fixed broken hyperlinks in Table documentation
 
