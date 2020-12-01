@@ -35,7 +35,7 @@ Terra.describeViewports('Tag', ['tiny'], () => {
 });
 
 Terra.describeViewports('Tag', ['tiny', 'medium', 'large'], () => {
-  it('displays multiple  tags', () => {
+  it('displays multiple tags', () => {
     browser.url('/raw/tests/terra-tag/tag/multiple-tags');
     Terra.validates.element('multiple');
   });
