@@ -1,49 +1,49 @@
 Terra.describeViewports('Heading', ['medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-heading/heading/default-heading'));
+  it('should display default Heading', () => {
+    browser.url('/raw/tests/terra-heading/heading/default-heading');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Color', () => {
-    before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-color'));
+  it('should display Heading with color', () => {
+    browser.url('/raw/tests/terra-heading/heading/heading-color');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('color');
   });
 
-  describe('Italics', () => {
-    before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-italics'));
+  it('should display Heading in italics', () => {
+    browser.url('/raw/tests/terra-heading/heading/heading-italics');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('italics');
   });
 
-  describe('Levels', () => {
-    before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-levels'));
+  it('should display Heading levels', () => {
+    browser.url('/raw/tests/terra-heading/heading/heading-levels');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('levels');
   });
 
-  describe('Size', () => {
-    before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-size'));
+  it('should display Heading sizes', () => {
+    browser.url('/raw/tests/terra-heading/heading/heading-size');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('sizes');
   });
 
-  describe('Visually Hidden', () => {
-    before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-visually-hidden'));
+  it('should display visually hidden Heading', () => {
+    browser.url('/raw/tests/terra-heading/heading/heading-visually-hidden');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('visually hidden');
   });
 
-  describe('Visual Props', () => {
-    before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-visual-props'));
+  it('should display Heading with all visual props set', () => {
+    browser.url('/raw/tests/terra-heading/heading/heading-visual-props');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('visual props');
   });
 
-  describe('Weight', () => {
-    before(() => browser.url('/#/raw/tests/terra-heading/heading/heading-weight'));
+  it('should display Heading weight', () => {
+    browser.url('/raw/tests/terra-heading/heading/heading-weight');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('weight');
   });
 });

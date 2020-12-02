@@ -1,28 +1,29 @@
 Terra.describeViewports('Tag', ['tiny'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-tag/tag/default-tag'));
-    Terra.it.validatesElement();
+  it('displays Default tag', () => {
+    browser.url('/raw/tests/terra-tag/tag/default-tag');
+    Terra.validates.element('default');
   });
 
-  describe('Href Tag', () => {
-    before(() => browser.url('/#/raw/tests/terra-tag/tag/href-tag'));
-    Terra.it.matchesScreenshot();
+  it('displays Href Tag', () => {
+    browser.url('/raw/tests/terra-tag/tag/href-tag');
+    Terra.validates.element('href');
   });
 
-  describe('Icon and Text Tag', () => {
-    before(() => browser.url('/#/raw/tests/terra-tag/tag/icon-and-text-tag'));
-    Terra.it.validatesElement();
+  it('displays Icon and Text Tag', () => {
+    browser.url('/raw/tests/terra-tag/tag/icon-and-text-tag');
+    Terra.validates.element('icon and text');
   });
 
-  describe('Icon and Text Long Tag', () => {
-    before(() => browser.url('/#/raw/tests/terra-tag/tag/long-text-tag'));
-    Terra.it.validatesElement();
+  it('displays Icon and Text Long Tag', () => {
+    browser.url('/raw/tests/terra-tag/tag/long-text-tag');
+    Terra.validates.element('icon and long text');
   });
 
   describe('OnClick Tag', () => {
-    before(() => browser.url('/#/raw/tests/terra-tag/tag/on-click-tag'));
-
-    Terra.it.validatesElement();
+    it('displays Default tag', () => {
+      browser.url('/raw/tests/terra-tag/tag/on-click-tag');
+      Terra.validates.element('display tag');
+    });
 
     it('tabs to tag', () => {
       browser.click('#root');
@@ -33,7 +34,9 @@ Terra.describeViewports('Tag', ['tiny'], () => {
   });
 });
 
-Terra.describeViewports('Multiple Tags', ['tiny', 'medium', 'large'], () => {
-  before(() => browser.url('/#/raw/tests/terra-tag/tag/multiple-tags'));
-  Terra.it.validatesElement();
+Terra.describeViewports('Tag', ['tiny', 'medium', 'large'], () => {
+  it('displays multiple tags', () => {
+    browser.url('/raw/tests/terra-tag/tag/multiple-tags');
+    Terra.validates.element('multiple');
+  });
 });
