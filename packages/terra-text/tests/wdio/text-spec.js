@@ -1,67 +1,56 @@
 Terra.describeViewports('Text', ['huge'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/default-text'));
-
-    Terra.it.validatesElement();
+  it('displays Default text', () => {
+    browser.url('/raw/tests/terra-text/text/default-text');
+    Terra.validates.element('default');
   });
 
-  describe('Color', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-color'));
-
-    Terra.it.validatesElement();
+  it('displays text with Color', () => {
+    browser.url('/raw/tests/terra-text/text/text-color');
+    Terra.validates.element('color');
   });
 
-  describe('Italics', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-italics'));
-
-    Terra.it.validatesElement();
+  it('displays text with Italics', () => {
+    browser.url('/raw/tests/terra-text/text/text-italics');
+    Terra.validates.element('italics');
   });
 
-  describe('Font Size Group 1', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-font-size-1'));
-
-    Terra.it.validatesElement();
+  it('displays Font Size Group 1', () => {
+    browser.url('/raw/tests/terra-text/text/text-font-size-1');
+    Terra.validates.element('font size group 1');
   });
 
-  describe('Font Size Group 2', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-font-size-2'));
-
-    Terra.it.validatesElement();
+  it('Font Size Group 2', () => {
+    browser.url('/raw/tests/terra-text/text/text-font-size-2');
+    Terra.validates.element('font size group 2');
   });
 
-  describe('Font Size Group 3', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-font-size-3'));
-
-    Terra.it.validatesElement();
+  it('displays Font Size Group 3', () => {
+    browser.url('/raw/tests/terra-text/text/text-font-size-3');
+    Terra.validates.element('font size group 3');
   });
 
-  describe('Visually Hidden', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-visually-hidden'));
-
-    Terra.it.validatesElement();
+  it('displays Visually Hidden text', () => {
+    browser.url('/raw/tests/terra-text/text/text-visually-hidden');
+    Terra.validates.element('visually hidden');
   });
 
-  describe('Visual Props', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-visual-props'));
-
-    Terra.it.validatesElement();
+  it('displays with Visual Props', () => {
+    browser.url('/raw/tests/terra-text/text/text-visual-props');
+    Terra.validates.element('visual props');
   });
 
-  describe('Weight', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-weight'));
-
-    Terra.it.validatesElement();
+  it('displays with Weight', () => {
+    browser.url('/raw/tests/terra-text/text/text-weight');
+    Terra.validates.element('weight');
   });
 
-  describe('Line-height calculated on text font size when parent has a different font size.', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-line-height'));
-
-    Terra.it.validatesElement();
+  it('should calculate Line-height on text font size when parent has a different font size.', () => {
+    browser.url('/raw/tests/terra-text/text/text-line-height');
+    Terra.validates.element('calculate line height');
   });
 
-  describe('Word Wrapped', () => {
-    before(() => browser.url('/#/raw/tests/terra-text/text/text-word-wrapped'));
-
-    Terra.it.validatesElement();
+  it('displays with Word Wrapped', () => {
+    browser.url('/raw/tests/terra-text/text/text-word-wrapped');
+    Terra.validates.element('word wrapped');
   });
 });

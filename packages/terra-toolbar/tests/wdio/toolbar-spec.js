@@ -1,40 +1,28 @@
 Terra.describeViewports('Toolbar', ['tiny'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-toolbar/toolbar/default-toolbar'));
-
-    it('validates the element', () => {
-      Terra.validates.element();
-    });
+  it('displays a default toolbar', () => {
+    browser.url('/raw/tests/terra-toolbar/toolbar/default-toolbar');
+    Terra.validates.element('default');
   });
-  describe('Start Align', () => {
-    before(() => browser.url('/#/raw/tests/terra-toolbar/toolbar/start-align-toolbar'));
 
-    it('validates the element', () => {
-      Terra.validates.element();
-    });
+  it('displays a start aligned toolbar', () => {
+    browser.url('/raw/tests/terra-toolbar/toolbar/start-align-toolbar');
+    Terra.validates.element('start align');
   });
-  describe('End Align', () => {
-    before(() => browser.url('/#/raw/tests/terra-toolbar/toolbar/end-align-toolbar'));
 
-    it('validates the element', () => {
-      Terra.validates.element();
-    });
+  it('displays a end aligned toolbar', () => {
+    browser.url('/raw/tests/terra-toolbar/toolbar/end-align-toolbar');
+    Terra.validates.element('end align');
   });
-  describe('Center Align', () => {
-    before(() => browser.url('/#/raw/tests/terra-toolbar/toolbar/center-align-toolbar'));
 
-    it('validates the element', () => {
-      Terra.validates.element();
-    });
+  it('displays a center aligned toolbar', () => {
+    browser.url('/raw/tests/terra-toolbar/toolbar/center-align-toolbar');
+    Terra.validates.element('center align');
   });
 });
 
 Terra.describeViewports('Toolbar', ['tiny', 'medium', 'large'], () => {
-  describe('Long Content', () => {
-    before(() => browser.url('/#/raw/tests/terra-toolbar/toolbar/long-button-toolbar'));
-
-    it('validates the element', () => {
-      Terra.validates.element();
-    });
+  it('displays a toolbar with Long Content', () => {
+    browser.url('/raw/tests/terra-toolbar/toolbar/long-button-toolbar');
+    Terra.validates.element('long content');
   });
 });
