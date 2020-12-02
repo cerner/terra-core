@@ -1,54 +1,41 @@
 Terra.describeViewports('Switch', ['tiny'], () => {
-  describe('DefaultSwitch', () => {
-    before(() => browser.url('/#/raw/tests/terra-switch/switch/default-switch'));
+  it('should display Default Switch', () => {
+    browser.url('/raw/tests/terra-switch/switch/default-switch');
+    Terra.validates.element('default');
+  });
 
-    Terra.it.validatesElement();
+  it('should focus', () => {
+    browser.keys('Tab');
+    Terra.validates.element('focus');
+  });
 
-    describe('should focus', () => {
-      before(() => {
-        browser.keys('Tab');
-      });
-
-      Terra.it.validatesElement();
-    });
-
-    describe('should check on click', () => {
-      before(() => {
-        browser.click('#defaultSwitch');
-      });
-
-      Terra.it.validatesElement();
-    });
+  it('should check on click', () => {
+    browser.click('#defaultSwitch');
+    Terra.validates.element('check on click');
   });
 
   describe('Disabled', () => {
-    before(() => browser.url('/#/raw/tests/terra-switch/switch/disabled-switch'));
+    it('should display disabled button', () => {
+      browser.url('/raw/tests/terra-switch/switch/disabled-switch');
+      Terra.validates.element('disabled');
+    });
 
-    Terra.it.validatesElement();
-
-    describe('should not change on click', () => {
-      before(() => {
-        browser.moveToObject('#disabledSwitch');
-        browser.click('#disabledSwitch');
-      });
-
-      Terra.it.validatesElement();
+    it('should not change on click', () => {
+      browser.moveToObject('#disabledSwitch');
+      browser.click('#disabledSwitch');
+      Terra.validates.element('no change on click');
     });
   });
 });
 
 Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
-  describe('Long Label Text', () => {
-    it('renders switch with long label text', () => {
-      browser.url('/#/raw/tests/terra-switch/switch/label-wrap');
-      Terra.validates.element();
-    });
+  it('renders switch with long label text', () => {
+    browser.url('/raw/tests/terra-switch/switch/label-wrap');
+    Terra.validates.element('long label text');
   });
 
-  describe('Block Switch', () => {
-    it('renders switch as block element', () => {
-      browser.url('/#/raw/tests/terra-switch/switch/block-switch');
-      Terra.validates.element();
-    });
+  it('renders switch as block element', () => {
+    browser.url('/raw/tests/terra-switch/switch/block-switch');
+    Terra.validates.element('block');
   });
 });
