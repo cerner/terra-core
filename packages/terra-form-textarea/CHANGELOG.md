@@ -2,6 +2,34 @@
 
 ## Unreleased
 
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
+## 5.9.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.8.0 - (November 10, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.7.0 - (October 27, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.6.0 - (October 13, 2020)
+
+* Changed
+  * Removed reference to terra-markdown
+
+## 5.5.0 - (September 29, 2020)
+
+* Changed
+  * Minor dependency version bump
+
 ## 5.4.0 - (September 16, 2020)
 
 * Added

@@ -1,29 +1,29 @@
 Terra.describeViewports('Badge', ['tiny', 'medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-default'));
+  it('displays default Badge', () => {
+    browser.url('/raw/tests/terra-badge/badge/badge-default');
 
-    Terra.it.validatesElement({ selector: '#default-badge' });
+    Terra.validates.element('default', { selector: '#default-badge' });
   });
 
-  describe('Intent', () => {
-    before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-intent'));
+  it('displays Badge with intent', () => {
+    browser.url('/raw/tests/terra-badge/badge/badge-intent');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('intent');
   });
 
-  describe('Size', () => {
-    before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-size'));
+  it('displays Badge with different sizes', () => {
+    browser.url('/raw/tests/terra-badge/badge/badge-size');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size');
   });
 
-  describe('Icons', () => {
-    before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-icon'));
-    Terra.it.validatesElement();
+  it('displays Badge with icons', () => {
+    browser.url('/raw/tests/terra-badge/badge/badge-icon');
+    Terra.validates.element('icons');
   });
 
-  describe('Visually Hidden Text', () => {
-    before(() => browser.url('/#/raw/tests/terra-badge/badge/badge-visually-hidden-text'));
-    Terra.it.validatesElement();
+  it('displays Badge with visually hidden text', () => {
+    browser.url('/raw/tests/terra-badge/badge/badge-visually-hidden-text');
+    Terra.validates.element('visually hidden text');
   });
 });

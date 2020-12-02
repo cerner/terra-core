@@ -1,11 +1,11 @@
 Terra.describeViewports('VisuallyHiddenText', ['tiny', 'medium', 'large'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-visually-hidden-text/visually-hidden-text/default-visually-hidden-text'));
-    Terra.it.validatesElement();
+  it('displays a Default visually hidden text', () => {
+    browser.url('/raw/tests/terra-visually-hidden-text/visually-hidden-text/default-visually-hidden-text');
+    Terra.validates.element('default');
   });
 
-  describe('NonNull', () => {
-    before(() => browser.url('/#/raw/tests/terra-visually-hidden-text/visually-hidden-text/non-null-visually-hidden-text'));
-    Terra.it.validatesElement();
+  it('displays a Non Null visually hidden text', () => {
+    browser.url('/raw/tests/terra-visually-hidden-text/visually-hidden-text/non-null-visually-hidden-text');
+    Terra.validates.element('non null');
   });
 });

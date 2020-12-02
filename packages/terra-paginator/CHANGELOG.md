@@ -1,6 +1,37 @@
 # Changelog
 
 ## Unreleased
+* Changed
+  * Changed progressive paginator to support unknown total page count.
+  * Replaced `Terra.it()` with `Terra.validates.element()`.
+
+* Fixed
+  * Fixed paginator not considering `totalCount` when `itemCountPerPage` was not provided.
+
+## 2.66.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.65.0 - (November 10, 2020)
+
+* Fixed
+  * Fixed build failures due to the react/sort-comp rule
+
+## 2.64.0 - (October 27, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.0 - (October 13, 2020)
+
+* Changed
+  * Removed reference to terra-props-table.
+
+## 2.62.0 - (September 29, 2020)
+
+* Changed
+  * Minor dependency version bump
 
 ## 2.61.0 - (September 16, 2020)
 
@@ -16,7 +47,7 @@
 
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices.
-  
+
 ## 2.58.0 - (August 6, 2020)
 
 * Changed

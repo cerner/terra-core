@@ -2,11 +2,29 @@
 
 ## Unreleased
 
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
+## 4.40.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.39.0 - (October 27, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.38.0 - (October 13, 2020)
+
+* Changed
+  * Replaced references to terra-doc-template with terra-docs
+
 ## 4.37.0 - (August 18, 2020)
 
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices and removed hover wdio.
-  
+
 ## 4.36.0 - (August 6, 2020)
 
 * Changed

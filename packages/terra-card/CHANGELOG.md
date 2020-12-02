@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 3.36.0 - (November 17, 2020)
+
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
+## 3.35.0 - (October 13, 2020)
+
+* Changed
+  * Remove reference to terra-doc-template
+
 ## 3.34.0 - (August 4, 2020)
 
 * Changed

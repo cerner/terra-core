@@ -15,6 +15,7 @@ import IconModerate from 'terra-icon/lib/icon/IconModerate';
 import IconUnspecified from 'terra-icon/lib/icon/IconUnspecified';
 import IconCritical from 'terra-icon/lib/icon/IconCritical';
 import IconCriticalInverse from 'terra-icon/lib/icon/IconCriticalInverse';
+import IconHazardLow from 'terra-icon/lib/icon/IconHazardLow';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconInformationInverse from 'terra-icon/lib/icon/IconInformationInverse';
 import IconErrorDark from 'terra-icon/lib/icon/IconErrorDark';
@@ -179,6 +180,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconCriticalInverse from 'terra-icon/lib/icon/IconCriticalInverse';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconHazardLow height='2em' width='2em' /></td>
+        <td style={cellStyle}>hazardLow</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconHazardLow from 'terra-icon/lib/icon/IconHazardLow';
           </code>
         </td>
       </tr>

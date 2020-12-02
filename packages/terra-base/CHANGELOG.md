@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 5.41.0 - (November 10, 2020)
+
+* Fixed
+  * Fix the internationalization setup url in the terra-base doc to point to the correct link.
+
+## 5.40.0 - (September 29, 2020)
+
+* Added
+  * Added `throwOnI18nLoadError` prop to opt into logging and throwing the error when i18n data fails to load instead of only logging the error to the console
+
 ## 5.39.0 - (August 4, 2020)
 
 * Changed

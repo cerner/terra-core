@@ -41,7 +41,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should not accept clicks', () => {
-      expect(browser.click.bind(browser, '[class*="button"]')).to.throw(Error);
+      expect(browser.click.bind(browser, '#searchfield > [data-terra-search-field-button="Search"]')).to.throw(Error);
     });
   });
 
@@ -68,12 +68,12 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     Terra.it.validatesElement('default value');
 
-    it('should enter a new search term', () => {
-      browser.click('input');
-      for (let i = 0; i < 7; i += 1) {
-        browser.keys('Backspace');
-      }
+    it('should clear the value', () => {
+      browser.click('#searchfield [data-terra-search-field-button="Clear"]');
+      Terra.validates.element('Clear');
+    });
 
+    it('should enter a new search term', () => {
       browser.addValue('input', 'Lorem');
     });
 
@@ -175,7 +175,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     Terra.it.validatesElement('programmatically');
 
     it('should search with value on search button press', () => {
-      browser.click('#searchfield > button');
+      browser.click('#searchfield > [data-terra-search-field-button="Search"]');
     });
 
     Terra.it.validatesElement('search');

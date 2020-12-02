@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+* Changed
+  * Bumped `one-cerner-style-icons` to v1.35.0
+
+## 3.38.0 - (November 17, 2020)
+
+* Changed
+  * Bumped `one-cerner-style-icons` to v1.34.0
+
+## 3.37.0 - (October 27, 2020)
+
+* Changed
+  * Updated animation styles to be passed as global in order to remove CSP violation.
+  * Bumped `one-cerner-style-icons` to v1.33.0
+
 ## 3.36.0 - (August 6, 2020)
 
 * Changed

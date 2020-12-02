@@ -1,68 +1,60 @@
 Terra.describeViewports('CheckboxField', ['tiny', 'large'], () => {
-  describe('CheckboxField Valid', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/controlled-checkbox-field');
-    });
+  it('should display controlled CheckboxField', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/controlled-checkbox-field');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('controlled');
   });
 
-  describe('CheckboxField Optional', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/optional-checkbox-field');
-    });
+  it('should display optional CheckboxField', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/optional-checkbox-field');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('optional');
   });
 
-  describe('CheckboxField Hidden Legend', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/hidden-legend');
-    });
+  it('should display CheckboxField with hidden legend', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/hidden-legend');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('hidden legend');
+  });
+
+  it('should display CheckboxField with long text legend', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/long-text-legend');
+
+    Terra.validates.element('long text legend');
   });
 });
 
 Terra.describeViewports('CheckboxField', ['tiny'], () => {
-  describe('CheckboxField Interactions - Valid State', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/controlled-checkbox-field');
-      browser.waitForVisible('#testing-checkbox-field');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
-    });
+  it('should display CheckboxField interactions valid state', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/controlled-checkbox-field');
+    browser.waitForVisible('#testing-checkbox-field');
+    browser.click('[for="website-dept"]');
+    browser.click('[for="ux-dept"]');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('interactions with valid state');
   });
 
-  describe('CheckboxField Interactions - Invalid State', () => {
-    before(() => {
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
-    });
+  it('should display CheckboxField interactions invalid state', () => {
+    browser.click('[for="website-dept"]');
+    browser.click('[for="ux-dept"]');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('interactions with invalid state');
   });
 
-  describe('CheckboxField Interactions - Valid State with hideRequired', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/hide-required-invalid-checkbox-field');
-      browser.waitForVisible('#testing-checkbox-field');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
-    });
+  it('should display CheckboxField interactions valid State with hideRequired', () => {
+    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox-field/hide-required-invalid-checkbox-field');
+    browser.waitForVisible('#testing-checkbox-field');
+    browser.click('[for="website-dept"]');
+    browser.click('[for="ux-dept"]');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('interactions valid State with hideRequired');
   });
 
-  describe('CheckboxField Interactions - Invalid State with hideRequired', () => {
-    before(() => {
-      browser.waitForVisible('#testing-checkbox-field');
-      browser.click('[for="website-dept"]');
-      browser.click('[for="ux-dept"]');
-    });
+  it('should display CheckboxField interactions invalid state with hideRequired', () => {
+    browser.waitForVisible('#testing-checkbox-field');
+    browser.click('[for="website-dept"]');
+    browser.click('[for="ux-dept"]');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('interactions invalid state with hideRequired');
   });
 });

@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## 5.26.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.25.0 - (November 10, 2020)
+
+* Fixed
+  * Fixed build failures due to the react/sort-comp rule
+
+## 5.24.0 - (October 13, 2020)
+
+* Changed
+  * Replaced references to terra-doc-template with terra-docs
+
 ## 5.23.0 - (August 4, 2020)
 
 * Changed

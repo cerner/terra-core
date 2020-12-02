@@ -125,6 +125,7 @@ const IconAll = () => (
     <Icon.IconGlasses className={cx(['icon'])} />
     <Icon.IconGroup className={cx(['icon'])} />
     <Icon.IconHalfRating className={cx(['icon'])} />
+    <Icon.IconHazardLow className={cx(['icon'])} />
     <Icon.IconHelp className={cx(['icon'])} />
     <Icon.IconHelpInverse className={cx(['icon', 'icon-inverse'])} />
     <Icon.IconHelpInverseLowLight className={cx(['icon'])} />
@@ -173,6 +174,10 @@ const IconAll = () => (
     <Icon.IconMediaRecord className={cx(['icon'])} />
     <Icon.IconMediaRewind className={cx(['icon'])} />
     <Icon.IconMediaStop className={cx(['icon'])} />
+    <Icon.IconMedicationTablet className={cx(['icon'])} />
+    <Icon.IconMedicationTabletOutline className={cx(['icon'])} />
+    <Icon.IconMedicationTabletHalf className={cx(['icon'])} />
+    <Icon.IconMedicationTabletHalfOutline className={cx(['icon'])} />
     <Icon.IconMenu className={cx(['icon'])} />
     <Icon.IconMerge className={cx(['icon'])} />
     <Icon.IconMicrophone className={cx(['icon'])} />

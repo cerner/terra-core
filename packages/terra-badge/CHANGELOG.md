@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## 3.45.0 - (November 17, 2020)
+
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
+## 3.44.0 - (October 27, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.43.0 - (October 13, 2020)
+
+* Changed
+  * Reference terra-theme-context 1.0.0 to enable hoisting.
+
 ## 3.42.0 - (August 6, 2020)
 
 * Changed

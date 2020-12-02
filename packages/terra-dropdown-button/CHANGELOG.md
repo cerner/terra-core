@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 1.23.0 - (November 10, 2020)
+
+* Fixed
+  * Fixed build failures due to the react/sort-comp rule
+
+## 1.22.0 - (October 13, 2020)
+
+* Fixed
+  * Fix to prevent modal from closing on pressing escape to close dropdown.
+
 ## 1.21.0 - (August 18, 2020)
 
 * Added

@@ -188,6 +188,10 @@ import IconKeyboard from 'terra-icon/lib/icon/IconKeyboard';
 import IconSharedSchedules from 'terra-icon/lib/icon/IconSharedSchedules';
 import IconPatientSearch from 'terra-icon/lib/icon/IconPatientSearch';
 import IconGroup from 'terra-icon/lib/icon/IconGroup';
+import IconMedicationTablet from 'terra-icon/lib/icon/IconMedicationTablet';
+import IconMedicationTabletOutline from 'terra-icon/lib/icon/IconMedicationTabletOutline';
+import IconMedicationTabletHalf from 'terra-icon/lib/icon/IconMedicationTabletHalf';
+import IconMedicationTabletHalfOutline from 'terra-icon/lib/icon/IconMedicationTabletHalfOutline';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -1909,6 +1913,42 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconGroup from 'terra-icon/lib/icon/IconGroup';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMedicationTablet height='2em' width='2em' /></td>
+        <td style={cellStyle}>medicationTablet</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMedicationTablet from 'terra-icon/lib/icon/IconMedicationTablet';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMedicationTabletOutline height='2em' width='2em' /></td>
+        <td style={cellStyle}>medicationTabletOutline</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMedicationTabletOutline from 'terra-icon/lib/icon/IconMedicationTabletOutline';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMedicationTabletHalf height='2em' width='2em' /></td>
+        <td style={cellStyle}>medicationTabletHalf</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMedicationTabletHalf from 'terra-icon/lib/icon/IconMedicationTabletHalf';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMedicationTabletHalfOutline height='2em' width='2em' /></td>
+        <td style={cellStyle}>medicationTabletHalfOutline</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMedicationTabletHalfOutline from 'terra-icon/lib/icon/IconMedicationTabletHalfOutline';
           </code>
         </td>
       </tr>

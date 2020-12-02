@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
+## 4.9.0 - (September 29, 2020)
+
+* Changed
+  * Updated legend styles in `CheckboxField` for long text.
+
 ## 4.8.0 - (August 4, 2020)
 
 * Removed

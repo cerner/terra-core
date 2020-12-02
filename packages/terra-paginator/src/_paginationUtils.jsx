@@ -1,4 +1,4 @@
-const calculatePages = (totalCount, itemCountPerPage) => Math.ceil(totalCount / itemCountPerPage);
+const calculatePages = (totalCount, itemCountPerPage) => ((itemCountPerPage) ? Math.ceil(totalCount / itemCountPerPage) : totalCount);
 
 const pageSet = (index, totalPages) => {
   const sequence = [];

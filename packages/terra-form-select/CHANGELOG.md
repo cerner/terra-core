@@ -2,6 +2,31 @@
 
 ## Unreleased
 
+## 6.21.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.20.0 - (November 10, 2020)
+
+* Fixed
+  * Fixed build failures due to the react/sort-comp rule
+
+## 6.19.0 - (October 27, 2020)
+
+* Added
+  * Added mutation observer-shim to better support inert in IE10.
+
+## 6.18.0 - (October 13, 2020)
+
+* Fixed
+  * Fix to prevent modal from closing on pressing escape to close select.
+
+## 6.17.0 - (September 29, 2020)
+
+* Changed
+  * Updated jest snapshots due to changes in form-field.
+
 ## 6.16.0 - (September 1, 2020)
 
 * Fixed

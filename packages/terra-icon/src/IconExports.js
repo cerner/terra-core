@@ -116,6 +116,7 @@ import IconGapChecking from './icon/IconGapChecking';
 import IconGlasses from './icon/IconGlasses';
 import IconGroup from './icon/IconGroup';
 import IconHalfRating from './icon/IconHalfRating';
+import IconHazardLow from './icon/IconHazardLow';
 import IconHelp from './icon/IconHelp';
 import IconHelpInverse from './icon/IconHelpInverse';
 import IconHelpInverseLowLight from './icon/IconHelpInverseLowLight';
@@ -164,6 +165,10 @@ import IconMediaPlay from './icon/IconMediaPlay';
 import IconMediaRecord from './icon/IconMediaRecord';
 import IconMediaRewind from './icon/IconMediaRewind';
 import IconMediaStop from './icon/IconMediaStop';
+import IconMedicationTablet from './icon/IconMedicationTablet';
+import IconMedicationTabletOutline from './icon/IconMedicationTabletOutline';
+import IconMedicationTabletHalf from './icon/IconMedicationTabletHalf';
+import IconMedicationTabletHalfOutline from './icon/IconMedicationTabletHalfOutline';
 import IconMenu from './icon/IconMenu';
 import IconMerge from './icon/IconMerge';
 import IconMicrophone from './icon/IconMicrophone';
@@ -410,6 +415,7 @@ const Icons = {
   IconGlasses,
   IconGroup,
   IconHalfRating,
+  IconHazardLow,
   IconHelp,
   IconHelpInverse,
   IconHelpInverseLowLight,
@@ -458,6 +464,10 @@ const Icons = {
   IconMediaRecord,
   IconMediaRewind,
   IconMediaStop,
+  IconMedicationTablet,
+  IconMedicationTabletOutline,
+  IconMedicationTabletHalf,
+  IconMedicationTabletHalfOutline,
   IconMenu,
   IconMerge,
   IconMicrophone,

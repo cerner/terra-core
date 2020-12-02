@@ -2,6 +2,30 @@
 
 ## Unreleased
 
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
+## 4.12.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.11.0 - (November 10, 2020)
+
+* Changed
+  * Updated `terra-dev-site` examples to use react hooks.
+
+## 4.10.0 - (October 27, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+
+## 4.9.0 - (September 29, 2020)
+
+* Fixed
+  * Fixed voiceover issues in label-group.
+
 ## 4.8.0 - (August 6, 2020)
 
 * Changed

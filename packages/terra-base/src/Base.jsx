@@ -26,10 +26,13 @@ const propTypes = {
    */
   strictMode: PropTypes.bool,
   /**
-   * The component(s) that will be wrapped by `<Base />` ONLY
-   * in the event that translations have not been loaded yet.
-   * NOTE: Absolutely no locale-dependent logic should be
-   * utilized in this placeholder.
+   * Whether or not the error should be logged and thrown if something goes wrong. When false, the error will only be logged to the
+   * console an error.
+   */
+  throwOnI18nLoadError: PropTypes.bool,
+  /**
+   * The component(s) that will be wrapped by `<Base />` ONLY in the event that translations have not been loaded yet.
+   * NOTE: Absolutely no locale-dependent logic should be utilized in this placeholder.
    */
   translationsLoadingPlaceholder: PropTypes.node,
 };
@@ -37,6 +40,7 @@ const propTypes = {
 const defaultProps = {
   customMessages: {},
   strictMode: false,
+  throwOnI18nLoadError: false,
 };
 
 class Base extends React.Component {
@@ -56,6 +60,10 @@ class Base extends React.Component {
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e);
+
+        if (this.props.throwOnI18nLoadError) {
+          throw e;
+        }
       }
     }
   }
@@ -67,6 +75,10 @@ class Base extends React.Component {
       } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e);
+
+        if (this.props.throwOnI18nLoadError) {
+          throw e;
+        }
       }
     }
   }

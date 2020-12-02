@@ -10,6 +10,9 @@ import Dropdown from '../shared/_Dropdown';
 import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
+import 'mutationobserver-shim';
+import '../shared/_contains-polyfill';
+import '../shared/_matches-polyfill';
 
 const cx = classNamesBind.bind(styles);
 
@@ -197,6 +200,165 @@ class Frame extends React.Component {
     clearTimeout(this.debounceTimer);
   }
 
+  /**
+   * Handles the blur event.
+   */
+  handleBlur(event) {
+    const { relatedTarget } = event;
+
+    // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
+    if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
+      return;
+    }
+
+    // Don't blur if we dismissed the onscreen keyboard
+    // Determined by if we have have interacted with the frame via onTouchStart
+    // and if the focus is on input.
+    if (relatedTarget === this.input || relatedTarget === this.selectMenu) {
+      return;
+    }
+
+    this.setState({ isFocused: false, focusedByTouch: false });
+
+    this.closeDropdown();
+
+    if (this.props.onBlur) {
+      this.props.onBlur(event);
+    }
+  }
+
+  /**
+   * Handles the focus event.
+   */
+  handleFocus(event) {
+    if (this.props.disabled) {
+      return;
+    }
+
+    if (this.props.onFocus && !this.state.isFocused) {
+      this.props.onFocus(event);
+    }
+
+    this.setState({ isFocused: true });
+  }
+
+  /**
+   * Manages keyboard interactions and accessibility.
+   * @param {event} event - The onKeyDown event.
+   */
+  handleKeyDown(event) {
+    const { keyCode, target } = event;
+
+    if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
+      event.preventDefault();
+      this.openDropdown(event);
+    } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
+      event.preventDefault();
+      this.openDropdown(event);
+    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
+      event.stopPropagation();
+      this.closeDropdown();
+    }
+  }
+
+  /**
+   * Handles the mouse down events.
+   * @param {event} event - The mouse down event.
+   */
+  handleMouseDown(event) {
+    // Preventing default events stops the search input from losing focus.
+    // The default variant has no search input therefore the mouse down gives the component focus.
+    event.preventDefault();
+    this.openDropdown(event);
+  }
+
+  /**
+   * Handles the input mouse down events.
+   * @param {event} event - The mouse down event.
+   */
+  handleInputMouseDown(event) {
+    event.stopPropagation();
+    this.openDropdown(event);
+  }
+
+  /**
+   * Handles the input focus event.
+   */
+  handleInputFocus() {
+    this.setState({ isInputFocused: true });
+  }
+
+  /**
+   * Handles the input blur event.
+   */
+  handleInputBlur() {
+    this.setState({ isInputFocused: false });
+  }
+
+  /**
+   * Handles the toggle mouse down events.
+   */
+  handleToggleMouseDown() {
+    if (this.state.isOpen) {
+      this.closeDropdown();
+    }
+  }
+
+  /**
+   * Handles the toggle button mouse down events.
+   */
+  handleToggleButtonMouseDown() {
+    if (this.state.isOpen) {
+      this.closeDropdown();
+      if (this.input) {
+        this.input.focus();
+      }
+    }
+  }
+
+  /**
+   * Handles the touch start events
+   */
+  handleTouchStart() {
+    this.setState({ focusedByTouch: true });
+  }
+
+  /**
+   * Handles changes to the search value.
+   * @param {event} event - The input change event.
+   */
+  handleSearch(event) {
+    const searchValue = event.target.value;
+
+    this.setState({
+      isOpen: true,
+      hasSearchChanged: true,
+      searchValue,
+    });
+
+    if (this.props.onSearch) {
+      this.props.onSearch(searchValue);
+    }
+  }
+
+  /**
+   * Handles the request to select an option.
+   * @param {string|number} value - The value of the selected option.
+   * @param {ReactNode} option - The option that was selected.
+   */
+  handleSelect(value, option) {
+    this.setState({
+      searchValue: '',
+      hasSearchChanged: false,
+      isOpen: false,
+      isAbove: false,
+    });
+
+    if (this.props.onSelect) {
+      this.props.onSelect(value, option);
+    }
+  }
+
   setInput(input) {
     this.input = input;
   }
@@ -307,164 +469,6 @@ class Frame extends React.Component {
     };
 
     this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible), updateDropdownAttributes);
-  }
-
-  /**
-   * Handles the blur event.
-   */
-  handleBlur(event) {
-    const { relatedTarget } = event;
-
-    // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
-    if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
-      return;
-    }
-
-    // Don't blur if we dismissed the onscreen keyboard
-    // Determined by if we have have interacted with the frame via onTouchStart
-    // and if the focus is on input.
-    if (relatedTarget === this.input || relatedTarget === this.selectMenu) {
-      return;
-    }
-
-    this.setState({ isFocused: false, focusedByTouch: false });
-
-    this.closeDropdown();
-
-    if (this.props.onBlur) {
-      this.props.onBlur(event);
-    }
-  }
-
-  /**
-   * Handles the focus event.
-   */
-  handleFocus(event) {
-    if (this.props.disabled) {
-      return;
-    }
-
-    if (this.props.onFocus && !this.state.isFocused) {
-      this.props.onFocus(event);
-    }
-
-    this.setState({ isFocused: true });
-  }
-
-  /**
-   * Manages keyboard interactions and accessibility.
-   * @param {event} event - The onKeyDown event.
-   */
-  handleKeyDown(event) {
-    const { keyCode, target } = event;
-
-    if (keyCode === KeyCode.KEY_SPACE && target !== this.input) {
-      event.preventDefault();
-      this.openDropdown(event);
-    } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
-      event.preventDefault();
-      this.openDropdown(event);
-    } else if (keyCode === KeyCode.KEY_ESCAPE) {
-      this.closeDropdown();
-    }
-  }
-
-  /**
-   * Handles the mouse down events.
-   * @param {event} event - The mouse down event.
-   */
-  handleMouseDown(event) {
-    // Preventing default events stops the search input from losing focus.
-    // The default variant has no search input therefore the mouse down gives the component focus.
-    event.preventDefault();
-    this.openDropdown(event);
-  }
-
-  /**
-   * Handles the input mouse down events.
-   * @param {event} event - The mouse down event.
-   */
-  handleInputMouseDown(event) {
-    event.stopPropagation();
-    this.openDropdown(event);
-  }
-
-  /**
-   * Handles the input focus event.
-   */
-  handleInputFocus() {
-    this.setState({ isInputFocused: true });
-  }
-
-  /**
-   * Handles the input blur event.
-   */
-  handleInputBlur() {
-    this.setState({ isInputFocused: false });
-  }
-
-  /**
-   * Handles the toggle mouse down events.
-   */
-  handleToggleMouseDown() {
-    if (this.state.isOpen) {
-      this.closeDropdown();
-    }
-  }
-
-  /**
-   * Handles the toggle button mouse down events.
-   */
-  handleToggleButtonMouseDown() {
-    if (this.state.isOpen) {
-      this.closeDropdown();
-      if (this.input) {
-        this.input.focus();
-      }
-    }
-  }
-
-  /**
-   * Handles the touch start events
-   */
-  handleTouchStart() {
-    this.setState({ focusedByTouch: true });
-  }
-
-  /**
-   * Handles changes to the search value.
-   * @param {event} event - The input change event.
-   */
-  handleSearch(event) {
-    const searchValue = event.target.value;
-
-    this.setState({
-      isOpen: true,
-      hasSearchChanged: true,
-      searchValue,
-    });
-
-    if (this.props.onSearch) {
-      this.props.onSearch(searchValue);
-    }
-  }
-
-  /**
-   * Handles the request to select an option.
-   * @param {string|number} value - The value of the selected option.
-   * @param {ReactNode} option - The option that was selected.
-   */
-  handleSelect(value, option) {
-    this.setState({
-      searchValue: '',
-      hasSearchChanged: false,
-      isOpen: false,
-      isAbove: false,
-    });
-
-    if (this.props.onSelect) {
-      this.props.onSelect(value, option);
-    }
   }
 
   /**

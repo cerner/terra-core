@@ -90,26 +90,6 @@ class SplitButton extends React.Component {
     };
   }
 
-  setListNode(element) {
-    this.dropdownList = element;
-  }
-
-  setButtonNode(node) {
-    this.buttonNode = node;
-  }
-
-  getButtonNode() {
-    return this.buttonNode;
-  }
-
-  toggleDropDown(event) {
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
-    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
-    // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
-    // This will put focus on the button when clicked.
-    event.currentTarget.focus();
-  }
-
   handleDropdownButtonClick(event) {
     if (this.state.isOpen) {
       this.setState({ openedViaKeyboard: false });
@@ -147,6 +127,9 @@ class SplitButton extends React.Component {
   }
 
   handleCaretKeyDown(event) {
+    if (this.state.isOpen && event.keyCode === KeyCode.KEY_ESCAPE) {
+      event.stopPropagation();
+    }
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       // In FireFox active styles don't get applied onKeyDown
       this.setState({ caretIsActive: true, openedViaKeyboard: true });
@@ -179,6 +162,26 @@ class SplitButton extends React.Component {
       this.setState({ caretIsActive: false });
       this.toggleDropDown(event);
     }
+  }
+
+  setListNode(element) {
+    this.dropdownList = element;
+  }
+
+  setButtonNode(node) {
+    this.buttonNode = node;
+  }
+
+  getButtonNode() {
+    return this.buttonNode;
+  }
+
+  toggleDropDown(event) {
+    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+    // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
+    // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
+    // This will put focus on the button when clicked.
+    event.currentTarget.focus();
   }
 
   render() {

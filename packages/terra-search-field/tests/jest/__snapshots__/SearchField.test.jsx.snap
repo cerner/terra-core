@@ -91,6 +91,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
         </div>
         <Button
           className="button"
+          data-terra-search-field-button="Search"
           icon={
             <IconSearch
               data-name="Layer 1"
@@ -112,6 +113,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
             aria-disabled={false}
             aria-label="Terra.searchField.submit-search"
             className="button neutral compact orion-fusion-theme button"
+            data-terra-search-field-button="Search"
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -250,6 +252,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
     </div>
     <Button
       className="button"
+      data-terra-search-field-button="Search"
       icon={
         <IconSearch
           data-name="Layer 1"
@@ -271,6 +274,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         aria-disabled={false}
         aria-label="Terra.searchField.submit-search"
         className="button neutral compact button"
+        data-terra-search-field-button="Search"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -350,6 +354,7 @@ exports[`Snapshots renders a basic search field 1`] = `
   </div>
   <Button
     className="button"
+    data-terra-search-field-button="Search"
     icon={
       <IconSearch
         data-name="Layer 1"
@@ -391,6 +396,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
   </div>
   <Button
     className="button"
+    data-terra-search-field-button="Search"
     icon={
       <IconSearch
         data-name="Layer 1"
@@ -432,6 +438,7 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
   </div>
   <Button
     className="button"
+    data-terra-search-field-button="Search"
     icon={
       <IconSearch
         data-name="Layer 1"
@@ -472,6 +479,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     />
     <Button
       className="clear"
+      data-terra-search-field-button="Clear"
       icon={
         <span
           className="clear-icon"
@@ -490,6 +498,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
   </div>
   <Button
     className="button"
+    data-terra-search-field-button="Search"
     icon={
       <IconSearch
         data-name="Layer 1"
@@ -531,6 +540,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     />
     <Button
       className="clear"
+      data-terra-search-field-button="Clear"
       icon={
         <span
           className="clear-icon"
@@ -549,6 +559,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
   </div>
   <Button
     className="button"
+    data-terra-search-field-button="Search"
     icon={
       <IconSearch
         data-name="Layer 1"
@@ -590,6 +601,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
   </div>
   <Button
     className="button"
+    data-terra-search-field-button="Search"
     icon={
       <IconSearch
         data-name="Layer 1"
@@ -631,6 +643,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     />
     <Button
       className="clear"
+      data-terra-search-field-button="Clear"
       icon={
         <span
           className="clear-icon"
@@ -649,6 +662,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
   </div>
   <Button
     className="button"
+    data-terra-search-field-button="Search"
     icon={
       <IconSearch
         data-name="Layer 1"
@@ -690,6 +704,7 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
   </div>
   <Button
     className="button"
+    data-terra-search-field-button="Search"
     icon={
       <IconSearch
         data-name="Layer 1"
@@ -732,6 +747,7 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
   </div>
   <Button
     className="button"
+    data-terra-search-field-button="Search"
     icon={
       <IconSearch
         data-name="Layer 1"

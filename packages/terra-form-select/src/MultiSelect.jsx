@@ -146,19 +146,6 @@ class MultiSelect extends React.Component {
   }
 
   /**
-   * Returns the appropriate variant display
-   */
-  display() {
-    const selectValue = SelectUtil.value(this.props, this.state);
-
-    return selectValue.map(tag => (
-      <Tag value={tag} key={tag} onDeselect={this.handleDeselect}>
-        {SelectUtil.valueDisplay(this.props, tag)}
-      </Tag>
-    ));
-  }
-
-  /**
    * Communicates changes to the value.
    * @param {array|number|string} value - The value resulting from a change.
    */
@@ -196,6 +183,19 @@ class MultiSelect extends React.Component {
     if (this.props.onSelect) {
       this.props.onSelect(value, option);
     }
+  }
+
+  /**
+   * Returns the appropriate variant display
+   */
+  display() {
+    const selectValue = SelectUtil.value(this.props, this.state);
+
+    return selectValue.map(tag => (
+      <Tag value={tag} key={tag} onDeselect={this.handleDeselect}>
+        {SelectUtil.valueDisplay(this.props, tag)}
+      </Tag>
+    ));
   }
 
   render() {

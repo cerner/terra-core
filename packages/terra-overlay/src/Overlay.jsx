@@ -105,6 +105,12 @@ class Overlay extends React.Component {
     this.enableContainerChildrenFocus();
   }
 
+  handleCloseEvent(event) {
+    if (this.props.onRequestClose) {
+      this.props.onRequestClose(event);
+    }
+  }
+
   setContainer(node) {
     if (!node) { return; } // Ref callbacks happen on mount and unmount, element is null on unmount
     this.overflow = document.documentElement.style.overflow;
@@ -169,12 +175,6 @@ class Overlay extends React.Component {
   shouldHandleClick(event) {
     if (this.props.isOpen) {
       this.handleCloseEvent(event);
-    }
-  }
-
-  handleCloseEvent(event) {
-    if (this.props.onRequestClose) {
-      this.props.onRequestClose(event);
     }
   }
 

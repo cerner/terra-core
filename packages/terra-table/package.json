@@ -1,7 +1,7 @@
 {
   "name": "terra-table",
   "main": "lib/index.js",
-  "version": "4.16.0",
+  "version": "4.18.0",
   "description": "The terra-table component provides user a way to render selectable data in a tabular format",
   "repository": {
     "type": "git",
@@ -26,10 +26,11 @@
     "react-dom": "^16.8.5"
   },
   "dependencies": {
+    "@cerner/terra-docs": "^1.0.0",
     "classnames": "^2.2.5",
     "keycode-js": "^2.0.1",
     "prop-types": "^15.5.8",
-    "terra-content-container": "^3.30.0",
+    "terra-content-container": "^3.31.0",
     "terra-mixins": "^1.38.0",
     "terra-theme-context": "^1.0.0",
     "terra-visually-hidden-text": "^2.30.0"

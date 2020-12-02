@@ -11,6 +11,9 @@ import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import styles from '../shared/_Frame.module.scss';
 import MenuUtil from '../shared/_MenuUtil';
+import 'mutationobserver-shim';
+import '../shared/_contains-polyfill';
+import '../shared/_matches-polyfill';
 
 const cx = classNamesBind.bind(styles);
 
@@ -212,132 +215,6 @@ class Frame extends React.Component {
     clearTimeout(this.debounceTimer);
   }
 
-  setInput(input) {
-    this.input = input;
-  }
-
-  setSelectMenuRef(element) {
-    this.selectMenu = element;
-  }
-
-  getDisplay(displayId, ariaDescribedBy, id) {
-    const { searchValue, isFocused } = this.state;
-    const {
-      disabled, display, placeholder, required, value, inputId,
-    } = this.props;
-
-    const isHidden = !isFocused && value && value.length > 0;
-
-    const inputAttrs = {
-      disabled,
-      placeholder,
-      ref: this.setInput,
-      onChange: this.handleSearch,
-      onFocus: this.handleInputFocus,
-      onBlur: this.handleInputBlur,
-      onMouseDown: this.handleInputMouseDown,
-      'aria-label': this.ariaLabel(),
-      'aria-describedby': `${displayId} ${ariaDescribedBy}`,
-      'aria-disabled': disabled,
-      'aria-owns': this.state.isOpen ? id : undefined,
-      type: 'text',
-      className: cx('search-input', { 'is-hidden': isHidden }),
-      required: required && !display.length ? true : undefined,
-      id: inputId,
-      'aria-required': (required && !display.length),
-    };
-
-    return (
-      <ul data-terra-form-select-input className={cx('content')}>
-        {display && display.length > 0
-          ? (
-            <li>
-              <ul id={displayId} className={cx('display-content')}>
-                {display}
-                <li className={cx('visually-hidden-component')}>
-                  <FormattedMessage id="Terra.form.select.selected" />
-                </li>
-              </ul>
-            </li>
-          ) : null}
-        <li className={cx('search-wrapper')}>
-          <input {...inputAttrs} value={searchValue} />
-        </li>
-      </ul>
-    );
-  }
-
-  /**
-   * Closes the dropdown.
-   */
-  closeDropdown() {
-    this.setState({
-      isAbove: false,
-      isFocused: document.activeElement === this.input || document.activeElement === this.select,
-      isOpen: false,
-      isPositioned: false,
-      hasSearchChanged: false,
-      searchValue: '',
-    });
-  }
-
-  /**
-   * Opens the dropdown.
-   */
-  openDropdown(event) {
-    if (this.state.isOpen || this.props.disabled) {
-      return;
-    }
-
-    /**
-     * Avoids focusing the input if the toggle button is used to open the select menu.
-     * This is to avoid an issue with VoiceOver on iOS where shifting to toggle button while the
-     * input is focused / onScreen keyboard is open unexpected focus shift when the onScreen
-     * keyboard is closed
-     */
-    if (event && event.target
-      && (event.target.hasAttribute('data-terra-form-select-toggle-button')
-      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
-      this.setState({ isOpen: true, isPositioned: false });
-
-      FrameUtil.shiftFocusToMenu(this);
-      return;
-    }
-    if (event.target.hasAttribute('data-terra-form-select-toggle')
-    || event.target.className.includes('arrow-icon')) {
-      this.input.focus();
-    }
-
-    if (this.input) {
-      this.input.focus();
-    } else {
-      FrameUtil.shiftFocusToMenu(this);
-    }
-
-    this.setState({ isOpen: true, isPositioned: false });
-  }
-
-  /**
-   * Positions the dropdown to utilize the most available space.
-   */
-  positionDropdown() {
-    if (!this.state.isOpen) {
-      return;
-    }
-
-    const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
-
-    const updateDropDownAttributes = () => {
-      if (this.state.isPositioned) {
-        this.dropdown.removeAttribute('inert');
-        this.dropdown.removeAttribute('aria-hidden');
-        this.selectMenu.setAttribute('tabIndex', '0');
-      }
-    };
-
-    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible), updateDropDownAttributes);
-  }
-
   /**
    * Handles the blur event.
    */
@@ -421,7 +298,8 @@ class Frame extends React.Component {
       if (onDeselect) {
         onDeselect(lastOptionValue);
       }
-    } else if (keyCode === KeyCode.KEY_ESCAPE) {
+    } else if (this.state.isOpen && keyCode === KeyCode.KEY_ESCAPE) {
+      event.stopPropagation();
       this.closeDropdown();
     }
   }
@@ -512,6 +390,61 @@ class Frame extends React.Component {
     }
   }
 
+  setInput(input) {
+    this.input = input;
+  }
+
+  setSelectMenuRef(element) {
+    this.selectMenu = element;
+  }
+
+  getDisplay(displayId, ariaDescribedBy, id) {
+    const { searchValue, isFocused } = this.state;
+    const {
+      disabled, display, placeholder, required, value, inputId,
+    } = this.props;
+
+    const isHidden = !isFocused && value && value.length > 0;
+
+    const inputAttrs = {
+      disabled,
+      placeholder,
+      ref: this.setInput,
+      onChange: this.handleSearch,
+      onFocus: this.handleInputFocus,
+      onBlur: this.handleInputBlur,
+      onMouseDown: this.handleInputMouseDown,
+      'aria-label': this.ariaLabel(),
+      'aria-describedby': `${displayId} ${ariaDescribedBy}`,
+      'aria-disabled': disabled,
+      'aria-owns': this.state.isOpen ? id : undefined,
+      type: 'text',
+      className: cx('search-input', { 'is-hidden': isHidden }),
+      required: required && !display.length ? true : undefined,
+      id: inputId,
+      'aria-required': (required && !display.length),
+    };
+
+    return (
+      <ul data-terra-form-select-input className={cx('content')}>
+        {display && display.length > 0
+          ? (
+            <li>
+              <ul id={displayId} className={cx('display-content')}>
+                {display}
+                <li className={cx('visually-hidden-component')}>
+                  <FormattedMessage id="Terra.form.select.selected" />
+                </li>
+              </ul>
+            </li>
+          ) : null}
+        <li className={cx('search-wrapper')}>
+          <input {...inputAttrs} value={searchValue} />
+        </li>
+      </ul>
+    );
+  }
+
   /**
    * Toggles the dropdown open or closed.
    */
@@ -521,6 +454,77 @@ class Frame extends React.Component {
     } else {
       this.openDropdown(event);
     }
+  }
+
+  /**
+   * Closes the dropdown.
+   */
+  closeDropdown() {
+    this.setState({
+      isAbove: false,
+      isFocused: document.activeElement === this.input || document.activeElement === this.select,
+      isOpen: false,
+      isPositioned: false,
+      hasSearchChanged: false,
+      searchValue: '',
+    });
+  }
+
+  /**
+   * Opens the dropdown.
+   */
+  openDropdown(event) {
+    if (this.state.isOpen || this.props.disabled) {
+      return;
+    }
+
+    /**
+     * Avoids focusing the input if the toggle button is used to open the select menu.
+     * This is to avoid an issue with VoiceOver on iOS where shifting to toggle button while the
+     * input is focused / onScreen keyboard is open unexpected focus shift when the onScreen
+     * keyboard is closed
+     */
+    if (event && event.target
+      && (event.target.hasAttribute('data-terra-form-select-toggle-button')
+      || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
+      this.setState({ isOpen: true, isPositioned: false });
+
+      FrameUtil.shiftFocusToMenu(this);
+      return;
+    }
+    if (event.target.hasAttribute('data-terra-form-select-toggle')
+    || event.target.className.includes('arrow-icon')) {
+      this.input.focus();
+    }
+
+    if (this.input) {
+      this.input.focus();
+    } else {
+      FrameUtil.shiftFocusToMenu(this);
+    }
+
+    this.setState({ isOpen: true, isPositioned: false });
+  }
+
+  /**
+   * Positions the dropdown to utilize the most available space.
+   */
+  positionDropdown() {
+    if (!this.state.isOpen) {
+      return;
+    }
+
+    const { dropdownAttrs, maxHeight, isTouchAccessible } = this.props;
+
+    const updateDropDownAttributes = () => {
+      if (this.state.isPositioned) {
+        this.dropdown.removeAttribute('inert');
+        this.dropdown.removeAttribute('aria-hidden');
+        this.selectMenu.setAttribute('tabIndex', '0');
+      }
+    };
+
+    this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible), updateDropDownAttributes);
   }
 
   /**

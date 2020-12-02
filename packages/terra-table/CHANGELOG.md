@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
+  * Fixed broken hyperlinks in Table documentation
+
+## 4.18.0 - (November 17, 2020)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.17.0 - (October 13, 2020)
+
+* Changed
+  * Replaced references to terra-doc-template with terra-docs
+
 ## 4.16.0 - (September 16, 2020)
 
 * Changed
