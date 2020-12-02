@@ -1,41 +1,53 @@
 Terra.describeViewports('List', ['medium'], () => {
-  describe('List Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-list/list/list'));
+  it('should display default List', () => {
+    browser.url('/raw/tests/terra-list/list/list');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('ListItem Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-list/list/list-item'));
+  describe('ListItem', () => {
+    before(() => browser.url('/raw/tests/terra-list/list/list-item'));
 
-    Terra.it.validatesElement('ListItem');
+    it('should display default ListItem', () => {
+      Terra.validates.element('default');
+    });
 
-    it('Hover', () => browser.moveToObject('#selectable-item'));
+    it('should Hover on ListItem', () => {
+      browser.moveToObject('#selectable-item');
 
-    Terra.it.matchesScreenshot('ListItem-Hover');
+      Terra.validates.element('hover');
+    });
   });
 
-  describe('ListSection Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-list/list/list-section'));
+  describe('ListSection', () => {
+    before(() => browser.url('/raw/tests/terra-list/list/list-section'));
 
-    Terra.it.validatesElement();
+    it('should display ListSection', () => {
+      Terra.validates.element('default');
+    });
   });
 
-  describe('ListSubsection Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-list/list/list-subsection'));
+  describe('ListSubsection', () => {
+    before(() => browser.url('/raw/tests/terra-list/list/list-subsection'));
 
-    Terra.it.validatesElement();
+    it('should display ListSubsection', () => {
+      Terra.validates.element('default');
+    });
   });
 
-  describe('ListSectionHeader Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-list/list/list-section-header'));
+  describe('ListSectionHeader', () => {
+    before(() => browser.url('/raw/tests/terra-list/list/list-section-header'));
 
-    Terra.it.validatesElement('ListSectionHeader');
+    it('should display ListSectionHeader', () => {
+      Terra.validates.element('default');
+    });
   });
 
-  describe('ListSubsectionHeader Test', () => {
-    before(() => browser.url('/#/raw/tests/terra-list/list/list-subsection-header'));
+  describe('ListSubsectionHeader', () => {
+    before(() => browser.url('/raw/tests/terra-list/list/list-subsection-header'));
 
-    Terra.it.validatesElement('ListSubsection');
+    it('should display ListSubsectionHeader', () => {
+      Terra.validates.element('ListSubsectionHeader');
+    });
   });
 });
