@@ -1,31 +1,31 @@
 Terra.describeViewports('Status', ['medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-status/status/status-default'));
+  it('should display default Status', () => {
+    browser.url('/raw/tests/terra-status/status/status-default');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Arrange', () => {
-    before(() => browser.url('/#/raw/tests/terra-status/status/status-arrange'));
+  it('should display Status with arrange', () => {
+    browser.url('/raw/tests/terra-status/status/status-arrange');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('arrange');
   });
 
-  describe('Icon', () => {
-    before(() => browser.url('/#/raw/tests/terra-status/status/status-icon'));
+  it('should display status with icon', () => {
+    browser.url('/raw/tests/terra-status/status/status-icon');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('icon');
   });
 
-  describe('Image', () => {
-    before(() => browser.url('/#/raw/tests/terra-status/status/status-image'));
+  it('should display Status with image', () => {
+    browser.url('/raw/tests/terra-status/status/status-image');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('image');
   });
 
-  describe('No color', () => {
-    before(() => browser.url('/#/raw/tests/terra-status/status/status-no-color'));
+  it('should display Status with no color', () => {
+    browser.url('/raw/tests/terra-status/status/status-no-color');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('no color');
   });
 });
