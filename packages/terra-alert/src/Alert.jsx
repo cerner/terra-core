@@ -124,7 +124,7 @@ const Alert = ({
   const theme = React.useContext(ThemeContext);
   const [isNarrow, setIsNarrow] = useState();
 
-  const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({id: `Terra.alert.${type}` });
+  const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const alertClassNames = classNames(
     cx(
       'alert-base',
@@ -193,4 +193,4 @@ Alert.defaultProps = defaultProps;
 Alert.Opts = {};
 Alert.Opts.Types = AlertTypes;
 
-export default Alert;
+export default injectIntl(Alert);
