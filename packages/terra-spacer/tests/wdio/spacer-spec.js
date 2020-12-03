@@ -1,61 +1,61 @@
 Terra.describeViewports('Spacer', ['medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/default-spacer'));
+  it('should display default Spacer', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/default-spacer');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Spacer with size small-2', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/spacer-small-2'));
+  it('should display Spacer with size small-2', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/spacer-small-2');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size small-2');
   });
 
-  describe('Spacer with size small-1', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/spacer-small-1'));
+  it('should display Spacer with size small-1', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/spacer-small-1');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size small-1');
   });
 
-  describe('Spacer with size small', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/spacer-small'));
+  it('should display Spacer with size small', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/spacer-small');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size small');
   });
 
-  describe('Spacer with size medium', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/spacer-medium'));
+  it('should display Spacer with size medium', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/spacer-medium');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size medium');
   });
 
-  describe('Spacer with size large', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/spacer-large'));
+  it('should display Spacer with size large', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/spacer-large');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size large');
   });
 
-  describe('Spacer with size large+1', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/spacer-large-1'));
+  it('should display Spacer with size large+1', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/spacer-large-1');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size large+1');
   });
 
-  describe('Spacer with size large+2', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/spacer-large-2'));
+  it('should display Spacer with size large+2', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/spacer-large-2');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size large+2');
   });
 
-  describe('Spacer with size large+3', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/spacer-large-3'));
+  it('should display Spacer with size large+3', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/spacer-large-3');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size large+3');
   });
 
-  describe('Spacer with size large+4', () => {
-    before(() => browser.url('/#/raw/tests/terra-spacer/spacer/spacer-large-4'));
+  it('should display Spacer with size large+4', () => {
+    browser.url('/raw/tests/terra-spacer/spacer/spacer-large-4');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size large+4');
   });
 });
