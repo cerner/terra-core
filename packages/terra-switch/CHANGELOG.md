@@ -4,6 +4,7 @@
 
 * Changed
   * Update wdio tests to remove deprecated Terra.it helpers
+  * Updated to be compatible with `react-intl` v2-v5
 
 ## 1.3.0 - (August 18, 2020)
 

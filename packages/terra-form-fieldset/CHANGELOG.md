@@ -4,6 +4,7 @@
 
 * Changed
   * Update wdio tests to remove deprecated Terra.it helpers
+  * Removed unused peer dependency on `react-intl`
 
 ## 2.54.0 - (November 17, 2020)
 

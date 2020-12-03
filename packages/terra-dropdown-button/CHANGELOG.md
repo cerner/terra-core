@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * Updated to be compatible with `react-intl` v2-v5
+  * Removed usage of `intlShape`
+
 ## 1.23.0 - (November 10, 2020)
 
 * Fixed

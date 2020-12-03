@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated to be compatible with `react-intl` v2-v5
+
 ## 3.59.0 - (November 17, 2020)
 
 * Changed
