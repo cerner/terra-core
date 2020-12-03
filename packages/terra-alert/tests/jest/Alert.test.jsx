@@ -122,6 +122,6 @@ it('correctly applies the theme context className', () => {
     });
 
   const wrapper = shallowWithIntl(<Alert type="success" />);
-  const headerContainer = wrapper.dive();
+  const headerContainer = wrapper.dive().dive();
   expect(headerContainer).toMatchSnapshot();
 });
