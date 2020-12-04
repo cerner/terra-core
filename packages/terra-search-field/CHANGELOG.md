@@ -5,6 +5,9 @@
   * Updated to be compatible with `react-intl` v2-v5
   * Removed usage of `intlShape`
 
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
 ## 3.62.0 - (November 17, 2020)
 
 * Changed
