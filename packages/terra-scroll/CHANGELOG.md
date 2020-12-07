@@ -4,6 +4,9 @@
 
 * Fixed
  * Fixed broken links in documentation.
+ 
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
 
 ## 2.28.0 - (August 4, 2020)
 

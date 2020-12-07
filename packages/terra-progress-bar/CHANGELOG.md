@@ -5,6 +5,9 @@
 
 ## Unreleased
 
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
+
 ## 4.28.0 - (August 11, 2020)
 
 * Changed
