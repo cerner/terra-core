@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+ * Fixed broken links in documentation.
+
 * Changed
   * Update wdio tests to add names for all screenshots.
 

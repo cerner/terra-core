@@ -1,5 +1,8 @@
 # Changelog
 
+* Fixed
+ * Fixed broken links in documentation.
+
 ## Unreleased
 
 ## 4.28.0 - (August 11, 2020)
