@@ -28,7 +28,7 @@ const propTypes = {
    * @private
    * intl object programmatically imported through injectIntl from react-intl.
    * */
-  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * Callback function for when the close button is clicked. The close button will not display if this is not set.
    * On small viewports a back button will be displayed instead of a close button.

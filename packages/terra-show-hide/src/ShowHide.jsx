@@ -14,6 +14,7 @@ const propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
+   * @private
    * The intl object to be injected for translations. Provided by the injectIntl function.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,

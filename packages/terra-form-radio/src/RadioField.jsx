@@ -27,7 +27,11 @@ const propTypes = {
    * Whether or not to hide the required indicator on the legend.
    */
   hideRequired: PropTypes.bool,
-  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
+  /**
+   * @private
+   * intl object programmatically imported through injectIntl from react-intl.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * Whether or not the field is an inline field.
    */
