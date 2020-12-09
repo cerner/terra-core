@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.55.0 - (December 8, 2020)
+
 * Changed
   * Update wdio tests to remove deprecated Terra.it helpers
   * Removed unused peer dependency on `react-intl`

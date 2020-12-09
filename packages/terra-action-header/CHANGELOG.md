@@ -5,6 +5,11 @@
 * Changed
   * Updated to be compatible with `react-intl` v2-v5
   * Removed usage of `FormattedMessage` in favor of `injectIntl`
+  
+## 2.61.0 - (December 8, 2020)
+
+* Changed
+  * Minor dependency version bump
 
 ## 2.60.0 - (November 17, 2020)
 
