@@ -1,70 +1,68 @@
 Terra.describeViewports('Hyperlink', ['tiny'], () => {
-  describe('Default', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-hyperlink/hyperlink/default-hyperlink');
-      browser.moveToObject('#root', 0, 700); // move mouse to prevent hover styles
-    });
+  it('should display default Hyperlink', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/default-hyperlink');
+    browser.moveToObject('#root', 0, 700); // move mouse to prevent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Disabled', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/disabled-hyperlink'));
+  it('should display disabled Hyperlink', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/disabled-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('disabled');
   });
 
-  describe('Audio', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/audio-hyperlink'));
+  it('should display audio Hyperlink', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/audio-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('audio');
   });
 
-  describe('Document', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/document-hyperlink'));
+  it('should display document Hyperlink', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/document-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('document');
   });
 
-  describe('External', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/external-hyperlink'));
+  it('should display external Hyperlink', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/external-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('external');
   });
 
-  describe('Image', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/image-hyperlink'));
+  it('should display image Hyperlink', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/image-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('image');
   });
 
-  describe('Video', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/video-hyperlink'));
+  it('should display video Hyperlink', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/video-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('video');
   });
 
-  describe('Icon Non Wrapping', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/icon-non-wrapping-hyperlink'));
+  it('should display Hyperlink with icon non wrapping', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/icon-non-wrapping-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('icon non wrapping');
   });
 
-  describe('Scaled', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/scaled-hyperlink'));
+  it('should display scaled Hyperlink', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/scaled-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('scaled');
   });
 
-  describe('States', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/states-hyperlink'));
+  it('should display hyperlink states', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/states-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('states');
   });
 
-  describe('Underline Hidden', () => {
-    before(() => browser.url('/#/raw/tests/terra-hyperlink/hyperlink/underline-hidden-hyperlink'));
+  it('should display Hyperlink with hidden underline', () => {
+    browser.url('/raw/tests/terra-hyperlink/hyperlink/underline-hidden-hyperlink');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('hidden underline');
   });
 });

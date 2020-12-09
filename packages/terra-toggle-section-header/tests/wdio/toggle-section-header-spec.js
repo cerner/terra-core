@@ -1,11 +1,10 @@
 Terra.describeViewports('ToggleSectionHeader', ['huge'], () => {
   describe('Default', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/default-toggle-section-header');
+    it('displays a closed toggle', () => {
+      browser.url('/raw/tests/terra-toggle-section-header/toggle-section-header/default-toggle-section-header');
       browser.moveToObject('#root'); // move to prevent hover styles
+      Terra.validates.element('closed');
     });
-
-    Terra.it.validatesElement();
 
     it('validates hover styles', () => {
       browser.moveToObject('#root', 0, 0); // move to cause hover styles
@@ -19,9 +18,10 @@ Terra.describeViewports('ToggleSectionHeader', ['huge'], () => {
   });
 
   describe('Transparent', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/transparent-toggle-section-header'));
-
-    Terra.it.validatesElement();
+    it('displays a closed toggle', () => {
+      browser.url('/raw/tests/terra-toggle-section-header/toggle-section-header/transparent-toggle-section-header');
+      Terra.validates.element('closed');
+    });
 
     it('validates hover styles', () => {
       browser.moveToObject('#root', 0, 0); // move to cause hover styles
@@ -35,9 +35,10 @@ Terra.describeViewports('ToggleSectionHeader', ['huge'], () => {
   });
 
   describe('Programmatic Toggle', () => {
-    before(() => browser.url('/#/raw/tests/terra-toggle-section-header/toggle-section-header/programmatic-toggle'));
-
-    Terra.it.validatesElement();
+    it('displays a closed toggle', () => {
+      browser.url('/raw/tests/terra-toggle-section-header/toggle-section-header/programmatic-toggle');
+      Terra.validates.element('closed');
+    });
 
     it('Toggles on button click', () => {
       browser.click('#toggle');
