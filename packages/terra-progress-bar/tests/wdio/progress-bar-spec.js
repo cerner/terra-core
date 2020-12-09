@@ -1,25 +1,25 @@
 Terra.describeViewports('Progress Bar', ['medium'], () => {
-  describe('Default', () => {
-    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-default'));
+  it('should display default Progress Bar', () => {
+    browser.url('/raw/tests/terra-progress-bar/progress-bar/progress-bar-default');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Size', () => {
-    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-size'));
+  it('should display Progress Bar sizes', () => {
+    browser.url('/raw/tests/terra-progress-bar/progress-bar/progress-bar-size');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('size');
   });
 
-  describe('Color', () => {
-    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-color'));
+  it('should display Progress Bar with colors', () => {
+    browser.url('/raw/tests/terra-progress-bar/progress-bar/progress-bar-color');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('color');
   });
 
-  describe('Customized', () => {
-    before(() => browser.url('/#/raw/tests/terra-progress-bar/progress-bar/progress-bar-customized-colors'));
+  it('should display customized Progress Bar', () => {
+    browser.url('/raw/tests/terra-progress-bar/progress-bar/progress-bar-customized-colors');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('customized');
   });
 });
