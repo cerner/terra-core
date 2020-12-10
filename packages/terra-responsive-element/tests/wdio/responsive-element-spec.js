@@ -1,26 +1,26 @@
 Terra.describeViewports('ResponsiveElement', ['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], () => {
-  describe('Controlled', () => {
-    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/controlled'));
+  it('should display controlled ResponsiveElement', () => {
+    browser.url('/raw/tests/terra-responsive-element/responsive-element/controlled');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('controlled');
   });
 
-  describe('Uncontrolled', () => {
-    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/uncontrolled'));
+  it('should display uncontrolled ResponsiveElement', () => {
+    browser.url('/raw/tests/terra-responsive-element/responsive-element/uncontrolled');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('uncontrolled');
   });
 
-  describe('Fixed Size', () => {
-    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/fixed-size'));
+  it('should display ResponsiveElement with fixed size', () => {
+    browser.url('/raw/tests/terra-responsive-element/responsive-element/fixed-size');
 
     // A selector is required here because the test component overflows the viewport.
-    Terra.it.validatesElement({ selector: '#fixed-target' });
+    Terra.validates.element('fixed size', { selector: '#fixed-target' });
   });
 
-  describe('Tiny and Medium', () => {
-    before(() => browser.url('/#/raw/tests/terra-responsive-element/responsive-element/tiny-and-medium'));
+  it('should display tiny and medium ResponsiveElement', () => {
+    browser.url('/raw/tests/terra-responsive-element/responsive-element/tiny-and-medium');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('tiny and medium');
   });
 });

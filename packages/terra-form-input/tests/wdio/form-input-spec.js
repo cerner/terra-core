@@ -1,178 +1,148 @@
 Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
-  describe('Valid', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display valid Form Input', () => {
+    browser.url('/raw/tests/terra-form-input/form-input/default-form-input');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('valid');
   });
 
-  describe('Invalid', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-input/form-input/invalid-form-input');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display invalid Form Input', () => {
+    browser.url('/raw/tests/terra-form-input/form-input/invalid-form-input');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('incomplete');
   });
 
-  describe('Incomplete', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-input/form-input/incomplete-form-input');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display incomplete Form Input', () => {
+    browser.url('/raw/tests/terra-form-input/form-input/incomplete-form-input');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('invalid');
   });
 
-  describe('Invalid With Incomplete', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-form-input/form-input/invalid-with-incomplete-form-input');
-      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-    });
+  it('should display invalid Form Input with incomplete', () => {
+    browser.url('/raw/tests/terra-form-input/form-input/invalid-with-incomplete-form-input');
+    browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-    Terra.it.validatesElement();
+    Terra.validates.element('invalid with incomplete');
   });
 
   describe('Enabled', () => {
-    describe('Enabled Non-Selected', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display enabled Form Input non-selected', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/default-form-input');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('non-selected');
     });
 
-    describe('Enabled Hovered', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
-        browser.moveToObject('input');
-      });
+    it('should display enabled Form Input hovered', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/default-form-input');
+      browser.moveToObject('input');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('hovered');
     });
 
-    describe('Enabled Value', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/value-form-input');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display enabled Form Input with value', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/value-form-input');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('value');
     });
 
-    describe('Enabled Keyboard-Focused', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/default-form-input');
-        browser.keys('Tab');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display enabled Form Input keyboard-focused', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/default-form-input');
+      browser.keys('Tab');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('keyboard-focused');
     });
   });
 
   describe('Disabled', () => {
-    describe('Disabled Non-Selected', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display disabled form Input non-selected', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/disabled-form-input');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('non-selected');
     });
 
-    describe('Disabled Value', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-value-input');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display disabled Form Input with value', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/disabled-value-input');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('value');
     });
 
-    describe('Disabled Hovered', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
-        browser.moveToObject('input');
-      });
+    it('should display disabled Form Input hovered', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/disabled-form-input');
+      browser.moveToObject('input');
 
-      Terra.it.validatesElement();
+      Terra.validates.element('hovered');
     });
 
-    describe('Disabled Keyboard-Focused', () => {
+    it('should display disabled Form Input keyboard-focused', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-form-input');
+        browser.url('/raw/tests/terra-form-input/form-input/disabled-form-input');
         browser.keys('Tab');
         browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
       });
 
-      Terra.it.validatesElement();
+      Terra.validates.element('keyboard-focused');
     });
   });
 
   describe('InputField', () => {
-    describe('Resized InputField', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/input-field-width');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display resized InputField', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/input-field-width');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('resized');
     });
 
-    describe('Valid InputField', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display valid InputField', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/input-field');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('valid');
     });
 
-    describe('Invalid InputField', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
-        browser.click('#validity-toggle');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display invalid InputField', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/input-field');
+      browser.click('#validity-toggle');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('invalid');
     });
 
-    describe('Incomplete InputField', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/input-field');
-        browser.click('#incomplete-toggle');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display incomplete InputField', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/input-field');
+      browser.click('#incomplete-toggle');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('incomplete');
     });
 
-    describe('Disabled InputField', () => {
-      before(() => {
-        browser.url('/#/raw/tests/terra-form-input/form-input/disabled-input-field');
-        browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
-      });
+    it('should display disabled InputField', () => {
+      browser.url('/raw/tests/terra-form-input/form-input/disabled-input-field');
+      browser.moveToObject('#root', 0, 700); // add to ensure consistent hover styles
 
-      Terra.it.validatesElement();
+      Terra.validates.element('disabled');
     });
   });
 });
 
 Terra.describeViewports('Form-Input', ['large'], () => {
   describe('Setting Value', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-input/form-input/setting-value-input'));
+    before(() => browser.url('/raw/tests/terra-form-input/form-input/setting-value-input'));
 
-    Terra.it.validatesElement('empty');
-
-    it('should not trigger onInput when programmatically setting value', () => {
-      browser.click('#input-set-text-button');
+    it('should display empty Form Input', () => {
+      Terra.validates.element('empty');
     });
 
-    Terra.it.validatesElement('programmatically');
+    it('should trigger onInput when programmatically setting value', () => {
+      browser.click('#input-set-text-button');
+
+      Terra.validates.element('programmatically');
+    });
   });
 });

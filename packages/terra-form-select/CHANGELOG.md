@@ -12,6 +12,11 @@
   * Updated default placeholder text for all variants to be `- Select -`.
   * Updated test and example to remove the use of placeholder.
 
+## 6.22.0 - (December 8, 2020)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.21.0 - (November 17, 2020)
 
 * Changed

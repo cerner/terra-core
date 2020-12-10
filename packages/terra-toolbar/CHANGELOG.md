@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.18.0 - (December 8, 2020)
+
+* Changed
+  * Update wdio tests to add names for all screenshots.
+
 ## 1.17.0 - (November 17, 2020)
 
 * Changed
