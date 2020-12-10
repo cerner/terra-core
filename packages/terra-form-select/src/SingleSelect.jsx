@@ -5,12 +5,9 @@ import Frame from './single/Frame';
 import OptGroup from './shared/_OptGroup';
 import Option from './shared/_Option';
 import SelectUtil from './shared/_SelectUtil';
+import MenuUtil from './shared/_MenuUtil';
 
 const propTypes = {
-  /**
-   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
-   */
-  allowClear: PropTypes.bool,
   /**
    * The dropdown menu options.
    */
@@ -33,6 +30,11 @@ const propTypes = {
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: intlShape.isRequired,
+  /**
+   * Whether the select input should use the filter style display, forcing a value to always be selected.
+   * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
+   */
+  isFilterStyle: PropTypes.bool,
   /**
    * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
@@ -75,6 +77,9 @@ const propTypes = {
   onSelect: PropTypes.func,
   /**
    * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -88,18 +93,17 @@ const propTypes = {
 };
 
 const defaultProps = {
-  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isFilterStyle: false,
   isIncomplete: false,
   isInvalid: false,
   noResultContent: undefined,
   onChange: undefined,
   onDeselect: undefined,
   onSelect: undefined,
-  placeholder: undefined,
   required: false,
   value: undefined,
 };
@@ -170,41 +174,35 @@ class SingleSelect extends React.Component {
 
   render() {
     const {
-      allowClear,
       children,
       defaultValue,
       onChange,
-      placeholder,
       required,
       value,
       intl,
+      isFilterStyle,
       ...otherProps
     } = this.props;
 
-    const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-    const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
-    let clearOptionDisplay;
-
-    if (allowClear) {
-      if (selectPlaceholder.length === 0) {
-        clearOptionDisplay = defaultPlaceholder;
-      } else {
-        clearOptionDisplay = selectPlaceholder;
-      }
+    let selectValue;
+    if (!isFilterStyle || (this.state.value && MenuUtil.findByValue(children, this.state.value)) || (value && MenuUtil.findByValue(children, value))) {
+      selectValue = SelectUtil.value(this.props, this.state);
+    } else if (children) {
+      selectValue = MenuUtil.findFirst(children);
     }
 
     return (
       <Frame
         {...otherProps}
         data-terra-select
-        value={SelectUtil.value(this.props, this.state)}
+        value={selectValue}
         display={this.display()}
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
-        placeholder={selectPlaceholder}
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
-        clearOptionDisplay={clearOptionDisplay}
+        clearOptionDisplay={!isFilterStyle ? intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' }) : undefined}
+        isFilterStyle={isFilterStyle}
       >
         {children}
       </Frame>

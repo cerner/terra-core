@@ -87,6 +87,9 @@ const propTypes = {
   optionFilter: PropTypes.func,
   /**
    * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -118,7 +121,6 @@ const defaultProps = {
   onSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
-  placeholder: undefined,
   required: false,
   value: undefined,
   inputId: undefined,
@@ -201,11 +203,8 @@ class TagSelect extends React.Component {
 
   render() {
     const {
-      children, defaultValue, onChange, placeholder, required, value, intl, inputId, ...otherProps
+      children, defaultValue, onChange, required, value, intl, inputId, ...otherProps
     } = this.props;
-
-    const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-    const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
 
     return (
       <Frame
@@ -215,7 +214,6 @@ class TagSelect extends React.Component {
         display={this.display()}
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
-        placeholder={selectPlaceholder}
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
         inputId={inputId}

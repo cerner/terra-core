@@ -5,12 +5,12 @@ import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-const IncompleteSelectFieldExample = () => (
+const InvalidSelectFieldExample = () => (
   <div className={cx('content-wrapper')}>
-    <SelectField isInvalid label="T-shirt size" placeholder="Select a size" selectId="select-field" defaultValue="small">
+    <SelectField isInvalid label="T-shirt size" selectId="select-field" defaultValue="small">
       <SelectField.Option value="small" display="Small" />
     </SelectField>
   </div>
 );
 
-export default IncompleteSelectFieldExample;
+export default InvalidSelectFieldExample;

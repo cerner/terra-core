@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const SingleSelectFieldMaxheight = () => (
   <div className={cx('content-wrapper')}>
-    <SingleSelectField label="Select Field" placeholder="Select a number" selectId="singleSelectField" defaultValue="2" maxHeight={300}>
+    <SingleSelectField label="Select Field" selectId="singleSelectField" defaultValue="2" maxHeight={300}>
       <SingleSelectField.Option value="1" display="One" />
       <SingleSelectField.Option value="2" display="Two" />
       <SingleSelectField.Option value="3" display="Three" />

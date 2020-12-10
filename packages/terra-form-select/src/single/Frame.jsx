@@ -10,6 +10,7 @@ import Dropdown from '../shared/_Dropdown';
 import Menu from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import SharedUtil from '../shared/_SharedUtil';
+import MenuUtil from '../shared/_MenuUtil';
 import styles from '../shared/_Frame.module.scss';
 import 'mutationobserver-shim';
 import '../shared/_contains-polyfill';
@@ -49,6 +50,11 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
+   * Whether the select input should use the filter style display, forcing a value to always be selected.
+   * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
+   */
+  isFilterStyle: PropTypes.bool,
+  /**
    * Whether the select displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
   isIncomplete: PropTypes.bool,
@@ -82,6 +88,9 @@ const propTypes = {
   onSelect: PropTypes.func,
   /**
    * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -102,12 +111,12 @@ const defaultProps = {
   clearOptionDisplay: undefined,
   disabled: false,
   dropdownAttrs: undefined,
+  isFilterStyle: false,
   isIncomplete: false,
   isInvalid: false,
   noResultContent: undefined,
   onDeselect: undefined,
   onSelect: undefined,
-  placeholder: undefined,
   required: false,
   totalOptions: undefined,
   value: undefined,
@@ -310,12 +319,21 @@ class Frame extends React.Component {
   }
 
   getDisplay(displayId, placeholderId) {
-    const { display, placeholder } = this.props;
+    const {
+      children, display, intl, isFilterStyle,
+    } = this.props;
 
-    return (display
-      ? <span id={displayId}>{display}</span>
-      : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>
-    );
+    if (!isFilterStyle && !(display && MenuUtil.findByDisplay(children, display))) {
+      return (<div id={placeholderId} className={cx('placeholder')}>{intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' }) || '\xa0'}</div>);
+    }
+
+    if (display && MenuUtil.findByDisplay(children, display)) {
+      return (<span id={displayId}>{display}</span>);
+    }
+    if (children) {
+      return (<span id={displayId}>{MenuUtil.findFirstDisplay(children)}</span>);
+    }
+    return null;
   }
 
   /**
@@ -351,7 +369,7 @@ class Frame extends React.Component {
 
     const { dropdownAttrs, maxHeight } = this.props;
 
-    // Sets Focus to dropdown menu after dropdown menu is postioned.
+    // Sets Focus to dropdown menu after dropdown menu is positioned.
     const moveFocusToDropdown = () => {
       if (this.state.isPositioned) {
         this.dropdown.removeAttribute('inert');
@@ -446,13 +464,13 @@ class Frame extends React.Component {
       display,
       dropdownAttrs,
       intl,
+      isFilterStyle,
       isIncomplete,
       isInvalid,
       maxHeight,
       noResultContent,
       onDeselect,
       onSelect,
-      placeholder,
       required,
       totalOptions,
       value,
@@ -497,6 +515,12 @@ class Frame extends React.Component {
       clearOptionDisplay,
       refCallback: this.setSelectMenuRef,
     };
+
+    if (customProps.placeholder) {
+      // eslint-disable-next-line no-console
+      console.warn('[WARN] The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.');
+      delete customProps.placeholder;
+    }
 
     return (
       <div

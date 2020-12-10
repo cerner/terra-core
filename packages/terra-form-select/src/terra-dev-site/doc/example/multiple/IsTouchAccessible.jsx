@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const IsTouchAccessibleExample = () => (
-  <MultiSelect placeholder="Select a color" className={cx('form-select')} isTouchAccessible>
+  <MultiSelect className={cx('form-select')} isTouchAccessible>
     <MultiSelect.Option value="blue" display="Blue" />
     <MultiSelect.Option value="green" display="Green" />
     <MultiSelect.Option value="purple" display="Purple" />

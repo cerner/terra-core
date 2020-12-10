@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const IsTouchAccessibleMultiSelect = () => (
   <div className={cx('content-wrapper')}>
-    <MultiSelect placeholder="Select a color" id="multiple" isTouchAccessible>
+    <MultiSelect id="multiple" isTouchAccessible>
       <MultiSelect.Option value="blue" display="Blue" />
       <MultiSelect.Option value="green" display="Green" />
       <MultiSelect.Option value="purple" display="Purple" />

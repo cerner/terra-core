@@ -107,6 +107,9 @@ const propTypes = {
   optionFilter: PropTypes.func,
   /**
    * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -135,7 +138,6 @@ const defaultProps = {
   onSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
-  placeholder: undefined,
   required: false,
   totalOptions: undefined,
   value: undefined,
@@ -401,14 +403,13 @@ class Frame extends React.Component {
   getDisplay(displayId, ariaDescribedBy, id) {
     const { searchValue, isFocused } = this.state;
     const {
-      disabled, display, placeholder, required, value, inputId,
+      disabled, display, required, value, inputId, intl,
     } = this.props;
 
     const isHidden = !isFocused && value && value.length > 0;
 
     const inputAttrs = {
       disabled,
-      placeholder,
       ref: this.setInput,
       onChange: this.handleSearch,
       onFocus: this.handleInputFocus,
@@ -439,21 +440,10 @@ class Frame extends React.Component {
             </li>
           ) : null}
         <li className={cx('search-wrapper')}>
-          <input {...inputAttrs} value={searchValue} />
+          <input {...inputAttrs} placeholder={intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })} value={searchValue} />
         </li>
       </ul>
     );
-  }
-
-  /**
-   * Toggles the dropdown open or closed.
-   */
-  toggleDropdown(event) {
-    if (this.state.isOpen) {
-      this.closeDropdown();
-    } else {
-      this.openDropdown(event);
-    }
   }
 
   /**
@@ -526,6 +516,18 @@ class Frame extends React.Component {
 
     this.setState(FrameUtil.dropdownPosition(dropdownAttrs, this.select, this.dropdown, maxHeight, isTouchAccessible), updateDropDownAttributes);
   }
+
+  /**
+   * Toggles the dropdown open or closed.
+   */
+  toggleDropdown(event) {
+    if (this.state.isOpen) {
+      this.closeDropdown();
+    } else {
+      this.openDropdown(event);
+    }
+  }
+
 
   /**
    * Determines compatible aria-label string based on if one is provided via props
@@ -671,7 +673,6 @@ class Frame extends React.Component {
       onSearch,
       onSelect,
       optionFilter,
-      placeholder,
       required,
       totalOptions,
       value,
@@ -716,6 +717,12 @@ class Frame extends React.Component {
       maxSelectionCount,
       refCallback: this.setSelectMenuRef,
     };
+
+    if (customProps.placeholder) {
+      // eslint-disable-next-line no-console
+      console.warn('[WARN] The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.');
+      delete customProps.placeholder;
+    }
 
     return (
       <div

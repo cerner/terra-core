@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const DisabledExample = () => (
-  <SingleSelect placeholder="Select a color" disabled className={cx('form-select')} defaultValue="blue">
+  <SingleSelect disabled className={cx('form-select')} defaultValue="blue">
     <SingleSelect.Option value="blue" display="Blue" />
     <SingleSelect.Option value="green" display="Green" />
     <SingleSelect.Option value="purple" display="Purple" />

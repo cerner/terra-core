@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const OptGroupExample = () => (
-  <Select placeholder="Select a color" className={cx('form-select')}>
+  <Select className={cx('form-select')}>
     <Select.OptGroup label="Shade of blue">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="cyan" display="Cyan" />

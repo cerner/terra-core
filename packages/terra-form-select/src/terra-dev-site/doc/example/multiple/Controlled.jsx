@@ -9,7 +9,7 @@ const ControlledExample = () => {
   const [value, setValue] = useState(['blue']);
 
   return (
-    <MultiSelect placeholder="Select a color" value={value} onChange={setValue} className={cx('form-select')}>
+    <MultiSelect value={value} onChange={setValue} className={cx('form-select')}>
       <MultiSelect.Option value="blue" display="Blue" />
       <MultiSelect.Option value="green" display="Green" />
       <MultiSelect.Option value="purple" display="Purple" />

@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const MaxSelectionExample = () => (
-  <SelectField help="Shades of blue and green." label="Colors" maxSelectionCount={3} placeholder="Select a size" selectId="max-selection-field" variant="multiple" className={cx('form-select')}>
+  <SelectField help="Shades of blue and green." label="Colors" maxSelectionCount={3} selectId="max-selection-field" variant="multiple" className={cx('form-select')}>
     <SelectField.OptGroup label="Shades of Blue">
       <SelectField.Option value="blue" display="Blue" />
       <SelectField.Option value="cyan" display="Cyan" />

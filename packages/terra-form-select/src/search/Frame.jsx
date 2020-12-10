@@ -101,6 +101,9 @@ const propTypes = {
   optionFilter: PropTypes.func,
   /**
    * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -129,7 +132,6 @@ const defaultProps = {
   onSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
-  placeholder: undefined,
   required: false,
   totalOptions: undefined,
   value: undefined,
@@ -370,12 +372,11 @@ class Frame extends React.Component {
   getDisplay(ariaDescribedBy, id) {
     const { hasSearchChanged, searchValue } = this.state;
     const {
-      disabled, display, placeholder, required, inputId,
+      disabled, display, required, inputId, intl,
     } = this.props;
 
     const inputAttrs = {
       disabled,
-      placeholder,
       ref: this.setInput,
       onChange: this.handleSearch,
       onFocus: this.handleInputFocus,
@@ -395,7 +396,7 @@ class Frame extends React.Component {
 
     return (
       <div className={cx('content')}>
-        <input {...inputAttrs} value={value} />
+        <input {...inputAttrs} placeholder={intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })} value={value} />
       </div>
     );
   }
@@ -616,7 +617,6 @@ class Frame extends React.Component {
       onSearch,
       onSelect,
       optionFilter,
-      placeholder,
       required,
       totalOptions,
       value,
@@ -660,6 +660,12 @@ class Frame extends React.Component {
       clearOptionDisplay,
       refCallback: this.setSelectMenuRef,
     };
+
+    if (customProps.placeholder) {
+      // eslint-disable-next-line no-console
+      console.warn('[WARN] The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.');
+      delete customProps.placeholder;
+    }
 
     return (
       <div

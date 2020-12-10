@@ -21,7 +21,6 @@ class ControlledDefault extends React.Component {
     return (
       <div className={cx('content-wrapper')}>
         <Select
-          placeholder="Select a color"
           required
           onChange={this.handleChange}
           id="default"

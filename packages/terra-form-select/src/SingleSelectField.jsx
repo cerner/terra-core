@@ -7,10 +7,6 @@ import Option from './shared/_Option';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection.
-   */
-  allowClear: PropTypes.bool,
-  /**
    * The select options.
    */
   children: PropTypes.node,
@@ -38,6 +34,11 @@ const propTypes = {
    * Whether to hide the required indicator on the label.
    */
   hideRequired: PropTypes.bool,
+  /**
+   * Whether the select input should use the filter style display, forcing a value to always be selected.
+   * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
+   */
+  isFilterStyle: PropTypes.bool,
   /**
    * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
@@ -74,6 +75,9 @@ const propTypes = {
   onChange: PropTypes.func,
   /**
    * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -100,13 +104,13 @@ const propTypes = {
 };
 
 const defaultProps = {
-  allowClear: false,
   children: undefined,
   defaultValue: undefined,
   disabled: false,
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isFilterStyle: false,
   isIncomplete: false,
   isInline: false,
   isInvalid: false,
@@ -115,7 +119,6 @@ const defaultProps = {
   maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
-  placeholder: undefined,
   required: false,
   selectAttrs: {},
   showOptional: false,
@@ -123,13 +126,13 @@ const defaultProps = {
 };
 
 const SingleSelectField = ({
-  allowClear,
   children,
   defaultValue,
   disabled,
   error,
   help,
   hideRequired,
+  isFilterStyle,
   isIncomplete,
   isInline,
   isInvalid,
@@ -139,7 +142,6 @@ const SingleSelectField = ({
   maxHeight,
   maxWidth,
   onChange,
-  placeholder,
   required,
   selectAttrs,
   selectId,
@@ -161,6 +163,13 @@ const SingleSelectField = ({
     }
   }
 
+  if (customProps.placeholder) {
+    // eslint-disable-next-line no-console
+    console.warn('[WARN] The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.');
+    // eslint-disable-next-line no-param-reassign
+    delete customProps.placeholder;
+  }
+
   return (
     <Field
       {...customProps}
@@ -180,16 +189,15 @@ const SingleSelectField = ({
       <SingleSelect
         {...selectAttrs}
         ariaLabel={label}
-        allowClear={allowClear}
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
+        isFilterStyle={isFilterStyle}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         defaultValue={defaultValue}
         maxHeight={maxHeight || selectAttrs.maxHeight}
         onChange={onChange}
-        placeholder={placeholder}
         required={required}
         value={value}
       >

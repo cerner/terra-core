@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const InvalidExample = () => (
-  <MultiSelect placeholder="Select a color" isInvalid className={cx('form-select')}>
+  <MultiSelect isInvalid className={cx('form-select')}>
     <MultiSelect.Option value="blue" display="Blue" />
     <MultiSelect.Option value="green" display="Green" />
     <MultiSelect.Option value="purple" display="Purple" />

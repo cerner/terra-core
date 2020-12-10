@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const IsTouchAccessibleTagSelect = () => (
   <div className={cx('content-wrapper')}>
-    <TagSelect placeholder="Select a color" id="tag" isTouchAccessible>
+    <TagSelect id="tag" isTouchAccessible>
       <TagSelect.Option value="blue" display="Blue" />
       <TagSelect.Option value="green" display="Green" />
       <TagSelect.Option value="purple" display="Purple" />

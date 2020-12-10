@@ -23,7 +23,6 @@ class ControlledSearch extends React.Component {
         <Select
           id="search"
           onChange={this.handleChange}
-          placeholder="Select a color"
           value={this.state.value}
           variant="search"
         >

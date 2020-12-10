@@ -5,9 +5,9 @@ import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-const IncompleteCombobox = () => (
+const InvalidCombobox = () => (
   <div className={cx('content-wrapper')}>
-    <Select isInvalid placeholder="Select a color" variant="combobox" id="combobox">
+    <Select isInvalid variant="combobox" id="combobox">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />
@@ -17,4 +17,4 @@ const IncompleteCombobox = () => (
   </div>
 );
 
-export default IncompleteCombobox;
+export default InvalidCombobox;

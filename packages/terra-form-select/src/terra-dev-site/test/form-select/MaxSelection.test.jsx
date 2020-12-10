@@ -11,7 +11,6 @@ const MaxSelectionExample = () => (
       id="tag"
       label="Colors"
       maxSelectionCount={2}
-      placeholder="Select a color"
       selectId="select-field"
       variant="tag"
       help="Shades of blue and green."

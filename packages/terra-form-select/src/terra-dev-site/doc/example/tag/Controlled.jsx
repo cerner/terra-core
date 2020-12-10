@@ -9,7 +9,7 @@ const ControlledExample = () => {
   const [value, setValue] = useState(['blue']);
 
   return (
-    <TagSelect placeholder="Select a color" value={value} onChange={setValue} className={cx('form-select')}>
+    <TagSelect value={value} onChange={setValue} className={cx('form-select')}>
       <TagSelect.Option value="blue" display="Blue" />
       <TagSelect.Option value="green" display="Green" />
       <TagSelect.Option value="purple" display="Purple" />

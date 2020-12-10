@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const DefaultHover = () => (
   <div className={cx('content-wrapper')}>
-    <Select placeholder="Select a color" id="default">
+    <Select id="default">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />

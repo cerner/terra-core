@@ -161,6 +161,20 @@ class MenuUtil {
   }
 
   /**
+   * Finds the first option to display in the menu.
+   * @param {ReactNode} object - The menu.
+   * @return {string|null} - The value of the first option. Null if not found.
+   */
+  static findFirstDisplay(object) {
+    const options = MenuUtil.flatten(object, true);
+
+    if (options.length > 0) {
+      return options[0].props.display;
+    }
+    return null;
+  }
+
+  /**
    * Finds the first option in the menu.
    * @param {ReactNode} object - The menu.
    * @return {string|null} - The value of the last option. Null if not found.

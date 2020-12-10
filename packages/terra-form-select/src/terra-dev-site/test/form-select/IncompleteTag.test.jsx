@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const IncompleteTag = () => (
   <div className={cx('content-wrapper')}>
-    <Select required isIncomplete placeholder="Select a color" variant="tag" id="tag">
+    <Select required isIncomplete variant="tag" id="tag">
       <Select.Option value="blue" display="Blue" />
       <Select.Option value="green" display="Green" />
       <Select.Option value="purple" display="Purple" />

@@ -8,7 +8,7 @@ import SelectUtil from './shared/_SelectUtil';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection, will use placeholder text if provided.
+   * The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.
    */
   allowClear: PropTypes.bool,
   /**
@@ -90,6 +90,9 @@ const propTypes = {
   optionFilter: PropTypes.func,
   /**
    * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -121,7 +124,6 @@ const defaultProps = {
   onSearch: undefined,
   onSelect: undefined,
   optionFilter: undefined,
-  placeholder: undefined,
   required: false,
   isTouchAccessible: false,
   value: undefined,
@@ -194,20 +196,8 @@ class SearchSelect extends React.Component {
 
   render() {
     const {
-      allowClear, children, defaultValue, onChange, placeholder, required, value, intl, inputId, ...otherProps
+      allowClear, children, defaultValue, onChange, required, value, intl, inputId, ...otherProps
     } = this.props;
-
-    const defaultPlaceholder = intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' });
-    const selectPlaceholder = placeholder === undefined ? defaultPlaceholder : placeholder;
-    let clearOptionDisplay;
-
-    if (allowClear) {
-      if (selectPlaceholder.length === 0) {
-        clearOptionDisplay = defaultPlaceholder;
-      } else {
-        clearOptionDisplay = selectPlaceholder;
-      }
-    }
 
     return (
       <Frame
@@ -217,10 +207,9 @@ class SearchSelect extends React.Component {
         display={this.display()}
         onDeselect={this.handleDeselect}
         onSelect={this.handleSelect}
-        placeholder={selectPlaceholder}
         required={required}
         totalOptions={SelectUtil.getTotalNumberOfOptions(children)}
-        clearOptionDisplay={clearOptionDisplay}
+        clearOptionDisplay={allowClear ? intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' }) : undefined}
         inputId={inputId}
       >
         {children}

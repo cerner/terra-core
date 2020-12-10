@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const IsTouchAccessibleExample = () => (
-  <Combobox placeholder="Select a color" className={cx('form-select')} isTouchAccessible>
+  <Combobox className={cx('form-select')} isTouchAccessible>
     <Combobox.Option value="blue" display="Blue" />
     <Combobox.Option value="green" display="Green" />
     <Combobox.Option value="purple" display="Purple" />

@@ -6,7 +6,7 @@ import styles from './common/Select.test.module.scss';
 const cx = classNames.bind(styles);
 
 const IsTouchAccessibleBottom = () => (
-  <Select className={cx('bottom-left')} isTouchAccessible placeholder="Select a color" variant="tag" id="tag">
+  <Select className={cx('bottom-left')} isTouchAccessible variant="tag" id="tag">
     <Select.Option value="blue" display="Blue" />
     <Select.Option value="green" display="Green" />
     <Select.Option value="purple" display="Purple" />

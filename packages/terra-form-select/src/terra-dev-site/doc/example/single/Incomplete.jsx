@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const IncompleteExample = () => (
-  <SingleSelect placeholder="Select a color" required isIncomplete className={cx('form-select')}>
+  <SingleSelect required isIncomplete className={cx('form-select')}>
     <SingleSelect.Option value="blue" display="Blue" />
     <SingleSelect.Option value="green" display="Green" />
     <SingleSelect.Option value="purple" display="Purple" />

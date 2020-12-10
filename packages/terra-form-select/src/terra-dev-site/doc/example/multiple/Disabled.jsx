@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const DisabledExample = () => (
-  <MultiSelect placeholder="Select a color" disabled className={cx('form-select')} defaultValue={['red', 'white', 'blue']}>
+  <MultiSelect disabled className={cx('form-select')} defaultValue={['red', 'white', 'blue']}>
     <MultiSelect.Option value="blue" display="Blue" />
     <MultiSelect.Option value="green" display="Green" />
     <MultiSelect.Option value="purple" display="Purple" />

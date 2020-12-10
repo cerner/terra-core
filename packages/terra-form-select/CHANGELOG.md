@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+* Breaking Changes
+  * Removed prop `placeholder` from all the variants of select.
+  * Removed prop `allowClear` from single select.
+  * Added new prop `isFilterStyle` to single select.
+
+* Changed
+  * Updated color for placeholder.
+  * Updated default placeholder text for all variants to be `- Select -`.
+  * Updated test and example to remove the use of placeholder.
+
 ## 6.22.0 - (December 8, 2020)
 
 * Changed

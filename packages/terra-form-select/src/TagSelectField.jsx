@@ -87,6 +87,9 @@ const propTypes = {
   onChange: PropTypes.func,
   /**
    * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -129,7 +132,6 @@ const defaultProps = {
   maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
-  placeholder: undefined,
   required: false,
   selectAttrs: {},
   showOptional: false,
@@ -155,7 +157,6 @@ const TagSelectField = ({
   maxHeight,
   maxWidth,
   onChange,
-  placeholder,
   required,
   selectAttrs,
   selectId,
@@ -194,6 +195,13 @@ const TagSelectField = ({
     }
   }
 
+  if (customProps.placeholder) {
+    // eslint-disable-next-line no-console
+    console.warn('[WARN] The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.');
+    // eslint-disable-next-line no-param-reassign
+    delete customProps.placeholder;
+  }
+
   return (
     <Field
       {...customProps}
@@ -223,7 +231,6 @@ const TagSelectField = ({
         maxHeight={maxHeight || selectAttrs.maxHeight}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
-        placeholder={placeholder}
         required={required}
         value={value}
       >

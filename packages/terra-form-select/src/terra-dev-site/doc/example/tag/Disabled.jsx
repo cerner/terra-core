@@ -6,7 +6,7 @@ import styles from '../FormSelectDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const DisabledExample = () => (
-  <TagSelect placeholder="Select a color" disabled className={cx('form-select')} defaultValue={['red', 'white', 'blue']}>
+  <TagSelect disabled className={cx('form-select')} defaultValue={['red', 'white', 'blue']}>
     <TagSelect.Option value="blue" display="Blue" />
     <TagSelect.Option value="green" display="Green" />
     <TagSelect.Option value="purple" display="Purple" />

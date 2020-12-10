@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const FilterStyleExample = () => (
   <NativeSelect
-    ariaLabel="Default Placeholder Example"
+    ariaLabel="Default Example"
     isFilterStyle
     options={[
       { value: 'volvo', display: 'Volvo' },

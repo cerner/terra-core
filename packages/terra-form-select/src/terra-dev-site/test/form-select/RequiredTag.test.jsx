@@ -22,7 +22,6 @@ class ControlledTag extends React.Component {
       <div className={cx('content-wrapper')}>
         <Select
           onChange={this.handleChange}
-          placeholder="Select a color"
           required
           variant="tag"
           id="tag"

@@ -7,7 +7,7 @@ import Variants from './shared/_variants';
 
 const propTypes = {
   /**
-   * Whether a clear option is available to clear the selection.
+   * The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.
    * This is not applicable to the `multiple` or `tag` variants since the selection can already be deselected using the tag.
    */
   allowClear: PropTypes.bool,
@@ -44,6 +44,11 @@ const propTypes = {
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
   intl: intlShape.isRequired,
+  /**
+   * Whether the select input should use the filter style display, forcing a value to always be selected.
+   * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
+   */
+  isFilterStyle: PropTypes.bool,
   /**
    * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
@@ -94,6 +99,9 @@ const propTypes = {
   onChange: PropTypes.func,
   /**
    * Placeholder text.
+   * [Deprecated] Placeholder text.
+   *
+   * This prop has been deprecated to provide for better accessibility and a common and consistent placeholder pattern.
    */
   placeholder: PropTypes.string,
   /**
@@ -137,6 +145,7 @@ const defaultProps = {
   error: undefined,
   help: undefined,
   hideRequired: false,
+  isFilterStyle: false,
   isIncomplete: false,
   isInline: false,
   isInvalid: false,
@@ -147,7 +156,6 @@ const defaultProps = {
   maxHeight: undefined,
   maxWidth: undefined,
   onChange: undefined,
-  placeholder: undefined,
   required: false,
   selectAttrs: {},
   showOptional: false,
@@ -164,6 +172,7 @@ const SelectField = ({
   help,
   hideRequired,
   intl,
+  isFilterStyle,
   isIncomplete,
   isInline,
   isInvalid,
@@ -175,7 +184,6 @@ const SelectField = ({
   maxHeight,
   maxWidth,
   onChange,
-  placeholder,
   required,
   selectAttrs,
   selectId,
@@ -215,6 +223,13 @@ const SelectField = ({
     }
   }
 
+  if (customProps.placeholder) {
+    // eslint-disable-next-line no-console
+    console.warn('[WARN] The placeholder prop has been deprecated and replaced with default placeholder `- Select -` for better accessibility and consistency.');
+    // eslint-disable-next-line no-param-reassign
+    delete customProps.placeholder;
+  }
+
   return (
     <Field
       {...customProps}
@@ -238,6 +253,7 @@ const SelectField = ({
         aria-describedby={ariaDescriptionIds}
         disabled={selectAttrs.disabled || disabled}
         id={selectId}
+        isFilterStyle={isFilterStyle}
         isIncomplete={isIncomplete}
         isInvalid={isInvalid}
         isTouchAccessible={isTouchAccessible}
@@ -245,7 +261,6 @@ const SelectField = ({
         maxHeight={maxHeight || selectAttrs.maxHeight}
         maxSelectionCount={maxSelectionCount !== undefined && maxSelectionCount < 2 ? undefined : maxSelectionCount}
         onChange={onChange}
-        placeholder={placeholder}
         required={required}
         value={value}
         variant={variant}
