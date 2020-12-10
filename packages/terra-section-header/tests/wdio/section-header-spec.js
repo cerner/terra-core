@@ -39,8 +39,9 @@ Terra.describeViewports('SectionHeader', ['huge'], () => {
       browser.buttonDown();
 
       Terra.validates.element('active');
+
+      browser.buttonUp();
     });
-    after(() => browser.buttonUp());
   });
 
   it('should display closed Section Header', () => {
