@@ -59,7 +59,7 @@ const propTypes = {
    * @private
    * intl object programmatically imported through injectIntl from react-intl.
    * */
-  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired ,
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * The title for the alert which will be bolded.
    */
