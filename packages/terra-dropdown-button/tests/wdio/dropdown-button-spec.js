@@ -1,14 +1,16 @@
 Terra.describeViewports('Dropdown Button', ['medium'], () => {
   describe('Default', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/default-dropdown-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/default-dropdown-button');
       // avoid hover styles
       browser.moveToObject('#root', 100, 1);
     });
 
-    Terra.it.validatesElement();
+    it('should display default Dropdown Button', () => {
+      Terra.validates.element('default');
+    });
 
-    it('validates focus styling', () => {
+    it('should validate focus styling', () => {
       browser.keys('Tab');
       Terra.validates.element('focus');
       // tab away from the button so focus is not in later screenshots
@@ -18,25 +20,27 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     it('opens and validates dropdown with click', () => {
       browser.click('[class*=dropdown-button]');
       Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });
-      Terra.validates.screenshot('dropdown button with dropdown open');
+      Terra.validates.element('dropdown button with dropdown open');
     });
 
-    it('prints MetaData of option on click', () => {
+    it('should print MetaData of option on click', () => {
       browser.click('#opt1');
-      Terra.validates.screenshot('MetaData of 1st option', { selector: '#root' });
+      Terra.validates.element('MetaData of 1st option', { selector: '#root' });
     });
   });
 
   describe('Disabled', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/disabled-dropdown-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/disabled-dropdown-button');
     });
 
-    Terra.it.validatesElement();
+    it('should display disabled Dropdown Button', () => {
+      Terra.validates.element('default');
+    });
 
     it('tries to tab to the button', () => {
       browser.keys(['Tab']);
-      Terra.validates.screenshot('tab attempted');
+      Terra.validates.element('tab attempted');
     });
 
     it('tries to click the button', () => {
@@ -46,12 +50,14 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
   describe('Interactions', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/callback-dropdown-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/callback-dropdown-button');
       // avoid hover styles
       browser.moveToObject('#root', 100, 1);
     });
 
-    Terra.it.matchesScreenshot();
+    it('should display Dropdown Button with interactions', () => {
+      Terra.validates.element('default');
+    });
 
     it('opens the dropdown with click', () => {
       browser.click('[class*=dropdown-button]');
@@ -60,7 +66,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
     it('closes dropdown on escape without running a callback', () => {
       browser.keys(['Escape']);
-      Terra.validates.screenshot('escape');
+      Terra.validates.element('escape');
     });
 
     it('opens the dropdown with enter', () => {
@@ -83,71 +89,71 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
         browser.waitForVisible('[class*=dropdown-list]');
       });
 
-      it('runs callback on space', () => {
+      it('should run callback on space', () => {
         browser.keys(['ArrowDown', 'Space']);
-        Terra.validates.screenshot('space');
+        Terra.validates.element('space');
       });
 
       it('keyboard navigates down and runs callback on space', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'Space']);
-        Terra.validates.screenshot('down arrow');
+        Terra.validates.element('down arrow');
       });
 
-      it('runs callback on enter', () => {
+      it('should run callback on enter', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'Enter']);
-        Terra.validates.screenshot('enter');
+        Terra.validates.element('enter');
       });
 
-      it('runs callback on click', () => {
+      it('should run callback on click', () => {
         browser.click('#red');
-        Terra.validates.screenshot('click');
+        Terra.validates.element('click');
       });
 
-      it('will not keyboard navigates down past the last option', () => {
+      it('keyboard navigates down past the last option', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
-        Terra.validates.screenshot('no down out of bounds');
+        Terra.validates.element('no down out of bounds');
       });
 
       it('keyboard navigates up and runs callback on enter', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'Enter']);
-        Terra.validates.screenshot('up arrow');
+        Terra.validates.element('up arrow');
       });
 
-      it('will not keyboard navigates up past the first option', () => {
+      it('keyboard navigates up past the first option', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
-        Terra.validates.screenshot('no up out of bounds');
+        Terra.validates.element('no up out of bounds');
       });
 
       it('jumps to the last entry', () => {
         browser.keys(['ArrowDown', 'End', 'Enter']);
-        Terra.validates.screenshot('end');
+        Terra.validates.element('end');
       });
 
       it('jumps to the first entry', () => {
         browser.keys(['ArrowDown', 'Home', 'Enter']);
-        Terra.validates.screenshot('home');
+        Terra.validates.element('home');
       });
 
       it('jumps when typing', () => {
         browser.keys(['ArrowDown', 'b', 'Enter']);
-        Terra.validates.screenshot('jumps when typing');
+        Terra.validates.element('jumps when typing');
       });
 
       it('closes on tab without running a callback', () => {
         browser.keys(['Tab']);
-        Terra.validates.screenshot('tab');
+        Terra.validates.element('tab');
       });
 
       it('closes the dropdown when clicking the caret with the dropdown open', () => {
         browser.click('[class*=dropdown-button]');
-        Terra.validates.screenshot('clicking caret closes dropdown');
+        Terra.validates.element('clicking caret closes dropdown');
       });
 
       it('closes the dropdown when clicking outside the dropdownbutton', () => {
         browser.moveToObject('#root', 200, 1);
         browser.buttonDown();
         browser.buttonUp();
-        Terra.validates.screenshot('clicking outside closes dropdown');
+        Terra.validates.element('clicking outside closes dropdown');
       });
     });
 
@@ -163,12 +169,14 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
   describe('Wide contents', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/wide-dropdown-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/wide-dropdown-button');
       // avoid hover styles
       browser.moveToObject('#root', 1, 300);
     });
 
-    Terra.it.validatesElement('Both closed');
+    it('should display wide contents Dropdown Button both closed', () => {
+      Terra.validates.element('Both closed');
+    });
 
     it('opens the long label dropdown', () => {
       browser.click('#wide-label');
@@ -182,17 +190,15 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
   });
 
-  describe('Block', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/block-dropdown-button');
-    });
+  it('should display block Dropdown Button', () => {
+    browser.url('/raw/tests/terra-dropdown-button/dropdown-button/block-dropdown-button');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('block');
   });
 
   describe('Bounded', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/bounded-dropdown-button');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/bounded-dropdown-button');
     });
 
     it('opens the top left dropdown', () => {
@@ -221,7 +227,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
   describe('Focus in callback', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/dropdown-focus');
+      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/dropdown-focus');
     });
 
     it('opens the dropdown', () => {
@@ -229,18 +235,16 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       browser.waitForVisible('[class*=dropdown-list]');
     });
 
-    it('runs callback in dropdown that focuses an element', () => {
+    it('should run callback in dropdown that focuses an element', () => {
       browser.click('#first');
-      Terra.validates.screenshot('first button clicked');
+      Terra.validates.element('first button clicked');
     });
   });
 
-  describe('Variants', () => {
-    before(() => {
-      browser.url('/#/raw/tests/terra-dropdown-button/dropdown-button/variant-dropdown-buttons');
-      browser.moveToObject('#root', 1, 100);
-    });
+  it('should display variants of Dropdown Button', () => {
+    browser.url('/raw/tests/terra-dropdown-button/dropdown-button/variant-dropdown-buttons');
+    browser.moveToObject('#root', 1, 100);
 
-    Terra.it.validatesElement();
+    Terra.validates.element('variants');
   });
 });
