@@ -4,6 +4,11 @@
 
 * Fixed
  * Fixed broken links in documentation.
+ 
+## 3.51.0 - (December 8, 2020)
+
+* Changed
+  * Minor dependency version bump
 
 ## 3.50.0 - (November 17, 2020)
 

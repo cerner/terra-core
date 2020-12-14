@@ -1,19 +1,19 @@
 Terra.describeViewports('Native Select Field', ['tiny'], () => {
-  describe('Default Field', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/default-field'));
+  it('should display default Field', () => {
+    browser.url('/raw/tests/terra-form-select/form-select/native-select/default-field');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default');
   });
 
-  describe('Incomplete Field', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/incomplete-field'));
+  it('should display incomplete Field', () => {
+    browser.url('/raw/tests/terra-form-select/form-select/native-select/incomplete-field');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('incomplete');
   });
 
-  describe('Required Field', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/required-field'));
+  it('should display required Field', () => {
+    browser.url('/raw/tests/terra-form-select/form-select/native-select/required-field');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('required');
   });
 });

@@ -4,6 +4,9 @@
 
 * Fixed
  * Fixed broken links in documentation.
+ 
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
 
 ## 1.23.0 - (November 10, 2020)
 
