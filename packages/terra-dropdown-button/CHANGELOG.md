@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+ * Fixed broken links in documentation.
+ 
 * Changed
   * Updated to be compatible with `react-intl` v2-v5
   * Removed usage of `intlShape`

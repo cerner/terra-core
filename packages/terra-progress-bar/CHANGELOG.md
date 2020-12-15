@@ -1,5 +1,8 @@
 # Changelog
 
+* Fixed
+ * Fixed broken links in documentation.
+
 ## Unreleased
 
 ## 4.29.0 - (December 8, 2020)
