@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Allow users to disable options in native-select.
+
 ## 6.21.0 - (November 17, 2020)
 
 * Changed
