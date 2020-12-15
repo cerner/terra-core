@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
@@ -27,6 +27,11 @@ const propTypes = {
    * Whether or not to hide the required indicator on the legend.
    */
   hideRequired: PropTypes.bool,
+  /**
+   * @private
+   * intl object programmatically imported through injectIntl from react-intl.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * Whether or not the field is an inline field.
    */
@@ -77,6 +82,7 @@ const RadioField = (props) => {
     error,
     help,
     hideRequired,
+    intl,
     isInvalid,
     isInline,
     isLegendHidden,
@@ -115,22 +121,14 @@ const RadioField = (props) => {
         {required && (isInvalid || !hideRequired) && (
           <React.Fragment>
             <div aria-hidden="true" className={cx('required')}>*</div>
-            <FormattedMessage id="Terra.form.field.required">
-              {text => (
-                <VisualyHiddenText text={text} />
-              )}
-            </FormattedMessage>
+            <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
           </React.Fragment>
         )}
         {legend}
         {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
         {showOptional && !required
           && (
-            <FormattedMessage id="Terra.form.field.optional">
-              {optionalText => (
-                <span className={cx('optional')}>{optionalText}</span>
-              )}
-            </FormattedMessage>
+            <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>
           )}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
@@ -160,4 +158,4 @@ const RadioField = (props) => {
 RadioField.propTypes = propTypes;
 RadioField.defaultProps = defaultProps;
 
-export default RadioField;
+export default injectIntl(RadioField);

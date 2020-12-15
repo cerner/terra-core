@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Button, { ButtonVariants } from 'terra-button';
-import { FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import ActionHeaderContainer from './_ActionHeaderContainer';
 import styles from './ActionHeader.module.scss';
@@ -14,6 +14,11 @@ const propTypes = {
    * Displays a single terra `Collapsible Menu View` (_Not provided by `Action Header`_) child element on the right end of the header.
    */
   children: PropTypes.element,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
   /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=1`. This helps screen readers to announce appropriate heading levels.
    * Changing 'level' will not visually change the style of the content.
@@ -74,6 +79,7 @@ const defaultProps = {
 
 const ActionHeader = ({
   title,
+  intl,
   level,
   onClose,
   onBack,
@@ -88,36 +94,28 @@ const ActionHeader = ({
 
   const closeButton = onClose
     ? (
-      <FormattedMessage id="Terra.actionHeader.close">
-        {closeText => (
-          <Button
-            className={cx(['header-button', 'close-button'])}
-            data-terra-action-header="close-button"
-            isIconOnly
-            icon={<span className={cx(['header-icon', 'close'])} />}
-            text={closeText}
-            onClick={onClose}
-            variant={ButtonVariants.UTILITY}
-          />
-        )}
-      </FormattedMessage>
+      <Button
+        className={cx(['header-button', 'close-button'])}
+        data-terra-action-header="close-button"
+        isIconOnly
+        icon={<span className={cx(['header-icon', 'close'])} />}
+        text={intl.formatMessage({ id: 'Terra.actionHeader.close' })}
+        onClick={onClose}
+        variant={ButtonVariants.UTILITY}
+      />
     )
     : null;
   const backButton = onBack
     ? (
-      <FormattedMessage id="Terra.actionHeader.back">
-        {backText => (
-          <Button
-            className={cx(['header-button', 'back-button'])}
-            data-terra-action-header="back-button"
-            isIconOnly
-            icon={<span className={cx(['header-icon', 'back'])} />}
-            text={backText}
-            onClick={onBack}
-            variant={ButtonVariants.UTILITY}
-          />
-        )}
-      </FormattedMessage>
+      <Button
+        className={cx(['header-button', 'back-button'])}
+        data-terra-action-header="back-button"
+        isIconOnly
+        icon={<span className={cx(['header-icon', 'back'])} />}
+        text={intl.formatMessage({ id: 'Terra.actionHeader.back' })}
+        onClick={onBack}
+        variant={ButtonVariants.UTILITY}
+      />
     )
     : null;
 
@@ -125,35 +123,27 @@ const ActionHeader = ({
   if (!backButton) {
     if (onMaximize) {
       expandButton = (
-        <FormattedMessage id="Terra.actionHeader.maximize">
-          {maximizeText => (
-            <Button
-              className={cx(['header-button', 'maximize-button'])}
-              data-terra-action-header="maximize-button"
-              isIconOnly
-              icon={<span className={cx(['header-icon', 'maximize'])} />}
-              text={maximizeText}
-              onClick={onMaximize}
-              variant={ButtonVariants.UTILITY}
-            />
-          )}
-        </FormattedMessage>
+        <Button
+          className={cx(['header-button', 'maximize-button'])}
+          data-terra-action-header="maximize-button"
+          isIconOnly
+          icon={<span className={cx(['header-icon', 'maximize'])} />}
+          text={intl.formatMessage({ id: 'Terra.actionHeader.maximize' })}
+          onClick={onMaximize}
+          variant={ButtonVariants.UTILITY}
+        />
       );
     } else if (onMinimize) {
       expandButton = (
-        <FormattedMessage id="Terra.actionHeader.minimize">
-          {minimizeText => (
-            <Button
-              className={cx(['header-button', 'minimize-button'])}
-              data-terra-action-header="minimize-button"
-              isIconOnly
-              icon={<span className={cx(['header-icon', 'minimize'])} />}
-              text={minimizeText}
-              onClick={onMinimize}
-              variant={ButtonVariants.UTILITY}
-            />
-          )}
-        </FormattedMessage>
+        <Button
+          className={cx(['header-button', 'minimize-button'])}
+          data-terra-action-header="minimize-button"
+          isIconOnly
+          icon={<span className={cx(['header-icon', 'minimize'])} />}
+          text={intl.formatMessage({ id: 'Terra.actionHeader.minimize' })}
+          onClick={onMinimize}
+          variant={ButtonVariants.UTILITY}
+        />
       );
     }
   }
@@ -161,34 +151,26 @@ const ActionHeader = ({
   const previousNextButtonGroup = (onPrevious || onNext)
     ? (
       <div className={cx('previous-next-button-group')}>
-        <FormattedMessage id="Terra.actionHeader.previous">
-          {previousText => (
-            <Button
-              className={cx(['header-button', 'previous-button'])}
-              data-terra-action-header="previous-button"
-              isIconOnly
-              icon={<span className={cx(['header-icon', 'previous'])} />}
-              text={previousText}
-              onClick={onPrevious}
-              isDisabled={onPrevious === undefined}
-              variant={ButtonVariants.UTILITY}
-            />
-          )}
-        </FormattedMessage>
-        <FormattedMessage id="Terra.actionHeader.next">
-          {nextText => (
-            <Button
-              className={cx(['header-button', 'next-button'])}
-              data-terra-action-header="next-button"
-              isIconOnly
-              icon={<span className={cx(['header-icon', 'next'])} />}
-              text={nextText}
-              onClick={onNext}
-              isDisabled={onNext === undefined}
-              variant={ButtonVariants.UTILITY}
-            />
-          )}
-        </FormattedMessage>
+        <Button
+          className={cx(['header-button', 'previous-button'])}
+          data-terra-action-header="previous-button"
+          isIconOnly
+          icon={<span className={cx(['header-icon', 'previous'])} />}
+          text={intl.formatMessage({ id: 'Terra.actionHeader.previous' })}
+          onClick={onPrevious}
+          isDisabled={onPrevious === undefined}
+          variant={ButtonVariants.UTILITY}
+        />
+        <Button
+          className={cx(['header-button', 'next-button'])}
+          data-terra-action-header="next-button"
+          isIconOnly
+          icon={<span className={cx(['header-icon', 'next'])} />}
+          text={intl.formatMessage({ id: 'Terra.actionHeader.next' })}
+          onClick={onNext}
+          isDisabled={onNext === undefined}
+          variant={ButtonVariants.UTILITY}
+        />
       </div>
     )
     : null;
@@ -221,4 +203,4 @@ const ActionHeader = ({
 ActionHeader.propTypes = propTypes;
 ActionHeader.defaultProps = defaultProps;
 
-export default ActionHeader;
+export default injectIntl(ActionHeader);
