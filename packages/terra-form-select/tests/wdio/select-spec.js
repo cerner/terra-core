@@ -1,49 +1,53 @@
 Terra.describeViewports('Select', ['tiny'], () => {
-  describe('should render an empty placeholder', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/empty-placeholder'));
+  it('should render an empty placeholder', () => {
+    browser.url('/raw/tests/terra-form-select/form-select/empty-placeholder');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('empty placeholder');
   });
 
-  describe('should render a placeholder', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-placeholder'));
+  it('should render a placeholder', () => {
+    browser.url('/raw/tests/terra-form-select/form-select/default-placeholder');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('placeholder');
   });
 
-  describe('should open the dropdown and honor the set max height', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/max-height'));
+  describe('open the dropdown and honor the set max height', () => {
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/max-height'));
 
-    Terra.it.validatesElement();
+    it('should open the dropdown and honor the set max height', () => {
+      Terra.validates.element('default');
+    });
 
     it('default should open the dropdown by clicking the toggle', () => {
       browser.click('#maxHeight:last-child');
-    });
 
-    Terra.it.validatesElement('open-dropdown-max-height', { selector: '#root' });
+      Terra.validates.element('open-dropdown-max-height', { selector: '#root' });
+    });
   });
 
-  describe('default renders an option with a value of zero', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-value-zero'));
+  it('should renders an option with a default value of zero', () => {
+    browser.url('/raw/tests/terra-form-select/form-select/default-value-zero');
 
-    Terra.it.validatesElement();
+    Terra.validates.element('default value of zero');
   });
 
   describe('default should truncate and wrap long text', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default-long-text'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-default-long-text'));
 
     it('default should open the dropdown by clicking the toggle', () => {
       browser.click('[data-terra-select]');
-    });
 
-    Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      Terra.validates.element('open-dropdown', { selector: '#root' });
+    });
   });
 
   describe('Default Variant - uncontrolled', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-default'));
 
     describe('default uncontrolled should be closed initially', () => {
-      Terra.it.validatesElement();
+      it('should display closed dropdown', () => {
+        Terra.validates.element('default');
+      });
     });
 
     describe('default should gain focus when tabbed to', () => {
@@ -55,7 +59,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+      it('should display tab focus on the Default select', () => {
+        Terra.validates.element('tab-focus', { selector: '#root' });
+      });
     });
 
     describe('default should open dropdown by click', () => {
@@ -67,7 +73,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -85,7 +93,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -103,7 +113,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -121,16 +133,18 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('default should close when clicking off of the select', () => {
       it('default should open the dropdown by clicking the select', () => {
         browser.click('[data-terra-select]');
         browser.moveToObject('#terra-select-option-green'); // add to ensure consistent hover styles
-      });
 
-      Terra.it.validatesElement('opened-dropdown', { selector: '#root' });
+        Terra.validates.element('opened-dropdown', { selector: '#root' });
+      });
 
       it('default should close the dropdown by clicking off the select', () => {
         browser.click('#root');
@@ -140,16 +154,18 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.false;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('default should close when clicking off of the select after being opened by toggle icon', () => {
       it('default should open the dropdown by clicking the select toggle icon', () => {
         browser.click('[data-terra-form-select-toggle]');
         browser.moveToObject('#terra-select-option-green'); // add to ensure consistent hover styles
-      });
 
-      Terra.it.validatesElement('toggle-opened-dropdown', { selector: '#root' });
+        Terra.validates.element('toggle-opened-dropdown', { selector: '#root' });
+      });
 
       it('default should close the dropdown by clicking off the select', () => {
         browser.click('#root');
@@ -159,7 +175,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.false;
       });
 
-      Terra.it.validatesElement('toggle-closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('default should close when pressing tab key to shift focus away from select', () => {
@@ -172,7 +190,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.false;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('default should close when clicking on toggle icon when select is open', () => {
@@ -191,8 +211,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
       it('select should be focused', async () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
-
-      Terra.it.validatesElement('select-closed', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('select-closed', { selector: '#root' });
+      });
     });
 
     describe('default should open and close the dropdown by clicking on the select', () => {
@@ -205,7 +226,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
-      Terra.it.validatesElement('opened', { selector: '#root' });
+      it('should display opened dropdown', () => {
+        Terra.validates.element('opened', { selector: '#root' });
+      });
 
       it('default should close on subsequent click', () => {
         browser.click('[data-terra-select]');
@@ -215,7 +238,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('closed', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed', { selector: '#root' });
+      });
     });
 
     describe('default should open and close the dropdown by clicking on toggle icon', () => {
@@ -228,7 +253,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
-      Terra.it.validatesElement('toggle-icon-opened-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('toggle-icon-opened-dropdown', { selector: '#root' });
+      });
 
       it('default should close the dropdown by clicking the select toggle icon again', () => {
         browser.click('[data-terra-form-select-toggle]');
@@ -238,7 +265,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('toggle-icon-closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('toggle-icon-closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('default should select an option by click', () => {
@@ -251,7 +280,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display select with selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -266,7 +297,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('toggle-icon-selected-option', { selector: '#root' });
+      it('should display select with selected option', () => {
+        Terra.validates.element('toggle-icon-selected-option', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -276,7 +309,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('default should select the first option by pressing enter', () => {
         browser.keys('Enter');
@@ -286,7 +321,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display select with selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
     });
 
     describe('default should open dropdown by click after initial selection', () => {
@@ -296,7 +333,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('open-dropdown-after-selection', { selector: '#root' });
+      it('should display open dropdown after selection', () => {
+        Terra.validates.element('open-dropdown-after-selection', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -308,28 +347,32 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('default-selected-and-hovered', { selector: '#root' });
+      it('should display hovered selected option', () => {
+        Terra.validates.element('default-selected-and-hovered', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
   });
 
   describe('Default Variant - Multiple Dropdown', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/multiple-default-select'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/multiple-default-select'));
     describe('default should close all dropdown and open the selected dropdown', () => {
       it('default should open the dropdown by clicking the select and close other dropdown', () => {
         browser.click('[class*=left-select]');
         browser.click('[class*=right-select]');
       });
 
-      Terra.it.validatesElement('close-and-open-dropdown-after-selection', { selector: '#root' });
+      it('should close and open dropdown after selection', () => {
+        Terra.validates.element('close-and-open-dropdown-after-selection', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
   });
 
   describe('Default Variant - controlled', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/controlled-default'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/controlled-default'));
 
     describe('default should select an option by keyboard interaction', () => {
       it('default should select the first option', () => {
@@ -342,7 +385,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display select with selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -358,7 +403,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display select with selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -373,7 +420,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('default controlled should select the first option', () => {
         browser.click('#terra-select-option-blue');
@@ -383,7 +432,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display select with selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => browser.click('#root'));
     });
@@ -399,7 +450,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[class*=menu]')).should.be.true;
       });
 
-      Terra.it.validatesElement('second-option-highlighted', { selector: '#root' });
+      it('should display second option highlighted', () => {
+        Terra.validates.element('second-option-highlighted', { selector: '#root' });
+      });
 
       it('default should select the second option', () => {
         browser.keys('Enter');
@@ -409,17 +462,21 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox]')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display select with selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
     });
   });
 
   describe('Combobox Variant - uncontrolled', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-combobox');
+      browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-combobox');
     });
 
     describe('combobox should be closed initially', () => {
-      Terra.it.validatesElement();
+      it('should display closed combobox', () => {
+        Terra.validates.element('default');
+      });
 
       after(() => browser.click('#root'));
     });
@@ -431,9 +488,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('combobox input should be focused', () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
-      });
 
-      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+        Terra.validates.element('tab-focus', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -451,7 +508,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -473,7 +532,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => {
         // remove backspace that is added to the input. Bug logged here: https://github.com/cerner/terra-core/issues/2414
@@ -495,7 +556,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('combobox should close when clicking off of the select', () => {
@@ -503,7 +566,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('opened-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('combobox should close the dropdown by clicking off the select', () => {
         browser.click('#root');
@@ -517,7 +582,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('combobox should close when clicking off of the select after being opened by toggle icon', () => {
@@ -525,7 +592,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-opened-dropdown', { selector: '#root' });
+      it('should display toggle-opened dropdown', () => {
+        Terra.validates.element('toggle-open-dropdown', { selector: '#root' });
+      });
 
       it('combobox should close the dropdown by clicking off the select', () => {
         browser.click('#root');
@@ -539,7 +608,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
       });
 
-      Terra.it.validatesElement('toggle-closed-dropdown', { selector: '#root' });
+      it('should display toggle closed dropdown', () => {
+        Terra.validates.element('toggle-closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('combobox should close when pressing tab key to shift focus away from select', () => {
@@ -557,7 +628,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.keys('Tab');
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('combobox should close when clicking on toggle icon when select is open', () => {
@@ -573,7 +646,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('select-closed', { selector: '#root' });
+      it('should display closed select', () => {
+        Terra.validates.element('select-closed', { selector: '#root' });
+      });
     });
 
     describe('combobox should open and close the dropdown by clicking on toggle icon', () => {
@@ -581,13 +656,17 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-icon-opened-dropdown', { selector: '#root' });
+      it('should display toggle icon open dropdown', () => {
+        Terra.validates.element('toggle-icon-open-dropdown', { selector: '#root' });
+      });
 
       it('combobox should close the dropdown by clicking the select toggle icon again', () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-icon-closed-dropdown', { selector: '#root' });
+      it('should display toggle icon closed dropdown', () => {
+        Terra.validates.element('toggle-icon-closed-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -597,9 +676,8 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.keys('Tab');
         browser.keys('Space');
         browser.keys('Enter');
+        Terra.validates.element('selected-option', { selector: '#root' });
       });
-
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
     });
 
     describe('combobox should select an option by click after clicking on toggle icon', () => {
@@ -612,7 +690,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('toggle-icon-selected-option', { selector: '#root' });
+      it('should display toggle icon selected option', () => {
+        Terra.validates.element('toggle-icon-selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace', 'Backspace', 'Backspace', 'Backspace']); // remove selected option
@@ -631,7 +711,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace', 'Backspace', 'Backspace', 'Backspace']); // remove selected option
@@ -650,7 +732,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('second-option-highlighted', { selector: '#root' });
+      it('should display highlighted second option', () => {
+        Terra.validates.element('second-option-highlighted', { selector: '#root' });
+      });
 
       it('combobox should select the second option', () => {
         browser.keys('Enter');
@@ -660,7 +744,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace', 'Backspace', 'Backspace', 'Backspace', 'Backspace']); // remove selected option
@@ -669,19 +755,25 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('combobox should select an option by click', () => {
-      Terra.it.validatesElement();
+      it('should display default combobox', () => {
+        Terra.validates.element('default');
+      });
 
       it('combobox should open the dropdown by clicking the toggle', () => {
         browser.click('#combobox:last-child');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('combobox should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.keys(['Backspace', 'Backspace', 'Backspace', 'Backspace']); // remove selected option
@@ -690,19 +782,25 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('combobox should select an option by pressing enter', () => {
-      Terra.it.validatesElement();
+      it('should display default combobox', () => {
+        Terra.validates.element('default');
+      });
 
       it('combobox should open the dropdown by clicking the toggle', () => {
         browser.click('#combobox:last-child ');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('combobox should select the first option by pressing enter', () => {
         browser.keys('Enter');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.keys(['Backspace', 'Backspace', 'Backspace', 'Backspace']); // remove selected option
@@ -711,13 +809,17 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('combobox should allow a free text entry', () => {
-      Terra.it.validatesElement();
+      it('should display default Combobox', () => {
+        Terra.validates.element('default');
+      });
 
       it('combobox should open the dropdown by clicking the toggle', () => {
         browser.click('#combobox:last-child');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('combobox should enter a free text entry', () => {
         browser.keys(['T', 'a', 'g']);
@@ -727,7 +829,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.keys('Enter');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -741,7 +845,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('open-dropdown-hover-check', { selector: '#root' });
+      it('should hover first option after reopening while clicking root to close', () => {
+        Terra.validates.element('open-dropdown-hover-check', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -750,32 +856,40 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Combobox Variant - controlled', () => {
     describe('combobox controlled should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-select/form-select/controlled-combobox');
+        browser.url('/raw/tests/terra-form-select/form-select/controlled-combobox');
       });
 
-      Terra.it.validatesElement();
+      it('should display default combobox', () => {
+        Terra.validates.element('default');
+      });
 
       it('combobox controlled should open the dropdown by clicking the toggle', () => {
         browser.click('#combobox:last-child');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('combobox controlled should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
     });
   });
 
   describe('Combobox Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-combobox');
+      browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-combobox');
     });
 
     describe('is touch accessible combobox should be closed initially', () => {
-      Terra.it.validatesElement();
+      it('should display closed combobox', () => {
+        Terra.validates.element('closed');
+      });
 
       after(() => {
         browser.refresh();
@@ -789,9 +903,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('combobox input should be focused', () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
-      });
 
-      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+        Terra.validates.element('is-touch-accessible-tab-focus', { selector: '#root' });
+      });
 
       after(() => {
         browser.refresh();
@@ -801,9 +915,8 @@ Terra.describeViewports('Select', ['tiny'], () => {
     describe('is touch accessible combobox should open when clicking on it', () => {
       it('should open on click', () => {
         browser.click('[data-terra-select]');
+        Terra.validates.element('default');
       });
-
-      Terra.it.validatesElement();
 
       after(() => {
         browser.refresh();
@@ -813,17 +926,19 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Multiple Variant - uncontrolled', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+      browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
     });
 
     describe('multiple should be closed initially', () => {
-      Terra.it.validatesElement();
+      it('should display closed Multiple select', () => {
+        Terra.validates.element('closed');
+      });
 
       after(() => browser.click('#root'));
     });
 
     describe('multiple should gain focus when tabbed to', () => {
-      it('should tab focus to the select', () => {
+      it('should tab focus to Multiple select', () => {
         browser.keys('Tab');
       });
 
@@ -831,7 +946,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+      it('should display tab focus on the Multiple select', () => {
+        Terra.validates.element('tab-focus', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -849,7 +966,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -867,7 +986,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -885,7 +1006,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('multiple should close when clicking off of the select', () => {
@@ -893,7 +1016,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('opened-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('opened-dropdown', { selector: '#root' });
+      });
 
       it('multiple should close the dropdown by clicking off the select', () => {
         browser.click('#root');
@@ -907,7 +1032,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('multiple should close when clicking off of the select after being opened by toggle icon', () => {
@@ -915,7 +1042,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-opened-dropdown', { selector: '#root' });
+      it('should display toggle opened dropdown', () => {
+        Terra.validates.element('toggle-opened-dropdown', { selector: '#root' });
+      });
 
       it('multiple should close the dropdown by clicking off the select', () => {
         browser.click('#root');
@@ -929,7 +1058,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.hasFocus('[data-terra-select-combobox] input').should.be.false;
       });
 
-      Terra.it.validatesElement('toggle-closed-dropdown', { selector: '#root' });
+      it('should display toggle closed dropdown', () => {
+        Terra.validates.element('toggle-closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('multiple should close when pressing tab key to shift focus away from select', () => {
@@ -947,7 +1078,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.keys('Tab');
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display toggle closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('multiple should close when clicking on toggle icon when select is open', () => {
@@ -963,7 +1096,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('select-closed', { selector: '#root' });
+      it('should display closed select', () => {
+        Terra.validates.element('select-closed', { selector: '#root' });
+      });
     });
 
     describe('multiple should open and close the dropdown by clicking on toggle icon', () => {
@@ -971,13 +1106,17 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-icon-opened-dropdown', { selector: '#root' });
+      it('should display toggle icon opened dropdown', () => {
+        Terra.validates.element('toggle-icon-opened-dropdown', { selector: '#root' });
+      });
 
       it('multiple should close the dropdown by clicking the select toggle icon again', () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-icon-closed-dropdown', { selector: '#root' });
+      it('should display toggle icon closed dropdown', () => {
+        Terra.validates.element('toggle-icon-closed-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -993,7 +1132,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1012,7 +1153,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1031,7 +1174,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('second-option-highlighted', { selector: '#root' });
+      it('should display highlighted second option', () => {
+        Terra.validates.element('second-option-highlighted', { selector: '#root' });
+      });
 
       it('multiple should select the second option', () => {
         browser.keys('Enter');
@@ -1041,7 +1186,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1050,19 +1197,25 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('multiple should select an option by click', () => {
-      Terra.it.validatesElement();
+      it('should display default Multiple select', () => {
+        Terra.validates.element('default');
+      });
 
       it('multiple should open the dropdown by clicking the toggle', () => {
         browser.click('[data-terra-select-combobox]');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('multiple should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1071,19 +1224,25 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('multiple should select an option by pressing enter', () => {
-      Terra.it.validatesElement();
+      it('should display default Multiple select', () => {
+        Terra.validates.element('default');
+      });
 
       it('multiple should open the dropdown by clicking the toggle', () => {
         browser.click('[data-terra-select-combobox]');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('multiple should select the first option by pressing enter', () => {
         browser.keys('Enter');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1099,7 +1258,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('open-dropdown-hover-check', { selector: '#root' });
+      it('should hover first option after reopening while clicking root to close', () => {
+        Terra.validates.element('open-dropdown-hover-check', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1108,32 +1269,40 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Multiple Variant - controlled', () => {
     describe('multiple controlled should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-select/form-select/controlled-multiple');
+        browser.url('/raw/tests/terra-form-select/form-select/controlled-multiple');
       });
 
-      Terra.it.validatesElement();
+      it('should display default multiple select', () => {
+        Terra.validates.element('default');
+      });
 
       it('multiple controlled should open the dropdown by clicking the toggle', () => {
         browser.click('[data-terra-select-combobox]');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('multiple controlled should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
     });
   });
 
   describe('Multiple Variant - placeholder', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/multi-select-placeholder');
+      browser.url('/raw/tests/terra-form-select/form-select/multi-select-placeholder');
     });
 
-    describe('multiple placeholder should be shown initially', () => {
-      Terra.it.validatesElement();
+    describe('Multiple placeholder should be shown initially', () => {
+      it('should display placeholder', () => {
+        Terra.validates.element('placeholder');
+      });
 
       after(() => {
         browser.refresh();
@@ -1159,7 +1328,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('#focusable')).should.be.true;
       });
 
-      Terra.it.validatesElement();
+      it('placeholder should disappear after selection and blur', () => {
+        Terra.validates.element('default');
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -1169,11 +1340,13 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Multiple Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-multi-select');
+      browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-multi-select');
     });
 
     describe('is touch accessible multiple should be closed initially', () => {
-      Terra.it.validatesElement();
+      it('should display closed Multiple select', () => {
+        Terra.validates.element('closed');
+      });
 
       after(() => {
         browser.refresh();
@@ -1187,9 +1360,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('multiple input should be focused', () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
-      });
 
-      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+        Terra.validates.element('is-touch-accessible-tab-focus', { selector: '#root' });
+      });
 
       after(() => {
         browser.refresh();
@@ -1201,7 +1374,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement();
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown');
+      });
 
       after(() => {
         browser.refresh();
@@ -1211,11 +1386,13 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Search Variant - uncontrolled', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-search');
+      browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-search');
     });
 
     describe('search should be closed initially', () => {
-      Terra.it.validatesElement();
+      it('should display closed Search select', () => {
+        Terra.validates.element('closed');
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1229,7 +1406,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+      it('should display tab focus on the Search select', () => {
+        Terra.validates.element('tab-focus', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1247,7 +1426,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1265,7 +1446,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1283,7 +1466,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('search should close when clicking off of the select', () => {
@@ -1291,7 +1476,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('opened-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('opened-dropdown', { selector: '#root' });
+      });
 
       it('search should close the dropdown by clicking off the select', () => {
         browser.click('#root');
@@ -1305,7 +1492,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('search should close when clicking off of the select after being opened by toggle icon', () => {
@@ -1313,7 +1502,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-opened-dropdown', { selector: '#root' });
+      it('should display toggle opened dropdown', () => {
+        Terra.validates.element('toggle-opened-dropdown', { selector: '#root' });
+      });
 
       it('search should close the dropdown by clicking off the select', () => {
         browser.click('#root');
@@ -1327,7 +1518,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
       });
 
-      Terra.it.validatesElement('toggle-closed-dropdown', { selector: '#root' });
+      it('should display toggle closed dropdown', () => {
+        Terra.validates.element('toggle-closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('search should close when pressing tab key to shift focus away from select', () => {
@@ -1345,7 +1538,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.keys('Tab');
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('search should close when clicking on toggle icon when select is open', () => {
@@ -1361,7 +1556,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('select-closed', { selector: '#root' });
+      it('should display closed select', () => {
+        Terra.validates.element('select-closed', { selector: '#root' });
+      });
     });
 
     describe('search should open and close the dropdown by clicking on toggle icon', () => {
@@ -1369,13 +1566,17 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-icon-opened-dropdown', { selector: '#root' });
+      it('should display toggle icon open dropdown', () => {
+        Terra.validates.element('toggle-icon-opened-dropdown', { selector: '#root' });
+      });
 
       it('search should close the dropdown by clicking the select toggle icon again', () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-icon-closed-dropdown', { selector: '#root' });
+      it('should display toggle icon closed dropdown', () => {
+        Terra.validates.element('toggle-icon-closed-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1391,7 +1592,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace', 'Backspace', 'Backspace', 'Backspace']); // remove selected option
@@ -1408,7 +1611,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('toggle-icon-selected-option', { selector: '#root' });
+      it('should display toggle icon selected option', () => {
+        Terra.validates.element('toggle-icon-selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -1426,7 +1631,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -1444,7 +1651,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('second-option-highlighted', { selector: '#root' });
+      it('should display highlighted second option', () => {
+        Terra.validates.element('second-option-highlighted', { selector: '#root' });
+      });
 
       it('search should select the second option', () => {
         browser.keys('Enter');
@@ -1454,7 +1663,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -1462,7 +1673,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('search should select an option by click', () => {
-      Terra.it.validatesElement();
+      it('should display default Search select', () => {
+        Terra.validates.element('default');
+      });
 
       it('should set the screen reader aria live region to blank', () => {
         expect(browser.getText('[data-terra-select-combobox] [aria-live]')).to.equal('');
@@ -1471,14 +1684,17 @@ Terra.describeViewports('Select', ['tiny'], () => {
       it('search should open the dropdown by clicking the toggle', () => {
         browser.click('#search:last-child');
       });
-
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('search should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -1492,9 +1708,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('search should enter a free text entry that does not match', () => {
         browser.keys(['a', 's', 'd', 'f']);
-      });
 
-      Terra.it.validatesElement('no-matching-results', { selector: '#root' });
+        Terra.validates.element('no-matching-results', { selector: '#root' });
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -1502,19 +1718,25 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('search should select an option by pressing enter', () => {
-      Terra.it.validatesElement();
+      it('should display default Search select', () => {
+        Terra.validates.element('default');
+      });
 
       it('search should open the dropdown by clicking the toggle', () => {
         browser.click('#search:last-child');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('search should select the first option by pressing enter', () => {
         browser.keys('Enter');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -1527,8 +1749,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('#root');
         browser.click('[data-terra-select]');
       });
-
-      Terra.it.validatesElement('open-dropdown-hover-check', { selector: '#root' });
+      it('should hover first option after reopening while clicking root to close', () => {
+        Terra.validates.element('open-dropdown-hover-check', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1537,33 +1760,41 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Search Variant - controlled', () => {
     describe('search controlled should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-select/form-select/controlled-search');
+        browser.url('/raw/tests/terra-form-select/form-select/controlled-search');
       });
 
-      Terra.it.validatesElement();
+      it('should display default Search select', () => {
+        Terra.validates.element('default');
+      });
 
       it('search controlled should open the dropdown by clicking the toggle', () => {
         browser.click('#search:last-child');
         browser.moveToObject('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('search controlled should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
     });
   });
 
   describe('Search Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-search-select');
+      browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-search-select');
     });
 
     describe('is touch accessible search should be closed initially', () => {
-      Terra.it.validatesElement();
+      it('should display closed Search select', () => {
+        Terra.validates.element('closed');
+      });
 
       after(() => {
         browser.refresh();
@@ -1577,9 +1808,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('search input should be focused', () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
-      });
 
-      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+        Terra.validates.element('is-touch-accessible-tab-focus', { selector: '#root' });
+      });
 
       after(() => {
         browser.refresh();
@@ -1591,7 +1822,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement();
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown');
+      });
 
       after(() => {
         browser.refresh();
@@ -1601,11 +1834,13 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Tag Variant', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
+      browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-tag');
     });
 
     describe('tag should be closed initially', () => {
-      Terra.it.validatesElement();
+      it('should display closed Tag select', () => {
+        Terra.validates.element('closed');
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1619,7 +1854,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('tab-focus', { selector: '#root' });
+      it('should display tab focus on the Tag select', () => {
+        Terra.validates.element('tab-focus', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1637,7 +1874,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1655,7 +1894,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1673,7 +1914,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('tag should close when clicking off of the select', () => {
@@ -1681,7 +1924,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('opened-dropdown', { selector: '#root' });
+      it('should display toggle opened dropdown', () => {
+        Terra.validates.element('toggle-opened', { selector: '#root' });
+      });
 
       it('tag should close the dropdown by clicking off the select', () => {
         browser.click('#root');
@@ -1695,7 +1940,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.false;
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('tag should close when pressing tab key to shift focus away from select', () => {
@@ -1713,7 +1960,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.keys('Tab');
       });
 
-      Terra.it.validatesElement('closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed-dropdown', { selector: '#root' });
+      });
     });
 
     describe('tag should close when clicking on toggle icon when select is open', () => {
@@ -1729,7 +1978,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('select-closed', { selector: '#root' });
+      it('should display closed select', () => {
+        Terra.validates.element('select-closed', { selector: '#root' });
+      });
     });
 
     describe('tag should open and close the dropdown by clicking on toggle icon', () => {
@@ -1737,13 +1988,17 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-icon-opened-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('toggle-icon-opened-dropdown', { selector: '#root' });
+      });
 
       it('tag should close the dropdown by clicking the select toggle icon again', () => {
         browser.click('[data-terra-form-select-toggle]');
       });
 
-      Terra.it.validatesElement('toggle-icon-closed-dropdown', { selector: '#root' });
+      it('should display closed dropdown', () => {
+        Terra.validates.element('toggle-icon-closed-dropdown', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1759,7 +2014,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1778,7 +2035,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1797,7 +2056,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('second-option-highlighted', { selector: '#root' });
+      it('should display highlighted second option', () => {
+        Terra.validates.element('second-option-highlighted', { selector: '#root' });
+      });
 
       it('tag should select the second option', () => {
         browser.keys('Enter');
@@ -1807,7 +2068,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('[data-terra-select-combobox] input')).should.be.true;
       });
 
-      Terra.it.validatesElement('selected-option', { selector: '#root' });
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option', { selector: '#root' });
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1816,19 +2079,25 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('tag should select an option by click', () => {
-      Terra.it.validatesElement();
+      it('should display default Tag select', () => {
+        Terra.validates.element('default');
+      });
 
       it('tag should open the dropdown by clicking the toggle', () => {
         browser.click('[data-terra-select-combobox]');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('tag should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1838,22 +2107,28 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     describe('tag should select an option by pressing enter', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-select/form-select/uncontrolled-tag');
+        browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-tag');
       });
 
-      Terra.it.validatesElement();
+      it('should display default Tag select', () => {
+        Terra.validates.element('default');
+      });
 
       it('tag should open the dropdown by clicking the toggle', () => {
         browser.click('[data-terra-select-combobox]');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('tag should select the first option by pressing enter', () => {
         browser.keys('Enter');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.keys(['Backspace']); // remove selected option
@@ -1862,13 +2137,17 @@ Terra.describeViewports('Select', ['tiny'], () => {
     });
 
     describe('tag should allow a free text entry', () => {
-      Terra.it.validatesElement();
+      it('should display default Tag', () => {
+        Terra.validates.element('default');
+      });
 
       it('tag should open the dropdown by clicking the toggle', () => {
         browser.click('[data-terra-select-combobox]');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('tag should enter a free text entry', () => {
         browser.keys(['T', 'a', 'g']);
@@ -1878,7 +2157,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.keys('Enter');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -1892,7 +2173,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('open-dropdown-hover-check', { selector: '#root' });
+      it('should hover first option after reopening while clicking root to close', () => {
+        Terra.validates.element('open-dropdown-hover-check', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });
@@ -1900,11 +2183,13 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Tag Variant - placeholder', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/tag-select-placeholder');
+      browser.url('/raw/tests/terra-form-select/form-select/tag-select-placeholder');
     });
 
     describe('tag placeholder should be shown initially', () => {
-      Terra.it.validatesElement();
+      it('should display placeholder', () => {
+        Terra.validates.element('placeholder');
+      });
 
       after(() => {
         browser.refresh();
@@ -1930,7 +2215,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         (await browser.hasFocus('#focusable')).should.be.true;
       });
 
-      Terra.it.validatesElement();
+      it('placeholder should disappear after selection and blur', () => {
+        Terra.validates.element('default');
+      });
 
       after(() => {
         browser.refresh(); // remove selected option
@@ -1940,11 +2227,13 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Tag Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-tag-select');
+      browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-tag-select');
     });
 
     describe('is touch accessible tag should be closed initially', () => {
-      Terra.it.validatesElement();
+      it('should display closed dropdown', () => {
+        Terra.validates.element('closed');
+      });
 
       after(() => {
         browser.refresh();
@@ -1958,9 +2247,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('tag input should be focused', () => {
         browser.hasFocus('[data-terra-select] input').should.be.true;
-      });
 
-      Terra.it.validatesElement('is-touch-accessible-tab-focus', { selector: '#root' });
+        Terra.validates.element('is-touch-accessible-tab-focus', { selector: '#root' });
+      });
 
       after(() => {
         browser.refresh();
@@ -1972,7 +2261,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement();
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown');
+      });
 
       after(() => {
         browser.refresh();
@@ -1983,22 +2274,28 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Combobox Variant - clear option', () => {
     describe('combobox should deselect the selected item when clicking on the clear option.', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-select/form-select/allow-clear');
+        browser.url('/raw/tests/terra-form-select/form-select/allow-clear');
       });
 
-      Terra.it.validatesElement();
+      it('should display default combobox', () => {
+        Terra.validates.element('default');
+      });
 
       it('combobox should open the dropdown by clicking the toggle', () => {
         browser.click('#allowclear:last-child');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('combobox should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
 
       it('combobox should open the dropdown by clicking the toggle again', () => {
         browser.click('#allowclear:last-child');
@@ -2008,118 +2305,142 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('#terra-select-option-');
       });
 
-      Terra.it.validatesElement('selected-clear-option');
+      it('should display selected clear option', () => {
+        Terra.validates.element('selected-clear-option');
+      });
     });
   });
 
   describe('Tag Variant - controlled', () => {
     describe('tag controlled should select an option by click', () => {
       before(() => {
-        browser.url('/#/raw/tests/terra-form-select/form-select/controlled-tag');
+        browser.url('/raw/tests/terra-form-select/form-select/controlled-tag');
       });
 
-      Terra.it.validatesElement();
+      it('should display default tag', () => {
+        Terra.validates.element('default');
+      });
 
       it('tag controlled should open the dropdown by clicking the toggle', () => {
         browser.click('[data-terra-select-combobox]');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('tag controlled should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
     });
   });
 
   describe('OptGroup', () => {
     describe('should render an optgroup', () => {
-      before(() => browser.url('/#/raw/tests/terra-form-select/form-select/opt-group'));
+      before(() => browser.url('/raw/tests/terra-form-select/form-select/opt-group'));
 
-      Terra.it.validatesElement();
+      it('should display default optGroup', () => {
+        Terra.validates.element();
+      });
 
       it('should open the dropdown by clicking the toggle', () => {
         browser.click('#opt-group:last-child');
       });
 
-      Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+      it('should display open dropdown', () => {
+        Terra.validates.element('open-dropdown', { selector: '#root' });
+      });
 
       it('should select the first option', () => {
         browser.click('#terra-select-option-blue');
       });
 
-      Terra.it.validatesElement('selected-option');
+      it('should display selected option', () => {
+        Terra.validates.element('selected-option');
+      });
     });
   });
 
-  describe('Default variant - incomplete', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-default'));
+  describe('Default variant', () => {
+    it('should display incomplete Default select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/incomplete-default');
 
-    Terra.it.validatesElement();
+      Terra.validates.element('incomplete');
+    });
+
+    it('should display invalid Default select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/invalid-default');
+
+      Terra.validates.element('invalid');
+    });
   });
 
-  describe('Combobox variant - incomplete', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-combobox'));
+  describe('Combobox variant', () => {
+    it('should display incomplete Combobox select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/incomplete-combobox');
 
-    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
-    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
+      // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+      Terra.validates.element('incomplete', { rules: { 'color-contrast': { enabled: false } } });
+    });
+
+    it('should display invalid Combobox select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/invalid-combobox');
+
+      Terra.validates.element('invalid');
+    });
   });
 
-  describe('Multiple variant - incomplete', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-multiple'));
+  describe('Multiple variant', () => {
+    it('should display incomplete Multiple select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/incomplete-multiple');
 
-    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
-    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
+      // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+      Terra.validates.element('incomplete', { rules: { 'color-contrast': { enabled: false } } });
+    });
+
+    it('should display invalid Multiple select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/invalid-multiple');
+
+      Terra.validates.element('invalid');
+    });
   });
 
-  describe('Search variant - incomplete', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-search'));
+  describe('Search variant', () => {
+    it('should display incomplete Search select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/incomplete-search');
 
-    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
-    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
+      // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+      Terra.validates.element('incomplete', { rules: { 'color-contrast': { enabled: false } } });
+    });
+
+    it('should display invalid Search select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/invalid-search');
+
+      Terra.validates.element('invalid');
+    });
   });
 
-  describe('Tag variant - incomplete', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/incomplete-tag'));
+  describe('Tag variant', () => {
+    it('should display incomplete Tag select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/incomplete-tag');
 
-    // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
-    Terra.it.validatesElement({ rules: { 'color-contrast': { enabled: false } } });
-  });
+      // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
+      Terra.validates.element('incomplete', { rules: { 'color-contrast': { enabled: false } } });
+    });
 
-  describe('Default variant - invalid', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-default'));
+    it('should display invalid Tag select', () => {
+      browser.url('/raw/tests/terra-form-select/form-select/invalid-tag');
 
-    Terra.it.validatesElement();
-  });
-
-  describe('Combobox variant - invalid', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-combobox'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('Multiple variant - invalid', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-multiple'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('Search variant - invalid', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-search'));
-
-    Terra.it.validatesElement();
-  });
-
-  describe('Tag variant - invalid', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/invalid-tag'));
-
-    Terra.it.validatesElement();
+      Terra.validates.element('invalid');
+    });
   });
 
   describe('With-Iframe should not cause page jump when', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/select-inside-iframe'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/select-inside-iframe'));
 
     it('open the dropdown by clicking the toggle', () => {
       /* global $ */
@@ -2131,7 +2452,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.moveToObject('#frmSelectSingle');
     });
 
-    Terra.it.validatesElement('opened form-select', { selector: '#root' });
+    it('should display opened form-select', () => {
+      Terra.validates.element('opened form-select', { selector: '#root' });
+    });
 
     it('select the option which is hidden from visible frame of form-select', () => {
       // eslint-disable-next-line prefer-arrow-callback
@@ -2143,37 +2466,44 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.click('#frmSelectSingle');
     });
 
-    Terra.it.validatesElement('opened form-select with selected-option', { selector: '#root' });
-
-    it('navigates to next option of form-select on down arrow key press', () => {
-      browser.keys('ArrowDown');
-      browser.keys('ArrowDown');
+    it('should display opened form-select with selected-option', () => {
+      Terra.validates.element('opened form-select with selected-option', { selector: '#root' });
     });
 
-    Terra.it.validatesElement('navigated to next option using key-board navigation', { selector: '#root' });
+    it('should navigate to the next option of form-select on down arrow key press', () => {
+      browser.keys('ArrowDown');
+      browser.keys('ArrowDown');
 
-    it('navigates to next option of form-select on down arrow key press', () => {
+      Terra.validates.element('navigated to the next option using key-board navigation', { selector: '#root' });
+    });
+
+    it('should navigate to the previous option of form-select on down arrow key press', () => {
       browser.keys('ArrowDown');
       browser.keys('ArrowUp');
-    });
 
-    Terra.it.validatesElement('navigated to previous option using key-board navigation', { selector: '#root' });
+      Terra.validates.element('navigated to previous option using key-board navigation', { selector: '#root' });
+    });
   });
 
   describe('dropdown should not detach on search', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/is-touch-accessible-bottom'));
-    Terra.it.validatesElement();
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-bottom'));
+
+    it('should display Tag select', () => {
+      Terra.validates.element('default');
+    });
 
     it('Tag should open and search', () => {
       browser.click('[data-terra-select-combobox]');
       browser.keys(['T', 'a', 'g']);
     });
 
-    Terra.it.validatesElement('open-dropdown', { selector: '#root' });
+    it('should display open dropdown', () => {
+      Terra.validates.element('open-dropdown', { selector: '#root' });
+    });
   });
 
   describe('Default Variant Hover- uncontrolled', () => {
-    before(() => browser.url('/#/raw/tests/terra-form-select/form-select/default-hover'));
+    before(() => browser.url('/raw/tests/terra-form-select/form-select/default-hover'));
 
     describe('default should hover first option after reopening while clicking root to close', () => {
       it('default should open the dropdown by clicking the select', () => {
@@ -2182,7 +2512,9 @@ Terra.describeViewports('Select', ['tiny'], () => {
         browser.click('[data-terra-select]');
       });
 
-      Terra.it.validatesElement('open-dropdown-hover-check', { selector: '#root' });
+      it('should hover first option after reopening while clicking root to close', () => {
+        Terra.validates.element('open-dropdown-hover-check', { selector: '#root' });
+      });
 
       after(() => browser.click('#root'));
     });

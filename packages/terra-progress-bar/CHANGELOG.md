@@ -1,6 +1,14 @@
 # Changelog
 
+* Fixed
+ * Fixed broken links in documentation.
+
 ## Unreleased
+
+## 4.29.0 - (December 8, 2020)
+
+* Changed
+  * Update wdio tests to remove deprecated Terra.it helpers
 
 ## 4.28.0 - (August 11, 2020)
 

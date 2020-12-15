@@ -1,6 +1,12 @@
 # Changelog
 
 ## Unreleased
+
+* Fixed
+ * Fixed broken links in documentation.
+ 
+## 2.67.0 - (December 8, 2020)
+
 * Changed
   * Changed progressive paginator to support unknown total page count.
   * Replaced `Terra.it()` with `Terra.validates.element()`.
