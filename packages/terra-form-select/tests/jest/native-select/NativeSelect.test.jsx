@@ -185,4 +185,19 @@ describe('NativeSelect', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a NativeSelect with disabled options', () => {
+    const wrapper = mountWithIntl(
+      <NativeSelect
+        ariaLabel="test-label"
+        options={[
+          { disabled: true, value: 'volvo', display: 'Volvo' },
+          { disabled: true, value: 'saab', display: 'Saab' },
+          { value: 'mercedes', display: 'Mercedes' },
+          { value: 'audi', display: 'Audi' },
+        ]}
+      />,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });
