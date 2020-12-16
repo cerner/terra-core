@@ -26,8 +26,8 @@ import Toggle from 'terra-toggle/lib/Toggle';
 ```
 
 ## Component Features
-* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
-* [Responsive Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#responsive-support)
-* [Mobile Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#mobile-support)
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
 
 [View component source code](https://github.com/cerner/terra-core/tree/main/packages/terra-toggle)
