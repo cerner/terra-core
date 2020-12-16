@@ -35,42 +35,75 @@ exports[`correctly applies the theme context className 1`] = `
     }
   }
 >
-  <CheckboxField
-    error={null}
-    help={null}
-    hideRequired={false}
-    isInline={false}
-    isInvalid={false}
-    isLegendHidden={false}
+  <InjectIntl(CheckboxField)
     legend="Hidden Legend legend"
-    legendAttrs={Object {}}
-    required={false}
-    showOptional={false}
   >
-    <fieldset
-      className="checkbox-field orion-fusion-theme"
+    <CheckboxField
+      error={null}
+      help={null}
+      hideRequired={false}
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      isInline={false}
+      isInvalid={false}
+      isLegendHidden={false}
+      legend="Hidden Legend legend"
+      legendAttrs={Object {}}
+      required={false}
+      showOptional={false}
     >
-      <legend
-        className="legend-group"
-        id="terra-checkbox-field-description-13"
+      <fieldset
+        className="checkbox-field orion-fusion-theme"
       >
-        <div
-          className="legend"
+        <legend
+          className="legend-group"
+          id="terra-checkbox-field-description-1"
         >
-          Hidden Legend legend
-          <span
-            className="error-icon-hidden"
-          />
-        </div>
-      </legend>
-    </fieldset>
-  </CheckboxField>
+          <div
+            className="legend"
+          >
+            Hidden Legend legend
+            <span
+              className="error-icon-hidden"
+            />
+          </div>
+        </legend>
+      </fieldset>
+    </CheckboxField>
+  </InjectIntl(CheckboxField)>
 </ThemeContextProvider>
 `;
 
 exports[`should display the required icon for fields with hideRequired, but have a state of invalid 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error={null}
+  help={null}
+  hideRequired={true}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -98,38 +131,21 @@ exports[`should display the required icon for fields with hideRequired, but have
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-10"
-  >
-    <div
-      className="legend"
-    >
-      <span
-        className="error-icon"
-      />
-      <div
-        aria-hidden="true"
-        className="required"
-      >
-        *
-      </div>
-      <FormattedMessage
-        id="Terra.form.field.required"
-        values={Object {}}
-      >
-        <Component />
-      </FormattedMessage>
-      Hidden Required CheckboxField
-    </div>
-  </legend>
-</fieldset>
+  isInline={false}
+  isInvalid={true}
+  isLegendHidden={false}
+  legend="Hidden Required CheckboxField"
+  legendAttrs={Object {}}
+  required={true}
+  showOptional={false}
+/>
 `;
 
 exports[`should hide the legend when requested 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -157,27 +173,25 @@ exports[`should hide the legend when requested 1`] = `
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group legend-group-hidden"
-    id="terra-checkbox-field-description-12"
-  >
-    <div
-      class="application-legend"
-      className="legend"
-    >
-      Hidden Legend legend
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={true}
+  legend="Hidden Legend legend"
+  legendAttrs={
+    Object {
+      "class": "application-legend",
+    }
+  }
+  required={false}
+  showOptional={false}
+/>
 `;
 
 exports[`should hide the required indicator when requested 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error={null}
+  help={null}
+  hideRequired={true}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -205,31 +219,21 @@ exports[`should hide the required indicator when requested 1`] = `
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-9"
-  >
-    <div
-      className="legend"
-    >
-      Hidden Required CheckboxField
-      <span
-        className="required-hidden"
-      >
-        *
-      </span>
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Hidden Required CheckboxField"
+  legendAttrs={Object {}}
+  required={true}
+  showOptional={false}
+/>
 `;
 
 exports[`should render a default checkbox field 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -257,26 +261,21 @@ exports[`should render a default checkbox field 1`] = `
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-1"
-  >
-    <div
-      className="legend"
-    >
-      Default CheckboxField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Default CheckboxField"
+  legendAttrs={Object {}}
+  required={false}
+  showOptional={false}
+/>
 `;
 
 exports[`should render a default checkbox field even if it has an undefined child 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -304,26 +303,21 @@ exports[`should render a default checkbox field even if it has an undefined chil
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-2"
-  >
-    <div
-      className="legend"
-    >
-      Default CheckboxField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Default CheckboxField"
+  legendAttrs={Object {}}
+  required={false}
+  showOptional={false}
+/>
 `;
 
 exports[`should render a help message 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error={null}
+  help="This will help up determine how many chairs to request"
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -351,32 +345,21 @@ exports[`should render a help message 1`] = `
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-5"
-  >
-    <div
-      className="legend"
-    >
-      Help CheckboxField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-  <div
-    className="help-text"
-    id="terra-checkbox-field-description-help-6"
-  >
-    This will help up determine how many chairs to request
-  </div>
-</fieldset>
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Help CheckboxField"
+  legendAttrs={Object {}}
+  required={false}
+  showOptional={false}
+/>
 `;
 
 exports[`should render an invalid checkbox field 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error="Test Error"
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -404,32 +387,21 @@ exports[`should render an invalid checkbox field 1`] = `
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-3"
-  >
-    <div
-      className="legend"
-    >
-      <span
-        className="error-icon"
-      />
-      Invalid CheckboxField
-    </div>
-  </legend>
-  <div
-    className="error-text"
-    id="terra-checkbox-field-description-error-4"
-  >
-    Test Error
-  </div>
-</fieldset>
+  isInline={false}
+  isInvalid={true}
+  isLegendHidden={false}
+  legend="Invalid CheckboxField"
+  legendAttrs={Object {}}
+  required={false}
+  showOptional={false}
+/>
 `;
 
 exports[`should render an optional part on the label 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -457,32 +429,21 @@ exports[`should render an optional part on the label 1`] = `
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-7"
-  >
-    <div
-      className="legend"
-    >
-      Optional CheckboxField
-      <FormattedMessage
-        id="Terra.form.field.optional"
-        values={Object {}}
-      >
-        <Component />
-      </FormattedMessage>
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Optional CheckboxField"
+  legendAttrs={Object {}}
+  required={false}
+  showOptional={true}
+/>
 `;
 
 exports[`should render required checkbox field 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -510,38 +471,21 @@ exports[`should render required checkbox field 1`] = `
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-8"
-  >
-    <div
-      className="legend"
-    >
-      <div
-        aria-hidden="true"
-        className="required"
-      >
-        *
-      </div>
-      <FormattedMessage
-        id="Terra.form.field.required"
-        values={Object {}}
-      >
-        <Component />
-      </FormattedMessage>
-      Required CheckboxField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Required CheckboxField"
+  legendAttrs={Object {}}
+  required={true}
+  showOptional={false}
+/>
 `;
 
 exports[`should render the legend with custom attributes properly 1`] = `
-<fieldset
-  className="checkbox-field"
+<CheckboxField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -569,20 +513,16 @@ exports[`should render the legend with custom attributes properly 1`] = `
       "timeZone": null,
     }
   }
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-11"
-  >
-    <div
-      class="application-legend"
-      className="legend"
-    >
-      Custom Legend CheckboxField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Custom Legend CheckboxField"
+  legendAttrs={
+    Object {
+      "class": "application-legend",
+    }
+  }
+  required={false}
+  showOptional={false}
+/>
 `;
