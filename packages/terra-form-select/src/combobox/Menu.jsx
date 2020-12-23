@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import { polyfill } from 'react-lifecycles-compat';
-import { injectIntl, intlShape } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import * as KeyCode from 'keycode-js';
 import AddOption from '../shared/_AddOption';
 import ClearOption from '../shared/_ClearOption';
@@ -32,7 +32,7 @@ const propTypes = {
    * @private
    * The intl object to be injected for translations.
    */
-  intl: intlShape.isRequired,
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * Input element ref used in select component.
    */

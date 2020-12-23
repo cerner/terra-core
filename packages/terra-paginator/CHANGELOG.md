@@ -10,6 +10,8 @@
 * Changed
   * Changed progressive paginator to support unknown total page count.
   * Replaced `Terra.it()` with `Terra.validates.element()`.
+  * Updated to be compatible with `react-intl` v2-v5.
+  * Removed usage of `intlShape`
 
 * Fixed
   * Fixed paginator not considering `totalCount` when `itemCountPerPage` was not provided.
