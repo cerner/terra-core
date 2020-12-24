@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated export function name in documentation.
+
 * Fixed
  * Fixed broken links in documentation.
 

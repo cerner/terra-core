@@ -58,29 +58,29 @@ console.log(activeBreakpointForSize(1300)); // 'huge'
 console.log(activeBreakpointForSize(1500)); // 'enormous'
 ```
 
-#### `isBreakpointActiveForSize(breakpointName, widthValue)`
+#### `breakpointIsActiveForSize(breakpointName, widthValue)`
 
-`isBreakpointActiveForSize` will return a boolean value indicating whether or not the given breakpoint name is active for the width value.
+`breakpointIsActiveForSize` will return a boolean value indicating whether or not the given breakpoint name is active for the width value.
 
 > Note that since the breakpoints are defined as minimum values, a breakpoint will be determined to be active if the width value is larger than the defined minimum, even if the width value is included in a higher breakpoint's range.
 
 ```jsx
-import { isBreakpointActiveForSize } from 'terra-breakpoints';
+import { breakpointIsActiveForSize } from 'terra-breakpoints';
 
-console.log(isBreakpointActiveForSize('tiny', 300));      // true
-console.log(isBreakpointActiveForSize('tiny', 544));      // true
-console.log(isBreakpointActiveForSize('tiny', 800));      // true
-console.log(isBreakpointActiveForSize('tiny', 1000));     // true
+console.log(breakpointIsActiveForSize('tiny', 300));      // true
+console.log(breakpointIsActiveForSize('tiny', 544));      // true
+console.log(breakpointIsActiveForSize('tiny', 800));      // true
+console.log(breakpointIsActiveForSize('tiny', 1000));     // true
 
-console.log(isBreakpointActiveForSize('medium', 300));    // false
-console.log(isBreakpointActiveForSize('medium', 544));    // false
-console.log(isBreakpointActiveForSize('medium', 800));    // true
-console.log(isBreakpointActiveForSize('medium', 1500));   // true
+console.log(breakpointIsActiveForSize('medium', 300));    // false
+console.log(breakpointIsActiveForSize('medium', 544));    // false
+console.log(breakpointIsActiveForSize('medium', 800));    // true
+console.log(breakpointIsActiveForSize('medium', 1500));   // true
 
-console.log(isBreakpointActiveForSize('enormous', 300));  // false
-console.log(isBreakpointActiveForSize('enormous', 544));  // false
-console.log(isBreakpointActiveForSize('enormous', 800));  // false
-console.log(isBreakpointActiveForSize('enormous', 1500)); // true
+console.log(breakpointIsActiveForSize('enormous', 300));  // false
+console.log(breakpointIsActiveForSize('enormous', 544));  // false
+console.log(breakpointIsActiveForSize('enormous', 800));  // false
+console.log(breakpointIsActiveForSize('enormous', 1500)); // true
 ```
 
 ### ActiveBreakpointProvider
