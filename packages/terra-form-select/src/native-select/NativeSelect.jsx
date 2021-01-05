@@ -131,18 +131,19 @@ const createOptions = options => {
   const currentOptGroupKeys = [];
 
   return options.map(current => {
+    const attr = current.disabled ? { disabled: true } : undefined;
     if (current.options) {
       const optGroupKeyIndex = getOptGroupKeyIndex(current.display, currentOptGroupKeys);
       const optGroupKey = getOptGroupKey(current.display, optGroupKeyIndex);
       currentOptGroupKeys.push(optGroupKey);
 
       return (
-        <optgroup disabled={!!current.disabled} key={optGroupKey} label={current.display}>
+        <optgroup {...attr} key={optGroupKey} label={current.display}>
           {createOptions(current.options)}
         </optgroup>
       );
     }
-    return <option disabled={!!current.disabled} key={`${current.value}`} value={current.value}>{current.display}</option>;
+    return <option {...attr} key={`${current.value}`} value={current.value}>{current.display}</option>;
   });
 };
 

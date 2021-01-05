@@ -1088,14 +1088,12 @@ exports[`NativeSelect should render a NativeSelect with disabled options 1`] = `
           Saab
         </option>
         <option
-          disabled={false}
           key="mercedes"
           value="mercedes"
         >
           Mercedes
         </option>
         <option
-          disabled={false}
           key="audi"
           value="audi"
         >
@@ -1383,19 +1381,16 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
           Terra.form.select.defaultDisplay
         </option>
         <optgroup
-          disabled={false}
           key="Swedish Cars-0"
           label="Swedish Cars"
         >
           <option
-            disabled={false}
             key="volvo"
             value="volvo"
           >
             Volvo
           </option>
           <option
-            disabled={false}
             key="saab"
             value="saab"
           >
@@ -1403,19 +1398,16 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
           </option>
         </optgroup>
         <optgroup
-          disabled={false}
           key="German Cars-0"
           label="German Cars"
         >
           <option
-            disabled={false}
             key="mercedes"
             value="mercedes"
           >
             Mercedes
           </option>
           <option
-            disabled={false}
             key="audi"
             value="audi"
           >
@@ -1572,28 +1564,24 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
           Terra.form.select.defaultDisplay
         </option>
         <option
-          disabled={false}
           key="volvo"
           value="volvo"
         >
           Volvo
         </option>
         <option
-          disabled={false}
           key="saab"
           value="saab"
         >
           Saab
         </option>
         <option
-          disabled={false}
           key="mercedes"
           value="mercedes"
         >
           Mercedes
         </option>
         <option
-          disabled={false}
           key="audi"
           value="audi"
         >
@@ -1751,28 +1739,24 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
           Terra.form.select.defaultDisplay
         </option>
         <option
-          disabled={false}
           key="volvo"
           value="volvo"
         >
           Volvo
         </option>
         <option
-          disabled={false}
           key="saab"
           value="saab"
         >
           Saab
         </option>
         <option
-          disabled={false}
           key="mercedes"
           value="mercedes"
         >
           Mercedes
         </option>
         <option
-          disabled={false}
           key="audi"
           value="audi"
         >
@@ -1930,28 +1914,24 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
           Terra.form.select.defaultDisplay
         </option>
         <option
-          disabled={false}
           key="volvo"
           value="volvo"
         >
           Volvo
         </option>
         <option
-          disabled={false}
           key="saab"
           value="saab"
         >
           Saab
         </option>
         <option
-          disabled={false}
           key="mercedes"
           value="mercedes"
         >
           Mercedes
         </option>
         <option
-          disabled={false}
           key="audi"
           value="audi"
         >
