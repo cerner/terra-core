@@ -46,6 +46,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   inputAttrs: PropTypes.object,
   /**
+   * Whether the textarea can be auto-resized vertically. _(Will be ignored if size attribute is set to "full".)_
+   */
+  isAutoResizable: PropTypes.bool,
+  /**
    * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
   isIncomplete: PropTypes.bool,
@@ -84,6 +88,16 @@ const propTypes = {
    */
   required: PropTypes.bool,
   /**
+   * Value to set for the rows attribute of the textarea. This takes precedence over size when
+   * setting the height of the textarea.
+   */
+  rows: PropTypes.number,
+  /**
+   * The size of the textarea. _(Sizes the textarea by setting the rows attribute a corresponding preset value.)_
+   */
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
+
+  /**
    * Whether or not to append the 'optional' label to a non-required field label.
    */
   showOptional: PropTypes.bool,
@@ -94,6 +108,11 @@ const propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
+  /**
+   * Whether or not the textarea is resizable.
+   * `Disabled` textarea and the ones with size `full` are always non-resizable.
+   */
+  disableResize: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -103,6 +122,7 @@ const defaultProps = {
   errorIcon: <IconError />,
   help: null,
   hideRequired: false,
+  isAutoResizable: false,
   inputAttrs: {},
   isIncomplete: false,
   isInline: false,
@@ -112,21 +132,26 @@ const defaultProps = {
   maxWidth: undefined,
   onChange: undefined,
   onInput: undefined,
+  rows: null,
+  size: 'small',
   required: false,
   showOptional: false,
   value: undefined,
+  disableResize: false,
 };
 
 const TextareaField = (props) => {
   const {
     defaultValue,
     disabled,
+    disableResize,
     error,
     errorIcon,
     help,
     hideRequired,
     inputAttrs,
     inputId,
+    isAutoResizable,
     isIncomplete,
     isInline,
     isInvalid,
@@ -135,6 +160,8 @@ const TextareaField = (props) => {
     labelAttrs,
     maxWidth,
     required,
+    rows,
+    size,
     showOptional,
     onChange,
     onInput,
@@ -181,12 +208,16 @@ const TextareaField = (props) => {
         {...inputAttrs}
         disabled={inputAttrs.disabled || disabled}
         id={inputId}
+        isAutoResizable={isAutoResizable}
         isIncomplete={isIncomplete}
         onChange={onChange}
         onInput={onInput}
         value={value}
         defaultValue={defaultValue}
         aria-describedby={ariaDescriptionIds}
+        rows={rows}
+        size={size}
+        disableResize={disableResize}
       />
     </Field>
   );

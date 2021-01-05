@@ -9,6 +9,7 @@ exports[`correctly applies the theme context className 1`] = `
   }
 >
   <TextareaField
+    disableResize={false}
     disabled={false}
     error={null}
     errorIcon={
@@ -21,6 +22,7 @@ exports[`correctly applies the theme context className 1`] = `
     hideRequired={false}
     inputAttrs={Object {}}
     inputId="test-input"
+    isAutoResizable={false}
     isIncomplete={false}
     isInline={false}
     isInvalid={false}
@@ -28,7 +30,9 @@ exports[`correctly applies the theme context className 1`] = `
     label="Label"
     labelAttrs={Object {}}
     required={false}
+    rows={null}
     showOptional={false}
+    size="small"
   >
     <Field
       error={null}
@@ -161,7 +165,7 @@ exports[`should render a TextareaField with props 1`] = `
     disableResize={false}
     disabled={false}
     id="test-input"
-    isAutoResizable={false}
+    isAutoResizable={true}
     isIncomplete={false}
     isInvalid={false}
     name="test"
