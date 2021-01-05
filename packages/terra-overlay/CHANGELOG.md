@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.61.0 - (January 5, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.60.0 - (December 8, 2020)
 
 * Changed
