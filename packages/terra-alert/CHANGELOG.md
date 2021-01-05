@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed action button alignment.
+
 * Changed
   * Updated to be compatible with `react-intl` v2-v5
   * Removed usage of `FormattedMessage` in favor of `injectIntl`
