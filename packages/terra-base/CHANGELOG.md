@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 5.43.0 - (January 5, 2021)
+
 * Fixed
  * Fixed broken links in documentation.
  

@@ -5,6 +5,8 @@
 * Fixed
   * Fixed action button alignment.
 
+## 4.48.0 - (January 5, 2021)
+
 * Changed
   * Updated to be compatible with `react-intl` v2-v5
   * Removed usage of `FormattedMessage` in favor of `injectIntl`
