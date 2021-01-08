@@ -35,8 +35,9 @@ it('should render a TextareaField with props', () => {
       hideRequired
       inputAttrs={{
         name: 'test',
-        rows: 15,
       }}
+      rows={15}
+      isAutoResizable
       isInline
       isInvalid
       isLabelHidden
