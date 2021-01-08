@@ -2,7 +2,10 @@
 
 ## Unreleased
 
+## 6.23.0 - (January 5, 2021)
+
 * Fixed
+ * Allow users to disable options in native-select.
  * Fixed broken links in documentation.
  
 * Changed

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.1.0 - (January 5, 2021)
+
 * Fixed
  * Fixed broken links in documentation.
 

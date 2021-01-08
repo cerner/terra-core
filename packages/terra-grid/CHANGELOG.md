@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.27.0 - (January 5, 2021)
+
 * Fixed
  * Fixed broken links in documentation.
  
