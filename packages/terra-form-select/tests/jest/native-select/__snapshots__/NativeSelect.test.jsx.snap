@@ -926,6 +926,185 @@ exports[`NativeSelect should render a NativeSelect with an id 1`] = `
 </InjectIntl(NativeSelect)>
 `;
 
+exports[`NativeSelect should render a NativeSelect with disabled options 1`] = `
+<InjectIntl(NativeSelect)
+  ariaLabel="test-label"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  options={
+    Array [
+      Object {
+        "disabled": true,
+        "display": "Volvo",
+        "value": "volvo",
+      },
+      Object {
+        "disabled": true,
+        "display": "Saab",
+        "value": "saab",
+      },
+      Object {
+        "display": "Mercedes",
+        "value": "mercedes",
+      },
+      Object {
+        "display": "Audi",
+        "value": "audi",
+      },
+    ]
+  }
+>
+  <NativeSelect
+    ariaLabel="test-label"
+    disabled={false}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isFilterStyle={false}
+    isIncomplete={false}
+    isInvalid={false}
+    options={
+      Array [
+        Object {
+          "disabled": true,
+          "display": "Volvo",
+          "value": "volvo",
+        },
+        Object {
+          "disabled": true,
+          "display": "Saab",
+          "value": "saab",
+        },
+        Object {
+          "display": "Mercedes",
+          "value": "mercedes",
+        },
+        Object {
+          "display": "Audi",
+          "value": "audi",
+        },
+      ]
+    }
+    required={false}
+  >
+    <div
+      className="native placeholder"
+      data-focus-interaction="none"
+    >
+      <div
+        aria-hidden={true}
+        className="frame"
+      >
+        <div
+          className="display"
+        >
+          Terra.form.select.defaultDisplay
+        </div>
+        <div
+          className="arrow"
+        >
+          <div
+            className="arrow-icon"
+          />
+        </div>
+      </div>
+      <select
+        aria-label="test-label"
+        className="select"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        required={false}
+        value=""
+      >
+        <option
+          value=""
+        >
+          Terra.form.select.defaultDisplay
+        </option>
+        <option
+          disabled={true}
+          key="volvo"
+          value="volvo"
+        >
+          Volvo
+        </option>
+        <option
+          disabled={true}
+          key="saab"
+          value="saab"
+        >
+          Saab
+        </option>
+        <option
+          key="mercedes"
+          value="mercedes"
+        >
+          Mercedes
+        </option>
+        <option
+          key="audi"
+          value="audi"
+        >
+          Audi
+        </option>
+      </select>
+    </div>
+  </NativeSelect>
+</InjectIntl(NativeSelect)>
+`;
+
 exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
 <InjectIntl(NativeSelect)
   ariaLabel="test-label"
