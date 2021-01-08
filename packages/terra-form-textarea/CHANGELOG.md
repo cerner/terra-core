@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+ * Added similar props from textarea to textarea-field.
+
 ## 5.11.0 - (January 5, 2021)
 
 * Fixed
