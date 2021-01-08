@@ -96,7 +96,6 @@ const propTypes = {
    * The size of the textarea. _(Sizes the textarea by setting the rows attribute a corresponding preset value.)_
    */
   size: PropTypes.oneOf(['small', 'medium', 'large', 'full']),
-
   /**
    * Whether or not to append the 'optional' label to a non-required field label.
    */
@@ -132,7 +131,7 @@ const defaultProps = {
   maxWidth: undefined,
   onChange: undefined,
   onInput: undefined,
-  rows: null,
+  rows: undefined,
   size: 'small',
   required: false,
   showOptional: false,
@@ -208,16 +207,16 @@ const TextareaField = (props) => {
         {...inputAttrs}
         disabled={inputAttrs.disabled || disabled}
         id={inputId}
-        isAutoResizable={isAutoResizable}
+        isAutoResizable={inputAttrs.isAutoResizable || isAutoResizable}
         isIncomplete={isIncomplete}
         onChange={onChange}
         onInput={onInput}
         value={value}
         defaultValue={defaultValue}
         aria-describedby={ariaDescriptionIds}
-        rows={rows}
-        size={size}
-        disableResize={disableResize}
+        rows={inputAttrs.rows || rows}
+        size={inputAttrs.size || size}
+        disableResize={inputAttrs.disableResize || disableResize}
       />
     </Field>
   );

@@ -110,7 +110,7 @@ const defaultProps = {
   onChange: undefined,
   onInput: undefined,
   required: false,
-  rows: null,
+  rows: undefined,
   size: 'small',
   value: undefined,
   refCallback: undefined,

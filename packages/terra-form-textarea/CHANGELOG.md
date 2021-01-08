@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
- * Added similar props from textarea to textarea-field.
+ * Added `size`, `rows`, `disableResize` and `isAutoResizable` props to textarea-field.
 
 ## 5.11.0 - (January 5, 2021)
 

@@ -30,7 +30,6 @@ exports[`correctly applies the theme context className 1`] = `
     label="Label"
     labelAttrs={Object {}}
     required={false}
-    rows={null}
     showOptional={false}
     size="small"
   >
@@ -115,7 +114,6 @@ exports[`correctly applies the theme context className 1`] = `
           key=".0"
           name={null}
           required={false}
-          rows={null}
           size="small"
         >
           <textarea
@@ -207,7 +205,6 @@ exports[`should render a default TextareaField component 1`] = `
     isInvalid={false}
     name={null}
     required={false}
-    rows={null}
     size="small"
   />
 </Field>
@@ -242,7 +239,6 @@ exports[`should render a disabled TextareaField component 1`] = `
     isInvalid={false}
     name={null}
     required={false}
-    rows={null}
     size="small"
   />
 </Field>
@@ -277,7 +273,6 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
     isInvalid={false}
     name={null}
     required={false}
-    rows={null}
     size="small"
   />
 </Field>
@@ -319,7 +314,6 @@ exports[`should render a valid TextareaField with props 1`] = `
     name="test"
     onChange={[Function]}
     required={false}
-    rows={null}
     size="small"
     type="number"
     value="Value"
