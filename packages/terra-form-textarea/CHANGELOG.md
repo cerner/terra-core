@@ -5,13 +5,13 @@
 ## 5.12.0 - (January 12, 2021)
 
 * Fixed
- * Added `size`, `rows`, `disableResize` and `isAutoResizable` props to textarea-field.
+  * Added `size`, `rows`, `disableResize` and `isAutoResizable` props to textarea-field.
 
 ## 5.11.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 5.10.0 - (December 8, 2020)
 
 * Changed
