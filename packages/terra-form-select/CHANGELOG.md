@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 6.24.0 - (January 12, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.23.0 - (January 5, 2021)
 
 * Fixed
