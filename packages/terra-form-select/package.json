@@ -1,7 +1,7 @@
 {
   "name": "terra-form-select",
   "main": "lib/Select.js",
-  "version": "6.23.0",
+  "version": "6.24.0",
   "description": "Provides a drop down of selectable options.",
   "repository": {
     "type": "git",

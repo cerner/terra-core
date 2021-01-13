@@ -2,12 +2,17 @@
 
 ## Unreleased
 
+## 6.24.0 - (January 12, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.23.0 - (January 5, 2021)
 
 * Fixed
- * Allow users to disable options in native-select.
- * Fixed broken links in documentation.
- 
+  * Allow users to disable options in native-select.
+  * Fixed broken links in documentation.
+
 * Changed
   * Updated to be compatible with `react-intl` v2-v5
   * Removed usage of `intlShape`
