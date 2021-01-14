@@ -39,7 +39,7 @@ const OptGroup = ({
 }) => {
   const theme = React.useContext(ThemeContext);
   return (
-    <li className={cx('opt-group', { 'is-disabled': disabled }, theme.className)} role="group">
+    <li className={cx('opt-group', { 'is-disabled': disabled }, theme.className)} role="option">
       <div className={cx('label')}>
         {label}
       </div>

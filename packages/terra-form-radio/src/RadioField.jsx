@@ -146,7 +146,7 @@ const RadioField = (props) => {
   });
 
   return (
-    <fieldset {...customProps} aria-required={required} required={required} className={radioFieldClasses}>
+    <fieldset {...customProps} role="radiogroup" aria-required={required} required={required} className={radioFieldClasses}>
       {legendGroup}
       {content}
       {isInvalid && error && <div id={errorAriaDescriptionId} className={cx('error-text')}>{error}</div>}
