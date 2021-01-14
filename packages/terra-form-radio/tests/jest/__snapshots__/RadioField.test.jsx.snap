@@ -81,6 +81,7 @@ exports[`correctly applies the theme context className 1`] = `
         aria-required={false}
         className="radio-field orion-fusion-theme"
         required={false}
+        role="radiogroup"
       >
         <legend
           className="legend-group"

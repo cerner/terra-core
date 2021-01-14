@@ -71,7 +71,7 @@ exports[`OptGroup correctly applies the theme context className 1`] = `
     >
       <li
         className="opt-group orion-fusion-theme"
-        role="group"
+        role="option"
       >
         <div
           className="label"

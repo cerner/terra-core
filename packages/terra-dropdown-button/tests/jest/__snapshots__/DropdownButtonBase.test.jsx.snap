@@ -79,13 +79,12 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                       role="menu"
                     >
                       <li
-                        role="presentation"
+                        role="menuitem"
                         tabindex="-1"
                       >
                         <div
                           class="item orion-fusion-theme"
                           data-terra-dropdown-list-item="true"
-                          role="menuitem"
                           tabindex="0"
                         >
                           1st option
@@ -167,14 +166,13 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                             requestClose={[Function]}
                           >
                             <li
-                              role="presentation"
+                              role="menuitem"
                               tabIndex="-1"
                             >
                               <div
                                 className="item orion-fusion-theme"
                                 data-terra-dropdown-list-item={true}
                                 onClick={[Function]}
-                                role="menuitem"
                                 tabIndex="0"
                               >
                                 1st option
