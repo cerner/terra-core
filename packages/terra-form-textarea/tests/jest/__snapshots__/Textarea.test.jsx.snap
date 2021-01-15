@@ -17,7 +17,6 @@ exports[`correctly applies the theme context className 1`] = `
     isInvalid={false}
     name={null}
     required={false}
-    rows={null}
     size="small"
   >
     <textarea

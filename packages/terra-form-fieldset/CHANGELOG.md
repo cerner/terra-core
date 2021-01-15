@@ -2,10 +2,16 @@
 
 ## Unreleased
 
+## 2.56.0 - (January 5, 2021)
+
+* Fixed
+ * Fixed broken links in documentation.
+ 
 ## 2.55.0 - (December 8, 2020)
 
 * Changed
   * Update wdio tests to remove deprecated Terra.it helpers
+  * Removed unused peer dependency on `react-intl`
 
 ## 2.54.0 - (November 17, 2020)
 

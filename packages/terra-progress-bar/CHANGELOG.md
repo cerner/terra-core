@@ -2,7 +2,15 @@
 
 ## Unreleased
 
+## 4.30.0 - (January 5, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.29.0 - (December 8, 2020)
+
+* Fixed
+  * Fixed broken links in documentation.
 
 * Changed
   * Update wdio tests to remove deprecated Terra.it helpers

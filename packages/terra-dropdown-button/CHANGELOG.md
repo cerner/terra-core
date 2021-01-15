@@ -2,7 +2,14 @@
 
 ## Unreleased
 
+## 1.24.0 - (January 5, 2021)
+
+* Fixed
+ * Fixed broken links in documentation.
+ 
 * Changed
+  * Updated to be compatible with `react-intl` v2-v5
+  * Removed usage of `intlShape`
   * Update wdio tests to remove deprecated Terra.it helpers
 
 ## 1.23.0 - (November 10, 2020)

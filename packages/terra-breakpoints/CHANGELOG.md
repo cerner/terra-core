@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 2.32.0 - (January 5, 2021)
+
+* Changed
+  * Updated export function name in documentation.
+
+* Fixed
+ * Fixed broken links in documentation.
+
 ## 2.31.0 - (November 17, 2020)
 
 * Changed

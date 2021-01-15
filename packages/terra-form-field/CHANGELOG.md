@@ -2,10 +2,16 @@
 
 ## Unreleased
 
+## 4.14.0 - (January 5, 2021)
+
+* Fixed
+ * Fixed broken links in documentation.
+ 
 ## 4.13.0 - (December 8, 2020)
 
 * Changed
   * Update wdio tests to remove deprecated Terra.it helpers
+  * Updated to be compatible with `react-intl` v2-v5
 
 ## 4.12.0 - (November 17, 2020)
 

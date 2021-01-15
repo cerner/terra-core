@@ -2,7 +2,20 @@
 
 ## Unreleased
 
+## 6.24.0 - (January 12, 2021)
+
 * Changed
+  * Minor dependency version bump
+
+## 6.23.0 - (January 5, 2021)
+
+* Fixed
+  * Allow users to disable options in native-select.
+  * Fixed broken links in documentation.
+
+* Changed
+  * Updated to be compatible with `react-intl` v2-v5
+  * Removed usage of `intlShape`
   * Update wdio tests to remove deprecated Terra.it helpers
 
 ## 6.22.0 - (December 8, 2020)

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
-import { FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
@@ -55,6 +55,11 @@ const propTypes = {
    * Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.
    */
   onDismiss: PropTypes.func,
+  /**
+   * @private
+   * intl object programmatically imported through injectIntl from react-intl.
+   * */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * The title for the alert which will be bolded.
    */
@@ -112,6 +117,7 @@ const Alert = ({
   customIcon,
   customColorClass,
   onDismiss,
+  intl,
   title,
   type,
   ...customProps
@@ -119,7 +125,7 @@ const Alert = ({
   const theme = React.useContext(ThemeContext);
   const [isNarrow, setIsNarrow] = useState();
 
-  const defaultTitle = type === AlertTypes.CUSTOM ? '' : <FormattedMessage id={`Terra.alert.${type}`} />;
+  const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const alertClassNames = classNames(
     cx(
       'alert-base',
@@ -140,13 +146,7 @@ const Alert = ({
 
   let dismissButton;
   if (onDismiss) {
-    dismissButton = (
-      <FormattedMessage id="Terra.alert.dismiss">
-        {buttonText => (
-          <Button text={buttonText} onClick={onDismiss} />
-        )}
-      </FormattedMessage>
-    );
+    dismissButton = <Button text={intl.formatMessage({ id: 'Terra.alert.dismiss' })} onClick={onDismiss} />;
   }
 
   let actionsSection;
@@ -194,4 +194,4 @@ Alert.defaultProps = defaultProps;
 Alert.Opts = {};
 Alert.Opts.Types = AlertTypes;
 
-export default Alert;
+export default injectIntl(Alert);

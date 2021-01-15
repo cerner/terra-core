@@ -5,7 +5,7 @@ import React, {
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
-import { injectIntl, intlShape } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import {
   defaultPlaceholderValue,
@@ -56,7 +56,7 @@ const propTypes = {
    * @private
    * The intl object to be injected for translations.
    */
-  intl: intlShape.isRequired,
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * Whether the select input should use the filter style display, forcing a value to always be selected.
    * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
@@ -131,18 +131,19 @@ const createOptions = options => {
   const currentOptGroupKeys = [];
 
   return options.map(current => {
+    const attr = current.disabled ? { disabled: true } : undefined;
     if (current.options) {
       const optGroupKeyIndex = getOptGroupKeyIndex(current.display, currentOptGroupKeys);
       const optGroupKey = getOptGroupKey(current.display, optGroupKeyIndex);
       currentOptGroupKeys.push(optGroupKey);
 
       return (
-        <optgroup key={optGroupKey} label={current.display}>
+        <optgroup {...attr} key={optGroupKey} label={current.display}>
           {createOptions(current.options)}
         </optgroup>
       );
     }
-    return <option key={`${current.value}`} value={current.value}>{current.display}</option>;
+    return <option {...attr} key={`${current.value}`} value={current.value}>{current.display}</option>;
   });
 };
 

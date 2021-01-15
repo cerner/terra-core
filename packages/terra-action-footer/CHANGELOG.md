@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.57.0 - (January 5, 2021)
+
+* Fixed
+ * Fixed broken links in documentation.
+ 
 ## 2.56.0 - (December 8, 2020)
 
 * Changed

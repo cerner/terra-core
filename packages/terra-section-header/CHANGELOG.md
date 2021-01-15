@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 2.47.0 - (January 5, 2021)
+
+* Fixed
+ * Fixed broken links in documentation.
 * Changed
   * Update wdio tests to remove deprecated Terra.it helpers
 

@@ -2,10 +2,17 @@
 
 ## Unreleased
 
+## 2.55.0 - (January 5, 2021)
+
+* Fixed
+ * Fixed broken links in documentation.
+ 
 ## 2.54.0 - (December 8, 2020)
 
 * Changed
   * Update wdio tests to remove deprecated Terra.it helpers
+  * Updated to be compatible with `react-intl` v2-v5
+  * Removed usage of `FormattedMessage` in favor of `injectIntl`
 
 ## 2.53.0 - (November 17, 2020)
 

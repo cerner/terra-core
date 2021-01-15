@@ -35,45 +35,77 @@ exports[`correctly applies the theme context className 1`] = `
     }
   }
 >
-  <RadioField
-    error={null}
-    help={null}
-    hideRequired={false}
-    isInline={false}
-    isInvalid={false}
-    isLegendHidden={false}
+  <InjectIntl(RadioField)
     legend="Default RadioField"
-    legendAttrs={Object {}}
-    required={false}
-    showOptional={false}
   >
-    <fieldset
-      aria-required={false}
-      className="radio-field orion-fusion-theme"
+    <RadioField
+      error={null}
+      help={null}
+      hideRequired={false}
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      isInline={false}
+      isInvalid={false}
+      isLegendHidden={false}
+      legend="Default RadioField"
+      legendAttrs={Object {}}
       required={false}
+      showOptional={false}
     >
-      <legend
-        className="legend-group"
-        id="terra-radio-field-description-13"
+      <fieldset
+        aria-required={false}
+        className="radio-field orion-fusion-theme"
+        required={false}
       >
-        <div
-          className="legend"
+        <legend
+          className="legend-group"
+          id="terra-radio-field-description-1"
         >
-          Default RadioField
-          <span
-            className="error-icon-hidden"
-          />
-        </div>
-      </legend>
-    </fieldset>
-  </RadioField>
+          <div
+            className="legend"
+          >
+            Default RadioField
+            <span
+              className="error-icon-hidden"
+            />
+          </div>
+        </legend>
+      </fieldset>
+    </RadioField>
+  </InjectIntl(RadioField)>
 </ThemeContextProvider>
 `;
 
 exports[`should display the required icon for fields with hideRequired, but have a state of invalid 1`] = `
-<fieldset
-  aria-required={true}
-  className="radio-field"
+<RadioField
+  error={null}
+  help={null}
+  hideRequired={true}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -101,40 +133,21 @@ exports[`should display the required icon for fields with hideRequired, but have
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={true}
+  isLegendHidden={false}
+  legend="Hidden Required CheckboxField"
+  legendAttrs={Object {}}
   required={true}
->
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-11"
-  >
-    <div
-      className="legend"
-    >
-      <span
-        className="error-icon"
-      />
-      <div
-        aria-hidden="true"
-        className="required"
-      >
-        *
-      </div>
-      <FormattedMessage
-        id="Terra.form.field.required"
-        values={Object {}}
-      >
-        <Component />
-      </FormattedMessage>
-      Hidden Required CheckboxField
-    </div>
-  </legend>
-</fieldset>
+  showOptional={false}
+/>
 `;
 
 exports[`should hide the legend when requested 1`] = `
-<fieldset
-  aria-required={false}
-  className="radio-field"
+<RadioField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -162,29 +175,25 @@ exports[`should hide the legend when requested 1`] = `
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={true}
+  legend="Hidden Legend legend"
+  legendAttrs={
+    Object {
+      "class": "application-legend",
+    }
+  }
   required={false}
->
-  <legend
-    className="legend-group legend-group-hidden"
-    id="terra-radio-field-description-12"
-  >
-    <div
-      class="application-legend"
-      className="legend"
-    >
-      Hidden Legend legend
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  showOptional={false}
+/>
 `;
 
 exports[`should hide the required indicator when requested 1`] = `
-<fieldset
-  aria-required={true}
-  className="radio-field"
+<RadioField
+  error={null}
+  help={null}
+  hideRequired={true}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -212,33 +221,21 @@ exports[`should hide the required indicator when requested 1`] = `
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Hidden Required RadioField"
+  legendAttrs={Object {}}
   required={true}
->
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-9"
-  >
-    <div
-      className="legend"
-    >
-      Hidden Required RadioField
-      <span
-        className="required-hidden"
-      >
-        *
-      </span>
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  showOptional={false}
+/>
 `;
 
 exports[`should render a default radio field 1`] = `
-<fieldset
-  aria-required={false}
-  className="radio-field"
+<RadioField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -266,28 +263,21 @@ exports[`should render a default radio field 1`] = `
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Default RadioField"
+  legendAttrs={Object {}}
   required={false}
->
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-1"
-  >
-    <div
-      className="legend"
-    >
-      Default RadioField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  showOptional={false}
+/>
 `;
 
 exports[`should render a default radio field if it has an undefined child 1`] = `
-<fieldset
-  aria-required={false}
-  className="radio-field"
+<RadioField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -315,28 +305,21 @@ exports[`should render a default radio field if it has an undefined child 1`] = 
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Default RadioField"
+  legendAttrs={Object {}}
   required={false}
->
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-2"
-  >
-    <div
-      className="legend"
-    >
-      Default RadioField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  showOptional={false}
+/>
 `;
 
 exports[`should render a help message 1`] = `
-<fieldset
-  aria-required={false}
-  className="radio-field"
+<RadioField
+  error={null}
+  help="This will help up determine how many chairs to request"
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -364,34 +347,21 @@ exports[`should render a help message 1`] = `
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Help RadioField"
+  legendAttrs={Object {}}
   required={false}
->
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-5"
-  >
-    <div
-      className="legend"
-    >
-      Help RadioField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-  <div
-    className="help-text"
-    id="terra-radio-field-description-help-6"
-  >
-    This will help up determine how many chairs to request
-  </div>
-</fieldset>
+  showOptional={false}
+/>
 `;
 
 exports[`should render an invalid radio field 1`] = `
-<fieldset
-  aria-required={false}
-  className="radio-field"
+<RadioField
+  error="Test Error"
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -419,34 +389,21 @@ exports[`should render an invalid radio field 1`] = `
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={true}
+  isLegendHidden={false}
+  legend="Invalid RadioField"
+  legendAttrs={Object {}}
   required={false}
->
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-3"
-  >
-    <div
-      className="legend"
-    >
-      <span
-        className="error-icon"
-      />
-      Invalid RadioField
-    </div>
-  </legend>
-  <div
-    className="error-text"
-    id="terra-radio-field-description-error-4"
-  >
-    Test Error
-  </div>
-</fieldset>
+  showOptional={false}
+/>
 `;
 
 exports[`should render an optional part on the label 1`] = `
-<fieldset
-  aria-required={false}
-  className="radio-field"
+<RadioField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -474,34 +431,21 @@ exports[`should render an optional part on the label 1`] = `
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Optional RadioField"
+  legendAttrs={Object {}}
   required={false}
->
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-7"
-  >
-    <div
-      className="legend"
-    >
-      Optional RadioField
-      <FormattedMessage
-        id="Terra.form.field.optional"
-        values={Object {}}
-      >
-        <Component />
-      </FormattedMessage>
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  showOptional={true}
+/>
 `;
 
 exports[`should render required radio field 1`] = `
-<fieldset
-  aria-required={true}
-  className="radio-field"
+<RadioField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -529,40 +473,21 @@ exports[`should render required radio field 1`] = `
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Required RadioField"
+  legendAttrs={Object {}}
   required={true}
->
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-8"
-  >
-    <div
-      className="legend"
-    >
-      <div
-        aria-hidden="true"
-        className="required"
-      >
-        *
-      </div>
-      <FormattedMessage
-        id="Terra.form.field.required"
-        values={Object {}}
-      >
-        <Component />
-      </FormattedMessage>
-      Required RadioField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  showOptional={false}
+/>
 `;
 
 exports[`should render the legend with custom attributes properly 1`] = `
-<fieldset
-  aria-required={false}
-  className="radio-field"
+<RadioField
+  error={null}
+  help={null}
+  hideRequired={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -590,21 +515,16 @@ exports[`should render the legend with custom attributes properly 1`] = `
       "timeZone": null,
     }
   }
+  isInline={false}
+  isInvalid={false}
+  isLegendHidden={false}
+  legend="Custom Legend RadioField"
+  legendAttrs={
+    Object {
+      "class": "application-legend",
+    }
+  }
   required={false}
->
-  <legend
-    className="legend-group"
-    id="terra-radio-field-description-10"
-  >
-    <div
-      class="application-legend"
-      className="legend"
-    >
-      Custom Legend RadioField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
+  showOptional={false}
+/>
 `;

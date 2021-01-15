@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.34.0 - (January 5, 2021)
+
+* Fixed
+ * Fixed broken links in documentation.
+
 ## 3.33.0 - (November 17, 2020)
 
 * Changed

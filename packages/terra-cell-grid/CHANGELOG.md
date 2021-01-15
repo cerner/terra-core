@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.9.0 - (January 5, 2021)
+
+* Fixed
+ * Fixed broken links in documentation.
+ 
 ## 1.8.0 - (December 8, 2020)
 
 * Changed

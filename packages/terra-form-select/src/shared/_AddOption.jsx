@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import Option from './_Option';
 
 const propTypes = {
@@ -8,7 +8,7 @@ const propTypes = {
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
-  intl: intlShape.isRequired,
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * The value of the option.
    */
