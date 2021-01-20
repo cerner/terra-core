@@ -2,11 +2,14 @@
 
 ## Unreleased
 
+* Added
+  * Added role to preemptively fix issues for upcoming axe-core version bump
+
 ## 4.20.0 - (January 5, 2021)
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 4.19.0 - (December 8, 2020)
 
 * Changed
