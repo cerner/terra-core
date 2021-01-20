@@ -2,7 +2,7 @@
 name: "\U0001F680 Feature Request"
 about: Submit a proposal for a new feature
 title: ''
-labels: ":construction: Blocked: Accessibility Input, :construction: Blocked: Engineering
+labels: ":construction: Blocked: Accessibility Input, :construction: Blocked: Engineering, Feature
   Input, :construction: Blocked: Functional Input, :construction: Blocked: UX Input"
 assignees: ''
 
