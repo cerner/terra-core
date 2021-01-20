@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated wdio screenshots for minor rendering issue.
+
 ## 3.64.0 - (January 5, 2021)
 
 * Changed
@@ -9,8 +12,8 @@
   * Removed usage of `intlShape`
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 3.63.0 - (December 8, 2020)
 
 * Changed
