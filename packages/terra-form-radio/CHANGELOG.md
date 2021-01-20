@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-* Added
-  * Added role to preemptively fix issues for upcoming axe-core version bump
+* Removed
+  * Removed unnecessary `aria-required` to preemptively fix issues for upcoming axe-core version bump
 
 ## 4.20.0 - (January 5, 2021)
 

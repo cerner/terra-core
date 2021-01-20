@@ -39,6 +39,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
             className="item orion-fusion-theme"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}
+            role="button"
             tabIndex="0"
           >
             1st Option
@@ -61,6 +62,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
             className="item orion-fusion-theme"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}
+            role="button"
             tabIndex="0"
           >
             2nd Option
@@ -83,6 +85,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
             className="item orion-fusion-theme"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}
+            role="button"
             tabIndex="0"
           >
             3rd Option

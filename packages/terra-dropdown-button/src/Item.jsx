@@ -52,6 +52,7 @@ const Item = ({
             onSelect(event, metaData);
           });
         }}
+        role="button"
         tabIndex="0"
         className={cx(
           'item',

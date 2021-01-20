@@ -85,6 +85,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                         <div
                           class="item orion-fusion-theme"
                           data-terra-dropdown-list-item="true"
+                          role="button"
                           tabindex="0"
                         >
                           1st option
@@ -173,6 +174,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                                 className="item orion-fusion-theme"
                                 data-terra-dropdown-list-item={true}
                                 onClick={[Function]}
+                                role="button"
                                 tabIndex="0"
                               >
                                 1st option

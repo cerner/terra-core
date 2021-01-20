@@ -70,6 +70,7 @@ exports[`OptGroup correctly applies the theme context className 1`] = `
       label="label"
     >
       <li
+        aria-selected="false"
         className="opt-group orion-fusion-theme"
         role="option"
       >
