@@ -2,11 +2,14 @@
 
 ## Unreleased
 
+* Changed
+  * Bumped `one-cerner-style-icons` to v1.36.0
+
 ## 3.40.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 3.39.0 - (December 8, 2020)
 
 * Changed
@@ -90,7 +93,7 @@
   * Updated eIFU text to be `Electronic Instructions for Use Icon`
   * Bumped `one-cerner-style-icons` to v1.30.1
   * Updated `terra-dev-site` WDIO test for IconAll
-  * Changed WDIO tests to use `huge` viewport in order to accomodate the new icons introduced in v1.30.1
+  * Changed WDIO tests to use `huge` viewport in order to accommodate the new icons introduced in v1.30.1
 
 ## 3.25.0 - (January 7, 2020)
 

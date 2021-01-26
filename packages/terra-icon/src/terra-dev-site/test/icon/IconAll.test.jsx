@@ -301,6 +301,7 @@ const IconAll = () => (
     <Icon.IconVisualization className={cx(['icon'])} />
     <Icon.IconWarning className={cx(['icon'])} />
     <Icon.IconWarningLowLight className={cx(['icon'])} />
+    <Icon.IconWaveform className={cx(['icon'])} />
     <Icon.IconXSymbol className={cx(['icon'])} />
     <Icon.IconZoomIn className={cx(['icon'])} />
     <Icon.IconZoomOut className={cx(['icon'])} />
