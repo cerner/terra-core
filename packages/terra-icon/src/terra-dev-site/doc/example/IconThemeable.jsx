@@ -192,6 +192,7 @@ import IconMedicationTablet from 'terra-icon/lib/icon/IconMedicationTablet';
 import IconMedicationTabletOutline from 'terra-icon/lib/icon/IconMedicationTabletOutline';
 import IconMedicationTabletHalf from 'terra-icon/lib/icon/IconMedicationTabletHalf';
 import IconMedicationTabletHalfOutline from 'terra-icon/lib/icon/IconMedicationTabletHalfOutline';
+import IconWaveform from 'terra-icon/lib/icon/IconWaveform';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -1949,6 +1950,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconMedicationTabletHalfOutline from 'terra-icon/lib/icon/IconMedicationTabletHalfOutline';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconWaveform height='2em' width='2em' /></td>
+        <td style={cellStyle}>waveform</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconWaveform from 'terra-icon/lib/icon/IconWaveform';
           </code>
         </td>
       </tr>
