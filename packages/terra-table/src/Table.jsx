@@ -339,6 +339,7 @@ const createHeader = (tableData) => {
         {tableData.headerData.cells.map((cellData, colIndex) => (
           <HeaderCell
             {...cellData.attrs}
+            id={cellData.id}
             key={cellData.key}
             refCallback={cellData.refCallback}
             metaData={cellData.metaData}
