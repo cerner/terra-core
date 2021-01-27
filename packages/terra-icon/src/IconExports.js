@@ -292,6 +292,7 @@ import IconVideoCameraDisabled from './icon/IconVideoCameraDisabled';
 import IconVisualization from './icon/IconVisualization';
 import IconWarning from './icon/IconWarning';
 import IconWarningLowLight from './icon/IconWarningLowLight';
+import IconWaveform from './icon/IconWaveform';
 import IconXSymbol from './icon/IconXSymbol';
 import IconZoomIn from './icon/IconZoomIn';
 import IconZoomOut from './icon/IconZoomOut';
@@ -591,6 +592,7 @@ const Icons = {
   IconVisualization,
   IconWarning,
   IconWarningLowLight,
+  IconWaveform,
   IconXSymbol,
   IconZoomIn,
   IconZoomOut,
