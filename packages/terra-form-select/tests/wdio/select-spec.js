@@ -2443,7 +2443,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
     before(() => browser.url('/raw/tests/terra-form-select/form-select/select-inside-iframe'));
 
     it('open the dropdown by clicking the toggle', () => {
-      /* global $ */
       const frame = $('#frmSelectFrame');
       frame.waitForVisible();
       browser.frame(frame.value);
