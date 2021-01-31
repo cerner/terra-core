@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Update mdx notice test for terra-dev-site v7
+
 ## 1.1.0 - (January 5, 2021)
 
 * Fixed
