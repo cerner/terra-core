@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.21.0 - (February 2, 2021)
+
 * Fixed
   * Fixed missing id mapping for header cells
 
