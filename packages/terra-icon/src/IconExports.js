@@ -253,6 +253,10 @@ import IconSortDescending from './icon/IconSortDescending';
 import IconSpinner from './icon/IconSpinner';
 import IconSquareSymbol from './icon/IconSquareSymbol';
 import IconSquareSymbolLight from './icon/IconSquareSymbolLight';
+import IconStatusPositive from './icon/IconStatusPositive';
+import IconStatusPositiveWhite from './icon/IconStatusPositiveWhite';
+import IconStatusPositiveLowLight from './icon/IconStatusPositiveLowLight';
+import IconStatusPositiveWhiteLowLight from './icon/IconStatusPositiveWhiteLowLight';
 import IconStartPresenting from './icon/IconStartPresenting';
 import IconStopPresenting from './icon/IconStopPresenting';
 import IconSuccess from './icon/IconSuccess';
@@ -553,6 +557,10 @@ const Icons = {
   IconSpinner,
   IconSquareSymbol,
   IconSquareSymbolLight,
+  IconStatusPositive,
+  IconStatusPositiveWhite,
+  IconStatusPositiveLowLight,
+  IconStatusPositiveWhiteLowLight,
   IconStartPresenting,
   IconStopPresenting,
   IconSuccess,
