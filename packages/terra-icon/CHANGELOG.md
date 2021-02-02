@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.41.0 - (February 2, 2021)
+
 * Changed
   * Bumped `one-cerner-style-icons` to v1.36.0
 

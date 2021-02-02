@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.25.0 - (February 2, 2021)
+
 * Fixed
   * Removed duplicate linter declaration.
 
