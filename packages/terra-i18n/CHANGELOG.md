@@ -2,11 +2,14 @@
 
 ## Unreleased
 
+* Fixed
+  * Avoid version 1.8.12 of intl-locales-supported as it is a bad publish.
+
 ## 4.35.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 4.34.0 - (December 8, 2020)
 
 * Changed
