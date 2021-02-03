@@ -29,7 +29,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "intl": "^1.2.5",
-    "intl-locales-supported": "^1.8.4",
+    "intl-locales-supported": ">=1.8.4 <1.8.12 || ^1.8.13",
     "prop-types": "^15.5.8"
   },
   "scripts": {
