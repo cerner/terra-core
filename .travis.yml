@@ -5,6 +5,7 @@ services:
 branches:
   only:
     - main
+    - feature-terra-functional-testing
 cache:
   directories:
     - travis-build
