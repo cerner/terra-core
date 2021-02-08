@@ -15,17 +15,17 @@ const CustomCell = () => (
     headerData={{
       cells: [
         {
-          id: 'header-name',
+          id: 'header-name-1',
           key: 'name0',
           children: 'Column 0',
         },
         {
-          id: 'header-name',
+          id: 'header-name-2',
           key: 'name1',
           children: 'Column 1',
         },
         {
-          id: 'header-name',
+          id: 'header-name-3',
           key: 'name2',
           children: 'Column 2',
         },

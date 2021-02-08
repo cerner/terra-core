@@ -105,6 +105,7 @@ exports[`Table should render a Table with check style icon and row style toggle 
       label="test-label"
     />
     <HeaderCell
+      id="cell-id"
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
@@ -168,6 +169,7 @@ exports[`Table should render a Table with check style toggle 1`] = `
       label="test-label"
     />
     <HeaderCell
+      id="cell-id"
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
@@ -231,6 +233,7 @@ exports[`Table should render a Table with check style toggle and row style discl
       label="test-label"
     />
     <HeaderCell
+      id="cell-id"
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
@@ -398,6 +401,7 @@ exports[`Table should render a Table with header 1`] = `
     aria-rowindex={1}
   >
     <HeaderCell
+      id="cell-id"
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
@@ -424,6 +428,7 @@ exports[`Table should render a Table with header with chevrons 1`] = `
     aria-rowindex={1}
   >
     <HeaderCell
+      id="cell-id"
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
@@ -485,6 +490,7 @@ exports[`Table should render a Table with inners remove despite padding 1`] = `
     aria-rowindex={1}
   >
     <HeaderCell
+      id="cell-id"
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
@@ -620,6 +626,7 @@ exports[`Table should render a Table with row style toggle 1`] = `
       label="test-label"
     />
     <HeaderCell
+      id="cell-id"
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
@@ -842,6 +849,7 @@ exports[`Table should render a Table with widths 1`] = `
     aria-rowindex={1}
   >
     <HeaderCell
+      id="cell-id"
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"

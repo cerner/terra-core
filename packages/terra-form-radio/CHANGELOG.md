@@ -4,6 +4,11 @@
 
 * Removed
   * Removed unnecessary `aria-required` to preemptively fix issues for upcoming axe-core version bump
+  
+## 4.21.0 - (February 2, 2021)
+
+* Changed
+  * Minor dependency version bump
 
 ## 4.20.0 - (January 5, 2021)
 

@@ -1,5 +1,3 @@
-/* global $ */
-
 Terra.describeViewports('Base', ['tiny'], () => {
   describe('Switching Locales', () => {
     before(() => browser.url('/#/raw/tests/terra-base/base/switch-locale-base'));

@@ -10,7 +10,7 @@ const PaddingTable = () => (
       numberOfColumns={1}
       headerData={{
         cells: [
-          { id: 'header-name', key: 'name', children: 'Name' },
+          { id: 'compact-header-name', key: 'name', children: 'Name' },
         ],
       }}
       bodyData={[
@@ -33,7 +33,7 @@ const PaddingTable = () => (
       numberOfColumns={1}
       headerData={{
         cells: [
-          { id: 'header-name', key: 'name', children: 'Name' },
+          { id: 'standard-header-name', key: 'name', children: 'Name' },
         ],
       }}
       bodyData={[

@@ -4,6 +4,11 @@
 
 * Fixed
   * Fixed incorrect role for upcoming axe-core version bump
+  
+## 6.25.0 - (February 2, 2021)
+
+* Fixed
+  * Removed duplicate linter declaration.
 
 ## 6.24.0 - (January 12, 2021)
 
