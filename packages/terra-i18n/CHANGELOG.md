@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.36.0 - (February 9, 2021)
+
 * Fixed
   * Avoid version 1.8.12 of intl-locales-supported as it is a bad publish.
 
