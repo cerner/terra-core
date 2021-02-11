@@ -8,7 +8,9 @@ if (process.env.npm_package_name !== 'terra-core') {
   const directory = process.env.npm_package_name.replace('@cerner/', '');
   wdioConfig.specs = [path.join(__dirname, 'packages', directory, 'tests', 'wdio', '**', '*-spec.js')];
 } else {
-  wdioConfig.specs = [];
+  wdioConfig.specs = [
+    path.join(__dirname, 'packages', 'terra-action-header', 'tests', 'wdio', '**', '*-spec.js'),
+  ];
 }
 
 const travis = process.env.TRAVIS;
