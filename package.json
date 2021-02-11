@@ -94,7 +94,7 @@
     "@cerner/terra-cli": "^1.0.0",
     "@cerner/terra-functional-testing": "file:./cerner-terra-functional-testing-0.0.0.tgz",
     "@cerner/terra-open-source-scripts": "^1.0.1",
-    "@cerner/webpack-config-terra": "^1.0.0-alpha.0",
+    "@cerner/webpack-config-terra": "^1.0.0",
     "babel-jest": "^24.8.0",
     "check-installed-dependencies": "^1.0.0",
     "core-js": "^3.1.3",
