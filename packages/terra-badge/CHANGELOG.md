@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+
+
 ## 3.48.0 - (February 2, 2021)
 
 * Changed
@@ -11,7 +15,7 @@
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 3.46.0 - (December 8, 2020)
 
 * Changed

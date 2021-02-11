@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+
 ## 3.34.0 - (January 5, 2021)
 
 * Fixed

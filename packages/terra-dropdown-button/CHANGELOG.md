@@ -2,11 +2,14 @@
 
 ## Unreleased
 
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+
 ## 1.24.0 - (January 5, 2021)
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 * Changed
   * Updated to be compatible with `react-intl` v2-v5
   * Removed usage of `intlShape`
