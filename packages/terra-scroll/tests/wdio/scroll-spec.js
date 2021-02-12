@@ -8,7 +8,7 @@ Terra.describeViewports('Scroll', ['huge'], () => {
   });
 
   it('scroll the view', () => {
-    browser.click('#scroll');
+    $('#scroll').click();
   });
 
   it('should display Scroll after click', () => {

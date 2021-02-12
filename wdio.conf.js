@@ -10,6 +10,11 @@ if (process.env.npm_package_name !== 'terra-core') {
 } else {
   wdioConfig.specs = [
     path.join(__dirname, 'packages', 'terra-action-header', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-scroll', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-search-field', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-section-header', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-show-hide', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-signature', 'tests', 'wdio', '**', '*-spec.js'),
   ];
 }
 
