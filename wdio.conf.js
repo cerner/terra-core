@@ -15,6 +15,11 @@ if (process.env.npm_package_name !== 'terra-core') {
     path.join(__dirname, 'packages', 'terra-content-container', 'tests', 'wdio', '**', '*-spec.js'),
     path.join(__dirname, 'packages', 'terra-demographics-banner', 'tests', 'wdio', '**', '*-spec.js'),
     path.join(__dirname, 'packages', 'terra-dialog', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-scroll', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-search-field', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-section-header', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-show-hide', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-signature', 'tests', 'wdio', '**', '*-spec.js'),
   ];
 }
 
