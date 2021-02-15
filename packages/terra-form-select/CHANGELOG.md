@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed incorrect role in `_OptGroup` from `group` to `option` for upcoming axe-core version bump
+
 ## 6.25.0 - (February 2, 2021)
 
 * Fixed
