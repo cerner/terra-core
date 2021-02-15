@@ -2,13 +2,13 @@ Terra.describeViewports('Card', ['tiny'], () => {
   it('displays default Card', () => {
     browser.url('/raw/tests/terra-card/card/default-card');
 
-    Terra.validates.element('default');
+    Terra.validates.element('default card');
   });
 
   it('displays raised Card', () => {
     browser.url('/raw/tests/terra-card/card/raised-card');
 
-    Terra.validates.element('raised');
+    Terra.validates.element('raised card');
   });
 
   it('displays Card with body padding horizontal', () => {
