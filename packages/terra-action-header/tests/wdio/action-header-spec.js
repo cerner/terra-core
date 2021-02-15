@@ -1,4 +1,4 @@
-/* Terra.describeViewports('ActionHeader', ['tiny', 'medium', 'large'], () => {
+Terra.describeViewports('ActionHeader', ['tiny', 'medium', 'large'], () => {
   it('displays default ActionHeader', () => {
     browser.url('/raw/tests/terra-action-header/action-header/default-action-header');
 
@@ -65,4 +65,3 @@
     Terra.validates.element('end element only');
   });
 });
-*/
