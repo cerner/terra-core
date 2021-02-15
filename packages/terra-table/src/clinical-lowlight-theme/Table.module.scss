@@ -4,14 +4,14 @@
   .clinical-lowlight-theme {
     // Table
     --terra-table-background-color: #383f42;
-    --terra-table-border-bottom: 1px solid #585A5C;
+    --terra-table-border-bottom: 1px solid #585a5c;
     --terra-table-body-background-color: none;
-    --terra-table-header-background-color: #6F7477;
+    --terra-table-header-background-color: #6f7477;
     --terra-table-header-border-bottom: 1px solid #2d3539;
     --terra-table-header-box-shadow: 0 4px 4px -4px #2d3539, inset 0 0 0 1px #909496;
-    --terra-table-border: 1px solid #585A5C;
+    --terra-table-border: 1px solid #585a5c;
     --terra-table-border-radius: 0;
-    --terra-table-simple-footer-background-color: #6F7477;
+    --terra-table-simple-footer-background-color: #6f7477;
     --terra-table-simple-footer-box-shadow: 0 -1px 0 #2d3539, 0 -5px 6px -4px #909496, inset 0 0 0 1px #909496, inset 0 2px 0 0 #909496;
     --terra-table-simple-footer-height: 0.7142857143rem;
 
@@ -64,7 +64,7 @@
     --terra-table-header-cell-sort-indicator-height: 0.6429rem;
     --terra-table-header-cell-sort-indicator-width: 0.6429rem;
     --terra-table-header-cell-outline: none;
-    --terra-table-header-cell-hover-background-color: #6F7477;
+    --terra-table-header-cell-hover-background-color: #6f7477;
     --terra-table-header-cell-focus-background-color: none;
     --terra-table-header-cell-focus-outline: 2px dashed #000;
     --terra-table-header-cell-focus-outline-offset: -2px;
@@ -78,7 +78,7 @@
     --terra-table-header-cell-compact-padding-top: 0.35715rem;
     --terra-table-header-cell-ie-focus-before-border: 2px dashed #000;
     --terra-table-header-cell-hover-background-image: linear-gradient(to bottom, #636669 2%, #727679 30%, #8a8e90 80%);
-    --terra-table-header-cell-hover-box-shadow: inset 0 0 0 1px #6F7477;
+    --terra-table-header-cell-hover-box-shadow: inset 0 0 0 1px #6f7477;
     --terra-table-header-cell-sort-indicator-margin-bottom: 0.21428rem;
 
     // HeaderCheckMarkCell
@@ -89,25 +89,25 @@
     --terra-table-header-checkmark-cell-padding: 1px;
     --terra-table-header-checkmark-cell-width: 1rem;
     --terra-table-header-checkmark-cell-interactable-background-color: #909496;
-    --terra-table-header-checkmark-cell-interactable-border: 1px solid #595F62;
+    --terra-table-header-checkmark-cell-interactable-border: 1px solid #595f62;
     --terra-table-header-checkmark-cell-interactable-hover-border: 1px solid #003f61;
-    --terra-table-header-checkmark-cell-interactable-active-background-color: #B0D1E5;
-    --terra-table-header-checkmark-cell-interactable-active-border: 1px solid #004C76;
+    --terra-table-header-checkmark-cell-interactable-active-background-color: #b0d1e5;
+    --terra-table-header-checkmark-cell-interactable-active-border: 1px solid #004c76;
     --terra-table-header-checkmark-cell-interactable-hover-selected-background-color: #003f61;
     --terra-table-header-checkmark-cell-interactable-active-selected-background-color: #005887;
     --terra-table-header-checkmark-cell-interactable-focus-outline: 2px dashed #000;
     --terra-table-header-checkmark-cell-interactable-focus-outline-offset: -2px;
     --terra-table-header-checkmark-cell-selected-background-color: #005887;
-    --terra-table-header-checkmark-cell-disabled-background-color: #8C9092;
-    --terra-table-header-checkmark-cell-disabled-border: 1px solid #595F62;
-    --terra-table-header-checkmark-cell-disabled-selected-background-color:#595F62;
-    --terra-table-header-checkmark-cell-disabled-intermediate-background-color:#595F62;
+    --terra-table-header-checkmark-cell-disabled-background-color: #8c9092;
+    --terra-table-header-checkmark-cell-disabled-border: 1px solid #595f62;
+    --terra-table-header-checkmark-cell-disabled-selected-background-color: #595f62;
+    --terra-table-header-checkmark-cell-disabled-intermediate-background-color: #595f62;
     --terra-table-header-checkmark-cell-default-padding-left: 0.7142857143rem;
     --terra-table-header-checkmark-cell-default-padding-right: 0.7142857143rem;
     --terra-table-header-checkmark-cell-standard-padding-bottom: 0.5rem;
     --terra-table-header-checkmark-cell-compact-padding-bottom: 0.35715rem;
     --terra-table-header-checkmark-cell-ie-focus-before-border: 2px dashed #000;
-    --terra-table-header-checkmark-cell-selected-border: 1px solid #004C76;
+    --terra-table-header-checkmark-cell-selected-border: 1px solid #004c76;
 
     // HeaderChevronCell
     --terra-table-header-chevron-cell-spacer-padding: 1px;
@@ -118,10 +118,10 @@
     // Row
     --terra-table-row-background-color: none;
     --terra-table-row-child-border-right: 1px solid transparent;
-    --terra-table-row-divider-child-border-right: 1px solid #585A5C;
-    --terra-table-row-divider-border-top: 1px solid #585A5C;
+    --terra-table-row-divider-child-border-right: 1px solid #585a5c;
+    --terra-table-row-divider-border-top: 1px solid #585a5c;
     --terra-table-row-divider-first-margin-top: -1px;
-    --terra-table-row-divider-border-bottom: 1px solid #585A5C;
+    --terra-table-row-divider-border-bottom: 1px solid #585a5c;
     --terra-table-row-striped-background-color: #2d3539;
     --terra-table-row-striped-selected-background-color: #1e3a49;
     --terra-table-row-striped-hover-background-color: #191e1e;
@@ -129,11 +129,11 @@
     --terra-table-row-striped-focus-background-color: #1e3a49;
     --terra-table-row-striped-selected-focus-background-color: #1e3a49;
     --terra-table-row-selected-background-color: #1e3a49;
-    --terra-table-row-selected-border-color: #007CC3;
-    --terra-table-row-selected-border-top-color: #007CC3;
+    --terra-table-row-selected-border-color: #007cc3;
+    --terra-table-row-selected-border-top-color: #007cc3;
     --terra-table-row-hover-background-color: #232a2d;
-    --terra-table-row-hover-background-image: linear-gradient(to bottom, #122B39 2%, #152933 30%, #1E3A49 80%);
-    --terra-table-row-active-background-color: #1E3A49;
+    --terra-table-row-hover-background-image: linear-gradient(to bottom, #122b39 2%, #152933 30%, #1e3a49 80%);
+    --terra-table-row-active-background-color: #1e3a49;
     --terra-table-row-focus-background-color: #232a2d;
     --terra-table-row-focus-outline: 2px dashed #000;
     --terra-table-row-focus-outline-offset: -2px;
@@ -143,34 +143,34 @@
     --terra-table-row-selected-active-background-color: #1e3a49;
     --terra-table-row-selected-active-background-image: none;
     --terra-table-row-selected-active-box-shadow: inset 0 0 0 1px #232a2d;
-    --terra-table-row-striped-hover-background-image: linear-gradient(to bottom, #04293F 2%, #053754 30%, #004C76 80%);
-    --terra-table-row-striped-hover-box-shadow: inset 0 0 0 1px #004C76;
-    --terra-table-row-striped-selected-hover-background-image: linear-gradient(to bottom, #04293F 2%, #053754 30%, #004C76 80%);
-    --terra-table-row-striped-selected-hover-box-shadow: inset 0 0 0 1px #04293F;
-    --terra-table-row-hover-box-shadow: inset 0 0 0 1px #122B39;
-    --terra-table-row-selected-hover-background-image: linear-gradient(to bottom, #04293F 2%, #053754 30%, #004C76 80%);
-    --terra-table-row-selected-hover-box-shadow: inset 0 0 0 1px #04293F;
-    --terra-table-row-active-box-shadow: inset 0 0 0 1px #007CC3;
-    --terra-table-row-active-hover-border-top-color: #004C76;
-    --terra-table-row-active-hover-last-border-bottom-color: #585A5C;
-    --terra-table-row-active-hover-last-border-top-color: #007CC3;
-    --terra-table-row-active-hover-next-border-top-color: #007CC3;
-    --terra-table-row-active-hover-next-selected-border-top-color: #007CC3;
-    --terra-table-row-selected-active-hover-border-top-color: #007CC3;
-    --terra-table-row-selected-active-hover-last-border-bottom-color: #585A5C;
-    --terra-table-row-selected-active-hover-last-border-top-color: #007CC3;
-    --terra-table-row-selected-active-hover-next-border-top-color: #007CC3;
-    --terra-table-row-selected-last-border-bottom-color: #585A5C;
+    --terra-table-row-striped-hover-background-image: linear-gradient(to bottom, #04293f 2%, #053754 30%, #004c76 80%);
+    --terra-table-row-striped-hover-box-shadow: inset 0 0 0 1px #004c76;
+    --terra-table-row-striped-selected-hover-background-image: linear-gradient(to bottom, #04293f 2%, #053754 30%, #004c76 80%);
+    --terra-table-row-striped-selected-hover-box-shadow: inset 0 0 0 1px #04293f;
+    --terra-table-row-hover-box-shadow: inset 0 0 0 1px #122b39;
+    --terra-table-row-selected-hover-background-image: linear-gradient(to bottom, #04293f 2%, #053754 30%, #004c76 80%);
+    --terra-table-row-selected-hover-box-shadow: inset 0 0 0 1px #04293f;
+    --terra-table-row-active-box-shadow: inset 0 0 0 1px #007cc3;
+    --terra-table-row-active-hover-border-top-color: #004c76;
+    --terra-table-row-active-hover-last-border-bottom-color: #585a5c;
+    --terra-table-row-active-hover-last-border-top-color: #007cc3;
+    --terra-table-row-active-hover-next-border-top-color: #007cc3;
+    --terra-table-row-active-hover-next-selected-border-top-color: #007cc3;
+    --terra-table-row-selected-active-hover-border-top-color: #007cc3;
+    --terra-table-row-selected-active-hover-last-border-bottom-color: #585a5c;
+    --terra-table-row-selected-active-hover-last-border-top-color: #007cc3;
+    --terra-table-row-selected-active-hover-next-border-top-color: #007cc3;
+    --terra-table-row-selected-last-border-bottom-color: #585a5c;
     --terra-table-row-selected-background-box-shadow: none;
     --terra-table-row-selected-next-selected-box-shadow: none;
-    --terra-table-row-selected-next-selected-hover-box-shadow: inset 0 0 0 1px #585A5C;
+    --terra-table-row-selected-next-selected-hover-box-shadow: inset 0 0 0 1px #585a5c;
     --terra-table-row-active-hover-next-selected-box-shadow: none;
     --terra-table-row-ie-focus-before-border: 2px dashed #000;
 
     // SectionHeader
-    --terra-table-section-header-background-color: #7A7F82;
-    --terra-table-section-header-border-top: 1px solid #585A5C;
-    --terra-table-section-header-next-border-top: 1px solid #585A5C;
+    --terra-table-section-header-background-color: #7a7f82;
+    --terra-table-section-header-border-top: 1px solid #585a5c;
+    --terra-table-section-header-next-border-top: 1px solid #585a5c;
     --terra-table-section-header-first-margin-top: -1px;
     --terra-table-section-header-content-padding-bottom: 0.5rem;
     --terra-table-section-header-content-padding-left: 0.7142857143rem;
@@ -184,13 +184,13 @@
     --terra-table-section-header-focus-outline: 2px dashed #000;
     --terra-table-section-header-focus-outline-offset: -2px;
     --terra-table-section-header-focus-background-color: transparent;
-    --terra-table-section-header-hover-background-color: #7A7F82;
-    --terra-table-section-header-active-background-color: #7A7F82;
+    --terra-table-section-header-hover-background-color: #7a7f82;
+    --terra-table-section-header-active-background-color: #7a7f82;
     --terra-table-section-header-start-padding-right: 0.7142857143rem;
     --terra-table-section-header-ie-focus-before-border: 2px dashed #000;
-    --terra-table-section-header-hover-background-image: linear-gradient(to bottom, #585A5C 0%, #7A7F82 12.5%, #A7AAAB 50%);
-    --terra-table-section-header-hover-box-shadow: inset 0 0 0 1px #7A7F82;
-    --terra-table-section-header-active-box-shadow: inset 0 0 0 1px #7A7F82;
+    --terra-table-section-header-hover-background-image: linear-gradient(to bottom, #585a5c 0%, #7a7f82 12.5%, #a7aaab 50%);
+    --terra-table-section-header-hover-box-shadow: inset 0 0 0 1px #7a7f82;
+    --terra-table-section-header-active-box-shadow: inset 0 0 0 1px #7a7f82;
 
     @include terra-inline-svg-var('--terra-table-checkmark-cell-selected-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#000" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>');
     @include terra-inline-svg-var('--terra-table-checkmark-cell-selected-disabled-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><polygon fill="#ccc" points="11.125 2.818 12.711 4.385 5.833 11.182 1.289 6.691 2.875 5.124 5.833 8.047 11.125 2.818"/></svg>');
