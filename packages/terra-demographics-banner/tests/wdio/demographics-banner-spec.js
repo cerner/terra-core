@@ -2,13 +2,13 @@ Terra.describeViewports('Demographics Banner', ['tiny', 'large'], () => {
   it('displays blank Demographics Banner', () => {
     browser.url('/raw/tests/terra-demographics-banner/demographics-banner/blank-demographics-banner');
 
-    Terra.validates.element('blank');
+    Terra.validates.element('blank banner');
   });
 
   it('displays deceased Demographics Banner', () => {
     browser.url('/raw/tests/terra-demographics-banner/demographics-banner/deceased-demographics-banner');
 
-    Terra.validates.element('deceased');
+    Terra.validates.element('deceased banner');
   });
 
   it('displays deceased Demographics Banner with no label', () => {
@@ -32,6 +32,6 @@ Terra.describeViewports('Demographics Banner', ['tiny', 'large'], () => {
   it('displays populated Demographics Banner', () => {
     browser.url('/raw/tests/terra-demographics-banner/demographics-banner/populated-demographics-banner');
 
-    Terra.validates.element('populated');
+    Terra.validates.element('populated banner');
   });
 });
