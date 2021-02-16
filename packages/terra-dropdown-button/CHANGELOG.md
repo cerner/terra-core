@@ -5,6 +5,9 @@
 * Changed
   * Removed unnecessary `wdio.conf.js` file
 
+  * Fixed
+    * Fixed incorrect role in `Item` from `presentation` to `menuitem` for upcoming axe-core version bump
+
 ## 1.24.0 - (January 5, 2021)
 
 * Fixed
