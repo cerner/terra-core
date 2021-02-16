@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.25.0 - (February 16, 2021)
+
 * Fixed
   * Fixed incorrect role in `Item` from `presentation` to `menuitem` for upcoming axe-core version bump
 
