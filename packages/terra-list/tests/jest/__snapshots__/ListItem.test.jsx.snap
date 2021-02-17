@@ -25,6 +25,18 @@ exports[`correctly applies the theme context className 1`] = `
 </ThemeContextProvider>
 `;
 
+exports[`should render with an id 1`] = `
+<li
+  className="list-item"
+  id="test_id"
+>
+  <div
+    className="item-fill"
+    key="item-fill"
+  />
+</li>
+`;
+
 exports[`should render with callback functions 1`] = `
 <li
   aria-selected={false}

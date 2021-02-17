@@ -24,6 +24,11 @@ it('should render with isSelectable', () => {
   expect(shallowComponent).toMatchSnapshot();
 });
 
+it('should render with an id', () => {
+  const shallowComponent = shallow(<ListItem id="test_id" />);
+  expect(shallowComponent).toMatchSnapshot();
+});
+
 it('should render with hasChevron', () => {
   const shallowComponent = shallow(<ListItem hasChevron />);
   expect(shallowComponent).toMatchSnapshot();

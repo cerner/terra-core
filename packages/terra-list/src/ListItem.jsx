@@ -32,6 +32,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
   /**
+   * An identifier used to identify the list item
+   */
+  id: PropTypes.string,
+  /**
    * Function callback for when the appropriate click or key action is performed.
    * Callback contains the javascript evnt and prop metadata, e.g. onSelect(event, metaData)
    */
@@ -71,6 +75,7 @@ const ListItem = ({
   isSelected,
   isSelectable,
   metaData,
+  id,
   onBlur,
   onClick,
   onKeyDown,
@@ -104,7 +109,7 @@ const ListItem = ({
   }
 
   return (
-    <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
+    <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback} id={id}>
       <div className={cx('item-fill')} key="item-fill">{children}</div>
       {hasChevron && <div className={cx('item-end')} key="item-end"><span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span></div>}
     </li>
