@@ -14,7 +14,7 @@ exports[`Item correctly applies the theme context className 1`] = `
     requestClose={[Function]}
   >
     <li
-      role="presentation"
+      role="menuitem"
       tabIndex="-1"
     >
       <div
@@ -32,7 +32,7 @@ exports[`Item correctly applies the theme context className 1`] = `
 
 exports[`Item renders a default item 1`] = `
 <li
-  role="presentation"
+  role="menuitem"
   tabIndex="-1"
 >
   <div
@@ -48,7 +48,7 @@ exports[`Item renders a default item 1`] = `
 
 exports[`Item renders an active item 1`] = `
 <li
-  role="presentation"
+  role="menuitem"
   tabIndex="-1"
 >
   <div

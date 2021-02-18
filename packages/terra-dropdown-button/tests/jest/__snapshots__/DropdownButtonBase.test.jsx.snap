@@ -79,7 +79,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                       role="menu"
                     >
                       <li
-                        role="presentation"
+                        role="menuitem"
                         tabindex="-1"
                       >
                         <div
@@ -167,7 +167,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                             requestClose={[Function]}
                           >
                             <li
-                              role="presentation"
+                              role="menuitem"
                               tabIndex="-1"
                             >
                               <div
