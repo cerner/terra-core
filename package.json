@@ -90,7 +90,7 @@
     "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
     "@cerner/browserslist-config-terra": "^3.1.0",
-    "@cerner/eslint-config-terra": "file:cerner-eslint-config-terra-4.4.0.tgz",
+    "@cerner/eslint-config-terra": "^5.0.0",
     "@cerner/terra-cli": "^1.0.0",
     "@cerner/terra-open-source-scripts": "^1.0.1",
     "@cerner/webpack-config-terra": "^1.0.0-alpha.0",
