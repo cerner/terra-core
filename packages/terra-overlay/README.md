@@ -4,9 +4,23 @@
 [![NPM version](https://badgen.net/npm/v/terra-overlay)](https://www.npmjs.org/package/terra-overlay)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-The Terra Overlay component is a component that displays an overlay relative to the container that triggered the overlay. This component blocks interactions and fades out all elements of the triggering container.
+## Deprecation Notice
 
-A Loading Overlay is a subcomponent that displays an overlay with a spinner icon and loading message.
+The terra-overlay npm package is deprecated as of 3.62.0. terra-overlay will be removed from the repo in a future version, but the package will remain on npm.
+
+### What deprecation means
+Any apps that currently use terra-overlay will continue to work as-is.
+However, the terra-overlay package will no longer continue to be supported / developed.
+
+## Why?
+Component is a bad pattern and hence is being deprecated.
+
+## How to replace this package?
+This package can be replaced with [terra-application-loading-overlay](https://engineering.cerner.com/terra-ui/application/terra-application/components/application-loading-overlay)
+
+~~The Terra Overlay component is a component that displays an overlay relative to the container that triggered the overlay. This component blocks interactions and fades out all elements of the triggering container.
+
+A Loading Overlay is a subcomponent that displays an overlay with a spinner icon and loading message.~~
 
 - [Getting Started](#getting-started)
 - [Documentation](https://engineering.cerner.com/terra-ui/components/terra-overlay/overlay/overlay)
