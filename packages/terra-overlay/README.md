@@ -13,7 +13,7 @@ Any apps that currently use terra-overlay will continue to work as-is.
 However, the terra-overlay package will no longer continue to be supported / developed.
 
 ## Why?
-Component is a bad pattern and hence is being deprecated.
+Terra Overlay design is a bad pattern and hence it is being deprecated.
 
 ## How to replace this package?
 This package can be replaced with [terra-application-loading-overlay](https://engineering.cerner.com/terra-ui/application/terra-application/components/application-loading-overlay)
