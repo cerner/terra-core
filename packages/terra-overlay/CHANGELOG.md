@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a deprecated notice.
+
 ## 3.62.0 - (February 2, 2021)
 
 * Changed
