@@ -32,10 +32,4 @@ if (process.env.npm_package_name !== 'terra-core') {
   ];
 }
 
-const travis = process.env.TRAVIS;
-
-if (travis) {
-  wdioConfig.host = 'localhost';
-}
-
 exports.config = wdioConfig;
