@@ -12,6 +12,7 @@
     font-family: inherit;
     font-size: var(--terra-dropdown-button-font-size, 1rem);
     line-height: var(--terra-dropdown-button-line-height, 1.42857);
+    vertical-align: middle;
 
     &:disabled,
     &.disabled {
