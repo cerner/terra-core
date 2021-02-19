@@ -127,7 +127,7 @@ class Textarea extends React.Component {
   }
 
   componentDidMount() {
-    const lineHeight = Math.ceil(parseInt(window.getComputedStyle(this.textarea).lineHeight, 0));
+    const lineHeight = Math.ceil(parseInt(window.getComputedStyle(this.textarea).lineHeight, 10));
     this.textarea.currentLineHeight = lineHeight;
     this.setBaseHeights();
 
@@ -148,7 +148,7 @@ class Textarea extends React.Component {
 
   onFocus(event) {
     if (this.props.isAutoResizable && !this.isMobileDevice) {
-      const lineHeight = Math.ceil(parseInt(window.getComputedStyle(this.textarea).lineHeight, 0));
+      const lineHeight = Math.ceil(parseInt(window.getComputedStyle(this.textarea).lineHeight, 10));
 
       if (this.textarea.currentLineHeight !== lineHeight) {
         this.textarea.currentLineHeight = lineHeight;
