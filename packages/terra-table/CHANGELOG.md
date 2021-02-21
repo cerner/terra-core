@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed errors in the Clinical Low Light theme
+
 ## 4.21.0 - (February 2, 2021)
 
 * Fixed
