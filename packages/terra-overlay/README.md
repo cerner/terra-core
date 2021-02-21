@@ -6,7 +6,7 @@
 
 ## Deprecation Notice
 
-The terra-overlay npm package is deprecated as of 3.62.0. terra-overlay will be removed from the repo in a future version, but the package will remain on npm.
+The terra-overlay npm package is deprecated as of `3.62.0`. terra-overlay will be removed from the repo in a future version, but the package will remain on npm.
 
 ### What deprecation means
 Any apps that currently use terra-overlay will continue to work as-is.
