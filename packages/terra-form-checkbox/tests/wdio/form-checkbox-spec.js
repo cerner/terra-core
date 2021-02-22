@@ -7,22 +7,22 @@ Terra.describeViewports('Checkbox', ['medium'], () => {
     });
 
     it('should hover on Checkbox', () => {
-      browser.moveToObject('#default');
+      $('#default').moveTo();
 
       Terra.validates.element('hover');
     });
 
     it('should display focus on Checkbox', () => {
-      browser.moveToObject('#root', 0, 0);
+      $('#root').moveTo({ xOffset: 0, yOffset: 0 });
       browser.keys('Tab');
 
       Terra.validates.element('focus');
     });
 
     it('should display checked Checkbox', () => {
-      browser.waitForVisible('#default');
-      browser.click('[for="default"]');
-      browser.click('#site');
+      $('#default').waitForDisplayed();
+      $('[for="default"]').click();
+      $('#site').click();
 
       Terra.validates.element('checked');
     });
@@ -36,9 +36,9 @@ Terra.describeViewports('Checkbox', ['medium'], () => {
     });
 
     it('should hover on disabled Checkbox', () => {
-      browser.moveToObject('#disabled');
+      $('#disabled').moveTo();
 
-      Terra.validates.element('hover');
+      Terra.validates.element('disabled hover');
     });
   });
 
