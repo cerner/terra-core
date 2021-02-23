@@ -3,7 +3,21 @@
 [![NPM version](https://badgen.net/npm/v/terra-status-view)](https://www.npmjs.org/package/terra-status-view)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-The status view component provides a customizable icon, message, and buttons in a view.
+## Deprecation Notice
+The terra-status-view npm package is deprecated as of `4.41.0`. terra-status-view will be removed from the repo in a future version, but the package will remain on npm.
+
+### What deprecation means
+Any apps that currently use terra-status-view will continue to work as-is.
+However, the terra-status-view package will no longer continue to be supported / developed.
+
+## Why?
+The reason behind terra-status-view deprecation is to integrate the presentation of overlays with the overall application framework to ensure better accessibility.
+
+## How to replace this package?
+This package can be replaced with [terra-application-status-overlay](https://engineering.cerner.com/terra-ui/application/terra-application/components/application-status-overlay)
+
+
+~~The status view component provides a customizable icon, message, and buttons in a view.~~
 
 - [Getting Started](#getting-started)
 - [Documentation](https://engineering.cerner.com/terra-ui/components/terra-status-view/status-view/status-view)
