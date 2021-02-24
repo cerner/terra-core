@@ -9,7 +9,7 @@ if (process.env.npm_package_name !== 'terra-core') {
   wdioConfig.specs = [path.join(__dirname, 'packages', directory, 'tests', 'wdio', '**', '*-spec.js')];
 } else {
   wdioConfig.specs = [
-    path.join(__dirname, 'packages', 'terra-action-footer', 'tests', 'wdio', '**', '*-spec.js'),
+    /* path.join(__dirname, 'packages', 'terra-action-footer', 'tests', 'wdio', '**', '*-spec.js'),
     path.join(__dirname, 'packages', 'terra-action-header', 'tests', 'wdio', '**', '*-spec.js'),
     path.join(__dirname, 'packages', 'terra-alert', 'tests', 'wdio', '**', '*-spec.js'),
     path.join(__dirname, 'packages', 'terra-arrange', 'tests', 'wdio', '**', '*-spec.js'),
@@ -28,7 +28,12 @@ if (process.env.npm_package_name !== 'terra-core') {
     path.join(__dirname, 'packages', 'terra-form-field', 'tests', 'wdio', '**', '*-spec.js'),
     path.join(__dirname, 'packages', 'terra-form-fieldset', 'tests', 'wdio', '**', '*-spec.js'),
     path.join(__dirname, 'packages', 'terra-form-input', 'tests', 'wdio', '**', '*-spec.js'),
-    path.join(__dirname, 'packages', 'terra-form-radio', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-form-radio', 'tests', 'wdio', '**', '*-spec.js'), */
+    path.join(__dirname, 'packages', 'terra-html-table', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-hyperlink', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-i18n', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-icon', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-image', 'tests', 'wdio', '**', '*-spec.js'),
   ];
 }
 
