@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `outline` colors for lowlight.
+
 * Fixed
   * Fixed errors in the Clinical Low Light theme
 

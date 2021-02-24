@@ -32,7 +32,7 @@
     --terra-table-checkmark-cell-hover-border: 1px solid #1e3a49;
     --terra-table-checkmark-cell-active-background-color: #b5d4fe;
     --terra-table-checkmark-cell-active-border: 1px solid #3a67a4;
-    --terra-table-checkmark-cell-focus-outline: 2px dashed #000;
+    --terra-table-checkmark-cell-focus-outline: 2px dashed #fff;
     --terra-table-checkmark-cell-focus-outline-offset: -2px;
     --terra-table-checkmark-cell-selected-hover-background-color: #2a4b77;
     --terra-table-checkmark-cell-selected-active-background-color: #1a2f4b;
@@ -66,7 +66,7 @@
     --terra-table-header-cell-outline: none;
     --terra-table-header-cell-hover-background-color: #6f7477;
     --terra-table-header-cell-focus-background-color: none;
-    --terra-table-header-cell-focus-outline: 2px dashed #000;
+    --terra-table-header-cell-focus-outline: 2px dashed #fff;
     --terra-table-header-cell-focus-outline-offset: -2px;
     --terra-table-header-cell-standard-padding-bottom: 0.5rem;
     --terra-table-header-cell-standard-padding-left: 0.7142857143rem;
@@ -95,7 +95,7 @@
     --terra-table-header-checkmark-cell-interactable-active-border: 1px solid #004c76;
     --terra-table-header-checkmark-cell-interactable-hover-selected-background-color: #003f61;
     --terra-table-header-checkmark-cell-interactable-active-selected-background-color: #005887;
-    --terra-table-header-checkmark-cell-interactable-focus-outline: 2px dashed #000;
+    --terra-table-header-checkmark-cell-interactable-focus-outline: 2px dashed #fff;
     --terra-table-header-checkmark-cell-interactable-focus-outline-offset: -2px;
     --terra-table-header-checkmark-cell-selected-background-color: #005887;
     --terra-table-header-checkmark-cell-disabled-background-color: #8c9092;
@@ -135,7 +135,7 @@
     --terra-table-row-hover-background-image: linear-gradient(to bottom, #122b39 2%, #152933 30%, #1e3a49 80%);
     --terra-table-row-active-background-color: #1e3a49;
     --terra-table-row-focus-background-color: #232a2d;
-    --terra-table-row-focus-outline: 2px dashed #000;
+    --terra-table-row-focus-outline: 2px dashed #fff;
     --terra-table-row-focus-outline-offset: -2px;
     --terra-table-row-selected-focus-background-color: #1e3a49;
     --terra-table-row-active-background-image: none;
@@ -181,7 +181,7 @@
     --terra-table-section-header-title-font-weight: bold;
     --terra-table-section-header-title-line-height: 1.1428571429;
     --terra-table-section-header-collapsible-padding-left: 1rem;
-    --terra-table-section-header-focus-outline: 2px dashed #000;
+    --terra-table-section-header-focus-outline: 2px dashed #fff;
     --terra-table-section-header-focus-outline-offset: -2px;
     --terra-table-section-header-focus-background-color: transparent;
     --terra-table-section-header-hover-background-color: #7a7f82;
