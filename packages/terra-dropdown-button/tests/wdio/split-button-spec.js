@@ -3,7 +3,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     before(() => {
       browser.url('/raw/tests/terra-dropdown-button/dropdown-button/default-split-button');
       // avoid hover styles
-      browser.moveToObject('#root', 100, 1);
+      $('#root').moveTo({ xOffset: 100, yOffset: 1 });
     });
 
     it('should display default Split Button', () => {
@@ -24,26 +24,26 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     it('should validate primary button active styling', () => {
-      browser.moveToObject('[class*=split-button-primary]');
+      $('[class*=split-button-primary]').moveTo();
       browser.buttonDown();
       Terra.validates.element('primary active');
       browser.buttonUp();
     });
 
     it('opens and validates dropdown with click', () => {
-      browser.click('[class*=split-button-caret]');
+      $('[class*=split-button-caret]').click();
       Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });
       Terra.validates.element('caret with dropdown open');
     });
 
     it('should print MetaData of option on click', () => {
-      browser.click('#opt1');
+      $('#opt1').click();
       Terra.validates.element('MetaData of 1st option', { selector: '#root' });
     });
 
     it('should print MetaData of primary button on click', () => {
-      browser.moveToObject('[class*=split-button-primary]');
-      browser.click('[class*=split-button-primary]');
+      $('[class*=split-button-primary]').moveTo();
+      $('[class*=split-button-primary]').click();
       Terra.validates.element('MetaData of Primary Button option', { selector: '#root' });
     });
   });
@@ -61,15 +61,15 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
     it('tries to tab to the button', () => {
       browser.keys(['Tab']);
-      Terra.validates.screenshot('tab attempted');
+      Terra.validates.element('tab attempted');
     });
 
     it('tries to click the primary button', () => {
-      expect(() => browser.click('[class*=split-button-primary]')).to.throw('not clickable');
+      expect(() => $('[class*=split-button-primary]').click()).toThrow('not clickable');
     });
 
     it('tries to click the caret', () => {
-      expect(() => browser.click('[class*=split-button-caret]')).to.throw('not clickable');
+      expect(() => $('[class*=split-button-caret]').click()).toThrow('not clickable');
     });
   });
 
@@ -77,16 +77,16 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     before(() => {
       browser.url('/raw/tests/terra-dropdown-button/dropdown-button/callback-split-button');
       // avoid hover styles
-      browser.moveToObject('#root', 100, 1);
+      $('#root').moveTo({ xOffset: 100, yOffset: 1 });
     });
 
     it('should display Dropdown Button with interactions', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('default interactions');
     });
 
     it('opens the dropdown with click', () => {
-      browser.click('[class*=split-button-caret]');
-      browser.waitForVisible('[class*=dropdown-list]');
+      $('[class*=split-button-caret]').click();
+      $('[class*=dropdown-list]').waitForDisplayed();
     });
 
     it('closes dropdown on escape without running a callback', () => {
@@ -96,27 +96,27 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
     it('opens the dropdown with enter', () => {
       browser.keys(['Enter']);
-      browser.waitForVisible('[class*=dropdown-list]');
+      $('[class*=dropdown-list]').waitForDisplayed();
       browser.keys('Escape');
     });
 
     it('opens the dropdown with space', () => {
       browser.keys('Space');
-      browser.waitForVisible('[class*=dropdown-list]');
+      $('[class*=dropdown-list]').waitForDisplayed();
       // Cleanup the open dropdown, after hooks don't work on it blocks
       browser.keys(['Escape']);
     });
 
     it('calls primary split button callback', () => {
-      browser.click('[class*=split-button-primary]');
+      $('[class*=split-button-primary]').click();
       Terra.validates.element('primary button click');
     });
 
     describe('Callback in menu', () => {
       beforeEach(() => {
         // Open the menu
-        browser.click('[class*=split-button-caret]');
-        browser.waitForVisible('[class*=dropdown-list]');
+        $('[class*=split-button-caret]').click();
+        $('[class*=dropdown-list]').waitForDisplayed();
       });
 
       it('should run callback on space', () => {
@@ -135,7 +135,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('should run callback on click', () => {
-        browser.click('#red');
+        $('#red').click();
         Terra.validates.element('click');
       });
 
@@ -175,30 +175,30 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('closes the dropdown when clicking the caret with the dropdown open', () => {
-        browser.click('[class*=split-button-caret]');
+        $('[class*=split-button-caret]').click();
         Terra.validates.element('clicking caret closes dropdown');
       });
 
       it('closes the dropdown when clicking outside the dropdownbutton', () => {
-        browser.moveToObject('#root', 200, 1);
+        $('#root').moveTo({ xOffset: 200, yOffset: 1 });
         browser.buttonDown();
         browser.buttonUp();
         Terra.validates.element('clicking outside closes dropdown');
       });
 
       it('closes the dropdown when clicking primary button and selects primary button', () => {
-        browser.click('[class*=split-button-primary]');
+        $('[class*=split-button-primary]').click();
         Terra.validates.element('clicking primary closes dropdown and selects primary');
       });
     });
 
     it('does not reopen the dropdown when open and closed with keyboard interactions', () => {
       browser.keys(['Tab', 'Enter']);
-      browser.waitForVisible('[class*=dropdown-list]');
+      $('[class*=dropdown-list]').waitForDisplayed();
 
       browser.keys(['Enter']);
       // wait for invisible
-      browser.waitForVisible('[class*=dropdown-list]', undefined, true);
+      $('[class*=dropdown-list]').waitForDisplayed({ reverse: true });
     });
   });
 
@@ -206,7 +206,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     before(() => {
       browser.url('/raw/tests/terra-dropdown-button/dropdown-button/wide-split-button');
       // avoid hover styles
-      browser.moveToObject('#root', 1, 300);
+      $('#root').moveTo({ xOffset: 1, yOffset: 300 });
     });
 
     it('should display wide contents Dropdown Button both closed', () => {
@@ -214,13 +214,13 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     it('opens the long label dropdown', () => {
-      browser.click('#wide-label [class*=split-button-caret]');
+      $('#wide-label [class*=split-button-caret]').click();
       Terra.validates.element('Long label open');
     });
 
     it('opens the long option dropdown', () => {
       browser.keys(['Escape']);
-      browser.click('#wide-option [class*=split-button-caret]');
+      $('#wide-option [class*=split-button-caret]').click();
       Terra.validates.element('Long option open');
     });
   });
@@ -237,25 +237,25 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     it('opens the top left dropdown', () => {
-      browser.click('#top-left [class*=split-button-caret]');
+      $('#top-left [class*=split-button-caret]').click();
       Terra.validates.element('Top left open');
     });
 
     it('opens the top right dropdown', () => {
       browser.keys('Escape');
-      browser.click('#top-right [class*=split-button-caret]');
+      $('#top-right [class*=split-button-caret]').click();
       Terra.validates.element('Top right open');
     });
 
     it('opens the bottom left dropdown', () => {
       browser.keys('Escape');
-      browser.click('#bottom-left [class*=split-button-caret]');
+      $('#bottom-left [class*=split-button-caret]').click();
       Terra.validates.element('Bottom left open');
     });
 
     it('opens the bottom right dropdown', () => {
       browser.keys('Escape');
-      browser.click('#bottom-right [class*=split-button-caret]');
+      $('#bottom-right [class*=split-button-caret]').click();
       Terra.validates.element('Bottom right open');
     });
   });
@@ -266,24 +266,24 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     it('should run primary callback that focuses an element', () => {
-      browser.click('[class*=split-button-primary]');
+      $('[class*=split-button-primary]').click();
       Terra.validates.element('first button clicked');
     });
 
     it('opens the dropdown', () => {
-      browser.click('[class*=split-button-caret]');
-      browser.waitForVisible('[class*=dropdown-list]');
+      $('[class*=split-button-caret]').click();
+      $('[class*=dropdown-list]').waitForDisplayed();
     });
 
     it('should run callback in dropdown that focuses an element', () => {
-      browser.click('#second');
+      $('#second').click();
       Terra.validates.element('second button clicked');
     });
   });
 
   it('displays variants of Split Button', () => {
     browser.url('/raw/tests/terra-dropdown-button/dropdown-button/variant-split-buttons');
-    browser.moveToObject('#root', 1, 100);
+    $('#root').moveTo({ xOffset: 1, yOffset: 100 });
 
     Terra.validates.element('variants');
   });
