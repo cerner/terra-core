@@ -1,42 +1,37 @@
 Terra.describeViewports('Tag', ['tiny'], () => {
-  it('displays Default tag', () => {
+  it('should display default tag', () => {
     browser.url('/raw/tests/terra-tag/tag/default-tag');
-    Terra.validates.element('default');
+    Terra.validates.element('default tag');
   });
 
-  it('displays Href Tag', () => {
+  it('should display href Tag', () => {
     browser.url('/raw/tests/terra-tag/tag/href-tag');
-    Terra.validates.element('href');
+    Terra.validates.element('href tag');
   });
 
-  it('displays Icon and Text Tag', () => {
+  it('should display icon and text Tag', () => {
     browser.url('/raw/tests/terra-tag/tag/icon-and-text-tag');
-    Terra.validates.element('icon and text');
+    Terra.validates.element('icon and text tag');
   });
 
-  it('displays Icon and Text Long Tag', () => {
+  it('should display icon and long text tag', () => {
     browser.url('/raw/tests/terra-tag/tag/long-text-tag');
-    Terra.validates.element('icon and long text');
+    Terra.validates.element('icon and long text tag');
   });
 
-  describe('OnClick Tag', () => {
-    it('displays Default tag', () => {
-      browser.url('/raw/tests/terra-tag/tag/on-click-tag');
-      Terra.validates.element('display tag');
-    });
-
-    it('tabs to tag', () => {
-      browser.click('#root');
-      browser.keys('Tab');
-      expect(browser.hasFocus('#on-click')).to.be.true;
-      Terra.validates.element('focus');
-    });
+  it('should focus', () => {
+    browser.url('/raw/tests/terra-tag/tag/on-click-tag');
+    $('#root').click();
+    browser.keys('Tab');
+    expect($('#on-click').isFocused()).toBe(true);
+    Terra.validates.element('focused tag');
   });
+
 });
 
 Terra.describeViewports('Tag', ['tiny', 'medium', 'large'], () => {
   it('displays multiple tags', () => {
     browser.url('/raw/tests/terra-tag/tag/multiple-tags');
-    Terra.validates.element('multiple');
+    Terra.validates.element('multiple tags');
   });
 });
