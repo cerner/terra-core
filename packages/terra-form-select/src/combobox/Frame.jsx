@@ -684,6 +684,7 @@ class Frame extends React.Component {
       select: this.select,
       clearOptionDisplay,
       refCallback: this.setSelectMenuRef,
+      totalOptions,
     };
 
     return (

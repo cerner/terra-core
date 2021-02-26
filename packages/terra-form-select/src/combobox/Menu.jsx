@@ -73,6 +73,10 @@ const propTypes = {
    * Ref callback for the select menu DOM element.
    */
   refCallback: PropTypes.func,
+  /**
+   * Total number of options.
+   */
+  totalOptions: PropTypes.number,
 };
 
 const defaultProps = {
@@ -88,6 +92,7 @@ const defaultProps = {
   visuallyHiddenComponent: undefined,
   value: undefined,
   refCallback: undefined,
+  totalOptions: undefined,
 };
 
 class Menu extends React.Component {
@@ -363,7 +368,8 @@ class Menu extends React.Component {
       } else if (this.isActiveSelected()) {
         visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText });
       } else {
-        visuallyHiddenComponent.current.innerText = displayText;
+        const idx = parseInt(element.key.substring(element.key.indexOf(':') + 1, element.key.length), 10) + 1;
+        visuallyHiddenComponent.current.innerText = `${displayText + idx}off${this.props.totalOptions}`;
       }
     }
   }
