@@ -26,7 +26,6 @@ Terra.describeViewports('Tag', ['tiny'], () => {
     expect($('#on-click').isFocused()).toBe(true);
     Terra.validates.element('focused tag');
   });
-
 });
 
 Terra.describeViewports('Tag', ['tiny', 'medium', 'large'], () => {
