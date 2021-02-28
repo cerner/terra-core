@@ -4,7 +4,20 @@
 [![NPM version](https://badgen.net/npm/v/terra-alert)](https://www.npmjs.org/package/terra-alert)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-The Terra Alert component is a notification banner that can be rendered in your application when there is information that you want to bring to the user's attention. The Alert component supports a number of built-in notification types that render with pre-defined colors and icons that help the user understand the severity and meaning of the notification. A custom notification type is also supported that allows your application to customize an alert that may not fit into the pre-defined types.
+## Deprecation Notice
+The terra-alert npm package is deprecated as of `4.49.0`. terra-alert will be removed from the repo in a future version, but the package will remain on npm.
+
+### What deprecation means
+Any apps that currently use terra-alert will continue to work as-is.
+However, the terra-alert package will no longer continue to be supported / developed.
+
+## Why?
+The reason behind terra-alert deprecation is to promote the usage of notification-banner provided by terra-application. As notification-banner integrates itself in the framework of application and prioritizes the notification based on it's variant.
+
+## How to replace this package?
+This package can be replaced with [notification-banner](https://engineering.cerner.com/terra-ui/application/terra-application/components/notification-banner)
+
+~~The Terra Alert component is a notification banner that can be rendered in your application when there is information that you want to bring to the user's attention. The Alert component supports a number of built-in notification types that render with pre-defined colors and icons that help the user understand the severity and meaning of the notification. A custom notification type is also supported that allows your application to customize an alert that may not fit into the pre-defined types.~~
 
 - [Getting Started](#getting-started)
 - [Documentation](https://engineering.cerner.com/terra-ui/components/terra-alert/alert/alert)
