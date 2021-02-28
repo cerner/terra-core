@@ -1,12 +1,13 @@
 Terra.describeViewports('Toggle', ['medium'], () => {
-  it('should display a closed toggle', () => {
-    browser.url('/raw/tests/terra-toggle/toggle/default-toggle');
-    Terra.validates.element('closed toggle');
-  });
-
   it('should expand the toggle', () => {
+    browser.url('/raw/tests/terra-toggle/toggle/default-toggle');
     $('#trigger-toggle').click();
     Terra.validates.element('expanded toggle');
+  });
+
+  it('should display a closed toggle', () => {
+    $('#trigger-toggle').click();
+    Terra.validates.element('closed toggle');
   });
 
   it('should display an opened toggle', () => {
