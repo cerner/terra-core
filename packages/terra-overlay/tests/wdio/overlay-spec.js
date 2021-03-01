@@ -167,7 +167,6 @@ Terra.describeViewports('Overlay', ['huge'], () => {
       });
 
       it('Custom Content under overlay is not clickable when Overlay is open', () => {
-        // expect(() => $('#random_button').click()).toThrow('not clickable');
         expect($('#random_button').isClickable()).toBe(false);
       });
 
