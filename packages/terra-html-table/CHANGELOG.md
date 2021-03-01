@@ -5,6 +5,7 @@
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated to use terra-functional-testing
 
 ## 1.10.0 - (January 5, 2021)
 
