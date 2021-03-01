@@ -4,6 +4,7 @@
 
 * Changed
   * Removed unnecessary `wdio.conf.js` file
+  * Upgrade to terra-functional-testing
 
 ## 4.21.0 - (February 2, 2021)
 
