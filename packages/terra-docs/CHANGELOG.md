@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+ * Fixed invalid WDIO snapshots.
+
 ## 1.1.0 - (January 5, 2021)
 
 * Fixed
