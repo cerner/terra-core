@@ -4,6 +4,7 @@
 
 * Changed
   * Removed unnecessary `wdio.conf.js` file
+  * Updated to use terra-functional-testing
 
 * Fixed
   * Fixed incorrect role in `_OptGroup` from `group` to `option` for upcoming axe-core version bump
