@@ -49,7 +49,6 @@
     "deploy": "webpack --config webpack.config -p && gh-pages -d build",
     "docs": "node scripts/root-readme-updater/index.js",
     "docs:peerDependencies": "node scripts/peer-dependency-generator/index.js",
-    "heroku-prebuild": "npx lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:prod",
     "jest": "jest --config jestconfig.js",
     "jest:coverage": "jest --coverage --config jestconfig.js",
