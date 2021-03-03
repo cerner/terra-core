@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed `focus` issue in IE for search and combobox variants.
+
 ## 6.26.0 - (February 17, 2021)
 
 * Fixed
