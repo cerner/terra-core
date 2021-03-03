@@ -736,7 +736,6 @@ class Frame extends React.Component {
       select: this.select,
       maxSelectionCount,
       refCallback: this.setSelectMenuRef,
-      totalOptions,
     };
 
     return (
