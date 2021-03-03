@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.26.0 - (March 2, 2021)
+
 * Fixed
   * Fixed misalignment when rendered with terra-button. 
 

@@ -5,6 +5,8 @@
 * Changed
   * Updated `focus-outline` colors for lowlight.
 
+## 4.22.0 - (March 2, 2021)
+
 * Fixed
   * Fixed errors in the Clinical Low Light theme
 
