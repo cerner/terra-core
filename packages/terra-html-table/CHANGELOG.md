@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.11.0 - (March 2, 2021)
+
+* Fixed
+  * Fixed low light styling bugs
+  
 ## 1.10.0 - (January 5, 2021)
 
 * Fixed
