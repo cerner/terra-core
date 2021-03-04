@@ -60,6 +60,8 @@ if (process.env.npm_package_name !== 'terra-core') {
     path.join(__dirname, 'packages', 'terra-toggle', 'tests', 'wdio', '**', '*-spec.js'),
     path.join(__dirname, 'packages', 'terra-toggle-button', 'tests', 'wdio', '**', '*-spec.js'),
     path.join(__dirname, 'packages', 'terra-toggle-section-header', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-toolbar', 'tests', 'wdio', '**', '*-spec.js'),
+    path.join(__dirname, 'packages', 'terra-visually-hidden-text', 'tests', 'wdio', '**', '*-spec.js'),
   ];
 }
 
