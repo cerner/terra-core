@@ -52,7 +52,8 @@ const Item = ({
             onSelect(event, metaData);
           });
         }}
-        role="menuitem"
+        role="button"
+        aria-roledescription="menu item"
         tabIndex="0"
         className={cx(
           'item',
