@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Removed
- * Removed custom CSS when `type="file"`.
+ * Removed className `form-input` when `type="file"`.
 
 ## 4.11.0 - (February 2, 2021)
 
