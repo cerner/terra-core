@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 5.29.0 - (March 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 5.28.0 - (January 5, 2021)
 
 * Fixed

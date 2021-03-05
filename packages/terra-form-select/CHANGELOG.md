@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 6.26.0 - (February 17, 2021)
+
+* Fixed
+  * Fixed incorrect role in `_OptGroup` from `group` to `option` for upcoming axe-core version bump
+
+## 6.25.0 - (February 2, 2021)
+
+* Fixed
+  * Removed duplicate linter declaration.
+
 ## 6.24.0 - (January 12, 2021)
 
 * Changed
@@ -55,9 +65,9 @@
 
 ## 6.15.0 - (August 18, 2020)
 
-* Fixed 
+* Fixed
   * Fixed focus to stay on select when escape is pressed to close dropdown.
-  
+
 ## 6.14.0 - (August 6, 2020)
 
 * Fixed

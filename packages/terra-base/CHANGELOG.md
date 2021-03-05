@@ -2,11 +2,21 @@
 
 ## Unreleased
 
+## 5.45.0 - (February 9, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.44.0 - (February 2, 2021)
+
+* Fixed
+  * Removed duplicate linter declaration.
+
 ## 5.43.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 5.42.0 - (December 8, 2020)
 
 * Changed

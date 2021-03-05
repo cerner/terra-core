@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 5.14.0 - (March 2, 2021)
+
+* Fixed
+  * parseInt now correctly specifies the radix parameter as base 10 not base 0. (I'm not even sure what that was doing.)
+
+## 5.13.0 - (February 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 5.12.0 - (January 12, 2021)
 
 * Fixed
