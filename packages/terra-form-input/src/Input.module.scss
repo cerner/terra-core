@@ -3,7 +3,7 @@
 @import './orion-fusion-theme/Input.module';
 
 :local {
-  .form-input {
+  .form-input:not([type="file"]) {
     background-color: var(--terra-form-input-background-color, #fff);
     background-image: var(--terra-form-input-background-image);
     background-position: 0 100%;
