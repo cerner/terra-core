@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Allow voice-over to read index values for options.
+
 ## 6.26.0 - (February 17, 2021)
 
 * Fixed
