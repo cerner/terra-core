@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-* Removed
+* Changed
  * Removed className `form-input` when `type="file"`.
 
 ## 4.11.0 - (February 2, 2021)
