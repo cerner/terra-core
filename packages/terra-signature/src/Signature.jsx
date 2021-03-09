@@ -76,7 +76,6 @@ class Signature extends React.Component {
     context.lineWidth = this.props.lineWidth;
 
     this.updateDimensions();
-
   }
 
   componentDidUpdate(prevProps) {
@@ -102,11 +101,10 @@ class Signature extends React.Component {
 
   mouseInBounds(event) {
     const rect = this.canvasRect;
-    if(event.type === "touchmove"){
+    if (event.type === 'touchmove') {
       return rect.top < event.changedTouches[0].pageY && rect.left < event.changedTouches[0].pageX && rect.bottom > event.changedTouches[0].pageY && rect.right > event.changedTouches[0].pageX;
-    }else {
-      return rect.top < event.pageY && rect.left < event.pageX && rect.bottom > event.pageY && rect.right > event.pageX;
     }
+    return rect.top < event.pageY && rect.left < event.pageX && rect.bottom > event.pageY && rect.right > event.pageX;
   }
 
   mouseDown(event) {
@@ -132,9 +130,9 @@ class Signature extends React.Component {
 
   mouseXY(event) {
     if (this.state.painting && this.mouseInBounds(event)) {
-      if(event.type === "touchmove"){
+      if (event.type === 'touchmove') {
         this.addLine(event.changedTouches[0].pageX - this.canvasRect.left, event.changedTouches[0].pageY - this.canvasRect.top, true);
-      }else {
+      } else {
         this.addLine(event.pageX - this.canvasRect.left, event.pageY - this.canvasRect.top, true);
       }
       this.draw();
@@ -238,7 +236,7 @@ class Signature extends React.Component {
     } = this.props;
 
     return (
-      <canvas {...custProps} className={cx('signature', theme.className)} style={{touchAction: "none"}} ref={(node) => { this.canvas = node; }} />
+      <canvas {...custProps} className={cx('signature', theme.className)} ref={(node) => { this.canvas = node; }} />
     );
   }
 }
