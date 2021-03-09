@@ -122,7 +122,7 @@ class Input extends React.Component {
     const theme = this.context;
     const formInputClassNames = classNames(
       cx(
-        type === 'file' ? '' : 'form-input',
+       'form-input': (type !== 'file'),
         { 'form-error': isInvalid },
         { 'form-incomplete': (isIncomplete && required && !isInvalid) },
         theme.className,
