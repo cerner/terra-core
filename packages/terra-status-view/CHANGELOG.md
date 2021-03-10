@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-* Changed
+* Fixed
   * Replaced style `overflow: auto;` from `innerView` to `outerView`.
 
 ## 4.41.0 - (February 2, 2021)
