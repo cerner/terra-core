@@ -40,4 +40,12 @@ Terra.describeViewports('StatusView', ['medium'], () => {
     browser.url('/raw/tests/terra-status-view/status-view/status-view-thin-constraint');
     Terra.validates.element('error too thin for glyph');
   });
+  it('Verifies overlay behaves as expected at a small height', () => {
+    browser.url('/raw/tests/terra-status-view/status-view/status-view-overflow');
+    // eslint-disable-next-line prefer-arrow-callback
+    browser.execute(function scrollOptionIntoView() {
+      document.querySelector('p[class*="title"]').scrollIntoView();
+    });
+    Terra.validates.element('scrolled', { selector: '#root' });
+  });
 });
