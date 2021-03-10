@@ -5,6 +5,11 @@
 * Added
   * Added a deprecation notice.
 
+## 4.50.0 - (March 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.49.0 - (February 2, 2021)
 
 * Changed
