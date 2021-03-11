@@ -20,7 +20,6 @@ exports[`Item correctly applies the theme context className 1`] = `
       <div
         className="item orion-fusion-theme"
         onClick={[Function]}
-        role="menuitem"
         tabIndex="0"
       >
         1st Option
@@ -38,7 +37,6 @@ exports[`Item renders a default item 1`] = `
   <div
     className="item"
     onClick={[Function]}
-    role="menuitem"
     tabIndex="0"
   >
     1st Option
@@ -54,7 +52,6 @@ exports[`Item renders an active item 1`] = `
   <div
     className="item active"
     onClick={[Function]}
-    role="menuitem"
     tabIndex="0"
   >
     1st Option
