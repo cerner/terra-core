@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Replaced style `overflow: auto;` from `innerView` to `outerView`.
+  * Fix glyph scrollbar appearing when there is enough room to display.
 
 ## 4.41.0 - (February 2, 2021)
 

@@ -46,6 +46,6 @@ Terra.describeViewports('StatusView', ['medium'], () => {
     browser.execute(function scrollOptionIntoView() {
       document.querySelector('p[class*="title"]').scrollIntoView();
     });
-    Terra.validates.element('scrolled', { selector: '#root' });
+    Terra.validates.element('scrolled', { selector: '#statusView' });
   });
 });
