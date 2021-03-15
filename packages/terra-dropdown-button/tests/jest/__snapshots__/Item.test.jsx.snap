@@ -14,13 +14,13 @@ exports[`Item correctly applies the theme context className 1`] = `
     requestClose={[Function]}
   >
     <li
+      onClick={[Function]}
       role="menuitem"
-      tabIndex="-1"
+      tabIndex="0"
     >
       <div
         className="item orion-fusion-theme"
-        onClick={[Function]}
-        tabIndex="0"
+        role="none"
       >
         1st Option
       </div>
@@ -31,13 +31,13 @@ exports[`Item correctly applies the theme context className 1`] = `
 
 exports[`Item renders a default item 1`] = `
 <li
+  onClick={[Function]}
   role="menuitem"
-  tabIndex="-1"
+  tabIndex="0"
 >
   <div
     className="item"
-    onClick={[Function]}
-    tabIndex="0"
+    role="none"
   >
     1st Option
   </div>
@@ -46,13 +46,13 @@ exports[`Item renders a default item 1`] = `
 
 exports[`Item renders an active item 1`] = `
 <li
+  onClick={[Function]}
   role="menuitem"
-  tabIndex="-1"
+  tabIndex="0"
 >
   <div
     className="item active"
-    onClick={[Function]}
-    tabIndex="0"
+    role="none"
   >
     1st Option
   </div>

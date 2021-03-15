@@ -81,7 +81,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     });
 
     it('should display Dropdown Button with interactions', () => {
-      Terra.validates.element('default interactions');
+      Terra.validates.element('interactions');
     });
 
     it('opens the dropdown with click', () => {

@@ -35,7 +35,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('should display disabled Dropdown Button', () => {
-      Terra.validates.element('default disabled');
+      Terra.validates.element('disabled');
     });
 
     it('tries to tab to the button', () => {
@@ -56,7 +56,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('should display Dropdown Button with interactions', () => {
-      Terra.validates.element('default interactions');
+      Terra.validates.element('interactions');
     });
 
     it('opens the dropdown with click', () => {
