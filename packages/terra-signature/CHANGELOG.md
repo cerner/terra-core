@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+ * Fixed issue with touch screen windows devices.
+
 ## 2.34.0 - (January 5, 2021)
 
 * Fixed
