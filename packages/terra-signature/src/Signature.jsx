@@ -60,26 +60,22 @@ class Signature extends React.Component {
   }
 
   componentDidMount() {
-    if ('ontouchstart' in document.documentElement) {
-      this.canvas.addEventListener('touchstart', this.mouseDown, false);
-      this.canvas.addEventListener('touchmove', this.mouseXY, true);
-      this.canvas.addEventListener('touchend', this.mouseUp, false);
-      document.body.addEventListener('touchleave', this.mouseLeave, false);
-      document.body.addEventListener('touchcancel', this.mouseUp, false);
-    } else {
-      this.canvas.addEventListener('mousedown', this.mouseDown);
-      this.canvas.addEventListener('mousemove', this.mouseXY);
-      document.body.addEventListener('mouseleave', this.mouseLeave, false);
-      document.body.addEventListener('mouseup', this.mouseUp);
-    }
+    this.canvas.addEventListener('mousedown', this.mouseDown);
+    this.canvas.addEventListener('mousemove', this.mouseXY);
+    this.canvas.addEventListener('touchstart', this.mouseDown, false);
+    this.canvas.addEventListener('touchmove', this.mouseXY, true);
+    this.canvas.addEventListener('touchend', this.mouseUp, false);
+    this.canvas.addEventListener('resize', this.updateDimensions);
+    document.body.addEventListener('mouseleave', this.mouseLeave, false);
+    document.body.addEventListener('mouseup', this.mouseUp);
+    document.body.addEventListener('touchleave', this.mouseLeave, false);
+    document.body.addEventListener('touchcancel', this.mouseUp, false);
 
     const context = this.canvas.getContext('2d');
 
     context.lineWidth = this.props.lineWidth;
 
     this.updateDimensions();
-
-    this.canvas.addEventListener('resize', this.updateDimensions);
   }
 
   componentDidUpdate(prevProps) {
@@ -91,24 +87,23 @@ class Signature extends React.Component {
   }
 
   componentWillUnmount() {
-    if ('ontouchstart' in document.documentElement) {
-      this.canvas.removeEventListener('touchstart', this.mouseDown);
-      this.canvas.removeEventListener('touchmove', this.mouseXY);
-      this.canvas.removeEventListener('touchend', this.mouseUp);
-      document.body.removeEventListener('touchleave', this.mouseLeave);
-      document.body.removeEventListener('touchcancel', this.mouseUp);
-    } else {
-      this.canvas.removeEventListener('mousedown', this.mouseDown);
-      this.canvas.removeEventListener('mousemove', this.mouseXY);
-      document.body.removeEventListener('mouseleave', this.mouseLeave);
-      document.body.removeEventListener('mouseup', this.mouseUp);
-    }
-
+    this.canvas.removeEventListener('mousedown', this.mouseDown);
+    this.canvas.removeEventListener('mousemove', this.mouseXY);
+    this.canvas.removeEventListener('touchstart', this.mouseDown);
+    this.canvas.removeEventListener('touchmove', this.mouseXY);
+    this.canvas.removeEventListener('touchend', this.mouseUp);
     this.canvas.removeEventListener('resize', this.updateDimensions);
+    document.body.removeEventListener('mouseleave', this.mouseLeave);
+    document.body.removeEventListener('mouseup', this.mouseUp);
+    document.body.removeEventListener('touchleave', this.mouseLeave);
+    document.body.removeEventListener('touchcancel', this.mouseUp);
   }
 
   mouseInBounds(event) {
     const rect = this.canvasRect;
+    if (event.type === 'touchmove') {
+      return rect.top < event.changedTouches[0].pageY && rect.left < event.changedTouches[0].pageX && rect.bottom > event.changedTouches[0].pageY && rect.right > event.changedTouches[0].pageX;
+    }
     return rect.top < event.pageY && rect.left < event.pageX && rect.bottom > event.pageY && rect.right > event.pageX;
   }
 
@@ -135,8 +130,11 @@ class Signature extends React.Component {
 
   mouseXY(event) {
     if (this.state.painting && this.mouseInBounds(event)) {
-      this.addLine(event.pageX - this.canvasRect.left, event.pageY - this.canvasRect.top, true);
-
+      if (event.type === 'touchmove') {
+        this.addLine(event.changedTouches[0].pageX - this.canvasRect.left, event.changedTouches[0].pageY - this.canvasRect.top, true);
+      } else {
+        this.addLine(event.pageX - this.canvasRect.left, event.pageY - this.canvasRect.top, true);
+      }
       this.draw();
     }
   }
