@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
- * Removed className `form-input` when `type="file"`.
+ * Update input to be native input when the type is file.
 
 ## 4.11.0 - (February 2, 2021)
 
