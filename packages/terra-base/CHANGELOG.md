@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated jest tests verify the custom prop validation in another way.
+
 ## 5.45.0 - (February 9, 2021)
 
 * Changed

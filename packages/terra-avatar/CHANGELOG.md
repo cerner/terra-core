@@ -2,11 +2,14 @@
 
 ## Unreleased
 
+* Changed
+  * Updated jest tests to not require a jpg mock.
+
 ## 3.11.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 3.10.0 - (December 8, 2020)
 
 * Changed
