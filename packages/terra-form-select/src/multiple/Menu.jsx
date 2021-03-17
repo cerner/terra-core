@@ -206,6 +206,7 @@ class Menu extends React.Component {
 
   componentDidUpdate() {
     this.updateNoResultsScreenReader();
+    this.updateCurrentActiveScreenReader();
   }
 
   componentWillUnmount() {
@@ -375,6 +376,8 @@ class Menu extends React.Component {
       intl,
       visuallyHiddenComponent,
     } = this.props;
+    const options = MenuUtil.flatten(this.state.children, true);
+    const totalOptions = options.length;
 
     const clearSelectTxt = intl.formatMessage({ id: 'Terra.form.select.clearSelect' });
 
@@ -398,17 +401,15 @@ class Menu extends React.Component {
     }
 
     if (element) {
-      const active = this.menu.querySelector('[data-select-active]');
-      const index = active.getAttribute('index');
-      const totalOptions = optGroupElement ? optGroupElement.props.children.length : document.querySelectorAll('[data-terra-select-option]').length;
+      const index = MenuUtil.checkIndex(options, this.state.active);
       if (element.props.display === '' && element.props.value === '') {
         // Used for case where users selects clear option and opens
         // dropdown again and navigates to clear option
         visuallyHiddenComponent.current.innerText = clearSelectTxt;
       } else if (this.isActiveSelected()) {
-        visuallyHiddenComponent.current.innerText = `${intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText })}${index}of${totalOptions}`;
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText, index, totalOptions });
       } else {
-        visuallyHiddenComponent.current.innerText = `${displayText + index}of${totalOptions}`;
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.activeOption' }, { text: displayText, index, totalOptions });
       }
     }
   }
@@ -427,9 +428,7 @@ class Menu extends React.Component {
    * @return {array} - A cloned copy of the object.
    */
   clone(object) {
-    let index = 0;
     return React.Children.map(object, (option) => {
-      index += 1;
       if (option.type.isOption) {
         return React.cloneElement(option, {
           id: `terra-select-option-${option.props.value}`,
@@ -441,7 +440,6 @@ class Menu extends React.Component {
           onMouseUp: event => this.handleOptionClick(event, option),
           onMouseEnter: event => this.handleMouseEnter(event, option),
           ...(option.props.value === this.state.active) && { 'data-select-active': true },
-          index,
         });
       } if (option.type.isOptGroup) {
         return React.cloneElement(option, {}, this.clone(option.props.children));
