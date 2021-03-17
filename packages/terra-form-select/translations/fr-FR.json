@@ -12,7 +12,7 @@
   "Terra.form.select.unselected": "Désélectionné.",
   "Terra.form.select.disabled": "Désactivé.",
   "Terra.form.select.dimmed": "Grisé.",
-  "Terra.form.select.listOfTotalOptions": "Liste de {total} options.",
+  "Terra.form.select.listOfTotalOptions": "Liste de options.",
   "Terra.form.select.defaultUsageGuidance": "Utilisez les touches fléchées haut et bas pour parcourir les options. Appuyez sur Entrée pour sélectionner une option.",
   "Terra.form.select.mobileUsageGuidance": "Balayez vers la droite pour naviguer vers les options.",
   "Terra.form.select.mobileButtonUsageGuidance": "Appuyez pour naviguer vers les options.",
