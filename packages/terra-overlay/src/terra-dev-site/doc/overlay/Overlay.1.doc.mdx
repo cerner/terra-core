@@ -1,4 +1,5 @@
 import { Badge } from 'terra-overlay/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
 
 import OverlayExample from '../example/OverlayExample?dev-site-example';
 import LoadingOverlayExample from '../example/LoadingOverlayExample?dev-site-example';
@@ -10,6 +11,16 @@ import LoadingOverlayPropsTable from 'terra-overlay/src/LoadingOverlay?dev-site-
 <Badge />
 
 # Terra Overlay
+<Notice variant='maintenance'>
+
+This component has been moved to [terra-application](/application/terra-application/components/application-loading-overlay) and should be imported from that package. While this is the final major version of this component we will release, this component will continue to receive minor updates until terra adopts react 17.
+
+```diff
+- import Overlay from 'terra-overlay';
++ import ApplicationLoadingOverlay from 'terra-application/lib/application-loading-overlay';
+```
+
+</Notice>
 The Overlay component is a component that creates an semi-transparent overlay screen that blocks interactions with the elements underneath the display. There are two types of overlays: fullscreen and relative to its container.
 
 When creating as an overlay relative to its container, place the overlay component within the overlay wrapper and the element(s) which should be hidden by overlay within the content(children) wrapper of Overlay Container subcomponent.
