@@ -158,6 +158,7 @@ class Menu extends React.Component {
 
   componentDidUpdate() {
     this.updateNoResultsScreenReader();
+    this.updateCurrentActiveScreenReader();
   }
 
   componentWillUnmount() {
@@ -332,14 +333,17 @@ class Menu extends React.Component {
     }
 
     if (element) {
+      const options = MenuUtil.flatten(this.state.children, true);
+      const totalOptions = options.length;
+      const index = MenuUtil.getIndex(options, this.state.active);
       if (element.props.display === '' && element.props.value === '') {
         // Used for case where users selects clear option and opens
         // dropdown again and navigates to clear option
         visuallyHiddenComponent.current.innerText = clearSelectTxt;
       } else if (this.isActiveSelected()) {
-        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText });
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: displayText, index, totalOptions });
       } else {
-        visuallyHiddenComponent.current.innerText = displayText;
+        visuallyHiddenComponent.current.innerText = intl.formatMessage({ id: 'Terra.form.select.activeOption' }, { text: displayText, index, totalOptions });
       }
     }
   }
