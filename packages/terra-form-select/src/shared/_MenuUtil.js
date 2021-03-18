@@ -204,7 +204,7 @@ class MenuUtil {
    * @param {string} value - The value of the active option.
    * @return {integer} - The value of the index of option.
    */
-  static checkIndex(object, value) {
+  static getIndex(object, value) {
     const options = MenuUtil.flatten(object, true);
     const index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
     return index + 1;

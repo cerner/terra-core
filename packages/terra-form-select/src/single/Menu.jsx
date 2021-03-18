@@ -349,7 +349,7 @@ class Menu extends React.Component {
     if (element) {
       const options = MenuUtil.flatten(this.state.children, true);
       const totalOptions = options.length;
-      const index = MenuUtil.checkIndex(options, this.state.active);
+      const index = MenuUtil.getIndex(options, this.state.active);
       if (element.props.display === '' && element.props.value === '') {
         // Used for case where users selects clear option and opens
         // dropdown again and navigates to clear option
