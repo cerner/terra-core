@@ -7,7 +7,7 @@ module.exports = {
     './jest.enzymeSetup.js',
   ],
   snapshotSerializers: [
-    './node_modules/enzyme-to-json/serializer',
+    'enzyme-to-json/serializer',
   ],
   moduleDirectories: [
     'aggregated-translations',
