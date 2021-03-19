@@ -2,10 +2,13 @@
 
 ## Unreleased
 
+* Changed
+  * Updated Jest command
+
 ## 1.26.0 - (March 2, 2021)
 
 * Fixed
-  * Fixed misalignment when rendered with terra-button. 
+  * Fixed misalignment when rendered with terra-button.
 
 ## 1.25.0 - (February 17, 2021)
 

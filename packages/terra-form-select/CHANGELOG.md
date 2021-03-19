@@ -5,6 +5,9 @@
 * Fixed
   * Allow voice-over to read index values for options.
   * Fixed `focus not getting removed` in IE for search and combobox variants.
+  
+* Changed
+  * Updated Jest command
 
 ## 6.26.0 - (February 17, 2021)
 

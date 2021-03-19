@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated Jest command
+
 ## 3.53.0 - (February 2, 2021)
 
 * Changed
@@ -11,7 +14,7 @@
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 3.51.0 - (December 8, 2020)
 
 * Changed
@@ -36,7 +39,7 @@
 
 * Changed
   * Remove wdio tests and screenshots for checking hover style.
-  
+
 ## 3.46.0 - (August 6, 2020)
 
 * Changed

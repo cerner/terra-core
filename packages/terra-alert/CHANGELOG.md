@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated Jest command
+
 ## 4.50.0 - (March 2, 2021)
 
 * Changed
@@ -20,7 +23,7 @@
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 4.47.0 - (December 8, 2020)
 
 * Changed
@@ -60,7 +63,7 @@
 
 * Changed
   * Add missing theme variables
-  
+
 ## 4.39.0 - (August 6, 2020)
 
 * Changed

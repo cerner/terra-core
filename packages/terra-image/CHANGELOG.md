@@ -2,11 +2,14 @@
 
 ## Unreleased
 
+* Changed
+  * Updated Jest command
+
 ## 3.33.0 - (January 5, 2021)
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 3.32.0 - (December 8, 2020)
 
 * Changed
