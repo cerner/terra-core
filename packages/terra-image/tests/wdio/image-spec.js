@@ -9,27 +9,27 @@ Terra.describeViewports('Image', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-image/image/image-non-fluid'));
 
     it('should display non fluid image', () => {
-      Terra.validates.element('smaller than container', { selector: '#smaller' });
-      Terra.validates.element('height smaller than container', { selector: '#height-smaller' });
-      Terra.validates.element('width smaller than container', { selector: '#width-smaller' });
+      Terra.validates.element('non-fluid smaller than container', { selector: '#smaller' });
+      Terra.validates.element('non-fluid height smaller than container', { selector: '#height-smaller' });
+      Terra.validates.element('non-fluid width smaller than container', { selector: '#width-smaller' });
     });
   });
 
   describe('Fluid', () => {
     before(() => browser.url('/#/raw/tests/terra-image/image/image-fluid'));
 
-    it('should display non fluid image', () => {
-      Terra.validates.element('smaller than container', { selector: '#smaller' });
-      Terra.validates.element('height smaller than container', { selector: '#height-smaller' });
-      Terra.validates.element('width smaller than container', { selector: '#width-smaller' });
+    it('should display fluid image', () => {
+      Terra.validates.element('fluid smaller than container', { selector: '#smaller' });
+      Terra.validates.element('fluid height smaller than container', { selector: '#height-smaller' });
+      Terra.validates.element('fluid width smaller than container', { selector: '#width-smaller' });
     });
   });
 
   describe('Loading', () => {
     before(() => {
       browser.url('/raw/tests/terra-image/image/image-loading');
-      browser.waitForExist('#loadedImage');
-      browser.waitForExist('#errorImage');
+      $('#loadedImage').waitForExist();
+      $('#errorImage').waitForExist();
     });
 
     it('should display loading Image', () => {

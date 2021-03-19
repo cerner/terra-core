@@ -3,14 +3,14 @@ Terra.describeViewports('Icon', ['huge'], () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-default'));
 
     it('checks element', () => {
-      Terra.validates.element();
+      Terra.validates.element('default');
     });
   });
 
   describe('HeightWidth', () => {
     it('checks element', () => {
       browser.url('/#/raw/tests/terra-icon/icon/icon-height-width');
-      Terra.validates.element();
+      Terra.validates.element('height width');
     });
   });
 
@@ -18,7 +18,7 @@ Terra.describeViewports('Icon', ['huge'], () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-bidi'));
 
     it('checks element', () => {
-      Terra.validates.element();
+      Terra.validates.element('bidi');
     });
   });
 
@@ -34,7 +34,7 @@ Terra.describeViewports('Icon', ['huge'], () => {
     before(() => browser.url('/#/raw/tests/terra-icon/icon/icon-all'));
 
     it('checks element', () => {
-      Terra.validates.element();
+      Terra.validates.element('all icons');
     });
   });
 });
