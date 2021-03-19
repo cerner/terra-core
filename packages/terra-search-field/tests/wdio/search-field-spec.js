@@ -5,23 +5,23 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display empty Search Field', () => {
-      Terra.validates.element('empty', { misMatchTolerance: 0.1 });
+      Terra.validates.element('default empty', { misMatchTolerance: 0.1 });
     });
 
     it('should enter a search term', () => {
-      browser.setValue('input', 'Lore');
+      $('input').setValue('Lore');
     });
 
     it('should display Search Field with text', () => {
-      Terra.validates.element('with text', { misMatchTolerance: 0.1 });
+      Terra.validates.element('default with text', { misMatchTolerance: 0.1 });
     });
 
     it('should scroll text that is too long', () => {
-      browser.addValue('input', ' is a correctly spelled word');
+      $('input').addValue(' is a correctly spelled word');
     });
 
     it('should display Search Field with scrolled text', () => {
-      Terra.validates.element('scrolled text', { misMatchTolerance: 0.1 });
+      Terra.validates.element('default scrolled text', { misMatchTolerance: 0.1 });
     });
   });
 
@@ -29,15 +29,15 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-block'));
 
     it('should display empty Search Field', () => {
-      Terra.validates.element('empty');
+      Terra.validates.element('block empty');
     });
 
     it('should enter a search term', () => {
-      browser.setValue('input', 'Lorem');
+      $('input').setValue('Lorem');
     });
 
     it('should display Search Field with text', () => {
-      Terra.validates.element('with text');
+      Terra.validates.element('block with text');
     });
   });
 
@@ -45,15 +45,15 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-disabled'));
 
     it('should display disabled Search Field', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('disabled default');
     });
 
     it('should not accept keyboard input', () => {
-      expect(browser.setValue.bind(browser, 'input', 'Lorem')).to.throw(Error);
+      expect($('input').isEnabled()).toBe(false);
     });
 
     it('should not accept clicks', () => {
-      expect(browser.click.bind(browser, '#searchfield > [data-terra-search-field-button="Search"]')).to.throw(Error);
+      expect($('#searchfield > [data-terra-search-field-button="Search"]').isEnabled()).toBe(false);
     });
   });
 
@@ -61,22 +61,22 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-with-placeholder'));
 
     it('should display Search Field with placeholder', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('placeholder default');
     });
 
     it('should enter a search term', () => {
-      browser.setValue('input', 'Lorem');
+      $('input').setValue('Lorem');
     });
 
     it('should display Search Field with text', () => {
-      Terra.validates.element('with text');
+      Terra.validates.element('placeholder with text');
     });
   });
 
   describe('Placeholder Disabled', () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-with-placeholder-disabled'));
     it('should display disabled Search Field with placeholder', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('disabled placeholder default');
     });
   });
 
@@ -84,21 +84,21 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-default-value'));
 
     it('should display Search Field with default value', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('default value default');
     });
 
     it('should clear the value', () => {
-      browser.click('#searchfield [data-terra-search-field-button="Clear"]');
+      $('#searchfield [data-terra-search-field-button="Clear"]').click();
 
-      Terra.validates.element('Clear');
+      Terra.validates.element('default value clear');
     });
 
     it('should enter a new search term', () => {
-      browser.addValue('input', 'Lorem');
+      $('input').addValue('Lorem');
     });
 
     it('should display Search Field with overwritten text', () => {
-      Terra.validates.element('with overwritten text');
+      Terra.validates.element('default value with overwritten text');
     });
   });
 
@@ -106,20 +106,20 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-with-value'));
 
     it('should display Search Field with value', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('value default');
     });
 
     it('should try to enter a new search term', () => {
-      browser.click('input');
+      $('input').click();
       for (let i = 0; i < 4; i += 1) {
         browser.keys('Backspace');
       }
 
-      browser.addValue('input', 'Lorem');
+      $('input').addValue('Lorem');
     });
 
     it('should display Search Field with unchanged text', () => {
-      Terra.validates.element('unchanged text');
+      Terra.validates.element('value unchanged text');
     });
   });
 
@@ -127,29 +127,29 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/minimum-length-search-field'));
 
     it('should enter a short search term', () => {
-      browser.setValue('input', 'Lore');
+      $('input').setValue('Lore');
     });
 
     it('should display Search Field with too short text', () => {
-      Terra.validates.element('too short text');
+      Terra.validates.element('minimum length too short text');
     });
 
     it('should not search with the button', () => {
       browser.keys('Enter');
       // Ensure button on hover styling is disabled
-      browser.click('#search-callback-text');
+      $('#search-callback-text').click();
     });
 
     it('should display Search Field with too short text after button press', () => {
-      Terra.validates.element('with too short text after button press');
+      Terra.validates.element('minimum length with too short text after button press');
     });
 
     it('should enter a long enough search term', () => {
-      browser.setValue('input', 'Lore is spelled correctly');
+      $('input').setValue('Lore is spelled correctly');
     });
 
     it('should display Search Field with long enough text', () => {
-      Terra.validates.element('with long enough text');
+      Terra.validates.element('minimum length with long enough text');
     });
   });
 
@@ -157,24 +157,24 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/callback-search-field'));
 
     it('should display empty Search Field', () => {
-      Terra.validates.element('empty');
+      Terra.validates.element('callback empty');
     });
 
     it('should enter a long enough search term', () => {
-      browser.setValue('input', 'Lore is spelled correctly');
+      $('input').setValue('Lore is spelled correctly');
     });
 
     it('should display Search Field with long enough text', () => {
-      Terra.validates.element('with long enough text');
+      Terra.validates.element('callback with long enough text');
     });
 
     it('should enter a short search term', () => {
-      browser.setValue('input', 'Lo');
-      browser.waitForVisible('#search-callback-text');
+      $('input').setValue('Lo');
+      $('#search-callback-text').waitForDisplayed();
     });
 
     it('should display Search Field with too short text', () => {
-      Terra.validates.element('with too short text');
+      Terra.validates.element('callback with too short text');
     });
   });
 
@@ -182,49 +182,49 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/setting-value-search-field'));
 
     it('should display empty Search Field', () => {
-      Terra.validates.element('empty');
+      Terra.validates.element('setting value empty');
     });
 
     it('should trigger search when entering a long enough search term', () => {
-      browser.setValue('input', 'LoremIpsum');
+      $('input').setValue('LoremIpsum');
     });
 
     it('should display Search Field with typed text', () => {
-      Terra.validates.element('typed');
+      Terra.validates.element('setting value typed');
     });
 
     it('should trigger search when cutting', () => {
       // select text
-      browser.addValue('input', ['Shift', 'Left arrow', 'Left arrow', 'Left arrow', 'Left arrow', 'NULL']);
+      $('input').addValue(['Shift', 'Left arrow', 'Left arrow', 'Left arrow', 'Left arrow', 'NULL']);
       // cut text
-      browser.addValue('input', ['Control', 'x', 'NULL']);
+      $('input').addValue(['Control', 'x', 'NULL']);
     });
 
     it('should display Search Field after cut operation', () => {
-      Terra.validates.element('cut');
+      Terra.validates.element('setting value cut');
     });
 
     it('should trigger search when pasting', () => {
       // paste value from clipboard
-      browser.addValue('input', ['Control', 'v']);
+      $('input').addValue(['Control', 'v']);
     });
 
     it('should display Search Field after paste operation', () => {
-      Terra.validates.element('paste');
+      Terra.validates.element('setting value paste');
     });
 
     it('should not trigger search when programmatically setting value', () => {
-      browser.click('#search-field-set-text-button');
-      browser.click('#searchfield');
+      $('#search-field-set-text-button').click();
+      $('#searchfield').click();
       browser.pause(2000);
 
-      Terra.validates.element('programmatically');
+      Terra.validates.element('setting value programmatically');
     });
 
     it('should search with value on search button press', () => {
-      browser.click('#searchfield > [data-terra-search-field-button="Search"]');
+      $('#searchfield > [data-terra-search-field-button="Search"]').click();
 
-      Terra.validates.element('search');
+      Terra.validates.element('setting value search');
     });
   });
 
@@ -232,15 +232,15 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-on-change'));
 
     it('should enter a letter', () => {
-      browser.setValue('input', 'L');
+      $('input').setValue('L');
 
-      Terra.validates.element('updated once');
+      Terra.validates.element('on change updated once');
     });
 
     it('should enter another letter', () => {
-      browser.addValue('input', 'o');
+      $('input').addValue('o');
 
-      Terra.validates.element('updated twice');
+      Terra.validates.element('on change updated twice');
     });
   });
 
@@ -248,10 +248,10 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-enter'));
 
     it('should search with enter', () => {
-      browser.click('input');
+      $('input').click();
       browser.keys('Enter');
 
-      Terra.validates.element('default');
+      Terra.validates.element('search with enter default');
     });
   });
 
@@ -259,22 +259,22 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/auto-search-disabled-search-field'));
 
     it('should enter a search term', () => {
-      browser.setValue('input', 'Lore');
+      $('input').setValue('Lore');
 
-      Terra.validates.element('text before search');
+      Terra.validates.element('auto search disabled text before search');
     });
 
     it('should search with the button', () => {
       browser.keys('Enter');
 
-      Terra.validates.element('searched text');
+      Terra.validates.element('auto search disabled searched text');
     });
 
     it('should search using enter', () => {
-      browser.addValue('input', ' is spelled correctly');
+      $('input').addValue(' is spelled correctly');
       browser.keys('Enter');
 
-      Terra.validates.element('extended search');
+      Terra.validates.element('auto search disabled extended search');
     });
   });
 
@@ -282,14 +282,14 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-focus'));
 
     it('should display empty Search Field', () => {
-      Terra.validates.element('empty');
+      Terra.validates.element('focus empty');
     });
 
     it('should click button to focus search field', () => {
-      browser.waitForVisible('#search-field-focus-button');
-      browser.click('#search-field-focus-button');
+      $('#search-field-focus-button').waitForDisplayed();
+      $('#search-field-focus-button').click();
 
-      Terra.validates.element('with focus');
+      Terra.validates.element('focus with focus');
     });
   });
 });

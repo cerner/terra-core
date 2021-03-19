@@ -3,6 +3,8 @@
 ## Unreleased
 
 * Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
   * Updated jest tests to not require a jpg mock.
 
 ## 3.11.0 - (January 5, 2021)
