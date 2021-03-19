@@ -58,6 +58,7 @@ const IconAll = () => (
     <Icon.IconCommit className={cx(['icon'])} />
     <Icon.IconComplete className={cx(['icon'])} />
     <Icon.IconCompose className={cx(['icon'])} />
+    <Icon.IconConfidential className={cx(['icon'])} />
     <Icon.IconConsultInstructionsForUse className={cx(['icon'])} />
     <Icon.IconCritical className={cx(['icon'])} />
     <Icon.IconCriticalInverse className={cx(['icon', 'icon-inverse'])} />

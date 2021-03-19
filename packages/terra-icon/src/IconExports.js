@@ -49,6 +49,7 @@ import IconComment from './icon/IconComment';
 import IconCommit from './icon/IconCommit';
 import IconComplete from './icon/IconComplete';
 import IconCompose from './icon/IconCompose';
+import IconConfidential from './icon/IconConfidential';
 import IconConsultInstructionsForUse from './icon/IconConsultInstructionsForUse';
 import IconCritical from './icon/IconCritical';
 import IconCriticalInverse from './icon/IconCriticalInverse';
@@ -353,6 +354,7 @@ const Icons = {
   IconCommit,
   IconComplete,
   IconCompose,
+  IconConfidential,
   IconConsultInstructionsForUse,
   IconCritical,
   IconCriticalInverse,
