@@ -141,6 +141,7 @@ Terra.describeViewports('Form-Input', ['large'], () => {
 
     it('should trigger onInput when programmatically setting value', () => {
       $('#input-set-text-button').click();
+      $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
 
       Terra.validates.element('programmatically');
     });
