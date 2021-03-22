@@ -1,7 +1,7 @@
 Terra.describeViewports('Hyperlink', ['tiny'], () => {
   it('should display default Hyperlink', () => {
     browser.url('/raw/tests/terra-hyperlink/hyperlink/default-hyperlink');
-    browser.moveToObject('#root', 0, 700); // move mouse to prevent hover styles
+    $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move mouse to prevent hover styles
 
     Terra.validates.element('default');
   });

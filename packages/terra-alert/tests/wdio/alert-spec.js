@@ -41,21 +41,21 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
   });
 
   it('should register actions', () => {
-    expect(browser.getText('#actionAlert')).to.have.string('clicked 0 times');
-    browser.click('#actionAlert button');
-    expect(browser.getText('#actionAlert')).to.have.string('clicked 1 times');
+    expect($('#actionAlert')).toHaveTextContaining('clicked 0 times');
+    $('#actionAlert button').click();
+    expect($('#actionAlert')).toHaveTextContaining('clicked 1 times');
   });
 
   describe('Alert Dismissible', () => {
     it('displays dismissible Alert', () => {
       browser.url('/raw/tests/terra-alert/alert/alert-dismissible');
 
-      Terra.validates.element('default');
+      Terra.validates.element('predismissed');
     });
 
     it('should dismiss', () => {
-      browser.click('#dismissibleAlert button');
-      expect(browser.getText('#dismissed')).to.equal('Alert was dismissed');
+      $('#dismissibleAlert button').click();
+      expect($('#dismissed').getText()).toEqual('Alert was dismissed');
 
       Terra.validates.element('dismissed');
     });
