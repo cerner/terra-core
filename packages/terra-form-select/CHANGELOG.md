@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated to use terra-functional-testing
+
 * Fixed
   * Allow voice-over to read index values for options.
   * Fixed `focus not getting removed` in IE for search and combobox variants.

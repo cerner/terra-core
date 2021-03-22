@@ -3,51 +3,51 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-show-hide/show-hide/default-show-hide'));
 
     it('should display collapsed Show Hide', () => {
-      Terra.validates.element('collapsed');
+      Terra.validates.element('default collapsed');
     });
 
     it('should expand to full text', () => {
-      browser.click('button');
+      $('button').click();
     });
 
     it('should display expanded Show Hide', () => {
-      Terra.validates.element('expanded');
+      Terra.validates.element('default expanded');
     });
 
     it('should re-collapse the text', () => {
-      browser.click('button');
-      browser.click('#root');
+      $('button').click();
+      $('#root').click();
     });
 
     describe('Focus', () => {
       it('has focus', () => {
         browser.keys(['Tab']);
-        expect(browser.hasFocus('button')).to.be.true;
+        expect($('button').isFocused()).toBe(true);
       });
 
       it('should display focus on Show Hide', () => {
-        Terra.validates.element('default');
+        Terra.validates.element('focus default');
       });
 
       it('removes focus', () => {
         browser.keys(['Tab']);
-        expect(browser.hasFocus('button')).to.be.false;
+        expect($('button').isFocused()).toBe(false);
       });
     });
 
     describe('Active', () => {
       it('is active', () => {
-        browser.moveToObject('button');
+        $('button').moveTo();
         browser.buttonDown();
       });
 
       it('should display active Show Hide', () => {
-        Terra.validates.element('default');
+        Terra.validates.element('active default');
       });
 
       it('release button press', () => {
         browser.buttonUp();
-        browser.moveToObject('#root');
+        $('#root').moveTo();
       });
     });
   });
@@ -56,15 +56,15 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-show-hide/show-hide/custom-button-text-show-hide'));
 
     it('should display collapsed Show Hide', () => {
-      Terra.validates.element('collapsed');
+      Terra.validates.element('custom button collapsed');
     });
 
     it('should expand to full text', () => {
-      browser.click('button');
+      $('button').click();
     });
 
     it('should display expanded Show Hide', () => {
-      Terra.validates.element('expanded');
+      Terra.validates.element('custom button expanded');
     });
   });
 
@@ -72,7 +72,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-show-hide/show-hide/initially-open-show-hide'));
 
     it('should display expanded Show Hide', () => {
-      Terra.validates.element('expanded');
+      Terra.validates.element('initially open expanded');
     });
   });
 
@@ -80,7 +80,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-show-hide/show-hide/no-preview-show-hide'));
 
     it('should display collapsed Show Hide', () => {
-      Terra.validates.element('collapsed');
+      Terra.validates.element('no preview collapsed');
     });
   });
 
@@ -88,15 +88,15 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-show-hide/show-hide/button-align-start-show-hide'));
 
     it('should display collapsed Show Hide', () => {
-      Terra.validates.element('collapsed');
+      Terra.validates.element('button align start collapsed');
     });
 
     it('should expand to full text', () => {
-      browser.click('button');
+      $('button').click();
     });
 
     it('should display expanded Show Hide', () => {
-      Terra.validates.element('expanded');
+      Terra.validates.element('button align start expanded');
     });
   });
 
@@ -104,15 +104,15 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-show-hide/show-hide/button-align-center-show-hide'));
 
     it('should display collapsed Show Hide', () => {
-      Terra.validates.element('collapsed');
+      Terra.validates.element('button align center collapsed');
     });
 
     it('should expand to full text', () => {
-      browser.click('button');
+      $('button').click();
     });
 
     it('should display expanded Show Hide', () => {
-      Terra.validates.element('expanded');
+      Terra.validates.element('button align center expanded');
     });
   });
 
@@ -120,34 +120,34 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-show-hide/show-hide/button-align-end-show-hide'));
 
     it('should display collapsed Show Hide', () => {
-      Terra.validates.element('collapsed');
+      Terra.validates.element('button align end collapsed');
     });
 
     it('should expand to full text', () => {
-      browser.click('button');
+      $('button').click();
     });
 
     it('should display expanded Show Hide', () => {
-      Terra.validates.element('expanded');
+      Terra.validates.element('button align end expanded');
     });
   });
 
   describe('Long button text', () => {
     before(() => {
       browser.url('/raw/tests/terra-show-hide/show-hide/long-button-text-show-hide');
-      browser.moveToObject('#root', 0, 700); // move cursor to remove focus styles
+      $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
     });
 
     it('should display collapsed Show Hide', () => {
-      Terra.validates.element('collapsed');
+      Terra.validates.element('long button text collapsed');
     });
 
     it('should expand to full text', () => {
-      browser.click('button');
+      $('button').click();
     });
 
     it('should display expanded Show Hide', () => {
-      Terra.validates.element('expanded');
+      Terra.validates.element('long button text expanded');
     });
   });
 });
