@@ -5,6 +5,7 @@
 * Changed
   * Upgrade tests to terra-functional-testing and WebDriverIO v6
   * Removed unnecessary `wdio.conf.js` file
+  * Updated screenshots with elements that are out of bound
 
 ## 4.22.0 - (February 17, 2021)
 
