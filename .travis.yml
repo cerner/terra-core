@@ -8,9 +8,13 @@ branches:
 cache:
   directories:
     - travis-build
+    - docker_images
 before_install:
   # Clean install on any new build
   - npm run clean
+before_script:
+  # Load Docker Cache
+  - docker load -i docker_images/images.tar || true
 jobs:
   include:
     - stage: danger lint jest and compile
@@ -24,6 +28,10 @@ jobs:
         - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/default
         - npm run compile:lowlight -- --output-path $TRAVIS_BUILD_DIR/travis-build/lowlight
         - npm run compile:fusion -- --output-path $TRAVIS_BUILD_DIR/travis-build/fusion
+        # Prime the docker cache
+        - docker-compose --file ./node_modules/@cerner/terra-functional-testing/lib/docker/docker-compose.yml pull
+        # Save docker cache
+        - docker save -o docker_images/images.tar $(docker images -a -q)
     # Default - Split out all the themes to not eat up all the travis executors at once.
 
     - stage: tiny & medium
