@@ -5,14 +5,12 @@
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Updated to use terra-functional-testing
+  * Updated Jest command
 
 * Fixed
   * Allow voice-over to read index values for options.
   * Fixed `focus not getting removed` in IE for search and combobox variants.
   * Fixed `focus not getting removed` in IE for multiple and tag variants.
-
-* Changed
-  * Updated Jest command
 
 ## 6.26.0 - (February 17, 2021)
 
