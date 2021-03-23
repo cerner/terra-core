@@ -78,7 +78,7 @@
     "@babel/preset-react": "^7.0.0",
     "@cerner/browserslist-config-terra": "^3.1.0",
     "@cerner/eslint-config-terra": "^5.0.0",
-    "@cerner/jest-config-terra": "file:cerner-jest-config-terra-0.0.0.tgz",
+    "@cerner/jest-config-terra": "^1.0.0",
     "@cerner/stylelint-config-terra": "^4.0.0",
     "@cerner/terra-aggregate-translations": "^2.0.1",
     "@cerner/terra-functional-testing": "^1.0.1",
