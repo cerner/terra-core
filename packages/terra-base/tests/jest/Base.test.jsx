@@ -7,10 +7,13 @@ jest.mock('terra-i18n');
 
 // Missing locale test
 it('throws error for missing required locale', () => {
+  // eslint-disable-next-line no-console
+  console.error = jest.fn();
   const messages = { Terra: 'Terra' };
 
-  expect(() => shallow(<Base customMessages={messages}>String</Base>))
-    .toThrowError(/The prop `locale` is marked as required in `Base`/);
+  shallow(<Base customMessages={messages}>String</Base>);
+  // eslint-disable-next-line no-console
+  expect(console.error).toHaveBeenCalled();
 });
 
 // Snapshot Tests

@@ -5,6 +5,7 @@
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Upgrade to terra-functional-testing
+  * Updated Jest command
   * Updated screenshots with elements that are out of bound
 
 ## 4.41.0 - (February 2, 2021)
