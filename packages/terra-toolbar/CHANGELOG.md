@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fix to remove extra padding due to `null` children.
+
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Upgrade to terra-functional-testing
