@@ -5,6 +5,7 @@
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated jest tests to verify the custom prop validation in another way.
 
 ## 5.45.0 - (February 9, 2021)
 

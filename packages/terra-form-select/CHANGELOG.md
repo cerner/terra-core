@@ -5,6 +5,7 @@
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Updated to use terra-functional-testing
+  * Updated Jest command
 
 * Fixed
   * Allow voice-over to read index values for options.
