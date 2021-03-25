@@ -6,6 +6,7 @@
   * Removed unnecessary `wdio.conf.js` file
   * Upgrade tests to terra-functional-testing and WebDriverIO v6
   * Updated to use terra-functional-testing
+  * Updated Jest command
 
 ## 1.11.0 - (March 2, 2021)
 

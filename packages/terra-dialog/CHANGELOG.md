@@ -5,6 +5,7 @@
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Updated to terra-functional-testing
+  * Updated Jest command
 
 ## 2.56.0 - (February 2, 2021)
 

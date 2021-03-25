@@ -5,6 +5,8 @@
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated Jest command
+  * Updated screenshots with elements that are out of bound
 
 ## 3.41.0 - (February 2, 2021)
 
