@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import IconBase from '../IconBase';
-import styles from '../IconInformationLowLight.module.scss';
+import styles from '../clinical-lowlight-theme/IconInformation.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
