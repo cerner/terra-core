@@ -1,11 +1,11 @@
 {
-  "Terra.alert.advisory": "Adviserend.",
-  "Terra.alert.alert": "Waarschuwing.",
   "Terra.alert.dismiss": "Negeren",
-  "Terra.alert.error": "Fout.",
   "Terra.alert.info": "Informatie.",
-  "Terra.alert.success": "Succes.",
+  "Terra.alert.error": "Fout.",
+  "Terra.alert.warning": "Waarschuwing.",
+  "Terra.alert.alert": "Waarschuwing.",
+  "Terra.alert.advisory": "Advies.",
   "Terra.alert.unsatisfied": "Vereiste actie.",
   "Terra.alert.unverified": "Externe records.",
-  "Terra.alert.warning": "Waarschuwing."
+  "Terra.alert.success": "Succes."
 }
