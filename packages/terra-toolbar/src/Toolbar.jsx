@@ -36,7 +36,7 @@ const Toolbar = ({
     customProps.className,
   );
 
-  const items = React.Children.map(children, item => (item ? <div className={cx('item')}>{item}</div> : null));
+  const items = React.Children.map(children, item => (item ? <div className={cx('item')}>{item}</div> : item));
 
   return (<div {...customProps} className={toolbarClassNames}>{items}</div>);
 };
