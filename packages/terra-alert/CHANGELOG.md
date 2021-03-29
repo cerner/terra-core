@@ -6,6 +6,7 @@
   * Upgrade tests to terra-functional-testing and WebDriverIO v6
   * Removed unnecessary `wdio.conf.js` file
   * Updated Jest command
+  * Update translations for the `nl` and `sv` languages.
 
 ## 4.50.0 - (March 2, 2021)
 

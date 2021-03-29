@@ -1,11 +1,11 @@
 {
-  "Terra.alert.advisory": "Rådgivning.",
-  "Terra.alert.alert": "Avisering.",
-  "Terra.alert.dismiss": "Ignorera",
-  "Terra.alert.error": "Fel.",
+  "Terra.alert.dismiss": "Stäng",
   "Terra.alert.info": "Information.",
-  "Terra.alert.success": "Klar.",
-  "Terra.alert.unsatisfied": "Nödvändig åtgärd krävs.",
+  "Terra.alert.error": "Fel.",
+  "Terra.alert.warning": "Obs!",
+  "Terra.alert.alert": "Varning.",
+  "Terra.alert.advisory": "Rekommendation.",
+  "Terra.alert.unsatisfied": "Åtgärd krävs.",
   "Terra.alert.unverified": "Externa journaler.",
-  "Terra.alert.warning": "Varning!"
+  "Terra.alert.success": "Klar."
 }
