@@ -2,11 +2,17 @@
 
 ## Unreleased
 
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated Jest command
+  * Updated screenshots with elements that are out of bound
+
 ## 4.22.0 - (February 17, 2021)
 
 * Removed
   * Removed unnecessary `aria-required` to preemptively fix issues for upcoming axe-core version bump
-  
+
 ## 4.21.0 - (February 2, 2021)
 
 * Changed

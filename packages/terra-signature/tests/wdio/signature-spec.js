@@ -8,27 +8,27 @@ Terra.describeViewports('Signature', ['medium'], () => {
   });
 
   it('should try to draw with right click', () => {
-    browser.moveToObject('#drawline', 0, 0);
+    $('#drawline').moveTo({ xOffset: 0, yOffset: 0 });
     browser.buttonDown(2);
-    browser.moveToObject('#drawline', 90, 90);
+    $('#drawline').moveTo({ xOffset: 90, yOffset: 90 });
     browser.buttonUp(2);
 
     Terra.validates.element('draw with right click');
   });
 
   it('should try to draw with middle click', () => {
-    browser.moveToObject('#drawline', 0, 0);
+    $('#drawline').moveTo({ xOffset: 0, yOffset: 0 });
     browser.buttonDown(1);
-    browser.moveToObject('#drawline', 90, 90);
+    $('#drawline').moveTo({ xOffset: 90, yOffset: 90 });
     browser.buttonUp(1);
 
     Terra.validates.element('draw with middle click');
   });
 
   it('should draws lines', () => {
-    browser.moveToObject('#drawline', 0, 0);
+    $('#drawline').moveTo({ xOffset: 0, yOffset: 0 });
     browser.buttonDown(0);
-    browser.moveToObject('#drawline', 90, 90);
+    $('#drawline').moveTo({ xOffset: 90, yOffset: 90 });
     browser.buttonUp(0);
 
     Terra.validates.element('draws lines');

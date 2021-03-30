@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated Jest command
+
 ## 4.42.0 - (February 2, 2021)
 
 * Changed
@@ -10,8 +15,8 @@
 ## 4.41.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 4.40.0 - (December 8, 2020)
 
 * Changed
@@ -36,7 +41,7 @@
 
 * Changed
   * Add missing theme variables
- 
+
 ## 4.35.0 - (August 6, 2020)
 
 * Changed

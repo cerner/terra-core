@@ -5,6 +5,11 @@
 * Changed
  * Update input to be native input when the type is file.
 
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated Jest command
+
 ## 4.11.0 - (February 2, 2021)
 
 * Changed
@@ -14,7 +19,7 @@
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 4.9.0 - (December 8, 2020)
 
 * Changed

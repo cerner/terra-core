@@ -27,31 +27,31 @@ Terra.describeViewports('RadioField', ['tiny', 'large'], () => {
 Terra.describeViewports('RadioField Interactions', ['tiny'], () => {
   it('should display RadioField interactions - valid state', () => {
     browser.url('/raw/tests/terra-form-radio/form-radio/field/controlled-radio-field');
-    browser.waitForVisible('#testing-radio-field');
-    browser.click('[for="website-dept"]');
-    browser.click('[for="ux-dept"]');
-    browser.click('[for="website-dept"]');
-    browser.click('[for="ux-dept"]');
+    $('#testing-radio-field').waitForDisplayed();
+    $('[for="website-dept"]').click();
+    $('[for="ux-dept"]').click();
+    $('[for="website-dept"]').click();
+    $('[for="ux-dept"]').click();
 
     Terra.validates.element('valid state');
   });
 
   it('should display RadioField interactions - valid state with hideRequired', () => {
     browser.url('/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
-    browser.waitForVisible('#testing-radio-field');
-    browser.click('[for="website-dept"]');
-    browser.click('[for="ux-dept"]');
+    $('#testing-radio-field').waitForDisplayed();
+    $('[for="website-dept"]').click();
+    $('[for="ux-dept"]').click();
 
     Terra.validates.element('valid state with hideRequired');
   });
 
   it('should display RadioField Interactions - invalid state with hideRequired', () => {
     browser.url('/raw/tests/terra-form-radio/form-radio/field/hide-required-invalid-radio-field');
-    browser.waitForVisible('#testing-radio-field');
-    browser.click('[for="website-dept"]');
-    browser.click('[for="ux-dept"]');
-    browser.click('[for="website-dept"]');
-    browser.click('[for="ux-dept"]');
+    $('#testing-radio-field').waitForDisplayed();
+    $('[for="website-dept"]').click();
+    $('[for="ux-dept"]').click();
+    $('[for="website-dept"]').click();
+    $('[for="ux-dept"]').click();
 
     Terra.validates.element('invalid state with hideRequired');
   });

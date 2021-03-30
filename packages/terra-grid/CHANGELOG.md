@@ -2,11 +2,17 @@
 
 ## Unreleased
 
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated Jest command
+  * Updated screenshots with elements that are out of bound
+
 ## 6.27.0 - (January 5, 2021)
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 6.26.0 - (December 8, 2020)
 
 * Changed
