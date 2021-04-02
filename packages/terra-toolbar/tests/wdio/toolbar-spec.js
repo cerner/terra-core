@@ -18,6 +18,17 @@ Terra.describeViewports('Toolbar', ['tiny'], () => {
     browser.url('/raw/tests/terra-toolbar/toolbar/center-align-toolbar');
     Terra.validates.element('center align');
   });
+
+  describe('Conditional Toolbar', () => {
+    it('displays two buttons', () => {
+      browser.url('/raw/tests/terra-toolbar/toolbar/conditional-toolbar');
+      Terra.validates.element('both buttons');
+    });
+    it('displays one button', () => {
+      $('#button-2').click();
+      Terra.validates.element('conditional render');
+    });
+  });
 });
 
 Terra.describeViewports('Toolbar', ['tiny', 'medium', 'large'], () => {
