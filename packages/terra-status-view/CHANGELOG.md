@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fix glyph scrollbar appearing when there is enough room to display.
+
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Upgrade to terra-functional-testing
