@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.42.0 - (April 6, 2021)
+
 * Fixed
   * Fix glyph scrollbar appearing when there is enough room to display.
 

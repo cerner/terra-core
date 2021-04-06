@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.3.0 - (April 6, 2021)
+
 * Changed
   * Upgrade tests to terra-functional-testing and WebDriverIO v6
   * Updated Jest command

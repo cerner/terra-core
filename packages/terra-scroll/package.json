@@ -1,7 +1,7 @@
 {
   "name": "terra-scroll",
   "main": "lib/Scroll.js",
-  "version": "2.30.0",
+  "version": "2.31.0",
   "description": "The terra-scroll is a content view that hides data accessible with scrolling and provides a refCallback.",
   "repository": {
     "type": "git",
@@ -37,9 +37,9 @@
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
     "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && npx wdio",
-    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio",
-    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio",
+    "wdio-default": "cd ../.. && terra wdio",
+    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }
