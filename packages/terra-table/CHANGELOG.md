@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade to terra-functional-testing
+  * Updated Jest command
+
 ## 4.23.0 - (March 9, 2021)
 
 * Changed

@@ -8,9 +8,13 @@ branches:
 cache:
   directories:
     - travis-build
+    - docker_images
 before_install:
   # Clean install on any new build
   - npm run clean
+before_script:
+  # Load Docker Cache
+  - docker load -i docker_images/images.tar || true
 jobs:
   include:
     - stage: danger lint jest and compile
@@ -24,6 +28,10 @@ jobs:
         - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/default
         - npm run compile:lowlight -- --output-path $TRAVIS_BUILD_DIR/travis-build/lowlight
         - npm run compile:fusion -- --output-path $TRAVIS_BUILD_DIR/travis-build/fusion
+        # Prime the docker cache
+        - docker-compose --file ./node_modules/@cerner/terra-functional-testing/lib/docker/docker-compose.yml pull
+        # Save docker cache
+        - docker save -o docker_images/images.tar $(docker images -a -q)
     # Default - Split out all the themes to not eat up all the travis executors at once.
 
     - stage: tiny & medium
@@ -33,39 +41,32 @@ jobs:
       # Rely on the cache for node_modules.. this won't work for any node modules in the packages dir but works for running wdio
       install: skip
       script:
-        # we start up our own standalone chrome instance because the Selenium Docker Service doesn't seem to work here.
-        - docker-compose up -d standalone-chrome-travis
         # using the travis env section to set env variables seems to break cache
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=tiny npm run wdio-default
     - name: tiny lowlight-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=tiny npm run wdio-lowlight
     - name: tiny fusion-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=tiny npm run wdio-fusion
     - name: medium default-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=medium npm run wdio-default
     - name: medium lowlight-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=medium npm run wdio-lowlight
     - name: medium fusion-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=medium npm run wdio-fusion
 
     - stage: small & enormous
@@ -73,37 +74,31 @@ jobs:
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=small npm run wdio-default
     - name: small lowlight-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=small npm run wdio-lowlight
     - name: small fusion-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=small npm run wdio-fusion
     - name: enormous default-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=enormous npm run wdio-default
     - name: enormous lowlight-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=enormous npm run wdio-lowlight
     - name: enormous fusion-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=enormous npm run wdio-fusion
 
     - stage: large & huge
@@ -111,37 +106,31 @@ jobs:
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=large npm run wdio-default
     - name: large lowlight-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=large npm run wdio-lowlight
     - name: large fusion-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=large npm run wdio-fusion
     - name: huge default-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/default FORM_FACTOR=huge npm run wdio-default
     - name: huge lowlight-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/lowlight FORM_FACTOR=huge npm run wdio-lowlight
     - name: huge fusion-theme
       before_install: skip
       install: skip
       script:
-        - docker-compose up -d standalone-chrome-travis
         - SITE=$TRAVIS_BUILD_DIR/travis-build/fusion FORM_FACTOR=huge npm run wdio-fusion
 
     - stage: publish & deploy

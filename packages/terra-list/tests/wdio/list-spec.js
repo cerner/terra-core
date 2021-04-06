@@ -2,20 +2,20 @@ Terra.describeViewports('List', ['medium'], () => {
   it('should display default List', () => {
     browser.url('/raw/tests/terra-list/list/list');
 
-    Terra.validates.element('default');
+    Terra.validates.element('list');
   });
 
   describe('ListItem', () => {
     before(() => browser.url('/raw/tests/terra-list/list/list-item'));
 
     it('should display default ListItem', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('item');
     });
 
     it('should Hover on ListItem', () => {
-      browser.moveToObject('#selectable-item');
+      $('#selectable-item').moveTo();
 
-      Terra.validates.element('hover');
+      Terra.validates.element('list item');
     });
   });
 
@@ -23,7 +23,7 @@ Terra.describeViewports('List', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-list/list/list-section'));
 
     it('should display ListSection', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('section');
     });
   });
 
@@ -31,7 +31,7 @@ Terra.describeViewports('List', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-list/list/list-subsection'));
 
     it('should display ListSubsection', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('subsection');
     });
   });
 
@@ -39,7 +39,7 @@ Terra.describeViewports('List', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-list/list/list-section-header'));
 
     it('should display ListSectionHeader', () => {
-      Terra.validates.element('default');
+      Terra.validates.element('section header');
     });
   });
 
@@ -47,7 +47,7 @@ Terra.describeViewports('List', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-list/list/list-subsection-header'));
 
     it('should display ListSubsectionHeader', () => {
-      Terra.validates.element('ListSubsectionHeader');
+      Terra.validates.element('subsection header');
     });
   });
 });
