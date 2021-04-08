@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.21.0 - (April 6, 2021)
+
 * Fixed
   * Fix to remove extra padding due to `null` children.
 

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.43.0 - (April 6, 2021)
+
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Updated to use terra-functional-testing
