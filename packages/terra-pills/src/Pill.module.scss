@@ -1,0 +1,103 @@
+:local {
+  .pill-container {
+    background-color: #fff;
+    border: 1px solid #868a8c;
+    border-radius: 0.85714rem;
+    display: inline-flex;
+    line-height: 1.16667;
+    margin: 0.35714rem;
+    outline: none;
+
+    &.is-focusable {
+      &[data-terra-pills-show-focus-styles='true']:focus {
+        outline: 2px dashed #000;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .pill-label {
+    border-radius: 0.78571rem;
+    color: #4d5153;
+    display: inline-block;
+    font-size: 0.85714rem;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 0.28571rem;
+    padding-left: 0.71428rem;
+    padding-right: 0.71428rem;
+    padding-top: 0.28571rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.is-selectable {
+      &:hover {
+        background-color: #dedfe0;
+      }
+  
+      &:active {
+        background-color: #bcbfc0;
+      }
+    }
+
+    &.is-removable {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      padding-right: 0.28571rem;
+    }
+  }
+
+  .remove-button {
+    border-bottom-right-radius: 0.78571rem;
+    border-left: 1px solid #000;
+    border-top-right-radius: 0.78571rem;
+    color: #4d5153;
+    padding-left: 0.35714rem;
+    padding-right: 0.71428rem;
+
+    &.is-removable {
+      &:hover {
+        background-color: #dedfe0;
+      }
+  
+      &:active {
+        background-color: #bcbfc0;
+      }
+    }
+  }
+
+  .pill-list {
+    border: 1px solid #000;
+    visibility: hidden;
+    width: 200px;
+  }
+
+  .roll-up-pill {
+    background-color: #fff;
+    border: 1px solid #868a8c;
+    border-radius: 0.85714rem;
+    color: #4d5153;
+    display: inline-block;
+    font-size: 0.85714rem;
+    line-height: 1.16667;
+    margin: 0.35714rem;
+    outline: none;
+    padding-bottom: 0.28571rem;
+    padding-left: 0.71428rem;
+    padding-right: 0.71428rem;
+    padding-top: 0.28571rem;
+
+    &[data-terra-pills-show-focus-styles='true']:focus {
+      outline: 2px dashed #000;
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background-color: #dedfe0;
+    }
+
+    &:active {
+      background-color: #bcbfc0;
+    }
+  }
+}
