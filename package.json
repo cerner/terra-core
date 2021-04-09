@@ -110,9 +110,5 @@
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1",
     "webpack-merge": "^4.1.2"
-  },
-  "dependencies": {
-    "@cerner/jest-config-terra": "^1.0.0",
-    "@cerner/terra-aggregate-translations": "^2.0.1"
   }
 }
