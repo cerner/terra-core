@@ -1,21 +1,11 @@
 /* eslint-disable */
 import React from 'react';
 import classNames from 'classnames';
-import classNamesBind from 'classnames/bind';
-import ThemeContext from 'terra-theme-context';
 import IconBase from '../IconBase';
-import styles from '../clinical-lowlight-theme/IconPharmacyReject.module.scss';
-
-const cx = classNamesBind.bind(styles);
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
-  const theme = React.useContext(ThemeContext);
   const iconClassNames = classNames(
-    cx(
-      'IconPharmacyRejectLowLight',
-      theme.className,
-    ),
     customProps.className,
   );
 
