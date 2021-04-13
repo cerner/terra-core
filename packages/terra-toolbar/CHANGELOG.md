@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Added missing reference screenshots.
+
 ## 1.21.0 - (April 6, 2021)
 
 * Fixed
@@ -20,7 +23,7 @@
 ## 1.19.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
+  * Fixed broken links in documentation.
 
 ## 1.18.0 - (December 8, 2020)
 
