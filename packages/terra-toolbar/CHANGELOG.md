@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.22.0 - (April 13, 2021)
+
 * Fixed
   * Added missing reference screenshots.
 
