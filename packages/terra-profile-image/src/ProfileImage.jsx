@@ -63,7 +63,7 @@ const ProfileImage = (props) => {
   /* eslint-enable react/forbid-dom-props */
 
   if (props.src) {
-    return (<div><TerraImage placeholder={placeholderImage} {...props} /></div>);
+    return (<div className={cx('image-container')}><TerraImage placeholder={placeholderImage} {...props} /></div>);
   }
   return placeholderImage;
 };
