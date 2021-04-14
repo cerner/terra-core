@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 3.43.0 - (April 13, 2021)
+
+* Changed
+  * Bumped `one-cerner-style-icons` to v1.38.0
+
+## 3.42.0 - (April 6, 2021)
+
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Upgrade tests to terra-functional-testing and WebDriverIO v6

@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 3.50.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.49.0 - (April 6, 2021)
+
 * Changed
   * Removed unnecessary `wdio.conf.js` file
   * Upgrade tests to terra-functional-testing and WebDriverIO v6

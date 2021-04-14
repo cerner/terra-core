@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 4.13.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.12.0 - (April 6, 2021)
+
 * Changed
  * Update input to be native input when the type is file.
 

@@ -58,6 +58,7 @@ const IconAll = () => (
     <Icon.IconCommit className={cx(['icon'])} />
     <Icon.IconComplete className={cx(['icon'])} />
     <Icon.IconCompose className={cx(['icon'])} />
+    <Icon.IconConfidential className={cx(['icon'])} />
     <Icon.IconConsultInstructionsForUse className={cx(['icon'])} />
     <Icon.IconCritical className={cx(['icon'])} />
     <Icon.IconCriticalInverse className={cx(['icon', 'icon-inverse'])} />
@@ -262,6 +263,10 @@ const IconAll = () => (
     <Icon.IconSpinner className={cx(['icon'])} isSpin={false} />
     <Icon.IconSquareSymbol className={cx(['icon'])} />
     <Icon.IconSquareSymbolLight className={cx(['icon'])} />
+    <Icon.IconStatusPositive className={cx(['icon'])} />
+    <Icon.IconStatusPositiveWhite className={cx(['icon'])} />
+    <Icon.IconStatusPositiveLowLight className={cx(['icon'])} />
+    <Icon.IconStatusPositiveWhiteLowLight className={cx(['icon'])} />
     <Icon.IconStartPresenting className={cx(['icon'])} />
     <Icon.IconStopPresenting className={cx(['icon'])} />
     <Icon.IconSuccess className={cx(['icon'])} />
