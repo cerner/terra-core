@@ -49,6 +49,7 @@ import IconComment from './icon/IconComment';
 import IconCommit from './icon/IconCommit';
 import IconComplete from './icon/IconComplete';
 import IconCompose from './icon/IconCompose';
+import IconConfidential from './icon/IconConfidential';
 import IconConsultInstructionsForUse from './icon/IconConsultInstructionsForUse';
 import IconCritical from './icon/IconCritical';
 import IconCriticalInverse from './icon/IconCriticalInverse';
@@ -253,6 +254,10 @@ import IconSortDescending from './icon/IconSortDescending';
 import IconSpinner from './icon/IconSpinner';
 import IconSquareSymbol from './icon/IconSquareSymbol';
 import IconSquareSymbolLight from './icon/IconSquareSymbolLight';
+import IconStatusPositive from './icon/IconStatusPositive';
+import IconStatusPositiveWhite from './icon/IconStatusPositiveWhite';
+import IconStatusPositiveLowLight from './icon/IconStatusPositiveLowLight';
+import IconStatusPositiveWhiteLowLight from './icon/IconStatusPositiveWhiteLowLight';
 import IconStartPresenting from './icon/IconStartPresenting';
 import IconStopPresenting from './icon/IconStopPresenting';
 import IconSuccess from './icon/IconSuccess';
@@ -349,6 +354,7 @@ const Icons = {
   IconCommit,
   IconComplete,
   IconCompose,
+  IconConfidential,
   IconConsultInstructionsForUse,
   IconCritical,
   IconCriticalInverse,
@@ -553,6 +559,10 @@ const Icons = {
   IconSpinner,
   IconSquareSymbol,
   IconSquareSymbolLight,
+  IconStatusPositive,
+  IconStatusPositiveWhite,
+  IconStatusPositiveLowLight,
+  IconStatusPositiveWhiteLowLight,
   IconStartPresenting,
   IconStopPresenting,
   IconSuccess,
