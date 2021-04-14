@@ -19,7 +19,7 @@ const CollapsiblePillListSinglePill = () => {
       <PillList
         ariaLabel="Pill Container"
         isCollapsed={isCollapsed}
-        rollUpPillOnClick={handleRollUpPillOnClick}
+        rollUpPillOnTrigger={handleRollUpPillOnClick}
       >
         <Pill
           label="Demo"

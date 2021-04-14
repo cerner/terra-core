@@ -19,7 +19,7 @@ const CollapsiblePillListFirstEllipsesPill = () => {
       <PillList
         ariaLabel="Pill Container"
         isCollapsed={isCollapsed}
-        rollUpPillOnClick={handleRollUpPillOnClick}
+        rollUpPillOnTrigger={handleRollUpPillOnClick}
       >
         <Pill
           label="Very Long Label which should show ellipses"

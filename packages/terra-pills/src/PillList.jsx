@@ -23,14 +23,14 @@ const propTypes = {
    */
   isCollapsed: PropTypes.bool,
   /**
-   * Callback function triggered on click of the roll up pill
+   * Callback function triggered on click/key press of the roll up pill
    */
-  rollUpPillOnClick: PropTypes.func,
+  rollUpPillOnTrigger: PropTypes.func,
 };
 
 const defaultProps = {
   isCollapsed: false,
-  rollUpPillOnClick: undefined,
+  rollUpPillOnTrigger: undefined,
 };
 
 const PillList = (props) => {
@@ -38,22 +38,22 @@ const PillList = (props) => {
     ariaLabel,
     children,
     isCollapsed,
-    rollUpPillOnClick,
+    rollUpPillOnTrigger,
   } = props;
 
   const theme = React.useContext(ThemeContext);
   const pillListRef = useRef();
   const rollUpPillRef = useRef();
   const [rollUpCount, setRollUpCount] = useState(0);
-  const [isRollUpPillRequired, setIsRollUpPillRequired] = useState(true);
 
   const handleRollUp = () => {
+    rollUpPillRef.current.removeAttribute('style');
     let pillListHeight = pillListRef.current.clientHeight;
     const rollUpPillStyles = rollUpPillRef.current.currentStyle || window.getComputedStyle(rollUpPillRef.current);
     const pillHeight = rollUpPillRef.current.offsetHeight + Math.round(parseFloat(rollUpPillStyles.marginTop)) + Math.round(parseFloat(rollUpPillStyles.marginBottom));
 
     if (pillListHeight <= pillHeight) {
-      setIsRollUpPillRequired(false);
+      rollUpPillRef.current.style.display = 'none';
       return;
     }
 
@@ -66,11 +66,12 @@ const PillList = (props) => {
       hiddenPillCounter += 1;
       pillListHeight = pillListRef.current.clientHeight;
     }
-    setIsRollUpPillRequired(true);
     setRollUpCount(hiddenPillCounter);
   };
 
   const handleExpansion = () => {
+    rollUpPillRef.current.style.display = 'none';
+
     if (rollUpCount === 0) {
       return;
     }
@@ -83,7 +84,6 @@ const PillList = (props) => {
       index -= 1;
       hiddenPillCounter -= 1;
     }
-    setIsRollUpPillRequired(false);
     setRollUpCount(hiddenPillCounter);
   };
 
@@ -99,7 +99,7 @@ const PillList = (props) => {
   const handleKeyDown = (event) => {
     rollUpPillRef.current.setAttribute('data-terra-pills-show-focus-styles', 'true');
     if (event.keyCode === KEY_RETURN || event.keyCode === KEY_SPACE) {
-      handleExpansion();
+      rollUpPillOnTrigger();
     }
   };
 
@@ -107,26 +107,23 @@ const PillList = (props) => {
     rollUpPillRef.current.setAttribute('data-terra-pills-show-focus-styles', 'false');
   };
 
-  const handleRollUpPillOnClick = () => {
-    rollUpPillOnClick();
+  const handleRollUpPillOnTrigger = () => {
+    rollUpPillOnTrigger();
   };
 
-  let rollUpPill;
-  if (isCollapsed && isRollUpPillRequired) {
-    rollUpPill = (
-      <div
-        className={cx(['roll-up-pill'])}
-        onClick={handleRollUpPillOnClick}
-        onKeyDown={handleKeyDown}
-        onMouseDown={handleMouseDown}
-        ref={rollUpPillRef}
-        role="button"
-        tabIndex="0"
-      >
-        {`${rollUpCount} more ...`}
-      </div>
-    );
-  }
+  const rollUpPill = (
+    <div
+      className={cx(['roll-up-pill'])}
+      onClick={handleRollUpPillOnTrigger}
+      onKeyDown={handleKeyDown}
+      onMouseDown={handleMouseDown}
+      ref={rollUpPillRef}
+      role="button"
+      tabIndex="0"
+    >
+      {`${rollUpCount} more...`}
+    </div>
+  );
 
   const PillListClassNames = cx([
     'pill-list',
