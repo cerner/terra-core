@@ -2,15 +2,15 @@
 
 ## Unreleased
 
+* Changed
+  * Update input to fallback to native defaults when the type is date, datetime-local, month, time, week, color, file, range, checkbox, radio, button, reset, or submit as they were never tested or originally intended to be supported.
+
 ## 4.13.0 - (April 13, 2021)
 
 * Changed
   * Minor dependency version bump
 
 ## 4.12.0 - (April 6, 2021)
-
-* Changed
- * Update input to be native input when the type is file.
 
 * Changed
   * Upgrade tests to terra-functional-testing and WebDriverIO v6
