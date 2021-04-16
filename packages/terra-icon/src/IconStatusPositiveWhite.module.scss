@@ -1,0 +1,12 @@
+@import './orion-fusion-theme/IconStatusPositiveWhite.module';
+@import './clinical-lowlight-theme/IconStatusPositiveWhite.module';
+
+/* stylelint-disable selector-class-pattern */
+:local {
+  .IconStatusPositiveWhite {
+    path {
+      fill: var(--terra-icon-status-positive-white-path-fill, #fff);
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */
