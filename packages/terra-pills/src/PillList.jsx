@@ -4,6 +4,7 @@ import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Pill.module.scss';
 import Pill from './Pill';
 
@@ -133,9 +134,12 @@ const PillList = (props) => {
   return (
     <div
       aria-label={ariaLabel}
+      aria-live="polite"
+      aria-relevant="removals"
       className={PillListClassNames}
       ref={pillListRef}
     >
+      <VisuallyHiddenText text={`Contains ${children.length} pills`} />
       {children}
       {rollUpPill}
     </div>

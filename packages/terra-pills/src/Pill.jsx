@@ -8,6 +8,7 @@ import {
   KEY_BACK_SPACE,
 } from 'keycode-js';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import IconClear from 'terra-icon/lib/icon/IconClear';
 import styles from './Pill.module.scss';
 
@@ -30,6 +31,10 @@ const propTypes = {
    * Callback to expose pill element's ref for popup placement.
    */
   refCallback: PropTypes.func,
+  /**
+   * Role attribute value to be assigned to the pill
+   */
+  role: PropTypes.string,
 };
 
 const defaultProps = {
@@ -80,20 +85,26 @@ const Pill = (props) => {
     pillProps.tabIndex = '0';
     pillProps.onKeyDown = handleOnKeyDown;
     pillProps.onMouseDown = handleOnMouseDown;
+    pillProps.role = 'button';
   }
 
   const pillButtonProps = {};
   if (onSelect) {
     pillButtonProps.onClick = handleOnClick;
-    pillButtonProps.role = 'button';
-  } else {
-    pillButtonProps.role = 'note';
   }
 
   const removeButtonProps = {};
   if (onRemove) {
     removeButtonProps.onClick = handleOnRemove;
-    removeButtonProps.role = 'button';
+  }
+
+  let pillInteractionHint;
+  if (onSelect && onRemove) {
+    pillInteractionHint = 'Pill is selectable via Space Bar or Enter key and removable via Delete or Back Space key';
+  } else if (onSelect) {
+    pillInteractionHint = 'Pill is selectable via Space Bar or Enter key';
+  } else if (onRemove) {
+    pillInteractionHint = 'Pill is removable via Delete or Back Space key';
   }
 
   const theme = React.useContext(ThemeContext);
@@ -113,28 +124,27 @@ const Pill = (props) => {
   ]);
 
   return (
-    <>
+    <div
+      {...pillProps}
+      className={pillClassNames}
+      ref={pillRef}
+    >
       <div
-        {...pillProps}
-        className={pillClassNames}
-        ref={pillRef}
+        {...pillButtonProps}
+        className={pillLabelClassNames}
       >
-        <div
-          {...pillButtonProps}
-          className={pillLabelClassNames}
-        >
-          {label}
-        </div>
-        {onRemove && (
-          <div
-            {...removeButtonProps}
-            className={removeButtonClassNames}
-          >
-            <IconClear height="0.57143rem" width="0.57143rem" />
-          </div>
-        )}
+        {label}
       </div>
-    </>
+      {onRemove && (
+        <div
+          {...removeButtonProps}
+          className={removeButtonClassNames}
+        >
+          <IconClear height="0.57143rem" width="0.57143rem" />
+        </div>
+      )}
+      {pillInteractionHint && <VisuallyHiddenText text={pillInteractionHint} />}
+    </div>
   );
 };
 
