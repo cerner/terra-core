@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Removed extra space from the container div.
+  * Removed container div.
 
 ## 3.38.0 - (April 6, 2021)
 
