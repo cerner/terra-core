@@ -13,7 +13,7 @@ const getInputTypeExamples = (arr) => {
     inputTypeExamples.push((
       <div className={cx('content-wrapper')}>
         <label htmlFor={`html-original-${arr[i]}-input`}>{`Input type=${arr[i]}`}</label>
-        <Input name={`html-original-${arr[i]}-input`} type={arr[i]} />
+        <Input name={`html-original-${arr[i]}-input`} type={arr[i]} ariaLabel={`Input type=${arr[i]}`} />
       </div>
     ));
   }
