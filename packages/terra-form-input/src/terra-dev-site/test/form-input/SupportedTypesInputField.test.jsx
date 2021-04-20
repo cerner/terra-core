@@ -36,7 +36,6 @@ class SupportedTypesInputField extends React.Component {
             inputAttrs={{
               name: `supported-${arr[i]}-input`,
               type: arr[i],
-              ariaLabel: `Input type=${arr[i]}`,
             }}
             label={`Input type=${arr[i]}`}
           />

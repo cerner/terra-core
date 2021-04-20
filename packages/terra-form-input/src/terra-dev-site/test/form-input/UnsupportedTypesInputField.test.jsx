@@ -34,9 +34,8 @@ class UnsupportedTypesInputField extends React.Component {
             isIncomplete={this.state.isIncomplete}
             required={this.state.required}
             inputAttrs={{
-              name: `html-original-${arr[i]}-input`,
+              id: `html-original-${arr[i]}-input`,
               type: arr[i],
-              ariaLabel: `Input type=${arr[i]}`,
             }}
             label={`Input type=${arr[i]}`}
           />

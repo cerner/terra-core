@@ -28,17 +28,10 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
   });
 
   it('should display Form Input supported types', () => {
-    browser.url('/tests/terra-form-input/form-input/supported-types-input');
+    browser.url('raw/tests/terra-form-input/form-input/supported-types-input');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
     Terra.validates.element('supported types');
-  });
-
-  it('should display Form Input unsupported types', () => {
-    browser.url('/tests/terra-form-input/form-input/unsupported-types-input');
-    $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
-
-    Terra.validates.element('unsupported types');
   });
 
   describe('Enabled', () => {
@@ -148,13 +141,6 @@ Terra.describeViewports('Form-Input', ['tiny', 'large'], () => {
       $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
       Terra.validates.screenshot('input field supported types');
-    });
-
-    it('should display InputField unsupported types', () => {
-      browser.url('raw/tests/terra-form-input/form-input/unsupported-types-input-field');
-      $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
-
-      Terra.validates.element('input field unsupported types');
     });
   });
 });
