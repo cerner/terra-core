@@ -5,7 +5,7 @@ import styles from './common/Input.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-const supportedTypes = [undefined, 'text', 'number', 'password', 'email', 'search', 'tel', 'url', 'hidden'];
+const supportedTypes = ['text', 'number', 'password', 'email', 'search', 'tel', 'url', 'hidden'];
 
 class SupportedTypesInputField extends React.Component {
   constructor() {

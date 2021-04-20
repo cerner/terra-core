@@ -127,9 +127,9 @@ class Input extends React.Component {
     const theme = this.context;
 
     // unsupportedTypes: 'date', 'datetime-local', 'month', 'time', 'week', 'color', 'file', 'range', 'checkbox', 'radio', 'button', 'reset', 'submit'
-    const supportedTypes = [undefined, 'text', 'number', 'password', 'email', 'search', 'tel', 'url', 'hidden'];
+    const supportedTypes = ['text', 'number', 'password', 'email', 'search', 'tel', 'url', 'hidden'];
 
-    const cxSupportedTypeClassNames = supportedTypes.includes(type) && cx(
+    const cxSupportedTypeClassNames = (type === undefined || supportedTypes.includes(type)) && cx(
       'form-input',
       { 'form-error': isInvalid },
       { 'form-incomplete': (isIncomplete && required && !isInvalid) },
