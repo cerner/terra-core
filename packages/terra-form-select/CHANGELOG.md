@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Update swedish translations.
+
 ## 6.28.0 - (April 13, 2021)
 
 * Changed

@@ -114,7 +114,7 @@ describe('InputField', () => {
   });
 
   it('should render a InputField with type specified by type attribute when both type attribute and InputAttributes are given', () => {
-    const type = 'Text';
+    const type = 'text';
     const textarea = (
       <InputField
         inputId="test-input"
