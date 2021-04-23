@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Update input to fallback to native defaults when the type is date, datetime-local, month, time, week, color, file, range, checkbox, radio, button, reset, or submit as they were never tested or originally intended to be supported.
+
 ## 4.13.0 - (April 13, 2021)
 
 * Changed
