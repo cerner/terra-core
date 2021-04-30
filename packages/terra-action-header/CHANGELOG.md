@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * migrate doc to terra-core-docs
+  * remove unnecessary dependencies
+
 ## 2.66.0 - (April 13, 2021)
 
 * Changed
