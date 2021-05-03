@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@cerner/terra-core-docs",
-  "version": "1.10.0",
+  "version": "0.0.0",
   "description": "Contains documentation for packages in the terra-core monorepo",
   "main": "index.js",
   "publishConfig": {
