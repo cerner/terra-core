@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.39.0 - (May 4, 2021)
+
 * Changed
   * Removed container div.
 
