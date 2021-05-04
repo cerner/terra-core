@@ -1,11 +1,4 @@
 {
-  "command": {
-    "publish": {
-      "ignoreChanges": [
-        "packages/terra-core-docs/**"
-      ]
-    }
-  },
   "packages": [
     "packages/*"
   ],
