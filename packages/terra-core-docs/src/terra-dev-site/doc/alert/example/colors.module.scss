@@ -2,21 +2,21 @@
 @import './orion-fusion-theme/colors.module';
 
 :root {
-  --terra-alert-attention-example-color: #fa0000;
-  --terra-alert-help-example-color: #b961cf;
-  --terra-alert-dismiss-example-color: #ffa500;
+  --terra-core-docs-attention-example-color: #fa0000;
+  --terra-core-docs-help-example-color: #b961cf;
+  --terra-core-docs-dismiss-example-color: #ffa500;
 }
 
 :local {
   .my-app-alert-attention-example {
-    color: var(--terra-alert-attention-example-color, #fa0000);
+    color: var(--terra-core-docs-attention-example-color, #fa0000);
   }
 
   .my-app-alert-help-example {
-    color: var(--terra-alert-help-example-color, #b961cf);
+    color: var(--terra-core-docs-help-example-color, #b961cf);
   }
 
   .my-app-alert-dismiss-example {
-    color: var(--terra-alert-dismiss-example-color, #ffa500);
+    color: var(--terra-core-docs-dismiss-example-color, #ffa500);
   }
 }
