@@ -41,10 +41,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "lodash.uniqueid": "^4.0.1",
-    "prop-types": "^15.5.8",
-    "terra-icon": "^3.43.0"
-  },
-  "devDependencies": {
-    "terra-icon": "^3.14.0"
+    "prop-types": "^15.5.8"
   }
 }

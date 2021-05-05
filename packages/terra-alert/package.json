@@ -32,8 +32,7 @@
     "terra-button": "^3.55.0",
     "terra-icon": "^3.43.0",
     "terra-responsive-element": "^5.30.0",
-    "terra-theme-context": "^1.0.0",
-    "terra-toggle": "^3.46.0"
+    "terra-theme-context": "^1.0.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
