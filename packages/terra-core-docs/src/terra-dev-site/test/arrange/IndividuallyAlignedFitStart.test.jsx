@@ -1,10 +1,10 @@
 import React from 'react';
-import Arrange from '../../../Arrange';
+import Arrange from 'terra-arrange';
 import {
-  ArrangeWrapper, IconWrapper, image, simpleText, longText,
+  ArrangeWrapper, IconWrapper, image, simpleText,
 } from './common/examplesetup';
 
-const AlignedAllArrange = () => (
+const IndividuallyAlignedFitStart = () => (
   <div>
     <ArrangeWrapper>
       <Arrange
@@ -18,7 +18,7 @@ const AlignedAllArrange = () => (
     <ArrangeWrapper>
       <Arrange
         id="center"
-        align="center"
+        alignFitStart="center"
         fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
@@ -28,7 +28,7 @@ const AlignedAllArrange = () => (
     <ArrangeWrapper>
       <Arrange
         id="bottom"
-        align="bottom"
+        alignFitStart="bottom"
         fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
@@ -38,23 +38,13 @@ const AlignedAllArrange = () => (
     <ArrangeWrapper>
       <Arrange
         id="stretch"
-        align="stretch"
+        alignFitStart="stretch"
         fitStart={image}
         fill={simpleText}
-        fitEnd={<IconWrapper />}
-      />
-    </ArrangeWrapper>
-
-    <ArrangeWrapper>
-      <Arrange
-        id="icon-stretch"
-        align="stretch"
-        fitStart={<IconWrapper />}
-        fill={longText}
         fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
   </div>
 );
 
-export default AlignedAllArrange;
+export default IndividuallyAlignedFitStart;

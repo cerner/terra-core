@@ -1,5 +1,5 @@
 import React from 'react';
-import Arrange from '../../../Arrange';
+import Arrange from 'terra-arrange';
 import { ArrangeWrapper, longWordText } from './common/examplesetup';
 
 const AlignedAllArrange = () => (

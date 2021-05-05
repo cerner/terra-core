@@ -1,12 +1,15 @@
 import React from 'react';
-import Arrange from '../../../Arrange';
-import { ArrangeWrapper, IconWrapper, simpleText } from './common/examplesetup';
+import Arrange from 'terra-arrange';
+import {
+  ArrangeWrapper, IconWrapper, image, simpleText,
+} from './common/examplesetup';
 
-const AlignedFitEndFillArrange = () => (
+const IndividuallyAlignedFitEnd = () => (
   <div>
     <ArrangeWrapper>
       <Arrange
         id="default"
+        fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
       />
@@ -15,7 +18,8 @@ const AlignedFitEndFillArrange = () => (
     <ArrangeWrapper>
       <Arrange
         id="center"
-        align="center"
+        alignFitEnd="center"
+        fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
       />
@@ -24,7 +28,8 @@ const AlignedFitEndFillArrange = () => (
     <ArrangeWrapper>
       <Arrange
         id="bottom"
-        align="bottom"
+        alignFitEnd="bottom"
+        fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
       />
@@ -33,7 +38,8 @@ const AlignedFitEndFillArrange = () => (
     <ArrangeWrapper>
       <Arrange
         id="stretch"
-        align="stretch"
+        alignFitEnd="stretch"
+        fitStart={image}
         fill={simpleText}
         fitEnd={<IconWrapper />}
       />
@@ -41,4 +47,4 @@ const AlignedFitEndFillArrange = () => (
   </div>
 );
 
-export default AlignedFitEndFillArrange;
+export default IndividuallyAlignedFitEnd;

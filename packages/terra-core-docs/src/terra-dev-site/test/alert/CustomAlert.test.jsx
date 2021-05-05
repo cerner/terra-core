@@ -2,7 +2,7 @@ import React from 'react';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import classNames from 'classnames/bind';
 import Alert from 'terra-alert';
-import styles from '../../doc/example/colors.module.scss';
+import styles from '../../doc/alert/example/colors.module.scss';
 
 const cx = classNames.bind(styles);
 

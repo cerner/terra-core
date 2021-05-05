@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
-import Alert from '../../../Alert';
+import Alert from 'terra-alert';
 
 class AlertActionButton extends React.Component {
   constructor(props) {

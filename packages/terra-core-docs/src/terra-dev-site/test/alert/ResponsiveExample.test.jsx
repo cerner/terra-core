@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
-import Alert from '../../../Alert';
+import Alert from 'terra-alert';
 import styles from './AlertTestCommon.scss';
 
 const cx = classNames.bind(styles);

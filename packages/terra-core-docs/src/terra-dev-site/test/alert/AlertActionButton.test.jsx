@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from 'terra-button';
-import Alert from '../../../Alert';
+import Alert from 'terra-alert';
 
 const AlertActionButton = () => {
   const [actionButtonClickCount, setActionButtonClickCount] = useState(0);

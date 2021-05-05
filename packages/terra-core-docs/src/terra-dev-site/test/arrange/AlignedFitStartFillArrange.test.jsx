@@ -1,50 +1,44 @@
 import React from 'react';
-import Arrange from '../../../Arrange';
-import {
-  ArrangeWrapper, IconWrapper, image, simpleText,
-} from './common/examplesetup';
+import Arrange from 'terra-arrange';
+import { ArrangeWrapper, image, simpleText } from './common/examplesetup';
 
-const IndividuallyAlignedFill = () => (
+const AlignedFitStartFillArrange = () => (
   <div>
     <ArrangeWrapper>
       <Arrange
         id="default"
         fitStart={image}
         fill={simpleText}
-        fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
 
     <ArrangeWrapper>
       <Arrange
         id="center"
-        alignFill="center"
+        align="center"
         fitStart={image}
         fill={simpleText}
-        fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
 
     <ArrangeWrapper>
       <Arrange
         id="bottom"
-        alignFill="bottom"
+        align="bottom"
         fitStart={image}
         fill={simpleText}
-        fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
 
     <ArrangeWrapper>
       <Arrange
         id="stretch"
-        alignFill="stretch"
+        align="stretch"
         fitStart={image}
         fill={simpleText}
-        fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
   </div>
 );
 
-export default IndividuallyAlignedFill;
+export default AlignedFitStartFillArrange;
