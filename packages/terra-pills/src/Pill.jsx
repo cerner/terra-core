@@ -111,16 +111,18 @@ const Pill = (props) => {
   const pillClassNames = cx([
     'pill-container',
     { 'is-focusable': !!onSelect || !!onRemove },
+    { 'is-selectable': !!onSelect },
+    { 'is-selectable-and-removable': !!onSelect && !!onRemove },
     theme.className,
   ]);
   const pillLabelClassNames = cx([
     'pill-label',
     { 'is-selectable': !!onSelect },
     { 'is-removable': !!onRemove },
+    { 'is-selectable-and-removable': !!onSelect && !!onRemove },
   ]);
   const removeButtonClassNames = cx([
     'remove-button',
-    { 'is-removable': !!onRemove },
   ]);
 
   return (
@@ -140,7 +142,7 @@ const Pill = (props) => {
           {...removeButtonProps}
           className={removeButtonClassNames}
         >
-          <IconClear height="0.57143rem" width="0.57143rem" />
+          <IconClear className={cx('clear-icon')} />
         </div>
       )}
       {pillInteractionHint && <VisuallyHiddenText text={pillInteractionHint} />}
