@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import TerraImage from 'terra-image';
@@ -49,13 +50,16 @@ const isOnlyNumbers = toTest => !(/\D/).test(toTest);
 const ProfileImage = (props) => {
   const theme = React.useContext(ThemeContext);
   // img tags assume a height attribute of only numbers is in px but CSS does not
-  const fixedHeight = isOnlyNumbers(props.height) ? `${props.height}px` : props.height;
-  const fixedWidth = isOnlyNumbers(props.width) ? `${props.width}px` : props.width;
+  const fixedHeight = isOnlyNumbers(props.height) ? `${props.height}px` : '75px';
+  const fixedWidth = isOnlyNumbers(props.width) ? `${props.width}px` : '75px';
 
   /* eslint-disable react/forbid-dom-props */
   const placeholderImage = (
     <span
-      className={cx('placeholder-images', theme.className)}
+      className={classNames(
+        cx('placeholder-images', props.variant, props.fit, theme.className),
+        props.className,
+      )}
       title={props.alt}
       style={{ height: fixedHeight, width: fixedWidth }}
     />
