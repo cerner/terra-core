@@ -1,0 +1,12 @@
+:local {
+  .test-style-border {
+    border: 10px solid rgb(69, 221, 170);
+    border-radius: 25px;
+    box-sizing: content-box;
+  }
+
+  .test-style-size {
+    height: 100px !important;
+    width: 50px !important;
+  }
+}

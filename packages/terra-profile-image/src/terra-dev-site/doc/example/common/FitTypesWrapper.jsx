@@ -20,6 +20,7 @@ function FitTypesWrapper(WrappedComponent) {
           <select id="fitType" name="fitType" value={this.state.fitType} onChange={this.handleOnSelect}>
             <option value="cover">cover</option>
             <option value="contain">contain</option>
+            <option value="fill">fill</option>
             <option value="scale-down">scale-down</option>
             <option value="none">none</option>
           </select>
