@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 2.67.0 - (May 4, 2021)
+
+* Changed
+  * migrate doc to terra-core-docs
+  * remove unnecessary dependencies
+
 ## 2.66.0 - (April 13, 2021)
 
 * Changed
@@ -31,7 +37,7 @@
   * Removed usage of `FormattedMessage` in favor of `injectIntl`
 
 * Fixed
- * Fixed broken links in documentation.
+  * Fixed broken links in documentation.
 
 ## 2.61.0 - (December 8, 2020)
 

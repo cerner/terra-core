@@ -1,0 +1,22 @@
+@import './clinical-lowlight-theme/colors.module';
+@import './orion-fusion-theme/colors.module';
+
+:root {
+  --terra-core-docs-attention-example-color: #fa0000;
+  --terra-core-docs-help-example-color: #b961cf;
+  --terra-core-docs-dismiss-example-color: #ffa500;
+}
+
+:local {
+  .my-app-alert-attention-example {
+    color: var(--terra-core-docs-attention-example-color, #fa0000);
+  }
+
+  .my-app-alert-help-example {
+    color: var(--terra-core-docs-help-example-color, #b961cf);
+  }
+
+  .my-app-alert-dismiss-example {
+    color: var(--terra-core-docs-dismiss-example-color, #ffa500);
+  }
+}

@@ -60,6 +60,7 @@ props-table
 **/__snapshots__/screen
 **/__snapshots__/latest
 **/__snapshots__/diff
+**/__snapshots__/error
 errorScreenshots
 *table.md
 generated-themes
