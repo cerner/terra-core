@@ -1,6 +1,5 @@
 Cerner Corporation
 - Bharath Banothu [@bbanothu]
-- Bharath Banothu [@bbanothu]
 - Ryan Manuel [@ryanthemanuel]
 - Brett Jankord [@bjankord]
 - Matt Henkes [@mjhenkes]
