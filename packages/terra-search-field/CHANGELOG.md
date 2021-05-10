@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `searchTimeout` to reset for any changes made to the input.
+
 ## 3.67.0 - (April 13, 2021)
 
 * Changed
