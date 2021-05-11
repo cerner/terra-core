@@ -129,6 +129,7 @@ const Pill = (props) => {
     <div
       {...pillProps}
       className={pillClassNames}
+      data-terra-pills-show-focus-styles="true"
       ref={pillRef}
     >
       <div
