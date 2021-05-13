@@ -15,6 +15,7 @@
 
     &.is-focusable {
       &[data-terra-pills-show-focus-styles='true']:focus {
+        border-width: var(--terra-pills-pill-container-border-width-focus, 1px);
         border-color: var(--terra-pills-pill-container-border-color-focus, #868a8c);
         box-shadow: var(--terra-pills-pill-container-box-shadow-focus, none);
         outline: var(--terra-pills-pill-container-outline-focus, 2px dashed #000);
@@ -141,6 +142,7 @@
     padding-top: var(--terra-pills-roll-up-pill-padding-top, 0.28571rem);
 
     &[data-terra-pills-show-focus-styles='true']:focus {
+      border-width: var(--terra-pills-roll-up-pill-border-width-focus, 1px);
       border-color: var(--terra-pills-roll-up-pill-border-color-focus, #868a8c);
       box-shadow: var(--terra-pills-roll-up-pill-box-shadow-focus, none);
       outline: var(--terra-pills-roll-up-pill-outline-focus, 2px dashed #000);
