@@ -64,19 +64,19 @@ describe('Facility', () => {
   it('displays icon Facility', () => {
     browser.url('/raw/tests/terra-avatar/avatar/facility/default-facility');
 
-    Terra.validates.element('icon', { selector: '#default-facility' });
+    Terra.validates.element('facility icon', { selector: '#default-facility' });
   });
 
   it('displays image Facility', () => {
     browser.url('/raw/tests/terra-avatar/avatar/facility/image-facility');
 
-    Terra.validates.element('image', { selector: '#image-facility' });
+    Terra.validates.element('facility image', { selector: '#image-facility' });
   });
 
   it('displays invalid image Facility', () => {
     browser.url('/raw/tests/terra-avatar/avatar/facility/invalid-image-facility');
 
-    Terra.validates.element('invalid image', { selector: '#invalid-image-facility' });
+    Terra.validates.element('facility invalid image', { selector: '#invalid-image-facility' });
   });
 });
 

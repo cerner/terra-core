@@ -17,7 +17,7 @@ Terra.describeViewports('Loading Overlay', ['huge'], () => {
     Terra.validates.element('custom message', { selector: '#terra-LoadingOverlay' });
 
     it('Expect default to have full screen', () => {
-      expect(browser.getAttribute('#terra-LoadingOverlay', 'class')).contains('fullscreen');
+      expect($('#terra-LoadingOverlay')).toHaveAttributeContaining('class', 'fullscreen');
     });
   });
 
@@ -25,7 +25,7 @@ Terra.describeViewports('Loading Overlay', ['huge'], () => {
     browser.url('/raw/tests/terra-overlay/overlay/loading-overlay/animated-loading-overlay');
 
     it('Expect Icon to be animated', () => {
-      expect(browser.getAttribute('#terra-LoadingOverlay div svg', 'class')).contains('is-spin');
+      expect($('#terra-LoadingOverlay div svg')).toHaveAttributeContaining('class', 'is-spin');
     });
   });
 

@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 2.47.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.46.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated Jest command
+
 ## 2.45.0 - (February 2, 2021)
 
 * Changed
@@ -10,8 +22,8 @@
 ## 2.44.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 2.43.0 - (December 8, 2020)
 
 * Changed
@@ -31,7 +43,7 @@
 
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices and removed wdio tests for hover styles.
-  
+
 ## 2.39.0 - (August 6, 2020)
 
 * Changed

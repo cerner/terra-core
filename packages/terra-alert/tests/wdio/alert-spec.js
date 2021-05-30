@@ -1,61 +1,61 @@
 Terra.describeViewports('Alert', ['tiny', 'large'], () => {
   it('displays default Alert', () => {
-    browser.url('/raw/tests/terra-alert/alert/default-alert');
+    browser.url('/raw/tests/terra-core-docs/alert/default-alert');
     Terra.validates.element('default');
   });
 
   it('displays types of Alert', () => {
-    browser.url('/raw/tests/terra-alert/alert/alert-type');
+    browser.url('/raw/tests/terra-core-docs/alert/alert-type');
 
     Terra.validates.element('types');
   });
 
   it('displays Alert with Wrapped Content', () => {
-    browser.url('/raw/tests/terra-alert/alert/alert-with-wrapped-content');
+    browser.url('/raw/tests/terra-core-docs/alert/alert-with-wrapped-content');
 
     Terra.validates.element('wrapped content');
   });
 
   it('displays Responsive Alert', () => {
-    browser.url('/raw/tests/terra-alert/alert/responsive-example');
+    browser.url('/raw/tests/terra-core-docs/alert/responsive-example');
 
     Terra.validates.element('responsive');
   });
 
   it('displays Alert with titles', () => {
-    browser.url('/raw/tests/terra-alert/alert/alert-title');
+    browser.url('/raw/tests/terra-core-docs/alert/alert-title');
 
     Terra.validates.element('titles');
   });
 
   it('displays custom Alert', () => {
-    browser.url('/raw/tests/terra-alert/alert/custom-alert');
+    browser.url('/raw/tests/terra-core-docs/alert/custom-alert');
 
     Terra.validates.element('custom');
   });
 
   it('displays Alert with action button', () => {
-    browser.url('/raw/tests/terra-alert/alert/alert-action-button');
+    browser.url('/raw/tests/terra-core-docs/alert/alert-action-button');
 
     Terra.validates.element('action button');
   });
 
   it('should register actions', () => {
-    expect(browser.getText('#actionAlert')).to.have.string('clicked 0 times');
-    browser.click('#actionAlert button');
-    expect(browser.getText('#actionAlert')).to.have.string('clicked 1 times');
+    expect($('#actionAlert')).toHaveTextContaining('clicked 0 times');
+    $('#actionAlert button').click();
+    expect($('#actionAlert')).toHaveTextContaining('clicked 1 times');
   });
 
   describe('Alert Dismissible', () => {
     it('displays dismissible Alert', () => {
-      browser.url('/raw/tests/terra-alert/alert/alert-dismissible');
+      browser.url('/raw/tests/terra-core-docs/alert/alert-dismissible');
 
-      Terra.validates.element('default');
+      Terra.validates.element('predismissed');
     });
 
     it('should dismiss', () => {
-      browser.click('#dismissibleAlert button');
-      expect(browser.getText('#dismissed')).to.equal('Alert was dismissed');
+      $('#dismissibleAlert button').click();
+      expect($('#dismissed').getText()).toEqual('Alert was dismissed');
 
       Terra.validates.element('dismissed');
     });

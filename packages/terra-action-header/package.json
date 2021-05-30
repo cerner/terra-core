@@ -1,7 +1,7 @@
 {
   "name": "terra-action-header",
   "main": "lib/ActionHeader.js",
-  "version": "2.64.0",
+  "version": "2.67.0",
   "description": "The terra-action-header component is a header bar containing a title and optional actionable items such as links and buttons.",
   "repository": {
     "type": "git",
@@ -27,13 +27,11 @@
     "react-intl": ">=2.8.0 <6.0.0"
   },
   "dependencies": {
-    "@cerner/terra-docs": "^1.2.0",
+    "@cerner/terra-docs": "^1.3.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.53.0",
-    "terra-button-group": "^3.53.0",
-    "terra-icon": "^3.41.0",
-    "terra-mixins": "^1.39.0",
+    "terra-button": "^3.55.0",
+    "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0"
   },
   "scripts": {
@@ -43,10 +41,10 @@
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
-    "jest": "jest --config ../../jestconfig.js",
-    "wdio-default": "cd ../.. && npx wdio",
-    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio",
-    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio",
+    "jest": "jest --config ../../jest.config.js",
+    "wdio-default": "cd ../.. && terra wdio",
+    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

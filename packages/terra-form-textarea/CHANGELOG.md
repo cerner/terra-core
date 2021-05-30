@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 5.16.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.15.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated to use terra-functional-testing
+  * Updated Jest command
+
 ## 5.14.0 - (March 2, 2021)
 
 * Fixed

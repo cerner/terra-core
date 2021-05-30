@@ -10,7 +10,7 @@ Terra.describeViewports('Switch', ['tiny'], () => {
   });
 
   it('should check on click', () => {
-    browser.click('#defaultSwitch');
+    $('#defaultSwitch').click();
     Terra.validates.element('check on click');
   });
 
@@ -21,8 +21,8 @@ Terra.describeViewports('Switch', ['tiny'], () => {
     });
 
     it('should not change on click', () => {
-      browser.moveToObject('#disabledSwitch');
-      browser.click('#disabledSwitch');
+      $('#disabledSwitch').moveTo();
+      $('#disabledSwitch').click();
       Terra.validates.element('no change on click');
     });
   });

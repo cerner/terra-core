@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## 1.22.0 - (April 13, 2021)
+
+* Fixed
+  * Added missing reference screenshots.
+
+## 1.21.0 - (April 6, 2021)
+
+* Fixed
+  * Fix to remove extra padding due to `null` children.
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade to terra-functional-testing
+  * Updated Jest command
+
 ## 1.20.0 - (February 2, 2021)
 
 * Changed
@@ -10,8 +25,8 @@
 ## 1.19.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 1.18.0 - (December 8, 2020)
 
 * Changed

@@ -2,7 +2,8 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 import Facility from '../../src/variants/Facility';
-import exampleProfilePhoto from '../../src/terra-dev-site/assets/150x150.jpg';
+
+const exampleProfilePhoto = 'test-file-stub';
 
 describe('Facility', () => {
   it('should render a default facility avatar', () => {

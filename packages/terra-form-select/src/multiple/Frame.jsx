@@ -219,7 +219,7 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
-    const { relatedTarget } = event;
+    const relatedTarget = event.relatedTarget || document.activeElement;
 
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
     if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
@@ -559,9 +559,9 @@ class Frame extends React.Component {
    * Renders descriptive text related to the select component to be available for screen readers
    */
   renderDescriptionText() {
-    const { intl, totalOptions } = this.props;
+    const { intl } = this.props;
 
-    const listOfOptionsTxt = intl.formatMessage({ id: 'Terra.form.select.listOfTotalOptions' }, { total: totalOptions });
+    const listOfOptionsTxt = intl.formatMessage({ id: 'Terra.form.select.listOfTotalOptions' });
     const mobileUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.mobileUsageGuidance' });
     const multiSelectUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.multiSelectUsageGuidance' });
 

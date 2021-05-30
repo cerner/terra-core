@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 3.54.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.53.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade to terra-functional-testing
+  * Updated Jest command
+
 ## 3.52.0 - (February 2, 2021)
 
 * Changed
@@ -11,7 +23,7 @@
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 3.50.0 - (December 8, 2020)
 
 * Changed

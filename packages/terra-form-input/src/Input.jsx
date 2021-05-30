@@ -51,7 +51,8 @@ const propTypes = {
   name: PropTypes.string,
   /**
    * The regular expression that the input's value is checked against.
-   * NOTE: The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.
+   *
+   * _NOTE:_ The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.
    */
   pattern: PropTypes.string,
   /**
@@ -64,6 +65,10 @@ const propTypes = {
   required: PropTypes.bool,
   /**
    * Specifies the type of input element to display.
+   *
+   * _NOTE:_ Styling is only applied to the following supported input types: text, number, password, email, search, tel, url, hidden.
+   *
+   * _These types are unsupported:_ date, datetime-local, month, time, week, color, file, range, checkbox, radio, button, reset, submit.
    */
   type: PropTypes.string,
   /**
@@ -120,13 +125,18 @@ class Input extends React.Component {
 
     const attributes = { ...customProps };
     const theme = this.context;
+
+    // unsupportedTypes: 'date', 'datetime-local', 'month', 'time', 'week', 'color', 'file', 'range', 'checkbox', 'radio', 'button', 'reset', 'submit'
+    const supportedTypes = ['text', 'number', 'password', 'email', 'search', 'tel', 'url', 'hidden'];
+
+    const cxSupportedTypeClassNames = (type === undefined || supportedTypes.includes(type)) && cx(
+      'form-input',
+      { 'form-error': isInvalid },
+      { 'form-incomplete': (isIncomplete && required && !isInvalid) },
+      theme.className,
+    );
     const formInputClassNames = classNames(
-      cx(
-        'form-input',
-        { 'form-error': isInvalid },
-        { 'form-incomplete': (isIncomplete && required && !isInvalid) },
-        theme.className,
-      ),
+      cxSupportedTypeClassNames,
       attributes.className,
     );
 

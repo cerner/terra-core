@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 1.6.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade to terra-functional-testing
+  * Updated Jest command
+
 ## 1.5.0 - (January 5, 2021)
 
 * Changed
@@ -20,7 +27,7 @@
 
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices.
-  
+
 ## 1.2.0 - (August 4, 2020)
 
 * Changed

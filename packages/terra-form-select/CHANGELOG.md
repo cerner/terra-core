@@ -2,6 +2,28 @@
 
 ## Unreleased
 
+## 6.29.0 - (April 27, 2021)
+
+* Changed
+  * Update swedish translations.
+
+## 6.28.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.27.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated to use terra-functional-testing
+  * Updated Jest command
+
+* Fixed
+  * Allow voice-over to read index values for options.
+  * Fixed `focus not getting removed` in IE for search and combobox variants.
+  * Fixed `focus not getting removed` in IE for multiple and tag variants.
+
 ## 6.26.0 - (February 17, 2021)
 
 * Fixed

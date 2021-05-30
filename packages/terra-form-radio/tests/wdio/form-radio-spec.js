@@ -3,18 +3,18 @@ Terra.describeViewports('Radio', ['medium'], () => {
     before(() => browser.url('/raw/tests/terra-form-radio/form-radio/radio/default-radio'));
 
     it('should display default Radio', () => {
-      Terra.validates.element();
+      Terra.validates.element('default');
     });
 
     it('should display hover on Radio', () => {
-      browser.moveToObject('#default');
+      $('#default').moveTo();
 
       Terra.validates.element('hover');
     });
 
     it('should display checked Radio', () => {
-      browser.click('[for="default"]');
-      browser.click('#site');
+      $('[for="default"]').click();
+      $('#site').click();
 
       Terra.validates.element('checked');
     });

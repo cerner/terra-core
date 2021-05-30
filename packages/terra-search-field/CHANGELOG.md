@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+## 3.67.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.66.0 - (April 6, 2021)
+
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  
+* Fixed
+  * Updated jest test to correctly update the search text.
+
 ## 3.65.0 - (February 2, 2021)
 
 * Changed
@@ -14,8 +28,8 @@
   * Removed usage of `intlShape`
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 3.63.0 - (December 8, 2020)
 
 * Changed
