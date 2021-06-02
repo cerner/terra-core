@@ -5,6 +5,9 @@
 * Fixed
   * Fixed `PaginatorButton` keyboard navigation focus issue.
 
+* Changed
+  * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
+
 ## 2.72.0 - (April 13, 2021)
 
 * Changed
