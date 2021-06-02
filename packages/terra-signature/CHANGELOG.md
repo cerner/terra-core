@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.37.0 - (May 19, 2021)
+
+* Fixed
+ * Fixed issue with touch screen windows devices for on mouseDown.
+
 ## 2.36.0 - (April 6, 2021)
 
 * Changed

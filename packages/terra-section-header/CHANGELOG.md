@@ -5,6 +5,11 @@
 * Changed
   * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
 
+## 2.51.0 - (May 11, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.50.0 - (April 13, 2021)
 
 * Changed
