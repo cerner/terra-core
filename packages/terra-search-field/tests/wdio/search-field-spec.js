@@ -292,4 +292,19 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       Terra.validates.element('focus with focus');
     });
   });
+
+  describe('Delayed Search Field', () => {
+    before(() => browser.url('/raw/tests/terra-search-field/search-field/delayed-search-field'));
+
+    it('should enter 5 characters with 0.25s intervals', () => {
+      const input = $('input');
+      input.setValue('L');
+      setTimeout(() => { input.addValue('L'); }, 250);
+      setTimeout(() => { input.addValue('L'); }, 250);
+      setTimeout(() => { input.addValue('L'); }, 250);
+      setTimeout(() => { input.addValue('L'); }, 250);
+
+      Terra.validates.element('empty search text');
+    });
+  });
 });

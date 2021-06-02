@@ -155,7 +155,8 @@ class SearchField extends React.Component {
       this.props.onChange(event, textValue);
     }
 
-    if (!this.searchTimeout && !this.props.disableAutoSearch) {
+    if (!this.props.disableAutoSearch) {
+      this.clearSearchTimeout();
       this.searchTimeout = setTimeout(this.handleSearch, this.props.searchDelay);
     }
   }
