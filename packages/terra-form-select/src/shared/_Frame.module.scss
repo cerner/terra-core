@@ -207,7 +207,7 @@
   }
 
   .search-wrapper,
-  .content > li.search-wrapper {
+  .content > .search-wrapper {
     display: flex;
     flex: 1 1 auto; // IE 10
     max-width: 100%; // IE 10
