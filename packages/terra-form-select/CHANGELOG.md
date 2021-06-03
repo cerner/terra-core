@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Changed
+  * Updated `select-wrapper` styles to consume 100% parent div's width.
+
+* Changed
   * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
 
 ## 6.29.0 - (April 27, 2021)
