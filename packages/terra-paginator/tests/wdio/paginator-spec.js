@@ -125,4 +125,15 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
       Terra.validates.element('progressive without total item count');
     });
   });
+
+  describe('Paginator Button should not retain focused state once disabled using keyboard navigation', () => {
+    before(() => browser.url('/raw/tests/terra-paginator/paginator/controlled-progressive-paginator'));
+
+    it('should display previous button with no focus', () => {
+      browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Enter']); // This is to navigate to next button and press enter.
+      browser.keys(['Shift', 'Tab', 'Shift', 'Enter']); // This is to navigate to previous button and press enter.
+      browser.keys(['Tab', 'Enter']); // This is to navigate back to next button and press enter.
+      Terra.validates.element('previous button is not focused');
+    });
+  });
 });
