@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed `PaginatorButton` keyboard navigation focus issue.
+
 * Changed
   * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
 
