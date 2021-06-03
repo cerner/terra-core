@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `searchTimeout` to reset for any changes made to the input.
+  * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
+
 ## 3.67.0 - (April 13, 2021)
 
 * Changed
