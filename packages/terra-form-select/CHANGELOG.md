@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Updated `select-wrapper` styles to consume 100% of parent div's width.
+  * Updated the specificity conflict for combobox's input flex & width styles.
 
 * Changed
   * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
