@@ -206,13 +206,15 @@
     width: 1px;
   }
 
+  // stylelint-disable selector-no-qualifying-type
   .search-wrapper,
-  .content > .search-wrapper {
+  .content > li.search-wrapper {
     display: flex;
     flex: 1 1 auto; // IE 10
     max-width: 100%; // IE 10
     min-width: 0; // IE 11
   }
+  // stylelint-enable selector-no-qualifying-type
 
   .search-input,
   .search-input:focus {
