@@ -1,4 +1,5 @@
 import { Badge } from 'terra-status-view/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
 
 import ToggleVariants from '../example/ToggleVariants?dev-site-example';
 import ToggleAlignmentAndGlyph from '../example/ToggleAlignmentAndGlyph?dev-site-example';
@@ -9,7 +10,16 @@ import StatusViewPropsTable from 'terra-status-view/src/StatusView?dev-site-prop
 <Badge />
 
 # Terra Status View
-debugger;
+<Notice variant='maintenance'>
+
+This component has been moved to [terra-application](https://engineering.cerner.com/terra-ui/application/terra-application/components/application-status-overlay) and should be imported from that package. While this is the final major version of this component we will release, this component will continue to receive minor updates until terra adopts react 17.
+
+```diff
+- import StatusView from 'terra-status-view';
++ import ApplicationStatusOverlay from 'terra-application/lib/application-status-overlay/ApplicationStatusOverlay';
+```
+
+</Notice>
 Presents an icon, title, message, and/or buttons based on a status type scenario. Scenarios include `no-data`, `no-matching-results`, `not-authorized`, `error`, or a custom scenario.
 
 ## Getting Started
