@@ -23,7 +23,7 @@
     display: flex;
     justify-content: center;
 
-    p {
+    .title {
       background-clip: padding-box;
       background-color: var(--terra-docs-placeholder-inner-p-background-color, #fff);
       border: 3px dashed;
