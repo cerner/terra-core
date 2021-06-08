@@ -22,5 +22,13 @@
     color: var(--terra-docs-placeholder-inner-color, #787575);
     display: flex;
     justify-content: center;
+
+    p {
+      background-color: var(--terra-docs-placeholder-inner-p-background-color, #fff);
+      background-clip: padding-box;
+      border: 3px dashed;
+      border-color: var(--terra-docs-placeholder-inner-p-border-color, rgba(255, 255, 255, 0.5));
+      padding: 0.125rem 0.5rem;
+    }
   }
 }
