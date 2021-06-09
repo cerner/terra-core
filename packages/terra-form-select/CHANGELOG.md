@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.30.0 - (June 8, 2021)
+
 * Changed
   * Updated the specificity conflict for combobox's input flex & width styles.
 
