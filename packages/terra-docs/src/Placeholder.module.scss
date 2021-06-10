@@ -25,9 +25,9 @@
 
     .title {
       background-clip: padding-box;
-      background-color: var(--terra-docs-placeholder-inner-p-background-color, #fff);
+      background-color: var(--terra-docs-placeholder-inner-title-background-color, #fff);
       border: 3px dashed;
-      border-color: var(--terra-docs-placeholder-inner-p-border-color, rgba(255, 255, 255, 0.5));
+      border-color: var(--terra-docs-placeholder-inner-title-border-color, rgba(255, 255, 255, 0.5));
       padding: 0.125rem 0.5rem;
     }
   }
