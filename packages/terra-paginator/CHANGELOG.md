@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.73.0 - (June 8, 2021)
+
 * Fixed
   * Fixed `PaginatorButton` keyboard navigation focus issue.
 
