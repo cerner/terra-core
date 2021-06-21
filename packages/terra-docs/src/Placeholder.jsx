@@ -38,7 +38,7 @@ const Placeholder = ({
   return (
     <div {...customProps} className={placeholderClassNames}>
       <div className={innerClassNames}>
-        <p>{title}</p>
+        <p className={cx('title')}>{title}</p>
       </div>
     </div>
   );
