@@ -180,6 +180,7 @@ import IconMediaRecord from 'terra-icon/lib/icon/IconMediaRecord';
 import IconMediaFastForward from 'terra-icon/lib/icon/IconMediaFastForward';
 import IconMediaRewind from 'terra-icon/lib/icon/IconMediaRewind';
 import IconBluetooth from 'terra-icon/lib/icon/IconBluetooth';
+import IconBluetoothSlash from 'terra-icon/lib/icon/IconBluetoothSlash';
 import IconStartPresenting from 'terra-icon/lib/icon/IconStartPresenting';
 import IconStopPresenting from 'terra-icon/lib/icon/IconStopPresenting';
 import IconPager from 'terra-icon/lib/icon/IconPager';
@@ -194,6 +195,8 @@ import IconMedicationTabletHalf from 'terra-icon/lib/icon/IconMedicationTabletHa
 import IconMedicationTabletHalfOutline from 'terra-icon/lib/icon/IconMedicationTabletHalfOutline';
 import IconWaveform from 'terra-icon/lib/icon/IconWaveform';
 import IconConfidential from 'terra-icon/lib/icon/IconConfidential';
+import IconWifi from 'terra-icon/lib/icon/IconWifi';
+import IconWifiSlash from 'terra-icon/lib/icon/IconWifiSlash';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -1847,6 +1850,15 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconBluetoothSlash height='2em' width='2em' /></td>
+        <td style={cellStyle}>bluetoothSlash</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconBluetoothSlash from 'terra-icon/lib/icon/IconBluetoothSlash';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconStartPresenting height='2em' width='2em' /></td>
         <td style={cellStyle}>startPresenting</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
@@ -1969,6 +1981,24 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconConfidential from 'terra-icon/lib/icon/IconConfidential';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconWifi height='2em' width='2em' /></td>
+        <td style={cellStyle}>wifi</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconWifi from 'terra-icon/lib/icon/IconWifi';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconWifiSlash height='2em' width='2em' /></td>
+        <td style={cellStyle}>wifiSlash</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconWifiSlash from 'terra-icon/lib/icon/IconWifiSlash';
           </code>
         </td>
       </tr>

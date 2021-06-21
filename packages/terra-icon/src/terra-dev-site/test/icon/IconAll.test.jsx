@@ -26,6 +26,7 @@ const IconAll = () => (
     <Icon.IconBedAssignedLowLight className={cx(['icon'])} />
     <Icon.IconBedRequested className={cx(['icon'])} />
     <Icon.IconBluetooth className={cx(['icon'])} />
+    <Icon.IconBluetoothSlash className={cx(['icon'])} />
     <Icon.IconBookmark className={cx(['icon'])} />
     <Icon.IconBriefcase className={cx(['icon'])} />
     <Icon.IconBusy className={cx(['icon'])} />
@@ -307,6 +308,8 @@ const IconAll = () => (
     <Icon.IconWarning className={cx(['icon'])} />
     <Icon.IconWarningLowLight className={cx(['icon'])} />
     <Icon.IconWaveform className={cx(['icon'])} />
+    <Icon.IconWifi className={cx(['icon'])} />
+    <Icon.IconWifiSlash className={cx(['icon'])} />
     <Icon.IconXSymbol className={cx(['icon'])} />
     <Icon.IconZoomIn className={cx(['icon'])} />
     <Icon.IconZoomOut className={cx(['icon'])} />
