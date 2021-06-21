@@ -7,7 +7,9 @@ exports[`Placeholder should render a default component 1`] = `
   <div
     className="inner"
   >
-    <p />
+    <p
+      className="title"
+    />
   </div>
 </div>
 `;
@@ -19,7 +21,9 @@ exports[`Placeholder should show with a title 1`] = `
   <div
     className="inner"
   >
-    <p>
+    <p
+      className="title"
+    >
       test
     </p>
   </div>
