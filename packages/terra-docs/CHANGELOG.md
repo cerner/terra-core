@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.4.0 - (June 22, 2021)
+
 * Changed
   * Upgrade placeholder styling to pass color-contrast in themes
 
