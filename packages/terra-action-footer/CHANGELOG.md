@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Update test urls to account for scoped packages.
+
 ## 2.61.0 - (May 4, 2021)
 
 * Changed
