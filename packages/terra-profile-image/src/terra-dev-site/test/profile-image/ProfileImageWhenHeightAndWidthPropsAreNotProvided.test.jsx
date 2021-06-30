@@ -2,12 +2,13 @@ import React from 'react';
 import ProfileImage from '../../../ProfileImage';
 import exampleProfileImage from '../../assets/150x150.jpg';
 
-const ProfileImageDefault = () => (
+const ProfileImageWhenHeightAndWidthPropsAreNotProvided = () => (
   <div>
-    <h2>Profile Image when height and width props are not provided</h2>
-    <ProfileImage alt="no height or width provided" src={exampleProfileImage} />
-    <ProfileImage alt="no height or width provided" src="invalid.jpg" />
+    <ProfileImage alt="profile image when height and width props are not provided, valid image" src={exampleProfileImage} />
+    &nbsp;
+    &nbsp;
+    <ProfileImage alt="profile image when height and width props are not provided, invalid image" src="invalid.jpg" />
   </div>
 );
 
-export default ProfileImageDefault;
+export default ProfileImageWhenHeightAndWidthPropsAreNotProvided;

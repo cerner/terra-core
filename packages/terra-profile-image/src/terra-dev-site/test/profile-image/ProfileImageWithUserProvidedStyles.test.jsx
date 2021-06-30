@@ -6,12 +6,11 @@ import styles from './ProfileImageCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const ProfileImageDefault = () => (
+const ProfileImageWithUserProvidedStyles = () => (
   <div>
-    <h2>Profile Image With User Provided Styles</h2>
-    <ProfileImage width="75" height="75" className={cx('test-style-border')} alt="adds css style" src={exampleProfileImage} />
-    <ProfileImage width="75" height="75" className={cx('test-style-border')} alt="adds css style" src="invalid.jpg" />
+    <ProfileImage width="95" height="95" className={cx('test-style-border')} alt="adding additional css style, valid image" src={exampleProfileImage} />
+    <ProfileImage width="95" height="95" className={cx(['test-style-border', 'add-left-margin'])} alt="adding additional css style, invalid image" src="invalid.jpg" />
   </div>
 );
 
-export default ProfileImageDefault;
+export default ProfileImageWithUserProvidedStyles;

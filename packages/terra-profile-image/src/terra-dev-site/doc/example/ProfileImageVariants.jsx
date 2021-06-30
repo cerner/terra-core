@@ -10,10 +10,9 @@ const ProfileImageDefault = () => {
   }
   return (
     <div>
-      <ProfileImage alt="Toggle fit style" src={exampleProfileImage} variant={variant} height="100" width="100" />
-      <ProfileImage alt="Toggle fit style" src="invalid.jpg" variant={variant} height="100" width="100" />
-      <p><label htmlFor="fitType">Select a Fit Type:</label></p>
-      <select id="fitType" name="fitType" value={variant} onChange={handleOnSelect}>
+      <ProfileImage alt="profile image for Martin Moon, photograph from space of rising star over a planet's silhouette" src={exampleProfileImage} variant={variant} height="100" width="100" />
+      <p><label htmlFor="variantType">Select an image styling &#39;variant&#39; type:</label></p>
+      <select id="variantType" name="variantType" value={variant} onChange={handleOnSelect}>
         <option value="default">default</option>
         <option value="circle">circle</option>
         <option value="rounded">rounded</option>

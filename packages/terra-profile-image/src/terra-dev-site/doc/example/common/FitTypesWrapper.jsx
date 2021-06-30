@@ -16,11 +16,10 @@ function FitTypesWrapper(WrappedComponent) {
       return (
         <div>
           <WrappedComponent fit={this.state.fitType} {...this.props} />
-          <p><label htmlFor="fitType">Select a Fit Type:</label></p>
+          <p><label htmlFor="fitType">Select an image styling &#39;fit&#39; type:</label></p>
           <select id="fitType" name="fitType" value={this.state.fitType} onChange={this.handleOnSelect}>
             <option value="cover">cover</option>
             <option value="contain">contain</option>
-            <option value="fill">fill</option>
             <option value="scale-down">scale-down</option>
             <option value="none">none</option>
           </select>

@@ -24,11 +24,11 @@ const propTypes = {
   */
   fit: PropTypes.oneOf(['cover', 'scale-down', 'contain', 'none']),
   /**
-   * Sets the height of the image.
+   * Sets the height of the image. Note: always define the width and height of the image as number value in pixels, e.g. `height="75"` for "75px".
    */
   height: PropTypes.string,
   /**
-   * Sets the width of the image.
+   * Sets the width of the image. Note: always define the width and height of the image as number value in pixels, e.g. `width="75"` for "75px".
    */
   width: PropTypes.string,
   /**
@@ -43,33 +43,32 @@ const propTypes = {
 
 const defaultProps = {
   fit: 'cover',
+  height: '75',
+  width: '75',
 };
-
-const isOnlyNumbers = toTest => !(/\D/).test(toTest);
 
 const ProfileImage = (props) => {
   const theme = React.useContext(ThemeContext);
-  // img tags assume a height attribute of only numbers is in px but CSS does not
-  const fixedHeight = isOnlyNumbers(props.height) ? `${props.height}px` : '75px';
-  const fixedWidth = isOnlyNumbers(props.width) ? `${props.width}px` : '75px';
 
-  /* eslint-disable react/forbid-dom-props */
-  const placeholderImage = (
-    <span
-      className={classNames(
-        cx('placeholder-images', props.variant, props.fit, theme.className),
-        props.className,
-      )}
-      title={props.alt}
-      style={{ height: fixedHeight, width: fixedWidth }}
-    />
+  // use placeholder SVG as source if default theme, otherwise use background image for all other themes
+  const PlaceholderImageSrc = !theme.className
+    ? 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NSA3NSIgd2lkdGg9Ijc1IiBoZWlnaHQ9Ijc1IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cGF0aCBmaWxsPSIjZGVkZmUwIiBkPSJNMCAwaDc1djc1SDB6Ii8+PGVsbGlwc2UgZmlsbD0iIzliOWZhMSIgY3g9IjM3LjM2IiBjeT0iMjcuNDEiIHJ4PSIxNS45NSIgcnk9IjE2LjM2Ii8+PHBhdGggZmlsbD0iIzliOWZhMSIgIGQ9Ik0zNy41IDUwLjQ1QzIyLjEgNTAuNDUgOS4xMzYgNjAuNjggNS40NSA3NSBoNjQuMSBjLTMuNjgtMTMuOS0xNi42NC0yNC41NSAtMzIuMSAtMjQuNTUgeiIvPjwvc3ZnPg=='
+    : 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NSA3NSIgd2lkdGg9Ijc1IiBoZWlnaHQ9Ijc1IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cGF0aCBmaWxsPSJyZ2JhKDEyNywxMjcsMTI3LDAuMDAwMSkiIGQ9Ik0wIDBoNzV2NzVIMHoiLz48L3N2Zz4=';
+
+  const ProfileImageClassNames = classNames(
+    cx([
+      'profile-image',
+      theme.className,
+    ]),
+    props.className,
   );
-  /* eslint-enable react/forbid-dom-props */
+
+  const ProfileImagePlaceholder = <TerraImage {...props} src={PlaceholderImageSrc} className={[cx(['placeholder-image', props.fit]), ProfileImageClassNames]} />;
 
   if (props.src) {
-    return (<TerraImage placeholder={placeholderImage} {...props} />);
+    return (<TerraImage {...props} placeholder={ProfileImagePlaceholder} className={ProfileImageClassNames} />);
   }
-  return placeholderImage;
+  return ProfileImagePlaceholder;
 };
 
 ProfileImage.propTypes = propTypes;

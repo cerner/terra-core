@@ -10,8 +10,7 @@ const ProfileImageFitTypes = ({
   ...props
 }) => (
   <div>
-    <ProfileImage alt="Toggle fit style" src={exampleProfileImage} fit={props.fit} height="100" width="80" />
-    <ProfileImage alt="Toggle fit style" src="invalid.jpg" fit={props.fit} height="100" width="80" />
+    <ProfileImage alt="profile image for Francis Forest, photograph of two tall trees in mountain forest landscape" src={exampleProfileImage} fit={props.fit} height="100" width="80" />
   </div>
 );
 
