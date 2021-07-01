@@ -26,11 +26,7 @@ exports[`correctly applies the theme context className 1`] = `
         <span
           alt="A profile image"
           aria-label="A profile image"
-          className={
-            Array [
-              "profile-image placeholder cover default orion-fusion-theme",
-            ]
-          }
+          className="profile-image placeholder cover default orion-fusion-theme"
           fit="cover"
           height="75"
           role="img"
@@ -61,11 +57,7 @@ exports[`correctly applies the theme context className 1`] = `
       <span
         alt="A profile image"
         aria-label="A profile image"
-        className={
-          Array [
-            "profile-image placeholder cover default orion-fusion-theme",
-          ]
-        }
+        className="profile-image placeholder cover default orion-fusion-theme"
         fit="cover"
         height="75"
         role="img"
@@ -95,11 +87,7 @@ exports[`should render a Terra image with a placeholder prop 1`] = `
     <span
       alt="A profile image"
       aria-label="A profile image"
-      className={
-        Array [
-          "profile-image placeholder cover default",
-        ]
-      }
+      className="profile-image placeholder cover default"
       fit="cover"
       height="75"
       role="img"
@@ -131,11 +119,7 @@ exports[`should render a profile image with fit style as contain 1`] = `
     <span
       alt="A profile image"
       aria-label="A profile image"
-      className={
-        Array [
-          "profile-image placeholder contain default",
-        ]
-      }
+      className="profile-image placeholder contain default"
       fit="contain"
       height="75"
       role="img"
@@ -160,11 +144,7 @@ exports[`should render an avatar image without Source prop 1`] = `
 <span
   alt="Default"
   aria-label="Default"
-  className={
-    Array [
-      "profile-image placeholder cover default",
-    ]
-  }
+  className="profile-image placeholder cover default"
   fit="cover"
   height="75"
   role="img"
