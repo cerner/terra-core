@@ -60,6 +60,7 @@ const ProfileImage = (props) => {
   // Terra-Image uses a height and width attribute using only numbers, the placeholder as a span needs CSS in 'px'
   const placeholderHeight = isOnlyNumbers(props.height) ? `${props.height}px` : props.height;
   const placeholderWidth = isOnlyNumbers(props.width) ? `${props.width}px` : props.width;
+  const placeholderSize = {'height': placeholderHeight, 'width': placeholderWidth };
 
   const PlaceholderClassNames = classNames(
     cx([
@@ -86,8 +87,8 @@ const ProfileImage = (props) => {
       {...props}
       role="img"
       aria-label={props.alt}
-      style={{ height: placeholderHeight, width: placeholderWidth }}
-      className={[PlaceholderClassNames]}
+      style={placeholderSize}
+      className={PlaceholderClassNames}
     />
   );
   /* eslint-enable react/forbid-dom-props */

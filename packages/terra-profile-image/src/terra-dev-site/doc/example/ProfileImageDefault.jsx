@@ -8,8 +8,8 @@ const cx = classNames.bind(styles);
 
 const ProfileImageDefault = () => (
   <div>
-    <ProfileImage alt="profile image for Martin Moon, photograph from space of rising star over a planet's silhouette" src={exampleProfileImage} width="75" height="75" aria-describedby="example1caption" />
-    <span id="example1caption" className={cx('add-left-margin')}>Successful Image Source</span>
+    <ProfileImage alt="profile image for Martin Moon, photograph from space of rising star over a planet's silhouette" src={exampleProfileImage} width="75" height="75" aria-describedby="caption-example-1" />
+    <span id="caption-example-1" className={cx('add-left-margin')}>Successful Image Source</span>
   </div>
 );
 
