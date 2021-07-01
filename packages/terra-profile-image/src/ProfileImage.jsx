@@ -32,6 +32,10 @@ const propTypes = {
    */
   width: PropTypes.string,
   /**
+   * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`.
+   */
+  variant: PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
+  /**
    * Function to be executed when the profile image load is successful.
    */
   onLoad: PropTypes.func,
@@ -45,15 +49,25 @@ const defaultProps = {
   fit: 'cover',
   height: '75',
   width: '75',
+  variant: 'default',
 };
 
 const ProfileImage = (props) => {
   const theme = React.useContext(ThemeContext);
 
-  // use placeholder SVG as source if default theme, otherwise use background image for all other themes
-  const PlaceholderImageSrc = !theme.className
-    ? 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NSA3NSIgd2lkdGg9Ijc1IiBoZWlnaHQ9Ijc1IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cGF0aCBmaWxsPSIjZGVkZmUwIiBkPSJNMCAwaDc1djc1SDB6Ii8+PGVsbGlwc2UgZmlsbD0iIzliOWZhMSIgY3g9IjM3LjM2IiBjeT0iMjcuNDEiIHJ4PSIxNS45NSIgcnk9IjE2LjM2Ii8+PHBhdGggZmlsbD0iIzliOWZhMSIgIGQ9Ik0zNy41IDUwLjQ1QzIyLjEgNTAuNDUgOS4xMzYgNjAuNjggNS40NSA3NSBoNjQuMSBjLTMuNjgtMTMuOS0xNi42NC0yNC41NSAtMzIuMSAtMjQuNTUgeiIvPjwvc3ZnPg=='
-    : 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NSA3NSIgd2lkdGg9Ijc1IiBoZWlnaHQ9Ijc1IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cGF0aCBmaWxsPSJyZ2JhKDEyNywxMjcsMTI3LDAuMDAwMSkiIGQ9Ik0wIDBoNzV2NzVIMHoiLz48L3N2Zz4=';
+  // transparent svg as profile src, image is handled by background-image
+  const PlaceholderImageSrc = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NSA3NSIgd2lkdGg9Ijc1IiBoZWlnaHQ9Ijc1IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cGF0aCBmaWxsPSJyZ2JhKDEyNywxMjcsMTI3LDAuMDAwMSkiIGQ9Ik0wIDBoNzV2NzVIMHoiLz48L3N2Zz4=';
+
+  const PlaceholderClassNames = classNames(
+    cx([
+      'profile-image',
+      'placeholder',
+      props.fit,
+      props.variant,
+      theme.className,
+    ]),
+    props.className,
+  );
 
   const ProfileImageClassNames = classNames(
     cx([
@@ -63,7 +77,18 @@ const ProfileImage = (props) => {
     props.className,
   );
 
-  const ProfileImagePlaceholder = <TerraImage {...props} src={PlaceholderImageSrc} className={[cx(['placeholder-image', props.fit]), ProfileImageClassNames]} />;
+  const ProfileImagePlaceholder = (
+    <img
+      {...props}
+      alt={props.alt}
+      src={PlaceholderImageSrc}
+      height={props.height}
+      width={props.width}
+      fit={null}
+      variant={null}
+      className={[PlaceholderClassNames]}
+    />
+  );
 
   if (props.src) {
     return (<TerraImage {...props} placeholder={ProfileImagePlaceholder} className={ProfileImageClassNames} />);

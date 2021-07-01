@@ -1,24 +1,67 @@
+@import '~terra-mixins/lib/Mixins';
+
 // Themes
 @import './clinical-lowlight-theme/ProfileImage.module';
 @import './orion-fusion-theme/ProfileImage.module';
 
 :local { 
-  .placeholder-image {
-    background-image: var(--terra-profile-image-placeholder-background-image, none); // Needed for themes
-    background-origin: content-box;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
+  .profile-image {
+    vertical-align: middle;
+  }
 
+  .placeholder {
+    // img styles from Terra-Image
+    background-color: var(--terra-profile-image-placeholder-background-color, #dedfe0);
+    background-image: var(--terra-profile-image-placeholder-background-image, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" width="75" height="75" preserveAspectRatio="none"><path fill="#dedfe0" d="M0 0h75v75H0z"/><ellipse fill="#9b9fa1" cx="37.36" cy="27.41" rx="15.95" ry="16.36"/><path fill="#9b9fa1"  d="M37.5 50.45C22.1 50.45 9.136 60.68 5.45 75 h64.1 c-3.68-13.9-16.64-24.55 -32.1 -24.55 z"/></svg>'));
+    background-origin: content-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+
+    // `fit` prop: mimics Object-Fit types from Terra-Image
     &.cover,
     &.fill {
-      background-size: cover; // Needed for themes
+      background-size: cover; 
     }
 
     &.contain,
-    &.scale-down,
+    &.scale-down {
+      background-size: contain;
+    }
+
     &.none {
-      background-size: contain; // Needed for themes
+      background-size: 150px 150px;
+    }
+
+    // `variant` prop: variant styles from Terra-Image
+    &.default {
+      border-radius: 0;
+    }
+
+    &.rounded {
+      border-radius: var(--terra-profile-image-placeholder-rounded-border-radius, 0.3rem);
+    }
+
+    &.circle {
+      border-radius: var(--terra-profile-image-placeholder-circle-border-radius, 50%);
+    }
+
+    &.thumbnail {
+      background-color: var(--terra-profile-image-placeholder-thumbnail-background-color, #fff);
+      background-clip: padding-box;
+      border-color: var(--terra-profile-image-placeholder-thumbnail-border-color, #ddd);
+      border-radius: var(--terra-profile-image-placeholder-thumbnail-border-radius, 0.25em);
+      border-style: var(--terra-profile-image-placeholder-thumbnail-border-style, solid);
+      border-width: var(--terra-profile-image-placeholder-thumbnail-border-width, 1px);
+      padding-bottom: var(--terra-profile-image-placeholder-thumbnail-padding-bottom, 0.25rem);
+      padding-left: var(--terra-profile-image-placeholder-thumbnail-padding-left, 0.25rem);
+      padding-right: var(--terra-profile-image-placeholder-thumbnail-padding-right, 0.25rem);
+      padding-top: var(--terra-profile-image-placeholder-thumbnail-padding-top, 0.25rem);
     }
   }
 }
