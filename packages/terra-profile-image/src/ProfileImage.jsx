@@ -52,11 +52,14 @@ const defaultProps = {
   variant: 'default',
 };
 
+const isOnlyNumbers = toTest => !(/\D/).test(toTest);
+
 const ProfileImage = (props) => {
   const theme = React.useContext(ThemeContext);
 
-  // transparent svg as profile src, image is handled by background-image
-  const PlaceholderImageSrc = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NSA3NSIgd2lkdGg9Ijc1IiBoZWlnaHQ9Ijc1IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cGF0aCBmaWxsPSJyZ2JhKDEyNywxMjcsMTI3LDAuMDAwMSkiIGQ9Ik0wIDBoNzV2NzVIMHoiLz48L3N2Zz4=';
+  // Terra-Image uses a height and width attribute using only numbers, the placeholder as a span needs CSS in 'px'
+  const placeholderHeight = isOnlyNumbers(props.height) ? `${props.height}px` : props.height;
+  const placeholderWidth = isOnlyNumbers(props.width) ? `${props.width}px` : props.width;
 
   const PlaceholderClassNames = classNames(
     cx([
@@ -77,16 +80,17 @@ const ProfileImage = (props) => {
     props.className,
   );
 
+  /* eslint-disable react/forbid-dom-props */
   const ProfileImagePlaceholder = (
-    <img
+    <span
       {...props}
-      alt={props.alt}
-      src={PlaceholderImageSrc}
-      height={props.height}
-      width={props.width}
+      role="img"
+      aria-label={props.alt}
+      style={{ height: placeholderHeight, width: placeholderWidth }}
       className={[PlaceholderClassNames]}
     />
   );
+  /* eslint-enable react/forbid-dom-props */
 
   if (props.src) {
     return (<TerraImage {...props} placeholder={ProfileImagePlaceholder} className={ProfileImageClassNames} />);
