@@ -40,7 +40,7 @@
 
     // `variant` prop: variant styles from Terra-Image
     &.default {
-      border-radius: 0;
+      box-sizing: border-box;
     }
 
     &.rounded {

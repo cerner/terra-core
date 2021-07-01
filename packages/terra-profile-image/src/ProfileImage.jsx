@@ -84,8 +84,6 @@ const ProfileImage = (props) => {
       src={PlaceholderImageSrc}
       height={props.height}
       width={props.width}
-      fit={null}
-      variant={null}
       className={[PlaceholderClassNames]}
     />
   );
