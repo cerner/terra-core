@@ -52,8 +52,8 @@
     }
 
     &.thumbnail {
-      background-color: var(--terra-profile-image-placeholder-thumbnail-background-color, #fff);
       background-clip: padding-box;
+      background-color: var(--terra-profile-image-placeholder-thumbnail-background-color, #fff);
       border-color: var(--terra-profile-image-placeholder-thumbnail-border-color, #ddd);
       border-radius: var(--terra-profile-image-placeholder-thumbnail-border-radius, 0.25em);
       border-style: var(--terra-profile-image-placeholder-thumbnail-border-style, solid);
