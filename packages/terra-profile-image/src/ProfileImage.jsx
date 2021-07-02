@@ -79,7 +79,7 @@ const ProfileImage = (props) => {
   );
 
   /* eslint-disable react/forbid-dom-props */
-  const ProfileImagePlaceholder = (
+  const profileImagePlaceholder = (
     <span
       {...customProps}
       role="img"
@@ -107,14 +107,14 @@ const ProfileImage = (props) => {
         width={width}
         fit={fit}
         variant={variant}
-        placeholder={ProfileImagePlaceholder}
+        placeholder={profileImagePlaceholder}
         onLoad={onLoad}
         onError={onError}
         className={profileImageClassNames}
       />
     );
   }
-  return ProfileImagePlaceholder;
+  return profileImagePlaceholder;
 };
 
 ProfileImage.propTypes = propTypes;
