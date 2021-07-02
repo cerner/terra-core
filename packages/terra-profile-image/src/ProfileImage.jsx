@@ -61,7 +61,7 @@ const ProfileImage = (props) => {
   const placeholderHeight = isOnlyNumbers(props.height) ? `${props.height}px` : props.height;
   const placeholderWidth = isOnlyNumbers(props.width) ? `${props.width}px` : props.width;
   const placeholderSize = { height: placeholderHeight, width: placeholderWidth };
-  const PlaceholderClassNames = classNames(
+  const placeholderClassNames = classNames(
     cx([
       'profile-image',
       'placeholder',
@@ -79,20 +79,20 @@ const ProfileImage = (props) => {
       role="img"
       aria-label={props.alt}
       style={placeholderSize}
-      className={PlaceholderClassNames}
+      className={placeholderClassNames}
     />
   );
   /* eslint-enable react/forbid-dom-props */
 
   if (props.src) {
-    const ProfileImageClassNames = classNames(
+    const profileImageClassNames = classNames(
       cx([
         'profile-image',
         theme.className,
       ]),
       props.className,
     );
-    return (<TerraImage {...props} placeholder={ProfileImagePlaceholder} className={ProfileImageClassNames} />);
+    return (<TerraImage {...props} placeholder={ProfileImagePlaceholder} className={profileImageClassNames} />);
   }
   return ProfileImagePlaceholder;
 };
