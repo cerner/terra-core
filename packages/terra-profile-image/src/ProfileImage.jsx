@@ -57,25 +57,16 @@ const isOnlyNumbers = toTest => !(/\D/).test(toTest);
 const ProfileImage = (props) => {
   const theme = React.useContext(ThemeContext);
 
-  // Terra-Image uses a height and width attribute using only numbers, the placeholder as a span needs CSS in 'px'
+  // Terra-Image uses a height and width attribute using only numbers, the placeholder span needs css in 'px'
   const placeholderHeight = isOnlyNumbers(props.height) ? `${props.height}px` : props.height;
   const placeholderWidth = isOnlyNumbers(props.width) ? `${props.width}px` : props.width;
-  const placeholderSize = {'height': placeholderHeight, 'width': placeholderWidth };
-
+  const placeholderSize = { height: placeholderHeight, width: placeholderWidth };
   const PlaceholderClassNames = classNames(
     cx([
       'profile-image',
       'placeholder',
       props.fit,
       props.variant,
-      theme.className,
-    ]),
-    props.className,
-  );
-
-  const ProfileImageClassNames = classNames(
-    cx([
-      'profile-image',
       theme.className,
     ]),
     props.className,
@@ -94,6 +85,13 @@ const ProfileImage = (props) => {
   /* eslint-enable react/forbid-dom-props */
 
   if (props.src) {
+    const ProfileImageClassNames = classNames(
+      cx([
+        'profile-image',
+        theme.className,
+      ]),
+      props.className,
+    );
     return (<TerraImage {...props} placeholder={ProfileImagePlaceholder} className={ProfileImageClassNames} />);
   }
   return ProfileImagePlaceholder;
