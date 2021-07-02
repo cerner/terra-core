@@ -92,6 +92,9 @@ function PaginatorButton(props) {
 
   useEffect(() => {
     setActive(false);
+    if (disabled) {
+      setFocused(false);
+    }
   }, [disabled]);
 
   return (

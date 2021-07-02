@@ -3,6 +3,21 @@
 ## Unreleased
 
 * Changed
+  * Update test urls to account for scoped packages.
+
+## 4.55.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.54.0 - (June 8, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.53.0 - (May 11, 2021)
+
+* Changed
   * migrate doc to terra-core-docs
   * remove unnecessary dependencies
 

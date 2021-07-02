@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 4.26.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.25.0 - (June 8, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.24.0 - (April 13, 2021)
 
 * Changed

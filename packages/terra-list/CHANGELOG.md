@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 4.48.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.47.0 - (June 8, 2021)
+
+* Changed
+  * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
+
 ## 4.46.0 - (April 13, 2021)
 
 * Changed

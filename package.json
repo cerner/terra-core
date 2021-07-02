@@ -103,7 +103,7 @@
     "react-test-renderer": "^16.5.2",
     "regenerator-runtime": "^0.13.2",
     "stylelint": "^13.0.0",
-    "terra-dev-site": "^6.5.0",
+    "terra-dev-site": "^6.37.0",
     "terra-disclosure-manager": "^4.9.0",
     "terra-enzyme-intl": "^3.0.0",
     "webpack": "^4.30.0",
