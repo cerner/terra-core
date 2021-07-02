@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated fallback image styles.
+
 ## 3.39.0 - (May 4, 2021)
 
 * Changed
