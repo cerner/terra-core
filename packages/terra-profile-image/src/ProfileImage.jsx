@@ -16,10 +16,13 @@ const propTypes = {
   src: PropTypes.string,
   /**
    * The text content that specifies an alternative text for an image.
+   *
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue) For accessibility best practices, the `alt` description must be provided in most situations.
    */
   alt: PropTypes.string,
   /**
   * Sets the `object-fit` style of the image from the following values: `cover`, `contain`, `scale-down`, `none`.
+  *
   * ![IMPORTANT](https://badgen.net/badge/UX/Design-Standards/blue) Anywhere the terra-profile-image is used to show images of People, _only_ `cover` and `contain` are acceptable.
   */
   fit: PropTypes.oneOf(['cover', 'scale-down', 'contain', 'none']),
@@ -55,44 +58,61 @@ const defaultProps = {
 const isOnlyNumbers = toTest => !(/\D/).test(toTest);
 
 const ProfileImage = (props) => {
+  const {
+    src, alt, fit, height, width, variant, onLoad, onError, ...customProps
+  } = props;
   const theme = React.useContext(ThemeContext);
 
   // Terra-Image uses a height and width attribute using only numbers, the placeholder span needs css in 'px'
-  const placeholderHeight = isOnlyNumbers(props.height) ? `${props.height}px` : props.height;
-  const placeholderWidth = isOnlyNumbers(props.width) ? `${props.width}px` : props.width;
+  const placeholderHeight = isOnlyNumbers(height) ? `${height}px` : height;
+  const placeholderWidth = isOnlyNumbers(width) ? `${width}px` : width;
   const placeholderSize = { height: placeholderHeight, width: placeholderWidth };
   const placeholderClassNames = classNames(
     cx([
       'profile-image',
       'placeholder',
-      props.fit,
-      props.variant,
+      fit,
+      variant,
       theme.className,
     ]),
-    props.className,
+    customProps.className,
   );
 
   /* eslint-disable react/forbid-dom-props */
   const ProfileImagePlaceholder = (
     <span
-      {...props}
+      {...customProps}
       role="img"
-      aria-label={props.alt}
+      aria-label={alt}
       style={placeholderSize}
       className={placeholderClassNames}
     />
   );
   /* eslint-enable react/forbid-dom-props */
 
-  if (props.src) {
+  if (src) {
     const profileImageClassNames = classNames(
       cx([
         'profile-image',
         theme.className,
       ]),
-      props.className,
+      customProps.className,
     );
-    return (<TerraImage {...props} placeholder={ProfileImagePlaceholder} className={profileImageClassNames} />);
+    return (
+      <TerraImage
+        {...customProps}
+        src={src}
+        alt={alt}
+        height={height}
+        width={width}
+        fit={fit}
+        variant={variant}
+        placeholder={ProfileImagePlaceholder}
+        onLoad={onLoad}
+        onError={onError}
+        className={profileImageClassNames}
+      />
+    );
   }
   return ProfileImagePlaceholder;
 };
