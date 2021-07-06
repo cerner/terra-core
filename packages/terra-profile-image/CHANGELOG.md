@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.40.0 - (July 6, 2021)
+
 * Changed
   * Updated fallback image styles.
 
