@@ -1,7 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from 'react';
 import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
+import { injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
@@ -12,9 +14,22 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
-   * The aria label string value for the pills container.
+   * The string that labels the collection of pills, used in cased where the text label is not visible on the screen and required for minimum accessibility standards.
+   * Providing this prop adds the `aria-label` attribute to the Pill List container element. (Required)
    */
   ariaLabel: PropTypes.string.isRequired,
+  /**
+   * If a visible text label is used with the collection of pills, provide a string of the ID for the html element containing the visible text label.
+   * Supplying the 'ariaLabelledBy' prop will override the 'ariaLabel' prop and adds the `aria-labelledby` attribute instead to the Pill List container element.
+   *
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue) For best practices, ensure the visible text in the html element `id` provided to the Pill List
+   * `ariaLabelledby`prop matches the text provided to the `ariaLabel` prop, for consistency in the case of fallback or errors.
+   */
+  ariaLabelledBy: PropTypes.string,
+  /**
+   * If additional visible information text is used, provide a string containing the IDs for html elements that help describe the intent of the pills and the Pill List container.
+   */
+  ariaDescribedBy: PropTypes.string,
   /**
    * The content to be shown in the pills container. Should only contain the sub-component pills.
    */
@@ -24,12 +39,20 @@ const propTypes = {
    */
   isCollapsed: PropTypes.bool,
   /**
-   * Callback function triggered on click/key press of the roll up pill
+   * Callback function triggered on click/key press of the roll-up pill
    */
   rollUpPillOnTrigger: PropTypes.func,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 };
 
 const defaultProps = {
+  ariaLabelledBy: undefined,
+  ariaDescribedBy: undefined,
+  children: undefined,
   isCollapsed: false,
   rollUpPillOnTrigger: undefined,
 };
@@ -37,9 +60,13 @@ const defaultProps = {
 const PillList = (props) => {
   const {
     ariaLabel,
+    ariaLabelledBy,
+    ariaDescribedBy,
     children,
     isCollapsed,
     rollUpPillOnTrigger,
+    intl,
+    ...customProps
   } = props;
 
   const theme = React.useContext(ThemeContext);
@@ -122,24 +149,30 @@ const PillList = (props) => {
       role="button"
       tabIndex="0"
     >
-      {`${rollUpCount} more...`}
+      {intl.formatMessage({ id: 'Terra.pills.rollupPillLabel' }, { pillsNotVisibleCount: rollUpCount })}
     </div>
   );
 
-  const PillListClassNames = cx([
-    'pill-list',
-    theme.className,
-  ]);
+  const pillListClassNames = classNames(
+    cx([
+      'pill-list',
+      theme.className,
+    ]),
+    customProps.className,
+  );
 
   return (
     <div
-      aria-label={ariaLabel}
+      {...customProps}
+      ref={pillListRef}
+      aria-label={!ariaLabelledBy ? ariaLabel : undefined}
+      aria-labelledby={ariaLabelledBy}
+      aria-describedby={ariaDescribedBy}
       aria-live="polite"
       aria-relevant="removals"
-      className={PillListClassNames}
-      ref={pillListRef}
+      className={pillListClassNames}
     >
-      <VisuallyHiddenText text={`Contains ${children.length} pills`} />
+      <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.pills.pillListHint' }, { numberOfPills: children.length })} />
       {children}
       {rollUpPill}
     </div>
@@ -149,5 +182,5 @@ const PillList = (props) => {
 PillList.propTypes = propTypes;
 PillList.defaultProps = defaultProps;
 
-export default PillList;
+export default injectIntl(PillList);
 export { Pill };

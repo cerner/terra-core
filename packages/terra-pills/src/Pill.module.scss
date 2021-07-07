@@ -1,3 +1,5 @@
+@import '~terra-mixins/lib/Mixins';
+
 // Themes
 @import './clinical-lowlight-theme/Pill.module';
 @import './orion-fusion-theme/Pill.module';
@@ -5,159 +7,179 @@
 :local {
   .pill-container {
     background-color: var(--terra-pills-pill-container-background-color, #fff);
-    border-width: 1px;
-    border-style: solid;
     border-color: var(--terra-pills-pill-container-border-color, #868a8c);
-    border-radius: var(--terra-pills-pill-container-border-radius, 0.85714rem);
+    border-radius: var(--terra-pills-pill-container-border-radius, 2rem);
+    border-style: solid;
+    border-width: var(--terra-pills-pill-container-border-width, 1px);
+    box-sizing: border-box;
     display: inline-flex;
     margin: var(--terra-pills-pill-container-margin, 0.35714rem);
+    max-width: calc(100% - 2 * var(--terra-pills-pill-container-max-width-inset, 0.35714rem)); // Needed for IE10 truncation
+    min-width: 0;
     outline: none;
+    overflow: hidden;
+    padding: 0;
 
     &.is-focusable {
       &[data-terra-pills-show-focus-styles='true']:focus {
-        border-width: var(--terra-pills-pill-container-border-width-focus, 1px);
-        border-color: var(--terra-pills-pill-container-border-color-focus, #868a8c);
-        box-shadow: var(--terra-pills-pill-container-box-shadow-focus, none);
-        outline: var(--terra-pills-pill-container-outline-focus, 2px dashed #000);
-        outline-offset: var(--terra-pills-pill-container-outline-offset-focus, 2px);
+        border-color: var(--terra-pills-pill-container-focus-border-color, #868a8c);
+        border-width: var(--terra-pills-pill-container-focus-border-width, 1px);
+        box-shadow: var(--terra-pills-pill-container-focus-box-shadow, none);
+        outline: var(--terra-pills-pill-container-focus-outline, 2px dashed #000);
+        outline-offset: var(--terra-pills-pill-container-focus-outline-offset, 2px);
       }
     }
 
     &.is-selectable {
       &:hover {
-        border-color: var(--terra-pills-pill-container-selectable-border-color-hover, #868a8c);
+        border-color: var(--terra-pills-pill-container-selectable-hover-border-color, #868a8c);
       }
   
       &:active {
-        border-color: var(--terra-pills-pill-container-selectable-border-color-active, #868a8c);
+        border-color: var(--terra-pills-pill-container-selectable-active-border-color, #868a8c);
       }
     }
 
     &.is-selectable-and-removable {
       &:hover {
-        border-color: var(--terra-pills-pill-container-selectable-removable-border-color-hover, #868a8c);
+        border-color: var(--terra-pills-pill-container-selectable-removable-hover-border-color, #868a8c);
       }
   
       &:active {
-        border-color: var(--terra-pills-pill-container-selectable-removable-border-color-active, #868a8c);
+        border-color: var(--terra-pills-pill-container-selectable-removable-active-border-color, #868a8c);
       }
     }
   }
 
   .pill-label {
-    border-radius: var(--terra-pills-pill-label-border-radius, 0.78571rem);
+    background-color: var(--terra-pills-pill-label-background-color, transparent);
+    box-sizing: border-box;
     color: var(--terra-pills-pill-label-color, #4d5153);
-    display: inline-block;
+    display: block;
+    flex: 1 1 auto;
     font-size: var(--terra-pills-pill-label-font-size, 0.85714rem);
-    line-height: 1.16667;
-    max-width: 100%;
+    line-height: var(--terra-pills-pill-label-line-height, 1.25);
+    min-width: 0;
     overflow: hidden;
-    padding-bottom: var(--terra-pills-pill-label-padding-bottom, 0.28571rem);
-    padding-left: var(--terra-pills-pill-label-padding-left, 0.71428rem);
-    padding-right: var(--terra-pills-pill-label-padding-right, 0.71428rem);
+    padding-bottom: var(--terra-pills-pill-label-padding-bottom, 0.21428rem);
+    padding-left: var(--terra-pills-pill-label-padding-left, 0.64285rem);
+    padding-right: var(--terra-pills-pill-label-padding-right, 0.64285rem);
     padding-top: var(--terra-pills-pill-label-padding-top, 0.28571rem);
     text-overflow: ellipsis;
     white-space: nowrap;
 
     &.is-selectable {
+      cursor: pointer;
+
       &:hover {
-        background-color: var(--terra-pills-pill-label-selectable-background-color-hover, #dedfe0);
+        background-color: var(--terra-pills-pill-label-selectable-hover-background-color, #dedfe0);
       }
   
       &:active {
-        background-color: var(--terra-pills-pill-label-selectable-background-color-active, #bcbfc0);
-        color: var(--terra-pills-pill-label-selectable-color-active, #4d5153);
+        background-color: var(--terra-pills-pill-label-selectable-active-background-color, #bcbfc0);
+        color: var(--terra-pills-pill-label-selectable-active-color, #4d5153);
       }
     }
 
     &.is-removable {
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
-      padding-right: var(--terra-pills-pill-label-padding-right-removable, 0.35714rem);
+      padding-right: var(--terra-pills-pill-label-removable-padding-right, 0.5rem);
     }
 
     &.is-selectable-and-removable {
       &:hover {
-        background-color: var(--terra-pills-pill-label-selectable-removable-background-color-hover, #dedfe0);
-        color: var(--terra-pills-pill-label-selectable-removable-color-hover, #222a2e);
+        background-color: var(--terra-pills-pill-label-selectable-removable-hover-background-color, #dedfe0);
+        box-shadow: var(--terra-pills-pill-label-selectable-removable-hover-box-shadow, inset -1px 0 0 0 #868a8c);
+        color: var(--terra-pills-pill-label-selectable-removable-hover-color, #222a2e);
+        z-index: 1;
       }
   
       &:active {
-        background-color: var(--terra-pills-pill-label-selectable-removable-background-color-active, #bcbfc0);
-        color: var(--terra-pills-pill-label-selectable-removable-color-active, #222a2e);
+        background-color: var(--terra-pills-pill-label-selectable-removable-active-background-color, #bcbfc0);
+        box-shadow: var(--terra-pills-pill-label-selectable-removable-active-box-shadow, inset -1px 0 0 0 #868a8c);
+        color: var(--terra-pills-pill-label-selectable-removable-active-color, #222a2e);
+        z-index: 1;
       }
     }
   }
 
-  .remove-button {
+  .pill-remove-button {
+    align-items: center;
     background-color: var(--terra-pills-pill-remove-button-background-color, #fff);
-    border-bottom-right-radius: var(--terra-pills-pill-remove-button-border-bottom-right-radius, 0.78571rem);
-    border-left: 1px solid #000;
-    border-top-right-radius: var(--terra-pills-pill-remove-button-border-top-right-radius, 0.78571rem);
+    box-shadow: var(--terra-pills-pill-remove-button-box-shadow, -4px 0 0 -3px #d3d4d5);
+    box-sizing: border-box;
     color: var(--terra-pills-pill-remove-button-color, #4d5153);
-    line-height: 0.57142;
-    padding-bottom: var(--terra-pills-pill-remove-button-padding-bottom, 0.5rem);
-    padding-left: var(--terra-pills-pill-remove-button-padding-left, 0.35714rem);
-    padding-right: var(--terra-pills-pill-remove-button-padding-right, 0.71428rem);
-    padding-top: var(--terra-pills-pill-remove-button-padding-top, 0.28571rem);
+    cursor: pointer;
+    display: flex;
+    flex: 0 0 auto;
+    line-height: 0;
+    min-width: 0;
+    padding: 0;
 
     &:hover {
-      background-color: var(--terra-pills-pill-remove-button-background-color-hover, #dedfe0);
-      color: var(--terra-pills-pill-remove-button-color-hover, #222a2e);
+      background-color: var(--terra-pills-pill-remove-button-hover-background-color, #dedfe0);
+      box-shadow: var(--terra-pills-pill-remove-button-hover-box-shadow, -1px 0 0 0 #868a8c);
+      color: var(--terra-pills-pill-remove-button-hover-color, #222a2e);
+
+      .clear-icon {
+        background-image: var(--terra-pills-clear-icon-hover-background-image, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#222a2e" d="M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z"></path></svg>'));  
+      }
     }
 
     &:active {
-      background-color: var(--terra-pills-pill-remove-button-background-color-active, #bcbfc0);
-      color: var(--terra-pills-pill-remove-button-color-active, #222a2e);
+      background-color: var(--terra-pills-pill-remove-button-active-background-color, #bcbfc0);
+      box-shadow: var(--terra-pills-pill-remove-button-active-box-shadow, -1px 0 0 0 #868a8c);
+      color: var(--terra-pills-pill-remove-button-active-color, #222a2e);
     }
   }
 
   .clear-icon {
-    height: var(--terra-pills-clear-icon-height, 0.57143rem);
-    width: var(--terra-pills-clear-icon-width, 0.57143rem);
-  }
-
-  // Temporary
-  .pill-list {
-    border: 1px solid #000;
-    visibility: hidden;
-    width: 200px;
+    background-image: var(--terra-pills-clear-icon-background-image, inline-svg('<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#4d5153" d="M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z"></path></svg>'));
+    display: inline-block;
+    height: var(--terra-pills-clear-icon-height, 0.75rem);
+    line-height: 0;
+    margin-bottom: 0;
+    margin-left: var(--terra-pills-clear-icon-margin-left, 0.3928571429rem);
+    margin-right: var(--terra-pills-clear-icon-margin-right, 0.6428571429rem);
+    margin-top: 0;
+    width: var(--terra-pills-clear-icon-width, 0.75rem);
   }
 
   .roll-up-pill {
     background-color: var(--terra-pills-roll-up-pill-background-color, #fff);
-    border-width: 1px;
-    border-style: solid;
     border-color: var(--terra-pills-roll-up-pill-border-color, #868a8c);
-    border-radius: var(--terra-pills-roll-up-pill-border-radius, 0.85714rem);
+    border-radius: var(--terra-pills-roll-up-pill-border-radius, 2rem);
+    border-style: solid;
+    border-width: var(--terra-pills-roll-up-pill-border-width, 1px);
     color: var(--terra-pills-roll-up-pill-color, #4d5153);
+    cursor: pointer;
     display: inline-block;
     font-size: var(--terra-pills-roll-up-pill-font-size, 0.85714rem);
-    line-height: 1.16667;
+    line-height: var(--terra-pills-roll-up-pill-line-height, 1.25);
     margin: var(--terra-pills-roll-up-pill-margin, 0.35714rem);
     outline: none;
-    padding-bottom: var(--terra-pills-roll-up-pill-padding-bottom, 0.28571rem);
-    padding-left: var(--terra-pills-roll-up-pill-padding-left, 0.71428rem);
-    padding-right: var(--terra-pills-roll-up-pill-padding-right, 0.71428rem);
+    padding-bottom: var(--terra-pills-roll-up-pill-padding-bottom, 0.21428rem);
+    padding-left: var(--terra-pills-roll-up-pill-padding-left, 0.64285rem);
+    padding-right: var(--terra-pills-roll-up-pill-padding-right, 0.64285rem);
     padding-top: var(--terra-pills-roll-up-pill-padding-top, 0.28571rem);
 
+
     &[data-terra-pills-show-focus-styles='true']:focus {
-      border-width: var(--terra-pills-roll-up-pill-border-width-focus, 1px);
-      border-color: var(--terra-pills-roll-up-pill-border-color-focus, #868a8c);
-      box-shadow: var(--terra-pills-roll-up-pill-box-shadow-focus, none);
-      outline: var(--terra-pills-roll-up-pill-outline-focus, 2px dashed #000);
-      outline-offset: var(--terra-pills-roll-up-pill-outline-offset-focus, 2px);
+      border-color: var(--terra-pills-roll-up-pill-focus-border-color, #868a8c);
+      border-width: var(--terra-pills-roll-up-pill-focus-border-width, 1px);
+      box-shadow: var(--terra-pills-roll-up-pill-focus-box-shadow, none);
+      outline: var(--terra-pills-roll-up-pill-focus-outline, 2px dashed #000);
+      outline-offset: var(--terra-pills-roll-up-pill-focus-outline-offset, 2px);
     }
 
     &:hover {
-      background-color: var(--terra-pills-roll-up-pill-background-color-hover, #dedfe0);
-      border-color: var(--terra-pills-roll-up-pill-border-color-hover, #868a8c);
+      background-color: var(--terra-pills-roll-up-pill-hover-background-color, #dedfe0);
+      border-color: var(--terra-pills-roll-up-pill-hover-border-color, #868a8c);
     }
 
     &:active {
-      background-color: var(--terra-pills-roll-up-pill-background-color-active, #bcbfc0);
-      border-color: var(--terra-pills-roll-up-pill-border-color-active, #868a8c);
-      color: var(--terra-pills-roll-up-pill-color-active, #4d5153);
+      background-color: var(--terra-pills-roll-up-pill-active-background-color, #bcbfc0);
+      border-color: var(--terra-pills-roll-up-pill-active-border-color, #868a8c);
+      color: var(--terra-pills-roll-up-pill-active-color, #4d5153);
     }
   }
 }

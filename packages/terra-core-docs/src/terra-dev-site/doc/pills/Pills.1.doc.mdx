@@ -1,0 +1,74 @@
+import { Badge } from 'terra-pills/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
+
+import BasicPillExample from './example/BasicPill?dev-site-example';
+import BasicRemovablePillExample from './example/BasicRemovablePill?dev-site-example';
+import DisclosurePillExample from './example/DisclosurePill?dev-site-example';
+import DisclosureRemovablePillExample from './example/DisclosureRemovablePill?dev-site-example';
+
+import PillListPropsTable from 'terra-pills/src/PillList?dev-site-props-table';
+import PillsPropsTable from 'terra-pills/src/Pill?dev-site-props-table';
+
+<Badge />
+
+# Terra Pills
+
+Pills are used to assign a label or keyword to user interface (UI) objects, defining a non-hierarchal group. They are used to visually label UI objects for quick recognition. These labels can be generated either by the system or created by users entering data.
+
+## What the component is
+
+Pills are comprised of the following:
+* Pill container with actionable target area
+* Label
+
+There are two types of pills:
+* Basic
+* Removable
+
+## What the component is not
+
+* Although similar, pills and tags have their own use cases and best practices for when they should be used within the UI. See tags for more information.
+* Pills should not be used to create button group functionality. See button groups for more information.
+* Pills should not be used to create toggle functionality. See button group, checkbox, radio buttons, or switch for more information.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-pills`
+
+## Usage
+
+```jsx
+import React from 'react';
+import PillList, { Pill } from 'terra-pills';
+
+```
+
+## Component Features
+
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#cross-browser-support)
+* [LTR/RTL Support](https://engineering.cerner.com/terra-ui/contributing/terra-ui/component-standards#ltr--rtl-support)
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+## Examples
+
+<BasicPillExample title="Basic Pill" />
+<BasicRemovablePillExample title="Removable Pill" />
+
+<DisclosurePillExample title="Basic Pill with a Popup" />
+<DisclosureRemovablePillExample title="Removable Pill with a Popup" />
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+## Props for Pill-List
+<PillListPropsTable />
+
+## Props for Pills
+<PillsPropsTable />
