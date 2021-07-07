@@ -1,13 +1,13 @@
 Terra.describeViewports('Button', ['medium'], () => {
   describe('Default Button', () => {
     it('is valid', () => {
-      browser.url('/raw/tests/terra-docs/docs/button');
+      browser.url('/raw/tests/cerner-terra-docs/docs/button');
       $('#root').moveTo({ xOffset: 700, yOffset: 700 });
       Terra.validates.element('is valid-default', { selector: '#site' });
     });
 
     it('checks keyboard focus', () => {
-      browser.url('/raw/tests/terra-docs/docs/button');
+      browser.url('/raw/tests/cerner-terra-docs/docs/button');
       browser.keys('Tab');
       Terra.validates.element('Checks keyboard focus', { selector: '#site' });
       browser.keys('Space');
@@ -17,7 +17,7 @@ Terra.describeViewports('Button', ['medium'], () => {
     });
 
     it('checks mouse interactions', () => {
-      browser.url('/raw/tests/terra-docs/docs/button');
+      browser.url('/raw/tests/cerner-terra-docs/docs/button');
       $('#button').moveTo();
       Terra.validates.element('checks mouse interactions - hover', { selector: '#site' });
       browser.buttonDown();

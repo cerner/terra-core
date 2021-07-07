@@ -1,7 +1,7 @@
 {
   "name": "terra-switch",
   "main": "lib/Switch.js",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "The terra-switch component provides users a way to toggle between state ON and OFF.",
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "keycode-js": "^2.0.1",
+    "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
     "terra-theme-context": "^1.0.0"
   }

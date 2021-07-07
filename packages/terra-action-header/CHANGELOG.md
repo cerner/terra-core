@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## 2.70.0 - (July 6, 2021)
+
+* Changed
+  * Update test urls to account for scoped packages.
+
+## 2.69.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.68.0 - (June 8, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.67.0 - (May 4, 2021)
 
 * Changed

@@ -115,7 +115,11 @@ class Signature extends React.Component {
 
     this.canvasRect = this.canvas.getBoundingClientRect();
 
-    this.addLine(event.pageX - this.canvasRect.left, event.pageY - this.canvasRect.top, false);
+    if (event.type === 'touchstart') {
+      this.addLine(event.changedTouches[0].pageX - this.canvasRect.left, event.changedTouches[0].pageY - this.canvasRect.top, false);
+    } else {
+      this.addLine(event.pageX - this.canvasRect.left, event.pageY - this.canvasRect.top, false);
+    }
 
     this.draw();
   }
