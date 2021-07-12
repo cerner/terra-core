@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[696],{1344:function(e,n,a){"use strict";a.r(n);var t=a(0),l=a.n(t),o=a(316);n.default=function(){return l.a.createElement(o.default,{locale:"gabcdef",translationsLoadingPlaceholder:l.a.createElement("div",null,"No Translations")},l.a.createElement("div",null,"Translations"))}}}]);

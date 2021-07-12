@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[722],{1303:function(e,n,t){"use strict";t.r(n);var a=t(0),i=t.n(a),o=t(84);n.default=function(){return i.a.createElement(o.default,{title:"Next Enabled Previous Disabled Action Header",onNext:function(){return alert("You clicked next!")}})}}}]);

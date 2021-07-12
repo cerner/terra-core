@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[770],{1553:function(e,a,n){"use strict";n.r(a);var t=n(0),i=n.n(t),r=n(4),c=n.n(r),s=n(818),l=n(836),o=c.a.bind(l.a);a.default=function(){return i.a.createElement("div",{className:o("content-wrapper")},i.a.createElement(s.a,{size:"medium",ariaLabel:"label"}))}}}]);

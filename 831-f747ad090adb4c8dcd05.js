@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[831],{1762:function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a),s=t(158);n.default=function(){return r.a.createElement("p",null,"Focus in this section to hear screen reader only text",r.a.createElement(s.default,{tabIndex:"0",text:"This is read by a screen reader"}))}}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[819],{1673:function(n,e,t){"use strict";t.r(e);var i=t(0),c=t.n(i),o=t(865);e.default=function(){return c.a.createElement(o.a,{title:"Open Section Header",onClick:function(){},isOpen:!0})}}}]);

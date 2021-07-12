@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[694],{1337:function(e,n,r){"use strict";r.r(n);var i=r(0),o=r.n(i),s=r(159);n.default=function(){return o.a.createElement(s.Generic,{id:"single-user",alt:"single user",color:"four"})}}}]);

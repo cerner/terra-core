@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[780],{1589:function(e,n,t){"use strict";t.r(n);var r=t(0),a=t.n(r),c=t(309);n.default=function(){return a.a.createElement("div",{role:"main"},a.a.createElement(c.default,{id:"link",href:"https://www.cerner.com",variant:"document"},"Document hyperlink"))}}}]);

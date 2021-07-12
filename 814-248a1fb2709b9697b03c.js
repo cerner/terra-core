@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[814],{1668:function(n,e,t){"use strict";t.r(e);var o=t(0),c=t.n(o),i=t(865);e.default=function(){return c.a.createElement(i.a,{title:"Closed Section Header",onClick:function(){}})}}}]);
