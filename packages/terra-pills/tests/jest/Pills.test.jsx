@@ -42,12 +42,12 @@ it('should render a standard pill list', () => {
 });
 
 /* Empty Pill List */
-// it('should render an empty pill list', () => {
-//   const wrapper = shallowWithIntl(
-//     <PillList ariaLabel="pill list label" />,
-//   );
-//   expect(wrapper).toMatchSnapshot();
-// });
+it('should render an empty pill list', () => {
+  const wrapper = shallowWithIntl(
+    <PillList ariaLabel="pill list label" />,
+  );
+  expect(wrapper).toMatchSnapshot();
+});
 
 /* Collapsible Pill List */
 it('should render a standard pill list', () => {

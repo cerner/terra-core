@@ -172,7 +172,7 @@ const PillList = (props) => {
       aria-relevant="removals"
       className={pillListClassNames}
     >
-      <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.pills.pillListHint' }, { numberOfPills: children.length })} />
+      <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.pills.pillListHint' }, { numberOfPills: children && children.length })} />
       {children}
       {rollUpPill}
     </div>
