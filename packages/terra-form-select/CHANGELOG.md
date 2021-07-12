@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * Added timeout to fix focus issue in menu with large number of options in mobile devices.
+  * Added timeout to fix focus issue in mobile devices for menu with large number of options.
 
 ## 6.31.0 - (June 22, 2021)
 
