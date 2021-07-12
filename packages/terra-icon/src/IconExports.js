@@ -17,6 +17,7 @@ import IconBedAssigned from './icon/IconBedAssigned';
 import IconBedAssignedLowLight from './icon/IconBedAssignedLowLight';
 import IconBedRequested from './icon/IconBedRequested';
 import IconBluetooth from './icon/IconBluetooth';
+import IconBluetoothSlash from './icon/IconBluetoothSlash';
 import IconBookmark from './icon/IconBookmark';
 import IconBriefcase from './icon/IconBriefcase';
 import IconBusy from './icon/IconBusy';
@@ -298,6 +299,8 @@ import IconVisualization from './icon/IconVisualization';
 import IconWarning from './icon/IconWarning';
 import IconWarningLowLight from './icon/IconWarningLowLight';
 import IconWaveform from './icon/IconWaveform';
+import IconWifi from './icon/IconWifi';
+import IconWifiSlash from './icon/IconWifiSlash';
 import IconXSymbol from './icon/IconXSymbol';
 import IconZoomIn from './icon/IconZoomIn';
 import IconZoomOut from './icon/IconZoomOut';
@@ -322,6 +325,7 @@ const Icons = {
   IconBedAssignedLowLight,
   IconBedRequested,
   IconBluetooth,
+  IconBluetoothSlash,
   IconBookmark,
   IconBriefcase,
   IconBusy,
@@ -603,6 +607,8 @@ const Icons = {
   IconWarning,
   IconWarningLowLight,
   IconWaveform,
+  IconWifi,
+  IconWifiSlash,
   IconXSymbol,
   IconZoomIn,
   IconZoomOut,
