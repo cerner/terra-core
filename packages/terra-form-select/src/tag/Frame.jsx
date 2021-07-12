@@ -500,7 +500,7 @@ class Frame extends React.Component {
       || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
 
-      FrameUtil.shiftFocusToMenu(this);
+      setTimeout(() => FrameUtil.shiftFocusToMenu(this), 100);
       return;
     }
     if (event.target.hasAttribute('data-terra-form-select-toggle')
