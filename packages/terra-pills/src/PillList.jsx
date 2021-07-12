@@ -77,14 +77,14 @@ const PillList = (props) => {
   const handleRollUp = () => {
     rollUpPillRef.current.removeAttribute('style');
     let pillListHeight = pillListRef.current.clientHeight;
-    const rollUpPillStyles = window.getComputedStyle(rollUpPillRef.current); 
+    const rollUpPillStyles = window.getComputedStyle(rollUpPillRef.current);
     const pillHeight = rollUpPillRef.current.offsetHeight + Math.round(parseFloat(rollUpPillStyles.marginTop)) + Math.round(parseFloat(rollUpPillStyles.marginBottom));
-    
+
     if (pillListHeight <= pillHeight) {
       rollUpPillRef.current.style.display = 'none';
       return;
     }
-    
+
     const childPills = pillListRef.current.querySelectorAll('[class*="pill-container"]');
     let index = childPills.length - 1;
     let hiddenPillCounter = 0;
