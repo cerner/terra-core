@@ -153,6 +153,7 @@
     color: var(--terra-pills-roll-up-pill-color, #4d5153);
     cursor: pointer;
     display: inline-block;
+    vertical-align: top;
     font-size: var(--terra-pills-roll-up-pill-font-size, 0.85714rem);
     line-height: var(--terra-pills-roll-up-pill-line-height, 1.25);
     margin: var(--terra-pills-roll-up-pill-margin, 0.35714rem);
