@@ -1,0 +1,7 @@
+{
+  "Terra.pills.pillHint.removable": "",
+  "Terra.pills.pillHint.selectable": "",
+  "Terra.pills.pillHint.selectableAndRemovable": "",
+  "Terra.pills.pillListHint": "{numberOfPills}",
+  "Terra.pills.rollupPillLabel": "{pillsNotVisibleCount}"
+}

@@ -1,0 +1,7 @@
+{
+  "Terra.pills.pillHint.removable": "pill is removable via Delete or Back Space key",
+  "Terra.pills.pillHint.selectable": "pill is selectable via Space Bar or Enter key",
+  "Terra.pills.pillHint.selectableAndRemovable": "pill is selectable via Space Bar or Enter key and removable via Delete or Back Space key",
+  "Terra.pills.pillListHint": "Contains {numberOfPills} pills",
+  "Terra.pills.rollupPillLabel": "{pillsNotVisibleCount} more..."
+}

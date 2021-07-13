@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added tests and docs for terra-pills
 
 ## 1.5.0 - (July 6, 2021)
 

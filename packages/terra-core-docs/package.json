@@ -35,6 +35,8 @@
     "precompile": "rm -rf lib"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "lodash.uniqueid": "^4.0.1",
     "@cerner/terra-docs": "^1.5.0",
     "terra-action-footer": "^2.62.0",
     "terra-action-header": "^2.70.0",

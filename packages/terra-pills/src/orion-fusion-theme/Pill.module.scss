@@ -1,0 +1,86 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .orion-fusion-theme {
+    // Pill
+    --terra-pills-pill-container-background-color: #fff;
+    --terra-pills-pill-container-border-color: #d6d7d9;
+    --terra-pills-pill-container-border-style: solid;
+    --terra-pills-pill-container-border-radius: 3px;
+    --terra-pills-pill-container-border-width: 1px;
+    --terra-pills-pill-container-margin: 0.41667rem;
+    --terra-pills-pill-container-max-width-inset: 0.41667rem;
+    --terra-pills-pill-container-focus-border-color: #4d5153;
+    --terra-pills-pill-container-focus-border-width: 1px;
+    --terra-pills-pill-container-focus-box-shadow: inset 0 3rem 1.5rem -2rem #f4f4f4, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(128, 191, 253, 1), 0 0 6px 3px rgba(128, 191, 253, 1);
+    --terra-pills-pill-container-focus-outline: none;
+    --terra-pills-pill-container-focus-outline-offset: 0;
+    --terra-pills-pill-container-selectable-hover-border-color: #4d5153;
+    --terra-pills-pill-container-selectable-active-border-color: #4d5153;
+    --terra-pills-pill-container-selectable-removable-hover-border-color: #d6d7d9;
+    --terra-pills-pill-container-selectable-removable-active-border-color: #d6d7d9;
+
+    --terra-pills-pill-label-background-color: transparent;
+    --terra-pills-pill-label-color: #111619;
+    --terra-pills-pill-label-font-size: 1rem;
+    --terra-pills-pill-label-line-height: 1.25;
+    --terra-pills-pill-label-padding-bottom: 0.41667rem;
+    --terra-pills-pill-label-padding-left: 0.33333rem;
+    --terra-pills-pill-label-padding-right: 0.33333rem;
+    --terra-pills-pill-label-padding-top: 0.33333rem;
+    --terra-pills-pill-label-selectable-hover-background-color: #dedfe0;
+    --terra-pills-pill-label-selectable-active-background-color: #c8cacb;
+    --terra-pills-pill-label-selectable-active-color: #111619;
+    --terra-pills-pill-label-removable-padding-right: 0.33333rem;
+    --terra-pills-pill-label-selectable-removable-hover-background-color: #dedfe0;
+    --terra-pills-pill-label-selectable-removable-hover-box-shadow: none;
+    --terra-pills-pill-label-selectable-removable-hover-color: #111619;
+    --terra-pills-pill-label-selectable-removable-active-background-color: #c8cacb;
+    --terra-pills-pill-label-selectable-removable-active-box-shadow: none;
+    --terra-pills-pill-label-selectable-removable-active-color: #111619;
+
+    --terra-pills-pill-remove-button-background-color: #d6d7d9;
+    --terra-pills-pill-remove-button-box-shadow: none;
+    --terra-pills-pill-remove-button-color: #434a4d;
+    --terra-pills-pill-remove-button-hover-background-color: #d6d7d9;
+    --terra-pills-pill-remove-button-hover-box-shadow: none;
+    --terra-pills-pill-remove-button-hover-color: #004c76;
+    --terra-pills-pill-remove-button-active-background-color: #c8cacb;
+    --terra-pills-pill-remove-button-active-box-shadow: none;
+    --terra-pills-pill-remove-button-active-color: #004c76;
+
+    // Clear Icon
+    --terra-pills-clear-icon-height: 1.125rem;
+    --terra-pills-clear-icon-margin-left: 0.25rem;
+    --terra-pills-clear-icon-margin-right: 0.25rem;
+    --terra-pills-clear-icon-width: 1.125rem;
+
+    //Roll Up Pill
+    --terra-pills-roll-up-pill-background-color: #fff;
+    --terra-pills-roll-up-pill-border-color: #d6d7d9;
+    --terra-pills-roll-up-pill-border-radius: 3px;
+    --terra-pills-roll-up-pill-border-width: 1px;
+    --terra-pills-roll-up-pill-color: #111619;
+    --terra-pills-roll-up-pill-font-size: 1rem;
+    --terra-pills-roll-up-pill-line-height: 1.25;
+    --terra-pills-roll-up-pill-margin: 5px;
+    --terra-pills-roll-up-pill-padding-bottom: 0.41667rem;
+    --terra-pills-roll-up-pill-padding-left: 0.33333rem;
+    --terra-pills-roll-up-pill-padding-right: 0.33333rem;
+    --terra-pills-roll-up-pill-padding-top: 0.33333rem;
+    --terra-pills-roll-up-pill-focus-border-width: 1px;
+    --terra-pills-roll-up-pill-focus-border-color: #4d5153;
+    --terra-pills-roll-up-pill-focus-box-shadow: inset 0 3rem 1.5rem -2rem #f4f4f4, 0 0 1px 1px rgba(255, 255, 255, 0.65), 0 0 2px 3px rgba(128, 191, 253, 1), 0 0 6px 3px rgba(128, 191, 253, 1);
+    --terra-pills-roll-up-pill-focus-outline: none;
+    --terra-pills-roll-up-pill-focus-outline-offset: 0;
+    --terra-pills-roll-up-pill-hover-background-color: #dedfe0;
+    --terra-pills-roll-up-pill-hover-border-color: #4d5153;
+    --terra-pills-roll-up-pill-active-background-color: #c8cacb;
+    --terra-pills-roll-up-pill-active-border-color: #4d5153;
+    --terra-pills-roll-up-pill-active-color: #111619;
+
+    // Clear Icon SVG
+    @include terra-inline-svg-var('--terra-pills-clear-icon-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#434a4d" d="M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z"></path></svg>');
+    @include terra-inline-svg-var('--terra-pills-clear-icon-hover-background-image', '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#004c76" d="M28.2 24L42.9 9.1 40.8 7l-1.7-1.6-.4-.5L24 19.7 9.4 4.9 7.2 7 5.6 8.6l-.5.5L19.8 24 5.1 38.9 7.2 41l1.7 1.6.5.5L24 28.3l14.7 14.8.4-.5 1.7-1.6 2.1-2.1L28.2 24z"></path></svg>');
+  }
+}

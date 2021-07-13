@@ -1,0 +1,24 @@
+:local {
+  .spacing-wrapper {
+    padding: 10px;
+  }
+
+  .container {
+    box-sizing: content-box;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .show-border {
+    border: 1px dashed #800080;
+  }
+
+  .width-200 {
+    width: 200px;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+}
