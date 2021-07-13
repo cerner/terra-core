@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed mislabeled doc examples.
+
 ## 4.12.0 - (April 6, 2021)
 
 * Changed
