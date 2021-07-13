@@ -2,4 +2,8 @@
 
 ## Unreleased
 
-* Initial stable release
+* Channged
+  * Migrated from terra-framework to terra-core
+
+* Added
+  * Initial stable release
