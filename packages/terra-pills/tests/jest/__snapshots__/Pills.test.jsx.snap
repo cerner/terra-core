@@ -74,6 +74,9 @@ exports[`correctly applies the theme context className 1`] = `
         aria-live="polite"
         aria-relevant="removals"
         className="pill-list orion-fusion-theme"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="-1"
       >
         <VisuallyHiddenText
           text="Terra.pills.pillListHint"
@@ -85,11 +88,14 @@ exports[`correctly applies the theme context className 1`] = `
           </span>
         </VisuallyHiddenText>
         <InjectIntl(Pill)
+          data-terra-focusable-pill="index-0"
+          key=".0"
           label="pill label"
         >
           <Pill
             ariaExpanded={false}
             ariaHasPopup={false}
+            data-terra-focusable-pill="index-0"
             intl={
               Object {
                 "defaultFormats": Object {},
@@ -121,7 +127,9 @@ exports[`correctly applies the theme context className 1`] = `
           >
             <div
               className="pill-container orion-fusion-theme"
-              data-terra-pills-show-focus-styles="true"
+              data-terra-focusable-pill="index-0"
+              data-terra-pill={true}
+              data-terra-pills-show-focus-styles={true}
             >
               <div
                 className="pill-label"
@@ -133,6 +141,7 @@ exports[`correctly applies the theme context className 1`] = `
         </InjectIntl(Pill)>
         <div
           className="roll-up-pill"
+          data-terra-pillList-show-focus-styles={true}
           onClick={[Function]}
           onKeyDown={[Function]}
           onMouseDown={[Function]}
@@ -367,6 +376,9 @@ exports[`should render a pill list with aria-labelledby attribute 1`] = `
         aria-live="polite"
         aria-relevant="removals"
         className="pill-list"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="-1"
       >
         <VisuallyHiddenText
           text="Terra.pills.pillListHint"
@@ -378,11 +390,14 @@ exports[`should render a pill list with aria-labelledby attribute 1`] = `
           </span>
         </VisuallyHiddenText>
         <InjectIntl(Pill)
+          data-terra-focusable-pill="index-0"
+          key=".0"
           label="pill label"
         >
           <Pill
             ariaExpanded={false}
             ariaHasPopup={false}
+            data-terra-focusable-pill="index-0"
             intl={
               Object {
                 "defaultFormats": Object {},
@@ -414,7 +429,9 @@ exports[`should render a pill list with aria-labelledby attribute 1`] = `
           >
             <div
               className="pill-container"
-              data-terra-pills-show-focus-styles="true"
+              data-terra-focusable-pill="index-0"
+              data-terra-pill={true}
+              data-terra-pills-show-focus-styles={true}
             >
               <div
                 className="pill-label"
@@ -426,6 +443,7 @@ exports[`should render a pill list with aria-labelledby attribute 1`] = `
         </InjectIntl(Pill)>
         <div
           className="roll-up-pill"
+          data-terra-pillList-show-focus-styles={true}
           onClick={[Function]}
           onKeyDown={[Function]}
           onMouseDown={[Function]}
