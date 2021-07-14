@@ -112,6 +112,7 @@ const Pill = (props) => {
     pillRef.current.setAttribute('data-terra-pills-show-focus-styles', 'true');
     if ((event.keyCode === KEY_RETURN || event.keyCode === KEY_SPACE) && onSelect) {
       onSelect();
+      event.preventDefault();
     } else if ((event.keyCode === KEY_DELETE || event.keyCode === KEY_BACK_SPACE) && onRemove) {
       onRemove();
     }
@@ -183,6 +184,7 @@ const Pill = (props) => {
       aria-expanded={!onSelect ? undefined : ariaExpanded}
       aria-controls={!onSelect ? undefined : ariaControls}
       data-terra-pills-show-focus-styles
+      data-terra-pill
       className={pillClassNames}
     >
       <div

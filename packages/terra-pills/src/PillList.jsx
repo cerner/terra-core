@@ -92,7 +92,7 @@ const PillList = (props) => {
       return;
     }
 
-    const childPills = pillListRef.current.querySelectorAll('[class*="pill-container"]');
+    const childPills = pillListRef.current.querySelectorAll('[data-terra-pill"]');
     let index = childPills.length - 1;
     let hiddenPillCounter = 0;
     while (pillListHeight > pillHeight) {
@@ -125,7 +125,7 @@ const PillList = (props) => {
       return;
     }
 
-    const childPills = pillListRef.current.querySelectorAll('[class*="pill-container"]');
+    const childPills = pillListRef.current.querySelectorAll('[data-terra-pill"]');
     let index = childPills.length - 1;
     let hiddenPillCounter = rollUpCount;
     while (hiddenPillCounter > 0) {
