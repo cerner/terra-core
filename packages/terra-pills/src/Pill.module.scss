@@ -163,7 +163,7 @@
     padding-top: var(--terra-pills-roll-up-pill-padding-top, 0.28571rem);
 
 
-    &[data-terra-pills-show-focus-styles='true']:focus {
+    &[data-terra-pillList-show-focus-styles='true']:focus {
       border-color: var(--terra-pills-roll-up-pill-focus-border-color, #868a8c);
       border-width: var(--terra-pills-roll-up-pill-focus-border-width, 1px);
       box-shadow: var(--terra-pills-roll-up-pill-focus-box-shadow, none);

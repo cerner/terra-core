@@ -182,7 +182,7 @@ const Pill = (props) => {
       aria-haspopup={!!onSelect && ariaHasPopup ? true : undefined}
       aria-expanded={!onSelect ? undefined : ariaExpanded}
       aria-controls={!onSelect ? undefined : ariaControls}
-      data-terra-pills-show-focus-styles="true"
+      data-terra-pills-show-focus-styles
       className={pillClassNames}
     >
       <div

@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from 'react';
-import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
+import {
+  KEY_SPACE, KEY_RETURN, KEY_RIGHT, KEY_LEFT,
+} from 'keycode-js';
 import { injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -70,8 +72,11 @@ const PillList = (props) => {
   } = props;
 
   const theme = React.useContext(ThemeContext);
+  const focusableNodes = [];
   const pillListRef = useRef();
   const rollUpPillRef = useRef();
+  const focusableNodeIndex = useRef();
+  const focusedNode = useRef(0);
   const [rollUpCount, setRollUpCount] = useState(0);
 
   const handleRollUp = () => {
@@ -97,6 +102,20 @@ const PillList = (props) => {
     setRollUpCount(hiddenPillCounter);
   };
 
+  const setTabIndex = (val) => {
+    const currentNode = focusableNodeIndex.current ? pillListRef.current.querySelector(`[data-terra-focusable-pill="${focusableNodeIndex.current}"]`) : null;
+    if (currentNode) {
+      currentNode.setAttribute('tabIndex', val);
+    }
+  };
+
+  const focusCurrentNode = () => {
+    const currentNode = focusableNodeIndex.current ? pillListRef.current.querySelector(`[data-terra-focusable-pill="${focusableNodeIndex.current}"]`) : null;
+    if (currentNode) {
+      currentNode.focus();
+    }
+  };
+
   const handleExpansion = () => {
     rollUpPillRef.current.style.display = 'none';
 
@@ -113,7 +132,32 @@ const PillList = (props) => {
       hiddenPillCounter -= 1;
     }
     setRollUpCount(hiddenPillCounter);
+
+    if (focusableNodes.length > 0) {
+      focusableNodeIndex.current = focusableNodes[focusedNode.current].id;
+      setTabIndex('0');
+      focusCurrentNode();
+    }
   };
+
+  useEffect(() => {
+    const pills = pillListRef.current.childNodes;
+    for (let i = 1; i < pills.length - 1; i += 1) {
+      pills[i].setAttribute('tabindex', '-1');
+    }
+
+    focusedNode.current = 0;
+    if (!isCollapsed && focusableNodes.length > 0) {
+      focusableNodeIndex.current = focusableNodes[focusedNode.current].id;
+      setTabIndex('0');
+    }
+
+    if (isCollapsed) {
+      pillListRef.current.lastChild.setAttribute('tabindex', 0);
+      focusableNodeIndex.current = pillListRef.current;
+      setTabIndex('0');
+    }
+  }, []);
 
   useEffect(() => {
     if (isCollapsed) {
@@ -124,15 +168,15 @@ const PillList = (props) => {
     pillListRef.current.style.visibility = 'visible';
   }, [isCollapsed]);
 
-  const handleKeyDown = (event) => {
-    rollUpPillRef.current.setAttribute('data-terra-pills-show-focus-styles', 'true');
+  const handleRollUpPillKeyDown = (event) => {
+    rollUpPillRef.current.setAttribute('data-terra-pillList-show-focus-styles', 'true');
     if (event.keyCode === KEY_RETURN || event.keyCode === KEY_SPACE) {
       rollUpPillOnTrigger();
     }
   };
 
-  const handleMouseDown = () => {
-    rollUpPillRef.current.setAttribute('data-terra-pills-show-focus-styles', 'false');
+  const handleRollUpPillMouseDown = () => {
+    rollUpPillRef.current.setAttribute('data-terra-pillList-show-focus-styles', 'false');
   };
 
   const handleRollUpPillOnTrigger = () => {
@@ -143,11 +187,12 @@ const PillList = (props) => {
     <div
       className={cx(['roll-up-pill'])}
       onClick={handleRollUpPillOnTrigger}
-      onKeyDown={handleKeyDown}
-      onMouseDown={handleMouseDown}
+      onKeyDown={handleRollUpPillKeyDown}
+      onMouseDown={handleRollUpPillMouseDown}
       ref={rollUpPillRef}
       role="button"
       tabIndex="0"
+      data-terra-pillList-show-focus-styles
     >
       {intl.formatMessage({ id: 'Terra.pills.rollupPillLabel' }, { pillsNotVisibleCount: rollUpCount })}
     </div>
@@ -161,9 +206,72 @@ const PillList = (props) => {
     customProps.className,
   );
 
+  const handlePillListKeyDown = (event) => {
+    if (event.keyCode === KEY_RIGHT) {
+      event.preventDefault();
+
+      if (focusedNode.current + 1 < focusableNodes.length) {
+        setTabIndex('-1');
+        focusedNode.current += 1;
+        focusableNodeIndex.current = focusableNodes[focusedNode.current].id;
+        setTabIndex('0');
+        focusCurrentNode();
+      }
+    }
+
+    if (event.keyCode === KEY_LEFT) {
+      event.preventDefault();
+      if (focusedNode.current >= 1) {
+        setTabIndex('-1');
+        focusedNode.current -= 1;
+        focusableNodeIndex.current = focusableNodes[focusedNode.current].id;
+        setTabIndex('0');
+        focusCurrentNode();
+      }
+    }
+  };
+
+  const handlePillListOnClick = (event) => {
+    const currentElement = event.target.parentElement.getAttribute('data-terra-focusable-pill');
+    const currentIndex = focusableNodes.findIndex((element) => element.id === currentElement);
+
+    if (currentElement && currentIndex >= 0) {
+      setTabIndex('-1');
+      focusedNode.current = currentIndex;
+      focusableNodeIndex.current = focusableNodes[focusedNode.current].id;
+      setTabIndex('0');
+      focusCurrentNode();
+    }
+
+    focusCurrentNode();
+  };
+
+  const renderChildren = (pills) => {
+    const items = React.Children.map(pills, (pill, index) => {
+      if (pill) {
+        return React.cloneElement(pill, { 'data-terra-focusable-pill': `index-${index}` });
+      }
+      return undefined;
+    });
+
+    items.map(item => {
+      if (item.props.onSelect || item.props.onRemove) {
+        focusableNodes.push({ id: item.props['data-terra-focusable-pill'] });
+      }
+      return undefined;
+    });
+
+    return items;
+  };
+
+  const pillListProps = {};
+  pillListProps.onKeyDown = handlePillListKeyDown;
+  pillListProps.onClick = handlePillListOnClick;
+
   return (
     <div
       {...customProps}
+      {...pillListProps}
       ref={pillListRef}
       aria-label={!ariaLabelledBy ? ariaLabel : undefined}
       aria-labelledby={ariaLabelledBy}
@@ -171,9 +279,10 @@ const PillList = (props) => {
       aria-live="polite"
       aria-relevant="removals"
       className={pillListClassNames}
+      tabIndex="-1"
     >
       <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.pills.pillListHint' }, { numberOfPills: children && children.length })} />
-      {children}
+      {children ? renderChildren(children) : []}
       {rollUpPill}
     </div>
   );
