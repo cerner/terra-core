@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import { injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
@@ -115,7 +115,7 @@ const PillList = (props) => {
     setRollUpCount(hiddenPillCounter);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isCollapsed) {
       handleRollUp();
     } else {
