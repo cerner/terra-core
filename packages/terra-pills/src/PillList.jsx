@@ -1,5 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  useEffect, useLayoutEffect, useRef, useState,
+} from 'react';
 import {
   KEY_SPACE, KEY_RETURN, KEY_RIGHT, KEY_LEFT,
 } from 'keycode-js';
@@ -159,7 +161,7 @@ const PillList = (props) => {
     }
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isCollapsed) {
       handleRollUp();
     } else {
