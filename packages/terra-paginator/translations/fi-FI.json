@@ -4,5 +4,7 @@
   "Terra.paginator.first": "Ensimmäinen",
   "Terra.paginator.last": "Viimeinen",
   "Terra.paginator.pageIndex": "Sivu {pageNumber}",
-  "Terra.paginator.pageCount": "Sivu {pageNumber} / {pageNumberTotal}"
+  "Terra.paginator.pageCount": "Sivu {pageNumber} / {pageNumberTotal}",
+  "Terra.paginator.pageIndexWithLabel": "{pageLabel} {pageNumber}",
+  "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} / {pageNumberTotal}"
 }

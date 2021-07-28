@@ -34,6 +34,10 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+  /**
+   * Allows to set custom page label.
+   */
+  pageLabel: PropTypes.string,
 };
 
 class ControlledProgressivePaginator extends React.Component {
@@ -73,6 +77,7 @@ class ControlledProgressivePaginator extends React.Component {
       intl,
       totalCount,
       itemCountPerPage,
+      pageLabel,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
@@ -81,8 +86,14 @@ class ControlledProgressivePaginator extends React.Component {
     return (
       <div className={cx('paginator', 'progressive', theme.className)} role="navigation" aria-label="pagination">
         <div>
-          {(totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
-            : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
+          {
+            /* eslint-disable no-nested-ternary */
+            (totalCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.pageCountWithLabel' }, { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages })
+              : (totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
+                : (pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.pageIndexWithLabel' }, { pageLabel, pageNumber: selectedPage })
+                  : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })
+            /* eslint-enable no-nested-ternary */
+          }
         </div>
         <div>
           {
@@ -147,6 +158,7 @@ class ControlledProgressivePaginator extends React.Component {
       intl,
       totalCount,
       itemCountPerPage,
+      pageLabel,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
@@ -182,8 +194,14 @@ class ControlledProgressivePaginator extends React.Component {
           </PaginatorButton>
         </div>
         <div>
-          {(totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
-            : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
+          {
+            /* eslint-disable no-nested-ternary */
+            (totalCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.pageCountWithLabel' }, { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages })
+              : (totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
+                : (pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.pageIndexWithLabel' }, { pageLabel, pageNumber: selectedPage })
+                  : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })
+            /* eslint-enable no-nested-ternary */
+          }
         </div>
         <div>
           <PaginatorButton
