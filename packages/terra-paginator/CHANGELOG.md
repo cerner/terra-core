@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added prop `pageLabel` to customize page label.
+
 ## 2.75.0 - (July 6, 2021)
 
 * Changed
