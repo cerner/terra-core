@@ -20,6 +20,8 @@ import IconBluetooth from './icon/IconBluetooth';
 import IconBluetoothSlash from './icon/IconBluetoothSlash';
 import IconBookmark from './icon/IconBookmark';
 import IconBriefcase from './icon/IconBriefcase';
+import IconBrokenImage from './icon/IconBrokenImage';
+import IconBrokenLinkUnlink from './icon/IconBrokenLinkUnlink';
 import IconBusy from './icon/IconBusy';
 import IconCalculator from './icon/IconCalculator';
 import IconCalendar from './icon/IconCalendar';
@@ -328,6 +330,8 @@ const Icons = {
   IconBluetoothSlash,
   IconBookmark,
   IconBriefcase,
+  IconBrokenImage,
+  IconBrokenLinkUnlink,
   IconBusy,
   IconCalculator,
   IconCalendar,
