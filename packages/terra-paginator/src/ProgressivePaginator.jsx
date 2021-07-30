@@ -35,7 +35,7 @@ const propTypes = {
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
-   * Allows to set custom page label.
+   * Allows user to set custom page label. _(usage note: User must pass translated text)_.
    */
   pageLabel: PropTypes.string,
 };
@@ -88,16 +88,30 @@ class ProgressivePaginator extends React.Component {
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
+    let messageId;
+    let messageAttributes;
+
+    if (totalCount) {
+      if (pageLabel) {
+        messageId = 'Terra.paginator.pageCountWithLabel';
+        messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
+      } else {
+        messageId = 'Terra.paginator.pageCount';
+        messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
+      }
+    } else if (pageLabel) {
+      messageId = 'Terra.paginator.pageIndexWithLabel';
+      messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
+    } else {
+      messageId = 'Terra.paginator.pageIndex';
+      messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
+    }
+
     return (
       <div className={cx('paginator', 'progressive', theme.className)} role="navigation" aria-label="pagination">
         <div>
           {
-            /* eslint-disable no-nested-ternary */
-            (totalCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.pageCountWithLabel' }, { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages })
-              : (totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
-                : (pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.pageIndexWithLabel' }, { pageLabel, pageNumber: selectedPage })
-                  : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })
-            /* eslint-enable no-nested-ternary */
+            intl.formatMessage({ id: messageId }, messageAttributes)
           }
         </div>
         <div>
@@ -169,6 +183,25 @@ class ProgressivePaginator extends React.Component {
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
+    let messageId;
+    let messageAttributes;
+
+    if (totalCount) {
+      if (pageLabel) {
+        messageId = 'Terra.paginator.pageCountWithLabel';
+        messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
+      } else {
+        messageId = 'Terra.paginator.pageCount';
+        messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
+      }
+    } else if (pageLabel) {
+      messageId = 'Terra.paginator.pageIndexWithLabel';
+      messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
+    } else {
+      messageId = 'Terra.paginator.pageIndex';
+      messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
+    }
+
     return (
       <div className={cx('paginator', theme.className)} role="navigation" aria-label="pagination">
         <div>
@@ -200,12 +233,7 @@ class ProgressivePaginator extends React.Component {
         </div>
         <div>
           {
-            /* eslint-disable no-nested-ternary */
-            (totalCount && pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.pageCountWithLabel' }, { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages })
-              : (totalCount) ? intl.formatMessage({ id: 'Terra.paginator.pageCount' }, { pageNumber: selectedPage, pageNumberTotal: totalPages })
-                : (pageLabel) ? intl.formatMessage({ id: 'Terra.paginator.pageIndexWithLabel' }, { pageLabel, pageNumber: selectedPage })
-                  : intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })
-            /* eslint-enable no-nested-ternary */
+            intl.formatMessage({ id: messageId }, messageAttributes)
           }
         </div>
         <div>

@@ -8,7 +8,7 @@ const ProgressivePaginatorWithCustomLabel = () => {
     <div>
       <Button id="total-count-button" text="Set Total Count to 45" onClick={() => { setTotalCount(45); }} />
       {/* eslint-disable-next-line no-console */}
-      <ProgressivePaginator pageLabel="Custom_Page_Label" totalCount={totalCount} onPageChange={i => console.log(i)} />
+      <ProgressivePaginator pageLabel="WebPage" totalCount={totalCount} onPageChange={i => console.log(i)} />
     </div>
   );
 };
