@@ -177,6 +177,7 @@ class Frame extends React.Component {
     this.menuId = `terra-select-menu-${uniqueid()}`;
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
+    this.shouldFocusDropdown = false;
   }
 
   componentDidMount() {
@@ -418,6 +419,7 @@ class Frame extends React.Component {
    * Opens the dropdown.
    */
   openDropdown(event) {
+    this.shouldFocusDropdown = false;
     if (this.state.isOpen || this.props.disabled) {
       return;
     }
@@ -432,8 +434,7 @@ class Frame extends React.Component {
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
       || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
-
-      FrameUtil.shiftFocusToMenu(this);
+      this.shouldFocusDropdown = true;
       return;
     }
     if (event.target.hasAttribute('data-terra-form-select-toggle')
@@ -465,6 +466,11 @@ class Frame extends React.Component {
         this.dropdown.removeAttribute('inert');
         this.dropdown.removeAttribute('aria-hidden');
         this.selectMenu.setAttribute('tabIndex', '0');
+
+        // sets focus to select menu after select menu is positioned when opened by toggle-button click
+        if (this.selectMenu && this.shouldFocusDropdown) {
+          this.selectMenu.focus();
+        }
       }
     };
 
