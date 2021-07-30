@@ -70,18 +70,12 @@ class ControlledProgressivePaginator extends React.Component {
     }
   }
 
-  defaultProgressivePaginator() {
-    const theme = this.context;
+  getPageLabel(totalPages) {
     const {
-      selectedPage,
-      intl,
-      totalCount,
-      itemCountPerPage,
       pageLabel,
+      totalCount,
+      selectedPage,
     } = this.props;
-    const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
-    const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
-    const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
     let messageId;
     let messageAttributes;
@@ -101,6 +95,23 @@ class ControlledProgressivePaginator extends React.Component {
       messageId = 'Terra.paginator.pageIndex';
       messageAttributes = { pageNumber: selectedPage };
     }
+
+    return { messageId, messageAttributes };
+  }
+
+  defaultProgressivePaginator() {
+    const theme = this.context;
+    const {
+      selectedPage,
+      intl,
+      totalCount,
+      itemCountPerPage,
+    } = this.props;
+    const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
+    const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
+    const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
+
+    const { messageId, messageAttributes } = this.getPageLabel(totalPages);
 
     return (
       <div className={cx('paginator', 'progressive', theme.className)} role="navigation" aria-label="pagination">
@@ -172,30 +183,12 @@ class ControlledProgressivePaginator extends React.Component {
       intl,
       totalCount,
       itemCountPerPage,
-      pageLabel,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
-    let messageId;
-    let messageAttributes;
-
-    if (totalCount) {
-      if (pageLabel) {
-        messageId = 'Terra.paginator.pageCountWithLabel';
-        messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
-      } else {
-        messageId = 'Terra.paginator.pageCount';
-        messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
-      }
-    } else if (pageLabel) {
-      messageId = 'Terra.paginator.pageIndexWithLabel';
-      messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
-    } else {
-      messageId = 'Terra.paginator.pageIndex';
-      messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
-    }
+    const { messageId, messageAttributes } = this.getPageLabel(totalPages);
 
     return (
       <div className={cx('paginator', theme.className)} role="navigation" aria-label="pagination">
