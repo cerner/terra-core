@@ -96,7 +96,7 @@ class ControlledProgressivePaginator extends React.Component {
       }
     } else if (pageLabel) {
       messageId = 'Terra.paginator.pageIndexWithLabel';
-      messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
+      messageAttributes = { pageLabel, pageNumber: selectedPage };
     } else {
       messageId = 'Terra.paginator.pageIndex';
       messageAttributes = { pageNumber: selectedPage };
