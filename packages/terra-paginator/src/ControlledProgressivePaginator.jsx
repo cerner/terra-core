@@ -9,6 +9,7 @@ import * as KeyCode from 'keycode-js';
 import styles from './Paginator.module.scss';
 import { calculatePages } from './_paginationUtils';
 import PaginatorButton from './_PaginatorButton';
+import getPageLabel from './PageLabel';
 
 const cx = classNamesBind.bind(styles);
 
@@ -70,35 +71,6 @@ class ControlledProgressivePaginator extends React.Component {
     }
   }
 
-  getPageLabel(totalPages) {
-    const {
-      pageLabel,
-      totalCount,
-      selectedPage,
-    } = this.props;
-
-    let messageId;
-    let messageAttributes;
-
-    if (totalCount) {
-      if (pageLabel) {
-        messageId = 'Terra.paginator.pageCountWithLabel';
-        messageAttributes = { pageLabel, pageNumber: selectedPage, pageNumberTotal: totalPages };
-      } else {
-        messageId = 'Terra.paginator.pageCount';
-        messageAttributes = { pageNumber: selectedPage, pageNumberTotal: totalPages };
-      }
-    } else if (pageLabel) {
-      messageId = 'Terra.paginator.pageIndexWithLabel';
-      messageAttributes = { pageLabel, pageNumber: selectedPage };
-    } else {
-      messageId = 'Terra.paginator.pageIndex';
-      messageAttributes = { pageNumber: selectedPage };
-    }
-
-    return { messageId, messageAttributes };
-  }
-
   defaultProgressivePaginator() {
     const theme = this.context;
     const {
@@ -106,12 +78,13 @@ class ControlledProgressivePaginator extends React.Component {
       intl,
       totalCount,
       itemCountPerPage,
+      pageLabel,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
-    const { messageId, messageAttributes } = this.getPageLabel(totalPages);
+    const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
 
     return (
       <div className={cx('paginator', 'progressive', theme.className)} role="navigation" aria-label="pagination">
@@ -183,12 +156,13 @@ class ControlledProgressivePaginator extends React.Component {
       intl,
       totalCount,
       itemCountPerPage,
+      pageLabel,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
 
-    const { messageId, messageAttributes } = this.getPageLabel(totalPages);
+    const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
 
     return (
       <div className={cx('paginator', theme.className)} role="navigation" aria-label="pagination">
