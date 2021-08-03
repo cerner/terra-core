@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.13.0 - (August 3, 2021)
+
 * Fixed
   * Fixed mislabeled doc examples.
 
