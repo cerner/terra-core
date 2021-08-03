@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.32.0 - (August 3, 2021)
+
 * Fixed
   * Fixed focus issue in mobile devices for menu with large number of options.
 
