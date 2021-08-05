@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.32.0 - (August 3, 2021)
+
 * Fixed
   * Fixed missing i18n context variables.
 
