@@ -44,11 +44,16 @@
     position: relative;
     width: 100%;
 
+    &:hover {
+      .header, .body {
+        overflow-y: scroll;
+      }
+    }
     .header {
       display: flex;
       flex: 0 0 auto;
       overflow-x: hidden;
-      overflow-y: scroll;
+      overflow-y: hidden;
       position: relative;
       width: 100%;
     }
@@ -63,7 +68,7 @@
       flex: 1 1 auto;
       height: 100%;
       -webkit-overflow-scrolling: touch;
-      overflow-y: scroll;
+      overflow-y: hidden;
       width: 100%;
     }
   }

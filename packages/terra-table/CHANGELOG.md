@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Fixed
+  * Fixed scroll-bar visible on table header issue on windows.
 
 ## 4.27.0 - (July 6, 2021)
 
