@@ -22,7 +22,12 @@ class ButtonGroupWithVariantsMultiSelect extends React.Component {
   render() {
     return (
       <div>
-        <ButtonGroup id="button-group-different-variant-multi-select" buttonGroupVariant={this.state.variant} onChange={this.handleSelection} selectedKeys={this.state.selectedKeys}>
+        <ButtonGroup
+          id="button-group-different-variant-multi-select"
+          buttonGroupVariant={this.state.variant}
+          onChange={this.handleSelection}
+          selectedKeys={this.state.selectedKeys}
+        >
           <ButtonGroup.Button text="Button 1" key="1" />
           <ButtonGroup.Button text="Button 2" key="2" />
           <ButtonGroup.Button text="Button 3" key="3" />
@@ -30,7 +35,14 @@ class ButtonGroupWithVariantsMultiSelect extends React.Component {
         </ButtonGroup>
         <fieldset>
           <legend>Change Variant</legend>
-          <select aria-label="changeVariant" id="buttonGroupVariantMultiSelect" name="buttonGroupVariantMultiSelect" value={this.state.variant} onChange={this.handleOnSelect}>
+          <select
+            aria-label="changeVariant"
+            id="buttonGroupVariantMultiSelect"
+            name="buttonGroupVariantMultiSelect"
+            value={this.state.variant}
+            onChange={this.handleOnSelect}
+            menuItemDropdownButtonVariant
+          >
             <option value={Button.Opts.Variants.NEUTRAL}>Neutral</option>
             <option value={Button.Opts.Variants.EMPHASIS}>Emphasis</option>
             <option value={Button.Opts.Variants.GHOST}>Ghost</option>
