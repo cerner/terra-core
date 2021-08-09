@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import Button from 'terra-button';
 import ButtonGroupButton from './ButtonGroupButton';
 import ButtonGroupUtils from './ButtonGroupUtils';
 import styles from './ButtonGroup.module.scss';
@@ -29,12 +30,15 @@ const propTypes = {
    * A list of keys of the buttons that should be selected.
    */
   selectedKeys: PropTypes.arrayOf(PropTypes.string),
+
+  buttonGroupVariant: PropTypes.oneOf([Button.Opts.Variants.NEUTRAL, Button.Opts.Variants.EMPHASIS, Button.Opts.Variants.GHOST, Button.Opts.Variants['DE-EMPHASIS'], Button.Opts.Variants.ACTION, Button.Opts.Variants.UTILITY]),
 };
 
 const defaultProps = {
   children: [],
   isBlock: false,
   selectedKeys: [],
+  buttonGroupVariant: Button.Opts.Variants.NEUTRAL,
 };
 
 class ButtonGroup extends React.Component {
@@ -66,6 +70,7 @@ class ButtonGroup extends React.Component {
       isBlock,
       onChange,
       selectedKeys,
+      buttonGroupVariant,
       ...customProps
     } = this.props;
 
@@ -88,6 +93,7 @@ class ButtonGroup extends React.Component {
         onClick: this.wrapOnClick(child),
         className: cx([{ 'is-selected': isSelected && !child.props.isDisabled }, child.props.className]),
         'aria-pressed': isSelected || null,
+        buttonGroupButtonVariant: buttonGroupVariant,
       });
       allButtons.push(cloneChild);
     });

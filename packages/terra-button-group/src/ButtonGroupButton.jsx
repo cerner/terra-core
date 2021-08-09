@@ -42,10 +42,13 @@ const propTypes = {
    * Sets the button text. If an icon is provided, it will be an icon only button and this text is set as the aria-label for accessibility.
    */
   text: PropTypes.string.isRequired,
+
+  buttonGroupButtonVariant: PropTypes.oneOf([Button.Opts.Variants.NEUTRAL, Button.Opts.Variants.EMPHASIS, Button.Opts.Variants.GHOST, Button.Opts.Variants['DE-EMPHASIS'], Button.Opts.Variants.ACTION, Button.Opts.Variants.UTILITY]),
 };
 
 const defaultProps = {
   isDisabled: false,
+  buttonGroupButtonVariant: Button.Opts.Variants.NEUTRAL,
 };
 
 class ButtonGroupButton extends React.Component {
@@ -113,6 +116,7 @@ class ButtonGroupButton extends React.Component {
       icon,
       isDisabled,
       onFocus,
+      buttonGroupButtonVariant,
       ...customProps
     } = this.props;
 
@@ -121,6 +125,7 @@ class ButtonGroupButton extends React.Component {
     const buttonClassName = classNames(
       cx(
         'button-group-button',
+        { neutral: buttonGroupButtonVariant === Button.Opts.Variants.NEUTRAL },
         { 'is-disabled': isDisabled },
         { 'is-focused': this.state.focused && !isDisabled },
         theme.className,
@@ -138,7 +143,7 @@ class ButtonGroupButton extends React.Component {
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
         onFocus={this.handleFocus}
-        variant={Button.Opts.Variants.NEUTRAL}
+        variant={buttonGroupButtonVariant}
         className={buttonClassName}
       />
     );
