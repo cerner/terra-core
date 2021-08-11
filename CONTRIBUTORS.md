@@ -89,6 +89,7 @@ Cerner Corporation
 - Jackson Nowotny [@JacksonJN]
 - Manjuraghavendra Sathrasala [@manjusr]
 - Saurabh Khare [@saurabhkhare86]
+- Kevin Schuster [@kschuste]
 
 Community
 
@@ -204,3 +205,4 @@ Community
 [@JacksonJN]: https://github.com/JacksonJN
 [@manjusr]: https://github.com/manjusr
 [@saurabhkhare86]: https://github.com/SaurabhKhare86
+[@kschuste]: https://github.com/kschuste

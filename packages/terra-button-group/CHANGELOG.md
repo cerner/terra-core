@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Adding additional variants
+
 ## 3.57.0 - (June 22, 2021)
 
 * Changed
