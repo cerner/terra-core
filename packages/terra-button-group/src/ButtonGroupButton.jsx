@@ -148,7 +148,6 @@ class ButtonGroupButton extends React.Component {
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
         onFocus={this.handleFocus}
-        // variant={buttonGroupButtonVariant}
         className={buttonClassName}
       />
     );
