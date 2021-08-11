@@ -1,0 +1,58 @@
+//  Map Button Variant's Color Schemes
+// ==========================
+
+@mixin terra-button-group-variant-color($color-map) {
+  background-color: map-get($color-map, background-color);
+  border-color: map-get($color-map, border-color);
+  box-shadow: map-get($color-map, box-shadow);
+  color: map-get($color-map, color);
+
+  &.is-disabled,
+  &:disabled {
+    opacity: map-get($color-map, disabled-opacity);
+  }
+
+  &.is-focused {
+    background-color: map-get($color-map, focus-background-color);
+    border-color: map-get($color-map, focus-border-color);
+    box-shadow: map-get($color-map, focus-box-shadow);
+    // A z-index needs to be added on focus so that the focus ring does not get hidden behind adjacent buttons
+    z-index: 1000;
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: map-get($color-map, hover-background-color);
+      color: map-get($color-map, hover-color);
+    }
+
+    &:hover.is-selected {
+      background-color: map-get($color-map, selected-hover-background-color);
+      border-color: map-get($color-map, selected-hover-border-color);
+      box-shadow: map-get($color-map, selected-hover-box-shadow);
+      color: map-get($color-map, selected-hover-color);
+    }
+  }
+
+  &.is-selected.is-focused {
+    background-color: map-get($color-map, selected-and-focus-background-color);
+    border-color: map-get($color-map, selected-and-focus-border-color);
+    box-shadow: map-get($color-map, selected-and-focus-box-shadow);
+    color: map-get($color-map, selected-and-focus-color);
+  }
+
+  &.is-selected {
+    background-color: map-get($color-map, selected-background-color);
+    border-color: map-get($color-map, selected-border-color);
+    box-shadow: map-get($color-map, selected-box-shadow);
+    color: map-get($color-map, selected-color);
+  }
+
+  &:active.is-selected,
+  &:active {
+    background-color: map-get($color-map, active-background-color);
+    border-color: map-get($color-map, active-border-color);
+    box-shadow: map-get($color-map, active-box-shadow);
+    color: map-get($color-map, active-color);
+  }
+}

@@ -126,6 +126,11 @@ class ButtonGroupButton extends React.Component {
       cx(
         'button-group-button',
         { neutral: buttonGroupButtonVariant === Button.Opts.Variants.NEUTRAL },
+        { emphasis: buttonGroupButtonVariant === Button.Opts.Variants.EMPHASIS },
+        { ghost: buttonGroupButtonVariant === Button.Opts.Variants.GHOST },
+        { 'de-emphasis': buttonGroupButtonVariant === Button.Opts.Variants['DE-EMPHASIS'] },
+        { action: buttonGroupButtonVariant === Button.Opts.Variants.ACTION },
+        { utility: buttonGroupButtonVariant === Button.Opts.Variants.UTILITY },
         { 'is-disabled': isDisabled },
         { 'is-focused': this.state.focused && !isDisabled },
         theme.className,
