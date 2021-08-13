@@ -2,11 +2,33 @@
 
 ## Unreleased
 
+## 1.28.0 - (June 8, 2021)
+
+* Changed
+  * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
+
+## 1.27.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated Jest command
+
+## 1.26.0 - (March 2, 2021)
+
+* Fixed
+  * Fixed misalignment when rendered with terra-button.
+
+## 1.25.0 - (February 17, 2021)
+
+* Fixed
+  * Fixed incorrect role in `Item` from `presentation` to `menuitem` for upcoming axe-core version bump
+
 ## 1.24.0 - (January 5, 2021)
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 * Changed
   * Updated to be compatible with `react-intl` v2-v5
   * Removed usage of `intlShape`

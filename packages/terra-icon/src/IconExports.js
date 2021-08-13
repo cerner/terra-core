@@ -17,6 +17,7 @@ import IconBedAssigned from './icon/IconBedAssigned';
 import IconBedAssignedLowLight from './icon/IconBedAssignedLowLight';
 import IconBedRequested from './icon/IconBedRequested';
 import IconBluetooth from './icon/IconBluetooth';
+import IconBluetoothSlash from './icon/IconBluetoothSlash';
 import IconBookmark from './icon/IconBookmark';
 import IconBriefcase from './icon/IconBriefcase';
 import IconBusy from './icon/IconBusy';
@@ -49,6 +50,7 @@ import IconComment from './icon/IconComment';
 import IconCommit from './icon/IconCommit';
 import IconComplete from './icon/IconComplete';
 import IconCompose from './icon/IconCompose';
+import IconConfidential from './icon/IconConfidential';
 import IconConsultInstructionsForUse from './icon/IconConsultInstructionsForUse';
 import IconCritical from './icon/IconCritical';
 import IconCriticalInverse from './icon/IconCriticalInverse';
@@ -253,6 +255,10 @@ import IconSortDescending from './icon/IconSortDescending';
 import IconSpinner from './icon/IconSpinner';
 import IconSquareSymbol from './icon/IconSquareSymbol';
 import IconSquareSymbolLight from './icon/IconSquareSymbolLight';
+import IconStatusPositive from './icon/IconStatusPositive';
+import IconStatusPositiveWhite from './icon/IconStatusPositiveWhite';
+import IconStatusPositiveLowLight from './icon/IconStatusPositiveLowLight';
+import IconStatusPositiveWhiteLowLight from './icon/IconStatusPositiveWhiteLowLight';
 import IconStartPresenting from './icon/IconStartPresenting';
 import IconStopPresenting from './icon/IconStopPresenting';
 import IconSuccess from './icon/IconSuccess';
@@ -292,6 +298,9 @@ import IconVideoCameraDisabled from './icon/IconVideoCameraDisabled';
 import IconVisualization from './icon/IconVisualization';
 import IconWarning from './icon/IconWarning';
 import IconWarningLowLight from './icon/IconWarningLowLight';
+import IconWaveform from './icon/IconWaveform';
+import IconWifi from './icon/IconWifi';
+import IconWifiSlash from './icon/IconWifiSlash';
 import IconXSymbol from './icon/IconXSymbol';
 import IconZoomIn from './icon/IconZoomIn';
 import IconZoomOut from './icon/IconZoomOut';
@@ -316,6 +325,7 @@ const Icons = {
   IconBedAssignedLowLight,
   IconBedRequested,
   IconBluetooth,
+  IconBluetoothSlash,
   IconBookmark,
   IconBriefcase,
   IconBusy,
@@ -348,6 +358,7 @@ const Icons = {
   IconCommit,
   IconComplete,
   IconCompose,
+  IconConfidential,
   IconConsultInstructionsForUse,
   IconCritical,
   IconCriticalInverse,
@@ -552,6 +563,10 @@ const Icons = {
   IconSpinner,
   IconSquareSymbol,
   IconSquareSymbolLight,
+  IconStatusPositive,
+  IconStatusPositiveWhite,
+  IconStatusPositiveLowLight,
+  IconStatusPositiveWhiteLowLight,
   IconStartPresenting,
   IconStopPresenting,
   IconSuccess,
@@ -591,6 +606,9 @@ const Icons = {
   IconVisualization,
   IconWarning,
   IconWarningLowLight,
+  IconWaveform,
+  IconWifi,
+  IconWifiSlash,
   IconXSymbol,
   IconZoomIn,
   IconZoomOut,

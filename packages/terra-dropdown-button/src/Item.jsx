@@ -44,16 +44,18 @@ const Item = ({
     navigate outside the dropdown with the dropdown still open if nothing else is pressed after opening the menu.
   */
   return (
-    <li tabIndex="-1" role="presentation">
+    <li
+      {...customProps}
+      onClick={(event) => {
+        requestClose(() => {
+          onSelect(event, metaData);
+        });
+      }}
+      tabIndex="0"
+      role="menuitem"
+    >
       <div
-        {...customProps}
-        onClick={(event) => {
-          requestClose(() => {
-            onSelect(event, metaData);
-          });
-        }}
-        role="menuitem"
-        tabIndex="0"
+        role="none"
         className={cx(
           'item',
           { active: isActive },

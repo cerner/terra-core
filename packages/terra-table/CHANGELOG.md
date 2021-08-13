@@ -2,6 +2,43 @@
 
 ## Unreleased
 
+## 4.27.0 - (July 6, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.26.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.25.0 - (June 8, 2021)
+
+* Changed
+  * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
+
+## 4.24.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade to terra-functional-testing
+  * Updated Jest command
+
+## 4.23.0 - (March 9, 2021)
+
+* Changed
+  * Updated `focus-outline` colors for lowlight.
+
+## 4.22.0 - (March 2, 2021)
+
+* Fixed
+  * Fixed errors in the Clinical Low Light theme
+
+## 4.21.0 - (February 2, 2021)
+
+* Fixed
+  * Fixed missing id mapping for header cells
+
 ## 4.20.0 - (January 5, 2021)
 
 * Changed

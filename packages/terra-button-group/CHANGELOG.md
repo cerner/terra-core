@@ -2,11 +2,38 @@
 
 ## Unreleased
 
+## 3.57.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.56.0 - (June 8, 2021)
+
+* Changed
+  * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
+
+## 3.55.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.54.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated Jest command
+
+## 3.53.0 - (February 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.52.0 - (January 5, 2021)
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 3.51.0 - (December 8, 2020)
 
 * Changed

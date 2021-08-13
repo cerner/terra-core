@@ -26,6 +26,7 @@ const IconAll = () => (
     <Icon.IconBedAssignedLowLight className={cx(['icon'])} />
     <Icon.IconBedRequested className={cx(['icon'])} />
     <Icon.IconBluetooth className={cx(['icon'])} />
+    <Icon.IconBluetoothSlash className={cx(['icon'])} />
     <Icon.IconBookmark className={cx(['icon'])} />
     <Icon.IconBriefcase className={cx(['icon'])} />
     <Icon.IconBusy className={cx(['icon'])} />
@@ -58,6 +59,7 @@ const IconAll = () => (
     <Icon.IconCommit className={cx(['icon'])} />
     <Icon.IconComplete className={cx(['icon'])} />
     <Icon.IconCompose className={cx(['icon'])} />
+    <Icon.IconConfidential className={cx(['icon'])} />
     <Icon.IconConsultInstructionsForUse className={cx(['icon'])} />
     <Icon.IconCritical className={cx(['icon'])} />
     <Icon.IconCriticalInverse className={cx(['icon', 'icon-inverse'])} />
@@ -262,6 +264,10 @@ const IconAll = () => (
     <Icon.IconSpinner className={cx(['icon'])} isSpin={false} />
     <Icon.IconSquareSymbol className={cx(['icon'])} />
     <Icon.IconSquareSymbolLight className={cx(['icon'])} />
+    <Icon.IconStatusPositive className={cx(['icon'])} />
+    <Icon.IconStatusPositiveWhite className={cx(['icon'])} />
+    <Icon.IconStatusPositiveLowLight className={cx(['icon'])} />
+    <Icon.IconStatusPositiveWhiteLowLight className={cx(['icon'])} />
     <Icon.IconStartPresenting className={cx(['icon'])} />
     <Icon.IconStopPresenting className={cx(['icon'])} />
     <Icon.IconSuccess className={cx(['icon'])} />
@@ -301,6 +307,9 @@ const IconAll = () => (
     <Icon.IconVisualization className={cx(['icon'])} />
     <Icon.IconWarning className={cx(['icon'])} />
     <Icon.IconWarningLowLight className={cx(['icon'])} />
+    <Icon.IconWaveform className={cx(['icon'])} />
+    <Icon.IconWifi className={cx(['icon'])} />
+    <Icon.IconWifiSlash className={cx(['icon'])} />
     <Icon.IconXSymbol className={cx(['icon'])} />
     <Icon.IconZoomIn className={cx(['icon'])} />
     <Icon.IconZoomOut className={cx(['icon'])} />

@@ -2,11 +2,39 @@
 
 ## Unreleased
 
+## 2.61.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.60.0 - (April 27, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.59.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.58.0 - (April 6, 2021)
+
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated Jest command
+  * Updated screenshots with elements that are out of bound
+
+## 2.57.0 - (February 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.56.0 - (January 5, 2021)
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 2.55.0 - (December 8, 2020)
 
 * Changed

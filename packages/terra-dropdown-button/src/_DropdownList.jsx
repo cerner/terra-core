@@ -127,8 +127,7 @@ class DropdownList extends React.Component {
   }
 
   changeFocusState(index) {
-    // the div inside the li is what is actually focusable so need to go 2 layers down
-    this.listRef.childNodes[index].childNodes[0].focus();
+    this.listRef.childNodes[index].focus();
 
     this.setState({ focused: index });
   }

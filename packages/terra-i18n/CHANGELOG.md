@@ -2,11 +2,23 @@
 
 ## Unreleased
 
+## 4.37.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated jest tests not have a mock spanning it blocks.
+
+## 4.36.0 - (February 9, 2021)
+
+* Fixed
+  * Avoid version 1.8.12 of intl-locales-supported as it is a bad publish.
+
 ## 4.35.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 4.34.0 - (December 8, 2020)
 
 * Changed

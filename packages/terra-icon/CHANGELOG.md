@@ -2,11 +2,34 @@
 
 ## Unreleased
 
+## 3.44.0 - (June 22, 2021)
+
+* Changed
+  * Updated to `one-cerner-style-icons` to v1.40.0
+
+## 3.43.0 - (April 13, 2021)
+
+* Changed
+  * Bumped `one-cerner-style-icons` to v1.38.0
+
+## 3.42.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated Jest command
+  * Updated screenshots with elements that are out of bound
+
+## 3.41.0 - (February 2, 2021)
+
+* Changed
+  * Bumped `one-cerner-style-icons` to v1.36.0
+
 ## 3.40.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 3.39.0 - (December 8, 2020)
 
 * Changed
@@ -90,7 +113,7 @@
   * Updated eIFU text to be `Electronic Instructions for Use Icon`
   * Bumped `one-cerner-style-icons` to v1.30.1
   * Updated `terra-dev-site` WDIO test for IconAll
-  * Changed WDIO tests to use `huge` viewport in order to accomodate the new icons introduced in v1.30.1
+  * Changed WDIO tests to use `huge` viewport in order to accommodate the new icons introduced in v1.30.1
 
 ## 3.25.0 - (January 7, 2020)
 

@@ -1,7 +1,7 @@
 {
   "name": "terra-show-hide",
   "main": "lib/ShowHide.js",
-  "version": "2.47.0",
+  "version": "2.52.0",
   "description": "Show/Hide component that previews a small section of content or shows the full content with the click of a button",
   "repository": {
     "type": "git",
@@ -31,11 +31,11 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "keycode-js": "^2.0.1",
+    "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
-    "terra-mixins": "^1.39.0",
+    "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0",
-    "terra-toggle": "^3.43.0"
+    "terra-toggle": "^3.47.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -44,10 +44,10 @@
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
-    "jest": "jest --config ../../jestconfig.js",
-    "wdio-default": "cd ../.. && npx wdio",
-    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio",
-    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio",
+    "jest": "jest --config ../../jest.config.js",
+    "wdio-default": "cd ../.. && terra wdio",
+    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

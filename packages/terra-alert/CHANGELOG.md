@@ -2,6 +2,50 @@
 
 ## Unreleased
 
+## 4.56.0 - (July 6, 2021)
+
+* Changed
+  * Update test urls to account for scoped packages.
+
+## 4.55.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.54.0 - (June 8, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.53.0 - (May 11, 2021)
+
+* Changed
+  * migrate doc to terra-core-docs
+  * remove unnecessary dependencies
+
+## 4.52.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.51.0 - (April 6, 2021)
+
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated Jest command
+  * Update translations for the `nl` and `sv` languages.
+
+## 4.50.0 - (March 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.49.0 - (February 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.48.0 - (January 5, 2021)
 
 * Changed
@@ -10,7 +54,7 @@
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 4.47.0 - (December 8, 2020)
 
 * Changed
@@ -50,7 +94,7 @@
 
 * Changed
   * Add missing theme variables
-  
+
 ## 4.39.0 - (August 6, 2020)
 
 * Changed

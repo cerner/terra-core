@@ -2,6 +2,19 @@
 
 :local {
   .orion-fusion-theme {
-    @include terra-inline-svg-var('--terra-profile-image-placeholder-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55"><style>.st0{fill:#DEDFE0;} .st1{fill:#9B9FA1;}</style><g id="Art"><path class="st0" d="M1.3 1H54v52.7H1.3z"/><ellipse class="st1" cx="27.6" cy="20.3" rx="11.2" ry="11.5"/><path class="st1" d="M27.7 36.4c-10.8 0-20 7.3-22.5 17.3h45C47.7 44 38.5 36.4 27.7 36.4z"/><path class="st0" d="M0 0h55v55H0z"/><g><ellipse class="st1" cx="27.4" cy="20.1" rx="11.7" ry="12"/><path class="st1" d="M27.5 37C16.2 37 6.7 44.5 4 55h47c-2.7-10.2-12.2-18-23.5-18z"/></g></g></svg>');
+    --terra-profile-image-placeholder-background-color: #dedfe0;
+    --terra-profile-image-placeholder-rounded-border-radius: 0.25rem;
+    --terra-profile-image-placeholder-circle-border-radius: 50%;
+    --terra-profile-image-placeholder-thumbnail-background-color: #fff;
+    --terra-profile-image-placeholder-thumbnail-border-color: #dedfe0;
+    --terra-profile-image-placeholder-thumbnail-border-radius: 0.25rem;
+    --terra-profile-image-placeholder-thumbnail-border-style: solid;
+    --terra-profile-image-placeholder-thumbnail-border-width: 1px;
+    --terra-profile-image-placeholder-thumbnail-padding-bottom: 0.25rem;
+    --terra-profile-image-placeholder-thumbnail-padding-left: 0.25rem;
+    --terra-profile-image-placeholder-thumbnail-padding-right: 0.25rem;
+    --terra-profile-image-placeholder-thumbnail-padding-top: 0.25rem;
+    
+    @include terra-inline-svg-var('--terra-profile-image-placeholder-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" width="75" height="75" preserveAspectRatio="none"><path fill="#dedfe0" d="M0 0h75v75H0z"/><ellipse fill="#9b9fa1" cx="37.36" cy="27.41" rx="15.95" ry="16.36"/><path fill="#9b9fa1"  d="M37.5 50.45C22.1 50.45 9.136 60.68 5.45 75 h64.1 c-3.68-13.9-16.64-24.55 -32.1 -24.55 z"/></svg>');
   }
 }

@@ -2,11 +2,38 @@
 
 ## Unreleased
 
+## 4.15.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.14.0 - (April 27, 2021)
+
+* Changed
+  * Update input to fallback to native defaults when the type is date, datetime-local, month, time, week, color, file, range, checkbox, radio, button, reset, or submit as they were never tested or originally intended to be supported.
+
+## 4.13.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.12.0 - (April 6, 2021)
+
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated Jest command
+
+## 4.11.0 - (February 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.10.0 - (January 5, 2021)
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 4.9.0 - (December 8, 2020)
 
 * Changed

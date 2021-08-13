@@ -2,7 +2,8 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 import Avatar from '../../src/variants/Avatar';
-import exampleProfilePhoto from '../../src/terra-dev-site/assets/150x150.jpg';
+
+const exampleProfilePhoto = 'test-file-stub';
 
 describe('Avatar', () => {
   // Snapshot Tests

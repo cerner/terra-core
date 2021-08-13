@@ -177,6 +177,7 @@ class Frame extends React.Component {
     this.menuId = `terra-select-menu-${uniqueid()}`;
     this.visuallyHiddenComponent = React.createRef();
     this.setSelectMenuRef = this.setSelectMenuRef.bind(this);
+    this.shouldFocusDropdown = false;
   }
 
   componentDidMount() {
@@ -204,7 +205,7 @@ class Frame extends React.Component {
    * Handles the blur event.
    */
   handleBlur(event) {
-    const { relatedTarget } = event;
+    const relatedTarget = event.relatedTarget || document.activeElement;
 
     // The check for dropdown.contains(activeElement) is necessary to prevent IE11 from closing dropdown on click of scrollbar in certain contexts.
     if (this.dropdown && (this.dropdown === document.activeElement && this.dropdown.contains(document.activeElement))) {
@@ -418,6 +419,7 @@ class Frame extends React.Component {
    * Opens the dropdown.
    */
   openDropdown(event) {
+    this.shouldFocusDropdown = false;
     if (this.state.isOpen || this.props.disabled) {
       return;
     }
@@ -432,8 +434,7 @@ class Frame extends React.Component {
       && (event.target.hasAttribute('data-terra-form-select-toggle-button')
       || event.target.hasAttribute('data-terra-form-select-toggle-button-icon'))) {
       this.setState({ isOpen: true, isPositioned: false });
-
-      FrameUtil.shiftFocusToMenu(this);
+      this.shouldFocusDropdown = true;
       return;
     }
     if (event.target.hasAttribute('data-terra-form-select-toggle')
@@ -465,6 +466,11 @@ class Frame extends React.Component {
         this.dropdown.removeAttribute('inert');
         this.dropdown.removeAttribute('aria-hidden');
         this.selectMenu.setAttribute('tabIndex', '0');
+
+        // sets focus to select menu after select menu is positioned when opened by toggle-button click
+        if (this.selectMenu && this.shouldFocusDropdown) {
+          this.selectMenu.focus();
+        }
       }
     };
 
@@ -514,9 +520,9 @@ class Frame extends React.Component {
    * Renders descriptive text related to the select component to be available for screen readers
    */
   renderDescriptionText() {
-    const { intl, totalOptions } = this.props;
+    const { intl } = this.props;
 
-    const listOfOptionsTxt = intl.formatMessage({ id: 'Terra.form.select.listOfTotalOptions' }, { total: totalOptions });
+    const listOfOptionsTxt = intl.formatMessage({ id: 'Terra.form.select.listOfTotalOptions' });
     const mobileUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.mobileUsageGuidance' });
     const searchUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.searchUsageGuidance' });
 

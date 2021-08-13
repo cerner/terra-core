@@ -3,8 +3,7 @@ import ProfileImage from '../../../ProfileImage';
 
 const ProfileImageSourceNotProvided = () => (
   <div>
-    <h2>Profile Image when source is not provided</h2>
-    <ProfileImage alt="Default" width="75" height="75" />
+    <ProfileImage alt="profile image when source is not provided" width="75" height="75" />
   </div>
 );
 

@@ -11,7 +11,7 @@ const HeaderCheckMarkTest = () => (
       numberOfColumns={1}
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'Default' }],
+        cells: [{ id: 'example-column-0', key: 'key-0', children: 'Default' }],
       }}
     />
     <Table
@@ -21,7 +21,7 @@ const HeaderCheckMarkTest = () => (
       numberOfColumns={1}
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkStatus: 'empty' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'Selectable Unchecked' }],
+        cells: [{ id: 'empty-column-0', key: 'key-0', children: 'Selectable Unchecked' }],
       }}
     />
     <Table
@@ -31,7 +31,7 @@ const HeaderCheckMarkTest = () => (
       numberOfColumns={1}
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkStatus: 'checked' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'Selectable Checked' }],
+        cells: [{ id: 'checked-column-0', key: 'key-0', children: 'Selectable Checked' }],
       }}
     />
     <Table
@@ -41,7 +41,7 @@ const HeaderCheckMarkTest = () => (
       numberOfColumns={1}
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkStatus: 'indeterminate' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'Selectable Indeterminate' }],
+        cells: [{ id: 'indeterminate-column-0', key: 'key-0', children: 'Selectable Indeterminate' }],
       }}
     />
     <Table
@@ -51,7 +51,7 @@ const HeaderCheckMarkTest = () => (
       numberOfColumns={1}
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, isDisabled: true },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'Disabled' }],
+        cells: [{ id: 'disabled-column-0', key: 'key-0', children: 'Disabled' }],
       }}
     />
     <Table
@@ -61,7 +61,7 @@ const HeaderCheckMarkTest = () => (
       numberOfColumns={1}
       headerData={{
         selectAllColumn: { checkLabel: 'Column Example Title', onCheckAction: () => {}, checkAlignment: '1rem' },
-        cells: [{ id: 'column-0', key: 'key-0', children: 'Vertical Alignment 1rem' }],
+        cells: [{ id: 'alignment-column-0', key: 'key-0', children: 'Vertical Alignment 1rem' }],
       }}
     />
   </React.Fragment>

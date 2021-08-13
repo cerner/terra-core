@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import TerraImage from 'terra-image';
@@ -15,21 +16,28 @@ const propTypes = {
   src: PropTypes.string,
   /**
    * The text content that specifies an alternative text for an image.
+   *
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue) For accessibility best practices, the `alt` description must be provided in most situations.
    */
   alt: PropTypes.string,
   /**
   * Sets the `object-fit` style of the image from the following values: `cover`, `contain`, `scale-down`, `none`.
+  *
   * ![IMPORTANT](https://badgen.net/badge/UX/Design-Standards/blue) Anywhere the terra-profile-image is used to show images of People, _only_ `cover` and `contain` are acceptable.
   */
   fit: PropTypes.oneOf(['cover', 'scale-down', 'contain', 'none']),
   /**
-   * Sets the height of the image.
+   * Sets the height of the image. Note: always define the width and height of the image as number value in pixels, e.g. `height="75"` for "75px".
    */
   height: PropTypes.string,
   /**
-   * Sets the width of the image.
+   * Sets the width of the image. Note: always define the width and height of the image as number value in pixels, e.g. `width="75"` for "75px".
    */
   width: PropTypes.string,
+  /**
+   * Sets the style of the image from the following values; `default`, `rounded`, `circle`, `thumbnail`.
+   */
+  variant: PropTypes.oneOf(['default', 'rounded', 'circle', 'thumbnail']),
   /**
    * Function to be executed when the profile image load is successful.
    */
@@ -42,30 +50,71 @@ const propTypes = {
 
 const defaultProps = {
   fit: 'cover',
+  height: '75',
+  width: '75',
+  variant: 'default',
 };
 
 const isOnlyNumbers = toTest => !(/\D/).test(toTest);
 
 const ProfileImage = (props) => {
+  const {
+    src, alt, fit, height, width, variant, onLoad, onError, ...customProps
+  } = props;
   const theme = React.useContext(ThemeContext);
-  // img tags assume a height attribute of only numbers is in px but CSS does not
-  const fixedHeight = isOnlyNumbers(props.height) ? `${props.height}px` : props.height;
-  const fixedWidth = isOnlyNumbers(props.width) ? `${props.width}px` : props.width;
+
+  // Terra-Image uses a height and width attribute using only numbers, the placeholder span needs css in 'px'
+  const placeholderHeight = isOnlyNumbers(height) ? `${height}px` : height;
+  const placeholderWidth = isOnlyNumbers(width) ? `${width}px` : width;
+  const placeholderSize = { height: placeholderHeight, width: placeholderWidth };
+  const placeholderClassNames = classNames(
+    cx([
+      'profile-image',
+      'placeholder',
+      fit,
+      variant,
+      theme.className,
+    ]),
+    customProps.className,
+  );
 
   /* eslint-disable react/forbid-dom-props */
-  const placeholderImage = (
+  const profileImagePlaceholder = (
     <span
-      className={cx('placeholder-images', theme.className)}
-      title={props.alt}
-      style={{ height: fixedHeight, width: fixedWidth }}
+      {...customProps}
+      role="img"
+      aria-label={alt}
+      style={placeholderSize}
+      className={placeholderClassNames}
     />
   );
   /* eslint-enable react/forbid-dom-props */
 
-  if (props.src) {
-    return (<div><TerraImage placeholder={placeholderImage} {...props} /></div>);
+  if (src) {
+    const profileImageClassNames = classNames(
+      cx([
+        'profile-image',
+        theme.className,
+      ]),
+      customProps.className,
+    );
+    return (
+      <TerraImage
+        {...customProps}
+        src={src}
+        alt={alt}
+        height={height}
+        width={width}
+        fit={fit}
+        variant={variant}
+        placeholder={profileImagePlaceholder}
+        onLoad={onLoad}
+        onError={onError}
+        className={profileImageClassNames}
+      />
+    );
   }
-  return placeholderImage;
+  return profileImagePlaceholder;
 };
 
 ProfileImage.propTypes = propTypes;
