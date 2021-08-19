@@ -1,0 +1,23 @@
+/* eslint-disable */
+import React from 'react';
+import classNames from 'classnames';
+import IconBase from '../IconBase';
+
+const SvgIcon = (customProps) => {
+  const attributes = Object.assign({}, customProps);
+  const iconClassNames = classNames(
+    customProps.className,
+  );
+
+  return (
+    <IconBase {...attributes} className={iconClassNames} >
+      <%= icon.children %>
+    </IconBase>
+  );
+};
+
+SvgIcon.displayName = <%= JSON.stringify(icon.name) %>;
+SvgIcon.defaultProps = <%= JSON.stringify(icon.attributes) %>;
+
+export default SvgIcon;
+/* eslint-enable */
