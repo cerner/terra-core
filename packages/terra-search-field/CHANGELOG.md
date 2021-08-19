@@ -2,6 +2,31 @@
 
 ## Unreleased
 
+## 3.69.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.68.0 - (June 8, 2021)
+
+* Changed
+  * Updated `searchTimeout` to reset for any changes made to the input.
+  * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
+
+## 3.67.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.66.0 - (April 6, 2021)
+
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  
+* Fixed
+  * Updated jest test to correctly update the search text.
+
 ## 3.65.0 - (February 2, 2021)
 
 * Changed
@@ -14,8 +39,8 @@
   * Removed usage of `intlShape`
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 3.63.0 - (December 8, 2020)
 
 * Changed

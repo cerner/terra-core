@@ -2,6 +2,39 @@
 
 ## Unreleased
 
+## 2.70.0 - (July 6, 2021)
+
+* Changed
+  * Update test urls to account for scoped packages.
+
+## 2.69.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.68.0 - (June 8, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.67.0 - (May 4, 2021)
+
+* Changed
+  * migrate doc to terra-core-docs
+  * remove unnecessary dependencies
+
+## 2.66.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.65.0 - (April 6, 2021)
+
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated Jest command
+
 ## 2.64.0 - (March 2, 2021)
 
 * Changed
@@ -19,7 +52,7 @@
   * Removed usage of `FormattedMessage` in favor of `injectIntl`
 
 * Fixed
- * Fixed broken links in documentation.
+  * Fixed broken links in documentation.
 
 ## 2.61.0 - (December 8, 2020)
 

@@ -2,11 +2,24 @@
 
 ## Unreleased
 
+## 4.13.0 - (August 3, 2021)
+
+* Fixed
+  * Fixed mislabeled doc examples.
+
+## 4.12.0 - (April 6, 2021)
+
+* Changed
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated Jest command
+  * Updated screenshots with elements that are out of bound
+
 ## 4.11.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
- 
+  * Fixed broken links in documentation.
+
 ## 4.10.0 - (December 8, 2020)
 
 * Changed

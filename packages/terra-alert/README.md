@@ -5,7 +5,7 @@
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 ## Deprecation Notice
-The terra-alert npm package is deprecated as of `4.51.0`. terra-alert will be removed from the repo in a future version, but the package will remain on npm.
+The terra-alert npm package is deprecated as of `4.56.0`. terra-alert will be removed from the repo in a future version, but the package will remain on npm.
 
 ### What deprecation means
 Any apps that currently use terra-alert will continue to work as-is.

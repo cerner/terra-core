@@ -2,6 +2,28 @@
 
 ## Unreleased
 
+## 2.49.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.48.0 - (June 8, 2021)
+
+* Changed
+  * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
+
+## 2.47.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.46.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated Jest command
+
 ## 2.45.0 - (February 2, 2021)
 
 * Changed
@@ -11,7 +33,7 @@
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 2.43.0 - (December 8, 2020)
 
 * Changed
@@ -31,7 +53,7 @@
 
 * Added
   * Added an interaction media query to apply `hover` styles only on non-touch devices.
-  
+
 ## 2.39.0 - (August 6, 2020)
 
 * Changed

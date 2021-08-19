@@ -46,6 +46,8 @@ import IconDischargeComingDue from 'terra-icon/lib/icon/IconDischargeComingDue';
 import IconDischargeOverDue from 'terra-icon/lib/icon/IconDischargeOverDue';
 import IconDrugDrug from 'terra-icon/lib/icon/IconDrugDrug';
 import IconOutOfNetwork from 'terra-icon/lib/icon/IconOutOfNetwork';
+import IconStatusPositive from 'terra-icon/lib/icon/IconStatusPositive';
+import IconStatusPositiveWhite from 'terra-icon/lib/icon/IconStatusPositiveWhite';
 const cellStyle = { padding: '0.5rem' };
 const IconAll = () => (
   <div>  <table>
@@ -459,6 +461,24 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconOutOfNetwork from 'terra-icon/lib/icon/IconOutOfNetwork';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconStatusPositive height='2em' width='2em' /></td>
+        <td style={cellStyle}>statusPositive</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconStatusPositive from 'terra-icon/lib/icon/IconStatusPositive';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconStatusPositiveWhite height='2em' width='2em' /></td>
+        <td style={cellStyle}>statusPositiveWhite</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconStatusPositiveWhite from 'terra-icon/lib/icon/IconStatusPositiveWhite';
           </code>
         </td>
       </tr>

@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 3.35.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated Jest command
+
 ## 3.34.0 - (January 5, 2021)
 
 * Fixed

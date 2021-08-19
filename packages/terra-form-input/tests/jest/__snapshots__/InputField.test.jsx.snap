@@ -76,7 +76,7 @@ exports[`InputField should render a InputField with type specified by type attri
     onChange={[Function]}
     refCallback={[Function]}
     required={false}
-    type="Text"
+    type="text"
     value="Value"
   />
 </Field>

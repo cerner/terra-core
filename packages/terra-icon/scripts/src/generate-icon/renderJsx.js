@@ -6,7 +6,8 @@ import ReactIcon from './ReactIcon';
 import iconData from '../../../src/icon-data.json';
 /* eslint-enable import/no-extraneous-dependencies */
 
-const staticIconTemplatePath = path.join(__dirname, './staticIcontemplate.txt');
+const staticIconTemplatePath = path.join(__dirname, './staticIconTemplate.txt');
+const staticIconLowLightTemplatePath = path.join(__dirname, './staticIconLowLightTemplate.txt');
 const themeIconTemplatePath = path.join(__dirname, './template.txt');
 // template path for Icons that supports Tooltip
 const themeIconWithTooltipTemplatePath = path.join(__dirname, './themeIconWithTooltipTemplate.txt');
@@ -24,7 +25,11 @@ const staticIcons = iconData
 const renderJsx = icon => new Promise((resolve, reject) => {
   let templatePath;
   if (staticIcons.includes(icon.name)) {
-    templatePath = staticIconTemplatePath;
+    if (icon.name.endsWith('LowLight')) {
+      templatePath = staticIconLowLightTemplatePath;
+    } else {
+      templatePath = staticIconTemplatePath;
+    }
   } else {
     templatePath = (themeIconsWithTooltip.includes(icon.name)) ? themeIconWithTooltipTemplatePath : themeIconTemplatePath;
   }

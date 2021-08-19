@@ -32,15 +32,14 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         requestClose={[Function]}
       >
         <li
+          data-terra-dropdown-list-item={true}
+          onClick={[Function]}
           role="menuitem"
-          tabIndex="-1"
+          tabIndex="0"
         >
           <div
             className="item orion-fusion-theme"
-            data-terra-dropdown-list-item={true}
-            onClick={[Function]}
-            role="menuitem"
-            tabIndex="0"
+            role="none"
           >
             1st Option
           </div>
@@ -55,15 +54,14 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         requestClose={[Function]}
       >
         <li
+          data-terra-dropdown-list-item={true}
+          onClick={[Function]}
           role="menuitem"
-          tabIndex="-1"
+          tabIndex="0"
         >
           <div
             className="item orion-fusion-theme"
-            data-terra-dropdown-list-item={true}
-            onClick={[Function]}
-            role="menuitem"
-            tabIndex="0"
+            role="none"
           >
             2nd Option
           </div>
@@ -78,15 +76,14 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         requestClose={[Function]}
       >
         <li
+          data-terra-dropdown-list-item={true}
+          onClick={[Function]}
           role="menuitem"
-          tabIndex="-1"
+          tabIndex="0"
         >
           <div
             className="item orion-fusion-theme"
-            data-terra-dropdown-list-item={true}
-            onClick={[Function]}
-            role="menuitem"
-            tabIndex="0"
+            role="none"
           >
             3rd Option
           </div>

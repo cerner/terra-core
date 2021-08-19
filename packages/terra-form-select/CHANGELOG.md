@@ -2,6 +2,46 @@
 
 ## Unreleased
 
+## 6.32.0 - (August 3, 2021)
+
+* Fixed
+  * Fixed focus issue in mobile devices for menu with large number of options.
+
+## 6.31.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.30.0 - (June 8, 2021)
+
+* Changed
+  * Updated the specificity conflict for combobox's input flex & width styles.
+
+* Changed
+  * Updated `keycode-js` from `v2.0.1` to `v3.1.0`.
+
+## 6.29.0 - (April 27, 2021)
+
+* Changed
+  * Update swedish translations.
+
+## 6.28.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.27.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated to use terra-functional-testing
+  * Updated Jest command
+
+* Fixed
+  * Allow voice-over to read index values for options.
+  * Fixed `focus not getting removed` in IE for search and combobox variants.
+  * Fixed `focus not getting removed` in IE for multiple and tag variants.
+
 ## 6.26.0 - (February 17, 2021)
 
 * Fixed

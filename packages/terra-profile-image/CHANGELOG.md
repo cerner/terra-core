@@ -2,6 +2,23 @@
 
 ## Unreleased
 
+## 3.40.0 - (July 6, 2021)
+
+* Changed
+  * Updated fallback image styles.
+
+## 3.39.0 - (May 4, 2021)
+
+* Changed
+  * Removed container div.
+
+## 3.38.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6
+  * Updated Jest command
+
 ## 3.37.0 - (January 5, 2021)
 
 * Changed

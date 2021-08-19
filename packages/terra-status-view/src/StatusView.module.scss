@@ -14,6 +14,7 @@
     height: 100%;
     justify-content: center;
     justify-items: center;
+    overflow: auto;
     padding-bottom: var(--terra-status-view-padding-bottom, 0.714rem);
     padding-top: var(--terra-status-view-padding-top, 0.714rem);
   }
@@ -40,7 +41,6 @@
     flex-direction: column;
     max-height: 100%;
     max-width: 100%;
-    overflow: auto;
   }
 
   .glyph {

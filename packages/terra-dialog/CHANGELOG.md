@@ -2,6 +2,28 @@
 
 ## Unreleased
 
+## 2.60.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.59.0 - (June 8, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.58.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.57.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Updated to terra-functional-testing
+  * Updated Jest command
+
 ## 2.56.0 - (February 2, 2021)
 
 * Changed
@@ -11,7 +33,7 @@
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 2.54.0 - (December 8, 2020)
 
 * Changed

@@ -1,7 +1,7 @@
 {
   "name": "terra-toggle",
   "main": "lib/Toggle.js",
-  "version": "3.44.0",
+  "version": "3.47.0",
   "description": "Toggle component that transitions content in and out.",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-animate-height": "^2.0.1",
-    "terra-icon": "^3.41.0"
+    "terra-icon": "^3.44.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
@@ -38,10 +38,10 @@
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
     "test": "npm run lint && npm run jest && npm run wdio",
-    "jest": "jest --config ../../jestconfig.js",
-    "wdio-default": "cd ../.. && npx wdio",
-    "wdio-lowlight": "cd ../.. && THEME=clinical-lowlight-theme npx wdio",
-    "wdio-fusion": "cd ../.. && THEME=orion-fusion-theme npx wdio",
+    "jest": "jest --config ../../jest.config.js",
+    "wdio-default": "cd ../.. && terra wdio",
+    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
+    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
     "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

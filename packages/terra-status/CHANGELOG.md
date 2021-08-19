@@ -2,6 +2,34 @@
 
 ## Unreleased
 
+## 4.46.0 - (July 6, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.45.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.44.0 - (May 11, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.43.0 - (April 13, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.42.0 - (April 6, 2021)
+
+* Changed
+  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade to terra-functional-testing
+  * Updated Jest command
+  * Updated screenshots with elements that are out of bound
+
 ## 4.41.0 - (February 2, 2021)
 
 * Changed
@@ -11,7 +39,7 @@
 
 * Fixed
  * Fixed broken links in documentation.
- 
+
 ## 4.39.0 - (December 8, 2020)
 
 * Changed
