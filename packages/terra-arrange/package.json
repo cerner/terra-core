@@ -1,7 +1,7 @@
 {
   "name": "terra-arrange",
   "main": "lib/Arrange.js",
-  "version": "3.46.0",
+  "version": "3.47.0",
   "description": "The arrange component is used for horizontally arranging and vertically aligning a single row of container elements.",
   "repository": {
     "type": "git",

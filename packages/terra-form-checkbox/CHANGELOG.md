@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.13.0 - (August 3, 2021)
+
+* Fixed
+  * Fixed mislabeled doc examples.
+
 ## 4.12.0 - (April 6, 2021)
 
 * Changed

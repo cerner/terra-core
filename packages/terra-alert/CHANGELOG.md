@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## 4.56.0 - (July 6, 2021)
+
+* Changed
+  * Update test urls to account for scoped packages.
+
+## 4.55.0 - (June 22, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.54.0 - (June 8, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.53.0 - (May 11, 2021)
 
 * Changed

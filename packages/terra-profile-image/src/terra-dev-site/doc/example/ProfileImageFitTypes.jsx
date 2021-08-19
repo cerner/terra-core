@@ -9,7 +9,9 @@ const propTypes = { fit: PropTypes.string };
 const ProfileImageFitTypes = ({
   ...props
 }) => (
-  <ProfileImage alt="Toggle fit style" src={exampleProfileImage} fit={props.fit} height="100" width="100" />
+  <div>
+    <ProfileImage alt="profile image for Francis Forest, photograph of two tall trees in mountain forest landscape" src={exampleProfileImage} fit={props.fit} height="75" width="75" />
+  </div>
 );
 
 ProfileImageFitTypes.propTypes = propTypes;

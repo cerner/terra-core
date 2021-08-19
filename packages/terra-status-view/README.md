@@ -4,7 +4,7 @@
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 ## Deprecation Notice
-The terra-status-view npm package is deprecated as of `4.41.0`. terra-status-view will be removed from the repo in a future version, but the package will remain on npm.
+The terra-status-view npm package is deprecated as of `4.45.0`. terra-status-view will be removed from the repo in a future version, but the package will remain on npm.
 
 ### What deprecation means
 Any apps that currently use terra-status-view will continue to work as-is.
