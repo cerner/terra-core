@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated docs for terra-alert
+
 ## 1.6.0 - (August 3, 2021)
 
 * Changed
