@@ -197,6 +197,8 @@ import IconWaveform from 'terra-icon/lib/icon/IconWaveform';
 import IconConfidential from 'terra-icon/lib/icon/IconConfidential';
 import IconWifi from 'terra-icon/lib/icon/IconWifi';
 import IconWifiSlash from 'terra-icon/lib/icon/IconWifiSlash';
+import IconBrokenImage from 'terra-icon/lib/icon/IconBrokenImage';
+import IconBrokenLinkUnlink from 'terra-icon/lib/icon/IconBrokenLinkUnlink';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -1999,6 +2001,24 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconWifiSlash from 'terra-icon/lib/icon/IconWifiSlash';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconBrokenImage height='2em' width='2em' /></td>
+        <td style={cellStyle}>brokenImage</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconBrokenImage from 'terra-icon/lib/icon/IconBrokenImage';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconBrokenLinkUnlink height='2em' width='2em' /></td>
+        <td style={cellStyle}>brokenLink_unlink</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconBrokenLinkUnlink from 'terra-icon/lib/icon/IconBrokenLinkUnlink';
           </code>
         </td>
       </tr>
