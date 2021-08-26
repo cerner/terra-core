@@ -208,6 +208,9 @@ class Menu extends React.Component {
       value,
       visuallyHiddenComponent,
     } = this.props;
+    const options = MenuUtil.flatten(this.state.children, true);
+    const totalOptions = options.length;
+    const index = MenuUtil.getIndex(options, this.state.active);
 
     if (keyCode === KeyCode.KEY_UP) {
       this.clearScrollTimeout();
@@ -225,7 +228,7 @@ class Menu extends React.Component {
       const option = MenuUtil.findByValue(children, active);
       // Handles communicating the case where a regular option is selected to screen readers.
       if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
-        visuallyHiddenComponent.current.innerHTML = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: option.props.display });
+        visuallyHiddenComponent.current.innerHTML = intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: option.props.display, index, totalOptions });
       }
 
       if (onSelect) {
@@ -265,11 +268,14 @@ class Menu extends React.Component {
     const {
       input, onDeselect, onSelect, value, intl, visuallyHiddenComponent,
     } = this.props;
+    const options = MenuUtil.flatten(this.state.children, true);
+    const totalOptions = options.length;
+    const index = MenuUtil.getIndex(options, this.state.active);
 
     const shouldUnselectOption = MenuUtil.includes(value, option.props.value);
     const optionATClickText = (shouldUnselectOption
       ? intl.formatMessage({ id: 'Terra.form.select.unselectedText' }, { text: option.props.display })
-      : intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: option.props.display })
+      : intl.formatMessage({ id: 'Terra.form.select.selectedText' }, { text: option.props.display, index, totalOptions })
     );
 
     if (visuallyHiddenComponent && visuallyHiddenComponent.current) {
