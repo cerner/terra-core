@@ -7,8 +7,9 @@
     border: 0;
     margin-bottom: var(--terra-form-field-margin-bottom, 1.428em);
     max-width: 72.857rem;
-    overflow-wrap: break-word;
+    overflow-wrap: break-word; /* Modern browsers */
     padding: 0;
+    word-wrap: break-word; /* For IE 10 and IE 11 */
   }
 
   .field-inline {
