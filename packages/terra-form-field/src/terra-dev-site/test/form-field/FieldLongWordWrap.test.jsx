@@ -5,7 +5,7 @@ import styles from './FormFieldTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const FieldLongWord = () => (
+const FieldLongWordWrap = () => (
   <div className={cx('field-wrapper')}>
     <Field
       id="field"
@@ -20,4 +20,4 @@ const FieldLongWord = () => (
   </div>
 );
 
-export default FieldLongWord;
+export default FieldLongWordWrap;
