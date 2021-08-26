@@ -10,6 +10,9 @@
 ## 6.32.0 - (August 3, 2021)
 
 * Fixed
+  * Fixed missing i18n context variables.
+
+* Fixed
   * Fixed focus issue in mobile devices for menu with large number of options.
 
 ## 6.31.0 - (June 22, 2021)
