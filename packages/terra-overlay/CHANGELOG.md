@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.67.0 - (August 25, 2021)
+
 * Changed
   * Updated assertion in WDIO tests due to changes in expect-webdriverio v3.
 

@@ -5,6 +5,11 @@
 * Changed
   * Updated styles to wrap long words.
 
+## 4.19.0 - (August 25, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.18.0 - (June 22, 2021)
 
 * Changed
