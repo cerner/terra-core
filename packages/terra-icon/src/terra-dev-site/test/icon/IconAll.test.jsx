@@ -29,6 +29,8 @@ const IconAll = () => (
     <Icon.IconBluetoothSlash className={cx(['icon'])} />
     <Icon.IconBookmark className={cx(['icon'])} />
     <Icon.IconBriefcase className={cx(['icon'])} />
+    <Icon.IconBrokenImage className={cx(['icon'])} />
+    <Icon.IconBrokenLinkUnlink className={cx(['icon'])} />
     <Icon.IconBusy className={cx(['icon'])} />
     <Icon.IconCalculator className={cx(['icon'])} />
     <Icon.IconCalendar className={cx(['icon'])} />

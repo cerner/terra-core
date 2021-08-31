@@ -4,5 +4,7 @@
   "Terra.paginator.first": "Eerste",
   "Terra.paginator.last": "Laatste",
   "Terra.paginator.pageIndex": "Pagina {pageNumber}",
-  "Terra.paginator.pageCount": "Pagina {pageNumber} van {pageNumberTotal}"
+  "Terra.paginator.pageCount": "Pagina {pageNumber} van {pageNumberTotal}",
+  "Terra.paginator.pageIndexWithLabel": "{pageLabel} {pageNumber}",
+  "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} van {pageNumberTotal}"
 }

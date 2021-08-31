@@ -136,4 +136,17 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
       Terra.validates.element('previous button is not focused');
     });
   });
+
+  describe('Progressive Paginator with custom page label', () => {
+    before(() => browser.url('/raw/tests/terra-paginator/paginator/progressive-paginator-with-custom-label'));
+
+    it('should display progressive paginator with custom page label without total count', () => {
+      Terra.validates.element('custom page label without total count');
+    });
+
+    it('should display progressive paginator with custom page label with total count', () => {
+      $('#total-count-button').click();
+      Terra.validates.element('custom page label with total count');
+    });
+  });
 });

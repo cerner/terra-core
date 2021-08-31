@@ -2,7 +2,15 @@
 
 ## Unreleased
 
+## 6.33.0 - (August 25, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.32.0 - (August 3, 2021)
+
+* Fixed
+  * Fixed missing i18n context variables.
 
 * Fixed
   * Fixed focus issue in mobile devices for menu with large number of options.

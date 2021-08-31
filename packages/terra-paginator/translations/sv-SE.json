@@ -4,5 +4,7 @@
   "Terra.paginator.first": "Första",
   "Terra.paginator.last": "Sista",
   "Terra.paginator.pageIndex": "Sida {pageNumber}",
-  "Terra.paginator.pageCount": "Sida {pageNumber} av {pageNumberTotal}"
+  "Terra.paginator.pageCount": "Sida {pageNumber} av {pageNumberTotal}",
+  "Terra.paginator.pageIndexWithLabel": "{pageLabel} {pageNumber}",
+  "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} av {pageNumberTotal}"
 }

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.57.0 - (August 25, 2021)
+
+* Changed
+  * Updated WDIO snapshots due to terra-functional-testing v2 upgrade.
+
 ## 4.56.0 - (July 6, 2021)
 
 * Changed
