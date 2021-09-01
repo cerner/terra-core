@@ -1,6 +1,6 @@
 {
   "name": "@cerner/terra-core-docs",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Contains documentation for packages in the terra-core monorepo",
   "main": "index.js",
   "publishConfig": {
@@ -59,7 +59,7 @@
     "terra-form-fieldset": "^2.62.0",
     "terra-form-input": "^4.16.0",
     "terra-form-radio": "^4.27.0",
-    "terra-form-select": "^6.33.0",
+    "terra-form-select": "^6.34.0",
     "terra-form-textarea": "^5.18.0",
     "terra-grid": "^6.29.0",
     "terra-heading": "^4.46.0",
