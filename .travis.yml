@@ -25,7 +25,7 @@ jobs:
         - npm run lint
         - npm run jest
         # These can't be built in parallel because the cache is a single object and you can't add to it in parallel
-        - npm run compile:prod -- --env.disableAggregateThemes --output-path $TRAVIS_BUILD_DIR/travis-build/default
+        - npm run compile:prod -- --output-path $TRAVIS_BUILD_DIR/travis-build/default
         - npm run compile:lowlight -- --output-path $TRAVIS_BUILD_DIR/travis-build/lowlight
         - npm run compile:fusion -- --output-path $TRAVIS_BUILD_DIR/travis-build/fusion
         # Prime the docker cache
