@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Updated screenshots due to viewport size change in @cerner/terra-functional-testing.
   * Update mdx notice test for terra-dev-site v7
 
 ## 1.5.0 - (July 6, 2021)
