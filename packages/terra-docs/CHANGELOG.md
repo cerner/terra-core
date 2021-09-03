@@ -4,6 +4,7 @@
 
 * Changed
   * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
+  * Update mdx notice test for terra-dev-site v7
 
 ## 1.5.0 - (July 6, 2021)
 
