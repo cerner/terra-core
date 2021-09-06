@@ -5,6 +5,11 @@
 * Changed
   * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
 
+## 2.62.0 - (August 25, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.61.0 - (June 22, 2021)
 
 * Changed
