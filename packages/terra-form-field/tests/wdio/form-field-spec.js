@@ -53,6 +53,12 @@ Terra.describeViewports('Form Field', ['medium'], () => {
     Terra.validates.element('text wrap');
   });
 
+  it('should display Form Field with long word wrap', () => {
+    browser.url('/raw/tests/terra-form-field/form-field/field-long-word-wrap');
+
+    Terra.validates.element('long word wrap');
+  });
+
   it('should display inline Form Field', () => {
     browser.url('/raw/tests/terra-form-field/form-field/field-inline');
 

@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Updated styles to wrap long words.
   * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
 
 ## 4.19.0 - (August 25, 2021)
