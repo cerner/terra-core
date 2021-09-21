@@ -3,6 +3,11 @@
 ## Unreleased
 
 * Changed
+  * Updated WDIO screenshots due to webpack-config-terra sass upgrade.
+
+## 3.54.0 - (August 25, 2021)
+
+* Changed
   * Updated WDIO snapshots due to terra-functional-testing v2 upgrade.
 
 ## 3.53.0 - (July 6, 2021)

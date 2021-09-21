@@ -3,6 +3,11 @@
 ## Unreleased
 
 * Changed
+  * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
+
+## 3.45.0 - (August 25, 2021)
+
+* Changed
   * Updated to `one-cerner-style-icons` to v1.41.2
 
 ## 3.44.0 - (June 22, 2021)

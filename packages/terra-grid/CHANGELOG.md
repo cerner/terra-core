@@ -3,6 +3,11 @@
 ## Unreleased
 
 * Changed
+  * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
+
+## 6.29.0 - (August 25, 2021)
+
+* Changed
   * Updated WDIO snapshots due to terra-functional-testing v2 upgrade.
 
 ## 6.28.0 - (April 6, 2021)
@@ -16,7 +21,7 @@
 ## 6.27.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
+  * Fixed broken links in documentation.
 
 ## 6.26.0 - (December 8, 2020)
 

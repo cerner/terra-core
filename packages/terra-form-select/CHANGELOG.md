@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+* Changed
+  * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
+
+## 6.34.0 - (August 31, 2021)
+
+* Fixed
+  * Fixed missing i18n context variables.
+
+## 6.33.0 - (August 25, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.32.0 - (August 3, 2021)
 
 * Fixed

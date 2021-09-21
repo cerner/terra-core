@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+* Changed
+  * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
+
+## 2.76.0 - (August 25, 2021)
+
 * Added
   * Added prop `pageLabel` to customize page label.
 
