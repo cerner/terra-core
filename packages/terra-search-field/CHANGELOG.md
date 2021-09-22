@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.71.0 - (September 21, 2021)
+
 * Changed
   * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
   * Updated wdio screenshots for minor rendering issue.
