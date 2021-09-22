@@ -5,6 +5,9 @@
 * Changed
   * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
 
+* Added
+  * Added package json lint test.
+
 ## 6.34.0 - (August 31, 2021)
 
 * Fixed

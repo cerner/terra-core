@@ -40,8 +40,9 @@
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
-    "lint": "npm run lint:js && npm run lint:scss",
+    "lint": "npm run lint:js && npm run lint:scss && npm run lint:package-json",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
+    "lint:package-json": "terra package-json-lint",
     "lint:scss": "stylelint src/**/*.scss",
     "precompile": "rm -rf lib",
     "props-table": "props-table ./src/Paginator.jsx --out-dir ./docs/props-table",

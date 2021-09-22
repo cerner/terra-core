@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added package json lint test.
+
 ## 3.12.0 - (April 6, 2021)
 
 * Changed
