@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "focus-trap-react": "^6.0.0",
+    "focus-trap-react": "^8.0.0",
     "keycode-js": "^3.1.0",
     "mutationobserver-shim": "0.3.3",
     "prop-types": "^15.5.8",
