@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Migrate doc from terra-avatar
+
 ## 1.9.0 - (September 21, 2021)
 
 * Changed
