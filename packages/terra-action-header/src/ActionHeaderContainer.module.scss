@@ -32,6 +32,7 @@
   .flex-fill {
     align-self: var(--terra-action-header-flex-fill-align-self);
     flex: 1 1 auto;
+    min-width: 0;
     position: relative;
     width: 100%;
   }
