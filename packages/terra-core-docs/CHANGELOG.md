@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated Arrange tests to be more reliable.
+
 * Added
   * Migrate doc from terra-avatar
 

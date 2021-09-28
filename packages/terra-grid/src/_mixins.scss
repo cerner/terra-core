@@ -1,7 +1,0 @@
-// Grid Component Mixins
-// ========================================================
-
-@mixin terra-grid-column-size($columns) {
-  flex-basis: percentage($columns / 12);
-  max-width: percentage($columns / 12);
-}

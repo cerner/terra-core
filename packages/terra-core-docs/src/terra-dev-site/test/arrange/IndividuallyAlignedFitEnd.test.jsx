@@ -1,7 +1,7 @@
 import React from 'react';
 import Arrange from 'terra-arrange';
 import {
-  ArrangeWrapper, IconWrapper, image, simpleText,
+  ArrangeWrapper, IconWrapper, longText,
 } from './common/examplesetup';
 
 const IndividuallyAlignedFitEnd = () => (
@@ -9,8 +9,8 @@ const IndividuallyAlignedFitEnd = () => (
     <ArrangeWrapper>
       <Arrange
         id="default"
-        fitStart={image}
-        fill={simpleText}
+        fitStart={<IconWrapper />}
+        fill={longText}
         fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
@@ -19,8 +19,8 @@ const IndividuallyAlignedFitEnd = () => (
       <Arrange
         id="center"
         alignFitEnd="center"
-        fitStart={image}
-        fill={simpleText}
+        fitStart={<IconWrapper />}
+        fill={longText}
         fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
@@ -29,8 +29,8 @@ const IndividuallyAlignedFitEnd = () => (
       <Arrange
         id="bottom"
         alignFitEnd="bottom"
-        fitStart={image}
-        fill={simpleText}
+        fitStart={<IconWrapper />}
+        fill={longText}
         fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
@@ -39,8 +39,8 @@ const IndividuallyAlignedFitEnd = () => (
       <Arrange
         id="stretch"
         alignFitEnd="stretch"
-        fitStart={image}
-        fill={simpleText}
+        fitStart={<IconWrapper />}
+        fill={longText}
         fitEnd={<IconWrapper />}
       />
     </ArrangeWrapper>
