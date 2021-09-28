@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.10.0 - (September 28, 2021)
+
 * Changed
   * Updated Arrange tests to be more reliable.
 
