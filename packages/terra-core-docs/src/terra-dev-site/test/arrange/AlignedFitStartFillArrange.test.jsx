@@ -1,13 +1,13 @@
 import React from 'react';
 import Arrange from 'terra-arrange';
-import { ArrangeWrapper, image, simpleText } from './common/examplesetup';
+import { ArrangeWrapper, IconWrapper, simpleText } from './common/examplesetup';
 
 const AlignedFitStartFillArrange = () => (
   <div>
     <ArrangeWrapper>
       <Arrange
         id="default"
-        fitStart={image}
+        fitStart={<IconWrapper />}
         fill={simpleText}
       />
     </ArrangeWrapper>
@@ -16,7 +16,7 @@ const AlignedFitStartFillArrange = () => (
       <Arrange
         id="center"
         align="center"
-        fitStart={image}
+        fitStart={<IconWrapper />}
         fill={simpleText}
       />
     </ArrangeWrapper>
@@ -25,7 +25,7 @@ const AlignedFitStartFillArrange = () => (
       <Arrange
         id="bottom"
         align="bottom"
-        fitStart={image}
+        fitStart={<IconWrapper />}
         fill={simpleText}
       />
     </ArrangeWrapper>
@@ -34,7 +34,7 @@ const AlignedFitStartFillArrange = () => (
       <Arrange
         id="stretch"
         align="stretch"
-        fitStart={image}
+        fitStart={<IconWrapper />}
         fill={simpleText}
       />
     </ArrangeWrapper>
