@@ -1,5 +1,4 @@
 @import '~terra-breakpoints/lib/variables';
-@import './mixins';
 
 // Themes
 @import './clinical-lowlight-theme/Grid.module';
@@ -28,21 +27,58 @@
     padding-left: var(--terra-grid-gutter-padding-left, 1rem);
   }
 
-  // Create column classes
-  @for $i from 1 through 12 {
-    .column-#{$i} {
-      @include terra-grid-column-size($i);
-    }
-  }
-
   // Create responsive styles
   @each $size-name, $size-width in $terra-breakpoints {
     @media screen and (min-width: #{$size-width}px) {
       // Responsive column classes
       /* stylelint-disable max-nesting-depth */
       @for $i from 1 through 12 {
-        .column-#{$size-name}-#{$i} {
-          @include terra-grid-column-size($i);
+        .column-#{$size-name}-1 {
+          flex-basis: 8.3333333333%;
+          max-width: 8.3333333333%;
+        }
+        .column-#{$size-name}-2 {
+          flex-basis: 16.6666666667%;
+          max-width: 16.6666666667%;
+        }
+        .column-#{$size-name}-3 {
+          flex-basis: 25%;
+          max-width: 25%; }
+        .column-#{$size-name}-4 {
+          flex-basis: 33.3333333333%;
+          max-width: 33.3333333333%;
+        }
+        .column-#{$size-name}-5 {
+          flex-basis: 41.6666666667%;
+          max-width: 41.6666666667%;
+        }
+        .column-#{$size-name}-6 {
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+        .column-#{$size-name}-7 {
+          flex-basis: 58.3333333333%;
+          max-width: 58.3333333333%;
+        }
+        .column-#{$size-name}-8 {
+          flex-basis: 66.6666666667%;
+          max-width: 66.6666666667%;
+        }
+        .column-#{$size-name}-9 {
+          flex-basis: 75%;
+          max-width: 75%;
+        }
+        .column-#{$size-name}-10 {
+          flex-basis: 83.3333333333%;
+          max-width: 83.3333333333%;
+        }
+        .column-#{$size-name}-11 {
+          flex-basis: 91.6666666667%;
+          max-width: 91.6666666667%;
+        }
+        .column-#{$size-name}-12 {
+          flex-basis: 100%;
+          max-width: 100%;
         }
       }
       /* stylelint-enable max-nesting-depth */
