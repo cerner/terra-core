@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated WDIO screenshots.
+
 ## 3.48.0 - (September 21, 2021)
 
 * Changed
