@@ -5,7 +5,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display empty Search Field', () => {
-      Terra.validates.element('default empty', { misMatchTolerance: 0.1 });
+      Terra.validates.element('default empty', { mismatchTolerance: 0.1 });
     });
 
     it('should enter a search term', () => {
@@ -13,7 +13,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with text', () => {
-      Terra.validates.element('default with text', { misMatchTolerance: 0.1 });
+      Terra.validates.element('default with text', { mismatchTolerance: 0.1 });
     });
 
     it('should scroll text that is too long', () => {
@@ -21,7 +21,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with scrolled text', () => {
-      Terra.validates.element('default scrolled text', { misMatchTolerance: 0.1 });
+      Terra.validates.element('default scrolled text', { mismatchTolerance: 0.1 });
     });
   });
 
