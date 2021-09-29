@@ -1,14 +1,14 @@
 import React from 'react';
 import Arrange from 'terra-arrange';
 import {
-  ArrangeWrapper, icon, image, simpleText,
+  ArrangeWrapper, icon, IconWrapper, simpleText,
 } from './common/examplesetup';
 
 const AlignedStretchMaxWidth = () => (
   <div>
     <ArrangeWrapper>
       <Arrange
-        fitStart={image}
+        fitStart={<IconWrapper />}
         fill={simpleText}
         fitEnd={icon}
         alignFitStart="stretch"

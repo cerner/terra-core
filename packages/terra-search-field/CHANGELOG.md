@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.72.0 - (September 28, 2021)
+
+* Changed
+  * Updated failing WDIO screenshot.
+
 ## 3.71.0 - (September 21, 2021)
 
 * Changed
@@ -37,7 +42,7 @@
 * Changed
   * Upgrade tests to terra-functional-testing and WebDriverIO v6
   * Removed unnecessary `wdio.conf.js` file
-  
+
 * Fixed
   * Updated jest test to correctly update the search text.
 
