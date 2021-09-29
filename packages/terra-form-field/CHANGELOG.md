@@ -2,14 +2,15 @@
 
 ## Unreleased
 
+* Added
+  * Added package json lint test.
+
+
 ## 4.20.0 - (September 21, 2021)
 
 * Changed
   * Updated styles to wrap long words.
   * Updated WDIO Screenshots due to webpack-config-terra sass upgrade.
-
-* Added
-  * Added package json lint test.
 
 ## 4.19.0 - (August 25, 2021)
 
