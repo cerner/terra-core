@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Migrate doc from terra-base.
+
 ## 1.10.0 - (September 28, 2021)
 
 * Changed
