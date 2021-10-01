@@ -1,7 +1,7 @@
 {
   "name": "terra-status",
   "main": "lib/Status.js",
-  "version": "4.48.0",
+  "version": "4.49.0",
   "description": "The status component provides a customizable color indictor to signify a specific condition.",
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-arrange": "^3.48.0",
+    "terra-arrange": "^3.49.0",
     "terra-icon": "^3.46.0",
     "terra-visually-hidden-text": "^2.34.0"
   }

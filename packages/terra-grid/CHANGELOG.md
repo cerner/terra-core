@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 6.31.0 - (September 28, 2021)
+
+* Changed
+  * Updated css to avoid dart sass deprecation warning.
+
 ## 6.30.0 - (September 21, 2021)
 
 * Changed
