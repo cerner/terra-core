@@ -29,6 +29,7 @@ jobs:
         - npm run compile:lowlight -- --output-path $TRAVIS_BUILD_DIR/travis-build/lowlight
         - npm run compile:fusion -- --output-path $TRAVIS_BUILD_DIR/travis-build/fusion
         # Prime the docker cache
+        - echo "$DOCKER_PASSWORD" | docker login -u "ryanthemanuel" --password-stdin
         - docker-compose --file ./node_modules/@cerner/terra-functional-testing/lib/docker/docker-compose.yml pull
         # Save docker cache
         - docker save -o docker_images/images.tar $(docker images -a -q)
