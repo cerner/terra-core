@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActiveBreakpointProvider, withActiveBreakpoint } from '../../../index';
+import { ActiveBreakpointProvider, withActiveBreakpoint } from 'terra-breakpoints';
 
 const ActiveBreakpointConsumer = withActiveBreakpoint(({ activeBreakpoint }) => (
   <div>

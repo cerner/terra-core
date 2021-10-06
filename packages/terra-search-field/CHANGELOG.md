@@ -4,6 +4,8 @@
 
 * Added
   * Added package json lint test.
+* Changed
+  * Correctly applied mismatch tolerance.
 
 ## 3.72.0 - (September 28, 2021)
 
