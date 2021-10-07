@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.73.0 - (October 7, 2021)
+
 * Changed
   * Correctly applied mismatch tolerance.
 
