@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Added
+  * Migrate doc from terra-base.
   * Migrate docs from terra-badge
   * Migrate docs from terra-breakpoints
 
