@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 5.48.0 - (October 8, 2021)
+
 * Changed
   * Migrate doc to terra-core-docs
 
