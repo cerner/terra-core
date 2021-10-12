@@ -5,6 +5,11 @@
 * Added
   * Added package json lint test.
 
+## 5.48.0 - (October 8, 2021)
+
+* Changed
+  * Migrate doc to terra-core-docs
+
 ## 5.47.0 - (September 21, 2021)
 
 * Changed
