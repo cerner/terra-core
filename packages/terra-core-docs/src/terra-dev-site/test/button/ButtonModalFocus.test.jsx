@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Button from '../../../Button';
+import Button from 'terra-button';
 
 export default function ButtonWithModal() {
   const [isOpen, setIsOpen] = useState(false);

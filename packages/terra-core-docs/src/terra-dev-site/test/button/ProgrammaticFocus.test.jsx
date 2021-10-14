@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Button from '../../../Button';
+import Button from 'terra-button';
 
 export default () => {
   const button1 = useRef();

@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Button from '../../../../Button';
+import Button from 'terra-button';
 import styles from '../ButtonTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
