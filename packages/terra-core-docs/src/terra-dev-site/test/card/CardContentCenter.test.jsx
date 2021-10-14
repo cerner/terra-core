@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../../../Card';
-import CardBody from '../../../CardBody';
+import Card from 'terra-card';
+import CardBody from 'terra-card/lib/CardBody';
 
 export default () => (
   <Card>
