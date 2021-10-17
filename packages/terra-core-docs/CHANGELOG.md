@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * Migrate doc from terra-cell-grid.
+  * Migrate docs from terra-cell-grid.
 
 ## 1.11.0 - (October 8, 2021)
 
