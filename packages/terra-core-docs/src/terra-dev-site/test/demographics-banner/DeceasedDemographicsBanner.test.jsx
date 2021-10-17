@@ -1,5 +1,5 @@
 import React from 'react';
-import DemographicsBanner from '../../../DemographicsBanner';
+import DemographicsBanner from 'terra-demographics-banner';
 
 export default () => (
   <DemographicsBanner

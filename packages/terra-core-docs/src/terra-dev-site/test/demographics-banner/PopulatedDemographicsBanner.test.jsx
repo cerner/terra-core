@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'terra-image';
-import DemographicsBanner from '../../../DemographicsBanner';
-import demographicsCat from '../../doc/assets/demographicsCat.jpg';
+import DemographicsBanner from 'terra-demographics-banner';
+import demographicsCat from '../../doc/demographics-banner/assets/demographicsCat.jpg';
 
 export default () => (
   <DemographicsBanner

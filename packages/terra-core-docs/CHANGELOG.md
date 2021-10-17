@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Migrate docs from terra-demographics-banner.
+
 ## 1.11.0 - (October 8, 2021)
 
 * Added
