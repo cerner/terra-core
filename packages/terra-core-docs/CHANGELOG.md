@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * Migrate doc from terra-badge.
+  * Migrate doc from terra-button.
 
 ## 1.11.0 - (October 8, 2021)
 
