@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ButtonGroup from '../../../ButtonGroup';
+import ButtonGroup from 'terra-button-group';
 
 const ProgrammaticDisabled = () => {
   const [isDisabled, setIsDisabled] = useState(false);

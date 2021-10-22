@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import ButtonGroup from '../../../ButtonGroup';
+import ButtonGroup from 'terra-button-group';
 import styles from './ButtonGroupIcon.test.scss';
 
 const cx = classNames.bind(styles);

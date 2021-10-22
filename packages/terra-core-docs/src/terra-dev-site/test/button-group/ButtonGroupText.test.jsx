@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonGroup from '../../../ButtonGroup';
+import ButtonGroup from 'terra-button-group';
 
 const TextButtonGroup = () => (
   <ButtonGroup id="button-group-text">
