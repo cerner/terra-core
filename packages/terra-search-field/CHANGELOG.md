@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 3.73.0 - (October 8, 2021)
+
+* Changed
+  * Correctly applied mismatch tolerance.
+
+## 3.72.0 - (September 28, 2021)
+
 * Changed
   * Updated failing WDIO screenshot.
 

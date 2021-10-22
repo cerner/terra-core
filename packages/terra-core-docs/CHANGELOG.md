@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## 1.11.0 - (October 8, 2021)
+
+* Added
+  * Migrate doc from terra-base.
+  * Migrate docs from terra-badge
+  * Migrate docs from terra-breakpoints
+
+## 1.10.0 - (September 28, 2021)
+
 * Changed
   * Updated Arrange tests to be more reliable.
 

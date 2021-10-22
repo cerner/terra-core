@@ -1,5 +1,5 @@
 import React from 'react';
-import Base from '../../../Base';
+import Base from 'terra-base';
 
 const BaseNoTranslationsLoaded = () => {
   const noTranslations = (
