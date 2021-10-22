@@ -30,7 +30,6 @@
     "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
     "terra-button": "^3.59.0",
-    "terra-icon": "^3.46.0",
     "terra-theme-context": "^1.0.0"
   },
   "scripts": {
