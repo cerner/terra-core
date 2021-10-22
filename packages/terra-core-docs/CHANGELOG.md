@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Migrate doc from terra-button-group.
+
 ## 1.11.0 - (October 8, 2021)
 
 * Added
