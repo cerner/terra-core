@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Added
+  * Migrate doc from terra-card.
+
+* Added
   * Migrate doc from terra-button.
 
 * Added
