@@ -1,5 +1,8 @@
 # Changelog
 
+* Changed
+  * Migrate doc to terra-core-docs.
+
 ## Unreleased
 
 ## 3.41.0 - (September 21, 2021)

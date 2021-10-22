@@ -4,6 +4,13 @@
 
 * Added
   * Migrate docs from terra-content-container.
+  * Migrate doc from terra-card.
+
+* Added
+  * Migrate doc from terra-button.
+
+* Added
+  * Migrate doc from terra-button-group.
 
 ## 1.11.0 - (October 8, 2021)
 

@@ -1,7 +1,7 @@
 Terra.describeViewports('Button', ['tiny'], () => {
   describe('Neutral', () => {
     it('displays default neutral Button', () => {
-      browser.url('/raw/tests/terra-button/button/variants/neutral-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/variants/neutral-button');
       $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
 
       Terra.validates.element('neutral default', { selector: '#neutral' });
@@ -14,7 +14,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
     });
 
     it('displays Neutral-Active Button', () => {
-      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/active-variant-buttons');
 
       Terra.validates.element('neutral active', { selector: '#neutralActive' });
       Terra.validates.element('neutral active and focused', { selector: '#neutralActiveFocusSpan' });
@@ -23,7 +23,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Emphasis', () => {
     it('displays default emphasis Button', () => {
-      browser.url('/raw/tests/terra-button/button/variants/emphasis-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/variants/emphasis-button');
 
       Terra.validates.element('emphasis default', { selector: '#emphasis' });
     });
@@ -35,7 +35,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
     });
 
     it('displays emphasis-active Button', () => {
-      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/active-variant-buttons');
 
       Terra.validates.element('emphasis active', { selector: '#emphasisActive' });
       Terra.validates.element('emphasis active and focused', { selector: '#emphasisActiveFocusSpan' });
@@ -44,7 +44,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Ghost', () => {
     it('displays default ghost Button', () => {
-      browser.url('/raw/tests/terra-button/button/variants/ghost-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/variants/ghost-button');
 
       Terra.validates.element('ghost default', { selector: '#ghost' });
     });
@@ -56,7 +56,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
     });
 
     it('displays ghost-active Button', () => {
-      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/active-variant-buttons');
 
       Terra.validates.element('ghost active', { selector: '#ghostActive' });
       Terra.validates.element('ghost active and focused', { selector: '#ghostActiveFocusSpan' });
@@ -65,7 +65,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('De-emphasis', () => {
     it('displays default de-emphasis Button', () => {
-      browser.url('/raw/tests/terra-button/button/variants/deemphasis-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/variants/deemphasis-button');
 
       Terra.validates.element('de-emphasis default', { selector: '#de-emphasis' });
     });
@@ -77,7 +77,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
     });
 
     it('displays de-emphasis-active Button', () => {
-      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/active-variant-buttons');
 
       Terra.validates.element('de-emphasis active', { selector: '#de-emphasisActive' });
       Terra.validates.element('de-emphasis active and focused', { selector: '#de-emphasisActiveFocusSpan' });
@@ -86,7 +86,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Action', () => {
     it('displays default action Button', () => {
-      browser.url('/raw/tests/terra-button/button/variants/action-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/variants/action-button');
 
       Terra.validates.element('action default', { selector: '#action' });
     });
@@ -98,7 +98,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
     });
 
     it('displays action-active Button', () => {
-      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/active-variant-buttons');
 
       Terra.validates.element('action active', { selector: '#actionActive' });
       Terra.validates.element('action active and focused', { selector: '#actionActiveFocusSpan' });
@@ -107,7 +107,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Utility', () => {
     it('displays default utility Button', () => {
-      browser.url('/raw/tests/terra-button/button/variants/utility-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/variants/utility-button');
 
       Terra.validates.element('utility default', { selector: '#utility' });
     });
@@ -119,7 +119,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
     });
 
     it('displays utility-active Button', () => {
-      browser.url('/raw/tests/terra-button/button/active-variant-buttons');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/active-variant-buttons');
 
       Terra.validates.element('utility active', { selector: '#utilityActive' });
       Terra.validates.element('utility active and focused', { selector: '#utilityActiveFocusSpan' });
@@ -127,7 +127,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
   });
 
   it('displays Button with long text', () => {
-    browser.url('/raw/tests/terra-button/button/long-text-button');
+    browser.url('/raw/tests/cerner-terra-core-docs/button/long-text-button');
     $('#root').moveTo();
 
     Terra.validates.element('long text', { selector: '#long-text' });
@@ -135,7 +135,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Button Types', () => {
     before(() => {
-      browser.url('/raw/tests/terra-button/button/button-types');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/button-types');
       $('#root').moveTo();
     });
 
@@ -154,7 +154,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('displays Button with Icon', () => {
     before(() => {
-      browser.url('/raw/tests/terra-button/button/icon-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/icon-button');
       $('#root').moveTo();
     });
 
@@ -172,7 +172,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
   });
 
   it('displays compact Button', () => {
-    browser.url('/raw/tests/terra-button/button/compact-button');
+    browser.url('/raw/tests/cerner-terra-core-docs/button/compact-button');
     $('#root').moveTo();
 
     Terra.validates.element('compact', { selector: '#compactButton' });
@@ -180,7 +180,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Programmatic Focus', () => {
     before(() => {
-      browser.url('/raw/tests/terra-button/button/programmatic-focus');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/programmatic-focus');
     });
 
     it('displays programmatic focus on Button 2', () => {
@@ -204,7 +204,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Dismissing Modal should focus the button', () => {
     it('displays Button with focus', () => {
-      browser.url('/raw/tests/terra-button/button/button-modal-focus');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/button-modal-focus');
       $('#modal-open-button').click();
       browser.pause(300);
 
@@ -214,7 +214,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Programmatic Disabled', () => {
     before(() => {
-      browser.url('/raw/tests/terra-button/button/programmatic-disabled');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/programmatic-disabled');
     });
 
     it('focuses button', () => {
@@ -232,7 +232,7 @@ Terra.describeViewports('Button', ['tiny'], () => {
 
   describe('Programmatically Re-enable a disabled button', () => {
     before(() => {
-      browser.url('/raw/tests/terra-button/button/programmatic-disable-enable');
+      browser.url('/raw/tests/cerner-terra-core-docs/button/programmatic-disable-enable');
     });
 
     it('disables button', () => {
