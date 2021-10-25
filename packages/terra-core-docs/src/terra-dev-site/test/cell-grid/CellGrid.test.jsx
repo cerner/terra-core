@@ -1,5 +1,5 @@
 import React from 'react';
-import CellGrid from '../../../index';
+import CellGrid from 'terra-cell-grid';
 
 const CellGridTest = () => (
   <CellGrid>

@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Added
+  * Migrate docs from terra-cell-grid.
   * Migrate docs from terra-demographics-banner.
   * Migrate docs from terra-content-container.
   * Migrate doc from terra-card.

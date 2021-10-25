@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Cell,
-} from '../../../index';
+} from 'terra-cell-grid';
 
 const CellTest = () => (
   <div>
