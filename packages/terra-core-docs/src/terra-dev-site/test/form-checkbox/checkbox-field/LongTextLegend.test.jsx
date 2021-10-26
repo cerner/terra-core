@@ -1,6 +1,6 @@
 import React from 'react';
-import Checkbox from '../../../../Checkbox';
-import CheckboxField from '../../../../CheckboxField';
+import Checkbox from 'terra-form-checkbox';
+import CheckboxField from 'terra-form-checkbox/lib/CheckboxField';
 
 const LongTextLegend = () => (
   <CheckboxField
