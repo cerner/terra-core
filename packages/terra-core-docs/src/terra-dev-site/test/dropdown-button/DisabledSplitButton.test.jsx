@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
 import classnames from 'classnames/bind';
-import SplitButton, { Item } from '../../../SplitButton';
+import { SplitButton, Item } from 'terra-dropdown-button';
 import styles from './ExtraSpacing.module.scss';
 
 const cx = classnames.bind(styles);

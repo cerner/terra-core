@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import DropdownButton, { Item } from '../../../DropdownButton';
+import DropdownButton, { Item } from 'terra-dropdown-button';
 
 export default () => (
   <DropdownButton

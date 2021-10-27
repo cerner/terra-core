@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames/bind';
-import SplitButton, { Item } from '../../../SplitButton';
+import DropdownButton, { Item } from 'terra-dropdown-button';
 import styles from './CallbackButtons.module.scss';
 
 const cx = classnames.bind(styles);
@@ -10,11 +10,11 @@ const CallbackDropdownButtons = () => {
 
   return (
     <div className={cx('background', color)}>
-      <SplitButton primaryOptionLabel="Gray" onSelect={() => { setColor('gray'); }}>
+      <DropdownButton label="Colors">
         <Item label="Red" onSelect={() => { setColor('red'); }} id="red" />
         <Item label="White" onSelect={() => { setColor('white'); }} id="white" />
         <Item label="Blue" onSelect={() => { setColor('blue'); }} id="blue" />
-      </SplitButton>
+      </DropdownButton>
     </div>
   );
 };
