@@ -303,11 +303,11 @@ class Button extends React.Component {
 
     return (
       <ComponentType
+        tabIndex={isDisabled ? '-1' : undefined}
         {...customProps}
         className={buttonClasses}
         type={type}
         disabled={isDisabled}
-        tabIndex={isDisabled ? '-1' : undefined}
         aria-disabled={isDisabled}
         aria-label={ariaLabel}
         onKeyDown={this.handleKeyDown}
