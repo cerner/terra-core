@@ -27,6 +27,7 @@ const Example = () => (
       <tr>
         <td>1</td>
         <td>true</td>
+        {/* eslint-disable-next-line jsx-a11y/tabindex-no-positive */}
         <td><Button text="button" isDisabled tabIndex="1" /></td>
       </tr>
       <tr>
@@ -47,10 +48,11 @@ const Example = () => (
       <tr>
         <td>1</td>
         <td>undefined</td>
+        {/* eslint-disable-next-line jsx-a11y/tabindex-no-positive */}
         <td><Button text="button" tabIndex="1" /></td>
       </tr>
     </tbody>
-  </table >
+  </table>
 );
 
 export default Example;
