@@ -5,6 +5,11 @@
 * Changed
   * Updated dependencies to not be hard-coded.
 
+## 3.69.0 - (November 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.68.0 - (September 21, 2021)
 
 * Changed
