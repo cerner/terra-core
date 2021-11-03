@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.79.0 - (November 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.78.0 - (October 8, 2021)
 
 * Changed
