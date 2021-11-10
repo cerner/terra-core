@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 1.12.0 - (November 2, 2021)
+
+* Added
+  * Migrate docs from terra-cell-grid.
+  * Migrate docs from terra-demographics-banner.
+  * Migrate docs from terra-content-container.
+  * Migrate doc from terra-card.
+  * Migrate doc from terra-button.
+  * Migrate doc from terra-button-group.
+
 ## 1.11.0 - (October 8, 2021)
 
 * Added

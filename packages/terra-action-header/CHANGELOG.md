@@ -5,6 +5,11 @@
 * Fixed
   * Added styles to ActionHeader to better support long non-breaking titles
 
+## 2.73.0 - (November 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.72.0 - (September 21, 2021)
 
 * Changed

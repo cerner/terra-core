@@ -14,7 +14,7 @@ before_install:
   - npm run clean
 before_script:
   # Load Docker Cache
-  - echo "$DOCKER_PASSWORD" | docker login -u "ryanthemanuel" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker load -i docker_images/images.tar || true
 jobs:
   include:

@@ -1,39 +1,39 @@
 Terra.describeViewports('Button Group', ['huge'], () => {
   it('displays text button', () => {
-    browser.url('/raw/tests/terra-button-group/button-group/button-group-text');
+    browser.url('/raw/tests/cerner-terra-core-docs/button-group/button-group-text');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 });
 
     Terra.validates.element('text button', { selector: '#button-group-text' });
   });
 
   it('displays long text button', () => {
-    browser.url('/raw/tests/terra-button-group/button-group/button-group-long-text');
+    browser.url('/raw/tests/cerner-terra-core-docs/button-group/button-group-long-text');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
 
     Terra.validates.element('long text button', { selector: '#button-group-text' });
   });
 
   it('displays icon button', () => {
-    browser.url('/raw/tests/terra-button-group/button-group/button-group-icon');
+    browser.url('/raw/tests/cerner-terra-core-docs/button-group/button-group-icon');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
 
     Terra.validates.element('icon button', { selector: '#button-group-icon' });
   });
 
   it('displays not selectable Button Group', () => {
-    browser.url('/raw/tests/terra-button-group/button-group/button-group-not-selectable');
+    browser.url('/raw/tests/cerner-terra-core-docs/button-group/button-group-not-selectable');
 
     Terra.validates.element('not selectable', { selector: '#button-group-not-selectable' });
   });
 
   it('displays disabled buttons', () => {
-    browser.url('/raw/tests/terra-button-group/button-group/button-group-disabled-buttons');
+    browser.url('/raw/tests/cerner-terra-core-docs/button-group/button-group-disabled-buttons');
 
     Terra.validates.element('disabled buttons', { selector: '#button-group-not-selectable' });
   });
 
   describe('Single-Select', () => {
-    before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-single-select'));
+    before(() => browser.url('/#/raw/tests/cerner-terra-core-docs/button-group/button-group-single-select'));
     it('should select the first button', () => {
       browser.keys('Tab');
       browser.keys('Space');
@@ -61,7 +61,7 @@ Terra.describeViewports('Button Group', ['huge'], () => {
   });
 
   describe('Multi-Select', () => {
-    before(() => browser.url('/#/raw/tests/terra-button-group/button-group/button-group-multi-select'));
+    before(() => browser.url('/#/raw/tests/cerner-terra-core-docs/button-group/button-group-multi-select'));
     it('should select the first button', () => {
       browser.keys('Tab');
       browser.keys('Space');
@@ -103,7 +103,7 @@ Terra.describeViewports('Button Group', ['huge'], () => {
 
   describe('Button Focus', () => {
     before(() => {
-      browser.url('/#/raw/tests/terra-button-group/button-group/button-group-multi-select');
+      browser.url('/#/raw/tests/cerner-terra-core-docs/button-group/button-group-multi-select');
     });
     it('should focus and select second button', () => {
       browser.keys('Tab');
@@ -114,7 +114,7 @@ Terra.describeViewports('Button Group', ['huge'], () => {
     });
     it('should switch window', () => {
       const title = browser.getTitle();
-      browser.newWindow('https://engineering.cerner.com/terra-core/raw/tests/terra-button-group/button-group/button-group-is-block', 'terra-core');
+      browser.newWindow('https://engineering.cerner.com/terra-core/raw/tests/cerner-terra-core-docs/button-group/button-group-is-block', 'terra-core');
       browser.switchWindow(title);
 
       Terra.validates.element('after switching window');
@@ -124,14 +124,14 @@ Terra.describeViewports('Button Group', ['huge'], () => {
 
 Terra.describeViewports('Button Group', ['tiny', 'huge'], () => {
   it('displays Button Group wrapping', () => {
-    browser.url('/raw/tests/terra-button-group/button-group/button-group-wrapping');
+    browser.url('/raw/tests/cerner-terra-core-docs/button-group/button-group-wrapping');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
 
     Terra.validates.element('wrapping');
   });
 
   it('displays Button Group block', () => {
-    browser.url('/raw/tests/terra-button-group/button-group/button-group-is-block');
+    browser.url('/raw/tests/cerner-terra-core-docs/button-group/button-group-is-block');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
 
     Terra.validates.element('block');
@@ -139,7 +139,7 @@ Terra.describeViewports('Button Group', ['tiny', 'huge'], () => {
 
   describe('Programmatic Disabled', () => {
     before(() => {
-      browser.url('/raw/tests/terra-button-group/button-group/programmatic-disabled');
+      browser.url('/raw/tests/cerner-terra-core-docs/button-group/programmatic-disabled');
     });
 
     it('focuses button', () => {
