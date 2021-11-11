@@ -1,5 +1,5 @@
 import React from 'react';
-import Fieldset from '../../../Fieldset';
+import Fieldset from 'terra-form-fieldset';
 
 const fieldset = () => (
   <Fieldset
