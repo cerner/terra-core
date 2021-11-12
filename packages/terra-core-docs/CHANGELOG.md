@@ -8,14 +8,17 @@
   * Migrate docs from terra-cell-grid.
   * Migrate docs from terra-demographics-banner.
   * Migrate docs from terra-content-container.
-  * Migrate doc from terra-card.
-  * Migrate doc from terra-button.
-  * Migrate doc from terra-button-group.
+  * Migrate docs from terra-card.
+  * Migrate docs from terra-button.
+  * Migrate docs from terra-button-group.
+  * Migrate docs from terra-form-field.
+  * Migrate docs from terra-divider.
+  * Migrate docs from terra-form-fieldset.
 
 ## 1.11.0 - (October 8, 2021)
 
 * Added
-  * Migrate doc from terra-base.
+  * Migrate docs from terra-base.
   * Migrate docs from terra-badge
   * Migrate docs from terra-breakpoints
 

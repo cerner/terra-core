@@ -1,7 +1,7 @@
 import React from 'react';
 import Field from 'terra-form-field';
 import Input from 'terra-form-input';
-import Fieldset from '../../../Fieldset';
+import Fieldset from 'terra-form-fieldset';
 
 const fieldsetwithhiddenlegend = () => (
   <Fieldset
