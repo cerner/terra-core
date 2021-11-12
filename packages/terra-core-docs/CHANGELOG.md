@@ -17,6 +17,7 @@
   * Migrate docs from terra-card.
   * Migrate docs from terra-button.
   * Migrate docs from terra-button-group.
+  * Migrate docs from terra-form-checkbox.
   * Migrate docs from terra-form-field.
   * Migrate docs from terra-divider.
   * Migrate docs from terra-form-fieldset.
