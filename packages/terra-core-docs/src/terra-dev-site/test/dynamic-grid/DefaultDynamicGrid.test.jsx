@@ -1,5 +1,5 @@
 import React from 'react';
-import DynamicGrid from '../../../DynamicGrid';
+import DynamicGrid from 'terra-dynamic-grid';
 
 const template = {
   'grid-template-columns': '100px 100px',
