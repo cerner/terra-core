@@ -1,7 +1,7 @@
 Terra.describeViewports('Split Button', ['medium'], () => {
   describe('Default', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/default-split-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/default-split-button');
       // avoid hover styles
       $('#root').moveTo({ xOffset: 100, yOffset: 1 });
     });
@@ -49,14 +49,14 @@ Terra.describeViewports('Split Button', ['medium'], () => {
   });
 
   it('should display disabled Dropdown Button', () => {
-    browser.url('/raw/tests/terra-dropdown-button/dropdown-button/disabled-split-button');
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/disabled-split-button');
 
     Terra.validates.element('disabled');
   });
 
   describe('Disabled', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/disabled-split-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/disabled-split-button');
     });
 
     it('tries to tab to the button', () => {
@@ -75,7 +75,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Interactions', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/callback-split-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/callback-split-button');
       // avoid hover styles
       $('#root').moveTo({ xOffset: 100, yOffset: 1 });
     });
@@ -204,7 +204,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Wide Contents', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/wide-split-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/wide-split-button');
       // avoid hover styles
       $('#root').moveTo({ xOffset: 1, yOffset: 300 });
     });
@@ -226,14 +226,14 @@ Terra.describeViewports('Split Button', ['medium'], () => {
   });
 
   it('should display block Split Button', () => {
-    browser.url('/raw/tests/terra-dropdown-button/dropdown-button/block-split-button');
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/block-split-button');
 
     Terra.validates.element('block');
   });
 
   describe('Bounded', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/bounded-split-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/bounded-split-button');
     });
 
     it('opens the top left dropdown', () => {
@@ -262,7 +262,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
   describe('Focus in callback', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/split-focus');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/split-focus');
     });
 
     it('should run primary callback that focuses an element', () => {
@@ -282,7 +282,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
   });
 
   it('displays variants of Split Button', () => {
-    browser.url('/raw/tests/terra-dropdown-button/dropdown-button/variant-split-buttons');
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-buttons');
     $('#root').moveTo({ xOffset: 1, yOffset: 100 });
 
     Terra.validates.element('variants');
