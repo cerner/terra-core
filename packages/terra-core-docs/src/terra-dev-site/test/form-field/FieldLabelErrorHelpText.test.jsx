@@ -1,22 +1,24 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Field from '../../../Field';
+import Field from 'terra-form-field';
 import styles from './FormFieldTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const FieldLabelRequired = () => (
+const FieldLabelErrorHelpText = () => (
   <div>
-    <h3>Field - Label + Required</h3>
+    <h3>Field - Label + In Error + Help Text</h3>
     <Field
-      id="label-required"
+      id="optional-invalid"
       className={cx('form-field')}
       label="Field Label"
-      required
+      help="Help Message"
+      error="Error Message"
+      isInvalid
     >
       <div className={cx('field-content')}>Control Placeholder</div>
     </Field>
   </div>
 );
 
-export default FieldLabelRequired;
+export default FieldLabelErrorHelpText;

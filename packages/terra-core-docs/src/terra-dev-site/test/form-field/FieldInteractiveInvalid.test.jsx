@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import Field from '../../../Field';
+import Field from 'terra-form-field';
 import styles from './FormFieldTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
