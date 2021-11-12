@@ -1,9 +1,9 @@
 import React from 'react';
-import Checkbox from '../../../../Checkbox';
-import CheckboxField from '../../../../CheckboxField';
+import Checkbox from 'terra-form-checkbox';
+import CheckboxField from 'terra-form-checkbox/lib/CheckboxField';
 
 const checkboxField = () => (
-  <CheckboxField legend="Desired Department" isLegendHidden>
+  <CheckboxField legend="Desired Department" showOptional>
     <Checkbox id="ux-dept" name="dept[]" labelText="UX/Interaction Design" value="ux" />
     <Checkbox id="magazine-dept" name="dept[]" labelText="Magazine Advertisements" value="magazine" />
     <Checkbox id="website-dept" name="dept[]" labelText="Website Advertisements" value="website" />
