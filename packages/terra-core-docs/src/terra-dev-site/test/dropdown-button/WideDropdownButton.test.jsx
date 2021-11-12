@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames/bind';
-import DropdownButton, { Item } from '../../../DropdownButton';
+import DropdownButton, { Item } from 'terra-dropdown-button';
 import styles from './ExtraSpacing.module.scss';
 
 const cx = classnames.bind(styles);

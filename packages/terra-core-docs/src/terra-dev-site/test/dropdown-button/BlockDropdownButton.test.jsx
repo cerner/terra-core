@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import React from 'react';
-import SplitButton, { Item } from '../../../SplitButton';
+import DropdownButton, { Item } from 'terra-dropdown-button';
 
 export default () => (
-  <SplitButton
-    primaryOptionLabel="Primary option"
+  <DropdownButton
+    label="Primary option"
     onSelect={() => { console.log('primary option'); }}
     isBlock
   >
@@ -12,5 +12,5 @@ export default () => (
     <Item label="2nd Option" onSelect={() => { console.log('bye'); }} />
     <Item label="3rd Option" onSelect={() => { console.log('eyb'); }} />
     <Item label="4th Option" onSelect={() => { console.log('ih'); }} />
-  </SplitButton>
+  </DropdownButton>
 );
