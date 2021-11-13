@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+* Added
+  * Migrate doc from terra-dynamic-grid.
+  * Migrate doc from terra-dropdown-button.
+  * Migrate docs from terra-form-checkbox.
+  * Migrate docs from terra-form-field.
+  * Migrate docs from terra-divider.
+  * Migrate docs from terra-form-fieldset.
+
 ## 1.12.0 - (November 2, 2021)
 
 * Added
@@ -11,9 +19,6 @@
   * Migrate docs from terra-card.
   * Migrate docs from terra-button.
   * Migrate docs from terra-button-group.
-  * Migrate docs from terra-form-field.
-  * Migrate docs from terra-divider.
-  * Migrate docs from terra-form-fieldset.
 
 ## 1.11.0 - (October 8, 2021)
 

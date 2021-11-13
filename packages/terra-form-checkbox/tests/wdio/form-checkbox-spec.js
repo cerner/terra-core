@@ -1,6 +1,6 @@
 Terra.describeViewports('Checkbox', ['medium'], () => {
   describe('Default', () => {
-    before(() => browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/default-checkbox'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-checkbox/checkbox/default-checkbox'));
 
     it('should display default Checkbox', () => {
       Terra.validates.element('default');
@@ -29,7 +29,7 @@ Terra.describeViewports('Checkbox', ['medium'], () => {
   });
 
   describe('Disabled', () => {
-    before(() => browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/disabled-checkbox'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-checkbox/checkbox/disabled-checkbox'));
 
     it('should display disabled Checkbox', () => {
       Terra.validates.element('disabled');
@@ -43,25 +43,25 @@ Terra.describeViewports('Checkbox', ['medium'], () => {
   });
 
   it('should display Checkbox with hidden label', () => {
-    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/hidden-label-checkbox');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-checkbox/checkbox/hidden-label-checkbox');
 
     Terra.validates.element('hidden label');
   });
 
   it('should display populated Checkbox', () => {
-    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/populated-checkbox');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-checkbox/checkbox/populated-checkbox');
 
     Terra.validates.element('populated');
   });
 
   it('should display Checkbox with long text', () => {
-    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/long-text-checkbox');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-checkbox/checkbox/long-text-checkbox');
 
     Terra.validates.element('long text');
   });
 
   it('should display three Checkboxes, first defaulted to checked', () => {
-    browser.url('/raw/tests/terra-form-checkbox/form-checkbox/checkbox/multiple-checkboxes');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-checkbox/checkbox/multiple-checkboxes');
 
     Terra.validates.element('three Checkboxes, first defaulted to checked');
   });
