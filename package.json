@@ -27,6 +27,10 @@
   "eslintConfig": {
     "extends": "@cerner/terra"
   },
+  "package-json-lint": {
+    "extends": "@cerner/package-json-lint-config-terra/package-json-lint.config.js",
+    "projectType": "module"
+  },
   "stylelint": {
     "extends": "@cerner/stylelint-config-terra",
     "rules": {
@@ -53,8 +57,9 @@
     "jest": "jest",
     "jest:coverage": "jest --coverage",
     "link-parent-bin": "link-parent-bin",
-    "lint": "npm run lint:js && npm run lint:scss",
+    "lint": "npm run lint:js && npm run lint:scss && npm run lint:package-json",
     "lint:js": "eslint --ext .js,.jsx .",
+    "lint:package-json": "terra package-json-lint",
     "lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
     "prepare-for-release": "terra prepare-for-release",
     "pretest": "npm run lint",
@@ -79,6 +84,8 @@
     "@cerner/browserslist-config-terra": "^3.1.0",
     "@cerner/eslint-config-terra": "^5.0.0",
     "@cerner/jest-config-terra": "^1.0.0",
+    "@cerner/package-json-lint": "^1.3.0",
+    "@cerner/package-json-lint-config-terra": "^1.2.0",
     "@cerner/stylelint-config-terra": "^4.0.0",
     "@cerner/terra-aggregate-translations": "^2.0.1",
     "@cerner/terra-cli": "^1.6.0",
