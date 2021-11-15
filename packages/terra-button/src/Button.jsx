@@ -83,10 +83,6 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Just like normal tabIndex, but if isDisabled then it will be forced to -1.
-   */
-  tabIndex: PropTypes.string,
-  /**
    * Sets the button text.
    * If the button is `isIconOnly` or variant `utility` this text is set as the aria-label and title for accessibility.
    */
@@ -113,7 +109,6 @@ const defaultProps = {
   isIconOnly: false,
   isReversed: false,
   refCallback: undefined,
-  tabIndex: undefined,
   title: undefined,
   type: ButtonTypes.BUTTON,
   variant: ButtonVariants.NEUTRAL,
@@ -243,7 +238,6 @@ class Button extends React.Component {
       onKeyUp,
       refCallback,
       title,
-      tabIndex,
       ...customProps
     } = this.props;
 
@@ -313,7 +307,7 @@ class Button extends React.Component {
         className={buttonClasses}
         type={type}
         disabled={isDisabled}
-        tabIndex={isDisabled ? '-1' : tabIndex}
+        tabIndex={isDisabled ? '-1' : customProps.tabIndex}
         aria-disabled={isDisabled}
         aria-label={ariaLabel}
         onKeyDown={this.handleKeyDown}

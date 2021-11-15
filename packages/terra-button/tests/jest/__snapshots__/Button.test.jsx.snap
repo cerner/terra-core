@@ -44,6 +44,32 @@ exports[`correctly applies the theme context className 1`] = `
 </ThemeContextProvider>
 `;
 
+exports[`should honor tabIndex when set 1`] = `
+<button
+  aria-disabled={false}
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  tabIndex="-1"
+  type="button"
+>
+  <span
+    className="button-label text-only"
+  >
+    <span
+      className=""
+    >
+      Tab Index
+    </span>
+  </span>
+</button>
+`;
+
 exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 <Button
   isBlock={false}
