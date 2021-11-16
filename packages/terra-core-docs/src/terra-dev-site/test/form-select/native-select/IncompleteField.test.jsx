@@ -1,23 +1,25 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import NativeSelectField from '../../../../native-select/NativeSelectField';
+import NativeSelectField from 'terra-form-select/lib/native-select/NativeSelect';
 import styles from './NativeSelectTest.module.scss';
 
 const cx = classNames.bind(styles);
 
-const DefaultFieldTest = () => (
+const IncompleteFieldTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelectField
-      label="Default Field Text"
+      isIncomplete
+      label="Incomplete Field Text"
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },
         { value: 'mercedes', display: 'Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
+      required
       selectId="test-id"
     />
   </div>
 );
 
-export default DefaultFieldTest;
+export default IncompleteFieldTest;

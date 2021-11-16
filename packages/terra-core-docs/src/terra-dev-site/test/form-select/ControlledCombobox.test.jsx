@@ -1,15 +1,15 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Select from '../../../Select';
+import Select from 'terra-form-select/lib/Select';
 import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-class ControlledDefault extends React.Component {
+class ControlledCombobox extends React.Component {
   constructor() {
     super();
 
-    this.state = { value: 'blue' };
+    this.state = { value: '' };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -20,7 +20,13 @@ class ControlledDefault extends React.Component {
   render() {
     return (
       <div className={cx('content-wrapper')}>
-        <Select placeholder="Select a color" onChange={this.handleChange} id="default" value={this.state.value}>
+        <Select
+          id="combobox"
+          onChange={this.handleChange}
+          placeholder="Select a color"
+          value={this.state.value}
+          variant="combobox"
+        >
           <Select.Option value="blue" display="Blue" />
           <Select.Option value="green" display="Green" />
           <Select.Option value="purple" display="Purple" />
@@ -32,4 +38,4 @@ class ControlledDefault extends React.Component {
   }
 }
 
-export default ControlledDefault;
+export default ControlledCombobox;

@@ -1,11 +1,11 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import NativeSelect from '../../../../native-select/NativeSelect';
+import NativeSelect from 'terra-form-select/lib/native-select/NativeSelect';
 import styles from './NativeSelectTest.module.scss';
 
 const cx = classNames.bind(styles);
 
-const DefaultTest = () => (
+const LongTextTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       ariaLabel="select-label"
@@ -13,11 +13,12 @@ const DefaultTest = () => (
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },
-        { value: 'mercedes', display: 'Mercedes' },
+        { value: 'mercedes', display: 'Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
+      value="mercedes"
     />
   </div>
 );
 
-export default DefaultTest;
+export default LongTextTest;

@@ -1,16 +1,15 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import NativeSelect from '../../../../native-select/NativeSelect';
+import NativeSelect from 'terra-form-select/lib/native-select/NativeSelect';
 import styles from './NativeSelectTest.module.scss';
 
 const cx = classNames.bind(styles);
 
-const InvalidTest = () => (
+const DefaultTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       ariaLabel="select-label"
       id="select-id"
-      isInvalid
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },
@@ -21,4 +20,4 @@ const InvalidTest = () => (
   </div>
 );
 
-export default InvalidTest;
+export default DefaultTest;

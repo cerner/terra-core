@@ -1,37 +1,25 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import NativeSelect from '../../../../native-select/NativeSelect';
+import NativeSelect from 'terra-form-select/lib/native-select/NativeSelect';
 import styles from './NativeSelectTest.module.scss';
 
 const cx = classNames.bind(styles);
 
-const InvalidTest = () => (
+const IncompleteTest = () => (
   <div className={cx('test-shell')}>
     <NativeSelect
       ariaLabel="select-label"
-      disabled
       id="select-id"
+      isIncomplete
       options={[
         { value: 'volvo', display: 'Volvo' },
         { value: 'saab', display: 'Saab' },
         { value: 'mercedes', display: 'Mercedes' },
         { value: 'audi', display: 'Audi' },
       ]}
-    />
-    <br />
-    <NativeSelect
-      ariaLabel="select-value-label"
-      disabled
-      id="select-value-id"
-      options={[
-        { value: 'volvo', display: 'Volvo' },
-        { value: 'saab', display: 'Saab' },
-        { value: 'mercedes', display: 'Mercedes' },
-        { value: 'audi', display: 'Audi' },
-      ]}
-      value="saab"
+      required
     />
   </div>
 );
 
-export default InvalidTest;
+export default IncompleteTest;
