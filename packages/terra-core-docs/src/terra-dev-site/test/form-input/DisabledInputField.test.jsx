@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import InputField from '../../../InputField';
+import InputField from 'terra-form-input/lib/InputField';
 import styles from './common/Input.test.module.scss';
 
 const cx = classNames.bind(styles);

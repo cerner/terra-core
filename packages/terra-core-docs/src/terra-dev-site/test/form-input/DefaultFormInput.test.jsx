@@ -1,14 +1,14 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Input from '../../../Input';
+import Input from 'terra-form-input';
 import styles from './common/Input.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-const DisabledValueInput = () => (
+const DefaultInput = () => (
   <div className={cx('content-wrapper')}>
-    <Input disabled id="form-input-disabled-value" value="value" ariaLabel="label" />
+    <Input id="form-input-default" ariaLabel="label" />
   </div>
 );
 
-export default DisabledValueInput;
+export default DefaultInput;
