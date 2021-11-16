@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Combobox from '../../../Combobox';
+import Combobox from 'terra-form-select/lib/Combobox';
 import styles from './common/Select.test.module.scss';
 
 const cx = classNames.bind(styles);

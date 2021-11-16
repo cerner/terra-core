@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
+import SearchSelectField from 'terra-form-select/lib/SearchSelectField';
 import styles from './common/Select.test.module.scss';
-import SearchSelectField from '../../../SearchSelectField';
 
 const cx = classNames.bind(styles);
 

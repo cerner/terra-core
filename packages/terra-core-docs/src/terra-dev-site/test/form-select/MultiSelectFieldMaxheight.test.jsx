@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
+import MultiSelectField from 'terra-form-select/lib/MultiSelectField';
 import styles from './common/Select.test.module.scss';
-import MultiSelectField from '../../../MultiSelectField';
 
 const cx = classNames.bind(styles);
 
