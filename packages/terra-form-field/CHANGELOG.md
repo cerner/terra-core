@@ -4,10 +4,6 @@
 
 * Changed
   * No longer assign tabIndex -1 to the error and help divs.
-
-## Unreleased
-
-* Changed
   * Migrate docs to terra-core-docs.
 
 ## 4.20.0 - (September 21, 2021)
