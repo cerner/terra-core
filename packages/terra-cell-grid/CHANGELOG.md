@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.12.0 - (November 2, 2021)
+
+* Changed
+  * Migrate docs to terra-core-docs.
+
 ## 1.11.0 - (September 21, 2021)
 
 * Changed

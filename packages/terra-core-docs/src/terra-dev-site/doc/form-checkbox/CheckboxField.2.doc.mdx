@@ -1,0 +1,37 @@
+import { Badge } from 'terra-form-checkbox/package.json?dev-site-package';
+
+import DefaultCheckboxField from './example/field/DefaultCheckboxField?dev-site-example';
+import ControlledCheckboxField from './example/field/ControlledCheckboxField?dev-site-example';
+import InlineCheckboxField from './example/field/InlineCheckboxField?dev-site-example';
+import OptionalCheckboxField from './example/field/OptionalCheckboxField?dev-site-example';
+
+import CheckboxFieldPropsTable from 'terra-form-checkbox/src/CheckboxField?dev-site-props-table';
+
+<Badge />
+
+# Terra Form Checkbox Field
+
+CheckboxField is a component of terra-form-checkbox that provides a container for rendering related checkboxes. CheckboxField include displays for help text, error text, required or optional indication, and invalid states.
+
+
+## Usage
+
+```jsx
+import CheckboxField from 'terra-form-checkbox/lib/CheckboxField';
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
+ * [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
+ * [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
+ * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
+
+## Examples
+<DefaultCheckboxField title="Default CheckboxField Example" />
+<ControlledCheckboxField title="Controlled CheckboxField Example" />
+<InlineCheckboxField title="Inline CheckboxField Example" />
+<OptionalCheckboxField title="Optional CheckboxField Example" />
+
+## Checkbox Field Props
+<CheckboxFieldPropsTable />

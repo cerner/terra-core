@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 3.57.0 - (November 2, 2021)
+
+* Changed
+  * Migrate docs to terra-core-docs.
+
+## 3.56.0 - (October 8, 2021)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.55.0 - (September 21, 2021)
 
 * Changed

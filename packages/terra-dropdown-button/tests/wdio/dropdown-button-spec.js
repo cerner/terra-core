@@ -1,7 +1,7 @@
 Terra.describeViewports('Dropdown Button', ['medium'], () => {
   describe('Default', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/default-dropdown-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/default-dropdown-button');
       // avoid hover styles
       $('#root').moveTo({ xOffset: 100, yOffset: 1 });
     });
@@ -31,7 +31,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
   describe('Disabled', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/disabled-dropdown-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/disabled-dropdown-button');
     });
 
     it('should display disabled Dropdown Button', () => {
@@ -50,7 +50,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
   describe('Interactions', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/callback-dropdown-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/callback-dropdown-button');
       // avoid hover styles
       $('#root').moveTo({ xOffset: 100, yOffset: 1 });
     });
@@ -169,7 +169,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
   describe('Wide contents', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/wide-dropdown-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/wide-dropdown-button');
       // avoid hover styles
       $('#root').moveTo({ xOffset: 1, yOffset: 300 });
     });
@@ -191,14 +191,14 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
   });
 
   it('should display block Dropdown Button', () => {
-    browser.url('/raw/tests/terra-dropdown-button/dropdown-button/block-dropdown-button');
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/block-dropdown-button');
 
     Terra.validates.element('block');
   });
 
   describe('Bounded', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/bounded-dropdown-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/bounded-dropdown-button');
     });
 
     it('opens the top left dropdown', () => {
@@ -227,7 +227,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
   describe('Focus in callback', () => {
     before(() => {
-      browser.url('/raw/tests/terra-dropdown-button/dropdown-button/dropdown-focus');
+      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/dropdown-focus');
     });
 
     it('opens the dropdown', () => {
@@ -242,7 +242,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
   });
 
   it('should display variants of Dropdown Button', () => {
-    browser.url('/raw/tests/terra-dropdown-button/dropdown-button/variant-dropdown-buttons');
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-dropdown-buttons');
     $('#root').moveTo({ xOffset: 1, yOffset: 100 });
 
     Terra.validates.element('variants');

@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 3.74.0 - (November 2, 2021)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.73.0 - (October 8, 2021)
+
 * Changed
   * Correctly applied mismatch tolerance.
 

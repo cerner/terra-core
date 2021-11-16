@@ -1,0 +1,63 @@
+import { Badge } from 'terra-dynamic-grid/package.json?dev-site-package';
+
+import OneColumn from './example/OneColumn?dev-site-example';
+import TwoColumn from './example/TwoColumn?dev-site-example';
+import ULayout from './example/ULayout?dev-site-example';
+import Dashboard from './example/Dashboard?dev-site-example';
+import ResponsiveGrid from './example/ResponsiveGrid?dev-site-example';
+
+import DynamicGridPropsTable from 'terra-dynamic-grid/src/DynamicGrid?dev-site-props-table';
+import RegionPropsTable from 'terra-dynamic-grid/src/Region?dev-site-props-table';
+
+<Badge />
+
+# Terra Dynamic Grid
+
+The DynamicGrid component provides users a way to dynamically configure a CSS Grid using
+configuration. The component supports defining custom regions across multiple responsive breakpoints.
+
+**NOTE:** Only shorthand syntax is supported. The DynamicGrid is not a 1-to-1 mirror of the CSS Grid API due to supporting legacy IE.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-dynamic-grid`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import DynamicGrid from 'terra-dynamic-grid';
+import Region from 'terra-dynamic-grid/lib/Region';
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
+ * [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
+ * [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
+ * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
+
+## Examples
+<OneColumn />
+<TwoColumn />
+<ULayout />
+<Dashboard />
+<ResponsiveGrid />
+
+## Dynamic Grid Props
+<DynamicGridPropsTable />
+
+## Region Props
+<RegionPropsTable />

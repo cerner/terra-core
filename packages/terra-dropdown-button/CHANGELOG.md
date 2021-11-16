@@ -4,6 +4,7 @@
 
 * Changed
   * Upgrade focus-trap-react to version ^8.0.0.
+  * Migrate doc to terra-core-docs.
 
 ## 1.29.0 - (September 21, 2021)
 
