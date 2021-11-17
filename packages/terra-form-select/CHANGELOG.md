@@ -3,10 +3,8 @@
 ## Unreleased
 
 * Changed
-  * Migrate doc to terra-core-docs.
-
-* Changed
   * Updated dependencies to not be hard-coded.
+  * Migrate doc to terra-core-docs.
 
 ## 6.35.0 - (September 21, 2021)
 
