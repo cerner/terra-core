@@ -728,3 +728,29 @@ exports[`should render text then an icon when reversed 1`] = `
   </span>
 </button>
 `;
+
+exports[`should render with tabIndex when set 1`] = `
+<button
+  aria-disabled={false}
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  tabIndex="-1"
+  type="button"
+>
+  <span
+    className="button-label text-only"
+  >
+    <span
+      className=""
+    >
+      Tab Index
+    </span>
+  </span>
+</button>
+`;
