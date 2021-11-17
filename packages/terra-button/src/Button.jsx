@@ -307,7 +307,7 @@ class Button extends React.Component {
         className={buttonClasses}
         type={type}
         disabled={isDisabled}
-        tabIndex={isDisabled ? '-1' : undefined}
+        tabIndex={isDisabled ? '-1' : customProps.tabIndex}
         aria-disabled={isDisabled}
         aria-label={ariaLabel}
         onKeyDown={this.handleKeyDown}
