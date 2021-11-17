@@ -84,6 +84,11 @@ it('should render as disabled when set', () => {
   expect(button).toMatchSnapshot();
 });
 
+it('should render with tabIndex when set', () => {
+  const button = shallow(<Button text="Tab Index" tabIndex="-1" />);
+  expect(button).toMatchSnapshot();
+});
+
 // Prop Tests
 it('should have the class neutral', () => {
   const button = shallow(<Button text="text" />);
