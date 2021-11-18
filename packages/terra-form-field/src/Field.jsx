@@ -200,8 +200,8 @@ const Field = (props) => {
     <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
       {content}
-      {isInvalid && error && <div aria-live="assertive" tabIndex="-1" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
-      {help && <div tabIndex="-1" id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
+      {isInvalid && error && <div aria-live="assertive" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
+      {help && <div id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
     </div>
   );
   /* eslint-enable react/forbid-dom-props */
