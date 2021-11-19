@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Help text div no longer has a tabIndex of -1.
   * Updated dependencies to not be hard-coded.
   * Migrate doc to terra-core-docs.
 
