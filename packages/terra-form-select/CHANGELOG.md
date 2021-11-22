@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Help text div no longer has a tabIndex of -1.
   * Updated dependencies to not be hard-coded.
 
 ## 6.35.0 - (September 21, 2021)
