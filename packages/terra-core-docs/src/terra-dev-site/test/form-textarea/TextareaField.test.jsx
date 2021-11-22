@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import TextareaField from '../../../TextareaField';
+import TextareaField from 'terra-form-textarea/lib/TextareaField';
 import styles from './common/Textarea.test.module.scss';
 
 const cx = classNames.bind(styles);

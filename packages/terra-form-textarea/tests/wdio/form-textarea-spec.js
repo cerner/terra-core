@@ -1,55 +1,55 @@
 Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
   it('should display default Textarea', () => {
-    browser.url('/raw/tests/terra-form-textarea/form-textarea/default-textarea');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/default-textarea');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
     Terra.validates.element('default');
   });
 
   it('should display Textarea with props populated', () => {
-    browser.url('/raw/tests/terra-form-textarea/form-textarea/populated-textarea');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/populated-textarea');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
     Terra.validates.element('props populated');
   });
 
   it('should display invalid Textarea', () => {
-    browser.url('/raw/tests/terra-form-textarea/form-textarea/invalid-textarea');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/invalid-textarea');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
     Terra.validates.element('invalid');
   });
 
   it('should display incomplete Textarea', () => {
-    browser.url('/raw/tests/terra-form-textarea/form-textarea/incomplete-textarea');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/incomplete-textarea');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
     Terra.validates.element('incomplete');
   });
 
   it('should display small Textarea with height resizing', () => {
-    browser.url('/raw/tests/terra-form-textarea/form-textarea/small-textarea');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/small-textarea');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
     Terra.validates.element('small textarea with height resizing');
   });
 
   it('should display medium Textarea with height resizing', () => {
-    browser.url('/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/medium-textarea');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
     Terra.validates.element('medium textarea with height resizing');
   });
 
   it('should display large Textarea with height resizing', () => {
-    browser.url('/raw/tests/terra-form-textarea/form-textarea/large-textarea');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/large-textarea');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
     Terra.validates.element('large Textarea with height resizing');
   });
 
   it('should display full size Textarea with height resizing', () => {
-    browser.url('/raw/tests/terra-form-textarea/form-textarea/full-textarea');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/full-textarea');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
     Terra.validates.element('full size Textarea with height resizing');
@@ -57,7 +57,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
 
   describe('AutoResizable Textarea', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/auto-resizable-textarea');
       $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
     });
 
@@ -73,7 +73,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
 
     describe('Non-Resizable Textarea', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-textarea/form-textarea/medium-textarea');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/medium-textarea');
         $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
       });
 
@@ -90,7 +90,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
 
     describe('Blocks autoresizing for when ontouch exists and browser screen is not desktop size', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-on-touch-start');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/auto-resizable-textarea-mobile-on-touch-start');
         $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
       });
 
@@ -107,7 +107,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
 
     describe('Blocks autoresizing for when DocumentTouch exists and browser screen is not desktop size', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-document-touch');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/auto-resizable-textarea-mobile-document-touch');
         $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
       });
 
@@ -124,7 +124,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
 
     describe('Blocks autoresizing for when maxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-max-touch-points');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/auto-resizable-textarea-mobile-max-touch-points');
         $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
       });
 
@@ -141,7 +141,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
 
     describe('Blocks autoresizing for when msMaxTouchPoints exists and browser screen is not desktop size', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-textarea/form-textarea/auto-resizable-textarea-mobile-ms-max-touch-points');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/auto-resizable-textarea-mobile-ms-max-touch-points');
         $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
       });
 
@@ -157,7 +157,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
     });
 
     it('should swap two Textareas with different size', () => {
-      browser.url('/raw/tests/terra-form-textarea/form-textarea/swap-textarea');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/swap-textarea');
       $('#swap-button').click();
 
       Terra.validates.element('swapping');
@@ -166,28 +166,28 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
 
   describe('TextareaField', () => {
     it('should display valid TextareaField', () => {
-      browser.url('/raw/tests/terra-form-textarea/form-textarea/textarea-field');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/textarea-field');
       $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
       Terra.validates.element('valid');
     });
 
     it('should display invalid TextareaField', () => {
-      browser.url('/raw/tests/terra-form-textarea/form-textarea/textarea-field');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/textarea-field');
       $('#validity-toggle').click();
 
       Terra.validates.element('text-area-field invalid');
     });
 
     it('should display incomplete TextareaField', () => {
-      browser.url('/raw/tests/terra-form-textarea/form-textarea/textarea-field');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/textarea-field');
       $('#incomplete-toggle').click();
 
       Terra.validates.element('text-area-field incomplete');
     });
 
     it('should display Disabled TextareaField', () => {
-      browser.url('/raw/tests/terra-form-textarea/form-textarea/disabled-textarea-field');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/disabled-textarea-field');
       $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // add to ensure consistent hover styles
 
       Terra.validates.element('disabled');
@@ -197,7 +197,7 @@ Terra.describeViewports('Form-Textarea', ['tiny', 'large'], () => {
 
 Terra.describeViewports('Form-Textarea', ['large'], () => {
   describe('Setting Value', () => {
-    before(() => browser.url('/raw/tests/terra-form-textarea/form-textarea/setting-value-textarea'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-textarea/setting-value-textarea'));
 
     it('should display empty Textarea', () => {
       Terra.validates.element('empty');
