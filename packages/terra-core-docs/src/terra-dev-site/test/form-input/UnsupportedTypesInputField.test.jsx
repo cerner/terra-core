@@ -1,13 +1,13 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import InputField from '../../../InputField';
+import InputField from 'terra-form-input/lib/InputField';
 import styles from './common/Input.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-const supportedTypes = ['text', 'number', 'password', 'email', 'search', 'tel', 'url', 'hidden'];
+const unsupportedTypes = ['date', 'datetime-local', 'month', 'time', 'week', 'color', 'file', 'range', 'checkbox', 'radio', 'button', 'reset', 'submit'];
 
-class SupportedTypesInputField extends React.Component {
+class UnsupportedTypesInputField extends React.Component {
   constructor() {
     super();
 
@@ -34,7 +34,7 @@ class SupportedTypesInputField extends React.Component {
             isIncomplete={this.state.isIncomplete}
             required={this.state.required}
             inputAttrs={{
-              name: `supported-${arr[i]}-input`,
+              id: `html-original-${arr[i]}-input`,
               type: arr[i],
             }}
             label={`Input type=${arr[i]}`}
@@ -74,10 +74,10 @@ class SupportedTypesInputField extends React.Component {
             {`required: ${this.state.required}`}
           </div>
         </div>
-        {this.createInputFieldTypeExamples(supportedTypes)}
+        {this.createInputFieldTypeExamples(unsupportedTypes)}
       </React.Fragment>
     );
   }
 }
 
-export default SupportedTypesInputField;
+export default UnsupportedTypesInputField;

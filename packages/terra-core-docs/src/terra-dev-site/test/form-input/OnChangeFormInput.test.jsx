@@ -1,14 +1,14 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Input from '../../../Input';
+import Input from 'terra-form-input';
 import styles from './common/Input.test.module.scss';
 
 const cx = classNames.bind(styles);
 
-const OnFocusInput = () => (
+const OnChangeInput = () => (
   <div className={cx('content-wrapper')}>
-    <Input onFocus={() => { }} id="form-input-onFocus" ariaLabel="label" />
+    <Input onChange={() => { }} id="form-input-onChange" ariaLabel="label" />
   </div>
 );
 
-export default OnFocusInput;
+export default OnChangeInput;
