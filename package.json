@@ -106,7 +106,7 @@
     "ky": "^0.12.0",
     "lerna": "^3.16.4",
     "link-parent-bin": "^1.0.0",
-    "postcss": "^8.2.1",
+    "postcss": "8.3.11",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-intl": "^2.9.0",
