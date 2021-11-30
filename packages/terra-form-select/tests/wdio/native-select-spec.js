@@ -1,6 +1,6 @@
 Terra.describeViewports('Native Select', ['tiny'], () => {
   describe('Default', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/default'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/default'));
 
     it('should display default select', () => {
       Terra.validates.element('default display');
@@ -27,7 +27,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('Disabled', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/disabled'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/disabled'));
 
     it('should display disabled select', () => {
       Terra.validates.element('disabled displayed');
@@ -54,7 +54,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('Incomplete', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/incomplete'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/incomplete'));
 
     it('should display incomplete select', () => {
       Terra.validates.element('incomplete displayed');
@@ -81,7 +81,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('Invalid', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/invalid'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/invalid'));
 
     it('should display invalid select', () => {
       Terra.validates.element('invalid displayed');
@@ -108,7 +108,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('LongText', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/long-text'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/long-text'));
 
     it('should display select with long text', () => {
       Terra.validates.element('long-text-displayed');
@@ -135,7 +135,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('OptGroup', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/opt-group'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/opt-group'));
 
     it('should display select with OptGroup', () => {
       Terra.validates.element('opt-group-displayed');
@@ -162,7 +162,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
   });
 
   describe('Filter Style', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/native-select/filter-style'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/filter-style'));
 
     it('should display select with filter style', () => {
       Terra.validates.element('filter-style-displayed');

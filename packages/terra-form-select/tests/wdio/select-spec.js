@@ -1,18 +1,18 @@
 Terra.describeViewports('Select', ['tiny'], () => {
   it('should render an empty placeholder', () => {
-    browser.url('/raw/tests/terra-form-select/form-select/empty-placeholder');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-select/empty-placeholder');
 
     Terra.validates.element('empty placeholder');
   });
 
   it('should render a placeholder', () => {
-    browser.url('/raw/tests/terra-form-select/form-select/default-placeholder');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-select/default-placeholder');
 
     Terra.validates.element('default placeholder');
   });
 
   describe('open the dropdown and honor the set max height', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/max-height'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/max-height'));
 
     it('should open the dropdown and honor the set max height', () => {
       Terra.validates.element('max height');
@@ -26,13 +26,13 @@ Terra.describeViewports('Select', ['tiny'], () => {
   });
 
   it('should renders an option with a default value of zero', () => {
-    browser.url('/raw/tests/terra-form-select/form-select/default-value-zero');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-select/default-value-zero');
 
     Terra.validates.element('default value of zero');
   });
 
   describe('default should truncate and wrap long text', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-default-long-text'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-default-long-text'));
 
     it('default should open the dropdown by clicking the toggle', () => {
       $('[data-terra-select]').click();
@@ -42,7 +42,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   });
 
   describe('Default Variant - uncontrolled', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-default'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-default'));
 
     describe('default uncontrolled should be closed initially', () => {
       it('should display closed dropdown', () => {
@@ -356,7 +356,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   });
 
   describe('Default Variant - Multiple Dropdown', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/multiple-default-select'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/multiple-default-select'));
     describe('default should close all dropdown and open the selected dropdown', () => {
       it('default should open the dropdown by clicking the select and close other dropdown', () => {
         $('[class*=left-select]').click();
@@ -372,7 +372,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   });
 
   describe('Default Variant - controlled', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/controlled-default'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/controlled-default'));
 
     describe('default should select an option by keyboard interaction', () => {
       it('default should select the first option', () => {
@@ -470,7 +470,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Combobox Variant - uncontrolled', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-combobox');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-combobox');
     });
 
     describe('combobox should be closed initially', () => {
@@ -856,7 +856,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Combobox Variant - controlled', () => {
     describe('combobox controlled should select an option by click', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-select/form-select/controlled-combobox');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-select/controlled-combobox');
       });
 
       it('should display default combobox', () => {
@@ -883,7 +883,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Combobox Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-combobox');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/is-touch-accessible-combobox');
     });
 
     describe('is touch accessible combobox should be closed initially', () => {
@@ -926,7 +926,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Multiple Variant - uncontrolled', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-multiple');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-multiple');
     });
 
     describe('multiple should be closed initially', () => {
@@ -1269,7 +1269,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Multiple Variant - controlled', () => {
     describe('multiple controlled should select an option by click', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-select/form-select/controlled-multiple');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-select/controlled-multiple');
       });
 
       it('should display default multiple select', () => {
@@ -1296,7 +1296,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Multiple Variant - placeholder', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/multi-select-placeholder');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/multi-select-placeholder');
     });
 
     describe('Multiple placeholder should be shown initially', () => {
@@ -1340,7 +1340,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Multiple Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-multi-select');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/is-touch-accessible-multi-select');
     });
 
     describe('is touch accessible multiple should be closed initially', () => {
@@ -1386,7 +1386,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Search Variant - uncontrolled', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-search');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-search');
     });
 
     describe('search should be closed initially', () => {
@@ -1760,7 +1760,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Search Variant - controlled', () => {
     describe('search controlled should select an option by click', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-select/form-select/controlled-search');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-select/controlled-search');
       });
 
       it('should display default Search select', () => {
@@ -1788,7 +1788,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Search Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-search-select');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/is-touch-accessible-search-select');
     });
 
     describe('is touch accessible search should be closed initially', () => {
@@ -1834,7 +1834,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Tag Variant', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-tag');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-tag');
     });
 
     describe('tag should be closed initially', () => {
@@ -2107,7 +2107,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
     describe('tag should select an option by pressing enter', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-tag');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-tag');
       });
 
       it('should display default Tag select', () => {
@@ -2183,7 +2183,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Tag Variant - placeholder', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/tag-select-placeholder');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/tag-select-placeholder');
     });
 
     describe('tag placeholder should be shown initially', () => {
@@ -2227,7 +2227,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Tag Variant - Is Touch Accessible', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-tag-select');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/is-touch-accessible-tag-select');
     });
 
     describe('is touch accessible tag should be closed initially', () => {
@@ -2274,7 +2274,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Combobox Variant - clear option', () => {
     describe('combobox should deselect the selected item when clicking on the clear option.', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-select/form-select/allow-clear');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-select/allow-clear');
       });
 
       it('should display default combobox', () => {
@@ -2314,7 +2314,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   describe('Tag Variant - controlled', () => {
     describe('tag controlled should select an option by click', () => {
       before(() => {
-        browser.url('/raw/tests/terra-form-select/form-select/controlled-tag');
+        browser.url('/raw/tests/cerner-terra-core-docs/form-select/controlled-tag');
       });
 
       it('should display default tag', () => {
@@ -2341,7 +2341,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('OptGroup', () => {
     describe('should render an optgroup', () => {
-      before(() => browser.url('/raw/tests/terra-form-select/form-select/opt-group'));
+      before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/opt-group'));
 
       it('should display default optGroup', () => {
         Terra.validates.element('display optgroup');
@@ -2367,13 +2367,13 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Default variant', () => {
     it('should display incomplete Default select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/incomplete-default');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/incomplete-default');
 
       Terra.validates.element('incomplete default');
     });
 
     it('should display invalid Default select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/invalid-default');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/invalid-default');
 
       Terra.validates.element('invalid default');
     });
@@ -2381,14 +2381,14 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Combobox variant', () => {
     it('should display incomplete Combobox select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/incomplete-combobox');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/incomplete-combobox');
 
       // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
       Terra.validates.element('incomplete combobox', { rules: { 'color-contrast': { enabled: false } } });
     });
 
     it('should display invalid Combobox select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/invalid-combobox');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/invalid-combobox');
 
       Terra.validates.element('invalid combobox');
     });
@@ -2396,14 +2396,14 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Multiple variant', () => {
     it('should display incomplete Multiple select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/incomplete-multiple');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/incomplete-multiple');
 
       // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
       Terra.validates.element('incomplete multi select', { rules: { 'color-contrast': { enabled: false } } });
     });
 
     it('should display invalid Multiple select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/invalid-multiple');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/invalid-multiple');
 
       Terra.validates.element('invalid multi select');
     });
@@ -2411,14 +2411,14 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Search variant', () => {
     it('should display incomplete Search select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/incomplete-search');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/incomplete-search');
 
       // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
       Terra.validates.element('incomplete search', { rules: { 'color-contrast': { enabled: false } } });
     });
 
     it('should display invalid Search select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/invalid-search');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/invalid-search');
 
       Terra.validates.element('invalid search');
     });
@@ -2426,21 +2426,21 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
   describe('Tag variant', () => {
     it('should display incomplete Tag select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/incomplete-tag');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/incomplete-tag');
 
       // TODO: remove disabled color-contrast rule: https://github.com/cerner/terra-core/issues/2992
       Terra.validates.element('incomplete tag', { rules: { 'color-contrast': { enabled: false } } });
     });
 
     it('should display invalid Tag select', () => {
-      browser.url('/raw/tests/terra-form-select/form-select/invalid-tag');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/invalid-tag');
 
       Terra.validates.element('invalid tag');
     });
   });
 
   describe('With-Iframe should not cause page jump when', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/select-inside-iframe'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/select-inside-iframe'));
 
     it('open the dropdown by clicking the toggle', () => {
       const frame = $('#frmSelectFrame');
@@ -2482,7 +2482,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   });
 
   describe('dropdown should not detach on search', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/is-touch-accessible-bottom'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/is-touch-accessible-bottom'));
 
     it('should display Tag select', () => {
       Terra.validates.element('[Dropdown should not detach]tag select displays');
@@ -2499,7 +2499,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
   });
 
   describe('Default Variant Hover- uncontrolled', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/default-hover'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/default-hover'));
 
     describe('default should hover first option after reopening while clicking root to close', () => {
       it('default should open the dropdown by clicking the select', () => {

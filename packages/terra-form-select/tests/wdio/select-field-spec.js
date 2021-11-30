@@ -1,6 +1,6 @@
 Terra.describeViewports('Select Field', ['tiny'], () => {
   describe('select an option by click', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/select-field'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/select-field'));
 
     it('should select an option by click', () => {
       Terra.validates.element('select with click');
@@ -20,25 +20,25 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   });
 
   it('should render a disabled Select Field', () => {
-    browser.url('/raw/tests/terra-form-select/form-select/disabled-select-field');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-select/disabled-select-field');
 
     Terra.validates.element('disabled');
   });
 
   it('should render an invalid Select Field', () => {
-    browser.url('/raw/tests/terra-form-select/form-select/invalid-select-field');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-select/invalid-select-field');
 
     Terra.validates.element('invalid');
   });
 
   it('should render an incomplete Select Field', () => {
-    browser.url('/raw/tests/terra-form-select/form-select/incomplete-select-field');
+    browser.url('/raw/tests/cerner-terra-core-docs/form-select/incomplete-select-field');
 
     Terra.validates.element('incomplete');
   });
 
   describe('select an option by pressing enter', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/select-field'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/select-field'));
 
     it('should select an option by pressing enter', () => {
       Terra.validates.element('select with enter');
@@ -59,7 +59,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   });
 
   describe('select the maximum number of items allowed', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/max-selection'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/max-selection'));
 
     it('should select the maximum number of items allowed', () => {
       Terra.validates.element('select with max item selections');
@@ -113,7 +113,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
 
   describe('show the max selection option on search', () => {
     before(() => {
-      browser.url('/raw/tests/terra-form-select/form-select/max-selection');
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/max-selection');
     });
 
     it('should show the max selection option on search', () => {
@@ -141,7 +141,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   });
 
   describe('accessible with no results', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/uncontrolled-search'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/uncontrolled-search'));
 
     it('should be accessible with no results', () => {
       Terra.validates.element('no results');
@@ -159,7 +159,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   });
 
   describe('open the Combobox field and honor the set max height', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/combobox-field-max-height'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/combobox-field-max-height'));
 
     it('should open the Combobox field and honor the set max height', () => {
       Terra.validates.element('combobox max height');
@@ -173,7 +173,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   });
 
   describe('should open the Multi select field and honor the set max height', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/multi-select-field-maxheight'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/multi-select-field-maxheight'));
 
     it('should open the Multi select field and honor the set max height', () => {
       Terra.validates.element('multi select max height');
@@ -187,7 +187,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   });
 
   describe('should open the search select and honor the set max height', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/search-select-field-maxheight'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/search-select-field-maxheight'));
 
     it('should open the search select and honor the set max height', () => {
       Terra.validates.element('search select max height');
@@ -201,7 +201,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   });
 
   describe('open the Select field and honor the set max height', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/select-field-maxheight'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/select-field-maxheight'));
 
     it('should open the Select field and honor the set max height', () => {
       Terra.validates.element('select field max height');
@@ -215,7 +215,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   });
 
   describe('open the Single select field and honor the set max height', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/single-select-field-maxheight'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/single-select-field-maxheight'));
 
     it('should open the Single select field and honor the set max height', () => {
       Terra.validates.element('single select max height');
@@ -229,7 +229,7 @@ Terra.describeViewports('Select Field', ['tiny'], () => {
   });
 
   describe('open the Tag select field and honor the set max height', () => {
-    before(() => browser.url('/raw/tests/terra-form-select/form-select/tag-select-field-maxheight'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/tag-select-field-maxheight'));
 
     it('should open the Tag select field and honor the set max height', () => {
       Terra.validates.element('tag select max height');
