@@ -10,6 +10,8 @@
   * Migrate docs from terra-divider.
   * Migrate docs from terra-form-fieldset.
   * Migrate docs from terra-form-select.
+  * Migrate docs from terra-form-radio.
+  * Migrate docs from terra-form-input.
   * Migrate docs from terra-form-textarea.
 
 ## 1.12.0 - (November 2, 2021)
