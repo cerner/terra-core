@@ -1,6 +1,6 @@
 import React from 'react';
-import Radio from '../../../../Radio';
-import RadioField from '../../../../RadioField';
+import Radio from 'terra-form-radio';
+import RadioField from 'terra-form-radio/lib/RadioField';
 
 const exampleRadioField = () => (
   <RadioField legend="Desired Department" showOptional>

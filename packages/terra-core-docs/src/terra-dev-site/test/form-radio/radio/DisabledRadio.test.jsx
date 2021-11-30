@@ -1,5 +1,5 @@
 import React from 'react';
-import Radio from '../../../../Radio';
+import Radio from 'terra-form-radio';
 
 export default () => (
   <div>

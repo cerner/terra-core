@@ -1,5 +1,5 @@
 import React from 'react';
-import Radio from '../../../../Radio';
+import Radio from 'terra-form-radio';
 
 const radio = () => (
   // TODO: Test this with next release of jsx-a11y, this rule seems to have a bug in the current version

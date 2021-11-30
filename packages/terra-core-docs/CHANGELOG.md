@@ -3,12 +3,13 @@
 ## Unreleased
 
 * Added
-  * Migrate doc from terra-dynamic-grid.
-  * Migrate doc from terra-dropdown-button.
+  * Migrate docs from terra-dynamic-grid.
+  * Migrate docs from terra-dropdown-button.
   * Migrate docs from terra-form-checkbox.
   * Migrate docs from terra-form-field.
   * Migrate docs from terra-divider.
   * Migrate docs from terra-form-fieldset.
+  * Migrate docs from terra-form-radio.
   * Migrate docs from terra-form-input.
   * Migrate docs from terra-form-textarea.
 
