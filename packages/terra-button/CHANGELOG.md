@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+
+## 3.60.1 - (December 1, 2021)
+
 * Changed
   * TabIndex is honored unless the button is disabled.
 
