@@ -5,7 +5,7 @@ import Table, {
   Body,
   Cell,
   Row,
-} from '../../../index';
+} from 'terra-html-table';
 
 const NoPaddingTable = () => (
   <Table paddingStyle="none">
