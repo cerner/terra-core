@@ -39,6 +39,7 @@
   },
   "scripts": {
     "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
+    "check-changelogs": "node scripts/check-changelogs/index.js",
     "clean": "lerna clean --yes && rm -rf node_modules || true",
     "clean:install": "npm run clean && npm install",
     "clean:obsolete-snapshots": "npm test -- -u",
