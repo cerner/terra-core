@@ -1,7 +1,7 @@
 import React from 'react';
 import Heading from 'terra-heading';
 import classNames from 'classnames/bind';
-import styles from './colors.module.scss';
+import styles from 'terra-heading/lib/colors.module.scss';
 
 const cx = classNames.bind(styles);
 
