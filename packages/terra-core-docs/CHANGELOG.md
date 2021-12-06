@@ -15,6 +15,7 @@
   * Migrate docs from terra-form-textarea.
   * Migrate docs from terra-grid.
   * Migrate docs from terra-html-table.
+  * Migrate docs from terra-hyperlink.
 
 ## 1.12.0 - (November 2, 2021)
 

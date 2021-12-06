@@ -1,5 +1,5 @@
 import React from 'react';
-import Hyperlink from '../../../Hyperlink';
+import Hyperlink from 'terra-hyperlink';
 
 export default () => (
   <div role="main">
