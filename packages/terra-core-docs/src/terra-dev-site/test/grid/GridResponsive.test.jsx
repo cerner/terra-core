@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '../../../../lib/Grid';
+import Grid from 'terra-grid';
 
 const GridResponsive = () => (
   <Grid id="grid">
