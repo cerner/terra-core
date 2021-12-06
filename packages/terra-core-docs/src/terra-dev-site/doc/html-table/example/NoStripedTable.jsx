@@ -1,14 +1,14 @@
 import React from 'react';
 import Table, {
-  Body,
   Header,
   HeaderCell,
-  Row,
+  Body,
   Cell,
-} from '../../../index';
+  Row,
+} from 'terra-html-table';
 
-const StripedTable = () => (
-  <Table>
+const NoStripedTable = () => (
+  <Table disableStripes>
     <Header>
       <HeaderCell key="NAME">Name</HeaderCell>
       <HeaderCell key="ADDRESS">Address</HeaderCell>
@@ -34,4 +34,4 @@ const StripedTable = () => (
   </Table>
 );
 
-export default StripedTable;
+export default NoStripedTable;

@@ -3,7 +3,9 @@ import Table, {
   Body,
   Header,
   HeaderCell,
-} from '../../../index';
+  Row,
+  Cell,
+} from 'terra-html-table';
 
 const SingleRowTable = () => (
   <Table>
@@ -12,7 +14,13 @@ const SingleRowTable = () => (
       <HeaderCell key="ADDRESS">Address</HeaderCell>
       <HeaderCell key="PHONE_NUMBER">Phone Number</HeaderCell>
     </Header>
-    <Body className="TableRows" />
+    <Body className="TableRows">
+      <Row key="PERSON_0">
+        <Cell key="NAME">John Smith</Cell>
+        <Cell key="ADDRESS">123 Adams Drive</Cell>
+        <Cell key="PHONE_NUMBER">111-222-3333</Cell>
+      </Row>
+    </Body>
   </Table>
 );
 
