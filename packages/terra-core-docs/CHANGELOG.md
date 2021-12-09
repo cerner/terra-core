@@ -13,6 +13,10 @@
   * Migrate docs from terra-form-radio.
   * Migrate docs from terra-form-input.
   * Migrate docs from terra-form-textarea.
+  * Migrate docs from terra-grid.
+  * Migrate docs from terra-html-table.
+  * Migrate docs from terra-hyperlink.
+  * Migrate docs from terra-heading.
 
 ## 1.12.0 - (November 2, 2021)
 
