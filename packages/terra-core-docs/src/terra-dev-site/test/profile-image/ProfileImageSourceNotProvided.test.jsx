@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileImage from '../../../ProfileImage';
+import ProfileImage from 'terra-profile-image';
 
 const ProfileImageSourceNotProvided = () => (
   <div>

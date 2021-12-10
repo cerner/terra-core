@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import ProfileImage from 'terra-profile-image';
-import exampleProfileImage from 'terra-profile-image/lib/terra-dev-site/assets/150x150.jpg';
-import styles from '../../test/profile-image/ProfileImageCommon.module.scss';
+import exampleProfileImage from '../assets/150x150.jpg';
+import styles from '../../../test/profile-image/ProfileImageCommon.module.scss';
 
 const cx = classNames.bind(styles);
 

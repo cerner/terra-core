@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProfileImage from 'terra-profile-image';
-import FitTypesWrapper from 'terra-profile-image/lib/terra-dev-site/doc/example/common/FitTypesWrapper';
-import exampleProfileImage from 'terra-profile-image/lib/terra-dev-site/assets/170x251.jpg';
+import exampleProfileImage from '../assets/170x251.jpg';
+import FitTypesWrapper from './common/FitTypesWrapper';
 
 const propTypes = { fit: PropTypes.string };
 
