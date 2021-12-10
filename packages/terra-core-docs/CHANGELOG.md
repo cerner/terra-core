@@ -13,7 +13,6 @@
   * Migrate docs from terra-form-radio.
   * Migrate docs from terra-form-input.
   * Migrate docs from terra-form-textarea.
-  * Migrate docs from terra-i18n.
   * Migrate docs from terra-grid.
   * Migrate docs from terra-html-table.
   * Migrate docs from terra-hyperlink.
