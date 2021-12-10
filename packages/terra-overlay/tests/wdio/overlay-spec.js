@@ -3,32 +3,32 @@ const SHOULD_NOT_EXIST = true;
 
 Terra.describeViewports('Overlay', ['huge'], () => {
   it('should display default Overlay', () => {
-    browser.url('/raw/tests/terra-overlay/overlay/overlay/default-overlay');
+    browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/default-overlay');
 
     Terra.validates.element('default', { selector: '#default-overlay' });
   });
 
   it('should display Overlay container', () => {
-    browser.url('/raw/tests/terra-overlay/overlay/overlay/container-overlay');
+    browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/container-overlay');
 
     Terra.validates.element('container', { selector: '#overlay-container' });
   });
 
   it('should display scrollable full screen Overlay', () => {
-    browser.url('/raw/tests/terra-overlay/overlay/overlay/fullscreen-scrollable-overlay');
+    browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/fullscreen-scrollable-overlay');
 
     Terra.validates.element('scrollable full screen', { selector: '#scrollable-overlay' });
   });
 
   it('should display scrollable relative container overlay', () => {
-    browser.url('/raw/tests/terra-overlay/overlay/overlay/container-scrollable-overlay');
+    browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/container-scrollable-overlay');
 
     Terra.validates.element('scrollable relative container', { selector: '#overlay-container' });
   });
 
   describe('Overlay on Request-Close', () => {
     before(() => {
-      browser.url('/raw/tests/terra-overlay/overlay/overlay/on-request-close-overlay');
+      browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/on-request-close-overlay');
       $('#root').moveTo({ xOffset: 0, yOffset: 0 });
     });
 
@@ -169,7 +169,7 @@ Terra.describeViewports('Overlay', ['huge'], () => {
   });
 
   describe('Custom Content', () => {
-    before(() => browser.url('/raw/tests/terra-overlay/overlay/overlay/custom-content-overlay'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/custom-content-overlay'));
 
     describe('Full Screen [Custom Content]', () => {
       it('opens fullscreen', () => {
@@ -204,7 +204,7 @@ Terra.describeViewports('Overlay', ['huge'], () => {
   });
 
   describe('Overlay unmounted', () => {
-    before(() => browser.url('/raw/tests/terra-overlay/overlay/overlay/removed-overlay'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/removed-overlay'));
 
     it('validates overlay exists and background scrolling is disabled', () => {
       $('#fullscreen_overlay').waitForExist();
@@ -219,17 +219,17 @@ Terra.describeViewports('Overlay', ['huge'], () => {
 
   describe('should display Themes', () => {
     it('displays light theme', () => {
-      browser.url('/raw/tests/terra-overlay/overlay/overlay/light-overlay');
+      browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/light-overlay');
       Terra.validates.element('light theme', { selector: '#light-overlay' });
     });
 
     it('displays dark theme', () => {
-      browser.url('/raw/tests/terra-overlay/overlay/overlay/dark-overlay');
+      browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/dark-overlay');
       Terra.validates.element('dark theme', { selector: '#dark-overlay' });
     });
 
     it('displays clear theme', () => {
-      browser.url('/raw/tests/terra-overlay/overlay/overlay/clear-overlay');
+      browser.url('/raw/tests/cerner-terra-core-docs/overlay/overlay/clear-overlay');
       Terra.validates.element('clear theme', { selector: '#clear-overlay' });
     });
   });
