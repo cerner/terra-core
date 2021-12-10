@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from 'terra-button';
-import ProgressivePaginator from '../../../ProgressivePaginator';
+import ProgressivePaginator from 'terra-paginator/lib/ProgressivePaginator';
 
 const ProgressivePaginatorWithCustomLabel = () => {
   const [totalCount, setTotalCount] = useState();
