@@ -17,6 +17,7 @@
   * Migrate docs from terra-html-table.
   * Migrate docs from terra-hyperlink.
   * Migrate docs from terra-heading.
+  * Migrate docs from terra-list.
 
 ## 1.12.0 - (November 2, 2021)
 
