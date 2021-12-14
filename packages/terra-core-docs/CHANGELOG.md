@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.12.1 - (December 14, 2021)
+
 * Added
   * Migrate docs from terra-dynamic-grid.
   * Migrate docs from terra-dropdown-button.

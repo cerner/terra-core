@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.69.1 - (December 14, 2021)
+
 * Changed
   * Updated dependencies to not be hard-coded.
 

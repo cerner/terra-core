@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.20.1 - (December 14, 2021)
+
 * Changed
   * No longer assign tabIndex -1 to the error and help divs.
   * Migrate docs to terra-core-docs.
