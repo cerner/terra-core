@@ -1,6 +1,6 @@
 import React from 'react';
-import IconComment from '../../../icon/IconComment';
-import IconDeviceCheck from '../../../icon/IconDeviceCheck';
+import IconComment from 'terra-icon/lib/icon/IconComment';
+import IconDeviceCheck from 'terra-icon/lib/icon/IconDeviceCheck';
 
 const IconBidi = () => (
   <div dir="rtl">
