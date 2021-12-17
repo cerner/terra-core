@@ -1,5 +1,5 @@
 import React from 'react';
-import IconAdd from '../../../icon/IconAdd';
+import IconAdd from 'terra-icon/lib/icon/IconAdd';
 
 const IconDefault = () => (
   <div>
