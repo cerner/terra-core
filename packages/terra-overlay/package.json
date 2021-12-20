@@ -33,7 +33,6 @@
     "mutationobserver-shim": "<=0.3.3",
     "prop-types": "^15.5.8",
     "react-portal": "^4.1.2",
-    "terra-button": "^3.60.1",
     "terra-icon": "^3.46.0",
     "terra-theme-context": "^1.0.0",
     "wicg-inert": "^3.0.0"
