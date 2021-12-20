@@ -25,6 +25,7 @@
   * Migrate docs from terra-overlay.
   * Migrate docs from terra-list.
   * Migrate docs from terra-paginator.
+  * Migrate docs from terra-progress-bar.
 
 ## 1.12.0 - (November 2, 2021)
 
