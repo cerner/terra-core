@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Overlay from '../../../../Overlay';
-import OverlayContainer from '../../../../OverlayContainer';
+import Overlay from 'terra-overlay/lib/Overlay';
+import OverlayContainer from 'terra-overlay/lib/OverlayContainer';
 import styles from './OverlayTestCommon.module.scss';
 
 const cx = classNames.bind(styles);

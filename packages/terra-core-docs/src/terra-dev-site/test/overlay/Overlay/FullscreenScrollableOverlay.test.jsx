@@ -1,5 +1,5 @@
 import React from 'react';
-import Overlay from '../../../../Overlay';
+import Overlay from 'terra-overlay/lib/Overlay';
 
 class OverlayExample extends React.Component {
   constructor() {
