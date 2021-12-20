@@ -1,21 +1,21 @@
 Terra.describeViewports('Paginator', ['tiny', 'medium', 'large'], () => {
   describe('Paginator', () => {
     it('default', () => {
-      browser.url('/raw/tests/terra-paginator/paginator/paginator');
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/paginator');
       Terra.validates.element('default paginator');
     });
   });
 
   describe('PaginatorNoPages', () => {
     it('default', () => {
-      browser.url('/raw/tests/terra-paginator/paginator/paginator-no-pages');
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/paginator-no-pages');
       Terra.validates.element('no pages');
     });
   });
 
   describe('ProgressivePaginator', () => {
     it('default', () => {
-      browser.url('/raw/tests/terra-paginator/paginator/progressive-paginator');
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/progressive-paginator');
       Terra.validates.element('progressive paginator');
     });
   });
@@ -24,7 +24,7 @@ Terra.describeViewports('Paginator', ['tiny', 'medium', 'large'], () => {
 Terra.describeViewports('Controlled Paginator', ['large'], () => {
   describe('Controlled Paginator', () => {
     it('displays initial selected page', () => {
-      browser.url('/raw/tests/terra-paginator/paginator/controlled-paginator');
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/controlled-paginator');
       $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
       Terra.validates.element('controlled 0');
     });
@@ -47,7 +47,7 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
 
   describe('Controlled Paginator without Total count', () => {
     it('displays initial selected page', () => {
-      browser.url('/raw/tests/terra-paginator/paginator/controlled-paginator-no-pages');
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/controlled-paginator-no-pages');
       $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
       Terra.validates.element('controlled total count 0');
     });
@@ -70,7 +70,7 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
 
   describe('Controlled Progressive Paginator', () => {
     it('displays initial selected page', () => {
-      browser.url('/raw/tests/terra-paginator/paginator/controlled-progressive-paginator');
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/controlled-progressive-paginator');
       Terra.validates.element('controlled progressive 0');
     });
 
@@ -92,7 +92,7 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
 
   describe('Controlled Progressive Paginator without total count', () => {
     it('displays the initial selected page', () => {
-      browser.url('/raw/tests/terra-paginator/paginator/controlled-progressive-paginator-without-total-count');
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/controlled-progressive-paginator-without-total-count');
       Terra.validates.element('controlled progressive no total count 0');
     });
 
@@ -114,20 +114,20 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
 
   describe('Progressive paginator without total count', () => {
     it('renders without total count', () => {
-      browser.url('/raw/tests/terra-paginator/paginator/progressive-paginator-without-total-count');
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/progressive-paginator-without-total-count');
       Terra.validates.element('progressive without total count');
     });
   });
 
   describe('Paginator without item count', () => {
     it('renders without item count', () => {
-      browser.url('/raw/tests/terra-paginator/paginator/paginator-without-item-count');
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/paginator-without-item-count');
       Terra.validates.element('progressive without total item count');
     });
   });
 
   describe('Paginator Button should not retain focused state once disabled using keyboard navigation', () => {
-    before(() => browser.url('/raw/tests/terra-paginator/paginator/controlled-progressive-paginator'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/paginator/controlled-progressive-paginator'));
 
     it('should display previous button with no focus', () => {
       browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Enter']); // This is to navigate to next button and press enter.
@@ -138,7 +138,7 @@ Terra.describeViewports('Controlled Paginator', ['large'], () => {
   });
 
   describe('Progressive Paginator with custom page label', () => {
-    before(() => browser.url('/raw/tests/terra-paginator/paginator/progressive-paginator-with-custom-label'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/paginator/progressive-paginator-with-custom-label'));
 
     it('should display progressive paginator with custom page label without total count', () => {
       Terra.validates.element('custom page label without total count');
