@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Image from '../../../Image';
-import placeholder150x150 from '../../assets/150x150.jpg';
+import Image from 'terra-image';
+import placeholder150x150 from '../../doc/image/assets/150x150.jpg';
 import styles from './ImageTestCommon.module.scss';
 
 const cx = classNames.bind(styles);

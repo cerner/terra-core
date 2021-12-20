@@ -31,6 +31,17 @@ it('should render a button group with children selected', () => {
   expect(buttonGroup).toMatchSnapshot();
 });
 
+it('should only render enabled buttons as toggle buttons', () => {
+  const buttonGroup = shallow((
+    <ButtonGroup selectedKeys={['1']}>
+      {button1}
+      {button2}
+      <ButtonGroup.Button text="Disabled Button" key="dis" isDisabled />
+    </ButtonGroup>
+  ));
+  expect(buttonGroup).toMatchSnapshot();
+});
+
 it('should render a block button group with children', () => {
   const buttonGroup = shallow((
     <ButtonGroup isBlock>

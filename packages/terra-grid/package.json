@@ -1,7 +1,7 @@
 {
   "name": "terra-grid",
   "main": "lib/Grid.js",
-  "version": "6.32.0",
+  "version": "6.32.1",
   "description": "The grid component provides a flexbox based grid system.",
   "repository": {
     "type": "git",

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.74.0 - (December 14, 2021)
+
 * Fixed
   * Added styles to ActionHeader to better support long non-breaking titles
 

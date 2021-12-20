@@ -16,7 +16,7 @@ exports[`correctly applies the theme context className 1`] = `
       className="button-group orion-fusion-theme"
     >
       <ButtonGroupButton
-        aria-pressed={null}
+        aria-pressed={false}
         className=""
         isDisabled={false}
         key="1"
@@ -24,7 +24,7 @@ exports[`correctly applies the theme context className 1`] = `
         text="Button 1"
       >
         <Button
-          aria-pressed={null}
+          aria-pressed={false}
           className="button-group-button orion-fusion-theme"
           isBlock={false}
           isCompact={false}
@@ -42,7 +42,7 @@ exports[`correctly applies the theme context className 1`] = `
         >
           <button
             aria-disabled={false}
-            aria-pressed={null}
+            aria-pressed={false}
             className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
             disabled={false}
             onBlur={[Function]}
@@ -66,7 +66,7 @@ exports[`correctly applies the theme context className 1`] = `
         </Button>
       </ButtonGroupButton>
       <ButtonGroupButton
-        aria-pressed={null}
+        aria-pressed={false}
         className=""
         isDisabled={false}
         key="2"
@@ -74,7 +74,7 @@ exports[`correctly applies the theme context className 1`] = `
         text="Button 2"
       >
         <Button
-          aria-pressed={null}
+          aria-pressed={false}
           className="button-group-button orion-fusion-theme"
           isBlock={false}
           isCompact={false}
@@ -92,7 +92,7 @@ exports[`correctly applies the theme context className 1`] = `
         >
           <button
             aria-disabled={false}
-            aria-pressed={null}
+            aria-pressed={false}
             className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
             disabled={false}
             onBlur={[Function]}
@@ -120,20 +120,20 @@ exports[`correctly applies the theme context className 1`] = `
 </ThemeContextProvider>
 `;
 
-exports[`should render a block button group with children 1`] = `
+exports[`should only render enabled buttons as toggle buttons 1`] = `
 <div
-  className="button-group is-block"
+  className="button-group"
 >
   <ButtonGroupButton
-    aria-pressed={null}
-    className=""
+    aria-pressed={true}
+    className="is-selected"
     isDisabled={false}
     key="1"
     onClick={[Function]}
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-pressed={null}
+    aria-pressed={false}
     className=""
     isDisabled={false}
     key="2"
@@ -142,6 +142,37 @@ exports[`should render a block button group with children 1`] = `
   />
   <ButtonGroupButton
     aria-pressed={null}
+    className=""
+    isDisabled={true}
+    key="dis"
+    onClick={[Function]}
+    text="Disabled Button"
+  />
+</div>
+`;
+
+exports[`should render a block button group with children 1`] = `
+<div
+  className="button-group is-block"
+>
+  <ButtonGroupButton
+    aria-pressed={false}
+    className=""
+    isDisabled={false}
+    key="1"
+    onClick={[Function]}
+    text="Button 1"
+  />
+  <ButtonGroupButton
+    aria-pressed={false}
+    className=""
+    isDisabled={false}
+    key="2"
+    onClick={[Function]}
+    text="Button 2"
+  />
+  <ButtonGroupButton
+    aria-pressed={false}
     className=""
     isDisabled={false}
     key="3"
@@ -156,7 +187,7 @@ exports[`should render a button group with children 1`] = `
   className="button-group"
 >
   <ButtonGroupButton
-    aria-pressed={null}
+    aria-pressed={false}
     className=""
     isDisabled={false}
     key="1"
@@ -179,7 +210,7 @@ exports[`should render a button group with children selected 1`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-pressed={null}
+    aria-pressed={false}
     className=""
     isDisabled={false}
     key="2"
@@ -200,7 +231,7 @@ exports[`should select a button 1`] = `
   className="button-group"
 >
   <ButtonGroupButton
-    aria-pressed={null}
+    aria-pressed={false}
     className=""
     isDisabled={false}
     key="1"
@@ -208,7 +239,7 @@ exports[`should select a button 1`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-pressed={null}
+    aria-pressed={false}
     className=""
     isDisabled={false}
     key="2"
@@ -223,7 +254,7 @@ exports[`should select a button 2`] = `
   className="button-group"
 >
   <ButtonGroupButton
-    aria-pressed={null}
+    aria-pressed={false}
     className=""
     isDisabled={false}
     key="1"
@@ -231,7 +262,7 @@ exports[`should select a button 2`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-pressed={null}
+    aria-pressed={false}
     className=""
     isDisabled={false}
     key="2"
