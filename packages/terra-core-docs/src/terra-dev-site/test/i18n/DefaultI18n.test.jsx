@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames/bind';
-import I18nProvider from '../../../I18nProvider';
-import i18nLoader from '../../../i18nLoader';
+import { I18nProvider, i18nLoader } from 'terra-i18n';
 import styles from './DefaultI18n.module.scss';
 
 const cx = classNames.bind(styles);

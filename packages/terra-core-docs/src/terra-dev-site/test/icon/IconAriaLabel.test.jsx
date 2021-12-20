@@ -1,5 +1,5 @@
 import React from 'react';
-import IconAlert from '../../../icon/IconAlert';
+import IconAlert from 'terra-icon/lib/icon/IconAlert';
 
 const IconAriaLabel = () => (
   <div>

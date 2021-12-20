@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Image from 'terra-image';
-import FitTypesWrapper from 'terra-image/lib/terra-dev-site/doc/example/common/FitTypesWrapper';
+import FitTypesWrapper from './common/FitTypesWrapper';
 import styles from './ImageFitTypes.scss';
-import exampleImage from '../../assets/170x251.jpg';
+import exampleImage from '../assets/170x251.jpg';
 
 const cx = classNames.bind(styles);
 

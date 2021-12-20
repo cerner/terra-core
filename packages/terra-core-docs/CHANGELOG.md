@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.12.1 - (December 14, 2021)
+
 * Added
   * Migrate docs from terra-dynamic-grid.
   * Migrate docs from terra-dropdown-button.
@@ -17,6 +19,9 @@
   * Migrate docs from terra-html-table.
   * Migrate docs from terra-hyperlink.
   * Migrate docs from terra-heading.
+  * Migrate docs from terra-i18n.
+  * Migrate docs from terra-icon.
+  * Migrate docs from terra-image.
   * Migrate docs from terra-overlay.
 
 ## 1.12.0 - (November 2, 2021)
