@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'terra-image';
-import placeholderPic150x150 from '../../assets/150x150.jpg';
-import placeholderPic1000x200 from '../../assets/1000x200.png';
+import placeholderPic150x150 from '../assets/150x150.jpg';
+import placeholderPic1000x200 from '../assets/1000x200.png';
 
 const ImageDefault = () => (
   <div>

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.60.1 - (December 14, 2021)
+
+* Fixed
+  * Active and unselected children button render as toggle buttons (aria-pressed=false);
+
 ## 3.60.0 - (November 2, 2021)
 
 * Changed

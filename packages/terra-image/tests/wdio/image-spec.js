@@ -1,12 +1,12 @@
 Terra.describeViewports('Image', ['medium'], () => {
   it('should display default Image', () => {
-    browser.url('/raw/tests/terra-image/image/image-default');
+    browser.url('/raw/tests/cerner-terra-core-docs/image/image-default');
 
     Terra.validates.element('default');
   });
 
   describe('Non Fluid', () => {
-    before(() => browser.url('/raw/tests/terra-image/image/image-non-fluid'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/image/image-non-fluid'));
 
     it('should display non fluid image', () => {
       Terra.validates.element('non-fluid smaller than container', { selector: '#smaller' });
@@ -16,7 +16,7 @@ Terra.describeViewports('Image', ['medium'], () => {
   });
 
   describe('Fluid', () => {
-    before(() => browser.url('/#/raw/tests/terra-image/image/image-fluid'));
+    before(() => browser.url('/#/raw/tests/cerner-terra-core-docs/image/image-fluid'));
 
     it('should display fluid image', () => {
       Terra.validates.element('fluid smaller than container', { selector: '#smaller' });
@@ -27,7 +27,7 @@ Terra.describeViewports('Image', ['medium'], () => {
 
   describe('Loading', () => {
     before(() => {
-      browser.url('/raw/tests/terra-image/image/image-loading');
+      browser.url('/raw/tests/cerner-terra-core-docs/image/image-loading');
       $('#loadedImage').waitForExist();
       $('#errorImage').waitForExist();
     });
