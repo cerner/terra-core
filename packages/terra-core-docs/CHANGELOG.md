@@ -21,7 +21,7 @@
   * Migrate docs from terra-heading.
   * Migrate docs from terra-i18n.
   * Migrate docs from terra-icon.
-
+  * Migrate docs from terra-image.
 
 ## 1.12.0 - (November 2, 2021)
 
