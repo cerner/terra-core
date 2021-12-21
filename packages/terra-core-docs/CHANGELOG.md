@@ -26,6 +26,7 @@
   * Migrate docs from terra-list.
   * Migrate docs from terra-paginator.
   * Migrate docs from terra-progress-bar.
+  * Migrate docs from terra-profile-image.
 
 ## 1.12.0 - (November 2, 2021)
 

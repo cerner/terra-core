@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ProfileImage from '../../../ProfileImage';
-import exampleProfileImage from '../../assets/150x150.jpg';
+import ProfileImage from 'terra-profile-image';
+import exampleProfileImage from '../assets/150x150.jpg';
 
 const ProfileImageDefault = () => {
   const [variant, setVariant] = useState('default');
