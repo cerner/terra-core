@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import Button from 'terra-button/lib/Button';
-import SearchField from '../../../SearchField';
+import SearchField from 'terra-search-field';
 
-const SearchFieldProgrammaticSet = () => {
+const SettingValueSearchField = () => {
   const [searchText, setSearchText] = useState('');
   const [message, setMessage] = useState('');
   const [text, setText] = useState('');
@@ -10,18 +10,20 @@ const SearchFieldProgrammaticSet = () => {
 
   const setTextClick = () => {
     if (inputRef.current) {
-      inputRef.current.value = 'IpsumLorem';
-      let customEvent;
-      if (typeof (Event) === 'function') {
-        customEvent = new Event('input', {
-          bubbles: true,
-          cancelable: false,
-        });
-      } else {
-        customEvent = document.createEvent('Event');
-        customEvent.initEvent('input', true, false);
-      }
-      inputRef.current.dispatchEvent(customEvent);
+      setTimeout(() => {
+        inputRef.current.value = 'IpsumLorem';
+        let customEvent;
+        if (typeof (Event) === 'function') {
+          customEvent = new Event('input', {
+            bubbles: true,
+            cancelable: false,
+          });
+        } else {
+          customEvent = document.createEvent('Event');
+          customEvent.initEvent('input', true, false);
+        }
+        inputRef.current.dispatchEvent(customEvent);
+      }, 1000);
     }
   };
 
@@ -45,9 +47,9 @@ const SearchFieldProgrammaticSet = () => {
 
   return (
     <div>
-      <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" />
-      <p>Minimum Search Length is 3</p>
+      <div> Minimum Search Length is 3 </div>
       <SearchField
+        inputRef
         id="searchfield"
         onSearch={handleSearch}
         onInvalidSearch={handleInvalidSearch}
@@ -57,6 +59,7 @@ const SearchFieldProgrammaticSet = () => {
         value={text}
         inputRefCallback={(ref) => { inputRef.current = ref; }}
       />
+      <Button text="Set search field text" onClick={setTextClick} id="search-field-set-text-button" />
       <div id="search-callback-text">
         {message}
         {searchText}
@@ -65,4 +68,4 @@ const SearchFieldProgrammaticSet = () => {
   );
 };
 
-export default SearchFieldProgrammaticSet;
+export default SettingValueSearchField;

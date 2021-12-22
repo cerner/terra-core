@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'terra-button/lib/Button';
-import SearchField from '../../../SearchField';
+import SearchField from 'terra-search-field';
 
 class SearchFieldFocus extends React.Component {
   constructor(props) {
