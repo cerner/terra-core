@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeader from '../../../SectionHeader';
+import SectionHeader from 'terra-section-header';
 
 const LongTitleAccordionSectionHeader = () => (
   <SectionHeader

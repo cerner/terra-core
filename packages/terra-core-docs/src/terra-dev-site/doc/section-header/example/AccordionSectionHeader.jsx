@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SectionHeaderExampleTemplate from 'terra-section-header/lib/terra-dev-site/doc/example/SectionHeaderExampleTemplate';
+import SectionHeaderExampleTemplate from './SectionHeaderExampleTemplate';
 
 const AccordionSectionHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
