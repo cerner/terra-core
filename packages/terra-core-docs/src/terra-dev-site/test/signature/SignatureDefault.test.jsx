@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Signature from '../../../Signature';
+import Signature from 'terra-signature';
 import styles from './SignatureDefaultTest.module.scss';
 
 const cx = classNames.bind(styles);

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Migrate docs from terra-signature.
+
 ## 1.12.1 - (December 14, 2021)
 
 * Added
