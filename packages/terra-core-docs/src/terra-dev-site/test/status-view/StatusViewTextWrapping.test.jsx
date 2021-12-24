@@ -1,11 +1,11 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import StatusView from '../../../StatusView';
+import StatusView from 'terra-status-view';
 import styles from './StatusViewTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const ipsum = 'Lorem ipsum dolor';
+const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. AnIncrediblyIncrediblyIncrediblyIncrediblyIncrediblyIncrediblyLongWord.';
 const StatusViewButtons = [
   {
     text: ipsum,
@@ -20,7 +20,7 @@ const StatusViewButtons = [
 
 /* eslint-disable react/forbid-dom-props */
 export default () => (
-  <div className={cx('status-view-wrapper-2')}>
+  <div className={cx('status-view-wrapper-1')}>
     <StatusView id="statusView" variant="error" title={ipsum} message={ipsum} buttonAttrs={StatusViewButtons} />
   </div>
 );
