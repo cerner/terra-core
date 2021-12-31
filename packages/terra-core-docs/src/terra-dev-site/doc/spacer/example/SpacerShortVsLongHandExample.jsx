@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'terra-button';
 import Spacer from 'terra-spacer';
-import 'terra-spacer/lib/terra-dev-site/doc/example/Spacer.module.scss';
+import './Spacer.module.scss';
 
 const SpacerShortVsLongHandExample = () => (
   <div>
