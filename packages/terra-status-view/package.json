@@ -45,7 +45,6 @@
     "prop-types": "^15.5.8",
     "terra-button": "^3.60.1",
     "terra-divider": "^3.36.1",
-    "terra-icon": "^3.46.0",
     "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0"
   }
