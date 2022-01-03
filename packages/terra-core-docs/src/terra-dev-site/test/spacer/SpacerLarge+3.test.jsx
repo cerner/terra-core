@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Spacer from '../../../Spacer';
+import Spacer from 'terra-spacer';
 import styles from './SpacerTest.module.scss';
 
 const cx = classNames.bind(styles);

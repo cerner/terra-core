@@ -4,6 +4,7 @@
 
 * Added
   * Migrate docs from terra-section-header.
+  * Migrate docs from terra-spacer.
 
 ## 1.12.1 - (December 14, 2021)
 
