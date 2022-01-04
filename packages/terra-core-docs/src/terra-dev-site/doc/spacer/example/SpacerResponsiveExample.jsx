@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'terra-image';
 import Spacer from 'terra-spacer';
-import placeholderPic150x150 from 'terra-spacer/lib/terra-dev-site/doc/example/assets/150x150.jpg';
-import placeholderPic1000x200 from 'terra-spacer/lib/terra-dev-site/doc/example/assets/1000x200.png';
+import placeholderPic150x150 from './150x150.jpg';
+import placeholderPic1000x200 from './1000x200.png';
 
 const SpacerResponsiveExample = () => (
   <div>
