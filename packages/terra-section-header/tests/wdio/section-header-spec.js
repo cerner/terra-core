@@ -1,19 +1,19 @@
 Terra.describeViewports('SectionHeader', ['huge'], () => {
   it('should display default Section Header', () => {
-    browser.url('/raw/tests/terra-section-header/section-header/default-section-header');
+    browser.url('/raw/tests/cerner-terra-core-docs/section-header/default-section-header');
 
     Terra.validates.element('default');
   });
 
   it('should display long title Section Header', () => {
-    browser.url('/raw/tests/terra-section-header/section-header/long-title-section-header');
+    browser.url('/raw/tests/cerner-terra-core-docs/section-header/long-title-section-header');
 
     Terra.validates.element('default long title');
   });
 
   describe('Long Title Accordion', () => {
     before(() => {
-      browser.url('/raw/tests/terra-section-header/section-header/long-title-accordion-section-header');
+      browser.url('/raw/tests/cerner-terra-core-docs/section-header/long-title-accordion-section-header');
       $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
     });
 
@@ -45,34 +45,34 @@ Terra.describeViewports('SectionHeader', ['huge'], () => {
   });
 
   it('should display closed Section Header', () => {
-    browser.url('/raw/tests/terra-section-header/section-header/closed-section-header');
+    browser.url('/raw/tests/cerner-terra-core-docs/section-header/closed-section-header');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
 
     Terra.validates.element('closed');
   });
 
   it('should display open Section Header', () => {
-    browser.url('/raw/tests/terra-section-header/section-header/open-section-header');
+    browser.url('/raw/tests/cerner-terra-core-docs/section-header/open-section-header');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
 
     Terra.validates.element('open');
   });
 
   it('should display onClick Section Header', () => {
-    browser.url('/raw/tests/terra-section-header/section-header/on-click-section-header');
+    browser.url('/raw/tests/cerner-terra-core-docs/section-header/on-click-section-header');
     $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
 
     Terra.validates.element('onClick');
   });
 
   it('should display transparent Section Header', () => {
-    browser.url('/raw/tests/terra-section-header/section-header/transparent-section-header');
+    browser.url('/raw/tests/cerner-terra-core-docs/section-header/transparent-section-header');
 
     Terra.validates.element('transparent');
   });
 
   describe('Interactable Transparent Section Header', () => {
-    before(() => browser.url('/raw/tests/terra-section-header/section-header/transparent-on-click-section-header'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/section-header/transparent-on-click-section-header'));
 
     it('should display hovered interactable transparent Section Header', () => {
       $('[data-id="section-header"]').moveTo();

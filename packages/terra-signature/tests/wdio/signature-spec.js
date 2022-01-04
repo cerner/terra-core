@@ -1,6 +1,6 @@
 Terra.describeViewports('Signature', ['medium'], () => {
   before(() => {
-    browser.url('/#/raw/tests/terra-signature/signature/signature-default');
+    browser.url('/#/raw/tests/cerner-terra-core-docs/signature/signature-default');
   });
 
   it('should display default Signature', () => {
