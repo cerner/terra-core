@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Migrate docs from terra-core-docs.
+
 ## 2.37.0 - (May 19, 2021)
 
 * Fixed

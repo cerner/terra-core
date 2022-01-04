@@ -28,7 +28,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.60.1",
     "terra-image": "^3.35.0",
     "terra-theme-context": "^1.0.0"
   },
