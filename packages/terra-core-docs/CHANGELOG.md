@@ -3,6 +3,17 @@
 ## Unreleased
 
 * Added
+  * Migrate docs from terra-section-header.
+  * Migrate docs from terra-spacer.
+  * Migrate docs from terra-signature.
+  * Migrate docs from terra-show-hide.
+  * Migrate docs from terra-status-view.
+  * Migrate docs from terra-search-field.
+  * Migrate docs from terra-scroll.
+
+## 1.12.1 - (December 14, 2021)
+
+* Added
   * Migrate docs from terra-dynamic-grid.
   * Migrate docs from terra-dropdown-button.
   * Migrate docs from terra-form-checkbox.
@@ -13,6 +24,18 @@
   * Migrate docs from terra-form-radio.
   * Migrate docs from terra-form-input.
   * Migrate docs from terra-form-textarea.
+  * Migrate docs from terra-grid.
+  * Migrate docs from terra-html-table.
+  * Migrate docs from terra-hyperlink.
+  * Migrate docs from terra-heading.
+  * Migrate docs from terra-i18n.
+  * Migrate docs from terra-icon.
+  * Migrate docs from terra-image.
+  * Migrate docs from terra-overlay.
+  * Migrate docs from terra-list.
+  * Migrate docs from terra-paginator.
+  * Migrate docs from terra-progress-bar.
+  * Migrate docs from terra-profile-image.
 
 ## 1.12.0 - (November 2, 2021)
 

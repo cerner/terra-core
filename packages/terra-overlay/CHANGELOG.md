@@ -2,8 +2,11 @@
 
 ## Unreleased
 
+## 3.69.1 - (December 14, 2021)
+
 * Changed
   * Updated dependencies to not be hard-coded.
+  * Migrate docs to terra-core-docs.
 
 ## 3.69.0 - (November 2, 2021)
 

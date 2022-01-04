@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 2.51.1 - (December 14, 2021)
+
+* Changed
+  * Migrate docs to core docs.
+
+
 ## 2.51.0 - (September 21, 2021)
 
 * Changed
