@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Scroll from '../../../Scroll';
+import Scroll from 'terra-scroll';
 import styles from './DefaultTest.module.scss';
 
 const cx = classNames.bind(styles);
