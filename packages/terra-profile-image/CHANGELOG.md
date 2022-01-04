@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.41.1 - (January 4, 2022)
+
 * Changed
   * Migrate docs to terra-core-docs.
 
