@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.12.2 - (January 4, 2022)
+
 * Added
   * Migrate docs from terra-section-header.
   * Migrate docs from terra-spacer.
