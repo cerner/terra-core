@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchField from '../../../SearchField';
+import SearchField from 'terra-search-field';
 
 class DelayedSearchField extends React.Component {
   constructor(props) {

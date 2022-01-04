@@ -1,7 +1,7 @@
 Terra.describeViewports('Search Field', ['medium'], () => {
   describe('Default', () => {
     before(() => {
-      browser.url('/raw/tests/terra-search-field/search-field/default-search-field');
+      browser.url('/raw/tests/cerner-terra-core-docs/search-field/default-search-field');
     });
 
     it('should display empty Search Field', () => {
@@ -26,7 +26,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Block', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-block'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-block'));
 
     it('should display empty Search Field', () => {
       Terra.validates.element('block empty');
@@ -42,7 +42,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Disabled', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-disabled'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-disabled'));
 
     it('should display disabled Search Field', () => {
       Terra.validates.element('disabled default');
@@ -58,7 +58,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Placeholder', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-with-placeholder'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-with-placeholder'));
 
     it('should display Search Field with placeholder', () => {
       Terra.validates.element('placeholder default');
@@ -74,14 +74,14 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Placeholder Disabled', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-with-placeholder-disabled'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-with-placeholder-disabled'));
     it('should display disabled Search Field with placeholder', () => {
       Terra.validates.element('disabled placeholder default');
     });
   });
 
   describe('Default Value', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-default-value'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-default-value'));
 
     it('should display Search Field with default value', () => {
       Terra.validates.element('default value default');
@@ -103,7 +103,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Value', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-with-value'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-with-value'));
 
     it('should display Search Field with value', () => {
       Terra.validates.element('value default');
@@ -124,7 +124,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Minimum Length', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/minimum-length-search-field'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/minimum-length-search-field'));
 
     it('should enter a short search term', () => {
       $('input').setValue('Lore');
@@ -154,7 +154,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Callback', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/callback-search-field'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/callback-search-field'));
 
     it('should display empty Search Field', () => {
       Terra.validates.element('callback empty');
@@ -179,7 +179,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Setting Value', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/setting-value-search-field'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/setting-value-search-field'));
 
     it('should display empty Search Field', () => {
       Terra.validates.element('setting value empty');
@@ -229,7 +229,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('On Change', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-on-change'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-on-change'));
 
     it('should enter a letter', () => {
       $('input').setValue('L');
@@ -245,7 +245,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Search With Enter', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-enter'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-enter'));
 
     it('should search with enter', () => {
       $('input').click();
@@ -256,7 +256,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Auto Search Disabled', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/auto-search-disabled-search-field'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/auto-search-disabled-search-field'));
 
     it('should enter a search term', () => {
       $('input').setValue('Lore');
@@ -279,7 +279,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Search Field in Focus', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/search-field-focus'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-focus'));
 
     it('should display empty Search Field', () => {
       Terra.validates.element('focus empty');
@@ -294,7 +294,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
   });
 
   describe('Delayed Search Field', () => {
-    before(() => browser.url('/raw/tests/terra-search-field/search-field/delayed-search-field'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/delayed-search-field'));
 
     it('should enter 5 characters with 0.25s intervals', () => {
       const input = $('input');
