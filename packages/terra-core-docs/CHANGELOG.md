@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Added
+  * Migrate docs from terra-spacer.
+  * Migrate docs from terra-signature.
+  * Migrate docs from terra-show-hide.
   * Migrate docs from terra-status-view.
 
 ## 1.12.1 - (December 14, 2021)
