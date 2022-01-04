@@ -1,10 +1,9 @@
 import React from 'react';
-import SectionHeader from '../../../SectionHeader';
+import SectionHeader from 'terra-section-header';
 
 export default () => (
   <SectionHeader
-    title="Open Section Header"
+    title="Closed Section Header"
     onClick={() => {}}
-    isOpen
   />
 );

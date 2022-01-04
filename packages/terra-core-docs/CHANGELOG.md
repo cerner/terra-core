@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Added
+  * Migrate docs from terra-section-header.
   * Migrate docs from terra-spacer.
   * Migrate docs from terra-signature.
   * Migrate docs from terra-show-hide.

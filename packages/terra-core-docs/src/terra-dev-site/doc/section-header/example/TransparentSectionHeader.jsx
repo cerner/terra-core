@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeaderExampleTemplate from 'terra-section-header/lib/terra-dev-site/doc/example/SectionHeaderExampleTemplate';
+import SectionHeaderExampleTemplate from './SectionHeaderExampleTemplate';
 
 const sectionHeaderProps = {
   title: 'I\'m clickable, click me',
