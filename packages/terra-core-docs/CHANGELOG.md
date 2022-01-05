@@ -12,6 +12,7 @@
   * Migrate docs from terra-status-view.
   * Migrate docs from terra-search-field.
   * Migrate docs from terra-scroll.
+  * Migrate docs from terra-responsive-element.
 
 ## 1.12.1 - (December 14, 2021)
 
