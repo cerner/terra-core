@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import IconBookmark from 'terra-icon/lib/icon/IconTile';
-import Tag from '../../../Tag';
+import Tag from 'terra-tag';
 
 const icon = <IconBookmark />;
 const text = 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ';
