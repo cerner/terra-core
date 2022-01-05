@@ -1,8 +1,8 @@
 import React from 'react';
 import Arrange from 'terra-arrange';
 import Status from 'terra-status';
-import placeholderPic150x150 from 'terra-status/lib/terra-dev-site/doc/example/150x150.jpg';
 import classNames from 'classnames/bind';
+import placeholderPic150x150 from './150x150.jpg';
 import styles from './colors.module.scss';
 
 const cx = classNames.bind(styles);

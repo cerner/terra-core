@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Migrate docs from terra-status.
+
 ## 1.12.2 - (January 4, 2022)
 
 * Added

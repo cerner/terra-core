@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Status from '../../../Status';
-import styles from '../../doc/example/colors.module.scss';
+import Status from 'terra-status';
+import styles from '../../doc/status/example/colors.module.scss';
 
 const cx = classNames.bind(styles);
 
