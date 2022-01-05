@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Switch from '../../../Switch';
+import Switch from 'terra-switch';
 
 const DefaultSwitch = () => {
   const [value, setValue] = useState(false);
