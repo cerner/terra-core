@@ -2,7 +2,7 @@ import React, {
   useState,
 } from 'react';
 import Table from 'terra-table';
-import mockData from '../../doc/guides/mock-data/mock-sort';
+import mockData from '../../doc/table/guides/mock-data/mock-sort';
 
 const columnKeys = ['column-0', 'column-1', 'column-2'];
 

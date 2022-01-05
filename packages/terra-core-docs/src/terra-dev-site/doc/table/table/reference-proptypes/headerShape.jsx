@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import headerCellShape from '../../../../proptypes/headerCellShape';
-import selecAllColumnShape from '../../../../proptypes/selectAllColumnShape';
+import headerCellShape from 'terra-table/lib/proptypes/headerCellShape';
+import selecAllColumnShape from 'terra-table/lib/proptypes/selectAllColumnShape';
 /**
  * The props table parser continues to have trouble detecting the propTypes of a component that
  * returns `null`. I've duplicated the propType definition here so that a table could be parsed for it.
