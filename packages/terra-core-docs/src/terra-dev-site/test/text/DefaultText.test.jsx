@@ -1,4 +1,4 @@
 import React from 'react';
-import Text from '../../../Text';
+import Text from 'terra-text';
 
 export default () => <Text id="text">Default</Text>;
