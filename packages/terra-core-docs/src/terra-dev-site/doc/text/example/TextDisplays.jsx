@@ -2,7 +2,7 @@ import React from 'react';
 import Arrange from 'terra-arrange';
 import Text from 'terra-text';
 import classNames from 'classnames/bind';
-import styles from '../../../Text.module.scss';
+import styles from 'terra-text/lib/Text.module.scss';
 import styles2 from './colors.module.scss';
 import styles3 from './TextDocCommon.module.scss';
 
