@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ToggleButton from '../../../ToggleButton';
+import ToggleButton from 'terra-toggle-button';
 
 const OnOpenToggleButton = () => {
   const [timesOpened, setTimesOpened] = useState(0);

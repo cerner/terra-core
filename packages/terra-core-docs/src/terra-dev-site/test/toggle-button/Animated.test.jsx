@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleButton from '../../../ToggleButton';
+import ToggleButton from 'terra-toggle-button';
 
 const AnimatedToggleButton = () => (
   <ToggleButton id="animatedToggle" closedButtonText="Custom Text" isAnimated>
