@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleSectionHeader from '../../../ToggleSectionHeader';
+import ToggleSectionHeader from 'terra-toggle-section-header';
 
 export default () => (
   <ToggleSectionHeader title="Default Toggle Section Header" isTransparent>

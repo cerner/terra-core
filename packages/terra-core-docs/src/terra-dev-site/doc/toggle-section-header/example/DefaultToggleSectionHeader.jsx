@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleSectionHeaderExampleTemplate from 'terra-toggle-section-header/lib/terra-dev-site/doc/example/ToggleSectionHeaderExampleTemplate';
+import ToggleSectionHeaderExampleTemplate from './ToggleSectionHeaderExampleTemplate';
 
 const componentProps = {
   title: 'Default Example',
