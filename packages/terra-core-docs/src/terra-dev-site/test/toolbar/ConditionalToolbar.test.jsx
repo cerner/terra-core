@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from 'terra-button';
-import Toolbar from '../../../Toolbar';
+import Toolbar from 'terra-toolbar';
 
 const ConditionalToolbar = () => {
   const [showButton, setShowButton] = useState(true);
