@@ -1,5 +1,5 @@
 import React from 'react';
-import VisuallyHiddenText from '../../../VisuallyHiddenText';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 export default () => (
   <p>
