@@ -3,7 +3,7 @@ import Button from 'terra-button';
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
 import IconAdd from 'terra-icon/lib/icon/IconAdd';
 import IconAttachment from 'terra-icon/lib/icon/IconAttachment';
-import Toolbar from '../../../Toolbar';
+import Toolbar from 'terra-toolbar';
 
 export default () => (
   <Toolbar align="center">

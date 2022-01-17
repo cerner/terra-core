@@ -3,7 +3,9 @@
 ## Unreleased
 
 * Added
+
   * Migrate docs from terra-visually-hidden-text.
+  * Migrate docs from terra-toolbar.
 
 ## 1.12.2 - (January 4, 2022)
 
