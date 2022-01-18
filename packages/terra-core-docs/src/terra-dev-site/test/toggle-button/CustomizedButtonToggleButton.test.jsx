@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleButton from '../../../ToggleButton';
+import ToggleButton from 'terra-toggle-button';
 
 const ButtonAttrsToggleButton = () => (
   <ToggleButton id="emphasisButton" closedButtonText="ToggleButton" buttonAttrs={{ variant: 'emphasis' }}>

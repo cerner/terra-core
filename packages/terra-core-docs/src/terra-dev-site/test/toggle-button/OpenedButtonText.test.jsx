@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleButton from '../../../ToggleButton';
+import ToggleButton from 'terra-toggle-button';
 
 const OpenedButtonTextToggleButton = () => (
   <ToggleButton id="openedButtonText" closedButtonText="Custom Text" openedButtonText="Custom Text 2">

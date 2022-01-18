@@ -1,6 +1,6 @@
 import React from 'react';
 import IconCaretRight from 'terra-icon/lib/icon/IconCaretRight';
-import ToggleButton from '../../../ToggleButton';
+import ToggleButton from 'terra-toggle-button';
 
 const CustomIconToggleButton = () => (
   <ToggleButton closedButtonText="ToggleButton" icon={<IconCaretRight id="custom-icon" />}>

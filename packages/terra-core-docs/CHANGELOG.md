@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-
+  * Migrate docs from terra-toggle-button.
   * Migrate docs from terra-visually-hidden-text.
   * Migrate docs from terra-toolbar.
   * Migrate docs from terra-text.
