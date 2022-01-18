@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Migrate docs to terra core docs.
+
 ## 4.48.0 - (September 28, 2021)
 
 * Changed

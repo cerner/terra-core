@@ -1,7 +1,7 @@
 Terra.describeViewports('ToggleSectionHeader', ['huge'], () => {
   describe('Default', () => {
     it('should display a closed toggle', () => {
-      browser.url('/raw/tests/terra-toggle-section-header/toggle-section-header/default-toggle-section-header');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-section-header/default-toggle-section-header');
       $('#root').moveTo(); // move to prevent hover styles
       Terra.validates.element('closed toggle');
     });
@@ -19,7 +19,7 @@ Terra.describeViewports('ToggleSectionHeader', ['huge'], () => {
 
   describe('Transparent', () => {
     it('should display a closed toggle', () => {
-      browser.url('/raw/tests/terra-toggle-section-header/toggle-section-header/transparent-toggle-section-header');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-section-header/transparent-toggle-section-header');
       Terra.validates.element('closed transparent toggle');
     });
 
@@ -36,7 +36,7 @@ Terra.describeViewports('ToggleSectionHeader', ['huge'], () => {
 
   describe('Programmatic Toggle', () => {
     it('should display a closed toggle', () => {
-      browser.url('/raw/tests/terra-toggle-section-header/toggle-section-header/programmatic-toggle');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-section-header/programmatic-toggle');
       Terra.validates.element('closed programmatic toggle');
     });
 
