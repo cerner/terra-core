@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Migrate docs to terra core docs.
+
 ## 3.60.2 - (January 4, 2022)
 
 * Changed
