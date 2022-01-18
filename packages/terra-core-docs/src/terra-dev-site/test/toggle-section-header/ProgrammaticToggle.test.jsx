@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'terra-button';
-import ToggleSectionHeader from '../../../ToggleSectionHeader';
+import ToggleSectionHeader from 'terra-toggle-section-header';
 
 class ProgrammaticToggle extends React.Component {
   constructor(props) {
