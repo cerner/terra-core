@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Text from '../../../Text';
-import styles from '../../doc/example/colors.module.scss';
+import Text from 'terra-text';
+import styles from '../../doc/text/example/colors.module.scss';
 
 const cx = classNames.bind(styles);
 
