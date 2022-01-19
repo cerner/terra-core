@@ -8,6 +8,7 @@
   * Migrate docs from terra-toolbar.
   * Migrate docs from terra-text.
   * Migrate docs from terra-toggle-section-header.
+  * Migrate docs from terra-toggle.
 
 ## 1.12.2 - (January 4, 2022)
 

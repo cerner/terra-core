@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Toggle from '../../../Toggle';
+import Toggle from 'terra-toggle';
 
 const ToggleDefault = () => {
   const [isOpen, setIsOpen] = useState(false);
