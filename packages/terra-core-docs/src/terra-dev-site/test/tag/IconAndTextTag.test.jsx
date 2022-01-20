@@ -1,6 +1,6 @@
 import React from 'react';
 import IconBookmark from 'terra-icon/lib/icon/IconTile';
-import Tag from '../../../Tag';
+import Tag from 'terra-tag';
 
 const icon = <IconBookmark />;
 

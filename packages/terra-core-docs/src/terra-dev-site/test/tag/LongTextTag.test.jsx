@@ -2,7 +2,7 @@
 import React from 'react';
 import IconBookmark from 'terra-icon/lib/icon/IconTile';
 import classNames from 'classnames/bind';
-import Tag from '../../../Tag';
+import Tag from 'terra-tag';
 import styles from './LongTextTagTest.module.scss';
 
 const cx = classNames.bind(styles);
