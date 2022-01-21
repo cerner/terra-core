@@ -1,7 +1,7 @@
 Terra.describeViewports('Toggle Button', ['medium'], () => {
   describe('Default', () => {
     it('should display closed button', () => {
-      browser.url('/raw/tests/terra-toggle-button/toggle-button/default-toggle-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/default-toggle-button');
       Terra.validates.element('closed toggle button');
     });
 
@@ -16,7 +16,7 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
 
   describe('Icon Only', () => {
     it('should open the button', () => {
-      browser.url('/raw/tests/terra-toggle-button/toggle-button/icon-only');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/icon-only');
       $('button').click();
 
       // Ensures the on hover button styling is not displayed
@@ -27,7 +27,7 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
 
   describe('Custom Icon', () => {
     it('should open the button', () => {
-      browser.url('/raw/tests/terra-toggle-button/toggle-button/custom-icon');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/custom-icon');
       $('button').click();
 
       // Ensures the on hover button styling is not displayed
@@ -38,7 +38,7 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
 
   describe('Customized Button', () => {
     it('should open the button', () => {
-      browser.url('/raw/tests/terra-toggle-button/toggle-button/customized-button-toggle-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/customized-button-toggle-button');
       $('button').click();
 
       // Ensures the on hover button styling is not displayed
@@ -48,14 +48,14 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
   });
 
   it('displays Closed Button Text', () => {
-    browser.url('/raw/tests/terra-toggle-button/toggle-button/closed-button-text');
+    browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/closed-button-text');
 
     Terra.validates.element('closed button text');
   });
 
   describe('Opened Button Text', () => {
     it('should open the button', () => {
-      browser.url('/raw/tests/terra-toggle-button/toggle-button/opened-button-text');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/opened-button-text');
       $('button').click();
 
       // Ensures the on hover button styling is not displayed
@@ -65,13 +65,13 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
   });
 
   it('displays initially open toggle button', () => {
-    browser.url('/raw/tests/terra-toggle-button/toggle-button/initially-open');
+    browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/initially-open');
     Terra.validates.element('initially opened toggle button');
   });
 
   describe('Animated', () => {
     it('should open the button', () => {
-      browser.url('/raw/tests/terra-toggle-button/toggle-button/animated');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/animated');
       $('button').click();
 
       // Ensures the on hover button styling is not displayed
@@ -85,7 +85,7 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
 
   describe('Icon Animated', () => {
     it('should open the button', () => {
-      browser.url('/raw/tests/terra-toggle-button/toggle-button/icon-animated');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/icon-animated');
       $('button').click();
 
       // Ensures the on hover button styling is not displayed
@@ -99,7 +99,7 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
 
   describe('On Close Toggle Button', () => {
     it('should not increment', () => {
-      browser.url('/raw/tests/terra-toggle-button/toggle-button/on-close-toggle-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/on-close-toggle-button');
       $('button').click();
 
       // Ensures the on hover button styling is not displayed
@@ -118,7 +118,7 @@ Terra.describeViewports('Toggle Button', ['medium'], () => {
 
   describe('On Open Toggle Button', () => {
     it('should increment', () => {
-      browser.url('/raw/tests/terra-toggle-button/toggle-button/on-open-toggle-button');
+      browser.url('/raw/tests/cerner-terra-core-docs/toggle-button/on-open-toggle-button');
       $('button').click();
 
       // Ensures the on hover button styling is not displayed

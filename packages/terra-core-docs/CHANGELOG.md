@@ -3,6 +3,16 @@
 ## Unreleased
 
 * Added
+
+  * Migrate docs from terra-tag.
+  * Migrate docs from terra-toggle-button.
+  * Migrate docs from terra-visually-hidden-text.
+  * Migrate docs from terra-toolbar.
+  * Migrate docs from terra-text.
+  * Migrate docs from terra-toggle-section-header.
+  * Migrate docs from terra-toggle.
+  * Migrate docs from terra-switch.
+  * Migrate docs from terra-table.
   * Migrate docs from terra-status.
 
 ## 1.12.2 - (January 4, 2022)

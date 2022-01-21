@@ -1,0 +1,57 @@
+import { Badge } from 'terra-toggle-button/package.json?dev-site-package';
+
+import DefaultToggleButton from './example/DefaultToggleButton?dev-site-example';
+import AnimatedToggleButton from './example/AnimatedToggleButton?dev-site-example';
+import ButtonAttrsToggleButton from './example/ButtonAttrsToggleButton?dev-site-example';
+import IsInitiallyOpenToggleButton from './example/IsInitiallyOpenToggleButton?dev-site-example';
+import IsIconOnlyToggleButton from './example/IsIconOnlyToggleButton?dev-site-example';
+import OpenCloseEventToggleButton from './example/OpenCloseEventToggleButton?dev-site-example';
+import OpenCloseTextToggleButton from './example/OpenCloseTextToggleButton?dev-site-example';
+
+import ToggleButtonPropsTable from 'terra-toggle-button/src/ToggleButton?dev-site-props-table';
+
+<Badge />
+
+# Terra Toggle Button
+
+Toggle Button component that transitions content in and out with the click on a button.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-toggle-button`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import ToggleButton from 'terra-toggle-button';
+```
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
+
+## Examples
+<DefaultToggleButton title="Default ToggleButton" />
+<AnimatedToggleButton title="isAnimated ToggleButton" />
+<OpenCloseTextToggleButton title="Open / Close Button Text ToggleButton" />
+<IsIconOnlyToggleButton title="isIconOnly ToggleButton" />
+<IsInitiallyOpenToggleButton title="isInitiallyOpen ToggleButton" />
+<ButtonAttrsToggleButton title="Custom ToggleButton Button" />
+<OpenCloseEventToggleButton title="OnOpen / OnClose Callback ToggleButton" />
+
+## Toggle Button Props
+<ToggleButtonPropsTable />
