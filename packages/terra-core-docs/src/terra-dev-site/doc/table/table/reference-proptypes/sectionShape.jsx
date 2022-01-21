@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import rowShape from '../../../../proptypes/rowShape';
-import sectionHeaderShape from '../../../../proptypes/sectionHeaderShape';
+import rowShape from 'terra-table/lib/proptypes/rowShape';
+import sectionHeaderShape from 'terra-table/lib/proptypes/sectionHeaderShape';
 /**
  * The props table parser continues to have trouble detecting the propTypes of a component that
  * returns `null`. I've duplicated the propType definition here so that a table could be parsed for it.

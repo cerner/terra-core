@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from 'terra-table';
-import Fixed from '../common/Fixed';
+import Fixed from './common/Fixed';
 
 const FixedTest = () => (
   <Fixed>

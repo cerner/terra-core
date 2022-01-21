@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cellShape from '../../../../proptypes/cellShape';
-import discloseShape from '../../../../proptypes/discloseShape';
-import toggleShape from '../../../../proptypes/toggleShape';
+import cellShape from 'terra-table/lib/proptypes/cellShape';
+import discloseShape from 'terra-table/lib/proptypes/discloseShape';
+import toggleShape from 'terra-table/lib/proptypes/toggleShape';
 
 /**
  * The props table parser continues to have trouble detecting the propTypes of a component that

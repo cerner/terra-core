@@ -4,7 +4,7 @@ import React, {
 import Table, {
   Utils,
 } from 'terra-table';
-import mockData from '../../doc/guides/mock-data/mock-select';
+import mockData from '../../doc/table/guides/mock-data/mock-select';
 
 const maxSectionCount = 3;
 
