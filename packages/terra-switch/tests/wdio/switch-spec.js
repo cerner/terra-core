@@ -1,6 +1,6 @@
 Terra.describeViewports('Switch', ['tiny'], () => {
   it('should display Default Switch', () => {
-    browser.url('/raw/tests/terra-switch/switch/default-switch');
+    browser.url('/raw/tests/cerner-terra-core-docs/switch/default-switch');
     Terra.validates.element('default');
   });
 
@@ -16,7 +16,7 @@ Terra.describeViewports('Switch', ['tiny'], () => {
 
   describe('Disabled', () => {
     it('should display disabled button', () => {
-      browser.url('/raw/tests/terra-switch/switch/disabled-switch');
+      browser.url('/raw/tests/cerner-terra-core-docs/switch/disabled-switch');
       Terra.validates.element('disabled');
     });
 
@@ -30,12 +30,12 @@ Terra.describeViewports('Switch', ['tiny'], () => {
 
 Terra.describeViewports('Switch', ['tiny', 'medium', 'large'], () => {
   it('renders switch with long label text', () => {
-    browser.url('/raw/tests/terra-switch/switch/label-wrap');
+    browser.url('/raw/tests/cerner-terra-core-docs/switch/label-wrap');
     Terra.validates.element('long label text');
   });
 
   it('renders switch as block element', () => {
-    browser.url('/raw/tests/terra-switch/switch/block-switch');
+    browser.url('/raw/tests/cerner-terra-core-docs/switch/block-switch');
     Terra.validates.element('block');
   });
 });
