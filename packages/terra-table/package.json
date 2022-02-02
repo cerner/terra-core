@@ -1,7 +1,7 @@
 {
   "name": "terra-table",
   "main": "lib/index.js",
-  "version": "4.30.1",
+  "version": "4.31.0",
   "description": "The terra-table component provides user a way to render selectable data in a tabular format",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "terra-content-container": "^3.36.1",
     "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0",
-    "terra-visually-hidden-text": "^2.34.0"
+    "terra-visually-hidden-text": "^2.35.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

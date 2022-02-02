@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.13.0 - (February 2, 2022)
+
 * Added
 
   * Migrate docs from terra-tag.

@@ -1,9 +1,11 @@
 # Changelog
 
+## Unreleased
+
+## 3.43.0 - (February 2, 2022)
+
 * Changed
   * Migrate doc to terra-core-docs.
-
-## Unreleased
 
 ## 3.42.0 - (November 2, 2021)
 
