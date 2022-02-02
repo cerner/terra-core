@@ -656,6 +656,7 @@ exports[`should render as an anchor when provided an href 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  role="button"
   type="button"
 >
   <span
