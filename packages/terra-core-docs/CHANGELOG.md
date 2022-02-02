@@ -14,6 +14,7 @@
   * Migrate docs from terra-switch.
   * Migrate docs from terra-table.
   * Migrate docs from terra-status.
+  * Added support for Node 14.
 
 ## 1.12.2 - (January 4, 2022)
 
