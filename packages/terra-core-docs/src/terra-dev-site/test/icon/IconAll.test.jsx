@@ -307,6 +307,10 @@ const IconAll = () => (
     <Icon.IconVideoCamera className={cx(['icon'])} />
     <Icon.IconVideoCameraDisabled className={cx(['icon'])} />
     <Icon.IconVisualization className={cx(['icon'])} />
+    <Icon.IconVolumeSetDefault className={cx(['icon'])} />
+    <Icon.IconVolumeSetDecrease className={cx(['icon'])} />
+    <Icon.IconVolumeSetIncrease className={cx(['icon'])} />
+    <Icon.IconVolumeSetMute className={cx(['icon'])} />
     <Icon.IconWarning className={cx(['icon'])} />
     <Icon.IconWarningLowLight className={cx(['icon'])} />
     <Icon.IconWaveform className={cx(['icon'])} />

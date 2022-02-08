@@ -298,6 +298,10 @@ import IconUsers from './icon/IconUsers';
 import IconVideoCamera from './icon/IconVideoCamera';
 import IconVideoCameraDisabled from './icon/IconVideoCameraDisabled';
 import IconVisualization from './icon/IconVisualization';
+import IconVolumeSetDefault from './icon/IconVolumeSetDefault';
+import IconVolumeSetDecrease from './icon/IconVolumeSetDecrease';
+import IconVolumeSetIncrease from './icon/IconVolumeSetIncrease';
+import IconVolumeSetMute from './icon/IconVolumeSetMute';
 import IconWarning from './icon/IconWarning';
 import IconWarningLowLight from './icon/IconWarningLowLight';
 import IconWaveform from './icon/IconWaveform';
@@ -608,6 +612,10 @@ const Icons = {
   IconVideoCamera,
   IconVideoCameraDisabled,
   IconVisualization,
+  IconVolumeSetDefault,
+  IconVolumeSetDecrease,
+  IconVolumeSetIncrease,
+  IconVolumeSetMute,
   IconWarning,
   IconWarningLowLight,
   IconWaveform,
