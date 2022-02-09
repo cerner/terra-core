@@ -38,6 +38,17 @@ const propTypes = {
    * Focusable attribute. IE 10/11 are focusable without this attribute.
    */
   focusable: PropTypes.string,
+
+  /**
+   * Is the icon decorative? Is false by default.
+   */
+  isDecorative: PropTypes.bool,
+
+  /**
+   * Is the icon decorative? Is false by default.
+   */
+     svgSrc: PropTypes.string
+
 };
 
 const defaultProps = {
@@ -58,6 +69,7 @@ const IconBase = ({
   width,
   ariaLabel,
   focusable,
+  isDecorative,
   ...customProps
 }) => {
   const attributes = { ...customProps };
@@ -73,6 +85,18 @@ const IconBase = ({
     attributes.className,
   );
 
+  attributes.height = height;
+  attributes.width = width;
+  attributes.focusable = focusable;
+
+  if (isDecorative) {
+    attributes.role = 'presentation';
+    attributes.alt = null;
+     
+    // return <svg {...attributes} className={classes}>{children}</svg>;
+    return <img {...attributes} className={classes} src={svgSrc}></img>;
+  }
+
   // aria-label is present, remove aria-hidden, set role to img
   if (ariaLabel) {
     attributes['aria-label'] = ariaLabel;
@@ -82,11 +106,13 @@ const IconBase = ({
     attributes['aria-hidden'] = 'true';
   }
 
-  attributes.height = height;
-  attributes.width = width;
-  attributes.focusable = focusable;
+  if(ariaLabel == undefined){
+    throw new Error ("ariaLabel must be defined");
+  }
 
-  return <svg {...attributes} className={classes}>{children}</svg>;
+  // return <svg {...attributes} className={classes}>{children}</svg>;
+  return <img {...attributes} className={classes} src={svgSrc}></img>;
+
 };
 
 IconBase.propTypes = propTypes;
