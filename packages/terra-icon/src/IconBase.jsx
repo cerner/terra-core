@@ -45,9 +45,9 @@ const propTypes = {
   isDecorative: PropTypes.bool,
 
   /**
-   * Is the icon decorative? Is false by default.
+   * Source for the svg file
    */
-     svgSrc: PropTypes.string
+  svgSource: PropTypes.string
 
 };
 
@@ -70,6 +70,7 @@ const IconBase = ({
   ariaLabel,
   focusable,
   isDecorative,
+  svgSource,
   ...customProps
 }) => {
   const attributes = { ...customProps };
@@ -92,9 +93,9 @@ const IconBase = ({
   if (isDecorative) {
     attributes.role = 'presentation';
     attributes.alt = null;
-     
+
     // return <svg {...attributes} className={classes}>{children}</svg>;
-    return <img {...attributes} className={classes} src={svgSrc}></img>;
+    return <img {...attributes} className={classes} src={svgSource}></img>;
   }
 
   // aria-label is present, remove aria-hidden, set role to img
@@ -106,12 +107,12 @@ const IconBase = ({
     attributes['aria-hidden'] = 'true';
   }
 
-  if(ariaLabel == undefined){
-    throw new Error ("ariaLabel must be defined");
+  if (ariaLabel == undefined) {
+    throw new Error("ariaLabel must be defined");
   }
 
   // return <svg {...attributes} className={classes}>{children}</svg>;
-  return <img {...attributes} className={classes} src={svgSrc}></img>;
+  return <img {...attributes} className={classes} src={svgSource}></img>;
 
 };
 
