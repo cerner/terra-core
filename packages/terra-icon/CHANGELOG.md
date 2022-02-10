@@ -7,6 +7,8 @@
   * Volume Set - decrease
   * Volume Set - increase
   * Volume Set - mute
+* Changed
+  * Modified SVG migration script to allow addition of a new line at the end of each written SVG file.
 
 ## 3.46.1 - (January 4, 2022)
 
