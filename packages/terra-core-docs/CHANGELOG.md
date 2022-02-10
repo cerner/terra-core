@@ -2,10 +2,16 @@
 
 ## Unreleased
 
+* Changed
+  * Added four new icons to the AllIcons WDIO test
+    * Volume Set - default
+    * Volume Set - decrease
+    * Volume Set - increase
+    * Volume Set - mute
+
 ## 1.13.0 - (February 2, 2022)
 
 * Added
-
   * Migrate docs from terra-tag.
   * Migrate docs from terra-toggle-button.
   * Migrate docs from terra-visually-hidden-text.
