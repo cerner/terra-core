@@ -319,6 +319,7 @@ class Button extends React.Component {
         onFocus={this.handleFocus}
         href={href}
         ref={refCallback}
+        role={href ? 'button' : undefined}
       >
         {buttonLabel}
       </ComponentType>
