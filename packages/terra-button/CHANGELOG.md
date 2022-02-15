@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Added `button` role to anchor butttons.
+
 ## 3.60.1 - (December 14, 2021)
 
 * Changed
