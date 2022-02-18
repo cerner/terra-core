@@ -61,11 +61,4 @@
     position: absolute;
     width: 1px;
   }
-
-  .font-stack {
-    &::after {
-      content: var(--terra-text-v2-font-stack-after-content, '\"Helvetica Neue\", Helvetica, Arial, sans-serif');
-      display: inline-block;
-    }
-  }
 }

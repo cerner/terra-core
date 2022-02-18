@@ -7,13 +7,13 @@ const cx = classNames.bind(styles);
 
 const TextColors = () => (
   <div>
-    <Text fontSize={18}>{'Font Color: \'default\' class'}</Text>
+    <Text fontSize={18} colorClass={cx(['primary'])}>Font Color Example: &ldquo;primary&rdquo; sample consumer-created class</Text>
     <br />
-    <Text fontSize={18} colorClass={cx(['attention'])}>{'Font Color: \'attention\' class'}</Text>
+    <Text fontSize={18} colorClass={cx(['secondary'])}>Font Color Example: &ldquo;secondary&rdquo; sample consumer-created class</Text>
     <br />
-    <Text fontSize={18} colorClass={cx(['success'])}>{'Font Color: \'success\' class'}</Text>
+    <Text fontSize={18} colorClass={cx(['attention'])}>Font Color Example: &ldquo;attention&rdquo; sample consumer-created class</Text>
     <br />
-    <Text fontSize={18} colorClass={cx(['info'])}>{'Font Color: \'info\' class'}</Text>
+    <Text fontSize={18} colorClass={cx(['result-value-unverified'])}>Font Color Example: &ldquo;result-value-unverified&rdquo; sample consumer-created class</Text>
   </div>
 );
 

@@ -44,31 +44,31 @@ This component requires the following peer dependencies be installed in your app
 import Text from 'terra-text';
 ```
 
-### Color Class
+### Sample CSS for adding colors using 'colorClass' prop
 
 ```css
 :root {
-  --my-app-text-attention-color: rgb(220, 20, 60);
-  --my-app-text-success-color: rgb(46, 125, 50);
-  --my-app-text-info-color: #304ffe;
-  --my-app-text-default-color: #333;
+  --my-app-text-primary-color: #1c1f21;
+  --my-app-text-secondary-color: rgba(28, 31, 33, 0.65);
+  --my-app-text-attention-color: #c00;
+  --my-app-text-result-value-unverified-color: #78288c;
 }
 
 :local {
-  .default {
-    color: var(--my-app-text-default-color, #333);
+  .primary {
+    color: var(--my-app-text-default-color, #1c1f21);
+  }
+  
+  .secondary {
+    color: var(--my-app-text-secondary-detail-color, rgba(28, 31, 33, 0.65));
   }
 
   .attention {
-    color: var(--my-app-text-attention-color, rgb(220, 20, 60));
+    color: var(--my-app-text-attention-color, #c00);
   }
 
-  .success {
-    color: var(--my-app-text-success-color, rgb(46, 125, 50));
-  }
-
-  .info {
-    color: var(--my-app-text-info-color, #304ffe);
+  .result-value-unverified {
+    color: var(--my-app-text-result-value-unverified-color, #78288c);
   }
 }
 ```
@@ -80,26 +80,31 @@ import Text from 'terra-text';
 
 ## Examples
 <TextDisplays title="Displays" />
+
 <TextFontSizes
   title="Font Sizes" 
-  description="The font-size values represent the pixel values of our UX defined font-scale. Then the `Text` component will render these font-sizes with rem units."
+  description="The font-size values represent the pixel values of our UX defined font-scale. The text component then will render these font-sizes with the corresponding rem units based on 14px=1rem."
 />
+
 <TextColors
 	title="Colors"
 	description="By passing in a className, authors can manually set the text color of any '<Text />' component."
 />
+
 <TextWeights title="Weight" />
 
 The `isVisuallyHidden` prop can be used to hide the content visually, yet provide the content to screen readers.
-More info on this approach can be found here: <Link to="http://a11yproject.com/posts/how-to-hide-content/">http://a11yproject.com/posts/how-to-hide-content/</Link>
+More info on this approach can be found here: [http://a11yproject.com/posts/how-to-hide-content/](http://a11yproject.com/posts/how-to-hide-content/)
 <TextVisuallyHidden title="Visually Hidden" />
+
 <TextVariations
 	title="Variations"
-	description="You can mix and match props on the `<Text />` component to create various text styles."
+	description="You can mix and match props on the '<Text />' component to create various text styles."
 />
+
 <TextWordWrapped
 	title="Word Wrapped"
-	description="The `isWordWrapped` prop can be used to apply cross-browser word-wrapping styles."
+	description="The 'isWordWrapped' prop can be used to apply cross-browser word-wrapping styles."
 />
 
 ## Text Props

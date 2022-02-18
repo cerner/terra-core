@@ -1,4 +1,25 @@
+@import './clinical-lowlight-theme/TextDocCommon.module';
+@import './orion-fusion-theme/TextDocCommon.module';
+
 :local {
+  .font-stack {
+    &::after {
+      content: var(--terra-text-docs-example-font-stack-after-content, '\"Helvetica Neue\", Helvetica, Arial, sans-serif;');
+      display: inline-block;
+    }
+  }
+
+  .code-highlight {
+    background-color: var(--terra-text-docs-example-code-highlight-background-color, #f6f8fa);
+    border-radius: 3px;
+    color: var(--terra-text-docs-example-code-highlight-color, #1c1f21);
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+    font-size: 85%;
+    font-style: normal;
+    margin: 0;
+    padding: 0.2em 0.4em;
+  }
+
   .content-wrapper {
     margin-left: 10px;
     margin-right: 10px;

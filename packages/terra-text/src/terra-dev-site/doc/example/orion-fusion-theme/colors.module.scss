@@ -1,11 +1,9 @@
 :local {
   .orion-fusion-theme {
-    --terra-text-v2-font-stack-after-content: 'Tahoma, Geneva, Verdana, \"Trebuchet MS\", sans-serif';
-
-    // Used for docsite custom color examples only 
-    --terra-text-attention-color: #c00;
-    --terra-text-default-color: #1c1f21;
-    --terra-text-info-color: #0065a3;
-    --terra-text-success-color: #78c346;
+    // Sample Consumer or Project Added ColorClass example styles (these do not come from Terra)
+    --terra-text-docs-example-sample-consumer-added-colorclass-primary-color: #1c1f21;
+    --terra-text-docs-example-sample-consumer-added-colorclass-secondary-color: rgba(28, 35, 40, 0.73);
+    --terra-text-docs-example-sample-consumer-added-colorclass-attention-color: #c00;
+    --terra-text-docs-example-sample-consumer-added-colorclass-result-value-unverified-color: #78288c;  
   }
 }

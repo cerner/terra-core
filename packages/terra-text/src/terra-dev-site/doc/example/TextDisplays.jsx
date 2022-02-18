@@ -2,13 +2,13 @@ import React from 'react';
 import Arrange from 'terra-arrange';
 import Text from 'terra-text';
 import classNames from 'classnames/bind';
-import styles from '../../../Text.module.scss';
+// import styles from '../../../Text.module.scss';
+import styles from './TextDocCommon.module.scss';
 import styles2 from './colors.module.scss';
-import styles3 from './TextDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 const cx2 = classNames.bind(styles2);
-const cx3 = classNames.bind(styles3);
+// const cx = classNames.bind(styles3);
 
 const TextDisplays = () => (
   <div>
@@ -16,7 +16,7 @@ const TextDisplays = () => (
       Fonts
       <br />
       <Text weight={400}>
-        Font Stack:
+        Font Stack:&nbsp;
         <span className={cx(['font-stack'])} />
       </Text>
     </h2>
@@ -26,7 +26,7 @@ const TextDisplays = () => (
     <Arrange
       fitStart={<Text weight={300} className={cx2(['default'])} fontSize={100}>Aa</Text>}
       fill={(
-        <div className={cx3('content-wrapper')}>
+        <div className={cx('content-wrapper')}>
           <Text weight={300} fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
           <br />
           <Text weight={300} fontSize={32}>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</Text>
@@ -41,7 +41,7 @@ const TextDisplays = () => (
     <Arrange
       fitStart={<Text isItalic weight={300} className={cx2(['default'])} fontSize={100}>Aa</Text>}
       fill={(
-        <div className={cx3('content-wrapper')}>
+        <div className={cx('content-wrapper')}>
           <Text isItalic weight={300} fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
           <br />
           <Text isItalic weight={300} fontSize={32}>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</Text>
@@ -56,7 +56,7 @@ const TextDisplays = () => (
     <Arrange
       fitStart={<Text className={cx2(['default'])} fontSize={100}>Aa</Text>}
       fill={(
-        <div className={cx3('content-wrapper')}>
+        <div className={cx('content-wrapper')}>
           <Text fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
           <br />
           <Text fontSize={32}>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</Text>
@@ -71,7 +71,7 @@ const TextDisplays = () => (
     <Arrange
       fitStart={<Text isItalic className={cx2(['default'])} fontSize={100}>Aa</Text>}
       fill={(
-        <div className={cx3('content-wrapper')}>
+        <div className={cx('content-wrapper')}>
           <Text isItalic fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
           <br />
           <Text isItalic fontSize={32}>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</Text>
@@ -86,7 +86,7 @@ const TextDisplays = () => (
     <Arrange
       fitStart={<Text weight={700} className={cx2(['default'])} fontSize={100}>Aa</Text>}
       fill={(
-        <div className={cx3('content-wrapper')}>
+        <div className={cx('content-wrapper')}>
           <Text weight={700} fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
           <br />
           <Text weight={700} fontSize={32}>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</Text>
@@ -101,7 +101,7 @@ const TextDisplays = () => (
     <Arrange
       fitStart={<Text isItalic weight={700} className={cx2(['default'])} fontSize={100}>Aa</Text>}
       fill={(
-        <div className={cx3('content-wrapper')}>
+        <div className={cx('content-wrapper')}>
           <Text isItalic weight={700} fontSize={32}>a b c d e f g h i j k l m n o p q r s t u v w x y z</Text>
           <br />
           <Text isItalic weight={700} fontSize={32}>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</Text>
