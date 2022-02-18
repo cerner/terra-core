@@ -1,0 +1,34 @@
+.scrollContainer {
+  overflow-x: scroll;
+}
+
+.iconCollectionTable {
+  border-radius: 12px;
+  border: 1px #bbb solid;
+  thead > tr:first-child > th {
+    background-color: white;
+  }
+  thead > tr:last-child > th {
+    background-color: #eee;
+  }
+  th, td {
+    vertical-align: middle;
+  }
+  th {
+    position: sticky;
+    top: 0;
+    border-collapse: collapse;
+    padding: 7px 20px;
+    min-width: min-content;
+    &:first-child {
+      border-top-left-radius: 12px;
+    }
+    &:last-child {
+      border-top-right-radius: 12px;
+    }
+  }
+  td {
+    background-color: #f8f8f8;
+    padding: 7px 10px;
+  }
+}
