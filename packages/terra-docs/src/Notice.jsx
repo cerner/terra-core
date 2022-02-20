@@ -28,7 +28,36 @@ const getTitle = (variant) => {
     return 'Important';
   }
 
+  if (variant === 'not-supported') {
+    return 'Hazards for Incorrect Usage';
+  }
+
   return 'error';
+};
+
+const getStaticContent = (variant) => {
+  if (variant === 'not-supported') {
+    return (
+      <>
+        <p className={cx('paragraph')}>
+          This component was designed and tested according to the documented implementation.
+        </p>
+        <p className={cx('paragraph')}>
+          Using the component incorrectly:
+          <ul className={cx('list')}>
+            <li>will likely result in improper composition and create accessibility issues</li>
+            <li>may cause erratic or broken behaviors and styles</li>
+            <li>
+              <strong>will not be supported </strong>
+              or enhanced to allow for incorrect use
+            </li>
+          </ul>
+        </p>
+      </>
+    );
+  }
+
+  return null;
 };
 
 const propTypes = {
@@ -55,6 +84,7 @@ const propTypes = {
     'deprecation',
     'maintenance',
     'important',
+    'not-supported',
   ]),
 };
 
@@ -78,6 +108,7 @@ const Notice = ({
         </span>
       </div>
       <div className={cx('children')}>
+        {getStaticContent(variant)}
         {
           // Wrap any string children in a p tag.
           React.Children.map(children, element => {
