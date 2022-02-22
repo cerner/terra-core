@@ -1,5 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`IconCollectionTable should pass the all correct props to its child rows 1`] = `
+<div
+  className="scrollContainer"
+>
+  <table
+    className="iconCollectionTable"
+  >
+    <thead>
+      <tr>
+        <th
+          rowSpan={2}
+        >
+          SVG
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Description
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Meaning
+        </th>
+        <th
+          colSpan={3}
+        >
+          Functions
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Sets/Categories
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Import Names
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Themable Elements
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Action
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+          Toggle
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <IconCollectionRow
+        description="white check mark in solid green circle"
+        hfFeedback="this icon rules"
+        iconSvg={
+          <IconComplete
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        importNames={
+          Array [
+            "IconAvailable",
+            "IconSuccess",
+            "IconComplete",
+          ]
+        }
+        isAction={true}
+        isBidi={true}
+        isDecoration={true}
+        isInteraction={true}
+        isStatus={true}
+        isToggle={true}
+        key="white check mark in solid green circle"
+        labelRequired={true}
+        meaning="completed, met, available, successful, yes, positive"
+        needsDarkBackground={false}
+        searchTerms="white check mark solid green circle completed met available successful yes positive status iconavailable iconsuccess iconcomplete success checkmark static"
+        sets={
+          Array [
+            "Status",
+          ]
+        }
+        themableElements="party"
+      />
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`IconCollectionTable should render properly with the bare minimum required props 1`] = `
 <div
   className="scrollContainer"
