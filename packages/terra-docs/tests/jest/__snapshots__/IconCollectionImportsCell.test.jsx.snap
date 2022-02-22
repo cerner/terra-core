@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconCollectionImportsCell should render a default component with import names 1`] = `
+<td>
+  <p
+    className="importName"
+    key="IconExplosion"
+  >
+    IconExplosion
+  </p>
+  <p
+    className="importName"
+    key="IconPig"
+  >
+    IconPig
+  </p>
+  <p
+    className="importName"
+    key="IconDinosaur"
+  >
+    IconDinosaur
+  </p>
+</td>
+`;

@@ -6,12 +6,12 @@ import IconDocuments from 'terra-icon/lib/icon/IconDocuments';
 
 const cx = classNames.bind(styles);
 
-const IconCollectionImportsCell = ({importNames}) => {
+const IconCollectionImportsCell = ({importNames = []}) => {
   return (
     <td>
       {
         importNames.map((importName, i) => (
-          <p className={cx('importName')}>{importName}</p>
+          <p key={importName} className={cx('importName')}>{importName}</p>
         ))
       }
     </td>
