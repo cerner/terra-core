@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconCollectionTable should render properly with the bare minimum required props 1`] = `
+<div
+  className="scrollContainer"
+>
+  <table
+    className="iconCollectionTable"
+  >
+    <thead>
+      <tr>
+        <th
+          rowSpan={2}
+        >
+          SVG
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Description
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Meaning
+        </th>
+        <th
+          colSpan={3}
+        >
+          Functions
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Sets/Categories
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Import Names
+        </th>
+        <th
+          rowSpan={2}
+        >
+          Themable Elements
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Action
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+          Toggle
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <IconCollectionRow
+        description="white check mark in solid green circle"
+        iconSvg={
+          <IconComplete
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        importNames={
+          Array [
+            "IconAvailable",
+          ]
+        }
+        key="white check mark in solid green circle"
+      />
+    </tbody>
+  </table>
+</div>
+`;
