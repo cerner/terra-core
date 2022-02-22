@@ -13,7 +13,7 @@ const propTypes = {
    */
   rows: PropTypes.arrayOf(
     PropTypes.shape({
-      iconSvg: PropTypes.elementType,
+      iconSvg: PropTypes.elementType.isRequired,
       description: PropTypes.string.isRequired,
       meaning: PropTypes.string,
       isAction: PropTypes.bool,
@@ -56,7 +56,7 @@ const IconCollectionTable = ({rows}) => {
         </thead>
         <tbody>
           {
-            displayedRows.map((row) => (<IconCollectionRow {...row}/>))
+            displayedRows.map((row) => (<IconCollectionRow key={row.description} {...row}/>))
           }
         </tbody>
       </table>

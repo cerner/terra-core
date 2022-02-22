@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const IconCollectionImportsCell = ({importNames}) => {
   return (
-    <td>
+    <td key="imports">
       {
         importNames.map((importName, i) => (
           <p className={cx('importName')}>{importName}</p>
