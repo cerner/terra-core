@@ -45,16 +45,16 @@ const IconCollectionRow = ({
   needsDarkBackground,
 }) => {
   return (
-    <tr key={description}>
-      <td key="icon" className={cx('iconCell')}>{iconSvg}</td>
-      <td key="desc">{description}</td>
-      <td key="meaning">{meaning}</td>
-      <td key="action" className={cx('iconCell', 'booleanCell')}>{isAction ? (<IconCheckmark />) : null}</td>
-      <td key="status" className={cx('iconCell', 'booleanCell')}>{isStatus ? (<IconCheckmark />) : null}</td>
-      <td key="toggle" className={cx('iconCell', 'booleanCell')}>{isToggle ? (<IconCheckmark />) : null}</td>
-      <td key="sets">{sets}</td>
+    <tr>
+      <td className={cx('iconCell')}>{iconSvg}</td>
+      <td>{description}</td>
+      <td>{meaning}</td>
+      <td className={cx('iconCell', 'booleanCell')}>{isAction ? (<IconCheckmark />) : null}</td>
+      <td className={cx('iconCell', 'booleanCell')}>{isStatus ? (<IconCheckmark />) : null}</td>
+      <td className={cx('iconCell', 'booleanCell')}>{isToggle ? (<IconCheckmark />) : null}</td>
+      <td>{sets}</td>
       <IconCollectionImportsCell importNames={importNames} />
-      <td key="themable">{themableElements}</td>
+      <td>{themableElements}</td>
     </tr>
   )
 }
