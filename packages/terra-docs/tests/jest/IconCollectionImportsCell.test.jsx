@@ -5,7 +5,7 @@ const someImportNames = [
   'IconExplosion',
   'IconPig',
   'IconDinosaur',
-]
+];
 
 describe('IconCollectionImportsCell', () => {
   it('should render a default component with import names', () => {

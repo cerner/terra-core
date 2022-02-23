@@ -8,7 +8,7 @@ import IconPaperFolded from 'terra-icon/lib/icon/IconPaperFolded';
 
 export default [
   {
-    iconSvg: <IconSuccessInverse/>,
+    iconSvg: <IconSuccessInverse />,
     description: 'transparent check mark in solid white circle',
     meaning: 'completed, met, available, successful, yes, positive',
     isAction: false,
@@ -26,7 +26,7 @@ export default [
     needsDarkBackground: true,
   },
   {
-    iconSvg: <IconComplete/>,
+    iconSvg: <IconComplete />,
     description: 'white check mark in solid green circle',
     meaning: 'completed, met, available, successful, yes, positive',
     isAction: false,
@@ -44,7 +44,7 @@ export default [
     needsDarkBackground: false,
   },
   {
-    iconSvg: <IconDeviceCheck/>,
+    iconSvg: <IconDeviceCheck />,
     description: 'mobile device with secondary indicator: white check mark in solid green circle',
     meaning: 'device associated',
     isAction: false,
@@ -62,7 +62,7 @@ export default [
     needsDarkBackground: false,
   },
   {
-    iconSvg: <IconCommit/>,
+    iconSvg: <IconCommit />,
     description: 'check mark',
     meaning: 'selected, commit',
     isAction: false,
@@ -79,7 +79,7 @@ export default [
     hfFeedback: '',
   },
   {
-    iconSvg: <IconTrash/>,
+    iconSvg: <IconTrash />,
     description: 'trash can with lid',
     meaning: 'send items to trash',
     isAction: true,
@@ -96,7 +96,7 @@ export default [
     hfFeedback: '',
   },
   {
-    iconSvg: <IconPaperFolded/>,
+    iconSvg: <IconPaperFolded />,
     description: 'single sheet of paper with top right corner folded down',
     meaning: 'document',
     isAction: false,
@@ -112,4 +112,4 @@ export default [
     searchTerms: 'single sheet paper top right corner folded down document general use iconpaperfolded themable',
     hfFeedback: '',
   },
-]
+];

@@ -3,7 +3,7 @@
 exports[`IconCollectionTable should render a check icon for each function of the icon 1`] = `
 <tr>
   <td
-    className="iconCell"
+    className="icon-cell"
   >
     <IconComplete
       viewBox="0 0 48 48"
@@ -15,7 +15,7 @@ exports[`IconCollectionTable should render a check icon for each function of the
   </td>
   <td />
   <td
-    className="iconCell booleanCell"
+    className="icon-cell boolean-cell"
   >
     <IconCheckmark
       data-name="Layer 1"
@@ -24,7 +24,7 @@ exports[`IconCollectionTable should render a check icon for each function of the
     />
   </td>
   <td
-    className="iconCell booleanCell"
+    className="icon-cell boolean-cell"
   >
     <IconCheckmark
       data-name="Layer 1"
@@ -33,7 +33,7 @@ exports[`IconCollectionTable should render a check icon for each function of the
     />
   </td>
   <td
-    className="iconCell booleanCell"
+    className="icon-cell boolean-cell"
   >
     <IconCheckmark
       data-name="Layer 1"
@@ -56,7 +56,7 @@ exports[`IconCollectionTable should render a check icon for each function of the
 exports[`IconCollectionTable should render a default component with maximum props 1`] = `
 <tr>
   <td
-    className="iconCell"
+    className="icon-cell"
   >
     <IconComplete
       viewBox="0 0 48 48"
@@ -70,7 +70,7 @@ exports[`IconCollectionTable should render a default component with maximum prop
     completed, met, available, successful, yes, positive
   </td>
   <td
-    className="iconCell booleanCell"
+    className="icon-cell boolean-cell"
   >
     <IconCheckmark
       data-name="Layer 1"
@@ -79,7 +79,7 @@ exports[`IconCollectionTable should render a default component with maximum prop
     />
   </td>
   <td
-    className="iconCell booleanCell"
+    className="icon-cell boolean-cell"
   >
     <IconCheckmark
       data-name="Layer 1"
@@ -88,7 +88,7 @@ exports[`IconCollectionTable should render a default component with maximum prop
     />
   </td>
   <td
-    className="iconCell booleanCell"
+    className="icon-cell boolean-cell"
   >
     <IconCheckmark
       data-name="Layer 1"
@@ -117,7 +117,7 @@ exports[`IconCollectionTable should render a default component with maximum prop
 exports[`IconCollectionTable should render a default component with minimum props 1`] = `
 <tr>
   <td
-    className="iconCell"
+    className="icon-cell"
   >
     <IconComplete
       viewBox="0 0 48 48"
@@ -129,13 +129,13 @@ exports[`IconCollectionTable should render a default component with minimum prop
   </td>
   <td />
   <td
-    className="iconCell booleanCell"
+    className="icon-cell boolean-cell"
   />
   <td
-    className="iconCell booleanCell"
+    className="icon-cell boolean-cell"
   />
   <td
-    className="iconCell booleanCell"
+    className="icon-cell boolean-cell"
   />
   <td />
   <IconCollectionImportsCell

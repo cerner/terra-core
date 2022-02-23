@@ -1,7 +1,7 @@
 import React from 'react';
 import IconCollectionRow from '../../src/IconCollectionTable/IconCollectionRow';
 
-import { bareMinimum, bareMaximum } from './iconCollectionData'
+import { bareMinimum, bareMaximum } from './iconCollectionData';
 
 describe('IconCollectionTable', () => {
   it('should render a default component with minimum props', () => {

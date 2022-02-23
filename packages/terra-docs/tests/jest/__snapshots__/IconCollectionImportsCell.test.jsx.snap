@@ -3,19 +3,19 @@
 exports[`IconCollectionImportsCell should render a default component with import names 1`] = `
 <td>
   <p
-    className="importName"
+    className="import-name"
     key="IconExplosion"
   >
     IconExplosion
   </p>
   <p
-    className="importName"
+    className="import-name"
     key="IconPig"
   >
     IconPig
   </p>
   <p
-    className="importName"
+    className="import-name"
     key="IconDinosaur"
   >
     IconDinosaur

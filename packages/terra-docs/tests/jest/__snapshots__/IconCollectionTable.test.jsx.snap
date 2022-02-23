@@ -2,10 +2,10 @@
 
 exports[`IconCollectionTable should pass the all correct props to its child rows 1`] = `
 <div
-  className="scrollContainer"
+  className="scroll-container"
 >
   <table
-    className="iconCollectionTable"
+    className="icon-collection-table"
   >
     <thead>
       <tr>
@@ -45,7 +45,9 @@ exports[`IconCollectionTable should pass the all correct props to its child rows
           Themable Elements
         </th>
       </tr>
-      <tr>
+      <tr
+        className="sub-header"
+      >
         <th>
           Action
         </th>
@@ -99,10 +101,10 @@ exports[`IconCollectionTable should pass the all correct props to its child rows
 
 exports[`IconCollectionTable should render properly with the bare minimum required props 1`] = `
 <div
-  className="scrollContainer"
+  className="scroll-container"
 >
   <table
-    className="iconCollectionTable"
+    className="icon-collection-table"
   >
     <thead>
       <tr>
@@ -142,7 +144,9 @@ exports[`IconCollectionTable should render properly with the bare minimum requir
           Themable Elements
         </th>
       </tr>
-      <tr>
+      <tr
+        className="sub-header"
+      >
         <th>
           Action
         </th>

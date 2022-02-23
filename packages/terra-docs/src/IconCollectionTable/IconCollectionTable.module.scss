@@ -1,32 +1,39 @@
-.scrollContainer {
+.scroll-container {
   overflow-x: scroll;
 }
 
-.iconCollectionTable {
-  border-radius: 12px;
+.icon-collection-table {
   border: 1px #bbb solid;
-  thead > tr:first-child > th {
-    background-color: white;
+  border-radius: 12px;
+
+  th {
+    background-color: #fff;
   }
-  thead > tr:last-child > th {
+
+  .sub-header > th {
     background-color: #eee;
   }
-  th, td {
+
+  th,
+  td {
     vertical-align: middle;
   }
+
   th {
-    position: sticky;
-    top: 0;
     border-collapse: collapse;
-    padding: 7px 20px;
     min-width: min-content;
+    padding: 7px 20px;
+    top: 0;
+
     &:first-child {
       border-top-left-radius: 12px;
     }
+
     &:last-child {
       border-top-right-radius: 12px;
     }
   }
+
   td {
     background-color: #f8f8f8;
     padding: 7px 10px;

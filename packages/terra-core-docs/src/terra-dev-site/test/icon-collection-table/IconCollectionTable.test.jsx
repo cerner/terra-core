@@ -9,6 +9,6 @@ const IconCollectionTableTest = () => (
       rows={iconData}
     />
   </div>
-)
+);
 
 export default IconCollectionTableTest;

@@ -3,20 +3,20 @@ import IconComplete from 'terra-icon/lib/icon/IconComplete';
 
 const bareMinimum = [
   {
-    iconSvg: <IconComplete/>,
+    iconSvg: <IconComplete />,
     description: 'white check mark in solid green circle',
     importNames: ['IconAvailable'],
-  }
+  },
 ];
 
 const twoBareMinimums = [
   {
-    iconSvg: <IconComplete/>,
+    iconSvg: <IconComplete />,
     description: 'solid green circle containing a white check mark',
     importNames: ['IconAvailable'],
   },
   {
-    iconSvg: <IconComplete/>,
+    iconSvg: <IconComplete />,
     description: 'white check mark in solid green circle',
     importNames: ['IconAvailable'],
   },
@@ -24,7 +24,7 @@ const twoBareMinimums = [
 
 const bareMaximum = [
   {
-    iconSvg: <IconComplete/>,
+    iconSvg: <IconComplete />,
     description: 'white check mark in solid green circle',
     meaning: 'completed, met, available, successful, yes, positive',
     isAction: true,
@@ -41,9 +41,7 @@ const bareMaximum = [
     hfFeedback: 'this icon rules',
     needsDarkBackground: false,
   },
-]
-
-
+];
 
 export {
   bareMinimum,
