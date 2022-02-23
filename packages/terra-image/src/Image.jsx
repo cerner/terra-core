@@ -70,7 +70,6 @@ const propTypes = {
 const defaultProps = {
   variant: 'default',
   isFluid: false,
-  alt: ' ',
   fit: 'fill',
 };
 /* eslint-enable react/default-props-match-prop-types */
