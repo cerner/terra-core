@@ -120,13 +120,23 @@ class DecorativeImage extends React.Component {
     }
   }
 
-  createImage(imageClasses) {
+  createImage(customProps, imageClasses) {
     const {
       src, height, width,
     } = this.props;
 
+    const additionalParams = customProps;
+
+    // removes Aria attributes annd title from customProps
+    Object.keys(additionalParams).forEach(prop => {
+      if (prop.includes('aria') || prop === 'title') {
+        delete additionalParams[prop];
+      }
+    });
+
     return (
       <img
+        {...additionalParams}
         src={src}
         role="presentation"
         alt=""
@@ -168,7 +178,7 @@ class DecorativeImage extends React.Component {
       if (this.state.isLoading) {
         return (
           <>
-            {this.createImage(imageClasses)}
+            {this.createImage(customProps, imageClasses)}
             {placeholder}
           </>
         );

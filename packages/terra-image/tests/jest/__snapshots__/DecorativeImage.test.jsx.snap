@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <DecorativeImage
+    alt=""
+    fit="fill"
+    isFluid={false}
+    src=""
+    variant="default"
+  >
+    <img
+      alt=""
+      className="image fill default orion-fusion-theme"
+      onError={[Function]}
+      onLoad={[Function]}
+      role="presentation"
+      src=""
+    />
+  </DecorativeImage>
+</ThemeContextProvider>
+`;
+
+exports[`should render a default component with empty attribute 1`] = `
+<img
+  alt=""
+  className="image fill default"
+  onError={[Function]}
+  onLoad={[Function]}
+  role="presentation"
+  src=""
+/>
+`;
+
+exports[`should render a default component without aria attributes 1`] = `
+<img
+  alt=""
+  className="image fill default"
+  onError={[Function]}
+  onLoad={[Function]}
+  role="presentation"
+  src=""
+/>
+`;
+
+exports[`should render a default component without title attribute 1`] = `
+<img
+  alt=""
+  className="image fill default"
+  onError={[Function]}
+  onLoad={[Function]}
+  role="presentation"
+  src=""
+/>
+`;
