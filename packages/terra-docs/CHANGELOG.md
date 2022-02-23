@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Introducing IconCollectionTable component
+
 ## 1.6.0 - (September 21, 2021)
 
 * Changed
