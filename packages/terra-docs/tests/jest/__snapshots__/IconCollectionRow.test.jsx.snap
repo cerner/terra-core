@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconCollectionTable should render a check icon for each function of the icon 1`] = `
+<tr>
+  <td
+    className="iconCell"
+  >
+    <IconComplete
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </td>
+  <td>
+    white check mark in solid green circle
+  </td>
+  <td />
+  <td
+    className="iconCell booleanCell"
+  >
+    <IconCheckmark
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </td>
+  <td
+    className="iconCell booleanCell"
+  >
+    <IconCheckmark
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </td>
+  <td
+    className="iconCell booleanCell"
+  >
+    <IconCheckmark
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </td>
+  <td />
+  <IconCollectionImportsCell
+    importNames={
+      Array [
+        "IconAvailable",
+      ]
+    }
+  />
+  <td />
+</tr>
+`;
+
+exports[`IconCollectionTable should render a default component with maximum props 1`] = `
+<tr>
+  <td
+    className="iconCell"
+  >
+    <IconComplete
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </td>
+  <td>
+    white check mark in solid green circle
+  </td>
+  <td>
+    completed, met, available, successful, yes, positive
+  </td>
+  <td
+    className="iconCell booleanCell"
+  >
+    <IconCheckmark
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </td>
+  <td
+    className="iconCell booleanCell"
+  >
+    <IconCheckmark
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </td>
+  <td
+    className="iconCell booleanCell"
+  >
+    <IconCheckmark
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </td>
+  <td>
+    Status
+  </td>
+  <IconCollectionImportsCell
+    importNames={
+      Array [
+        "IconAvailable",
+        "IconSuccess",
+        "IconComplete",
+      ]
+    }
+  />
+  <td>
+    party
+  </td>
+</tr>
+`;
+
+exports[`IconCollectionTable should render a default component with minimum props 1`] = `
+<tr>
+  <td
+    className="iconCell"
+  >
+    <IconComplete
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </td>
+  <td>
+    white check mark in solid green circle
+  </td>
+  <td />
+  <td
+    className="iconCell booleanCell"
+  />
+  <td
+    className="iconCell booleanCell"
+  />
+  <td
+    className="iconCell booleanCell"
+  />
+  <td />
+  <IconCollectionImportsCell
+    importNames={
+      Array [
+        "IconAvailable",
+      ]
+    }
+  />
+  <td />
+</tr>
+`;
