@@ -126,8 +126,7 @@ class DecorativeImage extends React.Component {
     } = this.props;
 
     const additionalParams = customProps;
-
-    // removes Aria attributes annd title from customProps
+    // removes Aria attributes and title from customProps
     Object.keys(additionalParams).forEach(prop => {
       if (prop.includes('aria') || prop === 'title') {
         delete additionalParams[prop];

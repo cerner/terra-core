@@ -128,6 +128,12 @@ class Image extends React.Component {
     const {
       src, alt, height, width,
     } = this.props;
+
+    // removes role attribute if the value is set to `presentation` OR `none`
+    if (customProps.role && (customProps.role === 'presentation' || customProps.role === 'none')) {
+      delete customProps.role;
+    }
+
     return (
       <img
         {...customProps}
