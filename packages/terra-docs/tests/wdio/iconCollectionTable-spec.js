@@ -1,4 +1,4 @@
-Terra.describeViewports('IconCollectionTable', ['large'], () => {
+Terra.describeViewports('IconCollectionTable', ['medium'], () => {
   describe('IconCollectionTable', () => {
     it('is valid', () => {
       browser.url('/raw/tests/cerner-terra-core-docs/icon-collection-table/icon-collection-table');

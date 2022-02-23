@@ -1,17 +1,19 @@
+@import '../clinical-lowlight-theme/IconCollectionTable.module';
+
 .scroll-container {
   overflow-x: scroll;
 }
 
 .icon-collection-table {
-  border: 1px #bbb solid;
+  border: 1px var(--terra-docs-icon-table-border-color,#bbb) solid;
   border-radius: 12px;
 
   th {
-    background-color: #fff;
+    background-color: var(--terra-docs-icon-table-header-cell-background-color, #fff);
   }
 
   .sub-header > th {
-    background-color: #eee;
+    background-color: var(--terra-docs-icon-table-subheader-cell-background-color, #eee);
   }
 
   th,
@@ -35,7 +37,7 @@
   }
 
   td {
-    background-color: #f8f8f8;
+    background-color: var(--terra-docs-icon-table-cell-background-color, #f8f8f8);
     padding: 7px 10px;
   }
 }

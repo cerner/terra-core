@@ -4,11 +4,9 @@ import IconCollectionTable from '../../../../../terra-docs/src/IconCollectionTab
 import iconData from './iconData';
 
 const IconCollectionTableTest = () => (
-  <div id="site">
-    <IconCollectionTable
-      rows={iconData}
-    />
-  </div>
+  <IconCollectionTable
+    rows={iconData}
+  /> 
 );
 
 export default IconCollectionTableTest;
