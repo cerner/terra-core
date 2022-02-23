@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added new subcomponent `DecorativeImage` to support non-informative image.
 
 ## 3.35.1 - (January 4, 2022)
 

@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added docs for Decorative Image
 
 ## 1.13.1 - (February 15, 2022)
 
