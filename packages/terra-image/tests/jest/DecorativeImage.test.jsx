@@ -5,8 +5,8 @@ import DecorativeImage from '../../src/variants/_DecorativeImage';
 
 /* Decorative Image component */
 it('should render a default component with empty attribute', () => {
-    const wrapper = shallow(<DecorativeImage src="" alt="default" title="default" />);
-    expect(wrapper).toMatchSnapshot();
+  const wrapper = shallow(<DecorativeImage src="" alt="default" title="default" />);
+  expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a default component without title attribute', () => {
