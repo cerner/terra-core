@@ -11,7 +11,7 @@ const propTypes = {
   /**
    * The terra-icon this row describes
    */
-  iconSvg: PropTypes.elementType,
+  iconSvg: PropTypes.elementType.isRequired,
   /**
    * Physical description of icon
    */
