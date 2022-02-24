@@ -4,11 +4,9 @@ import IconBase from '../IconBase';
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
-
+  const svgString = `<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z"/></svg>`;
   return (
-    <IconBase {...attributes}>
-      <path d="M24 37.7L0 14.2l3.8-3.9L24 30l20.2-19.7 3.8 3.9z" ></path>
-    </IconBase>
+    <IconBase {...attributes} svgSource={svgString} > </IconBase>
   );
 };
 
@@ -16,4 +14,5 @@ SvgIcon.displayName = "IconChevronDown";
 SvgIcon.defaultProps = {"className":"","viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg","data-name":"Layer 1","isBidi":true};
 
 export default SvgIcon;
+
 /* eslint-enable */

@@ -19,10 +19,9 @@ const SvgIcon = (customProps) => {
     customProps.className,
   );
 
+  const svgString = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M27 32V0h-6v32H8.5L24 48l15.5-16z"/></svg>`;
   return (
-    <IconBase {...attributes} className={iconClassNames} >
-      <path d="M27 32V0h-6v32H8.5L24 48l15.5-16z" ></path>
-    </IconBase>
+    <IconBase {...attributes} svgSource={svgString} > </IconBase>
   );
 };
 

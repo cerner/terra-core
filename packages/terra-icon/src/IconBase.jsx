@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
-
+import { Buffer } from 'buffer';
 // eslint-disable-next-line import/no-unresolved, import/no-webpack-loader-syntax
 import styles from './Icon.module.scss';
 
@@ -47,7 +47,7 @@ const propTypes = {
   /**
    * Source for the svg file
    */
-  svgSource: PropTypes.string
+   svgSource: PropTypes.string
 
 };
 
@@ -55,10 +55,11 @@ const defaultProps = {
   isBidi: false,
   isSpin: false,
   children: null,
-  height: '1em',
-  width: '1em',
+  height: '30em',
+  width: '30em',
   ariaLabel: null,
   focusable: 'false',
+  isDecorative: false
 };
 
 const IconBase = ({
@@ -90,14 +91,6 @@ const IconBase = ({
   attributes.width = width;
   attributes.focusable = focusable;
 
-  if (isDecorative) {
-    attributes.role = 'presentation';
-    attributes.alt = null;
-
-    // return <svg {...attributes} className={classes}>{children}</svg>;
-    return <img {...attributes} className={classes} src={svgSource}></img>;
-  }
-
   // aria-label is present, remove aria-hidden, set role to img
   if (ariaLabel) {
     attributes['aria-label'] = ariaLabel;
@@ -107,13 +100,15 @@ const IconBase = ({
     attributes['aria-hidden'] = 'true';
   }
 
-  if (ariaLabel == undefined) {
-    throw new Error("ariaLabel must be defined");
+
+  let svgsrc = '';
+
+  if (typeof svgSource === 'string' || svgSource instanceof String) {
+    const b64 = Buffer.from(svgSource, 'utf-8').toString('base64');
+    svgsrc = `data:image/svg+xml;base64, ${b64}`;
   }
 
-  // return <svg {...attributes} className={classes}>{children}</svg>;
-  return <img {...attributes} className={classes} src={svgSource}></img>;
-
+  return (<img {...attributes} className={classes} src={svgsrc}></img>);
 };
 
 IconBase.propTypes = propTypes;

@@ -5,12 +5,13 @@ import htmlToReactAttributes from './htmlToReactAttributes';
 import classNamesToAttributes from './classNamesToAttributes';
 
 class Icon {
-  constructor(name, node) {
+  constructor(name, node, svg) {
     this.name = `Icon${_.upperFirst(_.camelCase(name))}`;
     this.children = transformChildren(node);
     this.attributes = classNamesToAttributes(Array.prototype.slice.call(node.attributes)
       .map(x => ({ name: htmlToReactAttributes(x.name), value: x.value }))
       .reduce((attrs, x) => ({ [x.name]: x.value, ...attrs }), {}));
+    this.svg = svg;
   }
 }
 

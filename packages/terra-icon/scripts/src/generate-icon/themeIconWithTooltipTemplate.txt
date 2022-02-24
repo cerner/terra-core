@@ -5,14 +5,12 @@ import { FormattedMessage } from 'react-intl';
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
-
+  const svgString = `<%= icon.svg %>`;
   return (
     <FormattedMessage id="Terra.icon.<%= icon.name %>.title">
       {iconTitle => (
         <span aria-label={iconTitle} title={iconTitle}>
-            <IconBase {...attributes}>
-                <%= icon.children %>
-            </IconBase>
+          <IconBase {...attributes} svgSource={svgString} > </IconBase>
         </span>
       )}
     </FormattedMessage>
