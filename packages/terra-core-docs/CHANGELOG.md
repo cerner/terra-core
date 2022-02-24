@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Added
+  * IconCollectionTable for icon page
   * Test page for IconCollectionTable
 
 ## 1.13.1 - (February 15, 2022)
