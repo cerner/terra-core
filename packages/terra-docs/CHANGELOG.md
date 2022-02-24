@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.7.0 - (February 24, 2022)
+
 * Added
   * 'not-supported' notices variant
 
