@@ -1,6 +1,6 @@
 import React from 'react';
 
-import IconCollectionTable from '../../../../../terra-docs/src/IconCollectionTable';
+import IconCollectionTable from '../../doc/icon/IconCollectionTable';
 import iconData from './iconData';
 
 const IconCollectionTableTest = () => (

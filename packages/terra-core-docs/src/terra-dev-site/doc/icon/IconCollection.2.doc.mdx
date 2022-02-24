@@ -1,0 +1,33 @@
+import { Badge } from 'terra-icon/package.json?dev-site-package';
+// import IconCollectionTable from './IconCollectionTable';
+// import { iconData } from './IconCollectionTable';
+
+<Badge />
+
+# Terra Icon Collection
+
+This handy reference is your guide to all the different icons that come with the `terra-icon` library.
+
+## Using This Reference
+
+### Columns
+
+* **SVG** - The actual icon from the Terra Icon library
+* **Description** - A literal description of the icon's appearance
+* **Meaning** - A list of concepts the icon is recommended to convey
+* **Functions** - Approved uses for the icon
+  * **Action** - Icon can be used to represent an action that can be performed by the user
+  * **Status** - Icon can be used to represent status or state
+  * **Toggle** - Icon can be used for a toggle interaction
+* **Sets/Categories** - List of sets/categories the icon belongs to
+* **Import Names** - List of aliases for icon in Terra. For icons with multiple aliases, use whichever on makes the most sense for your use case
+  * Example: `IconCheckmark` would be imported as `import IconCheckmark from 'terra-icon/lib/icon/IconCheckmark'`
+* **Themable Elements** - A list of shapes within the icon that can be themed using the `color` style attribute
+
+### Interactive Elements
+_This table is static and boring right now. Neato interactions to come._
+
+## Icon Collection
+_Note: The is table is populated with example data. It is not final or complete._
+
+<IconCollectionTable rows={iconData}/>

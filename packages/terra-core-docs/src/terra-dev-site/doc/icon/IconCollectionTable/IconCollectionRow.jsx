@@ -43,7 +43,7 @@ const propTypes = {
   /**
    * A list of elements of the icon that respond to 'color' style attribute
    */
-  themableElements: PropTypes.string.isRequired,
+  themableElements: PropTypes.string,
 };
 
 const IconCollectionRow = ({

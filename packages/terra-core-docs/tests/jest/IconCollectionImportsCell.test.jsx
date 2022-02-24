@@ -1,5 +1,6 @@
 import React from 'react';
-import IconCollectionImportsCell from '../../src/IconCollectionTable/IconCollectionImportsCell';
+import IconCollectionImportsCell from '../../src/terra-dev-site/doc/icon/IconCollectionTable/IconCollectionImportsCell'
+// import IconCollectionImportsCell from '../../src/IconCollectionTable/IconCollectionImportsCell';
 
 const someImportNames = [
   'IconExplosion',

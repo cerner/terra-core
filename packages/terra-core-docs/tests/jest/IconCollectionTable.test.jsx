@@ -1,6 +1,6 @@
 import React from 'react';
-import IconCollectionTable from '../../src/IconCollectionTable';
-import IconCollectionRow from '../../src/IconCollectionTable/IconCollectionRow';
+import IconCollectionTable from '../../src/terra-dev-site/doc/icon/IconCollectionTable';
+import IconCollectionRow from '../../src/terra-dev-site/doc/icon/IconCollectionTable/IconCollectionRow';
 
 import { bareMinimum, twoBareMinimums, bareMaximum } from './iconCollectionData';
 
