@@ -5,23 +5,9 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from '../Image.module.scss';
+import createImage from '../shared/_ImageUtils';
 
 const cx = classNamesBind.bind(styles);
-
-const ImageVariant = {
-  DEFAULT: 'default',
-  ROUNDED: 'rounded',
-  CIRCLE: 'circle',
-  THUMBNAIL: 'thumbnail',
-};
-
-const FitTypes = {
-  COVER: 'cover',
-  SCALEDOWN: 'scale-down',
-  FILL: 'fill',
-  CONTAIN: 'contain',
-  NONE: 'none',
-};
 
 const propTypes = {
   /**
@@ -62,13 +48,11 @@ const propTypes = {
   fit: PropTypes.oneOf(['cover', 'scale-down', 'fill', 'contain', 'none']),
 };
 
-/* eslint-disable react/default-props-match-prop-types */
 const defaultProps = {
   variant: 'default',
   isFluid: false,
   fit: 'fill',
 };
-/* eslint-enable react/default-props-match-prop-types */
 
 class DecorativeImage extends React.Component {
   constructor(props) {
@@ -120,41 +104,16 @@ class DecorativeImage extends React.Component {
     }
   }
 
-  createImage(customProps, imageClasses) {
-    const {
-      src, height, width,
-    } = this.props;
-
-    const additionalParams = customProps;
-    // removes Aria attributes and title from customProps
-    Object.keys(additionalParams).forEach(prop => {
-      if (prop.includes('aria') || prop === 'title') {
-        delete additionalParams[prop];
-      }
-    });
-
-    return (
-      <img
-        {...additionalParams}
-        src={src}
-        role="presentation"
-        alt=""
-        height={height}
-        width={width}
-        onLoad={this.handleOnLoad}
-        onError={this.handleOnError}
-        className={imageClasses}
-        ref={this.ImageRef}
-      />
-    );
-  }
-
   render() {
     const {
       src, variant, isFluid, placeholder, height, width, onLoad, onError, fit, ...customProps
     } = this.props;
 
     const theme = this.context;
+    const alt = '';
+    const { handleOnError } = this.handleOnError;
+    const { handleOnLoad } = this.handleOnLoad;
+    const imageRef = this.ImageRef;
 
     const imageClasses = classNames(
       cx(
@@ -170,6 +129,15 @@ class DecorativeImage extends React.Component {
 
     delete customProps.className;
 
+    // removes Aria attributes and title from customProps
+    Object.keys(customProps).forEach(prop => {
+      if (prop.includes('aria') || prop === 'title' || prop === 'alt') {
+        delete customProps[prop];
+      }
+    });
+
+    const additionalProps = { ...customProps, role: 'presentation' };
+
     if (!this.state.isLoading) {
       objectFitImages(this.ImageRef.current);
     }
@@ -177,16 +145,42 @@ class DecorativeImage extends React.Component {
       if (this.state.isLoading) {
         return (
           <>
-            {this.createImage(customProps, imageClasses)}
+            {
+              createImage(additionalProps, imageClasses, {
+                src,
+                height,
+                width,
+                alt,
+                handleOnError,
+                handleOnLoad,
+                imageRef,
+              })
+            }
             {placeholder}
           </>
         );
       }
 
-      return this.state.isError ? placeholder : this.createImage(customProps, imageClasses);
+      return this.state.isError ? placeholder : createImage(additionalProps, imageClasses, {
+        src,
+        height,
+        width,
+        alt,
+        handleOnError,
+        handleOnLoad,
+        imageRef,
+      });
     }
 
-    return this.createImage(customProps, imageClasses);
+    return createImage(additionalProps, imageClasses, {
+      src,
+      height,
+      width,
+      alt,
+      handleOnError,
+      handleOnLoad,
+      imageRef,
+    });
   }
 }
 
@@ -195,4 +189,3 @@ DecorativeImage.defaultProps = defaultProps;
 DecorativeImage.contextType = ThemeContext;
 
 export default DecorativeImage;
-export { ImageVariant, FitTypes };

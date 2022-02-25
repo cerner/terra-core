@@ -4,7 +4,7 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import DecorativeImage from '../../src/variants/_DecorativeImage';
 
 /* Decorative Image component */
-it('should render a default component with empty attribute', () => {
+it('should render a default component with empty alt attribute', () => {
   const wrapper = shallow(<DecorativeImage src="" alt="default" title="default" />);
   expect(wrapper).toMatchSnapshot();
 });

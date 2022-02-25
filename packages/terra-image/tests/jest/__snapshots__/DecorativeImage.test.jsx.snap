@@ -27,7 +27,7 @@ exports[`correctly applies the theme context className 1`] = `
 </ThemeContextProvider>
 `;
 
-exports[`should render a default component with empty attribute 1`] = `
+exports[`should render a default component with empty alt attribute 1`] = `
 <img
   alt=""
   className="image fill default"

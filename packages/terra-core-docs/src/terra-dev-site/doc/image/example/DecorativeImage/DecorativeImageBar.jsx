@@ -1,6 +1,6 @@
 import React from 'react';
 import { DecorativeImage } from 'terra-image';
-import decorativeBar from '../../assets/decorative.png';
+import decorativeBar from '../../assets/decorative-bar.png';
 
 const DecorativeImageBar = () => (
   <div>
