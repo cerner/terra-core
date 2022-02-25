@@ -4,6 +4,11 @@
 * Added
   * Added docs for Decorative Image
 
+## 1.13.2 - (February 24, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 1.13.1 - (February 15, 2022)
 
 * Changed

@@ -168,6 +168,62 @@ exports[`Notice should render a important notice with text 1`] = `
 </div>
 `;
 
+exports[`Notice should render a important notice with text 2`] = `
+<div
+  className="notice not-supported"
+>
+  <div
+    aria-hidden="true"
+    className="accessory"
+    focusable="false"
+  />
+  <div
+    aria-level="2"
+    className="title"
+    role="heading"
+  >
+    <span>
+      Hazards for Incorrect Usage
+    </span>
+  </div>
+  <div
+    className="children"
+  >
+    <p
+      className="paragraph"
+    >
+      This component was designed and tested according to the documented implementation.
+    </p>
+    <p
+      className="paragraph"
+    >
+      Using the component incorrectly:
+      <ul
+        className="list"
+      >
+        <li>
+          will likely result in improper composition and create accessibility issues
+        </li>
+        <li>
+          may cause erratic or broken behaviors and styles
+        </li>
+        <li>
+          <strong>
+            will not be supported 
+          </strong>
+          or enhanced to allow for incorrect use
+        </li>
+      </ul>
+    </p>
+    <p
+      key=".0"
+    >
+      notice text
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Notice should render a maintenance notice with text 1`] = `
 <div
   className="notice maintenance"

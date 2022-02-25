@@ -1,17 +1,37 @@
 :local {
   .clinical-lowlight-theme {
+    --terra-docs-notice-children-color: #b2b5b6;
+    --terra-docs-notice-code-color: #b2b5b6;
+    --terra-docs-notice-code-text-shadow: 1px 1px #1c2326;
+    --terra-docs-notice-accessory-vertical-align: -0.15rem;
+    --terra-docs-notice-accessory-ms-vertical-align: -0.15rem;
+    // UX Reccomendation (Blue)
     --terra-docs-notice-ux-recommendation-background-color: #1c2e39;
     --terra-docs-notice-ux-recommendation-border-color: #084263;
     --terra-docs-notice-ux-recommendation-title-color: #b2b5b6;
     --terra-docs-notice-ux-recommendation-title-border-color: #004c76;
+    --terra-docs-notice-ux-recommendation-blockquote-background-color: rgba(0, 76, 118, 0.25);
+    --terra-docs-notice-ux-recommendation-blockquote-border-color: #004c76;
+    --terra-docs-notice-ux-recommendation-code-background-color: rgba(208, 234, 249, 0.15);
+    --terra-docs-notice-ux-recommendation-hr-background-color: #004c76;
     --terra-docs-notice-ux-recommendation-pre-border-color: #004c76;
-
+    --terra-docs-notice-ux-recommendation-pre-box-shadow: none;
+    --terra-docs-notice-ux-recommendation-table-zebra-background-color: rgba(208, 234, 249, 0.05);
+    --terra-docs-notice-ux-recommendation-table-cell-border-color: #004c76;
+    // Caution (Yellow)
     --terra-docs-notice-caution-background-color: #3d3c31;
     --terra-docs-notice-caution-border-color: #70593f;
     --terra-docs-notice-caution-title-color: #b2b5b6;
     --terra-docs-notice-caution-title-border-color: #ffb166;
+    --terra-docs-notice-caution-blockquote-background-color: rgba(255, 196, 19, 0.1);
+    --terra-docs-notice-caution-blockquote-border-color: #ffb166;
+    --terra-docs-notice-caution-code-background-color: #282a36;
+    --terra-docs-notice-caution-hr-background-color: #ffb166;
     --terra-docs-notice-caution-pre-border-color: #ffb166;
-
+    --terra-docs-notice-caution-pre-box-shadow: none;
+    --terra-docs-notice-caution-table-zebra-background-color: rgba(255, 196, 19, 0.08);
+    --terra-docs-notice-caution-table-cell-border-color: #856838;
+    // Deprecation (Yellow)
     --terra-docs-notice-deprecation-background-color: #3d3c31;
     --terra-docs-notice-deprecation-border-color: #70593f;
     --terra-docs-notice-deprecation-accessory-background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDggNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2IyYjViNiIgZD0iTTI1LjMgMjUuOWwtNS4yLTUuMnYtOC41Yy4xLS43LS40LTEuMy0xLTEuNC0uNy0uMS0xLjMuNC0xLjQgMVYyMWMwIC41LjIuOS41IDEuMmw1LjMgNS4zYy41LjUgMS4yLjYgMS44LjIuNS0uNC42LTEuMS4zLTEuNi0uMSAwLS4yLS4xLS4zLS4yem03LjItMTVsMS43LTEuN2MuNi0uNi42LTEuNyAwLTIuM2wtMS4xLTEuMWMtLjYtLjYtMS43LS42LTIuMyAwTDI5IDcuNmMtMS41LTEuMS0zLjMtMi01LjEtMi42LS45LS4zLTEuOC0uNS0yLjctLjZWMS42YzAtLjktLjctMS42LTEuNi0xLjZoLTEuNWMtLjkgMC0xLjYuNy0xLjYgMS42djIuN0M3LjIgNS43LjkgMTQuNCAyLjMgMjMuNyAzLjYgMzIgMTAuNyAzOC4xIDE5IDM4LjFjMSAwIDEuOS0uMSAyLjktLjNsLTEuNC0xLjRjLS4yLS4yLS40LS41LS41LS44LS4zIDAtLjcuMS0xIC4xLTguMSAwLTE0LjYtNi41LTE0LjYtMTQuNlMxMC45IDYuNSAxOSA2LjVjMS41IDAgMi45LjIgNC4zLjcgNS45IDEuOCA5LjkgNy4xIDEwLjIgMTMuMi43LS41IDEuNi0uNiAyLjQtLjItLjItMy40LTEuNC02LjYtMy40LTkuM3oiPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZiMTY2IiBkPSJNMzQuOSAyMS44Yy0uMyAwLS42LjEtLjguM2wtMTIgMTJjLS41LjQtLjUgMS4yLS4xIDEuNiAwIDAgMCAuMS4xLjFMMzQgNDcuNmMuNS40IDEuMS40IDEuNiAwbDExLjktMTEuOWMuNS0uNC41LTEuMi4xLTEuNiAwIDAgMC0uMS0uMS0uMUwzNS43IDIyLjJjLS4yLS4yLS41LS40LS44LS40eiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMxQzFGMjEiIGQ9Ik0zNC45IDIyLjlsMTIgMTEuOXYuMkwzNSA0Ni45aC0uMkwyMi45IDM1di0uMmwxMS45LTExLjloLjFtMC0xLjFjLS4zIDAtLjYuMS0uOC4zbC0xMiAxMmMtLjUuNC0uNSAxLjItLjEgMS42IDAgMCAwIC4xLjEuMUwzNCA0Ny42Yy41LjQgMS4xLjQgMS42IDBsMTEuOS0xMS45Yy41LS40LjUtMS4yLjEtMS42IDAgMCAwLS4xLS4xLS4xTDM1LjcgMjIuMmMtLjItLjItLjUtLjQtLjgtLjR6Ij48L3BhdGg+PHBhdGggZmlsbD0iIzFDMUYyMSIgZD0iTTM0IDM5aDJ2MmgtMnYtMnptMC0xMWgydjloLTJ2LTl6Ij48L3BhdGg+PC9zdmc+');
@@ -20,8 +40,15 @@
     --terra-docs-notice-deprecation-title-color: #b2b5b6;
     --terra-docs-notice-deprecation-title-margin-left: 2.42857rem;
     --terra-docs-notice-deprecation-title-border-color: #ffb166;
+    --terra-docs-notice-deprecation-blockquote-background-color: rgba(255, 196, 19, 0.1);
+    --terra-docs-notice-deprecation-blockquote-border-color: #ffb166;
+    --terra-docs-notice-deprecation-code-background-color: #282a36;
+    --terra-docs-notice-deprecation-hr-background-color: #ffb166;
     --terra-docs-notice-deprecation-pre-border-color: #ffb166;
-
+    --terra-docs-notice-deprecation-pre-box-shadow: none;
+    --terra-docs-notice-deprecation-table-zebra-background-color: rgba(255, 196, 19, 0.08);
+    --terra-docs-notice-deprecation-table-cell-border-color: #856838;
+    // Maintenance (Gray)
     --terra-docs-notice-maintenance-background-color: #30373b;
     --terra-docs-notice-maintenance-border-color: #565c60;
     --terra-docs-notice-maintenance-accessory-background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDggNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2IyYjViNiIgZD0iTTMxLjEgMzEuNGExLjUxIDEuNTEgMCAxMS0yLjEgMi4xbC02LjEtNi4xYTMgMyAwIDAxLS41LS43LjMxLjMxIDAgMDAtLjEtLjJjMC0uMS0uMS0uMy0uMS0uNFYxNS4zYTEuNjkgMS42OSAwIDAxMS41LTEuOCAxLjY5IDEuNjkgMCAwMTEuNSAxLjh2MTAuM3ptMTQuMy00LjhhMjEuMjYgMjEuMjYgMCAwMS00LjYgMTMuM0EyMS40MiAyMS40MiAwIDExMjAuOSA1LjRWMmEyIDIgMCAwMTItMmgyYTIgMiAwIDAxMiAydjMuNGExOC42MyAxOC42MyAwIDAxMy40LjcgMjQuMjUgMjQuMjUgMCAwMTYuNCAzLjNsMi4yLTIuMmEyLjA1IDIuMDUgMCAwMTIuOSAwbDEuNCAxLjRhMi4wNSAyLjA1IDAgMDEwIDIuOWwtMi4xIDIuMWEyMiAyMiAwIDAxNC4zIDEzem0tMyAwQTE4LjM0IDE4LjM0IDAgMDAyOS41IDlhMjAuMzIgMjAuMzIgMCAwMC01LjUtLjhBMTguNCAxOC40IDAgMTAzOC40IDM4YTE4LjE2IDE4LjE2IDAgMDA0LTExLjR6Ij48L3BhdGg+PC9zdmc+');
@@ -30,17 +57,44 @@
     --terra-docs-notice-maintenance-title-color: #b2b5b6;
     --terra-docs-notice-maintenance-title-margin-left: 2.14285rem;
     --terra-docs-notice-maintenance-title-border-color: #8b8f90;
+    --terra-docs-notice-maintenance-blockquote-background-color: rgba(232, 232, 233, 0.08);
+    --terra-docs-notice-maintenance-blockquote-border-color: #8b8f90;
+    --terra-docs-notice-maintenance-code-background-color: rgba(232, 232, 233, 0.2);
+    --terra-docs-notice-maintenance-hr-background-color: #8b8f90;
     --terra-docs-notice-maintenance-pre-border-color: #8b8f90;
-
+    --terra-docs-notice-maintenance-pre-box-shadow: none;
+    --terra-docs-notice-maintenance-table-zebra-background-color: rgba(232, 232, 233, 0.08);
+    --terra-docs-notice-maintenance-table-cell-border-color: #565c60;
+    // Important (Green)
     --terra-docs-notice-important-background-color: #232d2c;
     --terra-docs-notice-important-border-color: #2f4d23;
     --terra-docs-notice-important-title-color: #b2b5b6;
     --terra-docs-notice-important-title-border-color: #37651d;
+    --terra-docs-notice-important-blockquote-background-color: rgba(215, 237, 200, 0.1);
+    --terra-docs-notice-important-blockquote-border-color: #37651d;
+    --terra-docs-notice-important-code-background-color: rgba(215, 237, 200, 0.15);
+    --terra-docs-notice-important-hr-background-color: #37651d;
     --terra-docs-notice-important-pre-border-color: #37651d;
-
-    --terra-docs-notice-children-color: #b2b5b6;
-    --terra-docs-notice-pre-box-shadow: none;
-    --terra-docs-notice-accessory-vertical-align: -0.15rem;
-    --terra-docs-notice-accessory-ms-vertical-align: -0.15rem;
+    --terra-docs-notice-important-pre-box-shadow: none;
+    --terra-docs-notice-important-table-zebra-background-color: rgba(215, 237, 200, 0.08);
+    --terra-docs-notice-important-table-cell-border-color: #37651d;
+    // Not Supported
+    --terra-docs-notice-not-supported-background-color: transparent;
+    --terra-docs-notice-not-supported-border-color: #494f53;
+    --terra-docs-notice-not-supported-accessory-background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0iI2ZiNGM0YyIgZD0iTTQ3LjcgMjMuMkwyNC44LjNjLS40LS40LTEuMS0uNC0xLjYgMEwuMyAyMy4yYy0uNC40LS40IDEuMSAwIDEuNmwyMi45IDIyLjljLjQuNCAxLjEuNCAxLjYgMGwyMi45LTIyLjljLjQtLjQuNC0xLjIgMC0xLjZ6Ii8+PHBhdGggZmlsbD0iIzIyMmEyZSIgZD0iTTI3IDM5aC02di02aDZ2NnptMC0xMWgtNlY4aDZ2MjB6Ii8+PC9zdmc+');
+    --terra-docs-notice-not-supported-accessory-height: 1.85714rem;
+    --terra-docs-notice-not-supported-accessory-width: 1.85714rem;
+    --terra-docs-notice-not-supported-title-color: #b2b5b6;
+    --terra-docs-notice-not-supported-title-margin-left: 2.28571rem;
+    --terra-docs-notice-not-supported-title-border-color: #fb4c4c;
+    --terra-docs-notice-not-supported-blockquote-background-color: rgba(63, 70, 74, 0.3);
+    --terra-docs-notice-not-supported-blockquote-border-color: #494f53;
+    --terra-docs-notice-not-supported-code-background-color: #353c40;
+    --terra-docs-notice-not-supported-hr-background-color: #3f464a;
+    --terra-docs-notice-not-supported-children-margin-left: 2.28571rem;
+    --terra-docs-notice-not-supported-pre-border-color: #fb4c4c;
+    --terra-docs-notice-not-supported-pre-box-shadow: inset -1px 1px 0 0 #3f464a, inset -1px -1px 0 0 #3f464a;
+    --terra-docs-notice-not-supported-table-zebra-background-color: rgba(63, 70, 74, 0.3);
+    --terra-docs-notice-not-supported-table-cell-border-color: #494f53;
   }
 }

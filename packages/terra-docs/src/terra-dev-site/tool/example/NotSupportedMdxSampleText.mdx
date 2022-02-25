@@ -1,0 +1,25 @@
+> *-- the 'Not Supported' variant contains the static content shown above, the children content is inserted below here --* 
+
+Consumers should be aware to not create the following situations:  
+
+```diff
+    <div id="incorrect-usage-of-a-component">
+-     <DontDoThis>
+-       Example of Something that is Unsupported if Addded or Used Incorrectly
+-     </DontDoThis>
+      <TerraComponent
+        prop="Example of Component Use"
+      />
+-       <DontRemoveThis>
+-         Example of Something that is Unsupported if Removed or Used Incorrectly
+-       </DontRemoveThis>
+      </TerraComponent>
+    </div>
+```
+
+In this example, adding the `DontDoThis` or removing the `DontRemoveThis` component will break accesibility and all interactions. General tips that reiterate what will reusult in incorrect use include:
+
+* Always do this ...
+* Never do this ...
+
+Consumers should be aware to not create this situation by remembering {ABC} and {XYZ}, include helpful references like [google](https://www.google.com) for more information.
