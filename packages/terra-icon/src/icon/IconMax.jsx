@@ -21,7 +21,7 @@ const SvgIcon = (customProps) => {
 
   const svgString = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M39.5 16L24 0 8.5 16H21v32h6V16z"/></svg>`;
   return (
-    <IconBase {...attributes} svgSource={svgString} > </IconBase>
+    <IconBase {...attributes} encoding="utf8" svgSource={svgString} ></IconBase>
   );
 };
 

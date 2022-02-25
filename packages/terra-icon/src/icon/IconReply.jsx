@@ -6,7 +6,7 @@ const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
   const svgString = `<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="is-bidi"><path d="M0 20.4l14-14V16h9c16.5 0 25 9.9 25 22.2V43c-2.1-10-9.4-17.9-20-18H14v9.4z"/></svg>`;
   return (
-    <IconBase {...attributes} svgSource={svgString} > </IconBase>
+    <IconBase {...attributes} encoding="utf8" svgSource={svgString} ></IconBase>
   );
 };
 

@@ -21,7 +21,7 @@ const SvgIcon = (customProps) => {
 
   const svgString = `<%= icon.svg %>`;
   return (
-    <IconBase {...attributes} svgSource={svgString} > </IconBase>
+    <IconBase {...attributes} encoding="utf8" svgSource={svgString} ></IconBase>
   );
 };
 

@@ -10,6 +10,18 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
+  * Source for the svg file
+  */
+  svgSource: PropTypes.string,
+  /**
+  * Is the icon decorative? Is false by default.
+  */
+  encoding: PropTypes.string,
+  /**
+  * Is the icon decorative? Is false by default.
+  */
+  imageType: PropTypes.string,
+  /**
    * Should the svg mirror when dir="rtl".
    */
   isBidi: PropTypes.bool,
@@ -17,10 +29,6 @@ const propTypes = {
    * Should the SVG rotate.
    */
   isSpin: PropTypes.bool,
-  /**
-   * Child nodes.
-   */
-  children: PropTypes.node,
   /**
    * Height of SVG.
    */
@@ -30,48 +38,30 @@ const propTypes = {
    */
   width: PropTypes.string,
   /**
-   * String that labels the current element. If 'aria-label' is present,
-   * role is set to 'img' and aria-hidden is removed.
-   */
-  ariaLabel: PropTypes.string,
-  /**
    * Focusable attribute. IE 10/11 are focusable without this attribute.
    */
   focusable: PropTypes.string,
-
-  /**
-   * Is the icon decorative? Is false by default.
-   */
-  isDecorative: PropTypes.bool,
-
-  /**
-   * Source for the svg file
-   */
-   svgSource: PropTypes.string
-
 };
 
 const defaultProps = {
+  encoding: 'none',
+  imageType: 'informative',
   isBidi: false,
   isSpin: false,
-  children: null,
   height: '30em',
   width: '30em',
-  ariaLabel: null,
-  focusable: 'false',
-  isDecorative: false
+  focusable: 'false'
 };
 
 const IconBase = ({
+  svgSource,
+  encoding,
+  imageType,
   isBidi,
   isSpin,
-  children,
   height,
   width,
-  ariaLabel,
   focusable,
-  isDecorative,
-  svgSource,
   ...customProps
 }) => {
   const attributes = { ...customProps };
@@ -92,23 +82,48 @@ const IconBase = ({
   attributes.focusable = focusable;
 
   // aria-label is present, remove aria-hidden, set role to img
-  if (ariaLabel) {
-    attributes['aria-label'] = ariaLabel;
-    attributes.role = 'img';
-    attributes['aria-hidden'] = null;
-  } else {
-    attributes['aria-hidden'] = 'true';
-  }
-
+  // if (ariaLabel) {
+  //   attributes['aria-label'] = ariaLabel;
+  //   attributes.role = 'img';
+  //   attributes['aria-hidden'] = null;
+  // } else {
+  //   attributes['aria-hidden'] = 'true';
+  // }
 
   let svgsrc = '';
 
   if (typeof svgSource === 'string' || svgSource instanceof String) {
-    const b64 = Buffer.from(svgSource, 'utf-8').toString('base64');
-    svgsrc = `data:image/svg+xml;base64, ${b64}`;
+    switch (encoding) {
+      case 'utf8':
+      case 'utf-8':
+        const svgsrc_64 = Buffer.from(svgSource, 'utf-8').toString('base64');
+        svgsrc = `data:image/svg+xml;base64, ${svgsrc_64}`;
+        break;
+
+      case 'base64':
+        svgsrc = `data:image/svg+xml;base64, ${svgSource}`;
+        break;
+
+      case 'none':
+      default:
+        svgsrc = svgSource;
+        break;
+    }
   }
 
-  return (<img {...attributes} className={classes} src={svgsrc}></img>);
+  if(imageType === 'decorative'){
+    attributes.alt = '';
+    attributes.role = 'presentation';
+  } else {
+    attributes.role = null;
+
+
+    if(attributes.alt === undefined || attributes.alt === ''){
+      attributes.alt = 'icon';
+    }
+  }
+
+  return <img {...attributes} className={classes} src={svgsrc} ></img>;
 };
 
 IconBase.propTypes = propTypes;
