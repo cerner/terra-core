@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+
 * Added
   * Added new subcomponent `DecorativeImage` to support non-informative image.
 
