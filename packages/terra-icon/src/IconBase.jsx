@@ -48,8 +48,8 @@ const defaultProps = {
   imageType: 'informative',
   isBidi: false,
   isSpin: false,
-  height: '30em',
-  width: '30em',
+  height: '1em',
+  width: '1em',
   focusable: 'false'
 };
 
@@ -77,8 +77,8 @@ const IconBase = ({
     attributes.className,
   );
 
-  attributes.height = height;
-  attributes.width = width;
+  // attributes.height = height;
+  // attributes.width = width;
   attributes.focusable = focusable;
 
   // aria-label is present, remove aria-hidden, set role to img
@@ -123,7 +123,7 @@ const IconBase = ({
     }
   }
 
-  return <img {...attributes} className={classes} src={svgsrc} ></img>;
+  return <img {...attributes} className={classes} src={svgsrc} style={{height, width}} ></img>;
 };
 
 IconBase.propTypes = propTypes;
