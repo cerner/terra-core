@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+* Added
+  * Added new subcomponent `DecorativeImage` to support non-informative image.
+
+* Breaking Change
+  * Removed default value for `alt` prop.
+
 ## 3.35.1 - (January 4, 2022)
 
 * Changed

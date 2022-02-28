@@ -1,6 +1,6 @@
 {
   "name": "terra-image",
-  "main": "lib/Image.js",
+  "main": "lib/index.js",
   "version": "3.35.1",
   "description": "The terra-image component provides styling for visual imagery.",
   "repository": {
