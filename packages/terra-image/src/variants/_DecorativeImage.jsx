@@ -4,8 +4,8 @@ import objectFitImages from 'object-fit-images'; // Added polyfill for IE.
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import styles from './Image.module.scss';
-import createImage from './shared/_ImageUtils';
+import styles from '../Image.module.scss';
+import createImage from '../shared/_ImageUtils';
 
 const cx = classNamesBind.bind(styles);
 
@@ -22,10 +22,6 @@ const propTypes = {
    * Sets the fluid behavior of the image, which is `nonfluid` by default.
    */
   isFluid: PropTypes.bool,
-  /**
-   * The text content that specifies an alternative text for an image.
-   */
-  alt: PropTypes.string.isRequired,
   /**
    * A React element which will be displayed during loading and in case of src load failure.
    */
@@ -58,7 +54,7 @@ const defaultProps = {
   fit: 'fill',
 };
 
-class Image extends React.Component {
+class DecorativeImage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -110,10 +106,11 @@ class Image extends React.Component {
 
   render() {
     const {
-      src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, fit, ...customProps
+      src, variant, isFluid, placeholder, height, width, onLoad, onError, fit, ...customProps
     } = this.props;
 
     const theme = this.context;
+    const alt = '';
     const imageProps = {
       src,
       height,
@@ -137,10 +134,15 @@ class Image extends React.Component {
     );
 
     delete customProps.className;
-    // removes role attribute if the value is set to `presentation` OR `none`
-    if (customProps.role && (customProps.role === 'presentation' || customProps.role === 'none')) {
-      delete customProps.role;
-    }
+
+    // removes Aria attributes and title from customProps
+    Object.keys(customProps).forEach(prop => {
+      if (prop.includes('aria') || prop === 'title' || prop === 'alt') {
+        delete customProps[prop];
+      }
+    });
+
+    const additionalProps = { ...customProps, role: 'presentation' };
 
     if (!this.state.isLoading) {
       objectFitImages(this.ImageRef.current);
@@ -150,22 +152,22 @@ class Image extends React.Component {
         return (
           <>
             {
-              createImage(customProps, imageClasses, imageProps)
+              createImage(additionalProps, imageClasses, imageProps)
             }
             {placeholder}
           </>
         );
       }
 
-      return this.state.isError ? placeholder : createImage(customProps, imageClasses, imageProps);
+      return this.state.isError ? placeholder : createImage(additionalProps, imageClasses, imageProps);
     }
 
-    return createImage(customProps, imageClasses, imageProps);
+    return createImage(additionalProps, imageClasses, imageProps);
   }
 }
 
-Image.propTypes = propTypes;
-Image.defaultProps = defaultProps;
-Image.contextType = ThemeContext;
+DecorativeImage.propTypes = propTypes;
+DecorativeImage.defaultProps = defaultProps;
+DecorativeImage.contextType = ThemeContext;
 
-export default Image;
+export default DecorativeImage;

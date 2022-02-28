@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added docs for `DecorativeImage`
 
 ## 1.13.6 - (May 3, 2022)
 
