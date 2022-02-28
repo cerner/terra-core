@@ -111,9 +111,15 @@ class DecorativeImage extends React.Component {
 
     const theme = this.context;
     const alt = '';
-    const { handleOnError } = this.handleOnError;
-    const { handleOnLoad } = this.handleOnLoad;
-    const imageRef = this.ImageRef;
+    const imageProps = {
+      src,
+      height,
+      width,
+      alt,
+      handleOnError: this.handleOnError,
+      handleOnLoad: this.handleOnLoad,
+      imageRef: this.ImageRef,
+    };
 
     const imageClasses = classNames(
       cx(
@@ -146,41 +152,17 @@ class DecorativeImage extends React.Component {
         return (
           <>
             {
-              createImage(additionalProps, imageClasses, {
-                src,
-                height,
-                width,
-                alt,
-                handleOnError,
-                handleOnLoad,
-                imageRef,
-              })
+              createImage(additionalProps, imageClasses, imageProps)
             }
             {placeholder}
           </>
         );
       }
 
-      return this.state.isError ? placeholder : createImage(additionalProps, imageClasses, {
-        src,
-        height,
-        width,
-        alt,
-        handleOnError,
-        handleOnLoad,
-        imageRef,
-      });
+      return this.state.isError ? placeholder : createImage(additionalProps, imageClasses, imageProps);
     }
 
-    return createImage(additionalProps, imageClasses, {
-      src,
-      height,
-      width,
-      alt,
-      handleOnError,
-      handleOnLoad,
-      imageRef,
-    });
+    return createImage(additionalProps, imageClasses, imageProps);
   }
 }
 

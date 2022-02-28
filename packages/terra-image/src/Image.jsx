@@ -114,9 +114,15 @@ class Image extends React.Component {
     } = this.props;
 
     const theme = this.context;
-    const { handleOnError } = this.handleOnError;
-    const { handleOnLoad } = this.handleOnLoad;
-    const imageRef = this.ImageRef;
+    const imageProps = {
+      src,
+      height,
+      width,
+      alt,
+      handleOnError: this.handleOnError,
+      handleOnLoad: this.handleOnLoad,
+      imageRef: this.ImageRef,
+    };
 
     const imageClasses = classNames(
       cx(
@@ -144,41 +150,17 @@ class Image extends React.Component {
         return (
           <>
             {
-              createImage(customProps, imageClasses, {
-                src,
-                height,
-                width,
-                alt,
-                handleOnError,
-                handleOnLoad,
-                imageRef,
-              })
+              createImage(customProps, imageClasses, imageProps)
             }
             {placeholder}
           </>
         );
       }
 
-      return this.state.isError ? placeholder : createImage(customProps, imageClasses, {
-        src,
-        height,
-        width,
-        alt,
-        handleOnLoad,
-        handleOnError,
-        imageRef,
-      });
+      return this.state.isError ? placeholder : createImage(customProps, imageClasses, imageProps);
     }
 
-    return createImage(customProps, imageClasses, {
-      src,
-      height,
-      width,
-      alt,
-      handleOnError,
-      handleOnLoad,
-      imageRef,
-    });
+    return createImage(customProps, imageClasses, imageProps);
   }
 }
 
