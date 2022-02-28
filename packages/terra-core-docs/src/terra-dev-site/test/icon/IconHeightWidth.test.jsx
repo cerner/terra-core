@@ -11,7 +11,7 @@ const IconHeightWidth = () => (
     <h3>Default</h3>
     <IconAlert />
     <h3>Height and Width are 50px</h3>
-    <IconAlert id="icon-height-50-width-50" height="50" width="50" />
+    <IconAlert id="icon-height-50-width-50" height="50px" width="50px" />
     <h3>Height and Width are 5em</h3>
     <IconAlert id="icon-height-5em-width-5em" height="5em" width="5em" />
     <h3>Container font size is 5em</h3>
