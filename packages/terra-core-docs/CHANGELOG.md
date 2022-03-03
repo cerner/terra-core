@@ -2,7 +2,7 @@
 
 ## Unreleased
 * Added
-  * Added Accessiblity guide for `terra-image`.
+  * Added Accessibility guide for `terra-image`.
   * Added docs for `DecorativeImage`.
 
 * Fixed
