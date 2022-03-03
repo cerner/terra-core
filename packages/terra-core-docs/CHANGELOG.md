@@ -2,7 +2,8 @@
 
 ## Unreleased
 * Added
-  * Added docs for `DecorativeImage`
+  * Added Accessiblity guide for `terra-image`.
+  * Added docs for `DecorativeImage`.
 
 * Fixed
   * Updated broken links in terra-form-select docs.
