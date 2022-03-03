@@ -2,7 +2,8 @@
 
 ## Unreleased
 * Added
-  * Added docs for `DecorativeImage`
+  * Added Accessiblity Guide for `terra-image`.
+  * Added docs for `DecorativeImage`.
 
 ## 1.13.2 - (February 24, 2022)
 
