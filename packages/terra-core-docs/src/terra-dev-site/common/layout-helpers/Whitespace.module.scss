@@ -1,0 +1,48 @@
+/* 
+ * SASS calculation 
+ * based on lineheight of 20px (1.42857) for fontsize of 14px (1rem)
+ */
+@mixin terra-newline-height ($number-of-lines) {
+  height: 1.4285714286em * $number-of-lines;
+}
+
+:local {
+  .whitespace {
+    display: block;
+    margin: 0;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .newline-1 {
+    @include terra-newline-height(1);
+  }
+
+  .newline-2 {
+    @include terra-newline-height(2);
+  }
+
+  .newline-3 {
+    @include terra-newline-height(3);
+  }
+
+  .newline-4 {
+    @include terra-newline-height(4);
+  }
+
+  .newline-5 {
+    @include terra-newline-height(5);
+  }
+
+  .newline-6 {
+    @include terra-newline-height(6);
+  }
+
+  .newline-7 {
+    @include terra-newline-height(7);
+  }
+
+  .newline-8 {
+    @include terra-newline-height(8);
+  }
+}
