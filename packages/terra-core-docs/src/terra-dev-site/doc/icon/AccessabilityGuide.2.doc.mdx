@@ -1,8 +1,8 @@
 import { Notice } from "@cerner/terra-docs";
 import Whitespace from "../../common/layout-helpers/Whitespace";
 import { Badge } from 'terra-icon/package.json?dev-site-package';
-import MeaningfulIcon from './example/MeaningfulIIcon';
-import DecorativeIcon from './example/DecorativeIcon';
+import MeaningfulIconExample from './example/MeaningfulIconExample?dev-site-example';
+import DecorativeIconExample from './example/DecorativeIconExample?dev-site-example';
 
 <Badge />
 
@@ -11,6 +11,8 @@ import DecorativeIcon from './example/DecorativeIcon';
 <Notice variant="important" ariaLevel="2">
 
 Accessibility of icons is important because icons are ubiquitous. They can convey visual meaning or be used as a decorative or supportive element in a UI design and are an essential tool for creating intuitive user experiences that are appropriate for all languages. However, **if implemented improperly or without alternative content, they are not understood natively by everyone**.
+
+</Notice>
 
 Since icons are images, they are not inherently accessible to all users, especially those with significantly impaired vision or blindness. Therefore, interface **icons must have alternative content**.
 
@@ -22,7 +24,7 @@ It is common for interfaces to use multiples of the same icon on a screen. Devel
 
 In addition, people who use only their voice to interact with technology also rely upon consistent alternative content behind the icons to ensure they can interact with controls.
 
-</Notice>
+
 
 <Whitespace />
 
@@ -32,7 +34,7 @@ In addition, people who use only their voice to interact with technology also re
 
 Icons that convey information **must have alternative text in code** to ensure that assistive technologies pass the icon's meaning to the user.
 
-<MeaningfulIcon />
+<MeaningfulIconExample/>
 
 In this example, the plus (+) icon is meaningful.
 
@@ -48,7 +50,7 @@ In this example, the screen reader would say, ”Add Clinical Note. Button.” T
 
 In decorative use, an icon provides no additional information or context. Meaning that, without the icon, the user would still know the meaning and purpose of the button.
 
-<DecorativeIcon/>
+<DecorativeIconExample/>
 
 The plus (+) icon, in this case, is purely decorative. It supplements the button's text label, which informs the user of the element's purpose.
 
