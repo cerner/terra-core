@@ -1,16 +1,26 @@
-// import { Badge } from "@cerner/terra-pills/package.json?dev-site-package";
 import { Notice } from "@cerner/terra-docs";
 import Whitespace from "../../common/layout-helpers/Whitespace";
+import { Badge } from 'terra-icon/package.json?dev-site-package';
+import MeaningfulIcon from './example/MeaningfulIIcon';
+import DecorativeIcon from './example/DecorativeIcon';
 
 <Badge />
 
-# Accessibility Guide for Terra {Component Name}
+# Accessibility Guide for Terra Icon
 
 <Notice variant="important" ariaLevel="2">
 
-1. **Summarize why this is important** for this component, the main purpose should be to give the reader the TLDR on big things to know.
-2. Be sure to include **bolding around the **important parts\*\* in each of these points.
-3. Always include usually 2-3 points if possible, but **no more than 5-6 if possible**, and keep them brief. Cite reference links as needed. [<sub>[1]</sub>](/components/terra-clinical-header/clinical-header/accessibility-guide#linked-references)
+Accessibility of icons is important because icons are ubiquitous. They can convey visual meaning or be used as a decorative or supportive element in a UI design and are an essential tool for creating intuitive user experiences that are appropriate for all languages. However, **if implemented improperly or without alternative content, they are not understood natively by everyone**.
+
+Since icons are images, they are not inherently accessible to all users, especially those with significantly impaired vision or blindness. Therefore, interface **icons must have alternative content**.
+
+Screen readers convey alternative content to users who have difficulty interpreting icons. Speech input devices also use alternative content to target specific icons.
+
+It is common for interfaces to use multiples of the same icon on a screen. Development and content teams must consider this use case to ensure all users can predictably understand the icon's purpose.
+
+**Users expect identical icons to perform the same function**. Similarly, screen reader users expect their software to identify identical icons consistently. Therefore, failure to provide consistent identification (visual or alternative content) can cause problems for all users.
+
+In addition, people who use only their voice to interact with technology also rely upon consistent alternative content behind the icons to ensure they can interact with controls.
 
 </Notice>
 
@@ -18,118 +28,58 @@ import Whitespace from "../../common/layout-helpers/Whitespace";
 
 ## Accessibility Considerations:
 
+### Meaningful Use of Icons
+
+Icons that convey information **must have alternative text in code** to ensure that assistive technologies pass the icon's meaning to the user.
+
+<MeaningfulIcon />
+
+In this example, the plus (+) icon is meaningful.
+
+Although the icon is visually related to “Clinical Note,” no text supports its function to “add” something. Therefore, the icon&apos;s code must include `alt="Add"` to adequately convey this to a screen reader user. The screen reader would read the icon&apos;s alternative text, followed by the button&apos;s text label. In all, the user would hear, ”Add Clinical Note."
+
+#### Considerations for Meaningful Icons Used Within Components
+
+This example shows an icon used within a button. A button element receives visual focus when navigating with a keyboard. When a screen reader announces this element's focus, it reads the icon's alternative text, the button's label, and its role.
+
+In this example, the screen reader would say, ”Add Clinical Note. Button.” The user would also expect to hear instructions for interacting with the button (e.g., pressing the `Enter` key or `Space`).
+
+### Decorative Use of Icons
+
+In decorative use, an icon provides no additional information or context. Meaning that, without the icon, the user would still know the meaning and purpose of the button.
+
+<DecorativeIcon/>
+
+The plus (+) icon, in this case, is purely decorative. It supplements the button's text label, which informs the user of the element's purpose.
+
+Since the icon is decorative, its code must feature `alt=""` to ensure screen readers do not announce the icon's presence. For example, if this icon had `alt="Add"` in its code, a screen reader user would hear something like, "Add _Add_ Clinical Note." This is not only redundant but adds cognitive friction and possible confusion.
+
 ### Code Considerations
 
-Intro paragraph for Code Considerations.
-
-Include as many level 4 section headers as needed.
-
-- If the sections are prioritized, than use numbering: e.g. `#### 1. Most Important` `#### 2. Second Most Important`
-- If the sections are A or B options, append "recommended" to the title: e.g. `#### 1. Concept Title _(recommended)_` `#### 2. Concept Title`
-- Appending "always" and "as needed" to the title if something is critical to note: e.g. `#### Concept Title _(always)_` `#### 2. Concept Title _(as needed)_`
+- Appropriately code each icon as being meaningful or decorative. Ensure each meaningful icon has alternative text provided by the content creator.
+- Do not overwrite theme colors unless UX provides custom colors. All custom colors must pass WCAG 2.1 color accessibility requirements.
 
 <Whitespace />
-
-#### {title of important concept}
-
-Add text or list of details, perhaps include a notices component with code example.
-
-> | _Bad_              | _Good_              |
-> | ------------------ | ------------------- |
-> | Show something bad | Show something good |
-
-#### {title of important concept} _(recommended)_
-
-Add text or list of details, perhaps include a notices component with code example.
-
-<Whitespace newline={4} />
 
 ### Content Considerations
 
-Sample intro paragraph: As authors create text, choosing words and phrases for {component name} — the content itself is also a very important factor in ensuring proper accessibility in addition to the coding techniques listed above.
-
-<Whitespace /> (if needed)
-
-#### {title of important concept}
-
-Add text or list of details, perhaps include a notices component with code example.
-
-<Whitespace /> (if needed)
-
-#### Additional Writing Resources and Content Strategies
-
-- link, list item 1
-- link, list item 2
-- link, list item 3
-
-<Whitespace newline={4} />
-
-## Usability Expectations:
-
-### Interaction Details
-
-- link, list item 1
-- link, list item 2
-- link, list item 3
-
-### Keyboard Navigation
-
-Filter Pills will have the following keyboard navigation expectations:
-
-| Key/Sequence | Description             |
-| ------------ | ----------------------- |
-| **Key**      | description of behavior |
-| **Key**      | description of behavior |
-| **Key**      | description of behavior |
-| **Key**      | description of behavior |
-
-## Concerns & Hazards:
-
-### Incorrect Use
-
-Use this section only as needed to indicate critical problems if something is done incorrectly, or to warn authors against unsupported scenarios
-If will have critical affects: consider including a bad example with the "not-supported" notices component.
-
-<Whitespace newline={4} />
-
-## Support Compliance:
-
-### WCAG Resources
-
-#### Success Criteria
-
-_{Component name} **must** meet the following success criteria:_
-
-- [**1.3.1 Info and Relationships**](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html). - The intent of this Success Criterion is to ensure that information and relationships that are implied by visual or auditory formatting are preserved when the presentation format changes. For example, the presentation format changes when the content is read by a screen reader.
-- [**0.0.0. Criteria Name**](https://www.link-to-criteria.html) - copy main paragraph text for the criteria.
-
-#### Related or Additional Supporting Criteria
-
-_Apart from the above criteria, the following criteria are related or support the primary success criteria:_
-
-- [**0.0.0. Criteria Name**](https://www.link-to-criteria.html) - copy main paragraph text for the criteria.
-- [**0.0.0. Criteria Name**](https://www.link-to-criteria.html) - copy main paragraph text for the criteria.
+- Specify **every** icon instance as meaningful or decorative. Provide developers with clear and concise alternative text for meaningful icons that accurately reflect the icon's meaning or purpose.
+- While some icons are ubiquitous and generally intuitive (e.g., printer icon), it is best to use words with icons.
+- Icon meaning must be consistent throughout the product. For example, a plus (+) icon must always represent “add” functionality. In addition, if multiples of the same icon are in [repeated controls on the same page](https://adrianroselli.com/2019/06/group-labels-do-not-guarantee-uniquity.html), the combination of alternative text and text label must be [unique](https://fae.disability.illinois.edu/rulesets/CONTROL_10/) (e.g., “Add Blood Pressure” and “Add Temperature”).
+- Colors for icons are predefined in each of Terra's visual themes. When icon colors require customization, they must meet WCAG Success Criteria for [1.4.3 Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html), which is a 3:1 contrast ratio. Ensure icon colors have sufficient contrast against background colors with the [Colour Contrast Analyzer](https://www.tpgi.com/color-contrast-checker/).
+- Use color to enhance, not convey, icon meaning. For example, changing an icon's color from green to red to indicate a status change would fail accessibility requirements if no words or symbols were associated with the icon.
 
 <Whitespace />
 
-### Supported Features & Technology
+## Support Compliance
 
-- Keyboard Interactions
-- JAWS Support with Chrome (PC)
-- NVDA Support with Chrome (PC)
-- VoiceOver Support with Chrome, Safari (MAC)
-- Mobile Touch Interactions with Screen Reader assistive technology
-- Speech Input Interactions with assistive technology
+Terra is committed to ensuring its components provide maximum possible accessibility. However, using Terra components will not automatically make your product accessible. At most, consuming this component accounts for 33% of a product’s accessibility — the rest is up to development teams to implement.
 
-### Partial Support & Requiring Further Enhancement
+This component has **[known / no known]** accessibility failures. If you find accessibility bugs or gaps, please [report these issues on Github](https://github.com/cerner/terra-core/issues/new/choose).
 
-- None identified
-- [Report a problem with this component on **GitHub**](https://github.com/cerner/terra-{repo}/issues/new/choose)
+#### Success Criteria
 
-_For more information about Accessibility Support with Terra — go to [Component Standards: Accessibility (A11y)](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#accessibility-a11y)._
+_Icon **must** meet the following success criteria:_
 
-<Whitespace newline={4} />
-
-## Linked References:
-
-1. Author-Lastname, Firstname (01 January 2000). ["Title"](https://www.link.com). Site. (additional information). Retrieved 01 January 2022.
+- [**1.3.1 Info and Relationships**](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html). - The intent of this Success Criterion is to ensure that information and relationships that are implied by visual or auditory formatting are preserved when the presentation format changes. For example, the presentation format changes when the content is read by a screen reader.
+- [**0.0.0. Criteria Name**](https://www.link-to-criteria.html) - copy main paragraph text for the criteria.
