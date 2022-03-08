@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.13.3 - (March 8, 2022)
+
 * Fixed
   * Updated broken links in terra-form-select docs.
 
