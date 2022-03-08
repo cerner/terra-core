@@ -10,6 +10,10 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
+ * String that labels the current element. 
+ */
+  title: PropTypes.string,
+  /**
    * Should the svg mirror when dir="rtl".
    */
   isBidi: PropTypes.bool,
@@ -30,11 +34,6 @@ const propTypes = {
    */
   width: PropTypes.string,
   /**
-   * String that labels the current element. If 'aria-label' is present,
-   * role is set to 'img' and aria-hidden is removed.
-   */
-  ariaLabel: PropTypes.string,
-  /**
    * Focusable attribute. IE 10/11 are focusable without this attribute.
    */
   focusable: PropTypes.string,
@@ -46,7 +45,6 @@ const defaultProps = {
   children: null,
   height: '1em',
   width: '1em',
-  ariaLabel: null,
   focusable: 'false',
 };
 
@@ -56,7 +54,7 @@ const IconBase = ({
   children,
   height,
   width,
-  ariaLabel,
+  title,
   focusable,
   ...customProps
 }) => {
@@ -72,21 +70,25 @@ const IconBase = ({
     ),
     attributes.className,
   );
-
-  // aria-label is present, remove aria-hidden, set role to img
-  if (ariaLabel) {
-    attributes['aria-label'] = ariaLabel;
-    attributes.role = 'img';
-    attributes['aria-hidden'] = null;
-  } else {
-    attributes['aria-hidden'] = 'true';
-  }
-
+  
+  attributes.role = 'img';
   attributes.height = height;
   attributes.width = width;
   attributes.focusable = focusable;
+  attributes.title = title;
+  
+  const svgTitle = React.createElement('title', {}, title);
+  const svgChildren = new Array (svgTitle).concat(children);
 
-  return <svg {...attributes} className={classes}>{children}</svg>;
+  // if(Array.isArray(children)){
+  //   svgChildren = svgChildren.concat(children);
+  // } else {
+  //   svgChildren.push(children); 
+  // }
+  
+  console.log(svgChildren);
+
+  return <svg {...attributes} className={classes}>{svgChildren}</svg>;
 };
 
 IconBase.propTypes = propTypes;
