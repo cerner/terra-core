@@ -70,6 +70,17 @@ const IconBase = ({
     ),
     attributes.className,
   );
+
+  // aria-label is present, remove aria-hidden, set role to img
+  // if (ariaLabel) {
+    attributes['aria-label'] = title;
+    attributes.role = 'img';
+    attributes['aria-hidden'] = null;
+  // } else {
+    attributes['aria-hidden'] = 'true';
+  // }
+
+  attributes.alt = title;
   
   attributes.role = 'img';
   attributes.height = height;
