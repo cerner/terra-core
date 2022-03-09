@@ -10,9 +10,9 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
- * String that labels the current element. 
- */
-  title: PropTypes.string,
+  * String that labels the current element. 
+  */
+  title: PropTypes.string.isRequired,
   /**
    * Should the svg mirror when dir="rtl".
    */
@@ -75,18 +75,9 @@ const IconBase = ({
   attributes.height = height;
   attributes.width = width;
   attributes.focusable = focusable;
-  attributes.title = title;
   
   const svgTitle = React.createElement('title', {}, title);
   const svgChildren = new Array (svgTitle).concat(children);
-
-  // if(Array.isArray(children)){
-  //   svgChildren = svgChildren.concat(children);
-  // } else {
-  //   svgChildren.push(children); 
-  // }
-  
-  console.log(svgChildren);
 
   return <svg {...attributes} className={classes}>{svgChildren}</svg>;
 };
