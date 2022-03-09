@@ -80,6 +80,7 @@ const IconBase = ({
   const svgChildren = new Array (svgTitle).concat(children);
 
   return <svg {...attributes} className={classes}>{svgChildren}</svg>;
+  // return <svg {...attributes} className={classes}>{children}</svg>;
 };
 
 IconBase.propTypes = propTypes;
