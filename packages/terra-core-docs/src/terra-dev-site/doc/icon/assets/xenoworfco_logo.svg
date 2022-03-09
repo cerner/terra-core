@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient18445">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop18443" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient18445"
+       id="linearGradient18447"
+       x1="56.140516"
+       y1="62.153088"
+       x2="129.7317"
+       y2="62.153088"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="layer1">
+    <rect
+       style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.712;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect9891"
+       width="52.460361"
+       height="16.626215"
+       x="54.938805"
+       y="79.206886" />
+    <ellipse
+       style="fill:#ff0000;fill-rule:evenodd;stroke-width:0.712;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path9917"
+       cx="79.151268"
+       cy="72.873077"
+       rx="15.334567"
+       ry="15.042766" />
+    <path
+       style="fill:#ffff00;fill-rule:evenodd;stroke:#000000;stroke-opacity:1;stroke-width:2.89133862;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path9941"
+       d="m 190.46926,602.63229 -29.654,-3.86316 -19.99368,22.23818 -5.48952,-29.39642 -27.32814,-12.14314 26.26129,-14.30483 3.10396,-29.74305 21.71988,20.55554 29.2465,-6.23907 -12.83767,27.00885 z"
+       transform="matrix(0.26458333,0,0,0.26458333,35.354783,-65.438609)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.93889px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="54.112656"
+       y="102.44228"
+       id="text10905"><tspan
+         id="tspan10903"
+         style="font-style:italic;font-size:4.93889px;stroke-width:0.264583"
+         x="54.112656"
+         y="102.44228">Inventing the future, today</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.8041px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="61.74897"
+       y="64.669678"
+       id="text1287"
+       transform="scale(0.92637411,1.0794775)"><tspan
+         id="tspan1285"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.8041px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="61.74897"
+         y="64.669678">Xenoworf Co.</tspan></text>
+  </g>
+</svg>
