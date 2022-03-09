@@ -8,19 +8,19 @@ import styles from './IconDocCommon.module.scss';
 const cx = classNames.bind(styles);
 const className = cx('example');
 
-const MeaningfulIconExamples = () => (
+const InformativeIconExamples = () => (
   <>
-    <p className={className}>
+    <div className={className}>
       <IconManufacturer title="Manufactured by" />
       &nbsp;
       2800 Rock Creek Pkwy Kansas City, MO 64117
-    </p>
-    <a href="https://example.com/" target="_blank" rel="noreferrer" className={className}>
+    </div>
+    <div className={className}>
       <IconAnnouncement title="Announcement" height="2em" width="2em" />
       {' '}
       Facilities will closed on Monday.
-    </a>
+    </div>
   </>
 );
 
-export default MeaningfulIconExamples;
+export default InformativeIconExamples;

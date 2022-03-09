@@ -1,18 +1,19 @@
 import { Notice } from "@cerner/terra-docs";
 import Whitespace from "../../common/layout-helpers/Whitespace";
 import { Badge } from 'terra-icon/package.json?dev-site-package';
+
+<!-- Examples -->
 import DecorativeIconExamples from './example/DecorativeIconExamples?dev-site-example';
-import MeaningfulIconExamples from './example/MeaningfulIconExamples?dev-site-example';
-import MeaningfulIconGroupExample from './example/MeaningfulIconGroupExample?dev-site-example';
-import IconEdit from 'terra-icon/lib/icon/IconEdit';
+import GroupOfIconsExample from './example/GroupOfIconsExample?dev-site-example';
+import InformativeIconExamples from './example/InformativeIconExamples?dev-site-example';
+import FunctionalIconExample from './example/FunctionalIconExample?dev-site-example';
 
-import IconAudio from 'terra-icon/lib/icon/IconAudio';
-import Spacer from 'terra-spacer';
-
+<!-- Icons used in the examples, but also I want to use them in this doc. -->
 import IconManufacturer from 'terra-icon/lib/icon/IconManufacturer';
 import IconAnnouncement from 'terra-icon/lib/icon/IconAnnouncement';
-import logoWithText from './assets/xenoworfco_logo.svg';
-import Image from 'terra-image';
+import IconTile from 'terra-icon/lib/icon/IconTile';
+import IconList from 'terra-icon/lib/icon/IconList';
+import IconTreemap from 'terra-icon/lib/icon/IconTreemap';
 
 <Badge />
 
@@ -34,34 +35,44 @@ It is common for interfaces to use multiples of the same icon on a screen. Devel
 
 In addition, people who use only their voice to interact with technology also rely upon consistent alternative content behind the icons to ensure they can interact with controls.
 
-
-
 <Whitespace />
 
 ## Accessibility Considerations:
 
-### Meaningful Use of Icons
+### Meaningful Icons
+
+#### Informative Icons
 
 Icons that convey information **must have alternative text in code** to ensure that assistive technologies pass the icon's meaning to the user.
 
-<MeaningfulIconExamples/>
+<InformativeIconExamples/>
 
-In this example the factory icon (<IconManufacturer/>) and announcement icon (<IconAnnouncement/>) are both meaningful. The factory icon has the meaning that _this text is an address_. The announcement icon has the meaning that _this text is an announcement_. However, neither icon conveys that meaning to users who cannot see them. Therefore, both icons code must include `alt="<alternative text>"` to adequately convey their meaning to a screen reader user. The factory icon should have `alt="Address"` and the announcement icon should have `alt="Announcement"`. With these text alturnatives added, screen reader users will hear _"&lt;Text Alternative&gt; &lt;Text&gt_":
+In this example the factory icon (<IconManufacturer/>) and announcement icon (<IconAnnouncement/>) are both informative. The factory icon has the meaning that _this text is an address_. The announcement icon has the meaning that _this text is an announcement_. However, neither icon conveys that meaning to users who cannot see them. Therefore, both icons code must include `alt="<alternative text>"` to adequately convey their meaning to a screen reader user. The factory icon should have `alt="Address"` and the announcement icon should have `alt="Announcement"`. With these text alturnatives added, screen reader users will hear _"&lt;Text Alternative&gt; &lt;Text&gt_":
 
 <p><em>"Address 2800 Rock Creek Pkwy Kansas City, MO 64117"</em></p>
 <p><em>"Announcement Facilities will closed on Monday"</em></p>
 
-#### Meaningful Use of Groups of Icons
+#### Functional Icons
+
+Icons that perform some operation, like an icon taht is part of a hyperlink or a button, are said to be functional icons. Functional icons, like informative icons, **must have alternative text in code** to ensure that assistive technologies pass the icon's meaning to the user.
+
+<FunctionalIconExample/>
+
+In the example above, links to view a folder in three different ways are given: as a list (<IconList/>), as tiles (<IconTile/>), and as a tree map (<IconTreemap/>). With the title provided to each icon, the user will hear:
+
+<p><em>"View folder as, link, List view, link, Tile View, link, Treemap View"</em></p>
+
+#### Groups of Icons
 
 Sometimes icons only have meaning in the context of other icons. Here is one example where multiple icons are used to create a single five-star rating system:
 
-<MeaningfulIconGroupExample/>
+<GroupOfIconsExample/>
 
 One technique to make groups of images accessible is show above - to give the first image in the group a meaning but mark the other images as presentationsl (so that they will be ingored by screen readers). This technique results in the user hearing:
 
 _"Rating: Three and a half stars out of five"_
 
-#### Meaningful Use of Icons Containing Text
+#### Icons Containing Text
 
 Terra does not provide Icons containig text, but you might encounter such a scenario. One example found commonly is a company logo that includes the company's name in the logo graphic. For more information see https://www.w3.org/WAI/tutorials/images/textual/.
 
