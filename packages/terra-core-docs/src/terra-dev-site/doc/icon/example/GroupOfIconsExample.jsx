@@ -9,7 +9,7 @@ import styles from './IconDocCommon.module.scss';
 const cx = classNames.bind(styles);
 const className = cx('example');
 
-const MeaningfulIconGroupExample = () => (
+const GroupOfIconsExample = () => (
   <dl className={className}>
     <dt>Rating:</dt>
     <dd>
@@ -22,4 +22,4 @@ const MeaningfulIconGroupExample = () => (
   </dl>
 );
 
-export default MeaningfulIconGroupExample;
+export default GroupOfIconsExample;
