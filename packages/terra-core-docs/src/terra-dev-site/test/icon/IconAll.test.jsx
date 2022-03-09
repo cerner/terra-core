@@ -7,314 +7,314 @@ const cx = classNames.bind(styles);
 
 const IconAll = () => (
   <div>
-    <Icon.IconAbnormal className={cx(['icon'])} />
-    <Icon.IconAbnormalLowLight className={cx(['icon'])} />
-    <Icon.IconAdd className={cx(['icon'])} />
-    <Icon.IconAddPerson className={cx(['icon'])} />
-    <Icon.IconAlert className={cx(['icon'])} />
-    <Icon.IconAlertLowLight className={cx(['icon'])} />
-    <Icon.IconAllergy className={cx(['icon'])} />
-    <Icon.IconAnalytics className={cx(['icon'])} />
-    <Icon.IconAnnouncement className={cx(['icon'])} />
-    <Icon.IconArchive className={cx(['icon'])} />
-    <Icon.IconAttachment className={cx(['icon'])} />
-    <Icon.IconAudio className={cx(['icon'])} />
-    <Icon.IconAutoText className={cx(['icon'])} />
-    <Icon.IconAvailable className={cx(['icon'])} />
-    <Icon.IconAway className={cx(['icon'])} />
-    <Icon.IconBedAssigned className={cx(['icon'])} />
-    <Icon.IconBedAssignedLowLight className={cx(['icon'])} />
-    <Icon.IconBedRequested className={cx(['icon'])} />
-    <Icon.IconBluetooth className={cx(['icon'])} />
-    <Icon.IconBluetoothSlash className={cx(['icon'])} />
-    <Icon.IconBookmark className={cx(['icon'])} />
-    <Icon.IconBriefcase className={cx(['icon'])} />
-    <Icon.IconBrokenImage className={cx(['icon'])} />
-    <Icon.IconBrokenLinkUnlink className={cx(['icon'])} />
-    <Icon.IconBusy className={cx(['icon'])} />
-    <Icon.IconCalculator className={cx(['icon'])} />
-    <Icon.IconCalendar className={cx(['icon'])} />
-    <Icon.IconCamera className={cx(['icon'])} />
-    <Icon.IconCancel className={cx(['icon'])} />
-    <Icon.IconCaretDown className={cx(['icon'])} />
-    <Icon.IconCaretLeft className={cx(['icon'])} />
-    <Icon.IconCaretRight className={cx(['icon'])} />
-    <Icon.IconCaretUp className={cx(['icon'])} />
-    <Icon.IconCatalogueNumber className={cx(['icon'])} />
-    <Icon.IconCaution className={cx(['icon'])} />
-    <Icon.IconChecklist className={cx(['icon'])} />
-    <Icon.IconCheckmark className={cx(['icon'])} />
-    <Icon.IconChevron className={cx(['icon'])} />
-    <Icon.IconChevronDown className={cx(['icon'])} />
-    <Icon.IconChevronLeft className={cx(['icon'])} />
-    <Icon.IconChevronRight className={cx(['icon'])} />
-    <Icon.IconChevronUp className={cx(['icon'])} />
-    <Icon.IconCircleLinesSymbol className={cx(['icon'])} />
-    <Icon.IconCircleSymbol className={cx(['icon'])} />
-    <Icon.IconCircleSymbolLight className={cx(['icon'])} />
-    <Icon.IconClear className={cx(['icon'])} />
-    <Icon.IconClipboard className={cx(['icon'])} />
-    <Icon.IconClock className={cx(['icon'])} />
-    <Icon.IconClose className={cx(['icon'])} />
-    <Icon.IconCollapseRow className={cx(['icon'])} />
-    <Icon.IconComment className={cx(['icon'])} />
-    <Icon.IconCommit className={cx(['icon'])} />
-    <Icon.IconComplete className={cx(['icon'])} />
-    <Icon.IconCompose className={cx(['icon'])} />
-    <Icon.IconConfidential className={cx(['icon'])} />
-    <Icon.IconConsultInstructionsForUse className={cx(['icon'])} />
-    <Icon.IconCritical className={cx(['icon'])} />
-    <Icon.IconCriticalInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconCriticalInverseLowLight className={cx(['icon'])} />
-    <Icon.IconCriticalLowLight className={cx(['icon'])} />
-    <Icon.IconDateOfManufacture className={cx(['icon'])} />
-    <Icon.IconDevice className={cx(['icon'])} />
-    <Icon.IconDeviceAlert className={cx(['icon'])} />
-    <Icon.IconDeviceAlertLowLight className={cx(['icon'])} />
-    <Icon.IconDeviceCheck className={cx(['icon'])} />
-    <Icon.IconDeviceCheckLowLight className={cx(['icon'])} />
-    <Icon.IconDiamond className={cx(['icon'])} />
-    <Icon.IconDiamondLowLight className={cx(['icon'])} />
-    <Icon.IconDiamondSymbol className={cx(['icon'])} />
-    <Icon.IconDiamondSymbolLight className={cx(['icon'])} />
-    <Icon.IconDischargeComingDue className={cx(['icon'])} />
-    <Icon.IconDischargeComingDueLowLight className={cx(['icon'])} />
-    <Icon.IconDischargeComplete className={cx(['icon'])} />
-    <Icon.IconDischargeCompleteLowLight className={cx(['icon'])} />
-    <Icon.IconDischargeOverDue className={cx(['icon'])} />
-    <Icon.IconDischargeOverDueLowLight className={cx(['icon'])} />
-    <Icon.IconDocumentPlus className={cx(['icon'])} />
-    <Icon.IconDocuments className={cx(['icon'])} />
-    <Icon.IconDoNotDisturb className={cx(['icon'])} />
-    <Icon.IconDoorOpen className={cx(['icon'])} />
-    <Icon.IconDoubleChevronLeft className={cx(['icon'])} />
-    <Icon.IconDoubleChevronRight className={cx(['icon'])} />
-    <Icon.IconDown className={cx(['icon'])} />
-    <Icon.IconDownload className={cx(['icon'])} />
-    <Icon.IconDrugDrug className={cx(['icon'])} />
-    <Icon.IconDrugDrugLowLight className={cx(['icon'])} />
-    <Icon.IconDue className={cx(['icon'])} />
-    <Icon.IconDueSoon className={cx(['icon'])} />
-    <Icon.IconDueSoonLowLight className={cx(['icon'])} />
-    <Icon.IconEcRep className={cx(['icon'])} />
-    <Icon.IconEdit className={cx(['icon'])} />
-    <Icon.IconEllipses className={cx(['icon'])} />
-    <Icon.IconEnvelope className={cx(['icon'])} />
-    <Icon.IconEnvelopeFill className={cx(['icon'])} />
-    <Icon.IconError className={cx(['icon'])} />
-    <Icon.IconErrorDark className={cx(['icon'])} />
-    <Icon.IconErrorLowLight className={cx(['icon'])} />
-    <Icon.IconExclamation className={cx(['icon'])} />
-    <Icon.IconExpandLess className={cx(['icon'])} />
-    <Icon.IconExpandMore className={cx(['icon'])} />
-    <Icon.IconExpandRow className={cx(['icon'])} />
-    <Icon.IconExtensions className={cx(['icon'])} />
-    <Icon.IconExternalLink className={cx(['icon'])} />
-    <Icon.IconFeatured className={cx(['icon'])} />
-    <Icon.IconFeaturedOff className={cx(['icon'])} />
-    <Icon.IconFeaturedOutline className={cx(['icon'])} />
-    <Icon.IconFeaturedOutlineYellow className={cx(['icon'])} />
-    <Icon.IconFirst className={cx(['icon'])} />
-    <Icon.IconFitHeight className={cx(['icon'])} />
-    <Icon.IconFitScale className={cx(['icon'])} />
-    <Icon.IconFitWidth className={cx(['icon'])} />
-    <Icon.IconFlag className={cx(['icon'])} />
-    <Icon.IconFlipHorizontal className={cx(['icon'])} />
-    <Icon.IconFlipVertical className={cx(['icon'])} />
-    <Icon.IconFlowsheet className={cx(['icon'])} />
-    <Icon.IconFolder className={cx(['icon'])} />
-    <Icon.IconForward className={cx(['icon'])} />
-    <Icon.IconFunnel className={cx(['icon'])} />
-    <Icon.IconGapChecking className={cx(['icon'])} />
-    <Icon.IconGlasses className={cx(['icon'])} />
-    <Icon.IconGroup className={cx(['icon'])} />
-    <Icon.IconHalfRating className={cx(['icon'])} />
-    <Icon.IconHazardLow className={cx(['icon'])} />
-    <Icon.IconHelp className={cx(['icon'])} />
-    <Icon.IconHelpInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconHelpInverseLowLight className={cx(['icon'])} />
-    <Icon.IconHelpLowLight className={cx(['icon'])} />
-    <Icon.IconHide className={cx(['icon'])} />
-    <Icon.IconHigh className={cx(['icon'])} />
-    <Icon.IconHighInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconHighInverseLowLight className={cx(['icon'])} />
-    <Icon.IconHighLowLight className={cx(['icon'])} />
-    <Icon.IconHighPriority className={cx(['icon'])} />
-    <Icon.IconHold className={cx(['icon'])} />
-    <Icon.IconHospital className={cx(['icon'])} />
-    <Icon.IconHouse className={cx(['icon'])} />
-    <Icon.IconImage className={cx(['icon'])} />
-    <Icon.IconImplant className={cx(['icon'])} />
-    <Icon.IconIncomingCall className={cx(['icon'])} />
-    <Icon.IconIncomplete className={cx(['icon'])} />
-    <Icon.IconIncompleteInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconIncompleteInverseLowLight className={cx(['icon'])} />
-    <Icon.IconInformation className={cx(['icon'])} />
-    <Icon.IconInformationInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconInformationInverseLowLight className={cx(['icon'])} />
-    <Icon.IconInformationLowLight className={cx(['icon'])} />
-    <Icon.IconIPass className={cx(['icon'])} />
-    <Icon.IconItalicI className={cx(['icon'])} />
-    <Icon.IconKeyboard className={cx(['icon'])} />
-    <Icon.IconKnurling className={cx(['icon'])} />
-    <Icon.IconLast className={cx(['icon'])} />
-    <Icon.IconLeft className={cx(['icon'])} />
-    <Icon.IconLeftPane className={cx(['icon'])} />
-    <Icon.IconLightbulb className={cx(['icon'])} />
-    <Icon.IconLink className={cx(['icon'])} />
-    <Icon.IconList className={cx(['icon'])} />
-    <Icon.IconLocationPin className={cx(['icon'])} />
-    <Icon.IconLookback className={cx(['icon'])} />
-    <Icon.IconLow className={cx(['icon'])} />
-    <Icon.IconLowLowLight className={cx(['icon'])} />
-    <Icon.IconLowRisk className={cx(['icon'])} />
-    <Icon.IconLowRiskLowLight className={cx(['icon'])} />
-    <Icon.IconManufacturer className={cx(['icon'])} />
-    <Icon.IconMax className={cx(['icon'])} />
-    <Icon.IconMaximize className={cx(['icon'])} />
-    <Icon.IconMediaFastForward className={cx(['icon'])} />
-    <Icon.IconMediaPause className={cx(['icon'])} />
-    <Icon.IconMediaPlay className={cx(['icon'])} />
-    <Icon.IconMediaRecord className={cx(['icon'])} />
-    <Icon.IconMediaRewind className={cx(['icon'])} />
-    <Icon.IconMediaStop className={cx(['icon'])} />
-    <Icon.IconMedicationTablet className={cx(['icon'])} />
-    <Icon.IconMedicationTabletOutline className={cx(['icon'])} />
-    <Icon.IconMedicationTabletHalf className={cx(['icon'])} />
-    <Icon.IconMedicationTabletHalfOutline className={cx(['icon'])} />
-    <Icon.IconMenu className={cx(['icon'])} />
-    <Icon.IconMerge className={cx(['icon'])} />
-    <Icon.IconMicrophone className={cx(['icon'])} />
-    <Icon.IconMicrophoneDisabled className={cx(['icon'])} />
-    <Icon.IconMin className={cx(['icon'])} />
-    <Icon.IconMinimize className={cx(['icon'])} />
-    <Icon.IconMinus className={cx(['icon'])} />
-    <Icon.IconMissedCall className={cx(['icon'])} />
-    <Icon.IconModerate className={cx(['icon'])} />
-    <Icon.IconModerateLowLight className={cx(['icon'])} />
-    <Icon.IconModified className={cx(['icon'])} />
-    <Icon.IconNext className={cx(['icon'])} />
-    <Icon.IconNoRisk className={cx(['icon'])} />
-    <Icon.IconNoRiskLowLight className={cx(['icon'])} />
-    <Icon.IconNoSignal className={cx(['icon'])} />
-    <Icon.IconNotification className={cx(['icon'])} />
-    <Icon.IconNotificationDisabled className={cx(['icon'])} />
-    <Icon.IconNotificationOff className={cx(['icon'])} />
-    <Icon.IconNotMet className={cx(['icon'])} />
-    <Icon.IconOutgoingCall className={cx(['icon'])} />
-    <Icon.IconOutOfNetwork className={cx(['icon'])} />
-    <Icon.IconOverDue className={cx(['icon'])} />
-    <Icon.IconOverDueLowLight className={cx(['icon'])} />
-    <Icon.IconPadlock className={cx(['icon'])} />
-    <Icon.IconPager className={cx(['icon'])} />
-    <Icon.IconPanelLeft className={cx(['icon'])} />
-    <Icon.IconPanelRight className={cx(['icon'])} />
-    <Icon.IconPaperFolded className={cx(['icon'])} />
-    <Icon.IconPaperPencil className={cx(['icon'])} />
-    <Icon.IconPartiallyMet className={cx(['icon'])} />
-    <Icon.IconPatientSearch className={cx(['icon'])} />
-    <Icon.IconPending className={cx(['icon'])} />
-    <Icon.IconPerson className={cx(['icon'])} />
-    <Icon.IconPersonDoor className={cx(['icon'])} />
-    <Icon.IconPersonHospital className={cx(['icon'])} />
-    <Icon.IconPersonnelPerson className={cx(['icon'])} />
-    <Icon.IconPharmacyReject className={cx(['icon'])} />
-    <Icon.IconPharmacyRejectLowLight className={cx(['icon'])} />
-    <Icon.IconPharmacyReview className={cx(['icon'])} />
-    <Icon.IconPharmacyVerification className={cx(['icon'])} />
-    <Icon.IconPhone className={cx(['icon'])} />
-    <Icon.IconPhoneDown className={cx(['icon'])} />
-    <Icon.IconPill className={cx(['icon'])} />
-    <Icon.IconPinDiagonal className={cx(['icon'])} />
-    <Icon.IconPinDown className={cx(['icon'])} />
-    <Icon.IconPlusSymbol className={cx(['icon'])} />
-    <Icon.IconPlusSymbolLight className={cx(['icon'])} />
-    <Icon.IconPrevious className={cx(['icon'])} />
-    <Icon.IconPrinter className={cx(['icon'])} />
-    <Icon.IconProjects className={cx(['icon'])} />
-    <Icon.IconProtocol className={cx(['icon'])} />
-    <Icon.IconProvider className={cx(['icon'])} />
-    <Icon.IconQuestion className={cx(['icon'])} />
-    <Icon.IconQuestionOutline className={cx(['icon'])} />
-    <Icon.IconRectangleSymbol className={cx(['icon'])} />
-    <Icon.IconRectangleSymbolLight className={cx(['icon'])} />
-    <Icon.IconRecurringEvent className={cx(['icon'])} />
-    <Icon.IconRedo className={cx(['icon'])} />
-    <Icon.IconRefresh className={cx(['icon'])} />
-    <Icon.IconRefusedSlot className={cx(['icon'])} />
-    <Icon.IconReload className={cx(['icon'])} />
-    <Icon.IconReply className={cx(['icon'])} />
-    <Icon.IconReplyAll className={cx(['icon'])} />
-    <Icon.IconRequired className={cx(['icon'])} />
-    <Icon.IconRight className={cx(['icon'])} />
-    <Icon.IconRollup className={cx(['icon'])} />
-    <Icon.IconRotateLeft className={cx(['icon'])} />
-    <Icon.IconRotateRight className={cx(['icon'])} />
-    <Icon.IconSave className={cx(['icon'])} />
-    <Icon.IconScheduled className={cx(['icon'])} />
-    <Icon.IconScheduledLowLight className={cx(['icon'])} />
-    <Icon.IconScratchPad className={cx(['icon'])} />
-    <Icon.IconSearch className={cx(['icon'])} />
-    <Icon.IconSecondaryProvider className={cx(['icon'])} />
-    <Icon.IconSend className={cx(['icon'])} />
-    <Icon.IconSeparate className={cx(['icon'])} />
-    <Icon.IconSettings className={cx(['icon'])} />
-    <Icon.IconSharedSchedules className={cx(['icon'])} />
-    <Icon.IconSimulation className={cx(['icon'])} />
-    <Icon.IconSortAscending className={cx(['icon'])} />
-    <Icon.IconSortDescending className={cx(['icon'])} />
-    <Icon.IconSpinner className={cx(['icon'])} isSpin={false} />
-    <Icon.IconSquareSymbol className={cx(['icon'])} />
-    <Icon.IconSquareSymbolLight className={cx(['icon'])} />
-    <Icon.IconStatusPositive className={cx(['icon'])} />
-    <Icon.IconStatusPositiveWhite className={cx(['icon'])} />
-    <Icon.IconStatusPositiveLowLight className={cx(['icon'])} />
-    <Icon.IconStatusPositiveWhiteLowLight className={cx(['icon'])} />
-    <Icon.IconStartPresenting className={cx(['icon'])} />
-    <Icon.IconStopPresenting className={cx(['icon'])} />
-    <Icon.IconSuccess className={cx(['icon'])} />
-    <Icon.IconSuccessInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconSuccessInverseLowLight className={cx(['icon'])} />
-    <Icon.IconSuccessLowLight className={cx(['icon'])} />
-    <Icon.IconSwap className={cx(['icon'])} />
-    <Icon.IconTable className={cx(['icon'])} />
-    <Icon.IconTag className={cx(['icon'])} />
-    <Icon.IconTeardropSymbol className={cx(['icon'])} />
-    <Icon.IconTeardropSymbolLight className={cx(['icon'])} />
-    <Icon.IconTeardropUpSymbol className={cx(['icon'])} />
-    <Icon.IconTeardropUpSymbolLight className={cx(['icon'])} />
-    <Icon.IconThinDiamondSymbol className={cx(['icon'])} />
-    <Icon.IconThinDiamondSymbolLight className={cx(['icon'])} />
-    <Icon.IconTile className={cx(['icon'])} />
-    <Icon.IconTrash className={cx(['icon'])} />
-    <Icon.IconTreemap className={cx(['icon'])} />
-    <Icon.IconTriangleDownSymbol className={cx(['icon'])} />
-    <Icon.IconTriangleDownSymbolLight className={cx(['icon'])} />
-    <Icon.IconTriangleSymbol className={cx(['icon'])} />
-    <Icon.IconTriangleSymbolLight className={cx(['icon'])} />
-    <Icon.IconTrophy className={cx(['icon'])} />
-    <Icon.IconUnavailable className={cx(['icon'])} />
-    <Icon.IconUndo className={cx(['icon'])} />
-    <Icon.IconUnexpected className={cx(['icon'])} />
-    <Icon.IconUnexpectedLowLight className={cx(['icon'])} />
-    <Icon.IconUnknown className={cx(['icon'])} />
-    <Icon.IconUnlock className={cx(['icon'])} />
-    <Icon.IconUnread className={cx(['icon'])} />
-    <Icon.IconUnspecified className={cx(['icon'])} />
-    <Icon.IconUp className={cx(['icon'])} />
-    <Icon.IconUpload className={cx(['icon'])} />
-    <Icon.IconUsers className={cx(['icon'])} />
-    <Icon.IconVideoCamera className={cx(['icon'])} />
-    <Icon.IconVideoCameraDisabled className={cx(['icon'])} />
-    <Icon.IconVisualization className={cx(['icon'])} />
-    <Icon.IconWarning className={cx(['icon'])} />
-    <Icon.IconWarningLowLight className={cx(['icon'])} />
-    <Icon.IconWaveform className={cx(['icon'])} />
-    <Icon.IconWifi className={cx(['icon'])} />
-    <Icon.IconWifiSlash className={cx(['icon'])} />
-    <Icon.IconXSymbol className={cx(['icon'])} />
-    <Icon.IconZoomIn className={cx(['icon'])} />
-    <Icon.IconZoomOut className={cx(['icon'])} />
+    <Icon.IconAbnormal title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAbnormalLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAdd title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAddPerson title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAlert title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAlertLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAllergy title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAnalytics title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAnnouncement title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconArchive title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAttachment title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAudio title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAutoText title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAvailable title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconAway title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBedAssigned title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBedAssignedLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBedRequested title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBluetooth title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBluetoothSlash title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBookmark title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBriefcase title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBrokenImage title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBrokenLinkUnlink title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconBusy title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCalculator title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCalendar title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCamera title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCancel title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCaretDown title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCaretLeft title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCaretRight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCaretUp title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCatalogueNumber title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCaution title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconChecklist title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCheckmark title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconChevron title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconChevronDown title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconChevronLeft title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconChevronRight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconChevronUp title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCircleLinesSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCircleSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCircleSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconClear title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconClipboard title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconClock title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconClose title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCollapseRow title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconComment title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCommit title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconComplete title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCompose title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconConfidential title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconConsultInstructionsForUse title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCritical title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCriticalInverse title="Abnormal Icon" className={cx(['icon', 'icon-inverse'])} />
+    <Icon.IconCriticalInverseLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconCriticalLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDateOfManufacture title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDevice title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDeviceAlert title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDeviceAlertLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDeviceCheck title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDeviceCheckLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDiamond title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDiamondLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDiamondSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDiamondSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDischargeComingDue title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDischargeComingDueLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDischargeComplete title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDischargeCompleteLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDischargeOverDue title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDischargeOverDueLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDocumentPlus title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDocuments title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDoNotDisturb title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDoorOpen title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDoubleChevronLeft title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDoubleChevronRight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDown title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDownload title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDrugDrug title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDrugDrugLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDue title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDueSoon title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconDueSoonLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconEcRep title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconEdit title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconEllipses title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconEnvelope title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconEnvelopeFill title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconError title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconErrorDark title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconErrorLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconExclamation title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconExpandLess title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconExpandMore title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconExpandRow title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconExtensions title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconExternalLink title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFeatured title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFeaturedOff title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFeaturedOutline title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFeaturedOutlineYellow title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFirst title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFitHeight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFitScale title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFitWidth title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFlag title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFlipHorizontal title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFlipVertical title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFlowsheet title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFolder title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconForward title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconFunnel title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconGapChecking title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconGlasses title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconGroup title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHalfRating title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHazardLow title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHelp title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHelpInverse title="Abnormal Icon" className={cx(['icon', 'icon-inverse'])} />
+    <Icon.IconHelpInverseLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHelpLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHide title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHigh title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHighInverse title="Abnormal Icon" className={cx(['icon', 'icon-inverse'])} />
+    <Icon.IconHighInverseLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHighLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHighPriority title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHold title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHospital title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconHouse title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconImage title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconImplant title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconIncomingCall title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconIncomplete title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconIncompleteInverse title="Abnormal Icon" className={cx(['icon', 'icon-inverse'])} />
+    <Icon.IconIncompleteInverseLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconInformation title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconInformationInverse title="Abnormal Icon" className={cx(['icon', 'icon-inverse'])} />
+    <Icon.IconInformationInverseLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconInformationLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconIPass title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconItalicI title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconKeyboard title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconKnurling title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLast title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLeft title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLeftPane title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLightbulb title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLink title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconList title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLocationPin title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLookback title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLow title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLowLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLowRisk title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconLowRiskLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconManufacturer title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMax title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMaximize title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMediaFastForward title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMediaPause title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMediaPlay title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMediaRecord title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMediaRewind title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMediaStop title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMedicationTablet title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMedicationTabletOutline title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMedicationTabletHalf title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMedicationTabletHalfOutline title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMenu title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMerge title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMicrophone title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMicrophoneDisabled title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMin title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMinimize title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMinus title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconMissedCall title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconModerate title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconModerateLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconModified title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconNext title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconNoRisk title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconNoRiskLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconNoSignal title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconNotification title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconNotificationDisabled title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconNotificationOff title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconNotMet title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconOutgoingCall title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconOutOfNetwork title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconOverDue title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconOverDueLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPadlock title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPager title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPanelLeft title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPanelRight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPaperFolded title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPaperPencil title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPartiallyMet title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPatientSearch title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPending title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPerson title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPersonDoor title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPersonHospital title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPersonnelPerson title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPharmacyReject title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPharmacyRejectLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPharmacyReview title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPharmacyVerification title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPhone title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPhoneDown title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPill title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPinDiagonal title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPinDown title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPlusSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPlusSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPrevious title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconPrinter title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconProjects title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconProtocol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconProvider title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconQuestion title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconQuestionOutline title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRectangleSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRectangleSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRecurringEvent title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRedo title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRefresh title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRefusedSlot title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconReload title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconReply title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconReplyAll title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRequired title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRollup title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRotateLeft title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconRotateRight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSave title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconScheduled title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconScheduledLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconScratchPad title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSearch title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSecondaryProvider title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSend title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSeparate title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSettings title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSharedSchedules title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSimulation title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSortAscending title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSortDescending title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSpinner title="Abnormal Icon" className={cx(['icon'])} isSpin={false} />
+    <Icon.IconSquareSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSquareSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconStatusPositive title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconStatusPositiveWhite title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconStatusPositiveLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconStatusPositiveWhiteLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconStartPresenting title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconStopPresenting title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSuccess title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSuccessInverse title="Abnormal Icon" className={cx(['icon', 'icon-inverse'])} />
+    <Icon.IconSuccessInverseLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSuccessLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconSwap title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTable title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTag title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTeardropSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTeardropSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTeardropUpSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTeardropUpSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconThinDiamondSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconThinDiamondSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTile title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTrash title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTreemap title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTriangleDownSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTriangleDownSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTriangleSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTriangleSymbolLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconTrophy title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUnavailable title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUndo title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUnexpected title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUnexpectedLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUnknown title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUnlock title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUnread title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUnspecified title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUp title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUpload title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconUsers title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconVideoCamera title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconVideoCameraDisabled title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconVisualization title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconWarning title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconWarningLowLight title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconWaveform title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconWifi title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconWifiSlash title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconXSymbol title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconZoomIn title="Abnormal Icon" className={cx(['icon'])} />
+    <Icon.IconZoomOut title="Abnormal Icon" className={cx(['icon'])} />
   </div>
 );
 
