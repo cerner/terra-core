@@ -39,9 +39,9 @@ Icons that convey information **must have alternative text in code** to ensure t
 
 <InformativeIconExamples/>
 
-In this example the factory icon (<IconManufacturer/>) and announcement icon (<IconAnnouncement/>) are both informative. The factory icon has the meaning that _this text is an address_. The announcement icon has the meaning that _this text is an announcement_. However, neither icon conveys that meaning to users who cannot see them. Therefore, both icons code must include `title="<alternative text>"` to adequately convey their meaning to a screen reader user. The factory icon should have `title="Manufactured by"` and the announcement icon should have `title="Announcement"`. With these text alternatives added, screen reader users will hear _"&lt;Text Alternative&gt; &lt;Text&gt_":
+In this example the factory icon (<IconManufacturer/>) and announcement icon (<IconAnnouncement/>) are both informative. The factory icon has the meaning that _this text is an address_. The announcement icon has the meaning that _this text is an announcement_. However, neither icon conveys that meaning to users who cannot see them. Therefore, both icons code must include `title="<alternative text>"` to adequately convey their meaning to a screen reader user. The factory icon should have `title="Manufactured at"` and the announcement icon should have `title="Announcement"`. With these text alternatives added, screen reader users will hear _"&lt;Text Alternative&gt; &lt;Text&gt_":
 
-<p><em>"Manufactured by 2800 Rock Creek Pkwy Kansas City, MO 64117"</em></p>
+<p><em>"Manufactured at 2800 Rock Creek Pkwy Kansas City, MO 64117"</em></p>
 <p><em>"Announcement Facilities will closed on Monday"</em></p>
 
 #### Functional Icons
@@ -76,9 +76,9 @@ In decorative use, an icon provides no additional information or context. Meanin
 
 The factory icon (<IconManufacturer/>) above is purely decorative. It provides an extra visual queue but is not necessary for the user to understand that the text, _2800 Rock Creek Pkwy…_, is the address of the manufacturer.
 
-Since the icon is decorative, its code must set `title=""` to ensure screen readers do not announce the icon's presence. If the title is left out, then the user will hear "Image Manufactured by …". If the title is set to `title="Manufactured by"` like in the Informative example above, then the user would hear "Manufactured by Manufactured by…". Neither of these are correct. The correct choice is to set `title=""` so that the user hears:
+Since the icon is decorative, its code must set `title=""` to ensure screen readers do not announce the icon's presence. If the title is left out, then the user will hear "Image Manufactured at …". If the title is set to `title="Manufactured at"` like in the Informative example above, then the user would hear "Manufactured at Manufactured at…". Neither of these are correct. The correct choice is to set `title=""` so that the user hears:
 
-<p><em>"Manufactured by 2800 Rock Creek Pkwy Kansas City, MO 64117"</em></p>
+<p><em>"Manufactured at 2800 Rock Creek Pkwy Kansas City, MO 64117"</em></p>
 
 ### Code Considerations
 

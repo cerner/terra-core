@@ -11,7 +11,7 @@ const className = cx('example');
 const InformativeIconExamples = () => (
   <>
     <div className={className}>
-      <IconManufacturer title="Manufactured by" />
+      <IconManufacturer title="Manufactured at" />
       &nbsp;
       2800 Rock Creek Pkwy Kansas City, MO 64117
     </div>
