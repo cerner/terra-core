@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+  * Breaking changes
+    * Updated props for IconBase to make it meaningful by default.
 
 ## 3.46.1 - (January 4, 2022)
 

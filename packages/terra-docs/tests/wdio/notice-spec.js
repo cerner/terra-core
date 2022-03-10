@@ -40,4 +40,11 @@ Terra.describeViewports('Notice', ['medium'], () => {
       Terra.validates.element('mdx');
     });
   });
+
+  describe('Not Supported notice', () => {
+    it('checks accessibility', () => {
+      browser.url('/raw/tests/cerner-terra-docs/docs/not-supported-notice');
+      Terra.validates.element('not supported');
+    });
+  });
 });

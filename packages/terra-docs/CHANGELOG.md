@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 1.7.0 - (February 24, 2022)
+
+* Added
+  * 'not-supported' notices variant
+
+* Changed
+  * fixed missing colors for markdown styling inside of notices
+
 ## 1.6.0 - (September 21, 2021)
 
 * Changed
