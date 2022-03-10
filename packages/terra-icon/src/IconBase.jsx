@@ -71,27 +71,14 @@ const IconBase = ({
     attributes.className,
   );
 
-  // aria-label is present, remove aria-hidden, set role to img
-  // if (ariaLabel) {
-    attributes['aria-label'] = title;
-    attributes.role = 'img';
-    attributes['aria-hidden'] = null;
-  // } else {
-    attributes['aria-hidden'] = 'true';
-  // }
-
-  attributes.alt = title;
-  
-  attributes.role = 'img';
   attributes.height = height;
   attributes.width = width;
   attributes.focusable = focusable;
   
   const svgTitle = React.createElement('title', {}, title);
-  const svgChildren = new Array (svgTitle).concat(children);
+  const svgChildren = new Array(svgTitle).concat(children);
 
   return <svg {...attributes} className={classes}>{svgChildren}</svg>;
-  // return <svg {...attributes} className={classes}>{children}</svg>;
 };
 
 IconBase.propTypes = propTypes;

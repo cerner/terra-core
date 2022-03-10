@@ -6,7 +6,7 @@ import styles from './IconAll.module.scss';
 const cx = classNames.bind(styles);
 
 const IconAll = () => (
-  <div>
+  <div id="icon-all">
     <Icon.IconAbnormal title="Abnormal Icon" className={cx(['icon'])} />
     <Icon.IconAbnormalLowLight title="Abnormal Icon" className={cx(['icon'])} />
     <Icon.IconAdd title="Abnormal Icon" className={cx(['icon'])} />
