@@ -74,7 +74,7 @@ In decorative use, an icon provides no additional information or context. Meanin
 
 <DecorativeIconExample/>
 
-The factory icon (<IconManufacturer/>) above is purely decorative. It provides an extra visual queue but is not necessary for the user to understand that the text, _2800 Rock Creek Pkwy…_, is the address of the manufacturer.
+The factory icon (<IconManufacturer/>) above is purely decorative. It provides an extra visual cue but is not necessary for the user to understand that the text, _2800 Rock Creek Pkwy…_, is the address of the manufacturer.
 
 Since the icon is decorative, its code must set `title=""` to ensure screen readers do not announce the icon's presence. If the title is left out, then the user will hear "Image Manufactured at …". If the title is set to `title="Manufactured at"` like in the Informative example above, then the user would hear "Manufactured at Manufactured at…". Neither of these are correct. The correct choice is to set `title=""` so that the user hears:
 
