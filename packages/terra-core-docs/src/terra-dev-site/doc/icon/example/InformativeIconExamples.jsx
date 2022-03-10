@@ -16,7 +16,7 @@ const InformativeIconExamples = () => (
       2800 Rock Creek Pkwy Kansas City, MO 64117
     </div>
     <div className={className}>
-      <IconAnnouncement title="Announcement" height="2em" width="2em" />
+      <IconAnnouncement title="Announcement" />
       {' '}
       Facilities will closed on Monday.
     </div>
