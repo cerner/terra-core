@@ -3,7 +3,7 @@ import Whitespace from "../../common/layout-helpers/Whitespace";
 import { Badge } from 'terra-icon/package.json?dev-site-package';
 
 <!-- Examples -->
-import DecorativeIconExamples from './example/DecorativeIconExamples?dev-site-example';
+import DecorativeIconExample from './example/DecorativeIconExample?dev-site-example';
 import GroupOfIconsExample from './example/GroupOfIconsExample?dev-site-example';
 import InformativeIconExamples from './example/InformativeIconExamples?dev-site-example';
 import FunctionalIconExample from './example/FunctionalIconExample?dev-site-example';
@@ -47,9 +47,9 @@ Icons that convey information **must have alternative text in code** to ensure t
 
 <InformativeIconExamples/>
 
-In this example the factory icon (<IconManufacturer/>) and announcement icon (<IconAnnouncement/>) are both informative. The factory icon has the meaning that _this text is an address_. The announcement icon has the meaning that _this text is an announcement_. However, neither icon conveys that meaning to users who cannot see them. Therefore, both icons code must include `alt="<alternative text>"` to adequately convey their meaning to a screen reader user. The factory icon should have `alt="Address"` and the announcement icon should have `alt="Announcement"`. With these text alturnatives added, screen reader users will hear _"&lt;Text Alternative&gt; &lt;Text&gt_":
+In this example the factory icon (<IconManufacturer/>) and announcement icon (<IconAnnouncement/>) are both informative. The factory icon has the meaning that _this text is an address_. The announcement icon has the meaning that _this text is an announcement_. However, neither icon conveys that meaning to users who cannot see them. Therefore, both icons code must include `title="<alternative text>"` to adequately convey their meaning to a screen reader user. The factory icon should have `title="Manufactured by"` and the announcement icon should have `title="Announcement"`. With these text alturnatives added, screen reader users will hear _"&lt;Text Alternative&gt; &lt;Text&gt_":
 
-<p><em>"Address 2800 Rock Creek Pkwy Kansas City, MO 64117"</em></p>
+<p><em>"Manufactured by 2800 Rock Creek Pkwy Kansas City, MO 64117"</em></p>
 <p><em>"Announcement Facilities will closed on Monday"</em></p>
 
 #### Functional Icons
@@ -60,7 +60,7 @@ Icons that perform some operation, like an icon taht is part of a hyperlink or a
 
 In the example above, links to view a folder in three different ways are given: as a list (<IconList/>), as tiles (<IconTile/>), and as a tree map (<IconTreemap/>). With the title provided to each icon, the user will hear:
 
-<p><em>"View folder as, link, List view, link, Tile View, link, Treemap View"</em></p>
+<p><em>"View folder as, link, List view, link, Tile view, link, Treemap view"</em></p>
 
 #### Groups of Icons
 
@@ -76,19 +76,15 @@ _"Rating: Three and a half stars out of five"_
 
 Terra does not provide Icons containig text, but you might encounter such a scenario. One example found commonly is a company logo that includes the company's name in the logo graphic. For more information see https://www.w3.org/WAI/tutorials/images/textual/.
 
-## BELOW THIS LINE IS NOT READY FOR REVIEW YET!
-
 ### Decorative Use of Icons
 
-In decorative use, an icon provides no additional information or context. Meaning that, without the icon, the user would still know the meaning and purpose of the button.
+In decorative use, an icon provides no additional information or context. Meaning that, **without the decorative icon, the user would still know the meaning and purpose of content**.
 
-<DecorativeIconExamples/>
+<DecorativeIconExample/>
 
-The factory icon (<IconManufacturer/>) and announcement icon (<IconAnnouncement/>), in this case, are purely decorative. They supplements the text, which informs the user of the element's purpose.
+The factory icon (<IconManufacturer/>) above is purely decorative. It provides an extra visual queue but is not nessicary for the user to understand that the text, _2800 Rock Creek Pkwy…_, is the address of the manufacturer.
 
-Since the icons are decorative, their code must feature `alt=""` to ensure screen readers do not announce the icon's presence. For example, if the factory icon (<IconManufacturer/>) had `alt="Manufactured by"` in its code, a screen reader user would hear "<em>Manufactured by Manufactured</em> by 2800 Rock Creek Pkwy Kansas City, MO 64117" (emphasis added for illustration purposes). This is not only redundant but adds cognitive friction and possible confusion.
-
-By using the `alt=""` technique, the user will hear the correct intended message:
+Since the icon is decorative, its code must set `title=""` to ensure screen readers do not announce the icon's presence. If the title is left out, then the user will hear "Image Manufactured by …". If the title is set to `title="Manufactured by"` like in the Informative example above, then the user would hear "Manufactured by Manufactured by…". Neither of these are correct. The correct choice is to set `title=""` so that the user hears:
 
 <p><em>"Manufactured by 2800 Rock Creek Pkwy Kansas City, MO 64117"</em></p>
 

@@ -14,9 +14,9 @@ const viewLinkClassName = cx('viewLink');
 const FunctionalIconExample = () => (
   <div className={exampleClassName}>
     View folder as
-    <a className={viewLinkClassName} href="https://example.com/" target="_blank" rel="noreferrer"><IconList /></a>
-    <a className={viewLinkClassName} href="https://example.com/" target="_blank" rel="noreferrer"><IconTile /></a>
-    <a className={viewLinkClassName} href="https://example.com/" target="_blank" rel="noreferrer"><IconTreemap /></a>
+    <a className={viewLinkClassName} href="https://example.com/" target="_blank" rel="noreferrer"><IconList title="List view" /></a>
+    <a className={viewLinkClassName} href="https://example.com/" target="_blank" rel="noreferrer"><IconTile title="Tile view" /></a>
+    <a className={viewLinkClassName} href="https://example.com/" target="_blank" rel="noreferrer"><IconTreemap title="Treemap view" /></a>
   </div>
 );
 
