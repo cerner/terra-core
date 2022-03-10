@@ -84,9 +84,13 @@ In decorative use, an icon provides no additional information or context. Meanin
 
 <DecorativeIconExamples/>
 
-The plus (+) icon, in this case, is purely decorative. It supplements the button's text label, which informs the user of the element's purpose.
+The factory icon (<IconManufacturer/>) and announcement icon (<IconAnnouncement/>), in this case, are purely decorative. They supplements the text, which informs the user of the element's purpose.
 
-Since the icon is decorative, its code must feature `alt=""` to ensure screen readers do not announce the icon's presence. For example, if this icon had `alt="Add"` in its code, a screen reader user would hear something like, "Add _Add_ Clinical Note." This is not only redundant but adds cognitive friction and possible confusion.
+Since the icons are decorative, their code must feature `alt=""` to ensure screen readers do not announce the icon's presence. For example, if the factory icon (<IconManufacturer/>) had `alt="Manufactured by"` in its code, a screen reader user would hear "<em>Manufactured by Manufactured</em> by 2800 Rock Creek Pkwy Kansas City, MO 64117" (emphasis added for illustration purposes). This is not only redundant but adds cognitive friction and possible confusion.
+
+By using the `alt=""` technique, the user will hear the correct intended message:
+
+<p><em>"Manufactured by 2800 Rock Creek Pkwy Kansas City, MO 64117"</em></p>
 
 ### Code Considerations
 
