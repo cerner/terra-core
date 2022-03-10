@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Added
-  * Accessibility Guide
-
 ## 3.46.1 - (January 4, 2022)
 
 * Changed
