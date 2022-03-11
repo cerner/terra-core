@@ -12,7 +12,7 @@ const propTypes = {
   /**
   * String that labels the current element. 
   */
-  title: PropTypes.string.isRequired,
+  a11yLabel: PropTypes.string.isRequired,
   /**
    * Should the svg mirror when dir="rtl".
    */
@@ -49,12 +49,12 @@ const defaultProps = {
 };
 
 const IconBase = ({
+  a11yLabel,
   isBidi,
   isSpin,
   children,
   height,
   width,
-  title,
   focusable,
   ...customProps
 }) => {
@@ -75,8 +75,8 @@ const IconBase = ({
   attributes.width = width;
   attributes.focusable = focusable;
   
-  const svgTitle = React.createElement('title', {}, title);
-  const svgChildren = new Array(svgTitle).concat(children);
+  const svga11yLabel = React.createElement('a11yLabel', {}, a11yLabel);
+  const svgChildren = new Array(svga11yLabel).concat(children);
 
   return <svg {...attributes} className={classes}>{svgChildren}</svg>;
 };

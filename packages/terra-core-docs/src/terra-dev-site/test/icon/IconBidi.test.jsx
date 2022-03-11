@@ -6,19 +6,19 @@ const IconBidi = () => (
   <div dir="rtl">
     <h3>Icon where isBidi is false by default</h3>
     <h4>Default</h4>
-    <IconDeviceCheck title="Icon Device Check"/>
+    <IconDeviceCheck a11yLabel="Icon Device Check"/>
     <h4>Set isBidi true</h4>
-    <IconDeviceCheck title="Icon Device Check" isBidi />
+    <IconDeviceCheck a11yLabel="Icon Device Check" isBidi />
     <h4>Set isBidi false</h4>
-    <IconDeviceCheck title="Icon Device Check" isBidi={false} />
+    <IconDeviceCheck a11yLabel="Icon Device Check" isBidi={false} />
 
     <h3>Icon where isBidi is true by default</h3>
     <h4>Default</h4>
-    <IconComment title="Icon Comment"/>
+    <IconComment a11yLabel="Icon Comment"/>
     <h4>Set isBidi true</h4>
-    <IconComment title="Icon Comment" isBidi />
+    <IconComment a11yLabel="Icon Comment" isBidi />
     <h4>Set isBidi false</h4>
-    <IconComment title="Icon Comment" isBidi={false} />
+    <IconComment a11yLabel="Icon Comment" isBidi={false} />
   </div>
 );
 
