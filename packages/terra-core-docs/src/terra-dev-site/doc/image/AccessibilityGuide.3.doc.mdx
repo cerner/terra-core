@@ -1,8 +1,9 @@
 import { Badge } from 'terra-image/package.json?dev-site-package';
 import { Notice } from '@cerner/terra-docs';
 import Whitespace from "../../common/layout-helpers/Whitespace";
-// import InformativeImage from './example/InformativeImage?dev-site-example';
-// import DecorativeImageBar from './example/DecorativeImage/DecorativeImageBar?dev-site-example';
+import A11yExampleInformative from './example/A11yGuideExamples/A11yExampleInformative';
+import A11yExampleInformativeConcise from './example/A11yGuideExamples/A11yExampleInformativeConcise';
+import A11yExampleDecorative from './example/A11yGuideExamples/A11yExampleDecorative';
 
 <Badge />
 
@@ -74,13 +75,87 @@ Use the default `import Image from 'terra-image'` for cases similar to:
 - When the image is an illustration, diagram, or photograph that shows directions or explains succint information.
 - When the image conveys an impression or emotion.
 
-##### Additional WCAG Resources for Informative Images
-- [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94).
-- [H37: Using alt attributes on img elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H37).
+<Whitespace />
+
+<Notice variant="important" ariaLevel="5">
+
+**Accessibility Guidance: Creating Descriptive Alternative Text**
+
+_Example 1:_
+
+When deciding what to add for descriptive alternative text, consider how the image is being used and any surrounding content that helps to establish context.
+
+This image shows a photograph of the Matterhorn, but has no additional surrounding content, therefore the non-text content should be more descriptive and contain an objective description of the image shown. A recommended alternative text could be similar to: `alt="North-east face of the Matterhorn mountain peak and surrounding landscape covered in snow against a blue sky, located in the Swiss Apps near Zermatt, Switzerland"`.
+
+<A11yExampleInformative />
+
+```diff
+   import React from 'react';
+   import Image from 'terra-image';
+   import matterhornImage from '../src/folder/Matterhorn_150x150.jpg';
+
++  const matterhornAlternativeText = 'North-east face of the Matterhorn 
++     mountain peak and surrounding landscape covered in snow against a 
++     blue sky, located in the Swiss Apps near Zermatt, Switzerland';
+
+   export default () => (
+     <>
+       <Image 
+         src={matterhornImage} 
++        alt={matterhornDeAlternativeText}
+       />
+       <strong>Matterhorn</strong>
+     </>
+   );
+```
+
+<Whitespace newline={2} />
+
+**Accessibility Guidance: Concise Alternative Text**
+
+_Example 2:_
+
+In this example, the photograph of the Matterhorn is accompanied by additional text that describes the information and gives context to the user that Matterhorn is a mountain peak located in the Alps near Zermatt, Switzerland. Since the context and description is already handled by the text, the alternative text can be more concise and the recommended text for this use would be: `alt="Matterhorn mountain peak"`.
+
+Additional guidance and examples can be read in [WebAIM's Alternative Text](https://webaim.org/techniques/alttext/) article, as well as the [Content Considerations](/components/cerner-terra-core-docs/image/accessibility-guide#content-considerations) section below.
+
+<A11yExampleInformativeConcise />
+
+```diff
+   import React from 'react';
+   import Image from 'terra-image';
+   import matterhornImage from '../src/folder/Matterhorn_150x150.jpg';
+
++  const matterhornBriefAlternativeText = 'Matterhorn mountain peak';
+
+   export default () => (
+     <>
+       <Image 
+         src={matterhornImage} 
++        alt={matterhornBriefAlternativeText}
+       />
+       <strong>Matterhorn</strong>
++      <p>
++        Standing at 4,478 meters (14,692ft), Matterhorn is the fifth 
++        highest peak in the Alps located on the border between Switzerland 
++        and Italy, in the Monte Rosa area of the western Pennine Alps, and 
++        overlooks the Swiss town of Zermatt.
++      </p>
+     </>
+   );
+```
 
 <Whitespace />
 
+**Additional WCAG Resources for Informative Images**
+- [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94).
+- [H37: Using alt attributes on img elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H37).
+
+</Notice>
+
 ----
+
+<Whitespace />
 
 #### 2. When to use [Decorative Image](/components/cerner-terra-core-docs/image/decorative-image)
 
@@ -97,13 +172,55 @@ Use the subcomponent `import { DeocrativeImage } from 'terra-image'` for cases s
 - When the image is used with adjacent already visible alternate text.
 - When the image is only shown for visual effects or ambiance (eye candy).
 
-##### Additional WCAG Resources for Decorative Images
-- [H2: Combining adjacent image and text links for the same resource](https://www.w3.org/WAI/WCAG21/Techniques/html/H2).
-- [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG21/Techniques/html/H67).
+<Whitespace />
+
+<Notice variant="important" ariaLevel="5">
+
+**Accessibility Guidance: Adding Decorative Images**
+
+When an image is not part of the content and serves as visual reinforcement of structure that is already present in text, a Decorative Image is the appropriate choice. The example below is a composition that positions the image as a background behind the primary content. If the image were deleted, the important content would not be lost, since it already exists as text.
+
+The decorative image does not require adding alternative text, and the appropriate empty `alt=''` and `role='presentation'` attributes will be added automatically.
+
+<A11yExampleDecorative />
+
+```diff
+   import React from 'react';
+   import classNamesBind from 'classnames/bind';
+   import { DecorativeImage } from 'terra-image';
+   import matterhornImage from '../src/folder/Matterhorn_960x640.jpg';
+   import styles from './BackgroundImageStyles.module.scss';
+
+   const cx = classNamesBind.bind(styles);
+
+   export default () => (
+     <div className={cx('composition')}>
++      <DecorativeImage src={matterhornBackgroundImage} fit="cover" className={cx('background')} />
+       <div className={cx('foreground')}>
+         <strong>Matterhorn</strong>
+         <p>
+           Standing at 4,478 meters (14,692ft), Matterhorn is the fifth 
+           highest peak in the Alps located on the border between Switzerland 
+           and Italy, in the Monte Rosa area of the western Pennine Alps, and 
+           overlooks the Swiss town of Zermatt.
+         </p>
+       </div>
+     </div>
+   );
+```
 
 <Whitespace />
 
+**Additional WCAG Resources for Decorative Images**
+- [H2: Combining adjacent image and text links for the same resource](https://www.w3.org/WAI/WCAG21/Techniques/html/H2).
+- [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG21/Techniques/html/H67).
+
+</Notice>
+
+
 ----
+
+<Whitespace />
 
 ### Content Considerations
 
