@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+
 * Added
   * Added Accessibility guide for `terra-image`.
   * Added docs for `DecorativeImage`.
