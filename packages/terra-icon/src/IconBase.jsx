@@ -75,7 +75,7 @@ const IconBase = ({
   attributes.width = width;
   attributes.focusable = focusable;
   
-  const svgA11yLabel = React.createElement('a11yLabel', {}, a11yLabel);
+  const svgA11yLabel = React.createElement('title', {}, a11yLabel);
   const svgChildren = new Array(svgA11yLabel).concat(children);
 
   return <svg {...attributes} className={classes}>{svgChildren}</svg>;
