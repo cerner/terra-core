@@ -1,7 +1,9 @@
 import { Badge } from 'terra-image/package.json?dev-site-package';
 import { Notice } from '@cerner/terra-docs';
-import InformativeImage from './example/InformativeImage?dev-site-example';
-import DecorativeImageBar from './example/DecorativeImage/DecorativeImageBar?dev-site-example';
+import Whitespace from "../../common/layout-helpers/Whitespace";
+import A11yExampleInformative from './example/A11yGuideExamples/A11yExampleInformative';
+import A11yExampleInformativeConcise from './example/A11yGuideExamples/A11yExampleInformativeConcise';
+import A11yExampleDecorative from './example/A11yGuideExamples/A11yExampleDecorative';
 
 <Badge />
 
@@ -9,74 +11,286 @@ import DecorativeImageBar from './example/DecorativeImage/DecorativeImageBar?dev
 
 <Notice variant="important" ariaLevel="2">
 
-**Terra Images** are used ** to represent the information in meaningful ways OR to add visual decoration to the page**.
-Based on the purpose of the image, They are classified into following types.
-1. **Informative Images :** Images that graphically represent concepts and information, typically pictures, photos, and illustrations. Informative images convey a simple concept or information that can be expressed in a short phrase or sentence.
-2. **Decorative Images :** Decorative images don’t add information to the content of a page. For example, the information provided by the image might already be given using adjacent text, or the image might be included to make the website more visually attractive. The only purpose of an image is to add visual decoration to the page, rather than to convey information that is important to understanding the page.
+1. For each use of Terra Image, **special care needs to be taken to determine** whether it conveys **meaningful and informative context**, or is simply **adding visual decoration** to the page.
+2. Informative images **must provide alternative text to the alt attribute**. Writing **meaningful alternative text** is also critical to properly meet accessibility success criteria.
+3. Images set to be decorative need to ensure they are purely decorative, or the context must be provided already by other adjacent elements. 
 
 </Notice>
 
-## Why is this important?
-Images and graphics make content more pleasant and easier to understand for many people, and in particular for those with cognitive and learning disabilities. They serve as cues that are used by people with visual impairments, including people with low vision, to orient themselves in the content.
+<Whitespace />
 
-However, images are used extensively on websites and can create major barriers when they are not accessible. Accessible images are beneficial in many situations, such as:
-- **People using screen readers:** The text alternative can be read aloud or rendered as Braille.
-- **People using speech input software:** Users can put the focus onto a button or linked image with a single voice command.
-- **People browsing speech-enabled websites:** The text alternative can be read aloud.
-- **Mobile web users:** Images can be turned off, especially for data-roaming.
-- **Search engine optimization:** Images become indexable by search engines.
+### Why is this important?
+
+> Images and graphics make content more pleasant and easier to understand for many people, and in particular for those with cognitive and learning disabilities. They serve as cues that are used by people with visual impairments, including people with low vision, to orient themselves in the content.
+>
+> However, images are \[often\] used extensively on websites and can create major barriers when they are not accessible. Accessible images are beneficial in many situations, such as:
+>
+> - **People using screen readers:** The text alternative can be read aloud or rendered as Braille.
+> - **People using speech input software:** Users can put the focus onto a button or linked image with a single voice command.
+> - **People browsing speech-enabled websites:** The text alternative can be read aloud.
+> - **Mobile web users:** Images can be turned off, especially for data-roaming.
+> - **Search engine optimization:** Images become indexable by search engines.
+>
+> _&nbsp;&nbsp;&mdash; excerpt from [Image Concepts (W3C: Web Accessibility Tutorials)](https://www.w3.org/WAI/tutorials/images/)_[<sup>[1]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
+
+<Whitespace newline={2} />
 
 ## Accessibility Considerations:
 
 ### Code Considerations
 
-**Informative Images** must have text alternatives ( alt attribute ) that describe the information or function represented by them. This ensures that images can be used by people with various disabilities with help of assistive technologies. The text alternative should convey the meaning or content that is displayed visually, which typically isn’t a literal description of the image. In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the conveyed information.
+> All non-text content must be represented in a text format in one way or another, whether in the form of an alt attribute for an image, an alternative representation of non-HTML objects, or within the accessibility API methods of non-HTML objects.
+>
+> _&nbsp;&nbsp;&mdash; excerpt from [Summary and Checklist: Images, Canvas, SVG, and Other Non-Text Content (Deque)](https://dequeuniversity.com/assets/pdf/module-nontext/module-nontext-checklist.pdf)_[<sup>[2]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
 
-**Decorative images** must have a null (empty) alt text (alt="") so that they can be ignored by assistive technologies, such as screen readers. Text values for these types of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text. Leaving out the alt attribute is also not an option because when it is not provided, some screen readers will announce the file name of the image instead.
+When using images, extra consideration needs to be taken for screen reader users that may be blind, have low vision, or have cognitive disabilities. Applications need to provide alternative non-visual descriptions for screen readers in the form of alt text. When a screen reader encounters an image, it will attempt to read the text alternative.[<sup>[3]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
 
-_Whether to treat an image as informative or decorative is a judgment that should be made by Author, based on the reason for including the image on the page._
+W3C (World Wide Web Consortium) divides images into seven concept categories for accessibility purposes:[<sup>[1]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
 
-Following section describes how to use the `alt` attribute of the `Terra-Image` component in various situations.
+- [Informative images](https://www.w3.org/WAI/tutorials/images/informative/)
+- [Decorative images](https://www.w3.org/WAI/tutorials/images/decorative/)
+- [Functional images](https://www.w3.org/WAI/tutorials/images/functional/)
+- [Images of text](https://www.w3.org/WAI/tutorials/images/textual/)
+- [Complex images](https://www.w3.org/WAI/tutorials/images/complex/)
+- [Groups of images](https://www.w3.org/WAI/tutorials/images/groups/)
+- [Images maps](https://www.w3.org/WAI/tutorials/images/imagemap/)
 
-### 1. Use [Image](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/image/image)
-- When the `Image` contributes meaning to the current page or context.
-- When the `Image` is a simple graphic or photograph that describes the intended meaning of image.
-- When the `Image` conveys an impression or emotion.
+Knowing which type of image and how to add proper alternative text appropriate for the usage type can be difficult. Use the [Alt Decision Tree (W3C)](https://www.w3.org/WAI/tutorials/images/decision-tree/) to help determine which usage is appropriate based on context and content of each image.
 
-See [Informative Images](https://www.w3.org/WAI/tutorials/images/informative/) for more info.
+The [Accessible Images When It Matters Most](https://accessibility.deque.com/accessible-images-when-it-matters-most) video presentation by Carie Fisher, Senior Accessibility Consultant at Deque, goes into depth about best practice techniques when creating accessible images and gives examples to help determine the appropiate image concept type.
 
-#### Related or Additional WCAG Resources for Informative Image.
+Terra Image handles two of the image concepts &mdash; **informative** images (also called _"meaningful"_ images) and **decoratiive** images (also called _"presentation"_ images). The other image concepts may be supported in the future or can be contructed by consumers following the reccomeneded patterns.
+
+----
+
+#### 1. When to use [Image](/components/cerner-terra-core-docs/image/image)
+
+**Informative Images** graphically represent concepts and information, typically pictures, photos, and illustrations. Informative images convey a simple concept or information that can be expressed in a short phrase or sentence.[<sup>[1]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
+
+Informative Images **must have text alternatives provided by the alt attribute**, that describe the information or function represented by the image. This ensures that images can be used by people with various disabilities with help of assistive technologies. The text alternative should convey the meaning or content that is displayed visually, which typically isn't a literal description of the image. In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the conveyed information.
+
+Use the default `import Image from 'terra-image'` for cases similar to:
+- When the image contributes meaning to the current page or context.
+- When the image is being used to suppliment and support other information.
+- When the image is an illustration, diagram, or photograph that shows directions or explains succint information.
+- When the image conveys an impression or emotion.
+
+<Whitespace />
+
+<Notice variant="important" ariaLevel="5">
+
+**Accessibility Guidance: Creating Descriptive Alternative Text**
+
+_Example 1:_
+
+When deciding what to add for descriptive alternative text, consider how the image is being used and any surrounding content that helps to establish context.
+
+This image shows a photograph of the Matterhorn, but has no additional surrounding content, therefore the non-text content should be more descriptive and contain an objective description of the image shown. A recommended alternative text could be similar to: `alt="North-east face of the Matterhorn mountain peak and surrounding landscape covered in snow against a blue sky, located in the Swiss Apps near Zermatt, Switzerland"`.
+
+<A11yExampleInformative />
+
+```diff
+   import React from 'react';
+   import Image from 'terra-image';
+   import matterhornImage from '../src/folder/Matterhorn_150x150.jpg';
+
++  const matterhornAlternativeText = 'North-east face of the Matterhorn 
++     mountain peak and surrounding landscape covered in snow against a 
++     blue sky, located in the Swiss Apps near Zermatt, Switzerland';
+
+   export default () => (
+     <>
+       <Image 
+         src={matterhornImage} 
++        alt={matterhornDeAlternativeText}
+       />
+       <strong>Matterhorn</strong>
+     </>
+   );
+```
+
+<Whitespace newline={2} />
+
+**Accessibility Guidance: Concise Alternative Text**
+
+_Example 2:_
+
+In this example, the photograph of the Matterhorn is accompanied by additional text that describes the information and gives context to the user that Matterhorn is a mountain peak located in the Alps near Zermatt, Switzerland. Since the context and description is already handled by the text, the alternative text can be more concise and the recommended text for this use would be: `alt="Matterhorn mountain peak"`.
+
+Additional guidance and examples can be read in [WebAIM's Alternative Text](https://webaim.org/techniques/alttext/) article, as well as the [Content Considerations](/components/cerner-terra-core-docs/image/accessibility-guide#content-considerations) section below.
+
+<A11yExampleInformativeConcise />
+
+```diff
+   import React from 'react';
+   import Image from 'terra-image';
+   import matterhornImage from '../src/folder/Matterhorn_150x150.jpg';
+
++  const matterhornBriefAlternativeText = 'Matterhorn mountain peak';
+
+   export default () => (
+     <>
+       <Image 
+         src={matterhornImage} 
++        alt={matterhornBriefAlternativeText}
+       />
+       <strong>Matterhorn</strong>
++      <p>
++        Standing at 4,478 meters (14,692ft), Matterhorn is the fifth 
++        highest peak in the Alps located on the border between Switzerland 
++        and Italy, in the Monte Rosa area of the western Pennine Alps, and 
++        overlooks the Swiss town of Zermatt.
++      </p>
+     </>
+   );
+```
+
+<Whitespace />
+
+**Additional WCAG Resources for Informative Images**
 - [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG21/Techniques/general/G94).
 - [H37: Using alt attributes on img elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H37).
 
-#### Examples
-<InformativeImage />
+</Notice>
 
-### 2. Use [DecorativeImage](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/image/decorative-image)
-- When `Image` contains text and the text is also present as real text nearby.
-- When `Image` contains text and the text is only shown for visual effects.
-- When `Image` is purely decorative or not intended for the user.
+----
 
-See [Decorative Images](https://www.w3.org/WAI/tutorials/images/decorative/) for more info.
+<Whitespace />
 
-#### Related or Additional WCAG Resources for Decorative Image.
+#### 2. When to use [Decorative Image](/components/cerner-terra-core-docs/image/decorative-image)
+
+**Decorative Images** do not add information to the content of a page. For example, the information provided by the image might already be given using adjacent text, or the image might be included to make the website more visually attractive. The only purpose of an image is to add visual decoration to the page, rather than to convey information that is important to understanding the page.[<sup>[1]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
+
+Decorative images must have a null (empty) alt text (`alt=""`) so that they will be ignored by assistive technologies, such as screen readers. Any text values provided for these types of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text. Leaving out the alt attribute is also not an option because when it is not provided, some screen readers will announce the file name of the image instead.
+
+To help with this, **Terra automatically adds the appropriate empty alt text** assignment for images that are decorative, and consumers should not provide alternative text when using `DecorativeImage`.
+
+Use the subcomponent `import { DeocrativeImage } from 'terra-image'` for cases similar to:
+
+- When the image is used as part of the page design.
+- When the image is helping to make something else easier to identify, but does not add to the information already provided.
+- When the image is used with adjacent already visible alternate text.
+- When the image is only shown for visual effects or ambiance (eye candy).
+
+<Whitespace />
+
+<Notice variant="important" ariaLevel="5">
+
+**Accessibility Guidance: Adding Decorative Images**
+
+When an image is not part of the content and serves as visual reinforcement of structure that is already present in text, a Decorative Image is the appropriate choice. The example below is a composition that positions the image as a background behind the primary content. If the image were deleted, the important content would not be lost, since it already exists as text.
+
+The decorative image does not require adding alternative text, and the appropriate empty `alt=''` and `role='presentation'` attributes will be added automatically.
+
+<A11yExampleDecorative />
+
+```diff
+   import React from 'react';
+   import classNamesBind from 'classnames/bind';
+   import { DecorativeImage } from 'terra-image';
+   import matterhornImage from '../src/folder/Matterhorn_960x640.jpg';
+   import styles from './BackgroundImageStyles.module.scss';
+
+   const cx = classNamesBind.bind(styles);
+
+   export default () => (
+     <div className={cx('composition')}>
++      <DecorativeImage src={matterhornBackgroundImage} fit="cover" className={cx('background')} />
+       <div className={cx('foreground')}>
+         <strong>Matterhorn</strong>
+         <p>
+           Standing at 4,478 meters (14,692ft), Matterhorn is the fifth 
+           highest peak in the Alps located on the border between Switzerland 
+           and Italy, in the Monte Rosa area of the western Pennine Alps, and 
+           overlooks the Swiss town of Zermatt.
+         </p>
+       </div>
+     </div>
+   );
+```
+
+<Whitespace />
+
+**Additional WCAG Resources for Decorative Images**
 - [H2: Combining adjacent image and text links for the same resource](https://www.w3.org/WAI/WCAG21/Techniques/html/H2).
 - [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG21/Techniques/html/H67).
 
-#### Examples
-<DecorativeImageBar title="Decorative Image"/>
+</Notice>
 
-_Note: `DecorativeImage` component sets `alt` prop to empty `""` value internally to make `terra-image` as Decorative Image._
+
+----
+
+<Whitespace />
+
+### Content Considerations
+
+As authors create alternative text descriptions for informative images — the content itself and choosing descriptive words and phrases is an equally important factor in ensuring proper accessibility in addition to the coding techniques listed above.
+
+
+#### Alternative Text
+
+These image description guidelines were developed by the Carl and Ruth Shapiro Family National Center for Accessible Media at WGBH (NCAM) in conjunction with the DIAGRAM Center (Digital Image And Graphic Resources for Accessible Materials) at Benetech.[<sup>[4]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
+
+> - _**Context is Key:**_ Survey the text surrounding an image to understand how it fits into the bigger picture. Use context to decide which basic concepts and terms have already been explained, and avoid repetition of explanations.
+> - _**Consider Your Audience:**_ Know your target reader (e.g. age, culture, subject-matter expertise). Use vocabulary and phrases appropriate for the reader.
+> - _**Be Concise:**_ More is NOT better - be succinct. Don't repeat information presented in the main or adjacent texts. Instead, direct readers to existing descriptions, when available (e.g. captions). Avoid introducing new concepts or terms.
+> - _**Be Objective:**_ Describe only what you see - physical appearances and actions rather than emotions and possible intentions. Don't interpret or analyze the material. Instead, allow readers to form their own opinions. Don't omit uncomfortable or controversial content, such as images associated with politics, religion, or sex.
+> - _**General to Specific:**_ Start with high-level context, and then drill down to details that enhance understanding. This provides the reader with options about how much information to read. Segment content into logical, digestible chunks.
+> - _**Tone and Language:**_ Apply the same writing style and terminology as the surrounding text. Write out abbreviations and symbols to ensure proper pronunciation by screen readers. Use descriptive vocabulary that adds meaning (e.g. “map” instead of “image”).
+>
+> _&nbsp;&nbsp;&mdash; excerpts from [Image Description Guidelines (Diagram Center, A Benetech Initiative)](http://diagramcenter.org/table-of-contents-2.html)_[<sup>[4]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
+
+<Whitespace />
+
+#### Additional Writing Resources and Content Strategies
+
+- [Deque » Blog: Accessibility Strategies for Your Content Team](https://www.deque.com/blog/accessibility-strategies-for-your-content-team/)
+- [Deque » Blog: How to Design Great Alt Text: An Introduction](https://www.deque.com/blog/great-alt-text-introduction/)
+- [Diagram Center (A Benetech Initiative) » Alternative Text Guidance by Image Type](http://diagramcenter.org/specific-guidelines-final-draft.html)
+- [WebAIM (Accessibility In Mind) » Alternative Text](https://webaim.org/techniques/alttext/)
+- [W3C Web Accessibility Initiative (WAI) » Tips: Writing for Web Accessibility](https://www.w3.org/WAI/tips/writing/#write-meaningful-text-alternatives-for-images)
+- [Yale University » Usability Best Practices: Images](https://usability.yale.edu/web-accessibility/articles/images)
+
+<Whitespace newline={4} />
 
 ## Usability Expectations:
 
+### Interaction Details
+
+- **Informative images** are not interactive and do not respond to keyboard tab navigation or mouse/touch presses, but are expected to be read by screen readers and assistive technology. 
+  - _Read more at [Informative Images (W3C: Web Accessibility Tutorials)](https://www.w3.org/WAI/tutorials/images/informative/)._
+- **Decorative images** should be ignored by screen readers and assistive technology and have no corresponding behaviors or interactions. 
+  - _Read more at [Decorative Images (W3C: Web Accessibility Tutorials)](https://www.w3.org/WAI/tutorials/images/decorative/)._
+- **Functional images** that are interactive and used to initiate actions (e.g. as buttons, in hyperlinks, etc.) are not provided as a first-class feature of Terra Image. If Terra Image is used as a functional image, follow the recommended guidance for proper construction.
+  - _Read more at [functional Images (W3C: Web Accessibility Tutorials)](https://www.w3.org/WAI/tutorials/images/functional/)._
+
 ### Keyboard Navigation
- 
-`Terra-Image` does not have any keyboard navigation expectations on its own. Any content provided to the `startContent`, `endContent`, or `children` should follow the interaction expectations of those elements.
+
+Terra Image does not have any keyboard navigation expectations when used on its own.
  
 | Key/Sequence | Description |
 |---|---|
-|*none*| has no keyboard navigation unless image is made as interactive |
+|*none*| Has no keyboard navigation unless image is made to be interactive. |
+
+<Whitespace newline={4} />
+
+## Support Compliance:
+
+Terra is committed to ensuring its components provide maximum possible accessibility. However, using Terra components will not automatically make a product accessible.
+
+Final responsibility lies with the consumers of Terra components &mdash; ensuring proper usage, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance &mdash; to make a product fully accessible.
+
+### WCAG Resources
+
+#### Success Criteria
+
+_Informative (non-decorative) usage of Terra Image **must** meet the following success criteria:_
+
+- [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content) - All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed\[...\]. (Level A)
+- [**1.4.5 Images of Text**](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text) - If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except \[for customizable and essential images\] (Level AA)
+- [**1.4.9 Images of Text (No Exception)**](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text-no-exception) - Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed (Level AAA)
+
+<Whitespace />
 
 ### Supported Features & Technology
 
@@ -93,9 +307,14 @@ _Note: `DecorativeImage` component sets `alt` prop to empty `""` value internall
 
 _For more information about Accessibility Support with Terra — go to [Component Standards: Accessibility (A11y)](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#accessibility-a11y)._
 
-## Related WCAG resources:
-These tutorials provide best-practice guidance on implementing accessibility in different situations. This page combined the following WCAG success criteria and techniques from different conformance levels:
+<Whitespace newline={6} />
 
-- [1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content) : All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed[…]. (Level A)
-- [1.4.5 Images of Text](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text) : If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except [for customizable and essential images] (Level AA)
-- [1.4.9 Images of Text (No Exception)](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text-no-exception) : Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed (Level AAA)
+## Linked References:
+
+1. Eggert, Eric; Abou-Zahra, Shadi; et al. (27 July 2019). ["Web Accessibility Tutorials: Image Concepts"](https://www.w3.org/WAI/tutorials/images/). World Wide Web Consortium. Last updated 27 July 2019. Retrieved 2 March 2022.
+
+2. Deque staff (21 March 2019). ["Summary and Checklist: Images, Canvas, SVG, and Other Non-Text Content"](https://dequeuniversity.com/assets/pdf/module-nontext/module-nontext-checklist.pdf). Deque University. Publised Version 2019.03.21. Retrieved 2 March 2022.
+
+3. Yale staff (2022) ["Usability & Web Accessibility Articles: Images"](https://usability.yale.edu/web-accessibility/articles/images). Yale. Retrieved 2 March 2022.
+
+4. Benetech staff (June 2015). ["Image Description Guidelines"](http://diagramcenter.org/table-of-contents-2.html). Diagram Center, A Benetech Initiative.  First published June 2015. Retrieved 2 March 2022.
