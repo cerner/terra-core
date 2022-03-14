@@ -3,7 +3,7 @@ import IconAlert from 'terra-icon/lib/icon/IconAlert';
 
 const IconAriaLabel = () => (
   <div>
-    <IconAlert title="Alert icon"/>
+    <IconAlert a11yLabel="alert icon"/>
   </div>
 );
 

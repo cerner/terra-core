@@ -2,7 +2,7 @@
 
 ## Unreleased
   * Breaking changes
-    * Updated props for IconBase to make it meaningful by default.
+    * Updated terra-icon to meet accessibility standards.
 
 ## 3.46.1 - (January 4, 2022)
 
