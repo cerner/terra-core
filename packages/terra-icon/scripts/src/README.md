@@ -15,6 +15,6 @@
 
 This part requires perl 5 to run.
 
-    create-decorative-dir
-    replace-decorative-baseclass
-    replace-decorative-displayname
+    npm run create-decorative-dir
+    npm run replace-decorative-baseclass
+    npm run replace-decorative-displayname
