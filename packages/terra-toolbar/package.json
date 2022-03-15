@@ -1,7 +1,7 @@
 {
   "name": "terra-toolbar",
   "main": "lib/Toolbar.js",
-  "version": "1.28.1",
+  "version": "1.29.0",
   "description": "The terra-toolbar component is used to display bar containing items such as buttons, button groups, and links.",
   "repository": {
     "type": "git",
