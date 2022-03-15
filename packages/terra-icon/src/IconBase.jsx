@@ -48,6 +48,10 @@ const defaultProps = {
   focusable: 'false',
 };
 
+// Returns a SVG representing the icon. Is utilized as: <Iconbase  {..props} ><svg children></IconBase>
+// Note: while an img is the ideal recommended approach by accessibility guidelines, 
+// IconBase returns a svg so that non-static icons can be themable by using the CSS color property. 
+
 const IconBase = ({
   a11yLabel,
   isBidi,
