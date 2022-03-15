@@ -14,13 +14,13 @@ The terra-icon component is used to visually represent a literal or symbolic obj
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-icon`
 
-# Adding new icons from the One Cerner Style Icons repo
+## Adding new icons from the One Cerner Style Icons repo
 
     npm run migrate-ocs-icons
 
 This will add any new or changed icons from https://github.com/cerner/one-cerner-style-icons to this project's icons. It generates all of the components and updates the example tables.
 
-# Updating icon components
+## Updating icon components
 
     npm run generate-icons
 
