@@ -70,6 +70,7 @@ const IconBase = ({
   attributes.height = height;
   attributes.width = width;
   attributes.focusable = focusable;
+  attributes.role = 'presentation';
 
   return <svg {...attributes} className={classes}>{children}</svg>;
 };
