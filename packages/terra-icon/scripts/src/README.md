@@ -1,10 +1,1 @@
-# Update all SVG icons
-
-```
-npm run migrate-cerner-one-icons
-```
-* npm run compilescripts
-* npm run migrate-csv
-* npm run migrate-svg
-* npm run generate-icon
-* npm run generate-example
+Each script has its own readme. Instructions on when and how to use these scripts are in the terra-icons readme.
