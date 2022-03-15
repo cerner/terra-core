@@ -3,8 +3,8 @@ import React from 'react';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import IconBaseDec from '../IconBaseDec';
-import styles from '../IconMin.module.scss';
+import IconBaseDec from '../../IconBaseDec';
+import styles from '../../IconMin.module.scss';
 
 const cx = classNamesBind.bind(styles);
 

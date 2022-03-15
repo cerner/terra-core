@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import IconBaseDec from '../IconBaseDec';
+import IconBaseDec from '../../IconBaseDec';
 import { FormattedMessage } from 'react-intl';
 
 const SvgIcon = (customProps) => {
