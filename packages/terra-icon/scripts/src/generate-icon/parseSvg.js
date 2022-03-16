@@ -8,6 +8,7 @@ import Icon from './Icon';
 const parseSvg = filepath => new Promise((resolve) => {
   const source = fs.readFileSync(filepath, 'utf-8');
   const { name } = path.parse(filepath);
+  
   const { document } = new JSDOM(source).window;
   const icon = new Icon(name, document.querySelector('svg'));
 

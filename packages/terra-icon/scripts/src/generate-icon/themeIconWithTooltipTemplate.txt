@@ -9,9 +9,9 @@ const SvgIcon = (customProps) => {
     <FormattedMessage id="Terra.icon.<%= icon.name %>.title">
       {iconTitle => (
         <span aria-label={iconTitle} title={iconTitle}>
-          <IconBase {...attributes} >
-            <%= icon.children %>
-          </IconBase>
+            <IconBase {...attributes} >
+                <%= icon.children %>
+            </IconBase>
         </span>
       )}
     </FormattedMessage>

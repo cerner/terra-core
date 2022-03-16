@@ -16,5 +16,4 @@ SvgIcon.displayName = <%= JSON.stringify(icon.name) %>;
 SvgIcon.defaultProps = <%= JSON.stringify(icon.attributes) %>;
 
 export default SvgIcon;
-
 /* eslint-enable */
