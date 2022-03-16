@@ -23,7 +23,7 @@ Terra.describeViewports('Icon', ['huge'], () => {
   });
 
   describe('AriaLabel', () => {
-    before(() => browser.url('/#/raw/tests/cerner-terra-core-docs/icon/icon-accessible-label'));
+    before(() => browser.url('/#/raw/tests/cerner-terra-core-docs/icon/icon-aria-label'));
 
     it('is accessible', () => {
       Terra.validates.accessibility();
