@@ -4,9 +4,9 @@ import IconBase from '../IconBase';
 
 const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
-  
+
   return (
-    <IconBase {...attributes} className={iconClassNames} >
+    <IconBase {...attributes} >
       <%= icon.children %>
     </IconBase>
   );
