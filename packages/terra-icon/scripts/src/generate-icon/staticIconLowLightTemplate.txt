@@ -9,9 +9,10 @@ const SvgIcon = (customProps) => {
     customProps.className,
   );
 
-  const svgString = `<%= icon.svg %>`;
   return (
-    <IconBase {...attributes} encoding="utf8" svgSource={svgString} ></IconBase>
+    <IconBase {...attributes} className={iconClassNames} >
+      <%= icon.children %>
+    </IconBase>
   );
 };
 
