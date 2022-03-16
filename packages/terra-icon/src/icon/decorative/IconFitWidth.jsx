@@ -6,7 +6,7 @@ const SvgIcon = (customProps) => {
   const attributes = Object.assign({}, customProps);
 
   return (
-    <IconBaseDec {...attributes}>
+    <IconBaseDec {...attributes} >
       <path d="M0 10h3v28H0V10zm45 0v28h3V10h-3zM35 22.5H13v-6L5.5 24l7.5 7.5v-6h22v6l7.5-7.5-7.5-7.5v6z" ></path>
     </IconBaseDec>
   );
