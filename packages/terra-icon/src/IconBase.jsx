@@ -12,7 +12,7 @@ const propTypes = {
   /**
   * String that labels the current element. 
   */
-  title: PropTypes.string.isRequired,
+  a11yLabel: PropTypes.string.isRequired,
   /**
    * Should the svg mirror when dir="rtl".
    */
@@ -48,13 +48,17 @@ const defaultProps = {
   focusable: 'false',
 };
 
+// Returns a SVG representing the icon. Is utilized as: <Iconbase  {..props} ><svg children></IconBase>
+// Note: while an img is the ideal recommended approach by accessibility guidelines, 
+// IconBase returns a svg so that non-static icons can be themable by using the CSS color property. 
+
 const IconBase = ({
+  a11yLabel,
   isBidi,
   isSpin,
   children,
   height,
   width,
-  title,
   focusable,
   ...customProps
 }) => {
@@ -75,8 +79,8 @@ const IconBase = ({
   attributes.width = width;
   attributes.focusable = focusable;
   
-  const svgTitle = React.createElement('title', {}, title);
-  const svgChildren = new Array(svgTitle).concat(children);
+  const svgA11yLabel = React.createElement('title', {}, a11yLabel);
+  const svgChildren = new Array(svgA11yLabel).concat(children);
 
   return <svg {...attributes} className={classes}>{svgChildren}</svg>;
 };
