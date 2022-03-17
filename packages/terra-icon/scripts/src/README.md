@@ -1,20 +1,19 @@
 # Update all SVG icons
-## Step 1 - Migrate Cerner One Icons
 
-    npm run migrate-cerner-one-icons
-
-## Step 2 - Generate meaningful icons
+### Initate scripts
 
     npm run compilescripts
+
+### Migrate icons from a csv file
+You can skip this step if you're not updating svg files.
+
     npm run migrate-csv
     npm run migrate-svg
-    npm run generate-icon
-    npm run generate-example
 
-## Step 3 - Generate decorative icons
+### Generate icons based
+This will generate icons based on the files in `packages/terra-icon/src/svg`, whether they are newly migrated or pre-existing. 
 
-This part requires perl 5 to run.
+    npm run generate-all-icons
 
-    npm run create-decorative-dir
-    npm run replace-decorative-baseclass
-    npm run replace-decorative-displayname
+Meaningful icons will be generated in `packages/terra-icon/src/icon`, directly in the folder. 
+Decorative icons will be generated in `packages/terra-icon/src/icon/decorative`.
