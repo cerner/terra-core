@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+  * Breaking changes
+    * Updated terra-icon to meet accessibility standards.
 
 ## 3.46.1 - (January 4, 2022)
 
