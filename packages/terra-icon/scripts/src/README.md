@@ -11,7 +11,7 @@
     npm run generate-icon
     npm run generate-example
 
-## Step 3 - Generate decorateive icons
+## Step 3 - Generate decorative icons
 
 This part requires perl 5 to run.
 
