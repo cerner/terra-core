@@ -249,7 +249,7 @@ const IconAll = () => (
     </thead>
     <tbody>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconAdd height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconAdd a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>add</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -258,7 +258,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSearch height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSearch a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>search</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -267,7 +267,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCommit height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCommit a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>commit</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -276,7 +276,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCheckmark height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCheckmark a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>checkmark</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -285,7 +285,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTrash height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTrash a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>trash</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -294,7 +294,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPaperFolded height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPaperFolded a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>paperFolded</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -303,7 +303,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPrinter height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPrinter a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>printer</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -312,7 +312,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconComment height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconComment a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>comment</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -321,7 +321,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconBookmark height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconBookmark a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>bookmark</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -330,7 +330,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconModified height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconModified a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>modified</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -339,7 +339,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFirst height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFirst a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>first</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -348,7 +348,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFolder height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFolder a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>folder</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -357,7 +357,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconAttachment height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconAttachment a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>attachment</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -366,7 +366,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSend height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSend a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>send</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -375,7 +375,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPill height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPill a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>pill</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -384,7 +384,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRedo height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRedo a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>redo</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -393,7 +393,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconVisualization height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconVisualization a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>visualization</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -402,7 +402,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconLightbulb height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconLightbulb a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>lightbulb</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -411,7 +411,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconForward height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconForward a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>forward</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -420,7 +420,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconProjects height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconProjects a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>projects</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -429,7 +429,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconReplyAll height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconReplyAll a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>replyAll</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -438,7 +438,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFlag height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFlag a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>flag</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -447,7 +447,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCalculator height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCalculator a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>calculator</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -456,7 +456,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCaretRight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCaretRight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>caretRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -465,7 +465,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCaretLeft height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCaretLeft a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>caretLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -474,7 +474,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCaretUp height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCaretUp a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>caretUp</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -483,7 +483,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCaretDown height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCaretDown a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>caretDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -492,7 +492,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTrophy height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTrophy a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>trophy</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -501,7 +501,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconChevronLeft height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconChevronLeft a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>chevronLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -510,7 +510,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPrevious height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPrevious a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>previous</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -519,7 +519,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconChevronRight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconChevronRight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>chevronRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -528,7 +528,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconNext height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconNext a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>next</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -537,7 +537,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconChevronUp height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconChevronUp a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>chevronUp</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -546,7 +546,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconExpandLess height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconExpandLess a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>expandLess</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -555,7 +555,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconChevron height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconChevron a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>chevron</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -564,7 +564,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconChevronDown height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconChevronDown a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>chevronDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -573,7 +573,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconExpandMore height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconExpandMore a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>expandMore</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -582,7 +582,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconClock height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconClock a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>clock</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -591,7 +591,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconAway height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconAway a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>away</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -600,7 +600,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSortAscending height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSortAscending a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>sortAscending</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -609,7 +609,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSortDescending height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSortDescending a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>sortDescending</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -618,7 +618,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTreemap height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTreemap a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>treemap</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -627,7 +627,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconGlasses height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconGlasses a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>glasses</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -636,7 +636,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconImage height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconImage a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>image</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -645,7 +645,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDoorOpen height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDoorOpen a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>doorOpen</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -654,7 +654,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconEllipses height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconEllipses a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>ellipses</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -663,7 +663,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconExclamation height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconExclamation a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>exclamation</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -672,7 +672,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconItalicI height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconItalicI a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>italic-i</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -681,7 +681,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMinus height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMinus a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>minus</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -690,7 +690,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconClose height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconClose a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>close</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -699,7 +699,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconClear height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconClear a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>clear</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -708,7 +708,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconIncomplete height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconIncomplete a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>incomplete</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -717,7 +717,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconNotMet height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconNotMet a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>notMet</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -726,7 +726,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPerson height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPerson a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>person</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -735,7 +735,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconLeft height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconLeft a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>left</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -744,7 +744,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>right</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -753,7 +753,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconUp height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconUp a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>up</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -762,7 +762,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDown height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDown a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>down</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -771,7 +771,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSettings height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSettings a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>settings</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -780,7 +780,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconEdit height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconEdit a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>edit</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -789,7 +789,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCalendar height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCalendar a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>calendar</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -798,7 +798,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconLookback height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconLookback a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>lookback</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -807,7 +807,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRefresh height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRefresh a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>refresh</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -816,7 +816,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconProvider height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconProvider a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>provider</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -825,7 +825,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPadlock height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPadlock a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>padlock</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -834,7 +834,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFeatured height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFeatured a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>featured</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -843,7 +843,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFeaturedOff height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFeaturedOff a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>featuredOff</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -852,7 +852,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFeaturedOutline height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFeaturedOutline a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>featuredOutline</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -861,7 +861,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconHalfRating height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconHalfRating a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>halfRating</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -870,7 +870,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconArchive height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconArchive a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>archive</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -879,7 +879,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFunnel height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFunnel a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>funnel</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -888,7 +888,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDocuments height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDocuments a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>documents</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -897,7 +897,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconQuestion height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconQuestion a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>question</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -906,7 +906,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconUnknown height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconUnknown a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>unknown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -915,7 +915,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconQuestionOutline height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconQuestionOutline a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>questionOutline</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -924,7 +924,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconHouse height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconHouse a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>house</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -933,7 +933,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSave height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSave a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>save</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -942,7 +942,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconHospital height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconHospital a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>hospital</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -951,7 +951,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPending height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPending a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>pending</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -960,7 +960,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconAnalytics height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconAnalytics a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>analytics</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -969,7 +969,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconAnnouncement height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconAnnouncement a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>announcement</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -978,7 +978,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCamera height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCamera a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>camera</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -987,7 +987,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconBriefcase height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconBriefcase a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>briefcase</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -996,7 +996,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconLink height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconLink a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>link</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1005,7 +1005,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMenu height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMenu a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>menu</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1014,7 +1014,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconList height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconList a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>list</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1023,7 +1023,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconChecklist height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconChecklist a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>checklist</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1032,7 +1032,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconUnlock height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconUnlock a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>unlock</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1041,7 +1041,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDue height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDue a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>due</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1050,7 +1050,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSpinner height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSpinner a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>spinner</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1059,7 +1059,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTile height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTile a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>tile</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1068,7 +1068,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconUsers height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconUsers a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>users</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1077,7 +1077,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconKnurling height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconKnurling a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>knurling</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1086,7 +1086,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconAddPerson height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconAddPerson a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>addPerson</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1095,7 +1095,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconUpload height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconUpload a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>upload</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1104,7 +1104,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDownload height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDownload a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>download</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1113,7 +1113,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCancel height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCancel a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>cancel</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1122,7 +1122,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMaximize height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMaximize a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>maximize</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1131,7 +1131,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMinimize height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMinimize a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>minimize</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1140,7 +1140,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconReply height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconReply a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>reply</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1149,7 +1149,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTable height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTable a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>table</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1158,7 +1158,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRequired height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRequired a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>required</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1167,7 +1167,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconGapChecking height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconGapChecking a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>gap checking</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1176,7 +1176,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPersonHospital height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPersonHospital a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>personHospital</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1185,7 +1185,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPersonnelPerson height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPersonnelPerson a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>personnelPerson</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1194,7 +1194,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconLeftPane height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconLeftPane a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>leftPane</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1203,7 +1203,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFlowsheet height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFlowsheet a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>flowsheet</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1212,7 +1212,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconNotificationOff height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconNotificationOff a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>notificationOff</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1221,7 +1221,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconNotification height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconNotification a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>notification</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1230,7 +1230,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconNotificationDisabled height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconNotificationDisabled a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>notificationDisabled</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1239,7 +1239,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconLast height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconLast a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>last</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1248,7 +1248,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDevice height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDevice a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>device</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1257,7 +1257,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPaperPencil height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPaperPencil a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>paperPencil</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1266,7 +1266,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconClipboard height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconClipboard a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>clipboard</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1275,7 +1275,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconZoomOut height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconZoomOut a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>zoomOut</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1284,7 +1284,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconZoomIn height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconZoomIn a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>zoomIn</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1293,7 +1293,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconEnvelope height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconEnvelope a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>envelope</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1302,7 +1302,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconEnvelopeFill height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconEnvelopeFill a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>envelopeFill</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1311,7 +1311,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconAllergy height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconAllergy a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>allergy</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1320,7 +1320,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPhoneDown height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPhoneDown a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>phoneDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1329,7 +1329,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPhone height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPhone a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>phone</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1338,7 +1338,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPanelLeft height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPanelLeft a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>panelLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1347,7 +1347,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPanelRight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPanelRight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>panelRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1356,7 +1356,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTag height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTag a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>tag</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1365,7 +1365,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconIPass height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconIPass a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>iPass</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1374,7 +1374,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconScratchPad height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconScratchPad a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>scratchPad</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1383,7 +1383,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPharmacyReview height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPharmacyReview a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>pharmacyReview</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1392,7 +1392,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconBusy height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconBusy a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>busy</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1401,7 +1401,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconUnavailable height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconUnavailable a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>unavailable</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1410,7 +1410,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconImplant height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconImplant a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>implant</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1419,7 +1419,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconProtocol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconProtocol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>protocol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1428,7 +1428,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconVideoCamera height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconVideoCamera a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>videoCamera</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1437,7 +1437,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconVideoCameraDisabled height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconVideoCameraDisabled a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>videoCameraDisabled</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1446,7 +1446,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconNoSignal height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconNoSignal a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>noSignal</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1455,7 +1455,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconUndo height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconUndo a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>undo</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1464,7 +1464,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRecurringEvent height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRecurringEvent a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>recurringEvent</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1473,7 +1473,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSeparate height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSeparate a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>separate</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1482,7 +1482,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMerge height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMerge a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>merge</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1491,7 +1491,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCompose height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCompose a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>compose</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1500,7 +1500,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconUnread height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconUnread a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>unread</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1509,7 +1509,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSwap height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSwap a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>swap</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1518,7 +1518,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMicrophone height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMicrophone a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>microphone</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1527,7 +1527,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMicrophoneDisabled height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMicrophoneDisabled a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>microphoneDisabled</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1536,7 +1536,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconOutgoingCall height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconOutgoingCall a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>outgoingCall</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1545,7 +1545,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconIncomingCall height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconIncomingCall a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>incomingCall</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1554,7 +1554,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMissedCall height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMissedCall a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>missedCall</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1563,7 +1563,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPinDown height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPinDown a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>pinDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1572,7 +1572,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPinDiagonal height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPinDiagonal a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>pinDiagonal</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1581,7 +1581,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconAudio height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconAudio a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>audio</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1590,7 +1590,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconExternalLink height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconExternalLink a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>externalLink</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1599,7 +1599,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconBedRequested height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconBedRequested a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>bedRequested</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1608,7 +1608,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFlipVertical height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFlipVertical a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>flipVertical</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1617,7 +1617,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFlipHorizontal height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFlipHorizontal a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>flipHorizontal</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1626,7 +1626,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRotateLeft height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRotateLeft a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>rotateLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1635,7 +1635,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRotateRight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRotateRight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>rotateRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1644,7 +1644,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconHold height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconHold a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>hold</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1653,7 +1653,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFitWidth height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFitWidth a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>fitWidth</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1662,7 +1662,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFitScale height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFitScale a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>fitScale</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1671,7 +1671,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSecondaryProvider height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSecondaryProvider a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>secondaryProvider</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1680,7 +1680,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPartiallyMet height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPartiallyMet a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>partiallyMet</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1689,7 +1689,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSimulation height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSimulation a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>simulation</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1698,7 +1698,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCollapseRow height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCollapseRow a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>collapseRow</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1707,7 +1707,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconExpandRow height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconExpandRow a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>expandRow</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1716,7 +1716,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDoubleChevronLeft height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDoubleChevronLeft a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>doubleChevronLeft</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1725,7 +1725,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDoubleChevronRight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDoubleChevronRight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>doubleChevronRight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1734,7 +1734,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconExtensions height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconExtensions a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>extensions</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1743,7 +1743,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDocumentPlus height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDocumentPlus a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>documentPlus</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1752,7 +1752,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRefusedSlot height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRefusedSlot a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>refusedSlot</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1761,7 +1761,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPharmacyVerification height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPharmacyVerification a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>pharmacyVerification</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1770,7 +1770,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconFitHeight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconFitHeight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>fitHeight</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1779,7 +1779,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPersonDoor height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPersonDoor a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>personDoor</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1788,7 +1788,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconLocationPin height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconLocationPin a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>locationPin</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1797,7 +1797,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMediaPlay height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMediaPlay a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>mediaPlay</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1806,7 +1806,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMediaPause height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMediaPause a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>mediaPause</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1815,7 +1815,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMediaStop height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMediaStop a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>mediaStop</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1824,7 +1824,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMediaRecord height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMediaRecord a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>mediaRecord</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1833,7 +1833,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMediaFastForward height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMediaFastForward a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>mediaFastForward</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1842,7 +1842,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMediaRewind height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMediaRewind a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>mediaRewind</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1851,7 +1851,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconBluetooth height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconBluetooth a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>bluetooth</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1860,7 +1860,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconBluetoothSlash height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconBluetoothSlash a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>bluetoothSlash</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1869,7 +1869,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconStartPresenting height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconStartPresenting a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>startPresenting</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1878,7 +1878,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconStopPresenting height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconStopPresenting a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>stopPresenting</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1887,7 +1887,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPager height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPager a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>pager</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1896,7 +1896,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconAutoText height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconAutoText a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>autoText</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1905,7 +1905,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconKeyboard height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconKeyboard a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>keyboard</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1914,7 +1914,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSharedSchedules height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSharedSchedules a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>sharedSchedules</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1923,7 +1923,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPatientSearch height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPatientSearch a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>patientSearch</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1932,7 +1932,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconGroup height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconGroup a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>group</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1941,7 +1941,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMedicationTablet height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMedicationTablet a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>medicationTablet</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1950,7 +1950,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMedicationTabletOutline height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMedicationTabletOutline a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>medicationTabletOutline</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1959,7 +1959,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMedicationTabletHalf height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMedicationTabletHalf a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>medicationTabletHalf</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1968,7 +1968,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconMedicationTabletHalfOutline height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconMedicationTabletHalfOutline a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>medicationTabletHalfOutline</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1977,7 +1977,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconWaveform height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconWaveform a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>waveform</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1986,7 +1986,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconConfidential height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconConfidential a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>confidential</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -1995,7 +1995,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconWifi height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconWifi a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>wifi</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2004,7 +2004,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconWifiSlash height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconWifiSlash a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>wifiSlash</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2013,7 +2013,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconBrokenImage height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconBrokenImage a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>brokenImage</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2022,7 +2022,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconBrokenLinkUnlink height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconBrokenLinkUnlink a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>brokenLink_unlink</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2104,6 +2104,7 @@ const IconAll = () => (
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconCircleSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCircleSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>circle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2112,7 +2113,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCircleSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCircleSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>circle_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2121,7 +2122,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDiamondSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDiamondSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>diamond_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2130,7 +2131,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDiamondSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDiamondSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>diamond_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2139,7 +2140,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPlusSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPlusSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>plus_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2148,7 +2149,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPlusSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPlusSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>plus_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2157,7 +2158,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRectangleSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRectangleSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>rectangle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2166,7 +2167,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconRectangleSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconRectangleSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>rectangle_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2175,7 +2176,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSquareSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSquareSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>square_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2184,7 +2185,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconSquareSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconSquareSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>square_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2193,7 +2194,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTeardropSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTeardropSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>teardrop_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2202,7 +2203,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTeardropSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTeardropSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>teardrop_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2211,7 +2212,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTeardropUpSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTeardropUpSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>teardropUp_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2220,7 +2221,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTeardropUpSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTeardropUpSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>teardropUp_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2229,7 +2230,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconThinDiamondSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconThinDiamondSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>thinDiamond_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2238,7 +2239,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconThinDiamondSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconThinDiamondSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>thinDiamond_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2247,7 +2248,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTriangleSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTriangleSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>triangle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2256,7 +2257,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTriangleSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTriangleSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>triangle_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2265,7 +2266,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTriangleDownSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTriangleDownSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>triangleDown_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2274,7 +2275,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTriangleDownSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTriangleDownSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>triangleDown_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2283,7 +2284,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconXSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconXSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>x_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2292,7 +2293,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconXSymbolLight height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconXSymbolLight a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>x_symbol_light</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2301,7 +2302,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCircleLinesSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCircleLinesSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>circleLines_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2310,7 +2311,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCatalogueNumber height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCatalogueNumber a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>catalogueNumber</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2319,7 +2320,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCaution height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCaution a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>caution</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2328,7 +2329,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconConsultInstructionsForUse height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconConsultInstructionsForUse a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>consultInstructionsForUse</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2337,7 +2338,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconDateOfManufacture height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconDateOfManufacture a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>dateOfManufacture</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2346,7 +2347,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconManufacturer height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconManufacturer a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>manufacturer</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2355,7 +2356,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCeMarking height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconCeMarking a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>ceMarking</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2364,7 +2365,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconEcRep height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconEcRep a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>ecRep</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>

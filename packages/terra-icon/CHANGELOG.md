@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+  * Breaking changes
+    * Updated terra-icon to meet accessibility standards.
 
 * Changed
   * Updated to `one-cerner-style-icons` v1.48.0

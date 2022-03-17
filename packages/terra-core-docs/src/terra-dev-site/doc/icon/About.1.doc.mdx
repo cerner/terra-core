@@ -7,6 +7,8 @@ import IconBasePropsTable from 'terra-icon/src/IconBase?dev-site-props-table';
 # Terra Icon
 
 The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.
+Icons can be `meaningful` where they used to convey a semantic meaning or `decorative` where they are are simply used for aesthetic purposes.
+See [Usage](#usage) for more information.
 
 ## Getting Started
 
@@ -28,6 +30,9 @@ This component requires the following peer dependencies be installed in your app
 
 ## Usage
 
+### Meaningful Icons
+Each Icon can be imported individually.
+
 ```jsx
 import IconAdd from 'terra-icon/lib/icon/IconAdd';
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
@@ -35,6 +40,19 @@ import IconEdit from 'terra-icon/lib/icon/IconEdit';
 <div>
   <IconAdd a11yLabel="add item"/>
   <IconEdit a11yLabel="edit item"/>
+</div>
+```
+
+By default, the icons imported are `meaningful` which means that they are intended to convey meaning and thus, the `a11yLabel` prop is required for screenreaders. 
+If icons are intended for aesthetic purposes, then `decorative` icons and be imported as follows:
+
+```jsx
+import IconAddDecorative from 'terra-icon/lib/icon/decorative/IconAdd';
+import IconEditDecorative from 'terra-icon/lib/icon/decoartive/IconEdit';
+
+<div>
+  <IconAdd />
+  <IconEdit />
 </div>
 ```
 
