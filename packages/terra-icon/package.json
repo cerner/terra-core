@@ -49,7 +49,7 @@
     "generate-meaningful-icons": "npm run compilescripts && node scripts/lib/generate-icon/index.js",
     "generate-decorative-icons": "npm run create-decorative-dir && npm run replace-decorative-baseclass && npm run replace-decorative-import && npm run replace-decorative-displayname",
     "generate-example": "node scripts/lib/generate-example/index.js",
-    "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-json && npm run generate-icon && npm run generate-example",
+    "migrate-cerner-one-icons": "npm run compilescripts && npm run migrate-csv && npm run migrate-svg && npm run generate-json && npm run generate-all-icons && npm run generate-example",
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
