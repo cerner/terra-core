@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+  * Breaking changes
+    * Updated terra-icon to meet accessibility standards.
 
   * Breaking changes
     * Updated terra-icon to meet accessibility standards.

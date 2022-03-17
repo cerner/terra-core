@@ -78,7 +78,7 @@ const IconBase = ({
   attributes.height = height;
   attributes.width = width;
   attributes.focusable = focusable;
-
+  
   const svgA11yLabel = React.createElement('title', {}, a11yLabel);
   const svgChildren = new Array(svgA11yLabel).concat(children);
 

@@ -50,6 +50,7 @@ const IconBase = ({
   children,
   height,
   width,
+  title,
   focusable,
   ...customProps
 }) => {
