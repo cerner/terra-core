@@ -199,6 +199,11 @@ import IconWifi from 'terra-icon/lib/icon/IconWifi';
 import IconWifiSlash from 'terra-icon/lib/icon/IconWifiSlash';
 import IconBrokenImage from 'terra-icon/lib/icon/IconBrokenImage';
 import IconBrokenLinkUnlink from 'terra-icon/lib/icon/IconBrokenLinkUnlink';
+import IconVolumeSetDefault from 'terra-icon/lib/icon/IconVolumeSetDefault';
+import IconVolumeSetDecrease from 'terra-icon/lib/icon/IconVolumeSetDecrease';
+import IconVolumeSetIncrease from 'terra-icon/lib/icon/IconVolumeSetIncrease';
+import IconVolumeSetMute from 'terra-icon/lib/icon/IconVolumeSetMute';
+import IconPersonConnection from 'terra-icon/lib/icon/IconPersonConnection';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -2019,6 +2024,51 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconBrokenLinkUnlink from 'terra-icon/lib/icon/IconBrokenLinkUnlink';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconVolumeSetDefault height='2em' width='2em' /></td>
+        <td style={cellStyle}>volumeSet_default</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconVolumeSetDefault from 'terra-icon/lib/icon/IconVolumeSetDefault';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconVolumeSetDecrease height='2em' width='2em' /></td>
+        <td style={cellStyle}>volumeSet_decrease</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconVolumeSetDecrease from 'terra-icon/lib/icon/IconVolumeSetDecrease';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconVolumeSetIncrease height='2em' width='2em' /></td>
+        <td style={cellStyle}>volumeSet_increase</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconVolumeSetIncrease from 'terra-icon/lib/icon/IconVolumeSetIncrease';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconVolumeSetMute height='2em' width='2em' /></td>
+        <td style={cellStyle}>volumeSet_mute</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconVolumeSetMute from 'terra-icon/lib/icon/IconVolumeSetMute';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconPersonConnection height='2em' width='2em' /></td>
+        <td style={cellStyle}>personConnection</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconPersonConnection from 'terra-icon/lib/icon/IconPersonConnection';
           </code>
         </td>
       </tr>
