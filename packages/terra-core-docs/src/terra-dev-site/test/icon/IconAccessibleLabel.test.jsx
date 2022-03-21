@@ -6,12 +6,12 @@ const IconAccessibleLabel = () => (
   <div>
     <h3>Meaningful icon</h3>
     <div>
-      <IconAlert a11yLabel="alert icon"/>
+      <IconAlert a11yLabel="alert icon" />
     </div>
-    
+
     <h3>Decorative icon</h3>
     <div>
-      <IconAlertDecorative a11yLabel="alert icon"/>
+      <IconAlertDecorative a11yLabel="alert icon" />
     </div>
   </div>
 );
