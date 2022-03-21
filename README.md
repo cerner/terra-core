@@ -47,7 +47,7 @@ Components in beta stage may include breaking changes, new features, and bug fix
 
 <h3 id="status">
   Status
-</h3>
+</h3> 
 
 ![Stable](https://badgen.net/badge/status/Stable/green)
 ![Beta](https://badgen.net/badge/status/Beta/orange)
