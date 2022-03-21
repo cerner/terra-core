@@ -5,6 +5,7 @@ services:
 branches:
   only:
     - main
+    - A11y-MVB
 cache:
   directories:
     - travis-build
