@@ -8,6 +8,7 @@
 * Added
   * Added Accessibility guide for `terra-image`.
   * Added docs for `DecorativeImage`.
+  * Added A11y guide for `terra-icon`.
 
 * Fixed
   * Updated broken links in terra-form-select docs.
