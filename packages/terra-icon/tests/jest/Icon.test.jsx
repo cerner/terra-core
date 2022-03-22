@@ -77,16 +77,6 @@ describe('Icon', () => {
       });
     });
 
-    describe('ariaLabel prop', () => {
-      it('should have default ariaLabel={null}', () => {
-        const wrapper = shallow(<IconAdd />);
-        expect(wrapper.prop('ariaLabel')).toEqual(null);
-      });
-      it('should have ariaLabel={some value}', () => {
-        const wrapper = shallow(<IconAdd ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual('some value');
-      });
-    });
   });
 
   describe('IconSpinner', () => {
@@ -158,16 +148,6 @@ describe('Icon', () => {
       });
     });
 
-    describe('ariaLabel prop', () => {
-      it('should have default ariaLabel={null}', () => {
-        const wrapper = shallow(<IconSpinner />);
-        expect(wrapper.prop('ariaLabel')).toEqual(null);
-      });
-      it('should have ariaLabel={some value}', () => {
-        const wrapper = shallow(<IconSpinner ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual('some value');
-      });
-    });
   });
 
   describe('IconComment', () => {
@@ -243,16 +223,6 @@ describe('Icon', () => {
       });
     });
 
-    describe('ariaLabel prop', () => {
-      it('should have default ariaLabel={null}', () => {
-        const wrapper = shallow(<IconComment />);
-        expect(wrapper.prop('ariaLabel')).toEqual(null);
-      });
-      it('should have ariaLabel={some value}', () => {
-        const wrapper = shallow(<IconComment ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual('some value');
-      });
-    });
   });
 
   it('correctly applies the theme context className', () => {
