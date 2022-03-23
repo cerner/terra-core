@@ -171,27 +171,32 @@ exports[`Alert of type alert with text content should render an Alert component 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconAlert"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#E50000\\" d=\\"M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z\\"/><path fill=\\"#FFF\\" d=\\"M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconAlert"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#E50000\\" d=\\"M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z\\"/><path fill=\\"#FFF\\" d=\\"M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+                    fill="#E50000"
+                  />
+                  <path
+                    d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconAlert>
@@ -309,27 +314,32 @@ exports[`Alert of type custom with custom title and text content should render a
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconHelp"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#007CC3\\" d=\\"M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z\\"/><path fill=\\"#FFF\\" d=\\"M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconHelp"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#007CC3\\" d=\\"M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z\\"/><path fill=\\"#FFF\\" d=\\"M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z"
+                    fill="#007CC3"
+                  />
+                  <path
+                    d="M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconHelp>
@@ -432,27 +442,32 @@ exports[`Alert of type error with text content should render an Alert component 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconError"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#E50000\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M7 21.5h34v5H7v-5z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconError"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#E50000\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M7 21.5h34v5H7v-5z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                    fill="#E50000"
+                  />
+                  <path
+                    d="M7 21.5h34v5H7v-5z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconError>
@@ -557,27 +572,32 @@ exports[`Alert of type info with custom title and HTML content should render an 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconInformation"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#007CC3\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconInformation"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#007CC3\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                    fill="#007CC3"
+                  />
+                  <path
+                    d="M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconInformation>
@@ -682,27 +702,32 @@ exports[`Alert of type info with text content should render an Alert component o
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconInformation"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#007CC3\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconInformation"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#007CC3\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                    fill="#007CC3"
+                  />
+                  <path
+                    d="M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconInformation>
@@ -831,27 +856,32 @@ exports[`Alert of type success with an action button text content should render 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconSuccess"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#78C346\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconSuccess"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#78C346\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                    fill="#78C346"
+                  />
+                  <path
+                    d="M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconSuccess>
@@ -992,27 +1022,32 @@ exports[`Alert of type success with text content should render an Alert componen
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconSuccess"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#78C346\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconSuccess"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#78C346\\" d=\\"M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z\\"/><path fill=\\"#FFF\\" d=\\"M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                    fill="#78C346"
+                  />
+                  <path
+                    d="M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconSuccess>
@@ -1115,27 +1150,26 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path d=\\"M46 15.1l-2.7-5.5-16.5 9.6V0h-5.5v19.2L4.8 9.6l-2.7 5.5L17.8 24 2 32.9l2.7 5.5 16.5-9.6V48h5.5V28.8l16.5 9.6 2.7-5.5L30.2 24 46 15.1z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
                   className="tui-Icon icon"
-                  encoding="utf8"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path d=\\"M46 15.1l-2.7-5.5-16.5 9.6V0h-5.5v19.2L4.8 9.6l-2.7 5.5L17.8 24 2 32.9l2.7 5.5 16.5-9.6V48h5.5V28.8l16.5 9.6 2.7-5.5L30.2 24 46 15.1z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M46 15.1l-2.7-5.5-16.5 9.6V0h-5.5v19.2L4.8 9.6l-2.7 5.5L17.8 24 2 32.9l2.7 5.5 16.5-9.6V48h5.5V28.8l16.5 9.6 2.7-5.5L30.2 24 46 15.1z"
+                  />
                 </svg>
               </IconBase>
             </IconGapChecking>
@@ -1238,27 +1272,26 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path d=\\"M24 0l24 24-24 24L0 24 24 0z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
                   className="tui-Icon icon"
-                  encoding="utf8"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path d=\\"M24 0l24 24-24 24L0 24 24 0z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M24 0l24 24-24 24L0 24 24 0z"
+                  />
                 </svg>
               </IconBase>
             </IconDiamondSymbol>
@@ -1361,27 +1394,32 @@ exports[`Alert of type warning with text content should render an Alert componen
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconWarning"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#FFC20A\\" d=\\"M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z\\"/><path fill=\\"#1C1F21\\" d=\\"M47.7 43.3L25 3.7c-.3-.5-.6-.7-1-.7s-.7.2-1 .7L.2 43.3c-.5 1-.1 1.7 1 1.7h45.5c1.1 0 1.6-.8 1-1.7zm-45.9.2L24 5l22.2 38.5H1.8zm19.7-6.8h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconWarning"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#FFC20A\\" d=\\"M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z\\"/><path fill=\\"#1C1F21\\" d=\\"M47.7 43.3L25 3.7c-.3-.5-.6-.7-1-.7s-.7.2-1 .7L.2 43.3c-.5 1-.1 1.7 1 1.7h45.5c1.1 0 1.6-.8 1-1.7zm-45.9.2L24 5l22.2 38.5H1.8zm19.7-6.8h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+                    fill="#FFC20A"
+                  />
+                  <path
+                    d="M47.7 43.3L25 3.7c-.3-.5-.6-.7-1-.7s-.7.2-1 .7L.2 43.3c-.5 1-.1 1.7 1 1.7h45.5c1.1 0 1.6-.8 1-1.7zm-45.9.2L24 5l22.2 38.5H1.8zm19.7-6.8h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+                    fill="#1C1F21"
+                  />
                 </svg>
               </IconBase>
             </IconWarning>
@@ -1483,27 +1521,32 @@ exports[`Alert with no props should render a default component 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconAlert"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#E50000\\" d=\\"M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z\\"/><path fill=\\"#FFF\\" d=\\"M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconAlert"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#E50000\\" d=\\"M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z\\"/><path fill=\\"#FFF\\" d=\\"M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+                    fill="#E50000"
+                  />
+                  <path
+                    d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconAlert>
@@ -1648,27 +1691,32 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconHelp"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#007CC3\\" d=\\"M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z\\"/><path fill=\\"#FFF\\" d=\\"M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconHelp"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#007CC3\\" d=\\"M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z\\"/><path fill=\\"#FFF\\" d=\\"M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z"
+                    fill="#007CC3"
+                  />
+                  <path
+                    d="M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconHelp>
@@ -1844,27 +1892,32 @@ exports[`Dismissible Alert that includes actions section should render an alert 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                encoding="utf8"
+                className="IconAlert"
                 focusable="false"
                 height="1em"
                 isBidi={false}
                 isSpin={false}
-                svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#E50000\\" d=\\"M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z\\"/><path fill=\\"#FFF\\" d=\\"M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z\\"/></svg>"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon"
-                  encoding="utf8"
+                  className="tui-Icon icon IconAlert"
                   focusable="false"
                   height="1em"
-                  svgSource="<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\"><path fill=\\"#E50000\\" d=\\"M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z\\"/><path fill=\\"#FFF\\" d=\\"M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title />
+                  <path
+                    d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+                    fill="#E50000"
+                  />
+                  <path
+                    d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+                    fill="#FFF"
+                  />
                 </svg>
               </IconBase>
             </IconAlert>

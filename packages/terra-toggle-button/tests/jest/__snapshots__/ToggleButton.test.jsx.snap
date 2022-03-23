@@ -22,15 +22,16 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
           <svg
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
-            encoding="utf8"
             focusable="false"
             height="1em"
-            svgsource="<svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi\\"><path d=\\"M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z\\"/></svg>"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title />
+            <path
+              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+            />
           </svg>
         </span>
       </span>
@@ -70,15 +71,16 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
           <svg
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
-            encoding="utf8"
             focusable="false"
             height="1em"
-            svgsource="<svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi\\"><path d=\\"M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z\\"/></svg>"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title />
+            <path
+              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+            />
           </svg>
         </span>
       </span>
@@ -130,15 +132,16 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
           <svg
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
-            encoding="utf8"
             focusable="false"
             height="1em"
-            svgsource="<svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi\\"><path d=\\"M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z\\"/></svg>"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title />
+            <path
+              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+            />
           </svg>
         </span>
       </span>
@@ -173,15 +176,16 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
           <svg
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
-            encoding="utf8"
             focusable="false"
             height="1em"
-            svgsource="<svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi\\"><path d=\\"M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z\\"/></svg>"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title />
+            <path
+              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+            />
           </svg>
         </span>
       </span>
@@ -278,12 +282,10 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                 <IconBase
                   className=""
                   data-name="Layer 1"
-                  encoding="utf8"
                   focusable="false"
                   height="1em"
                   isBidi={true}
                   isSpin={false}
-                  svgSource="<svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi\\"><path d=\\"M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z\\"/></svg>"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
@@ -291,15 +293,16 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                   <svg
                     className="tui-Icon icon is-bidi"
                     data-name="Layer 1"
-                    encoding="utf8"
                     focusable="false"
                     height="1em"
-                    svgSource="<svg data-name=\\"Layer 1\\" xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 48 48\\" class=\\"is-bidi\\"><path d=\\"M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z\\"/></svg>"
                     viewBox="0 0 48 48"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <title />
+                    <path
+                      d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
+                    />
                   </svg>
                 </IconBase>
               </IconChevronRight>
