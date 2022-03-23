@@ -76,7 +76,6 @@ describe('Icon', () => {
         expect(wrapper.prop('isSpin')).toEqual(true);
       });
     });
-
   });
 
   describe('IconSpinner', () => {
@@ -147,7 +146,6 @@ describe('Icon', () => {
         expect(wrapper.prop('isSpin')).toEqual(false);
       });
     });
-
   });
 
   describe('IconComment', () => {
@@ -222,7 +220,6 @@ describe('Icon', () => {
         expect(wrapper.prop('isSpin')).toEqual(true);
       });
     });
-
   });
 
   it('correctly applies the theme context className', () => {
