@@ -72,7 +72,7 @@ exports[`correctly applies the theme context className 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                className="IconError"
+                className="IconError orion-fusion-theme"
                 focusable="false"
                 height="1em"
                 isBidi={false}
@@ -82,7 +82,7 @@ exports[`correctly applies the theme context className 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  className="tui-Icon icon IconError"
+                  className="tui-Icon icon IconError orion-fusion-theme"
                   focusable="false"
                   height="1em"
                   viewBox="0 0 48 48"
