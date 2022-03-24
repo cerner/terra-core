@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated jest snapshots.
+
 ## 2.51.2 - (January 4, 2022)
 
 * Changed
@@ -11,7 +14,6 @@
 
 * Changed
   * Migrate docs to core docs.
-
 
 ## 2.51.0 - (September 21, 2021)
 
