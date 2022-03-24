@@ -10,9 +10,21 @@ The terra-icon component is used to visually represent a literal or symbolic obj
 - [Documentation](https://engineering.cerner.com/terra-ui/components/terra-icon/icon/icon)
 - [LICENSE](#license)
 
-## Getting Started
+## Using Terra Icon
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-icon`
+
+## Adding new icons from the One Cerner Style Icons repo
+
+    npm run migrate-ocs-icons
+
+This will add any new or changed icons from https://github.com/cerner/one-cerner-style-icons to this project's icons. It generates all of the components and updates the example tables.
+
+## Updating icon components
+
+    npm run generate-icons
+
+This will recreate the icon components from the current SVGs.
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
