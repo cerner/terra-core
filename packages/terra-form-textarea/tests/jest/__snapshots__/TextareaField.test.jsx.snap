@@ -72,7 +72,6 @@ exports[`correctly applies the theme context className 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconError orion-fusion-theme"
                 focusable="false"
                 height="1em"
@@ -83,7 +82,6 @@ exports[`correctly applies the theme context className 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconError orion-fusion-theme"
                   focusable="false"
                   height="1em"
@@ -91,6 +89,7 @@ exports[`correctly applies the theme context className 1`] = `
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                     fill="#E50000"

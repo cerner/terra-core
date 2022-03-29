@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * linter fixes.
+
 * Added
   * Added Accessibility guide for `terra-image`.
   * Added docs for `DecorativeImage`.

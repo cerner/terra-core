@@ -11,7 +11,7 @@ const AlertResponsiveToParent = () => {
   const [isDismissed, setIsDismissed] = useState(false);
 
   return (
-    <>
+    <div id="alert-example">
       <p>Alerts are responsive to their container width.</p>
       {!isDismissed && (
         <Alert
@@ -45,7 +45,7 @@ const AlertResponsiveToParent = () => {
         </Alert>
         <Alert id="noActionsAlert" type="info">This is an info alert</Alert>
       </div>
-    </>
+    </div>
   );
 };
 
