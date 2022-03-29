@@ -1,8 +1,10 @@
 # Changelog
 
 ## Unreleased
+
   * Breaking changes
     * Updated terra-icon to meet accessibility standards.
+    * Updated jest snapshots.
 
 ## 3.46.1 - (January 4, 2022)
 

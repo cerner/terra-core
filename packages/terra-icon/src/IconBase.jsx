@@ -10,7 +10,7 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
-  * String that labels the current element. 
+  * String that labels the current element.
   */
   a11yLabel: PropTypes.string.isRequired,
   /**
@@ -49,8 +49,8 @@ const defaultProps = {
 };
 
 // Returns a SVG representing the icon. Is utilized as: <Iconbase  {..props} ><svg children></IconBase>
-// Note: while an img is the ideal recommended approach by accessibility guidelines, 
-// IconBase returns a svg so that non-static icons can be themable by using the CSS color property. 
+// Note: while an img is the ideal recommended approach by accessibility guidelines,
+// IconBase returns a svg so that non-static icons can be themable by using the CSS color property.
 
 const IconBase = ({
   a11yLabel,
@@ -78,7 +78,7 @@ const IconBase = ({
   attributes.height = height;
   attributes.width = width;
   attributes.focusable = focusable;
-  
+
   const svgA11yLabel = React.createElement('title', {}, a11yLabel);
   const svgChildren = new Array(svgA11yLabel).concat(children);
 

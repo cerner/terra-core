@@ -171,7 +171,6 @@ exports[`Alert of type alert with text content should render an Alert component 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconAlert"
                 focusable="false"
                 height="1em"
@@ -182,7 +181,6 @@ exports[`Alert of type alert with text content should render an Alert component 
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconAlert"
                   focusable="false"
                   height="1em"
@@ -190,6 +188,7 @@ exports[`Alert of type alert with text content should render an Alert component 
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
                     fill="#E50000"
@@ -315,7 +314,6 @@ exports[`Alert of type custom with custom title and text content should render a
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconHelp"
                 focusable="false"
                 height="1em"
@@ -326,7 +324,6 @@ exports[`Alert of type custom with custom title and text content should render a
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconHelp"
                   focusable="false"
                   height="1em"
@@ -334,6 +331,7 @@ exports[`Alert of type custom with custom title and text content should render a
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z"
                     fill="#007CC3"
@@ -444,7 +442,6 @@ exports[`Alert of type error with text content should render an Alert component 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconError"
                 focusable="false"
                 height="1em"
@@ -455,7 +452,6 @@ exports[`Alert of type error with text content should render an Alert component 
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconError"
                   focusable="false"
                   height="1em"
@@ -463,6 +459,7 @@ exports[`Alert of type error with text content should render an Alert component 
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                     fill="#E50000"
@@ -575,7 +572,6 @@ exports[`Alert of type info with custom title and HTML content should render an 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconInformation"
                 focusable="false"
                 height="1em"
@@ -586,7 +582,6 @@ exports[`Alert of type info with custom title and HTML content should render an 
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconInformation"
                   focusable="false"
                   height="1em"
@@ -594,6 +589,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                     fill="#007CC3"
@@ -706,7 +702,6 @@ exports[`Alert of type info with text content should render an Alert component o
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconInformation"
                 focusable="false"
                 height="1em"
@@ -717,7 +712,6 @@ exports[`Alert of type info with text content should render an Alert component o
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconInformation"
                   focusable="false"
                   height="1em"
@@ -725,6 +719,7 @@ exports[`Alert of type info with text content should render an Alert component o
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                     fill="#007CC3"
@@ -861,7 +856,6 @@ exports[`Alert of type success with an action button text content should render 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconSuccess"
                 focusable="false"
                 height="1em"
@@ -872,7 +866,6 @@ exports[`Alert of type success with an action button text content should render 
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconSuccess"
                   focusable="false"
                   height="1em"
@@ -880,6 +873,7 @@ exports[`Alert of type success with an action button text content should render 
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                     fill="#78C346"
@@ -1028,7 +1022,6 @@ exports[`Alert of type success with text content should render an Alert componen
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconSuccess"
                 focusable="false"
                 height="1em"
@@ -1039,7 +1032,6 @@ exports[`Alert of type success with text content should render an Alert componen
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconSuccess"
                   focusable="false"
                   height="1em"
@@ -1047,6 +1039,7 @@ exports[`Alert of type success with text content should render an Alert componen
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                     fill="#78C346"
@@ -1157,7 +1150,6 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 focusable="false"
                 height="1em"
                 isBidi={false}
@@ -1167,7 +1159,6 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon"
                   focusable="false"
                   height="1em"
@@ -1175,6 +1166,7 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M46 15.1l-2.7-5.5-16.5 9.6V0h-5.5v19.2L4.8 9.6l-2.7 5.5L17.8 24 2 32.9l2.7 5.5 16.5-9.6V48h5.5V28.8l16.5 9.6 2.7-5.5L30.2 24 46 15.1z"
                   />
@@ -1280,7 +1272,6 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 focusable="false"
                 height="1em"
                 isBidi={false}
@@ -1290,7 +1281,6 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon"
                   focusable="false"
                   height="1em"
@@ -1298,6 +1288,7 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M24 0l24 24-24 24L0 24 24 0z"
                   />
@@ -1403,7 +1394,6 @@ exports[`Alert of type warning with text content should render an Alert componen
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconWarning"
                 focusable="false"
                 height="1em"
@@ -1414,7 +1404,6 @@ exports[`Alert of type warning with text content should render an Alert componen
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconWarning"
                   focusable="false"
                   height="1em"
@@ -1422,6 +1411,7 @@ exports[`Alert of type warning with text content should render an Alert componen
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
                     fill="#FFC20A"
@@ -1531,7 +1521,6 @@ exports[`Alert with no props should render a default component 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconAlert"
                 focusable="false"
                 height="1em"
@@ -1542,7 +1531,6 @@ exports[`Alert with no props should render a default component 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconAlert"
                   focusable="false"
                   height="1em"
@@ -1550,6 +1538,7 @@ exports[`Alert with no props should render a default component 1`] = `
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
                     fill="#E50000"
@@ -1702,7 +1691,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconHelp"
                 focusable="false"
                 height="1em"
@@ -1713,7 +1701,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconHelp"
                   focusable="false"
                   height="1em"
@@ -1721,6 +1708,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z"
                     fill="#007CC3"
@@ -1904,7 +1892,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="IconAlert"
                 focusable="false"
                 height="1em"
@@ -1915,7 +1902,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon IconAlert"
                   focusable="false"
                   height="1em"
@@ -1923,6 +1909,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
                     fill="#E50000"
