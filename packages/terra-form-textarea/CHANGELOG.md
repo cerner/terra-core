@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated jest snapshots.
+  
 ## 5.19.5 - (July 5, 2022)
 
 * Changed

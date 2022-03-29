@@ -138,7 +138,6 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <IconBase
-                    ariaLabel={null}
                     className="icon-svg"
                     data-name="Layer 1"
                     focusable="false"
@@ -150,7 +149,6 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      aria-hidden="true"
                       className="tui-Icon icon icon-svg"
                       data-name="Layer 1"
                       focusable="false"
@@ -159,6 +157,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
                     >
+                      <title />
                       <path
                         d="M47.4 43.2l-13-13A19.66 19.66 0 0038 19a19 19 0 10-7.9 15.4l13 13a2.05 2.05 0 002.9 0l1.4-1.4a1.93 1.93 0 000-2.8zM3 19a16 16 0 1116 16A16 16 0 013 19z"
                       />
@@ -300,7 +299,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                ariaLabel={null}
                 className="icon-svg"
                 data-name="Layer 1"
                 focusable="false"
@@ -312,7 +310,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <svg
-                  aria-hidden="true"
                   className="tui-Icon icon icon-svg"
                   data-name="Layer 1"
                   focusable="false"
@@ -321,6 +318,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title />
                   <path
                     d="M47.4 43.2l-13-13A19.66 19.66 0 0038 19a19 19 0 10-7.9 15.4l13 13a2.05 2.05 0 002.9 0l1.4-1.4a1.93 1.93 0 000-2.8zM3 19a16 16 0 1116 16A16 16 0 013 19z"
                   />

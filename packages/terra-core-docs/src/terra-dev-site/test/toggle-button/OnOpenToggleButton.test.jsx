@@ -9,7 +9,7 @@ const OnOpenToggleButton = () => {
   };
 
   return (
-    <div>
+    <div id="toggle-button-example">
       <div id="on-open-event">
         <h3>{`Times Opened: ${timesOpened}`}</h3>
       </div>

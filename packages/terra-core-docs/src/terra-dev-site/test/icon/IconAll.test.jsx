@@ -1,3 +1,5 @@
+/* eslint-disable  react/jsx-props-no-multi-spaces, no-multi-spaces */
+
 import React from 'react';
 import classNames from 'classnames/bind';
 import Icon from 'terra-icon/lib/IconExports';

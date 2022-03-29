@@ -1,8 +1,10 @@
 # Changelog
 
 ## Unreleased
+
   * Breaking changes
     * Updated terra-icon to meet accessibility standards.
+    * Updated jest snapshots.
 
 * Changed
   * Updated to `one-cerner-style-icons` v1.48.0

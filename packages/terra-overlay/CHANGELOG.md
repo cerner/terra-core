@@ -1,7 +1,9 @@
 # Changelog
 
 ## Unreleased
-
+  * Changed
+    * Updated jest snapshots.
+    
 ## 3.69.5 - (July 5, 2022)
 
 * Changed
