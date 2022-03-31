@@ -1,9 +1,142 @@
-import A11yMeaningful from './example/A11yMeaningful';
+import { Notice } from "@cerner/terra-docs";
+import { Badge } from 'terra-image/package.json?dev-site-package';
+
+import A11yMeaningfulReadOnly from './example/A11yMeaningfulReadOnly';
+import A11yGroupInteractive from './example/A11yGroupInteractive';
 import A11yDecorative from './example/A11yDecorative';
 import A11yGroupReadOnly from './example/A11yGroupReadOnly';
-import A11yGroupInteractive from './example/A11yGroupInteractive';
+import A11yMeaningfulInteractive from './example/A11yMeaningfulInteractive';
 
-<A11yMeaningful/>
+import IconAudio from 'terra-icon/lib/icon/IconAudio';
+import IconAnnouncement from "terra-icon/lib/icon/IconAnnouncement";
+
+import FilledStar from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
+import EmptyStar from 'terra-icon/lib/icon/IconFeaturedOff';
+
+import FilledDecorativeStar from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
+import EmptyDecorativeStar from 'terra-icon/lib/icon/IconFeaturedOff';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+
+<Badge />
+
+# Accessibility Guide for Terra Icon
+
+<Notice variant="important" ariaLevel="2">
+
+Accessibility of icons is important because icons are ubiquitous. They can convey visual meaning or be used as a decorative or supportive element in a UI design and are an essential tool for creating intuitive user experiences that are appropriate for all languages. However, **if implemented improperly or without alternative content, they will not be understood by everyone**.
+
+</Notice>
+
+Since icons are images, they are not inherently accessible to all users, especially those with significantly impaired vision or blindness. Therefore, interface **icons must have alternative content**. Screen readers convey alternative content to users who have difficulty interpreting icons. Speech input devices also use alternative content to target specific icons. It is common for interfaces to use multiples of the same icon on a screen. Development and content teams must consider this use case to ensure all users can predictably understand the icon's purpose. **Users expect identical icons to perform the same function**. Similarly, screen reader users expect their software to identify identical icons consistently. Therefore, failure to provide consistent identification (visual or alternative content) can cause problems for all users. In addition, people who use only their voice to interact with technology also rely upon consistent alternative content behind the icons to ensure they can interact with controls.
+
+## Accessibility Considerations
+
+### Meaningful Icons
+
+To ensure that assistive technologies pass the icon's meaning to the user, **Icons that convey information must have alternative text in code**. Terra Icon provides the `a11yLabel` prop to help. The examples below show how to use that property.
+
+**Example:**
+
+<A11yMeaningfulReadOnly/>
+
+    import IconAnnouncement from 'terra-icon/lib/icon/IconAnnouncement';
+
+    // Set the a11yLabel to convey the meaning of the icon.
+    <IconAnnouncement a11yLabel="Announcement" />
+    &nbsp;
+    Facilities will be closed tomorrow.
+
+The announcement icon <span aria-hidden>(<IconAnnouncement/>)</span> in this example is informative, because it means _the following text is an announcement_. However, that meaning is only conveyed if the user can see the icon. Setting the icons's `a11yLabel="Announcement"` express the icon's meaning to a screen reader user. The screen reader user will hear: <IconAudio a11yLabel='Screen reader audio'/> _Image Announcement. Facilities will be closed tomorrow._
+
+**Example:**
+
+<A11yMeaningfulInteractive/>
+
+    <div>Playback Controls</div>
+    <div>
+        <a href="#">
+            <IconMediaRewind a11yLabel="Rewind" />
+        </a>
+        <a href="#">
+            <IconMediaPlay a11yLabel="Play" />
+        </a>
+        <a href="#">
+            <IconMediaFastForward a11yLabel="Fast Forward" />
+        </a>
+    </div>
+
+In this example each icon is clickable to perform a playback action. The screen reader user will hear: <IconAudio a11yLabel='Screen reader audio'/> _Playback Controls. Link image Rewind. Link image Play. Link Fast image Forward._
+
+### Decorative Icons
+
+A decorative icon provides no additional information or context. Without the decorative icon, the user would still know the meaning and purpose of content. All of Terra icons imported from `terra-icon/lib/icon/` are meaningful. **You must import special decorative icons from a different path** &mdash; `terra-icon/lib/icon/decorative/`. These decorative are visually identical to the default icons but have two special features for decorative use:
+
+1. You do not set the `a11yLabel` prop.
+2. They are ignored by screen readers.
+
+**Example:**
+
 <A11yDecorative/>
+
+    import IconAnnouncement from "terra-icon/lib/icon/decorative/IconAnnouncement";
+
+    <IconAnnouncement />
+    &nbsp;
+    Announcement: Facilities will be closed tomorrow.
+
+This example is similar to the Announcement example above, but it uses a decorative icon instead of a meaningful one. The decorative icon is ignored by the screen reader.
+The screen reader user will hear: <span aria-hidden><IconAudio/></span> _Announcement: Facilities will be closed tomorrow._
+
+### Groups of icons
+
+Some icons only make sense in the context of a group of icons. For example, in a five-star rating system each star icon only makes sense when used with the other four stars.
+
+**Example part 1 - A read-only group of icons:**
+
 <A11yGroupReadOnly/>
+
+    import DecorativeStar from "terra-icon/lib/icon/decorative/IconFeaturedOutlineYellow";
+    import DecorativeEmptyStar from "terra-icon/lib/icon/decorative/IconFeaturedOutline";
+    import Star from "terra-icon/lib/icon/IconFeaturedOutlineYellow";
+
+    Rating:&nbsp;
+    <Star a11yLabel="Four out of five stars" />
+    <DecorativeStar />
+    <DecorativeStar />
+    <DecorativeStar />
+    <DecorativeEmptyStar />
+
+The first star icon <span aria-hidden>(<FilledStar/>)</span> is meaningful and conveys they rating to the screen reader user. The other icons <span aria-hidden>(<FilledDecorativeStar/>, and <EmptyDecorativeStar/>)</span> are decorative so that the screen reader won't mention them. Mentioning the other icons in the group provides no benefit and serves only to confuse the user.
+The screen reader user will hear something like: <span aria-hidden><IconAudio/></span> _Rating. Four out of five stars._
+
+**Example part 2 - An interactive group:**
+
 <A11yGroupInteractive/>
+
+This example shows important differences in how to handle an interactive group of icons: That the user can click on any of the stars (links) to change the rating. You must convey what will happen when the user clicks on each icon.
+
+    import Star from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
+    import EmptyStar from 'terra-icon/lib/icon/IconFeaturedOutline';
+    import VisuallyHiddenText from 'terra-visually-hidden-text';
+
+    Rating:&nbsp;
+    <VisuallyHiddenText text="Four out of five stars" />
+    <a href="#">
+        <Star a11yLabel="Rate one star" />
+    </a>
+    <a href="#">
+        <Star a11yLabel="Rate two stars" />
+    </a>
+    <a href="#">
+        <Star a11yLabel="Rate three stars" />
+    </a>
+    <a href="#">
+        <Star a11yLabel="Rate four stars" />
+    </a>
+    <a href="#">
+        <EmptyStar a11yLabel="Rate five stars" />
+    </a>
+
+The meaning of the rating is conveyed by the `<VisuallyHiddenText />` given first. Each star icon <span aria-hidden>(<FilledStar/>, and <EmptyStar/>)</span> describes it's own action, e.g. rating an item one star.
+
+The screen reader user will hear: <span aria-hidden><IconAudio/></span> _Rating: Four out of five stars. Link image Rate one star. Link image Rate two stars. Link image Rate three stars. Link image Rate four stars. Link image Rate five stars._

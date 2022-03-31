@@ -3,31 +3,31 @@ import React from 'react';
 import Star from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
 import EmptyStar from 'terra-icon/lib/icon/IconFeaturedOutline';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
-import classNames from 'classnames/bind';
-import styles from './Example.scss';
-
-const cx = classNames.bind(styles);
+import Card from 'terra-card';
+import { width, height } from './common';
 
 const A11yGroupInteractive = () => (
-  <p>
-    Rating:&nbsp;
-    <VisuallyHiddenText text="Four out of five stars" />
-    <a href="#" className={cx('rating')}>
-      <Star a11yLabel="Rate one star" />
-    </a>
-    <a href="#" className={cx('rating')}>
-      <Star a11yLabel="Rate two stars" />
-    </a>
-    <a href="#" className={cx('rating')}>
-      <Star a11yLabel="Rate three stars" />
-    </a>
-    <a href="#" className={cx('rating')}>
-      <Star a11yLabel="Rate four stars" />
-    </a>
-    <a href="#" className={cx('rating')}>
-      <EmptyStar a11yLabel="Rate five stars" />
-    </a>
-  </p>
+  <Card>
+    <Card.Body>
+      Rating:&nbsp;
+      <VisuallyHiddenText text="Four out of five stars" />
+      <a href="#">
+        <Star a11yLabel="Rate one star" width={width} height={height} />
+      </a>
+      <a href="#">
+        <Star a11yLabel="Rate two stars" width={width} height={height} />
+      </a>
+      <a href="#">
+        <Star a11yLabel="Rate three stars" width={width} height={height} />
+      </a>
+      <a href="#">
+        <Star a11yLabel="Rate four stars" width={width} height={height} />
+      </a>
+      <a href="#">
+        <EmptyStar a11yLabel="Rate five stars" width={width} height={height} />
+      </a>
+    </Card.Body>
+  </Card>
 );
 
 export default A11yGroupInteractive;

@@ -4,16 +4,20 @@ import React from "react";
 import DecorativeStar from "terra-icon/lib/icon/decorative/IconFeaturedOutlineYellow";
 import Star from "terra-icon/lib/icon/IconFeaturedOutlineYellow";
 import DecorativeEmptyStar from "terra-icon/lib/icon/decorative/IconFeaturedOutline";
+import {width, height} from './common';
+import Card from 'terra-card';
 
 const A11yGroupReadOnly = () => (
-  <p>
+  <Card>
+  <Card.Body>
     Rating:&nbsp;
-    <Star a11yLabel="Four out of five stars" />
-    <DecorativeStar />
-    <DecorativeStar />
-    <DecorativeStar />
-    <DecorativeEmptyStar />
-  </p>
+    <Star a11yLabel="Four out of five stars" width={width} height={height} />
+    <DecorativeStar  width={width} height={height} />
+    <DecorativeStar  width={width} height={height} />
+    <DecorativeStar  width={width} height={height} />
+    <DecorativeEmptyStar  width={width} height={height} />
+  </Card.Body>
+</Card>
 );
 
 export default A11yGroupReadOnly;
