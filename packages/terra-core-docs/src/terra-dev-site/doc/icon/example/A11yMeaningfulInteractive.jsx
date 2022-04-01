@@ -10,21 +10,20 @@ import Card from 'terra-card';
 const A11yMeaningfulInteractive = () => (
   <Card>
     <Card.Body>
-      <div>Playback Controls</div>
-      <div>
-        <a href="#">
+      <div role="group" aria-labelledby="controlsLabel">
+        <span id="controlsLabel">Playback controls</span><br/>
+        <button type="button">
           <IconMediaRewind a11yLabel="Rewind" width={width} height={height} />
-        </a>
-        <a href="#">
+        </button>
+        <button type="button">
           <IconMediaPlay a11yLabel="Play" width={width} height={height} />
-        </a>
-        <a href="#">
+        </button>
+        <button type="button">
           <IconMediaFastForward a11yLabel="Fast Forward" width={width} height={height} />
-        </a>
+        </button>
       </div>
     </Card.Body>
-  </Card> 
-
+  </Card>
 );
 
 export default A11yMeaningfulInteractive;
