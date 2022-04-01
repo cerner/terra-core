@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated documentation for generating icons.
+
 ## 3.46.1 - (January 4, 2022)
 
 * Changed

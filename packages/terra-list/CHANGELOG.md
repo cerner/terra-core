@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.51.2 - (February 24, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.51.1 - (January 4, 2022)
 
 * Changed 
