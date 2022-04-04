@@ -13,7 +13,7 @@ import A11yExampleDecorative from './example/A11yGuideExamples/A11yExampleDecora
 
 1. For each use of Terra Image, **special care needs to be taken to determine** whether it conveys **meaningful and informative context**, or is simply **adding visual decoration** to the page.
 2. Informative images **must provide alternative text to the alt attribute**. Writing **meaningful alternative text** is also critical to properly meet accessibility success criteria.
-3. Images set to be decorative need to ensure they are purely decorative, or the context must be provided already by other adjacent elements. 
+3. Images set to be decorative need to ensure they are purely decorative, or the context must be provided already by other adjacent elements.
 
 </Notice>
 
@@ -57,9 +57,9 @@ W3C (World Wide Web Consortium) divides images into seven concept categories for
 
 Knowing which type of image and how to add proper alternative text appropriate for the usage type can be difficult. Use the [Alt Decision Tree (W3C)](https://www.w3.org/WAI/tutorials/images/decision-tree/) to help determine which usage is appropriate based on context and content of each image.
 
-The [Accessible Images When It Matters Most](https://accessibility.deque.com/accessible-images-when-it-matters-most) video presentation by Carie Fisher, Senior Accessibility Consultant at Deque, goes into depth about best practice techniques when creating accessible images and gives examples to help determine the appropiate image concept type.
+The [Accessible Images When It Matters Most](https://accessibility.deque.com/accessible-images-when-it-matters-most) video presentation by Carie Fisher, Senior Accessibility Consultant at Deque, goes into depth about best practice techniques when creating accessible images and gives examples to help determine the appropriate image concept type.
 
-Terra Image handles two of the image concepts &mdash; **informative** images (also called _"meaningful"_ images) and **decoratiive** images (also called _"presentation"_ images). The other image concepts may be supported in the future or can be contructed by consumers following the reccomeneded patterns.
+Terra Image handles two of the image concepts &mdash; **informative** images (also called _"meaningful"_ images) and **decorative** images (also called _"presentation"_ images). The other image concepts may be supported in the future or can be constructed by consumers following the recommended patterns.
 
 ----
 
@@ -71,8 +71,8 @@ Informative Images **must have text alternatives provided by the alt attribute**
 
 Use the default `import Image from 'terra-image'` for cases similar to:
 - When the image contributes meaning to the current page or context.
-- When the image is being used to suppliment and support other information.
-- When the image is an illustration, diagram, or photograph that shows directions or explains succint information.
+- When the image is being used to supplement and support other information.
+- When the image is an illustration, diagram, or photograph that shows directions or explains succinct information.
 - When the image conveys an impression or emotion.
 
 <Whitespace />
@@ -94,14 +94,14 @@ This image shows a photograph of the Matterhorn, but has no additional surroundi
    import Image from 'terra-image';
    import matterhornImage from '../src/folder/Matterhorn_150x150.jpg';
 
-+  const matterhornAlternativeText = 'North-east face of the Matterhorn 
-+     mountain peak and surrounding landscape covered in snow against a 
++  const matterhornAlternativeText = 'North-east face of the Matterhorn
++     mountain peak and surrounding landscape covered in snow against a
 +     blue sky, located in the Swiss Apps near Zermatt, Switzerland';
 
    export default () => (
      <>
-       <Image 
-         src={matterhornImage} 
+       <Image
+         src={matterhornImage}
 +        alt={matterhornDeAlternativeText}
        />
        <strong>Matterhorn</strong>
@@ -130,15 +130,15 @@ Additional guidance and examples can be read in [WebAIM's Alternative Text](http
 
    export default () => (
      <>
-       <Image 
-         src={matterhornImage} 
+       <Image
+         src={matterhornImage}
 +        alt={matterhornBriefAlternativeText}
        />
        <strong>Matterhorn</strong>
 +      <p>
-+        Standing at 4,478 meters (14,692ft), Matterhorn is the fifth 
-+        highest peak in the Alps located on the border between Switzerland 
-+        and Italy, in the Monte Rosa area of the western Pennine Alps, and 
++        Standing at 4,478 meters (14,692ft), Matterhorn is the fifth
++        highest peak in the Alps located on the border between Switzerland
++        and Italy, in the Monte Rosa area of the western Pennine Alps, and
 +        overlooks the Swiss town of Zermatt.
 +      </p>
      </>
@@ -199,9 +199,9 @@ The decorative image does not require adding alternative text, and the appropria
        <div className={cx('foreground')}>
          <strong>Matterhorn</strong>
          <p>
-           Standing at 4,478 meters (14,692ft), Matterhorn is the fifth 
-           highest peak in the Alps located on the border between Switzerland 
-           and Italy, in the Monte Rosa area of the western Pennine Alps, and 
+           Standing at 4,478 meters (14,692ft), Matterhorn is the fifth
+           highest peak in the Alps located on the border between Switzerland
+           and Italy, in the Monte Rosa area of the western Pennine Alps, and
            overlooks the Swiss town of Zermatt.
          </p>
        </div>
@@ -257,9 +257,9 @@ These image description guidelines were developed by the Carl and Ruth Shapiro F
 
 ### Interaction Details
 
-- **Informative images** are not interactive and do not respond to keyboard tab navigation or mouse/touch presses, but are expected to be read by screen readers and assistive technology. 
+- **Informative images** are not interactive and do not respond to keyboard tab navigation or mouse/touch presses, but are expected to be read by screen readers and assistive technology.
   - _Read more at [Informative Images (W3C: Web Accessibility Tutorials)](https://www.w3.org/WAI/tutorials/images/informative/)._
-- **Decorative images** should be ignored by screen readers and assistive technology and have no corresponding behaviors or interactions. 
+- **Decorative images** should be ignored by screen readers and assistive technology and have no corresponding behaviors or interactions.
   - _Read more at [Decorative Images (W3C: Web Accessibility Tutorials)](https://www.w3.org/WAI/tutorials/images/decorative/)._
 - **Functional images** that are interactive and used to initiate actions (e.g. as buttons, in hyperlinks, etc.) are not provided as a first-class feature of Terra Image. If Terra Image is used as a functional image, follow the recommended guidance for proper construction.
   - _Read more at [functional Images (W3C: Web Accessibility Tutorials)](https://www.w3.org/WAI/tutorials/images/functional/)._
@@ -267,7 +267,7 @@ These image description guidelines were developed by the Carl and Ruth Shapiro F
 ### Keyboard Navigation
 
 Terra Image does not have any keyboard navigation expectations when used on its own.
- 
+
 | Key/Sequence | Description |
 |---|---|
 |*none*| Has no keyboard navigation unless image is made to be interactive. |
