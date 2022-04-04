@@ -4,7 +4,6 @@
 
 * Changed
   * linter fixes.
-  * Terra Icon accessibility guide.
   * Spelling fixes for Image accessibility guide.
 
 * Added

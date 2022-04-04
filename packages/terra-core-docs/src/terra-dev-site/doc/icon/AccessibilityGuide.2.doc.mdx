@@ -24,7 +24,7 @@ import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 <Notice variant="important" ariaLevel="2">
 
-If implemented improperly or without alternative content, icons will not be understood by everyone.
+Using icons improperly may prevent some of your users from understanding your UI.
 
 </Notice>
 
@@ -89,7 +89,7 @@ You should pick an `a11yLabel` that conveys the same information that a user vie
 
 </div>
 
-The announcement icon <span role="presentation">(<IconAnnouncement/>)</span> in this example is informative, because it means _the following text is an announcement_. However, that meaning is only conveyed if the user can see the icon. Setting the icons's `a11yLabel="Announcement"` conveys the same information to a screen reader user.
+The announcement icon <span role="presentation">(<IconAnnouncement/>)</span> in this example is informative, because it means _the following text is an announcement_. However, that meaning is only conveyed if the user can see the icon. Setting the icon's `a11yLabel="Announcement"` conveys the same information to a screen reader user.
 
 The screen reader user will hear something like: <samp> Image: Announcement. Facilities will be closed tomorrow.</samp>
 
@@ -113,7 +113,7 @@ The screen reader user will hear something like: <samp> Image: Announcement. Fac
 
 </div>
 
-The screen reader user will hear something like: <samp> Group: Playback Controls. Link image Rewind. Link image Play. Link image Fast Forward.</samp>
+The screen reader user will hear something like: <samp> Group: Playback Controls. Button image Rewind. Button image Play. Button image Fast Forward.</samp>
 
 </Notice>
 
@@ -129,7 +129,6 @@ Some icons only make sense in the context of a group of icons. For example, in a
     <A11yGroupReadOnly />
 </div>
 <div aria-label="Example code">
-
     import DecorativeStar from "terra-icon/lib/icon/decorative/IconFeaturedOutlineYellow";
     import DecorativeEmptyStar from "terra-icon/lib/icon/decorative/IconFeaturedOutline";
     import Star from "terra-icon/lib/icon/IconFeaturedOutlineYellow";
@@ -143,7 +142,7 @@ Some icons only make sense in the context of a group of icons. For example, in a
 
 </div>
 
-The first star icon <span role="presentation">(<FilledStar/>)</span> is meaningful and conveys they rating to the screen reader user. The other icons <span role="presentation">(<FilledDecorativeStar/> and <EmptyDecorativeStar/>)</span> are decorative so that the screen reader won't mention them. Mentioning the other icons in the group provides no benefit and serves only to confuse the user.
+The first star icon <span role="presentation">(<FilledStar/>)</span> is meaningful and conveys the rating to the screen reader user. The other icons <span role="presentation">(<FilledDecorativeStar/> and <EmptyDecorativeStar/>)</span> are decorative so that the screen reader won't mention them. Mentioning the other icons in the group provides no benefit and serves only to confuse the user.
 The screen reader user will hear something like: <samp>Rating. Four out of five stars.</samp>
 
 ###### Accessibility Guidance: An interactive group of icons
@@ -167,9 +166,9 @@ The screen reader user will hear something like: <samp>Rating. Four out of five 
 
 </div>
 
-This example shows important differences in how to handle an interactive group of icons: That the user can click on any of the stars (links) to change the rating. You must convey what will happen when the user clicks on each icon. The meaning of the rating is conveyed by the `<VisuallyHiddenText />` given first. Each star icon <span role="presentation">(<FilledStar/> and <EmptyStar/>)</span> describes it's own action, e.g. rating an item one star.
+This example shows important differences in how to handle an interactive group of icons: That the user can click on any of the stars (links) to change the rating. You must convey what will happen when the user clicks on each icon. The meaning of the rating is conveyed by the `<VisuallyHiddenText />` given first. Each star icon <span role="presentation">(<FilledStar/> and <EmptyStar/>)</span> describes its own action, e.g. rating an item one star.
 
-The screen reader user will hear: <samp> Rating: Four out of five stars. Link image Rate one star. Link image Rate two stars. Link image Rate three stars. Link image Rate four stars. Link image Rate five stars.</samp>
+The screen reader user will hear: <samp> Rating: Four out of five stars. Button image Rate one star. Button image Rate two stars. Button image Rate three stars. Button image Rate four stars. Button image Rate five stars.</samp>
 
 </Notice>
 
