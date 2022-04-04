@@ -11,6 +11,7 @@ exports[`Hyperlink correctly applies the theme context className 1`] = `
   <Hyperlink
     href="https://www.cerner.com"
     isDisabled={false}
+    text="Default hyperlink"
     variant="default"
   >
     <a
@@ -65,12 +66,13 @@ exports[`Hyperlink should render a default hyperlink 1`] = `
 `;
 
 exports[`Hyperlink should render a disabled hyperlink 1`] = `
-<span
+<a
   aria-disabled="true"
   class="hyperlink default is-disabled"
+  role="link"
 >
   Disabled hyperlink
-</span>
+</a>
 `;
 
 exports[`Hyperlink should render a document hyperlink 1`] = `
