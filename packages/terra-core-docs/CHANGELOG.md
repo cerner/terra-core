@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated hyperlink tests and examples.
+
 ## 1.13.4 - (March 15, 2022)
 
 * Changed

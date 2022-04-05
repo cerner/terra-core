@@ -4,6 +4,22 @@ import { Badge } from 'terra-hyperlink/package.json?dev-site-package';
 
 # Terra Hyperlink Upgrade Guide
 
+## Changes from version 2 to version 3
+
+### Changes to Props
+
+* `isDisabled` prop has been marked as **private**, allowing it to be used, but for very special circumstances or higher-order components.
+* `isUnderlineHidden` prop has been marked as **private**, allowing it to be used, but for very special circumstances such as higher-order components that use hyperlink in approved ways without an underline.
+
+#### Breaking Changes
+
+* `children` prop has been replaced with the `text` which is of `string` type and is a `required` prop.
+
+```diff
+- <Hyperlink href="https://www.cerner.com">Default hyperlink</Hyperlink>
++ <Hyperlink href="https://www.cerner.com" text="Default hyperlink" />
+```
+
 ## Changes from version 1 to version 2
 
 ### Changes to CSS Custom Properties

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * `isDisabled` and `isUnderlineHidden` props have been marked as private.
+  * `children` prop has been replaced by `text` prop.
+
 ## 2.51.2 - (January 4, 2022)
 
 * Changed
