@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.29.0 - (March 15, 2022)
+
+* Changed
+  * Border-color changes in fusion-theme and lowlight-theme
+
 ## 1.28.1 - (February 15, 2022)
 
 * Changed
