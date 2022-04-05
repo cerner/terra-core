@@ -10,6 +10,10 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
+  * String that labels the current element.
+  */
+  a11yLabel: PropTypes.string.isRequired,
+  /**
    * Should the svg mirror when dir="rtl".
    */
   isBidi: PropTypes.bool,
@@ -30,11 +34,6 @@ const propTypes = {
    */
   width: PropTypes.string,
   /**
-   * String that labels the current element. If 'aria-label' is present,
-   * role is set to 'img' and aria-hidden is removed.
-   */
-  ariaLabel: PropTypes.string,
-  /**
    * Focusable attribute. IE 10/11 are focusable without this attribute.
    */
   focusable: PropTypes.string,
@@ -46,17 +45,20 @@ const defaultProps = {
   children: null,
   height: '1em',
   width: '1em',
-  ariaLabel: null,
   focusable: 'false',
 };
 
+// Returns a SVG representing the icon. Is utilized as: <Iconbase  {..props} ><svg children></IconBase>
+// Note: while an img is the ideal recommended approach by accessibility guidelines,
+// IconBase returns a svg so that non-static icons can be themable by using the CSS color property.
+
 const IconBase = ({
+  a11yLabel,
   isBidi,
   isSpin,
   children,
   height,
   width,
-  ariaLabel,
   focusable,
   ...customProps
 }) => {
@@ -73,20 +75,14 @@ const IconBase = ({
     attributes.className,
   );
 
-  // aria-label is present, remove aria-hidden, set role to img
-  if (ariaLabel) {
-    attributes['aria-label'] = ariaLabel;
-    attributes.role = 'img';
-    attributes['aria-hidden'] = null;
-  } else {
-    attributes['aria-hidden'] = 'true';
-  }
-
   attributes.height = height;
   attributes.width = width;
   attributes.focusable = focusable;
 
-  return <svg {...attributes} className={classes}>{children}</svg>;
+  const svgA11yLabel = React.createElement('title', {}, a11yLabel);
+  const svgChildren = new Array(svgA11yLabel).concat(children);
+
+  return <svg {...attributes} className={classes}>{svgChildren}</svg>;
 };
 
 IconBase.propTypes = propTypes;

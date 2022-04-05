@@ -1,0 +1,136 @@
+                              Image Source Record
+                           Version 1.0, March 2022
+            * * * IMAGE DATA and GENERAL USAGE INFORMATION ONLY * * *
+     =======================================================================
+                           SEE APPLICABLE LICENSES for 
+          TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+     =======================================================================
+
+
+1. Image Details
+     -----------------------------------------------------------------------
+     Page URL    = [https://commons.wikimedia.org/wiki/File:Matterhorn,_Marc
+                   h_2019_(01).jpg]
+     -----------------------------------------------------------------------
+     File URL    = [https://upload.wikimedia.org/wikipedia/commons/2/21/Matt
+                   erhorn%2C_March_2019_%2801%29.jpg]
+     -----------------------------------------------------------------------
+     Filename    = Matterhorn, March 2019 (01)
+     -----------------------------------------------------------------------
+     Description = English: Matterhorn,
+                   Camera location: 46° 00′ 42.21″ N, 7° 46′ 02.45″ E
+     -----------------------------------------------------------------------
+     Source      = Own work
+     -----------------------------------------------------------------------
+     Date        = 2019-03-03 14:38:39
+     -----------------------------------------------------------------------
+     Author      = [Liridon](https://commons.wikimedia.org/wiki/User:Liridon)
+     -----------------------------------------------------------------------
+     Permission  = Creative Commons Attribution-Share Alike 4.0
+     -----------------------------------------------------------------------
+     License URL = [https://creativecommons.org/licenses/by-sa/4.0/deed.en]
+     -----------------------------------------------------------------------
+     Date retrieved = 3 March 2022 03:11 UTC
+     -----------------------------------------------------------------------
+
+
+2. Licensing
+
+     =======================================================================
+     Permission  = cc-by-sa-4.0
+     author      = self (Liridon)
+
+     Category:North-east side of Matterhorn
+     Category:Images of Switzerland by Liridon
+     Category:Images by Liridon
+     Category:Quality images by Liridon
+     Category:Quality images of Switzerland by Liridon
+     Category:Quality images of Switzerland
+     Category:Clouds and blue sky in Switzerland
+     Category:2019 in the canton of Valais
+     Category:Switzerland photographs taken on 2019-03-03
+     Category:Winter in Switzerland
+     Category:Snowy landscapes in Switzerland
+     Category:Mountains with snow
+     Category:Featured Images by Liridon
+     Category:Featured pictures of Switzerland
+     Category:Featured pictures of Switzerland by Liridon
+
+     -----------------------------------------------------------------------
+     • From Wikimedia description:
+
+     -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+     I, the copyright holder of this work, hereby publish it under the 
+     following license:
+
+     This file is licensed under the [Creative Commons Attribution-Share Alike 
+     4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+     license.
+
+     You are free:
+       * to share – to copy, distribute and transmit the work
+       * to remix – to adapt the work
+
+     Under the following conditions:
+       * attribution – You must give appropriate credit, provide a link to 
+         the license, and indicate if changes were made. You may do so in any 
+         reasonable manner, but not in any way that suggests the licensor 
+         endorses you or your use.
+       * share alike – If you remix, transform, or build upon the material, 
+         you must distribute your contributions under the [same or compatible 
+         license](https://creativecommons.org/share-your-work/licensing-
+         considerations/compatible-licenses) as the original.
+     -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+
+
+3. Attribution
+
+     =======================================================================
+     • Be sure to include this attribution on any page that uses this image:
+     -----------------------------------------------------------------------
+
+     <cite>Photo Credit: [Liridon](https://commons.wikimedia.org/wiki/File:M
+     atterhorn,_March_2019_(01).jpg), [CC BY-SA 4.0](https://creativecommons
+     .org/licenses/by-sa/4.0), via Wikimedia Commons</cite>
+
+     -----------------------------------------------------------------------
+
+
+4. ALT Text
+
+     =======================================================================
+     • Be sure to include this alt text on any image usage:
+     -----------------------------------------------------------------------
+
+     alt="North-east face of the Matterhorn mountain peak and surrounding 
+     landscape covered in snow against a blue sky, located in the Swiss Apps 
+     near Zermatt, Switzerland";
+
+     -----------------------------------------------------------------------
+
+
+5. Bibliographic details
+
+     =======================================================================
+     Page name: File:Matterhorn, March 2019 (01).jpg
+     -----------------------------------------------------------------------
+     Author: Wikimedia Commons contributors
+     -----------------------------------------------------------------------
+     Publisher: Wikimedia Commons, the free media repository.
+     -----------------------------------------------------------------------
+     Date of last revision: 21 February 2022 17:07 UTC
+     -----------------------------------------------------------------------
+     Date retrieved: 3 March 2022 03:11 UTC
+     -----------------------------------------------------------------------
+     Permanent URL: [https://commons.wikimedia.org/w/index.php?title=File:Ma
+                    tterhorn,_March_2019_(01).jpg&oldid=631389539]
+     -----------------------------------------------------------------------
+     Page Version ID: 631389539
+     -----------------------------------------------------------------------
+
+
+
+
+
+     -----------------------------------------------------------------------
+     =======================================================================

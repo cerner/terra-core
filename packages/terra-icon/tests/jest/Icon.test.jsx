@@ -3,9 +3,9 @@ import React from 'react';
 // IconAdd by default, isBidi: false, isSpin: false
 // IconSpinner by default, isBidi: false, isSpin: true
 // IconComment by default, isBidi: true, isSpin: false
-import IconAdd from '../../src/icon/IconAdd';
-import IconSpinner from '../../src/icon/IconSpinner';
-import IconComment from '../../src/icon/IconComment';
+import IconAdd from '../../src/icon/decorative/IconAdd';
+import IconSpinner from '../../src/icon/decorative/IconSpinner';
+import IconComment from '../../src/icon/decorative/IconComment';
 
 describe('Icon', () => {
   describe('IconAdd', () => {
@@ -76,17 +76,6 @@ describe('Icon', () => {
         expect(wrapper.prop('isSpin')).toEqual(true);
       });
     });
-
-    describe('ariaLabel prop', () => {
-      it('should have default ariaLabel={null}', () => {
-        const wrapper = shallow(<IconAdd />);
-        expect(wrapper.prop('ariaLabel')).toEqual(null);
-      });
-      it('should have ariaLabel={some value}', () => {
-        const wrapper = shallow(<IconAdd ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual('some value');
-      });
-    });
   });
 
   describe('IconSpinner', () => {
@@ -155,17 +144,6 @@ describe('Icon', () => {
       it('should have isSpin={false} with override', () => {
         const wrapper = shallow(<IconSpinner isSpin={false} />);
         expect(wrapper.prop('isSpin')).toEqual(false);
-      });
-    });
-
-    describe('ariaLabel prop', () => {
-      it('should have default ariaLabel={null}', () => {
-        const wrapper = shallow(<IconSpinner />);
-        expect(wrapper.prop('ariaLabel')).toEqual(null);
-      });
-      it('should have ariaLabel={some value}', () => {
-        const wrapper = shallow(<IconSpinner ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual('some value');
       });
     });
   });
@@ -240,17 +218,6 @@ describe('Icon', () => {
       it('should have isSpin={true}', () => {
         const wrapper = shallow(<IconComment isSpin />);
         expect(wrapper.prop('isSpin')).toEqual(true);
-      });
-    });
-
-    describe('ariaLabel prop', () => {
-      it('should have default ariaLabel={null}', () => {
-        const wrapper = shallow(<IconComment />);
-        expect(wrapper.prop('ariaLabel')).toEqual(null);
-      });
-      it('should have ariaLabel={some value}', () => {
-        const wrapper = shallow(<IconComment ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual('some value');
       });
     });
   });

@@ -5,23 +5,9 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './Image.module.scss';
+import createImage from './shared/_ImageUtils';
 
 const cx = classNamesBind.bind(styles);
-
-const ImageVariant = {
-  DEFAULT: 'default',
-  ROUNDED: 'rounded',
-  CIRCLE: 'circle',
-  THUMBNAIL: 'thumbnail',
-};
-
-const FitTypes = {
-  COVER: 'cover',
-  SCALEDOWN: 'scale-down',
-  FILL: 'fill',
-  CONTAIN: 'contain',
-  NONE: 'none',
-};
 
 const propTypes = {
   /**
@@ -66,14 +52,11 @@ const propTypes = {
   fit: PropTypes.oneOf(['cover', 'scale-down', 'fill', 'contain', 'none']),
 };
 
-/* eslint-disable react/default-props-match-prop-types */
 const defaultProps = {
   variant: 'default',
   isFluid: false,
-  alt: ' ',
   fit: 'fill',
 };
-/* eslint-enable react/default-props-match-prop-types */
 
 class Image extends React.Component {
   constructor(props) {
@@ -125,31 +108,21 @@ class Image extends React.Component {
     }
   }
 
-  createImage(customProps, imageClasses) {
-    const {
-      src, alt, height, width,
-    } = this.props;
-    return (
-      <img
-        {...customProps}
-        src={src}
-        alt={alt}
-        height={height}
-        width={width}
-        onLoad={this.handleOnLoad}
-        onError={this.handleOnError}
-        className={imageClasses}
-        ref={this.ImageRef}
-      />
-    );
-  }
-
   render() {
     const {
       src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, fit, ...customProps
     } = this.props;
 
     const theme = this.context;
+    const imageProps = {
+      src,
+      height,
+      width,
+      alt,
+      handleOnError: this.handleOnError,
+      handleOnLoad: this.handleOnLoad,
+      imageRef: this.ImageRef,
+    };
 
     const imageClasses = classNames(
       cx(
@@ -164,6 +137,11 @@ class Image extends React.Component {
     );
 
     delete customProps.className;
+    // removes role attribute if the value is set to `presentation` OR `none`
+    if (customProps.role && (customProps.role === 'presentation' || customProps.role === 'none')) {
+      delete customProps.role;
+    }
+
     if (!this.state.isLoading) {
       objectFitImages(this.ImageRef.current);
     }
@@ -171,16 +149,18 @@ class Image extends React.Component {
       if (this.state.isLoading) {
         return (
           <>
-            {this.createImage(customProps, imageClasses)}
+            {
+              createImage(customProps, imageClasses, imageProps)
+            }
             {placeholder}
           </>
         );
       }
 
-      return this.state.isError ? placeholder : this.createImage(customProps, imageClasses);
+      return this.state.isError ? placeholder : createImage(customProps, imageClasses, imageProps);
     }
 
-    return this.createImage(customProps, imageClasses);
+    return createImage(customProps, imageClasses, imageProps);
   }
 }
 
@@ -189,4 +169,3 @@ Image.defaultProps = defaultProps;
 Image.contextType = ThemeContext;
 
 export default Image;
-export { ImageVariant, FitTypes };

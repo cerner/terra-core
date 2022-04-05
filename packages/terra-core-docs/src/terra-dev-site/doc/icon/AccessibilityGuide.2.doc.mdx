@@ -1,0 +1,238 @@
+import { Notice } from "@cerner/terra-docs";
+import { Badge } from 'terra-image/package.json?dev-site-package';
+import Whitespace from "../../common/layout-helpers/Whitespace";
+
+import A11yMeaningfulReadOnly from './example/A11yMeaningfulReadOnly';
+import A11yGroupInteractive from './example/A11yGroupInteractive';
+import A11yDecorative from './example/A11yDecorative';
+import A11yGroupReadOnly from './example/A11yGroupReadOnly';
+import A11yMeaningfulInteractive from './example/A11yMeaningfulInteractive';
+
+import IconAudio from 'terra-icon/lib/icon/IconAudio';
+import IconAnnouncement from "terra-icon/lib/icon/IconAnnouncement";
+
+import FilledStar from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
+import EmptyStar from 'terra-icon/lib/icon/IconFeaturedOff';
+
+import FilledDecorativeStar from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
+import EmptyDecorativeStar from 'terra-icon/lib/icon/IconFeaturedOff';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+
+<Badge />
+
+# Accessibility Guide for Terra Icon
+
+<Notice variant="important" ariaLevel="2">
+
+Using icons improperly may prevent some of your users from understanding your UI.
+
+</Notice>
+
+<Whitespace />
+
+## Why is this important?
+
+Icons are a type of image or graphic, and as such:
+
+> Images and graphics make content more pleasant and easier to understand for many people, and in particular for those with cognitive and learning disabilities. They serve as cues that are used by people with visual impairments, including people with low vision, to orient themselves in the content.
+>
+> However, images are used extensively on websites and can create major barriers when they are not accessible. Accessible images are beneficial in many situations, such as:
+>
+> - **People using screen readers**: The text alternative can be read aloud or rendered as Braille
+> - **People using speech input software**: Users can put the focus onto a button or linked image with a single voice command
+> - **People browsing speech-enabled websites**: The text alternative can be read aloud
+>
+> _&nbsp;&nbsp;&mdash; excerpt from [Image Concepts (W3C: Web Accessibility Tutorials)](https://www.w3.org/WAI/tutorials/images/)_[<sup>[1]</sup>](/components/cerner-terra-core-docs/icon/accessibility-guide#linked-references)
+
+## Accessibility Considerations
+
+### Code Considerations
+
+Every Terra Icon has two variants: _Meaningful_ and _Decorative_. The table below explains the difference between the two, and how to import them into your code.
+
+| Variant | Purpose | Example import |
+| --- | --- | --- |
+| Meaningful | Convey information to the user and must provide a text alternative via the `a11yLabel` prop. | `import X from 'terra-icon/lib/icon/X';` |
+| Decorative | Only for aesthetic purposes. | `import X from 'terra-icon/lib/icon/decorative/X';` |
+
+The following sections go into more detail about when and how to use each variant.
+
+----
+
+#### When to use _Meaningful Icons_
+
+Meaningful icons are icons that convey information to the user. **Meaningful icons must provide an alternative text using the `a11yLabel` prop**.
+
+> All non-text content must be represented in a text format in one way or another, whether in the form of an alt attribute for an image, an alternative representation of non-HTML objects, or within the accessibility API methods of non-HTML objects.
+>
+> _&nbsp;&nbsp;&mdash; excerpt from [Summary and Checklist: Images, Canvas, SVG, and Other Non-Text Content (Deque)](https://dequeuniversity.com/assets/pdf/module-nontext/module-nontext-checklist.pdf)_[<sup>[2]</sup>](/components/cerner-terra-core-docs/icon/accessibility-guide#linked-references)
+
+You should pick an `a11yLabel` that conveys the same information that a user viewing the icons would perceive. That way, no information will be hidden from a user who cannot view the icon with the text.
+
+<Whitespace />
+
+<Notice variant="important" ariaLevel="5">
+
+###### Accessibility Guidance: Using meaningful icons
+
+<div aria-label="Example demo">
+    <A11yMeaningfulReadOnly />
+</div>
+<div aria-label="Example code">
+
+    import IconAnnouncement from 'terra-icon/lib/icon/IconAnnouncement';
+
+    // Set the a11yLabel to convey the meaning of the icon.
+    <IconAnnouncement a11yLabel="Announcement" />
+    &nbsp;
+    Facilities will be closed tomorrow.
+
+</div>
+
+The announcement icon <span role="presentation">(<IconAnnouncement/>)</span> in this example is informative, because it means _the following text is an announcement_. However, that meaning is only conveyed if the user can see the icon. Setting the icon's `a11yLabel="Announcement"` conveys the same information to a screen reader user.
+
+The screen reader user will hear something like: <samp> Image: Announcement. Facilities will be closed tomorrow.</samp>
+
+###### Accessibility Guidance: Interactive meaningful icons
+
+<div aria-label="Example demo">
+    <A11yMeaningfulInteractive/>
+</div>
+<div aria-label="Example code">
+
+    import IconMediaPlay from 'terra-icon/lib/icon/IconMediaPlay';
+    import IconMediaFastForward from 'terra-icon/lib/icon/IconMediaFastForward';
+    import IconMediaRewind from 'terra-icon/lib/icon/IconMediaRewind';
+
+    <div role="group" aria-labelledby="controlsLabel">
+        <span id="controlsLabel">Playback controls</span><br/>
+        <button><IconMediaRewind a11yLabel="Rewind" /></button>
+        <button><IconMediaPlay a11yLabel="Play" /></button>
+        <button><IconMediaFastForward a11yLabel="Fast Forward" /></button>
+    </div>
+
+</div>
+
+The screen reader user will hear something like: <samp> Group: Playback Controls. Button image Rewind. Button image Play. Button image Fast Forward.</samp>
+
+</Notice>
+
+#### Groups of Meaningful Icons
+
+Some icons only make sense in the context of a group of icons. For example, in a five-star rating system each star icon only makes sense when used with the other four stars.
+
+<Notice variant="important" ariaLevel="5">
+
+###### Accessibility Guidance: Using groups of icons
+
+<div aria-label="Example demo">
+    <A11yGroupReadOnly />
+</div>
+<div aria-label="Example code">
+    import DecorativeStar from "terra-icon/lib/icon/decorative/IconFeaturedOutlineYellow";
+    import DecorativeEmptyStar from "terra-icon/lib/icon/decorative/IconFeaturedOutline";
+    import Star from "terra-icon/lib/icon/IconFeaturedOutlineYellow";
+
+    Rating:&nbsp;
+    <Star a11yLabel="Four out of five stars" />
+    <DecorativeStar />
+    <DecorativeStar />
+    <DecorativeStar />
+    <DecorativeEmptyStar />
+
+</div>
+
+The first star icon <span role="presentation">(<FilledStar/>)</span> is meaningful and conveys the rating to the screen reader user. The other icons <span role="presentation">(<FilledDecorativeStar/> and <EmptyDecorativeStar/>)</span> are decorative so that the screen reader won't mention them. Mentioning the other icons in the group provides no benefit and serves only to confuse the user.
+The screen reader user will hear something like: <samp>Rating. Four out of five stars.</samp>
+
+###### Accessibility Guidance: An interactive group of icons
+
+<div aria-label="Example demo">
+    <A11yGroupInteractive/>
+</div>
+<div aria-label="Example code">
+
+    import Star from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
+    import EmptyStar from 'terra-icon/lib/icon/IconFeaturedOutline';
+    import VisuallyHiddenText from 'terra-visually-hidden-text';
+
+    Rating:&nbsp;
+    <VisuallyHiddenText text="Four out of five stars" />
+    <button><Star a11yLabel="Rate one star" /></button>
+    <button><Star a11yLabel="Rate two stars" /></button>
+    <button><Star a11yLabel="Rate three stars" /></button>
+    <button><Star a11yLabel="Rate four stars" /></button>
+    <button><EmptyStar a11yLabel="Rate five stars" /></button>
+
+</div>
+
+This example shows important differences in how to handle an interactive group of icons: That the user can click on any of the stars (links) to change the rating. You must convey what will happen when the user clicks on each icon. The meaning of the rating is conveyed by the `<VisuallyHiddenText />` given first. Each star icon <span role="presentation">(<FilledStar/> and <EmptyStar/>)</span> describes its own action, e.g. rating an item one star.
+
+The screen reader user will hear: <samp> Rating: Four out of five stars. Button image Rate one star. Button image Rate two stars. Button image Rate three stars. Button image Rate four stars. Button image Rate five stars.</samp>
+
+</Notice>
+
+#### When to use Decorative Icons
+
+Decorative icons provide no additional information or context. Use decorative icons when you could remove the icon entirely from the content without losing any information.
+
+* You do not set the `a11yLabel` prop when using a decorative icon.
+* Decorative icons are ignored by screen readers and other assistive tech.
+
+<Notice variant="important" ariaLevel="5">
+
+###### Accessibility Guidance: Using decorative icons
+
+<div aria-label="Example demo">
+    <A11yDecorative />
+</div>
+<div aria-label="Example code">
+
+    import IconAnnouncement from "terra-icon/lib/icon/decorative/IconAnnouncement";
+
+    <IconAnnouncement />
+    &nbsp;
+    Announcement: Facilities will be closed tomorrow.
+
+</div>
+
+This example is similar to the Announcement example above, but it uses a decorative icon instead of a meaningful one. The decorative icon is ignored by the screen reader. The screen reader user will hear something like: <samp> Announcement: Facilities will be closed tomorrow.</samp>
+
+</Notice>
+
+## Usability Expectations
+
+### Interaction Details
+
+None
+
+### Keyboard Navigation
+
+None
+
+## Support Compliance
+
+Terra is committed to ensuring its components provide maximum possible accessibility. However, using Terra components will not automatically make a product accessible.
+
+Final responsibility lies with the consumers of Terra components &mdash; ensuring proper usage, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance &mdash; to make a product fully accessible.
+
+### WCAG Resources
+
+#### Success Criteria
+
+_Informative (non-decorative) usage of Terra Icon **must** meet the following success criteria:_
+
+- [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content) - All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed\[...\]. (Level A)
+
+### Partial Support & Requiring Further Enhancement
+
+- None identified
+- [Report a problem with this component on **GitHub**](https://github.com/cerner/terra-core/issues/new/choose)
+
+_For more information about Accessibility Support with Terra — go to [Component Standards: Accessibility (A11y)](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#accessibility-a11y)._
+
+## Linked References:
+
+1. Eggert, Eric; Abou-Zahra, Shadi; et al. (27 July 2019). ["Web Accessibility Tutorials: Image Concepts"](https://www.w3.org/WAI/tutorials/images/). World Wide Web Consortium. Last updated 27 July 2019. Retrieved 2 March 2022.
+
+2. Deque staff (21 March 2019). ["Summary and Checklist: Images, Canvas, SVG, and Other Non-Text Content"](https://dequeuniversity.com/assets/pdf/module-nontext/module-nontext-checklist.pdf). Deque University. Published Version 2019.03.21. Retrieved 2 March 2022.

@@ -37,4 +37,11 @@ Terra.describeViewports('Image', ['medium'], () => {
       Terra.validates.element('failed load', { selector: '#errorImage' });
     });
   });
+
+  describe('Decorative Image', () => {
+    it('should display decorative image', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/image/decorative-image');
+      Terra.validates.element('decorative-image');
+    });
+  });
 });
