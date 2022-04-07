@@ -9,8 +9,7 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
-// import styles from './Hyperlink.module.scss';
-import styles from './HyperlinkChanges.module.scss';
+import styles from './Hyperlink.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
@@ -26,15 +25,15 @@ const variants = {
 const getHyperlinkIcon = (variant) => {
   switch (variant) {
     case variants.AUDIO:
-      return (<span className={cx(['icon', variant])}><IconAudio a11yLabel="temp-audio" /></span>);
+      return (<span className={cx(['icon', variant])}><IconAudio a11yLabel="(opens a sound file)" /></span>);
     case variants.DOCUMENT:
-      return (<span className={cx(['icon', variant])}><IconDocuments a11yLabel="temp-document" /></span>);
+      return (<span className={cx(['icon', variant])}><IconDocuments a11yLabel="(opens a document)" /></span>);
     case variants.EXTERNAL:
-      return (<span className={cx(['icon', variant])}><IconExternalLink a11yLabel="temp-external"/></span>);
+      return (<span className={cx(['icon', variant])}><IconExternalLink a11yLabel="(opens an external page or application)" /></span>);
     case variants.IMAGE:
-      return (<span className={cx(['icon', variant])}><IconImage a11yLabel="temp-image"/></span>);
+      return (<span className={cx(['icon', variant])}><IconImage a11yLabel="(opens an image file)" /></span>);
     case variants.VIDEO:
-      return (<span className={cx(['icon', variant])}><IconVideoCamera a11yLabel="temp-video" /></span>);
+      return (<span className={cx(['icon', variant])}><IconVideoCamera a11yLabel="(opens a video)" /></span>);
     default:
       return null;
   }

@@ -4,22 +4,22 @@ import HyperlinkButton from 'terra-hyperlink/lib/HyperlinkButton';
 export default () => (
   <div role="main">
     <p>
-    <HyperlinkButton onClick={() => {}} text="Hyperlink Button" />
+      <HyperlinkButton onClick={() => {}} text="Hyperlink Button" />
     </p>
     <p>
-      <HyperlinkButton onClick={() => {}} variant="audio" text="Audio Hyperlink Testy" />
+      <HyperlinkButton onClick={() => {}} variant="audio" text="Radio Broadcast of the Wright Brothers First Flight, December 17, 1903" />
     </p>
     <p>
-      <HyperlinkButton onClick={() => {}} variant="external" text="External Link Hyperlink Testy" />
+      <HyperlinkButton onClick={() => {}} variant="external" text="The Wright Brothers Biography" />
     </p>
     <p>
-      <HyperlinkButton onClick={() => {}} variant="document" text="Document Hyperlink Testy" />
+      <HyperlinkButton onClick={() => {}} variant="document" text="Anatomy of the 1903 Wright Flyer" />
     </p>
     <p>
-      <HyperlinkButton onClick={() => {}} variant="image" text="Image Hyperlink Testy" />
+      <HyperlinkButton onClick={() => {}} variant="image" text="Orville Wright and Wilbur Wright, Kitty Hawk, North Carolina" />
     </p>
     <p>
-      <HyperlinkButton onClick={() => {}} variant="video" text="Video Hyperlink Testy" />
-    </p>    
+      <HyperlinkButton onClick={() => {}} variant="video" text="Wright Brothers First Flight Footage, 1903 - YouTube" />
+    </p>
   </div>
 );

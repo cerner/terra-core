@@ -4,22 +4,22 @@ import Hyperlink from 'terra-hyperlink';
 export default () => (
   <div role="main">
     <p>
-      <Hyperlink href="http://www.link.com" text="Hyperlink Normal" />
+      <Hyperlink href="http://www.terra-ui.com" text="Hyperlink" />
     </p>
     <p>
-      <Hyperlink href="http://www.link.com" variant="audio" text="Audio Hyperlink Testy" />
+      <Hyperlink href="http://www.terra-ui.com" variant="audio" text="Radio Broadcast of the Wright Brothers First Flight, December 17, 1903" />
     </p>
     <p>
-      <Hyperlink href="http://www.link.com" variant="external" text="External Link Hyperlink Testy" />
+      <Hyperlink href="http://www.terra-ui.com" variant="external" text="The Wright Brothers Biography" />
     </p>
     <p>
-      <Hyperlink href="http://www.link.com" variant="document" text="Document Hyperlink Testy" />
+      <Hyperlink href="http://www.terra-ui.com" variant="document" text="Anatomy of the 1903 Wright Flyer" />
     </p>
     <p>
-      <Hyperlink href="http://www.link.com" variant="image" text="Image Hyperlink Testy" />
+      <Hyperlink href="http://www.terra-ui.com" variant="image" text="Orville Wright and Wilbur Wright, Kitty Hawk, North Carolina" />
     </p>
     <p>
-      <Hyperlink href="http://www.link.com" variant="video" text="Video Hyperlink Testy" />
+      <Hyperlink href="http://www.terra-ui.com" variant="video" text="Wright Brothers First Flight Footage, 1903 - YouTube" />
     </p>
   </div>
 );

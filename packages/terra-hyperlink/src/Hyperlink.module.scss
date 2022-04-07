@@ -78,8 +78,35 @@
   }
 
   .icon {
-    margin-left: var(--terra-hyperlink-icon-margin-left, 0.5em);
+    display: inline-block;
+    font-size: var(--terra-hyperlink-icon-font-size, 1em);
+    margin-left: var(--terra-hyperlink-icon-margin-left, 0.28571em);
+    overflow: visible;
+    position: relative;
+
+    &.audio {
+      font-size: var(--terra-hyperlink-icon-audio-font-size, 0.92857em);
+    }
+
+    &.document {
+      margin-left: var(--terra-hyperlink-icon-document-margin-left, 0.21428em);
+    }
+
+    &.external {
+      bottom: var(--terra-hyperlink-icon-external-bottom, 0.03571em); // 0.07142em);
+      font-size: var(--terra-hyperlink-icon-external-font-size, 0.85714em);
+      margin-left: var(--terra-hyperlink-icon-external-margin-left, 0.28571em); // 0.32142em);
+    }
+
+    &.image {
+      bottom: var(--terra-hyperlink-icon-image-bottom, -0.07142em);
+    }
+
+    &.video {
+      bottom: var(--terra-hyperlink-icon-video-bottom, -0.07142em);
+    }
   }
+
 
   // Resets for Hyperlink-Button
   .button-reset {
@@ -88,8 +115,8 @@
     font-family: inherit;
     font-size: 1em;
     left: 0; // reset for IE
-    margin: 0; // reset for Safari, defaults to 2px
     line-height: inherit;
+    margin: 0; // reset for Safari, defaults to 2px
     outline: none;
     overflow: visible; // reset for IE
     padding: 0;
@@ -103,8 +130,8 @@
     .button-inner {
       font-family: inherit;
       left: 0; // reset for IE
-      min-width: 0;
       line-height: inherit;
+      min-width: 0;
       position: relative; // reset for IE
       top: 0;  // reset for IE
     }  
