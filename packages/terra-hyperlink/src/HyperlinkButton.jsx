@@ -46,10 +46,6 @@ const propTypes = {
    */
   text: PropTypes.string.isRequired,
   /**
-   * Sets the href of the link.
-   */
-  href: PropTypes.string,
-  /**
    * @private
    * Whether or not the link should be disabled.
    *
@@ -68,7 +64,7 @@ const propTypes = {
   /**
    * Callback function triggered when clicked.
    */
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
   /**
    * Callback function triggered when hyperlink loses focus.
    */
@@ -96,7 +92,7 @@ const defaultProps = {
   variant: variants.DEFAULT,
 };
 
-class Hyperlink extends React.Component {
+class HyperlinkButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false, focused: false };
@@ -141,7 +137,6 @@ class Hyperlink extends React.Component {
       isDisabled,
       isUnderlineHidden,
       variant,
-      href,
       onClick,
       onBlur,
       onFocus,
@@ -154,6 +149,7 @@ class Hyperlink extends React.Component {
 
     const hyperlinkClasses = classNames(
       cx(
+        'button-reset',
         'hyperlink',
         variant,
         { 'is-disabled': isDisabled },
@@ -165,28 +161,15 @@ class Hyperlink extends React.Component {
       customProps.className,
     );
 
-    let { target } = customProps; // Defaults to undefined if not set
-    let { rel } = customProps; // Defaults to undefined if not set
+    // const attrSpread = {};
 
-    // If variant is set to external, we'll add target="_blank" and rel="noopener noreferrer"
-    // unless user passes their own target or rel attribute
-    if (!customProps.target && variant === 'external') {
-      target = '_blank';
-    }
-
-    if (!customProps.rel && variant === 'external') {
-      rel = 'noopener noreferrer';
-    }
-
-    const attrSpread = {};
     if (isDisabled) {
-      attrSpread.role = 'link';
+      // attrSpread.role = 'link';
     }
 
     return (
-      <a
+      <button
         {...customProps}
-        {...attrSpread}
         className={hyperlinkClasses}
         aria-disabled={isDisabled}
         onKeyDown={this.handleKeyDown}
@@ -194,20 +177,21 @@ class Hyperlink extends React.Component {
         onBlur={this.handleOnBlur}
         onClick={onClick}
         onFocus={onFocus}
-        href={isDisabled ? null : href}
-        target={target}
-        rel={rel}
+        role="link"
+        type="button"
       >
-        {text}
-        {getHyperlinkIcon(variant)}
-      </a>
+        <span className={cx('button-inner')}>
+          {text}
+          {getHyperlinkIcon(variant)}
+        </span>
+      </button>
     );
   }
 }
 
-Hyperlink.propTypes = propTypes;
-Hyperlink.defaultProps = defaultProps;
-Hyperlink.contextType = ThemeContext;
+HyperlinkButton.propTypes = propTypes;
+HyperlinkButton.defaultProps = defaultProps;
+HyperlinkButton.contextType = ThemeContext;
 
-export { variants as HyperlinkVariants };
-export default Hyperlink;
+export { variants as HyperlinkButtonVariants };
+export default HyperlinkButton;

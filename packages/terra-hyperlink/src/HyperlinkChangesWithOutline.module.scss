@@ -5,10 +5,14 @@
 :local {
   .hyperlink {
     background-color: transparent; // Remove the gray background on active links in IE 10
+    // clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
     color: var(--terra-hyperlink-color, #006fc3);
     cursor: pointer;
-    display: inline-block; // prevents variant icon from breaking onto its own line
+    display: inline;
     outline: none;
+    // padding-bottom: 2px;
+    // padding-top: 2px;
+    position: relative;
     text-decoration: var(--terra-hyperlink-text-decoration, underline);
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
     vertical-align: baseline;
@@ -19,6 +23,7 @@
 
       &:focus {
         color: var(--terra-hyperlink-visited-focus-color, #001f67);
+        outline: 2px dashed #f00;
       }
     }
     
@@ -33,9 +38,11 @@
 
     &.is-focused {
       background-color: var(--terra-hyperlink-focus-background-color, transparent);
-      border-radius: var(--terra-hyperlink-focus-border-radius, 0.2142rem);
-      box-shadow: var(--terra-hyperlink-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
+      // border-radius: var(--terra-hyperlink-focus-border-radius, 0.2142rem);
+      // box-shadow: var(--terra-hyperlink-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
       color: var(--terra-hyperlink-focus-color, #001f67);
+      outline: 2px dashed #000;
+      outline-offset: 2px;
       text-decoration: var(--terra-hyperlink-focus-text-decoration, underline);
     }
 
@@ -48,7 +55,7 @@
       cursor: default;
       pointer-events: none;
       text-decoration: var(--terra-hyperlink-disabled-text-decoration, none);
-      touch-action: auto;
+      touch-action: none;
     }
   }
 
@@ -78,15 +85,46 @@
   }
 
   .icon {
-    margin-left: var(--terra-hyperlink-icon-margin-left, 0.5em);
+    // box-sizing: content-box;
+    display: inline-block;
+    // height: 1em;
+    margin-left: var(--terra-hyperlink-icon-margin-left, 0.28571em);
+    // overflow: hidden;
+    overflow: visible;
+    position: relative;
+    // width: 1em;
+
+    &.document {
+      margin-left: var(--terra-hyperlink-icon-document-margin-left, 0.21428em);
+    }
+
+    &.external {
+      font-size: var(--terra-hyperlink-icon-external-font-size, 0.85714em);
+      margin-left: var(--terra-hyperlink-icon-external-margin-left, 0.32142em);
+
+      svg {
+        bottom: var(--terra-hyperlink-icon-external-bottom, 0.07142em);
+      }
+    }
+
+    &.image {
+      bottom: var(--terra-hyperlink-icon-image-bottom, -0.07142em);
+    }
+
+    &.video {
+      bottom: var(--terra-hyperlink-icon-video-bottom, -0.07142em);
+    }
   }
+
 
   // Resets for Hyperlink-Button
   .button-reset {
     border: 0 none;
-    display: inline-block; // prevents variant icon from breaking onto its own line
+    border-radius: 0;
+    display: inline;
     font-family: inherit;
     font-size: 1em;
+    height: auto;
     left: 0; // reset for IE
     margin: 0; // reset for Safari, defaults to 2px
     line-height: inherit;
