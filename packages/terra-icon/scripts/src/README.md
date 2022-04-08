@@ -24,3 +24,4 @@ Decorative icons will be generated in `packages/terra-icon/src/icon/decorative`.
 Alternatively, if you need to run steps 1, 2 and 3, then you can execute them all with a single command:
 
     npm run migrate-cerner-one-icons
+Each script has its own readme. Instructions on when and how to use these scripts are in the [terra-icons readme](../../README.md).
