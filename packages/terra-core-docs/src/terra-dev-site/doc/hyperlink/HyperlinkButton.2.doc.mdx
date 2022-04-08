@@ -1,0 +1,58 @@
+import { Badge } from 'terra-hyperlink/package.json?dev-site-package';
+
+import DefaultHyperlinkButton from './example/HyperlinkButton/DefaultHyperlinkButton?dev-site-example';
+import Audio from './example/HyperlinkButton/AudioHyperlinkButton?dev-site-example';
+import Document from './example/HyperlinkButton/DocumentHyperlinkButton?dev-site-example';
+import External from './example/HyperlinkButton/ExternalHyperlinkButton?dev-site-example';
+import Image from './example/HyperlinkButton/ImageHyperlinkButton?dev-site-example';
+import Video from './example/HyperlinkButton/VideoHyperlinkButton?dev-site-example';
+
+import HyperlinkButtonPropsTable from 'terra-hyperlink/src/HyperlinkButton?dev-site-props-table';
+
+<Badge />
+
+# Terra Hyperlink Button
+
+Similar to the standard [hyperlinks](/components/cerner-terra-core-docs/hyperlink/hyperlink), there are times when applications may need to use a button element 
+and add a onClick function to navigate the user, instead of a traditional anchor `<a>` element with an `href` attribute for URL routing.
+
+Terra Hyperlink Button is intended to communicate both visually to sighted users and to accessible users relying on assistive technology, that the interactive element is still a link, with the 
+intention of navigating a user somewhere (contrasted with standard buttons which communicate that user can take an action).
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-hyperlink`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+```jsx
+import HyperlinkButton from 'terra-hyperlink/lib/HyperlinkButton';
+```
+
+## Component Features
+
+ * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
+ * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
+
+## Examples
+<DefaultHyperlinkButton description="A hyperlink button is intended to look, sound, and act like a traditional anchor link meant for navigation, but uses a button element instead." />
+<External description="An external variant adds a custom icon to indicate the destination is external to the source." />
+<Audio description="An audio variant adds a custom icon to indicate the content linked is audio." />
+<Video description="A video variant adds a custom icon to indicate the content linked is a video." />
+<Image description="An image variant adds a custom icon to indicate the content linked is an image." />
+<Document description="A document variant adds a custom icon to indicate the content linked is document (.pdf, .doc, .xls, etc.)." />
+
+## HyperlinkButton Props
+<HyperlinkButtonPropsTable />
