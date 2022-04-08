@@ -1,0 +1,52 @@
+.resultsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resultContents{
+  height: 75px;
+  width: 175px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iconModalContents {
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas: 
+    "icon-previews summary-data"
+    "bottom-matter bottom-matter";
+}
+
+.iconPreviews {
+  grid-area: icon-previews;
+  & span {
+    font-size: 0.857rem;
+    font-style: italic;
+  }
+}
+
+.largePreviewContainer {
+  border: 0.5px #bbb solid;
+  width: 160px;
+  height: 160px;
+  padding: 20px;
+  background-color: #eee;
+  background: #eee url('data:image/svg+xml,\
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".2" >\
+              <rect x="50" width="50" height="50" />\
+              <rect y="50" width="50" height="50" />\
+            </svg>');
+background-size: 32px 32px;
+}
+
+.iconPreviewsBottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: center;
+}
