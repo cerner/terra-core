@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl } from 'react-intl';
 import IconExternalLink from 'terra-icon/lib/icon/IconExternalLink';
 import IconAudio from 'terra-icon/lib/icon/IconAudio';
 import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
@@ -22,23 +23,6 @@ const variants = {
   DOCUMENT: 'document',
 };
 
-const getHyperlinkIcon = (variant) => {
-  switch (variant) {
-    case variants.AUDIO:
-      return (<span className={cx(['icon', variant])}><IconAudio a11yLabel="(opens a sound file)" /></span>);
-    case variants.DOCUMENT:
-      return (<span className={cx(['icon', variant])}><IconDocuments a11yLabel="(opens a document)" /></span>);
-    case variants.EXTERNAL:
-      return (<span className={cx(['icon', variant])}><IconExternalLink a11yLabel="(opens an external page or application)" /></span>);
-    case variants.IMAGE:
-      return (<span className={cx(['icon', variant])}><IconImage a11yLabel="(opens an image file)" /></span>);
-    case variants.VIDEO:
-      return (<span className={cx(['icon', variant])}><IconVideoCamera a11yLabel="(opens a video)" /></span>);
-    default:
-      return null;
-  }
-};
-
 const propTypes = {
   /**
    * The content to display inside link.
@@ -47,7 +31,7 @@ const propTypes = {
   /**
    * Sets the href of the link.
    */
-  href: PropTypes.string,
+  href: PropTypes.string.isRequired,
   /**
    * @private
    * Whether or not the link should be disabled.
@@ -65,9 +49,10 @@ const propTypes = {
    */
   isUnderlineHidden: PropTypes.bool,
   /**
-   * Callback function triggered when clicked.
+   * @private
+   * The intl object to be injected for translations.
    */
-  onClick: PropTypes.func,
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * Callback function triggered when hyperlink loses focus.
    */
@@ -77,13 +62,13 @@ const propTypes = {
    */
   onFocus: PropTypes.func,
   /**
-   * Callback function triggered when key is pressed.
-   */
-  onKeyDown: PropTypes.func,
-  /**
    * Callback function triggered when key is released.
    */
   onKeyUp: PropTypes.func,
+  /**
+   * Additional information to display as a native tooltip on hover.
+   */
+  title: PropTypes.string,
   /**
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
@@ -99,7 +84,6 @@ class Hyperlink extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false, focused: false };
-    this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
   }
@@ -109,17 +93,6 @@ class Hyperlink extends React.Component {
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
-    }
-  }
-
-  handleKeyDown(event) {
-    // Add focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ focused: true });
-    }
-
-    if (this.props.onKeyDown) {
-      this.props.onKeyDown(event);
     }
   }
 
@@ -134,18 +107,36 @@ class Hyperlink extends React.Component {
     }
   }
 
+  getHyperlinkIcon() {
+    const { intl, variant } = this.props;
+    switch (variant) {
+      case variants.AUDIO:
+        return (<span className={cx('icon')}><IconAudio a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.audio' })} /></span>);
+      case variants.DOCUMENT:
+        return (<span className={cx('icon')}><IconDocuments a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.document' })} /></span>);
+      case variants.EXTERNAL:
+        return (<span className={cx('icon')}><IconExternalLink a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.external' })} /></span>);
+      case variants.IMAGE:
+        return (<span className={cx('icon')}><IconImage a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.image' })} /></span>);
+      case variants.VIDEO:
+        return (<span className={cx('icon')}><IconVideoCamera a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.video' })} /></span>);
+      default:
+        return null;
+    }
+  }
+
   render() {
     const {
       text,
       isDisabled,
       isUnderlineHidden,
+      intl,
       variant,
       href,
-      onClick,
       onBlur,
       onFocus,
-      onKeyDown,
       onKeyUp,
+      title,
       ...customProps
     } = this.props;
 
@@ -188,17 +179,16 @@ class Hyperlink extends React.Component {
         {...attrSpread}
         className={hyperlinkClasses}
         aria-disabled={isDisabled}
-        onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
-        onClick={onClick}
         onFocus={onFocus}
         href={isDisabled ? null : href}
+        title={title}
         target={target}
         rel={rel}
       >
         {text}
-        {getHyperlinkIcon(variant)}
+        {this.getHyperlinkIcon()}
       </a>
     );
   }
@@ -209,4 +199,4 @@ Hyperlink.defaultProps = defaultProps;
 Hyperlink.contextType = ThemeContext;
 
 export { variants as HyperlinkVariants };
-export default Hyperlink;
+export default injectIntl(Hyperlink);

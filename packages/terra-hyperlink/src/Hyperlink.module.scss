@@ -83,30 +83,39 @@
     margin-left: var(--terra-hyperlink-icon-margin-left, 0.28571em);
     overflow: visible;
     position: relative;
+  }
 
-    &.audio {
-      font-size: var(--terra-hyperlink-icon-audio-font-size, 0.92857em);
-    }
-
-    &.document {
-      margin-left: var(--terra-hyperlink-icon-document-margin-left, 0.21428em);
-    }
-
-    &.external {
-      bottom: var(--terra-hyperlink-icon-external-bottom, 0.03571em); // 0.07142em);
-      font-size: var(--terra-hyperlink-icon-external-font-size, 0.85714em);
-      margin-left: var(--terra-hyperlink-icon-external-margin-left, 0.28571em); // 0.32142em);
-    }
-
-    &.image {
-      bottom: var(--terra-hyperlink-icon-image-bottom, -0.07142em);
-    }
-
-    &.video {
-      bottom: var(--terra-hyperlink-icon-video-bottom, -0.07142em);
+  .audio {
+    .icon {
+      font-size: var(--terra-hyperlink-audio-icon-font-size, 0.92857em);
     }
   }
 
+  .document {
+    .icon {
+      margin-left: var(--terra-hyperlink-document-icon-margin-left, 0.21428em);
+    }
+  }
+
+  .external { 
+    .icon {
+      bottom: var(--terra-hyperlink-external-icon-bottom, 0.03571em);
+      font-size: var(--terra-hyperlink-external-icon-font-size, 0.85714em);
+      margin-left: var(--terra-hyperlink-external-icon-margin-left, 0.28571em);
+    }
+  }
+
+  .image {
+    .icon {
+      bottom: var(--terra-hyperlink-image-icon-bottom, -0.07142em);
+    }
+  }
+
+  .video {
+    .icon {
+      bottom: var(--terra-hyperlink-video-icon-bottom, -0.07142em);
+    }
+  }
 
   // Resets for Hyperlink-Button
   .button-reset {

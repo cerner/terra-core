@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl } from 'react-intl';
 import IconExternalLink from 'terra-icon/lib/icon/IconExternalLink';
 import IconAudio from 'terra-icon/lib/icon/IconAudio';
 import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
@@ -20,23 +21,6 @@ const variants = {
   VIDEO: 'video',
   AUDIO: 'audio',
   DOCUMENT: 'document',
-};
-
-const getHyperlinkIcon = (variant) => {
-  switch (variant) {
-    case variants.AUDIO:
-      return (<span className={cx(['icon', variant])}><IconAudio a11yLabel="(opens a sound file)" /></span>);
-    case variants.DOCUMENT:
-      return (<span className={cx(['icon', variant])}><IconDocuments a11yLabel="(opens a document)" /></span>);
-    case variants.EXTERNAL:
-      return (<span className={cx(['icon', variant])}><IconExternalLink a11yLabel="(opens an external page or application)" /></span>);
-    case variants.IMAGE:
-      return (<span className={cx(['icon', variant])}><IconImage a11yLabel="(opens an image file)" /></span>);
-    case variants.VIDEO:
-      return (<span className={cx(['icon', variant])}><IconVideoCamera a11yLabel="(opens a video)" /></span>);
-    default:
-      return null;
-  }
 };
 
 const propTypes = {
@@ -61,6 +45,11 @@ const propTypes = {
    */
   isUnderlineHidden: PropTypes.bool,
   /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+  /**
    * Callback function triggered when clicked.
    */
   onClick: PropTypes.func.isRequired,
@@ -80,6 +69,10 @@ const propTypes = {
    * Callback function triggered when key is released.
    */
   onKeyUp: PropTypes.func,
+  /**
+   * Additional information to display as a native tooltip on hover.
+   */
+  title: PropTypes.string,
   /**
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
@@ -130,17 +123,37 @@ class HyperlinkButton extends React.Component {
     }
   }
 
+  getHyperlinkIcon() {
+    const { intl, variant } = this.props;
+    switch (variant) {
+      case variants.AUDIO:
+        return (<span className={cx('icon')}><IconAudio a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.audio' })} /></span>);
+      case variants.DOCUMENT:
+        return (<span className={cx('icon')}><IconDocuments a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.document' })} /></span>);
+      case variants.EXTERNAL:
+        return (<span className={cx('icon')}><IconExternalLink a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.external' })} /></span>);
+      case variants.IMAGE:
+        return (<span className={cx('icon')}><IconImage a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.image' })} /></span>);
+      case variants.VIDEO:
+        return (<span className={cx('icon')}><IconVideoCamera a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.video' })} /></span>);
+      default:
+        return null;
+    }
+  }
+
   render() {
     const {
       text,
       isDisabled,
       isUnderlineHidden,
+      intl,
       variant,
       onClick,
       onBlur,
       onFocus,
       onKeyDown,
       onKeyUp,
+      title,
       ...customProps
     } = this.props;
 
@@ -165,6 +178,8 @@ class HyperlinkButton extends React.Component {
       //
       // Perhaps have it be the same as https://www.scottohara.me/blog/2021/05/28/disabled-links.html
       // using an anchor with no href
+      //
+      // Could import Hyperlink and pass thru props, and assign an HREF of #, which will get removed.
     }
 
     return (
@@ -177,12 +192,13 @@ class HyperlinkButton extends React.Component {
         onBlur={this.handleOnBlur}
         onClick={onClick}
         onFocus={onFocus}
+        title={title}
         role="link"
         type="button"
       >
         <span className={cx('button-inner')}>
           {text}
-          {getHyperlinkIcon(variant)}
+          {this.getHyperlinkIcon()}
         </span>
       </button>
     );
@@ -194,4 +210,4 @@ HyperlinkButton.defaultProps = defaultProps;
 HyperlinkButton.contextType = ThemeContext;
 
 export { variants as HyperlinkButtonVariants };
-export default HyperlinkButton;
+export default injectIntl(HyperlinkButton);

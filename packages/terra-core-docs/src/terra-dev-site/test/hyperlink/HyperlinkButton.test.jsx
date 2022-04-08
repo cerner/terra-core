@@ -7,7 +7,7 @@ export default () => (
       <HyperlinkButton onClick={() => {}} text="Hyperlink Button" />
     </p>
     <p>
-      <HyperlinkButton onClick={() => {}} variant="audio" text="Radio Broadcast of the Wright Brothers First Flight, December 17, 1903" />
+      <HyperlinkButton onClick={() => {}} variant="audio" text="Radio Broadcast of the 20th anniversary for the Wright Brothers First Flight" title="Radio Broadcast of the 20th anniversary for the Wright Brothers First Flight, December 17, 1923, © Copyright WBZ Boston" />
     </p>
     <p>
       <HyperlinkButton onClick={() => {}} variant="external" text="The Wright Brothers Biography" />

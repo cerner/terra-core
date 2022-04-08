@@ -7,7 +7,7 @@ export default () => (
       <Hyperlink href="http://www.terra-ui.com" text="Hyperlink" />
     </p>
     <p>
-      <Hyperlink href="http://www.terra-ui.com" variant="audio" text="Radio Broadcast of the Wright Brothers First Flight, December 17, 1903" />
+      <Hyperlink href="http://www.terra-ui.com" variant="audio" text="Radio Broadcast of the 20th anniversary for the Wright Brothers First Flight" title="Radio Broadcast of the 20th anniversary for the Wright Brothers First Flight, December 17, 1923, © Copyright WBZ Boston" />
     </p>
     <p>
       <Hyperlink href="http://www.terra-ui.com" variant="external" text="The Wright Brothers Biography" />
