@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Move terra-header docs out of example directory
+
 ## 1.13.4 - (March 15, 2022)
 
 * Changed
