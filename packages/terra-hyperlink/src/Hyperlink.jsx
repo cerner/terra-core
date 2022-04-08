@@ -177,17 +177,17 @@ class Hyperlink extends React.Component {
       rel = 'noopener noreferrer';
     }
 
-    const attrSpread = {};
+    const attrsToDisable = {};
     if (isDisabled) {
-      attrSpread.role = 'link';
+      attrsToDisable.role = 'link';
+      attrsToDisable['aria-disabled'] = true;
     }
 
     return (
       <a
         {...customProps}
-        {...attrSpread}
+        {...attrsToDisable}
         className={hyperlinkClasses}
-        aria-disabled={isDisabled}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
