@@ -41,10 +41,6 @@ const getHyperlinkIcon = (variant) => {
 
 const propTypes = {
   /**
-   * The content to display inside link.
-   */
-  text: PropTypes.string.isRequired,
-  /**
    * Sets the href of the link.
    */
   href: PropTypes.string,
@@ -84,6 +80,10 @@ const propTypes = {
    * Callback function triggered when key is released.
    */
   onKeyUp: PropTypes.func,
+  /**
+   * The content to display inside link.
+   */
+  text: PropTypes.string.isRequired,
   /**
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
