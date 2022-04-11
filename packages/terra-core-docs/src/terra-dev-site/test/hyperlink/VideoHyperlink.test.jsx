@@ -3,6 +3,6 @@ import Hyperlink from 'terra-hyperlink';
 
 export default () => (
   <div role="main">
-    <Hyperlink id="link" href="https://www.cerner.com" variant="video">Video hyperlink</Hyperlink>
+    <Hyperlink text="Video hyperlink" id="link" href="https://www.cerner.com" variant="video" />
   </div>
 );

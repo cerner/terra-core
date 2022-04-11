@@ -11,10 +11,10 @@ exports[`Hyperlink correctly applies the theme context className 1`] = `
   <Hyperlink
     href="https://www.cerner.com"
     isDisabled={false}
+    text="Default hyperlink"
     variant="default"
   >
     <a
-      aria-disabled={false}
       className="hyperlink default orion-fusion-theme"
       href="https://www.cerner.com"
       onBlur={[Function]}
@@ -29,7 +29,6 @@ exports[`Hyperlink correctly applies the theme context className 1`] = `
 
 exports[`Hyperlink should render a audio hyperlink 1`] = `
 <a
-  aria-disabled="false"
   class="hyperlink audio"
   href="https://www.cerner.com"
 >
@@ -56,7 +55,6 @@ exports[`Hyperlink should render a audio hyperlink 1`] = `
 
 exports[`Hyperlink should render a default hyperlink 1`] = `
 <a
-  aria-disabled="false"
   class="hyperlink default"
   href="https://www.cerner.com"
 >
@@ -65,17 +63,17 @@ exports[`Hyperlink should render a default hyperlink 1`] = `
 `;
 
 exports[`Hyperlink should render a disabled hyperlink 1`] = `
-<span
+<a
   aria-disabled="true"
   class="hyperlink default is-disabled"
+  role="link"
 >
   Disabled hyperlink
-</span>
+</a>
 `;
 
 exports[`Hyperlink should render a document hyperlink 1`] = `
 <a
-  aria-disabled="false"
   class="hyperlink document"
   href="https://www.cerner.com"
 >
@@ -103,7 +101,6 @@ exports[`Hyperlink should render a document hyperlink 1`] = `
 
 exports[`Hyperlink should render a external hyperlink 1`] = `
 <a
-  aria-disabled="false"
   class="hyperlink external"
   href="https://www.cerner.com"
   rel="noopener noreferrer"
@@ -132,7 +129,6 @@ exports[`Hyperlink should render a external hyperlink 1`] = `
 
 exports[`Hyperlink should render a image hyperlink 1`] = `
 <a
-  aria-disabled="false"
   class="hyperlink image"
   href="https://www.cerner.com"
 >
@@ -159,7 +155,6 @@ exports[`Hyperlink should render a image hyperlink 1`] = `
 
 exports[`Hyperlink should render a underline hidden hyperlink 1`] = `
 <a
-  aria-disabled="false"
   class="hyperlink default is-underline-hidden"
   href="https://www.cerner.com"
 >
@@ -169,7 +164,6 @@ exports[`Hyperlink should render a underline hidden hyperlink 1`] = `
 
 exports[`Hyperlink should render a video hyperlink 1`] = `
 <a
-  aria-disabled="false"
   class="hyperlink video"
   href="https://www.cerner.com"
 >
@@ -196,7 +190,6 @@ exports[`Hyperlink should render a video hyperlink 1`] = `
 
 exports[`Hyperlink should render with custom props 1`] = `
 <a
-  aria-disabled="false"
   class="hyperlink default"
   href="https://www.cerner.com"
   rel="nofollow"
@@ -208,7 +201,6 @@ exports[`Hyperlink should render with custom props 1`] = `
 
 exports[`Hyperlink should render with custom props with external variant 1`] = `
 <a
-  aria-disabled="false"
   class="hyperlink external"
   href="https://www.cerner.com"
   rel="external"

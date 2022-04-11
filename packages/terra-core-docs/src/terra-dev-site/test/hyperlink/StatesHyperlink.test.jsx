@@ -7,34 +7,34 @@ const cx = classNames.bind(styles);
 
 const HyperlinkStates = () => (
   <div role="main" className={cx('hyperlink-states')} id="link-example">
-    <Hyperlink href="https://my.cerner.com/?">hyperlink</Hyperlink>
+    <Hyperlink text="hyperlink" href="https://my.cerner.com/?" />
     <br />
     <br />
-    <Hyperlink href="https://my.cerner.com/?" className={cx('is-visited')}>visited hyperlink</Hyperlink>
+    <Hyperlink text="visited hyperlink" href="https://my.cerner.com/?" className={cx('is-visited')} />
     <br />
     <br />
-    <Hyperlink href="https://my.cerner.com/?" className={cx('is-hovered')}>hovered hyperlink</Hyperlink>
+    <Hyperlink text="hovered hyperlink" href="https://my.cerner.com/?" className={cx('is-hovered')} />
     <br />
     <br />
-    <Hyperlink href="https://my.cerner.com/?" className={cx('is-focused')}>focused hyperlink</Hyperlink>
+    <Hyperlink text="focused hyperlink" href="https://my.cerner.com/?" className={cx('is-focused')} />
     <br />
     <br />
-    <Hyperlink href="https://my.cerner.com/?" className={cx('is-active')}>active hyperlink</Hyperlink>
+    <Hyperlink text="active hyperlink" href="https://my.cerner.com/?" className={cx('is-active')} />
     <br />
     <br />
-    <Hyperlink href="https://my.cerner.com/?" variant="document">icon hyperlink</Hyperlink>
+    <Hyperlink text="icon hyperlink" href="https://my.cerner.com/?" variant="document" />
     <br />
     <br />
-    <Hyperlink href="https://my.cerner.com/?" className={cx('is-visited')} variant="document">icon visited hyperlink</Hyperlink>
+    <Hyperlink text="icon visited hyperlink" href="https://my.cerner.com/?" className={cx('is-visited')} variant="document" />
     <br />
     <br />
-    <Hyperlink href="https://my.cerner.com/?" className={cx('is-hovered')} variant="document">icon hovered hyperlink</Hyperlink>
+    <Hyperlink text="icon hovered hyperlink" href="https://my.cerner.com/?" className={cx('is-hovered')} variant="document" />
     <br />
     <br />
-    <Hyperlink href="https://my.cerner.com/?" className={cx('is-focused')} variant="document">icon focused hyperlink</Hyperlink>
+    <Hyperlink text="icon focused hyperlink" href="https://my.cerner.com/?" className={cx('is-focused')} variant="document" />
     <br />
     <br />
-    <Hyperlink href="https://my.cerner.com/?" className={cx('is-active')} variant="document">icon active hyperlink</Hyperlink>
+    <Hyperlink text="icon active hyperlink" href="https://my.cerner.com/?" className={cx('is-active')} variant="document" />
   </div>
 );
 
