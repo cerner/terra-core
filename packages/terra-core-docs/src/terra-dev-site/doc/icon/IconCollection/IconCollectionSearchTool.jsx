@@ -5,8 +5,11 @@ import SearchField from 'terra-search-field';
 import Card from 'terra-card';
 import Text from 'terra-text';
 import Spacer from 'terra-spacer';
+import Heading from 'terra-heading';
 import ModalManager, { disclosureType } from 'terra-application/lib/modal-manager';
 import disclosureManager, { withDisclosureManager, DisclosureManagerContext, DisclosureManagerHeaderAdapter } from 'terra-application/lib/disclosure-manager';
+import IconAvailable from 'terra-icon/lib/icon/IconAvailable';
+import IconClear from 'terra-icon/lib/icon/IconClear';
 
 import styles from './IconCollectionSearchTool.module.scss';
 const cx = classNames.bind(styles);
@@ -65,6 +68,27 @@ const SmallIconPreview = ({size = 14, icon: Icon}) => (
   </div>
 )
 
+const FunctionIndicator = ({canBe, stringTemplate, emphasizedSubstring}) => {
+  const insertionIndex = stringTemplate.indexOf('_');
+  const firstSubstring = stringTemplate.substring(0, insertionIndex);
+  const secondSubstring = stringTemplate.substring(insertionIndex + 1);
+  console.log('firstString', firstSubstring)
+  console.log('secondString', secondSubstring)
+
+  const iconProps = {
+    height: '1.5rem',
+    width: '1.5rem',
+    style: {color: 'red'},
+  }
+
+  return (
+    <Text>
+      { canBe ? (<><IconAvailable {...iconProps} /> Can </>) : <><IconClear {...iconProps} /> Cannot </>}
+      {firstSubstring}{<b>{emphasizedSubstring}</b>}{secondSubstring}
+    </Text>
+  )
+}
+
 const IconInformationModal = ({data}) => {
   const Icon = data.svg;
   return (
@@ -83,6 +107,41 @@ const IconInformationModal = ({data}) => {
             <SmallIconPreview size={28} icon={Icon} />
             <SmallIconPreview size={40} icon={Icon} />
           </div>
+        </div>
+
+        <div className={cx('summaryInfo')}>
+          <Heading level={5}>Meaning</Heading>
+          <Text>{data.meaning}</Text>
+          <Spacer marginBottom="large+1"/>
+
+          <Heading level={5}>Sets/Categories</Heading>
+          <Text>{data.sets.join(', ')}</Text>
+          <Spacer marginBottom="large+1"/>
+
+          <Heading level={5}>Functions</Heading>
+          <FunctionIndicator
+            canBe={data.isAction}
+            stringTemplate="be used to perform an _"
+            emphasizedSubstring="action"
+          />
+          <FunctionIndicator
+            canBe={data.isStatus}
+            stringTemplate="be used to indicate a _"
+            emphasizedSubstring="status"
+          />
+          <FunctionIndicator
+            canBe={data.isToggle}
+            stringTemplate="be used as a _"
+            emphasizedSubstring="toggle"
+          />
+          <FunctionIndicator
+            canBe={!data.labelRequired}
+            stringTemplate="be used without a _"
+            emphasizedSubstring="label"
+          />
+
+
+          <Spacer marginBottom="large+1"/>
         </div>
       </div>
     </div>

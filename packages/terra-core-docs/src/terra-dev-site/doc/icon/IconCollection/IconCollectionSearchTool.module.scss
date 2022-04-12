@@ -15,11 +15,11 @@
 .iconModalContents {
   padding: 14px;
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 160px 60px 1fr;
   grid-template-rows: min-content 1fr;
   grid-template-areas: 
-    "icon-previews summary-data"
-    "bottom-matter bottom-matter";
+    "icon-previews . summary-data"
+    "bottom-matter bottom-matter bottom-matter";
 }
 
 .iconPreviews {
@@ -49,4 +49,9 @@ background-size: 32px 32px;
   justify-content: space-between;
   align-items: flex-end;
   text-align: center;
+}
+
+.summaryInfo {
+  grid-area: summary-data;
+  padding-left: 14px;
 }
