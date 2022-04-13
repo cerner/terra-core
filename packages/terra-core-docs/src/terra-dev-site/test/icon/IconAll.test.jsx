@@ -289,6 +289,8 @@ const IconAll = () => (
     <Icon.IconTile className={cx(['icon'])} />
     <Icon.IconTrash className={cx(['icon'])} />
     <Icon.IconTreemap className={cx(['icon'])} />
+    <Icon.IconTrendingDown className={cx(['icon'])} />
+    <Icon.IconTrendingUp className={cx(['icon'])} />
     <Icon.IconTriangleDownSymbol className={cx(['icon'])} />
     <Icon.IconTriangleDownSymbolLight className={cx(['icon'])} />
     <Icon.IconTriangleSymbol className={cx(['icon'])} />

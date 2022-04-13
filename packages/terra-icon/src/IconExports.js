@@ -280,6 +280,8 @@ import IconThinDiamondSymbolLight from './icon/IconThinDiamondSymbolLight';
 import IconTile from './icon/IconTile';
 import IconTrash from './icon/IconTrash';
 import IconTreemap from './icon/IconTreemap';
+import IconTrendingDown from './icon/IconTrendingDown';
+import IconTrendingUp from './icon/IconTrendingUp';
 import IconTriangleDownSymbol from './icon/IconTriangleDownSymbol';
 import IconTriangleDownSymbolLight from './icon/IconTriangleDownSymbolLight';
 import IconTriangleSymbol from './icon/IconTriangleSymbol';
@@ -595,6 +597,8 @@ const Icons = {
   IconTile,
   IconTrash,
   IconTreemap,
+  IconTrendingDown,
+  IconTrendingUp,
   IconTriangleDownSymbol,
   IconTriangleDownSymbolLight,
   IconTriangleSymbol,

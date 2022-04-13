@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Updated to `one-cerner-style-icons` v1.44.0
+  * Updated to `one-cerner-style-icons` v1.46.0
   * Updated SVG migration script `writeSvg,js` to include a newline character at the end of each SVG file
   * Updated example generation scripts to point to `terra-core-docs` instead of within the `terra-icons` package
 

@@ -204,6 +204,8 @@ import IconVolumeSetDecrease from 'terra-icon/lib/icon/IconVolumeSetDecrease';
 import IconVolumeSetIncrease from 'terra-icon/lib/icon/IconVolumeSetIncrease';
 import IconVolumeSetMute from 'terra-icon/lib/icon/IconVolumeSetMute';
 import IconPersonConnection from 'terra-icon/lib/icon/IconPersonConnection';
+import IconTrendingDown from 'terra-icon/lib/icon/IconTrendingDown';
+import IconTrendingUp from 'terra-icon/lib/icon/IconTrendingUp';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -2069,6 +2071,24 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconPersonConnection from 'terra-icon/lib/icon/IconPersonConnection';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconTrendingDown height='2em' width='2em' /></td>
+        <td style={cellStyle}>trendingDown</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconTrendingDown from 'terra-icon/lib/icon/IconTrendingDown';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconTrendingUp height='2em' width='2em' /></td>
+        <td style={cellStyle}>trendingUp</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconTrendingUp from 'terra-icon/lib/icon/IconTrendingUp';
           </code>
         </td>
       </tr>
