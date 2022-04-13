@@ -30,25 +30,40 @@
   }
 }
 
-.largePreviewContainer {
-  border: 0.5px #bbb solid;
-  width: 160px;
-  height: 160px;
-  padding: 20px;
+.checkeredBackground {
   background-color: #eee;
   background: #eee url('data:image/svg+xml,\
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".2" >\
               <rect x="50" width="50" height="50" />\
               <rect y="50" width="50" height="50" />\
             </svg>');
-background-size: 32px 32px;
+  background-size: 32px 32px;
+}
+
+.largePreviewContainer {
+  border: 0.5px #bbb solid;
+  width: 160px;
+  height: 160px;
+  padding: 20px;
 }
 
 .iconPreviewsBottomRow {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   text-align: center;
+
+  * {
+    position: relative;
+  }
+}
+
+.iconPreviewsBackground {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
 }
 
 .summaryInfo {

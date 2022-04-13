@@ -98,11 +98,13 @@ const IconInformationModal = ({data}) => {
       />
       <div className={cx('iconModalContents')}>
         <div className={cx('iconPreviews')}>
-          <div className={cx('largePreviewContainer')}>
+          <div className={cx('largePreviewContainer', 'checkeredBackground')}>
             <Icon height="120" width="120"/>
           </div>
           <Text>120px</Text>
+          <Spacer marginBottom='large'/>
           <div className={cx('iconPreviewsBottomRow')}>
+            <div className={cx('iconPreviewsBackground', 'checkeredBackground')} />
             <SmallIconPreview size={14} icon={Icon} />
             <SmallIconPreview size={28} icon={Icon} />
             <SmallIconPreview size={40} icon={Icon} />
