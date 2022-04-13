@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Moved terra-heading docs up one level to `src/terra-dev-site/doc/heading`
+
 ## 1.13.4 - (March 15, 2022)
 
 * Changed
