@@ -89,6 +89,47 @@ const FunctionIndicator = ({canBe, stringTemplate, emphasizedSubstring}) => {
   )
 }
 
+const IconPreviews = ({Icon, defaultBackground}) => {
+  const values = ['light', 'low-light', 'checkered'];
+  const [selectedBackground, setSelectedBackground] = useState(defaultBackground || values[0]);
+
+  return (
+    <div className={cx('iconPreviews')}>
+      <div className={cx('largePreviewContainer', `${selectedBackground}-background`)}>
+        <Icon height="120" width="120"/>
+      </div>
+      <Text>120px</Text>
+      <Spacer marginBottom='medium'/>
+      <div className={cx('iconPreviewsBottomRow')}>
+        <div className={cx('iconPreviewsBackground', `${selectedBackground}-background`)} />
+        <SmallIconPreview size={14} icon={Icon} />
+        <SmallIconPreview size={28} icon={Icon} />
+        <SmallIconPreview size={40} icon={Icon} />
+      </div>
+      <div>
+        <Text>Preview Background</Text>
+        <fieldset className={cx('background-options-fieldset')}>
+          {
+            values.map((value, index) => (
+              <>
+                <input
+                  type="radio"
+                  name="background-options"
+                  value={value}
+                  className={cx('background-radio-button', value)}
+                  defaultChecked={value === selectedBackground}
+                  onChange={() => setSelectedBackground(value)}
+                />
+                <label for={value} className={cx('background-radio-label', value)}>{value}</label>
+              </>
+            ))
+          }
+        </fieldset>
+      </div>
+    </div>
+  )
+}
+
 const IconInformationModal = ({data}) => {
   const Icon = data.svg;
   return (
@@ -97,19 +138,7 @@ const IconInformationModal = ({data}) => {
         title="Icon Details"
       />
       <div className={cx('iconModalContents')}>
-        <div className={cx('iconPreviews')}>
-          <div className={cx('largePreviewContainer', 'checkeredBackground')}>
-            <Icon height="120" width="120"/>
-          </div>
-          <Text>120px</Text>
-          <Spacer marginBottom='large'/>
-          <div className={cx('iconPreviewsBottomRow')}>
-            <div className={cx('iconPreviewsBackground', 'checkeredBackground')} />
-            <SmallIconPreview size={14} icon={Icon} />
-            <SmallIconPreview size={28} icon={Icon} />
-            <SmallIconPreview size={40} icon={Icon} />
-          </div>
-        </div>
+        <IconPreviews Icon={Icon} defaultBackground={data.needsDarkBackground ? 'low-light' : 'light'} />
 
         <div className={cx('summaryInfo')}>
           <Heading level={5}>Meaning</Heading>
@@ -141,7 +170,6 @@ const IconInformationModal = ({data}) => {
             stringTemplate="be used _"
             emphasizedSubstring="without a label"
           />
-
 
           <Spacer marginBottom="large+1"/>
 
@@ -175,15 +203,18 @@ const IconCollectionSearchTool = withDisclosureManager(({ disclosureManager }) =
       <Card className={cx('resultsContainer')}>
           {
             filteredResults.map((result) => (
-              <IconCard icon={result.svg} label={result.meaning} onClick={
-                () => disclosureManager.disclose({
-                  preferredType: 'modal',
-                  size: 'small',
-                  content: {
-                    key: `meaning`,
-                    component: <IconInformationModal data={result}/>
-                  }
-                })
+              <IconCard
+                icon={result.svg}
+                label={result.meaning}
+                onClick={
+                  () => disclosureManager.disclose({
+                    preferredType: 'modal',
+                    size: 'small',
+                    content: {
+                      key: `meaning`,
+                      component: <IconInformationModal data={result}/>
+                    }
+                  })
               } />
             ))
           }

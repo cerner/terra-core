@@ -27,7 +27,7 @@ const icons = [
     isToggle: false,
     labelRequired: false,
     colorResponsiveElements: '',
-    needsDarkBackground: false,
+    needsDarkBackground: true,
     searchTerms: 'success status check checkmark white circle static',
   },
   {
