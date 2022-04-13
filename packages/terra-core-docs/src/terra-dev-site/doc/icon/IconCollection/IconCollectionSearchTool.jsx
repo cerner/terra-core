@@ -144,6 +144,15 @@ const IconInformationModal = ({data}) => {
 
 
           <Spacer marginBottom="large+1"/>
+
+          <Heading level={5}>Color-Responsive Elements</Heading>
+          <Text>
+            {
+              !data.colorResponsiveElements || data.colorResponsiveElements.length <= 0
+                ? 'None'
+                : data.colorResponsiveElements
+            }
+          </Text>
         </div>
       </div>
     </div>
