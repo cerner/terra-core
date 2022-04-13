@@ -1,9 +1,9 @@
 /* eslint-disable compat/compat */
-const fs = require("fs");
+const fs = require('fs');
 
 const writeSvg = (csvObject) =>
   new Promise((resolve, reject) => {
-    fs.writeFile(csvObject.svgDest, csvObject.svg + "\n", "utf-8", (error) => {
+    fs.writeFile(csvObject.svgDest, csvObject.svg + '\n', 'utf-8', (error) => {
       if (error) {
         reject(error);
       } else {
