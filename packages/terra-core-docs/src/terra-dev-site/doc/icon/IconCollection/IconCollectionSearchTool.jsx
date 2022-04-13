@@ -136,8 +136,8 @@ const IconInformationModal = ({data}) => {
           />
           <FunctionIndicator
             canBe={!data.labelRequired}
-            stringTemplate="be used without a _"
-            emphasizedSubstring="label"
+            stringTemplate="be used _"
+            emphasizedSubstring="without a label"
           />
 
 
