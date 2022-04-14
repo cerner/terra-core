@@ -119,3 +119,28 @@
     background-color: #222a2e;
   }
 }
+
+.bottom-matter {
+  grid-area: bottom-matter;
+  margin-top: 30px;
+}
+
+.import-example {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+
+  .import{
+    color: #C11460;
+  }
+  .alias{
+    color: #383F42;
+  }
+  .from{
+    color: #C11460;
+  }
+  .import-path{
+    color: #19368E;
+  }
+  .semicolon{
+    color: #383F42;
+  }
+}

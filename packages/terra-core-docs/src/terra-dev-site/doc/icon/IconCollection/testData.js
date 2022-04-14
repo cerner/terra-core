@@ -17,6 +17,8 @@ const icons = [
     colorResponsiveElements: '',
     needsDarkBackground: false,
     searchTerms: 'success status check checkmark green circle static',
+    hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
+    terraAlias: 'IconSuccess',
   },
   {
     svg: IconSuccessInverse,
@@ -29,6 +31,8 @@ const icons = [
     colorResponsiveElements: '',
     needsDarkBackground: true,
     searchTerms: 'success status check checkmark white circle static',
+    hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
+    terraAlias: 'IconSuccessInverse',
   },
   {
     svg: IconAvailable,
@@ -41,6 +45,8 @@ const icons = [
     colorResponsiveElements: '',
     needsDarkBackground: false,
     searchTerms: 'available status check checkmark green circle static',
+    hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
+    terraAlias: 'IconAvailable',
   },
   {
     svg: IconScheduled,
@@ -53,6 +59,8 @@ const icons = [
     colorResponsiveElements: '',
     needsDarkBackground: false,
     searchTerms: 'scheduled scheduling schedule calendar green circle check hybrid themable',
+    hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
+    terraAlias: 'IconScheduled',
   },
   {
     svg: IconTrash,
@@ -65,6 +73,8 @@ const icons = [
     colorResponsiveElements: '',
     needsDarkBackground: false,
     searchTerms: 'trash garbage junk delete refuse themable',
+    hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
+    terraAlias: 'IconTrash',
   },
   {
     svg: IconNotMet,
@@ -77,6 +87,8 @@ const icons = [
     colorResponsiveElements: '',
     needsDarkBackground: false,
     searchTerms: 'not met clear remove x circle themable',
+    hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
+    terraAlias: 'IconNotMet',
   },
 ];
 

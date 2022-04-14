@@ -134,6 +134,24 @@ const IconInformationModal = ({data}) => {
             }
           </Text>
         </div>
+
+        <div className={cx('bottom-matter')}>
+          <Spacer marginTop="large">
+            <Heading level={5}>Human Factors Guidance</Heading>
+            <Text>{data.hfGuidance}</Text>
+          </Spacer>
+
+          <Spacer marginTop="large">
+            <Heading level={5}>Importing</Heading>
+            <div className={cx('import-example')}>
+              <span className={cx('import')}>import</span>
+              <span className={cx('alias')}> {data.terraAlias} </span>
+              <span className={cx('from')}>from </span>
+              <span className={cx('import-path')}>'terra-icon/lib/icon/{data.terraAlias}'</span>
+              <span className={cx('semicolon')}>;</span>
+            </div>
+          </Spacer>
+        </div>
       </div>
     </div>
   )
