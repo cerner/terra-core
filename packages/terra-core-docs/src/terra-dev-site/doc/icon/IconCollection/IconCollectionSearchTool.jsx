@@ -17,20 +17,19 @@ import testData from './testData';
 
 const propTypes = {};
 
-const IconCard = ({icon: Icon, label, onClick}) => {
+const IconCard = ({icon: Icon, label, onClick, darkBackground}) => {
   const [hovered, setHovered] = useState(false);
-  const [depressed, setDepressed] = useState(false);
 
   return (
     <Spacer margin='large+2'>
-      <Card variant={(hovered || depressed) ? 'raised' : null}>
+      <Card variant={hovered ? 'raised' : null}>
         <div
           className={cx('resultContents')}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           onClick={onClick}
         >
-          <Spacer margin="large">
+          <Spacer padding="small" margin="small" className={cx({'dark-background': darkBackground})}>
             <Icon height='2.1em' width='2.1em'/>
           </Spacer>
           <Text>{label}</Text>
@@ -77,6 +76,7 @@ const IconCollectionSearchTool = withDisclosureManager(({ disclosureManager }) =
               <IconCard
                 icon={result.svg}
                 label={result.meaning}
+                darkBackground={result.needsDarkBackground}
                 onClick={
                   () => disclosureManager.disclose({
                     preferredType: 'modal',
