@@ -1,0 +1,121 @@
+.iconModalContents {
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 160px 60px 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas: 
+    "icon-previews . summary-data"
+    "bottom-matter bottom-matter bottom-matter";
+}
+
+.iconPreviews {
+  grid-area: icon-previews;
+  & span {
+    font-size: 0.857rem;
+    font-style: italic;
+  }
+}
+
+.checkered-background {
+  background-color: #eee;
+  background: #eee url('data:image/svg+xml,\
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".2" >\
+              <rect x="50" width="50" height="50" />\
+              <rect y="50" width="50" height="50" />\
+            </svg>');
+  background-size: 32px 32px;
+}
+
+.light-background {
+  background-color: #fff;
+}
+
+.low-light-background {
+  background-color: #222a2e;
+}
+
+.largePreviewContainer {
+  border: 0.5px #bbb solid;
+  width: 160px;
+  height: 160px;
+  padding: 20px;
+}
+
+.iconPreviewsBottomRow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: center;
+  padding: 7px 0;
+
+  * {
+    position: relative;
+  }
+}
+
+.iconPreviewsBackground {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 54px;
+  border: 0.5px #bbb solid;
+}
+
+.summaryInfo {
+  grid-area: summary-data;
+  padding-left: 14px;
+}
+
+.background-radio-label {
+  position: absolute;
+  left: -99999px;
+}
+
+.background-options-fieldset {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.background-radio-button {
+  appearance: none;
+  &:after {
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.3rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+  }
+  &:checked:after {
+    box-shadow: 
+      0 0 1px 3px rgba(76, 178, 233, 0.5),
+      0 0 7px 4px rgba(76, 178, 233, 0.35);
+  }
+
+  // Colors
+  &.checkered:after {
+    background-color: #eee;
+    background: #eee url('data:image/svg+xml,\
+              <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".2" >\
+                <rect x="50" width="50" height="50" />\
+                <rect y="50" width="50" height="50" />\
+              </svg>');
+    background-size: 1.4rem 1.4rem;
+  }
+
+  &.light:after {
+    background-color: #fff;
+  }
+
+  &.low-light:after {
+    background-color: #222a2e;
+  }
+}
