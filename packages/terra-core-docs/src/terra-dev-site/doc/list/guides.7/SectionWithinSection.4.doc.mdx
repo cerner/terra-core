@@ -1,12 +1,13 @@
 import { Badge } from 'terra-list/package.json?dev-site-package';
 
-import SectionList from '../../guides/SectionList?dev-site-example';
+import SectionWithSubsection1 from '../guides/SectionWithSubsection1?dev-site-example';
+import SectionWithSubsection2 from '../guides/SectionWithSubsection2?dev-site-example';
 
 <Badge />
 
-# Terra List - Sections
+# Terra List - Sections with Subsections
 
-List sections are available in both static and collapsible varieties. A list section that is collapsed will remove its children items from the DOM. This improves performance and accessiblilty, but may remove potentional state associated to a mounted list item. If your list item content has additional state, it needs to be stored externally and reapplied when thawed for the next render that shows its section open. Since this render occurs at the same time that a collapsible section state changes, for additional optimization, collapsed sections do not necessarily need to be provided with child items.
+With the inclusion of sections in the list, there are two recommended patterns for creating nested collapsible sections. First is collapsible sections and static subsections, and the second is static sections and collapsible subsections. The guidance from UX is to only use collapsible sections or collapsible subsections in a list, but not both.
 
 ## State Management
 As section and subsection have the same API, we'll be walking through the expectation of a collapsible section in only one pattern.
@@ -17,7 +18,7 @@ class MyList extends React.Component {
   constructor(props) {
     super(props);
 
-+   this.state = { collapsedKeys: [] };
++    this.state = { collapsedKeys: [] };
   }
   
   render() {
@@ -26,27 +27,27 @@ class MyList extends React.Component {
   }
 }
 ```
-Next creating an event handler callback method to pass to the section's `onSelect` prop. The `onSelect` callback will return the metaData prop passed to each section.
+Next creating an event handler callback method to pass to the section's `onSelect` prop. The `onSelect` will return the metaData prop passed it each section.
 ```diff
 class MyList extends React.Component {
-   constructor(props) {
+  constructor(props) {
     super(props);
 
     this.state = { collapsedKeys: [] };
 +   this.handleSectionSelection = this.handleSectionSelection.bind(this)
-   }
+  }
   
 +  handleSectionSelection(event, metaData) {
-
++
 +  }
 ```
 As a precaution we can prevent default on the event, in case the list has an ancestor with a listener. This also prevents the browser from auto page scrolling when we are intending to make a selection with the space bar.
 ```diff
   handleSectionSelection(event, metaData) {
-+   event.preventDefault();
++    event.preventDefault();
   }
 ```
-Terra List comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method `updatedMulitSelectedKeys`, which takes an array of keys and returns a new array of keys following the addition or removal of the key passed. We then set this as our state.
+Terra list comes with additional helpers to manage state, in this case we want to determine if the selection has collapsed or opened the section using the section key in our state. So we use the utility method `updatedMulitSelectedKeys`, which returns an array of the keys following the addition or removing of the key passed. We then set this as our state.
 ```diff
   handleSectionSelection(event, metaData) {
     event.preventDefault();
@@ -60,8 +61,8 @@ class MyList extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { selectedKey: null };
-    this.handleItemSelection = this.handleItemSelection.bind(this)
+    this.state = { collapsedKeys: [] };
+    this.handleSectionSelection = this.handleSectionSelection.bind(this)
 +   this.createSection = this.createSection.bind(this)
   }
   ...
@@ -91,7 +92,7 @@ Next we need to set up our `metaData` object with our key value, and attach the 
     );
   }
 ```
-For rendering the collapsible section we set `isCollapsible` for all sections.
+For the common collapsible sections we set `isCollapsible` for all sections.
 ```diff
   createSection(sectionData) {
     return (
@@ -120,8 +121,8 @@ Finally we need to check if the section is collapsed. As we support IE10 & 11, w
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
       >
--        {sectionData.childItems.map(childItem => createSubsection(childItem))}
-+        {!isCollapsed && sectionData.childItems.map(childItem => createListItem(childItem))}
+-       {sectionData.childItems.map(childItem => createSubsection(childItem))}
++       {!isCollapsed && sectionData.childItems.map(childItem => createSubsection(childItem))}
       </Section>
     );
 ```
@@ -131,23 +132,30 @@ We can then implement the unpack of our data into our list items.
    const isCollapsed = this.state.collapsedKeys.indexOf(sectionData.key) >= 0;
 +  const createListItem = itemData => (
 +    <Item key={itemData.key}>
-+      <Placeholder />
++       <Placeholder />
 +    </Item>
 +  );
-   return (
+
++  const createSubsection = subsectionData => (
++     <Subsection
++       key={subsectionData.key}
++       title={subsectionData.title}
++     >
++       {subsectionData.childItems.map(childItem => createListItem(childItem))}
++     </Subsection>
++   );
+    return (
       <Section
         key={sectionData.key}
         title={sectionData.title}
-       isCollapsed={isCollapsed}
+        isCollapsed={isCollapsed}
         isCollapsible
         metaData={{ key: sectionData.key }}
         onSelect={this.handleSectionSelection}
       >
-        {!isCollapsed && sectionData.childItems.map(childItem => createListItem(childItem))}
+        {!isCollapsed && sectionData.childItems.map(childItem => createSubsection(childItem))}
       </Section>
     );
-  
-
 ```
 Then we can implement a method to loop through our data and create the section with our methods and call it from our render method.
 ```diff
@@ -155,8 +163,8 @@ class MyList extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { selectedKey: null };
-    this.handleItemSelection = this.handleItemSelection.bind(this)
+    this.state = { collapsedKeys: [] };
+    this.handleSectionSelection = this.handleSectionSelection.bind(this)
     this.createSection = this.createSection.bind(this)
 +   this.createSections = this.createSections.bind(this)
   }
@@ -172,8 +180,9 @@ class MyList extends React.Component {
 +     </List>
     );
   }
-```
-Using these steps we get the following example:
+  ```
+  Using these steps we get the following example.
 
 ## Examples
-<SectionList />
+<SectionWithSubsection1 />
+<SectionWithSubsection2 />
