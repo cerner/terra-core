@@ -10,6 +10,7 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
+import Hyperlink from './Hyperlink';
 import styles from './Hyperlink.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -160,25 +161,30 @@ const HyperlinkButton = ({
     customProps.className,
   );
 
+  const disabledHyperlinkButton = <Hyperlink variant={variant} text={text} href="" isDisabled />;
+
   return (
-    <button
-      {...customProps}
-      className={hyperlinkButtonClasses}
-      aria-disabled={isDisabled}
-      onKeyDown={handleKeyDown}
-      onKeyUp={handleKeyUp}
-      onBlur={handleOnBlur}
-      onClick={onClick}
-      onFocus={onFocus}
-      title={title}
-      role="link"
-      type="button"
-    >
-      <span className={cx('button-inner')}>
-        {text}
-        {getHyperlinkIcon(intl, variant)}
-      </span>
-    </button>
+    !isDisabled
+      ? (
+        <button
+          {...customProps}
+          className={hyperlinkButtonClasses}
+          aria-disabled={isDisabled}
+          onKeyDown={handleKeyDown}
+          onKeyUp={handleKeyUp}
+          onBlur={handleOnBlur}
+          onClick={onClick}
+          onFocus={onFocus}
+          title={title}
+          role="link"
+          type="button"
+        >
+          <span className={cx('button-inner')}>
+            {text}
+            {getHyperlinkIcon(intl, variant)}
+          </span>
+        </button>
+      ) : disabledHyperlinkButton
   );
 };
 
