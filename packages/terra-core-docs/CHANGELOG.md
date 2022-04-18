@@ -19,6 +19,7 @@
   * Added Accessibility guide for `terra-image`.
   * Added docs for `DecorativeImage`.
   * Added A11y guide for `terra-icon`.
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.46.0.
 
 ## 1.13.4 - (March 15, 2022)
 
@@ -114,6 +115,7 @@
 ## 1.10.0 - (September 28, 2021)
 
 * Changed
+
   * Updated Arrange tests to be more reliable.
 
 * Added
