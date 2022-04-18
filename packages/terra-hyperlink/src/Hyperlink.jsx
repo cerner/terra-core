@@ -41,19 +41,23 @@ const getHyperlinkIcon = (variant) => {
 
 const propTypes = {
   /**
-   * The content to display inside link.
-   */
-  children: PropTypes.node,
-  /**
    * Sets the href of the link.
    */
   href: PropTypes.string,
   /**
+   * @private
    * Whether or not the link should be disabled.
+   *
+   * Accessibility best practices are to not use hyperlinks that are disabled.
+   * This prop has been marked as private, allowing it to be used, but for very special circumstances or higher-order components that need it in rare occasions.
    */
   isDisabled: PropTypes.bool,
   /**
+   * @private
    * Whether or not the link should display an underline by default. Will still display an underline on hover and focus.
+   *
+   * Accessibility best practices are to always have hyperlinks display with an underline.
+   * This prop has been marked as private, allowing it to be used, but for very special circumstances such as higher-order components that use hyperlink in approved ways without an underline because interactive affordance is replaced with an alternate method.
    */
   isUnderlineHidden: PropTypes.bool,
   /**
@@ -76,6 +80,10 @@ const propTypes = {
    * Callback function triggered when key is released.
    */
   onKeyUp: PropTypes.func,
+  /**
+   * The content to display inside link.
+   */
+  text: PropTypes.string.isRequired,
   /**
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
@@ -128,7 +136,7 @@ class Hyperlink extends React.Component {
 
   render() {
     const {
-      children,
+      text,
       isDisabled,
       isUnderlineHidden,
       variant,
@@ -156,8 +164,6 @@ class Hyperlink extends React.Component {
       customProps.className,
     );
 
-    const ComponentType = isDisabled ? 'span' : 'a';
-
     let { target } = customProps; // Defaults to undefined if not set
     let { rel } = customProps; // Defaults to undefined if not set
 
@@ -171,11 +177,17 @@ class Hyperlink extends React.Component {
       rel = 'noopener noreferrer';
     }
 
+    const attrsToDisable = {};
+    if (isDisabled) {
+      attrsToDisable.role = 'link';
+      attrsToDisable['aria-disabled'] = true;
+    }
+
     return (
-      <ComponentType
+      <a
         {...customProps}
+        {...attrsToDisable}
         className={hyperlinkClasses}
-        aria-disabled={isDisabled}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
@@ -185,9 +197,9 @@ class Hyperlink extends React.Component {
         target={target}
         rel={rel}
       >
-        {children}
+        {text}
         {getHyperlinkIcon(variant)}
-      </ComponentType>
+      </a>
     );
   }
 }

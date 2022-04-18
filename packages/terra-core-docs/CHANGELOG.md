@@ -3,6 +3,14 @@
 ## Unreleased
 
 * Changed
+  * Updated hyperlink tests and examples.
+
+## 1.13.4 - (March 15, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.13.3 - (March 8, 2022)
   * linter fixes.
   * Spelling fixes for Image accessibility guide.
 
