@@ -1,23 +1,23 @@
 import { Badge } from 'terra-form-select/package.json?dev-site-package';
 
-import TagExample from '../example/tag/Tag?dev-site-example';
-import ControlledExample from '../example/tag/Controlled?dev-site-example';
-import DisabledExample from '../example/tag/Disabled?dev-site-example';
-import IsTouchAccessibleExample from '../example/tag/IsTouchAccessible?dev-site-example';
-import InvalidExample from '../example/tag/Invalid?dev-site-example';
-import IncompleteExample from '../example/tag/Incomplete?dev-site-example';
-import MaxHeightExample from '../example/tag/MaxHeight?dev-site-example';
-import OptGroupExample from '../example/tag/OptGroup?dev-site-example';
+import AllowClearExample from './example/single/AllowClear?dev-site-example';
+import ControlledExample from './example/single/Controlled?dev-site-example';
+import SingleSelectExample from './example/single/SingleSelect?dev-site-example';
+import DisabledExample from './example/single/Disabled?dev-site-example';
+import InvalidExample from './example/single/Invalid?dev-site-example';
+import IncompleteExample from './example/single/Incomplete?dev-site-example';
+import MaxHeightExample from './example/single/MaxHeight?dev-site-example';
+import OptGroupExample from './example/single/OptGroup?dev-site-example';
 
-import TagSelectPropsTable from 'terra-form-select/src/TagSelect?dev-site-props-table';
+import SingleSelectPropsTable from 'terra-form-select/src/SingleSelect?dev-site-props-table';
 import OptionPropsTable from 'terra-form-select/src/shared/_Option?dev-site-props-table';
 import OptGroupPropsTable from 'terra-form-select/src/shared/_OptGroup?dev-site-props-table';
 
 <Badge />
 
-# Terra Form TagSelect
+# Terra Form Single Select
 
-The Tag Select component allows a user to enter multiple custom free text entries or select multiple options from the dropdown of a selectable options.
+The Single Select component allows selecting a single option from a dropdown of selectable options.
 
 ## Getting Started
 
@@ -47,7 +47,7 @@ The Form-Select component must be composed inside the [Base][1] component with a
 ## Usage
 
 ```jsx
-import TagSelect from 'terra-form-select/lib/TagSelect';
+import SingleSelect from 'terra-form-select/lib/SingleSelect';
 ```
 
 ## Component Features
@@ -60,17 +60,17 @@ import TagSelect from 'terra-form-select/lib/TagSelect';
 - [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
 
 ## Examples
-<TagExample description="A Tag Select allows a user to enter multiple custom free text entries or select multiple options from the dropdown." />
-<IsTouchAccessibleExample description="Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices." />
+<SingleSelectExample description="A Single Select allows selecting a single option." />
 <DisabledExample />
 <InvalidExample description="Applies theme-specific styling for invalid. Will also display error text when used with a Field." />
 <IncompleteExample description="Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
 <OptGroupExample title="Ability to add Option Groups" description="An OptGroup provides a way to group options together within the listbox." />
 <MaxHeightExample title="Ability to set a Maximum Height" description="An example of implementing a custom max height of the dropdown." />
-<ControlledExample title="Create a Controlled Tag Select" description="An example of implementing a controlled Tag Select." />
+<AllowClearExample title="Ability to Clear Selection" description="An example with an option to clear the selected item." />
+<ControlledExample title="Create a Controlled Single Select" description="An example of implementing a controlled Single Select." />
 
-## Tag Select Props
-<TagSelectPropsTable />
+## Single Select Props
+<SingleSelectPropsTable />
 
 ## Option Props
 <OptionPropsTable />

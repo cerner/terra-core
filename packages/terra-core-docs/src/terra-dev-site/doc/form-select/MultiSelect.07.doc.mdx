@@ -1,24 +1,23 @@
 import { Badge } from 'terra-form-select/package.json?dev-site-package';
 
-import AllowClearExample from '../example/combobox/AllowClear?dev-site-example';
-import ControlledExample from '../example/combobox/Controlled?dev-site-example';
-import ComboboxExample from '../example/combobox/Combobox?dev-site-example';
-import DisabledExample from '../example/combobox/Disabled?dev-site-example';
-import IsTouchAccessibleExample from '../example/combobox/IsTouchAccessible?dev-site-example';
-import InvalidExample from '../example/combobox/Invalid?dev-site-example';
-import IncompleteExample from '../example/combobox/Incomplete?dev-site-example';
-import MaxHeightExample from '../example/combobox/MaxHeight?dev-site-example';
-import OptGroupExample from '../example/combobox/OptGroup?dev-site-example';
+import MultipleExample from './example/multiple/MultiSelect?dev-site-example';
+import ControlledExample from './example/multiple/Controlled?dev-site-example';
+import DisabledExample from './example/multiple/Disabled?dev-site-example';
+import IsTouchAccessibleExample from './example/multiple/IsTouchAccessible?dev-site-example';
+import InvalidExample from './example/multiple/Invalid?dev-site-example';
+import IncompleteExample from './example/multiple/Incomplete?dev-site-example';
+import MaxHeightExample from './example/multiple/MaxHeight?dev-site-example';
+import OptGroupExample from './example/multiple/OptGroup?dev-site-example';
 
-import ComboboxPropsTable from 'terra-form-select/src/Combobox?dev-site-props-table';
+import MultiSelectPropsTable from 'terra-form-select/src/MultiSelect?dev-site-props-table';
 import OptionPropsTable from 'terra-form-select/src/shared/_Option?dev-site-props-table';
 import OptGroupPropsTable from 'terra-form-select/src/shared/_OptGroup?dev-site-props-table';
 
 <Badge />
 
-# Terra Form Combobox
+# Terra Form Multi Select
 
-The Combobox component allows a user to enter a single free text entry or select a single option from the dropdown of a selectable options.
+The Multi Select component allows searching and selecting multiple options from a dropdown of selectable options.
 
 ## Getting Started
 
@@ -48,7 +47,7 @@ The Form-Select component must be composed inside the [Base][1] component with a
 ## Usage
 
 ```jsx
-import Combobox from 'terra-form-select/lib/Combobox';
+import MultiSelect from 'terra-form-select/lib/MultiSelect';
 ```
 
 ## Component Features
@@ -61,18 +60,17 @@ import Combobox from 'terra-form-select/lib/Combobox';
 - [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
 
 ## Examples
-<ComboboxExample description="A Combobox allows a user to enter a single free text entry or select a single option from the the dropdown." />
+<MultipleExample description="A MultiSelect allows searching and selecting multiple options." />
 <IsTouchAccessibleExample description="Ensure accessibility on touch devices. Will render the dropdown menu in normal DOM flow with position absolute. By default, the menu renders in a portal, which is inaccessible on touch devices." />
 <DisabledExample />
 <InvalidExample description="Applies theme-specific styling for invalid. Will also display error text when used with a Field." />
 <IncompleteExample description="Applies theme-specific styling for incomplete. ***Note: Only use incomplete if given specific guidance, reserved for specific applications when no value has been provided. Not for general use.***" />
 <OptGroupExample title="Ability to add Option Groups" description="An OptGroup provides a way to group options together within the listbox." />
 <MaxHeightExample title="Ability to set a Maximum Height" description="An example of implementing a custom max height of the dropdown." />
-<AllowClearExample title="Ability to Clear Selection" description="An example with an option to clear the selected item." />
-<ControlledExample title="Create a Controlled Combobox" description="An example of implementing a controlled Combobox." />
+<ControlledExample title="Create a Controlled MultiSelect" description="An example of implementing a controlled MultiSelect." />
 
-## Combobox Props
-<ComboboxPropsTable />
+## Multi Select Props
+<MultiSelectPropsTable />
 
 ## Option Props
 <OptionPropsTable />
