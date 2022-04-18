@@ -9,6 +9,7 @@
     * List
     * Table
     * Form Select
+  * Merged 'About' and 'Avatar' pages for `terra-avatar` docs.
 
 ## 1.13.4 - (March 15, 2022)
 
