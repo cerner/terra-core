@@ -17,14 +17,14 @@ import Whitespace from "../../common/layout-helpers/Whitespace";
 
 ### Why is this important?
 
-Hyperlinks are one of the most basic elements of HTML so making links accessible is essential. Hyperlinks are an important tool for creating an effective, intuitive user experience. However, because links are so basic to the functionality of web content, inaccessible or improperly implemented links can be a severe barrier to overall accessibility. 
+Hyperlinks are one of the most basic elements of HTML so making links accessible is essential. Hyperlinks are a vital tool for creating an intuitive user experience. However, because links are so fundamental to the functionality of web content, inaccessible or improperly implemented links can be a severe barrier to overall accessibility. 
 
-Accessible hyperlinks are beneficial in many situations, such as:
+Accessible hyperlinks are critical to ensure all users can effectively understand and use them.  For example::
 
-- **People using screen readers:** Screen reader users may prefer to listen to a list of links. In that case, a screen reader may only read the link text and not the surrounding text.
-- **People using speech input software:** Users can speak the text of the link that they would like to follow.
-- **Keyboard only users** For users navigating by Tab key it is very important to see which item has focus at all times.
-- **People unable to perceive colors** Pages present links as a different color than their surrounding text. Adding underlines or other non-color indicators help users who may not see color.
+- **Blind screen reader** users do not necessarily interact with the page in a linear fashion and can use links out of context. They need the words within the link to be descriptive of purpose.
+- **People using speech input software** require unique links to efffectively activate the link they would like to follow.
+- **Keyboard only users** navigate the page using only a keyboard and a visible keyboard focus is crucial to see where they are on the page.
+- **People unable to perceive colors** need links to be perceivably different that the surrounding text. Ensuring underlines or other non-color indicators helps users who may not see color.
 
 <Whitespace newline={2} />
 
@@ -32,7 +32,7 @@ Accessible hyperlinks are beneficial in many situations, such as:
 
 ### Code Considerations
 
-Terra Hyperlink has two variants: _Hyperlink_ and _Hyperlink Button_. The table below explains the difference between the two, and how to import them into your code.
+Terra Hyperlink has two variants: _Hyperlink_ and _Hyperlink Button_. The table below explains the difference between the two and how to import them into your code.
 
 | Variant | Purpose | Example import |
 | --- | --- | --- |
@@ -41,14 +41,14 @@ Terra Hyperlink has two variants: _Hyperlink_ and _Hyperlink Button_. The table 
 
 Developers must ensure the following code considerations:
 
-- Engineers must not override the role of `link`. 
-  - Instead of overriding the role of `link`, use the component that best matches the intended usage. For example, a link for a link or a button for a button. 
-- If non-unique link text must be used, for example, `Learn more`, engineers must ensure the link text is programmatically associated to other content that describes its purpose. 
-- Engineers must ensure that action is not taken on a hyperlink when it receives focus or when focus is moved away from a hyperlink. 
-- Engineers must ensure that action on a hyperlink occurs on the up event. 
-- Engineers must ensure that links have a non-empty href in order to be considered true links and to be accessible to keyboard users. 
-- Engineers must ensure that links with icons are appropriately identified as meaningful or decorative. 
-  - Meaningful icons must have applied the appropriate alt attribute. 
+- Do not override `role=link`. 
+  - Use the component that best matches the intended usage &mdash; for example, a link for a link or a button for a button. 
+- If non-unique link text must be used, for example, `Learn more`, ensure the link is programmatically associated with other content that describes its purpose. 
+- Ensure that action is not taken on a hyperlink when it receives focus or when the focus leaves a hyperlink. 
+- Ensure that action on a hyperlink occurs on the up event. 
+- Links must have a non-empty `href` to be considered proper links and accessible to keyboard users. 
+- Ensure that links with icons follow meaningful or decorative use guidelines. 
+  - Meaningful icons must have applied the appropriate `alt` attribute. 
   - Decorative icons must be marked as decorative.
 
 <Whitespace />
@@ -56,11 +56,11 @@ Developers must ensure the following code considerations:
 ### Content Considerations:
 
 > It is most important for link text to make sense without the surrounding sentences or content. The link text alone should convey the function and purpose of the link. Link text should also be unique and easy to speak out loud.
-
+>
 > Consider these guidelines when writing link text:
-
-> - Avoid link text like “Click Here,” “More,” and “Read More.” These kinds of links can be confusing when a screen reader reads them out of context.
-> - Use unique link text where possible. Speech recognition software users may have a bad experience with duplicated link text.
+>
+> - Use text that is unique and descriptive of the links purpose.
+> - Avoid link text like “Click Here,” “More,” and “Read More.” These kinds of links can be confusing when a screen reader reads them out of context. These types of non-unique links prevent peech input users may from accurately activiating them.
 > - It is OK to link a full sentence, but avoid longer.
 > - Use judgment when linking full URLs. When linking a URL, consider users who must speak it out loud and who must listen to a screen reader announce it.
 >
@@ -70,17 +70,19 @@ Developers must ensure the following code considerations:
 
 ## Usability Expectations:
 
+> Users expect links to open a new page, take them somewhere on the page, or to download a file.
+
 ### Interaction Details
 
-None
+> Mouse users expect the cursor to change to a hand with pointing finger when the link is hovered. Keyboard only users expect to see a visible keyboard focus indicator when the link is in focus.
 
 ### Keyboard Navigation
 
-Hyperlinks will have the following keyboard navigation expectations:
+Hyperlinks have the following keyboard navigation expectations:
 
 | Key/Sequence | Description |
 |---|---|
-|**Tab**| Puts Focus on the hyperlink |
+|**Tab**| Puts Focus on the hyperlink. |
 |**Enter**| Executes the link and moves focus to the link target. |
 
 ## Support Compliance
