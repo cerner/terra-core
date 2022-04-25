@@ -19,7 +19,7 @@ import Whitespace from "../../common/layout-helpers/Whitespace";
 
 Hyperlinks are one of the most basic elements of HTML so making links accessible is essential. Hyperlinks are a vital tool for creating an intuitive user experience. However, because links are so fundamental to the functionality of web content, inaccessible or improperly implemented links can be a severe barrier to overall accessibility. 
 
-Accessible hyperlinks are critical to ensure all users can effectively understand and use them.  For example::
+Accessible hyperlinks are critical to ensure all users can effectively understand and use them.  For example:
 
 - **Blind screen reader** users do not necessarily interact with the page in a linear fashion and can use links out of context. They need the words within the link to be descriptive of purpose.
 - **People using speech input software** require unique links to efffectively activate the link they would like to follow.
@@ -37,15 +37,15 @@ Terra Hyperlink has two variants: _Hyperlink_ and _Hyperlink Button_. The table 
 | Variant | Purpose | Example import |
 | --- | --- | --- |
 | Hyperlink | It represents a hyperlink (a hypertext anchor) labeled by its contents, must add a `href` prop. | `import Hyperlink from terra-hyperlink';` |
-| Hyperlink Button | When applications may need to use a button element, must add an `onClick` function to navigate the user | `import HyperlinkButton from 'terra-hyperlink/lib/HyperlinkButton';` |
+| Hyperlink Button | When applications may need to use a button element and add an `onClick` function to navigate the user | `import HyperlinkButton from 'terra-hyperlink/lib/HyperlinkButton';` |
 
-Developers must ensure the following code considerations:
+#### Developers must ensure the following code considerations:
 
 - Do not override `role=link`. 
   - Use the component that best matches the intended usage &mdash; for example, a link for a link or a button for a button. 
-- If non-unique link text must be used, for example, `Learn more`, ensure the link is programmatically associated with other content that describes its purpose. 
+- If non-unique link text must be used, for example `Learn more`, ensure the link is programmatically associated with other content that describes its purpose. 
 - Ensure that action is not taken on a hyperlink when it receives focus or when the focus leaves a hyperlink. 
-- Ensure that action on a hyperlink occurs on the up event. 
+- Ensure that action on a hyperlink occurs on the mouse-up OR key-up event. 
 - Links must have a non-empty `href` to be considered proper links and accessible to keyboard users. 
 - Ensure that links with icons follow meaningful or decorative use guidelines. 
   - Meaningful icons must have applied the appropriate `alt` attribute. 
