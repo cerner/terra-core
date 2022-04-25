@@ -9,6 +9,9 @@
 * Breaking Changes
   * `children` prop has been replaced by `text` prop.
 
+* Added
+  * Added new `Hyperlink Button` component.
+
 ## 2.51.2 - (January 4, 2022)
 
 * Changed
