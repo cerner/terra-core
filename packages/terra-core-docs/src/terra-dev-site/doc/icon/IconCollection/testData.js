@@ -19,6 +19,8 @@ const icons = [
     searchTerms: 'success status check checkmark green circle static',
     hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
     terraAlias: 'IconSuccess',
+    // note: the following value is mutated by the resultsFromSearchString function
+    matchingWords: [],
   },
   {
     svg: IconSuccessInverse,
@@ -33,6 +35,8 @@ const icons = [
     searchTerms: 'success status check checkmark white circle static',
     hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
     terraAlias: 'IconSuccessInverse',
+    // note: the following value is mutated by the resultsFromSearchString function
+    matchingWords: [],
   },
   {
     svg: IconAvailable,
@@ -47,6 +51,8 @@ const icons = [
     searchTerms: 'available status check checkmark green circle static',
     hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
     terraAlias: 'IconAvailable',
+    // note: the following value is mutated by the resultsFromSearchString function
+    matchingWords: [],
   },
   {
     svg: IconScheduled,
@@ -61,6 +67,8 @@ const icons = [
     searchTerms: 'scheduled scheduling schedule calendar green circle check hybrid themable',
     hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
     terraAlias: 'IconScheduled',
+    // note: the following value is mutated by the resultsFromSearchString function
+    matchingWords: [],
   },
   {
     svg: IconTrash,
@@ -75,6 +83,8 @@ const icons = [
     searchTerms: 'trash garbage junk delete refuse themable',
     hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
     terraAlias: 'IconTrash',
+    // note: the following value is mutated by the resultsFromSearchString function
+    matchingWords: [],
   },
   {
     svg: IconNotMet,
@@ -89,6 +99,8 @@ const icons = [
     searchTerms: 'not met clear remove x circle themable',
     hfGuidance: 'This is where my HF guidance would go... IF I HAD ANY.',
     terraAlias: 'IconNotMet',
+    // note: the following value is mutated by the resultsFromSearchString function
+    matchingWords: [],
   },
 ];
 

@@ -19,7 +19,75 @@ import Heading from 'terra-heading';
 
 const propTypes = {};
 
-const IconCard = ({icon: Icon, label, onClick, darkBackground}) => {
+const MatchingSearchTerm = ({term, matchedSubstrings}) => {
+  // boldify the matched substrings accounting for overlaps and duplicates
+  if(matchedSubstrings.length === 1 && term === matchedSubstrings[0]){
+    return <span><b>{term} </b></span>;
+  }
+  // find begins and ends for each substring
+  let substringLocations = [];
+  matchedSubstrings.forEach((substring) => {
+    let searchPosition = 0;
+    while(searchPosition < term.length - substring.length){
+      const substrIndex = term.indexOf(substring, searchPosition);
+      if(substrIndex > -1){
+        substringLocations.push({
+          begin: substrIndex,
+          end: substrIndex + substring.length - 1,
+        });
+        searchPosition++;
+      } else {
+        break;
+      }
+    }
+  })
+  // now we have to deal with overlaps
+  // sort all results by beginning
+  substringLocations.sort((a, b) => a.begin - b.begin);
+  // now merge overlaps
+  let mergePosition = 0;
+  while (mergePosition < substringLocations.length - 1){
+    if(substringLocations[mergePosition].end >= substringLocations[mergePosition + 1].begin - 1){
+      // if the two entries being compared overlap merge the second into the first
+      substringLocations[mergePosition].end = Math.max(
+        substringLocations[mergePosition].end,
+        substringLocations[mergePosition + 1].end,
+      );
+      // and delete the redundant one
+      substringLocations.splice(mergePosition + 1, 1);
+    } else {
+      mergePosition++;
+    }
+  }
+
+  const elements = [];
+  if(substringLocations[0].begin !== 0){
+    elements.push(<span>{term.substr(0, substringLocations[0].begin)}</span>)
+  }
+  for(let i = 0; i < substringLocations.length; i++){
+    elements.push(
+      <b>{
+        term.substr(
+          substringLocations[i].begin,
+          substringLocations[i].end - substringLocations[i].begin + 1,
+      )}</b>
+    );
+    if(substringLocations[i].end < term.length - 1){
+      const spanLength = substringLocations[i + 1] ?
+        substringLocations[i + 1]?.begin - substringLocations[i].end - 1
+        : term.length;
+      elements.push(<span begin={substringLocations[i].end + 1} end={substringLocations[i + 1]?.begin}>{
+        term.substr(
+          substringLocations[i].end + 1,
+          spanLength,
+      )}</span>)
+    }
+  }
+
+  return (<span>{[...elements]} </span>);
+}
+
+const IconCard = ({icon: Icon, label, onClick, darkBackground, matchingSearchTerms = []}) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -37,6 +105,9 @@ const IconCard = ({icon: Icon, label, onClick, darkBackground}) => {
           <Text>{label}</Text>
         </div>
       </Card>
+      <span className={cx('matching-search-terms')}>
+        {matchingSearchTerms.map((searchTerm) => (<MatchingSearchTerm {...searchTerm} />))}
+      </span>
     </Spacer>
   )
 };
@@ -44,14 +115,42 @@ const IconCard = ({icon: Icon, label, onClick, darkBackground}) => {
 const resultsFromSearchString = (resultsToSearch, searchString) => {
   if(!searchString || searchString === '') return resultsToSearch;
 
+  // make an array of the words in the search string
   const words = searchString.split(' ')
     .filter((word) => word !== '')
     .map((word) => word.toLowerCase());
-  console.log(words);
 
   const filteredResults = testData.filter((icon) => {
+    // make an array of the icon's search terms
+    // TODO move this to where the data structure is generated
+    const iconSearchTerms = icon.searchTerms.split(' ')
+      .filter((word) => word !== '')
+      .map((word) => word.toLowerCase());
+    console.log('search terms', iconSearchTerms);
+    let matchingWords = [];
+
     for(let i = 0; i < words.length; i++){
-      if(icon.searchTerms.includes(words[i])) return true;
+      if(icon.searchTerms.includes(words[i])) {
+        // add all matching search terms to this array
+        matchingWords = matchingWords.concat(iconSearchTerms.filter((term) => term.includes(words[i])));
+      };
+    }
+    // if we found any matching words, reassign the object's matching words and don't filter it
+    if(matchingWords.length > 0){
+      icon.matchingWords = [...new Set(matchingWords)]
+        .map((matchingWord) => {
+          // compile list of matching substrings for each word for highlighting
+          const matchedSubstrings = [];
+          for(let i = 0; i < words.length; i++){
+            if(matchingWord.includes(words[i])) matchedSubstrings.push(words[i]);
+          }
+          return {
+            term: matchingWord,
+            matchedSubstrings,
+            totalMatchedCharacters: matchedSubstrings.reduce((acc, string) => acc + string.length, 0),
+          };
+        }).sort((a, b) => b.totalMatchedCharacters - a.totalMatchedCharacters);
+      return true;
     }
     return false;
   })
@@ -143,20 +242,21 @@ const IconCollectionSearchTool = withDisclosureManager(({ disclosureManager }) =
       <Card className={cx('resultsContainer')}>
           {
             filteredResults.map((result) => (
-              <IconCard
-                icon={result.svg}
-                label={result.meaning}
-                darkBackground={result.needsDarkBackground}
-                onClick={
-                  () => disclosureManager.disclose({
-                    preferredType: 'modal',
-                    size: 'small',
-                    content: {
-                      key: `meaning`,
-                      component: <IconInformationModal data={result}/>
-                    }
-                  })
-              } />
+                <IconCard
+                  icon={result.svg}
+                  label={result.meaning}
+                  darkBackground={result.needsDarkBackground}
+                  matchingSearchTerms={result.matchingWords}
+                  onClick={
+                    () => disclosureManager.disclose({
+                      preferredType: 'modal',
+                      size: 'small',
+                      content: {
+                        key: `meaning`,
+                        component: <IconInformationModal data={result}/>
+                      }
+                    })
+                } />
             ))
           }
         </Card>

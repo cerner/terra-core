@@ -3,9 +3,11 @@
   flex-wrap: wrap;
 }
 
+$resultWidth: 175px;
+
 .resultContents{
   height: 75px;
-  width: 175px;
+  width: $resultWidth;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -15,4 +17,14 @@
 .dark-background {
   background-color: #222a2e;
   border-radius: 3px;
+}
+
+.matching-search-terms {
+  width: $resultWidth;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  opacity: 0.7;
+  font-size: 0.8rem;
 }
