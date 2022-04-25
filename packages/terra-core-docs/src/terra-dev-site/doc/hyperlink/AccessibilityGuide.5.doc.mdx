@@ -1,0 +1,123 @@
+import { Badge } from 'terra-hyperlink/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
+import Whitespace from "../../common/layout-helpers/Whitespace";
+
+<Badge />
+
+# Accessibility Guide for Terra Hyperlink
+
+<Notice variant="important" ariaLevel="2">
+
+1. For each use of Terra Hyperlink, **special care needs to be taken to ensure** the link text alone should convey the function and purpose of the link.
+2. Hyperlink **must have a non-empty href** in order to be considered true links and to be accessible to keyboard users. 
+
+</Notice>
+
+<Whitespace />
+
+### Why is this important?
+
+Hyperlinks are one of the most basic elements of HTML so making links accessible is essential. Hyperlinks are a vital tool for creating an intuitive user experience. However, because links are so fundamental to the functionality of web content, inaccessible or improperly implemented links can be a severe barrier to overall accessibility. 
+
+Accessible hyperlinks are critical to ensure all users can effectively understand and use them.  For example::
+
+- **Blind screen reader** users do not necessarily interact with the page in a linear fashion and can use links out of context. They need the words within the link to be descriptive of purpose.
+- **People using speech input software** require unique links to efffectively activate the link they would like to follow.
+- **Keyboard only users** navigate the page using only a keyboard and a visible keyboard focus is crucial to see where they are on the page.
+- **People unable to perceive colors** need links to be perceivably different that the surrounding text. Ensuring underlines or other non-color indicators helps users who may not see color.
+
+<Whitespace newline={2} />
+
+## Accessibility Considerations:
+
+### Code Considerations
+
+Terra Hyperlink has two variants: _Hyperlink_ and _Hyperlink Button_. The table below explains the difference between the two and how to import them into your code.
+
+| Variant | Purpose | Example import |
+| --- | --- | --- |
+| Hyperlink | It represents a hyperlink (a hypertext anchor) labeled by its contents, must add a `href` prop. | `import Hyperlink from terra-hyperlink';` |
+| Hyperlink Button | When applications may need to use a button element, must add an `onClick` function to navigate the user | `import HyperlinkButton from 'terra-hyperlink/lib/HyperlinkButton';` |
+
+Developers must ensure the following code considerations:
+
+- Do not override `role=link`. 
+  - Use the component that best matches the intended usage &mdash; for example, a link for a link or a button for a button. 
+- If non-unique link text must be used, for example, `Learn more`, ensure the link is programmatically associated with other content that describes its purpose. 
+- Ensure that action is not taken on a hyperlink when it receives focus or when the focus leaves a hyperlink. 
+- Ensure that action on a hyperlink occurs on the up event. 
+- Links must have a non-empty `href` to be considered proper links and accessible to keyboard users. 
+- Ensure that links with icons follow meaningful or decorative use guidelines. 
+  - Meaningful icons must have applied the appropriate `alt` attribute. 
+  - Decorative icons must be marked as decorative.
+
+<Whitespace />
+
+### Content Considerations:
+
+> It is most important for link text to make sense without the surrounding sentences or content. The link text alone should convey the function and purpose of the link. Link text should also be unique and easy to speak out loud.
+>
+> Consider these guidelines when writing link text:
+>
+> - Use text that is unique and descriptive of the links purpose.
+> - Avoid link text like “Click Here,” “More,” and “Read More.” These kinds of links can be confusing when a screen reader reads them out of context. These types of non-unique links prevent peech input users may from accurately activiating them.
+> - It is OK to link a full sentence, but avoid longer.
+> - Use judgment when linking full URLs. When linking a URL, consider users who must speak it out loud and who must listen to a screen reader announce it.
+>
+> _&nbsp;&nbsp;&mdash; excerpt from ["Usability & Web Accessibility Articles: Links"](https://usability.yale.edu/web-accessibility/articles/links)_[<sup>[1]</sup>](/components/cerner-terra-core-docs/hyperlink/accessibility-guide#linked-references)
+
+<Whitespace newline={4} />
+
+## Usability Expectations:
+
+> Users expect links to open a new page, take them somewhere on the page, or to download a file.
+
+### Interaction Details
+
+> Mouse users expect the cursor to change to a hand with pointing finger when the link is hovered. Keyboard only users expect to see a visible keyboard focus indicator when the link is in focus.
+
+### Keyboard Navigation
+
+Hyperlinks have the following keyboard navigation expectations:
+
+| Key/Sequence | Description |
+|---|---|
+|**Tab**| Puts Focus on the hyperlink. |
+|**Enter**| Executes the link and moves focus to the link target. |
+
+## Support Compliance
+
+Terra is committed to ensuring its components provide maximum possible accessibility. However, using Terra components will not automatically make a product accessible.
+
+Final responsibility lies with the consumers of Terra components &mdash; ensuring proper usage, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance &mdash; to make a product fully accessible.
+
+### WCAG Resources
+
+#### Success Criteria
+
+_Terra Hyperlink **must** meet the following success criteria:_
+
+- [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content) - All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed\[...\]. (Level A)
+- [**1.3.1 Info and Relationships**](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) - The intent of this Success Criterion is to ensure that information and relationships that are implied by visual or auditory formatting are preserved when the presentation format changes. For example, the presentation format changes when the content is read by a screen reader.
+- [**2.4.4 Link Purpose**](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html) - The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.
+- [**2.5.3 Label in Name**](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html) — For user interface components with labels that include text or images of text, the name contains the text that is presented visually.
+- [**3.2.4 Consistent Identification**](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification.html) — Content creators must ensure icons used within hyperlinks are used consistently for the same function.
+
+### Supported Features & Technology
+
+- JAWS Support with Chrome (PC)
+- NVDA Support with Chrome (PC)
+- VoiceOver Support with Chrome, Safari (MAC)
+- Mobile Touch Interactions with Screen Reader assistive technology
+- Speech Input Interactions with assistive technology
+ 
+### Partial Support & Requiring Further Enhancement
+
+- None identified
+- [Report a problem with this component on **GitHub**](https://github.com/cerner/terra-core/issues/new/choose)
+
+_For more information about Accessibility Support with Terra — go to [Component Standards: Accessibility (A11y)](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#accessibility-a11y)._
+
+## Linked References:
+
+1. Yale staff (2022) ["Usability & Web Accessibility Articles: Links"](https://usability.yale.edu/web-accessibility/articles/links). Yale. Retrieved 21 April 2022.
