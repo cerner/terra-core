@@ -5,6 +5,7 @@ import IconAudio from 'terra-icon/lib/icon/IconAudio';
 import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
 import IconImage from 'terra-icon/lib/icon/IconImage';
 import IconDocuments from 'terra-icon/lib/icon/IconDocuments';
+import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
@@ -22,18 +23,18 @@ const variants = {
   DOCUMENT: 'document',
 };
 
-const getHyperlinkIcon = (variant) => {
+const getHyperlinkIcon = (intl, variant) => {
   switch (variant) {
     case variants.AUDIO:
-      return (<span className={cx('icon')}><IconAudio /></span>);
+      return (<span className={cx('icon')}><IconAudio a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.audio' })} /></span>);
     case variants.DOCUMENT:
-      return (<span className={cx('icon')}><IconDocuments /></span>);
+      return (<span className={cx('icon')}><IconDocuments a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.document' })} /></span>);
     case variants.EXTERNAL:
-      return (<span className={cx('icon')}><IconExternalLink /></span>);
+      return (<span className={cx('icon')}><IconExternalLink a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.external' })} /></span>);
     case variants.IMAGE:
-      return (<span className={cx('icon')}><IconImage /></span>);
+      return (<span className={cx('icon')}><IconImage a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.image' })} /></span>);
     case variants.VIDEO:
-      return (<span className={cx('icon')}><IconVideoCamera /></span>);
+      return (<span className={cx('icon')}><IconVideoCamera a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.video' })} /></span>);
     default:
       return null;
   }
@@ -43,7 +44,7 @@ const propTypes = {
   /**
    * Sets the href of the link.
    */
-  href: PropTypes.string,
+  href: PropTypes.string.isRequired,
   /**
    * @private
    * Whether or not the link should be disabled.
@@ -61,9 +62,10 @@ const propTypes = {
    */
   isUnderlineHidden: PropTypes.bool,
   /**
-   * Callback function triggered when clicked.
+   * @private
+   * The intl object to be injected for translations.
    */
-  onClick: PropTypes.func,
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * Callback function triggered when hyperlink loses focus.
    */
@@ -72,10 +74,6 @@ const propTypes = {
    * Callback function triggered when hyperlink gains focus.
    */
   onFocus: PropTypes.func,
-  /**
-   * Callback function triggered when key is pressed.
-   */
-  onKeyDown: PropTypes.func,
   /**
    * Callback function triggered when key is released.
    */
@@ -88,6 +86,10 @@ const propTypes = {
    * The content to display inside link.
    */
   text: PropTypes.string.isRequired,
+  /**
+   * Additional information to display as a native tooltip on hover.
+   */
+  title: PropTypes.string,
   /**
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
@@ -103,7 +105,6 @@ class Hyperlink extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false, focused: false };
-    this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
     this.handleMouseDown = this.handleMouseDown.bind(this);
@@ -127,17 +128,6 @@ class Hyperlink extends React.Component {
     }
   }
 
-  handleKeyDown(event) {
-    // Add focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
-      this.setState({ focused: true });
-    }
-
-    if (this.props.onKeyDown) {
-      this.props.onKeyDown(event);
-    }
-  }
-
   handleKeyUp(event) {
     // Apply focus styles for keyboard navigation
     if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
@@ -156,12 +146,12 @@ class Hyperlink extends React.Component {
       isUnderlineHidden,
       variant,
       href,
-      onClick,
+      intl,
       onBlur,
       onFocus,
-      onKeyDown,
       onKeyUp,
       onMouseDown,
+      title,
       ...customProps
     } = this.props;
 
@@ -204,7 +194,6 @@ class Hyperlink extends React.Component {
         {...customProps}
         {...attrsToDisable}
         className={hyperlinkClasses}
-        onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
         onMouseDown={this.handleMouseDown}
@@ -215,9 +204,10 @@ class Hyperlink extends React.Component {
         rel={rel}
         data-focus-styles-enabled
         ref={this.linkRef}
+        title={title}
       >
         {text}
-        {getHyperlinkIcon(variant)}
+        {getHyperlinkIcon(intl, variant)}
       </a>
     );
   }
@@ -228,4 +218,4 @@ Hyperlink.defaultProps = defaultProps;
 Hyperlink.contextType = ThemeContext;
 
 export { variants as HyperlinkVariants };
-export default Hyperlink;
+export default injectIntl(Hyperlink);
