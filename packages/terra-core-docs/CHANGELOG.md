@@ -6,6 +6,7 @@
   * Updated hyperlink tests and examples.
   * Added Accessibility guide for `terra-hyperlink`.
   * Added Hyperlink Button tests and examples.
+  * Re-order hyperlink docs.
 
 ## 1.13.4 - (March 15, 2022)
 
