@@ -28,7 +28,7 @@ const MatchingSearchTerm = ({term, matchedSubstrings}) => {
   let substringLocations = [];
   matchedSubstrings.forEach((substring) => {
     let searchPosition = 0;
-    while(searchPosition < term.length - substring.length){
+    while(searchPosition < term.length){
       const substrIndex = term.indexOf(substring, searchPosition);
       if(substrIndex > -1){
         substringLocations.push({
@@ -113,7 +113,10 @@ const IconCard = ({icon: Icon, label, onClick, darkBackground, matchingSearchTer
 };
 
 const resultsFromSearchString = (resultsToSearch, searchString) => {
-  if(!searchString || searchString === '') return resultsToSearch;
+  if(!searchString || searchString === '')
+    return resultsToSearch.map(
+      ({matchingWords, ...rest}) => ({...rest, matchingWords: []})
+    );
 
   // make an array of the words in the search string
   const words = searchString.split(' ')
