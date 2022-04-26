@@ -4,6 +4,12 @@
 
 * Changed
   * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.46.0.
+  * Updated routes/sidebar names for package root component pages to "About" for consistency.
+  * Moved docs files for the following packages into the root directory for their docs:
+    * List
+    * Table
+    * Form Select
+  * Merged 'About' and 'Avatar' pages for `terra-avatar` docs.
 
 ## 1.13.4 - (March 15, 2022)
 
