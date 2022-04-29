@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.47.0 - (April 29, 2022)
+
 * Changed
   * Updated to `one-cerner-style-icons` v1.46.0
   * Updated SVG migration script `writeSvg,js` to include a newline character at the end of each SVG file
