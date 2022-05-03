@@ -4,6 +4,7 @@
 
 * Changed
   * Icon table regenerated after fixing trending up/down labeling errors
+  * Updated screenshot tests to reflect trending icon changes 
 
 ## 1.13.5 - (April 29, 2022)
 
