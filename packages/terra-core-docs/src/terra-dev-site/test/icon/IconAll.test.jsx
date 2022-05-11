@@ -231,7 +231,7 @@ const IconAll = () => (
     <Icon.IconPatientSearch               a11yLabel="patient search icon"                   className={cx(['icon'])} />
     <Icon.IconPending                     a11yLabel="pending icon"                          className={cx(['icon'])} />
     <Icon.IconPerson                      a11yLabel="person icon"                           className={cx(['icon'])} />
-    <Icon.IconPersonConnection            a11yLabel="person connection"                     className={cx(['icon'])} />
+    <Icon.IconPersonConnection            a11yLabel="person connection icon"                className={cx(['icon'])} />
     <Icon.IconPersonDoor                  a11yLabel="person door icon"                      className={cx(['icon'])} />
     <Icon.IconPersonHospital              a11yLabel="person hospital  icon"                 className={cx(['icon'])} />
     <Icon.IconPersonnelPerson             a11yLabel="personel person icon"                  className={cx(['icon'])} />

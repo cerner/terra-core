@@ -5,6 +5,7 @@
 * Changed
   * Updated jest snapshots.
 
+<<<<<<< HEAD
 ## 4.60.6 - (May 3, 2022)
 
 * Changed
@@ -15,6 +16,8 @@
 * Changed
   * Minor dependency version bump
 
+=======
+>>>>>>> 305841ca9efb7e5bdfa47b71ec37d329f9b774ed
 ## 4.60.4 - (February 24, 2022)
 
 * Changed
