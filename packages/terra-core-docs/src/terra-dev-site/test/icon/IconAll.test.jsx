@@ -268,7 +268,7 @@ const IconAll = () => (
     <Icon.IconRollup                      a11yLabel="rollup icon"                           className={cx(['icon'])} />
     <Icon.IconRotateLeft                  a11yLabel="rotate left icon"                      className={cx(['icon'])} />
     <Icon.IconRotateRight                 a11yLabel="rotate right icon"                     className={cx(['icon'])} />
-    
+
     <Icon.IconSave                        a11yLabel="save icon"                             className={cx(['icon'])} />
     <Icon.IconScheduled                   a11yLabel="scheduled icon"                        className={cx(['icon'])} />
     <Icon.IconScheduledLowLight           a11yLabel="scheduled low light icon"              className={cx(['icon'])} />
@@ -315,7 +315,7 @@ const IconAll = () => (
     <Icon.IconTriangleSymbol              a11yLabel="triangle icon"                         className={cx(['icon'])} />
     <Icon.IconTriangleSymbolLight         a11yLabel="light triangle icon"                   className={cx(['icon'])} />
     <Icon.IconTrophy                      a11yLabel="trophy icon"                           className={cx(['icon'])} />
-    
+
     <Icon.IconUnavailable                 a11yLabel="unavailable icon"                      className={cx(['icon'])} />
     <Icon.IconUndo                        a11yLabel="undo icon"                             className={cx(['icon'])} />
     <Icon.IconUnexpected                  a11yLabel="unexpected icon"                       className={cx(['icon'])} />
