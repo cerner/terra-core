@@ -88,6 +88,7 @@ const IconInformationModal = ({data}) => {
     <div>
       <DisclosureManagerHeaderAdapter
         title="Icon Details"
+        
       />
       <div className={cx('iconModalContents')}>
         <IconPreviews Icon={Icon} defaultBackground={data.needsDarkBackground ? 'low-light' : 'light'} />

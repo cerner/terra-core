@@ -7,6 +7,7 @@ import Text from 'terra-text';
 import Spacer from 'terra-spacer';
 import Checkbox from 'terra-form-checkbox';
 import ModalManager from 'terra-application/lib/modal-manager';
+import Button from 'terra-button';
 import { withDisclosureManager } from 'terra-application/lib/disclosure-manager';
 
 import IconInformationModal from './IconInformationModal';
@@ -129,7 +130,6 @@ const resultsFromSearchString = (resultsToSearch, searchString) => {
     const iconSearchTerms = icon.searchTerms.split(' ')
       .filter((word) => word !== '')
       .map((word) => word.toLowerCase());
-    console.log('search terms', iconSearchTerms);
     let matchingWords = [];
 
     for(let i = 0; i < words.length; i++){
@@ -151,8 +151,19 @@ const resultsFromSearchString = (resultsToSearch, searchString) => {
             term: matchingWord,
             matchedSubstrings,
             totalMatchedCharacters: matchedSubstrings.reduce((acc, string) => acc + string.length, 0),
+            exactMatch: matchedSubstrings.reduce((acc, string) => string === matchingWord ? true : acc, false)
           };
-        }).sort((a, b) => b.totalMatchedCharacters - a.totalMatchedCharacters);
+        }).sort((a, b) => {
+          // order by most matched word, prioritize exact matches
+          if(a.exactMatch && !b.exactMatch){
+            return -1;
+          } else if (!a.exactMatch && b.exactMatch){
+            return 1;
+          } else {
+            return b.totalMatchedCharacters / b.term.length -
+              a.totalMatchedCharacters / a.term.length;
+          }
+        });
       return true;
     }
     return false;
@@ -189,7 +200,7 @@ const applyBoolFilters = (results, filterNames) => {
 const getFilteredResults = (searchString, activeBoolFilters) => {
   const searchedResults = resultsFromSearchString([...testData], searchString);
   const filteredResults = applyBoolFilters(searchedResults, activeBoolFilters);
-  return filteredResults;
+  return filteredResults.sort((a, b) => b.matchingWords.length - a.matchingWords.length);
 }
 
 const IconCollectionSearchTool = withDisclosureManager(({ disclosureManager }) => {
