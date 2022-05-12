@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+<<<<<<< HEAD
   * Changed
     * Updated jest snapshots.
     
@@ -10,6 +11,11 @@
 * Changed
   * Minor dependency version bump
 
+=======
+* Changed
+  * Updated jest snapshots.
+  
+>>>>>>> 01143d2fb (Update mvb branch (#3618))
 ## 3.61.3 - (May 3, 2022)
 
 * Changed

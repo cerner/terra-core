@@ -20,6 +20,16 @@
 * Changed
   * Minor dependency version bump
 
+## 4.20.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.20.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.20.2 - (January 4, 2022)
 
 * Changed

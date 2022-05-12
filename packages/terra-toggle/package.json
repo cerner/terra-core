@@ -1,7 +1,11 @@
 {
   "name": "terra-toggle",
   "main": "lib/Toggle.js",
+<<<<<<< HEAD
   "version": "3.50.3",
+=======
+  "version": "3.50.2",
+>>>>>>> 01143d2fb (Update mvb branch (#3618))
   "description": "Toggle component that transitions content in and out.",
   "repository": {
     "type": "git",
@@ -29,7 +33,11 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
     "react-animate-height": "^2.0.1",
+<<<<<<< HEAD
     "terra-icon": "^3.48.0"
+=======
+    "terra-icon": "^3.47.1"
+>>>>>>> 01143d2fb (Update mvb branch (#3618))
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",

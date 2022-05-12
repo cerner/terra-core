@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+<<<<<<< HEAD
 ## 2.58.4 - (July 14, 2022)
 
 * Changed
@@ -12,6 +13,8 @@
 * Changed
   * Minor dependency version bump
 
+=======
+>>>>>>> 01143d2fb (Update mvb branch (#3618))
 ## 2.58.2 - (May 3, 2022)
 
 * Changed

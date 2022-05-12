@@ -5,11 +5,14 @@
 * Changed
   * Updated jest snapshots.
   
+<<<<<<< HEAD
 ## 5.19.5 - (July 5, 2022)
 
 * Changed
   * Minor dependency version bump
 
+=======
+>>>>>>> 01143d2fb (Update mvb branch (#3618))
 ## 5.19.4 - (May 3, 2022)
 
 * Changed

@@ -1,12 +1,7 @@
 {
   "name": "terra-hyperlink",
-<<<<<<< HEAD
   "main": "lib/Hyperlink.js",
   "version": "2.53.0",
-=======
-  "main": "lib/index.js",
-  "version": "2.51.2",
->>>>>>> 196286628 ([terra-hyperlink] Add Hyperlink Button component (#3608))
   "description": "The terra hyperlink component allows linking to other web pages, files, locations within the same page, email addresses, or any other URL.",
   "repository": {
     "type": "git",

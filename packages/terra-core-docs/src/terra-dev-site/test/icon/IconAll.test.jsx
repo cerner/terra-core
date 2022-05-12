@@ -24,6 +24,7 @@ const IconAll = () => (
     <Icon.IconAutoText                    a11yLabel="auto text icon"                        className={cx(['icon'])} />
     <Icon.IconAvailable                   a11yLabel="available icon"                        className={cx(['icon'])} />
     <Icon.IconAway                        a11yLabel="away icon"                             className={cx(['icon'])} />
+
     <Icon.IconBedAssigned                 a11yLabel="bed asigned icon"                      className={cx(['icon'])} />
     <Icon.IconBedAssignedLowLight         a11yLabel="low light bed assigned icon"           className={cx(['icon'])} />
     <Icon.IconBedRequested                a11yLabel="bed requested icon"                    className={cx(['icon'])} />
@@ -34,6 +35,7 @@ const IconAll = () => (
     <Icon.IconBrokenImage                 a11yLabel="broken image icon"                     className={cx(['icon'])} />
     <Icon.IconBrokenLinkUnlink            a11yLabel="broken link unlink icon"               className={cx(['icon'])} />
     <Icon.IconBusy                        a11yLabel="busy icon"                             className={cx(['icon'])} />
+
     <Icon.IconCalculator                  a11yLabel="calculator icon"                       className={cx(['icon'])} />
     <Icon.IconCalendar                    a11yLabel="calender icon"                         className={cx(['icon'])} />
     <Icon.IconCamera                      a11yLabel="camera icon"                           className={cx(['icon'])} />
@@ -69,6 +71,7 @@ const IconAll = () => (
     <Icon.IconCriticalInverse             a11yLabel="critical inverse icon"                 className={cx(['icon', 'icon-inverse'])} />
     <Icon.IconCriticalInverseLowLight     a11yLabel="low light critical inverse icon"       className={cx(['icon'])} />
     <Icon.IconCriticalLowLight            a11yLabel="critical icon"                         className={cx(['icon'])} />
+
     <Icon.IconDateOfManufacture           a11yLabel="date of manufacture icon"              className={cx(['icon'])} />
     <Icon.IconDevice                      a11yLabel="device icon"                           className={cx(['icon'])} />
     <Icon.IconDeviceAlert                 a11yLabel="device alert icon"                     className={cx(['icon'])} />
@@ -98,6 +101,7 @@ const IconAll = () => (
     <Icon.IconDue                         a11yLabel="due icon"                              className={cx(['icon'])} />
     <Icon.IconDueSoon                     a11yLabel="due soon icon"                         className={cx(['icon'])} />
     <Icon.IconDueSoonLowLight             a11yLabel="due soon icon"                         className={cx(['icon'])} />
+
     <Icon.IconEcRep                       a11yLabel="EcRep icon"                            className={cx(['icon'])} />
     <Icon.IconEdit                        a11yLabel="edit icon"                             className={cx(['icon'])} />
     <Icon.IconEllipses                    a11yLabel="ellipses icon"                         className={cx(['icon'])} />
@@ -112,6 +116,7 @@ const IconAll = () => (
     <Icon.IconExpandRow                   a11yLabel="expand row icon"                       className={cx(['icon'])} />
     <Icon.IconExtensions                  a11yLabel="extensions icon"                       className={cx(['icon'])} />
     <Icon.IconExternalLink                a11yLabel="external link icon"                    className={cx(['icon'])} />
+
     <Icon.IconFeatured                    a11yLabel="Abnormal icon"                         className={cx(['icon'])} />
     <Icon.IconFeaturedOff                 a11yLabel="featured off icon"                     className={cx(['icon'])} />
     <Icon.IconFeaturedOutline             a11yLabel="featured outline icon"                 className={cx(['icon'])} />
@@ -127,9 +132,11 @@ const IconAll = () => (
     <Icon.IconFolder                      a11yLabel="folder icon"                           className={cx(['icon'])} />
     <Icon.IconForward                     a11yLabel="forward icon"                          className={cx(['icon'])} />
     <Icon.IconFunnel                      a11yLabel="funnel icon"                           className={cx(['icon'])} />
+
     <Icon.IconGapChecking                 a11yLabel="gap checking icon"                     className={cx(['icon'])} />
     <Icon.IconGlasses                     a11yLabel="glasses icon"                          className={cx(['icon'])} />
     <Icon.IconGroup                       a11yLabel="group icon"                            className={cx(['icon'])} />
+
     <Icon.IconHalfRating                  a11yLabel="half rating icon"                      className={cx(['icon'])} />
     <Icon.IconHazardLow                   a11yLabel="hazard low icon"                       className={cx(['icon'])} />
     <Icon.IconHelp                        a11yLabel="help icon"                             className={cx(['icon'])} />
@@ -145,6 +152,7 @@ const IconAll = () => (
     <Icon.IconHold                        a11yLabel="hold icon"                             className={cx(['icon'])} />
     <Icon.IconHospital                    a11yLabel="hospital icon"                         className={cx(['icon'])} />
     <Icon.IconHouse                       a11yLabel="house icon"                            className={cx(['icon'])} />
+
     <Icon.IconImage                       a11yLabel="image icon"                            className={cx(['icon'])} />
     <Icon.IconImplant                     a11yLabel="implant icon"                          className={cx(['icon'])} />
     <Icon.IconIncomingCall                a11yLabel="incoming call icon"                    className={cx(['icon'])} />
@@ -157,8 +165,10 @@ const IconAll = () => (
     <Icon.IconInformationLowLight         a11yLabel="low light information icon"            className={cx(['icon'])} />
     <Icon.IconIPass                       a11yLabel="i pass icon"                           className={cx(['icon'])} />
     <Icon.IconItalicI                     a11yLabel="italics i icon"                        className={cx(['icon'])} />
+
     <Icon.IconKeyboard                    a11yLabel="keyboard icon"                         className={cx(['icon'])} />
     <Icon.IconKnurling                    a11yLabel="knurling icon"                         className={cx(['icon'])} />
+
     <Icon.IconLast                        a11yLabel="last icon"                             className={cx(['icon'])} />
     <Icon.IconLeft                        a11yLabel="left icon"                             className={cx(['icon'])} />
     <Icon.IconLeftPane                    a11yLabel="left pane icon"                        className={cx(['icon'])} />
@@ -171,6 +181,7 @@ const IconAll = () => (
     <Icon.IconLowLowLight                 a11yLabel="low light low icon"                    className={cx(['icon'])} />
     <Icon.IconLowRisk                     a11yLabel="low risk icon"                         className={cx(['icon'])} />
     <Icon.IconLowRiskLowLight             a11yLabel="low risk icon"                         className={cx(['icon'])} />
+
     <Icon.IconManufacturer                a11yLabel="manufacturer icon"                     className={cx(['icon'])} />
     <Icon.IconMax                         a11yLabel="max icon"                              className={cx(['icon'])} />
     <Icon.IconMaximize                    a11yLabel="maximize icon"                         className={cx(['icon'])} />
@@ -195,6 +206,7 @@ const IconAll = () => (
     <Icon.IconModerate                    a11yLabel="moderate icon"                         className={cx(['icon'])} />
     <Icon.IconModerateLowLight            a11yLabel="low light moderate icon"               className={cx(['icon'])} />
     <Icon.IconModified                    a11yLabel="modified icon"                         className={cx(['icon'])} />
+
     <Icon.IconNext                        a11yLabel="next icon"                             className={cx(['icon'])} />
     <Icon.IconNoResults                   a11yLabel="no results icon"                       className={cx(['icon'])} />
     <Icon.IconNoRisk                      a11yLabel="no risk icon"                          className={cx(['icon'])} />
@@ -204,10 +216,12 @@ const IconAll = () => (
     <Icon.IconNotificationDisabled        a11yLabel="notification disabled icon"            className={cx(['icon'])} />
     <Icon.IconNotificationOff             a11yLabel="notification off icon"                 className={cx(['icon'])} />
     <Icon.IconNotMet                      a11yLabel="not met icon"                          className={cx(['icon'])} />
+
     <Icon.IconOutgoingCall                a11yLabel="outgoing call icon"                    className={cx(['icon'])} />
     <Icon.IconOutOfNetwork                a11yLabel="out of network icon"                   className={cx(['icon'])} />
     <Icon.IconOverDue                     a11yLabel="overdue icon"                          className={cx(['icon'])} />
     <Icon.IconOverDueLowLight             a11yLabel="low light overdue icon"                className={cx(['icon'])} />
+
     <Icon.IconPadlock                     a11yLabel="padlock icon"                          className={cx(['icon'])} />
     <Icon.IconPager                       a11yLabel="pager icon"                            className={cx(['icon'])} />
     <Icon.IconPanelLeft                   a11yLabel="panel left icon"                       className={cx(['icon'])} />
@@ -237,6 +251,7 @@ const IconAll = () => (
     <Icon.IconProjects                    a11yLabel="projects icon"                         className={cx(['icon'])} />
     <Icon.IconProtocol                    a11yLabel="protocol icon"                         className={cx(['icon'])} />
     <Icon.IconProvider                    a11yLabel="provider icon"                         className={cx(['icon'])} />
+
     <Icon.IconQuestion                    a11yLabel="question icon"                         className={cx(['icon'])} />
     <Icon.IconQuestionOutline             a11yLabel="question outline icon"                 className={cx(['icon'])} />
     <Icon.IconRectangleSymbol             a11yLabel="rectangle symbol icon"                 className={cx(['icon'])} />
@@ -253,6 +268,7 @@ const IconAll = () => (
     <Icon.IconRollup                      a11yLabel="rollup icon"                           className={cx(['icon'])} />
     <Icon.IconRotateLeft                  a11yLabel="rotate left icon"                      className={cx(['icon'])} />
     <Icon.IconRotateRight                 a11yLabel="rotate right icon"                     className={cx(['icon'])} />
+
     <Icon.IconSave                        a11yLabel="save icon"                             className={cx(['icon'])} />
     <Icon.IconScheduled                   a11yLabel="scheduled icon"                        className={cx(['icon'])} />
     <Icon.IconScheduledLowLight           a11yLabel="scheduled low light icon"              className={cx(['icon'])} />
@@ -280,6 +296,7 @@ const IconAll = () => (
     <Icon.IconSuccessInverseLowLight      a11yLabel="inverse low light success icon"        className={cx(['icon'])} />
     <Icon.IconSuccessLowLight             a11yLabel="low light success icon"                className={cx(['icon'])} />
     <Icon.IconSwap                        a11yLabel="swap icon"                             className={cx(['icon'])} />
+
     <Icon.IconTable                       a11yLabel="table icon"                            className={cx(['icon'])} />
     <Icon.IconTag                         a11yLabel="tag icon"                              className={cx(['icon'])} />
     <Icon.IconTeardropSymbol              a11yLabel="teardrop icon"                         className={cx(['icon'])} />
@@ -296,6 +313,7 @@ const IconAll = () => (
     <Icon.IconTriangleSymbol              a11yLabel="triangle icon"                         className={cx(['icon'])} />
     <Icon.IconTriangleSymbolLight         a11yLabel="light triangle icon"                   className={cx(['icon'])} />
     <Icon.IconTrophy                      a11yLabel="trophy icon"                           className={cx(['icon'])} />
+
     <Icon.IconUnavailable                 a11yLabel="unavailable icon"                      className={cx(['icon'])} />
     <Icon.IconUndo                        a11yLabel="undo icon"                             className={cx(['icon'])} />
     <Icon.IconUnexpected                  a11yLabel="unexpected icon"                       className={cx(['icon'])} />
@@ -307,15 +325,23 @@ const IconAll = () => (
     <Icon.IconUp                          a11yLabel="up icon"                               className={cx(['icon'])} />
     <Icon.IconUpload                      a11yLabel="upload icon"                           className={cx(['icon'])} />
     <Icon.IconUsers                       a11yLabel="users icon"                            className={cx(['icon'])} />
+
     <Icon.IconVideoCamera                 a11yLabel="video camera icon"                     className={cx(['icon'])} />
     <Icon.IconVideoCameraDisabled         a11yLabel="video camera disabled icon"            className={cx(['icon'])} />
     <Icon.IconVisualization               a11yLabel="visualization icon"                    className={cx(['icon'])} />
+    <Icon.IconVolumeSetDefault            a11yLabel="volume set default icon"               className={cx(['icon'])} />
+    <Icon.IconVolumeSetMute               a11yLabel="volume mute icon"                      className={cx(['icon'])} />
+    <Icon.IconVolumeSetIncrease           a11yLabel="volume increase icon"                  className={cx(['icon'])} />
+    <Icon.IconVolumeSetDecrease           a11yLabel="volume decrease icon"                  className={cx(['icon'])} />
+
     <Icon.IconWarning                     a11yLabel="warning icon"                          className={cx(['icon'])} />
     <Icon.IconWarningLowLight             a11yLabel="low light warning icon"                className={cx(['icon'])} />
     <Icon.IconWaveform                    a11yLabel="waveform icon"                         className={cx(['icon'])} />
     <Icon.IconWifi                        a11yLabel="wifi icon"                             className={cx(['icon'])} />
     <Icon.IconWifiSlash                   a11yLabel="wifi icon"                             className={cx(['icon'])} />
+
     <Icon.IconXSymbol                     a11yLabel="x symbol icon"                         className={cx(['icon'])} />
+
     <Icon.IconZoomIn                      a11yLabel="zoom in icon"                          className={cx(['icon'])} />
     <Icon.IconZoomOut                     a11yLabel="zoom out icon"                         className={cx(['icon'])} />
   </div>

@@ -7,16 +7,9 @@
   * Added Hyperlink Button tests and examples.
   * Re-order hyperlink docs.
   * Added Accessibility guide for `terra-hyperlink`.
-
-## 1.13.4 - (March 15, 2022)
-
-* Changed
-  * Minor dependency version bump
-
-## 1.13.3 - (March 8, 2022)
   * linter fixes.
   * Spelling fixes for Image accessibility guide.
-
+  
 * Added
   * Added Accessibility guide for `terra-image`.
   * Added docs for `DecorativeImage`.
@@ -57,7 +50,7 @@
 
 * Changed
   * Icon table regenerated after fixing trending up/down labeling errors
-  * Updated screenshot tests to reflect trending icon changes
+  * Updated screenshot tests to reflect trending icon changes 
 
 ## 1.13.5 - (April 29, 2022)
 

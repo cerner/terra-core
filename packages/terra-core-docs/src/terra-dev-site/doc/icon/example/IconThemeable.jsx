@@ -2031,7 +2031,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconVolumeSetDefault height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconVolumeSetDefault a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>volumeSet_default</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2040,7 +2040,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconVolumeSetDecrease height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconVolumeSetDecrease a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>volumeSet_decrease</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2058,7 +2058,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconVolumeSetMute height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconVolumeSetMute a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>volumeSet_mute</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2067,7 +2067,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPersonConnection height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPersonConnection a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>personConnection</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2076,7 +2076,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTrendingUp height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTrendingUp a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>trendingUp</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2085,7 +2085,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTrendingDown height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTrendingDown a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>trendingDown</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
