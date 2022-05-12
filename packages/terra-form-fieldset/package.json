@@ -1,7 +1,7 @@
 {
   "name": "terra-form-fieldset",
   "main": "lib/Fieldset.js",
-  "version": "2.63.2",
+  "version": "2.63.4",
   "description": "Generic form fieldset component which handles the layout of a standard form fieldset including help text, legend, value and widget placement.",
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-form-field": "^4.20.2",
-    "terra-form-input": "^4.17.2",
+    "terra-form-field": "^4.20.4",
+    "terra-form-input": "^4.17.4",
     "terra-theme-context": "^1.0.0"
   },
   "scripts": {

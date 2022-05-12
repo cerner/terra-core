@@ -2,8 +2,18 @@
 
 ## Unreleased
 
-  * Changed
-    * Updated jest snapshots.
+* Changed
+  * Updated jest snapshots.
+  
+## 4.48.5 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.48.4 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
 
 ## 4.48.3 - (February 15, 2022)
 

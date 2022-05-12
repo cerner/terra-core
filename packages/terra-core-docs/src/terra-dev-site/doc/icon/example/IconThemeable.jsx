@@ -204,8 +204,8 @@ import IconVolumeSetDecrease from 'terra-icon/lib/icon/IconVolumeSetDecrease';
 import IconVolumeSetIncrease from 'terra-icon/lib/icon/IconVolumeSetIncrease';
 import IconVolumeSetMute from 'terra-icon/lib/icon/IconVolumeSetMute';
 import IconPersonConnection from 'terra-icon/lib/icon/IconPersonConnection';
-import IconTrendingDown from 'terra-icon/lib/icon/IconTrendingDown';
 import IconTrendingUp from 'terra-icon/lib/icon/IconTrendingUp';
+import IconTrendingDown from 'terra-icon/lib/icon/IconTrendingDown';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -2030,7 +2030,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconVolumeSetDefault height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconVolumeSetDefault a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>volumeSet_default</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2039,7 +2039,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconVolumeSetDecrease height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconVolumeSetDecrease a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>volumeSet_decrease</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2057,7 +2057,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconVolumeSetMute height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconVolumeSetMute a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>volumeSet_mute</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2066,7 +2066,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconPersonConnection height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconPersonConnection a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>personConnection</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2075,16 +2075,7 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTrendingDown height='2em' width='2em' /></td>
-        <td style={cellStyle}>trendingDown</td>
-        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
-          <code>
-            import IconTrendingDown from 'terra-icon/lib/icon/IconTrendingDown';
-          </code>
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconTrendingUp height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTrendingUp a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>trendingUp</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
@@ -2093,7 +2084,16 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td style={cellStyle}><IconCircleSymbol height='2em' width='2em' /></td>
+        <td style={cellStyle}><IconTrendingDown a11yLabel="icon" height='2em' width='2em' /></td>
+        <td style={cellStyle}>trendingDown</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconTrendingDown from 'terra-icon/lib/icon/IconTrendingDown';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconCircleSymbol a11yLabel="icon" height='2em' width='2em' /></td>
         <td style={cellStyle}>circle_symbol</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>

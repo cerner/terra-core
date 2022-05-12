@@ -5,6 +5,15 @@
   * Breaking changes
     * Updated terra-icon to meet accessibility standards.
     * Updated jest snapshots.
+
+## 3.47.1 - (May 3, 2022)
+
+* Changed
+  * Updated to `one-cerner-style-icons` v1.46.1
+  * Fixed labeling errors on trending up/down icons
+
+## 3.47.0 - (April 29, 2022)
+
 * Changed
   * Updated to `one-cerner-style-icons` v1.46.0
   * Updated SVG migration script `writeSvg,js` to include a newline character at the end of each SVG file

@@ -5,6 +5,16 @@
 * Changed
   * Updated jest snapshots.
 
+## 4.60.6 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.60.5 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.60.4 - (February 24, 2022)
 
 * Changed

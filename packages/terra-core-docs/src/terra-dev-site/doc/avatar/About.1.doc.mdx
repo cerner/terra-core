@@ -1,10 +1,20 @@
 import { Badge } from 'terra-avatar/package.json?dev-site-package';
 
+import AvatarUser from './example/avatar/AvatarUser?dev-site-example';
+import AvatarOneInitial from './example/avatar/AvatarOneInitial?dev-site-example';
+import AvatarTwoInitials from './example/avatar/AvatarTwoInitials?dev-site-example';
+import AvatarImage from './example/avatar/AvatarImage?dev-site-example';
+import AvatarIsDeceased from './example/avatar/AvatarIsDeceased?dev-site-example';
+import AvatarSize from './example/avatar/AvatarSize?dev-site-example';
+import AvatarColorVariants from './example/avatar/AvatarColorVariants?dev-site-example';
+
+import AvatarPropsTable from 'terra-avatar/src/variants/Avatar?dev-site-props-table';
+
 <Badge />
 
-# About terra-avatar
+# Terra Avatar
 
-The `terra-avatar` package contains three components: `Avatar`, `Facility`, and `Generic`. View their respective documentation tabs for information on accepted props and examples.
+The `Avatar` variant represents a person - it displays an image or initials in a circular frame. If a valid image is not provided then the avatar falls back to displaying initials. This is the default export of the `terra-avatar` package.
 
 ## Getting Started
 
@@ -26,25 +36,22 @@ This component requires the following peer dependencies be installed in your app
 ## Usage
 
 ```jsx
-import React from 'react';
-import Avatar, { Facility, Generic } from 'terra-avatar';
-
-<Avatar
-  alt="User"
-  image="https://path/to/image.jpg"
-/>
-
-<Facility
-  alt="Location"
-  image="https://path/to/image.jpg"
-/>
-
-<Generic
-  alt="Generic"
-/>
+import Avatar from 'terra-avatar';
 ```
 
 ## Component Features
 
  * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
  * [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
+
+## Examples
+<AvatarUser title="Default - Fallback Icon" />
+<AvatarOneInitial title="Initials (1)" />
+<AvatarTwoInitials title="Initials (2)" />
+<AvatarIsDeceased title="Is Deceased" />
+<AvatarImage title="Image" />
+<AvatarSize title="Override Size" />
+<AvatarColorVariants title="Toggle Color Variants - Theme Specific" />
+
+## Avatar Props
+<AvatarPropsTable />

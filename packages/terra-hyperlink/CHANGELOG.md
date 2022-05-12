@@ -5,6 +5,16 @@
 * Changed
   * `isDisabled` and `isUnderlineHidden` props have been marked as private.
   * Updated jest snapshots.
+  
+## 2.51.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.51.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
 
 * Breaking Changes
   * `children` prop has been replaced by `text` prop.
