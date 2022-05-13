@@ -7,6 +7,7 @@ import Spacer from 'terra-spacer';
 import Heading from 'terra-heading';
 import IconAvailable from 'terra-icon/lib/icon/IconAvailable';
 import IconClear from 'terra-icon/lib/icon/IconClear';
+import Checkbox from 'terra-form-checkbox';
 import { DisclosureManagerHeaderAdapter } from 'terra-application/lib/disclosure-manager';
 
 import styles from './IconInformationModal.module.scss';
@@ -27,38 +28,38 @@ const FunctionIndicator = ({canBe, stringTemplate, emphasizedSubstring}) => {
   console.log('secondString', secondSubstring)
 
   const iconProps = {
-    height: '1.5rem',
-    width: '1.5rem',
+    height: '1rem',
+    width: '1rem',
     style: {color: 'red'},
   }
 
   return (
-    <Text>
-      { canBe ? (<><IconAvailable {...iconProps} /> Can </>) : <><IconClear {...iconProps} /> Cannot </>}
-      {firstSubstring}{<b>{emphasizedSubstring}</b>}{secondSubstring}
-    </Text>
+    <Spacer marginBottom='small-2'>
+      <Text>
+        { canBe ? (<><IconAvailable {...iconProps} /> Can </>) : <><IconClear {...iconProps} /> Cannot </>}
+        {firstSubstring}{<b>{emphasizedSubstring}</b>}{secondSubstring}
+      </Text>
+    </Spacer>
   )
 }
 
 const IconPreviews = ({Icon, defaultBackground}) => {
-  const values = ['light', 'low-light', 'checkered'];
   const [selectedBackground, setSelectedBackground] = useState(defaultBackground || values[0]);
+  const [colorHighlighted, setColorHighlighted] = useState(false);
+
+  const values = ['light', 'low-light', 'checkered'];
 
   return (
     <div className={cx('iconPreviews')}>
-      <div className={cx('largePreviewContainer', `${selectedBackground}-background`)}>
+      <div className={cx(
+        'largePreviewContainer',
+        `${selectedBackground}-background`,
+        colorHighlighted ? 'highlighted' : '',
+      )}>
         <Icon height="120" width="120"/>
       </div>
-      <Text>120px</Text>
-      <Spacer marginBottom='medium'/>
-      <div className={cx('iconPreviewsBottomRow')}>
-        <div className={cx('iconPreviewsBackground', `${selectedBackground}-background`)} />
-        <SmallIconPreview size={14} icon={Icon} />
-        <SmallIconPreview size={28} icon={Icon} />
-        <SmallIconPreview size={40} icon={Icon} />
-      </div>
-      <div>
-        <Text>Preview Background</Text>
+      <Spacer marginTop="large">
+        <Text className={cx('preview-background-label')}>Preview Background</Text>
         <fieldset className={cx('background-options-fieldset')}>
           {
             values.map((value, index) => (
@@ -76,7 +77,13 @@ const IconPreviews = ({Icon, defaultBackground}) => {
             ))
           }
         </fieldset>
-      </div>
+      </Spacer>
+      <Spacer marginTop='large'>
+        <Checkbox
+          labelText={"Highlight Color Responsive Elements"}
+          onChange={(e) => setColorHighlighted(e.target.checked)}  
+        />
+      </Spacer>
     </div>
   )
 }
@@ -102,6 +109,10 @@ const IconInformationModal = ({data}) => {
           <Text>{data.sets.join(', ')}</Text>
           <Spacer marginBottom="large+1"/>
 
+          <Heading level={5}>Contextual Example</Heading>
+          <span className={cx('inline-example')}><Text><Icon />Inline with<Icon />text</Text></span>
+          <Spacer marginTop="large+1" />
+
           <Heading level={5}>Functions</Heading>
           <FunctionIndicator
             canBe={data.isAction}
@@ -123,17 +134,6 @@ const IconInformationModal = ({data}) => {
             stringTemplate="be used _"
             emphasizedSubstring="without a label"
           />
-
-          <Spacer marginBottom="large+1"/>
-
-          <Heading level={5}>Color-Responsive Elements</Heading>
-          <Text>
-            {
-              !data.colorResponsiveElements || data.colorResponsiveElements.length <= 0
-                ? 'None'
-                : data.colorResponsiveElements
-            }
-          </Text>
         </div>
 
         <div className={cx('bottom-matter')}>

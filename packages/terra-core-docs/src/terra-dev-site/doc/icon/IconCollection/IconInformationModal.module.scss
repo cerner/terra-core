@@ -10,10 +10,6 @@
 
 .iconPreviews {
   grid-area: icon-previews;
-  & span {
-    font-size: 0.857rem;
-    font-style: italic;
-  }
 }
 
 .checkered-background {
@@ -39,6 +35,10 @@
   width: 160px;
   height: 160px;
   padding: 20px;
+
+  &.highlighted {
+    color: #BF00F0;
+  }
 }
 
 .iconPreviewsBottomRow {
