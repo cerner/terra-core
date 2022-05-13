@@ -43,7 +43,7 @@ const FunctionIndicator = ({canBe, stringTemplate, emphasizedSubstring}) => {
   )
 }
 
-const IconPreviews = ({Icon, defaultBackground}) => {
+const IconPreviews = ({Icon, defaultBackground, colorResponsive}) => {
   const [selectedBackground, setSelectedBackground] = useState(defaultBackground || values[0]);
   const [colorHighlighted, setColorHighlighted] = useState(false);
 
@@ -78,12 +78,16 @@ const IconPreviews = ({Icon, defaultBackground}) => {
           }
         </fieldset>
       </Spacer>
-      <Spacer marginTop='large'>
-        <Checkbox
-          labelText={"Highlight Color Responsive Elements"}
-          onChange={(e) => setColorHighlighted(e.target.checked)}  
-        />
-      </Spacer>
+      {
+        colorResponsive ? 
+        <Spacer marginTop='large'>
+          <Checkbox
+            labelText={"Highlight Color Responsive Elements"}
+            onChange={(e) => setColorHighlighted(e.target.checked)}  
+          />
+        </Spacer>
+        : null
+      }
     </div>
   )
 }
@@ -98,7 +102,11 @@ const IconInformationModal = ({data}) => {
         
       />
       <div className={cx('iconModalContents')}>
-        <IconPreviews Icon={Icon} defaultBackground={data.needsDarkBackground ? 'low-light' : 'light'} />
+        <IconPreviews
+          Icon={Icon}
+          defaultBackground={data.needsDarkBackground ? 'low-light' : 'light'}
+          colorResponsive={data.colorResponsiveElements.length > 0}  
+        />
 
         <div className={cx('summaryInfo')}>
           <Heading level={5}>Meaning</Heading>
