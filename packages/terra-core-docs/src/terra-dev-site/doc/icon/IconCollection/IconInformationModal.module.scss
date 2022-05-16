@@ -37,7 +37,21 @@
   padding: 20px;
 
   &.highlighted {
+    animation: breathepink 0.7s infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes breathepink {
+  0% {
+    color: initial;
+  }
+
+  50% {
     color: #BF00F0;
+  }
+
+  100% {
+    color: initial;
   }
 }
 

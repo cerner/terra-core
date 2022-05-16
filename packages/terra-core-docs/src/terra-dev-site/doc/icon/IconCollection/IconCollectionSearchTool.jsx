@@ -264,9 +264,12 @@ const IconCollectionSearchTool = withDisclosureManager(({ disclosureManager }) =
                   onClick={
                     () => disclosureManager.disclose({
                       preferredType: 'modal',
-                      size: 'small',
+                      dimensions: {
+                        width: '560',
+                        height: '600',
+                      },
                       content: {
-                        key: `meaning`,
+                        key: `${result.meaning}`,
                         component: <IconInformationModal data={result}/>
                       }
                     })

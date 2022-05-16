@@ -13,13 +13,6 @@ import { DisclosureManagerHeaderAdapter } from 'terra-application/lib/disclosure
 import styles from './IconInformationModal.module.scss';
 const cx = classNames.bind(styles);
 
-const SmallIconPreview = ({size = 14, icon: Icon}) => (
-  <div>
-    <Icon height={`${size}px`} width={`${size}px`}/>
-    <Text>{`${size}px`}</Text>
-  </div>
-);
-
 const FunctionIndicator = ({canBe, stringTemplate, emphasizedSubstring}) => {
   const insertionIndex = stringTemplate.indexOf('_');
   const firstSubstring = stringTemplate.substring(0, insertionIndex);
@@ -80,12 +73,12 @@ const IconPreviews = ({Icon, defaultBackground, colorResponsive}) => {
       </Spacer>
       {
         colorResponsive ? 
-        <Spacer marginTop='large'>
-          <Checkbox
-            labelText={"Highlight Color Responsive Elements"}
-            onChange={(e) => setColorHighlighted(e.target.checked)}  
-          />
-        </Spacer>
+          <Spacer marginTop='large'>
+            <Checkbox
+              labelText={"Highlight Color Responsive Elements"}
+              onChange={(e) => setColorHighlighted(e.target.checked)}  
+            />
+          </Spacer>
         : null
       }
     </div>
