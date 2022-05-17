@@ -118,6 +118,8 @@ class SearchField extends React.Component {
 
     this.searchTimeout = null;
     this.searchText = this.props.defaultValue || this.props.value;
+
+    this.searchBtnRef = React.createRef();
   }
 
   componentDidUpdate() {
@@ -172,6 +174,10 @@ class SearchField extends React.Component {
 
   handleKeyDown(event) {
     if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
+      this.searchBtnRef.focus();
+      this.handleSearch();
+    }
+    if (event.nativeEvent.keyCode === KeyCode.KEY_BACK_SPACE) {
       this.handleSearch();
     }
     if (event.nativeEvent.keyCode === KeyCode.KEY_ESCAPE) {
@@ -304,6 +310,7 @@ class SearchField extends React.Component {
           icon={Icon}
           isIconOnly
           isCompact
+          ref={this.searchBtnRef}
         />
       </div>
     );
