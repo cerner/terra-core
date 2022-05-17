@@ -177,9 +177,6 @@ class SearchField extends React.Component {
       this.searchBtnRef.focus();
       this.handleSearch();
     }
-    if (event.nativeEvent.keyCode === KeyCode.KEY_BACK_SPACE) {
-      this.handleSearch();
-    }
     if (event.nativeEvent.keyCode === KeyCode.KEY_ESCAPE) {
       this.handleClear(event);
     }
