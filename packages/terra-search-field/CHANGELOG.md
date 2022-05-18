@@ -2,20 +2,23 @@
 
 ## Unreleased
 
+* Changed
+  * Fixed mobile keyboard not closing after pressing enter key on mobile devices.
+
 ## 3.74.5 - (May 3, 2022)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.74.4 - (April 29, 2022)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.74.3 - (February 15, 2022)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.74.2 - (January 4, 2022)
 
@@ -25,12 +28,12 @@
 ## 3.74.1 - (December 14, 2021)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.74.0 - (November 2, 2021)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.73.0 - (October 8, 2021)
 
@@ -51,12 +54,12 @@
 ## 3.70.0 - (August 25, 2021)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.69.0 - (June 22, 2021)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.68.0 - (June 8, 2021)
 
@@ -67,13 +70,13 @@
 ## 3.67.0 - (April 13, 2021)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.66.0 - (April 6, 2021)
 
 * Changed
-  * Upgrade tests to terra-functional-testing and WebDriverIO v6
-  * Removed unnecessary `wdio.conf.js` file
+  * Upgrade tests to terra-functional-testing and WebDriverIO v6.
+  * Removed unnecessary `wdio.conf.js` file.
 
 * Fixed
   * Updated jest test to correctly update the search text.
@@ -86,8 +89,8 @@
 ## 3.64.0 - (January 5, 2021)
 
 * Changed
-  * Updated to be compatible with `react-intl` v2-v5
-  * Removed usage of `intlShape`
+  * Updated to be compatible with `react-intl` v2-v5.
+  * Removed usage of `intlShape`.
 
 * Fixed
   * Fixed broken links in documentation.
@@ -95,17 +98,17 @@
 ## 3.63.0 - (December 8, 2020)
 
 * Changed
-  * Update wdio tests to remove deprecated Terra.it helpers
+  * Update wdio tests to remove deprecated Terra.it helpers.
 
 ## 3.62.0 - (November 17, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.61.0 - (November 10, 2020)
 
 * Fixed
-  * Fixed build failures due to the react/sort-comp rule
+  * Fixed build failures due to the react/sort-comp rule.
 
 * Added
   * Added data-attribute `data-terra-search-field-button-attribute` for the search and clear button.
@@ -113,27 +116,27 @@
 ## 3.60.0 - (October 27, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.59.0 - (September 16, 2020)
 
 * Fixed
-  * Updated vertical-alignment with buttons
+  * Updated vertical-alignment with buttons.
 
 ## 3.58.0 - (September 1, 2020)
 
 * Updated
-  * Updated fusion theme screenshots to fix master build
+  * Updated fusion theme screenshots to fix master build.
 
 ## 3.57.0 - (August 18, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.56.0 - (August 6, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.55.0 - (August 4, 2020)
 
@@ -146,19 +149,19 @@
   * Removed `terra-form-input` from dependencies.
 
 * Changed
-  * Removed the terra-form-input and replaced it with a native input
-  * Updated wdio snapshots
-  * Update changelog formatting
-  * Updated jest tests due to icon changes
+  * Removed the terra-form-input and replaced it with a native input.
+  * Updated wdio snapshots.
+  * Update changelog formatting.
+  * Updated jest tests due to icon changes.
 
 * Added
-  * Added new theme variables
-  * Added test for disabled search-field with placeholder
+  * Added new theme variables.
+  * Added test for disabled search-field with placeholder.
 
 ## 3.53.0 - (July 7, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.52.0 - (June 11, 2020)
 
@@ -176,12 +179,12 @@
 ## 3.50.0 - (June 2, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.49.0 - (May 19, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.48.0 - (May 12, 2020)
 
@@ -196,36 +199,36 @@
 ## 3.46.0 - (April 28, 2020)
 
 * Changed
-  * Removed "View Component Source Code" from docs in favour of source code badge
+  * Removed "View Component Source Code" from docs in favour of source code badge.
 
 * Added
-  * Added clinical-lowlight-theme wdio screenshots
+  * Added clinical-lowlight-theme wdio screenshots.
 
 ## 3.45.0 - (April 22, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.44.0 - (April 22, 2020)
 
 * Changed
   * Updated wdio snapshots due to changes in button.
-  * Updated documentation link in README
+  * Updated documentation link in README.
 
 ## 3.43.0 - (March 31, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.42.0 - (March 31, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.41.0 - (March 10, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.40.0 - (March 3, 2020)
 
@@ -235,7 +238,7 @@
 ## 3.39.0 - (February 18, 2020)
 
 * Added
-  * Added clinical-lowlight-theme theming files
+  * Added clinical-lowlight-theme theming files.
 
 ## 3.38.0 - (February 4, 2020)
 
@@ -245,17 +248,17 @@
 ## 3.37.0 - (January 28, 2020)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.36.0 - (January 7, 2020)
 
 * Changed
-  * Updated wdio screenshots
+  * Updated wdio screenshots.
 
 ## 3.35.0 - (December 10, 2019)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump.
 
 ## 3.34.0 - (December 3, 2019)
 
@@ -265,7 +268,7 @@
 ## 3.33.0 - (October 30, 2019)
 
 * Fixed
-  * Fixed lint warnings for multiple empty lines
+  * Fixed lint warnings for multiple empty lines.
 
 ## 3.32.0 - (October 15, 2019)
 
