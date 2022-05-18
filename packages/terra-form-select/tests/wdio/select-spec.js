@@ -2515,4 +2515,36 @@ Terra.describeViewports('Select', ['tiny'], () => {
       after(() => $('#root').click());
     });
   });
+
+  describe('With Background Color', () => {
+    it('should display default select over background color', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/with-background-color-default');
+
+      Terra.validates.element('with background color default');
+    });
+
+    it('should display default select over background color', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/with-background-color-combobox');
+
+      Terra.validates.element('with background color combobox');
+    });
+
+    it('should display default select over background color', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/with-background-color-search');
+
+      Terra.validates.element('with background color search');
+    });
+
+    it('should display default select over background color', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/with-background-color-multiple');
+
+      Terra.validates.element('with background color multiple');
+    });
+
+    it('should display default select over background color', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/with-background-color-tag');
+
+      Terra.validates.element('with background color tag');
+    });
+  });
 });

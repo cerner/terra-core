@@ -187,4 +187,12 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
       Terra.validates.element('filter-style-hover-and-focus');
     });
   });
+
+  describe('With Background Color', () => {
+    it('should display over background color', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/with-background-color');
+
+      Terra.validates.element('with-background-color');
+    });
+  });
 });
