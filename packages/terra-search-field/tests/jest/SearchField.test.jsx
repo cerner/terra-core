@@ -99,10 +99,10 @@ fdescribe('Manual Search', () => {
 
     const onSearch = jest.fn();
     const searchField = mountWithIntl(<SearchField onSearch={onSearch} />, {
-      attachTo: document.querySelector('#container')
+      attachTo: document.querySelector('#container'),
     });
 
-    searchField.find('input').simulate('keydown', { nativeEvent: { keyCode: 13 } })
+    searchField.find('input').simulate('keydown', { nativeEvent: { keyCode: 13 } });
     const searchBtn = searchField.find('button');
     expect(document.activeElement).toBe(searchBtn.getDOMNode());
   });
