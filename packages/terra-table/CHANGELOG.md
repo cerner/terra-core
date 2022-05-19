@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed fusion theme color and size styling bugs.
+
 ## 4.31.1 - (February 24, 2022)
 
 * Changed
