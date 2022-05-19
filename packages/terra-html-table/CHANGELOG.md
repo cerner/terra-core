@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed fusion theme color styling bugs.
+
 ## 1.13.1 - (December 14, 2021)
 
 * Changed
