@@ -81,7 +81,7 @@ describe('Snapshots', () => {
   });
 });
 
-fdescribe('Manual Search', () => {
+describe('Manual Search', () => {
   it('triggers search on button click', () => {
     const onSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />).dive();
