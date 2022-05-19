@@ -175,7 +175,7 @@ class SearchField extends React.Component {
   handleKeyDown(event) {
     if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
       // set focus to search button to hide keyboard on mobile devices
-      this.searchBtnRef.focus();
+      this.searchBtnRef.current.focus();
 
       this.handleSearch();
     }
@@ -309,7 +309,7 @@ class SearchField extends React.Component {
           icon={Icon}
           isIconOnly
           isCompact
-          ref={this.searchBtnRef}
+          refCallback={(ref) => { this.searchBtnRef.current = ref; }}
         />
       </div>
     );

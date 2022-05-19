@@ -81,7 +81,7 @@ describe('Snapshots', () => {
   });
 });
 
-describe('Manual Search', () => {
+fdescribe('Manual Search', () => {
   it('triggers search on button click', () => {
     const onSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />).dive();
@@ -90,6 +90,21 @@ describe('Manual Search', () => {
     expect(onSearch).not.toBeCalled();
     searchField.childAt(1).simulate('click');
     expect(onSearch).toBeCalledWith('Te');
+  });
+
+  it('focuses on search button on enter keypress', () => {
+    const container = document.createElement('div');
+    container.id = 'container';
+    document.body.appendChild(container);
+
+    const onSearch = jest.fn();
+    const searchField = mountWithIntl(<SearchField onSearch={onSearch} />, {
+      attachTo: document.querySelector('#container')
+    });
+
+    searchField.find('input').simulate('keydown', { nativeEvent: { keyCode: 13 } })
+    const searchBtn = searchField.find('button');
+    expect(document.activeElement).toBe(searchBtn.getDOMNode());
   });
 
   it('does not trigger search if default minimum search text has not been met', () => {
