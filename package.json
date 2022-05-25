@@ -59,6 +59,7 @@
     "link-parent-bin": "link-parent-bin",
     "lint": "npm run lint:js && npm run lint:scss && npm run lint:package-json",
     "lint:js": "eslint --ext .js,.jsx .",
+    "lint:js-fix": "eslint --ext .js,.jsx . --fix",
     "lint:package-json": "terra package-json-lint",
     "lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
     "prepare-for-release": "terra prepare-for-release",
