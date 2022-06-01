@@ -2,7 +2,7 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from '@cerner/terra-enzyme-intl';
 import Option from '../../src/shared/_Option';
 import ComboboxMenu from '../../src/combobox/Menu';
 import SingleSelectMenu from '../../src/single/Menu';
@@ -12,7 +12,7 @@ describe('Menu', () => {
     const liveRegion = { current: document.createElement('div') };
 
     const menu = <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" />;
-    const wrapper = shallowWithIntl(menu);
+    const wrapper = shallowWithIntl(menu).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -26,11 +26,9 @@ describe('Menu', () => {
       </SingleSelectMenu>
     );
 
-    const wrapper = shallowWithIntl(menu);
+    const wrapper = shallowWithIntl(menu).dive();
 
     jest.useFakeTimers();
-
-    wrapper.setState({ hasNoResults: true });
 
     jest.advanceTimersByTime(500);
 
@@ -50,10 +48,8 @@ describe('Menu', () => {
 
     jest.useFakeTimers();
 
-    wrapper.setState({ hasNoResults: true });
-
     jest.advanceTimersByTime(500);
-    expect(true).toEqual(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should not error when visuallyHiddenComponent has null for current', () => {
@@ -70,10 +66,8 @@ describe('Menu', () => {
 
     jest.useFakeTimers();
 
-    wrapper.setState({ hasNoResults: true });
-
     jest.advanceTimersByTime(500);
-    expect(true).toEqual(true);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a Menu with the clear option', () => {
@@ -89,7 +83,7 @@ describe('Menu', () => {
 
     jest.useFakeTimers();
 
-    const wrapper = shallowWithIntl(menu);
+    const wrapper = shallowWithIntl(menu).dive();
 
     jest.runOnlyPendingTimers();
 

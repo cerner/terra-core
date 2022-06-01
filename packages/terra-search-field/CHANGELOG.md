@@ -1,8 +1,8 @@
 # Changelog
 
 ## Unreleased
-
 * Changed
+  * Dropped react-intl v2 support.
   * Fixed mobile keyboard not closing after pressing enter key on mobile devices
 
 ## 3.74.5 - (May 3, 2022)

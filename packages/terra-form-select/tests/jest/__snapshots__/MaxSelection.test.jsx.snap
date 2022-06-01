@@ -2,33 +2,6 @@
 
 exports[`MaxSelection correctly applies the theme context className to tag variant 1`] = `
 <ThemeContextProvider
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   theme={
     Object {
       "className": "orion-fusion-theme",
@@ -49,9 +22,7 @@ exports[`MaxSelection correctly applies the theme context className to tag varia
           }
         }
       >
-        <span>
-          Terra.form.select.maxSelectionOption
-        </span>
+        Terra.form.select.maxSelectionOption
       </FormattedMessage>
     </div>
   </MaxSelection>
@@ -62,7 +33,7 @@ exports[`MaxSelection should render a default MaxSelection 1`] = `
 <div
   className="max-selection"
 >
-  <FormattedMessage
+  <MemoizedFormattedMessage
     id="Terra.form.select.maxSelectionOption"
     values={
       Object {

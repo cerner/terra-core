@@ -22,7 +22,7 @@ exports[`should render MultiSelectField component with max height 1`] = `
       />
     </div>
   </div>
-  <InjectIntl(MultiSelect)
+  <injectIntl(MultiSelect)
     ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
@@ -59,6 +59,6 @@ exports[`should render MultiSelectField component with max height 1`] = `
       display="Violet"
       value="violet"
     />
-  </InjectIntl(MultiSelect)>
+  </injectIntl(MultiSelect)>
 </div>
 `;

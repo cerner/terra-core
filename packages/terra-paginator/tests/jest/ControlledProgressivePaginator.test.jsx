@@ -2,7 +2,7 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from '@cerner/terra-enzyme-intl';
 import ControlledProgressivePaginator from '../../src/ControlledProgressivePaginator';
 
 describe('Paginator', () => {
@@ -10,7 +10,7 @@ describe('Paginator', () => {
 
   // Snapshot Tests
   it('should render a Controlled ProgressivePaginator - Tiny', () => {
-    const wrapper = shallowWithIntl(defaultRender).dive();
+    const wrapper = shallowWithIntl(defaultRender).dive().dive();
     wrapper.setState({ breakpoint: 'tiny' });
     wrapper.update();
     expect(wrapper).toMatchSnapshot();
@@ -18,7 +18,7 @@ describe('Paginator', () => {
 
   // Snapshot Tests
   it('should render a Controlled ProgressivePaginator - Large', () => {
-    const wrapper = shallowWithIntl(defaultRender).dive();
+    const wrapper = shallowWithIntl(defaultRender).dive().dive();
     wrapper.setState({ breakpoint: 'large' });
     wrapper.update();
     expect(wrapper).toMatchSnapshot();

@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Changed
+  * Updated react-intl supported version to V5 on component docs.
 
 * Fixed
   * Updated broken links in terra-form-select and action-footer.

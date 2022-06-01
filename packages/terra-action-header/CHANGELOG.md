@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Breaking
+  * Dropped react-intl v2 support.
 
 ## 2.74.2 - (February 24, 2022)
 

@@ -2,124 +2,124 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, renderWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, renderWithIntl } from '@cerner/terra-enzyme-intl';
 import Select from '../../src/Select';
 import Option from '../../src/shared/_Option';
 import OptGroup from '../../src/shared/_OptGroup';
 
 describe('Select', () => {
   it('should render a default variant', () => {
-    const wrapper = shallowWithIntl(<Select />).dive();
+    const wrapper = shallowWithIntl(<Select />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a combobox variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="combobox" />);
+    const wrapper = shallowWithIntl(<Select variant="combobox" />).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a multiple variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="multiple" />).dive();
+    const wrapper = shallowWithIntl(<Select variant="multiple" />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a search variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="search" />).dive();
+    const wrapper = shallowWithIntl(<Select variant="search" />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a tag variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="tag" />).dive();
+    const wrapper = shallowWithIntl(<Select variant="tag" />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a default variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Select placeholder="Placeholder" />).dive();
+    const wrapper = shallowWithIntl(<Select placeholder="Placeholder" />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a combobox variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Select variant="combobox" placeholder="Placeholder" />);
+    const wrapper = shallowWithIntl(<Select variant="combobox" placeholder="Placeholder" />).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a multiple variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Select variant="multiple" placeholder="Placeholder" />).dive();
+    const wrapper = shallowWithIntl(<Select variant="multiple" placeholder="Placeholder" />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a search variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Select variant="search" placeholder="Placeholder" />).dive();
+    const wrapper = shallowWithIntl(<Select variant="search" placeholder="Placeholder" />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a tag variant with a placeholder', () => {
-    const wrapper = shallowWithIntl(<Select variant="tag" placeholder="Placeholder" />).dive();
+    const wrapper = shallowWithIntl(<Select variant="tag" placeholder="Placeholder" />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled default variant', () => {
-    const wrapper = shallowWithIntl(<Select disabled />).dive();
+    const wrapper = shallowWithIntl(<Select disabled />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled combobox variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="tag" disabled />).dive();
+    const wrapper = shallowWithIntl(<Select variant="tag" disabled />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled multiple variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="multiple" disabled />).dive();
+    const wrapper = shallowWithIntl(<Select variant="multiple" disabled />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled search variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="search" disabled />).dive();
+    const wrapper = shallowWithIntl(<Select variant="search" disabled />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a disabled tag variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="tag" disabled />).dive();
+    const wrapper = shallowWithIntl(<Select variant="tag" disabled />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid default variant', () => {
-    const wrapper = shallowWithIntl(<Select isInvalid />).dive();
+    const wrapper = shallowWithIntl(<Select isInvalid />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid combobox variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="combobox" isInvalid />);
+    const wrapper = shallowWithIntl(<Select variant="combobox" isInvalid />).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid multiple variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="multiple" isInvalid />).dive();
+    const wrapper = shallowWithIntl(<Select variant="multiple" isInvalid />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid search variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="search" isInvalid />).dive();
+    const wrapper = shallowWithIntl(<Select variant="search" isInvalid />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an invalid tag variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="tag" isInvalid />).dive();
+    const wrapper = shallowWithIntl(<Select variant="tag" isInvalid />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an incomplete default variant', () => {
-    const wrapper = shallowWithIntl(<Select isIncomplete />).dive();
+    const wrapper = shallowWithIntl(<Select isIncomplete />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an incomplete combobox variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="combobox" isIncomplete />);
+    const wrapper = shallowWithIntl(<Select variant="combobox" isIncomplete />).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an incomplete multiple variant', () => {
-    const wrapper = shallowWithIntl(<Select variant="multiple" isIncomplete />).dive();
+    const wrapper = shallowWithIntl(<Select variant="multiple" isIncomplete />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -177,7 +177,7 @@ describe('Select', () => {
 
   it('should call onBlur', () => {
     const mockBlur = jest.fn();
-    const wrapper = shallowWithIntl(<Select onBlur={mockBlur} />).dive();
+    const wrapper = shallowWithIntl(<Select onBlur={mockBlur} />).dive().dive();
 
     wrapper.simulate('focus');
     wrapper.simulate('blur');
@@ -187,7 +187,7 @@ describe('Select', () => {
 
   it('should call onFocus', () => {
     const mockFocus = jest.fn();
-    const wrapper = shallowWithIntl(<Select onFocus={mockFocus} />).dive();
+    const wrapper = shallowWithIntl(<Select onFocus={mockFocus} />).dive().dive();
 
     wrapper.simulate('focus');
 
@@ -196,7 +196,7 @@ describe('Select', () => {
 
   it('should call onClick', () => {
     const mockClick = jest.fn();
-    const wrapper = shallowWithIntl(<Select onClick={mockClick} />).dive();
+    const wrapper = shallowWithIntl(<Select onClick={mockClick} />).dive().dive();
 
     wrapper.simulate('click');
 
@@ -204,12 +204,12 @@ describe('Select', () => {
   });
 
   it('should render a clear option', () => {
-    const wrapper = shallowWithIntl(<Select allowClear />).dive();
+    const wrapper = shallowWithIntl(<Select allowClear />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a required select', () => {
-    const wrapper = shallowWithIntl(<Select required />).dive();
+    const wrapper = shallowWithIntl(<Select required />).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 

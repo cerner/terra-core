@@ -2,6 +2,10 @@
 
 exports[`I18nProvider for snapshot tests renders a default I18nProvider 1`] = `
 <IntlProvider
+  defaultFormats={Object {}}
+  defaultLocale="en"
+  fallbackOnEmptyString={true}
+  formats={Object {}}
   key="en"
   locale="en"
   messages={
@@ -9,6 +13,9 @@ exports[`I18nProvider for snapshot tests renders a default I18nProvider 1`] = `
       "Terra": "Terra",
     }
   }
+  onError={[Function]}
+  onWarn={[Function]}
+  textComponent={Symbol(react.fragment)}
 >
   <Children />
 </IntlProvider>
