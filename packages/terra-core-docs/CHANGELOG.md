@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+* Fixed
+  * Updated broken links in terra-form-select and action-footer.
+
+## 1.13.6 - (May 3, 2022)
+
+* Changed
+  * Icon table regenerated after fixing trending up/down labeling errors
+  * Updated screenshot tests to reflect trending icon changes 
+
+## 1.13.5 - (April 29, 2022)
+
 * Changed
   * Updated hyperlink tests and examples.
   * Added Hyperlink Button tests and examples.
