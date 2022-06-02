@@ -4,7 +4,30 @@ import { Badge } from 'terra-icon/package.json?dev-site-package';
 
 # Terra Icon Upgrade Guide
 
-## Changes from 2.0 to 3.0
+- [Upgrading from 3.0 to 4.0](#upgrading-from-3.0-to-4.0)
+- [Upgrading from 2.0 to 3.0](#upgrading-from-2.0-to-3.0)
+
+## Upgrading from 3.0 to 4.0
+
+- Icons are now split into `meaningful icons` and `decorative icons`. By default, icons are imported as `meaningful`. To import `decorative` icons, the import statement must be updated:
+
+```js
+// importing a meaninful icon
+import Star           from "terra-icon/lib/icon/IconFeaturedOutlineYellow";
+
+// importing a decorative icon
+import DecorativeStar from "terra-icon/lib/icon/decorative/IconFeaturedOutlineYellow";
+```
+
+For more information on the difference between `meaningful` and `decorative` icons, see [Acessibility Guide](/components/cerner-terra-core-docs/icon/accessibility-guide).
+
+### Prop changes
+
+- `ariaLabel` has been deprecated and is replaced by the `a11yLabel` prop.
+- `a11yLabel` is now _required_ if importing a meaningful icon.
+
+
+## Upgrading from 2.0 to 3.0
 
 ### Changes to CSS Custom Properties
 
