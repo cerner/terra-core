@@ -14,6 +14,7 @@
   * Added Accessibility guide for `terra-image`.
   * Added docs for `DecorativeImage`.
   * Added A11y guide for `terra-icon`.
+  * Added upgrade guide for `terra-icon` from 3 to 4.
 
 ## 1.13.6 - (May 3, 2022)
 
