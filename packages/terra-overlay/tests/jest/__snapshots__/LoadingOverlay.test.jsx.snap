@@ -61,7 +61,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                   class="content"
                 >
                   <svg
-                    aria-hidden="true"
                     class="tui-Icon icon icon"
                     data-name="Layer 1"
                     focusable="false"
@@ -70,6 +69,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                     width="36"
                     xmlns="http://www.w3.org/2000/svg"
                   >
+                    <title />
                     <path
                       d="M24 0a3.8 3.8 0 11-3.8 3.8A3.8 3.8 0 0124 0zm0 40.4a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm20.2-20.2a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm-40.4 0A3.8 3.8 0 110 24a3.8 3.8 0 013.8-3.8zM38.3 5.9a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zM9.7 34.5a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm0-28.6a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm28.6 28.6a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8z"
                     />
@@ -118,7 +118,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <IconBase
-                    ariaLabel={null}
                     className="icon"
                     data-name="Layer 1"
                     focusable="false"
@@ -130,7 +129,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      aria-hidden="true"
                       className="tui-Icon icon icon"
                       data-name="Layer 1"
                       focusable="false"
@@ -139,6 +137,7 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                       width="36"
                       xmlns="http://www.w3.org/2000/svg"
                     >
+                      <title />
                       <path
                         d="M24 0a3.8 3.8 0 11-3.8 3.8A3.8 3.8 0 0124 0zm0 40.4a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm20.2-20.2a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm-40.4 0A3.8 3.8 0 110 24a3.8 3.8 0 013.8-3.8zM38.3 5.9a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zM9.7 34.5a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm0-28.6a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm28.6 28.6a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8z"
                       />
@@ -199,7 +198,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                   class="content"
                 >
                   <svg
-                    aria-hidden="true"
                     class="tui-Icon icon icon"
                     data-name="Layer 1"
                     focusable="false"
@@ -208,6 +206,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                     width="36"
                     xmlns="http://www.w3.org/2000/svg"
                   >
+                    <title />
                     <path
                       d="M24 0a3.8 3.8 0 11-3.8 3.8A3.8 3.8 0 0124 0zm0 40.4a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm20.2-20.2a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm-40.4 0A3.8 3.8 0 110 24a3.8 3.8 0 013.8-3.8zM38.3 5.9a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zM9.7 34.5a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm0-28.6a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm28.6 28.6a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8z"
                     />
@@ -256,7 +255,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <IconBase
-                    ariaLabel={null}
                     className="icon"
                     data-name="Layer 1"
                     focusable="false"
@@ -268,7 +266,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      aria-hidden="true"
                       className="tui-Icon icon icon"
                       data-name="Layer 1"
                       focusable="false"
@@ -277,6 +274,7 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                       width="36"
                       xmlns="http://www.w3.org/2000/svg"
                     >
+                      <title />
                       <path
                         d="M24 0a3.8 3.8 0 11-3.8 3.8A3.8 3.8 0 0124 0zm0 40.4a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm20.2-20.2a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm-40.4 0A3.8 3.8 0 110 24a3.8 3.8 0 013.8-3.8zM38.3 5.9a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zM9.7 34.5a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm0-28.6a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8zm28.6 28.6a3.8 3.8 0 11-3.8 3.8 3.8 3.8 0 013.8-3.8z"
                       />

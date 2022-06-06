@@ -16,6 +16,27 @@
 ## 1.13.5 - (April 29, 2022)
 
 * Changed
+  * Updated hyperlink tests and examples.
+  * Added Hyperlink Button tests and examples.
+  * Re-order hyperlink docs.
+  * Added Accessibility guide for `terra-hyperlink`.
+  * linter fixes.
+  * Spelling fixes for Image accessibility guide.
+  
+* Added
+  * Added Accessibility guide for `terra-image`.
+  * Added docs for `DecorativeImage`.
+  * Added A11y guide for `terra-icon`.
+
+## 1.13.6 - (May 3, 2022)
+
+* Changed
+  * Icon table regenerated after fixing trending up/down labeling errors
+  * Updated screenshot tests to reflect trending icon changes 
+
+## 1.13.5 - (April 29, 2022)
+
+* Changed
   * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.46.0.
   * Updated routes/sidebar names for package root component pages to "About" for consistency.
   * Moved docs files for the following packages into the root directory for their docs:

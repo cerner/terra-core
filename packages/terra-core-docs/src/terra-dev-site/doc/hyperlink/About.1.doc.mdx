@@ -2,11 +2,9 @@ import { Badge } from 'terra-hyperlink/package.json?dev-site-package';
 
 import DefaultHyperlink from './example/DefaultHyperlink?dev-site-example';
 import Audio from './example/AudioHyperlink?dev-site-example';
-import Disabled from './example/DisabledHyperlink?dev-site-example';
 import Document from './example/DocumentHyperlink?dev-site-example';
 import External from './example/ExternalHyperlink?dev-site-example';
 import Image from './example/ImageHyperlink?dev-site-example';
-import UnderlineHidden from './example/UnderlineHiddenHyperlink?dev-site-example';
 import Video from './example/VideoHyperlink?dev-site-example';
 
 import HyperlinkPropsTable from 'terra-hyperlink/src/Hyperlink?dev-site-props-table';
@@ -31,6 +29,7 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
+| react-intl | ^2.8.0 |
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -46,13 +45,11 @@ import Hyperlink from 'terra-hyperlink';
 
 ## Examples
 <DefaultHyperlink />
-<Disabled />
 <External description="An external variant adds a custom icon to indicate the destination is external to the source." />
 <Audio description="An audio variant adds a custom icon to indicate the content linked is audio." />
 <Video description="A video variant adds a custom icon to indicate the content linked is a video." />
 <Image description="An image variant adds a custom icon to indicate the content linked is an image." />
 <Document description="A document variant adds a custom icon to indicate the content linked is document (.pdf, .doc, .xls, etc.)." />
-<UnderlineHidden description="Option to hide the default underline when applied with theme-specific styling. Reserve for use when terra-hyperlink is applied in special situations within lists, other controls, or other components." />
 
 ## Hyperlink Props
 <HyperlinkPropsTable />

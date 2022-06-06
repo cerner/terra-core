@@ -20,7 +20,6 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            aria-hidden="true"
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
             focusable="false"
@@ -29,6 +28,7 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title />
             <path
               d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
@@ -69,7 +69,6 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            aria-hidden="true"
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
             focusable="false"
@@ -78,6 +77,7 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title />
             <path
               d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
@@ -130,7 +130,6 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            aria-hidden="true"
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
             focusable="false"
@@ -139,6 +138,7 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title />
             <path
               d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
@@ -174,7 +174,6 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            aria-hidden="true"
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
             focusable="false"
@@ -183,6 +182,7 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title />
             <path
               d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
@@ -280,7 +280,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <IconBase
-                  ariaLabel={null}
                   className=""
                   data-name="Layer 1"
                   focusable="false"
@@ -292,7 +291,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <svg
-                    aria-hidden="true"
                     className="tui-Icon icon is-bidi"
                     data-name="Layer 1"
                     focusable="false"
@@ -301,6 +299,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
+                    <title />
                     <path
                       d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
                     />

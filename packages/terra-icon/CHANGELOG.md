@@ -4,11 +4,21 @@
 
 * Breaking
   * Dropped react-intl v2 support.
+  * Updated terra-icon to meet accessibility standards.
+  * Updated jest snapshots.
+
+## 3.47.1 - (May 3, 2022)
+
+* Changed
+  * Updated to `one-cerner-style-icons` v1.46.1
+  * Fixed labeling errors on trending up/down icons
+
+## 3.47.0 - (April 29, 2022)
 
 * Changed
   * Updated to `one-cerner-style-icons` v1.47.0
   * Removed colored static favorite star in favor of using the themeable variant of the star icon
-    * Consumers that are currently using the static icon should change their reference to the themeable variant, as the duplicate static replacement will be removed at some point.
+  * Consumers that are currently using the static icon should change their reference to the themeable variant, as the duplicate static replacement will be removed at some point.
 
 ## 3.47.1 - (May 3, 2022)
 

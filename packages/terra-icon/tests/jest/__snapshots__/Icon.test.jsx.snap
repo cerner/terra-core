@@ -2,7 +2,6 @@
 
 exports[`Icon IconAdd should shallow IconBase 1`] = `
 <IconBase
-  ariaLabel={null}
   data-name="Layer 1"
   focusable="false"
   height="1em"
@@ -20,11 +19,11 @@ exports[`Icon IconAdd should shallow IconBase 1`] = `
 
 exports[`Icon IconComment should render IconBase with custom-class 1`] = `
 <svg
-  aria-hidden="true"
   class="tui-Icon icon is-bidi custom-class"
   data-name="Layer 1"
   focusable="false"
   height="1em"
+  role="presentation"
   viewBox="0 0 48 48"
   width="1em"
   xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +36,6 @@ exports[`Icon IconComment should render IconBase with custom-class 1`] = `
 
 exports[`Icon IconComment should shallow IconBase 1`] = `
 <IconBase
-  ariaLabel={null}
   className=""
   data-name="Layer 1"
   focusable="false"
@@ -56,7 +54,6 @@ exports[`Icon IconComment should shallow IconBase 1`] = `
 
 exports[`Icon IconSpinner should shallow IconBase 1`] = `
 <IconBase
-  ariaLabel={null}
   className=""
   data-name="Layer 1"
   focusable="false"
@@ -74,13 +71,12 @@ exports[`Icon IconSpinner should shallow IconBase 1`] = `
 `;
 
 exports[`Icon correctly applies the theme context className 1`] = `
-<IconAdd
+<IconAddDec
   data-name="Layer 1"
   viewBox="0 0 48 48"
   xmlns="http://www.w3.org/2000/svg"
 >
   <IconBase
-    ariaLabel={null}
     data-name="Layer 1"
     focusable="false"
     height="1em"
@@ -91,11 +87,11 @@ exports[`Icon correctly applies the theme context className 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <svg
-      aria-hidden="true"
       className="tui-Icon icon"
       data-name="Layer 1"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -105,5 +101,5 @@ exports[`Icon correctly applies the theme context className 1`] = `
       />
     </svg>
   </IconBase>
-</IconAdd>
+</IconAddDec>
 `;

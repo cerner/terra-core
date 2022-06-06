@@ -7,7 +7,7 @@ Terra.describeViewports('Hyperlink', ['tiny'], () => {
   });
 
   it('should display disabled Hyperlink', () => {
-    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/disabled-hyperlink');
+    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/private-disabled-hyperlink');
 
     Terra.validates.element('disabled');
   });
@@ -61,7 +61,7 @@ Terra.describeViewports('Hyperlink', ['tiny'], () => {
   });
 
   it('should display Hyperlink with hidden underline', () => {
-    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/underline-hidden-hyperlink');
+    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/private-underline-hidden-hyperlink');
 
     Terra.validates.element('hidden underline');
   });

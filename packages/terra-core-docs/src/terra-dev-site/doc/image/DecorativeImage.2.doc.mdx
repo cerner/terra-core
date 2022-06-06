@@ -1,0 +1,61 @@
+import { Badge } from 'terra-image/package.json?dev-site-package';
+
+import DecorativeImageVariants from './example/DecorativeImage/DecorativeImageVariants?dev-site-example';
+import DecorativeImageFit from './example/DecorativeImage/DecorativeImageFitTypes?dev-site-example';
+import DecorativeImageBar from './example/DecorativeImage/DecorativeImageBar?dev-site-example';
+import DecorativeImageTextLink from './example/DecorativeImage/DecorativeImageTextLink?dev-site-example';
+
+import DecorativeImagePropsTable from 'terra-image/src/variants/_DecorativeImage?dev-site-props-table';
+
+<Badge />
+
+# Decorative Image
+
+Decorative images are images that don’t add information to the content of a page but instead support existing content or are used plainly for aesthetics. For example, it can be an image depicting adjacent text or to make the website more visually attractive.
+
+`DecorativeImage` should be used only when the purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the page.
+
+Images may be decorative when they are:
+- Visual styling such as borders, spacers, and corners.
+- Supplementary to link text to improve its appearance or increase the clickable area.
+- Illustrative of adjacent text but not contributing information (“eye-candy”).
+- Identified and described by surrounding text.
+
+`DecorativeImage` is implemented in a way that it can be ignored by assistive technology.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-image`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import { DecorativeImage } from 'terra-image';
+```
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
+
+## Examples
+<DecorativeImageBar />
+<DecorativeImageTextLink />
+<DecorativeImageVariants />
+<DecorativeImageFit />
+
+## Image Props
+<DecorativeImagePropsTable />

@@ -9,7 +9,7 @@ const OnCloseToggleButton = () => {
   };
 
   return (
-    <div>
+    <div id="toggle-button-example">
       <div id="on-close-event">
         <h3>{`Times Closed: ${timesClosed}`}</h3>
       </div>

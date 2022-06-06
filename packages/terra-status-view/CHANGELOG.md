@@ -4,6 +4,9 @@
 * Changed
   * Dropped react-intl v2 support.
 
+* Changed
+  * Updated jest snapshots.
+  
 ## 4.48.5 - (May 3, 2022)
 
 * Changed
