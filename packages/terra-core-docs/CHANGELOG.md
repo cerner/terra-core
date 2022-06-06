@@ -2,29 +2,23 @@
 
 ## Unreleased
 
-* Fixed
-  * Updated broken links in terra-form-select and action-footer.
-
-## 1.13.6 - (May 3, 2022)
-
-* Changed
-  * Icon table regenerated after fixing trending up/down labeling errors
-  * Updated screenshot tests to reflect trending icon changes 
-
-## 1.13.5 - (April 29, 2022)
-
 * Changed
   * Updated hyperlink tests and examples.
-  * Added Hyperlink Button tests and examples.
   * Re-order hyperlink docs.
   * Added Accessibility guide for `terra-hyperlink`.
-  * linter fixes.
   * Spelling fixes for Image accessibility guide.
-  
+
 * Added
+  * Added Hyperlink Button tests and examples.
+  * Added Accessibility guide for `terra-hyperlink`.
   * Added Accessibility guide for `terra-image`.
   * Added docs for `DecorativeImage`.
-  * Added A11y guide for `terra-icon`.
+  * Added Accessibility guide for `terra-icon`.
+  * Added upgrade guide for `terra-icon` from 3 to 4.
+
+* Fixed
+  * Updated broken links in terra-form-select and action-footer.
+  * linter fixes.
 
 ## 1.13.6 - (May 3, 2022)
 
