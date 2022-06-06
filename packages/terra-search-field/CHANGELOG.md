@@ -4,6 +4,7 @@
 
   * Changed
     * Updated jest snapshots.
+    * Updated wdio snapshots.
     
 ## 3.75.0 - (July 5, 2022)
 

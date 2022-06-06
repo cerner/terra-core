@@ -4,16 +4,21 @@
 
 * Changed
   * Updated hyperlink tests and examples.
-  * Added Hyperlink Button tests and examples.
   * Re-order hyperlink docs.
   * Added Accessibility guide for `terra-hyperlink`.
-  * linter fixes.
   * Spelling fixes for Image accessibility guide.
-  
+
 * Added
+  * Added Hyperlink Button tests and examples.
+  * Added Accessibility guide for `terra-hyperlink`.
   * Added Accessibility guide for `terra-image`.
   * Added docs for `DecorativeImage`.
-  * Added A11y guide for `terra-icon`.
+  * Added Accessibility guide for `terra-icon`.
+  * Added upgrade guide for `terra-icon` from 3 to 4.
+
+* Fixed
+  * Updated broken links in terra-form-select and action-footer.
+  * linter fixes.
 
 ## 1.15.1 - (September 8, 2022)
 
