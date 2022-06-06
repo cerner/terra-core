@@ -3,6 +3,7 @@
   "main": "lib/I18n.js",
   "version": "4.38.1",
   "description": "The terra-i18n package provides on-demand internationalization of React components.",
+  "deprecated": "this packages does not supported by react-intl v5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
@@ -31,16 +32,5 @@
     "intl": "^1.2.5",
     "intl-locales-supported": ">=1.8.4 <1.8.12 || ^1.8.13",
     "prop-types": "^15.5.8"
-  },
-  "scripts": {
-    "compile": "babel --root-mode upward src --out-dir lib --copy-files",
-    "lint": "npm run lint:js",
-    "lint:js": "eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
-    "test": "npm run lint && npm run jest && npm run wdio",
-    "jest": "jest --config ../../jest.config.js",
-    "wdio-default": "cd ../.. && terra wdio",
-    "wdio-lowlight": "cd ../.. && terra wdio --themes clinical-lowlight-theme",
-    "wdio-fusion": "cd ../.. && terra wdio --themes orion-fusion-theme",
-    "wdio": "npm run wdio-default && npm run wdio-lowlight && npm run wdio-fusion"
   }
 }

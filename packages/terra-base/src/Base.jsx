@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { I18nProvider, i18nLoader } from 'terra-i18n';

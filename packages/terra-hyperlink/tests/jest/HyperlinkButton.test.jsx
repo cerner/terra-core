@@ -1,6 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { renderWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import { renderWithIntl, mountWithIntl } from '@cerner/terra-enzyme-intl';
 import HyperlinkButton from '../../src/HyperlinkButton';
 
 describe('Hyperlink Button', () => {
