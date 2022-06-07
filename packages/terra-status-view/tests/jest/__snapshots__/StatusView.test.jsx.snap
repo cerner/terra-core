@@ -144,173 +144,71 @@ exports[`should render a not-authorized status-view 1`] = `
 `;
 
 exports[`should render a status view with custom glyph, title, message, and two buttons 1`] = `
-<StatusView
-  buttonAttrs={
-    Array [
-      Object {
-        "key": 1,
-        "text": "Action1",
-      },
-      Object {
-        "key": 2,
-        "text": "Action2",
-      },
-    ]
-  }
-  customGlyph={
-    <IconDiamondDec
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  }
-  isAlignedTop={false}
-  isGlyphHidden={false}
-  message="Test Message"
-  title="Test Title"
+<div
+  className="outer-view"
 >
   <div
-    className="outer-view"
+    className="top-space"
+  />
+  <div
+    className="inner-view"
   >
     <div
-      className="top-space"
-    />
-    <div
-      className="inner-view"
+      className="glyph"
     >
-      <div
-        className="glyph"
-      >
-        <IconDiamondDec
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <IconBase
-            className="IconDiamond"
-            focusable="false"
-            height="1em"
-            isBidi={false}
-            isSpin={false}
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <svg
-              className="tui-Icon icon IconDiamond"
-              focusable="false"
-              height="1em"
-              role="presentation"
-              viewBox="0 0 48 48"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M24.8 47.7l22.9-22.9c.4-.4.4-1.1 0-1.6L24.8.3c-.4-.4-1.1-.4-1.6 0L.3 23.2c-.4.4-.4 1.1 0 1.6l22.9 22.9c.4.4 1.2.4 1.6 0z"
-                fill="#78288C"
-              />
-            </svg>
-          </IconBase>
-        </IconDiamondDec>
-      </div>
-      <p
-        className="title"
-      >
-        Test Title
-      </p>
-      <div
-        className="divider"
-      >
-        <Divider>
-          <hr
-            aria-hidden="true"
-            className="divider"
-          />
-        </Divider>
-      </div>
-      <p
-        className="message"
-      >
-        Test Message
-      </p>
-      <div
-        className="actions"
-      >
-        <Button
-          className="button"
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={false}
-          isReversed={false}
-          key="1"
-          text="Action1"
-          type="button"
-          variant="neutral"
-        >
-          <button
-            aria-disabled={false}
-            className="button neutral button"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            type="button"
-          >
-            <span
-              className="button-label text-only"
-            >
-              <span
-                className=""
-              >
-                Action1
-              </span>
-            </span>
-          </button>
-        </Button>
-        <Button
-          className="button"
-          isBlock={false}
-          isCompact={false}
-          isDisabled={false}
-          isIconOnly={false}
-          isReversed={false}
-          key="2"
-          text="Action2"
-          type="button"
-          variant="neutral"
-        >
-          <button
-            aria-disabled={false}
-            className="button neutral button"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            type="button"
-          >
-            <span
-              className="button-label text-only"
-            >
-              <span
-                className=""
-              >
-                Action2
-              </span>
-            </span>
-          </button>
-        </Button>
-      </div>
+      <IconDiamond
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
     </div>
+    <p
+      className="title"
+    >
+      Test Title
+    </p>
     <div
-      className="bottom-space"
-    />
+      className="divider"
+    >
+      <Divider />
+    </div>
+    <p
+      className="message"
+    >
+      Test Message
+    </p>
+    <div
+      className="actions"
+    >
+      <Button
+        className="button"
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={false}
+        isReversed={false}
+        key="1"
+        text="Action1"
+        type="button"
+        variant="neutral"
+      />
+      <Button
+        className="button"
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={false}
+        isReversed={false}
+        key="2"
+        text="Action2"
+        type="button"
+        variant="neutral"
+      />
+    </div>
   </div>
-</StatusView>
+  <div
+    className="bottom-space"
+  />
+</div>
 `;
 
 exports[`should render an error status-view 1`] = `
