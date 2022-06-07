@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Breaking
+  * Dropped react-intl v2 support.
+
 * Changed
   * `isDisabled` and `isUnderlineHidden` props have been marked as private.
   * Updated jest snapshots.
