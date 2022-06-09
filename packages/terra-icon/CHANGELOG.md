@@ -5,6 +5,8 @@
   * Breaking changes
     * Updated terra-icon to meet accessibility standards.
     * Updated jest snapshots.
+    * Updated wdio snapshots.
+
 
 ## 3.47.1 - (May 3, 2022)
 
