@@ -39,12 +39,12 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
       it('is active', () => {
         $('button').moveTo();
         browser.performActions([{
-          'type': 'pointer',
-          'id': 'pointer1',
-          'parameters': {'pointerType': 'mouse'},
-          'actions': [
-              {'type': 'pointerDown', 'button': 0}
-          ]
+          type: 'pointer',
+          id: 'pointer1',
+          parameters: { pointerType: 'mouse' },
+          actions: [
+            { type: 'pointerDown', button: 0 },
+          ],
         }]);
       });
 
@@ -54,12 +54,12 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
 
       it('release button press', () => {
         browser.performActions([{
-          'type': 'pointer',
-          'id': 'pointer2',
-          'parameters': {'pointerType': 'mouse'},
-          'actions': [
-              {'type': 'pointerUp', 'button': 0}
-          ]
+          type: 'pointer',
+          id: 'pointer2',
+          parameters: { pointerType: 'mouse' },
+          actions: [
+            { type: 'pointerUp', button: 0 },
+          ],
         }]);
         $('#root').moveTo();
       });

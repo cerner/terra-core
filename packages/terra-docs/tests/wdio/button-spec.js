@@ -21,12 +21,12 @@ Terra.describeViewports('Button', ['medium'], () => {
       $('#button').moveTo();
       Terra.validates.element('checks mouse interactions - hover', { selector: '#site' });
       browser.performActions([{
-        'type': 'pointer',
-        'id': 'pointer1',
-        'parameters': {'pointerType': 'mouse'},
-        'actions': [
-            {'type': 'pointerDown', 'button': 0}
-        ]
+        type: 'pointer',
+        id: 'pointer1',
+        parameters: { pointerType: 'mouse' },
+        actions: [
+          { type: 'pointerDown', button: 0 },
+        ],
       }]);
       Terra.validates.element('checks mouse interactions - active', { selector: '#site' });
     });
