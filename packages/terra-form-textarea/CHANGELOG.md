@@ -3,8 +3,9 @@
 ## Unreleased
 
 * Changed
+  * Updated WDIO screenshots due to docker chrome node upgrade.
   * Updated jest snapshots.
-  
+
 ## 5.19.4 - (May 3, 2022)
 
 * Changed

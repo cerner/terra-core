@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated WDIO screenshots due to docker chrome node upgrade.
+
 * Added
   * Added new subcomponent `DecorativeImage` to support non-informative image.
 

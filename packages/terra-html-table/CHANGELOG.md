@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated WDIO screenshots due to docker chrome node upgrade.
+
 ## 1.13.1 - (December 14, 2021)
 
 * Changed

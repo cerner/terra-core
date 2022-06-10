@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Updated snapshots.
+  * Updated WDIO screenshots due to docker chrome node upgrade.
 
 ## 3.49.0 - (September 28, 2021)
 
