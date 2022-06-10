@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * replaced deperecated `browser.buttonDown` with `browser.performActions` in wdio specs.
+
 ## 2.55.1 - (January 4, 2022)
 
 * Added

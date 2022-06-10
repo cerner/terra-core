@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * replaced deperecated `browser.buttonDown` with `browser.performActions` in wdio specs.
   * Update wdio screenshots for failing MDX notice tests.
 
 ## 1.7.0 - (February 24, 2022)
