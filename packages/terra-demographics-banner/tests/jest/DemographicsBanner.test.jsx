@@ -1,12 +1,12 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl } from '@cerner/terra-enzyme-intl';
 import Image from 'terra-image';
 import DemographicsBanner from '../../src/DemographicsBanner';
 
 it('renders a blank banner wrapper', () => {
   const banner = shallowWithIntl(<DemographicsBanner />);
-  expect(banner.dive()).toMatchSnapshot();
+  expect(banner.dive().dive()).toMatchSnapshot();
 });
 
 it('renders the banner wrapper with all props', () => {
@@ -26,5 +26,5 @@ it('renders the banner wrapper with all props', () => {
     />
   ));
 
-  expect(banner.dive()).toMatchSnapshot();
+  expect(banner.dive().dive()).toMatchSnapshot();
 });

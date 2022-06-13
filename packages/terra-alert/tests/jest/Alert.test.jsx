@@ -1,6 +1,6 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from '@cerner/terra-enzyme-intl';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import Button from 'terra-button';
 import Alert from '../../src/Alert';
@@ -122,6 +122,6 @@ it('correctly applies the theme context className', () => {
     });
 
   const wrapper = shallowWithIntl(<Alert type="success" />);
-  const headerContainer = wrapper.dive().dive();
+  const headerContainer = wrapper.dive().dive().dive();
   expect(headerContainer).toMatchSnapshot();
 });

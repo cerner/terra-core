@@ -3,33 +3,6 @@
 exports[`LoadingOverlay should not render markup when isOpen is not provided 1`] = `
 <LoadingOverlay
   backgroundStyle="light"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isAnimated={false}
   isOpen={false}
   isRelativeToContainer={false}
@@ -39,33 +12,6 @@ exports[`LoadingOverlay should not render markup when isOpen is not provided 1`]
     aria-live="polite"
     backgroundStyle="light"
     className="loading-overlay"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
     isOpen={false}
     isRelativeToContainer={false}
     isScrollable={false}
@@ -78,33 +24,6 @@ exports[`LoadingOverlay should not render markup when isOpen is not provided 1`]
 exports[`LoadingOverlay when isOpen is provided should render with message prop 1`] = `
 <LoadingOverlay
   backgroundStyle="light"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isAnimated={false}
   isOpen={true}
   isRelativeToContainer={false}
@@ -115,33 +34,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
     aria-live="polite"
     backgroundStyle="light"
     className="loading-overlay"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
     isOpen={true}
     isRelativeToContainer={false}
     isScrollable={false}
@@ -163,7 +55,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
               <div
                 aria-live="polite"
                 class="overlay fullscreen light layer-100 loading-overlay"
-                intl="[object Object]"
                 tabindex="0"
               >
                 <div
@@ -211,33 +102,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
             <div
               aria-live="polite"
               className="overlay fullscreen light layer-100 loading-overlay"
-              intl={
-                Object {
-                  "defaultFormats": Object {},
-                  "defaultLocale": "en",
-                  "formatDate": [Function],
-                  "formatHTMLMessage": [Function],
-                  "formatMessage": [Function],
-                  "formatNumber": [Function],
-                  "formatPlural": [Function],
-                  "formatRelative": [Function],
-                  "formatTime": [Function],
-                  "formats": Object {},
-                  "formatters": Object {
-                    "getDateTimeFormat": [Function],
-                    "getMessageFormat": [Function],
-                    "getNumberFormat": [Function],
-                    "getPluralFormat": [Function],
-                    "getRelativeFormat": [Function],
-                  },
-                  "locale": "en",
-                  "messages": null,
-                  "now": [Function],
-                  "onError": [Function],
-                  "textComponent": "span",
-                  "timeZone": null,
-                }
-              }
               onClick={[Function]}
               tabIndex="0"
             >
@@ -299,33 +163,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
 exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay should render a default component 1`] = `
 <LoadingOverlay
   backgroundStyle="light"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isAnimated={false}
   isOpen={true}
   isRelativeToContainer={false}
@@ -335,33 +172,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
     aria-live="polite"
     backgroundStyle="light"
     className="loading-overlay"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
     isOpen={true}
     isRelativeToContainer={false}
     isScrollable={false}
@@ -383,7 +193,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
               <div
                 aria-live="polite"
                 class="overlay fullscreen light layer-100 loading-overlay"
-                intl="[object Object]"
                 tabindex="0"
               >
                 <div
@@ -431,33 +240,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
             <div
               aria-live="polite"
               className="overlay fullscreen light layer-100 loading-overlay"
-              intl={
-                Object {
-                  "defaultFormats": Object {},
-                  "defaultLocale": "en",
-                  "formatDate": [Function],
-                  "formatHTMLMessage": [Function],
-                  "formatMessage": [Function],
-                  "formatNumber": [Function],
-                  "formatPlural": [Function],
-                  "formatRelative": [Function],
-                  "formatTime": [Function],
-                  "formats": Object {},
-                  "formatters": Object {
-                    "getDateTimeFormat": [Function],
-                    "getMessageFormat": [Function],
-                    "getNumberFormat": [Function],
-                    "getPluralFormat": [Function],
-                    "getRelativeFormat": [Function],
-                  },
-                  "locale": "en",
-                  "messages": null,
-                  "now": [Function],
-                  "onError": [Function],
-                  "textComponent": "span",
-                  "timeZone": null,
-                }
-              }
               onClick={[Function]}
               tabIndex="0"
             >
@@ -503,7 +285,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                 </IconSpinner>
                 <FormattedMessage
                   id="Terra.Overlay.loading"
-                  values={Object {}}
                 >
                   <div
                     className="message"

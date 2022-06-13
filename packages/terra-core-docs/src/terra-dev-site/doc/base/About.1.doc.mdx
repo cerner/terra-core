@@ -1,12 +1,15 @@
-import { Badge } from 'terra-base/package.json?dev-site-package';
-
+import { Notice } from '@cerner/terra-docs';
 import GlobalBaseStylesExample from './example/GlobalBaseStylesExample?dev-site-example'
 
-import BasePropsTable from 'terra-base/src/Base?dev-site-props-table';
-
-<Badge />
+![Deprecated](https://badgen.net/badge/status/Deprecated/grey)
 
 # Terra Base
+
+<Notice variant='deprecation'>
+
+Terra-base has been Deprecated and code has been moved [Application-Base](https://engineering.cerner.com/terra-ui/application/terra-application/components/application-base)
+
+</Notice>
 
 The `terra-base` component handles two main concerns, [application internationalization](https://engineering.cerner.com/terra-ui/#/getting-started/terra-ui/internationalization/internationalization-intro) and global base styles.
 
@@ -34,7 +37,7 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-| react-intl | ^2.8.0 |
+| react-intl | ^5.8.2 |
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
@@ -86,6 +89,3 @@ const locale = (navigator.languages && navigator.languages[0])
 
 ## Example
 <GlobalBaseStylesExample />
-
-## Base Props
-<BasePropsTable />

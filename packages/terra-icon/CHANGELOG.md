@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Breaking
+  * Dropped react-intl v2 support.
+
 * Changed
   * Updated to `one-cerner-style-icons` v1.47.0
   * Removed colored static favorite star in favor of using the themeable variant of the star icon

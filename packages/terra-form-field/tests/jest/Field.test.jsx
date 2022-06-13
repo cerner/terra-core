@@ -2,7 +2,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from '@cerner/terra-enzyme-intl';
 import Input from './mocks/Input';
 import Select from './mocks/Select';
 import Textarea from './mocks/Textarea';

@@ -151,8 +151,15 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
       it('closes the dropdown when clicking outside the dropdownbutton', () => {
         $('#root').moveTo({ xOffset: 200, yOffset: 1 });
-        browser.buttonDown();
-        browser.buttonUp();
+        browser.performActions([{
+          type: 'pointer',
+          id: 'pointer1',
+          parameters: { pointerType: 'mouse' },
+          actions: [
+            { type: 'pointerDown', button: 0 },
+            { type: 'pointerUp', button: 0 },
+          ],
+        }]);
         Terra.validates.element('clicking outside closes dropdown');
       });
     });

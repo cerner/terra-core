@@ -3,33 +3,6 @@
 exports[`should render the selectId to the input field in ComboboxField component 1`] = `
 <div
   className="field"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
 >
   <div
     className="label-group"
@@ -49,7 +22,7 @@ exports[`should render the selectId to the input field in ComboboxField componen
       />
     </div>
   </div>
-  <InjectIntl(Combobox)
+  <injectIntl(Combobox)
     allowClear={false}
     ariaLabel="Label"
     defaultValue="blue"
@@ -86,7 +59,7 @@ exports[`should render the selectId to the input field in ComboboxField componen
       display="Violet"
       value="violet"
     />
-  </InjectIntl(Combobox)>
+  </injectIntl(Combobox)>
 </div>
 `;
 
@@ -112,7 +85,7 @@ exports[`should render the selectId to the input field in MultiSelectField compo
       />
     </div>
   </div>
-  <InjectIntl(MultiSelect)
+  <injectIntl(MultiSelect)
     ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
@@ -148,40 +121,13 @@ exports[`should render the selectId to the input field in MultiSelectField compo
       display="Violet"
       value="violet"
     />
-  </InjectIntl(MultiSelect)>
+  </injectIntl(MultiSelect)>
 </div>
 `;
 
 exports[`should render the selectId to the input field in SearchSelectField component 1`] = `
 <div
   className="field"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
 >
   <div
     className="label-group"
@@ -201,7 +147,7 @@ exports[`should render the selectId to the input field in SearchSelectField comp
       />
     </div>
   </div>
-  <InjectIntl(SearchSelect)
+  <injectIntl(SearchSelect)
     allowClear={false}
     ariaLabel="Label"
     defaultValue="blue"
@@ -238,7 +184,7 @@ exports[`should render the selectId to the input field in SearchSelectField comp
       display="Violet"
       value="violet"
     />
-  </InjectIntl(SearchSelect)>
+  </injectIntl(SearchSelect)>
 </div>
 `;
 
@@ -264,7 +210,7 @@ exports[`should render the selectId to the input field in TagSelectField compone
       />
     </div>
   </div>
-  <InjectIntl(TagSelect)
+  <injectIntl(TagSelect)
     ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
@@ -300,6 +246,6 @@ exports[`should render the selectId to the input field in TagSelectField compone
       display="Violet"
       value="violet"
     />
-  </InjectIntl(TagSelect)>
+  </injectIntl(TagSelect)>
 </div>
 `;

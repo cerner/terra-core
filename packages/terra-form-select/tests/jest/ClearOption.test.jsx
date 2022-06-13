@@ -2,7 +2,7 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl } from '@cerner/terra-enzyme-intl';
 import ClearOption from '../../src/shared/_ClearOption';
 
 describe('ClearOption', () => {
@@ -12,11 +12,11 @@ describe('ClearOption', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mountWithIntl(
+    const wrapper = shallowWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <ClearOption value="" display="Clear" />
       </ThemeContextProvider>,
-    );
+    ).dive();
     expect(wrapper).toMatchSnapshot();
   });
 });

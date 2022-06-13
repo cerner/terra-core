@@ -2,7 +2,7 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { mountWithIntl } from 'terra-enzyme-intl';
+import { mountWithIntl } from '@cerner/terra-enzyme-intl';
 import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
 import StatusView, { StatusViewVariants } from '../../src/StatusView';
 

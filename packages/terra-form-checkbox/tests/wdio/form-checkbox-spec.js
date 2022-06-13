@@ -7,7 +7,8 @@ Terra.describeViewports('Checkbox', ['medium'], () => {
     });
 
     it('should hover on Checkbox', () => {
-      $('#default').moveTo();
+      $('label').scrollIntoView();
+      $('label').moveTo();
 
       Terra.validates.element('hover');
     });
@@ -36,7 +37,8 @@ Terra.describeViewports('Checkbox', ['medium'], () => {
     });
 
     it('should hover on disabled Checkbox', () => {
-      $('#disabled').moveTo();
+      $('label').scrollIntoView();
+      $('label').moveTo();
 
       Terra.validates.element('disabled hover');
     });

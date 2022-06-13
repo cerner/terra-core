@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Breaking
+  * Dropped react-intl v2 support.
+
 ## 1.29.1 - (December 14, 2021)
 
 * Changed

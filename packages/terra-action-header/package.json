@@ -24,7 +24,7 @@
   "peerDependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "react-intl": ">=2.8.0 <6.0.0"
+    "react-intl": "^5.8.2"
   },
   "dependencies": {
     "@cerner/terra-docs": "^1.7.0",
