@@ -121,6 +121,6 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.3.1",
     "webpack-merge": "^5.1.4",
-    "wicg-inert": "^3.1.1"
+    "wicg-inert": "3.1.1"
   }
 }
