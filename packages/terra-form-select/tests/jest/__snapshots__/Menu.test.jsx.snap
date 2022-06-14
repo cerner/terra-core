@@ -2,40 +2,13 @@
 
 exports[`Menu correctly applies the theme context className 1`] = `
 <ThemeContextProvider
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   theme={
     Object {
       "className": "orion-fusion-theme",
     }
   }
 >
-  <InjectIntl(Menu)
+  <injectIntl(Menu)
     onSelect={[Function]}
     searchValue="asdf"
     value="value"
@@ -48,29 +21,41 @@ exports[`Menu correctly applies the theme context className 1`] = `
     <Menu
       intl={
         Object {
+          "$t": [Function],
           "defaultFormats": Object {},
           "defaultLocale": "en",
+          "defaultRichTextElements": undefined,
+          "fallbackOnEmptyString": true,
           "formatDate": [Function],
-          "formatHTMLMessage": [Function],
+          "formatDateTimeRange": [Function],
+          "formatDateToParts": [Function],
+          "formatDisplayName": [Function],
+          "formatList": [Function],
+          "formatListToParts": [Function],
           "formatMessage": [Function],
           "formatNumber": [Function],
+          "formatNumberToParts": [Function],
           "formatPlural": [Function],
-          "formatRelative": [Function],
+          "formatRelativeTime": [Function],
           "formatTime": [Function],
+          "formatTimeToParts": [Function],
           "formats": Object {},
           "formatters": Object {
             "getDateTimeFormat": [Function],
+            "getDisplayNames": [Function],
+            "getListFormat": [Function],
             "getMessageFormat": [Function],
             "getNumberFormat": [Function],
-            "getPluralFormat": [Function],
-            "getRelativeFormat": [Function],
+            "getPluralRules": [Function],
+            "getRelativeTimeFormat": [Function],
           },
           "locale": "en",
           "messages": null,
-          "now": [Function],
           "onError": [Function],
-          "textComponent": "span",
-          "timeZone": null,
+          "onWarn": [Function],
+          "textComponent": Symbol(react.fragment),
+          "timeZone": undefined,
+          "wrapRichTextChunksInFragment": undefined,
         }
       }
       onSelect={[Function]}
@@ -128,37 +113,61 @@ exports[`Menu correctly applies the theme context className 1`] = `
         </Option>
       </ul>
     </Menu>
-  </InjectIntl(Menu)>
+  </injectIntl(Menu)>
 </ThemeContextProvider>
+`;
+
+exports[`Menu should not error when visuallyHiddenComponent has null for current 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
+
+exports[`Menu should not error when visuallyHiddenComponent is not provided 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`Menu should render a Menu with no results and update the live region appropriately 1`] = `
 <Menu
   intl={
     Object {
+      "$t": [Function],
       "defaultFormats": Object {},
       "defaultLocale": "en",
+      "defaultRichTextElements": undefined,
+      "fallbackOnEmptyString": true,
       "formatDate": [Function],
-      "formatHTMLMessage": [Function],
+      "formatDateTimeRange": [Function],
+      "formatDateToParts": [Function],
+      "formatDisplayName": [Function],
+      "formatList": [Function],
+      "formatListToParts": [Function],
       "formatMessage": [Function],
       "formatNumber": [Function],
+      "formatNumberToParts": [Function],
       "formatPlural": [Function],
-      "formatRelative": [Function],
+      "formatRelativeTime": [Function],
       "formatTime": [Function],
+      "formatTimeToParts": [Function],
       "formats": Object {},
       "formatters": Object {
         "getDateTimeFormat": [Function],
+        "getDisplayNames": [Function],
+        "getListFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
+        "getPluralRules": [Function],
+        "getRelativeTimeFormat": [Function],
       },
       "locale": "en",
       "messages": null,
-      "now": [Function],
       "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
+      "onWarn": [Function],
+      "textComponent": Symbol(react.fragment),
+      "timeZone": undefined,
+      "wrapRichTextChunksInFragment": undefined,
     }
   }
   onSelect={[Function]}
@@ -183,29 +192,41 @@ exports[`Menu should render a Menu with the clear option 1`] = `
   clearOptionDisplay="-Select-"
   intl={
     Object {
+      "$t": [Function],
       "defaultFormats": Object {},
       "defaultLocale": "en",
+      "defaultRichTextElements": undefined,
+      "fallbackOnEmptyString": true,
       "formatDate": [Function],
-      "formatHTMLMessage": [Function],
+      "formatDateTimeRange": [Function],
+      "formatDateToParts": [Function],
+      "formatDisplayName": [Function],
+      "formatList": [Function],
+      "formatListToParts": [Function],
       "formatMessage": [Function],
       "formatNumber": [Function],
+      "formatNumberToParts": [Function],
       "formatPlural": [Function],
-      "formatRelative": [Function],
+      "formatRelativeTime": [Function],
       "formatTime": [Function],
+      "formatTimeToParts": [Function],
       "formats": Object {},
       "formatters": Object {
         "getDateTimeFormat": [Function],
+        "getDisplayNames": [Function],
+        "getListFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
+        "getPluralRules": [Function],
+        "getRelativeTimeFormat": [Function],
       },
       "locale": "en",
       "messages": null,
-      "now": [Function],
       "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
+      "onWarn": [Function],
+      "textComponent": Symbol(react.fragment),
+      "timeZone": undefined,
+      "wrapRichTextChunksInFragment": undefined,
     }
   }
   onSelect={[Function]}
@@ -228,29 +249,41 @@ exports[`Menu should render a default Menu 1`] = `
 <Menu
   intl={
     Object {
+      "$t": [Function],
       "defaultFormats": Object {},
       "defaultLocale": "en",
+      "defaultRichTextElements": undefined,
+      "fallbackOnEmptyString": true,
       "formatDate": [Function],
-      "formatHTMLMessage": [Function],
+      "formatDateTimeRange": [Function],
+      "formatDateToParts": [Function],
+      "formatDisplayName": [Function],
+      "formatList": [Function],
+      "formatListToParts": [Function],
       "formatMessage": [Function],
       "formatNumber": [Function],
+      "formatNumberToParts": [Function],
       "formatPlural": [Function],
-      "formatRelative": [Function],
+      "formatRelativeTime": [Function],
       "formatTime": [Function],
+      "formatTimeToParts": [Function],
       "formats": Object {},
       "formatters": Object {
         "getDateTimeFormat": [Function],
+        "getDisplayNames": [Function],
+        "getListFormat": [Function],
         "getMessageFormat": [Function],
         "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
+        "getPluralRules": [Function],
+        "getRelativeTimeFormat": [Function],
       },
       "locale": "en",
       "messages": null,
-      "now": [Function],
       "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
+      "onWarn": [Function],
+      "textComponent": Symbol(react.fragment),
+      "timeZone": undefined,
+      "wrapRichTextChunksInFragment": undefined,
     }
   }
   onSelect={[Function]}

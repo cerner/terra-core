@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * Updated docs for components consuming react-intl v5.
+  * Updated terra-base and terra-i18n docs with deprecation notice.
+
 * Fixed
   * Updated broken links in terra-form-select and action-footer.
 

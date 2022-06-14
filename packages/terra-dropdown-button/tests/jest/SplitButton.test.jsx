@@ -2,7 +2,7 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from '@cerner/terra-enzyme-intl';
 import SplitButton, { Item } from '../../src/SplitButton';
 
 describe('Dropdown Button', () => {
@@ -12,7 +12,7 @@ describe('Dropdown Button', () => {
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper.dive()).toMatchSnapshot();
+    expect(wrapper.dive().dive()).toMatchSnapshot();
   });
 
   it('should render a split type with multiple children', () => {
@@ -23,7 +23,7 @@ describe('Dropdown Button', () => {
         <Item label="3rd Option" onSelect={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper.dive()).toMatchSnapshot();
+    expect(wrapper.dive().dive()).toMatchSnapshot();
   });
 
   it('should render a disabled split type', () => {
@@ -32,7 +32,7 @@ describe('Dropdown Button', () => {
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper.dive()).toMatchSnapshot();
+    expect(wrapper.dive().dive()).toMatchSnapshot();
   });
 
   it('should render a block split type', () => {
@@ -41,7 +41,7 @@ describe('Dropdown Button', () => {
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper.dive()).toMatchSnapshot();
+    expect(wrapper.dive().dive()).toMatchSnapshot();
   });
 
   it('should render a compact split type', () => {
@@ -50,7 +50,7 @@ describe('Dropdown Button', () => {
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper.dive()).toMatchSnapshot();
+    expect(wrapper.dive().dive()).toMatchSnapshot();
   });
 
   it('should render an open split type', () => {
@@ -58,10 +58,10 @@ describe('Dropdown Button', () => {
       <SplitButton primaryOptionLabel="Primary Option" onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
-    );
+    ).dive().dive();
     wrapper.setState({ isOpen: true });
 
-    expect(wrapper.dive()).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render a split type with custom attributes', () => {
@@ -70,7 +70,7 @@ describe('Dropdown Button', () => {
         <Item label="1st Option" onSelect={() => {}} />
       </SplitButton>,
     );
-    expect(wrapper.dive()).toMatchSnapshot();
+    expect(wrapper.dive().dive()).toMatchSnapshot();
   });
 
   it('correctly applies the theme context className', () => {

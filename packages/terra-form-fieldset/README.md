@@ -23,7 +23,6 @@ This component requires the following peer dependencies be installed in your app
 |-|-|
 | react | ^16.8.5 |
 | react-dom | ^16.8.5 |
-| react-intl | ^2.8.0 |
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

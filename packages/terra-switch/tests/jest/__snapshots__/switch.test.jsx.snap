@@ -6,33 +6,6 @@ exports[`Switch should render a default component 1`] = `
   aria-label="default"
   className="switch is-enabled"
   data-terra-switch-show-focus-styles={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   onBlur={[Function]}
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -52,9 +25,8 @@ exports[`Switch should render a default component 1`] = `
     <div
       className="status-label-text"
     >
-      <FormattedMessage
+      <MemoizedFormattedMessage
         id="Terra.switch.switchstatuslabel.off"
-        values={Object {}}
       />
     </div>
   </div>
@@ -76,33 +48,6 @@ exports[`Switch should render as disabled when set 1`] = `
   aria-label="Label"
   className="switch is-disabled"
   data-terra-switch-show-focus-styles={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   role="switch"
 >
   <div
@@ -117,9 +62,8 @@ exports[`Switch should render as disabled when set 1`] = `
     <div
       className="status-label-text"
     >
-      <FormattedMessage
+      <MemoizedFormattedMessage
         id="Terra.switch.switchstatuslabel.off"
-        values={Object {}}
       />
     </div>
   </div>
@@ -140,33 +84,6 @@ exports[`Switch should render block switch element when isBlock is specified 1`]
   aria-label="default"
   className="switch is-enabled is-block"
   data-terra-switch-show-focus-styles={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   onBlur={[Function]}
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -186,9 +103,8 @@ exports[`Switch should render block switch element when isBlock is specified 1`]
     <div
       className="status-label-text"
     >
-      <FormattedMessage
+      <MemoizedFormattedMessage
         id="Terra.switch.switchstatuslabel.off"
-        values={Object {}}
       />
     </div>
   </div>

@@ -13,33 +13,6 @@ exports[`NativeSelectField should render a NativeSelectField aria described by 1
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -48,7 +21,7 @@ exports[`NativeSelectField should render a NativeSelectField aria described by 1
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -71,33 +44,6 @@ exports[`NativeSelectField should render a NativeSelectField as disabled 1`] = `
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -106,7 +52,7 @@ exports[`NativeSelectField should render a NativeSelectField as disabled 1`] = `
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={true}
     id="test-id"
@@ -129,33 +75,6 @@ exports[`NativeSelectField should render a NativeSelectField as invalid 1`] = `
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   invalid={true}
   isInline={false}
   isInvalid={false}
@@ -165,7 +84,7 @@ exports[`NativeSelectField should render a NativeSelectField as invalid 1`] = `
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -188,33 +107,6 @@ exports[`NativeSelectField should render a NativeSelectField as optional 1`] = `
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -223,7 +115,7 @@ exports[`NativeSelectField should render a NativeSelectField as optional 1`] = `
   required={false}
   showOptional={true}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -246,33 +138,6 @@ exports[`NativeSelectField should render a NativeSelectField isIncomplete 1`] = 
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -281,7 +146,7 @@ exports[`NativeSelectField should render a NativeSelectField isIncomplete 1`] = 
   required={true}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -304,33 +169,6 @@ exports[`NativeSelectField should render a NativeSelectField required 1`] = `
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -339,7 +177,7 @@ exports[`NativeSelectField should render a NativeSelectField required 1`] = `
   required={true}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -362,33 +200,6 @@ exports[`NativeSelectField should render a NativeSelectField required 2`] = `
   help={null}
   hideRequired={true}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -397,7 +208,7 @@ exports[`NativeSelectField should render a NativeSelectField required 2`] = `
   required={true}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -420,33 +231,6 @@ exports[`NativeSelectField should render a NativeSelectField required and isInco
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -455,7 +239,7 @@ exports[`NativeSelectField should render a NativeSelectField required and isInco
   required={true}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -478,33 +262,6 @@ exports[`NativeSelectField should render a NativeSelectField with a labelAttrs 1
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -517,7 +274,7 @@ exports[`NativeSelectField should render a NativeSelectField with a labelAttrs 1
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -540,33 +297,6 @@ exports[`NativeSelectField should render a NativeSelectField with a maxWidth 1`]
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -576,7 +306,7 @@ exports[`NativeSelectField should render a NativeSelectField with a maxWidth 1`]
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -599,33 +329,6 @@ exports[`NativeSelectField should render a NativeSelectField with a selectAttrs 
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -634,7 +337,7 @@ exports[`NativeSelectField should render a NativeSelectField with a selectAttrs 
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     attrs={
       Object {
@@ -666,33 +369,6 @@ exports[`NativeSelectField should render a NativeSelectField with error 1`] = `
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -701,7 +377,7 @@ exports[`NativeSelectField should render a NativeSelectField with error 1`] = `
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -730,33 +406,6 @@ exports[`NativeSelectField should render a NativeSelectField with help 1`] = `
   }
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -765,7 +414,7 @@ exports[`NativeSelectField should render a NativeSelectField with help 1`] = `
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaDescribedBy="test-id-help"
     ariaLabel="test-label"
     disabled={false}
@@ -789,33 +438,6 @@ exports[`NativeSelectField should render a NativeSelectField with onChange 1`] =
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -824,7 +446,7 @@ exports[`NativeSelectField should render a NativeSelectField with onChange 1`] =
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -848,33 +470,6 @@ exports[`NativeSelectField should render a NativeSelectField with opt groups 1`]
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -883,7 +478,7 @@ exports[`NativeSelectField should render a NativeSelectField with opt groups 1`]
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -936,33 +531,6 @@ exports[`NativeSelectField should render a NativeSelectField with options 1`] = 
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -971,7 +539,7 @@ exports[`NativeSelectField should render a NativeSelectField with options 1`] = 
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -1014,33 +582,6 @@ exports[`NativeSelectField should render a NativeSelectField with options and de
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -1049,7 +590,7 @@ exports[`NativeSelectField should render a NativeSelectField with options and de
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     defaultValue="saab"
     disabled={false}
@@ -1093,33 +634,6 @@ exports[`NativeSelectField should render a NativeSelectField with options and va
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -1128,7 +642,7 @@ exports[`NativeSelectField should render a NativeSelectField with options and va
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"
@@ -1172,33 +686,6 @@ exports[`NativeSelectField should render a default NativeSelectField 1`] = `
   help={null}
   hideRequired={false}
   htmlFor="test-id"
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   isInline={false}
   isInvalid={false}
   isLabelHidden={false}
@@ -1207,7 +694,7 @@ exports[`NativeSelectField should render a default NativeSelectField 1`] = `
   required={false}
   showOptional={false}
 >
-  <InjectIntl(NativeSelect)
+  <injectIntl(NativeSelect)
     ariaLabel="test-label"
     disabled={false}
     id="test-id"

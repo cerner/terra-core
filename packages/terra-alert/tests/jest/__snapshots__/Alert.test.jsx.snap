@@ -1,63 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   type="advisory"
 >
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="advisory"
@@ -87,67 +72,52 @@ exports[`Alert of type advisory with text content should render an Alert compone
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   type="alert"
 >
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="alert"
@@ -216,44 +186,17 @@ exports[`Alert of type alert with text content should render an Alert component 
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type custom with custom title and text content should render an Alert component of type custom 1`] = `
-<InjectIntl(Alert)
+<injectIntl(Alert)
   customColorClass="terra-alert-custom-orange-color"
   customIcon={
     <IconHelp
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
-  }
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
   }
   title="Help!"
   type="custom"
@@ -268,29 +211,41 @@ exports[`Alert of type custom with custom title and text content should render a
     }
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     title="Help!"
@@ -360,67 +315,52 @@ exports[`Alert of type custom with custom title and text content should render a
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   type="error"
 >
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="error"
@@ -489,38 +429,11 @@ exports[`Alert of type error with text content should render an Alert component 
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   title="Gettysburg Address"
   type="info"
 >
@@ -528,29 +441,41 @@ exports[`Alert of type info with custom title and HTML content should render an 
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     title="Gettysburg Address"
@@ -622,67 +547,52 @@ exports[`Alert of type info with custom title and HTML content should render an 
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type info with text content should render an Alert component of type info 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   type="info"
 >
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="info"
@@ -751,11 +661,11 @@ exports[`Alert of type info with text content should render an Alert component o
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type success with an action button text content should render an Alert component of type success with an action button 1`] = `
-<InjectIntl(Alert)
+<injectIntl(Alert)
   action={
     <Button
       isBlock={false}
@@ -768,33 +678,6 @@ exports[`Alert of type success with an action button text content should render 
       type="button"
       variant="emphasis"
     />
-  }
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
   }
   type="success"
 >
@@ -815,29 +698,41 @@ exports[`Alert of type success with an action button text content should render 
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="success"
@@ -944,67 +839,52 @@ exports[`Alert of type success with an action button text content should render 
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type success with text content should render an Alert component of type success 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   type="success"
 >
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="success"
@@ -1073,67 +953,52 @@ exports[`Alert of type success with text content should render an Alert componen
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   type="unsatisfied"
 >
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="unsatisfied"
@@ -1196,67 +1061,52 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type unverified should render an unverified Alert 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   type="unverified"
 >
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="unverified"
@@ -1319,67 +1169,52 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert of type warning with text content should render an Alert component of type warning 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   type="warning"
 >
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="warning"
@@ -1448,66 +1283,50 @@ exports[`Alert of type warning with text content should render an Alert componen
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Alert with no props should render a default component 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
->
+<injectIntl(Alert)>
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     type="alert"
@@ -1575,11 +1394,11 @@ exports[`Alert with no props should render a default component 1`] = `
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Dismissable Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
-<InjectIntl(Alert)
+<injectIntl(Alert)
   action={
     <Button
       isBlock={false}
@@ -1599,33 +1418,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
-  }
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
   }
   onDismiss={[Function]}
   title="Help!"
@@ -1654,29 +1446,41 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
     }
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     onDismiss={[Function]}
@@ -1819,67 +1623,52 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
+<injectIntl(Alert)
   onDismiss={[Function]}
 >
   <Alert
     customColorClass="custom-default-color"
     intl={
       Object {
+        "$t": [Function],
         "defaultFormats": Object {},
         "defaultLocale": "en",
+        "defaultRichTextElements": undefined,
+        "fallbackOnEmptyString": true,
         "formatDate": [Function],
-        "formatHTMLMessage": [Function],
+        "formatDateTimeRange": [Function],
+        "formatDateToParts": [Function],
+        "formatDisplayName": [Function],
+        "formatList": [Function],
+        "formatListToParts": [Function],
         "formatMessage": [Function],
         "formatNumber": [Function],
+        "formatNumberToParts": [Function],
         "formatPlural": [Function],
-        "formatRelative": [Function],
+        "formatRelativeTime": [Function],
         "formatTime": [Function],
+        "formatTimeToParts": [Function],
         "formats": Object {},
         "formatters": Object {
           "getDateTimeFormat": [Function],
+          "getDisplayNames": [Function],
+          "getListFormat": [Function],
           "getMessageFormat": [Function],
           "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
+          "getPluralRules": [Function],
+          "getRelativeTimeFormat": [Function],
         },
         "locale": "en",
         "messages": null,
-        "now": [Function],
         "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
+        "onWarn": [Function],
+        "textComponent": Symbol(react.fragment),
+        "timeZone": undefined,
+        "wrapRichTextChunksInFragment": undefined,
       }
     }
     onDismiss={[Function]}
@@ -1987,7 +1776,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
       </div>
     </ResponsiveElement>
   </Alert>
-</InjectIntl(Alert)>
+</injectIntl(Alert)>
 `;
 
 exports[`correctly applies the theme context className 1`] = `

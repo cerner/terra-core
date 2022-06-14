@@ -1,0 +1,13 @@
+    import { Badge } from 'terra-dropdown-button/package.json?dev-site-package';
+
+<Badge />
+
+# Terra Dropdown Button Upgrade Guide
+
+## Changes from version 1 to version 2
+    * Requires `react-intl` version >= 5.
+    * React-intl V5 no longer exports the `intlShape` consuming project should replace the `intlShape` with `PropTypes.shape()` containing the functions that are utilized by the component. See [doc](https://formatjs.io/docs/intl#the-intl-object) for most complete and up to date intl shape.
+    * Follow the upgrade guides of react-intl to know more about the breaking changes : 
+        - v5 Upgrade Guide - https://formatjs.io/docs/react-intl/upgrade-guide-5x
+        - v4 Upgrade Guide - https://formatjs.io/docs/react-intl/upgrade-guide-4x
+        - v3 Upgrade Guide - https://formatjs.io/docs/react-intl/upgrade-guide-3x

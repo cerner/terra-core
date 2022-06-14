@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Breaking
+  * Dropped react-intl v2 support.
+
 * Changed
   * Fixed mobile keyboard not closing after pressing enter key on mobile devices
 

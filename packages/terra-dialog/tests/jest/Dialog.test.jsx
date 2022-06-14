@@ -2,7 +2,7 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl } from '@cerner/terra-enzyme-intl';
 import Dialog from '../../src/Dialog';
 
 describe('Dialog', () => {
@@ -10,13 +10,13 @@ describe('Dialog', () => {
 
   // Snapshot Test
   it('should render a default component', () => {
-    const wrapper = shallowWithIntl(defaultRender).dive();
+    const wrapper = shallowWithIntl(defaultRender).dive().dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   // Structure Tests
   it('should have the class dialog', () => {
-    const wrapper = shallowWithIntl(defaultRender).dive();
+    const wrapper = shallowWithIntl(defaultRender).dive().dive();
     expect(wrapper.prop('className')).toContain('dialog');
   });
 

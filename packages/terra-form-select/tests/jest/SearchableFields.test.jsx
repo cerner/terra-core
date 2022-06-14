@@ -1,6 +1,6 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl } from '@cerner/terra-enzyme-intl';
 import ComboboxField from '../../src/ComboboxField';
 import MultiSelectField from '../../src/MultiSelectField';
 import SearchSelectField from '../../src/SearchSelectField';
@@ -31,7 +31,7 @@ it('should render the selectId to the input field in MultiSelectField component'
     </MultiSelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(shallowWithIntl(select).dive().dive().dive()).toMatchSnapshot();
 });
 
 it('should render the selectId to the input field in SearchSelectField component', () => {
@@ -59,5 +59,5 @@ it('should render the selectId to the input field in TagSelectField component', 
     </TagSelectField>
   );
 
-  expect(shallowWithIntl(select).dive().dive()).toMatchSnapshot();
+  expect(shallowWithIntl(select).dive().dive().dive()).toMatchSnapshot();
 });

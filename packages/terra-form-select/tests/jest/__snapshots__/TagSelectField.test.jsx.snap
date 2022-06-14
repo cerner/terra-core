@@ -22,7 +22,7 @@ exports[`should render TagSelectField component with max height 1`] = `
       />
     </div>
   </div>
-  <InjectIntl(TagSelect)
+  <injectIntl(TagSelect)
     ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
@@ -59,6 +59,6 @@ exports[`should render TagSelectField component with max height 1`] = `
       display="Violet"
       value="violet"
     />
-  </InjectIntl(TagSelect)>
+  </injectIntl(TagSelect)>
 </div>
 `;

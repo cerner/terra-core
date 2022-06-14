@@ -2,40 +2,13 @@
 
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
   theme={
     Object {
       "className": "orion-fusion-theme",
     }
   }
 >
-  <InjectIntl(RadioField)
+  <injectIntl(RadioField)
     legend="Default RadioField"
   >
     <RadioField
@@ -44,29 +17,41 @@ exports[`correctly applies the theme context className 1`] = `
       hideRequired={false}
       intl={
         Object {
+          "$t": [Function],
           "defaultFormats": Object {},
           "defaultLocale": "en",
+          "defaultRichTextElements": undefined,
+          "fallbackOnEmptyString": true,
           "formatDate": [Function],
-          "formatHTMLMessage": [Function],
+          "formatDateTimeRange": [Function],
+          "formatDateToParts": [Function],
+          "formatDisplayName": [Function],
+          "formatList": [Function],
+          "formatListToParts": [Function],
           "formatMessage": [Function],
           "formatNumber": [Function],
+          "formatNumberToParts": [Function],
           "formatPlural": [Function],
-          "formatRelative": [Function],
+          "formatRelativeTime": [Function],
           "formatTime": [Function],
+          "formatTimeToParts": [Function],
           "formats": Object {},
           "formatters": Object {
             "getDateTimeFormat": [Function],
+            "getDisplayNames": [Function],
+            "getListFormat": [Function],
             "getMessageFormat": [Function],
             "getNumberFormat": [Function],
-            "getPluralFormat": [Function],
-            "getRelativeFormat": [Function],
+            "getPluralRules": [Function],
+            "getRelativeTimeFormat": [Function],
           },
           "locale": "en",
           "messages": null,
-          "now": [Function],
           "onError": [Function],
-          "textComponent": "span",
-          "timeZone": null,
+          "onWarn": [Function],
+          "textComponent": Symbol(react.fragment),
+          "timeZone": undefined,
+          "wrapRichTextChunksInFragment": undefined,
         }
       }
       isInline={false}
@@ -96,434 +81,66 @@ exports[`correctly applies the theme context className 1`] = `
         </legend>
       </fieldset>
     </RadioField>
-  </InjectIntl(RadioField)>
+  </injectIntl(RadioField)>
 </ThemeContextProvider>
 `;
 
 exports[`should display the required icon for fields with hideRequired, but have a state of invalid 1`] = `
-<RadioField
-  error={null}
-  help={null}
-  hideRequired={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={true}
-  isLegendHidden={false}
-  legend="Hidden Required CheckboxField"
-  legendAttrs={Object {}}
-  required={true}
-  showOptional={false}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`should hide the legend when requested 1`] = `
-<RadioField
-  error={null}
-  help={null}
-  hideRequired={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLegendHidden={true}
-  legend="Hidden Legend legend"
-  legendAttrs={
-    Object {
-      "class": "application-legend",
-    }
-  }
-  required={false}
-  showOptional={false}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`should hide the required indicator when requested 1`] = `
-<RadioField
-  error={null}
-  help={null}
-  hideRequired={true}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLegendHidden={false}
-  legend="Hidden Required RadioField"
-  legendAttrs={Object {}}
-  required={true}
-  showOptional={false}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`should render a default radio field 1`] = `
-<RadioField
-  error={null}
-  help={null}
-  hideRequired={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLegendHidden={false}
-  legend="Default RadioField"
-  legendAttrs={Object {}}
-  required={false}
-  showOptional={false}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`should render a default radio field if it has an undefined child 1`] = `
-<RadioField
-  error={null}
-  help={null}
-  hideRequired={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLegendHidden={false}
-  legend="Default RadioField"
-  legendAttrs={Object {}}
-  required={false}
-  showOptional={false}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`should render a help message 1`] = `
-<RadioField
-  error={null}
-  help="This will help up determine how many chairs to request"
-  hideRequired={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLegendHidden={false}
-  legend="Help RadioField"
-  legendAttrs={Object {}}
-  required={false}
-  showOptional={false}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`should render an invalid radio field 1`] = `
-<RadioField
-  error="Test Error"
-  help={null}
-  hideRequired={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={true}
-  isLegendHidden={false}
-  legend="Invalid RadioField"
-  legendAttrs={Object {}}
-  required={false}
-  showOptional={false}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`should render an optional part on the label 1`] = `
-<RadioField
-  error={null}
-  help={null}
-  hideRequired={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLegendHidden={false}
-  legend="Optional RadioField"
-  legendAttrs={Object {}}
-  required={false}
-  showOptional={true}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`should render required radio field 1`] = `
-<RadioField
-  error={null}
-  help={null}
-  hideRequired={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLegendHidden={false}
-  legend="Required RadioField"
-  legendAttrs={Object {}}
-  required={true}
-  showOptional={false}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;
 
 exports[`should render the legend with custom attributes properly 1`] = `
-<RadioField
-  error={null}
-  help={null}
-  hideRequired={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isInline={false}
-  isInvalid={false}
-  isLegendHidden={false}
-  legend="Custom Legend RadioField"
-  legendAttrs={
-    Object {
-      "class": "application-legend",
-    }
-  }
-  required={false}
-  showOptional={false}
-/>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

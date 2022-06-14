@@ -1,28 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render MultiSelectField component with max height 1`] = `
-<div
-  className="field"
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="select-id"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="Label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
 >
-  <div
-    className="label-group"
-  >
-    <label
-      className="label"
-      htmlFor="select-id"
-    >
-      Label
-    </label>
-    <div
-      className="error-icon-hidden"
-    >
-      <IconError
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </div>
-  </div>
-  <InjectIntl(MultiSelect)
+  <injectIntl(MultiSelect)
     ariaLabel="Label"
     defaultValue="blue"
     disabled={false}
@@ -30,7 +28,6 @@ exports[`should render MultiSelectField component with max height 1`] = `
     isIncomplete={false}
     isInvalid={false}
     isTouchAccessible={false}
-    key=".0"
     maxHeight={100}
     required={false}
   >
@@ -59,6 +56,6 @@ exports[`should render MultiSelectField component with max height 1`] = `
       display="Violet"
       value="violet"
     />
-  </InjectIntl(MultiSelect)>
-</div>
+  </injectIntl(MultiSelect)>
+</Field>
 `;
