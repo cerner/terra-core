@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed caret icon size and position to match similar components
+
 ## 2.55.1 - (January 4, 2022)
 
 * Added
