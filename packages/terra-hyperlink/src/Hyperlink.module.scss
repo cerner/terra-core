@@ -53,14 +53,6 @@
     }
   }
 
-  .hyperlink[data-focus-styles-enabled='true']:focus {
-    background-color: var(--terra-hyperlink-focus-background-color, transparent);
-    border-radius: var(--terra-hyperlink-focus-border-radius, 0.2142rem);
-    box-shadow: var(--terra-hyperlink-focus-box-shadow, 0 0 0 1px #4cb2e9, 0 0 0 3px rgba(76, 178, 233, 0.25));
-    color: var(--terra-hyperlink-focus-color, #001f67);
-    text-decoration: var(--terra-hyperlink-focus-text-decoration, underline);
-  }
-
   .is-underline-hidden {
     color: var(--terra-hyperlink-underline-hidden-color, #006fc3);
     text-decoration: none;
