@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import IconExternalLink from 'terra-icon/lib/icon/IconExternalLink';
@@ -118,9 +118,15 @@ const HyperlinkButton = ({
 }) => {
   const theme = useContext(ThemeContext);
   const [isFocused, setIsFocused] = useState(false);
+  const buttonRef = useRef();
+
+  const handleMouseDown = () => {
+    buttonRef.current.setAttribute('data-focus-styles-enabled', 'false');
+  };
 
   const handleOnBlur = (event) => {
     setIsFocused(false);
+    buttonRef.current.setAttribute('data-focus-styles-enabled', 'true');
     if (onBlur) {
       onBlur(event);
     }
@@ -173,11 +179,14 @@ const HyperlinkButton = ({
           onKeyDown={handleKeyDown}
           onKeyUp={handleKeyUp}
           onBlur={handleOnBlur}
+          onMouseDown={handleMouseDown}
           onClick={onClick}
           onFocus={onFocus}
           title={title}
           role="link"
           type="button"
+          data-focus-styles-enabled
+          ref={buttonRef}
         >
           <span className={cx('button-inner')}>
             {text}

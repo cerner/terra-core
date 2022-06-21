@@ -65,4 +65,11 @@ Terra.describeViewports('Hyperlink', ['tiny'], () => {
 
     Terra.validates.element('hidden underline');
   });
+
+  it('should display programmatic focus on hyperlink', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/programmatic-focus');
+    $('#button1').click();
+
+    Terra.validates.element('focused hyperlink');
+  });
 });

@@ -15,6 +15,7 @@
   * Added docs for `DecorativeImage`.
   * Added Accessibility guide for `terra-icon`.
   * Added upgrade guide for `terra-icon` from 3 to 4.
+  * Added test for programmatic focus of hyperlink.
 
 * Fixed
   * Updated broken links in terra-form-select and action-footer.
