@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.74.6 - (June 22, 2022)
+
 * Changed
   * Fixed mobile keyboard not closing after pressing enter key on mobile devices
 

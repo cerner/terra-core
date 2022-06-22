@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.48.0 - (June 22, 2022)
+
 * Changed
   * Updated to `one-cerner-style-icons` v1.47.0
   * Removed colored static favorite star in favor of using the themeable variant of the star icon
