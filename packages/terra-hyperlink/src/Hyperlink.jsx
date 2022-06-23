@@ -190,7 +190,6 @@ class Hyperlink extends React.Component {
         onMouseDown={this.handleMouseDown}
         onFocus={onFocus}
         href={isDisabled ? null : href}
-        onMouseDown={this.handleMouseDown}
         target={target}
         rel={rel}
         title={title}
