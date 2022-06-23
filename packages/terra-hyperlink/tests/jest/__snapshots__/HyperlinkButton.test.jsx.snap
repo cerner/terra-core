@@ -138,6 +138,7 @@ exports[`Hyperlink Button should render a disabled hyperlink 1`] = `
 <a
   aria-disabled="true"
   class="hyperlink default is-disabled"
+  data-focus-styles-enabled="true"
   role="link"
 >
   Disabled hyperlink button
