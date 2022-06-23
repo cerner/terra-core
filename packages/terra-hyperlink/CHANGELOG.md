@@ -15,6 +15,9 @@
 * Fixed
   * Fixed focus box bug for hyperlink and hyperlink-button.
   
+* Fixed
+  * Fixed focus box bug for hyperlink.
+
 ## 2.51.4 - (May 3, 2022)
 
 * Changed
