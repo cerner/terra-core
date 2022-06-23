@@ -94,10 +94,17 @@ class Hyperlink extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.linkRef = React.createRef();
+  }
+
+  handleMouseDown() {
+    this.linkRef.current.setAttribute('data-focus-styles-enabled', 'false');
   }
 
   handleOnBlur(event) {
     this.setState({ focused: false });
+    this.linkRef.current.setAttribute('data-focus-styles-enabled', 'true');
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
@@ -179,11 +186,14 @@ class Hyperlink extends React.Component {
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
+        onMouseDown={this.handleMouseDown}
         onClick={onClick}
         onFocus={onFocus}
         href={isDisabled ? null : href}
         target={target}
         rel={rel}
+        data-focus-styles-enabled
+        ref={this.linkRef}
       >
         {children}
         {getHyperlinkIcon(variant)}
