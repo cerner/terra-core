@@ -39,21 +39,46 @@ exports[`Hyperlink correctly applies the theme context className 1`] = `
     href="https://www.cerner.com"
     text="Default hyperlink"
   >
-    <a
-      aria-disabled={false}
-      className="hyperlink default orion-fusion-theme"
-      data-focus-styles-enabled={true}
+    <Hyperlink
       href="https://www.cerner.com"
-      onBlur={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      isDisabled={false}
+      text="Default hyperlink"
+      variant="default"
     >
       <a
         className="hyperlink default orion-fusion-theme"
+        data-focus-styles-enabled={true}
         href="https://www.cerner.com"
         onBlur={[Function]}
         onKeyUp={[Function]}
+        onMouseDown={[Function]}
       >
         Default hyperlink
       </a>
@@ -106,6 +131,7 @@ exports[`Hyperlink should render a disabled hyperlink 1`] = `
   aria-disabled="true"
   class="hyperlink default is-disabled"
   data-focus-styles-enabled="true"
+  role="link"
 >
   Disabled hyperlink
 </a>
