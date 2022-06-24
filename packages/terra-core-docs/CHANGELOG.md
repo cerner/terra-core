@@ -5,6 +5,9 @@
 * Fixed
   * Updated broken links in terra-form-select and action-footer.
 
+* Changed
+  * Added test for programmatic focus of hyperlink.
+
 ## 1.13.6 - (May 3, 2022)
 
 * Changed
