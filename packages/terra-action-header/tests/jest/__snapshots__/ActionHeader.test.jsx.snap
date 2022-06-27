@@ -3,6 +3,7 @@
 exports[`ActionHeader correctly applies the theme context className 1`] = `
 <div
   className="flex-header orion-fusion-theme customClassName"
+  title="Action Header"
 >
   <div
     className="flex-end"
@@ -32,17 +33,7 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
   </div>
   <div
     className="flex-fill"
-  >
-    <div
-      className="title-container"
-    >
-      <h1
-        className="title"
-      >
-        Action Header
-      </h1>
-    </div>
-  </div>
+  />
   <div
     className="flex-end"
   >
@@ -75,7 +66,6 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
 exports[`ActionHeader should render a default action header 1`] = `
 <ActionHeaderContainer
   endContent={null}
-  level={1}
   startContent={null}
 />
 `;
@@ -381,7 +371,7 @@ exports[`ActionHeader should render an action header with next and previous butt
 />
 `;
 
-exports[`ActionHeader should render an action header with title 1`] = `
+exports[`ActionHeader should render an action header with title and heading level 1`] = `
 <ActionHeaderContainer
   endContent={null}
   level={1}

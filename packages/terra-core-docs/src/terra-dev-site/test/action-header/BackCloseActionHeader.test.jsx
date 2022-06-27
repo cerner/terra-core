@@ -4,9 +4,10 @@ import ActionHeader from 'terra-action-header/lib/ActionHeader';
 
 const ActionHeaderExample = () => (
   <ActionHeader
-    title="Back Close Action Header"
+    text="Back Close Action Header"
     onBack={() => alert('You clicked back!')}
     onClose={() => alert('You clicked close!')}
+    level={1}
   />
 );
 

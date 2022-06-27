@@ -6,8 +6,9 @@ const ActionHeaderExample = () => (
   <div>
     <br />
     <ActionHeader
-      title="Back Action Header"
+      text="Back Action Header"
       onBack={() => alert('You clicked back!')}
+      level={3}
     />
     <br />
   </div>

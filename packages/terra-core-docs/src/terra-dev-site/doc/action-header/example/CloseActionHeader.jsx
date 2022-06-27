@@ -6,8 +6,9 @@ const ActionHeaderExample = () => (
   <div>
     <br />
     <ActionHeader
-      title="Close Action Header"
+      text="Close Action Header"
       onClose={() => alert('You clicked close!')}
+      level={3}
     />
     <br />
   </div>

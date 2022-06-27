@@ -5,7 +5,8 @@ const ActionHeaderExample = () => (
   <div>
     <br />
     <ActionHeader
-      title="Default Action Header"
+      text="Default Action Header"
+      level={3}
     />
     <br />
   </div>

@@ -62,12 +62,12 @@ const propTypes = {
   /**
    * Text to be displayed as the title in the header bar.
    */
-  title: PropTypes.string,
+  text: PropTypes.string,
 };
 
 const defaultProps = {
-  title: undefined,
-  level: 1,
+  text: undefined,
+  level: undefined,
   onClose: undefined,
   onBack: undefined,
   onMaximize: undefined,
@@ -78,7 +78,7 @@ const defaultProps = {
 };
 
 const ActionHeader = ({
-  title,
+  text,
   intl,
   level,
   onClose,
@@ -191,7 +191,7 @@ const ActionHeader = ({
     <ActionHeaderContainer
       {...customProps}
       startContent={leftButtons}
-      title={title}
+      text={text}
       endContent={rightButtons}
       level={level}
     >

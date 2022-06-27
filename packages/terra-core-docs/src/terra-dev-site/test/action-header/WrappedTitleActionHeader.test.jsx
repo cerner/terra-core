@@ -4,8 +4,9 @@ import ActionHeader from 'terra-action-header/lib/ActionHeader';
 
 export default () => (
   <ActionHeader
-    title="Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Long Title Action Header"
+    text="Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Long Title Action Header"
     onBack={() => alert('You clicked back!')}
     onClose={() => alert('You clicked close!')}
+    level={1}
   />
 );

@@ -13,26 +13,26 @@ describe('ActionHeader', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render an action header with title', () => {
-    const actionHeader = <ActionHeader title="Action Header" />;
+  it('should render an action header with title and heading level', () => {
+    const actionHeader = <ActionHeader level={1} title="Action Header" />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with back button and title', () => {
-    const actionHeader = <ActionHeader title="Action Header" onBack={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onBack={() => {}} />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with close button and title', () => {
-    const actionHeader = <ActionHeader title="Action Header" onClose={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onClose={() => {}} />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with back and close buttons and title', () => {
-    const actionHeader = <ActionHeader title="Action Header" onBack={() => {}} onClose={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onBack={() => {}} onClose={() => {}} />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
@@ -44,14 +44,14 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with custom button and title', () => {
-    const actionHeader = <ActionHeader title="Action Header"><Button text="Custom Button" onClick={() => alert('You clicked me!')} /></ActionHeader>;
+    const actionHeader = <ActionHeader level={1} title="Action Header"><Button text="Custom Button" onClick={() => alert('You clicked me!')} /></ActionHeader>;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with multiple custom buttons and title', () => {
     const actionHeader = (
-      <ActionHeader title="Action Header">
+      <ActionHeader level={1} title="Action Header">
         <span>
           <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
           <Button text="Custom Button" onClick={() => alert('You clicked me!')} />
@@ -63,31 +63,31 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with maximize button and title', () => {
-    const actionHeader = <ActionHeader title="Action Header" onMaximize={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onMaximize={() => {}} />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with minimize button and title', () => {
-    const actionHeader = <ActionHeader title="Action Header" onMinimize={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onMinimize={() => {}} />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with next and previous buttons and title', () => {
-    const actionHeader = <ActionHeader title="Action Header" onNext={() => {}} onPrevious={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onNext={() => {}} onPrevious={() => {}} />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with title, enabled next button, and disabled previous button', () => {
-    const actionHeader = <ActionHeader title="Action Header" onNext={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onNext={() => {}} />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with title, enabled previous button, and disabled next button', () => {
-    const actionHeader = <ActionHeader title="Action Header" onPrevious={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onPrevious={() => {}} />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
@@ -104,6 +104,7 @@ describe('ActionHeader', () => {
         className="customClassName"
         onMaximize={() => {}}
         onClose={() => {}}
+        level={1}
       />
     );
     const wrapper = shallowWithIntl(actionHeader);
