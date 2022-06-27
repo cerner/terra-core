@@ -5,6 +5,15 @@
 * Changed
   * `isDisabled` and `isUnderlineHidden` props have been marked as private.
   * Updated jest snapshots.
+
+* Breaking Changes
+  * `children` prop has been replaced by `text` prop.
+
+* Added
+  * Added new `Hyperlink Button` component.
+
+* Fixed
+  * Fixed focus box bug for hyperlink and hyperlink-button.
   
 * Fixed
   * Fixed focus box bug for hyperlink.
@@ -18,12 +27,6 @@
 
 * Changed
   * Minor dependency version bump
-
-* Breaking Changes
-  * `children` prop has been replaced by `text` prop.
-
-* Added
-  * Added new `Hyperlink Button` component.
 
 ## 2.51.2 - (January 4, 2022)
 
