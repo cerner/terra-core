@@ -68,10 +68,12 @@ exports[`Hyperlink Button correctly applies the theme context className 1`] = `
     <button
       aria-disabled={false}
       className="button-reset hyperlink default"
+      data-focus-styles-enabled={true}
       onBlur={[Function]}
       onClick={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
+      onMouseDown={[Function]}
       role="link"
       type="button"
     >
@@ -89,6 +91,7 @@ exports[`Hyperlink Button should render a audio hyperlink 1`] = `
 <button
   aria-disabled="false"
   class="button-reset hyperlink audio"
+  data-focus-styles-enabled="true"
   role="link"
   type="button"
 >
@@ -123,6 +126,7 @@ exports[`Hyperlink Button should render a default hyperlink button 1`] = `
 <button
   aria-disabled="false"
   class="button-reset hyperlink default"
+  data-focus-styles-enabled="true"
   role="link"
   type="button"
 >
@@ -149,6 +153,7 @@ exports[`Hyperlink Button should render a document hyperlink 1`] = `
 <button
   aria-disabled="false"
   class="button-reset hyperlink document"
+  data-focus-styles-enabled="true"
   role="link"
   type="button"
 >
@@ -184,6 +189,7 @@ exports[`Hyperlink Button should render a external hyperlink 1`] = `
 <button
   aria-disabled="false"
   class="button-reset hyperlink external"
+  data-focus-styles-enabled="true"
   role="link"
   type="button"
 >
@@ -218,6 +224,7 @@ exports[`Hyperlink Button should render a image hyperlink 1`] = `
 <button
   aria-disabled="false"
   class="button-reset hyperlink image"
+  data-focus-styles-enabled="true"
   role="link"
   type="button"
 >
@@ -252,6 +259,7 @@ exports[`Hyperlink Button should render a underline hidden hyperlink 1`] = `
 <button
   aria-disabled="false"
   class="button-reset hyperlink default is-underline-hidden"
+  data-focus-styles-enabled="true"
   role="link"
   type="button"
 >
@@ -267,6 +275,7 @@ exports[`Hyperlink Button should render a video hyperlink 1`] = `
 <button
   aria-disabled="false"
   class="button-reset hyperlink video"
+  data-focus-styles-enabled="true"
   role="link"
   type="button"
 >
