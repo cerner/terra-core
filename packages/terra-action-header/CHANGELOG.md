@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Breaking Changes
-  * Changed prop `title` to `text` to avoid confusion with HTML attribute `title`.
+  * Renamed `title` prop as `text` to avoid confusion with HTML attribute `title`.
   * Removed default `h1` heading level.
 
 ## 2.74.2 - (February 24, 2022)
