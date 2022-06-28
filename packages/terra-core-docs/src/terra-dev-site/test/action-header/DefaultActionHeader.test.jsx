@@ -3,7 +3,8 @@ import ActionHeader from 'terra-action-header/lib/ActionHeader';
 
 const ActionHeaderExample = () => (
   <ActionHeader
-    title="Default Action Header"
+    text="Default Action Header"
+    level={1}
   />
 );
 
