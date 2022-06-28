@@ -6,11 +6,12 @@ const ActionHeaderExample = () => (
   <div>
     <br />
     <ActionHeader
-      title="Back Close Previous Next Action Header"
+      text="Back Close Previous Next Action Header"
       onClose={() => alert('You clicked close!')}
       onBack={() => alert('You clicked back!')}
       onPrevious={() => alert('You clicked previous!')}
       onNext={() => alert('You clicked next!')}
+      level={3}
     />
     <br />
   </div>

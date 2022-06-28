@@ -22,7 +22,7 @@ const propTypes = {
   /**
    * Text to be displayed as the title in the header bar.
    */
-  title: PropTypes.string,
+  text: PropTypes.string,
 
   /**
    * Content to be displayed at the end of the header.
@@ -37,28 +37,31 @@ const propTypes = {
 };
 
 const defaultProps = {
-  title: undefined,
+  text: undefined,
   startContent: undefined,
   endContent: undefined,
 };
 
 const ActionHeaderContainer = ({
-  children, title, startContent, endContent, level, ...customProps
+  children, text, startContent, endContent, level, ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
-  const HeaderElement = `h${level}`;
 
   const content = React.Children.map(children, child => (
     React.cloneElement(child, { className: cx(['flex-collapse', children.props.className]) })
   ));
 
-  const titleElement = title ? (
-    <div className={cx('title-container')}>
-      <HeaderElement className={cx('title')}>
-        {title}
-      </HeaderElement>
-    </div>
-  ) : undefined;
+  let titleElement;
+  if (text && level) {
+    const HeaderElement = `h${level}`;
+    titleElement = (
+      <div className={cx('title-container')}>
+        <HeaderElement className={cx('title')}>
+          {text}
+        </HeaderElement>
+      </div>
+    );
+  }
 
   return (
     <div {...customProps} className={classNames(cx(['flex-header', theme.className]), customProps.className)}>
