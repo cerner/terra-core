@@ -1,7 +1,7 @@
 {
   "name": "terra-form-input",
   "main": "lib/Input.js",
-  "version": "4.17.4",
+  "version": "4.17.5",
   "description": "Element for building out inputs in a form.",
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-form-field": "^4.20.4",
-    "terra-icon": "^3.47.1",
+    "terra-form-field": "^4.20.5",
+    "terra-icon": "^3.48.0",
     "terra-theme-context": "^1.0.0"
   },
   "scripts": {

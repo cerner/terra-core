@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.52.0 - (July 5, 2022)
+
 * Fixed
   * Fixed focus box bug for hyperlink.
 
