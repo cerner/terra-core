@@ -18,7 +18,6 @@ exports[`correctly applies the theme context className 1`] = `
       isCompact={false}
       isDisabled={false}
       isIconOnly={false}
-      isReversed={false}
       onBlur={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
@@ -29,22 +28,23 @@ exports[`correctly applies the theme context className 1`] = `
     >
       <button
         aria-disabled={false}
+        aria-label="Default Button"
         className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
         disabled={false}
+        isIconOnly={false}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
+        title="Default Button"
         type="button"
       >
         <span
           className="button-label text-only"
         >
-          <span
-            className=""
-          >
+          <span>
             Default Button
           </span>
         </span>
@@ -61,7 +61,6 @@ exports[`should render a default component 1`] = `
   isCompact={false}
   isDisabled={false}
   isIconOnly={false}
-  isReversed={false}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -79,7 +78,6 @@ exports[`should render as disabled 1`] = `
   isCompact={false}
   isDisabled={true}
   isIconOnly={false}
-  isReversed={false}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -102,7 +100,6 @@ exports[`should render with icon only 1`] = `
   isCompact={false}
   isDisabled={false}
   isIconOnly={true}
-  isReversed={false}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -120,7 +117,6 @@ exports[`should render with onBlur 1`] = `
   isCompact={false}
   isDisabled={false}
   isIconOnly={false}
-  isReversed={false}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -138,7 +134,6 @@ exports[`should render with onClick 1`] = `
   isCompact={false}
   isDisabled={false}
   isIconOnly={false}
-  isReversed={false}
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}
@@ -157,7 +152,6 @@ exports[`should render with onFocus 1`] = `
   isCompact={false}
   isDisabled={false}
   isIconOnly={false}
-  isReversed={false}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -175,7 +169,6 @@ exports[`should render with onKeyDown 1`] = `
   isCompact={false}
   isDisabled={false}
   isIconOnly={false}
-  isReversed={false}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -193,7 +186,6 @@ exports[`should render with onKeyUp 1`] = `
   isCompact={false}
   isDisabled={false}
   isIconOnly={false}
-  isReversed={false}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}

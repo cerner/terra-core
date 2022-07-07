@@ -1,14 +1,16 @@
 import React from 'react';
 import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
+import { IconButton } from 'terra-button';
 import styles from './ButtonTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const IconNeutralButton = () => <Button id="iconNeutralButton" text="Button with Icon" icon={<IconSquare />} />;
-const IconOnlyButton = () => <Button id="iconOnlyButton" text="iconOnlyButton" isIconOnly icon={<IconSquare />} />;
-const IconReversedButton = () => <Button id="iconReversedButton" text="Button with Icon and reversed" icon={<IconSquare />} isReversed />;
+const iconSquare = <IconSquare a11yLabel="Square" />;
+
+const IconNeutralButton = () => <IconButton id="iconNeutralButton" text="Button with Icon" icon={iconSquare} iconType="informative" />;
+const IconOnlyButton = () => <IconButton id="iconOnlyButton" text="iconOnlyButton" isIconOnly icon={iconSquare} iconType="informative" />;
+const IconReversedButton = () => <IconButton id="iconReversedButton" text="Button with Icon and reversed" icon={iconSquare} iconType="informative" isReversed />;
 
 export default () => (
   <div>

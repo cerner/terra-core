@@ -1,0 +1,614 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`correctly applies the theme context className 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <IconButton
+    icon={
+      <IconSquareSymbol
+        a11yLabel="square"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    }
+    iconType="informative"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isIconOnly={false}
+    isReversed={false}
+    text="text"
+    type="button"
+    variant="action"
+  >
+    <button
+      aria-disabled={false}
+      className="button action orion-fusion-theme"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      role="button"
+      type="button"
+    >
+      <span
+        className="button-label text-and-icon"
+      >
+        <span
+          className="icon icon-first"
+        >
+          <IconSquareSymbol
+            a11yLabel="square"
+            className="icon-svg"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <IconBase
+              a11yLabel="square"
+              ariaLabel={null}
+              className="icon-svg"
+              focusable="false"
+              height="1em"
+              isBidi={false}
+              isSpin={false}
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <svg
+                a11yLabel="square"
+                aria-hidden="true"
+                className="tui-Icon icon icon-svg"
+                focusable="false"
+                height="1em"
+                viewBox="0 0 48 48"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h48v48H0V0z"
+                />
+              </svg>
+            </IconBase>
+          </IconSquareSymbol>
+        </span>
+        <span
+          className=""
+        >
+          text
+        </span>
+      </span>
+    </button>
+  </IconButton>
+</ThemeContextProvider>
+`;
+
+exports[`should pass in refCallback as the ref prop of the input element 1`] = `
+<IconButton
+  icon={
+    <IconSquareSymbol
+      a11yLabel="square"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  iconType="informative"
+  isBlock={false}
+  isCompact={false}
+  isDisabled={false}
+  isIconOnly={false}
+  isReversed={false}
+  refCallback={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          <button
+            aria-disabled="false"
+            class="button action"
+            role="button"
+            type="button"
+          >
+            <span
+              class="button-label text-and-icon"
+            >
+              <span
+                class="icon icon-first"
+              >
+                <svg
+                  a11yLabel="square"
+                  aria-hidden="true"
+                  class="tui-Icon icon icon-svg"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 48 48"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h48v48H0V0z"
+                  />
+                </svg>
+              </span>
+              <span
+                class=""
+              >
+                text
+              </span>
+            </span>
+          </button>,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  text="text"
+  type="button"
+  variant="action"
+>
+  <button
+    aria-disabled={false}
+    className="button action"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    role="button"
+    type="button"
+  >
+    <span
+      className="button-label text-and-icon"
+    >
+      <span
+        className="icon icon-first"
+      >
+        <IconSquareSymbol
+          a11yLabel="square"
+          className="icon-svg"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            a11yLabel="square"
+            ariaLabel={null}
+            className="icon-svg"
+            focusable="false"
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              a11yLabel="square"
+              aria-hidden="true"
+              className="tui-Icon icon icon-svg"
+              focusable="false"
+              height="1em"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h48v48H0V0z"
+              />
+            </svg>
+          </IconBase>
+        </IconSquareSymbol>
+      </span>
+      <span
+        className=""
+      >
+        text
+      </span>
+    </span>
+  </button>
+</IconButton>
+`;
+
+exports[`should render IconButton as disabled when set 1`] = `
+<button
+  aria-disabled={true}
+  className="button action is-disabled"
+  disabled={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  tabIndex="-1"
+  type="button"
+>
+  <span
+    className="button-label text-and-icon"
+  >
+    <span
+      className="icon icon-first"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+    <span
+      className=""
+    >
+      text
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render IconButton with tabIndex when set 1`] = `
+<button
+  aria-disabled={true}
+  className="button action is-disabled"
+  disabled={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  tabIndex="-1"
+  type="button"
+>
+  <span
+    className="button-label text-and-icon"
+  >
+    <span
+      className="text-first"
+    >
+      text
+    </span>
+    <span
+      className="icon"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render a IconButton 1`] = `
+<button
+  aria-disabled={false}
+  className="button action"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  type="button"
+>
+  <span
+    className="button-label text-and-icon"
+  >
+    <span
+      className="icon icon-first"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+    <span
+      className=""
+    >
+      square
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render a IconButton with merged attributes 1`] = `
+<button
+  aria-disabled={false}
+  className="button action TestClass"
+  data-mock="data"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  style={
+    Object {
+      "height": "100px",
+    }
+  }
+  type="button"
+>
+  <span
+    className="button-label text-and-icon"
+  >
+    <span
+      className="icon icon-first"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+    <span
+      className=""
+    >
+      text
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render a IconButton with type equal to iconButton 1`] = `
+<button
+  aria-disabled={false}
+  className="button action"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  type="iconButton"
+>
+  <span
+    className="button-label text-and-icon"
+  >
+    <span
+      className="icon icon-first"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+    <span
+      className=""
+    >
+      iconButton
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render a IconButton with type equal to reset 1`] = `
+<button
+  aria-disabled={false}
+  className="button action"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  type="reset"
+>
+  <span
+    className="button-label text-and-icon"
+  >
+    <span
+      className="icon icon-first"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+    <span
+      className=""
+    >
+      reset
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render a IconButton with type equal to submit 1`] = `
+<button
+  aria-disabled={false}
+  className="button action"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  type="submit"
+>
+  <span
+    className="button-label text-and-icon"
+  >
+    <span
+      className="icon icon-first"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+    <span
+      className=""
+    >
+      submit
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render a icon only IconButton 1`] = `
+<button
+  aria-disabled={false}
+  className="button action"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  type="button"
+>
+  <span
+    className="button-label icon-only"
+  >
+    <span
+      className="icon"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render a utility IconButton 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="square"
+  className="button utility"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  title="square"
+  type="button"
+>
+  <span
+    className="button-label icon-only"
+  >
+    <span
+      className="icon"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render an action IconButton 1`] = `
+<button
+  aria-disabled={false}
+  className="button action"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  type="button"
+>
+  <span
+    className="button-label icon-only"
+  >
+    <span
+      className="icon"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+  </span>
+</button>
+`;
+
+exports[`should render text then an icon when reversed 1`] = `
+<button
+  aria-disabled={false}
+  className="button action"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  type="button"
+>
+  <span
+    className="button-label text-and-icon"
+  >
+    <span
+      className="text-first"
+    >
+      text
+    </span>
+    <span
+      className="icon"
+    >
+      <IconSquareSymbol
+        a11yLabel="square"
+        className="icon-svg"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      />
+    </span>
+  </span>
+</button>
+`;

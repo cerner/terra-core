@@ -103,7 +103,6 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
           isCompact={true}
           isDisabled={false}
           isIconOnly={true}
-          isReversed={false}
           onClick={[Function]}
           refCallback={[Function]}
           text="Terra.searchField.submit-search"
@@ -116,6 +115,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
             className="button neutral compact orion-fusion-theme button"
             data-terra-search-field-button="Search"
             disabled={false}
+            isIconOnly={true}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -126,44 +126,10 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
             type="button"
           >
             <span
-              className="button-label icon-only"
+              className="button-label text-only"
             >
-              <span
-                className="icon"
-              >
-                <IconSearch
-                  className="icon-svg"
-                  data-name="Layer 1"
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <IconBase
-                    className="icon-svg"
-                    data-name="Layer 1"
-                    focusable="false"
-                    height="1em"
-                    isBidi={false}
-                    isSpin={false}
-                    viewBox="0 0 48 48"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      className="tui-Icon icon icon-svg"
-                      data-name="Layer 1"
-                      focusable="false"
-                      height="1em"
-                      viewBox="0 0 48 48"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title />
-                      <path
-                        d="M47.4 43.2l-13-13A19.66 19.66 0 0038 19a19 19 0 10-7.9 15.4l13 13a2.05 2.05 0 002.9 0l1.4-1.4a1.93 1.93 0 000-2.8zM3 19a16 16 0 1116 16A16 16 0 013 19z"
-                      />
-                    </svg>
-                  </IconBase>
-                </IconSearch>
+              <span>
+                Terra.searchField.submit-search
               </span>
             </span>
           </button>
@@ -264,7 +230,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       isCompact={true}
       isDisabled={false}
       isIconOnly={true}
-      isReversed={false}
       onClick={[Function]}
       refCallback={[Function]}
       text="Terra.searchField.submit-search"
@@ -277,6 +242,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         className="button neutral compact button"
         data-terra-search-field-button="Search"
         disabled={false}
+        isIconOnly={true}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -287,44 +253,10 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
         type="button"
       >
         <span
-          className="button-label icon-only"
+          className="button-label text-only"
         >
-          <span
-            className="icon"
-          >
-            <IconSearch
-              className="icon-svg"
-              data-name="Layer 1"
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="icon-svg"
-                data-name="Layer 1"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon icon-svg"
-                  data-name="Layer 1"
-                  focusable="false"
-                  height="1em"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title />
-                  <path
-                    d="M47.4 43.2l-13-13A19.66 19.66 0 0038 19a19 19 0 10-7.9 15.4l13 13a2.05 2.05 0 002.9 0l1.4-1.4a1.93 1.93 0 000-2.8zM3 19a16 16 0 1116 16A16 16 0 013 19z"
-                  />
-                </svg>
-              </IconBase>
-            </IconSearch>
+          <span>
+            Terra.searchField.submit-search
           </span>
         </span>
       </button>
@@ -366,7 +298,6 @@ exports[`Snapshots renders a basic search field 1`] = `
     isCompact={true}
     isDisabled={false}
     isIconOnly={true}
-    isReversed={false}
     onClick={[Function]}
     refCallback={[Function]}
     text="Terra.searchField.submit-search"
@@ -409,7 +340,6 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     isCompact={true}
     isDisabled={true}
     isIconOnly={true}
-    isReversed={false}
     onClick={[Function]}
     refCallback={[Function]}
     text="Terra.searchField.submit-search"
@@ -452,7 +382,6 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
     isCompact={true}
     isDisabled={false}
     isIconOnly={true}
-    isReversed={false}
     onClick={[Function]}
     refCallback={[Function]}
     text="Terra.searchField.submit-search"
@@ -492,7 +421,6 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
       isCompact={false}
       isDisabled={false}
       isIconOnly={true}
-      isReversed={false}
       onClick={[Function]}
       text="Terra.searchField.clear"
       type="button"
@@ -513,7 +441,6 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     isCompact={true}
     isDisabled={false}
     isIconOnly={true}
-    isReversed={false}
     onClick={[Function]}
     refCallback={[Function]}
     text="Terra.searchField.submit-search"
@@ -554,7 +481,6 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
       isCompact={false}
       isDisabled={false}
       isIconOnly={true}
-      isReversed={false}
       onClick={[Function]}
       text="Terra.searchField.clear"
       type="button"
@@ -575,7 +501,6 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     isCompact={true}
     isDisabled={false}
     isIconOnly={true}
-    isReversed={false}
     onClick={[Function]}
     refCallback={[Function]}
     text="Terra.searchField.submit-search"
@@ -618,7 +543,6 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     isCompact={true}
     isDisabled={false}
     isIconOnly={true}
-    isReversed={false}
     onClick={[Function]}
     refCallback={[Function]}
     text="Terra.searchField.submit-search"
@@ -659,7 +583,6 @@ exports[`Snapshots renders a search field with a value 1`] = `
       isCompact={false}
       isDisabled={false}
       isIconOnly={true}
-      isReversed={false}
       onClick={[Function]}
       text="Terra.searchField.clear"
       type="button"
@@ -680,7 +603,6 @@ exports[`Snapshots renders a search field with a value 1`] = `
     isCompact={true}
     isDisabled={false}
     isIconOnly={true}
-    isReversed={false}
     onClick={[Function]}
     refCallback={[Function]}
     text="Terra.searchField.submit-search"
@@ -723,7 +645,6 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     isCompact={true}
     isDisabled={false}
     isIconOnly={true}
-    isReversed={false}
     onClick={[Function]}
     refCallback={[Function]}
     text="Terra.searchField.submit-search"
@@ -767,7 +688,6 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
     isCompact={true}
     isDisabled={false}
     isIconOnly={true}
-    isReversed={false}
     onClick={[Function]}
     refCallback={[Function]}
     text="Terra.searchField.submit-search"

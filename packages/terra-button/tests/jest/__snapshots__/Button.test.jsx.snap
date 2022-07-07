@@ -12,14 +12,13 @@ exports[`correctly applies the theme context className 1`] = `
     isBlock={false}
     isCompact={false}
     isDisabled={false}
-    isIconOnly={false}
-    isReversed={false}
     text="neutral"
     type="button"
     variant="neutral"
   >
     <button
       aria-disabled={false}
+      aria-label="neutral"
       className="button neutral orion-fusion-theme"
       disabled={false}
       onBlur={[Function]}
@@ -28,14 +27,13 @@ exports[`correctly applies the theme context className 1`] = `
       onKeyDown={[Function]}
       onKeyUp={[Function]}
       onMouseDown={[Function]}
+      title="neutral"
       type="button"
     >
       <span
         className="button-label text-only"
       >
-        <span
-          className=""
-        >
+        <span>
           neutral
         </span>
       </span>
@@ -49,23 +47,21 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
   isBlock={false}
   isCompact={false}
   isDisabled={false}
-  isIconOnly={false}
-  isReversed={false}
   refCallback={
     [MockFunction] {
       "calls": Array [
         Array [
           <button
             aria-disabled="false"
+            aria-label="text"
             class="button neutral"
+            title="text"
             type="button"
           >
             <span
               class="button-label text-only"
             >
-              <span
-                class=""
-              >
+              <span>
                 text
               </span>
             </span>
@@ -86,6 +82,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 >
   <button
     aria-disabled={false}
+    aria-label="text"
     className="button neutral"
     disabled={false}
     onBlur={[Function]}
@@ -94,14 +91,13 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
+    title="text"
     type="button"
   >
     <span
       className="button-label text-only"
     >
-      <span
-        className=""
-      >
+      <span>
         text
       </span>
     </span>
@@ -112,6 +108,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 exports[`should render a Button with merged attributes 1`] = `
 <button
   aria-disabled={false}
+  aria-label="text"
   className="button neutral TestClass"
   data-mock="data"
   disabled={false}
@@ -126,14 +123,13 @@ exports[`should render a Button with merged attributes 1`] = `
       "height": "100px",
     }
   }
+  title="text"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       text
     </span>
   </span>
@@ -143,6 +139,7 @@ exports[`should render a Button with merged attributes 1`] = `
 exports[`should render a button with a title 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Button"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -157,9 +154,7 @@ exports[`should render a button with a title 1`] = `
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       Button
     </span>
   </span>
@@ -178,14 +173,13 @@ exports[`should render a button with accessible label 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  title="Button"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       Button
     </span>
   </span>
@@ -195,6 +189,7 @@ exports[`should render a button with accessible label 1`] = `
 exports[`should render a button with type equal to button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="button"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -203,14 +198,13 @@ exports[`should render a button with type equal to button 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  title="button"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       button
     </span>
   </span>
@@ -220,6 +214,7 @@ exports[`should render a button with type equal to button 1`] = `
 exports[`should render a button with type equal to reset 1`] = `
 <button
   aria-disabled={false}
+  aria-label="reset"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -228,14 +223,13 @@ exports[`should render a button with type equal to reset 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  title="reset"
   type="reset"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       reset
     </span>
   </span>
@@ -245,6 +239,7 @@ exports[`should render a button with type equal to reset 1`] = `
 exports[`should render a button with type equal to submit 1`] = `
 <button
   aria-disabled={false}
+  aria-label="submit"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -253,14 +248,13 @@ exports[`should render a button with type equal to submit 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  title="submit"
   type="submit"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       submit
     </span>
   </span>
@@ -270,6 +264,7 @@ exports[`should render a button with type equal to submit 1`] = `
 exports[`should render a de-emphasis button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="de-emphasis"
   className="button de-emphasis"
   disabled={false}
   onBlur={[Function]}
@@ -278,14 +273,13 @@ exports[`should render a de-emphasis button 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  title="de-emphasis"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       de-emphasis
     </span>
   </span>
@@ -295,6 +289,7 @@ exports[`should render a de-emphasis button 1`] = `
 exports[`should render a emphasis button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="emphasis"
   className="button emphasis"
   disabled={false}
   onBlur={[Function]}
@@ -303,14 +298,13 @@ exports[`should render a emphasis button 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  title="emphasis"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       emphasis
     </span>
   </span>
@@ -320,6 +314,7 @@ exports[`should render a emphasis button 1`] = `
 exports[`should render a ghost button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="ghost"
   className="button ghost"
   disabled={false}
   onBlur={[Function]}
@@ -328,14 +323,13 @@ exports[`should render a ghost button 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  title="ghost"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       ghost
     </span>
   </span>
@@ -345,6 +339,7 @@ exports[`should render a ghost button 1`] = `
 exports[`should render a neutral button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="neutral"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -353,14 +348,13 @@ exports[`should render a neutral button 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  title="neutral"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       neutral
     </span>
   </span>
@@ -383,8 +377,12 @@ exports[`should render a utility button 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
-  />
+    className="button-label text-only"
+  >
+    <span>
+      utility
+    </span>
+  </span>
 </button>
 `;
 
@@ -404,8 +402,12 @@ exports[`should render a utility button with a custom accessible label 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
-  />
+    className="button-label text-only"
+  >
+    <span>
+      Icon Only
+    </span>
+  </span>
 </button>
 `;
 
@@ -425,8 +427,12 @@ exports[`should render a utility button with a custom title 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
-  />
+    className="button-label text-only"
+  >
+    <span>
+      Icon Only
+    </span>
+  </span>
 </button>
 `;
 
@@ -446,8 +452,12 @@ exports[`should render a utility button with text as a fallback accessible label
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
-  />
+    className="button-label text-only"
+  >
+    <span>
+      Icon Only
+    </span>
+  </span>
 </button>
 `;
 
@@ -467,14 +477,19 @@ exports[`should render a utility button with text as a fallback title 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
-  />
+    className="button-label text-only"
+  >
+    <span>
+      Icon Only
+    </span>
+  </span>
 </button>
 `;
 
 exports[`should render an action button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="action"
   className="button action"
   disabled={false}
   onBlur={[Function]}
@@ -483,170 +498,23 @@ exports[`should render an action button 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  title="action"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       action
     </span>
   </span>
 </button>
 `;
 
-exports[`should render an icon 1`] = `
-<button
-  aria-disabled={false}
-  aria-label="isIconOnly"
-  className="button neutral"
-  disabled={false}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  title="isIconOnly"
-  type="button"
->
-  <span
-    className="button-label icon-only"
-  >
-    <span
-      className="icon"
-    >
-      <img
-        alt="icon"
-        className="icon-svg"
-      />
-    </span>
-  </span>
-</button>
-`;
-
-exports[`should render an icon and a text 1`] = `
-<button
-  aria-disabled={false}
-  className="button neutral"
-  disabled={false}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  type="button"
->
-  <span
-    className="button-label text-and-icon"
-  >
-    <span
-      className="icon icon-first"
-    >
-      <img
-        alt="icon"
-        className="icon-svg"
-      />
-    </span>
-    <span
-      className=""
-    >
-      text
-    </span>
-  </span>
-</button>
-`;
-
-exports[`should render an icon only button with a custom accessible label 1`] = `
-<button
-  aria-disabled={false}
-  aria-label="Custom Accessible Label"
-  className="button neutral"
-  disabled={false}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  title="Icon Only"
-  type="button"
->
-  <span
-    className="button-label icon-only text-only"
-  />
-</button>
-`;
-
-exports[`should render an icon only button with a custom title 1`] = `
-<button
-  aria-disabled={false}
-  aria-label="Icon Only"
-  className="button neutral"
-  disabled={false}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  title="Custom Title"
-  type="button"
->
-  <span
-    className="button-label icon-only text-only"
-  />
-</button>
-`;
-
-exports[`should render an icon only button with text as a fallback accessible label 1`] = `
-<button
-  aria-disabled={false}
-  aria-label="Icon Only"
-  className="button neutral"
-  disabled={false}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  title="Icon Only"
-  type="button"
->
-  <span
-    className="button-label icon-only text-only"
-  />
-</button>
-`;
-
-exports[`should render an icon only button with text as a fallback title 1`] = `
-<button
-  aria-disabled={false}
-  aria-label="Icon Only"
-  className="button neutral"
-  disabled={false}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  title="Icon Only"
-  type="button"
->
-  <span
-    className="button-label icon-only text-only"
-  />
-</button>
-`;
-
 exports[`should render as an anchor when provided an href 1`] = `
 <a
   aria-disabled={false}
+  aria-label="href"
   className="button neutral"
   disabled={false}
   href="MockHref"
@@ -657,14 +525,13 @@ exports[`should render as an anchor when provided an href 1`] = `
   onKeyUp={[Function]}
   onMouseDown={[Function]}
   role="button"
+  title="href"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       href
     </span>
   </span>
@@ -674,6 +541,7 @@ exports[`should render as an anchor when provided an href 1`] = `
 exports[`should render as disabled when set 1`] = `
 <button
   aria-disabled={true}
+  aria-label="Disabled"
   className="button neutral is-disabled"
   disabled={true}
   onBlur={[Function]}
@@ -683,48 +551,14 @@ exports[`should render as disabled when set 1`] = `
   onKeyUp={[Function]}
   onMouseDown={[Function]}
   tabIndex="-1"
+  title="Disabled"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       Disabled
-    </span>
-  </span>
-</button>
-`;
-
-exports[`should render text then an icon when reversed 1`] = `
-<button
-  aria-disabled={false}
-  className="button neutral"
-  disabled={false}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  type="button"
->
-  <span
-    className="button-label text-and-icon"
-  >
-    <span
-      className="text-first"
-    >
-      text
-    </span>
-    <span
-      className="icon"
-    >
-      <img
-        alt="icon"
-        className="icon-svg"
-      />
     </span>
   </span>
 </button>
@@ -733,6 +567,7 @@ exports[`should render text then an icon when reversed 1`] = `
 exports[`should render with tabIndex when set 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Tab Index"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -742,14 +577,13 @@ exports[`should render with tabIndex when set 1`] = `
   onKeyUp={[Function]}
   onMouseDown={[Function]}
   tabIndex="-1"
+  title="Tab Index"
   type="button"
 >
   <span
     className="button-label text-only"
   >
-    <span
-      className=""
-    >
+    <span>
       Tab Index
     </span>
   </span>

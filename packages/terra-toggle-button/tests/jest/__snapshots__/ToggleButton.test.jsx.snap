@@ -7,37 +7,15 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
+    aria-label="Show"
     class="button neutral"
+    title="Show"
     type="button"
   >
     <span
-      class="button-label text-and-icon"
+      class="button-label text-only"
     >
-      <span
-        class="icon icon-first"
-      >
-        <span
-          class="icon icon-svg"
-        >
-          <svg
-            class="tui-Icon icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title />
-            <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
-            />
-          </svg>
-        </span>
-      </span>
-      <span
-        class=""
-      >
+      <span>
         Show
       </span>
     </span>
@@ -56,37 +34,15 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
+    aria-label="Show"
     class="button neutral"
+    title="Show"
     type="button"
   >
     <span
-      class="button-label text-and-icon"
+      class="button-label text-only"
     >
-      <span
-        class="icon icon-first"
-      >
-        <span
-          class="icon icon-svg"
-        >
-          <svg
-            class="tui-Icon icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title />
-            <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
-            />
-          </svg>
-        </span>
-      </span>
-      <span
-        class=""
-      >
+      <span>
         Show
       </span>
     </span>
@@ -121,29 +77,10 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
     type="button"
   >
     <span
-      class="button-label icon-only"
+      class="button-label text-only"
     >
-      <span
-        class="icon"
-      >
-        <span
-          class="icon icon-svg"
-        >
-          <svg
-            class="tui-Icon icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title />
-            <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
-            />
-          </svg>
-        </span>
+      <span>
+        Show
       </span>
     </span>
   </button>
@@ -161,37 +98,15 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="true"
+    aria-label="Show"
     class="button neutral"
+    title="Show"
     type="button"
   >
     <span
-      class="button-label text-and-icon"
+      class="button-label text-only"
     >
-      <span
-        class="icon icon-first"
-      >
-        <span
-          class="icon icon-svg"
-        >
-          <svg
-            class="tui-Icon icon is-bidi"
-            data-name="Layer 1"
-            focusable="false"
-            height="1em"
-            viewBox="0 0 48 48"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title />
-            <path
-              d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
-            />
-          </svg>
-        </span>
-      </span>
-      <span
-        class=""
-      >
+      <span>
         Show
       </span>
     </span>
@@ -244,7 +159,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
       isCompact={false}
       isDisabled={false}
       isIconOnly={false}
-      isReversed={false}
       onClick={[Function]}
       text="Show"
       type="button"
@@ -253,64 +167,23 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
       <button
         aria-disabled={false}
         aria-expanded={true}
+        aria-label="Show"
         className="button neutral"
         disabled={false}
+        isIconOnly={false}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
         onMouseDown={[Function]}
+        title="Show"
         type="button"
       >
         <span
-          className="button-label text-and-icon"
+          className="button-label text-only"
         >
-          <span
-            className="icon icon-first"
-          >
-            <span
-              className="icon icon-svg"
-            >
-              <IconChevronRight
-                className=""
-                data-name="Layer 1"
-                isBidi={true}
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <IconBase
-                  className=""
-                  data-name="Layer 1"
-                  focusable="false"
-                  height="1em"
-                  isBidi={true}
-                  isSpin={false}
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <svg
-                    className="tui-Icon icon is-bidi"
-                    data-name="Layer 1"
-                    focusable="false"
-                    height="1em"
-                    viewBox="0 0 48 48"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title />
-                    <path
-                      d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
-                    />
-                  </svg>
-                </IconBase>
-              </IconChevronRight>
-            </span>
-          </span>
-          <span
-            className=""
-          >
+          <span>
             Show
           </span>
         </span>
@@ -354,7 +227,6 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
     isCompact={false}
     isDisabled={false}
     isIconOnly={false}
-    isReversed={false}
     onClick={[Function]}
     text="Show"
     type="button"
@@ -391,7 +263,6 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
     isCompact={false}
     isDisabled={false}
     isIconOnly={false}
-    isReversed={false}
     onClick={[Function]}
     text="Show"
     type="button"
@@ -429,7 +300,6 @@ exports[`ToggleButton should set onClose prop correctly 1`] = `
     isCompact={false}
     isDisabled={false}
     isIconOnly={false}
-    isReversed={false}
     onClick={[Function]}
     text="Show"
     type="button"
@@ -467,7 +337,6 @@ exports[`ToggleButton should set onOpen prop correctly 1`] = `
     isCompact={false}
     isDisabled={false}
     isIconOnly={false}
-    isReversed={false}
     onClick={[Function]}
     text="Show"
     type="button"

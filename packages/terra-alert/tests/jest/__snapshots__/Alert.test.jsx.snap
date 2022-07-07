@@ -756,8 +756,6 @@ exports[`Alert of type success with an action button text content should render 
       isBlock={false}
       isCompact={false}
       isDisabled={false}
-      isIconOnly={false}
-      isReversed={false}
       onClick={[Function]}
       text="Action"
       type="button"
@@ -799,8 +797,6 @@ exports[`Alert of type success with an action button text content should render 
         isBlock={false}
         isCompact={false}
         isDisabled={false}
-        isIconOnly={false}
-        isReversed={false}
         onClick={[Function]}
         text="Action"
         type="button"
@@ -904,8 +900,6 @@ exports[`Alert of type success with an action button text content should render 
             isBlock={false}
             isCompact={false}
             isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
             onClick={[Function]}
             text="Action"
             type="button"
@@ -913,6 +907,7 @@ exports[`Alert of type success with an action button text content should render 
           >
             <button
               aria-disabled={false}
+              aria-label="Action"
               className="button emphasis"
               disabled={false}
               onBlur={[Function]}
@@ -921,14 +916,13 @@ exports[`Alert of type success with an action button text content should render 
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
+              title="Action"
               type="button"
             >
               <span
                 className="button-label text-only"
               >
-                <span
-                  className=""
-                >
+                <span>
                   Action
                 </span>
               </span>
@@ -1574,8 +1568,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
       isBlock={false}
       isCompact={false}
       isDisabled={false}
-      isIconOnly={false}
-      isReversed={false}
       onClick={[Function]}
       text="Action"
       type="button"
@@ -1626,8 +1618,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
         isBlock={false}
         isCompact={false}
         isDisabled={false}
-        isIconOnly={false}
-        isReversed={false}
         onClick={[Function]}
         text="Action"
         type="button"
@@ -1739,8 +1729,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             isBlock={false}
             isCompact={false}
             isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
             onClick={[Function]}
             text="Action"
             type="button"
@@ -1748,6 +1736,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           >
             <button
               aria-disabled={false}
+              aria-label="Action"
               className="button emphasis"
               disabled={false}
               onBlur={[Function]}
@@ -1756,14 +1745,13 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
+              title="Action"
               type="button"
             >
               <span
                 className="button-label text-only"
               >
-                <span
-                  className=""
-                >
+                <span>
                   Action
                 </span>
               </span>
@@ -1773,8 +1761,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             isBlock={false}
             isCompact={false}
             isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
             onClick={[Function]}
             text="Terra.alert.dismiss"
             type="button"
@@ -1782,6 +1768,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           >
             <button
               aria-disabled={false}
+              aria-label="Terra.alert.dismiss"
               className="button neutral"
               disabled={false}
               onBlur={[Function]}
@@ -1790,14 +1777,13 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
+              title="Terra.alert.dismiss"
               type="button"
             >
               <span
                 className="button-label text-only"
               >
-                <span
-                  className=""
-                >
+                <span>
                   Terra.alert.dismiss
                 </span>
               </span>
@@ -1940,8 +1926,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
             isBlock={false}
             isCompact={false}
             isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
             onClick={[Function]}
             text="Terra.alert.dismiss"
             type="button"
@@ -1949,6 +1933,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           >
             <button
               aria-disabled={false}
+              aria-label="Terra.alert.dismiss"
               className="button neutral"
               disabled={false}
               onBlur={[Function]}
@@ -1957,14 +1942,13 @@ exports[`Dismissible Alert that includes actions section should render an alert 
               onKeyDown={[Function]}
               onKeyUp={[Function]}
               onMouseDown={[Function]}
+              title="Terra.alert.dismiss"
               type="button"
             >
               <span
                 className="button-label text-only"
               >
-                <span
-                  className=""
-                >
+                <span>
                   Terra.alert.dismiss
                 </span>
               </span>

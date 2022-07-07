@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
+import { IconButton } from 'terra-button';
 import IconChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import Toggle from 'terra-toggle';
 import styles from './ToggleButton.module.scss';
@@ -116,10 +116,11 @@ class ToggleButton extends React.Component {
     ]);
 
     const button = (
-      <Button
+      <IconButton
         {...buttonAttrs}
         isIconOnly={isIconOnly}
         icon={<span className={cx('icon')}>{icon}</span>}
+        iconType={IconButton.Opts.IconTypes.INFORMATIVE}
         aria-expanded={this.state.isOpen}
         text={text}
         onClick={this.handleOnClick}

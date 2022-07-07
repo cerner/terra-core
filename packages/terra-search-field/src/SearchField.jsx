@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import Button from 'terra-button';
+import { IconButton } from 'terra-button';
 import * as KeyCode from 'keycode-js';
 import IconSearch from 'terra-icon/lib/icon/IconSearch';
 import { injectIntl } from 'react-intl';
@@ -270,13 +270,14 @@ class SearchField extends React.Component {
 
     const clearButton = this.searchText && !isDisabled
       ? (
-        <Button
+        <IconButton
           data-terra-search-field-button="Clear"
           className={cx('clear')}
           onClick={this.handleClear}
           text={clearText}
           variant="utility"
           icon={clearIcon}
+          iconType={IconButton.Opts.IconTypes.INFORMATIVE}
           isIconOnly
         />
       )
@@ -300,13 +301,14 @@ class SearchField extends React.Component {
           />
           {clearButton}
         </div>
-        <Button
+        <IconButton
           data-terra-search-field-button="Search"
           className={cx('button')}
           text={buttonText}
           onClick={this.handleSearch}
           isDisabled={isDisabled}
           icon={Icon}
+          iconType={IconButton.Opts.IconTypes.INFORMATIVE}
           isIconOnly
           isCompact
           refCallback={(ref) => { this.searchBtnRef.current = ref; }}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'terra-button';
+import Button, { IconButton, IconTypes } from 'terra-button';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
@@ -14,6 +14,12 @@ const propTypes = {
    * An optional icon. If an icon is provided, it will be an icon only button and the provided text is set as the aria-label for accessibility.
    */
   icon: PropTypes.element,
+  /**
+   * specifies the icon type. `iconType` should be specified when using icons with button.
+   * Not providing value for iconType will cause failures in [IconButton](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/button//icon-button) API.
+   * refer Icon [Accessiblity Guide](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/icon/accessibility-guide) to know about types of icon.
+   */
+  iconType: PropTypes.oneOf([IconTypes.DECORATIVE, IconTypes.INFORMATIVE]),
   /**
    * Whether or not the button should be disabled.
    */
@@ -111,6 +117,7 @@ class ButtonGroupButton extends React.Component {
   render() {
     const {
       icon,
+      iconType,
       isDisabled,
       onFocus,
       ...customProps
@@ -128,12 +135,28 @@ class ButtonGroupButton extends React.Component {
       customProps.className,
     );
 
+    if (icon) {
+      return (
+        <IconButton
+          {...customProps}
+          icon={icon}
+          iconType={iconType}
+          isDisabled={isDisabled}
+          isIconOnly={icon != null}
+          onKeyDown={this.handleKeyDown}
+          onKeyUp={this.handleKeyUp}
+          onBlur={this.handleOnBlur}
+          onFocus={this.handleFocus}
+          variant={Button.Opts.Variants.NEUTRAL}
+          className={buttonClassName}
+        />
+      );
+    }
+
     return (
       <Button
         {...customProps}
-        icon={icon}
         isDisabled={isDisabled}
-        isIconOnly={icon != null}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}

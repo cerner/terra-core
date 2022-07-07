@@ -491,8 +491,6 @@ exports[`should render a status view with custom glyph, title, message, and two 
           isBlock={false}
           isCompact={false}
           isDisabled={false}
-          isIconOnly={false}
-          isReversed={false}
           key="1"
           text="Action1"
           type="button"
@@ -500,6 +498,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
         >
           <button
             aria-disabled={false}
+            aria-label="Action1"
             className="button neutral button"
             disabled={false}
             onBlur={[Function]}
@@ -508,14 +507,13 @@ exports[`should render a status view with custom glyph, title, message, and two 
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             onMouseDown={[Function]}
+            title="Action1"
             type="button"
           >
             <span
               className="button-label text-only"
             >
-              <span
-                className=""
-              >
+              <span>
                 Action1
               </span>
             </span>
@@ -526,8 +524,6 @@ exports[`should render a status view with custom glyph, title, message, and two 
           isBlock={false}
           isCompact={false}
           isDisabled={false}
-          isIconOnly={false}
-          isReversed={false}
           key="2"
           text="Action2"
           type="button"
@@ -535,6 +531,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
         >
           <button
             aria-disabled={false}
+            aria-label="Action2"
             className="button neutral button"
             disabled={false}
             onBlur={[Function]}
@@ -543,14 +540,13 @@ exports[`should render a status view with custom glyph, title, message, and two 
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             onMouseDown={[Function]}
+            title="Action2"
             type="button"
           >
             <span
               className="button-label text-only"
             >
-              <span
-                className=""
-              >
+              <span>
                 Action2
               </span>
             </span>
