@@ -6,7 +6,7 @@ const ButtonVariants = {
   ACTION: 'action',
   UTILITY: 'utility',
 };
-  
+
 const ButtonTypes = {
   BUTTON: 'button',
   SUBMIT: 'submit',
