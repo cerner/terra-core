@@ -3,7 +3,6 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
 /* eslint-disable  import/no-unresolved */
 import DecoIconSquare from 'terra-icon/lib/icon/decorative/IconSquareSymbol';
-import { mount } from 'enzyme';
 
 import IconButton from '../../src/variants/_IconButton';
 

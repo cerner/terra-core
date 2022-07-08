@@ -45,7 +45,6 @@
     "terra-theme-context": "^1.0.0"
   },
   "devDependencies": {
-    "terra-icon": "^3.47.1",
-    "enzyme": "^3.11.0"
+    "terra-icon": "^3.47.1"
   }
 }

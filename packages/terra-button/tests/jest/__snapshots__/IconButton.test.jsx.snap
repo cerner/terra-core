@@ -52,7 +52,6 @@ exports[`correctly applies the theme context className 1`] = `
           >
             <IconBase
               a11yLabel="square"
-              ariaLabel={null}
               className="icon-svg"
               focusable="false"
               height="1em"
@@ -63,8 +62,6 @@ exports[`correctly applies the theme context className 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <svg
-                a11yLabel="square"
-                aria-hidden="true"
                 className="tui-Icon icon icon-svg"
                 focusable="false"
                 height="1em"
@@ -72,6 +69,9 @@ exports[`correctly applies the theme context className 1`] = `
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
+                <title>
+                  square
+                </title>
                 <path
                   d="M0 0h48v48H0V0z"
                 />
@@ -121,8 +121,6 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
                 class="icon icon-first"
               >
                 <svg
-                  a11yLabel="square"
-                  aria-hidden="true"
                   class="tui-Icon icon icon-svg"
                   focusable="false"
                   height="1em"
@@ -130,6 +128,9 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title>
+                    square
+                  </title>
                   <path
                     d="M0 0h48v48H0V0z"
                   />
@@ -182,7 +183,6 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
         >
           <IconBase
             a11yLabel="square"
-            ariaLabel={null}
             className="icon-svg"
             focusable="false"
             height="1em"
@@ -193,8 +193,6 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
-              a11yLabel="square"
-              aria-hidden="true"
               className="tui-Icon icon icon-svg"
               focusable="false"
               height="1em"
@@ -202,6 +200,9 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
+              <title>
+                square
+              </title>
               <path
                 d="M0 0h48v48H0V0z"
               />
