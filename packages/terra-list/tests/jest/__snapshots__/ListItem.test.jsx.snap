@@ -87,6 +87,7 @@ exports[`should render with hasChevron 1`] = `
       className="chevron"
     >
       <IconChevronRight
+        a11yLabel="Right"
         className=""
         data-name="Layer 1"
         height="1em"

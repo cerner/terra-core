@@ -5,6 +5,7 @@ exports[`InputField should render a InputField with props 1`] = `
   error="Text"
   errorIcon={
     <IconHelp
+      a11yLabel="Help"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -46,6 +47,7 @@ exports[`InputField should render a InputField with type specified by type attri
   error="Text"
   errorIcon={
     <IconHelp
+      a11yLabel="Help"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -87,6 +89,7 @@ exports[`InputField should render a InputField with type specified through Input
   error="Text"
   errorIcon={
     <IconHelp
+      a11yLabel="Help"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -128,6 +131,7 @@ exports[`InputField should render a default InputField component 1`] = `
   error={null}
   errorIcon={
     <IconError
+      a11yLabel="Error"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -159,6 +163,7 @@ exports[`InputField should render a disabled InputField component 1`] = `
   error={null}
   errorIcon={
     <IconError
+      a11yLabel="Error"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -190,6 +195,7 @@ exports[`InputField should render a disabled InputField component via inputAttrs
   error={null}
   errorIcon={
     <IconError
+      a11yLabel="Error"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -221,6 +227,7 @@ exports[`InputField should render a valid InputField with props 1`] = `
   error="Text"
   errorIcon={
     <IconHelp
+      a11yLabel="Help"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />

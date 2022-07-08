@@ -15,7 +15,7 @@ const StatusViewButtons = [
 const Custom = () => (
   <StatusView
     message="Custom Message"
-    customGlyph={<IconDiamond />}
+    customGlyph={<IconDiamond a11yLabel="Diamond" />}
     title="Custom Title"
     buttonAttrs={StatusViewButtons}
   />

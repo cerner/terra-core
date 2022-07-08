@@ -78,7 +78,7 @@ const propTypes = {
 const defaultProps = {
   children: null,
   error: null,
-  errorIcon: <IconError />,
+  errorIcon: <IconError a11yLabel="Error" />,
   help: null,
   hideRequired: false,
   htmlFor: undefined,

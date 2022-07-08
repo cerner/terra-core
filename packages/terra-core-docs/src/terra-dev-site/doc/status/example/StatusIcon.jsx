@@ -6,7 +6,7 @@ import styles from './colors.module.scss';
 
 const cx = classNames.bind(styles);
 
-const icon = <IconDue height="60" width="60" />;
+const icon = <IconDue a11yLabel="Due" height="60" width="60" />;
 
 const StatusIcon = () => (
   <Status colorClass={cx(['info'])} visuallyHiddenText="Status Info">{icon}</Status>

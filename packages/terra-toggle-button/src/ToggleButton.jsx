@@ -61,7 +61,7 @@ const defaultProps = {
   isIconAnimated: false,
   isIconOnly: false,
   isInitiallyOpen: false,
-  icon: <IconChevronRight />,
+  icon: <IconChevronRight a11yLabel="Right" />,
 };
 
 class ToggleButton extends React.Component {

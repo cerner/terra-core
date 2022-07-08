@@ -3,8 +3,8 @@ import IconCaretUp from 'terra-icon/lib/icon/IconCaretUp';
 import IconCaretDown from 'terra-icon/lib/icon/IconCaretDown';
 import ButtonGroup from 'terra-button-group';
 
-const iconCaretUp = <IconCaretUp />;
-const iconCaretDown = <IconCaretDown />;
+const iconCaretUp = <IconCaretUp a11yLabel="Up" />;
+const iconCaretDown = <IconCaretDown a11yLabel="Down" />;
 
 const ButtonGroupWithIcons = () => (
   <div>

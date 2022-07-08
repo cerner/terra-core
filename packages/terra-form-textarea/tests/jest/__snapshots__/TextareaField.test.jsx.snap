@@ -14,6 +14,7 @@ exports[`correctly applies the theme context className 1`] = `
     error={null}
     errorIcon={
       <IconError
+        a11yLabel="Error"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -37,6 +38,7 @@ exports[`correctly applies the theme context className 1`] = `
       error={null}
       errorIcon={
         <IconError
+          a11yLabel="Error"
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         />
@@ -68,10 +70,12 @@ exports[`correctly applies the theme context className 1`] = `
             className="error-icon-hidden"
           >
             <IconError
+              a11yLabel="Error"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
+                a11yLabel="Error"
                 className="IconError orion-fusion-theme"
                 focusable="false"
                 height="1em"
@@ -89,7 +93,9 @@ exports[`correctly applies the theme context className 1`] = `
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title />
+                  <title>
+                    Error
+                  </title>
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                     fill="#E50000"
@@ -136,7 +142,7 @@ exports[`should render a TextareaField with props 1`] = `
 <Field
   error="Text"
   errorIcon={
-    <IconHelp
+    <IconHelpDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -180,6 +186,7 @@ exports[`should render a default TextareaField component 1`] = `
   error={null}
   errorIcon={
     <IconError
+      a11yLabel="Error"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -214,6 +221,7 @@ exports[`should render a disabled TextareaField component 1`] = `
   error={null}
   errorIcon={
     <IconError
+      a11yLabel="Error"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -248,6 +256,7 @@ exports[`should render a disabled TextareaField component via inputAttrs 1`] = `
   error={null}
   errorIcon={
     <IconError
+      a11yLabel="Error"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -281,7 +290,7 @@ exports[`should render a valid TextareaField with props 1`] = `
 <Field
   error="Text"
   errorIcon={
-    <IconHelp
+    <IconHelpDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />

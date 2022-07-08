@@ -5,22 +5,9 @@ import classNamesBind from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
 import ThemeContext from 'terra-theme-context';
 import styles from './Button.module.scss';
+import { ButtonTypes, ButtonVariants } from './_constants';
 
 const cx = classNamesBind.bind(styles);
-
-const ButtonVariants = {
-  NEUTRAL: 'neutral',
-  EMPHASIS: 'emphasis',
-  GHOST: 'ghost',
-  'DE-EMPHASIS': 'de-emphasis',
-  ACTION: 'action',
-};
-
-const ButtonTypes = {
-  BUTTON: 'button',
-  SUBMIT: 'submit',
-  RESET: 'reset',
-};
 
 const propTypes = {
   /**

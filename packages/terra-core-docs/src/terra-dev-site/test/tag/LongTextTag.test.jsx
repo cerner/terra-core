@@ -7,7 +7,7 @@ import styles from './LongTextTagTest.module.scss';
 
 const cx = classNames.bind(styles);
 
-const icon = <IconBookmark />;
+const icon = <IconBookmark a11yLabel="Bookmark" />;
 const text = 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ';
 
 const LongTextIconTag = () => (

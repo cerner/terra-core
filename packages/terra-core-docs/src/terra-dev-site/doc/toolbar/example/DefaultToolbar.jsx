@@ -23,9 +23,9 @@ export default () => {
       </label>
       <br />
       <Toolbar align={align}>
-        <Button text="Edit" variant="utility" icon={<IconEdit />} />
-        <Button text="Add" variant="utility" icon={<IconAdd />} />
-        <Button text="Attachment" variant="utility" icon={<IconAttachment />} />
+        <Button text="Edit" variant="utility" icon={<IconEdit a11yLabel="Edit" />} />
+        <Button text="Add" variant="utility" icon={<IconAdd a11yLabel="Add" />} />
+        <Button text="Attachment" variant="utility" icon={<IconAttachment a11yLabel="Attachment" />} />
       </Toolbar>
     </div>
   );

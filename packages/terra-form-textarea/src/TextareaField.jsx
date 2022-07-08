@@ -118,7 +118,7 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   error: null,
-  errorIcon: <IconError />,
+  errorIcon: <IconError a11yLabel="Error" />,
   help: null,
   hideRequired: false,
   isAutoResizable: false,

@@ -11,7 +11,7 @@ import styles from './SearchField.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
-const Icon = <IconSearch />;
+const Icon = <IconSearch a11yLabel="Search" />;
 
 const propTypes = {
   /**

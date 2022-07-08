@@ -7,9 +7,9 @@ import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
 import IconGapChecking from 'terra-icon/lib/icon/IconGapChecking';
-import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
+import IconDiamondSymbol from 'terra-icon/lib/icon/decorative/IconDiamondSymbol';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
-import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
+import IconSuccess from 'terra-icon/lib/icon/decorative/IconSuccess';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
@@ -89,19 +89,19 @@ const defaultProps = {
 const getAlertIcon = (type, customIcon) => {
   switch (type) {
     case AlertTypes.ALERT:
-      return (<span className={cx('icon')}><IconAlert /></span>);
+      return (<span className={cx('icon')}><IconAlert a11yLabel="Alert" /></span>);
     case AlertTypes.ERROR:
-      return (<span className={cx('icon')}><IconError /></span>);
+      return (<span className={cx('icon')}><IconError a11yLabel="Error" /></span>);
     case AlertTypes.WARNING:
-      return (<span className={cx('icon')}><IconWarning /></span>);
+      return (<span className={cx('icon')}><IconWarning a11yLabel="Warning" /></span>);
     case AlertTypes.UNSATISFIED:
-      return (<span className={cx('icon', 'unsatisfied-icon')}><IconGapChecking /></span>);
+      return (<span className={cx('icon', 'unsatisfied-icon')}><IconGapChecking a11yLabel="Gap Checking" /></span>);
     case AlertTypes.UNVERIFIED:
       return (<span className={cx('icon', 'unverified-icon')}><IconDiamondSymbol /></span>);
     case AlertTypes.ADVISORY:
       return null;
     case AlertTypes.INFO:
-      return (<span className={cx('icon')}><IconInformation /></span>);
+      return (<span className={cx('icon')}><IconInformation a11yLabel="Information" /></span>);
     case AlertTypes.SUCCESS:
       return (<span className={cx('icon')}><IconSuccess /></span>);
     case AlertTypes.CUSTOM:

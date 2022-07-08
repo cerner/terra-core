@@ -24,11 +24,11 @@ exports[`correctly applies the theme context className 1`] = `
     isReversed={false}
     text="text"
     type="button"
-    variant="action"
+    variant="neutral"
   >
     <button
       aria-disabled={false}
-      className="button action orion-fusion-theme"
+      className="button neutral orion-fusion-theme"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -36,7 +36,6 @@ exports[`correctly applies the theme context className 1`] = `
       onKeyDown={[Function]}
       onKeyUp={[Function]}
       onMouseDown={[Function]}
-      role="button"
       type="button"
     >
       <span
@@ -112,8 +111,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
         Array [
           <button
             aria-disabled="false"
-            class="button action"
-            role="button"
+            class="button neutral"
             type="button"
           >
             <span
@@ -156,11 +154,11 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
   }
   text="text"
   type="button"
-  variant="action"
+  variant="neutral"
 >
   <button
     aria-disabled={false}
-    className="button action"
+    className="button neutral"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -168,7 +166,6 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
-    role="button"
     type="button"
   >
     <span
@@ -225,7 +222,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 exports[`should render IconButton as disabled when set 1`] = `
 <button
   aria-disabled={true}
-  className="button action is-disabled"
+  className="button neutral is-disabled"
   disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
@@ -233,7 +230,6 @@ exports[`should render IconButton as disabled when set 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   tabIndex="-1"
   type="button"
 >
@@ -262,7 +258,7 @@ exports[`should render IconButton as disabled when set 1`] = `
 exports[`should render IconButton with tabIndex when set 1`] = `
 <button
   aria-disabled={true}
-  className="button action is-disabled"
+  className="button neutral is-disabled"
   disabled={true}
   onBlur={[Function]}
   onClick={[Function]}
@@ -270,7 +266,6 @@ exports[`should render IconButton with tabIndex when set 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   tabIndex="-1"
   type="button"
 >
@@ -299,7 +294,7 @@ exports[`should render IconButton with tabIndex when set 1`] = `
 exports[`should render a IconButton 1`] = `
 <button
   aria-disabled={false}
-  className="button action"
+  className="button neutral"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -307,7 +302,6 @@ exports[`should render a IconButton 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   type="button"
 >
   <span
@@ -335,7 +329,7 @@ exports[`should render a IconButton 1`] = `
 exports[`should render a IconButton with merged attributes 1`] = `
 <button
   aria-disabled={false}
-  className="button action TestClass"
+  className="button neutral TestClass"
   data-mock="data"
   disabled={false}
   onBlur={[Function]}
@@ -344,7 +338,6 @@ exports[`should render a IconButton with merged attributes 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   style={
     Object {
       "height": "100px",
@@ -377,7 +370,7 @@ exports[`should render a IconButton with merged attributes 1`] = `
 exports[`should render a IconButton with type equal to iconButton 1`] = `
 <button
   aria-disabled={false}
-  className="button action"
+  className="button neutral"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -385,7 +378,6 @@ exports[`should render a IconButton with type equal to iconButton 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   type="iconButton"
 >
   <span
@@ -413,7 +405,7 @@ exports[`should render a IconButton with type equal to iconButton 1`] = `
 exports[`should render a IconButton with type equal to reset 1`] = `
 <button
   aria-disabled={false}
-  className="button action"
+  className="button neutral"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -421,7 +413,6 @@ exports[`should render a IconButton with type equal to reset 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   type="reset"
 >
   <span
@@ -449,7 +440,7 @@ exports[`should render a IconButton with type equal to reset 1`] = `
 exports[`should render a IconButton with type equal to submit 1`] = `
 <button
   aria-disabled={false}
-  className="button action"
+  className="button neutral"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -457,7 +448,6 @@ exports[`should render a IconButton with type equal to submit 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   type="submit"
 >
   <span
@@ -485,7 +475,7 @@ exports[`should render a IconButton with type equal to submit 1`] = `
 exports[`should render a icon only IconButton 1`] = `
 <button
   aria-disabled={false}
-  className="button action"
+  className="button neutral"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -493,7 +483,6 @@ exports[`should render a icon only IconButton 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   type="button"
 >
   <span
@@ -502,7 +491,7 @@ exports[`should render a icon only IconButton 1`] = `
     <span
       className="icon"
     >
-      <IconSquareSymbol
+      <IconSquareSymbolDec
         a11yLabel="square"
         className="icon-svg"
         viewBox="0 0 48 48"
@@ -525,7 +514,6 @@ exports[`should render a utility IconButton 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   title="square"
   type="button"
 >
@@ -557,7 +545,6 @@ exports[`should render an action IconButton 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   type="button"
 >
   <span
@@ -566,7 +553,7 @@ exports[`should render an action IconButton 1`] = `
     <span
       className="icon"
     >
-      <IconSquareSymbol
+      <IconSquareSymbolDec
         a11yLabel="square"
         className="icon-svg"
         viewBox="0 0 48 48"
@@ -580,7 +567,7 @@ exports[`should render an action IconButton 1`] = `
 exports[`should render text then an icon when reversed 1`] = `
 <button
   aria-disabled={false}
-  className="button action"
+  className="button neutral"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -588,7 +575,6 @@ exports[`should render text then an icon when reversed 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
-  role="button"
   type="button"
 >
   <span

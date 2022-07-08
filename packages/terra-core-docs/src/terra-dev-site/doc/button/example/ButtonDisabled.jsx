@@ -12,8 +12,8 @@ const ButtonDisabled = () => (
     <Button text="Disabled Emphasis" variant="emphasis" isDisabled className={cx('button')} />
     <Button text="Disabled Ghost" variant="ghost" isDisabled className={cx('button')} />
     <Button text="Disabled De-emphasis" variant="de-emphasis" isDisabled className={cx('button')} />
-    <Button text="Disabled Action" variant="action" isDisabled icon={<IconEdit />} className={cx('button')} />
-    <Button text="Disabled Utility" variant="utility" isDisabled icon={<IconEdit />} className={cx('button')} />
+    <Button text="Disabled Action" variant="action" isDisabled icon={<IconEdit a11yLabel="Edit" />} className={cx('button')} />
+    <Button text="Disabled Utility" variant="utility" isDisabled icon={<IconEdit a11yLabel="Edit" />} className={cx('button')} />
   </div>
 );
 
