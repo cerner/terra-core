@@ -1,5 +1,5 @@
 import React from 'react';
-import IconDiamond from 'terra-icon/lib/icon/IconDiamond';
+import IconDiamond from 'terra-icon/lib/icon/decorative/IconDiamond';
 import StatusView from 'terra-status-view';
 
 const StatusViewButtons = [
@@ -15,7 +15,7 @@ const StatusViewButtons = [
 const Custom = () => (
   <StatusView
     message="Custom Message"
-    customGlyph={<IconDiamond a11yLabel="Diamond" />}
+    customGlyph={<IconDiamond />}
     title="Custom Title"
     buttonAttrs={StatusViewButtons}
   />

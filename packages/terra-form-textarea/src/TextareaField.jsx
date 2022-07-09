@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconError from 'terra-icon/lib/icon/IconError';
+import IconError from 'terra-icon/lib/icon/decorative/IconError';
 import Field from 'terra-form-field';
 import Textarea from './Textarea';
 
@@ -118,7 +118,7 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   error: null,
-  errorIcon: <IconError a11yLabel="Error" />,
+  errorIcon: <IconError />,
   help: null,
   hideRequired: false,
   isAutoResizable: false,

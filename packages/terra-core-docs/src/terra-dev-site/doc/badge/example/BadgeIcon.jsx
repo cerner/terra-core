@@ -1,8 +1,8 @@
 import React from 'react';
-import IconBookmark from 'terra-icon/lib/icon/IconBookmark';
+import IconBookmark from 'terra-icon/lib/icon/decorative/IconBookmark';
 import Badge from 'terra-badge';
 
-const Icon = <IconBookmark a11yLabel="Bookmark" />;
+const Icon = <IconBookmark />;
 
 const BadgeIcon = () => (
   <div>

@@ -11,8 +11,6 @@ import styles from './SearchField.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
-const Icon = <IconSearch a11yLabel="Search" />;
-
 const propTypes = {
   /**
    * The defaultValue of the search field. Use this to create an uncontrolled search field.
@@ -307,7 +305,7 @@ class SearchField extends React.Component {
           text={buttonText}
           onClick={this.handleSearch}
           isDisabled={isDisabled}
-          icon={Icon}
+          icon={<IconSearch a11yLabel={intl.formatMessage({ id: 'Terra.searchField.search' })}/>}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
           isIconOnly
           isCompact

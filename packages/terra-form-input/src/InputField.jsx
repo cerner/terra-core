@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Field from 'terra-form-field';
-import IconError from 'terra-icon/lib/icon/IconError';
+import IconError from 'terra-icon/lib/icon/decorative/IconError';
 import Input from './Input';
 
 const propTypes = {
@@ -108,7 +108,7 @@ const defaultProps = {
   defaultValue: undefined,
   disabled: false,
   error: null,
-  errorIcon: <IconError a11yLabel="Error" />,
+  errorIcon: <IconError />,
   help: null,
   hideRequired: false,
   inputAttrs: {},

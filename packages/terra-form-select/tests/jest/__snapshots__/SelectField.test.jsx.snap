@@ -16,8 +16,7 @@ exports[`should render a default SelectField component 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -81,8 +80,7 @@ exports[`should render a default SelectField component with attributes spread on
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -147,8 +145,7 @@ exports[`should render a disabled SelectField component 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -212,8 +209,7 @@ exports[`should render a disabled SelectField component via selectAttrs 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -277,8 +273,7 @@ exports[`should render a max height SelectField component 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -343,8 +338,7 @@ exports[`should render a multiple SelectField component that limits the selectio
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -427,8 +421,7 @@ exports[`should render a required SelectField component 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -492,8 +485,7 @@ exports[`should render an incomplete SelectField component 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />

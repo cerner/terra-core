@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { IconButton } from 'terra-button';
-import IconChevronRight from 'terra-icon/lib/icon/IconChevronRight';
+import IconChevronRight from 'terra-icon/lib/icon/decorative/IconChevronRight';
 import Toggle from 'terra-toggle';
 import styles from './ToggleButton.module.scss';
 
@@ -61,7 +61,7 @@ const defaultProps = {
   isIconAnimated: false,
   isIconOnly: false,
   isInitiallyOpen: false,
-  icon: <IconChevronRight a11yLabel="Right" />,
+  icon: <IconChevronRight />,
 };
 
 class ToggleButton extends React.Component {

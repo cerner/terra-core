@@ -130,8 +130,7 @@ exports[`InputField should render a default InputField component 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
-      a11yLabel="Error"
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -162,8 +161,7 @@ exports[`InputField should render a disabled InputField component 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
-      a11yLabel="Error"
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -194,8 +192,7 @@ exports[`InputField should render a disabled InputField component via inputAttrs
 <Field
   error={null}
   errorIcon={
-    <IconError
-      a11yLabel="Error"
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />

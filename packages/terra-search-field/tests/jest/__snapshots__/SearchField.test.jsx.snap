@@ -94,7 +94,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
           data-terra-search-field-button="Search"
           icon={
             <IconSearch
-              a11yLabel="Search"
+              a11yLabel="Terra.searchField.search"
               data-name="Layer 1"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
@@ -134,14 +134,14 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
                 className="icon"
               >
                 <IconSearch
-                  a11yLabel="Search"
+                  a11yLabel="Terra.searchField.search"
                   className="icon-svg"
                   data-name="Layer 1"
                   viewBox="0 0 48 48"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <IconBase
-                    a11yLabel="Search"
+                    a11yLabel="Terra.searchField.search"
                     className="icon-svg"
                     data-name="Layer 1"
                     focusable="false"
@@ -162,7 +162,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <title>
-                        Search
+                        Terra.searchField.search
                       </title>
                       <path
                         d="M47.4 43.2l-13-13A19.66 19.66 0 0038 19a19 19 0 10-7.9 15.4l13 13a2.05 2.05 0 002.9 0l1.4-1.4a1.93 1.93 0 000-2.8zM3 19a16 16 0 1116 16A16 16 0 013 19z"
@@ -261,7 +261,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
       data-terra-search-field-button="Search"
       icon={
         <IconSearch
-          a11yLabel="Search"
+          a11yLabel="Terra.searchField.search"
           data-name="Layer 1"
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
@@ -301,14 +301,14 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
             className="icon"
           >
             <IconSearch
-              a11yLabel="Search"
+              a11yLabel="Terra.searchField.search"
               className="icon-svg"
               data-name="Layer 1"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                a11yLabel="Search"
+                a11yLabel="Terra.searchField.search"
                 className="icon-svg"
                 data-name="Layer 1"
                 focusable="false"
@@ -329,7 +329,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
-                    Search
+                    Terra.searchField.search
                   </title>
                   <path
                     d="M47.4 43.2l-13-13A19.66 19.66 0 0038 19a19 19 0 10-7.9 15.4l13 13a2.05 2.05 0 002.9 0l1.4-1.4a1.93 1.93 0 000-2.8zM3 19a16 16 0 1116 16A16 16 0 013 19z"
@@ -369,7 +369,7 @@ exports[`Snapshots renders a basic search field 1`] = `
     data-terra-search-field-button="Search"
     icon={
       <IconSearch
-        a11yLabel="Search"
+        a11yLabel="Terra.searchField.search"
         data-name="Layer 1"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
@@ -414,7 +414,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
     data-terra-search-field-button="Search"
     icon={
       <IconSearch
-        a11yLabel="Search"
+        a11yLabel="Terra.searchField.search"
         data-name="Layer 1"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
@@ -459,7 +459,7 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
     data-terra-search-field-button="Search"
     icon={
       <IconSearch
-        a11yLabel="Search"
+        a11yLabel="Terra.searchField.search"
         data-name="Layer 1"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
@@ -523,7 +523,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
     data-terra-search-field-button="Search"
     icon={
       <IconSearch
-        a11yLabel="Search"
+        a11yLabel="Terra.searchField.search"
         data-name="Layer 1"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
@@ -588,7 +588,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
     data-terra-search-field-button="Search"
     icon={
       <IconSearch
-        a11yLabel="Search"
+        a11yLabel="Terra.searchField.search"
         data-name="Layer 1"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
@@ -633,7 +633,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
     data-terra-search-field-button="Search"
     icon={
       <IconSearch
-        a11yLabel="Search"
+        a11yLabel="Terra.searchField.search"
         data-name="Layer 1"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
@@ -698,7 +698,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
     data-terra-search-field-button="Search"
     icon={
       <IconSearch
-        a11yLabel="Search"
+        a11yLabel="Terra.searchField.search"
         data-name="Layer 1"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
@@ -743,7 +743,7 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
     data-terra-search-field-button="Search"
     icon={
       <IconSearch
-        a11yLabel="Search"
+        a11yLabel="Terra.searchField.search"
         data-name="Layer 1"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
@@ -789,7 +789,7 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
     data-terra-search-field-button="Search"
     icon={
       <IconSearch
-        a11yLabel="Search"
+        a11yLabel="Terra.searchField.search"
         data-name="Layer 1"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"

@@ -167,12 +167,12 @@ exports[`Alert of type alert with text content should render an Alert component 
             className="icon"
           >
             <IconAlert
-              a11yLabel="Alert"
+              a11yLabel="Terra.alert.alert"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                a11yLabel="Alert"
+                a11yLabel="Terra.alert.alert"
                 className="IconAlert"
                 focusable="false"
                 height="1em"
@@ -191,7 +191,7 @@ exports[`Alert of type alert with text content should render an Alert component 
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
-                    Alert
+                    Terra.alert.alert
                   </title>
                   <path
                     d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
@@ -448,12 +448,12 @@ exports[`Alert of type error with text content should render an Alert component 
             className="icon"
           >
             <IconError
-              a11yLabel="Error"
+              a11yLabel="Terra.alert.error"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                a11yLabel="Error"
+                a11yLabel="Terra.alert.error"
                 className="IconError"
                 focusable="false"
                 height="1em"
@@ -472,7 +472,7 @@ exports[`Alert of type error with text content should render an Alert component 
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
-                    Error
+                    Terra.alert.error
                   </title>
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
@@ -582,12 +582,12 @@ exports[`Alert of type info with custom title and HTML content should render an 
             className="icon"
           >
             <IconInformation
-              a11yLabel="Information"
+              a11yLabel="Terra.alert.info"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                a11yLabel="Information"
+                a11yLabel="Terra.alert.info"
                 className="IconInformation"
                 focusable="false"
                 height="1em"
@@ -606,7 +606,7 @@ exports[`Alert of type info with custom title and HTML content should render an 
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
-                    Information
+                    Terra.alert.info
                   </title>
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
@@ -716,12 +716,12 @@ exports[`Alert of type info with text content should render an Alert component o
             className="icon"
           >
             <IconInformation
-              a11yLabel="Information"
+              a11yLabel="Terra.alert.info"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                a11yLabel="Information"
+                a11yLabel="Terra.alert.info"
                 className="IconInformation"
                 focusable="false"
                 height="1em"
@@ -740,7 +740,7 @@ exports[`Alert of type info with text content should render an Alert component o
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
-                    Information
+                    Terra.alert.info
                   </title>
                   <path
                     d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
@@ -1161,13 +1161,11 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
           <span
             className="icon unsatisfied-icon"
           >
-            <IconGapChecking
-              a11yLabel="Gap Checking"
+            <IconGapCheckingDec
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                a11yLabel="Gap Checking"
                 focusable="false"
                 height="1em"
                 isBidi={false}
@@ -1180,19 +1178,17 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
                   className="tui-Icon icon"
                   focusable="false"
                   height="1em"
+                  role="presentation"
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>
-                    Gap Checking
-                  </title>
                   <path
                     d="M46 15.1l-2.7-5.5-16.5 9.6V0h-5.5v19.2L4.8 9.6l-2.7 5.5L17.8 24 2 32.9l2.7 5.5 16.5-9.6V48h5.5V28.8l16.5 9.6 2.7-5.5L30.2 24 46 15.1z"
                   />
                 </svg>
               </IconBase>
-            </IconGapChecking>
+            </IconGapCheckingDec>
           </span>
           <div
             className="section"
@@ -1410,12 +1406,12 @@ exports[`Alert of type warning with text content should render an Alert componen
             className="icon"
           >
             <IconWarning
-              a11yLabel="Warning"
+              a11yLabel="Terra.alert.warning"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                a11yLabel="Warning"
+                a11yLabel="Terra.alert.warning"
                 className="IconWarning"
                 focusable="false"
                 height="1em"
@@ -1434,7 +1430,7 @@ exports[`Alert of type warning with text content should render an Alert componen
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
-                    Warning
+                    Terra.alert.warning
                   </title>
                   <path
                     d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
@@ -1541,12 +1537,12 @@ exports[`Alert with no props should render a default component 1`] = `
             className="icon"
           >
             <IconAlert
-              a11yLabel="Alert"
+              a11yLabel="Terra.alert.alert"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                a11yLabel="Alert"
+                a11yLabel="Terra.alert.alert"
                 className="IconAlert"
                 focusable="false"
                 height="1em"
@@ -1565,7 +1561,7 @@ exports[`Alert with no props should render a default component 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
-                    Alert
+                    Terra.alert.alert
                   </title>
                   <path
                     d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
@@ -1914,12 +1910,12 @@ exports[`Dismissible Alert that includes actions section should render an alert 
             className="icon"
           >
             <IconAlert
-              a11yLabel="Alert"
+              a11yLabel="Terra.alert.alert"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
             >
               <IconBase
-                a11yLabel="Alert"
+                a11yLabel="Terra.alert.alert"
                 className="IconAlert"
                 focusable="false"
                 height="1em"
@@ -1938,7 +1934,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <title>
-                    Alert
+                    Terra.alert.alert
                   </title>
                   <path
                     d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"

@@ -6,7 +6,7 @@ import { injectIntl } from 'react-intl';
 import IconAlert from 'terra-icon/lib/icon/IconAlert';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
-import IconGapChecking from 'terra-icon/lib/icon/IconGapChecking';
+import IconGapChecking from 'terra-icon/lib/icon/decorative/IconGapChecking';
 import IconDiamondSymbol from 'terra-icon/lib/icon/decorative/IconDiamondSymbol';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/decorative/IconSuccess';
@@ -86,22 +86,22 @@ const defaultProps = {
   type: AlertTypes.ALERT,
 };
 
-const getAlertIcon = (type, customIcon) => {
+const getAlertIcon = (type, customIcon, intl) => {
   switch (type) {
     case AlertTypes.ALERT:
-      return (<span className={cx('icon')}><IconAlert a11yLabel="Alert" /></span>);
+      return (<span className={cx('icon')}><IconAlert a11yLabel={intl.formatMessage({ id: `Terra.alert.alert` })} /></span>);
     case AlertTypes.ERROR:
-      return (<span className={cx('icon')}><IconError a11yLabel="Error" /></span>);
+      return (<span className={cx('icon')}><IconError a11yLabel={intl.formatMessage({ id: `Terra.alert.error` })} /></span>);
     case AlertTypes.WARNING:
-      return (<span className={cx('icon')}><IconWarning a11yLabel="Warning" /></span>);
+      return (<span className={cx('icon')}><IconWarning a11yLabel={intl.formatMessage({ id: `Terra.alert.warning` })} /></span>);
     case AlertTypes.UNSATISFIED:
-      return (<span className={cx('icon', 'unsatisfied-icon')}><IconGapChecking a11yLabel="Gap Checking" /></span>);
+      return (<span className={cx('icon', 'unsatisfied-icon')}><IconGapChecking /></span>);
     case AlertTypes.UNVERIFIED:
       return (<span className={cx('icon', 'unverified-icon')}><IconDiamondSymbol /></span>);
     case AlertTypes.ADVISORY:
       return null;
     case AlertTypes.INFO:
-      return (<span className={cx('icon')}><IconInformation a11yLabel="Information" /></span>);
+      return (<span className={cx('icon')}><IconInformation a11yLabel={intl.formatMessage({ id: `Terra.alert.info` })} /></span>);
     case AlertTypes.SUCCESS:
       return (<span className={cx('icon')}><IconSuccess /></span>);
     case AlertTypes.CUSTOM:
@@ -179,7 +179,7 @@ const Alert = ({
     >
       <div role="alert" {...customProps} className={alertClassNames}>
         <div className={bodyClassNameForParent}>
-          {getAlertIcon(type, customIcon)}
+          {getAlertIcon(type, customIcon, intl)}
           {alertMessageContent}
         </div>
         {actionsSection}

@@ -43,8 +43,7 @@ exports[`should render the selectId to the input field in ComboboxField componen
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -107,8 +106,7 @@ exports[`should render the selectId to the input field in MultiSelectField compo
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -197,8 +195,7 @@ exports[`should render the selectId to the input field in SearchSelectField comp
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -261,8 +258,7 @@ exports[`should render the selectId to the input field in TagSelectField compone
     <div
       className="error-icon-hidden"
     >
-      <IconError
-        a11yLabel="Error"
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />

@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import IconError from 'terra-icon/lib/icon/IconError';
+import IconError from 'terra-icon/lib/icon/decorative/IconError';
 import styles from './Field.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -78,7 +78,7 @@ const propTypes = {
 const defaultProps = {
   children: null,
   error: null,
-  errorIcon: <IconError a11yLabel="Error" />,
+  errorIcon: <IconError />,
   help: null,
   hideRequired: false,
   htmlFor: undefined,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
+import ChevronRight from 'terra-icon/lib/icon/decorative/IconChevronRight';
 import ListUtils from './ListUtils';
 import styles from './List.module.scss';
 
@@ -106,7 +106,7 @@ const ListItem = ({
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
       <div className={cx('item-fill')} key="item-fill">{children}</div>
-      {hasChevron && <div className={cx('item-end')} key="item-end"><span className={cx('chevron')}><ChevronRight height="1em" width="1em" a11yLabel="Right" /></span></div>}
+      {hasChevron && <div className={cx('item-end')} key="item-end"><span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span></div>}
     </li>
   );
 };
