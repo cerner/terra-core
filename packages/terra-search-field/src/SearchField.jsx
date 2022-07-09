@@ -305,7 +305,7 @@ class SearchField extends React.Component {
           text={buttonText}
           onClick={this.handleSearch}
           isDisabled={isDisabled}
-          icon={<IconSearch a11yLabel={intl.formatMessage({ id: 'Terra.searchField.search' })}/>}
+          icon={<IconSearch a11yLabel={intl.formatMessage({ id: 'Terra.searchField.search' })} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
           isIconOnly
           isCompact

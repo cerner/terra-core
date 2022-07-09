@@ -89,11 +89,11 @@ const defaultProps = {
 const getAlertIcon = (type, customIcon, intl) => {
   switch (type) {
     case AlertTypes.ALERT:
-      return (<span className={cx('icon')}><IconAlert a11yLabel={intl.formatMessage({ id: `Terra.alert.alert` })} /></span>);
+      return (<span className={cx('icon')}><IconAlert a11yLabel={intl.formatMessage({ id: 'Terra.alert.alert' })} /></span>);
     case AlertTypes.ERROR:
-      return (<span className={cx('icon')}><IconError a11yLabel={intl.formatMessage({ id: `Terra.alert.error` })} /></span>);
+      return (<span className={cx('icon')}><IconError a11yLabel={intl.formatMessage({ id: 'Terra.alert.error' })} /></span>);
     case AlertTypes.WARNING:
-      return (<span className={cx('icon')}><IconWarning a11yLabel={intl.formatMessage({ id: `Terra.alert.warning` })} /></span>);
+      return (<span className={cx('icon')}><IconWarning a11yLabel={intl.formatMessage({ id: 'Terra.alert.warning' })} /></span>);
     case AlertTypes.UNSATISFIED:
       return (<span className={cx('icon', 'unsatisfied-icon')}><IconGapChecking /></span>);
     case AlertTypes.UNVERIFIED:
@@ -101,7 +101,7 @@ const getAlertIcon = (type, customIcon, intl) => {
     case AlertTypes.ADVISORY:
       return null;
     case AlertTypes.INFO:
-      return (<span className={cx('icon')}><IconInformation a11yLabel={intl.formatMessage({ id: `Terra.alert.info` })} /></span>);
+      return (<span className={cx('icon')}><IconInformation a11yLabel={intl.formatMessage({ id: 'Terra.alert.info' })} /></span>);
     case AlertTypes.SUCCESS:
       return (<span className={cx('icon')}><IconSuccess /></span>);
     case AlertTypes.CUSTOM:
