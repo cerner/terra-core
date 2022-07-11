@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.14.0 - (July 5, 2022)
+
 * Fixed
   * Updated broken links in terra-form-select and action-footer.
 

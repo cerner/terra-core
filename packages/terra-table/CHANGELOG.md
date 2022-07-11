@@ -5,6 +5,11 @@
 * Fixed
   * Fixed fusion theme colors and caret icon size to match similar components
 
+## 4.31.2 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.31.1 - (February 24, 2022)
 
 * Changed
