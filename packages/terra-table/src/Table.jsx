@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -114,20 +115,25 @@ const defaultProps = {
   showSimpleFooter: false,
 };
 
-const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
-  <Cell
-    {...cell.attrs}
-    // The headers attribute is a string that gives the cell a column reading order.
-    headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
-    key={cell.key}
-    refCallback={cell.refCallback}
-    removeInner={cell.removeInner}
-    width={colWidth}
-    disclosureData={discloseData}
-  >
-    {cell.children}
-  </Cell>
-);
+// Probably a better way to indent is to assign CSS classes or data attributes.
+function createCell(cell, sectionId, columnId, colWidth, discloseData, indent = null, prefix = null) {
+  return (
+    <Cell
+      {...cell.attrs}
+      // The headers attribute is a string that gives the cell a column reading order.
+      headers={sectionId && columnId ? [sectionId, columnId].join(' ') : sectionId || columnId}
+      key={cell.key}
+      refCallback={cell.refCallback}
+      removeInner={cell.removeInner}
+      width={colWidth}
+      disclosureData={discloseData}
+    >
+      {indent}
+      {prefix}
+      {cell.children}
+    </Cell>
+  );
+}
 
 const createCheckCell = (rowData, rowStyle, checkStyle) => {
   let cellMetaData;
@@ -233,6 +239,7 @@ const createHeaderChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
+// This needs a more specific name to signal that it's for the left-most cell.
 const createRow = (tableData, rowData, rowIndex, sectionId) => {
   let rowMetaData;
   let rowOnAction;
@@ -276,7 +283,14 @@ const createRow = (tableData, rowData, rowIndex, sectionId) => {
         const columnId = tableData.headerData && tableData.headerData.cells ? tableData.headerData.cells[colIndex].id : undefined;
         const columnWidth = tableData.columnWidths ? tableData.columnWidths[colIndex] : undefined;
         const discloseData = colIndex === primaryIndex ? primaryData : undefined;
-        return createCell(cell, sectionId, columnId, columnWidth, discloseData);
+
+        // This is not the way to really do this. Use CSS in the real version!!
+        // Also in the real code we should define these values for all cells, not
+        // just the cells relevant to the demo as I have done here.
+        const hShowIcon = tableData.hierarchyShowIcons[cell.key] || false;
+        const hIndent = tableData.hierarchyIndents[cell.key] || false;
+
+        return createCell(cell, sectionId, columnId, columnWidth, discloseData, '_'.repeat(hIndent), `${hShowIcon ? '▼' : ' '}`);
       })}
       {createChevronCell(tableData.rowStyle, tableData.hasChevrons)}
     </Row>
@@ -365,6 +379,80 @@ const unpackTableData = (tableData) => {
   return { rowCount: sectionIndex, header, sections };
 };
 
+// const calculateHierarchyParents = (tableData) => ({
+// /** This is hard-coded because it's a POC. The actual algo for doing this
+//  *  will be like:
+//  *
+//  * Initialize, parents P = {};
+//  * For each row R in tableData:
+//  * if R.parent:
+//  *    P[R] = R.parent
+//  * else:
+//  *    P[R] = R
+//  *
+//  * This example maps to mock-select.js!!!
+//  */
+// 'unique-0-0': undefined, // Dave has no parent
+// 'unique-1-0': 'unique-0-0', // Michael's parent is Dave
+// 'unique-2-0': 'unique-1-0', // Jack's parent is Michael
+// 'unique-3-0': 'unique-0-0', // Tom's parent is Dave
+// 'unique-4-0': undefined, // Paul has no parent
+// });
+
+// const calculateHierarchyChildren = (tableData) => ({
+// /** This is hard-coded because it's a POC. The actual algo for doing this
+//  *  will be like:
+//  *
+//  * Initialize, children C = {r:[] for r in Rows};
+//  * For each row R in tableData:
+//  * if R.parent:
+//  *    C[R.parent] ++ R
+//  *
+//  * This example maps to mock-select.js!!!
+//  */
+// 'unique-0-0': ['unique-0-1', 'unique-0-3'], // Dave is parent of Michael and Tom.
+// 'unique-1-0': ['unique-0-2'], // Michael is parent of Jack.
+// 'unique-2-0': [],
+// 'unique-3-0': [],
+// 'unique-4-0': [],
+// });
+
+const calculateHierarchyIndention = (tableData) => ({
+  /** This is hard-coded because it's a POC. The actual algo for doing this
+   *  will be like:
+   *
+   * Initialize, indents I = {r:0 for r in Rows};
+   * For each row R in tableData:
+   * if R.parent:
+   *    I[R] = 1 + I[R.parent]
+   *
+   * This example maps to mock-select.js!!!
+   */
+  'unique-0-0': 0,
+  'unique-1-0': 1,
+  'unique-2-0': 2,
+  'unique-3-0': 1,
+  'unique-4-0': 0,
+});
+
+const calculateShowHierarchyIcons = (tableData) => ({
+  /** This is hard-coded because it's a POC. The actual algo for doing this
+   *  will be like:
+   *
+   * Initialize, indent I = {r: false for r in Rows};
+   * For each row R in tableData:
+   * if R.parent:
+   *    I[R.parent] = true
+   *
+   * This example maps to mock-select.js!!!
+   */
+  'unique-0-0': true, // Dave
+  'unique-1-0': true, // Michael
+  'unique-2-0': false, // Jack
+  'unique-3-0': false, // Tom
+  'unique-4-0': false, // Paul
+});
+
 const Table = ({
   dividerStyle,
   hasChevrons,
@@ -412,6 +500,16 @@ const Table = ({
     dividerStyle,
     numberOfColumns,
   };
+
+  // Don't ship this. This is merely the quickest n' dirtiest way.
+  // Probably the Table should have some state and we keep that state rather than pass the state down
+  // through so many layers of function calls. Same result, but it will unlock us to do arbitrary data processing
+  // for cases like outline view.
+  //
+  // const tableData = useState(tableData, setTableData) ...
+  tableData.hierarchyIndents = calculateHierarchyIndention(tableData);
+  tableData.hierarchyShowIcons = calculateShowHierarchyIcons(tableData);
+
   const { rowCount, header, sections } = unpackTableData(tableData);
 
   const attrSpread = cellPaddingStyle ? { 'data-table-padding': cellPaddingStyle } : {};

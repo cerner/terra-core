@@ -28,6 +28,7 @@ const mockData = [
     toggleText: 'Toggle Power Row 1',
     discloseText: 'Power Row 1 - Details',
     primaryIndex: 1,
+    parentRow: 'unique-0',
     cells: [
       {
         key: 'unique-1-0',
@@ -52,6 +53,7 @@ const mockData = [
     toggleText: 'Toggle Power Row 2',
     discloseText: 'Power Row 2 - Details',
     primaryIndex: 1,
+    parentRow: 'unique-1',
     cells: [
       {
         key: 'unique-2-0',
@@ -76,6 +78,7 @@ const mockData = [
     toggleText: 'Toggle Power Row 3',
     discloseText: 'Power Row 3 - Details',
     primaryIndex: 1,
+    parentRow: 'unique-0',
     cells: [
       {
         key: 'unique-3-0',
