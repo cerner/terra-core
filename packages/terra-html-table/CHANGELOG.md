@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed fusion theme colors to match terra-table
+
 ## 1.13.1 - (December 14, 2021)
 
 * Changed
