@@ -77,6 +77,10 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
+   * Callback function triggered when mouse is pressed.
+   */
+  onMouseDown: PropTypes.func,
+  /**
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
   variant: PropTypes.oneOf(['default', 'external', 'image', 'video', 'audio', 'document']),
@@ -98,8 +102,12 @@ class Hyperlink extends React.Component {
     this.linkRef = React.createRef();
   }
 
-  handleMouseDown() {
+  handleMouseDown(event) {
     this.linkRef.current.setAttribute('data-focus-styles-enabled', 'false');
+
+    if (this.props.onMouseDown) {
+      this.props.onMouseDown(event);
+    }
   }
 
   handleOnBlur(event) {
@@ -145,6 +153,7 @@ class Hyperlink extends React.Component {
       onFocus,
       onKeyDown,
       onKeyUp,
+      onMouseDown,
       ...customProps
     } = this.props;
 
