@@ -77,7 +77,7 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
-   * Callback function triggered when mouse is pressed.
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onMouseDown: PropTypes.func,
   /**
