@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fix to allow users to pass onMouseDown prop.
+
 ## 2.52.0 - (July 5, 2022)
 
 * Fixed
