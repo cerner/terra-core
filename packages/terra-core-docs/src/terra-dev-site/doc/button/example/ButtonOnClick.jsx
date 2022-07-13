@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const ButtonOnClick = () => (
   // eslint-disable-next-line no-alert
-  <Button text="Click Me" onClick={() => alert('Ive been clicked!')} className={cx('button')} />
+  <Button text="Show Alert" onClick={() => alert('Ive been clicked!')} className={cx('button')} />
 );
 
 export default ButtonOnClick;
