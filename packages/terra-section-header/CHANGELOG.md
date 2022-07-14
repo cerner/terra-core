@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.56.0 - (July 14, 2022)
+
 * Fixed
   * Fixed caret icon size to match similar components.
 

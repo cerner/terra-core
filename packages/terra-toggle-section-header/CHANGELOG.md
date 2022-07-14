@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.58.4 - (July 14, 2022)
+
 * Changed
   * Updated WDIO Screenshots from changes made to terra-section-header
   
