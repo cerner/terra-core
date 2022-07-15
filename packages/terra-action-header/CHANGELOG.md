@@ -2,7 +2,7 @@
 
 ## Unreleased
 * Changed
-  * Replaced `terra-button` with `terra-icon-button`
+  * Replaced `terra-button` with `IconButton`
 
 * Breaking Changes
   * Renamed `title` prop as `text` to avoid confusion with HTML attribute `title`.

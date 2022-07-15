@@ -59,7 +59,7 @@ const propTypes = {
    */
   text: PropTypes.string.isRequired,
   /**
-   * Additional information to display as a native tooltip on hover. will fallback to using `text` if not provided.
+   * Additional information to display as a native tooltip on hover. It will fallback to using `text` if not provided.
    */
   title: PropTypes.string,
   /**

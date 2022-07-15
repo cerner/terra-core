@@ -13,7 +13,7 @@ const DecorativeIcon = <IconAudio />;
 const ButtonIcon = () => (
   <div>
     <IconButton icon={Icon} text="icon" iconType={IconTypes.INFORMATIVE} className={cx('button')} />
-    <IconButton icon={Icon} text="icon" iconType="informative" isReversed className={cx('button')} />
+    <IconButton icon={Icon} text="icon" iconType={IconTypes.INFORMATIVE} isReversed className={cx('button')} />
     <IconButton icon={DecorativeIcon} isIconOnly iconType={IconTypes.INFORMATIVE} text="Icon Only Button" className={cx('button')} />
   </div>
 );
