@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.32.0 - (July 14, 2022)
+
 * Fixed
   * Fixed fusion theme colors and caret icon size to match similar components
 

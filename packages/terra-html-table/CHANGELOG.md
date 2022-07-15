@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.14.0 - (July 14, 2022)
+
 * Fixed
   * Fixed fusion theme colors to match terra-table
 

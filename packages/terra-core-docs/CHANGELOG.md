@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.14.1 - (July 14, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 1.14.0 - (July 5, 2022)
 
 * Fixed
