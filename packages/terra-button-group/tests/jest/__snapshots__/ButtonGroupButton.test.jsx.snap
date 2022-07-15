@@ -92,6 +92,7 @@ exports[`should render with icon only 1`] = `
       alt="icon"
     />
   }
+  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={false}
