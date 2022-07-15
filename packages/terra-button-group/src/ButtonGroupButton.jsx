@@ -142,7 +142,7 @@ class ButtonGroupButton extends React.Component {
           icon={icon}
           iconType={iconType}
           isDisabled={isDisabled}
-          isIconOnly={true}
+          isIconOnly
           onKeyDown={this.handleKeyDown}
           onKeyUp={this.handleKeyUp}
           onBlur={this.handleOnBlur}
