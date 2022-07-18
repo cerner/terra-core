@@ -6,7 +6,7 @@ import styles from './ButtonDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const A11yIconButton = () => (
+const A11yButtonLabel = () => (
   <Card>
     <Card.Body>
       <p>
@@ -20,4 +20,4 @@ const A11yIconButton = () => (
   </Card>
 );
 
-export default A11yIconButton;
+export default A11yButtonLabel;
