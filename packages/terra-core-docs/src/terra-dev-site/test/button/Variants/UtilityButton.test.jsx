@@ -1,15 +1,15 @@
 import React from 'react';
 import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
+import { IconButton } from 'terra-button';
 import styles from '../ButtonTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
 const UtilityButton = () => (
   <div id="utility" className={cx('button-wrapper')}>
-    <Button id="utilityButton" text="Utility" icon={<IconSquare />} variant="utility" />
-    <Button id="utilityButtonDisabled" text="Utility Disabled" icon={<IconSquare />} variant="utility" isDisabled />
+    <IconButton id="utilityButton" text="Utility" icon={<IconSquare a11yLabel="square" />} iconType="informative" variant="utility" />
+    <IconButton id="utilityButtonDisabled" text="Utility Disabled" icon={<IconSquare a11yLabel="square" />} iconType="informative" variant="utility" isDisabled />
   </div>
 );
 

@@ -38,7 +38,7 @@ exports[`correctly applies the theme context className 1`] = `
   <Field
     error={null}
     errorIcon={
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -69,7 +69,7 @@ exports[`correctly applies the theme context className 1`] = `
         <div
           className="error-icon-hidden"
         >
-          <IconError
+          <IconErrorDec
             viewBox="0 0 48 48"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -87,11 +87,11 @@ exports[`correctly applies the theme context className 1`] = `
                 className="tui-Icon icon IconError orion-fusion-theme"
                 focusable="false"
                 height="1em"
+                role="presentation"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title />
                 <path
                   d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                   fill="#E50000"
@@ -102,7 +102,7 @@ exports[`correctly applies the theme context className 1`] = `
                 />
               </svg>
             </IconBase>
-          </IconError>
+          </IconErrorDec>
         </div>
       </div>
     </div>
@@ -153,7 +153,7 @@ exports[`should render a field error message 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -205,7 +205,7 @@ exports[`should render a field help message 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -257,7 +257,7 @@ exports[`should render a field in error 1`] = `
     <div
       className="error-icon"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -328,7 +328,7 @@ exports[`should render a field label 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -380,7 +380,7 @@ exports[`should render a field with a Select 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -398,11 +398,11 @@ exports[`should render a field with a Select 1`] = `
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
               fill="#E50000"
@@ -413,7 +413,7 @@ exports[`should render a field with a Select 1`] = `
             />
           </svg>
         </IconBase>
-      </IconError>
+      </IconErrorDec>
     </div>
   </div>
   <Select
@@ -467,7 +467,7 @@ exports[`should render a field with a Textarea 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -485,11 +485,11 @@ exports[`should render a field with a Textarea 1`] = `
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
               fill="#E50000"
@@ -500,7 +500,7 @@ exports[`should render a field with a Textarea 1`] = `
             />
           </svg>
         </IconBase>
-      </IconError>
+      </IconErrorDec>
     </div>
   </div>
   <Textarea
@@ -555,6 +555,7 @@ exports[`should render a field with a custom error icon 1`] = `
       className="error-icon-hidden"
     >
       <IconHelp
+        a11yLabel="Help"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -606,7 +607,7 @@ exports[`should render a field with a hidden label 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -652,7 +653,7 @@ exports[`should render a field with a hidden label in error 1`] = `
     <div
       className="error-icon"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -723,7 +724,7 @@ exports[`should render a field with an Input 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -741,11 +742,11 @@ exports[`should render a field with an Input 1`] = `
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
               fill="#E50000"
@@ -756,7 +757,7 @@ exports[`should render a field with an Input 1`] = `
             />
           </svg>
         </IconBase>
-      </IconError>
+      </IconErrorDec>
     </div>
   </div>
   <Input
@@ -804,7 +805,7 @@ exports[`should render a required field in error 1`] = `
     <div
       className="error-icon"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -887,7 +888,7 @@ exports[`should render a required field label 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -944,7 +945,7 @@ exports[`should render a required field label with required hidden 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -1002,7 +1003,7 @@ exports[`should render a required field with a Select 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1020,11 +1021,11 @@ exports[`should render a required field with a Select 1`] = `
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
               fill="#E50000"
@@ -1035,7 +1036,7 @@ exports[`should render a required field with a Select 1`] = `
             />
           </svg>
         </IconBase>
-      </IconError>
+      </IconErrorDec>
     </div>
   </div>
   <Select
@@ -1098,7 +1099,7 @@ exports[`should render a required field with a Textarea 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1116,11 +1117,11 @@ exports[`should render a required field with a Textarea 1`] = `
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
               fill="#E50000"
@@ -1131,7 +1132,7 @@ exports[`should render a required field with a Textarea 1`] = `
             />
           </svg>
         </IconBase>
-      </IconError>
+      </IconErrorDec>
     </div>
   </div>
   <Textarea
@@ -1194,7 +1195,7 @@ exports[`should render a required field with a hidden label 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -1240,7 +1241,7 @@ exports[`should render a required field with a hidden label in error 1`] = `
     <div
       className="error-icon"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -1323,7 +1324,7 @@ exports[`should render a required field with an Input 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -1341,11 +1342,11 @@ exports[`should render a required field with an Input 1`] = `
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
               fill="#E50000"
@@ -1356,7 +1357,7 @@ exports[`should render a required field with an Input 1`] = `
             />
           </svg>
         </IconBase>
-      </IconError>
+      </IconErrorDec>
     </div>
   </div>
   <Input
@@ -1413,7 +1414,7 @@ exports[`should render an inline field with most of the possible props are passe
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -1437,7 +1438,7 @@ exports[`should render an invalid and required field with a Select 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -1516,7 +1517,7 @@ exports[`should render an invalid and required field with a Select 1`] = `
       <div
         className="error-icon"
       >
-        <IconError
+        <IconErrorDec
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1534,11 +1535,11 @@ exports[`should render an invalid and required field with a Select 1`] = `
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title />
               <path
                 d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                 fill="#E50000"
@@ -1549,7 +1550,7 @@ exports[`should render an invalid and required field with a Select 1`] = `
               />
             </svg>
           </IconBase>
-        </IconError>
+        </IconErrorDec>
       </div>
       <label
         className="label"
@@ -1582,7 +1583,7 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -1661,7 +1662,7 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
       <div
         className="error-icon"
       >
-        <IconError
+        <IconErrorDec
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1679,11 +1680,11 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title />
               <path
                 d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                 fill="#E50000"
@@ -1694,7 +1695,7 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
               />
             </svg>
           </IconBase>
-        </IconError>
+        </IconErrorDec>
       </div>
       <label
         className="label"
@@ -1727,7 +1728,7 @@ exports[`should render an invalid and required field with an Input 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -1806,7 +1807,7 @@ exports[`should render an invalid and required field with an Input 1`] = `
       <div
         className="error-icon"
       >
-        <IconError
+        <IconErrorDec
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1824,11 +1825,11 @@ exports[`should render an invalid and required field with an Input 1`] = `
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title />
               <path
                 d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                 fill="#E50000"
@@ -1839,7 +1840,7 @@ exports[`should render an invalid and required field with an Input 1`] = `
               />
             </svg>
           </IconBase>
-        </IconError>
+        </IconErrorDec>
       </div>
       <label
         className="label"
@@ -1872,7 +1873,7 @@ exports[`should render an invalid field with a Select 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -1951,7 +1952,7 @@ exports[`should render an invalid field with a Select 1`] = `
       <div
         className="error-icon"
       >
-        <IconError
+        <IconErrorDec
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -1969,11 +1970,11 @@ exports[`should render an invalid field with a Select 1`] = `
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title />
               <path
                 d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                 fill="#E50000"
@@ -1984,7 +1985,7 @@ exports[`should render an invalid field with a Select 1`] = `
               />
             </svg>
           </IconBase>
-        </IconError>
+        </IconErrorDec>
       </div>
       <label
         className="label"
@@ -2009,7 +2010,7 @@ exports[`should render an invalid field with an Input 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -2088,7 +2089,7 @@ exports[`should render an invalid field with an Input 1`] = `
       <div
         className="error-icon"
       >
-        <IconError
+        <IconErrorDec
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -2106,11 +2107,11 @@ exports[`should render an invalid field with an Input 1`] = `
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title />
               <path
                 d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                 fill="#E50000"
@@ -2121,7 +2122,7 @@ exports[`should render an invalid field with an Input 1`] = `
               />
             </svg>
           </IconBase>
-        </IconError>
+        </IconErrorDec>
       </div>
       <label
         className="label"
@@ -2146,7 +2147,7 @@ exports[`should render an invalid field with an Textarea 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -2225,7 +2226,7 @@ exports[`should render an invalid field with an Textarea 1`] = `
       <div
         className="error-icon"
       >
-        <IconError
+        <IconErrorDec
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -2243,11 +2244,11 @@ exports[`should render an invalid field with an Textarea 1`] = `
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title />
               <path
                 d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
                 fill="#E50000"
@@ -2258,7 +2259,7 @@ exports[`should render an invalid field with an Textarea 1`] = `
               />
             </svg>
           </IconBase>
-        </IconError>
+        </IconErrorDec>
       </div>
       <label
         className="label"
@@ -2316,7 +2317,7 @@ exports[`should render an optional field in error 1`] = `
     <div
       className="error-icon"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />
@@ -2399,7 +2400,7 @@ exports[`should render an optional field label 1`] = `
     <div
       className="error-icon-hidden"
     >
-      <IconError
+      <IconErrorDec
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       />

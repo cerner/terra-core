@@ -27,7 +27,7 @@ describe('InputField', () => {
         inputId="test-input"
         defaultValue="Value"
         error="Text"
-        errorIcon={<IconHelp />}
+        errorIcon={<IconHelp a11yLabel="Help" />}
         help="Help"
         hideRequired
         inputAttrs={{
@@ -58,7 +58,7 @@ describe('InputField', () => {
         inputId="test-input"
         defaultValue="Value"
         error="Text"
-        errorIcon={<IconHelp />}
+        errorIcon={<IconHelp a11yLabel="Help" />}
         help="Help"
         hideRequired
         inputAttrs={{
@@ -88,7 +88,7 @@ describe('InputField', () => {
         inputId="test-input"
         defaultValue="Value"
         error="Text"
-        errorIcon={<IconHelp />}
+        errorIcon={<IconHelp a11yLabel="Help" />}
         help="Help"
         hideRequired
         inputAttrs={{
@@ -120,7 +120,7 @@ describe('InputField', () => {
         inputId="test-input"
         defaultValue="Value"
         error="Text"
-        errorIcon={<IconHelp />}
+        errorIcon={<IconHelp a11yLabel="Help" />}
         help="Help"
         hideRequired
         inputAttrs={{

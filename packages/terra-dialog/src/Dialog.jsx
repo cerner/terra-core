@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import Button from 'terra-button';
+import { IconButton } from 'terra-button';
 import ContentContainer from 'terra-content-container';
 import { injectIntl } from 'react-intl';
 import styles from './Dialog.module.scss';
@@ -57,12 +57,13 @@ const Dialog = ({
   const closeButton = onClose
     ? (
       <div className={cx('dialog-header-close')}>
-        <Button
+        <IconButton
           variant="utility"
           text={intl.formatMessage({ id: 'Terra.dialog.close' })}
           onClick={onClose}
           isIconOnly
           icon={<span className={cx('close-icon')} />}
+          iconType={IconButton.Opts.IconTypes.INFORMATIVE}
         />
       </div>
     )

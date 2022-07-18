@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Toggle from 'terra-toggle';
-import IconInformation from 'terra-icon/lib/icon/IconInformation';
+import IconInformation from 'terra-icon/lib/icon/decorative/IconInformation';
 
 const ToggleDefault = () => {
   const [isOpen, setIsOpen] = useState(false);

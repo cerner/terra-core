@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Replaced `terra-button` with `IconButton`
+
 ## 2.63.6 - (July 5, 2022)
 
 * Changed

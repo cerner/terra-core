@@ -53,7 +53,7 @@ describe('ToggleButton', () => {
   });
 
   it('should set icon prop correctly with custom icon', () => {
-    const toggleButton = shallow(<ToggleButton closedButtonText="Show" icon={<IconCaretRight />}>Test</ToggleButton>);
+    const toggleButton = shallow(<ToggleButton closedButtonText="Show" icon={<IconCaretRight a11yLabel="Right" />}>Test</ToggleButton>);
     expect(toggleButton).toMatchSnapshot();
   });
 

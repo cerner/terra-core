@@ -1,5 +1,5 @@
 import React from 'react';
-import IconTag from 'terra-icon/lib/icon/IconTag';
+import IconTag from 'terra-icon/lib/icon/decorative/IconTag';
 import Tag from 'terra-tag';
 
 const TagFallbacks = () => (

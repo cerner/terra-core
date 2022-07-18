@@ -204,7 +204,7 @@ it('should render a field with a custom error icon', () => {
     <Field
       label="Field Label"
       htmlFor="test"
-      errorIcon={<IconHelp />}
+      errorIcon={<IconHelp a11yLabel="Help" />}
     />
   );
   const wrapper = shallowWithIntl(field);

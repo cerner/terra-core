@@ -1,6 +1,11 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added new subcomponent `IconButton` to display icon.
+
+* Breaking Changes
+  * `icon`, `isIconOnly` and `isReveresed` props have been moved from `terra-button` to `IconButton`.
 
 ## 3.61.0 - (February 15, 2022)
 

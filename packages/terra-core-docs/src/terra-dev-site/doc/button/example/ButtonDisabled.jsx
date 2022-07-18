@@ -1,5 +1,5 @@
 import React from 'react';
-import IconEdit from 'terra-icon/lib/icon/IconEdit';
+import IconEdit from 'terra-icon/lib/icon/decorative/IconEdit';
 import Button from 'terra-button/lib/Button';
 import classNames from 'classnames/bind';
 import styles from './ButtonDocCommon.module.scss';

@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Updated jest snapshots for terra-icon changes.
   * Updated jest snapshots.
   
 ## 4.60.7 - (July 5, 2022)

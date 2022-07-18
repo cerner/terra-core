@@ -24,11 +24,11 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
             data-name="Layer 1"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
@@ -73,11 +73,11 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
             data-name="Layer 1"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
@@ -134,11 +134,11 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
             data-name="Layer 1"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
@@ -178,11 +178,11 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
             data-name="Layer 1"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title />
             <path
               d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
             />
@@ -209,7 +209,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
 <ToggleButton
   closedButtonText="Show"
   icon={
-    <IconChevronRight
+    <IconChevronRightDec
       className=""
       data-name="Layer 1"
       isBidi={true}
@@ -225,13 +225,13 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
   <div
     className="button is-open"
   >
-    <Button
+    <IconButton
       aria-expanded={true}
       icon={
         <span
           className="icon"
         >
-          <IconChevronRight
+          <IconChevronRightDec
             className=""
             data-name="Layer 1"
             isBidi={true}
@@ -240,6 +240,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
           />
         </span>
       }
+      iconType="informative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -272,7 +273,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
             <span
               className="icon icon-svg"
             >
-              <IconChevronRight
+              <IconChevronRightDec
                 className=""
                 data-name="Layer 1"
                 isBidi={true}
@@ -295,17 +296,17 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                     data-name="Layer 1"
                     focusable="false"
                     height="1em"
+                    role="presentation"
                     viewBox="0 0 48 48"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <title />
                     <path
                       d="M37.7 24L14.2 48l-3.9-3.8L30 24 10.3 3.8 14.2 0z"
                     />
                   </svg>
                 </IconBase>
-              </IconChevronRight>
+              </IconChevronRightDec>
             </span>
           </span>
           <span
@@ -315,7 +316,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
           </span>
         </span>
       </button>
-    </Button>
+    </IconButton>
     <Toggle
       isAnimated={false}
       isOpen={true}
@@ -335,13 +336,13 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
 <div
   className="button"
 >
-  <Button
+  <IconButton
     aria-expanded={false}
     icon={
       <span
         className="icon"
       >
-        <IconChevronRight
+        <IconChevronRightDec
           className=""
           data-name="Layer 1"
           isBidi={true}
@@ -350,6 +351,7 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
         />
       </span>
     }
+    iconType="informative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -373,13 +375,14 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
 <div
   className="button"
 >
-  <Button
+  <IconButton
     aria-expanded={false}
     icon={
       <span
         className="icon"
       >
         <IconCaretRight
+          a11yLabel="Right"
           className=""
           isBidi={true}
           viewBox="0 0 48 48"
@@ -387,6 +390,7 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
         />
       </span>
     }
+    iconType="informative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -410,13 +414,13 @@ exports[`ToggleButton should set onClose prop correctly 1`] = `
 <div
   className="button"
 >
-  <Button
+  <IconButton
     aria-expanded={false}
     icon={
       <span
         className="icon"
       >
-        <IconChevronRight
+        <IconChevronRightDec
           className=""
           data-name="Layer 1"
           isBidi={true}
@@ -425,6 +429,7 @@ exports[`ToggleButton should set onClose prop correctly 1`] = `
         />
       </span>
     }
+    iconType="informative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -448,13 +453,13 @@ exports[`ToggleButton should set onOpen prop correctly 1`] = `
 <div
   className="button"
 >
-  <Button
+  <IconButton
     aria-expanded={false}
     icon={
       <span
         className="icon"
       >
-        <IconChevronRight
+        <IconChevronRightDec
           className=""
           data-name="Layer 1"
           isBidi={true}
@@ -463,6 +468,7 @@ exports[`ToggleButton should set onOpen prop correctly 1`] = `
         />
       </span>
     }
+    iconType="informative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}

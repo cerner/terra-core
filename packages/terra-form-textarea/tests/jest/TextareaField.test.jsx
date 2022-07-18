@@ -1,7 +1,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-import IconHelp from 'terra-icon/lib/icon/IconHelp';
+import IconHelp from 'terra-icon/lib/icon/decorative/IconHelp';
 import TextareaField from '../../src/TextareaField';
 
 window.matchMedia = () => ({ matches: true });

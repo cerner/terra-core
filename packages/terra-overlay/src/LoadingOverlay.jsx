@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import IconSpinner from 'terra-icon/lib/icon/IconSpinner';
+import IconSpinner from 'terra-icon/lib/icon/decorative/IconSpinner';
 import { FormattedMessage } from 'react-intl';
 import Overlay from './Overlay';
 import styles from './Overlay.module.scss';

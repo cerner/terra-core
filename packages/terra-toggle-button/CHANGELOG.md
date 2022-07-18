@@ -13,6 +13,7 @@
 
 =======
 * Changed
+  * Replaced `terra-button` with `IconButton`
   * Updated jest snapshots.
   
 >>>>>>> 01143d2fb (Update mvb branch (#3618))

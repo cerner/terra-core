@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Button, { ButtonVariants } from 'terra-button';
+import { IconButton } from 'terra-button';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import ActionHeaderContainer from './_ActionHeaderContainer';
@@ -94,27 +94,29 @@ const ActionHeader = ({
 
   const closeButton = onClose
     ? (
-      <Button
+      <IconButton
         className={cx(['header-button', 'close-button'])}
         data-terra-action-header="close-button"
         isIconOnly
         icon={<span className={cx(['header-icon', 'close'])} />}
+        iconType={IconButton.Opts.IconTypes.INFORMATIVE}
         text={intl.formatMessage({ id: 'Terra.actionHeader.close' })}
         onClick={onClose}
-        variant={ButtonVariants.UTILITY}
+        variant={IconButton.Opts.Variants.UTILITY}
       />
     )
     : null;
   const backButton = onBack
     ? (
-      <Button
+      <IconButton
         className={cx(['header-button', 'back-button'])}
         data-terra-action-header="back-button"
         isIconOnly
         icon={<span className={cx(['header-icon', 'back'])} />}
+        iconType={IconButton.Opts.IconTypes.INFORMATIVE}
         text={intl.formatMessage({ id: 'Terra.actionHeader.back' })}
         onClick={onBack}
-        variant={ButtonVariants.UTILITY}
+        variant={IconButton.Opts.Variants.UTILITY}
       />
     )
     : null;
@@ -123,26 +125,28 @@ const ActionHeader = ({
   if (!backButton) {
     if (onMaximize) {
       expandButton = (
-        <Button
+        <IconButton
           className={cx(['header-button', 'maximize-button'])}
           data-terra-action-header="maximize-button"
           isIconOnly
           icon={<span className={cx(['header-icon', 'maximize'])} />}
+          iconType={IconButton.Opts.IconTypes.INFORMATIVE}
           text={intl.formatMessage({ id: 'Terra.actionHeader.maximize' })}
           onClick={onMaximize}
-          variant={ButtonVariants.UTILITY}
+          variant={IconButton.Opts.Variants.UTILITY}
         />
       );
     } else if (onMinimize) {
       expandButton = (
-        <Button
+        <IconButton
           className={cx(['header-button', 'minimize-button'])}
           data-terra-action-header="minimize-button"
           isIconOnly
           icon={<span className={cx(['header-icon', 'minimize'])} />}
+          iconType={IconButton.Opts.IconTypes.INFORMATIVE}
           text={intl.formatMessage({ id: 'Terra.actionHeader.minimize' })}
           onClick={onMinimize}
-          variant={ButtonVariants.UTILITY}
+          variant={IconButton.Opts.Variants.UTILITY}
         />
       );
     }
@@ -151,25 +155,27 @@ const ActionHeader = ({
   const previousNextButtonGroup = (onPrevious || onNext)
     ? (
       <div className={cx('previous-next-button-group')}>
-        <Button
+        <IconButton
           className={cx(['header-button', 'previous-button'])}
           data-terra-action-header="previous-button"
           isIconOnly
           icon={<span className={cx(['header-icon', 'previous'])} />}
+          iconType={IconButton.Opts.IconTypes.INFORMATIVE}
           text={intl.formatMessage({ id: 'Terra.actionHeader.previous' })}
           onClick={onPrevious}
           isDisabled={onPrevious === undefined}
-          variant={ButtonVariants.UTILITY}
+          variant={IconButton.Opts.Variants.UTILITY}
         />
-        <Button
+        <IconButton
           className={cx(['header-button', 'next-button'])}
           data-terra-action-header="next-button"
           isIconOnly
           icon={<span className={cx(['header-icon', 'next'])} />}
+          iconType={IconButton.Opts.IconTypes.INFORMATIVE}
           text={intl.formatMessage({ id: 'Terra.actionHeader.next' })}
           onClick={onNext}
           isDisabled={onNext === undefined}
-          variant={ButtonVariants.UTILITY}
+          variant={IconButton.Opts.Variants.UTILITY}
         />
       </div>
     )

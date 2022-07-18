@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Updated jest snapshots for terra-icon changes.
   * Updated jest snapshots.
   
 <<<<<<< HEAD

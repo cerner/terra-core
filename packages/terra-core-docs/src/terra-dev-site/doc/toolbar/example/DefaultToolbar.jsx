@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Toolbar from 'terra-toolbar';
 import Button from 'terra-button';
-import IconEdit from 'terra-icon/lib/icon/IconEdit';
-import IconAdd from 'terra-icon/lib/icon/IconAdd';
-import IconAttachment from 'terra-icon/lib/icon/IconAttachment';
+import IconEdit from 'terra-icon/lib/icon/decorative/IconEdit';
+import IconAdd from 'terra-icon/lib/icon/decorative/IconAdd';
+import IconAttachment from 'terra-icon/lib/icon/decorative/IconAttachment';
 
 export default () => {
   const [align, setAlign] = useState();

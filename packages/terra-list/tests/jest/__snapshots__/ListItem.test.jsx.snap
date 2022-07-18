@@ -86,7 +86,7 @@ exports[`should render with hasChevron 1`] = `
     <span
       className="chevron"
     >
-      <IconChevronRight
+      <IconChevronRightDec
         className=""
         data-name="Layer 1"
         height="1em"
