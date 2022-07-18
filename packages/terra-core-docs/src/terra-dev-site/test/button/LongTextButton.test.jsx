@@ -1,7 +1,7 @@
 import React from 'react';
-import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
+import IconSquare from 'terra-icon/lib/icon/decorative/IconSquareSymbol';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
+import Button, { IconButton } from 'terra-button';
 import styles from './ButtonTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
@@ -22,8 +22,8 @@ export default () => (
     <div className={cx('spacing')} />
     <Button id="long-word-block" text={words} isBlock />
     <div className={cx('spacing')} />
-    <Button icon={<IconSquare />} text={words} />
+    <IconButton icon={<IconSquare />} iconType="decorative" text={words} />
     <div className={cx('spacing')} />
-    <Button icon={<IconSquare />} text={words} isReversed />
+    <IconButton icon={<IconSquare />} iconType="decorative" text={words} isReversed />
   </div>
 );

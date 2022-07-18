@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Replaced `terra-button` with `IconButton`
   * Updated jest snapshots.
   * Updated wdio snapshots.
   * Fixed mobile keyboard not closing after pressing enter key on mobile devices

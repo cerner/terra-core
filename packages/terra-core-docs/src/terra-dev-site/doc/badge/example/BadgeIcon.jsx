@@ -1,5 +1,5 @@
 import React from 'react';
-import IconBookmark from 'terra-icon/lib/icon/IconBookmark';
+import IconBookmark from 'terra-icon/lib/icon/decorative/IconBookmark';
 import Badge from 'terra-badge';
 
 const Icon = <IconBookmark />;

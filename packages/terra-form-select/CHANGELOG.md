@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated jest snapshots for terra-icon changes.
+
 ## 6.35.4 - (May 3, 2022)
 
 * Changed

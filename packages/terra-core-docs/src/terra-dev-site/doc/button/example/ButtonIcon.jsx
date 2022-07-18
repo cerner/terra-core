@@ -1,18 +1,20 @@
 import React from 'react';
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
-import Button from 'terra-button/lib/Button';
+import IconAudio from 'terra-icon/lib/icon/decorative/IconAudio';
+import { IconButton, IconTypes } from 'terra-button';
 import classNames from 'classnames/bind';
 import styles from './ButtonDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Icon = <IconEdit />;
+const Icon = <IconEdit a11yLabel="Edit Icon" />;
+const DecorativeIcon = <IconAudio />;
 
 const ButtonIcon = () => (
   <div>
-    <Button icon={Icon} text="icon" className={cx('button')} />
-    <Button icon={Icon} text="icon" isReversed className={cx('button')} />
-    <Button icon={Icon} isIconOnly text="Icon Only Button" className={cx('button')} />
+    <IconButton icon={Icon} text="icon" iconType={IconTypes.INFORMATIVE} className={cx('button')} />
+    <IconButton icon={Icon} text="icon" iconType={IconTypes.INFORMATIVE} isReversed className={cx('button')} />
+    <IconButton icon={DecorativeIcon} isIconOnly iconType={IconTypes.INFORMATIVE} text="Icon Only Button" className={cx('button')} />
   </div>
 );
 

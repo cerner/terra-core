@@ -5,39 +5,15 @@ import classNamesBind from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
 import ThemeContext from 'terra-theme-context';
 import styles from './Button.module.scss';
+import { ButtonTypes, ButtonVariants } from './_constants';
 
 const cx = classNamesBind.bind(styles);
-
-const ButtonVariants = {
-  NEUTRAL: 'neutral',
-  EMPHASIS: 'emphasis',
-  GHOST: 'ghost',
-  // TODO: this should be removed on the next major version bump
-  'DE-EMPHSASIS': 'de-emphasis',
-  'DE-EMPHASIS': 'de-emphasis',
-  ACTION: 'action',
-  UTILITY: 'utility',
-};
-
-const ButtonTypes = {
-  BUTTON: 'button',
-  SUBMIT: 'submit',
-  RESET: 'reset',
-};
 
 const propTypes = {
   /**
    * Sets the href. When set will render the component as an anchor tag.
    */
   href: PropTypes.string,
-  /**
-   * An optional icon. Nested inline with the text when provided.
-   */
-  icon: PropTypes.element,
-  /**
-   * Whether or not the button should only display as an icon.
-   */
-  isIconOnly: PropTypes.bool,
   /**
    * Whether or not the button should display as a block.
    */
@@ -50,10 +26,6 @@ const propTypes = {
    * Whether or not the button should be disabled.
    */
   isDisabled: PropTypes.bool,
-  /**
-   * Reverses the position of the icon and text.
-   */
-  isReversed: PropTypes.bool,
   /**
    * Callback function triggered when mouse is pressed.
    */
@@ -84,12 +56,10 @@ const propTypes = {
   refCallback: PropTypes.func,
   /**
    * Sets the button text.
-   * If the button is `isIconOnly` or variant `utility` this text is set as the aria-label and title for accessibility.
    */
   text: PropTypes.string.isRequired,
   /**
-   * Additional information to display as a native tooltip on hover.
-   * Buttons declared as `isIconOnly` or `utility` will fallback to using `text` if not provided.
+   * Additional information to display as a native tooltip on hover. It will fallback to using `text` if not provided.
    */
   title: PropTypes.string,
   /**
@@ -97,17 +67,15 @@ const propTypes = {
    */
   type: PropTypes.oneOf([ButtonTypes.BUTTON, ButtonTypes.SUBMIT, ButtonTypes.RESET]),
   /**
-   * Sets the button variant. One of `neutral`,  `emphasis`, `ghost`, `de-emphasis`, `action` or `utility`.
+   * Sets the button variant. One of `neutral`,  `emphasis`, `ghost`, `de-emphasis`, `action`.
    */
-  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants.GHOST, ButtonVariants['DE-EMPHASIS'], ButtonVariants.ACTION, ButtonVariants.UTILITY]),
+  variant: PropTypes.oneOf([ButtonVariants.NEUTRAL, ButtonVariants.EMPHASIS, ButtonVariants.GHOST, ButtonVariants['DE-EMPHASIS'], ButtonVariants.ACTION]),
 };
 
 const defaultProps = {
   isBlock: false,
   isCompact: false,
   isDisabled: false,
-  isIconOnly: false,
-  isReversed: false,
   refCallback: undefined,
   title: undefined,
   type: ButtonTypes.BUTTON,
@@ -220,12 +188,9 @@ class Button extends React.Component {
 
   render() {
     const {
-      icon,
       isBlock,
       isCompact,
       isDisabled,
-      isIconOnly,
-      isReversed,
       text,
       type,
       variant,
@@ -259,45 +224,10 @@ class Button extends React.Component {
 
     const buttonLabelClasses = cx([
       'button-label',
-      { 'text-and-icon': icon && !isIconOnly && variant !== 'utility' },
-      { 'icon-only': isIconOnly || variant === 'utility' },
-      { 'text-only': !icon },
+      'text-only',
     ]);
 
-    const buttonTextClasses = cx([
-      { 'text-first': icon && isReversed },
-    ]);
-
-    const iconClasses = cx([
-      'icon',
-      { 'icon-first': (!isIconOnly && variant !== 'utility') && !isReversed },
-    ]);
-
-    const buttonText = !isIconOnly && variant !== 'utility' ? <span className={buttonTextClasses}>{text}</span> : null;
-
-    let buttonIcon = null;
-    if (icon) {
-      const iconSvgClasses = icon.props.className ? `${icon.props.className} ${cx('icon-svg')}` : cx('icon-svg');
-      const cloneIcon = React.cloneElement(icon, { className: iconSvgClasses });
-      buttonIcon = <span className={iconClasses}>{cloneIcon}</span>;
-    }
-
-    let buttonTitle = title;
-    if (isIconOnly || variant === 'utility') {
-      buttonTitle = title || text;
-    }
-
-    const buttonLabel = (
-      <span className={buttonLabelClasses}>
-        {isReversed ? buttonText : buttonIcon}
-        {isReversed ? buttonIcon : buttonText}
-      </span>
-    );
-
-    let ariaLabel = customProps['aria-label'];
-    if (isIconOnly || variant === 'utility') {
-      ariaLabel = ariaLabel || text;
-    }
+    const ariaLabel = customProps['aria-label'];
 
     const ComponentType = href ? 'a' : 'button';
 
@@ -309,11 +239,11 @@ class Button extends React.Component {
         disabled={isDisabled}
         tabIndex={isDisabled ? '-1' : customProps.tabIndex}
         aria-disabled={isDisabled}
-        aria-label={ariaLabel}
+        aria-label={ariaLabel || text}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
-        title={buttonTitle}
+        title={title || text}
         onClick={this.handleClick}
         onMouseDown={this.handleMouseDown}
         onFocus={this.handleFocus}
@@ -321,7 +251,9 @@ class Button extends React.Component {
         ref={refCallback}
         role={href ? 'button' : undefined}
       >
-        {buttonLabel}
+        <span className={buttonLabelClasses}>
+          <span>{text}</span>
+        </span>
       </ComponentType>
     );
   }
@@ -336,4 +268,3 @@ Button.Opts.Types = ButtonTypes;
 Button.Opts.Variants = ButtonVariants;
 
 export default Button;
-export { ButtonTypes, ButtonVariants };

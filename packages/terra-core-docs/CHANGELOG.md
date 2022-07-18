@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Updated test to make components compaitable with IconButton.
   * Updated hyperlink tests and examples.
   * Re-order hyperlink docs.
   * Added Accessibility guide for `terra-hyperlink`.

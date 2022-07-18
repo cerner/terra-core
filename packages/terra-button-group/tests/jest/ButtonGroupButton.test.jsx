@@ -15,7 +15,7 @@ it('should render as disabled', () => {
 
 it('should render with icon only', () => {
   const testElement = <img alt="icon" />;
-  const button = shallow(<Button text="Icon Only" icon={testElement} />);
+  const button = shallow(<Button text="Icon Only" icon={testElement} iconType="decorative" />);
   expect(button).toMatchSnapshot();
 });
 

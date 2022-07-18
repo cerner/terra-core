@@ -1,5 +1,4 @@
 import React from 'react';
-import IconEdit from 'terra-icon/lib/icon/IconEdit';
 import Button from 'terra-button/lib/Button';
 import classNames from 'classnames/bind';
 import styles from './ButtonDocCommon.module.scss';
@@ -12,8 +11,7 @@ const ButtonVariant = () => (
     <Button text="Emphasis" variant="emphasis" className={cx('button')} />
     <Button text="Ghost" variant="ghost" className={cx('button')} />
     <Button text="De-emphasis" variant="de-emphasis" className={cx('button')} />
-    <Button text="Action" variant="action" icon={<IconEdit />} className={cx('button')} />
-    <Button text="Utility" variant="utility" icon={<IconEdit />} className={cx('button')} />
+    <Button text="Action" variant="action" className={cx('button')} />
   </div>
 );
 

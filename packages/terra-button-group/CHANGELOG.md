@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Changed
+  * Replaced `terra-button` with `IconButton`
 
 ## 3.60.2 - (February 15, 2022)
 

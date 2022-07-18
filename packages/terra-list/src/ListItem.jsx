@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
+import ChevronRight from 'terra-icon/lib/icon/decorative/IconChevronRight';
 import ListUtils from './ListUtils';
 import styles from './List.module.scss';
 

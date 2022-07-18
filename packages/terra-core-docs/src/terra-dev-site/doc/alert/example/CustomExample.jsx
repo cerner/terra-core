@@ -1,5 +1,5 @@
 import React from 'react';
-import IconHelp from 'terra-icon/lib/icon/IconHelp';
+import IconHelp from 'terra-icon/lib/icon/decorative/IconHelp';
 import classNames from 'classnames/bind';
 import Alert from 'terra-alert';
 import styles from './colors.module.scss';

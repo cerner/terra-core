@@ -6,7 +6,7 @@ import styles from './examplesetuptest.scss';
 
 const cx = classNames.bind(styles);
 
-const icon = <IconAlert width="4em" height="4em" />;
+const icon = <IconAlert width="4em" height="4em" a11yLabel="Alert" />;
 const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 const longWord = 'Thisisareallyreallylongwordthathasnospacesthatwillneedtobebrokeninordertohavethetextwrapandnotoverlowintothenextelement';
 const simpleText = <div>{ipsum}</div>;

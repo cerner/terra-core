@@ -1,8 +1,8 @@
 import React from 'react';
-import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
+import IconSquare from 'terra-icon/lib/icon/decorative/IconSquareSymbol';
 import classNames from 'classnames/bind';
 import buttonStyles from 'terra-button/lib/Button.module.scss';
-import Button from 'terra-button';
+import Button, { IconButton } from 'terra-button';
 import styles from './ButtonTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
@@ -46,18 +46,18 @@ const DeemphasisButton = () => (
 
 const ActionButton = () => (
   <div id="action" className={cx('spacing')}>
-    <Button id="actionActive" text="Action-Active" icon={<IconSquare />} variant="action" className={cy('is-active')} />
+    <IconButton id="actionActive" text="Action-Active" icon={<IconSquare />} iconType="decorative" variant="action" className={cy('is-active')} />
     <span id="actionActiveFocusSpan" className={cx('spacing')}>
-      <Button id="actionActiveFocus" text="Action-Active+Focus" icon={<IconSquare />} variant="action" className={cy(['is-active', 'is-focused'])} />
+      <IconButton id="actionActiveFocus" text="Action-Active+Focus" icon={<IconSquare />} iconType="decorative" variant="action" className={cy(['is-active', 'is-focused'])} />
     </span>
   </div>
 );
 
 const UtilityButton = () => (
   <div id="utility" className={cx('spacing')}>
-    <Button id="utilityActive" text="Utility-Active" icon={<IconSquare />} variant="utility" className={cy('is-active')} />
+    <IconButton id="utilityActive" text="Utility-Active" icon={<IconSquare />} iconType="decorative" variant="utility" className={cy('is-active')} />
     <span id="utilityActiveFocusSpan" className={cx('spacing')}>
-      <Button id="utilityButtonActiveFocus" text="Utility-Active+Focus" icon={<IconSquare />} variant="utility" className={cy(['is-active', 'is-focused'])} />
+      <IconButton id="utilityButtonActiveFocus" text="Utility-Active+Focus" icon={<IconSquare />} iconType="decorative" variant="utility" className={cy(['is-active', 'is-focused'])} />
     </span>
   </div>
 );

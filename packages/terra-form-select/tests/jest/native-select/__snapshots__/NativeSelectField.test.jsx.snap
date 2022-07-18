@@ -5,7 +5,7 @@ exports[`NativeSelectField should render a NativeSelectField aria described by 1
   ariaDescribedBy="test-described-id"
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -63,7 +63,7 @@ exports[`NativeSelectField should render a NativeSelectField as disabled 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -121,7 +121,7 @@ exports[`NativeSelectField should render a NativeSelectField as invalid 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -180,7 +180,7 @@ exports[`NativeSelectField should render a NativeSelectField as optional 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -238,7 +238,7 @@ exports[`NativeSelectField should render a NativeSelectField isIncomplete 1`] = 
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -296,7 +296,7 @@ exports[`NativeSelectField should render a NativeSelectField required 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -354,7 +354,7 @@ exports[`NativeSelectField should render a NativeSelectField required 2`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -412,7 +412,7 @@ exports[`NativeSelectField should render a NativeSelectField required and isInco
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -470,7 +470,7 @@ exports[`NativeSelectField should render a NativeSelectField with a labelAttrs 1
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -532,7 +532,7 @@ exports[`NativeSelectField should render a NativeSelectField with a maxWidth 1`]
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -591,7 +591,7 @@ exports[`NativeSelectField should render a NativeSelectField with a selectAttrs 
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -658,7 +658,7 @@ exports[`NativeSelectField should render a NativeSelectField with error 1`] = `
     </p>
   }
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -716,7 +716,7 @@ exports[`NativeSelectField should render a NativeSelectField with help 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -781,7 +781,7 @@ exports[`NativeSelectField should render a NativeSelectField with onChange 1`] =
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -840,7 +840,7 @@ exports[`NativeSelectField should render a NativeSelectField with opt groups 1`]
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -928,7 +928,7 @@ exports[`NativeSelectField should render a NativeSelectField with options 1`] = 
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -1006,7 +1006,7 @@ exports[`NativeSelectField should render a NativeSelectField with options and de
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -1085,7 +1085,7 @@ exports[`NativeSelectField should render a NativeSelectField with options and va
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
@@ -1164,7 +1164,7 @@ exports[`NativeSelectField should render a default NativeSelectField 1`] = `
 <Field
   error={null}
   errorIcon={
-    <IconError
+    <IconErrorDec
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />

@@ -1,5 +1,5 @@
 import React from 'react';
-import IconDue from 'terra-icon/lib/icon/IconDue';
+import IconDue from 'terra-icon/lib/icon/decorative/IconDue';
 import Status from 'terra-status';
 import classNames from 'classnames/bind';
 import styles from './colors.module.scss';
