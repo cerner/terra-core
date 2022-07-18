@@ -18,6 +18,7 @@
   * Added test for programmatic focus of hyperlink.
   * Added `level` prop to `terra-action-header` tests and examples.
   * Added upgrade guide for `terra-action-header`.
+  * Added Accessibility guide for `terra-button`.
 
 * Fixed
   * Updated broken links in terra-form-select and action-footer.
