@@ -1,21 +1,14 @@
 import React from 'react';
 import Button from 'terra-button/lib/Button';
 import Card from 'terra-card';
-import classNames from 'classnames/bind';
-import styles from './ButtonDocCommon.module.scss';
-
-const cx = classNames.bind(styles);
 
 const A11yIconButton = () => (
   <Card>
     <Card.Body>
-      <p>
-        Allergies, also known as allergic diseases, are a number of conditions caused by hypersensitivity of the immune
-        system to typically harmless substances in the environment. These diseases include hay fever, food allergies,
-        atopic dermatitis, allergic asthma, and anaphylaxis. Symptoms may include red eyes, an itchy rash, sneezing,
-        coughing, a runny nose, shortness of breath, or swelling.
-      </p>
-      <Button aria-label="Learn More About Allergies" href="https://en.wikipedia.org/wiki/Allergy" text="Learn More" className={cx('button')} />
+      <h3>Allergies</h3>
+      <p>Current Allergies: Cats, Dogs, Dust, Moulds</p>
+      <Button aria-label="Add Allergies" text="Add" />
+
     </Card.Body>
   </Card>
 );
