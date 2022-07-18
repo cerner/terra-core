@@ -47,11 +47,7 @@ The visual name of the label must match the programmatic name. The best practice
 
 The screen reader user will hear something like: <samp> Show Alert: Button </samp>
 
-##### Accessibility Guidance: Icon Buttons
-
-<div aria-label="Example demo">
-    <A11yIconButton />
-</div>
+##### Accessibility Guidance: Using Meaningful or Decorative Icon Buttons
 
 ```jsx
 import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
@@ -63,16 +59,24 @@ const DecorativeIcon = <DecoIconPrinter />;
 
   <div>
     <IconButton icon={Icon} isIconOnly iconType={IconTypes.INFORMATIVE} />
-    <IconButton icon={Icon} text="All Documents" iconType={IconTypes.INFORMATIVE} />
+    <IconButton icon={Icon} text="All Documents" iconType={IconTypes.INFORMATIVE} /> 
     <IconButton icon={DecorativeIcon} iconType={IconTypes.INFORMATIVE} text="Print" />
   </div>
 ```
 
-The screen reader user will hear something like: <samp> Print Button Group, Print All Documents Button Group, Print Button </samp>
+<div aria-label="Example demo">
+    <A11yIconButton />
+</div>
 
-For buttons that use icons that convey a meaning, it is critical to include alternate content that represents that icon meaning. 
+For buttons that use icons that convey a meaning, it is critical to include alternate content that represents that icon meaning.
+
+- The first example is  a button with **Meaningful Icon Only** and the screen reader will read <samp>Print Button.</samp>
+
+- The second example is  a button with **Meaningful Icon and Text** and the screen reader will read <samp>Print All Documents Button.</samp>
 
 For buttons that use icons that do not convey a meaning, make sure they are marked as purely decorative.
+
+- The third example is  a button with **Decorative Icon and Text** and the screen reader will read <samp>Print Button.</samp>
 
 ##### Accessibility Guidance: Using Non-unique Button label
 
@@ -83,11 +87,13 @@ For buttons that use icons that do not convey a meaning, make sure they are mark
 ```jsx
 import Button from 'terra-button/lib/Button';
 
-<Button aria-label="Learn More About Allergies" href="https://en.wikipedia.org/wiki/Allergy" text="Learn More" className={cx('button')} />
+<Button aria-label="Add Allergies" text="Add" className={cx('button')} />
 ```
-The screen reader user will hear something like: <samp> Learn More About Allergies Button  </samp>
+The screen reader user will hear something like: <samp> Add Allergies Button  </samp>
 
-Ensure any non-unique button label that is visually related to content in the page must be programmatically associated with its content. For example, a “learn more” button next to the word “allergies” must be appropriate associated with the word allergies.
+![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue) The above example is NOT recommended. For Accessibility Best Practices it is recommended to use the same text for both visual and the programmatic label of the button.
+
+Ensure any non-unique button label that is visually related to content in the page must be programmatically associated with its content. For example, a “Add” button next to the word “allergies” must be appropriate associated with the word allergies.
 
 </Notice>
 

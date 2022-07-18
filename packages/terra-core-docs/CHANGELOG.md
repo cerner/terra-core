@@ -20,6 +20,7 @@
   * Added `level` prop to `terra-action-header` tests and examples.
   * Added upgrade guide for `terra-action-header`.
   * Added Accessibility guide for `terra-button`.
+  * Changes to Accessibility guide for `terra-button`.
 
 * Fixed
   * Updated broken links in terra-form-select and action-footer.
@@ -31,7 +32,7 @@
 ## 1.13.6 - (May 3, 2022)
 
 * Changed
-  * Icon table regenerated after fixing trending up/down labeling errors
+  * Icon table regenerated after fixing trending up/down labeling errors.
   * Updated screenshot tests to reflect trending icon changes 
 
 ## 1.13.5 - (April 29, 2022)
