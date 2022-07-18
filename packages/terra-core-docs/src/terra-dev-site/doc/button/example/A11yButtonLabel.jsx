@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'terra-button/lib/Button';
 import Card from 'terra-card';
 
-const A11yIconButton = () => (
+const A11yButtonLabel = () => (
   <Card>
     <Card.Body>
       <h3>Allergies</h3>
@@ -13,4 +13,4 @@ const A11yIconButton = () => (
   </Card>
 );
 
-export default A11yIconButton;
+export default A11yButtonLabel;
