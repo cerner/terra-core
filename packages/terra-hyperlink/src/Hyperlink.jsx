@@ -91,6 +91,10 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onMouseDown: PropTypes.func,
+  /**
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
   variant: PropTypes.oneOf(['default', 'external', 'image', 'video', 'audio', 'document']),
