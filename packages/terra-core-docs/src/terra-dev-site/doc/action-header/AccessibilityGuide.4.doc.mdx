@@ -1,0 +1,252 @@
+import { Badge } from 'terra-image/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
+import Whitespace from "../../common/layout-helpers/Whitespace";
+import ActionHeaderExample from "./example/BackActionHeader"
+import BackActionHeader from "./example/BackPreviousNextCloseActionHeader"
+import MaximizeActionHeader from "./example/MaximizeCloseActionHeader"
+import ActionHeadercontainer from "./example/BackActionHeaderContent"
+
+<Badge />
+
+# Accessibility Guide for Terra Action Header
+
+
+### Why is this important?
+
+> Terra Action Header is an essential component used to identify a section of content and provide controls to manage the respective content. If Terra Action Header is not made accessible, it can prevent users from understanding content and necessary context to interact with the page.  
+>
+>Action Headers provide a visual and programmatic presentation of content structure and convey a meaningful purpose to the section. Action headers also commonly use icon-only buttons that must visually communicate an action. In addition, the buttons must be intuitive and have a programmatic association to other words on the page to ensure a unique and descriptive accessible control name to allow speech input device users can use them. Screen reader users also rely on the added programmatic context to understand what precisely a control may do. 
+
+<Whitespace newline={2} />
+
+## Accessibility Considerations:
+
+### Code Considerations
+>Headings and the various heading levels separate page content and organize it in a meaningful fashion both visually and programmatically to ensure all users can understand the structure of the page. Previous patterns combined size and styling details to create visual headings of the page without the appropriate programmatic context to properly convey the page’s structure. Missing or inappropriate ordered heading levels combined with the visual styling often resulted in accessibility barriers to people using assistive technologies. 
+>
+>
+>&nbsp;&nbsp;For proper accessibility to assistive technologies, developers must ensure that all headings on the page follow these two imperatives:  
+- Terra Action Headers **must always** follow the correct **heading level order and arrangement** for where it is placed within other content on the page. 
+- Terra Action Headers may sometimes be used to **label page regions** and should have the appropriate landmark role to ensure the programmatic context. 
+
+#### Heading Level Order and Arrangement 
+The primary objective of using Action Headers is to provide information on the structural hierarchy of a document. Therefore, headings must look like a heading and be programmatically coded to ensure users can understand the page structure. Additionally, the programmatic heading context can help some users navigate the page using assistive technologies like screen readers. The following are accessibility best practices that developers must follow to create accessible headers: 
+- Developers must use the appropriate heading levels (1 to 6) by always providing a value to the '**level**' prop. The heading level should match the hierarchical structure of the page. 
+- If a value to the '**level**' prop is not provided, the heading '**text**' will not be rendered. 
+- For accessibility best practices, it is recommended that consumers should always use **only one** `<h1>` per page or view. The one `<h1>` should be the page title. 
+- Nest headings by their level. Headings with an equal or higher level start a new section, headings with a lower level start new subsections that are part of the higher ranked section. 
+- Avoid skipping heading levels to be more specific (for example, do not skip from `<h2> to <h5>`). However, it is permissible to skip headings in the other direction if it indicates closing a subsection (for example, from `<h5> to <h2>`). 
+> | _Bad_ [<sub>[1]</sub>](/components/cerner-terra-core-docs/action-header/accessibility-guide#linked-references) | _Good_ |
+> |---|---|
+> | `<h1>Heading level 1</h1>`<br />`<h3>Heading level 3</h3>`<br />`<h4>Heading level 4</h4>` | `<h1>Heading level 1</h1>`<br />`<h2>Heading level 2</h2>`<br />`<h3>Heading level 3</h3>` |
+
+<Whitespace />
+
+Headings create an outline for the content on the page, similar to a term paper outline or table of contents. The `<h1>` describes the page as a whole (and should be similar to the page `<title>`). A page should typically have only one `<h1>`. Headings `<h2>`through `<h6>` represent increasing degrees of "indentation" in our conceptual "outline". As such, it does not make sense to skip heading levels, such as from `<h2>` to `<h4>`, going down the page. Here is an example of content hierarchy with corresponding heading levels: [<sub>[2]</sub>](/components/cerner-terra-core-docs/action-header/accessibility-guide#linked-references)
+
+
+
+#### Labeling Page Regions (as needed)
+Action Header can also be used to provide labels to distinguish multiple page regions of the same type. Most content on web pages should be organized into sections. When pages are organized into sections, a heading should be present. Developers may choose to use sectioning elements to indicate these sections. When using a sectioning element, a clinical header should generally be the first content within the section to act as a label. The objective of this technique is to use section headings to convey the structure of the content. Action Headers can be used to: 
+- Indicate start of main content 
+- Mark up section headings within the main content area 
+- Demarcate different navigational sections like top or main navigation, left or secondary navigation and footer navigation 
+- Allow users the ability to navigate a page by sections or skip repeated blocks of information
+
+<Whitespace />
+
+<Notice variant="important" ariaLevel="5">
+
+**Accessibility Guidance: Label Page Regions**
+
+Sectioning content can be labeled using a combination of the [aria-labelledby](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) property and <spam>id</spam> attribute, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page. 
+
+
+#### Actionable elements within Action Header
+- Engineers must ensure the code order reflects the user’s logical reading order so actionable elements will receive focus in the expected order. 
+- All actionable elements must be able to receive keyboard focus. Though a TABINDEX attribute should not be required to ensure keyboard use, if used, never use a TABINDEX higher than 0.  
+- Terra provides the ability to use the up action to initiate actions. Do not initiate actions on the down event to ensure users can cancel their actions by moving off the interactable element. 
+- Do not initiate any change of context or anything unexpected on focus or input of actionable elements. 
+- Never override the visible keyboard focus state. Keyboard-only users rely on the focus state to see where they are on the page. 
+- All actionable elements within Action Header must have an accessible name: 
+  - Ensure the programmatic name of actionable elements matches the visual label of the element. Often, they are the same, but when an aria-label is used to create an accessible name, the aria-label value should be the same or similar to the visible name to ensure all users can access and activate it.  
+    - For example, a button with an aria-label of “Submit” and the text label of “Send” would be problematic and create accessibility barriers for speech input device users.  
+  - For buttons that use icons to convey meaning, it is critical to include alternate content to represent the icon's meaning.
+<div > 
+    <ActionHeadercontainer/>
+</div>
+```jsx
+import ActionHeader from 'terra-action-header';
+
+const ActionHeaderExample = () => (
+  <div>
+    <br />
+    <ActionHeader
+      text="Back Action Header"
+      onBack={() => alert('You clicked back!')}
+      level={3}
+    />
+    <br />
+  </div>
+);
+
+```
+  - For buttons that use icons that do not convey a meaning, ensure they are marked as purely decorative. 
+<div aria-label="Example demo">
+    <BackActionHeader/>
+</div>
+```jsx
+import ActionHeader from 'terra-action-header';
+
+const ActionHeaderExample = () => (
+  <div>
+    <br />
+    <ActionHeader
+      text="Back Close Previous Next Action Header"
+      onClose={() => alert('You clicked close!')}
+      onBack={() => alert('You clicked back!')}
+      onPrevious={() => alert('You clicked previous!')}
+      onNext={() => alert('You clicked next!')}
+      level={3}
+    />
+    <br />
+  </div>
+);
+
+```
+  - Ensure any non-unique button label that is visually related to content on the page must be programmatically associated with its content. For example, a “learn more” button next to the word “allergies” must be appropriately associated with the word allergies. 
+<div aria-label="Example demo">
+    <MaximizeActionHeader/>
+</div>
+```jsx
+import ActionHeader from 'terra-action-header';
+
+const ActionHeaderExample = () => (
+  <div>
+    <br />
+    <ActionHeader
+      text="Maximize Close Action Header"
+      onClose={() => alert('You clicked close!')}
+      onMaximize={() => alert('You clicked maximize!')}
+      level={3}
+    />
+    <br />
+  </div>
+);
+
+```	 
+
+
+
+
+</Notice>
+
+----
+
+<Whitespace />
+
+### Content Creator Considerations
+- Work with engineers to convey the page's structure to ensure proper heading levels are assigned. 
+- When creating the text for the action header or any labels of interactable elements within it, ensure the words used are purposeful and help the user understand the context or purpose of the content. 
+  - Heading labels must accurately describe the content they represent. 
+  - Button labels must be unique and descriptive of the actions they will initiate. The best practice is to use verbs that describe the action. Never use “OK," "Yes," or "No” for buttons. They are vague and can be confusing to the user. 
+  - For any actionable element, avoid non-unique labels unless the element perform the exact same function. For example, two print buttons that print the exact same document are fine. However, if the buttons print different documents, this would be an accessibility failure. 
+    - If non-unique names cannot be avoided, inform the engineer of other text on the page that can be programmatically associated with other content on the page that may help describe a visual relationship. For example, multiple “Learn more” buttons on the page are placed in visual proximity to the item the user can learn more about. Ensure the first word(s) of the programmatic label match the visual label. 
+  - When using icons, inform engineers when an icon is purely decorative. Otherwise, provide the engineer with meaningful alternate text which will serve as the accessible name.  
+    - Ensure any icon used within Action Header is used to consistently represent the same functionality. Additionally, any alternate content used with an icon must be consistent for a predictable user experience. The alternate text should be consistent in wording based on the icon usage 
+- Ensure the engineers understand the logical reading order of the page. 
+- Never add unexpected behaviors to buttons that could cause a change of context on focus or activation of the button. Ensure buttons always meet the user’s expectations.  
+- After coded, ensure all interactable elements receive keyboard focus in the user’s reading order and display a visible keyboard focus. Ensure the keyboard user does not get “trapped” somewhere on the page preventing them from the entire workflow. 
+
+## Usability Expectations:
+Users do not expect Action Header to be actionable. They would, however, expect any actionable elements within Action Header to perform the expected action based on the label of the element. 
+
+### Interaction Details
+Users do not expect Action Header to receive keyboard focus or be actionable. However, they would expect any actionable element within it to receive keyboard focus and behave in an expected and predictable manner. 
+<Whitespace />
+Mouse users expect the cursor to change to a hand with pointing finger when a Button or Link is hovered. Keyboard only users expect to see a visible keyboard focus indicator when an actionable element is in focus. 
+
+### Keyboard Navigation
+
+The basic keyboard navigation expectations: 
+
+| Key/Sequence | Description |
+|---|---|
+|*Tab*| Moves focus on and off interactable elements. User expects elements to receive focus in the logical reading order of the page.  |
+|*Enter*| Executes Button action.   |
+
+<Whitespace newline={4} />
+
+## Support Compliance:
+
+### Primary criteria related to Terra Action Headers 
+- [1.3.1 Info and Relationships](https://wiki.cerner.com/display/UserExperience/1.3.1+Info+and+Relationships) — Supports 
+  - Terra provides the ability for information, structure, and relationships to be programmatically determined. 
+  - Engineers must ensure that the appropriate heading level is applied to convey the proper content structure of the action header on the page. Engineers must also programmatically associate non-unique controls with other words on the page to ensure visual relationships can be communicated via assistive technologies. 
+  - Content creators must work with engineering to determine the appropriate heading level to match the structure within the page. Should also work with engineers to identify non-unique control labels (e.g., multiple "Close" buttons on the page" to ensure a programmatic association to other words in the interface to create more descriptive and unique accessible names for the controls. 
+- [2.1.1 Keyboard](https://wiki.cerner.com/display/UserExperience/2.1.1+Keyboard) — Supports
+  - Terra provides the ability for all interactable elements to receive focus, be interacted with, and be acted upon via keyboard. 
+  - Engineers must ensure that all interactable elements can receive focus, be interacted with, and can be acted upon.  
+- [2.4.1 Bypass Blocks](https://wiki.cerner.com/display/UserExperience/2.4.1+Bypass+Blocks) — Supports
+  - Terra provides the ability to create headings and labels that break content up into sections and provide meaningful structure that can be used by assistive technologies. 
+  - Consuming teams must implement headings in a way that conveys the organizational structure of the page. 
+  - Engineers, where appropriate, should include [landmark roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) (e.g.; role=”main”) to define regions of the page.  
+- [2.4.6 Headings and Labels](https://wiki.cerner.com/display/UserExperience/2.4.6+Headings+and+Labels) — Supports
+  - Terra provides the ability to create headings and labels that are descriptive of their purpose. 
+  - Engineers must implement meaningful text for headings and labels to accurately describe their purpose. 
+  - Content creators must ensure the headings and labels provided to engineers accurately describe the purpose of the content they represent. 
+- [2.4.7 Focus Visible](https://wiki.cerner.com/display/UserExperience/2.4.7+Focus+Visible) — Supports
+  - Terra provides the ability for actionable elements to receive visual focus. 
+  - Engineers must ensure a visible keyboard focus is maintained on all interactive elements. 
+  - Content creators must never remove the default keyboard focus on interactable controls. 
+### Other accessibility criteria consuming teams are responsible for 
+- [1.1.1 Non-text Content](https://wiki.cerner.com/display/UserExperience/1.1.1+Non-text+Content) — Supports
+  - Terra provides the ability to include alternate content on images and icons. 
+  - Engineers must ensure appropriate alternate content is added to icons and non-text elements to convey any meaning or mark the icon as decorative if necessary. 
+  - Content creators must provide Engineers with alternate content that conveys meaning to the user. See also 3.2.4 Consistent Identification. Content creators must also note any icons that are purely decorative so engineers can correctly codify decorative icons.  
+- [1.4.10 Reflow](https://wiki.cerner.com/display/UserExperience/1.4.10+Reflow) — Supports
+  - Terra provides the ability for components to reflow when the viewport is resized to 320x256 px without loss of information or function. 
+  - Engineers must ensure content within Terra Action Header can reflow when the viewport is resized to 320 x 256 px without scrolling in two directions or loss of information or functionality. 
+  - Content creators must consider the responsive nature of Terra Action Header and provide engineers guidance on how it should content should reflow when the viewport is resized to 320 x 256 px 
+- [1.4.11 Non-Text Contrast](https://wiki.cerner.com/display/UserExperience/1.4.11+Non-Text+Contrast) — Supports
+  - Terra provides components that, by default, meet color contrast requirements. 
+  - Content creators must ensure any graphical elements used within Action Header that convey information meets a 3:1 color contrast ratio. 
+- [1.4.3 Contrast (Minimum)](https://wiki.cerner.com/display/UserExperience/1.4.3+Contrast) — Supports
+  - Terra provides components that, by default, meet color contrast requirements. 
+  - Content creators must ensure any content used within Action Header meets the proper color contrast ratios for text. 
+- [2.4.3 Focus Order](https://wiki.cerner.com/display/UserExperience/2.4.3+Focus+Order) — Supports
+  - Terra provides the ability for actionable components to receive focus in the order they are coded. 
+  - Engineers must ensure that the focus order is expected and preserves page meaning. Code order should follow the logical reading order of the user. Though a TABINDEX attribute should not be required to ensure keyboard use, if used, never use TABINDEX higher than 0.  
+  - Content creators should convey to the engineers the logical reading order of the page. 
+- [2.5.2 Pointer Cancellation](https://wiki.cerner.com/display/UserExperience/2.5.2+Pointer+Cancellation) — Supports
+  - Terra components use the up event to perform actions. 
+  - Engineers must ensure actionable controls always take on the up event. 
+- [2.5.3 Label in Name](https://wiki.cerner.com/display/UserExperience/2.5.3+Label+in+Name) — Supports 
+  - Terra provides the ability for programmatic labels to match visual labels. 
+  - Engineers must ensure the programmatic label matches the visual label when interactable controls are included within Action Header. Ensure the visible control label is the first word of the programmatic label when associating the control to other words in visual proximity that further describe the control. 
+  - Content creators must provide engineers guidance to ensure unique names for all interactive controls within Terra Action Header.  
+- [3.2.1 On Focus](https://wiki.cerner.com/display/UserExperience/3.2.1+On+Focus) — Supports 
+  - Terra components do not cause a change of context on focus by default. 
+  - Engineers must ensure that no unexpected change of context happens when interactive elements receive focus. 
+  - Content creators must use standard, predictable design patterns that support user expectations. 
+- [3.2.4 Consistent Identification](https://wiki.cerner.com/display/UserExperience/3.2.4+Consistent+Identification) — Supports 
+  - Terra provides the ability for elements to be consistently identified. 
+  - Engineers must ensure that elements used for the same function are identified consistently, both visually (same icon for the same functionality) and programmatically (the alternate content behind each image consistently represents the same functionality). 
+  - Content creators must ensure any icons used are used to represent the same function consistently. Additionally, the alternate content used to describe icons must be consistent for users to understand their function predictably. 
+- [4.1.1 Parsing](https://wiki.cerner.com/display/UserExperience/4.1.1+Parsing) — Supports 
+  - Terra components are tested and validated before release to ensure proper code parsing. 
+  - Engineers must ensure their code is valid HTML. 
+- [4.1.2 Name, Role, Value](https://wiki.cerner.com/display/UserExperience/4.1.2+Name%2C+Role%2C+Value) — Supports 
+  - Terra provides the ability for Name, Role, and Value attributes to be programmatically determined so as to be read by screen readers. 
+  - Engineers must ensure child elements added into Action Header have an accessible name, proper role, and value for the intended use.  
+  - Content creators must provide engineers with names to appropriately identify controls added within Action Header.            
+
+## Linked References:
+
+1. MDN contributors (02 February 2022). ["Accessibility Concerns | &lt;h1&gt;-&lt;h6&gt;: The HTML Section Heading elements"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements#accessibility_concerns). Mozilla. First published 15 September 2020. Retrieved 24 February 2022.
+2. WebAIM staff (01 May 2020). ["Semantic Structure: Regions, Headings, and Lists"](https://webaim.org/techniques/semanticstructure/#headings). WebAIM (Accessibility In Mind). Institute for Disability Research, Policy, and Practice.  Utah State University. Last updated 01 May 2020. Retrieved 24 February 2022.
+3. Accessibility Guidelines Working Group (22 February 2022). ["Technique G130: Providing descriptive headings"](https://www.w3.org/WAI/WCAG21/Techniques/general/G130). World Wide Web Consortium. Last updated 22 February 2022. Retrieved 24 February 2022.
+
+
+
+
