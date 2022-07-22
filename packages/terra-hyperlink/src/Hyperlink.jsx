@@ -86,7 +86,7 @@ const propTypes = {
    * Additional information to display as a native tooltip on hover.
    */
   title: PropTypes.string,
-  /**   
+  /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onMouseDown: PropTypes.func,
