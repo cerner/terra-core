@@ -18,6 +18,7 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
       className="section-header orion-fusion-theme"
     >
       <Arrange
+        className="title-arrange"
         fill={
           <h2
             className="title"
@@ -27,7 +28,7 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
         }
       >
         <div
-          className="arrange"
+          className="arrange title-arrange"
         >
           <div
             className="fit"
@@ -56,6 +57,7 @@ exports[`SectionHeader should render a default component 1`] = `
   className="section-header"
 >
   <Arrange
+    className="title-arrange"
     fill={
       <h2
         className="title"
@@ -74,7 +76,7 @@ exports[`SectionHeader should render with an accordion icon in the open position
   tabindex="0"
 >
   <div
-    class="arrange"
+    class="arrange title-arrange"
   >
     <div
       class="fit"
@@ -110,7 +112,7 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
   tabindex="0"
 >
   <div
-    class="arrange"
+    class="arrange title-arrange"
   >
     <div
       class="fit"
@@ -144,7 +146,7 @@ exports[`SectionHeader should render without an accordion icon when no 'onClick(
   class="section-header"
 >
   <div
-    class="arrange"
+    class="arrange title-arrange"
   >
     <div
       class="fit"

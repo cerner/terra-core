@@ -22,6 +22,13 @@
   * Added Accessibility guide for `terra-button`.
   * Changes to Accessibility guide for `terra-button`.
 
+## 1.14.1 - (July 14, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.14.0 - (July 5, 2022)
+
 * Fixed
   * Updated broken links in terra-form-select and action-footer.
   * linter fixes.

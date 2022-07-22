@@ -86,6 +86,10 @@ const propTypes = {
    * Additional information to display as a native tooltip on hover.
    */
   title: PropTypes.string,
+  /**   
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onMouseDown: PropTypes.func,
   /**
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
@@ -107,8 +111,12 @@ class Hyperlink extends React.Component {
     this.linkRef = React.createRef();
   }
 
-  handleMouseDown() {
+  handleMouseDown(event) {
     this.linkRef.current.setAttribute('data-focus-styles-enabled', 'false');
+
+    if (this.props.onMouseDown) {
+      this.props.onMouseDown(event);
+    }
   }
 
   handleOnBlur(event) {
@@ -143,6 +151,7 @@ class Hyperlink extends React.Component {
       onFocus,
       onKeyUp,
       title,
+      onMouseDown,
       ...customProps
     } = this.props;
 

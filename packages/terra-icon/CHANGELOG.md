@@ -14,6 +14,7 @@
   * Fixed labeling errors on trending up/down icons
 
 ## 3.47.0 - (April 29, 2022)
+## 3.48.0 - (July 5, 2022)
 
 * Changed
   * Updated to `one-cerner-style-icons` v1.47.0

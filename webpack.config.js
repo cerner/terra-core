@@ -11,6 +11,10 @@ const coreConfig = (env = {}) => ({
       defaultLocale: env.defaultLocale,
     }),
   ],
+  devServer: {
+    host: '0.0.0.0',
+    port: 8083,
+  },
 });
 
 const mergedConfig = (env, argv) => (

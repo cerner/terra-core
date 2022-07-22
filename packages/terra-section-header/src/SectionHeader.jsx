@@ -139,6 +139,7 @@ class SectionHeader extends React.Component {
         <Arrange
           fitStart={onClick && accordionIcon}
           fill={<Element className={cx('title')}>{title}</Element>}
+          className={cx('title-arrange')}
         />
       </div>
     );

@@ -15,6 +15,13 @@
 * Fixed
   * Fixed focus box bug for hyperlink and hyperlink-button.
   
+## 2.53.0 - (July 14, 2022)
+
+* Fixed
+  * Fix to allow users to pass onMouseDown prop.
+
+## 2.52.0 - (July 5, 2022)
+
 * Fixed
   * Fixed focus box bug for hyperlink.
 
