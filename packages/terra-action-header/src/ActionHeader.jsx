@@ -11,9 +11,17 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
+   * Accessibility label for Back button. To be used with onBack prop.
+   */
+  backButtonLabel: PropTypes.string,
+  /**
    * Displays a single terra `Collapsible Menu View` (_Not provided by `Action Header`_) child element on the right end of the header.
    */
   children: PropTypes.element,
+  /**
+   * Accessibility label for Close button. To be used with onClose prop.
+   */
+  closeButtonLabel: PropTypes.string,
   /**
    * @private
    * The intl object to be injected for translations.
@@ -24,6 +32,18 @@ const propTypes = {
    * Changing 'level' will not visually change the style of the content.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  /**
+   * Accessibility label for Maximize button. To be used with with onMaximize prop..
+   */
+  maximizeButtonLabel: PropTypes.string,
+  /**
+   * Accessibility label for Minimize button. To be used with with onMinimize prop.
+   */
+  minimizeButtonLabel: PropTypes.string,
+  /**
+   * Accessibility label for Next button. To be used with with onNext prop
+   */
+  nextButtonLabel: PropTypes.string,
   /**
    * Callback function for when the close button is clicked.
    * On small viewports, this will be triggered by a back button if onBack is not set.
@@ -60,6 +80,10 @@ const propTypes = {
    */
   onPrevious: PropTypes.func,
   /**
+   * Accessibility label for Previous button. To be used with with onPrevious prop.
+   */
+  prevButtonLabel: PropTypes.string,
+  /**
    * Text to be displayed as the title in the header bar.
    */
   text: PropTypes.string,
@@ -75,6 +99,13 @@ const defaultProps = {
   onNext: undefined,
   onPrevious: undefined,
   children: undefined,
+  backButtonLabel: undefined,
+  closeButtonLabel: undefined,
+  maximizeButtonLabel: undefined,
+  minimizeButtonLabel: undefined,
+  nextButtonLabel: undefined,
+  prevButtonLabel: undefined,
+
 };
 
 const ActionHeader = ({
@@ -88,6 +119,12 @@ const ActionHeader = ({
   onPrevious,
   onNext,
   children,
+  backButtonLabel,
+  closeButtonLabel,
+  maximizeButtonLabel,
+  minimizeButtonLabel,
+  nextButtonLabel,
+  prevButtonLabel,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -100,7 +137,7 @@ const ActionHeader = ({
         isIconOnly
         icon={<span className={cx(['header-icon', 'close'])} />}
         iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-        text={intl.formatMessage({ id: 'Terra.actionHeader.close' })}
+        text={closeButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.close' })}
         onClick={onClose}
         variant={IconButton.Opts.Variants.UTILITY}
       />
@@ -114,7 +151,7 @@ const ActionHeader = ({
         isIconOnly
         icon={<span className={cx(['header-icon', 'back'])} />}
         iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-        text={intl.formatMessage({ id: 'Terra.actionHeader.back' })}
+        text={backButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.back' })}
         onClick={onBack}
         variant={IconButton.Opts.Variants.UTILITY}
       />
@@ -131,7 +168,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'maximize'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={intl.formatMessage({ id: 'Terra.actionHeader.maximize' })}
+          text={maximizeButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.maximize' })}
           onClick={onMaximize}
           variant={IconButton.Opts.Variants.UTILITY}
         />
@@ -144,7 +181,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'minimize'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={intl.formatMessage({ id: 'Terra.actionHeader.minimize' })}
+          text={minimizeButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.minimize' })}
           onClick={onMinimize}
           variant={IconButton.Opts.Variants.UTILITY}
         />
@@ -161,7 +198,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'previous'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={intl.formatMessage({ id: 'Terra.actionHeader.previous' })}
+          text={prevButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.previous' })}
           onClick={onPrevious}
           isDisabled={onPrevious === undefined}
           variant={IconButton.Opts.Variants.UTILITY}
@@ -172,7 +209,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'next'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={intl.formatMessage({ id: 'Terra.actionHeader.next' })}
+          text={nextButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.next' })}
           onClick={onNext}
           isDisabled={onNext === undefined}
           variant={IconButton.Opts.Variants.UTILITY}

@@ -32,7 +32,7 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with back and close buttons and title', () => {
-    const actionHeader = <ActionHeader level={1} title="Action Header" onBack={() => {}} onClose={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onBack={() => {}} onClose={() => {}} backButtonLabel="Go Back" closeButtonLabel="Close Modal" />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
@@ -63,31 +63,31 @@ describe('ActionHeader', () => {
   });
 
   it('should render an action header with maximize button and title', () => {
-    const actionHeader = <ActionHeader level={1} title="Action Header" onMaximize={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onMaximize={() => {}} maximizeButtonLabel="maximize modal" />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with minimize button and title', () => {
-    const actionHeader = <ActionHeader level={1} title="Action Header" onMinimize={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onMinimize={() => {}} minimizeButtonLabel="minimize modal" />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with next and previous buttons and title', () => {
-    const actionHeader = <ActionHeader level={1} title="Action Header" onNext={() => {}} onPrevious={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onNext={() => {}} onPrevious={() => {}} nextButtonLabel="Go to Next Page" prevButtonLabel="Go to Previous Page" />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with title, enabled next button, and disabled previous button', () => {
-    const actionHeader = <ActionHeader level={1} title="Action Header" onNext={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onNext={() => {}} nextButtonLabel="Go to Next Page" />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should render an action header with title, enabled previous button, and disabled next button', () => {
-    const actionHeader = <ActionHeader level={1} title="Action Header" onPrevious={() => {}} />;
+    const actionHeader = <ActionHeader level={1} title="Action Header" onPrevious={() => {}} prevButtonLabel="Go to Previous Page" />;
     const wrapper = shallowWithIntl(actionHeader).dive();
     expect(wrapper).toMatchSnapshot();
   });

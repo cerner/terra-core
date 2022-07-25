@@ -93,7 +93,7 @@ exports[`ActionHeader should render an action header with back and close buttons
         isIconOnly={true}
         isReversed={false}
         onClick={[Function]}
-        text="Terra.actionHeader.close"
+        text="Close Modal"
         type="button"
         variant="utility"
       />
@@ -119,7 +119,7 @@ exports[`ActionHeader should render an action header with back and close buttons
         isIconOnly={true}
         isReversed={false}
         onClick={[Function]}
-        text="Terra.actionHeader.back"
+        text="Go Back"
         type="button"
         variant="utility"
       />
@@ -246,7 +246,7 @@ exports[`ActionHeader should render an action header with maximize button and ti
         isIconOnly={true}
         isReversed={false}
         onClick={[Function]}
-        text="Terra.actionHeader.maximize"
+        text="maximize modal"
         type="button"
         variant="utility"
       />
@@ -279,7 +279,7 @@ exports[`ActionHeader should render an action header with minimize button and ti
         isIconOnly={true}
         isReversed={false}
         onClick={[Function]}
-        text="Terra.actionHeader.minimize"
+        text="minimize modal"
         type="button"
         variant="utility"
       />
@@ -345,7 +345,7 @@ exports[`ActionHeader should render an action header with next and previous butt
           isIconOnly={true}
           isReversed={false}
           onClick={[Function]}
-          text="Terra.actionHeader.previous"
+          text="Go to Previous Page"
           type="button"
           variant="utility"
         />
@@ -364,7 +364,7 @@ exports[`ActionHeader should render an action header with next and previous butt
           isIconOnly={true}
           isReversed={false}
           onClick={[Function]}
-          text="Terra.actionHeader.next"
+          text="Go to Next Page"
           type="button"
           variant="utility"
         />
@@ -428,7 +428,7 @@ exports[`ActionHeader should render an action header with title, enabled next bu
           isIconOnly={true}
           isReversed={false}
           onClick={[Function]}
-          text="Terra.actionHeader.next"
+          text="Go to Next Page"
           type="button"
           variant="utility"
         />
@@ -465,7 +465,7 @@ exports[`ActionHeader should render an action header with title, enabled previou
           isIconOnly={true}
           isReversed={false}
           onClick={[Function]}
-          text="Terra.actionHeader.previous"
+          text="Go to Previous Page"
           type="button"
           variant="utility"
         />
