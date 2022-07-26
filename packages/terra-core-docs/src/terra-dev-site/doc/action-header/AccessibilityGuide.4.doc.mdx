@@ -73,12 +73,11 @@ Sectioning content can be labeled using a combination of the [aria-labelledby]
     - For example, a button with an aria-label of “Submit” and the text label of “Send” would be problematic and create accessibility barriers for speech input device users.  
   - For buttons that use icons to convey meaning, it is critical to include alternate content to represent the icon's meaning.
 <div > 
-    <ActionHeadercontainer/>
+    <ActionHeaderExample/>
 </div>
 ```jsx
 import ActionHeader from 'terra-action-header';
 
-const ActionHeaderExample = () => (
   <div>
     <br />
     <ActionHeader
@@ -88,7 +87,6 @@ const ActionHeaderExample = () => (
     />
     <br />
   </div>
-);
 
 ```
   - For buttons that use icons that do not convey a meaning, ensure they are marked as purely decorative. 
@@ -98,7 +96,6 @@ const ActionHeaderExample = () => (
 ```jsx
 import ActionHeader from 'terra-action-header';
 
-const ActionHeaderExample = () => (
   <div>
     <br />
     <ActionHeader
@@ -111,37 +108,39 @@ const ActionHeaderExample = () => (
     />
     <br />
   </div>
-);
 
 ```
   - Ensure any non-unique button label that is visually related to content on the page must be programmatically associated with its content. For example, a “learn more” button next to the word “allergies” must be appropriately associated with the word allergies. 
 <div aria-label="Example demo">
-    <MaximizeActionHeader/>
+    <ActionHeadercontainer/>
 </div>
+
 ```jsx
+import Button from 'terra-button';
 import ActionHeader from 'terra-action-header';
+import DialogModal from 'terra-dialog-modal';
 
-const ActionHeaderExample = () => (
-  <div>
-    <br />
-    <ActionHeader
-      text="Maximize Close Action Header"
-      onClose={() => alert('You clicked close!')}
-      onMaximize={() => alert('You clicked maximize!')}
-      level={3}
-    />
-    <br />
+
+<div>
+        <DialogModal
+          ariaLabel="Dialog Modal"
+          isOpen={this.state.isOpen}
+          onRequestClose={this.handleCloseModal}
+          header={<ActionHeader text="Allergies" level={2} onBack={this.handleCloseModal} onClose={this.handleCloseModal} />}
+        >
+        <p>{text}</p>
+        </DialogModal>
+        <Button id="trigger-dialog-modal" text="Show Allergies" onClick={this.handleOpenModal} />
   </div>
-);
+```
 
-```	 
+
+ 
 
 
 
 
 </Notice>
-
-----
 
 <Whitespace />
 

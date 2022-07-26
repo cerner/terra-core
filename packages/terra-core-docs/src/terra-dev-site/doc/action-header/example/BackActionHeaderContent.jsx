@@ -1,54 +1,51 @@
-import React, { useContext, useState } from 'react';
-
+import React from 'react';
 import Button from 'terra-button';
-import { DisclosureManagerContext } from 'terra-disclosure-manager';
-import ModalManager from 'terra-modal-manager';
+import ActionHeader from 'terra-action-header';
+import DialogModal from 'terra-dialog-modal';
+import Card from 'terra-card';
 
+class DefaultDialogModal extends React.Component {
+  constructor() {
+    super();
 
+    this.state = {
+      isOpen: false,
+    };
 
-/**
- * This example file contains three React Components:
- *    - ModalManagerExample - renders a ModalManager and the ModalContainer.
- *    - ModalContainer - provide a button to disclose the ModalContent.
- *    - ModalContent - provides the example showing the Notification Dialog renders over modal content.
- * Typically Terra would recommend breaking these into three files, but we condense them to one for documentation purposes.
- */
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
 
-const ModalContent = () => {
-  
+  handleOpenModal() {
+    this.setState({ isOpen: true });
+  }
 
-  return (<>
-            <p>text</p>
-  </>
-  );
-};
+  handleCloseModal() {
+    this.setState({ isOpen: false });
+  }
 
-const ModalContainer = () => {
-  const disclosureManager = useContext(DisclosureManagerContext);
+  render() {
+    const text = ['Current Allergies: Cats, Dogs, Dust, Moulds'];
+    return (
+      <Card>
+        <div>
+          <Card.Body>
+            <h3>Allergies</h3>
+            <p>Current Patient names: Alex, Stokes, Joe root</p>
+            <DialogModal
+              ariaLabel="Dialog Modal"
+              isOpen={this.state.isOpen}
+              onRequestClose={this.handleCloseModal}
+              header={<ActionHeader text="Allergies" level={2} onBack={this.handleCloseModal} onClose={this.handleCloseModal} />}
+            >
+              <p>{text}</p>
+            </DialogModal>
+            <Button id="trigger-dialog-modal" text="Show Allergies" onClick={this.handleOpenModal} />
+          </Card.Body>
+        </div>
+      </Card>
+    );
+  }
+}
 
-  const disclose = () => {
-    disclosureManager.disclose({
-      preferredType: 'modal',
-      size: 'small',
-      content: {
-        key: 'ModalContent',
-        title: 'Example Modal Content',
-        component: <ModalContent />,
-      },
-    });
-  };
-
-  return (
-    <Button text="Trigger Modal" onClick={disclose} />
-  );
-};
-
-const ModalManagerExample = () => (
-  <div>
-    <ModalManager>
-      <ModalContainer />
-    </ModalManager>
-  </div>
-);
-
-export default ModalManagerExample;
+export default DefaultDialogModal;
