@@ -4,12 +4,12 @@
   .orion-fusion-theme {
     // Table
     --terra-table-background-color: transparent;
-    --terra-table-border-bottom: 1px solid #dedfe0;
+    --terra-table-border-bottom: 1px solid #c8cacb;
     --terra-table-body-background-color: transparent;
     --terra-table-header-background-color: #f4f4f4;
-    --terra-table-header-border-bottom: 2px solid #1c1f21;
+    --terra-table-header-border-bottom: 2px solid #64696c;
     --terra-table-header-box-shadow: none;
-    --terra-table-border: 1px solid #dedfe0;
+    --terra-table-border: 1px solid #c8cacb;
     --terra-table-border-radius: 0;
     --terra-table-simple-footer-background-color: #f4f4f4;
     --terra-table-simple-footer-box-shadow: none;
@@ -56,10 +56,10 @@
 
     // HeaderCell
     --terra-table-header-cell-border-right: 1px solid #c8cacb;
-    --terra-table-header-cell-color: #1c1f21;
+    --terra-table-header-cell-color: #64696c;
     --terra-table-header-cell-active-background-color: transparent;
     --terra-table-header-cell-font-size: 1rem;
-    --terra-table-header-cell-font-weight: bold;
+    --terra-table-header-cell-font-weight: normal;
     --terra-table-header-cell-line-height: 1.143;
     --terra-table-header-cell-sort-indicator-height: 0.6429rem;
     --terra-table-header-cell-sort-indicator-width: 0.6429rem;
@@ -121,7 +121,7 @@
     --terra-table-row-divider-child-border-right: 1px solid #dedfe0;
     --terra-table-row-divider-border-top: 1px solid #dedfe0;
     --terra-table-row-divider-first-margin-top: -1px;
-    --terra-table-row-divider-border-bottom: 1px solid #dedfe0;
+    --terra-table-row-divider-border-bottom: 1px solid #c8cacb;
     --terra-table-row-striped-background-color: #f4f4f4;
     --terra-table-row-striped-selected-background-color: #cbe7fa;
     --terra-table-row-striped-hover-background-color: #e2f2fc;
@@ -152,7 +152,7 @@
     --terra-table-row-selected-hover-box-shadow: none;
     --terra-table-row-active-box-shadow: none;
     --terra-table-row-active-hover-border-top-color: #dedfe0;
-    --terra-table-row-active-hover-last-border-bottom-color: #dedfe0;
+    --terra-table-row-active-hover-last-border-bottom-color: #c8cacb;
     --terra-table-row-active-hover-last-border-top-color: #dedfe0;
     --terra-table-row-active-hover-next-border-top-color: #dedfe0;
     --terra-table-row-active-hover-next-selected-border-top-color: #0092e0;
@@ -168,25 +168,27 @@
     --terra-table-row-ie-focus-before-border: 0;
 
     // SectionHeader
-    --terra-table-section-header-background-color: #e8e9ea;
+    --terra-table-section-header-background-color: #dedfe0;
     --terra-table-section-header-border-top: 1px solid #9b9fa1;
     --terra-table-section-header-next-border-top: 1px solid #9b9fa1;
     --terra-table-section-header-first-margin-top: -1px;
-    --terra-table-section-header-content-padding-bottom: 0.25rem;
+    --terra-table-section-header-content-padding-bottom: 0.33333rem;
     --terra-table-section-header-content-padding-left: 0.83333rem;
     --terra-table-section-header-content-padding-right: 0.83333rem;
-    --terra-table-section-header-content-padding-top: 0.25rem;
+    --terra-table-section-header-content-padding-top: 0.33333rem;
     --terra-table-section-header-title-color: #1c1f21;
     --terra-table-section-header-title-font-size: 1rem;
     --terra-table-section-header-title-font-weight: normal;
-    --terra-table-section-header-title-line-height: 1.41667;
+    --terra-table-section-header-title-line-height: 1.5;
     --terra-table-section-header-collapsible-padding-left: 0.83333rem;
     --terra-table-section-header-focus-outline: none;
     --terra-table-section-header-focus-outline-offset: 0;
     --terra-table-section-header-focus-background-color: transparent;
     --terra-table-section-header-hover-background-color: #c8cacb;
     --terra-table-section-header-active-background-color: #c8cacb;
-    --terra-table-section-header-start-padding-right: 0.25rem;
+    --terra-table-section-header-start-padding-right: 0.4166666667rem;
+    --terra-table-section-header-accordion-icon-height: 0.6666666667rem;
+    --terra-table-section-header-accordion-icon-width: 0.6666666667rem;
     --terra-table-section-header-ie-focus-before-border: 0;
     --terra-table-section-header-hover-background-image: none;
     --terra-table-section-header-hover-box-shadow: none;

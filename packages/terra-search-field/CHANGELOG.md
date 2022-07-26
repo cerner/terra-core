@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.75.0 - (July 5, 2022)
+
 * Changed
   * Replaced `terra-button` with `IconButton`
   * Updated jest snapshots.

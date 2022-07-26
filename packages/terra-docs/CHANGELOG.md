@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.7.1 - (July 5, 2022)
+
 * Changed
   * Update wdio screenshots for failing MDX notice tests.
 
