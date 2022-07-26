@@ -13,7 +13,7 @@ const propTypes = {
   /**
    * Accessibility label for Back button. To be used with onBack prop.
    */
-  backButtonLabel: PropTypes.string,
+  backButtonA11yLabel: PropTypes.string,
   /**
    * Displays a single terra `Collapsible Menu View` (_Not provided by `Action Header`_) child element on the right end of the header.
    */
@@ -21,7 +21,7 @@ const propTypes = {
   /**
    * Accessibility label for Close button. To be used with onClose prop.
    */
-  closeButtonLabel: PropTypes.string,
+  closeButtonA11yLabel: PropTypes.string,
   /**
    * @private
    * The intl object to be injected for translations.
@@ -35,15 +35,15 @@ const propTypes = {
   /**
    * Accessibility label for Maximize button. To be used with with onMaximize prop..
    */
-  maximizeButtonLabel: PropTypes.string,
+  maximizeButtonA11yLabel: PropTypes.string,
   /**
    * Accessibility label for Minimize button. To be used with with onMinimize prop.
    */
-  minimizeButtonLabel: PropTypes.string,
+  minimizeButtonA11yLabel: PropTypes.string,
   /**
    * Accessibility label for Next button. To be used with with onNext prop
    */
-  nextButtonLabel: PropTypes.string,
+  nextButtonA11yLabel: PropTypes.string,
   /**
    * Callback function for when the close button is clicked.
    * On small viewports, this will be triggered by a back button if onBack is not set.
@@ -82,7 +82,7 @@ const propTypes = {
   /**
    * Accessibility label for Previous button. To be used with with onPrevious prop.
    */
-  prevButtonLabel: PropTypes.string,
+  prevButtonA11yLabel: PropTypes.string,
   /**
    * Text to be displayed as the title in the header bar.
    */
@@ -99,12 +99,12 @@ const defaultProps = {
   onNext: undefined,
   onPrevious: undefined,
   children: undefined,
-  backButtonLabel: undefined,
-  closeButtonLabel: undefined,
-  maximizeButtonLabel: undefined,
-  minimizeButtonLabel: undefined,
-  nextButtonLabel: undefined,
-  prevButtonLabel: undefined,
+  backButtonA11yLabel: undefined,
+  closeButtonA11yLabel: undefined,
+  maximizeButtonA11yLabel: undefined,
+  minimizeButtonA11yLabel: undefined,
+  nextButtonA11yLabel: undefined,
+  prevButtonA11yLabel: undefined,
 
 };
 
@@ -119,12 +119,12 @@ const ActionHeader = ({
   onPrevious,
   onNext,
   children,
-  backButtonLabel,
-  closeButtonLabel,
-  maximizeButtonLabel,
-  minimizeButtonLabel,
-  nextButtonLabel,
-  prevButtonLabel,
+  backButtonA11yLabel,
+  closeButtonA11yLabel,
+  maximizeButtonA11yLabel,
+  minimizeButtonA11yLabel,
+  nextButtonA11yLabel,
+  prevButtonA11yLabel,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -137,7 +137,7 @@ const ActionHeader = ({
         isIconOnly
         icon={<span className={cx(['header-icon', 'close'])} />}
         iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-        text={closeButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.close' })}
+        text={closeButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.close' })}
         onClick={onClose}
         variant={IconButton.Opts.Variants.UTILITY}
       />
@@ -151,7 +151,7 @@ const ActionHeader = ({
         isIconOnly
         icon={<span className={cx(['header-icon', 'back'])} />}
         iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-        text={backButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.back' })}
+        text={backButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.back' })}
         onClick={onBack}
         variant={IconButton.Opts.Variants.UTILITY}
       />
@@ -168,7 +168,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'maximize'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={maximizeButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.maximize' })}
+          text={maximizeButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.maximize' })}
           onClick={onMaximize}
           variant={IconButton.Opts.Variants.UTILITY}
         />
@@ -181,7 +181,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'minimize'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={minimizeButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.minimize' })}
+          text={minimizeButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.minimize' })}
           onClick={onMinimize}
           variant={IconButton.Opts.Variants.UTILITY}
         />
@@ -198,7 +198,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'previous'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={prevButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.previous' })}
+          text={prevButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.previous' })}
           onClick={onPrevious}
           isDisabled={onPrevious === undefined}
           variant={IconButton.Opts.Variants.UTILITY}
@@ -209,7 +209,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'next'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={nextButtonLabel || intl.formatMessage({ id: 'Terra.actionHeader.next' })}
+          text={nextButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.next' })}
           onClick={onNext}
           isDisabled={onNext === undefined}
           variant={IconButton.Opts.Variants.UTILITY}
