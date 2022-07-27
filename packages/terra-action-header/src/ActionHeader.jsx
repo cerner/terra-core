@@ -4,6 +4,8 @@ import classNames from 'classnames/bind';
 import { IconButton } from 'terra-button';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+import uniqueid from 'lodash.uniqueid';
 import ActionHeaderContainer from './_ActionHeaderContainer';
 import styles from './ActionHeader.module.scss';
 
@@ -19,10 +21,6 @@ const propTypes = {
    */
   children: PropTypes.element,
   /**
-   * Accessibility label for Close button. To be used with onClose prop.
-   */
-  closeButtonA11yLabel: PropTypes.string,
-  /**
    * @private
    * The intl object to be injected for translations.
    */
@@ -32,14 +30,6 @@ const propTypes = {
    * Changing 'level' will not visually change the style of the content.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
-  /**
-   * Accessibility label for Maximize button. To be used with with onMaximize prop..
-   */
-  maximizeButtonA11yLabel: PropTypes.string,
-  /**
-   * Accessibility label for Minimize button. To be used with with onMinimize prop.
-   */
-  minimizeButtonA11yLabel: PropTypes.string,
   /**
    * Accessibility label for Next button. To be used with with onNext prop
    */
@@ -100,9 +90,6 @@ const defaultProps = {
   onPrevious: undefined,
   children: undefined,
   backButtonA11yLabel: undefined,
-  closeButtonA11yLabel: undefined,
-  maximizeButtonA11yLabel: undefined,
-  minimizeButtonA11yLabel: undefined,
   nextButtonA11yLabel: undefined,
   prevButtonA11yLabel: undefined,
 
@@ -120,14 +107,27 @@ const ActionHeader = ({
   onNext,
   children,
   backButtonA11yLabel,
-  closeButtonA11yLabel,
-  maximizeButtonA11yLabel,
-  minimizeButtonA11yLabel,
   nextButtonA11yLabel,
   prevButtonA11yLabel,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
+
+  const descriptiveText1 = `On Clicking the close button, ${text} will be closed`;
+  const descriptiveText2 = `On Clicking the maximize button, ${text} will be maximized`;
+  const descriptiveText3 = `On Clicking the minimize button, ${text} will be minimized`;
+
+  const closeButtonId = `terra-action-header-close-button-${uniqueid()}`;
+  const maximizeButtonId = `terra-action-header-maximize-button-${uniqueid()}`;
+  const minimizeButtonId = `terra-action-header-minimize-button-${uniqueid()}`;
+
+  const visuallyHiddenComponent = (
+    <>
+      <VisuallyHiddenText aria-hidden id={closeButtonId} text={descriptiveText1} />
+      <VisuallyHiddenText aria-hidden id={maximizeButtonId} text={descriptiveText2} />
+      <VisuallyHiddenText aria-hidden id={minimizeButtonId} text={descriptiveText3} />
+    </>
+  );
 
   const closeButton = onClose
     ? (
@@ -137,9 +137,10 @@ const ActionHeader = ({
         isIconOnly
         icon={<span className={cx(['header-icon', 'close'])} />}
         iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-        text={closeButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.close' })}
+        text={intl.formatMessage({ id: 'Terra.actionHeader.close' })}
         onClick={onClose}
         variant={IconButton.Opts.Variants.UTILITY}
+        aria-describedby={closeButtonId}
       />
     )
     : null;
@@ -168,9 +169,10 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'maximize'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={maximizeButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.maximize' })}
+          text={intl.formatMessage({ id: 'Terra.actionHeader.maximize' })}
           onClick={onMaximize}
           variant={IconButton.Opts.Variants.UTILITY}
+          aria-describedby={maximizeButtonId}
         />
       );
     } else if (onMinimize) {
@@ -181,9 +183,10 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'minimize'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={minimizeButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.minimize' })}
+          text={intl.formatMessage({ id: 'Terra.actionHeader.minimize' })}
           onClick={onMinimize}
           variant={IconButton.Opts.Variants.UTILITY}
+          aria-describedby={minimizeButtonId}
         />
       );
     }
@@ -224,6 +227,7 @@ const ActionHeader = ({
         {backButton}
         {expandButton}
         {previousNextButtonGroup}
+        {visuallyHiddenComponent}
       </div>
     )
     : null;
@@ -233,7 +237,7 @@ const ActionHeader = ({
   return (
     <ActionHeaderContainer
       {...customProps}
-      startContent={leftButtons}
+      startContent={leftButtons || visuallyHiddenComponent}
       text={text}
       endContent={rightButtons}
       level={level}
