@@ -13,20 +13,20 @@ import ActionHeaderAllergies from "./example/ActionHeaderAllergies"
 
 ## Why is this important?
 
-> Terra Action Header is an essential component used to identify a section of content and provide controls to manage the respective content. If Terra Action Header is not made accessible, it can prevent users from understanding content and necessary context to interact with the page.  
+> Terra Action Header is an essential component used to identify a section of content and provide controls to manage the respective content. If Terra Action Header lacks accessibility, it can prevent users from understanding content and necessary context to interact with the page.  
 >
->Action Headers provide a visual and programmatic presentation of content structure and convey a meaningful purpose to the section. Action headers also commonly use icon-only buttons that must visually communicate an action. In addition, the buttons must be intuitive and have a programmatic association to other words on the page to ensure a unique and descriptive accessible control name to allow speech input device users can use them. Screen reader users also rely on the added programmatic context to understand what precisely a control may do. 
+>Action Headers provide a visual and programmatic presentation of content structure and convey a meaningful purpose to the section. Icon-only buttons are commonly use to visually communicate an action. Therefore, the buttons must be intuitive and have a programmatic association with other words on the page to ensure a unique and descriptive accessible control name.This will allow speech input devices to utilize them. Screen reader users will also rely on the added programmatic context to understand what precisely a control may do. 
 
 <Whitespace newline={2} />
 
 ## Accessibility Considerations:
 
 ### Code Considerations
->Headings and the various heading levels separate page content and organize it in a meaningful fashion both visually and programmatically to ensure all users can understand the structure of the page. Previous patterns combined size and styling details to create visual headings of the page without the appropriate programmatic context to properly convey the page’s structure. Missing or inappropriate ordered heading levels combined with the visual styling often resulted in accessibility barriers to people using assistive technologies. 
+>Headings and their various sub-levels ensure all users can understand the structure of the page by separating page content visually and programmatically to organize it in a meaningful way. Previous patterns combined size and styling details to create visual headings of the page without the appropriate programmatic context to properly convey the page’s structure. Missing or inappropriately ordered heading levels combined with the visual styling often resulted in accessibility barriers to people using assistive technologies. 
 >
 >
 >&nbsp;&nbsp;For proper accessibility to assistive technologies, developers must ensure that all headings on the page follow these two imperatives:  
-- Terra Action Headers **must always** follow the correct **heading level order and arrangement** for where it is placed within other content on the page. 
+- Terra Action Headers **must always** follow the correct **heading level order** and **arrangement** for where it is placed within other content on the page. 
 - Terra Action Headers may sometimes be used to **label page regions** and should have the appropriate landmark role to ensure the programmatic context. 
 
 #### Heading Level Order and Arrangement 
