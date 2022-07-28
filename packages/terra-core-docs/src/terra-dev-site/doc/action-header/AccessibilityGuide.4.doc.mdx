@@ -1,9 +1,8 @@
 import { Badge } from 'terra-action-header/package.json?dev-site-package';
 import { Notice } from '@cerner/terra-docs';
 import Whitespace from "../../common/layout-helpers/Whitespace";
-import ActionHeaderExample from "./example/BackActionHeader"
-import BackActionHeader from "./example/BackPreviousNextCloseActionHeader"
-import MaximizeActionHeader from "./example/MaximizeCloseActionHeader"
+import AccessibilityBackActionHeader from "./example/AccessibilityBackActionHeader"
+import AccessibilityBackPreviousActionHeader from "./example/AccessibilityBackPreviousActionHeader"
 import ActionHeaderAllergies from "./example/ActionHeaderAllergies"
 
 <Badge />
@@ -29,7 +28,7 @@ import ActionHeaderAllergies from "./example/ActionHeaderAllergies"
 - Terra Action Headers **must always** follow the correct **heading level order** and **arrangement** for where it is placed within other content on the page. 
 - Terra Action Headers may sometimes be used to **label page regions** and should have the appropriate landmark role to ensure the programmatic context. 
 
-#### Heading Level Order and Arrangement 
+#### Heading Level Order and Arrangement _(always)_
 The primary objective of using Action Headers is to provide information on the structural hierarchy of a document. Therefore, headings must look like a heading and be programmatically coded to ensure users can understand the page structure. Additionally, the programmatic heading context can help some users navigate the page using assistive technologies like screen readers. The following are accessibility best practices that developers must follow to create accessible headers: 
 - Developers must use the appropriate heading levels (1 to 6) by always providing a value to the '**level**' prop. The heading level should match the hierarchical structure of the page. 
 - If a value to the '**level**' prop is not provided, the heading '**text**' will not be rendered. 
@@ -71,39 +70,49 @@ Sectioning content can be labeled using a combination of the [aria-labelledby]
     - For example, a button with an aria-label of “Submit” and the text label of “Send” would be problematic and create accessibility barriers for speech input device users.  
   - For buttons that use icons to convey meaning, it is critical to include alternate content to represent the icon's meaning.
 <div aria-label="Example demo"> 
-    <ActionHeaderExample/>
+    <AccessibilityBackActionHeader/>
 </div>
 ```jsx
 import ActionHeader from 'terra-action-header';
+import DialogModal from 'terra-dialog-modal';
+import ContentContainer from 'terra-content-container/lib/ContentContainer';
 
   <div>
     <br />
-    <ActionHeader
-      text="Back Action Header"
-      onBack={() => alert('You clicked back!')}
-      level={3}
-    />
+    <ContentContainer
+      header={<ActionHeader text="Patient Details" level={2} onBack={handleCloseModal} />}
+    >
+      <p>{text}</p>
+    </ContentContainer>
     <br />
   </div>
 
 ```
   - For buttons that use icons that do not convey a meaning, ensure they are marked as purely decorative. 
 <div aria-label="Example demo">
-    <BackActionHeader/>
+    <AccessibilityBackPreviousActionHeader/>
 </div>
 ```jsx
 import ActionHeader from 'terra-action-header';
+import DialogModal from 'terra-dialog-modal';
+import ContentContainer from 'terra-content-container/lib/ContentContainer';
 
   <div>
     <br />
-    <ActionHeader
-      text="Back Close Previous Next Action Header"
-      onClose={() => alert('You clicked close!')}
-      onBack={() => alert('You clicked back!')}
-      onPrevious={() => alert('You clicked previous!')}
-      onNext={() => alert('You clicked next!')}
-      level={3}
-    />
+    <ContentContainer
+        header={(
+                <ActionHeader
+                  text="Patient Details"
+                  level={2}
+                  onBack={handleCloseModal}
+                  onClose={handleCloseModal}
+                  onPrevious={() => alert('Previous Patient Details')}
+                  onNext={() => alert('Next Patient Details')}
+                />
+              )}
+    >
+    <p>{text}</p>
+    </ContentContainer>
     <br />
   </div>
 
@@ -125,7 +134,7 @@ import ContentContainer from 'terra-content-container/lib/ContentContainer';
     >
       <p>{text}</p>
     </ContentContainer>
-  </div>
+</div>
 ```
 </Notice>
 <Whitespace />
