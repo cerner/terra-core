@@ -31,7 +31,7 @@ const propTypes = {
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
-   * Accessibility label for Next button. To be used with with onNext prop
+   * Accessibility label for Next button. To be used with onNext prop
    */
   nextButtonA11yLabel: PropTypes.string,
   /**
@@ -70,7 +70,7 @@ const propTypes = {
    */
   onPrevious: PropTypes.func,
   /**
-   * Accessibility label for Previous button. To be used with with onPrevious prop.
+   * Accessibility label for Previous button. To be used with onPrevious prop.
    */
   prevButtonA11yLabel: PropTypes.string,
   /**
@@ -113,19 +113,15 @@ const ActionHeader = ({
 }) => {
   const theme = React.useContext(ThemeContext);
 
-  const descriptiveText1 = `On Clicking the close button, ${text} will be closed`;
-  const descriptiveText2 = `On Clicking the maximize button, ${text} will be maximized`;
-  const descriptiveText3 = `On Clicking the minimize button, ${text} will be minimized`;
-
   const closeButtonId = `terra-action-header-close-button-${uniqueid()}`;
   const maximizeButtonId = `terra-action-header-maximize-button-${uniqueid()}`;
   const minimizeButtonId = `terra-action-header-minimize-button-${uniqueid()}`;
 
   const visuallyHiddenComponent = (
     <>
-      <VisuallyHiddenText aria-hidden id={closeButtonId} text={descriptiveText1} />
-      <VisuallyHiddenText aria-hidden id={maximizeButtonId} text={descriptiveText2} />
-      <VisuallyHiddenText aria-hidden id={minimizeButtonId} text={descriptiveText3} />
+      <VisuallyHiddenText aria-hidden id={closeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.close.description' }, { text })} />
+      <VisuallyHiddenText aria-hidden id={maximizeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.maximize.description' }, { text })} />
+      <VisuallyHiddenText aria-hidden id={minimizeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.minimize.description' }, { text })} />
     </>
   );
 

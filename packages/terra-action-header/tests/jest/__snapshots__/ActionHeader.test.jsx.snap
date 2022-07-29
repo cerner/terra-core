@@ -34,17 +34,17 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-close-button-40"
-        text="On Clicking the close button, undefined will be closed"
+        text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-maximize-button-41"
-        text="On Clicking the maximize button, undefined will be maximized"
+        text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-minimize-button-42"
-        text="On Clicking the minimize button, undefined will be minimized"
+        text="Terra.actionHeader.minimize.description"
       />
     </div>
   </div>
@@ -90,17 +90,17 @@ exports[`ActionHeader should render a default action header 1`] = `
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-close-button-1"
-        text="On Clicking the close button, undefined will be closed"
+        text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-maximize-button-2"
-        text="On Clicking the maximize button, undefined will be maximized"
+        text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-minimize-button-3"
-        text="On Clicking the minimize button, undefined will be minimized"
+        text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
   }
@@ -164,17 +164,17 @@ exports[`ActionHeader should render an action header with back and close buttons
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-close-button-13"
-          text="On Clicking the close button, undefined will be closed"
+          text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-maximize-button-14"
-          text="On Clicking the maximize button, undefined will be maximized"
+          text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-minimize-button-15"
-          text="On Clicking the minimize button, undefined will be minimized"
+          text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
     </div>
@@ -214,17 +214,17 @@ exports[`ActionHeader should render an action header with back button and title 
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-close-button-7"
-          text="On Clicking the close button, undefined will be closed"
+          text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-maximize-button-8"
-          text="On Clicking the maximize button, undefined will be maximized"
+          text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-minimize-button-9"
-          text="On Clicking the minimize button, undefined will be minimized"
+          text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
     </div>
@@ -267,17 +267,17 @@ exports[`ActionHeader should render an action header with close button and title
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-close-button-10"
-        text="On Clicking the close button, undefined will be closed"
+        text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-maximize-button-11"
-        text="On Clicking the maximize button, undefined will be maximized"
+        text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-minimize-button-12"
-        text="On Clicking the minimize button, undefined will be minimized"
+        text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
   }
@@ -294,17 +294,17 @@ exports[`ActionHeader should render an action header with custom button and titl
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-close-button-19"
-        text="On Clicking the close button, undefined will be closed"
+        text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-maximize-button-20"
-        text="On Clicking the maximize button, undefined will be maximized"
+        text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-minimize-button-21"
-        text="On Clicking the minimize button, undefined will be minimized"
+        text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
   }
@@ -331,17 +331,17 @@ exports[`ActionHeader should render an action header with level three header ele
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-close-button-16"
-        text="On Clicking the close button, undefined will be closed"
+        text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-maximize-button-17"
-        text="On Clicking the maximize button, undefined will be maximized"
+        text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-minimize-button-18"
-        text="On Clicking the minimize button, undefined will be minimized"
+        text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
   }
@@ -382,17 +382,17 @@ exports[`ActionHeader should render an action header with maximize button and ti
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-close-button-25"
-          text="On Clicking the close button, undefined will be closed"
+          text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-maximize-button-26"
-          text="On Clicking the maximize button, undefined will be maximized"
+          text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-minimize-button-27"
-          text="On Clicking the minimize button, undefined will be minimized"
+          text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
     </div>
@@ -434,17 +434,17 @@ exports[`ActionHeader should render an action header with minimize button and ti
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-close-button-28"
-          text="On Clicking the close button, undefined will be closed"
+          text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-maximize-button-29"
-          text="On Clicking the maximize button, undefined will be maximized"
+          text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-minimize-button-30"
-          text="On Clicking the minimize button, undefined will be minimized"
+          text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
     </div>
@@ -462,17 +462,17 @@ exports[`ActionHeader should render an action header with multiple custom button
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-close-button-22"
-        text="On Clicking the close button, undefined will be closed"
+        text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-maximize-button-23"
-        text="On Clicking the maximize button, undefined will be maximized"
+        text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-minimize-button-24"
-        text="On Clicking the minimize button, undefined will be minimized"
+        text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
   }
@@ -555,17 +555,17 @@ exports[`ActionHeader should render an action header with next and previous butt
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-close-button-31"
-          text="On Clicking the close button, undefined will be closed"
+          text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-maximize-button-32"
-          text="On Clicking the maximize button, undefined will be maximized"
+          text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-minimize-button-33"
-          text="On Clicking the minimize button, undefined will be minimized"
+          text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
     </div>
@@ -583,17 +583,17 @@ exports[`ActionHeader should render an action header with title and heading leve
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-close-button-4"
-        text="On Clicking the close button, undefined will be closed"
+        text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-maximize-button-5"
-        text="On Clicking the maximize button, undefined will be maximized"
+        text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
         id="terra-action-header-minimize-button-6"
-        text="On Clicking the minimize button, undefined will be minimized"
+        text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
   }
@@ -654,17 +654,17 @@ exports[`ActionHeader should render an action header with title, enabled next bu
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-close-button-34"
-          text="On Clicking the close button, undefined will be closed"
+          text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-maximize-button-35"
-          text="On Clicking the maximize button, undefined will be maximized"
+          text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-minimize-button-36"
-          text="On Clicking the minimize button, undefined will be minimized"
+          text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
     </div>
@@ -726,17 +726,17 @@ exports[`ActionHeader should render an action header with title, enabled previou
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-close-button-37"
-          text="On Clicking the close button, undefined will be closed"
+          text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-maximize-button-38"
-          text="On Clicking the maximize button, undefined will be maximized"
+          text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
           id="terra-action-header-minimize-button-39"
-          text="On Clicking the minimize button, undefined will be minimized"
+          text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
     </div>
