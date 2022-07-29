@@ -1,9 +1,12 @@
 import { Badge } from 'terra-action-header/package.json?dev-site-package';
 import { Notice } from '@cerner/terra-docs';
 import Whitespace from "../../common/layout-helpers/Whitespace";
-import AccessibilityBackActionHeader from "./example/AccessibilityBackActionHeader"
-import AccessibilityBackPreviousActionHeader from "./example/AccessibilityBackPreviousActionHeader"
-import ActionHeaderAllergies from "./example/ActionHeaderAllergies"
+import ActionHeaderWithDecorativeIcon from "./example/ActionHeaderWithDecorativeIcon";
+import ActionHeaderWithInformativeIcon from "./example/ActionHeaderWithInformativeIcon";
+import ActionHeaderAllergies from "./example/ActionHeaderAllergies";
+import WebAIMSemanticHeadingContentStructure from './references/WebAIMSemanticHeadingContentStructure';
+
+
 
 <Badge />
 
@@ -14,7 +17,7 @@ import ActionHeaderAllergies from "./example/ActionHeaderAllergies"
 
 > Terra Action Header is an essential component used to identify a section of content and provide controls to manage the respective content. If Terra Action Header lacks accessibility, it can prevent users from understanding content and necessary context to interact with the page.  
 >
->Action Headers provide a visual and programmatic presentation of content structure and convey a meaningful purpose to the section. Icon-only buttons are commonly use to visually communicate an action. Therefore, the buttons must be intuitive and have a programmatic association with other words on the page to ensure a unique and descriptive accessible control name.This will allow speech input devices to utilize them. Screen reader users will also rely on the added programmatic context to understand what precisely a control may do. 
+>Action Headers provide a visual and programmatic presentation of content structure to convey a meaningful purpose to the section. Icon-only buttons are commonly use to visually communicate an action. Therefore, the buttons must be intuitive and have a programmatic association with other words on the page to ensure a unique and descriptive accessible control name.This will allow speech input devices to utilize them. Screen reader users will also rely on the added programmatic context to understand what precisely a control may do. 
 
 <Whitespace newline={2} />
 
@@ -42,22 +45,22 @@ The primary objective of using Action Headers is to provide information on the s
 <Whitespace />
 
 Headings create an outline for the content on the page, similar to a term paper outline or table of contents. The `<h1>` describes the page as a whole (and should be similar to the page `<title>`). A page should typically have only one `<h1>`. Headings `<h2>`through `<h6>` represent increasing degrees of "indentation" in our conceptual "outline". As such, it does not make sense to skip heading levels, such as from `<h2>` to `<h4>`, going down the page. Here is an example of content hierarchy with corresponding heading levels: [<sub>[2]</sub>](/components/cerner-terra-core-docs/action-header/accessibility-guide#linked-references)
+> <WebAIMSemanticHeadingContentStructure />
 
-#### Labeling Page Regions _(as needed)_
+#### Labeling Page Regions _(as needed)_
 Action Header can also be used to provide labels to distinguish multiple page regions of the same type. Most content on web pages should be organized into sections. When pages are organized into sections, a heading should be present. Developers may choose to use sectioning elements to indicate these sections. When using a sectioning element, a clinical header should generally be the first content within the section to act as a label. The objective of this technique is to use section headings to convey the structure of the content. Action Headers can be used to: 
 - Indicate start of main content 
 - Mark up section headings within the main content area 
 - Demarcate different navigational sections like top or main navigation, left or secondary navigation and footer navigation 
-- Allow users the ability to navigate a page by sections or skip repeated blocks of information
+- Allow users the ability to navigate a page by sections or skip repeated blocks of 
+
+#### Accessibility Guidance: Label Page Regions
+
+Sectioning content can be labeled using a combination of the [aria-labelledby](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) property and <spam>id</spam> attribute, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page. 
 
 <Whitespace />
 
 <Notice variant="important" ariaLevel="5">
-
-**Accessibility Guidance: Label Page Regions**
-
-Sectioning content can be labeled using a combination of the [aria-labelledby](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) property and <spam>id</spam> attribute, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page. 
-
 
 #### Actionable elements within Action Header
 - Engineers must ensure the code order reflects the user’s logical reading order so actionable elements will receive focus in the expected order. 
@@ -69,72 +72,77 @@ Sectioning content can be labeled using a combination of the [aria-labelledby]
   - Ensure the programmatic name of actionable elements matches the visual label of the element. Often, they are the same, but when an aria-label is used to create an accessible name, the aria-label value should be the same or similar to the visible name to ensure all users can access and activate it.  
     - For example, a button with an aria-label of “Submit” and the text label of “Send” would be problematic and create accessibility barriers for speech input device users.  
   - For buttons that use icons to convey meaning, it is critical to include alternate content to represent the icon's meaning.
-<div aria-label="Example demo"> 
-    <AccessibilityBackActionHeader/>
-</div>
-```jsx
-import ActionHeader from 'terra-action-header';
-import DialogModal from 'terra-dialog-modal';
-import ContentContainer from 'terra-content-container/lib/ContentContainer';
-
-  <div>
-    <br />
-    <ContentContainer
-      header={<ActionHeader text="Patient Details" level={2} onBack={handleCloseModal} />}
-    >
-      <p>{text}</p>
-    </ContentContainer>
-    <br />
-  </div>
-
-```
-  - For buttons that use icons that do not convey a meaning, ensure they are marked as purely decorative. 
 <div aria-label="Example demo">
-    <AccessibilityBackPreviousActionHeader/>
+    <ActionHeaderWithInformativeIcon/>
 </div>
 ```jsx
 import ActionHeader from 'terra-action-header';
-import DialogModal from 'terra-dialog-modal';
-import ContentContainer from 'terra-content-container/lib/ContentContainer';
+import ContentContainer from 'terra-content-container';
+import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
 
+  const Icon = <IconPrinter a11yLabel="Print" />;
   <div>
     <br />
     <ContentContainer
-        header={(
-                <ActionHeader
-                  text="Patient Details"
-                  level={2}
-                  onBack={handleCloseModal}
-                  onClose={handleCloseModal}
-                  onPrevious={() => alert('Previous Patient Details')}
-                  onNext={() => alert('Next Patient Details')}
-                />
-              )}
-    >
+              header={(
+                <ActionHeader text="Patients Details" level={2} onBack={handleCloseModal}>
+                  <IconButton icon={Icon} iconType={IconTypes.INFORMATIVE} text="Print Patient Details" />
+                </ActionHeader>
+)}
+            >
     <p>{text}</p>
     </ContentContainer>
     <br />
   </div>
 
 ```
+  - For buttons that use icons that do not convey a meaning, ensure they are marked as purely decorative. 
+  <div aria-label="Example demo"> 
+    <ActionHeaderWithDecorativeIcon/>
+</div>
+```jsx
+import ActionHeader from 'terra-action-header';
+import ContentContainer from 'terra-content-container';
+import Button, { IconButton, IconTypes } from 'terra-button';
+import DecoIconPrinter from 'terra-icon/lib/icon/decorative/IconPrinter';
+
+
+  const DecorativeIcon = <DecoIconPrinter />;
+  <div>
+    <br />
+    <ContentContainer
+              header={(
+                <ActionHeader text="Patient Details" level={2} onBack={handleCloseModal}>
+                  <IconButton icon={DecorativeIcon} iconType={IconTypes.DECORATIVE} text="Print Patient Details" />
+                </ActionHeader>
+)}
+            >
+    <p>{text}</p>
+    </ContentContainer>
+    <br />
+  </div>
+
+```
+
   - Ensure any non-unique button label that is visually related to content on the page must be programmatically associated with its content. For example, a “learn more” button next to the word “allergies” must be appropriately associated with the word allergies. 
 <div aria-label="Example demo">
     <ActionHeaderAllergies/>
 </div>
 
 ```jsx
-import Button from 'terra-button';
 import ActionHeader from 'terra-action-header';
-import DialogModal from 'terra-dialog-modal';
-import ContentContainer from 'terra-content-container/lib/ContentContainer';
+import ContentContainer from 'terra-content-container';
+import Button from 'terra-button';
 
 <div>
     <ContentContainer
-      header={<ActionHeader text="Allergies" level={2} onBack={handleCloseModal} onClose={handleCloseModal} />}
+      header={<ActionHeader text="Allergies" level={2} onBack={handleCloseModal} backButtonA11yLabel="Back To the Main View" onClose={handleCloseModal} />}
     >
       <p>{text}</p>
     </ContentContainer>
 </div>
+<Button id="trigger-dialog-modal" aria-label="Click Here to View Allergies" text="Show Allergies" onClick={handleOpenModal} />
+
 ```
 </Notice>
 <Whitespace />
@@ -142,9 +150,9 @@ import ContentContainer from 'terra-content-container/lib/ContentContainer';
 ### Content Creator Considerations
 - Work with engineers to convey the page's structure to ensure proper heading levels are assigned. 
 - When creating the text for the action header or any labels of interactable elements within it, ensure the words used are purposeful and help the user understand the context or purpose of the content. 
-  - Heading labels must accurately describe the content they represent. 
+  - Heading text must accurately describe the content they represent. 
   - Button labels must be unique and descriptive of the actions they will initiate. The best practice is to use verbs that describe the action. Never use “OK," "Yes," or "No” for buttons. They are vague and can be confusing to the user. 
-  - For any actionable element, avoid non-unique labels unless the element perform the exact same function. For example, two print buttons that print the exact same document are fine. However, if the buttons print different documents, this would be an accessibility failure. 
+  - For any actionable element, avoid non-unique labels unless the elements perform the exact same function. For example, two print buttons that print the exact same document are fine. However, if the buttons print different documents, this would be an accessibility failure. 
     - If non-unique names cannot be avoided, inform the engineer of other text on the page that can be programmatically associated with other content on the page that may help describe a visual relationship. For example, multiple “Learn more” buttons on the page are placed in visual proximity to the item the user can learn more about. Ensure the first word(s) of the programmatic label match the visual label. 
   - When using icons, inform engineers when an icon is purely decorative. Otherwise, provide the engineer with meaningful alternate text which will serve as the accessible name.  
     - Ensure any icon used within Action Header is used to consistently represent the same functionality. Additionally, any alternate content used with an icon must be consistent for a predictable user experience. The alternate text should be consistent in wording based on the icon usage 
@@ -231,7 +239,7 @@ The basic keyboard navigation expectations:
   - Terra components are tested and validated before release to ensure proper code parsing. 
   - Engineers must ensure their code is valid HTML. 
 - [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) — Supports 
-  - Terra provides the ability for Name, Role, and Value attributes to be programmatically determined so as to be read by screen readers. 
+  - Terra provides the ability for `Name` `Role`, and `Value` attributes to be programmatically determined so as to be read by screen readers. 
   - Engineers must ensure child elements added into Action Header have an accessible name, proper role, and value for the intended use.  
   - Content creators must provide engineers with names to appropriately identify controls added within Action Header.            
 

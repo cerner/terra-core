@@ -22,7 +22,7 @@ const ActionHeaderAllergies = () => {
         <Card>
           <Card.Body>
             <ContentContainer
-              header={<ActionHeader text="Allergies" level={2} onBack={handleCloseModal} onClose={handleCloseModal} />}
+              header={<ActionHeader text="Allergies" level={2} onBack={handleCloseModal} backButtonA11yLabel="Back To the Main View" onClose={handleCloseModal} />}
             >
               <p>{text}</p>
             </ContentContainer>
@@ -38,7 +38,7 @@ const ActionHeaderAllergies = () => {
         <Card.Body>
           <h3>Allergies</h3>
           <p>Patient name: Alex</p>
-          <Button id="trigger-dialog-modal" text="Show Allergies" onClick={handleOpenModal} />
+          <Button id="trigger-dialog-modal" aria-label="Click Here to View Allergies" text="Show Allergies" onClick={handleOpenModal} />
         </Card.Body>
       </div>
     </Card>
