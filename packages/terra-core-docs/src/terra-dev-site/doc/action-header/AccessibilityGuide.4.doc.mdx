@@ -17,7 +17,7 @@ import ActionHeaderNonUniqueIcon from './example/ActionHeaderNonUniqueIcon';
 
 > Terra Action Header is an essential component used to identify a section of content and provide controls to manage the respective content. If Terra Action Header lacks accessibility, it can prevent users from understanding content and necessary context to interact with the page.  
 >
->Action Headers provide a visual and programmatic presentation of content structure to convey a meaningful purpose to the section. Icon-only buttons are commonly use to visually communicate an action. Therefore, the buttons must be intuitive and have a programmatic association with other words on the page to ensure a unique and descriptive accessible control name.This will allow speech input devices to utilize them. Screen reader users will also rely on the added programmatic context to understand what precisely a control may do. 
+> Action Headers provide a visual and programmatic presentation of content structure to convey a meaningful purpose to the section. Icon-only buttons are commonly use to visually communicate an action. Therefore, the buttons must be intuitive and have a programmatic association with other words on the page to ensure a unique and descriptive accessible control name.This will allow speech input devices to utilize them. Screen reader users will also rely on the added programmatic context to understand what precisely a control may do. 
 
 <Whitespace newline={2} />
 
@@ -82,17 +82,15 @@ import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
 
   const Icon = <IconPrinter a11yLabel="Print" />;
   <div>
-    <br />
     <ContentContainer
-              header={(
-                <ActionHeader text="Patients Details" level={2} onBack={handleCloseModal}>
-                  <IconButton icon={Icon} iconType={IconTypes.INFORMATIVE} text="Print Details" />
-                </ActionHeader>
-)}
-            >
-    <p>{text}</p>
+      header={(
+        <ActionHeader text="Patients Details" level={2} onBack={handleCloseModal}>
+          <IconButton icon={Icon} iconType={IconTypes.INFORMATIVE} text="Patient Details" />
+        </ActionHeader>
+      )}
+    >
+      <p>{text}</p>
     </ContentContainer>
-    <br />
   </div>
 
 ```
@@ -109,17 +107,15 @@ import DecoIconPrinter from 'terra-icon/lib/icon/decorative/IconPrinter';
 
   const DecorativeIcon = <DecoIconPrinter />;
   <div>
-    <br />
     <ContentContainer
-              header={(
-                <ActionHeader text="Patient Details" level={2} onBack={handleCloseModal}>
-                  <IconButton icon={DecorativeIcon} iconType={IconTypes.DECORATIVE} text="Print Patient Details" />
-                </ActionHeader>
-)}
-            >
-    <p>{text}</p>
+      header={(
+       <ActionHeader text="Patient Details" level={2} onBack={handleCloseModal}>
+          <IconButton icon={DecorativeIcon} iconType={IconTypes.DECORATIVE} text="Print Patient Details" />
+        </ActionHeader>
+      )}
+    >
+      <p>{text}</p>
     </ContentContainer>
-    <br />
   </div>
 
 ```
@@ -139,22 +135,22 @@ import { IconButton, IconTypes } from 'terra-button';
 
 <div>
   <ContentContainer
-            header={(
-              <ActionHeader text="Patient Medications" level={2}>
-                <IconButton icon={MedIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
-              </ActionHeader>
-)}
-          >
-            <p>{Medications}</p>
+    header={(
+      <ActionHeader text="Patient Medications" level={2}>
+        <IconButton icon={MedIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+      </ActionHeader>
+    )}
+  >
+    <p>{Medications}</p>
   </ContentContainer>
   <ContentContainer
-            header={(
-              <ActionHeader text="Patient Results" level={2}>
-                <IconButton icon={ResIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
-              </ActionHeader>
-)}
-          >
-            <p>{Results}</p>
+    header={(
+      <ActionHeader text="Patient Results" level={2}>
+        <IconButton icon={ResIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+      </ActionHeader>
+    )}
+  >
+    <p>{Results}</p>
   </ContentContainer>
 </div>
 
