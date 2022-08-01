@@ -133,11 +133,13 @@ import ContentContainer from 'terra-content-container';
 import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
 import { IconButton, IconTypes } from 'terra-button';
 
+const MedIcon = <IconPrinter a11yLabel="Print Patient Medications" />;
+const ResIcon = <IconPrinter a11yLabel="Print Patient Result" />;
 <div>
   <ContentContainer
     header={(
       <ActionHeader text="Patient Medications" level={2}>
-        <IconButton icon={MedIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+        <IconButton icon={MedIcon} iconType={IconTypes.INFORMATIVE} text="Print" />
       </ActionHeader>
     )}
   >
@@ -146,7 +148,7 @@ import { IconButton, IconTypes } from 'terra-button';
   <ContentContainer
     header={(
       <ActionHeader text="Patient Results" level={2}>
-        <IconButton icon={ResIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+        <IconButton icon={ResIcon} iconType={IconTypes.INFORMATIVE} text="Print" />
       </ActionHeader>
     )}
   >

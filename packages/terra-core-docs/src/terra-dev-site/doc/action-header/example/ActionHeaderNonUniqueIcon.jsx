@@ -18,7 +18,7 @@ const ActionHeaderNonUniqueIcon = () => {
           <ContentContainer
             header={(
               <ActionHeader text="Patient Medications" level={2}>
-                <IconButton icon={MedIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+                <IconButton icon={MedIcon} iconType={IconTypes.INFORMATIVE} text="Print" />
               </ActionHeader>
 )}
           >
@@ -27,7 +27,7 @@ const ActionHeaderNonUniqueIcon = () => {
           <ContentContainer
             header={(
               <ActionHeader text="Patient Results" level={2}>
-                <IconButton icon={ResIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+                <IconButton icon={ResIcon} iconType={IconTypes.INFORMATIVE} text="Print" />
               </ActionHeader>
 )}
           >
