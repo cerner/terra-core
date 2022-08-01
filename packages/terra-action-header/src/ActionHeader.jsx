@@ -113,9 +113,10 @@ const ActionHeader = ({
 }) => {
   const theme = React.useContext(ThemeContext);
 
-  const closeButtonId = `terra-action-header-close-button-${uniqueid()}`;
-  const maximizeButtonId = `terra-action-header-maximize-button-${uniqueid()}`;
-  const minimizeButtonId = `terra-action-header-minimize-button-${uniqueid()}`;
+  const buttonId = uniqueid();
+  const closeButtonId = `terra-action-header-close-button-${buttonId}`;
+  const maximizeButtonId = `terra-action-header-maximize-button-${buttonId}`;
+  const minimizeButtonId = `terra-action-header-minimize-button-${buttonId}`;
 
   const visuallyHiddenComponent = (
     <>

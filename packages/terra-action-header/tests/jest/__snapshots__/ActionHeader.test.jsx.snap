@@ -12,7 +12,7 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
       className="left-buttons orion-fusion-theme"
     >
       <IconButton
-        aria-describedby="terra-action-header-maximize-button-41"
+        aria-describedby="terra-action-header-maximize-button-14"
         className="header-button maximize-button"
         data-terra-action-header="maximize-button"
         icon={
@@ -33,17 +33,17 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-close-button-40"
+        id="terra-action-header-close-button-14"
         text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-maximize-button-41"
+        id="terra-action-header-maximize-button-14"
         text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-minimize-button-42"
+        id="terra-action-header-minimize-button-14"
         text="Terra.actionHeader.minimize.description"
       />
     </div>
@@ -58,7 +58,7 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
       className="right-buttons orion-fusion-theme"
     >
       <IconButton
-        aria-describedby="terra-action-header-close-button-40"
+        aria-describedby="terra-action-header-close-button-14"
         className="header-button close-button"
         data-terra-action-header="close-button"
         icon={
@@ -94,12 +94,12 @@ exports[`ActionHeader should render a default action header 1`] = `
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-maximize-button-2"
+        id="terra-action-header-maximize-button-1"
         text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-minimize-button-3"
+        id="terra-action-header-minimize-button-1"
         text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
@@ -115,7 +115,7 @@ exports[`ActionHeader should render an action header with back and close buttons
       className="right-buttons"
     >
       <IconButton
-        aria-describedby="terra-action-header-close-button-13"
+        aria-describedby="terra-action-header-close-button-5"
         className="header-button close-button"
         data-terra-action-header="close-button"
         icon={
@@ -163,17 +163,17 @@ exports[`ActionHeader should render an action header with back and close buttons
       <React.Fragment>
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-close-button-13"
+          id="terra-action-header-close-button-5"
           text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-maximize-button-14"
+          id="terra-action-header-maximize-button-5"
           text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-minimize-button-15"
+          id="terra-action-header-minimize-button-5"
           text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
@@ -213,17 +213,17 @@ exports[`ActionHeader should render an action header with back button and title 
       <React.Fragment>
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-close-button-7"
+          id="terra-action-header-close-button-3"
           text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-maximize-button-8"
+          id="terra-action-header-maximize-button-3"
           text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-minimize-button-9"
+          id="terra-action-header-minimize-button-3"
           text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
@@ -240,7 +240,7 @@ exports[`ActionHeader should render an action header with close button and title
       className="right-buttons"
     >
       <IconButton
-        aria-describedby="terra-action-header-close-button-10"
+        aria-describedby="terra-action-header-close-button-4"
         className="header-button close-button"
         data-terra-action-header="close-button"
         icon={
@@ -266,17 +266,17 @@ exports[`ActionHeader should render an action header with close button and title
     <React.Fragment>
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-close-button-10"
+        id="terra-action-header-close-button-4"
         text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-maximize-button-11"
+        id="terra-action-header-maximize-button-4"
         text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-minimize-button-12"
+        id="terra-action-header-minimize-button-4"
         text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
@@ -293,17 +293,17 @@ exports[`ActionHeader should render an action header with custom button and titl
     <React.Fragment>
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-close-button-19"
+        id="terra-action-header-close-button-7"
         text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-maximize-button-20"
+        id="terra-action-header-maximize-button-7"
         text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-minimize-button-21"
+        id="terra-action-header-minimize-button-7"
         text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
@@ -330,17 +330,17 @@ exports[`ActionHeader should render an action header with level three header ele
     <React.Fragment>
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-close-button-16"
+        id="terra-action-header-close-button-6"
         text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-maximize-button-17"
+        id="terra-action-header-maximize-button-6"
         text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-minimize-button-18"
+        id="terra-action-header-minimize-button-6"
         text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
@@ -359,7 +359,7 @@ exports[`ActionHeader should render an action header with maximize button and ti
       className="left-buttons"
     >
       <IconButton
-        aria-describedby="terra-action-header-maximize-button-26"
+        aria-describedby="terra-action-header-maximize-button-9"
         className="header-button maximize-button"
         data-terra-action-header="maximize-button"
         icon={
@@ -381,17 +381,17 @@ exports[`ActionHeader should render an action header with maximize button and ti
       <React.Fragment>
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-close-button-25"
+          id="terra-action-header-close-button-9"
           text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-maximize-button-26"
+          id="terra-action-header-maximize-button-9"
           text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-minimize-button-27"
+          id="terra-action-header-minimize-button-9"
           text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
@@ -411,7 +411,7 @@ exports[`ActionHeader should render an action header with minimize button and ti
       className="left-buttons"
     >
       <IconButton
-        aria-describedby="terra-action-header-minimize-button-30"
+        aria-describedby="terra-action-header-minimize-button-10"
         className="header-button minimize-button"
         data-terra-action-header="minimize-button"
         icon={
@@ -433,17 +433,17 @@ exports[`ActionHeader should render an action header with minimize button and ti
       <React.Fragment>
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-close-button-28"
+          id="terra-action-header-close-button-10"
           text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-maximize-button-29"
+          id="terra-action-header-maximize-button-10"
           text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-minimize-button-30"
+          id="terra-action-header-minimize-button-10"
           text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
@@ -461,17 +461,17 @@ exports[`ActionHeader should render an action header with multiple custom button
     <React.Fragment>
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-close-button-22"
+        id="terra-action-header-close-button-8"
         text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-maximize-button-23"
+        id="terra-action-header-maximize-button-8"
         text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-minimize-button-24"
+        id="terra-action-header-minimize-button-8"
         text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
@@ -554,17 +554,17 @@ exports[`ActionHeader should render an action header with next and previous butt
       <React.Fragment>
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-close-button-31"
+          id="terra-action-header-close-button-11"
           text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-maximize-button-32"
+          id="terra-action-header-maximize-button-11"
           text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-minimize-button-33"
+          id="terra-action-header-minimize-button-11"
           text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
@@ -582,17 +582,17 @@ exports[`ActionHeader should render an action header with title and heading leve
     <React.Fragment>
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-close-button-4"
+        id="terra-action-header-close-button-2"
         text="Terra.actionHeader.close.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-maximize-button-5"
+        id="terra-action-header-maximize-button-2"
         text="Terra.actionHeader.maximize.description"
       />
       <VisuallyHiddenText
         aria-hidden={true}
-        id="terra-action-header-minimize-button-6"
+        id="terra-action-header-minimize-button-2"
         text="Terra.actionHeader.minimize.description"
       />
     </React.Fragment>
@@ -653,17 +653,17 @@ exports[`ActionHeader should render an action header with title, enabled next bu
       <React.Fragment>
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-close-button-34"
+          id="terra-action-header-close-button-12"
           text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-maximize-button-35"
+          id="terra-action-header-maximize-button-12"
           text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-minimize-button-36"
+          id="terra-action-header-minimize-button-12"
           text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
@@ -725,17 +725,17 @@ exports[`ActionHeader should render an action header with title, enabled previou
       <React.Fragment>
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-close-button-37"
+          id="terra-action-header-close-button-13"
           text="Terra.actionHeader.close.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-maximize-button-38"
+          id="terra-action-header-maximize-button-13"
           text="Terra.actionHeader.maximize.description"
         />
         <VisuallyHiddenText
           aria-hidden={true}
-          id="terra-action-header-minimize-button-39"
+          id="terra-action-header-minimize-button-13"
           text="Terra.actionHeader.minimize.description"
         />
       </React.Fragment>
