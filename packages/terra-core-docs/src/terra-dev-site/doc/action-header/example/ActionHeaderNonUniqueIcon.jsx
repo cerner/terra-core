@@ -1,6 +1,6 @@
 import React from 'react';
 import ActionHeader from 'terra-action-header';
-import ContentContainer from 'terra-content-container/lib/ContentContainer';
+import ContentContainer from 'terra-content-container';
 import Card from 'terra-card';
 import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
 import { IconButton, IconTypes } from 'terra-button';

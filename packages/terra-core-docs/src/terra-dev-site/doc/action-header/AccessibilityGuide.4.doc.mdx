@@ -3,7 +3,6 @@ import { Notice } from '@cerner/terra-docs';
 import Whitespace from "../../common/layout-helpers/Whitespace";
 import ActionHeaderWithDecorativeIcon from "./example/ActionHeaderWithDecorativeIcon";
 import ActionHeaderWithInformativeIcon from "./example/ActionHeaderWithInformativeIcon";
-import ActionHeaderAllergies from "./example/ActionHeaderAllergies";
 import WebAIMSemanticHeadingContentStructure from './references/WebAIMSemanticHeadingContentStructure';
 import ActionHeaderNonUniqueIcon from './example/ActionHeaderNonUniqueIcon';
 
@@ -135,16 +134,29 @@ import DecoIconPrinter from 'terra-icon/lib/icon/decorative/IconPrinter';
 ```jsx
 import ActionHeader from 'terra-action-header';
 import ContentContainer from 'terra-content-container';
-import Button from 'terra-button';
+import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
+import { IconButton, IconTypes } from 'terra-button';
 
 <div>
-    <ContentContainer
-      header={<ActionHeader text="Allergies" level={2} onBack={handleCloseModal} backButtonA11yLabel="Back To the Main View" onClose={handleCloseModal} />}
-    >
-      <p>{text}</p>
-    </ContentContainer>
+  <ContentContainer
+            header={(
+              <ActionHeader text="Patient Medications" level={2}>
+                <IconButton icon={MedIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+              </ActionHeader>
+)}
+          >
+            <p>{Medications}</p>
+  </ContentContainer>
+  <ContentContainer
+            header={(
+              <ActionHeader text="Patient Results" level={2}>
+                <IconButton icon={ResIcon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+              </ActionHeader>
+)}
+          >
+            <p>{Results}</p>
+  </ContentContainer>
 </div>
-<Button id="trigger-dialog-modal" aria-label="Click Here to View Allergies" text="Show Allergies" onClick={handleOpenModal} />
 
 ```
 </Notice>
