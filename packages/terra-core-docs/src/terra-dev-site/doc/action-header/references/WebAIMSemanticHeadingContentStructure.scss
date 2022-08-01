@@ -1,0 +1,45 @@
+:local {
+  .webaim-semantic-heading-blockquote {
+    margin-left: 0;
+
+    cite {
+      font-style: italic;
+    }
+
+    span {
+      margin-right: 0.7ch;
+      opacity: 0.7;
+    }
+  }
+
+  .webaim-semantic-heading-content {
+    margin-top: 0.75rem;
+    max-width: 50rem;
+    padding: 0.5rem 2rem 0.5rem 0;
+    position: relative;
+    white-space: pre;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+  
+    ul {
+      list-style-type: none;
+    }
+
+    b {
+      margin-right: 0.9ch;
+    }
+
+    &::after {
+      border: 1px solid currentColor;
+      border-radius: 5px;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.15;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
