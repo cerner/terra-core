@@ -29,7 +29,7 @@ const ActionHeaderWithInformativeIcon = () => {
             <ContentContainer
               header={(
                 <ActionHeader text="Patients Details" level={2} onBack={handleCloseModal}>
-                  <IconButton icon={Icon} iconType={IconTypes.INFORMATIVE} text="Print Patient Details" />
+                  <IconButton icon={Icon} iconType={IconTypes.INFORMATIVE} text="Patient Details" />
                 </ActionHeader>
 )}
             >

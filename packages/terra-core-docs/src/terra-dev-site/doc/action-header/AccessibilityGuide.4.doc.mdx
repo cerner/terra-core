@@ -5,6 +5,7 @@ import ActionHeaderWithDecorativeIcon from "./example/ActionHeaderWithDecorative
 import ActionHeaderWithInformativeIcon from "./example/ActionHeaderWithInformativeIcon";
 import ActionHeaderAllergies from "./example/ActionHeaderAllergies";
 import WebAIMSemanticHeadingContentStructure from './references/WebAIMSemanticHeadingContentStructure';
+import ActionHeaderNonUniqueIcon from './example/ActionHeaderNonUniqueIcon';
 
 
 
@@ -86,7 +87,7 @@ import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
     <ContentContainer
               header={(
                 <ActionHeader text="Patients Details" level={2} onBack={handleCloseModal}>
-                  <IconButton icon={Icon} iconType={IconTypes.INFORMATIVE} text="Print Patient Details" />
+                  <IconButton icon={Icon} iconType={IconTypes.INFORMATIVE} text="Print Details" />
                 </ActionHeader>
 )}
             >
@@ -126,8 +127,10 @@ import DecoIconPrinter from 'terra-icon/lib/icon/decorative/IconPrinter';
 
   - Ensure any non-unique button label that is visually related to content on the page must be programmatically associated with its content. For example, a “learn more” button next to the word “allergies” must be appropriately associated with the word allergies. 
 <div aria-label="Example demo">
-    <ActionHeaderAllergies/>
+    <ActionHeaderNonUniqueIcon/>
 </div>
+
+
 
 ```jsx
 import ActionHeader from 'terra-action-header';
