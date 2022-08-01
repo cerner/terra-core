@@ -21,6 +21,7 @@
   * Added upgrade guide for `terra-action-header`.
   * Added Accessibility guide for `terra-button`.
   * Changes to Accessibility guide for `terra-button`.
+  * Added a11y changes to `terra-action-header` examples.
 
 ## 1.14.1 - (July 14, 2022)
 
