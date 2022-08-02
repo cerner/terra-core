@@ -8,6 +8,7 @@ const ActionHeaderExample = () => (
     <ActionHeader
       text="Back Action Header"
       onBack={() => alert('You clicked back!')}
+      backButtonA11yLabel="Show Back Alert"
       level={3}
     />
     <br />

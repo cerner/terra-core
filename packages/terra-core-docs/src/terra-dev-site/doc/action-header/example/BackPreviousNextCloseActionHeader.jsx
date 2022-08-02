@@ -11,6 +11,9 @@ const ActionHeaderExample = () => (
       onBack={() => alert('You clicked back!')}
       onPrevious={() => alert('You clicked previous!')}
       onNext={() => alert('You clicked next!')}
+      nextButtonA11yLabel="Show Next Alert"
+      prevButtonA11yLabel=" Show Previous Alert"
+      backButtonA11yLabel="Show Back Alert"
       level={3}
     />
     <br />

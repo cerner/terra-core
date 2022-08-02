@@ -1,8 +1,10 @@
 # Changelog
 
 ## Unreleased
+
 * Changed
   * Replaced `terra-button` with `IconButton`
+  * Added props to provide accessibility label to action buttons.
 
   * Breaking Changes
     * Renamed `title` prop as `text` to avoid confusion with HTML attribute `title`.
