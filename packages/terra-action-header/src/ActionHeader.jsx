@@ -4,12 +4,17 @@ import classNames from 'classnames/bind';
 import { IconButton } from 'terra-button';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
+import uniqueid from 'lodash.uniqueid';
 import ActionHeaderContainer from './_ActionHeaderContainer';
 import styles from './ActionHeader.module.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Accessibility label for Back button. To be used with onBack prop.
+   */
+  backButtonA11yLabel: PropTypes.string,
   /**
    * Displays a single terra `Collapsible Menu View` (_Not provided by `Action Header`_) child element on the right end of the header.
    */
@@ -24,6 +29,10 @@ const propTypes = {
    * Changing 'level' will not visually change the style of the content.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  /**
+   * Accessibility label for Next button. To be used with onNext prop
+   */
+  nextButtonA11yLabel: PropTypes.string,
   /**
    * Callback function for when the close button is clicked.
    * On small viewports, this will be triggered by a back button if onBack is not set.
@@ -60,6 +69,10 @@ const propTypes = {
    */
   onPrevious: PropTypes.func,
   /**
+   * Accessibility label for Previous button. To be used with onPrevious prop.
+   */
+  prevButtonA11yLabel: PropTypes.string,
+  /**
    * Text to be displayed as the title in the header bar.
    */
   text: PropTypes.string,
@@ -75,6 +88,10 @@ const defaultProps = {
   onNext: undefined,
   onPrevious: undefined,
   children: undefined,
+  backButtonA11yLabel: undefined,
+  nextButtonA11yLabel: undefined,
+  prevButtonA11yLabel: undefined,
+
 };
 
 const ActionHeader = ({
@@ -88,9 +105,17 @@ const ActionHeader = ({
   onPrevious,
   onNext,
   children,
+  backButtonA11yLabel,
+  nextButtonA11yLabel,
+  prevButtonA11yLabel,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
+
+  const buttonId = uniqueid();
+  const closeButtonId = `terra-action-header-close-button-${buttonId}`;
+  const maximizeButtonId = `terra-action-header-maximize-button-${buttonId}`;
+  const minimizeButtonId = `terra-action-header-minimize-button-${buttonId}`;
 
   const closeButton = onClose
     ? (
@@ -103,6 +128,7 @@ const ActionHeader = ({
         text={intl.formatMessage({ id: 'Terra.actionHeader.close' })}
         onClick={onClose}
         variant={IconButton.Opts.Variants.UTILITY}
+        aria-describedby={closeButtonId}
       />
     )
     : null;
@@ -114,7 +140,7 @@ const ActionHeader = ({
         isIconOnly
         icon={<span className={cx(['header-icon', 'back'])} />}
         iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-        text={intl.formatMessage({ id: 'Terra.actionHeader.back' })}
+        text={backButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.back' })}
         onClick={onBack}
         variant={IconButton.Opts.Variants.UTILITY}
       />
@@ -134,6 +160,7 @@ const ActionHeader = ({
           text={intl.formatMessage({ id: 'Terra.actionHeader.maximize' })}
           onClick={onMaximize}
           variant={IconButton.Opts.Variants.UTILITY}
+          aria-describedby={maximizeButtonId}
         />
       );
     } else if (onMinimize) {
@@ -147,6 +174,7 @@ const ActionHeader = ({
           text={intl.formatMessage({ id: 'Terra.actionHeader.minimize' })}
           onClick={onMinimize}
           variant={IconButton.Opts.Variants.UTILITY}
+          aria-describedby={minimizeButtonId}
         />
       );
     }
@@ -161,7 +189,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'previous'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={intl.formatMessage({ id: 'Terra.actionHeader.previous' })}
+          text={prevButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.previous' })}
           onClick={onPrevious}
           isDisabled={onPrevious === undefined}
           variant={IconButton.Opts.Variants.UTILITY}
@@ -172,7 +200,7 @@ const ActionHeader = ({
           isIconOnly
           icon={<span className={cx(['header-icon', 'next'])} />}
           iconType={IconButton.Opts.IconTypes.INFORMATIVE}
-          text={intl.formatMessage({ id: 'Terra.actionHeader.next' })}
+          text={nextButtonA11yLabel || intl.formatMessage({ id: 'Terra.actionHeader.next' })}
           onClick={onNext}
           isDisabled={onNext === undefined}
           variant={IconButton.Opts.Variants.UTILITY}
@@ -200,6 +228,7 @@ const ActionHeader = ({
       text={text}
       endContent={rightButtons}
       level={level}
+      id={buttonId}
     >
       {children}
     </ActionHeaderContainer>
