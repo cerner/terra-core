@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+import { injectIntl } from 'react-intl';
 import styles from './ActionHeaderContainer.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -13,6 +15,12 @@ const propTypes = {
    * The element passed as children will be decorated with flex attributes.
    */
   children: PropTypes.element,
+
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
 
   /**
    * Content to be displayed at the start of the header, placed before the title.
@@ -43,13 +51,25 @@ const defaultProps = {
 };
 
 const ActionHeaderContainer = ({
-  children, text, startContent, endContent, level, ...customProps
+  children, text, startContent, endContent, level, intl, ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
 
   const content = React.Children.map(children, child => (
     React.cloneElement(child, { className: cx(['flex-collapse', children.props.className]) })
   ));
+
+  const closeButtonId = `terra-action-header-close-button-${customProps.id}`;
+  const maximizeButtonId = `terra-action-header-maximize-button-${customProps.id}`;
+  const minimizeButtonId = `terra-action-header-minimize-button-${customProps.id}`;
+
+  const visuallyHiddenComponent = (
+    <>
+      <VisuallyHiddenText aria-hidden id={closeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.close.description' }, { text })} />
+      <VisuallyHiddenText aria-hidden id={maximizeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.maximize.description' }, { text })} />
+      <VisuallyHiddenText aria-hidden id={minimizeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.minimize.description' }, { text })} />
+    </>
+  );
 
   let titleElement;
   if (text && level) {
@@ -71,6 +91,7 @@ const ActionHeaderContainer = ({
       </div>
       {content}
       {endContent && <div className={cx('flex-end')}>{endContent}</div>}
+      <div className={cx('hidden-label')}>{visuallyHiddenComponent}</div>
     </div>
   );
 };
@@ -78,4 +99,4 @@ const ActionHeaderContainer = ({
 ActionHeaderContainer.propTypes = propTypes;
 ActionHeaderContainer.defaultProps = defaultProps;
 
-export default ActionHeaderContainer;
+export default injectIntl(ActionHeaderContainer);

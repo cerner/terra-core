@@ -1,59 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ActionHeader correctly applies the theme context className 1`] = `
-<div
-  className="flex-header orion-fusion-theme customClassName"
-  title="Action Header"
->
-  <div
-    className="flex-end"
-  >
-    <div
-      className="left-buttons orion-fusion-theme"
-    >
-      <IconButton
-        aria-describedby="terra-action-header-maximize-button-14"
-        className="header-button maximize-button"
-        data-terra-action-header="maximize-button"
-        icon={
-          <span
-            className="header-icon maximize"
-          />
-        }
-        iconType="informative"
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={true}
-        isReversed={false}
-        onClick={[Function]}
-        text="Terra.actionHeader.maximize"
-        type="button"
-        variant="utility"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-close-button-14"
-        text="Terra.actionHeader.close.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-maximize-button-14"
-        text="Terra.actionHeader.maximize.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-minimize-button-14"
-        text="Terra.actionHeader.minimize.description"
-      />
-    </div>
-  </div>
-  <div
-    className="flex-fill"
-  />
-  <div
-    className="flex-end"
-  >
+<ActionHeaderContainer
+  className="customClassName"
+  endContent={
     <div
       className="right-buttons orion-fusion-theme"
     >
@@ -78,37 +28,76 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
         variant="utility"
       />
     </div>
-  </div>
-</div>
+  }
+  id="14"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  level={1}
+  startContent={
+    <div
+      className="left-buttons orion-fusion-theme"
+    >
+      <IconButton
+        aria-describedby="terra-action-header-maximize-button-14"
+        className="header-button maximize-button"
+        data-terra-action-header="maximize-button"
+        icon={
+          <span
+            className="header-icon maximize"
+          />
+        }
+        iconType="informative"
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        text="Terra.actionHeader.maximize"
+        type="button"
+        variant="utility"
+      />
+    </div>
+  }
+  title="Action Header"
+/>
 `;
 
 exports[`ActionHeader should render a default action header 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
-  startContent={
-    <React.Fragment>
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-close-button-1"
-        text="Terra.actionHeader.close.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-maximize-button-1"
-        text="Terra.actionHeader.maximize.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-minimize-button-1"
-        text="Terra.actionHeader.minimize.description"
-      />
-    </React.Fragment>
-  }
+  id="1"
+  startContent={null}
 />
 `;
 
 exports[`ActionHeader should render an action header with back and close buttons and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   closeButtonA11yLabel="Close Modal"
   endContent={
     <div
@@ -136,6 +125,7 @@ exports[`ActionHeader should render an action header with back and close buttons
       />
     </div>
   }
+  id="5"
   level={1}
   startContent={
     <div
@@ -160,23 +150,6 @@ exports[`ActionHeader should render an action header with back and close buttons
         type="button"
         variant="utility"
       />
-      <React.Fragment>
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-close-button-5"
-          text="Terra.actionHeader.close.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-maximize-button-5"
-          text="Terra.actionHeader.maximize.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-minimize-button-5"
-          text="Terra.actionHeader.minimize.description"
-        />
-      </React.Fragment>
     </div>
   }
   title="Action Header"
@@ -184,8 +157,9 @@ exports[`ActionHeader should render an action header with back and close buttons
 `;
 
 exports[`ActionHeader should render an action header with back button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="3"
   level={1}
   startContent={
     <div
@@ -210,23 +184,6 @@ exports[`ActionHeader should render an action header with back button and title 
         type="button"
         variant="utility"
       />
-      <React.Fragment>
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-close-button-3"
-          text="Terra.actionHeader.close.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-maximize-button-3"
-          text="Terra.actionHeader.maximize.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-minimize-button-3"
-          text="Terra.actionHeader.minimize.description"
-        />
-      </React.Fragment>
     </div>
   }
   title="Action Header"
@@ -234,7 +191,7 @@ exports[`ActionHeader should render an action header with back button and title 
 `;
 
 exports[`ActionHeader should render an action header with close button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={
     <div
       className="right-buttons"
@@ -261,53 +218,19 @@ exports[`ActionHeader should render an action header with close button and title
       />
     </div>
   }
+  id="4"
   level={1}
-  startContent={
-    <React.Fragment>
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-close-button-4"
-        text="Terra.actionHeader.close.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-maximize-button-4"
-        text="Terra.actionHeader.maximize.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-minimize-button-4"
-        text="Terra.actionHeader.minimize.description"
-      />
-    </React.Fragment>
-  }
+  startContent={null}
   title="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with custom button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="7"
   level={1}
-  startContent={
-    <React.Fragment>
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-close-button-7"
-        text="Terra.actionHeader.close.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-maximize-button-7"
-        text="Terra.actionHeader.maximize.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-minimize-button-7"
-        text="Terra.actionHeader.minimize.description"
-      />
-    </React.Fragment>
-  }
+  startContent={null}
   title="Action Header"
 >
   <Button
@@ -319,39 +242,23 @@ exports[`ActionHeader should render an action header with custom button and titl
     type="button"
     variant="neutral"
   />
-</ActionHeaderContainer>
+</InjectIntl(ActionHeaderContainer)>
 `;
 
 exports[`ActionHeader should render an action header with level three header element and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="6"
   level={3}
-  startContent={
-    <React.Fragment>
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-close-button-6"
-        text="Terra.actionHeader.close.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-maximize-button-6"
-        text="Terra.actionHeader.maximize.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-minimize-button-6"
-        text="Terra.actionHeader.minimize.description"
-      />
-    </React.Fragment>
-  }
+  startContent={null}
   title="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with maximize button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="9"
   level={1}
   maximizeButtonA11yLabel="maximize modal"
   startContent={
@@ -378,23 +285,6 @@ exports[`ActionHeader should render an action header with maximize button and ti
         type="button"
         variant="utility"
       />
-      <React.Fragment>
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-close-button-9"
-          text="Terra.actionHeader.close.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-maximize-button-9"
-          text="Terra.actionHeader.maximize.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-minimize-button-9"
-          text="Terra.actionHeader.minimize.description"
-        />
-      </React.Fragment>
     </div>
   }
   title="Action Header"
@@ -402,8 +292,9 @@ exports[`ActionHeader should render an action header with maximize button and ti
 `;
 
 exports[`ActionHeader should render an action header with minimize button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="10"
   level={1}
   minimizeButtonA11yLabel="minimize modal"
   startContent={
@@ -430,23 +321,6 @@ exports[`ActionHeader should render an action header with minimize button and ti
         type="button"
         variant="utility"
       />
-      <React.Fragment>
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-close-button-10"
-          text="Terra.actionHeader.close.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-maximize-button-10"
-          text="Terra.actionHeader.maximize.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-minimize-button-10"
-          text="Terra.actionHeader.minimize.description"
-        />
-      </React.Fragment>
     </div>
   }
   title="Action Header"
@@ -454,28 +328,11 @@ exports[`ActionHeader should render an action header with minimize button and ti
 `;
 
 exports[`ActionHeader should render an action header with multiple custom buttons and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="8"
   level={1}
-  startContent={
-    <React.Fragment>
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-close-button-8"
-        text="Terra.actionHeader.close.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-maximize-button-8"
-        text="Terra.actionHeader.maximize.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-minimize-button-8"
-        text="Terra.actionHeader.minimize.description"
-      />
-    </React.Fragment>
-  }
+  startContent={null}
   title="Action Header"
 >
   <span>
@@ -498,12 +355,13 @@ exports[`ActionHeader should render an action header with multiple custom button
       variant="neutral"
     />
   </span>
-</ActionHeaderContainer>
+</InjectIntl(ActionHeaderContainer)>
 `;
 
 exports[`ActionHeader should render an action header with next and previous buttons and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="11"
   level={1}
   startContent={
     <div
@@ -551,23 +409,6 @@ exports[`ActionHeader should render an action header with next and previous butt
           variant="utility"
         />
       </div>
-      <React.Fragment>
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-close-button-11"
-          text="Terra.actionHeader.close.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-maximize-button-11"
-          text="Terra.actionHeader.maximize.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-minimize-button-11"
-          text="Terra.actionHeader.minimize.description"
-        />
-      </React.Fragment>
     </div>
   }
   title="Action Header"
@@ -575,35 +416,19 @@ exports[`ActionHeader should render an action header with next and previous butt
 `;
 
 exports[`ActionHeader should render an action header with title and heading level 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="2"
   level={1}
-  startContent={
-    <React.Fragment>
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-close-button-2"
-        text="Terra.actionHeader.close.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-maximize-button-2"
-        text="Terra.actionHeader.maximize.description"
-      />
-      <VisuallyHiddenText
-        aria-hidden={true}
-        id="terra-action-header-minimize-button-2"
-        text="Terra.actionHeader.minimize.description"
-      />
-    </React.Fragment>
-  }
+  startContent={null}
   title="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with title, enabled next button, and disabled previous button 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="12"
   level={1}
   startContent={
     <div
@@ -650,23 +475,6 @@ exports[`ActionHeader should render an action header with title, enabled next bu
           variant="utility"
         />
       </div>
-      <React.Fragment>
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-close-button-12"
-          text="Terra.actionHeader.close.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-maximize-button-12"
-          text="Terra.actionHeader.maximize.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-minimize-button-12"
-          text="Terra.actionHeader.minimize.description"
-        />
-      </React.Fragment>
     </div>
   }
   title="Action Header"
@@ -674,8 +482,9 @@ exports[`ActionHeader should render an action header with title, enabled next bu
 `;
 
 exports[`ActionHeader should render an action header with title, enabled previous button, and disabled next button 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="13"
   level={1}
   startContent={
     <div
@@ -722,23 +531,6 @@ exports[`ActionHeader should render an action header with title, enabled previou
           variant="utility"
         />
       </div>
-      <React.Fragment>
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-close-button-13"
-          text="Terra.actionHeader.close.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-maximize-button-13"
-          text="Terra.actionHeader.maximize.description"
-        />
-        <VisuallyHiddenText
-          aria-hidden={true}
-          id="terra-action-header-minimize-button-13"
-          text="Terra.actionHeader.minimize.description"
-        />
-      </React.Fragment>
     </div>
   }
   title="Action Header"

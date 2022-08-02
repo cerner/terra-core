@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import { IconButton } from 'terra-button';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import uniqueid from 'lodash.uniqueid';
 import ActionHeaderContainer from './_ActionHeaderContainer';
 import styles from './ActionHeader.module.scss';
@@ -118,14 +117,6 @@ const ActionHeader = ({
   const maximizeButtonId = `terra-action-header-maximize-button-${buttonId}`;
   const minimizeButtonId = `terra-action-header-minimize-button-${buttonId}`;
 
-  const visuallyHiddenComponent = (
-    <>
-      <VisuallyHiddenText aria-hidden id={closeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.close.description' }, { text })} />
-      <VisuallyHiddenText aria-hidden id={maximizeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.maximize.description' }, { text })} />
-      <VisuallyHiddenText aria-hidden id={minimizeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.minimize.description' }, { text })} />
-    </>
-  );
-
   const closeButton = onClose
     ? (
       <IconButton
@@ -224,7 +215,6 @@ const ActionHeader = ({
         {backButton}
         {expandButton}
         {previousNextButtonGroup}
-        {visuallyHiddenComponent}
       </div>
     )
     : null;
@@ -234,10 +224,11 @@ const ActionHeader = ({
   return (
     <ActionHeaderContainer
       {...customProps}
-      startContent={leftButtons || visuallyHiddenComponent}
+      startContent={leftButtons}
       text={text}
       endContent={rightButtons}
       level={level}
+      id={buttonId}
     >
       {children}
     </ActionHeaderContainer>
