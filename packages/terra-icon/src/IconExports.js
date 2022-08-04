@@ -187,6 +187,7 @@ import IconModified from './icon/IconModified';
 import IconNext from './icon/IconNext';
 import IconNoRisk from './icon/IconNoRisk';
 import IconNoRiskLowLight from './icon/IconNoRiskLowLight';
+import IconNoResults from './icon/IconNoResults';
 import IconNoSignal from './icon/IconNoSignal';
 import IconNotification from './icon/IconNotification';
 import IconNotificationDisabled from './icon/IconNotificationDisabled';
@@ -504,6 +505,7 @@ const Icons = {
   IconNext,
   IconNoRisk,
   IconNoRiskLowLight,
+  IconNoResults,
   IconNoSignal,
   IconNotMet,
   IconNotification,
