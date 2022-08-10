@@ -4,5 +4,8 @@
   "Terra.actionHeader.previous": "Vorherige",
   "Terra.actionHeader.next": "Nächste",
   "Terra.actionHeader.maximize": "Maximieren",
-  "Terra.actionHeader.minimize": "Minimieren"
+  "Terra.actionHeader.minimize": "Minimieren",
+  "Terra.actionHeader.close.description": "Klicken Sie auf 'Schließen', um {text} zu schließen.",
+  "Terra.actionHeader.maximize.description": "Klicken Sie auf 'Maximieren', um {text} zu maximieren.",
+  "Terra.actionHeader.minimize.description": "Klicken Sie auf 'Minimieren', um {text} zu minimieren."
 }
