@@ -5,7 +5,7 @@
   "Terra.actionHeader.next": "Next",
   "Terra.actionHeader.maximize": "Maximize",
   "Terra.actionHeader.minimize": "Minimize",
-  "Terra.actionHeader.close.description":"On Clicking the close button, {text} will be closed",
-  "Terra.actionHeader.maximize.description":"On Clicking the maximize button, {text} will be maximized",
-  "Terra.actionHeader.minimize.description":"On Clicking the minimize button, {text} will be minimized"
+  "Terra.actionHeader.close.description": "Select the button to close {text}",
+  "Terra.actionHeader.maximize.description": "Select the button to maximize {text}",
+  "Terra.actionHeader.minimize.description": "Select the button to minimize {text}"
 }
