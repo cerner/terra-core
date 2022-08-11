@@ -5,6 +5,7 @@
 * Changed
   * Replaced `terra-button` with `IconButton`
   * Added props to provide accessibility label to action buttons.
+  * Added translations for action header button descriptions. 
 
 * Breaking Changes
   * Renamed `title` prop as `text` to avoid confusion with HTML attribute `title`.
