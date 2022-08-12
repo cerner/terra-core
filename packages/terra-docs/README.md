@@ -6,7 +6,7 @@
 {insert description}
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/main/packages/terra-docs/docs)
+- [Documentation](https://engineering.cerner.com/terra-ui/dev_tools/cerner-terra-docs/documentation-components/notice)
 - [LICENSE](#license)
 
 ## Getting Started

@@ -9,7 +9,7 @@ The Terra Overlay component is a component that displays an overlay relative to 
 A Loading Overlay is a subcomponent that displays an overlay with a spinner icon and loading message.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-overlay/overlay/overlay)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/overlay/about)
 - [LICENSE](#license)
 
 ## Getting Started

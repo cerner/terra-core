@@ -7,7 +7,7 @@
 The Form Field component handles the layout of the label, help text and error text associated with a form element. Additionally, it provides required, optional, and invalid indicators.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-form-field/form-field/form-field)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/form-field/about)
 - [LICENSE](#license)
 
 ## Getting Started

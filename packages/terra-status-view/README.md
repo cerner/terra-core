@@ -6,7 +6,7 @@
 The status view component provides a customizable icon, message, and buttons in a view.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-status-view/status-view/status-view)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/status-view/about)
 - [LICENSE](#license)
 
 ## Getting Started

@@ -6,7 +6,7 @@
 The terra-table component provides users a way to render data in a tabular format.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-table/table/table)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/table/about)
 - [LICENSE](#license)
 
 ## Getting Started
