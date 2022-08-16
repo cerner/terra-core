@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OutlineTableView should render a OutlineTableView 1`] = `
+<div
+  className="outline"
+>
+  Hello World
+</div>
+`;
