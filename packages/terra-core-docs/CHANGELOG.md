@@ -23,6 +23,7 @@
   * Changes to Accessibility guide for `terra-button`.
   * Added a11y changes to `terra-action-header` examples.
   * Added Accessibility guide for `terra-action-header`.
+  * Added Accessibility guide for `terra-switch`.
 
 ## 1.14.1 - (July 14, 2022)
 
