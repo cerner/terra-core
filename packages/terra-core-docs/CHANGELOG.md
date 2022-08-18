@@ -4,6 +4,8 @@
 
 * Added
   * Added new outline-table-view docs and tests folders
+* Changed
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.48.0.
 
 ## 1.14.1 - (July 14, 2022)
 
