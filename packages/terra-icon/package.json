@@ -38,6 +38,7 @@
     "terra-theme-context": "^1.0.0"
   },
   "scripts": {
+    "clean:all-icons": "find . -name \\all_icons.png -type f -exec rm -f {} \\;",
     "compilescripts": "npm run compilescripts:clean && npm run compilescripts:build",
     "compilescripts:clean": "rm -rf scripts/lib",
     "compilescripts:build": "babel --root-mode upward scripts/src --out-dir scripts/lib --copy-files",
