@@ -8,6 +8,7 @@
   * Re-order hyperlink docs.
   * Added Accessibility guide for `terra-hyperlink`.
   * Spelling fixes for Image accessibility guide.
+  * Updated terra-button accessibility guide with anchor-button examples.
 
 * Added
   * Added Hyperlink Button tests and examples.
