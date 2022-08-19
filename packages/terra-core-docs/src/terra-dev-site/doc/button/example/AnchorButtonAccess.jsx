@@ -9,8 +9,8 @@ const cx = classNames.bind(styles);
 const AnchorButtonAccess = () => (
   <Card>
     <Card.Body>
-      <h3>Anchor Button</h3>
-      <Button href="#" text="Patient menu" className={cx('button')} />
+      <h3>Patients</h3>
+      <Button href="#" text="Show Patients" className={cx('button')} />
     </Card.Body>
   </Card>
 );
