@@ -11,11 +11,9 @@ const SwitchLabel = () => {
           <Switch
             isChecked={value}
             labelText="Show Patients List in Menu"
-            isBlock
             onChange={setValue}
           />
         </Card.Body>
-
       </Card>
     </div>
 

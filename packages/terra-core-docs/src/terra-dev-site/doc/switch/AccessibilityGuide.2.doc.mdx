@@ -1,16 +1,17 @@
 import { Notice } from "@cerner/terra-docs";
-import { Badge } from 'terra-image/package.json?dev-site-package';
+import { Badge } from 'terra-switch/package.json?dev-site-package';
 import Whitespace from "../../common/layout-helpers/Whitespace";
 import SwitchLabel from './example/SwitchLabel';
 import AllergiesSwitch from './example/AllergiesSwitch';
+import SwitchDisabledAccess from './example/SwitchDisabledAccess';
 
 <Badge />
 
 # Accessibility Guide for Terra Switch
 
-## Why is the accessibility of Terra Switch? 
+## Why is the accessibility of Terra Switch important? 
 
-The accessibility of a switch is imperative because a switch is a control users use to turn a setting on or off. If switches are not accessible, it can prevent users from understanding what state the switch is in, or worse, prevent the users from interacting with the product. By implemented switches in an accessible way, we are ensuring as many users can use the switch as possible regardless of how they may interact with it (e.g., with a mouse, touch, speech input, keyboard only, or other assistive technology).  
+The accessibility of a switch is imperative because a switch is a control users use to turn a setting on or off. If switches are not accessible, it can prevent users from understanding what state the switch is in, or worse, prevent the users from interacting with the product. By implementing switches in an accessible way, we are ensuring as many users can use the switch as possible regardless of how they may interact with it (e.g., with a mouse, touch, speech input, keyboard only, or other assistive technology).  
 
 It is critical that a switch is coded correctly to ensure it is keyboard accessible. Additionally, switch must be programmatically understood as a switch to properly convey to users of assistive technologies what type of a component they are on and how to interact with it. Users expect a switch to turn on or off a setting and not to do something unexpected. For switch to be highly usable and easily understood, it is critical that all switches be uniquely labeled and descriptive of what action(on/off) will be taken when activated. For example:  
 
@@ -29,41 +30,54 @@ It is critical that a switch is coded correctly to ensure it is keyboard accessi
 
 | Bad Practice | Good Practice |
 |---|---|
-|``` <Switch role="checkbox" isChecked={value} labelText="Show Patients List in Menu" isBlock onChange={setValue} /> ```|```<Switch isChecked={value} labelText="Show Patients List in Menu" isBlock onChange={setValue} /> ```|
+|``` <Switch role="checkbox" isChecked={value} labelText="Show Patients List in Menu" onChange={setValue} /> ```|```<Switch isChecked={value} labelText="Show Patients List in Menu" onChange={setValue} /> ```|
 
 <Notice variant="important" ariaLevel="4">
 
 - Switch must have an accessible name which is descriptive of the purpose.
   - The visual name of the label must match the programmatic name.
-<div aria-label="Example demo">
-    <SwitchLabel />
-</div>
+  <div aria-label="Example demo">
+      <SwitchLabel />
+  </div>
 
-```jsx
-import Switch from 'terra-switch';
+  ```jsx
+  import Switch from 'terra-switch';
 
-  <Switch
-        isChecked={value}
-        labelText="Show Patients List in Menu"
-        isBlock
-        onChange={setValue}
-      />
-```
+    <Switch
+          isChecked={value}
+          labelText="Show Patients List in Menu"
+          onChange={setValue}
+        />
+  ```
 
-  - Ensure switch label that is visually related to content in the page must be programmatically associated with its content. For example, “allergies” switch (on/off) must be appropriate associated with the word allergies.
-<div aria-label="Example demo">
-  <AllergiesSwitch />
-</div>
+  - The visual name of the label must match the programmatic name for the Disabled Switch.
+  <div aria-label="Example demo">
+      <SwitchDisabledAccess />
+  </div>
 
-```jsx
-import Switch from 'terra-switch';
+  ```jsx
+  import Switch from 'terra-switch';
 
-  <Switch
-        isChecked={value}
-        labelText="Show allergies"
-        onChange={setValue}
-      />
-```
+    <Switch
+          labelText="Show Patient History"
+          isDisabled
+        />
+  ```
+
+- Ensure switch label that is visually related to content in the page must be programmatically associated with its content. For example, “Show allergies” switch (on/off) must be appropriate associated with the word allergies.
+  <div aria-label="Example demo">
+      <AllergiesSwitch />
+  </div>
+
+  ```jsx
+  import Switch from 'terra-switch';
+
+     <Switch
+          isChecked={value}
+          labelText="Show allergies"
+          onChange={setValue}
+       />
+  ```
 
 </Notice>
 
