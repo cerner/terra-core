@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added new outline-table-view docs and tests folders
+
 ## 1.14.1 - (July 14, 2022)
 
 * Changed
@@ -19,7 +22,7 @@
 
 * Changed
   * Icon table regenerated after fixing trending up/down labeling errors
-  * Updated screenshot tests to reflect trending icon changes 
+  * Updated screenshot tests to reflect trending icon changes
 
 ## 1.13.5 - (April 29, 2022)
 
