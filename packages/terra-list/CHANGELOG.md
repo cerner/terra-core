@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed broken link in documentation.
+
 ## 4.51.5 - (July 5, 2022)
 
 * Changed
@@ -24,7 +27,7 @@
 
 ## 4.51.1 - (January 4, 2022)
 
-* Changed 
+* Changed
   * Migrate docs to terra-core-docs.
 
 ## 4.51.0 - (September 21, 2021)

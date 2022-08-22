@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed broken link in documentation.
+
 ## 4.48.1 - (December 14, 2021)
 
 * Changed

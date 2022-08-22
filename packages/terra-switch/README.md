@@ -10,7 +10,7 @@ Switches are used to activate settings immediately, in real time. It would be us
 The difference between Switch and Checkbox is that Switch has only two states which change directly when you toggle it, while Checkbox has three states and has intermediate state initial value along with checked and unchecked state.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-core/components/terra-switch/switch/switch)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/switch/about)
 - [LICENSE](#license)
 
 ## Getting Started

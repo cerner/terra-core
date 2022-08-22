@@ -11,7 +11,7 @@ In these cases, the text component may be helpful. Using terra-text, you can cre
 However, there are drawbacks to be aware of with this component. The styles set with this component are not themable and will be static. If this is a concern for your usage, we recommend building a custom component that handles your font styles that need to differ from the base font styles so you can control the themability of them.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-text/text/text)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/text/about)
 - [LICENSE](#license)
 
 ## Getting Started

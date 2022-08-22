@@ -7,7 +7,7 @@
 The terra-avatar component displays an avatar, which can be either an image or text, in a circular frame. If neither an image or text is provided, a variant-based fallback icon is used.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-avatar/avatar/about)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/avatar/about)
 - [LICENSE](#license)
 
 ## Getting Started
