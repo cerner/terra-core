@@ -511,12 +511,11 @@ exports[`should render an action button 1`] = `
 </button>
 `;
 
-exports[`should render as an anchor when provided an href 1`] = `
+exports[`should render as an anchor when AnchorButton is used 1`] = `
 <a
   aria-disabled={false}
   aria-label="href"
   className="button neutral"
-  disabled={false}
   href="MockHref"
   onBlur={[Function]}
   onClick={[Function]}

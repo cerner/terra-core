@@ -4,12 +4,16 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import * as KeyCode from 'keycode-js';
 import ThemeContext from 'terra-theme-context';
-import styles from './Button.module.scss';
-import { ButtonTypes, ButtonVariants } from './_constants';
+import styles from '../Button.module.scss';
+import { ButtonTypes, ButtonVariants } from '../_constants';
 
 const cx = classNamesBind.bind(styles);
 
 const propTypes = {
+  /**
+   * Sets the href. Renders the component as an anchor tag.
+   */
+  href: PropTypes.string.isRequired,
   /**
    * Whether or not the button should display as a block.
    */
@@ -78,7 +82,7 @@ const defaultProps = {
   variant: ButtonVariants.NEUTRAL,
 };
 
-class Button extends React.Component {
+class AnchorButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { active: false, focused: false };
@@ -126,6 +130,13 @@ class Button extends React.Component {
     // Add active state to FF browsers
     if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
       this.setState({ active: true });
+
+      // Follow href on space keydown when rendered as an anchor tag
+      if (this.props.href) {
+        // Prevent window scrolling
+        event.preventDefault();
+        window.location.href = this.props.href;
+      }
     }
 
     // Add focus styles for keyboard navigation
@@ -183,6 +194,7 @@ class Button extends React.Component {
       text,
       type,
       variant,
+      href,
       onClick,
       onMouseDown,
       onBlur,
@@ -217,13 +229,11 @@ class Button extends React.Component {
 
     const ariaLabel = customProps['aria-label'];
 
-    /* eslint-disable react/button-has-type */
     return (
-      <button
+      <a
         {...customProps}
         className={buttonClasses}
         type={type}
-        disabled={isDisabled}
         tabIndex={isDisabled ? '-1' : customProps.tabIndex}
         aria-disabled={isDisabled}
         aria-label={ariaLabel || text}
@@ -234,24 +244,24 @@ class Button extends React.Component {
         onClick={this.handleClick}
         onMouseDown={this.handleMouseDown}
         onFocus={this.handleFocus}
+        href={href}
         ref={refCallback}
-        role={undefined}
+        role="button"
       >
         <span className={buttonLabelClasses}>
           <span>{text}</span>
         </span>
-      </button>
+      </a>
     );
-    /* eslint-enable react/button-has-type */
   }
 }
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
-Button.contextType = ThemeContext;
+AnchorButton.propTypes = propTypes;
+AnchorButton.defaultProps = defaultProps;
+AnchorButton.contextType = ThemeContext;
 
-Button.Opts = {};
-Button.Opts.Types = ButtonTypes;
-Button.Opts.Variants = ButtonVariants;
+AnchorButton.Opts = {};
+AnchorButton.Opts.Types = ButtonTypes;
+AnchorButton.Opts.Variants = ButtonVariants;
 
-export default Button;
+export default AnchorButton;

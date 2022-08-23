@@ -1,12 +1,13 @@
 import React from 'react';
-import Button from 'terra-button/lib/Button';
+import AnchorButton from 'terra-button/lib/variants/_AnchorButton';
+
 import classNames from 'classnames/bind';
 import styles from './ButtonDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
 const ButtonAnchor = () => (
-  <Button href="#" text="I am rendered with an anchor tag" className={cx('button')} />
+  <AnchorButton href="#" text="I am rendered with an anchor tag" className={cx('button')} />
 );
 
 export default ButtonAnchor;
