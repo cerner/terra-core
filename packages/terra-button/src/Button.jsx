@@ -235,7 +235,6 @@ class Button extends React.Component {
         onMouseDown={this.handleMouseDown}
         onFocus={this.handleFocus}
         ref={refCallback}
-        role={undefined}
       >
         <span className={buttonLabelClasses}>
           <span>{text}</span>
