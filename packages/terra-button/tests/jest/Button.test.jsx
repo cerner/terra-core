@@ -2,7 +2,6 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 import Button from '../../src/Button';
-import AnchorButton from '../../src/variants/_AnchorButton';
 
 // Snapshot Tests
 it('should render a neutral button', () => {
@@ -55,11 +54,6 @@ it('should render a Button with merged attributes', () => {
   const button = shallow(<Button className="TestClass" data-mock="data" text="text" style={{ height: '100px' }} />);
   expect(button).toMatchSnapshot();
   /* eslint-enable react/forbid-component-props */
-});
-
-it('should render as an anchor when AnchorButton is used', () => {
-  const anchorButton = shallow(<AnchorButton text="href" href="MockHref" />);
-  expect(anchorButton).toMatchSnapshot();
 });
 
 it('should render as disabled when set', () => {
@@ -129,11 +123,6 @@ it('should have the class text-only when only text is provided', () => {
 it('should set the span text', () => {
   const button = shallow(<Button text="text" />);
   expect(button.find('.text-only').text()).toEqual('text');
-});
-
-it('should render as an anchor tag when AnchorButton is used', () => {
-  const anchorButton = shallow(<AnchorButton href="MockHref" text="text" />);
-  expect(anchorButton.is('a')).toEqual(true);
 });
 
 // Attributes
