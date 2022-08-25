@@ -4,6 +4,7 @@ import Whitespace from "../../common/layout-helpers/Whitespace";
 import ButtonOnClick from "./example/ButtonOnClick";
 import A11yIconButton from "./example/A11yIconButton";
 import A11yButtonLabel from "./example/A11yButtonLabel";
+import AnchorButtonAccess from "./example/AnchorButtonAccess";
 
 <Badge />
 
@@ -94,6 +95,19 @@ The screen reader user will hear something like: <samp> Add Allergies Button  </
 ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue) The above example is NOT recommended. For Accessibility Best Practices it is recommended to use the same text for both visual and the programmatic label of the button.
 
 Ensure any non-unique button label that is visually related to content in the page must be programmatically associated with its content. For example, a “Add” button next to the word “allergies” must be appropriate associated with the word allergies.
+
+##### Accessibility Guidance: Anchor Button Tag
+Ensure a button that is made with an anchor tag and a role of button. It has the same requirements and details as button. It would be new guidence that the non-button button.  
+
+<div aria-label="Example demo">
+  <AnchorButtonAccess />
+</div>
+
+```jsx
+import AnchorButton from 'terra-button/lib/variants/_AnchorButton';
+
+<AnchorButton href="#" text="Show Patients" className={cx(['button', 'anchor-button'])} />
+```
 
 </Notice>
 
