@@ -1,9 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OutlineTableView should render a OutlineTableView 1`] = `
-<div
-  className="outline"
->
-  Hello World
-</div>
+exports[`OutlineTableView should pass through props to Table 1`] = `
+<Table
+  bodyData={
+    Array [
+      Object {
+        "rows": Array [
+          Object {
+            "cells": Array [
+              Object {
+                "children": "John Smith",
+                "key": "cell-0",
+              },
+              Object {
+                "children": "123 Adams Drive",
+                "key": "cell-1",
+              },
+              Object {
+                "children": "111-222-3333",
+                "key": "cell-2",
+              },
+            ],
+            "key": "row-0",
+          },
+        ],
+      },
+    ]
+  }
+  cellPaddingStyle="standard"
+  checkStyle="toggle"
+  className="outline test"
+  columnWidths={
+    Array [
+      Object {
+        "static": Object {
+          "unit": "px",
+          "value": 10,
+        },
+      },
+    ]
+  }
+  dividerStyle="both"
+  fill={true}
+  footerNode={
+    <p>
+      zxcv
+    </p>
+  }
+  headerData={
+    Object {
+      "cells": Array [
+        Object {
+          "children": "Name",
+          "id": "header-name",
+          "key": "name",
+        },
+        Object {
+          "children": "Address",
+          "id": "header-address",
+          "key": "address",
+        },
+        Object {
+          "children": "Phone Number",
+          "id": "header-phone_number",
+          "key": "phone_number",
+        },
+      ],
+    }
+  }
+  numberOfColumns={3}
+  numberOfRows={1}
+  rowStyle="toggle"
+  scrollRefCallback={[MockFunction]}
+  showSimpleFooter={true}
+  summary="This is a default table structure"
+  summaryId="test-id"
+/>
 `;
