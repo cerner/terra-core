@@ -6,7 +6,7 @@
 The terra-grid component provides a flexbox based grid system.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-grid/grid/grid)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/grid/about)
 - [LICENSE](#license)
 
 ## Getting Started

@@ -7,7 +7,7 @@
 The terra-action-header component is a header bar containing a title and optional actionable items such as links and buttons.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-action-header/action-header/action-header)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/action-header/about)
 - [LICENSE](#license)
 
 ## Getting Started

@@ -7,7 +7,7 @@
 ToggleButton component that transitions content in and out with the click on a button.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-toggle-button/toggle-button/toggle-button)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/toggle-button/about)
 - [LICENSE](#license)
 
 ## Getting Started

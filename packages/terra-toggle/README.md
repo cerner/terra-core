@@ -7,7 +7,7 @@
 Toggle component that transitions content in and out.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-toggle/toggle/toggle)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/toggle/about)
 - [LICENSE](#license)
 
 ## Getting Started

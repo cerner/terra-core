@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed broken link in documentation.
+
 ## 3.35.1 - (January 4, 2022)
 
 * Changed
@@ -22,7 +25,7 @@
 ## 3.33.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
+  * Fixed broken links in documentation.
 
 ## 3.32.0 - (December 8, 2020)
 
