@@ -7,7 +7,7 @@
 The divider component is used to visually separate content on a layout.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-divider/divider/divider)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/divider/about)
 - [LICENSE](#license)
 
 ## Getting Started

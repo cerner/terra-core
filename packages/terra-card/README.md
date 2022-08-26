@@ -7,7 +7,7 @@
 Card is a basic container with some base styling to help separate elements with different content
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-card/card/card)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/card/about)
 - [LICENSE](#license)
 
 ## Getting Started

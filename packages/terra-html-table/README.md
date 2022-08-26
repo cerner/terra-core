@@ -7,7 +7,7 @@
 The Terra HTML Table is a structural component to arrange content within a semantic html table.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-html-table/html-table/table)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/html-table/about)
 - [LICENSE](#license)
 
 ## Getting Started

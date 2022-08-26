@@ -8,7 +8,7 @@ The ResponsiveElement conditionally renders components based on viewport size.
 The viewport can be set to the immediate parent or window.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-responsive-element/responsive-element/responsive-element)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/responsive-element/about)
 - [LICENSE](#license)
 
 ## Getting Started

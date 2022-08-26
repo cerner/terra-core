@@ -7,7 +7,7 @@
 The Terra Form Checkbox is a responsive input component rendered as a box. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-form-checkbox/form-checkbox/checkbox)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/form-checkbox/about)
 - [LICENSE](#license)
 
 ## Getting Started
