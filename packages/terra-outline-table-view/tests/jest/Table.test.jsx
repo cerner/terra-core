@@ -4,7 +4,7 @@ import OutlineTableView from '../../src/Table';
 
 describe('OutlineTableView', () => {
   // Snapshot Tests
-  it('should pass through props to Table', () => {
+  it('should passthrough props to Table', () => {
     const shallowComponent = shallow(
       <OutlineTableView
         bodyData={[
