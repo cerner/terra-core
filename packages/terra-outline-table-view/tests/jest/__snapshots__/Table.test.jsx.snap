@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OutlineTableView should pass through props to Table 1`] = `
+exports[`OutlineTableView should passthrough props to Table 1`] = `
 <Table
   bodyData={
     Array [
