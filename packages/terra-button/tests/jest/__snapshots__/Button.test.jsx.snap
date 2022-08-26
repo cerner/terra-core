@@ -511,33 +511,6 @@ exports[`should render an action button 1`] = `
 </button>
 `;
 
-exports[`should render as an anchor when provided an href 1`] = `
-<a
-  aria-disabled={false}
-  aria-label="href"
-  className="button neutral"
-  disabled={false}
-  href="MockHref"
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  role="button"
-  title="href"
-  type="button"
->
-  <span
-    className="button-label text-only"
-  >
-    <span>
-      href
-    </span>
-  </span>
-</a>
-`;
-
 exports[`should render as disabled when set 1`] = `
 <button
   aria-disabled={true}

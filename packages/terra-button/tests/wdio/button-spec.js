@@ -247,4 +247,10 @@ Terra.describeViewports('Button', ['tiny'], () => {
       Terra.validates.element('programmatic re-enabled -Enabled Button is not focused', { selector: '#root' });
     });
   });
+
+  it('displays Anchor button', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/button/anchor-button');
+    $('<a>').click();
+    Terra.validates.element('anchor');
+  });
 });

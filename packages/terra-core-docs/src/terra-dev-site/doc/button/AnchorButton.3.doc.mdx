@@ -1,27 +1,20 @@
 import { Badge } from 'terra-button/package.json?dev-site-package';
 
-import ButtonBlock from './example/ButtonBlock?dev-site-example';
-import ButtonCompact from './example/ButtonCompact?dev-site-example';
-import ButtonDisabled from './example/ButtonDisabled?dev-site-example';
-import ButtonOnClick from './example/ButtonOnClick?dev-site-example';
-import ButtonVariant from './example/ButtonVariant?dev-site-example';
-
-import ButtonPropsTable from 'terra-button/src/Button?dev-site-props-table';
+import ButtonAnchor from './example/ButtonAnchor?dev-site-example';
+import ButtonPropsTable from 'terra-button/src/variants/_AnchorButton?dev-site-props-table';
 
 <Badge />
 
-# Terra Button
+# Anchor Button
 
-The button component provides users a way to trigger actions in the UI.
-It can be modified in color and type, and can optionally display an icon.
-Submit a request if additional variants not provided are needed.
+The subcomponent of [Terra-Button](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/button/about) that can display a button rendered using anchor element.
 
 The `action` variant is intended for specific solutions in which a non-inline floating button sits above the page content in a fixed position.
 
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
-  - `npm install terra-button`
+- `npm install terra-button`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
@@ -38,7 +31,7 @@ This component requires the following peer dependencies be installed in your app
 ## Usage
 
 ```jsx
-import Button from 'terra-button';
+import { AnchorButton } from 'terra-button'
 ```
 
 ## Component Features
@@ -47,11 +40,7 @@ import Button from 'terra-button';
 * [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
 
 ## Examples
-<ButtonVariant title="Variant" />
-<ButtonBlock title="Block" />
-<ButtonCompact title="Compact" />
-<ButtonDisabled title="Disabled" />
-<ButtonOnClick title="Click" />
+<ButtonAnchor title="Anchor" />
 
-## Button Props
+## Anchor button Props
 <ButtonPropsTable />

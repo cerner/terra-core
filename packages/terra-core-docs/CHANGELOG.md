@@ -23,6 +23,8 @@
   * Changes to Accessibility guide for `terra-button`.
   * Added a11y changes to `terra-action-header` examples.
   * Added Accessibility guide for `terra-action-header`.
+  * Added docs for `AnchorButton`
+  * Added test for `AnchorButton`
 
 * Fixed
   * Updated broken links in terra-form-select and action-footer.
