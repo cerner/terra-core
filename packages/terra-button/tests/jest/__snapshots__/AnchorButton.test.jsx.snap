@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render as an anchor when AnchorButton is used 1`] = `
+<a
+  aria-disabled={false}
+  aria-label="href"
+  className="button neutral"
+  href="MockHref"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  role="button"
+  title="href"
+  type="button"
+>
+  <span
+    className="button-label text-only"
+  >
+    <span>
+      href
+    </span>
+  </span>
+</a>
+`;

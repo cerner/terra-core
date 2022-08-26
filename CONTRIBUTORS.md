@@ -90,6 +90,7 @@ Cerner Corporation
 - Manjuraghavendra Sathrasala [@manjusr]
 - Saurabh Khare [@saurabhkhare86]
 - Uday Kiran Mattam [@udaymattam]
+- Sugan G [@sugan2416]
 
 Community
 
@@ -206,3 +207,4 @@ Community
 [@manjusr]: https://github.com/manjusr
 [@saurabhkhare86]: https://github.com/SaurabhKhare86
 [@udaymattam]: https://github.com/udaymattam
+[@sugan2416]: https://github.com/sugan2416

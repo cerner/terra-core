@@ -24,6 +24,8 @@
   * Added a11y changes to `terra-action-header` examples.
   * Added Accessibility guide for `terra-action-header`.
   * Added Accessibility guide for `terra-switch`.
+  * Added docs for `AnchorButton`.
+  * Added test for `AnchorButton`.
 
 ## 1.14.1 - (July 14, 2022)
 
