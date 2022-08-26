@@ -21,7 +21,7 @@ describe('OutlineTableView', () => {
             ],
           },
         ]}
-        className='test'
+        className="test"
         columnWidths={[
           { static: { value: 10, unit: 'px' } },
         ]}
@@ -38,8 +38,8 @@ describe('OutlineTableView', () => {
         numberOfRows={1}
         scrollRefCallback={jest.fn()}
         showSimpleFooter
-        summary='This is a default table structure'
-        summaryId='test-id'
+        summary="This is a default table structure"
+        summaryId="test-id"
       />,
     );
     expect(shallowComponent).toMatchSnapshot();

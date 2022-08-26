@@ -65,9 +65,7 @@ const defaultProps = {
 
 const OutlineTableView = ({
   bodyData,
-  cellPaddingStyle,
   columnWidths,
-  dividerStyle,
   fill,
   footerNode,
   headerData,
@@ -89,17 +87,17 @@ const OutlineTableView = ({
   return (
     <Table
       bodyData={bodyData}
-      cellPaddingStyle='standard'
-      checkStyle='toggle'
+      cellPaddingStyle="standard"
+      checkStyle="toggle"
       className={tableClasses}
       columnWidths={columnWidths}
-      dividerStyle='both'
+      dividerStyle="both"
       fill={fill}
       footerNode={footerNode}
       headerData={headerData}
       numberOfColumns={numberOfColumns}
       numberOfRows={numberOfRows}
-      rowStyle='toggle'
+      rowStyle="toggle"
       scrollRefCallback={scrollRefCallback}
       showSimpleFooter={showSimpleFooter}
       summary={summary}

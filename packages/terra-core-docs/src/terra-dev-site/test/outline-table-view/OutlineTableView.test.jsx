@@ -47,8 +47,8 @@ const DefaultTest = () => (
     }}
     numberOfColumns={3}
     numberOfRows={2}
-    summary='This is a default table structure'
-    summaryId='test-id'
+    summary="This is a default table structure"
+    summaryId="test-id"
   />
 );
 
