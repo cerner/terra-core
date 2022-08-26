@@ -3,9 +3,11 @@
 ## Unreleased
 * Added
   * Added new subcomponent `IconButton` to display icon.
+  * Added new subcomponent `AnchorButton`
 
 * Breaking Changes
   * `icon`, `isIconOnly` and `isReveresed` props have been moved from `terra-button` to `IconButton`.
+  * `href` prop has been moved from `terra-button` to `AnchorButton`
 
 ## 3.61.0 - (February 15, 2022)
 
