@@ -14,7 +14,7 @@ const cx = classNamesBind.bind(styles);
 const propTypes = {
   /**
    * An array of sections containing rows.
-   * TODO: Not final shape as row headers and parent/children  heirarchies are still needed to be addressed. NOTE: make sure bodyData rows have toggleAction with a toggleLabel, otherwise tests fail aria
+   * TODO: Not final shape as row headers and parent/children  heirarchies are still needed to be addressed. NOTE: make sure bodyData rows have toggleAction with a toggleLabel, otherwise tests fail aria.
    */
   bodyData: PropTypes.arrayOf(sectionShape),
   /**
