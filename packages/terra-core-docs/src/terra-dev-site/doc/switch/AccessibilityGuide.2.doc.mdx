@@ -2,7 +2,6 @@ import { Notice } from "@cerner/terra-docs";
 import { Badge } from 'terra-switch/package.json?dev-site-package';
 import Whitespace from "../../common/layout-helpers/Whitespace";
 import SwitchLabel from './example/SwitchLabel';
-import AllergiesSwitch from './example/AllergiesSwitch';
 import SwitchDisabledAccess from './example/SwitchDisabledAccess';
 
 <Badge />
@@ -11,19 +10,19 @@ import SwitchDisabledAccess from './example/SwitchDisabledAccess';
 
 ## Why is the accessibility of Terra Switch important? 
 
-The accessibility of a switch is imperative because a switch is a control users use to turn a setting on or off. If switches are not accessible, it can prevent users from understanding what state the switch is in, or worse, prevent the users from interacting with the product. By implementing switches in an accessible way, we are ensuring as many users can use the switch as possible regardless of how they may interact with it (e.g., with a mouse, touch, speech input, keyboard only, or other assistive technology).  
+The accessibility of a switch is imperative because a switch is a control users use to turn a setting on or off. If switches are not accessible, it can prevent users from understanding what state the switch is in, or worse, prevent the users from interacting with the control. By implementing switches in an accessible way, we are ensuring as many users as possible can use the switch regardless of how they may interact with it (e.g., with a mouse, touch, speech input, keyboard only, or other assistive technology).  
 
-It is critical that a switch is coded correctly to ensure it is keyboard accessible. Additionally, switch must be programmatically understood as a switch to properly convey to users of assistive technologies what type of a component they are on and how to interact with it. Users expect a switch to turn on or off a setting and not to do something unexpected. For switch to be highly usable and easily understood, it is critical that all switches be uniquely labeled and descriptive of what action(on/off) will be taken when activated. For example:  
+It is critical that a switch is written to be keyboard accessible. Additionally, a switch must be programmatically understood as a switch so that users of assistive technologies can understand what type of a component they are on and how to interact with it. Users expect a switch to turn on or off a setting and not to do anything unexpected. For a switch to be highly usable and easily understood, it is critical that all switches be uniquely labeled and descriptive of what action(on/off) will be taken when activated. For example:  
 
-- **Blind screen reader users** do not necessarily interact with pages in a linear fashion and can use a switch out of context. They need to know what kind of a component they are on and how to interact with It - different components have different expectations. They need the words within the switch to be descriptive of purpose.
+- **Blind screen reader users** do not necessarily interact with pages in a linear fashion and can use a switch out of context. They need to know what kind of a component they are on and how to interact with It; different components have different expectations. They need the switch's label to be descriptive of its purpose.
 - **People using speech input software** require unique Switch labels to effectively activate the Switch. 
-- **Keyboard only users** navigate the page using only a keyboard. They expect a switch to be keyboard accessible and able to be activated using specific keys. Additionally, a visible keyboard focus is crucial for this user to see where they are on the page.
+- **Keyboard only users** navigate the page using only a keyboard. They expect a switch to be keyboard accessible and able to be activated using specific keys. Additionally, visible keyboard focus is crucial for this user to see where they are on the page.
 
 ## Accessibility Considerations
 
 ### Code Considerations
 
-- Ensure all switches receive keyboard focus and can be interacted with only the keyboard.
+- Ensure all switches receive keyboard focus and can be only interacted through the keyboard.
   - Do NOT override keyboard focus state or use a TABINDEX greater than zero. 
   - Switch should be coded in the users logical reading order of the page to ensure a meaningful experience.  
 - Do NOT override the implicit/explicit role of a switch if another role is required do NOT use the Terra switch.
@@ -34,7 +33,7 @@ It is critical that a switch is coded correctly to ensure it is keyboard accessi
 
 <Notice variant="important" ariaLevel="4">
 
-- Switch must have an accessible name which is descriptive of the purpose.
+- Switch must have an accessible name which is descriptive of its purpose.
   - The visual name of the label must match the programmatic name.
   <div aria-label="Example demo">
       <SwitchLabel />
@@ -64,21 +63,6 @@ It is critical that a switch is coded correctly to ensure it is keyboard accessi
         />
   ```
 
-- Ensure switch label that is visually related to content in the page must be programmatically associated with its content. For example, “Show allergies” switch (on/off) must be appropriate associated with the word allergies.
-  <div aria-label="Example demo">
-      <AllergiesSwitch />
-  </div>
-
-  ```jsx
-  import Switch from 'terra-switch';
-
-     <Switch
-          isChecked={value}
-          labelText="Show allergies"
-          onChange={setValue}
-       />
-  ```
-
 </Notice>
 
 ### Content Considerations:
@@ -103,7 +87,8 @@ It is critical that a switch is coded correctly to ensure it is keyboard accessi
 
 ### Interaction Details
 
-Mouse users expect the cursor to change to a hand with pointing finger when the Switch is hovered. Keyboard only users expect to see a visible keyboard focus indicator when the switch is in focus.
+- Mouse users expect the cursor to change to a hand with pointing finger when the Switch is hovered. Keyboard only users expect to see a visible keyboard focus indicator when the switch is in focus.
+- Keyboard users expect the switch to have a visible focus indication when the keyboard focus is placed upon the switch.
 
 ### Keyboard Navigation
 
