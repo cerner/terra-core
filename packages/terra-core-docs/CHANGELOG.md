@@ -5,6 +5,9 @@
 * Added
   * Added new outline-table-view docs and tests folders
 
+* Changed
+  * terra-outline-table-view tests and doc for now initial implementation
+
 ## 1.14.1 - (July 14, 2022)
 
 * Changed
