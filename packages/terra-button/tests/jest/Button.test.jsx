@@ -2,7 +2,6 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 import Button from '../../src/Button';
-import AnchorButton from '../../src/variants/_AnchorButton';
 
 // Snapshot Tests
 it('should render a neutral button', () => {
