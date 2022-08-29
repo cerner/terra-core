@@ -57,11 +57,6 @@ it('should render a Button with merged attributes', () => {
   /* eslint-enable react/forbid-component-props */
 });
 
-it('should render as an anchor when AnchorButton is used', () => {
-  const anchorButton = shallow(<AnchorButton text="href" href="MockHref" />);
-  expect(anchorButton).toMatchSnapshot();
-});
-
 it('should render as disabled when set', () => {
   const button = shallow(<Button text="Disabled" isDisabled />);
   expect(button).toMatchSnapshot();
@@ -129,11 +124,6 @@ it('should have the class text-only when only text is provided', () => {
 it('should set the span text', () => {
   const button = shallow(<Button text="text" />);
   expect(button.find('.text-only').text()).toEqual('text');
-});
-
-it('should render as an anchor tag when AnchorButton is used', () => {
-  const anchorButton = shallow(<AnchorButton href="MockHref" text="text" />);
-  expect(anchorButton.is('a')).toEqual(true);
 });
 
 // Attributes

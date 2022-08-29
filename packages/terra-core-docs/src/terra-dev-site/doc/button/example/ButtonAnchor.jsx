@@ -1,5 +1,5 @@
 import React from 'react';
-import AnchorButton from 'terra-button/lib/variants/_AnchorButton';
+import { AnchorButton } from 'terra-button';
 
 import classNames from 'classnames/bind';
 import styles from './ButtonDocCommon.module.scss';
