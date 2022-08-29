@@ -68,22 +68,22 @@ It is critical that a switch is written to be keyboard accessible. Additionally,
 ### Content Considerations:
 
 - Must provide engineers with a meaningful and descriptive switch label that conveys the switch's purpose. 
-- When implementing switch do not override default theme colors of switch to ensure the switch be easily perceived against its background color. If changing the default colors, the text color must meet a minimum contrast ratio against the background color. See WCAG 1.4.3 Contrast Minimum and 1.4.11 Non-text Content for more information.
-- Not everyone perceives color so never use color as the only way to convey meaning within the interface. Always provide both color and text or a shape together to represent the meaning.
+- When implementing the switch do not override default theme colors of switch to ensure it  be easily perceived against its background color. If changing the default colors, the text color must meet a minimum contrast ratio against the background color. See [**WCAG 1.4.3 Contrast Minimum**](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) and [**WCAG 1.4.11 Non-text Content**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) for more information.
+- To prevent accessibility issues, never use color as the only way to convey meaning within the interface. Always provide both color and text or a shape together to represent the meaning.
 - Ensure the engineers understand the logical reading order of the page.
-- Never add unexpected behaviors to switch that could cause a change of context on focus or on activation of the switch. Ensure switch always meet the user’s expectations.
+- Never add unexpected behaviors to the switch that could cause a change of context on focus or on activation of the switch. Ensure that the switch always meet the user’s expectations.
 - It is best practice to always have the switch in close proximity to the switch label. If the switch label and actual switch do not appear together, the extra space in-between can create accessibility and usability problems for some users.
-- After coded, ensure all interactable elements receive keyboard focus in the users reading order and display a visible keyboard focus.
+- After implementing the switch, ensure all interactable elements receive keyboard focus in the appropriate reading order and display a visible keyboard focus.
 
 <Whitespace newline={2} />
 
 ## Usability Expectations:
 
-- User expects switch to have a visual and matching programmatic label that is descriptive of its purpose.
-- User expects to see or hear that the actionable element in focus is a switch.
-- User expects to see or hear the current state of the Switch. For example, selected/not selected, on/off, yes/no, and so on.
-- If the Switch state is changed, the user expects to be informed (audibly or visually) of the new state.
-- User expects the changing of switch states to result in instantaneous feedback. They do not expect to take further action to save the setting change.
+- Users expect a switch to have a visual and matching programmatic label that is descriptive of its purpose.
+- Users expect to see or hear that the actionable element in focus is a switch.
+- Users expect to see or hear the current state of the Switch. For example, selected/not selected, on/off, yes/no, and so on.
+- If the switch state is changed then the users expect to be informed (audibly or visually) of the new state.
+- Users expect the changing of switch states to result in instantaneous feedback. They do not expect to take further action to save the setting change.
 
 ### Interaction Details
 
@@ -105,8 +105,8 @@ Buttons have the following keyboard navigation expectations:
 
 - [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html) - Supports 
    - Terra provides the ability for information, structure, and relationships to be programmatically determined.
-   - Engineers must ensure any visual relationship with a switch and other content that conveys meaning must programmatically set associations to the content for visual relationships can be understood by screen reader users.
-   - Content creators must provide the meaningful switch text (the visual label) that communicates what users should expect when the switch is activated(on/off). Must also express to the engineer any visual relationships of a switch to other content for them to ensure engineers can programmatically convey the visual relationships.
+   - Engineers must ensure all visual relationships between a switch and content that conveys meaning must also be programmatically implemented to ensure that the visual relationships can be understood by screen reader users.
+   - Content creators must provide the meaningful switch text (the visual label) that communicates what users should expect when the switch is activated (on/off). Content creates should also provide any visual relationships of a switch with other content to ensure engineers can programmatically convey the visual relationships.
 
 - [**2.1.1 Keyboard**](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) — Supports
    - Terra provides the ability for all interactable elements to receive focus, be interacted with, and be acted upon via keyboard.
@@ -121,12 +121,12 @@ Buttons have the following keyboard navigation expectations:
 - [**2.4.7 Focus Visible**](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html) - Supports
   - Terra provides the ability for actionable elements to receive visual focus.
   - Engineers must ensure a visible keyboard focus is maintained on all interactive elements.
-  - Content creators must inform engineers that whenever switch receives focus, the focus must be visible and maintain existing Terra Keyboard Focus styles.
+  - Content creators must inform engineers that whenever the switch receives focus, the focus must be visible and maintain existing Terra Keyboard Focus styles.
 
 - [**2.5.3 Label in Name**](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html) — Supports 
   - Terra provides the ability for programmatic labels to match visual labels. 
   - Engineers must ensure the programmatic label matches the visual labels when interactable elements are included with this component.
-  - Provide the engineer with the switch text (the visual labels) which must be unique and describe the purpose of the switch so it can be understood by the user out of context.
+  - Content creators must provide the engineer with the switch text (the visual labels) which must be unique and describe the purpose of the switch so it can be understood by a user out of context.
 
 ### Other Accessibility Criteria Consuming Teams Are Responsible For
 
@@ -173,6 +173,6 @@ Buttons have the following keyboard navigation expectations:
   - Engineers must ensure their code is valid HTML.
 
 - [**4.1.2 Name,Role,Value**](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) - Supports
-  - Terra provides the ability for Name, Role, and Value attributes to be programmatically determined so as to be read by screen readers.
+  - Terra provides the ability for `Name`, `Role`, and `Value` attributes to be programmatically determined so that they can be read by screen readers.
   - Engineers must not override the implicit or explicit role of “switch” when using switch and have an accessible name, proper role, and value.
   - Content creators must provide engineers a unique and meaningful name is provided for switch that communicates what users can expect from activating it.
