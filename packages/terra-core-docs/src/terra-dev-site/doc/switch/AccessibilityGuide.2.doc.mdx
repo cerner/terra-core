@@ -1,0 +1,178 @@
+import { Notice } from "@cerner/terra-docs";
+import { Badge } from 'terra-switch/package.json?dev-site-package';
+import Whitespace from "../../common/layout-helpers/Whitespace";
+import SwitchLabel from './example/SwitchLabel';
+import SwitchDisabledAccess from './example/SwitchDisabledAccess';
+
+<Badge />
+
+# Accessibility Guide for Terra Switch
+
+## Why is the accessibility of Terra Switch important? 
+
+The accessibility of a switch is imperative because a switch is a control users use to turn a setting on or off. If switches are not accessible, it can prevent users from understanding what state the switch is in, or worse, prevent the users from interacting with the control. By implementing switches in an accessible way, we are ensuring as many users as possible can use the switch regardless of how they may interact with it (e.g., with a mouse, touch, speech input, keyboard only, or other assistive technology).  
+
+It is critical that a switch is written to be keyboard accessible. Additionally, a switch must be programmatically understood as a switch so that users of assistive technologies can understand what type of a component they are on and how to interact with it. Users expect a switch to turn on or off a setting and not to do anything unexpected. For a switch to be highly usable and easily understood, it is critical that all switches be uniquely labeled and descriptive of what action(on/off) will be taken when activated. For example:  
+
+- **Blind screen reader users** do not necessarily interact with pages in a linear fashion and can use a switch out of context. They need to know what kind of a component they are on and how to interact with It; different components have different expectations. They need the switch's label to be descriptive of its purpose.
+- **People using speech input software** require unique Switch labels to effectively activate the Switch. 
+- **Keyboard only users** navigate the page using only a keyboard. They expect a switch to be keyboard accessible and able to be activated using specific keys. Additionally, visible keyboard focus is crucial for this user to see where they are on the page.
+
+## Accessibility Considerations
+
+### Code Considerations
+
+- Ensure all switches receive keyboard focus and can be only interacted through the keyboard.
+  - Do NOT override keyboard focus state or use a TABINDEX greater than zero. 
+  - Switch should be coded in the users logical reading order of the page to ensure a meaningful experience.  
+- Do NOT override the implicit/explicit role of a switch if another role is required do NOT use the Terra switch.
+
+| Bad Practice | Good Practice |
+|---|---|
+|``` <Switch role="checkbox" isChecked={value} labelText="Show Patients List in Menu" onChange={setValue} /> ```|```<Switch isChecked={value} labelText="Show Patients List in Menu" onChange={setValue} /> ```|
+
+<Notice variant="important" ariaLevel="4">
+
+- Switch must have an accessible name which is descriptive of its purpose.
+  - The visual name of the label must match the programmatic name.
+  <div aria-label="Example demo">
+      <SwitchLabel />
+  </div>
+
+  ```jsx
+  import Switch from 'terra-switch';
+
+  <Switch
+     isChecked={value}
+     labelText="Show Patients List in Menu"
+     onChange={setValue}
+  />
+  ```
+
+  - The visual name of the label must match the programmatic name for the Disabled Switch.
+  <div aria-label="Example demo">
+      <SwitchDisabledAccess />
+  </div>
+
+  ```jsx
+  import Switch from 'terra-switch';
+
+  <Switch
+     labelText="Show Patient History"
+     isDisabled
+  />
+  ```
+
+</Notice>
+
+### Content Considerations:
+
+- Must provide engineers with a meaningful and descriptive switch label that conveys the switch's purpose. 
+- When implementing the switch do not override default theme colors of switch to ensure it  be easily perceived against its background color. If changing the default colors, the text color must meet a minimum contrast ratio against the background color. See [**WCAG 1.4.3 Contrast Minimum**](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) and [**WCAG 1.4.11 Non-text Content**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) for more information.
+- To prevent accessibility issues, never use color as the only way to convey meaning within the interface. Always provide both color and text or a shape together to represent the meaning.
+- Ensure the engineers understand the logical reading order of the page.
+- Never add unexpected behaviors to the switch that could cause a change of context on focus or on activation of the switch. Ensure that the switch always meet the user’s expectations.
+- It is best practice to always have the switch in close proximity to the switch label. If the switch label and actual switch do not appear together, the extra space in-between can create accessibility and usability problems for some users.
+- After implementing the switch, ensure all interactable elements receive keyboard focus in the appropriate reading order and display a visible keyboard focus.
+
+<Whitespace newline={2} />
+
+## Usability Expectations:
+
+- Users expect a switch to have a visual and matching programmatic label that is descriptive of its purpose.
+- Users expect to see or hear that the actionable element in focus is a switch.
+- Users expect to see or hear the current state of the Switch. For example, selected/not selected, on/off, yes/no, and so on.
+- If the switch state is changed then the users expect to be informed (audibly or visually) of the new state.
+- Users expect the changing of switch states to result in instantaneous feedback. They do not expect to take further action to save the setting change.
+
+### Interaction Details
+
+- Mouse users expect the cursor to change to a hand with pointing finger when the Switch is hovered. Keyboard only users expect to see a visible keyboard focus indicator when the switch is in focus.
+- Keyboard users expect the switch to have a visible focus indication when the keyboard focus is placed upon the switch.
+
+### Keyboard Navigation
+
+Buttons have the following keyboard navigation expectations:
+
+| Key/Sequence | Description |
+|---|---|
+|**Tab**| Moves focus on and off interactable elements. User expects elements to receive focus in the logical reading order of the page. |
+|**Enter**| Executes Switch action.  |
+
+## Support Compliance
+
+### Primary Criteria
+
+- [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html) - Supports 
+   - Terra provides the ability for information, structure, and relationships to be programmatically determined.
+   - Engineers must ensure all visual relationships between a switch and content that conveys meaning must also be programmatically implemented to ensure that the visual relationships can be understood by screen reader users.
+   - Content creators must provide the meaningful switch text (the visual label) that communicates what users should expect when the switch is activated (on/off). Content creates should also provide any visual relationships of a switch with other content to ensure engineers can programmatically convey the visual relationships.
+
+- [**2.1.1 Keyboard**](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) — Supports
+   - Terra provides the ability for all interactable elements to receive focus, be interacted with, and be acted upon via keyboard.
+   - Engineers must ensure that all interactable elements can receive focus, be interacted with, and are able to be acted upon using the keyboard.
+   - Content creators must ensure that all interactable elements can receive focus, be interacted with, and are able to be acted upon using the keyboard.
+
+- [**2.4.6 Headings and Labels**](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html) — Supports 
+   - Terra provides the ability to create labels that are descriptive of their purpose.
+   - Engineers must implement meaningful text for labels to accurately describe their purpose.
+   - Content creators are responsible for providing the unique label that describes the action the switch performs.
+
+- [**2.4.7 Focus Visible**](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html) - Supports
+  - Terra provides the ability for actionable elements to receive visual focus.
+  - Engineers must ensure a visible keyboard focus is maintained on all interactive elements.
+  - Content creators must inform engineers that whenever the switch receives focus, the focus must be visible and maintain existing Terra Keyboard Focus styles.
+
+- [**2.5.3 Label in Name**](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html) — Supports 
+  - Terra provides the ability for programmatic labels to match visual labels. 
+  - Engineers must ensure the programmatic label matches the visual labels when interactable elements are included with this component.
+  - Content creators must provide the engineer with the switch text (the visual labels) which must be unique and describe the purpose of the switch so it can be understood by a user out of context.
+
+### Other Accessibility Criteria Consuming Teams Are Responsible For
+
+- [**1.3.2 Meaningful Sequence**](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html) — Supports 
+  - Terra switch provides the ability for components to be presented in the order in which they are coded.
+  - Engineers must ensure content is meaningful and logical. If there is a visual presentation of content that is important for the user to understand, that must be available programmatically.
+  - Content creator must ensure content is read in a meaningful and logical order so as to not lose context. Must also convey to the engineers any visual presentation of the use of switch which creates meaning in the order so that it can be programmatically understood. 
+  
+- [**1.4.10 Reflow**](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) - Supports
+  - Terra provides the ability for components to reflow when the viewport is resized to 320x256 px without loss of information or function.
+  - Engineers must ensure content within Terra Switch can reflow when the viewport is resized to 320 x 256 px without scrolling in two directions or loss of information or functionality.
+  - Content creators must consider the responsive nature of Terra Switch and provide engineers guidance on how it should content should reflow when the viewport is resized to 320 x 256 px .
+
+- [**1.4.11 Non-Text Contrast**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) - Supports
+  - Terra provides components that, by default, meet color contrast requirements.
+  - Content creators must ensure any graphical elements used within Action Header that convey information meets a 3:1 color contrast ratio.
+
+- [**1.4.3 Contrast(Minimum)**](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) - Supports
+  - Terra switch provides components that, by default, meet color contrast requirements.
+  - Engineers must work with content creators to implement switch so that switch text (visual label) color and the background color meet appropriate color contrast ratios.
+  - Content creators must ensure that the switch text color meets the appropriate contrast ratio against background color(s) based on text size of the visual label text. Contrast ratios should be above 4.5:1 for normal text and 3:1 for bold and large text.
+
+- [**2.4.3 Focus Order**](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html) — Supports
+  - Terra provides the ability for actionable components to receive focus in the order they are coded.
+  - Engineers must ensure that the focus order is expected and preserves page meaning. Code order should follow the logical reading order of the user. Though a TABINDEX attribute should not be required to ensure keyboard use, if used, never use TABINDEX higher than 0.
+  - Content creators should convey to the engineers the logical reading order of the page.
+
+- [**2.5.2 Pointer Cancellation**](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation)  — Supports 
+  - Terra components use the up event to perform actions.
+  - Engineers must ensure actionable controls always take on the up event.
+  
+- [**3.2.1 On Focus**](https://www.w3.org/WAI/WCAG21/Understanding/on-focus) —Supports 
+  - Terra components do not cause a change of context on focus by default.
+  - Engineers must ensure that no unexpected change of context happens when interactive elements receive focus.
+  - Content creators must inform engineers that switch should not cause any change while on focus.
+
+- [**3.2.4 Consistent Identification**](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification) - Supports
+  - Terra provides the ability for elements to be consistently identified.
+  - Engineers must ensure that elements used for the same function are identified consistently.
+  - Content creators must ensure any icons used are used to represent the same function consistently. Additionally, the alternate content used to describe icons must be consistent for users to understand their function predictably.
+
+- [**4.1.1 Parsing**](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html) - Supports
+  - Terra components are tested and validated before release to ensure proper code parsing.
+  - Engineers must ensure their code is valid HTML.
+
+- [**4.1.2 Name,Role,Value**](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) - Supports
+  - Terra provides the ability for `Name`, `Role`, and `Value` attributes to be programmatically determined so that they can be read by screen readers.
+  - Engineers must not override the implicit or explicit role of “switch” when using switch and have an accessible name, proper role, and value.
+  - Content creators must provide engineers a unique and meaningful name is provided for switch that communicates what users can expect from activating it.
