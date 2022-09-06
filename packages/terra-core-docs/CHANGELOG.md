@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Relative import paths of terra-hyperlink tests are changed to absolute path.
+
 * Added
   * Added new outline-table-view docs and tests folders
 
