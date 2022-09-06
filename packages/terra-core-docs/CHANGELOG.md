@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.15.0 - (September 07, 2022)
+
 * Changed
   * Relative import paths of terra-hyperlink tests are changed to absolute path.
 
