@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Fixed
-  * Fixed broken link in documentation.
-
 ## 1.10.0 - (February 2, 2022)
 
 * Added

@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Fixed
-  * Fixed broken link in documentation.
-
 ## 2.63.0 - (September 21, 2021)
 
 * Changed

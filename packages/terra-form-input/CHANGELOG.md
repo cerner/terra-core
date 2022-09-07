@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Fixed
-  * Fixed broken link in documentation.
-
 ## 4.17.5 - (July 5, 2022)
 
 * Changed

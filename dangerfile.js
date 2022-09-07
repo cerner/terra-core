@@ -15,6 +15,7 @@ changedFiles.forEach((file) => {
   }
 
   const packageName = file.split('packages/')[1].split('/')[0];
+  console.log('file==>', file);
 
   if (CHANGELOG_PATTERN.test(file)) {
     changedChangelogs.add(packageName);
