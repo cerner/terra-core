@@ -16,13 +16,10 @@ changedFiles.forEach((file) => {
 
   const packageName = file.split('packages/')[1].split('/')[0];
   const fileName = file.split('packages/')[1].split('/')[1].split('/')[0];
-  const fileName1 = file.split('packages/');
-  console.log('fileName ==>', fileName);
-  console.log('fileName1 ==>', fileName1);
 
   if (CHANGELOG_PATTERN.test(file)) {
     changedChangelogs.add(packageName);
-  } else { // file is in a package and was changed - we need a changelog
+  } else if(fileName !== 'README.md') { // file is in a package and was changed ( ignores changes made for readme file ) - we need a changelog
     changedPackages.add(packageName);
   }
 });
