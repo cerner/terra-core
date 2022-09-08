@@ -248,3 +248,15 @@ Terra.describeViewports('Button', ['tiny'], () => {
     });
   });
 });
+
+Terra.describeViewports('Time Input', ['medium'], () => {
+  it('should display a red square', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/button/a-square');
+    Terra.validates.element('*a square no para');
+  });
+
+  it('should display a red square with para', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/button/a-square-para');
+    Terra.validates.element('*a square with para');
+  });
+});
