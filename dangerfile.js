@@ -15,8 +15,8 @@ changedFiles.forEach((file) => {
   }
 
   const packageName = file.split('packages/')[1].split('/')[0];
-  const fileName = file.split('packages/')[1].split('/')[0].split('/')[0];
-  const fileName1 = file.split('packages/')[1].split('/')[0].split('/');
+  const fileName = file.split('packages/')[1].split('/')[1].split('/')[0];
+  const fileName1 = file.split('packages/');
   console.log('fileName ==>', fileName);
   console.log('fileName1 ==>', fileName1);
 
