@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Moved outline-table-view docs and tests folders to component dev-site folder.
+
 ## 1.15.0 - (September 07, 2022)
 
 * Changed
