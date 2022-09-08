@@ -19,7 +19,7 @@ changedFiles.forEach((file) => {
 
   if (CHANGELOG_PATTERN.test(file)) {
     changedChangelogs.add(packageName);
-  } else if(fileName !== 'README.md') { // file is in a package and was changed ( ignores changes made for readme file ) - we need a changelog
+  } else if (fileName !== 'README.md') { // file is in a package and was changed ( ignores changes made for readme file ) - we need a changelog
     changedPackages.add(packageName);
   }
 });
