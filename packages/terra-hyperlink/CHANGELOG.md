@@ -2,6 +2,29 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed broken link in documentation.
+
+## 2.53.0 - (July 14, 2022)
+
+* Fixed
+  * Fix to allow users to pass onMouseDown prop.
+
+## 2.52.0 - (July 5, 2022)
+
+* Fixed
+  * Fixed focus box bug for hyperlink.
+
+## 2.51.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.51.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.51.2 - (January 4, 2022)
 
 * Changed

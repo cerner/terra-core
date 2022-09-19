@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed broken link in documentation.
+
+## 2.56.0 - (July 14, 2022)
+
+* Fixed
+  * Fixed caret icon size to match similar components.
+
 ## 2.55.1 - (January 4, 2022)
 
 * Added

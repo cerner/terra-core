@@ -2,8 +2,29 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed broken link in documentation.
+
+## 3.48.0 - (July 5, 2022)
+
 * Changed
-  * Updated documentation for generating icons.
+  * Updated to `one-cerner-style-icons` v1.47.0
+  * Removed colored static favorite star in favor of using the themeable variant of the star icon
+    * Consumers that are currently using the static icon should change their reference to the themeable variant, as the duplicate static replacement will be removed at some point.
+
+## 3.47.1 - (May 3, 2022)
+
+* Changed
+  * Updated to `one-cerner-style-icons` v1.46.1
+  * Fixed labeling errors on trending up/down icons
+
+## 3.47.0 - (April 29, 2022)
+
+* Changed
+  * Updated to `one-cerner-style-icons` v1.46.0
+  * Updated SVG migration script `writeSvg,js` to include a newline character at the end of each SVG file
+  * Updated JSON generation script to include a newline character at the end of `src/icon-data.json`
+  * Updated example generation scripts to point to `terra-core-docs` instead of within the `terra-icons` package
 
 ## 3.46.1 - (January 4, 2022)
 
@@ -79,7 +100,7 @@
 
 * Changed
   * Update changelog formatting
-
+  
 * Fixed
   * Fixed how class names are identified with css modules to support themes properly
 
@@ -98,7 +119,7 @@
 
 * Changed
   * Updated wdio screenshot tests to accommodate Bluetooth icon
-
+  
 * Added
   * Added Bluetooth icon
 
@@ -136,6 +157,7 @@
 ## 3.25.0 - (January 7, 2020)
 
 * Added
+
   * Location Pin icon
 
 * Removed
@@ -159,6 +181,7 @@
 ## 3.21.0 - (September 19, 2019)
 
 * Changed
+
   * Removed `details` tag from doc-site.
 
 * Added
@@ -182,6 +205,7 @@
 ## 3.18.0 - (August 21, 2019)
 
 * Changed
+
   * Import for package version from package.json added to doc page
   * Switch from Object.assign to Object spread syntax.
   * Cleaned up imports in examples and test files
@@ -192,6 +216,7 @@
 ## 3.17.0 - (August 14, 2019)
 
 * Added
+
   * Added new icon `IconCircleSymbolLight`
   * Added new icon `IconDiamondSymbolLight`
   * Added new icon `IconPlusSymbolLight`
@@ -221,6 +246,7 @@
 ## 3.14.0 - (July 16, 2019)
 
 * Added
+
   * Added new icon `IconCeMarking`
   * Added new icon `IconEcRep`
   * Added new icon `IconEnvelopeFill`
@@ -230,13 +256,14 @@
   * Added new icon `IconRefusedSlot`
 
 * Changed
+
   * Consume one-cerner-style-icons v1.26
   * Added documentation on required peerDependencies
 
 * Changed
   * Update tests to use `Terra.describeViewports` for setting viewports and use `Terra.it.validatesElement`
 
-## 3.13.0  - (July 11, 2019)
+## 3.13.0 - (July 11, 2019)
 
 * Changed
   * Minor dependency version bump
@@ -249,6 +276,7 @@
 ## 3.11.0 - (June 18, 2019)
 
 * Added
+
   * Added `--terra-icon-abnormal-low-light-path-1-fill` variable in IconAbnormalLowLight.module.scss
   * Added new icon `IconDocumentPlus`
   * Added new icon `IconExtensions`
@@ -269,6 +297,7 @@
 ## 3.10.0 - (June 11, 2019)
 
 * Removed
+
   * Removed node_modules from .npmignore
 
 * Changed
@@ -277,6 +306,7 @@
 ## 3.9.0 - (May 1, 2019)
 
 * Changed
+
   * Minor dependency version bump
 
 * Added
@@ -290,6 +320,7 @@
 ## 3.7.0 - (April 9, 2019)
 
 * Added
+
   * IconCatalogueNumber
   * IconCaution
   * IconCircleLinesSymbol
@@ -311,6 +342,7 @@
 ## 3.6.0 - (March 26, 2019)
 
 * Changed
+
   * Update react/react-dom peer-dependency to latest stable minor release
 
 * Removed
@@ -320,6 +352,7 @@
 ## 3.5.0 - (March 21, 2019)
 
 * Changed
+
   * Changed doc templates to render with HTML table instead of terra-table component
 
 * Removed
@@ -363,6 +396,7 @@
 ## 2.30.0 - (January 2, 2019)
 
 * Changed
+
   * Moved keyframe animation styles out of CSS Modules parsing and into global styles written to the DOM with JS
 
 * Fixed
@@ -376,6 +410,7 @@
 ## 2.29.0 - (November 19, 2018)
 
 * Fixed
+
   * Fixed keyframe animation name hashing in webpacker environments
 
 * Changed
@@ -458,6 +493,7 @@
 ## 2.15.0 - (June 28, 2018)
 
 * Changed
+
   * Minor dependency version bump
 
 * Added
@@ -532,6 +568,7 @@
 ## 2.1.0 - (February 26, 2018)
 
 * Changed
+
   * High Icon
   * Low Icon
   * Bold the import statements on terra-icon site to make documentation more readable
@@ -593,6 +630,7 @@
 ## 1.12.0 - (November 7, 2017)
 
 * Changed
+
   * Changed Reply All Icon
 
 * Added
@@ -628,6 +666,7 @@
 ## 1.8.0 - (September 7, 2017)
 
 * Added
+
   * Added compose icon.
   * Added incomingCall icon.
   * Added microphone icon.
@@ -678,6 +717,7 @@
 ## 1.1.0 - (July 18, 2017)
 
 * Changed
+
   * Updated nightwatch test scripts
 
 * Removed

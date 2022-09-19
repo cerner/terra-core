@@ -2,6 +2,24 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed broken link in documentation.
+
+## 4.48.6 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.48.5 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.48.4 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.48.3 - (February 15, 2022)
 
 * Changed

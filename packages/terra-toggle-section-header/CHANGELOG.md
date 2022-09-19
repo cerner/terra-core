@@ -2,6 +2,29 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed broken link in documentation.
+
+## 2.58.4 - (July 14, 2022)
+
+* Changed
+  * Updated WDIO Screenshots from changes made to terra-section-header
+  
+## 2.58.3 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.58.2 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.58.1 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.58.0 - (February 2, 2022)
 
 * Added

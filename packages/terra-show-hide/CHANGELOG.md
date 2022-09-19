@@ -2,6 +2,24 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed broken link in documentation.
+
+## 2.55.3 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.55.2 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.55.1 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.55.0 - (February 2, 2022)
 
 * Changed

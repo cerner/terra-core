@@ -2,6 +2,52 @@
 
 ## Unreleased
 
+## 1.15.1 - (September 8, 2022)
+
+* Changed
+  * Moved outline-table-view docs and tests folders to component dev-site folder.
+
+## 1.15.0 - (September 07, 2022)
+
+* Changed
+  * Relative import paths of terra-hyperlink tests are changed to absolute path.
+
+* Added
+  * Added new outline-table-view docs and tests folders
+
+* Changed
+  * terra-outline-table-view tests and doc for now initial implementation
+
+## 1.14.1 - (July 14, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.14.0 - (July 5, 2022)
+
+* Fixed
+  * Updated broken links in terra-form-select and action-footer.
+
+* Changed
+  * Added test for programmatic focus of hyperlink.
+
+## 1.13.6 - (May 3, 2022)
+
+* Changed
+  * Icon table regenerated after fixing trending up/down labeling errors
+  * Updated screenshot tests to reflect trending icon changes
+
+## 1.13.5 - (April 29, 2022)
+
+* Changed
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.46.0.
+  * Updated routes/sidebar names for package root component pages to "About" for consistency.
+  * Moved docs files for the following packages into the root directory for their docs:
+    * List
+    * Table
+    * Form Select
+  * Merged 'About' and 'Avatar' pages for `terra-avatar` docs.
+
 ## 1.13.4 - (March 15, 2022)
 
 * Changed
@@ -96,6 +142,7 @@
 ## 1.10.0 - (September 28, 2021)
 
 * Changed
+
   * Updated Arrange tests to be more reliable.
 
 * Added

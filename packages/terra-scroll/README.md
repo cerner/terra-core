@@ -6,7 +6,7 @@
 The terra-scroll is a content view that hides data accessible with scrolling and provides a refCallback.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-scroll/scroll/scroll)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/scroll/about)
 - [LICENSE](#license)
 
 ## Getting Started
