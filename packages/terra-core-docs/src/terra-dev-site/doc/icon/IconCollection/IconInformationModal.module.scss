@@ -158,3 +158,12 @@
     color: #383F42;
   }
 }
+
+.pink-color-code {
+  
+  &.highlighted {
+    color: #BF00F0;
+    // animation: breathepink 0.9s infinite;
+    // animation-timing-function: ease-in-out;
+  }
+}

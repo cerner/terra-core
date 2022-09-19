@@ -8,6 +8,7 @@ import Heading from 'terra-heading';
 import IconAvailable from 'terra-icon/lib/icon/IconAvailable';
 import IconClear from 'terra-icon/lib/icon/IconClear';
 import Checkbox from 'terra-form-checkbox';
+import Switch from 'terra-switch';
 import { DisclosureManagerHeaderAdapter } from 'terra-application/lib/disclosure-manager';
 
 import styles from './IconInformationModal.module.scss';
@@ -36,11 +37,13 @@ const FunctionIndicator = ({canBe, stringTemplate, emphasizedSubstring}) => {
   )
 }
 
-const IconPreviews = ({Icon, defaultBackground, colorResponsive}) => {
+const IconPreviews = ({Icon, defaultBackground, colorResponsiveElements}) => {
   const [selectedBackground, setSelectedBackground] = useState(defaultBackground || values[0]);
   const [colorHighlighted, setColorHighlighted] = useState(false);
 
-  const values = ['light', 'low-light', 'checkered'];
+  const colorResponsive = colorResponsiveElements.length > 0;
+
+  const backgrounds = ['light', 'low-light', 'checkered'];
 
   return (
     <div className={cx('iconPreviews')}>
@@ -55,7 +58,7 @@ const IconPreviews = ({Icon, defaultBackground, colorResponsive}) => {
         <Text className={cx('preview-background-label')}>Preview Background</Text>
         <fieldset className={cx('background-options-fieldset')}>
           {
-            values.map((value, index) => (
+            backgrounds.map((value, index) => (
               <>
                 <input
                   type="radio"
@@ -74,9 +77,13 @@ const IconPreviews = ({Icon, defaultBackground, colorResponsive}) => {
       {
         colorResponsive ? 
           <Spacer marginTop='large'>
-            <Checkbox
-              labelText={"Highlight Color Responsive Elements"}
-              onChange={(e) => setColorHighlighted(e.target.checked)}  
+            <Heading level={5}>Themable Elements</Heading>
+            <Text>{colorResponsiveElements}</Text>
+            <Spacer marginTop="large" />
+            <Switch
+              isChecked={colorHighlighted}
+              labelText={<Text className={cx('pink-color-code', {highlighted: colorHighlighted})}>Highlight</Text>}
+              onChange={setColorHighlighted}
             />
           </Spacer>
         : null
@@ -98,7 +105,7 @@ const IconInformationModal = ({data}) => {
         <IconPreviews
           Icon={Icon}
           defaultBackground={data.needsDarkBackground ? 'low-light' : 'light'}
-          colorResponsive={data.colorResponsiveElements.length > 0}  
+          colorResponsiveElements={data.colorResponsiveElements}
         />
 
         <div className={cx('summaryInfo')}>
@@ -111,7 +118,7 @@ const IconInformationModal = ({data}) => {
           <Spacer marginBottom="large+1"/>
 
           <Heading level={5}>Contextual Example</Heading>
-          <span className={cx('inline-example')}><Text><Icon />Inline with<Icon />text</Text></span>
+          <span className={cx('inline-example')}><Text><Icon />Lorem ipsum <Icon /> dolor sit amet <Icon /></Text></span>
           <Spacer marginTop="large+1" />
 
           <Heading level={5}>Functions</Heading>
