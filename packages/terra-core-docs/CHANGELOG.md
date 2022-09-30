@@ -59,6 +59,7 @@
 
 * Fixed
   * Updated broken links in terra-form-select and action-footer.
+  * linter fixes.
 
 * Changed
   * Added test for programmatic focus of hyperlink.

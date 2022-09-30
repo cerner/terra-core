@@ -10,6 +10,9 @@
 ## 3.75.0 - (July 5, 2022)
 
 * Changed
+  * Replaced `terra-button` with `IconButton`
+  * Updated jest snapshots.
+  * Updated wdio snapshots.
   * Fixed mobile keyboard not closing after pressing enter key on mobile devices
 
 ## 3.74.5 - (May 3, 2022)

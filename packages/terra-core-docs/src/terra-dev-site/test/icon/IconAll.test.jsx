@@ -232,6 +232,7 @@ const IconAll = () => (
     <Icon.IconPatientSearch               a11yLabel="patient search icon"                   className={cx(['icon'])} />
     <Icon.IconPending                     a11yLabel="pending icon"                          className={cx(['icon'])} />
     <Icon.IconPerson                      a11yLabel="person icon"                           className={cx(['icon'])} />
+    <Icon.IconPersonConnection            a11yLabel="person connection icon"                className={cx(['icon'])} />
     <Icon.IconPersonDoor                  a11yLabel="person door icon"                      className={cx(['icon'])} />
     <Icon.IconPersonHospital              a11yLabel="person hospital  icon"                 className={cx(['icon'])} />
     <Icon.IconPersonnelPerson             a11yLabel="personel person icon"                  className={cx(['icon'])} />
@@ -308,6 +309,9 @@ const IconAll = () => (
     <Icon.IconTile                        a11yLabel="tile icon"                             className={cx(['icon'])} />
     <Icon.IconTrash                       a11yLabel="trash icon"                            className={cx(['icon'])} />
     <Icon.IconTreemap                     a11yLabel="treemap icon"                          className={cx(['icon'])} />
+    <Icon.IconTrendingDown                a11yLabel="trending down icon"                    className={cx(['icon'])} />
+    <Icon.IconTrendingUp                  a11yLabel="trending up icon"                      className={cx(['icon'])} />
+
     <Icon.IconTriangleDownSymbol          a11yLabel="triangle down icon"                    className={cx(['icon'])} />
     <Icon.IconTriangleDownSymbolLight     a11yLabel="light triangle down icon"              className={cx(['icon'])} />
     <Icon.IconTriangleSymbol              a11yLabel="triangle icon"                         className={cx(['icon'])} />

@@ -7,10 +7,10 @@
   * Added props to provide accessibility label to action buttons.
   * Added translations for action header button descriptions. 
 
-  * Breaking Changes
-    * Renamed `title` prop as `text` to avoid confusion with HTML attribute `title`.
-    * Removed default `h1` heading level.
-    
+* Breaking Changes
+  * Renamed `title` prop as `text` to avoid confusion with HTML attribute `title`.
+  * Removed default `h1` heading level.
+
 ## 2.74.3 - (July 5, 2022)
 
 * Changed
