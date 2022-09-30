@@ -162,7 +162,6 @@ class Hyperlink extends React.Component {
       onBlur,
       onFocus,
       onKeyUp,
-      title,
       onMouseDown,
       title,
       ...customProps
@@ -217,7 +216,6 @@ class Hyperlink extends React.Component {
         title={title}
         data-focus-styles-enabled
         ref={this.linkRef}
-        title={title}
       >
         {text}
         {getHyperlinkIcon(intl, variant)}
