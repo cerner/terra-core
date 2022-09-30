@@ -24,7 +24,7 @@
 
 ## 4.51.1 - (January 4, 2022)
 
-* Changed 
+* Changed
   * Migrate docs to terra-core-docs.
 
 ## 4.51.0 - (September 21, 2021)

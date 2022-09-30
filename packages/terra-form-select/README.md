@@ -7,7 +7,7 @@
 The select component is a form input with a drop down list of options that allows for single selection.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-form-select/form-select/select)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/form-select/about)
 - [LICENSE](#license)
 
 ## Getting Started

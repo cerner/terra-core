@@ -7,7 +7,7 @@
 The Terra List is a structural component to arrange content within list/listitems.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-list/list/list)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/list/about)
 - [LICENSE](#license)
 
 ## Getting Started

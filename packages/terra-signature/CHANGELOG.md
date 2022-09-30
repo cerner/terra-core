@@ -10,7 +10,7 @@
 ## 2.37.0 - (May 19, 2021)
 
 * Fixed
- * Fixed issue with touch screen windows devices for on mouseDown.
+  * Fixed issue with touch screen windows devices for on mouseDown.
 
 ## 2.36.0 - (April 6, 2021)
 
@@ -22,12 +22,12 @@
 ## 2.35.0 - (March 16, 2021)
 
 * Fixed
- * Fixed issue with touch screen windows devices.
+  * Fixed issue with touch screen windows devices.
 
 ## 2.34.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
+  * Fixed broken links in documentation.
 
 ## 2.33.0 - (December 8, 2020)
 
