@@ -2,21 +2,15 @@
 
 ## Unreleased
 
-<<<<<<< HEAD
-  * Changed
-    * Updated jest snapshots.
-    
+* Changed
+  * Replaced `terra-button` with `IconButton`
+  * Updated jest snapshots.
+  
 ## 3.61.4 - (July 5, 2022)
 
 * Changed
   * Minor dependency version bump
 
-=======
-* Changed
-  * Replaced `terra-button` with `IconButton`
-  * Updated jest snapshots.
-  
->>>>>>> 01143d2fb (Update mvb branch (#3618))
 ## 3.61.3 - (May 3, 2022)
 
 * Changed

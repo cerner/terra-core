@@ -1,18 +1,16 @@
 # Changelog
 
 ## Unreleased
-  * Changed
-    * Updated jest snapshots.
-    * Updated jest snapshots for terra-icon changes.
-    
+
+* Changed
+  * Updated jest snapshots.
+  * Updated jest snapshots for terra-icon changes.
+
 ## 3.69.5 - (July 5, 2022)
 
 * Changed
-<<<<<<< HEAD
-  * Minor dependency version bump
-=======
 
->>>>>>> 8b6e77d30 (Adds Decorative and Informative Icon support in terra-button (#3640))
+  * Minor dependency version bump
 
 ## 3.69.4 - (May 3, 2022)
 

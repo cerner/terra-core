@@ -2,10 +2,10 @@
 
 ## Unreleased
 
-  * Breaking changes
-    * Updated terra-icon to meet accessibility standards.
-    * Updated jest snapshots.
-    * Updated wdio snapshots.
+* Breaking changes
+  * Updated terra-icon to meet accessibility standards.
+  * Updated jest snapshots.
+  * Updated wdio snapshots.
 
 * Changed
   * Updated to `one-cerner-style-icons` v1.48.0

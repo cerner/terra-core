@@ -79,6 +79,14 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
+   * The content to display inside link.
+   */
+  text: PropTypes.string.isRequired,
+  /**
+   * Additional information to display as a native tooltip on hover.
+   */
+  title: PropTypes.string,
+  /**
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onMouseDown: PropTypes.func,
@@ -154,6 +162,7 @@ class Hyperlink extends React.Component {
       onBlur,
       onFocus,
       onKeyUp,
+      title,
       onMouseDown,
       title,
       ...customProps
@@ -201,11 +210,11 @@ class Hyperlink extends React.Component {
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
         onMouseDown={this.handleMouseDown}
-        onClick={onClick}
         onFocus={onFocus}
         href={isDisabled ? null : href}
         target={target}
         rel={rel}
+        title={title}
         data-focus-styles-enabled
         ref={this.linkRef}
         title={title}
