@@ -14,6 +14,8 @@
 
 * Added
   * Added new outline-table-view docs and tests folders
+* Changed
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.48.0.
 
 * Changed
   * terra-outline-table-view tests and doc for now initial implementation
