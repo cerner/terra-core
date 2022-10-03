@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Added Accordion Examples for `terra-section-header`.
   * Updated test to make components compaitable with IconButton.
   * Updated hyperlink tests and examples.
   * Re-order hyperlink docs.
