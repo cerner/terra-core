@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added Accordion Examples for `terra-section-header`.
+
 ## 1.15.1 - (September 8, 2022)
 
 * Changed
