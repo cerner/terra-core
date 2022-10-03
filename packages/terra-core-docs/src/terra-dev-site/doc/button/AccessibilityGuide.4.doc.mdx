@@ -1,9 +1,11 @@
+import { Badge } from 'terra-button/package.json?dev-site-package';
 import { Notice } from "@cerner/terra-docs";
-import { Badge } from 'terra-image/package.json?dev-site-package';
 import Whitespace from "../../common/layout-helpers/Whitespace";
 import ButtonOnClick from "./example/ButtonOnClick";
 import A11yIconButton from "./example/A11yIconButton";
 import A11yButtonLabel from "./example/A11yButtonLabel";
+import AnchorButtonAccess from "./example/AnchorButtonAccess";
+import A11yDecorativeButton from "./example/A11yDecorativeButton";
 
 <Badge />
 
@@ -28,6 +30,7 @@ It is critical that buttons are coded correctly to ensure they are keyboard acce
   - Buttons should be coded in the user logical reading order of the page to ensure a meaningful experience.  
   - Never use the down event to activate a button; always use the up event. 
 - Do NOT override the implicit/explicit role of a button; if another role is required do NOT use the Terra button.
+- Always use the button variant over the anchor-button variant when possible.
 
 <Notice variant="important" ariaLevel="4">
 
@@ -51,16 +54,13 @@ The screen reader user will hear something like: <samp> Show Alert: Button </sam
 
 ```jsx
 import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
-import DecoIconPrinter from 'terra-icon/lib/icon/decorative/IconPrinter';
 import { IconButton, IconTypes } from 'terra-button';
 
 const Icon = <IconPrinter a11yLabel="Print" />;
-const DecorativeIcon = <DecoIconPrinter />;
 
   <div>
     <IconButton icon={Icon} isIconOnly iconType={IconTypes.INFORMATIVE} />
     <IconButton icon={Icon} text="All Documents" iconType={IconTypes.INFORMATIVE} /> 
-    <IconButton icon={DecorativeIcon} iconType={IconTypes.INFORMATIVE} text="Print" />
   </div>
 ```
 
@@ -73,6 +73,21 @@ For buttons that use icons that convey a meaning, it is critical to include alte
 - The first example is  a button with **Meaningful Icon Only** and the screen reader will read <samp>Print Button.</samp>
 
 - The second example is  a button with **Meaningful Icon and Text** and the screen reader will read <samp>Print All Documents Button.</samp>
+
+```jsx
+import DecoIconPrinter from 'terra-icon/lib/icon/decorative/IconPrinter';
+import { IconButton, IconTypes } from 'terra-button';
+
+const DecorativeIcon = <DecoIconPrinter />;
+
+  <div>
+    <IconButton icon={DecorativeIcon} iconType={IconTypes.INFORMATIVE} text="Print" />
+  </div>
+```
+
+<div aria-label="Example demo">
+    <A11yDecorativeButton />
+</div>
 
 For buttons that use icons that do not convey a meaning, make sure they are marked as purely decorative.
 
@@ -93,7 +108,21 @@ The screen reader user will hear something like: <samp> Add Allergies Button  </
 
 ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue) The above example is NOT recommended. For Accessibility Best Practices it is recommended to use the same text for both visual and the programmatic label of the button.
 
-Ensure any non-unique button label that is visually related to content in the page must be programmatically associated with its content. For example, a “Add” button next to the word “allergies” must be appropriate associated with the word allergies.
+Ensure any non-uniquely labelded buttons have a unique programmatic name that communicates the button's purpose by incorporating visually related content into the ARIA-LABEL. See the Allergies "Add" button example above. Be sure the visible text of the button is the first word of the ARIA-LABEL.
+
+##### Accessibility Guidance: When to use Anchor Button
+
+![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue) The best accessibility practice is always to use the button variant if possible. Only use the anchor-button variant when the intended action cannot be implemented using the button variant. 
+
+<div aria-label="Example demo">
+  <AnchorButtonAccess />
+</div>
+
+```jsx
+import { AnchorButton } from 'terra-button';
+
+<AnchorButton href="#" text="Go-to" className={cx(['button', 'anchor-button'])} />
+```
 
 </Notice>
 
