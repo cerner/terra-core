@@ -1,18 +1,14 @@
 import { Badge } from 'terra-list/package.json?dev-site-package';
 
-import Tabs from 'terra-tabs';
 import ListExample from './example/List?dev-site-example';
 import ListDividedExample from './example/ListDivided?dev-site-example';
+import ListPaddedExample from './example/ListPadded?dev-site-example';
 
 import ListPropsTable from 'terra-list/src/List?dev-site-props-table';
 
 <Badge />
 
 # Terra List
-
-The Terra List is a structural component to vertically arrange content within list/list items.
-
-If a list implementation contains selectable list options the role prop should be set to "listbox" for accesibility.
 
 Two padding variants are provide for list item content, standard and compact. If different padding is desired use the defaulted style of 'none' and set the padding on the list item's child content with your own css values, preferrably themeable variables.
 
@@ -45,22 +41,9 @@ import List, { Item } from 'terra-list';
 * [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
 
 ## Examples
-<div style={{ height: '400px', padding: '10px'}}>
-  <Tabs fill>
-      <Tabs.Pane
-        label="Default List"
-        key="DefaultList"
-      >
-        <ListExample title="Default List" />
-      </Tabs.Pane>
-      <Tabs.Pane
-        label="Divided List"
-        key="DividedList"
-      >
-        <ListDividedExample title="Divided List" />
-      </Tabs.Pane>
-  </Tabs>
-</div>
+<ListExample title="Default List" />
+<ListDividedExample title="Divided List" />
+<ListPaddedExample title="Padded List" />
 
 ## List Props
 <ListPropsTable />
