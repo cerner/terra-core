@@ -14,7 +14,7 @@ const AccordionSectionHeader = () => {
   };
 
   return (
-    <AccoordianExampleTemplate title="I can accordion, click me" heading="Accordion Section Header" exampleProps={sectionHeaderProps}>
+    <AccoordianExampleTemplate title="I can accordion, click me" heading="Accordion Section Header" sectionHeaderAttrs={sectionHeaderProps}>
       <p>Accordion1</p>
       <p>Accordion2</p>
     </AccoordianExampleTemplate>

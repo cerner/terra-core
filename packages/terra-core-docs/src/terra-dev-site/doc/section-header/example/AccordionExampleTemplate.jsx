@@ -22,6 +22,10 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   sectionHeaderAttrs: PropTypes.object,
   /**
+   * Sets the toggle-section-header to be animated when it is opened or closed.
+   */
+  isAnimated: PropTypes.bool,
+  /**
    * Programmatically  the section-header component.
    */
   isOpen: PropTypes.bool,
@@ -29,6 +33,7 @@ const propTypes = {
 
 const defaultProps = {
   sectionHeaderAttrs: {},
+  isAnimated: false,
   isOpen: undefined,
 };
 
@@ -74,6 +79,7 @@ class AccoordianExampleTemplate extends React.Component {
       children,
       heading,
       title,
+      isAnimated,
       isOpen,
       sectionHeaderAttrs,
       ...customProps
@@ -91,7 +97,7 @@ class AccoordianExampleTemplate extends React.Component {
           isOpen={this.state.isOpen}
           title={title}
         />
-        <Toggle isOpen={this.state.isOpen}>
+        <Toggle isOpen={this.state.isOpen} isAnimated={isAnimated}>
           {children}
         </Toggle>
       </div>
