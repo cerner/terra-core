@@ -26,7 +26,7 @@ const propTypes = {
    */
   isAnimated: PropTypes.bool,
   /**
-   * Programmatically  the section-header component.
+   * Programmatically the section-header component.
    */
   isOpen: PropTypes.bool,
 };
