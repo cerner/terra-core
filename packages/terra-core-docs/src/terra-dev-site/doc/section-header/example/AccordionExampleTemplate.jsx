@@ -5,7 +5,7 @@ import Toggle from 'terra-toggle';
 
 const propTypes = {
   /**
-   * Content in the body of the toggle section header component that will be expanded or hidden.
+   * Content in the body of the section header component that will be expanded or hidden.
    */
   children: PropTypes.node,
   /**
@@ -22,7 +22,7 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   sectionHeaderAttrs: PropTypes.object,
   /**
-   * Sets the toggle-section-header to be animated when it is opened or closed.
+   * Sets the section-header to be animated when it is opened or closed.
    */
   isAnimated: PropTypes.bool,
   /**
