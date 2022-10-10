@@ -97,7 +97,7 @@ class AccoordianExampleTemplate extends React.Component {
           isOpen={this.state.isOpen}
           title={title}
         />
-        <Toggle isOpen={this.state.isOpen} isAnimated={isAnimated}>
+        <Toggle isOpen={this.state.isOpen} isAnimated>
           {children}
         </Toggle>
       </div>
