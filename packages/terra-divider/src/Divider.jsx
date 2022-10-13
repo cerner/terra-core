@@ -8,6 +8,7 @@ import styles from './Divider.module.scss';
 const propTypes = {
   /**
    * String to be displayed inline with the divider.
+   * A level should also be used whenever using the text.
    */
   text: PropTypes.string,
 };
