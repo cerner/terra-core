@@ -1,12 +1,12 @@
 import React from 'react';
-import SectionDivider from 'terra-divider/src/_SectionDivider';
+import Divider from 'terra-divider/src/Divider';
 import DividerExampleTemplate from './DividerExampleTemplate';
 
 const currentDate = 'November 12, 1955';
 
 const DividerCustomExample = () => (
   <DividerExampleTemplate>
-    <SectionDivider text={currentDate} level={3} />
+    <Divider text={currentDate} />
   </DividerExampleTemplate>
 );
 

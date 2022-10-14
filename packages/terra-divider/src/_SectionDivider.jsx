@@ -31,8 +31,7 @@ const SectionDivider = ({
 
   const dividerClassNames = classNames(
     cx([
-      { divider: !text },
-      { 'divider-container': text },
+      'divider-container',
       theme.className,
     ]),
     customProps.className,
@@ -42,11 +41,9 @@ const SectionDivider = ({
   if (text && level) {
     const HeaderElement = `h${level}`;
     titleElement = (
-      <div>
-        <HeaderElement id={id}>
-          {text}
-        </HeaderElement>
-      </div>
+      <HeaderElement id={id}>
+        {text}
+      </HeaderElement>
     );
   }
 
