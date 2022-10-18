@@ -14,7 +14,7 @@ describe('Divider', () => {
 
   // Custom Prop Test
   it('it should pass in a custom prop', () => {
-    const wrapper = shallow(<Divider id="testDivider" />);
+    const wrapper = shallow(<Divider id="testDivider" text="custom-text" level={3} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -46,13 +46,13 @@ describe('Divider', () => {
   });
 
   it('should spread a custom prop onto the hr divider', () => {
-    const wrapper = shallow(<Divider id="custom-id" />);
+    const wrapper = shallow(<Divider id="custom-id" text="custom-text" level={3} />);
 
     expect(wrapper.is('#custom-id')).toBe(true);
   });
 
   it('should spread a custom prop onto the text divider', () => {
-    const wrapper = shallow(<Divider id="custom-id" text="custom-text" />);
+    const wrapper = shallow(<Divider id="custom-id" text="custom-text" level={3} />);
 
     expect(wrapper.is('#custom-id')).toBe(true);
   });

@@ -18,10 +18,11 @@ exports[`Divider correctly applies the theme context className 1`] = `
 `;
 
 exports[`Divider it should pass in a custom prop 1`] = `
-<hr
-  aria-hidden="true"
-  className="divider"
+<SectionDivider
+  className="divider-container"
   id="testDivider"
+  level={3}
+  text="custom-text"
 />
 `;
 
