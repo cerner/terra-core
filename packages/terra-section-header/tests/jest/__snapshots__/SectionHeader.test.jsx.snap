@@ -12,7 +12,7 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
     isOpen={false}
     isTransparent={false}
     level={2}
-    title="foo"
+    text="foo"
   >
     <div
       className="section-header orion-fusion-theme"
@@ -72,7 +72,6 @@ exports[`SectionHeader should render a default component 1`] = `
 exports[`SectionHeader should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed 1`] = `
 <div
   class="section-header is-interactable"
-  role="button"
   tabindex="0"
 >
   <div
@@ -82,7 +81,11 @@ exports[`SectionHeader should render with an accordion icon in the open position
       class="fit"
     >
       <div
+        aria-expanded="true"
+        aria-label="foo"
         class="accordion-icon-wrapper"
+        role="button"
+        tabindex="-1"
       >
         <span
           class="accordion-icon is-open"
@@ -108,7 +111,6 @@ exports[`SectionHeader should render with an accordion icon in the open position
 exports[`SectionHeader should render with an accordion icon when an 'onClick()' callback is passed 1`] = `
 <div
   class="section-header is-interactable"
-  role="button"
   tabindex="0"
 >
   <div
@@ -118,7 +120,11 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
       class="fit"
     >
       <div
+        aria-expanded="false"
+        aria-label="foo"
         class="accordion-icon-wrapper"
+        role="button"
+        tabindex="-1"
       >
         <span
           class="accordion-icon"

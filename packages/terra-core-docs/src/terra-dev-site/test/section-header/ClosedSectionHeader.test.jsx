@@ -3,7 +3,7 @@ import SectionHeader from 'terra-section-header';
 
 export default () => (
   <SectionHeader
-    title="Closed Section Header"
+    text="Closed Section Header"
     onClick={() => {}}
   />
 );

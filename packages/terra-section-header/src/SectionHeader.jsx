@@ -13,7 +13,7 @@ const propTypes = {
   /**
    * Text to be displayed on the SectionHeader.
    */
-  title: PropTypes.string.isRequired,
+  text: PropTypes.string,
   /**
    * Callback function triggered when the accordion icon is clicked.
    */
@@ -81,7 +81,7 @@ class SectionHeader extends React.Component {
 
   render() {
     const {
-      title,
+      text,
       onClick,
       isOpen,
       isTransparent,
@@ -102,7 +102,6 @@ class SectionHeader extends React.Component {
       attributes.tabIndex = '0';
       attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
       attributes.onKeyUp = this.wrapOnKeyUp(attributes.onKeyUp);
-      attributes.role = 'button';
     }
 
     const iconClassNames = cx([
@@ -111,7 +110,7 @@ class SectionHeader extends React.Component {
     ]);
 
     const accordionIcon = (
-      <div className={cx('accordion-icon-wrapper')}>
+      <div className={cx('accordion-icon-wrapper')} role="button" aria-expanded={isOpen} aria-label={text || customProps.title} tabIndex="-1">
         <span className={iconClassNames} />
       </div>
     );
@@ -138,7 +137,7 @@ class SectionHeader extends React.Component {
       <div {...attributes} onClick={onClick} className={sectionHeaderClassNames}>
         <Arrange
           fitStart={onClick && accordionIcon}
-          fill={<Element className={cx('title')}>{title}</Element>}
+          fill={<Element className={cx('title')}>{text || customProps.title}</Element>}
           className={cx('title-arrange')}
         />
       </div>

@@ -8,7 +8,7 @@ exports[`ToggleSectionHeader should call any custom onCLose that is provided by 
     isTransparent={false}
     level={2}
     onClick={[Function]}
-    title="custom title"
+    text="custom title"
   />
   <Toggle
     isAnimated={false}
@@ -27,7 +27,7 @@ exports[`ToggleSectionHeader should call any custom onOpen that is provided by t
     isTransparent={false}
     level={2}
     onClick={[Function]}
-    title="custom title"
+    text="custom title"
   />
   <Toggle
     isAnimated={false}
@@ -43,7 +43,6 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
   <div
     aria-expanded="false"
     class="section-header is-interactable"
-    role="button"
     tabindex="0"
   >
     <div
@@ -53,7 +52,11 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
         class="fit"
       >
         <div
+          aria-expanded="false"
+          aria-label="default title"
           class="accordion-icon-wrapper"
+          role="button"
+          tabindex="-1"
         >
           <span
             class="accordion-icon"
@@ -86,7 +89,6 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
   <div
     aria-expanded="false"
     class="section-header is-interactable"
-    role="button"
     tabindex="0"
   >
     <div
@@ -96,7 +98,11 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
         class="fit"
       >
         <div
+          aria-expanded="false"
+          aria-label="animated title"
           class="accordion-icon-wrapper"
+          role="button"
+          tabindex="-1"
         >
           <span
             class="accordion-icon"
@@ -139,7 +145,6 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
   <div
     aria-expanded="true"
     class="section-header is-interactable"
-    role="button"
     tabindex="0"
   >
     <div
@@ -149,7 +154,11 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
         class="fit"
       >
         <div
+          aria-expanded="true"
+          aria-label="initially open title"
           class="accordion-icon-wrapper"
+          role="button"
+          tabindex="-1"
         >
           <span
             class="accordion-icon is-open"
@@ -195,7 +204,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
       isTransparent={false}
       level={2}
       onClick={[Function]}
-      title="opens on click title"
+      text="opens on click title"
     >
       <div
         aria-expanded={true}
@@ -203,7 +212,6 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
         onClick={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
-        role="button"
         tabIndex="0"
       >
         <Arrange
@@ -217,7 +225,11 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
           }
           fitStart={
             <div
+              aria-expanded={true}
+              aria-label="opens on click title"
               className="accordion-icon-wrapper"
+              role="button"
+              tabIndex="-1"
             >
               <span
                 className="accordion-icon is-open"
@@ -232,7 +244,11 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
               className="fit"
             >
               <div
+                aria-expanded={true}
+                aria-label="opens on click title"
                 className="accordion-icon-wrapper"
+                role="button"
+                tabIndex="-1"
               >
                 <span
                   className="accordion-icon is-open"
@@ -279,7 +295,7 @@ exports[`ToggleSectionHeader should set sectionHeaderAttrs prop correctly 1`] = 
     isTransparent={false}
     level={2}
     onClick={[Function]}
-    title="sectionHeaderAttrs props test"
+    text="sectionHeaderAttrs props test"
   />
   <Toggle
     isAnimated={false}
@@ -298,7 +314,7 @@ exports[`ToggleSectionHeader should set the children prop correctly 1`] = `
     isTransparent={false}
     level={2}
     onClick={[Function]}
-    title="sectionHeaderAttrs props test"
+    text="sectionHeaderAttrs props test"
   />
   <Toggle
     isAnimated={false}
@@ -317,7 +333,7 @@ exports[`ToggleSectionHeader should set the level prop correctly 1`] = `
     isTransparent={false}
     level={1}
     onClick={[Function]}
-    title="sectionHeaderAttrs props test"
+    text="sectionHeaderAttrs props test"
   />
   <Toggle
     isAnimated={false}

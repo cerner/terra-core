@@ -9,7 +9,7 @@ const AccordionSectionHeader = () => {
   };
 
   const sectionHeaderProps = {
-    title: 'I can accordion, click me',
+    text: 'I can accordion, click me',
     isOpen,
     onClick: handleClick,
   };

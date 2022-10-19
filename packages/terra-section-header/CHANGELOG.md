@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 2.57.0 - (October 19, 2022)
+
+* Changed
+  * Renamed title prop to text to avoid conflict with native html attribute
+* Added
+  * Assigned button role to the actionable section of component
+  * aria-label and aria-expanded attribute to the actionable section of component
+
 ## 2.56.0 - (July 14, 2022)
 
 * Fixed
