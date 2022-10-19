@@ -44,3 +44,12 @@ exports[`Divider should render a basic component 1`] = `
   className="divider"
 />
 `;
+
+exports[`Divider should spread a custom prop onto the text with level divider 1`] = `
+<SectionDivider
+  className="divider-container"
+  id="custom-id"
+  level={3}
+  text="custom-text"
+/>
+`;

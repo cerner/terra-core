@@ -52,9 +52,15 @@ describe('Divider', () => {
   });
 
   it('should spread a custom prop onto the text divider', () => {
-    const wrapper = shallow(<Divider id="custom-id" text="custom-text" level={3} />);
+    const wrapper = shallow(<Divider id="custom-id" text="custom-text" />);
 
     expect(wrapper.is('#custom-id')).toBe(true);
+  });
+
+  it('should spread a custom prop onto the text with level divider', () => {
+    const wrapper = shallow(<Divider id="custom-id" text="custom-text" level={3} />);
+
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should apply the theme context className to the hr divider', () => {

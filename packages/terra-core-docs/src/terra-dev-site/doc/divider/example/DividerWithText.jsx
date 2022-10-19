@@ -1,5 +1,5 @@
 import React from 'react';
-import Divider from 'terra-divider/src/Divider';
+import Divider from 'terra-divider';
 import DividerExampleTemplate from './DividerExampleTemplate';
 
 const currentDate = 'November 12, 1955';

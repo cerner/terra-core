@@ -12,7 +12,7 @@ const propTypes = {
    */
   text: PropTypes.string.isRequired,
   /**
-   * Sets the heading level &lt;h3&gt;-&lt;h6&gt;. One of `3`, `4`, `5`, `6`. This helps screen readers to announce appropriate heading levels.
+   * Sets the heading level to One of `3`, `4`, `5`, `6`. This helps screen readers to announce appropriate heading levels.
    * Changing `level` will not visually change the style of the content.
    */
   level: PropTypes.oneOf([3, 4, 5, 6]).isRequired,
