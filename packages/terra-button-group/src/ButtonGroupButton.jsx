@@ -149,6 +149,7 @@ class ButtonGroupButton extends React.Component {
           onFocus={this.handleFocus}
           variant={Button.Opts.Variants.NEUTRAL}
           className={buttonClassName}
+          data-terra-button-group-button
         />
       );
     }
@@ -163,6 +164,7 @@ class ButtonGroupButton extends React.Component {
         onFocus={this.handleFocus}
         variant={Button.Opts.Variants.NEUTRAL}
         className={buttonClassName}
+        data-terra-button-group-button
       />
     );
   }
