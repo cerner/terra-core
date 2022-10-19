@@ -18,7 +18,6 @@ exports[`correctly applies the theme context className 1`] = `
       role="none"
     >
       <ButtonGroupButton
-        aria-checked={null}
         aria-pressed={false}
         className=""
         index={0}
@@ -30,7 +29,6 @@ exports[`correctly applies the theme context className 1`] = `
         text="Button 1"
       >
         <Button
-          aria-checked={null}
           aria-pressed={false}
           className="button-group-button orion-fusion-theme"
           data-terra-button-group-button={true}
@@ -49,7 +47,6 @@ exports[`correctly applies the theme context className 1`] = `
           variant="neutral"
         >
           <button
-            aria-checked={null}
             aria-disabled={false}
             aria-label="Button 1"
             aria-pressed={false}
@@ -78,7 +75,6 @@ exports[`correctly applies the theme context className 1`] = `
         </Button>
       </ButtonGroupButton>
       <ButtonGroupButton
-        aria-checked={null}
         aria-pressed={false}
         className=""
         index={1}
@@ -90,7 +86,6 @@ exports[`correctly applies the theme context className 1`] = `
         text="Button 2"
       >
         <Button
-          aria-checked={null}
           aria-pressed={false}
           className="button-group-button orion-fusion-theme"
           data-terra-button-group-button={true}
@@ -109,7 +104,6 @@ exports[`correctly applies the theme context className 1`] = `
           variant="neutral"
         >
           <button
-            aria-checked={null}
             aria-disabled={false}
             aria-label="Button 2"
             aria-pressed={false}
@@ -149,7 +143,6 @@ exports[`should apply correct role for multiSelect button group 1`] = `
 >
   <ButtonGroupButton
     aria-checked={false}
-    aria-pressed={false}
     className=""
     index={0}
     isDisabled={false}
@@ -161,7 +154,6 @@ exports[`should apply correct role for multiSelect button group 1`] = `
   />
   <ButtonGroupButton
     aria-checked={false}
-    aria-pressed={false}
     className=""
     index={1}
     isDisabled={false}
@@ -181,7 +173,6 @@ exports[`should apply correct role for single select button group 1`] = `
 >
   <ButtonGroupButton
     aria-checked={false}
-    aria-pressed={false}
     className=""
     index={0}
     isDisabled={false}
@@ -193,7 +184,6 @@ exports[`should apply correct role for single select button group 1`] = `
   />
   <ButtonGroupButton
     aria-checked={false}
-    aria-pressed={false}
     className=""
     index={1}
     isDisabled={false}
@@ -212,7 +202,6 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
   role="none"
 >
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={true}
     className="is-selected"
     index={0}
@@ -224,7 +213,6 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={1}
@@ -236,8 +224,6 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
     text="Button 2"
   />
   <ButtonGroupButton
-    aria-checked={null}
-    aria-pressed={null}
     className=""
     index={2}
     isDisabled={true}
@@ -256,7 +242,6 @@ exports[`should render a block button group with children 1`] = `
   role="none"
 >
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={0}
@@ -268,7 +253,6 @@ exports[`should render a block button group with children 1`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={1}
@@ -280,7 +264,6 @@ exports[`should render a block button group with children 1`] = `
     text="Button 2"
   />
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={2}
@@ -300,7 +283,6 @@ exports[`should render a button group with children 1`] = `
   role="none"
 >
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={0}
@@ -320,7 +302,6 @@ exports[`should render a button group with children selected 1`] = `
   role="none"
 >
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={true}
     className="is-selected"
     index={0}
@@ -332,7 +313,6 @@ exports[`should render a button group with children selected 1`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={1}
@@ -359,7 +339,6 @@ exports[`should select a button 1`] = `
   role="none"
 >
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={0}
@@ -371,7 +350,6 @@ exports[`should select a button 1`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={1}
@@ -391,7 +369,6 @@ exports[`should select a button 2`] = `
   role="none"
 >
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={0}
@@ -403,7 +380,6 @@ exports[`should select a button 2`] = `
     text="Button 1"
   />
   <ButtonGroupButton
-    aria-checked={null}
     aria-pressed={false}
     className=""
     index={1}
