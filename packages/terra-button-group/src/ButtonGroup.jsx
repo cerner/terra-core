@@ -57,9 +57,9 @@ class ButtonGroup extends React.Component {
     }
   }
 
-  handleKeyDown(event) {
+  handleKeyDown(event, idx) {
     const allBtns = this.btnGrpRef.querySelectorAll('[data-terra-button-group-button]');
-    let key = parseInt(document.activeElement.getAttribute('index'), 10);
+    let key = idx;
 
     if (event.keyCode === KEY_RIGHT && allBtns[key + 1]) {
       key += 1;
@@ -78,10 +78,10 @@ class ButtonGroup extends React.Component {
     }
   }
 
-  wrapKeyDown(item) {
+  wrapKeyDown(item, idx) {
     const { onKeyDown } = item.props;
     return (event) => {
-      this.handleKeyDown(event);
+      this.handleKeyDown(event, idx);
 
       if (onKeyDown) {
         onKeyDown(event);
@@ -130,11 +130,10 @@ class ButtonGroup extends React.Component {
       const cloneChild = React.cloneElement(child, {
         role: btnRole,
         onClick: this.wrapOnClick(child),
-        onKeyDown: this.wrapKeyDown(child),
+        onKeyDown: this.wrapKeyDown(child, index),
         className: cx([{ 'is-selected': isSelected && !child.props.isDisabled }, child.props.className]),
         'aria-pressed': btnRole === 'button' && !child.props.isDisabled ? isSelected : undefined,
         'aria-checked': btnRole !== 'button' && !child.props.isDisabled ? isSelected : undefined,
-        index,
       });
       allButtons.push(cloneChild);
     });
