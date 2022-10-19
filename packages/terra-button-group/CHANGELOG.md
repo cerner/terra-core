@@ -3,6 +3,7 @@
 ## Unreleased
 * Changed
   * Replaced `terra-button` with `IconButton`
+  * Added keyboard navigation feature and fixes to convey selection states.
 
 ## 3.60.2 - (February 15, 2022)
 

@@ -9,6 +9,7 @@
   * Added Accessibility guide for `terra-hyperlink`.
   * Spelling fixes for Image accessibility guide.
   * Updated terra-button accessibility guide with anchor-button examples.
+  * Updated `terra-button-group` tests and examples.
 
 * Added
   * Added Hyperlink Button tests and examples.
