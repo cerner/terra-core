@@ -23,7 +23,7 @@ import AccordionSectionHeaderAccess from "./example/AccordionSectionHeaderAccess
   - Provide engineers the meaningful label that matches for each heading.
 - Work with engineers to convey the structure of the page.
   - For each heading on the page, provide the engineers with an appropriate heading level to use to match the placement of the heading on the page.
-- When implementing section header, do not override default theme colors of section header to ensure the Section Header be easily perceived against its background color. If changing the default colors, the text color must meet a minimum contrast ratio against the background color. See [WCAG 1.4.3 Contrast Minimum](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) and [1.4.11 Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) for more information.
+- When implementing section header, do not override default theme colors of section header to ensure the Section Header be easily perceived against its background color. If changing the default colors, the text color must meet a minimum contrast ratio against the background color. See [WCAG 1.4.3 Contrast Minimum](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) and [1.4.11 Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) for more information.
 - Do not cause any unexpected events to occur on focus or on input of any actionable controls.
 
 ### Code Considerations
@@ -65,7 +65,7 @@ import AccordionSectionHeaderAccess from "./example/AccordionSectionHeaderAccess
 > };
 > ```
 >   - Terra Section Headers must always follow the correct heading level order and arrangement for where it is placed within other content on the page.
->   - IMPORTANT: If a value to the `level` prop is not provided, the heading `text` will not be rendered.
+>   - **IMPORTANT**: If a value to the `level` prop is not provided, the heading `text` will not be rendered.
 > - For accessibility best practices, it is recommended that consumers should always use `only one` `<h1>` per page or view. The one `<h1>` should be the page title.
 >   - A section header should never be a heading level 1.
 > - Do not implement any action to activate on the down event. All actions must be initiated on the up event.
@@ -89,7 +89,7 @@ The basic keyboard navigation expectations:
 | Key/Sequence | Description |
 |---|---|
 |*Tab*| Moves focus on to and off an expandable/collapsible Section Header. User expects to navigate from element to interactable element User expects elements to receive focus in the logical reading order of the page. |
-|*Space & Enter*| When focus is on the Section Header of a collapsed section, expands the section.    |
+|*Space & Enter*| When focus is on the Section Header of a collapsed section, expands the section and vice-versa.    |
 
 <Whitespace newline={4} />
 
@@ -161,7 +161,7 @@ The basic keyboard navigation expectations:
 - Speech Input Interactions with assistive technology.
 - Mobile Touch Interactions with Screen Reader assistive technology.
 ### Partial Support & Requiring Further Enhancement.
-- [Report a problem with this component on GitHub](https://github.com/cerner/terra-framework/issues/new/choose)
+- [Report a problem with this component on GitHub](https://github.com/cerner/terra-core/issues/new/choose)
 ## References:
 - [Web Content Accessibility Guidelines (WCAG) ](https://www.w3.org/WAI/WCAG21/Understanding/)
 - [WebAim.org: Semantic Structure: Regions, Headings, and Lists](https://webaim.org/techniques/semanticstructure/#headings)
