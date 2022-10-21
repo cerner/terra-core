@@ -15,7 +15,7 @@ exports[`correctly applies the theme context className 1`] = `
   >
     <div
       className="button-group orion-fusion-theme"
-      role="none"
+      role="group"
     >
       <ButtonGroupButton
         aria-pressed={false}
@@ -133,7 +133,7 @@ exports[`correctly applies the theme context className 1`] = `
 exports[`should apply correct role for multiSelect button group 1`] = `
 <div
   className="button-group"
-  role="none"
+  role="group"
 >
   <ButtonGroupButton
     aria-checked={false}
@@ -189,7 +189,7 @@ exports[`should apply correct role for single select button group 1`] = `
 exports[`should only render enabled buttons as toggle buttons 1`] = `
 <div
   className="button-group"
-  role="none"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={true}
@@ -226,7 +226,7 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
 exports[`should render a block button group with children 1`] = `
 <div
   className="button-group is-block"
-  role="none"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={false}
@@ -264,7 +264,7 @@ exports[`should render a block button group with children 1`] = `
 exports[`should render a button group with children 1`] = `
 <div
   className="button-group"
-  role="none"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={false}
@@ -282,7 +282,7 @@ exports[`should render a button group with children 1`] = `
 exports[`should render a button group with children selected 1`] = `
 <div
   className="button-group"
-  role="none"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={true}
@@ -310,14 +310,14 @@ exports[`should render a button group with children selected 1`] = `
 exports[`should render an empty component 1`] = `
 <div
   className="button-group"
-  role="none"
+  role="group"
 />
 `;
 
 exports[`should select a button 1`] = `
 <div
   className="button-group"
-  role="none"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={false}
@@ -345,7 +345,7 @@ exports[`should select a button 1`] = `
 exports[`should select a button 2`] = `
 <div
   className="button-group"
-  role="none"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={false}

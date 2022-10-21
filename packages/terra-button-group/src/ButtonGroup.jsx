@@ -139,7 +139,7 @@ class ButtonGroup extends React.Component {
     });
 
     return (
-      <div {...customProps} ref={(btnGrpRef) => { this.btnGrpRef = btnGrpRef; }} role={btnRole === 'radio' ? 'radiogroup' : 'none'} className={buttonGroupClassNames}>
+      <div {...customProps} ref={(btnGrpRef) => { this.btnGrpRef = btnGrpRef; }} role={btnRole === 'radio' ? 'radiogroup' : 'group'} className={buttonGroupClassNames}>
         {allButtons}
       </div>
     );
