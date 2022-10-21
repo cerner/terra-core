@@ -45,7 +45,7 @@ const Divider = (props) => {
   );
 
   if (!text) {
-    return <hr {...customProps} className={dividerClassNames} aria-hidden="true" />;
+    return <hr {...customProps} className={dividerClassNames} />;
   }
   if (level) {
     return <SectionDivider level={level} text={text} id={id} {...customProps} className={dividerClassNames} />;
