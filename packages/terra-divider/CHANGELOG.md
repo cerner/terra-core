@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-* Changed
-  * Minor dependency version bump.
+* Added
+  * Added a new props `level`, `id` to the divider.
 
 ## 3.36.1 - (December 14, 2021)
 
