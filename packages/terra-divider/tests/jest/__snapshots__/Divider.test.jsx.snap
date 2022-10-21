@@ -10,7 +10,6 @@ exports[`Divider correctly applies the theme context className 1`] = `
 >
   <Divider>
     <hr
-      aria-hidden="true"
       className="divider orion-fusion-theme"
     />
   </Divider>
@@ -40,7 +39,6 @@ exports[`Divider it should pass in a string of text 1`] = `
 
 exports[`Divider should render a basic component 1`] = `
 <hr
-  aria-hidden="true"
   className="divider"
 />
 `;
