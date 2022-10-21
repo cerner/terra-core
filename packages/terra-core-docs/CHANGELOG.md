@@ -7,6 +7,16 @@
   * Added Accessibility Guide for `terra-Profile-image`.
 
 * Changed
+  * Added Accessibility Guide for `terra-Profile-image`.
+
+* Changed
+  * Updated `terra-list` section guide to not use listbox role.
+
+* Changed
+  * Added Higher Order examples for `terra-profile-image`.
+  * Added Accessibility Guide for `terra-Profile-image`.
+
+* Changed
   * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
 
 * Changed
