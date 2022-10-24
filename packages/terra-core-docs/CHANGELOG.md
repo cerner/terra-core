@@ -12,6 +12,7 @@
   * Updated `terra-button-group` tests and examples.
 
 * Added
+  * Added Accessibility guide for `terra-section-header`.
   * Added Hyperlink Button tests and examples.
   * Added Accessibility guide for `terra-hyperlink`.
   * Added Accessibility guide for `terra-image`.
