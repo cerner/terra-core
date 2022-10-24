@@ -2,8 +2,6 @@
 
 ## Unreleased
 
-## 2.59.0 - (October 19, 2022)
-
 * Changed
   * Renamed `terra-section-header` title prop to text
 

@@ -2,8 +2,6 @@
 
 ## Unreleased
 
-## 2.57.0 - (October 19, 2022)
-
 * Changed
   * Renamed title prop to text to avoid conflict with native html attribute
 * Added
