@@ -20,7 +20,7 @@ describe('Divider', () => {
   it('should apply the theme context className to the text divider', () => {
     const wrapper = mount(
       <ThemeContextProvider theme={{ className: 'theme-class-name' }}>
-        <SectionDivider text="custom-text" />
+        <SectionDivider text="custom-text" level={3} id="testDivider" />
       </ThemeContextProvider>,
     );
     expect(wrapper).toMatchSnapshot();

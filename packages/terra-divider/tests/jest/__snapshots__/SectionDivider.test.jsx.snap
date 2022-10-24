@@ -25,6 +25,8 @@ exports[`Divider should apply the theme context className to the text divider 1`
   }
 >
   <SectionDivider
+    id="testDivider"
+    level={3}
     text="custom-text"
   >
     <div
@@ -32,7 +34,13 @@ exports[`Divider should apply the theme context className to the text divider 1`
     >
       <span
         className="divider-text"
-      />
+      >
+        <h3
+          id="testDivider"
+        >
+          custom-text
+        </h3>
+      </span>
     </div>
   </SectionDivider>
 </ThemeContextProvider>
