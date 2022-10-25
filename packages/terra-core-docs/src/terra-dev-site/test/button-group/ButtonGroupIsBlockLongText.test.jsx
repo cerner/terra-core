@@ -18,6 +18,7 @@ class ButtonGroupIsBlockLongText extends React.Component {
       <ButtonGroup
         id="button-block-group-long-text"
         isBlock
+        isMultiSelect
         onChange={this.handleSelection}
         selectedKeys={this.state.selectedKeys}
       >

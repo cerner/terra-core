@@ -23,6 +23,7 @@ class ButtonGroupMultiSelect extends React.Component {
         </h3>
         <ButtonGroup
           id="button-group-multi-select"
+          isMultiSelect
           onChange={this.handleSelection}
           selectedKeys={this.state.selectedKeys}
         >

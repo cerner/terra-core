@@ -2,8 +2,11 @@
 
 ## Unreleased
 
+* Changed
+  * Updated button-group examples and test files to include `isMultiSelect`.
+
 * Added
-  * Added Accordion Examples for `terra-section-header`.
+  * Added Accordion Examples for `terra-section-header`. 
 
 ## 1.15.1 - (September 8, 2022)
 

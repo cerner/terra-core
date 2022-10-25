@@ -4,7 +4,13 @@ import Button from 'terra-button';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import * as KeyCode from 'keycode-js';
+import {
+  KEY_RIGHT,
+  KEY_LEFT,
+  KEY_SPACE,
+  KEY_RETURN,
+  KEY_TAB,
+} from 'keycode-js';
 import styles from './ButtonGroup.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -76,7 +82,7 @@ class ButtonGroupButton extends React.Component {
   handleKeyDown(event) {
     // Add focus styles for keyboard navigation.
     // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
-    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
+    if (event.nativeEvent.keyCode === KEY_SPACE || event.nativeEvent.keyCode === KEY_RETURN) {
       this.setState({ focused: true });
     }
 
@@ -88,7 +94,7 @@ class ButtonGroupButton extends React.Component {
   handleKeyUp(event) {
     // Apply focus styles for keyboard navigation.
     // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
-    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
+    if (event.nativeEvent.keyCode === KEY_TAB || event.nativeEvent.keyCode === KEY_LEFT || event.nativeEvent.keyCode === KEY_RIGHT) {
       this.setState({ focused: true });
       this.shouldShowFocus = true;
     }
@@ -131,6 +137,7 @@ class ButtonGroupButton extends React.Component {
     return (
       <Button
         {...customProps}
+        data-terra-button-group-button
         icon={icon}
         isDisabled={isDisabled}
         isIconOnly={icon != null}
