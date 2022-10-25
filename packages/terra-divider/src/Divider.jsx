@@ -8,18 +8,17 @@ import SectionDivider from './_SectionDivider';
 
 const propTypes = {
   /**
-   * String to be displayed inline with the divider.
-   * A level should also be used whenever using the text.
-   * And The next major breaking change, the text prop and the level prop will be removed from the default divider and will be added to new component SectionDivider.
+   * String to be displayed inline with the divider. For accessibility best practices, providing a `level` should also be used whenever.
+   * Using the `text` prop to make it a section heading.
    */
   text: PropTypes.string,
   /**
-   * Sets the heading level to One of `3`, `4`, `5`, `6`. This helps screen readers to announce appropriate heading levels.
+   * Sets the heading level to One of `1`, `2`, `3`, `4`, `5`, `6`. This helps screen readers to announce appropriate heading levels.
    * Changing `level` will not visually change the style of the content.
    */
-  level: PropTypes.oneOf([3, 4, 5, 6]),
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
-   * IDs should be used with 'aria-labelledby' to associate headings with the corresponding page area when needing to label regions.
+   * IDs should be used with 'aria-labelledby' to associate headings with the corresponding list, section, or page area to label regions.
    */
   id: PropTypes.string,
 };

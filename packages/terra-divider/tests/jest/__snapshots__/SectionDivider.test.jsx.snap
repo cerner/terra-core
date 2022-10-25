@@ -4,15 +4,12 @@ exports[`Divider it should pass the All the Props 1`] = `
 <div
   className="divider-container"
 >
-  <span
+  <h3
     className="divider-text"
+    id="testDivider"
   >
-    <h3
-      id="testDivider"
-    >
-      custom-text
-    </h3>
-  </span>
+    custom-text
+  </h3>
 </div>
 `;
 
@@ -32,15 +29,12 @@ exports[`Divider should apply the theme context className to the text divider 1`
     <div
       className="divider-container theme-class-name"
     >
-      <span
+      <h3
         className="divider-text"
+        id="testDivider"
       >
-        <h3
-          id="testDivider"
-        >
-          custom-text
-        </h3>
-      </span>
+        custom-text
+      </h3>
     </div>
   </SectionDivider>
 </ThemeContextProvider>
@@ -49,9 +43,5 @@ exports[`Divider should apply the theme context className to the text divider 1`
 exports[`Divider should render a basic component 1`] = `
 <div
   className="divider-container"
->
-  <span
-    className="divider-text"
-  />
-</div>
+/>
 `;
