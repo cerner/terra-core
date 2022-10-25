@@ -27,6 +27,7 @@ const propTypes = {
    */
   help: PropTypes.node,
   /**
+   * @private
    * Whether or not to hide the required indicator on the label.
    */
   hideRequired: PropTypes.bool,
