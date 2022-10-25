@@ -13,7 +13,7 @@ const propTypes = {
   /**
    * Text to be displayed on the SectionHeader.
    */
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   /**
    * Callback function triggered when the accordion icon is clicked.
    */

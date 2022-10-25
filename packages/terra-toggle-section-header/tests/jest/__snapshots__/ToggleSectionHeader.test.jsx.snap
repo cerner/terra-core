@@ -40,7 +40,7 @@ exports[`ToggleSectionHeader should call any custom onOpen that is provided by t
 
 exports[`ToggleSectionHeader should render a default toggle section header 1`] = `
 <div>
-  <div
+  <h2
     aria-expanded="false"
     class="section-header is-interactable"
     tabindex="0"
@@ -66,17 +66,18 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
       <div
         class="fill"
       >
-        <h2
+        <span
+          aria-hidden="true"
           class="title"
         >
           default title
-        </h2>
+        </span>
       </div>
       <div
         class="fit"
       />
     </div>
-  </div>
+  </h2>
   <div
     aria-hidden="true"
     class="toggle"
@@ -86,7 +87,7 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
 
 exports[`ToggleSectionHeader should render an animated toggle section header 1`] = `
 <div>
-  <div
+  <h2
     aria-expanded="false"
     class="section-header is-interactable"
     tabindex="0"
@@ -112,17 +113,18 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
       <div
         class="fill"
       >
-        <h2
+        <span
+          aria-hidden="true"
           class="title"
         >
           animated title
-        </h2>
+        </span>
       </div>
       <div
         class="fit"
       />
     </div>
-  </div>
+  </h2>
   <div
     aria-hidden="true"
     class="toggle"
@@ -142,7 +144,7 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
 
 exports[`ToggleSectionHeader should render an initially open toggle section header 1`] = `
 <div>
-  <div
+  <h2
     aria-expanded="true"
     class="section-header is-interactable"
     tabindex="0"
@@ -168,17 +170,18 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
       <div
         class="fill"
       >
-        <h2
+        <span
+          aria-hidden="true"
           class="title"
         >
           initially open title
-        </h2>
+        </span>
       </div>
       <div
         class="fit"
       />
     </div>
-  </div>
+  </h2>
   <div
     aria-hidden="false"
     class="toggle"
@@ -206,7 +209,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
       onClick={[Function]}
       text="opens on click title"
     >
-      <div
+      <h2
         aria-expanded={true}
         className="section-header is-interactable"
         onClick={[Function]}
@@ -217,11 +220,12 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
         <Arrange
           className="title-arrange"
           fill={
-            <h2
+            <span
+              aria-hidden={true}
               className="title"
             >
               opens on click title
-            </h2>
+            </span>
           }
           fitStart={
             <div
@@ -258,18 +262,19 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
             <div
               className="fill"
             >
-              <h2
+              <span
+                aria-hidden={true}
                 className="title"
               >
                 opens on click title
-              </h2>
+              </span>
             </div>
             <div
               className="fit"
             />
           </div>
         </Arrange>
-      </div>
+      </h2>
     </SectionHeader>
     <Toggle
       isAnimated={false}
