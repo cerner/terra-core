@@ -13,7 +13,7 @@ const propTypes = {
   /**
    * Text to be displayed on the SectionHeader.
    */
-  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   /**
    * Callback function triggered when the accordion icon is clicked.
    */
@@ -81,7 +81,7 @@ class SectionHeader extends React.Component {
 
   render() {
     const {
-      title,
+      text,
       onClick,
       isOpen,
       isTransparent,
@@ -91,6 +91,12 @@ class SectionHeader extends React.Component {
 
     const theme = this.context;
 
+    let headerText = text;
+    if (text === undefined && customProps.title !== undefined) {
+      headerText = customProps.title;
+      customProps.title = undefined;
+    }
+
     if ((process.env.NODE_ENV !== 'production') && (!onClick && isOpen)) {
       // eslint-disable-next-line no-console
       console.warn('\'isOpen\' are intended to be used only when \'onClick\' is provided.');
@@ -99,10 +105,8 @@ class SectionHeader extends React.Component {
     const attributes = { ...customProps };
 
     if (onClick) {
-      attributes.tabIndex = '0';
       attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
       attributes.onKeyUp = this.wrapOnKeyUp(attributes.onKeyUp);
-      attributes.role = 'button';
     }
 
     const iconClassNames = cx([
@@ -111,7 +115,7 @@ class SectionHeader extends React.Component {
     ]);
 
     const accordionIcon = (
-      <div className={cx('accordion-icon-wrapper')}>
+      <div className={cx('accordion-icon-wrapper')} role="button" aria-expanded={isOpen} aria-label={headerText} tabIndex="-1">
         <span className={iconClassNames} />
       </div>
     );
@@ -135,13 +139,13 @@ class SectionHeader extends React.Component {
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
-      <div {...attributes} onClick={onClick} className={sectionHeaderClassNames}>
+      <Element {...attributes} onClick={onClick} className={sectionHeaderClassNames} tabIndex="0">
         <Arrange
           fitStart={onClick && accordionIcon}
-          fill={<Element className={cx('title')}>{title}</Element>}
+          fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
           className={cx('title-arrange')}
         />
-      </div>
+      </Element>
     );
     /* eslint-enable jsx-a11y/no-static-element-interactions */
   }

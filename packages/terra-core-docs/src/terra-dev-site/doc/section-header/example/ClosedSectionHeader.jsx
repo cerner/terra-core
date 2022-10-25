@@ -2,7 +2,7 @@ import React from 'react';
 import SectionHeaderExampleTemplate from './SectionHeaderExampleTemplate';
 
 const sectionHeaderProps = {
-  title: 'Closed',
+  text: 'Closed',
   onClick: () => {},
 };
 

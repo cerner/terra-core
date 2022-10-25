@@ -95,7 +95,7 @@ class AccoordianExampleTemplate extends React.Component {
           {...sectionHeaderProps}
           aria-expanded={this.state.isOpen}
           isOpen={this.state.isOpen}
-          title={title}
+          text={title}
         />
         <Toggle isOpen={this.state.isOpen} isAnimated>
           {children}
