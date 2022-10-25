@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Set the hideRequired prop to private
+
 ## 4.17.5 - (July 5, 2022)
 
 * Changed
