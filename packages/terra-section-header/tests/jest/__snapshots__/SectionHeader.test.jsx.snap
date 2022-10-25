@@ -12,19 +12,21 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
     isOpen={false}
     isTransparent={false}
     level={2}
-    title="foo"
+    text="foo"
   >
-    <div
+    <h2
       className="section-header orion-fusion-theme"
+      tabIndex="0"
     >
       <Arrange
         className="title-arrange"
         fill={
-          <h2
+          <span
+            aria-hidden={false}
             className="title"
           >
             foo
-          </h2>
+          </span>
         }
       >
         <div
@@ -36,43 +38,45 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
           <div
             className="fill"
           >
-            <h2
+            <span
+              aria-hidden={false}
               className="title"
             >
               foo
-            </h2>
+            </span>
           </div>
           <div
             className="fit"
           />
         </div>
       </Arrange>
-    </div>
+    </h2>
   </SectionHeader>
 </ThemeContextProvider>
 `;
 
 exports[`SectionHeader should render a default component 1`] = `
-<div
+<h2
   className="section-header"
+  tabIndex="0"
 >
   <Arrange
     className="title-arrange"
     fill={
-      <h2
+      <span
+        aria-hidden={false}
         className="title"
       >
         foo
-      </h2>
+      </span>
     }
   />
-</div>
+</h2>
 `;
 
 exports[`SectionHeader should render with an accordion icon in the open position when an 'onClick()' callback and 'isOpen' is passed 1`] = `
-<div
+<h2
   class="section-header is-interactable"
-  role="button"
   tabindex="0"
 >
   <div
@@ -82,7 +86,11 @@ exports[`SectionHeader should render with an accordion icon in the open position
       class="fit"
     >
       <div
+        aria-expanded="true"
+        aria-label="foo"
         class="accordion-icon-wrapper"
+        role="button"
+        tabindex="-1"
       >
         <span
           class="accordion-icon is-open"
@@ -92,23 +100,23 @@ exports[`SectionHeader should render with an accordion icon in the open position
     <div
       class="fill"
     >
-      <h2
+      <span
+        aria-hidden="true"
         class="title"
       >
         foo
-      </h2>
+      </span>
     </div>
     <div
       class="fit"
     />
   </div>
-</div>
+</h2>
 `;
 
 exports[`SectionHeader should render with an accordion icon when an 'onClick()' callback is passed 1`] = `
-<div
+<h2
   class="section-header is-interactable"
-  role="button"
   tabindex="0"
 >
   <div
@@ -118,7 +126,11 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
       class="fit"
     >
       <div
+        aria-expanded="false"
+        aria-label="foo"
         class="accordion-icon-wrapper"
+        role="button"
+        tabindex="-1"
       >
         <span
           class="accordion-icon"
@@ -128,22 +140,24 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
     <div
       class="fill"
     >
-      <h2
+      <span
+        aria-hidden="true"
         class="title"
       >
         foo
-      </h2>
+      </span>
     </div>
     <div
       class="fit"
     />
   </div>
-</div>
+</h2>
 `;
 
 exports[`SectionHeader should render without an accordion icon when no 'onClick()' is passed 1`] = `
-<div
+<h2
   class="section-header"
+  tabindex="0"
 >
   <div
     class="arrange title-arrange"
@@ -154,15 +168,16 @@ exports[`SectionHeader should render without an accordion icon when no 'onClick(
     <div
       class="fill"
     >
-      <h2
+      <span
+        aria-hidden="false"
         class="title"
       >
         foo
-      </h2>
+      </span>
     </div>
     <div
       class="fit"
     />
   </div>
-</div>
+</h2>
 `;
