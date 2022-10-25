@@ -5,6 +5,7 @@
 * Changed
   * Renamed `terra-section-header` title prop to text
   * Updated snapshots from changes made to terra-section-header
+  * Updated WDIO Screenshots from changes made to terra-section-header
 
 ## 2.58.4 - (July 14, 2022)
 

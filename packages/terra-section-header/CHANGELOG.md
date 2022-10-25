@@ -4,6 +4,7 @@
 
 * Changed
   * Renamed title prop to text to avoid conflict with native html attribute
+  * Updated WDIO Screenshots for DOM changes
 
 * Added
   * Assigned button role to the actionable section of component
