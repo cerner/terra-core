@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `terra-divider` tests and doc examples to include heading level prop.
+
 * Added
   * Added Accordion Examples for `terra-section-header`.
 

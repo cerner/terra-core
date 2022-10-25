@@ -10,7 +10,6 @@ exports[`Divider correctly applies the theme context className 1`] = `
 >
   <Divider>
     <hr
-      aria-hidden="true"
       className="divider orion-fusion-theme"
     />
   </Divider>
@@ -18,10 +17,11 @@ exports[`Divider correctly applies the theme context className 1`] = `
 `;
 
 exports[`Divider it should pass in a custom prop 1`] = `
-<hr
-  aria-hidden="true"
-  className="divider"
+<SectionDivider
+  className="divider-container"
   id="testDivider"
+  level={3}
+  text="custom-text"
 />
 `;
 
@@ -39,7 +39,15 @@ exports[`Divider it should pass in a string of text 1`] = `
 
 exports[`Divider should render a basic component 1`] = `
 <hr
-  aria-hidden="true"
   className="divider"
+/>
+`;
+
+exports[`Divider should spread a custom prop onto the text with level divider 1`] = `
+<SectionDivider
+  className="divider-container"
+  id="custom-id"
+  level={3}
+  text="custom-text"
 />
 `;

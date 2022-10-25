@@ -12,5 +12,17 @@ export default () => (
     <div className={cx('separator')} />
     <Divider id="divider" text={content} />
     <div className={cx('separator')} />
+    <Divider id="divider1" text={`H1: ${content}`} level={1} />
+    <div className={cx('separator')} />
+    <Divider id="divider2" text={`H2: ${content}`} level={2} />
+    <div className={cx('separator')} />
+    <Divider id="divider3" text={`H3: ${content}`} level={3} />
+    <div className={cx('separator')} />
+    <Divider id="divider4" text={`H4: ${content}`} level={4} />
+    <div className={cx('separator')} />
+    <Divider id="divider5" text={`H5: ${content}`} level={5} />
+    <div className={cx('separator')} />
+    <Divider id="divider6" text={`H6: ${content}`} level={6} />
+    <div className={cx('separator')} />
   </div>
 );
