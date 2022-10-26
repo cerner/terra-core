@@ -3,7 +3,8 @@
 ## Unreleased
 
 * Changed
-  * Set the hideRequired prop to private
+  * Set the hideRequired prop to be private
+  * Set the isLabelHidden prop to be private
 
 ## 4.17.5 - (July 5, 2022)
 

@@ -59,6 +59,7 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * @private
    * Whether or not the label is visible. Use this props to hide a label while still creating it on the DOM for accessibility.
    */
   isLabelHidden: PropTypes.bool,
