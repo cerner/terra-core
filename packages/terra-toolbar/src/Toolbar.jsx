@@ -38,7 +38,7 @@ const Toolbar = ({
 
   const items = React.Children.map(children, item => (item ? <div className={cx('item')}>{item}</div> : item));
 
-  return (<div {...customProps} className={toolbarClassNames}>{items}</div>);
+  return (<div {...customProps} className={toolbarClassNames} role="toolbar">{items}</div>);
 };
 
 Toolbar.propTypes = propTypes;
