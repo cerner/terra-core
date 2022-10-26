@@ -474,7 +474,6 @@ exports[`should render a status view with custom glyph, title, message, and two 
       >
         <Divider>
           <hr
-            aria-hidden="true"
             className="divider"
           />
         </Divider>
