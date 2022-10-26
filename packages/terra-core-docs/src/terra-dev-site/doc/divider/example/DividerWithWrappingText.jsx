@@ -6,7 +6,7 @@ const content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eni
 
 const DividerWithWrappingText = () => (
   <DividerExampleTemplate>
-    <Divider text={content} />
+    <Divider text={content} level={3} />
   </DividerExampleTemplate>
 );
 

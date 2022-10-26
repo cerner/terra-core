@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a new props `id`, `level` to the divider.
+
 ## 3.36.1 - (December 14, 2021)
 
 * Changed

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider it should pass the All the Props 1`] = `
+<div
+  className="divider-container"
+>
+  <h3
+    className="divider-text"
+    id="testDivider"
+  >
+    custom-text
+  </h3>
+</div>
+`;
+
+exports[`Divider should apply the theme context className to the text divider 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "theme-class-name",
+    }
+  }
+>
+  <SectionDivider
+    id="testDivider"
+    level={3}
+    text="custom-text"
+  >
+    <div
+      className="divider-container theme-class-name"
+    >
+      <h3
+        className="divider-text"
+        id="testDivider"
+      >
+        custom-text
+      </h3>
+    </div>
+  </SectionDivider>
+</ThemeContextProvider>
+`;
+
+exports[`Divider should render a basic component 1`] = `
+<div
+  className="divider-container"
+/>
+`;
