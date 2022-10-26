@@ -125,7 +125,6 @@ class ButtonGroupButton extends React.Component {
 
     const theme = this.context;
 
-    console.log('focus value ', this.state.focused && !isDisabled);
     const buttonClassName = classNames(
       cx(
         'button-group-button',
