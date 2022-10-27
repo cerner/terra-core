@@ -101,6 +101,30 @@ Terra.describeViewports('Button Group', ['huge'], () => {
     });
   });
 
+  describe('Keyboard Navigation', () => {
+    before(() => browser.url('/#/raw/tests/cerner-terra-core-docs/button-group/button-group-multi-select'));
+
+    it('should navigate to the second button', () => {
+      browser.keys('Tab');
+      browser.keys('ArrowRight');
+
+      Terra.validates.element('Button-2 focused');
+    });
+
+    it('should navigate to the third button', () => {
+      browser.keys('ArrowRight');
+
+      Terra.validates.element('Button-3 focused');
+    });
+
+    it('should navigate to the first button', () => {
+      browser.keys('ArrowLeft');
+      browser.keys('ArrowLeft');
+
+      Terra.validates.element('Button-1 focused');
+    });
+  });
+
   describe('Button Focus', () => {
     before(() => {
       browser.url('/#/raw/tests/cerner-terra-core-docs/button-group/button-group-multi-select');
