@@ -1,0 +1,108 @@
+import DividerWithTextAccess from "./example/DividerWithTextAccess";
+import DividerWithoutTextAccess from "./example/DividerWithoutTextAccess";
+
+# Accessibility Guide for Terra  Divider
+
+## Why is accessibility of Divider important
+
+> The Divider component helps break content into logical sections. Dividers can be visual or have heading text assigned to describe the new content section. This component must be coded correctly and utilize proper content strategy when applicable to ensure understanding of the content section. At best inaccessible Dividers can cause confusion to people with disabilities. At worst, they can prevent users from navigating the page and understanding the proper context headings afford.
+
+## Accessibility Considerations
+
+### Content Considerations: What do content creators need to do?
+
+- Dividers with text must act as a heading to describe the section.
+  - Ensure that the divider text accurately describes the content it represents.
+- Content creators must provide engineers with the desired heading text.
+  - Work with engineers to understand the content structure of the page to ensure heading levels for all Dividers are appropriate for their placement within the page.
+      - Dividers with text should never be a heading level 1.
+- Best practice dictates that headings should be used to identify sections of content.
+  - If a Divider is used with text, the Divider text will act as the appropriate heading.
+  - If no heading text is provided within the Divider, best practice would be to include a heading within the content after the divider.
+      - Dividers with no text should not have a heading level assigned to the Divider itself.
+
+<div aria-label="Example Demo">
+    <DividerWithTextAccess />
+</div>
+
+> ```jsx
+> const currentDate = 'November 12, 1955';
+>
+>  const DividerWithTextAccess = () => (
+>   <Card>
+>     <Card.Body>
+>       <DividerExampleTemplate>
+>        <Divider text={currentDate} level={3} />
+>       </DividerExampleTemplate>
+>     </Card.Body>
+>   </Card>
+>
+> );
+> ```
+
+- If default theme colors are overridden, custom colors must meet proper contrast ratios.
+
+### Code Considerations: What do engineers need to do?
+
+<div aria-label="Example Demo">
+    <DividerWithoutTextAccess />
+</div>
+
+> ```jsx
+>  const DividerWithoutTextAccess = () => (
+>  <Card>
+>    <Card.Body>
+>    <DividerExampleTemplate>
+>        <Divider />
+>    </DividerExampleTemplate>
+>   </Card.Body>
+>
+>  </Card>
+> );
+> ```
+
+-  Engineers must work with content creators to ensure heading levels for all Dividers are appropriate for their placement on the page.
+  - Dividers with text cannot be heading level 1. Heading level 1 is reserved for the page’s title.
+  - Engineers must assign the proper heading level prop (H2-H6) to a Divider.
+  - Dividers with text must follow the correct heading level order based on its relationship to other headings in the flow of the page’s content.
+
+## Usability Expectations
+
+### Interaction Detail
+Terra Divider is not interactable.
+
+### Keyboard Interactions
+Because Terra Divider is not interactable, it does not get keyboard focus.
+
+## Concerns and Hazards
+[DEV TEAM TO INSERT CONCERNS AND HAZARDS]
+
+## Support Compliance
+
+### Primary accessibility criteria for Divider
+- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) — Supports
+  - Terra provides consuming teams the ability to set the appropriate heading level.
+  - Engineers and content creators must ensure appropriate heading levels are applied to Dividers to convey proper content structure.
+  - Content creators must provide divider heading level to match the page structure.
+- [2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html) — Supports
+  - Content creators must ensure headings and labels accurately describe the content the Divider is delineating.
+- [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) — Supports (Update to reflect the changes made during uplift) Supports
+  - Dividers with heading text are not fully supported because ARIA attribute role=separator is not set. WHAT DOES TERRA SUPPORT AFTER UPDATE? Suggested: Terra provides teams ability set the appropriate heading level when Dividers use text.
+  - Engineers must assign a heading level to the Divider text.
+
+### Secondary accessibility criteria for Divider
+- [1.4.10 Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) — Supports
+  - Terra Divider supports reflow when the viewport is resized to 320x256 pixels without losing information or function.
+  - Content creators must consider how content resizes and reflows at different viewpoints.
+- [1.4.3 Contrast(Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) — Supports
+  - Text content within Divider must meet proper color contrast ratios for text.
+  - Content creators must ensure that text colors assigned to a Divider meet proper color contrast ratios.
+
+### Supported Features and Technology (TERRA TO UPDATE AS NEEDED AFTER UPDATES)
+- Keyboard Interactions
+- JAWS Support with Chrome (PC)
+- VoiceOver Support with Chrome, Safari (MAC)
+
+## Linked References:
+1.	[W3C WAI Aria: Use heading to convey meaning and structure](https://www.w3.org/WAI/tips/writing/#use-headings-to-convey-meaning-and-structure)
+2.	[Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/Understanding/)
