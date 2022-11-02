@@ -10,7 +10,7 @@ const TableSectionExample = () => (
     bodyData={[
       {
         sectionHeader: {
-          title: 'Default Section',
+          title: 'Default Amyyy1 Section',
           id: 'default-id',
           key: 'default',
         },

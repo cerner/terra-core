@@ -8,8 +8,21 @@ const SectionTest = () => (
     numberOfColumns={1}
     bodyData={[
       {
+        rows: [
+          {
+            key: 'row-1',
+            cells: [
+              {
+                key: 'cell-1',
+                children: [
+                  <div key="cell-1">Amy3EditedInVsCode olor</div>,
+                ],
+              },
+            ],
+          },
+        ],
         sectionHeader: {
-          title: 'Default Section',
+          title: 'Default Amy3TestEditedInVsCode Section',
           id: 'default-id',
           key: 'default',
         },

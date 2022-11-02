@@ -88,7 +88,7 @@ const SectionHeader = ({
   ...customProps
 }) => {
   const attrSpread = {};
-  let titleElement = <span className={cx('title')}>{title}</span>;
+  let titleElement = <span className={cx('title')}>{`Amy4EditInVsCode_${title}`}</span>;
   let accordionIcon;
   if (isCollapsible) {
     accordionIcon = (
