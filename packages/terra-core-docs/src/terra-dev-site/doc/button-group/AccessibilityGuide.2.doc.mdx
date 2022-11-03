@@ -2,6 +2,7 @@ import { Badge } from 'terra-button-group/package.json?dev-site-package';
 import { Notice } from "@cerner/terra-docs";
 import Whitespace from "../../common/layout-helpers/Whitespace";
 import SingleSelect from "./example/ButtonGroupSingleSelect";
+import MultiSelect from "./example/ButtonGroupMultiSelect";
 
 <Badge />
 
@@ -24,6 +25,8 @@ The button group component is a group of buttons that allow users to manage cont
 
 ##### Accessibility Guidance: Users must be able to differentitate selected and unselected buttons
 
+###### Single Select variant
+
 <div aria-label="Example demo">
     <SingleSelect />
 </div>
@@ -37,6 +40,24 @@ The button group component is a group of buttons that allow users to manage cont
         <ButtonGroup.Button text="Dust Allergy" key="single-select1" />
         <ButtonGroup.Button text="Food Allergy" key="single-select2" />
         <ButtonGroup.Button text="Pet Allergy" key="single-select3" />
+      </ButtonGroup>
+```
+###### Multi Select variant
+
+<div aria-label="Example demo">
+    <MultiSelect />
+</div>
+
+```jsx
+      <ButtonGroup
+        id="button-group-multi-select"
+        onChange={this.handleSelection}
+        selectedKeys={this.state.selectedKeys}
+        isMultiSelect
+      >
+        <ButtonGroup.Button text="Dust Allergy" key="multi-select1" />
+        <ButtonGroup.Button text="Food Allergy" key="multi-select2" />
+        <ButtonGroup.Button text="Pet Allergy" key="multi-select3" />
       </ButtonGroup>
 ```
 </Notice>
