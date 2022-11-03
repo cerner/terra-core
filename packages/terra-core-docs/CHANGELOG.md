@@ -29,6 +29,7 @@
   * Added Accessibility guide for `terra-switch`.
   * Added docs for `AnchorButton`.
   * Added test for `AnchorButton`.
+  * Added Accessibility Guide for `terra-button-group`.
 
 ## 1.14.1 - (July 14, 2022)
 
