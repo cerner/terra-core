@@ -3,6 +3,7 @@ import { Notice } from "@cerner/terra-docs";
 import Whitespace from "../../common/layout-helpers/Whitespace";
 import SingleSelect from "./example/ButtonGroupSingleSelect";
 import MultiSelect from "./example/ButtonGroupMultiSelect";
+import IconGroup from "./example/ButtonGroupIconA11y";
 
 <Badge />
 
@@ -16,7 +17,7 @@ The button group component is a group of buttons that allow users to manage cont
 
 ### Code Considerations
 
-- Ensure all button within the button group receive keyboard focus and can be interacted with only the keyboard.   
+- Ensure all buttons within the button group receive keyboard focus and can be interacted with only the keyboard.   
   - Do NOT override keyboard focus state or use a TABINDEX greater than zero.  
   -	Button group should be coded in the users logical reading order of the page to ensure a meaningful experience.
 - Ensure the user can intuitively understand and perceive the selected state from the unselected state.
@@ -60,17 +61,30 @@ The button group component is a group of buttons that allow users to manage cont
         <ButtonGroup.Button text="Pet Allergy" key="multi-select3" />
       </ButtonGroup>
 ```
+
+##### Accessibility Guidance: Ensure any button with a meaningful icon has an accessible name assigned to the icon
+
+<div aria-label="Example demo">
+    <IconGroup />
+</div>
+
+```jsx
+const iconPrint = <IconPrinter a11yLabel="Print" />;
+const iconSave = <IconSave a11yLabel="Save" />;
+
+const ButtonGroupA11yIcon = () => (
+  <ButtonGroup>
+    <ButtonGroup.Button text="All Documents" icon={iconPrint} key="print" />
+    <ButtonGroup.Button text="All Documents" icon={iconSave} key="save" />
+  </ButtonGroup>
+```
 </Notice>
 
 - Ensure all meaningful information that is presented visually is programmatically available to the assistive technology.
   - All buttons within the button group must have an accessible name (button label) which is descriptive of the purpose.
-    - The visual label of the button must match the programmatic accessible name. 
-    - Ensure any button with a meaningful icon has an accessible name assigned to the icon. [insert code example here]
-  - Because Button groups are used to control content on the page, they must either have a programmatic association to a visible label on the page or assigned an accessible name for the button group.
-    - Button groups within a Toolbar will automatically provide the proper context.
-    - Button groups not inside a toolbar must ensure the proper context is provided.For example:
-      - A button group that controls content within a chart should be programmatically associated to the charts title (words on the page)
-      - A Button group must have a prop that assigns the group name.
+  - The visual label of the button must match the programmatic accessible name.
+- Because Button groups are used to control content on the page, they must either have a programmatic association to a visible label on the page or assigned an accessible name for the button group.
+  - Button groups within a Toolbar will automatically provide the proper context.
 
 ### Content Considerations
 
@@ -80,7 +94,7 @@ The button group component is a group of buttons that allow users to manage cont
   - Is it text on the page or is it a visually hidden text? 
   - Visually hidden text must be intuitive for sighted users to understand, otherwise the text should be on the page and in proximity to the button group.
 - When implementing button group do not override default theme colors of button group to ensure the button group be easily perceived against its background color. 
-  - If changing the default colors, the text color must meet a minimum contrast ratio against the background color. See WCAG 1.4.3 Contrast Minimum and 1.4.11 Non-text Content for more information.  
+  - If changing the default colors, the text color must meet a minimum contrast ratio against the background color. See WCAG [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) and [1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) for more information.  
   - Not everyone perceives color so never use color as the only way to convey meaning within the interface. Always provide both color and text or a shape together to represent the meaning.
 - Ensure the engineers understand the logical reading order of the page.
 - Ensure button group always meet the user’s expectations.
@@ -88,7 +102,6 @@ The button group component is a group of buttons that allow users to manage cont
   - Ensure all buttons perform the action on the up event
 - After coded, ensure all interactable elements receive keyboard focus in the users reading order and display a visible keyboard focus. Ensure the keyboard user does not get “trapped” somewhere on the page preventing them from the entire workflow.
 
-<Whitespace newline={2} />
 
 ## Usability Expectations
 
