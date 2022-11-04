@@ -7,7 +7,7 @@
 
 * Added
   * Added Accordion Examples for `terra-section-header`.
-  * Added accessibility guide for `terra-divider`.
+  * Added accessibility guide for `terra-divider`
 
 ## 1.15.1 - (September 8, 2022)
 

@@ -1,5 +1,4 @@
-import DividerWithTextAccess from "./example/DividerWithTextAccess";
-import DividerWithoutTextAccess from "./example/DividerWithoutTextAccess";
+import DividerExampleAccess from "./example/DividerExampleAccess";
 
 # Accessibility Guide for Terra  Divider
 
@@ -8,6 +7,51 @@ import DividerWithoutTextAccess from "./example/DividerWithoutTextAccess";
 > The Divider component helps break content into logical sections. Dividers can be visual or have heading text assigned to describe the new content section. This component must be coded correctly and utilize proper content strategy when applicable to ensure understanding of the content section. At best inaccessible Dividers can cause confusion to people with disabilities. At worst, they can prevent users from navigating the page and understanding the proper context headings afford.
 
 ## Accessibility Considerations
+
+### Code Considerations: What do engineers need to do?
+
+<div aria-label="Example Demo">
+    <DividerExampleAccess />
+</div>
+
+> ```jsx
+> const date1 = '1979 Cerner is founded';
+> const date2 = '2006 Cerner opens Healthe Clinic';
+>
+> const DividerExampleAccess = () => (
+> <div>
+>    <Card>
+>        <Card.Body>
+>            <div>
+>                <p>
+>                    For over four decades, Cerner has pursued breakthrough innovation that’s helped shape the health care
+>                    industry as we know it.
+>                </p>
+>                <Divider text={date1} level={3} />
+>                <p>
+>                    Before leaving Arthur Andersen & Co. to form their own company, three young friends and co-workers
+>                    sat around a picnic table at Loose Creek Park in Kansas City, Missouri brainstorming business
+>                    ideas. It was here that Neal Patterson, Paul Gorup and Cliff Illig conceived PGI & Associates, the
+>                    company that would eventually become Cerner.
+>                </p>
+>                <Divider text={date2} level={3} />
+>                <p>The company’s first on-site health clinic opened on its World Headquarters campus.</p>
+>                <Divider />
+>                <p>
+>                    Since 1979, we’ve been proud to work at the intersection of health care and information technology to
+>                    connect people and systems around the world.
+>                </p>
+>            </div>
+>        </Card.Body>
+>    </Card>
+> </div>
+> );
+> ```
+
+-  Engineers must work with content creators to ensure heading levels for all Dividers are appropriate for their placement on the page.
+  - Dividers with text cannot be heading level 1. Heading level 1 is reserved for the page’s title.
+  - Engineers must assign the proper heading level prop (H2-H6) to a Divider.
+  - Dividers with text must follow the correct heading level order based on its relationship to other headings in the flow of the page’s content.
 
 ### Content Considerations: What do content creators need to do?
 
@@ -21,50 +65,9 @@ import DividerWithoutTextAccess from "./example/DividerWithoutTextAccess";
   - If no heading text is provided within the Divider, best practice would be to include a heading within the content after the divider.
       - Dividers with no text should not have a heading level assigned to the Divider itself.
 
-<div aria-label="Example Demo">
-    <DividerWithTextAccess />
-</div>
 
-> ```jsx
-> const currentDate = 'November 12, 1955';
->
->  const DividerWithTextAccess = () => (
->   <Card>
->     <Card.Body>
->       <DividerExampleTemplate>
->        <Divider text={currentDate} level={3} />
->       </DividerExampleTemplate>
->     </Card.Body>
->   </Card>
->
-> );
-> ```
 
 - If default theme colors are overridden, custom colors must meet proper contrast ratios.
-
-### Code Considerations: What do engineers need to do?
-
-<div aria-label="Example Demo">
-    <DividerWithoutTextAccess />
-</div>
-
-> ```jsx
->  const DividerWithoutTextAccess = () => (
->  <Card>
->    <Card.Body>
->    <DividerExampleTemplate>
->        <Divider />
->    </DividerExampleTemplate>
->   </Card.Body>
->
->  </Card>
-> );
-> ```
-
--  Engineers must work with content creators to ensure heading levels for all Dividers are appropriate for their placement on the page.
-  - Dividers with text cannot be heading level 1. Heading level 1 is reserved for the page’s title.
-  - Engineers must assign the proper heading level prop (H2-H6) to a Divider.
-  - Dividers with text must follow the correct heading level order based on its relationship to other headings in the flow of the page’s content.
 
 ## Usability Expectations
 
