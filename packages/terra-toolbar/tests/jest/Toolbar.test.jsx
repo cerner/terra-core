@@ -47,7 +47,7 @@ describe('Toolbar', () => {
         <div id="test-id">
           Test content
         </div>
-      </div>
+      </div>,
     );
     expect(wrapper).toMatchSnapshot();
   });
