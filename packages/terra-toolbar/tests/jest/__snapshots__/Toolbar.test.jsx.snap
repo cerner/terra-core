@@ -33,6 +33,20 @@ exports[`Toolbar should render center aligned component 1`] = `
 />
 `;
 
+exports[`Toolbar should render component with aria-controls 1`] = `
+<div>
+  <Toolbar
+    align="start"
+    ariaControls="test-id"
+  />
+  <div
+    id="test-id"
+  >
+    Sample toolbar content
+  </div>
+</div>
+`;
+
 exports[`Toolbar should render component with aria-label 1`] = `
 <div
   aria-label="test"

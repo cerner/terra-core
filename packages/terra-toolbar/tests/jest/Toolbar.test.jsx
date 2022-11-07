@@ -50,6 +50,18 @@ describe('Toolbar', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render component with aria-controls', () => {
+    const wrapper = shallow(
+      <div>
+        <Toolbar ariaControls="test-id" />
+        <div id="test-id">
+          Sample toolbar content
+        </div>
+      </div>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should apply custom class', () => {
     const wrapper = shallow(<Toolbar className="testing" />);
     expect(wrapper.hasClass('testing'));

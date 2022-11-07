@@ -13,6 +13,11 @@ const propTypes = {
    */
   align: PropTypes.oneOf(['start', 'end', 'center']),
   /**
+   * String that labels the content the toolbar controls. Should reference
+   * the id of the content area that the toolbar controls.
+   */
+  ariaControls: PropTypes.string,
+  /**
    * String that labels the content the toolbar controls. `ariaLabel` only be used
    * when no visible label for the toolbar is present. `ariaLabelledBy` should be
    * used over `ariaLabel` when possible.
@@ -37,6 +42,7 @@ const defaultProps = {
 
 const Toolbar = ({
   align,
+  ariaControls,
   ariaLabel,
   ariaLabelledBy,
   children,
@@ -58,6 +64,7 @@ const Toolbar = ({
   return (
     <div
       {...customProps}
+      aria-controls={ariaControls}
       aria-label={!ariaLabelledBy ? ariaLabel : undefined}
       aria-labelledby={ariaLabelledBy}
       className={toolbarClassNames}
