@@ -22,14 +22,12 @@ export default () => {
         </select>
       </label>
       <br />
+      <h4 id="example">Example</h4>
       <Toolbar ariaLabelledBy="example" align={align}>
         <Button text="Edit" variant="utility" icon={<IconEdit />} />
         <Button text="Add" variant="utility" icon={<IconAdd />} />
         <Button text="Attachment" variant="utility" icon={<IconAttachment />} />
       </Toolbar>
-      <div id="example">
-        Example Content
-      </div>
     </div>
   );
 };

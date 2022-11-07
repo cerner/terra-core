@@ -43,10 +43,8 @@ describe('Toolbar', () => {
   it('should render component with aria-labelledby', () => {
     const wrapper = shallow(
       <div>
+        <h4 id="test-id">Test</h4>
         <Toolbar ariaLabelledBy="test-id" />
-        <div id="test-id">
-          Test content
-        </div>
       </div>,
     );
     expect(wrapper).toMatchSnapshot();

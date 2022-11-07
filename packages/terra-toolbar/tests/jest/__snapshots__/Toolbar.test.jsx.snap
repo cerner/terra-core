@@ -43,15 +43,15 @@ exports[`Toolbar should render component with aria-label 1`] = `
 
 exports[`Toolbar should render component with aria-labelledby 1`] = `
 <div>
+  <h4
+    id="test-id"
+  >
+    Test
+  </h4>
   <Toolbar
     align="start"
     ariaLabelledBy="test-id"
   />
-  <div
-    id="test-id"
-  >
-    Test content
-  </div>
 </div>
 `;
 
