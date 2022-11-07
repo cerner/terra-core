@@ -22,7 +22,7 @@ export default () => {
         </select>
       </label>
       <br />
-      <Toolbar ariaLabel="example" align={align}>
+      <Toolbar ariaLabel="image tools" align={align}>
         <Button text="Edit" variant="utility" icon={<IconEdit />} />
         <Button text="Add" variant="utility" icon={<IconAdd />} />
         <Button text="Attachment" variant="utility" icon={<IconAttachment />} />

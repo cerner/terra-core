@@ -37,10 +37,10 @@ exports[`Toolbar should render component with aria-controls 1`] = `
 <div>
   <Toolbar
     align="start"
-    ariaControls="test-id"
+    ariaControls="test-content-id"
   />
   <div
-    id="test-id"
+    id="test-content-id"
   >
     Sample toolbar content
   </div>
@@ -49,7 +49,7 @@ exports[`Toolbar should render component with aria-controls 1`] = `
 
 exports[`Toolbar should render component with aria-label 1`] = `
 <div
-  aria-label="test"
+  aria-label="image tools"
   className="toolbar start-align"
   role="toolbar"
 />
@@ -58,13 +58,13 @@ exports[`Toolbar should render component with aria-label 1`] = `
 exports[`Toolbar should render component with aria-labelledby 1`] = `
 <div>
   <h4
-    id="test-id"
+    id="image-tools-id"
   >
     Test
   </h4>
   <Toolbar
     align="start"
-    ariaLabelledBy="test-id"
+    ariaLabelledBy="image-tools-id"
   />
 </div>
 `;

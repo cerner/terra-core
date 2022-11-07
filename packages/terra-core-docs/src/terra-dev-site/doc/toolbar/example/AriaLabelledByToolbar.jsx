@@ -22,8 +22,8 @@ export default () => {
         </select>
       </label>
       <br />
-      <h4 id="example-id">Example</h4>
-      <Toolbar ariaLabelledBy="example-id" align={align}>
+      <h4 id="image-tools-id">Image Tools</h4>
+      <Toolbar ariaLabelledBy="image-tools-id" align={align}>
         <Button text="Edit" variant="utility" icon={<IconEdit />} />
         <Button text="Add" variant="utility" icon={<IconAdd />} />
         <Button text="Attachment" variant="utility" icon={<IconAttachment />} />

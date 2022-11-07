@@ -7,8 +7,8 @@ import Toolbar from 'terra-toolbar';
 
 export default () => (
   <>
-    <h4 id="test">Test Header</h4>
-    <Toolbar ariaLabelledBy="test">
+    <h4 id="image-tools-id">Image Tools</h4>
+    <Toolbar ariaLabelledBy="image-tools-id">
       <Button text="Edit" variant="utility" icon={<IconEdit />} />
       <Button text="Add" variant="utility" icon={<IconAdd />} />
       <Button text="Attachment" variant="utility" icon={<IconAttachment />} />

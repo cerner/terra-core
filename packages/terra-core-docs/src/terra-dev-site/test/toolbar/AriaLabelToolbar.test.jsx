@@ -6,7 +6,7 @@ import IconAttachment from 'terra-icon/lib/icon/IconAttachment';
 import Toolbar from 'terra-toolbar';
 
 export default () => (
-  <Toolbar ariaLabel="test">
+  <Toolbar ariaLabel="image tools">
     <Button text="Edit" variant="utility" icon={<IconEdit />} />
     <Button text="Add" variant="utility" icon={<IconAdd />} />
     <Button text="Attachment" variant="utility" icon={<IconAttachment />} />
