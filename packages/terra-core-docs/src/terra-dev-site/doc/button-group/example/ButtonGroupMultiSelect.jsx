@@ -21,9 +21,9 @@ class ButtonGroupMultiSelect extends React.Component {
         selectedKeys={this.state.selectedKeys}
         isMultiSelect
       >
-        <ButtonGroup.Button text="Multi-Select 1" key="multi-select1" />
-        <ButtonGroup.Button text="Multi-Select 2" key="multi-select2" />
-        <ButtonGroup.Button text="Multi-Select 3" key="multi-select3" />
+        <ButtonGroup.Button text="Dust Allergy" key="multi-select1" />
+        <ButtonGroup.Button text="Food Allergy" key="multi-select2" />
+        <ButtonGroup.Button text="Pet Allergy" key="multi-select3" />
       </ButtonGroup>
     );
   }
