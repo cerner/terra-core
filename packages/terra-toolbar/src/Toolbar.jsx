@@ -50,22 +50,13 @@ const Toolbar = ({
     customProps.className,
   );
 
-  const additionalToolbarProps = {};
-
-  if (ariaLabel) {
-    additionalToolbarProps['aria-label'] = ariaLabel;
-  }
-
-  if (ariaLabelledBy) {
-    additionalToolbarProps['aria-labelledby'] = ariaLabelledBy;
-  }
-
   const items = React.Children.map(children, item => (item ? <div className={cx('item')}>{item}</div> : item));
 
   return (
     <div
       {...customProps}
-      {...additionalToolbarProps}
+      aria-label={!ariaLabelledBy ? ariaLabel : undefined}
+      aria-labelledby={ariaLabelledBy}
       className={toolbarClassNames}
       role="toolbar"
     >
