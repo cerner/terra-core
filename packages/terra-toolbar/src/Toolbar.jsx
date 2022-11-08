@@ -13,18 +13,18 @@ const propTypes = {
    */
   align: PropTypes.oneOf(['start', 'end', 'center']),
   /**
-   * String that labels the content the toolbar controls. Should reference
+   * String that labels the content that the toolbar controls. Should reference
    * the id of the content area that the toolbar controls.
    */
   ariaControls: PropTypes.string,
   /**
-   * String that labels the content the toolbar controls. `ariaLabel` only be used
+   * String that labels the content that the toolbar controls. `ariaLabel` only be used
    * when no visible label for the toolbar is present. `ariaLabelledBy` should be
    * used over `ariaLabel` when possible.
    */
   ariaLabel: PropTypes.string,
   /**
-   * String that labels the content the toolbar controls. Should reference
+   * String that labels the content that the toolbar controls. Should reference
    * the visible text label that describes the toolbar's function. If no
    * visible text label is present, `ariaLabel` should be used instead. If both
    * `ariaLabel` and `ariaLabelledBy` are present, `ariaLabelledBy` will be used.

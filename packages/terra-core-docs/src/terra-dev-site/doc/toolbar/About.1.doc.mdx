@@ -1,8 +1,5 @@
 import { Badge } from 'terra-toolbar/package.json?dev-site-package';
 import DefaultToolbar from './example/DefaultToolbar?dev-site-example';
-import AriaLabelToolbar from './example/AriaLabelToolbar?dev-site-example';
-import AriaLabelledByToolbar from './example/AriaLabelledByToolbar?dev-site-example';
-import AriaControlsToolbar from './example/AriaControlsToolbar?dev-site-example';
 import PropsTable from 'terra-toolbar/src/Toolbar?dev-site-props-table';
 
 <Badge />
@@ -42,10 +39,11 @@ import Toolbar from 'terra-toolbar';
  * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
 
  ## Examples
- <DefaultToolbar />
- <AriaLabelToolbar />
- <AriaLabelledByToolbar />
- <AriaControlsToolbar />
+ <DefaultToolbar
+  title="A Basic Toolbar using the aria-label and aria-controls attributes for accessibility" 
+  description="For assistive technology users, this example adds the aria-label attribute to name the type tools this 
+ toolbar contains, and adds the aria-controls attribute to indicate which page region the toolbar applies to."
+ />
 
  ## Toolbar Props
  <PropsTable />
