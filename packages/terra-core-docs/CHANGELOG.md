@@ -7,7 +7,7 @@
 
 * Added
   * Added Accordion Examples for `terra-section-header`.
-  * Updated `terra-section-header` tests and examples.
+  * Updated `terra-section-header` tests and examples
 
 ## 1.15.1 - (September 8, 2022)
 
