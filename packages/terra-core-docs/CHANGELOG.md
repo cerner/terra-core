@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added 
+  * Added Higher Order Component for `terra-profile-image`.
+
 * Changed
   * Updated `terra-divider` tests and doc examples to include heading level prop.
 

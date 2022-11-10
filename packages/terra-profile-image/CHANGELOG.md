@@ -4,6 +4,9 @@
 
 ## 3.41.1 - (January 4, 2022)
 
+* Changed 
+  * changed role="profile-image" for Decorative profile images.
+
 * Changed
   * Migrate docs to terra-core-docs.
 

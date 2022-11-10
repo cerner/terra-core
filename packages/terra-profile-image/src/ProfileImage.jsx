@@ -83,7 +83,7 @@ const ProfileImage = (props) => {
     <span
       {...customProps}
       // eslint-disable-next-line jsx-a11y/aria-role
-      role="profile-imge"
+      role="profile-image"
       aria-label={alt}
       style={placeholderSize}
       className={placeholderClassNames}
