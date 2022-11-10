@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Changed
+  * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
+
+* Changed
   * Updated `terra-divider` tests and doc examples to include heading level prop.
 
 * Added
