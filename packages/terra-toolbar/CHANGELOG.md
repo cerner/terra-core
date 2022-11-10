@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Role attribute is set as toolbar
+
 ## 1.29.0 - (March 15, 2022)
 
 * Changed

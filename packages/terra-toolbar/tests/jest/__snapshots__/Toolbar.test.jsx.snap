@@ -13,6 +13,7 @@ exports[`Toolbar correctly applies the theme context className 1`] = `
   >
     <div
       className="toolbar start-align orion-fusion-theme"
+      role="toolbar"
     />
   </Toolbar>
 </ThemeContextProvider>
@@ -21,30 +22,35 @@ exports[`Toolbar correctly applies the theme context className 1`] = `
 exports[`Toolbar should render a default component 1`] = `
 <div
   className="toolbar start-align"
+  role="toolbar"
 />
 `;
 
 exports[`Toolbar should render center aligned component 1`] = `
 <div
   className="toolbar center-align"
+  role="toolbar"
 />
 `;
 
 exports[`Toolbar should render end aligned component 1`] = `
 <div
   className="toolbar end-align"
+  role="toolbar"
 />
 `;
 
 exports[`Toolbar should render start aligned component 1`] = `
 <div
   className="toolbar start-align"
+  role="toolbar"
 />
 `;
 
 exports[`Toolbar should render with children 1`] = `
 <div
   className="toolbar start-align"
+  role="toolbar"
 >
   <div
     className="item"
