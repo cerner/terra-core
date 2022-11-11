@@ -6,6 +6,9 @@
   * Added Higher Order Component for `terra-profile-image`.
 
 * Changed
+  * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
+
+* Changed
   * Updated `terra-divider` tests and doc examples to include heading level prop.
 
 * Added
