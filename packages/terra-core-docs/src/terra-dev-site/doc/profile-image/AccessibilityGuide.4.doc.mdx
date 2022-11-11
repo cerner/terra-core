@@ -1,6 +1,6 @@
 import { Badge } from 'terra-profile-image/package.json?dev-site-package';
 import { Notice } from '@cerner/terra-docs';
-import Whitespace from "../../common/layout-helpers/Whitespace";
+import ProfileImageExamples from './example/ProfileImageExamples';
 
 <Badge />
 
@@ -13,8 +13,6 @@ The Profile Image component represents an account or profile across the platform
 Poor or improper implementation can cause Profile Image to be inaccessible, which can cause user confusion and impede the identification of content relevant to that user’s profile.
 
 </Notice>
-
-<Whitespace />
 
 ## Accessibility Considerations
 
@@ -29,7 +27,30 @@ Poor or improper implementation can cause Profile Image to be inaccessible, whic
 ### Code Considerations: What do engineers need to do?
 
 > - Engineers must not override the Profile Image’s role of image.
-> - Engineers must apply an alt prop for meaningful images or __SOMETHING YET TO BE DETERMINED BY TERRA TEAM FOR DECORATIVE IMAGE___
+> - Engineers must apply an alt prop for meaningful images.
+<div aria-label="Example Demo">
+  <ProfileImageExamples />
+</div>
+> ```jsx
+> const cx = classNames.bind(styles);
+> 
+> const ProfileImageExamples = () => (
+>   <div>
+>     <Card>
+>       <Card.Body>
+>         <ProfileImage alt="" width="75" height="75" aria-describedby="caption-example-1" />
+>         <span id="caption-example-1" className={cx('add-left-margin')}>Decorative Profile Image Source</span>
+>       </Card.Body>
+>     </Card>
+>     <Card>
+>       <Card.Body>
+>         <ProfileImage alt="profile image for Martin Moon, photograph from space of rising star over a planet's silhouette" src={exampleProfileImage} aria-describedby="caption-example-2" />
+>         <span id="caption-example-2" className={cx('add-left-margin')}>Meaningful Profile Image Source</span>
+>       </Card.Body>
+>     </Card>
+>   </div>
+);
+> ```
 > - Work with content creators to understand how content should resize and reflow at different breakpoints and form factors to ensure content is not artificially constrained or cut off at smaller viewports.
 > - Engineers must work with the content creators to understand if Profile Image is visual related to other content.
 >   - If so, the engineer must associate the Profile Image to the related content.
