@@ -24,6 +24,7 @@ exports[`correctly applies the theme context className 1`] = `
       isFluid={false}
       placeholder={
         <span
+          aria-hidden={true}
           aria-label="A profile image"
           className="profile-image placeholder cover default orion-fusion-theme"
           role="img"
@@ -49,6 +50,7 @@ exports[`correctly applies the theme context className 1`] = `
         width="75"
       />
       <span
+        aria-hidden={true}
         aria-label="A profile image"
         className="profile-image placeholder cover default orion-fusion-theme"
         role="img"
@@ -73,6 +75,7 @@ exports[`should render a Terra image with a placeholder prop 1`] = `
   isFluid={false}
   placeholder={
     <span
+      aria-hidden={true}
       aria-label="A profile image"
       className="profile-image placeholder cover default"
       role="img"
@@ -99,6 +102,7 @@ exports[`should render a profile image with fit style as contain 1`] = `
   isFluid={false}
   placeholder={
     <span
+      aria-hidden={true}
       aria-label="A profile image"
       className="profile-image placeholder contain default"
       role="img"
@@ -118,6 +122,7 @@ exports[`should render a profile image with fit style as contain 1`] = `
 
 exports[`should render an avatar image without Source prop 1`] = `
 <span
+  aria-hidden={false}
   aria-label="Default"
   className="profile-image placeholder cover default"
   role="img"
