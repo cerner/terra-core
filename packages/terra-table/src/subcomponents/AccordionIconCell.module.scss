@@ -1,0 +1,39 @@
+@import '~terra-mixins/lib/Mixins';
+
+:local {
+  .cell {
+    align-items: center;
+    border: 0;
+    display: flex;
+    flex: 0 0 auto;
+    word-break: break-word;
+  }
+
+  .accordion-icon {
+    background: var(--terra-table-section-header-accordion-icon-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path id="caretRight" d="M12,0l24,24L12,48V0z"/></svg>'));
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: var(--terra-table-section-header-accordion-icon-height, 0.7142857143rem);
+    transform: rotate(0deg);
+    width: var(--terra-table-section-header-accordion-icon-width, 0.7142857143rem);
+
+    // flips the icon about its vertical axis, presenting it in its mirrored-image form
+    [dir=rtl] & {
+      transform: scaleX(-1);
+    }
+
+    // tells the rtl postcss plugin to not transform this by default
+    [dir] &.is-open {
+      transform: rotate(90deg);
+    }
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--terra-table-chevron-cell-padding-left, 0.7142857143rem);
+    padding-right: var(--terra-table-chevron-cell-padding-right, 0.7142857143rem);
+  }
+}

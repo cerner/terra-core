@@ -13,9 +13,11 @@ import widthShape from './proptypes/widthShape';
 import Row from './subcomponents/_Row';
 import Cell from './subcomponents/_Cell';
 import Section from './subcomponents/_Section';
+import SectionOfParentChildRows from './subcomponents/_SectionOfParentChildRows';
 import HeaderRow from './subcomponents/_HeaderRow';
 import HeaderCell from './subcomponents/_HeaderCell';
 import ChevronCell from './subcomponents/_ChevronCell';
+import AccordionIconCell from './subcomponents/_AccordionIconCell';
 import CheckMarkCell from './subcomponents/_CheckMarkCell';
 import HeaderChevronCell from './subcomponents/_HeaderChevronCell';
 import HeaderCheckMarkCell from './subcomponents/_HeaderCheckMarkCell';
@@ -181,6 +183,16 @@ const createChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
+const createAccordionIconCell = (isParentRow, areItsChildRowsCollapsed) => {
+  if (isParentRow) {
+    return (
+      <AccordionIconCell 
+       isCollapsed={areItsChildRowsCollapsed}/>
+    );
+  }
+  return undefined;
+};
+
 const createHeaderCheckCell = (columnData, rowStyle, checkStyle) => {
   let cellAlignment;
   let cellOnAction;
@@ -233,7 +245,7 @@ const createHeaderChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
-const createRow = (tableData, rowData, rowIndex, sectionId) => {
+const createRow = (tableData, rowData, rowIndex, sectionId, isParentRow, areItsChildRowsCollapsed) => {
   let rowMetaData;
   let rowOnAction;
   let rowActiveState;
@@ -271,6 +283,8 @@ const createRow = (tableData, rowData, rowIndex, sectionId) => {
       dividerStyle={tableData.dividerStyle}
       refCallback={rowData.refCallback}
     >
+      
+      {createAccordionIconCell(isParentRow, areItsChildRowsCollapsed)}
       {createCheckCell(rowData, tableData.rowStyle, tableData.checkStyle)}
       {rowData.cells.map((cell, colIndex) => {
         const columnId = tableData.headerData && tableData.headerData.cells ? tableData.headerData.cells[colIndex].id : undefined;
@@ -283,12 +297,34 @@ const createRow = (tableData, rowData, rowIndex, sectionId) => {
   );
 };
 
+const createParentChildRows = (tableData, sectionData, rowIndex) => {
+  const rowArray = [];
+  rowIndex += 1;
+  rowArray.push(createRow(tableData, sectionData.parentRow.row, rowIndex, null, true, sectionData.parentRow.areItsChildRowsCollapsed));
+
+  if (!sectionData.parentRow.areItsChildRowsCollapsed) {
+    rowArray.push(...(sectionData.rows ? sectionData.rows.map(rowData => {
+      rowIndex += 1;
+      return createRow(tableData, rowData, rowIndex, null, false, false);
+    }) : undefined));
+  }
+  return rowArray;
+}
+
+/*
+          {createRow(tableData, section.parentRow.row, rowIndex, null, true, section.parentRow.isCollapsed)}
+          {section.rows ? section.rows.map(rowData => {
+            rowIndex += 1;
+            return createRow(tableData, rowData, rowIndex, null, false, false);
+          }) : undefined}
+*/
 const createSections = (tableData, headerIndex) => {
   if (!tableData.bodyData) {
     return { sections: undefined, sectionIndex: headerIndex };
   }
 
   let rowIndex = headerIndex;
+  let rowArray = [];
   const sections = tableData.bodyData.map((section) => {
     if (section.sectionHeader) {
       const header = section.sectionHeader;
@@ -307,15 +343,30 @@ const createSections = (tableData, headerIndex) => {
         >
           {section.rows ? section.rows.map(rowData => {
             rowIndex += 1;
-            return createRow(tableData, rowData, rowIndex, header.id);
+            return createRow(tableData, rowData, rowIndex, header.id, false, false);
           }) : undefined}
         </Section>
       );
     }
+    //{createRow(tableData, section.parentRow, rowIndex, null, true)}
+    //parent = {createRow(tableData, section.parentRow.rowData, rowIndex, null, true)}
+    if (section.parentRow) {
+      rowArray = [];
+      rowIndex += 1;
+      rowArray.push(createRow(tableData, section.parentRow.row, rowIndex, null, true, section.parentRow.areItsChildRowsCollapsed));
+    
+      if (!section.parentRow.isCollapsible || !section.parentRow.areItsChildRowsCollapsed) {
+        rowArray.push(...(section.rows ? section.rows.map(rowData => {
+          rowIndex += 1;
+          return createRow(tableData, rowData, rowIndex, null, false, false);
+        }) : undefined));
+      }
+      return rowArray;
+    }
     if (section.rows) {
       return section.rows.map(rowData => {
         rowIndex += 1;
-        return createRow(tableData, rowData, rowIndex, null);
+        return createRow(tableData, rowData, rowIndex, null, false, false);
       });
     }
     return undefined;
