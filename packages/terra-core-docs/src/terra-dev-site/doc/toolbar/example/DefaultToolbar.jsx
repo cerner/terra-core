@@ -4,6 +4,7 @@ import Button from 'terra-button';
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
 import IconAdd from 'terra-icon/lib/icon/IconAdd';
 import IconAttachment from 'terra-icon/lib/icon/IconAttachment';
+import { Placeholder } from '@cerner/terra-docs';
 
 export default () => {
   const [align, setAlign] = useState();
@@ -22,11 +23,14 @@ export default () => {
         </select>
       </label>
       <br />
-      <Toolbar align={align}>
+      <Toolbar ariaLabel="Documentation Tools" ariaControls="test-content-id" align={align}>
         <Button text="Edit" variant="utility" icon={<IconEdit />} />
         <Button text="Add" variant="utility" icon={<IconAdd />} />
         <Button text="Attachment" variant="utility" icon={<IconAttachment />} />
       </Toolbar>
+      <div id="test-content-id" aria-label="Add Progress Note Documentation">
+        <Placeholder title="Sample Content Area for Toolbar" />
+      </div>
     </div>
   );
 };

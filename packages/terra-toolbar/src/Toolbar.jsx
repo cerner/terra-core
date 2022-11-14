@@ -13,6 +13,24 @@ const propTypes = {
    */
   align: PropTypes.oneOf(['start', 'end', 'center']),
   /**
+   * String that labels the content that the toolbar controls. Should reference
+   * the id of the content area that the toolbar controls.
+   */
+  ariaControls: PropTypes.string,
+  /**
+   * String that labels the content that the toolbar controls. `ariaLabel` only be used
+   * when no visible label for the toolbar is present. `ariaLabelledBy` should be
+   * used over `ariaLabel` when possible.
+   */
+  ariaLabel: PropTypes.string,
+  /**
+   * String that labels the content that the toolbar controls. Should reference
+   * the visible text label that describes the toolbar's function. If no
+   * visible text label is present, `ariaLabel` should be used instead. If both
+   * `ariaLabel` and `ariaLabelledBy` are present, `ariaLabelledBy` will be used.
+   */
+  ariaLabelledBy: PropTypes.string,
+  /**
    * Items to be displayed in toolbar such as buttons, button groups, and links.
    */
   children: PropTypes.node,
@@ -23,7 +41,12 @@ const defaultProps = {
 };
 
 const Toolbar = ({
-  align, children, ...customProps
+  align,
+  ariaControls,
+  ariaLabel,
+  ariaLabelledBy,
+  children,
+  ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
 
@@ -38,7 +61,18 @@ const Toolbar = ({
 
   const items = React.Children.map(children, item => (item ? <div className={cx('item')}>{item}</div> : item));
 
-  return (<div {...customProps} className={toolbarClassNames} role="toolbar">{items}</div>);
+  return (
+    <div
+      {...customProps}
+      aria-controls={ariaControls}
+      aria-label={!ariaLabelledBy ? ariaLabel : undefined}
+      aria-labelledby={ariaLabelledBy}
+      className={toolbarClassNames}
+      role="toolbar"
+    >
+      {items}
+    </div>
+  );
 };
 
 Toolbar.propTypes = propTypes;
