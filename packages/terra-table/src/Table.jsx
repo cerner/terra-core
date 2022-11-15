@@ -13,7 +13,6 @@ import widthShape from './proptypes/widthShape';
 import Row from './subcomponents/_Row';
 import Cell from './subcomponents/_Cell';
 import Section from './subcomponents/_Section';
-import SectionOfParentChildRows from './subcomponents/_SectionOfParentChildRows';
 import HeaderRow from './subcomponents/_HeaderRow';
 import HeaderCell from './subcomponents/_HeaderCell';
 import ChevronCell from './subcomponents/_ChevronCell';
@@ -21,6 +20,7 @@ import AccordionIconCell from './subcomponents/_AccordionIconCell';
 import CheckMarkCell from './subcomponents/_CheckMarkCell';
 import HeaderChevronCell from './subcomponents/_HeaderChevronCell';
 import HeaderCheckMarkCell from './subcomponents/_HeaderCheckMarkCell';
+import HeaderAccordionIconCell from './subcomponents/_HeaderAccordionIconCell';
 
 const cx = classNamesBind.bind(styles);
 
@@ -109,6 +109,10 @@ const propTypes = {
    * The element id to associate to the descriptive text.
    */
   summaryId: PropTypes.string.isRequired,
+  /**
+   * Whether or not the table contains any rows that have parent & child relationship.
+   */
+   hasParentChildRows: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -183,13 +187,19 @@ const createChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
-const createAccordionIconCell = (isParentRow, areItsChildRowsCollapsed) => {
-  if (isParentRow) {
-    return (
-      <AccordionIconCell 
-       isCollapsed={areItsChildRowsCollapsed}/>
-    );
+const createAccordionIconCell = (hasParentChildRows, isParentRow, areItsChildRowsCollapsed) => {
+  if (hasParentChildRows) {
+    if (isParentRow) {
+      return (
+        <AccordionIconCell 
+          isCollapsed={areItsChildRowsCollapsed}
+        />
+      );
+    } else {
+      return <HeaderAccordionIconCell />;
+    }
   }
+
   return undefined;
 };
 
@@ -245,6 +255,13 @@ const createHeaderChevronCell = (rowStyle, hasChevrons) => {
   return undefined;
 };
 
+const createHeaderAccordionIconCell = (hasParentChildRows) => {
+  if (hasParentChildRows) {
+    return <HeaderAccordionIconCell />;
+  }
+  return undefined;
+};
+
 const createRow = (tableData, rowData, rowIndex, sectionId, isParentRow, areItsChildRowsCollapsed) => {
   let rowMetaData;
   let rowOnAction;
@@ -284,7 +301,7 @@ const createRow = (tableData, rowData, rowIndex, sectionId, isParentRow, areItsC
       refCallback={rowData.refCallback}
     >
       
-      {createAccordionIconCell(isParentRow, areItsChildRowsCollapsed)}
+      {createAccordionIconCell(tableData.hasParentChildRows, isParentRow, areItsChildRowsCollapsed)}
       {createCheckCell(rowData, tableData.rowStyle, tableData.checkStyle)}
       {rowData.cells.map((cell, colIndex) => {
         const columnId = tableData.headerData && tableData.headerData.cells ? tableData.headerData.cells[colIndex].id : undefined;
@@ -386,6 +403,7 @@ const createHeader = (tableData) => {
       <HeaderRow
         aria-rowindex={1} // Row count begins with the header.
       >
+        {createHeaderAccordionIconCell(tableData.hasParentChildRows)}
         {createHeaderCheckCell(tableData.headerData.selectAllColumn, tableData.rowStyle, tableData.checkStyle)}
         {tableData.headerData.cells.map((cellData, colIndex) => (
           <HeaderCell
@@ -434,6 +452,7 @@ const Table = ({
   showSimpleFooter,
   summary,
   summaryId,
+  hasParentChildRows,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -453,6 +472,8 @@ const Table = ({
     customProps.className,
   );
 
+  //const tempArray = bodyData.map(section => section.parentRow !== undefined);
+  //const hasParentChildRows = bodyData.map(section => section.parentRow != undefined).includes(true);
   const tableData = {
     headerData,
     bodyData,
@@ -462,6 +483,7 @@ const Table = ({
     hasChevrons,
     dividerStyle,
     numberOfColumns,
+    hasParentChildRows,
   };
   const { rowCount, header, sections } = unpackTableData(tableData);
 

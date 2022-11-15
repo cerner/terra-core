@@ -26,7 +26,11 @@ const AccordionIconCell = ({
     role="none"
   >
     <div className={cx('container')}>
-    <span className={cx(['accordion-icon', { 'is-open': !isCollapsed }])} />
+      <span 
+        className={cx(
+          ['accordion-icon', { 'is-open': !isCollapsed }]
+        )} 
+      />
     </div>
   </div>
 );

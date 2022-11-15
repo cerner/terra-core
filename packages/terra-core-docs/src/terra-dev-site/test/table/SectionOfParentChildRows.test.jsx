@@ -1,13 +1,28 @@
 import React from 'react';
 import Table from 'terra-table';
 
-const SectionTest = () => (
+const SectionOfParentChildRowsTest = () => (
   <Table
     summaryId="section-table"
     summary="This table displays section grouping."
     dividerStyle="both"
     cellPaddingStyle="standard"
     numberOfColumns={1}
+    hasParentChildRows={true}
+    headerData={{
+      cells: [
+        {
+          id: 'amy-header-column1',
+          key: 'amy-column0',
+          children: 'Amy Column 1',
+        },
+        {
+          id: 'amy-header-column2',
+          key: 'amy-column1',
+          children: 'Amy Column 2',
+        },
+      ],
+    }}
     bodyData={[
       {
         sectionHeader: {
@@ -181,4 +196,4 @@ const SectionTest = () => (
   />
 );
 
-export default SectionTest;
+export default SectionOfParentChildRowsTest;
