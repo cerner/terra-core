@@ -5,6 +5,9 @@
 * Changed
   * Sections and subsections updated to add programmatic context to communicate hierarchal relationships
 
+* Added
+  * Prop `instructions` - Conveys information about the list and how to interact with it.
+
 ## 4.51.5 - (July 5, 2022)
 
 * Changed

@@ -5,10 +5,13 @@
 * Added
   * Added Higher Order examples for `terra-profile-image`.
   * Added Accessibility Guide for `terra-Profile-image`.
+
+* Changed
   * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
   * Added Accordion Examples for `terra-section-header`.
   * Added accessibility guide for `terra-divider`.
   * Added tests and example for adding row header to `terra-html-table`.
+  * Added `terra-list` tests for instructions prop.
 
 * Changed
   * Updated `terra-list` section guide to not use listbox role.

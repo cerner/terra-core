@@ -18,6 +18,16 @@ const propTypes = {
    */
   dividerStyle: PropTypes.oneOf(['none', 'standard', 'bottom-only']),
   /**
+   * The visible or hidden text element on the page that conveys
+   * information about the list and how to interact with it.
+   */
+  instructions: PropTypes.string,
+  /**
+   * String that provides information about the list and how to interact
+   * with it.
+   */
+  instructionText: PropTypes.string,
+  /**
    * The padding styling to apply to the child list item content.
    * One of `'none'`, `'standard'`, `'compact'`.
    */
@@ -42,6 +52,8 @@ const defaultProps = {
 const List = ({
   children,
   dividerStyle,
+  instructions,
+  instructionText,
   paddingStyle,
   refCallback,
   role,
@@ -61,12 +73,20 @@ const List = ({
   );
 
   const attrSpread = {};
+  attrSpread.role = 'list'; // Explicitly set role='list' as it's missing in Safari
   if (role && role.length > 0 && role !== 'none') {
     attrSpread.role = role;
   }
 
   return (
-    <ul {...customProps} {...attrSpread} className={listClassNames} ref={refCallback}>
+    <ul
+      aria-describedby={instructions}
+      aria-description={instructionText}
+      {...customProps}
+      {...attrSpread}
+      className={listClassNames}
+      ref={refCallback}
+    >
       {children}
     </ul>
   );
