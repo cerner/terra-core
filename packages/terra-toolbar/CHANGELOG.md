@@ -4,6 +4,8 @@
 
 * Added
   * Role attribute is set as toolbar
+  * Prop `ariaLabel` - String that labels what content the toolbar controls.
+  * Prop `ariaLabelledBy` - String that labels what content (referencing the element id) the toolbar controls.
 
 ## 1.29.0 - (March 15, 2022)
 

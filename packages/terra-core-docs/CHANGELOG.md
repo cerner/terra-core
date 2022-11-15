@@ -3,10 +3,14 @@
 ## Unreleased
 
 * Changed
+  * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
+
+* Changed
   * Updated `terra-divider` tests and doc examples to include heading level prop.
 
 * Added
   * Added Accordion Examples for `terra-section-header`.
+  * Added accessibility guide for `terra-divider`
 
 ## 1.15.1 - (September 8, 2022)
 
