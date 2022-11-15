@@ -37,31 +37,45 @@ const propTypes = {
    * Title text to be placed within the section header.
    */
   title: PropTypes.string.isRequired,
+  /**
+   * Whether or not the section header should be visible.
+   */
+   isSectionHeaderVisible: PropTypes.bool,
 };
 
 const defaultProps = {
   children: [],
   isCollapsed: false,
   isCollapsible: false,
+  isSectionHeaderVisible: true,
 };
 
 const Section = ({
   children,
   isCollapsed,
   isCollapsible,
+  isSectionHeaderVisible,
   ...customProps
 }) => {
   let sectionItems;
   if (!isCollapsible || !isCollapsed) {
     sectionItems = children;
   }
-
-  return (
-    <React.Fragment>
-      <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
-      {sectionItems}
-    </React.Fragment>
-  );
+  if (isSectionHeaderVisible) {
+    return (
+      <React.Fragment>
+        <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
+        {sectionItems}
+      </React.Fragment>
+    );
+  } else {
+    return (
+      <React.Fragment>
+        {sectionItems}
+      </React.Fragment>
+    );
+  }
+  
 };
 
 Section.propTypes = propTypes;

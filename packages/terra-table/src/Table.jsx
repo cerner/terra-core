@@ -357,6 +357,7 @@ const createSections = (tableData, headerIndex) => {
           metaData={header.metaData}
           numberOfColumns={tableData.checkStyle !== 'toggle' && tableData.rowStyle === 'toggle' ? tableData.numberOfColumns + 1 : tableData.numberOfColumns}
           onSelect={header.onToggle}
+          isSectionHeaderVisible={header.isSectionHeaderVisible}
         >
           {section.rows ? section.rows.map(rowData => {
             rowIndex += 1;
