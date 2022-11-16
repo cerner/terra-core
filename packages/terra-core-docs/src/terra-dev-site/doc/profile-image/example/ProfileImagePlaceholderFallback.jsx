@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const ProfileImagePlaceholderFallback = () => (
   <div>
-    <ProfileImage alt="" src="invalid.jpg" width="75" height="75" aria-describedby="caption-example-2" />
+    <ProfileImage alt="profile image for Martin Moon, image failed to load" src="invalid.jpg" width="75" height="75" aria-describedby="caption-example-2" />
     <span id="caption-example-2" className={cx('add-left-margin')}>Failed or Invalid Image Source</span>
     <br />
     <br />

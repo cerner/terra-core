@@ -25,10 +25,10 @@ const ProfileImageHigherOrderComponent = () => {
           label="Dropdown"
           variant="ghost"
         >
-          <Item label="Your Profile" onSelect={() => setMessage('Your in profile')} />
-          <Item label="Your organization" onSelect={() => setMessage('Your in organization')} />
-          <Item label="Your enterprise" onSelect={() => setMessage('Your in  enterprise')} />
-          <Item label="Your projects" onSelect={() => setMessage('Your in projects')} />
+          <Item label="Your Profile" onSelect={() => setMessage('You are in profile')} />
+          <Item label="Your organization" onSelect={() => setMessage('You are in organization')} />
+          <Item label="Your enterprise" onSelect={() => setMessage('You are in  enterprise')} />
+          <Item label="Your projects" onSelect={() => setMessage('You are in projects')} />
         </DropdownButton>
         <p>{message}</p>
       </React.Fragment>
