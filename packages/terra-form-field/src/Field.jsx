@@ -182,7 +182,7 @@ const Field = (props) => {
       <label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
         {required && (isInvalid || !hideRequired) && <div className={cx('required')} aria-hidden="true">*</div>}
         {label}
-        {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
+        {required && !isInvalid && hideRequired && <div className={cx('required-hidden')} aria-hidden="true">*</div>}
         {showOptional && !required
             && (
               <FormattedMessage id="Terra.form.field.optional">
