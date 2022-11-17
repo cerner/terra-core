@@ -15,6 +15,12 @@ it('should render an avatar image without Source prop', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+/* Profile Image without ALT */
+it('should render an avatar image without alt prop', () => {
+  const wrapper = shallow(<ProfileImage height="75" width="75" />);
+  expect(wrapper).toMatchSnapshot();
+});
+
 /* Profile Image with fit as contain */
 it('should render a profile image with fit style as contain', () => {
   const wrapper = shallow(<ProfileImage src="profile.jpg" height="75" width="75" fit="contain" alt="A profile image" />);
