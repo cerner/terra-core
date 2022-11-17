@@ -133,7 +133,7 @@ exports[`should render an avatar image without Source prop 1`] = `
 exports[`should render an avatar image without alt prop 1`] = `
 <span
   className="profile-image placeholder cover default"
-  role="presenetation"
+  role="presentation"
   style={
     Object {
       "height": "75px",

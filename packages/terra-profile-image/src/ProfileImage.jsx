@@ -82,7 +82,7 @@ const ProfileImage = (props) => {
   const profileImagePlaceholder = (
     <span
       {...customProps}
-      role={alt ? 'img' : 'presenetation'}
+      role={alt ? 'img' : 'presentation'}
       aria-label={alt}
       style={placeholderSize}
       className={placeholderClassNames}
