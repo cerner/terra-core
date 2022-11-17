@@ -6,6 +6,9 @@
   * Set the hideRequired prop to be private
   * Set the isLabelHidden prop to be private
 
+* Removed
+  * Removed aria-live attribute from error message.
+
 ## 4.20.5 - (July 5, 2022)
 
 * Changed
