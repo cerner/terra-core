@@ -12,13 +12,13 @@ const ProfileImageExamples = () => (
     <Card>
       <Card.Body>
         <ProfileImage alt="" width="75" height="75" aria-describedby="caption-example-1" />
-        <span id="caption-example-1" className={cx('add-left-margin')}>Decorative Profile Image Source</span>
+        <span id="caption-example-1" className={cx('add-left-margin')}>Decorative Profile Image</span>
       </Card.Body>
     </Card>
     <Card>
       <Card.Body>
         <ProfileImage alt="profile image for Martin Moon, photograph from space of rising star over a planet's silhouette" src={exampleProfileImage} aria-describedby="caption-example-2" />
-        <span id="caption-example-2" className={cx('add-left-margin')}>Meaningful Profile Image Source</span>
+        <span id="caption-example-2" className={cx('add-left-margin')}>Meaningful Profile Image</span>
       </Card.Body>
     </Card>
   </div>
