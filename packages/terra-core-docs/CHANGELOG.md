@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added Accessibility Guide for `terra-Profile-image`.
+
 * Changed
   * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
 
