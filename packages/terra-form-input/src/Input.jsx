@@ -79,6 +79,7 @@ const propTypes = {
     PropTypes.number,
   ]),
   /**
+  * @private
   * String that labels the current element. 'aria-label' must be present,
   * for accessibility.
   */
