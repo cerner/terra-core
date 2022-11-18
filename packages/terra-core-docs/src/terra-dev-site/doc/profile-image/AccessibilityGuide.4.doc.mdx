@@ -77,9 +77,8 @@ The final responsibility lies with the consumers of Terra components — ens
 ### Primary accessibility criteria for Profile Image
 
 - [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content) - Partially Supports
-  - Terra Profile Image contains a meaningful alt tag. The ALT prop is listed as optional. Whenever null or no value provided for alt prop Terra Profile Image will be presented as decorative for accessibility user.
+  - Terra Profile Image contains a meaningful alt tag. The ALT prop is listed as optional. Whenever null or no value provided for alt prop Terra Profile Image will be presented as decorative for accessibility user. All images or anything with role = image must have an ALT attribute.
   - Engineers must assign a textual equivalent to the alt prop for meaningful images.
-  - **Note:** _All images or anything with role=image must have an ALT attribute_.
   - Content creators must provide engineers an alt prop that conveys the meaning of the image.
 - [**1.3.1 Info and Relationships**](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) — Supports
   - Terra provides the ability for information, structure, and relationships to be programmatically determined.
