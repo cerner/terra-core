@@ -5,16 +5,13 @@
 * Added
   * Added Higher Order examples for `terra-profile-image`.
   * Added Accessibility Guide for `terra-Profile-image`.
-
-* Changed
   * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
+  * Added Accordion Examples for `terra-section-header`.
+  * Added accessibility guide for `terra-divider`.
 
 * Changed
+  * Updated `terra-list` section guide to not use listbox role.
   * Updated `terra-divider` tests and doc examples to include heading level prop.
-
-* Added
-  * Added Accordion Examples for `terra-section-header`.
-  * Added accessibility guide for `terra-divider`
 
 ## 1.15.1 - (September 8, 2022)
 
