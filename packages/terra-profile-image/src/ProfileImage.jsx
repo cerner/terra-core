@@ -103,6 +103,7 @@ const ProfileImage = (props) => {
         {...customProps}
         src={src}
         alt={alt}
+        role={alt ? 'img' : 'presentation'}
         height={height}
         width={width}
         fit={fit}

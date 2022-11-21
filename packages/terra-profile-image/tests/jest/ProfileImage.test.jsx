@@ -9,6 +9,12 @@ it('should render a Terra image with a placeholder prop', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+/* Profile Image with source and without ALt */
+it('should render a Terra image with a placeholder prop without alt prop', () => {
+  const wrapper = shallow(<ProfileImage src="profile.jpg" height="75" width="75" alt="" />);
+  expect(wrapper).toMatchSnapshot();
+});
+
 /* Profile Image source is not provided */
 it('should render an avatar image without Source prop', () => {
   const wrapper = shallow(<ProfileImage alt="Default" height="75" width="75" />);
