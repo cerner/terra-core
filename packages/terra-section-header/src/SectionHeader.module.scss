@@ -17,11 +17,11 @@
     box-shadow: var(--terra-section-header-box-shadow, none);
     color: var(--terra-section-header-color, #1c1f21);
     display: flex;
+    margin: 0;
     min-height: var(--terra-section-header-min-height, 2.5rem);
     padding-bottom: var(--terra-section-header-padding-bottom, 0.5rem);
     padding-top: var(--terra-section-header-padding-top, 0.5rem);
     width: 100%;
-    margin: 0;
 
     &.is-interactable {
       @include terra-padding-start(var(--terra-section-header-accordion-padding-start, 0.5rem));
