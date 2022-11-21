@@ -937,6 +937,7 @@ exports[`should render a required field label with required hidden 1`] = `
     >
       Field Label
       <div
+        aria-hidden="true"
         className="required-hidden"
       >
         *

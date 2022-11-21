@@ -5,6 +5,7 @@
 * Changed
   * Set the hideRequired prop to be private
   * Set the isLabelHidden prop to be private
+  * Set an asterisk denoting required field to be aria-hidden
 
 * Removed
   * Removed aria-live attribute from error message.

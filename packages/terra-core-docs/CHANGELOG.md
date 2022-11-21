@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Added
+  * Added Higher Order examples for `terra-profile-image`.
+  * Added Accessibility Guide for `terra-Profile-image`.
+
 * Changed
   * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
 
