@@ -21,6 +21,7 @@
     padding-bottom: var(--terra-section-header-padding-bottom, 0.5rem);
     padding-top: var(--terra-section-header-padding-top, 0.5rem);
     width: 100%;
+    margin: 0;
 
     &.is-interactable {
       @include terra-padding-start(var(--terra-section-header-accordion-padding-start, 0.5rem));
@@ -139,6 +140,15 @@
     // tells the rtl postcss plugin to not transform this by default
     [dir] &.is-open {
       transform: rotate(90deg);
+    }
+  }
+
+  .arrange-wrapper {
+    margin: 0;
+    width: 100%;
+
+    &:focus {
+      outline: none;
     }
   }
 }
