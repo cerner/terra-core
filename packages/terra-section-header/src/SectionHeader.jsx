@@ -115,7 +115,7 @@ class SectionHeader extends React.Component {
     ]);
 
     const accordionIcon = (
-      <div className={cx('accordion-icon-wrapper')} role="button" aria-expanded={isOpen} aria-label={headerText} tabIndex="-1">
+      <div className={cx('accordion-icon-wrapper')}>
         <span className={iconClassNames} />
       </div>
     );
@@ -140,11 +140,13 @@ class SectionHeader extends React.Component {
     /* eslint-disable jsx-a11y/no-static-element-interactions */
     return (
       <Element {...attributes} onClick={onClick} className={sectionHeaderClassNames} tabIndex="0">
-        <Arrange
-          fitStart={onClick && accordionIcon}
-          fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
-          className={cx('title-arrange')}
-        />
+        <div role="button" aria-expanded={isOpen} tabIndex="-1" aria-label={headerText} className={cx('arrange-wrapper')}>
+          <Arrange
+            fitStart={onClick && accordionIcon}
+            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
+            className={cx('title-arrange')}
+          />
+        </div>
       </Element>
     );
     /* eslint-enable jsx-a11y/no-static-element-interactions */
