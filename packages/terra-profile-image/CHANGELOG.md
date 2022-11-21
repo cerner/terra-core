@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed 
+  * Added `role = presentation` for Decorative profile-image.
+
 ## 3.41.1 - (January 4, 2022)
 
 * Changed

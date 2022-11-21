@@ -11,7 +11,7 @@ const ProfileImagePlaceholderFallback = () => (
     <span id="caption-example-2" className={cx('add-left-margin')}>Failed or Invalid Image Source</span>
     <br />
     <br />
-    <ProfileImage alt="no photo provided" aria-describedby="caption-example-3" />
+    <ProfileImage alt="" aria-describedby="caption-example-3" />
     <span id="caption-example-3" className={cx('add-left-margin')}>No Provided Image Source</span>
   </div>
 );
