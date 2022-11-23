@@ -7,14 +7,16 @@ import Table from 'terra-table';
 import sectionShape from './proptypes/sectionShape';
 import headerShape from './proptypes/headerShape';
 import widthShape from './proptypes/widthShape';
-import styles from './Table.module.scss';
+import styles from './OutlineViewTable.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
-   * An array of sections containing rows.
-   * TODO: Not final shape as row headers and parent/children  heirarchies are still needed to be addressed. NOTE: make sure bodyData rows have toggleAction with a toggleLabel, otherwise tests fail aria.
+   * An array of sections containing rows. **TODO: Not final shape as row headers and parent/children
+   * hierarchies are still needing to be addressed.**
+   *
+   * _NOTE: make sure `bodyData` rows have `toggleAction` with a `toggleLabel`, otherwise tests fail aria._
    */
   bodyData: PropTypes.arrayOf(sectionShape),
   /**
@@ -63,7 +65,7 @@ const propTypes = {
 const defaultProps = {
 };
 
-const OutlineTableView = ({
+const OutlineViewTable = ({
   bodyData,
   columnWidths,
   fill,
@@ -106,7 +108,7 @@ const OutlineTableView = ({
   );
 };
 
-OutlineTableView.propTypes = propTypes;
-OutlineTableView.defaultProps = defaultProps;
+OutlineViewTable.propTypes = propTypes;
+OutlineViewTable.defaultProps = defaultProps;
 
-export default OutlineTableView;
+export default OutlineViewTable;

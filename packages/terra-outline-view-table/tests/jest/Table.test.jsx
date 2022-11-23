@@ -1,6 +1,6 @@
 import React from 'react';
 
-import OutlineTableView from '../../src/Table';
+import OutlineTableView from '../../src/OutlineViewTable';
 
 describe('OutlineTableView', () => {
   // Snapshot Tests

@@ -1,0 +1,10 @@
+// Themes
+@import './clinical-lowlight-theme/OutlineViewTable.module';
+@import './orion-fusion-theme/OutlineViewTable.module';
+
+:local {
+  // TODO: Replace with actual styles -- placeholder temporary styling only
+  .outline {
+    border: 1px solid #dedfe0;
+  }
+}
