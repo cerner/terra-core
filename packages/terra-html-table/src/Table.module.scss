@@ -25,6 +25,7 @@
     }
 
     // Row Cell
+    th,
     td {
       border: 0;
       border-left: var(--terra-html-table-cell-border-left, 0);
@@ -44,7 +45,7 @@
     }
 
     // Header Cell
-    th {
+    thead th {
       border: 0;
       border-right: var(--terra-html-table-header-cell-border-right, 1px solid rgba(200, 202, 203, 0.5));
       display: table-cell;
