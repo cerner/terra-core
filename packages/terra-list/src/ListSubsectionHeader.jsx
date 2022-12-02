@@ -90,7 +90,7 @@ const ListSubsectionHeader = ({
 
   const attrSpread = {};
   const Element = `h${level}`;
-  let titleElement = <Element className={cx('title')}>{title}</Element>;
+  const titleElement = <div className={cx('fill')}>{title}</div>;
   let accordionIcon;
   if (isCollapsible) {
     accordionIcon = (
@@ -98,27 +98,25 @@ const ListSubsectionHeader = ({
         <span className={cx(['accordion-icon', { 'is-open': !isCollapsed }])} />
       </div>
     );
-    titleElement = (
-      <div className={cx('fill')}>
-        {titleElement}
-      </div>
-    );
 
     attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
     attrSpread.tabIndex = '0';
-    attrSpread.role = 'heading';
+    attrSpread.role = 'button';
     attrSpread['aria-expanded'] = !isCollapsed;
-    attrSpread['aria-level'] = 2;
     attrSpread['data-item-show-focus'] = 'true';
     attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
 
   return (
-    <li {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
-      {accordionIcon}
-      {titleElement}
+    <li>
+      <Element className={cx('title')}>
+        <div {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
+          {accordionIcon}
+          {titleElement}
+        </div>
+      </Element>
     </li>
   );
 };
