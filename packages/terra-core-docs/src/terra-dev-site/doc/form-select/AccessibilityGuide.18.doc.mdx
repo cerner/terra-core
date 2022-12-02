@@ -1,5 +1,4 @@
 import { Badge } from 'terra-form-select/package.json?dev-site-package';
-import SingleSelectExample from './example/SingleSelectExample';
 import SelectFieldExample from './example/SelectFieldExample';
 <Badge />
 
@@ -55,28 +54,6 @@ import SelectFieldExample from './example/SelectFieldExample';
   - Ensure nothing unexpected happens on focus or on select of a Select Field.
 - Work with Content Creators to understand how content should resize and reflow at different breakpoints and form factors to ensure content is not artificially constrained or cut off at smaller view ports.
 - Ensure that Select Field is implemented correctly to programmatically associate all related content (visible label, helper text, error messaging) to the field
-
-<div aria-label="Example Demo">
-  <SingleSelectExample />
-</div>
-
-```jsx
-const cx = classNames.bind(styles);
-
-const SingleSelectExample = () => (
-  <Card>
-    <Card.Body>
-      <SingleSelect placeholder="Select Allergies" className={cx('form-select')}>
-        <SingleSelect.Option value="cats" display="Cats" />
-        <SingleSelect.Option value="dogs" display="Dogs" />
-        <SingleSelect.Option value="dust" display="Dust" />
-        <SingleSelect.Option value="mold" display="Mold" />
-        <SingleSelect.Option value="latex" display="Latex" />
-      </SingleSelect>
-    </Card.Body>
-  </Card>
-);
-```
   - Ensure the visible select Label matches any artificially applied programmatic label.
   - Do not change the placement of any of the related content to other areas around the field. For example, do not move the select label creating large gaps between the field and the label.
 - Ensure validation can provide users the necessary details to understand any errors.
@@ -93,12 +70,11 @@ const cx = classNames.bind(styles);
 const SelectFieldExample = () => (
   <Card>
     <Card.Body>
-      <SelectField label="T-shirt size" placeholder="Select a size" selectId="tshirt-size-field-3" className={cx('form-select')}>
-        <SelectField.Option value="xSmall" display="Extra Small" />
-        <SelectField.Option value="small" display="Small" />
-        <SelectField.Option value="medium" display="Medium" />
-        <SelectField.Option value="large" display="Large" />
-        <SelectField.Option value="xLarge" display="Extra Large" />
+      <SelectField label="Allergies Hospital Locations" placeholder="Select clinic for location" selectId="Hospital-location-field" className={cx('form-select')}>
+        <SelectField.Option value="Kansas,MO" display="Cerner,Kansas City, MO" />
+        <SelectField.Option value="Riverport Campus, MO" display="Cerner Corporation - Riverport Campus" />
+        <SelectField.Option value="Innovations Campus, MO" display="Cerner Corporation - Innovations Campus" />
+        <SelectField.Option value="Realization Campus, MO" display="Cerner Corporation - Realization Campus" />
       </SelectField>
     </Card.Body>
   </Card>
@@ -107,15 +83,13 @@ const SelectFieldExample = () => (
 
 ## Usability Expectations
 
-### Interaction Detail
-
-- Select field should be able to receive focus and have item selected in them.
-
-### Usability Expectations
-
 - The user expects to understand the purpose of the select field.
 - The user expects to understand the state (Expand or collapse) of select field.
 - The user expects to understand any requirements of the select field. For example, is it required, etc.
+
+### Interaction Detail
+
+- Select field should be able to receive focus and have item selected in them.
 
 ### Keyboard Expectations
 
