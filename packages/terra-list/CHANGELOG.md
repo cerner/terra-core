@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Sections and subsections updated to add programmatic context to communicate hierarchal relationships
+
 ## 4.51.5 - (July 5, 2022)
 
 * Changed

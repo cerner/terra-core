@@ -1,6 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import classNamesBind from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import SectionHeader from './ListSectionHeader';
+import styles from './List.module.scss';
+
+const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -57,11 +63,24 @@ const ListSection = ({
     sectionItems = children;
   }
 
+  const theme = React.useContext(ThemeContext);
+  const listClassNames = classNames(
+    cx(
+      'list',
+      theme.className,
+    ),
+    customProps.className,
+  );
+
   return (
-    <React.Fragment>
+    <>
       <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
-      {sectionItems}
-    </React.Fragment>
+      <li>
+        <ul {...customProps} className={listClassNames}>
+          {sectionItems}
+        </ul>
+      </li>
+    </>
   );
 };
 
