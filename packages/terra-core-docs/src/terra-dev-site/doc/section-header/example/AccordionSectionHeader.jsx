@@ -14,12 +14,12 @@ const AccordionSectionHeader = () => {
   };
 
   return (
-    <AccoordianExampleTemplate title="Patient is Allergic to:" heading="Accordion Section Header" sectionHeaderAttrs={sectionHeaderProps}>
-      <p>Cats</p>
-      <p>Dogs</p>
-      <p>Dust</p>
-      <p>Mold</p>
-      <p>Latex</p>
+    <AccoordianExampleTemplate title="Patient Allergy details:" heading="Accordion Section Header" sectionHeaderAttrs={sectionHeaderProps}>
+      <p>Allergic to Cats</p>
+      <p>Allergic to Dogs</p>
+      <p>Allergic to Dust</p>
+      <p>Allergic to Mold</p>
+      <p>Allergic to Latex</p>
     </AccoordianExampleTemplate>
   );
 };
