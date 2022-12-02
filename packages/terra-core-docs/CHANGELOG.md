@@ -11,6 +11,7 @@
 * Added
   * Added Accordion Examples for `terra-section-header`.
   * Added accessibility guide for `terra-divider`
+  * Added tests and example for adding row header to `terra-html-table`.
 
 ## 1.15.1 - (September 8, 2022)
 
