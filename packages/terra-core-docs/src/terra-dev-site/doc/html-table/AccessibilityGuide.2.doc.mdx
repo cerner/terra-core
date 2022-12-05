@@ -1,6 +1,6 @@
 import { Badge } from 'terra-html-table/package.json?dev-site-package';
 import { Notice } from "@cerner/terra-docs";
-import Whitespace from "../../common/layout-helpers/Whitespace";
+import RowHeaderTable from './example/RowHeaderTable';
 
 <Badge />
 
@@ -21,7 +21,7 @@ Tables are a simple and intuitive way to display tabular information that is rel
       - For example, in a patient list the patient’s name in the first column of the row should be the row header because it describes what the other content is referring to. 
       - In most instances, row headers should be the first column of the table but may be the second column if there are checkboxes in the first. Very rarely should the row header be in a column after the first or second column. 
     - Each column header must also describe the content within the column. 
-      - It is appropriate to have a column header that describes the column filled with all the row headers. For example, the column with a patient name as row header would have a column header “Patient” or “Patient Name” – whatever would best describe the content and purpose of the column. 
+      - It is appropriate to have a column header that describes the column filled with all the row headers. For example, the column with a patient name as row header would have a column header “Patient” or “Patient Name” – whatever would best describe the content and purpose of the column.
   - Communicate to engineers which column should within a row if it is not the first column. 
     - It is best practice is to have the first or second column used to display row headers.  
     - Most tables at Cerner should use both row headers and column headers, though there may be a an extremely few instances where a table only requires headers on only one axis. 
@@ -37,7 +37,88 @@ Tables are a simple and intuitive way to display tabular information that is rel
 - Do not make a table cell, row, or column receive keyboard focus. Only actionable elements within a table should receive keyboard focus. 
 - Do NOT make any part of the HTML Table (rows, columns, cells, etc.) receive keyboard focus - only interactive content within the cells should receive focus. 
 - Engineers are responsible for ensuring all interactive elements within a table can receive keyboard focus, can be interacted with, and acted upon. 
-- Most tables at Cerner will require both column and row headers to ensure tabular relationships can be understood programmatically. (DEV TO SHOW EXAMPLE OF ADDING COLUMN AND ROW HEADERS AND HOW TO ASSIGN A SECOND COLUMN AS ROW HEADER) 
+- Most tables at Cerner will require both column and row headers to ensure tabular relationships can be understood programmatically.
+
+<Notice ariaLevel="4">
+
+  **Accessibility Guidance: Adding table with offset row header**
+
+  <div aria-label="Example Demo">
+    <RowHeaderTable />
+  </div>
+
+  ```jsx
+    <Table paddingStyle="compact" disableStripes>
+    <caption>
+      Requested Quantities of Aspirin from the Last Six Months (table with row header cells in an offset column)
+    </caption>
+    <Header>
+      <HeaderCell key="ID"><abbr title="Identification Number">Patient ID</abbr></HeaderCell>
+      <HeaderCell key="NAME">Patient Name</HeaderCell>
+      <HeaderCell key="JUL">July</HeaderCell>
+      <HeaderCell key="AUG">August</HeaderCell>
+      <HeaderCell key="SEPT">September</HeaderCell>
+      <HeaderCell key="OCT">October</HeaderCell>
+      <HeaderCell key="NOV">November</HeaderCell>
+      <HeaderCell key="DEC">December</HeaderCell>
+    </Header>
+    <Body>
+      <Row>
+        <Cell key="ID">215</Cell>
+        <HeaderCell key="NAME">Abel</HeaderCell>
+        <Cell key="JUL">5</Cell>
+        <Cell key="AUG">2</Cell>
+        <Cell key="SEPT">0</Cell>
+        <Cell key="OCT">0</Cell>
+        <Cell key="NOV">0</Cell>
+        <Cell key="DEC">3</Cell>
+      </Row>
+      <Row>
+        <Cell key="ID">231</Cell>
+        <HeaderCell key="NAME">Annette </HeaderCell>
+        <Cell key="JUL">0</Cell>
+        <Cell key="AUG">5</Cell>
+        <Cell key="SEPT">3</Cell>
+        <Cell key="OCT">0</Cell>
+        <Cell key="NOV">0</Cell>
+        <Cell key="DEC">6</Cell>
+      </Row>
+      <Row>
+        <Cell key="ID">173</Cell>
+        <HeaderCell key="NAME">Bernard</HeaderCell>
+        <Cell key="JUL">2</Cell>
+        <Cell key="AUG">0</Cell>
+        <Cell key="SEPT">0</Cell>
+        <Cell key="OCT">5</Cell>
+        <Cell key="NOV">0</Cell>
+        <Cell key="DEC">0</Cell>
+      </Row>
+      <Row>
+        <Cell key="ID">141</Cell>
+        <HeaderCell key="NAME">Gerald</HeaderCell>
+        <Cell key="JUL">0</Cell>
+        <Cell key="AUG">10</Cell>
+        <Cell key="SEPT">0</Cell>
+        <Cell key="OCT">0</Cell>
+        <Cell key="NOV">0</Cell>
+        <Cell key="DEC">8</Cell>
+      </Row>
+      <Row>
+        <Cell key="ID">99</Cell>
+        <HeaderCell key="NAME">Michael</HeaderCell>
+        <Cell key="JUL">8</Cell>
+        <Cell key="AUG">8</Cell>
+        <Cell key="SEPT">8</Cell>
+        <Cell key="OCT">8</Cell>
+        <Cell key="NOV">0</Cell>
+        <Cell key="DEC">4</Cell>
+      </Row>
+    </Body>
+  </Table>
+  ```
+
+</Notice>
+
   - By default, row headers should be the first column but may be the second column if the first column contains checkboxes to select a row. 
     - Work with content creators to understand placement of row headers should the need be different. 
     - Very rarely should row headers be assigned beyond the second column. 
