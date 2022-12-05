@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Added
+  * Added Accessibility Guide for `terra-form-select`.
+
+* Added
   * Added Higher Order examples for `terra-profile-image`.
   * Added Accessibility Guide for `terra-Profile-image`.
   * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
