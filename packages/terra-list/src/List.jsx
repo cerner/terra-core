@@ -81,7 +81,7 @@ const List = ({
   return (
     <ul
       aria-describedby={instructions}
-      aria-description={instructionText}
+      aria-description={instructionText} // eslint-disable-line jsx-a11y/aria-props
       {...customProps}
       {...attrSpread}
       className={listClassNames}
