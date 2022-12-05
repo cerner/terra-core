@@ -35,10 +35,6 @@ const propTypes = {
    */
   help: PropTypes.node,
   /**
-   * Whether to hide the required indicator on the label.
-   */
-  hideRequired: PropTypes.bool,
-  /**
    * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
    */
   isIncomplete: PropTypes.bool,
@@ -50,10 +46,6 @@ const propTypes = {
    * Whether the field displays as Invalid. Use when value does not meet validation pattern.
    */
   isInvalid: PropTypes.bool,
-  /**
-   * Whether the label is hidden. Allows hiding the label while meeting accessibility guidelines.
-   */
-  isLabelHidden: PropTypes.bool,
   /**
    * Additional attributes to spread onto the label.
    */
@@ -106,11 +98,9 @@ const defaultProps = {
   disabled: false,
   error: undefined,
   help: undefined,
-  hideRequired: false,
   isIncomplete: false,
   isInline: false,
   isInvalid: false,
-  isLabelHidden: false,
   labelAttrs: {},
   maxHeight: undefined,
   maxWidth: undefined,
@@ -129,11 +119,9 @@ const SingleSelectField = ({
   disabled,
   error,
   help,
-  hideRequired,
   isIncomplete,
   isInline,
   isInvalid,
-  isLabelHidden,
   label,
   labelAttrs,
   maxHeight,
@@ -168,12 +156,10 @@ const SingleSelectField = ({
       labelAttrs={labelAttrs}
       error={error}
       help={help}
-      hideRequired={hideRequired}
       required={required}
       showOptional={showOptional}
       isInvalid={isInvalid}
       isInline={isInline}
-      isLabelHidden={isLabelHidden}
       htmlFor={selectId}
       maxWidth={maxWidth}
     >
