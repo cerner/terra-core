@@ -20,22 +20,31 @@ exports[`correctly applies the theme context className 1`] = `
           <tr>
             <TableHeaderCell
               key="NAME"
+              scope="col"
             >
-              <th>
+              <th
+                scope="col"
+              >
                 Name
               </th>
             </TableHeaderCell>
             <TableHeaderCell
               key="ADDRESS"
+              scope="col"
             >
-              <th>
+              <th
+                scope="col"
+              >
                 Address
               </th>
             </TableHeaderCell>
             <TableHeaderCell
               key="PHONE_NUMBER"
+              scope="col"
             >
-              <th>
+              <th
+                scope="col"
+              >
                 Phone Number
               </th>
             </TableHeaderCell>

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Added ability to add row headers to the table.
+
 ## 1.14.0 - (July 14, 2022)
 
 * Fixed

@@ -11,6 +11,7 @@
   * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
   * Added Accordion Examples for `terra-section-header`.
   * Added accessibility guide for `terra-divider`.
+  * Added tests and example for adding row header to `terra-html-table`.
 
 * Changed
   * Updated `terra-list` section guide to not use listbox role.

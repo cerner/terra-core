@@ -6,16 +6,19 @@ exports[`should render table header tag 1`] = `
     <TableHeaderCell
       key="NAME"
       onClick={[MockFunction]}
+      scope="col"
     >
       Name
     </TableHeaderCell>
     <TableHeaderCell
       key="ADDRESS"
+      scope="col"
     >
       Address
     </TableHeaderCell>
     <TableHeaderCell
       key="PHONE_NUMBER"
+      scope="col"
     >
       Phone Number
     </TableHeaderCell>
