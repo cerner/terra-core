@@ -105,6 +105,7 @@ const Option = ({
       aria-disabled={disabled}
       tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
       data-terra-select-option
+      aria-label={`${display} (${customProps.index} of ${customProps.totalOptions})`}
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
       <span className={cx('display')}>{display}</span>

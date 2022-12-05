@@ -393,6 +393,8 @@ class Menu extends React.Component {
           isCheckable: false,
           isSelected: MenuUtil.isSelected(this.props.value, option.props.value),
           variant: 'default',
+          totalOptions: object.length,
+          index: object.indexOf(option) + 1,
           onMouseDown: () => { this.downOption = option; },
           onMouseUp: event => this.handleOptionClick(event, option),
           onMouseEnter: event => this.handleMouseEnter(event, option),
