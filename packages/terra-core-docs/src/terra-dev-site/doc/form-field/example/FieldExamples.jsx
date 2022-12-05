@@ -57,10 +57,10 @@ const FieldExamples = () => {
       </Field>
 
       <Field
-        label="Field Label and input with Accessibilty Hooks"
+        label="E-mail Field Label with Accessibilty Hooks"
         htmlFor="input_id"
-        help="This is a standard field with help text from accessibility hooks."
-        error="This is error text with accessibility hooks"
+        help="Please enter a valid e-mail address"
+        error="The e-mail address entered is invalid"
         isInvalid={isInvalid}
         >
           <input id="input_id" aria-describedby="input_id-error input_id-help"/>
