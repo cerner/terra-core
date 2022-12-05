@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const SelectFieldExample = () => (
   <Card>
     <Card.Body>
-      <SelectField label="Allergies Hospital Locations" placeholder="Select clinic for location" selectId="Hospital-location-field" className={cx('form-select')}>
+      <SelectField label="Allergies Hospitals" placeholder="Select a location" selectId="Hospital-location-field" className={cx('form-select')}>
         <SelectField.Option value="Kansas,MO" display="Cerner,Kansas City, MO" />
         <SelectField.Option value="Riverport Campus, MO" display="Cerner Corporation - Riverport Campus" />
         <SelectField.Option value="Innovations Campus, MO" display="Cerner Corporation - Innovations Campus" />
