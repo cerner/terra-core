@@ -55,6 +55,17 @@ const FieldExamples = () => {
       >
         <div className={cx('field-content')}>Control Placeholder</div>
       </Field>
+
+      <Field
+        label="Field Label and input with Accessibilty Hooks"
+        htmlFor="input_id"
+        help="This is a standard field with help text from accessibility hooks."
+        error="This is error text with accessibility hooks"
+        isInvalid={isInvalid}
+        >
+          <input id="input_id" aria-describedby="input_id-error input_id-help"/>
+        </Field>
+
       <hr />
       <p>
         If a field is invalid, an error icon will be displayed.
