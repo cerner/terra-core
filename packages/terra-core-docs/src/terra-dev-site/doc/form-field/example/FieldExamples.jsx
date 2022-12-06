@@ -55,6 +55,18 @@ const FieldExamples = () => {
       >
         <div className={cx('field-content')}>Control Placeholder</div>
       </Field>
+
+      <p> Accessibility Hooks Example Field Label </p>
+      <Field
+        label="E-mail Label"
+        htmlFor="input_id"
+        help="Please enter a valid e-mail address."
+        error="The e-mail address entered is invalid."
+        isInvalid={isInvalid}
+      >
+        <input id="input_id" aria-describedby="input_id-error input_id-help" />
+      </Field>
+
       <hr />
       <p>
         If a field is invalid, an error icon will be displayed.

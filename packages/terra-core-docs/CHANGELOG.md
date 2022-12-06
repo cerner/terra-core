@@ -13,10 +13,12 @@
   * Added accessibility guide for `terra-divider`.
   * Added tests and example for adding row header to `terra-html-table`.
   * Added accessibility guide for `terra-html-table`.
+  * Added an accessibility hooks example for `terra-form-field` and `terra-input`.
 
 * Changed
   * Updated `terra-list` section guide to not use listbox role.
   * Updated `terra-divider` tests and doc examples to include heading level prop.
+  * Updated `terra-section-header` tests and examples.
 
 ## 1.15.1 - (September 8, 2022)
 

@@ -128,7 +128,7 @@ class ToggleSectionHeader extends React.Component {
           aria-expanded={this.state.isOpen}
           isOpen={this.state.isOpen}
           level={level}
-          title={title}
+          text={title}
           isTransparent={isTransparent}
         />
         <Toggle isAnimated={isAnimated} isOpen={this.state.isOpen}>
