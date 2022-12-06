@@ -4,7 +4,7 @@ import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 const HiddenInstructionsListTest = () => (
   <>
-    <List instructions="list-help">
+    <List ariaDescribedBy="list-help">
       <Item key="0">
         <p>Item 1</p>
       </Item>

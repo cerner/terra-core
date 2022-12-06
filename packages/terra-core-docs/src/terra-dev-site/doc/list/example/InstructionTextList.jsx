@@ -7,7 +7,7 @@ import styles from './ListDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const InstructionTextList = () => (
-  <List instructionText="Here are some instructions for using this list.">
+  <List ariaDescription="Here are some instructions for using this list.">
     <Item key="123">
       <Placeholder title="Item 0" className={cx('placeholder')} />
     </Item>

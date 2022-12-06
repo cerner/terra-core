@@ -64,7 +64,7 @@ it('should render with thin padded items', () => {
   expect(shallowComponent).toMatchSnapshot();
 });
 
-it('should render with thin padded items', () => {
+it('should render with ariaDescribedBy', () => {
   const item1 = <Item key="123" />;
   const item2 = <Item key="124" />;
   const item3 = <Item key="125" />;
@@ -74,8 +74,21 @@ it('should render with thin padded items', () => {
   const shallowComponent = shallow(
     <div>
       <p id="list-help"> Navigate this list using the arrow keys. </p>
-      <List instructions="list-help">{items}</List>
+      <List ariaDescribedBy="list-help">{items}</List>
     </div>,
+  );
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render with ariaDescription', () => {
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
+  const items = [item1, item2, item3, item4, item5];
+  const shallowComponent = shallow(
+    <List ariaDescription="Navigate this list using the arrow keys.">{items}</List>,
   );
   expect(shallowComponent).toMatchSnapshot();
 });

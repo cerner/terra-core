@@ -13,7 +13,7 @@ const SelectableInstructionsListTest = () => {
 
   return (
     <>
-      <List instructions="list-help" role="listbox">
+      <List ariaDescribedBy="list-help" role="listbox">
         <Item key="1" isSelectable isSelected={selected.selectedKey === '1'} metaData={{ key: '1' }} onSelect={handleSelectItem}>
           <p>Item 1</p>
         </Item>

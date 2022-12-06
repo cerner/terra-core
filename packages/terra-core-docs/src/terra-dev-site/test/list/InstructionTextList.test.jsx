@@ -2,7 +2,7 @@ import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
 
 const InstructionTextList = () => (
-  <List instructionText="Here are some instructions for using this list.">
+  <List ariaDescription="Here are some instructions for using this list.">
     <Item key="0">
       <p>Item 1</p>
     </Item>

@@ -13,7 +13,7 @@ const HiddenInstructionsList = () => (
       id="list-help"
       text="Here are some instructions for using this list."
     />
-    <List instructions="list-help">
+    <List ariaDescribedBy="list-help">
       <Item key="123">
         <Placeholder title="Item 0" className={cx('placeholder')} />
       </Item>

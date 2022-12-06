@@ -22,12 +22,12 @@ const propTypes = {
    * on the page that conveys information about the list
    * and how to interact with it.
    */
-  instructions: PropTypes.string,
+  ariaDescribedBy: PropTypes.string,
   /**
    * String that provides information about the list and how to interact
    * with it.
    */
-  instructionText: PropTypes.string,
+  ariaDescription: PropTypes.string,
   /**
    * The padding styling to apply to the child list item content.
    * One of `'none'`, `'standard'`, `'compact'`.
@@ -53,8 +53,8 @@ const defaultProps = {
 const List = ({
   children,
   dividerStyle,
-  instructions,
-  instructionText,
+  ariaDescribedBy,
+  ariaDescription,
   paddingStyle,
   refCallback,
   role,
@@ -81,8 +81,8 @@ const List = ({
 
   return (
     <ul
-      aria-describedby={instructions}
-      aria-description={instructionText} // eslint-disable-line jsx-a11y/aria-props
+      aria-describedby={ariaDescribedBy}
+      aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
       {...customProps}
       {...attrSpread}
       className={listClassNames}

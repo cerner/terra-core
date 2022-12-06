@@ -11,7 +11,7 @@ const VisibleInstructionsList = () => (
     <p id="list-help">
       Here are some instructions for using this list.
     </p>
-    <List instructions="list-help">
+    <List ariaDescribedBy="list-help">
       <Item key="123">
         <Placeholder title="Item 0" className={cx('placeholder')} />
       </Item>

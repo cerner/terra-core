@@ -3,7 +3,7 @@ import List, { Item } from 'terra-list/lib/index';
 
 const VisibleInstructionsListTest = () => (
   <>
-    <List instructions="list-help">
+    <List ariaDescribedBy="list-help">
       <Item key="0">
         <p>Item 1</p>
       </Item>
