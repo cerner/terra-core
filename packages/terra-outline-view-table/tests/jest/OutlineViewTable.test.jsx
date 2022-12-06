@@ -1,12 +1,12 @@
 import React from 'react';
 
-import OutlineTableView from '../../src/OutlineViewTable';
+import OutlineViewTable from '../../src/OutlineViewTable';
 
-describe('OutlineTableView', () => {
+describe('OutlineViewTable', () => {
   // Snapshot Tests
   it('should passthrough props to Table', () => {
     const shallowComponent = shallow(
-      <OutlineTableView
+      <OutlineViewTable
         bodyData={[
           {
             rows: [

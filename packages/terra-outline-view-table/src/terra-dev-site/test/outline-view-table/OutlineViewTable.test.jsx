@@ -1,8 +1,8 @@
 import React from 'react';
-import OutlineTableView from 'terra-outline-view-table';
+import OutlineViewTable from 'terra-outline-view-table';
 
 const DefaultTest = () => (
-  <OutlineTableView
+  <OutlineViewTable
     aria-multiselectable
     bodyData={[
       {
