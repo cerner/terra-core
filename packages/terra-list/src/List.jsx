@@ -18,7 +18,7 @@ const propTypes = {
    */
   dividerStyle: PropTypes.oneOf(['none', 'standard', 'bottom-only']),
   /**
-   * References the visible or visually hidden text element 
+   * References the visible or visually hidden text element
    * on the page that conveys information about the list
    * and how to interact with it.
    */
