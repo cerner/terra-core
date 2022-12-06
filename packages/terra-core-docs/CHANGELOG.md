@@ -20,6 +20,7 @@
 * Changed
   * Updated `terra-list` section guide to not use listbox role.
   * Updated `terra-divider` tests and doc examples to include heading level prop.
+  * Updated `terra-section-header` tests and examples.
 
 ## 1.15.1 - (September 8, 2022)
 
