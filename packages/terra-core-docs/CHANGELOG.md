@@ -14,7 +14,7 @@
   * Added Accordion Examples for `terra-section-header`.
   * Added accessibility guide for `terra-divider`.
   * Added tests and example for adding row header to `terra-html-table`.
-  * Added `terra-list` tests for instructions prop.
+  * Added `terra-list` tests and examples for `instructions` and `instructionText` prop.
   * Added an accessibility hooks example for `terra-form-field` and `terra-input`.
 
 * Changed
