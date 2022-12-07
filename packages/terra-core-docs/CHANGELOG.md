@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.16.0 - (December 7, 2022)
+
 * Added
   * Added Accessibility Guide for `terra-form-select`.
 

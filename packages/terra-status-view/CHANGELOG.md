@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.49.0 - (December 7, 2022)
+
 * Changed
   * Update jest test snapshot
 
