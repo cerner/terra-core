@@ -19,19 +19,20 @@
   * Updated `terra-list` section guide to not use listbox role.
   * Updated `terra-divider` tests and doc examples to include heading level prop.
   * Updated `terra-section-header` tests and examples.
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.49.0.
 
 ## 1.15.1 - (September 8, 2022)
 
 * Changed
-  * Moved outline-table-view docs and tests folders to component dev-site folder.
+  * Moved `outline-table-view` docs and tests folders to component dev-site folder.
 
 ## 1.15.0 - (September 07, 2022)
 
 * Changed
-  * Relative import paths of terra-hyperlink tests are changed to absolute path.
+  * Relative import paths of `terra-hyperlink` tests are changed to absolute path.
 
 * Added
-  * Added new outline-table-view docs and tests folders
+  * Added new `outline-table-view` docs and tests folders
 * Changed
   * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.48.0.
 
