@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.16.0 - (December 7, 2022)
+
 * Added
   * Added Accessibility Guide for `terra-form-select`.
 
@@ -15,6 +17,7 @@
   * Added accessibility guide for `terra-divider`.
   * Added tests and example for adding row header to `terra-html-table`.
   * Added `terra-list` tests and examples for `ariaDescribedBy`, `ariaDescription`, and `ariaDetails` props.
+  * Added accessibility guide for `terra-html-table`.
   * Added an accessibility hooks example for `terra-form-field` and `terra-input`.
 
 * Changed

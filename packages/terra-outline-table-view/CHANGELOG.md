@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.2.0 - (December 7, 2022)
+
 * Added
   * Added new outline-table-view docs and tests folders
 

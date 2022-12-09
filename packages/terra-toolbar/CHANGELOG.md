@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.30.0 - (December 7, 2022)
+
 * Added
   * Role attribute is set as toolbar
   * Prop `ariaLabel` - String that labels what content the toolbar controls.

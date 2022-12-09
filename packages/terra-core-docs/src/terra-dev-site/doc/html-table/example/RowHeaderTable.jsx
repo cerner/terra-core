@@ -10,11 +10,11 @@ import Table, {
 const RowHeaderTable = () => (
   <Table paddingStyle="compact" disableStripes>
     <caption>
-      Requested Quantities from the Last Six Months (table with row header cells in an offset column)
+      Requested Quantities of Aspirin from the Last Six Months (table with row header cells in an offset column)
     </caption>
     <Header>
-      <HeaderCell key="ID"><abbr title="Identification Number">ID</abbr></HeaderCell>
-      <HeaderCell key="NAME">Name</HeaderCell>
+      <HeaderCell key="ID"><abbr title="Identification Number">Patient ID</abbr></HeaderCell>
+      <HeaderCell key="NAME">Patient Name</HeaderCell>
       <HeaderCell key="JUL">July</HeaderCell>
       <HeaderCell key="AUG">August</HeaderCell>
       <HeaderCell key="SEPT">September</HeaderCell>
