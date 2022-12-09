@@ -9,6 +9,24 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
+   * References a visible or visually hidden text element
+   * on the page that conveys information about the list
+   * and how to interact with it.
+   */
+  ariaDescribedBy: PropTypes.string,
+  /**
+    * String that provides information about the list and how to interact
+    * with it.
+    */
+  ariaDescription: PropTypes.string,
+  /**
+   * References a visible or visually hidden text element
+   * on the page that conveys information about the list
+   * and how to interact with it. Can be used alongside
+   * ariaDescribedBy or ariaDescription.
+   */
+  ariaDetails: PropTypes.string,
+  /**
    * The children list items passed to the component.
    */
   children: PropTypes.node,
@@ -17,17 +35,6 @@ const propTypes = {
    * One of `'none'`, `'standard'`, `'bottom-only'`.
    */
   dividerStyle: PropTypes.oneOf(['none', 'standard', 'bottom-only']),
-  /**
-   * References the visible or visually hidden text element
-   * on the page that conveys information about the list
-   * and how to interact with it.
-   */
-  ariaDescribedBy: PropTypes.string,
-  /**
-   * String that provides information about the list and how to interact
-   * with it.
-   */
-  ariaDescription: PropTypes.string,
   /**
    * The padding styling to apply to the child list item content.
    * One of `'none'`, `'standard'`, `'compact'`.
@@ -51,10 +58,11 @@ const defaultProps = {
 };
 
 const List = ({
-  children,
-  dividerStyle,
   ariaDescribedBy,
   ariaDescription,
+  ariaDetails,
+  children,
+  dividerStyle,
   paddingStyle,
   refCallback,
   role,
@@ -83,6 +91,7 @@ const List = ({
     <ul
       aria-describedby={ariaDescribedBy}
       aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
+      aria-details={ariaDetails}
       {...customProps}
       {...attrSpread}
       className={listClassNames}
