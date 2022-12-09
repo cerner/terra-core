@@ -6,7 +6,7 @@ import styles from './ListDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const InstructionTextList = () => (
+const AriaDescriptionList = () => (
   <List ariaDescription="Here are some instructions for using this list.">
     <Item key="123">
       <Placeholder title="Item 0" className={cx('placeholder')} />
@@ -20,4 +20,4 @@ const InstructionTextList = () => (
   </List>
 );
 
-export default InstructionTextList;
+export default AriaDescriptionList;

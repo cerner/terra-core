@@ -1,18 +1,16 @@
 import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
 import { Placeholder } from '@cerner/terra-docs';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import classNames from 'classnames/bind';
 import styles from './ListDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const HiddenInstructionsList = () => (
+const AriaDescribedByVisibleList = () => (
   <>
-    <VisuallyHiddenText
-      id="list-help"
-      text="Here are some instructions for using this list."
-    />
+    <p id="list-help">
+      Here are some instructions for using this list.
+    </p>
     <List ariaDescribedBy="list-help">
       <Item key="123">
         <Placeholder title="Item 0" className={cx('placeholder')} />
@@ -27,4 +25,4 @@ const HiddenInstructionsList = () => (
   </>
 );
 
-export default HiddenInstructionsList;
+export default AriaDescribedByVisibleList;
