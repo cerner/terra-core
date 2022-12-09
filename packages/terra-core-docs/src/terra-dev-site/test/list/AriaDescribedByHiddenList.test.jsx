@@ -1,7 +1,8 @@
 import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 
-const VisibleInstructionsListTest = () => (
+const AriaDescribedByHiddenListTest = () => (
   <>
     <List ariaDescribedBy="list-help">
       <Item key="0">
@@ -14,10 +15,11 @@ const VisibleInstructionsListTest = () => (
         <p>Item 3</p>
       </Item>
     </List>
-    <p id="list-help">
-      Here are some instructions for using this list.
-    </p>
+    <VisuallyHiddenText
+      id="list-help"
+      text="Here are some instructions for using this list."
+    />
   </>
 );
 
-export default VisibleInstructionsListTest;
+export default AriaDescribedByHiddenListTest;

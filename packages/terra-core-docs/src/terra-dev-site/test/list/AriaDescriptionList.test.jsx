@@ -1,7 +1,7 @@
 import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
 
-const InstructionTextList = () => (
+const AriaDescriptionListTest = () => (
   <List ariaDescription="Here are some instructions for using this list.">
     <Item key="0">
       <p>Item 1</p>
@@ -15,4 +15,4 @@ const InstructionTextList = () => (
   </List>
 );
 
-export default InstructionTextList;
+export default AriaDescriptionListTest;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import List, { Item } from 'terra-list/lib/index';
 
-const SelectableInstructionsListTest = () => {
+const AriaDescribedBySelectableListTest = () => {
   const [selected, setSelected] = useState({ selectedKey: null });
 
   const handleSelectItem = (event, metaData) => {
@@ -31,4 +31,4 @@ const SelectableInstructionsListTest = () => {
   );
 };
 
-export default SelectableInstructionsListTest;
+export default AriaDescribedBySelectableListTest;
