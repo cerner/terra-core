@@ -520,7 +520,12 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()} tabIndex="-1">
+        <div
+          className={cx('display')}
+          aria-label={this.ariaLabel()}
+          tabIndex="-1"
+          role={this.role() === 'combobox' ? 'textbox' : 'group'}
+        >
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}
