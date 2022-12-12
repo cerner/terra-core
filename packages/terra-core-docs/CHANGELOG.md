@@ -5,6 +5,9 @@
 * Added
   * Added single and multi select list test examples for `terra-list`.
 
+* Updated
+  * Updated single and multi select guides with the new ariaSelectionStyle prop for `terra-list`.
+
 ## 1.16.0 - (December 7, 2022)
 
 * Added

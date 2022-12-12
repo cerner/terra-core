@@ -11,7 +11,7 @@ The terra-list implementation requires controlled state if selections are requir
 ## State Management
 The state of selection needs to be managed for the list in a High Order Component (HOC). In this example we are going to be a unique key, but the type of state used is open to the implementor of the HOC.
 
-First defaulting our state to an empty array in the constructor. 
+First defaulting our state to an empty array in the constructor.
 ```diff
 class MyList extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class MyList extends React.Component {
 
 +   this.state = { selectedKeys: [] };
   }
-  
+
   render() {
     return (
     );
@@ -35,7 +35,7 @@ class MyList extends React.Component {
     this.state = { collapsedKeys: [] };
 +   this.handleItemSelection = this.handleItemSelection.bind(this)
   }
-  
+
 +  handleItemSelection(event, metaData) {
 +
 +  }
@@ -120,7 +120,7 @@ Finally we need to check if the item is selected. As we support IE10 & 11, we ca
     );
   }
 ```
-Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the aria role of `"listbox"` and a string to `aria-label` for the list, as it is required for accessibility with selectable list options. In addition, we need to assign the aria role for multiple selections, `aria-multiselectable`.
+Then we can implement a method to loop through our data and create the list item with our methods and call it from our render method. Making special note to assign the prop `ariaSelectionStyle` with the value `multi-select` for the list, as it is required for accessibility with selectable list options.
 ```diff
 class MyList extends React.Component {
   constructor(props) {
@@ -138,12 +138,7 @@ class MyList extends React.Component {
 
   render() {
     return (
-+     <List
-+       dividerStyle="standard"
-+       role="listbox"
-+       aria-multiselectable
-+       aria-label="MultiSelectList-label"
-+     >
++     <List ariaSelectionStyle="multi-select">
 +       {this.createListItems(mockData)}
 +     </List>
 +   );
