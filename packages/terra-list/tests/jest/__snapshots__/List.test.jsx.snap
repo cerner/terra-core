@@ -9,12 +9,14 @@ exports[`correctly applies the theme context className 1`] = `
   }
 >
   <List
+    ariaSelectionStyle="none"
     dividerStyle="none"
     paddingStyle="none"
     role="none"
   >
     <ul
       className="list orion-fusion-theme"
+      role="listbox"
     />
   </List>
 </ThemeContextProvider>
@@ -23,6 +25,7 @@ exports[`correctly applies the theme context className 1`] = `
 exports[`should render with bottom only divided items 1`] = `
 <ul
   className="list divider-bottom-only"
+  role="listbox"
 >
   <ListItem
     hasChevron={false}
@@ -60,6 +63,7 @@ exports[`should render with bottom only divided items 1`] = `
 exports[`should render with items 1`] = `
 <ul
   className="list"
+  role="listbox"
 >
   <ListItem
     hasChevron={false}
@@ -97,12 +101,14 @@ exports[`should render with items 1`] = `
 exports[`should render with no items 1`] = `
 <ul
   className="list"
+  role="listbox"
 />
 `;
 
 exports[`should render with standard divided items 1`] = `
 <ul
   className="list divider-standard"
+  role="listbox"
 >
   <ListItem
     hasChevron={false}
@@ -140,6 +146,7 @@ exports[`should render with standard divided items 1`] = `
 exports[`should render with standard padded items 1`] = `
 <ul
   className="list padding-standard"
+  role="listbox"
 >
   <ListItem
     hasChevron={false}
@@ -177,6 +184,7 @@ exports[`should render with standard padded items 1`] = `
 exports[`should render with thin padded items 1`] = `
 <ul
   className="list padding-compact"
+  role="listbox"
 >
   <ListItem
     hasChevron={false}

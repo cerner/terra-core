@@ -27,9 +27,15 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Accessibility role of the list, defaults to 'none'. If creating a list with selectable items, pass 'listbox'.
+   * Accessibility role of the list, defaults to 'none'.
    */
   role: PropTypes.string,
+  /**
+   * Sets the role to `'listbox'` and provides an aria-description of whether its a single or multi-select list.
+   * For multi-select lists, it sets aria-multiselectable to true.
+   * One of `'none'`, `'single-select'`, `'multi-select'`.
+   */
+  ariaSelectionStyle: PropTypes.oneOf(['none', 'single-select', 'multi-select']),
 };
 
 const defaultProps = {
@@ -37,6 +43,7 @@ const defaultProps = {
   dividerStyle: 'none',
   paddingStyle: 'none',
   role: 'none',
+  ariaSelectionStyle: 'none',
 };
 
 const List = ({
@@ -45,6 +52,7 @@ const List = ({
   paddingStyle,
   refCallback,
   role,
+  ariaSelectionStyle,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -63,6 +71,20 @@ const List = ({
   const attrSpread = {};
   if (role && role.length > 0 && role !== 'none') {
     attrSpread.role = role;
+  }
+
+  if (ariaSelectionStyle) {
+    const interactInstructions = 'To select or deselect items, press enter or spacebar';
+    attrSpread.role = 'listbox';
+
+    if (ariaSelectionStyle === 'single-select') {
+      attrSpread['aria-label'] = `Single select list, ${interactInstructions}`;
+    }
+
+    if (ariaSelectionStyle === 'multi-select') {
+      attrSpread['aria-multiselectable'] = true;
+      attrSpread['aria-label'] = `Multi select list, ${interactInstructions}`;
+    }
   }
 
   return (

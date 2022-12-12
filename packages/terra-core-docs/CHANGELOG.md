@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added single and multi select list test examples for `terra-list`.
+
 ## 1.16.0 - (December 7, 2022)
 
 * Added
