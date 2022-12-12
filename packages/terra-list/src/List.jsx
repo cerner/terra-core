@@ -73,18 +73,17 @@ const List = ({
     attrSpread.role = role;
   }
 
-  if (ariaSelectionStyle) {
-    const interactInstructions = 'To select or deselect items, press enter or spacebar';
+  const interactInstructions = 'To select or deselect items, press enter or spacebar';
+
+  if (ariaSelectionStyle === 'single-select') {
     attrSpread.role = 'listbox';
+    attrSpread['aria-label'] = `Single select list, ${interactInstructions}`;
+  }
 
-    if (ariaSelectionStyle === 'single-select') {
-      attrSpread['aria-label'] = `Single select list, ${interactInstructions}`;
-    }
-
-    if (ariaSelectionStyle === 'multi-select') {
-      attrSpread['aria-multiselectable'] = true;
-      attrSpread['aria-label'] = `Multi select list, ${interactInstructions}`;
-    }
+  if (ariaSelectionStyle === 'multi-select') {
+    attrSpread.role = 'listbox';
+    attrSpread['aria-multiselectable'] = true;
+    attrSpread['aria-label'] = `Multi select list, ${interactInstructions}`;
   }
 
   return (
