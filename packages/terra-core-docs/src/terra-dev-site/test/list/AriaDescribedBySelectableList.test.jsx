@@ -5,7 +5,6 @@ const AriaDescribedBySelectableListTest = () => {
   const [selected, setSelected] = useState({ selectedKey: null });
 
   const handleSelectItem = (event, metaData) => {
-    event.preventDefault();
     if (selected.selectedKey !== metaData.key) {
       setSelected({ selectedKey: metaData.key });
     }
