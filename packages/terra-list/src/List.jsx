@@ -16,7 +16,8 @@ const propTypes = {
   ariaDescribedBy: PropTypes.string,
   /**
     * String that provides information about the list and how to interact
-    * with it.
+    * with it. When used with `ariaDescribedBy` prop, `ariaDescribedbBy`
+    * takes precedence in defining the accessible description property.
     */
   ariaDescription: PropTypes.string,
   /**
@@ -89,11 +90,11 @@ const List = ({
 
   return (
     <ul
+      {...customProps}
+      {...attrSpread}
       aria-describedby={ariaDescribedBy}
       aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
       aria-details={ariaDetails}
-      {...customProps}
-      {...attrSpread}
       className={listClassNames}
       ref={refCallback}
     >
