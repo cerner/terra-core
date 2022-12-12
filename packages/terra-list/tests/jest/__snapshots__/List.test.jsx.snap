@@ -107,6 +107,53 @@ exports[`should render with ariaDescription 1`] = `
 </ul>
 `;
 
+exports[`should render with ariaDetails 1`] = `
+<div>
+  <p
+    id="list-details"
+  >
+     Here is some more information about this list. 
+  </p>
+  <List
+    ariaDetails="list-details"
+    dividerStyle="none"
+    paddingStyle="none"
+    role="none"
+  >
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="123"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="124"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="125"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="126"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="127"
+    />
+  </List>
+</div>
+`;
+
 exports[`should render with bottom only divided items 1`] = `
 <ul
   className="list divider-bottom-only"
