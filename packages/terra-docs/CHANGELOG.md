@@ -2,8 +2,10 @@
 
 ## Unreleased
 
-* Fixed
-  * Fixed broken link in documentation.
+## 1.8.0 - (December 7, 2022)
+
+* Changed
+  * Updated `terra-section-header` tests and examples.
 
 ## 1.7.1 - (July 5, 2022)
 

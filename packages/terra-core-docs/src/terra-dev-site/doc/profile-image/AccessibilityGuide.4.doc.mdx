@@ -1,0 +1,116 @@
+import { Badge } from 'terra-profile-image/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
+import ProfileImageExamples from './example/ProfileImageExamples';
+
+<Badge />
+
+# Why the accessibility of Profile Image is important 
+
+<Notice variant="important" ariaLevel="2">
+
+The Profile Image component represents an account or profile across the platform. A Profile Image visually associates a user’s, patient’s, or customer’s image with personalised content.
+
+Poor or improper implementation can cause Profile Image to be inaccessible, which can cause user confusion and impede the identification of content relevant to that user’s profile.
+
+</Notice>
+
+## Accessibility Considerations
+
+### Content Considerations: What do content creators need to do?
+
+> - Content creators must ensure that images with meaningful content have a textual equivalent.
+>   - Provide engineers with text for the “alt prop”.
+>   - The alt prop must be a textual equivalent that conveys the meaning of the image.
+> - For supplemental or decorative images that provide no contextual value, content creators must convey to the engineers that no alt prop will be supplied.
+> - Content creators must work with engineers to convey any visual relationships created with Profile Image and other content on the page.
+
+### Code Considerations: What do engineers need to do?
+
+- Engineers must not override the Profile Image’s role of image.
+- Engineers must apply an alt prop for meaningful images.
+<div aria-label="Example Demo">
+  <ProfileImageExamples />
+</div>
+```jsx
+const cx = classNames.bind(styles);
+
+const ProfileImageExamples = () => (
+  <div>
+    <Card>
+      <Card.Body>
+        <ProfileImage alt="" width="75" height="75" aria-describedby="caption-example-1" />
+        <span id="caption-example-1" className={cx('add-left-margin')}>Decorative Profile Image</span>
+      </Card.Body>
+    </Card>
+    <Card>
+      <Card.Body>
+        <ProfileImage alt="profile image for Martin Moon, photograph from space of rising star over a planet's silhouette" src={exampleProfileImage} aria-describedby="caption-example-2" />
+        <span id="caption-example-2" className={cx('add-left-margin')}>Meaningful Profile Image</span>
+      </Card.Body>
+    </Card>
+  </div>
+);
+```
+- Work with content creators to understand how content should resize and reflow at different breakpoints and form factors to ensure content is not artificially constrained or cut off at smaller viewports.
+- Engineers must work with the content creators to understand if Profile Image is visual related to other content.
+  - If so, the engineer must associate the Profile Image to the related content.
+
+## Usability Expectations
+
+The user expects to understand the purpose of Profile Image regardless of how they experience the content.
+
+
+### Interaction Detail
+
+Profile image is not interactable.
+
+### Keyboard Expectations
+
+Because Profile Image is not actionable, it does not receive keyboard focus.
+
+## Support Compliance
+
+Terra is committed to ensuring its components provide maximum accessibility. Terra provides the ability to make accessibile products. However, using Terra components will not automatically make a product accessible.
+
+The final responsibility lies with the consumers of Terra components — ensuring proper usage, programmatic context where needed, the words used to label elements, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance — to make a product fully accessible.
+
+### Primary accessibility criteria for Profile Image
+
+- [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content) - Partially Supports
+  - Terra Profile Image contains a meaningful alt tag. The ALT prop is listed as optional. Whenever null or no value provided for alt prop Terra Profile Image will be presented as decorative for accessibility user. All images or anything with role = image must have an ALT attribute.
+  - Engineers must assign a textual equivalent to the alt prop for meaningful images.
+  - Content creators must provide engineers an alt prop that conveys the meaning of the image.
+- [**1.3.1 Info and Relationships**](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) — Supports
+  - Terra provides the ability for information, structure, and relationships to be programmatically determined.
+  - Engineers must programmatically associate Profile Image with other content if a visual relationship with the content is apparent.
+  - Content creators must convey to the engineers when the visual presentation of Profile image is associated to their content.
+- [**1.3.2 Meaningful Sequence**](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html) - Supports
+  - Engineers must ensure content is coded following the users logical reading order.
+- [**4.1.2 Name, Role, Value**](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) - Supports
+  - Terra Profile Image provides the role of image and allows consuming teams to supply a meaningful textual equivalent for the name.
+
+### Related accessibility criteria that apply when adding content to action header
+
+- [**1.4.10 Reflow**](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) — Supports
+  - Terra provides the ability for components to reflow when the viewport is resized to 320x256 px without loss of information or function. 
+  - Engineers must ensure content within Terra Action Header can reflow when the viewport is resized to 320 x 256 px without scrolling in two directions or loss of information or functionality. 
+  - Content creators must consider the responsive nature of Terra Action Header and provide engineers guidance on how it should content should reflow when the viewport is resized to 320 x 256 px
+- [**1.4.11 Non-Text Contrast**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) — Supports
+  - Terra provides the ability to populate user created images or provide a default image should an image not be provided or fails to load.
+  - If the image is to be meaningful, content creators must ensure the default image meets the 3:1 contrast ratio.
+
+### Supported Features and Technology
+
+- Keyboard Interactions
+- JAWS Support with Chrome (PC)
+- VoiceOver Support with Chrome, Safari (MAC) 
+
+### Partial Support & Requiring Further Enhancement
+
+- NVDA not tested (PC)
+  - Mobile Touch Interactions with Screen Reader assistive technology
+- Speech Input Interactions with assistive technology
+- [Report a problem with this component on GitHub ](https://github.com/cerner/terra-core/issues/new/choose)
+
+### Linked References:
+[Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/Understanding/)

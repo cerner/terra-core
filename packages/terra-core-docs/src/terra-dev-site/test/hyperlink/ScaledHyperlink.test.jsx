@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Hyperlink from 'terra-hyperlink';
-import styles from '../../../../../terra-hyperlink/src/HyperlinkTestCommon.module.scss';
+import styles from 'terra-hyperlink/lib/HyperlinkTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 

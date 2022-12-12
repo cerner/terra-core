@@ -1,0 +1,187 @@
+import { Badge } from 'terra-form-select/package.json?dev-site-package';
+import SelectFieldExample from './example/SelectFieldExample';
+<Badge />
+
+# Form Select - Single Select Field Accessibility Guide 
+
+## Why the accessibility of Select Field is important 
+
+- Select Fields are one of the most used controls to gather data within an interface. Because they are so ubiquitous, users need to understand their purpose and be able to interact with them. However, if select Fields are not implemented following best practices, users may fail to understand what the field is for, or worse, may not be able to interact with the select field. It is critical to users that select fields must be accessible to effectively understand and interact with a field.
+- There are many ways a poorly implemented Select Field can make the field unusable to users: 
+  - All users rely on the Select Field label to tell them what must be selected in the field.
+  - All users rely upon good error messaging to help the user understand when a field is invalid and what they must do to successfully complete the field.
+  - Blind users need the label to be programmatically associated to the select field for the screen reader to read the label, otherwise they won’t know what to doss.
+  - Speech input device users will not be able to activate a field if the field label is not unique or programmatically associated to the field.
+  - If Select Field don’t provide meaningful helper text or appropriate note a field is required, the user may not understand how to meet the field requirements.
+
+
+## Accessibility Considerations 
+
+### Content Considerations: What do content creators need to do?
+
+- Consider adding instructions at the beginning of the form when content may be complex or out of the ordinary.
+  - Use clear and concise wording that helps the user understand what is expected of them.
+- Ensure each select Field has a descriptive label that accurately describes its purpose.
+  - Ensure each select field label is unique to the page.
+    - The best practice is to never use the same label for multiple fields that are asking for different data on the same page.
+    - Or groups of related fields can be placed inside of a fieldset which will create the necessary programmatic context.
+  - If there is any specific requirement for the user to make a field valid, that requirement must be presented visibly either in the field label or within helper text.
+    - If a form field is required, it must be set as required, have the required red asterisk, and the form itself should have instructions that any item marked with the asterisk is required.
+  - When creating error messaging, ensure the message provides enough context the user can understand what the problem is and how to fix it. Use clear and concise messaging.
+  - If any icons are used to convey meaning in conjunction with a Select Field, the icon must have an accessible name (alternate content). For example, a help icon next to a field.
+    - The icon must be intuitive for the functionality it represents.
+    - The icon must be named consistently across the product and accurately reflect the purpose of the icon.
+    - The icons must be used to consistently represent the same function (don’t use multiple icons for the same functionality).
+    - The icon must have alternate content that reflects the select field it is related to, or it must be programmatically associated to the field. Work with engineers when needed to add programmatic association of icons to the field.
+  - Any purely decorative icon (does not convey ANY meaning) must be marked as decorative.
+  - Consider how forms resize and reflow at different breakpoints and form factors.
+    - Convey to engineers how content should resize and reflow.
+  - Do not override default form field colors.
+    - If colors are changed, all select Field content (visible label, required asterisk, helper text, instructions, helper text, and the field itself) must meet color contrast requirements against their respective backgrounds.
+- Ensure the engineer understands the logical reading order of the form.
+- After coded:
+  - Ensure nothing unexpected happens on focus or on select of the select Field.
+  - Ensure all form field can receive keyboard focus, have a visible keyboard focus indication when in focus, and can be interacted with and acted upon using only the keyboard.
+  - Ensure all form field receive focus in the users logical reading order and the focus order does not affect the meaning of content.
+
+### Code Considerations: What do engineers need to do?
+
+- Do not override the implicit or explicit role of the Select Field.
+- Ensure the code order of form select field matches the users logical reading order.
+  - Ensure that select Field can receive keyboard focus.
+  - Do not override the default keyboard focus indicator unless to reverse out of a dark background for perceivability.
+  - Do not implement a TABINDEX value of anything greater than zero.
+  - Ensure nothing unexpected happens on focus or on select of a Select Field.
+- Work with Content Creators to understand how content should resize and reflow at different breakpoints and form factors to ensure content is not artificially constrained or cut off at smaller view ports.
+- Ensure that Select Field is implemented correctly to programmatically associate all related content (visible label, helper text, error messaging) to the field
+  - Ensure the visible select Label matches any artificially applied programmatic label.
+  - Do not change the placement of any of the related content to other areas around the field. For example, do not move the select label creating large gaps between the field and the label.
+- Ensure validation can provide users the necessary details to understand any errors.
+  - Ensure invalid fields can be identified with error messaging.
+    - Error messaging should provide error suggestions when the system can programmatically understand what is wrong.
+
+<div aria-label="Example Demo">
+  <SelectFieldExample />
+</div>
+
+```jsx
+const cx = classNames.bind(styles);
+
+const SelectFieldExample = () => (
+  <Card>
+    <Card.Body>
+      <SelectField label="Allergies Hospitals" placeholder="Select a location" selectId="Hospital-location-field" className={cx('form-select')}>
+        <SelectField.Option value="Kansas,MO" display="Cerner,Kansas City, MO" />
+        <SelectField.Option value="Riverport Campus, MO" display="Cerner Corporation - Riverport Campus" />
+        <SelectField.Option value="Innovations Campus, MO" display="Cerner Corporation - Innovations Campus" />
+        <SelectField.Option value="Realization Campus, MO" display="Cerner Corporation - Realization Campus" />
+      </SelectField>
+    </Card.Body>
+  </Card>
+);
+```
+
+## Usability Expectations
+
+- The user expects to understand the purpose of the select field.
+- The user expects to understand the state (Expand or collapse) of select field.
+- The user expects to understand any requirements of the select field. For example, is it required, etc.
+
+### Interaction Detail
+
+- Select field should be able to receive focus and have item selected in them.
+
+### Keyboard Expectations
+
+| Key/Sequence | Expectation  |
+|---|---|
+|*Tab*| Moves forward or backward to any interactive element including form Select Field   |
+|*Space*| When Select Field is focused, will open or close the Select Field dropdown menu depending upon its current state.   |
+|*Up/Down*| With Select Field in focus and dropdown menu closed, will open the dropdown. Moves focus up/down the Select Field list of options. |
+|*Enter*| Selects the selected dropdown menu option. |
+|*Escape*| When the Select Field dropdown is open, Escape will close the dropdown. |
+
+## Support Compliance
+
+### Primary accessibility criteria for Form Select
+- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) — Supports
+   - Terra Form Select Field natively associates the select label, error messaging, and helper text to the field.
+   - Engineers must ensure the label, helper text, and the error messaging are correctly hooked up to the select field.
+   - Content creators must convey any visible relationships of content to the select field to the engineer.
+- [1.3.2 Meaningful Sequence](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html) - Supports
+   - Terra Form Select Field generally support to have content read in meaningful order.
+   - Engineers must ensure content is coded in the user’s logical order. Engineers must not use a TABINDEX value greater than zero.
+   - Creators must ensure the keyboard focus order meets the users expected order and does not affect the meaning of content.
+- [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) - Supports
+   - Terra Form Select Field labels and text meet the required contrast ratios based on the default text and color backgrounds.
+   - If colors are changed, engineers and content creators must ensure text colors meet the appropriate contrast ratio based on their font size and the color they appear against. See 1.4.3 Contrast (Minimum) for more information.
+- [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) - Supports
+   - Terra ensures keyboard accessibility is built into the component.
+   - Engineer and Content Creators must ensure all form select field can be accessed and acted upon using only the keyboard after implemented within code.
+- [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html) - Supports
+   - Form select field can be coded in the user’s logical read order.
+   - Engineers must code the form elements to match the users logical reading order. Engineers must not add a TABINDEX greater than zero.
+   - Content creators must ensure the form select field receive focus in the users logical reading order.
+- [2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html) - Partially Supports
+   - Terra Form Select Field provides the ability to create unique and descriptive headings and labels.
+   - Engineers must implement a meaningful label provided by content creators.
+   - Content creators must provide development a label that accurately describes the purpose of the form select field.
+- [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html) - Supports
+   - Terra Form Select Field ensures a visible keyboard focus is built into the component.
+   - Engineer and Content Creators must ensure all form select field have a visible keyboard focus after implemented within code.
+- [2.5.3 Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html) - Supports
+   - Terra Form Select Field provides the consuming team the ability to meet this criterion.
+   - Engineers must ensure the programmatic name matches that of the visible form select field label.
+- [3.2.1 On Focus](https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html) - Supports
+   - Terra Form Select Field does not initiate a change of context on its own.
+   - Engineer and Content Creators must ensure nothing unexpected happens on focus of the Select Field.
+- [3.2.2 On Input](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html) - Partially Supports
+   - Terra Form Select Field does not initiate a change of context on Select.
+   - Engineers and content creators must not initiate any change of context on focus of the select field.
+- [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) - Supports
+   - Terra Form Select Field provides the ability to validate field.
+   - Engineers must ensure validation is hooked up correctly and the error messaging is appropriately associated to the errant field.
+   - Content creators must ensure provide engineers with error messaging for any potential validation error of the field.
+- [3.3.2 Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) - Supports
+   - Terra Form Select Field are clearly marked and labeled.
+   - Engineers must ensure form select field are coded correctly for helper text or other instructions are properly associated with the field.
+   - Content creators must provide engineers with the proper label and any helper text instructions for formatting requirements of the field.
+- [3.3.3 Error Suggestion](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html) - Supports
+   - Terra Form Select Field provides the ability to include error suggestion when forms are validated.
+   - When the cause of the error can be known to the system, engineers must ensure validation is hooked up correctly and can provide the appropriate error messaging to the user.
+   - Content creators must provide engineers with appropriate error messaging to account for a known invalid entry. If possible, the error messaging must provide the user guidance on how to correct the issue.
+- [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) - Supports
+   - Terra Form Select Field ensure that the proper role is applied and provides consuming teams the ability to set appropriate label for the field.
+   - Engineers must not overwrite the default role of the form select field.
+   - Content creators must provide development an appropriate label for the form select field.
+
+### Related accessibility criteria that apply when adding content to action header 
+- [1.4.10 Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) - Supports
+   - Terra Form Select Field can reflow with content by default.
+   - Engineers and content creators must ensure their form layouts can reflow without loss of functionality or scrolling in two directions at up to 400% except when used within tables.
+- [1.4.12 Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html) - Supports
+   - Terra Form Select Field meets this criterion by default.
+   - Engineers and content creators must ensure support for this criterion.
+- [1.4.4 Resize text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) - Supports
+   - Terra Form Select Field resizes natively.
+   - Engineers and content creators must ensure their form layouts allow users to resize text up to 200% without the loss of content or functionality.
+- [4.1.1 Parsing](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html) - Supports
+   - Terra Select field creates valid HTML code.
+   - Engineers must ensure their code is valid.
+
+### Supported Features and Technology 
+
+- Keyboard Interactions
+- JAWS Support with Chrome (PC)
+- VoiceOver Support with Chrome, Safari (MAC)
+- Speech Input Interactions with assistive technology
+- Mobile Touch Interactions with Screen Reader assistive technology
+
+### Partial Support & Requiring Further Enhancement
+
+- [Report a problem with this component on GitHub](https://github.com/cerner/terra-core/issues/new/choose)
+
+## References:
+
+- [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/Understanding/)
+- [WebAim.org: Creating More Accessible Forms](https://webaim.org/techniques/forms/)

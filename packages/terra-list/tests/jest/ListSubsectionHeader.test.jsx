@@ -31,9 +31,9 @@ it('should render with callback functions', () => {
     <ListSubsectionHeader title="test" isCollapsible onSelect={mockCallBack} refCallback={jest.fn()} />,
   );
   expect(shallowComponent).toMatchSnapshot();
-  shallowComponent.find('li').simulate('click');
-  shallowComponent.find('li').simulate('keydown', { nativeEvent: { keyCode: 13 } });
-  shallowComponent.find('li').simulate('keydown', { nativeEvent: { keyCode: 32 } });
+  shallowComponent.find('div').first().simulate('click');
+  shallowComponent.find('div').first().simulate('keydown', { nativeEvent: { keyCode: 13 } });
+  shallowComponent.find('div').first().simulate('keydown', { nativeEvent: { keyCode: 32 } });
   expect(mockCallBack.mock.calls.length).toEqual(3);
 });
 

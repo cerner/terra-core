@@ -2,8 +2,10 @@
 
 ## Unreleased
 
-* Fixed
-  * Fixed broken link in documentation.
+## 4.49.0 - (December 7, 2022)
+
+* Changed
+  * Update jest test snapshot
 
 ## 4.48.6 - (July 5, 2022)
 

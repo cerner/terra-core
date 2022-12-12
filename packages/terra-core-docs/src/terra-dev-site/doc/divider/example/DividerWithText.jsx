@@ -6,7 +6,7 @@ const currentDate = 'November 12, 1955';
 
 const DividerCustomExample = () => (
   <DividerExampleTemplate>
-    <Divider text={currentDate} />
+    <Divider text={currentDate} level={3} />
   </DividerExampleTemplate>
 );
 

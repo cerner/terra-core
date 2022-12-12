@@ -2,8 +2,10 @@
 
 ## Unreleased
 
-* Fixed
-  * Fixed broken link in documentation.
+## 5.36.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
 
 ## 5.35.2 - (July 5, 2022)
 

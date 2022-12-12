@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SectionHeaderExampleTemplate from './SectionHeaderExampleTemplate';
+import AccoordianExampleTemplate from './AccordionExampleTemplate';
 
 const AccordionSectionHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,13 +9,18 @@ const AccordionSectionHeader = () => {
   };
 
   const sectionHeaderProps = {
-    title: 'I can accordion, click me',
     isOpen,
     onClick: handleClick,
   };
 
   return (
-    <SectionHeaderExampleTemplate title="Accordion Section Header" exampleProps={sectionHeaderProps} />
+    <AccoordianExampleTemplate title="Patient Allergy details:" heading="Accordion Section Header" sectionHeaderAttrs={sectionHeaderProps}>
+      <p>Allergic to Cats</p>
+      <p>Allergic to Dogs</p>
+      <p>Allergic to Dust</p>
+      <p>Allergic to Mold</p>
+      <p>Allergic to Latex</p>
+    </AccoordianExampleTemplate>
   );
 };
 

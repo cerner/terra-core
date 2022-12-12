@@ -2,8 +2,13 @@
 
 ## Unreleased
 
-* Fixed
-  * Fixed broken link in documentation.
+## 2.57.0 - (December 7, 2022)
+
+* Changed
+  * Renamed title prop to text to avoid conflict with native html attribute
+
+* Added
+  * Added button role, aria-label and aria-expanded attribute to `Arrange` component wrapper
 
 ## 2.56.0 - (July 14, 2022)
 
