@@ -7,6 +7,9 @@
 * Added
   * Added Accessibility Guide for `terra-form-select`.
 
+* Changed
+  * Updated wording in examples for `terra-demographics-banner`
+
 * Added
   * Added Higher Order examples for `terra-profile-image`.
   * Added Accessibility Guide for `terra-Profile-image`.
