@@ -8,9 +8,9 @@
   * Sections and subsections updated to add programmatic context to communicate hierarchal relationships
 
 * Added
-  * Prop `ariaDescribedBy` - Associates a list to an element or elements that convey information about the list and how to interact with it.
+  * Prop `ariaDescribedBy` - Associates a list with an element or elements that convey information about the list and how to interact with it.
   * Prop `ariaDescription` - Conveys information about a list and how to interact with it.
-  * Prop `ariaDetails` - Associates a list to an element or elements that convey information about the list and how to interact with it.
+  * Prop `ariaDetails` - Associates a list with an element or elements that convey information about the list and how to interact with it.
 
 ## 4.51.5 - (July 5, 2022)
 
