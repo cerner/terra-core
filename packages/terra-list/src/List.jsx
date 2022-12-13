@@ -11,14 +11,14 @@ const propTypes = {
   /**
    * References a visible or visually hidden text element
    * on the page that conveys information about the list
-   * and how to interact with it. Maps to [aria-describedby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+   * and how to interact with it. Maps to [aria-describedby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
    */
   ariaDescribedBy: PropTypes.string,
   /**
     * String that provides information about the list and how to interact
     * with it. When used with `ariaDescribedBy` prop, `ariaDescribedbBy`
     * takes precedence in defining the accessible description property.
-    * Maps to [aria-description](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
+    * Maps to [aria-description](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description).
     */
   ariaDescription: PropTypes.string,
   /**
@@ -26,7 +26,7 @@ const propTypes = {
    * on the page that conveys information about the list
    * and how to interact with it. Can be used alongside
    * ariaDescribedBy or ariaDescription. Maps to
-   * [aria-details](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+   * [aria-details](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
    */
   ariaDetails: PropTypes.string,
   /**
