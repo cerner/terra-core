@@ -40,39 +40,48 @@ exports[`ToggleSectionHeader should call any custom onOpen that is provided by t
 
 exports[`ToggleSectionHeader should render a default toggle section header 1`] = `
 <div>
-  <div
+  <h2
     aria-expanded="false"
     class="section-header is-interactable"
-    role="button"
     tabindex="0"
-    text="default title"
   >
     <div
-      class="arrange title-arrange"
+      aria-expanded="false"
+      aria-label="default title"
+      class="arrange-wrapper"
+      role="button"
+      tabindex="-1"
     >
       <div
-        class="fit"
+        class="arrange title-arrange"
       >
         <div
-          class="accordion-icon-wrapper"
+          class="fit"
+        >
+          <div
+            class="accordion-icon-wrapper"
+          >
+            <span
+              class="accordion-icon"
+            />
+          </div>
+        </div>
+        <div
+          class="fill"
         >
           <span
-            class="accordion-icon"
-          />
+            aria-hidden="true"
+            class="title"
+          >
+            default title
+          </span>
         </div>
-      </div>
-      <div
-        class="fill"
-      >
-        <h2
-          class="title"
+        <div
+          class="fit"
         />
       </div>
-      <div
-        class="fit"
-      />
     </div>
-  </div>
+  </h2>
   <div
     aria-hidden="true"
     class="toggle"
@@ -82,39 +91,48 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
 
 exports[`ToggleSectionHeader should render an animated toggle section header 1`] = `
 <div>
-  <div
+  <h2
     aria-expanded="false"
     class="section-header is-interactable"
-    role="button"
     tabindex="0"
-    text="animated title"
   >
     <div
-      class="arrange title-arrange"
+      aria-expanded="false"
+      aria-label="animated title"
+      class="arrange-wrapper"
+      role="button"
+      tabindex="-1"
     >
       <div
-        class="fit"
+        class="arrange title-arrange"
       >
         <div
-          class="accordion-icon-wrapper"
+          class="fit"
+        >
+          <div
+            class="accordion-icon-wrapper"
+          >
+            <span
+              class="accordion-icon"
+            />
+          </div>
+        </div>
+        <div
+          class="fill"
         >
           <span
-            class="accordion-icon"
-          />
+            aria-hidden="true"
+            class="title"
+          >
+            animated title
+          </span>
         </div>
-      </div>
-      <div
-        class="fill"
-      >
-        <h2
-          class="title"
+        <div
+          class="fit"
         />
       </div>
-      <div
-        class="fit"
-      />
     </div>
-  </div>
+  </h2>
   <div
     aria-hidden="true"
     class="toggle"
@@ -134,39 +152,48 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
 
 exports[`ToggleSectionHeader should render an initially open toggle section header 1`] = `
 <div>
-  <div
+  <h2
     aria-expanded="true"
     class="section-header is-interactable"
-    role="button"
     tabindex="0"
-    text="initially open title"
   >
     <div
-      class="arrange title-arrange"
+      aria-expanded="true"
+      aria-label="initially open title"
+      class="arrange-wrapper"
+      role="button"
+      tabindex="-1"
     >
       <div
-        class="fit"
+        class="arrange title-arrange"
       >
         <div
-          class="accordion-icon-wrapper"
+          class="fit"
+        >
+          <div
+            class="accordion-icon-wrapper"
+          >
+            <span
+              class="accordion-icon is-open"
+            />
+          </div>
+        </div>
+        <div
+          class="fill"
         >
           <span
-            class="accordion-icon is-open"
-          />
+            aria-hidden="true"
+            class="title"
+          >
+            initially open title
+          </span>
         </div>
-      </div>
-      <div
-        class="fill"
-      >
-        <h2
-          class="title"
+        <div
+          class="fit"
         />
       </div>
-      <div
-        class="fit"
-      />
     </div>
-  </div>
+  </h2>
   <div
     aria-hidden="false"
     class="toggle"
@@ -194,39 +221,32 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
       onClick={[Function]}
       text="opens on click title"
     >
-      <div
+      <h2
         aria-expanded={true}
         className="section-header is-interactable"
         onClick={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
-        role="button"
         tabIndex="0"
-        text="opens on click title"
       >
-        <Arrange
-          className="title-arrange"
-          fill={
-            <h2
-              className="title"
-            />
-          }
-          fitStart={
-            <div
-              className="accordion-icon-wrapper"
-            >
-              <span
-                className="accordion-icon is-open"
-              />
-            </div>
-          }
+        <div
+          aria-expanded={true}
+          aria-label="opens on click title"
+          className="arrange-wrapper"
+          role="button"
+          tabIndex="-1"
         >
-          <div
-            className="arrange title-arrange"
-          >
-            <div
-              className="fit"
-            >
+          <Arrange
+            className="title-arrange"
+            fill={
+              <span
+                aria-hidden={true}
+                className="title"
+              >
+                opens on click title
+              </span>
+            }
+            fitStart={
               <div
                 className="accordion-icon-wrapper"
               >
@@ -234,20 +254,39 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
                   className="accordion-icon is-open"
                 />
               </div>
-            </div>
+            }
+          >
             <div
-              className="fill"
+              className="arrange title-arrange"
             >
-              <h2
-                className="title"
+              <div
+                className="fit"
+              >
+                <div
+                  className="accordion-icon-wrapper"
+                >
+                  <span
+                    className="accordion-icon is-open"
+                  />
+                </div>
+              </div>
+              <div
+                className="fill"
+              >
+                <span
+                  aria-hidden={true}
+                  className="title"
+                >
+                  opens on click title
+                </span>
+              </div>
+              <div
+                className="fit"
               />
             </div>
-            <div
-              className="fit"
-            />
-          </div>
-        </Arrange>
-      </div>
+          </Arrange>
+        </div>
+      </h2>
     </SectionHeader>
     <Toggle
       isAnimated={false}
