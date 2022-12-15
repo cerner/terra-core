@@ -13,7 +13,7 @@ const AriaDescribedBySelectableListTest = () => {
   return (
     <>
       <p id="list-help">
-        Here are some instructions for using this list.
+        Select a patient from the list to view patient details.
       </p>
       <List ariaDescribedBy="list-help" role="listbox">
         <Item key="1" isSelectable isSelected={selected.selectedKey === '1'} metaData={{ key: '1' }} onSelect={handleSelectItem}>

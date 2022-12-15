@@ -4,7 +4,7 @@ import List, { Item } from 'terra-list/lib/index';
 const AriaDetailsListTest = () => (
   <>
     <p id="list-details">
-      Here is some more information about this list.
+      Select a patient from the list to view patient details.
     </p>
     <List ariaDetails="list-details">
       <Item key="0">

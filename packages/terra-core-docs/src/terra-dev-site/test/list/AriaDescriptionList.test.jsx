@@ -2,7 +2,7 @@ import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
 
 const AriaDescriptionListTest = () => (
-  <List ariaDescription="Here are some instructions for using this list.">
+  <List ariaDescription="Select a patient from the list to view patient details.">
     <Item key="0">
       <p>John Smith</p>
     </Item>

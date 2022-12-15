@@ -4,7 +4,7 @@ import List, { Item } from 'terra-list/lib/index';
 const AriaDescribedByVisibleListTest = () => (
   <>
     <p id="list-help">
-      Here are some instructions for using this list.
+      Select a patient from the list to view patient details.
     </p>
     <List ariaDescribedBy="list-help">
       <Item key="0">

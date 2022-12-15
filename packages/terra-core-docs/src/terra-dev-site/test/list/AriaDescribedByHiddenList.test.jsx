@@ -6,7 +6,7 @@ const AriaDescribedByHiddenListTest = () => (
   <>
     <VisuallyHiddenText
       id="list-help"
-      text="Here are some instructions for using this list."
+      text="Select a patient from the list to view patient details."
     />
     <List ariaDescribedBy="list-help">
       <Item key="0">
