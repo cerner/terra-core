@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const AriaDetailsList = () => (
   <>
     <p id="list-details">
-      Here are some instructions for using this list.
+      Select a patient from the list to view patient details.
     </p>
     <List ariaDetails="list-details">
       <Item key="123">

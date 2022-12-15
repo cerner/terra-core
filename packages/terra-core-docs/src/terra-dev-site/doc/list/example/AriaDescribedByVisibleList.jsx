@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const AriaDescribedByVisibleList = () => (
   <>
     <p id="list-help">
-      Here are some instructions for using this list.
+      Select a patient from the list to view patient details.
     </p>
     <List ariaDescribedBy="list-help">
       <Item key="123">

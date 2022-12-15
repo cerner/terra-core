@@ -7,7 +7,7 @@ import styles from './ListDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const AriaDescriptionList = () => (
-  <List ariaDescription="Here are some instructions for using this list.">
+  <List ariaDescription="Select a patient from the list to view patient details.">
     <Item key="123">
       <Placeholder title="John Smith" className={cx('placeholder')} />
     </Item>

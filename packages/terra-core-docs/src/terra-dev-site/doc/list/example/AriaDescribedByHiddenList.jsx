@@ -11,7 +11,7 @@ const AriaDescribedByHiddenList = () => (
   <>
     <VisuallyHiddenText
       id="list-help"
-      text="Here are some instructions for using this list."
+      text="Select a patient from the list to view patient details."
     />
     <List ariaDescribedBy="list-help">
       <Item key="123">
