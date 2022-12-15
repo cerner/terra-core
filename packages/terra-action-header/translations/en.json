@@ -4,5 +4,7 @@
   "Terra.actionHeader.previous": "Previous",
   "Terra.actionHeader.next": "Next",
   "Terra.actionHeader.maximize": "Maximize",
-  "Terra.actionHeader.minimize": "Minimize"
+  "Terra.actionHeader.minimize": "Minimize",
+  "Terra.list.singleSelect": "Single select list, to select or deselect items, press enter or spacebar",
+  "Terra.list.multiSelect": "Multi select list, to select or deselect items, press enter or spacebar"
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
+import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import styles from './List.module.scss';
 
@@ -12,6 +13,11 @@ const propTypes = {
    * The children list items passed to the component.
    */
   children: PropTypes.node,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
   /**
    * Whether or not the list's child items should have a border color applied.
    * One of `'none'`, `'standard'`, `'bottom-only'`.
@@ -48,6 +54,7 @@ const defaultProps = {
 
 const List = ({
   children,
+  intl,
   dividerStyle,
   paddingStyle,
   refCallback,
@@ -73,17 +80,15 @@ const List = ({
     attrSpread.role = role;
   }
 
-  const interactInstructions = 'To select or deselect items, press enter or spacebar';
-
   if (ariaSelectionStyle === 'single-select') {
     attrSpread.role = 'listbox';
-    attrSpread['aria-label'] = `Single select list, ${interactInstructions}`;
+    attrSpread['aria-label'] = intl.formatMessage({ id: 'Terra.list.singleSelect' });
   }
 
   if (ariaSelectionStyle === 'multi-select') {
     attrSpread.role = 'listbox';
     attrSpread['aria-multiselectable'] = true;
-    attrSpread['aria-label'] = `Multi select list, ${interactInstructions}`;
+    attrSpread['aria-label'] = intl.formatMessage({ id: 'Terra.list.multiSelect' });
   }
 
   return (
@@ -96,4 +101,4 @@ const List = ({
 List.propTypes = propTypes;
 List.defaultProps = defaultProps;
 
-export default List;
+export default injectIntl(List);
