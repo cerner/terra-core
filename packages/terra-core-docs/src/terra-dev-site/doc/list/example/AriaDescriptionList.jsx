@@ -9,13 +9,13 @@ const cx = classNames.bind(styles);
 const AriaDescriptionList = () => (
   <List ariaDescription="Here are some instructions for using this list.">
     <Item key="123">
-      <Placeholder title="Item 0" className={cx('placeholder')} />
+      <Placeholder title="John Smith" className={cx('placeholder')} />
     </Item>
     <Item key="124">
-      <Placeholder title="Item 1" className={cx('placeholder')} />
+      <Placeholder title="Mary Jones" className={cx('placeholder')} />
     </Item>
     <Item key="125">
-      <Placeholder title="Item 2" className={cx('placeholder')} />
+      <Placeholder title="Sam Brown" className={cx('placeholder')} />
     </Item>
   </List>
 );
