@@ -3,6 +3,9 @@ import List, { Item } from 'terra-list/lib/index';
 
 const AriaDescribedByVisibleListTest = () => (
   <>
+    <p id="list-help">
+      Here are some instructions for using this list.
+    </p>
     <List ariaDescribedBy="list-help">
       <Item key="0">
         <p>Item 1</p>
@@ -14,9 +17,6 @@ const AriaDescribedByVisibleListTest = () => (
         <p>Item 3</p>
       </Item>
     </List>
-    <p id="list-help">
-      Here are some instructions for using this list.
-    </p>
   </>
 );
 

@@ -3,6 +3,9 @@ import List, { Item } from 'terra-list/lib/index';
 
 const AriaDetailsListTest = () => (
   <>
+    <p id="list-details">
+      Here is some more information about this list.
+    </p>
     <List ariaDetails="list-details">
       <Item key="0">
         <p>Item 1</p>
@@ -14,9 +17,6 @@ const AriaDetailsListTest = () => (
         <p>Item 3</p>
       </Item>
     </List>
-    <p id="list-details">
-      Here is some more information about this list.
-    </p>
   </>
 );
 

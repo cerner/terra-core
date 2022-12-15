@@ -4,6 +4,10 @@ import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 const AriaDescribedByHiddenListTest = () => (
   <>
+    <VisuallyHiddenText
+      id="list-help"
+      text="Here are some instructions for using this list."
+    />
     <List ariaDescribedBy="list-help">
       <Item key="0">
         <p>Item 1</p>
@@ -15,10 +19,6 @@ const AriaDescribedByHiddenListTest = () => (
         <p>Item 3</p>
       </Item>
     </List>
-    <VisuallyHiddenText
-      id="list-help"
-      text="Here are some instructions for using this list."
-    />
   </>
 );
 
