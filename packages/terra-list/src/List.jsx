@@ -34,7 +34,7 @@ const propTypes = {
    * References a visible or visually hidden text element
    * on the page that conveys information about the list
    * and how to interact with it. Maps to
-   * [aria-details](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details). 
+   * [aria-details](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
    * Can be used alongside `ariaDescribedBy` or `ariaDescription`.
    * `aria-details` is not supported in all screen reader/browser
    * combinations. Consumers should test for different screen
