@@ -17,13 +17,13 @@ const AriaDescribedBySelectableListTest = () => {
       </p>
       <List ariaDescribedBy="list-help" role="listbox">
         <Item key="1" isSelectable isSelected={selected.selectedKey === '1'} metaData={{ key: '1' }} onSelect={handleSelectItem}>
-          <p>Item 1</p>
+          <p>John Smith</p>
         </Item>
         <Item key="2" isSelectable isSelected={selected.selectedKey === '2'} metaData={{ key: '2' }} onSelect={handleSelectItem}>
-          <p>Item 2</p>
+          <p>Mary Jones</p>
         </Item>
         <Item key="3" isSelectable isSelected={selected.selectedKey === '3'} metaData={{ key: '3' }} onSelect={handleSelectItem}>
-          <p>Item 3</p>
+          <p>Sam Brown</p>
         </Item>
       </List>
     </>
