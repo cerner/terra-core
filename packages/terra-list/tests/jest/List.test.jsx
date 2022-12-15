@@ -1,6 +1,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
-
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { shallowWithIntl } from 'terra-enzyme-intl';
 import List, { Item } from '../../src/index';
 
 // Snapshot Tests
@@ -11,12 +12,12 @@ it('should render with items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallow(<List>{items}</List>);
+  const shallowComponent = shallowWithIntl(<List>{items}</List>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with no items', () => {
-  const shallowComponent = shallow(<List />);
+  const shallowComponent = shallowWithIntl(<List />);
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -27,7 +28,7 @@ it('should render with standard divided items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallow(<List dividerStyle="standard">{items}</List>);
+  const shallowComponent = shallowWithIntl(<List dividerStyle="standard">{items}</List>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -38,7 +39,7 @@ it('should render with bottom only divided items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallow(<List dividerStyle="bottom-only">{items}</List>);
+  const shallowComponent = shallowWithIntl(<List dividerStyle="bottom-only">{items}</List>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -49,7 +50,7 @@ it('should render with standard padded items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallow(<List paddingStyle="standard">{items}</List>);
+  const shallowComponent = shallowWithIntl(<List paddingStyle="standard">{items}</List>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
@@ -60,15 +61,16 @@ it('should render with thin padded items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallow(<List paddingStyle="compact">{items}</List>);
+  const shallowComponent = shallowWithIntl(<List paddingStyle="compact">{items}</List>);
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = shallowWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <List />
     </ThemeContextProvider>,
   );
-  expect(wrapper).toMatchSnapshot();
+  const listContainer = wrapper.dive().dive();
+  expect(listContainer).toMatchSnapshot();
 });
