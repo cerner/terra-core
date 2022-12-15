@@ -23,7 +23,7 @@ const propTypes = {
   /**
     * String that provides information about the list and how to interact
     * with it. Maps to [aria-description](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description).
-    * When used with `ariaDescribedBy` prop, `ariaDescribedBy`
+    * When used with the `ariaDescribedBy` prop, `ariaDescribedBy`
     * takes precedence in defining the accessible description property.
     * Because `aria-description` still has limited screen reader support
     * compared to `aria-describedby`, this prop should only be used in cases where
@@ -36,6 +36,10 @@ const propTypes = {
    * and how to interact with it. Maps to
    * [aria-details](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details). 
    * Can be used alongside `ariaDescribedBy` or `ariaDescription`.
+   * `aria-details` is not supported in all screen reader/browser
+   * combinations. Consumers should test for different screen
+   * reader/browser combinations to ensure that instructions
+   * are consistently read.
    */
   ariaDetails: PropTypes.string,
   /**
