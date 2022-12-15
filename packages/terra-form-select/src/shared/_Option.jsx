@@ -94,6 +94,9 @@ const Option = ({
     }
   }
 
+  const label = `${display} (${customProps.index} of ${customProps.totalOptions})`;
+  const itemLabel = isSelected || customProps.index === 1 ? `Expanded combobox. ${label}` : label;
+
   return (
     <li
       role={role}
@@ -105,7 +108,7 @@ const Option = ({
       aria-disabled={disabled}
       tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
       data-terra-select-option
-      aria-label={`${display} (${customProps.index} of ${customProps.totalOptions})`}
+      aria-label={itemLabel}
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
       <span className={cx('display')}>{display}</span>

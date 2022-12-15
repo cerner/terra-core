@@ -386,14 +386,8 @@ class Frame extends React.Component {
    * Determines compatible role attribute to apply to select based on active variant and disabled prop
    */
   role() {
-    let role;
     const { disabled } = this.props;
-
-    if (SharedUtil.isMac()) {
-      role = SharedUtil.isSafari() ? 'group' : 'button';
-    } else {
-      role = 'combobox';
-    }
+    const role = SharedUtil.isSafari() ? 'group' : 'button';
 
     return disabled ? undefined : role;
   }
@@ -479,6 +473,7 @@ class Frame extends React.Component {
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
     const selectMenuId = `terra-select-menu-${uniqueid()}`;
+    const label = this.props.display ? `${this.props.display} is selected` : `${this.props.placeholder}`;
 
     const menuProps = {
       id: selectMenuId,
@@ -503,7 +498,7 @@ class Frame extends React.Component {
         aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!disabled && this.state.isOpen}
-        aria-label={`${this.props.display} is selected, ${this.ariaLabel()}`}
+        aria-label={`${label}, ${this.ariaLabel()}`}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
         aria-owns={this.state.isOpen ? selectMenuId : undefined}

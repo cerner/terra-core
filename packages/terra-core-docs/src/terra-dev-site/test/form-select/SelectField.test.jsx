@@ -7,12 +7,11 @@ const cx = classNames.bind(styles);
 
 const SelectFieldExample = () => (
   <div className={cx('content-wrapper')}>
-    <SelectField label="T-shirt size" placeholder="Select a size" selectId="select-field" defaultValue="small">
-      <SelectField.Option value="xSmall" display="Extra Small" />
-      <SelectField.Option value="small" display="Small" />
-      <SelectField.Option value="medium" display="Medium" />
-      <SelectField.Option value="large" display="Large" />
-      <SelectField.Option value="xLarge" display="Extra Large" />
+    <SelectField label="Allergies Hospitals" placeholder="Select a location" selectId="select-field">
+      <SelectField.Option value="kc" display="Cerner, Kansas City, MO" />
+      <SelectField.Option value="riverport" display="Cerner Corporation - Riverport Campus" />
+      <SelectField.Option value="innovation" display="Cerner Corporation - Innovation Campus" />
+      <SelectField.Option value="realization" display="Cerner Corporation - Realization Campus" />
     </SelectField>
   </div>
 );
