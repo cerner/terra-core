@@ -238,7 +238,7 @@ class Frame extends React.Component {
   handleKeyDown(event) {
     const { keyCode } = event;
 
-    if (keyCode === KeyCode.KEY_SPACE || (!this.state.isOpen && keyCode === KeyCode.KEY_RETURN)) {
+    if (keyCode === KeyCode.KEY_SPACE) {
       event.preventDefault();
       this.openDropdown();
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
@@ -493,7 +493,6 @@ class Frame extends React.Component {
       <div
         {...customProps}
         role={this.role()}
-        aria-required={required}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
@@ -515,7 +514,7 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()} tabIndex="-1">
+        <div className={cx('display')} aria-label={this.ariaLabel()}>
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}
