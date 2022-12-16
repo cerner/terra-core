@@ -1,11 +1,29 @@
 import React from 'react';
 import List, { Item, Utils } from 'terra-list/lib/index';
 import { Placeholder } from '@cerner/terra-docs';
-import classNames from 'classnames/bind';
-import mockData from './mock-data/mock-select';
-import styles from '../example/ListDocCommon.module.scss';
 
-const cx = classNames.bind(styles);
+const mockData = [
+  {
+    title: 'Item 0',
+    key: 'unique-0',
+  },
+  {
+    title: 'Item 1',
+    key: 'unique-1',
+  },
+  {
+    title: 'Item 2',
+    key: 'unique-2',
+  },
+  {
+    title: 'Item 3',
+    key: 'unique-3',
+  },
+  {
+    title: 'Item 4',
+    key: 'unique-4',
+  },
+];
 
 const maxSectionCount = 3;
 
@@ -31,7 +49,7 @@ class MutliSelectList extends React.Component {
         metaData={{ key: itemData.key }}
         onSelect={this.handleItemSelection}
       >
-        <Placeholder title={itemData.title} className={cx('placeholder')} />
+        <Placeholder title={itemData.title} />
       </Item>
     );
   }
@@ -42,7 +60,7 @@ class MutliSelectList extends React.Component {
 
   render() {
     return (
-      <List ariaSelectionStyle="multi-select">
+      <List dividerStyle="standard" ariaSelectionStyle="multi-select">
         {this.createListItems(mockData)}
       </List>
     );

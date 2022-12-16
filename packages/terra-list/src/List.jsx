@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
+import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import styles from './List.module.scss';
 
@@ -47,6 +48,11 @@ const propTypes = {
    */
   children: PropTypes.node,
   /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
+  /**
    * Whether or not the list's child items should have a border color applied.
    * One of `'none'`, `'standard'`, `'bottom-only'`.
    */
@@ -61,9 +67,15 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
-   * Accessibility role of the list, defaults to 'none'. If creating a list with selectable items, pass 'listbox'.
+   * Accessibility role of the list, defaults to 'none'.
    */
   role: PropTypes.string,
+  /**
+   * Sets the role to `'listbox'` and provides an aria-description of whether its a single or multi-select list.
+   * For multi-select lists, it sets aria-multiselectable to true.
+   * One of `'none'`, `'single-select'`, `'multi-select'`.
+   */
+  ariaSelectionStyle: PropTypes.oneOf(['none', 'single-select', 'multi-select']),
 };
 
 const defaultProps = {
@@ -71,6 +83,7 @@ const defaultProps = {
   dividerStyle: 'none',
   paddingStyle: 'none',
   role: 'none',
+  ariaSelectionStyle: 'none',
 };
 
 const List = ({
@@ -78,10 +91,12 @@ const List = ({
   ariaDescription,
   ariaDetails,
   children,
+  intl,
   dividerStyle,
   paddingStyle,
   refCallback,
   role,
+  ariaSelectionStyle,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -103,6 +118,17 @@ const List = ({
     attrSpread.role = role;
   }
 
+  if (ariaSelectionStyle === 'single-select') {
+    attrSpread.role = 'listbox';
+    attrSpread['aria-label'] = intl.formatMessage({ id: 'Terra.list.singleSelect' });
+  }
+
+  if (ariaSelectionStyle === 'multi-select') {
+    attrSpread.role = 'listbox';
+    attrSpread['aria-multiselectable'] = true;
+    attrSpread['aria-label'] = intl.formatMessage({ id: 'Terra.list.multiSelect' });
+  }
+
   return (
     <ul
       {...customProps}
@@ -121,4 +147,4 @@ const List = ({
 List.propTypes = propTypes;
 List.defaultProps = defaultProps;
 
-export default List;
+export default injectIntl(List);

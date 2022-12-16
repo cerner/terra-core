@@ -2,37 +2,119 @@
 
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   theme={
     Object {
       "className": "orion-fusion-theme",
     }
   }
 >
-  <List
-    dividerStyle="none"
-    paddingStyle="none"
-    role="none"
-  >
-    <ul
-      className="list orion-fusion-theme"
-      role="list"
-    />
-  </List>
+  <InjectIntl(List)>
+    <List
+      ariaSelectionStyle="none"
+      dividerStyle="none"
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      paddingStyle="none"
+      role="none"
+    >
+      <ul
+        className="list orion-fusion-theme"
+        role="list"
+      />
+    </List>
+  </InjectIntl(List)>
 </ThemeContextProvider>
 `;
 
 exports[`should render with ariaDescribedBy 1`] = `
-<div>
+<div
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
   <p
     id="list-help"
   >
      Navigate this list using the arrow keys. 
   </p>
-  <List
+  <InjectIntl(List)
     ariaDescribedBy="list-help"
-    dividerStyle="none"
-    paddingStyle="none"
-    role="none"
   >
     <ListItem
       hasChevron={false}
@@ -64,7 +146,79 @@ exports[`should render with ariaDescribedBy 1`] = `
       isSelected={false}
       key="127"
     />
-  </List>
+  </InjectIntl(List)>
+</div>
+`;
+
+exports[`should render with ariaDescribedBy 2`] = `
+<div
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <p
+    id="list-help"
+  >
+     Navigate this list using the arrow keys. 
+  </p>
+  <InjectIntl(List)
+    ariaDescribedBy="list-help"
+  >
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="123"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="124"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="125"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="126"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="127"
+    />
+  </InjectIntl(List)>
 </div>
 `;
 
@@ -107,18 +261,111 @@ exports[`should render with ariaDescription 1`] = `
 </ul>
 `;
 
+exports[`should render with ariaDescription 2`] = `
+<List
+  ariaDescription="Navigate this list using the arrow keys."
+  ariaSelectionStyle="none"
+  dividerStyle="none"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  paddingStyle="none"
+  role="none"
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="127"
+  />
+</List>
+`;
+
 exports[`should render with ariaDetails 1`] = `
-<div>
+<div
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
   <p
     id="list-details"
   >
      Here is some more information about this list. 
   </p>
-  <List
+  <InjectIntl(List)
     ariaDetails="list-details"
-    dividerStyle="none"
-    paddingStyle="none"
-    role="none"
   >
     <ListItem
       hasChevron={false}
@@ -150,7 +397,79 @@ exports[`should render with ariaDetails 1`] = `
       isSelected={false}
       key="127"
     />
-  </List>
+  </InjectIntl(List)>
+</div>
+`;
+
+exports[`should render with ariaDetails 2`] = `
+<div
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <p
+    id="list-details"
+  >
+     Here is some more information about this list. 
+  </p>
+  <InjectIntl(List)
+    ariaDetails="list-details"
+  >
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="123"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="124"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="125"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="126"
+    />
+    <ListItem
+      hasChevron={false}
+      isSelectable={false}
+      isSelected={false}
+      key="127"
+    />
+  </InjectIntl(List)>
 </div>
 `;
 
@@ -230,11 +549,90 @@ exports[`should render with items 1`] = `
 </ul>
 `;
 
+exports[`should render with mutli select aria attributes with ariaSelectionStyle mutli-select 1`] = `
+<ul
+  aria-label="Terra.list.multiSelect"
+  aria-multiselectable={true}
+  className="list"
+  role="listbox"
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="127"
+  />
+</ul>
+`;
+
 exports[`should render with no items 1`] = `
 <ul
   className="list"
   role="list"
 />
+`;
+
+exports[`should render with single select aria attributes with ariaSelectionStyle single-select 1`] = `
+<ul
+  aria-label="Terra.list.singleSelect"
+  className="list"
+  role="listbox"
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="127"
+  />
+</ul>
 `;
 
 exports[`should render with standard divided items 1`] = `
