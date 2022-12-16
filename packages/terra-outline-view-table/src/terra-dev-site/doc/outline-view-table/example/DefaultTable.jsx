@@ -1,5 +1,5 @@
 import React from 'react';
-import OutlineViewTable from 'terra-outline-table-view';
+import OutlineViewTable from 'terra-outline-view-table';
 
 const TableExample = () => (
   <OutlineViewTable
