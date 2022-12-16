@@ -155,6 +155,32 @@ it('should render with ariaDetails', () => {
   expect(shallowComponent).toMatchSnapshot();
 });
 
+it('should render with single select aria attributes with ariaSelectionStyle single-select', () => {
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
+  const items = [item1, item2, item3, item4, item5];
+  const shallowComponent = shallowWithIntl(
+    <List ariaSelectionStyle="single-select">{items}</List>,
+  ).dive();
+  expect(shallowComponent).toMatchSnapshot();
+});
+
+it('should render with mutli select aria attributes with ariaSelectionStyle mutli-select', () => {
+  const item1 = <Item key="123" />;
+  const item2 = <Item key="124" />;
+  const item3 = <Item key="125" />;
+  const item4 = <Item key="126" />;
+  const item5 = <Item key="127" />;
+  const items = [item1, item2, item3, item4, item5];
+  const shallowComponent = shallowWithIntl(
+    <List ariaSelectionStyle="multi-select">{items}</List>,
+  ).dive();
+  expect(shallowComponent).toMatchSnapshot();
+});
+
 it('correctly applies the theme context className', () => {
   const wrapper = mountWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>

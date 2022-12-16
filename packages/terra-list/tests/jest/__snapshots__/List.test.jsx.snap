@@ -549,11 +549,90 @@ exports[`should render with items 1`] = `
 </ul>
 `;
 
+exports[`should render with mutli select aria attributes with ariaSelectionStyle mutli-select 1`] = `
+<ul
+  aria-label="Terra.list.multiSelect"
+  aria-multiselectable={true}
+  className="list"
+  role="listbox"
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="127"
+  />
+</ul>
+`;
+
 exports[`should render with no items 1`] = `
 <ul
   className="list"
   role="list"
 />
+`;
+
+exports[`should render with single select aria attributes with ariaSelectionStyle single-select 1`] = `
+<ul
+  aria-label="Terra.list.singleSelect"
+  className="list"
+  role="listbox"
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="125"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="126"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={false}
+    isSelected={false}
+    key="127"
+  />
+</ul>
 `;
 
 exports[`should render with standard divided items 1`] = `
