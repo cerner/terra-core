@@ -383,6 +383,20 @@ class Frame extends React.Component {
   }
 
   /**
+   * Generates the main label for the field.
+   */
+  mainLabel() {
+    let label;
+    if (this.props.display) {
+      label = `${this.props.display} is selected, ${this.ariaLabel()}`;
+    } else if (this.props.placeholder) {
+      label = `${this.props.placeholder}, ${this.ariaLabel()}`;
+    }
+
+    return label || this.ariaLabel();
+  }
+
+  /**
    * Determines compatible role attribute to apply to select based on active variant and disabled prop
    */
   role() {
@@ -473,7 +487,6 @@ class Frame extends React.Component {
     const customAriaDescribedbyIds = customProps['aria-describedby'];
     const ariaDescribedBy = customAriaDescribedbyIds ? `${descriptionId} ${customAriaDescribedbyIds}` : descriptionId;
     const selectMenuId = `terra-select-menu-${uniqueid()}`;
-    const label = this.props.display ? `${this.props.display} is selected` : `${this.props.placeholder}`;
 
     const menuProps = {
       id: selectMenuId,
@@ -497,7 +510,7 @@ class Frame extends React.Component {
         aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!disabled && this.state.isOpen}
-        aria-label={`${label}, ${this.ariaLabel()}`}
+        aria-label={this.mainLabel()}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
         aria-owns={this.state.isOpen ? selectMenuId : undefined}

@@ -94,7 +94,10 @@ const Option = ({
     }
   }
 
-  const label = `${display} (${customProps.index} of ${customProps.totalOptions})`;
+  let label = display;
+  if (customProps.index && customProps.totalOptions) {
+    label = `${display} (${customProps.index} of ${customProps.totalOptions})`;
+  }
   const itemLabel = isSelected || customProps.index === 1 ? `Expanded combobox. ${label}` : label;
 
   return (
