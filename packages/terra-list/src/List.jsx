@@ -10,6 +10,40 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
+   * References a visible or visually hidden text element
+   * on the page that conveys information about the list
+   * and how to interact with it. Maps to [aria-describedby](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
+   * Because `aria-describedby` has the most comprehensive
+   * screen reader support of `aria-describedby`, `aria-description`, and
+   * `aria-details`, it should be the first choice for conveying
+   * List instructions to screen readers. (Note: In some screen readers,
+   * including JAWS, `aria-describedby` is not supported for non-interactable
+   * elements. In these cases, use `aria-details`.)
+   */
+  ariaDescribedBy: PropTypes.string,
+  /**
+    * String that provides information about the list and how to interact
+    * with it. Maps to [aria-description](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description).
+    * When used with the `ariaDescribedBy` prop, `ariaDescribedBy`
+    * takes precedence in defining the accessible description property.
+    * Because `aria-description` still has limited screen reader support
+    * compared to `aria-describedby`, this prop should only be used in cases where
+    * `aria-describedby` is not sufficient.
+    */
+  ariaDescription: PropTypes.string,
+  /**
+   * References a visible or visually hidden text element
+   * on the page that conveys information about the list
+   * and how to interact with it. Maps to
+   * [aria-details](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
+   * Can be used alongside `ariaDescribedBy` or `ariaDescription`.
+   * `aria-details` is not supported in all screen reader/browser
+   * combinations. Consumers should test for different screen
+   * reader/browser combinations to ensure that instructions
+   * are consistently read.
+   */
+  ariaDetails: PropTypes.string,
+  /**
    * The children list items passed to the component.
    */
   children: PropTypes.node,
@@ -53,6 +87,9 @@ const defaultProps = {
 };
 
 const List = ({
+  ariaDescribedBy,
+  ariaDescription,
+  ariaDetails,
   children,
   intl,
   dividerStyle,
@@ -76,6 +113,7 @@ const List = ({
   );
 
   const attrSpread = {};
+  attrSpread.role = 'list'; // Explicitly set role='list' as it's missing in Safari
   if (role && role.length > 0 && role !== 'none') {
     attrSpread.role = role;
   }
@@ -92,7 +130,15 @@ const List = ({
   }
 
   return (
-    <ul {...customProps} {...attrSpread} className={listClassNames} ref={refCallback}>
+    <ul
+      {...customProps}
+      {...attrSpread}
+      aria-describedby={ariaDescribedBy}
+      aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
+      aria-details={ariaDetails}
+      className={listClassNames}
+      ref={refCallback}
+    >
       {children}
     </ul>
   );
