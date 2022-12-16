@@ -30,11 +30,13 @@ exports[`should render a Fieldset when all the possible props are passed into it
 >
   <legend
     className="legend healtheintent-legend"
+    id="terra-fieldset-legend-b68d784f-fd91-45e7-9e98-6c85434b68e1"
   >
     Text
   </legend>
   <small
     className="help-text"
+    id="terra-fieldset-help-a3ba88e4-1c66-4a49-a7b1-ff43c87bd623"
     tabIndex="-1"
   >
     This is a test input
@@ -43,6 +45,7 @@ exports[`should render a Fieldset when all the possible props are passed into it
     className="fieldset-children"
   >
     <input
+      aria-labelledby="terra-fieldset-help-a3ba88e4-1c66-4a49-a7b1-ff43c87bd623 terra-fieldset-legend-b68d784f-fd91-45e7-9e98-6c85434b68e1"
       type="radio"
       value="Test"
     />

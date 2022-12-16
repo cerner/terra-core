@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added `aria-labelledby` for terra-form-fieldset.
+
 ## 2.64.0 - (December 7, 2022)
 
 * Changed
