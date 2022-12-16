@@ -65,7 +65,7 @@ const Fieldset = ({
   const legendId = `terra-fieldset-legend-${uuidv4()}`;
   const helpId = `terra-fieldset-help-${uuidv4()}`;
 
-  const addAriadescribedby = (fieldsetChildren) => {
+  const addAriaHelpers = (fieldsetChildren) => {
     const cloneChildren = [];
     React.Children.forEach(fieldsetChildren, (child) => {
       cloneChildren.push(React.cloneElement(child, { 'aria-labelledby': `${helpId} ${legendId}` }));
@@ -78,7 +78,7 @@ const Fieldset = ({
       {legend && <legend id={legendId} {...legendAttrs} className={legendClasses}>{legend}</legend>}
       {help && <small id={helpId} className={cx('help-text')} tabIndex="-1">{help}</small>}
       <div className={cx('fieldset-children')}>
-        {addAriadescribedby(children)}
+        {addAriaHelpers(children)}
       </div>
     </fieldset>
   );
