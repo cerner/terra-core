@@ -34,4 +34,10 @@ Terra.describeViewports('HTML Table', ['medium'], () => {
 
     Terra.validates.element('no rows');
   });
+
+  it('should display HTML Table with row headers', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/html-table/row-header-table');
+
+    Terra.validates.element('row header');
+  });
 });

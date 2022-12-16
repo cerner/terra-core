@@ -3,15 +3,36 @@
 ## Unreleased
 
 * Added
+  * Added single and multi select list test examples for `terra-list`.
+
+* Updated
+  * Updated single and multi select guides with the new ariaSelectionStyle prop for `terra-list`.
+
+## 1.16.0 - (December 7, 2022)
+
+* Added
+  * Added Accessibility Guide for `terra-form-select`.
+
+* Changed
+  * Updated wording in examples for `terra-demographics-banner`
+
+* Added
   * Added Higher Order examples for `terra-profile-image`.
   * Added Accessibility Guide for `terra-Profile-image`.
+
+* Changed
   * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
   * Added Accordion Examples for `terra-section-header`.
   * Added accessibility guide for `terra-divider`.
+  * Added tests and example for adding row header to `terra-html-table`.
+  * Added `terra-list` tests and examples for `ariaDescribedBy`, `ariaDescription`, and `ariaDetails` props.
+  * Added accessibility guide for `terra-html-table`.
+  * Added an accessibility hooks example for `terra-form-field` and `terra-input`.
 
 * Changed
   * Updated `terra-list` section guide to not use listbox role.
   * Updated `terra-divider` tests and doc examples to include heading level prop.
+  * Updated `terra-section-header` tests and examples.
 
 ## 1.15.1 - (September 8, 2022)
 
