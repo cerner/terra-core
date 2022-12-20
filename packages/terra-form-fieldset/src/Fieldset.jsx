@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import uuidv4 from 'uuid/v4';
 import styles from './Fieldset.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -61,12 +62,23 @@ const Fieldset = ({
     { 'legend-visually-hidden': isLegendHidden },
   ]);
 
+  const legendId = `terra-fieldset-legend-${uuidv4()}`;
+  const helpId = `terra-fieldset-help-${uuidv4()}`;
+
+  const addAriaHelpers = (fieldsetChildren) => {
+    const cloneChildren = [];
+    React.Children.forEach(fieldsetChildren, (child) => {
+      cloneChildren.push(React.cloneElement(child, { 'aria-labelledby': `${legendId} ${helpId}` }));
+    });
+    return cloneChildren;
+  };
+
   return (
     <fieldset {...customProps} className={fieldsetClasses}>
-      {legend && <legend {...legendAttrs} className={legendClasses}>{legend}</legend>}
-      {help && <small className={cx('help-text')} tabIndex="-1">{help}</small>}
+      {legend && <legend id={legendId} {...legendAttrs} className={legendClasses}>{legend}</legend>}
+      {help && <small id={helpId} className={cx('help-text')} tabIndex="-1">{help}</small>}
       <div className={cx('fieldset-children')}>
-        {children}
+        {addAriaHelpers(children)}
       </div>
     </fieldset>
   );
