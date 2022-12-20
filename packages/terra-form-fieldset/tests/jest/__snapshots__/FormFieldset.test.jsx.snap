@@ -45,7 +45,7 @@ exports[`should render a Fieldset when all the possible props are passed into it
     className="fieldset-children"
   >
     <input
-      aria-labelledby="terra-fieldset-help-00000000-0000-0000-0000-000000000000 terra-fieldset-legend-00000000-0000-0000-0000-000000000000"
+      aria-labelledby="terra-fieldset-legend-00000000-0000-0000-0000-000000000000 terra-fieldset-help-00000000-0000-0000-0000-000000000000"
       type="radio"
       value="Test"
     />
