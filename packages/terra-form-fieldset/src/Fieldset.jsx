@@ -68,7 +68,7 @@ const Fieldset = ({
   const addAriaHelpers = (fieldsetChildren) => {
     const cloneChildren = [];
     React.Children.forEach(fieldsetChildren, (child) => {
-      cloneChildren.push(React.cloneElement(child, { 'aria-labelledby': `${helpId} ${legendId}` }));
+      cloneChildren.push(React.cloneElement(child, { 'aria-labelledby': `${legendId} ${helpId}` }));
     });
     return cloneChildren;
   };
