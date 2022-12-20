@@ -386,9 +386,10 @@ class Frame extends React.Component {
    * Generates the main label for the field.
    */
   mainLabel() {
+    const selectedText = this.props.intl.formatMessage({ id: 'Terra.form.select.selected' });
     let label;
     if (this.props.display) {
-      label = `${this.props.display} is selected, ${this.ariaLabel()}`;
+      label = `${this.props.display} ${selectedText}, ${this.ariaLabel()}`;
     } else if (this.props.placeholder) {
       label = `${this.props.placeholder}, ${this.ariaLabel()}`;
     }
