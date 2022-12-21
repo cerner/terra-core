@@ -18,7 +18,8 @@ removeMakeDirectories();
 // For each icon in CernerOneIcons.json, optimize and copy corresponding svg
 iconData.forEach(({fileName}) => {
   readSvg(fileName)
-    // .then(svg => console.log(svg))
+    .then(optimizeSvg)
+    .then(svg => console.log(svg))
 })
 
 /*
