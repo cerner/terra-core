@@ -12,13 +12,9 @@
         "alias": "Add",
         "usage": "add",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -36,13 +32,9 @@
         "alias": "Search",
         "usage": "search",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -60,25 +52,19 @@
         "alias": "Checkmark",
         "usage": "commit, checkmark",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       },
       {
         "alias": "Commit",
         "usage": "commit, checkmark",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -100,37 +86,25 @@
         "alias": "Success",
         "usage": "success, yes, positive, Available (Presence Status in Care Aware Connect)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       },
       {
         "alias": "Available",
         "usage": "success, yes, positive, Available (Presence Status in Care Aware Connect)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       },
       {
         "alias": "Complete",
         "usage": "success, yes, positive, Available (Presence Status in Care Aware Connect)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": []
@@ -149,25 +123,19 @@
         "alias": "iconNoRisk",
         "usage": "UK Risk Indicator - no risk",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "UKNoRisk",
         "usage": "UK Risk Indicator - no risk",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ]
   },
@@ -189,25 +157,19 @@
         "alias": "Trash",
         "usage": "delete, send items to trash",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "Delete",
         "usage": "delete, send items to trash",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -226,25 +188,21 @@
         "alias": "Document",
         "usage": "document",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "PaperFolded",
         "usage": "document",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -265,13 +223,9 @@
         "alias": "Printer",
         "usage": "print document",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -289,13 +243,12 @@
         "alias": "Comment",
         "usage": "comment, comments available",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -313,13 +266,11 @@
         "alias": "Bookmark",
         "usage": "bookmark",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -338,13 +289,10 @@
         "alias": "Modified",
         "usage": "indicates that value has been modified",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -361,13 +309,11 @@
         "sets": [
           "Linear Navigation"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": [
@@ -377,13 +323,11 @@
         "sets": [
           "Linear Navigation"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ]
   },
@@ -401,13 +345,11 @@
         "alias": "Folder",
         "usage": "folder",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -430,13 +372,10 @@
         "sets": [
           "messaging"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -453,13 +392,11 @@
         "sets": [
           "messaging"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -482,25 +419,23 @@
         "alias": "Pill",
         "usage": "pill, used to describe a nursing medication task",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "TwoPieceCapsule",
         "usage": "pill, used to describe a nursing medication task",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -517,13 +452,10 @@
         "alias": "Redo",
         "usage": "redo",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -543,13 +475,12 @@
         "alias": "Visualization",
         "usage": "view information as a graph",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -572,13 +503,9 @@
         "alias": "LightBulb",
         "usage": "light bulb, suggestion, recommendation",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -602,13 +529,10 @@
         "sets": [
           "messaging"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": [
@@ -618,13 +542,10 @@
         "sets": [
           "messaging"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ]
   },
@@ -642,25 +563,21 @@
         "alias": "Projects",
         "usage": "projects, multiple folders",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "Folders",
         "usage": "projects, multiple folders",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -677,13 +594,10 @@
         "sets": [
           "messaging"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -702,13 +616,12 @@
         "alias": "Flag",
         "usage": "pay attention to this element",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -729,13 +642,9 @@
         "alias": "Calculator",
         "usage": "calculator, calculate information",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -757,13 +666,11 @@
         "sets": [
           "carets"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -784,13 +691,11 @@
         "sets": [
           "carets"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -811,13 +716,12 @@
         "sets": [
           "carets"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -838,13 +742,12 @@
         "sets": [
           "carets"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -868,13 +771,10 @@
         "sets": [
           "scheduling"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -893,13 +793,10 @@
         "alias": "Trophy",
         "usage": "trophy",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -921,13 +818,11 @@
         "sets": [
           "chevrons"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "Previous",
@@ -935,13 +830,11 @@
         "sets": [
           "chevrons"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -963,13 +856,11 @@
         "sets": [
           "chevrons"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "ChevronNext",
@@ -977,13 +868,11 @@
         "sets": [
           "chevrons"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -1005,13 +894,11 @@
         "sets": [
           "chevrons"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "ExpandLess",
@@ -1019,13 +906,11 @@
         "sets": [
           "chevrons"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": [
@@ -1035,13 +920,11 @@
         "sets": [
           "chevrons"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ]
   },
@@ -1062,13 +945,11 @@
         "sets": [
           "chevrons"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "ExpandMore",
@@ -1076,13 +957,11 @@
         "sets": [
           "chevrons"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isInteraction",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -1102,25 +981,19 @@
         "alias": "Clock",
         "usage": "clock",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "Timeout",
         "usage": "clock",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -1140,13 +1013,11 @@
         "alias": "Away",
         "usage": "away",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -1165,13 +1036,11 @@
         "alias": "SortAscending",
         "usage": "sort ascending",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -1190,13 +1059,11 @@
         "alias": "SortDescending",
         "usage": "sort descending",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -1219,13 +1086,11 @@
         "alias": "Treemap",
         "usage": "treemap",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -1252,13 +1117,11 @@
         "alias": "Glasses",
         "usage": "indicates a med order that needs a nurse's review",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -1280,13 +1143,11 @@
         "alias": "Image",
         "usage": "image, placeholder",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -1306,49 +1167,45 @@
         "alias": "DoorOpen",
         "usage": "open, door, depart",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "Open",
         "usage": "open, door, depart",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "Depart",
         "usage": "open, door, depart",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "Exit",
         "usage": "open, door, depart",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -1369,13 +1226,9 @@
         "alias": "Ellipses",
         "usage": "more options available",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -1397,25 +1250,17 @@
         "alias": "EllipsesVertical",
         "usage": "more options available",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "Rollup",
         "usage": "more options available",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -1431,13 +1276,11 @@
         "alias": "Exclamation",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -1452,13 +1295,10 @@
         "alias": "Alert",
         "usage": "severity - alert",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -1476,25 +1316,19 @@
         "alias": "Caution",
         "usage": "caution (hazard medium)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "HazardMedium",
         "usage": "caution (hazard medium)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": [
@@ -1502,13 +1336,10 @@
         "alias": "Warning",
         "usage": "caution (hazard medium)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -1523,25 +1354,19 @@
         "alias": "Moderate",
         "usage": "UK risk indicator",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "Unspecified",
         "usage": "UK risk indicator",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -1563,49 +1388,33 @@
         "alias": "Critical",
         "usage": "warning (hazard high)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       },
       {
         "alias": "WarningDiamond",
         "usage": "warning (hazard high)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       },
       {
         "alias": "HazardHigh",
         "usage": "warning (hazard high)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       },
       {
         "alias": "SeverityCritical",
         "usage": "warning (hazard high)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": []
@@ -1625,13 +1434,10 @@
         "alias": "HazardLow",
         "usage": "advisory (hazard low)",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -1647,13 +1453,9 @@
         "alias": "ItalicI",
         "usage": "NOT IN DS",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -1671,13 +1473,9 @@
         "alias": "Information",
         "usage": "Information",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -1693,13 +1491,9 @@
         "alias": "Minus",
         "usage": "minus",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -1717,13 +1511,10 @@
         "alias": "ErrorSolid",
         "usage": "error",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -1731,13 +1522,10 @@
         "alias": "ErrorDark",
         "usage": "error",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ]
   },
@@ -1751,25 +1539,17 @@
         "alias": "Error",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       },
       {
         "alias": "ErrorRed",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": []
@@ -1789,13 +1569,7 @@
         "alias": "DoNotDisturb",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -1813,25 +1587,17 @@
         "alias": "Close",
         "usage": "close",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "X",
         "usage": "close",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -1839,13 +1605,9 @@
         "alias": "Clear",
         "usage": "close",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -1865,37 +1627,28 @@
         "alias": "Incomplete",
         "usage": "clear, remove",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "NotMet",
         "usage": "clear, remove",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "Remove",
         "usage": "clear, remove",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -1916,13 +1669,10 @@
         "alias": "Person",
         "usage": "person",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -1945,13 +1695,10 @@
         "sets": [
           "arrows"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -1974,13 +1721,11 @@
         "sets": [
           "arrows"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -2001,13 +1746,10 @@
         "sets": [
           "arrows"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -2028,13 +1770,10 @@
         "sets": [
           "arrows"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -2054,13 +1793,9 @@
         "alias": "Settings",
         "usage": "settings",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2080,13 +1815,9 @@
         "alias": "Edit",
         "usage": "edit",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -2094,13 +1825,9 @@
         "alias": "Pencil",
         "usage": "edit",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -2118,25 +1845,19 @@
         "alias": "Calendar",
         "usage": "calendar, lookback",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "Lookback",
         "usage": "calendar, lookback",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2154,13 +1875,9 @@
         "alias": "Refresh",
         "usage": "refresh, sync",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2181,13 +1898,10 @@
         "alias": "Provider",
         "usage": "provider",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2207,49 +1921,41 @@
         "alias": "Padlock",
         "usage": "locked, access denied",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "Locked",
         "usage": "locked, access denied",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "Secure",
         "usage": "locked, access denied",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "Unauthorized",
         "usage": "locked, access denied",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -2274,13 +1980,12 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "StarSolid",
@@ -2289,13 +1994,12 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "FavoriteTrue",
@@ -2304,13 +2008,12 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "RatingStarFilled",
@@ -2319,13 +2022,12 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": [
@@ -2336,13 +2038,12 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -2366,13 +2067,11 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable"
+        ]
       },
       {
         "alias": "FeaturedOutline",
@@ -2381,13 +2080,11 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable"
+        ]
       },
       {
         "alias": "StarOutline",
@@ -2396,13 +2093,11 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable"
+        ]
       },
       {
         "alias": "FavoriteFalse",
@@ -2411,13 +2106,11 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable"
+        ]
       },
       {
         "alias": "RatingStarEmpty",
@@ -2426,13 +2119,11 @@
           "favorites",
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2454,13 +2145,10 @@
         "sets": [
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "StarHalf",
@@ -2468,13 +2156,10 @@
         "sets": [
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "RatingStarHalf",
@@ -2482,13 +2167,10 @@
         "sets": [
           "stars"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2508,13 +2190,9 @@
         "alias": "Archive",
         "usage": "archive",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2532,13 +2210,9 @@
         "alias": "Filter",
         "usage": "filter",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -2546,13 +2220,9 @@
         "alias": "Funnel",
         "usage": "filter",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -2570,13 +2240,9 @@
         "alias": "Documents",
         "usage": "documents",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2592,13 +2258,9 @@
         "alias": "Question",
         "usage": "question",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -2617,13 +2279,7 @@
         "alias": "HelpBlue",
         "usage": "access help",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": [
@@ -2631,13 +2287,7 @@
         "alias": "Help",
         "usage": "access help",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -2655,25 +2305,17 @@
         "alias": "Unknown",
         "usage": "Help, Unknown (CareAware Connect, themed gray)",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "HelpSolid",
         "usage": "Help, Unknown (CareAware Connect, themed gray)",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2693,13 +2335,9 @@
         "alias": "UnexpectedResult",
         "usage": "Unexpected Result",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": [
@@ -2707,13 +2345,9 @@
         "alias": "Unexpected",
         "usage": "Unexpected Result",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ]
   },
@@ -2731,25 +2365,17 @@
         "alias": "HelpOutline",
         "usage": "Help",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "QuestionOutline",
         "usage": "Help",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2768,25 +2394,17 @@
         "alias": "Home",
         "usage": "house, home",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "House",
         "usage": "house, home",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2807,13 +2425,9 @@
         "alias": "Save",
         "usage": "save",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2833,13 +2447,9 @@
         "alias": "Hospital",
         "usage": "hospital",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2863,25 +2473,19 @@
         "alias": "Pending",
         "usage": "waiting for completion",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "Hourglass",
         "usage": "waiting for completion",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2903,13 +2507,12 @@
         "alias": "Analytics",
         "usage": "view information as a graph",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -2927,13 +2530,10 @@
         "alias": "Announcement",
         "usage": "announcement",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -2952,25 +2552,17 @@
         "alias": "Camera",
         "usage": "camera, take a photo",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "TakePhoto",
         "usage": "camera, take a photo",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -2994,25 +2586,19 @@
         "alias": "Briefcase",
         "usage": "briefcase",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "MedicalBag",
         "usage": "briefcase",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -3035,61 +2621,56 @@
         "alias": "Link",
         "usage": "link",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "Linked",
         "usage": "link",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "HyperLink",
         "usage": "link",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "LinkObjects",
         "usage": "link",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "LinkTo",
         "usage": "link",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -3108,13 +2689,9 @@
         "alias": "Menu",
         "usage": "menu",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -3122,13 +2699,9 @@
         "alias": "List",
         "usage": "menu",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -3147,13 +2720,9 @@
         "alias": "Checklist",
         "usage": "checklist",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3177,37 +2746,34 @@
         "alias": "Unlock",
         "usage": "unlocked, access granted",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "Unlocked",
         "usage": "unlocked, access granted",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "AccessGranted",
         "usage": "unlocked, access granted",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -3229,25 +2795,19 @@
         "alias": "Due",
         "usage": "due, stopwatch",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "Stopwatch",
         "usage": "due, stopwatch",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3263,13 +2823,9 @@
         "alias": "DueSoon",
         "usage": "Item is due soon",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ]
   },
@@ -3290,13 +2846,9 @@
         "alias": "Spinner",
         "usage": "Content loading, should spin",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3319,25 +2871,17 @@
         "alias": "Tile",
         "usage": "tile the information in rows and columns, show grid layout",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "GridLayout",
         "usage": "tile the information in rows and columns, show grid layout",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3353,13 +2897,7 @@
         "alias": "Overdue",
         "usage": "Item overdue",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -3378,25 +2916,21 @@
         "alias": "MultipleUsers",
         "usage": "people, users",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "Users",
         "usage": "people, users",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -3420,13 +2954,10 @@
         "alias": "Knurling",
         "usage": "indicates drag/drop reorder interactability of an element",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": true,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isInteraction",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3447,13 +2978,9 @@
         "alias": "AddPerson",
         "usage": "add person",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3475,13 +3002,9 @@
         "alias": "Upload",
         "usage": "upload local content into system",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3503,13 +3026,9 @@
         "alias": "Download",
         "usage": "download content from system",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3529,13 +3048,10 @@
         "alias": "Cancel",
         "usage": "cancel, discontinued",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3555,13 +3071,10 @@
         "alias": "Maximize",
         "usage": "maximize content or element",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3580,13 +3093,10 @@
         "alias": "Minimize",
         "usage": "minimize content or element",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3610,13 +3120,10 @@
         "sets": [
           "messaging"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -3635,13 +3142,10 @@
         "alias": "Table",
         "usage": "view information as table",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3661,25 +3165,17 @@
         "alias": "Required",
         "usage": "required (themed red), gap checking",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "GapChecking",
         "usage": "required (themed red), gap checking",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3700,13 +3196,10 @@
         "alias": "PersonHospital",
         "usage": "Relationship exists between the given organization and the person. ",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3727,13 +3220,10 @@
         "alias": "PersonnelPerson",
         "usage": "Provider-person relationship",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3758,13 +3248,9 @@
         "sets": [
           "results"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": [
@@ -3774,13 +3260,9 @@
         "sets": [
           "results"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ]
   },
@@ -3803,13 +3285,9 @@
         "sets": [
           "results"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": [
@@ -3819,13 +3297,9 @@
         "sets": [
           "results"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ]
   },
@@ -3840,13 +3314,7 @@
         "alias": "LowRisk",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -3868,13 +3336,10 @@
         "sets": [
           "results"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3897,13 +3362,10 @@
         "sets": [
           "results"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -3926,13 +3388,9 @@
         "sets": [
           "results"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": [
@@ -3942,13 +3400,9 @@
         "sets": [
           "results"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ]
   },
@@ -3969,37 +3423,31 @@
         "alias": "LeftPane",
         "usage": "displays left pane, flowsheet",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "FlowSheet",
         "usage": "displays left pane, flowsheet",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "SidebarLeft",
         "usage": "displays left pane, flowsheet",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -4015,13 +3463,9 @@
         "alias": "NotificationOff",
         "usage": "notification empty",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -4041,25 +3485,19 @@
         "alias": "Notification",
         "usage": "notification available, notifications enabled",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       },
       {
         "alias": "NotificationEnabled",
         "usage": "notification available, notifications enabled",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4080,13 +3518,10 @@
         "alias": "NotificationDisabled",
         "usage": "notification disabled",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4108,13 +3543,11 @@
         "sets": [
           "linear navigation"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": [
@@ -4124,13 +3557,11 @@
         "sets": [
           "linear navigation"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ]
   },
@@ -4148,25 +3579,19 @@
         "alias": "Device",
         "usage": "device exists",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "MobileDevice",
         "usage": "device exists",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4182,25 +3607,17 @@
         "alias": "DeviceCheck",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       },
       {
         "alias": "DeviceAssociated",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ]
   },
@@ -4215,13 +3632,7 @@
         "alias": "DeviceAlert",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -4235,25 +3646,17 @@
         "alias": "EditDocument",
         "usage": "Edit document",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "PaperPencil",
         "usage": "Edit document",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4272,13 +3675,9 @@
         "alias": "Clipboard",
         "usage": "clipboard, copy",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4301,13 +3700,9 @@
         "alias": "ZoomOut",
         "usage": "zoom out",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4330,13 +3725,9 @@
         "alias": "ZoomIn",
         "usage": "zoom in",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4354,13 +3745,9 @@
         "alias": "UnverifiedResult",
         "usage": "unverified result/data",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": [
@@ -4368,13 +3755,9 @@
         "alias": "Diamond",
         "usage": "unverified result/data",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ]
   },
@@ -4395,25 +3778,19 @@
         "alias": "Envelope",
         "usage": "message",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "MessageOutline",
         "usage": "message",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -4435,25 +3812,17 @@
         "alias": "MessageSolid",
         "usage": "message",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "EnvelopeFill",
         "usage": "message",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4477,13 +3846,10 @@
         "alias": "Allergy",
         "usage": "presence of allergies",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4498,25 +3864,17 @@
         "alias": "EndCall",
         "usage": "hang up, leave call",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "PhoneDown",
         "usage": "hang up, leave call",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4531,25 +3889,17 @@
         "alias": "Phone",
         "usage": "phone, make call",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "Call",
         "usage": "phone, make call",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4569,13 +3919,12 @@
         "alias": "PanelLeft",
         "usage": "remove section from side pane",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -4595,13 +3944,12 @@
         "alias": "PanelRight",
         "usage": "push section to side pane",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -4624,13 +3972,11 @@
         "alias": "Tag",
         "usage": "tag, tagged items",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -4646,13 +3992,10 @@
         "alias": "IPass",
         "usage": "iPass",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ]
   },
@@ -4671,37 +4014,28 @@
         "alias": "Inbox",
         "usage": "inbox, scratchpad, orders cart",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "ScratchPad",
         "usage": "inbox, scratchpad, orders cart",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "OrdersCart",
         "usage": "inbox, scratchpad, orders cart",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -4729,13 +4063,11 @@
         "alias": "NeedsPharmacyReview",
         "usage": "medication activity that needs pharmacy approval",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": [
@@ -4743,13 +4075,11 @@
         "alias": "PharmacyReview",
         "usage": "medication activity that needs pharmacy approval",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -4777,13 +4107,7 @@
         "alias": "RejectedByPharmacy",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": [
@@ -4791,13 +4115,7 @@
         "alias": "PharmacyReject",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -4815,13 +4133,10 @@
         "alias": "Busy",
         "usage": "User's status is busy",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -4829,13 +4144,10 @@
         "alias": "CircleSolid",
         "usage": "User's status is busy",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ]
   },
@@ -4853,13 +4165,10 @@
         "alias": "Unavailable",
         "usage": "user's status is unavailable",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -4867,13 +4176,10 @@
         "alias": "CircleOutline",
         "usage": "user's status is unavailable",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ]
   },
@@ -4892,13 +4198,10 @@
         "alias": "Implant",
         "usage": "procedure has an associated implant",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -4918,25 +4221,21 @@
         "alias": "Protocol",
         "usage": "part of a protocol, network",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "Network",
         "usage": "part of a protocol, network",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -4959,25 +4258,21 @@
         "alias": "VideoCamera",
         "usage": "video camera, video camera on",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "VideoEnabled",
         "usage": "video camera, video camera on",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -5000,25 +4295,21 @@
         "alias": "VideoCameraDisabled",
         "usage": "video camera off",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "VideoDisabled",
         "usage": "video camera off",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isToggle",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -5042,13 +4333,11 @@
         "alias": "WifiNoSignal",
         "usage": "no wifi connection",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": [
@@ -5056,13 +4345,11 @@
         "alias": "NoSignal",
         "usage": "no wifi connection",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isBidirectional"
+        ]
       }
     ]
   },
@@ -5081,13 +4368,10 @@
         "alias": "Undo",
         "usage": "undo",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -5109,13 +4393,10 @@
         "alias": "RecurringEvent",
         "usage": "indicates event is part of a series",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5134,13 +4415,11 @@
         "alias": "Separate",
         "usage": "separate items",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -5159,13 +4438,11 @@
         "alias": "Merge",
         "usage": "merge, join",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -5187,13 +4464,10 @@
         "alias": "Compose",
         "usage": "compose message",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -5213,13 +4487,10 @@
         "alias": "Visible",
         "usage": "show characters",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -5227,13 +4498,10 @@
         "alias": "Hide",
         "usage": "show characters",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ]
   },
@@ -5253,13 +4521,9 @@
         "alias": "Hidden",
         "usage": "view, visible",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle"
+        ]
       }
     ],
     "secretAliases": [
@@ -5267,13 +4531,9 @@
         "alias": "Unread",
         "usage": "view, visible",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle"
+        ]
       }
     ]
   },
@@ -5292,25 +4552,19 @@
         "alias": "Transfer",
         "usage": "swap, transfer",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "Swap",
         "usage": "swap, transfer",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -5331,25 +4585,19 @@
         "alias": "Microphone",
         "usage": "microphone on",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       },
       {
         "alias": "MicrophoneEnabled",
         "usage": "microphone on",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5370,13 +4618,10 @@
         "alias": "MicrophoneDisabled",
         "usage": "microphone off",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5397,13 +4642,10 @@
         "sets": [
           "telephone"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5424,13 +4666,10 @@
         "sets": [
           "telephone"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5451,13 +4690,10 @@
         "sets": [
           "telephone"
         ],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5477,13 +4713,10 @@
         "alias": "PinDown",
         "usage": "pin open pane",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5503,90 +4736,13 @@
         "alias": "PinDiagonal",
         "usage": "unpin pane",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
-  },
-  {
-    "descriptiveName": "Audio With Two Sound Lines",
-    "fileName": "0167_speakerCurvedLines_a.svg",
-    "searchTerms": [
-      "audio",
-      "volume",
-      "increase",
-      "up",
-      "sound",
-      "enabled",
-      "loud"
-    ],
-    "restricted": false,
-    "aliases": [
-      {
-        "alias": "Audio",
-        "usage": "audio",
-        "sets": [
-          "Media Controls"
-        ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
-      },
-      {
-        "alias": "VolumeIncrease",
-        "usage": "audio",
-        "sets": [
-          "Media Controls"
-        ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
-      },
-      {
-        "alias": "AudioIncrease",
-        "usage": "audio",
-        "sets": [
-          "Media Controls"
-        ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
-      }
-    ],
-    "secretAliases": [
-      {
-        "alias": "AudioSetIncrease",
-        "usage": "audio",
-        "sets": [
-          "Media Controls"
-        ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
-      }
-    ]
   },
   {
     "descriptiveName": "External Link",
@@ -5602,13 +4758,10 @@
         "alias": "ExternalLink",
         "usage": "indicates a hyperlink will navigate the user away from or out of their current page or site",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5628,13 +4781,10 @@
         "alias": "BedRequested",
         "usage": "A Bed Assignment has been requested",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5654,13 +4804,9 @@
         "alias": "BedAssigned",
         "usage": "A Bed Assignment has been made",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": []
@@ -5680,13 +4826,9 @@
         "alias": "DischargeComplete",
         "usage": "Patient who left",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": []
@@ -5702,13 +4844,7 @@
         "alias": "DischargeComingDue",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -5723,13 +4859,7 @@
         "alias": "DischargeOverDue",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -5747,13 +4877,10 @@
         "alias": "FlipVertical",
         "usage": "flip vertical",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -5772,13 +4899,10 @@
         "alias": "FlipHorizontal",
         "usage": "flip horizontal",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -5802,25 +4926,17 @@
         "alias": "RotateLeft",
         "usage": "rotate left",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "RotateAnticlockwise",
         "usage": "rotate left",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5842,25 +4958,17 @@
         "alias": "RotateRight",
         "usage": "rotate right",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "RotateClockwise",
         "usage": "rotate right",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5880,13 +4988,10 @@
         "alias": "Hold",
         "usage": "hold",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5907,13 +5012,9 @@
         "alias": "FitWidth",
         "usage": "fit to width",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5934,13 +5035,9 @@
         "alias": "FitScale",
         "usage": "fit to container",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -5956,25 +5053,13 @@
         "alias": "PossibleDrugInteraction",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       },
       {
         "alias": "DrugDrug",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -5997,13 +5082,11 @@
         "alias": "SecondaryProvider",
         "usage": "indicates which resource from our personnel pool is the patient's secondary care provider",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6023,25 +5106,25 @@
         "alias": "PartiallyMet",
         "usage": "partially met, in progress",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       },
       {
         "alias": "InProgress",
         "usage": "partially met, in progress",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": true
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired",
+          "isBidirectional"
+        ]
       }
     ],
     "secretAliases": []
@@ -6063,25 +5146,19 @@
         "alias": "Simulation",
         "usage": "desktop device, simulation",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "ComputerMonitor",
         "usage": "desktop device, simulation",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -6104,13 +5181,9 @@
         "alias": "CollapseRow",
         "usage": "collapse all children",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -6129,13 +5202,9 @@
         "alias": "ExpandRow",
         "usage": "expand all children",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -6157,13 +5226,9 @@
         "alias": "DoubleChevronLeft",
         "usage": "moves the view back by a large segment",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -6185,13 +5250,9 @@
         "alias": "DoubleChevronRight",
         "usage": "moves the view forward by a large segment",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -6209,13 +5270,9 @@
         "alias": "Extensions",
         "usage": "extensions",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -6235,13 +5292,10 @@
         "alias": "AddDocument",
         "usage": "add document",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": [
@@ -6249,13 +5303,10 @@
         "alias": "DocumentPlus",
         "usage": "add document",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -6275,13 +5326,11 @@
         "alias": "AppointmentRefused",
         "usage": "Indicates user has refused appointment time slot",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6297,13 +5346,7 @@
         "alias": "OutOfNetwork",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -6326,13 +5369,11 @@
         "alias": "PendingPharmacyVerification",
         "usage": "Pending pharmacy verification",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": [
@@ -6340,13 +5381,11 @@
         "alias": "PharmacyVerification",
         "usage": "Pending pharmacy verification",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -6360,13 +5399,10 @@
         "alias": "FitHeight",
         "usage": "fit to height",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6387,25 +5423,17 @@
         "alias": "PatientDischarge",
         "usage": "discharge, elopement, patient has left unexpectedly",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "Elopement",
         "usage": "discharge, elopement, patient has left unexpectedly",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -6413,13 +5441,9 @@
         "alias": "PersonDoor",
         "usage": "discharge, elopement, patient has left unexpectedly",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -6438,13 +5462,9 @@
         "alias": "LocationPin",
         "usage": "location",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -6468,13 +5488,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -6484,13 +5500,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -6513,13 +5525,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -6529,13 +5537,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -6558,13 +5562,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -6574,13 +5574,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -6603,13 +5599,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -6619,13 +5611,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -6649,13 +5637,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -6665,13 +5649,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -6696,13 +5676,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -6712,13 +5688,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ]
   },
@@ -6736,25 +5708,23 @@
         "alias": "Bluetooth",
         "usage": "bluetooth on",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "BluetoothEnabled",
         "usage": "bluetooth on",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6773,13 +5743,12 @@
         "alias": "BluetoothDisabled",
         "usage": "bluetooth off",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": [
@@ -6787,13 +5756,12 @@
         "alias": "BluetoothSlash",
         "usage": "bluetooth off",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": true,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isToggle",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ]
   },
@@ -6818,13 +5786,10 @@
         "alias": "StartPresenting",
         "usage": "share screen, start presenting",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6851,13 +5816,10 @@
         "alias": "StopPresenting",
         "usage": "stop sharing screen, stop presenting",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6876,13 +5838,10 @@
         "alias": "Pager",
         "usage": "pager",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6901,13 +5860,10 @@
         "alias": "AutoText",
         "usage": "auto text",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6925,13 +5881,10 @@
         "alias": "Keyboard",
         "usage": "keyboard",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6951,13 +5904,10 @@
         "alias": "SharedSchedules",
         "usage": "shared schedule",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -6979,37 +5929,28 @@
         "alias": "PatientSearch",
         "usage": "search for a person, patient, or provider",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "PersonSearch",
         "usage": "search for a person, patient, or provider",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "ProviderSearch",
         "usage": "search for a person, patient, or provider",
         "sets": [],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -7029,13 +5970,11 @@
         "alias": "Group",
         "usage": "group",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -7056,25 +5995,19 @@
         "alias": "MedicationTablet",
         "usage": "medication",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "MedicationTabletSolid",
         "usage": "medication",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -7095,13 +6028,10 @@
         "alias": "MedicationTabletOutline",
         "usage": "medication outline",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -7123,25 +6053,17 @@
         "alias": "MedicationTabletHalf",
         "usage": "medication half",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       },
       {
         "alias": "MedicationTabletHalfSolid",
         "usage": "medication half",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -7163,13 +6085,9 @@
         "alias": "MedicationTabletHalfOutline",
         "usage": "medication half outline",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -7187,13 +6105,9 @@
         "alias": "Waveform",
         "usage": "waveform",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -7212,13 +6126,7 @@
         "alias": "PositiveStatus",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": [
@@ -7226,13 +6134,7 @@
         "alias": "StatusPositive",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -7250,13 +6152,10 @@
         "alias": "Confidential",
         "usage": "confidential",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -7264,13 +6163,10 @@
         "alias": "RevCycleSensitive",
         "usage": "confidential",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ]
   },
@@ -7288,25 +6184,19 @@
         "alias": "Wifi",
         "usage": "wifi on",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       },
       {
         "alias": "WifiEnabled",
         "usage": "wifi on",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -7325,13 +6215,10 @@
         "alias": "WifiDisabled",
         "usage": "wifi off",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": [
@@ -7339,13 +6226,10 @@
         "alias": "WifiSlash",
         "usage": "wifi off",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable"
+        ]
       }
     ]
   },
@@ -7362,13 +6246,11 @@
         "alias": "BrokenImage",
         "usage": "broken image",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
@@ -7389,25 +6271,21 @@
         "alias": "BrokenLink",
         "usage": "broken link, unlink",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "Unlink",
         "usage": "broken link, unlink",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": [
@@ -7415,19 +6293,17 @@
         "alias": "BrokenLinkUnlink",
         "usage": "broken link, unlink",
         "sets": [],
-        "isAction": true,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": true,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus",
+          "isColorable",
+          "isLabelRequired"
+        ]
       }
     ]
   },
   {
     "descriptiveName": "Audio No Lines",
-    "fileName": "0218_VolumeSet_a_48_Audio.svg",
+    "fileName": "0218_Audio_t_48.svg",
     "searchTerms": [
       "audio",
       "quiet",
@@ -7444,13 +6320,9 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isLabelRequired"
+        ]
       },
       {
         "alias": "MediaVolumeZero",
@@ -7458,20 +6330,16 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": true,
-        "isBidirectional": false
+        "characteristics": [
+          "isLabelRequired"
+        ]
       }
     ],
     "secretAliases": []
   },
   {
     "descriptiveName": "Audio One Radiating Line",
-    "fileName": "0218_VolumeSet_a_48_DecreasedVolume.svg",
+    "fileName": "0219_Audio_DecreaseVolume_a_48.svg",
     "searchTerms": [
       "audio",
       "quiet",
@@ -7487,13 +6355,7 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       },
       {
         "alias": "MediaVolumeOne",
@@ -7501,13 +6363,7 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       },
       {
         "alias": "DecreaseMediaVolume",
@@ -7515,13 +6371,57 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": true,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Audio With Two Sound Lines",
+    "fileName": "0220_Audio_IncreaseVolume_a_48.svg",
+    "searchTerms": [
+      "audio",
+      "volume",
+      "increase",
+      "up",
+      "sound",
+      "enabled",
+      "loud"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Audio",
+        "usage": "audio",
+        "sets": [
+          "Media Controls"
+        ],
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
+      },
+      {
+        "alias": "VolumeIncrease",
+        "usage": "audio",
+        "sets": [
+          "Media Controls"
+        ],
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
+      },
+      {
+        "alias": "AudioIncrease",
+        "usage": "audio",
+        "sets": [
+          "Media Controls"
+        ],
+        "characteristics": [
+          "isToggle",
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -7544,13 +6444,7 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       },
       {
         "alias": "MuteMedia",
@@ -7558,13 +6452,7 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       },
       {
         "alias": "AudioDisabled",
@@ -7572,13 +6460,7 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": [
@@ -7588,13 +6470,7 @@
         "sets": [
           "Media Controls"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -7611,13 +6487,9 @@
         "alias": "PersonConnection",
         "usage": "person connection",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": []
@@ -7637,13 +6509,9 @@
         "alias": "TrendingUp",
         "usage": "Upward trend",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
       }
     ],
     "secretAliases": []
@@ -7663,13 +6531,29 @@
         "alias": "TrendingDown",
         "usage": "Downward trend",
         "sets": [],
-        "isAction": false,
-        "isStatus": true,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": [
+          "isStatus"
+        ]
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "No Results",
+    "fileName": "0225_noResults_i_48.svg",
+    "searchTerms": [
+      "no",
+      "results"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "NoResults",
+        "usage": "Used to indicate no results for timeframe",
+        "sets": ["results"],
+        "characteristics": [
+          "isColorable"
+        ]
       }
     ],
     "secretAliases": []
@@ -7686,13 +6570,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7709,13 +6587,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7730,13 +6602,7 @@
         "alias": "DiamondSymbol",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7753,13 +6619,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7776,13 +6636,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7799,13 +6653,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7822,13 +6670,7 @@
         "alias": "RectangleSymbol",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7845,13 +6687,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7868,13 +6704,7 @@
         "alias": "SquareSymbol",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7891,13 +6721,7 @@
         "alias": "SquareSymbolLight",
         "usage": "",
         "sets": [],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7914,13 +6738,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7937,13 +6755,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7960,13 +6772,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -7983,13 +6789,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -8006,13 +6806,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -8029,13 +6823,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -8052,20 +6840,14 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
   },
   {
     "descriptiveName": "Triangle Down Outline Triangle Inverted Outline",
-    "fileName": "src/icons/S_0010_triangleDown_light.svg",
+    "fileName": "S_0010_triangleDown_light.svg",
     "searchTerms": [],
     "restricted": false,
     "aliases": [
@@ -8075,13 +6857,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -8098,13 +6874,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -8121,13 +6891,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -8144,13 +6908,7 @@
         "sets": [
           "Carbon Graphs"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ],
     "secretAliases": []
@@ -8168,13 +6926,7 @@
         "sets": [
           "Restricted"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -8191,13 +6943,7 @@
         "sets": [
           "Restricted"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -8214,13 +6960,7 @@
         "sets": [
           "Restricted"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -8237,13 +6977,7 @@
         "sets": [
           "Restricted"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -8260,13 +6994,7 @@
         "sets": [
           "Restricted"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
@@ -8283,13 +7011,7 @@
         "sets": [
           "Restricted"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       },
       {
         "alias": "CEMarking",
@@ -8297,19 +7019,13 @@
         "sets": [
           "Restricted"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   },
   {
     "descriptiveName": "European Union Authorized Representative (Regulatory)",
-    "fileName": "R_ecRep.sv",
+    "fileName": "R_ecRep.svg",
     "searchTerms": [],
     "restricted": true,
     "aliases": [],
@@ -8320,13 +7036,7 @@
         "sets": [
           "Restricted"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       },
       {
         "alias": "ECRep",
@@ -8334,13 +7044,7 @@
         "sets": [
           "Restricted"
         ],
-        "isAction": false,
-        "isStatus": false,
-        "isToggle": false,
-        "isInteraction": false,
-        "isColorable": false,
-        "isLabelRequired": false,
-        "isBidirectional": false
+        "characteristics": []
       }
     ]
   }
