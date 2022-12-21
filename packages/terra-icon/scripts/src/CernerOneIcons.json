@@ -1,0 +1,8347 @@
+[
+  {
+    "descriptiveName": "Add",
+    "fileName": "0001_plus_a.svg",
+    "searchTerms": [
+      "add",
+      "plus"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Add",
+        "usage": "add",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Search",
+    "fileName": "0002_magnifyingGlass_a.svg",
+    "searchTerms": [
+      "search",
+      "magnifying glass"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Search",
+        "usage": "search",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Checkmark",
+    "fileName": "0003_check_a.svg",
+    "searchTerms": [
+      "checkmark",
+      "commit"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Checkmark",
+        "usage": "commit, checkmark",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Commit",
+        "usage": "commit, checkmark",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Checkmark Fill",
+    "fileName": "0003_check_i_heavyCircleGreen.svg",
+    "searchTerms": [
+      "success",
+      "yes",
+      "positive",
+      "available",
+      "checkmark",
+      "green"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Success",
+        "usage": "success, yes, positive, Available (Presence Status in Care Aware Connect)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Available",
+        "usage": "success, yes, positive, Available (Presence Status in Care Aware Connect)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Complete",
+        "usage": "success, yes, positive, Available (Presence Status in Care Aware Connect)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Checkmark in Outline Circle",
+    "fileName": "0003_check_i_lightCircle.svg",
+    "searchTerms": [
+      "no risk",
+      "UK"
+    ],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "iconNoRisk",
+        "usage": "UK Risk Indicator - no risk",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "UKNoRisk",
+        "usage": "UK Risk Indicator - no risk",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Trash Can",
+    "fileName": "0004_trashCan_a.svg",
+    "searchTerms": [
+      [
+        "trash can",
+        "trashcan"
+      ],
+      "garbage",
+      "delete",
+      "remove"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Trash",
+        "usage": "delete, send items to trash",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Delete",
+        "usage": "delete, send items to trash",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Document",
+    "fileName": "0005_paperFolded_a.svg",
+    "searchTerms": [
+      "document",
+      "paper",
+      "folded"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Document",
+        "usage": "document",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "PaperFolded",
+        "usage": "document",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Printer",
+    "fileName": "0006_printer_a.svg",
+    "searchTerms": [
+      [
+        "print",
+        "printer"
+      ],
+      "document"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Printer",
+        "usage": "print document",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Comment",
+    "fileName": "0007_speechBubble_a.svg",
+    "searchTerms": [
+      "speech bubble",
+      "comment"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Comment",
+        "usage": "comment, comments available",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Bookmark",
+    "fileName": "0008_bookmark_a.svg",
+    "searchTerms": [
+      "bookmark",
+      "ribbon"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Bookmark",
+        "usage": "bookmark",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Modified",
+    "fileName": "0009_delta_a.svg",
+    "searchTerms": [
+      "modified",
+      "delta",
+      "triangle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Modified",
+        "usage": "indicates that value has been modified",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Go to First",
+    "fileName": "0010_lineChevronLeft_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "GoToFirst",
+        "usage": "go back to the first instance",
+        "sets": [
+          "Linear Navigation"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "First",
+        "usage": "go back to the first instance",
+        "sets": [
+          "Linear Navigation"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Folder",
+    "fileName": "0011_folder_a.svg",
+    "searchTerms": [
+      "folder",
+      "directory",
+      "file"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Folder",
+        "usage": "folder",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Attachment",
+    "fileName": "0012_paperClip_a.svg",
+    "searchTerms": [
+      "paper clip",
+      [
+        "attach",
+        "attachment"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Attachment",
+        "usage": "Add as an attachment",
+        "sets": [
+          "messaging"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Send",
+    "fileName": "0013_sendRight_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Send",
+        "usage": "Send message",
+        "sets": [
+          "messaging"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Two-Piece Capsule",
+    "fileName": "0014_pill_a.svg",
+    "searchTerms": [
+      "pill",
+      "capsule",
+      "medication",
+      [
+        "nurse",
+        "nursing"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Pill",
+        "usage": "pill, used to describe a nursing medication task",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "TwoPieceCapsule",
+        "usage": "pill, used to describe a nursing medication task",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Redo",
+    "fileName": "0015_circleArrowRight_a.svg",
+    "searchTerms": [
+      "redo"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Redo",
+        "usage": "redo",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Visualization",
+    "fileName": "0016_angledArrow_a.svg",
+    "searchTerms": [
+      "visualization",
+      "graph",
+      "data",
+      "chart"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Visualization",
+        "usage": "view information as a graph",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Light Bulb",
+    "fileName": "0017_lightbulb_a.svg",
+    "searchTerms": [
+      [
+        "light",
+        "light bulb",
+        "lightbulb"
+      ],
+      "suggestion",
+      "recommendation"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "LightBulb",
+        "usage": "light bulb, suggestion, recommendation",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Forward Message",
+    "fileName": "0018_curvedArrowRight_a.svg",
+    "searchTerms": [
+      "forward",
+      [
+        "message",
+        "messaging",
+        "messenger"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ForwardMessage",
+        "usage": "forward message",
+        "sets": [
+          "messaging"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Forward",
+        "usage": "forward message",
+        "sets": [
+          "messaging"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Folders",
+    "fileName": "0019_folders_a.svg",
+    "searchTerms": [
+      "project",
+      "folder",
+      "files"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Projects",
+        "usage": "projects, multiple folders",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "Folders",
+        "usage": "projects, multiple folders",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Reply All",
+    "fileName": "0020_curvedDoubleArrowLeft_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ReplyAll",
+        "usage": "reply to all recipients",
+        "sets": [
+          "messaging"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Flag",
+    "fileName": "0021_flag_a.svg",
+    "searchTerms": [
+      "flag",
+      "attention",
+      "mark"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Flag",
+        "usage": "pay attention to this element",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Calculator",
+    "fileName": "0022_calculator_a.svg",
+    "searchTerms": [
+      [
+        "calulator",
+        "calculate"
+      ],
+      "math"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Calculator",
+        "usage": "calculator, calculate information",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Caret Right",
+    "fileName": "0023_caretRight_a.svg",
+    "searchTerms": [
+      "caret",
+      "right",
+      "collapsed",
+      "arrow"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "CaretRight",
+        "usage": "right caret, collapsed",
+        "sets": [
+          "carets"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Caret Left",
+    "fileName": "0023_caretLeft_a.svg",
+    "searchTerms": [
+      "caret",
+      "left",
+      "arrow"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "CaretLeft",
+        "usage": "left caret",
+        "sets": [
+          "carets"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Caret Up",
+    "fileName": "0023_caretUp_a.svg",
+    "searchTerms": [
+      "caret",
+      "up",
+      "arrow"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "CaretUp",
+        "usage": "",
+        "sets": [
+          "carets"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Caret Down",
+    "fileName": "0023_caretDown_a.svg",
+    "searchTerms": [
+      "caret",
+      "down",
+      "arrow"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "CaretDown",
+        "usage": "",
+        "sets": [
+          "carets"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Scheduled",
+    "fileName": "0024_calendar_check_i_heavyCircleGreen.svg",
+    "searchTerms": [
+      [
+        "scheduled",
+        "schedule",
+        "scheduling"
+      ],
+      "calendar"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Scheduled",
+        "usage": "scheduled",
+        "sets": [
+          "scheduling"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Trophy",
+    "fileName": "0025_trophy_a.svg",
+    "searchTerms": [
+      "trophy",
+      "award",
+      "achievement"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Trophy",
+        "usage": "trophy",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Chevron Left",
+    "fileName": "0026_chevronLeft_a.svg",
+    "searchTerms": [
+      "chevron",
+      "left",
+      "previous",
+      "back"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ChevronLeft",
+        "usage": "back/previous",
+        "sets": [
+          "chevrons"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "Previous",
+        "usage": "back/previous",
+        "sets": [
+          "chevrons"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Chevron Right",
+    "fileName": "0026_chevronRight_a.svg",
+    "searchTerms": [
+      "chevron",
+      "right",
+      "forward",
+      "next"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ChevronRight",
+        "usage": "forward/next",
+        "sets": [
+          "chevrons"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "ChevronNext",
+        "usage": "forward/next",
+        "sets": [
+          "chevrons"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Chevron Up",
+    "fileName": "0026_chevronUp_a.svg",
+    "searchTerms": [
+      "chevron",
+      "up",
+      "hide",
+      "expand"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ChevronUp",
+        "usage": "up, hide",
+        "sets": [
+          "chevrons"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "ExpandLess",
+        "usage": "up, hide",
+        "sets": [
+          "chevrons"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Chevron",
+        "usage": "up, hide",
+        "sets": [
+          "chevrons"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Chevron Down",
+    "fileName": "0026_chevronDown_a.svg",
+    "searchTerms": [
+      "chevron",
+      "down",
+      "show more",
+      "expand"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ChevronDown",
+        "usage": "down",
+        "sets": [
+          "chevrons"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "ExpandMore",
+        "usage": "down",
+        "sets": [
+          "chevrons"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Clock Outline",
+    "fileName": "0027_clock_a.svg",
+    "searchTerms": [
+      "clock",
+      "away",
+      "time",
+      "due"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Clock",
+        "usage": "clock",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Timeout",
+        "usage": "clock",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Away",
+    "fileName": "0027_clock_i_heavyCircle.svg",
+    "searchTerms": [
+      "clock",
+      "away",
+      "due",
+      "time"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Away",
+        "usage": "away",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Sort Ascending",
+    "fileName": "0028_threeLinesAscending_a.svg",
+    "searchTerms": [
+      "sort",
+      "ascending",
+      "order"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "SortAscending",
+        "usage": "sort ascending",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Sort Descending",
+    "fileName": "0029_threeLinesDescending_a.svg",
+    "searchTerms": [
+      "sort",
+      "ascending",
+      "order"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "SortDescending",
+        "usage": "sort descending",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Treemap",
+    "fileName": "0030_varyingSquares.svg",
+    "searchTerms": [
+      [
+        "treemap",
+        "tree map"
+      ],
+      "layout",
+      "grid",
+      "visualization"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Treemap",
+        "usage": "treemap",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Eyeglasses",
+    "fileName": "0031_glasses_a.svg",
+    "searchTerms": [
+      [
+        "glasses",
+        "eyeglasses"
+      ],
+      "review",
+      [
+        "nurse",
+        "nursing"
+      ],
+      "medication"
+    ],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "Glasses",
+        "usage": "indicates a med order that needs a nurse's review",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Image",
+    "fileName": "0032_image_a.svg",
+    "searchTerms": [
+      "image",
+      [
+        "placeholder",
+        "place holder"
+      ],
+      "picture",
+      "media"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Image",
+        "usage": "image, placeholder",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Door Open",
+    "fileName": "0033_doorOpen_a.svg",
+    "searchTerms": [
+      "door",
+      "open",
+      "depart",
+      "exit"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "DoorOpen",
+        "usage": "open, door, depart",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "Open",
+        "usage": "open, door, depart",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "Depart",
+        "usage": "open, door, depart",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "Exit",
+        "usage": "open, door, depart",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Ellipses Horizontal",
+    "fileName": "0036_ellipses_a.svg",
+    "searchTerms": [
+      "ellipses",
+      "more",
+      "options",
+      "horizontal",
+      "dots"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Ellipses",
+        "usage": "more options available",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Ellipses Vertical",
+    "fileName": "0036_ellipsesVertical_a.svg",
+    "searchTerms": [
+      "ellipses",
+      "vertical",
+      "more",
+      "options",
+      "rollup",
+      "dots"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "EllipsesVertical",
+        "usage": "more options available",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Rollup",
+        "usage": "more options available",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Exclamation Mark",
+    "fileName": "0037_exclamation_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "Exclamation",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Alert Critical Alert",
+    "fileName": "0037_exclamation_i_heavyTriangleRed.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "Alert",
+        "usage": "severity - alert",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Caution",
+    "fileName": "0037_exclamation_i_heavyTriangleYellow.svg",
+    "searchTerms": [
+      "caution",
+      "hazard",
+      "medium"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Caution",
+        "usage": "caution (hazard medium)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "HazardMedium",
+        "usage": "caution (hazard medium)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Warning",
+        "usage": "caution (hazard medium)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "_",
+    "fileName": "0037_exclamation_i_lightCircleGray.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "Moderate",
+        "usage": "UK risk indicator",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Unspecified",
+        "usage": "UK risk indicator",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Exclamation Mark in Solid Diamond",
+    "fileName": "0037_exclamation_i_heavyDiamondRed.svg",
+    "searchTerms": [
+      "critical",
+      "warning",
+      "hazard",
+      "high",
+      "severity",
+      "red",
+      "exclamation"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Critical",
+        "usage": "warning (hazard high)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "WarningDiamond",
+        "usage": "warning (hazard high)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "HazardHigh",
+        "usage": "warning (hazard high)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "SeverityCritical",
+        "usage": "warning (hazard high)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Low Hazard",
+    "fileName": "0037_exclamation_i_heavyCircle_blue.svg",
+    "searchTerms": [
+      "hazard",
+      "low",
+      "blue",
+      "exclamation"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "HazardLow",
+        "usage": "advisory (hazard low)",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Italic I",
+    "fileName": "0038_italic-i_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "ItalicI",
+        "usage": "NOT IN DS",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Information",
+    "fileName": "0038_italic-i_i_heavyCircleBlue.svg",
+    "searchTerms": [
+      "information",
+      "blue",
+      "circle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Information",
+        "usage": "Information",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Minus",
+    "fileName": "0039_minus_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "Minus",
+        "usage": "minus",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Error Fill",
+    "fileName": "0039_minus_i_heavyCircle.svg",
+    "searchTerms": [
+      "error",
+      "solid",
+      "circle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ErrorSolid",
+        "usage": "error",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "ErrorDark",
+        "usage": "error",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Error Red",
+    "fileName": "0039_minus_i_heavyCircleRed.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Error",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "ErrorRed",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Do Not Disturb",
+    "fileName": "0039_minus_i_heavyCircleRedAngle.svg",
+    "searchTerms": [
+      "do not disturb",
+      "circle",
+      "diagonal",
+      "red"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "DoNotDisturb",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "X",
+    "fileName": "0041_x_a.svg",
+    "searchTerms": [
+      "close",
+      "x"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Close",
+        "usage": "close",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "X",
+        "usage": "close",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Clear",
+        "usage": "close",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "X in Solid Circle",
+    "fileName": "0041_x_i_heavyCircle.svg",
+    "searchTerms": [
+      "incomplete",
+      "not met",
+      "remove",
+      "x",
+      "circle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Incomplete",
+        "usage": "clear, remove",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "NotMet",
+        "usage": "clear, remove",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Remove",
+        "usage": "clear, remove",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Person",
+    "fileName": "0043_person_a.svg",
+    "searchTerms": [
+      "person",
+      "human",
+      "user",
+      "patient",
+      "avatar"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Person",
+        "usage": "person",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Arrow Left",
+    "fileName": "0044_arrowLeft_a.svg",
+    "searchTerms": [
+      "arrow",
+      "left",
+      "direction",
+      "previous",
+      "back"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Left",
+        "usage": "left",
+        "sets": [
+          "arrows"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Arrow Right",
+    "fileName": "0044_arrowRight_a.svg",
+    "searchTerms": [
+      "arrow",
+      "right",
+      "direction",
+      "next",
+      "forward"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Right",
+        "usage": "right",
+        "sets": [
+          "arrows"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Arrow Up",
+    "fileName": "0044_arrowUp_a.svg",
+    "searchTerms": [
+      "arrow",
+      "up",
+      "direction"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Up",
+        "usage": "up",
+        "sets": [
+          "arrows"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Arrow Down",
+    "fileName": "0044_arrowDown_a.svg",
+    "searchTerms": [
+      "arrow",
+      "down",
+      "direction"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Down",
+        "usage": "down",
+        "sets": [
+          "arrows"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Gear",
+    "fileName": "0048_gear_a.svg",
+    "searchTerms": [
+      "gear",
+      "settings",
+      "preferences",
+      "menu"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Settings",
+        "usage": "settings",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Edit",
+    "fileName": "0049_pencil_a.svg",
+    "searchTerms": [
+      "edit",
+      "pencil",
+      "crayon",
+      "change"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Edit",
+        "usage": "edit",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Pencil",
+        "usage": "edit",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Calendar Folded",
+    "fileName": "0050_calendar_a.svg",
+    "searchTerms": [
+      "calendar",
+      "lookback",
+      "schedule"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Calendar",
+        "usage": "calendar, lookback",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Lookback",
+        "usage": "calendar, lookback",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Refresh",
+    "fileName": "0051_arrowsCircle_a.svg",
+    "searchTerms": [
+      "refresh",
+      "synchronize"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Refresh",
+        "usage": "refresh, sync",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Provider",
+    "fileName": "0053_provider_a.svg",
+    "searchTerms": [
+      "provider",
+      "physician",
+      "doctor",
+      "avatar",
+      "person"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Provider",
+        "usage": "provider",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Padlock",
+    "fileName": "0054_padlock_a.svg",
+    "searchTerms": [
+      "padlock",
+      "locked",
+      "secure",
+      "unauthorized"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Padlock",
+        "usage": "locked, access denied",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Locked",
+        "usage": "locked, access denied",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Secure",
+        "usage": "locked, access denied",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Unauthorized",
+        "usage": "locked, access denied",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Star Solid",
+    "fileName": "0056_star_a_on.svg",
+    "searchTerms": [
+      "featured",
+      "favorited",
+      "star",
+      "solid",
+      "rating",
+      "filled"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Featured",
+        "usage": "full star rating, featured, favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "StarSolid",
+        "usage": "full star rating, featured, favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "FavoriteTrue",
+        "usage": "full star rating, featured, favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "RatingStarFilled",
+        "usage": "full star rating, featured, favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "FeaturedOutlineYellow",
+        "usage": "full star rating, featured, favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Star Outline",
+    "fileName": "0056_star_a_light_off.svg",
+    "searchTerms": [
+      "featured",
+      "favorited",
+      "star",
+      "solid",
+      "rating",
+      "empty"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "FeaturedOff",
+        "usage": "empty star rating, not featured, not favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "FeaturedOutline",
+        "usage": "empty star rating, not featured, not favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "StarOutline",
+        "usage": "empty star rating, not featured, not favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "FavoriteFalse",
+        "usage": "empty star rating, not featured, not favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "RatingStarEmpty",
+        "usage": "empty star rating, not featured, not favorite",
+        "sets": [
+          "favorites",
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Star Half Solid",
+    "fileName": "0056_star_a_half.svg",
+    "searchTerms": [
+      "star",
+      "solid",
+      "rating",
+      "half"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "HalfRating",
+        "usage": "half star rating",
+        "sets": [
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "StarHalf",
+        "usage": "half star rating",
+        "sets": [
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "RatingStarHalf",
+        "usage": "half star rating",
+        "sets": [
+          "stars"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Archive",
+    "fileName": "0058_box_a.svg",
+    "searchTerms": [
+      "archive",
+      "file",
+      "folder",
+      "box"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Archive",
+        "usage": "archive",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Filter",
+    "fileName": "0059_funnel_a.svg",
+    "searchTerms": [
+      "filter",
+      "funnel"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Filter",
+        "usage": "filter",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Funnel",
+        "usage": "filter",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "TwoPapers",
+    "fileName": "0060_papers_a.svg",
+    "searchTerms": [
+      "documents",
+      "papers",
+      "two"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Documents",
+        "usage": "documents",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Question Mark",
+    "fileName": "0061_questionMark_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "Question",
+        "usage": "question",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Help Blue",
+    "fileName": "0061_questionMark_i_heavyCircleBlue.svg",
+    "searchTerms": [
+      "help",
+      "question mark",
+      "circle",
+      "blue"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "HelpBlue",
+        "usage": "access help",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Help",
+        "usage": "access help",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Help Solid",
+    "fileName": "0061_questionMark_i_heavyCircle.svg",
+    "searchTerms": [
+      "help",
+      "question mark",
+      "circle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Unknown",
+        "usage": "Help, Unknown (CareAware Connect, themed gray)",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "HelpSolid",
+        "usage": "Help, Unknown (CareAware Connect, themed gray)",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Unexpected Result",
+    "fileName": "0061_questionMark_i_diamond_light.svg",
+    "searchTerms": [
+      "unexpected",
+      "results",
+      "question mark",
+      "diamond"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "UnexpectedResult",
+        "usage": "Unexpected Result",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Unexpected",
+        "usage": "Unexpected Result",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Help Outline",
+    "fileName": "0061_questionMark_i_lightCircle.svg",
+    "searchTerms": [
+      "help",
+      "question mark",
+      "circle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "HelpOutline",
+        "usage": "Help",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "QuestionOutline",
+        "usage": "Help",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "House",
+    "fileName": "0062_house_a.svg",
+    "searchTerms": [
+      "home",
+      "house",
+      "building"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Home",
+        "usage": "house, home",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "House",
+        "usage": "house, home",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Save",
+    "fileName": "0065_floppyDisk_a.svg",
+    "searchTerms": [
+      "save",
+      [
+        "floppy disk",
+        "floppy disc"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Save",
+        "usage": "save",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Hospital",
+    "fileName": "0068_hospital_a.svg",
+    "searchTerms": [
+      "hospital",
+      "building",
+      "facility",
+      "location"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Hospital",
+        "usage": "hospital",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Hourglass",
+    "fileName": "0069_hourglass_a.svg",
+    "searchTerms": [
+      [
+        "hourglass",
+        "hour glass"
+      ],
+      "pending",
+      "waiting",
+      "completion",
+      "time"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Pending",
+        "usage": "waiting for completion",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Hourglass",
+        "usage": "waiting for completion",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Analytics",
+    "fileName": "0070_dottedLine_a.svg",
+    "searchTerms": [
+      "analytics",
+      "graph",
+      "points",
+      "data",
+      "trend",
+      "line"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Analytics",
+        "usage": "view information as a graph",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Megaphone",
+    "fileName": "0071_megaphone_a.svg",
+    "searchTerms": [
+      "announcement",
+      "megaphone"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Announcement",
+        "usage": "announcement",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Camera",
+    "fileName": "0072_camera_a.svg",
+    "searchTerms": [
+      "camera",
+      "take photo",
+      "picture"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Camera",
+        "usage": "camera, take a photo",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "TakePhoto",
+        "usage": "camera, take a photo",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Medical Bag",
+    "fileName": "0073_briefcase_a.svg",
+    "searchTerms": [
+      [
+        "medical bag",
+        "equipment bag"
+      ],
+      [
+        "briefcase",
+        "brief case"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Briefcase",
+        "usage": "briefcase",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "MedicalBag",
+        "usage": "briefcase",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Link",
+    "fileName": "0074_chain_a.svg",
+    "searchTerms": [
+      [
+        "link",
+        "linked",
+        "link objects"
+      ],
+      "hyperlink",
+      "link to"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Link",
+        "usage": "link",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "Linked",
+        "usage": "link",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "HyperLink",
+        "usage": "link",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "LinkObjects",
+        "usage": "link",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "LinkTo",
+        "usage": "link",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Menu",
+    "fileName": "0075_list_a.svg",
+    "searchTerms": [
+      "menu",
+      "hamburger",
+      "lines"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Menu",
+        "usage": "menu",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "List",
+        "usage": "menu",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Checklist",
+    "fileName": "0079_checkList_a.svg",
+    "searchTerms": [
+      [
+        "checklist",
+        "check list"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Checklist",
+        "usage": "checklist",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Padlock Open",
+    "fileName": "0080_padlock_open_a.svg",
+    "searchTerms": [
+      "unlocked",
+      "access",
+      "granted",
+      "open",
+      [
+        "authorization",
+        "authorized"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Unlock",
+        "usage": "unlocked, access granted",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "Unlocked",
+        "usage": "unlocked, access granted",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "AccessGranted",
+        "usage": "unlocked, access granted",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Stopwatch",
+    "fileName": "0081_stopwatch_a.svg",
+    "searchTerms": [
+      "due",
+      [
+        "stopwatch",
+        "stop watch"
+      ],
+      "time"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Due",
+        "usage": "due, stopwatch",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Stopwatch",
+        "usage": "due, stopwatch",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Due Soon",
+    "fileName": "0084_stopwatch_exclamation_i_heavyDiamondYellow.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "DueSoon",
+        "usage": "Item is due soon",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Spinner",
+    "fileName": "0086_eightCircles_a.svg",
+    "searchTerms": [
+      "spinner",
+      "loading",
+      "pending",
+      "processing",
+      "circle",
+      "dots"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Spinner",
+        "usage": "Content loading, should spin",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Tile Grid",
+    "fileName": "0087_tile_a.svg",
+    "searchTerms": [
+      "tile",
+      "grid",
+      "layout",
+      "rows",
+      "columns",
+      "squares",
+      "boxes"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Tile",
+        "usage": "tile the information in rows and columns, show grid layout",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "GridLayout",
+        "usage": "tile the information in rows and columns, show grid layout",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Overdue",
+    "fileName": "0093_stopwatch_critical_i.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "Overdue",
+        "usage": "Item overdue",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Two People",
+    "fileName": "0094_people_a.svg",
+    "searchTerms": [
+      "users",
+      "patients",
+      "people",
+      "person"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "MultipleUsers",
+        "usage": "people, users",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Users",
+        "usage": "people, users",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Knurling",
+    "fileName": "0112_knurling_a.svg",
+    "searchTerms": [
+      "knurling",
+      "drag",
+      "drop",
+      "gripper",
+      [
+        "interaction",
+        "interactive"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Knurling",
+        "usage": "indicates drag/drop reorder interactability of an element",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": true,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Add Person",
+    "fileName": "0113_plusPerson_a.svg",
+    "searchTerms": [
+      "add",
+      "person",
+      "people",
+      "patient",
+      "user"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "AddPerson",
+        "usage": "add person",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Upload",
+    "fileName": "0114_lineArrowUp_a.svg",
+    "searchTerms": [
+      "upload",
+      "content",
+      "system",
+      "arrow",
+      "file",
+      "transfer"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Upload",
+        "usage": "upload local content into system",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Download",
+    "fileName": "0115_lineArrowDown_a.svg",
+    "searchTerms": [
+      "download",
+      "content",
+      "system",
+      "arrow",
+      "file",
+      "transfer"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Download",
+        "usage": "download content from system",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Cancel",
+    "fileName": "0116_cancel_a.svg",
+    "searchTerms": [
+      "cancel",
+      "discontinued",
+      "circle",
+      "slash"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Cancel",
+        "usage": "cancel, discontinued",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Maximize",
+    "fileName": "0117_arrowsOut_a.svg",
+    "searchTerms": [
+      "maximize",
+      "arrows",
+      "size",
+      "expand"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Maximize",
+        "usage": "maximize content or element",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Minimize",
+    "fileName": "0118_arrowsIn_a.svg",
+    "searchTerms": [
+      "minimize",
+      "arrows",
+      "shrink"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Minimize",
+        "usage": "minimize content or element",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Reply",
+    "fileName": "0119_curvedArrowLeft_a.svg",
+    "searchTerms": [
+      "reply",
+      [
+        "messaging",
+        "message"
+      ],
+      "arrows"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Reply",
+        "usage": "reply",
+        "sets": [
+          "messaging"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Table",
+    "fileName": "0120_table_a.svg",
+    "searchTerms": [
+      "table",
+      "view",
+      "layout"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Table",
+        "usage": "view information as table",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Asterisk",
+    "fileName": "0121_asterisk_a.svg",
+    "searchTerms": [
+      "asterisk",
+      "gap checking",
+      "required",
+      "star"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Required",
+        "usage": "required (themed red), gap checking",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "GapChecking",
+        "usage": "required (themed red), gap checking",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Hospital and Person",
+    "fileName": "0122_personHospital_a.svg",
+    "searchTerms": [
+      "hospital",
+      "person",
+      "relationship",
+      "building",
+      "facility"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PersonHospital",
+        "usage": "Relationship exists between the given organization and the person. ",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Stethoscope Person with Person Badge",
+    "fileName": "0123_personnelPerson_a.svg",
+    "searchTerms": [
+      "personnel",
+      "physician",
+      "people",
+      "person",
+      "staff"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PersonnelPerson",
+        "usage": "Provider-person relationship",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Out of Range High",
+    "fileName": "0124_statusArrowUp_i_lightDiamond.svg",
+    "searchTerms": [
+      "high",
+      "results",
+      "out of range",
+      "arrow",
+      "red",
+      "orange",
+      "diamond"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "HighResult",
+        "usage": "Result out of range high",
+        "sets": [
+          "results"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "High",
+        "usage": "Result out of range high",
+        "sets": [
+          "results"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Out of Range Low",
+    "fileName": "0124_statusArrowDown_i_lightDiamond.svg",
+    "searchTerms": [
+      "low",
+      "results",
+      "out of range",
+      "arrow",
+      "blue",
+      "diamond"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "LowResult",
+        "usage": "Result out of range low",
+        "sets": [
+          "results"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Low",
+        "usage": "Result out of range low",
+        "sets": [
+          "results"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Low Risk",
+    "fileName": "0124_arrowDown_i_lightCircle.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "LowRisk",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Maximum",
+    "fileName": "0124_arrowUp_i.svg",
+    "searchTerms": [
+      "maximum",
+      "highest",
+      "arrow",
+      "up",
+      "results"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Max",
+        "usage": "highest value in the last [timeframe]",
+        "sets": [
+          "results"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Minimum",
+    "fileName": "0124_arrowDown_i.svg",
+    "searchTerms": [
+      "lowest",
+      "minimum",
+      "arrow",
+      "down",
+      "results"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Min",
+        "usage": "lowest value in the last [timeframe]",
+        "sets": [
+          "results"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Abnormal",
+    "fileName": "0125_squiggle_i_lightDiamond.svg",
+    "searchTerms": [
+      "abnormal",
+      "diamond",
+      "squiggle",
+      "brown",
+      "results"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "AbnormalResult",
+        "usage": "",
+        "sets": [
+          "results"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Abnormal",
+        "usage": "",
+        "sets": [
+          "results"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Left Pane Sidebar",
+    "fileName": "0126_squareLeftFill_a.svg",
+    "searchTerms": [
+      "pane",
+      "left",
+      [
+        "flowsheet",
+        "flow sheet"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "LeftPane",
+        "usage": "displays left pane, flowsheet",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "FlowSheet",
+        "usage": "displays left pane, flowsheet",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "SidebarLeft",
+        "usage": "displays left pane, flowsheet",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Bell Outline",
+    "fileName": "0127_bell_a_light_off.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "NotificationOff",
+        "usage": "notification empty",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Bell Solid",
+    "fileName": "0127_bell_a_heavy_on.svg",
+    "searchTerms": [
+      "bells",
+      "notifications",
+      "enabled",
+      "ring",
+      "solid"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Notification",
+        "usage": "notification available, notifications enabled",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "NotificationEnabled",
+        "usage": "notification available, notifications enabled",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Bell Disabled",
+    "fileName": "0127_bell_i_heavy_on_slash.svg",
+    "searchTerms": [
+      "bells",
+      "notifications",
+      "disabled",
+      "ring",
+      "solid"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "NotificationDisabled",
+        "usage": "notification disabled",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Go to Last",
+    "fileName": "0128_lineChevronRight_a.svg",
+    "searchTerms": [
+      "last",
+      "go",
+      "navigation",
+      "arrow"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "GoToLast",
+        "usage": "go to the last instance",
+        "sets": [
+          "linear navigation"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Last",
+        "usage": "go to the last instance",
+        "sets": [
+          "linear navigation"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Mobile Device",
+    "fileName": "0129_device_a.svg",
+    "searchTerms": [
+      "mobile",
+      "device",
+      "phone"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Device",
+        "usage": "device exists",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "MobileDevice",
+        "usage": "device exists",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Mobile Device with Circle Checkmark",
+    "fileName": "0130_device_check_i_heavyCircleGreen.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "DeviceCheck",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "DeviceAssociated",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Mobile Device with Alert Badge",
+    "fileName": "0131_device_exclamation_i_heavyTriangleRed.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "DeviceAlert",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Paper and Pencil",
+    "fileName": "0132_paperPencil_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "EditDocument",
+        "usage": "Edit document",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "PaperPencil",
+        "usage": "Edit document",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Clipboard",
+    "fileName": "0133_clipboard_a.svg",
+    "searchTerms": [
+      "clipboard",
+      "chart",
+      "forms"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Clipboard",
+        "usage": "clipboard, copy",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Zoom Out",
+    "fileName": "0134_magnifyingGlassMinus_a.svg",
+    "searchTerms": [
+      "zoom",
+      "out",
+      "view",
+      [
+        "magnification",
+        "magnifying glass"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ZoomOut",
+        "usage": "zoom out",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Zoom In",
+    "fileName": "0135_magnifyingGlassPlus_a.svg",
+    "searchTerms": [
+      "zoom",
+      "out",
+      "view",
+      [
+        "magnification",
+        "magnifying glass"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ZoomIn",
+        "usage": "zoom in",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Unverified",
+    "fileName": "0136_diamond_i_purple.svg",
+    "searchTerms": [
+      "unverified",
+      "results"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "UnverifiedResult",
+        "usage": "unverified result/data",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Diamond",
+        "usage": "unverified result/data",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Envelope Outline",
+    "fileName": "0137_envelope_a.svg",
+    "searchTerms": [
+      [
+        "message",
+        "messaging"
+      ],
+      "mail",
+      "envelopes"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Envelope",
+        "usage": "message",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "MessageOutline",
+        "usage": "message",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Envelope Solid",
+    "fileName": "0137_envelope_a_fill.svg",
+    "searchTerms": [
+      [
+        "message",
+        "messaging"
+      ],
+      "mail",
+      "envelopes"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "MessageSolid",
+        "usage": "message",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "EnvelopeFill",
+        "usage": "message",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Allergy",
+    "fileName": "0138_circleLines_a.svg",
+    "searchTerms": [
+      [
+        "allergy",
+        "allergies"
+      ],
+      [
+        "microbe",
+        "microorganism"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Allergy",
+        "usage": "presence of allergies",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "End Call",
+    "fileName": "0139_phoneDown_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "EndCall",
+        "usage": "hang up, leave call",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "PhoneDown",
+        "usage": "hang up, leave call",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Phone Receiver",
+    "fileName": "0139_phone_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Phone",
+        "usage": "phone, make call",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Call",
+        "usage": "phone, make call",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Panel to Left",
+    "fileName": "0140_rectangleLeftArrow_a.svg",
+    "searchTerms": [
+      "panel",
+      "left",
+      "chevron",
+      "layout"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PanelLeft",
+        "usage": "remove section from side pane",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Panel to Right",
+    "fileName": "0141_rectangleRightArrow_a.svg",
+    "searchTerms": [
+      "panel",
+      "left",
+      "chevron",
+      "layout"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PanelRight",
+        "usage": "push section to side pane",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Tag",
+    "fileName": "0142_pointedRectangle_a.svg",
+    "searchTerms": [
+      [
+        "tagged",
+        "tags"
+      ],
+      "marked",
+      "label",
+      "dangle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Tag",
+        "usage": "tag, tagged items",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "iPass",
+    "fileName": "0143_personCurvedArrow_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "IPass",
+        "usage": "iPass",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Inbox",
+    "fileName": "0144_openBox_a.svg",
+    "searchTerms": [
+      "orders",
+      "cart",
+      "inbox",
+      "documents"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Inbox",
+        "usage": "inbox, scratchpad, orders cart",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "ScratchPad",
+        "usage": "inbox, scratchpad, orders cart",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "OrdersCart",
+        "usage": "inbox, scratchpad, orders cart",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Needs Pharmacy Review",
+    "fileName": "0145_roundRectangleLinePlus_a.svg",
+    "searchTerms": [
+      [
+        "pharmacy",
+        "pharmacist"
+      ],
+      "drugs",
+      [
+        "medications",
+        "medicine"
+      ],
+      "review",
+      "mortar",
+      "pestle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "NeedsPharmacyReview",
+        "usage": "medication activity that needs pharmacy approval",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "PharmacyReview",
+        "usage": "medication activity that needs pharmacy approval",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Rejected by Pharmacy",
+    "fileName": "0146_roundRectangleLinePlusCancel_a.svg",
+    "searchTerms": [
+      "rejected",
+      [
+        "pharmacy",
+        "pharmacist"
+      ],
+      "drugs",
+      [
+        "medications",
+        "medicine"
+      ],
+      "review",
+      "mortar",
+      "pestle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "RejectedByPharmacy",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "PharmacyReject",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Circle Solid",
+    "fileName": "0147_circle_i_heavy.svg",
+    "searchTerms": [
+      "circle",
+      "busy",
+      "user status"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Busy",
+        "usage": "User's status is busy",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "CircleSolid",
+        "usage": "User's status is busy",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Circle Outline",
+    "fileName": "0147_circle_i_light.svg",
+    "searchTerms": [
+      "circle",
+      "unavailable",
+      "user status"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Unavailable",
+        "usage": "user's status is unavailable",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "CircleOutline",
+        "usage": "user's status is unavailable",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Implant",
+    "fileName": "0148_pointedLine_a.svg",
+    "searchTerms": [
+      "implant",
+      "screw",
+      "surgery",
+      "procedure"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Implant",
+        "usage": "procedure has an associated implant",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Protocol/Network",
+    "fileName": "0149_linesThreeSquares_a.svg",
+    "searchTerms": [
+      "protocol",
+      "network",
+      "diagram",
+      "nodes"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Protocol",
+        "usage": "part of a protocol, network",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Network",
+        "usage": "part of a protocol, network",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Video Camera",
+    "fileName": "0150_videoCamera_a.svg",
+    "searchTerms": [
+      "video",
+      "camera",
+      "enabled",
+      [
+        "conference",
+        "conferencing"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "VideoCamera",
+        "usage": "video camera, video camera on",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "VideoEnabled",
+        "usage": "video camera, video camera on",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Video Camera Disabled",
+    "fileName": "0150_videoCamera_i_slash.svg",
+    "searchTerms": [
+      "video",
+      "camera",
+      "disabled",
+      [
+        "conference",
+        "conferencing"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "VideoCameraDisabled",
+        "usage": "video camera off",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      },
+      {
+        "alias": "VideoDisabled",
+        "usage": "video camera off",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Wifi No Signal",
+    "fileName": "0151_wifiCircleLine_i.svg",
+    "searchTerms": [
+      [
+        "wifi",
+        "wi-fi"
+      ],
+      "wireless",
+      "connection",
+      "unavailable",
+      "disconnected"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "WifiNoSignal",
+        "usage": "no wifi connection",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "NoSignal",
+        "usage": "no wifi connection",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": true
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Undo",
+    "fileName": "0152_circleArrowLeft_a.svg",
+    "searchTerms": [
+      "undo",
+      "arrow",
+      "counterclockwise",
+      "anticlockwise"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Undo",
+        "usage": "undo",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Recurring Event",
+    "fileName": "0153_calendarCircleArrow_a.svg",
+    "searchTerms": [
+      "recurring",
+      "events",
+      "calendars",
+      "series",
+      "arrow",
+      "clockwise"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "RecurringEvent",
+        "usage": "indicates event is part of a series",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Separate",
+    "fileName": "0154_lineTwoArrows_a.svg",
+    "searchTerms": [
+      "separate",
+      "diverge",
+      "arrows"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Separate",
+        "usage": "separate items",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Merge",
+    "fileName": "0155_connectedLinesArrow_a.svg",
+    "searchTerms": [
+      "merge",
+      "squish",
+      "arrow"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Merge",
+        "usage": "merge, join",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Compose",
+    "fileName": "0158_pencilSquare_a.svg",
+    "searchTerms": [
+      "compose",
+      [
+        "message",
+        "messaging"
+      ],
+      "pencil"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Compose",
+        "usage": "compose message",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Visible",
+    "fileName": "0159_eye_i_slash.svg",
+    "searchTerms": [
+      "visible",
+      "visibility",
+      "hide",
+      "eyeball"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Visible",
+        "usage": "show characters",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Hide",
+        "usage": "show characters",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Hidden",
+    "fileName": "0159_eye_a.svg",
+    "searchTerms": [
+      "hidden",
+      "visibility",
+      "show",
+      "eyeball",
+      "disabled"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Hidden",
+        "usage": "view, visible",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "Unread",
+        "usage": "view, visible",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Opposing Arrows",
+    "fileName": "0160_arrowLeftarrowRight_i.svg",
+    "searchTerms": [
+      "transfer",
+      "swap",
+      "arrows",
+      "exchange"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Transfer",
+        "usage": "swap, transfer",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Swap",
+        "usage": "swap, transfer",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Microphone",
+    "fileName": "0161_microphone_a.svg",
+    "searchTerms": [
+      "microphone",
+      "enabled",
+      "audio",
+      "sound",
+      "voice"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Microphone",
+        "usage": "microphone on",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "MicrophoneEnabled",
+        "usage": "microphone on",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Microphone Disabled",
+    "fileName": "0161_microphone_i_slash.svg",
+    "searchTerms": [
+      "microphone",
+      "disabled",
+      "audio",
+      "sound",
+      "voice"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "MicrophoneDisabled",
+        "usage": "microphone off",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Outgoing Call",
+    "fileName": "0162_phoneArrowRight_i.svg",
+    "searchTerms": [
+      "telephone",
+      "outgoing",
+      "call"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "OutgoingCall",
+        "usage": "outgoing call",
+        "sets": [
+          "telephone"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Incoming Call",
+    "fileName": "0163_phoneArrowLeft_i.svg",
+    "searchTerms": [
+      "telephone",
+      "incoming",
+      "call"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "IncomingCall",
+        "usage": "incoming call",
+        "sets": [
+          "telephone"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Missed Call",
+    "fileName": "0164_phoneDownCurvedArrow_i.svg",
+    "searchTerms": [
+      "telephone",
+      "missed",
+      "call"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "MissedCall",
+        "usage": "missed call",
+        "sets": [
+          "telephone"
+        ],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Pushpin Down",
+    "fileName": "0165_pinDown_a_on.svg",
+    "searchTerms": [
+      "pushpin",
+      "down",
+      "stay",
+      "persist"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PinDown",
+        "usage": "pin open pane",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Pushpin Diagonal",
+    "fileName": "0165_pinDiagonal_a_off.svg",
+    "searchTerms": [
+      "pushpin",
+      "stay",
+      "persist",
+      "unpin"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PinDiagonal",
+        "usage": "unpin pane",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Audio With Two Sound Lines",
+    "fileName": "0167_speakerCurvedLines_a.svg",
+    "searchTerms": [
+      "audio",
+      "volume",
+      "increase",
+      "up",
+      "sound",
+      "enabled",
+      "loud"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Audio",
+        "usage": "audio",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "VolumeIncrease",
+        "usage": "audio",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "AudioIncrease",
+        "usage": "audio",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "AudioSetIncrease",
+        "usage": "audio",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "External Link",
+    "fileName": "0168_boxArrowDiagonal_a.svg",
+    "searchTerms": [
+      "hyperlink",
+      "external",
+      "navigation"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ExternalLink",
+        "usage": "indicates a hyperlink will navigate the user away from or out of their current page or site",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Person in Bed",
+    "fileName": "0169_bed_a.svg",
+    "searchTerms": [
+      "bed",
+      "requested",
+      "person",
+      "sleeping"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "BedRequested",
+        "usage": "A Bed Assignment has been requested",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Bed Assigned",
+    "fileName": "0170_checkBed_i_heavyCircleGreen.svg",
+    "searchTerms": [
+      "bed",
+      "assigned",
+      "person",
+      "sleeping"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "BedAssigned",
+        "usage": "A Bed Assignment has been made",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Discharge Complete",
+    "fileName": "0171_checkdoorOpen_i_heavyCircleGreen.svg",
+    "searchTerms": [
+      "discharge",
+      "complete",
+      "patient",
+      "left"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "DischargeComplete",
+        "usage": "Patient who left",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Discharge Coming Due",
+    "fileName": "0172_exclamationDoorOpen_i_heavyTriangleYellow.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "DischargeComingDue",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Discharge Overdue",
+    "fileName": "0173_exclamationDoorOpen_i_heavyTriangleRed.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "DischargeOverDue",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Flip Vertical",
+    "fileName": "0174_twoTrianglesRight_a.svg",
+    "searchTerms": [
+      "flip",
+      "vertical",
+      "mirror"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "FlipVertical",
+        "usage": "flip vertical",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Flip Horizontal",
+    "fileName": "0174_twoTrianglesUp_a.svg",
+    "searchTerms": [
+      "flip",
+      "horizontal",
+      "mirror"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "FlipHorizontal",
+        "usage": "flip horizontal",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Rotate Anticlockwise",
+    "fileName": "0175_squareCurvedArrowLeft_a.svg",
+    "searchTerms": [
+      [
+        "rotate",
+        "rotation"
+      ],
+      "left",
+      "anti",
+      "counter",
+      "clockwise"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "RotateLeft",
+        "usage": "rotate left",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "RotateAnticlockwise",
+        "usage": "rotate left",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Rotate Clockwise",
+    "fileName": "0175_squareCurvedArrowRight_a.svg",
+    "searchTerms": [
+      [
+        "rotate",
+        "rotation"
+      ],
+      "right",
+      "clockwise"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "RotateRight",
+        "usage": "rotate right",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "RotateClockwise",
+        "usage": "rotate right",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Hold",
+    "fileName": "0176_stopwatch_pause_i.svg",
+    "searchTerms": [
+      "hold",
+      "stopwatch",
+      "pause",
+      "clock"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Hold",
+        "usage": "hold",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Fit to Width",
+    "fileName": "0177_arrowsLeftRightLines_a.svg",
+    "searchTerms": [
+      "fit",
+      "width",
+      "scale",
+      "horizontal",
+      "stretch"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "FitWidth",
+        "usage": "fit to width",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Fit to Container",
+    "fileName": "0178_arrowsUpDownRightLeftLines_a.svg",
+    "searchTerms": [
+      "fit",
+      "container",
+      "scale",
+      "size",
+      "stretch"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "FitScale",
+        "usage": "fit to container",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Possible Interaction Alert",
+    "fileName": "0179_pill_exclamation_i_heavyTriangleYellow.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "PossibleDrugInteraction",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "DrugDrug",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Secondary Provider",
+    "fileName": "0180_people_a_light.svg",
+    "searchTerms": [
+      "secondary",
+      "provider",
+      "relationship",
+      "patient",
+      "physician",
+      "clinician",
+      "person",
+      "people"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "SecondaryProvider",
+        "usage": "indicates which resource from our personnel pool is the patient's secondary care provider",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Circle Half Full",
+    "fileName": "0181_halfCircle_i.svg",
+    "searchTerms": [
+      "partially",
+      "met",
+      "progress",
+      "circle"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PartiallyMet",
+        "usage": "partially met, in progress",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      },
+      {
+        "alias": "InProgress",
+        "usage": "partially met, in progress",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": true
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Monitor Display",
+    "fileName": "0182_monitor_a.svg",
+    "searchTerms": [
+      "monitor",
+      "display",
+      "simulation",
+      "computer",
+      "pc",
+      "mac"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Simulation",
+        "usage": "desktop device, simulation",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "ComputerMonitor",
+        "usage": "desktop device, simulation",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Collapse Vertical",
+    "fileName": "0183_arrowsInTwoLines_a.svg",
+    "searchTerms": [
+      "collapse",
+      [
+        "squish",
+        "squash",
+        "squarsh"
+      ],
+      "arrows"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "CollapseRow",
+        "usage": "collapse all children",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Expand Vertical",
+    "fileName": "0184_arrowsOutTwoLines_a.svg",
+    "searchTerms": [
+      "expand",
+      "stretch",
+      "arrows"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "ExpandRow",
+        "usage": "expand all children",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Double Chevron Left",
+    "fileName": "0185_twoChevronsLeft_a.svg",
+    "searchTerms": [
+      "double",
+      "chevron",
+      "left",
+      "back",
+      "arrow",
+      "view"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "DoubleChevronLeft",
+        "usage": "moves the view back by a large segment",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Double Chevron Right",
+    "fileName": "0185_twoChevronsRight_a.svg",
+    "searchTerms": [
+      "double",
+      "chevron",
+      "right",
+      "forward",
+      "arrow",
+      "view"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "DoubleChevronRight",
+        "usage": "moves the view forward by a large segment",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Extensions",
+    "fileName": "0186_threeSquares_a.svg",
+    "searchTerms": [
+      "extensions",
+      "stack"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Extensions",
+        "usage": "extensions",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Add Document",
+    "fileName": "0187_documentPlus_a.svg",
+    "searchTerms": [
+      "add",
+      "document",
+      "plus",
+      "paper"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "AddDocument",
+        "usage": "add document",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "DocumentPlus",
+        "usage": "add document",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Appointment Refused",
+    "fileName": "0188_calendarX_i.svg",
+    "searchTerms": [
+      "appointment",
+      "refused",
+      "calendar",
+      "x",
+      "canceled"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "AppointmentRefused",
+        "usage": "Indicates user has refused appointment time slot",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Out of Network",
+    "fileName": "0189_shieldCancel_i.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "OutOfNetwork",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Pending Pharmacy Verification",
+    "fileName": "0190_roundRectangleLinePlusHourglass_a.svg",
+    "searchTerms": [
+      "pharmacy",
+      "pending",
+      "approval",
+      "verification",
+      "medication",
+      "order",
+      "medicine",
+      "drugs"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PendingPharmacyVerification",
+        "usage": "Pending pharmacy verification",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "PharmacyVerification",
+        "usage": "Pending pharmacy verification",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Fit to Height",
+    "fileName": "0191_arrowsUpDownLines_a.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "FitHeight",
+        "usage": "fit to height",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Person Leaving Box",
+    "fileName": "0192_personDoor_i.svg",
+    "searchTerms": [
+      "elopement",
+      "flee",
+      "run",
+      "door",
+      "discharge"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PatientDischarge",
+        "usage": "discharge, elopement, patient has left unexpectedly",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Elopement",
+        "usage": "discharge, elopement, patient has left unexpectedly",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "PersonDoor",
+        "usage": "discharge, elopement, patient has left unexpectedly",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Location Pin",
+    "fileName": "0193_locationPin_i.svg",
+    "searchTerms": [
+      "location",
+      "pin",
+      "map",
+      "geography"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "LocationPin",
+        "usage": "location",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Media Play",
+    "fileName": "0194_mediaPlay_a.svg",
+    "searchTerms": [
+      "media",
+      "controls",
+      "play",
+      "audio",
+      "video",
+      "music"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PlayMedia",
+        "usage": "play media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "MediaPlay",
+        "usage": "play media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Media Pause",
+    "fileName": "0195_mediaPause_a.svg",
+    "searchTerms": [
+      "media",
+      "controls",
+      "pause",
+      "audio",
+      "video",
+      "music"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PauseMedia",
+        "usage": "pause media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "MediaPause",
+        "usage": "pause media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Media Stop",
+    "fileName": "0196_mediaStop_a.svg",
+    "searchTerms": [
+      "media",
+      "controls",
+      "stop",
+      "audio",
+      "video",
+      "music"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "StopMedia",
+        "usage": "stop media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "MediaStop",
+        "usage": "stop media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Media Record",
+    "fileName": "0197_mediaRecord_a.svg",
+    "searchTerms": [
+      "media",
+      "controls",
+      "play",
+      "audio",
+      "video",
+      "music"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "RecordMedia",
+        "usage": "record media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "MediaRecord",
+        "usage": "record media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Media Fast Forward",
+    "fileName": "0198_mediaFastForward_a.svg",
+    "searchTerms": [
+      "media",
+      "controls",
+      "fast",
+      "forward",
+      "audio",
+      "video",
+      "music"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "FastForwardMedia",
+        "usage": "fast forward media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "MediaFastForward",
+        "usage": "fast forward media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Media Fast Reverse",
+    "fileName": "0199_mediaRewind_a.svg",
+    "searchTerms": [
+      "media",
+      "controls",
+      "rewind",
+      "reverse",
+      "fast",
+      "audio",
+      "video",
+      "music"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "FastReverseMedia",
+        "usage": "rewind media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "MediaRewind",
+        "usage": "rewind media",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Bluetooth",
+    "fileName": "0199_bluetooth_a.svg",
+    "searchTerms": [
+      "bluetooth",
+      "enabled",
+      "connectivity"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Bluetooth",
+        "usage": "bluetooth on",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "BluetoothEnabled",
+        "usage": "bluetooth on",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Bluetooth Disabled",
+    "fileName": "0213_bluetooth_a_slash.svg",
+    "searchTerms": [
+      "bluetooth",
+      "disabled",
+      "connectivity"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "BluetoothDisabled",
+        "usage": "bluetooth off",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "BluetoothSlash",
+        "usage": "bluetooth off",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": true,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Start Presenting",
+    "fileName": "0201_monitorArrowUp_a_48.svg",
+    "searchTerms": [
+      [
+        "share",
+        "sharing"
+      ],
+      "screen",
+      [
+        "present",
+        "presentation",
+        "presenting"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "StartPresenting",
+        "usage": "share screen, start presenting",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Stop Presenting",
+    "fileName": "0202_monitor_a_slash_48.svg",
+    "searchTerms": [
+      [
+        "share",
+        "sharing"
+      ],
+      "stop",
+      "screen",
+      [
+        "present",
+        "presentation",
+        "presenting"
+      ]
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "StopPresenting",
+        "usage": "stop sharing screen, stop presenting",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Pager",
+    "fileName": "0203_pager_a_48.svg",
+    "searchTerms": [
+      "pager",
+      "device",
+      "80s"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Pager",
+        "usage": "pager",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Auto Text",
+    "fileName": "0204_autoText_a_48.svg",
+    "searchTerms": [
+      "autotext",
+      "cursor",
+      "field"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "AutoText",
+        "usage": "auto text",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Keyboard",
+    "fileName": "0205_keyboard_a_48.svg",
+    "searchTerms": [
+      "keyboard",
+      "input"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Keyboard",
+        "usage": "keyboard",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Shared Schedules",
+    "fileName": "0206_calendarPeople_a_48.svg",
+    "searchTerms": [
+      "shared",
+      "schedules",
+      "calendar",
+      "people"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "SharedSchedules",
+        "usage": "shared schedule",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Person Search",
+    "fileName": "0207_personMagnifyingGlass_a_48.svg",
+    "searchTerms": [
+      "person",
+      "patient",
+      "provider",
+      "search",
+      "magnifying",
+      "glass"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PatientSearch",
+        "usage": "search for a person, patient, or provider",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "PersonSearch",
+        "usage": "search for a person, patient, or provider",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "ProviderSearch",
+        "usage": "search for a person, patient, or provider",
+        "sets": [],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Group",
+    "fileName": "0208_threePeople_i_48.svg",
+    "searchTerms": [
+      "group",
+      "people",
+      "patients",
+      "calendar"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Group",
+        "usage": "group",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Medication Tablet Solid",
+    "fileName": "0209_medicationTablet_fill.svg",
+    "searchTerms": [
+      "medication",
+      "medicine",
+      "order",
+      "drugs",
+      "pills"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "MedicationTablet",
+        "usage": "medication",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "MedicationTabletSolid",
+        "usage": "medication",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Medication Tablet Outline",
+    "fileName": "0210_medicationTablet_outline.svg",
+    "searchTerms": [
+      "medication",
+      "medicine",
+      "order",
+      "drugs",
+      "pills"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "MedicationTabletOutline",
+        "usage": "medication outline",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Medication Half Tablet Solid",
+    "fileName": "0211_medicationTablet_filled_half.svg",
+    "searchTerms": [
+      "medication",
+      "medicine",
+      "order",
+      "drugs",
+      "pills",
+      "half"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "MedicationTabletHalf",
+        "usage": "medication half",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "MedicationTabletHalfSolid",
+        "usage": "medication half",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Medication Half Tablet Outline",
+    "fileName": "0211_medicationTablet_outline_half.svg",
+    "searchTerms": [
+      "medication",
+      "medicine",
+      "order",
+      "drugs",
+      "pills",
+      "half"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "MedicationTabletHalfOutline",
+        "usage": "medication half outline",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Waveform",
+    "fileName": "0212_waveform.svg",
+    "searchTerms": [
+      "telemetry",
+      "waveform"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Waveform",
+        "usage": "waveform",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Positive Status",
+    "fileName": "0213_statusPositive_i_lightDiamond.svg",
+    "searchTerms": [
+      "positive",
+      "status",
+      "red"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PositiveStatus",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "StatusPositive",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Confidential",
+    "fileName": "0215_confidential.svg",
+    "searchTerms": [
+      "confidential",
+      "sensitive",
+      "keyhole"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Confidential",
+        "usage": "confidential",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "RevCycleSensitive",
+        "usage": "confidential",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Wifi",
+    "fileName": "0214_wi_fi_a.svg",
+    "searchTerms": [
+      "wifi",
+      "enabled",
+      "signal"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "Wifi",
+        "usage": "wifi on",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "WifiEnabled",
+        "usage": "wifi on",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Wifi Disabled",
+    "fileName": "0215_wi_fi_a_slash.svg",
+    "searchTerms": [
+      "wifi",
+      "disabled",
+      "signal"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "WifiDisabled",
+        "usage": "wifi off",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "WifiSlash",
+        "usage": "wifi off",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Broken Image",
+    "fileName": "0216_brokenImage_48.svg",
+    "searchTerms": [
+      "broken",
+      "image"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "BrokenImage",
+        "usage": "broken image",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Broken Chain Link",
+    "fileName": "0217_brokenLink_unlink_48.svg",
+    "searchTerms": [
+      "broken",
+      "link",
+      "unlink",
+      "chain",
+      "snap"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "BrokenLink",
+        "usage": "broken link, unlink",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "Unlink",
+        "usage": "broken link, unlink",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "BrokenLinkUnlink",
+        "usage": "broken link, unlink",
+        "sets": [],
+        "isAction": true,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": true,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Audio No Lines",
+    "fileName": "0218_VolumeSet_a_48_Audio.svg",
+    "searchTerms": [
+      "audio",
+      "quiet",
+      "silence",
+      "mute",
+      "sound",
+      "speaker"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "VolumeSetDefault",
+        "usage": "",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      },
+      {
+        "alias": "MediaVolumeZero",
+        "usage": "",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": true,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Audio One Radiating Line",
+    "fileName": "0218_VolumeSet_a_48_DecreasedVolume.svg",
+    "searchTerms": [
+      "audio",
+      "quiet",
+      "low",
+      "sound",
+      "speaker"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "VolumeSetDecrease",
+        "usage": "volume low, decrease volume",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "MediaVolumeOne",
+        "usage": "volume low, decrease volume",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "DecreaseMediaVolume",
+        "usage": "volume low, decrease volume",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": true,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Audio Slash",
+    "fileName": "0221_Audio_Slash_t_48.svg",
+    "searchTerms": [
+      "audio",
+      "quiet",
+      "low",
+      "sound",
+      "speaker"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "MediaMuted",
+        "usage": "",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "MuteMedia",
+        "usage": "",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "AudioDisabled",
+        "usage": "",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": [
+      {
+        "alias": "VolumeSetMute",
+        "usage": "",
+        "sets": [
+          "Media Controls"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Person Connection",
+    "fileName": "0222_PersonConnection_i_48.svg",
+    "searchTerms": [
+      "person",
+      "connection"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PersonConnection",
+        "usage": "person connection",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Graph Line Upward",
+    "fileName": "0223_trendingUp_i_48.svg",
+    "searchTerms": [
+      "upward",
+      "trend",
+      "graph",
+      "arrow"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TrendingUp",
+        "usage": "Upward trend",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Graph Line Downward",
+    "fileName": "0224_trendingDown_i_48.svg",
+    "searchTerms": [
+      "downward",
+      "trend",
+      "graph",
+      "arrow"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TrendingDown",
+        "usage": "Downward trend",
+        "sets": [],
+        "isAction": false,
+        "isStatus": true,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Circle Solid",
+    "fileName": "S_0001_circle.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "CircleSymbol",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Circle Outline",
+    "fileName": "S_0001_circle_light.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "CircleSymbolLight",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Diamond Solid",
+    "fileName": "S_0002_diamond.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "DiamondSymbol",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Diamond Outline",
+    "fileName": "S_0002_diamond_light.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "DiamondSymbolLight",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Heavy Plus Solid",
+    "fileName": "S_0003_plus.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PlusSymbol",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Heavy Plus Outline",
+    "fileName": "S_0003_plus_light.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "PlusSymbolLight",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Vertical Rectangle Solid",
+    "fileName": "S_0004_rectangle.svg",
+    "searchTerms": [
+      "Carbon Graphs"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "RectangleSymbol",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Vertical Rectangle Outline",
+    "fileName": "S_0004_rectangle_light.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "RectangleSymbolLight",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Square Solid",
+    "fileName": "S_0005_square.svg",
+    "searchTerms": [
+      "Carbon Graphs"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "SquareSymbol",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Square Outline",
+    "fileName": "S_0005_square_light.svg",
+    "searchTerms": [
+      "Carbon Graphs"
+    ],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "SquareSymbolLight",
+        "usage": "",
+        "sets": [],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Teardrop Solid",
+    "fileName": "S_0006_teardrop.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TeardropSymbol",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Teardrop Outline",
+    "fileName": "S_0006_teardrop_light.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TeardropSymbolLight",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Treardrop Inverted Solid",
+    "fileName": "S_0007_teardropUp.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TeardropUpSymbol",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Teardrop Inverted Solid",
+    "fileName": "S_0007_teardropUp_light.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TeardropUpSymbolLight",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Triangle Up Solid Triangle Solid",
+    "fileName": "S_0009_triangle.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TriangleSymbol",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Triangle Up Outline Triangle Outline",
+    "fileName": "S_0009_triangle_light.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TriangleSymbolLight",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Triangle Down Solid Triangle Inverted Solid",
+    "fileName": "S_0010_triangleDown.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TriangleDownSymbol",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Triangle Down Outline Triangle Inverted Outline",
+    "fileName": "src/icons/S_0010_triangleDown_light.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "TriangleSymbolDownLight",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "X Heavy Solid",
+    "fileName": "S_0011_x.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "XSymbol",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "X Heavy Outline",
+    "fileName": "S_0011_x_light.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "XSymbolLight",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Circle filled with lines",
+    "fileName": "S_0012_circleLines.svg",
+    "searchTerms": [],
+    "restricted": false,
+    "aliases": [
+      {
+        "alias": "CircleLinesSymbol",
+        "usage": "",
+        "sets": [
+          "Carbon Graphs"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ],
+    "secretAliases": []
+  },
+  {
+    "descriptiveName": "Catlogue Number (Regulatory)",
+    "fileName": "R_catalogueNumber.svg",
+    "searchTerms": [],
+    "restricted": true,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "CatalogueNumber",
+        "usage": "",
+        "sets": [
+          "Restricted"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Caution (Regulatory)",
+    "fileName": "R_caution.svg",
+    "searchTerms": [],
+    "restricted": true,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "Caution",
+        "usage": "Caution: Consult Accompanying Documents",
+        "sets": [
+          "Restricted"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Consult Instructions for Use (Regulatory)",
+    "fileName": "R_consultInstructionsForUse.svg",
+    "searchTerms": [],
+    "restricted": true,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "ConsultInstructionsForUse",
+        "usage": "",
+        "sets": [
+          "Restricted"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Date of Manufacture (Regulatory)",
+    "fileName": "R_dateOfManufacture.svg",
+    "searchTerms": [],
+    "restricted": true,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "DateOfManufacture",
+        "usage": "",
+        "sets": [
+          "Restricted"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "Manufacturer (Regulatory)",
+    "fileName": "R_manufacturer.svg",
+    "searchTerms": [],
+    "restricted": true,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "Manufacturer",
+        "usage": "",
+        "sets": [
+          "Restricted"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "CE Marking (Regulatory)",
+    "fileName": "R_ceMarking.svg",
+    "searchTerms": [],
+    "restricted": true,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "CeMarking",
+        "usage": "",
+        "sets": [
+          "Restricted"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "CEMarking",
+        "usage": "",
+        "sets": [
+          "Restricted"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  },
+  {
+    "descriptiveName": "European Union Authorized Representative (Regulatory)",
+    "fileName": "R_ecRep.sv",
+    "searchTerms": [],
+    "restricted": true,
+    "aliases": [],
+    "secretAliases": [
+      {
+        "alias": "EcRep",
+        "usage": "",
+        "sets": [
+          "Restricted"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      },
+      {
+        "alias": "ECRep",
+        "usage": "",
+        "sets": [
+          "Restricted"
+        ],
+        "isAction": false,
+        "isStatus": false,
+        "isToggle": false,
+        "isInteraction": false,
+        "isColorable": false,
+        "isLabelRequired": false,
+        "isBidirectional": false
+      }
+    ]
+  }
+]
