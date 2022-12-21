@@ -19,21 +19,7 @@ removeMakeDirectories();
 iconData.forEach(({fileName}) => {
   readSvg(fileName)
     .then(optimizeSvg)
-    .then(svg => console.log(svg))
-})
-
-/*
-const csvHeaders = ['name', 'filepath', 'themeable', 'bidi'];
-
-// Parse the csv file to json
-csv({ noheader: true, headers: csvHeaders }).fromFile(TerraIcon.csvFile).subscribe((jsonObj) => {
-  const csvObject = new CsvObject(jsonObj.name, jsonObj.filepath, jsonObj.themeable, jsonObj.bidi);
-
-  readSvg(csvObject)
-    .then(optimizeSvg)
-    .then(writeSvg)
+    .then(svg => writeSvg(fileName, svg))
     // eslint-disable-next-line no-console
     .catch(console.error);
 });
-
-*/
