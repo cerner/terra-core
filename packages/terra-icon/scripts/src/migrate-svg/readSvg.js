@@ -1,14 +1,15 @@
 /* eslint-disable compat/compat */
 const fs = require('fs');
+import path from 'path';
+const { CernerOneIcons } = require('../config');
 
-const readSvg = csvObject => new Promise((resolve, reject) => {
-  const objectCsv = { ...csvObject };
-  fs.readFile(objectCsv.svgSrc, 'utf-8', (error, svg) => {
+const readSvg = source => new Promise((resolve, reject) => {
+  const filePath = path.join(CernerOneIcons.svgDir, source);
+  fs.readFile(filePath, 'utf-8', (error, svg) => {
     if (error) {
       reject(error);
     } else {
-      objectCsv.svg = svg;
-      resolve(objectCsv);
+      resolve(svg);
     }
   });
 });

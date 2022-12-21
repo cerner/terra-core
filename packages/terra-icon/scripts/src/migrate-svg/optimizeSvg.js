@@ -12,8 +12,7 @@ const optimizeSvg = csvObject => new Promise((resolve, reject) => {
     if (result.error) {
       reject(result.error);
     } else {
-      objectCsv.svg = result.data;
-      resolve(objectCsv);
+      resolve(result.data);
     }
   });
 });
