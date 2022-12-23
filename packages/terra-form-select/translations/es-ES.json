@@ -12,6 +12,8 @@
   "Terra.form.select.unselected": "No seleccionado.",
   "Terra.form.select.disabled": "Deshabilitado.",
   "Terra.form.select.dimmed": "Atenuado.",
+  "Terra.form.select.expanded": "Cuadro combinado expandido.",
+  "Terra.form.select.collapsed": "Cuadro combinado contraído.",
   "Terra.form.select.listOfTotalOptions": "Lista de opciones.",
   "Terra.form.select.defaultUsageGuidance": "Use las flechas arriba y abajo para desplazarse por las opciones. Presione entrar para seleccionar una opción.",
   "Terra.form.select.mobileUsageGuidance": "Deslice a la derecha para acceder a las opciones.",

@@ -12,6 +12,8 @@
   "Terra.form.select.unselected": "Gedeselecteerd.",
   "Terra.form.select.disabled": "Gedeactiveerd.",
   "Terra.form.select.dimmed": "Gedimd.",
+  "Terra.form.select.expanded": "Uitgevouwen keuzelijst.",
+  "Terra.form.select.collapsed": "Samengevouwen keuzelijst.",
   "Terra.form.select.listOfTotalOptions": "Lijst van opties.",
   "Terra.form.select.defaultUsageGuidance": "Gebruik de knoppen Pijl-omhoog en Pijl-omlaag om de opties te bekijken. Druk op Enter om een optie te selecteren.",
   "Terra.form.select.mobileUsageGuidance": "Veeg naar rechts om naar opties te gaan.",

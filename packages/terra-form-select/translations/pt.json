@@ -12,6 +12,8 @@
   "Terra.form.select.unselected": "Não selecionado.",
   "Terra.form.select.disabled": "Desativado.",
   "Terra.form.select.dimmed": "Esmaecido.",
+  "Terra.form.select.expanded": "Caixa de combinação expandida.",
+  "Terra.form.select.collapsed": "Caixa de combinação recolhida.",
   "Terra.form.select.listOfTotalOptions": "Lista de opções.",
   "Terra.form.select.defaultUsageGuidance": "Use as teclas de seta para cima e para baixo para navegar pelas opções. Pressione Enter para selecionar uma opção.",
   "Terra.form.select.mobileUsageGuidance": "Deslize para a direita para acessar as opções.",
