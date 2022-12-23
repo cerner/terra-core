@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Added
+  * Added Accessibility Guide for `terra-form-fieldset`.
+
+* Added
   * Added single and multi select list test examples for `terra-list`.
 
 * Updated
