@@ -1,8 +1,8 @@
 import React from 'react';
-import OutlineTableView from 'terra-outline-table-view';
+import OutlineViewTable from 'terra-outline-view-table';
 
 const TableExample = () => (
-  <OutlineTableView
+  <OutlineViewTable
     summaryId="default-table"
     summary="This is a default table structure."
     numberOfColumns={3}

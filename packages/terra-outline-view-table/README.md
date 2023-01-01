@@ -1,17 +1,17 @@
 # Terra Outline Table View
 
-[![NPM version](https://badgen.net/npm/v/terra-outline-table-view)](https://www.npmjs.org/package/terra-outline-table-view)
+[![NPM version](https://badgen.net/npm/v/terra-outline-view-table)](https://www.npmjs.org/package/terra-outline-view-table)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-The terra-outline-table-view component provides
+The terra-outline-view-table component provides
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-outline-table-view)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-outline-view-table)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-outline-table-view`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-outline-view-table`
 
 <!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
 ## Peer Dependencies
