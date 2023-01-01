@@ -1,22 +1,23 @@
 {
-  "name": "terra-outline-table-view",
+  "name": "terra-outline-view-table",
   "private": true,
   "main": "lib/index.js",
-  "version": "0.2.0",
-  "description": "The terra-outline-table-view component ",
+  "version": "0.1.0",
+  "description": "The terra-outline-view-table component ",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git",
-    "directory": "packages/terra-outline-table-view"
+    "directory": "packages/terra-outline-view-table"
   },
   "keywords": [
     "Cerner",
-    "Outline",
     "Terra",
-    "terra-outline-table-view",
+    "terra-outline-view-table",
+    "Outline View",
+    "Treeview",
     "Table",
-    "UI",
-    "View"
+    "Expand Collapse Table Rows",
+    "UI"
   ],
   "author": "Cerner Corporation",
   "license": "Apache-2.0",

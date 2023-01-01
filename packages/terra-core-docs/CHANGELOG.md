@@ -38,7 +38,7 @@
 ## 1.15.1 - (September 8, 2022)
 
 * Changed
-  * Moved outline-table-view docs and tests folders to component dev-site folder.
+  * Moved outline-view-table docs and tests folders to component dev-site folder.
 
 ## 1.15.0 - (September 07, 2022)
 
@@ -46,12 +46,12 @@
   * Relative import paths of terra-hyperlink tests are changed to absolute path.
 
 * Added
-  * Added new outline-table-view docs and tests folders
+  * Added new outline-view-table docs and tests folders
 * Changed
   * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.48.0.
 
 * Changed
-  * terra-outline-table-view tests and doc for now initial implementation
+  * terra-outline-view-table tests and doc for now initial implementation
 
 ## 1.14.1 - (July 14, 2022)
 
