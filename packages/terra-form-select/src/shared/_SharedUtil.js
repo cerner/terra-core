@@ -10,14 +10,6 @@ class SharedUtil {
 
     return false;
   }
-
-  static isMac() {
-    if (navigator.userAgent.indexOf('Mac') !== -1 && navigator.userAgent.indexOf('Win') === -1) {
-      return true;
-    }
-
-    return false;
-  }
 }
 
 export default SharedUtil;

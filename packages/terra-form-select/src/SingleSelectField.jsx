@@ -109,9 +109,11 @@ const defaultProps = {
   disabled: false,
   error: undefined,
   help: undefined,
+  hideRequired: false,
   isIncomplete: false,
   isInline: false,
   isInvalid: false,
+  isLabelHidden: false,
   labelAttrs: {},
   maxHeight: undefined,
   maxWidth: undefined,
@@ -130,9 +132,11 @@ const SingleSelectField = ({
   disabled,
   error,
   help,
+  hideRequired,
   isIncomplete,
   isInline,
   isInvalid,
+  isLabelHidden,
   label,
   labelAttrs,
   maxHeight,
@@ -167,10 +171,12 @@ const SingleSelectField = ({
       labelAttrs={labelAttrs}
       error={error}
       help={help}
+      hideRequired={hideRequired}
       required={required}
       showOptional={showOptional}
       isInvalid={isInvalid}
       isInline={isInline}
+      isLabelHidden={isLabelHidden}
       htmlFor={selectId}
       maxWidth={maxWidth}
     >
