@@ -238,7 +238,7 @@ class Frame extends React.Component {
   handleKeyDown(event) {
     const { keyCode } = event;
 
-    if (keyCode === KeyCode.KEY_SPACE || (!this.state.isOpen && keyCode === KeyCode.KEY_RETURN)) {
+    if (keyCode === KeyCode.KEY_SPACE) {
       event.preventDefault();
       this.openDropdown();
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
@@ -383,17 +383,26 @@ class Frame extends React.Component {
   }
 
   /**
+   * Generates the main label for the field.
+   */
+  mainLabel() {
+    const selectedText = this.props.intl.formatMessage({ id: 'Terra.form.select.selected' });
+    let label;
+    if (this.props.display) {
+      label = `${this.props.display} ${selectedText}, ${this.ariaLabel()}`;
+    } else if (this.props.placeholder) {
+      label = `${this.props.placeholder}, ${this.ariaLabel()}`;
+    }
+
+    return label || this.ariaLabel();
+  }
+
+  /**
    * Determines compatible role attribute to apply to select based on active variant and disabled prop
    */
   role() {
-    let role;
     const { disabled } = this.props;
-
-    if (SharedUtil.isMac()) {
-      role = SharedUtil.isSafari() ? 'group' : 'button';
-    } else {
-      role = 'combobox';
-    }
+    const role = SharedUtil.isSafari() ? 'group' : 'button';
 
     return disabled ? undefined : role;
   }
@@ -498,12 +507,11 @@ class Frame extends React.Component {
       <div
         {...customProps}
         role={this.role()}
-        aria-required={required}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
         aria-expanded={!disabled && this.state.isOpen}
-        aria-label={`${this.props.display} is selected, ${this.ariaLabel()}`}
+        aria-label={this.mainLabel()}
         aria-haspopup={!disabled ? 'true' : undefined}
         aria-describedby={ariaDescribedBy}
         aria-owns={this.state.isOpen ? selectMenuId : undefined}
@@ -520,7 +528,7 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()} tabIndex="-1">
+        <div className={cx('display')} aria-label={this.ariaLabel()}>
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}

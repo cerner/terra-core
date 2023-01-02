@@ -12,6 +12,8 @@
   "Terra.form.select.unselected": "Nicht ausgewählt",
   "Terra.form.select.disabled": "Deaktiviert",
   "Terra.form.select.dimmed": "Gedimmt",
+  "Terra.form.select.expanded": "Eingeblendetes Kombinationsfeld.",
+  "Terra.form.select.collapsed": "Ausgeblendetes Kombinationsfeld.",
   "Terra.form.select.listOfTotalOptions": "Liste von Optionen",
   "Terra.form.select.defaultUsageGuidance": "Verwenden Sie die Pfeiltasten, um durch die Optionen zu navigieren. Drücken Sie die Eingabetaste, um eine Option auszuwählen.",
   "Terra.form.select.mobileUsageGuidance": "Nach rechts wischen, um zu Optionen zu navigieren",
