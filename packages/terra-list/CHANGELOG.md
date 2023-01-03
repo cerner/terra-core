@@ -4,6 +4,7 @@
 
 * Changed
   * Added a `ariaSelectionStyle` prop that provides accessibility support for single and multi select lists
+  * Fix section and subsection header colors in the lowlight theme.
 
 ## 4.52.0 - (December 7, 2022)
 
