@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.65.0 - (January 3, 2023)
+
 * Added
   * Added `aria-labelledby` for terra-form-fieldset.
 

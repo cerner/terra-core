@@ -1,6 +1,6 @@
 {
   "name": "@cerner/terra-core-docs",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "description": "Contains documentation for packages in the terra-core monorepo",
   "main": "index.js",
   "publishConfig": {
@@ -56,7 +56,7 @@
     "terra-dynamic-grid": "^3.34.0",
     "terra-form-checkbox": "^4.17.0",
     "terra-form-field": "^4.21.0",
-    "terra-form-fieldset": "^2.64.0",
+    "terra-form-fieldset": "^2.65.0",
     "terra-form-input": "^4.18.0",
     "terra-form-radio": "^4.31.0",
     "terra-form-select": "^6.36.0",
@@ -68,7 +68,7 @@
     "terra-i18n": "^4.39.0",
     "terra-icon": "^3.49.0",
     "terra-image": "^3.36.0",
-    "terra-list": "^4.52.0",
+    "terra-list": "^4.53.0",
     "terra-overlay": "^3.70.0",
     "terra-paginator": "^2.81.0",
     "terra-profile-image": "^3.42.0",

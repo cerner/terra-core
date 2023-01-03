@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.17.0 - (January 3, 2023)
+
 * Added
   * Added Accessibility Guide for `terra-form-fieldset`.
   * Added single and multi select list test examples for `terra-list`.
