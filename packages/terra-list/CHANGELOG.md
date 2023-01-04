@@ -17,11 +17,6 @@
 ## 4.52.0 - (December 7, 2022)
 
 * Changed
-  * Added a `ariaSelectionStyle` prop that provides accessibility support for single and multi select lists
-
-## 4.52.0 - (December 7, 2022)
-
-* Changed
   * Sections and subsections updated to add programmatic context to communicate hierarchal relationships
 
 ## 4.51.5 - (July 5, 2022)
