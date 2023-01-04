@@ -2,12 +2,10 @@
 
 ## Unreleased
 
-* Changed
-  * Fix section and subsection header colors in the lowlight theme.
-
 ## 4.53.0 - (January 3, 2023)
 * Changed
   * Added a `ariaSelectionStyle` prop that provides accessibility support for single and multi select lists
+  * Fix section and subsection header colors in the lowlight theme.
 
 * Added
   * Prop `ariaDescribedBy` - Associates a list with an element or elements that convey information about the list and how to interact with it.
