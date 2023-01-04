@@ -2,42 +2,50 @@
 
 ## Unreleased
 
-* Added
-  * Added Accessibility Guide for `terra-form-select`.
+* Changed
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.49.0.
+
+## 1.17.0 - (January 3, 2023)
 
 * Added
-  * Added Higher Order examples for `terra-profile-image`.
-  * Added Accessibility Guide for `terra-Profile-image`.
+  * Added Accessibility Guide for `terra-form-fieldset`.
+  * Added single and multi select list test examples for `terra-list`.
+
+* Changed
+  * Updated single and multi select guides with the new ariaSelectionStyle prop for `terra-list`.
+
+## 1.16.0 - (December 7, 2022)
+
+* Added
+  * Added Accessibility Guide for `terra-form-select`.
+  * Added higher-order examples and Accessibility Guide for `terra-profile-image`.
   * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
-  * Added Accordion Examples for `terra-section-header`.
-  * Added accessibility guide for `terra-divider`.
+  * Added accordion examples for `terra-section-header`.
+  * Added Accessibility Guide for `terra-divider`.
   * Added tests and example for adding row header to `terra-html-table`.
-  * Added accessibility guide for `terra-html-table`.
+  * Added `terra-list` tests and examples for `ariaDescribedBy`, `ariaDescription`, and `ariaDetails` props.
+  * Added Accessibility Guide for `terra-html-table`.
   * Added an accessibility hooks example for `terra-form-field` and `terra-input`.
 
 * Changed
+  * Updated wording in examples for `terra-demographics-banner`.
   * Updated `terra-list` section guide to not use listbox role.
   * Updated `terra-divider` tests and doc examples to include heading level prop.
   * Updated `terra-section-header` tests and examples.
-  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.49.0.
 
 ## 1.15.1 - (September 8, 2022)
 
 * Changed
-  * Moved `outline-table-view` docs and tests folders to component dev-site folder.
+  * Moved `terra-outline-view-table` docs and tests folders to component dev-site folder.
 
 ## 1.15.0 - (September 07, 2022)
 
+* Added
+  * Added new `terra-outline-view-table` docs and tests folders.
+
 * Changed
   * Relative import paths of `terra-hyperlink` tests are changed to absolute path.
-
-* Added
-  * Added new `outline-table-view` docs and tests folders
-* Changed
   * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.48.0.
-
-* Changed
-  * terra-outline-table-view tests and doc for now initial implementation
 
 ## 1.14.1 - (July 14, 2022)
 

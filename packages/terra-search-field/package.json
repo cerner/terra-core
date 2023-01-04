@@ -1,7 +1,7 @@
 {
   "name": "terra-search-field",
   "main": "lib/SearchField.js",
-  "version": "3.75.0",
+  "version": "3.76.0",
   "description": "A search component with a field that automatically performs a search callback after user input.",
   "repository": {
     "type": "git",
@@ -30,8 +30,8 @@
     "classnames": "^2.2.5",
     "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.61.0",
-    "terra-icon": "^3.48.0",
+    "terra-button": "^3.62.0",
+    "terra-icon": "^3.49.0",
     "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0"
   },

@@ -3,6 +3,10 @@ import { Badge } from 'terra-list/package.json?dev-site-package';
 import ListExample from './example/List?dev-site-example';
 import ListDividedExample from './example/ListDivided?dev-site-example';
 import ListPaddedExample from './example/ListPadded?dev-site-example';
+import AriaDescribedByVisibleList from  './example/AriaDescribedByVisibleList?dev-site-example';
+import AriaDescribedByHiddenList from  './example/AriaDescribedByHiddenList?dev-site-example';
+import AriaDescriptionList from './example/AriaDescriptionList?dev-site-example';
+import AriaDetailsList from './example/AriaDetailsList?dev-site-example';
 
 import ListPropsTable from 'terra-list/src/List?dev-site-props-table';
 
@@ -48,6 +52,29 @@ import List, { Item } from 'terra-list';
 <ListExample title="Default List" />
 <ListDividedExample title="Divided List" />
 <ListPaddedExample title="Padded List" />
+<AriaDescribedByVisibleList
+  title="Patient List with Visible Instructions using the ariaDescribedBy prop for accessibility"
+  description="For assistive technology users, this example adds the aria-describedby attribute
+  (in reference to the visible text above the list) to give additional instructions for how the user
+  should use this list."
+/>
+<AriaDescribedByHiddenList
+  title="Patient List with Visually Hidden Instructions using the ariaDescribedBy prop for accessibility"
+  description="For assistive technology users, this example adds the aria-describedby attribute
+  (in reference to visually hidden text) to give additional instructions for how the user
+  should use this list."
+/>
+<AriaDescriptionList
+  title="Patient List with instructions using the ariaDescription prop for accessibility"
+  description="For assistive technology users, this example adds the aria-description attribute
+  to give additional instructions for how the user should use this list."
+/>
+<AriaDetailsList
+  title="Patient List with Visible Instructions using the ariaDetails prop for  accessibility"
+  description="For assistive technology users, this example adds the aria-details attribute
+  (in reference to the visible text above the list) to give additional instructions for how the user
+  should use this list."
+/>
 
 ## List Props
 <ListPropsTable />

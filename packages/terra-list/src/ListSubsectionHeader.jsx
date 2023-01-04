@@ -83,7 +83,6 @@ const ListSubsectionHeader = ({
     cx(
       'subsection-header',
       { 'is-collapsible': isCollapsible },
-      theme.className,
     ),
     customProps.className,
   );
@@ -110,7 +109,7 @@ const ListSubsectionHeader = ({
   }
 
   return (
-    <li>
+    <li className={cx(theme.className)}>
       <Element className={cx('title')}>
         <div {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
           {accordionIcon}

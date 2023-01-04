@@ -10,6 +10,8 @@ it('should render a default component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+jest.mock('uuid/v4', () => () => '00000000-0000-0000-0000-000000000000');
+
 it('should render a Fieldset when all the possible props are passed into it', () => {
   const input = (
     <Fieldset
