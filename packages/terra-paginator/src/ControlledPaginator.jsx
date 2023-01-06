@@ -215,13 +215,13 @@ class Paginator extends React.Component {
         <PaginatorButton
           ariaDisabled={selectedPage === 1}
           ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
-          className={cx(['nav-link', 'left-controls', 'previous', selectedPage === 1 && 'is-disabled'])}
+          className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
           disabled={selectedPage === 1}
           onClick={this.handlePageChange(previousPageIndex)}
           onKeyDown={this.handlePageChange(previousPageIndex)}
         >
+          <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.previous' })} />
           <span className={cx('icon')} />
-          {intl.formatMessage({ id: 'Terra.paginator.previous' })}
         </PaginatorButton>
         {totalCount && intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
         <PaginatorButton
