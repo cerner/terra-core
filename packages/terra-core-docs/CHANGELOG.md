@@ -4,6 +4,7 @@
 
 * Changed
   * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.49.0.
+  * Added `react-intl` to peerDependency list for `terra-list` doc info.
 
 ## 1.17.0 - (January 3, 2023)
 
