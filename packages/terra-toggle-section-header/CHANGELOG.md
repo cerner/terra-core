@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.60.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump  of terra-toggle
+
 ## 2.59.0 - (December 7, 2022)
 
 * Changed

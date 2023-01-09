@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.53.1 - (January 9, 2023)
+
 * Fixed
   * Fixed `react-intl` import to peerDependency and match other Terra components.  
 

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.66.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-form-field and terra-form-input
+
 ## 2.65.0 - (January 3, 2023)
 
 * Added

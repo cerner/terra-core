@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.63.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-icon and terra-toggle
+
 ## 3.62.0 - (December 7, 2022)
 
 * Changed
