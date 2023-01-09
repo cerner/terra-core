@@ -2,7 +2,11 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed `react-intl` import to peerDependency and match other Terra components.  
+
 ## 4.53.0 - (January 3, 2023)
+
 * Changed
   * Added a `ariaSelectionStyle` prop that provides accessibility support for single and multi select lists
   * Fix section and subsection header colors in the lowlight theme.
