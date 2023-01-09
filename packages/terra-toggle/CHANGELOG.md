@@ -5,7 +5,7 @@
 ## 3.52.0 - (January 9, 2023)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump of terra-icon
 
 ## 3.51.0 - (December 7, 2022)
 

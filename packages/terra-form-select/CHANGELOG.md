@@ -5,7 +5,7 @@
 ## 6.37.0 - (January 9, 2023)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump of terra-form-field
 
 ## 6.36.0 - (December 7, 2022)
 

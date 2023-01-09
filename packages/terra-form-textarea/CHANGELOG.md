@@ -5,7 +5,7 @@
 ## 5.21.0 - (January 9, 2023)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump of terra-icon and terra-form-field
 
 ## 5.20.0 - (December 7, 2022)
 
