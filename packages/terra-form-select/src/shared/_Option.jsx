@@ -96,7 +96,7 @@ const Option = ({
 
   let label = display;
   if (customProps.index && customProps.totalOptions) {
-    label = `${display} (${customProps.index} of ${customProps.totalOptions})`;
+    label = `${display} (${customProps.index} ${customProps.ofText} ${customProps.totalOptions})`;
   }
   const itemLabel = isSelected || customProps.index === 1 ? `${customProps.expandedStateText} ${label}` : label;
 

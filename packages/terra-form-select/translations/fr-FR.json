@@ -7,6 +7,7 @@
   "Terra.form.select.noResults": "Aucun résultat correspondant pour \"{text}\"",
   "Terra.form.select.selectedText": "{text} sélectionné. ({index} sur {totalOptions}).",
   "Terra.form.select.activeOption": "{text} ({index} sur {totalOptions}).",
+  "Terra.form.select.of": "sur",
   "Terra.form.select.unselectedText": "{text} désélectionné.",
   "Terra.form.select.selected": "Sélectionné.",
   "Terra.form.select.unselected": "Désélectionné.",

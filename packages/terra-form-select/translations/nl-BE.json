@@ -7,6 +7,7 @@
   "Terra.form.select.noResults": "Geen resultaten gevonden voor \"{text}\"",
   "Terra.form.select.selectedText": "{text} geselecteerd. ({index} van {totalOptions})",
   "Terra.form.select.activeOption": "{text} ({index} van {totalOptions}).",
+  "Terra.form.select.of": "van",
   "Terra.form.select.unselectedText": "{text} niet geselecteerd.",
   "Terra.form.select.selected": "Geselecteerd.",
   "Terra.form.select.unselected": "Gedeselecteerd.",

@@ -7,6 +7,7 @@
   "Terra.form.select.noResults": "Inga matchande resultat för \"{text}\"",
   "Terra.form.select.selectedText": "{text} vald. ({index} av {totalOptions}).",
   "Terra.form.select.activeOption": "{text} ({index} av {totalOptions}).",
+  "Terra.form.select.of": "av",
   "Terra.form.select.unselectedText": "{text} avmarkerad.",
   "Terra.form.select.selected": "Vald.",
   "Terra.form.select.unselected": "Omarkerad.",
