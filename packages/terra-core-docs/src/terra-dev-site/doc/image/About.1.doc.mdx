@@ -2,6 +2,7 @@ import { Badge } from 'terra-image/package.json?dev-site-package';
 
 import ImageDefault from './example/ImageDefault?dev-site-example';
 import ImageFit from './example/ImageFitTypes?dev-site-example';
+import DecorativeImage from './example/DecorativeImage?dev-site-example';
 
 import ImagePropsTable from 'terra-image/src/Image?dev-site-props-table';
 
@@ -10,6 +11,29 @@ import ImagePropsTable from 'terra-image/src/Image?dev-site-props-table';
 # Terra Image
 
 The terra-image component provides styling for visual imagery.
+
+
+# Infomative Image
+
+
+
+Informative images must have text alternatives that describe the information or function represented by them. To ensure that images can be used by people with various disabilities.
+
+# Decorative Image
+
+Decorative images are images that don’t add information to the content of a page but instead support existing content or are used plainly for aesthetics. For example, it can be an image depicting adjacent text or to make the website more visually attractive.
+
+`DecorativeImage` should be used only when the purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the page.
+
+Images may be decorative when they are:
+- Visual styling such as borders, spacers, and corners.
+- Supplementary to link text to improve its appearance or increase the clickable area.
+- Illustrative of adjacent text but not contributing information (“eye-candy”).
+- Identified and described by surrounding text.
+
+`DecorativeImage` is implemented in a way that it can be ignored by assistive technology.
+
+Provide a null text alternative (alt="") when the only purpose of an image is to add visual decoration to the page.
 
 ## Getting Started
 
@@ -42,6 +66,7 @@ import Image from 'terra-image';
 ## Examples
 <ImageDefault />
 <ImageFit />
+<DecorativeImage />
 
 ## Image Props
 <ImagePropsTable />
