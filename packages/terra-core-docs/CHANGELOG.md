@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added examples and accessibility guide for `terra-image`.
+
 ## 1.18.0 - (January 9, 2023)
 
 * Changed

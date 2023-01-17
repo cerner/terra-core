@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added support for decorative images.
+
 ## 3.36.0 - (December 7, 2022)
 
 * Changed

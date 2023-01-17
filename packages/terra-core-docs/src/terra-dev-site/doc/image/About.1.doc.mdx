@@ -3,6 +3,7 @@ import { Badge } from 'terra-image/package.json?dev-site-package';
 import ImageDefault from './example/ImageDefault?dev-site-example';
 import ImageFit from './example/ImageFitTypes?dev-site-example';
 import DecorativeImage from './example/DecorativeImage?dev-site-example';
+import InformativeImage from './example/InformativeImage?dev-site-example';
 
 import ImagePropsTable from 'terra-image/src/Image?dev-site-props-table';
 
@@ -15,9 +16,17 @@ The terra-image component provides styling for visual imagery.
 
 # Infomative Image
 
+Informative images are images that graphically represent concepts and information on a page. images are known as informative when they convey a concept or information of image with a short phrase or sentence.
 
+Images must have text alternatives described through `alt` prop which will provide the information or function represented by them. This will ensure that images are accessible for people with various disabilities.
 
-Informative images must have text alternatives that describe the information or function represented by them. To ensure that images can be used by people with various disabilities.
+Images may be infomative when they are:
+- Used to label other information
+- Used to supplement other information
+- Conveying succinct information
+- Conveying an impression or emotion
+- Conveying file format
+
 
 # Decorative Image
 
@@ -67,6 +76,7 @@ import Image from 'terra-image';
 <ImageDefault />
 <ImageFit />
 <DecorativeImage />
+<InformativeImage />
 
 ## Image Props
 <ImagePropsTable />

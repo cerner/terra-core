@@ -20,10 +20,37 @@ exports[`correctly applies the theme context className 1`] = `
       className="image fill default orion-fusion-theme"
       onError={[Function]}
       onLoad={[Function]}
+      role="presentation"
       src=""
     />
   </Image>
 </ThemeContextProvider>
+`;
+
+exports[`should ignore Aria and title attribute for decorative image 1`] = `
+<img
+  alt=" "
+  className="image fill default"
+  height="75"
+  onError={[Function]}
+  onLoad={[Function]}
+  role="presentation"
+  src="profile.jpg"
+  width="75"
+/>
+`;
+
+exports[`should ignore provided role and render image with default decorative image role 1`] = `
+<img
+  alt=" "
+  className="image fill default"
+  height="75"
+  onError={[Function]}
+  onLoad={[Function]}
+  role="presentation"
+  src="profile.jpg"
+  width="75"
+/>
 `;
 
 exports[`should render a circle image component with fluid behavior 1`] = `
@@ -46,6 +73,17 @@ exports[`should render a circle image component with fluid behavior 1`] = `
 </div>
 `;
 
+exports[`should render a default component with decorative image attributes 1`] = `
+<img
+  alt=" "
+  className="image fill default"
+  onError={[Function]}
+  onLoad={[Function]}
+  role="presentation"
+  src=""
+/>
+`;
+
 exports[`should render a hidden src image and a visible placeholder image 1`] = `
 <Fragment>
   <img
@@ -54,6 +92,7 @@ exports[`should render a hidden src image and a visible placeholder image 1`] = 
     height="75"
     onError={[Function]}
     onLoad={[Function]}
+    role="presentation"
     src="profile.jpg"
     width="75"
   />
@@ -76,6 +115,18 @@ exports[`should render a thumbail image component with non-fluid behavior 1`] = 
   alt="thumbnail image"
   class="image fill thumbnail"
   src=""
+/>
+`;
+
+exports[`should render image without decorative image role 1`] = `
+<img
+  alt="profile image"
+  className="image fill default"
+  height="75"
+  onError={[Function]}
+  onLoad={[Function]}
+  src="profile.jpg"
+  width="75"
 />
 `;
 
