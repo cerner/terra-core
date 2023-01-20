@@ -117,16 +117,12 @@ exports[`Menu correctly applies the theme context className 1`] = `
             data-select-active={true}
             data-terra-select-option={true}
             disabled={false}
-            expandedStateText="Terra.form.select.expanded"
             id="terra-select-option-value"
-            index={1}
-            ofText="Terra.form.select.of"
             onMouseDown={[Function]}
             onMouseEnter={[Function]}
             onMouseUp={[Function]}
             role="option"
             tabIndex="0"
-            totalOptions={1}
           >
             <span
               className="display"
