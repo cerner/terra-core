@@ -170,11 +170,11 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                   class="content"
                 >
                   <svg
-                    aria-hidden="true"
                     class="tui-Icon icon icon"
                     data-name="Layer 1"
                     focusable="false"
                     height="36"
+                    role="presentation"
                     viewBox="0 0 48 48"
                     width="36"
                     xmlns="http://www.w3.org/2000/svg"
@@ -254,7 +254,6 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <IconBase
-                    ariaLabel={null}
                     className="icon"
                     data-name="Layer 1"
                     focusable="false"
@@ -266,11 +265,11 @@ exports[`LoadingOverlay when isOpen is provided should render with message prop 
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      aria-hidden="true"
                       className="tui-Icon icon icon"
                       data-name="Layer 1"
                       focusable="false"
                       height="36"
+                      role="presentation"
                       viewBox="0 0 48 48"
                       width="36"
                       xmlns="http://www.w3.org/2000/svg"
@@ -390,11 +389,11 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                   class="content"
                 >
                   <svg
-                    aria-hidden="true"
                     class="tui-Icon icon icon"
                     data-name="Layer 1"
                     focusable="false"
                     height="36"
+                    role="presentation"
                     viewBox="0 0 48 48"
                     width="36"
                     xmlns="http://www.w3.org/2000/svg"
@@ -474,7 +473,6 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <IconBase
-                    ariaLabel={null}
                     className="icon"
                     data-name="Layer 1"
                     focusable="false"
@@ -486,11 +484,11 @@ exports[`LoadingOverlay when isOpen is provided the default LoadingOverlay shoul
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <svg
-                      aria-hidden="true"
                       className="tui-Icon icon icon"
                       data-name="Layer 1"
                       focusable="false"
                       height="36"
+                      role="presentation"
                       viewBox="0 0 48 48"
                       width="36"
                       xmlns="http://www.w3.org/2000/svg"

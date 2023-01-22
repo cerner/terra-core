@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added A11y guide for terra-icon.
+
 ## 1.18.0 - (January 9, 2023)
 
 * Changed

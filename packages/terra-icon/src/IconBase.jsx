@@ -30,10 +30,17 @@ const propTypes = {
    */
   width: PropTypes.string,
   /**
-   * String that labels the current element. If 'aria-label' is present,
-   * role is set to 'img' and aria-hidden is removed.
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * String that labels the current element.
+   * a11yLabel is required for informative icons to convey meaning of icon to screenreaders.
    */
-  ariaLabel: PropTypes.string,
+  a11yLabel: PropTypes.string,
+  /**
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * ariaLabel has been deprecated and will be removed on next major version release.
+   * rename the `ariaLabel` prop to `a11yLabel`.
+   */
+  ariaLabel: PropTypes.string, // to be removed on next major version release.
   /**
    * Focusable attribute. IE 10/11 are focusable without this attribute.
    */
@@ -46,7 +53,6 @@ const defaultProps = {
   children: null,
   height: '1em',
   width: '1em',
-  ariaLabel: null,
   focusable: 'false',
 };
 
@@ -57,6 +63,7 @@ const IconBase = ({
   height,
   width,
   ariaLabel,
+  a11yLabel,
   focusable,
   ...customProps
 }) => {
@@ -73,20 +80,23 @@ const IconBase = ({
     attributes.className,
   );
 
-  // aria-label is present, remove aria-hidden, set role to img
-  if (ariaLabel) {
-    attributes['aria-label'] = ariaLabel;
-    attributes.role = 'img';
-    attributes['aria-hidden'] = null;
+  let svgChildren;
+  if (a11yLabel || ariaLabel) {
+    const svgA11yLabel = React.createElement('title', {}, a11yLabel || ariaLabel);
+    svgChildren = new Array(svgA11yLabel).concat(children);
+    if (ariaLabel) {
+    // eslint-disable-next-line no-console
+      console.warn('`ariaLabel` prop has been renamed to `a11yLabel`. please update all the refernces of ariaLabel prop to a11yLabel before next major version release.'); // to be removed on next major version release.
+    }
   } else {
-    attributes['aria-hidden'] = 'true';
+    attributes.role = 'presentation';
   }
 
   attributes.height = height;
   attributes.width = width;
   attributes.focusable = focusable;
 
-  return <svg {...attributes} className={classes}>{children}</svg>;
+  return <svg {...attributes} className={classes}>{(a11yLabel) ? svgChildren : children}</svg>;
 };
 
 IconBase.propTypes = propTypes;

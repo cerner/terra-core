@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added decortive icon support.
+
 ## 3.50.0 - (January 9, 2023)
 
 * Changed

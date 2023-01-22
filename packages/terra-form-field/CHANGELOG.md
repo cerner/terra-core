@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Jest snapshots updated due to decorative / informative icon changes in terra-icon.
+
 ## 4.22.0 - (January 9, 2023)
 
 * Changed
