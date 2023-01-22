@@ -4,6 +4,10 @@
 
 * Added
   * Added decortive icon support.
+  * Added prop `a11yLabel`.
+
+* Removed
+  * Removed prop `ariaLabel`.
 
 ## 3.50.0 - (January 9, 2023)
 
