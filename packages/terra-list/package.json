@@ -1,7 +1,7 @@
 {
   "name": "terra-list",
   "main": "lib/index.js",
-  "version": "4.53.1",
+  "version": "4.54.0",
   "description": "The Terra List is a structural component to arrange content within list/listitems.",
   "repository": {
     "type": "git",
@@ -27,11 +27,11 @@
     "react-intl": ">=2.8.0 <6.0.0"
   },
   "dependencies": {
-    "@cerner/terra-docs": "^1.8.0",
+    "@cerner/terra-docs": "^1.9.0",
     "classnames": "^2.2.5",
     "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
-    "terra-icon": "^3.50.0",
+    "terra-icon": "^3.51.0",
     "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0"
   },
