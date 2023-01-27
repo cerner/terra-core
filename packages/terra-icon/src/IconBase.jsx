@@ -86,7 +86,7 @@ const IconBase = ({
     svgChildren = new Array(svgA11yLabel).concat(children);
     if (ariaLabel) {
     // eslint-disable-next-line no-console
-      console.warn('`ariaLabel` prop has been renamed to `a11yLabel`. please update all the refernces of ariaLabel prop to a11yLabel before next major version release.'); // to be removed on next major version release.
+      console.warn('`ariaLabel` prop has been renamed to `a11yLabel`. please update all the refernces of ariaLabel prop to a11yLabel.'); // to be removed on next major version release.
     }
   } else {
     attributes.role = 'presentation';
