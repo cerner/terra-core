@@ -63,13 +63,12 @@ Terra Image handles two of the image concepts &mdash; **informative** images (al
 
 ----
 
-#### 1. When to use [Image](/components/cerner-terra-core-docs/image/image)
+#### 1. When to use Image
 
 **Informative Images** graphically represent concepts and information, typically pictures, photos, and illustrations. Informative images convey a simple concept or information that can be expressed in a short phrase or sentence.[<sup>[1]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
 
 Informative Images **must have text alternatives provided by the alt attribute**, that describe the information or function represented by the image. This ensures that images can be used by people with various disabilities with help of assistive technologies. The text alternative should convey the meaning or content that is displayed visually, which typically isn't a literal description of the image. In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the conveyed information.
 
-Use the default `import Image from 'terra-image'` for cases similar to:
 - When the image contributes meaning to the current page or context.
 - When the image is being used to suppliment and support other information.
 - When the image is an illustration, diagram, or photograph that shows directions or explains succint information.
@@ -157,15 +156,13 @@ Additional guidance and examples can be read in [WebAIM's Alternative Text](http
 
 <Whitespace />
 
-#### 2. When to use [Decorative Image](/components/cerner-terra-core-docs/image/decorative-image)
+#### 2. When to use Decorative Image
 
 **Decorative Images** do not add information to the content of a page. For example, the information provided by the image might already be given using adjacent text, or the image might be included to make the website more visually attractive. The only purpose of an image is to add visual decoration to the page, rather than to convey information that is important to understanding the page.[<sup>[1]</sup>](/components/cerner-terra-core-docs/image/accessibility-guide#linked-references)
 
 Decorative images must have a null (empty) alt text (`alt=""`) so that they will be ignored by assistive technologies, such as screen readers. Any text values provided for these types of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text. Leaving out the alt attribute is also not an option because when it is not provided, some screen readers will announce the file name of the image instead.
 
 To help with this, **Terra automatically adds the appropriate empty alt text** assignment for images that are decorative, and consumers should not provide alternative text when using `DecorativeImage`.
-
-Use the subcomponent `import { DeocrativeImage } from 'terra-image'` for cases similar to:
 
 - When the image is used as part of the page design.
 - When the image is helping to make something else easier to identify, but does not add to the information already provided.
