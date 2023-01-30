@@ -4,6 +4,7 @@
 
 * Added
   * Added A11y guide for terra-icon.
+  * Added examples and accessibility guide for `terra-image`.
 
 ## 1.18.0 - (January 9, 2023)
 

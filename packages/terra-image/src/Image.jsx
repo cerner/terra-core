@@ -5,23 +5,11 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './Image.module.scss';
+import {
+  getDecorativeImage, getInformativeImage, ImageVariant, FitTypes,
+} from './_imageHelper';
 
 const cx = classNamesBind.bind(styles);
-
-const ImageVariant = {
-  DEFAULT: 'default',
-  ROUNDED: 'rounded',
-  CIRCLE: 'circle',
-  THUMBNAIL: 'thumbnail',
-};
-
-const FitTypes = {
-  COVER: 'cover',
-  SCALEDOWN: 'scale-down',
-  FILL: 'fill',
-  CONTAIN: 'contain',
-  NONE: 'none',
-};
 
 const propTypes = {
   /**
@@ -37,9 +25,12 @@ const propTypes = {
    */
   isFluid: PropTypes.bool,
   /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
    * The text content that specifies an alternative text for an image.
+   * `alt` prop helps to provide meaningfull context for images and should be used for creating informative images. For decorative images `alt` prop can be ignored.
+   *  whenever `alt` prop is empty OR not defined image will be marked as decorative by default and ignored by Assistive Tools.
    */
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   /**
    * A React element which will be displayed during loading and in case of src load failure.
    */
@@ -66,14 +57,11 @@ const propTypes = {
   fit: PropTypes.oneOf(['cover', 'scale-down', 'fill', 'contain', 'none']),
 };
 
-/* eslint-disable react/default-props-match-prop-types */
 const defaultProps = {
   variant: 'default',
   isFluid: false,
-  alt: ' ',
   fit: 'fill',
 };
-/* eslint-enable react/default-props-match-prop-types */
 
 class Image extends React.Component {
   constructor(props) {
@@ -128,10 +116,13 @@ class Image extends React.Component {
   createImage(customProps, imageClasses) {
     const {
       src, alt, height, width,
-    } = this.props;
+    } = customProps;
+
+    const imageProps = (alt !== undefined && alt?.trim() !== '') ? getInformativeImage(customProps) : getDecorativeImage(customProps);
+
     return (
       <img
-        {...customProps}
+        {...imageProps}
         src={src}
         alt={alt}
         height={height}
@@ -146,7 +137,7 @@ class Image extends React.Component {
 
   render() {
     const {
-      src, variant, isFluid, alt, placeholder, height, width, onLoad, onError, fit, ...customProps
+      variant, isFluid, placeholder, fit, ...customProps
     } = this.props;
 
     const theme = this.context;
