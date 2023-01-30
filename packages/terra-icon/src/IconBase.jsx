@@ -89,6 +89,12 @@ const IconBase = ({
       console.warn('`ariaLabel` prop has been renamed to `a11yLabel`. please update all the refernces of ariaLabel prop to a11yLabel.'); // to be removed on next major version release.
     }
   } else {
+    // removes Aria attributes, role and title from customProps
+    Object.keys(attributes).forEach(prop => {
+      if (prop.includes('aria') || prop === 'title' || prop === 'role') {
+        delete attributes[prop];
+      }
+    });
     attributes.role = 'presentation';
   }
 
