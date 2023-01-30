@@ -102,7 +102,7 @@ const IconBase = ({
   attributes.width = width;
   attributes.focusable = focusable;
 
-  return <svg {...attributes} className={classes}>{(a11yLabel) ? svgChildren : children}</svg>;
+  return <svg {...attributes} className={classes}>{ svgChildren || children }</svg>;
 };
 
 IconBase.propTypes = propTypes;
