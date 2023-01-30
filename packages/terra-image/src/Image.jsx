@@ -28,6 +28,7 @@ const propTypes = {
    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
    * The text content that specifies an alternative text for an image.
    * `alt` prop helps to provide meaningfull context for images and should be used for creating informative images. For decorative images `alt` prop can be ignored.
+   *  whenever `alt` prop is empty OR not defined image will be marked as decorative by default and ignored by Assistive Tools.
    */
   alt: PropTypes.string,
   /**
