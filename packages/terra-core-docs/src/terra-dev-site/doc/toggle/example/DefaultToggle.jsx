@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Toggle from 'terra-toggle';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
+import classNames from 'classnames/bind';
+import styles from './ToggleExample.module.scss';
 
 const ToggleDefault = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,10 +10,11 @@ const ToggleDefault = () => {
   const handleOnClick = () => {
     setIsOpen(!isOpen);
   };
+  const cx = classNames.bind(styles);
 
   return (
     <div>
-      <IconInformation onClick={handleOnClick} aria-expanded={isOpen} aria-controls="toggle" />
+      <IconInformation className={cx('is-focused')} a11yLabel="information Icon" tabIndex="0" role="button" onClick={handleOnClick} aria-expanded={isOpen} aria-controls="toggle" />
       {/**
       * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
       */}

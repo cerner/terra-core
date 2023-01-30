@@ -4,7 +4,7 @@ import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import classNames from 'classnames/bind';
 import styles from './ToggleExample.module.scss';
 
-const ToggleDefault = () => {
+const ToggleWithLabel = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOnClick = () => {
@@ -14,11 +14,11 @@ const ToggleDefault = () => {
 
   return (
     <div>
-      <IconInformation className={cx('is-focused')} a11yLabel="information Icon" tabIndex="0" role="button" onClick={handleOnClick} aria-expanded={isOpen} aria-controls="toggle" />
-      {/**
-      * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
-      */}
-      <Toggle id="animated-toggle" isOpen={isOpen} isAnimated>
+      <label htmlFor="Icon-label">
+        <IconInformation className={cx('is-focused')} onClick={handleOnClick} a11yLabel="information Icon" tabIndex="0" role="button" area-labelledby="Toggle label" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
+        <span id="Icon-label"> Toggle label</span>
+      </label>
+      <Toggle isOpen={isOpen} isAnimated>
         <p>
           Lorem ipsum dolor sit amet,
           <a href="#test">consectetur</a>
@@ -30,4 +30,4 @@ const ToggleDefault = () => {
   );
 };
 
-export default ToggleDefault;
+export default ToggleWithLabel;
