@@ -437,7 +437,6 @@ exports[`should render a status view with custom glyph, title, message, and two 
           xmlns="http://www.w3.org/2000/svg"
         >
           <IconBase
-            ariaLabel={null}
             className="IconDiamond"
             focusable="false"
             height="1em"
@@ -448,10 +447,10 @@ exports[`should render a status view with custom glyph, title, message, and two 
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
-              aria-hidden="true"
               className="tui-Icon icon IconDiamond"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
