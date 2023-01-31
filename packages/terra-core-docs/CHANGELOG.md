@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.19.0 - (January 31, 2023)
+
 * Added
   * Added A11y guide for terra-icon.
   * Added examples and accessibility guide for `terra-image`.
