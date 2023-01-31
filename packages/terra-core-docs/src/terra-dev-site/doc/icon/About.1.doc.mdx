@@ -7,6 +7,9 @@ import IconBasePropsTable from 'terra-icon/src/IconBase?dev-site-props-table';
 # Terra Icon
 
 The terra-icon component is used to visually represent a literal or symbolic object intended to initiate an action, communicate a status, or navigate the workflow.
+Icons can be `meaningful` where they used to convey a semantic meaning or `decorative` where they are are simply used for aesthetic purposes.
+
+See [Usage](#usage) for more information.
 
 ## Getting Started
 
@@ -27,7 +30,7 @@ This component requires the following peer dependencies be installed in your app
 <!-- AUTO-GENERATED-CONTENT:END -->
 
 ## Usage
-
+The value for `a11yLabel` prop is required for the icons that are `meaningful` which means that they are intended to convey meaning. 
 ```jsx
 import IconAdd from 'terra-icon/lib/icon/IconAdd';
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
@@ -37,6 +40,18 @@ import IconEdit from 'terra-icon/lib/icon/IconEdit';
   <IconEdit a11yLabel="edit item"/>
 </div>
 ```
+
+If icons are intended for aesthetic purposes (`decorative` icons) then `a11yLabel` can be ignored.
+```jsx
+import IconAllergy from 'terra-icon/lib/icon/IconAllergy';
+import IconScratchPad from 'terra-icon/lib/icon/IconScratchPad';
+
+<div>
+  <IconAllergy />
+  <IconScratchPad />
+</div>
+```
+Refer to [Accessibility guide](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/icon/AccessibilityGuide) to know more about informative and decorative icons.
 
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)

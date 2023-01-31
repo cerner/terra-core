@@ -41,10 +41,10 @@ exports[`Hyperlink should render a audio hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -90,11 +90,11 @@ exports[`Hyperlink should render a document hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon"
       data-name="Layer 1"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -121,10 +121,10 @@ exports[`Hyperlink should render a external hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -149,10 +149,10 @@ exports[`Hyperlink should render a image hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon is-bidi"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -188,10 +188,10 @@ exports[`Hyperlink should render a video hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon is-bidi"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -231,10 +231,10 @@ exports[`Hyperlink should render with custom props with external variant 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"

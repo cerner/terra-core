@@ -77,14 +77,22 @@ describe('Icon', () => {
       });
     });
 
-    describe('ariaLabel prop', () => {
-      it('should have default ariaLabel={null}', () => {
+    describe('a11yLabel prop', () => {
+      it('should have default a11yLabel={undefined}', () => {
         const wrapper = shallow(<IconAdd />);
-        expect(wrapper.prop('ariaLabel')).toEqual(null);
+        expect(wrapper.prop('a11yLabel')).toEqual(undefined);
       });
-      it('should have ariaLabel={some value}', () => {
-        const wrapper = shallow(<IconAdd ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual('some value');
+      it('should have default role={presentation} when a11yLabel={undefined}', () => {
+        const wrapper = render(<IconAdd role="link" />);
+        expect(wrapper.prop('role')).toEqual('presentation');
+        // ensures role = presentation is added.
+        expect(wrapper).toMatchSnapshot();
+      });
+      it('should have a11yLabel={some value}', () => {
+        const wrapper = shallow(<IconAdd a11yLabel="some value" />);
+        expect(wrapper.prop('a11yLabel')).toEqual('some value');
+        // ensures role = presentation in not added.
+        expect(wrapper).toMatchSnapshot();
       });
     });
   });
@@ -158,14 +166,14 @@ describe('Icon', () => {
       });
     });
 
-    describe('ariaLabel prop', () => {
-      it('should have default ariaLabel={null}', () => {
+    describe('a11yLabel prop', () => {
+      it('should have default a11yLabel={undefined}', () => {
         const wrapper = shallow(<IconSpinner />);
-        expect(wrapper.prop('ariaLabel')).toEqual(null);
+        expect(wrapper.prop('a11yLabel')).toEqual(undefined);
       });
-      it('should have ariaLabel={some value}', () => {
-        const wrapper = shallow(<IconSpinner ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual('some value');
+      it('should have a11yLabel={some value}', () => {
+        const wrapper = shallow(<IconSpinner a11yLabel="some value" />);
+        expect(wrapper.prop('a11yLabel')).toEqual('some value');
       });
     });
   });
@@ -243,14 +251,14 @@ describe('Icon', () => {
       });
     });
 
-    describe('ariaLabel prop', () => {
-      it('should have default ariaLabel={null}', () => {
+    describe('a11yLabel prop', () => {
+      it('should have default a11yLabel={undefined}', () => {
         const wrapper = shallow(<IconComment />);
-        expect(wrapper.prop('ariaLabel')).toEqual(null);
+        expect(wrapper.prop('a11yLabel')).toEqual(undefined);
       });
-      it('should have ariaLabel={some value}', () => {
-        const wrapper = shallow(<IconComment ariaLabel="some value" />);
-        expect(wrapper.prop('ariaLabel')).toEqual('some value');
+      it('should have a11yLabel={some value}', () => {
+        const wrapper = shallow(<IconComment a11yLabel="some value" />);
+        expect(wrapper.prop('a11yLabel')).toEqual('some value');
       });
     });
   });
