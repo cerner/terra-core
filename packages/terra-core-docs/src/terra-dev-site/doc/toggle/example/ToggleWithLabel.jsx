@@ -9,7 +9,6 @@ const ToggleWithLabel = () => {
   const [focused, setFocus] = useState(true);
   const handleOnClick = () => {
     setIsOpen(!isOpen);
-    setFocus(false);
   };
   const handleOnKeyDown = (event) => {
     if (event.nativeEvent.keyCode === KEY_TAB) {
