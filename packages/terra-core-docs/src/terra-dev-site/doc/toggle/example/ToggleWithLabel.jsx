@@ -1,37 +1,26 @@
 import React, { useState } from 'react';
 import Toggle from 'terra-toggle';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
-import classNames from 'classnames';
-import classNamesBind from 'classnames/bind';
-import * as KeyCode from 'keycode-js';
-import styles from './ToggleExample.module.scss';
+import { KEY_TAB } from 'keycode-js';
+import './ToggleExample.module.scss';
 
 const ToggleWithLabel = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [focused, setfocused] = useState(false);
-
+  const [focused, setFocus] = useState(true);
   const handleOnClick = () => {
     setIsOpen(!isOpen);
+    setFocus(false);
   };
-  const handleKeyDown = (event) => {
-    if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
-      setfocused({ focused: true });
+  const handleOnKeyDown = (event) => {
+    if (event.nativeEvent.keyCode === KEY_TAB) {
+      setFocus(true);
     }
   };
-  const handleKeyUp = (event) => {
-    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
-      setfocused({ focused: true });
-    }
-  };
-  const cx = classNamesBind.bind(styles);
 
-  const toggleClasses = classNames(
-    cx({ 'is-focused': focused }),
-  );
   return (
     <div>
       <label htmlFor="Icon-label">
-        <IconInformation className={toggleClasses} onClick={handleOnClick} handleKeyUp={handleKeyUp} handleKeyDown={handleKeyDown} a11yLabel="information Icon" tabIndex="0" role="button" area-labelledby="Toggle label" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
+        <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
         <span id="Icon-label"> Toggle label</span>
       </label>
       <Toggle isOpen={isOpen} isAnimated>

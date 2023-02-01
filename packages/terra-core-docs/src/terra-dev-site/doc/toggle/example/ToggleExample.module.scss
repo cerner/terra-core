@@ -1,6 +1,10 @@
 :local {
-  .is-focused {
-    outline: 2px dashed #0000;
-    outline-offset: 0;
+  [data-show-focus-styles='false']:focus {
+    outline: none;
   }
+
+  [data-show-focus-styles='true']:focus {
+    outline: 2px dashed #000;
+    outline-offset: 2px;
+  } 
 }

@@ -1,36 +1,25 @@
 import React, { useState } from 'react';
 import Toggle from 'terra-toggle';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
-import classNames from 'classnames';
-import classNamesBind from 'classnames/bind';
-import * as KeyCode from 'keycode-js';
-import styles from './ToggleExample.module.scss';
+import { KEY_TAB } from 'keycode-js';
+import './ToggleExample.module.scss';
 
-const ToggleDefault = () => {
+const AnimatedToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [focused, setfocused] = useState(false);
-
+  const [focused, setFocus] = useState(true);
   const handleOnClick = () => {
     setIsOpen(!isOpen);
+    setFocus(false);
   };
-  const handleKeyDown = (event) => {
-    if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
-      setfocused({ focused: true });
+  const handleOnKeyDown = (event) => {
+    if (event.nativeEvent.keyCode === KEY_TAB) {
+      setFocus(true);
     }
   };
-  const handleKeyUp = (event) => {
-    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
-      setfocused({ focused: true });
-    }
-  };
-  const cx = classNamesBind.bind(styles);
 
-  const toggleClasses = classNames(
-    cx({ 'is-focused': focused }),
-  );
   return (
     <div>
-      <IconInformation className={toggleClasses} a11yLabel="information Icon" tabIndex="0" role="button" handleKeyUp={handleKeyUp} handleKeyDown={handleKeyDown} onClick={handleOnClick} aria-expanded={isOpen} aria-controls="toggle" />
+      <IconInformation data-show-focus-styles={focused} focusable a11yLabel="information Icon" tabIndex="0" role="button" onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} aria-expanded={isOpen} aria-controls="toggle" />
       {/**
       * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
       */}
@@ -46,4 +35,4 @@ const ToggleDefault = () => {
   );
 };
 
-export default ToggleDefault;
+export default AnimatedToggle;
