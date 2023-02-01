@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.51.0 - (January 31, 2023)
+
 * Added
   * Added decortive icon support.
   * Added prop `a11yLabel`.
