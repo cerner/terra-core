@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+* Changed
+  * Updated examples to use informative icons.
+
+* Added 
+  * Added Label Example for `terra-toggle`.
+  
 ## 1.19.0 - (January 31, 2023)
 
 * Added
