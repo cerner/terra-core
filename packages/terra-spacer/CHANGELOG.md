@@ -5,7 +5,7 @@
 ## 3.60.1 - (January 31, 2023)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump of `terra-image`
 
 ## 3.60.0 - (December 7, 2022)
 

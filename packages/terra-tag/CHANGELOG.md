@@ -5,7 +5,7 @@
 ## 2.54.1 - (January 31, 2023)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump of `terra-icon`
 
 ## 2.54.0 - (January 9, 2023)
 

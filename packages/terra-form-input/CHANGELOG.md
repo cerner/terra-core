@@ -5,7 +5,7 @@
 ## 4.19.1 - (January 31, 2023)
 
 * Changed
-  * Minor dependency version bump
+  * Minor dependency version bump of `terra-icon`
 
 ## 4.19.0 - (January 9, 2023)
 
