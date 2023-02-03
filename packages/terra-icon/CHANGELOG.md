@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed console error `Each child in a list should have a unique "key" prop` thrown due to use of Array.
+
 ## 3.51.0 - (January 31, 2023)
 
 * Added
