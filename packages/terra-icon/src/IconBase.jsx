@@ -80,10 +80,9 @@ const IconBase = ({
     attributes.className,
   );
 
-  let svgChildren;
+  let svgTitleTag;
   if (a11yLabel || ariaLabel) {
-    const svgA11yLabel = React.createElement('title', {}, a11yLabel || ariaLabel);
-    svgChildren = new Array(svgA11yLabel).concat(children);
+    svgTitleTag = React.createElement('title', {}, a11yLabel || ariaLabel);
     if (ariaLabel) {
     // eslint-disable-next-line no-console
       console.warn('`ariaLabel` prop has been renamed to `a11yLabel`. please update all the refernces of ariaLabel prop to a11yLabel.'); // to be removed on next major version release.
@@ -102,7 +101,12 @@ const IconBase = ({
   attributes.width = width;
   attributes.focusable = focusable;
 
-  return <svg {...attributes} className={classes}>{ svgChildren || children }</svg>;
+  return (
+    <svg {...attributes} className={classes}>
+      {svgTitleTag}
+      {children}
+    </svg>
+  );
 };
 
 IconBase.propTypes = propTypes;
