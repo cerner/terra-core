@@ -1,0 +1,283 @@
+import { Notice } from "@cerner/terra-docs";
+import { Badge } from 'terra-toggle/package.json?dev-site-package';
+import ToggleLabResults from './example/ToggleLabResults';
+import TogglePatient from './example/TogglePatient';
+
+<Badge />
+
+# Terra Toggle Accessibility Guide
+
+## Why is accessibility of Divider important?
+
+Terra Toggle is a component that hides and progressively discloses new content. If it is not implemented in a way that meets the accessibility criteria, it can be rendered useless to some users preventing them from accessing or understanding the content.
+
+## Accessibility Considerations
+
+<Notice variant="important" ariaLevel="3">
+
+### Code Considerations: What do engineers need to do?
+
+- Ensure all interactive elements within Terra Toggle have a meaningful label
+  - The Toggle button provides more information about a “thing”. Ensure the Toggle is programmatically associated with the “thing” it provides more information about.
+
+<div aria-label="Example demo">
+  <TogglePatient />
+</div>
+<div aria-label="Example code">
+
+    const TogglePatient = () => {
+      const [isOpen, setIsOpen] = useState(false);
+      const [focused, setFocus] = useState(true);
+      const handleOnClick = () => {
+        setIsOpen(!isOpen);
+      };
+      const handleOnKeyDown = (event) => {
+        if (event.nativeEvent.keyCode === KEY_TAB) {
+          setFocus(true);
+        }
+      };
+
+      return (
+        <Card>
+          <Card.Body>
+            <div>
+              <label htmlFor="Icon-label">
+                <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
+                <span id="Icon-label"> Lab Results</span>
+              </label>
+              <Toggle isOpen={isOpen} isAnimated>
+                <p>
+                  Cerner Patient
+                  <a href="https://www.cerner.com/solutions/patient">Cerner recognizes the digitization of health care requires improved focus around care coordination and communication, as well as support, empowerment and access to promote patient-centered care.</a>
+                  {' '}
+                  Leveraging an ecosystem of virtual, remote and mobile services and technology, your provider is able to provide you greater access to care and enable collaboration among your care team. Through use of Cerner’s patient engagement tools, your care team is able to track your progress and proactively engage with you, enabling the delivery of timely, quality and cost-effective care anywhere.
+                </p>
+              </Toggle>
+            </div>
+          </Card.Body>
+        </Card>
+      );
+    };
+
+</div>
+
+   - For instance, a Toggle next to the words "Lab Results" is used to provide more information about a patient's lab results should be programmatically associated with and close to the patient's name and the words "Lab Results".
+
+<div aria-label="Example Demo">
+  <ToggleLabResults />
+</div>
+<div aria-label="Example code">
+
+    const ToggleLabResults = () => {
+      const [isOpen, setIsOpen] = useState(false);
+      const [focused, setFocus] = useState(true);
+      const handleOnClick = () => {
+        setIsOpen(!isOpen);
+      };
+      const handleOnKeyDown = (event) => {
+        if (event.nativeEvent.keyCode === KEY_TAB) {
+          setFocus(true);
+        }
+      };
+
+      return (
+        <Card>
+          <Card.Body>
+            <div>
+              <label htmlFor="Icon-label">
+                <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
+                <span id="Icon-label"> Lab Results</span>
+              </label>
+              <Toggle isOpen={isOpen} isAnimated>
+                <p>
+                  Cerner offers a suite of solutions targeted toward the key segments of the complex laboratory
+                  <a href="#test">blood sciences, microbiology, cellular pathology, molecular diagnostics, and laboratory logistical services.</a>
+                  {' '}
+                  Cerner also offers a reference lab network partner programme that allows you to collaborate with Cerner and other reference labs to support the sharing of information across your own lab network.
+                </p>
+              </Toggle>
+            </div>
+          </Card.Body>
+        </Card>
+      );
+    };
+
+</div>
+
+  - Ensure all icons have alternate content added. [“Alternate Content” SHOULD BE CHANGED TO REFLECT THE PROP NAME USED WITHIN ICONS.]
+- Work with the content creators to understand details before writing code.
+  - Understand how the Toggle and its content will resize and reflow based on user settings, resizing the viewport, or user zooming into the content.
+  - Understand the user's logical reading order and ensure code order follows it.
+- Ensure the toggle and any other interactive elements within the Toggle content can be accessed, interacted with, and activated using only the keyboard.
+  - Ensure each interactive element has a visible keyboard focus.
+  - Ensure Toggle does not cause a keyboard trap.
+- Do not override the implicit or explicit role of the Toggle.
+
+</Notice>
+
+### Content Considerations: What do content creators need to do?
+
+- Ensure all interactive elements have descriptive labels that describe their purpose.
+  - The Toggle button provides more information about a “thing”. Convey to the engineer the text on the page that further describes the purpose of the Toggle so the Toggle may be programmatically associated with the text on the page.
+    - Ensure the Toggle is placed near the text to help users understand the visual relationship.
+    - For instance, a Toggle next to the words "Lab Results" is used to provide more information about a patient's lab results should be programmatically associated with and close to the patient's name and the words "Lab Results".
+  - For each interactive element within Terra Toggle, provide the engineers with a meaningful label.
+  - Ensure each interactive element label is unique to the page.
+    - If multiple elements with the same name are used, they must perform the same exact function (e.g., download the same file).
+    - Or it must be programmatically associated with other visible and related content on the page that can help users understand the purpose of elements.
+ - If the label is text, the visible text must match the programmatic label.
+ - All icons used within interactive elements that convey meaning must have an accessible name (alternate content).
+   - The icon must be intuitive for the functionality it represents.
+   - The icon must be named consistently across the product.
+   - Icons must be used to represent the same function consistently (don’t use multiple icons for the same functionality)
+ - Any purely decorative icon (does NOT convey any meaning) within a button must be marked as decorative.
+- Consider how content will adjust to resizing text or reflowing content at different viewpoints. Users may have settings that change the font size, style, or other text attributes. They may also resize a window or zoom into the content. All these things can cause content to resize or reflow, and when it does, content must not overlap, be cut off, or become unusable.
+- Ensure all content is perceivable by meeting all the color requirements.
+  - Ensure color is not used as the only way to convey information.
+  - Ensure all text and non-text graphics meet the appropriate color contrast requirements. See [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum) and [1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast) for more information.
+- After development, ensure the Toggle and its content is keyboard accessible and works as expected.
+  - Ensure the Toggle button has a visible keyboard focus when accessed using the keyboard.
+  - Ensure the Toggle does not cause a keyboard trap.
+
+## Usability Expectations
+
+### Interaction Detail
+
+- Users expect to activate the Toggle control do show or hide content on activation.
+
+### Keyboard Expectations
+
+| Key/Sequence | Expectation  |
+|---|---|
+|*Tab*| Moves forward or backward to any interactive element including form Select Field   |
+|*Enter/Return/Spacebar*| With Toggle button in focus, shows or hides the extra content |
+
+## Concerns and Hazards 
+
+- As needed (if any…)
+
+## Support Compliance
+
+### How does Toggle support compliance?
+
+[Insert General blurb used on other accessibility guides]
+Terra is committed to ensuring its components provide the maximum possible accessibility. Terra provides the ability to make accessibility products. However, using Terra components will not automatically make a product accessible.
+
+The final responsibility lies with the consumers of Terra components — ensuring proper usage, the programmatic context where needed, the words used to label elements, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance — to make a product fully accessible.
+
+### Primary accessibility criteria for Toggle
+- [1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content) - Supports
+  - default alternate content for the icon.
+  - CHECK TO MAKE SURE HOW IMPLEMENTED ENGINEER AND CONTENT CREATOR DOES NOTHING - ALT CONTENT SHOULD BE PROVIDED BY TERRA.
+- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships) - Supports
+  - Terra provides the ability for information, structure, and relationships to be programmatically determined.
+  - Engineers must associate the Toggle with other related content on the page. The toggle should be near the item it is associated with.
+  - Content creators must ensure the Toggle is visually close to another element that helps describe the toggle's purpose. For instance, Toggle next to the words "Lab Results" that is used to provide more information about a patient's lab results should be programmatically associated with and close to the patient's name and the words "Lab Results". 
+- [1.3.2 Meaningful Sequence](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence) - Supports
+  - Terra provides the ability for components to be presented in the order in which they are coded.
+  - Engineers must ensure that content is coded in the user's logical reading order and preserves meaning.
+  - Content creators must convey to engineers any content order that.
+- [1.4.10 Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow) - Supports
+  - Terra provides the ability for components to reflow when the viewport is resized to 320x256 px without loss of information or function.
+  - Engineers must ensure content within Terra toggle can reflow when the viewport is resized to 320 x 256 px without scrolling in two directions or causing a loss of information or functionality.
+  - Content creators must consider the responsive nature of Terra toggle and provide engineers guidance on how Terra Toggle content should reflow and resize when the viewport is resized to 320 x 256 px.
+- [1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast) - Supports
+  - Terra Toggle includes an icon that, by default, meets the non-text color contrast requirements.
+  - If the default icon color of the Toggle is changed or other graphics are inserted into the Toggle content area, Engineers must work with content creators to implement non-text content (image or icon) colors to meet the 3:1 color contrast ratio.
+  - Content creators must ensure any graphical elements used within the toggle that conveys information meets a 3:1 color contrast ratio.
+- [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum) - Supports
+  - Terra toggle provides components that, by default, meet color contrast requirements.
+  - Engineers must work with content creators to implement toggle so that toggle text (visual label) color and the background color meet appropriate color contrast ratios.
+  - Engineers must work with content creators to implement toggle so that toggle text (visual label) color and the background color meet appropriate color contrast ratios.
+- [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard) - Supports
+  - Terra ensures that Terra Toggle supports basic keyboard functionality.
+  - Engineers must ensure Toggle is keyboard accessible and does not override any basic keyboard functionality.
+  - Ensure all content can be accessed, interacted with, and acted upon using only the keyboard.
+- [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG21/Understanding/focus-order) - Supports
+  - Terra Toggle will natively receive focus in the order it is coded.
+  - Engineers code content in the user's logical reading order. Engineers must never set a TABINDEX of greater than zero.
+  - Content creators ensure that engineers understand the user's logical reading.
+- [2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels) - Supports
+  - Terra provides the ability to create labels that are descriptive of their purpose.
+  - Engineers must associate the Toggle with related information on the page programmatically.
+  - Content creators must convey to the engineers what other content on the page Toggle is related to.
+- [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible) - Supports
+  - Terra Ensures Terra toggle receives visual focus
+  - Engineers must ensure that visible focus is maintained for all Toggle elements.
+  - Content creators must not remove the visible focus when Terra Toggle receives focus.
+- [2.5.3 Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name) - Supports
+  - Terra provides the ability for programmatic labels to match visual labels.
+  - Engineers must ensure the programmatic label matches the visible label.
+  - Provide the engineer with the toggle text (the visual label), which must be unique and describe the purpose of the toggle so it can be understood by the user out of context.
+- [3.2.4 Consistent Identification](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification) - Supports
+  - Terra provides the default alternate content for the icon so that all Toggle elements will be consistently named.
+  - CHECK TO MAKE SURE HOW IMPLEMENTED ENGINEER AND CONTENT CREATOR DOES NOTHING - ALT CONTENT SHOULD BE PROVIDED BY TERRA.
+  - CHECK TO MAKE SURE HOW IMPLEMENTED ENGINEER AND CONTENT CREATOR DOES NOTHING - ALT CONTENT SHOULD BE PROVIDED BY TERRA.
+- [4.1.1 Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing) - Supports
+  - Terra components are tested and validated before release to ensure proper parsing of code.
+  - Engineers must ensure this criterion is met.
+- [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value) - Supports
+  - Terra provides the ability for Name, Role, and Value attributes to be programmatically determined for screen readers to communicate with the user effectively.
+  - Engineers must not override the implicit or explicit of Terra Toggle when implementing.
+  - Content creators must provide engineers with a unique and meaningful name is provided for the toggle that communicates what users can expect from activating it.
+### Related accessibility criteria that apply when adding content to Terra Toggle
+- [1.3.4 Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation) - Supports
+  - Terra components operate regardless of orientation.
+  - Engineers must ensure components operate independently of orientation.
+  - Content creators must ensure components operate independently of orientation.
+- [1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color) - Supports
+  - Terra ensures that the color alone is not used to convey meaningful information to the users.
+  - Engineers must ensure that color is not used as the only medium to convey meaningful information.
+  - Content creators must not use color as the only method to convey information.
+- [1.4.12 Text Spacing](https://www.w3.org/WAI/WCAG21/Understanding/text-spacing) - Supports
+  - Terra supports altering multiple CSS attributes without loss of function or information.
+  - Engineers must ensure content is implemented in code in a way that supports altering multiple CSS attributes without loss of function or information.
+  - Content creators must consider how altering user settings can change CSS attributes of text within Terra Toggle. Must inform engineers how content should react when text spacing attributes are altered to ensure content does not overlap, get cut off, or become unusable.
+- [1.4.4 Resize text](https://www.w3.org/WAI/WCAG21/Understanding/resize-text) - Supports
+  - Terra provides the ability for text to be resized and zoomed without loss of information or function.
+  - Engineers must ensure content other than captions and images of text can be up to 200 percent without loss of content or functionality.
+  - Content creators must consider how content will resize if zoomed up to 200% and ensure designs account for possible zooming of text without causing loss of content or functionality.
+- [1.4.5 Images of Text](https://www.w3.org/WAI/WCAG21/Understanding/images-of-text) - Supports
+  - Terra toggle uses SVG images by default
+  - Content creators should not use images of text unless they are scalable vector graphics (SVG) that can enlarge and reduce without losing detail.
+- [2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap) - Supports
+  - Terra provides the ability to focus in and out of components without causing a keyboard trap.
+  - Engineers must ensure no keyboard traps are introduced into code. 
+  - Content creators must ensure that the toggle does not cause any keyboard trap 
+- [2.3.1 Three Flashes or Below Threshold](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold) - Supports
+  - Terra components contain no flashing or flickering that would cause seizures or migraines.
+  - Engineers must ensure the product contains no flashing or flickering that would cause seizures or migraines. Any flashing or flickering must be below the threshold rate/time limit.
+  - Content creators must not implement content that flashes or flickers.
+- [2.5.2 Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation) - Supports
+  - Terra Toggle, by default, uses the up event to perform actions.
+  - Engineers must ensure action is always taken on the up event.
+- [2.5.4 Motion Actuation](https://www.w3.org/WAI/WCAG21/Understanding/motion-actuation) - Supports
+  - Terra components, by default, do not provide motion-based functionality.
+  - If motion-based functionality is implemented, consuming teams would be responsible to ensure this requirement is met.
+- [3.1.2 Language of Parts](https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts) - Supports
+  - Terra does not support the ability for engineers to assign the appropriate LANG attribute value to parts of a page. Where different from the page.
+- [3.2.2 On Input](https://www.w3.org/WAI/WCAG21/Understanding/on-input) - Supports
+  - Terra components do not cause a change of context on input.
+  - Engineers must ensure that nothing unexpected happens when interactive elements receive input.
+  - Content creators must inform engineers that the toggle should not cause any change on activation. 
+- [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG21/Understanding/status-messages) - Supports
+  - Terra toggle should provide the user context of the Toggle state when it changes.
+  - Engineers must ensure their code does not interfere with Toggle state messages
+
+### Supported Features and Technology 
+
+ - Keyboard Interactions
+ - JAWS Support with Chrome (PC)
+ - VoiceOver Support with Chrome, Safari (MAC)
+
+### Partial Support & Requiring Further 
+
+- NVDA not tested (PC)
+- Mobile Touch Interactions with Screen Reader assistive technology
+- Speech Input Interactions with assistive technology
+- [Report a problem with this component on GitHub](https://github.com/cerner/terra-core/issues/new/choose)
+
+### Linked References: [UX / Dev to UPDATE AS NEEDED AFTER DEVELOPMENT]
+[1.W3C WAI Aria: Disclosure (Show/Hide)](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)
+
+
