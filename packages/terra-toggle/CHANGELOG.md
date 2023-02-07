@@ -5,6 +5,16 @@
 * Changed
   * Updated wdio screenshots due to functional-testing upgrade.
 
+## 3.53.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.52.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.52.0 - (January 9, 2023)
 
 * Changed

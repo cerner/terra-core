@@ -5,6 +5,16 @@
 * Changed
   * Updated wdio screenshots due to functional-testing upgrade.
 
+## 4.20.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.19.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump of `terra-icon`
+
 ## 4.19.0 - (January 9, 2023)
 
 * Changed

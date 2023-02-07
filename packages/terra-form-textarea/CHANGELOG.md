@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 5.22.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.21.1 - (January 31, 2023)
+
 * Changed
   * Updated wdio screenshots due to functional-testing upgrade.
 

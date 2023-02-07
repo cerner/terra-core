@@ -5,6 +5,10 @@
 * Changed
   * Updated wdio screenshots due to functional-testing upgrade.
 
+## 3.42.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump of `terra-image`
 ## 3.42.0 - (December 7, 2022)
 
 * Changed 

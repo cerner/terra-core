@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 1.20.0 - (February 7, 2023)
+
+* Changed
+  * Updated examples to use informative icons.
+
+* Added 
+  * Added Label Example for `terra-toggle`.
+  
+## 1.19.0 - (January 31, 2023)
+
 * Added
   * Added A11y guide for terra-icon.
   * Added examples and accessibility guide for `terra-image`.

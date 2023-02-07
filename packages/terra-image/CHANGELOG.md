@@ -5,6 +5,8 @@
 * Changed
   * Updated wdio screenshots due to functional-testing upgrade.
 
+## 3.37.0 - (January 31, 2023)
+
 * Added
   * Added support for decorative images.
 
