@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated jest & wdio tests.
+
 ## 1.20.0 - (February 7, 2023)
 
 * Changed
