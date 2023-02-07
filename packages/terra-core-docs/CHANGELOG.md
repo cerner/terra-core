@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.20.0 - (February 7, 2023)
+
 * Changed
   * Updated examples to use informative icons.
 
