@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added support for decorative icon buttons.
+
 ## 3.62.0 - (December 7, 2022)
 
 * Changed

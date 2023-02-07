@@ -487,6 +487,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
       >
         <Button
           className="button"
+          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={false}
@@ -522,6 +523,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
         </Button>
         <Button
           className="button"
+          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={false}

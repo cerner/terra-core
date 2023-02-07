@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated jest snapshots for icon button changes.
+
 ## 4.63.0 - (February 7, 2023)
 
 * Changed

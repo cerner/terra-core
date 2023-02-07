@@ -99,6 +99,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             />
           }
+          iconType="decorative"
           isBlock={false}
           isCompact={true}
           isDisabled={false}
@@ -112,7 +113,6 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
         >
           <button
             aria-disabled={false}
-            aria-label="Terra.searchField.submit-search"
             className="button neutral compact orion-fusion-theme button"
             data-terra-search-field-button="Search"
             disabled={false}
@@ -260,6 +260,7 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
           xmlns="http://www.w3.org/2000/svg"
         />
       }
+      iconType="decorative"
       isBlock={false}
       isCompact={true}
       isDisabled={false}
@@ -273,7 +274,6 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
     >
       <button
         aria-disabled={false}
-        aria-label="Terra.searchField.submit-search"
         className="button neutral compact button"
         data-terra-search-field-button="Search"
         disabled={false}
@@ -362,6 +362,7 @@ exports[`Snapshots renders a basic search field 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       />
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
@@ -405,6 +406,7 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       />
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={true}
     isDisabled={true}
@@ -448,6 +450,7 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
         xmlns="http://www.w3.org/2000/svg"
       />
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
@@ -488,6 +491,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
           className="clear-icon"
         />
       }
+      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -509,6 +513,7 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
         xmlns="http://www.w3.org/2000/svg"
       />
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
@@ -550,6 +555,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
           className="clear-icon"
         />
       }
+      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -571,6 +577,7 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       />
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
@@ -614,6 +621,7 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       />
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
@@ -655,6 +663,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
           className="clear-icon"
         />
       }
+      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -676,6 +685,7 @@ exports[`Snapshots renders a search field with a value 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       />
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
@@ -719,6 +729,7 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       />
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
@@ -763,6 +774,7 @@ exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       />
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={true}
     isDisabled={false}
