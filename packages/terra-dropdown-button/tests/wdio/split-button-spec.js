@@ -25,9 +25,29 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
     it('should validate primary button active styling', () => {
       $('[class*=split-button-primary]').moveTo();
-      browser.buttonDown();
+      browser.performActions([{
+        type: 'pointer',
+        id: 'pointer1',
+        parameters: {
+          pointerType: 'mouse',
+        },
+        actions: [{
+          type: 'pointerDown',
+          button: 0,
+        }],
+      }]);
       Terra.validates.element('primary active');
-      browser.buttonUp();
+      browser.performActions([{
+        type: 'pointer',
+        id: 'pointer1',
+        parameters: {
+          pointerType: 'mouse',
+        },
+        actions: [{
+          type: 'pointerUp',
+          button: 0,
+        }],
+      }]);
     });
 
     it('opens and validates dropdown with click', () => {
@@ -181,8 +201,28 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
       it('closes the dropdown when clicking outside the dropdownbutton', () => {
         $('#root').moveTo({ xOffset: 200, yOffset: 1 });
-        browser.buttonDown();
-        browser.buttonUp();
+        browser.performActions([{
+          type: 'pointer',
+          id: 'pointer1',
+          parameters: {
+            pointerType: 'mouse',
+          },
+          actions: [{
+            type: 'pointerDown',
+            button: 0,
+          }],
+        }]);
+        browser.performActions([{
+          type: 'pointer',
+          id: 'pointer1',
+          parameters: {
+            pointerType: 'mouse',
+          },
+          actions: [{
+            type: 'pointerUp',
+            button: 0,
+          }],
+        }]);
         Terra.validates.element('clicking outside closes dropdown');
       });
 

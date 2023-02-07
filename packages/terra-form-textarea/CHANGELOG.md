@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+* Changed
   * Jest snapshots updated due to decorative / informative icon changes in terra-icon.
 
 ## 5.21.0 - (January 9, 2023)

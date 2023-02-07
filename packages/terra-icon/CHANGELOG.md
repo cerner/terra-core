@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
 * Added
   * Added decortive icon support.
   * Added prop `a11yLabel`.
