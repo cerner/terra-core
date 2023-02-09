@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated radio and checkbox tests to fix fusion theme tests.
+
 ## 1.20.0 - (February 7, 2023)
 
 * Changed
