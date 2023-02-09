@@ -1,0 +1,210 @@
+import { Notice } from "@cerner/terra-docs";
+import { Badge } from 'terra-image/package.json?dev-site-package';
+import Whitespace from "../../common/layout-helpers/Whitespace";
+import ButtonOnClick from "./example/ButtonOnClick";
+import A11yIconButton from "./example/A11yIconButton";
+import A11yButtonLabel from "./example/A11yButtonLabel";
+
+<Badge />
+
+# Accessibility Guide for Terra Button
+
+## Why is the accessibility of buttons important? 
+
+Buttons are one of HTML's most foundational elements and are a vital tool for creating accessible and intuitive user experiences. However, because buttons are so fundamental to the functionality of web content, inaccessible or improperly implemented Buttons can present a severe barrier to the accessibility of a product.
+
+It is critical that buttons are coded correctly to ensure they are keyboard accessible. Additionally, buttons must be programmatically understood as a button to properly convey to users of assistive technologies that they are on a button. Users expect buttons to perform an action and not do something unexpected. For buttons to be highly usable and easily understood, it is critical that all buttons be uniquely labeled and descriptive of what action will be taken when activated. For example:
+
+- **Blind screen reader users** do not necessarily interact with pages in a linear fashion and can use a button out of context. They need to know what kind of a component they are on and how to interact with it – different components have different expectations. They need the words within the button to be descriptive of purpose. 
+- **People using speech input software** require unique Button labels to effectively activate the Button. 
+- **Keyboard only users** navigate the page using only a keyboard. Buttons must be keyboard accessible for keyboard only users to interact with the button. Additionally, a visible keyboard focus is crucial this user to see where they are on the page.
+
+## Accessibility Considerations
+
+### Code Considerations
+
+- Ensure all buttons receive keyboard focus and can be interacted with only the keyboard.  
+  - Do NOT override keyboard focus state or use a TABINDEX greater than zero. 
+  - Buttons should be coded in the user logical reading order of the page to ensure a meaningful experience.  
+  - Never use the down event to activate a button; always use the up event. 
+- Do NOT override the implicit/explicit role of a button; if another role is required do NOT use the Terra button.
+
+<Notice variant="important" ariaLevel="4">
+
+##### Accessibility Guidance: Buttons must have an accessible name which is descriptive of the purpose
+
+<div aria-label="Example demo">
+    <ButtonOnClick />
+</div>
+
+```jsx
+import Button from 'terra-button/lib/Button';
+
+<Button text="Show Alert" onClick={() => alert('Ive been clicked!')} />
+```
+
+The visual name of the label must match the programmatic name. The best practice is to use words within the button label. If an Aria-label is used the Aria-label must start with the visual label of the button.
+
+The screen reader user will hear something like: <samp> Show Alert: Button </samp>
+
+##### Accessibility Guidance: Using Meaningful or Decorative Icon Buttons
+
+```jsx
+import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
+import DecoIconPrinter from 'terra-icon/lib/icon/decorative/IconPrinter';
+import { IconButton, IconTypes } from 'terra-button';
+
+const Icon = <IconPrinter a11yLabel="Print" />;
+const DecorativeIcon = <DecoIconPrinter />;
+
+  <div>
+    <IconButton icon={Icon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+    <IconButton icon={Icon} text="All Documents" iconType={IconTypes.INFORMATIVE} /> 
+    <IconButton icon={DecorativeIcon} iconType={IconTypes.INFORMATIVE} text="Print" />
+  </div>
+```
+
+<div aria-label="Example demo">
+    <A11yIconButton />
+</div>
+
+For buttons that use icons that convey a meaning, it is critical to include alternate content that represents that icon meaning.
+
+- The first example is  a button with **Meaningful Icon Only** and the screen reader will read <samp>Print Button.</samp>
+
+- The second example is  a button with **Meaningful Icon and Text** and the screen reader will read <samp>Print All Documents Button.</samp>
+
+For buttons that use icons that do not convey a meaning, make sure they are marked as purely decorative.
+
+- The third example is  a button with **Decorative Icon and Text** and the screen reader will read <samp>Print Button.</samp>
+
+##### Accessibility Guidance: Using Non-unique Button label
+
+<div aria-label="Example demo">
+  <A11yButtonLabel />
+</div>
+
+```jsx
+import Button from 'terra-button/lib/Button';
+
+<Button aria-label="Add Allergies" text="Add" className={cx('button')} />
+```
+The screen reader user will hear something like: <samp> Add Allergies Button  </samp>
+
+![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue) The above example is NOT recommended. For Accessibility Best Practices it is recommended to use the same text for both visual and the programmatic label of the button.
+
+Ensure any non-unique button label that is visually related to content in the page must be programmatically associated with its content. For example, a “Add” button next to the word “allergies” must be appropriate associated with the word allergies.
+
+</Notice>
+
+<Whitespace />
+
+### Content Considerations:
+
+- Must provide engineers with a meaningful and descriptive button label that conveys the button's purpose. The best practice is to use a verb that describes the button action.
+  - Avoid non-unique button labels unless the buttons perform the exact same function. For example, two print buttons that print the exact same document are fine to have. However, if the buttons print different documents, this would be an accessibility failure.
+  - If non-unique names cannot be avoided, inform the engineer of other text on the page that can be programmatically associated to other content on the page that may help describe a visual relationship. For example, multiple “Learn more” buttons on the page are placed in visual proximity to the item the user can learn more about. 
+  - Ensure the first word(s) of the programmatic label should match the visual label. 
+- When using icons, inform engineers when an icon is purely decorative. Otherwise, provide the engineer with meaningful alternate text which will serve as the accessible name.  
+  - Ensure any icon used within a button is used to consistently represent the same functionality. Additionally, any alternate content used with an icon must be consistent for a predictable user experience. 
+- When implementing buttons ensure the button has good contrast ratios to be easily perceived against its background color. If changing the default colors, the text color must meet a minimum contrast ratio against the background color. See [WCAG 1.4.3 Contrast Minimum](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) for more information. 
+- Not everyone perceives color so never use color as the only way to convey meaning within the interface. Always provide both color and text or a shape together to represent the meaning. 
+- Ensure the engineers understand the logical reading order of the page.
+- Never add unexpected behaviors to buttons that could cause a change of context on focus or on activation of the button. Ensure buttons always meet the user’s expectations.  
+- After coded, ensure all interactable elements receive keyboard focus in the users reading order and display a visible keyboard focus. Ensure the keyboard user does not get “trapped” somewhere on the page preventing them from the entire workflow.
+
+<Whitespace newline={2} />
+
+## Usability Expectations:
+
+Users expect Buttons to perform the action indicated in the button label.
+
+### Interaction Details
+
+Mouse users expect the cursor to change to a hand with pointing finger when the Button is hovered. Keyboard only users expect to see a visible keyboard focus indicator when the Button is in focus. 
+
+### Keyboard Navigation
+
+Buttons have the following keyboard navigation expectations:
+
+| Key/Sequence | Description |
+|---|---|
+|**Tab**| Moves focus on and off the Button. User expects elements to receive keyboard focus in the logical reading order of the page.  |
+|**Enter**| Executes the Button and moves focus to the Button target. |
+
+## Support Compliance
+
+### Primary Criteria
+
+- [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html) – Partially Supports 
+  - Terra provides the ability to use Icons inside a Button. Terra also provides the ability to set those icons as decorative and meaningful. 
+  - Engineers must ensure when an Icon conveys meaning, to add appropriate ALT text to create a meaningful Button label. If the icon does not convey meaning and is only decorative, it should be marked as decorative.
+  - Content creators must provide engineers with meaningful text when using icons that convey meaning. For example, when a button has a print icon with the word "instructions" then the Icon is conveying information thus must have the alternate text “Print”.
+  - If icons are not meaningful, content creators must inform engineers when the icon is "decorative" only. For example, when a button has the print Icon next to the word "print"; the Icon would be decorative and not have alternate text.   
+
+- [**1.3.1 Info and Relationships**](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) — Partially Supports
+  - Terra Button does allow users to set a programmatic label of the button (a text string) but does not allow consuming teams the ability to set extra programmatic context for buttons to ensure they are programmatically associated to other related content. 
+  - When applicable, engineers must ensure that any visual relationship to the button is programmatically codified. E.g.: to non-unique button "learn more", must be programmatically associated to the words to describe the "learn more" button.  
+  - Content creators, when applicable, if other text on the page describes a non-unique button purpose through visual presentation; make sure engineers understand the relationship and apply a programmatic association to the text. For example, multiple buttons named “View details” next to the items they will present information about. If using formatting to convey information, it should be available in text. Any visual formatting must be available in text programmatically. Use words in addition to the format to convey necessary information.   
+
+- [**2.1.1 Keyboard**](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) — Supports 
+  - Interactable Terra Buttons natively receive focus, can be interacted with, and acted upon using the keyboard. Consuming teams must ensure to not overwrite native behavior.
+  - Engineers must ensure behaviors is maintained.
+  - Content creators must ensure that all elements with focus are receiving the right treatment, Focus Order, Focus Visible. No Keyboard Trap. 
+
+- [**2.4.6 Headings and Labels**](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html) — Supports 
+  - Terra Buttons provides the ability to add descriptive and unique labels. 
+  - Engineers must implement the descriptive label to the button.  
+  - Content creators are responsible for providing the unique label that describes the action the button performs.  
+
+- [**2.5.3 Label in Name**](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html) — Supports 
+  - Terra provides teams with the ability to meet this criterion.
+  - Engineers must ensure the programmatic label matches the visual labels.
+  - Content creators must provide engineers with the appropriate, programmatic, and visual labels essentially match. The first word of the programmatic label should match the first word of the visual label.
+
+### Secondary Criteria
+
+- [**1.3.2 Meaningful Sequence**](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html) — Supports 
+  - Terra Buttons by themselves do not have a meaningful sequence. 
+  - Engineers must ensure that content is coded in the expected reading order of the page. Never use a TABINDEX higher than 0. 
+
+- [**1.4.1 Use of Color**](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) - Partially Supports 
+  - Engineers must ensure Terra buttons styles do NOT rely on color alone to convey information.  
+  - Content Creators must ensure color is NOT the only method used to convey information. Instead, use both color and text. 
+
+- [**1.4.3 Contrast (Minimum)**](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) — Supports 
+  - Terra Buttons natively meet appropriate contrast ratios and support this criterion. 
+    If consuming teams alter button colors, the consuming team must ensure Contrast (minimum) is met. 
+
+- [**2.1.2 No Keyboard Trap**](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html) — Supports 
+  - Engineers need to ensure when Terra button is implemented with other components, User can navigate through the code without a keyboard trap.  
+
+- [**2.2.1 Timing Adjustable**](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html) — Supports 
+  - Consuming teams must ensure Terra Buttons do not have a time limit to interact with. 
+
+- [**2.4.3 Focus Order**](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html) — Supports 
+  - Engineers must ensure that the focus order is the user's expected reading order and preserves page meaning. Focus order should come from the order the content is coded. 
+    Do NOT implement a tab index value greater than zero. 
+  - Content creators should convey to the engineers what the proper reading order of the page should be. 
+
+- [**2.4.7 Focus Visible**](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html) — Supports 
+  - Terra Buttons provide a natively keyboard focus. 
+  - Consuming teams must ensure visible focus is maintained for all elements.  
+  - Content creators must NOT remove visible focus. Ensure visible focus follows the non-text contrast ratio if the visible focus color has changed. (See 1.4.11 Non-text contrast).  
+
+- [**2.5.2 Pointer Cancellation**](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation)  — Supports 
+  - Terra buttons use the up event to perform actions allowing the user to move away from the button or Button while still pressing down, canceling the selection. 
+  - Engineers must ensure that actions are not activated by the down action allowing the user to cancel interactions. 
+
+- [**3.2.1 On Focus**](https://www.w3.org/WAI/WCAG21/Understanding/on-focus) —Supports 
+  - Engineers must ensure Terra buttons do NOT initiate a change of context, or anything unexpected, on focus. 
+  - Content creators should ensure there is no change of context on focus.  
+
+- [**3.2.2 On Input**](https://www.w3.org/WAI/WCAG21/Understanding/on-input) — Supports 
+  - Terra Buttons does not cause an unexpected change of context on input. Terra provides the ability to customize button actions. 
+  - Engineers must ensure nothing unexpected happens on input. 
+  - Content creators must also ensure buttons do not create a change of context for the user. If there is a change of context on input, the user must be warned (with text) before the user activates the button.  
+
+- [**3.2.4 Consistent Identification**](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification) - Supports
+  - Content creators should ensure consistency of buttons based on functionality/actions for both compliance in accessibility and usability. Ensure consistency when using icons and labels across product, functionality
+  

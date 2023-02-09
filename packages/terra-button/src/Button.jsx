@@ -313,7 +313,11 @@ class Button extends React.Component {
       ariaLabel = ariaLabel || text;
     }
 
-    const ComponentType = href ? 'a' : 'button';
+    let ComponentType = 'button';
+    if (href) {
+      ComponentType = 'a';
+      customProps.role = 'button';
+    }
 
     return (
       <ComponentType
@@ -333,7 +337,6 @@ class Button extends React.Component {
         onFocus={this.handleFocus}
         href={href}
         ref={refCallback}
-        role={href ? 'button' : undefined}
       >
         {buttonLabel}
       </ComponentType>
