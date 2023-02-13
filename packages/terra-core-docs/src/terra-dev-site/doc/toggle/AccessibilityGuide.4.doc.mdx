@@ -12,6 +12,8 @@ import TogglePatient from './example/TogglePatient';
 
 Terra Toggle is a component that hides and progressively discloses new content. If it is not implemented in a way that meets the accessibility criteria, it can be rendered useless to some users preventing them from accessing or understanding the content.
 
+<Whitespace />
+
 ## Accessibility Considerations
 
 <Notice variant="important" ariaLevel="3">
@@ -20,8 +22,6 @@ Terra Toggle is a component that hides and progressively discloses new content. 
 
 - Ensure all interactive elements within Terra Toggle have a meaningful label
   - The Toggle button provides more information about a “thing”. Ensure the Toggle is programmatically associated with the “thing” it provides more information about.
-
-<Whitespace />
 
 <div>
   <TogglePatient />
@@ -46,9 +46,9 @@ Terra Toggle is a component that hides and progressively discloses new content. 
 
     return (
       <div>
-        <label htmlFor="Icon-label">
-          <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Patient, Information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
-          <span id="Icon-label"> Patients</span>
+        <label htmlFor="Info-Icon">
+          <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Allergies, Information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Info-Icon" />
+          <span> Allergies</span>
         </label>
         <Toggle isOpen={isOpen} isAnimated>
           <Table
@@ -92,8 +92,6 @@ Terra Toggle is a component that hides and progressively discloses new content. 
 ```
 
    - For instance, a Toggle next to the words "Lab Results" is used to provide more information about a patient's lab results should be programmatically associated with and close to the patient's name and the words "Lab Results".
-
-<Whitespace />
 
 <div>
   <ToggleLabResults />
@@ -256,7 +254,7 @@ The final responsibility lies with the consumers of Terra components — ensurin
 - [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum) - Supports
   - Terra toggle provides components that, by default, meet color contrast requirements.
   - Engineers must work with content creators to implement toggle so that toggle text (visual label) color and the background color meet appropriate color contrast ratios.
-  - Engineers must work with content creators to implement toggle so that toggle text (visual label) color and the background color meet appropriate color contrast ratios.
+  - Content creators must ensure that the toggle text color meets the appropriate contrast ratio against background color(s) based on the text size of the visual label text. Contrast ratios should be above 4.5:1 for normal text and 3:1 for bold and large text.
 - [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard) - Supports
   - Terra ensures that Terra Toggle supports basic keyboard functionality.
   - Engineers must ensure Toggle is keyboard accessible and does not override any basic keyboard functionality.
@@ -279,7 +277,6 @@ The final responsibility lies with the consumers of Terra components — ensurin
   - Provide the engineer with the toggle text (the visual label), which must be unique and describe the purpose of the toggle so it can be understood by the user out of context.
 - [3.2.4 Consistent Identification](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification) - Supports
   - Terra provides the default alternate content for the icon so that all Toggle elements will be consistently named.
-  - CHECK TO MAKE SURE HOW IMPLEMENTED ENGINEER AND CONTENT CREATOR DOES NOTHING - ALT CONTENT SHOULD BE PROVIDED BY TERRA.
   - CHECK TO MAKE SURE HOW IMPLEMENTED ENGINEER AND CONTENT CREATOR DOES NOTHING - ALT CONTENT SHOULD BE PROVIDED BY TERRA.
 - [4.1.1 Parsing](https://www.w3.org/WAI/WCAG21/Understanding/parsing) - Supports
   - Terra components are tested and validated before release to ensure proper parsing of code.
