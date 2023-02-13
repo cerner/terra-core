@@ -1,5 +1,6 @@
 import { Notice } from "@cerner/terra-docs";
 import { Badge } from 'terra-toggle/package.json?dev-site-package';
+import Whitespace from '../../common/layout-helpers/Whitespace';
 import ToggleLabResults from './example/ToggleLabResults';
 import TogglePatient from './example/TogglePatient';
 
@@ -7,7 +8,7 @@ import TogglePatient from './example/TogglePatient';
 
 # Terra Toggle Accessibility Guide
 
-## Why is accessibility of Divider important?
+## Why the Accessibility of Toggle is important
 
 Terra Toggle is a component that hides and progressively discloses new content. If it is not implemented in a way that meets the accessibility criteria, it can be rendered useless to some users preventing them from accessing or understanding the content.
 
@@ -20,91 +21,158 @@ Terra Toggle is a component that hides and progressively discloses new content. 
 - Ensure all interactive elements within Terra Toggle have a meaningful label
   - The Toggle button provides more information about a “thing”. Ensure the Toggle is programmatically associated with the “thing” it provides more information about.
 
-<div aria-label="Example demo">
+<Whitespace />
+
+<div>
   <TogglePatient />
 </div>
-<div aria-label="Example code">
 
-    const TogglePatient = () => {
-      const [isOpen, setIsOpen] = useState(false);
-      const [focused, setFocus] = useState(true);
-      const handleOnClick = () => {
+```jsx
+  const TogglePatient = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [focused, setFocus] = useState(true);
+    const handleOnClick = () => {
+      setIsOpen(!isOpen);
+    };
+    const handleOnKeyDown = (event) => {
+      if (event.nativeEvent.keyCode === KEY_TAB) {
+        setFocus(true);
+      }
+      if (event.nativeEvent.keyCode === KEY_SPACE || event.nativeEvent.keyCode === KEY_RETURN) {
         setIsOpen(!isOpen);
-      };
-      const handleOnKeyDown = (event) => {
-        if (event.nativeEvent.keyCode === KEY_TAB) {
-          setFocus(true);
-        }
-      };
-
-      return (
-        <Card>
-          <Card.Body>
-            <div>
-              <label htmlFor="Icon-label">
-                <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
-                <span id="Icon-label"> Lab Results</span>
-              </label>
-              <Toggle isOpen={isOpen} isAnimated>
-                <p>
-                  Cerner Patient
-                  <a href="https://www.cerner.com/solutions/patient">Cerner recognizes the digitization of health care requires improved focus around care coordination and communication, as well as support, empowerment and access to promote patient-centered care.</a>
-                  {' '}
-                  Leveraging an ecosystem of virtual, remote and mobile services and technology, your provider is able to provide you greater access to care and enable collaboration among your care team. Through use of Cerner’s patient engagement tools, your care team is able to track your progress and proactively engage with you, enabling the delivery of timely, quality and cost-effective care anywhere.
-                </p>
-              </Toggle>
-            </div>
-          </Card.Body>
-        </Card>
-      );
+        event.preventDefault();
+      }
     };
 
-</div>
+    return (
+      <div>
+        <label htmlFor="Icon-label">
+          <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Patient, Information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
+          <span id="Icon-label"> Patients</span>
+        </label>
+        <Toggle isOpen={isOpen} isAnimated>
+          <Table
+            numberOfColumns={3}
+            cellPaddingStyle="standard"
+            dividerStyle="horizontal"
+            headerData={{
+              cells: [
+                { id: 'header-name', key: 'name', children: 'Patient is allergic TO:' },
+              ],
+            }}
+            bodyData={[
+              {
+                rows: [
+                  {
+                    key: 'row-0',
+                    cells: [
+                      { key: 'cell-0', children: 'dogs' },
+                    ],
+                  },
+                  {
+                    key: 'row-1',
+                    cells: [
+                      { key: 'cell-0', children: 'dust' },
+                    ],
+                  },
+                  {
+                    key: 'row-2',
+                    cells: [
+                      { key: 'cell-0', children: 'peanuts' },
+                    ],
+                  },
+                ],
+              },
+            ]}
+          />
+        </Toggle>
+      </div>
+    );
+  };
+```
 
    - For instance, a Toggle next to the words "Lab Results" is used to provide more information about a patient's lab results should be programmatically associated with and close to the patient's name and the words "Lab Results".
 
-<div aria-label="Example Demo">
+<Whitespace />
+
+<div>
   <ToggleLabResults />
 </div>
-<div aria-label="Example code">
 
-    const ToggleLabResults = () => {
-      const [isOpen, setIsOpen] = useState(false);
-      const [focused, setFocus] = useState(true);
-      const handleOnClick = () => {
+```jsx
+  const ToggleLabResults = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [focused, setFocus] = useState(true);
+    const handleOnClick = () => {
+      setIsOpen(!isOpen);
+    };
+    const handleOnKeyDown = (event) => {
+      if (event.nativeEvent.keyCode === KEY_TAB) {
+        setFocus(true);
+      }
+      if (event.nativeEvent.keyCode === KEY_SPACE || event.nativeEvent.keyCode === KEY_RETURN) {
         setIsOpen(!isOpen);
-      };
-      const handleOnKeyDown = (event) => {
-        if (event.nativeEvent.keyCode === KEY_TAB) {
-          setFocus(true);
-        }
-      };
-
-      return (
-        <Card>
-          <Card.Body>
-            <div>
-              <label htmlFor="Icon-label">
-                <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
-                <span id="Icon-label"> Lab Results</span>
-              </label>
-              <Toggle isOpen={isOpen} isAnimated>
-                <p>
-                  Cerner offers a suite of solutions targeted toward the key segments of the complex laboratory
-                  <a href="#test">blood sciences, microbiology, cellular pathology, molecular diagnostics, and laboratory logistical services.</a>
-                  {' '}
-                  Cerner also offers a reference lab network partner programme that allows you to collaborate with Cerner and other reference labs to support the sharing of information across your own lab network.
-                </p>
-              </Toggle>
-            </div>
-          </Card.Body>
-        </Card>
-      );
+        event.preventDefault();
+      }
     };
 
-</div>
+    return (
+       <div>
+        <label htmlFor="Icon-label">
+          <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Lab Results, Information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
+          <span id="Icon-label"> Lab Results</span>
+        </label>
+        <Toggle isOpen={isOpen} isAnimated>
+          <Table
+            numberOfColumns={3}
+            cellPaddingStyle="standard"
+            dividerStyle="horizontal"
+            headerData={{
+              cells: [
+                { id: 'header-Component', key: 'Component', children: 'BLOOD PRESSURE CATEGORY' },
+                { id: 'header-Normal range', key: 'Normal range', children: 'SYSTOLIC mm Hg (upper number)' },
+                { id: 'header-Results', key: 'Results', children: 'DIASTOLIC mm Hg (lower number)' },
+              ],
+            }}
+            bodyData={[
+              {
+                rows: [
+                  {
+                    key: 'row-0',
+                    cells: [
+                      { key: 'cell-0', children: 'NORMAL' },
+                      { key: 'cell-1', children: 'LESS THAN 120' },
+                      { key: 'cell-2', children: 'LESS THAN 80' },
+                    ],
+                  },
+                  {
+                    key: 'row-1',
+                    cells: [
+                      { key: 'cell-0', children: 'ELEVATED' },
+                      { key: 'cell-1', children: '120 – 129' },
+                      { key: 'cell-2', children: 'LESS THAN 80' },
+                    ],
+                  },
+                  {
+                    key: 'row-2',
+                    cells: [
+                      { key: 'cell-0', children: 'HIGH BLOOD PRESSURE (HYPERTENSION) STAGE 1' },
+                      { key: 'cell-1', children: '130 – 139' },
+                      { key: 'cell-2', children: '80 – 89' },
+                    ],
+                  },
+                ],
+              },
+            ]}
+          />
+        </Toggle>
+      </div>
+    );
+  };
+```
 
-  - Ensure all icons have alternate content added. [“Alternate Content” SHOULD BE CHANGED TO REFLECT THE PROP NAME USED WITHIN ICONS.]
+
+  - Meaningful icons are icons that convey information to the user. Ensure all Meaningful icons have an alternate text or content provided through `a11yLabel` prop.
 - Work with the content creators to understand details before writing code.
   - Understand how the Toggle and its content will resize and reflow based on user settings, resizing the viewport, or user zooming into the content.
   - Understand the user's logical reading order and ensure code order follows it.
@@ -149,12 +217,12 @@ Terra Toggle is a component that hides and progressively discloses new content. 
 
 | Key/Sequence | Expectation  |
 |---|---|
-|*Tab*| Moves forward or backward to any interactive element including form Select Field   |
+|*Tab*| On to or off of the Toggle button   |
 |*Enter/Return/Spacebar*| With Toggle button in focus, shows or hides the extra content |
 
 ## Concerns and Hazards 
 
-- As needed (if any…)
+- No Concerns and Hazards
 
 ## Support Compliance
 
@@ -270,14 +338,12 @@ The final responsibility lies with the consumers of Terra components — ensurin
  - JAWS Support with Chrome (PC)
  - VoiceOver Support with Chrome, Safari (MAC)
 
-### Partial Support & Requiring Further 
+### Partial Support & Requiring Further Enhancement
 
 - NVDA not tested (PC)
 - Mobile Touch Interactions with Screen Reader assistive technology
 - Speech Input Interactions with assistive technology
 - [Report a problem with this component on GitHub](https://github.com/cerner/terra-core/issues/new/choose)
 
-### Linked References: [UX / Dev to UPDATE AS NEEDED AFTER DEVELOPMENT]
+## Linked References:
 [1.W3C WAI Aria: Disclosure (Show/Hide)](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/)
-
-
