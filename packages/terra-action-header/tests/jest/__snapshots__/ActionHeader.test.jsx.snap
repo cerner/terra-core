@@ -18,7 +18,6 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
             className="header-icon maximize"
           />
         }
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -58,7 +57,6 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
             className="header-icon close"
           />
         }
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -96,7 +94,6 @@ exports[`ActionHeader should render an action header with back and close buttons
             className="header-icon close"
           />
         }
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -122,7 +119,6 @@ exports[`ActionHeader should render an action header with back and close buttons
             className="header-icon back"
           />
         }
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -155,7 +151,6 @@ exports[`ActionHeader should render an action header with back button and title 
             className="header-icon back"
           />
         }
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -186,7 +181,6 @@ exports[`ActionHeader should render an action header with close button and title
             className="header-icon close"
           />
         }
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -213,7 +207,6 @@ exports[`ActionHeader should render an action header with custom button and titl
   title="Action Header"
 >
   <Button
-    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -252,7 +245,6 @@ exports[`ActionHeader should render an action header with maximize button and ti
             className="header-icon maximize"
           />
         }
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -285,7 +277,6 @@ exports[`ActionHeader should render an action header with minimize button and ti
             className="header-icon minimize"
           />
         }
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -311,7 +302,6 @@ exports[`ActionHeader should render an action header with multiple custom button
 >
   <span>
     <Button
-      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -323,7 +313,6 @@ exports[`ActionHeader should render an action header with multiple custom button
       variant="neutral"
     />
     <Button
-      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -357,7 +346,6 @@ exports[`ActionHeader should render an action header with next and previous butt
               className="header-icon previous"
             />
           }
-          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={false}
@@ -376,7 +364,6 @@ exports[`ActionHeader should render an action header with next and previous butt
               className="header-icon next"
             />
           }
-          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={false}
@@ -422,7 +409,6 @@ exports[`ActionHeader should render an action header with title, enabled next bu
               className="header-icon previous"
             />
           }
-          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={true}
@@ -440,7 +426,6 @@ exports[`ActionHeader should render an action header with title, enabled next bu
               className="header-icon next"
             />
           }
-          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={false}
@@ -477,7 +462,6 @@ exports[`ActionHeader should render an action header with title, enabled previou
               className="header-icon previous"
             />
           }
-          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={false}
@@ -496,7 +480,6 @@ exports[`ActionHeader should render an action header with title, enabled previou
               className="header-icon next"
             />
           }
-          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={true}
