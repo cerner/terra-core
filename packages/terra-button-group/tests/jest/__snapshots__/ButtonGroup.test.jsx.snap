@@ -26,7 +26,6 @@ exports[`correctly applies the theme context className 1`] = `
         <Button
           aria-pressed={false}
           className="button-group-button orion-fusion-theme"
-          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={false}
@@ -77,7 +76,6 @@ exports[`correctly applies the theme context className 1`] = `
         <Button
           aria-pressed={false}
           className="button-group-button orion-fusion-theme"
-          iconType="decorative"
           isBlock={false}
           isCompact={false}
           isDisabled={false}

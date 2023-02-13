@@ -14,7 +14,6 @@ exports[`correctly applies the theme context className 1`] = `
   >
     <Button
       className="button-group-button orion-fusion-theme"
-      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -58,7 +57,6 @@ exports[`correctly applies the theme context className 1`] = `
 exports[`should render a default component 1`] = `
 <Button
   className="button-group-button"
-  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -77,7 +75,6 @@ exports[`should render a default component 1`] = `
 exports[`should render as disabled 1`] = `
 <Button
   className="button-group-button is-disabled"
-  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={true}
@@ -101,7 +98,6 @@ exports[`should render with icon only 1`] = `
       alt="icon"
     />
   }
-  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -120,7 +116,6 @@ exports[`should render with icon only 1`] = `
 exports[`should render with onBlur 1`] = `
 <Button
   className="button-group-button"
-  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -139,7 +134,6 @@ exports[`should render with onBlur 1`] = `
 exports[`should render with onClick 1`] = `
 <Button
   className="button-group-button"
-  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -159,7 +153,6 @@ exports[`should render with onClick 1`] = `
 exports[`should render with onFocus 1`] = `
 <Button
   className="button-group-button"
-  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -178,7 +171,6 @@ exports[`should render with onFocus 1`] = `
 exports[`should render with onKeyDown 1`] = `
 <Button
   className="button-group-button"
-  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -197,7 +189,6 @@ exports[`should render with onKeyDown 1`] = `
 exports[`should render with onKeyUp 1`] = `
 <Button
   className="button-group-button"
-  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={false}
