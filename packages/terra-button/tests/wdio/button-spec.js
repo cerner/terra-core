@@ -178,6 +178,14 @@ Terra.describeViewports('Button', ['tiny'], () => {
     Terra.validates.element('compact', { selector: '#compactButton' });
   });
 
+  describe('displays anchor button', () => {
+    it('Anchor button', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/button/anchor-button');
+      $('<a>').click();
+      Terra.validates.element('anchor-button');
+    });
+  });
+
   describe('Programmatic Focus', () => {
     before(() => {
       browser.url('/raw/tests/cerner-terra-core-docs/button/programmatic-focus');
