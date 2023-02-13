@@ -115,7 +115,6 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
-    aria-label="Show"
     class="button neutral"
     title="Show"
     type="button"
@@ -240,6 +239,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
           />
         </span>
       }
+      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -350,6 +350,7 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
         />
       </span>
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -387,6 +388,7 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
         />
       </span>
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -425,6 +427,7 @@ exports[`ToggleButton should set onClose prop correctly 1`] = `
         />
       </span>
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -463,6 +466,7 @@ exports[`ToggleButton should set onOpen prop correctly 1`] = `
         />
       </span>
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
