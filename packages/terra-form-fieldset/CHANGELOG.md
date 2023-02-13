@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Updated
-  * Updated jest & wdio tests.
+  * Fixed jest test failures caused by empty children nodes.
 
 ## 2.67.0 - (February 7, 2023)
 
