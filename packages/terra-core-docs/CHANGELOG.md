@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated jest & wdio tests.
+
 * Added
   * Added A11y guide and examples for `terra-button`.
 
