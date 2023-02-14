@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
 * Updated
   * Fixed jest test failures caused by empty children nodes.
 

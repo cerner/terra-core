@@ -13,6 +13,9 @@
 ## 3.77.1 - (January 31, 2023)
 
 * Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+* Changed
   * Jest snapshots updated due to decorative / informative icon changes in terra-icon.
 
 ## 3.77.0 - (January 9, 2023)

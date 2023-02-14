@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
 ## 3.59.1 - (January 31, 2023)
 
 * Changed

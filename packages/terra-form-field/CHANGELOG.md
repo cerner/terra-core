@@ -10,6 +10,9 @@
 ## 4.22.1 - (January 31, 2023)
 
 * Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+* Changed
   * Jest snapshots updated due to decorative / informative icon changes in terra-icon.
 
 ## 4.22.0 - (January 9, 2023)

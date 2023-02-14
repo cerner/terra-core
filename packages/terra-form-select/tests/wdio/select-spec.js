@@ -2445,7 +2445,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
     it('open the dropdown by clicking the toggle', () => {
       const frame = $('#frmSelectFrame');
       frame.waitForDisplayed();
-      browser.switchToFrame('frmSelectFrame');
+      browser.switchToFrame(frame);
       $('#frmSelectSingle').scrollIntoView();
       $('#frmSelectSingle').click();
       $('#frmSelectSingle').moveTo();
