@@ -4,6 +4,12 @@
 
 * Changed
   * Updated radio and checkbox tests to fix fusion theme tests.
+* Added 
+  * Added Accessibility Guide for `terra-toggle`.
+
+* Updated
+  * Updated jest & wdio tests.
+
 * Added
   * Added A11y guide and examples for `terra-button`.
 

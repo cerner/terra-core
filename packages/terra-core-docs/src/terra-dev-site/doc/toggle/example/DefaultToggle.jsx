@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Toggle from 'terra-toggle';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
-import { KEY_TAB } from 'keycode-js';
+import { KEY_TAB, KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import './ToggleExample.module.scss';
 
 const ToggleDefault = () => {
@@ -13,6 +13,10 @@ const ToggleDefault = () => {
   const handleOnKeyDown = (event) => {
     if (event.nativeEvent.keyCode === KEY_TAB) {
       setFocus(true);
+    }
+    if (event.nativeEvent.keyCode === KEY_SPACE || event.nativeEvent.keyCode === KEY_RETURN) {
+      setIsOpen(!isOpen);
+      event.preventDefault();
     }
   };
   return (

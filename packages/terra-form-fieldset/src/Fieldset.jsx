@@ -78,7 +78,7 @@ const Fieldset = ({
       {legend && <legend id={legendId} {...legendAttrs} className={legendClasses}>{legend}</legend>}
       {help && <small id={helpId} className={cx('help-text')} tabIndex="-1">{help}</small>}
       <div className={cx('fieldset-children')}>
-        {addAriaHelpers(children)}
+        {(help || legend) && children ? addAriaHelpers(children) : children}
       </div>
     </fieldset>
   );

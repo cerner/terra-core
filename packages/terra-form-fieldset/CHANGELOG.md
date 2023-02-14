@@ -5,6 +5,9 @@
 * Changed
   * Updated wdio screenshots due to functional-testing upgrade.
 
+* Updated
+  * Fixed jest test failures caused by empty children nodes.
+
 ## 2.67.0 - (February 7, 2023)
 
 * Changed
