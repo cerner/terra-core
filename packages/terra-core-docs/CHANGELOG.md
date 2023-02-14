@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added 
+  * Added Accessibility Guide for `terra-toggle`.
+
 * Updated
   * Updated jest & wdio tests.
 
