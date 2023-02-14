@@ -4,6 +4,11 @@
 
 * Added 
   * Added Accessibility Guide for `terra-toggle`.
+
+* Updated
+  * Updated jest & wdio tests.
+
+* Added
   * Added A11y guide and examples for `terra-button`.
 
 ## 1.20.0 - (February 7, 2023)

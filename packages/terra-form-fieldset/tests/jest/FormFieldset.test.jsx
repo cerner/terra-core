@@ -29,6 +29,21 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should render a Fieldset without legend and helptext', () => {
+  const input = (
+    <Fieldset
+      className="fieldset-custom"
+      legendAttrs={{ className: 'healtheintent-legend' }}
+      required
+    >
+      <input type="radio" value="Test" />
+    </Fieldset>
+  );
+
+  const wrapper = shallow(input);
+  expect(wrapper).toMatchSnapshot();
+});
+
 it('correctly applies the theme context className', () => {
   const wrapper = mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
