@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from 'terra-button/lib/Button';
+import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import styles from './ButtonDocCommon.module.scss';
 

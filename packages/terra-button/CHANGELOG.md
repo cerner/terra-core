@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Added
+  * Added `IconTypes` for terra-button.
   * Added support for decorative icon buttons.
 
 ## 3.62.0 - (December 7, 2022)
