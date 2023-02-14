@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
   * Updated jest snapshots for icon button changes.
 
 ## 2.75.0 - (December 7, 2022)

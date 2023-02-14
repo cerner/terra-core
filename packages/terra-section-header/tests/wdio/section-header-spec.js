@@ -36,11 +36,31 @@ Terra.describeViewports('SectionHeader', ['huge'], () => {
 
     it('should display active long title accordion Section Header', () => {
       $('.accordionContent').moveTo();
-      browser.buttonDown();
+      browser.performActions([{
+        type: 'pointer',
+        id: 'pointer1',
+        parameters: {
+          pointerType: 'mouse',
+        },
+        actions: [{
+          type: 'pointerDown',
+          button: 0,
+        }],
+      }]);
 
       Terra.validates.element('long title accordion active');
 
-      browser.buttonUp();
+      browser.performActions([{
+        type: 'pointer',
+        id: 'pointer1',
+        parameters: {
+          pointerType: 'mouse',
+        },
+        actions: [{
+          type: 'pointerUp',
+          button: 0,
+        }],
+      }]);
     });
   });
 
@@ -89,7 +109,17 @@ Terra.describeViewports('SectionHeader', ['huge'], () => {
 
     it('should display active interactable transparent Section Header', () => {
       $('[data-id="section-header"]').moveTo();
-      browser.buttonDown();
+      browser.performActions([{
+        type: 'pointer',
+        id: 'pointer1',
+        parameters: {
+          pointerType: 'mouse',
+        },
+        actions: [{
+          type: 'pointerDown',
+          button: 0,
+        }],
+      }]);
 
       Terra.validates.element('interactable transparent active');
     });

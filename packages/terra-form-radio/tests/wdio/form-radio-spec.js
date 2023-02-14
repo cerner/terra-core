@@ -7,6 +7,7 @@ Terra.describeViewports('Radio', ['medium'], () => {
     });
 
     it('should display hover on Radio', () => {
+      $('#default').scrollIntoView();
       $('#default').moveTo();
 
       Terra.validates.element('hover');

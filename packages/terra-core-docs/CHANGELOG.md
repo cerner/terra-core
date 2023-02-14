@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Changed
+  * Updated radio and checkbox tests to fix fusion theme tests.
 * Added 
   * Added Accessibility Guide for `terra-toggle`.
 
