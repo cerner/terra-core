@@ -1,6 +1,6 @@
 import React from 'react';
 import IconEdit from 'terra-icon/lib/icon/IconEdit';
-import Button from 'terra-button/lib/Button';
+import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import styles from './ButtonDocCommon.module.scss';
 

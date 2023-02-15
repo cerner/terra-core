@@ -38,7 +38,7 @@ It is critical that buttons are coded correctly to ensure they are keyboard acce
 </div>
 
 ```jsx
-import Button from 'terra-button/lib/Button';
+import Button from 'terra-button';
 
 <Button text="Show Alert" onClick={() => alert('Ive been clicked!')} />
 ```
@@ -51,16 +51,15 @@ The screen reader user will hear something like: <samp> Show Alert: Button </sam
 
 ```jsx
 import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
-import DecoIconPrinter from 'terra-icon/lib/icon/decorative/IconPrinter';
-import { IconButton, IconTypes } from 'terra-button';
+import Button, { IconTypes } from 'terra-button';
 
 const Icon = <IconPrinter a11yLabel="Print" />;
-const DecorativeIcon = <DecoIconPrinter />;
+const DecorativeIcon = <IconPrinter />;
 
   <div>
-    <IconButton icon={Icon} isIconOnly iconType={IconTypes.INFORMATIVE} />
-    <IconButton icon={Icon} text="All Documents" iconType={IconTypes.INFORMATIVE} /> 
-    <IconButton icon={DecorativeIcon} iconType={IconTypes.INFORMATIVE} text="Print" />
+    <Button icon={Icon} isIconOnly iconType={IconTypes.INFORMATIVE} />
+    <Button icon={Icon} text="All Documents" iconType={IconTypes.INFORMATIVE} /> 
+    <Button icon={DecorativeIcon} iconType={IconTypes.DECORATIVE} text="Print" />
   </div>
 ```
 
@@ -85,7 +84,7 @@ For buttons that use icons that do not convey a meaning, make sure they are mark
 </div>
 
 ```jsx
-import Button from 'terra-button/lib/Button';
+import Button from 'terra-button';
 
 <Button aria-label="Add Allergies" text="Add" className={cx('button')} />
 ```
