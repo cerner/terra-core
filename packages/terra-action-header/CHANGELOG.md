@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.76.0 - (February 15, 2023)
+
 * Changed
   * Updated wdio screenshots due to functional-testing upgrade.
   * Updated jest snapshots for icon button changes.

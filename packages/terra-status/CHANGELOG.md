@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.54.0 - (February 15, 2023)
+
 * Changed
   * Updated wdio screenshots due to functional-testing upgrade.
 
