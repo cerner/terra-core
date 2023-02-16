@@ -308,9 +308,9 @@ class Button extends React.Component {
     );
 
     // ignore aria-label for button with decorative icons.
-    let ariaLabel = customProps['aria-label'] ? customProps['aria-label'] : text;
-    if ((isIconOnly || variant === 'utility') && iconType === IconTypes.DECORATIVE) {
-      ariaLabel = undefined;
+    let ariaLabel = customProps['aria-label'];
+    if (isIconOnly || variant === 'utility') {
+      ariaLabel = (iconType === IconTypes.INFORMATIVE) ? ariaLabel || text : undefined;
     }
 
     let ComponentType = 'button';

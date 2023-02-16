@@ -916,7 +916,6 @@ exports[`Alert of type success with an action button text content should render 
           >
             <button
               aria-disabled={false}
-              aria-label="Action"
               className="button emphasis"
               disabled={false}
               onBlur={[Function]}
@@ -1755,7 +1754,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           >
             <button
               aria-disabled={false}
-              aria-label="Action"
               className="button emphasis"
               disabled={false}
               onBlur={[Function]}
@@ -1791,7 +1789,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           >
             <button
               aria-disabled={false}
-              aria-label="Terra.alert.dismiss"
               className="button neutral"
               disabled={false}
               onBlur={[Function]}
@@ -1960,7 +1957,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           >
             <button
               aria-disabled={false}
-              aria-label="Terra.alert.dismiss"
               className="button neutral"
               disabled={false}
               onBlur={[Function]}

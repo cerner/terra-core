@@ -7,7 +7,6 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
-    aria-label="Show"
     class="button neutral"
     type="button"
   >
@@ -57,7 +56,6 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
-    aria-label="Show"
     class="button neutral"
     type="button"
   >
@@ -162,7 +160,6 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="true"
-    aria-label="Show"
     class="button neutral"
     type="button"
   >
@@ -256,7 +253,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
       <button
         aria-disabled={false}
         aria-expanded={true}
-        aria-label="Show"
         className="button neutral"
         disabled={false}
         onBlur={[Function]}
