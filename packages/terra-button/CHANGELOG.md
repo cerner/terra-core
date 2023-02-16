@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Fixed aria-label bug.
+
 ## 3.63.0 - (February 15, 2023)
 
 * Changed

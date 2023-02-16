@@ -171,6 +171,7 @@ exports[`should render a button with a title 1`] = `
 exports[`should render a button with accessible label 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Custom Accessible Label"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -493,35 +494,6 @@ exports[`should render an action button 1`] = `
 </button>
 `;
 
-exports[`should render an icon 1`] = `
-<button
-  aria-disabled={false}
-  className="button neutral"
-  disabled={false}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  title="isIconOnly"
-  type="button"
->
-  <span
-    className="button-label icon-only"
-  >
-    <span
-      className="icon"
-    >
-      <img
-        alt="icon"
-        className="icon-svg"
-      />
-    </span>
-  </span>
-</button>
-`;
-
 exports[`should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
@@ -632,6 +604,36 @@ exports[`should render an icon only button with text as a fallback title 1`] = `
   <span
     className="button-label icon-only text-only"
   />
+</button>
+`;
+
+exports[`should render an informative icon button 1`] = `
+<button
+  aria-disabled={false}
+  aria-label="isIconOnly"
+  className="button neutral"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  title="isIconOnly"
+  type="button"
+>
+  <span
+    className="button-label icon-only"
+  >
+    <span
+      className="icon"
+    >
+      <img
+        alt="icon"
+        className="icon-svg"
+      />
+    </span>
+  </span>
 </button>
 `;
 
