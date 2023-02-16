@@ -500,6 +500,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
         >
           <button
             aria-disabled={false}
+            aria-label="Action1"
             className="button neutral button"
             disabled={false}
             onBlur={[Function]}
@@ -536,6 +537,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
         >
           <button
             aria-disabled={false}
+            aria-label="Action2"
             className="button neutral button"
             disabled={false}
             onBlur={[Function]}

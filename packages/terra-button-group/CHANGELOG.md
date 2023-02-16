@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated jest snapshots for button changes.
+
 ## 3.62.0 - (February 15, 2023)
 
 * Changed

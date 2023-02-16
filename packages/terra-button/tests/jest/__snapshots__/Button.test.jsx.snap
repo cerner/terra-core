@@ -21,6 +21,7 @@ exports[`correctly applies the theme context className 1`] = `
   >
     <button
       aria-disabled={false}
+      aria-label="neutral"
       className="button neutral orion-fusion-theme"
       disabled={false}
       onBlur={[Function]}
@@ -59,6 +60,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
         Array [
           <button
             aria-disabled="false"
+            aria-label="text"
             class="button neutral"
             type="button"
           >
@@ -88,6 +90,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 >
   <button
     aria-disabled={false}
+    aria-label="text"
     className="button neutral"
     disabled={false}
     onBlur={[Function]}
@@ -114,6 +117,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 exports[`should render a Button with merged attributes 1`] = `
 <button
   aria-disabled={false}
+  aria-label="text"
   className="button neutral TestClass"
   data-mock="data"
   disabled={false}
@@ -145,6 +149,7 @@ exports[`should render a Button with merged attributes 1`] = `
 exports[`should render a button with a title 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Button"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -171,6 +176,7 @@ exports[`should render a button with a title 1`] = `
 exports[`should render a button with accessible label 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Custom Accessible Label"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -196,6 +202,7 @@ exports[`should render a button with accessible label 1`] = `
 exports[`should render a button with type equal to button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="button"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -221,6 +228,7 @@ exports[`should render a button with type equal to button 1`] = `
 exports[`should render a button with type equal to reset 1`] = `
 <button
   aria-disabled={false}
+  aria-label="reset"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -246,6 +254,7 @@ exports[`should render a button with type equal to reset 1`] = `
 exports[`should render a button with type equal to submit 1`] = `
 <button
   aria-disabled={false}
+  aria-label="submit"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -271,6 +280,7 @@ exports[`should render a button with type equal to submit 1`] = `
 exports[`should render a de-emphasis button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="de-emphasis"
   className="button de-emphasis"
   disabled={false}
   onBlur={[Function]}
@@ -296,6 +306,7 @@ exports[`should render a de-emphasis button 1`] = `
 exports[`should render a emphasis button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="emphasis"
   className="button emphasis"
   disabled={false}
   onBlur={[Function]}
@@ -321,6 +332,7 @@ exports[`should render a emphasis button 1`] = `
 exports[`should render a ghost button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="ghost"
   className="button ghost"
   disabled={false}
   onBlur={[Function]}
@@ -346,6 +358,7 @@ exports[`should render a ghost button 1`] = `
 exports[`should render a neutral button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="neutral"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -471,6 +484,7 @@ exports[`should render a utility button with text as a fallback title 1`] = `
 exports[`should render an action button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="action"
   className="button action"
   disabled={false}
   onBlur={[Function]}
@@ -525,6 +539,7 @@ exports[`should render an icon 1`] = `
 exports[`should render an icon and a text 1`] = `
 <button
   aria-disabled={false}
+  aria-label="text"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -638,6 +653,7 @@ exports[`should render an icon only button with text as a fallback title 1`] = `
 exports[`should render as an anchor when provided an href 1`] = `
 <a
   aria-disabled={false}
+  aria-label="href"
   className="button neutral"
   disabled={false}
   href="MockHref"
@@ -665,6 +681,7 @@ exports[`should render as an anchor when provided an href 1`] = `
 exports[`should render as disabled when set 1`] = `
 <button
   aria-disabled={true}
+  aria-label="Disabled"
   className="button neutral is-disabled"
   disabled={true}
   onBlur={[Function]}
@@ -691,6 +708,7 @@ exports[`should render as disabled when set 1`] = `
 exports[`should render text then an icon when reversed 1`] = `
 <button
   aria-disabled={false}
+  aria-label="text"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -724,6 +742,7 @@ exports[`should render text then an icon when reversed 1`] = `
 exports[`should render with tabIndex when set 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Tab Index"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}

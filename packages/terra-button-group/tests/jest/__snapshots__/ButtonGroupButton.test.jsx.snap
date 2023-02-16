@@ -30,6 +30,7 @@ exports[`correctly applies the theme context className 1`] = `
     >
       <button
         aria-disabled={false}
+        aria-label="Default Button"
         className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
         disabled={false}
         onBlur={[Function]}
