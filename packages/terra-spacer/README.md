@@ -7,7 +7,7 @@
 This component is used to provide margin and/or padding space between two components based on the given values.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-spacer/spacer/spacer)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/spacer/about)
 - [LICENSE](#license)
 
 ## Getting Started

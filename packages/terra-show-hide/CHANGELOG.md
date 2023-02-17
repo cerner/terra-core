@@ -2,6 +2,56 @@
 
 ## Unreleased
 
+## 2.59.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 2.58.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.57.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.57.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-toggle
+
+## 2.56.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.55.3 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.55.2 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.55.1 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.55.0 - (February 2, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.54.1 - (January 4, 2022)
+
+* Added
+  * Migrate docs to terra-core-docs.
+
 ## 2.54.0 - (September 21, 2021)
 
 * Changed

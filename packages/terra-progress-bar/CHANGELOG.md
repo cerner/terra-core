@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 4.33.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.32.1 - (January 4, 2022)
+
 * Changed
   * Migrate docs to terra core docs.
 

@@ -1,0 +1,181 @@
+import { Badge } from 'terra-form-fieldset/package.json?dev-site-package';
+import FieldsetExampleAccess from "./example/FieldsetExampleAccess";
+
+<Badge />
+
+# Accessibility Guide for Terra Fieldset
+
+## Why the accessibility of Fieldset is important 
+
+> Fieldset are some of the most used controls across products. Because they are so ubiquitous, users need to understand their purpose and be able to interact with them. However, if Fieldset are not implemented following best practices, users may fail to understand what the field is for, or worse, may not be able to interact with the input. It is critical to users that all Fieldset must be accessible to effectively understand and interact with a field.
+
+## Accessibility Considerations
+
+### Content Considerations: What do content creators need to do?
+
+- Consider adding instructions at the beginning of the form or when content may be complex or out of the ordinary.
+  - Use clear and concise wording that helps the user understand what is expected of them.
+- Ensure all Fieldset have a descriptive label that accurately describes its purpose.
+  - Work with the engineer to ensure programmatic field names created using ARIA match the visible label of the field.
+    - For example, if the visible input label says, “Where do you live” and the programmatic name is “Address”, some users will not be able to activate the control to edit the field.
+  - Ensure each field label is unique to the page.
+    - The best practice is to never use the same label for multiple fields that are asking for different data on the same page. For example, two fields named “Address” would be an accessibility barrier for several users. Instead, provide more specific labels like, “Home Address” and “Business Address”.
+    - Or groups of related fields can be placed inside of a fieldset which will create the necessary programmatic context. For example, the same page can have two fields named “Address” if each are in their own respective fieldset labeled “Home” and “Work”.
+  - If there is any specific requirement for the user to make a field valid, that requirement must be presented visibly either in the field label or within helper text.
+    - If a Fieldset is required, it must be set as required, have the required red asterisk, and the form itself should have instructions that any item marked with the asterisk is required.
+    - If there is a specific format to the field, it must be indicated. For example, MM/DD/YYYY for a date, or XXX-XXX-XXXX for a phone number.
+    - If a field only accepts numbers, letters, or a certain number of characters, those requirements must also be available to all users in text associated to the field (in helper text or within the Fieldset label). 
+  - When creating error messaging, ensure the message provides enough context the user can understand what the problem is and how to fix it. Use clear and concise messaging.
+  - If any icons are used to convey meaning in conjunction with a Fieldset, the icon must have an accessible name (alternate content). For example, a help icon next to a field.
+    - The icon must be intuitive for the functionality it represents.
+    - The icon must be named consistently across the product and accurately reflect the purpose of the icon.
+    - The icons must be used to consistently represent the same function (don’t use multiple icons for the same functionality).
+    - The icon must have alternate content that reflects the Fieldset it is related to, or it must be programmatically associated to the field. Work with engineers when needed to add programmatic association of icons to the fields.
+  - Any purely decorative icon (does not convey ANY meaning) must be marked as decorative.
+  - Consider how forms resize and reflow at different breakpoints and form factors.
+    - Convey to engineers how content should resize and reflow.
+  - Do not override default Fieldset colors.
+   - If colors are changed, all Fieldset content (visible label, required asterisk, helper text, instructions, helper text, and the field itself) must meet color contrast requirements against their respective backgrounds.
+  - Ensure the engineer understands the logical reading order of the form.
+  - After coded:
+    - Ensure nothing unexpected happens on focus or on input of the Fieldset.
+    - Ensure all Fieldset can receive keyboard focus, have a visible keyboard focus indication when in focus, and can be interacted with and acted upon using only the keyboard.
+    - Ensure all Fieldset receive focus in the users logical reading order and the focus order does not affect the meaning of content.
+
+### Code Considerations: What do engineers need to do?
+
+- Ensure the code order of Fieldset match the users logical reading order.
+  - Ensure all Fieldset can receive keyboard focus.
+  - Do not override the default keyboard focus indicator unless to reverse out of a dark background for perceivability. Do not override the visible focus indicator.
+  - Never implement a TABINDEX value of anything greater than zero.
+  - Ensure nothing unexpected happens on focus or on input of a Fieldset.
+- Work with Content Creators to understand how content should resize and reflow at different breakpoints and form factors to ensure content is not artificially constrained or cut off at smaller view ports.
+- Ensure all Fieldset are implemented correctly to programmatically associate all related content (visible label, helper text, error messaging) to the field
+  - Ensure the visible Input Label matches any artificially applied programmatic label.
+    - For example, the visible Input label is “Where do you live” and an ARIA-LABEL is “Address” would be a failure. Both should match.
+  - Any requirement of the field must be visible with the field. Work with the content creator to understand any requirements (e.g., “required” field, specific format of the field, number of characters of the field, etc.).
+    - Required fields must have the red asterisk as a required indicator for the user see next to the Fieldset label.
+  - Do not change the placement of any of the related content to other areas around the field. For example, do not move the input label creating large gaps between the field and the label.
+- Ensure validation can provide the users necessary details to help them resolve any errors.
+  - Ensure error messaging should provide error suggestions when possible.
+
+<div aria-label="Example Demo">
+  <FieldsetExampleAccess />
+</div>
+
+```jsx
+<div>
+  <Fieldset
+    type="checkbox"
+    legend="Please Enter Patient full name here"
+    name="children_present"
+    value="children_present"
+    error="All fields must be filled out"
+    help="Patient Families are eligible for family package plans"
+    required
+  >
+      <Field label="First" isInline required htmlFor="first">
+        <Input id="first" type="text" name="first" defaultValue="" onChange={this.handleFirstChange} />
+      </Field>
+      <Field label="Middle" isInline required htmlFor="middle">
+        <Input id="middle" type="text" name="middle" defaultValue="" onChange={this.handleMiddleChange} />
+      </Field>
+      <Field label="Last" isInline required htmlFor="last">
+        <Input id="last" type="text" name="last" defaultValue="" onChange={this.handleLastChange} />
+      </Field>
+  </Fieldset>
+  <hr />
+  <p>
+      Patient Full Name Provided:
+      <span className={cx('fieldset-wrapper')}>
+        {this.state.first}
+        {' '}
+        {this.state.middle}
+        {' '}
+        {this.state.last}
+      </span>
+  </p>
+  <br />
+</div>
+```
+
+## Usability Expectations
+
+### Usability Expectations
+- The user expects to understand the purpose of the field and enter details.
+- The user expects to understand any requirements of the field. For example, is it required, does it have a special format, does it only accept certain number of characters, etc.
+
+### Keyboard Expectations
+In general, all Fieldset should receive initial keyboard focus by tabbing on to the field. Each Fieldset will its own set of keyboard behaviors. See the individual form elements for specific keyboard expectations of each.
+
+## Support Compliance
+
+### How does Terra Fieldset support compliance?
+
+Terra is committed to ensuring its components provide maximum possible accessibility. Terra provides the ability to make accessibility products. However, using Terra components will not automatically make a product accessible.
+
+Final responsibility lies with the consumers of Terra components — ensuring proper usage, programmatic context where needed, the words used to label elements, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance — to make a product fully accessible.
+
+### Primary accessibility criteria for Fieldset
+- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) — Supports
+  - Terra Fieldset provides the necessary props to programmatically associate related content to the form element within the Fieldset.
+  - Engineers must ensure all related content to the Fieldset (required asterisk, helper text, error messaging, etc.) is appropriately associated to the field using the correct Terra props
+  - Content creators must provide engineers with all the related content for each Fieldset.
+- [1.4.10 Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) — Supports
+  - Terra Fieldset support reflow of content.
+  - Engineers should work with the content creators to understand how content should reflow at different view port sizes.
+  - Content creators should consider how content should reflow at different user view port sizes.
+- [1.4.4 Resize text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) – Supports
+  - Terra Fieldset support resizing of text.
+  - Engineers should work with the content creators to understand how content should resize.
+  - Content creators should consider how content should resize at different user view ports.
+- [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) – Supports
+  - Terra Fieldset itself does not receive focus, but the form elements within them should.
+  - Engineers must ensure they do not interfere with the keyboard accessibility of any component.
+- [2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html) – Supports 
+  - Terra provides consuming teams the ability to have meaningful headings and labels with Fieldset.
+  - Content creators must provide engineers with headings and Fieldset labels that are descriptive of the purpose of the field or related fields.
+- [3.3.1 Error Identification](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html) – Supports 
+  - Terra provides the ability to perform error validation.
+  - Engineers must implement error validation and ensure error messaging is provided for invalid fields.
+  - Content creators must provide error messaging that helps users identify when a field is invalid.
+- [3.3.2 Labels or Instructions](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)– Partially Supports 
+  - Terra provides consuming teams the ability to have labels and instructions with Fieldset.
+  - Content creators must provide engineers with instructions when necessary and Fieldset labels that help the user understand what is required of them to complete the Fieldset.
+- [3.3.3 Error Suggestion](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-suggestions.html) – Supports 
+  - WHAT DOES TERRA PROVIDE IN VALIDATION?
+  - When possible, engineers must ensure form validation can provide the user suggestions on how to successfully complete an errant field.
+  - When possible, Content creators provide error messaging that helps the user understand how to successfully complete a field when error detection can automatically be detected.
+
+### Related accessibility criteria that apply when adding content to action header
+- [1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) – Supports 
+  - Terra Fieldset does not use color as the only method to convey information.
+  - Content creators must not use color as the only way to convey information to the user.
+- [1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) – Supports
+  - Terra Fieldset itself passes all non-text contrast thresholds on the default white background.
+  - Content creators must ensure all non-text that conveys information passes the necessary contrast ratios when the Fieldset appears on anything other than white background.
+- [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) – Supports
+  - Text within Terra Fieldset meets the proper contrast ratios when placed on the default white background.
+  - Content creators must ensure all text passes the necessary contrast ratios when Fieldset text appears on anything other than white background.
+- [3.2.1 On Focus](https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html) – Supports
+  - Terra Fieldset does not cause unexpected changes on focus of a field.
+  - Engineers must not implement any behavior that would cause a change of user’s context on focus of the field
+  - Content creators must not ask engineers to implement any behaviors that would cause the user a change of context on focus of a field.
+- [3.2.2 On Input](https://www.w3.org/WAI/WCAG21/Understanding/on-input) – Supports 
+  - Terra Fieldset does not cause unexpected changes on input of a field.
+  - Engineers must not implement any behavior that would cause a change of user’s context on input of the field
+  - Content creators must not ask engineers to implement any behaviors that would cause the user a change of context on input of a field.
+
+### Supported Features and Technology
+- Keyboard Interactions 
+- JAWS Support with Chrome (PC) 
+- VoiceOver Support with Chrome, Safari (MAC)  
+- Speech Input Interactions with assistive technology 
+- Mobile Touch Interactions with Screen Reader assistive technology 
+
+### Partial Support & Requiring Further Enhancement 
+- [Report a problem with this component on GitHub](https://github.com/cerner/terra-core/issues/new/choose)
+
+## References:
+- [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/Understanding/)
+- [WebAim.org: Creating More Accessible Forms ](https://webaim.org/techniques/forms/)

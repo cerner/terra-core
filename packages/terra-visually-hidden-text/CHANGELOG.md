@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 2.36.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.35.0 - (February 2, 2022)
+
+* Added
+  * Migrate docs to terra core docs.
+
 ## 2.34.0 - (September 21, 2021)
 
 * Changed

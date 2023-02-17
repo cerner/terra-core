@@ -16,10 +16,12 @@ exports[`Hyperlink correctly applies the theme context className 1`] = `
     <a
       aria-disabled={false}
       className="hyperlink default orion-fusion-theme"
+      data-focus-styles-enabled={true}
       href="https://www.cerner.com"
       onBlur={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
+      onMouseDown={[Function]}
     >
       Default hyperlink
     </a>
@@ -31,6 +33,7 @@ exports[`Hyperlink should render a audio hyperlink 1`] = `
 <a
   aria-disabled="false"
   class="hyperlink audio"
+  data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
   Audio hyperlink
@@ -38,10 +41,10 @@ exports[`Hyperlink should render a audio hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -58,6 +61,7 @@ exports[`Hyperlink should render a default hyperlink 1`] = `
 <a
   aria-disabled="false"
   class="hyperlink default"
+  data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
   Default hyperlink
@@ -68,6 +72,7 @@ exports[`Hyperlink should render a disabled hyperlink 1`] = `
 <span
   aria-disabled="true"
   class="hyperlink default is-disabled"
+  data-focus-styles-enabled="true"
 >
   Disabled hyperlink
 </span>
@@ -77,6 +82,7 @@ exports[`Hyperlink should render a document hyperlink 1`] = `
 <a
   aria-disabled="false"
   class="hyperlink document"
+  data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
   Document hyperlink
@@ -84,11 +90,11 @@ exports[`Hyperlink should render a document hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon"
       data-name="Layer 1"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -105,6 +111,7 @@ exports[`Hyperlink should render a external hyperlink 1`] = `
 <a
   aria-disabled="false"
   class="hyperlink external"
+  data-focus-styles-enabled="true"
   href="https://www.cerner.com"
   rel="noopener noreferrer"
   target="_blank"
@@ -114,10 +121,10 @@ exports[`Hyperlink should render a external hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -134,6 +141,7 @@ exports[`Hyperlink should render a image hyperlink 1`] = `
 <a
   aria-disabled="false"
   class="hyperlink image"
+  data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
   Image hyperlink
@@ -141,10 +149,10 @@ exports[`Hyperlink should render a image hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon is-bidi"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -161,6 +169,7 @@ exports[`Hyperlink should render a underline hidden hyperlink 1`] = `
 <a
   aria-disabled="false"
   class="hyperlink default is-underline-hidden"
+  data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
   Underline hidden hyperlink
@@ -171,6 +180,7 @@ exports[`Hyperlink should render a video hyperlink 1`] = `
 <a
   aria-disabled="false"
   class="hyperlink video"
+  data-focus-styles-enabled="true"
   href="https://www.cerner.com"
 >
   Video hyperlink
@@ -178,10 +188,10 @@ exports[`Hyperlink should render a video hyperlink 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon is-bidi"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
@@ -198,6 +208,7 @@ exports[`Hyperlink should render with custom props 1`] = `
 <a
   aria-disabled="false"
   class="hyperlink default"
+  data-focus-styles-enabled="true"
   href="https://www.cerner.com"
   rel="nofollow"
   target="_self"
@@ -210,6 +221,7 @@ exports[`Hyperlink should render with custom props with external variant 1`] = `
 <a
   aria-disabled="false"
   class="hyperlink external"
+  data-focus-styles-enabled="true"
   href="https://www.cerner.com"
   rel="external"
   target="_parent"
@@ -219,10 +231,10 @@ exports[`Hyperlink should render with custom props with external variant 1`] = `
     class="icon"
   >
     <svg
-      aria-hidden="true"
       class="tui-Icon icon"
       focusable="false"
       height="1em"
+      role="presentation"
       viewBox="0 0 48 48"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"

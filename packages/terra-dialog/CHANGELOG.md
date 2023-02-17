@@ -2,6 +2,61 @@
 
 ## Unreleased
 
+## 2.68.0 - (February 16, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.67.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 2.66.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.65.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump of `terra-icon`
+
+## 2.65.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-icon
+
+## 2.64.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.6 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.5 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.4 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.3 - (February 15, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.2 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.63.1 - (December 14, 2021)
 
 * Changed

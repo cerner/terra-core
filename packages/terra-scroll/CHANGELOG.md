@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## 2.34.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 2.33.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.32.1 - (January 4, 2022)
+
+* Added
+  * Migrate docs to terra-core-docs.
+
 ## 2.32.0 - (September 21, 2021)
 
 * Changed
@@ -17,7 +32,7 @@
 ## 2.30.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
+  * Fixed broken links in documentation.
 
 ## 2.29.0 - (December 8, 2020)
 

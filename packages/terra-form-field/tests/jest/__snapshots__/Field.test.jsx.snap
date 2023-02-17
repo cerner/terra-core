@@ -74,7 +74,6 @@ exports[`correctly applies the theme context className 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <IconBase
-              ariaLabel={null}
               className="IconError orion-fusion-theme"
               focusable="false"
               height="1em"
@@ -85,10 +84,10 @@ exports[`correctly applies the theme context className 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <svg
-                aria-hidden="true"
                 className="tui-Icon icon IconError orion-fusion-theme"
                 focusable="false"
                 height="1em"
+                role="presentation"
                 viewBox="0 0 48 48"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +270,6 @@ exports[`should render a field in error 1`] = `
     </label>
   </div>
   <div
-    aria-live="assertive"
     className="error-text"
     id="test-error"
   >
@@ -386,7 +384,6 @@ exports[`should render a field with a Select 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <IconBase
-          ariaLabel={null}
           className="IconError"
           focusable="false"
           height="1em"
@@ -397,10 +394,10 @@ exports[`should render a field with a Select 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            aria-hidden="true"
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -474,7 +471,6 @@ exports[`should render a field with a Textarea 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <IconBase
-          ariaLabel={null}
           className="IconError"
           focusable="false"
           height="1em"
@@ -485,10 +481,10 @@ exports[`should render a field with a Textarea 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            aria-hidden="true"
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -668,7 +664,6 @@ exports[`should render a field with a hidden label in error 1`] = `
     </label>
   </div>
   <div
-    aria-live="assertive"
     className="error-text"
     id="test-error"
   >
@@ -731,7 +726,6 @@ exports[`should render a field with an Input 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <IconBase
-          ariaLabel={null}
           className="IconError"
           focusable="false"
           height="1em"
@@ -742,10 +736,10 @@ exports[`should render a field with an Input 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            aria-hidden="true"
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -827,7 +821,6 @@ exports[`should render a required field in error 1`] = `
     </label>
   </div>
   <div
-    aria-live="assertive"
     className="error-text"
     id="test-error"
   >
@@ -940,6 +933,7 @@ exports[`should render a required field label with required hidden 1`] = `
     >
       Field Label
       <div
+        aria-hidden="true"
         className="required-hidden"
       >
         *
@@ -1011,7 +1005,6 @@ exports[`should render a required field with a Select 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <IconBase
-          ariaLabel={null}
           className="IconError"
           focusable="false"
           height="1em"
@@ -1022,10 +1015,10 @@ exports[`should render a required field with a Select 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            aria-hidden="true"
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -1108,7 +1101,6 @@ exports[`should render a required field with a Textarea 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <IconBase
-          ariaLabel={null}
           className="IconError"
           focusable="false"
           height="1em"
@@ -1119,10 +1111,10 @@ exports[`should render a required field with a Textarea 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            aria-hidden="true"
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -1265,7 +1257,6 @@ exports[`should render a required field with a hidden label in error 1`] = `
     </label>
   </div>
   <div
-    aria-live="assertive"
     className="error-text"
     id="test-error"
   >
@@ -1334,7 +1325,6 @@ exports[`should render a required field with an Input 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <IconBase
-          ariaLabel={null}
           className="IconError"
           focusable="false"
           height="1em"
@@ -1345,10 +1335,10 @@ exports[`should render a required field with an Input 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <svg
-            aria-hidden="true"
             className="tui-Icon icon IconError"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -1528,7 +1518,6 @@ exports[`should render an invalid and required field with a Select 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <IconBase
-            ariaLabel={null}
             className="IconError"
             focusable="false"
             height="1em"
@@ -1539,10 +1528,10 @@ exports[`should render an invalid and required field with a Select 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
-              aria-hidden="true"
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -1674,7 +1663,6 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <IconBase
-            ariaLabel={null}
             className="IconError"
             focusable="false"
             height="1em"
@@ -1685,10 +1673,10 @@ exports[`should render an invalid and required field with a Textarea 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
-              aria-hidden="true"
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -1820,7 +1808,6 @@ exports[`should render an invalid and required field with an Input 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <IconBase
-            ariaLabel={null}
             className="IconError"
             focusable="false"
             height="1em"
@@ -1831,10 +1818,10 @@ exports[`should render an invalid and required field with an Input 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
-              aria-hidden="true"
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -1966,7 +1953,6 @@ exports[`should render an invalid field with a Select 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <IconBase
-            ariaLabel={null}
             className="IconError"
             focusable="false"
             height="1em"
@@ -1977,10 +1963,10 @@ exports[`should render an invalid field with a Select 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
-              aria-hidden="true"
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -2104,7 +2090,6 @@ exports[`should render an invalid field with an Input 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <IconBase
-            ariaLabel={null}
             className="IconError"
             focusable="false"
             height="1em"
@@ -2115,10 +2100,10 @@ exports[`should render an invalid field with an Input 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
-              aria-hidden="true"
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -2242,7 +2227,6 @@ exports[`should render an invalid field with an Textarea 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <IconBase
-            ariaLabel={null}
             className="IconError"
             focusable="false"
             height="1em"
@@ -2253,10 +2237,10 @@ exports[`should render an invalid field with an Textarea 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <svg
-              aria-hidden="true"
               className="tui-Icon icon IconError"
               focusable="false"
               height="1em"
+              role="presentation"
               viewBox="0 0 48 48"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -2348,7 +2332,6 @@ exports[`should render an optional field in error 1`] = `
     </label>
   </div>
   <div
-    aria-live="assertive"
     className="error-text"
     id="test-error"
   >

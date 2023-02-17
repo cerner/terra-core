@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Table.module.scss';
+import TableUtils from './TableUtils';
 
 const cx = classNames.bind(styles);
 
@@ -23,13 +24,12 @@ const TableRow = ({
   const rowClassNames = cx([
     'row',
   ]);
-
   return (
     <tr
       {...customProps}
       className={customProps.className ? `${rowClassNames} ${customProps.className}` : rowClassNames}
     >
-      {children}
+      {TableUtils.addScope(children, 'row')}
     </tr>
   );
 };

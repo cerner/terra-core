@@ -2,7 +2,65 @@
 
 ## Unreleased
 
-* Changed 
+## 4.55.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 4.54.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.53.2 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump of `terra-icon`.
+
+## 4.53.1 - (January 9, 2023)
+
+* Fixed
+  * Fixed `react-intl` import to peerDependency and match other Terra components.  
+
+## 4.53.0 - (January 3, 2023)
+
+* Changed
+  * Added a `ariaSelectionStyle` prop that provides accessibility support for single and multi select lists
+  * Fix section and subsection header colors in the lowlight theme.
+
+* Added
+  * Prop `ariaDescribedBy` - Associates a list with an element or elements that convey information about the list and how to interact with it.
+  * Prop `ariaDescription` - Conveys information about a list and how to interact with it.
+  * Prop `ariaDetails` - Associates a list with an element or elements that convey information about the list and how to interact with it.
+
+## 4.52.0 - (December 7, 2022)
+
+* Changed
+  * Sections and subsections updated to add programmatic context to communicate hierarchal relationships
+
+## 4.51.5 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.51.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.51.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.51.2 - (February 24, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.51.1 - (January 4, 2022)
+
+* Changed
   * Migrate docs to terra-core-docs.
 
 ## 4.51.0 - (September 21, 2021)

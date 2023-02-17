@@ -6,7 +6,7 @@
 Text that is designed to only be read by a screen reader.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-visually-hidden-text/visually-hidden-text/visually-hidden-text)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/visually-hidden-text/about)
 - [LICENSE](#license)
 
 ## Getting Started

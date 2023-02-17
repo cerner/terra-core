@@ -1,0 +1,81 @@
+import { Badge } from 'terra-list/package.json?dev-site-package';
+
+import ListExample from './example/List?dev-site-example';
+import ListDividedExample from './example/ListDivided?dev-site-example';
+import ListPaddedExample from './example/ListPadded?dev-site-example';
+import AriaDescribedByVisibleList from  './example/AriaDescribedByVisibleList?dev-site-example';
+import AriaDescribedByHiddenList from  './example/AriaDescribedByHiddenList?dev-site-example';
+import AriaDescriptionList from './example/AriaDescriptionList?dev-site-example';
+import AriaDetailsList from './example/AriaDetailsList?dev-site-example';
+
+import ListPropsTable from 'terra-list/src/List?dev-site-props-table';
+
+<Badge />
+
+# Terra List
+
+The Terra List is a structural component to vertically arrange content within list/list items.
+
+If a list implementation contains selectable list options the role prop should be set to "listbox" for accesibility.
+
+Two padding variants are provide for list item content, standard and compact. If different padding is desired use the defaulted style of 'none' and set the padding on the list item's child content with your own css values, preferrably themeable variables.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-list`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+| react-intl | ^2.8.0 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import List, { Item } from 'terra-list';
+```
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
+
+## Examples
+<ListExample title="Default List" />
+<ListDividedExample title="Divided List" />
+<ListPaddedExample title="Padded List" />
+<AriaDescribedByVisibleList
+  title="Patient List with Visible Instructions using the ariaDescribedBy prop for accessibility"
+  description="For assistive technology users, this example adds the aria-describedby attribute
+  (in reference to the visible text above the list) to give additional instructions for how the user
+  should use this list."
+/>
+<AriaDescribedByHiddenList
+  title="Patient List with Visually Hidden Instructions using the ariaDescribedBy prop for accessibility"
+  description="For assistive technology users, this example adds the aria-describedby attribute
+  (in reference to visually hidden text) to give additional instructions for how the user
+  should use this list."
+/>
+<AriaDescriptionList
+  title="Patient List with instructions using the ariaDescription prop for accessibility"
+  description="For assistive technology users, this example adds the aria-description attribute
+  to give additional instructions for how the user should use this list."
+/>
+<AriaDetailsList
+  title="Patient List with Visible Instructions using the ariaDetails prop for  accessibility"
+  description="For assistive technology users, this example adds the aria-details attribute
+  (in reference to the visible text above the list) to give additional instructions for how the user
+  should use this list."
+/>
+
+## List Props
+<ListPropsTable />

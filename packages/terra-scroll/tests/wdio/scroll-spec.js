@@ -1,6 +1,6 @@
 Terra.describeViewports('Scroll', ['huge'], () => {
   before(() => {
-    browser.url('/raw/tests/terra-scroll/scroll/default');
+    browser.url('/raw/tests/cerner-terra-core-docs/scroll/default');
   });
 
   it('should display Scroll before click', () => {

@@ -2,6 +2,38 @@
 
 ## Unreleased
 
+## 1.32.0 - (February 16, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.31.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 1.30.0 - (December 7, 2022)
+
+* Added
+  * Role attribute is set as toolbar
+  * Prop `ariaLabel` - String that labels what content the toolbar controls.
+  * Prop `ariaLabelledBy` - String that labels what content (referencing the element id) the toolbar controls.
+
+## 1.29.0 - (March 15, 2022)
+
+* Changed
+  * Border-color changes in fusion-theme and lowlight-theme
+
+## 1.28.1 - (February 15, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.28.0 - (February 2, 2022)
+
+* Added
+  * Migrate docs to terra-core-docs.
+
 ## 1.27.1 - (December 14, 2021)
 
 * Changed

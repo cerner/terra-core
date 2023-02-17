@@ -2,6 +2,37 @@
 
 ## Unreleased
 
+## 2.77.0 - (February 16, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.76.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+  * Updated jest snapshots for icon button changes.
+
+## 2.75.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.74.3 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.74.2 - (February 24, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.74.1 - (February 15, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.74.0 - (December 14, 2021)
 
 * Fixed

@@ -7,7 +7,9 @@ This component was created for this express purpose and caution should be used w
 * list
 * content
 
-*asterisks* or _underscores_ **asterisks** or __underscores__. **asterisks and _underscores_**. ~~Scratch this.~~
+*single asterisks* or _single underscores_, **double asterisks** or __double underscores__, **double asterisks & _single underscores_**, ~~Scratch this.~~
+
+> Blockquotes are very handy in conversations to emulate reply text, or make something standout.
 
 | Tables        | Are           | Cool |
 | ------------- |:-------------:| -----:|
@@ -15,19 +17,23 @@ This component was created for this express purpose and caution should be used w
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
+`Inline Code` highlighting for keywords and phrases that are `Very Important` and `Something Worth Calling Out`
+
+Multiline Code block:
 ```jsx
 var ExampleApplication = React.createClass({
-    render: function() {
-      var elapsed = Math.round(this.props.elapsed  / 100);
-      var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
-      var message =
-        'React has been successfully running for ' + seconds + ' seconds.';
+  render: function() {
+    var elapsed = Math.round(this.props.elapsed  / 100);
+    var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
+    var message =
+      'React has been successfully running for ' + seconds + ' seconds.';
 
-      return <p>{message}</p>;
-    }
-  });
+    return <p>{message}</p>;
+  }
+});
 ```
 
-> Blockquotes are very handy in email to emulate reply text.
+Horizontal Rule:
+***
 
 </Notice>

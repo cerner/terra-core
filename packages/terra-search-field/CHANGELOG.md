@@ -2,6 +2,64 @@
 
 ## Unreleased
 
+## 3.80.0 - (February 16, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.79.0 - (February 15, 2023)
+
+* Changed
+  * Updated jest snapshots for icon button changes.
+
+## 3.78.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.77.1 - (January 31, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+* Changed
+  * Jest snapshots updated due to decorative / informative icon changes in terra-icon.
+
+## 3.77.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-icon
+
+## 3.76.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.75.0 - (July 5, 2022)
+
+* Changed
+  * Fixed mobile keyboard not closing after pressing enter key on mobile devices
+
+## 3.74.5 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.74.4 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.74.3 - (February 15, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.74.2 - (January 4, 2022)
+
+* Added
+  * Migrate docs to terra-core-docs.
+
 ## 3.74.1 - (December 14, 2021)
 
 * Changed

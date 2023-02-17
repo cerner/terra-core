@@ -48,7 +48,7 @@ class SectionList extends React.Component {
 
   render() {
     return (
-      <List role="listbox">
+      <List>
         {this.createSections(mockData)}
       </List>
     );

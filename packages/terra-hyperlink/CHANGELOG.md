@@ -2,6 +2,59 @@
 
 ## Unreleased
 
+## 2.57.0 - (February 15, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.56.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.55.1 - (January 31, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+* Changed
+  * Jest snapshots updated due to decorative / informative icon changes in terra-icon.
+
+## 2.55.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-icon
+
+## 2.54.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.53.0 - (July 14, 2022)
+
+* Fixed
+  * Fix to allow users to pass onMouseDown prop.
+
+## 2.52.0 - (July 5, 2022)
+
+* Fixed
+  * Fixed focus box bug for hyperlink.
+
+## 2.51.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.51.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.51.2 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.51.1 - (December 14, 2021)
 
 * Changed

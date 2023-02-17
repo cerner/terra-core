@@ -2,6 +2,56 @@
 
 ## Unreleased
 
+## 4.54.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 4.53.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.52.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump of `terra-icon`
+
+## 4.52.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-icon
+
+## 4.51.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.50.3 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.50.2 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.50.1 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.50.0 - (February 2, 2022)
+
+* Added
+  * Migrate docs to terra-core-docs.
+
+## 4.49.1 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.49.0 - (September 28, 2021)
 
 * Changed

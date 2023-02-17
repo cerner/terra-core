@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TableUtils from './TableUtils';
 
 const propTypes = {
   /**
@@ -18,7 +19,7 @@ const TableHeader = ({
 }) => (
   <thead {...customProps}>
     <tr>
-      {children}
+      {TableUtils.addScope(children, 'col')}
     </tr>
   </thead>
 );

@@ -2,6 +2,29 @@
 
 ## Unreleased
 
+## 3.64.0 - (February 16, 2023)
+
+* Changed
+  * Fixed aria-label bug.
+
+## 3.63.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+* Added
+  * Added `IconTypes` for terra-button.
+  * Added support for decorative icon buttons.
+
+## 3.62.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.61.0 - (February 15, 2022)
+
+* Changed
+  * Added `button` role to anchor butttons.
+
 ## 3.60.1 - (December 14, 2021)
 
 * Changed

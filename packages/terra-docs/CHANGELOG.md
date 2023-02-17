@@ -2,6 +2,29 @@
 
 ## Unreleased
 
+## 1.9.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 1.8.0 - (December 7, 2022)
+
+* Changed
+  * Updated `terra-section-header` tests and examples.
+
+## 1.7.1 - (July 5, 2022)
+
+* Changed
+  * Update wdio screenshots for failing MDX notice tests.
+
+## 1.7.0 - (February 24, 2022)
+
+* Added
+  * 'not-supported' notices variant
+
+* Changed
+  * fixed missing colors for markdown styling inside of notices
+
 ## 1.6.0 - (September 21, 2021)
 
 * Changed

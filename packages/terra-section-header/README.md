@@ -7,7 +7,7 @@
 Section Header presentational component that provides an onClick callback.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-section-header/section-header/section-header)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/section-header/about)
 - [LICENSE](#license)
 
 ## Getting Started

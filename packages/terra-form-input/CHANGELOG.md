@@ -2,6 +2,53 @@
 
 ## Unreleased
 
+## 4.21.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 4.20.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.19.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump of `terra-icon`
+
+## 4.19.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-icon and terra-form-field
+
+## 4.18.0 - (December 7, 2022)
+
+* Changed
+  * Set the hideRequired prop to be private
+  * Set the isLabelHidden prop to be private
+  * Set the ariaLabel prop to be private
+
+## 4.17.5 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.17.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.17.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.17.2 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.17.1 - (December 14, 2021)
 
 * Changed

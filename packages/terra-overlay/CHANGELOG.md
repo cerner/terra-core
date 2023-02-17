@@ -2,6 +2,54 @@
 
 ## Unreleased
 
+## 3.73.0 - (February 15, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.72.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.71.1 - (January 31, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+* Changed
+  * Jest snapshots updated due to decorative / informative icon changes in terra-icon.
+
+## 3.71.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-icon
+
+## 3.70.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.69.5 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.69.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.69.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.69.2 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.69.1 - (December 14, 2021)
 
 * Changed

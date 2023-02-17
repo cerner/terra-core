@@ -33,7 +33,7 @@ This component requires the following peer dependencies be installed in your app
 
 Documentation for this component is spilt into multiple files.
 
-See the [documentation](https://engineering.cerner.com/terra-ui/components/terra-i-18-n/i-18-n/i-18-n).
+See the [documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/i-18-n/about).
 
 ## LICENSE
 

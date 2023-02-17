@@ -42,12 +42,7 @@ class MutliSelectList extends React.Component {
 
   render() {
     return (
-      <List
-        dividerStyle="standard"
-        role="listbox"
-        aria-multiselectable
-        aria-label="MultiSelectList-label"
-      >
+      <List ariaSelectionStyle="multi-select">
         {this.createListItems(mockData)}
       </List>
     );

@@ -1,9 +1,21 @@
 # Changelog
 
+## Unreleased
+
+## 3.45.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 3.44.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.43.0 - (February 2, 2022)
+
 * Changed
   * Migrate doc to terra-core-docs.
-
-## Unreleased
 
 ## 3.42.0 - (November 2, 2021)
 

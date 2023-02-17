@@ -2,6 +2,26 @@
 
 ## Unreleased
 
+## 5.37.0 - (February 15, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.36.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.35.2 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.35.1 - (February 24, 2022)
+
+* Added
+  * Migrate docs to terra-core-docs.
+
 ## 5.35.0 - (October 8, 2021)
 
 * Changed

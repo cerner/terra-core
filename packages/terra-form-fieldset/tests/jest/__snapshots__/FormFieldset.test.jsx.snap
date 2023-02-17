@@ -30,15 +30,33 @@ exports[`should render a Fieldset when all the possible props are passed into it
 >
   <legend
     className="legend healtheintent-legend"
+    id="terra-fieldset-legend-00000000-0000-0000-0000-000000000000"
   >
     Text
   </legend>
   <small
     className="help-text"
+    id="terra-fieldset-help-00000000-0000-0000-0000-000000000000"
     tabIndex="-1"
   >
     This is a test input
   </small>
+  <div
+    className="fieldset-children"
+  >
+    <input
+      aria-labelledby="terra-fieldset-legend-00000000-0000-0000-0000-000000000000 terra-fieldset-help-00000000-0000-0000-0000-000000000000"
+      type="radio"
+      value="Test"
+    />
+  </div>
+</fieldset>
+`;
+
+exports[`should render a Fieldset without legend and helptext 1`] = `
+<fieldset
+  className="fieldset fieldset-required fieldset-custom"
+>
   <div
     className="fieldset-children"
   >

@@ -77,6 +77,10 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
+   * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
+   */
+  onMouseDown: PropTypes.func,
+  /**
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
   variant: PropTypes.oneOf(['default', 'external', 'image', 'video', 'audio', 'document']),
@@ -94,10 +98,21 @@ class Hyperlink extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.linkRef = React.createRef();
+  }
+
+  handleMouseDown(event) {
+    this.linkRef.current.setAttribute('data-focus-styles-enabled', 'false');
+
+    if (this.props.onMouseDown) {
+      this.props.onMouseDown(event);
+    }
   }
 
   handleOnBlur(event) {
     this.setState({ focused: false });
+    this.linkRef.current.setAttribute('data-focus-styles-enabled', 'true');
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
@@ -138,6 +153,7 @@ class Hyperlink extends React.Component {
       onFocus,
       onKeyDown,
       onKeyUp,
+      onMouseDown,
       ...customProps
     } = this.props;
 
@@ -179,11 +195,14 @@ class Hyperlink extends React.Component {
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
+        onMouseDown={this.handleMouseDown}
         onClick={onClick}
         onFocus={onFocus}
         href={isDisabled ? null : href}
         target={target}
         rel={rel}
+        data-focus-styles-enabled
+        ref={this.linkRef}
       >
         {children}
         {getHyperlinkIcon(variant)}

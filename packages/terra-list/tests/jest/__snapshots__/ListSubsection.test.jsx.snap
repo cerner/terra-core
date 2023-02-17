@@ -21,15 +21,30 @@ exports[`correctly applies the theme context className 1`] = `
       title="test"
     >
       <li
-        className="subsection-header orion-fusion-theme"
+        className="orion-fusion-theme"
       >
         <h2
           className="title"
         >
-          test
+          <div
+            className="subsection-header"
+          >
+            <div
+              className="fill"
+            >
+              test
+            </div>
+          </div>
         </h2>
       </li>
     </ListSubsectionHeader>
+    <li>
+      <ul
+        className="list orion-fusion-theme"
+        level={2}
+        title="test"
+      />
+    </li>
   </ListSubsection>
 </ThemeContextProvider>
 `;
@@ -44,6 +59,15 @@ exports[`should render with callback functions 1`] = `
     refCallback={[MockFunction]}
     title="test"
   />
+  <li>
+    <ul
+      className="list"
+      level={2}
+      onSelect={[MockFunction]}
+      refCallback={[MockFunction]}
+      title="test"
+    />
+  </li>
 </Fragment>
 `;
 
@@ -55,6 +79,13 @@ exports[`should render with isCollapsed 1`] = `
     level={2}
     title="test"
   />
+  <li>
+    <ul
+      className="list"
+      level={2}
+      title="test"
+    />
+  </li>
 </Fragment>
 `;
 
@@ -66,6 +97,13 @@ exports[`should render with isCollapsible 1`] = `
     level={2}
     title="test"
   />
+  <li>
+    <ul
+      className="list"
+      level={2}
+      title="test"
+    />
+  </li>
 </Fragment>
 `;
 
@@ -77,36 +115,44 @@ exports[`should render with items 1`] = `
     level={2}
     title="test"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
-    key="123"
-  />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
-    key="124"
-  />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
-    key="125"
-  />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
-    key="126"
-  />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
-    key="127"
-  />
+  <li>
+    <ul
+      className="list"
+      level={2}
+      title="test"
+    >
+      <ListItem
+        hasChevron={false}
+        isSelectable={false}
+        isSelected={false}
+        key="123"
+      />
+      <ListItem
+        hasChevron={false}
+        isSelectable={false}
+        isSelected={false}
+        key="124"
+      />
+      <ListItem
+        hasChevron={false}
+        isSelectable={false}
+        isSelected={false}
+        key="125"
+      />
+      <ListItem
+        hasChevron={false}
+        isSelectable={false}
+        isSelected={false}
+        key="126"
+      />
+      <ListItem
+        hasChevron={false}
+        isSelectable={false}
+        isSelected={false}
+        key="127"
+      />
+    </ul>
+  </li>
 </Fragment>
 `;
 
@@ -118,6 +164,13 @@ exports[`should render with level 1`] = `
     level={3}
     title="test"
   />
+  <li>
+    <ul
+      className="list"
+      level={3}
+      title="test"
+    />
+  </li>
 </Fragment>
 `;
 
@@ -129,5 +182,12 @@ exports[`should render with no items 1`] = `
     level={2}
     title="test"
   />
+  <li>
+    <ul
+      className="list"
+      level={2}
+      title="test"
+    />
+  </li>
 </Fragment>
 `;

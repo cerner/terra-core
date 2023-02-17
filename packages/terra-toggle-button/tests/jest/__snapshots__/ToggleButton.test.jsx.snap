@@ -20,11 +20,11 @@ exports[`ToggleButton should render a default toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            aria-hidden="true"
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -69,11 +69,11 @@ exports[`ToggleButton should render an animated toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            aria-hidden="true"
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,6 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
   <button
     aria-disabled="false"
     aria-expanded="false"
-    aria-label="Show"
     class="button neutral"
     title="Show"
     type="button"
@@ -130,11 +129,11 @@ exports[`ToggleButton should render an icon only toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            aria-hidden="true"
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -174,11 +173,11 @@ exports[`ToggleButton should render an initially open toggle-button 1`] = `
           class="icon icon-svg"
         >
           <svg
-            aria-hidden="true"
             class="tui-Icon icon is-bidi"
             data-name="Layer 1"
             focusable="false"
             height="1em"
+            role="presentation"
             viewBox="0 0 48 48"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -240,6 +239,7 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
           />
         </span>
       }
+      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -280,7 +280,6 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <IconBase
-                  ariaLabel={null}
                   className=""
                   data-name="Layer 1"
                   focusable="false"
@@ -292,11 +291,11 @@ exports[`ToggleButton should render an open toggle-button when clicked 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <svg
-                    aria-hidden="true"
                     className="tui-Icon icon is-bidi"
                     data-name="Layer 1"
                     focusable="false"
                     height="1em"
+                    role="presentation"
                     viewBox="0 0 48 48"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -351,6 +350,7 @@ exports[`ToggleButton should set icon prop correctly 1`] = `
         />
       </span>
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -388,6 +388,7 @@ exports[`ToggleButton should set icon prop correctly with custom icon 1`] = `
         />
       </span>
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -426,6 +427,7 @@ exports[`ToggleButton should set onClose prop correctly 1`] = `
         />
       </span>
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -464,6 +466,7 @@ exports[`ToggleButton should set onOpen prop correctly 1`] = `
         />
       </span>
     }
+    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}

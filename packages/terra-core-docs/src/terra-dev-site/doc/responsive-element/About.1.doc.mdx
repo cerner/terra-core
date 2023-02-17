@@ -1,0 +1,57 @@
+import { Badge } from 'terra-responsive-element/package.json?dev-site-package';
+
+import BreakpointExample from './example/BreakpointExample?dev-site-example';
+import ResizeExample from './example/ResizeExample?dev-site-example';
+
+import ResponsiveElementPropsTable from 'terra-responsive-element/src/ResponsiveElement?dev-site-props-table';
+
+<Badge />
+
+# Terra Responsive Element
+
+The Responsive Element provides a way to conditionally render components during breakpoint or resize changes.
+
+The Responsive Element can be set to be responsive to the parent of the component or the window. By default, event listeners will be bound to the immediate parent of the component and invoke the onChange and onResize callback functions as a result of resize changes to the bound target.
+
+## Additional Notes
+
+The Responsive Element observes the total width of the bound container. Padding and borders are included in the calculation to determine the available width. Margins are not included. For breakpoint accuracy it is not recommended to set padding on the parent container when responsiveTo is set to parent. For more details on how box-sizing affects the dom box model see: <https://css-tricks.com/almanac/properties/b/box-sizing/>
+
+For consistency, breakpoint ranges are inherited from [terra-breakpoints](https://engineering.cerner.com/terra-ui/#/components/terra-breakpoints/breakpoints/about).
+
+For the uncontrolled version of this component it is not necessary to set each breakpoint. If a breakpoint is not set the component will look at each successive smaller breakpoint until one is found.
+
+## Getting Started
+
+* Install with [npmjs](https://www.npmjs.com):
+  * `npm install terra-responsive-element`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import ResponsiveElement from 'terra-responsive-element';
+```
+## Component Features
+
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
+
+## Examples
+<BreakpointExample title="Responsive Breakpoints" description="An example demonstrating the callback events during a breakpoint change." />
+<ResizeExample title="Responsive Resizing" description="An example demonstrating the callback events during a resize." />
+
+## Responsive Element Props
+<ResponsiveElementPropsTable />

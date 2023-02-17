@@ -2,6 +2,41 @@
 
 ## Unreleased
 
+## 4.34.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 4.33.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.32.0 - (July 14, 2022)
+
+* Fixed
+  * Fixed fusion theme colors and caret icon size to match similar components
+
+## 4.31.2 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.31.1 - (February 24, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.31.0 - (February 2, 2022)
+
+* Added
+  * Migrate docs to terra-core-docs.
+
+## 4.30.1 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.30.0 - (November 2, 2021)
 
 * Changed

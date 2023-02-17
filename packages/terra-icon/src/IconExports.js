@@ -184,7 +184,9 @@ import IconMissedCall from './icon/IconMissedCall';
 import IconModerate from './icon/IconModerate';
 import IconModerateLowLight from './icon/IconModerateLowLight';
 import IconModified from './icon/IconModified';
+import IconNavStackUp from './icon/IconNavStackUp';
 import IconNext from './icon/IconNext';
+import IconNoResults from './icon/IconNoResults';
 import IconNoRisk from './icon/IconNoRisk';
 import IconNoRiskLowLight from './icon/IconNoRiskLowLight';
 import IconNoSignal from './icon/IconNoSignal';
@@ -206,6 +208,7 @@ import IconPartiallyMet from './icon/IconPartiallyMet';
 import IconPatientSearch from './icon/IconPatientSearch';
 import IconPending from './icon/IconPending';
 import IconPerson from './icon/IconPerson';
+import IconPersonConnection from './icon/IconPersonConnection';
 import IconPersonDoor from './icon/IconPersonDoor';
 import IconPersonHospital from './icon/IconPersonHospital';
 import IconPersonnelPerson from './icon/IconPersonnelPerson';
@@ -279,6 +282,8 @@ import IconThinDiamondSymbolLight from './icon/IconThinDiamondSymbolLight';
 import IconTile from './icon/IconTile';
 import IconTrash from './icon/IconTrash';
 import IconTreemap from './icon/IconTreemap';
+import IconTrendingDown from './icon/IconTrendingDown';
+import IconTrendingUp from './icon/IconTrendingUp';
 import IconTriangleDownSymbol from './icon/IconTriangleDownSymbol';
 import IconTriangleDownSymbolLight from './icon/IconTriangleDownSymbolLight';
 import IconTriangleSymbol from './icon/IconTriangleSymbol';
@@ -298,6 +303,10 @@ import IconUsers from './icon/IconUsers';
 import IconVideoCamera from './icon/IconVideoCamera';
 import IconVideoCameraDisabled from './icon/IconVideoCameraDisabled';
 import IconVisualization from './icon/IconVisualization';
+import IconVolumeSetDefault from './icon/IconVolumeSetDefault';
+import IconVolumeSetMute from './icon/IconVolumeSetMute';
+import IconVolumeSetIncrease from './icon/IconVolumeSetIncrease';
+import IconVolumeSetDecrease from './icon/IconVolumeSetDecrease';
 import IconWarning from './icon/IconWarning';
 import IconWarningLowLight from './icon/IconWarningLowLight';
 import IconWaveform from './icon/IconWaveform';
@@ -494,9 +503,11 @@ const Icons = {
   IconModerate,
   IconModerateLowLight,
   IconModified,
+  IconNavStackUp,
   IconNext,
   IconNoRisk,
   IconNoRiskLowLight,
+  IconNoResults,
   IconNoSignal,
   IconNotMet,
   IconNotification,
@@ -516,6 +527,7 @@ const Icons = {
   IconPatientSearch,
   IconPending,
   IconPerson,
+  IconPersonConnection,
   IconPersonDoor,
   IconPersonHospital,
   IconPersonnelPerson,
@@ -589,6 +601,8 @@ const Icons = {
   IconTile,
   IconTrash,
   IconTreemap,
+  IconTrendingDown,
+  IconTrendingUp,
   IconTriangleDownSymbol,
   IconTriangleDownSymbolLight,
   IconTriangleSymbol,
@@ -608,6 +622,10 @@ const Icons = {
   IconVideoCamera,
   IconVideoCameraDisabled,
   IconVisualization,
+  IconVolumeSetDefault,
+  IconVolumeSetMute,
+  IconVolumeSetIncrease,
+  IconVolumeSetDecrease,
   IconWarning,
   IconWarningLowLight,
   IconWaveform,

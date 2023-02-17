@@ -27,6 +27,7 @@ const propTypes = {
    */
   help: PropTypes.node,
   /**
+   * @private
    * Whether or not to hide the required indicator on the label.
    */
   hideRequired: PropTypes.bool,
@@ -43,6 +44,7 @@ const propTypes = {
    */
   isInline: PropTypes.bool,
   /**
+   * @private
    * Whether or not the label is visible. Use this props to hide a label while still creating it on the DOM for accessibility.
    */
   isLabelHidden: PropTypes.bool,
@@ -180,7 +182,7 @@ const Field = (props) => {
       <label htmlFor={htmlFor} {...labelAttrs} className={labelClassNames}>
         {required && (isInvalid || !hideRequired) && <div className={cx('required')} aria-hidden="true">*</div>}
         {label}
-        {required && !isInvalid && hideRequired && <div className={cx('required-hidden')}>*</div>}
+        {required && !isInvalid && hideRequired && <div className={cx('required-hidden')} aria-hidden="true">*</div>}
         {showOptional && !required
             && (
               <FormattedMessage id="Terra.form.field.optional">
@@ -200,7 +202,7 @@ const Field = (props) => {
     <div style={customStyles} {...customProps} className={fieldClasses}>
       {labelGroup}
       {content}
-      {isInvalid && error && <div aria-live="assertive" id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
+      {isInvalid && error && <div id={htmlFor ? `${htmlFor}-error` : undefined} className={cx('error-text')}>{error}</div>}
       {help && <div id={htmlFor ? `${htmlFor}-help` : undefined} className={cx('help-text')}>{help}</div>}
     </div>
   );

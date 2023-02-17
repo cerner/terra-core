@@ -10,6 +10,8 @@ it('should render a default component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+jest.mock('uuid/v4', () => () => '00000000-0000-0000-0000-000000000000');
+
 it('should render a Fieldset when all the possible props are passed into it', () => {
   const input = (
     <Fieldset
@@ -17,6 +19,21 @@ it('should render a Fieldset when all the possible props are passed into it', ()
       className="fieldset-custom"
       legendAttrs={{ className: 'healtheintent-legend' }}
       help="This is a test input"
+      required
+    >
+      <input type="radio" value="Test" />
+    </Fieldset>
+  );
+
+  const wrapper = shallow(input);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a Fieldset without legend and helptext', () => {
+  const input = (
+    <Fieldset
+      className="fieldset-custom"
+      legendAttrs={{ className: 'healtheintent-legend' }}
       required
     >
       <input type="radio" value="Test" />

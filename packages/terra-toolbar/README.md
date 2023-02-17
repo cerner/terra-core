@@ -6,7 +6,7 @@
 The terra-toolbar component is used to display bar containing items such as buttons, button groups, and links.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-toolbar/toolbar/toolbar)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/toolbar/about)
 - [LICENSE](#license)
 
 ## Getting Started

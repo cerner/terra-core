@@ -2,6 +2,31 @@
 
 ## Unreleased
 
+## 4.33.0 - (February 16, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.32.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 4.31.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.30.1 - (February 15, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.30.0 - (February 2, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.29.1 - (December 14, 2021)
 
 * Changed

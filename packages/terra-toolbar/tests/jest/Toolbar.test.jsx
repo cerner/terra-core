@@ -35,6 +35,33 @@ describe('Toolbar', () => {
     expect(wrapper.hasClass('align-center'));
   });
 
+  it('should render component with aria-label', () => {
+    const wrapper = shallow(<Toolbar ariaLabel="image tools" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render component with aria-labelledby', () => {
+    const wrapper = shallow(
+      <div>
+        <h4 id="image-tools-id">Test</h4>
+        <Toolbar ariaLabelledBy="image-tools-id" />
+      </div>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render component with aria-controls', () => {
+    const wrapper = shallow(
+      <div>
+        <Toolbar ariaControls="test-content-id" />
+        <div id="test-content-id">
+          Sample toolbar content
+        </div>
+      </div>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should apply custom class', () => {
     const wrapper = shallow(<Toolbar className="testing" />);
     expect(wrapper.hasClass('testing'));

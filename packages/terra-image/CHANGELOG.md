@@ -2,6 +2,23 @@
 
 ## Unreleased
 
+## 3.38.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 3.37.0 - (January 31, 2023)
+
+* Added
+  * Added support for decorative images.
+
+## 3.36.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.35.1 - (January 4, 2022)
+
 * Changed
   * Migrate docs to terra-core-docs.
 
@@ -20,7 +37,7 @@
 ## 3.33.0 - (January 5, 2021)
 
 * Fixed
- * Fixed broken links in documentation.
+  * Fixed broken links in documentation.
 
 ## 3.32.0 - (December 8, 2020)
 

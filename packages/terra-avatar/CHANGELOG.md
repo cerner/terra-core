@@ -5,6 +5,26 @@
 * Added
   * Updated alt prop to include `Deceased` string when `isDeceased` prop is set.
 
+## 3.16.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 3.15.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump of `terra-image`
+
+## 3.15.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.14.1 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.14.0 - (September 28, 2021)
 
 * Changed

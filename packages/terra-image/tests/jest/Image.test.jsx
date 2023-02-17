@@ -12,9 +12,10 @@ const imagecontainerStyle1 = {
 const image = <Image src="" alt="circle" variant="circle" isFluid />;
 
 /* Default component */
-it('should render a default component', () => {
+it('should render a default component with decorative image attributes', () => {
   const wrapper = shallow(<Image src="" alt=" " />);
   expect(wrapper.instance().props.alt).toEqual(' ');
+  expect(wrapper).toMatchSnapshot();
 });
 
 /* Default component with a height and width */
@@ -94,6 +95,24 @@ it('should render the src image', () => {
 it('should render the placeholder image', () => {
   const wrapper = shallow(<Image src="profile.jpg" alt="avatar" height="75" width="75" placeholder={<div>placeholder text</div>} />);
   wrapper.setState({ isLoading: false, isError: true });
+  expect(wrapper).toMatchSnapshot();
+});
+
+/* Ignores roles passed for decorative images */
+it('should ignore provided role and render image with default decorative image role', () => {
+  const wrapper = shallow(<Image src="profile.jpg" alt=" " role="link" height="75" width="75" />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+/* Ignores Aria and title attributes passed for decorative images */
+it('should ignore Aria and title attribute for decorative image', () => {
+  const wrapper = shallow(<Image src="profile.jpg" alt=" " aria-label="example-link" title="link-example" role="link" height="75" width="75" />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+/* Ignores decorative roles passed for informative images */
+it('should render image without decorative image role', () => {
+  const wrapper = shallow(<Image src="profile.jpg" alt="profile image" role="presentation" height="75" width="75" />);
   expect(wrapper).toMatchSnapshot();
 });
 

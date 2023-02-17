@@ -1,6 +1,6 @@
 Terra.describeViewports('Show Hide', ['medium'], () => {
   describe('Default', () => {
-    before(() => browser.url('/raw/tests/terra-show-hide/show-hide/default-show-hide'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/show-hide/default-show-hide'));
 
     it('should display collapsed Show Hide', () => {
       Terra.validates.element('default collapsed');
@@ -38,7 +38,17 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
     describe('Active', () => {
       it('is active', () => {
         $('button').moveTo();
-        browser.buttonDown();
+        browser.performActions([{
+          type: 'pointer',
+          id: 'pointer1',
+          parameters: {
+            pointerType: 'mouse',
+          },
+          actions: [{
+            type: 'pointerDown',
+            button: 0,
+          }],
+        }]);
       });
 
       it('should display active Show Hide', () => {
@@ -46,14 +56,24 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
       });
 
       it('release button press', () => {
-        browser.buttonUp();
+        browser.performActions([{
+          type: 'pointer',
+          id: 'pointer1',
+          parameters: {
+            pointerType: 'mouse',
+          },
+          actions: [{
+            type: 'pointerUp',
+            button: 0,
+          }],
+        }]);
         $('#root').moveTo();
       });
     });
   });
 
   describe('Custom button text', () => {
-    before(() => browser.url('/raw/tests/terra-show-hide/show-hide/custom-button-text-show-hide'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/show-hide/custom-button-text-show-hide'));
 
     it('should display collapsed Show Hide', () => {
       Terra.validates.element('custom button collapsed');
@@ -69,7 +89,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
   });
 
   describe('Initially open', () => {
-    before(() => browser.url('/raw/tests/terra-show-hide/show-hide/initially-open-show-hide'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/show-hide/initially-open-show-hide'));
 
     it('should display expanded Show Hide', () => {
       Terra.validates.element('initially open expanded');
@@ -77,7 +97,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
   });
 
   describe('No preview', () => {
-    before(() => browser.url('/raw/tests/terra-show-hide/show-hide/no-preview-show-hide'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/show-hide/no-preview-show-hide'));
 
     it('should display collapsed Show Hide', () => {
       Terra.validates.element('no preview collapsed');
@@ -85,7 +105,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
   });
 
   describe('Button align start', () => {
-    before(() => browser.url('/raw/tests/terra-show-hide/show-hide/button-align-start-show-hide'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/show-hide/button-align-start-show-hide'));
 
     it('should display collapsed Show Hide', () => {
       Terra.validates.element('button align start collapsed');
@@ -101,7 +121,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
   });
 
   describe('Button align center', () => {
-    before(() => browser.url('/raw/tests/terra-show-hide/show-hide/button-align-center-show-hide'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/show-hide/button-align-center-show-hide'));
 
     it('should display collapsed Show Hide', () => {
       Terra.validates.element('button align center collapsed');
@@ -117,7 +137,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
   });
 
   describe('Button align end', () => {
-    before(() => browser.url('/raw/tests/terra-show-hide/show-hide/button-align-end-show-hide'));
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/show-hide/button-align-end-show-hide'));
 
     it('should display collapsed Show Hide', () => {
       Terra.validates.element('button align end collapsed');
@@ -134,7 +154,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
 
   describe('Long button text', () => {
     before(() => {
-      browser.url('/raw/tests/terra-show-hide/show-hide/long-button-text-show-hide');
+      browser.url('/raw/tests/cerner-terra-core-docs/show-hide/long-button-text-show-hide');
       $('#root').moveTo({ xOffset: 0, yOffset: 700 }); // move cursor to remove focus styles
     });
 

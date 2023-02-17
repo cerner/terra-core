@@ -2,6 +2,163 @@
 
 ## Unreleased
 
+## 1.22.0 - (February 16, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.21.0 - (February 15, 2023)
+
+* Changed
+  * Updated radio and checkbox tests to fix fusion theme tests.
+* Added 
+  * Added Accessibility Guide for `terra-toggle`.
+  * Added A11y guide and examples for `terra-button`.
+
+* Updated
+  * Updated imports of decorative icons.
+  * Updated jest & wdio tests.
+
+## 1.20.0 - (February 7, 2023)
+
+* Changed
+  * Updated examples to use informative icons.
+
+* Added 
+  * Added Label Example for `terra-toggle`.
+  
+## 1.19.0 - (January 31, 2023)
+
+* Added
+  * Added A11y guide for terra-icon.
+  * Added examples and accessibility guide for `terra-image`.
+
+## 1.18.0 - (January 9, 2023)
+
+* Changed
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.49.0.
+  * Added `react-intl` to peerDependency list for `terra-list` doc info.
+
+## 1.17.0 - (January 3, 2023)
+
+* Added
+  * Added Accessibility Guide for `terra-form-fieldset`.
+  * Added single and multi select list test examples for `terra-list`.
+
+* Changed
+  * Updated single and multi select guides with the new ariaSelectionStyle prop for `terra-list`.
+
+## 1.16.0 - (December 7, 2022)
+
+* Added
+  * Added Accessibility Guide for `terra-form-select`.
+  * Added higher-order examples and Accessibility Guide for `terra-profile-image`.
+  * Added ariaLabel and ariaLabelledBy examples for `terra-toolbar`.
+  * Added accordion examples for `terra-section-header`.
+  * Added Accessibility Guide for `terra-divider`.
+  * Added tests and example for adding row header to `terra-html-table`.
+  * Added `terra-list` tests and examples for `ariaDescribedBy`, `ariaDescription`, and `ariaDetails` props.
+  * Added Accessibility Guide for `terra-html-table`.
+  * Added an accessibility hooks example for `terra-form-field` and `terra-input`.
+
+* Changed
+  * Updated wording in examples for `terra-demographics-banner`.
+  * Updated `terra-list` section guide to not use listbox role.
+  * Updated `terra-divider` tests and doc examples to include heading level prop.
+  * Updated `terra-section-header` tests and examples.
+
+## 1.15.1 - (September 8, 2022)
+
+* Changed
+  * Moved `terra-outline-view-table` docs and tests folders to component dev-site folder.
+
+## 1.15.0 - (September 07, 2022)
+
+* Added
+  * Added new `terra-outline-view-table` docs and tests folders.
+
+* Changed
+  * Relative import paths of `terra-hyperlink` tests are changed to absolute path.
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.48.0.
+
+## 1.14.1 - (July 14, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.14.0 - (July 5, 2022)
+
+* Fixed
+  * Updated broken links in terra-form-select and action-footer.
+
+* Changed
+  * Added test for programmatic focus of hyperlink.
+
+## 1.13.6 - (May 3, 2022)
+
+* Changed
+  * Icon table regenerated after fixing trending up/down labeling errors
+  * Updated screenshot tests to reflect trending icon changes
+
+## 1.13.5 - (April 29, 2022)
+
+* Changed
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.46.0.
+  * Updated routes/sidebar names for package root component pages to "About" for consistency.
+  * Moved docs files for the following packages into the root directory for their docs:
+    * List
+    * Table
+    * Form Select
+  * Merged 'About' and 'Avatar' pages for `terra-avatar` docs.
+
+## 1.13.4 - (March 15, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.13.3 - (March 8, 2022)
+
+* Fixed
+  * Updated broken links in terra-form-select docs.
+
+## 1.13.2 - (February 24, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.13.1 - (February 15, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.13.0 - (February 2, 2022)
+
+* Added
+
+  * Migrate docs from terra-tag.
+  * Migrate docs from terra-toggle-button.
+  * Migrate docs from terra-visually-hidden-text.
+  * Migrate docs from terra-toolbar.
+  * Migrate docs from terra-text.
+  * Migrate docs from terra-toggle-section-header.
+  * Migrate docs from terra-toggle.
+  * Migrate docs from terra-switch.
+  * Migrate docs from terra-table.
+  * Migrate docs from terra-status.
+  * Added support for Node 14.
+
+## 1.12.2 - (January 4, 2022)
+
+* Added
+  * Migrate docs from terra-section-header.
+  * Migrate docs from terra-spacer.
+  * Migrate docs from terra-signature.
+  * Migrate docs from terra-show-hide.
+  * Migrate docs from terra-status-view.
+  * Migrate docs from terra-search-field.
+  * Migrate docs from terra-scroll.
+  * Migrate docs from terra-responsive-element.
+
 ## 1.12.1 - (December 14, 2021)
 
 * Added
@@ -48,6 +205,7 @@
 ## 1.10.0 - (September 28, 2021)
 
 * Changed
+
   * Updated Arrange tests to be more reliable.
 
 * Added

@@ -2,6 +2,59 @@
 
 ## Unreleased
 
+## 2.68.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+* Updated
+  * Fixed jest test failures caused by empty children nodes.
+
+## 2.67.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.66.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.66.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-form-field and terra-form-input
+
+## 2.65.0 - (January 3, 2023)
+
+* Added
+  * Added `aria-labelledby` for terra-form-fieldset.
+
+## 2.64.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.5 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.63.2 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.63.1 - (December 14, 2021)
 
 * Changed

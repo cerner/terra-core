@@ -2,6 +2,33 @@
 
 ## Unreleased
 
+## 2.82.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 2.81.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.80.2 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.80.1 - (February 24, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.80.0 - (February 2, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.79.2 - (January 4, 2022)
+
 * Changed
   * Migrate docs to terra core docs.
 

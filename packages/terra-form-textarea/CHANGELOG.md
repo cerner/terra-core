@@ -2,6 +2,54 @@
 
 ## Unreleased
 
+## 5.23.0 - (February 15, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.22.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.21.1 - (January 31, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+* Changed
+  * Jest snapshots updated due to decorative / informative icon changes in terra-icon.
+
+## 5.21.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-icon and terra-form-field
+
+## 5.20.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.19.5 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.19.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.19.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 5.19.2 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 5.19.1 - (December 14, 2021)
 
 * Changed

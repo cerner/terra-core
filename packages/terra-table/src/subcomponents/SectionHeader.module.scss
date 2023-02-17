@@ -88,9 +88,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
-    height: 0.7142857143rem;
+    height: var(--terra-table-section-header-accordion-icon-height, 0.7142857143rem);
     transform: rotate(0deg);
-    width: 0.7142857143rem;
+    width: var(--terra-table-section-header-accordion-icon-width, 0.7142857143rem);
 
     // flips the icon about its vertical axis, presenting it in its mirrored-image form
     [dir=rtl] & {

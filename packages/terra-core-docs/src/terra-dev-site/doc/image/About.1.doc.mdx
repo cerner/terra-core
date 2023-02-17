@@ -1,0 +1,81 @@
+import { Badge } from 'terra-image/package.json?dev-site-package';
+
+import ImageDefault from './example/ImageDefault?dev-site-example';
+import ImageFit from './example/ImageFitTypes?dev-site-example';
+import DecorativeImage from './example/DecorativeImage?dev-site-example';
+import InformativeImage from './example/InformativeImage?dev-site-example';
+
+import ImagePropsTable from 'terra-image/src/Image?dev-site-props-table';
+
+<Badge />
+
+# Terra Image
+
+The terra-image component provides styling for visual imagery.
+
+
+# Informative Image
+
+Informative images are images that graphically represent concepts and information on a page. images are known as informative when they convey a concept or information of image with a short phrase or sentence.
+
+Images must have text alternatives described through `alt` prop which will provide the information or function represented by them. This will ensure that images are accessible for people with various disabilities.
+
+Images may be infomative when they are:
+- Used to label other information
+- Used to supplement other information
+- Conveying succinct information
+- Conveying an impression or emotion
+- Conveying file format
+
+
+# Decorative Image
+
+Decorative images are images that don’t add information to the content of a page but instead support existing content or are used plainly for aesthetics. For example, it can be an image depicting adjacent text or to make the website more visually attractive.
+
+Decorative Image should be used only when the purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the page.
+
+Images may be decorative when they are:
+- Visual styling such as borders, spacers, and corners.
+- Supplementary to link text to improve its appearance or increase the clickable area.
+- Illustrative of adjacent text but not contributing information (“eye-candy”).
+- Identified and described by surrounding text.
+
+
+Provide a null text alternative (alt="") when the only purpose of an image is to add visual decoration to the page.
+
+## Getting Started
+
+- Install with [npmjs](https://www.npmjs.com):
+  - `npm install terra-image`
+
+<!-- AUTO-GENERATED-CONTENT:START Peer Dependencies -->
+## Peer Dependencies
+
+This component requires the following peer dependencies be installed in your app for the component to properly function.
+
+| Peer Dependency | Version |
+|-|-|
+| react | ^16.8.5 |
+| react-dom | ^16.8.5 |
+
+<!-- AUTO-GENERATED-CONTENT:END -->
+
+## Usage
+
+```jsx
+import Image from 'terra-image';
+```
+
+## Component Features
+* [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
+* [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
+* [Mobile Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#mobile-support)
+
+## Examples
+<ImageDefault />
+<ImageFit />
+<DecorativeImage />
+<InformativeImage />
+
+## Image Props
+<ImagePropsTable />

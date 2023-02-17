@@ -2,6 +2,63 @@
 
 ## Unreleased
 
+## 2.62.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 2.61.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.60.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.60.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump  of terra-toggle
+
+## 2.59.0 - (December 7, 2022)
+
+* Changed
+  * Renamed `terra-section-header` title prop to text
+  * Updated snapshots from changes made to terra-section-header
+  * Updated WDIO Screenshots from changes made to terra-section-header
+
+## 2.58.4 - (July 14, 2022)
+
+* Changed
+  * Updated WDIO Screenshots from changes made to terra-section-header
+  
+## 2.58.3 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.58.2 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.58.1 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.58.0 - (February 2, 2022)
+
+* Added
+  * Migrate docs to terra-core-docs.
+
+## 2.57.1 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.57.0 - (September 28, 2021)
 
 * Changed

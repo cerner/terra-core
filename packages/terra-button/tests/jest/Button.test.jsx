@@ -1,7 +1,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
-import Button from '../../src/Button';
+import Button, { IconTypes } from '../../src/Button';
 
 // Snapshot Tests
 it('should render a neutral button', () => {
@@ -49,9 +49,9 @@ it('should render a button with type equal to submit', () => {
   expect(button).toMatchSnapshot();
 });
 
-it('should render an icon', () => {
+it('should render an informative icon button', () => {
   const testElement = <img alt="icon" />;
-  const button = shallow(<Button icon={testElement} isIconOnly text="isIconOnly" />);
+  const button = shallow(<Button iconType={IconTypes.INFORMATIVE} icon={testElement} isIconOnly text="isIconOnly" />);
   expect(button).toMatchSnapshot();
 });
 

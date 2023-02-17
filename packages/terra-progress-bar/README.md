@@ -8,7 +8,7 @@ The progress bar component provides users a way to display the progress of proce
 Note: The progress bar displays fill with respect to percentage (value between 0 and 100). If `max` isn't specified in the input to the component, then `value` corresponds to a percentage value.
 
 - [Getting Started](#getting-started)
-- [Documentation](https://engineering.cerner.com/terra-ui/components/terra-progress-bar/progress-bar/progress-bar)
+- [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/progress-bar/about)
 - [LICENSE](#license)
 
 ## Getting Started

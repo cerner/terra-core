@@ -25,6 +25,11 @@ const ButtonTypes = {
   RESET: 'reset',
 };
 
+const IconTypes = {
+  DECORATIVE: 'decorative',
+  INFORMATIVE: 'informative',
+};
+
 const propTypes = {
   /**
    * Sets the href. When set will render the component as an anchor tag.
@@ -38,6 +43,12 @@ const propTypes = {
    * Whether or not the button should only display as an icon.
    */
   isIconOnly: PropTypes.bool,
+  /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * specifies the icon type. if not specified defaluts to DECORATIVE icon.
+   * refer Icon [Accessiblity Guide](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/icon/accessibility-guide) to know about types of icon.
+   */
+  iconType: PropTypes.oneOf([IconTypes.DECORATIVE, IconTypes.INFORMATIVE]),
   /**
    * Whether or not the button should display as a block.
    */
@@ -107,6 +118,7 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   isIconOnly: false,
+  iconType: IconTypes.DECORATIVE,
   isReversed: false,
   refCallback: undefined,
   title: undefined,
@@ -225,6 +237,7 @@ class Button extends React.Component {
       isCompact,
       isDisabled,
       isIconOnly,
+      iconType,
       isReversed,
       text,
       type,
@@ -294,12 +307,17 @@ class Button extends React.Component {
       </span>
     );
 
+    // ignore aria-label for button with decorative icons.
     let ariaLabel = customProps['aria-label'];
     if (isIconOnly || variant === 'utility') {
-      ariaLabel = ariaLabel || text;
+      ariaLabel = (iconType === IconTypes.INFORMATIVE) ? ariaLabel || text : undefined;
     }
 
-    const ComponentType = href ? 'a' : 'button';
+    let ComponentType = 'button';
+    if (href) {
+      ComponentType = 'a';
+      customProps.role = 'button';
+    }
 
     return (
       <ComponentType
@@ -335,4 +353,4 @@ Button.Opts.Types = ButtonTypes;
 Button.Opts.Variants = ButtonVariants;
 
 export default Button;
-export { ButtonTypes, ButtonVariants };
+export { ButtonTypes, ButtonVariants, IconTypes };

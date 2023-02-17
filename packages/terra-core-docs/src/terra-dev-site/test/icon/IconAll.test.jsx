@@ -193,8 +193,10 @@ const IconAll = () => (
     <Icon.IconModerate className={cx(['icon'])} />
     <Icon.IconModerateLowLight className={cx(['icon'])} />
     <Icon.IconModified className={cx(['icon'])} />
+    <Icon.IconNavStackUp className={cx(['icon'])} />
     <Icon.IconNext className={cx(['icon'])} />
     <Icon.IconNoRisk className={cx(['icon'])} />
+    <Icon.IconNoResults className={cx(['icon'])} />
     <Icon.IconNoRiskLowLight className={cx(['icon'])} />
     <Icon.IconNoSignal className={cx(['icon'])} />
     <Icon.IconNotification className={cx(['icon'])} />
@@ -215,6 +217,7 @@ const IconAll = () => (
     <Icon.IconPatientSearch className={cx(['icon'])} />
     <Icon.IconPending className={cx(['icon'])} />
     <Icon.IconPerson className={cx(['icon'])} />
+    <Icon.IconPersonConnection className={cx(['icon'])} />
     <Icon.IconPersonDoor className={cx(['icon'])} />
     <Icon.IconPersonHospital className={cx(['icon'])} />
     <Icon.IconPersonnelPerson className={cx(['icon'])} />
@@ -288,6 +291,8 @@ const IconAll = () => (
     <Icon.IconTile className={cx(['icon'])} />
     <Icon.IconTrash className={cx(['icon'])} />
     <Icon.IconTreemap className={cx(['icon'])} />
+    <Icon.IconTrendingDown className={cx(['icon'])} />
+    <Icon.IconTrendingUp className={cx(['icon'])} />
     <Icon.IconTriangleDownSymbol className={cx(['icon'])} />
     <Icon.IconTriangleDownSymbolLight className={cx(['icon'])} />
     <Icon.IconTriangleSymbol className={cx(['icon'])} />
@@ -307,6 +312,10 @@ const IconAll = () => (
     <Icon.IconVideoCamera className={cx(['icon'])} />
     <Icon.IconVideoCameraDisabled className={cx(['icon'])} />
     <Icon.IconVisualization className={cx(['icon'])} />
+    <Icon.IconVolumeSetDefault className={cx(['icon'])} />
+    <Icon.IconVolumeSetMute className={cx(['icon'])} />
+    <Icon.IconVolumeSetIncrease className={cx(['icon'])} />
+    <Icon.IconVolumeSetDecrease className={cx(['icon'])} />
     <Icon.IconWarning className={cx(['icon'])} />
     <Icon.IconWarningLowLight className={cx(['icon'])} />
     <Icon.IconWaveform className={cx(['icon'])} />

@@ -2,6 +2,51 @@
 
 ## Unreleased
 
+## 6.39.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 6.38.0 - (February 7, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.37.1 - (January 31, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.37.0 - (January 9, 2023)
+
+* Changed
+  * Minor dependency version bump of terra-form-field
+
+## 6.36.0 - (December 7, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.35.5 - (July 5, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.35.4 - (May 3, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.35.3 - (April 29, 2022)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.35.2 - (January 4, 2022)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.35.1 - (December 14, 2021)
 
 * Changed

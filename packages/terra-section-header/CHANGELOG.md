@@ -2,6 +2,29 @@
 
 ## Unreleased
 
+## 2.58.0 - (February 15, 2023)
+
+* Changed
+  * Updated wdio screenshots due to functional-testing upgrade.
+
+## 2.57.0 - (December 7, 2022)
+
+* Changed
+  * Renamed title prop to text to avoid conflict with native html attribute
+
+* Added
+  * Added button role, aria-label and aria-expanded attribute to `Arrange` component wrapper
+
+## 2.56.0 - (July 14, 2022)
+
+* Fixed
+  * Fixed caret icon size to match similar components.
+
+## 2.55.1 - (January 4, 2022)
+
+* Added
+  * Migrate docs to terra-core-docs.
+
 ## 2.55.0 - (September 28, 2021)
 
 * Changed

@@ -25,37 +25,40 @@
     }
 
     // Row Cell
-    td {
+    td,
+    th {
       border: 0;
       border-left: var(--terra-html-table-cell-border-left, 0);
       color: var(--terra-html-table-cell-color, #1c1f21);
       display: table-cell;
       font-size: var(--terra-html-table-cell-font-size, 1rem);
+      font-weight: normal;
       text-align: left;
       vertical-align: top;
 
-      &:first-of-type {
+      &:first-child {
         border-left: var(--terra-html-table-first-cell-border-left, 1px solid #dedfe0);
       }
 
-      &:last-of-type {
+      &:last-child {
         border-right: var(--terra-html-table-last-cell-border-right, 1px solid #dedfe0);
       }
     }
 
     // Header Cell
-    th {
+    thead th,
+    thead td {
       border: 0;
       border-right: var(--terra-html-table-header-cell-border-right, 1px solid rgba(200, 202, 203, 0.5));
       display: table-cell;
       text-align: left;
       vertical-align: top;
 
-      &:first-of-type {
+      &:first-child {
         border-left: var(--terra-html-table-first-header-cell-border-left, 1px solid #dedfe0);
       }
 
-      &:last-of-type {
+      &:last-child {
         border-right: var(--terra-html-table-last-header-cell-border-right, 1px solid #dedfe0);
       }
     }
@@ -73,7 +76,8 @@
       }
 
       // Header Cell
-      th {
+      th,
+      td {
         color: var(--terra-html-table-header-cell-color, #1c1f21);
         font-size: var(--terra-html-table-header-cell-font-size, 1rem);
         font-weight: var(--terra-html-table-header-cell-font-weight, bold);

@@ -57,4 +57,13 @@ describe('Notice', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render a important notice with text', () => {
+    const wrapper = shallow(
+      <Notice variant="not-supported">
+        notice text
+      </Notice>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });
