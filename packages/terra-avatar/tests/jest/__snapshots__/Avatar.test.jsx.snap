@@ -151,9 +151,9 @@ exports[`Avatar should render an isDeceased avatar 1`] = `
   class="avatar one is-deceased"
 >
   <span
-    alt="user"
+    alt="user, Deceased"
     aria-hidden="false"
-    aria-label="user"
+    aria-label="user, Deceased"
     class="initials"
     role="img"
   >
