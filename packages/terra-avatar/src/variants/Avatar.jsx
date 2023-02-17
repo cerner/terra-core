@@ -90,6 +90,7 @@ class Avatar extends React.Component {
     const avatarParams = {
       image,
       alt,
+      isDeceased,
       isAriaHidden,
       variant: AVATAR_VARIANTS.USER,
       handleFallback: this.handleFallback,
