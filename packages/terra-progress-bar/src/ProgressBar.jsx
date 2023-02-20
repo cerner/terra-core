@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './ProgressBar.module.scss';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 const cx = classNamesBind.bind(styles);
 
@@ -70,19 +71,23 @@ const ProgressBar = ({
   );
 
   const normalizedValue = (value / max) * 100;
+  const valText = valueText || `${normalizedValue}%`
 
   return (
-    <progress
-      {...customProps}
-      className={classes}
-      max={100}
-      value={normalizedValue}
-      aria-valuemax={100}
-      aria-valuemin={0}
-      aria-valuenow={normalizedValue}
-      aria-valuetext={valueText}
-      tabIndex="-1"
-    />
+      <>
+        <VisuallyHiddenText aria-live='polite' text={valText} />
+        <progress
+            {...customProps}
+            className={classes}
+            max={100}
+            value={normalizedValue}
+            aria-valuemax={100}
+            aria-valuemin={0}
+            aria-valuenow={normalizedValue}
+            aria-valuetext={valText}
+            tabIndex="-1"
+        />
+      </>
   );
 };
 
