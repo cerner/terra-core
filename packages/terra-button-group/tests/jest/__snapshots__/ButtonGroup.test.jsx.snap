@@ -10,10 +10,12 @@ exports[`correctly applies the theme context className 1`] = `
 >
   <ButtonGroup
     isBlock={false}
+    isMultiSelect={false}
     selectedKeys={Array []}
   >
     <div
       className="button-group orion-fusion-theme"
+      role="group"
     >
       <ButtonGroupButton
         aria-pressed={false}
@@ -21,11 +23,14 @@ exports[`correctly applies the theme context className 1`] = `
         isDisabled={false}
         key="1"
         onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
         text="Button 1"
       >
         <Button
           aria-pressed={false}
           className="button-group-button orion-fusion-theme"
+          data-terra-button-group-button={true}
           iconType="decorative"
           isBlock={false}
           isCompact={false}
@@ -37,6 +42,7 @@ exports[`correctly applies the theme context className 1`] = `
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
+          role="button"
           text="Button 1"
           type="button"
           variant="neutral"
@@ -45,6 +51,7 @@ exports[`correctly applies the theme context className 1`] = `
             aria-disabled={false}
             aria-pressed={false}
             className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
+            data-terra-button-group-button={true}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -52,6 +59,7 @@ exports[`correctly applies the theme context className 1`] = `
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             onMouseDown={[Function]}
+            role="button"
             type="button"
           >
             <span
@@ -72,11 +80,14 @@ exports[`correctly applies the theme context className 1`] = `
         isDisabled={false}
         key="2"
         onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
         text="Button 2"
       >
         <Button
           aria-pressed={false}
           className="button-group-button orion-fusion-theme"
+          data-terra-button-group-button={true}
           iconType="decorative"
           isBlock={false}
           isCompact={false}
@@ -88,6 +99,7 @@ exports[`correctly applies the theme context className 1`] = `
           onFocus={[Function]}
           onKeyDown={[Function]}
           onKeyUp={[Function]}
+          role="button"
           text="Button 2"
           type="button"
           variant="neutral"
@@ -96,6 +108,7 @@ exports[`correctly applies the theme context className 1`] = `
             aria-disabled={false}
             aria-pressed={false}
             className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
+            data-terra-button-group-button={true}
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
@@ -103,6 +116,7 @@ exports[`correctly applies the theme context className 1`] = `
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             onMouseDown={[Function]}
+            role="button"
             type="button"
           >
             <span
@@ -122,9 +136,73 @@ exports[`correctly applies the theme context className 1`] = `
 </ThemeContextProvider>
 `;
 
+exports[`should apply correct role for multiSelect button group 1`] = `
+<div
+  className="button-group"
+  role="group"
+>
+  <ButtonGroupButton
+    aria-checked={false}
+    className=""
+    isDisabled={false}
+    key="1"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="checkbox"
+    text="Button 1"
+  />
+  <ButtonGroupButton
+    aria-checked={false}
+    className=""
+    isDisabled={false}
+    key="2"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="checkbox"
+    text="Button 2"
+  />
+</div>
+`;
+
+exports[`should apply correct role for single select button group 1`] = `
+<div
+  className="button-group"
+  role="radiogroup"
+>
+  <ButtonGroupButton
+    aria-checked={false}
+    className=""
+    isDisabled={false}
+    key="1"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="radio"
+    text="Button 1"
+  />
+  <ButtonGroupButton
+    aria-checked={false}
+    className=""
+    isDisabled={false}
+    key="2"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="radio"
+    text="Button 2"
+  />
+</div>
+`;
+
+exports[`should apply correct role for single select button group 2`] = `
+<div
+  className="button-group"
+  role="radiogroup"
+/>
+`;
+
 exports[`should only render enabled buttons as toggle buttons 1`] = `
 <div
   className="button-group"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={true}
@@ -132,6 +210,8 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
     isDisabled={false}
     key="1"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -140,14 +220,17 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
     isDisabled={false}
     key="2"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 2"
   />
   <ButtonGroupButton
-    aria-pressed={null}
     className=""
     isDisabled={true}
     key="dis"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Disabled Button"
   />
 </div>
@@ -156,6 +239,7 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
 exports[`should render a block button group with children 1`] = `
 <div
   className="button-group is-block"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={false}
@@ -163,6 +247,8 @@ exports[`should render a block button group with children 1`] = `
     isDisabled={false}
     key="1"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -171,6 +257,8 @@ exports[`should render a block button group with children 1`] = `
     isDisabled={false}
     key="2"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 2"
   />
   <ButtonGroupButton
@@ -179,6 +267,8 @@ exports[`should render a block button group with children 1`] = `
     isDisabled={false}
     key="3"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 3"
   />
 </div>
@@ -187,6 +277,7 @@ exports[`should render a block button group with children 1`] = `
 exports[`should render a button group with children 1`] = `
 <div
   className="button-group"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={false}
@@ -194,6 +285,8 @@ exports[`should render a button group with children 1`] = `
     isDisabled={false}
     key="1"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 1"
   />
 </div>
@@ -202,6 +295,7 @@ exports[`should render a button group with children 1`] = `
 exports[`should render a button group with children selected 1`] = `
 <div
   className="button-group"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={true}
@@ -209,6 +303,8 @@ exports[`should render a button group with children selected 1`] = `
     isDisabled={false}
     key="1"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -217,6 +313,8 @@ exports[`should render a button group with children selected 1`] = `
     isDisabled={false}
     key="2"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 2"
   />
 </div>
@@ -225,12 +323,14 @@ exports[`should render a button group with children selected 1`] = `
 exports[`should render an empty component 1`] = `
 <div
   className="button-group"
+  role="group"
 />
 `;
 
 exports[`should select a button 1`] = `
 <div
   className="button-group"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={false}
@@ -238,6 +338,8 @@ exports[`should select a button 1`] = `
     isDisabled={false}
     key="1"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -246,6 +348,8 @@ exports[`should select a button 1`] = `
     isDisabled={false}
     key="2"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 2"
   />
 </div>
@@ -254,6 +358,7 @@ exports[`should select a button 1`] = `
 exports[`should select a button 2`] = `
 <div
   className="button-group"
+  role="group"
 >
   <ButtonGroupButton
     aria-pressed={false}
@@ -261,6 +366,8 @@ exports[`should select a button 2`] = `
     isDisabled={false}
     key="1"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 1"
   />
   <ButtonGroupButton
@@ -269,6 +376,8 @@ exports[`should select a button 2`] = `
     isDisabled={false}
     key="2"
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
     text="Button 2"
   />
 </div>

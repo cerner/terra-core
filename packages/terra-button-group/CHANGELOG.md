@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+* Added
+  * Added support for decoratove icons and multi-selection.
+
+* Fixed
+  * Fixed keyboard navigation. 
+
 ## 3.63.0 - (February 16, 2023)
 
 * Changed

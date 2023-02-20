@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'terra-button';
+import Button, { IconTypes } from 'terra-button';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
@@ -14,6 +14,12 @@ const propTypes = {
    * An optional icon. If an icon is provided, it will be an icon only button and the provided text is set as the aria-label for accessibility.
    */
   icon: PropTypes.element,
+  /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * specifies the icon type. if not specified defaluts to DECORATIVE icon.
+   * refer Icon [Accessiblity Guide](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/icon/accessibility-guide) to know about types of icon.
+   */
+  iconType: PropTypes.oneOf([IconTypes.DECORATIVE, IconTypes.INFORMATIVE]),
   /**
    * Whether or not the button should be disabled.
    */
@@ -88,7 +94,7 @@ class ButtonGroupButton extends React.Component {
   handleKeyUp(event) {
     // Apply focus styles for keyboard navigation.
     // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
-    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB || event.nativeEvent.keyCode === KeyCode.KEY_LEFT || event.nativeEvent.keyCode === KeyCode.KEY_RIGHT) {
       this.setState({ focused: true });
       this.shouldShowFocus = true;
     }
@@ -111,6 +117,7 @@ class ButtonGroupButton extends React.Component {
   render() {
     const {
       icon,
+      iconType,
       isDisabled,
       onFocus,
       ...customProps
@@ -132,6 +139,7 @@ class ButtonGroupButton extends React.Component {
       <Button
         {...customProps}
         icon={icon}
+        iconType={iconType}
         isDisabled={isDisabled}
         isIconOnly={icon != null}
         onKeyDown={this.handleKeyDown}
@@ -140,6 +148,7 @@ class ButtonGroupButton extends React.Component {
         onFocus={this.handleFocus}
         variant={Button.Opts.Variants.NEUTRAL}
         className={buttonClassName}
+        data-terra-button-group-button
       />
     );
   }
