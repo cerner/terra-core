@@ -107,8 +107,10 @@ class SectionHeader extends React.Component {
     const attributes = { ...customProps };
 
     if (onClick) {
+      attributes.tabIndex = '0';
       attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
       attributes.onKeyUp = this.wrapOnKeyUp(attributes.onKeyUp);
+      attributes.onClick = onClick;
     }
 
     const iconClassNames = cx([
@@ -120,6 +122,14 @@ class SectionHeader extends React.Component {
       <div className={cx('accordion-icon-wrapper')}>
         <span className={iconClassNames} />
       </div>
+    );
+
+    const arrangeComp = (
+        <Arrange
+            fitStart={onClick && accordionIcon}
+            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
+            className={cx('title-arrange')}
+        />
     );
 
     const sectionHeaderClassNames = classNames(
@@ -150,17 +160,23 @@ class SectionHeader extends React.Component {
     // eslint doesn't know about this and so it marks this as a lint error
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-static-element-interactions */
-    return (
-      <Element {...attributes} onClick={onClick} className={sectionHeaderClassNames} tabIndex="0">
-        <div role="button" aria-expanded={isOpen} tabIndex="-1" aria-label={headerText} className={cx('arrange-wrapper')}>
-          <Arrange
-            fitStart={onClick && accordionIcon}
-            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
-            className={cx('title-arrange')}
-          />
-        </div>
-      </Element>
-    );
+
+    if (onClick) {
+      return (
+          <Element {...attributes} className={sectionHeaderClassNames}>
+            <div role="button" aria-expanded={isOpen} tabIndex="-1" aria-label={headerText} className={cx('arrange-wrapper')}>
+              {arrangeComp}
+            </div>
+          </Element>
+      );
+    }
+    else {
+      return (
+          <Element {...attributes} className={sectionHeaderClassNames} aria-label={headerText}>
+            {arrangeComp}
+          </Element>
+      );
+    }
     /* eslint-enable jsx-a11y/no-static-element-interactions */
   }
 }
