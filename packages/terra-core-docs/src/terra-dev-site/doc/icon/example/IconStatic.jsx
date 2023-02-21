@@ -18,6 +18,7 @@ import IconCriticalInverse from 'terra-icon/lib/icon/IconCriticalInverse';
 import IconHazardLow from 'terra-icon/lib/icon/IconHazardLow';
 import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconInformationInverse from 'terra-icon/lib/icon/IconInformationInverse';
+import IconInformationStatic from 'terra-icon/lib/icon/IconInformationStatic';
 import IconErrorDark from 'terra-icon/lib/icon/IconErrorDark';
 import IconError from 'terra-icon/lib/icon/IconError';
 import IconDoNotDisturb from 'terra-icon/lib/icon/IconDoNotDisturb';
@@ -25,6 +26,7 @@ import IconIncompleteInverse from 'terra-icon/lib/icon/IconIncompleteInverse';
 import IconFeaturedOutlineYellow from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import IconHelpInverse from 'terra-icon/lib/icon/IconHelpInverse';
+import IconHelpStatic from 'terra-icon/lib/icon/IconHelpStatic';
 import IconUnexpected from 'terra-icon/lib/icon/IconUnexpected';
 import IconDueSoon from 'terra-icon/lib/icon/IconDueSoon';
 import IconOverDue from 'terra-icon/lib/icon/IconOverDue';
@@ -213,6 +215,15 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconInformationStatic height='2em' width='2em' /></td>
+        <td style={cellStyle}>information_static</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconInformationStatic from 'terra-icon/lib/icon/IconInformationStatic';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconErrorDark height='2em' width='2em' /></td>
         <td style={cellStyle}>error_dark</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
@@ -272,6 +283,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconHelpInverse from 'terra-icon/lib/icon/IconHelpInverse';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconHelpStatic height='2em' width='2em' /></td>
+        <td style={cellStyle}>help_static</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconHelpStatic from 'terra-icon/lib/icon/IconHelpStatic';
           </code>
         </td>
       </tr>

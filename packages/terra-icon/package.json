@@ -25,7 +25,7 @@
     "jsdom": "^21.0.0",
     "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.50.0.tar.gz",
     "shelljs": "^0.8.2",
-    "svgo": "^3.0.0"
+    "svgo": "^3.0.2"
   },
   "peerDependencies": {
     "react": "^16.8.5",
