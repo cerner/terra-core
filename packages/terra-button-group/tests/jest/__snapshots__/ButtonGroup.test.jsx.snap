@@ -164,6 +164,34 @@ exports[`should apply correct role for multiSelect button group 1`] = `
 </div>
 `;
 
+exports[`should apply correct role for multiSelect button group 2`] = `
+<div
+  className="button-group"
+  role="group"
+>
+  <ButtonGroupButton
+    aria-checked={false}
+    className=""
+    isDisabled={false}
+    key="1"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="checkbox"
+    text="Button 1"
+  />
+  <ButtonGroupButton
+    aria-checked={false}
+    className=""
+    isDisabled={false}
+    key="2"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="checkbox"
+    text="Button 2"
+  />
+</div>
+`;
+
 exports[`should apply correct role for single select button group 1`] = `
 <div
   className="button-group"
@@ -190,13 +218,6 @@ exports[`should apply correct role for single select button group 1`] = `
     text="Button 2"
   />
 </div>
-`;
-
-exports[`should apply correct role for single select button group 2`] = `
-<div
-  className="button-group"
-  role="radiogroup"
-/>
 `;
 
 exports[`should only render enabled buttons as toggle buttons 1`] = `

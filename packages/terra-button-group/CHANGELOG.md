@@ -6,7 +6,7 @@
   * Added support for decoratove icons and multi-selection.
 
 * Fixed
-  * Fixed keyboard navigation. 
+  * Fixed keyboard navigation feature and fixes to convey selection states.
 
 ## 3.63.0 - (February 16, 2023)
 

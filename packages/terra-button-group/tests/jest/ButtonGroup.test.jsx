@@ -84,18 +84,6 @@ it('should select a button', () => {
   expect(buttonGroup).toMatchSnapshot();
 });
 
-it('correctly applies the theme context className', () => {
-  const buttonGroup = mount(
-    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
-      <ButtonGroup>
-        {button1}
-        {button2}
-      </ButtonGroup>
-    </ThemeContextProvider>,
-  );
-  expect(buttonGroup).toMatchSnapshot();
-});
-
 it('should apply correct role for multiSelect button group', () => {
   const onChange = jest.fn();
   const buttonGroup = shallow((
@@ -116,12 +104,16 @@ it('should apply correct role for single select button group', () => {
     </ButtonGroup>
   ));
   expect(buttonGroup).toMatchSnapshot();
-})
+});
 
-it('should apply correct role for single select button group', () => {
-  const onChange = jest.fn();
-  const buttonGroup = shallow((
-    <ButtonGroup onChange={onChange} />
-  ));
+it('correctly applies the theme context className', () => {
+  const buttonGroup = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <ButtonGroup>
+        {button1}
+        {button2}
+      </ButtonGroup>
+    </ThemeContextProvider>,
+  );
   expect(buttonGroup).toMatchSnapshot();
-})
+});
