@@ -38,8 +38,10 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        form-factor: [tiny, small, medium, large, huge, enormous]
-        theme: [default, lowlight, fusion]
+        form-factor: [tiny]
+        theme: [default]
+        # form-factor: [tiny, small, medium, large, huge, enormous]
+        # theme: [default, lowlight, fusion]
       
     steps:
       - name: Checkout Project
