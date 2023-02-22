@@ -68,7 +68,9 @@ jobs:
         with:
           route: POST /repos/:repository/deployments
           repository: ${{ github.repository }}
-          data: ${{ toJSON(env.REQUEST_BODY) }}
+          ref: ${{ fromJson(steps.get-pull-request.outputs.data).head.ref }}
+          environment: dev
+          auto_merge: false
 
       - name: set deployment status to in progress
         uses: octokit/request-action@v2.x
