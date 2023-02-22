@@ -54,7 +54,7 @@ jobs:
         with:
           route: GET /repos/:repository/pulls/:issue_id
           repository: ${{ github.repository }}
-          issue_id: ${{ github.event.issue.number }}
+          issue_id: ${{ github.event.number }}
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
