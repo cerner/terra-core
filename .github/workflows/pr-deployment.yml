@@ -64,19 +64,10 @@ jobs:
         if: |
           steps.check-previous.outputs.status != '404'
         env:
-          REQUEST_BODY: |
-            ${{ format('{{
-              "ref": "{0}",
-              "transient_environment": true,
-              "auto_merge": false,
-              "environment": "development",
-              "required_contexts": ["test"]
-            }}', fromJSON(steps.get-pull-request.outputs.data).head.ref) }}
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         with:
           route: POST /repos/:repository/deployments
           repository: ${{ github.repository }}
-          data: ${{ toJSON(env.REQUEST_BODY) }}
 
       - name: set deployment status to in progress
         uses: octokit/request-action@v2.x
