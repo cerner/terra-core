@@ -1,9 +1,8 @@
 name: pr-deployment
 
 on:
-  issue_comment:
-    types: [created]
-
+  pull_request:
+    branches: ['main']
 jobs:
   deploy-check:
     runs-on: ubuntu-latest
