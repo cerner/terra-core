@@ -1,0 +1,64 @@
+---
+#CI will run on all pushes and PRs to verify validity of the code
+name: CI
+
+on:
+  push:
+    branches: ['main', 'GithubActions']
+  pull_request:
+    branches: ['main']
+  schedule:
+    - cron: '0 1 * * SUN'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v3
+      - name: Setup Project
+        uses: ./.github/actions/setup
+      - if: github.event_name == 'pull_request'
+        name: Danger
+        uses: danger/danger-js@9.1.8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # https://github.com/danger/danger-js/issues/557#issuecomment-664851950
+          DANGER_DISABLE_TRANSPILATION: true
+      - name: Linting Project
+        run: |
+          npm run lint
+      - name: Testing Project
+        run: |
+          npm run jest
+  wdio:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        form-factor: [tiny]
+        theme: [default]
+        # form-factor: [tiny, small, medium, large, huge, enormous]
+        # theme: [default, lowlight, fusion]
+      
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v3
+      - name: Setup Project
+        uses: ./.github/actions/setup      
+      - name: Compile Project Default
+        run: |
+          npm run compile:prod -- --output-path build/default
+        if: matrix.theme == 'default'
+      - name: Compile Project Lowlight
+        run: |
+          npm run compile:lowlight -- --output-path build/lowlight
+        if: matrix.theme == 'lowlight'
+      - name: Compile Project Fusion
+        run: |
+          npm run compile:fusion -- --output-path build/fusion
+        if: matrix.theme == 'fusion'
+      - name: Run WDIO Tests for form factor ${{ matrix.form-factor }} and ${{ matrix.theme }}
+        run: SITE=build/${{ matrix.theme }} FORM_FACTOR=${{ matrix.form-factor }} npm run wdio-${{ matrix.theme }}
