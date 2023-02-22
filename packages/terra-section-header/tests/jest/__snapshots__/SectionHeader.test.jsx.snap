@@ -14,49 +14,41 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
     text="foo"
   >
     <h2
+      aria-label="foo"
       className="section-header orion-fusion-theme"
-      tabIndex="0"
     >
-      <div
-        aria-expanded={false}
-        aria-label="foo"
-        className="arrange-wrapper"
-        role="button"
-        tabIndex="-1"
+      <Arrange
+        className="title-arrange"
+        fill={
+          <span
+            aria-hidden={false}
+            className="title"
+          >
+            foo
+          </span>
+        }
       >
-        <Arrange
-          className="title-arrange"
-          fill={
+        <div
+          className="arrange title-arrange"
+        >
+          <div
+            className="fit"
+          />
+          <div
+            className="fill"
+          >
             <span
               aria-hidden={false}
               className="title"
             >
               foo
             </span>
-          }
-        >
-          <div
-            className="arrange title-arrange"
-          >
-            <div
-              className="fit"
-            />
-            <div
-              className="fill"
-            >
-              <span
-                aria-hidden={false}
-                className="title"
-              >
-                foo
-              </span>
-            </div>
-            <div
-              className="fit"
-            />
           </div>
-        </Arrange>
-      </div>
+          <div
+            className="fit"
+          />
+        </div>
+      </Arrange>
     </h2>
   </SectionHeader>
 </ThemeContextProvider>
@@ -64,28 +56,20 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
 
 exports[`SectionHeader should render a default component 1`] = `
 <h2
+  aria-label="foo"
   className="section-header"
-  tabIndex="0"
 >
-  <div
-    aria-expanded={false}
-    aria-label="foo"
-    className="arrange-wrapper"
-    role="button"
-    tabIndex="-1"
-  >
-    <Arrange
-      className="title-arrange"
-      fill={
-        <span
-          aria-hidden={false}
-          className="title"
-        >
-          foo
-        </span>
-      }
-    />
-  </div>
+  <Arrange
+    className="title-arrange"
+    fill={
+      <span
+        aria-hidden={false}
+        className="title"
+      >
+        foo
+      </span>
+    }
+  />
 </h2>
 `;
 
@@ -179,36 +163,28 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
 
 exports[`SectionHeader should render without an accordion icon when no 'onClick()' is passed 1`] = `
 <h2
+  aria-label="foo"
   class="section-header"
-  tabindex="0"
 >
   <div
-    aria-expanded="false"
-    aria-label="foo"
-    class="arrange-wrapper"
-    role="button"
-    tabindex="-1"
+    class="arrange title-arrange"
   >
     <div
-      class="arrange title-arrange"
+      class="fit"
+    />
+    <div
+      class="fill"
     >
-      <div
-        class="fit"
-      />
-      <div
-        class="fill"
+      <span
+        aria-hidden="false"
+        class="title"
       >
-        <span
-          aria-hidden="false"
-          class="title"
-        >
-          foo
-        </span>
-      </div>
-      <div
-        class="fit"
-      />
+        foo
+      </span>
     </div>
+    <div
+      class="fit"
+    />
   </div>
 </h2>
 `;

@@ -6,6 +6,11 @@
 
 * Added
   * Added console warnings for section-header.
+  
+* Changed
+  * Removed button role for non-interactive section header.
+  * Added aria-label for non-interactive section header.
+  * Updated jest snapshots due to removal of button role
 
 ## 2.58.0 - (February 15, 2023)
 
