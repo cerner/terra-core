@@ -41,6 +41,10 @@ const propTypes = {
    * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
    */
   colorClass: PropTypes.string,
+  /**
+   * The label of the Progress bar.
+   */
+  label: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
@@ -56,6 +60,7 @@ const ProgressBar = ({
   max,
   valueText,
   colorClass,
+  label,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -76,6 +81,7 @@ const ProgressBar = ({
   return (
       <>
         <VisuallyHiddenText aria-live='polite' text={valText} />
+        {label && <label>{label}</label>}
         <progress
             {...customProps}
             className={classes}
