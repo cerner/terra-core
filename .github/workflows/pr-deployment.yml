@@ -104,7 +104,7 @@ jobs:
         with:
           route: POST /repos/:repository/deployments/:deployment/statuses
           repository: ${{ github.repository }}
-          deployment: ${{ fromJson(steps.create_deployment.outputs.data).id }}
+          deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
           environment: dev
           environment_url: https://example.com
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
