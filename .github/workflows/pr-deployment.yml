@@ -4,24 +4,8 @@ on:
   pull_request:
     branches: ['main']
 jobs:
-  deploy-check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: acknowledge deployment request to commenter
-        id: check
-        uses: khan/pull-request-comment-trigger@master
-        with:
-          trigger: "/deploy"
-          reaction: rocket
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-    outputs:
-      triggered: ${{ steps.check.outputs.triggered }}
-
   deploy:
     runs-on: ubuntu-latest
-    needs: [deploy-check]
-    if: needs.deploy-check.outputs.triggered == 'true'
     steps:
       - name: get issue from comment
         id: get-issue
