@@ -116,7 +116,7 @@ jobs:
       - name: deploy the pull request
         run: |
           # deployment logic goes here
-          npm run compile -- --output-path build
+          npm run compile:prod
           npm run start-heroku
 
       - name: set deployment status to success
