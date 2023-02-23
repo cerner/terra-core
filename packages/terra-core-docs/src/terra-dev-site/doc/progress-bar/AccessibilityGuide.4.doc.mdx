@@ -1,0 +1,114 @@
+import { Badge } from 'terra-divider/package.json?dev-site-package';
+import ProgressBarExampleAccess from './example/ProgressBarExampleAccess'
+
+<Badge />
+
+# Terra Progress Bar Accessibility Guide
+
+## Why the accessibility of Progress Bar is important
+
+> Because Progress Bar is a component that helps users understand the status of a process or activity users must understand, it is critical that each progress bar be implemented correctly to be accessible to all users. Users with color blindness or low vision may not perceive the progress bar status if the colors don’t have enough contrast to be seen against each other or the background color. Non-sighted users require programmatic context to be conveyed by the screen reader; without that context, the user cannot understand the status.
+
+## Accessibility Considerations
+
+### Code Considerations: What do engineers need to do?
+
+<div aria-label="Example Demo">
+    <ProgressBarExampleAccess />
+</div>
+
+> ```jsx
+> const ProgressBarExampleAccess = () => (
+>   <div>
+>      <Card>
+>        <Card.Body>
+>          <ProgressBar  value={15} label="Progress bar: 15%" valueText="Progress is 15%"  />
+>        </Card.Body>
+>      </Card>
+>    </div>
+>  );
+> ```
+
+-  Work with content creators to understand if any extra programmatic context is required when implanting the progress bar.
+  - If words that describe the purpose of the progress bar are also added, ensure the progress bar is programmatically associated to the content. (PROVIDE EXAMPLE)
+-  If no other text is used visually on the page to describe the content, work with the content creator to understand what text to use as the programmatic label to ensure proper context can be communicated to assistive technology users. (PROVIDE EXAMPLE)
+  - Do not override the implicit or explicit role of the progress bar as implemented by Terra.
+
+### Content Considerations: What do content creators need to do?
+
+-  Ensure the progress bar has a descriptive label that describes what the status is related to.
+  -	Convey to the engineer the programmatic label for the engineer to use so the progress bar can communicate what is loading or what the status is related to.
+  -	After coded, check the code with a screen reader to ensure what is read by the screen reader conveys the proper context of the situation. Think about if you couldn’t see what was happening on screen, with what was communicated by the screen reader would it be enough for you to understand?
+-  Consider how content will adjust to resizing text or reflowing content at different viewpoints. Users may have settings that change the font size, style, or other text attributes. They may also resize a window or zoom into the content. All these things can cause content to resize or reflow, and when it does, content must not overlap, be cut off, or become unusable.
+-  Ensure all content is perceivable by meeting all the color contrast requirements.
+  - Ensure the colors used for both parts of the progress bar meet the 3:1 color contrast ratio between each other and the background the progress bar appears on or provide the value as text on the page with the progress bar.
+  - Ensure the color of any text presented with the progress bar (e.g., the current status or value, the visual label that describes the purpose of the progress bar) meets the proper contrast ratio against the background it appears on based upon the size of the text.
+  - Ensure color is not the only way meaning is conveyed.
+-  After development, ensure the progress bar and its content is keyboard accessible and works as expected.
+  - Ensure text resizes and reflows without losing content or functionality when users alter their view through different methods (e.g., increasing font sizes, zooming in or out of the page, or changing their viewport).
+
+## Usability Expectations
+
+### Interaction Detail
+
+Terra Progress bar is not interactable.
+
+### Keyboard Expectations
+
+Because Terra Progress bar is not interactable, it does not get tab focus.
+
+| Key/Sequence              | Description                                                                                                                        |
+|---------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| **Arrow keys**            | Moves focus on and off the progress bar. User expects elements to receive keyboard focus in the logical reading order of the page. |
+
+## Support Compliance
+
+### How does Progress Bar support compliance?
+
+Terra is committed to ensuring its components provide the maximum possible accessibility. Terra provides the ability to make accessibility products. However, using Terra components will not automatically make a product accessible.
+The final responsibility lies with the consumers of Terra components — ensuring proper usage, programmatic context where needed, the words used to label elements, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance — to make a product fully accessible.
+
+### Primary accessibility criteria for Progress Bar
+
+- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) — Supports
+  - Terra provides a basic label for the progress bar to ensure the programmatic context of the progress bar and the current state of the progress bar.
+  - Engineers must provide a text value that reflects the purpose of the progress bar and ensure it accurately reflects the current state.
+  - Content creators should provide the engineers with text reflecting the progress bar’s purpose. For instance, if the progress bar is related to the status of a particular file loading, the content creator should instruct the engineer to use the name of the file so users can understand that the progress bar indicates the status of how much of the file has loaded.
+    - In addition to the progress bar, consider including text that presents the progress bar's description and current value.
+    - If visual text is added to the progress bar, the additional programmatic label may not be needed.
+  - Ensure the colors used for both bars within the progress bar meet the 3:1 contrast ratio against each other and the background they appear on.
+- [1.4.1 Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) – Does Not Support
+  - Terra Progress Bar alone does not support the use of color because it conveys the progress using only color, and the default colors don't meet the 3:1 contrast ratio and does not have text that supports the current value.
+  - Engineers must work with content creators and implement colors that meet the 3:1 color contrast ratio between each other and the backgrounds the progress bar appears on or provide the value as text on the page with the progress bar.
+  - Content creators should design progress bars that include text that presents the progress bar's current value or ensure the foreground and background colors meet the 3:1 contrast ratio against each other and the background they appear on.
+- [1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) – Does Not Support
+  - Terra progress bar does not currently support non-text contrast but will be remediated in future iterations.
+  - Engineers must work with content creators to implement progress bars with colors that meet the 3:1 non-text contrast ratio threshold.
+  - Content creators must implement progress bars with colors that meet the 3:1 non-text contrast ratio threshold to ensure both the progress bar and the static full percentage bar can meet 3:1 against their background color and each other. To ensure the content and progress can be understood, incorporate text with the progress bar that can be easily perceived and understood.
+  - Primary
+- [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG21/Understanding/status-messages) – Supports
+  - Terra provides the ability for consuming teams to add programmatically knowable status messages.
+  - Engineers must ensure any status messages are implemented correctly to ensure programmatic availability
+
+### Related accessibility criteria that apply when adding content to Progress Bar
+- [1.4.10 Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) — Supports
+  - Terra Progress bar supports the ability for content to reflow without loss of content or function.
+  - Engineers should work with content creators to understand how content will reflow at different sizes and viewports. Ensure code allows for content to reflow without loss of content or function when zoomed in at 400%.
+  - Content creators should consider and convey to engineers how content resizes and reflows at different sizes and viewports to ensure content is not lost or become unusable.
+- [1.4.4 Resize text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) – Supports
+  - Terra Progress bar supports the ability to resize the text without losing function.
+  - Engineers must not implement artificial height constraints that could prevent text from resizing unexpectedly, making content unusable or losing functionality.
+  -	Content creators should consider how content resizes and reflows at different sizes and viewports.
+- [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) – Supports
+  - Terra provides property to set the name, sets the role, and value of the progress bar.
+  - Engineers must ensure the value conveyed is accurate via the screen reader.
+
+### Supported Features and Technology
+- Keyboard Interactions
+- JAWS Support with Chrome (PC)
+- VoiceOver Support with Chrome, Safari (MAC)
+
+## Linked References:
+1.	[W3C WAI Aria: Use heading to convey meaning and structure](https://www.w3.org/WAI/tips/writing/#use-headings-to-convey-meaning-and-structure)
+2.	[Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/Understanding/)
+3. [Report a problem with this component on GitHub](https://github.com/cerner/terra-core/issues/new/choose)
