@@ -74,7 +74,7 @@ jobs:
         env:
           TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY: ${{ secrets.TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY }}
           TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID: "144458769"
-          TERRA_DEV_SITE_PUBLIC_PATH: /terra-graphs/
+          TERRA_DEV_SITE_PUBLIC_PATH: /terra-core/
         run: npm run compile:prod
       - name: Release
         run: npx terra release
