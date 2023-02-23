@@ -24,7 +24,7 @@ const ProgressBarDefault = () => {
 
     return (
         <>
-            <ProgressBar id="progressbar" value={val} label="Progress bar" valueText={`Progress is ${val}%`}/>
+            <ProgressBar id="progressbar" value={val} label={`Progress bar: ${val}%`} valueText={`Progress is ${val}%`}/>
             <br/>
             <Button text='Start' onClick={start}/>
             &nbsp;
