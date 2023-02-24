@@ -125,11 +125,11 @@ class SectionHeader extends React.Component {
     );
 
     const arrangeComp = (
-        <Arrange
-            fitStart={onClick && accordionIcon}
-            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
-            className={cx('title-arrange')}
-        />
+      <Arrange
+        fitStart={onClick && accordionIcon}
+        fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
+        className={cx('title-arrange')}
+      />
     );
 
     const sectionHeaderClassNames = classNames(
@@ -163,20 +163,20 @@ class SectionHeader extends React.Component {
 
     if (onClick) {
       return (
-          <Element {...attributes} className={sectionHeaderClassNames}>
-            <div role="button" aria-expanded={isOpen} tabIndex="-1" aria-label={headerText} className={cx('arrange-wrapper')}>
-              {arrangeComp}
-            </div>
-          </Element>
-      );
-    }
-    else {
-      return (
-          <Element {...attributes} className={sectionHeaderClassNames} aria-label={headerText}>
+        <Element {...attributes} className={sectionHeaderClassNames}>
+          <div role="button" aria-expanded={isOpen} tabIndex="-1" aria-label={headerText} className={cx('arrange-wrapper')}>
             {arrangeComp}
-          </Element>
+          </div>
+        </Element>
       );
     }
+
+    return (
+      <Element {...attributes} className={sectionHeaderClassNames} aria-label={headerText}>
+        {arrangeComp}
+      </Element>
+    );
+
     /* eslint-enable jsx-a11y/no-static-element-interactions */
   }
 }
