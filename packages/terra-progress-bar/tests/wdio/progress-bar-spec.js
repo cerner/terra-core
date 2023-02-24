@@ -1,5 +1,5 @@
 Terra.describeViewports('Progress Bar', ['medium'], () => {
-  it('should display default Progress Bar', () => {
+  it('should display default Progress Bar with label', () => {
     browser.url('/raw/tests/cerner-terra-core-docs/progress-bar/progress-bar-default');
 
     Terra.validates.element('default');
