@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import styles from './ProgressBar.module.scss';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
+import styles from './ProgressBar.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
@@ -44,7 +44,7 @@ const propTypes = {
   /**
    * The label of the Progress bar.
    */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
 };
 
 const defaultProps = {
@@ -76,24 +76,24 @@ const ProgressBar = ({
   );
 
   const normalizedValue = (value / max) * 100;
-  const valText = valueText || `${normalizedValue}%`
+  const valText = valueText || `${normalizedValue}%`;
 
   return (
-      <>
-        <VisuallyHiddenText aria-live='polite' text={valText} />
-        {label && <label>{label}</label>}
-        <progress
-            {...customProps}
-            className={classes}
-            max={100}
-            value={normalizedValue}
-            aria-valuemax={100}
-            aria-valuemin={0}
-            aria-valuenow={normalizedValue}
-            aria-valuetext={valText}
-            tabIndex="-1"
-        />
-      </>
+    <div>
+      <VisuallyHiddenText aria-live="polite" text={valText} />
+      {label && <label>{label}</label>}
+      <progress
+        {...customProps}
+        className={classes}
+        max={100}
+        value={normalizedValue}
+        aria-valuemax={100}
+        aria-valuemin={0}
+        aria-valuenow={normalizedValue}
+        aria-valuetext={valText}
+        tabIndex="-1"
+      />
+    </div>
   );
 };
 
