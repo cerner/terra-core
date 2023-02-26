@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+* Added
+  * Added `text` prop as a replacement of `title` prop to avoid confusion with HTML attribute `title`.
+  * Added Ally labels for action header navigation buttons.
+  * Added translations for back, next and previous button.
+
 ## 2.77.0 - (February 16, 2023)
 
 * Changed

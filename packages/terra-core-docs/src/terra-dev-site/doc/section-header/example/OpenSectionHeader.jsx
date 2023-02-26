@@ -7,6 +7,6 @@ const sectionHeaderProps = {
   onClick: () => {},
 };
 
-const OpenSectionheader = () => <SectionHeaderExampleTemplate title="Open Section Header" exampleProps={sectionHeaderProps} />;
+const OpenSectionheader = () => <SectionHeaderExampleTemplate text="Open Section Header" exampleProps={sectionHeaderProps} />;
 
 export default OpenSectionheader;

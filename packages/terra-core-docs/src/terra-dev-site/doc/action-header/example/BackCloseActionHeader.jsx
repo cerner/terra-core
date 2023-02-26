@@ -6,9 +6,10 @@ const ActionHeaderExample = () => (
   <div>
     <br />
     <ActionHeader
-      title="Back Close Action Header"
+      text="Back Close Action Header"
       onClose={() => alert('You clicked close!')}
       onBack={() => alert('You clicked back!')}
+      backButtonA11yLabel="Show Back Alert"
     />
     <br />
   </div>

@@ -4,7 +4,7 @@ import ActionHeader from 'terra-action-header/lib/ActionHeader';
 
 const ActionHeaderExample = () => (
   <ActionHeader
-    title="Previous Enabled Next Disabled Action Header"
+    text="Previous Enabled Next Disabled Action Header"
     onPrevious={() => alert('You clicked previous!')}
   />
 );

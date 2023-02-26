@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated action-header examples to include A11y labels.
+
 ## 1.22.0 - (February 16, 2023)
 
 * Changed
