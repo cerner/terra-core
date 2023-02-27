@@ -107,20 +107,20 @@ Terra.describeViewports('Button Group', ['huge'], () => {
     it('should navigate to the second button', () => {
       browser.keys('Tab');
       browser.keys('ArrowRight');
-
+      browser.pause(300);
       Terra.validates.element('Button-2 focused');
     });
 
     it('should navigate to the third button', () => {
       browser.keys('ArrowRight');
-
+      browser.pause(300);
       Terra.validates.element('Button-3 focused');
     });
 
     it('should navigate to the first button', () => {
       browser.keys('ArrowLeft');
       browser.keys('ArrowLeft');
-
+      browser.pause(300);
       Terra.validates.element('Button-1 focused');
     });
   });
