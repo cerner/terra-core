@@ -51,15 +51,15 @@ The screen reader user will hear something like: <samp> Show Alert: Button </sam
 
 ```jsx
 import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
-import Button, { IconTypes } from 'terra-button';
+import Button from 'terra-button';
 
 const Icon = <IconPrinter a11yLabel="Print" />;
 const DecorativeIcon = <IconPrinter />;
 
   <div>
-    <Button icon={Icon} isIconOnly iconType={IconTypes.INFORMATIVE} />
-    <Button icon={Icon} text="All Documents" iconType={IconTypes.INFORMATIVE} /> 
-    <Button icon={DecorativeIcon} iconType={IconTypes.DECORATIVE} text="Print" />
+    <Button icon={Icon} text="Print Icon Button" isIconOnly className={cx('button')} />
+    <Button icon={Icon} text="All Documents" className={cx('button')} />
+    <Button icon={DecorativeIcon} text="Print" className={cx('button')} />
   </div>
 ```
 

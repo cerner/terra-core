@@ -7,6 +7,9 @@
   * Added Ally labels for action header navigation buttons.
   * Added translations for back, next and previous button.
 
+* Changed
+  * Updated jest snapshots for button changes.
+
 ## 2.77.0 - (February 16, 2023)
 
 * Changed

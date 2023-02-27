@@ -4,6 +4,10 @@
 
 * Changed
   * Updated action-header examples to include A11y labels.
+  * Updated `terra-button-group` tests and examples.
+
+* Added
+  * Added accessibility guide for `terra-button-group`.
 
 ## 1.22.0 - (February 16, 2023)
 

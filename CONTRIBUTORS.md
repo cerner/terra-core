@@ -89,6 +89,7 @@ Cerner Corporation
 - Jackson Nowotny [@JacksonJN]
 - Manjuraghavendra Sathrasala [@manjusr]
 - Saurabh Khare [@saurabhkhare86]
+- Chetan Sharma [@cschetan77]
 
 Community
 
