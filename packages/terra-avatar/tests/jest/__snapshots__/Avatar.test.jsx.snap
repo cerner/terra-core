@@ -2,45 +2,104 @@
 
 exports[`Avatar correctly applies the theme context className 1`] = `
 <ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   theme={
     Object {
       "className": "orion-fusion-theme",
     }
   }
 >
-  <Avatar
+  <InjectIntl(Avatar)
     alt="user"
-    color="auto"
     initials="JS"
-    isAriaHidden={false}
-    isDeceased={false}
   >
-    <div
-      className="avatar one orion-fusion-theme"
+    <Avatar
+      alt="user"
+      color="auto"
+      initials="JS"
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      isAriaHidden={false}
+      isDeceased={false}
     >
-      <span
-        alt="user"
-        aria-hidden={false}
-        aria-label="user"
-        className="initials"
-        role="img"
+      <div
+        className="avatar one orion-fusion-theme"
       >
-        JS
-      </span>
-    </div>
-  </Avatar>
+        <span
+          alt="user"
+          aria-hidden={false}
+          aria-label="user"
+          className="initials"
+          role="img"
+        >
+          JS
+        </span>
+      </div>
+    </Avatar>
+  </InjectIntl(Avatar)>
 </ThemeContextProvider>
 `;
 
 exports[`Avatar should render a default avatar 1`] = `
 <div
-  class="avatar one"
+  className="avatar one"
 >
   <span
     alt="user"
-    aria-hidden="false"
+    aria-hidden={false}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     JS
@@ -50,13 +109,13 @@ exports[`Avatar should render a default avatar 1`] = `
 
 exports[`Avatar should render an avatar with an automated color variant, based on a hashValue 1`] = `
 <div
-  class="avatar two"
+  className="avatar two"
 >
   <span
     alt="user"
-    aria-hidden="false"
+    aria-hidden={false}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     JS
@@ -66,13 +125,13 @@ exports[`Avatar should render an avatar with an automated color variant, based o
 
 exports[`Avatar should render an avatar with color variant netural 1`] = `
 <div
-  class="avatar neutral"
+  className="avatar neutral"
 >
   <span
     alt="user"
-    aria-hidden="false"
+    aria-hidden={false}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     JS
@@ -82,13 +141,13 @@ exports[`Avatar should render an avatar with color variant netural 1`] = `
 
 exports[`Avatar should render an avatar with color variant one 1`] = `
 <div
-  class="avatar one"
+  className="avatar one"
 >
   <span
     alt="user"
-    aria-hidden="false"
+    aria-hidden={false}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     JS
@@ -98,14 +157,14 @@ exports[`Avatar should render an avatar with color variant one 1`] = `
 
 exports[`Avatar should render an avatar with custom props 1`] = `
 <div
-  class="avatar one"
+  className="avatar one"
   id="custom props avatar"
 >
   <span
     alt="user"
-    aria-hidden="false"
+    aria-hidden={false}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     JS
@@ -115,13 +174,13 @@ exports[`Avatar should render an avatar with custom props 1`] = `
 
 exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
 <div
-  class="avatar one"
+  className="avatar one"
 >
   <span
     alt="user"
-    aria-hidden="true"
+    aria-hidden={true}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     JJ
@@ -131,14 +190,18 @@ exports[`Avatar should render an avatar with initials and aria hidden 1`] = `
 
 exports[`Avatar should render an avatar with provided size 1`] = `
 <div
-  class="avatar one"
-  style="font-size:5em"
+  className="avatar one"
+  style={
+    Object {
+      "fontSize": "5em",
+    }
+  }
 >
   <span
     alt="user"
-    aria-hidden="false"
+    aria-hidden={false}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     JS
@@ -148,13 +211,13 @@ exports[`Avatar should render an avatar with provided size 1`] = `
 
 exports[`Avatar should render an isDeceased avatar 1`] = `
 <div
-  class="avatar one is-deceased"
+  className="avatar one is-deceased"
 >
   <span
-    alt="user"
-    aria-hidden="false"
-    aria-label="user"
-    class="initials"
+    alt="user, Terra.avatar.deceased"
+    aria-hidden={false}
+    aria-label="user, Terra.avatar.deceased"
+    className="initials"
     role="img"
   >
     JS
@@ -164,55 +227,67 @@ exports[`Avatar should render an isDeceased avatar 1`] = `
 
 exports[`Avatar should render fallback initials when invalid image is passed in with initials 1`] = `
 <div
-  class="avatar five image"
+  className="avatar five image"
 >
-  <img
+  <Image
     alt="placeholder"
-    class="image cover default hidden image"
+    className="image"
+    fit="cover"
+    isFluid={false}
+    onError={[Function]}
+    placeholder={
+      <span
+        alt="placeholder"
+        aria-hidden={false}
+        aria-label="placeholder"
+        className="initials"
+        role="img"
+      >
+        JD
+      </span>
+    }
     src="https://path/to/invalid_image.jpg"
+    variant="default"
   />
-  <span
-    alt="placeholder"
-    aria-hidden="false"
-    aria-label="placeholder"
-    class="initials"
-    role="img"
-  >
-    JD
-  </span>
 </div>
 `;
 
 exports[`Avatar should render image avatar when image is passed in 1`] = `
 <div
-  class="avatar five image"
+  className="avatar five image"
 >
-  <img
+  <Image
     alt="placeholder"
-    class="image cover default hidden image"
+    className="image"
+    fit="cover"
+    isFluid={false}
+    onError={[Function]}
+    placeholder={
+      <span
+        alt="placeholder"
+        aria-hidden={false}
+        aria-label="placeholder"
+        className="initials"
+        role="img"
+      >
+        JS
+      </span>
+    }
     src="test-file-stub"
+    variant="default"
   />
-  <span
-    alt="placeholder"
-    aria-hidden="false"
-    aria-label="placeholder"
-    class="initials"
-    role="img"
-  >
-    JS
-  </span>
 </div>
 `;
 
 exports[`Avatar should render one initial avatar when one initial is passed in 1`] = `
 <div
-  class="avatar one"
+  className="avatar one"
 >
   <span
     alt="user"
-    aria-hidden="false"
+    aria-hidden={false}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     J
@@ -222,13 +297,13 @@ exports[`Avatar should render one initial avatar when one initial is passed in 1
 
 exports[`Avatar should render two initials avatar when more than two initials are passed in 1`] = `
 <div
-  class="avatar one"
+  className="avatar one"
 >
   <span
     alt="user"
-    aria-hidden="false"
+    aria-hidden={false}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     JJ
@@ -238,13 +313,13 @@ exports[`Avatar should render two initials avatar when more than two initials ar
 
 exports[`Avatar should render two initials avatar when two initials are passed in 1`] = `
 <div
-  class="avatar one"
+  className="avatar one"
 >
   <span
     alt="user"
-    aria-hidden="false"
+    aria-hidden={false}
     aria-label="user"
-    class="initials"
+    className="initials"
     role="img"
   >
     JS

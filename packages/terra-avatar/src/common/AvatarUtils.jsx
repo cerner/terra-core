@@ -69,12 +69,23 @@ const generateImagePlaceholder = (avatarParams) => {
 };
 
 /**
+ * Appends deceased text based on alt
+ */
+
+const appendDeceased = (alt, initials, intl) => {
+  const deceasedText = intl.formatMessage({ id: 'Terra.avatar.deceased' });
+  return alt === '' ? `${initials}, ${deceasedText}` : `${alt}, ${deceasedText}`;
+};
+
+/**
  * Render placeholder.
  */
 const generateInitials = (avatarParams) => {
   const {
-    alt, initials, isAriaHidden,
+    initials, isAriaHidden, isDeceased, intl,
   } = avatarParams;
+
+  const alt = isDeceased ? appendDeceased(avatarParams.alt, initials, intl) : avatarParams.alt;
   const avatarTextClassNames = cx('initials');
   return <span className={avatarTextClassNames} role="img" alt={alt} aria-label={alt} aria-hidden={isAriaHidden}>{initials.toUpperCase()}</span>;
 };
@@ -84,8 +95,10 @@ const generateInitials = (avatarParams) => {
  */
 const generateImage = (avatarParams) => {
   const {
-    alt, image, variant, handleFallback,
+    initials, image, variant, handleFallback, isDeceased, intl,
   } = avatarParams;
+
+  const alt = isDeceased ? appendDeceased(avatarParams.alt, initials, intl) : avatarParams.alt;
   const icon = (variant === AVATAR_VARIANTS.USER) ? generateInitials(avatarParams) : generateImagePlaceholder(avatarParams);
   return <TerraImage className={cx('image')} src={image} placeholder={icon} alt={alt} onError={handleFallback} fit="cover" />;
 };

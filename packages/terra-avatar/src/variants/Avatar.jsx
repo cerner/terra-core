@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import { injectIntl } from 'react-intl';
 import styles from '../common/Avatar.module.scss';
 import {
   AVATAR_VARIANTS, generateInitials, generateImage, setColor,
@@ -11,6 +12,11 @@ import {
 const cx = classNamesBind.bind(styles);
 
 const propTypes = {
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
   /**
    * Specifies the alternative text for the image.
    */
@@ -81,6 +87,7 @@ class Avatar extends React.Component {
       isAriaHidden,
       isDeceased,
       size,
+      intl,
       ...customProps
     } = this.props;
 
@@ -90,6 +97,8 @@ class Avatar extends React.Component {
     const avatarParams = {
       image,
       alt,
+      intl,
+      isDeceased,
       isAriaHidden,
       variant: AVATAR_VARIANTS.USER,
       handleFallback: this.handleFallback,
@@ -130,4 +139,4 @@ Avatar.propTypes = propTypes;
 Avatar.defaultProps = defaultProps;
 Avatar.contextType = ThemeContext;
 
-export default Avatar;
+export default injectIntl(Avatar);
