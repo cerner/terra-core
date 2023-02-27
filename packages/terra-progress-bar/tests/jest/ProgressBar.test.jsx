@@ -29,8 +29,8 @@ it('should render a ProgressBar component with default heightSize 50% fill and c
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a ProgressBar component with default heightSize 50% fill and label and valueText', () => {
-  const wrapper = shallow(<ProgressBar value={5} valueText="Progress is 6%" max={10} label="Progress bar: %6" />);
+it('should render a ProgressBar component with default heightSize 50% fill and valueText', () => {
+  const wrapper = shallow(<ProgressBar value={5} valueText="Progress is 6%" max={10} />);
   expect(wrapper).toMatchSnapshot();
 });
 

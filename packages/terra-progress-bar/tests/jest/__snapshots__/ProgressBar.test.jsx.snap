@@ -61,15 +61,12 @@ exports[`should render a ProgressBar component with default heightSize 50% fill 
 </div>
 `;
 
-exports[`should render a ProgressBar component with default heightSize 50% fill and label and valueText 1`] = `
+exports[`should render a ProgressBar component with default heightSize 50% fill and valueText 1`] = `
 <div>
   <VisuallyHiddenText
     aria-live="polite"
     text="Progress is 6%"
   />
-  <label>
-    Progress bar: %6
-  </label>
   <progress
     aria-valuemax={100}
     aria-valuemin={0}
