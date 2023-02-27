@@ -1,0 +1,216 @@
+import { Badge } from 'terra-button-group/package.json?dev-site-package';
+import { Notice } from "@cerner/terra-docs";
+import Whitespace from "../../common/layout-helpers/Whitespace";
+import SingleSelect from "./example/ButtonGroupSingleSelect";
+import MultiSelect from "./example/ButtonGroupMultiSelect";
+import IconGroup from "./example/ButtonGroupA11yIcon";
+
+<Badge />
+
+# Accessibility Guide for Terra Button group
+
+## Why the accessibility of Terra Button group?
+
+The button group component is a group of buttons that allow users to manage content within the page view. If button group is not accessible, it can cause confusion for the user, or worse, prevent the users from interacting with the product. Therefore, it is critical that a button group is implemented correctly to ensure all users can use the button group regardless of how they may interact with it.
+
+## Accessibility Considerations
+
+### Code Considerations
+
+- Ensure all buttons within the button group receive keyboard focus and can be interacted with only the keyboard.   
+  - Do NOT override keyboard focus state or use a TABINDEX greater than zero.  
+  -	Button group should be coded in the users logical reading order of the page to ensure a meaningful experience.
+- Ensure the user can intuitively understand and perceive the selected state from the unselected state.
+
+<Notice variant="important" ariaLevel="4">
+
+**Accessibility Guidance: Users must be able to differentitate selected and unselected buttons**
+
+**Single Select variant**
+
+<div aria-label="Example demo">
+    <SingleSelect />
+</div>
+
+```jsx
+      <ButtonGroup
+        id="controlled-button-group"
+        onChange={this.handleSelection}
+        selectedKeys={this.state.selectedKey}
+      >
+        <ButtonGroup.Button text="Dust Allergy" key="single-select1" />
+        <ButtonGroup.Button text="Food Allergy" key="single-select2" />
+        <ButtonGroup.Button text="Pet Allergy" key="single-select3" />
+      </ButtonGroup>
+```
+**Multi Select variant**
+
+<div aria-label="Example demo">
+    <MultiSelect />
+</div>
+
+```jsx
+      <ButtonGroup
+        id="button-group-multi-select"
+        onChange={this.handleSelection}
+        selectedKeys={this.state.selectedKeys}
+        isMultiSelect
+      >
+        <ButtonGroup.Button text="Dust Allergy" key="multi-select1" />
+        <ButtonGroup.Button text="Food Allergy" key="multi-select2" />
+        <ButtonGroup.Button text="Pet Allergy" key="multi-select3" />
+      </ButtonGroup>
+```
+
+**Accessibility Guidance: Ensure any button with a meaningful icon has an accessible name assigned to the icon**
+
+<div aria-label="Example demo">
+    <IconGroup />
+</div>
+
+```jsx
+const iconPrint = <IconPrinter a11yLabel="Print" />;
+const iconSave = <IconSave a11yLabel="Save" />;
+
+const ButtonGroupA11yIcon = () => (
+  <ButtonGroup>
+    <ButtonGroup.Button text="Print Documents" icon={iconPrint} key="print" />
+    <ButtonGroup.Button text="Save Documents" icon={iconSave} key="save" />
+  </ButtonGroup>
+```
+</Notice>
+
+- Ensure all meaningful information that is presented visually is programmatically available to the assistive technology.
+  - All buttons within the button group must have an accessible name (button label) which is descriptive of the purpose.
+  - The visual label of the button must match the programmatic accessible name.
+- Because Button groups are used to control content on the page, they must either have a programmatic association to a visible label on the page or assigned an accessible name for the button group.
+  - Button groups within a Toolbar will automatically provide the proper context.
+
+### Content Considerations
+
+- Provide instructions when it is not clear to the user what a button control is for or what they should expect to do with it.
+- Must provide engineers with a meaningful and descriptive labels that conveys each button’s purpose.
+- Must convey to engineers the Button group label: 
+  - Is it text on the page or is it a visually hidden text? 
+  - Visually hidden text must be intuitive for sighted users to understand, otherwise the text should be on the page and in proximity to the button group.
+- When implementing button group do not override default theme colors of button group to ensure the button group be easily perceived against its background color. 
+  - If changing the default colors, the text color must meet a minimum contrast ratio against the background color. See WCAG [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) and [1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) for more information.  
+  - Not everyone perceives color so never use color as the only way to convey meaning within the interface. Always provide both color and text or a shape together to represent the meaning.
+- Ensure the engineers understand the logical reading order of the page.
+- Ensure button group always meet the user’s expectations.
+  - Never add unexpected behaviors to button group that could cause a change of context on focus or on activation of the button group.
+  - Ensure all buttons perform the action on the up event
+- After coded, ensure all interactable elements receive keyboard focus in the users reading order and display a visible keyboard focus. Ensure the keyboard user does not get “trapped” somewhere on the page preventing them from the entire workflow.
+
+
+## Usability Expectations
+
+- User expects to understand what the button group will control.
+- User expects each button within the group to have a unique and descriptive label that clearly communicates what action will be performed when selected.
+- User expects to be able to tab to a button group and one of the buttons receive visible focus.
+- User expects to see and understand when a button is selected.
+  - If the button group can have multiple selected buttons, the user expects to be see and understand which buttons are selected and unselected.
+- If the Button state is changed, the user expects to be informed (audibly or visually) of the new state.
+  - User expects the changing of button states to result in instantaneous feedback. They do not expect to take further action to save the setting change. 
+- User expects all icons with the same functionality to be consistently identified by the same name.
+  - User also expects icons to be intuitive and to be used consistently across a product.
+
+### Interaction Details
+
+- Mouse users expect the cursor to change to a hand with pointing finger when the Button group is hovered. 
+- Keyboard only users expect to see a visible keyboard focus indicator when a button within the button group is in focus.
+
+### Keyboard Navigation
+
+When in focus a button group must have a visible keyboard focus. Additionally, sighted, and unsighted users have basic keyboard navigation expectations:
+
+| Key/Sequence | Description |
+|---|---|
+|**Tab**| Moves to the button group and one of the buttons in that group receive focus. User expects elements to receive focus in the logical reading order of the page. |
+|**Left/Right**| Moves to navigate through the button group element. |
+|**Enter/Return/Spacebar**| Executes the selected button action. |
+
+## Support Compliance
+
+### Primary Criteria
+
+- [1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html) – Supports
+  - Terra provides the ability to use icons inside a button group.
+  - Engineers must ensure when an icon conveys meaning, to add appropriate ALT text to create a meaningful button label.
+  -	Content creators must provide engineers with meaningful text when using icons that convey meaning.
+
+- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) — Supports
+  -	Terra provides the ability for information, structure, and relationships to be programmatically determined.
+  -	Engineers must ensure any visual relationship with a button group that conveys meaning must programmatically set associations to the content for visual relationships to be understood by assistive technology users.  
+  -	Content creators must provide the meaningful button label that communicates what users should expect when the button is activated. Must also express to the engineer any visual relationships of a button group to other content for them to ensure engineers can programmatically convey the visual relationships. 
+
+- [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) — Supports
+  -	Terra provides the ability for all interactable elements to receive focus, be interacted with, and be acted upon via keyboard.
+  -	Engineers must ensure that all interactable elements can receive focus, be interacted with, and are able to be acted upon using the keyboard. 
+  -	Content creators must ensure that all interactable elements can receive focus, be interacted with, and are able to be acted upon using the keyboard.
+
+- [2.4.6 Headings and Labels](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html) — Supports
+  -	Terra provides the ability to create labels that are descriptive of their purpose.
+  -	Engineers must implement meaningful text for labels to accurately describe their purpose.
+  -	Content creators are responsible for providing the unique label that describes the purpose of each button within a button group.
+
+- [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) — Supports
+  -	Terra provides the ability for actionable elements to receive visual focus.
+  -	Engineers must ensure a visible keyboard focus is maintained on all interactive elements.
+  -	Content creators must not override Keyboard Focus styles.
+
+- [2.5.3 Label in Name](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html) — Supports 
+  -	Terra provides the ability for programmatic labels to match visual labels.
+  -	Engineers must ensure the programmatic label matches the visual labels when for each button within the button group.
+  -	Ensure the visible label for each button within the group the each is unique and describes the purpose of the button group so it can be understood by the user out of context. 
+  -	Work with engineers to ensure the visible label matches the programmatic label with each button.
+
+- [4.1.2 Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) — Supports
+  -	Terra provides the ability for Name, Role, and Value attributes to be programmatically determined.
+  -	Engineers must not override the implicit or explicit role of any button within the button group and must implement the button labels.
+
+### Secondary Criteria
+
+- [1.3.2 Meaningful Sequence](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html) — Supports 
+  -	Terra button group provides the ability for components to be presented in the order in which they are coded.
+  -	Engineers must ensure content order is meaningful and logical. If there is a visual presentation of content that is important for the user to understand, that must be available programmatically.
+  -	Content creator must ensure content is read in a meaningful and logical order so as to not lose context.
+
+- [1.4.10 Reflow](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) — Supports
+  -	Terra provides the ability for components to reflow when the viewport is resized to 320x256 px without loss of information or function.
+  -	Engineers must ensure content within Terra Button group can reflow when the viewport is resized to 320 x 256 px without scrolling in two directions or loss of information or functionality.
+  -	Content creators must consider the responsive nature of Terra Button group and provide engineers guidance on how content should reflow when the viewport is resized to 320 x 256 px.
+
+- [1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) — Supports
+  -	Terra provides components that, by default, meet color contrast requirements.
+  -	Content creators must ensure any graphical elements used within Action Header that convey information meets a 3:1 color contrast ratio against whatever color background Button groups may appear upon.
+
+- [1.4.3 Contrast (Minimum)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html) — Supports
+  -	Terra button group provides components that, by default, meet color contrast requirements.
+  -	Engineers must work with content creators to implement button group so that button group text (visual label) color and the background color meet appropriate color contrast ratios. 
+  -	Content creators must ensure that the button group text color meets the appropriate contrast ratio against background color(s) based on text size of the visual label text if colors are changed. Contrast ratios should be above 4.5:1 for normal text and 3:1 for bold and large text.
+
+- [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html) — Supports
+  -	Terra provides the ability for actionable components to receive focus in the order they are coded.
+  -	Engineers must ensure that the focus order is expected and preserves page meaning. Code order should follow the logical reading order of the user. Though a TABINDEX attribute should not be required to ensure keyboard use, if used, never use TABINDEX higher than 0. 
+  -	Content creators should convey to the engineers the logical reading order of the page.
+
+- [2.5.2 Pointer Cancellation](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html) — Supports
+  -	Terra components use the up event to perform actions.
+  -	Engineers must ensure actionable controls always activate on the up event.
+
+- [3.2.1 On Focus](https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html) — Supports
+  -	Terra components do not cause a change of context on focus by default.
+  -	Engineers must ensure that no unexpected change of context happens when interactive elements receive focus.
+  -	Content creators must inform engineers that button group should not cause any change when a button receives focus.
+
+- [3.2.4 Consistent Identification](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification) — Supports
+  -	Terra provides the ability for elements to be consistently identified.
+  -	Engineers must ensure that elements used for the same function are identified consistently.
+  -	Content creators must ensure any icons used are used to represent the same function consistently. Additionally, the alternate content used to describe icons must be consistent for users to understand their function predictably.
+
+- [4.1.1 Parsing](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html) — Supports
+  -	Terra components are tested and validated before release to ensure proper code parsing.
+  -	Engineers must ensure their code is valid HTML.
+
+[Report a problem with this component on GitHub](https://github.com/cerner/terra-core/issues/new/choose)

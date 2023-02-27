@@ -84,6 +84,28 @@ it('should select a button', () => {
   expect(buttonGroup).toMatchSnapshot();
 });
 
+it('should apply correct role for multiSelect button group', () => {
+  const onChange = jest.fn();
+  const buttonGroup = shallow((
+    <ButtonGroup isMultiSelect onChange={onChange}>
+      {button1}
+      {button2}
+    </ButtonGroup>
+  ));
+  expect(buttonGroup).toMatchSnapshot();
+});
+
+it('should apply correct role for single select button group', () => {
+  const onChange = jest.fn();
+  const buttonGroup = shallow((
+    <ButtonGroup onChange={onChange}>
+      {button1}
+      {button2}
+    </ButtonGroup>
+  ));
+  expect(buttonGroup).toMatchSnapshot();
+});
+
 it('correctly applies the theme context className', () => {
   const buttonGroup = mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
