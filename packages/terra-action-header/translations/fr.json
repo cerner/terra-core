@@ -4,5 +4,8 @@
   "Terra.actionHeader.previous": "Précédent",
   "Terra.actionHeader.next": "Suivant",
   "Terra.actionHeader.maximize": "Agrandir",
-  "Terra.actionHeader.minimize": "Réduire"
+  "Terra.actionHeader.minimize": "Réduire",
+  "Terra.actionHeader.close.description": "Sélectionnez le bouton pour fermer {text}.",
+  "Terra.actionHeader.maximize.description": "Sélectionnez le bouton pour agrandir {text}.",
+  "Terra.actionHeader.minimize.description": "Sélectionnez le bouton pour réduire {text}."
 }

@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Updated action-header examples to include A11y labels.
   * Updated `terra-button-group` tests and examples.
 
 * Added

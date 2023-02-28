@@ -1,16 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ActionHeader correctly applies the theme context className 1`] = `
-<div
-  className="flex-header orion-fusion-theme customClassName"
->
-  <div
-    className="flex-end"
-  >
+<ActionHeaderContainer
+  className="customClassName"
+  endContent={
+    <div
+      className="right-buttons orion-fusion-theme"
+    >
+      <Button
+        aria-describedby="terra-action-header-close-button-14"
+        className="header-button close-button"
+        data-terra-action-header="close-button"
+        icon={
+          <span
+            className="header-icon close"
+          />
+        }
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        text="Terra.actionHeader.close"
+        type="button"
+        variant="utility"
+      />
+    </div>
+  }
+  id="14"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  level={1}
+  startContent={
     <div
       className="left-buttons orion-fusion-theme"
     >
       <Button
+        aria-describedby="terra-action-header-maximize-button-14"
         className="header-button maximize-button"
         data-terra-action-header="maximize-button"
         icon={
@@ -29,64 +81,28 @@ exports[`ActionHeader correctly applies the theme context className 1`] = `
         variant="utility"
       />
     </div>
-  </div>
-  <div
-    className="flex-fill"
-  >
-    <div
-      className="title-container"
-    >
-      <h1
-        className="title"
-      >
-        Action Header
-      </h1>
-    </div>
-  </div>
-  <div
-    className="flex-end"
-  >
-    <div
-      className="right-buttons orion-fusion-theme"
-    >
-      <Button
-        className="header-button close-button"
-        data-terra-action-header="close-button"
-        icon={
-          <span
-            className="header-icon close"
-          />
-        }
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={true}
-        isReversed={false}
-        onClick={[Function]}
-        text="Terra.actionHeader.close"
-        type="button"
-        variant="utility"
-      />
-    </div>
-  </div>
-</div>
+  }
+  text="Action Header"
+/>
 `;
 
 exports[`ActionHeader should render a default action header 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="1"
   level={1}
   startContent={null}
 />
 `;
 
 exports[`ActionHeader should render an action header with back and close buttons and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={
     <div
       className="right-buttons"
     >
       <Button
+        aria-describedby="terra-action-header-close-button-5"
         className="header-button close-button"
         data-terra-action-header="close-button"
         icon={
@@ -106,6 +122,7 @@ exports[`ActionHeader should render an action header with back and close buttons
       />
     </div>
   }
+  id="5"
   level={1}
   startContent={
     <div
@@ -131,13 +148,14 @@ exports[`ActionHeader should render an action header with back and close buttons
       />
     </div>
   }
-  title="Action Header"
+  text="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with back button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="3"
   level={1}
   startContent={
     <div
@@ -163,17 +181,18 @@ exports[`ActionHeader should render an action header with back button and title 
       />
     </div>
   }
-  title="Action Header"
+  text="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with close button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={
     <div
       className="right-buttons"
     >
       <Button
+        aria-describedby="terra-action-header-close-button-4"
         className="header-button close-button"
         data-terra-action-header="close-button"
         icon={
@@ -193,18 +212,20 @@ exports[`ActionHeader should render an action header with close button and title
       />
     </div>
   }
+  id="4"
   level={1}
   startContent={null}
-  title="Action Header"
+  text="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with custom button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="7"
   level={1}
   startContent={null}
-  title="Action Header"
+  text="Action Header"
 >
   <Button
     isBlock={false}
@@ -217,27 +238,30 @@ exports[`ActionHeader should render an action header with custom button and titl
     type="button"
     variant="neutral"
   />
-</ActionHeaderContainer>
+</InjectIntl(ActionHeaderContainer)>
 `;
 
 exports[`ActionHeader should render an action header with level three header element and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="6"
   level={3}
   startContent={null}
-  title="Action Header"
+  text="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with maximize button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="9"
   level={1}
   startContent={
     <div
       className="left-buttons"
     >
       <Button
+        aria-describedby="terra-action-header-maximize-button-9"
         className="header-button maximize-button"
         data-terra-action-header="maximize-button"
         icon={
@@ -257,19 +281,21 @@ exports[`ActionHeader should render an action header with maximize button and ti
       />
     </div>
   }
-  title="Action Header"
+  text="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with minimize button and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="10"
   level={1}
   startContent={
     <div
       className="left-buttons"
     >
       <Button
+        aria-describedby="terra-action-header-minimize-button-10"
         className="header-button minimize-button"
         data-terra-action-header="minimize-button"
         icon={
@@ -289,16 +315,17 @@ exports[`ActionHeader should render an action header with minimize button and ti
       />
     </div>
   }
-  title="Action Header"
+  text="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with multiple custom buttons and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="8"
   level={1}
   startContent={null}
-  title="Action Header"
+  text="Action Header"
 >
   <span>
     <Button
@@ -324,12 +351,13 @@ exports[`ActionHeader should render an action header with multiple custom button
       variant="neutral"
     />
   </span>
-</ActionHeaderContainer>
+</InjectIntl(ActionHeaderContainer)>
 `;
 
 exports[`ActionHeader should render an action header with next and previous buttons and title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="11"
   level={1}
   startContent={
     <div
@@ -377,22 +405,24 @@ exports[`ActionHeader should render an action header with next and previous butt
       </div>
     </div>
   }
-  title="Action Header"
+  text="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with title 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="2"
   level={1}
   startContent={null}
-  title="Action Header"
+  text="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with title, enabled next button, and disabled previous button 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="12"
   level={1}
   startContent={
     <div
@@ -439,13 +469,14 @@ exports[`ActionHeader should render an action header with title, enabled next bu
       </div>
     </div>
   }
-  title="Action Header"
+  text="Action Header"
 />
 `;
 
 exports[`ActionHeader should render an action header with title, enabled previous button, and disabled next button 1`] = `
-<ActionHeaderContainer
+<InjectIntl(ActionHeaderContainer)
   endContent={null}
+  id="13"
   level={1}
   startContent={
     <div
@@ -492,6 +523,6 @@ exports[`ActionHeader should render an action header with title, enabled previou
       </div>
     </div>
   }
-  title="Action Header"
+  text="Action Header"
 />
 `;

@@ -4,5 +4,8 @@
   "Terra.actionHeader.maximize": "Maximalisatie",
   "Terra.actionHeader.minimize": "Minimaliseren",
   "Terra.actionHeader.next": "Volgende",
-  "Terra.actionHeader.previous": "Vorige"
+  "Terra.actionHeader.previous": "Vorige",
+  "Terra.actionHeader.close.description": "Selecteer de knop om {text} te sluiten",
+  "Terra.actionHeader.maximize.description": "Selecteer de knop om {text} te maximaliseren",
+  "Terra.actionHeader.minimize.description": "Selecteer de knop om {text} te minimaliseren"
 }

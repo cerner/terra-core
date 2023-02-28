@@ -11,9 +11,15 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
    * Text to be displayed on the SectionHeader.
    */
   text: PropTypes.string.isRequired,
+  /**
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * title prop has been deperecated and will be removed on next major version relase. Replace the `title` prop with `text` prop.
+   */
+  title: PropTypes.string.isRequired,
   /**
    * Callback function triggered when the accordion icon is clicked.
    */
@@ -23,7 +29,9 @@ const propTypes = {
    */
   isOpen: PropTypes.bool,
   /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`. Default `level=2`.
+   * `level` should be specified explicitly to allow screen readers to identify headers consistently.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
@@ -36,7 +44,6 @@ const defaultProps = {
   onClick: undefined,
   isOpen: false,
   isTransparent: false,
-  level: 2,
 };
 
 const isRecognizedKeyPress = event => ((event.nativeEvent.keyCode === KeyCode.KEY_RETURN) || (event.nativeEvent.keyCode === KeyCode.KEY_SPACE));
@@ -82,6 +89,7 @@ class SectionHeader extends React.Component {
   render() {
     const {
       text,
+      title,
       onClick,
       isOpen,
       isTransparent,
@@ -90,12 +98,6 @@ class SectionHeader extends React.Component {
     } = this.props;
 
     const theme = this.context;
-
-    let headerText = text;
-    if (text === undefined && customProps.title !== undefined) {
-      headerText = customProps.title;
-      customProps.title = undefined;
-    }
 
     if ((process.env.NODE_ENV !== 'production') && (!onClick && isOpen)) {
       // eslint-disable-next-line no-console
@@ -131,7 +133,17 @@ class SectionHeader extends React.Component {
       customProps.className,
     );
 
-    const Element = `h${level}`;
+    if (!level) {
+      // eslint-disable-next-line no-console
+      console.warn('Default heading level may not appropriate has it would fail to convey context of heading in a site / application where it is used. Heading level should be set explicitly depending on the position of header in site / application to allow screen readers to identify headers consistently.'); // to be removed on next major version release.
+    }
+
+    if (title) {
+      // eslint-disable-next-line no-console
+      console.warn('`title` prop has been renamed to `text`. please update all the refernces of `title` prop to use prop `text`.'); // to be removed on next major version release.
+    }
+    const Element = `h${level || 2}`;
+    const headerText = text || title;
 
     // allows us to set an onClick on the div
     // We set key events and role conditionally set if onClick is set

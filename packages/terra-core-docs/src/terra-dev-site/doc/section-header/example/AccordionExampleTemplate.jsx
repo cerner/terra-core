@@ -15,7 +15,7 @@ const propTypes = {
   /**
    * Text to be displayed in the section header.
    */
-  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   /**
    * Used to set props and HTML attributes on the underlying section-header.
    */
@@ -78,7 +78,7 @@ class AccoordianExampleTemplate extends React.Component {
     const {
       children,
       heading,
-      title,
+      text,
       isAnimated,
       isOpen,
       sectionHeaderAttrs,
@@ -95,7 +95,7 @@ class AccoordianExampleTemplate extends React.Component {
           {...sectionHeaderProps}
           aria-expanded={this.state.isOpen}
           isOpen={this.state.isOpen}
-          text={title}
+          text={text}
         />
         <Toggle isOpen={this.state.isOpen} isAnimated>
           {children}

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+* Added
+  * Added `text` prop as a replacement of `title` prop to avoid confusion with HTML attribute `title`.
+  * Added Ally labels for action header navigation buttons.
+  * Added translations for back, next and previous button.
+
 * Changed
   * Updated jest snapshots for button changes.
 

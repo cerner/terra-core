@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+import { injectIntl } from 'react-intl';
 import styles from './ActionHeaderContainer.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -22,7 +24,7 @@ const propTypes = {
   /**
    * Text to be displayed as the title in the header bar.
    */
-  title: PropTypes.string,
+  text: PropTypes.string,
 
   /**
    * Content to be displayed at the end of the header.
@@ -34,16 +36,21 @@ const propTypes = {
    * Changing 'level' will not visually change the style of the content.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
 };
 
 const defaultProps = {
-  title: undefined,
+  text: undefined,
   startContent: undefined,
   endContent: undefined,
 };
 
 const ActionHeaderContainer = ({
-  children, title, startContent, endContent, level, ...customProps
+  children, text, startContent, endContent, level, intl, ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
   const HeaderElement = `h${level}`;
@@ -52,10 +59,22 @@ const ActionHeaderContainer = ({
     React.cloneElement(child, { className: cx(['flex-collapse', children.props.className]) })
   ));
 
-  const titleElement = title ? (
+  const closeButtonId = `terra-action-header-close-button-${customProps.id}`;
+  const maximizeButtonId = `terra-action-header-maximize-button-${customProps.id}`;
+  const minimizeButtonId = `terra-action-header-minimize-button-${customProps.id}`;
+
+  const visuallyHiddenComponent = (
+    <>
+      <VisuallyHiddenText aria-hidden id={closeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.close.description' }, { text })} />
+      <VisuallyHiddenText aria-hidden id={maximizeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.maximize.description' }, { text })} />
+      <VisuallyHiddenText aria-hidden id={minimizeButtonId} text={intl.formatMessage({ id: 'Terra.actionHeader.minimize.description' }, { text })} />
+    </>
+  );
+
+  const titleElement = text ? (
     <div className={cx('title-container')}>
       <HeaderElement className={cx('title')}>
-        {title}
+        {text}
       </HeaderElement>
     </div>
   ) : undefined;
@@ -68,6 +87,7 @@ const ActionHeaderContainer = ({
       </div>
       {content}
       {endContent && <div className={cx('flex-end')}>{endContent}</div>}
+      <div className={cx('hidden-label')}>{visuallyHiddenComponent}</div>
     </div>
   );
 };
@@ -75,4 +95,4 @@ const ActionHeaderContainer = ({
 ActionHeaderContainer.propTypes = propTypes;
 ActionHeaderContainer.defaultProps = defaultProps;
 
-export default ActionHeaderContainer;
+export default injectIntl(ActionHeaderContainer);

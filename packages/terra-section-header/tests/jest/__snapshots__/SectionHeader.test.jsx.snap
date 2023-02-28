@@ -11,7 +11,6 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
   <SectionHeader
     isOpen={false}
     isTransparent={false}
-    level={2}
     text="foo"
   >
     <h2
