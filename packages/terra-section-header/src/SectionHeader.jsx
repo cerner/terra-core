@@ -161,19 +161,13 @@ class SectionHeader extends React.Component {
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-    if (onClick) {
-      return (
-        <Element {...attributes} className={sectionHeaderClassNames}>
-          <div role="button" aria-expanded={isOpen} tabIndex="-1" aria-label={headerText} className={cx('arrange-wrapper')}>
-            {arrangeComp}
-          </div>
-        </Element>
-      );
-    }
+    const buttonAttributes = (onClick) ? { role: 'button', 'aria-expanded': isOpen, 'aria-label': headerText } : undefined;
 
     return (
-      <Element {...attributes} className={sectionHeaderClassNames} aria-label={headerText}>
-        {arrangeComp}
+      <Element {...attributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
+        <div {...buttonAttributes} tabIndex="-1" className={cx('arrange-wrapper')}>
+          {arrangeComp}
+        </div>
       </Element>
     );
 

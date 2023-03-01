@@ -17,38 +17,43 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
       aria-label="foo"
       className="section-header orion-fusion-theme"
     >
-      <Arrange
-        className="title-arrange"
-        fill={
-          <span
-            aria-hidden={false}
-            className="title"
-          >
-            foo
-          </span>
-        }
+      <div
+        className="arrange-wrapper"
+        tabIndex="-1"
       >
-        <div
-          className="arrange title-arrange"
-        >
-          <div
-            className="fit"
-          />
-          <div
-            className="fill"
-          >
+        <Arrange
+          className="title-arrange"
+          fill={
             <span
               aria-hidden={false}
               className="title"
             >
               foo
             </span>
-          </div>
+          }
+        >
           <div
-            className="fit"
-          />
-        </div>
-      </Arrange>
+            className="arrange title-arrange"
+          >
+            <div
+              className="fit"
+            />
+            <div
+              className="fill"
+            >
+              <span
+                aria-hidden={false}
+                className="title"
+              >
+                foo
+              </span>
+            </div>
+            <div
+              className="fit"
+            />
+          </div>
+        </Arrange>
+      </div>
     </h2>
   </SectionHeader>
 </ThemeContextProvider>
@@ -59,17 +64,22 @@ exports[`SectionHeader should render a default component 1`] = `
   aria-label="foo"
   className="section-header"
 >
-  <Arrange
-    className="title-arrange"
-    fill={
-      <span
-        aria-hidden={false}
-        className="title"
-      >
-        foo
-      </span>
-    }
-  />
+  <div
+    className="arrange-wrapper"
+    tabIndex="-1"
+  >
+    <Arrange
+      className="title-arrange"
+      fill={
+        <span
+          aria-hidden={false}
+          className="title"
+        >
+          foo
+        </span>
+      }
+    />
+  </div>
 </h2>
 `;
 
@@ -167,24 +177,29 @@ exports[`SectionHeader should render without an accordion icon when no 'onClick(
   class="section-header"
 >
   <div
-    class="arrange title-arrange"
+    class="arrange-wrapper"
+    tabindex="-1"
   >
     <div
-      class="fit"
-    />
-    <div
-      class="fill"
+      class="arrange title-arrange"
     >
-      <span
-        aria-hidden="false"
-        class="title"
+      <div
+        class="fit"
+      />
+      <div
+        class="fill"
       >
-        foo
-      </span>
+        <span
+          aria-hidden="false"
+          class="title"
+        >
+          foo
+        </span>
+      </div>
+      <div
+        class="fit"
+      />
     </div>
-    <div
-      class="fit"
-    />
   </div>
 </h2>
 `;
