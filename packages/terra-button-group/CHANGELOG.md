@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.64.0 - (March 1, 2023)
+
 * Added
   * Added support for decoratove icons and multi-selection.
 
