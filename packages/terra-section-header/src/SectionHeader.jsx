@@ -124,14 +124,6 @@ class SectionHeader extends React.Component {
       </div>
     );
 
-    const arrangeComp = (
-      <Arrange
-        fitStart={onClick && accordionIcon}
-        fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
-        className={cx('title-arrange')}
-      />
-    );
-
     const sectionHeaderClassNames = classNames(
       cx(
         'section-header',
@@ -166,7 +158,11 @@ class SectionHeader extends React.Component {
     return (
       <Element {...attributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
         <div {...buttonAttributes} tabIndex="-1" className={cx('arrange-wrapper')}>
-          {arrangeComp}
+          <Arrange
+            fitStart={onClick && accordionIcon}
+            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
+            className={cx('title-arrange')}
+          />
         </div>
       </Element>
     );
