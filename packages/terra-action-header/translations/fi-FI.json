@@ -4,5 +4,8 @@
   "Terra.actionHeader.previous": "Edellinen",
   "Terra.actionHeader.next": "Seuraava",
   "Terra.actionHeader.maximize": "Maksimoida",
-  "Terra.actionHeader.minimize": "Minimoida"
+  "Terra.actionHeader.minimize": "Minimoida",
+  "Terra.actionHeader.close.description": "Valitse painike sulkeaksesi {text}",
+  "Terra.actionHeader.maximize.description": "Valitse painike suurentaaksesi {text}",
+  "Terra.actionHeader.minimize.description": "Valitse painike pienentääksesi {text}"
 }

@@ -4,5 +4,8 @@
   "Terra.actionHeader.maximize": "Maximera",
   "Terra.actionHeader.minimize": "Minimera",
   "Terra.actionHeader.next": "Nästa",
-  "Terra.actionHeader.previous": "Föregående"
+  "Terra.actionHeader.previous": "Föregående",
+  "Terra.actionHeader.close.description": "Välj knappen för att stänga {text}",
+  "Terra.actionHeader.maximize.description": "Välj knappen för att maximera {text}",
+  "Terra.actionHeader.minimize.description": "Välj knappen för att minimera {text}"
 }

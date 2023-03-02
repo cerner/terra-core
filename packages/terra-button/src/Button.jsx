@@ -25,11 +25,6 @@ const ButtonTypes = {
   RESET: 'reset',
 };
 
-const IconTypes = {
-  DECORATIVE: 'decorative',
-  INFORMATIVE: 'informative',
-};
-
 const propTypes = {
   /**
    * Sets the href. When set will render the component as an anchor tag.
@@ -43,12 +38,6 @@ const propTypes = {
    * Whether or not the button should only display as an icon.
    */
   isIconOnly: PropTypes.bool,
-  /**
-   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
-   * specifies the icon type. if not specified defaluts to DECORATIVE icon.
-   * refer Icon [Accessiblity Guide](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/icon/accessibility-guide) to know about types of icon.
-   */
-  iconType: PropTypes.oneOf([IconTypes.DECORATIVE, IconTypes.INFORMATIVE]),
   /**
    * Whether or not the button should display as a block.
    */
@@ -95,7 +84,8 @@ const propTypes = {
   refCallback: PropTypes.func,
   /**
    * Sets the button text.
-   * If the button is `isIconOnly` or variant `utility` this text is set as the aria-label and title for accessibility.
+   * If the button is `isIconOnly` or variant `utility` this text is set as the aria-label and title for accessibility
+   * `a11yLabel` prop of `icon` will be set as aria-label and title when `icon` has `a11yLabel` prop specified.
    */
   text: PropTypes.string.isRequired,
   /**
@@ -118,7 +108,6 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   isIconOnly: false,
-  iconType: IconTypes.DECORATIVE,
   isReversed: false,
   refCallback: undefined,
   title: undefined,
@@ -237,7 +226,6 @@ class Button extends React.Component {
       isCompact,
       isDisabled,
       isIconOnly,
-      iconType,
       isReversed,
       text,
       type,
@@ -297,7 +285,7 @@ class Button extends React.Component {
 
     let buttonTitle = title;
     if (isIconOnly || variant === 'utility') {
-      buttonTitle = title || text;
+      buttonTitle = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : title || text;
     }
 
     const buttonLabel = (
@@ -307,10 +295,9 @@ class Button extends React.Component {
       </span>
     );
 
-    // ignore aria-label for button with decorative icons.
     let ariaLabel = customProps['aria-label'];
     if (isIconOnly || variant === 'utility') {
-      ariaLabel = (iconType === IconTypes.INFORMATIVE) ? ariaLabel || text : undefined;
+      ariaLabel = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : ariaLabel || text;
     }
 
     let ComponentType = 'button';
@@ -353,4 +340,4 @@ Button.Opts.Types = ButtonTypes;
 Button.Opts.Variants = ButtonVariants;
 
 export default Button;
-export { ButtonTypes, ButtonVariants, IconTypes };
+export { ButtonTypes, ButtonVariants };

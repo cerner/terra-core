@@ -22,9 +22,9 @@ class ButtonGroupSingleSelect extends React.Component {
         onChange={this.handleSelection}
         selectedKeys={this.state.selectedKey}
       >
-        <ButtonGroup.Button text="Single-Select 1" key="single-select1" />
-        <ButtonGroup.Button text="Single-Select 2" key="single-select2" />
-        <ButtonGroup.Button text="Single-Select 3" key="single-select3" />
+        <ButtonGroup.Button text="Dust Allergy" key="single-select1" />
+        <ButtonGroup.Button text="Food Allergy" key="single-select2" />
+        <ButtonGroup.Button text="Pet Allergy" key="single-select3" />
       </ButtonGroup>
     );
   }

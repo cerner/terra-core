@@ -753,7 +753,6 @@ exports[`Alert of type success with an action button text content should render 
 <InjectIntl(Alert)
   action={
     <Button
-      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -797,7 +796,6 @@ exports[`Alert of type success with an action button text content should render 
   <Alert
     action={
       <Button
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -903,7 +901,6 @@ exports[`Alert of type success with an action button text content should render 
           className="actions"
         >
           <Button
-            iconType="decorative"
             isBlock={false}
             isCompact={false}
             isDisabled={false}
@@ -1574,7 +1571,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
 <InjectIntl(Alert)
   action={
     <Button
-      iconType="decorative"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
@@ -1627,7 +1623,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
   <Alert
     action={
       <Button
-        iconType="decorative"
         isBlock={false}
         isCompact={false}
         isDisabled={false}
@@ -1741,7 +1736,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           className="actions actions-custom"
         >
           <Button
-            iconType="decorative"
             isBlock={false}
             isCompact={false}
             isDisabled={false}
@@ -1776,7 +1770,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             </button>
           </Button>
           <Button
-            iconType="decorative"
             isBlock={false}
             isCompact={false}
             isDisabled={false}
@@ -1944,7 +1937,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           className="actions"
         >
           <Button
-            iconType="decorative"
             isBlock={false}
             isCompact={false}
             isDisabled={false}

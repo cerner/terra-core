@@ -20,6 +20,7 @@ class ButtonGroupIsBlock extends React.Component {
         isBlock
         onChange={this.handleSelection}
         selectedKeys={this.state.selectedKeys}
+        isMultiSelect
       >
         <ButtonGroup.Button text="Button 1" key="block-select1" />
         <ButtonGroup.Button text="Button 2" key="block-select2" />

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.59.0 - (March 1, 2023)
+
+* Added
+  * Added console warnings for section-header.
+
 ## 2.58.0 - (February 15, 2023)
 
 * Changed

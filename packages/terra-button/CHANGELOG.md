@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 3.65.0 - (March 1, 2023)
+
+* Removed
+  * Removed `iconType` prop from button.
+
+* Changed
+  * Updated jest snapshots for button changes.
+
 ## 3.64.0 - (February 16, 2023)
 
 * Changed
