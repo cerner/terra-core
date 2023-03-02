@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.78.0 - (March 1, 2023)
+
 * Added
   * Added `text` prop as a replacement of `title` prop to avoid confusion with HTML attribute `title`.
   * Added Ally labels for action header navigation buttons.

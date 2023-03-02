@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.65.0 - (March 1, 2023)
+
 * Removed
   * Removed `iconType` prop from button.
 
