@@ -1,0 +1,80 @@
+import { Badge } from 'terra-avatar/package.json?dev-site-package';
+
+<Badge />
+
+# Avatar Accessibility Guide
+
+## Why the accessibility of Avatar is important
+
+The Avatar component visually represents a person or facility. Poor or improper implementation of this component can render it inaccessible, which can cause the user inability to understand the avatar.
+
+## Accessibility Considerations
+
+### Content Considerations: What do content creators need to do
+
+- Images with meaningful content must always be assigned proper alternative text. Content creators should provide engineers with relevant text for the component’s `alt` prop that conveys the image's meaning.
+    - If the image conveys no meaning, instruct the engineer that the avatar is purely decorative.
+- If the avatar conveys meaning and is used on top of color other than white, ensure the colors meet the 3:1 non-text contrast ratio between the avatar color and its background color.
+
+### Code Considerations: What do engineers need to do
+
+- Engineers must not override Avatar’s ARIA role.
+    - Engineers must apply an `alt` prop for meaningful images.
+- Avatars that are purely decorative should have the isAriaHidden prop set to true, effectively hiding the component from assistive technologies.
+- Work with content creators to understand how content should resize and reflow at different breakpoints and form factors to ensure content is not artificially constrained or cut off at smaller viewports.
+
+## Usability Expectations
+
+### Interaction Detail
+
+- Avatar is not interactable.
+
+### Usability Expectations
+
+- The user expects to understand the purpose of an Avatar regardless of how they experience the content. Because Avatar is not actionable, it does not receive keyboard focus.
+
+## Support Compliance
+
+Terra is committed to ensuring its components provide the maximum possible accessibility. Terra delivers the ability to make accessibility products. However, using Terra components will not automatically make a product accessible.
+
+The final responsibility lies with the consumers of Terra components — ensuring proper usage, a programmatic context where needed, the words used to label elements, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance — to make a product fully accessible.
+
+### Primary accessibility criteria for Avatar
+
+- [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast) - Supports
+    - Terra provides the ability to use alternate content on images and icons.
+    - Engineers must ensure that when an Avatar image/icon conveys meaning, to add appropriate ALT text to create a meaningful label.
+    - Content creators must provide engineers with meaningful alt-prop text when using icons that convey meaning.
+
+- [**1.3.1 Info and Relationships**](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html) - Supports
+    - Terra provides the ability for information, structure, and relationships to be programmatically determined.
+    - Engineers must ensure that any visual relationship with an Avatar component that conveys meaning must programmatically set associations to the content for visual relationships to be understood by screen readers.
+    - Content creators must express to the engineer any visual relationships of an avatar component to ensure engineers can programmatically convey the visual relationships.
+
+- [**1.4.11 Non-Text Contrast**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast) - Supports
+    - Terra avatars provides components that, by default, meet color contrast requirements.
+    - Engineers must work with content creators to implement avatar so that the color of any non-text content of the avatar component and the background color meet a 3:1 color contrast ratio.
+    - Content creators must ensure that any meaningful non-text content meets a 3:1 color contrast ratio if the avatar appears on colors other than white.
+    - Secondary applicable accessibility criteria for Avatar.
+
+- [**1.3.4. Orientation**](https://www.w3.org/WAI/WCAG21/Understanding/orientation) - Supports
+    - Terra components operate independently of orientation.
+    - Engineers must ensure components operate independently of orientation.
+
+- [**1.4.1 Use of Color**](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html) - Supports
+    - Terra Avatar does not use color to convey information.
+    - Content creators must not use color as the only way to convey information to the user. Instead, use both color and a shape or text.
+
+### Supported Features and Technology
+
+- JAWS Support with Chrome (PC)
+- VoiceOver Support with Chrome, Safari (MAC)
+
+### Partial Support & Requiring Further Enhancement
+
+- NVDA not tested (PC)
+- [Report a problem with this component on GitHub ](https://github.com/cerner/terra-core/issues/new/choose)
+
+### Linked References:
+
+[Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/Understanding/)
