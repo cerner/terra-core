@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added accessibility guide for `terra-avatar`
+
 ## 1.23.0 - (March 1, 2023)
 
 * Changed
