@@ -77,6 +77,8 @@ jobs:
           TERRA_DEV_SITE_PUBLIC_PATH: /terra-core/
         run: npm run compile:prod
       - name: Release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx terra release
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
