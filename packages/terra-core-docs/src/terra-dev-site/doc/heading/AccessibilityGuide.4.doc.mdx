@@ -21,11 +21,13 @@ import HeadingLevels from './example/HeadingLevels';
 
 ### Code Considerations: What do engineers need to do?
 
+- Headings must programmatically have a heading level that is set to match the structure of its placement on the page. Content creators should work with engineers to determine what heading level to use, and engineers must assign the proper heading level.
+
 <div aria-label="Heading Demo">
   <HeadingLevels />
 </div>
 
->```jsx
+```jsx
 <div>
     <Arrange
       align="center"
@@ -100,9 +102,7 @@ import HeadingLevels from './example/HeadingLevels';
 )}
     />
 </div>
->```
-
-- Headings must programmatically have a heading level that is set to match the structure of its placement on the page. Content creators should work with engineers to determine what heading level to use, and engineers must assign the proper heading level.
+```
 
 ## Usability Expectations
 
