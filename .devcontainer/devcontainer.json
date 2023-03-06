@@ -1,0 +1,26 @@
+{
+    "name": "TerraCore",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "vscode",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": "",
+    "runServices": [
+        "vscode"
+    ],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "james-yu.latex-workshop",
+          "eamodio.gitlens",
+          "shardulm94.trailing-spaces",
+          "stkb.rewrap",
+          "vscode-icons-team.vscode-icons",
+          "streetsidesoftware.code-spell-checker"
+        ]
+      }
+    },
+
+    "forwardPorts": [8080]
+}
