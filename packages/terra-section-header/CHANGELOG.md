@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+* Changed
+  * Removed required for `text` and `title` prop
+  * Removed button role for non-interactive section header.
+  * Updated jest snapshots due to removal of button role
+
+* Added
+  * Added aria-label for non-interactive section header.
+
 ## 2.59.0 - (March 1, 2023)
 
 * Added

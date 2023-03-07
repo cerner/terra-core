@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added Accessibility Guide for `terra-section-header`
+
 ## 1.23.0 - (March 1, 2023)
 
 * Changed
