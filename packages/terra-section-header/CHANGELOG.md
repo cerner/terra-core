@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Removed required for `text` and `title` prop
+
 ## 2.59.0 - (March 1, 2023)
 
 * Added
