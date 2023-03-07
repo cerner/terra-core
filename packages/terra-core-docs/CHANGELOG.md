@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Fix second example on default Paginator doc page
+
 ## 1.23.0 - (March 1, 2023)
 
 * Changed
