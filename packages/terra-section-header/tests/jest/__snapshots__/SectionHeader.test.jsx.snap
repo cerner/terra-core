@@ -14,14 +14,11 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
     text="foo"
   >
     <h2
+      aria-label="foo"
       className="section-header orion-fusion-theme"
-      tabIndex="0"
     >
       <div
-        aria-expanded={false}
-        aria-label="foo"
         className="arrange-wrapper"
-        role="button"
         tabIndex="-1"
       >
         <Arrange
@@ -64,14 +61,11 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
 
 exports[`SectionHeader should render a default component 1`] = `
 <h2
+  aria-label="foo"
   className="section-header"
-  tabIndex="0"
 >
   <div
-    aria-expanded={false}
-    aria-label="foo"
     className="arrange-wrapper"
-    role="button"
     tabIndex="-1"
   >
     <Arrange
@@ -179,14 +173,11 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
 
 exports[`SectionHeader should render without an accordion icon when no 'onClick()' is passed 1`] = `
 <h2
+  aria-label="foo"
   class="section-header"
-  tabindex="0"
 >
   <div
-    aria-expanded="false"
-    aria-label="foo"
     class="arrange-wrapper"
-    role="button"
     tabindex="-1"
   >
     <div
