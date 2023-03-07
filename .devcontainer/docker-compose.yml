@@ -1,14 +1,55 @@
 version: "3"
 
 services:
-  vscode:
-    build: .
+  # vscode:
+  #   build: .
+  #   ports:
+  #     - "8080:8080"
+  #   volumes:
+  #     - ../:/workspace
+  #     # Docker socket to access Docker server
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     # Git config
+  #     - ~/.gitconfig:/root/.gitconfig
+  #   entrypoint: /bin/sh -c "while sleep 1000; do :; done" 
+    
+  selenium-hub:
+    image: selenium/hub:3.14.0-helium
+    container_name: selenium-hub
     ports:
-      - "8080:8080"
+      - "4444:4444"
+    healthcheck:
+      test: ["CMD", "/opt/bin/check-grid.sh"]
+      interval: 15s
+      timeout: 30s
+      retries: 5
+
+  chrome:
+    image: selenium/node-chrome:3.14.0-helium
+    # Volume mounting is necessary to ensure the browser does not crash inside the docker container.
+    # For more details see: 
+    #  https://github.com/SeleniumHQ/docker-selenium#running-the-images
+    #  https://bugs.chromium.org/p/chromium/issues/detail?id=519952
+    #  https://bugzilla.mozilla.org/show_bug.cgi?id=1338771#c10
     volumes:
-      - ../:/workspace
-      # Docker socket to access Docker server
-      - /var/run/docker.sock:/var/run/docker.sock
-      # Git config
-      - ~/.gitconfig:/root/.gitconfig
-    entrypoint: /bin/sh -c "while sleep 1000; do :; done" 
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
+  firefox:
+    image: selenium/node-firefox:3.141.59-titanium
+    # Volume mounting is necessary to ensure the browser does not crash inside the docker container.
+    # For more details see: 
+    #  https://github.com/SeleniumHQ/docker-selenium#running-the-images
+    #  https://bugs.chromium.org/p/chromium/issues/detail?id=519952
+    #  https://bugzilla.mozilla.org/show_bug.cgi?id=1338771#c10
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444

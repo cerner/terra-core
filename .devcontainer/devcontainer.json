@@ -6,7 +6,7 @@
     "workspaceFolder": "/workspace",
     "postCreateCommand": "",
     "runServices": [
-        "vscode"
+        "vscode", "selenium-hub", "chrome", "firefox"
     ],
     "customizations": {
       "vscode": {
@@ -22,5 +22,5 @@
       }
     },
 
-    "forwardPorts": [8080]
+    "forwardPorts": [8080, 4444]
 }
