@@ -14,12 +14,12 @@ const propTypes = {
    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
    * Text to be displayed on the SectionHeader.
    */
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   /**
    * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
    * title prop has been deperecated and will be removed on next major version relase. Replace the `title` prop with `text` prop.
    */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   /**
    * Callback function triggered when the accordion icon is clicked.
    */

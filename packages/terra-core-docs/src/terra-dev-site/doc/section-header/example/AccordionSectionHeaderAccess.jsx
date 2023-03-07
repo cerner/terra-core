@@ -19,7 +19,7 @@ const AccordionSectionHeaderAccess = () => {
     <div>
       <Card>
         <Card.Body>
-          <AccoordianExampleTemplate title="Patient is Allergic to:" heading="Documented Allergies" sectionHeaderAttrs={sectionHeaderProps}>
+          <AccoordianExampleTemplate text="Patient is Allergic to:" heading="Documented Allergies" sectionHeaderAttrs={sectionHeaderProps}>
             <p>Cats</p>
             <p>Dogs</p>
             <p>Dust</p>
