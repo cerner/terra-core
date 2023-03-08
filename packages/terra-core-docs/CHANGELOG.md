@@ -5,6 +5,9 @@
 * Added
   * Added Accessibility Guide for `terra-section-header`
 
+* Changed
+  * Updated example for `terra-progress-bar`
+
 ## 1.23.0 - (March 1, 2023)
 
 * Changed
