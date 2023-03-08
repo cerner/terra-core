@@ -41,7 +41,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-breakpoints": "^2.39.0",
+    "terra-breakpoints": "^2.38.0",
     "terra-theme-context": "^1.0.0"
   }
 }

@@ -28,8 +28,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.5.8",
-    "terra-button": "^3.66.0",
-    "terra-icon": "^3.54.0",
+    "terra-button": "^3.65.0",
+    "terra-icon": "^3.53.0",
     "terra-toggle": "^3.55.0"
   },
   "scripts": {

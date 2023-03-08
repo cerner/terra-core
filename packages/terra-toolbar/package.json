@@ -26,7 +26,7 @@
     "react-dom": "^16.8.5"
   },
   "devDependencies": {
-    "terra-button": "^3.66.0"
+    "terra-button": "^3.65.0"
   },
   "dependencies": {
     "classnames": "^2.2.5",
