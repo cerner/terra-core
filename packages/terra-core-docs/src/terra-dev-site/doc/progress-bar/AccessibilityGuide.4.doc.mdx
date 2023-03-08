@@ -18,15 +18,42 @@ import ProgressBarExampleAccess from './example/ProgressBarExampleAccess'
 </div>
 
 > ```jsx
-> const ProgressBarExampleAccess = () => (
->   <div>
->      <Card>
->        <Card.Body>
->          <ProgressBar  value={15} label="Progress bar: 15%" valueText="Progress is 15%"  />
->        </Card.Body>
->      </Card>
->    </div>
->  );
+> const ProgressBarExampleAccess = () => {
+>   const [val, setVal] = useState(10);
+>   let intervalId; let
+>   curVal;
+>   curVal = 10;
+>
+>   const updateProgress = () => {
+>   setVal((_val) => {
+>     curVal = _val + 10;
+>     return _val + 10;
+>   });
+>
+>       if (curVal === 100) {
+>         clearInterval(intervalId);
+>       }
+>   };
+>
+>   const start = () => {
+>     intervalId = setInterval(updateProgress, 2000);
+>   };
+>
+>   return (
+>       <div>
+>           <Card>
+>           <Card.Body>
+>               <label>{`Progress bar: ${val}%`}</label>
+>               <ProgressBar id="progressbar" value={val} valueText={`Loading ${val}%`} />
+>               <br />
+>               <Button text="Start" onClick={start} />
+>               &nbsp;
+>               <Button text="Reset" onClick={() => { setVal(10); }} />
+>           </Card.Body>
+>           </Card>
+>       </div>
+>   );
+> };
 > ```
 
 -  Work with content creators to understand if any extra programmatic context is required when implanting the progress bar.
