@@ -4,6 +4,7 @@
 
 * Added
   * Added Accessibility Guide for `terra-section-header`
+  * Added accessibility guide for `terra-progress-bar`
 
 * Changed
   * Updated example for `terra-progress-bar`
