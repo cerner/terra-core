@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.24.0 - (March 8, 2023)
+
 * Added
   * Added Accessibility Guide for `terra-section-header`
   * Added accessibility guide for `terra-progress-bar`
