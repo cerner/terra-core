@@ -43,7 +43,7 @@ class PaginatorNoPagesExample extends React.Component {
   }
 
   changePages(direction) {
-    const index = direction === 'next' ? this.state.currentPage + 1 : this.state.currentPage - 1;
+    const index = direction === 'Next' ? this.state.currentPage + 1 : this.state.currentPage - 1;
 
     if (index >= maxPages) {
       this.setState({ content: <h2>No more pages...</h2>, currentPage: maxPages });

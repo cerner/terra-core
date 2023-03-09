@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Fix second example on default Paginator doc page
+
 * Added
   * Added Accessibility Guide for `terra-section-header`
   * Added accessibility guide for `terra-progress-bar`
