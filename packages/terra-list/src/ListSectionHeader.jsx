@@ -20,7 +20,7 @@ const propTypes = {
   /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
    */
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  level: PropTypes.oneOf([2, 3, 4, 5, 6]),
   /**
    * @private The associated metaData to be provided in the onSelect callback.
    */
@@ -60,7 +60,7 @@ const propTypes = {
 const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
-  level: 1,
+  level: 2,
 };
 
 const ListSectionHeader = ({

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * Fixed heading level for list sections.
+  * Added support for `Home` and `End` key navigation.
+
 ## 4.55.0 - (February 15, 2023)
 
 * Changed

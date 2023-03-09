@@ -50,4 +50,21 @@ Terra.describeViewports('List', ['medium'], () => {
       Terra.validates.element('subsection header');
     });
   });
+
+  describe('Keyboard Navigation', () => {
+    before(() => browser.url('raw/tests/cerner-terra-core-docs/list/single-select-list'));
+
+    it('should tab to the 3rd list item and put focus on it', () => {
+      browser.keys(['Tab', 'Tab', 'Tab']);
+      Terra.validates.element('Tab Keypress');
+    });
+    it('should focus the first list item when Home key is pressed', () => {
+      browser.keys('Home');
+      Terra.validates.element('Home Keypress');
+    });
+    it('should focus the last list item when End key is pressed', () => {
+      browser.keys('End');
+      Terra.validates.element('End Keypress');
+    });
+  });
 });
