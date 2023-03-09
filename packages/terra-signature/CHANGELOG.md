@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.40.0 - (March 3, 2023)
+
+* Changed
+  * Nothing changed.  Just testing new release process.
+
 ## 2.39.0 - (February 15, 2023)
 
 * Changed

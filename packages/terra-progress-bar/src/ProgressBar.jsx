@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
+import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './ProgressBar.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -40,6 +42,11 @@ const propTypes = {
    * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
    */
   colorClass: PropTypes.string,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
 };
 
 const defaultProps = {
@@ -55,6 +62,7 @@ const ProgressBar = ({
   max,
   valueText,
   colorClass,
+  intl,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -70,19 +78,23 @@ const ProgressBar = ({
   );
 
   const normalizedValue = (value / max) * 100;
+  const valText = valueText || intl.formatMessage({ id: 'Terra.progress.bar.percentage' }, { value: normalizedValue });
 
   return (
-    <progress
-      {...customProps}
-      className={classes}
-      max={100}
-      value={normalizedValue}
-      aria-valuemax={100}
-      aria-valuemin={0}
-      aria-valuenow={normalizedValue}
-      aria-valuetext={valueText}
-      tabIndex="-1"
-    />
+    <div>
+      <VisuallyHiddenText aria-live="polite" text={valText} />
+      <progress
+        {...customProps}
+        className={classes}
+        max={100}
+        value={normalizedValue}
+        aria-valuemax={100}
+        aria-valuemin={0}
+        aria-valuenow={normalizedValue}
+        aria-valuetext={valText}
+        tabIndex="-1"
+      />
+    </div>
   );
 };
 
@@ -90,5 +102,5 @@ ProgressBar.propTypes = propTypes;
 
 ProgressBar.defaultProps = defaultProps;
 
-export default ProgressBar;
+export default injectIntl(ProgressBar);
 export { ProgressBarHeightSize };

@@ -5,6 +5,16 @@
 * Added 
   * Added Accessibility Guide for `terra-dropdown-button`.
 
+* Changed
+  * Fix second example on default Paginator doc page
+
+* Added
+  * Added Accessibility Guide for `terra-section-header`
+  * Added accessibility guide for `terra-progress-bar`
+
+* Changed
+  * Updated example for `terra-progress-bar`
+
 ## 1.23.0 - (March 1, 2023)
 
 * Changed

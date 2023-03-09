@@ -15,7 +15,7 @@ const propTypes = {
   /**
    * Text to be displayed in the section header.
    */
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   /**
    * Used to set props and HTML attributes on the underlying section-header.
    */
