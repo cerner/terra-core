@@ -14,12 +14,12 @@ const propTypes = {
    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
    * Text to be displayed on the SectionHeader.
    */
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   /**
    * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
    * title prop has been deperecated and will be removed on next major version relase. Replace the `title` prop with `text` prop.
    */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   /**
    * Callback function triggered when the accordion icon is clicked.
    */
@@ -107,8 +107,10 @@ class SectionHeader extends React.Component {
     const attributes = { ...customProps };
 
     if (onClick) {
+      attributes.tabIndex = '0';
       attributes.onKeyDown = this.wrapOnKeyDown(attributes.onKeyDown);
       attributes.onKeyUp = this.wrapOnKeyUp(attributes.onKeyUp);
+      attributes.onClick = onClick;
     }
 
     const iconClassNames = cx([
@@ -150,9 +152,12 @@ class SectionHeader extends React.Component {
     // eslint doesn't know about this and so it marks this as a lint error
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-static-element-interactions */
+
+    const buttonAttributes = (onClick) ? { role: 'button', 'aria-expanded': isOpen, 'aria-label': headerText } : undefined;
+
     return (
-      <Element {...attributes} onClick={onClick} className={sectionHeaderClassNames} tabIndex="0">
-        <div role="button" aria-expanded={isOpen} tabIndex="-1" aria-label={headerText} className={cx('arrange-wrapper')}>
+      <Element {...attributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
+        <div {...buttonAttributes} tabIndex="-1" className={cx('arrange-wrapper')}>
           <Arrange
             fitStart={onClick && accordionIcon}
             fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
@@ -161,6 +166,7 @@ class SectionHeader extends React.Component {
         </div>
       </Element>
     );
+
     /* eslint-enable jsx-a11y/no-static-element-interactions */
   }
 }

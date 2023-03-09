@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+* Changed
+  * Added visually hidden component under progress bar to provide 
+    context and status update of progress.
+  * Added label for visual context.
+
 ## 4.33.0 - (December 7, 2022)
 
 * Changed
