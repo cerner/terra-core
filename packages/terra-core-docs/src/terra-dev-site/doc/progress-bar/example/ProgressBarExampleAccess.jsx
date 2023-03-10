@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import Card from 'terra-card';
 import ProgressBar from 'terra-progress-bar';
 import Button from 'terra-button';
 
-const ProgressBarDefault = () => {
+const ProgressBarExampleAccess = () => {
   const [val, setVal] = useState(10);
   let intervalId; let
     curVal;
@@ -25,14 +26,18 @@ const ProgressBarDefault = () => {
 
   return (
     <div>
-      <label>{`Progress bar: ${val}%`}</label>
-      <ProgressBar id="progressbar" value={val} valueText={`Loading ${val}%`} />
-      <br />
-      <Button text="Start" onClick={start} />
-            &nbsp;
-      <Button text="Reset" onClick={() => { setVal(10); }} />
+      <Card>
+        <Card.Body>
+          <label>{`Progress bar: ${val}%`}</label>
+          <ProgressBar id="progressbar" value={val} valueText={`Loading ${val}%`} />
+          <br />
+          <Button text="Start" onClick={start} />
+                    &nbsp;
+          <Button text="Reset" onClick={() => { setVal(10); }} />
+        </Card.Body>
+      </Card>
     </div>
   );
 };
 
-export default ProgressBarDefault;
+export default ProgressBarExampleAccess;
