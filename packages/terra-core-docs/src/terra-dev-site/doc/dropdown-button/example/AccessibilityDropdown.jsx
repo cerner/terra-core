@@ -10,13 +10,13 @@ const AccessibilityDropdown = () => {
       <Card.Body>
         <React.Fragment>
           <DropdownButton
-            label="For Patients"
+            label="Patient Allergies"
           >
-            <Item label="Ask free health question" onSelect={() => setMessage('Ask free health question clicked')} />
-            <Item label="Search for Doctors" onSelect={() => setMessage('Search for Doctors clicked')} />
-            <Item label="Search for clinics" onSelect={() => setMessage('Search for clinics clicked')} />
-            <Item label="Search for Hospitals" onSelect={() => setMessage('Search for Hospitals clicked')} />
-            <Item label="Consult a Doctor" onSelect={() => setMessage('Consult a Doctor clicked')} />
+            <Item label="Cats" onSelect={() => setMessage('Clicked Cat allergies')} />
+            <Item label="Dogs" onSelect={() => setMessage('Clicked Dogs allergies')} />
+            <Item label="Dust" onSelect={() => setMessage('Clicked Dust allergies')} />
+            <Item label="Mold" onSelect={() => setMessage('Clicked Mold allergies')} />
+            <Item label="Latex" onSelect={() => setMessage('Clicked Latex allergies')} />
           </DropdownButton>
           <p>{message}</p>
         </React.Fragment>
