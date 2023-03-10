@@ -1,0 +1,122 @@
+import { Badge } from 'terra-heading/package.json?dev-site-package';
+import HeadingLevels from './example/HeadingLevels';
+
+<Badge />
+
+# Accessibility Guide for Terra  Heading
+> Accessibility of Headings is important because headers are used on virtually every page and in every product. Headings convey the page's visual structure and informational hierarchy and can also provide cues such as urgency, importance, or activity. However, headings must be coded correctly, for example, with proper heading levels, so that screen readers can convey the same structure of the page to people with limited or no vision.  
+
+> Headings should accurately describe the content that follows them to ensure all users understand the proper context. It can be confusing if headings don't represent associated content or if heading levels do not match the appropriate level or are skipped or out of order. Any text that is visually styled to look like a heading must be understood programmatically, as a heading. 
+
+## Accessibility Considerations 
+
+### Code Considerations: What do engineers need to do?
+- Headings must accurately describe the content they represent (content creators must provide the words used for the heading that describe its content and engineers must implement that within the code).
+
+- Side note that Toggle Section Header provides teams with spaces to drop in other components or content. When consuming teams are adding interactive controls inside of Toggle Section Headers, Content creators must: 
+    - Ensure the controls have labels that accurately describe the action they perform 
+    - Ensure the objects have unique accessible names or add programmatic association to the Toggle Section Header heading.
+    - If icons that convey information (meaningful icons) are used, ensure they have alternate content that reflect their purpose. And ensure the icon and alternate content used to describe it are consistent for other instances of the same icon when used for the same functionality.
+    - If default theme colors are overridden, the consuming team must make sure colors meet proper contrast ratios for any meaningful text and non-text content.
+
+### Code Considerations: What do engineers need to do?
+
+- Headings must programmatically have a heading level that is set to match the structure of its placement on the page. Content creators should work with engineers to determine what heading level to use, and engineers must assign the proper heading level.
+
+<div aria-label="Heading Demo">
+  <HeadingLevels />
+</div>
+
+```jsx
+<div>
+    <Arrange
+      align="center"
+      fitStart={<span className={cx('fitstart-content')}>h1</span>}
+      fill={(
+        <div className={cx('heading-wrapper')}>
+          <Heading level={1}>
+            Level 1 Heading
+            <span className={cx('heading-content')}>32px (2.286rem)</span>
+          </Heading>
+        </div>
+)}
+    />
+    <Arrange
+      align="center"
+      fitStart={<span className={cx('fitstart-content')}>h2</span>}
+      fill={(
+        <div className={cx('heading-wrapper')}>
+          <Heading level={2}>
+            Level 2 Heading
+            <span className={cx('heading-content')}>24px (1.714rem)</span>
+          </Heading>
+        </div>
+)}
+    />
+    <Arrange
+      align="center"
+      fitStart={<span className={cx('fitstart-content')}>h3</span>}
+      fill={(
+        <div className={cx('heading-wrapper')}>
+          <Heading level={3}>
+            Level 3 Heading
+            <span className={cx('heading-content')}>20px (1.429rem)</span>
+          </Heading>
+        </div>
+)}
+    />
+    <Arrange
+      align="center"
+      fitStart={<span className={cx('fitstart-content')}>h4</span>}
+      fill={(
+        <div className={cx('heading-wrapper')}>
+          <Heading level={4}>
+            Level 4 Heading
+            <span className={cx('heading-content')}>18px (1.286rem)</span>
+          </Heading>
+        </div>
+)}
+    />
+    <Arrange
+      align="center"
+      fitStart={<span className={cx('fitstart-content')}>h5</span>}
+      fill={(
+        <div className={cx('heading-wrapper')}>
+          <Heading level={5}>
+            Level 5 Heading
+            <span className={cx('heading-content')}>16px (1.143rem)</span>
+          </Heading>
+        </div>
+)}
+    />
+    <Arrange
+      align="center"
+      fitStart={<span className={cx('fitstart-content')}>h6</span>}
+      fill={(
+        <div className={cx('heading-wrapper')}>
+          <Heading level={6}>
+            Level 6 Heading
+            <span className={cx('heading-content')}>14px (1rem)</span>
+          </Heading>
+        </div>
+)}
+    />
+</div>
+```
+
+## Usability Expectations
+
+### Interaction Detail
+Terra Heading is not interactable.
+
+### Keyboard Interactions
+Terra Heading is not interactable.
+
+## Concerns and Hazards
+
+### Support Compliance
+
+Terra is committed to ensuring its components provide maximum possible accessibility. Terra provides the ability to make accessible products. However, using Terra components will not automatically make a product accessible.
+
+Final responsibility lies with the consumers of Terra components — ensuring proper usage, programmatic context where needed, the words used to label elements, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance — to make a product fully accessible.
+
