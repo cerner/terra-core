@@ -46,10 +46,22 @@ const propTypes = {
    * Title text to be placed within the section header.
    */
   title: PropTypes.string.isRequired,
+  /**
+   * Whether or not the list's child items should have a border color applied.
+   * One of `'none'`, `'standard'`, `'bottom-only'`.
+   */
+  dividerStyle: PropTypes.oneOf(['none', 'standard', 'bottom-only']),
+  /**
+   * The padding styling to apply to the child list item content.
+   * One of `'none'`, `'standard'`, `'compact'`.
+   */
+  paddingStyle: PropTypes.oneOf(['none', 'standard', 'compact']),
 };
 
 const defaultProps = {
   children: [],
+  dividerStyle: 'none',
+  paddingStyle: 'none',
   isCollapsed: false,
   isCollapsible: false,
   level: 2,
@@ -59,6 +71,8 @@ const ListSection = ({
   children,
   isCollapsed,
   isCollapsible,
+  paddingStyle,
+  dividerStyle,
   ...customProps
 }) => {
   let sectionItems;
@@ -70,19 +84,25 @@ const ListSection = ({
   const listClassNames = classNames(
     cx(
       'list',
+      { 'padding-standard': paddingStyle === 'standard' },
+      { 'padding-compact': paddingStyle === 'compact' },
+      { 'divider-standard': dividerStyle === 'standard' },
+      { 'divider-bottom-only': dividerStyle === 'bottom-only' },
+      'list-fill',
       theme.className,
     ),
-    customProps.className,
   );
 
   return (
     <>
       <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
-      <li>
+      {sectionItems && (
+      <li className={cx('list-item')}>
         <ul {...customProps} className={listClassNames}>
           {sectionItems}
         </ul>
       </li>
+      )}
     </>
   );
 };

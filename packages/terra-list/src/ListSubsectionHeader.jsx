@@ -109,7 +109,7 @@ const ListSubsectionHeader = ({
   }
 
   return (
-    <li className={cx(theme.className)}>
+    <li className={cx('list-item', theme.className)}>
       <Element className={cx('title')}>
         <div {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
           {accordionIcon}
