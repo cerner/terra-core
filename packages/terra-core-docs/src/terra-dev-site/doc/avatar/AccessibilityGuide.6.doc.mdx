@@ -1,5 +1,6 @@
 import { Badge } from 'terra-avatar/package.json?dev-site-package';
 import A11yExampleAvatar from './example/Avatar/A11yExampleAvatar';
+import A11yExampleDecorativeAvatar from './example/Avatar/A11yExampleDecorativeAvatar';
 
 <Badge />
 
@@ -32,13 +33,30 @@ const cx = classNames.bind(styles);
 const AvatarExample = () => (
     <Card classNames={cx('card')}>
         <Card.Body>
-            <Avatar image={exampleAvatarImage} initials="JS" alt="Deep Space" size="1.5em" />
+            <Avatar image={exampleAvatarImage} initials='JS' alt='Avatar' size='1.5em' />
             <span className={cx('add-left-margin')}>Avatar with meaningful image assigned with proper alternative text</span>
         </Card.Body>
     </Card>
 );
 ```
 - Avatars that are purely decorative should have the isAriaHidden prop set to true, effectively hiding the component from assistive technologies.
+
+<div>
+    <A11yExampleDecorativeAvatar />
+</div>
+
+```jsx
+const cx = classNamesBind.bind(styles);
+
+const A11yExampleAvatar = () => (
+    <Card classNames={cx('card')}>
+        <Card.Body>
+        <Avatar initials="JD" alt="" size="1.5em" isAriaHidden />
+        <span className={cx('add-left-margin')}>Avatar used for decorative purpose has isAriaHidden prop set.</span>
+        </Card.Body>
+    </Card>
+);
+```
 - Work with content creators to understand how content should resize and reflow at different breakpoints and form factors to ensure content is not artificially constrained or cut off at smaller viewports.
 
 ## Usability Expectations

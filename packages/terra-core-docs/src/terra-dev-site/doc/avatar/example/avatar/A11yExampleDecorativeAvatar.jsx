@@ -2,7 +2,6 @@ import React from 'react';
 import classNamesBind from 'classnames/bind';
 import Card from 'terra-card';
 import Avatar from 'terra-avatar';
-import exampleAvatarImage from '../../../demographics-banner/assets/demographicsCat.jpg';
 import styles from '../common/A11yExamples.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -10,9 +9,9 @@ const cx = classNamesBind.bind(styles);
 const A11yExampleAvatar = () => (
   <Card classNames={cx('card')}>
     <Card.Body>
-      <Avatar image={exampleAvatarImage} initials="JS" alt="Avatar" size="1.5em" />
+      <Avatar initials="JD" alt="" size="1.5em" isAriaHidden />
       <span className={cx('add-left-margin')}>
-        Avatar with meaningful image assigned with proper alternative text
+        Avatar used for decorative purpose has isAriaHidden prop set.
       </span>
     </Card.Body>
   </Card>
