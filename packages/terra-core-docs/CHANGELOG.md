@@ -8,6 +8,7 @@
 * Added
   * Added Accessibility Guide for `terra-section-header`
   * Added accessibility guide for `terra-progress-bar`
+  * Added accessibility guide for `terra-avatar`
 
 * Changed
   * Updated example for `terra-progress-bar`
