@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "description": "terra-core",
   "engines": {
-    "node": "^10.0.0 || ^12.0.0 || ^14.0.0"
+    "node": "^10.0.0 || ^12.0.0 || ^14.0.0",
+    "npm" : "^8.0.0"
   },
   "repository": {
     "type": "git",
@@ -64,13 +65,13 @@
     "lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
     "prepare-for-release": "terra prepare-for-release",
     "pretest": "npm run lint",
-    "postinstall": "npm run compile && npm run bootstrap:hoist",
+    "postinstall": "npm run bootstrap:hoist && npm run compile",
     "start": "webpack serve",
     "start:prod": "webpack serve --env disableHotReloading --mode=production",
     "start-static": "npm run compile:prod && terra express-server --site ./build",
     "start-heroku": "terra express-server --port $PORT --site './build' ",
-    "test": "npm run lint && npm run jest && npm run wdio",
-    "wdio-default": "terra wdio",
+    "test": "npm run jest && npm run wdio",
+    "wdio-default": "terra wdio --themes terra-default-theme",
     "wdio-lowlight": "terra wdio --themes clinical-lowlight-theme",
     "wdio-fusion": "terra wdio --themes orion-fusion-theme",
     "wdio": "terra wdio --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme"
