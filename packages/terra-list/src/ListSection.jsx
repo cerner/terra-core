@@ -22,9 +22,12 @@ const propTypes = {
    */
   isCollapsible: PropTypes.bool,
   /**
-   * Optionally sets the heading level. One of `2`, `3`, `4`, `5`, `6`.
+   * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Do Not use level as 1 as there should be only one H1 in a page.
+   * The option to add H1 will be removed in the next MVB
    */
-  level: PropTypes.oneOf([2, 3, 4, 5, 6]),
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
    * The associated metaData to be provided in the onSelect callback.
    */
