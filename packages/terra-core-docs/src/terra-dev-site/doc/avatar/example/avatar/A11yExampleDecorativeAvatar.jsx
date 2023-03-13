@@ -10,9 +10,6 @@ const A11yExampleAvatar = () => (
   <Card classNames={cx('card')}>
     <Card.Body>
       <Avatar initials="JD" alt="" size="1.5em" isAriaHidden />
-      <span className={cx('add-left-margin')}>
-        Avatar used for decorative purpose has isAriaHidden prop set.
-      </span>
     </Card.Body>
   </Card>
 );

@@ -11,9 +11,6 @@ const A11yExampleAvatar = () => (
   <Card classNames={cx('card')}>
     <Card.Body>
       <Avatar image={exampleAvatarImage} initials="JS" alt="Avatar" size="1.5em" />
-      <span className={cx('add-left-margin')}>
-        Avatar with meaningful image assigned with proper alternative text
-      </span>
     </Card.Body>
   </Card>
 );
