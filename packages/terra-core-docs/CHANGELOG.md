@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added Accessibility guideline for `terra-heading`
+  
 * Changed
   * Fix second example on default Paginator doc page
 
