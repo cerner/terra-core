@@ -20,7 +20,7 @@ const mockData = [
   },
   {
     title: 'Anne White',
-    key: 'unique-4  ',
+    key: 'unique-4',
   },
 ];
 
