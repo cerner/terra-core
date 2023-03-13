@@ -22,8 +22,8 @@ The Avatar component visually represents a person or facility. Poor or improper 
 
 - Engineers must not override Avatar’s ARIA role.
     - Engineers must apply an `alt` prop for meaningful images.
+- Avatar with meaningful image assigned with proper alternative text.
 
-**Example:** Avatar with meaningful image assigned with proper alternative text.
 <div>
     <A11yExampleAvatar />
 </div>
@@ -40,8 +40,8 @@ const AvatarExample = () => (
 );
 ```
 - Avatars that are purely decorative should have the isAriaHidden prop set to true, effectively hiding the component from assistive technologies.
+- Avatar used for decorative purpose has isAriaHidden prop set.
 
-**Example:** Avatar used for decorative purpose has isAriaHidden prop set.
 <div>
     <A11yExampleDecorativeAvatar />
 </div>
