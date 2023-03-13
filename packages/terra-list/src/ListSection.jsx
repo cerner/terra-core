@@ -49,7 +49,7 @@ const defaultProps = {
   children: [],
   isCollapsed: false,
   isCollapsible: false,
-  level: 1,
+  level: 2,
 };
 
 const ListSection = ({
