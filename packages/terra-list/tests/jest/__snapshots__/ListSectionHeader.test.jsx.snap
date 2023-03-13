@@ -59,7 +59,7 @@ exports[`should render with callback functions 1`] = `
 <li
   className=""
 >
-  <h1
+  <h2
     className="title"
   >
     <div
@@ -86,7 +86,7 @@ exports[`should render with callback functions 1`] = `
         test
       </div>
     </div>
-  </h1>
+  </h2>
 </li>
 `;
 
