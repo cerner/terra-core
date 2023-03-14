@@ -23,6 +23,7 @@
   - [Packages Requiring I18n](#packages-requiring-i18n)
 - [Contributing](#contributing)
 - [Local Development](#local-development)
+- [Local Development using Docker](#docker-local-development)
 - [LICENSE](#license)
 
 <h2 id="packages">
@@ -174,6 +175,32 @@ Please read through our [contributing guidelines](CONTRIBUTING.md). Included are
 npm install
 npm run test
 ```
+
+<h2 id="docker-local-development">
+  Local Development using Docker
+</h2>
+
+1. Install docker https://www.docker.com/.
+2. Install [Microsoft VS Code](https://code.visualstudio.com/Download)
+3. Clone this repo.
+4. Open this repo in VS Code.
+5. Install the Dev Container extension.
+    - Navigate to View -> Extension  -> Search for and install _Dev Containers_
+6. Build the dev container.
+    - Navigate to View -> Command Palette -> Open Workspace In Container or Reopen Folder Locally
+7. You're now running in a dev container.  Use the terminal of the dev container to issue any npm commands.
+8. Before running any WDIO tests (`npm run test` or `npm run wdio`) from inside this Dev Container, make sure to perform the following steps:
+    - Open a fresh terminal and navigate to  ".devcontainer/" path.
+    - Execute the command `"docker compose -f docker-compose-wdio.yml up"`. Selenium hub should spin up.
+    - Navigate to the root package.json file and edit the wdio scripts to include `--disableSeleniumService=true` flag.
+      For example:
+       ```sh
+       "scripts": {
+        "wdio": "terra wdio --disableSeleniumService --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme"
+        }
+       ```
+      This will disable the selenium service from spinning up again through terra-functional-testing setup.
+    - You can now run `npm run test` or any npm command which runs wdio tests through the Dev container.
 
 <h2 id="license">
   LICENSE
