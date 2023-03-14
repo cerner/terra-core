@@ -2,8 +2,11 @@
 
 ## Unreleased
 
+* Changed
+  * updated hyperlink to have underline always.
+
 * Added 
-  * Added new subcomponent `hyperlink-button`.
+  * Added support for `hyperlink-button`.
 
 ## 2.57.0 - (February 15, 2023)
 

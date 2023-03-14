@@ -9,7 +9,9 @@
     cursor: pointer;
     display: inline-block; // prevents variant icon from breaking onto its own line
     outline: none;
-    text-decoration: var(--terra-hyperlink-text-decoration, none);
+    text-decoration: var(--terra-hyperlink-text-decoration, underline);
+    touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
+    vertical-align: baseline;
 
     &:visited,
     &.is-visited {
@@ -47,6 +49,7 @@
       cursor: default;
       pointer-events: none;
       text-decoration: var(--terra-hyperlink-disabled-text-decoration, none);
+      touch-action: auto;
     }
   }
 
@@ -76,6 +79,71 @@
   }
 
   .icon {
-    margin-left: var(--terra-hyperlink-icon-margin-left, 0.5em);
+    display: inline-block;
+    font-size: var(--terra-hyperlink-icon-font-size, 1em);
+    margin-left: var(--terra-hyperlink-icon-margin-left, 0.28571em);
+    overflow: visible;
+    position: relative;
   }
+
+  .audio {
+    .icon {
+      font-size: var(--terra-hyperlink-audio-icon-font-size, 0.92857em);
+    }
+  }
+
+  .document {
+    .icon {
+      margin-left: var(--terra-hyperlink-document-icon-margin-left, 0.21428em);
+    }
+  }
+
+  .external { 
+    .icon {
+      bottom: var(--terra-hyperlink-external-icon-bottom, 0.03571em);
+      font-size: var(--terra-hyperlink-external-icon-font-size, 0.85714em);
+      margin-left: var(--terra-hyperlink-external-icon-margin-left, 0.28571em);
+    }
+  }
+
+  .image {
+    .icon {
+      bottom: var(--terra-hyperlink-image-icon-bottom, -0.07142em);
+    }
+  }
+
+  .video {
+    .icon {
+      bottom: var(--terra-hyperlink-video-icon-bottom, -0.07142em);
+    }
+  }
+
+  // Resets for Hyperlink-Button
+  .button-reset {
+    border: 0 none;
+    display: inline-block; // prevents variant icon from breaking onto its own line
+    font-family: inherit;
+    font-size: 1em;
+    left: 0; // reset for IE
+    line-height: inherit;
+    margin: 0; // reset for Safari, defaults to 2px
+    outline: none;
+    overflow: visible; // reset for IE
+    padding: 0;
+    pointer-events: auto;
+    position: relative; // reset for IE
+    text-align: left;
+    top: 0;  // reset for IE
+    touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
+    vertical-align: baseline;
+
+    .button-inner {
+      font-family: inherit;
+      left: 0; // reset for IE
+      line-height: inherit;
+      min-width: 0;
+      position: relative; // reset for IE
+      top: 0;  // reset for IE
+    }  
+  } 
 }
