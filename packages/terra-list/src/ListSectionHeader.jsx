@@ -19,6 +19,9 @@ const propTypes = {
   isCollapsible: PropTypes.bool,
   /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Do Not use level as 1 as there should be only one H1 in a page.
+   * The option to add H1 will be removed in the next MVB
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
@@ -60,7 +63,7 @@ const propTypes = {
 const defaultProps = {
   isCollapsed: false,
   isCollapsible: false,
-  level: 1,
+  level: 2,
 };
 
 const ListSectionHeader = ({
@@ -88,7 +91,7 @@ const ListSectionHeader = ({
   );
 
   const attrSpread = {};
-  const Element = `h${level}`;
+  const Element = level === 1 ? 'h2' : `h${level}`;
   const titleElement = <div className={cx('fill')}>{title}</div>;
   let accordionIcon;
   if (isCollapsible) {

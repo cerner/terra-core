@@ -71,6 +71,7 @@ exports[`correctly applies the theme context className 1`] = `
     >
       <ul
         className="list orion-fusion-theme"
+        onKeyDown={[Function]}
         role="list"
       />
     </List>
@@ -226,6 +227,7 @@ exports[`should render with ariaDescription 1`] = `
 <ul
   aria-description="Navigate this list using the arrow keys."
   className="list"
+  onKeyDown={[Function]}
   role="list"
 >
   <ListItem
@@ -476,6 +478,7 @@ exports[`should render with ariaDetails 2`] = `
 exports[`should render with bottom only divided items 1`] = `
 <ul
   className="list divider-bottom-only"
+  onKeyDown={[Function]}
   role="list"
 >
   <ListItem
@@ -514,6 +517,7 @@ exports[`should render with bottom only divided items 1`] = `
 exports[`should render with items 1`] = `
 <ul
   className="list"
+  onKeyDown={[Function]}
   role="list"
 >
   <ListItem
@@ -554,6 +558,7 @@ exports[`should render with mutli select aria attributes with ariaSelectionStyle
   aria-label="Terra.list.multiSelect"
   aria-multiselectable={true}
   className="list"
+  onKeyDown={[Function]}
   role="listbox"
 >
   <ListItem
@@ -592,6 +597,7 @@ exports[`should render with mutli select aria attributes with ariaSelectionStyle
 exports[`should render with no items 1`] = `
 <ul
   className="list"
+  onKeyDown={[Function]}
   role="list"
 />
 `;
@@ -600,6 +606,7 @@ exports[`should render with single select aria attributes with ariaSelectionStyl
 <ul
   aria-label="Terra.list.singleSelect"
   className="list"
+  onKeyDown={[Function]}
   role="listbox"
 >
   <ListItem
@@ -638,6 +645,7 @@ exports[`should render with single select aria attributes with ariaSelectionStyl
 exports[`should render with standard divided items 1`] = `
 <ul
   className="list divider-standard"
+  onKeyDown={[Function]}
   role="list"
 >
   <ListItem
@@ -676,6 +684,7 @@ exports[`should render with standard divided items 1`] = `
 exports[`should render with standard padded items 1`] = `
 <ul
   className="list padding-standard"
+  onKeyDown={[Function]}
   role="list"
 >
   <ListItem
@@ -714,6 +723,7 @@ exports[`should render with standard padded items 1`] = `
 exports[`should render with thin padded items 1`] = `
 <ul
   className="list padding-compact"
+  onKeyDown={[Function]}
   role="list"
 >
   <ListItem

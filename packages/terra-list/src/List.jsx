@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
+import * as KeyCode from 'keycode-js';
 import styles from './List.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -111,6 +112,26 @@ const List = ({
     ),
     customProps.className,
   );
+  let listNode = useRef();
+
+  const handleListRef = (node) => {
+    if (refCallback) {
+      refCallback(node);
+    }
+    listNode = node;
+  };
+  const handleKeyDown = event => {
+    const listItems = listNode.querySelectorAll('[data-item-show-focus]');
+    if (event.nativeEvent.keyCode === KeyCode.KEY_END) {
+      event.preventDefault();
+      listItems[listItems.length - 1].focus();
+    }
+
+    if (event.nativeEvent.keyCode === KeyCode.KEY_HOME) {
+      event.preventDefault();
+      listItems[0].focus();
+    }
+  };
 
   const attrSpread = {};
   attrSpread.role = 'list'; // Explicitly set role='list' as it's missing in Safari
@@ -130,6 +151,7 @@ const List = ({
   }
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <ul
       {...customProps}
       {...attrSpread}
@@ -137,7 +159,8 @@ const List = ({
       aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
       aria-details={ariaDetails}
       className={listClassNames}
-      ref={refCallback}
+      ref={handleListRef}
+      onKeyDown={handleKeyDown}
     >
       {children}
     </ul>

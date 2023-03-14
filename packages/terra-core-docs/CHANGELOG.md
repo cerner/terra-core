@@ -6,6 +6,7 @@
   * Added Accessibility guideline for `terra-heading`
   
 * Changed
+  * Added tests for `terra-list`.
   * Fix second example on default Paginator doc page
 
 * Added
