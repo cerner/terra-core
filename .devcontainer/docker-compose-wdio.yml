@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+  selenium-hub:
+    image: selenium/hub:3.141.59-zirconium
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
+    healthcheck:
+      test: ["CMD", "/opt/bin/check-grid.sh"]
+      interval: 15s
+      timeout: 30s
+      retries: 5
+
+  chrome:
+    image: selenium/node-chrome:3.141.59-zirconium
+    # Volume mounting is necessary to ensure the browser does not crash inside the docker container.
+    # For more details see:
+    #  https://github.com/SeleniumHQ/docker-selenium#running-the-images
+    #  https://bugs.chromium.org/p/chromium/issues/detail?id=519952
+    #  https://bugzilla.mozilla.org/show_bug.cgi?id=1338771#c10
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+
+  firefox:
+    image: selenium/node-firefox:3.141.59-zirconium
+    # Volume mounting is necessary to ensure the browser does not crash inside the docker container.
+    # For more details see:
+    #  https://github.com/SeleniumHQ/docker-selenium#running-the-images
+    #  https://bugs.chromium.org/p/chromium/issues/detail?id=519952
+    #  https://bugzilla.mozilla.org/show_bug.cgi?id=1338771#c10
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
