@@ -11,13 +11,13 @@ exports[`correctly applies the theme context className 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
-    level={1}
+    level={2}
     title="test"
   >
     <li
       className="orion-fusion-theme"
     >
-      <h1
+      <h2
         className="title"
       >
         <div
@@ -29,7 +29,7 @@ exports[`correctly applies the theme context className 1`] = `
             test
           </div>
         </div>
-      </h1>
+      </h2>
     </li>
   </ListSectionHeader>
 </ThemeContextProvider>
@@ -39,7 +39,7 @@ exports[`should render default 1`] = `
 <li
   className=""
 >
-  <h1
+  <h2
     className="title"
   >
     <div
@@ -51,7 +51,7 @@ exports[`should render default 1`] = `
         test
       </div>
     </div>
-  </h1>
+  </h2>
 </li>
 `;
 
@@ -59,7 +59,7 @@ exports[`should render with callback functions 1`] = `
 <li
   className=""
 >
-  <h1
+  <h2
     className="title"
   >
     <div
@@ -86,7 +86,7 @@ exports[`should render with callback functions 1`] = `
         test
       </div>
     </div>
-  </h1>
+  </h2>
 </li>
 `;
 
@@ -94,7 +94,7 @@ exports[`should render with isCollapsed 1`] = `
 <li
   className=""
 >
-  <h1
+  <h2
     className="title"
   >
     <div
@@ -106,7 +106,7 @@ exports[`should render with isCollapsed 1`] = `
         test
       </div>
     </div>
-  </h1>
+  </h2>
 </li>
 `;
 
@@ -114,7 +114,7 @@ exports[`should render with isCollapsible 1`] = `
 <li
   className=""
 >
-  <h1
+  <h2
     className="title"
   >
     <div
@@ -139,7 +139,7 @@ exports[`should render with isCollapsible 1`] = `
         test
       </div>
     </div>
-  </h1>
+  </h2>
 </li>
 `;
 

@@ -5,12 +5,17 @@
 * Added 
   * Added Accessibility Guide for `terra-dropdown-button`.
 
+* Added
+  * Added Accessibility guideline for `terra-heading`
+  
 * Changed
+  * Added tests for `terra-list`.
   * Fix second example on default Paginator doc page
 
 * Added
   * Added Accessibility Guide for `terra-section-header`
   * Added accessibility guide for `terra-progress-bar`
+  * Added accessibility guide for `terra-avatar`
 
 * Changed
   * Updated example for `terra-progress-bar`

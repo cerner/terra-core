@@ -1,26 +1,25 @@
 import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
-import { Placeholder } from '@cerner/terra-docs';
 
 const mockData = [
   {
-    title: 'Item 0',
+    title: 'John Smith',
     key: 'unique-0',
   },
   {
-    title: 'Item 1',
+    title: 'Mary Jane',
     key: 'unique-1',
   },
   {
-    title: 'Item 2',
+    title: 'Peter Parker',
     key: 'unique-2',
   },
   {
-    title: 'Item 3',
+    title: 'Clark Kent',
     key: 'unique-3',
   },
   {
-    title: 'Item 4',
+    title: 'Anne White',
     key: 'unique-4',
   },
 ];
@@ -49,7 +48,7 @@ class SingleSelectList extends React.Component {
         metaData={{ key: itemData.key }}
         onSelect={this.handleItemSelection}
       >
-        <Placeholder title={itemData.title} />
+        <p>{itemData.title}</p>
       </Item>
     );
   }
@@ -60,9 +59,14 @@ class SingleSelectList extends React.Component {
 
   render() {
     return (
-      <List dividerStyle="standard" ariaSelectionStyle="single-select">
-        {this.createListItems(mockData)}
-      </List>
+      <>
+        <p id="list-help">
+          Select a patient from the list to view patient details.
+        </p>
+        <List ariaDescribedBy="list-help" dividerStyle="standard" ariaSelectionStyle="single-select">
+          {this.createListItems(mockData)}
+        </List>
+      </>
     );
   }
 }
