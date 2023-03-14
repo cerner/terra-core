@@ -27,11 +27,27 @@ Terra.describeViewports('List', ['medium'], () => {
     });
   });
 
+  describe('ListSectionDivider', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/list/list-section-divider'));
+
+    it('should display ListSection with divider', () => {
+      Terra.validates.element('section divider');
+    });
+  });
+
   describe('ListSubsection', () => {
     before(() => browser.url('/raw/tests/cerner-terra-core-docs/list/list-subsection'));
 
     it('should display ListSubsection', () => {
       Terra.validates.element('subsection');
+    });
+  });
+
+  describe('ListSubsectionDivider', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/list/list-subsection-divider'));
+
+    it('should display ListSubsection with divider', () => {
+      Terra.validates.element('subsection divider');
     });
   });
 
