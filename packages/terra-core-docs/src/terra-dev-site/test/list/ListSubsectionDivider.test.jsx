@@ -1,7 +1,7 @@
 import React from 'react';
 import List, { Item, Subsection } from 'terra-list/lib/index';
 
-const ListSubsectionTest = () => (
+const ListSubsectionDividerTest = () => (
   <List dividerStyle="standard">
     <Subsection
       key="static-subsection"
@@ -42,4 +42,4 @@ const ListSubsectionTest = () => (
   </List>
 );
 
-export default ListSubsectionTest;
+export default ListSubsectionDividerTest;
