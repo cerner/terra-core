@@ -4,6 +4,7 @@
 
 * Added
   * Added Accessibility guideline for `terra-heading`
+  * Added examples for for `terra-list`
   
 * Changed
   * Added tests for `terra-list`.

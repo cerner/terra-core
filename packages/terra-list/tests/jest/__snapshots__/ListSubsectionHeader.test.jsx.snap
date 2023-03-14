@@ -15,7 +15,7 @@ exports[`correctly applies the theme context className 1`] = `
     title="test"
   >
     <li
-      className="orion-fusion-theme"
+      className="list-item orion-fusion-theme"
     >
       <h2
         className="title"
@@ -37,7 +37,7 @@ exports[`correctly applies the theme context className 1`] = `
 
 exports[`should render default 1`] = `
 <li
-  className=""
+  className="list-item"
 >
   <h2
     className="title"
@@ -57,7 +57,7 @@ exports[`should render default 1`] = `
 
 exports[`should render with callback functions 1`] = `
 <li
-  className=""
+  className="list-item"
 >
   <h2
     className="title"
@@ -92,7 +92,7 @@ exports[`should render with callback functions 1`] = `
 
 exports[`should render with isCollapsed 1`] = `
 <li
-  className=""
+  className="list-item"
 >
   <h2
     className="title"
@@ -112,7 +112,7 @@ exports[`should render with isCollapsed 1`] = `
 
 exports[`should render with isCollapsible 1`] = `
 <li
-  className=""
+  className="list-item"
 >
   <h2
     className="title"
@@ -145,7 +145,7 @@ exports[`should render with isCollapsible 1`] = `
 
 exports[`should render with level 1`] = `
 <li
-  className=""
+  className="list-item"
 >
   <h3
     className="title"

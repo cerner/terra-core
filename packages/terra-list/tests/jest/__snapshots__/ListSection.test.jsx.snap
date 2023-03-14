@@ -21,7 +21,7 @@ exports[`correctly applies the theme context className 1`] = `
       title="test"
     >
       <li
-        className="orion-fusion-theme"
+        className="list-item orion-fusion-theme"
       >
         <h2
           className="title"
@@ -38,11 +38,11 @@ exports[`correctly applies the theme context className 1`] = `
         </h2>
       </li>
     </ListSectionHeader>
-    <li>
+    <li
+      className="list-item"
+    >
       <ul
-        className="list orion-fusion-theme"
-        level={2}
-        title="test"
+        className="list list-fill orion-fusion-theme"
       />
     </li>
   </ListSection>
@@ -59,13 +59,11 @@ exports[`should render with callback functions 1`] = `
     refCallback={[MockFunction]}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={2}
-      onSelect={[MockFunction]}
-      refCallback={[MockFunction]}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>
@@ -79,11 +77,11 @@ exports[`should render with isCollapsed 1`] = `
     level={2}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={2}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>
@@ -97,11 +95,11 @@ exports[`should render with isCollapsible 1`] = `
     level={2}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={2}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>
@@ -115,11 +113,11 @@ exports[`should render with items 1`] = `
     level={2}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={2}
-      title="test"
+      className="list list-fill"
     >
       <ListItem
         hasChevron={false}
@@ -164,11 +162,11 @@ exports[`should render with level 1`] = `
     level={3}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={3}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>
@@ -182,11 +180,11 @@ exports[`should render with no items 1`] = `
     level={2}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={2}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>

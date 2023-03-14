@@ -20,8 +20,8 @@ const propTypes = {
   /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
-   * Do Not use level as 1 as there should be only one H1 in a page.
-   * The option to add H1 will be removed in the next MVB
+   * Replace value `1` of `level` prop with other level values. Do Not use level as 1 as there should be only one H1 in a page.
+   * Heading value `1` will be converted as heading level `2` until it is removed in the next MVB release.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
@@ -112,9 +112,9 @@ const ListSectionHeader = ({
   }
 
   return (
-    <li className={cx(theme.className)}>
+    <li {...customProps} className={cx('list-item', theme.className)}>
       <Element className={cx('title')}>
-        <div {...customProps} {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
+        <div {...attrSpread} className={sectionHeaderClassNames} ref={refCallback}>
           {accordionIcon}
           {titleElement}
         </div>

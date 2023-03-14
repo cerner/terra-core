@@ -65,21 +65,19 @@ const ListSubsection = ({
 
   const theme = React.useContext(ThemeContext);
   const listClassNames = classNames(
-    cx(
-      'list',
-      theme.className,
-    ),
-    customProps.className,
+    cx('list', 'list-fill', theme.className),
   );
 
   return (
     <>
       <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
-      <li>
-        <ul {...customProps} className={listClassNames}>
+      {sectionItems && (
+      <li className={cx('list-item')}>
+        <ul className={listClassNames}>
           {sectionItems}
         </ul>
       </li>
+      )}
     </>
   );
 };
