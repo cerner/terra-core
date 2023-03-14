@@ -27,11 +27,27 @@ Terra.describeViewports('List', ['medium'], () => {
     });
   });
 
+  describe('ListSectionDivider', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/list/list-section-divider'));
+
+    it('should display ListSection with divider', () => {
+      Terra.validates.element('section divider');
+    });
+  });
+
   describe('ListSubsection', () => {
     before(() => browser.url('/raw/tests/cerner-terra-core-docs/list/list-subsection'));
 
     it('should display ListSubsection', () => {
       Terra.validates.element('subsection');
+    });
+  });
+
+  describe('ListSubsectionDivider', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/list/list-subsection-divider'));
+
+    it('should display ListSubsection with divider', () => {
+      Terra.validates.element('subsection divider');
     });
   });
 
@@ -48,6 +64,23 @@ Terra.describeViewports('List', ['medium'], () => {
 
     it('should display ListSubsectionHeader', () => {
       Terra.validates.element('subsection header');
+    });
+  });
+
+  describe('Keyboard Navigation', () => {
+    before(() => browser.url('raw/tests/cerner-terra-core-docs/list/single-select-list'));
+
+    it('should tab to the 3rd list item and put focus on it', () => {
+      browser.keys(['Tab', 'Tab', 'Tab']);
+      Terra.validates.element('Tab Keypress');
+    });
+    it('should focus the first list item when Home key is pressed', () => {
+      browser.keys('Home');
+      Terra.validates.element('Home Keypress');
+    });
+    it('should focus the last list item when End key is pressed', () => {
+      browser.keys('End');
+      Terra.validates.element('End Keypress');
     });
   });
 });

@@ -23,6 +23,9 @@ const propTypes = {
   isCollapsible: PropTypes.bool,
   /**
    * Optionally sets the heading level. One of `1`, `2`, `3`, `4`, `5`, `6`.
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Replace value `1` of `level` prop with other level values. Do Not use level as 1 as there should be only one H1 in a page.
+   * Heading value `1` will be converted as heading level `2` until it is removed in the next MVB release.
    */
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
@@ -49,7 +52,7 @@ const defaultProps = {
   children: [],
   isCollapsed: false,
   isCollapsible: false,
-  level: 1,
+  level: 2,
 };
 
 const ListSection = ({
@@ -65,21 +68,19 @@ const ListSection = ({
 
   const theme = React.useContext(ThemeContext);
   const listClassNames = classNames(
-    cx(
-      'list',
-      theme.className,
-    ),
-    customProps.className,
+    cx('list', 'list-fill', theme.className),
   );
 
   return (
     <>
       <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
-      <li>
-        <ul {...customProps} className={listClassNames}>
+      {sectionItems && (
+      <li className={cx('list-item')}>
+        <ul className={listClassNames}>
           {sectionItems}
         </ul>
       </li>
+      )}
     </>
   );
 };
