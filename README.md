@@ -23,7 +23,7 @@
   - [Packages Requiring I18n](#packages-requiring-i18n)
 - [Contributing](#contributing)
 - [Local Development](#local-development)
-- [Local Development using Docker](#docker-local-development)
+- [Local Development using Docker (Dev Containers)](#docker-local-development)
 - [LICENSE](#license)
 
 <h2 id="packages">
@@ -177,7 +177,7 @@ npm run test
 ```
 
 <h2 id="docker-local-development">
-  Local Development using Docker
+  Local Development using Docker (Dev Containers)
 </h2>
 
 1. Install docker https://www.docker.com/.
@@ -186,6 +186,7 @@ npm run test
 4. Open this repo in VS Code.
 5. Install the Dev Container extension.
     - Navigate to View -> Extension  -> Search for and install _Dev Containers_
+    - More information on [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
 6. Build the dev container.
     - Navigate to View -> Command Palette -> Open Workspace In Container or Reopen Folder Locally
 7. You're now running in a dev container.  Use the terminal of the dev container to issue any npm commands.
