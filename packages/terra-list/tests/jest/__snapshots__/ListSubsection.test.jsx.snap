@@ -9,11 +9,9 @@ exports[`correctly applies the theme context className 1`] = `
   }
 >
   <ListSubsection
-    dividerStyle="none"
     isCollapsed={false}
     isCollapsible={false}
     level={2}
-    paddingStyle="none"
     title="test"
   >
     <ListSubsectionHeader
@@ -45,8 +43,6 @@ exports[`correctly applies the theme context className 1`] = `
     >
       <ul
         className="list list-fill orion-fusion-theme"
-        level={2}
-        title="test"
       />
     </li>
   </ListSubsection>
@@ -68,10 +64,6 @@ exports[`should render with callback functions 1`] = `
   >
     <ul
       className="list list-fill"
-      level={2}
-      onSelect={[MockFunction]}
-      refCallback={[MockFunction]}
-      title="test"
     />
   </li>
 </Fragment>
@@ -90,8 +82,6 @@ exports[`should render with isCollapsed 1`] = `
   >
     <ul
       className="list list-fill"
-      level={2}
-      title="test"
     />
   </li>
 </Fragment>
@@ -110,8 +100,6 @@ exports[`should render with isCollapsible 1`] = `
   >
     <ul
       className="list list-fill"
-      level={2}
-      title="test"
     />
   </li>
 </Fragment>
@@ -130,8 +118,6 @@ exports[`should render with items 1`] = `
   >
     <ul
       className="list list-fill"
-      level={2}
-      title="test"
     >
       <ListItem
         hasChevron={false}
@@ -181,8 +167,6 @@ exports[`should render with level 1`] = `
   >
     <ul
       className="list list-fill"
-      level={3}
-      title="test"
     />
   </li>
 </Fragment>
@@ -201,8 +185,6 @@ exports[`should render with no items 1`] = `
   >
     <ul
       className="list list-fill"
-      level={2}
-      title="test"
     />
   </li>
 </Fragment>
