@@ -185,10 +185,11 @@ npm run test
 3. Clone this repo.
 4. Open this repo in VS Code.
 5. Install the Dev Container extension.
-    - Navigate to View -> Extension  -> Search for and install _Dev Containers_
+    - Navigate to View -> Extension  -> Search for and install _Dev Containers_ (or "ms-vscode-remote.remote-containers")
     - More information on [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
 6. Build the dev container.
-    - Navigate to View -> Command Palette -> Open Workspace In Container or Reopen Folder Locally
+    - Make sure you are connected to the Cerner VPN when building this container the first time.
+    - Navigate to View -> Command Palette -> Open Workspace In Container or Reopen In Container.
 7. You're now running in a dev container.  Use the terminal of the dev container to issue any npm commands.
 8. Before running any WDIO tests (`npm run test` or `npm run wdio`), make sure to perform the following steps:
     - Open a new terminal (outside the dev container) and navigate to  ".devcontainer/" path in your repository.
