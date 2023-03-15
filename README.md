@@ -192,16 +192,15 @@ npm run test
 7. You're now running in a dev container.  Use the terminal of the dev container to issue any npm commands.
 8. Before running any WDIO tests (`npm run test` or `npm run wdio`), make sure to perform the following steps:
     - Open a new terminal (outside the dev container) and navigate to  ".devcontainer/" path in your repository.
-    - Execute the command `"docker compose -f docker-compose-wdio.yml up"`. Selenium hub should spin up.
-    - Navigate to the root package.json file and edit the wdio scripts to include `--disableSeleniumService=true` flag.
+    - Execute the command `"docker compose -f docker-compose-wdio.yml up"`. Selenium hub should spin up. Leave this running in the background. If you see errors saying "container name already exists", run `"docker container prune"` command followed by selecting "y" to clear up any unused containers and try running the previous command again.
+    - Edit the root package.json file WDIO scripts to include `--disableSeleniumService=true` flag. This will disable the selenium service from spinning up again.
       For example:
        ```sh
        "scripts": {
         "wdio": "terra wdio --disableSeleniumService=true --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme"
         }
        ```
-      This will disable the selenium service from spinning up again through terra-functional-testing setup.
-    - You can now run `npm run test` or any npm command which runs wdio tests from inside the Dev Container.
+    - You can now run `npm run test` or any npm command which runs WDIO tests from inside the Dev Container.
 
 <h2 id="license">
   LICENSE
