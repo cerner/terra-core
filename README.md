@@ -180,7 +180,7 @@ npm run test
   Local Development using Docker (Dev Containers)
 </h2>
 
-1. Install docker https://www.docker.com/.
+1. Install [Docker](https://www.docker.com/).
 2. Install [Microsoft VS Code](https://code.visualstudio.com/Download)
 3. Clone this repo.
 4. Open this repo in VS Code.
@@ -191,17 +191,17 @@ npm run test
     - Make sure you are connected to the Cerner VPN when building this container the first time.
     - Navigate to View -> Command Palette -> Open Workspace In Container or Reopen In Container.
 7. You're now running in a dev container.  Use the terminal of the dev container to issue any npm commands.
-8. Before running any WDIO tests (`npm run test` or `npm run wdio`), make sure to perform the following steps:
+8. Before running any WDIO tests, make sure to perform the following steps:
     - Open a new terminal (outside the dev container) and navigate to  ".devcontainer/" path in your repository.
-    - Execute the command `"docker compose -f docker-compose-wdio.yml up"`. Selenium hub should spin up. Leave this running in the background. If you see errors saying "container name already exists", run `"docker container prune"` command followed by selecting "y" to clear up any unused containers and try running the previous command again.
-    - Edit the root package.json file WDIO scripts to include `--disableSeleniumService=true` flag. This will disable the selenium service from spinning up again.
+    - Execute the command `"docker compose -f docker-compose-wdio.yml up"`. Selenium hub should spin up. Leave this running in the background. If you see errors saying "container name already exists", run `"docker container prune"` command followed by pressing "y" to clear up any unused containers and try running the previous command again.
+    - You can now run `npm run test:docker` or `npm run wdio:docker` commands to run WDIO tests from inside the Dev Container.
+    - NOTE: Optionally, if you want to run other WDIO commands in the dev container, you can also edit the root package.json file WDIO scripts to include `--disableSeleniumService=true` flag. This will disable the selenium service from spinning up again.
       For example:
        ```sh
        "scripts": {
-        "wdio": "terra wdio --disableSeleniumService=true --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme"
+        "wdio-lowlight": "terra wdio --disableSeleniumService=true --themes clinical-lowlight-theme"
         }
        ```
-    - You can now run `npm run test` or any npm command which runs WDIO tests from inside the Dev Container.
 
 <h2 id="license">
   LICENSE
