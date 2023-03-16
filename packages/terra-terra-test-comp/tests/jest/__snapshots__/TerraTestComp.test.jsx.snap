@@ -2,7 +2,7 @@
 
 exports[`TerraTestComp should render a default component 1`] = `
 <button
-  className="TerraTestComp"
+  className="terra-test-comp"
 >
   default
 </button>

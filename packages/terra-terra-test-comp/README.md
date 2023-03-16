@@ -1,17 +1,17 @@
-# Terra Terratestcomp
+# Terra Terra Test Comp
 
-[![NPM version](https://badgen.net/npm/v/terra-TerraTestComp)](https://www.npmjs.com/package/terra-TerraTestComp)
+[![NPM version](https://badgen.net/npm/v/terra-terra-test-comp)](https://www.npmjs.com/package/terra-terra-test-comp)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
 {insert description}
 
 - [Getting Started](#getting-started)
-- [Documentation](https://github.com/cerner/terra-core/tree/main/packages/terra-TerraTestComp/docs)
+- [Documentation](https://github.com/cerner/terra-core/tree/main/packages/terra-terra-test-comp/docs)
 - [LICENSE](#license)
 
 ## Getting Started
 
-- Install from [npmjs](https://www.npmjs.com): `npm install terra-TerraTestComp`
+- Install from [npmjs](https://www.npmjs.com): `npm install terra-terra-test-comp`
 
 ## LICENSE
 

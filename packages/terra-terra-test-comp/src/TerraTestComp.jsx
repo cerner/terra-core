@@ -22,13 +22,13 @@ const TerraTestComp = ({ name, ...customProps }) => {
   const theme = React.useContext(ThemeContext);
   const TerraTestCompClassNames = classNames(
     cx([
-      'terra-test-comp',
-      theme.className,
-    ]),
+    'terra-test-comp',
+    theme.className,
+  ]),
     customProps.className,
   );
 
-  return (<div {...customProps} className={TerraTestCompClassNames}>{name}</div>);
+  return (<button {...customProps} className={TerraTestCompClassNames}>{name}</button>);
 };
 
 TerraTestComp.propTypes = propTypes;

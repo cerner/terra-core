@@ -13,12 +13,12 @@ describe('TerraTestComp', () => {
   // Prop Tests
   it('should use the default value when no value is given', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.find('.TerraTestComp').text()).toEqual('default');
+    expect(wrapper.find('.terra-test-comp').text()).toEqual('default');
   });
 
   // Structure Tests
-  it('should have the class TerraTestComp', () => {
+  it('should have the class terra-test-comp', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('TerraTestComp');
+    expect(wrapper.prop('className')).toContain('terra-test-comp');
   });
 });
