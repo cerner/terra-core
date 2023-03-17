@@ -108,9 +108,9 @@ jobs:
           publish_dir: ./build
           force_orphan: true
           destination_dir: ${{ env.PR_PATH }}
-     - name: Comment on PR
-        uses: hasura/comment-progress@v2.2.0
+      - name: Comment on PR
         if: github.event_name == 'pull_request'
+        uses: hasura/comment-progress@v2.2.0  
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
