@@ -72,4 +72,17 @@ Terra.describeViewports('Hyperlink', ['tiny'], () => {
 
     Terra.validates.element('focused hyperlink');
   });
+
+  it('should display programmatic focus on hyperlink button', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/programmatic-focus');
+    $('#button2').click();
+
+    Terra.validates.element('focused hyperlink button');
+  });
+
+  it('should render Hyperlink Button states when onClick is provided', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/hyperlink/states-hyperlink-button');
+
+    Terra.validates.element('hyperlink-button');
+  });
 });

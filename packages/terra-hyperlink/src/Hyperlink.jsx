@@ -5,6 +5,7 @@ import IconAudio from 'terra-icon/lib/icon/IconAudio';
 import IconVideoCamera from 'terra-icon/lib/icon/IconVideoCamera';
 import IconImage from 'terra-icon/lib/icon/IconImage';
 import IconDocuments from 'terra-icon/lib/icon/IconDocuments';
+import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
@@ -22,18 +23,18 @@ const variants = {
   DOCUMENT: 'document',
 };
 
-const getHyperlinkIcon = (variant) => {
+const getHyperlinkIcon = (intl, variant) => {
   switch (variant) {
     case variants.AUDIO:
-      return (<span className={cx('icon')}><IconAudio /></span>);
+      return (<span className={cx('icon')}><IconAudio a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.audio' })} /></span>);
     case variants.DOCUMENT:
-      return (<span className={cx('icon')}><IconDocuments /></span>);
+      return (<span className={cx('icon')}><IconDocuments a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.document' })} /></span>);
     case variants.EXTERNAL:
-      return (<span className={cx('icon')}><IconExternalLink /></span>);
+      return (<span className={cx('icon')}><IconExternalLink a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.external' })} /></span>);
     case variants.IMAGE:
-      return (<span className={cx('icon')}><IconImage /></span>);
+      return (<span className={cx('icon')}><IconImage a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.image' })} /></span>);
     case variants.VIDEO:
-      return (<span className={cx('icon')}><IconVideoCamera /></span>);
+      return (<span className={cx('icon')}><IconVideoCamera a11yLabel={intl.formatMessage({ id: 'Terra.hyperlink.iconLabel.video' })} /></span>);
     default:
       return null;
   }
@@ -41,23 +42,40 @@ const getHyperlinkIcon = (variant) => {
 
 const propTypes = {
   /**
-   * The content to display inside link.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * This prop is deperecated and will be removed on next MVB release.
+   * update all the references to use `text` prop to add the content to display inside link.
    */
   children: PropTypes.node,
   /**
-   * Sets the href of the link.
+   * The content to display inside link.
+   */
+  text: PropTypes.string,
+  /**
+   * Additional information to display as a native tooltip on hover.
+   */
+  title: PropTypes.string,
+  /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Sets the href of the link. href is required for hyperlinks and should be ignored when `onClick` callback is used.
    */
   href: PropTypes.string,
   /**
-   * Whether or not the link should be disabled.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * This prop is deperecated and will be removed on next MVB release.
+   * Do not use this prop as Accessibility best practices are to not use hyperlinks that are disabled.
    */
   isDisabled: PropTypes.bool,
   /**
-   * Whether or not the link should display an underline by default. Will still display an underline on hover and focus.
+   * ![IMPORTANT](https://badgen.net/badge/prop/deprecated/red)
+   * This prop is deperecated and will be removed on next MVB release.
+   * Do not use this prop as Accessibility best practices are to always have hyperlinks display with an underline.
    */
   isUnderlineHidden: PropTypes.bool,
   /**
-   * Callback function triggered when clicked.
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Callback function triggered when clicked. onClick is required to render hyperlink as a button.
+   * `onClick` should be ignored when `href` is provided.
    */
   onClick: PropTypes.func,
   /**
@@ -84,10 +102,16 @@ const propTypes = {
    * Sets the hyperlink variant. One of `default`, `external`, `image`, `video`, `audio`, `document`.
    */
   variant: PropTypes.oneOf(['default', 'external', 'image', 'video', 'audio', 'document']),
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 };
 
 const defaultProps = {
   isDisabled: false,
+  isUnderlineHidden: false,
   variant: variants.DEFAULT,
 };
 
@@ -103,7 +127,9 @@ class Hyperlink extends React.Component {
   }
 
   handleMouseDown(event) {
-    this.linkRef.current.setAttribute('data-focus-styles-enabled', 'false');
+    if (this.linkRef) {
+      this.linkRef.current.setAttribute('data-focus-styles-enabled', 'false');
+    }
 
     if (this.props.onMouseDown) {
       this.props.onMouseDown(event);
@@ -112,7 +138,9 @@ class Hyperlink extends React.Component {
 
   handleOnBlur(event) {
     this.setState({ focused: false });
-    this.linkRef.current.setAttribute('data-focus-styles-enabled', 'true');
+    if (this.linkRef) {
+      this.linkRef.current.setAttribute('data-focus-styles-enabled', 'true');
+    }
 
     if (this.props.onBlur) {
       this.props.onBlur(event);
@@ -144,8 +172,10 @@ class Hyperlink extends React.Component {
   render() {
     const {
       children,
+      text,
       isDisabled,
       isUnderlineHidden,
+      intl,
       variant,
       href,
       onClick,
@@ -154,6 +184,7 @@ class Hyperlink extends React.Component {
       onKeyDown,
       onKeyUp,
       onMouseDown,
+      title,
       ...customProps
     } = this.props;
 
@@ -172,7 +203,17 @@ class Hyperlink extends React.Component {
       customProps.className,
     );
 
-    const ComponentType = isDisabled ? 'span' : 'a';
+    const hyperlinkButtonClasses = classNames(
+      cx(
+        'button-reset',
+        'hyperlink',
+        variant,
+        { 'is-underline-hidden': isUnderlineHidden },
+        { 'is-focused': this.state.focused },
+        theme.className,
+      ),
+      customProps.className,
+    );
 
     let { target } = customProps; // Defaults to undefined if not set
     let { rel } = customProps; // Defaults to undefined if not set
@@ -187,11 +228,36 @@ class Hyperlink extends React.Component {
       rel = 'noopener noreferrer';
     }
 
+    if (onClick && !isDisabled) {
+      return (
+        <button
+          {...customProps}
+          className={hyperlinkButtonClasses}
+          onMouseDown={this.handleMouseDown}
+          onKeyDown={this.handleKeyDown}
+          onKeyUp={this.handleKeyUp}
+          onBlur={this.handleOnBlur}
+          onClick={onClick}
+          onFocus={onFocus}
+          title={title}
+          role="link"
+          type="button"
+          ref={this.linkRef}
+        >
+          <span className={cx('button-inner')}>
+            {text}
+            {getHyperlinkIcon(intl, variant)}
+          </span>
+        </button>
+      );
+    }
+
     return (
-      <ComponentType
+      <a
         {...customProps}
-        className={hyperlinkClasses}
+        role={(isDisabled) ? 'link' : undefined}
         aria-disabled={isDisabled}
+        className={hyperlinkClasses}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
@@ -203,10 +269,11 @@ class Hyperlink extends React.Component {
         rel={rel}
         data-focus-styles-enabled
         ref={this.linkRef}
+        title={title}
       >
-        {children}
-        {getHyperlinkIcon(variant)}
-      </ComponentType>
+        {text || children}
+        {getHyperlinkIcon(intl, variant)}
+      </a>
     );
   }
 }
@@ -216,4 +283,4 @@ Hyperlink.defaultProps = defaultProps;
 Hyperlink.contextType = ThemeContext;
 
 export { variants as HyperlinkVariants };
-export default Hyperlink;
+export default injectIntl(Hyperlink);

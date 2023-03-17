@@ -3,19 +3,17 @@
 ## Unreleased
 
 * Added
+  * Added accessibility guide for `terra-hyperlink`
   * Added Accessibility guideline for `terra-heading`
   * Added examples for for `terra-list`
+  * Added Accessibility Guide for `terra-section-header`
+  * Added accessibility guide for `terra-progress-bar`
+  * Added accessibility guide for `terra-avatar`
   
 * Changed
   * Added tests for `terra-list`.
   * Fix second example on default Paginator doc page
-
-* Added
-  * Added Accessibility Guide for `terra-section-header`
-  * Added accessibility guide for `terra-progress-bar`
-  * Added accessibility guide for `terra-avatar`
-
-* Changed
+  * Updated example for `terra-hyperlink`
   * Updated example for `terra-progress-bar`
 
 ## 1.23.0 - (March 1, 2023)
