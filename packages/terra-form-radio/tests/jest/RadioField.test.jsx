@@ -93,4 +93,5 @@ it('correctly applies "inputAttrs" property to the Radio component', () => {
   );
   const wrapper = mountWithIntl(radioField);
   expect(wrapper.find('input').prop(attrKey)).toBe(attrValue);
+  expect(wrapper).toMatchSnapshot();
 });
