@@ -201,6 +201,7 @@ npm run test
       -  Select the Remote Explorer icon in the Activity Bar or View -> Command Palette and run **Remote Explorer: Focus on Containers View**
       - Locate the **terra-core_devcontainer** or currently running dev container under "Dev Containers"
       - Right click and select **Stop Container** and close the workspace
+        - You can also select **Rebuild Container** to restart the dev container
 6. To reopen a dev container:
     - Existing local workspace (for Option 1)
       - Open the project in Visual Studio Code
