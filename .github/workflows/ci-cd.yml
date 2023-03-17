@@ -62,12 +62,12 @@ jobs:
 
   release-and-deploy:
     runs-on: ubuntu-latest
-
+    env:
+          PR_PATH: pull/${{ github.event.number }}
     needs: [build, wdio]
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout Project
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup GitHub Config
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -81,11 +81,13 @@ jobs:
           TERRA_DEV_SITE_PUBLIC_PATH: /terra-core/
         run: npm run compile:prod
       - name: Release
+        if: github.ref == 'refs/heads/main'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx terra release
-      - name: Deploy
+      - name: Deploy main branch
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -94,3 +96,23 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: 'chore(docs): Regenerate docs'
+      - name: Set PR preview URL
+        if: github.event_name == 'pull_request'
+        run: echo "BASE_URL=https://engineering.cerner.com/terra-core/${{ env.PR_PATH }}/" >> $GITHUB_ENV
+      - name: Deploy PR preview
+        if: github.event_name == 'pull_request'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          force_orphan: true
+          destination_dir: ${{ env.PR_PATH }}
+     - name: Comment on PR
+        uses: hasura/comment-progress@v2.2.0
+        if: github.event_name == 'pull_request'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: "A preview of ${{ github.event.after }} is uploaded and can be seen here:\n\n ✨ ${{ env.BASE_URL }} ✨\n\nChanges may take a few minutes to propagate. Since this is a preview of production, content with `draft: true` will not be rendered. The source is here: https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PR_PATH }}/"
