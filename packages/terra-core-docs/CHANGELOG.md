@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added 
+  * Added Accessibility Guide for `terra-dropdown-button`.
+
 * Added
   * Added accessibility guide for `terra-hyperlink`
   * Added Accessibility guideline for `terra-heading`
