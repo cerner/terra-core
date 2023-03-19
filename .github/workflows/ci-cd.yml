@@ -80,7 +80,7 @@ jobs:
           TERRA_DEV_SITE_PUBLIC_PATH: /terra-core/
         run: npm run compile:prod
       - name: Set Terra dev site path for pr
-        if: github.event.name == 'pull_request'
+        if: github.event_name == 'pull_request'
         env:
           PR_PATH: pull/${{ github.event.number }}
         run: echo "TERRA_DEV_SITE_PUBLIC_PATH=/terra-core/${{ env.PR_PATH }}/" >> $GITHUB_ENV
