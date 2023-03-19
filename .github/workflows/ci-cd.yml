@@ -62,10 +62,7 @@ jobs:
 
   release-and-deploy:
     runs-on: ubuntu-latest
-    
-    env:
-      PR_PATH: pull/${{ github.event.number }}
-      BASE_URL: https://engineering.cerner.com
+
     needs: [build, wdio]
     steps:
       - name: Checkout Project
@@ -76,11 +73,19 @@ jobs:
           git config --global user.name "github-actions[bot]"
       - name: Setup Project
         uses: ./.github/actions/setup
+      - name: Set Terra dev site path for prod
+        if: github.ref == 'refs/heads/main'
+        env:
+          TERRA_DEV_SITE_PUBLIC_PATH: /terra-core/
+      - name: Set Terra dev site path for pr
+        if: github.event.name == 'pull_request'
+        env:
+          PR_PATH: pull/${{ github.event.number }}
+        run: echo "TERRA_DEV_SITE_PUBLIC_PATH=/terra-core/${{ env.PR_PATH }}/" >> $GITHUB_ENV
       - name: Build
         env:
           TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY: ${{ secrets.TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY }}
           TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID: "144458769"
-          TERRA_DEV_SITE_PUBLIC_PATH: /terra-core/
         run: npm run compile:prod
       - name: Release
         if: github.ref == 'refs/heads/main'
@@ -97,6 +102,9 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: 'chore(docs): Regenerate docs'
+      - name: Set PR preview URL
+        if: github.event_name == 'pull_request'
+        run: echo "BASE_URL=https://engineering.cerner.com/${{ github.event.repository.name }}/${{ env.PR_PATH }}/" >> $GITHUB_ENV
       - name: Deploy PR preview
         if: github.event_name == 'pull_request'
         uses: peaceiris/actions-gh-pages@v3
@@ -109,7 +117,7 @@ jobs:
         uses: hasura/comment-progress@v2.2.0  
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}          
+          repository: ${{ github.repository }}
           number: ${{ github.event.number }}
           id: deploy-preview
-          message: "A preview of ${{ github.event.after }} is uploaded and can be seen here:\n\n ✨ ${{ env.BASE_URL }}/${{ github.event.repository.name }}/${{ env.PR_PATH }} ✨\n\nChanges may take a few minutes to propagate.  The source is here: https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PR_PATH }}/"
+          message: "A preview of ${{ github.event.after }} is uploaded and can be seen here:\n\n ✨ ${{ env.BASE_URL }} ✨\n\nChanges may take a few minutes to propagate.  The source is here: https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PR_PATH }}/"
