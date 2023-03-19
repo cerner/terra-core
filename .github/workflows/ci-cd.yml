@@ -109,6 +109,7 @@ jobs:
         uses: hasura/comment-progress@v2.2.0  
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}          number: ${{ github.event.number }}
+          repository: ${{ github.repository }}          
+          number: ${{ github.event.number }}
           id: deploy-preview
           message: "A preview of ${{ github.event.after }} is uploaded and can be seen here:\n\n ✨ ${{ env.BASE_URL }}/${{ github.event.repository.name }}/${{ env.PR_PATH }} ✨\n\nChanges may take a few minutes to propagate.  The source is here: https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PR_PATH }}/"
