@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Alert from 'terra-alert';
 import Button from 'terra-button';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
+import Input from 'terra-form-input';
 import MultiSelect from 'terra-form-select/lib/MultiSelect';
 import NativeSelect from 'terra-form-select/lib/native-select/NativeSelect';
 import classNames from 'classnames/bind';
@@ -34,19 +35,24 @@ const CustomPropExample = () => {
     custom: 'Welcome to Terra!',
   };
   const [actionButtonClickCount, setActionButtonClickCount] = useState(0);
+  const [alertDelay, setAlertDelay] = useState(3000);
   const [alerts, setAlerts] = useState([
     {
       type: AlertTypes.SUCCESS,
       onDismiss: true,
     },
   ]);
-  const [selectedAlertType, setSelectedAlertType] = useState(
-    AlertTypes.SUCCESS
-  );
+  const [selectedAlertType, setSelectedAlertType] = useState(AlertTypes.SUCCESS);
   const [selectedProps, setSelectedProps] = useState(['onDismiss']);
 
   const handleActionClick = () => {
     setActionButtonClickCount((prevCount) => prevCount + 1);
+  };
+
+  const handleAlertDismiss = (index) => {
+    const updatedAlerts = [...alerts];
+    updatedAlerts.splice(index, 1);
+    setAlerts(updatedAlerts);
   };
 
   const triggerNewAlert = () => {
@@ -63,6 +69,10 @@ const CustomPropExample = () => {
                   onClick={handleActionClick}
                 />
               ) : null,
+            customColorClass:
+              selectedProps.indexOf('customColorClass') >= 0
+                ? cx(['my-app-alert-help-example'])
+                : null,
             customIcon:
               selectedProps.indexOf('customIcon') >= 0 ? <IconHelp /> : null,
             title: selectedProps.indexOf('title') >= 0 ? 'Terra Message' : null,
@@ -71,7 +81,7 @@ const CustomPropExample = () => {
         });
         setAlerts([...alerts]);
       },
-      selectedProps.indexOf('alertDelay') >= 0 ? 3000 : 0
+      selectedProps.indexOf('alertDelay') >= 0 ? alertDelay : 0,
     );
   };
 
@@ -82,14 +92,11 @@ const CustomPropExample = () => {
           <Alert
             key={index}
             id="customAlert"
-            customColorClass={cx(['my-app-alert-help-example'])}
             type={alert.type}
             onDismiss={
               alert.onDismiss
                 ? () => {
-                    const updatedAlerts = [...alerts];
-                    updatedAlerts.splice(index, 1);
-                    setAlerts(updatedAlerts);
+                    handleAlertDismiss(index);
                   }
                 : null
             }
@@ -117,11 +124,27 @@ const CustomPropExample = () => {
         onChange={setSelectedProps}
       >
         <MultiSelect.Option value="action" display="action (prop)" />
+        <MultiSelect.Option
+          value="customColorClass"
+          display="customColorClass (prop)"
+        />
         <MultiSelect.Option value="customIcon" display="customIcon (prop)" />
         <MultiSelect.Option value="onDismiss" display="onDismiss (prop)" />
         <MultiSelect.Option value="title" display="title (prop)" />
         <MultiSelect.Option value="alertDelay" display="alertDelay" />
       </MultiSelect>
+      {selectedProps.indexOf('alertDelay') >= 0 && (
+        <>
+          <div id="alertDelay">Set alert delay (ms):</div>
+          <Input
+            ariaLabel="Numeric Input"
+            name="Set alert delay (ms)"
+            onChange={(event) => setAlertDelay(event.target.value)}
+            type="number"
+            value={alertDelay}
+          />
+        </>
+      )}
       <br />
       <Button text="Trigger Alert" onClick={triggerNewAlert} />
       <p>{`Action button has been clicked ${actionButtonClickCount} times.`}</p>
