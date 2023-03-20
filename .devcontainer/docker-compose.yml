@@ -5,6 +5,7 @@ services:
     network_mode: host
     build: .
     volumes:
+      - ../:/workspace
       # Docker socket to access Docker server
       - /var/run/docker.sock:/var/run/docker.sock
     entrypoint: /bin/sh -c "while sleep 1000; do :; done"
