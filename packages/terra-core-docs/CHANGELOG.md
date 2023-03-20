@@ -7,6 +7,9 @@
 * Added 
   * Added Accessibility Guide for `terra-dropdown-button`.
 
+* Changed
+  * Updated examples for terra-content-container
+
 * Added
   * Added accessibility guide for `terra-hyperlink`
   * Added Accessibility guideline for `terra-heading`
