@@ -15,9 +15,7 @@ const AlertDismissible = () => {
     SUCCESS: 'success',
   };
   const [isOpen, setIsOpen] = useState(true);
-  const [selectedAlertType, setSelectedAlertType] = useState(
-    AlertTypes.SUCCESS
-  );
+  const [selectedAlertType, setSelectedAlertType] = useState(AlertTypes.SUCCESS);
 
   return (
     <>
@@ -27,7 +25,7 @@ const AlertDismissible = () => {
           type={selectedAlertType}
           onDismiss={() => setIsOpen(false)}
         >
-          This is a dismissable Alert.
+          This is a dismissible Alert.
         </Alert>
       )}
       <br />

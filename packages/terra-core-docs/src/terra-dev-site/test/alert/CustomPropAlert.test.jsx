@@ -87,24 +87,24 @@ const CustomPropExample = () => {
 
   return (
     <>
-      {alerts &&
-        alerts.map((alert, index) => (
-          <Alert
-            key={index}
-            id="customAlert"
-            type={alert.type}
-            onDismiss={
-              alert.onDismiss
-                ? () => {
-                    handleAlertDismiss(index);
-                  }
-                : null
-            }
-            {...alert.props}
-          >
-            {alertTypeMessages[alert.type]}
-          </Alert>
-        ))}
+      {alerts && alerts.map((alert, index) => (
+        <Alert
+          // eslint-disable-next-line react/no-array-index-key
+          key={index}
+          id="customAlert"
+          type={alert.type}
+          onDismiss={
+            alert.onDismiss
+              ? () => {
+                handleAlertDismiss(index);
+              }
+              : null
+          }
+          {...alert.props}
+        >
+          {alertTypeMessages[alert.type]}
+        </Alert>
+      ))}
       <br />
       <div id="alertType">Select alert type:</div>
       <NativeSelect
