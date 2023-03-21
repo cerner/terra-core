@@ -2,8 +2,14 @@
 
 ## Unreleased
 
+<<<<<<< HEAD
 * Added 
   * Added Accessibility Guide for `terra-dropdown-button`.
+=======
+* Changed
+  * Fix second example on default Paginator doc page
+  * Changed examples for terra-content-container
+>>>>>>> 226e19974 (Updating lint)
 
 * Added
   * Added accessibility guide for `terra-hyperlink`
