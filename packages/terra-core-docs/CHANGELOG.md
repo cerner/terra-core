@@ -5,7 +5,6 @@
 * Added 
   * Added Accessibility Guide for `terra-dropdown-button`.
 * Changed
-  * Fix second example on default Paginator doc page
   * Changed examples for terra-content-container
 
 * Added
