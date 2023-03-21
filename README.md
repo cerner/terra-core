@@ -189,11 +189,12 @@ npm run test
     - (Option 1) - Opening local workspace in dev container
       - Clone the repository (or fork) locally and open the project in Visual Studio Code
       - Navigate to View -> Command Palette and run **Dev Containers: Open Workspace in Container**
-    - (Option 2) - Recommended for Windows: Creating the dev container using dev volumes (for more information and guidance, see the [Official Guide](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume))
+    - (Option 2) - Recommended for Windows for hot-reloading to work during development and improved performance: Creating the dev container using dev volumes (for more information and guidance, see the [Official Guide](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume))
       - If you have git setup and have global config file _~/.gitconfig_ locally, these settings should automatically be transferred to the dev container
       - Navigate to View -> Command Palette and run **Dev Containers: Clone Repository in Container Volume**
       - Paste the GitHub URL of this repository (or fork)
       - VS Code will now reload the workspace and create/start the dev container and volume
+      - Please note: changes made using this option will only update files in the Docker volume. It is recommended to commit changes often in case the volume is deleted or dev container gets removed.
 5. You're now running in a dev container.  Use the terminal of the dev container in Visual Studio Code to issue any npm or bash commands.
 6. To terminate a dev container:
     - Use command line or Docker Desktop OR
