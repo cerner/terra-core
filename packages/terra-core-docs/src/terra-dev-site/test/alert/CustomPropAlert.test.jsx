@@ -10,6 +10,8 @@ import styles from '../../doc/alert/example/colors.module.scss';
 
 const cx = classNames.bind(styles);
 
+let alertIdx = 0;
+
 const CustomPropExample = () => {
   const AlertTypes = {
     ALERT: 'alert',
@@ -38,6 +40,7 @@ const CustomPropExample = () => {
   const [alertDelay, setAlertDelay] = useState(3000);
   const [alerts, setAlerts] = useState([
     {
+      id: alertIdx,
       type: AlertTypes.SUCCESS,
       onDismiss: true,
     },
@@ -58,7 +61,9 @@ const CustomPropExample = () => {
   const triggerNewAlert = () => {
     setTimeout(
       () => {
+        alertIdx += 1;
         alerts.push({
+          id: alertIdx,
           type: selectedAlertType,
           props: {
             action:
@@ -89,8 +94,7 @@ const CustomPropExample = () => {
     <>
       {alerts && alerts.map((alert, index) => (
         <Alert
-          // eslint-disable-next-line react/no-array-index-key
-          key={index}
+          key={alert.id}
           id="customAlert"
           type={alert.type}
           onDismiss={
