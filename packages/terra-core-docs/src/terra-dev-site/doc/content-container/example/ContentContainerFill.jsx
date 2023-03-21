@@ -42,15 +42,15 @@ const Container = () => {
         <div key="1">{display1}</div>
         <div key="2">
           <InputField
-            inputId='input-field-2'
-            label='Enter Patient Name'
-            type='text'
+            inputId="input-field-2"
+            label="Enter Patient Name"
+            type="text"
             onChange={handleFirstChange}
           />
         </div>
         <div key="3">
           <Button
-            text='Submit'
+            text="Submit"
             onClick={clickHandler}
             className={cx('button')}
           />
