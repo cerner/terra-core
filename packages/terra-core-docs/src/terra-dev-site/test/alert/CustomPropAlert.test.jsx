@@ -160,7 +160,7 @@ const CustomPropExample = () => {
         </>
       )}
       <br />
-      <Button text="Trigger Custom Alert" onClick={triggerNewAlert} />
+      <Button text="Trigger Alert" onClick={triggerNewAlert} />
       <Button
         isDisabled={isOpen}
         text="Trigger Replaceable Alert"
