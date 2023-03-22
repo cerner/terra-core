@@ -197,24 +197,7 @@ npm run test
       - VS Code will now reload the workspace and create/start the dev container and volume
       - Please note: changes made using this option will only update files in the Docker volume. It is recommended to commit changes often in case the volume is deleted or dev container gets removed.
 5. You're now running in a dev container.  Use the terminal of the dev container in Visual Studio Code to issue any npm or bash commands.
-6. To terminate a dev container:
-    - Use command line or Rancher/Docker Desktop OR
-    - Using Visual Studio Code
-      -  Select the Remote Explorer icon in the Activity Bar or View -> Command Palette and run **Remote Explorer: Focus on Containers View**
-      - Locate the **terra-core_devcontainer** or currently running dev container under "Dev Containers"
-      - Right click and select **Stop Container** and close the workspace
-        - You can also select **Rebuild Container** to restart the dev container
-6. To reopen a dev container:
-    - Existing local workspace (for Option 1)
-      - Open the project in Visual Studio Code
-      - Ensure the workspace contains the .devcontainer folder
-      - Navigate to View -> Command Palette and run **Dev Containers: Open Workspace in Container**
-    - Isolated dev container volume (for Option 2)
-      - Open Visual Studio Code
-      - Use the Remote Explorer icon in the Activity Bar or View -> Command Palette and run **Remote Explorer: Focus on Containers View** to view containers
-      - Locate the **terra-core_devcontainer** under "Dev Containers"
-      - Hover over the dev container and click the Folder icon labelled **Open Folder in Container** or by right clicking and selecting **Open Folder in Container**
-8. Before running any WDIO tests, make sure to perform the following steps:
+6. Before running any WDIO tests, make sure to perform the following steps:
     - Open a new terminal (outside the dev container) and navigate to  ".devcontainer/" path in your repository.
     - Execute the command `"docker compose -f docker-compose-wdio.yml up"`. Selenium hub should spin up. Leave this running in the background. If you see errors saying "container name already exists", run `"docker container prune"` command followed by pressing "y" to clear up any unused containers and try running the previous command again.
     - You can now run `npm run test:docker` or `npm run wdio:docker` commands to run WDIO tests from inside the Dev Container.
@@ -225,6 +208,23 @@ npm run test
         "wdio-lowlight": "terra wdio --disableSeleniumService=true --themes clinical-lowlight-theme"
         }
        ```
+7. To terminate a dev container:
+    - Use command line or Rancher/Docker Desktop OR
+    - Using Visual Studio Code
+      -  Select the Remote Explorer icon in the Activity Bar or View -> Command Palette and run **Remote Explorer: Focus on Containers View**
+      - Locate the **terra-core_devcontainer** or currently running dev container under "Dev Containers"
+      - Right click and select **Stop Container** and close the workspace
+        - You can also select **Rebuild Container** to restart the dev container
+8. To reopen a dev container:
+    - Existing local workspace (for Option 1)
+      - Open the project in Visual Studio Code
+      - Ensure the workspace contains the .devcontainer folder
+      - Navigate to View -> Command Palette and run **Dev Containers: Open Workspace in Container**
+    - Isolated dev container volume (for Option 2)
+      - Open Visual Studio Code
+      - Use the Remote Explorer icon in the Activity Bar or View -> Command Palette and run **Remote Explorer: Focus on Containers View** to view containers
+      - Locate the **terra-core_devcontainer** under "Dev Containers"
+      - Hover over the dev container and click the Folder icon labelled **Open Folder in Container** or by right clicking and selecting **Open Folder in Container**
 
 <h2 id="license">
   LICENSE
