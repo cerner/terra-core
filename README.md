@@ -180,7 +180,8 @@ npm run test
   Local Development using Docker (Dev Containers)
 </h2>
 
-1. Install [Docker](https://www.docker.com/).
+1. Install [Rancher](https://rancherdesktop.io/) or [Docker](https://www.docker.com/).
+    - [Rancher](https://rancherdesktop.io/) is free and open-source and is highly recommended whereas Docker may require a license for use.
 2. Install [Microsoft VS Code](https://code.visualstudio.com/Download).
 3. Install the [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
     - Navigate to View -> Extension  -> Search for and install _Dev Containers_ (or "ms-vscode-remote.remote-containers")
@@ -197,7 +198,7 @@ npm run test
       - Please note: changes made using this option will only update files in the Docker volume. It is recommended to commit changes often in case the volume is deleted or dev container gets removed.
 5. You're now running in a dev container.  Use the terminal of the dev container in Visual Studio Code to issue any npm or bash commands.
 6. To terminate a dev container:
-    - Use command line or Docker Desktop OR
+    - Use command line or Rancher/Docker Desktop OR
     - Using Visual Studio Code
       -  Select the Remote Explorer icon in the Activity Bar or View -> Command Palette and run **Remote Explorer: Focus on Containers View**
       - Locate the **terra-core_devcontainer** or currently running dev container under "Dev Containers"
