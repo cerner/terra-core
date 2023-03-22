@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Alert from 'terra-alert';
 import Button from 'terra-button';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
@@ -45,24 +45,25 @@ const CustomPropExample = () => {
       onDismiss: true,
     },
   ]);
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedAlertType, setSelectedAlertType] = useState(AlertTypes.SUCCESS);
   const [selectedProps, setSelectedProps] = useState(['onDismiss']);
+  const alertsRef = useRef(alerts);
 
   const handleActionClick = () => {
     setActionButtonClickCount((prevCount) => prevCount + 1);
   };
 
   const handleAlertDismiss = (index) => {
-    const updatedAlerts = [...alerts];
-    updatedAlerts.splice(index, 1);
-    setAlerts(updatedAlerts);
+    alertsRef.current.splice(index, 1);
+    setAlerts([...alertsRef.current]);
   };
 
   const triggerNewAlert = () => {
     setTimeout(
       () => {
         alertIdx += 1;
-        alerts.push({
+        alertsRef.current.push({
           id: alertIdx,
           type: selectedAlertType,
           props: {
@@ -84,7 +85,7 @@ const CustomPropExample = () => {
           },
           onDismiss: selectedProps.indexOf('onDismiss') >= 0,
         });
-        setAlerts([...alerts]);
+        setAlerts([...alertsRef.current]);
       },
       selectedProps.indexOf('alertDelay') >= 0 ? alertDelay : 0,
     );
@@ -92,6 +93,15 @@ const CustomPropExample = () => {
 
   return (
     <>
+      {isOpen && (
+        <Alert
+          id="replaceableAlert"
+          type={selectedAlertType}
+          onDismiss={() => setIsOpen(false)}
+        >
+          {`${alertTypeMessages[selectedAlertType]} Replaceable alert.`}
+        </Alert>
+      )}
       {alerts && alerts.map((alert, index) => (
         <Alert
           key={alert.id}
@@ -150,7 +160,14 @@ const CustomPropExample = () => {
         </>
       )}
       <br />
-      <Button text="Trigger Alert" onClick={triggerNewAlert} />
+      <Button text="Trigger Custom Alert" onClick={triggerNewAlert} />
+      <Button
+        isDisabled={isOpen}
+        text="Trigger Replaceable Alert"
+        onClick={() => {
+          setIsOpen(true);
+        }}
+      />
       <p>{`Action button has been clicked ${actionButtonClickCount} times.`}</p>
     </>
   );
