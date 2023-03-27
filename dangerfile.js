@@ -14,13 +14,14 @@ changedFiles.forEach((file) => {
     return;
   }
 
-  const packageName = file.split('packages/')[1].split('/')[0];
-  const fileName = file.split('packages/')[1].split('/')[1].split('/')[0];
+  // ignore changes to files outside of package.json, src folder and translations folder
+  // as they are not relevant for CHANGELOG entries
+  if (file.includes('package.json') || file.includes('src') || file.includes('translations')) {
+    const packageName = file.split('packages/')[1].split('/')[0];
 
-  if (CHANGELOG_PATTERN.test(file)) {
-    changedChangelogs.add(packageName);
-  } else if (fileName !== 'README.md') { // file is in a package and was changed ( ignores changes made for readme file ) - we need a changelog
-    changedPackages.add(packageName);
+    if (CHANGELOG_PATTERN.test(file)) {
+      changedChangelogs.add(packageName);
+    }
   }
 });
 
@@ -28,5 +29,5 @@ const missingChangelogs = [...changedPackages].filter(packageName => !changedCha
 
 // Fail if there are package changes without a CHANGELOG update
 if (missingChangelogs.length > 0) {
-  fail(`Please include a CHANGELOG entry for each changed package this PR. Looks like a CHANGELOG is missing for: \n\n - ${missingChangelogs.join('\n - ')}`);
+  fail(`Please include a CHANGELOG entry for each changed package this PR. Looks like a CHANGELOG entry is missing for: \n\n - ${missingChangelogs.join('\n - ')}`);
 }
