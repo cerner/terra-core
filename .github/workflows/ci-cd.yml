@@ -64,9 +64,7 @@ jobs:
     runs-on: ubuntu-latest
 
     needs: [build, wdio]
-    env:
-      TERRA_DEV_SITE_PUBLIC_PATH: /terra-core/
-      PR_PATH: pull/${{ github.event.number }}
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout Project
         uses: actions/checkout@v3
@@ -75,23 +73,19 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
       - name: Setup Project
-        uses: ./.github/actions/setup 
-      - name: Set Terra dev site path for pr
-        if: github.event_name == 'pull_request'
-        run: echo "TERRA_DEV_SITE_PUBLIC_PATH=/terra-core/${{ env.PR_PATH }}/" >> $GITHUB_ENV   
+        uses: ./.github/actions/setup
       - name: Build
         env:
           TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY: ${{ secrets.TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY }}
-          TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID: "144458769"          
-        run: npm run compile:prod    
+          TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID: "144458769"
+          TERRA_DEV_SITE_PUBLIC_PATH: /terra-core/
+        run: npm run compile:prod
       - name: Release
-        if: github.ref == 'refs/heads/main'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx terra release
-      - name: Deploy main branch
-        if: github.ref == 'refs/heads/main'
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -99,22 +93,3 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: 'chore(docs): Regenerate docs'
-      - name: Set PR preview URL
-        if: github.event_name == 'pull_request'
-        run: echo "BASE_URL=https://engineering.cerner.com/${{ github.event.repository.name }}/${{ env.PR_PATH }}/" >> $GITHUB_ENV
-      - name: Deploy PR preview
-        if: github.event_name == 'pull_request'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          destination_dir: ${{ env.PR_PATH }}
-      - name: Comment on PR
-        if: github.event_name == 'pull_request'
-        uses: hasura/comment-progress@v2.2.0  
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}
-          number: ${{ github.event.number }}
-          id: deploy-preview
-          message: "A preview of ${{ github.event.after }} is uploaded and can be seen here:\n\n ✨ ${{ env.BASE_URL }} ✨\n\nChanges may take a few minutes to propagate.  The source is here: https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PR_PATH }}/"
