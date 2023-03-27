@@ -10,17 +10,21 @@ jobs:
       PR_PATH: pull/${{ github.event.number }}
       TERRA_DEV_SITE_PUBLIC_PATH: "/terra-core/pull/${{ github.event.number }}/"
       BASE_URL: "https://engineering.cerner.com/${{ github.event.repository.name }}/pull/${{ github.event.number }}/"
+      # ENVIRONMENT_NAME: "PR_#${{ github.run_id }}"
+      ENVIRONMENT_NAME: preview-pr-${{ github.event.number }}
+      # ENVIRONMENT_NAME: pull_request
     steps:
       - name: test-stuff
         run: |
           echo github.event.number = ${{ github.event.number  }}
           echo github.event.pull_request.number = ${{ github.event.pull_request.number }}
           echo github.event.issue.number = ${{ github.event.issue.number }}
+
       - name: get issue from comment
         id: get-issue
         uses: octokit/request-action@v2.x
         with:
-          route: GET /repos/:repository/pulls/:issue_id
+          route: GET /repos/{repository}/pulls/{issue_id}
           repository: ${{ github.repository }}
           issue_id: ${{ github.event.number }}
         env:
@@ -30,10 +34,10 @@ jobs:
         id: check-previous
         uses: octokit/request-action@v2.x
         with:
-          route: GET /repos/:repository/deployments
+          route: GET /repos/{repository}/deployments
           repository: ${{ github.repository }}
           ref: ${{ github.event.pull_request.head.ref }}
-          environment: development
+          environment: env.ENVIRONMENT_NAME
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
@@ -43,10 +47,10 @@ jobs:
             toJSON(fromJSON(steps.check-previous.outputs.data)) != '[]'
         uses: octokit/request-action@v2.x
         with:
-          route: POST /repos/:repository/deployments/:deployment/statuses
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJSON(steps.check-previous.outputs.data)[0].id }}
-          environment: development
+          environment: env.ENVIRONMENT_NAME
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           state: inactive
         env:
@@ -56,7 +60,7 @@ jobs:
         id: get-pull-request
         uses: octokit/request-action@v2.x
         with:
-          route: GET /repos/:repository/pulls/:issue_id
+          route: GET /repos/{repository}/pulls/{issue_id}
           repository: ${{ github.repository }}
           issue_id: ${{ github.event.number }}
         env:
@@ -73,12 +77,12 @@ jobs:
               "ref": "{0}",
               "transient_environment": true,
               "auto_merge": false,
-              "environment": "development",
+              "environment": "env.ENVIRONMENT_NAME",
               "required_contexts": []
             }}', fromJSON(steps.get-pull-request.outputs.data).head.ref) }}
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         with:
-          route: POST /repos/:repository/deployments
+          route: POST /repos/{repository}/deployments
           repository: ${{ github.repository }}
           data: ${{ toJSON(env.REQUEST_BODY) }}
 
@@ -87,7 +91,7 @@ jobs:
         if: |
           steps.check-previous.outputs.status != '404'
         with:
-          route: POST /repos/:repository/deployments/:deployment/statuses
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJSON(steps.create-deployment.outputs.data).id }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
@@ -103,10 +107,10 @@ jobs:
         id: start_deployment
         uses: octokit/request-action@v2.x
         with:
-          route: POST /repos/:repository/deployments/:deployment/statuses
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
-          environment: dev
+          environment: env.ENVIRONMENT_NAME
           environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           state: in_progress
@@ -134,10 +138,10 @@ jobs:
         id: successful_deployment
         uses: octokit/request-action@v2.x
         with:
-          route: POST /repos/:repository/deployments/:deployment/statuses
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
-          environment: dev
+          environment: env.ENVIRONMENT_NAME
           environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           mediaType: '{"previews": ["ant-man"]}'
@@ -150,10 +154,10 @@ jobs:
         uses: octokit/request-action@v2.x
         if: failure()
         with:
-          route: POST /repos/:repository/deployments/:deployment/statuses
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
-          environment: dev
+          environment: env.ENVIRONMENT_NAME
           environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           mediaType: '{"previews": ["ant-man"]}'
