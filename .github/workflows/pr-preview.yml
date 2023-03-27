@@ -24,7 +24,7 @@ jobs:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: test output
-        run: echo ouput_of_check_previous = ${{steps.check-previous.ouputs.data}} 
+        run: echo output_of_check_previous = ${{steps.check-previous.outputs.data}} 
 
       - name: set previous deployment as inactive
         if: |
