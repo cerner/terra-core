@@ -4,25 +4,34 @@ import { danger, fail } from 'danger';
 const CHANGELOG_PATTERN = /^packages\/terra-([a-z-0-9])*\/CHANGELOG\.md/i;
 
 const changedFiles = danger.git.created_files.concat(danger.git.modified_files);
+const allowedFilepaths = ['package.json', 'src', 'translations'];
 
 const changedChangelogs = new Set();
 const changedPackages = new Set();
 
 changedFiles.forEach((file) => {
-  // file isn't in a package so it has no changelog, skip further processing
+
   if (file.substring(0, 9) !== 'packages/') {
+    // file isn't in a package so it has no changelog, skip further processing
     return;
   }
 
-  // ignore changes to files outside of package.json, src folder and translations folder
-  // as they are not relevant for CHANGELOG entries
-  if (file.includes('package.json') || file.includes('src') || file.includes('translations')) {
-    const packageName = file.split('packages/')[1].split('/')[0];
-
-    if (CHANGELOG_PATTERN.test(file)) {
-      changedChangelogs.add(packageName);
-    }
+  if(!allowedFilepaths.some(filepath => file.includes(filepath))){
+    // skip further processing if the changed file is not among the allowed filepaths
+    return;
   }
+
+  const packageName = file.split('packages/')[1].split('/')[0];
+
+  if (CHANGELOG_PATTERN.test(file)) {
+    // changed file is the CHANGELOG itself
+    changedChangelogs.add(packageName);
+    return;
+  } 
+  
+  // for all other files
+  changedPackages.add(packageName);
+  return;
 });
 
 const missingChangelogs = [...changedPackages].filter(packageName => !changedChangelogs.has(packageName));
