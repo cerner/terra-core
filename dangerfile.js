@@ -28,7 +28,7 @@ changedFiles.forEach((file) => {
     return;
   }
 
-  // for all other files
+  // for other allowed files
   changedPackages.add(packageName);
 });
 
