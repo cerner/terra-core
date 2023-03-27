@@ -10,13 +10,12 @@ const changedChangelogs = new Set();
 const changedPackages = new Set();
 
 changedFiles.forEach((file) => {
-
   if (file.substring(0, 9) !== 'packages/') {
     // file isn't in a package so it has no changelog, skip further processing
     return;
   }
 
-  if(!allowedFilepaths.some(filepath => file.includes(filepath))){
+  if (!allowedFilepaths.some(filepath => file.includes(filepath))) {
     // skip further processing if the changed file is not among the allowed filepaths
     return;
   }
@@ -27,11 +26,10 @@ changedFiles.forEach((file) => {
     // changed file is the CHANGELOG itself
     changedChangelogs.add(packageName);
     return;
-  } 
-  
+  }
+
   // for all other files
   changedPackages.add(packageName);
-  return;
 });
 
 const missingChangelogs = [...changedPackages].filter(packageName => !changedChangelogs.has(packageName));
