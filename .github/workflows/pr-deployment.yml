@@ -37,7 +37,7 @@ jobs:
           route: GET /repos/{repository}/deployments
           repository: ${{ github.repository }}
           ref: ${{ github.event.pull_request.head.ref }}
-          environment: env.ENVIRONMENT_NAME
+          environment: ${{ env.ENVIRONMENT_NAME }}
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
@@ -50,7 +50,7 @@ jobs:
           route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJSON(steps.check-previous.outputs.data)[0].id }}
-          environment: env.ENVIRONMENT_NAME
+          environment: ${{ env.ENVIRONMENT_NAME }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           state: inactive
         env:
@@ -110,7 +110,7 @@ jobs:
           route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
-          environment: env.ENVIRONMENT_NAME
+          environment: ${{ env.ENVIRONMENT_NAME }}
           environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           state: in_progress
@@ -141,7 +141,7 @@ jobs:
           route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
-          environment: env.ENVIRONMENT_NAME
+          environment: ${{ env.ENVIRONMENT_NAME }}
           environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           mediaType: '{"previews": ["ant-man"]}'
@@ -157,7 +157,7 @@ jobs:
           route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
-          environment: env.ENVIRONMENT_NAME
+          environment: ${{ env.ENVIRONMENT_NAME }}
           environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           mediaType: '{"previews": ["ant-man"]}'
