@@ -9,7 +9,7 @@ jobs:
     env:
       PR_PATH: pull/${{ github.event.number }}
       TERRA_DEV_SITE_PUBLIC_PATH: "/terra-core/pull/${{ github.event.number }}/"
-      BASE_URL: "https://engineering.cerner.com/${{ github.event.repository.name }}/${{ env.PR_PATH }}/"
+      BASE_URL: "https://engineering.cerner.com/${{ github.event.repository.name }}/pull/${{ github.event.number }}/"
     steps:
       - name: test-stuff
         run: |
