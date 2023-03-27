@@ -19,7 +19,6 @@ jobs:
           route: GET /repos/{repository}/deployments
           repository: ${{ github.repository }}
           ref: ${{ github.event.pull_request.head.ref }}
-          #environment: ${{ env.ENVIRONMENT_NAME }}
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
@@ -35,7 +34,6 @@ jobs:
           route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJSON(steps.check-previous.outputs.data)[0].id }}
-          environment: ${{ env.ENVIRONMENT_NAME }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           state: inactive
         env:
