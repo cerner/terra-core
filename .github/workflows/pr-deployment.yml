@@ -9,6 +9,7 @@ jobs:
     env:
       PR_PATH: pull/${{ github.event.number }}
       TERRA_DEV_SITE_PUBLIC_PATH: "/terra-core/pull/${{ github.event.number }}/"
+      BASE_URL: "https://engineering.cerner.com/${{ github.event.repository.name }}/${{ env.PR_PATH }}/"
     steps:
       - name: test-stuff
         run: |
@@ -106,7 +107,7 @@ jobs:
           repository: ${{ github.repository }}
           deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
           environment: dev
-          environment_url: https://example.com
+          environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           state: in_progress
           mediaType: '{"previews": ["flash", "ant-man"]}'
@@ -128,8 +129,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           destination_dir: ${{ env.PR_PATH }}
-        env:
-          BASE_URL: "https://engineering.cerner.com/${{ github.event.repository.name }}/${{ env.PR_PATH }}/"
 
       - name: set deployment status to success
         id: successful_deployment
