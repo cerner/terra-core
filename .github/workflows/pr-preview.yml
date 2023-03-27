@@ -18,8 +18,8 @@ jobs:
         with:
           route: GET /repos/{repository}/deployments
           repository: ${{ github.repository }}
-          #ref: ${{ github.event.pull_request.head.ref }}
-          environment: ${{ env.ENVIRONMENT_NAME }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          #environment: ${{ env.ENVIRONMENT_NAME }}
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
