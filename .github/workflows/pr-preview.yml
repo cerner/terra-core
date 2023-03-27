@@ -12,22 +12,6 @@ jobs:
       BASE_URL: "https://engineering.cerner.com/${{ github.event.repository.name }}/pull/${{ github.event.number }}/"
       ENVIRONMENT_NAME: preview-pr-${{ github.event.number }}
     steps:
-      - name: test-stuff
-        run: |
-          echo github.event.number = ${{ github.event.number  }}
-          echo github.event.pull_request.number = ${{ github.event.pull_request.number }}
-          echo github.event.issue.number = ${{ github.event.issue.number }}
-
-      - name: get issue from comment
-        id: get-issue
-        uses: octokit/request-action@v2.x
-        with:
-          route: GET /repos/{repository}/pulls/{issue_id}
-          repository: ${{ github.repository }}
-          issue_id: ${{ github.event.number }}
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
       - name: check for previous deployment
         id: check-previous
         uses: octokit/request-action@v2.x
@@ -85,6 +69,7 @@ jobs:
           data: ${{ toJSON(env.REQUEST_BODY) }}
 
       - name: set deployment status to in progress
+        id: start_deployment
         uses: octokit/request-action@v2.x
         if: |
           steps.check-previous.outputs.status != '404'
@@ -92,6 +77,8 @@ jobs:
           route: POST /repos/{repository}/deployments/{deployment}/statuses
           repository: ${{ github.repository }}
           deployment: ${{ fromJSON(steps.create-deployment.outputs.data).id }}
+          environment: ${{ env.ENVIRONMENT_NAME }}
+          environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           state: in_progress
         env:
@@ -100,21 +87,6 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: ${{ fromJSON(steps.get-pull-request.outputs.data).head.sha }}
-
-      - name: set deployment status to in progress
-        id: start_deployment
-        uses: octokit/request-action@v2.x
-        with:
-          route: POST /repos/{repository}/deployments/{deployment}/statuses
-          repository: ${{ github.repository }}
-          deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
-          environment: ${{ env.ENVIRONMENT_NAME }}
-          environment_url: ${{ env.BASE_URL }}
-          log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          state: in_progress
-          mediaType: '{"previews": ["flash", "ant-man"]}'
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: setup project
         uses: ./.github/actions/setup      
@@ -142,7 +114,6 @@ jobs:
           environment: ${{ env.ENVIRONMENT_NAME }}
           environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          mediaType: '{"previews": ["ant-man"]}'
           state: success
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
@@ -158,7 +129,6 @@ jobs:
           environment: ${{ env.ENVIRONMENT_NAME }}
           environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          mediaType: '{"previews": ["ant-man"]}'
           state: failure
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
