@@ -138,7 +138,7 @@ jobs:
           repository: ${{ github.repository }}
           deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
           environment: dev
-          environment_url: https://example.com
+          environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           mediaType: '{"previews": ["ant-man"]}'
           state: success
@@ -154,7 +154,7 @@ jobs:
           repository: ${{ github.repository }}
           deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
           environment: dev
-          environment_url: https://example.com
+          environment_url: ${{ env.BASE_URL }}
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           mediaType: '{"previews": ["ant-man"]}'
           state: failure
