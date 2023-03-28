@@ -12,7 +12,8 @@
   * Added Accessibility Guide for `terra-section-header`
   * Added accessibility guide for `terra-progress-bar`
   * Added accessibility guide for `terra-avatar`
-  
+  * Added examples for for `terra-alert`
+
 * Changed
   * Added tests for `terra-list`.
   * Fix second example on default Paginator doc page
