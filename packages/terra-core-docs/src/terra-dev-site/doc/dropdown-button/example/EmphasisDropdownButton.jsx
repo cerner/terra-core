@@ -10,7 +10,7 @@ const Example = () => {
         label="Dropdown"
         variant={Variants.EMPHASIS}
       >
-       <Item label="PDF" onSelect={() => setMessage('PDF option clicked')} />
+        <Item label="PDF" onSelect={() => setMessage('PDF option clicked')} />
         <Item label="Plain Text" onSelect={() => setMessage('Plain Text option clicked')} />
         <Item label="Web Page" onSelect={() => setMessage('Web Page option clicked')} />
         <Item label="XML" onSelect={() => setMessage('XML option clicked')} />
