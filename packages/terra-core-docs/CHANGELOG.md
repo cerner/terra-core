@@ -18,6 +18,7 @@
   * Fix second example on default Paginator doc page
   * Updated example for `terra-hyperlink`
   * Updated example for `terra-progress-bar`
+  * Updated list options for `terra-dropdown-button`
 
 ## 1.23.0 - (March 1, 2023)
 
