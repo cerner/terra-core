@@ -52,19 +52,15 @@ jobs:
         if: |
           steps.check-previous.outputs.status != '404'
         env:
-          REQUEST_BODY: |
-            ${{ format('{{
-              "ref": "{0}",
-              "transient_environment": true,
-              "auto_merge": false,
-              "environment": "env.ENVIRONMENT_NAME",
-              "required_contexts": []
-            }}', fromJSON(steps.get-pull-request.outputs.data).head.ref) }}
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         with:
           route: POST /repos/{repository}/deployments
           repository: ${{ github.repository }}
-          data: ${{ toJSON(env.REQUEST_BODY) }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          transient_environment: true
+          auto_merge: false
+          environment: ${{env.ENVIRONMENT_NAME}}
+          required_contexts: '[]'
 
       - name: set deployment status to in progress
         id: start_deployment
@@ -114,7 +110,7 @@ jobs:
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           state: success
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: set deployment status to failure
         id: failed_deployment
@@ -129,4 +125,4 @@ jobs:
           log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           state: failure
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
