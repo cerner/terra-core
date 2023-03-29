@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[28213],{28213:function(e,a,i){Object.defineProperty(a,"__esModule",{value:!0}),a.default=void 0;var t,l=(t=i(67294))&&t.__esModule?t:{default:t},u=i(89755);a.default=function(){return l.default.createElement(u.Facility,{image:"invalid-image-url",alt:"Facility",id:"invalid-image-facility"})}}}]);
