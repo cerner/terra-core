@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PR_PATH: pull/${{github.event.number}}
+      ENVIRONMENT_NAME: preview-pr-${{ github.event.number }}
     steps: 
       - name: make empty dir
         run: mkdir public
@@ -41,5 +42,14 @@ jobs:
           deployment: ${{ fromJSON(steps.get-deplpoyment.outputs.data)[0].id }}
           repository: ${{ github.repository }}
           state: inactive
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: delete environment
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/{repository}/environments/{environment}
+          repository: ${{ github.repository }}
+          environment: ${{ env.ENVIRONMENT_NAME }}
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
