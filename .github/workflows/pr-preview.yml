@@ -52,14 +52,6 @@ jobs:
         if: |
           steps.check-previous.outputs.status != '404'
         env:
-          #REQUEST_BODY: |
-           # ${{ format('{{
-            #  "ref": "{0}",
-             # "transient_environment": true,
-             # "auto_merge": false,
-             # "environment": "preview-pr-"${{ github.event.number }}
-             # "required_contexts": []
-           # }}', fromJSON(steps.get-pull-request.outputs.data).head.ref) }}
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         with:
           route: POST /repos/{repository}/deployments
@@ -69,7 +61,6 @@ jobs:
           auto_merge: false
           environment: ${{env.ENVIRONMENT_NAME}}
           required_contexts: '[]'
-          #data: ${{ toJSON(env.REQUEST_BODY) }}
 
       - name: set deployment status to in progress
         id: start_deployment
