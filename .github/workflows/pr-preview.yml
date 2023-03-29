@@ -64,11 +64,11 @@ jobs:
         with:
           route: POST /repos/{repository}/deployments
           repository: ${{ github.repository }}
-          ref: "{0}"
+          ref: ${{ github.event.pull_request.head.ref }}
           transient_environment: true
           auto_merge: false
           environment: ${{env.ENVIRONMENT_NAME}}
-          required_contexts: "[]"
+          #required_contexts: "[]"
           #data: ${{ toJSON(env.REQUEST_BODY) }}
 
       - name: set deployment status to in progress
