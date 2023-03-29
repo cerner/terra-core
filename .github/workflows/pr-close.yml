@@ -11,6 +11,28 @@ jobs:
     env:
       PR_PATH: pull/${{github.event.number}}
     steps:
+      - name: get deployment
+        id: get-deplpoyment
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/{repository}/deployments
+          repository: ${{ github.repository }}
+          ref: ${{ github.event.pull_request.head.ref }}
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: delete deployment
+        if: |
+            steps.get-deplpoyment.outputs.status != '404' &&
+              toJSON(fromJSON(steps.get-deplpoyment.outputs.data)) != '[]'
+        uses: octokit/request-action@v2.x
+        with:
+          route: DELETE /repos/{repository}/deployments/{deployment}
+          deployment: ${{ fromJSON(steps.get-deplpoyment.outputs.data)[0].id }}
+          repository: ${{ github.repository }}
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      
       - name: make empty dir
         run: mkdir public
 
