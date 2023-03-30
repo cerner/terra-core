@@ -44,12 +44,3 @@ jobs:
           state: inactive
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-
-      - name: delete environment
-        uses: octokit/request-action@v2.x
-        with:
-          route: DELETE /repos/{repository}/environments/{environment}
-          repository: ${{ github.repository }}
-          environment: ${{ env.ENVIRONMENT_NAME }}
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
