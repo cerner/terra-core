@@ -48,7 +48,7 @@ jobs:
       - name: delete environment
         uses: octokit/request-action@v2.x
         with:
-          route: GET /repos/{repository}/environments/{environment}
+          route: DELETE /repos/{repository}/environments/{environment}
           repository: ${{ github.repository }}
           environment: ${{ env.ENVIRONMENT_NAME }}
         env:
