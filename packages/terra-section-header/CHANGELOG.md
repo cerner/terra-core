@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.60.0 - (April 5, 2023)
+
 * Changed
   * Removed required for `text` and `title` prop
   * Removed button role for non-interactive section header.

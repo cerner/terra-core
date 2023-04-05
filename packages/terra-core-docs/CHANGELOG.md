@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.24.0 - (April 5, 2023)
+
 * Added 
   * Added Accessibility Guide for `terra-dropdown-button`.
 
