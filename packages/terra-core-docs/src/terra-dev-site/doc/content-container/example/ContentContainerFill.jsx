@@ -9,17 +9,13 @@ const cx = classNames.bind(styles);
 
 const display1 = (
   <p key="1">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam
-    lectus quis finibus feugiat. Nullam ut sagittis purus. Pellentesque habitant
-    morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut
-    placerat fringilla aliquam. Phasellus in eleifend odio. Nunc maximus sem vel
-    odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+    This tool is used to add patient details to the hospital database for documentation purposes.
+    Please enter patient name as your name to get started.
   </p>
 );
 
-const contentheader = <h3>Display Header</h3>;
-const contentfooter = <p>Display Footer</p>;
+const contentheader = <h3>Registration Form</h3>;
+const contentfooter = <p>Please enter the name as per the official document</p>;
 
 const Container = () => {
   const [field, setField] = useState('');
