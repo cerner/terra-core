@@ -49,6 +49,7 @@ class DropdownList extends React.Component {
   handleKeyDown(event) {
     const { keyCode } = event;
     const { focused } = this.state;
+    const index = Util.findIndexByValue(this, event.target.innerText);
     if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
       /*
         Prevent the callback from being called repeatedly if key is held down.
@@ -63,12 +64,20 @@ class DropdownList extends React.Component {
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
       if (!this.pressed) {
-        this.changeFocusState(Util.findNext(this, this.state.focused));
+        if (index === Util.getChildArray(this).length - 1) {
+          this.changeFocusState(0);
+        } else {
+          this.changeFocusState(Util.findNext(this, this.state.focused));
+        }
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_UP) {
       if (!this.pressed) {
-        this.changeFocusState(Util.findPrevious(this, this.state.focused));
+        if (index === 0) {
+          this.changeFocusState(Util.getChildArray(this).length - 1);
+        } else {
+          this.changeFocusState(Util.findPrevious(this, this.state.focused));
+        }
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_HOME) {
