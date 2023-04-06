@@ -4,6 +4,7 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import RadioField from '../../src/RadioField';
+import Radio from '../../src/Radio';
 
 window.matchMedia = () => ({ matches: true });
 
@@ -74,5 +75,23 @@ it('correctly applies the theme context className', () => {
       <RadioField legend="Default RadioField" />
     </ThemeContextProvider>,
   );
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies "inputAttrs" property to the Radio component', () => {
+  const attrKey = 'data-custom-attr';
+  const attrValue = 'attr data';
+  const radioField = (
+    <RadioField legend="Default RadioField">
+      <Radio
+        labelText="Default label"
+        inputAttrs={{
+          [attrKey]: attrValue,
+        }}
+      />
+    </RadioField>
+  );
+  const wrapper = mountWithIntl(radioField);
+  expect(wrapper.find('input').prop(attrKey)).toBe(attrValue);
   expect(wrapper).toMatchSnapshot();
 });
