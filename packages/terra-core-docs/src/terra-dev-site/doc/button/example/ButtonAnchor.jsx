@@ -6,7 +6,7 @@ import styles from './ButtonDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const ButtonAnchor = () => (
-  <Button href="#" text="I am rendered with an anchor tag" className={cx('button')} />
+  <Button href="https://en.wikipedia.org/wiki/Allergy" text="Learn More about Allergies" className={cx('button')} />
 );
 
 export default ButtonAnchor;

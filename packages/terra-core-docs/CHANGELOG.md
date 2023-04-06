@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed `terra-ui` build failures happening due to usage of relative paths on mdx file.
+  * Fixed `terra-button` A11y guide example to match the description.
+
 ## 1.24.0 - (April 5, 2023)
 
 * Added 
@@ -10,11 +14,11 @@
 * Added
   * Added accessibility guide for `terra-hyperlink`
   * Added Accessibility guideline for `terra-heading`
-  * Added examples for for `terra-list`
+  * Added examples for `terra-list`
   * Added Accessibility Guide for `terra-section-header`
   * Added accessibility guide for `terra-progress-bar`
   * Added accessibility guide for `terra-avatar`
-  * Added examples for for `terra-alert`
+  * Added examples for `terra-alert`
 
 * Changed
   * Added tests for `terra-list`.
@@ -41,6 +45,7 @@
 
 * Changed
   * Updated radio and checkbox tests to fix fusion theme tests.
+
 * Added 
   * Added Accessibility Guide for `terra-toggle`.
   * Added A11y guide and examples for `terra-button`.
