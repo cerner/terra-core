@@ -6,6 +6,8 @@
   * Fixed `terra-ui` build failures happening due to usage of relative paths on mdx file.
   * Fixed `terra-button` A11y guide example to match the description.
 
+## 1.24.0 - (April 5, 2023)
+
 * Added 
   * Added Accessibility Guide for `terra-dropdown-button`.
 

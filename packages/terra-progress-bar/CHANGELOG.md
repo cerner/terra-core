@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.34.0 - (April 5, 2023)
+
 * Changed
   * Added visually hidden component under progress bar to provide 
     context and status update of progress.

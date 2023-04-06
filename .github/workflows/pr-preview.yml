@@ -1,0 +1,128 @@
+name: pr-preview
+
+on:
+  pull_request:
+    branches: ['main']
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      PR_PATH: pull/${{ github.event.number }}
+      TERRA_DEV_SITE_PUBLIC_PATH: "/terra-core/pull/${{ github.event.number }}/"
+      BASE_URL: "https://engineering.cerner.com/${{ github.event.repository.name }}/pull/${{ github.event.number }}/"
+      ENVIRONMENT_NAME: preview-pr-${{ github.event.number }}
+    steps:
+      - name: check for previous deployment
+        id: check-previous
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/{repository}/deployments
+          repository: ${{ github.repository }}
+          ref: ${{ github.event.pull_request.head.ref }}
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: set previous deployment as inactive
+        if: |
+          steps.check-previous.outputs.status != '404' &&
+            toJSON(fromJSON(steps.check-previous.outputs.data)) != '[]'
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
+          repository: ${{ github.repository }}
+          deployment: ${{ fromJSON(steps.check-previous.outputs.data)[0].id }}
+          log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          state: inactive
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: get pull request
+        id: get-pull-request
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/{repository}/pulls/{issue_id}
+          repository: ${{ github.repository }}
+          issue_id: ${{ github.event.number }}
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: create deployment
+        id: create-deployment
+        uses: octokit/request-action@v2.x
+        if: |
+          steps.check-previous.outputs.status != '404'
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+        with:
+          route: POST /repos/{repository}/deployments
+          repository: ${{ github.repository }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          transient_environment: true
+          auto_merge: false
+          environment: ${{env.ENVIRONMENT_NAME}}
+          required_contexts: '[]'
+
+      - name: set deployment status to in progress
+        id: start_deployment
+        uses: octokit/request-action@v2.x
+        if: |
+          steps.check-previous.outputs.status != '404'
+        with:
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
+          repository: ${{ github.repository }}
+          deployment: ${{ fromJSON(steps.create-deployment.outputs.data).id }}
+          environment: ${{ env.ENVIRONMENT_NAME }}
+          environment_url: ${{ env.BASE_URL }}
+          log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          state: in_progress
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ fromJSON(steps.get-pull-request.outputs.data).head.sha }}
+
+      - name: setup project
+        uses: ./.github/actions/setup      
+
+      - name: build project
+        env:
+          TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY: ${{ secrets.TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY }}
+          TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID: "144458769"
+        run: npm run compile:prod
+
+      - name: deploy the pull request
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          destination_dir: ${{ env.PR_PATH }}
+
+      - name: set deployment status to success
+        id: successful_deployment
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
+          repository: ${{ github.repository }}
+          deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
+          environment: ${{ env.ENVIRONMENT_NAME }}
+          environment_url: ${{ env.BASE_URL }}
+          log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          state: success
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: set deployment status to failure
+        id: failed_deployment
+        uses: octokit/request-action@v2.x
+        if: failure()
+        with:
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
+          repository: ${{ github.repository }}
+          deployment: ${{ fromJson(steps.create-deployment.outputs.data).id }}
+          environment: ${{ env.ENVIRONMENT_NAME }}
+          environment_url: ${{ env.BASE_URL }}
+          log_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          state: failure
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'

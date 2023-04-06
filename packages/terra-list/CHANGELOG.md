@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.56.0 - (April 5, 2023)
+
 * Changed
   * Removed heading level `1` for list sections.
   * Added support for `Home` and `End` key navigation.
