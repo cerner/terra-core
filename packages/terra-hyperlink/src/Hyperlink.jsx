@@ -245,7 +245,7 @@ class Hyperlink extends React.Component {
           ref={this.linkRef}
         >
           <span className={cx('button-inner')}>
-            {text}
+            {text || children}
             {getHyperlinkIcon(intl, variant)}
           </span>
         </button>
