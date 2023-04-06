@@ -173,7 +173,7 @@ class Button extends React.Component {
     }
 
     // Add focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN || document.activeElement === event.currentTarget) {
       this.setState({ focused: true });
     }
 
@@ -189,7 +189,7 @@ class Button extends React.Component {
     }
 
     // Apply focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
+    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB || document.activeElement === event.currentTarget) {
       this.setState({ focused: true });
     }
 

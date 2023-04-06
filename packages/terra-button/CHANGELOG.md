@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Enabled visible focus when button is the active element
+
 ## 3.65.0 - (March 1, 2023)
 
 * Removed
