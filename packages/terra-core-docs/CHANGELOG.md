@@ -5,6 +5,8 @@
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes for `terra-text`.
 
+## 1.25.0 - (April 7, 2023)
+
 * Fixed
   * Fixed `terra-ui` build failures happening due to usage of relative paths on mdx file.
   * Fixed `terra-button` A11y guide example to match the description.
