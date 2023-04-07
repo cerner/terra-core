@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes for `terra-text`.
+
 ## 1.24.0 - (April 5, 2023)
 
 * Added 
