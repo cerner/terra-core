@@ -1,5 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
+<InjectIntl(RadioField)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  legend="Default RadioField"
+>
+  <RadioField
+    error={null}
+    help={null}
+    hideRequired={false}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isInline={false}
+    isInvalid={false}
+    isLegendHidden={false}
+    legend="Default RadioField"
+    legendAttrs={Object {}}
+    required={false}
+    showOptional={false}
+  >
+    <fieldset
+      className="radio-field"
+      required={false}
+    >
+      <legend
+        className="legend-group"
+        id="terra-radio-field-description-2"
+      >
+        <div
+          className="legend"
+        >
+          Default RadioField
+          <span
+            className="error-icon-hidden"
+          />
+        </div>
+      </legend>
+      <Radio
+        disabled={false}
+        inputAttrs={
+          Object {
+            "aria-describedby": "terra-radio-field-description-2  ",
+            "data-custom-attr": "attr data",
+          }
+        }
+        isInline={false}
+        isLabelHidden={false}
+        key=".0"
+        labelText="Default label"
+        labelTextAttrs={Object {}}
+        name={null}
+      >
+        <div
+          className="radio"
+        >
+          <label
+            className="label"
+          >
+            <input
+              aria-describedby="terra-radio-field-description-2  "
+              className="native-input"
+              data-custom-attr="attr data"
+              disabled={false}
+              name={null}
+              type="radio"
+            />
+            <span
+              className="outer-ring"
+            >
+              <span
+                className="inner-ring"
+              />
+            </span>
+            <span
+              className="label-text"
+            >
+              Default label
+            </span>
+          </label>
+        </div>
+      </Radio>
+    </fieldset>
+  </RadioField>
+</InjectIntl(RadioField)>
+`;
+
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={

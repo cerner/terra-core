@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed cloning of CheckboxField child to extend property instead of overriding it.
+
 ## 4.18.0 - (February 15, 2023)
 
 * Changed
