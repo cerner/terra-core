@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
+
 ## 4.51.0 - (February 15, 2023)
 
 * Changed
