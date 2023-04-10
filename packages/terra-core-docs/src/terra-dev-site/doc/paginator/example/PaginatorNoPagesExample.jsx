@@ -9,8 +9,8 @@ const maxPages = 5;
 
 const buildPage = () => {
   const fullContent = [<p>A digital front door to support engagement and enable consumers to participate in their health outcomes.</p>,
-  <p>Enhanced communications and data flow to help the clinical care team provide high-quality care and facilitate increased clinician satisfaction and wellness, regardless of where care is provided</p>,
-  <p>Integration across ambulatory systems and venues – even virtual health – to help drive efficiencies within clinic workflows, leveraging data in- and out-of-network – no matter the source system</p>];
+    <p>Enhanced communications and data flow to help the clinical care team provide high-quality care and facilitate increased clinician satisfaction and wellness, regardless of where care is provided</p>,
+    <p>Integration across ambulatory systems and venues – even virtual health – to help drive efficiencies within clinic workflows, leveraging data in- and out-of-network – no matter the source system</p>];
 
   return (
     fullContent

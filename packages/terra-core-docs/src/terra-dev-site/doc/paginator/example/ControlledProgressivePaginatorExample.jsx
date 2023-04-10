@@ -10,8 +10,8 @@ const cx = classNames.bind(styles);
 const totalCount = 450;
 
 const buildPage = () => {
-  const fullContent = [<p>Each year, more than half of the nearly 50 million American adults1 experiencing mental illness do not receive the treatment they need. As the demand for services continues to increase, behavioral healthcare providers struggle to provide timely, holistic treatment when and where patients need it most. Additionally, behavioral health organizations face staffing shortages, extensive reporting processes, compliance requirements, and siloed technology systems.</p>,
-  <p>Providers need a solution that helps ease their burden so they can make timely, informed care decisions benefiting their patients.</p>];
+  const fullContent = [<p>This example used to  separating content into discrete pages.</p>,
+    <p>selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
 
   return (
     fullContent

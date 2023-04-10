@@ -29,7 +29,7 @@ const OpenCloseEventToggleButton = () => {
           <span className={cx('times-wrapper')}>{timesClosed}</span>
         </p>
       </div>
-      <ToggleButton closedButtonText="ToggleButton" onOpen={handleOnOpen} onClose={handleOnClose}>
+      <ToggleButton closedButtonText="Information about Model Experience" onOpen={handleOnOpen} onClose={handleOnClose}>
         <p>New implementations of Cerner solutions use Model Experience, our collection of industry and Cerner best practices, to provide strategic recommendations for implementing and utilizing Cerner platforms. Cerner consulting services specialize in organizational change management and will help lead your organization through the implementation process. We’ll work with your employees to establish engagement and encourage best practices so your staff can confidently and competently adopt your new EHR system.</p>
       </ToggleButton>
     </div>

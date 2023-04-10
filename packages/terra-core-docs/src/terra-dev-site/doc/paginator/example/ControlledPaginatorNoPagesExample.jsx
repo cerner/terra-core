@@ -8,14 +8,8 @@ import styles from './ControlledPaginatorCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const buildPage = () => {
-  const fullContent = [<p>When combining the enhanced features of the Cerner Ambulatory EHR with integrated and comprehensive ambulatory support, Oracle Cerner aims to help deliver value across five key areas:</p>,
-  <ul>
-    <li>Keep the patient, their safety, and quality of care at the center of all solutions</li>
-    <li>Focus on improving clinician satisfaction while reducing the cognitive burden</li>
-    <li>Facilitate coordination and communication across the care team, including the patient</li>
-    <li>Enhance specific capabilities to support focused specialties</li>
-    <li>Seek to optimize revenue and reduce total cost of care</li>
-  </ul>];
+  const fullContent = [<p>This example used to  separating content into discrete pages without page preview.</p>,
+    <p>selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
 
   return (
     fullContent

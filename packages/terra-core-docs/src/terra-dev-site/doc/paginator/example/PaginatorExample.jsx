@@ -18,7 +18,8 @@ const buildPage = () => {
       <li>Optimize for key service lines across the network to support care coordination and maximize revenue generation</li>
       <li>Implement an outpatient electronic health record (EHR) that contributes to improved clinician efficiency and satisfaction</li>
       <li>Manage practice operations while accounting for emerging payment models</li>
-    </ul>];
+    </ul>,
+  ];
 
   return (
     fullContent

@@ -10,13 +10,8 @@ const cx = classNames.bind(styles);
 const totalCount = 450;
 
 const buildPage = () => {
-  const fullContent = [<p>Cerner Ambulatory offers simplified workflows across venues through integrated products and embedded collaborative content. Through intelligent solutions designed to help improve care quality, clinician efficiency, and operational improvements, Oracle Cerner is working to deliver:</p>,
-    <ul>
-      <li>Interoperability between systems and providers, regardless of EHR, with data infused directly into the ambulatory workflow</li>
-      <li>A singular plan designed to help enhance care team collaboration while using unified tools, workflows, and access</li>
-      <li>Integration between care venues, including acute and virtual</li>
-      <li>Enhanced clinically driven revenue cycle functionality and ambulatory practice management workflows</li>
-    </ul>];
+  const fullContent = [<p>This example used to  separating content into discrete pages with page preview.</p>,
+    <p>selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
 
   return (
     fullContent
