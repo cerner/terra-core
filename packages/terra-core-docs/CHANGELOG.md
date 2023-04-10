@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `action-header`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `arrange`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `content-container`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `divider`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `form-checkbox`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `form-radio`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `paginator`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `Scroll`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `Section header`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `show-hide`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `toggle`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `toggle-button`
+  * Updated `Lorem Ipsum` and non meaning full text with meaningful text for `toggle-section-header`
+
 ## 1.24.0 - (April 5, 2023)
 
 * Added 
