@@ -15,7 +15,7 @@ const A11yButtonLabel = () => (
         atopic dermatitis, allergic asthma, and anaphylaxis. Symptoms may include red eyes, an itchy rash, sneezing,
         coughing, a runny nose, shortness of breath, or swelling.
       </p>
-      <Button aria-label="Learn More About Allergies" href="https://en.wikipedia.org/wiki/Allergy" text="Learn More" className={cx('button')} />
+      <Button aria-label="Learn More About Allergies" text="Learn More" className={cx('button')} />
     </Card.Body>
   </Card>
 );

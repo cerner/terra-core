@@ -1,43 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContentContainer from 'terra-content-container';
+import Button from 'terra-button';
 import classNames from 'classnames/bind';
+import InputField from 'terra-form-input/lib/InputField';
 import styles from './ContentContainerDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
 const display1 = (
   <p key="1">
-    Command Center provides near real-time enterprise transparency to help health systems perform at their peak efficiency, streamline operations and improve care delivery.
-  </p>
-);
-const display2 = (
-  <p key="2">
-    We know organizations are challenged to increase clinical and operational efficiencies, provide high-quality care, improve satisfaction and, ultimately, grow revenue and market share. The ability to provide consumers, clinicians, and clinics with integration across ambulatory venues is vital for organizations to achieve their goals.
-  </p>
-);
-const display3 = (
-  <p key="3">
-    With a focus on enhanced productivity across ambulatory practices, Cerner Ambulatory is designed to help advance clinical and operational efficiencies throughout the continuum of care. We’ve designed our products with an ambulatory-first focus where operations and workflows are streamlined through integration across venues.
+    This tool is used to add patient details to the hospital database for documentation purposes.
+    Please enter patient name as your name to get started.
   </p>
 );
 
-const contentheader = <h3>Display Header</h3>;
-const contentfooter = <h3>Display Footer</h3>;
+const contentheader = <h3>Registration Form</h3>;
+const contentfooter = <p>Please enter the name as per the official document</p>;
 
-const container = () => (
-  <div className={cx('content-container-fill')}>
-    <ContentContainer header={contentheader} footer={contentfooter} fill>
-      <div key="1">
-        {display1}
-      </div>
-      <div key="2">
-        {display2}
-      </div>
-      <div key="3">
-        {display3}
-      </div>
-    </ContentContainer>
-  </div>
-);
+const Container = () => {
+  const [field, setField] = useState('');
 
-export default container;
+  const handleFirstChange = (event) => {
+    setField(event.target.value);
+  };
+
+  const clickHandler = () => alert(
+    `${
+      field.trim().length !== 0
+        ? `You have entered ${field}`
+        : 'You have not entered anything'
+    }`,
+  );
+
+  return (
+    <div className={cx('content-container-fill')}>
+      <ContentContainer header={contentheader} footer={contentfooter} fill>
+        <div key="1">{display1}</div>
+        <div key="2">
+          <InputField
+            inputId="input-field-2"
+            label="Enter Patient Name"
+            type="text"
+            onChange={handleFirstChange}
+          />
+        </div>
+        <div key="3">
+          <Button
+            text="Submit"
+            onClick={clickHandler}
+            className={cx('button')}
+          />
+        </div>
+      </ContentContainer>
+    </div>
+  );
+};
+
+export default Container;

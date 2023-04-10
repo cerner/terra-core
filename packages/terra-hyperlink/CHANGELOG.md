@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.58.1 - (April 7, 2023)
+
+* Fixed
+  * Fixed passivity bug to allow rendering `children` also.
+
 ## 2.58.0 - (April 5, 2023)
 
 * Changed

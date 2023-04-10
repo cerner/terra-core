@@ -1,5 +1,133 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`correctly applies "inputAttrs" property to the Checkbox component 1`] = `
+<InjectIntl(CheckboxField)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  legend="Default CheckboxField"
+>
+  <CheckboxField
+    error={null}
+    help={null}
+    hideRequired={false}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isInline={false}
+    isInvalid={false}
+    isLegendHidden={false}
+    legend="Default CheckboxField"
+    legendAttrs={Object {}}
+    required={false}
+    showOptional={false}
+  >
+    <fieldset
+      className="checkbox-field"
+    >
+      <legend
+        className="legend-group"
+        id="terra-checkbox-field-description-2"
+      >
+        <div
+          className="legend"
+        >
+          Default CheckboxField
+          <span
+            className="error-icon-hidden"
+          />
+        </div>
+      </legend>
+      <Checkbox
+        disabled={false}
+        inputAttrs={
+          Object {
+            "aria-describedby": "terra-checkbox-field-description-2  ",
+            "data-custom-attr": "attr data",
+          }
+        }
+        isInline={false}
+        isLabelHidden={false}
+        key=".0"
+        labelText="Default label"
+        labelTextAttrs={Object {}}
+        name={null}
+      >
+        <div
+          className="checkbox"
+        >
+          <label
+            className="label"
+          >
+            <input
+              aria-describedby="terra-checkbox-field-description-2  "
+              className="native-input"
+              data-custom-attr="attr data"
+              disabled={false}
+              name={null}
+              type="checkbox"
+            />
+            <span
+              className="label-text"
+            >
+              Default label
+            </span>
+          </label>
+        </div>
+      </Checkbox>
+    </fieldset>
+  </CheckboxField>
+</InjectIntl(CheckboxField)>
+`;
+
 exports[`correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
