@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
@@ -96,9 +97,49 @@ const Text = ({
     attributes.className,
   );
 
+  const descriptiveClasses = classNames(
+    cx([
+      'text',
+      { 'visually-hidden': true },
+    ]),
+    attributes.className,
+  );
+
+  const isValidDate = moment(children, 'MM/DD/YYYY', true).isValid();
+  const dateParts = isValidDate ? children.split('/') : [null, null, null];
+  const monthVal = dateParts[0];
+  const dayVal = dateParts[1];
+  const yearVal = dateParts[2];
+
+  const isValidTime = moment(children, 'hh:mm:ss', true).isValid();
+  const timeParts = isValidTime ? children.split(':') : [null, null, null];
+  const hourVal = timeParts[0];
+  const minuteVal = timeParts[1];
+  const secondVal = timeParts[2];
+
   return (
     <span {...attributes} className={TextClassNames}>
-      {children}
+      {isValidDate
+        ? (<>
+          <span className={descriptiveClasses}>Month</span>
+          <React.Fragment>{monthVal}/</React.Fragment>
+
+          <span className={descriptiveClasses}>Day</span>
+          <React.Fragment>{dayVal}/</React.Fragment>
+
+          <span className={descriptiveClasses}>Year</span>
+          <React.Fragment>{yearVal}</React.Fragment>
+        </>) : isValidTime
+        ? (<>
+          <span className={descriptiveClasses}>Hour</span>
+          <React.Fragment>{hourVal}:</React.Fragment>
+
+          <span className={descriptiveClasses}>Minute</span>
+          <React.Fragment>{minuteVal}:</React.Fragment>
+
+          <span className={descriptiveClasses}>Second</span>
+          <React.Fragment>{secondVal}</React.Fragment>
+        </>) : children}
     </span>
   );
 };
