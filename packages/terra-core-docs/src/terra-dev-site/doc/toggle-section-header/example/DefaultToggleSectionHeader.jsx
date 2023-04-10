@@ -7,9 +7,10 @@ const componentProps = {
 
 const DefaultToggleSectionHeader = () => (
   <ToggleSectionHeaderExampleTemplate exampleProps={componentProps}>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Cerner provides research solutions and services to support clinical sites and academic institutions.
+          <a href="https://www.cerner.com/gb/en/solutions/data-research">Data and research</a>
+          {' '}
+          We bring a deep understanding of clinical systems, workflows and health data, as well as extensive experience in pharmaceutical, outcomes and health economic research. Through medical and economic analyses, researchers gain insights into the viability, safety, and efficacy of new and existing therapies. Principal investigators and research coordinators can use the Cerner EHR to facilitate and enhance their research activities.</p>
   </ToggleSectionHeaderExampleTemplate>
 );
 

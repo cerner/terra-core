@@ -30,7 +30,7 @@ const OpenCloseEventToggleButton = () => {
         </p>
       </div>
       <ToggleButton closedButtonText="ToggleButton" onOpen={handleOnOpen} onClose={handleOnClose}>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>New implementations of Cerner solutions use Model Experience, our collection of industry and Cerner best practices, to provide strategic recommendations for implementing and utilizing Cerner platforms. Cerner consulting services specialize in organizational change management and will help lead your organization through the implementation process. We’ll work with your employees to establish engagement and encourage best practices so your staff can confidently and competently adopt your new EHR system.</p>
       </ToggleButton>
     </div>
   );

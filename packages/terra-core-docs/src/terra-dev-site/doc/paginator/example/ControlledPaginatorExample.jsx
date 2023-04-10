@@ -18,14 +18,20 @@ const fillArray = (value, len) => {
 };
 
 const buildPage = () => {
-  let fullContent = [];
-  const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-    + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
-    + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
-    + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
-    + 'Aliquam eget maximus dui, ut rhoncus augue.');
+  let fullContent = [<p>Cerner Ambulatory offers simplified workflows across venues through integrated products and embedded collaborative content. Through intelligent solutions designed to help improve care quality, clinician efficiency, and operational improvements, Oracle Cerner is working to deliver:</p>,
+    <ul>
+      <li>Interoperability between systems and providers, regardless of EHR, with data infused directly into the ambulatory workflow</li>
+      <li>A singular plan designed to help enhance care team collaboration while using unified tools, workflows, and access</li>
+      <li>Integration between care venues, including acute and virtual</li>
+      <li>Enhanced clinically driven revenue cycle functionality and ambulatory practice management workflows</li>
+    </ul>];
+  // const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  // + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
+  // + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
+  // + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
+  // + 'Aliquam eget maximus dui, ut rhoncus augue.');
 
-  fullContent = fillArray(content, 10);
+  // fullContent = fillArray(content, 1);
 
   return (
     fullContent

@@ -14,9 +14,8 @@ const LongTitleAccordionSectionHeader = () => {
   };
 
   return (
-    <AccoordianExampleTemplate text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu" heading="Long Title Accordion Section Header" sectionHeaderAttrs={sectionHeaderProps}>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu</p>
+    <AccoordianExampleTemplate text="Long Title Accordion Section Header that provides data an onClick callback" heading="Long Title Accordion Section Header" sectionHeaderAttrs={sectionHeaderProps}>
+      <p>Keystone Accountable Care Organization (ACO), a collaboration between Geisinger Health System and three other health systems, entered the Medicare Shared Savings Program (MSSP) in 2013 and transitioned to an MSSP Track 1+ in 2018, qualifying Keystone ACO as an advanced payment model. According to the Centers for Medicaid and Medicare Services (CMS) benchmark minus expenditures formula, the ACO saved Medicare nearly $10 million in 2018. Hear how Keystone ACO is using the Cerner HealtheIntent® platform to garner insights across more than 72,000 ACO beneficiaries and multiple EHRs.</p>
     </AccoordianExampleTemplate>
   );
 };

@@ -7,26 +7,17 @@ const cx = classNames.bind(styles);
 
 const display1 = (
   <p key="1">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-    Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+    Healthcare organizations face accelerating cost and revenue pressures, as well as the need to improve clinical outcomes. Establishing greater operational and clinical efficiency can help alleviate these pressures. Unfortunately, many healthcare organizations are basing care decisions on old data.
   </p>
 );
 const display2 = (
   <p key="2">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-    Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+    They could achieve greater efficiency and outcomes by basing decisions on near real-time and predictive analytics to gain situational awareness of what is happening in the enterprise right now, instead of yesterday. Cerner Command Center provides near real-time enterprise transparency to help health systems perform at their peak efficiency, streamline operations and improve care delivery.
   </p>
 );
 const display3 = (
   <p key="3">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-    Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+    Effectively centralizing operations requires a more holistic approach than technology alone can provide. It also requires having the right people and processes in place. Cerner Advisory Services are designed to help healthcare organizations maximize the value of their Command Center implementation through improved outcomes and reduced costs.
   </p>
 );
 

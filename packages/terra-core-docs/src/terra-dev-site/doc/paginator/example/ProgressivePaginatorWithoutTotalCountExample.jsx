@@ -15,14 +15,16 @@ const fillArray = (value, len) => {
 };
 
 const buildPage = () => {
-  let fullContent = [];
-  const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-    + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
-    + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
-    + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
-    + 'Aliquam eget maximus dui, ut rhoncus augue.');
+  let fullContent = [<p>Cerner Ambulatory Surgery Center integrates our established surgical, anesthesia, inventory, revenue cycle management and patient portal products on a single EHR platform to help simplify the management of an ambulatory surgery center.</p>,
+  <p>With future growth in mind, Cerner Ambulatory Surgery Center is contemporary, scalable and flexible.</p>,
+  <p>Cerner Ambulatory Surgery Center aims to enable clinicians and staff to focus on what truly matters – a safe, personal and efficient patient experience.</p>];
+  // const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  //   + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
+  //   + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
+  //   + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
+  //   + 'Aliquam eget maximus dui, ut rhoncus augue.');
 
-  fullContent = fillArray(content, 10);
+  // fullContent = fillArray(content, 10);
 
   return (
     fullContent

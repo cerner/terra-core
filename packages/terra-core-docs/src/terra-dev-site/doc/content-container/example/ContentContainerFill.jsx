@@ -7,26 +7,17 @@ const cx = classNames.bind(styles);
 
 const display1 = (
   <p key="1">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-    Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+    Command Center provides near real-time enterprise transparency to help health systems perform at their peak efficiency, streamline operations and improve care delivery.
   </p>
 );
 const display2 = (
   <p key="2">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-    Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+    We know organizations are challenged to increase clinical and operational efficiencies, provide high-quality care, improve satisfaction and, ultimately, grow revenue and market share. The ability to provide consumers, clinicians, and clinics with integration across ambulatory venues is vital for organizations to achieve their goals.
   </p>
 );
 const display3 = (
   <p key="3">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-    Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+    With a focus on enhanced productivity across ambulatory practices, Cerner Ambulatory is designed to help advance clinical and operational efficiencies throughout the continuum of care. We’ve designed our products with an ambulatory-first focus where operations and workflows are streamlined through integration across venues.
   </p>
 );
 

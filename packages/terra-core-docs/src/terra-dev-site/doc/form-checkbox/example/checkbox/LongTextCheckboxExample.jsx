@@ -4,8 +4,7 @@ import Checkbox from 'terra-form-checkbox';
 const longTextExample = () => (
   <Checkbox
     id="longTextCheckbox"
-    labelText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua '
-              + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'}
+    labelText={'Click to trigger the Checkbox. When activated, a check mark shall appear. Focus can be activated through tabbing and the checked state can be toggled with the space bar.'}
   />
 );
 

@@ -9,26 +9,17 @@ const cx = classNames.bind(styles);
 
 const display1 = (
   <p key="1">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-    Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+    Nearly half of healthcare executives reported patient leakage cost them at least 10% of their annual revenue, with one in five executives stating it cost more than 20%.
   </p>
 );
 const display2 = (
   <p key="2">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-    Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+    You work hard for your patients and your revenue. Keeping referrals inside your network is paramount to generating both fee-for-service (increasing utilization) and risk-based revenue (managing care quality and gap closure).
   </p>
 );
 const display3 = (
   <p key="3">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam lectus quis finibus feugiat. Nullam ut sagittis purus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut placerat fringilla aliquam.
-    Phasellus in eleifend odio. Nunc maximus sem vel odio lobortis, in accumsan arcu dapibus. Nunc consectetur, nunc in mattis
-    pharetra, augue felis aliquet nunc, non facilisis est velit vel elit.
+   Around one in three primary care appointments result in a referral. Today, many referrals are based on personal relationships. To build and retain market share, referring decisions should align to evidence-based best practices and factors like schedule availability, location and accepted insurances.
   </p>
 );
 

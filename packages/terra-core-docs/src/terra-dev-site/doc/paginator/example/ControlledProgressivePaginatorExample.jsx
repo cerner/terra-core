@@ -18,14 +18,15 @@ const fillArray = (value, len) => {
 };
 
 const buildPage = () => {
-  let fullContent = [];
-  const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-    + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
-    + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
-    + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
-    + 'Aliquam eget maximus dui, ut rhoncus augue.');
+  let fullContent = [<p>Each year, more than half of the nearly 50 million American adults1 experiencing mental illness do not receive the treatment they need. As the demand for services continues to increase, behavioral healthcare providers struggle to provide timely, holistic treatment when and where patients need it most. Additionally, behavioral health organizations face staffing shortages, extensive reporting processes, compliance requirements, and siloed technology systems.</p>,
+  <p>Providers need a solution that helps ease their burden so they can make timely, informed care decisions benefiting their patients.</p>];
+  // const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
+  //   + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
+  //   + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
+  //   + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
+  //   + 'Aliquam eget maximus dui, ut rhoncus augue.');
 
-  fullContent = fillArray(content, 10);
+  // fullContent = fillArray(content, 10);
 
   return (
     fullContent
