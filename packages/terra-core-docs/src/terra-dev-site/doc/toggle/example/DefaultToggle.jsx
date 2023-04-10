@@ -26,9 +26,7 @@ const ToggleDefault = () => {
       * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
       */}
       <Toggle id="default-toggle" isOpen={isOpen}>
-      <p>
-      Health care providers in smaller communities often face the challenge of how to do more with less while trying to provide the best possible care to their populations. Geographic isolation, workforce shortages, technology disparities and diminishing resources can make it harder to deliver high-quality care. Leveraging the right technology can be critical to provide their community with an integrated healthcare experience.
-        </p>
+        <p>Health care providers in smaller communities often face the challenge of how to do more with less while trying to provide the best possible care to their populations. Geographic isolation, workforce shortages, technology disparities and diminishing resources can make it harder to deliver high-quality care. Leveraging the right technology can be critical to provide their community with an integrated healthcare experience.</p>
       </Toggle>
     </div>
   );

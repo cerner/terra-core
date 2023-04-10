@@ -7,16 +7,8 @@ import styles from './ControlledPaginatorCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const fillArray = (value, len) => {
-  const arr = [];
-  for (let i = 0; i < len; i += 1) {
-    arr.push(<p key={Math.floor(Math.random() * Math.floor(100000))}>{value}</p>);
-  }
-  return arr;
-};
-
 const buildPage = () => {
-  let fullContent = [<p>When combining the enhanced features of the Cerner Ambulatory EHR with integrated and comprehensive ambulatory support, Oracle Cerner aims to help deliver value across five key areas:</p>,
+  const fullContent = [<p>When combining the enhanced features of the Cerner Ambulatory EHR with integrated and comprehensive ambulatory support, Oracle Cerner aims to help deliver value across five key areas:</p>,
   <ul>
     <li>Keep the patient, their safety, and quality of care at the center of all solutions</li>
     <li>Focus on improving clinician satisfaction while reducing the cognitive burden</li>
@@ -24,13 +16,6 @@ const buildPage = () => {
     <li>Enhance specific capabilities to support focused specialties</li>
     <li>Seek to optimize revenue and reduce total cost of care</li>
   </ul>];
-  // const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-  //   + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
-  //   + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
-  //   + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
-  //   + 'Aliquam eget maximus dui, ut rhoncus augue.');
-
-  // fullContent = fillArray(content, 10);
 
   return (
     fullContent

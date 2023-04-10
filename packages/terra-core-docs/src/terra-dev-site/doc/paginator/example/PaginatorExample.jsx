@@ -8,16 +8,8 @@ const cx = classNames.bind(styles);
 
 const totalCount = 450;
 
-const fillArray = (value, len) => {
-  const arr = [];
-  for (let i = 0; i < len; i += 1) {
-    arr.push(<p key={Math.floor(Math.random() * Math.floor(100000))}>{value}</p>);
-  }
-  return arr;
-};
-
 const buildPage = () => {
-  let fullContent = [<p>Beyond general financial constraints, here are some goals to consider when developing your ambulatory approach:</p>,
+  const fullContent = [<p>Beyond general financial constraints, here are some goals to consider when developing your ambulatory approach:</p>,
     <ul>
       <li>Provide consumers with lower cost and convenient care options</li>
       <li>Capture and engage existing patients while identifying and attracting new patients</li>
@@ -27,13 +19,6 @@ const buildPage = () => {
       <li>Implement an outpatient electronic health record (EHR) that contributes to improved clinician efficiency and satisfaction</li>
       <li>Manage practice operations while accounting for emerging payment models</li>
     </ul>];
-  // const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-  //   + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
-  //   + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
-  //   + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
-  //   + 'Aliquam eget maximus dui, ut rhoncus augue.');
-
-  // fullContent = fillArray(content, 10);
 
   return (
     fullContent

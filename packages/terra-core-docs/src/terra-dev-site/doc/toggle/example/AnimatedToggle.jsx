@@ -27,9 +27,7 @@ const AnimatedToggle = () => {
       * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
       */}
       <Toggle id="animated-toggle" isOpen={isOpen} isAnimated>
-        <p>
-        Cerner is committed to providing technology and services that help enable high-quality care to organizations of all types and sizes, regardless of their ZIP code. Through the CommunityWorksSM delivery model, Cerner scales and tailors their electronic health record (EHR) system, Cerner Millennium®, to offer cutting-edge technology with predictable IT spend, providing an economical business model for community and critical access hospitals.
-        </p>
+        <p>Cerner is committed to providing technology and services that help enable high-quality care to organizations of all types and sizes, regardless of their ZIP code. Through the CommunityWorksSM delivery model, Cerner scales and tailors their electronic health record (EHR) system, Cerner Millennium®, to offer cutting-edge technology with predictable IT spend, providing an economical business model for community and critical access hospitals.</p>
       </Toggle>
     </div>
   );
