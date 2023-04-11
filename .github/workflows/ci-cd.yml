@@ -1,0 +1,95 @@
+---
+name: CI and CD
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+  schedule:
+    - cron: '0 1 * * SUN'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v3
+      - name: Setup Project
+        uses: ./.github/actions/setup
+      - if: github.event_name == 'pull_request'
+        name: Danger
+        uses: danger/danger-js@9.1.8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # https://github.com/danger/danger-js/issues/557#issuecomment-664851950
+          DANGER_DISABLE_TRANSPILATION: true
+      - name: Linting Project
+        run: |
+          npm run lint
+      - name: Testing Project
+        run: |
+          npm run jest
+  wdio:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        form-factor: [tiny, small, medium, large, huge, enormous]
+        theme: [default, lowlight, fusion]
+      
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v3
+      - name: Setup Project
+        uses: ./.github/actions/setup      
+      - name: Compile Project Default
+        run: |
+          npm run compile:prod -- --output-path build/default
+        if: matrix.theme == 'default'
+      - name: Compile Project Lowlight
+        run: |
+          npm run compile:lowlight -- --output-path build/lowlight
+        if: matrix.theme == 'lowlight'
+      - name: Compile Project Fusion
+        run: |
+          npm run compile:fusion -- --output-path build/fusion
+        if: matrix.theme == 'fusion'
+      - name: Run WDIO Tests for form factor ${{ matrix.form-factor }} and ${{ matrix.theme }}
+        run: SITE=build/${{ matrix.theme }} FORM_FACTOR=${{ matrix.form-factor }} npm run wdio-${{ matrix.theme }}
+
+  release-and-deploy:
+    runs-on: ubuntu-latest
+
+    needs: [build, wdio]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v3
+      - name: Setup GitHub Config
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+      - name: Setup Project
+        uses: ./.github/actions/setup
+      - name: Build
+        env:
+          TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY: ${{ secrets.TERRA_DEV_SITE_NEW_RELIC_LICENSE_KEY }}
+          TERRA_DEV_SITE_NEW_RELIC_APPLICATION_ID: "144458769"
+          TERRA_DEV_SITE_PUBLIC_PATH: /terra-core/
+        run: npm run compile:prod
+      - name: Release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx terra release
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'chore(docs): Regenerate docs'

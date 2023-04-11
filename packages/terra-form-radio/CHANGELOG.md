@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 4.35.0 - (April 7, 2023)
+
+* Fixed
+  * Fixed cloning of RadioField child to extend property instead of overriding it.
+
+## 4.34.0 - (March 1, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.33.0 - (February 16, 2023)
 
 * Changed

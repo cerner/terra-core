@@ -14,7 +14,7 @@ const AccordionSectionHeader = () => {
   };
 
   return (
-    <AccoordianExampleTemplate title="Patient Allergy details:" heading="Accordion Section Header" sectionHeaderAttrs={sectionHeaderProps}>
+    <AccoordianExampleTemplate text="Patient Allergy details:" heading="Accordion Section Header" sectionHeaderAttrs={sectionHeaderProps}>
       <p>Allergic to Cats</p>
       <p>Allergic to Dogs</p>
       <p>Allergic to Dust</p>

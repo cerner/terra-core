@@ -86,4 +86,17 @@
       transform: rotate(90deg);
     }
   }
+
+  // List Item Component
+  // ========================================================
+  .list-item {
+    align-items: center;
+    background-color: var(--terra-list-item-background-color);
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    min-height: var(--terra-list-item-min-height);
+    padding: 0;
+    width: 100%;
+  }
 }

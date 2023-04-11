@@ -7,13 +7,13 @@ const GhostDropdownButton = () => {
   return (
     <React.Fragment>
       <DropdownButton
-        label="Dropdown"
+        label="Export Dropdown"
         variant="ghost"
       >
-        <Item label="1st Option" onSelect={() => setMessage('1st option clicked')} />
-        <Item label="2nd Option" onSelect={() => setMessage('2nd option clicked')} />
-        <Item label="3rd Option" onSelect={() => setMessage('3rd option clicked')} />
-        <Item label="4th Option" onSelect={() => setMessage('4th option clicked')} />
+        <Item label="PDF" onSelect={() => setMessage('PDF option clicked')} />
+        <Item label="Plain Text" onSelect={() => setMessage('Plain Text option clicked')} />
+        <Item label="Web Page" onSelect={() => setMessage('Web Page option clicked')} />
+        <Item label="XML" onSelect={() => setMessage('XML option clicked')} />
       </DropdownButton>
       <p>{message}</p>
     </React.Fragment>

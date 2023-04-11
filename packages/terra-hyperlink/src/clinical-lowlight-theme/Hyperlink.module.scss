@@ -1,7 +1,7 @@
 :local {
   .clinical-lowlight-theme {
     --terra-hyperlink-color: #007ee0;
-    --terra-hyperlink-text-decoration: none;
+    --terra-hyperlink-text-decoration: underline;
     --terra-hyperlink-visited-color: #007ee0;
     --terra-hyperlink-visited-focus-color: #007ee0;
     --terra-hyperlink-hover-background-color: transparent;
@@ -20,6 +20,14 @@
     --terra-hyperlink-underline-hidden-hover-color: #007ee0;
     --terra-hyperlink-underline-hidden-visited-color: #007ee0;
     --terra-hyperlink-underline-hidden-visited-focus-color: #007ee0;
-    --terra-hyperlink-icon-margin-left: 0.5em;
+    --terra-hyperlink-icon-font-size: 1em;
+    --terra-hyperlink-icon-margin-left: 0.28571em;
+    --terra-hyperlink-icon-audio-font-size: 0.92857em;
+    --terra-hyperlink-icon-document-margin-left: 0.21428em;
+    --terra-hyperlink-icon-external-bottom: 0.03571em;
+    --terra-hyperlink-icon-external-font-size: 0.85714em;
+    --terra-hyperlink-icon-external-margin-left: 0.28571em;
+    --terra-hyperlink-icon-image-bottom: -0.07142em;
+    --terra-hyperlink-icon-video-bottom: -0.07142em;
   }
 }

@@ -138,7 +138,7 @@ const CheckboxField = (props) => {
   const content = React.Children.map(children, (child) => {
     if (child && child.type.isCheckbox) {
       return React.cloneElement(child, {
-        inputAttrs: { 'aria-describedby': ariaDescriptionIds },
+        inputAttrs: { ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds },
       });
     }
 

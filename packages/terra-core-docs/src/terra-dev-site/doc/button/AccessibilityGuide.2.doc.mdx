@@ -51,15 +51,15 @@ The screen reader user will hear something like: <samp> Show Alert: Button </sam
 
 ```jsx
 import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
-import Button, { IconTypes } from 'terra-button';
+import Button from 'terra-button';
 
 const Icon = <IconPrinter a11yLabel="Print" />;
 const DecorativeIcon = <IconPrinter />;
 
   <div>
-    <Button icon={Icon} isIconOnly iconType={IconTypes.INFORMATIVE} />
-    <Button icon={Icon} text="All Documents" iconType={IconTypes.INFORMATIVE} /> 
-    <Button icon={DecorativeIcon} iconType={IconTypes.DECORATIVE} text="Print" />
+    <Button icon={Icon} text="Print Icon Button" isIconOnly className={cx('button')} />
+    <Button icon={Icon} text="All Documents" className={cx('button')} />
+    <Button icon={DecorativeIcon} text="Print" className={cx('button')} />
   </div>
 ```
 
@@ -86,13 +86,13 @@ For buttons that use icons that do not convey a meaning, make sure they are mark
 ```jsx
 import Button from 'terra-button';
 
-<Button aria-label="Add Allergies" text="Add" className={cx('button')} />
+<Button aria-label="Learn More About Allergies" text="Learn More" className={cx('button')} />
 ```
-The screen reader user will hear something like: <samp> Add Allergies Button  </samp>
+The screen reader user will hear something like: <samp> Learn More About Allergies Button  </samp>
 
 ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue) The above example is NOT recommended. For Accessibility Best Practices it is recommended to use the same text for both visual and the programmatic label of the button.
 
-Ensure any non-unique button label that is visually related to content in the page must be programmatically associated with its content. For example, a “Add” button next to the word “allergies” must be appropriate associated with the word allergies.
+Ensure any non-unique button label that is visually related to content in the page must be programmatically associated with its content. For example, a “Learn more” button next to the word “allergies” must be appropriate associated with the word allergies.
 
 </Notice>
 

@@ -4,6 +4,7 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import CheckboxField from '../../src/CheckboxField';
+import Checkbox from '../../src/Checkbox';
 
 window.matchMedia = () => ({ matches: true });
 
@@ -74,5 +75,23 @@ it('correctly applies the theme context className', () => {
       <CheckboxField legend="Hidden Legend legend" />
     </ThemeContextProvider>,
   );
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies "inputAttrs" property to the Checkbox component', () => {
+  const attrKey = 'data-custom-attr';
+  const attrValue = 'attr data';
+  const checkboxField = (
+    <CheckboxField legend="Default CheckboxField">
+      <Checkbox
+        labelText="Default label"
+        inputAttrs={{
+          [attrKey]: attrValue,
+        }}
+      />
+    </CheckboxField>
+  );
+  const wrapper = mountWithIntl(checkboxField);
+  expect(wrapper.find('input').prop(attrKey)).toBe(attrValue);
   expect(wrapper).toMatchSnapshot();
 });

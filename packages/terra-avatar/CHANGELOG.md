@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.17.0 - (March 1, 2023)
+
+* Added
+  * Updated alt prop to include `Deceased` string when `isDeceased` prop is set based on its value.
+
 ## 3.16.0 - (February 15, 2023)
 
 * Changed

@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+## 2.58.1 - (April 7, 2023)
+
+* Fixed
+  * Fixed passivity bug to allow rendering `children` also.
+
+## 2.58.0 - (April 5, 2023)
+
+* Changed
+  * updated hyperlink to have underline always.
+
+* Added 
+  * Added support for `hyperlink-button`.
+
 ## 2.57.0 - (February 15, 2023)
 
 * Changed

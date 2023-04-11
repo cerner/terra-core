@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.67.0 - (March 1, 2023)
+
+* Changed
+  * Updated jest snapshots for button changes.
+
 ## 3.66.0 - (February 16, 2023)
 
 * Changed

@@ -9,7 +9,6 @@ exports[`correctly applies the theme context className 1`] = `
   }
 >
   <Button
-    iconType="decorative"
     isBlock={false}
     isCompact={false}
     isDisabled={false}
@@ -47,7 +46,6 @@ exports[`correctly applies the theme context className 1`] = `
 
 exports[`should pass in refCallback as the ref prop of the input element 1`] = `
 <Button
-  iconType="decorative"
   isBlock={false}
   isCompact={false}
   isDisabled={false}
@@ -372,6 +370,7 @@ exports[`should render a neutral button 1`] = `
 exports[`should render a utility button 1`] = `
 <button
   aria-disabled={false}
+  aria-label="utility"
   className="button utility"
   disabled={false}
   onBlur={[Function]}
@@ -392,6 +391,7 @@ exports[`should render a utility button 1`] = `
 exports[`should render a utility button with a custom accessible label 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Custom Accessible Label"
   className="button utility"
   disabled={false}
   onBlur={[Function]}
@@ -412,6 +412,7 @@ exports[`should render a utility button with a custom accessible label 1`] = `
 exports[`should render a utility button with a custom title 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Icon Only"
   className="button utility"
   disabled={false}
   onBlur={[Function]}
@@ -432,6 +433,7 @@ exports[`should render a utility button with a custom title 1`] = `
 exports[`should render a utility button with text as a fallback accessible label 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Icon Only"
   className="button utility"
   disabled={false}
   onBlur={[Function]}
@@ -452,6 +454,7 @@ exports[`should render a utility button with text as a fallback accessible label
 exports[`should render a utility button with text as a fallback title 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Icon Only"
   className="button utility"
   disabled={false}
   onBlur={[Function]}
@@ -530,6 +533,7 @@ exports[`should render an icon and a text 1`] = `
 exports[`should render an icon only button with a custom accessible label 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Custom Accessible Label"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -550,6 +554,7 @@ exports[`should render an icon only button with a custom accessible label 1`] = 
 exports[`should render an icon only button with a custom title 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Icon Only"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -570,6 +575,7 @@ exports[`should render an icon only button with a custom title 1`] = `
 exports[`should render an icon only button with text as a fallback accessible label 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Icon Only"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}
@@ -590,6 +596,7 @@ exports[`should render an icon only button with text as a fallback accessible la
 exports[`should render an icon only button with text as a fallback title 1`] = `
 <button
   aria-disabled={false}
+  aria-label="Icon Only"
   className="button neutral"
   disabled={false}
   onBlur={[Function]}

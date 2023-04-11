@@ -11,19 +11,19 @@ exports[`correctly applies the theme context className 1`] = `
   <ListSection
     isCollapsed={false}
     isCollapsible={false}
-    level={1}
+    level={2}
     title="test"
   >
     <ListSectionHeader
       isCollapsed={false}
       isCollapsible={false}
-      level={1}
+      level={2}
       title="test"
     >
       <li
-        className="orion-fusion-theme"
+        className="list-item orion-fusion-theme"
       >
-        <h1
+        <h2
           className="title"
         >
           <div
@@ -35,14 +35,14 @@ exports[`correctly applies the theme context className 1`] = `
               test
             </div>
           </div>
-        </h1>
+        </h2>
       </li>
     </ListSectionHeader>
-    <li>
+    <li
+      className="list-item"
+    >
       <ul
-        className="list orion-fusion-theme"
-        level={1}
-        title="test"
+        className="list list-fill orion-fusion-theme"
       />
     </li>
   </ListSection>
@@ -54,18 +54,16 @@ exports[`should render with callback functions 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
-    level={1}
+    level={2}
     onSelect={[MockFunction]}
     refCallback={[MockFunction]}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={1}
-      onSelect={[MockFunction]}
-      refCallback={[MockFunction]}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>
@@ -76,14 +74,14 @@ exports[`should render with isCollapsed 1`] = `
   <ListSectionHeader
     isCollapsed={true}
     isCollapsible={false}
-    level={1}
+    level={2}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={1}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>
@@ -94,14 +92,14 @@ exports[`should render with isCollapsible 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={true}
-    level={1}
+    level={2}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={1}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>
@@ -112,14 +110,14 @@ exports[`should render with items 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
-    level={1}
+    level={2}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={1}
-      title="test"
+      className="list list-fill"
     >
       <ListItem
         hasChevron={false}
@@ -164,11 +162,11 @@ exports[`should render with level 1`] = `
     level={3}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={3}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>
@@ -179,14 +177,14 @@ exports[`should render with no items 1`] = `
   <ListSectionHeader
     isCollapsed={false}
     isCollapsible={false}
-    level={1}
+    level={2}
     title="test"
   />
-  <li>
+  <li
+    className="list-item"
+  >
     <ul
-      className="list"
-      level={1}
-      title="test"
+      className="list list-fill"
     />
   </li>
 </Fragment>

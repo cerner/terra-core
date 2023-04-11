@@ -1,0 +1,46 @@
+name: delete preview on PR close
+
+# only trigger on pull request closed events
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  delete_preview:
+    runs-on: ubuntu-latest
+    env:
+      PR_PATH: pull/${{github.event.number}}
+      ENVIRONMENT_NAME: preview-pr-${{ github.event.number }}
+    steps: 
+      - name: make empty dir
+        run: mkdir public
+
+      - name: delete folder
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          destination_dir: ${{ env.PR_PATH }}
+
+      - name: get deployment
+        id: get-deplpoyment
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/{repository}/deployments
+          repository: ${{ github.repository }}
+          ref: ${{ github.event.pull_request.head.ref }}
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: set previous deployment as inactive
+        if: |
+            steps.get-deplpoyment.outputs.status != '404' &&
+              toJSON(fromJSON(steps.get-deplpoyment.outputs.data)) != '[]'
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/{repository}/deployments/{deployment}/statuses
+          deployment: ${{ fromJSON(steps.get-deplpoyment.outputs.data)[0].id }}
+          repository: ${{ github.repository }}
+          state: inactive
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'

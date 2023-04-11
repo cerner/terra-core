@@ -16,7 +16,7 @@ const HeadingVariations = () => (
     </Heading>
     <Heading level={3} size="huge" weight={200}>
       H3 heading with size set to
-      <code>huge</code>
+      <code> huge</code>
       {' '}
       and weight set to
       <code>200</code>

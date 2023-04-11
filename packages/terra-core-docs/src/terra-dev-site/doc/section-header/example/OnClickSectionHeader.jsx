@@ -9,6 +9,6 @@ const sectionHeaderProps = {
   },
 };
 
-const OnClickSectionHeader = () => <SectionHeaderExampleTemplate title="OnClick Section Header" exampleProps={sectionHeaderProps} />;
+const OnClickSectionHeader = () => <SectionHeaderExampleTemplate text="OnClick Section Header" exampleProps={sectionHeaderProps} />;
 
 export default OnClickSectionHeader;

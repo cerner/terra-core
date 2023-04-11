@@ -4,6 +4,48 @@
 
 * Updated
   * Updated icon documentation to incorporate `one-cerner-style-icons` v1.5.0.
+  
+* Added
+  * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
+
+## 1.25.0 - (April 7, 2023)
+
+* Fixed
+  * Fixed `terra-ui` build failures happening due to usage of relative paths on mdx file.
+  * Fixed `terra-button` A11y guide example to match the description.
+
+## 1.24.0 - (April 5, 2023)
+
+* Added 
+  * Added Accessibility Guide for `terra-dropdown-button`.
+
+* Changed
+  * Updated examples for terra-content-container
+
+* Added
+  * Added accessibility guide for `terra-hyperlink`
+  * Added Accessibility guideline for `terra-heading`
+  * Added examples for `terra-list`
+  * Added Accessibility Guide for `terra-section-header`
+  * Added accessibility guide for `terra-progress-bar`
+  * Added accessibility guide for `terra-avatar`
+  * Added examples for `terra-alert`
+
+* Changed
+  * Added tests for `terra-list`.
+  * Fix second example on default Paginator doc page
+  * Updated example for `terra-hyperlink`
+  * Updated example for `terra-progress-bar`
+  * Updated list options for `terra-dropdown-button`
+
+## 1.23.0 - (March 1, 2023)
+
+* Changed
+  * Updated action-header examples to include A11y labels.
+  * Updated `terra-button-group` tests and examples.
+
+* Added
+  * Added accessibility guide for `terra-button-group`.
 
 ## 1.22.0 - (February 16, 2023)
 
@@ -14,6 +56,7 @@
 
 * Changed
   * Updated radio and checkbox tests to fix fusion theme tests.
+
 * Added 
   * Added Accessibility Guide for `terra-toggle`.
   * Added A11y guide and examples for `terra-button`.
