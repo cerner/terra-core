@@ -5,6 +5,10 @@
 * Changed
   * Updated non-meaningful content with meaningful content for `action-header`, `arrange`, `content-container`, `divider`, `checkbox`, `radio`, `paginator`, `scroll`, `section-header`, `show-hide`, `toggle`, `toggle-button` and `toggle-section-header`
 
+* Added
+  * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
+
+
 ## 1.25.0 - (April 7, 2023)
 
 * Fixed
