@@ -4,15 +4,17 @@
 /* stylelint-disable selector-class-pattern */
 :local {
   .IconHelpStatic {
-	path:first-child {
-	  fill: var(--terra-icon-help-static-path-1-fill, #007cc3);
-	}
-	path:nth-child(2) {
-	  fill: var(--terra-icon-help-static-path-2-fill, #007cc3);
-	}
-	path:last-child {
-	  fill: var(--terra-icon-help-static-path-3-fill, #007cc3);
-	}
+    path:first-child {
+      fill: var(--terra-icon-help-static-path-1-fill, #007cc3);
+    }
+	
+    path:nth-child(2) {
+      fill: var(--terra-icon-help-static-path-2-fill, #007cc3);
+    }
+	
+    path:last-child {
+      fill: var(--terra-icon-help-static-path-3-fill, #007cc3);
+    }
   }
 }
 /* stylelint-enable selector-class-pattern */
