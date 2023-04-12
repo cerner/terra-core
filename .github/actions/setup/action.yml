@@ -9,7 +9,7 @@ runs:
         node-version: 14.x
     - name: Clean Environment
       shell: bash
-      run: npm run clean:all
+      run: npm run clean
     - name: Install Dependencies
       shell: bash
       run: npm install
