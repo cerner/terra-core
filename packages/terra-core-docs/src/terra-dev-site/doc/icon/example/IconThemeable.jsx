@@ -49,6 +49,7 @@ import IconDoorOpen from 'terra-icon/lib/icon/IconDoorOpen';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
 import IconExclamation from 'terra-icon/lib/icon/IconExclamation';
 import IconItalicI from 'terra-icon/lib/icon/IconItalicI';
+import IconInformationThemeable from 'terra-icon/lib/icon/IconInformationThemeable';
 import IconMinus from 'terra-icon/lib/icon/IconMinus';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import IconClear from 'terra-icon/lib/icon/IconClear';
@@ -74,6 +75,7 @@ import IconArchive from 'terra-icon/lib/icon/IconArchive';
 import IconFunnel from 'terra-icon/lib/icon/IconFunnel';
 import IconDocuments from 'terra-icon/lib/icon/IconDocuments';
 import IconQuestion from 'terra-icon/lib/icon/IconQuestion';
+import IconHelpThemeable from 'terra-icon/lib/icon/IconHelpThemeable';
 import IconUnknown from 'terra-icon/lib/icon/IconUnknown';
 import IconQuestionOutline from 'terra-icon/lib/icon/IconQuestionOutline';
 import IconHouse from 'terra-icon/lib/icon/IconHouse';
@@ -682,6 +684,15 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconInformationThemeable height='2em' width='2em' /></td>
+        <td style={cellStyle}>information_themeable</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconInformationThemeable from 'terra-icon/lib/icon/IconInformationThemeable';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td style={cellStyle}><IconMinus height='2em' width='2em' /></td>
         <td style={cellStyle}>minus</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
@@ -903,6 +914,15 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconQuestion from 'terra-icon/lib/icon/IconQuestion';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconHelpThemeable height='2em' width='2em' /></td>
+        <td style={cellStyle}>help_themeable</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconHelpThemeable from 'terra-icon/lib/icon/IconHelpThemeable';
           </code>
         </td>
       </tr>

@@ -125,6 +125,8 @@ import IconHelp from './icon/IconHelp';
 import IconHelpInverse from './icon/IconHelpInverse';
 import IconHelpInverseLowLight from './icon/IconHelpInverseLowLight';
 import IconHelpLowLight from './icon/IconHelpLowLight';
+import IconHelpStatic from './icon/IconHelpStatic';
+import IconHelpThemeable from './icon/IconHelpThemeable';
 import IconHide from './icon/IconHide';
 import IconHigh from './icon/IconHigh';
 import IconHighInverse from './icon/IconHighInverse';
@@ -144,6 +146,8 @@ import IconInformation from './icon/IconInformation';
 import IconInformationInverse from './icon/IconInformationInverse';
 import IconInformationInverseLowLight from './icon/IconInformationInverseLowLight';
 import IconInformationLowLight from './icon/IconInformationLowLight';
+import IconInformationStatic from './icon/IconInformationStatic';
+import IconInformationThemeable from './icon/IconInformationThemeable';
 import IconIPass from './icon/IconIPass';
 import IconItalicI from './icon/IconItalicI';
 import IconKeyboard from './icon/IconKeyboard';
@@ -444,6 +448,8 @@ const Icons = {
   IconHelpInverse,
   IconHelpInverseLowLight,
   IconHelpLowLight,
+  IconHelpStatic,
+  IconHelpThemeable,
   IconHide,
   IconHigh,
   IconHighInverse,
@@ -464,6 +470,8 @@ const Icons = {
   IconInformationInverse,
   IconInformationInverseLowLight,
   IconInformationLowLight,
+  IconInformationStatic,
+  IconInformationThemeable,
   IconItalicI,
   IconKeyboard,
   IconKnurling,
