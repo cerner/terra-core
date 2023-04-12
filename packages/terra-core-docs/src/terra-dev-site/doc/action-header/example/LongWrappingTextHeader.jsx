@@ -11,11 +11,7 @@ const ActionHeaderExample = () => (
   <div>
     <br />
     <ActionHeader
-      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla orci dolor, dignissim vitae risus vel, tristique egestas sapien.
-      Vivamus blandit augue justo, id tincidunt justo luctus et. Morbi lacinia porttitor lacus, ac fermentum mauris tempus dapibus. Donec fringilla est ut ullamcorper consequat.
-      Aliquam ornare efficitur ornare. Curabitur facilisis urna a congue gravida.
-      Nulla accumsan non nisl sed elementum.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      text="This is a header with long wrapping text .This is an element provides a customizable header layout with a prominent title options for the elements.This component saves time and effort in designing a header from scratch and ensures consistency across a websites pages."
       onMinimize={() => alert('You clicked minimize!')}
       onClose={() => alert('You clicked close!')}
     >

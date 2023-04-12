@@ -27,12 +27,7 @@ const AnimatedToggle = () => {
       * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
       */}
       <Toggle id="animated-toggle" isOpen={isOpen} isAnimated>
-        <p>
-          Lorem ipsum dolor sit amet,
-          <a href="#test">consectetur</a>
-          {' '}
-          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <p>Cerner is committed to providing technology and services that help enable high-quality care to organizations of all types and sizes, regardless of their ZIP code. Through the CommunityWorksSM delivery model, Cerner scales and tailors their electronic health record (EHR) system, Cerner Millennium®, to offer cutting-edge technology with predictable IT spend, providing an economical business model for community and critical access hospitals.</p>
       </Toggle>
     </div>
   );

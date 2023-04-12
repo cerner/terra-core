@@ -2,14 +2,19 @@
 
 ## Unreleased
 
+* Changed
+  * Updated non-meaningful content with meaningful content for `action-header`, `arrange`, `content-container`, `divider`, `checkbox`, `radio`, `paginator`, `scroll`, `section-header`, `show-hide`, `toggle`, `toggle-button` and `toggle-section-header`
+
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
+
 
 ## 1.25.0 - (April 7, 2023)
 
 * Fixed
   * Fixed `terra-ui` build failures happening due to usage of relative paths on mdx file.
   * Fixed `terra-button` A11y guide example to match the description.
+
 
 ## 1.24.0 - (April 5, 2023)
 

@@ -5,8 +5,7 @@ const hiddenLabelRadioExample = () => (
   <Radio
     id="long-text"
     name="longText"
-    labelText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua '
-              + 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'}
+    labelText="Click to trigger the Radio. When activated, a dot shall appear. The checked state can be activated with the space bar. Form Radio have one required prop which is labelText to add text of the label."
   />
 );
 

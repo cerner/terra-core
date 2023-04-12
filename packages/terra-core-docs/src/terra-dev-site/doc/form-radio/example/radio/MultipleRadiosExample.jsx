@@ -3,9 +3,9 @@ import Radio from 'terra-form-radio';
 
 const multipleRadiosExample = () => (
   <div>
-    <Radio id="first" labelText="First Radio" name="multiple-group" defaultChecked />
-    <Radio id="second" labelText="Second Radio" name="multiple-group" />
-    <Radio id="third" labelText="Third Radio" name="multiple-group" />
+    <Radio id="baseUser" labelText="Base User" name="multiple-group" defaultChecked />
+    <Radio id="teamOwner" labelText="Team Owner" name="multiple-group" />
+    <Radio id="administrator" labelText="Administrator" name="multiple-group" />
   </div>
 );
 
