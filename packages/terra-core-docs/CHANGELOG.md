@@ -5,6 +5,9 @@
 * Fixed
   * UI text for date and hour format to be read correctly by the screen readers.
 
+* Added
+  * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
+
 ## 1.25.0 - (April 7, 2023)
 
 * Fixed
