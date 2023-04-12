@@ -322,9 +322,29 @@ Terra.describeViewports('Split Button', ['medium'], () => {
   });
 
   it('displays variants of Split Button', () => {
-    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-buttons');
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-button');
     $('#root').moveTo({ xOffset: 1, yOffset: 100 });
 
     Terra.validates.element('variants');
+  });
+});
+
+describe('Navigate from first item to last item', () => {
+  browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-button');
+  it('Navigate from first Item to last Item', () => {
+    $('[class*=split-button-caret]').click();
+    $('[class*=dropdown-list]').waitForDisplayed();
+    $('li:first-child[role="menuitem"]').isFocused();
+    browser.keys(['ArrowUp']);
+    Terra.validates.element('last item focused', { selector: '#root' });
+  });
+
+  it('Navigate from last item to first item', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-button');
+    $('[class*=split-button-caret]').click();
+    $('[class*=dropdown-list]').waitForDisplayed();
+    $('li:last-child[role="menuitem"]').isFocused();
+    browser.keys(['ArrowDown']);
+    Terra.validates.element('first item focused', { selector: '#root' });
   });
 });

@@ -268,3 +268,23 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     Terra.validates.element('variants');
   });
 });
+
+describe('Navigate from first item to last item', () => {
+  it('Navigate from first Item to last Item', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-dropdown-buttons');
+    $('[class*=dropdown-button]').click();
+    $('[class*=dropdown-list]').waitForDisplayed();
+    $('li:first-child[role="menuitem"]').isFocused();
+    browser.keys(['ArrowUp']);
+    Terra.validates.element('last item focused', { selector: '#root' });
+  });
+
+  it('Navigate from last item to first item', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-dropdown-buttons');
+    $('[class*=dropdown-button]').click();
+    $('[class*=dropdown-list]').waitForDisplayed();
+    $('li:last-child[role="menuitem"]').isFocused();
+    browser.keys(['ArrowDown']);
+    Terra.validates.element('first item focused', { selector: '#root' });
+  });
+});
