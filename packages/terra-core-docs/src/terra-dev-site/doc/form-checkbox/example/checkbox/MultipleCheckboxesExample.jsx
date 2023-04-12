@@ -3,9 +3,9 @@ import Checkbox from 'terra-form-checkbox';
 
 const multipleCheckboxesExample = () => (
   <div>
-    <Checkbox id="first" labelText="First Checkbox" defaultChecked />
-    <Checkbox id="second" labelText="Second Checkbox" />
-    <Checkbox id="third" labelText="Third Checkbox" />
+    <Checkbox id="ie9" labelText="IE9" defaultChecked />
+    <Checkbox id="flash" labelText="Flash" />
+    <Checkbox id="punchCards" labelText="Punch Cards" />
   </div>
 );
 
