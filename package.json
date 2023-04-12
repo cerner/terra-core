@@ -39,7 +39,7 @@
   },
   "scripts": {
     "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
-    "clean:all": "npm run clean:build && npm run clean:root",
+    "clean": "npm run clean:build && npm run clean:root",
     "clean:build": "rm -rf packages/**/lib",
     "clean:install": "npm run clean:all && time npm install",
     "clean:root": "$(lerna clean --yes || true) && echo 'removing ./node_modules' && rm -rf node_modules && echo 'removed ./node_modules'",
