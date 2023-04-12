@@ -322,7 +322,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
   });
 
   it('displays variants of Split Button', () => {
-    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-button');
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-buttons');
     $('#root').moveTo({ xOffset: 1, yOffset: 100 });
 
     Terra.validates.element('variants');
