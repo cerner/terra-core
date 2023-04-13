@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Fixed
-  * UI text for date and hour format to be read correctly by the screen readers.
-
 ## 4.51.0 - (February 15, 2023)
 
 * Changed

@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-* Fixed
-  * UI text for date and hour format to be read correctly by the screen readers.
+* Added
+  * Additional examples for `terra-text` to demonstrate valid date and time formats.
 
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
