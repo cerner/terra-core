@@ -15,9 +15,7 @@ const descriptiveClasses = classNames(
 
 const dateVar = moment('01-10-2022').format('MM/DD/YYYY');
 
-const isValidDate = moment(dateVar, 'MM/DD/YYYY', true).isValid();
-
-const dateParts = isValidDate ? dateVar.split('/') : [null, null, null];
+const dateParts = dateVar.split('/');
 const monthVal = dateParts[0];
 const dayVal = dateParts[1];
 const yearVal = dateParts[2];

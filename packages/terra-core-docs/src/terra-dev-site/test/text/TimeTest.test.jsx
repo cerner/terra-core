@@ -15,9 +15,7 @@ const descriptiveClasses = classNames(
 
 const timeVar = moment('10:22:30', 'hh:mm:ss').format('hh:mm:ss');
 
-const isValidTime = moment(timeVar, 'hh:mm:ss', true).isValid();
-
-const timeParts = isValidTime ? timeVar.split(':') : [null, null, null];
+const timeParts = timeVar.split(':');
 const hourVal = timeParts[0];
 const minuteVal = timeParts[1];
 const secondVal = timeParts[2];
