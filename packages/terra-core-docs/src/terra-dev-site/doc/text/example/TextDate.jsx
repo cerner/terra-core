@@ -41,6 +41,6 @@ const valueToDisplay = (
 
 const TextDate = () => (
   <div><Text id="dateTest">{valueToDisplay}</Text></div>
-)
+);
 
 export default TextDate;
