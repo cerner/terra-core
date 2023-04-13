@@ -36,12 +36,11 @@ const valueToDisplay = (
 
     <span className={descriptiveClasses}>Second</span>
     <React.Fragment>{secondVal}</React.Fragment>
-    <div><Text id="timeTest">{valueToDisplay}</Text></div>
   </>
 );
 
 const TextTime = () => (
-  <div><Text id="dateTest">{valueToDisplay}</Text></div>
+  <div><Text id="timeTest">{valueToDisplay}</Text></div>
 )
 
 export default TextTime;
