@@ -331,7 +331,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
 
 describe('When navigating between first and last items', () => {
   it('Navigates from first item to last item', () => {
-    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-button');
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-buttons');
     $('[class*=split-button-caret]').click();
     $('[class*=dropdown-list]').waitForDisplayed();
     $('li:first-child[role="menuitem"]').isFocused();
@@ -340,7 +340,7 @@ describe('When navigating between first and last items', () => {
   });
 
   it('Navigates from last item to first item', () => {
-    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-button');
+    browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-split-buttons');
     $('[class*=split-button-caret]').click();
     $('[class*=dropdown-list]').waitForDisplayed();
     $('li:last-child[role="menuitem"]').isFocused();
