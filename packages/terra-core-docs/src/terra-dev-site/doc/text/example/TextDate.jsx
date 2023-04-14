@@ -3,7 +3,7 @@ import Text from 'terra-text';
 import moment from 'moment';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 
-const dateVar = moment('01-10-2022').format('MM/DD/YYYY');
+const dateVar = moment('01-10-2022', 'MM/DD/YYYY').format('MM/DD/YYYY');
 
 const dateParts = dateVar.split('/');
 const monthVal = dateParts[0];
