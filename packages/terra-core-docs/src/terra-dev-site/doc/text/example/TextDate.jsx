@@ -1,17 +1,7 @@
 import React from 'react';
 import Text from 'terra-text';
 import moment from 'moment';
-import classNames from 'classnames';
-import classNamesBind from 'classnames/bind';
-import styles from '../../../../../../terra-text/src/Text.module.scss';
-
-const cx = classNamesBind.bind(styles);
-const descriptiveClasses = classNames(
-  cx([
-    'text',
-    { 'visually-hidden': true },
-  ]),
-);
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 const dateVar = moment('01-10-2022').format('MM/DD/YYYY');
 
@@ -22,19 +12,19 @@ const yearVal = dateParts[2];
 
 const valueToDisplay = (
   <>
-    <span className={descriptiveClasses}>Month</span>
+    <VisuallyHiddenText text="Month" />
     <React.Fragment>
       {monthVal}
       /
     </React.Fragment>
 
-    <span className={descriptiveClasses}>Day</span>
+    <VisuallyHiddenText text="Day" />
     <React.Fragment>
       {dayVal}
       /
     </React.Fragment>
 
-    <span className={descriptiveClasses}>Year</span>
+    <VisuallyHiddenText text="Year" />
     <React.Fragment>{yearVal}</React.Fragment>
   </>
 );
