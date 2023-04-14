@@ -269,8 +269,8 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
   });
 });
 
-describe('Navigate from first item to last item', () => {
-  it('Navigate from first Item to last Item', () => {
+describe('When navigating between first and last items', () => {
+  it('Navigates from first item to last item', () => {
     browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-dropdown-buttons');
     $('[class*=dropdown-button]').click();
     $('[class*=dropdown-list]').waitForDisplayed();
@@ -279,7 +279,7 @@ describe('Navigate from first item to last item', () => {
     Terra.validates.element('last item focused', { selector: '#root' });
   });
 
-  it('Navigate from last item to first item', () => {
+  it('Navigates from last item to first item', () => {
     browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-dropdown-buttons');
     $('[class*=dropdown-button]').click();
     $('[class*=dropdown-list]').waitForDisplayed();

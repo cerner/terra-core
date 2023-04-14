@@ -2,7 +2,7 @@
 
 ## Unreleased
 * Fixed
-   * Added logic to change the selection when we are on last option to first option and vice-versa
+   * Updated selection logic to cycle from last option to first option and vice-versa
 
 ## 1.32.0 - (March 1, 2023)
 
