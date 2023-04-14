@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * Additional examples for `terra-text` to demonstrate valid date and time formats.
+  * Added examples for `terra-text` to demonstrate valid date and time formats.
 
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
