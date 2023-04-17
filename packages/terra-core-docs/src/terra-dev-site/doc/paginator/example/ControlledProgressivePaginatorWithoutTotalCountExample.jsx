@@ -7,23 +7,10 @@ import styles from './PaginatorExampleCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
-const fillArray = (value, len) => {
-  const arr = [];
-  for (let i = 0; i < len; i += 1) {
-    arr.push(<p key={Math.floor(Math.random() * Math.floor(100000))}>{value}</p>);
-  }
-  return arr;
-};
 
 const buildPage = () => {
-  let fullContent = [];
-  const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-    + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
-    + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
-    + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
-    + 'Aliquam eget maximus dui, ut rhoncus augue.');
-
-  fullContent = fillArray(content, 10);
+  const fullContent = [<p>This example used to  separating content into discrete pages.</p>,
+    <p>selectedPage must be managed through the state of a parent component, and passed into this paginator through props.</p>];
 
   return (
     fullContent

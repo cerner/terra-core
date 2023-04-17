@@ -134,6 +134,8 @@ const IconAll = () => (
     <Icon.IconHelpInverse className={cx(['icon', 'icon-inverse'])} />
     <Icon.IconHelpInverseLowLight className={cx(['icon'])} />
     <Icon.IconHelpLowLight className={cx(['icon'])} />
+    <Icon.IconHelpStatic className={cx(['icon'])} />
+    <Icon.IconHelpThemeable className={cx(['icon'])} />
     <Icon.IconHide className={cx(['icon'])} />
     <Icon.IconHigh className={cx(['icon'])} />
     <Icon.IconHighInverse className={cx(['icon', 'icon-inverse'])} />
@@ -153,6 +155,8 @@ const IconAll = () => (
     <Icon.IconInformationInverse className={cx(['icon', 'icon-inverse'])} />
     <Icon.IconInformationInverseLowLight className={cx(['icon'])} />
     <Icon.IconInformationLowLight className={cx(['icon'])} />
+    <Icon.IconInformationStatic className={cx(['icon'])} />
+    <Icon.IconInformationThemeable className={cx(['icon'])} />
     <Icon.IconIPass className={cx(['icon'])} />
     <Icon.IconItalicI className={cx(['icon'])} />
     <Icon.IconKeyboard className={cx(['icon'])} />

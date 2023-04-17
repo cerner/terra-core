@@ -104,6 +104,7 @@ Community
 - Cory McDonald [@corymcdonald]
 - Noah Benham [@noahbenham]
 - Payal Sawant [@PayalSawant]
+- Volodymyr Kondratenko [@vohaha]
 
 [@ryanthemanuel]: https://github.com/ryanthemanuel
 [@Matt-Butler]: https://github.com/Matt-Butler
@@ -205,3 +206,4 @@ Community
 [@JacksonJN]: https://github.com/JacksonJN
 [@manjusr]: https://github.com/manjusr
 [@saurabhkhare86]: https://github.com/SaurabhKhare86
+[@vohaha]: https://github.com/vohaha
