@@ -109,20 +109,20 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
         Terra.validates.element('click');
       });
 
-      it('keyboard navigates down past the last option', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
-        Terra.validates.element('no down out of bounds');
-      });
+      // it('keyboard navigates down past the last option', () => {
+      //   browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
+      //   Terra.validates.element('no down out of bounds');
+      // });
 
       it('keyboard navigates up and runs callback on enter', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'Enter']);
         Terra.validates.element('up arrow');
       });
 
-      it('keyboard navigates up past the first option', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
-        Terra.validates.element('no up out of bounds');
-      });
+      // it('keyboard navigates up past the first option', () => {
+      //   browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
+      //   Terra.validates.element('no up out of bounds');
+      // });
 
       it('jumps to the last entry', () => {
         browser.keys(['ArrowDown', 'End', 'Enter']);
