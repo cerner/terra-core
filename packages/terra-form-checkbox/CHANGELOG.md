@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Fixed
+  * Fixed the click area is too large in Fusion theme.
 
 ## 4.19.0 - (April 7, 2023)
 
