@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[30045],{30045:function(e,t,u){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r=n(u(67294)),a=n(u(3741));function n(e){return e&&e.__esModule?e:{default:e}}t.default=function(){return r.default.createElement(a.default,{id:"statusView",variant:"not-authorized"})}}}]);
