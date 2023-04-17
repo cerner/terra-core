@@ -3,6 +3,9 @@
 ## Unreleased
 
 * Added
+  * `aria-live="polite"` added to announce variant name name message.
+
+* Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
 
 ## 1.25.0 - (April 7, 2023)
