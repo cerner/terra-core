@@ -12,7 +12,7 @@ export default () => (
     gestationalAge="May 11, 1993"
     postMenstrualAge="May 13, 1993"
     gender="Male"
-    identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifiers={{ MRN: 12343, REA: '3JSDA', Loc: 'Unit 253' }}
     personName="Johnathon Doe"
     photo={<Image alt="My Cat" src={demographicsCat} />}
     preferredFirstName="John"

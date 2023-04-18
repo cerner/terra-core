@@ -10,7 +10,7 @@ it('renders a blank banner wrapper', () => {
 });
 
 it('renders the banner wrapper with all props', () => {
-  const banner = shallowWithIntl((
+  const wrapper = shallowWithIntl((
     <DemographicsBanner
       applicationContent={<span className="risk-score">5%</span>}
       age="25 Years"
@@ -24,7 +24,15 @@ it('renders the banner wrapper with all props', () => {
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
     />
-  ));
+  )).dive();
 
-  expect(banner.dive()).toMatchSnapshot();
+  const identifiers = { 'Terra.demographicsBanner.MRN': 12343, REA: '3JSDA' };
+  const defaultIdentifierTitles = {
+    'Terra.demographicsBanner.MRN': 'Terra.demographicsBanner.MRN_fullText',
+  };
+
+  expect(wrapper.prop('personNameLevel')).toEqual(2);
+  expect(wrapper.prop('identifiers')).toEqual(identifiers);
+  expect(wrapper.prop('identifierTitles')).toEqual(defaultIdentifierTitles);
+  expect(wrapper).toMatchSnapshot();
 });

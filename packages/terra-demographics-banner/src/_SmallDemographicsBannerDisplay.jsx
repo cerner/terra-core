@@ -33,7 +33,7 @@ export default (props) => {
   } = props;
 
   const theme = React.useContext(ThemeContext);
-  const PersonNameElement = `h${personNameLevel}`;
+  const PersonNameElement = `h${personNameLevel || 2}`;
 
   const mainClasses = classNames(
     cx(

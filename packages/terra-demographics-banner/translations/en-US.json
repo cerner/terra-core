@@ -4,7 +4,10 @@
   "Terra.demographicsBanner.deceased": "Deceased",
   "Terra.demographicsBanner.gestationalAge": "GA",
   "Terra.demographicsBanner.gestationalAgeFullText": "Gestational Age",
-  "Terra.demographicsBanner.MRN": "Medical Record Number",
+  "Terra.demographicsBanner.Loc": "Loc",
+  "Terra.demographicsBanner.Loc_fullText": "Location",
+  "Terra.demographicsBanner.MRN": "MRN",
+  "Terra.demographicsBanner.MRN_fullText": "Medical Record Number",
   "Terra.demographicsBanner.noDataProvided": "--",
   "Terra.demographicsBanner.postMenstrualAge": "PMA",
   "Terra.demographicsBanner.postMenstrualAgeFullText": "Post Menstrual Age"

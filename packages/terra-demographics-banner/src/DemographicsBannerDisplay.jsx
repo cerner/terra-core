@@ -51,14 +51,14 @@ const propTypes = {
    */
   gestationalAgeFullText: PropTypes.string,
   /**
-   * Additional key value identifiers of a person's demographic information
+   * Additional key value identifiers of a person's demographic information.
    */
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
-   * Key value full title identifier name of a person's demographic information.
-   * Should be added for identifiers (like abbreviations) that may require more
-   * descriptive name for assistive technologies.
+   * Additional key value full titles for identifiers of a person's demographic information.
+   * Should be added for identifiers that may require more
+   * descriptive name for assistive technologies (typically abbreviations).
    */
   identifierTitles: PropTypes.objectOf(PropTypes.string),
   /**
