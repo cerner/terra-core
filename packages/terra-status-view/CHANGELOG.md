@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * `aria-live="polite"` added to announce variant name name message.
+
 ## 4.54.0 - (March 1, 2023)
 
 * Changed
