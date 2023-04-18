@@ -34,6 +34,12 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
+   * Key value full title identifier name of a person's demographic information.
+   * Should be added for identifiers (like abbreviations) that may require more
+   * descriptive name for assistive technologies.
+   */
+  identifierTitles: PropTypes.objectOf(PropTypes.string),
+  /**
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
    */
@@ -42,6 +48,12 @@ const propTypes = {
    * Full Name of the person
    */
   personName: PropTypes.string,
+  /**
+   * Sets the heading level of the person's name. One of `1`, `2`, `3`, `4`, `5`, `6`.
+   * This helps screen readers to announce appropriate heading levels.
+   * Changing 'personNameLevel' will not visually change the style of the content.
+   */
+  personNameLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
    * Photo to display in the banner
    */
@@ -65,6 +77,7 @@ const defaultProps = {
   gestationalAge: null,
   identifiers: {},
   personName: undefined,
+  personNameLevel: 2,
   photo: null,
   postMenstrualAge: null,
   preferredFirstName: null,
@@ -74,11 +87,15 @@ const DemographicsBanner = ({
   age,
   dateOfBirth,
   gender,
+  identifierTitles,
   intl,
   personName,
   ...customProps
 }) => {
   const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
+  identifierTitles = {
+    MRN: identifierTitles?.MRN || intl.formatMessage({ id: 'Terra.demographicsBanner.MRN' }),
+  }
 
   return (
     <DemographicsBannerDisplay
@@ -94,6 +111,7 @@ const DemographicsBanner = ({
       gestationalAgeFullText={intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAgeFullText' })}
       postMenstrualAgeLabel={intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAge' })}
       postMenstrualAgeFullText={intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAgeFullText' })}
+      identifierTitles={identifierTitles}
     />
   );
 };

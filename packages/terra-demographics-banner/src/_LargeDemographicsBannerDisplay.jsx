@@ -22,7 +22,9 @@ export default (props) => {
     gestationalAgeFullText,
     gestationalAgeLabel,
     identifiers,
+    identifierTitles,
     personName,
+    personNameLevel,
     photo,
     postMenstrualAge,
     postMenstrualAgeFullText,
@@ -32,6 +34,7 @@ export default (props) => {
   } = props;
 
   const theme = React.useContext(ThemeContext);
+  const PersonNameElement = `h${personNameLevel}`;
 
   const mainClasses = classNames(
     cx(
@@ -54,10 +57,10 @@ export default (props) => {
       )}
       <div className={cx('content')}>
         <div className={cx('row')}>
-          <h1 className={cx('person-name')}>
+          <PersonNameElement className={cx('person-name')}>
             { personName }
-            { preferredFirstName && <span className={cx('preferred-first-name')}>{ preferredFirstName }</span> }
-          </h1>
+            { preferredFirstName && <span className={cx('preferred-first-name')}>{ `(${preferredFirstName})` }</span> }
+          </PersonNameElement>
           <div className={cx('application-content')}>
             {applicationContent}
           </div>
