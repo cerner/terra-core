@@ -109,20 +109,20 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
         Terra.validates.element('click');
       });
 
-      // it('keyboard navigates down past the last option', () => {
-      //   browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
-      //   Terra.validates.element('no down out of bounds');
-      // });
+      it('Navigates from last item to first item', () => {
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Enter']);
+        Terra.validates.element('first item focused');
+      });
 
       it('keyboard navigates up and runs callback on enter', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'Enter']);
         Terra.validates.element('up arrow');
       });
 
-      // it('keyboard navigates up past the first option', () => {
-      //   browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
-      //   Terra.validates.element('no up out of bounds');
-      // });
+      it('Navigates from first item to last item', () => {
+        browser.keys(['ArrowUp', 'Enter']);
+        Terra.validates.element('last item focused');
+      });
 
       it('jumps to the last entry', () => {
         browser.keys(['ArrowDown', 'End', 'Enter']);
@@ -266,25 +266,5 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     $('#root').moveTo({ xOffset: 1, yOffset: 100 });
 
     Terra.validates.element('variants');
-  });
-
-  describe('When navigating between first and last items', () => {
-    it('Navigates from first item to last item', () => {
-      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-dropdown-buttons');
-      $('[class*=dropdown-button]').click();
-      $('[class*=dropdown-list]').waitForDisplayed();
-      $('li:first-child[role="menuitem"]').isFocused();
-      browser.keys(['ArrowUp']);
-      Terra.validates.element('last item focused', { selector: '#root' });
-    });
-
-    it('Navigates from last item to first item', () => {
-      browser.url('/raw/tests/cerner-terra-core-docs/dropdown-button/variant-dropdown-buttons');
-      $('[class*=dropdown-button]').click();
-      $('[class*=dropdown-list]').waitForDisplayed();
-      $('li:last-child[role="menuitem"]').isFocused();
-      browser.keys(['ArrowDown']);
-      Terra.validates.element('first item focused', { selector: '#root' });
-    });
   });
 });
