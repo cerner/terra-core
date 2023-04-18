@@ -6,8 +6,7 @@ const Example = () => (
   <ToggleButton closedButtonText="ToggleButton">
     <StatusView
       role="alert"
-      aria-live="polite"
-      message="Testing"
+      message="Cerner can help you integrate data throughout the network and within the health system, driving predictable and operational excellence with contextual awareness."
       variant="no-data"
     />
   </ToggleButton>

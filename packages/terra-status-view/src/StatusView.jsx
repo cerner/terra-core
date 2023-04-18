@@ -164,7 +164,7 @@ const StatusView = ({
   return (
     <div {...customProps} className={outerViewClassNames}>
       <div className={cx('top-space')} />
-      <div className={innerViewClassNames}>
+      <div className={innerViewClassNames} aria-live="polite">
         {glyphSection}
         {titleSection}
         {dividerSection}

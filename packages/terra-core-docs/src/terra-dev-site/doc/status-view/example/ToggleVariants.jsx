@@ -10,7 +10,7 @@ const ToggleVariants = () => {
 
   return (
     <div>
-      <StatusView aria-live="polite" variant={variant} />
+      <StatusView variant={variant} />
       <fieldset>
         <legend>Change Variant</legend>
         <select aria-label="changeVariant" id="statusViewVariant" name="statusViewVariant" value={variant} onChange={handleOnSelect}>
