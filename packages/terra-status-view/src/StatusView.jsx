@@ -38,6 +38,11 @@ const propTypes = {
   isAlignedTop: PropTypes.bool,
 
   /**
+   * Determines if the attributes should be displayed.
+   */
+  isDynamic: PropTypes.bool,
+
+  /**
    * Determines if the glyph should be displayed.
    */
   isGlyphHidden: PropTypes.bool,
@@ -64,6 +69,7 @@ const defaultProps = {
   buttonAttrs: [],
   customGlyph: undefined,
   isAlignedTop: false,
+  isDynamic: false,
   isGlyphHidden: false,
   message: undefined,
   title: undefined,
@@ -82,6 +88,7 @@ const StatusView = ({
   buttonAttrs,
   customGlyph,
   isAlignedTop,
+  isDynamic,
   isGlyphHidden,
   message,
   title,
@@ -164,7 +171,7 @@ const StatusView = ({
   return (
     <div {...customProps} className={outerViewClassNames}>
       <div className={cx('top-space')} />
-      <div className={innerViewClassNames} aria-live="polite">
+      <div className={innerViewClassNames} {...isDynamic ? { 'aria-live': 'polite' } : ''}>
         {glyphSection}
         {titleSection}
         {dividerSection}

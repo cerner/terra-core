@@ -38,6 +38,7 @@ exports[`correctly applies the theme context className 1`] = `
   <StatusView
     buttonAttrs={Array []}
     isAlignedTop={false}
+    isDynamic={false}
     isGlyphHidden={false}
   >
     <div
@@ -88,6 +89,7 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
     }
   }
   isAlignedTop={false}
+  isDynamic={false}
   isGlyphHidden={true}
   variant="no-data"
 >
@@ -178,6 +180,7 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
     }
   }
   isAlignedTop={true}
+  isDynamic={false}
   isGlyphHidden={false}
   variant="no-matching-results"
 >
@@ -275,6 +278,7 @@ exports[`should render a not-authorized status-view 1`] = `
     }
   }
   isAlignedTop={false}
+  isDynamic={false}
   isGlyphHidden={false}
   variant="not-authorized"
 >
@@ -389,6 +393,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
     }
   }
   isAlignedTop={false}
+  isDynamic={false}
   isGlyphHidden={false}
   message="Test Message"
   title="Test Title"
@@ -595,6 +600,7 @@ exports[`should render an error status-view 1`] = `
     }
   }
   isAlignedTop={false}
+  isDynamic={false}
   isGlyphHidden={false}
   variant="error"
 >
