@@ -5,7 +5,7 @@ import moment from 'moment';
 const timeVar = moment('10:22:30', 'hh:mm:ss').format('hh:mm:ss');
 
 const valueToDisplay = (
-  <time datetime={timeVar}>{timeVar}</time>
+  <time dateTime={timeVar}>{timeVar}</time>
 );
 
 const TextTime = () => (
