@@ -59,6 +59,8 @@ class DropdownList extends React.Component {
       if (!this.pressed) {
         this.pressed = true;
         this.setState({ active: focused });
+        event.target.setAttribute('aria-selected', true);
+        event.target.setAttribute('aria-checked', true);
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
@@ -176,7 +178,7 @@ class DropdownList extends React.Component {
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
-        role="menu"
+        role="listbox"
       >
         {this.cloneChildren()}
       </ul>

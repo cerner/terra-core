@@ -52,7 +52,9 @@ const Item = ({
         });
       }}
       tabIndex="0"
-      role="menuitem"
+      role="option"
+      aria-selected={false} // Needed to allow VoiceOver on iOS to announce "selected" state
+      aria-checked={false} // Needed to allow JAWS to announce "selected" state
     >
       <div
         role="none"
