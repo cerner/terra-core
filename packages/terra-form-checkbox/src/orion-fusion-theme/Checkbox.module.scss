@@ -73,6 +73,6 @@
 
     // Inline SVG
     @include terra-inline-svg-var('--terra-form-checkbox-checked-disabled-before-content', '<svg xmlns="http://www.w3.org/2000/svg"></svg>');
-    @include terra-inline-svg-var('--terra-form-checkbox-checked-before-content', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#002b42" d="M12.2,44.5L0,32.3v-4.9V22l18.4,18.4L48,10.8l0,5.4l0,4.9l-24,24C20.9,48,16,48.6,12.2,44.5z"/><path fill="#b2b5b6" d="M18.4,40.4L0,22l4.2-4.2L18.4,32L43.8,6.6l4.2,4.2L18.4,40.4z"/></svg>');
+    @include terra-inline-svg-var('--terra-form-checkbox-checked-before-content', none);
   }
 }
