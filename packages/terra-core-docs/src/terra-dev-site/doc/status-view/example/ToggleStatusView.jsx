@@ -2,7 +2,7 @@ import React from 'react';
 import StatusView from 'terra-status-view';
 import ToggleButton from 'terra-toggle-button';
 
-const Example = () => (
+const ToggleStatusView = () => (
   <ToggleButton closedButtonText="Trigger Error">
     <StatusView
       role="alert"
@@ -13,4 +13,4 @@ const Example = () => (
   </ToggleButton>
 );
 
-export default Example;
+export default ToggleStatusView;
