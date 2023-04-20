@@ -320,11 +320,11 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       Terra.validates.element('second button clicked');
     });
 
-    it('Focus to single item on arrow up and arrow down', () => {
+    it('Focus to single item on arrow down', () => {
       $('[class*=split-button-caret]').click();
       $('[class*=dropdown-list]').waitForDisplayed();
-      browser.keys(['ArrowDown', 'ArrowDown', 'Enter']);
-      Terra.validates.element('single item focused');
+      browser.keys(['ArrowDown', 'ArrowDown']);
+      Terra.validates.element('single item focus', { selector: '#root' });
     });
   });
 

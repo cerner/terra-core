@@ -260,11 +260,11 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       Terra.validates.element('first button clicked');
     });
 
-    it('Focus to single item on arrow up and arrow down', () => {
+    it('Focus to single item on arrow down', () => {
       $('[class*=dropdown-button]').click();
       $('[class*=dropdown-list]').waitForDisplayed();
-      browser.keys(['ArrowDown', 'ArrowDown', 'Enter']);
-      Terra.validates.element('single item focused');
+      browser.keys(['ArrowDown', 'ArrowDown']);
+      Terra.validates.element('single item focus', { selector: '#root' });
     });
   });
 
