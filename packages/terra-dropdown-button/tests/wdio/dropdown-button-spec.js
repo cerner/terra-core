@@ -259,6 +259,13 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       $('#first').click();
       Terra.validates.element('first button clicked');
     });
+
+    it('Focus to single item on arrow up and arrow down', () => {
+      $('[class*=dropdown-button]').click();
+      $('[class*=dropdown-list]').waitForDisplayed();
+      browser.keys(['ArrowDown', 'ArrowDown', 'Enter']);
+      Terra.validates.element('single item focused');
+    });
   });
 
   it('should display variants of Dropdown Button', () => {

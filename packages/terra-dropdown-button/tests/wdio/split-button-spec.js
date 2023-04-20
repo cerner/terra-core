@@ -319,6 +319,13 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       $('#second').click();
       Terra.validates.element('second button clicked');
     });
+
+    it('Focus to single item on arrow up and arrow down', () => {
+      $('[class*=split-button-caret]').click();
+      $('[class*=dropdown-list]').waitForDisplayed();
+      browser.keys(['ArrowDown', 'ArrowDown', 'Enter']);
+      Terra.validates.element('single item focused');
+    });
   });
 
   it('displays variants of Split Button', () => {
