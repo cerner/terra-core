@@ -93,7 +93,7 @@
     "@cerner/terra-aggregate-translations": "^2.0.1",
     "@cerner/terra-cli": "^1.6.0",
     "@cerner/terra-dev-site": "^7.0.0",
-    "@cerner/terra-functional-testing": "3.3.0",
+    "@cerner/terra-functional-testing": "^3.0.0",
     "@cerner/terra-open-source-scripts": "^1.0.1",
     "@cerner/webpack-config-terra": "^3.0.0",
     "core-js": "^3.1.3",
