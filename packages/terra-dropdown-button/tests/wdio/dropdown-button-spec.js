@@ -110,8 +110,9 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       });
 
       it('Navigates from last item to first item', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown']);
         expect($('#red').isFocused()).toBeTruthy();
+        browser.keys(['Enter']);
         Terra.validates.element('first item focused');
       });
 
@@ -121,8 +122,9 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       });
 
       it('Navigates from first item to last item', () => {
-        browser.keys(['ArrowUp', 'Enter']);
+        browser.keys(['ArrowUp']);
         expect($('#blue').isFocused()).toBeTruthy();
+        browser.keys(['Enter']);
         Terra.validates.element('last item focused');
       });
 
