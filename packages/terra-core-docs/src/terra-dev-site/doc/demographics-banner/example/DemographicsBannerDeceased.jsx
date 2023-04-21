@@ -10,6 +10,7 @@ const DemographicsBannerDeceased = () => (
     deceasedDate="March 12, 2017"
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifierTitles={{ MRN: 'Medical Record Number' }}
     photo={<Image alt="My Cat" src={demographicsImage} />}
     personName="Johnathon Doe"
     preferredFirstName="John"

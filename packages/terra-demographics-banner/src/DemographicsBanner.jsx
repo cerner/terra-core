@@ -30,7 +30,6 @@ const propTypes = {
   gestationalAge: PropTypes.string,
   /**
    * Additional key value identifiers of a person's demographic information.
-   * i18n is supported by this component for the following identifier keys: [Loc, MRN]
    * - ex. { MRN: 'ABC123', EI: '123ABC' }
    * - Note: in this example, EI may need additional context which can be added in identifierTitles prop.
    */
@@ -40,8 +39,6 @@ const propTypes = {
    * Additional key value full titles for identifiers of a person's demographic information.
    * Should be added for identifiers that may require more
    * descriptive name for assistive technologies (typically abbreviations).
-   * The following identifiers are already supported by this component and do
-   * not require entries: [Loc, MRN]
    * - ex. { EI: 'Example Identifier' }
    */
   identifierTitles: PropTypes.objectOf(PropTypes.string),
@@ -99,30 +96,6 @@ const DemographicsBanner = ({
   personName,
   ...customProps
 }) => {
-  const supportedIdentifiers = ['Loc', 'MRN'];
-
-  const handleIdentifier = (key) => {
-    if (identifiers[key]) {
-      const identifierKey = intl.formatMessage({ id: `Terra.demographicsBanner.${key}` });
-      const identifierValue = identifiers[key];
-      /* eslint-disable no-param-reassign */
-      delete identifiers[key];
-      identifiers = {
-        [identifierKey]: identifierValue,
-        ...identifiers,
-      };
-      identifierTitles = {
-        [identifierKey]: intl.formatMessage({ id: `Terra.demographicsBanner.${key}_fullText` }),
-        ...identifierTitles,
-      };
-      /* eslint-enable no-param-reassign */
-    }
-  };
-
-  if (identifiers) {
-    supportedIdentifiers.forEach((identifier) => handleIdentifier(identifier));
-  }
-
   const noDataProvided = intl.formatMessage({ id: 'Terra.demographicsBanner.noDataProvided' });
 
   return (

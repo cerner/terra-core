@@ -11,6 +11,7 @@ const DemographicsBannerAdditionalAges = () => (
     gender="Male"
     gestationalAge="33 Weeks"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifierTitles={{ MRN: 'Medical Record Number' }}
     photo={<Image alt="My Cat" src={demographicsImage} />}
     personName="Johnathon Doe"
     postMenstrualAge="43 Weeks"

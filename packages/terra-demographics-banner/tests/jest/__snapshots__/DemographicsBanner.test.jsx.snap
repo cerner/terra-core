@@ -57,13 +57,13 @@ exports[`renders the banner wrapper with all props 1`] = `
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifierTitles={
     Object {
-      "Terra.demographicsBanner.MRN": "Terra.demographicsBanner.MRN_fullText",
+      "MRN": "Medical Record Number",
     }
   }
   identifiers={
     Object {
+      "MRN": 12343,
       "REA": "3JSDA",
-      "Terra.demographicsBanner.MRN": 12343,
     }
   }
   personName="Johnathon Doe"
