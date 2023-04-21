@@ -6,7 +6,7 @@
 
 * Changed
   * Changed `hideRequired`, `isLabelHidden`, `onChange` props to private.
-  * Updated aria attributes.
+  * Updated `aria-live`, `aria-label` usages.
 
 * Fixed
   * Screen reader responses for single-select.
