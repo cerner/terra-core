@@ -111,6 +111,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
       it('Navigates from last item to first item', () => {
         browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Enter']);
+        expect($('#red').isFocused()).toBeTruthy();
         Terra.validates.element('first item focused');
       });
 
@@ -121,6 +122,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
 
       it('Navigates from first item to last item', () => {
         browser.keys(['ArrowUp', 'Enter']);
+        expect($('#blue').isFocused()).toBeTruthy();
         Terra.validates.element('last item focused');
       });
 
