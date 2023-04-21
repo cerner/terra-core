@@ -15,7 +15,6 @@ const StatusViewButtons = [
 const Custom = () => (
   <StatusView
     message="Custom Message"
-    isDynamic={false}
     customGlyph={<IconDiamond />}
     title="Custom Title"
     buttonAttrs={StatusViewButtons}

@@ -17,7 +17,7 @@ const ToggleAlignmentAndGlyph = () => {
   return (
     <div>
       <div style={{ height: '400px', border: '1px dashed black' }}>
-        <StatusView isDynamic={false} variant="error" isAlignedTop={isAlignedTop} isGlyphHidden={isGlyphHidden} />
+        <StatusView variant="error" isAlignedTop={isAlignedTop} isGlyphHidden={isGlyphHidden} />
       </div>
       <fieldset>
         <legend>Toggle alignment and glyph</legend>

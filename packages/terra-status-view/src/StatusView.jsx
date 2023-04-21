@@ -38,7 +38,7 @@ const propTypes = {
   isAlignedTop: PropTypes.bool,
 
   /**
-   * Determines if the attributes should be displayed.
+   * Status view is treated as dynamic if we set isDynamic value as true
    */
   isDynamic: PropTypes.bool,
 
@@ -171,7 +171,7 @@ const StatusView = ({
   return (
     <div {...customProps} className={outerViewClassNames}>
       <div className={cx('top-space')} />
-      <div className={innerViewClassNames} {...isDynamic ? { 'aria-live': 'polite' } : ''}>
+      <div className={innerViewClassNames} {...isDynamic ? { 'aria-live': 'polite' } : { tabIndex: 0, role: 'status' }}>
         {glyphSection}
         {titleSection}
         {dividerSection}
