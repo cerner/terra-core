@@ -90,6 +90,7 @@ Cerner Corporation
 - Manjuraghavendra Sathrasala [@manjusr]
 - Saurabh Khare [@saurabhkhare86]
 - Chetan Sharma [@cschetan77]
+- Razvan Luca [@razvanluca]
 
 Community
 
@@ -207,3 +208,4 @@ Community
 [@manjusr]: https://github.com/manjusr
 [@saurabhkhare86]: https://github.com/SaurabhKhare86
 [@vohaha]: https://github.com/vohaha
+[@razvanluca] https://github.com/razvanluca
