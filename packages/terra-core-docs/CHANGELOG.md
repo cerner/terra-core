@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added the UX recommendation for terra-content-container
+
 * Changed
   * Updated icon documentation to incorporate `one-cerner-style-icons` v1.5.0.
   * Updated non-meaningful content with meaningful content for `action-header`, `arrange`, `content-container`, `divider`, `checkbox`, `radio`, `paginator`, `scroll`, `section-header`, `show-hide`, `toggle`, `toggle-button` and `toggle-section-header`
