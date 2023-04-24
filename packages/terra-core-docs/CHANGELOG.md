@@ -4,6 +4,9 @@
 
 * Changed
   * Updated demographics banner examples to include `identifiersLongForm` prop
+  
+* Added
+  * Added an example for terra-form-select native select field without placeholder
 
 ## 1.26.0 - (April 27, 2023)
 

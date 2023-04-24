@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added attr check for isFilterStyle
+
 ## 6.40.0 - (April 27, 2023)
 
 * Added
