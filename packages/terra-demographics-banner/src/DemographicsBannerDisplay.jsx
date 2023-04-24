@@ -51,14 +51,12 @@ const propTypes = {
    */
   gestationalAgeFullText: PropTypes.string,
   /**
-   * Additional key value identifiers of a person's demographic information.
+   * Additional key value identifiers of a person's demographic information
    */
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
-   * Additional key value full titles for identifiers of a person's demographic information.
-   * Should be added for identifiers that may require more
-   * descriptive name for assistive technologies (typically abbreviations).
+   * Additional key value full titles for abbreviated/shortened identifiers of a person's demographic information
    */
   identifierTitles: PropTypes.objectOf(PropTypes.string),
   /**
@@ -67,7 +65,7 @@ const propTypes = {
   personName: PropTypes.string,
   /**
    * Sets the heading level of the person's name. One of `1`, `2`, `3`, `4`, `5`, `6`.
-   * This helps screen readers to announce appropriate heading levels.
+   * This helps screen readers announce appropriate heading levels.
    * Changing 'personNameLevel' will not visually change the style of the content.
    */
   personNameLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),

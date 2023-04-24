@@ -22,7 +22,6 @@ export default (props) => {
     gestationalAgeFullText,
     gestationalAgeLabel,
     identifiers,
-    identifierTitles,
     personName,
     personNameLevel,
     photo,

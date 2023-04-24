@@ -30,16 +30,17 @@ const propTypes = {
   gestationalAge: PropTypes.string,
   /**
    * Additional key value identifiers of a person's demographic information.
-   * - ex. { MRN: 'ABC123', EI: '123ABC' }
-   * - Note: in this example, EI may need additional context which can be added in identifierTitles prop.
+   * - ex. { MRN: 'ABC123' }
+   *    - **Note**: abbreviated/shortened identifiers like MRN may need additional context for assistive technologies
+   *        which can be added in the identifierTitles prop.
    */
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
-   * Additional key value full titles for identifiers of a person's demographic information.
+   * Additional key value full titles for abbreviated/shortened identifiers of a person's demographic information.
    * Should be added for identifiers that may require more
-   * descriptive name for assistive technologies (typically abbreviations).
-   * - ex. { EI: 'Example Identifier' }
+   * descriptive name for assistive technologies.
+   * - ex. { MRN: 'Medical Record Number' }
    */
   identifierTitles: PropTypes.objectOf(PropTypes.string),
   /**
@@ -53,7 +54,7 @@ const propTypes = {
   personName: PropTypes.string,
   /**
    * Sets the heading level of the person's name. One of `1`, `2`, `3`, `4`, `5`, `6`.
-   * This helps screen readers to announce appropriate heading levels.
+   * This helps screen readers announce appropriate heading levels.
    * Changing 'personNameLevel' will not visually change the style of the content.
    */
   personNameLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
@@ -79,6 +80,7 @@ const defaultProps = {
   gender: undefined,
   gestationalAge: null,
   identifiers: {},
+  identifierTitles: {},
   personName: undefined,
   personNameLevel: 2,
   photo: null,
@@ -90,8 +92,6 @@ const DemographicsBanner = ({
   age,
   dateOfBirth,
   gender,
-  identifiers,
-  identifierTitles,
   intl,
   personName,
   ...customProps
@@ -112,8 +112,6 @@ const DemographicsBanner = ({
       gestationalAgeFullText={intl.formatMessage({ id: 'Terra.demographicsBanner.gestationalAgeFullText' })}
       postMenstrualAgeLabel={intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAge' })}
       postMenstrualAgeFullText={intl.formatMessage({ id: 'Terra.demographicsBanner.postMenstrualAgeFullText' })}
-      identifiers={identifiers}
-      identifierTitles={identifierTitles}
     />
   );
 };
