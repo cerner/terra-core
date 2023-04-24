@@ -159,9 +159,11 @@ Terra.describeViewports('Split Button', ['medium'], () => {
         Terra.validates.element('click');
       });
 
-      it('keyboard navigates down past the last option', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown', 'Space']);
-        Terra.validates.element('no down out of bounds');
+      it('Navigates from last item to first item', () => {
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown']);
+        expect($('#red').isFocused()).toBeTruthy();
+        browser.keys(['Enter']);
+        Terra.validates.element('first item focused');
       });
 
       it('keyboard navigates up and runs callback on enter', () => {
@@ -169,9 +171,11 @@ Terra.describeViewports('Split Button', ['medium'], () => {
         Terra.validates.element('up arrow');
       });
 
-      it('keyboard navigates up past the first option', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowUp', 'Enter']);
-        Terra.validates.element('no up out of bounds');
+      it('Navigates from first item to last item', () => {
+        browser.keys(['ArrowUp']);
+        expect($('#blue').isFocused()).toBeTruthy();
+        browser.keys(['Enter']);
+        Terra.validates.element('last item focused');
       });
 
       it('jumps to the last entry', () => {
@@ -318,6 +322,13 @@ Terra.describeViewports('Split Button', ['medium'], () => {
     it('should run callback in dropdown that focuses an element', () => {
       $('#second').click();
       Terra.validates.element('second button clicked');
+    });
+
+    it('Focus to single item on arrow down', () => {
+      $('[class*=split-button-caret]').click();
+      $('[class*=dropdown-list]').waitForDisplayed();
+      browser.keys(['ArrowDown', 'ArrowDown']);
+      Terra.validates.element('single item focus', { selector: '#root' });
     });
   });
 
