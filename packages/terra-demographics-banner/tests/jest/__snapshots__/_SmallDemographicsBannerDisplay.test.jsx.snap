@@ -127,3 +127,38 @@ exports[`renders small banner that contains all valid information 1`] = `
   </div>
 </section>
 `;
+
+exports[`renders the provided person name header level 1`] = `
+<section
+  className="demographics-banner"
+>
+  <h3
+    className="person-name"
+  >
+    <span>
+      Johnathon Doe
+      <span
+        className="preferred-first-name"
+      >
+        (John)
+      </span>
+    </span>
+  </h3>
+  <div
+    className="person-details"
+  >
+    <DemographicsBannerValue
+      key="age"
+    />
+    <DemographicsBannerValue
+      key="gender"
+    />
+    <DemographicsBannerValue
+      key="dob"
+    />
+  </div>
+  <div
+    className="application-content"
+  />
+</section>
+`;

@@ -25,6 +25,17 @@ it('renders small banner that contains all valid information', () => {
   expect(banner).toMatchSnapshot();
 });
 
+it('renders the provided person name header level', () => {
+  const banner = shallow(<SmallDemographicsBannerDisplay
+    personName="Johnathon Doe"
+    personNameLevel={3}
+    preferredFirstName="John"
+  />);
+
+  expect(banner.find('h3').exists()).toBe(true);
+  expect(banner).toMatchSnapshot();
+});
+
 it('correctly applies the theme context className', () => {
   const banner = mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
