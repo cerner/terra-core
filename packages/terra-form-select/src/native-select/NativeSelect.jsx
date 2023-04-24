@@ -113,15 +113,15 @@ const defaultProps = {
   required: false,
 };
 
-const createPlaceholder = (isFilterStyle, intl) => {
-  if (isFilterStyle) {
+const createPlaceholder = (isFilterStyle, attrs, intl) => {
+  const updatedIsFilterStyle = isFilterStyle || (attrs !== undefined && attrs.isFilterStyle);
+
+  if (updatedIsFilterStyle) {
     return undefined;
   }
 
   return (
-    <option
-      value={defaultPlaceholderValue}
-    >
+    <option value={defaultPlaceholderValue}>
       {intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })}
     </option>
   );
@@ -204,11 +204,22 @@ const NativeSelect = ({
     }
   };
 
+  const updatedIsFilterStyle = isFilterStyle || (attrs !== undefined && attrs.isFilterStyle);
   let currentValue = refIsControlled.current ? value : uncontrolledValue;
-  let currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
+  let currentDisplay = getDisplay(
+    currentValue,
+    options,
+    updatedIsFilterStyle,
+    intl,
+  );
   if (!currentDisplay) {
-    currentValue = getFirstValue(options, isFilterStyle);
-    currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
+    currentValue = getFirstValue(options, updatedIsFilterStyle);
+    currentDisplay = getDisplay(
+      currentValue,
+      options,
+      updatedIsFilterStyle,
+      intl,
+    );
   }
 
   const selectAttrs = {
@@ -261,7 +272,7 @@ const NativeSelect = ({
         onBlur={handleOnBlur}
         ref={refCallback}
       >
-        {createPlaceholder(isFilterStyle, intl)}
+        {createPlaceholder(isFilterStyle, attrs, intl)}
         {createOptions(options)}
       </select>
     </div>
