@@ -82,7 +82,7 @@ describe('applicationIdentifiers', () => {
   });
 
   it('creates elements for each identifier when identifiers and valid identifiersTitles provided', () => {
-    props.identifierTitles = { MRN: 'Medical Record Number', REA: 'RRREEEAAA' };
+    props.identifiersLongForm = { MRN: 'Medical Record Number', REA: 'RRREEEAAA' };
     const elements = DemographicsBannerUtils.applicationIdentifiers(props);
 
     expect(elements.length).toBe(2);
@@ -92,7 +92,7 @@ describe('applicationIdentifiers', () => {
   });
 
   it('creates elements for each identifier when identifiers and invalid identifiersTitles provided', () => {
-    props.identifierTitles = { FIN: 'Financial Number', REA: 'RRREEEAAA' };
+    props.identifiersLongForm = { FIN: 'Financial Number', REA: 'RRREEEAAA' };
     const elements = DemographicsBannerUtils.applicationIdentifiers(props);
 
     expect(elements.length).toBe(2);

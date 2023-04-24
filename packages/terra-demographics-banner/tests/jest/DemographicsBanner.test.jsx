@@ -19,7 +19,7 @@ it('renders the banner wrapper with all props', () => {
       gender="Male"
       gestationalAge="April 5, 2016"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
-      identifierTitles={{ MRN: 'Medical Record Number' }}
+      identifiersLongForm={{ MRN: 'Medical Record Number' }}
       photo={<Image alt="My Cat" src="" />}
       personName="Johnathon Doe"
       postMenstrualAge="April 7, 2016"

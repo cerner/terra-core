@@ -58,7 +58,7 @@ const propTypes = {
   /**
    * Additional key value full titles for abbreviated/shortened identifiers of a person's demographic information
    */
-  identifierTitles: PropTypes.objectOf(PropTypes.string),
+  identifiersLongForm: PropTypes.objectOf(PropTypes.string),
   /**
    * Full Name of the person
    */
@@ -104,7 +104,7 @@ const defaultProps = {
   gestationalAgeLabel: 'GA',
   gestationalAgeFullText: 'Gestational Age',
   identifiers: {},
-  identifierTitles: {},
+  identifiersLongForm: {},
   personName: '--',
   personNameLevel: 2,
   photo: null,

@@ -29,20 +29,17 @@ const propTypes = {
    */
   gestationalAge: PropTypes.string,
   /**
-   * Additional key value identifiers of a person's demographic information.
-   * - ex. { MRN: 'ABC123' }
-   *    - **Note**: abbreviated/shortened identifiers like MRN may need additional context for assistive technologies
-   *        which can be added in the identifierTitles prop.
+   * Additional key value identifiers of a person's demographic information _(see included examples)_
+   * _(usage note: abbreviated/shortened identifiers may need additional context for assistive technologies
+   * which can be added in the `identifiersLongForm` prop)_.
    */
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
-   * Additional key value full titles for abbreviated/shortened identifiers of a person's demographic information.
-   * Should be added for identifiers that may require more
-   * descriptive name for assistive technologies.
-   * - ex. { MRN: 'Medical Record Number' }
+   * Additional key value long form titles for abbreviated/shortened identifiers of a person's demographic information.
+   * Should be added for identifiers that may require more descriptive name for assistive technologies _(see included examples)_.
    */
-  identifierTitles: PropTypes.objectOf(PropTypes.string),
+  identifiersLongForm: PropTypes.objectOf(PropTypes.string),
   /**
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
@@ -80,7 +77,7 @@ const defaultProps = {
   gender: undefined,
   gestationalAge: null,
   identifiers: {},
-  identifierTitles: {},
+  identifiersLongForm: {},
   personName: undefined,
   personNameLevel: 2,
   photo: null,

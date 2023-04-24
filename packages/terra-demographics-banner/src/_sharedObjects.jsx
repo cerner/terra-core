@@ -76,12 +76,12 @@ const personDetails = (props) => {
 };
 
 const applicationIdentifiers = (props) => {
-  const { identifiers, identifierTitles } = props;
+  const { identifiers, identifiersLongForm } = props;
 
   if (identifiers) {
     return Object.keys(identifiers).map(key => (
       <DemographicsBannerValue
-        abbrTitle={identifierTitles && identifierTitles[key] ? identifierTitles[key] : undefined}
+        abbrTitle={identifiersLongForm && identifiersLongForm[key] ? identifiersLongForm[key] : undefined}
         key={`identifier-${key}`}
         label={key}
         value={identifiers[key]}

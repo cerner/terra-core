@@ -13,8 +13,8 @@ exports[`renders a blank banner wrapper 1`] = `
   gestationalAge={null}
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
-  identifierTitles={Object {}}
   identifiers={Object {}}
+  identifiersLongForm={Object {}}
   personName="Terra.demographicsBanner.noDataProvided"
   personNameLevel={2}
   photo={null}
@@ -55,15 +55,15 @@ exports[`renders the banner wrapper with all props 1`] = `
   gestationalAge="April 5, 2016"
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
-  identifierTitles={
-    Object {
-      "MRN": "Medical Record Number",
-    }
-  }
   identifiers={
     Object {
       "MRN": 12343,
       "REA": "3JSDA",
+    }
+  }
+  identifiersLongForm={
+    Object {
+      "MRN": "Medical Record Number",
     }
   }
   personName="Johnathon Doe"
