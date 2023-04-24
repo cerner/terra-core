@@ -21,8 +21,10 @@ it('renders small banner that contains all valid information', () => {
     postMenstrualAgeLabel="PMA"
   />);
 
+  expect(banner.find('h2').exists()).toBe(true);
   expect(banner).toMatchSnapshot();
 });
+
 it('correctly applies the theme context className', () => {
   const banner = mount(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>

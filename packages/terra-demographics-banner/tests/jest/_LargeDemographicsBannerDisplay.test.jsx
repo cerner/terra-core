@@ -21,6 +21,7 @@ it('renders large banner that contains all valid information', () => {
     postMenstrualAgeLabel="PMA"
   />);
 
+  expect(banner.find('h2').exists()).toBe(true);
   expect(banner).toMatchSnapshot();
 });
 
