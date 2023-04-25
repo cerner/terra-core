@@ -48,9 +48,9 @@ exports[`correctly applies the theme context className 1`] = `
         className="top-space"
       />
       <div
+        aria-live="polite"
         className="inner-view"
-        role="status"
-        tabIndex={0}
+        role="alert"
       />
       <div
         className="bottom-space"
@@ -129,9 +129,9 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
       className="top-space"
     />
     <div
+      aria-live="polite"
       className="inner-view"
-      role="status"
-      tabIndex={0}
+      role="alert"
     >
       <p
         className="title"
@@ -222,9 +222,9 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
       className="top-space"
     />
     <div
+      aria-live="polite"
       className="inner-view"
-      role="status"
-      tabIndex={0}
+      role="alert"
     >
       <div
         className="glyph"
@@ -322,9 +322,9 @@ exports[`should render a not-authorized status-view 1`] = `
       className="top-space"
     />
     <div
+      aria-live="polite"
       className="inner-view"
-      role="status"
-      tabIndex={0}
+      role="alert"
     >
       <div
         className="glyph"
@@ -440,9 +440,9 @@ exports[`should render a status view with custom glyph, title, message, and two 
       className="top-space"
     />
     <div
+      aria-live="polite"
       className="inner-view"
-      role="status"
-      tabIndex={0}
+      role="alert"
     >
       <div
         className="glyph"
@@ -648,9 +648,9 @@ exports[`should render an error status-view 1`] = `
       className="top-space"
     />
     <div
+      aria-live="polite"
       className="inner-view"
-      role="status"
-      tabIndex={0}
+      role="alert"
     >
       <div
         className="glyph"
