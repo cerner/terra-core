@@ -171,7 +171,7 @@ const StatusView = ({
   return (
     <div {...customProps} className={outerViewClassNames}>
       <div className={cx('top-space')} />
-      <div className={innerViewClassNames} {...isDynamic ? { 'aria-live': 'polite' } : { tabIndex: 0, role: 'status' }}>
+      <div className={innerViewClassNames} aria-live="polite" role="alert">
         {glyphSection}
         {titleSection}
         {dividerSection}
