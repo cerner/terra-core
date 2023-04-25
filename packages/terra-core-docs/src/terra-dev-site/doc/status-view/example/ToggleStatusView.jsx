@@ -7,7 +7,6 @@ const ToggleStatusView = () => (
     <StatusView
       message="run time error"
       variant="error"
-      isDynamic
     />
   </ToggleButton>
 );

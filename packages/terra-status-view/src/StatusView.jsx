@@ -38,11 +38,6 @@ const propTypes = {
   isAlignedTop: PropTypes.bool,
 
   /**
-   * Status view is treated as dynamic if we set isDynamic value as true
-   */
-  isDynamic: PropTypes.bool,
-
-  /**
    * Determines if the glyph should be displayed.
    */
   isGlyphHidden: PropTypes.bool,
@@ -69,7 +64,6 @@ const defaultProps = {
   buttonAttrs: [],
   customGlyph: undefined,
   isAlignedTop: false,
-  isDynamic: false,
   isGlyphHidden: false,
   message: undefined,
   title: undefined,
@@ -88,7 +82,6 @@ const StatusView = ({
   buttonAttrs,
   customGlyph,
   isAlignedTop,
-  isDynamic,
   isGlyphHidden,
   message,
   title,
