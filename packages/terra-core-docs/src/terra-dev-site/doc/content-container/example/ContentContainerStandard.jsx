@@ -25,6 +25,7 @@ const Container = () => {
     setField(event.target.value);
   };
 
+  // eslint-disable-next-line no-alert
   const clickHandler = () => alert(
     `${
       field.trim().length !== 0

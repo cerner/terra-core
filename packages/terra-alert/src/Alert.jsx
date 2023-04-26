@@ -13,6 +13,7 @@ import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import { v4 as uuidv4 } from 'uuid';
 
 import styles from './Alert.module.scss';
 
@@ -144,9 +145,21 @@ const Alert = ({
     { 'body-narrow': isNarrow && (onDismiss || action) },
   );
 
+  const alertId = uuidv4();
+  const alertTitleId = `alert-title-${alertId}`;
+  const alertMessageId = `alert-message-${alertId}`;
+
+  const dismissButtonAriaDescribedBy = title || defaultTitle ? alertTitleId : alertMessageId;
+
   let dismissButton;
   if (onDismiss) {
-    dismissButton = <Button text={intl.formatMessage({ id: 'Terra.alert.dismiss' })} onClick={onDismiss} />;
+    dismissButton = (
+      <Button
+        aria-describedby={dismissButtonAriaDescribedBy}
+        text={intl.formatMessage({ id: 'Terra.alert.dismiss' })}
+        onClick={onDismiss}
+      />
+    );
   }
 
   let actionsSection;
@@ -162,8 +175,8 @@ const Alert = ({
 
   const alertSectionClassName = cx('section', { 'section-custom': type === AlertTypes.CUSTOM });
   const alertMessageContent = (
-    <div className={alertSectionClassName}>
-      {(title || defaultTitle) && <strong className={cx('title')}>{title || defaultTitle}</strong>}
+    <div id={alertMessageId} className={alertSectionClassName}>
+      {(title || defaultTitle) && <strong id={alertTitleId} className={cx('title')}>{title || defaultTitle}</strong>}
       {children}
     </div>
   );
