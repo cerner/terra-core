@@ -65,6 +65,17 @@ The Alert component must be composed inside the [Base][1] component with a local
 import Alert from 'terra-alert';
 ```
 
+## Accessibility
+[WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/alert/)
+
+Alerts are expected to interrupt the flow only when notifications (alerts) are of high criticality.
+Less critical notification banners should display a brief/important message that attracts the user's attention without interrupting.
+
+To enable assisstive technologies the ability to inform the user of a less critical alert in a polite (non-interruptive) way, ensure the Alert is
+within an element with `aria-live="polite"` and `aria-atomic="false"` (if screen reader should only read new content).
+
+By default, Terra Alert will set the role to "alert" for the `alert` type and "status" for all other types.
+
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
 * [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)

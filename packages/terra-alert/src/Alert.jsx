@@ -62,8 +62,8 @@ const propTypes = {
    * */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
-   * The ARIA role attribute of the alert. If not provided, alert type _alert_ will default to `alert`,
-   * otherwise role is set to `status`.
+   * The ARIA role attribute of the alert. If not provided, alert type _alert_ will default to role `"alert"`,
+   * all other alert types will use the role of `"status"`.
    */
   role: PropTypes.string,
   /**
