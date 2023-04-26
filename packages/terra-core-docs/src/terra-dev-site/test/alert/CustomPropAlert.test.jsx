@@ -93,32 +93,34 @@ const CustomPropExample = () => {
 
   return (
     <>
-      {isOpen && (
-        <Alert
-          id="replaceableAlert"
-          type={selectedAlertType}
-          onDismiss={() => setIsOpen(false)}
-        >
-          {`${alertTypeMessages[selectedAlertType]} Replaceable alert.`}
-        </Alert>
-      )}
-      {alerts && alerts.map((alert, index) => (
-        <Alert
-          key={alert.id}
-          id="customAlert"
-          type={alert.type}
-          onDismiss={
-            alert.onDismiss
-              ? () => {
-                handleAlertDismiss(index);
-              }
-              : null
-          }
-          {...alert.props}
-        >
-          {alertTypeMessages[alert.type]}
-        </Alert>
-      ))}
+      <div aria-live="polite" aria-atomic="false">
+        {isOpen && (
+          <Alert
+            id="replaceableAlert"
+            type={selectedAlertType}
+            onDismiss={() => setIsOpen(false)}
+          >
+            {`${alertTypeMessages[selectedAlertType]} Replaceable alert.`}
+          </Alert>
+        )}
+        {alerts && alerts.map((alert, index) => (
+          <Alert
+            key={alert.id}
+            id="customAlert"
+            type={alert.type}
+            onDismiss={
+              alert.onDismiss
+                ? () => {
+                  handleAlertDismiss(index);
+                }
+                : null
+            }
+            {...alert.props}
+          >
+            {alertTypeMessages[alert.type]}
+          </Alert>
+        ))}
+      </div>
       <br />
       <div id="alertType">Select alert type:</div>
       <NativeSelect
