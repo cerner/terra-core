@@ -1,4 +1,5 @@
 import { Badge } from 'terra-content-container/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
 
 import ContentContainerStandard from './example/ContentContainerStandard?dev-site-example';
 import ContentContainerFill from './example/ContentContainerFill?dev-site-example';
@@ -36,6 +37,13 @@ This component requires the following peer dependencies be installed in your app
 ```jsx
 import ContentContainer from 'terra-content-container';
 ```
+
+<Notice variant="ux-recommendation" ariaLevel="3">
+
+As a best practice to ensure proper page structure, Ensure that the content container header uses valid header component which has a prop that allows to specify the proper heading level based on where the heading occurs on the page.   
+It is not recommended to use content container footer with heading elements, instead use `<p>` tag or text.
+
+</Notice>
 
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)

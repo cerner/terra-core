@@ -2,16 +2,15 @@ import React from 'react';
 import ShowHide from 'terra-show-hide';
 
 const sentences = [
-  <p key="lorem1">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem2">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem3">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem4">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem5">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem6">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem7">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem8">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem9">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem10">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  <h3 key="sentence1">Key Benefits of Cerner Cardiovascular Solutions</h3>,
+  <p key="sentence2">Eliminates silos of information and the resulting inefficiencies with a unified EHR and cardiovascular system</p>,
+  <p key="sentence3">Creates efficient diagnostic workflows, image management and analysis</p>,
+  <p key="sentence4">Enhances clinical, financial and performance outcomes with comprehensive procedural documentation</p>,
+  <p key="sentence5">Promotes cardiac disease management through health maintenance protocols</p>,
+  // <p key="sentence6">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  // <p key="sentence7">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  // <p key="sentence8">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+  // <p key="sentence9">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 ];
 
 class CustomButtonTextShowHide extends React.Component {

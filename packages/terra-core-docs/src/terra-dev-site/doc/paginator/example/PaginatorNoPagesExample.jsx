@@ -7,23 +7,10 @@ import styles from './PaginatorExampleCommon.module.scss';
 const cx = classNames.bind(styles);
 const maxPages = 5;
 
-const fillArray = (value, len) => {
-  const arr = [];
-  for (let i = 0; i < len; i += 1) {
-    arr.push(<p key={Math.floor(Math.random() * Math.floor(100000))}>{value}</p>);
-  }
-  return arr;
-};
-
 const buildPage = () => {
-  let fullContent = [];
-  const content = ('Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-    + 'Fusce porttitor ullamcorper nisi, vel tincidunt dui pharetra vel. '
-    + 'Morbi eu rutrum nibh, sit amet placerat libero. Integer vel dapibus nibh. '
-    + 'Donec tempor mi vitae lorem congue, ut ultrices metus feugiat. Sed non commodo felis. '
-    + 'Aliquam eget maximus dui, ut rhoncus augue.');
-
-  fullContent = fillArray(content, 10);
+  const fullContent = [<p>A digital front door to support engagement and enable consumers to participate in their health outcomes.</p>,
+    <p>Enhanced communications and data flow to help the clinical care team provide high-quality care and facilitate increased clinician satisfaction and wellness, regardless of where care is provided</p>,
+    <p>Integration across ambulatory systems and venues – even virtual health – to help drive efficiencies within clinic workflows, leveraging data in- and out-of-network – no matter the source system</p>];
 
   return (
     fullContent

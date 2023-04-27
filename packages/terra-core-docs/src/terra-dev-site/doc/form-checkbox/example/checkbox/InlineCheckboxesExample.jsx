@@ -3,9 +3,9 @@ import Checkbox from 'terra-form-checkbox';
 
 const inlineCheckboxesExample = () => (
   <div>
-    <Checkbox id="firstInline" labelText="First Checkbox" isInline />
-    <Checkbox id="secondInline" labelText="Second Checkbox" isInline />
-    <Checkbox id="thirdInline" labelText="Third Checkbox" isInline />
+    <Checkbox id="inDesign" labelText="InDesign" isInline />
+    <Checkbox id="photoshop" labelText="Photoshop" isInline />
+    <Checkbox id="illustrator" labelText="Illustrator" isInline />
   </div>
 );
 

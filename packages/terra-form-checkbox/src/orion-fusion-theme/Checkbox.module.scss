@@ -73,6 +73,6 @@
 
     // Inline SVG
     @include terra-inline-svg-var('--terra-form-checkbox-checked-disabled-before-content', '<svg xmlns="http://www.w3.org/2000/svg"></svg>');
-    @include terra-inline-svg-var('--terra-form-checkbox-checked-before-content', '<svg xmlns="http://www.w3.org/2000/svg"></svg>');
+    @include terra-inline-svg-var('--terra-form-checkbox-checked-before-content', none);
   }
 }
