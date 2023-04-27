@@ -272,7 +272,7 @@ const NativeSelect = ({
         onBlur={handleOnBlur}
         ref={refCallback}
       >
-        {createPlaceholder(isFilterStyle, attrs, intl)}
+        {createPlaceholder(updatedIsFilterStyle, intl)}
         {createOptions(options)}
       </select>
     </div>
