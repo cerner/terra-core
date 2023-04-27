@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.26.0 - (April 27, 2023)
+
 * Added
 
   * Added dynamic example for terra-status-view.

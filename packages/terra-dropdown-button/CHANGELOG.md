@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+
+## 1.33.0 - (April 27, 2023)
+
 * Fixed
    * Fixed selection logic to cycle from last option to first option and vice-versa
 

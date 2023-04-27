@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.20.0 - (April 27, 2023)
+
 * Fixed
   * Fixed issue where click area of a checked checkbox is too large in Fusion theme.
 
