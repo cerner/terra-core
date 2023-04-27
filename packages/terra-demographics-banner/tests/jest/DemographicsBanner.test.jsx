@@ -28,7 +28,7 @@ it('renders the banner wrapper with all props', () => {
     />
   )).dive();
 
-  expect(wrapper.prop('personNameLevel')).toEqual(2);
+  expect(wrapper.prop('personNameHeadingLevel')).toEqual(2);
   expect(wrapper.prop('identifiersLongForm')).toEqual(identifiersLongForm);
   expect(wrapper).toMatchSnapshot();
 });

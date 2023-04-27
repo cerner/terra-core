@@ -19,7 +19,7 @@ exports[`renders a banner that has basic information 1`] = `
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="Terra Demographics Banner"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -43,7 +43,7 @@ exports[`renders a banner that has basic information 1`] = `
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="Terra Demographics Banner"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -73,7 +73,7 @@ exports[`renders a blank banner properly 1`] = `
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="--"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -97,7 +97,7 @@ exports[`renders a blank banner properly 1`] = `
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="--"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -127,7 +127,7 @@ exports[`renders gestational date with a default label when the label is not pro
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="--"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -151,7 +151,7 @@ exports[`renders gestational date with a default label when the label is not pro
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="--"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -181,7 +181,7 @@ exports[`renders post menstrural date with a default label when the label is not
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="--"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge="April 5, 2016"
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -205,7 +205,7 @@ exports[`renders post menstrural date with a default label when the label is not
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="--"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge="April 5, 2016"
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -235,7 +235,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="Old Terra Demographics Banner"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -259,7 +259,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       identifiers={Object {}}
       identifiersLongForm={Object {}}
       personName="Old Terra Demographics Banner"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={null}
       postMenstrualAge={null}
       postMenstrualAgeFullText="Post Menstrual Age"
@@ -311,7 +311,7 @@ exports[`renders the banner appropriately for a person with gestational and post
       }
       identifiersLongForm={Object {}}
       personName="Johnathon Doe"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={
         <Image
           alt="My Cat"
@@ -365,7 +365,7 @@ exports[`renders the banner appropriately for a person with gestational and post
       }
       identifiersLongForm={Object {}}
       personName="Johnathon Doe"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={
         <Image
           alt="My Cat"
@@ -425,7 +425,7 @@ exports[`renders the banner properly for a deceased person with additional appli
       }
       identifiersLongForm={Object {}}
       personName="Johnathon Doe"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={
         <Image
           alt="My Cat"
@@ -479,7 +479,7 @@ exports[`renders the banner properly for a deceased person with additional appli
       }
       identifiersLongForm={Object {}}
       personName="Johnathon Doe"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={
         <Image
           alt="My Cat"
@@ -539,7 +539,7 @@ exports[`renders the banner that contains additional information 1`] = `
       }
       identifiersLongForm={Object {}}
       personName="Johnathon Doe"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={
         <Image
           alt="My Cat"
@@ -593,7 +593,7 @@ exports[`renders the banner that contains additional information 1`] = `
       }
       identifiersLongForm={Object {}}
       personName="Johnathon Doe"
-      personNameLevel={2}
+      personNameHeadingLevel={2}
       photo={
         <Image
           alt="My Cat"

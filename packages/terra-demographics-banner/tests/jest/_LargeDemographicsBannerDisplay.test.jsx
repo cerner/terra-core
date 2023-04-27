@@ -28,7 +28,7 @@ it('renders large banner that contains all valid information', () => {
 it('renders the provided person name header level', () => {
   const banner = shallow(<LargeDemographicsBannerDisplay
     personName="Johnathon Doe"
-    personNameLevel={3}
+    personNameHeadingLevel={3}
     preferredFirstName="John"
   />);
 

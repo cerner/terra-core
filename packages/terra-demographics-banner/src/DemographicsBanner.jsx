@@ -52,9 +52,9 @@ const propTypes = {
   /**
    * Sets the heading level of the person's name. One of `1`, `2`, `3`, `4`, `5`, `6`.
    * This helps screen readers announce appropriate heading levels.
-   * Changing 'personNameLevel' will not visually change the style of the content.
+   * Changing `personNameHeadingLevel` will not visually change the style of the content.
    */
-  personNameLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  personNameHeadingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
    * Photo to display in the banner
    */
@@ -79,7 +79,7 @@ const defaultProps = {
   identifiers: {},
   identifiersLongForm: {},
   personName: undefined,
-  personNameLevel: 2,
+  personNameHeadingLevel: 2,
   photo: null,
   postMenstrualAge: null,
   preferredFirstName: null,

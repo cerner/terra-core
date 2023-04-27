@@ -24,7 +24,7 @@ export default (props) => {
     identifiers,
     identifiersLongForm,
     personName,
-    personNameLevel,
+    personNameHeadingLevel,
     photo,
     postMenstrualAge,
     postMenstrualAgeFullText,
@@ -34,7 +34,7 @@ export default (props) => {
   } = props;
 
   const theme = React.useContext(ThemeContext);
-  const PersonNameElement = `h${personNameLevel || 2}`;
+  const PersonNameElement = `h${personNameHeadingLevel || 2}`;
 
   const mainClasses = classNames(
     cx(
