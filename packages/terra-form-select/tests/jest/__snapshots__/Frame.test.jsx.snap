@@ -65,11 +65,10 @@ exports[`Frame correctly applies the theme context className for default variant
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-labelledby="terra-select-screen-reader-label-1 terra-select-screen-reader-display-2 terra-select-screen-reader-placeholder-3"
-  aria-required="false"
+  aria-label="Terra.form.select.ariaLabel"
   class="select default orion-fusion-theme"
   data-terra-select-combobox="true"
-  role="combobox"
+  role="button"
   tabindex="0"
 >
   <div
@@ -84,15 +83,15 @@ exports[`Frame correctly applies the theme context className for default variant
     <span
       id="terra-select-screen-reader-description-4"
     >
-      Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
+      Terra.form.select.collapsed Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
     </span>
   </div>
   <div
     aria-label="Terra.form.select.ariaLabel"
     class="display"
-    role="textbox"
   >
     <div
+      aria-hidden="true"
       class="placeholder"
       id="terra-select-screen-reader-placeholder-3"
     >
@@ -108,9 +107,7 @@ exports[`Frame correctly applies the theme context className for default variant
     />
   </div>
   <span
-    aria-atomic="true"
-    aria-live="assertive"
-    aria-relevant="additions text"
+    aria-live="off"
     class="visually-hidden-component"
   />
 </div>

@@ -35,6 +35,7 @@ const propTypes = {
    */
   help: PropTypes.node,
   /**
+   * @private
    * Whether to hide the required indicator on the label.
    */
   hideRequired: PropTypes.bool,
@@ -51,6 +52,7 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * @private
    * Whether the label is hidden. Allows hiding the label while meeting accessibility guidelines.
    */
   isLabelHidden: PropTypes.bool,
@@ -69,6 +71,7 @@ const propTypes = {
    */
   maxWidth: PropTypes.string,
   /**
+   * @private
    * Callback function triggered when the select value changes. function(value)
    */
   onChange: PropTypes.func,

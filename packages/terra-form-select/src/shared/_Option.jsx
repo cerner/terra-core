@@ -46,6 +46,26 @@ const propTypes = {
    * Variant of select component
    */
   variant: PropTypes.string,
+  /**
+   * @private
+   * The index of the option.
+   */
+  index: PropTypes.number,
+  /**
+   * @private
+   * Number of options in the list.
+   */
+  totalOptions: PropTypes.number,
+  /**
+   * @private
+   * The i18n value of the text "OF".
+   */
+  ofText: PropTypes.string,
+  /**
+   * @private
+   * The i18n value of the text "Expanded combobox".
+   */
+  expandedStateText: PropTypes.string,
 };
 
 const defaultProps = {
@@ -62,6 +82,10 @@ const Option = ({
   isSelected,
   isCheckable,
   isAddOption,
+  index,
+  totalOptions,
+  ofText,
+  expandedStateText,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -94,6 +118,13 @@ const Option = ({
     }
   }
 
+  let label = display;
+  // Allows VO to announce index of items
+  if (SharedUtil.isMac() && index && totalOptions) {
+    label = `${display} (${index} ${ofText} ${totalOptions})`;
+  }
+  const itemLabel = isSelected || index === 1 ? `${expandedStateText} ${label}` : label;
+
   return (
     <li
       role={role}
@@ -105,6 +136,7 @@ const Option = ({
       aria-disabled={disabled}
       tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
       data-terra-select-option
+      aria-label={itemLabel}
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
       <span className={cx('display')}>{display}</span>

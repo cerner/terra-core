@@ -113,20 +113,6 @@ const defaultProps = {
   value: undefined,
 };
 
-/**
-   * Determines compatible aria-labelledby IDs based on active variant
-   * Used with default, multiple, and tag variants to provide information about the label, displayed
-   * value and or the placeholder value.
-   */
-function ariaLabelledByIds(labelId, displayId, placeholderId) {
-  // Safari is able to read the display/placeholder text, other browsers need help to provide that info to
-  // the accessibility tree used by screen readers
-  if (SharedUtil.isSafari()) {
-    return `${labelId}`;
-  }
-  return `${labelId} ${displayId} ${placeholderId}`;
-}
-
 /* This rule can be removed when eslint-plugin-jsx-a11y is updated to ~> 6.0.0 */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 class Frame extends React.Component {
@@ -258,7 +244,7 @@ class Frame extends React.Component {
     } else if (keyCode === KeyCode.KEY_UP || keyCode === KeyCode.KEY_DOWN) {
       event.preventDefault();
       this.openDropdown();
-    } else if (keyCode === KeyCode.KEY_ESCAPE) {
+    } else if (keyCode === KeyCode.KEY_ESCAPE || (this.state.isOpen && keyCode === KeyCode.KEY_TAB)) {
       this.select.focus();
       this.closeDropdown();
     }
@@ -313,8 +299,8 @@ class Frame extends React.Component {
     const { display, placeholder } = this.props;
 
     return (display
-      ? <span id={displayId}>{display}</span>
-      : <div id={placeholderId} className={cx('placeholder')}>{placeholder || '\xa0'}</div>
+      ? <span id={displayId} aria-hidden="true">{display}</span>
+      : <div id={placeholderId} className={cx('placeholder')} aria-hidden="true">{placeholder || '\xa0'}</div>
     );
   }
 
@@ -397,11 +383,28 @@ class Frame extends React.Component {
   }
 
   /**
+   * Generates the main label for the field.
+   */
+  mainLabel() {
+    const selectedText = this.props.intl.formatMessage({ id: 'Terra.form.select.selected' });
+    let label;
+    if (this.props.display) {
+      label = `${this.props.display} ${selectedText}, ${this.ariaLabel()}`;
+    } else if (this.props.placeholder) {
+      label = `${this.props.placeholder}, ${this.ariaLabel()}`;
+    }
+
+    return label || this.ariaLabel();
+  }
+
+  /**
    * Determines compatible role attribute to apply to select based on active variant and disabled prop
    */
   role() {
     const { disabled } = this.props;
-    return disabled ? undefined : 'combobox';
+    const role = SharedUtil.isSafari() ? 'group' : 'button';
+
+    return disabled ? undefined : role;
   }
 
   /**
@@ -410,6 +413,8 @@ class Frame extends React.Component {
   renderDescriptionText() {
     const { intl } = this.props;
 
+    const comboboxState = this.state.isOpen ? intl.formatMessage({ id: 'Terra.form.select.expanded' })
+      : intl.formatMessage({ id: 'Terra.form.select.collapsed' });
     const listOfOptionsTxt = intl.formatMessage({ id: 'Terra.form.select.listOfTotalOptions' });
     const defaultUsageGuidanceTxt = intl.formatMessage({ id: 'Terra.form.select.defaultUsageGuidance' });
 
@@ -417,7 +422,7 @@ class Frame extends React.Component {
       return listOfOptionsTxt;
     }
 
-    return `${listOfOptionsTxt} ${defaultUsageGuidanceTxt}`;
+    return `${comboboxState} ${listOfOptionsTxt} ${defaultUsageGuidanceTxt}`;
   }
 
   renderToggleButton() {
@@ -502,13 +507,12 @@ class Frame extends React.Component {
       <div
         {...customProps}
         role={this.role()}
-        aria-required={required}
         data-terra-select-combobox
         aria-controls={!disabled && this.state.isOpen ? selectMenuId : undefined}
         aria-disabled={!!disabled}
-        aria-expanded={!!disabled && !!this.state.isOpen}
+        aria-expanded={!disabled && this.state.isOpen}
+        aria-label={this.mainLabel()}
         aria-haspopup={!disabled ? 'true' : undefined}
-        aria-labelledby={ariaLabelledByIds(labelId, displayId, placeholderId)}
         aria-describedby={ariaDescribedBy}
         aria-owns={this.state.isOpen ? selectMenuId : undefined}
         className={selectClasses}
@@ -524,14 +528,12 @@ class Frame extends React.Component {
           <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()} role="textbox">
+        <div className={cx('display')} aria-label={this.ariaLabel()}>
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}
         <span
-          aria-atomic="true"
-          aria-live="assertive"
-          aria-relevant="additions text"
+          aria-live={SharedUtil.isSafari() ? 'polite' : 'off'}
           className={cx('visually-hidden-component')}
           ref={this.visuallyHiddenComponent}
         />

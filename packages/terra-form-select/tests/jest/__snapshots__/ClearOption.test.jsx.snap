@@ -50,6 +50,7 @@ exports[`ClearOption correctly applies the theme context className 1`] = `
       <li
         aria-checked={false}
         aria-disabled={false}
+        aria-label="Clear"
         aria-selected={false}
         className="option is-default orion-fusion-theme clear-option orion-fusion-theme"
         data-terra-select-clear-option={true}
