@@ -41,15 +41,15 @@ exports[`correctly applies the theme context className 1`] = `
     isGlyphHidden={false}
   >
     <div
+      aria-live="polite"
       className="outer-view orion-fusion-theme"
+      role="alert"
     >
       <div
         className="top-space"
       />
       <div
-        aria-live="polite"
         className="inner-view"
-        role="alert"
       />
       <div
         className="bottom-space"
@@ -94,6 +94,7 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
   variant="no-data"
 >
   <div
+    aria-live="polite"
     className="outer-view"
     intl={
       Object {
@@ -122,14 +123,13 @@ exports[`should render a no-data status view with a hidden glyph 1`] = `
         "timeZone": null,
       }
     }
+    role="alert"
   >
     <div
       className="top-space"
     />
     <div
-      aria-live="polite"
       className="inner-view"
-      role="alert"
     >
       <p
         className="title"
@@ -186,6 +186,7 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
   variant="no-matching-results"
 >
   <div
+    aria-live="polite"
     className="outer-view is-aligned-top"
     intl={
       Object {
@@ -214,14 +215,13 @@ exports[`should render a no-matching-results status-view with top alignment 1`] 
         "timeZone": null,
       }
     }
+    role="alert"
   >
     <div
       className="top-space"
     />
     <div
-      aria-live="polite"
       className="inner-view"
-      role="alert"
     >
       <div
         className="glyph"
@@ -285,6 +285,7 @@ exports[`should render a not-authorized status-view 1`] = `
   variant="not-authorized"
 >
   <div
+    aria-live="polite"
     className="outer-view"
     intl={
       Object {
@@ -313,14 +314,13 @@ exports[`should render a not-authorized status-view 1`] = `
         "timeZone": null,
       }
     }
+    role="alert"
   >
     <div
       className="top-space"
     />
     <div
-      aria-live="polite"
       className="inner-view"
-      role="alert"
     >
       <div
         className="glyph"
@@ -402,6 +402,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
   title="Test Title"
 >
   <div
+    aria-live="polite"
     className="outer-view"
     intl={
       Object {
@@ -430,14 +431,13 @@ exports[`should render a status view with custom glyph, title, message, and two 
         "timeZone": null,
       }
     }
+    role="alert"
   >
     <div
       className="top-space"
     />
     <div
-      aria-live="polite"
       className="inner-view"
-      role="alert"
     >
       <div
         className="glyph"
@@ -609,6 +609,7 @@ exports[`should render an error status-view 1`] = `
   variant="error"
 >
   <div
+    aria-live="polite"
     className="outer-view"
     intl={
       Object {
@@ -637,14 +638,13 @@ exports[`should render an error status-view 1`] = `
         "timeZone": null,
       }
     }
+    role="alert"
   >
     <div
       className="top-space"
     />
     <div
-      aria-live="polite"
       className="inner-view"
-      role="alert"
     >
       <div
         className="glyph"

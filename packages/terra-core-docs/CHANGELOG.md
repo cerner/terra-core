@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * `aria-live="polite"` & `alert="role"` added to auto announce variant details.
+  * Added dynamic example for terra-status-view.
 
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.

@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * `aria-live="polite"` & `alert="role"` added to auto announce variant details.
+  * Added dynamic example for terra-status-view.
 
 ## 4.54.0 - (March 1, 2023)
 

@@ -162,9 +162,9 @@ const StatusView = ({
   ]);
 
   return (
-    <div {...customProps} className={outerViewClassNames}>
+    <div {...customProps} className={outerViewClassNames} role="alert" aria-live="polite">
       <div className={cx('top-space')} />
-      <div className={innerViewClassNames} aria-live="polite" role="alert">
+      <div className={innerViewClassNames}>
         {glyphSection}
         {titleSection}
         {dividerSection}
