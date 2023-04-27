@@ -5,6 +5,7 @@
 * Changed
   * Added screen reader support to programmatically associate an alert's text to its dismiss button.
   * Added text-wrapping at high magnification and narrow screen widths.
+  * Changed Alert role attribute with default of "status" for all types except critical alert type and added new optional `role` prop.
 
 ## 4.67.0 - (April 27, 2023)
 

@@ -7,9 +7,11 @@
 
 * Changed
   * Updated demographics banner examples to include `identifiersLongForm` prop
+  * Changed terra-alert examples to include aria-live attribute
   
 * Added
   * Added an example for terra-form-select native select field without placeholder
+  * Add terra-alert accessiblity guide
 
 ## 1.26.0 - (April 27, 2023)
 

@@ -16,7 +16,6 @@ const mockUUID = '00000000-0000-0000-0000-000000000000';
 jest.mock('uuid', () => ({ v4: () => mockUUID }));
 
 describe('Alert with no props', () => {
-  // Snapshot Tests
   it('should render a default component', () => {
     const wrapper = mountWithIntl(<Alert />);
     expect(wrapper).toMatchSnapshot();
@@ -24,7 +23,6 @@ describe('Alert with no props', () => {
 });
 
 describe('Alert with role prop', () => {
-  // Snapshot Tests
   it('should render a alert with provided role', () => {
     const wrapper = shallowWithIntl(<Alert role={'status'}/>).dive();
 
@@ -39,7 +37,6 @@ describe('Alert with role prop', () => {
 
 
 describe('Dismissible Alert that includes actions section', () => {
-  // Snapshot Tests
   it('should render an alert component with a dismiss button', () => {
     const mockOnDismiss = jest.fn();
     const wrapper = shallowWithIntl(<Alert onDismiss={mockOnDismiss}>This is a test</Alert>).dive();
@@ -53,7 +50,6 @@ describe('Dismissible Alert that includes actions section', () => {
 });
 
 describe('Alert of type alert with text content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type alert', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ALERT}>This is a test</Alert>).dive();
     
@@ -67,7 +63,6 @@ describe('Alert of type alert with text content', () => {
 });
 
 describe('Alert of type error with text content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type error', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ERROR}>This is an error.</Alert>).dive();
     
@@ -81,7 +76,6 @@ describe('Alert of type error with text content', () => {
 });
 
 describe('Alert of type warning with text content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type warning', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.WARNING}>This is an warning.</Alert>).dive();
     
@@ -95,7 +89,6 @@ describe('Alert of type warning with text content', () => {
 });
 
 describe('Alert of type advisory with text content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type advisory', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ADVISORY}>This is an advisory alert.</Alert>).dive();
     
@@ -134,7 +127,6 @@ describe('Alert of type unverified', () => {
 });
 
 describe('Alert of type info with text content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type info', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO}>This is an information alert.</Alert>).dive();
     
@@ -148,7 +140,6 @@ describe('Alert of type info with text content', () => {
 });
 
 describe('Alert of type success with text content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type success', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS}>This is a success alert.</Alert>).dive();
     
@@ -162,7 +153,6 @@ describe('Alert of type success with text content', () => {
 });
 
 describe('Alert of type custom with custom title and text content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type custom', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color">This is a custom alert.</Alert>).dive();
     
@@ -176,7 +166,6 @@ describe('Alert of type custom with custom title and text content', () => {
 });
 
 describe('Alert of type info with custom title and HTML content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type info with custom title and HTML content', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>);
     
@@ -188,7 +177,6 @@ describe('Alert of type info with custom title and HTML content', () => {
 });
 
 describe('Alert of type success with an action button text content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type success with an action button', () => {
     const mockOnClick = jest.fn();
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={mockOnClick} />}>This is a success alert.</Alert>).dive();
@@ -207,7 +195,6 @@ describe('Alert of type success with an action button text content', () => {
 });
 
 describe('Dismissable Alert of type custom with action button, custom title and text content', () => {
-  // Snapshot Tests
   it('should render an Alert component of type custom with an action button', () => {
     const mockOnClick = jest.fn();
     const mockOnDismiss = jest.fn();
