@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * `aria-live="polite"` added to announce variant name name message.
+  * `aria-live="polite"` & `alert="role"` added to auto announce variant name message.
 
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.

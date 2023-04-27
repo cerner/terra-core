@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * `aria-live="polite"` added to announce variant name name message.
+  * `aria-live="polite"` & `alert="role"` added to auto announce variant name message.
 
 ## 4.54.0 - (March 1, 2023)
 
