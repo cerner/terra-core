@@ -93,7 +93,7 @@ const CustomPropExample = () => {
 
   return (
     <>
-      <div aria-live="polite" aria-atomic="false">
+      <div aria-live="polite">
         {isOpen && (
           <Alert
             id="replaceableAlert"
