@@ -1,7 +1,14 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import IconAlert from 'terra-icon/lib/icon/IconAlert';
+import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
+import IconError from 'terra-icon/lib/icon/IconError';
+import IconGapChecking from 'terra-icon/lib/icon/IconGapChecking';
 import IconHelp from 'terra-icon/lib/icon/IconHelp';
+import IconInformation from 'terra-icon/lib/icon/IconInformation';
+import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
+import IconWarning from 'terra-icon/lib/icon/IconWarning';
 import Button from 'terra-button';
 import Alert from '../../src/Alert';
 
@@ -16,10 +23,31 @@ describe('Alert with no props', () => {
   });
 });
 
+describe('Alert with role prop', () => {
+  // Snapshot Tests
+  it('should render a alert with provided role', () => {
+    const wrapper = shallowWithIntl(<Alert role={'status'}/>).dive();
+
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconAlert).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+
 describe('Dismissible Alert that includes actions section', () => {
   // Snapshot Tests
   it('should render an alert component with a dismiss button', () => {
-    const wrapper = mountWithIntl(<Alert onDismiss={() => { }}>This is a test</Alert>);
+    const mockOnDismiss = jest.fn();
+    const wrapper = shallowWithIntl(<Alert onDismiss={mockOnDismiss}>This is a test</Alert>).dive();
+    
+    expect(wrapper.find(Button).length).toEqual(1);
+    expect(wrapper.find(Button).prop('text')).toEqual('Terra.alert.dismiss');
+    expect(wrapper.find(Button).prop('onClick')).toEqual(mockOnDismiss);
+    expect(wrapper.find(Button).prop('variant')).toEqual('neutral');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -27,7 +55,13 @@ describe('Dismissible Alert that includes actions section', () => {
 describe('Alert of type alert with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type alert', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.ALERT}>This is a test</Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ALERT}>This is a test</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
+    expect(alertDiv.prop('role')).toEqual('alert');
+    expect(wrapper.find(IconAlert).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -35,7 +69,13 @@ describe('Alert of type alert with text content', () => {
 describe('Alert of type error with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type error', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.ERROR}>This is an error.</Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ERROR}>This is an error.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base error wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconError).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.error');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -43,7 +83,13 @@ describe('Alert of type error with text content', () => {
 describe('Alert of type warning with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type warning', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.WARNING}>This is an warning.</Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.WARNING}>This is an warning.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base warning wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconWarning).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.warning');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -51,21 +97,38 @@ describe('Alert of type warning with text content', () => {
 describe('Alert of type advisory with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type advisory', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.ADVISORY}>This is an advisory alert.</Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ADVISORY}>This is an advisory alert.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base advisory wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.advisory');
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type unsatisfied', () => {
   it('should render an unsatisfied Alert', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.UNSATISFIED}>This is an unsatisfied alert.</Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.UNSATISFIED}>This is an unsatisfied alert.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base unsatisfied wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconGapChecking).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.unsatisfied');
     expect(wrapper).toMatchSnapshot();
   });
 });
 
 describe('Alert of type unverified', () => {
   it('should render an unverified Alert', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.UNVERIFIED}>This is an unverified alert.</Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.UNVERIFIED}>This is an unverified alert.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base unverified wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconDiamondSymbol).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.unverified');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -73,7 +136,13 @@ describe('Alert of type unverified', () => {
 describe('Alert of type info with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type info', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.INFO}>This is an information alert.</Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO}>This is an information alert.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base info wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconInformation).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.info');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -81,7 +150,13 @@ describe('Alert of type info with text content', () => {
 describe('Alert of type success with text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type success', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.SUCCESS}>This is a success alert.</Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS}>This is a success alert.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base success wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconSuccess).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.success');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -89,7 +164,13 @@ describe('Alert of type success with text content', () => {
 describe('Alert of type custom with custom title and text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type custom', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color">This is a custom alert.</Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color">This is a custom alert.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base custom wide terra-alert-custom-orange-color');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconHelp).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Help!');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -97,7 +178,11 @@ describe('Alert of type custom with custom title and text content', () => {
 describe('Alert of type info with custom title and HTML content', () => {
   // Snapshot Tests
   it('should render an Alert component of type info with custom title and HTML content', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>);
+    
+    expect(wrapper.prop('title')).toEqual('Gettysburg Address');
+    expect(wrapper.prop('type')).toEqual('info');
+    expect(wrapper.find('span').text()).toEqual('Four score and seven years ago . . .');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -105,7 +190,18 @@ describe('Alert of type info with custom title and HTML content', () => {
 describe('Alert of type success with an action button text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type success with an action button', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a success alert.</Alert>);
+    const mockOnClick = jest.fn();
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={mockOnClick} />}>This is a success alert.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base success wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconSuccess).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.success');
+    expect(wrapper.find(Button).length).toEqual(1);
+    expect(wrapper.find(Button).prop('text')).toEqual('Action');
+    expect(wrapper.find(Button).prop('onClick')).toEqual(mockOnClick);
+    expect(wrapper.find(Button).prop('variant')).toEqual('emphasis');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -113,7 +209,25 @@ describe('Alert of type success with an action button text content', () => {
 describe('Dismissable Alert of type custom with action button, custom title and text content', () => {
   // Snapshot Tests
   it('should render an Alert component of type custom with an action button', () => {
-    const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => { }} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a custom alert.</Alert>);
+    const mockOnClick = jest.fn();
+    const mockOnDismiss = jest.fn();
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={mockOnDismiss} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={mockOnClick} />}>This is a custom alert.</Alert>).dive();
+    
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base custom wide terra-alert-custom-orange-color');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconHelp).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Help!');
+    const buttons = wrapper.find(Button);
+    expect(buttons.length).toEqual(2);
+    // action button
+    expect(buttons.at(0).prop('text')).toEqual('Action');
+    expect(buttons.at(0).prop('onClick')).toEqual(mockOnClick);
+    expect(buttons.at(0).prop('variant')).toEqual('emphasis');
+    // dismiss button
+    expect(buttons.at(1).prop('text')).toEqual('Terra.alert.dismiss');
+    expect(buttons.at(1).prop('onClick')).toEqual(mockOnDismiss);
+    expect(buttons.at(1).prop('variant')).toEqual('neutral');
     expect(wrapper).toMatchSnapshot();
   });
 });
