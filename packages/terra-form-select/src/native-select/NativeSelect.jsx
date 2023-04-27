@@ -113,10 +113,8 @@ const defaultProps = {
   required: false,
 };
 
-const createPlaceholder = (isFilterStyle, attrs, intl) => {
-  const updatedIsFilterStyle = isFilterStyle || (attrs !== undefined && attrs.isFilterStyle);
-
-  if (updatedIsFilterStyle) {
+const createPlaceholder = (isFilterStyle, intl) => {
+  if (isFilterStyle) {
     return undefined;
   }
 
