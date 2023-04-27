@@ -24,7 +24,7 @@ describe('Alert with no props', () => {
 
 describe('Alert with role prop', () => {
   it('should render a alert with provided role', () => {
-    const wrapper = shallowWithIntl(<Alert role={'status'}/>).dive();
+    const wrapper = shallowWithIntl(<Alert role="status" />).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
@@ -35,12 +35,11 @@ describe('Alert with role prop', () => {
   });
 });
 
-
 describe('Dismissible Alert that includes actions section', () => {
   it('should render an alert component with a dismiss button', () => {
     const mockOnDismiss = jest.fn();
     const wrapper = shallowWithIntl(<Alert onDismiss={mockOnDismiss}>This is a test</Alert>).dive();
-    
+
     expect(wrapper.find(Button).length).toEqual(1);
     expect(wrapper.find(Button).prop('text')).toEqual('Terra.alert.dismiss');
     expect(wrapper.find(Button).prop('onClick')).toEqual(mockOnDismiss);
@@ -52,7 +51,7 @@ describe('Dismissible Alert that includes actions section', () => {
 describe('Alert of type alert with text content', () => {
   it('should render an Alert component of type alert', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ALERT}>This is a test</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
     expect(alertDiv.prop('role')).toEqual('alert');
@@ -65,7 +64,7 @@ describe('Alert of type alert with text content', () => {
 describe('Alert of type error with text content', () => {
   it('should render an Alert component of type error', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ERROR}>This is an error.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base error wide');
     expect(alertDiv.prop('role')).toEqual('status');
@@ -78,7 +77,7 @@ describe('Alert of type error with text content', () => {
 describe('Alert of type warning with text content', () => {
   it('should render an Alert component of type warning', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.WARNING}>This is an warning.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base warning wide');
     expect(alertDiv.prop('role')).toEqual('status');
@@ -91,7 +90,7 @@ describe('Alert of type warning with text content', () => {
 describe('Alert of type advisory with text content', () => {
   it('should render an Alert component of type advisory', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ADVISORY}>This is an advisory alert.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base advisory wide');
     expect(alertDiv.prop('role')).toEqual('status');
@@ -103,7 +102,7 @@ describe('Alert of type advisory with text content', () => {
 describe('Alert of type unsatisfied', () => {
   it('should render an unsatisfied Alert', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.UNSATISFIED}>This is an unsatisfied alert.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base unsatisfied wide');
     expect(alertDiv.prop('role')).toEqual('status');
@@ -116,7 +115,7 @@ describe('Alert of type unsatisfied', () => {
 describe('Alert of type unverified', () => {
   it('should render an unverified Alert', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.UNVERIFIED}>This is an unverified alert.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base unverified wide');
     expect(alertDiv.prop('role')).toEqual('status');
@@ -129,7 +128,7 @@ describe('Alert of type unverified', () => {
 describe('Alert of type info with text content', () => {
   it('should render an Alert component of type info', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO}>This is an information alert.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base info wide');
     expect(alertDiv.prop('role')).toEqual('status');
@@ -142,7 +141,7 @@ describe('Alert of type info with text content', () => {
 describe('Alert of type success with text content', () => {
   it('should render an Alert component of type success', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS}>This is a success alert.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base success wide');
     expect(alertDiv.prop('role')).toEqual('status');
@@ -155,7 +154,7 @@ describe('Alert of type success with text content', () => {
 describe('Alert of type custom with custom title and text content', () => {
   it('should render an Alert component of type custom', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color">This is a custom alert.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base custom wide terra-alert-custom-orange-color');
     expect(alertDiv.prop('role')).toEqual('status');
@@ -168,7 +167,7 @@ describe('Alert of type custom with custom title and text content', () => {
 describe('Alert of type info with custom title and HTML content', () => {
   it('should render an Alert component of type info with custom title and HTML content', () => {
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>);
-    
+
     expect(wrapper.prop('title')).toEqual('Gettysburg Address');
     expect(wrapper.prop('type')).toEqual('info');
     expect(wrapper.find('span').text()).toEqual('Four score and seven years ago . . .');
@@ -180,7 +179,7 @@ describe('Alert of type success with an action button text content', () => {
   it('should render an Alert component of type success with an action button', () => {
     const mockOnClick = jest.fn();
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.SUCCESS} action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={mockOnClick} />}>This is a success alert.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base success wide');
     expect(alertDiv.prop('role')).toEqual('status');
@@ -199,7 +198,7 @@ describe('Dismissable Alert of type custom with action button, custom title and 
     const mockOnClick = jest.fn();
     const mockOnDismiss = jest.fn();
     const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={mockOnDismiss} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={mockOnClick} />}>This is a custom alert.</Alert>).dive();
-    
+
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base custom wide terra-alert-custom-orange-color');
     expect(alertDiv.prop('role')).toEqual('status');
