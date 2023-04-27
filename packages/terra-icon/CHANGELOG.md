@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.54.0 - (April 27, 2023)
+
 * Changed
   * Updated to `one-cerner-style-icons` v1.50.0
 

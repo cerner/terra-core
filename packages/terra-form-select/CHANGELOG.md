@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+
+## 6.40.0 - (April 27, 2023)
+
 * Added
   * Added `aria-label` to list options.
 
