@@ -14,7 +14,7 @@ const DefaultFieldTestwithoutPlaceholder = () => (
       { value: 'mercedes', display: 'Mercedes' },
       { value: 'audi', display: 'Audi' },
     ]}
-    selectAttrs={{ isFilterStyle: true }}
+    isFilterStyle
     selectId="default-example"
     className={cx('form-select')}
   />
