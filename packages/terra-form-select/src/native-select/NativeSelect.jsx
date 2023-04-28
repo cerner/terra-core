@@ -202,22 +202,11 @@ const NativeSelect = ({
     }
   };
 
-  const updatedIsFilterStyle = isFilterStyle || (attrs !== undefined && attrs.isFilterStyle);
   let currentValue = refIsControlled.current ? value : uncontrolledValue;
-  let currentDisplay = getDisplay(
-    currentValue,
-    options,
-    updatedIsFilterStyle,
-    intl,
-  );
+  let currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
   if (!currentDisplay) {
-    currentValue = getFirstValue(options, updatedIsFilterStyle);
-    currentDisplay = getDisplay(
-      currentValue,
-      options,
-      updatedIsFilterStyle,
-      intl,
-    );
+    currentValue = getFirstValue(options, isFilterStyle);
+    currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
   }
 
   const selectAttrs = {
@@ -270,7 +259,7 @@ const NativeSelect = ({
         onBlur={handleOnBlur}
         ref={refCallback}
       >
-        {createPlaceholder(updatedIsFilterStyle, intl)}
+        {createPlaceholder(isFilterStyle, intl)}
         {createOptions(options)}
       </select>
     </div>
