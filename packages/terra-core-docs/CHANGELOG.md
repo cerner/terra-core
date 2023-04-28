@@ -17,10 +17,20 @@
 * Changed
   * Updated icon documentation to incorporate `one-cerner-style-icons` v1.5.0.
   * Updated non-meaningful content with meaningful content for `action-header`, `arrange`, `content-container`, `divider`, `checkbox`, `radio`, `paginator`, `scroll`, `section-header`, `show-hide`, `toggle`, `toggle-button` and `toggle-section-header`
+<<<<<<< HEAD
   * Updated terra-toggle component focusable attribute value from boolean to string to fix some console log warnings.
+=======
+
+<<<<<<< HEAD
+>>>>>>> 68e5b1aaf (Update packages/terra-core-docs/CHANGELOG.md)
 
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
+=======
+* Added
+  * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
+  * Added an example for terra-form-select native select field without placeholder.
+>>>>>>> 061da1980 (Update packages/terra-core-docs/CHANGELOG.md)
 
 ## 1.25.0 - (April 7, 2023)
 
