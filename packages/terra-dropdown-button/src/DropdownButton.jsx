@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
+import { injectIntl } from 'react-intl';
 import DropdownButtonBase from './_DropdownButtonBase';
 import styles from './DropdownButton.module.scss';
 import Item from './Item';
@@ -41,6 +42,11 @@ const propTypes = {
    * Sets the styles of the component, one of `neutral`, `emphasis`, or `ghost`.
    */
   variant: PropTypes.oneOf(['neutral', 'emphasis', 'ghost']),
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 };
 
 const defaultProps = {
@@ -62,7 +68,9 @@ class DropdownButton extends React.Component {
     this.getButtonNode = this.getButtonNode.bind(this);
     this.setListNode = this.setListNode.bind(this);
     this.toggleDropDown = this.toggleDropDown.bind(this);
-    this.state = { isOpen: false, isActive: false, openedViaKeyboard: false };
+    this.state = {
+      isOpen: false, isActive: false, openedViaKeyboard: false, selectText: '',
+    };
   }
 
   handleDropdownButtonClick(event) {
@@ -127,6 +135,18 @@ class DropdownButton extends React.Component {
     return this.buttonNode;
   }
 
+  getSelectedOptionText = (selectedOptionText) => {
+    this.setState({ selectText: selectedOptionText });
+  }
+
+  handleFocus = () => {
+    this.setState({ selectText: '' });
+  };
+
+  handleBlur = () => {
+    this.setState({ selectText: '' });
+  };
+
   toggleDropDown(event) {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
@@ -142,14 +162,17 @@ class DropdownButton extends React.Component {
       isCompact,
       isDisabled,
       label,
+      intl,
       variant,
       ...customProps
     } = this.props;
 
     const theme = this.context;
 
-    const { isOpen, isActive, openedViaKeyboard } = this.state;
-
+    const {
+      isOpen, isActive, openedViaKeyboard, selectText,
+    } = this.state;
+    const selectedLabel = intl.formatMessage({ id: 'Terra.dropdownButton.selected' });
     const classnames = cx(
       'dropdown-button',
       variant,
@@ -175,6 +198,7 @@ class DropdownButton extends React.Component {
         openedViaKeyboard={openedViaKeyboard}
         buttonRef={this.getButtonNode}
         refCallback={this.setListNode}
+        getSelectedOptionText={this.getSelectedOptionText}
       >
         <button
           type="button"
@@ -188,6 +212,9 @@ class DropdownButton extends React.Component {
           aria-expanded={isOpen}
           aria-haspopup="menu"
           ref={this.setButtonNode}
+          aria-label={selectText ? `${selectText} ${selectedLabel}` : ''}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
           <span className={cx('caret-icon')} />
@@ -201,7 +228,8 @@ DropdownButton.propTypes = propTypes;
 DropdownButton.defaultProps = defaultProps;
 DropdownButton.contextType = ThemeContext;
 
-export default DropdownButton;
+export default injectIntl(DropdownButton);
+// export default DropdownButton;
 export {
   Item, Variants, SplitButton, SplitButtonVariants,
 };

@@ -86,7 +86,7 @@ class SplitButton extends React.Component {
     this.toggleDropDown = this.toggleDropDown.bind(this);
 
     this.state = {
-      isOpen: false, caretIsActive: false, primaryIsActive: false, openedViaKeyboard: false,
+      isOpen: false, caretIsActive: false, primaryIsActive: false, openedViaKeyboard: false, selectText: '',
     };
   }
 
@@ -176,6 +176,18 @@ class SplitButton extends React.Component {
     return this.buttonNode;
   }
 
+  getSelectedOptionText = (selectedOptionText) => {
+    this.setState({ selectText: selectedOptionText });
+  }
+
+  handleFocus = () => {
+    this.setState({ selectText: '' });
+  };
+
+  handleBlur = () => {
+    this.setState({ selectText: '' });
+  };
+
   toggleDropDown(event) {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
@@ -204,11 +216,13 @@ class SplitButton extends React.Component {
       primaryIsActive,
       caretIsActive,
       openedViaKeyboard,
+      selectText,
     } = this.state;
 
     const theme = this.context;
 
     const caretLabel = intl.formatMessage({ id: 'Terra.dropdownButton.moreOptions' });
+    const selectedLabel = intl.formatMessage({ id: 'Terra.dropdownButton.selected' });
 
     const primaryClassnames = cx(
       'split-button-primary',
@@ -242,6 +256,7 @@ class SplitButton extends React.Component {
         openedViaKeyboard={openedViaKeyboard}
         buttonRef={this.getButtonNode}
         refCallback={this.setListNode}
+        getSelectedOptionText={this.getSelectedOptionText}
       >
         <button
           type="button"
@@ -266,7 +281,9 @@ class SplitButton extends React.Component {
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"
-          aria-label={caretLabel}
+          aria-label={selectText ? `${selectText} ${selectedLabel} ${caretLabel}` : caretLabel}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
           ref={this.setButtonNode}
         >
           <span className={cx('caret-icon')} />

@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Fixed
+ * Fixed dropdown button list items of not announcing the selection state.
 
 ## 1.32.0 - (March 1, 2023)
 
