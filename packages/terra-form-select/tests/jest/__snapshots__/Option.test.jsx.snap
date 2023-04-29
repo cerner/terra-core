@@ -15,6 +15,7 @@ exports[`Option correctly applies the theme context className 1`] = `
   >
     <li
       aria-disabled={false}
+      aria-label="display"
       className="option is-default orion-fusion-theme"
       data-terra-select-option={true}
       disabled={false}
@@ -34,6 +35,7 @@ exports[`Option correctly applies the theme context className 1`] = `
 exports[`Option should render a default Option 1`] = `
 <li
   aria-disabled={false}
+  aria-label="display"
   className="option is-default"
   data-terra-select-option={true}
   disabled={false}
@@ -51,6 +53,7 @@ exports[`Option should render a default Option 1`] = `
 exports[`Option should render a disabled Option 1`] = `
 <li
   aria-disabled={true}
+  aria-label="display"
   className="option is-default is-disabled"
   data-terra-select-option={true}
   disabled={true}

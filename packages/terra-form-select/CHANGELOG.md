@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 6.40.0 - (April 27, 2023)
+
+* Added
+  * Added `aria-label` to list options.
+
+* Changed
+  * Changed `hideRequired`, `isLabelHidden`, `onChange` props to private.
+  * Updated `aria-live`, `aria-label` usages.
+
+* Fixed
+  * Screen reader responses for single-select.
+
 ## 6.39.0 - (February 15, 2023)
 
 * Changed

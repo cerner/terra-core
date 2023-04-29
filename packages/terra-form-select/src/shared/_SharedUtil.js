@@ -10,6 +10,13 @@ class SharedUtil {
 
     return false;
   }
+
+  /**
+   * Util to determine if the user agent indicates that it is macOS
+   * @return {boolean}
+   */
+
+  static isMac = () => navigator.userAgent.indexOf('Mac') !== -1 && navigator.userAgent.indexOf('Win') === -1;
 }
 
 export default SharedUtil;
