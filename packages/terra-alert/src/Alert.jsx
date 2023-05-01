@@ -149,7 +149,7 @@ const Alert = ({
   const alertTitleId = `alert-title-${alertId}`;
   const alertMessageId = `alert-message-${alertId}`;
 
-  const dismissButtonAriaDescribedBy = title || defaultTitle ? alertTitleId : alertMessageId;
+  const dismissButtonAriaDescribedBy = (title || defaultTitle) ? alertTitleId : alertMessageId;
 
   let dismissButton;
   if (onDismiss) {
