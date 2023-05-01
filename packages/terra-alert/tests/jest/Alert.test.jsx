@@ -121,7 +121,7 @@ describe('Dismissable Alert of type custom with action button, custom title and 
 describe('Dismissible Alert', () => {
   let wrapper;
 
-  describe('Custom Alert with no title', () => {
+  describe('Custom Alert with no title prop', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
@@ -174,7 +174,7 @@ describe('Dismissible Alert', () => {
     });
   });
 
-  describe('Success Alert with no title', () => {
+  describe('Success Alert with no title prop', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
