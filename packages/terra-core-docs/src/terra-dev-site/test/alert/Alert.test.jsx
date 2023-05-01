@@ -37,7 +37,9 @@ class AlertActionButton extends React.Component {
       <div>
         <p> This Test has been added to test the functionality on JAWS and Voice Over </p>
         <Button text="Trigger Alert" onClick={this.popAlert} />
-        {this.state.showAlert && this.alert }
+        <div aria-live="polite">
+          {this.state.showAlert && this.alert }
+        </div>
       </div>
     );
   }

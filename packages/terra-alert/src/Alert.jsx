@@ -205,7 +205,6 @@ const Alert = ({
         {actionsSection}
       </div>
     </ResponsiveElement>
-
   );
 };
 
