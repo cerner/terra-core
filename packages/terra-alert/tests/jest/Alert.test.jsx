@@ -121,7 +121,7 @@ describe('Dismissable Alert of type custom with action button, custom title and 
 describe('Dismissible Alert', () => {
   let wrapper;
 
-  describe('of type custom with no title', () => {
+  describe('Custom Alert with no title', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
@@ -144,7 +144,7 @@ describe('Dismissible Alert', () => {
     });
   });
 
-  describe('of type custom with custom title', () => {
+  describe('Custom Alert with custom title', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
@@ -174,7 +174,7 @@ describe('Dismissible Alert', () => {
     });
   });
 
-  describe('of type success with no title', () => {
+  describe('Success Alert with no title', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
@@ -202,7 +202,7 @@ describe('Dismissible Alert', () => {
     });
   });
 
-  describe('of type success with blank title', () => {
+  describe('Success Alert with blank title', () => {
     beforeEach(() => {
       wrapper = shallowWithIntl(
         <Alert
