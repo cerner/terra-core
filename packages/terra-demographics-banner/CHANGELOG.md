@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+* Added
+  * Added optional `personNameHeadingLevel` prop to set the person name header level with default of 2.
+  * Added optional `identifiersLongForm` prop to add well defined descriptions for shortened/abbreviated identifiers.
+
+* Changed
+  * Improved representation of patient nickname for screen readers by appending parentheses through a template string instead of CSS.
+
 ## 3.60.0 - (February 15, 2023)
 
 * Changed

@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`applicationIdentifiers creates elements for each identifier when identifiers and invalid identifiersTitles provided 1`] = `
+Array [
+  <DemographicsBannerValue
+    label="MRN"
+    value={12343}
+  />,
+  <DemographicsBannerValue
+    abbrTitle="RRREEEAAA"
+    label="REA"
+    value="3JSDA"
+  />,
+]
+`;
+
+exports[`applicationIdentifiers creates elements for each identifier when identifiers and valid identifiersTitles provided 1`] = `
+Array [
+  <DemographicsBannerValue
+    abbrTitle="Medical Record Number"
+    label="MRN"
+    value={12343}
+  />,
+  <DemographicsBannerValue
+    abbrTitle="RRREEEAAA"
+    label="REA"
+    value="3JSDA"
+  />,
+]
+`;
+
+exports[`applicationIdentifiers creates elements for each identifier when only identifiers provided 1`] = `
+Array [
+  <DemographicsBannerValue
+    label="MRN"
+    value={12343}
+  />,
+  <DemographicsBannerValue
+    label="REA"
+    value="3JSDA"
+  />,
+]
+`;
+
+exports[`personDetails creates elements with all provided props 1`] = `
+Array [
+  <DemographicsBannerValue
+    value="25"
+  />,
+  <DemographicsBannerValue
+    value="Male"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Date of Birth"
+    label="DOB"
+    value="May 9, 1993"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Gestational Age"
+    label="GA"
+    value="2"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Post Menstrual Age"
+    label="PMA"
+    value="3"
+  />,
+  <DemographicsBannerValue
+    label="Deceased"
+    value="March 12, 2017"
+  />,
+]
+`;
+
+exports[`personDetails creates elements with deceased 1`] = `
+Array [
+  <DemographicsBannerValue
+    value="25"
+  />,
+  <DemographicsBannerValue
+    value="Male"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Date of Birth"
+    label="DOB"
+    value="May 9, 1993"
+  />,
+  <DemographicsBannerValue
+    label="Deceased"
+    value="March 12, 2017"
+  />,
+]
+`;
+
+exports[`personDetails creates elements with gestational age 1`] = `
+Array [
+  <DemographicsBannerValue
+    value="25"
+  />,
+  <DemographicsBannerValue
+    value="Male"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Date of Birth"
+    label="DOB"
+    value="May 9, 1993"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Gestational Age"
+    label="GA"
+    value="2"
+  />,
+]
+`;
+
+exports[`personDetails creates elements with minimum props 1`] = `
+Array [
+  <DemographicsBannerValue
+    value="25"
+  />,
+  <DemographicsBannerValue
+    value="Male"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Date of Birth"
+    label="DOB"
+    value="May 9, 1993"
+  />,
+]
+`;
+
+exports[`personDetails creates elements with post menstrual age 1`] = `
+Array [
+  <DemographicsBannerValue
+    value="25"
+  />,
+  <DemographicsBannerValue
+    value="Male"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Date of Birth"
+    label="DOB"
+    value="May 9, 1993"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Post Menstrual Age"
+    label="PMA"
+    value="3"
+  />,
+]
+`;
