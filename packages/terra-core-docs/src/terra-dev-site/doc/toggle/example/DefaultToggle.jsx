@@ -21,7 +21,7 @@ const ToggleDefault = () => {
   };
   return (
     <div>
-      <IconInformation data-show-focus-styles={focused} focusable a11yLabel="information Icon" tabIndex="0" role="button" onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} aria-expanded={isOpen} aria-controls="toggle" />
+      <IconInformation data-show-focus-styles={focused} focusable="true" a11yLabel="information Icon" tabIndex="0" role="button" onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} aria-expanded={isOpen} aria-controls="toggle" />
       {/**
       * The aria-expanded state is used on the triggering component to indicate the contents are collapsible, and whether a region is currently expanded or collapsed
       */}

@@ -24,7 +24,7 @@ const ToggleLabResults = () => {
   return (
     <div>
       <label htmlFor="Icon-label">
-        <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Lab Results, Information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
+        <IconInformation data-show-focus-styles={focused} focusable="true" onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Lab Results, Information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
         <span> Lab Results</span>
       </label>
       <Toggle isOpen={isOpen} isAnimated>
