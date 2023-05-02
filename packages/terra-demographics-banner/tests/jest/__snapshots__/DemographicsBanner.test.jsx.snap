@@ -14,7 +14,9 @@ exports[`renders a blank banner wrapper 1`] = `
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
   identifiers={Object {}}
+  identifiersLongForm={Object {}}
   personName="Terra.demographicsBanner.noDataProvided"
+  personNameHeadingLevel={2}
   photo={null}
   postMenstrualAge={null}
   postMenstrualAgeFullText="Terra.demographicsBanner.postMenstrualAgeFullText"
@@ -59,7 +61,13 @@ exports[`renders the banner wrapper with all props 1`] = `
       "REA": "3JSDA",
     }
   }
+  identifiersLongForm={
+    Object {
+      "MRN": "Medical Record Number",
+    }
+  }
   personName="Johnathon Doe"
+  personNameHeadingLevel={2}
   photo={
     <Image
       alt="My Cat"

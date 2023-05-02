@@ -2,20 +2,19 @@
 
 ## Unreleased
 
+* Changed
+  * Updated demographics banner examples to include `identifiersLongForm` prop
+
 ## 1.26.0 - (April 27, 2023)
 
 * Added
-
   * Added dynamic example for terra-status-view.
-
   * Added the UX recommendation for terra-content-container
 
 * Changed
-
   * Updated icon documentation to incorporate `one-cerner-style-icons` v1.5.0.
   * Updated non-meaningful content with meaningful content for `action-header`, `arrange`, `content-container`, `divider`, `checkbox`, `radio`, `paginator`, `scroll`, `section-header`, `show-hide`, `toggle`, `toggle-button` and `toggle-section-header`
   * Updated terra-toggle component focusable attribute value from boolean to string to fix some console log warnings.
-
 
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
@@ -25,7 +24,6 @@
 * Fixed
   * Fixed `terra-ui` build failures happening due to usage of relative paths on mdx file.
   * Fixed `terra-button` A11y guide example to match the description.
-
 
 ## 1.24.0 - (April 5, 2023)
 

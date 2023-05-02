@@ -56,9 +56,19 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
+   * Additional key value full titles for abbreviated/shortened identifiers of a person's demographic information
+   */
+  identifiersLongForm: PropTypes.objectOf(PropTypes.string),
+  /**
    * Full Name of the person
    */
   personName: PropTypes.string,
+  /**
+   * Sets the heading level of the person's name. One of `1`, `2`, `3`, `4`, `5`, `6`.
+   * This helps screen readers announce appropriate heading levels.
+   * Changing `personNameHeadingLevel` will not visually change the style of the content.
+   */
+  personNameHeadingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
    * Photo to display in the banner
    */
@@ -94,7 +104,9 @@ const defaultProps = {
   gestationalAgeLabel: 'GA',
   gestationalAgeFullText: 'Gestational Age',
   identifiers: {},
+  identifiersLongForm: {},
   personName: '--',
+  personNameHeadingLevel: 2,
   photo: null,
   postMenstrualAge: null,
   postMenstrualAgeLabel: 'PMA',
