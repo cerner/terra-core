@@ -281,7 +281,7 @@ class SplitButton extends React.Component {
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"
-          aria-label={selectText ? `${selectText} ${selectedLabel} ${caretLabel}` : caretLabel}
+          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${caretLabel}` : caretLabel}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           ref={this.setButtonNode}

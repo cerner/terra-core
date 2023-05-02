@@ -1,11 +1,13 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import DropdownButton, { Item, Variants } from '../../src/DropdownButton';
 
 describe('Dropdown Button', () => {
   it('should render a default dropdown type', () => {
-    const wrapper = shallow(
+    const wrapper = shallowWithIntl(
       <DropdownButton label="Primary Option">
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -14,7 +16,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a split type with multiple children', () => {
-    const wrapper = shallow(
+    const wrapper = shallowWithIntl(
       <DropdownButton label="Primary Option" onSelect={() => {}}>
         <Item label="1st Option" onSelect={() => {}} />
         <Item label="2nd Option" onSelect={() => {}} />
@@ -25,7 +27,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render an emphasis dropdown type', () => {
-    const wrapper = shallow(
+    const wrapper = shallowWithIntl(
       <DropdownButton label="Primary Option" variant={Variants.EMPHASIS}>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -34,7 +36,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a disabled dropdown type', () => {
-    const wrapper = shallow(
+    const wrapper = shallowWithIntl(
       <DropdownButton label="Primary Option" isDisabled>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -43,7 +45,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a block dropdown type', () => {
-    const wrapper = shallow(
+    const wrapper = shallowWithIntl(
       <DropdownButton label="Primary Option" isBlock>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -52,7 +54,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a compact dropdown type', () => {
-    const wrapper = shallow(
+    const wrapper = shallowWithIntl(
       <DropdownButton label="Primary Option" isCompact>
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -61,7 +63,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render an open dropdown', () => {
-    const wrapper = shallow(
+    const wrapper = shallowWithIntl(
       <DropdownButton label="Primary Option">
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -72,7 +74,7 @@ describe('Dropdown Button', () => {
   });
 
   it('should render a split type with custom attributes', () => {
-    const wrapper = shallow(
+    const wrapper = shallowWithIntl(
       <DropdownButton label="Primary Option" test-custom-attribute other-custom-attribute="purple">
         <Item label="1st Option" onSelect={() => {}} />
       </DropdownButton>,
@@ -81,7 +83,7 @@ describe('Dropdown Button', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mount(
+    const wrapper = mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <DropdownButton label="Primary Option">
           <Item label="1st Option" onSelect={() => {}} />

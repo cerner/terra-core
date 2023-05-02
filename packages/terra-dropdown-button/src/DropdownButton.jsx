@@ -212,8 +212,8 @@ class DropdownButton extends React.Component {
           aria-expanded={isOpen}
           aria-haspopup="menu"
           ref={this.setButtonNode}
-          aria-label={selectText ? `${selectText} ${selectedLabel}` : ''}
-          onFocus={this.handleFocus}
+          aria-label={selectText ? `${selectText}, ${selectedLabel}` : ''}
+          // onFocus={this.handleFocus}
           onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
@@ -229,7 +229,6 @@ DropdownButton.defaultProps = defaultProps;
 DropdownButton.contextType = ThemeContext;
 
 export default injectIntl(DropdownButton);
-// export default DropdownButton;
 export {
   Item, Variants, SplitButton, SplitButtonVariants,
 };

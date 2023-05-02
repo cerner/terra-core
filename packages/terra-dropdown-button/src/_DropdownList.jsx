@@ -190,7 +190,7 @@ class DropdownList extends React.Component {
         onFocus={this.handleFocus}
         onKeyDown={this.handleKeyDown}
         onKeyUp={this.handleKeyUp}
-        role="listbox"
+        role="menubar"
       >
         {this.cloneChildren()}
       </ul>

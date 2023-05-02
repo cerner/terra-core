@@ -16,7 +16,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
       onFocus={[Function]}
       onKeyDown={[Function]}
       onKeyUp={[Function]}
-      role="menu"
+      role="menubar"
       style={
         Object {
           "width": undefined,
@@ -32,9 +32,11 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         requestClose={[Function]}
       >
         <li
+          aria-checked={false}
+          aria-selected={false}
           data-terra-dropdown-list-item={true}
           onClick={[Function]}
-          role="menuitem"
+          role="option"
           tabIndex="0"
         >
           <div
@@ -54,9 +56,11 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         requestClose={[Function]}
       >
         <li
+          aria-checked={false}
+          aria-selected={false}
           data-terra-dropdown-list-item={true}
           onClick={[Function]}
-          role="menuitem"
+          role="option"
           tabIndex="0"
         >
           <div
@@ -76,9 +80,11 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         requestClose={[Function]}
       >
         <li
+          aria-checked={false}
+          aria-selected={false}
           data-terra-dropdown-list-item={true}
           onClick={[Function]}
-          role="menuitem"
+          role="option"
           tabIndex="0"
         >
           <div
@@ -100,7 +106,7 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
   onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  role="menu"
+  role="menubar"
   style={
     Object {
       "width": undefined,
@@ -124,7 +130,7 @@ exports[`Dropdown List renders a dropdown list a non-default focused option 1`] 
   onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  role="menu"
+  role="menubar"
   style={
     Object {
       "width": undefined,
@@ -164,7 +170,7 @@ exports[`Dropdown List renders a dropdown list an active and focused option 1`] 
   onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  role="menu"
+  role="menubar"
   style={
     Object {
       "width": undefined,
@@ -204,7 +210,7 @@ exports[`Dropdown List renders a dropdown list an active option 1`] = `
   onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  role="menu"
+  role="menubar"
   style={
     Object {
       "width": undefined,
@@ -244,7 +250,7 @@ exports[`Dropdown List renders a dropdown list with a set width 1`] = `
   onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  role="menu"
+  role="menubar"
   style={
     Object {
       "width": "440px",
@@ -268,7 +274,7 @@ exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
   onFocus={[Function]}
   onKeyDown={[Function]}
   onKeyUp={[Function]}
-  role="menu"
+  role="menubar"
   style={
     Object {
       "width": undefined,
