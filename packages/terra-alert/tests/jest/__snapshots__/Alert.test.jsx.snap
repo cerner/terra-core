@@ -75,9 +75,11 @@ exports[`Alert of type advisory with text content should render an Alert compone
         >
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.advisory
             </strong>
@@ -203,9 +205,11 @@ exports[`Alert of type alert with text content should render an Alert component 
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.alert
             </strong>
@@ -346,9 +350,11 @@ exports[`Alert of type custom with custom title and text content should render a
           </span>
           <div
             className="section section-custom"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Help!
             </strong>
@@ -474,9 +480,11 @@ exports[`Alert of type error with text content should render an Alert component 
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.error
             </strong>
@@ -604,9 +612,11 @@ exports[`Alert of type info with custom title and HTML content should render an 
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Gettysburg Address
             </strong>
@@ -734,9 +744,11 @@ exports[`Alert of type info with text content should render an Alert component o
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.info
             </strong>
@@ -888,9 +900,11 @@ exports[`Alert of type success with an action button text content should render 
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.success
             </strong>
@@ -1054,9 +1068,11 @@ exports[`Alert of type success with text content should render an Alert componen
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.success
             </strong>
@@ -1176,9 +1192,11 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.unsatisfied
             </strong>
@@ -1298,9 +1316,11 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.unverified
             </strong>
@@ -1426,9 +1446,11 @@ exports[`Alert of type warning with text content should render an Alert componen
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.warning
             </strong>
@@ -1553,9 +1575,11 @@ exports[`Alert with no props should render a default component 1`] = `
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.alert
             </strong>
@@ -1723,9 +1747,11 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           </span>
           <div
             className="section section-custom"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Help!
             </strong>
@@ -1770,6 +1796,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             </button>
           </Button>
           <Button
+            aria-describedby="alert-title-00000000-0000-0000-0000-000000000000"
             isBlock={false}
             isCompact={false}
             isDisabled={false}
@@ -1781,6 +1808,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             variant="neutral"
           >
             <button
+              aria-describedby="alert-title-00000000-0000-0000-0000-000000000000"
               aria-disabled={false}
               className="button neutral"
               disabled={false}
@@ -1924,9 +1952,11 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           </span>
           <div
             className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
           >
             <strong
               className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
             >
               Terra.alert.alert
             </strong>
@@ -1937,6 +1967,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           className="actions"
         >
           <Button
+            aria-describedby="alert-title-00000000-0000-0000-0000-000000000000"
             isBlock={false}
             isCompact={false}
             isDisabled={false}
@@ -1948,6 +1979,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
             variant="neutral"
           >
             <button
+              aria-describedby="alert-title-00000000-0000-0000-0000-000000000000"
               aria-disabled={false}
               className="button neutral"
               disabled={false}
@@ -1997,9 +2029,11 @@ exports[`correctly applies the theme context className 1`] = `
       </span>
       <div
         className="section"
+        id="alert-message-00000000-0000-0000-0000-000000000000"
       >
         <strong
           className="title"
+          id="alert-title-00000000-0000-0000-0000-000000000000"
         >
           Terra.alert.success
         </strong>

@@ -5,6 +5,9 @@ import IconHelp from 'terra-icon/lib/icon/IconHelp';
 import Button from 'terra-button';
 import Alert from '../../src/Alert';
 
+const mockUUID = '00000000-0000-0000-0000-000000000000';
+jest.mock('uuid', () => ({ v4: () => mockUUID }));
+
 describe('Alert with no props', () => {
   // Snapshot Tests
   it('should render a default component', () => {
@@ -112,6 +115,125 @@ describe('Dismissable Alert of type custom with action button, custom title and 
   it('should render an Alert component of type custom with an action button', () => {
     const wrapper = mountWithIntl(<Alert type={Alert.Opts.Types.CUSTOM} onDismiss={() => { }} title="Help!" customIcon={<IconHelp />} customColorClass="terra-alert-custom-orange-color" action={<Button text="Action" variant={Button.Opts.Variants.EMPHASIS} onClick={() => { }} />}>This is a custom alert.</Alert>);
     expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Dismissible Alert', () => {
+  let wrapper;
+
+  describe('Custom Alert with no title prop', () => {
+    beforeEach(() => {
+      wrapper = shallowWithIntl(
+        <Alert
+          type={Alert.Opts.Types.CUSTOM}
+          onDismiss={() => { }}
+          customIcon={<IconHelp />}
+        >
+          This is a custom alert.
+        </Alert>,
+      ).dive();
+    });
+    it('should set the alert message ID', () => {
+      const alertContent = wrapper.find('.section');
+      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
+    });
+
+    it('should set the dismiss button aria-describedby to the alert description', () => {
+      const dismissButton = wrapper.find('Button');
+      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-message-${mockUUID}`);
+    });
+  });
+
+  describe('Custom Alert with custom title', () => {
+    beforeEach(() => {
+      wrapper = shallowWithIntl(
+        <Alert
+          type={Alert.Opts.Types.CUSTOM}
+          title="Help!"
+          onDismiss={() => { }}
+          customIcon={<IconHelp />}
+        >
+          This is a custom alert.
+        </Alert>,
+      ).dive();
+    });
+
+    it('should set the alert message ID', () => {
+      const alertContent = wrapper.find('.section');
+      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
+    });
+
+    it('should set the alert title ID', () => {
+      const alertTitle = wrapper.find('.title');
+      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUUID}`);
+    });
+
+    it('should set the dismiss button aria-describedby to the alert title', () => {
+      const dismissButton = wrapper.find('Button');
+      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUUID}`);
+    });
+  });
+
+  describe('Success Alert with no title prop', () => {
+    beforeEach(() => {
+      wrapper = shallowWithIntl(
+        <Alert
+          type={Alert.Opts.Types.SUCCESS}
+          onDismiss={() => { }}
+        >
+          This is a success alert.
+        </Alert>,
+      ).dive();
+    });
+
+    it('should set the alert message ID', () => {
+      const alertContent = wrapper.find('.section');
+      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
+    });
+
+    it('should set the alert title ID', () => {
+      const alertTitle = wrapper.find('.title');
+      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUUID}`);
+    });
+
+    it('should set the dismiss button aria-describedby to the alert title', () => {
+      const dismissButton = wrapper.find('Button');
+      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUUID}`);
+    });
+  });
+
+  describe('Success Alert with blank title', () => {
+    beforeEach(() => {
+      wrapper = shallowWithIntl(
+        <Alert
+          type={Alert.Opts.Types.SUCCESS}
+          title=""
+          onDismiss={() => { }}
+        >
+          This is a success alert.
+        </Alert>,
+      ).dive();
+    });
+
+    it('should use the default title', () => {
+      const alertTitle = wrapper.find('.title');
+      expect(alertTitle.prop('children')).toEqual('Terra.alert.success');
+    });
+
+    it('should set the alert message ID', () => {
+      const alertContent = wrapper.find('.section');
+      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
+    });
+
+    it('should set the alert title ID', () => {
+      const alertTitle = wrapper.find('.title');
+      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUUID}`);
+    });
+
+    it('should set the dismiss button aria-describedby to the alert title', () => {
+      const dismissButton = wrapper.find('Button');
+      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUUID}`);
+    });
   });
 });
 
