@@ -1,0 +1,82 @@
+import { Notice } from "@cerner/terra-docs";
+import { Badge } from 'terra-image/package.json?dev-site-package';
+import Whitespace from '../../common/layout-helpers/Whitespace';
+
+import Hyperlink from 'terra-hyperlink';
+
+<Badge />
+
+# Accessibility Guide for Terra Alert
+
+<Notice variant="important" ariaLevel="2">
+
+Using alerts improperly may prevent some of your users from understanding your UI.
+
+</Notice>
+
+<Whitespace />
+
+## Why is this important?
+
+Alert is a form of notifications with varying criticalities that should inform and assist the user with their task.
+
+> "An alert is an element that displays a brief, important message in a way that attracts the user's attention without interrupting the user's task."
+> _&nbsp;&nbsp;&mdash; excerpt from <Hyperlink href="https://www.w3.org/WAI/ARIA/apg/patterns/alert/" variant="external">ARIA Authoring Practices Guide (APG): Alert Pattern</Hyperlink>_[<sup>[1]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references)
+
+## Accessibility Considerations
+
+### Code Considerations
+
+#### Consistency
+
+The use of an alert notification should be consistent in order to provide the user the best experience.
+
+#### Alert Criticality
+
+The user only expects to be interrupted for notifications (alerts) that are of high criticality.
+Less critical notifications should wait until the current task is complete before presenting to the user.
+
+By default, Terra Alert will set the role to `"alert"` for the `alert` type and `"status"` for all other types.
+Terra Alert has an optional role prop but should be used carefully when the default does not meet accessbility or usability expectations.
+
+| Role | Purpose |
+| --- | --- |
+| Alert | See <Hyperlink href="https://w3c.github.io/aria/#alert" variant="external">Alert</Hyperlink>[<sup>[2]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region with important, and usually time-sensitive, information." |
+| Status | See <Hyperlink href="https://w3c.github.io/aria/#status" variant="external">Status</Hyperlink>[<sup>[2]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region whose content is advisory information for the user but is not important enough to justify an alert, often but not necessarily presented as a status bar." |
+
+#### Assistive technologies
+
+In combination with the Alert Criticality, screen reader users should understand the importance of the alert when presented.
+
+The `"alert"` role will interrupt the user and announce the high critical notification immediately.
+The `"status"` role will not interrupt the user and present politely.
+
+<Notice variant="important" ariaLevel="5">
+
+###### Accessibility Guidance: Live regions
+
+For screen readers to pick up and announce a newly rendered alert, the alert must be within an live region.
+To enable assisstive technologies the ability to inform the user of a less critical alert in a polite (non-interruptive) way, ensure the Alert is
+within an element where `aria-live="polite"`.
+
+Please note: the `"alert"` role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-lve is previously present.
+
+<div aria-label="Example code">
+
+    import Alert from 'terra-alert';
+
+    <div aria-live="polite">
+        {isOpen && (
+            <Alert>
+                Meaningful alert content.
+            </Alert>
+        )}
+    </div>
+
+</div>
+
+</Notice>
+
+## Linked References:
+1. ["ARIA Authoring Practices Guide (APG): Alert Pattern"](https://www.w3.org/WAI/ARIA/apg/patterns/alert/). World Wide Web Consortium. Retrieved 2 May 2023.
+2. ["Accessible Rich Internet Applications (WAI-ARIA) 1.3"](https://w3c.github.io/aria/). World Wide Web Consortium. Last updated 01 May 2023. Retrieved 2 May 2023.
