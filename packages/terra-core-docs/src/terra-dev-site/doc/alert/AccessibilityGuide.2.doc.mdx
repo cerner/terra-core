@@ -37,7 +37,7 @@ The user only expects to be interrupted for notifications (alerts) that are of h
 Less critical notifications should wait until the current task is complete before presenting to the user.
 
 By default, Terra Alert will set the role to `"alert"` for the `alert` type and `"status"` for all other types.
-Terra Alert has an optional role prop but should be used carefully when the default does not meet accessbility or usability expectations.
+Terra Alert has an optional role prop but should be used carefully when the default does not meet accessibility or usability expectations.
 
 | Role | Purpose |
 | --- | --- |
@@ -56,10 +56,10 @@ The `"status"` role will not interrupt the user and present politely.
 ###### Accessibility Guidance: Live regions
 
 For screen readers to pick up and announce a newly rendered alert, the alert must be within an live region.
-To enable assisstive technologies the ability to inform the user of a less critical alert in a polite (non-interruptive) way, ensure the Alert is
+To enable assistive technologies the ability to inform the user of a less critical alert in a polite (non-interruptive) way, ensure the Alert is
 within an element where `aria-live="polite"`.
 
-Please note: the `"alert"` role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-lve is previously present.
+Please note: the `"alert"` role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-live is previously present.
 
 <div aria-label="Example code">
 
