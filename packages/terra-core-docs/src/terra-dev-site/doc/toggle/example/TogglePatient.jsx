@@ -24,7 +24,7 @@ const TogglePatient = () => {
   return (
     <div>
       <label htmlFor="Info-Icon">
-        <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Allergies, Information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Info-Icon" />
+        <IconInformation data-show-focus-styles={focused} focusable="true" onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Allergies, Information Icon" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Info-Icon" />
         <span> Allergies</span>
       </label>
       <Toggle isOpen={isOpen} isAnimated>

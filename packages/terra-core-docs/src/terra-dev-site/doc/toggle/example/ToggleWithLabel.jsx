@@ -23,7 +23,7 @@ const ToggleWithLabel = () => {
   return (
     <div>
       <label htmlFor="Icon-label">
-        <IconInformation data-show-focus-styles={focused} focusable onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Cerner’s Physician Solutions" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
+        <IconInformation data-show-focus-styles={focused} focusable="true" onKeyDown={handleOnKeyDown} onMouseDown={() => { setFocus(false); }} onClick={handleOnClick} a11yLabel="Cerner’s Physician Solutions" tabIndex="0" role="button" aria-expanded={isOpen} aria-controls="toggle" id="Icon-label" />
         <span id="Icon-label"> Cerner’s Physician Solutions</span>
       </label>
       <Toggle isOpen={isOpen} isAnimated>
