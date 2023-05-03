@@ -4,6 +4,7 @@
 
 * Changed
   * Added screen reader support to programmatically associate an alert's text to its dismiss button.
+  * Updated CSS to allow alert content to wrap naturally at high magnification.
 
 ## 4.67.0 - (April 27, 2023)
 
