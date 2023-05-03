@@ -68,5 +68,5 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
 
       Terra.validates.element('text wrapping');
     });
-  })
+  });
 });
