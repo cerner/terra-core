@@ -139,13 +139,13 @@ class DropdownButton extends React.Component {
     this.setState({ selectText: selectedOptionText });
   }
 
-  handleFocus = () => {
-    this.setState({ selectText: '' });
-  };
+  // handleFocus = () => {
+  //   this.setState({ selectText: '' });
+  // };
 
-  handleBlur = () => {
-    this.setState({ selectText: '' });
-  };
+  // handleBlur = () => {
+  //   this.setState({ selectText: '' });
+  // };
 
   toggleDropDown(event) {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
@@ -213,7 +213,7 @@ class DropdownButton extends React.Component {
           aria-haspopup="menu"
           ref={this.setButtonNode}
           aria-label={selectText ? `${selectText}, ${selectedLabel}` : ''}
-          // onFocus={this.handleFocus}
+          onFocus={this.handleFocus}
           onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
