@@ -60,4 +60,13 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
       Terra.validates.element('dismissed');
     });
   });
+
+  describe('Alert Long Text', () => {
+    it('wraps naturally at high magnification', () => {
+      browser.setWindowRect(0, 0, 100, 800);
+      browser.url('/raw/tests/cerner-terra-core-docs/alert/long-text-alert');
+
+      Terra.validates.element('text wrapping');
+    });
+  })
 });
