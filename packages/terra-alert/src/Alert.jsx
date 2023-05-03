@@ -13,6 +13,7 @@ import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import { v4 as uuidv4 } from 'uuid';
 
 import styles from './Alert.module.scss';
@@ -180,11 +181,21 @@ const Alert = ({
     );
   }
 
-  const alertSectionClassName = cx('section', { 'section-custom': type === AlertTypes.CUSTOM });
+  const alertSectionClassName = cx('section', {
+    'section-custom': type === AlertTypes.CUSTOM,
+  });
   const alertMessageContent = (
     <div id={alertMessageId} className={alertSectionClassName}>
-      {(title || defaultTitle) && <strong id={alertTitleId} className={cx('title')}>{title || defaultTitle}</strong>}
+      {(title || defaultTitle) && (
+        <>
+          <strong id={alertTitleId} className={cx('title')}>
+            {title || defaultTitle}
+          </strong>
+          <VisuallyHiddenText text="," />
+        </>
+      )}
       {children}
+      <VisuallyHiddenText text="," />
     </div>
   );
 

@@ -33,6 +33,7 @@
     "terra-icon": "^3.54.0",
     "terra-responsive-element": "^5.37.0",
     "terra-theme-context": "^1.0.0",
+    "terra-visually-hidden-text": "^2.36.0",
     "uuid": "^9.0.0"
   },
   "scripts": {
