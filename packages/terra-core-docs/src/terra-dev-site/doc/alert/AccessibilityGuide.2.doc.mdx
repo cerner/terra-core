@@ -10,7 +10,7 @@ import Hyperlink from 'terra-hyperlink';
 
 <Notice variant="important" ariaLevel="2">
 
-Using alerts improperly may prevent some of your users from understanding your UI.
+Using notifications improperly may prevent some of your users from understanding your UI.
 
 </Notice>
 
@@ -28,25 +28,28 @@ Terra's Alert component is a notification banner with varying criticalities that
 
 The use of each variant of this component should be consistent in order to provide the user the best experience.
 
-#### Alert Criticality
+#### Notification Criticality
 
-The user only expects to be interrupted for notifications (alerts) that are of high criticality. This behavior is referred to as "assertive".
-Less critical notifications should wait until the screen reader has finished reading the current item before notification content is read to the user. This behavior is referred to as "polite".
+The user only expects to be interrupted for notifications (alerts) that are of high criticality.
+* This behavior is referred to as "assertive".
 
-By default, Terra Alert will set the role to `"alert"` for the `alert` type and `"status"` for all other types.
+Less critical notifications should wait until the screen reader has finished reading the current item before notification content is read to the user.
+* This behavior is referred to as "polite".
+
+By default, Terra Alert will set the role to `"alert"` (assertive) for the `alert` type and `"status"` (polite) for all other types.
 Terra Alert has an optional role prop but should be used carefully when the default does not meet accessibility or usability expectations.
 
 | Role | Purpose |
 | --- | --- |
-| Alert | See <Hyperlink href="https://w3c.github.io/aria/#alert" variant="external">WAI-ARIA Alert Role</Hyperlink>[<sup>[2]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region with important, and usually time-sensitive, information." |
-| Status | See <Hyperlink href="https://w3c.github.io/aria/#status" variant="external">WAI-ARIA Status Role</Hyperlink>[<sup>[2]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region whose content is advisory information for the user but is not important enough to justify an alert, often but not necessarily presented as a status bar." |
+| Alert | See <Hyperlink href="https://w3c.github.io/aria/#alert" variant="external">WAI-ARIA Alert Role</Hyperlink>[<sup>[1]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region with important, and usually time-sensitive, information." |
+| Status | See <Hyperlink href="https://w3c.github.io/aria/#status" variant="external">WAI-ARIA Status Role</Hyperlink>[<sup>[1]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region whose content is advisory information for the user but is not important enough to justify an alert, often but not necessarily presented as a status bar." |
 
 #### Assistive technologies
 
-In combination with the Alert Criticality, screen reader users should understand the importance of the notification when presented.
+In combination with the notification criticality, screen reader users should understand the importance of the notification when presented.
 
-The `"alert"` role will interrupt the user and announce the high critical notification immediately.
-The `"status"` role will not interrupt the user and present politely.
+* The `"alert"` role will interrupt the user and announce the high critical notification immediately.
+* The `"status"` role will not interrupt the user and present politely.
 
 <Notice variant="important" ariaLevel="5">
 
