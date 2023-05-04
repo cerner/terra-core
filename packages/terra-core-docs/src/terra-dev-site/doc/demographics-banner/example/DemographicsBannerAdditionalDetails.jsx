@@ -10,6 +10,7 @@ const DemographicsBannerAdditionalDetails = () => (
     dateOfBirth="May 9, 1993"
     gender="Male"
     identifiers={{ MRN: 12343, REA: '3JSDA' }}
+    identifiersLongForm={{ MRN: 'Medical Record Number' }}
     personName="Johnathon Doe"
     photo={<Image alt="My Cat" src={demographicsImage} />}
     preferredFirstName="John"

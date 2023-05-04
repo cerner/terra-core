@@ -10,7 +10,8 @@ it('renders a blank banner wrapper', () => {
 });
 
 it('renders the banner wrapper with all props', () => {
-  const banner = shallowWithIntl((
+  const identifiersLongForm = { MRN: 'Medical Record Number' };
+  const wrapper = shallowWithIntl((
     <DemographicsBanner
       applicationContent={<span className="risk-score">5%</span>}
       age="25 Years"
@@ -19,12 +20,15 @@ it('renders the banner wrapper with all props', () => {
       gender="Male"
       gestationalAge="April 5, 2016"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
+      identifiersLongForm={identifiersLongForm}
       photo={<Image alt="My Cat" src="" />}
       personName="Johnathon Doe"
       postMenstrualAge="April 7, 2016"
       preferredFirstName="John"
     />
-  ));
+  )).dive();
 
-  expect(banner.dive()).toMatchSnapshot();
+  expect(wrapper.prop('personNameHeadingLevel')).toEqual(2);
+  expect(wrapper.prop('identifiersLongForm')).toEqual(identifiersLongForm);
+  expect(wrapper).toMatchSnapshot();
 });

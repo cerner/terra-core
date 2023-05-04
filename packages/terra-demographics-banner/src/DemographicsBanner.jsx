@@ -29,10 +29,17 @@ const propTypes = {
    */
   gestationalAge: PropTypes.string,
   /**
-   * Additional key value identifiers of a person's demographic information
+   * Additional key value identifiers of a person's demographic information _(see included examples)_
+   * _(usage note: abbreviated/shortened identifiers may need additional context for assistive technologies
+   * which can be added in the `identifiersLongForm` prop)_.
    */
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
+  /**
+   * Additional key value long form titles for abbreviated/shortened identifiers of a person's demographic information.
+   * Should be added for identifiers that may require more descriptive name for assistive technologies _(see included examples)_.
+   */
+  identifiersLongForm: PropTypes.objectOf(PropTypes.string),
   /**
    * @private
    * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
@@ -42,6 +49,12 @@ const propTypes = {
    * Full Name of the person
    */
   personName: PropTypes.string,
+  /**
+   * Sets the heading level of the person's name. One of `1`, `2`, `3`, `4`, `5`, `6`.
+   * This helps screen readers announce appropriate heading levels.
+   * Changing `personNameHeadingLevel` will not visually change the style of the content.
+   */
+  personNameHeadingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
    * Photo to display in the banner
    */
@@ -64,7 +77,9 @@ const defaultProps = {
   gender: undefined,
   gestationalAge: null,
   identifiers: {},
+  identifiersLongForm: {},
   personName: undefined,
+  personNameHeadingLevel: 2,
   photo: null,
   postMenstrualAge: null,
   preferredFirstName: null,
