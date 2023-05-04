@@ -11,11 +11,17 @@ const TextDate = () => (
     <Text id="dateTest"><time dateTime={dateVar}>{dateVar}</time></Text>
 
     <p>Date format using custom labels:</p>
-    <Text id="text"><VisuallyHiddenText text="June, 01, 2017"/><span aria-hidden="true">2017-06-01</span></Text> {/*to make screen readers to announce value as date*/}
-
+    {/* to make screen readers to announce value as date */}
+    <Text id="text">
+      <VisuallyHiddenText text="June, 01, 2017" />
+      <span aria-hidden="true">
+        2017-06-01
+      </span>
+    </Text>
 
     <p>Date format using date as a string:</p>
-    <Text id="text">2017/06/01</Text> {/*to make screen readers to announce slash or any type of separator with date values*/}
+    {/* to make screen readers to announce slash or any type of separator with date values */}
+    <Text id="text">2017/06/01</Text>
   </>
 );
 
