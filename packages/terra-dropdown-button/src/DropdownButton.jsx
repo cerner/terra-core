@@ -139,10 +139,6 @@ class DropdownButton extends React.Component {
     this.setState({ selectText: selectedOptionText });
   }
 
-  handleFocus = () => {
-    this.setState({ selectText: '' });
-  };
-
   handleBlur = () => {
     this.setState({ selectText: '' });
   };
@@ -213,7 +209,6 @@ class DropdownButton extends React.Component {
           aria-haspopup="menu"
           ref={this.setButtonNode}
           aria-label={selectText ? `${selectText}, ${selectedLabel}` : ''}
-          onFocus={this.handleFocus}
           onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>

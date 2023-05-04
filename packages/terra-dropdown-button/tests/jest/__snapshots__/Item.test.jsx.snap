@@ -14,10 +14,8 @@ exports[`Item correctly applies the theme context className 1`] = `
     requestClose={[Function]}
   >
     <li
-      aria-checked={false}
-      aria-selected={false}
       onClick={[Function]}
-      role="option"
+      role="menuitem"
       tabIndex="0"
     >
       <div
@@ -33,10 +31,8 @@ exports[`Item correctly applies the theme context className 1`] = `
 
 exports[`Item renders a default item 1`] = `
 <li
-  aria-checked={false}
-  aria-selected={false}
   onClick={[Function]}
-  role="option"
+  role="menuitem"
   tabIndex="0"
 >
   <div
@@ -50,10 +46,8 @@ exports[`Item renders a default item 1`] = `
 
 exports[`Item renders an active item 1`] = `
 <li
-  aria-checked={false}
-  aria-selected={false}
   onClick={[Function]}
-  role="option"
+  role="menuitem"
   tabIndex="0"
 >
   <div

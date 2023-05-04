@@ -76,13 +76,11 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                   >
                     <ul
                       class="dropdown-list orion-fusion-theme"
-                      role="menubar"
+                      role="menu"
                     >
                       <li
-                        aria-checked="false"
-                        aria-selected="false"
                         data-terra-dropdown-list-item="true"
-                        role="option"
+                        role="menuitem"
                         tabindex="0"
                       >
                         <div
@@ -152,7 +150,7 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                           onFocus={[Function]}
                           onKeyDown={[Function]}
                           onKeyUp={[Function]}
-                          role="menubar"
+                          role="menu"
                           style={
                             Object {
                               "width": undefined,
@@ -168,11 +166,9 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                             requestClose={[Function]}
                           >
                             <li
-                              aria-checked={false}
-                              aria-selected={false}
                               data-terra-dropdown-list-item={true}
                               onClick={[Function]}
-                              role="option"
+                              role="menuitem"
                               tabIndex="0"
                             >
                               <div
