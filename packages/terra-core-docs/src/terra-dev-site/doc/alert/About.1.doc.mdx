@@ -75,8 +75,8 @@ Please view the full [Accessibility Guide](./accessibility-guide).
 
 For more, please view the [full accessibility guide for live regions and assistive technologies](./accessibility-guide#assistive-technologies)
 
-For screen readers to pick up and announce a newly rendered alert, the alert must be within an live region.
-To enable assistive technologies the ability to inform the user of a less critical alert in a polite (non-interruptive) way, ensure the Alert is
+For screen readers to pick up and announce a newly rendered notification, the notification must be within an aria-live region.
+To enable assistive technologies the ability to inform the user of a less critical notification in a polite (non-interruptive) way, ensure the Alert is
 within an element where `aria-live="polite"`.
 
 Please note: the `"alert"` role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-live is previously present.
