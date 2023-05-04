@@ -22,13 +22,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
         >
           Terra.alert.advisory
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is an advisory alert.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -65,13 +59,7 @@ exports[`Alert of type alert with text content should render an Alert component 
         >
           Terra.alert.alert
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is a test
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -108,13 +96,7 @@ exports[`Alert of type custom with custom title and text content should render a
         >
           Help!
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is a custom alert.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -151,13 +133,7 @@ exports[`Alert of type error with text content should render an Alert component 
         >
           Terra.alert.error
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is an error.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -233,13 +209,7 @@ exports[`Alert of type info with text content should render an Alert component o
         >
           Terra.alert.info
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is an information alert.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -276,13 +246,7 @@ exports[`Alert of type success with an action button text content should render 
         >
           Terra.alert.success
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is a success alert.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
     <div
@@ -334,13 +298,7 @@ exports[`Alert of type success with text content should render an Alert componen
         >
           Terra.alert.success
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is a success alert.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -377,13 +335,7 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
         >
           Terra.alert.unsatisfied
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is an unsatisfied alert.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -420,13 +372,7 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
         >
           Terra.alert.unverified
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is an unverified alert.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -463,13 +409,7 @@ exports[`Alert of type warning with text content should render an Alert componen
         >
           Terra.alert.warning
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is an warning.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -596,24 +536,6 @@ exports[`Alert with no props should render a default component 1`] = `
             >
               Terra.alert.alert
             </strong>
-            <VisuallyHiddenText
-              text=","
-            >
-              <span
-                className="visually-hidden-text"
-              >
-                ,
-              </span>
-            </VisuallyHiddenText>
-            <VisuallyHiddenText
-              text=","
-            >
-              <span
-                className="visually-hidden-text"
-              >
-                ,
-              </span>
-            </VisuallyHiddenText>
           </div>
         </div>
       </div>
@@ -652,12 +574,6 @@ exports[`Alert with role prop should render a alert with provided role 1`] = `
         >
           Terra.alert.alert
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
@@ -694,13 +610,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
         >
           Help!
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is a custom alert.
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
     <div
@@ -764,13 +674,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
         >
           Terra.alert.alert
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
         This is a test
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
     <div
@@ -821,12 +725,6 @@ exports[`correctly applies the theme context className 1`] = `
         >
           Terra.alert.success
         </strong>
-        <VisuallyHiddenText
-          text=","
-        />
-        <VisuallyHiddenText
-          text=","
-        />
       </div>
     </div>
   </div>
