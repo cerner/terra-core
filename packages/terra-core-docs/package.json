@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@cerner/terra-docs": "^1.9.0",
+    "moment": "^2.29.4",
     "terra-action-footer": "^2.65.0",
     "terra-action-header": "^2.78.0",
     "terra-alert": "^4.66.0",
