@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Removed 
-  * Removed dubugger text from status view.
+  * Removed dubugger text from status view first paragraph after the title.
 
 * Changed
   * Updated demographics banner examples to include `identifiersLongForm` prop
