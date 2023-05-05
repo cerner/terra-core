@@ -4,6 +4,7 @@ import { Notice } from '@cerner/terra-docs';
 import ContentContainerStandard from './example/ContentContainerStandard?dev-site-example';
 import ContentContainerFill from './example/ContentContainerFill?dev-site-example';
 import ContentContainerScrollRef from './example/ContentContainerScrollRef?dev-site-example';
+import ContentContainerFillWithoutInteractiveElements from './example/ContentContainerFillWithoutInteractiveElements?dev-site-example';
 
 import ContentContainerPropsTable from 'terra-content-container/src/ContentContainer?dev-site-props-table';
 
@@ -40,7 +41,7 @@ import ContentContainer from 'terra-content-container';
 
 <Notice variant="ux-recommendation" ariaLevel="3">
 
-As a best practice to ensure proper page structure, Ensure that the content container header uses valid header component which has a prop that allows to specify the proper heading level based on where the heading occurs on the page.   
+As a best practice to ensure proper page structure, Ensure that the content container header uses valid header component which has a prop that allows to specify the proper heading level based on where the heading occurs on the page.
 It is not recommended to use content container footer with heading elements, instead use `<p>` tag or text.
 
 </Notice>
@@ -52,6 +53,7 @@ It is not recommended to use content container footer with heading elements, ins
 
 ## Examples
 <ContentContainerStandard title="Standard Container" />
+<ContentContainerFillWithoutInteractiveElements title = "Fill container without interactive elements"/>
 <ContentContainerFill title="Fill Container" />
 <ContentContainerScrollRef title="Scroll Ref Container" />
 

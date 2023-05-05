@@ -19,9 +19,11 @@ const display1 = (
 const contentheader = <h3>Registration Form</h3>;
 const contentfooter = <p id="contentfooter">Children count is </p>;
 
-const onContainerScroll = (scrollRef) => document
-  .getElementById('contentfooter')
-  .append(` ${scrollRef.children.length}`);
+const onContainerScroll = (scrollRef) => {
+  document
+    .getElementById('contentfooter')
+    .append(` ${scrollRef.children.length}`);
+}
 
 const Container = () => {
   const [field, setField] = useState('');
