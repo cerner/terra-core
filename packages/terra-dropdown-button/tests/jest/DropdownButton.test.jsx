@@ -1,8 +1,10 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
-
+import { IntlProvider } from 'react-intl';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import translationsFile from '../../translations/en.json';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 import DropdownButton, { Item, Variants } from '../../src/DropdownButton';
 
 describe('Dropdown Button', () => {
@@ -91,5 +93,16 @@ describe('Dropdown Button', () => {
       </ThemeContextProvider>,
     );
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should set the aria-label property from ./translations', () => {
+    const wrapper = shallowWithIntl(
+      <IntlProvider locale="en" messages={translationsFile}>
+        <DropdownButton label="Primary Option" id="dropDown" />
+      </IntlProvider>,
+    ).dive().dive();
+    wrapper.setState({ selectText: 'PDF' });
+    const dropdownButtonAriaLabelValue = wrapper.find('#dropDown button').prop('aria-label');
+    expect(dropdownButtonAriaLabelValue).toEqual(`PDF, ${translationsFile['Terra.dropdownButton.selected']}`);
   });
 });

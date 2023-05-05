@@ -1,8 +1,8 @@
 # Changelog
 
 ## Unreleased
-* Fixed
- * Fixed dropdown button list items not announcing the selection state.
+* Added
+ * Added screenreader support to announce the selection state for dropdown list items.
 
 ## 1.33.0 - (April 27, 2023)
 
