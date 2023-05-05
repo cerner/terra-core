@@ -16,4 +16,10 @@ Terra.describeViewports('Native Select Field', ['tiny'], () => {
 
     Terra.validates.element('required');
   });
+
+  it('should display Field without placeholder', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/default-field-without-placeholder');
+
+    Terra.validates.element('default-without-placeholder');
+  });
 });

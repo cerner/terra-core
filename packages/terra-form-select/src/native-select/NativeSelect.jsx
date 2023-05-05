@@ -119,9 +119,7 @@ const createPlaceholder = (isFilterStyle, intl) => {
   }
 
   return (
-    <option
-      value={defaultPlaceholderValue}
-    >
+    <option value={defaultPlaceholderValue}>
       {intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })}
     </option>
   );
