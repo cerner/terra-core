@@ -15,10 +15,18 @@ const display1 = (
 );
 
 const contentheader = <h3>Registration Form</h3>;
-const contentfooter = <p>Please enter the name as per the official document</p>;
+const contentfooter = <p id="contentfooter1">Please enter the name as per the official document</p>;
 
 const Container = () => {
   const [field, setField] = useState('');
+
+
+  const onContainerScroll = (scrollRef) => {
+    debugger
+    document
+      .getElementById('contentfooter1')
+      .append(` ${scrollRef.children.length}`);
+  }
 
   const handleFirstChange = (event) => {
     setField(event.target.value);
@@ -34,7 +42,8 @@ const Container = () => {
 
   return (
     <div className={cx('content-container-fill')}>
-      <ContentContainer header={contentheader} footer={contentfooter} fill>
+      <ContentContainer header={contentheader} footer={contentfooter} fill scrollRefCallback={onContainerScroll}
+      >
         <div key="1">{display1}</div>
         <div key="2">
           <InputField

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Scroll from 'terra-scroll';
@@ -45,16 +45,27 @@ const ContentContainer = ({
   scrollRefCallback,
   ...customProps
 }) => {
+  const [isScrollable, setIsScrollable] = useState(false);
+
   const contentLayoutClassNames = cx([
     `content-container-${fill ? 'fill' : 'static'}`,
     customProps.className,
   ]);
 
+  const handleRef = (scrollRef) => {
+    if (scrollRef) {
+      //setIsScrollable(scrollRef.scrollHeight > scrollRef.clientHeight);
+      console.log(scrollRef.scrollHeight);
+      if (scrollRefCallback) {
+        scrollRefCallback(scrollRef);
+      }
+    }
+  };
   return (
     <div {...customProps} className={contentLayoutClassNames}>
       {header && <div className={cx('header')}>{header}</div>}
       <div className={cx('main')}>
-        <Scroll className={cx('normalizer')} refCallback={scrollRefCallback}>
+        <Scroll className={cx('normalizer')} refCallback={handleRef} tabIndex={isScrollable ? '0' : '-1'}>
           {children}
         </Scroll>
       </div>
