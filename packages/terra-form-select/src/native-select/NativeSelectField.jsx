@@ -45,6 +45,11 @@ const propTypes = {
    */
   isInvalid: PropTypes.bool,
   /**
+   * Whether the select input should use the filter style display, forcing a value to always be selected.
+   * This also removes the placeholder and removes the ability for user to clear the value, returning the select to browser-native behavior.
+   */
+  isFilterStyle: PropTypes.bool,
+  /**
    * The field label.
    */
   label: PropTypes.node.isRequired,
@@ -95,6 +100,7 @@ const defaultProps = {
   isIncomplete: false,
   isInline: false,
   isInvalid: false,
+  isFilterStyle: false,
   isLabelHidden: false,
   required: false,
   showOptional: false,
@@ -110,6 +116,7 @@ const NativeSelectField = ({
   isInline,
   isLabelHidden,
   isInvalid,
+  isFilterStyle,
   label,
   labelAttrs,
   maxWidth,
@@ -166,6 +173,7 @@ const NativeSelectField = ({
         onChange={onChange}
         options={options}
         value={value}
+        isFilterStyle={isFilterStyle}
       />
     </Field>
   );

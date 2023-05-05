@@ -4,6 +4,9 @@
 
 * Changed
   * Updated demographics banner examples to include `identifiersLongForm` prop
+  
+* Added
+  * Added an example for terra-form-select native select field without placeholder
 
 ## 1.26.0 - (April 27, 2023)
 
@@ -15,6 +18,7 @@
   * Updated icon documentation to incorporate `one-cerner-style-icons` v1.5.0.
   * Updated non-meaningful content with meaningful content for `action-header`, `arrange`, `content-container`, `divider`, `checkbox`, `radio`, `paginator`, `scroll`, `section-header`, `show-hide`, `toggle`, `toggle-button` and `toggle-section-header`
   * Updated terra-toggle component focusable attribute value from boolean to string to fix some console log warnings.
+
 
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
