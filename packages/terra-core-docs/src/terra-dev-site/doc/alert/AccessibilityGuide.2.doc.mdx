@@ -26,17 +26,15 @@ Terra's Alert component is a notification banner with varying criticalities that
 
 #### Consistency
 
-The use of each variant of this component should be consistent in order to provide the user the best experience.
+The use of each variant of this component should be consistent in order to provide the best user experience.
 
 #### Notification Criticality
 
-The user only expects to be interrupted for notifications (alerts) that are of high criticality.
-* This behavior is referred to as "assertive".
+The user only expects to be interrupted for notifications (alerts) that are of high criticality. This behavior is referred to as "assertive".
 
-Less critical notifications should wait until the screen reader has finished reading the current item before notification content is read to the user.
-* This behavior is referred to as "polite".
+Less critical notifications should wait until the screen reader has finished reading the current item before notification content is read to the user. This behavior is referred to as "polite".
 
-By default, Terra Alert will set the role to `"alert"` (assertive) for the `alert` type and `"status"` (polite) for all other types.
+By default, Terra Alert will set the role to `"alert"` (or assertive) for the `alert` type and `"status"` (or polite) for all other types.
 Terra Alert has an optional role prop but should be used carefully when the default does not meet accessibility or usability expectations.
 
 | Role | Purpose |
