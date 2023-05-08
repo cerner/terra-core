@@ -49,6 +49,10 @@ const propTypes = {
    * Ref callback for the dropdown list DOM element.
    */
   refCallback: PropTypes.func,
+  /**
+   * Callback for the dropdown list selected option.
+   */
+  getSelectedOptionText: PropTypes.func,
 };
 
 const defaultProps = {
@@ -88,6 +92,7 @@ class DropdownButtonBase extends React.Component {
       openedViaKeyboard,
       buttonRef,
       refCallback,
+      getSelectedOptionText,
       ...customProps
     } = this.props;
 
@@ -124,6 +129,7 @@ class DropdownButtonBase extends React.Component {
           openedViaKeyboard={openedViaKeyboard}
           buttonRef={buttonRef}
           refCallback={refCallback}
+          getSelectedOptionText={getSelectedOptionText}
         >
           {items}
         </Dropdown>

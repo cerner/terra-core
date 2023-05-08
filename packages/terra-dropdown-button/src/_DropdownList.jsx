@@ -26,6 +26,10 @@ const propTypes = {
    * Ref callback for the dropdown list DOM element.
    */
   refCallback: PropTypes.func,
+  /**
+   * Callback for the dropdown list selected option.
+   */
+  getSelectedOptionText: PropTypes.func,
 };
 
 class DropdownList extends React.Component {
@@ -60,6 +64,7 @@ class DropdownList extends React.Component {
       if (!this.pressed) {
         this.pressed = true;
         this.setState({ active: focused });
+        this.props.getSelectedOptionText(event.target.innerText);
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
