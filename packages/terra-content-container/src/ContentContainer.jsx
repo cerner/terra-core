@@ -54,8 +54,7 @@ const ContentContainer = ({
 
   const handleRef = (scrollRef) => {
     if (scrollRef) {
-      //setIsScrollable(scrollRef.scrollHeight > scrollRef.clientHeight);
-      console.log(scrollRef.scrollHeight);
+      setIsScrollable(scrollRef.scrollHeight > scrollRef.clientHeight);
       if (scrollRefCallback) {
         scrollRefCallback(scrollRef);
       }

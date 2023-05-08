@@ -16,21 +16,17 @@ const display1 = (
   </p>
 );
 
-const contentheader = <h3>Registration Form</h3>;
-const contentfooter = <p id="contentfooter">Children count is </p>;
-
-const onContainerScroll = (scrollRef) => {
-  document
-    .getElementById('contentfooter')
-    .append(` ${scrollRef.children.length}`);
-}
-
 const Container = () => {
   const [field, setField] = useState('');
+  const [childCount,setChildCount] = useState('');
 
   const handleFirstChange = (event) => {
     setField(event.target.value);
   };
+
+  const onContainerScroll = (scrollRef) => {
+    setChildCount(scrollRef.children.length)
+  }
 
   // eslint-disable-next-line no-alert
   const clickHandler = () => alert(
@@ -39,6 +35,15 @@ const Container = () => {
         ? `You have entered ${field}`
         : 'You have not entered anything'
     }`,
+  );
+
+  const contentheader = <h3>Registration Form</h3>;
+  const contentfooter = (
+    <p id="contentfooter">
+      Children count is
+      {' '}
+      {childCount}
+    </p>
   );
 
   return (
