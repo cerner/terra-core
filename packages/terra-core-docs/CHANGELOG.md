@@ -10,6 +10,7 @@
   
 * Added
   * Added an example for terra-form-select native select field without placeholder
+  * Added an example in terra-content-container without interactive elements
 
 ## 1.26.0 - (April 27, 2023)
 

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added scroll capability for keyboard only users
+
 ## 3.38.0 - (February 15, 2023)
 
 * Changed
