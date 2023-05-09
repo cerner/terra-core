@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.61.0 - (May 9, 2023)
+
 * Added
   * Added optional `personNameHeadingLevel` prop to set the person name header level with default of 2.
   * Added optional `identifiersLongForm` prop to add well defined descriptions for shortened/abbreviated identifiers.

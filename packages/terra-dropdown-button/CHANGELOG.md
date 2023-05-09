@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+
+## 1.34.0 - (May 9, 2023)
+
 * Added
  * Added screenreader support to announce the selection state for dropdown list items.
 

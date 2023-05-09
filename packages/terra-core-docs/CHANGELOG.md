@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.27.0 - (May 9, 2023)
+
 * Removed 
   * Removed dubugger text from status view first paragraph after the title.
 
