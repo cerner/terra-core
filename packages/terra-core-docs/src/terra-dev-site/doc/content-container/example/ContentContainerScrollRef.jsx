@@ -18,15 +18,15 @@ const display1 = (
 
 const Container = () => {
   const [field, setField] = useState('');
-  const [childCount,setChildCount] = useState('');
+  const [childCount, setChildCount] = useState('');
 
   const handleFirstChange = (event) => {
     setField(event.target.value);
   };
 
   const onContainerScroll = (scrollRef) => {
-    setChildCount(scrollRef.children.length)
-  }
+    setChildCount(scrollRef.children.length);
+  };
 
   // eslint-disable-next-line no-alert
   const clickHandler = () => alert(
