@@ -62,6 +62,11 @@ const propTypes = {
    * */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
+   * The ARIA role attribute of the alert. If not provided, alert type _alert_ will default to role `"alert"`,
+   * all other alert types will use the role of `"status"`.
+   */
+  role: PropTypes.string,
+  /**
    * The title for the alert which will be bolded.
    */
   title: PropTypes.string,
@@ -119,6 +124,7 @@ const Alert = ({
   customColorClass,
   onDismiss,
   intl,
+  role,
   title,
   type,
   ...customProps
@@ -127,6 +133,7 @@ const Alert = ({
   const [isNarrow, setIsNarrow] = useState();
 
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
+  const defaultRole = type === AlertTypes.ALERT ? 'alert' : 'status';
   const alertClassNames = classNames(
     cx(
       'alert-base',
@@ -173,10 +180,16 @@ const Alert = ({
     );
   }
 
-  const alertSectionClassName = cx('section', { 'section-custom': type === AlertTypes.CUSTOM });
+  const alertSectionClassName = cx('section', {
+    'section-custom': type === AlertTypes.CUSTOM,
+  });
   const alertMessageContent = (
     <div id={alertMessageId} className={alertSectionClassName}>
-      {(title || defaultTitle) && <strong id={alertTitleId} className={cx('title')}>{title || defaultTitle}</strong>}
+      {(title || defaultTitle) && (
+        <strong id={alertTitleId} className={cx('title')}>
+          {title || defaultTitle}
+        </strong>
+      )}
       {children}
     </div>
   );
@@ -190,7 +203,7 @@ const Alert = ({
         }
       }}
     >
-      <div role="alert" {...customProps} className={alertClassNames}>
+      <div role={role || defaultRole} {...customProps} className={alertClassNames}>
         <div className={bodyClassNameForParent}>
           {getAlertIcon(type, customIcon)}
           {alertMessageContent}
@@ -198,7 +211,6 @@ const Alert = ({
         {actionsSection}
       </div>
     </ResponsiveElement>
-
   );
 };
 
