@@ -116,9 +116,12 @@ exports[`Dialog correctly applies the theme context className 1`] = `
             >
               <Scroll
                 className="normalizer"
+                refCallback={[Function]}
+                tabIndex="-1"
               >
                 <div
                   className="scroll normalizer"
+                  tabIndex="-1"
                 >
                   <div
                     className="dialog-body"
