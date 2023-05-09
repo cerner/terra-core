@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.68.0 - (May 9, 2023)
+
 * Changed
   * Added screen reader support to programmatically associate an alert's text to its dismiss button.
   * Added text-wrapping at high magnification and narrow screen widths.

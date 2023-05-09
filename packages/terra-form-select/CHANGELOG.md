@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 6.41.0 - (May 9, 2023)
+
 * Added
   * Added `isFilterStyle` prop to native-select-field.
 
