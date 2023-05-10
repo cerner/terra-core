@@ -38,17 +38,21 @@ const CustomPropExample = () => {
   };
   const [actionButtonClickCount, setActionButtonClickCount] = useState(0);
   const [alertDelay, setAlertDelay] = useState(3000);
-  const [alerts, setAlerts] = useState([
+  const [notifications, setNotifications] = useState([
     {
       id: alertIdx,
+      notificationMessage: alertTypeMessages[AlertTypes.SUCCESS],
       type: AlertTypes.SUCCESS,
       onDismiss: true,
     },
   ]);
+  const [alerts, setAlerts] = useState([]);
+  const [customMessage, setCustomMessage] = useState('Enter custom notification message');
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedAlertType, setSelectedAlertType] = useState(AlertTypes.SUCCESS);
-  const [selectedProps, setSelectedProps] = useState(['onDismiss']);
+  const [selectedAlertType, setSelectedAlertType] = useState(AlertTypes.ALERT);
+  const [selectedProps, setSelectedProps] = useState(['action', 'onDismiss']);
   const alertsRef = useRef(alerts);
+  const notificationsRef = useRef(notifications);
 
   const handleActionClick = () => {
     setActionButtonClickCount((prevCount) => prevCount + 1);
@@ -59,33 +63,46 @@ const CustomPropExample = () => {
     setAlerts([...alertsRef.current]);
   };
 
+  const getAlert = () => ({
+    id: alertIdx,
+    type: selectedAlertType,
+    notificationMessage:
+      selectedProps.indexOf('customMessage') >= 0
+        ? customMessage
+        : alertTypeMessages[selectedAlertType],
+    props: {
+      action:
+        selectedProps.indexOf('action') >= 0 ? (
+          <Button
+            text="Action"
+            variant="emphasis"
+            onClick={handleActionClick}
+          />
+        ) : null,
+      customColorClass:
+        selectedProps.indexOf('customColorClass') >= 0
+          ? cx(['my-app-alert-help-example'])
+          : null,
+      customIcon:
+        selectedProps.indexOf('customIcon') >= 0 ? <IconHelp /> : null,
+      title: selectedProps.indexOf('title') >= 0 ? 'Terra Message' : null,
+      disableAlertActionFocus:
+        selectedProps.indexOf('disableAlertActionFocus') >= 0 ? true : null,
+    },
+    onDismiss: selectedProps.indexOf('onDismiss') >= 0,
+  });
+
   const triggerNewAlert = () => {
     setTimeout(
       () => {
         alertIdx += 1;
-        alertsRef.current.push({
-          id: alertIdx,
-          type: selectedAlertType,
-          props: {
-            action:
-              selectedProps.indexOf('action') >= 0 ? (
-                <Button
-                  text="Action"
-                  variant="emphasis"
-                  onClick={handleActionClick}
-                />
-              ) : null,
-            customColorClass:
-              selectedProps.indexOf('customColorClass') >= 0
-                ? cx(['my-app-alert-help-example'])
-                : null,
-            customIcon:
-              selectedProps.indexOf('customIcon') >= 0 ? <IconHelp /> : null,
-            title: selectedProps.indexOf('title') >= 0 ? 'Terra Message' : null,
-          },
-          onDismiss: selectedProps.indexOf('onDismiss') >= 0,
-        });
-        setAlerts([...alertsRef.current]);
+        if (selectedAlertType === AlertTypes.ALERT) {
+          alertsRef.current.push(getAlert());
+          setAlerts([...alertsRef.current]);
+        } else {
+          notificationsRef.current.push(getAlert());
+          setNotifications([...notificationsRef.current]);
+        }
       },
       selectedProps.indexOf('alertDelay') >= 0 ? alertDelay : 0,
     );
@@ -93,6 +110,23 @@ const CustomPropExample = () => {
 
   return (
     <>
+      {alerts && alerts.map((alert, index) => (
+        <Alert
+          key={alert.id}
+          id={alert.id}
+          type={alert.type}
+          onDismiss={
+            alert.onDismiss
+              ? () => {
+                handleAlertDismiss(index);
+              }
+              : null
+          }
+          {...alert.props}
+        >
+          {alert.notificationMessage}
+        </Alert>
+      ))}
       <div aria-live="polite">
         {isOpen && (
           <Alert
@@ -103,10 +137,10 @@ const CustomPropExample = () => {
             {`${alertTypeMessages[selectedAlertType]} Replaceable alert.`}
           </Alert>
         )}
-        {alerts && alerts.map((alert, index) => (
+        {notifications && notifications.map((alert, index) => (
           <Alert
             key={alert.id}
-            id="customAlert"
+            id={alert.id}
             type={alert.type}
             onDismiss={
               alert.onDismiss
@@ -117,14 +151,14 @@ const CustomPropExample = () => {
             }
             {...alert.props}
           >
-            {alertTypeMessages[alert.type]}
+            {alert.notificationMessage}
           </Alert>
         ))}
       </div>
       <br />
-      <div id="alertType">Select alert type:</div>
+      <div id="alertType">Select notification type:</div>
       <NativeSelect
-        ariaLabel="Alert types"
+        ariaLabel="Notification types"
         isFilterStyle
         onChange={(event) => setSelectedAlertType(event.currentTarget.value)}
         options={Object.values(AlertTypes).map((alertType) => ({
@@ -133,7 +167,7 @@ const CustomPropExample = () => {
         }))}
         value={selectedAlertType}
       />
-      <div id="alertProps">Select alert props/options:</div>
+      <div id="alertProps">Select notification banner props/options:</div>
       <MultiSelect
         placeholder="Select alert props"
         value={selectedProps}
@@ -145,13 +179,15 @@ const CustomPropExample = () => {
           display="customColorClass (prop)"
         />
         <MultiSelect.Option value="customIcon" display="customIcon (prop)" />
+        <MultiSelect.Option value="customMessage" display="customMessage" />
+        <MultiSelect.Option value="disableAlertActionFocus" display="disableAlertActionFocus (prop)" />
         <MultiSelect.Option value="onDismiss" display="onDismiss (prop)" />
         <MultiSelect.Option value="title" display="title (prop)" />
         <MultiSelect.Option value="alertDelay" display="alertDelay" />
       </MultiSelect>
       {selectedProps.indexOf('alertDelay') >= 0 && (
         <>
-          <div id="alertDelay">Set alert delay (ms):</div>
+          <div id="alertDelay">Set notification delay (ms):</div>
           <Input
             ariaLabel="Numeric Input"
             name="Set alert delay (ms)"
@@ -161,11 +197,22 @@ const CustomPropExample = () => {
           />
         </>
       )}
+      {selectedProps.indexOf('customMessage') >= 0 && (
+        <>
+          <div id="alertMessage">Set custom notification message:</div>
+          <Input
+            ariaLabel="Set custom notification message"
+            name="Set custom notification message"
+            onChange={(event) => setCustomMessage(event.target.value)}
+            value={customMessage}
+          />
+        </>
+      )}
       <br />
-      <Button text="Trigger Alert" onClick={triggerNewAlert} />
+      <Button text="Trigger Notification Banner" onClick={triggerNewAlert} />
       <Button
         isDisabled={isOpen}
-        text="Trigger Replaceable Alert"
+        text="Trigger Replaceable Notification Banner"
         onClick={() => {
           setIsOpen(true);
         }}

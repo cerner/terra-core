@@ -29,9 +29,9 @@ const ActionAndDismissibleExample = () => {
               />
             )}
           >
-            This is a custom alert with no icon or title. It is configured to be
+            This is a custom notification banner with no icon or title. It is configured to be
             dismissible and with a custom action button. Click on the Dismiss
-            button to dismiss the alert.
+            button to dismiss the notification banner.
           </Alert>
         )}
       </div>
@@ -39,7 +39,7 @@ const ActionAndDismissibleExample = () => {
       <p>{`Action button has been clicked ${actionButtonClickCount} times.`}</p>
       <Button
         isDisabled={isOpen}
-        text="Trigger Alert"
+        text="Trigger Notification Banner"
         onClick={() => {
           setIsOpen(true);
         }}

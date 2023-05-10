@@ -46,6 +46,12 @@
     padding-top: 0;
   }
 
+  .body:focus-visible {
+    box-shadow: var(--terra-alert-focus-keyboard-box-shadow, none);
+    outline: var(--terra-alert-focus-keyboard-outline, 2px dashed #000);
+    outline-offset: var(--terra-alert-focus-keyboard-outline-offset, 1px);
+  }
+
   .body-narrow {
     margin-bottom: 0;
   }
