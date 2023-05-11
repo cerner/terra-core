@@ -15,16 +15,9 @@ exports[`correctly applies the theme context className 1`] = `
       <div
         className="content"
       >
-        <div
-          className="row"
-        >
-          <h2
-            className="person-name"
-          />
-          <div
-            className="application-content"
-          />
-        </div>
+        <h2
+          className="person-name"
+        />
         <div
           className="row"
         >
@@ -69,6 +62,9 @@ exports[`correctly applies the theme context className 1`] = `
             className="identifiers"
           />
         </div>
+        <div
+          className="application-content"
+        />
       </div>
     </section>
   </_default>
@@ -104,29 +100,16 @@ exports[`renders large banner that contains all valid information 1`] = `
   <div
     className="content"
   >
-    <div
-      className="row"
+    <h2
+      className="person-name"
     >
-      <h2
-        className="person-name"
+      Johnathon Doe
+      <span
+        className="preferred-first-name"
       >
-        Johnathon Doe
-        <span
-          className="preferred-first-name"
-        >
-          (John)
-        </span>
-      </h2>
-      <div
-        className="application-content"
-      >
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      </div>
-    </div>
+        (John)
+      </span>
+    </h2>
     <div
       className="row"
     >
@@ -162,6 +145,15 @@ exports[`renders large banner that contains all valid information 1`] = `
         />
       </div>
     </div>
+    <div
+      className="application-content"
+    >
+      <span
+        className="risk-score"
+      >
+        5%
+      </span>
+    </div>
   </div>
 </section>
 `;
@@ -173,23 +165,16 @@ exports[`renders the provided person name header level 1`] = `
   <div
     className="content"
   >
-    <div
-      className="row"
+    <h3
+      className="person-name"
     >
-      <h3
-        className="person-name"
+      Johnathon Doe
+      <span
+        className="preferred-first-name"
       >
-        Johnathon Doe
-        <span
-          className="preferred-first-name"
-        >
-          (John)
-        </span>
-      </h3>
-      <div
-        className="application-content"
-      />
-    </div>
+        (John)
+      </span>
+    </h3>
     <div
       className="row"
     >
@@ -210,6 +195,9 @@ exports[`renders the provided person name header level 1`] = `
         className="identifiers"
       />
     </div>
+    <div
+      className="application-content"
+    />
   </div>
 </section>
 `;

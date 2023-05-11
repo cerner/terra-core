@@ -56,15 +56,10 @@ export default (props) => {
         </div>
       )}
       <div className={cx('content')}>
-        <div className={cx('row')}>
-          <PersonNameElement className={cx('person-name')}>
-            { personName }
-            { preferredFirstName && <span className={cx('preferred-first-name')}>{ `(${preferredFirstName})` }</span> }
-          </PersonNameElement>
-          <div className={cx('application-content')}>
-            {applicationContent}
-          </div>
-        </div>
+        <PersonNameElement className={cx('person-name')}>
+          { personName }
+          { preferredFirstName && <span className={cx('preferred-first-name')}>{ `(${preferredFirstName})` }</span> }
+        </PersonNameElement>
         <div className={cx('row')}>
           <div className={cx('person-details')}>
             {DemographicsBannerUtils.personDetails(props)}
@@ -72,6 +67,9 @@ export default (props) => {
           <div className={cx('identifiers')}>
             {DemographicsBannerUtils.applicationIdentifiers(props)}
           </div>
+        </div>
+        <div className={cx('application-content')}>
+          {applicationContent}
         </div>
       </div>
     </section>

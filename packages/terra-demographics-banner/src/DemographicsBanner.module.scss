@@ -77,7 +77,10 @@
   }
 
   .content {
+    display: flex;
+    flex-direction: row;
     flex-grow: 1;
+    flex-wrap: wrap;
     margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
   }
 
@@ -105,6 +108,11 @@
 
     .identifiers {
       text-align: right;
+    }
+
+    .row {
+      flex: 100%;
+      order: 3;
     }
   }
 }
