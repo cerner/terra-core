@@ -111,8 +111,9 @@
     }
 
     .row {
-      flex: 100%;
-      order: 3;
+      flex: 0 0 auto;
+      order: 3; // Places row after person-name and application-content visually as the third flex item (this element must be rendered immediately following person-name element for assistive technology support).
+      width: 100%;
     }
   }
 }
