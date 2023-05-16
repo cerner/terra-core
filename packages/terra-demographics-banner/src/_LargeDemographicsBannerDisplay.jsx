@@ -60,7 +60,7 @@ export default (props) => {
           { personName }
           { preferredFirstName && <span className={cx('preferred-first-name')}>{ `(${preferredFirstName})` }</span> }
         </PersonNameElement>
-        <div className={cx('row')}>
+        <div className={cx('identifier-row')}>
           <div className={cx('person-details')}>
             {DemographicsBannerUtils.personDetails(props)}
           </div>
