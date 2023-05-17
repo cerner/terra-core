@@ -17,4 +17,8 @@
     padding-right: 0;
     padding-top: var(--terra-dropdown-button-list-padding-top, 0.42857rem);
   }
+  .dropdown-list li:focus {
+    outline: 2px dashed var(--terra-dev-site-example-template-keyboard-focus-outline, #000);
+    outline-offset: -2px;
+  }
 }
