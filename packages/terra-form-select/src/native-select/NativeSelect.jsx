@@ -65,6 +65,10 @@ const propTypes = {
   /**
    * Whether the input is invalid.
    */
+  isCustomPlaceholder: PropTypes.bool,
+  /**
+   * Whether the placeholder is customised.
+   */
   isInvalid: PropTypes.bool,
   /**
    * Whether the field displays as Incomplete. Use when no value has been provided. _(usage note: `required` must also be set)_.
@@ -107,6 +111,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   isFilterStyle: false,
+  isCustomPlaceholder: false,
   isIncomplete: false,
   isInvalid: false,
   options: [],
@@ -154,6 +159,7 @@ const NativeSelect = ({
   id,
   intl,
   isFilterStyle,
+  isCustomPlaceholder,
   isInvalid,
   isIncomplete,
   onBlur,
@@ -226,7 +232,7 @@ const NativeSelect = ({
       { disabled },
       { invalid: isInvalid },
       { incomplete: required && isIncomplete },
-      { placeholder: isCurrentPlaceholder(selectAttrs.value, isFilterStyle) },
+      { placeholder: isCurrentPlaceholder(selectAttrs.value, isFilterStyle, isCustomPlaceholder) },
     ),
     customProps.className,
   );

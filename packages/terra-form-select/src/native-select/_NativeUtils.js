@@ -10,7 +10,7 @@ const getDisplay = (findValue, options, isFilterStyle, intl) => {
 
   for (let i = 0; i < options.length; i += 1) {
     const current = options[i];
-    if (current.value) {
+    if (current.value || (current.value === '' && current.isPlaceholderOption)) {
       if (current.value === findValue) {
         return current.display;
       }
@@ -33,7 +33,7 @@ const getFirstValue = (options, isFilterStyle = false) => {
   }
   for (let i = 0; i < options.length; i += 1) {
     const current = options[i];
-    if (current.value) {
+    if (current.value || (current.value === '' && current.isPlaceholderOption)) {
       return current.value;
     }
     const firstValue = getFirstValue(current.options, isFilterStyle);
@@ -44,7 +44,7 @@ const getFirstValue = (options, isFilterStyle = false) => {
   return undefined;
 };
 
-const isCurrentPlaceholder = (value, isFilterStyle = false) => !isFilterStyle && value === defaultPlaceholderValue;
+const isCurrentPlaceholder = (value, isFilterStyle = false, isCustomPlaceholder) => isCustomPlaceholder || (!isFilterStyle && value === defaultPlaceholderValue);
 
 const isValuePresent = value => value !== undefined && value !== null;
 
