@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added example to implement custom placeholder in terra-native-select. 
+
 ## 1.27.0 - (May 9, 2023)
 
 * Removed 
