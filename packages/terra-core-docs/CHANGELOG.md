@@ -14,7 +14,7 @@
 * Added
   * Added an example for terra-form-select native select field without placeholder
   * Add terra-alert accessiblity guide
-  * Added examples for fullscreen and container-related overlays with custom content and and loading overlays with custom message 
+  * Added examples for fullscreen and container-related overlays with custom content and loading overlays with custom message 
 
 ## 1.26.0 - (April 27, 2023)
 
