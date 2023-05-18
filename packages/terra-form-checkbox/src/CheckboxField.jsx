@@ -117,38 +117,37 @@ const CheckboxField = (props) => {
   let isSafariBrowser = false;
 
   if (navigator.userAgent.indexOf('Safari') !== -1 && (navigator.userAgent.indexOf('Chrome') === -1 || navigator.userAgent.indexOf('Edg') !== -1)) {
-    isSafariBrowser = true
-  } 
+    isSafariBrowser = true;
+  }
 
-  const legendCode = <div {...legendAttrs} className={legendClassNames}>
-  {isInvalid && <span className={cx('error-icon')} />}
-  {required && (isInvalid || !hideRequired) && (
-    <React.Fragment>
-      <div aria-hidden="true" className={cx('required')}>*</div>
-      <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
-    </React.Fragment>
-  )}
-  {legend}
-  {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
-  {showOptional && !required
-    && (
-      <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>
-    )}
-  {!isInvalid && <span className={cx('error-icon-hidden')} />}
-</div>
-
-  const legendGroup =isSafariBrowser ?  (
-    <div id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
-     {legendCode}
+  const legendCode = (
+    <div {...legendAttrs} className={legendClassNames}>
+      {isInvalid && <span className={cx('error-icon')} />}
+      {required && (isInvalid || !hideRequired) && (
+        <React.Fragment>
+          <div aria-hidden="true" className={cx('required')}>*</div>
+          <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
+        </React.Fragment>
+      )}
+      {legend}
+      {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
+      {showOptional && !required
+        && (
+          <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>
+        )}
+      {!isInvalid && <span className={cx('error-icon-hidden')} />}
     </div>
-  ): (
-    <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
-        {legendCode}
- </legend>
   );
 
-
- 
+  const legendGroup = isSafariBrowser ? (
+    <div id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+      {legendCode}
+    </div>
+  ) : (
+    <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+      {legendCode}
+    </legend>
+  );
 
   const content = React.Children.map(children, (child) => {
     if (child && child.type.isCheckbox) {
