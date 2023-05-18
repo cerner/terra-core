@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.21.0 - (May 18, 2023)
+
+* Fixed
+  * Fixed issue - Form Checkbox Field - VO announces group and legend multiple times.
+
 ## 4.20.0 - (April 27, 2023)
 
 * Fixed
