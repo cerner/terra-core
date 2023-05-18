@@ -71,7 +71,7 @@
     "start-heroku": "terra express-server --port $PORT --site './build' ",
     "test": "npm run lint && npm run jest && npm run wdio",
     "test:docker": "npm run lint && npm run jest && npm run wdio:docker",
-    "wdio-default": "terra wdio",
+    "wdio-default": "WDIO_EXTERNAL_HOST='10.189.206.7' terra wdio --gridUrl grid314.test.devcernerpowerchart.com --browsers chrome --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme --spec /packages/terra-status-view/tests/wdio/status-view-spec.js",
     "wdio-lowlight": "terra wdio --themes clinical-lowlight-theme",
     "wdio-fusion": "terra wdio --themes orion-fusion-theme",
     "wdio": "terra wdio --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme",
@@ -121,5 +121,8 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.1.4"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
   }
 }

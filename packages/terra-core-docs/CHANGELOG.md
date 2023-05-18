@@ -2,10 +2,10 @@
 
 ## Unreleased
 
-## 1.27.0 - (May 9, 2023)
-
 * Updated
   * Changed status view title font size as per OpenSource Theme
+
+## 1.27.0 - (May 9, 2023)
 
 * Removed 
   * Removed dubugger text from status view first paragraph after the title.
