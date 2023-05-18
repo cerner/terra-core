@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Changed status view title font size as per OpenSource Theme.
+
 ## 4.55.0 - (April 27, 2023)
 
 * Added
