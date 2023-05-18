@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated large banner to allow screen readers to follow the meaningful sequence of content, now consistent with the small banner.
+
 ## 3.61.0 - (May 9, 2023)
 
 * Added
@@ -10,7 +13,6 @@
 
 * Changed
   * Improved representation of patient nickname for screen readers by appending parentheses through a template string instead of CSS.
-  * Updated large banner to allow screen readers to follow the meaningful sequence of content, now consistent with the small banner.
 
 ## 3.60.0 - (February 15, 2023)
 
