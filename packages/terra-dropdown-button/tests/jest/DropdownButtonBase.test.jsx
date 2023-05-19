@@ -1,6 +1,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
-
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { mountWithIntl } from 'terra-enzyme-intl';
 import DropdownButtonBase from '../../src/_DropdownButtonBase';
 import { Item } from '../../src/DropdownButton';
 
@@ -68,7 +69,7 @@ describe('Dropdown Button Base', () => {
   });
 
   it('correctly applies the theme context className', () => {
-    const wrapper = mount(
+    const wrapper = mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <DropdownButtonBase
           items={

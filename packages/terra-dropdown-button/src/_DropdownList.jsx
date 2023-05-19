@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
+import { injectIntl } from 'react-intl';
 import Util from './_DropdownListUtil';
 import styles from './_DropdownList.module.scss';
+import SharedUtil from '../../terra-form-select/src/shared/_SharedUtil';
 
 const cx = classNamesBind.bind(styles);
 
@@ -30,6 +32,12 @@ const propTypes = {
    * Callback for the dropdown list selected option.
    */
   getSelectedOptionText: PropTypes.func,
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+
 };
 
 class DropdownList extends React.Component {
@@ -53,7 +61,7 @@ class DropdownList extends React.Component {
   handleKeyDown(event) {
     const { keyCode } = event;
     const { focused } = this.state;
-    const index = Util.findIndexByValue(this, event.target.innerText);
+    const index = Util.findIndexByValue(this, event.target.innertext);
     if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
       /*
         Prevent the callback from being called repeatedly if key is held down.
@@ -160,11 +168,22 @@ class DropdownList extends React.Component {
    * @return {Array<React.ReactNode>} the array of children
    */
   cloneChildren() {
-    return React.Children.map(this.props.children, (child, index) => React.cloneElement(child, {
-      isActive: index === this.state.active,
-      requestClose: this.props.requestClose,
-      'data-terra-dropdown-list-item': true,
-    }));
+    return React.Children.map(this.props.children, (child, index) => {
+      const currentItemLabel = this.props.children[index]?.props.label;
+      const currentIndex = index + 1;
+      const ofText = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.of' });
+      const totalItems = this.props.children.length;
+      let ariaLabel = null;
+      if (SharedUtil.isMac() && currentIndex && totalItems) {
+        ariaLabel = `${currentItemLabel} (${currentIndex} ${ofText} ${totalItems})`;
+      }
+      return React.cloneElement(child, {
+        isActive: index === this.state.active,
+        requestClose: this.props.requestClose,
+        'data-terra-dropdown-list-item': true,
+        'aria-label': ariaLabel,
+      });
+    });
   }
 
   /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
@@ -201,4 +220,4 @@ class DropdownList extends React.Component {
 DropdownList.propTypes = propTypes;
 DropdownList.contextType = ThemeContext;
 
-export default DropdownList;
+export default injectIntl(DropdownList);

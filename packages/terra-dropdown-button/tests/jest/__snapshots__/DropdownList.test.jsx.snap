@@ -2,95 +2,159 @@
 
 exports[`Dropdown List correctly applies the theme context className 1`] = `
 <ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   theme={
     Object {
       "className": "orion-fusion-theme",
     }
   }
 >
-  <DropdownList
+  <InjectIntl(DropdownList)
     requestClose={[Function]}
   >
-    <ul
-      className="dropdown-list orion-fusion-theme"
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      role="menu"
-      style={
+    <DropdownList
+      intl={
         Object {
-          "width": undefined,
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
         }
       }
+      requestClose={[Function]}
     >
-      <Item
-        data-terra-dropdown-list-item={true}
-        isActive={false}
-        key=".0"
-        label="1st Option"
-        onSelect={[Function]}
-        requestClose={[Function]}
+      <ul
+        className="dropdown-list orion-fusion-theme"
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        role="menu"
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
       >
-        <li
+        <Item
+          aria-label={null}
           data-terra-dropdown-list-item={true}
-          onClick={[Function]}
-          role="menuitem"
-          tabIndex="0"
+          isActive={false}
+          key=".0"
+          label="1st Option"
+          onSelect={[Function]}
+          requestClose={[Function]}
         >
-          <div
-            className="item orion-fusion-theme"
-            role="none"
+          <li
+            aria-label={null}
+            data-terra-dropdown-list-item={true}
+            onClick={[Function]}
+            role="menuitem"
+            tabIndex="0"
           >
-            1st Option
-          </div>
-        </li>
-      </Item>
-      <Item
-        data-terra-dropdown-list-item={true}
-        isActive={false}
-        key=".1"
-        label="2nd Option"
-        onSelect={[Function]}
-        requestClose={[Function]}
-      >
-        <li
+            <div
+              className="item orion-fusion-theme"
+              role="none"
+            >
+              1st Option
+            </div>
+          </li>
+        </Item>
+        <Item
+          aria-label={null}
           data-terra-dropdown-list-item={true}
-          onClick={[Function]}
-          role="menuitem"
-          tabIndex="0"
+          isActive={false}
+          key=".1"
+          label="2nd Option"
+          onSelect={[Function]}
+          requestClose={[Function]}
         >
-          <div
-            className="item orion-fusion-theme"
-            role="none"
+          <li
+            aria-label={null}
+            data-terra-dropdown-list-item={true}
+            onClick={[Function]}
+            role="menuitem"
+            tabIndex="0"
           >
-            2nd Option
-          </div>
-        </li>
-      </Item>
-      <Item
-        data-terra-dropdown-list-item={true}
-        isActive={false}
-        key=".2"
-        label="3rd Option"
-        onSelect={[Function]}
-        requestClose={[Function]}
-      >
-        <li
+            <div
+              className="item orion-fusion-theme"
+              role="none"
+            >
+              2nd Option
+            </div>
+          </li>
+        </Item>
+        <Item
+          aria-label={null}
           data-terra-dropdown-list-item={true}
-          onClick={[Function]}
-          role="menuitem"
-          tabIndex="0"
+          isActive={false}
+          key=".2"
+          label="3rd Option"
+          onSelect={[Function]}
+          requestClose={[Function]}
         >
-          <div
-            className="item orion-fusion-theme"
-            role="none"
+          <li
+            aria-label={null}
+            data-terra-dropdown-list-item={true}
+            onClick={[Function]}
+            role="menuitem"
+            tabIndex="0"
           >
-            3rd Option
-          </div>
-        </li>
-      </Item>
-    </ul>
-  </DropdownList>
+            <div
+              className="item orion-fusion-theme"
+              role="none"
+            >
+              3rd Option
+            </div>
+          </li>
+        </Item>
+      </ul>
+    </DropdownList>
+  </InjectIntl(DropdownList)>
 </ThemeContextProvider>
 `;
 
@@ -108,6 +172,7 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
   }
 >
   <Item
+    aria-label={null}
     data-terra-dropdown-list-item={true}
     isActive={false}
     key=".0"
@@ -119,185 +184,224 @@ exports[`Dropdown List renders a default dropdown list 1`] = `
 `;
 
 exports[`Dropdown List renders a dropdown list a non-default focused option 1`] = `
-<ul
-  className="dropdown-list"
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  role="menu"
-  style={
+<DropdownList
+  intl={
     Object {
-      "width": undefined,
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  requestClose={[Function]}
 >
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".0"
     label="1st Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".1"
     label="2nd Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".2"
     label="3rd Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
-</ul>
+</DropdownList>
 `;
 
 exports[`Dropdown List renders a dropdown list an active and focused option 1`] = `
-<ul
-  className="dropdown-list"
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  role="menu"
-  style={
+<DropdownList
+  intl={
     Object {
-      "width": undefined,
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  requestClose={[Function]}
 >
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".0"
     label="1st Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".1"
     label="2nd Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".2"
     label="3rd Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
-</ul>
+</DropdownList>
 `;
 
 exports[`Dropdown List renders a dropdown list an active option 1`] = `
-<ul
-  className="dropdown-list"
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  role="menu"
-  style={
+<DropdownList
+  intl={
     Object {
-      "width": undefined,
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  requestClose={[Function]}
 >
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".0"
     label="1st Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".1"
     label="2nd Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".2"
     label="3rd Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
-</ul>
+</DropdownList>
 `;
 
 exports[`Dropdown List renders a dropdown list with a set width 1`] = `
-<ul
-  className="dropdown-list"
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  role="menu"
-  style={
+<DropdownList
+  intl={
     Object {
-      "width": "440px",
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  requestClose={[Function]}
+  width="440px"
 >
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".0"
     label="1st Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
-</ul>
+</DropdownList>
 `;
 
 exports[`Dropdown List renders a dropdown list with multiple children 1`] = `
-<ul
-  className="dropdown-list"
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  role="menu"
-  style={
+<DropdownList
+  intl={
     Object {
-      "width": undefined,
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
     }
   }
+  requestClose={[Function]}
 >
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".0"
     label="1st Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".1"
     label="2nd Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
   <Item
-    data-terra-dropdown-list-item={true}
-    isActive={false}
-    key=".2"
     label="3rd Option"
     onSelect={[Function]}
-    requestClose={[Function]}
   />
-</ul>
+</DropdownList>
 `;

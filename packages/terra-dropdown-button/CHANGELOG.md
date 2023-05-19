@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+ * Added screenreader support to announce index for dropdown list items.
 
 ## 1.34.0 - (May 9, 2023)
 
