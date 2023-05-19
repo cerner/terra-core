@@ -3,4 +3,15 @@
     height: 100px;
     width: 100%;
   }
+
+  .overlay-context-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .button {
+      margin-top: 10px;
+    }
+  }
 }
