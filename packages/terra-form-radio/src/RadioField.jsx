@@ -114,24 +114,38 @@ const RadioField = (props) => {
   const errorAriaDescriptionId = error ? `terra-radio-field-description-error-${uniqueid()}` : '';
   const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
 
-  const legendGroup = (
-    <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
-      <div {...legendAttrs} className={legendClassNames}>
-        {isInvalid && <span className={cx('error-icon')} />}
-        {required && (isInvalid || !hideRequired) && (
-          <React.Fragment>
-            <div aria-hidden="true" className={cx('required')}>*</div>
-            <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
-          </React.Fragment>
+  let isSafariOrEdgBrowser = false;
+
+  if (navigator.userAgent.indexOf('Safari') !== -1 && (navigator.userAgent.indexOf('Chrome') === -1 || navigator.userAgent.indexOf('Edg') !== -1)) {
+    isSafariOrEdgBrowser = true;
+  }
+
+  const legendCode = (
+    <div {...legendAttrs} className={legendClassNames}>
+      {isInvalid && <span className={cx('error-icon')} />}
+      {required && (isInvalid || !hideRequired) && (
+        <React.Fragment>
+          <div aria-hidden="true" className={cx('required')}>*</div>
+          <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
+        </React.Fragment>
+      )}
+      {legend}
+      {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
+      {showOptional && !required
+        && (
+          <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>
         )}
-        {legend}
-        {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
-        {showOptional && !required
-          && (
-            <span className={cx('optional')}>{intl.formatMessage({ id: 'Terra.form.field.optional' })}</span>
-          )}
-        {!isInvalid && <span className={cx('error-icon-hidden')} />}
-      </div>
+      {!isInvalid && <span className={cx('error-icon-hidden')} />}
+    </div>
+  );
+
+  const legendGroup = isSafariOrEdgBrowser ? (
+    <div id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+      {legendCode}
+    </div>
+  ) : (
+    <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+      {legendCode}
     </legend>
   );
 
