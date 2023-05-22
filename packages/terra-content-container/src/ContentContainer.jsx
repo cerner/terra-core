@@ -27,6 +27,10 @@ const propTypes = {
    * Ref callback for the scrollable area of the content container.
    */
   scrollRefCallback: PropTypes.func,
+  /**
+   * Makes the content of the container interactive (only to be used when there are no interactive elements in the container)
+   */
+  isInteractiveElement: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -35,6 +39,7 @@ const defaultProps = {
   children: undefined,
   fill: false,
   scrollRefCallback: undefined,
+  isInteractiveElement: false,
 };
 
 const ContentContainer = ({
@@ -43,6 +48,7 @@ const ContentContainer = ({
   children,
   fill,
   scrollRefCallback,
+  isInteractiveElement,
   ...customProps
 }) => {
   const contentLayoutClassNames = cx([
@@ -54,7 +60,7 @@ const ContentContainer = ({
     <div {...customProps} className={contentLayoutClassNames}>
       {header && <div className={cx('header')}>{header}</div>}
       <div className={cx('main')}>
-        <Scroll className={cx('normalizer')} refCallback={scrollRefCallback}>
+        <Scroll className={cx('normalizer')} refCallback={scrollRefCallback} tabIndex={isInteractiveElement?'0':'-1'}>
           {children}
         </Scroll>
       </div>
