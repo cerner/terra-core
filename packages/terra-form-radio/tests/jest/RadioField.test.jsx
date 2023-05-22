@@ -8,9 +8,20 @@ import Radio from '../../src/Radio';
 
 window.matchMedia = () => ({ matches: true });
 
+let userAgentGetter;
+beforeEach(() => {
+  userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
+});
+
 it('should render a default radio field', () => {
   const radioField = (<RadioField legend="Default RadioField" />);
   const wrapper = shallowWithIntl(radioField);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render radio field with div element or legend element', () => {
+  userAgentGetter.mockReturnValue('safari');
+  const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />).dive();
   expect(wrapper).toMatchSnapshot();
 });
 
