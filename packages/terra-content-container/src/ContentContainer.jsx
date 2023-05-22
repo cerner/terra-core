@@ -27,6 +27,8 @@ const propTypes = {
    * Ref callback for the scrollable area of the content container.
    */
   scrollRefCallback: PropTypes.func,
+  ariacontrols: PropTypes.string,
+  isKeyboardAccessible: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -34,6 +36,8 @@ const defaultProps = {
   footer: undefined,
   children: undefined,
   fill: false,
+  isKeyboardAccessible:false,
+  ariacontrols: '',
   scrollRefCallback: undefined,
 };
 
@@ -42,6 +46,8 @@ const ContentContainer = ({
   footer,
   children,
   fill,
+  ariacontrols,
+  isKeyboardAccessible,
   scrollRefCallback,
   ...customProps
 }) => {
@@ -63,8 +69,8 @@ const ContentContainer = ({
   return (
     <div {...customProps} className={contentLayoutClassNames}>
       {header && <div className={cx('header')}>{header}</div>}
-      <div className={cx('main')}>
-        <Scroll className={cx('normalizer')} refCallback={handleRef} tabIndex={isScrollable ? '0' : '-1'}>
+      <div className={cx('main')} role='button' aria-label={ariacontrols} tabIndex={isScrollable ? '0' : '-1'}>
+        <Scroll className={cx('normalizer')} refCallback={handleRef}>
           {children}
         </Scroll>
       </div>
