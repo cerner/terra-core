@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-*Added 
+* Added 
  * Added focus styles for dropdown list items.
 
 
