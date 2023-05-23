@@ -19,11 +19,18 @@ it('should render a default checkbox field', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render checkbox field with div element for safari browser', () => {
-  userAgentGetter.mockReturnValue('Safari');
+it('should render checkbox field with div element for safari browser or Edg browser', () => {
+  userAgentGetter.mockReturnValue('safari Edg');
   const wrapper = shallowWithIntl(<checkboxField legend="Coustom Message CheckboxField" />);
   expect(wrapper).toMatchSnapshot();
 });
+
+it('should render checkbox field with legend element for Chrome browser', () => {
+  userAgentGetter.mockReturnValue('Chrome');
+  const wrapper = shallowWithIntl(<checkboxField legend="Coustom Message CheckboxField" />);
+  expect(wrapper).toMatchSnapshot();
+});
+
 
 it('should render a default checkbox field even if it has an undefined child', () => {
   const undefinedChild = undefined;
