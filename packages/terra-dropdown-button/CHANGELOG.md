@@ -4,6 +4,9 @@
 * Added
  * Added screenreader support to announce index for dropdown list items.
 
+* Added 
+   * Added focus styles for dropdown list items.
+
 ## 1.34.0 - (May 9, 2023)
 
 * Added

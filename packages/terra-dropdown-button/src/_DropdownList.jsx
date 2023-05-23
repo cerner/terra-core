@@ -61,7 +61,7 @@ class DropdownList extends React.Component {
   handleKeyDown(event) {
     const { keyCode } = event;
     const { focused } = this.state;
-    const index = Util.findIndexByValue(this, event.target.innertext);
+    const index = Util.findIndexByValue(this, event.target.textContent);
     if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
       /*
         Prevent the callback from being called repeatedly if key is held down.
