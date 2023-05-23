@@ -116,7 +116,7 @@ const CheckboxField = (props) => {
 
   let isSafariOrEdgBrowser = false;
 
-  if (navigator.userAgent.indexOf('Safari') !== -1 && (navigator.userAgent.indexOf('Chrome') === -1 || navigator.userAgent.indexOf('Edg') !== -1)) {
+  if ((navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) || navigator.userAgent.indexOf('Edg') !== -1) {
     isSafariOrEdgBrowser = true;
   }
   const Component = (isSafariOrEdgBrowser) ? 'div' : 'legend';
