@@ -76,7 +76,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
     >
       <legend
         className="legend-group"
-        id="terra-radio-field-description-3"
+        id="terra-radio-field-description-4"
       >
         <div
           className="legend"
@@ -91,7 +91,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
         disabled={false}
         inputAttrs={
           Object {
-            "aria-describedby": "terra-radio-field-description-3  ",
+            "aria-describedby": "terra-radio-field-description-4  ",
             "data-custom-attr": "attr data",
           }
         }
@@ -109,7 +109,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
             className="label"
           >
             <input
-              aria-describedby="terra-radio-field-description-3  "
+              aria-describedby="terra-radio-field-description-4  "
               className="native-input"
               data-custom-attr="attr data"
               disabled={false}
@@ -219,7 +219,7 @@ exports[`correctly applies the theme context className 1`] = `
       >
         <legend
           className="legend-group"
-          id="terra-radio-field-description-2"
+          id="terra-radio-field-description-3"
         >
           <div
             className="legend"
@@ -576,12 +576,33 @@ exports[`should render an optional part on the label 1`] = `
 />
 `;
 
-exports[`should render radio field with div element or legend element 1`] = `
+exports[`should render radio field with div element for Chrome browser 1`] = `
 <fieldset
   className="radio-field"
   required={false}
 >
   <legend
+    className="legend-group"
+    id="terra-radio-field-description-2"
+  >
+    <div
+      className="legend"
+    >
+      Coustom Message RadioField
+      <span
+        className="error-icon-hidden"
+      />
+    </div>
+  </legend>
+</fieldset>
+`;
+
+exports[`should render radio field with div element for safari browser or Edg browser 1`] = `
+<fieldset
+  className="radio-field"
+  required={false}
+>
+  <div
     className="legend-group"
     id="terra-radio-field-description-1"
   >
@@ -593,7 +614,7 @@ exports[`should render radio field with div element or legend element 1`] = `
         className="error-icon-hidden"
       />
     </div>
-  </legend>
+  </div>
 </fieldset>
 `;
 

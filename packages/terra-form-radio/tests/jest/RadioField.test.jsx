@@ -19,8 +19,14 @@ it('should render a default radio field', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render radio field with div element or legend element', () => {
-  userAgentGetter.mockReturnValue('safari');
+it('should render radio field with div element for safari browser or Edg browser', () => {
+  userAgentGetter.mockReturnValue('safari Edg');
+  const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />).dive();
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render radio field with legend element for Chrome browser', () => {
+  userAgentGetter.mockReturnValue('Chrome');
   const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />).dive();
   expect(wrapper).toMatchSnapshot();
 });
