@@ -21,14 +21,14 @@ it('should render a default radio field', () => {
 
 it('should render radio field with div element for safari browser or Edg browser', () => {
   userAgentGetter.mockReturnValue('safari Edg');
-  const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />).dive();
-  expect(wrapper).toMatchSnapshot();
+  const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />);
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render radio field with legend element for Chrome browser', () => {
   userAgentGetter.mockReturnValue('Chrome');
-  const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />).dive();
-  expect(wrapper).toMatchSnapshot();
+  const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />);
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render a default radio field if it has an undefined child', () => {
