@@ -8,9 +8,20 @@ import Checkbox from '../../src/Checkbox';
 
 window.matchMedia = () => ({ matches: true });
 
+let userAgentGetter;
+beforeEach(() => {
+  userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
+});
+
 it('should render a default checkbox field', () => {
   const checkBox = (<CheckboxField legend="Default CheckboxField" />);
   const wrapper = shallowWithIntl(checkBox);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render checkbox field with div element for safari browser', () => {
+  userAgentGetter.mockReturnValue('Safari');
+  const wrapper = shallowWithIntl(<checkboxField legend="Coustom Message CheckboxField" />);
   expect(wrapper).toMatchSnapshot();
 });
 
