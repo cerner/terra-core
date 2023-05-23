@@ -119,7 +119,6 @@ const CheckboxField = (props) => {
   if (navigator.userAgent.indexOf('Safari') !== -1 && (navigator.userAgent.indexOf('Chrome') === -1 || navigator.userAgent.indexOf('Edg') !== -1)) {
     isSafariOrEdgBrowser = true;
   }
-  
   const Component = (isSafariOrEdgBrowser) ? 'div' : 'legend';
   const legendGroup = (
     <Component id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
@@ -130,7 +129,7 @@ const CheckboxField = (props) => {
             <div aria-hidden="true" className={cx('required')}>*</div>
             <VisualyHiddenText text={intl.formatMessage({ id: 'Terra.form.field.required' })} />
           </React.Fragment>
-          )}
+        )}
         {legend}
         {required && !isInvalid && hideRequired && <span className={cx('required-hidden')}>*</span>}
         {showOptional && !required
