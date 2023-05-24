@@ -21,14 +21,14 @@ it('should render a default checkbox field', () => {
 
 it('should render checkbox field with div element for Safari browser or Edg browser', () => {
   userAgentGetter.mockReturnValue('Safari Edg');
-  const wrapper = shallowWithIntl(<checkboxField legend="Coustom Message CheckboxField" />);
-  expect(wrapper).toMatchSnapshot();
+  const wrapper = shallowWithIntl(<CheckboxField legend="Coustom Message CheckboxField" />);
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 it('should render checkbox field with legend element for Chrome browser', () => {
   userAgentGetter.mockReturnValue('Chrome');
-  const wrapper = shallowWithIntl(<checkboxField legend="Coustom Message CheckboxField" />);
-  expect(wrapper).toMatchSnapshot();
+  const wrapper = shallowWithIntl(<CheckboxField legend="Coustom Message CheckboxField" />);
+  expect(wrapper.dive()).toMatchSnapshot();
 });
 
 
