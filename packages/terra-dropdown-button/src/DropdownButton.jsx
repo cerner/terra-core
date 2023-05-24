@@ -78,6 +78,7 @@ class DropdownButton extends React.Component {
       this.setState({ openedViaKeyboard: false });
     }
     this.toggleDropDown(event);
+    this.setState({ selectText: '' });
   }
 
   handleDropdownRequestClose(callback) {
@@ -206,7 +207,6 @@ class DropdownButton extends React.Component {
           tabIndex={isDisabled ? '-1' : undefined}
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
-          aria-haspopup="menu"
           ref={this.setButtonNode}
           aria-label={selectText ? `${selectText}, ${selectedLabel}` : ''}
           onBlur={this.handleBlur}
