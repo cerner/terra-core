@@ -58,9 +58,14 @@ const CustomPropExample = () => {
     setActionButtonClickCount((prevCount) => prevCount + 1);
   };
 
-  const handleAlertDismiss = (index) => {
+  const handleAlertNotificationDismiss = (index) => {
     alertsRef.current.splice(index, 1);
     setAlerts([...alertsRef.current]);
+  };
+
+  const handleNotificationDismiss = (index) => {
+    notificationsRef.current.splice(index, 1);
+    setNotifications([...notificationsRef.current]);
   };
 
   const getAlert = () => ({
@@ -118,7 +123,7 @@ const CustomPropExample = () => {
           onDismiss={
             alert.onDismiss
               ? () => {
-                handleAlertDismiss(index);
+                handleAlertNotificationDismiss(index);
               }
               : null
           }
@@ -145,7 +150,7 @@ const CustomPropExample = () => {
             onDismiss={
               alert.onDismiss
                 ? () => {
-                  handleAlertDismiss(index);
+                  handleNotificationDismiss(index);
                 }
                 : null
             }
