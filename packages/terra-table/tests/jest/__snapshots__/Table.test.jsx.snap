@@ -67,7 +67,7 @@ exports[`Table should render a Table header and footer nodes 1`] = `
       asdf
     </p>
   }
-  isInteractiveElement={false}
+  setFocusOnContent={false}
 >
   <div
     aria-describedby="test-id"
@@ -820,7 +820,7 @@ exports[`Table should render a Table with simple footer 1`] = `
       />,
     ]
   }
-  isInteractiveElement={false}
+  setFocusOnContent={false}
 >
   <div
     aria-describedby="test-id"

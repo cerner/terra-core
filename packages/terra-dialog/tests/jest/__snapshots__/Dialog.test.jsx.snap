@@ -94,7 +94,7 @@ exports[`Dialog correctly applies the theme context className 1`] = `
               </div>
             </div>
           }
-          isInteractiveElement={false}
+          setFocusOnContent={false}
         >
           <div
             className="content-container-fill"
@@ -172,7 +172,7 @@ exports[`Dialog should render a Dialog with merged attributes 1`] = `
         </div>
       </div>
     }
-    isInteractiveElement={false}
+    setFocusOnContent={false}
   >
     <div
       className="dialog-body"
@@ -207,7 +207,7 @@ exports[`Dialog should render a default component 1`] = `
         </div>
       </div>
     }
-    isInteractiveElement={false}
+    setFocusOnContent={false}
   >
     <div
       className="dialog-body"
