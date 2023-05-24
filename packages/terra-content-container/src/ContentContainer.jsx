@@ -28,9 +28,10 @@ const propTypes = {
    */
   scrollRefCallback: PropTypes.func,
   /**
-   * Makes the content of the container interactive (only to be used when there are no interactive elements in the container)
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Sets focus on content when set to `true`. Focus on content helps in scrolling  within container when there is no interactive element to focus within container. 
    */
-  isInteractiveElement: PropTypes.bool,
+  setFocusOnContent: PropTypes.bool,
 };
 
 const defaultProps = {
