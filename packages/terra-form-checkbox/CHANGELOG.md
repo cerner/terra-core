@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Fixed issue with VO announcing group and legend multiple times.
+  * Fixed issue with VoiceOver announcing group and legend multiple times.
 
 ## 4.20.0 - (April 27, 2023)
 

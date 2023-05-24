@@ -567,7 +567,7 @@ exports[`should render an optional part on the label 1`] = `
 />
 `;
 
-exports[`should render checkbox field with div element for safari browser or Edg browser 1`] = `
+exports[`should render checkbox field with div element for Safari browser or Edg browser 1`] = `
 <checkboxField
   intl={
     Object {

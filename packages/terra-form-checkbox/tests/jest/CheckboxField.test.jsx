@@ -19,8 +19,8 @@ it('should render a default checkbox field', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render checkbox field with div element for safari browser or Edg browser', () => {
-  userAgentGetter.mockReturnValue('safari Edg');
+it('should render checkbox field with div element for Safari browser or Edg browser', () => {
+  userAgentGetter.mockReturnValue('Safari Edg');
   const wrapper = shallowWithIntl(<checkboxField legend="Coustom Message CheckboxField" />);
   expect(wrapper).toMatchSnapshot();
 });
