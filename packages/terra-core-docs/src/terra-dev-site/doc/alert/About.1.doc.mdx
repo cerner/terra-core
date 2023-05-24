@@ -19,7 +19,7 @@ import AlertPropsTable from 'terra-alert/src/Alert?dev-site-props-table';
 
 <Badge />
 
-# Terra Alert
+# Terra Alert (Notification Banner)
 
 The Terra Alert component is a notification banner that can be rendered in your application when there is information that you want to bring to the user's attention.
 
@@ -87,7 +87,7 @@ Please note: the `"alert"` role implicitly has aria-live value of `assertive` an
 
     <div aria-live="polite">
         {isOpen && (
-            <Alert>
+            <Alert type="success">
                 Meaningful alert content.
             </Alert>
         )}
@@ -105,7 +105,7 @@ Please note: the `"alert"` role implicitly has aria-live value of `assertive` an
 * [Localization Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#internationalization-i18n)
 
 ## Examples
-<AlertExample title="Default Notification Banner" />
+<AlertExample title="Alert Notification Banner" />
 <ErrorExample title="Error Notification Banner" />
 <WarningExample title="Warning Notification Banner" />
 <UnsatisfiedExample title="Unsatisfied Notification Banner" />
