@@ -29,7 +29,7 @@ const propTypes = {
   scrollRefCallback: PropTypes.func,
   /**
    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
-   * Sets focus on content when set to `true`. Focus on content helps in scrolling  within container when there is no interactive element to focus within container. 
+   * Sets focus on content when set to `true`. Focus on content helps in scrolling  within container when there is no interactive element to focus within container.
    */
   setFocusOnContent: PropTypes.bool,
 };
@@ -40,7 +40,7 @@ const defaultProps = {
   children: undefined,
   fill: false,
   scrollRefCallback: undefined,
-  isInteractiveElement: false,
+  setFocusOnContent: false,
 };
 
 const ContentContainer = ({
@@ -49,7 +49,7 @@ const ContentContainer = ({
   children,
   fill,
   scrollRefCallback,
-  isInteractiveElement,
+  setFocusOnContent,
   ...customProps
 }) => {
   const contentLayoutClassNames = cx([
@@ -61,7 +61,7 @@ const ContentContainer = ({
     <div {...customProps} className={contentLayoutClassNames}>
       {header && <div className={cx('header')}>{header}</div>}
       <div className={cx('main')}>
-        <Scroll className={cx('normalizer')} refCallback={scrollRefCallback} tabIndex={isInteractiveElement ? '0' : '-1'}>
+        <Scroll className={cx('normalizer')} refCallback={scrollRefCallback} tabIndex={setFocusOnContent ? '0' : '-1'}>
           {children}
         </Scroll>
       </div>

@@ -23,7 +23,7 @@ const contentfooter = <p>Please enter the name as per the official document</p>;
 
 const Container = () => (
   <div className={cx('content-container-fill')}>
-    <ContentContainer header={contentheader} footer={contentfooter} fill isInteractiveElement>
+    <ContentContainer header={contentheader} footer={contentfooter} fill setFocusOnContent>
       <div key="1">{display1}</div>
     </ContentContainer>
   </div>
