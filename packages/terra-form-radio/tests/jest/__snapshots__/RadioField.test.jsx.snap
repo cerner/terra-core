@@ -576,7 +576,7 @@ exports[`should render an optional part on the label 1`] = `
 />
 `;
 
-exports[`should render radio field with div element for safari browser or Edg browser 1`] = `
+exports[`should render radio field with div element for Safari browser or Edg browser 1`] = `
 <fieldset
   className="radio-field"
   required={false}
