@@ -14,8 +14,7 @@ Terra.describeViewports('Content Container', ['medium'], () => {
   it('displays Content Container with fill', () => {
     browser.url('/raw/tests/cerner-terra-core-docs/content-container/scrollable-content-container');
     Terra.validates.element('before scroll');
-    browser.keys(['Tab', 'ArrowDown','ArrowDown']);
+    browser.keys(['Tab', 'ArrowDown', 'ArrowDown']);
     Terra.validates.element('after scroll');
-
   });
 });
