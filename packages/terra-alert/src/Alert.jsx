@@ -205,7 +205,8 @@ const Alert = ({
 
   useEffect(() => {
     const isAlert = role === 'alert' || defaultRole === 'alert';
-    if (!disableAlertActionFocus && isAlert && action && alertRef?.current?.focus) {
+    // if the notification is an alert with an action element, focus the alert
+    if (isAlert && action && !disableAlertActionFocus && alertRef?.current?.focus) {
       alertRef.current.focus();
     }
 
