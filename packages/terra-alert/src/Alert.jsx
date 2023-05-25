@@ -209,8 +209,8 @@ const Alert = ({
       alertRef.current.focus();
     }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [alertRef.current]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <ResponsiveElement
