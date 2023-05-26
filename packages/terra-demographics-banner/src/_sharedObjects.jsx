@@ -26,11 +26,13 @@ const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
   }
 
   return (
-    <span className={cx('value')}>
-      {abbrTitle && (<VisuallyHiddenText text={abbrTitle} />)}
-      {valueLabelContent}
-      <span className={cx('value-text')}>{value}</span>
-    </span>
+    <div className={cx('value')}>
+      <dt className={cx('value-term')}>
+        {abbrTitle && (<VisuallyHiddenText text={abbrTitle} />)}
+        {valueLabelContent}
+      </dt>
+      <dd className={cx('value-text')}>{value}</dd>
+    </div>
   );
 };
 
