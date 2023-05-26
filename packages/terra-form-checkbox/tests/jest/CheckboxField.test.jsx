@@ -24,18 +24,18 @@ it('should render checkbox field with div element for Safari browser or Edg brow
   const wrapper = shallowWithIntl(<CheckboxField legend="Coustom Message CheckboxField" />);
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
-      className='checkbox-field'
+      className="checkbox-field"
     >
       <div
-        className='legend-group'
+        className="legend-group"
         id='terra-checkbox-field-description-1'
       >
         <div
-          className='legend'
+          className="legend"
         >
           Coustom Message CheckboxField
           <span
-            className='error-icon-hidden'
+            className="error-icon-hidden"
           />
         </div>
       </div>
@@ -48,18 +48,18 @@ it('should render checkbox field with legend element for Chrome browser', () => 
   const wrapper = shallowWithIntl(<CheckboxField legend="Coustom Message CheckboxField" />);
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
-      className='checkbox-field'
+      className="checkbox-field"
     >
       <legend
-        className='legend-group'
+        className="legend-group"
         id='terra-checkbox-field-description-2'
       >
         <div
-          className='legend'
+          className="legend"
         >
           Coustom Message CheckboxField
           <span
-            className='error-icon-hidden'
+            className="error-icon-hidden"
           />
         </div>
       </legend>
