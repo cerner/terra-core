@@ -22,13 +22,51 @@ it('should render a default radio field', () => {
 it('should render radio field with div element for Safari browser or Edg browser', () => {
   userAgentGetter.mockReturnValue('Safari Edg');
   const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />);
-  expect(wrapper.dive()).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchInlineSnapshot(`
+    <fieldset
+    className="radio-field"
+    required={false}
+    >
+      <div
+        className="legend-group"
+        id="terra-radio-field-description-1"
+      >
+        <div
+          className="legend"
+        >
+          Coustom Message RadioField
+          <span
+            className="error-icon-hidden"
+          />
+        </div>
+      </div>
+    </fieldset>
+  `);
 });
 
 it('should render radio field with legend element for Chrome browser', () => {
   userAgentGetter.mockReturnValue('Chrome');
   const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />);
-  expect(wrapper.dive()).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchInlineSnapshot(`
+    <fieldset
+    className="radio-field"
+    required={false}
+    >
+      <legend
+        className="legend-group"
+        id="terra-radio-field-description-2"
+      >
+        <div
+          className="legend"
+        >
+          Coustom Message RadioField
+          <span
+            className="error-icon-hidden"
+          />
+        </div>
+      </legend>
+    </fieldset>
+  `);
 });
 
 it('should render a default radio field if it has an undefined child', () => {
