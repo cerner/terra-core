@@ -3,7 +3,7 @@
   .content-container-static {
     display: flex;
     flex-direction: column;
-    
+
     // reset scroll styles to standard div defaults to handle stack/block style layout.
     // IE10 does not properly support 'initial', so we need to be explicit.
     > .main > .normalizer {
@@ -13,7 +13,7 @@
       width: auto;
     }
   }
-  
+
   .content-container-fill {
     display: flex;
     flex-direction: column;
@@ -35,6 +35,11 @@
 
       > .normalizer {
         position: absolute;
+      }
+
+      > .normalizer:focus {
+        outline: 2px dashed #000;
+        outline-offset: -2px;
       }
     }
   }
