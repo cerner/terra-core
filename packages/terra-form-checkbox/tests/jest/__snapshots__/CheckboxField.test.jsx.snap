@@ -567,46 +567,6 @@ exports[`should render an optional part on the label 1`] = `
 />
 `;
 
-exports[`should render checkbox field with div element for Safari browser or Edg browser 1`] = `
-<fieldset
-  className="checkbox-field"
->
-  <div
-    className="legend-group"
-    id="terra-checkbox-field-description-1"
-  >
-    <div
-      className="legend"
-    >
-      Coustom Message CheckboxField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </div>
-</fieldset>
-`;
-
-exports[`should render checkbox field with legend element for Chrome browser 1`] = `
-<fieldset
-  className="checkbox-field"
->
-  <legend
-    className="legend-group"
-    id="terra-checkbox-field-description-2"
-  >
-    <div
-      className="legend"
-    >
-      Coustom Message CheckboxField
-      <span
-        className="error-icon-hidden"
-      />
-    </div>
-  </legend>
-</fieldset>
-`;
-
 exports[`should render required checkbox field 1`] = `
 <CheckboxField
   error={null}

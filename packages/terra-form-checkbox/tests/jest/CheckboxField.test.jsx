@@ -22,13 +22,49 @@ it('should render a default checkbox field', () => {
 it('should render checkbox field with div element for Safari browser or Edg browser', () => {
   userAgentGetter.mockReturnValue('Safari Edg');
   const wrapper = shallowWithIntl(<CheckboxField legend="Coustom Message CheckboxField" />);
-  expect(wrapper.dive()).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchInlineSnapshot(`
+    <fieldset
+      className='checkbox-field'
+    >
+      <div
+        className='legend-group'
+        id='terra-checkbox-field-description-1'
+      >
+        <div
+          className='legend'
+        >
+          Coustom Message CheckboxField
+          <span
+            className='error-icon-hidden'
+          />
+        </div>
+      </div>
+    </fieldset>
+  `);
 });
 
 it('should render checkbox field with legend element for Chrome browser', () => {
   userAgentGetter.mockReturnValue('Chrome');
   const wrapper = shallowWithIntl(<CheckboxField legend="Coustom Message CheckboxField" />);
-  expect(wrapper.dive()).toMatchSnapshot();
+  expect(wrapper.dive()).toMatchInlineSnapshot(`
+    <fieldset
+      className='checkbox-field'
+    >
+      <legend
+        className='legend-group'
+        id='terra-checkbox-field-description-2'
+      >
+        <div
+          className='legend'
+        >
+          Coustom Message CheckboxField
+          <span
+            className='error-icon-hidden'
+          />
+        </div>
+      </legend>
+    </fieldset>
+  `);
 });
 
 
