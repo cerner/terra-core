@@ -114,8 +114,11 @@ const CheckboxField = (props) => {
   const errorAriaDescriptionId = error ? `terra-checkbox-field-description-error-${uniqueid()}` : '';
   const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
 
+
+  const isSafariOREdge = ((navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) || navigator.userAgent.indexOf('Edg') !== -1);
+  const Component = (isSafariOREdge) ? 'div' : 'legend';
   const legendGroup = (
-    <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+    <Component id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
       <div {...legendAttrs} className={legendClassNames}>
         {isInvalid && <span className={cx('error-icon')} />}
         {required && (isInvalid || !hideRequired) && (
@@ -132,7 +135,7 @@ const CheckboxField = (props) => {
           )}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
-    </legend>
+    </Component>
   );
 
   const content = React.Children.map(children, (child) => {
