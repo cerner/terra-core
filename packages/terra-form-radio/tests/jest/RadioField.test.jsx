@@ -24,8 +24,8 @@ it('should render radio field with div element for Safari browser or Edg browser
   const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />);
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
-    className="radio-field"
-    required={false}
+      className="radio-field"
+      required={false}
     >
       <div
         className="legend-group"
@@ -49,8 +49,8 @@ it('should render radio field with legend element for Chrome browser', () => {
   const wrapper = shallowWithIntl(<RadioField legend="Coustom Message RadioField" />);
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
-    className="radio-field"
-    required={false}
+      className="radio-field"
+      required={false}
     >
       <legend
         className="legend-group"
