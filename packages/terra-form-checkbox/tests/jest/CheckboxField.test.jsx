@@ -21,19 +21,19 @@ it('should render a default checkbox field', () => {
 
 it('should render checkbox field with div element for Safari browser or Edg browser', () => {
   userAgentGetter.mockReturnValue('Safari Edg');
-  const wrapper = shallowWithIntl(<CheckboxField legend="Coustom Message CheckboxField" />);
+  const wrapper = shallowWithIntl(<CheckboxField legend="Custom Message CheckboxField" />);
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
       className="checkbox-field"
     >
       <div
         className="legend-group"
-        id='terra-checkbox-field-description-1'
+        id="terra-checkbox-field-description-1"
       >
         <div
           className="legend"
         >
-          Coustom Message CheckboxField
+          Custom Message CheckboxField
           <span
             className="error-icon-hidden"
           />
@@ -45,19 +45,19 @@ it('should render checkbox field with div element for Safari browser or Edg brow
 
 it('should render checkbox field with legend element for Chrome browser', () => {
   userAgentGetter.mockReturnValue('Chrome');
-  const wrapper = shallowWithIntl(<CheckboxField legend="Coustom Message CheckboxField" />);
+  const wrapper = shallowWithIntl(<CheckboxField legend="Custom Message CheckboxField" />);
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
       className="checkbox-field"
     >
       <legend
         className="legend-group"
-        id='terra-checkbox-field-description-2'
+        id="terra-checkbox-field-description-2"
       >
         <div
           className="legend"
         >
-          Coustom Message CheckboxField
+          Custom Message CheckboxField
           <span
             className="error-icon-hidden"
           />
@@ -66,7 +66,6 @@ it('should render checkbox field with legend element for Chrome browser', () => 
     </fieldset>
   `);
 });
-
 
 it('should render a default checkbox field even if it has an undefined child', () => {
   const undefinedChild = undefined;

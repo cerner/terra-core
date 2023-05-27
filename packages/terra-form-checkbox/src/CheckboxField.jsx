@@ -114,7 +114,6 @@ const CheckboxField = (props) => {
   const errorAriaDescriptionId = error ? `terra-checkbox-field-description-error-${uniqueid()}` : '';
   const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
 
-
   const isSafariOREdge = ((navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) || navigator.userAgent.indexOf('Edg') !== -1);
   const Component = (isSafariOREdge) ? 'div' : 'legend';
   const legendGroup = (
