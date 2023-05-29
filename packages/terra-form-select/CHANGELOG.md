@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated role as `tab`for selected items for single-select.
+
 ## 6.41.0 - (May 9, 2023)
 
 * Added
