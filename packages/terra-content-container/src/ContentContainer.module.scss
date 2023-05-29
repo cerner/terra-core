@@ -1,4 +1,5 @@
 /* stylelint-disable selector-max-compound-selectors */
+
 :local {
   .content-container-static {
     display: flex;
@@ -35,11 +36,6 @@
 
       > .normalizer {
         position: absolute;
-      }
-
-      > .normalizer:focus {
-        outline: 2px dashed #000;
-        outline-offset: -2px;
       }
     }
   }
