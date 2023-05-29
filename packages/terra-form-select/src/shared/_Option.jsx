@@ -127,7 +127,7 @@ const Option = ({
 
   return (
     <li
-      role={role}
+      role={isSelected ? 'tab' : role}
       {...customProps}
       disabled={disabled}
       className={optionClassNames}

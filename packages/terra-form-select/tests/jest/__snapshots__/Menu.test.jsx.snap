@@ -86,7 +86,7 @@ exports[`Menu correctly applies the theme context className 1`] = `
         aria-activedescendant="terra-select-option-value"
         aria-label="Terra.form.select.menu"
         className="menu orion-fusion-theme"
-        role="listbox"
+        role="tablist"
         tabIndex="0"
       >
         <Option
@@ -121,7 +121,7 @@ exports[`Menu correctly applies the theme context className 1`] = `
             onMouseDown={[Function]}
             onMouseEnter={[Function]}
             onMouseUp={[Function]}
-            role="option"
+            role="tab"
             tabIndex="0"
           >
             <span
