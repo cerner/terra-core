@@ -22,7 +22,7 @@ const Scroll = ({
   refCallback,
   ...customProps
 }) => {
-  const theme = React.useContext(ThemeContext)
+  const theme = React.useContext(ThemeContext);
 
   return (
     <div {...customProps} className={cx(['scroll', customProps.className, theme.className])} ref={refCallback}>

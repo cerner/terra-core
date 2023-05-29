@@ -10,7 +10,7 @@
   }
 
   .scroll:focus {
-    outline: 2px dashed var(--terra-scroll-outline, #000);
+    outline: 2px dashed var(--terra-scroll-focus-outline, #000);
     outline-offset: -2px;
   }
 }
