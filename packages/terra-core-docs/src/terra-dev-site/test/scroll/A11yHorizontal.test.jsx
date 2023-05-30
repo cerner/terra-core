@@ -5,6 +5,8 @@ import styles from './DefaultTest.module.scss';
 
 const cx = classNames.bind(styles);
 
+// NOTE: This example has no WDIO tests relying on it, it is solely for A11y testing purposes.
+
 class DefaultScroll extends React.Component {
   constructor(props) {
     super(props);
