@@ -6,6 +6,7 @@ exports[`renders a banner that has basic information 1`] = `
   small={
     <_default
       age="24"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="March 30, 2017"
       dateOfBirthFullText="Date of Birth"
@@ -13,6 +14,7 @@ exports[`renders a banner that has basic information 1`] = `
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="F"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -30,6 +32,7 @@ exports[`renders a banner that has basic information 1`] = `
   tiny={
     <_default
       age="24"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="March 30, 2017"
       dateOfBirthFullText="Date of Birth"
@@ -37,6 +40,7 @@ exports[`renders a banner that has basic information 1`] = `
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="F"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -60,6 +64,7 @@ exports[`renders a blank banner properly 1`] = `
   small={
     <_default
       age="--"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
@@ -67,6 +72,7 @@ exports[`renders a blank banner properly 1`] = `
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -84,6 +90,7 @@ exports[`renders a blank banner properly 1`] = `
   tiny={
     <_default
       age="--"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
@@ -91,6 +98,7 @@ exports[`renders a blank banner properly 1`] = `
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -114,6 +122,7 @@ exports[`renders gestational date with a default label when the label is not pro
   small={
     <_default
       age="--"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
@@ -121,6 +130,7 @@ exports[`renders gestational date with a default label when the label is not pro
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
+      genderTitle="Gender"
       gestationalAge="April 5, 2016"
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -138,6 +148,7 @@ exports[`renders gestational date with a default label when the label is not pro
   tiny={
     <_default
       age="--"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
@@ -145,6 +156,7 @@ exports[`renders gestational date with a default label when the label is not pro
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
+      genderTitle="Gender"
       gestationalAge="April 5, 2016"
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -168,6 +180,7 @@ exports[`renders post menstrural date with a default label when the label is not
   small={
     <_default
       age="--"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
@@ -175,6 +188,7 @@ exports[`renders post menstrural date with a default label when the label is not
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -192,6 +206,7 @@ exports[`renders post menstrural date with a default label when the label is not
   tiny={
     <_default
       age="--"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="--"
       dateOfBirthFullText="Date of Birth"
@@ -199,6 +214,7 @@ exports[`renders post menstrural date with a default label when the label is not
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="--"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -222,6 +238,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
   small={
     <_default
       age="24"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="June 15, 2014"
       dateOfBirthFullText="Date of Birth"
@@ -229,6 +246,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       deceasedDate="March 30, 2017"
       deceasedDateLabel="Deceased"
       gender="F"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -246,6 +264,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
   tiny={
     <_default
       age="24"
+      ageTitle="Age"
       applicationContent={null}
       dateOfBirth="June 15, 2014"
       dateOfBirthFullText="Date of Birth"
@@ -253,6 +272,7 @@ exports[`renders the banner appropriately for a deceased person 1`] = `
       deceasedDate="March 30, 2017"
       deceasedDateLabel="Deceased"
       gender="F"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -276,6 +296,7 @@ exports[`renders the banner appropriately for a person with gestational and post
   small={
     <_default
       age="25 Years"
+      ageTitle="Age"
       applicationContent={
         <span
           className="risk-score"
@@ -300,6 +321,7 @@ exports[`renders the banner appropriately for a person with gestational and post
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="Male"
+      genderTitle="Gender"
       gestationalAge="April 5, 2016"
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -330,6 +352,7 @@ exports[`renders the banner appropriately for a person with gestational and post
   tiny={
     <_default
       age="25 Years"
+      ageTitle="Age"
       applicationContent={
         <span
           className="risk-score"
@@ -354,6 +377,7 @@ exports[`renders the banner appropriately for a person with gestational and post
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="Male"
+      genderTitle="Gender"
       gestationalAge="April 5, 2016"
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -390,6 +414,7 @@ exports[`renders the banner properly for a deceased person with additional appli
   small={
     <_default
       age="25 Years"
+      ageTitle="Age"
       applicationContent={
         <span
           className="risk-score"
@@ -414,6 +439,7 @@ exports[`renders the banner properly for a deceased person with additional appli
       deceasedDate="March 5, 2016"
       deceasedDateLabel="Deceased"
       gender="Male"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -444,6 +470,7 @@ exports[`renders the banner properly for a deceased person with additional appli
   tiny={
     <_default
       age="25 Years"
+      ageTitle="Age"
       applicationContent={
         <span
           className="risk-score"
@@ -468,6 +495,7 @@ exports[`renders the banner properly for a deceased person with additional appli
       deceasedDate="March 5, 2016"
       deceasedDateLabel="Deceased"
       gender="Male"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -504,6 +532,7 @@ exports[`renders the banner that contains additional information 1`] = `
   small={
     <_default
       age="25 Years"
+      ageTitle="Age"
       applicationContent={
         <span
           className="risk-score"
@@ -528,6 +557,7 @@ exports[`renders the banner that contains additional information 1`] = `
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="Male"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
@@ -558,6 +588,7 @@ exports[`renders the banner that contains additional information 1`] = `
   tiny={
     <_default
       age="25 Years"
+      ageTitle="Age"
       applicationContent={
         <span
           className="risk-score"
@@ -582,6 +613,7 @@ exports[`renders the banner that contains additional information 1`] = `
       deceasedDate={null}
       deceasedDateLabel="Deceased"
       gender="Male"
+      genderTitle="Gender"
       gestationalAge={null}
       gestationalAgeFullText="Gestational Age"
       gestationalAgeLabel="GA"
