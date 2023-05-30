@@ -42,6 +42,24 @@ Array [
 ]
 `;
 
+exports[`personDetails creates elements with age and gender titles for screen readers 1`] = `
+Array [
+  <DemographicsBannerValue
+    abbrTitle="Age"
+    value="25"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Gender"
+    value="Male"
+  />,
+  <DemographicsBannerValue
+    abbrTitle="Date of Birth"
+    label="DOB"
+    value="May 9, 1993"
+  />,
+]
+`;
+
 exports[`personDetails creates elements with all provided props 1`] = `
 Array [
   <DemographicsBannerValue

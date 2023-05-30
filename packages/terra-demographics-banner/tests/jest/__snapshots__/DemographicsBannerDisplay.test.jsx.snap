@@ -174,7 +174,7 @@ exports[`renders gestational date with a default label when the label is not pro
 />
 `;
 
-exports[`renders post menstrural date with a default label when the label is not provided 1`] = `
+exports[`renders post menstrual date with a default label when the label is not provided 1`] = `
 <ResponsiveElement
   responsiveTo="parent"
   small={
