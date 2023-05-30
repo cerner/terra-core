@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Corrected typo in `terra-demographics-banner` example doc.
+
 ## 1.27.0 - (May 9, 2023)
 
 * Removed 
