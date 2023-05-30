@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+ * Added terra-scroll A11y tests
+
 ## 1.27.0 - (May 9, 2023)
 
 * Removed 
