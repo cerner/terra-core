@@ -38,8 +38,16 @@ const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
 
 const personDetails = (props) => {
   const elements = [
-    <DemographicsBannerValue key="age" value={props.age} />,
-    <DemographicsBannerValue key="gender" value={props.gender} />,
+    <DemographicsBannerValue
+      key="age"
+      abbrTitle={props.ageTitle}
+      value={props.age}
+    />,
+    <DemographicsBannerValue
+      key="gender"
+      abbrTitle={props.genderTitle}
+      value={props.gender}
+    />,
     <DemographicsBannerValue
       key="dob"
       abbrTitle={props.dateOfBirthFullText}
