@@ -26,7 +26,7 @@ const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
   }
 
   return (
-    <div className={cx('value')} role="presentation">
+    <div className={cx('value')}>
       <dt className={cx('value-term')}>
         {abbrTitle && (<VisuallyHiddenText text={abbrTitle} />)}
         {valueLabelContent}

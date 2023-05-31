@@ -30,7 +30,6 @@ exports[`correctly applies the theme context className 1`] = `
             >
               <div
                 className="value"
-                role="presentation"
               >
                 <dt
                   className="value-term"
@@ -45,7 +44,6 @@ exports[`correctly applies the theme context className 1`] = `
             >
               <div
                 className="value"
-                role="presentation"
               >
                 <dt
                   className="value-term"
@@ -60,7 +58,6 @@ exports[`correctly applies the theme context className 1`] = `
             >
               <div
                 className="value"
-                role="presentation"
               >
                 <dt
                   className="value-term"
