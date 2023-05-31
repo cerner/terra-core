@@ -121,3 +121,14 @@ Please note: the `"alert"` role implicitly has aria-live value of `assertive` an
 
 ## Alert Props
 <AlertPropsTable />
+
+## Testing
+
+Terra Alert uses `uuid` to dynamically generate the component's description id. It can be mocked in Jest though `jest.mock`. An example is given below.
+
+If teams are using `shallow` for the tests then the mock is not required. But if the tests use `mount`, then the teams must use the mock as given below.
+
+```js
+const mockUUID = '00000000-0000-0000-0000-000000000000';
+jest.mock('uuid', () => ({ v4: () => mockUUID }));
+```
