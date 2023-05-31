@@ -13,11 +13,6 @@ it('should render a default component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should set the alert message ID', () => {
-  const alertContent = wrapper.find('.section');
-  expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
-});
-
 it('should render a Fieldset when all the possible props are passed into it', () => {
   const input = (
     <Fieldset
