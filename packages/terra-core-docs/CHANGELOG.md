@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+ * Updated Custom Icon + message + buttons example for `terra-status-view`.
+ * Updated `terra-status-view` Change Variant example component from HTML Native select to `terra-form-select` component.
+
 ## 1.27.0 - (May 9, 2023)
 
 * Removed 
