@@ -217,8 +217,8 @@ const Alert = ({
       // eslint-disable-next-line react/forbid-dom-props
       style={{
         position: 'absolute',
-        width: alertBodyRef.current ? emptyBodyWidth : 0,
-        height: alertBodyRef.current ? emptyBodyHeight : 0,
+        width: emptyBodyWidth || 0,
+        height: emptyBodyHeight || 0,
       }}
       tabIndex="-1"
     />
