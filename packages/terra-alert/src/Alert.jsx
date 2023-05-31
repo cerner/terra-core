@@ -137,10 +137,12 @@ const Alert = ({
 }) => {
   const theme = React.useContext(ThemeContext);
   const [isNarrow, setIsNarrow] = useState();
-  const alertRef = useRef(null);
+  const alertBodyRef = useRef(null);
+  const emptyBodyRef = useRef(null);
 
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const defaultRole = type === AlertTypes.ALERT ? 'alert' : 'status';
+  const isAlert = role === 'alert' || defaultRole === 'alert';
   const alertClassNames = classNames(
     cx(
       'alert-base',
@@ -158,6 +160,8 @@ const Alert = ({
     { 'body-std': !isNarrow || (isNarrow && !onDismiss && !action) },
     { 'body-narrow': isNarrow && (onDismiss || action) },
   );
+
+  const emptyBodyClassName = cx('empty-body');
 
   const alertId = uuidv4();
   const alertTitleId = `alert-title-${alertId}`;
@@ -203,11 +207,29 @@ const Alert = ({
     </div>
   );
 
+  // Empty element that outlines the notification content for visual focus
+  const emptyFocusableBody = (
+    <div
+      className={emptyBodyClassName}
+      ref={emptyBodyRef}
+      // eslint-disable-next-line react/forbid-dom-props
+      style={{
+        position: 'absolute',
+        width: alertBodyRef.current
+          ? alertBodyRef.current.offsetWidth
+          : 0,
+        height: alertBodyRef.current
+          ? alertBodyRef.current.offsetHeight
+          : 0,
+      }}
+      tabIndex="-1"
+    />
+  );
+
   useEffect(() => {
-    const isAlert = role === 'alert' || defaultRole === 'alert';
     // if the notification is an alert with an action element, focus the alert
-    if (isAlert && action && !disableAlertActionFocus && alertRef?.current?.focus) {
-      alertRef.current.focus();
+    if (isAlert && action && !disableAlertActionFocus && emptyBodyRef?.current?.focus) {
+      emptyBodyRef.current.focus();
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -227,9 +249,10 @@ const Alert = ({
         {...customProps}
         className={alertClassNames}
       >
-        <div className={bodyClassNameForParent} tabIndex="-1" ref={alertRef}>
+        <div className={bodyClassNameForParent} ref={alertBodyRef}>
           {getAlertIcon(type, customIcon)}
           {alertMessageContent}
+          {isAlert && action && emptyFocusableBody}
         </div>
         {actionsSection}
       </div>

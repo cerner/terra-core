@@ -46,12 +46,6 @@
     padding-top: 0;
   }
 
-  .body:focus-visible {
-    box-shadow: var(--terra-alert-focus-keyboard-box-shadow, none);
-    outline: var(--terra-alert-focus-keyboard-outline, 2px dashed #000);
-    outline-offset: var(--terra-alert-focus-keyboard-outline-offset, 1px);
-  }
-
   .body-narrow {
     margin-bottom: 0;
   }
@@ -59,6 +53,12 @@
   .body-std {
     margin-bottom: var(--terra-alert-std-margin-bottom, 0.7143rem);
     margin-right: var(--terra-alert-std-margin-right, 0.6667rem);
+  }
+
+  .empty-body:focus-visible {
+    box-shadow: var(--terra-alert-focus-keyboard-box-shadow, none);
+    outline: var(--terra-alert-focus-keyboard-outline, 2px dashed #000);
+    outline-offset: var(--terra-alert-focus-keyboard-outline-offset, 1px);
   }
 
   .section {

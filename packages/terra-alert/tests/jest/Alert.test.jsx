@@ -30,10 +30,8 @@ describe('Alert with no props', () => {
     const wrapper = shallowWithIntl(<Alert />).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
-    const alertContentDiv = wrapper.find('div.body');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
     expect(alertDiv.prop('role')).toEqual('alert');
-    expect(alertContentDiv.prop('tabIndex')).toEqual('-1');
     expect(wrapper.find(IconAlert).length).toEqual(1);
     expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
     expect(wrapper).toMatchSnapshot();
@@ -81,6 +79,23 @@ describe('Alert of type alert with text content', () => {
     const alertDiv = wrapper.find('div.alert-base');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
     expect(alertDiv.prop('role')).toEqual('alert');
+    expect(wrapper.find(IconAlert).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+
+describe('Notification banner of type alert with action element', () => {
+  it('should render with empty body div to focus', () => {
+    const action = <Button />;
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.ALERT} action={action}>This is a test</Alert>).dive();
+
+    const alertDiv = wrapper.find('div.alert-base');
+    const emptyBodyDiv = wrapper.find('div.empty-body');
+    expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
+    expect(alertDiv.prop('role')).toEqual('alert');
+    expect(emptyBodyDiv.length).toEqual(1);
+    expect(emptyBodyDiv.prop('tabIndex')).toEqual('-1');
     expect(wrapper.find(IconAlert).length).toEqual(1);
     expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
     expect(wrapper).toMatchSnapshot();

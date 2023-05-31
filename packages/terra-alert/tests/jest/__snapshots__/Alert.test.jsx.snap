@@ -11,7 +11,6 @@ exports[`Alert of type advisory with text content should render an Alert compone
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <div
         className="section"
@@ -41,7 +40,6 @@ exports[`Alert of type alert with text content should render an Alert component 
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -79,7 +77,6 @@ exports[`Alert of type custom with custom title and text content should render a
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -117,7 +114,6 @@ exports[`Alert of type error with text content should render an Alert component 
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -195,7 +191,6 @@ exports[`Alert of type info with text content should render an Alert component o
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -233,7 +228,6 @@ exports[`Alert of type success with an action button text content should render 
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -286,7 +280,6 @@ exports[`Alert of type success with text content should render an Alert componen
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -324,7 +317,6 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon unsatisfied-icon"
@@ -362,7 +354,6 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon unverified-icon"
@@ -400,7 +391,6 @@ exports[`Alert of type warning with text content should render an Alert componen
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -499,7 +489,6 @@ exports[`Alert with no props should render a default component 1`] = `
       >
         <div
           className="body body-std"
-          tabIndex="-1"
         >
           <span
             className="icon"
@@ -568,7 +557,6 @@ exports[`Alert with no props should render a default notification banner with de
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -605,7 +593,6 @@ exports[`Alert with props should render an alert with provided role 1`] = `
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -704,7 +691,6 @@ exports[`Alert with props should render disableAlertActionFocus when provided 1`
       >
         <div
           className="body body-std"
-          tabIndex="-1"
         >
           <span
             className="icon"
@@ -773,7 +759,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -838,7 +823,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -881,6 +865,67 @@ exports[`Dismissible Alert that includes actions section should render an alert 
 </ResponsiveElement>
 `;
 
+exports[`Notification banner of type alert with action element should render with empty body div to focus 1`] = `
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
+>
+  <div
+    className="alert-base alert wide"
+    role="alert"
+  >
+    <div
+      className="body body-std"
+    >
+      <span
+        className="icon"
+      >
+        <IconAlert
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </span>
+      <div
+        className="section"
+        id="alert-message-00000000-0000-0000-0000-000000000000"
+      >
+        <strong
+          className="title"
+          id="alert-title-00000000-0000-0000-0000-000000000000"
+        >
+          Terra.alert.alert
+        </strong>
+        This is a test
+      </div>
+      <div
+        className="empty-body"
+        style={
+          Object {
+            "height": 0,
+            "position": "absolute",
+            "width": 0,
+          }
+        }
+        tabIndex="-1"
+      />
+    </div>
+    <div
+      className="actions"
+    >
+      <Button
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={false}
+        isReversed={false}
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  </div>
+</ResponsiveElement>
+`;
+
 exports[`correctly applies the theme context className 1`] = `
 <Fragment>
   <div />
@@ -890,7 +935,6 @@ exports[`correctly applies the theme context className 1`] = `
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
