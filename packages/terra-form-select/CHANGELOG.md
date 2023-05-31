@@ -1,5 +1,8 @@
 # Changelog
 
+* Changed
+  * Removed aria-checked to make screen readers announce Selected.
+
 ## Unreleased
 
 ## 6.41.0 - (May 9, 2023)
