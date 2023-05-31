@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Locked `uuid` to `v8` to maintain IE compatibility.
+
 ## 4.68.0 - (May 9, 2023)
 
 * Changed
