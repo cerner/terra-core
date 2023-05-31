@@ -5,6 +5,9 @@
 * Changed
   * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
 
+* Added
+  * Added testing sections to `terra-alert` and `terra-form-fieldset` documentation.
+
 ## 1.27.0 - (May 9, 2023)
 
 * Removed 
