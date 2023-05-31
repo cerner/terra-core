@@ -4,13 +4,19 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 import Fieldset from '../../src/Fieldset';
 
+const mockUUID = '00000000-0000-0000-0000-000000000000';
+jest.mock('uuid', () => ({ v4: () => mockUUID }));
+
 it('should render a default component', () => {
   const field = (<Fieldset />);
   const wrapper = shallow(field);
   expect(wrapper).toMatchSnapshot();
 });
 
-jest.mock('uuid/v4', () => () => '00000000-0000-0000-0000-000000000000');
+it('should set the alert message ID', () => {
+  const alertContent = wrapper.find('.section');
+  expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
+});
 
 it('should render a Fieldset when all the possible props are passed into it', () => {
   const input = (
@@ -26,7 +32,11 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   );
 
   const wrapper = shallow(input);
+
+  const legend = wrapper.find('.healtheintent-legend');
+  expect(legend.prop('id')).toEqual(`terra-fieldset-legend-${mockUUID}`);
   expect(wrapper).toMatchSnapshot();
+  
 });
 
 it('should render a Fieldset without legend and helptext', () => {
