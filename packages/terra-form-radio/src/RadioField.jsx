@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
@@ -6,6 +6,10 @@ import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import uniqueid from 'lodash.uniqueid';
 import VisualyHiddenText from 'terra-visually-hidden-text';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import {
+  VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT,
+} from 'keycode-js';
 import styles from './RadioField.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -94,6 +98,7 @@ const RadioField = (props) => {
   } = props;
 
   const theme = React.useContext(ThemeContext);
+  const [radioItems, setRadioItems] = useState([]);
 
   const radioFieldClasses = classNames(
     cx(
@@ -109,14 +114,20 @@ const RadioField = (props) => {
     legendAttrs.className,
   ]);
 
+  const feildSetId = `terra-radio-group-${uniqueid()}`;
   const legendAriaDescriptionId = `terra-radio-field-description-${uniqueid()}`;
   const helpAriaDescriptionId = help ? `terra-radio-field-description-help-${uniqueid()}` : '';
   const errorAriaDescriptionId = error ? `terra-radio-field-description-error-${uniqueid()}` : '';
   const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
-  const isSafariOREdge = ((navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) || navigator.userAgent.indexOf('Edg') !== -1);
-  const Component = (isSafariOREdge) ? 'div' : 'legend';
+
+  useEffect(() => {
+    const radioGroup = document.getElementById(feildSetId);
+    setRadioItems(radioGroup.querySelectorAll('[type=radio]'));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const legendGroup = (
-    <Component id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+    <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
       <div {...legendAttrs} className={legendClassNames}>
         {isInvalid && <span className={cx('error-icon')} />}
         {required && (isInvalid || !hideRequired) && (
@@ -133,13 +144,36 @@ const RadioField = (props) => {
           )}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
-    </Component>
+    </legend>
   );
+
+  const handleKeyDown = (event) => {
+    const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
+    if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
+      if (itemIndex === radioItems.length - 1) {
+        radioItems[0].focus();
+        radioItems[0].checked = true;
+      } else {
+        radioItems[itemIndex + 1].focus();
+        radioItems[itemIndex + 1].checked = true;
+      }
+    } else if (event.key === VALUE_UP || event.key === VALUE_LEFT) {
+      if (itemIndex === 0) {
+        radioItems[radioItems.length - 1].focus();
+        radioItems[radioItems.length - 1].checked = true;
+      } else {
+        radioItems[itemIndex - 1].focus();
+        radioItems[itemIndex - 1].checked = true;
+      }
+    }
+  };
 
   const content = React.Children.map(children, (child) => {
     if (child && child.type.isRadio) {
       return React.cloneElement(child, {
-        inputAttrs: { ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds },
+        inputAttrs: {
+          ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds, onKeyDown: handleKeyDown,
+        },
       });
     }
 
@@ -147,7 +181,7 @@ const RadioField = (props) => {
   });
 
   return (
-    <fieldset {...customProps} required={required} className={radioFieldClasses}>
+    <fieldset id={feildSetId} {...customProps} required={required} className={radioFieldClasses}>
       {legendGroup}
       {content}
       {isInvalid && error && <div id={errorAriaDescriptionId} className={cx('error-text')}>{error}</div>}
