@@ -38,7 +38,6 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   expect(inputTag.prop('aria-labelledby')).toEqual(`terra-fieldset-legend-${mockUUID} terra-fieldset-help-${mockUUID}`);
 
   expect(wrapper).toMatchSnapshot();
-  
 });
 
 it('should render a Fieldset without legend and helptext', () => {
