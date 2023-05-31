@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
@@ -139,6 +139,8 @@ const Alert = ({
   const [isNarrow, setIsNarrow] = useState();
   const alertBodyRef = useRef(null);
   const emptyBodyRef = useRef(null);
+  const [emptyBodyHeight, setEmptyBodyHeight] = useState(null);
+  const [emptyBodyWidth, setEmptyBodyWidth] = useState(null);
 
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const defaultRole = type === AlertTypes.ALERT ? 'alert' : 'status';
@@ -215,25 +217,23 @@ const Alert = ({
       // eslint-disable-next-line react/forbid-dom-props
       style={{
         position: 'absolute',
-        width: alertBodyRef.current
-          ? alertBodyRef.current.offsetWidth
-          : 0,
-        height: alertBodyRef.current
-          ? alertBodyRef.current.offsetHeight
-          : 0,
+        width: alertBodyRef.current ? emptyBodyWidth : 0,
+        height: alertBodyRef.current ? emptyBodyHeight : 0,
       }}
       tabIndex="-1"
     />
   );
 
-  useEffect(() => {
-    // if the notification is an alert with an action element, focus the alert
+  useLayoutEffect(() => {
+    const { width: alertWidth, height: alertHeight } = alertBodyRef.current.getBoundingClientRect();
+    setEmptyBodyHeight(alertHeight);
+    setEmptyBodyWidth(alertWidth);
     if (isAlert && action && !disableAlertActionFocus && emptyBodyRef?.current?.focus) {
+      // if the notification is an alert with an action element, focus the alert
       emptyBodyRef.current.focus();
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [emptyBodyHeight, emptyBodyWidth]);
 
   return (
     <ResponsiveElement
