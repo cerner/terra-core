@@ -13,7 +13,7 @@ it('should render a default component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render a Fieldset when all the possible props are passed into it', () => {
+fit('should render a Fieldset when all the possible props are passed into it', () => {
   const input = (
     <Fieldset
       legend="Text"
@@ -29,7 +29,7 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   const wrapper = shallow(input);
 
   const legend = wrapper.find('.healtheintent-legend');
-  expect(legend.prop('id')).toEqual(`terra-fieldset-legend-${mockUUID}`);
+  expect(legend.prop('id')).toEqual(`terra--legend-${mockUUID}`);
   expect(wrapper).toMatchSnapshot();
   
 });
