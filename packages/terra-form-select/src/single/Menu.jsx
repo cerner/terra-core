@@ -449,7 +449,7 @@ class Menu extends React.Component {
        */
       <ul
         id={id}
-        role="tablist"
+        role={SharedUtil.isSafari ? "listbox" : "tablist"}
         className={cx('menu', theme.className)}
         aria-label={intl.formatMessage({ id: 'Terra.form.select.menu' })}
         ref={(menu) => {
