@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
@@ -138,9 +138,6 @@ const Alert = ({
   const theme = React.useContext(ThemeContext);
   const [isNarrow, setIsNarrow] = useState();
   const alertBodyRef = useRef(null);
-  const emptyBodyRef = useRef(null);
-  const [emptyBodyHeight, setEmptyBodyHeight] = useState(null);
-  const [emptyBodyWidth, setEmptyBodyWidth] = useState(null);
 
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const defaultRole = type === AlertTypes.ALERT ? 'alert' : 'status';
@@ -162,8 +159,6 @@ const Alert = ({
     { 'body-std': !isNarrow || (isNarrow && !onDismiss && !action) },
     { 'body-narrow': isNarrow && (onDismiss || action) },
   );
-
-  const emptyBodyClassName = cx('empty-body');
 
   const alertId = uuidv4();
   const alertTitleId = `alert-title-${alertId}`;
@@ -209,31 +204,14 @@ const Alert = ({
     </div>
   );
 
-  // Empty element that outlines the notification content for visual focus
-  const emptyFocusableBody = (
-    <div
-      className={emptyBodyClassName}
-      ref={emptyBodyRef}
-      // eslint-disable-next-line react/forbid-dom-props
-      style={{
-        position: 'absolute',
-        width: emptyBodyWidth || 0,
-        height: emptyBodyHeight || 0,
-      }}
-      tabIndex="-1"
-    />
-  );
-
-  useLayoutEffect(() => {
-    const { width: alertWidth, height: alertHeight } = alertBodyRef.current.getBoundingClientRect();
-    setEmptyBodyHeight(alertHeight);
-    setEmptyBodyWidth(alertWidth);
-    if (isAlert && action && !disableAlertActionFocus && emptyBodyRef?.current?.focus) {
-      // if the notification is an alert with an action element, focus the alert
-      emptyBodyRef.current.focus();
+  useEffect(() => {
+    // if the notification is an alert with an action element, focus the alert
+    if (isAlert && action && !disableAlertActionFocus && alertBodyRef?.current?.focus) {
+      alertBodyRef.current.focus();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [emptyBodyHeight, emptyBodyWidth]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <ResponsiveElement
@@ -249,10 +227,9 @@ const Alert = ({
         {...customProps}
         className={alertClassNames}
       >
-        <div className={bodyClassNameForParent} ref={alertBodyRef}>
+        <div className={bodyClassNameForParent} ref={alertBodyRef} tabIndex="-1">
           {getAlertIcon(type, customIcon)}
           {alertMessageContent}
-          {isAlert && action && emptyFocusableBody}
         </div>
         {actionsSection}
       </div>
