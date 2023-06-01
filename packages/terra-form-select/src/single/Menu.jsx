@@ -161,8 +161,9 @@ class Menu extends React.Component {
     this.clearSearch();
     this.clearScrollTimeout();
     if (this.state.closedViaKeyEvent) {
-      if (!SharedUtil.isSafari()){this.props.select.focus();}
-      else {
+      if (!SharedUtil.isSafari()) {
+        this.props.select.focus();
+      } else {
         /**
          * Shifting focus back to the select specifically
          * when VoiceOver is on will sometimes trigger VO to shift focus
@@ -260,10 +261,9 @@ class Menu extends React.Component {
     }
 
     if (select) {
-    if (!SharedUtil.isSafari()){
-      
-      select.focus();}
-      else {
+      if (!SharedUtil.isSafari()) {
+        select.focus();
+      } else {
         /**
          * Shifting focus back to the select specifically
          * when VoiceOver is on will sometimes trigger VO to shift focus
