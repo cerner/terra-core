@@ -59,14 +59,14 @@ const ContentContainer = ({
 
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      {header && <div className={cx('header')}>{header}</div>}
+      {header && <div className={cx('header', { focusoncontainer: setFocusOnContainer })}>{header}</div>}
       {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
       <div className={cx('main')} role="region">
-        <Scroll className={cx('normalizer')} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
+        <Scroll className={cx('normalizer', { focusoncontainer: setFocusOnContainer })} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
           {children}
         </Scroll>
       </div>
-      {footer && <div className={cx('footer')}>{footer}</div>}
+      {footer && <div className={cx('footer', { focusoncontainer: setFocusOnContainer })}>{footer}</div>}
     </div>
   );
 };
