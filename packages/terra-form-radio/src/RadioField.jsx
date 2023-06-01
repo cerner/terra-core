@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
@@ -98,7 +98,6 @@ const RadioField = (props) => {
   } = props;
 
   const theme = React.useContext(ThemeContext);
-  const [radioItems, setRadioItems] = useState([]);
 
   const radioFieldClasses = classNames(
     cx(
@@ -119,12 +118,6 @@ const RadioField = (props) => {
   const helpAriaDescriptionId = help ? `terra-radio-field-description-help-${uniqueid()}` : '';
   const errorAriaDescriptionId = error ? `terra-radio-field-description-error-${uniqueid()}` : '';
   const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
-
-  useEffect(() => {
-    const radioGroup = document.getElementById(feildSetId);
-    setRadioItems(radioGroup.querySelectorAll('[type=radio]'));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const legendGroup = (
     <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
@@ -148,6 +141,8 @@ const RadioField = (props) => {
   );
 
   const handleKeyDown = (event) => {
+    const radioGroup = document.getElementById(feildSetId);
+    const radioItems = radioGroup.querySelectorAll('[type=radio]');
     const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
     if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
       if (itemIndex === radioItems.length - 1) {
