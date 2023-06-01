@@ -28,13 +28,13 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   const wrapper = shallow(input);
 
   const legendTag = wrapper.find('.healtheintent-legend');
-  expect(legendTag.prop('id')).toEqual(`terra-fieldset-legend-00000000-0000-0000-0000-000000000000`);
+  expect(legendTag.prop('id')).toEqual('terra-fieldset-legend-00000000-0000-0000-0000-000000000000');
 
   const smallTag = wrapper.find('.help-text');
-  expect(smallTag.prop('id')).toEqual(`terra-fieldset-help-00000000-0000-0000-0000-000000000000`);
+  expect(smallTag.prop('id')).toEqual('terra-fieldset-help-00000000-0000-0000-0000-000000000000');
 
   const inputTag = wrapper.find('.fieldset-children > input');
-  expect(inputTag.prop('aria-labelledby')).toEqual(`terra-fieldset-legend-00000000-0000-0000-0000-000000000000 terra-fieldset-help-00000000-0000-0000-0000-000000000000`);
+  expect(inputTag.prop('aria-labelledby')).toEqual('terra-fieldset-legend-00000000-0000-0000-0000-000000000000 terra-fieldset-help-00000000-0000-0000-0000-000000000000');
 
   expect(wrapper).toMatchSnapshot();
 });

@@ -234,12 +234,12 @@ describe('Dismissible Alert', () => {
     });
     it('should set the alert message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the dismiss button aria-describedby to the alert description', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
   });
 
@@ -259,17 +259,17 @@ describe('Dismissible Alert', () => {
 
     it('should set the alert message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the alert title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
+      expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the dismiss button aria-describedby to the alert title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
   });
 
@@ -287,17 +287,17 @@ describe('Dismissible Alert', () => {
 
     it('should set the alert message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the alert title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
+      expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the dismiss button aria-describedby to the alert title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
   });
 
@@ -321,17 +321,17 @@ describe('Dismissible Alert', () => {
 
     it('should set the alert message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the alert title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
+      expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the dismiss button aria-describedby to the alert title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
   });
 });
