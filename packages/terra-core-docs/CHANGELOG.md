@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+ * Added terra-scroll A11y tests.
+
 * Changed
   * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
 
