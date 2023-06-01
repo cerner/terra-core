@@ -12,8 +12,7 @@ import IconWarning from 'terra-icon/lib/icon/IconWarning';
 import Button from 'terra-button';
 import Alert from '../../src/Alert';
 
-const mockUUID = '00000000-0000-0000-0000-000000000000';
-jest.mock('uuid', () => ({ v4: () => mockUUID }));
+jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
 
 describe('Alert with no props', () => {
   it('should render a default component', () => {
@@ -235,12 +234,12 @@ describe('Dismissible Alert', () => {
     });
     it('should set the alert message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
+      expect(alertContent.prop('id')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
     });
 
     it('should set the dismiss button aria-describedby to the alert description', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-message-${mockUUID}`);
+      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
     });
   });
 
@@ -260,17 +259,17 @@ describe('Dismissible Alert', () => {
 
     it('should set the alert message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
+      expect(alertContent.prop('id')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
     });
 
     it('should set the alert title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUUID}`);
+      expect(alertTitle.prop('id')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
     });
 
     it('should set the dismiss button aria-describedby to the alert title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUUID}`);
+      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
     });
   });
 
@@ -288,17 +287,17 @@ describe('Dismissible Alert', () => {
 
     it('should set the alert message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
+      expect(alertContent.prop('id')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
     });
 
     it('should set the alert title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUUID}`);
+      expect(alertTitle.prop('id')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
     });
 
     it('should set the dismiss button aria-describedby to the alert title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUUID}`);
+      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
     });
   });
 
@@ -322,17 +321,17 @@ describe('Dismissible Alert', () => {
 
     it('should set the alert message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUUID}`);
+      expect(alertContent.prop('id')).toEqual(`alert-message-00000000-0000-0000-0000-000000000000`);
     });
 
     it('should set the alert title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUUID}`);
+      expect(alertTitle.prop('id')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
     });
 
     it('should set the dismiss button aria-describedby to the alert title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUUID}`);
+      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-00000000-0000-0000-0000-000000000000`);
     });
   });
 });

@@ -4,8 +4,7 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 import Fieldset from '../../src/Fieldset';
 
-const mockUUID = '00000000-0000-0000-0000-000000000000';
-jest.mock('uuid', () => ({ v4: () => mockUUID }));
+jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
 
 it('should render a default component', () => {
   const field = (<Fieldset />);
@@ -29,13 +28,13 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   const wrapper = shallow(input);
 
   const legendTag = wrapper.find('.healtheintent-legend');
-  expect(legendTag.prop('id')).toEqual(`terra-fieldset-legend-${mockUUID}`);
+  expect(legendTag.prop('id')).toEqual(`terra-fieldset-legend-00000000-0000-0000-0000-000000000000`);
 
   const smallTag = wrapper.find('.help-text');
-  expect(smallTag.prop('id')).toEqual(`terra-fieldset-help-${mockUUID}`);
+  expect(smallTag.prop('id')).toEqual(`terra-fieldset-help-00000000-0000-0000-0000-000000000000`);
 
   const inputTag = wrapper.find('.fieldset-children > input');
-  expect(inputTag.prop('aria-labelledby')).toEqual(`terra-fieldset-legend-${mockUUID} terra-fieldset-help-${mockUUID}`);
+  expect(inputTag.prop('aria-labelledby')).toEqual(`terra-fieldset-legend-00000000-0000-0000-0000-000000000000 terra-fieldset-help-00000000-0000-0000-0000-000000000000`);
 
   expect(wrapper).toMatchSnapshot();
 });
