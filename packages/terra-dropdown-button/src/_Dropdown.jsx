@@ -27,10 +27,6 @@ const propTypes = {
    */
   width: PropTypes.string,
   /**
-   * Whether or not dropdown is opened using keyboard.
-   */
-  openedViaKeyboard: PropTypes.bool,
-  /**
    * Callback for reference of the dropdown button
    */
   buttonRef: PropTypes.func,
@@ -45,33 +41,46 @@ const propTypes = {
 };
 
 const Dropdown = ({
-  requestClose, isOpen, targetRef, children, width, openedViaKeyboard, buttonRef, refCallback, getSelectedOptionText,
-}) => (
-  <Hookshot
-    isOpen={isOpen}
-    isEnabled
-    targetRef={targetRef}
-    attachmentBehavior="flip"
-    contentAttachment={{ vertical: 'top', horizontal: 'start' }}
-    targetAttachment={{ vertical: 'bottom', horizontal: 'start' }}
-  >
-    <Hookshot.Content
-      onEsc={requestClose}
-      onOutsideClick={requestClose}
+  requestClose, isOpen, targetRef, children, width, buttonRef, refCallback, getSelectedOptionText,
+}) => {
+  if (isOpen) {
+    buttonRef().setAttribute('role', 'presentation');
+    buttonRef().setAttribute('aria-hidden', 'true');
+  }
+
+  const onRequestClose = () => {
+    buttonRef().removeAttribute('role');
+    buttonRef().removeAttribute('aria-hidden');
+    requestClose();
+  };
+
+  return (
+    <Hookshot
+      isOpen={isOpen}
+      isEnabled
+      targetRef={targetRef}
+      attachmentBehavior="flip"
+      contentAttachment={{ vertical: 'top', horizontal: 'start' }}
+      targetAttachment={{ vertical: 'bottom', horizontal: 'start' }}
     >
-      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, initialFocus: openedViaKeyboard ? '' : buttonRef, clickOutsideDeactivates: true }}>
-        <DropdownList
-          requestClose={requestClose}
-          width={width}
-          refCallback={refCallback}
-          getSelectedOptionText={getSelectedOptionText}
-        >
-          {children}
-        </DropdownList>
-      </FocusTrap>
-    </Hookshot.Content>
-  </Hookshot>
-);
+      <Hookshot.Content
+        onEsc={onRequestClose}
+        onOutsideClick={onRequestClose}
+      >
+        <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, clickOutsideDeactivates: true }}>
+          <DropdownList
+            requestClose={onRequestClose}
+            width={width}
+            refCallback={refCallback}
+            getSelectedOptionText={getSelectedOptionText}
+          >
+            {children}
+          </DropdownList>
+        </FocusTrap>
+      </Hookshot.Content>
+    </Hookshot>
+  );
+};
 
 Dropdown.propTypes = propTypes;
 
