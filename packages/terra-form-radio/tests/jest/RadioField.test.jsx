@@ -1,35 +1,41 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+import uniqueid from 'lodash.uniqueid';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import RadioField from '../../src/RadioField';
 import Radio from '../../src/Radio';
 
+jest.mock('lodash.uniqueid');
 window.matchMedia = () => ({ matches: true });
 
 let userAgentGetter;
 beforeEach(() => {
   userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
+  uniqueid.mockImplementation(() => 'uuid123');
 });
 
 it('should render a default radio field', () => {
-  const radioField = (<RadioField legend="Default RadioField" />);
+  const radioField = <RadioField legend="Default RadioField" />;
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render radio field with div element for Safari browser or Edg browser', () => {
   userAgentGetter.mockReturnValue('Safari Edg');
-  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />);
+  const wrapper = shallowWithIntl(
+    <RadioField legend="Custom Message RadioField" />,
+  );
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
       className="radio-field"
+      id="terra-radio-group-uuid123"
       required={false}
     >
-      <div
+      <legend
         className="legend-group"
-        id="terra-radio-field-description-1"
+        id="terra-radio-field-description-uuid123"
       >
         <div
           className="legend"
@@ -39,22 +45,25 @@ it('should render radio field with div element for Safari browser or Edg browser
             className="error-icon-hidden"
           />
         </div>
-      </div>
+      </legend>
     </fieldset>
   `);
 });
 
 it('should render radio field with legend element for Chrome browser', () => {
   userAgentGetter.mockReturnValue('Chrome');
-  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />);
+  const wrapper = shallowWithIntl(
+    <RadioField legend="Custom Message RadioField" />,
+  );
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
       className="radio-field"
+      id="terra-radio-group-uuid123"
       required={false}
     >
       <legend
         className="legend-group"
-        id="terra-radio-field-description-2"
+        id="terra-radio-field-description-uuid123"
       >
         <div
           className="legend"
@@ -71,55 +80,84 @@ it('should render radio field with legend element for Chrome browser', () => {
 
 it('should render a default radio field if it has an undefined child', () => {
   const undefinedChild = undefined;
-  const radioField = (<RadioField legend="Default RadioField">{ undefinedChild }</RadioField>);
+  const radioField = (
+    <RadioField legend="Default RadioField">{undefinedChild}</RadioField>
+  );
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an invalid radio field', () => {
-  const radioField = (<RadioField legend="Invalid RadioField" isInvalid error="Test Error" />);
+  const radioField = (
+    <RadioField legend="Invalid RadioField" isInvalid error="Test Error" />
+  );
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a help message', () => {
-  const radioField = (<RadioField legend="Help RadioField" help="This will help up determine how many chairs to request" />);
+  const radioField = (
+    <RadioField
+      legend="Help RadioField"
+      help="This will help up determine how many chairs to request"
+    />
+  );
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an optional part on the label', () => {
-  const radioField = (<RadioField legend="Optional RadioField" showOptional />);
+  const radioField = <RadioField legend="Optional RadioField" showOptional />;
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render required radio field', () => {
-  const radioField = (<RadioField legend="Required RadioField" required />);
+  const radioField = <RadioField legend="Required RadioField" required />;
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should hide the required indicator when requested', () => {
-  const radioField = (<RadioField legend="Hidden Required RadioField" required hideRequired />);
+  const radioField = (
+    <RadioField legend="Hidden Required RadioField" required hideRequired />
+  );
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render the legend with custom attributes properly', () => {
-  const radioField = (<RadioField legend="Custom Legend RadioField" legendAttrs={{ class: 'application-legend' }} />);
+  const radioField = (
+    <RadioField
+      legend="Custom Legend RadioField"
+      legendAttrs={{ class: 'application-legend' }}
+    />
+  );
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should display the required icon for fields with hideRequired, but have a state of invalid', () => {
-  const checkBox = (<RadioField legend="Hidden Required CheckboxField" required hideRequired isInvalid />);
+  const checkBox = (
+    <RadioField
+      legend="Hidden Required CheckboxField"
+      required
+      hideRequired
+      isInvalid
+    />
+  );
   const wrapper = shallowWithIntl(checkBox);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should hide the legend when requested', () => {
-  const radioField = (<RadioField legend="Hidden Legend legend" legendAttrs={{ class: 'application-legend' }} isLegendHidden />);
+  const radioField = (
+    <RadioField
+      legend="Hidden Legend legend"
+      legendAttrs={{ class: 'application-legend' }}
+      isLegendHidden
+    />
+  );
   const wrapper = shallowWithIntl(radioField);
   expect(wrapper).toMatchSnapshot();
 });

@@ -72,12 +72,12 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
   >
     <fieldset
       className="radio-field"
-      id="terra-radio-group-7"
+      id="terra-radio-group-uuid123"
       required={false}
     >
       <legend
         className="legend-group"
-        id="terra-radio-field-description-8"
+        id="terra-radio-field-description-uuid123"
       >
         <div
           className="legend"
@@ -92,7 +92,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
         disabled={false}
         inputAttrs={
           Object {
-            "aria-describedby": "terra-radio-field-description-8  ",
+            "aria-describedby": "terra-radio-field-description-uuid123  ",
             "data-custom-attr": "attr data",
             "onKeyDown": [Function],
           }
@@ -111,7 +111,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
             className="label"
           >
             <input
-              aria-describedby="terra-radio-field-description-8  "
+              aria-describedby="terra-radio-field-description-uuid123  "
               className="native-input"
               data-custom-attr="attr data"
               disabled={false}
@@ -218,12 +218,12 @@ exports[`correctly applies the theme context className 1`] = `
     >
       <fieldset
         className="radio-field orion-fusion-theme"
-        id="terra-radio-group-5"
+        id="terra-radio-group-uuid123"
         required={false}
       >
         <legend
           className="legend-group"
-          id="terra-radio-field-description-6"
+          id="terra-radio-field-description-uuid123"
         >
           <div
             className="legend"
