@@ -14,6 +14,7 @@ import LongTextExample from './example/LongTextExample?dev-site-example';
 import ActionExample from './example/ActionExample?dev-site-example';
 import DismissibleExample from './example/DismissibleExample?dev-site-example';
 import ActionAndDismissibleExample from './example/ActionAndDismissibleExample?dev-site-example';
+import AlertActionFocusDemo from './example/AlertActionFocusDemo';
 
 import AlertPropsTable from 'terra-alert/src/Alert?dev-site-props-table';
 
@@ -67,19 +68,41 @@ import Alert from 'terra-alert';
 ```
 
 ## Accessibility
-Please view the full [Accessibility Guide](./accessibility-guide).
+
+For further guidance, please view the full [Accessibility Guide](./accessibility-guide).
+
+<Notice variant="important" ariaLevel="3">
+
+#### Accessibility Guidance: Alerts
+
+The `alert` notification type and role should be used notify the user of highly critical and time-sensitive information.
+
+If the notification banner includes an action element and is an `alert`, focus will be shifted to the banner for keyboard and assistive technology users.
+This helps users quickly take action when it is critical but can optionally be disabled via the `disableAlertActionFocus` prop.
+
+**Please note**: it may be more appropriate to use a modal or component with `alertdialog` if presenting the user with an alert and action to address the alert which is better
+supported by assistive technologies.
+
+Alert notifications do not need to be inside an `aria-live="polite"` region and it is recommended to separate them from less critical notification banners
+to prevent assistive technologies from confusing them.
+
+By default, Terra Alert uses the `alert` notification type. Below is a demo of Terra Alert with an action element.
+
+<AlertActionFocusDemo />
+
+</Notice>
 
 <Notice variant="important" ariaLevel="3">
 
 #### Accessibility Guidance: Live regions
 
-For more, please view the [full accessibility guide for live regions and assistive technologies](./accessibility-guide#assistive-technologies)
-
-For screen readers to pick up and announce a newly rendered notification, the notification must be within an aria-live region.
-To enable assistive technologies the ability to inform the user of a less critical notification in a polite (non-interruptive) way, ensure the Alert is
+For screen readers to pick up and announce a newly rendered notification, the notification banner must be within an aria-live region.
+To enable assistive technologies the ability to inform the user of a less critical notification in a polite (non-interruptive) way, ensure the notification banner is
 within an element where `aria-live="polite"`.
 
-Please note: the `"alert"` role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-live is previously present.
+Please note: the `alert` notification type/role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-live is previously present.
+It is recommended to separate them from less critical notification banners to prevent assistive technologies from confusing them.
+Refer to [accessibility guidance for Alerts](#accessibility-guidance-alerts).
 
 <div aria-label="Example code">
 
@@ -88,6 +111,30 @@ Please note: the `"alert"` role implicitly has aria-live value of `assertive` an
     <div aria-live="polite">
         {isOpen && (
             <Alert type="success">
+                Meaningful alert content.
+            </Alert>
+        )}
+    </div>
+
+</div>
+
+</Notice>
+
+<Notice variant="important" ariaLevel="3">
+
+#### Accessibility Guidance: Titles
+
+Titles are highly recommended for custom notification banners to have an accessible notification.
+
+By default, a custom notification banner will not provide a title and all other notification types will include a title which should not need a provided title.
+
+<div aria-label="Example code">
+
+    import Alert from 'terra-alert';
+
+    <div aria-live="polite">
+        {isOpen && (
+            <Alert type="custom" title="Terra Message">
                 Meaningful alert content.
             </Alert>
         )}

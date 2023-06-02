@@ -1,6 +1,7 @@
 import { Notice } from "@cerner/terra-docs";
 import { Badge } from 'terra-image/package.json?dev-site-package';
 import Whitespace from '../../common/layout-helpers/Whitespace';
+import AlertActionFocusDemo from './example/AlertActionFocusDemo';
 
 import Hyperlink from 'terra-hyperlink';
 
@@ -42,6 +43,27 @@ Terra Alert has an optional role prop but should be used carefully when the defa
 | Alert | See <Hyperlink href="https://w3c.github.io/aria/#alert" variant="external">WAI-ARIA Alert Role</Hyperlink>[<sup>[1]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region with important, and usually time-sensitive, information." |
 | Status | See <Hyperlink href="https://w3c.github.io/aria/#status" variant="external">WAI-ARIA Status Role</Hyperlink>[<sup>[1]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region whose content is advisory information for the user but is not important enough to justify an alert, often but not necessarily presented as a status bar." |
 
+<Notice variant="important" ariaLevel="5">
+
+#### Accessibility Guidance: Alerts
+
+The `alert` notification type and role should be used notify the user of highly critical and time-sensitive information.
+
+If the notification banner includes an action element and is an `alert`, focus will be shifted to the banner for keyboard and assistive technology users.
+This helps users quickly take action when it is critical but can optionally be disabled via the `disableAlertActionFocus` prop.
+
+**Please note**: it may be more appropriate to use a modal or component with `alertdialog` if presenting the user with an alert and action to address the alert which is better
+supported by assistive technologies.
+
+Alert notifications do not need to be inside an `aria-live="polite"` region and it is recommended to separate them from less critical notification banners
+to prevent assistive technologies from confusing them.
+
+By default, Terra Alert uses the `alert` notification type. Below is a demo of Terra Alert with an action element.
+
+<AlertActionFocusDemo />
+
+</Notice>
+
 #### Assistive technologies
 
 In combination with the notification criticality, screen reader users should understand the importance of the notification when presented.
@@ -51,13 +73,15 @@ In combination with the notification criticality, screen reader users should und
 
 <Notice variant="important" ariaLevel="5">
 
-###### Accessibility Guidance: Live regions
+#### Accessibility Guidance: Live regions
 
-For screen readers to pick up and announce a newly rendered notification, the notification must be within an aria-live region.
-To enable assistive technologies the ability to inform the user of a less critical notification in a polite (non-interruptive) way, ensure the Alert is
+For screen readers to pick up and announce a newly rendered notification, the notification banner must be within an aria-live region.
+To enable assistive technologies the ability to inform the user of a less critical notification in a polite (non-interruptive) way, ensure the notification banner is
 within an element where `aria-live="polite"`.
 
-Please note: the `"alert"` role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-live is previously present.
+Please note: the `alert` notification type/role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-live is previously present.
+It is recommended to separate them from less critical notification banners to prevent assistive technologies from confusing them.
+Refer to [accessibility guidance for Alerts](#accessibility-guidance-alerts).
 
 <div aria-label="Example code">
 
@@ -65,7 +89,33 @@ Please note: the `"alert"` role implicitly has aria-live value of `assertive` an
 
     <div aria-live="polite">
         {isOpen && (
-            <Alert>
+            <Alert type="success">
+                Meaningful alert content.
+            </Alert>
+        )}
+    </div>
+
+</div>
+
+</Notice>
+
+#### Titles
+
+<Notice variant="important" ariaLevel="5">
+
+#### Accessibility Guidance: Titles
+
+Titles are highly recommended for custom notification banners to have an accessible notification.
+
+By default, a custom notification banner will not provide a title and all other notification types will include a title which should not need a provided title.
+
+<div aria-label="Example code">
+
+    import Alert from 'terra-alert';
+
+    <div aria-live="polite">
+        {isOpen && (
+            <Alert type="custom" title="Terra Message">
                 Meaningful alert content.
             </Alert>
         )}
