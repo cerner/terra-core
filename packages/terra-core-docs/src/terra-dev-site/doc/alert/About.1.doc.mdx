@@ -73,22 +73,18 @@ For further guidance, please view the full [Accessibility Guide](./accessibility
 
 <Notice variant="important" ariaLevel="3">
 
-#### Accessibility Guidance: Alerts
+#### Accessibility Guidance: Alert Notification Type
 
-The `alert` notification type and role should be used notify the user of highly critical and time-sensitive information.
-
-If the notification banner includes an action element and is an `alert`, focus will be shifted to the banner for keyboard and assistive technology users.
-This helps users quickly take action when it is critical but can optionally be disabled via the `disableAlertActionFocus` prop.
-
-**Please note**: it may be more appropriate to use a modal or component with `alertdialog` if presenting the user with an alert and action to address the alert which is better
-supported by assistive technologies.
-
-Alert notifications do not need to be inside an `aria-live="polite"` region and it is recommended to separate them from less critical notification banners
-to prevent assistive technologies from confusing them.
-
-By default, Terra Alert uses the `alert` notification type. Below is a demo of Terra Alert with an action element.
-
-<AlertActionFocusDemo />
+<ul>
+    <li>
+        The "alert" role/notification type will cause keyboard navigation focus to shift to the notification banner body.
+        This helps users quickly take action when it is critical but can optionally be disabled via the "disableAlertActionFocus" prop.
+    </li>
+    <li>
+        Notifications with "alert" role/notification type do not need to explicitly be in an aria-live region.
+        It is recommended to separate them from less critical notification banners to prevent assistive technologies from confusing them.
+    </li>
+</ul>
 
 </Notice>
 
@@ -96,13 +92,14 @@ By default, Terra Alert uses the `alert` notification type. Below is a demo of T
 
 #### Accessibility Guidance: Live regions
 
-For screen readers to pick up and announce a newly rendered notification, the notification banner must be within an aria-live region.
-To enable assistive technologies the ability to inform the user of a less critical notification in a polite (non-interruptive) way, ensure the notification banner is
-within an element where `aria-live="polite"`.
-
-Please note: the `alert` notification type/role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-live is previously present.
-It is recommended to separate them from less critical notification banners to prevent assistive technologies from confusing them.
-Refer to [accessibility guidance for Alerts](#accessibility-guidance-alerts).
+<ul>
+    <li>
+        For less critical notifications (non-alerts), the notification banner should be in an aria-live "polite" region (aria-live="polite").
+    </li>
+    <li>
+        Avoid mixing critical alert notifications and less critical notifications in the same region. See <a href="#accessibility-guidance-alert-notification-type">alert notification type guidance</a>.
+    </li>
+</ul>
 
 <div aria-label="Example code">
 
@@ -124,9 +121,14 @@ Refer to [accessibility guidance for Alerts](#accessibility-guidance-alerts).
 
 #### Accessibility Guidance: Titles
 
-Titles are highly recommended for custom notification banners to have an accessible notification.
-
-By default, a custom notification banner will not provide a title and all other notification types will include a title which should not need a provided title.
+<ul>
+    <li>
+        Custom notification banners should have a title provided to the title prop.
+    </li>
+    <li>
+        It is recommended to always have a title present in the notification.
+    </li>
+</ul>
 
 <div aria-label="Example code">
 
