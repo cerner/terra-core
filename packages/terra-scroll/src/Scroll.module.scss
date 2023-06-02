@@ -1,3 +1,6 @@
+@import './clinical-lowlight-theme/Scroll.module';
+@import './orion-fusion-theme/Scroll.module';
+
 :local {
   .scroll {
     height: 100%;
@@ -5,5 +8,10 @@
     -webkit-overflow-scrolling: touch;
     position: relative;
     width: 100%;
+  }
+
+  .scroll:focus {
+    outline: 2px dashed var(--terra-scroll-focus-outline, #000);
+    outline-offset: -2px;
   }
 }

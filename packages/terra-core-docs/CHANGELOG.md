@@ -4,9 +4,10 @@
 
 * Added
  * Added terra-scroll A11y tests.
-
 * Changed
   * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
+* Added
+  * Added an example in terra-content-container without interactive elements 
 
 ## 1.27.0 - (May 9, 2023)
 
