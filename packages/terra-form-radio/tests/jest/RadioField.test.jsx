@@ -33,7 +33,7 @@ it('should render radio field with div element for Safari browser or Edg browser
       id="terra-radio-group-uuid123"
       required={false}
     >
-      <legend
+      <div
         className="legend-group"
         id="terra-radio-field-description-uuid123"
       >
@@ -45,7 +45,7 @@ it('should render radio field with div element for Safari browser or Edg browser
             className="error-icon-hidden"
           />
         </div>
-      </legend>
+      </div>
     </fieldset>
   `);
 });
