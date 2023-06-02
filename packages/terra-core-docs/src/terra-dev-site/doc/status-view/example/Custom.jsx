@@ -1,16 +1,17 @@
 import React from 'react';
 import IconDueSoon from 'terra-icon/lib/icon/IconDueSoon';
 import StatusView from 'terra-status-view';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 const StatusViewButtons = [
   {
-    'aria-label': 'Submit your Timesheet',
+    'aria-describedby': 'submittimesheet',
     id: 'Submit',
     key: 1,
     text: 'Submit',
     variant: 'emphasis',
   }, {
-    'aria-label': 'Cancel your Timesheet Submission',
+    'aria-describedby': 'canceltimesheet',
     id: 'Cancel',
     key: 2,
     text: 'Cancel',
@@ -19,10 +20,12 @@ const StatusViewButtons = [
 
 const Custom = () => (
   <div>
+    <VisuallyHiddenText aria-hidden id="submittimesheet" text="Select to Submit Timesheet" />
+    <VisuallyHiddenText aria-hidden id="canceltimesheet" text="Select to Cancel Timesheet" />
     <StatusView
       message="Once submitted cannot be revised"
       customGlyph={<IconDueSoon />}
-      title="Time Sheet Due Soon"
+      title="Timesheet"
       buttonAttrs={StatusViewButtons}
     />
     <p>
