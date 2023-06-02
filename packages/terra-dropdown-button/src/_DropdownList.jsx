@@ -56,6 +56,7 @@ class DropdownList extends React.Component {
     this.searchString = '';
     this.pressed = false;
     this.listRef = null;
+    this.expanded = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.expanded' });
   }
 
   handleKeyDown(event) {
@@ -77,6 +78,7 @@ class DropdownList extends React.Component {
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
       if (!this.pressed) {
+        this.expanded = '';
         if (index === Util.getChildArray(this).length - 1) {
           this.changeFocusState(0);
         } else {
@@ -86,6 +88,7 @@ class DropdownList extends React.Component {
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_UP) {
       if (!this.pressed) {
+        this.expanded = '';
         if (index === 0) {
           this.changeFocusState(Util.getChildArray(this).length - 1);
         } else {
@@ -174,7 +177,9 @@ class DropdownList extends React.Component {
       const ofText = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.of' });
       const totalItems = this.props.children.length;
       let ariaLabel = null;
-      if (SharedUtil.isMac() && currentIndex && totalItems) {
+      if (SharedUtil.isMac() && currentIndex === 1 && totalItems) {
+        ariaLabel = `${this.expanded} ${currentItemLabel} (${currentIndex} ${ofText} ${totalItems})`;
+      } else if (SharedUtil.isMac() && currentIndex !== 1 && totalItems) {
         ariaLabel = `${currentItemLabel} (${currentIndex} ${ofText} ${totalItems})`;
       }
       return React.cloneElement(child, {

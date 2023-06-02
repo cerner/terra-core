@@ -1,5 +1,6 @@
 {
   "Terra.dropdownButton.moreOptions": "More Options",
   "Terra.dropdownButton.selected": "Selected.",
-  "Terra.dropdownButton.of": "of"
+  "Terra.dropdownButton.of": "of",
+  "Terra.dropdownButton.expanded": "Expanded button,"
 }

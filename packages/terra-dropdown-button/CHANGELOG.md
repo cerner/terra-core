@@ -2,7 +2,7 @@
 
 ## Unreleased
 * Added
- * Added screenreader support to announce index for dropdown list items.
+   * Added screenreader support to announce index and expand/collapse state for dropdown list items.
 
 * Added 
    * Added focus styles for dropdown list items.
