@@ -19,7 +19,7 @@ const ToggleVariants = () => {
         <SingleSelectField.Option value="not-authorized" display="Not Authorized" />
       </SingleSelectField>
       <p>
-        **  Select a status view variant from the dropdown above.
+        Select a status view variant from the dropdown above.
       </p>
     </div>
   );
