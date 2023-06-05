@@ -6,25 +6,34 @@
   * Removed aria-checked to make screen readers announce Selected in `terra-form-select`.
   * Updated focus to shift back on select upon key press or mouse click event while using Safari browser.
 
+* Added
+  * Added terra-scroll A11y tests.
+  * Added an example in terra-content-container without interactive elements.
+* Changed
+  * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
+  * Updated "alert" wording to "notification banner" to avoid confusion with the alert notification type.
+  * Update examples for testing `alert` notification focus shift.
+
+
 ## 1.27.0 - (May 9, 2023)
 
-* Removed 
-  * Removed dubugger text from status view first paragraph after the title.
+* Removed
+  * Removed debugger text from status view first paragraph after the title.
 
 * Changed
-  * Updated demographics banner examples to include `identifiersLongForm` prop
-  * Changed terra-alert examples to include aria-live attribute
-  
+  * Updated demographics banner examples to include `identifiersLongForm` prop.
+  * Changed terra-alert examples to include aria-live attribute.
+
 * Added
-  * Added an example for terra-form-select native select field without placeholder
-  * Add terra-alert accessiblity guide
-  * Added examples for fullscreen and container-related overlays with custom content and loading overlays with custom message 
+  * Added an example for terra-form-select native select field without placeholder.
+  * Add terra-alert accessibility guide.
+  * Added examples for fullscreen and container-related overlays with custom content and loading overlays with custom message.
 
 ## 1.26.0 - (April 27, 2023)
 
 * Added
   * Added dynamic example for terra-status-view.
-  * Added the UX recommendation for terra-content-container
+  * Added the UX recommendation for terra-content-container.
 
 * Changed
   * Updated icon documentation to incorporate `one-cerner-style-icons` v1.5.0.

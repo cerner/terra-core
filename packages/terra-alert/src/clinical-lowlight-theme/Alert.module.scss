@@ -45,5 +45,9 @@
     --terra-alert-unsatisfied-icon-color: #fa0000;
     --terra-alert-unverified-icon-color: #9630af;
     --terra-alert-custom-default-color: #1c1f21;
+    // focus - keyboard
+    --terra-alert-focus-keyboard-box-shadow: none;
+    --terra-alert-focus-keyboard-outline: 2px dashed #b2b5b6;
+    --terra-alert-focus-keyboard-outline-offset: 1px;
   }
 }

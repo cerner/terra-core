@@ -12,7 +12,7 @@ const CustomExample = () => (
       This is a
       <b> custom</b>
       {' '}
-      alert
+      notification banner
     </span>
   </Alert>
 );
