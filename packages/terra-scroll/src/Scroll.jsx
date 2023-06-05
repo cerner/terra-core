@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './Scroll.module.scss';
 
 const cx = classNames.bind(styles);
@@ -20,11 +21,15 @@ const Scroll = ({
   children,
   refCallback,
   ...customProps
-}) => (
-  <div {...customProps} className={cx(['scroll', customProps.className])} ref={refCallback}>
-    {children}
-  </div>
-);
+}) => {
+  const theme = React.useContext(ThemeContext);
+
+  return (
+    <div {...customProps} className={cx(['scroll', customProps.className, theme.className])} ref={refCallback}>
+      {children}
+    </div>
+  );
+};
 
 Scroll.propTypes = propTypes;
 

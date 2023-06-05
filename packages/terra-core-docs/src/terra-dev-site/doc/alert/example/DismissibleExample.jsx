@@ -14,16 +14,16 @@ const AlertDismissible = () => {
             type="success"
             onDismiss={() => setIsOpen(false)}
           >
-            This is a dismissable Alert.
+            This is a dismissible notification banner.
           </Alert>
         </div>
       ) : (
-        <div id="dismissed">Alert was dismissed</div>
+        <div id="dismissed">Notification banner was dismissed</div>
       )}
       <br />
       <Button
         isDisabled={isOpen}
-        text="Trigger Alert"
+        text="Trigger Notification Banner"
         onClick={() => {
           setIsOpen(true);
         }}
