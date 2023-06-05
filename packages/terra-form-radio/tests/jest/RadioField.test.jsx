@@ -24,9 +24,7 @@ it('should render a default radio field', () => {
 
 it('should render radio field with div element for Safari browser or Edg browser', () => {
   userAgentGetter.mockReturnValue('Safari Edg');
-  const wrapper = shallowWithIntl(
-    <RadioField legend="Custom Message RadioField" />,
-  );
+  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />);
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
       className="radio-field"
@@ -52,9 +50,7 @@ it('should render radio field with div element for Safari browser or Edg browser
 
 it('should render radio field with legend element for Chrome browser', () => {
   userAgentGetter.mockReturnValue('Chrome');
-  const wrapper = shallowWithIntl(
-    <RadioField legend="Custom Message RadioField" />,
-  );
+  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />);
   expect(wrapper.dive()).toMatchInlineSnapshot(`
     <fieldset
       className="radio-field"

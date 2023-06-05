@@ -113,17 +113,16 @@ const RadioField = (props) => {
     legendAttrs.className,
   ]);
 
-  const feildSetId = `terra-radio-group-${uniqueid()}`;
+  const fieldSetId = `terra-radio-group-${uniqueid()}`;
   const legendAriaDescriptionId = `terra-radio-field-description-${uniqueid()}`;
   const helpAriaDescriptionId = help ? `terra-radio-field-description-help-${uniqueid()}` : '';
   const errorAriaDescriptionId = error ? `terra-radio-field-description-error-${uniqueid()}` : '';
   const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
 
   const isSafariOREdge = ((navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) || navigator.userAgent.indexOf('Edg') !== -1);
-  const Component = (isSafariOREdge) ? 'div' : 'legend';
-
+  const LegendGroup = (isSafariOREdge) ? 'div' : 'legend';
   const legendGroup = (
-    <Component id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+    <LegendGroup id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
       <div {...legendAttrs} className={legendClassNames}>
         {isInvalid && <span className={cx('error-icon')} />}
         {required && (isInvalid || !hideRequired) && (
@@ -140,11 +139,11 @@ const RadioField = (props) => {
           )}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
-    </Component>
+    </LegendGroup>
   );
 
   const handleKeyDown = (event) => {
-    const radioGroup = document.getElementById(feildSetId);
+    const radioGroup = document.getElementById(fieldSetId);
     const radioItems = radioGroup.querySelectorAll('[type=radio]');
     const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
     if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
@@ -179,7 +178,7 @@ const RadioField = (props) => {
   });
 
   return (
-    <fieldset id={feildSetId} {...customProps} required={required} className={radioFieldClasses}>
+    <fieldset id={fieldSetId} {...customProps} required={required} className={radioFieldClasses}>
       {legendGroup}
       {content}
       {isInvalid && error && <div id={errorAriaDescriptionId} className={cx('error-text')}>{error}</div>}
