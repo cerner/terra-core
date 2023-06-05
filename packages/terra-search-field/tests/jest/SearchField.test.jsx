@@ -13,30 +13,34 @@ describe('Snapshots', () => {
 
   it('renders a search field with a placeholder', () => {
     const searchField = shallowWithIntl(<SearchField placeholder="Test" />).dive();
+    expect(searchField.find('input').prop('placeholder')).toEqual('Test');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a value', () => {
     const searchField = shallowWithIntl(<SearchField value="Test" />).dive();
+    expect(searchField.find('input').prop('value')).toEqual('Test');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a defaulted value', () => {
     const searchField = shallowWithIntl(<SearchField defaultValue="Default" />).dive();
+    expect(searchField.find('input').prop('defaultValue')).toEqual('Default');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a disabled search field with a value', () => {
     const searchField = shallowWithIntl(<SearchField isDisabled />).dive();
     searchField.instance().updateSearchText('Test');
-
+    expect(searchField.find('input').prop('disabled')).toBe(true);
+    expect(searchField.find('Button').prop('isDisabled')).toBe(true);
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field that displays as a block to fill its container', () => {
     const searchField = shallowWithIntl(<SearchField isBlock />).dive();
     searchField.instance().updateSearchText('Test');
-
+    expect(searchField.prop('className')).toContain('block');
     expect(searchField).toMatchSnapshot();
   });
 
@@ -49,16 +53,19 @@ describe('Snapshots', () => {
 
   it('renders a search field with an aria-label', () => {
     const searchField = shallowWithIntl(<SearchField inputAttributes={{ 'aria-label': 'Search Field' }} />).dive();
+    expect(searchField.find('input').prop('aria-label')).toEqual('Search Field');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with an aria-label using prop', () => {
     const searchField = shallowWithIntl(<SearchField inputAttributes={{ ariaLabel: 'Search Field' }} />).dive();
+    expect(searchField.find('input').prop('aria-label')).toEqual('Terra.searchField.search');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field such that custom styles are applied', () => {
     const searchField = shallowWithIntl(<SearchField inputAttributes={{ className: 'test-class' }} />).dive();
+    expect(searchField.find('input').prop('className')).toContain('test-class');
     expect(searchField).toMatchSnapshot();
   });
 
@@ -89,10 +96,11 @@ describe('Manual Search', () => {
 
     expect(onSearch).not.toBeCalled();
     searchField.childAt(1).simulate('click');
+    expect(onSearch).toBeCalledTimes(1);
     expect(onSearch).toBeCalledWith('Te');
   });
 
-  it('focuses on search button on enter keypress', () => {
+  it('focuses on search button and triggers search on enter keypress', () => {
     const container = document.createElement('div');
     container.id = 'container';
     document.body.appendChild(container);
@@ -102,9 +110,13 @@ describe('Manual Search', () => {
       attachTo: document.querySelector('#container'),
     });
 
+    expect(onSearch).not.toBeCalled();
+    searchField.find('input').simulate('change', { target: { value: 'Te' } });
     searchField.find('input').simulate('keydown', { nativeEvent: { keyCode: 13 } });
-    const searchBtn = searchField.find('button');
+    const searchBtn = searchField.find('button').at(1);
     expect(document.activeElement).toBe(searchBtn.getDOMNode());
+    expect(onSearch).toBeCalledTimes(1);
+    expect(onSearch).toBeCalledWith('Te');
   });
 
   it('does not trigger search if default minimum search text has not been met', () => {
