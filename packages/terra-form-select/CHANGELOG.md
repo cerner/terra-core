@@ -2,6 +2,7 @@
 
 * Changed
   * Removed aria-checked to make screen readers announce Selected.
+  * Updated focus to shift back on select upon key press or mouse click event while using Safari browser.
 
 ## Unreleased
 

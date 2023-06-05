@@ -19,6 +19,14 @@ import OptGroupPropsTable from 'terra-form-select/src/shared/_OptGroup?dev-site-
 
 The Single Select component allows selecting a single option from a dropdown of selectable options.
 
+Users are encouraged to prefer "Single Select Field" component over "Single Select" component (where ever possible) as the latter does not provide labels necessary to support accessibility.
+
+To create an accessible Single Select component, follow the guidelines below:
+1. Label: Use a `<label>` element to associate a text label with the Single Select input.
+2. Helper Text: Include a helper text to provide additional information or instructions related to the Single Select input.
+3. Validation: If the Single Select input requires validation, provide visual cues to indicate the validation status (e.g., valid, invalid).
+4. Error Messaging: When an error occurs during form submission or input validation, display an error message to provide feedback to the user.
+
 ## Getting Started
 
 - Install with [npmjs](https://www.npmjs.com):
