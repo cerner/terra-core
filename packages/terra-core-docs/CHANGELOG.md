@@ -3,8 +3,8 @@
 ## Unreleased
 
 * Changed
- * Updated Custom Icon + message + buttons example for `terra-status-view`.
- * Updated `terra-status-view` Change Variant example component from HTML Native select to `terra-form-select` component.
+ * Updated `Custom Icon + message + buttons example` for `terra-status-view`.
+ * Updated `terra-status-view - Change Variant` example component to use the `terra-form-select` component instead of HTML native `<select>`.
  * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
 
 * Added

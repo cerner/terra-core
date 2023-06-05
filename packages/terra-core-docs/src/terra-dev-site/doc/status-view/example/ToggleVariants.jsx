@@ -19,7 +19,7 @@ const ToggleVariants = () => {
         <SingleSelectField.Option value="not-authorized" display="Not Authorized" />
       </SingleSelectField>
       <p>
-        ** Here the Select field shows the list of available status view variants. One can select any of the available options to check. For example a simple search screen can use the No-results variant to show that the entered string is not available while fetching a result from the database.
+        **  Select a status view variant from the dropdown above.
       </p>
     </div>
   );
