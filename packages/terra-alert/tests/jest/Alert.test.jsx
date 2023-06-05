@@ -18,12 +18,30 @@ jest.mock('uuid', () => ({ v4: () => mockUUID }));
 describe('Alert with no props', () => {
   it('should render a default component', () => {
     const wrapper = mountWithIntl(<Alert />);
+
+    const alert = wrapper.find('Alert');
+    expect(alert.prop('customColorClass')).toEqual('custom-default-color');
+    expect(alert.prop('disableAlertActionFocus')).toEqual(false);
+    expect(alert.prop('type')).toEqual('alert');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a default notification banner with default props', () => {
+    const wrapper = shallowWithIntl(<Alert />).dive();
+
+    const alertDiv = wrapper.find('div.alert-base');
+    const alertContentDiv = wrapper.find('div.body');
+    expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
+    expect(alertDiv.prop('role')).toEqual('alert');
+    expect(alertContentDiv.prop('tabIndex')).toEqual('-1');
+    expect(wrapper.find(IconAlert).length).toEqual(1);
+    expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
     expect(wrapper).toMatchSnapshot();
   });
 });
 
-describe('Alert with role prop', () => {
-  it('should render a alert with provided role', () => {
+describe('Alert with props', () => {
+  it('should render an alert with provided role', () => {
     const wrapper = shallowWithIntl(<Alert role="status" />).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
@@ -31,6 +49,14 @@ describe('Alert with role prop', () => {
     expect(alertDiv.prop('role')).toEqual('status');
     expect(wrapper.find(IconAlert).length).toEqual(1);
     expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render disableAlertActionFocus when provided', () => {
+    const wrapper = mountWithIntl(<Alert disableAlertActionFocus />);
+
+    const alert = wrapper.find('Alert');
+    expect(alert.prop('disableAlertActionFocus')).toEqual(true);
     expect(wrapper).toMatchSnapshot();
   });
 });
