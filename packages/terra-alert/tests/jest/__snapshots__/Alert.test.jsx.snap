@@ -11,6 +11,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <div
         className="section"
@@ -40,6 +41,7 @@ exports[`Alert of type alert with text content should render an Alert component 
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -77,6 +79,7 @@ exports[`Alert of type custom with custom title and text content should render a
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -114,6 +117,7 @@ exports[`Alert of type error with text content should render an Alert component 
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -143,6 +147,7 @@ exports[`Alert of type error with text content should render an Alert component 
 exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
 <Alert
   customColorClass="custom-default-color"
+  disableAlertActionFocus={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -190,6 +195,7 @@ exports[`Alert of type info with text content should render an Alert component o
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -227,6 +233,7 @@ exports[`Alert of type success with an action button text content should render 
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -279,6 +286,7 @@ exports[`Alert of type success with text content should render an Alert componen
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -316,6 +324,7 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon unsatisfied-icon"
@@ -353,6 +362,7 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon unverified-icon"
@@ -390,6 +400,7 @@ exports[`Alert of type warning with text content should render an Alert componen
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -448,6 +459,7 @@ exports[`Alert with no props should render a default component 1`] = `
 >
   <Alert
     customColorClass="custom-default-color"
+    disableAlertActionFocus={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -487,6 +499,7 @@ exports[`Alert with no props should render a default component 1`] = `
       >
         <div
           className="body body-std"
+          tabIndex="-1"
         >
           <span
             className="icon"
@@ -544,17 +557,18 @@ exports[`Alert with no props should render a default component 1`] = `
 </InjectIntl(Alert)>
 `;
 
-exports[`Alert with role prop should render a alert with provided role 1`] = `
+exports[`Alert with no props should render a default notification banner with default props 1`] = `
 <ResponsiveElement
   onChange={[Function]}
   responsiveTo="parent"
 >
   <div
     className="alert-base alert wide"
-    role="status"
+    role="alert"
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -580,6 +594,174 @@ exports[`Alert with role prop should render a alert with provided role 1`] = `
 </ResponsiveElement>
 `;
 
+exports[`Alert with props should render an alert with provided role 1`] = `
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
+>
+  <div
+    className="alert-base alert wide"
+    role="status"
+  >
+    <div
+      className="body body-std"
+      tabIndex="-1"
+    >
+      <span
+        className="icon"
+      >
+        <IconAlert
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </span>
+      <div
+        className="section"
+        id="alert-message-00000000-0000-0000-0000-000000000000"
+      >
+        <strong
+          className="title"
+          id="alert-title-00000000-0000-0000-0000-000000000000"
+        >
+          Terra.alert.alert
+        </strong>
+      </div>
+    </div>
+  </div>
+</ResponsiveElement>
+`;
+
+exports[`Alert with props should render disableAlertActionFocus when provided 1`] = `
+<InjectIntl(Alert)
+  disableAlertActionFocus={true}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <Alert
+    customColorClass="custom-default-color"
+    disableAlertActionFocus={true}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    type="alert"
+  >
+    <ResponsiveElement
+      onChange={[Function]}
+      responsiveTo="parent"
+    >
+      <div
+        className="alert-base alert narrow"
+        role="alert"
+      >
+        <div
+          className="body body-std"
+          tabIndex="-1"
+        >
+          <span
+            className="icon"
+          >
+            <IconAlert
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <IconBase
+                className="IconAlert"
+                focusable="false"
+                height="1em"
+                isBidi={false}
+                isSpin={false}
+                viewBox="0 0 48 48"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  className="tui-Icon icon IconAlert"
+                  focusable="false"
+                  height="1em"
+                  role="presentation"
+                  viewBox="0 0 48 48"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+                    fill="#E50000"
+                  />
+                  <path
+                    d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+                    fill="#FFF"
+                  />
+                </svg>
+              </IconBase>
+            </IconAlert>
+          </span>
+          <div
+            className="section"
+            id="alert-message-00000000-0000-0000-0000-000000000000"
+          >
+            <strong
+              className="title"
+              id="alert-title-00000000-0000-0000-0000-000000000000"
+            >
+              Terra.alert.alert
+            </strong>
+          </div>
+        </div>
+      </div>
+    </ResponsiveElement>
+  </Alert>
+</InjectIntl(Alert)>
+`;
+
 exports[`Dismissable Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
 <ResponsiveElement
   onChange={[Function]}
@@ -591,6 +773,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -655,6 +838,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
@@ -706,6 +890,7 @@ exports[`correctly applies the theme context className 1`] = `
   >
     <div
       className="body body-std"
+      tabIndex="-1"
     >
       <span
         className="icon"
