@@ -27,6 +27,11 @@ const propTypes = {
    * Ref callback for the scrollable area of the content container.
    */
   scrollRefCallback: PropTypes.func,
+  /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * Sets focus on content when set to `true`. Focus on content helps in scrolling  within container when there is no interactive element to focus within container.
+   */
+  setFocusOnContainer: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -35,6 +40,7 @@ const defaultProps = {
   children: undefined,
   fill: false,
   scrollRefCallback: undefined,
+  setFocusOnContainer: false,
 };
 
 const ContentContainer = ({
@@ -43,6 +49,7 @@ const ContentContainer = ({
   children,
   fill,
   scrollRefCallback,
+  setFocusOnContainer,
   ...customProps
 }) => {
   const contentLayoutClassNames = cx([
@@ -52,13 +59,14 @@ const ContentContainer = ({
 
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      {header && <div className={cx('header')}>{header}</div>}
-      <div className={cx('main')}>
-        <Scroll className={cx('normalizer')} refCallback={scrollRefCallback}>
+      {header && <div className={cx('header', { focusoncontainer: setFocusOnContainer })}>{header}</div>}
+      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+      <div className={cx('main')} role="region">
+        <Scroll className={cx('normalizer', { focusoncontainer: setFocusOnContainer })} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
           {children}
         </Scroll>
       </div>
-      {footer && <div className={cx('footer')}>{footer}</div>}
+      {footer && <div className={cx('footer', { focusoncontainer: setFocusOnContainer })}>{footer}</div>}
     </div>
   );
 };
