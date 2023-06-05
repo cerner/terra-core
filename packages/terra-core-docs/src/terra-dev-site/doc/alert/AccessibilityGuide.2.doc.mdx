@@ -43,9 +43,7 @@ Terra Alert has an optional role prop but should be used carefully when the defa
 | Alert | See <Hyperlink href="https://w3c.github.io/aria/#alert" variant="external">WAI-ARIA Alert Role</Hyperlink>[<sup>[1]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region with important, and usually time-sensitive, information." |
 | Status | See <Hyperlink href="https://w3c.github.io/aria/#status" variant="external">WAI-ARIA Status Role</Hyperlink>[<sup>[1]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region whose content is advisory information for the user but is not important enough to justify an alert, often but not necessarily presented as a status bar." |
 
-<Notice variant="important" ariaLevel="5">
-
-#### Accessibility Guidance: Alert Notification Type
+#### Alert Notification Type
 
 <Notice variant="ux-recommendation" ariaLevel="6">
 
@@ -71,8 +69,6 @@ Demo of Terra Alert with an action element.
 
 <AlertActionFocusDemo />
 
-</Notice>
-
 #### Assistive technologies
 
 In combination with the notification criticality, screen reader users should understand the importance of the notification when presented.
@@ -80,13 +76,11 @@ In combination with the notification criticality, screen reader users should und
 * The `"alert"` role will interrupt the user and announce the high critical notification immediately.
 * The `"status"` role will not interrupt the user and present politely.
 
-<Notice variant="important" ariaLevel="5">
-
-#### Accessibility Guidance: Live regions
+#### Live regions
 
 <ul>
     <li>
-        For any less critical notifications (non-alerts), the notification banner should be in an aria-live "polite" region (aria-live="polite").
+        For less critical notifications (non-alerts), the notification banner should be in an aria-live "polite" region (aria-live="polite").
     </li>
     <ul>
         <li>
@@ -120,13 +114,7 @@ It is recommended to separate critical alert notifications from less critical no
 
 </div>
 
-</Notice>
-
 #### Titles
-
-<Notice variant="important" ariaLevel="5">
-
-#### Accessibility Guidance: Titles
 
 <ul>
     <li>
@@ -137,9 +125,6 @@ It is recommended to separate critical alert notifications from less critical no
             Titles are highly recommended for custom notification banners to have a more accessible notification.
         </li>
     </ul>
-    <li>
-        By default, a custom notification banner will not provide a title and all other notification types will include a title which should not need a provided title.
-    </li>
 </ul>
 
 <div aria-label="Example code">
@@ -155,8 +140,6 @@ It is recommended to separate critical alert notifications from less critical no
     </div>
 
 </div>
-
-</Notice>
 
 ## Linked References:
 1. ["Accessible Rich Internet Applications (WAI-ARIA) 1.3"](https://w3c.github.io/aria/). World Wide Web Consortium. Last updated 01 May 2023. Retrieved 2 May 2023.

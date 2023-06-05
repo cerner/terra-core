@@ -3,7 +3,6 @@ import Button from 'terra-button';
 import Alert from 'terra-alert';
 
 const AlertActionFocusDemo = () => {
-  const [actionButtonClickCount, setActionButtonClickCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -15,9 +14,7 @@ const AlertActionFocusDemo = () => {
             <Button
               text="Action"
               variant="emphasis"
-              onClick={() => {
-                setActionButtonClickCount((prevCount) => prevCount + 1);
-              }}
+              onClick={() => {}}
             />
           )}
         >
@@ -31,7 +28,6 @@ const AlertActionFocusDemo = () => {
           setIsOpen(true);
         }}
       />
-      <p>{`Action button has been clicked ${actionButtonClickCount} times.`}</p>
     </>
   );
 };
