@@ -119,8 +119,10 @@ const RadioField = (props) => {
   const errorAriaDescriptionId = error ? `terra-radio-field-description-error-${uniqueid()}` : '';
   const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
 
-  const isSafariOREdge = ((navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) || navigator.userAgent.indexOf('Edg') !== -1);
-  const LegendGroup = (isSafariOREdge) ? 'div' : 'legend';
+  const isSafari = navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1;
+  const isEdge = navigator.userAgent.indexOf('Edg') !== -1;
+  const LegendGroup = (isSafari || isEdge) ? 'div' : 'legend';
+
   const legendGroup = (
     <LegendGroup id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
       <div {...legendAttrs} className={legendClassNames}>
