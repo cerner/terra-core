@@ -29,7 +29,7 @@ const Custom = () => (
       buttonAttrs={StatusViewButtons}
     />
     <p>
-      Note: Action button labels should provide a proper message or title. For accessibility best practice use ARIA attributes (such as aria-label) to provide context.
+      Note: Action button labels should provide a proper message or title. To meet accessibility guidelines, use ARIA attributes (such as `aria-label`) to provide context.
     </p>
   </div>
 );
