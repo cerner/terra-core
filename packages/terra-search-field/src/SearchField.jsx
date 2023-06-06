@@ -174,6 +174,7 @@ class SearchField extends React.Component {
 
   handleKeyDown(event) {
     if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
+      event.preventDefault();
       // set focus to search button to hide keyboard on mobile devices
       this.searchBtnRef.current.focus();
 
