@@ -207,7 +207,6 @@ class DropdownButton extends React.Component {
           tabIndex={isDisabled ? '-1' : undefined}
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
-          aria-haspopup="menu"
           ref={this.setButtonNode}
           aria-label={selectText ? `${selectText}, ${selectedLabel}` : ''}
           onBlur={this.handleBlur}

@@ -81,7 +81,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         }
       >
         <Item
-          aria-label={null}
+          aria-label="Terra.dropdownButton.expanded1st Option,(1 Terra.dropdownButton.of 3)"
           data-terra-dropdown-list-item={true}
           isActive={false}
           key=".0"
@@ -90,7 +90,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           requestClose={[Function]}
         >
           <li
-            aria-label={null}
+            aria-label="Terra.dropdownButton.expanded1st Option,(1 Terra.dropdownButton.of 3)"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}
             role="menuitem"
@@ -105,7 +105,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           </li>
         </Item>
         <Item
-          aria-label={null}
+          aria-label="2nd Option,(2 Terra.dropdownButton.of 3)"
           data-terra-dropdown-list-item={true}
           isActive={false}
           key=".1"
@@ -114,7 +114,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           requestClose={[Function]}
         >
           <li
-            aria-label={null}
+            aria-label="2nd Option,(2 Terra.dropdownButton.of 3)"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}
             role="menuitem"
@@ -129,7 +129,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           </li>
         </Item>
         <Item
-          aria-label={null}
+          aria-label="3rd Option,(3 Terra.dropdownButton.of 3)"
           data-terra-dropdown-list-item={true}
           isActive={false}
           key=".2"
@@ -138,7 +138,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           requestClose={[Function]}
         >
           <li
-            aria-label={null}
+            aria-label="3rd Option,(3 Terra.dropdownButton.of 3)"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}
             role="menuitem"

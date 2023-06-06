@@ -163,7 +163,6 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                       focusTrapOptions={
                         Object {
                           "clickOutsideDeactivates": true,
-                          "initialFocus": undefined,
                           "returnFocusOnDeactivate": true,
                         }
                       }

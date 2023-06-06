@@ -27,10 +27,6 @@ const propTypes = {
    */
   width: PropTypes.string,
   /**
-   * Callback for reference of the dropdown button
-   */
-  buttonRef: PropTypes.func,
-  /**
    * Ref callback for the dropdown list DOM element.
    */
   refCallback: PropTypes.func,
@@ -41,46 +37,33 @@ const propTypes = {
 };
 
 const Dropdown = ({
-  requestClose, isOpen, targetRef, children, width, buttonRef, refCallback, getSelectedOptionText,
-}) => {
-  if (isOpen) {
-    buttonRef().setAttribute('role', 'presentation');
-    buttonRef().setAttribute('aria-hidden', 'true');
-  }
-
-  const onRequestClose = () => {
-    buttonRef().removeAttribute('role');
-    buttonRef().removeAttribute('aria-hidden');
-    requestClose();
-  };
-
-  return (
-    <Hookshot
-      isOpen={isOpen}
-      isEnabled
-      targetRef={targetRef}
-      attachmentBehavior="flip"
-      contentAttachment={{ vertical: 'top', horizontal: 'start' }}
-      targetAttachment={{ vertical: 'bottom', horizontal: 'start' }}
+  requestClose, isOpen, targetRef, children, width, refCallback, getSelectedOptionText,
+}) => (
+  <Hookshot
+    isOpen={isOpen}
+    isEnabled
+    targetRef={targetRef}
+    attachmentBehavior="flip"
+    contentAttachment={{ vertical: 'top', horizontal: 'start' }}
+    targetAttachment={{ vertical: 'bottom', horizontal: 'start' }}
+  >
+    <Hookshot.Content
+      onEsc={requestClose}
+      onOutsideClick={requestClose}
     >
-      <Hookshot.Content
-        onEsc={onRequestClose}
-        onOutsideClick={onRequestClose}
-      >
-        <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, clickOutsideDeactivates: true }}>
-          <DropdownList
-            requestClose={onRequestClose}
-            width={width}
-            refCallback={refCallback}
-            getSelectedOptionText={getSelectedOptionText}
-          >
-            {children}
-          </DropdownList>
-        </FocusTrap>
-      </Hookshot.Content>
-    </Hookshot>
-  );
-};
+      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, clickOutsideDeactivates: true }}>
+        <DropdownList
+          requestClose={requestClose}
+          width={width}
+          refCallback={refCallback}
+          getSelectedOptionText={getSelectedOptionText}
+        >
+          {children}
+        </DropdownList>
+      </FocusTrap>
+    </Hookshot.Content>
+  </Hookshot>
+);
 
 Dropdown.propTypes = propTypes;
 

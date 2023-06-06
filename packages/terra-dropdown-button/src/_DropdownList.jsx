@@ -6,7 +6,6 @@ import * as KeyCode from 'keycode-js';
 import { injectIntl } from 'react-intl';
 import Util from './_DropdownListUtil';
 import styles from './_DropdownList.module.scss';
-import SharedUtil from '../../terra-form-select/src/shared/_SharedUtil';
 
 const cx = classNamesBind.bind(styles);
 
@@ -177,10 +176,10 @@ class DropdownList extends React.Component {
       const ofText = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.of' });
       const totalItems = this.props.children.length;
       let ariaLabel = null;
-      if (SharedUtil.isMac() && currentIndex === 1 && totalItems) {
-        ariaLabel = `${this.expanded} ${currentItemLabel} (${currentIndex} ${ofText} ${totalItems})`;
-      } else if (SharedUtil.isMac() && currentIndex !== 1 && totalItems) {
-        ariaLabel = `${currentItemLabel} (${currentIndex} ${ofText} ${totalItems})`;
+      if (currentIndex === 1 && totalItems) {
+        ariaLabel = `${this.expanded}${currentItemLabel},(${currentIndex} ${ofText} ${totalItems})`;
+      } else if (currentIndex !== 1 && totalItems) {
+        ariaLabel = `${currentItemLabel},(${currentIndex} ${ofText} ${totalItems})`;
       }
       return React.cloneElement(child, {
         isActive: index === this.state.active,

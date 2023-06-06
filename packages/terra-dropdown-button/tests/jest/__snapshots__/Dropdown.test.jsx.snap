@@ -52,7 +52,6 @@ exports[`Dropdown renders a default dropdown 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }
@@ -123,7 +122,6 @@ exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }
@@ -194,7 +192,6 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }
@@ -266,7 +263,6 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }
@@ -345,7 +341,6 @@ exports[`Dropdown renders an open dropdown 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }

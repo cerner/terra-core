@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+
 * Added
    * Added screenreader support to announce index and expand/collapse state for dropdown list items.
 

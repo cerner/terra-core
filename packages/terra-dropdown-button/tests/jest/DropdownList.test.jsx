@@ -1,7 +1,9 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+import { IntlProvider } from 'react-intl';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import translationsFile from '../../translations/en.json';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import DropdownList from '../../src/_DropdownList';
 import { Item } from '../../src/DropdownButton';
@@ -90,5 +92,45 @@ describe('Dropdown List', () => {
       </ThemeContextProvider>,
     );
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should set the aria-label property to empty on keydown', () => {
+    const listRefMock = {
+      childNodes: [
+        { focus: jest.fn() },
+        { focus: jest.fn() },
+        { focus: jest.fn() },
+      ],
+    };
+
+    const eventMock = {
+      key: 'ArrowDown',
+      keyCode: 40,
+      target: { textContent: 0 },
+      preventDefault: jest.fn(),
+      stopPropagation: jest.fn(),
+    };
+
+    const wrapper = shallowWithIntl(
+      <IntlProvider locale="en" messages={translationsFile}>
+        <DropdownList id="dropdownList" requestClose={() => { }}>
+          <Item id="firstItem" label="1st Option" onSelect={() => { }} />
+          <Item label="2nd Option" onSelect={() => { }} />
+          <Item label="3rd Option" onSelect={() => { }} />
+        </DropdownList>
+      </IntlProvider>,
+    ).dive().dive();
+
+    wrapper.instance().listRef = listRefMock;
+    const firstListItem = wrapper.find('#firstItem');
+    const firstListItemAriaLabelValue = firstListItem.props()['aria-label'];
+    const expectedAriaLabelValueInitial = `${translationsFile['Terra.dropdownButton.expanded']}1st Option,(1 ${translationsFile['Terra.dropdownButton.of']} 3)`;
+    expect(firstListItemAriaLabelValue).toEqual(expectedAriaLabelValueInitial);
+
+    // Simulate keydown event
+    wrapper.instance().handleKeyDown(eventMock);
+    const updatedFirstListItemAriaLabelValue = wrapper.find('#firstItem').props()['aria-label'];
+    const expectedAriaLabelValue = `1st Option,(1 ${translationsFile['Terra.dropdownButton.of']} 3)`;
+    expect(updatedFirstListItemAriaLabelValue).toEqual(expectedAriaLabelValue);
   });
 });
