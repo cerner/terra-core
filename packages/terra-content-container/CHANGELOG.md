@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+   * Added `setFocusOnContainer` prop to provide scroll capability for keyboard only users. (Requires Jest Snapshot updates)
+
 ## 3.38.0 - (February 15, 2023)
 
 * Changed

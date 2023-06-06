@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
@@ -33,27 +33,31 @@ const AlertTypes = {
 
 const propTypes = {
   /**
-   * An action element to be added to the action section of the alert to give the user an easy way
+   * An action element to be added to the action section of the notification banner to give the user an easy way
    * to accomplish a task to resolve the notification.
    */
   action: PropTypes.element,
   /**
-   * Child Nodes providing the message content for the alert. Can contain text and HTML.
+   * Child Nodes providing the message content for the notification banner. Can contain text and HTML.
    */
   children: PropTypes.node,
   /**
-   * The icon to be used for an alert of type custom. This will not be used for any other alert types.
+   * The icon to be used for a notification banner of type custom. This will not be used for any other notification types.
    */
   customIcon: PropTypes.element,
   /**
-   * Sets an author-defined class, to control the status bar color to be used for an alert of type custom.
+   * Sets an author-defined class, to control the status bar color to be used for a notification banner of type custom.
    *
    * ![IMPORTANT](https://badgen.net/badge//IMPORTANT/CSS?icon=github)
    * Adding `var(--my-app...` CSS variables is required for proper re-themeability when creating custom color styles _(see included examples)_.
    */
   customColorClass: PropTypes.string,
   /**
-   * Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the alert.
+   * Disables the focus shift to Alert Notification Banners when action element is present.
+   */
+  disableAlertActionFocus: PropTypes.bool,
+  /**
+   * Callback function triggered when Dismiss button is clicked. The presence of this prop will cause the Dismiss button to be included on the notification banner.
    */
   onDismiss: PropTypes.func,
   /**
@@ -62,16 +66,16 @@ const propTypes = {
    * */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
-   * The ARIA role attribute of the alert. If not provided, alert type _alert_ will default to role `"alert"`,
-   * all other alert types will use the role of `"status"`.
+   * The ARIA role attribute of the notification banner. If not provided, notification banner of type _alert_ will default to role `"alert"`,
+   * all other notification banner types will use the role of `"status"`.
    */
   role: PropTypes.string,
   /**
-   * The title for the alert which will be bolded.
+   * The title for the notification banner which will be bolded.
    */
   title: PropTypes.string,
   /**
-   * The type of alert to be rendered. One of `alert`, `error`, `warning`, `unsatisfied`, `unverified`, `advisory`,
+   * The type of notification banner to be rendered. One of `alert`, `error`, `warning`, `unsatisfied`, `unverified`, `advisory`,
    * `info`, `success`, or `custom`.
    */
   type: PropTypes.oneOf([
@@ -89,6 +93,7 @@ const propTypes = {
 
 const defaultProps = {
   customColorClass: 'custom-default-color',
+  disableAlertActionFocus: false,
   type: AlertTypes.ALERT,
 };
 
@@ -122,6 +127,7 @@ const Alert = ({
   children,
   customIcon,
   customColorClass,
+  disableAlertActionFocus,
   onDismiss,
   intl,
   role,
@@ -131,9 +137,11 @@ const Alert = ({
 }) => {
   const theme = React.useContext(ThemeContext);
   const [isNarrow, setIsNarrow] = useState();
+  const alertBodyRef = useRef(null);
 
   const defaultTitle = type === AlertTypes.CUSTOM ? '' : intl.formatMessage({ id: `Terra.alert.${type}` });
   const defaultRole = type === AlertTypes.ALERT ? 'alert' : 'status';
+  const isAlert = role === 'alert' || defaultRole === 'alert';
   const alertClassNames = classNames(
     cx(
       'alert-base',
@@ -171,7 +179,9 @@ const Alert = ({
 
   let actionsSection;
   if (onDismiss || action) {
-    const actionsClassName = cx('actions', { 'actions-custom': type === AlertTypes.CUSTOM });
+    const actionsClassName = cx('actions', {
+      'actions-custom': type === AlertTypes.CUSTOM,
+    });
     actionsSection = (
       <div className={actionsClassName}>
         {action}
@@ -194,6 +204,15 @@ const Alert = ({
     </div>
   );
 
+  useEffect(() => {
+    // if the notification is an alert with an action element, focus the alert
+    if (isAlert && action && !disableAlertActionFocus && alertBodyRef?.current?.focus) {
+      alertBodyRef.current.focus();
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <ResponsiveElement
       onChange={(value) => {
@@ -203,8 +222,12 @@ const Alert = ({
         }
       }}
     >
-      <div role={role || defaultRole} {...customProps} className={alertClassNames}>
-        <div className={bodyClassNameForParent}>
+      <div
+        role={role || defaultRole}
+        {...customProps}
+        className={alertClassNames}
+      >
+        <div className={bodyClassNameForParent} ref={alertBodyRef} tabIndex="-1">
           {getAlertIcon(type, customIcon)}
           {alertMessageContent}
         </div>
