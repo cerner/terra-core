@@ -6,13 +6,11 @@ import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import RadioField from '../../src/RadioField';
 import Radio from '../../src/Radio';
 
-jest.mock('lodash.uniqueid');
 window.matchMedia = () => ({ matches: true });
 
 let userAgentGetter;
 beforeEach(() => {
   userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
-  uniqueid.mockImplementation(() => 'uuid123');
 });
 
 it('should render a default radio field', () => {
