@@ -1,16 +1,18 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
-
+import uniqueid from 'lodash.uniqueid';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import RadioField from '../../src/RadioField';
 import Radio from '../../src/Radio';
 
 window.matchMedia = () => ({ matches: true });
+jest.mock('lodash.uniqueid');
 
 let userAgentGetter;
 beforeEach(() => {
   userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
+  uniqueid.mockReturnValue('uuid123');
 });
 
 it('should render a default radio field', () => {
@@ -21,14 +23,20 @@ it('should render a default radio field', () => {
 
 it('should render radio field with div element for Safari browser or Edg browser', () => {
   userAgentGetter.mockReturnValue('Safari Edg');
-  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />);
-  expect(wrapper.dive()).toMatchSnapshot();
+  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />).dive();
+  const radioDiv = wrapper.find('fieldset');
+  const divExist = radioDiv.find('div');
+  expect(divExist).toBeDefined();
+  expect(wrapper).toMatchSnapshot();
 });
 
 it('should render radio field with legend element for Chrome browser', () => {
   userAgentGetter.mockReturnValue('Chrome');
-  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />);
-  expect(wrapper.dive()).toMatchSnapshot();
+  const wrapper = shallowWithIntl(<RadioField legend="Custom Message RadioField" />).dive();
+  const radioDiv = wrapper.find('fieldset');
+  const legendExist = radioDiv.find('legend');
+  expect(legendExist).toBeDefined();
+  expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a default radio field if it has an undefined child', () => {
