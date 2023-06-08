@@ -17,6 +17,14 @@ describe('Input', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render as uncontrolled when placeholder is passed into the Input', () => {
+    const input = <Input defaultValue="foo" id="placeholderText" ariaLabel="label" placeholder="Enter The Text" showMpageFusionPlaceholder />;
+    const wrapper = shallow(input);
+    const placeholderInput = wrapper.find('input#placeholderText');
+    expect(placeholderInput.props()).toHaveProperty('placeholder', 'Enter The Text');
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render with a type of password and pattern prop value', () => {
     const input = <Input type="password" pattern=".{6,}" ariaLabel="label" />;
     const wrapper = shallow(input);

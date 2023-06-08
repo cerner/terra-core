@@ -165,9 +165,11 @@ class Input extends React.Component {
       attributes.defaultValue = defaultValue;
     }
 
-    if (attributes.placeholder) {
+    if (attributes.placeholder && !attributes.showMpageFusionPlaceholder) {
       attributes.placeholder = null;
     }
+
+    delete (attributes.showMpageFusionPlaceholder);
 
     return (
       <input

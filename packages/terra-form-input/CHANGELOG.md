@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Added
+   * Added placeholder to Input and Input Field.
+   * Added placeholder examples for Input and Input Field.
+
 ## 4.22.0 - (April 27, 2023)
 
 * Changed
