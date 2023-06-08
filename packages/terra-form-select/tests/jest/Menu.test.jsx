@@ -112,7 +112,7 @@ describe('Menu', () => {
   });
 
   it('should call focus on select component when select is closed via key event while not using safari browser', () => {
-    SharedUtil.isSafari.mockImplementation(() => false);
+    SharedUtil.isSafari.mockReturnValueOnce(false);
     const liveRegion = { current: document.createElement('div') };
 
     const mockSelect = {
@@ -133,7 +133,7 @@ describe('Menu', () => {
   });
 
   it('should call focus on select component when select is closed via key event while using safari browser', () => {
-    SharedUtil.isSafari.mockImplementation(() => true);
+    SharedUtil.isSafari.mockReturnValueOnce(true);
     const liveRegion = { current: document.createElement('div') };
 
     const mockSelect = {

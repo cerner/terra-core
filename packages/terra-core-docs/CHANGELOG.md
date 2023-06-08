@@ -2,17 +2,19 @@
 
 ## Unreleased
 
-* Changed
-  * Removed aria-checked to make screen readers announce Selected in `terra-form-select`.
-  * Updated focus to shift back on select upon key press or mouse click event while using Safari browser.
-
 * Added
   * Added terra-scroll A11y tests.
   * Added an example in terra-content-container without interactive elements.
+
 * Changed
   * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
   * Updated "alert" wording to "notification banner" to avoid confusion with the alert notification type.
   * Update examples for testing `alert` notification focus shift.
+
+* Changed
+  * Removed aria-checked to make screen readers announce Selected in `terra-form-select`.
+  * Updated focus to shift back on select upon key press or mouse click event while using Safari browser.
+  
 
 
 ## 1.27.0 - (May 9, 2023)
