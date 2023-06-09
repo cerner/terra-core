@@ -2,8 +2,8 @@ import { Notice } from "@cerner/terra-docs";
 import { Badge } from 'terra-image/package.json?dev-site-package';
 import Whitespace from '../../common/layout-helpers/Whitespace';
 import AlertActionFocusDemo from './example/AlertActionFocusDemo';
-import CustomExample from './example/CustomExample';
-import CustomExampleNoTitle from './example/CustomExampleNoTitle';
+import CustomExample from './example/CustomExample?dev-site-example';
+import CustomExampleNoTitle from './example/CustomExampleNoTitle?dev-site-example';
 
 import Hyperlink from 'terra-hyperlink';
 
@@ -111,26 +111,8 @@ In combination with the notification criticality, screen reader users should und
 
 - Custom notification banners should have a title provided to the `title` prop in order to be accessible.
 
-##### Bad: Avoid notifications with no titles
-<CustomExampleNoTitle />
-<br />
-
-##### Good: Titles help users understand notifications
-<CustomExample />
-
-<div aria-label="Example code">
-
-    import Alert from 'terra-alert';
-
-    <div aria-live="polite">
-        {isOpen && (
-            <Alert type="custom" title="Meaningful Notification Title">
-                Meaningful alert content.
-            </Alert>
-        )}
-    </div>
-
-</div>
+<CustomExampleNoTitle title="Bad: Avoid notifications with no titles" />
+<CustomExample title="Good: Titles help users understand notifications" />
 
 ## Linked References:
 1. ["Accessible Rich Internet Applications (WAI-ARIA) 1.3"](https://w3c.github.io/aria/). World Wide Web Consortium. Last updated 01 May 2023. Retrieved 2 May 2023.
