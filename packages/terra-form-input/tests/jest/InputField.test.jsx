@@ -21,8 +21,14 @@ describe('InputField', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render placeholder when showMpageFusionPlaceholder is passed', () => {
+  it('should render placeholder when showMpageFusionPlaceholder is not passed', () => {
     const textarea = <InputField inputId="test-input" label="label" inputAttrs={{ placeholder: 'Enter The Text' }} />;
+    const wrapper = shallow(textarea);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render placeholder when showMpageFusionPlaceholder is passed', () => {
+    const textarea = <InputField inputId="test-input" label="label" inputAttrs={{ placeholder: 'Enter The Text', showMpageFusionPlaceholder: true }} />;
     const wrapper = shallow(textarea);
     expect(wrapper).toMatchSnapshot();
   });

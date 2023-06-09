@@ -257,6 +257,38 @@ exports[`InputField should render a valid InputField with props 1`] = `
 </Field>
 `;
 
+exports[`InputField should render placeholder when showMpageFusionPlaceholder is not passed 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test-input"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Input
+    disabled={false}
+    id="test-input"
+    isIncomplete={false}
+    isInvalid={false}
+    name={null}
+    placeholder="Enter The Text"
+    required={false}
+  />
+</Field>
+`;
+
 exports[`InputField should render placeholder when showMpageFusionPlaceholder is passed 1`] = `
 <Field
   error={null}
@@ -285,6 +317,7 @@ exports[`InputField should render placeholder when showMpageFusionPlaceholder is
     name={null}
     placeholder="Enter The Text"
     required={false}
+    showMpageFusionPlaceholder={true}
   />
 </Field>
 `;
