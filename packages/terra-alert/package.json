@@ -33,7 +33,7 @@
     "terra-icon": "^3.54.0",
     "terra-responsive-element": "^5.37.0",
     "terra-theme-context": "^1.0.0",
-    "uuid": "^8.3.2"
+    "uuid": "8.2.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
