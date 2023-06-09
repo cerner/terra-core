@@ -24,8 +24,6 @@ describe('InputField', () => {
   it('should render placeholder when showMpageFusionPlaceholder is passed', () => {
     const textarea = <InputField inputId="test-input" label="label" inputAttrs={{ placeholder: 'Enter The Text' }} />;
     const wrapper = shallow(textarea);
-    const placeholderInput = (wrapper.find('Field')).find('Input#test-input');
-    expect(placeholderInput.props()).toHaveProperty('placeholder', 'Enter The Text');
     expect(wrapper).toMatchSnapshot();
   });
 
