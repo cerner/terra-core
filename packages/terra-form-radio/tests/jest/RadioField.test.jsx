@@ -10,7 +10,7 @@ window.matchMedia = () => ({ matches: true });
 jest.mock('lodash.uniqueid');
 
 let userAgentGetter;
-beforeEach(() => {
+beforeAll(() => {
   userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
   uniqueid.mockReturnValue('uuid123');
 });
