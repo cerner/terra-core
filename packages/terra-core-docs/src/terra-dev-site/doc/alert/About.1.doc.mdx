@@ -72,38 +72,39 @@ For further guidance, please view the full [Accessibility Guide](./accessibility
 
 <Notice variant="important" ariaLevel="3">
 
-<ul>
-    <li>
-        The `alert` notification type will seize keyboard focus by default when an action element is present. This behavior should only be used when absolutely necessary to interrupt the user's workflow.
-    </li>
-    <li>
-        Custom notification banners should always have a title provided to the `title` prop.
-    </li>
-</ul>
+- The `alert` notification type will seize keyboard focus by default when an action element is present. This behavior should only be used when absolutely necessary to interrupt the user's workflow.
+- Custom notification banners should always have a title provided to the `title` prop.
 
 </Notice>
 
 #### Accessibility Guidance: Live regions
-<ul>
-    <li>
-        For less critical notifications (non-alerts), the notification banner should be in an `aria-live="polite"` region. See example code below.
-    </li>
-    <li>
-        Avoid mixing critical alert notifications and less critical notifications in the same region.
-    </li>
-</ul>
+- For less critical notifications (non-alerts), the notification banner should be in an `aria-live="polite"` region. See example code below.
+- Avoid mixing critical alert notifications and less critical notifications in the same region.
 
 <div aria-label="Example code">
 
     import Alert from 'terra-alert';
 
-    <div aria-live="polite">
-        {isOpen && (
-            <Alert type="success">
-                Meaningful alert content.
-            </Alert>
-        )}
-    </div>
+    <>
+        // This less critical notification should be in polite aria-live region so screen reader users are notified.
+        <div aria-live="polite">
+            {isOpen && (
+                <Alert type="success">
+                    This notification is a less critical and should be polite.
+                </Alert>
+            )}
+        </div>
+
+        // Alert notifications are implicitly assertive, no aria-live needed
+        // It is recommended to keep these separate from polite aria-live regions.
+        <div>
+            {isOpen && (
+                <Alert type="alert">
+                    This notification is a critical alert that is interruptive.
+                </Alert>
+            )}
+        </div>
+    </>
 
 </div>
 
