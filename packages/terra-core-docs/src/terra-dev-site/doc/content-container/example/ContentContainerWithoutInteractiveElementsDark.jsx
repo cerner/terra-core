@@ -2,7 +2,6 @@ import React from 'react';
 import ContentContainer from 'terra-content-container';
 import classNames from 'classnames/bind';
 import styles from './ContentContainerDocCommon.module.scss';
-import BorderColor from '../../../../../../terra-content-container/src/BorderColor';
 
 const cx = classNames.bind(styles);
 
@@ -24,7 +23,7 @@ const contentfooter = <p className={cx('white-text')}>Please enter the name as p
 
 const Container = () => (
   <div className={cx('content-container-dark')}>
-    <ContentContainer header={contentheader} footer={contentfooter} fill setFocusOnContainer borderColor={BorderColor.Lightborder}>
+    <ContentContainer header={contentheader} footer={contentfooter} fill setFocusOnContainer borderColor="light-border">
       <div key="1">{display1}</div>
     </ContentContainer>
   </div>

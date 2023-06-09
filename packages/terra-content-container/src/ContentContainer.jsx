@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import Scroll from 'terra-scroll';
 import ThemeContext from 'terra-theme-context';
 import styles from './ContentContainer.module.scss';
-import BorderColor from './BorderColor';
 
 const cx = classNames.bind(styles);
 
@@ -39,7 +38,7 @@ const propTypes = {
    * set the border color to white or not to match the color contast ratios if the content has dark background (only to be used when setFocusOnContainer is used),
    * when borderColor is not defined or prop is not used, it will used the default border color according to the theme.
    */
-  borderColor: PropTypes.oneOf(['dark-border', 'light-border']),
+  borderColor: PropTypes.oneOf(['dark-border', 'light-border', 'default-border']),
 };
 
 const defaultProps = {
@@ -49,7 +48,7 @@ const defaultProps = {
   fill: false,
   scrollRefCallback: undefined,
   setFocusOnContainer: false,
-  borderColor: '',
+  borderColor: 'default-border',
 };
 
 const ContentContainer = ({
@@ -69,27 +68,11 @@ const ContentContainer = ({
     customProps.className,
   ]);
 
-  let borderColorStyle = '';
-  if (borderColor) {
-    switch (borderColor) {
-      case BorderColor.Darkborder:
-        borderColorStyle = 'dark-border';
-        break;
-      case BorderColor.Lightborder:
-        borderColorStyle = 'light-border';
-        break;
-      default:
-        borderColorStyle = 'default-border';
-    }
-  } else {
-    borderColorStyle = 'default-border';
-  }
-
   return (
     <div {...customProps} className={contentLayoutClassNames}>
       {header && <div className={cx('header', { focusoncontainer: setFocusOnContainer })}>{header}</div>}
       <div className={cx('main')}>
-        <Scroll className={cx('normalizer', { focusoncontainer: setFocusOnContainer }, theme.className, borderColorStyle)} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
+        <Scroll className={cx('normalizer', { focusoncontainer: setFocusOnContainer }, theme.className, borderColor)} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
           {children}
         </Scroll>
       </div>
