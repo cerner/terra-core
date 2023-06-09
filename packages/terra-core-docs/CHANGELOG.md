@@ -5,7 +5,7 @@
 * Added
   * Added terra-scroll A11y tests.
   * Added an example in terra-content-container without interactive elements.
-
+  * Added examples for terra-content-container with dark and light colors
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the `terra-form-select` component instead of HTML native `<select>`.
   * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
