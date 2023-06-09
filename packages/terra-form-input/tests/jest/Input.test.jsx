@@ -17,7 +17,7 @@ describe('Input', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render as uncontrolled when placeholder is passed into the Input', () => {
+  it('should render placeholder when showMpageFusionPlaceholder is passed into the Input', () => {
     const input = <Input defaultValue="foo" id="placeholderText" ariaLabel="label" placeholder="Enter The Text" showMpageFusionPlaceholder />;
     const wrapper = shallow(input);
     const placeholderInput = wrapper.find('input#placeholderText');

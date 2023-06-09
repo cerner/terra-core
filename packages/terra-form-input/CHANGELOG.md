@@ -3,8 +3,7 @@
 ## Unreleased
 
 * Added
-   * Added placeholder to Input and Input Field.
-   * Added placeholder examples for Input and Input Field.
+  * Enabled placeholder support for `fusion-textbox`.
 
 ## 4.22.0 - (April 27, 2023)
 

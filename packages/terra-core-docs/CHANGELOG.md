@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-*Added
-  * Added placeholder for terra-form-input tests.
-  * Added placeholder for terra-form-inputfield tests.
 * Added
   * Added terra-scroll A11y tests.
   * Added an example in terra-content-container without interactive elements.

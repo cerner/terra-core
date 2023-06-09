@@ -1,38 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputField should render a InputField with Placeholder 1`] = `
-<Field
-  error={null}
-  errorIcon={
-    <IconError
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  }
-  help={null}
-  hideRequired={false}
-  htmlFor="test-input"
-  isInline={false}
-  isInvalid={false}
-  isLabelHidden={false}
-  label="label"
-  labelAttrs={Object {}}
-  required={false}
-  showOptional={false}
->
-  <Input
-    disabled={false}
-    id="test-input"
-    isIncomplete={false}
-    isInvalid={false}
-    name={null}
-    placeholder="Enter The Text"
-    required={false}
-    showMpageFusionPlaceholder={true}
-  />
-</Field>
-`;
-
 exports[`InputField should render a InputField with props 1`] = `
 <Field
   error="Text"
@@ -286,6 +253,38 @@ exports[`InputField should render a valid InputField with props 1`] = `
     required={false}
     type="number"
     value="Value"
+  />
+</Field>
+`;
+
+exports[`InputField should render placeholder when showMpageFusionPlaceholder is passed 1`] = `
+<Field
+  error={null}
+  errorIcon={
+    <IconError
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  help={null}
+  hideRequired={false}
+  htmlFor="test-input"
+  isInline={false}
+  isInvalid={false}
+  isLabelHidden={false}
+  label="label"
+  labelAttrs={Object {}}
+  required={false}
+  showOptional={false}
+>
+  <Input
+    disabled={false}
+    id="test-input"
+    isIncomplete={false}
+    isInvalid={false}
+    name={null}
+    placeholder="Enter The Text"
+    required={false}
   />
 </Field>
 `;
