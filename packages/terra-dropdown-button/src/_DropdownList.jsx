@@ -58,6 +58,14 @@ class DropdownList extends React.Component {
     this.expanded = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.expanded' });
   }
 
+  componentDidMount() {
+    // Set focus to first focusable menu item
+    const items = this.listRef.querySelectorAll('[data-terra-dropdown-list-item]');
+    if (items.length) {
+      items[0].focus();
+    }
+  }
+
   handleKeyDown(event) {
     const { keyCode } = event;
     const { focused } = this.state;
