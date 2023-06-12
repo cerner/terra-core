@@ -34,18 +34,10 @@ const propTypes = {
    * Callback for the dropdown list selected option.
    */
   getSelectedOptionText: PropTypes.func,
-  /**
-   * Whether or not dropdown is opened using keyboard.
-   */
-  openedViaKeyboard: PropTypes.bool,
-  /**
-   * Callback for reference of the dropdown button
-   */
-  buttonRef: PropTypes.func,
 };
 
 const Dropdown = ({
-  requestClose, isOpen, targetRef, children, width, openedViaKeyboard, buttonRef, refCallback, getSelectedOptionText,
+  requestClose, isOpen, targetRef, children, width, refCallback, getSelectedOptionText,
 }) => (
   <Hookshot
     isOpen={isOpen}
@@ -59,7 +51,7 @@ const Dropdown = ({
       onEsc={requestClose}
       onOutsideClick={requestClose}
     >
-      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, initialFocus: openedViaKeyboard ? '' : buttonRef, clickOutsideDeactivates: true }}>
+      <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, clickOutsideDeactivates: true }}>
         <DropdownList
           requestClose={requestClose}
           width={width}
