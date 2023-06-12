@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed bug where search was being called twice when pressing Enter key.
+
 ## 3.82.0 - (April 27, 2023)
 
 * Changed
