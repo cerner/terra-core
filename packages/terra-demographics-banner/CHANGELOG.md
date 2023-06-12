@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated large banner to allow screen readers to follow the meaningful sequence of content, now consistent with the small banner.
+
 ## 3.61.0 - (May 9, 2023)
 
 * Added

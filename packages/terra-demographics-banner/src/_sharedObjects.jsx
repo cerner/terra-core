@@ -26,18 +26,28 @@ const DemographicsBannerValue = ({ label, value, abbrTitle }) => {
   }
 
   return (
-    <span className={cx('value')}>
-      {abbrTitle && (<VisuallyHiddenText text={abbrTitle} />)}
-      {valueLabelContent}
-      <span className={cx('value-text')}>{value}</span>
-    </span>
+    <div className={cx('value')}>
+      <dt className={cx('value-term')}>
+        {abbrTitle && (<VisuallyHiddenText text={abbrTitle} />)}
+        {valueLabelContent}
+      </dt>
+      <dd className={cx('value-text')}>{value}</dd>
+    </div>
   );
 };
 
 const personDetails = (props) => {
   const elements = [
-    <DemographicsBannerValue key="age" value={props.age} />,
-    <DemographicsBannerValue key="gender" value={props.gender} />,
+    <DemographicsBannerValue
+      key="age"
+      abbrTitle={props.ageTitle}
+      value={props.age}
+    />,
+    <DemographicsBannerValue
+      key="gender"
+      abbrTitle={props.genderTitle}
+      value={props.gender}
+    />,
     <DemographicsBannerValue
       key="dob"
       abbrTitle={props.dateOfBirthFullText}

@@ -3,6 +3,7 @@
 exports[`renders a blank banner wrapper 1`] = `
 <DemographicsBannerDisplay
   age="Terra.demographicsBanner.noDataProvided"
+  ageTitle="Terra.demographicsBanner.age"
   applicationContent={null}
   dateOfBirth="Terra.demographicsBanner.noDataProvided"
   dateOfBirthFullText="Terra.demographicsBanner.dateOfBirthFullText"
@@ -10,6 +11,7 @@ exports[`renders a blank banner wrapper 1`] = `
   deceasedDate={null}
   deceasedDateLabel="Terra.demographicsBanner.deceased"
   gender="Terra.demographicsBanner.noDataProvided"
+  genderTitle="Terra.demographicsBanner.gender"
   gestationalAge={null}
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"
@@ -28,6 +30,7 @@ exports[`renders a blank banner wrapper 1`] = `
 exports[`renders the banner wrapper with all props 1`] = `
 <DemographicsBannerDisplay
   age="25 Years"
+  ageTitle="Terra.demographicsBanner.age"
   applicationContent={
     <span
       className="risk-score"
@@ -52,6 +55,7 @@ exports[`renders the banner wrapper with all props 1`] = `
   deceasedDate={null}
   deceasedDateLabel="Terra.demographicsBanner.deceased"
   gender="Male"
+  genderTitle="Terra.demographicsBanner.gender"
   gestationalAge="April 5, 2016"
   gestationalAgeFullText="Terra.demographicsBanner.gestationalAgeFullText"
   gestationalAgeLabel="Terra.demographicsBanner.gestationalAge"

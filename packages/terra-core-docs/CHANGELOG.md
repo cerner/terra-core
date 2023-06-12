@@ -12,6 +12,7 @@
   * Updated "alert" wording to "notification banner" to avoid confusion with the alert notification type.
   * Update examples for testing `alert` notification focus shift.
   * Updated `Custom Icon + message + buttons example` for `terra-status-view`.
+  * Corrected typo in `terra-demographics-banner` example doc.
 
 ## 1.27.0 - (May 9, 2023)
 

@@ -78,17 +78,25 @@ const propTypes = {
    */
   postMenstrualAge: PropTypes.string,
   /**
-   * Label to display for the PostMenstrualAgeLabel
+   * Label to display for the Post Menstrual Age
    */
   postMenstrualAgeLabel: PropTypes.string,
   /**
-  * Text Description of the Post Menstrural Age label that is read by screen readers
+   * Text Description of the Post Menstrual Age label that is read by screen readers
    */
   postMenstrualAgeFullText: PropTypes.string,
   /**
    * The persons preferred first name if they have one.
    */
   preferredFirstName: PropTypes.string,
+  /**
+   * Title for Age that is read by screen readers
+   */
+  ageTitle: PropTypes.string,
+  /**
+   * Title for Gender that is read by screen readers
+   */
+  genderTitle: PropTypes.string,
 };
 
 const defaultProps = {
@@ -112,6 +120,8 @@ const defaultProps = {
   postMenstrualAgeLabel: 'PMA',
   postMenstrualAgeFullText: 'Post Menstrual Age',
   preferredFirstName: null,
+  ageTitle: 'Age',
+  genderTitle: 'Gender',
 };
 
 const DemographicsBannerDisplay = props => (
