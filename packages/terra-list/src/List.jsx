@@ -151,7 +151,7 @@ const List = ({
   }
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
     <ul
       {...customProps}
       {...attrSpread}
