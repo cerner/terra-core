@@ -206,7 +206,7 @@ const Alert = ({
 
   useEffect(() => {
     // if the notification is an alert with an action element, focus the alert
-    if (isAlert && action && !disableAlertActionFocus && alertBodyRef?.current?.focus) {
+    if (isAlert && (action || onDismiss) && !disableAlertActionFocus && alertBodyRef?.current?.focus) {
       alertBodyRef.current.focus();
     }
 

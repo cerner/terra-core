@@ -7,6 +7,7 @@
 * Added
   * Added terra-scroll A11y tests.
   * Added an example in terra-content-container without interactive elements.
+  * Added testing sections to `terra-alert` and `terra-form-fieldset` documentation.
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the `terra-form-select` component instead of HTML native `<select>`.
@@ -17,8 +18,8 @@
   * Corrected typo in `terra-demographics-banner` example doc.
   * Updated documentation for a11y guidance on `alert` notification type, live regions, and titles.
 
-* Added
-  * Added testing sections to `terra-alert` and `terra-form-fieldset` documentation.
+* Removed
+  * Removed console logs in Terra Alert example.
 
 ## 1.27.0 - (May 9, 2023)
 

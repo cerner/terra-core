@@ -62,12 +62,25 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
   });
 
   describe('Critical alert notification banner', () => {
-    it('alert content is focused when rendered with an action element', () => {
+    it('alert content is focused when rendered with an action element and dismiss', () => {
       browser.url('/raw/tests/cerner-terra-core-docs/alert/custom-prop-alert');
-
       browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Enter']);
 
-      Terra.validates.element('alert focused');
+      Terra.validates.element('alert focused with action and dismiss');
+    });
+
+    it('alert content is focused when rendered with only action element', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/alert/custom-prop-alert');
+      browser.keys(['Tab', 'Tab', 'Tab', 'Down arrow', 'Down arrow', 'Down arrow', 'Down arrow', 'Down arrow', 'Down arrow', 'Enter', 'Escape', 'Tab', 'Enter']);
+
+      Terra.validates.element('alert focused with action');
+    });
+
+    it('alert content is focused when rendered with only dismiss', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/alert/custom-prop-alert');
+      browser.keys(['Tab', 'Tab', 'Tab', 'Down arrow', 'Enter', 'Escape', 'Tab', 'Enter']);
+
+      Terra.validates.element('alert focused with dismiss');
     });
   });
 

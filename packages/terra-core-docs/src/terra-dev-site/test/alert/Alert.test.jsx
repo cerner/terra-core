@@ -21,14 +21,14 @@ const AlertAlert = () => {
 
   return (
     <div>
-      <Button text="Dummy Button" onClick={() => console.log('Click')} />
+      <Button text="Dummy Button" onClick={() => {}} />
       <br />
       <br />
       <Alert
         id="successAlert"
         type="success"
         action={<Button text="Action" onClick={handleActionClick} />}
-        onDismiss={() => console.log('Dismiss')}
+        onDismiss={() => {}}
       >
         Test
       </Alert>
