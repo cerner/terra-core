@@ -15,6 +15,9 @@
   * Corrected typo in `terra-demographics-banner` example doc.
   * Updated documentation for a11y guidance on `alert` notification type, live regions, and titles.
 
+* Added
+  * Added testing sections to `terra-alert` and `terra-form-fieldset` documentation.
+
 ## 1.27.0 - (May 9, 2023)
 
 * Removed

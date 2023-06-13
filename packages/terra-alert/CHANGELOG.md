@@ -3,7 +3,10 @@
 ## Unreleased
 
 * Added
-  * Added focus shift to the rendered notification banners content when notification is an alert and includes an action element.
+  * Added focus shift to the rendered notification banners content when notification is an alert and includes an action element
+
+* Changed
+  * Locked `uuid` to `8.2.0` to maintain IE compatibility.
 
 ## 4.68.0 - (May 9, 2023)
 
