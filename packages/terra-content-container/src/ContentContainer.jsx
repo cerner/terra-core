@@ -35,10 +35,11 @@ const propTypes = {
   setFocusOnContainer: PropTypes.bool,
   /**
    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
-   * set the border color to white or not to match the color contast ratios if the content has dark background (only to be used when setFocusOnContainer is used),
-   * when borderColor is not defined or prop is not used, it will used the default border color according to the theme.
+   * Sets border outline color to either `dark` or `light` if specified. select outline color according to the container background color.
+   * When specified theme values of border-outline will be ignored.
+   *  Theme values will be used when `borderOutline` is not set.
    */
-  borderColor: PropTypes.oneOf(['dark-border', 'light-border', 'default-border']),
+  borderOutline: PropTypes.oneOf(['dark', 'light']),
 };
 
 const defaultProps = {
@@ -48,7 +49,7 @@ const defaultProps = {
   fill: false,
   scrollRefCallback: undefined,
   setFocusOnContainer: false,
-  borderColor: 'default-border',
+  borderOutline: undefined,
 };
 
 const ContentContainer = ({
@@ -58,7 +59,7 @@ const ContentContainer = ({
   fill,
   scrollRefCallback,
   setFocusOnContainer,
-  borderColor,
+  borderOutline,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -68,15 +69,25 @@ const ContentContainer = ({
     customProps.className,
   ]);
 
+  const outline = borderOutline || 'defaultOutline';
+  const scrollClassNames = cx(
+    'normalizer',
+    theme.className,
+    { setPadding: setFocusOnContainer },
+    { dark: outline === 'dark' },
+    { defaultOutline: outline === 'defaultOutline' },
+    { light: outline === 'light' },
+  );
+
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      {header && <div className={cx('header', { focusoncontainer: setFocusOnContainer })}>{header}</div>}
+      {header && <div className={cx('header', { setPadding: setFocusOnContainer })}>{header}</div>}
       <div className={cx('main')}>
-        <Scroll className={cx('normalizer', { focusoncontainer: setFocusOnContainer }, theme.className, borderColor)} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
+        <Scroll className={scrollClassNames} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
           {children}
         </Scroll>
       </div>
-      {footer && <div className={cx('footer', { focusoncontainer: setFocusOnContainer })}>{footer}</div>}
+      {footer && <div className={cx('footer', { setPadding: setFocusOnContainer })}>{footer}</div>}
     </div>
   );
 };
