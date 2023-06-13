@@ -75,7 +75,6 @@ exports[`Dialog correctly applies the theme context className 1`] = `
         className="dialog orion-fusion-theme"
       >
         <ContentContainer
-          borderColor="default-border"
           fill={true}
           footer={
             <div
@@ -95,7 +94,6 @@ exports[`Dialog correctly applies the theme context className 1`] = `
               </div>
             </div>
           }
-          setFocusOnContainer={false}
         >
           <div
             className="content-container-fill"
@@ -117,12 +115,10 @@ exports[`Dialog correctly applies the theme context className 1`] = `
               className="main"
             >
               <Scroll
-                className="normalizer orion-fusion-theme default-border"
-                tabIndex="-1"
+                className="normalizer"
               >
                 <div
-                  className="scroll normalizer orion-fusion-theme default-border"
-                  tabIndex="-1"
+                  className="scroll normalizer"
                 >
                   <div
                     className="dialog-body"
@@ -154,7 +150,6 @@ exports[`Dialog should render a Dialog with merged attributes 1`] = `
   className="dialog TestClass"
 >
   <ContentContainer
-    borderColor="default-border"
     fill={true}
     footer={
       <div
@@ -174,7 +169,6 @@ exports[`Dialog should render a Dialog with merged attributes 1`] = `
         </div>
       </div>
     }
-    setFocusOnContainer={false}
   >
     <div
       className="dialog-body"
@@ -190,7 +184,6 @@ exports[`Dialog should render a default component 1`] = `
   className="dialog"
 >
   <ContentContainer
-    borderColor="default-border"
     fill={true}
     footer={
       <div
@@ -210,7 +203,6 @@ exports[`Dialog should render a default component 1`] = `
         </div>
       </div>
     }
-    setFocusOnContainer={false}
   >
     <div
       className="dialog-body"

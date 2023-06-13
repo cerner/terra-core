@@ -73,9 +73,9 @@ const ContentContainer = ({
   const scrollClassNames = cx(
     'normalizer',
     theme.className,
-    { setPadding: setFocusOnContainer },
+    { setpadding: setFocusOnContainer },
     { dark: outline === 'dark' },
-    { defaultOutline: outline === 'defaultOutline' },
+    { defaultoutline: outline === 'defaultOutline' },
     { light: outline === 'light' },
   );
 

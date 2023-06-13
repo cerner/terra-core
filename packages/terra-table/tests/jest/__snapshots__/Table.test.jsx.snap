@@ -53,7 +53,6 @@ exports[`Table should render a Table 1`] = `
 
 exports[`Table should render a Table header and footer nodes 1`] = `
 <ContentContainer
-  borderColor="default-border"
   className="outer"
   fill={false}
   footer={
@@ -68,7 +67,6 @@ exports[`Table should render a Table header and footer nodes 1`] = `
       asdf
     </p>
   }
-  setFocusOnContainer={false}
 >
   <div
     aria-describedby="test-id"
@@ -812,7 +810,6 @@ exports[`Table should render a Table with section rows width chevrons 1`] = `
 
 exports[`Table should render a Table with simple footer 1`] = `
 <ContentContainer
-  borderColor="default-border"
   className="outer"
   fill={false}
   footer={
@@ -822,7 +819,6 @@ exports[`Table should render a Table with simple footer 1`] = `
       />,
     ]
   }
-  setFocusOnContainer={false}
 >
   <div
     aria-describedby="test-id"

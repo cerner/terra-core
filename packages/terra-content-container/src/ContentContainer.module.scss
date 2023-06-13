@@ -42,12 +42,12 @@
     }
   }
 
-  .setPadding {
+  .setpadding {
     padding-left: 0.7142857143rem;
     padding-right: 0.7142857143rem;
   }
 
-  .defaultOutline:focus {
+  .defaultoutline:focus {
     outline: 2px dashed var(--terra-content-container-focus-outline, #000);
     outline-offset: -2px;
   }
