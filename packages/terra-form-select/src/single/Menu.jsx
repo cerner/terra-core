@@ -116,6 +116,7 @@ class Menu extends React.Component {
   static getDerivedStateFromProps(props, state) {
     const { clearOptionDisplay, noResultContent } = props;
 
+    const closedViaKeyEvent = true;
     let hasNoResults = false;
     const hasAddOption = false;
 
@@ -135,6 +136,7 @@ class Menu extends React.Component {
       children,
       hasNoResults,
       active: Menu.getActiveOptionFromProps(props, children, state),
+      closedViaKeyEvent,
     };
   }
 
@@ -161,8 +163,9 @@ class Menu extends React.Component {
     this.clearSearch();
     this.clearScrollTimeout();
     if (this.state.closedViaKeyEvent) {
-      this.props.select.focus();
-      if (SharedUtil.isSafari()) {
+      if (!SharedUtil.isSafari()) {
+        this.props.select.focus();
+      } else {
         /**
          * Shifting focus back to the select specifically
          * when VoiceOver is on will sometimes trigger VO to shift focus
@@ -260,7 +263,21 @@ class Menu extends React.Component {
     }
 
     if (select) {
-      select.focus();
+      if (!SharedUtil.isSafari()) {
+        select.focus();
+      } else {
+        /**
+         * Shifting focus back to the select specifically
+         * when VoiceOver is on will sometimes trigger VO to shift focus
+         * randomly to the root of document or the skip to main link
+         * instead of the select and then break VoiceOver usage when navigating the
+         * select options on subsequent opening of select
+         * Refocusing on select seems to seems to mitigate this VO bug.
+         */
+        setTimeout(() => {
+          select.focus();
+        }, 300);
+      }
     }
   }
 

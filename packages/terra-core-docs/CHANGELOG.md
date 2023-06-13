@@ -5,6 +5,7 @@
 * Added
   * Added terra-scroll A11y tests.
   * Added an example in terra-content-container without interactive elements.
+  * Added documentation updates for `Single Select`.
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the `terra-form-select` component instead of HTML native `<select>`.
@@ -14,6 +15,8 @@
   * Updated `Custom Icon + message + buttons example` for `terra-status-view`.
   * Corrected typo in `terra-demographics-banner` example doc.
   * Updated documentation for a11y guidance on `alert` notification type, live regions, and titles.
+  * Removed aria-checked to make screen readers announce Selected in `terra-form-select`.
+  * Updated focus to shift back on select upon key press or mouse click event while using Safari browser in `terra-form-select`.
 
 ## 1.27.0 - (May 9, 2023)
 
