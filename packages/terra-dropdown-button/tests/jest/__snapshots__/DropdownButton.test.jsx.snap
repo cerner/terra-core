@@ -73,7 +73,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
       variant="neutral"
     >
       <DropdownButtonBase
-        buttonRef={[Function]}
         getSelectedOptionText={[Function]}
         isBlock={false}
         isCompact={false}
@@ -85,7 +84,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             onSelect={[Function]}
           />
         }
-        openedViaKeyboard={false}
         refCallback={[Function]}
         requestClose={[Function]}
       >
@@ -114,10 +112,8 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             />
           </button>
           <Dropdown
-            buttonRef={[Function]}
             getSelectedOptionText={[Function]}
             isOpen={false}
-            openedViaKeyboard={false}
             refCallback={[Function]}
             requestClose={[Function]}
             targetRef={[Function]}

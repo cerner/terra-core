@@ -60,8 +60,8 @@ class DropdownList extends React.Component {
 
   componentDidMount() {
     // Set focus to first focusable menu item
-    const items = this.listRef.querySelectorAll('[data-terra-dropdown-list-item]');
-    if (items.length) {
+    const items = this.listRef && this.listRef.querySelectorAll('[data-terra-dropdown-list-item]');
+    if (items && items.length) {
       items[0].focus();
     }
   }
