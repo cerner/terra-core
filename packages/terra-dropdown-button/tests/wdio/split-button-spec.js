@@ -160,7 +160,7 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       });
 
       it('Navigates from last item to first item', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown']);
         expect($('#red').isFocused()).toBeTruthy();
         browser.keys(['Enter']);
         Terra.validates.element('first item focused');
