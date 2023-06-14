@@ -115,6 +115,32 @@ exports[`Input should render as uncontrolled when just a default value is passed
 />
 `;
 
+exports[`Input should render placeholder when showMpageFusionPlaceholder is passed into the Input 1`] = `
+<input
+  aria-label="label"
+  className="form-input"
+  defaultValue="foo"
+  disabled={false}
+  id="placeholderText"
+  name={null}
+  placeholder="Enter The Text"
+  required={false}
+/>
+`;
+
+exports[`Input should render placeholder with null when showMpageFusionPlaceholder is not passed into the Input 1`] = `
+<input
+  aria-label="label"
+  className="form-input"
+  defaultValue="foo"
+  disabled={false}
+  id="placeholderText"
+  name={null}
+  placeholder={null}
+  required={false}
+/>
+`;
+
 exports[`Input should render with a type of password and pattern prop value 1`] = `
 <input
   aria-label="label"

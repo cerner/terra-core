@@ -17,6 +17,22 @@ describe('Input', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render placeholder when showMpageFusionPlaceholder is passed into the Input', () => {
+    const input = <Input defaultValue="foo" id="placeholderText" ariaLabel="label" placeholder="Enter The Text" showMpageFusionPlaceholder />;
+    const wrapper = shallow(input);
+    const placeholderInput = wrapper.find('input#placeholderText');
+    expect(placeholderInput.props()).toHaveProperty('placeholder', 'Enter The Text');
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render placeholder with null when showMpageFusionPlaceholder is not passed into the Input', () => {
+    const input = <Input defaultValue="foo" id="placeholderText" ariaLabel="label" placeholder="Enter The Text" />;
+    const wrapper = shallow(input);
+    const placeholderInput = wrapper.find('input#placeholderText');
+    expect(placeholderInput.props()).toHaveProperty('placeholder', null);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render with a type of password and pattern prop value', () => {
     const input = <Input type="password" pattern=".{6,}" ariaLabel="label" />;
     const wrapper = shallow(input);
