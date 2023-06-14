@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Changed
-  * Fixed lint failures.
-
 ## 4.57.0 - (April 27, 2023)
 
 * Changed
