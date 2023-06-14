@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.69.0 - (June 14, 2023)
+
 * Added
   * Added focus shift to the rendered notification banners content when notification is an alert and includes an action element
 

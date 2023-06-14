@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.58.0 - (June 14, 2023)
+
 * Fixed
   * Fixed build issue `aria-description is not supported by the role list`.
 
