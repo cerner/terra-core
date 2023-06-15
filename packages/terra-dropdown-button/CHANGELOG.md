@@ -3,10 +3,7 @@
 ## Unreleased
 
 * Added
-   * Added screenreader support to announce index and expand/collapse state for dropdown list items.
-
-* Added 
-   * Added focus styles for dropdown list items.
+   * Added focus styles and screenreader support to announce expand/collapse state and index for dropdown list items.
 
 ## 1.34.0 - (May 9, 2023)
 
