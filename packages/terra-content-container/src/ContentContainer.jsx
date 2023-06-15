@@ -81,13 +81,13 @@ const ContentContainer = ({
 
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      {header && <div className={cx('header', { setPadding: setFocusOnContainer })}>{header}</div>}
+      {header && <div className={cx('header', { setpadding: setFocusOnContainer })}>{header}</div>}
       <div className={cx('main')}>
         <Scroll className={scrollClassNames} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
           {children}
         </Scroll>
       </div>
-      {footer && <div className={cx('footer', { setPadding: setFocusOnContainer })}>{footer}</div>}
+      {footer && <div className={cx('footer', { setpadding: setFocusOnContainer })}>{footer}</div>}
     </div>
   );
 };
