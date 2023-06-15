@@ -39,7 +39,7 @@ const propTypes = {
    * When specified theme values of border-outline will be ignored.
    *  Theme values will be used when `borderOutline` is not set.
    */
-  borderOutline: PropTypes.oneOf(['dark', 'light']),
+  borderOutline: PropTypes.oneOf(['primary', 'reverse']),
 };
 
 const defaultProps = {
@@ -74,9 +74,9 @@ const ContentContainer = ({
     'normalizer',
     theme.className,
     { setpadding: setFocusOnContainer },
-    { dark: outline === 'dark' },
+    { dark: outline === 'primary' },
     { defaultoutline: outline === 'defaultOutline' },
-    { light: outline === 'light' },
+    { light: outline === 'reverse' },
   );
 
   return (

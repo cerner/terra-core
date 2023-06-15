@@ -23,7 +23,7 @@ const contentFooter = <p className={cx('white-text')}>Please enter the name as p
 
 const Container = () => (
   <div className={cx('content-container-dark')}>
-    <ContentContainer header={contentHeader} footer={contentFooter} fill setFocusOnContainer borderOutline="light">
+    <ContentContainer header={contentHeader} footer={contentFooter} fill setFocusOnContainer borderOutline="reverse">
       <div key="1">{display1}</div>
     </ContentContainer>
   </div>
