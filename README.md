@@ -182,23 +182,27 @@ npm run test
 
 1. Install [Rancher](https://rancherdesktop.io/) or [Docker](https://www.docker.com/).
     - [Rancher](https://rancherdesktop.io/) is free and open-source and is highly recommended whereas Docker may require a license for use.
+      - The `dockerd` Container Engine should be used for running dev containers using Rancher.
 2. Install [Microsoft VS Code](https://code.visualstudio.com/Download).
 3. Install the [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
     - Navigate to View -> Extension  -> Search for and install _Dev Containers_ (or "ms-vscode-remote.remote-containers")
     - More information on [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
 4. Build the dev container:
-    - (Option 1) - Opening local workspace in dev container
+      - (Option 1) - Creating the dev container using dev volumes. Recommended for Windows for hot-reloading to work during development and improved performance (for more information and guidance, see the [Official Guide](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume)):
+        - Copy the GitHub URL of this repository (or fork)
+        - Navigate to View -> Command Palette and run **Dev Containers: Clone Repository in Container Volume**
+        - Paste the GitHub URL of this repository (or fork)
+        - VS Code will now reload the workspace and create/start the dev container and volume
+        - Please note: changes made using this option will only update files in the Docker volume. It is recommended to commit changes often in case the volume is deleted or dev container gets removed.
+    - (Option 2) - Opening local workspace in dev container
       - Clone the repository (or fork) locally and open the project in Visual Studio Code
       - Navigate to View -> Command Palette and run **Dev Containers: Open Workspace in Container**
-    - (Option 2) - Recommended for Windows for hot-reloading to work during development and improved performance: Creating the dev container using dev volumes (for more information and guidance, see the [Official Guide](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume))
-      - If you have git setup and have global config file _~/.gitconfig_ locally, these settings should automatically be transferred to the dev container
-      - Navigate to View -> Command Palette and run **Dev Containers: Clone Repository in Container Volume**
-      - Paste the GitHub URL of this repository (or fork)
-      - VS Code will now reload the workspace and create/start the dev container and volume
-      - Please note: changes made using this option will only update files in the Docker volume. It is recommended to commit changes often in case the volume is deleted or dev container gets removed.
+    - Troubleshooting:
+      - VPN may need to be disconnected if experiencing a timeout.
+      - For errors while starting dev container that results in `"Container server terminated (code: 137, signal: null)"`, try downgrading the Dev Container plugin to `v0.266.1` by selecting the "Install another version" in the extension settings.
 5. You're now running in a dev container.  Use the terminal of the dev container in Visual Studio Code to issue any npm or bash commands.
 6. Before running any WDIO tests, make sure to perform the following steps:
-    - Open a new terminal (outside the dev container) and navigate to  ".devcontainer/" path in your repository.
+    - Open a new terminal (outside the dev container) and navigate to ".devcontainer/" path in your repository.
     - Execute the command `"docker compose -f docker-compose-wdio.yml up"`. Selenium hub should spin up. Leave this running in the background. If you see errors saying "container name already exists", run `"docker container prune"` command followed by pressing "y" to clear up any unused containers and try running the previous command again.
     - You can now run `npm run test:docker` or `npm run wdio:docker` commands to run WDIO tests from inside the Dev Container.
     - NOTE: Optionally, if you want to run other WDIO commands in the dev container, you can also edit the root package.json file WDIO scripts to include `--disableSeleniumService=true` flag. This will disable the selenium service from spinning up again.
