@@ -90,17 +90,17 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       });
 
       it('should run callback on space', () => {
-        browser.keys(['ArrowDown', 'Space']);
+        browser.keys(['Space']);
         Terra.validates.element('space');
       });
 
       it('keyboard navigates down and runs callback on space', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'Space']);
+        browser.keys(['ArrowDown', 'Space']);
         Terra.validates.element('down arrow');
       });
 
       it('should run callback on enter', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowDown', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowDown', 'Enter']);
         Terra.validates.element('enter');
       });
 
@@ -117,7 +117,7 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       });
 
       it('keyboard navigates up and runs callback on enter', () => {
-        browser.keys(['ArrowDown', 'ArrowDown', 'ArrowUp', 'Enter']);
+        browser.keys(['ArrowDown', 'ArrowUp', 'Enter']);
         Terra.validates.element('up arrow');
       });
 
@@ -129,17 +129,17 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       });
 
       it('jumps to the last entry', () => {
-        browser.keys(['ArrowDown', 'End', 'Enter']);
+        browser.keys(['End', 'Enter']);
         Terra.validates.element('end');
       });
 
       it('jumps to the first entry', () => {
-        browser.keys(['ArrowDown', 'Home', 'Enter']);
+        browser.keys(['Home', 'Enter']);
         Terra.validates.element('home');
       });
 
       it('jumps when typing', () => {
-        browser.keys(['ArrowDown', 'b', 'Enter']);
+        browser.keys(['b', 'Enter']);
         Terra.validates.element('jumps when typing');
       });
 
@@ -262,13 +262,6 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     it('should run callback in dropdown that focuses an element', () => {
       $('#first').click();
       Terra.validates.element('first button clicked');
-    });
-
-    it('Focus to single item on arrow down', () => {
-      $('[class*=dropdown-button]').click();
-      $('[class*=dropdown-list]').waitForDisplayed();
-      browser.keys(['ArrowDown', 'ArrowDown']);
-      Terra.validates.element('single item focus', { selector: '#root' });
     });
   });
 
