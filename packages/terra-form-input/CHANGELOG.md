@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.23.0 - (June 14, 2023)
+
 * Added
   * Enabled placeholder support for `fusion-textbox`.
 

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.21.0 - (June 14, 2023)
+
 * Fixed
   * Fixed issue with VoiceOver announcing group and legend multiple times.
 

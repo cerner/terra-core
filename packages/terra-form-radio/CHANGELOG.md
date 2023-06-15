@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.36.0 - (June 14, 2023)
+
 * Fixed
   * Fixed issue with VO announcing group and legend multiple times.
 

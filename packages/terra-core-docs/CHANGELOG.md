@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.28.0 - (June 14, 2023)
+
 * Added
   * Added terra-scroll A11y tests.
   * Added an example in terra-content-container without interactive elements.
