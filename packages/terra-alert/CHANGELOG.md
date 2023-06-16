@@ -2,10 +2,13 @@
 
 ## Unreleased
 
+* Changed
+  * Updated focus shift to rendered `alert` notification banners content that include an interactable action element and/or dismiss.
+
 ## 4.69.0 - (June 14, 2023)
 
 * Added
-  * Added focus shift to rendered `alert` notification banners content that include an interactable action element and/or dismiss.
+  * Added focus shift to the rendered notification banners content when notification is an alert and includes an action element
 
 * Changed
   * Locked `uuid` to `8.2.0` to maintain IE compatibility.
