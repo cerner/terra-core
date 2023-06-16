@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Updated focus shift to rendered `alert` notification banners content that include an interactable action element and/or dismiss.
+  * Updated focus shift for `alert` notification banners that have an interactable action element and/or dismiss.
 
 ## 4.69.0 - (June 14, 2023)
 

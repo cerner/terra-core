@@ -66,6 +66,7 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
       browser.url('/raw/tests/cerner-terra-core-docs/alert/custom-prop-alert');
       browser.keys(['Tab', 'Tab', 'Tab', 'Tab', 'Enter']);
 
+      expect($('[tabIndex="-1"]').isFocused()).toBeTruthy();
       Terra.validates.element('alert focused with action and dismiss');
     });
 
@@ -73,6 +74,7 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
       browser.url('/raw/tests/cerner-terra-core-docs/alert/custom-prop-alert');
       browser.keys(['Tab', 'Tab', 'Tab', 'Down arrow', 'Down arrow', 'Down arrow', 'Down arrow', 'Down arrow', 'Down arrow', 'Enter', 'Escape', 'Tab', 'Enter']);
 
+      expect($('[tabIndex="-1"]').isFocused()).toBeTruthy();
       Terra.validates.element('alert focused with action');
     });
 
@@ -80,6 +82,7 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
       browser.url('/raw/tests/cerner-terra-core-docs/alert/custom-prop-alert');
       browser.keys(['Tab', 'Tab', 'Tab', 'Down arrow', 'Enter', 'Escape', 'Tab', 'Enter']);
 
+      expect($('[tabIndex="-1"]').isFocused()).toBeTruthy();
       Terra.validates.element('alert focused with dismiss');
     });
   });
