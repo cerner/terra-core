@@ -67,35 +67,46 @@ import Alert from 'terra-alert';
 ```
 
 ## Accessibility
-Please view the full [Accessibility Guide](./accessibility-guide).
+
+For further guidance, please view the full [Accessibility Guide](./accessibility-guide).
 
 <Notice variant="important" ariaLevel="3">
 
+- The `alert` notification type will seize keyboard focus by default when an action element is present. This behavior should only be used when absolutely necessary to interrupt the user's workflow.
+- Custom notification banners should always have a title provided to the `title` prop.
+
+</Notice>
+
 #### Accessibility Guidance: Live regions
-
-For more, please view the [full accessibility guide for live regions and assistive technologies](./accessibility-guide#assistive-technologies)
-
-For screen readers to pick up and announce a newly rendered notification, the notification must be within an aria-live region.
-To enable assistive technologies the ability to inform the user of a less critical notification in a polite (non-interruptive) way, ensure the Alert is
-within an element where `aria-live="polite"`.
-
-Please note: the `"alert"` role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-live is previously present.
+- For less critical notifications (non-alerts), the notification banner should be in an `aria-live="polite"` region. See example code below.
+- Avoid mixing critical alert notifications and less critical notifications in the same region.
 
 <div aria-label="Example code">
 
     import Alert from 'terra-alert';
 
-    <div aria-live="polite">
-        {isOpen && (
-            <Alert type="success">
-                Meaningful alert content.
-            </Alert>
-        )}
-    </div>
+    <>
+        // This less critical notification should be in polite aria-live region so screen reader users are notified.
+        <div aria-live="polite">
+            {isOpen && (
+                <Alert type="success">
+                    This notification is a less critical and should be polite.
+                </Alert>
+            )}
+        </div>
+
+        // Alert notifications are implicitly assertive, no aria-live needed
+        // It is recommended to keep these separate from polite aria-live regions.
+        <div>
+            {isOpen && (
+                <Alert type="alert">
+                    This notification is a critical alert that is interruptive.
+                </Alert>
+            )}
+        </div>
+    </>
 
 </div>
-
-</Notice>
 
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
@@ -121,3 +132,15 @@ Please note: the `"alert"` role implicitly has aria-live value of `assertive` an
 
 ## Alert Props
 <AlertPropsTable />
+
+## Testing
+
+Terra Alert uses `uuid` which changes the component's description id dynamically. To mock it with the Jest testing library, `jest.mock` can be used.
+
+If Enzyme `shallow` is being used for the tests then the mock may not be required depending on the depth of the returned wrapper. However, if `mount` is used then uuid should be mocked as shown below.
+
+```js
+// using a variable may result in failures. For best results, hardcode the mock return value.
+jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
+
+```

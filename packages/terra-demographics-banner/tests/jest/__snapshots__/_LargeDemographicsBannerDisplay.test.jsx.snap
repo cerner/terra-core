@@ -15,60 +15,67 @@ exports[`correctly applies the theme context className 1`] = `
       <div
         className="content"
       >
-        <div
-          className="row"
-        >
-          <h2
-            className="person-name"
-          />
-          <div
-            className="application-content"
-          />
-        </div>
-        <div
-          className="row"
+        <h2
+          className="person-name"
+        />
+        <dl
+          className="identifier-row"
         >
           <div
             className="person-details"
+            role="presentation"
           >
             <DemographicsBannerValue
               key="age"
             >
-              <span
+              <div
                 className="value"
               >
-                <span
+                <dt
+                  className="value-term"
+                />
+                <dd
                   className="value-text"
                 />
-              </span>
+              </div>
             </DemographicsBannerValue>
             <DemographicsBannerValue
               key="gender"
             >
-              <span
+              <div
                 className="value"
               >
-                <span
+                <dt
+                  className="value-term"
+                />
+                <dd
                   className="value-text"
                 />
-              </span>
+              </div>
             </DemographicsBannerValue>
             <DemographicsBannerValue
               key="dob"
             >
-              <span
+              <div
                 className="value"
               >
-                <span
+                <dt
+                  className="value-term"
+                />
+                <dd
                   className="value-text"
                 />
-              </span>
+              </div>
             </DemographicsBannerValue>
           </div>
           <div
             className="identifiers"
+            role="presentation"
           />
-        </div>
+        </dl>
+        <div
+          className="application-content"
+        />
       </div>
     </section>
   </_default>
@@ -104,34 +111,22 @@ exports[`renders large banner that contains all valid information 1`] = `
   <div
     className="content"
   >
-    <div
-      className="row"
+    <h2
+      className="person-name"
     >
-      <h2
-        className="person-name"
+      Johnathon Doe
+      <span
+        className="preferred-first-name"
       >
-        Johnathon Doe
-        <span
-          className="preferred-first-name"
-        >
-          (John)
-        </span>
-      </h2>
-      <div
-        className="application-content"
-      >
-        <span
-          className="risk-score"
-        >
-          5%
-        </span>
-      </div>
-    </div>
-    <div
-      className="row"
+        (John)
+      </span>
+    </h2>
+    <dl
+      className="identifier-row"
     >
       <div
         className="person-details"
+        role="presentation"
       >
         <DemographicsBannerValue
           key="age"
@@ -149,6 +144,7 @@ exports[`renders large banner that contains all valid information 1`] = `
       </div>
       <div
         className="identifiers"
+        role="presentation"
       >
         <DemographicsBannerValue
           key="identifier-MRN"
@@ -161,6 +157,15 @@ exports[`renders large banner that contains all valid information 1`] = `
           value="3JSDA"
         />
       </div>
+    </dl>
+    <div
+      className="application-content"
+    >
+      <span
+        className="risk-score"
+      >
+        5%
+      </span>
     </div>
   </div>
 </section>
@@ -173,28 +178,22 @@ exports[`renders the provided person name header level 1`] = `
   <div
     className="content"
   >
-    <div
-      className="row"
+    <h3
+      className="person-name"
     >
-      <h3
-        className="person-name"
+      Johnathon Doe
+      <span
+        className="preferred-first-name"
       >
-        Johnathon Doe
-        <span
-          className="preferred-first-name"
-        >
-          (John)
-        </span>
-      </h3>
-      <div
-        className="application-content"
-      />
-    </div>
-    <div
-      className="row"
+        (John)
+      </span>
+    </h3>
+    <dl
+      className="identifier-row"
     >
       <div
         className="person-details"
+        role="presentation"
       >
         <DemographicsBannerValue
           key="age"
@@ -208,8 +207,12 @@ exports[`renders the provided person name header level 1`] = `
       </div>
       <div
         className="identifiers"
+        role="presentation"
       />
-    </div>
+    </dl>
+    <div
+      className="application-content"
+    />
   </div>
 </section>
 `;

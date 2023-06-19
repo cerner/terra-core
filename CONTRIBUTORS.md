@@ -94,6 +94,7 @@ Cerner Corporation
 - Andrew Tran [@trandrew1023]
 - Steven Mason [@smason0]
 - Alla Doroshkevych [@adoroshk]
+- Quan Le [@leducquan]
 
 Community
 
@@ -215,3 +216,4 @@ Community
 [@trandrew1023]: https://github.com/trandrew1023
 [@smason0]: https://github.com/smason0
 [@adoroshk]: https://github.com/adoroshk
+[@leducquan]: https://github.com/leducquan

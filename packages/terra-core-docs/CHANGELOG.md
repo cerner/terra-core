@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.28.0 - (June 14, 2023)
+
 * Added
   * Added terra-scroll A11y tests.
   * Added an example in terra-content-container without interactive elements.
@@ -10,8 +12,13 @@
   * Updated `terra-status-view - Change Variant` example component to use the `terra-form-select` component instead of HTML native `<select>`.
   * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
   * Updated "alert" wording to "notification banner" to avoid confusion with the alert notification type.
-  * Update examples for testing `alert` notification focus shift.
+  * Updated examples for testing `alert` notification focus shift.
   * Updated `Custom Icon + message + buttons example` for `terra-status-view`.
+  * Corrected typo in `terra-demographics-banner` example doc.
+  * Updated documentation for a11y guidance on `alert` notification type, live regions, and titles.
+
+* Added
+  * Added testing sections to `terra-alert` and `terra-form-fieldset` documentation.
 
 ## 1.27.0 - (May 9, 2023)
 

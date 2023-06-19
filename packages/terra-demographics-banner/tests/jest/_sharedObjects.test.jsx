@@ -20,6 +20,17 @@ describe('personDetails', () => {
     expect(elements).toMatchSnapshot();
   });
 
+  it('creates elements with age and gender titles for screen readers', () => {
+    props.ageTitle = 'Age';
+    props.genderTitle = 'Gender';
+    const elements = DemographicsBannerUtils.personDetails(props);
+
+    expect(elements.length).toBe(3);
+    expect(elements[0].props.abbrTitle).toEqual('Age');
+    expect(elements[1].props.abbrTitle).toEqual('Gender');
+    expect(elements).toMatchSnapshot();
+  });
+
   it('creates elements with gestational age', () => {
     props.gestationalAge = '2';
     props.gestationalAgeLabel = 'GA';

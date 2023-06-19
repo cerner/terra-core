@@ -28,11 +28,17 @@
   }
 
   .value-text {
+    display: inline-block;
     font-weight: var(--terra-demographics-banner-value-text-font-weight, bold);
+    margin-left: 0;
   }
 
   .value-label {
     margin-right: 0.357em;
+  }
+
+  .value-term {
+    display: inline-block;
   }
 
   .person-name {
@@ -50,6 +56,7 @@
 
   .person-details {
     flex: 1;
+    margin-bottom: 0;
     margin-top: var(--terra-demographics-banner-person-details-margin-top);
   }
 
@@ -72,12 +79,20 @@
     text-decoration: none;
   }
 
-  .row {
+  .identifier-row {
     display: flex;
+    flex: 0 0 auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    order: 3; // Places row after person-name and application-content visually as the third flex item (this element must be rendered immediately following person-name element for assistive technology support).
+    width: 100%;
   }
 
   .content {
+    display: flex;
+    flex-direction: row;
     flex-grow: 1;
+    flex-wrap: wrap;
     margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
   }
 
