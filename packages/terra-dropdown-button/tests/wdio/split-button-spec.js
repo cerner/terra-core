@@ -323,6 +323,12 @@ Terra.describeViewports('Split Button', ['medium'], () => {
       $('#second').click();
       Terra.validates.element('second button clicked');
     });
+
+    it('Focus to single item on arrow down', () => {
+      $('[class*=split-button-caret]').click();
+      $('[class*=dropdown-list]').waitForDisplayed();
+      Terra.validates.element('single item focus', { selector: '#root' });
+    });
   });
 
   it('displays variants of Split Button', () => {
