@@ -4,8 +4,11 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import Option from '../../src/shared/_Option';
+import SharedUtil from '../../src/shared/_SharedUtil';
 import ComboboxMenu from '../../src/combobox/Menu';
 import SingleSelectMenu from '../../src/single/Menu';
+
+jest.mock('../../src/shared/_SharedUtil');
 
 describe('Menu', () => {
   it('should render a default Menu', () => {
@@ -105,6 +108,50 @@ describe('Menu', () => {
         </SingleSelectMenu>
       </ThemeContextProvider>,
     );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should call focus on select component when select is closed via key event while not using safari browser', () => {
+    SharedUtil.isSafari.mockReturnValueOnce(false);
+    const liveRegion = { current: document.createElement('div') };
+    const mockSelect = {
+      focus: jest.fn(),
+    };
+
+    const menu = (
+      <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" searchValue="" select={mockSelect}>
+        <Option value="value" display="display" />
+      </SingleSelectMenu>
+    );
+
+    const wrapper = mountWithIntl(menu);
+    wrapper.setState({ closedViaKeyEvent: true });
+    wrapper.unmount();
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should call focus on select component when select is closed via key event while using safari browser', () => {
+    SharedUtil.isSafari.mockReturnValueOnce(true);
+    const liveRegion = { current: document.createElement('div') };
+
+    const mockSelect = {
+      focus: jest.fn(),
+    };
+
+    jest.useFakeTimers();
+
+    const menu = (
+      <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" searchValue="" select={mockSelect}>
+        <Option value="value" display="display" />
+      </SingleSelectMenu>
+    );
+
+    const wrapper = mountWithIntl(menu);
+    wrapper.setState({ closedViaKeyEvent: true });
+    wrapper.unmount();
+    jest.advanceTimersByTime(500);
+
     expect(wrapper).toMatchSnapshot();
   });
 });
