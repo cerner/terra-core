@@ -125,7 +125,9 @@ describe('Menu', () => {
     );
 
     const wrapper = mountWithIntl(menu);
+    jest.useFakeTimers();
     wrapper.setState({ closedViaKeyEvent: true });
+    jest.advanceTimersByTime(500);
     wrapper.unmount();
 
     expect(wrapper).toMatchSnapshot();

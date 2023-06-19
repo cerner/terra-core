@@ -117,7 +117,6 @@ class Menu extends React.Component {
     const { clearOptionDisplay, noResultContent } = props;
 
     let hasNoResults = false;
-    const closedViaKeyEvent = false;
     const hasAddOption = false;
 
     let children = MenuUtil.filter(props.children, '');
@@ -136,7 +135,6 @@ class Menu extends React.Component {
       children,
       hasNoResults,
       active: Menu.getActiveOptionFromProps(props, children, state),
-      closedViaKeyEvent,
     };
   }
 
