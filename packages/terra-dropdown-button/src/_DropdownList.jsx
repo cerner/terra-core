@@ -181,13 +181,13 @@ class DropdownList extends React.Component {
     return React.Children.map(this.props.children, (child, index) => {
       const currentItemLabel = this.props.children[index]?.props.label;
       const currentIndex = index + 1;
-      const ofText = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.of' });
       const totalItems = this.props.children.length;
+      const activeOption = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.activeOption' }, { currentItemLabel, currentIndex, totalItems });
       let ariaLabel = null;
       if (currentIndex === 1 && totalItems) {
-        ariaLabel = `${this.expanded}${currentItemLabel},(${currentIndex} ${ofText} ${totalItems})`;
+        ariaLabel = `${this.expanded}${activeOption}`;
       } else if (currentIndex !== 1 && totalItems) {
-        ariaLabel = `${currentItemLabel},(${currentIndex} ${ofText} ${totalItems})`;
+        ariaLabel = `${activeOption}`;
       }
       return React.cloneElement(child, {
         isActive: index === this.state.active,

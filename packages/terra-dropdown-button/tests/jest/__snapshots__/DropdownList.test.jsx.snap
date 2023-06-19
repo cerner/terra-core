@@ -81,7 +81,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         }
       >
         <Item
-          aria-label="Terra.dropdownButton.expanded1st Option,(1 Terra.dropdownButton.of 3)"
+          aria-label="Terra.dropdownButton.expandedTerra.dropdownButton.activeOption"
           data-terra-dropdown-list-item={true}
           isActive={false}
           key=".0"
@@ -90,7 +90,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           requestClose={[Function]}
         >
           <li
-            aria-label="Terra.dropdownButton.expanded1st Option,(1 Terra.dropdownButton.of 3)"
+            aria-label="Terra.dropdownButton.expandedTerra.dropdownButton.activeOption"
             className="item orion-fusion-theme"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}
@@ -101,7 +101,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           </li>
         </Item>
         <Item
-          aria-label="2nd Option,(2 Terra.dropdownButton.of 3)"
+          aria-label="Terra.dropdownButton.activeOption"
           data-terra-dropdown-list-item={true}
           isActive={false}
           key=".1"
@@ -110,7 +110,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           requestClose={[Function]}
         >
           <li
-            aria-label="2nd Option,(2 Terra.dropdownButton.of 3)"
+            aria-label="Terra.dropdownButton.activeOption"
             className="item orion-fusion-theme"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}
@@ -121,7 +121,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           </li>
         </Item>
         <Item
-          aria-label="3rd Option,(3 Terra.dropdownButton.of 3)"
+          aria-label="Terra.dropdownButton.activeOption"
           data-terra-dropdown-list-item={true}
           isActive={false}
           key=".2"
@@ -130,7 +130,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           requestClose={[Function]}
         >
           <li
-            aria-label="3rd Option,(3 Terra.dropdownButton.of 3)"
+            aria-label="Terra.dropdownButton.activeOption"
             className="item orion-fusion-theme"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}

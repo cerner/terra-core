@@ -124,13 +124,13 @@ describe('Dropdown List', () => {
     wrapper.instance().listRef = listRefMock;
     const firstListItem = wrapper.find('#firstItem');
     const firstListItemAriaLabelValue = firstListItem.props()['aria-label'];
-    const expectedAriaLabelValueInitial = `${translationsFile['Terra.dropdownButton.expanded']}1st Option,(1 ${translationsFile['Terra.dropdownButton.of']} 3)`;
+    const expectedAriaLabelValueInitial = `${translationsFile['Terra.dropdownButton.expanded']}1st Option,(1 of 3)`;
     expect(firstListItemAriaLabelValue).toEqual(expectedAriaLabelValueInitial);
 
     // Simulate keydown event
     wrapper.instance().handleKeyDown(eventMock);
     const updatedFirstListItemAriaLabelValue = wrapper.find('#firstItem').props()['aria-label'];
-    const expectedAriaLabelValue = `1st Option,(1 ${translationsFile['Terra.dropdownButton.of']} 3)`;
+    const expectedAriaLabelValue = '1st Option,(1 of 3)';
     expect(updatedFirstListItemAriaLabelValue).toEqual(expectedAriaLabelValue);
   });
 });
