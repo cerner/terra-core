@@ -59,7 +59,7 @@ class DropdownList extends React.Component {
   }
 
   componentDidMount() {
-    // Set focus to first focusable menu item
+    // Set focus to first focusable menu item, prevents focus from being set on button while navigating through dropdown items using keyboard in safari with Voice Over.
     const items = this.listRef && this.listRef.querySelectorAll('[data-terra-dropdown-list-item]');
     if (items && items.length) {
       items[0].focus();

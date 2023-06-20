@@ -64,7 +64,6 @@ class DropdownButton extends React.Component {
     this.handleDropdownRequestClose = this.handleDropdownRequestClose.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
-    this.setButtonNode = this.setButtonNode.bind(this);
     this.setListNode = this.setListNode.bind(this);
     this.toggleDropDown = this.toggleDropDown.bind(this);
     this.state = {
@@ -111,10 +110,6 @@ class DropdownButton extends React.Component {
 
   setListNode(element) {
     this.dropdownList = element;
-  }
-
-  setButtonNode(node) {
-    this.buttonNode = node;
   }
 
   getSelectedOptionText = (selectedOptionText) => {
@@ -186,7 +181,6 @@ class DropdownButton extends React.Component {
           tabIndex={isDisabled ? '-1' : undefined}
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
-          ref={this.setButtonNode}
           aria-label={selectText ? `${selectText}, ${selectedLabel}` : ''}
           onBlur={this.handleBlur}
         >
