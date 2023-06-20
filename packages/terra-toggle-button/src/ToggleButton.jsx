@@ -106,7 +106,7 @@ class ToggleButton extends React.Component {
     } = this.props;
     // Set openHeaderText to the same value as closedHeaderText if its not already set
     const normalizedOpenButtonText = openedButtonText || closedButtonText;
-    const buttonText = !this.state.isOpen ? closedButtonText : normalizedOpenButtonText;
+    const buttonText = this.state.isOpen ? (normalizedOpenButtonText || closedButtonText) : closedButtonText;
     const text = isIconOnly ? closedButtonText : buttonText;
     const toggleButtonClass = cx([
       'button',
@@ -120,7 +120,12 @@ class ToggleButton extends React.Component {
         {...buttonAttrs}
         isIconOnly={isIconOnly}
         icon={<span className={cx('icon')}>{icon}</span>}
-        aria-expanded={this.state.isOpen}
+        aria-expanded={this.state.isOpen ? "true" : "false"}
+        aria-label={
+          this.state.isOpen
+            ? ` ${normalizedOpenButtonText}`
+            : ` ${closedButtonText}`
+        }
         text={text}
         onClick={this.handleOnClick}
       />

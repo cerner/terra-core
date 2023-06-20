@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+* Added the realistic examples and fixed the Accessibility issue for Open/Close text example.
 
 ## 3.68.0 - (April 27, 2023)
 
