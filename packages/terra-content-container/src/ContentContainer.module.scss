@@ -47,18 +47,13 @@
     padding-right: 0.7142857143rem;
   }
 
-  .defaultoutline:focus {
-    outline: 2px dashed var(--terra-content-container-focus-outline, #000);
-    outline-offset: -2px;
-  }
-
   .dark:focus {
-    outline: 2px dashed #000;
+    outline: 2px dashed var(--terra-content-container-focus-outline-dark, #c8cacb);
     outline-offset: -2px;
   }
 
   .light:focus {
-    outline: 2px dashed #c8cacb;
+    outline: 2px dashed var(--terra-content-container-focus-outline-light, #000);
     outline-offset: -2px;
   }
 

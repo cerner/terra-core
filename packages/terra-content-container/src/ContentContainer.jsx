@@ -39,7 +39,7 @@ const propTypes = {
    * When specified theme values of border-outline will be ignored.
    *  Theme values will be used when `borderOutline` is not set.
    */
-  borderOutline: PropTypes.oneOf(['primary', 'reverse']),
+  backgroundColor: PropTypes.oneOf(['dark','light'])
 };
 
 const defaultProps = {
@@ -49,7 +49,7 @@ const defaultProps = {
   fill: false,
   scrollRefCallback: undefined,
   setFocusOnContainer: false,
-  borderOutline: undefined,
+  backgroundColor: undefined,
 };
 
 const ContentContainer = ({
@@ -59,7 +59,7 @@ const ContentContainer = ({
   fill,
   scrollRefCallback,
   setFocusOnContainer,
-  borderOutline,
+  backgroundColor,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -69,14 +69,13 @@ const ContentContainer = ({
     customProps.className,
   ]);
 
-  const outline = borderOutline || 'defaultOutline';
+  const background = backgroundColor || 'light';
   const scrollClassNames = cx(
     'normalizer',
     theme.className,
     { setpadding: setFocusOnContainer },
-    { dark: outline === 'primary' },
-    { defaultoutline: outline === 'defaultOutline' },
-    { light: outline === 'reverse' },
+    { dark: background === 'dark' },
+    { light: background === 'light' },
   );
 
   return (

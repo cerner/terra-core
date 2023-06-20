@@ -9,21 +9,17 @@
   }
 
   .content-container-dark {
-    background-color: #024978;
+    background-color: var(--terra-content-container-dark-background-color,#024978);
     border: 1px solid #fff;
   }
 
-  .content-container-light {
-    background-color: #fffefe;
-    border: 1px solid;
+  .content-container-darker {
+    background-color: var(--terra-content-container-dark-background-color,#1b2326);
+    border: 1px solid #fff;
   }
 
   .white-text {
     color: #fff;
-  }
-
-  .black-text {
-    color: #000;
   }
 
   .button {
