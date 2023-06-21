@@ -7,8 +7,6 @@ import Option from '../../src/shared/_Option';
 import ComboboxMenu from '../../src/combobox/Menu';
 import SingleSelectMenu from '../../src/single/Menu';
 
-jest.mock('../../src/shared/_SharedUtil');
-
 describe('Menu', () => {
   it('should render a default Menu', () => {
     const liveRegion = { current: document.createElement('div') };
@@ -100,7 +98,6 @@ describe('Menu', () => {
 
   it('correctly applies the theme context className', () => {
     const liveRegion = { current: document.createElement('div') };
-
     const wrapper = mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
         <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" searchValue="asdf">
