@@ -7,7 +7,7 @@ import { injectIntl } from 'react-intl';
 import uniqueid from 'lodash.uniqueid';
 import * as KeyCode from 'keycode-js';
 import Dropdown from '../shared/_Dropdown';
-import Menu from './Menu';
+import { Menu } from './Menu';
 import FrameUtil from '../shared/_FrameUtil';
 import SharedUtil from '../shared/_SharedUtil';
 import styles from '../shared/_Frame.module.scss';
@@ -503,6 +503,8 @@ class Frame extends React.Component {
       refCallback: this.setSelectMenuRef,
     };
 
+    const SelectMenu = injectIntl(Menu);
+
     return (
       <div
         {...customProps}
@@ -548,9 +550,9 @@ class Frame extends React.Component {
             refCallback={(ref) => { this.dropdown = ref; }}
             style={FrameUtil.dropdownStyle(dropdownAttrs, this.state)} // eslint-disable-line react/forbid-component-props
           >
-            <Menu {...menuProps}>
+            <SelectMenu {...menuProps}>
               {children}
-            </Menu>
+            </SelectMenu>
           </Dropdown>
         )}
       </div>

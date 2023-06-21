@@ -254,10 +254,10 @@ export class Menu extends React.Component {
 
     if (select) {
       if (!SharedUtil.isSafari()) {
-        this.props.select.focus();
+        select.focus();
       } else {
         setTimeout(() => {
-          this.props.select.focus();
+          select.focus();
         }, 300);
       }
     }
