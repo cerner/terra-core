@@ -9,7 +9,7 @@ const ToggleVariants = () => {
 
   const handleOnSelect = (value) => setSelectValue(value);
 
-  const handleValue = () => setVariant(selectValue);
+  const handleOnClick = () => setVariant(selectValue);
 
   return (
     <div>
