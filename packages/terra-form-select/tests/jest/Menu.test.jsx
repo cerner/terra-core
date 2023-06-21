@@ -7,6 +7,7 @@ import Option from '../../src/shared/_Option';
 import SharedUtil from '../../src/shared/_SharedUtil';
 import ComboboxMenu from '../../src/combobox/Menu';
 import SingleSelectMenu from '../../src/single/Menu';
+import {Menu} from '../../src/single/Menu';
 
 jest.mock('../../src/shared/_SharedUtil');
 
@@ -112,48 +113,44 @@ describe('Menu', () => {
   });
 
   it('should call focus on select component when select is closed via key event while not using safari browser', () => {
-    SharedUtil.isSafari.mockReturnValueOnce(false);
+    jest.spyOn(SharedUtil, 'isSafari').mockReturnValue(false);
     const liveRegion = { current: document.createElement('div') };
-    const mockSelect = {
-      focus: jest.fn(),
-    };
+
+    const mockSelect = document.createElement('div');
+    mockSelect.focus = spyOn(mockSelect, 'focus');
 
     const menu = (
-      <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" searchValue="" select={mockSelect}>
+      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={{}} value="value" searchValue="" select={mockSelect}>
         <Option value="value" display="display" />
-      </SingleSelectMenu>
+      </Menu>
     );
 
     const wrapper = mountWithIntl(menu);
-    jest.useFakeTimers();
-    wrapper.setState({ closedViaKeyEvent: true });
-    jest.advanceTimersByTime(500);
-    wrapper.unmount();
-
-    expect(wrapper).toMatchSnapshot();
+    wrapper.setState({closedViaKeyEvent: true})
+    wrapper.unmount()
+    expect(mockSelect.focus).toHaveBeenCalled();
   });
 
   it('should call focus on select component when select is closed via key event while using safari browser', () => {
-    SharedUtil.isSafari.mockReturnValueOnce(true);
+    jest.spyOn(SharedUtil, 'isSafari').mockReturnValue(true);
     const liveRegion = { current: document.createElement('div') };
 
-    const mockSelect = {
-      focus: jest.fn(),
-    };
-
-    jest.useFakeTimers();
+    const mockSelect = document.createElement('div');
+    mockSelect.focus = spyOn(mockSelect, 'focus');
 
     const menu = (
-      <SingleSelectMenu onSelect={() => {}} visuallyHiddenComponent={liveRegion} value="value" searchValue="" select={mockSelect}>
+      <Menu onSelect={() => {}} visuallyHiddenComponent={liveRegion} intl={{}} value="value" searchValue="" select={mockSelect}>
         <Option value="value" display="display" />
-      </SingleSelectMenu>
+      </Menu>
     );
 
     const wrapper = mountWithIntl(menu);
-    wrapper.setState({ closedViaKeyEvent: true });
-    wrapper.unmount();
-    jest.advanceTimersByTime(500);
+    wrapper.setState({closedViaKeyEvent: true})
 
-    expect(wrapper).toMatchSnapshot();
+    jest.useFakeTimers();
+    wrapper.unmount();
+    jest.advanceTimersByTime(400);
+
+    expect(mockSelect.focus).toHaveBeenCalled();
   });
 });

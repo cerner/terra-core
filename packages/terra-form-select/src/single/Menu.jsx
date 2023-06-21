@@ -75,7 +75,7 @@ const defaultProps = {
   refCallback: undefined,
 };
 
-class Menu extends React.Component {
+export class Menu extends React.Component {
   static getActiveOptionFromProps(props, children, state) {
     const { active } = state;
     const { value } = props;
