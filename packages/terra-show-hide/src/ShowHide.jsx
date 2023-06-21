@@ -5,6 +5,7 @@ import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
 import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
+import { v4 as uuidv4 } from 'uuid';
 
 const cx = classNames.bind(styles);
 
@@ -58,6 +59,16 @@ const ShowHide = (props) => {
     ...customProps
   } = props;
 
+  const ref = React.useRef(null);
+
+  React.useEffect(() => {
+    if (isOpen && ref?.current) {
+      ref.current.focus();
+    }
+  }, [isOpen]);
+
+  const toggleWrapperId = `toggle-wrapper-${uuidv4()}`;
+
   const buttonClassName = cx([
     'show-hide',
     'button',
@@ -78,12 +89,15 @@ const ShowHide = (props) => {
   return (
     <div {...customProps}>
       {!isOpen && preview}
-      <Toggle isOpen={isOpen}>
-        {children}
-      </Toggle>
+      <div tabIndex={-1} ref={ref} id={toggleWrapperId}>
+        <Toggle isOpen={isOpen}>
+          {children}
+        </Toggle>
+      </div>
       <div className={cx('show-hide')}>
         <Button
           aria-expanded={isOpen}
+          aria-controls={isOpen ? toggleWrapperId : null}
           text={buttonText || intlButtonText}
           onClick={onChange}
           className={buttonClassName}
