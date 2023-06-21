@@ -20,7 +20,7 @@ const ToggleVariants = () => {
         <SingleSelectField.Option value="no-matching-results" display="No Matching Result" />
         <SingleSelectField.Option value="not-authorized" display="Not Authorized" />
       </SingleSelectField>
-      <Button text="Apply" variant="emphasis" onClick={handleValue} />
+      <Button text="Apply" variant="emphasis" onClick={handleOnClick} />
       <p>
         Select a status view variant from the dropdown above.
       </p>
