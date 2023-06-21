@@ -35,11 +35,10 @@ const propTypes = {
   setFocusOnContainer: PropTypes.bool,
   /**
    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
-   * Sets border outline color to either `dark` or `light` if specified. select outline color according to the container background color.
-   * When specified theme values of border-outline will be ignored.
-   *  Theme values will be used when `borderOutline` is not set.
+   * This prop needs to be set only if `setFocusOnContainer` is set. Based on dark or light background color the border will be wite or black to match color contrast ratio
+   * guidelines.
    */
-  backgroundColor: PropTypes.oneOf(['dark','light'])
+  backgroundColor: PropTypes.oneOf(['dark', 'light']),
 };
 
 const defaultProps = {
@@ -73,20 +72,20 @@ const ContentContainer = ({
   const scrollClassNames = cx(
     'normalizer',
     theme.className,
-    { setpadding: setFocusOnContainer },
+    { 'content-container-focused-padding': setFocusOnContainer },
     { dark: background === 'dark' },
     { light: background === 'light' },
   );
 
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      {header && <div className={cx('header', { setpadding: setFocusOnContainer })}>{header}</div>}
+      {header && <div className={cx('header', { 'content-container-focused-padding': setFocusOnContainer })}>{header}</div>}
       <div className={cx('main')}>
         <Scroll className={scrollClassNames} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
           {children}
         </Scroll>
       </div>
-      {footer && <div className={cx('footer', { setpadding: setFocusOnContainer })}>{footer}</div>}
+      {footer && <div className={cx('footer', { 'content-container-focused-padding': setFocusOnContainer })}>{footer}</div>}
     </div>
   );
 };

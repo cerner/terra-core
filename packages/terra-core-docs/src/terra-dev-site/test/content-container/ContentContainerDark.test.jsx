@@ -1,8 +1,8 @@
 import React from 'react';
 import ContentContainer from 'terra-content-container';
 import classNames from 'classnames/bind';
-import styles from './ContentContainerTestCommon.module.scss';
 import ThemeContext from 'terra-theme-context';
+import styles from './ContentContainerTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -25,11 +25,12 @@ const contentFooter = <p className={cx('white-text')}>Please enter the name as p
 const Container = () => {
   const theme = React.useContext(ThemeContext);
   return (
-  <div className={cx(theme.className === 'clinical-lowlight-theme'?'content-container-darker':'content-container-dark')}>
-    <ContentContainer header={contentHeader} footer={contentFooter} fill setFocusOnContainer borderOutline="reverse">
-      <div key="1">{display1}</div>
-    </ContentContainer>
-  </div>
-)};
+    <div className={cx(theme.className === 'clinical-lowlight-theme' ? 'content-container-darker' : 'content-container-dark')}>
+      <ContentContainer header={contentHeader} footer={contentFooter} fill setFocusOnContainer borderOutline="reverse">
+        <div key="1">{display1}</div>
+      </ContentContainer>
+    </div>
+  );
+};
 
 export default Container;
