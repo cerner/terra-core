@@ -26,7 +26,7 @@ const Container = () => {
   const theme = React.useContext(ThemeContext);
   return (
     <div className={cx(theme.className === 'clinical-lowlight-theme' ? 'content-container-darker' : 'content-container-dark')}>
-      <ContentContainer header={contentHeader} footer={contentFooter} fill setFocusOnContainer borderOutline="reverse">
+      <ContentContainer header={contentHeader} footer={contentFooter} fill setFocusOnContainer backgroundColor="dark">
         <div key="1">{display1}</div>
       </ContentContainer>
     </div>
