@@ -18,12 +18,11 @@ exports[`correctly applies the theme context className 1`] = `
         <h2
           className="person-name"
         />
-        <dl
+        <div
           className="identifier-row"
         >
-          <div
+          <dl
             className="person-details"
-            role="presentation"
           >
             <DemographicsBannerValue
               key="age"
@@ -67,12 +66,11 @@ exports[`correctly applies the theme context className 1`] = `
                 />
               </div>
             </DemographicsBannerValue>
-          </div>
-          <div
+          </dl>
+          <dl
             className="identifiers"
-            role="presentation"
           />
-        </dl>
+        </div>
         <div
           className="application-content"
         />
@@ -121,12 +119,11 @@ exports[`renders large banner that contains all valid information 1`] = `
         (John)
       </span>
     </h2>
-    <dl
+    <div
       className="identifier-row"
     >
-      <div
+      <dl
         className="person-details"
-        role="presentation"
       >
         <DemographicsBannerValue
           key="age"
@@ -141,10 +138,9 @@ exports[`renders large banner that contains all valid information 1`] = `
           label="DOB"
           value="May 9, 1993"
         />
-      </div>
-      <div
+      </dl>
+      <dl
         className="identifiers"
-        role="presentation"
       >
         <DemographicsBannerValue
           key="identifier-MRN"
@@ -156,8 +152,8 @@ exports[`renders large banner that contains all valid information 1`] = `
           label="REA"
           value="3JSDA"
         />
-      </div>
-    </dl>
+      </dl>
+    </div>
     <div
       className="application-content"
     >
@@ -188,12 +184,11 @@ exports[`renders the provided person name header level 1`] = `
         (John)
       </span>
     </h3>
-    <dl
+    <div
       className="identifier-row"
     >
-      <div
+      <dl
         className="person-details"
-        role="presentation"
       >
         <DemographicsBannerValue
           key="age"
@@ -204,12 +199,11 @@ exports[`renders the provided person name header level 1`] = `
         <DemographicsBannerValue
           key="dob"
         />
-      </div>
-      <div
+      </dl>
+      <dl
         className="identifiers"
-        role="presentation"
       />
-    </dl>
+    </div>
     <div
       className="application-content"
     />

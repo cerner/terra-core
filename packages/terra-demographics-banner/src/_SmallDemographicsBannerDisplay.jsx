@@ -30,6 +30,8 @@ export default (props) => {
     postMenstrualAgeFullText,
     postMenstrualAgeLabel,
     preferredFirstName,
+    ageTitle,
+    genderTitle,
     ...customProps
   } = props;
 
