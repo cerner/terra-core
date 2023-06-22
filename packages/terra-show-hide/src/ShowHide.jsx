@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
-import { v4 as uuidv4 } from 'uuid';
 
 const cx = classNames.bind(styles);
 
@@ -59,6 +59,7 @@ const ShowHide = (props) => {
     ...customProps
   } = props;
 
+  const theme = React.useContext(ThemeContext);
   const ref = React.useRef(null);
 
   React.useEffect(() => {
@@ -66,8 +67,6 @@ const ShowHide = (props) => {
       ref.current.focus();
     }
   }, [isOpen]);
-
-  const toggleWrapperId = `toggle-wrapper-${uuidv4()}`;
 
   const buttonClassName = cx([
     'show-hide',
@@ -85,11 +84,23 @@ const ShowHide = (props) => {
       intlButtonText = intl.formatMessage({ id: 'Terra.showhide.showmore' });
     }
   }
+  /**
+   * This prevents container from getting focus on click.
+   * Does not prevent container's children to receive focus and be click-able.
+   */
+  const onMouseDown = (event) => event.preventDefault();
 
   return (
     <div {...customProps}>
       {!isOpen && preview}
-      <div tabIndex={-1} ref={ref} id={toggleWrapperId}>
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+      <div
+        className={cx(['show-hide', 'context-container', theme.className])}
+        tabIndex={-1}
+        ref={ref}
+        data-focus-styles-enabled={isOpen}
+        onMouseDown={onMouseDown}
+      >
         <Toggle isOpen={isOpen}>
           {children}
         </Toggle>
@@ -97,7 +108,6 @@ const ShowHide = (props) => {
       <div className={cx('show-hide')}>
         <Button
           aria-expanded={isOpen}
-          aria-controls={isOpen ? toggleWrapperId : null}
           text={buttonText || intlButtonText}
           onClick={onChange}
           className={buttonClassName}
