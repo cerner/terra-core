@@ -88,18 +88,15 @@ const ShowHide = (props) => {
    * This prevents container from getting focus on click.
    * Does not prevent container's children to receive focus and be click-able.
    */
-  const onMouseDown = (event) => event.preventDefault();
 
   return (
     <div {...customProps}>
       {!isOpen && preview}
-      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
-        className={cx(['show-hide', 'context-container', theme.className])}
+        className={cx(['show-hide', 'content-container', theme.className])}
         tabIndex={-1}
         ref={ref}
         data-focus-styles-enabled={isOpen}
-        onMouseDown={onMouseDown}
       >
         <Toggle isOpen={isOpen}>
           {children}
