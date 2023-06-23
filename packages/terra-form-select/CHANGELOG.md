@@ -1,6 +1,11 @@
 # Changelog
 
 ## Unreleased
+* Fixed
+  * Fixed `Native Select` to allow updating the value prop in subsequent renders.
+
+* Added
+  * Added WDIO screenshots for `Native Select` with initial value as null and without null.
 
 ## 6.41.0 - (May 9, 2023)
 
