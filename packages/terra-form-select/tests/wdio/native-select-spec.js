@@ -187,4 +187,18 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
       Terra.validates.element('filter-style-hover-and-focus');
     });
   });
+
+  describe('Controlled Select', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/form-select/native-select/controlled-select'));
+
+    it('native select with null value', () => {
+      Terra.validates.element('controlled-select-null');
+    });
+
+    it('should set Mercedes value on click', () => {
+      $('#test-button-id').click();
+
+      Terra.validates.element('controlled-select-value');
+    });
+  });
 });

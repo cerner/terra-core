@@ -1,6 +1,7 @@
 import React, {
   useState,
   useRef,
+  useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -167,9 +168,19 @@ const NativeSelect = ({
   ...customProps
 }) => {
   const [uncontrolledValue, setUncontrolledValue] = useState(!isValuePresent(value) ? defaultValue || getFirstValue(options, isFilterStyle) : undefined);
-  const refIsControlled = useRef(isValuePresent(value));
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
+  const [refIsControlled, setrefIsControlled] = useState(useRef(isValuePresent(value)));
+
+  useEffect(() => {
+    // added this to allow initial null values
+    if (value) {
+      setrefIsControlled(true);
+      setUncontrolledValue('');
+    } else {
+      setrefIsControlled(false);
+    }
+  }, [value]);
 
   // The native select's presentation is masked to allow for better customization of the inputs display.
   // In order to facilitate this, the mouseDown, blur, and focus events need to be mapped mapped to the mask.
@@ -194,7 +205,7 @@ const NativeSelect = ({
     }
   };
   const handleOnChange = event => {
-    if (!refIsControlled.current) {
+    if (!refIsControlled) {
       setUncontrolledValue(event.currentTarget.value);
     }
     if (onChange) {
@@ -202,7 +213,7 @@ const NativeSelect = ({
     }
   };
 
-  let currentValue = refIsControlled.current ? value : uncontrolledValue;
+  let currentValue = refIsControlled ? value : uncontrolledValue;
   let currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
   if (!currentDisplay) {
     currentValue = getFirstValue(options, isFilterStyle);
