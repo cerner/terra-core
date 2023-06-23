@@ -10,10 +10,10 @@ const ControlledSelect = () => {
   const [value, setValue] = useState(null);
 
   return (
-    <>
+    <div className={cx('test-shell')}>
       <NativeSelect
         ariaLabel="Controlled Select Example"
-        selectId="test-select-id"
+        id="test-select-id"
         onChange={event => setValue(event.currentTarget.value)}
         options={[
           { value: 'volvo', display: 'Volvo' },
@@ -25,7 +25,7 @@ const ControlledSelect = () => {
         className={cx('form-select')}
       />
       <Button id="test-button-id" text="Set Mercedes" onClick={() => setValue('mercedes')} />
-    </>
+    </div>
   );
 };
 
