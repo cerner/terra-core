@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated WDIO Screenshots due to added focus.
+
 * Added
   * Shift focus to newly revealed content for screen-reader users.
 
