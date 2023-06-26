@@ -75,17 +75,17 @@ const Arrange = ({
   const fitEndProps = { ...fitEndAttributes };
 
   return (
-    <div {...customProps} className={cx('arrange', customProps.className)}>
-      <div {...fitStartProps} className={cx('fit', align || alignFitStart, fitStartProps.className)}>
+    <span {...customProps} className={cx('arrange', customProps.className)}>
+      <span {...fitStartProps} className={cx('fit', align || alignFitStart, fitStartProps.className || 'fitBlock')}>
         {fitStart}
-      </div>
-      <div {...fillProps} className={cx('fill', align || alignFill, fillProps.className)}>
+      </span>
+      <span {...fillProps} className={cx('fill', align || alignFill, fillProps.className || 'fillBlock')}>
         {fill}
-      </div>
-      <div {...fitEndProps} className={cx('fit', align || alignFitEnd, fitEndProps.className)}>
+      </span>
+      <span {...fitEndProps} className={cx('fit', align || alignFitEnd, fitEndProps.className)}>
         {fitEnd}
-      </div>
-    </div>
+      </span>
+    </span>
   );
 };
 

@@ -127,7 +127,8 @@
     background: var(--terra-section-header-accordion-icon-background, inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#1c1f21" d="M12,0l24,24L12,48V0z"/></svg>'));
     background-repeat: no-repeat;
     background-size: contain;
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     height: var(--terra-section-header-accordion-icon-height, 0.83593rem);
     transform: rotate(0deg);
     width: var(--terra-section-header-accordion-icon-width, 0.83593rem);
@@ -151,4 +152,11 @@
       outline: none;
     }
   }
+}
+.toggleButton {
+  border: none;
+  background: none;
+  text-align: left;
+  padding: 0px;
+  cursor: pointer;
 }

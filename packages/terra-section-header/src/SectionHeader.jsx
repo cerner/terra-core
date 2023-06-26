@@ -119,9 +119,9 @@ class SectionHeader extends React.Component {
     ]);
 
     const accordionIcon = (
-      <div className={cx('accordion-icon-wrapper')}>
+      <span className={cx('accordion-icon-wrapper', 'icon-wrapper')}>
         <span className={iconClassNames} />
-      </div>
+      </span>
     );
 
     const sectionHeaderClassNames = classNames(
@@ -153,17 +153,28 @@ class SectionHeader extends React.Component {
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-    const buttonAttributes = (onClick) ? { role: 'button', 'aria-expanded': isOpen, 'aria-label': headerText } : undefined;
+    //Function to use Arrange component
+    const ArrangeComponent = () => (
+      <Arrange
+        fitStart={onClick && accordionIcon}
+        fill={<span aria-hidden={(onClick !== undefined)} className={cx('title', 'titleBlock')}>{headerText}</span>}
+        className={cx('title-arrange')}
+      />
+    )
+
+    const buttonAttributes = (onClick) ? { 'aria-expanded': isOpen, 'aria-label': headerText } : undefined;
 
     return (
       <Element {...attributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
-        <div {...buttonAttributes} tabIndex="-1" className={cx('arrange-wrapper')}>
-          <Arrange
-            fitStart={onClick && accordionIcon}
-            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
-            className={cx('title-arrange')}
-          />
-        </div>
+         {onClick && accordionIcon ? (
+          <button {...buttonAttributes} type="button" tabIndex="-1" className={cx('arrange-wrapper toggleButton')}>
+            <ArrangeComponent />
+          </button>
+        ) : (
+          <div tabIndex="-1" className={cx('arrange-wrapper')}>
+            <ArrangeComponent />
+          </div>
+        )}
       </Element>
     );
 
