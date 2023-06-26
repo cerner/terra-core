@@ -9,13 +9,12 @@ const IconOnly = () => {
   };
 
   const handleBookAppointmentClick = () => {
-    
-    console.log('Booking an appointment...');
+    alert("Appointment Book")
   };
 
   const handleContactClick = () => {
-    
-    console.log('Contacting us...');
+    alert("Contact Button Clicked")
+
   };
 
   return (

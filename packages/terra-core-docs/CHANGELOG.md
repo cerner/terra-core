@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+* Added the realistic examples for terra-toggle-button.
 ## 1.28.0 - (June 14, 2023)
 
 * Added

@@ -18,13 +18,12 @@ const OpenCloseEventToggleButton = () => {
   };
 
   const handleContactClick = () => {
-    
-    console.log('Contact button clicked!');
+    alert("Research Team ")
+
   };
 
   const handleTrialSignupClick = () => {
-    // Logic to handle trial signup button click
-    console.log('Trial signup button clicked!');
+    alert("Sign up")
   };
 
   return (
@@ -41,6 +40,7 @@ const OpenCloseEventToggleButton = () => {
       </div>
       <ToggleButton
         closedButtonText="Explore Research"
+        openedButtonText="Opened Toggle Button Text"
         onOpen={handleOnOpen}
         onClose={handleOnClose}
       >

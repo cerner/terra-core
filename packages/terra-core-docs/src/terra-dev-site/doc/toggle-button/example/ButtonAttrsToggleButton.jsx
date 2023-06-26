@@ -4,12 +4,11 @@ import ToggleButton from 'terra-toggle-button';
 
 const ButtonAttrsToggleButton = () => {
   const handleLearnMoreClick = () => {
-  console.log("Learn more Clicked");
+    alert("Learn More Button")
   };
 
   const handleContactClick = () => {
-  console.log("Contact Click");
-    
+    alert("Contact Button Click")
   };
 
   return (
