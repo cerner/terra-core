@@ -128,9 +128,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    vertical-align: middle;
     height: var(--terra-section-header-accordion-icon-height, 0.83593rem);
     transform: rotate(0deg);
+    vertical-align: middle;
     width: var(--terra-section-header-accordion-icon-width, 0.83593rem);
 
     // flips the icon about its vertical axis, presenting it in its mirrored-image form
@@ -153,10 +153,11 @@
     }
   }
 }
-.toggleButton {
-  border: none;
+
+.toggle-button {
   background: none;
-  text-align: left;
-  padding: 0px;
+  border: 0;
   cursor: pointer;
+  padding: 0;
+  text-align: left;
 }

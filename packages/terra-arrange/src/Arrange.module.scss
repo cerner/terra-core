@@ -41,14 +41,16 @@
     align-self: flex-start;
   }
 }
-.fitBlock {
+
+.fit-block {
   .icon-wrapper {
+    display: inline-flex;
     font-size: 8px;
-  display: inline-flex;
   }
 }
-.fillBlock {
-  .titleBlock {
-    font-family: var(--terra-base-font-family, "Helvetica Neue", Helvetica, Arial, sans-serif);
+
+.fill-block {
+  .title-block {
+    font-family: var(--terra-arrange-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif);
   }
 }

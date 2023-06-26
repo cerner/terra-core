@@ -76,10 +76,10 @@ const Arrange = ({
 
   return (
     <span {...customProps} className={cx('arrange', customProps.className)}>
-      <span {...fitStartProps} className={cx('fit', align || alignFitStart, fitStartProps.className || 'fitBlock')}>
+      <span {...fitStartProps} className={cx('fit', align || alignFitStart, fitStartProps.className || 'fit-block')}>
         {fitStart}
       </span>
-      <span {...fillProps} className={cx('fill', align || alignFill, fillProps.className || 'fillBlock')}>
+      <span {...fillProps} className={cx('fill', align || alignFill, fillProps.className || 'fill-block')}>
         {fill}
       </span>
       <span {...fitEndProps} className={cx('fit', align || alignFitEnd, fitEndProps.className)}>
