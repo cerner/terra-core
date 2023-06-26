@@ -71,7 +71,7 @@
     "start-heroku": "terra express-server --port $PORT --site './build' ",
     "test": "npm run lint && npm run jest && npm run wdio",
     "test:docker": "npm run lint && npm run jest && npm run wdio:docker",
-    "wdio-default": "WDIO_EXTERNAL_HOST='10.189.206.27' terra wdio --gridUrl grid314.test.devcernerpowerchart.com --browsers chrome --spec packages/terra-toggle-button/tests/wdio/toggle-button-spec.js --themes orion-fusion-theme",
+    "wdio-default": "terra wdio",
     "wdio-lowlight": "terra wdio --themes clinical-lowlight-theme",
     "wdio-fusion": "terra wdio --themes orion-fusion-theme",
     "wdio": "terra wdio --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme",
