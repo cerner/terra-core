@@ -170,15 +170,12 @@ const NativeSelect = ({
   const [uncontrolledValue, setUncontrolledValue] = useState(!isValuePresent(value) ? defaultValue || getFirstValue(options, isFilterStyle) : undefined);
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
-  const [refIsControlled, setrefIsControlled] = useState(useRef(isValuePresent(value)));
+  const refIsControlled = isValuePresent(value);
 
   useEffect(() => {
     // added this to allow initial null values
     if (value) {
-      setrefIsControlled(true);
       setUncontrolledValue('');
-    } else {
-      setrefIsControlled(false);
     }
   }, [value]);
 
