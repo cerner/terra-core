@@ -5,7 +5,7 @@
 * Added
   * Added styles when the scroll is focussed
 * Changed
-  * Removed the focus style changes added for terra-scroll.
+  * Reverted the focus style changes added in terra-scroll.
 
 ## 2.34.0 - (February 15, 2023)
 

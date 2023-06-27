@@ -35,8 +35,8 @@ const propTypes = {
   setFocusOnContainer: PropTypes.bool,
   /**
    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
-   * This prop needs to be set only if `setFocusOnContainer` is set. Based on dark or light background color the border will be wite or black to match color contrast ratio
-   * guidelines.
+   * This prop needs to be set only if `setFocusOnContainer` is set. Based on dark or light background color the border will be white or black respectively to maintain 
+   * an accessible color contrast ratio.
    */
   backgroundColor: PropTypes.oneOf(['dark', 'light']),
 };
@@ -73,8 +73,7 @@ const ContentContainer = ({
     'normalizer',
     theme.className,
     { 'content-container-focused-padding': setFocusOnContainer },
-    { dark: background === 'dark' },
-    { light: background === 'light' },
+    background
   );
 
   return (
