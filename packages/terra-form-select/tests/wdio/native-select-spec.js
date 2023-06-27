@@ -197,6 +197,7 @@ Terra.describeViewports('Native Select', ['tiny'], () => {
 
     it('should set Mercedes value on click', () => {
       $('#test-button-id').click();
+      expect($('#test-select-id').getAttribute('value')).toEqual('mercedes');
 
       Terra.validates.element('controlled-select-value');
     });
