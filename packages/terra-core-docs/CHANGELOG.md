@@ -1,5 +1,8 @@
 # Changelog
 
+* Added
+  * Added documentation updates for `Single Select` in `terra-form-select`.
+
 ## Unreleased
 
 * Changed
