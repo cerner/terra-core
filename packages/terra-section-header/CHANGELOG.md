@@ -3,11 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Updated div element with span tag element.
-  * Updated div element with button tag element.
-
-* Added
-  * Added a function "ArrangeComponent" to use Arrange component.
+  * Updated SectionHeader to use `span` & `button` elements instead of `div`.
 
 ## 2.60.0 - (April 5, 2023)
 

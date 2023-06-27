@@ -59,7 +59,7 @@ describe('Arrange', () => {
   it('should have fit and fill with the default class when align is not set', () => {
     const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} />;
     const wrapper = shallow(arrange);
-    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.type()).toEqual('span');
     expect(wrapper.childAt(0).hasClass('fit')).toEqual(true);
     expect(wrapper.childAt(1).hasClass('fill')).toEqual(true);
     expect(wrapper.childAt(2).hasClass('fit')).toEqual(true);
@@ -68,7 +68,7 @@ describe('Arrange', () => {
   it('should have fit and fill with the required class when fitStart and fill set to top and stretch"', () => {
     const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} alignFitStart="center" alignFill="stretch" />;
     const wrapper = shallow(arrange);
-    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.type()).toEqual('span');
     expect(wrapper.childAt(0).hasClass('fit center')).toEqual(true);
     expect(wrapper.childAt(1).hasClass('fill stretch')).toEqual(true);
     expect(wrapper.childAt(2).hasClass('fit')).toEqual(true);
@@ -77,7 +77,7 @@ describe('Arrange', () => {
   it('should have fit and fill with the required class when fitStart, fitEnd and fill set to stretch, bottom and stretch"', () => {
     const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} alignFitStart="stretch" alignFill="stretch" alignFitEnd="bottom" />;
     const wrapper = shallow(arrange);
-    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.type()).toEqual('span');
     expect(wrapper.childAt(0).hasClass('fit stretch')).toEqual(true);
     expect(wrapper.childAt(1).hasClass('fill stretch')).toEqual(true);
     expect(wrapper.childAt(2).hasClass('fit bottom')).toEqual(true);
@@ -86,7 +86,7 @@ describe('Arrange', () => {
   it('should have child with the correct class when align is set to stretch', () => {
     const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="stretch" />;
     const wrapper = shallow(arrange);
-    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.type()).toEqual('span');
     expect(wrapper.childAt(0).hasClass('fit stretch')).toEqual(true);
     expect(wrapper.childAt(1).hasClass('fill stretch')).toEqual(true);
     expect(wrapper.childAt(2).hasClass('fit stretch')).toEqual(true);
@@ -95,7 +95,7 @@ describe('Arrange', () => {
   it('should have child with the correct class when align is set and overwrites individual fit and fill ', () => {
     const arrange = <Arrange fitStart={fitStart} fitEnd={fitEnd} fill={fill} align="stretch" alignFitStart="center" />;
     const wrapper = shallow(arrange);
-    expect(wrapper.type()).toEqual('div');
+    expect(wrapper.type()).toEqual('span');
     expect(wrapper.childAt(0).hasClass('fit stretch')).toEqual(true);
     expect(wrapper.childAt(1).hasClass('fill stretch')).toEqual(true);
     expect(wrapper.childAt(2).hasClass('fit stretch')).toEqual(true);
