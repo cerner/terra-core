@@ -1,5 +1,9 @@
 import React from 'react';
 import ToggleButton from 'terra-toggle-button';
+import classNames from 'classnames/bind';
+import styles from './ToggleButtonCommon.module.scss';
+
+const cx = classNames.bind(styles);
 
 const IconOnly = () => {
   const [isButtonOn, setButtonOn] = React.useState(false);
@@ -9,12 +13,11 @@ const IconOnly = () => {
   };
 
   const handleBookAppointmentClick = () => {
-    alert("Appointment Book")
+    alert('Appointment Book');
   };
 
   const handleContactClick = () => {
-    alert("Contact Button Clicked")
-
+    alert('Contact Button Clicked');
   };
 
   return (
@@ -33,11 +36,11 @@ const IconOnly = () => {
       <p>
         Whether you need a routine check-up, have a specific health concern, or require ongoing care, our compassionate healthcare professionals are here to support you every step of the way. We prioritize patient satisfaction and strive to create a comfortable and nurturing environment for everyone who walks through our doors.
       </p>
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
-        <button onClick={handleBookAppointmentClick} className="appointment-button">
+      <div className={cx('toggle-div-style')}>
+        <button type="button" onClick={handleBookAppointmentClick}>
           Book an Appointment
         </button>
-        <button onClick={handleContactClick} className="contact-button">
+        <button type="button" onClick={handleContactClick}>
           Contact Us
         </button>
       </div>

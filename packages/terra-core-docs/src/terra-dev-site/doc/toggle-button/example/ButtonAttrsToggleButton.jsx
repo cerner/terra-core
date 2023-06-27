@@ -4,11 +4,11 @@ import ToggleButton from 'terra-toggle-button';
 
 const ButtonAttrsToggleButton = () => {
   const handleLearnMoreClick = () => {
-    alert("Learn More Button")
+    alert('Learn More Button');
   };
 
   const handleContactClick = () => {
-    alert("Contact Button Click")
+    alert('Contact Button Click');
   };
 
   return (
@@ -31,7 +31,9 @@ const ButtonAttrsToggleButton = () => {
           Our platform supports nationwide interoperability, allowing healthcare facilities to access comprehensive patient records regardless of where care was provided. Through our partnership with the CommonWell Health Alliance, we facilitate secure data exchange and provide a unified view of patient information.
         </p>
         <p>
-          To learn more about our integrated healthcare solutions and how they can benefit your organization, please <Button text="Contact us" onClick={handleContactClick} /> for further information. Our dedicated team is ready to assist you in transforming healthcare delivery and achieving better patient outcomes.
+          To learn more about our integrated healthcare solutions and how they can benefit your organization, please
+          <Button text="Contact us" onClick={handleContactClick} />
+          for further information. Our dedicated team is ready to assist you in transforming healthcare delivery and achieving better patient outcomes.
         </p>
       </div>
     </ToggleButton>

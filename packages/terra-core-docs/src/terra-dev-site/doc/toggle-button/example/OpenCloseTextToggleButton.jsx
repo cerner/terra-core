@@ -9,10 +9,10 @@ const OpenCloseTextToggleButton = () => (
   >
     <div>
       <p>
-        This is a ToggleButton component with open and close functionality. When the button is closed, the text "Close Toggle Button Text" will be displayed. When the button is opened, the text "Opened Toggle Button Text" will be displayed.
+        This is a ToggleButton component with open and close functionality. When the button is closed, the text  &quot; Close Toggle Button Text &ldquo; will be displayed. When the button is opened, the text &quot;Opened Toggle Button Text&ldquo; will be displayed.
       </p>
       <p>
-        To use this ToggleButton user can customize the 'closedButtonText' and 'openedButtonText' props according to your desired text. User can adjust the 'isAnimated' prop to enable or disable the animation when toggling the button.
+        To use this ToggleButton user can customize the &quot;closedButtonText&ldquo; and &quot;openedButtonText&ldquo; props according to your desired text. User can adjust the &quot;isAnimated&ldquo; prop to enable or disable the animation when toggling the button.
       </p>
     </div>
   </ToggleButton>

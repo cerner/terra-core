@@ -18,12 +18,11 @@ const OpenCloseEventToggleButton = () => {
   };
 
   const handleContactClick = () => {
-    alert("Research Team ")
-
+    alert('Research Team');
   };
 
   const handleTrialSignupClick = () => {
-    alert("Sign up")
+    alert('Sign up');
   };
 
   return (
@@ -40,7 +39,6 @@ const OpenCloseEventToggleButton = () => {
       </div>
       <ToggleButton
         closedButtonText="Explore Research"
-        openedButtonText="Opened Toggle Button Text"
         onOpen={handleOnOpen}
         onClose={handleOnClose}
       >
@@ -59,10 +57,14 @@ const OpenCloseEventToggleButton = () => {
             By participating in our research studies, patients have the opportunity to access cutting-edge treatments and contribute to the advancement of medical science. We offer comprehensive support and information to participants throughout the research process.
           </p>
           <p>
-            If you are interested in learning more about our ongoing research projects or considering participation in a clinical trial, please <a href="#contact" onClick={handleContactClick}>contact our research department</a>. Your involvement can help us bring new breakthroughs to patients in need.
+            If you are interested in learning more about our ongoing research projects or considering participation in a clinical trial, please
+            <a href="#contact" onClick={handleContactClick}>contact our research department</a>
+            . Your involvement can help us bring new breakthroughs to patients in need.
           </p>
           <p>
-            Additionally, you can directly sign up for a clinical trial by filling out our <a href="#trial-signup" onClick={handleTrialSignupClick}>trial signup form</a>. We will review your information and get in touch with you regarding eligibility and further steps.
+            Additionally, you can directly sign up for a clinical trial by filling out our
+            <a href="#trial-signup" onClick={handleTrialSignupClick}>trial signup form</a>
+            . We will review your information and get in touch with you regarding eligibility and further steps.
           </p>
         </div>
       </ToggleButton>
