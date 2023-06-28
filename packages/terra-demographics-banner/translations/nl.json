@@ -1,8 +1,10 @@
 {
+  "Terra.demographicsBanner.age": "Leeftijd",
   "Terra.demographicsBanner.dateOfBirth": "Geboortedatum",
   "Terra.demographicsBanner.dateOfBirthFullText": "Geboortedatum",
   "Terra.demographicsBanner.deceased": "Overleden",
-  "Terra.demographicsBanner.gestationalAge": "Zwangerschapsduur",
+  "Terra.demographicsBanner.gender": "Geslacht",
+  "Terra.demographicsBanner.gestationalAge": "Gestatieleeftijd",
   "Terra.demographicsBanner.gestationalAgeFullText": "Zwangerschapsduur",
   "Terra.demographicsBanner.noDataProvided": "--",
   "Terra.demographicsBanner.postMenstrualAge": "Postmenstruele leeftijd",

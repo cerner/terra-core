@@ -1,12 +1,13 @@
 import React from 'react';
 import ContentContainer from 'terra-content-container';
 import classNames from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './ContentContainerDocCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
 const display1 = (
-  <p key="1">
+  <p className={cx('white-text')} key="1">
     Entering patient details is a crucial process in healthcare facilities that involves capturing and documenting relevant information about
     individuals seeking medical care. Patient details need to be regularly updated to ensure accuracy and relevancy. This may involve periodic
     verification of personal information, updating medical history, and making necessary changes to insurance or contact details. Hospitals may
@@ -18,15 +19,18 @@ const display1 = (
   </p>
 );
 
-const contentHeader = <h3>Registration Form</h3>;
-const contentFooter = <p>Please enter the name as per the official document</p>;
+const contentHeader = <h3 className={cx('white-text')}>Registration Form</h3>;
+const contentFooter = <p className={cx('white-text')}>Please enter the name as per the official document</p>;
 
-const Container = () => (
-  <div className={cx('content-container-fill')}>
-    <ContentContainer header={contentHeader} footer={contentFooter} fill setFocusOnContainer>
-      <div key="1">{display1}</div>
-    </ContentContainer>
-  </div>
-);
+const Container = () => {
+  const theme = React.useContext(ThemeContext);
+  return (
+    <div className={cx(theme.className === 'clinical-lowlight-theme' ? 'content-container-darker' : 'content-container-dark')}>
+      <ContentContainer header={contentHeader} footer={contentFooter} fill setFocusOnContainer backgroundColor="dark">
+        <div key="1">{display1}</div>
+      </ContentContainer>
+    </div>
+  );
+};
 
 export default Container;

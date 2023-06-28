@@ -1,5 +1,9 @@
 # Changelog
 
+* Changed
+  * Removed aria-checked to make screen readers announce Selected in `terra-form-select`.
+  * Updated focus to shift back on `select` upon key press or mouse click event on `terra-form-single-select` in Safari browser.
+
 ## Unreleased
 
 ## 6.41.0 - (May 9, 2023)

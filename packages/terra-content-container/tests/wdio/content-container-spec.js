@@ -17,4 +17,10 @@ Terra.describeViewports('Content Container', ['medium'], () => {
     browser.keys(['Tab', 'ArrowDown', 'ArrowDown']);
     Terra.validates.element('after scroll');
   });
+
+  it('displays Content Container with dark color', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/content-container/content-container-dark');
+    browser.keys(['Tab']);
+    Terra.validates.element('dark content container');
+  });
 });

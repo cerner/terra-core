@@ -22,7 +22,8 @@ it('renders large banner that contains all valid information', () => {
   />);
 
   expect(banner.find('h2').exists()).toBe(true);
-  expect(banner.find('dl').exists()).toBe(true);
+  expect(banner.find('dl').at(0).exists()).toBe(true);
+  expect(banner.find('dl').at(1).exists()).toBe(true);
   expect(banner).toMatchSnapshot();
 });
 
