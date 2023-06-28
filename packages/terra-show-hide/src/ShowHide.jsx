@@ -93,8 +93,8 @@ const ShowHide = (props) => {
     <div {...customProps}>
       {!isOpen && preview}
       <div
-        className={cx(['show-hide', 'content-container', theme.className])}
-        tabIndex={-1}
+        className={cx(['show-hide', 'show-hide-content', theme.className])}
+        tabIndex="-1"
         ref={ref}
         data-focus-styles-enabled={isOpen}
       >
