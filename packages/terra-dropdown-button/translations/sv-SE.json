@@ -1,4 +1,6 @@
 {
   "Terra.dropdownButton.moreOptions": "Fler alternativ",
-  "Terra.dropdownButton.selected": "Vald."
+  "Terra.dropdownButton.selected": "Vald.",
+  "Terra.dropdownButton.expanded": "Visad knapp.",
+  "Terra.dropdownButton.activeOption": "{currentItemLabel},({currentIndex} av {totalItems})"
 }
