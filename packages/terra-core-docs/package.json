@@ -87,6 +87,7 @@
     "terra-table": "^4.34.0",
     "terra-tag": "^2.57.0",
     "terra-text": "^4.51.0",
+    "terra-theme-context": "^1.0.0",
     "terra-toggle": "^3.55.0",
     "terra-toggle-button": "^3.68.0",
     "terra-toggle-section-header": "^2.65.0",
