@@ -161,3 +161,10 @@
   padding: 0;
   text-align: left;
 }
+
+.fit-block {
+  .icon-wrapper {
+    display: inline-flex;
+    font-size: 8px;
+  }
+}
