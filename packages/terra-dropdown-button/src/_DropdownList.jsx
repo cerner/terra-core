@@ -190,7 +190,7 @@ class DropdownList extends React.Component {
           ariaLabel = `${this.expanded}${activeOption}`;
         } else if (currentIndex !== 1 && totalItems) {
           ariaLabel = `${activeOption}`;
-        }
+        } // In Edge with JAWS,removed aria-label for index to avoid announcing left parent and right parent (1 of 4).
       } else if (currentIndex === 1 && totalItems) {
         ariaLabel = `${this.expanded}${currentItemLabel}`;
       } else if (currentIndex !== 1 && totalItems) {

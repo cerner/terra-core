@@ -7,6 +7,7 @@ import translationsFile from '../../translations/en.json';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import DropdownList from '../../src/_DropdownList';
 import { Item } from '../../src/DropdownButton';
+import SharedUtil from '../../../terra-form-select/src/shared/_SharedUtil';
 
 describe('Dropdown List', () => {
   it('renders a default dropdown list', () => {
@@ -125,12 +126,22 @@ describe('Dropdown List', () => {
     const firstListItem = wrapper.find('#firstItem');
     const firstListItemAriaLabelValue = firstListItem.props()['aria-label'];
     const expectedAriaLabelValueInitial = `${translationsFile['Terra.dropdownButton.expanded']}1st Option,(1 of 3)`;
-    expect(firstListItemAriaLabelValue).toEqual(expectedAriaLabelValueInitial);
+    const expectedAriaLabelValueInitialEDGE = `${translationsFile['Terra.dropdownButton.expanded']}1st Option`;
+    if (SharedUtil.isMac()) {
+      expect(firstListItemAriaLabelValue).toEqual(expectedAriaLabelValueInitial);
+    } else {
+      expect(firstListItemAriaLabelValue).toEqual(expectedAriaLabelValueInitialEDGE);
+    }
 
     // Simulate keydown event
     wrapper.instance().handleKeyDown(eventMock);
     const updatedFirstListItemAriaLabelValue = wrapper.find('#firstItem').props()['aria-label'];
     const expectedAriaLabelValue = '1st Option,(1 of 3)';
-    expect(updatedFirstListItemAriaLabelValue).toEqual(expectedAriaLabelValue);
+    const expectedAriaLabelValueEDGE = '1st Option';
+    if (SharedUtil.isMac()) {
+      expect(updatedFirstListItemAriaLabelValue).toEqual(expectedAriaLabelValue);
+    } else {
+      expect(updatedFirstListItemAriaLabelValue).toEqual(expectedAriaLabelValueEDGE);
+    }
   });
 });
