@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.35.0 - (June 28, 2023)
+
 * Added
   * Added styles when the scroll is focussed
 * Changed
