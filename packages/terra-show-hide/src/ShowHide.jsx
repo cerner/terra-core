@@ -92,16 +92,17 @@ const ShowHide = (props) => {
   return (
     <div {...customProps}>
       {!isOpen && preview}
-      <div
-        className={cx(['show-hide', 'show-hide-content', theme.className])}
-        tabIndex="-1"
-        ref={ref}
-        data-focus-styles-enabled={isOpen}
-      >
-        <Toggle isOpen={isOpen}>
+      <Toggle isOpen={isOpen}>
+        <div
+          className={cx(['show-hide', 'show-hide-content', theme.className])}
+          ref={ref}
+          data-focus-styles-enabled="true"
+          role="group"
+          tabIndex="-1"
+        >
           {children}
-        </Toggle>
-      </div>
+        </div>
+      </Toggle>
       <div className={cx('show-hide')}>
         <Button
           aria-expanded={isOpen}
