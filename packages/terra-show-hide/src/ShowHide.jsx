@@ -97,6 +97,7 @@ const ShowHide = (props) => {
         tabIndex="-1"
         ref={ref}
         data-focus-styles-enabled={isOpen}
+        role="group"
       >
         <Toggle isOpen={isOpen}>
           {children}
