@@ -5,6 +5,8 @@
 
 ## Unreleased
 
+## 1.29.0 - (June 28, 2023)
+
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
   
