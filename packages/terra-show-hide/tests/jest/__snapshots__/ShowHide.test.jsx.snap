@@ -84,15 +84,22 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
         <p>
           Test
         </p>
-        <Toggle
-          isAnimated={false}
-          isOpen={false}
+        <div
+          className="show-hide show-hide-content orion-fusion-theme"
+          data-focus-styles-enabled={false}
+          role="group"
+          tabIndex="-1"
         >
-          <div
-            aria-hidden={true}
-            className="toggle"
-          />
-        </Toggle>
+          <Toggle
+            isAnimated={false}
+            isOpen={false}
+          >
+            <div
+              aria-hidden={true}
+              className="toggle"
+            />
+          </Toggle>
+        </div>
         <div
           className="show-hide"
         >
@@ -217,15 +224,22 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -361,15 +375,22 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -493,15 +514,22 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -625,15 +653,22 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -754,15 +789,22 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -882,15 +924,22 @@ exports[`ShowHide should render a default show-hide component 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -997,15 +1046,22 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
     onChange={[Function]}
   >
     <div>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -1123,17 +1179,24 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
     }
   >
     <div>
-      <Toggle
-        isAnimated={false}
-        isOpen={true}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={true}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={false}
-          className="toggle"
+        <Toggle
+          isAnimated={false}
+          isOpen={true}
         >
-          Full Text
-        </div>
-      </Toggle>
+          <div
+            aria-hidden={false}
+            className="toggle"
+          >
+            Full Text
+          </div>
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -1256,15 +1319,22 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -1384,17 +1454,24 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
     }
   >
     <div>
-      <Toggle
-        isAnimated={false}
-        isOpen={true}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={true}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={false}
-          className="toggle"
+        <Toggle
+          isAnimated={false}
+          isOpen={true}
         >
-          Full Text
-        </div>
-      </Toggle>
+          <div
+            aria-hidden={false}
+            className="toggle"
+          >
+            Full Text
+          </div>
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -1514,15 +1591,22 @@ exports[`ShowHide should set children prop correctly 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -1640,17 +1724,24 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
     }
   >
     <div>
-      <Toggle
-        isAnimated={false}
-        isOpen={true}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={true}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={false}
-          className="toggle"
+        <Toggle
+          isAnimated={false}
+          isOpen={true}
         >
-          Full Text
-        </div>
-      </Toggle>
+          <div
+            aria-hidden={false}
+            className="toggle"
+          >
+            Full Text
+          </div>
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -1770,15 +1861,22 @@ exports[`ShowHide should set preview prop correctly 1`] = `
       <p>
         Preview Text
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
@@ -1899,15 +1997,22 @@ exports[`ShowHide should set the button to align right 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide show-hide-content"
+        data-focus-styles-enabled={false}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >

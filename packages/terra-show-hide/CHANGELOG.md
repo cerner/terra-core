@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Shift focus to newly revealed content for screen-reader users.
+
 ## 2.60.0 - (April 27, 2023)
 
 * Changed

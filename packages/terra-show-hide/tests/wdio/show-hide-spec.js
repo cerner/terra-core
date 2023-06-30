@@ -29,6 +29,18 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
         Terra.validates.element('focus default');
       });
 
+      it('should shift focus to full content once expanded', () => {
+        $('button').click();
+        expect($('[class*="show-hide-content"]').isFocused()).toBe(true);
+      });
+
+      it('should move focus from expanded content to the button on tab', () => {
+        browser.keys(['Tab']);
+        expect($('[class*="show-hide-content"]').isFocused()).toBe(false);
+        expect($('button').isFocused()).toBe(true);
+        $('button').click(); // collaps the content
+      });
+
       it('removes focus', () => {
         browser.keys(['Tab']);
         expect($('button').isFocused()).toBe(false);
