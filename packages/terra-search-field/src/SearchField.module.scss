@@ -47,8 +47,8 @@
       }
 
       &:focus {
-        outline: var(--terra-search-field-keyboard-outline, 2px dashed #000);
-        outline-offset: var(--terra-search-field-keyboard-outline-offset, 1px);
+        outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
+        outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
         z-index: 1;
       }
     }
@@ -78,8 +78,8 @@
       margin-top: var(--terra-search-field-button-margin-top, 0);
 
       &:focus {
-        outline: var(--terra-search-field-keyboard-outline, 2px dashed #000);
-        outline-offset: var(--terra-search-field-keyboard-outline-offset, 1px);
+        outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
+        outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
         z-index: 1;
       }
     }
@@ -153,9 +153,9 @@
     &:focus {
       background-color: var(--terra-search-field-input-focus-background-color, #fff);
       background-size: auto;
-      color: var(--terra-search-field-input-focus-color);
-      outline: var(--terra-search-field-keyboard-outline, 2px dashed #000);
-      outline-offset: var(--terra-search-field-keyboard-outline-offset, 1px);
+      color: var(--terra-search-field-focus-input-focus-color);
+      outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
+      outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
 
       [dir=ltr] & {
         box-shadow: var(--terra-search-field-input-focus-ltr-box-shadow);
