@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
 
@@ -58,6 +59,15 @@ const ShowHide = (props) => {
     ...customProps
   } = props;
 
+  const theme = React.useContext(ThemeContext);
+  const ref = React.useRef(null);
+
+  React.useEffect(() => {
+    if (isOpen && ref?.current) {
+      ref.current.focus();
+    }
+  }, [isOpen]);
+
   const buttonClassName = cx([
     'show-hide',
     'button',
@@ -74,13 +84,25 @@ const ShowHide = (props) => {
       intlButtonText = intl.formatMessage({ id: 'Terra.showhide.showmore' });
     }
   }
+  /**
+   * This prevents container from getting focus on click.
+   * Does not prevent container's children to receive focus and be click-able.
+   */
 
   return (
     <div {...customProps}>
       {!isOpen && preview}
-      <Toggle isOpen={isOpen}>
-        {children}
-      </Toggle>
+      <div
+        className={cx(['show-hide', 'show-hide-content', theme.className])}
+        tabIndex="-1"
+        ref={ref}
+        data-focus-styles-enabled={isOpen}
+        role="group"
+      >
+        <Toggle isOpen={isOpen}>
+          {children}
+        </Toggle>
+      </div>
       <div className={cx('show-hide')}>
         <Button
           aria-expanded={isOpen}
