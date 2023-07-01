@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 3.63.0 - (June 28, 2023)
+
+* Fixed
+  * Fixed improper HTML structure and resolved console warnings.
+
+* Added
+  * Added missing translations.
+
 ## 3.62.0 - (June 14, 2023)
 
 * Changed

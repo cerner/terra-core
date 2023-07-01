@@ -4,12 +4,21 @@
 
 * Added
   * Added more realistic examples for terra-toggle-button.
+
+## 1.29.0 - (June 28, 2023)
+
+* Changed
+  * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
+
+* Added
+  * Added documentation updates for `Single Select` in `terra-form-select`.
+
 ## 1.28.0 - (June 14, 2023)
 
 * Added
   * Added terra-scroll A11y tests.
   * Added an example in terra-content-container without interactive elements.
-
+  * Added examples for terra-content-container with dark colors.
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the `terra-form-select` component instead of HTML native `<select>`.
   * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
