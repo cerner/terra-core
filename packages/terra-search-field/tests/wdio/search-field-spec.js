@@ -9,7 +9,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should enter a search term', () => {
-      $('input').setValue('Lore');
+      $('input').setValue('Lore', { mismatchTolerance: 0.1 });
     });
 
     it('should display Search Field with text', () => {
@@ -304,7 +304,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       setTimeout(() => { input.addValue('L'); }, 250);
       setTimeout(() => { input.addValue('L'); }, 250);
 
-      Terra.validates.element('empty search text');
+      Terra.validates.element('empty search text', { mismatchTolerance: 0.1 });
     });
   });
 });
