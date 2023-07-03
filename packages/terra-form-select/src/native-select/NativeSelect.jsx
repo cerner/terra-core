@@ -173,7 +173,7 @@ const NativeSelect = ({
   const refIsControlled = isValuePresent(value);
 
   useEffect(() => {
-    // added this to allow initial null values
+    // setting the uncontrolledValue to empty string whenever the value prop changes
     if (value) {
       setUncontrolledValue('');
     }
