@@ -4,6 +4,8 @@
   * Added documentation updates for `Single Select` in `terra-form-select`.
 
 ## Unreleased
+* Added
+  * Added test example for controlled form native select component.
 
 ## 1.29.0 - (June 28, 2023)
 
