@@ -17,14 +17,6 @@ const OpenCloseEventToggleButton = () => {
     setTimesClosed(timesClosed + 1);
   };
 
-  const handleContactClick = () => {
-    alert('Research Team');
-  };
-
-  const handleTrialSignupClick = () => {
-    alert('Sign up');
-  };
-
   return (
     <div>
       <div id="on-open-event">
@@ -59,15 +51,13 @@ const OpenCloseEventToggleButton = () => {
           <p>
             If you are interested in learning more about our ongoing research projects or considering participation in a clinical trial, please
             &nbsp;
-            <a href="#contact" onClick={handleContactClick}>contact our research department</a>
-            &nbsp;
+            <a href="#contact">contact our research department</a>
             . Your involvement can help us bring new breakthroughs to patients in need.
           </p>
           <p>
             Additionally, you can directly sign up for a clinical trial by filling out our
             &nbsp;
-            <a href="#trial-signup" onClick={handleTrialSignupClick}>trial signup form</a>
-            &nbsp;
+            <a href="#trial-signup">trial signup form</a>
             . We will review your information and get in touch with you regarding eligibility and further steps.
           </p>
         </div>

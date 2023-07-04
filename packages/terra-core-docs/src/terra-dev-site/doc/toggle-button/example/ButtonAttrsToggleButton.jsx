@@ -22,7 +22,9 @@ const ButtonAttrsToggleButton = () => (
       </p>
       <p>
         To learn more about our integrated healthcare solutions and how they can benefit your organization, please
-        <a href="#contact"> Contact us </a>
+        &nbsp;
+        <a href="#contact">Contact us</a>
+        &nbsp;
         for further information. Our dedicated team is ready to assist you in transforming healthcare delivery and achieving better patient outcomes.
       </p>
     </div>

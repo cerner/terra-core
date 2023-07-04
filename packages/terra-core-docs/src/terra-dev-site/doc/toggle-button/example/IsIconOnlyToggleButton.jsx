@@ -13,10 +13,12 @@ const IconOnly = () => {
   };
 
   const handleBookAppointmentClick = () => {
-    alert('Appointment Book');
+    // eslint-disable-next-line no-alert
+    alert('Appointment Book Button Clicked');
   };
 
   const handleContactClick = () => {
+    // eslint-disable-next-line no-alert
     alert('Contact Button Clicked');
   };
 
