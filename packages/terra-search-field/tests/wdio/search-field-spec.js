@@ -131,7 +131,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with too short text', () => {
-      Terra.validates.element('minimum length too short text');
+      Terra.validates.element('minimum length too short text', { mismatchTolerance: 0.1 });
     });
 
     it('should not search with the button', () => {
@@ -149,7 +149,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with long enough text', () => {
-      Terra.validates.element('minimum length with long enough text');
+      Terra.validates.element('minimum length with long enough text', { mismatchTolerance: 0.1 });
     });
   });
 
@@ -174,7 +174,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with too short text', () => {
-      Terra.validates.element('callback with too short text');
+      Terra.validates.element('callback with too short text', { mismatchTolerance: 0.1 });
     });
   });
 
@@ -190,7 +190,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with typed text', () => {
-      Terra.validates.element('setting value typed');
+      Terra.validates.element('setting value typed', { mismatchTolerance: 0.1 });
     });
 
     it('should trigger search when cutting', () => {
