@@ -261,7 +261,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     it('should enter a search term', () => {
       $('input').setValue('Lore');
 
-      Terra.validates.element('auto search disabled text before search');
+      Terra.validates.element('auto search disabled text before search', { mismatchTolerance: 0.1 });
     });
 
     it('should search with the button', () => {

@@ -154,7 +154,7 @@
       background-color: var(--terra-search-field-input-focus-background-color, #fff);
       background-size: auto;
       color: var(--terra-search-field-focus-input-focus-color);
-      outline: var(--terra-search-field-focus-keyboard-outline, 3px dashed #000);
+      outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
       outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
 
       [dir=ltr] & {
