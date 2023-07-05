@@ -68,7 +68,7 @@ const ContentContainer = ({
     customProps.className,
   ]);
 
-  const background = backgroundColor || 'light';
+  const background = setFocusOnContainer &&(backgroundColor || 'light');
   const scrollClassNames = cx(
     'normalizer',
     theme.className,
