@@ -68,6 +68,7 @@ const ContentContainer = ({
     customProps.className,
   ]);
 
+  // border will only be visible when setFocusOnContainer is set for content-container
   const background = setFocusOnContainer &&(backgroundColor || 'light');
   const scrollClassNames = cx(
     'normalizer',
