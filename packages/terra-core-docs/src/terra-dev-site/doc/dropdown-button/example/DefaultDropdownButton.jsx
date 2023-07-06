@@ -8,7 +8,10 @@ const Example = () => {
     <React.Fragment>
       <DropdownButton
         label="Export"
-      >
+          inputAttrs={{
+            'aria-label': 'test for dropdown',
+          }} 
+               >
         <Item label="Export as PDF" onSelect={() => setMessage('Export as PDF clicked')} />
         <Item label="Export as Plain Text" onSelect={() => setMessage('Export as Plain Text clicked')} />
         <Item label="Export as Web Page" onSelect={() => setMessage('Export as Web Page clicked')} />
