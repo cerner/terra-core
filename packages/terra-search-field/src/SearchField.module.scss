@@ -47,7 +47,7 @@
       }
 
       &:focus {
-        outline: var(--terra-search-field-focus-keyboard-outline, 3px dashed #000);
+        outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
         outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
         z-index: 1;
       }
@@ -78,7 +78,7 @@
       margin-top: var(--terra-search-field-button-margin-top, 0);
 
       &:focus {
-        outline: var(--terra-search-field-focus-keyboard-outline, 3px dashed #000);
+        outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
         outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
         z-index: 1;
       }
