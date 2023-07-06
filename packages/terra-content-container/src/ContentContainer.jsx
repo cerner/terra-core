@@ -62,6 +62,7 @@ const ContentContainer = ({
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
+  const lightbackground = 'light';
 
   const contentLayoutClassNames = cx([
     `content-container-${fill ? 'fill' : 'static'}`,
@@ -69,7 +70,7 @@ const ContentContainer = ({
   ]);
 
   // border will only be visible when setFocusOnContainer is set for content-container
-  const background = setFocusOnContainer && (backgroundColor || 'light');
+  const background = setFocusOnContainer && (backgroundColor || lightbackground);
   const scrollClassNames = cx(
     'normalizer',
     theme.className,
