@@ -29,6 +29,9 @@
 ## 1.29.0 - (June 28, 2023)
 
 * Changed
+  * Updated Arrange component example to use `span` element instead of `div`.
+
+* Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
   * Updated `terra-form-textarea` example component and added an button to toggle valid/invalid status
   

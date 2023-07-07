@@ -17,7 +17,7 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
       aria-label="foo"
       className="section-header orion-fusion-theme"
     >
-      <div
+      <span
         className="arrange-wrapper"
         tabIndex="-1"
       >
@@ -55,7 +55,7 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
             </span>
           </Arrange>
         </ArrangeComponent>
-      </div>
+      </span>
     </h2>
   </SectionHeader>
 </ThemeContextProvider>
@@ -66,12 +66,12 @@ exports[`SectionHeader should render a default component 1`] = `
   aria-label="foo"
   className="section-header"
 >
-  <div
+  <span
     className="arrange-wrapper"
     tabIndex="-1"
   >
     <ArrangeComponent />
-  </div>
+  </span>
 </h2>
 `;
 
@@ -168,7 +168,7 @@ exports[`SectionHeader should render without an accordion icon when no 'onClick(
   aria-label="foo"
   class="section-header"
 >
-  <div
+  <span
     class="arrange-wrapper"
     tabindex="-1"
   >
@@ -192,6 +192,6 @@ exports[`SectionHeader should render without an accordion icon when no 'onClick(
         class="fit"
       />
     </span>
-  </div>
+  </span>
 </h2>
 `;
