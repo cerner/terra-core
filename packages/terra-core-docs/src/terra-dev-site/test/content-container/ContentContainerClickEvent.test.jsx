@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ContentContainer from 'terra-content-container';
 import classNames from 'classnames/bind';
-import InputField from 'terra-form-input/lib/InputField';
 import Button from 'terra-button';
 import styles from './ContentContainerTestCommon.module.scss';
 
@@ -18,18 +17,15 @@ const display1 = (
 const contentheader = <h3>Registration Form</h3>;
 const contentfooter = <p>Please enter the name as per the official document</p>;
 
-const Container = () => 
-(
+const Container = () => (
   <div className={cx('content-container-fill')}>
     <ContentContainer header={contentheader} footer={contentfooter}>
       <div key="1" id="click-on-content">{display1}</div>
       <div key="2">
-        <Button text="Submit"/>
+        <Button text="Submit" />
       </div>
     </ContentContainer>
   </div>
-)
-
-
+);
 
 export default Container;
