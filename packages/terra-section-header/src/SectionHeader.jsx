@@ -171,9 +171,9 @@ class SectionHeader extends React.Component {
             <ArrangeComponent />
           </button>
         ) : (
-          <div tabIndex="-1" className={cx('arrange-wrapper')}>
+          <span tabIndex="-1" className={cx('arrange-wrapper')}>
             <ArrangeComponent />
-          </div>
+          </span>
         )}
       </Element>
     );
