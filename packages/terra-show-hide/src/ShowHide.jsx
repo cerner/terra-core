@@ -26,7 +26,7 @@ const propTypes = {
   /**
    * Applies style for which side of the container the button aligns to. Available options are start, center and end
    */
-  buttonAlign: PropTypes.string,
+  buttonAlign: PropTypes.node,
   /**
    * Button text that will be displayed.
    */
@@ -35,6 +35,12 @@ const propTypes = {
    * Allows parent to toggle the component. True for open and false for close.
    */
   isOpen: PropTypes.bool,
+  /**
+   * Ref to the first hidden child element. The element will get focus once the full content revealed. That allows the assistive technologies to start reading the hidden content from the place where it was cut off.
+   */
+  focusRef: PropTypes.shape({
+    current: PropTypes.element,
+  }),
   /**
    * Elements(s) that will be visible to the user when component is collapsed
    */
@@ -47,7 +53,7 @@ const defaultProps = {
   preview: undefined,
 };
 
-const ShowHide = (props) => {
+const ShowHide = ((props) => {
   const {
     buttonAlign,
     buttonText,
@@ -56,17 +62,29 @@ const ShowHide = (props) => {
     preview,
     intl,
     isOpen,
+    focusRef,
     ...customProps
   } = props;
 
   const theme = React.useContext(ThemeContext);
-  const ref = React.useRef(null);
+  const contentRef = React.useRef(null);
 
   React.useEffect(() => {
-    if (isOpen && ref?.current) {
-      ref.current.focus();
+    if (isOpen) {
+      let element = null;
+      if (props.focusRef?.current) {
+        element = props.focusRef?.current;
+      } else if (contentRef?.current) {
+        element = contentRef?.current;
+      }
+      if (element) {
+        element.setAttribute('tabIndex', '-1');
+        element.setAttribute('data-focus-styles-enabled', isOpen);
+        element.setAttribute('role', 'group');
+        element.focus();
+      }
     }
-  }, [isOpen]);
+  }, [isOpen, props.focusRef, contentRef]);
 
   const buttonClassName = cx([
     'show-hide',
@@ -84,20 +102,13 @@ const ShowHide = (props) => {
       intlButtonText = intl.formatMessage({ id: 'Terra.showhide.showmore' });
     }
   }
-  /**
-   * This prevents container from getting focus on click.
-   * Does not prevent container's children to receive focus and be click-able.
-   */
 
   return (
     <div {...customProps}>
       {!isOpen && preview}
       <div
         className={cx(['show-hide', 'show-hide-content', theme.className])}
-        tabIndex="-1"
-        ref={ref}
-        data-focus-styles-enabled={isOpen}
-        role="group"
+        ref={contentRef}
       >
         <Toggle isOpen={isOpen}>
           {children}
@@ -113,7 +124,7 @@ const ShowHide = (props) => {
       </div>
     </div>
   );
-};
+});
 
 ShowHide.propTypes = propTypes;
 ShowHide.defaultProps = defaultProps;

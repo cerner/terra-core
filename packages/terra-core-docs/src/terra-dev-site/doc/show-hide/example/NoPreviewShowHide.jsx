@@ -9,6 +9,7 @@ class NoPreviewShowHide extends React.Component {
 
     this.state = { isOpen: false };
     this.toggleShowHide = this.toggleShowHide.bind(this);
+    this.focusRef = React.createRef();
   }
 
   toggleShowHide() {
@@ -19,8 +20,8 @@ class NoPreviewShowHide extends React.Component {
 
   render() {
     return (
-      <ShowHide isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
-        <p>{fullText}</p>
+      <ShowHide focusRef={this.focusRef} isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
+        <p ref={this.focusRef}>{fullText}</p>
       </ShowHide>
     );
   }

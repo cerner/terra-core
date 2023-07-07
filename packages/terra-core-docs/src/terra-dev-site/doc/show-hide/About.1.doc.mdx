@@ -1,4 +1,5 @@
 import { Badge } from 'terra-show-hide/package.json?dev-site-package';
+import { Notice } from "@cerner/terra-docs";
 
 import DefaultShowHide from './example/DefaultShowHide?dev-site-example';
 import CustomButtonTextShowHide from './example/CustomButtonTextShowHide?dev-site-example';
@@ -44,6 +45,19 @@ The Show-Hide component must be composed inside the [Base][1] component with a l
 ```jsx
 import ShowHide from 'terra-show-hide';
 ```
+
+## Accessibility
+
+<Notice variant="important" ariaLevel="3">
+
+- In order for the component to be accessible, the `ref` to the first hidden child node have to be provided to the `focusRef` prop. The element will get focus once the full content revealed, that allows the assistive technologies to start reading the hidden content from the place where it was cut off.
+- While the back compatibility has been preserved and the `focusRef` prop is not required, it is highly reccomended to provide that prop for the best user experience.
+
+</Notice>
+
+#### Accessibility Guidance.
+- For the child component being a single paragraph `<p>`, wrap the portion of the text that is about to be hidden, in `<span>` tag, and pass a `ref` to that element as `focusRef` prop.
+- For multiple children, pass a `ref` to the first child that is not included in preview portion as `focusRef` prop, no `role` required.
 
 ## Component Features
 
