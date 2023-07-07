@@ -77,7 +77,7 @@ const Dropdown = ({
       </Hookshot.Content>
     </Hookshot>
   );
-}
+};
 Dropdown.propTypes = propTypes;
 
 export default Dropdown;
