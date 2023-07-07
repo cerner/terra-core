@@ -47,6 +47,7 @@
       }
 
       &:focus {
+        box-shadow: var(--terra-search-field-button-box-shadow);
         outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
         outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
         z-index: 1;
