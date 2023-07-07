@@ -26,7 +26,7 @@ const propTypes = {
   /**
    * Applies style for which side of the container the button aligns to. Available options are start, center and end
    */
-  buttonAlign: PropTypes.node,
+  buttonAlign: PropTypes.string,
   /**
    * Button text that will be displayed.
    */
@@ -53,7 +53,7 @@ const defaultProps = {
   preview: undefined,
 };
 
-const ShowHide = ((props) => {
+const ShowHide = (props) => {
   const {
     buttonAlign,
     buttonText,
@@ -69,6 +69,10 @@ const ShowHide = ((props) => {
   const theme = React.useContext(ThemeContext);
   const contentRef = React.useRef(null);
 
+  /**
+   * Upon showing hidden content, add required attributes and set focus to the child element provided by focusRef,
+   * or the content container element, if focusRef wasn't provided.
+   */
   React.useEffect(() => {
     if (isOpen) {
       let element = null;
@@ -124,7 +128,7 @@ const ShowHide = ((props) => {
       </div>
     </div>
   );
-});
+};
 
 ShowHide.propTypes = propTypes;
 ShowHide.defaultProps = defaultProps;

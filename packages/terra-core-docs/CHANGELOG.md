@@ -1,11 +1,8 @@
 # Changelog
 
-## Unreleased
-* Added
-  * Added test example for controlled form native select component.
+* Added documentation updates for `Single Select` in `terra-form-select`.
 
-* Added
-  * Added more realistic examples for terra-toggle-button.
+## Unreleased
 
 ## 1.29.0 - (June 28, 2023)
 
