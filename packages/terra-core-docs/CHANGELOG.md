@@ -7,9 +7,6 @@
 * Added
   * Added more realistic examples for terra-toggle-button.
 
-* Changed
-  * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
-
 ## 1.29.0 - (June 28, 2023)
 
 * Changed
