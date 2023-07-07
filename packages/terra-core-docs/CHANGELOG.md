@@ -1,6 +1,14 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added test example for controlled form native select component.
+
+* Added
+  * Added more realistic examples for terra-toggle-button.
+
+* Changed
+  * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
 ## 1.30.0 - (July 11, 2023)
 
@@ -17,8 +25,8 @@
   * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
 * Added
-  * Added documentation updates for `Single Select` in `terra-form-select`.  
-  
+  * Added documentation updates for `Single Select` in `terra-form-select`.
+
 ## 1.28.0 - (June 14, 2023)
 
 * Added
