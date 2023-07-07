@@ -9,6 +9,8 @@
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
+  * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
+  
   
 ## 1.28.0 - (June 14, 2023)
 
