@@ -1,9 +1,10 @@
 # Changelog
 
+## Unreleased
+
 * Added
   * Added documentation updates for `Single Select` in `terra-form-select`.
-
-## Unreleased
+  * Added `focusRef` prop in `terra-show-hide`.
 
 * Changed
   * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
