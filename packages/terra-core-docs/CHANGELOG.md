@@ -1,9 +1,10 @@
 # Changelog
 
+## Unreleased
+
 * Added
   * Added documentation updates for `Single Select` in `terra-form-select`.
-
-## Unreleased
+  * Added `focusRef` prop in `terra-show-hide`.
 
 ## 1.29.0 - (June 28, 2023)
 
