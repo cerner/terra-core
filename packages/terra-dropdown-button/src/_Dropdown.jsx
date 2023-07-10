@@ -43,14 +43,20 @@ const propTypes = {
 const Dropdown = ({
   requestClose, isOpen, targetRef, children, width, refCallback, buttonRef, getSelectedOptionText,
 }) => {
-  const buttonFocused = useRef(isOpen);
+  const buttonFocused = useRef(false);
   React.useEffect(() => {
     // added this change to bring focus back to button when dropdown list is closed.
-    if (buttonFocused.current !== isOpen && buttonRef) {
-      buttonFocused.current = isOpen;
+    if (buttonFocused.current && buttonRef) {
+      buttonFocused.current = false;
       buttonRef().focus();
     }
   }, [isOpen, buttonRef]);
+
+  const handleClose = () => {
+    buttonFocused.current = true;
+    requestClose();
+  };
+
   return (
     <Hookshot
       isOpen={isOpen}
@@ -62,7 +68,7 @@ const Dropdown = ({
     >
       <Hookshot.Content
         onEsc={requestClose}
-        onOutsideClick={requestClose}
+        onOutsideClick={handleClose}
       >
         <FocusTrap focusTrapOptions={{ returnFocusOnDeactivate: true, clickOutsideDeactivates: true }}>
           <DropdownList
