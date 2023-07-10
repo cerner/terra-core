@@ -121,7 +121,7 @@ const Option = ({
   let label = display;
   // Allows VO to announce index of items
   if (SharedUtil.isMac() && index && totalOptions) {
-    label = `${display} (${index} ${ofText} ${totalOptions})`;
+    label = `${display}`;
   }
   const itemLabel = isSelected || index === 1 ? `${expandedStateText} ${label}` : label;
 
