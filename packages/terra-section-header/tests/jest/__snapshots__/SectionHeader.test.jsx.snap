@@ -21,40 +21,38 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
         className="arrange-wrapper"
         tabIndex="-1"
       >
-        <ArrangeComponent>
-          <Arrange
-            className="title-arrange"
-            fill={
+        <Arrange
+          className="title-arrange"
+          fill={
+            <span
+              aria-hidden={false}
+              className="title title-block"
+            >
+              foo
+            </span>
+          }
+        >
+          <span
+            className="arrange title-arrange"
+          >
+            <span
+              className="fit fit-block"
+            />
+            <span
+              className="fill fill-block"
+            >
               <span
                 aria-hidden={false}
                 className="title title-block"
               >
                 foo
               </span>
-            }
-          >
-            <span
-              className="arrange title-arrange"
-            >
-              <span
-                className="fit fit-block"
-              />
-              <span
-                className="fill fill-block"
-              >
-                <span
-                  aria-hidden={false}
-                  className="title title-block"
-                >
-                  foo
-                </span>
-              </span>
-              <span
-                className="fit"
-              />
             </span>
-          </Arrange>
-        </ArrangeComponent>
+            <span
+              className="fit"
+            />
+          </span>
+        </Arrange>
       </span>
     </h2>
   </SectionHeader>
@@ -70,7 +68,17 @@ exports[`SectionHeader should render a default component 1`] = `
     className="arrange-wrapper"
     tabIndex="-1"
   >
-    <ArrangeComponent />
+    <Arrange
+      className="title-arrange"
+      fill={
+        <span
+          aria-hidden={false}
+          className="title title-block"
+        >
+          foo
+        </span>
+      }
+    />
   </span>
 </h2>
 `;
