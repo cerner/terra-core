@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated Arrange component example to use `span` element instead of `div`.
+
 * Added
   * Added email validation for `terra-form-field`.
 
@@ -27,9 +30,6 @@
   * Added more realistic examples for terra-toggle-button.
 
 ## 1.29.0 - (June 28, 2023)
-
-* Changed
-  * Updated Arrange component example to use `span` element instead of `div`.
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
