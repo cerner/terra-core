@@ -3,6 +3,7 @@
 ## Unreleased
 * Fixed
   * Fixed `Native Select` to allow updating the value prop in subsequent renders.
+  * Removed index to avoid screen reader reading index twice in `terra form single select`.
 
 ## 6.42.0 - (June 28, 2023)
 
