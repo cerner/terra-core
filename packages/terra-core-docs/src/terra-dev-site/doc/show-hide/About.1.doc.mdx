@@ -7,6 +7,7 @@ import InitiallyOpenShowHide from './example/InitiallyOpenShowHide?dev-site-exam
 import ButtonAlignCenterShowHide from './example/ButtonAlignCenterShowHide?dev-site-example';
 import ButtonAlignRightShowHide from './example/ButtonAlignRightShowHide?dev-site-example';
 import NoPreviewShowHide from './example/NoPreviewShowHide?dev-site-example';
+import NoFocusRefShowHide from './example/NoFocusRefShowHide?dev-site-example';
 
 import ShowHidePropsTable from 'terra-show-hide/src/ShowHide?dev-site-props-table';
 
@@ -50,8 +51,7 @@ import ShowHide from 'terra-show-hide';
 
 <Notice variant="important" ariaLevel="3">
 
-- In order for the component to be accessible, the `ref` to the first hidden child node have to be provided to the `focusRef` prop. The element will get focus once the full content revealed, that allows the assistive technologies to start reading the hidden content from the place where it was cut off.
-- While the back compatibility has been preserved and the `focusRef` prop is not required, it is highly reccomended to provide that prop for the best user experience.
+In order for the component to be accessible, the `focusRef` to the first hidden child node have to be provided. That element will get focus once the full content revealed, that allows the assistive technologies to start reading the hidden content from the place where it was cut off.
 
 </Notice>
 
@@ -69,12 +69,13 @@ import ShowHide from 'terra-show-hide';
 * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
 
 ## Examples
-<DefaultShowHide title="Default ShowHide" />
-<CustomButtonTextShowHide title="Custom Button Text ShowHide" />
+<DefaultShowHide title="Default ShowHide with one paragraph content" description="For a single paragraph content, wrap the hidden portion in a  <span>, then pass a ref to it as focusRef prop:" />
+<CustomButtonTextShowHide title="Custom Button Text ShowHide with multiple children" description="For multiple children, pass a ref to the first child, not included in preview portion, as a focusRef prop:" />
 <InitiallyOpenShowHide title="Initially Open ShowHide" />
 <ButtonAlignCenterShowHide title="Button Align Center ShowHide" />
 <ButtonAlignRightShowHide title="Button Align Right ShowHide" />
 <NoPreviewShowHide title="No Preview ShowHide" />
+<NoFocusRefShowHide title="No focusRef ShowHide" description="Note: omitting focusRef is possible for backward compatibility. In this case the focus will be set to the content container. Hovewer, it is important to pass a focusRef in all future implementations." />
 
 ## Show Hide Props
 <ShowHidePropsTable />

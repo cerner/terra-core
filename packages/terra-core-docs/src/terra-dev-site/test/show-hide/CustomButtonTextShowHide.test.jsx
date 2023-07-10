@@ -1,17 +1,18 @@
 import React from 'react';
 import ShowHide from 'terra-show-hide';
 
-const sentences = [
-  <p key="lorem1">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem2">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem3">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem4">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem5">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem6">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem7">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem8">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem9">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
-  <p key="lorem10">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>,
+const sentence = 'Lorem ipsum dolor sit amet consectetur adipiscing elit.';
+
+const preview = [
+  <p key="lorem1">{sentence}</p>,
+  <p key="lorem2">{sentence}</p>,
+  <p key="lorem3">{sentence}</p>,
+];
+
+const text = [
+  <p key="lorem5">{sentence}</p>,
+  <p key="lorem6">{sentence}</p>,
+  <p key="lorem7">{sentence}</p>,
 ];
 
 class CustomButtonTextShowHideTest extends React.Component {
@@ -20,6 +21,7 @@ class CustomButtonTextShowHideTest extends React.Component {
 
     this.state = { isOpen: false };
     this.toggleShowHide = this.toggleShowHide.bind(this);
+    this.focusRef = React.createRef();
   }
 
   toggleShowHide() {
@@ -32,19 +34,22 @@ class CustomButtonTextShowHideTest extends React.Component {
     let customText = '';
 
     if (this.state.isOpen) {
-      customText = `Hide ${sentences.length - 3} Sentences`;
+      customText = `Hide ${text.length + 1} Sentences`;
     } else {
-      customText = `Show ${sentences.length - 3} More Sentences`;
+      customText = `Show ${text.length + 1} More Sentences`;
     }
 
     return (
       <ShowHide
-        preview={[sentences[0], sentences[1], sentences[2]]}
+        focusRef={this.focusRef}
+        preview={preview}
         onChange={this.toggleShowHide}
         isOpen={this.state.isOpen}
         buttonText={customText}
       >
-        {sentences}
+        {preview}
+        <p ref={this.focusRef} key="lorem4">{sentence}</p>
+        {text}
       </ShowHide>
     );
   }

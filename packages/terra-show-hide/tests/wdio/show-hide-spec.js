@@ -29,9 +29,9 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
         Terra.validates.element('focus default');
       });
 
-      it('should shift focus to full content once expanded', () => {
+      it('should not focus on full content if focusRef provided', () => {
         $('button').click();
-        expect($('[class*="show-hide-content"]').isFocused()).toBe(true);
+        expect($('[class*="show-hide-content"]').isFocused()).toBe(false);
       });
 
       it('should move focus from expanded content to the button on tab', () => {
