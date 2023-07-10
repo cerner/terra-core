@@ -4,7 +4,7 @@
 [![NPM version](https://badgen.net/npm/v/terra-toggle-section-header)](https://www.npmjs.org/package/terra-toggle-section-header)
 [![Build Status](https://badgen.net/travis/cerner/terra-core)](https://travis-ci.com/cerner/terra-core)
 
-Toggle section header component that transitions content in and out with a click.
+Toggle section header component that transitions content in and out with a click. For accessibility best practices, it is recommended that consumers should always use only one h1 tag per page or view. The one h1 tag should be the page title. A section header should never be a heading level 1. 
 
 - [Getting Started](#getting-started)
 - [Documentation](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/toggle-section-header/about)
