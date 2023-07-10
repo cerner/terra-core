@@ -111,8 +111,8 @@ const ShowHide = (props) => {
   React.useEffect(() => {
     if (isOpen) {
       let element = null;
-      if (props.focusRef?.current) {
-        element = props.focusRef?.current;
+      if (focusRef?.current) {
+        element = focusRef?.current;
       } else if (contentRef?.current) {
         element = contentRef?.current;
       }
@@ -120,7 +120,7 @@ const ShowHide = (props) => {
         focusElement(element);
       }
     }
-  }, [isOpen, props.focusRef, contentRef]);
+  }, [isOpen, focusRef, contentRef]);
 
   const buttonClassName = cx([
     'show-hide',
