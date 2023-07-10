@@ -236,18 +236,32 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
           tabIndex="-1"
           type="button"
         >
-          <ArrangeComponent>
-            <Arrange
-              className="title-arrange"
-              fill={
+          <Arrange
+            className="title-arrange"
+            fill={
+              <span
+                aria-hidden={true}
+                className="title title-block"
+              >
+                opens on click title
+              </span>
+            }
+            fitStart={
+              <span
+                className="accordion-icon-wrapper icon-wrapper"
+              >
                 <span
-                  aria-hidden={true}
-                  className="title title-block"
-                >
-                  opens on click title
-                </span>
-              }
-              fitStart={
+                  className="accordion-icon is-open"
+                />
+              </span>
+            }
+          >
+            <span
+              className="arrange title-arrange"
+            >
+              <span
+                className="fit fit-block"
+              >
                 <span
                   className="accordion-icon-wrapper icon-wrapper"
                 >
@@ -255,38 +269,22 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
                     className="accordion-icon is-open"
                   />
                 </span>
-              }
-            >
+              </span>
               <span
-                className="arrange title-arrange"
+                className="fill fill-block"
               >
                 <span
-                  className="fit fit-block"
+                  aria-hidden={true}
+                  className="title title-block"
                 >
-                  <span
-                    className="accordion-icon-wrapper icon-wrapper"
-                  >
-                    <span
-                      className="accordion-icon is-open"
-                    />
-                  </span>
+                  opens on click title
                 </span>
-                <span
-                  className="fill fill-block"
-                >
-                  <span
-                    aria-hidden={true}
-                    className="title title-block"
-                  >
-                    opens on click title
-                  </span>
-                </span>
-                <span
-                  className="fit"
-                />
               </span>
-            </Arrange>
-          </ArrangeComponent>
+              <span
+                className="fit"
+              />
+            </span>
+          </Arrange>
         </button>
       </h2>
     </SectionHeader>
