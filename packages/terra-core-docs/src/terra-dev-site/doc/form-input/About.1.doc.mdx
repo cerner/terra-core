@@ -1,4 +1,5 @@
 import { Badge } from 'terra-form-input/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
 
 import BlankExample from './common/BlankExample?dev-site-example';
 import NumberInputExample from './common/NumberInputExample?dev-site-example';
@@ -25,6 +26,12 @@ import FormInputPropsTable from 'terra-form-input/src/Input?dev-site-props-table
 Generic input which represents an HTML input element directly.
 
 **Note:** To follow [UX Best Practices](https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research), this component does not allow `placeholder`.
+
+<Notice variant="caution" ariaLevel="3">
+
+**Accessibility Bug:** Currently a bug exists in Chromium based browsers with VoiceOver where `<input type="number" />` is read incorrectly when incrementing or decrementing the value with keyboard shortcuts. Terra Form Input utilizes `<input type="number" />` when given "number" as type, and thus will also have this screenreader issue. An alternative is to use something like `<input type="text" inputmode="numeric" pattern="\d*" />`, however this will have no built in validity checks or keyboard commands.
+
+</Notice>
 
 ## Getting Started
 
