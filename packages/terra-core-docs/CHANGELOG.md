@@ -5,12 +5,17 @@
 * Added
   * Added documentation updates for `Single Select` in `terra-form-select`.
   * Added documentation updates for `terra-form-input`.
+  * Added test example for controlled form native select component.
+  * Added more realistic examples for terra-toggle-button.
 
 ## 1.29.0 - (June 28, 2023)
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
-  
+
+* Added
+  * Added documentation updates for `Single Select` in `terra-form-select`.
+
 ## 1.28.0 - (June 14, 2023)
 
 * Added
