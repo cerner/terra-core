@@ -53,6 +53,41 @@ const defaultProps = {
   preview: undefined,
 };
 
+/**
+ * Disables focus styles for normally unfocusable elements.
+ */
+const disableFocusStyles = (event) => {
+  event.currentTarget.setAttribute('data-focus-styles-enabled', 'false');
+};
+
+/**
+ * Remove attributes that makes element focusable.
+ */
+const removeAttributes = (event) => {
+  event.currentTarget.removeAttribute('tabindex');
+  event.currentTarget.removeAttribute('role');
+};
+
+/**
+ * Focus element.
+ */
+const focusElement = (element) => {
+  element.setAttribute('data-focus-styles-enabled', 'true');
+  element.addEventListener('blur', disableFocusStyles);
+  // try to focus the element.
+  element.focus();
+  // if element is not focusable, add atributes that make it focusable, then focus again.
+  if (document.activeElement !== element) {
+    element.setAttribute('tabIndex', '-1');
+    element.setAttribute('role', 'group');
+    element.addEventListener('blur', (event) => {
+      disableFocusStyles(event);
+      removeAttributes(event);
+    });
+    element.focus();
+  }
+};
+
 const ShowHide = (props) => {
   const {
     buttonAlign,
@@ -70,8 +105,8 @@ const ShowHide = (props) => {
   const contentRef = React.useRef(null);
 
   /**
-   * Upon showing hidden content, add required attributes and set focus to the child element provided by focusRef,
-   * or the content container element, if focusRef wasn't provided.
+   * Upon showing hidden content, set focus to the child element if focusRef provided, othervise set focus to the content container.
+   * That would allow assistive technologies to read the newly revealed content.
    */
   React.useEffect(() => {
     if (isOpen) {
@@ -82,10 +117,7 @@ const ShowHide = (props) => {
         element = contentRef?.current;
       }
       if (element) {
-        element.setAttribute('tabIndex', '-1');
-        element.setAttribute('data-focus-styles-enabled', isOpen);
-        element.setAttribute('role', 'group');
-        element.focus();
+        focusElement(element);
       }
     }
   }, [isOpen, props.focusRef, contentRef]);
