@@ -1,3 +1,6 @@
+@import './orion-fusion-theme/ContentContainer.module';
+@import './clinical-lowlight-theme/ContentContainer.module';
+
 /* stylelint-disable selector-max-compound-selectors */
 :local {
   .content-container-static {
@@ -39,9 +42,20 @@
     }
   }
 
-  .focusoncontainer {
+  .content-container-focused-padding {
     padding-left: 0.7142857143rem;
     padding-right: 0.7142857143rem;
   }
+
+  .dark:focus {
+    outline: 2px dashed var(--terra-content-container-dark-focus-outline, #c8cacb);
+    outline-offset: -2px;
+  }
+
+  .light:focus {
+    outline: 2px dashed var(--terra-content-container-light-focus-outline, #000);
+    outline-offset: -2px;
+  }
+
 }
 /* stylelint-enable */

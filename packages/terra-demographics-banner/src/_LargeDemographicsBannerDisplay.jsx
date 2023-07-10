@@ -30,6 +30,8 @@ export default (props) => {
     postMenstrualAgeFullText,
     postMenstrualAgeLabel,
     preferredFirstName,
+    ageTitle,
+    genderTitle,
     ...customProps
   } = props;
 
@@ -60,14 +62,14 @@ export default (props) => {
           { personName }
           { preferredFirstName && <span className={cx('preferred-first-name')}>{ `(${preferredFirstName})` }</span> }
         </PersonNameElement>
-        <dl className={cx('identifier-row')}>
-          <div className={cx('person-details')} role="presentation">
+        <div className={cx('identifier-row')}>
+          <dl className={cx('person-details')}>
             {DemographicsBannerUtils.personDetails(props)}
-          </div>
-          <div className={cx('identifiers')} role="presentation">
+          </dl>
+          <dl className={cx('identifiers')}>
             {DemographicsBannerUtils.applicationIdentifiers(props)}
-          </div>
-        </dl>
+          </dl>
+        </div>
         <div className={cx('application-content')}>
           {applicationContent}
         </div>

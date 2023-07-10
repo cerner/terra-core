@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Scroll from 'terra-scroll';
+import ThemeContext from 'terra-theme-context';
 import styles from './ContentContainer.module.scss';
 
 const cx = classNames.bind(styles);
@@ -32,6 +33,12 @@ const propTypes = {
    * Sets focus on content when set to `true`. Focus on content helps in scrolling  within container when there is no interactive element to focus within container.
    */
   setFocusOnContainer: PropTypes.bool,
+  /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * This prop needs to be set only if `setFocusOnContainer` is set. Based on dark or light background color the border will be white or black respectively to maintain
+   * an accessible color contrast ratio.
+   */
+  backgroundColor: PropTypes.oneOf(['dark', 'light']),
 };
 
 const defaultProps = {
@@ -41,6 +48,7 @@ const defaultProps = {
   fill: false,
   scrollRefCallback: undefined,
   setFocusOnContainer: false,
+  backgroundColor: undefined,
 };
 
 const ContentContainer = ({
@@ -50,23 +58,33 @@ const ContentContainer = ({
   fill,
   scrollRefCallback,
   setFocusOnContainer,
+  backgroundColor,
   ...customProps
 }) => {
+  const theme = React.useContext(ThemeContext);
+
   const contentLayoutClassNames = cx([
     `content-container-${fill ? 'fill' : 'static'}`,
     customProps.className,
   ]);
 
+  const background = backgroundColor || 'light';
+  const scrollClassNames = cx(
+    'normalizer',
+    theme.className,
+    { 'content-container-focused-padding': setFocusOnContainer },
+    background,
+  );
+
   return (
     <div {...customProps} className={contentLayoutClassNames}>
-      {header && <div className={cx('header', { focusoncontainer: setFocusOnContainer })}>{header}</div>}
-      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-      <div className={cx('main')} role="region">
-        <Scroll className={cx('normalizer', { focusoncontainer: setFocusOnContainer })} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
+      {header && <div className={cx('header', { 'content-container-focused-padding': setFocusOnContainer })}>{header}</div>}
+      <div className={cx('main')}>
+        <Scroll className={scrollClassNames} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
           {children}
         </Scroll>
       </div>
-      {footer && <div className={cx('footer', { focusoncontainer: setFocusOnContainer })}>{footer}</div>}
+      {footer && <div className={cx('footer', { 'content-container-focused-padding': setFocusOnContainer })}>{footer}</div>}
     </div>
   );
 };
