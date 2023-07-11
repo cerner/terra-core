@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  *  Locked `uuid` to `7.0.3`.
+
 ## 2.70.0 - (June 14, 2023)
 
 * Changed
