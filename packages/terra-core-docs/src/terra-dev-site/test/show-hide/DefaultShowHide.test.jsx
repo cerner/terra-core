@@ -24,7 +24,7 @@ class DefaultShowHide extends React.Component {
       <ShowHide focusRef={this.focusRef} isOpen={this.state.isOpen} preview={<p>{previewText}</p>} onChange={this.toggleShowHide}>
         <p>
           { previewText }
-          <span ref={this.focusRef}>{ text }</span>
+          <span id="focusRef" ref={this.focusRef}>{ text }</span>
         </p>
       </ShowHide>
     );
