@@ -21,6 +21,9 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
       $('[class*=dropdown-button]').click();
       Terra.validates.element('dropdown open', { selector: '[class*=dropdown-list]' });
       Terra.validates.element('dropdown button with dropdown open');
+      // to validate focus on button when dropdown is closed by outside click
+      $('#root').click();
+      expect($('[class*=dropdown-button]')).toBeFocused();
     });
 
     it('should print MetaData of option on click', () => {

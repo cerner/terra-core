@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import FocusTrap from 'focus-trap-react';
 import Hookshot from 'terra-hookshot';
@@ -44,7 +44,7 @@ const Dropdown = ({
   requestClose, isOpen, targetRef, children, width, refCallback, buttonRef, getSelectedOptionText,
 }) => {
   const buttonFocused = useRef(false);
-  React.useEffect(() => {
+  useEffect(() => {
     // added this change to bring focus back to button when dropdown list is closed.
     if (buttonFocused.current && buttonRef) {
       buttonFocused.current = false;
