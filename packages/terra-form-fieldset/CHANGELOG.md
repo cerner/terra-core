@@ -3,12 +3,12 @@
 ## Unreleased
 
 * Changed
-  *  Locked `uuid` to `7.0.3`.
+  *  Locked `uuid` dependency to `7.0.3`.
 
 ## 2.70.0 - (June 14, 2023)
 
 * Changed
-  * Updated `uuid` to `8.2.0` for consistency with other components.
+  * Updated `uuid` dependency to `8.2.0` for consistency with other components.
 
 ## 2.69.0 - (April 27, 2023)
 
