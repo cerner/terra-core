@@ -39,7 +39,7 @@ const propTypes = {
    * Ref to the first hidden child element that will receive focus when the full content is revealed. This allows assistive technologies to start reading the hidden content from where it left off.
    */
   focusRef: PropTypes.shape({
-    current: PropTypes.element,
+    current: PropTypes.instanceOf(Element),
   }),
   /**
    * Elements(s) that will be visible to the user when component is collapsed
@@ -51,6 +51,7 @@ const defaultProps = {
   buttonAlign: 'start',
   isOpen: false,
   preview: undefined,
+  focusRef: null,
 };
 
 /**

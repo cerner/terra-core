@@ -29,10 +29,5 @@
       outline: var(--terra-show-hide-focus-outline, 2px dashed #000);
       outline-offset: var(--terra-show-hide-focus-outline-offset, 2px);
     }
-
-    p > span[data-focus-styles-enabled='true']:focus {
-      outline: var(--terra-show-hide-focus-outline, 2px dashed #000);
-      outline-offset: var(--terra-show-hide-focus-outline-offset, 2px);
-    }
   }
 }
