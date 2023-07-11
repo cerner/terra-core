@@ -3,7 +3,7 @@
 ## Unreleased
 
   * Changed
-    *  Locked `uuid` to `7.0.3`.
+    *  Locked `uuid` dependency to `7.0.3`.
 
 ## 4.69.0 - (June 14, 2023)
 
@@ -11,7 +11,7 @@
   * Added focus shift to the rendered notification banners content when notification is an alert and includes an action element
 
 * Changed
-  * Locked `uuid` to `8.2.0` to maintain IE compatibility.
+  * Locked `uuid` dependency to `8.2.0` to maintain IE compatibility.
   * Updated the Dutch translation for `Terra.alert.success`.
 
 ## 4.68.0 - (May 9, 2023)
