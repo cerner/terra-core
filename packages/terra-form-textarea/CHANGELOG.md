@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+* Added `aria-invalid` field to Textarea component and changed existing example so it can be tested
 
 ## 5.24.0 - (April 27, 2023)
 

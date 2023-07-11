@@ -242,6 +242,7 @@ class Textarea extends React.Component {
     }
 
     additionalTextareaProps['aria-label'] = ariaLabelText;
+    additionalTextareaProps['aria-invalid'] = isInvalid;
 
     if (required) {
       additionalTextareaProps['aria-required'] = 'true';
