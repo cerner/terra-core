@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[68110],{68110:function(e,t,a){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var l,r=(l=a(67294))&&l.__esModule?l:{default:l},u=a(89755);t.default=function(){return r.default.createElement(u.Facility,{id:"default-facility",alt:"facility",color:"three"})}}}]);
