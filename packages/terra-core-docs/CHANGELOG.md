@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+
+## 1.30.0 - (July 11, 2023)
+
 * Added
   * Added test example for controlled form native select component.
 

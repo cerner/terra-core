@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+
+## 6.43.0 - (July 11, 2023)
+
 * Fixed
   * Fixed `Native Select` to allow updating the value prop in subsequent renders.
 
