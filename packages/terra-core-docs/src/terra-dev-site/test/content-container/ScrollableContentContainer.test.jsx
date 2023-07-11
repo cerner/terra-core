@@ -12,18 +12,18 @@ const display1 = (
     verification of personal information, updating medical history, and making necessary changes to insurance or contact details. Hospitals may
     request patients to review and confirm their information during subsequent visits or at designated intervals. Accurate and comprehensive patient
     details play a vital role in providing effective healthcare. They serve as a foundation for medical assessments, treatment planning, and continuity
-    of care, enabling healthcare providers to deliver personalized and efficient services to patients.Begin filling out the form by entering your personal
+    of care, enabling healthcare providers to deliver personalised and efficient services to patients.Begin filling out the form by entering your personal
     information. This usually includes your full name, contact details (such as phone number and email address), and residential address. It is crucial to
     provide accurate contact information as it will be used for communication and verification purposes.
   </p>
 );
 
-const contentheader = <h3>Registration Form</h3>;
-const contentfooter = <p>Please enter the name as per the official document</p>;
+const contentHeader = <h3>Registration Form</h3>;
+const contentFooter = <p>Please enter the name as per the official document</p>;
 
 const Container = () => (
   <div className={cx('content-container-fill')}>
-    <ContentContainer header={contentheader} footer={contentfooter} fill setFocusOnContainer>
+    <ContentContainer header={contentHeader} footer={contentFooter} fill setFocusOnContainer>
       <div key="1">{display1}</div>
     </ContentContainer>
   </div>

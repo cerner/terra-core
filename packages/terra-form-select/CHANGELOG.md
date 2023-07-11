@@ -1,6 +1,15 @@
 # Changelog
 
 ## Unreleased
+* Fixed
+  * Fixed `Native Select` to allow updating the value prop in subsequent renders.
+
+## 6.42.0 - (June 28, 2023)
+
+* Changed
+  * Minor dependency version bump
+  * Removed aria-checked to make screen readers announce Selected in `terra-form-select`.
+  * Updated focus to shift back on `select` upon key press or mouse click event on `terra-form-single-select` in Safari browser.
 
 ## 6.41.0 - (May 9, 2023)
 
