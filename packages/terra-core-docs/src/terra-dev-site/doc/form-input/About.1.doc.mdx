@@ -29,7 +29,13 @@ Generic input which represents an HTML input element directly.
 
 <Notice variant="caution" ariaLevel="3">
 
-**Accessibility Bug:** Due to a bug in Chromium-based browsers (Chrome, Microsoft Edge, etc.), VoiceOver would read `<input type="number" />` incorrectly when incrementing or decrementing the value with keyboard shortcuts. Terra Form Input utilizes `<input type="number" />` when the `type` prop is set to "number" and will also have this screenreader issue. An alternative is to use something like `<input type="text" inputmode="numeric" pattern="\d*" />`. However, this will have no built in validity checks or keyboard commands. Consumers are responsible for adding this functionality.
+**Accessibility Bug:** Due to a bug in Chromium-based browsers (Chrome, Microsoft Edge, etc.), VoiceOver would read `<input type="number" />` incorrectly when incrementing or decrementing the value with keyboard shortcuts. Terra Form Input utilizes `<input type="number" />` when the `type` prop is set to "number" and will also have this screenreader issue. A recommended solution would be to use the basic html `input` instead of Terra Form Input. For example:
+
+ ```html
+<input type="text" inputmode="numeric" pattern="\d*" />
+```
+
+However, this will not have the built-in validity checks or keyboard commands that Terra Form Input provides. Consumers are responsible for adding this functionality.
 
 </Notice>
 
