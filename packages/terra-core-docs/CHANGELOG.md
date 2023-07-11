@@ -4,6 +4,7 @@
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
+  * Updated `terra-form-textarea` example component and added an button to toggle valid/invalid status
   
 ## 1.28.0 - (June 14, 2023)
 
