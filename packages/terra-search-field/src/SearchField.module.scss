@@ -11,6 +11,12 @@
     vertical-align: middle;
     width: var(--terra-search-field-max-width, 16.5rem);
 
+    *:focus {
+      box-shadow: var(--terra-search-field-focus-box-shadow, none);
+      outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
+      outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
+    }
+
     .input-group {
       display: inline-flex;
       flex: 1 1 auto;
@@ -47,9 +53,6 @@
       }
 
       &:focus {
-        box-shadow: var(--terra-search-field-clear-focus-box-shadow);
-        outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
-        outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
         z-index: 1;
       }
     }
@@ -79,8 +82,6 @@
       margin-top: var(--terra-search-field-button-margin-top, 0);
 
       &:focus {
-        outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
-        outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
         z-index: 1;
       }
     }
@@ -155,8 +156,6 @@
       background-color: var(--terra-search-field-input-focus-background-color, #fff);
       background-size: auto;
       color: var(--terra-search-field-focus-input-focus-color);
-      outline: var(--terra-search-field-focus-keyboard-outline, 2px dashed #000);
-      outline-offset: var(--terra-search-field-focus-keyboard-outline-offset, 1px);
 
       [dir=ltr] & {
         box-shadow: var(--terra-search-field-input-focus-ltr-box-shadow);
