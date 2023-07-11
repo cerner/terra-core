@@ -27,6 +27,8 @@ Terra.describeViewports('Dropdown Button', ['medium'], () => {
     });
 
     it('should print MetaData of option on click', () => {
+      // added this event to open dropdown again
+      $('[class*=dropdown-button]').click();
       $('#opt1').click();
       Terra.validates.element('MetaData of 1st option', { selector: '#root' });
     });
