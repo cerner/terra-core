@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  Added custom prop to for dropdown button.
+   
 * Added
    * Added focus styles and screenreader support to announce expand/collapse state and index for dropdown list items.
 
