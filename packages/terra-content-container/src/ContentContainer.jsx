@@ -69,6 +69,8 @@ const ContentContainer = ({
     customProps.className,
   ]);
 
+  // setting tab index to 0 if setFocusOnContainer is set
+  const scrollAttrs = (setFocusOnContainer) ? { tabIndex: 0 } : '';
   // border will only be visible when setFocusOnContainer is set for content-container
   const background = setFocusOnContainer && (backgroundColor || lightbackground);
   const scrollClassNames = cx(
@@ -82,7 +84,7 @@ const ContentContainer = ({
     <div {...customProps} className={contentLayoutClassNames}>
       {header && <div className={cx('header', { 'content-container-focused-padding': setFocusOnContainer })}>{header}</div>}
       <div className={cx('main')}>
-        <Scroll className={scrollClassNames} refCallback={scrollRefCallback} tabIndex={setFocusOnContainer ? '0' : '-1'}>
+        <Scroll className={scrollClassNames} refCallback={scrollRefCallback} {...scrollAttrs}>
           {children}
         </Scroll>
       </div>

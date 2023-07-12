@@ -9,7 +9,6 @@ exports[`should render a default component 1`] = `
   >
     <Scroll
       className="normalizer"
-      tabIndex="-1"
     />
   </div>
 </div>
@@ -24,7 +23,6 @@ exports[`should render a footer 1`] = `
   >
     <Scroll
       className="normalizer"
-      tabIndex="-1"
     />
   </div>
   <div
@@ -53,7 +51,6 @@ exports[`should render a header 1`] = `
   >
     <Scroll
       className="normalizer"
-      tabIndex="-1"
     />
   </div>
 </div>
@@ -68,7 +65,6 @@ exports[`should render as fill 1`] = `
   >
     <Scroll
       className="normalizer"
-      tabIndex="-1"
     />
   </div>
 </div>
@@ -83,7 +79,6 @@ exports[`should render content 1`] = `
   >
     <Scroll
       className="normalizer"
-      tabIndex="-1"
     >
       <p>
         test content
@@ -109,7 +104,6 @@ exports[`should render header & footer 1`] = `
   >
     <Scroll
       className="normalizer"
-      tabIndex="-1"
     />
   </div>
   <div
