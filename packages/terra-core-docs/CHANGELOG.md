@@ -2,12 +2,13 @@
 
 ## Unreleased
 
+* Changed
+  * Minor formatting update in `terra-alert` & `terra-form-fieldset`.
+
 ## 1.30.0 - (July 11, 2023)
 
 * Added
   * Added test example for controlled form native select component.
-
-* Added
   * Added more realistic examples for terra-toggle-button.
 
 ## 1.29.0 - (June 28, 2023)
