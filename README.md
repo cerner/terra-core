@@ -162,7 +162,7 @@ Please review [Terra\'s Internationalization documentation](https://engineering.
   Contributing
 </h2>
 
-Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
+Please read through our [contributing guidelines](./CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
 
 <h2 id="local-development">
   Local Development
