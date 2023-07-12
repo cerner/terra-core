@@ -55,13 +55,6 @@ const defaultProps = {
 };
 
 /**
- * Disables focus styles for normally unfocusable elements.
- */
-const disableFocusStyles = (event) => {
-  event.currentTarget.setAttribute('data-focus-styles-enabled', 'false');
-};
-
-/**
  * Remove attributes that makes element focusable.
  */
 const removeAttributes = (event) => {
@@ -73,8 +66,6 @@ const removeAttributes = (event) => {
  * Focus element.
  */
 const focusElement = (element) => {
-  element.setAttribute('data-focus-styles-enabled', 'true');
-  element.addEventListener('blur', disableFocusStyles);
   // try to focus the element.
   element.focus();
   // if element is not focusable, add atributes that make it focusable, then focus again.
@@ -82,7 +73,6 @@ const focusElement = (element) => {
     element.setAttribute('tabIndex', '-1');
     element.setAttribute('role', 'group');
     element.addEventListener('blur', (event) => {
-      disableFocusStyles(event);
       removeAttributes(event);
     });
     element.focus();
