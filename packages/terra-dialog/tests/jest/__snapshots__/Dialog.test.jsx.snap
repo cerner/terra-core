@@ -117,11 +117,9 @@ exports[`Dialog correctly applies the theme context className 1`] = `
             >
               <Scroll
                 className="normalizer orion-fusion-theme"
-                tabIndex="-1"
               >
                 <div
                   className="scroll normalizer orion-fusion-theme"
-                  tabIndex="-1"
                 >
                   <div
                     className="dialog-body"
