@@ -3,7 +3,6 @@
 ## Unreleased
 
 * Added
-  * Added documentation updates for `Single Select` in `terra-form-select`.
   * Added documentation updates for `terra-form-input`.
 
 ## 1.30.0 - (July 11, 2023)
