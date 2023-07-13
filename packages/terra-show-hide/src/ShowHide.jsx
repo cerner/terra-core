@@ -157,6 +157,7 @@ const ShowHide = (props) => {
         ref={contentRef}
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={isActiveElement ? '-1' : null}
+        role={isActiveElement ? 'group' : null}
         onBlur={onBlur}
       >
         <Toggle isOpen={isOpen}>
