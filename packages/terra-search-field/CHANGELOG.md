@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Updated focus indicators to standard dashed line.
+  * Updated focus indicators to be a standard dashed line.
 
 ## 3.83.0 - (June 14, 2023)
 
