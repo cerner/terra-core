@@ -4,6 +4,7 @@
 
 * Added
   * Added a test case for click event when setFocusOnContainer is disabled
+  * Added email format instruction text for `terra-form-field`.
 
 * Changed
   * Minor formatting update in `terra-alert` & `terra-form-fieldset`.
