@@ -9,6 +9,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should enter a search term', () => {
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       $('input').setValue('Lore', { mismatchTolerance: 0.1 });
     });
 
@@ -137,6 +138,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with too short text', () => {
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       Terra.validates.element('minimum length too short text', { mismatchTolerance: 0.1 });
     });
 
@@ -156,6 +158,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should display Search Field with long enough text', () => {
       expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       Terra.validates.element('minimum length with long enough text', { mismatchTolerance: 0.1 });
     });
   });
@@ -183,6 +186,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should display Search Field with too short text', () => {
       expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       Terra.validates.element('callback with too short text', { mismatchTolerance: 0.1 });
     });
   });
@@ -200,6 +204,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
 
     it('should display Search Field with typed text', () => {
       expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       Terra.validates.element('setting value typed', { mismatchTolerance: 0.1 });
     });
 
@@ -279,6 +284,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       $('input').setValue('Lore');
 
       expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       Terra.validates.element('auto search disabled text before search', { mismatchTolerance: 0.1 });
     });
 
@@ -340,6 +346,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       setTimeout(() => { input.addValue('L'); }, 250);
 
       expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       Terra.validates.element('empty search text', { mismatchTolerance: 0.1 });
     });
   });
