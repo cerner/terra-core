@@ -23,4 +23,10 @@ Terra.describeViewports('Content Container', ['medium'], () => {
     browser.keys(['Tab']);
     Terra.validates.element('dark content container');
   });
+
+  it('displays Content Container without border when clicked', () => {
+    browser.url('/raw/tests/cerner-terra-core-docs/content-container/content-container-click-event');
+    $('#click-on-content').click();
+    Terra.validates.element('no border on click');
+  });
 });
