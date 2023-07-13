@@ -21,6 +21,7 @@ const AlertAlert = () => {
 
   return (
     <div>
+      {/* eslint-disable-next-line no-console */}
       <Button text="Dummy Button" onClick={() => console.log('Click')} />
       <br />
       <br />
@@ -28,7 +29,7 @@ const AlertAlert = () => {
         id="successAlert"
         type="success"
         action={<Button text="Action" onClick={handleActionClick} />}
-        onDismiss={() => console.log('Dismiss')}
+        onDismiss={() => console.log('Dismiss')} // eslint-disable-line no-console
       >
         Test
       </Alert>

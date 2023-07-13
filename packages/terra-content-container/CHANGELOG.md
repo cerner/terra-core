@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.39.0 - (June 28, 2023)
+
 * Added
    * Added `setFocusOnContainer` prop to provide scroll capability for keyboard only users. (Requires Jest Snapshot updates)
    * Added `borderColor` prop for allowing consumers to change the border color to dark or white depending upon the color of the content container 
