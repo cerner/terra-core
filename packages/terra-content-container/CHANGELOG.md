@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Fixed issue of focus outline when `setFocusOnContainer` is not set.
+
 ## 3.39.0 - (June 28, 2023)
 
 * Added
