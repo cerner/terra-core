@@ -5,12 +5,19 @@
 * Changed
   * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
+## 1.31.0 - (July 13, 2023)
+
+* Added
+  * Added a test case for click event when setFocusOnContainer is disabled
+  * Added email format instruction text for `terra-form-field`.
+
+* Changed
+  * Minor formatting update in `terra-alert` & `terra-form-fieldset`.
+
 ## 1.30.0 - (July 11, 2023)
 
 * Added
   * Added test example for controlled form native select component.
-
-* Added
   * Added more realistic examples for terra-toggle-button.
 
 ## 1.29.0 - (June 28, 2023)
