@@ -12,9 +12,6 @@
 
 * Added
   * Added test example for controlled form native select component.
-
-* Added
-  * Added test example for controlled form native select component.
   * Added more realistic examples for terra-toggle-button.
 
 ## 1.29.0 - (June 28, 2023)
