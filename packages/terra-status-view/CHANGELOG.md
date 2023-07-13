@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 4.56.0 - (July 13, 2023)
+
 * Updated
   * Changed orion-fusion-theme status view bottom and top padding to reduce white space.
 
