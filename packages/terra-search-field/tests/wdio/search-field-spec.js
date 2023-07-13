@@ -9,8 +9,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should enter a search term', () => {
-      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
-      $('input').setValue('Lore', { mismatchTolerance: 0.1 });
+      $('input').setValue('Lore');
     });
 
     it('should display Search Field with text', () => {
