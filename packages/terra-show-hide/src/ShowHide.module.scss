@@ -21,7 +21,7 @@
 
   .show-hide-content {
     &:focus,
-    & :focus {
+    :focus {
       outline: var(--terra-show-hide-focus-outline, 1px dashed #949494);
       outline-offset: var(--terra-show-hide-focus-outline-offset, 1px);
     }
