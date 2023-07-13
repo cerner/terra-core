@@ -62,7 +62,7 @@ const ContentContainer = ({
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
-  const lightbackground = 'light';
+  const lightBackground = 'light';
 
   const contentLayoutClassNames = cx([
     `content-container-${fill ? 'fill' : 'static'}`,
@@ -72,7 +72,7 @@ const ContentContainer = ({
   // setting tab index to 0 if setFocusOnContainer is set
   const scrollAttrs = (setFocusOnContainer) ? { tabIndex: 0 } : '';
   // border will only be visible when setFocusOnContainer is set for content-container
-  const background = setFocusOnContainer && (backgroundColor || lightbackground);
+  const background = setFocusOnContainer && (backgroundColor || lightBackground);
   const scrollClassNames = cx(
     'normalizer',
     theme.className,

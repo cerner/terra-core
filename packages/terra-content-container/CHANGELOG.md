@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Addressed the focus style on click issue when `setFocusOnContainer` is not set
+  * Updated focus style when `setFocusOnContainer` is not set.
 
 ## 3.39.0 - (June 28, 2023)
 

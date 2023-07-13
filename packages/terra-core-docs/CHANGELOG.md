@@ -2,10 +2,16 @@
 
 ## Unreleased
 
+* Added
+  * Added a test case for click event when setFocusOnContainer is disabled
+
 * Changed
   * Minor formatting update in `terra-alert` & `terra-form-fieldset`.
 
 ## 1.30.0 - (July 11, 2023)
+
+* Added
+  * Added test example for controlled form native select component.
 
 * Added
   * Added test example for controlled form native select component.
