@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed issue terra arrange support resizing to 400% and viewport is resized to 320x256 px without loss of information or function.
+
 ## 3.51.0 - (February 15, 2023)
 
 * Changed
