@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added email format instruction text for `terra-form-field`.
+
 * Changed
   * Minor formatting update in `terra-alert` & `terra-form-fieldset`.
 
