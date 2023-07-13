@@ -87,6 +87,8 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
         </p>
         <div
           className="show-hide show-hide-content orion-fusion-theme"
+          onBlur={[Function]}
+          tabIndex="-1"
         >
           <Toggle
             isAnimated={false}
@@ -225,6 +227,8 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -374,6 +378,8 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -511,6 +517,8 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -648,6 +656,8 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -782,6 +792,8 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -915,6 +927,8 @@ exports[`ShowHide should render a default show-hide component 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -1035,6 +1049,8 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
     <div>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -1166,6 +1182,8 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
     <div>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -1304,6 +1322,8 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -1437,6 +1457,8 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
     <div>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -1572,6 +1594,8 @@ exports[`ShowHide should set children prop correctly 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -1703,6 +1727,8 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
     <div>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -1838,6 +1864,8 @@ exports[`ShowHide should set preview prop correctly 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
@@ -1972,6 +2000,8 @@ exports[`ShowHide should set the button to align right 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        onBlur={[Function]}
+        tabIndex="-1"
       >
         <Toggle
           isAnimated={false}
