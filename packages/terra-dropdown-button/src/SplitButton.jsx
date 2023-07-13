@@ -80,6 +80,7 @@ class SplitButton extends React.Component {
     this.handlePrimaryKeyUp = this.handlePrimaryKeyUp.bind(this);
     this.handleCaretKeyDown = this.handleCaretKeyDown.bind(this);
     this.handleCaretKeyUp = this.handleCaretKeyUp.bind(this);
+    this.getButtonNode = this.getButtonNode.bind(this);
     this.setButtonNode = this.setButtonNode.bind(this);
     this.setListNode = this.setListNode.bind(this);
     this.toggleDropDown = this.toggleDropDown.bind(this);
@@ -158,6 +159,10 @@ class SplitButton extends React.Component {
     this.buttonNode = node;
   }
 
+  getButtonNode() {
+    return this.buttonNode;
+  }
+
   getSelectedOptionText = (selectedOptionText) => {
     this.setState({ selectText: selectedOptionText });
   }
@@ -230,6 +235,7 @@ class SplitButton extends React.Component {
         isBlock={isBlock}
         isCompact={isCompact}
         isDisabled={isDisabled}
+        buttonRef={this.getButtonNode}
         refCallback={this.setListNode}
         getSelectedOptionText={this.getSelectedOptionText}
       >

@@ -42,6 +42,10 @@ const propTypes = {
    */
   refCallback: PropTypes.func,
   /**
+   * Callback for reference of the dropdown button
+   */
+  buttonRef: PropTypes.func,
+  /**
    * Callback for the dropdown list selected option.
    */
   getSelectedOptionText: PropTypes.func,
@@ -81,6 +85,7 @@ class DropdownButtonBase extends React.Component {
       isCompact,
       isDisabled,
       refCallback,
+      buttonRef,
       getSelectedOptionText,
       ...customProps
     } = this.props;
@@ -115,6 +120,7 @@ class DropdownButtonBase extends React.Component {
           isOpen={isOpen}
           requestClose={requestClose}
           width={calcWidth}
+          buttonRef={buttonRef}
           refCallback={refCallback}
           getSelectedOptionText={getSelectedOptionText}
         >
