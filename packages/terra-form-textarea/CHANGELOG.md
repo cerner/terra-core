@@ -1,7 +1,8 @@
 # Changelog
 
 ## Unreleased
-* Added `aria-invalid` field to Textarea component and changed existing example so it can be tested
+* Added
+  * Added support for `aria-invalid` through the `IsInvalid` prop to mark what field is invalid for assistive technology.
 
 ## 5.24.0 - (April 27, 2023)
 
