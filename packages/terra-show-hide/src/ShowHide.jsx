@@ -87,39 +87,36 @@ const ShowHide = (props) => {
 
   const theme = React.useContext(ThemeContext);
   const contentRef = React.useRef(null);
-  const [activeElement, setActiveElement] = React.useState(null);
+  const [containerIsActive, setContainerIsActive] = React.useState(false);
   const focusRefClassName = 'show-hide-ref-focusable';
 
   /**
    * Upon showing hidden content, set activeElement to focusRef element if provided, othervise set it to content container.
    */
   React.useEffect(() => {
-    let newActiveElement = null;
     if (isOpen) {
       if (focusRef?.current) {
         if (checkIfAddTabindex(focusRef?.current)) {
           // not focusable element with no tabindex set, safe to temporary add tabindex that will later be removed on blur
           focusRef?.current.setAttribute('tabIndex', '-1');
           focusRef?.current.setAttribute('role', 'group');
+          if (!focusRef?.current.hasAttribute('role')) {
+            focusRef?.current.setAttribute('role', 'group');
+          }
           focusRef?.current.classList.add(focusRefClassName); // needed for onBlur cleanup
         }
-        newActiveElement = focusRef?.current;
+        focusRef?.current.focus();
       } else if (contentRef?.current) {
-        newActiveElement = contentRef?.current;
+        setContainerIsActive(true);
       }
     }
-    setActiveElement(newActiveElement);
   }, [isOpen, focusRef, contentRef]);
 
-  /**
-  * Set focus to active element allows assistive technologies to read the newly revealed content.
-  */
   React.useEffect(() => {
-    if (activeElement && isOpen) {
-      activeElement.focus();
+    if (containerIsActive && isOpen && contentRef?.current) {
+      contentRef?.current?.focus();
     }
-  }, [activeElement, isOpen]);
-
+  }, [containerIsActive, isOpen]);
   const buttonClassName = cx([
     'show-hide',
     'button',
@@ -137,17 +134,17 @@ const ShowHide = (props) => {
     }
   }
 
-  const onBlur = () => {
-    if (activeElement === focusRef?.current && focusRef?.current?.classList?.contains(focusRefClassName)) {
+  const onBlur = (e) => {
+    if (e.target === focusRef?.current && focusRef?.current?.classList?.contains(focusRefClassName)) {
       focusRef?.current.removeAttribute('tabindex');
-      focusRef?.current.removeAttribute('role');
+      if (focusRef.current.getAttribute('role') === 'group') {
+        focusRef?.current.removeAttribute('role');
+      }
       focusRef?.current.classList.remove(focusRefClassName);
     }
     // There should be no activeElement anymore, the nex time an activeElement shows up is when isOpen changes to true.
-    setActiveElement(null);
+    setContainerIsActive(false);
   };
-
-  const isActiveElement = activeElement === contentRef?.current;
 
   return (
     <div {...customProps}>
@@ -156,8 +153,8 @@ const ShowHide = (props) => {
         className={cx(['show-hide', 'show-hide-content', theme.className])}
         ref={contentRef}
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
-        tabIndex={isActiveElement ? '-1' : null}
-        role={isActiveElement ? 'group' : null}
+        tabIndex={containerIsActive ? '-1' : null}
+        role={containerIsActive ? 'group' : null}
         onBlur={onBlur}
       >
         <Toggle isOpen={isOpen}>
