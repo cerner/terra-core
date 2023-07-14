@@ -60,7 +60,7 @@ const FieldExamples = () => {
       <Field
         label="E-mail Label"
         htmlFor="input_id"
-        help="Please enter a valid e-mail address."
+        help="Please enter a valid e-mail address (abc@example.com)."
         error="The e-mail address entered is invalid."
         isInvalid={isInvalid}
       >
