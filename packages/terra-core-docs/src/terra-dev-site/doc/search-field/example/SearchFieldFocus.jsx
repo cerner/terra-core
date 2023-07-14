@@ -21,6 +21,7 @@ const SearchFieldFocus = () => {
       <Button text="Focus Me" onClick={handleButtonClick} id="search-field-focus-button" />
       <p>{message}</p>
       <SearchField
+        groupName="Search Field Group name"
         inputRefCallback={(inputRef) => { searchElement = inputRef; }}
         onSearch={setSearchText}
         onInvalidSearch={setSearchText}

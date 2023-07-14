@@ -23,7 +23,7 @@ const SearchFieldFilterNumeric = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField onSearch={handleSearchText} onChange={handleChange} value={state.searchText} />
+      <SearchField groupName="Search Field Group name" onSearch={handleSearchText} onChange={handleChange} value={state.searchText} />
     </div>
   );
 };

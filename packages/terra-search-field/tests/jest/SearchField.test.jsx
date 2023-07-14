@@ -7,30 +7,36 @@ import SearchField from '../../src/SearchField';
 
 describe('Snapshots', () => {
   it('renders a basic search field', () => {
-    const searchField = shallowWithIntl(<SearchField />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup"/>).dive();
+    expect(searchField).toMatchSnapshot();
+  });
+
+  it('renders a search field with a label', () => {
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isLabelVisible/>).dive();
+    expect(searchField.find('label').text()).toEqual('TestGroup');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a placeholder', () => {
-    const searchField = shallowWithIntl(<SearchField placeholder="Test" />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" placeholder="Test" />).dive();
     expect(searchField.find('input').prop('placeholder')).toEqual('Test');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a value', () => {
-    const searchField = shallowWithIntl(<SearchField value="Test" />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" value="Test" />).dive();
     expect(searchField.find('input').prop('value')).toEqual('Test');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a defaulted value', () => {
-    const searchField = shallowWithIntl(<SearchField defaultValue="Default" />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" defaultValue="Default" />).dive();
     expect(searchField.find('input').prop('defaultValue')).toEqual('Default');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a disabled search field with a value', () => {
-    const searchField = shallowWithIntl(<SearchField isDisabled />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isDisabled />).dive();
     searchField.instance().updateSearchText('Test');
     expect(searchField.find('input').prop('disabled')).toBe(true);
     expect(searchField.find('Button').prop('isDisabled')).toBe(true);
@@ -38,7 +44,7 @@ describe('Snapshots', () => {
   });
 
   it('renders a search field that displays as a block to fill its container', () => {
-    const searchField = shallowWithIntl(<SearchField isBlock />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isBlock />).dive();
     searchField.instance().updateSearchText('Test');
     expect(searchField.prop('className')).toContain('block');
     expect(searchField).toMatchSnapshot();
@@ -46,31 +52,31 @@ describe('Snapshots', () => {
 
   it('passes in inputRefCallback as the refCallback prop of the Input component', () => {
     const inputRefCallback = jest.fn();
-    const searchField = mountWithIntl(<SearchField inputRefCallback={inputRefCallback} />).children();
+    const searchField = mountWithIntl(<SearchField groupName="TestGroup" inputRefCallback={inputRefCallback} />).children();
     expect(inputRefCallback).toBeCalled();
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with an aria-label', () => {
-    const searchField = shallowWithIntl(<SearchField inputAttributes={{ 'aria-label': 'Search Field' }} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" inputAttributes={{ 'aria-label': 'Search Field' }} />).dive();
     expect(searchField.find('input').prop('aria-label')).toEqual('Search Field');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with an aria-label using prop', () => {
-    const searchField = shallowWithIntl(<SearchField inputAttributes={{ ariaLabel: 'Search Field' }} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" inputAttributes={{ ariaLabel: 'Search Field' }} />).dive();
     expect(searchField.find('input').prop('aria-label')).toEqual('Terra.searchField.search');
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field such that custom styles are applied', () => {
-    const searchField = shallowWithIntl(<SearchField inputAttributes={{ className: 'test-class' }} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" inputAttributes={{ className: 'test-class' }} />).dive();
     expect(searchField.find('input').prop('className')).toContain('test-class');
     expect(searchField).toMatchSnapshot();
   });
 
   it('clears form with clear method', () => {
-    const searchField = shallowWithIntl(<SearchField />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup"/>).dive();
     searchField.instance().updateSearchText('amp');
 
     expect(searchField.instance().searchText).toBe('amp');
@@ -81,7 +87,7 @@ describe('Snapshots', () => {
   it('correctly applies the theme context className', () => {
     const searchField = mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
-        <SearchField />
+        <SearchField groupName="TestGroup"/>
       </ThemeContextProvider>,
     );
     expect(searchField).toMatchSnapshot();
@@ -91,11 +97,12 @@ describe('Snapshots', () => {
 describe('Manual Search', () => {
   it('triggers search on button click', () => {
     const onSearch = jest.fn();
-    const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} />).dive();
+    
     searchField.instance().updateSearchText('Te');
-
+    console.log(searchField)
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(1).simulate('click');
+    searchField.find('button').simulate('click');
     expect(onSearch).toBeCalledTimes(1);
     expect(onSearch).toBeCalledWith('Te');
   });
@@ -106,7 +113,7 @@ describe('Manual Search', () => {
     document.body.appendChild(container);
 
     const onSearch = jest.fn();
-    const searchField = mountWithIntl(<SearchField onSearch={onSearch} />, {
+    const searchField = mountWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} />, {
       attachTo: document.querySelector('#container'),
     });
 
@@ -121,29 +128,29 @@ describe('Manual Search', () => {
 
   it('does not trigger search if default minimum search text has not been met', () => {
     const onSearch = jest.fn();
-    const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} />).dive();
     searchField.setState({ searchText: 'T' });
 
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(1).simulate('click');
+    searchField.childAt(3).simulate('click');
     expect(onSearch).not.toBeCalled();
   });
 
   it('does not trigger search if minimum search text has not been met', () => {
     const onSearch = jest.fn();
-    const searchField = shallowWithIntl(<SearchField onSearch={onSearch} minimumSearchTextLength={5} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} minimumSearchTextLength={5} />).dive();
     searchField.setState({ searchText: 'Sear' });
 
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(1).simulate('click');
+    searchField.childAt(3).simulate('click');
     expect(onSearch).not.toBeCalled();
   });
 
   it('does not search when callback is not provided', () => {
-    const searchField = shallowWithIntl(<SearchField minimumSearchTextLength={5} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" minimumSearchTextLength={5} />).dive();
     searchField.setState({ searchText: 'Searc' });
 
-    searchField.childAt(1).simulate('click'); // Verifies we do not attempt to call an undefined function.
+    searchField.childAt(3).simulate('click'); // Verifies we do not attempt to call an undefined function.
   });
 });
 
@@ -158,7 +165,7 @@ describe('Auto Search', () => {
 
   it('triggers search after delay on text change', () => {
     const onSearch = jest.fn();
-    const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} />).dive();
 
     searchField.find('.input').simulate('change', { target: { value: 'Te' } });
 
@@ -169,13 +176,13 @@ describe('Auto Search', () => {
 
   it('only triggers one search if a manual search is triggered before automatic search', () => {
     const onSearch = jest.fn();
-    const searchField = shallowWithIntl(<SearchField onSearch={onSearch} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} />).dive();
 
     searchField.find('.input').simulate('change', { target: { value: 'Te' } });
 
     expect(onSearch).not.toBeCalled();
 
-    searchField.childAt(1).simulate('click');
+    searchField.childAt(3).simulate('click');
     expect(onSearch).toBeCalledWith('Te');
 
     jest.runAllTimers();
@@ -185,7 +192,7 @@ describe('Auto Search', () => {
   it('does not trigger search if minimum text length is not met', () => {
     jest.useFakeTimers();
     const onSearch = jest.fn();
-    const searchField = shallowWithIntl(<SearchField onSearch={onSearch} minimumSearchTextLength={5} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} minimumSearchTextLength={5} />).dive();
 
     searchField.find('.input').simulate('change', { target: { value: 'Sear' } });
 
@@ -198,7 +205,7 @@ describe('Auto Search', () => {
     jest.useFakeTimers();
     const onSearch = jest.fn();
     const onInvalidSearch = jest.fn();
-    const searchField = shallowWithIntl(<SearchField onSearch={onSearch} onInvalidSearch={onInvalidSearch} minimumSearchTextLength={5} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} onInvalidSearch={onInvalidSearch} minimumSearchTextLength={5} />).dive();
 
     searchField.find('.input').simulate('change', { target: { value: 'Sear' } });
 
@@ -208,7 +215,7 @@ describe('Auto Search', () => {
   });
 
   it('uses standard timeout for search delay when not provided', () => {
-    const searchField = shallowWithIntl(<SearchField />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup"/>).dive();
 
     searchField.find('.input').simulate('change', { target: {} });
     expect(setTimeout).toBeCalledWith(expect.anything(), 250);
@@ -216,7 +223,7 @@ describe('Auto Search', () => {
 
   it('uses custom timeout for search delay when provided', () => {
     const onSearch = jest.fn();
-    const searchField = shallowWithIntl(<SearchField searchDelay={1000} onSearch={onSearch} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" searchDelay={1000} onSearch={onSearch} />).dive();
 
     searchField.find('.input').simulate('change', { target: {} });
 
@@ -232,7 +239,7 @@ describe('Auto Search', () => {
 
   it('should call onChange when button is selected', () => {
     const onChange = jest.fn();
-    const searchField = shallowWithIntl(<SearchField onChange={onChange} />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onChange={onChange} />).dive();
 
     searchField.find('.input').simulate('change', { target: {} });
     expect(onChange).toBeCalled();

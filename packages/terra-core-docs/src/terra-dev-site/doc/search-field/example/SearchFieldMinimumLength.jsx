@@ -11,7 +11,7 @@ const SearchFieldMinimumLength = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField minimumSearchTextLength={5} onSearch={setSearchText} onInvalidSearch={setSearchText} />
+      <SearchField groupName="Search Field Group name" minimumSearchTextLength={5} onSearch={setSearchText} onInvalidSearch={setSearchText} />
     </div>
   );
 };

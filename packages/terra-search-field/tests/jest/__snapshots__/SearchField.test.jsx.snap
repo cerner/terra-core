@@ -35,9 +35,12 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
     }
   }
 >
-  <InjectIntl(SearchField)>
+  <InjectIntl(SearchField)
+    groupName="TestGroup"
+  >
     <SearchField
       disableAutoSearch={false}
+      groupName="TestGroup"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -67,12 +70,194 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
       }
       isBlock={false}
       isDisabled={false}
+      isLabelVisible={false}
       minimumSearchTextLength={2}
       placeholder=""
       searchDelay={250}
     >
       <div
-        className="search-field orion-fusion-theme"
+        aria-label="Search region"
+        role="search"
+      >
+        <div
+          aria-label="TestGroup"
+          role="group"
+        >
+          <div
+            className="search-field orion-fusion-theme"
+          >
+            <div
+              className="input-group"
+            >
+              <input
+                aria-disabled={false}
+                aria-label="Terra.searchField.search"
+                className="input"
+                disabled={false}
+                onChange={[Function]}
+                onInput={[Function]}
+                onKeyDown={[Function]}
+                placeholder=""
+                type="search"
+              />
+            </div>
+            <Button
+              className="button"
+              data-terra-search-field-button="Search"
+              icon={
+                <IconSearch
+                  data-name="Layer 1"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              }
+              isBlock={false}
+              isCompact={true}
+              isDisabled={false}
+              isIconOnly={true}
+              isReversed={false}
+              onClick={[Function]}
+              refCallback={[Function]}
+              text="Terra.searchField.submit-search"
+              type="button"
+              variant="neutral"
+            >
+              <button
+                aria-disabled={false}
+                aria-label="Terra.searchField.submit-search"
+                className="button neutral compact orion-fusion-theme button"
+                data-terra-search-field-button="Search"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                title="Terra.searchField.submit-search"
+                type="button"
+              >
+                <span
+                  className="button-label icon-only"
+                >
+                  <span
+                    className="icon"
+                  >
+                    <IconSearch
+                      className="icon-svg"
+                      data-name="Layer 1"
+                      viewBox="0 0 48 48"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <IconBase
+                        className="icon-svg"
+                        data-name="Layer 1"
+                        focusable="false"
+                        height="1em"
+                        isBidi={false}
+                        isSpin={false}
+                        viewBox="0 0 48 48"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <svg
+                          className="tui-Icon icon icon-svg"
+                          data-name="Layer 1"
+                          focusable="false"
+                          height="1em"
+                          role="presentation"
+                          viewBox="0 0 48 48"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M47.4 43.2l-13-13A19.66 19.66 0 0038 19a19 19 0 10-7.9 15.4l13 13a2.05 2.05 0 002.9 0l1.4-1.4a1.93 1.93 0 000-2.8zM3 19a16 16 0 1116 16A16 16 0 013 19z"
+                          />
+                        </svg>
+                      </IconBase>
+                    </IconSearch>
+                  </span>
+                </span>
+              </button>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </SearchField>
+  </InjectIntl(SearchField)>
+</ThemeContextProvider>
+`;
+
+exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Input component 1`] = `
+<SearchField
+  disableAutoSearch={false}
+  groupName="TestGroup"
+  inputRefCallback={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          <input
+            aria-disabled="false"
+            aria-label="Terra.searchField.search"
+            class="input"
+            placeholder=""
+            type="search"
+            value=""
+          />,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isBlock={false}
+  isDisabled={false}
+  isLabelVisible={false}
+  minimumSearchTextLength={2}
+  placeholder=""
+  searchDelay={250}
+>
+  <div
+    aria-label="Search region"
+    role="search"
+  >
+    <div
+      aria-label="TestGroup"
+      role="group"
+    >
+      <div
+        className="search-field"
       >
         <div
           className="input-group"
@@ -113,7 +298,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
           <button
             aria-disabled={false}
             aria-label="Terra.searchField.submit-search"
-            className="button neutral compact orion-fusion-theme button"
+            className="button neutral compact button"
             data-terra-search-field-button="Search"
             disabled={false}
             onBlur={[Function]}
@@ -169,296 +354,167 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
           </button>
         </Button>
       </div>
-    </SearchField>
-  </InjectIntl(SearchField)>
-</ThemeContextProvider>
-`;
-
-exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Input component 1`] = `
-<SearchField
-  disableAutoSearch={false}
-  inputRefCallback={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          <input
-            aria-disabled="false"
-            aria-label="Terra.searchField.search"
-            class="input"
-            placeholder=""
-            type="search"
-            value=""
-          />,
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  isBlock={false}
-  isDisabled={false}
-  minimumSearchTextLength={2}
-  placeholder=""
-  searchDelay={250}
->
-  <div
-    className="search-field"
-  >
-    <div
-      className="input-group"
-    >
-      <input
-        aria-disabled={false}
-        aria-label="Terra.searchField.search"
-        className="input"
-        disabled={false}
-        onChange={[Function]}
-        onInput={[Function]}
-        onKeyDown={[Function]}
-        placeholder=""
-        type="search"
-      />
     </div>
-    <Button
-      className="button"
-      data-terra-search-field-button="Search"
-      icon={
-        <IconSearch
-          data-name="Layer 1"
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      isBlock={false}
-      isCompact={true}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
-      onClick={[Function]}
-      refCallback={[Function]}
-      text="Terra.searchField.submit-search"
-      type="button"
-      variant="neutral"
-    >
-      <button
-        aria-disabled={false}
-        aria-label="Terra.searchField.submit-search"
-        className="button neutral compact button"
-        data-terra-search-field-button="Search"
-        disabled={false}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        title="Terra.searchField.submit-search"
-        type="button"
-      >
-        <span
-          className="button-label icon-only"
-        >
-          <span
-            className="icon"
-          >
-            <IconSearch
-              className="icon-svg"
-              data-name="Layer 1"
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="icon-svg"
-                data-name="Layer 1"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon icon-svg"
-                  data-name="Layer 1"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M47.4 43.2l-13-13A19.66 19.66 0 0038 19a19 19 0 10-7.9 15.4l13 13a2.05 2.05 0 002.9 0l1.4-1.4a1.93 1.93 0 000-2.8zM3 19a16 16 0 1116 16A16 16 0 013 19z"
-                  />
-                </svg>
-              </IconBase>
-            </IconSearch>
-          </span>
-        </span>
-      </button>
-    </Button>
   </div>
 </SearchField>
 `;
 
 exports[`Snapshots renders a basic search field 1`] = `
 <div
-  className="search-field"
+  aria-label="Search region"
+  role="search"
 >
   <div
-    className="input-group"
+    aria-label="TestGroup"
+    role="group"
   >
-    <input
-      aria-disabled={false}
-      aria-label="Terra.searchField.search"
-      className="input"
-      disabled={false}
-      onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      placeholder=""
-      type="search"
-    />
-  </div>
-  <Button
-    className="button"
-    data-terra-search-field-button="Search"
-    icon={
-      <IconSearch
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="search-field"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Terra.searchField.search"
+          className="input"
+          disabled={false}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          type="search"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
       />
-    }
-    isBlock={false}
-    isCompact={true}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    refCallback={[Function]}
-    text="Terra.searchField.submit-search"
-    type="button"
-    variant="neutral"
-  />
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Snapshots renders a disabled search field with a value 1`] = `
 <div
-  className="search-field"
+  aria-label="Search region"
+  role="search"
 >
   <div
-    className="input-group"
+    aria-label="TestGroup"
+    role="group"
   >
-    <input
-      aria-disabled={true}
-      aria-label="Terra.searchField.search"
-      className="input"
-      disabled={true}
-      onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      placeholder=""
-      type="search"
-    />
-  </div>
-  <Button
-    className="button"
-    data-terra-search-field-button="Search"
-    icon={
-      <IconSearch
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="search-field"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={true}
+          aria-label="Terra.searchField.search"
+          className="input"
+          disabled={true}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          type="search"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={true}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
       />
-    }
-    isBlock={false}
-    isCompact={true}
-    isDisabled={true}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    refCallback={[Function]}
-    text="Terra.searchField.submit-search"
-    type="button"
-    variant="neutral"
-  />
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Snapshots renders a search field such that custom styles are applied 1`] = `
 <div
-  className="search-field"
+  aria-label="Search region"
+  role="search"
 >
   <div
-    className="input-group"
+    aria-label="TestGroup"
+    role="group"
   >
-    <input
-      aria-disabled={false}
-      aria-label="Terra.searchField.search"
-      className="input test-class"
-      disabled={false}
-      onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      placeholder=""
-      type="search"
-    />
-  </div>
-  <Button
-    className="button"
-    data-terra-search-field-button="Search"
-    icon={
-      <IconSearch
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="search-field"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Terra.searchField.search"
+          className="input test-class"
+          disabled={false}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          type="search"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
       />
-    }
-    isBlock={false}
-    isCompact={true}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    refCallback={[Function]}
-    text="Terra.searchField.submit-search"
-    type="button"
-    variant="neutral"
-  />
+    </div>
+  </div>
 </div>
 `;
 
@@ -525,254 +581,365 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
 
 exports[`Snapshots renders a search field with a defaulted value 1`] = `
 <div
-  className="search-field"
+  aria-label="Search region"
+  role="search"
 >
   <div
-    className="input-group"
+    aria-label="TestGroup"
+    role="group"
   >
-    <input
-      aria-disabled={false}
-      aria-label="Terra.searchField.search"
-      className="input"
-      defaultValue="Default"
-      disabled={false}
-      onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      placeholder=""
-      type="search"
-    />
-    <Button
-      className="clear"
-      data-terra-search-field-button="Clear"
-      icon={
-        <span
-          className="clear-icon"
+    <div
+      className="search-field"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Terra.searchField.search"
+          className="input"
+          defaultValue="Default"
+          disabled={false}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          type="search"
         />
-      }
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
-      onClick={[Function]}
-      text="Terra.searchField.clear"
-      type="button"
-      variant="utility"
-    />
-  </div>
-  <Button
-    className="button"
-    data-terra-search-field-button="Search"
-    icon={
-      <IconSearch
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
+        <Button
+          className="clear"
+          data-terra-search-field-button="Clear"
+          icon={
+            <span
+              className="clear-icon"
+            />
+          }
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isIconOnly={true}
+          isReversed={false}
+          onClick={[Function]}
+          text="Terra.searchField.clear"
+          type="button"
+          variant="utility"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
       />
-    }
-    isBlock={false}
-    isCompact={true}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    refCallback={[Function]}
-    text="Terra.searchField.submit-search"
-    type="button"
-    variant="neutral"
-  />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshots renders a search field with a label 1`] = `
+<div
+  aria-label="Search region"
+  role="search"
+>
+  <div
+    aria-label="TestGroup"
+    role="group"
+  >
+    <div>
+       
+      <label
+        className="label"
+      >
+        TestGroup
+      </label>
+    </div>
+    <div
+      className="search-field"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Terra.searchField.search"
+          className="input"
+          disabled={false}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          type="search"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Snapshots renders a search field with a placeholder 1`] = `
 <div
-  className="search-field"
+  aria-label="Search region"
+  role="search"
 >
   <div
-    className="input-group"
+    aria-label="TestGroup"
+    role="group"
   >
-    <input
-      aria-disabled={false}
-      aria-label="Terra.searchField.search"
-      className="input"
-      disabled={false}
-      onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      placeholder="Test"
-      type="search"
-    />
-  </div>
-  <Button
-    className="button"
-    data-terra-search-field-button="Search"
-    icon={
-      <IconSearch
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="search-field"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Terra.searchField.search"
+          className="input"
+          disabled={false}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Test"
+          type="search"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
       />
-    }
-    isBlock={false}
-    isCompact={true}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    refCallback={[Function]}
-    text="Terra.searchField.submit-search"
-    type="button"
-    variant="neutral"
-  />
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Snapshots renders a search field with a value 1`] = `
 <div
-  className="search-field"
+  aria-label="Search region"
+  role="search"
 >
   <div
-    className="input-group"
+    aria-label="TestGroup"
+    role="group"
   >
-    <input
-      aria-disabled={false}
-      aria-label="Terra.searchField.search"
-      className="input"
-      disabled={false}
-      onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      placeholder=""
-      type="search"
-      value="Test"
-    />
-    <Button
-      className="clear"
-      data-terra-search-field-button="Clear"
-      icon={
-        <span
-          className="clear-icon"
+    <div
+      className="search-field"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Terra.searchField.search"
+          className="input"
+          disabled={false}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          type="search"
+          value="Test"
         />
-      }
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
-      onClick={[Function]}
-      text="Terra.searchField.clear"
-      type="button"
-      variant="utility"
-    />
-  </div>
-  <Button
-    className="button"
-    data-terra-search-field-button="Search"
-    icon={
-      <IconSearch
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
+        <Button
+          className="clear"
+          data-terra-search-field-button="Clear"
+          icon={
+            <span
+              className="clear-icon"
+            />
+          }
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isIconOnly={true}
+          isReversed={false}
+          onClick={[Function]}
+          text="Terra.searchField.clear"
+          type="button"
+          variant="utility"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
       />
-    }
-    isBlock={false}
-    isCompact={true}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    refCallback={[Function]}
-    text="Terra.searchField.submit-search"
-    type="button"
-    variant="neutral"
-  />
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Snapshots renders a search field with an aria-label 1`] = `
 <div
-  className="search-field"
+  aria-label="Search region"
+  role="search"
 >
   <div
-    className="input-group"
+    aria-label="TestGroup"
+    role="group"
   >
-    <input
-      aria-disabled={false}
-      aria-label="Search Field"
-      className="input"
-      disabled={false}
-      onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      placeholder=""
-      type="search"
-    />
-  </div>
-  <Button
-    className="button"
-    data-terra-search-field-button="Search"
-    icon={
-      <IconSearch
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="search-field"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Search Field"
+          className="input"
+          disabled={false}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          type="search"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
       />
-    }
-    isBlock={false}
-    isCompact={true}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    refCallback={[Function]}
-    text="Terra.searchField.submit-search"
-    type="button"
-    variant="neutral"
-  />
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
 <div
-  className="search-field"
+  aria-label="Search region"
+  role="search"
 >
   <div
-    className="input-group"
+    aria-label="TestGroup"
+    role="group"
   >
-    <input
-      aria-disabled={false}
-      aria-label="Terra.searchField.search"
-      ariaLabel="Search Field"
-      className="input"
-      disabled={false}
-      onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      placeholder=""
-      type="search"
-    />
-  </div>
-  <Button
-    className="button"
-    data-terra-search-field-button="Search"
-    icon={
-      <IconSearch
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="search-field"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Terra.searchField.search"
+          ariaLabel="Search Field"
+          className="input"
+          disabled={false}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          type="search"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
       />
-    }
-    isBlock={false}
-    isCompact={true}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    refCallback={[Function]}
-    text="Terra.searchField.submit-search"
-    type="button"
-    variant="neutral"
-  />
+    </div>
+  </div>
 </div>
 `;

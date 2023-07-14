@@ -3,7 +3,7 @@ import SearchField from 'terra-search-field';
 
 const INVALID_MESSAGE = 'The default minimum search length is 2.';
 
-const SearchFieldPlaceholder = () => {
+const SearchFieldWithLabel = () => {
   const [searchText, setSearchText] = useState('');
 
   const message = searchText.length >= 2 ? `Search text: ${searchText}` : INVALID_MESSAGE;
@@ -11,9 +11,9 @@ const SearchFieldPlaceholder = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField groupName="Search Field Group name" onSearch={setSearchText} onInvalidSearch={setSearchText} placeholder="- Search Here -" />
+      <SearchField groupName="Search Field Group name" isLabelVisible onSearch={setSearchText} onInvalidSearch={setSearchText}  />
     </div>
   );
 };
 
-export default SearchFieldPlaceholder;
+export default SearchFieldWithLabel;

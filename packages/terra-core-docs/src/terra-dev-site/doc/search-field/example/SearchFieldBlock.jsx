@@ -11,7 +11,7 @@ const SearchFieldBlock = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField isBlock onSearch={setSearchText} onInvalidSearch={setSearchText} />
+      <SearchField isBlock onSearch={setSearchText} onInvalidSearch={setSearchText} groupName="Search Field Group name" />
     </div>
   );
 };

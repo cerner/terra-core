@@ -25,6 +25,11 @@ const propTypes = {
   disableAutoSearch: PropTypes.bool,
 
   /**
+   * Group name value for search group elements. This value is also used as Label name.
+   */
+  groupName: PropTypes.string.isRequired,
+
+  /**
    * Callback ref to pass into the inner input component.
    */
   inputRefCallback: PropTypes.func,
@@ -51,6 +56,10 @@ const propTypes = {
    */
   isDisabled: PropTypes.bool,
 
+  /**
+   * Whether or not the label is visible. Use this props to include a label above the search field. The label will be same as groupName prop value defined.
+   */
+  isLabelVisible: PropTypes.bool,
   /**
    * The minimum number of characters to perform a search.
    */
@@ -97,6 +106,7 @@ const defaultProps = {
   disableAutoSearch: false,
   isBlock: false,
   isDisabled: false,
+  isLabelVisible: false,
   minimumSearchTextLength: 2,
   placeholder: '',
   searchDelay: 250,
@@ -223,11 +233,13 @@ class SearchField extends React.Component {
     const {
       defaultValue,
       disableAutoSearch,
+      groupName,
       inputRefCallback,
       inputAttributes,
       intl,
       isBlock,
       isDisabled,
+      isLabelVisible,
       minimumSearchTextLength,
       onChange,
       onInput,
@@ -284,34 +296,40 @@ class SearchField extends React.Component {
       : undefined;
 
     return (
-      <div {...customProps} className={searchFieldClassNames}>
-        <div className={cx('input-group')}>
-          <input
-            {...additionalInputAttributes}
-            className={inputClass}
-            type="search"
-            placeholder={placeholder}
-            onChange={this.handleTextChange}
-            disabled={isDisabled}
-            aria-label={inputText}
-            aria-disabled={isDisabled}
-            onKeyDown={this.handleKeyDown}
-            onInput={this.handleInput}
-            ref={this.setInputRef}
-          />
-          {clearButton}
+      <div role="search" aria-label="Search region">
+        <div role="group" aria-label={groupName}>
+          {isLabelVisible && <div> <label className={cx('label')}>{groupName}</label></div>} 
+          <div {...customProps} className={searchFieldClassNames}>
+            
+            <div className={cx('input-group')}>
+              <input
+                {...additionalInputAttributes}
+                className={inputClass}
+                type="search"
+                placeholder={placeholder}
+                onChange={this.handleTextChange}
+                disabled={isDisabled}
+                aria-label={inputText}
+                aria-disabled={isDisabled}
+                onKeyDown={this.handleKeyDown}
+                onInput={this.handleInput}
+                ref={this.setInputRef}
+              />
+              {clearButton}
+            </div>
+            <Button
+              data-terra-search-field-button="Search"
+              className={cx('button')}
+              text={buttonText}
+              onClick={this.handleSearch}
+              isDisabled={isDisabled}
+              icon={Icon}
+              isIconOnly
+              isCompact
+              refCallback={(ref) => { this.searchBtnRef.current = ref; }}
+            />
+          </div>
         </div>
-        <Button
-          data-terra-search-field-button="Search"
-          className={cx('button')}
-          text={buttonText}
-          onClick={this.handleSearch}
-          isDisabled={isDisabled}
-          icon={Icon}
-          isIconOnly
-          isCompact
-          refCallback={(ref) => { this.searchBtnRef.current = ref; }}
-        />
       </div>
     );
   }
