@@ -117,7 +117,7 @@ describe('Dropdown List', () => {
   });
 
   it('should set the aria-label property to empty on keydown on Mac', () => {
-    // Set the mock implementation for isMac
+    //  Sets the mock return value for isMac
     SharedUtil.isMac.mockReturnValue(true);
 
     const wrapper = shallowWithIntl(
@@ -133,18 +133,17 @@ describe('Dropdown List', () => {
     wrapper.instance().listRef = listRefMock;
     const firstListItem = wrapper.find('#firstItem');
     const firstListItemAriaLabelValue = firstListItem.props()['aria-label'];
-    const expectedAriaLabelValueInitial = `${translationsFile['Terra.dropdownButton.expanded']}1st Option,(1 of 3)`;
-    expect(firstListItemAriaLabelValue).toEqual(expectedAriaLabelValueInitial);
-
+    const expectedAriaLabelInitialValue = `${translationsFile['Terra.dropdownButton.expanded']}1st Option,(1 of 3)`;
     // Simulate keydown event
     wrapper.instance().handleKeyDown(eventMock);
     const updatedFirstListItemAriaLabelValue = wrapper.find('#firstItem').props()['aria-label'];
     const expectedAriaLabelValue = '1st Option,(1 of 3)';
+    expect(firstListItemAriaLabelValue).toEqual(expectedAriaLabelInitialValue);
     expect(updatedFirstListItemAriaLabelValue).toEqual(expectedAriaLabelValue);
   });
 
   it('should set the aria-label property to empty on keydown on non-mac', () => {
-    // Set the mock implementation for isMac
+    //  Sets the mock return value for isMac
     SharedUtil.isMac.mockReturnValue(false);
 
     const wrapper = shallowWithIntl(
@@ -160,13 +159,12 @@ describe('Dropdown List', () => {
     wrapper.instance().listRef = listRefMock;
     const firstListItem = wrapper.find('#firstItem');
     const firstListItemAriaLabelValue = firstListItem.props()['aria-label'];
-    const expectedAriaLabelValueInitialEDGE = `${translationsFile['Terra.dropdownButton.expanded']}1st Option`;
-    expect(firstListItemAriaLabelValue).toEqual(expectedAriaLabelValueInitialEDGE);
-
+    const expectedAriaLabelInitialValueEDGE = `${translationsFile['Terra.dropdownButton.expanded']}1st Option`;
     // Simulate keydown event
     wrapper.instance().handleKeyDown(eventMock);
     const updatedFirstListItemAriaLabelValue = wrapper.find('#firstItem').props()['aria-label'];
     const expectedAriaLabelValueEDGE = '1st Option';
+    expect(firstListItemAriaLabelValue).toEqual(expectedAriaLabelInitialValueEDGE);
     expect(updatedFirstListItemAriaLabelValue).toEqual(expectedAriaLabelValueEDGE);
   });
 });
