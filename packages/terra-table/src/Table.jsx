@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -329,6 +329,41 @@ const createHeader = (tableData) => {
     return { headerIndex: 0, header: undefined };
   }
 
+  const [ariaText,setAriaText] = React.useState('')
+  const data = tableData.headerData.cells
+  let sortBy = ''
+  let sortOrder = ''
+  let ariatext = ''
+  let allHeaders = data.map(item => item.children);
+  const [keyPressed,setKeyPressed] = React.useState(false);
+
+  useEffect(() => {
+    const isSortAvailable = data.find(item => item.isSortActive !== undefined)
+    console.log(isSortAvailable)
+    if(isSortAvailable){
+      const item = data.find(item => item.isSortActive === true);
+      sortBy = item.children
+      sortOrder = item.isSortDesc ? 'descending' : 'ascending'
+      if(keyPressed){
+        setAriaText(`${allHeaders} is sorted by ${sortBy},${sortOrder}`)
+      }
+      else {
+        setAriaText('')
+      }
+    }
+  }, [data]);
+    
+  const handleKeyDown = (event) => {
+    if (event.key === 'Tab') {
+      setAriaText('')
+    }
+    if (event.key === ' ' || event.key === 'Enter') {
+      setKeyPressed(true)
+    }
+  }
+
+  
+
   return {
     headerIndex: 1,
     header: (
@@ -348,6 +383,8 @@ const createHeader = (tableData) => {
             onCellAction={cellData.onCellAction}
             onSortAction={cellData.onSortAction}
             removeInner={cellData.removeInner}
+            onKeyDown={handleKeyDown}
+            sortingLabel={ariaText}
             width={tableData.columnWidths ? tableData.columnWidths[colIndex] : undefined}
           >
             {cellData.children}

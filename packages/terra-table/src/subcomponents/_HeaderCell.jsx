@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import classNames from 'classnames/bind';
 import styles from './HeaderCell.module.scss';
 import {
@@ -69,6 +70,7 @@ const propTypes = {
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onMouseDown: PropTypes.func,
+  sortingLabel: PropTypes.string,
 };
 
 const defaultProps = {
@@ -76,6 +78,7 @@ const defaultProps = {
   removeInner: false,
   isSortDesc: false,
   isSortActive: false,
+  sortingLabel: ''
 };
 
 const HeaderCell = ({
@@ -91,6 +94,7 @@ const HeaderCell = ({
   onSortAction,
   refCallback,
   removeInner,
+  sortingLabel,
   width,
   ...customProps
 }) => {
@@ -129,6 +133,7 @@ const HeaderCell = ({
     <div className={cx('cell-content')} key="content">
       {children}
     </div>,
+    <VisuallyHiddenText text={sortingLabel} aria-live='polite'/>,
     sortIndicator,
   ];
 
