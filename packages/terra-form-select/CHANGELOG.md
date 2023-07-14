@@ -2,10 +2,16 @@
 
 ## Unreleased
 
+## 6.43.0 - (July 13, 2023)
+
+* Changed
+  * Minor dependency version bump.
+
 ## 6.42.1 - (July 11, 2023)
 
 * Fixed
   * Fixed `Native Select` to allow updating the value prop in subsequent renders.
+  * Fixed VoiceOver reading the index twice in `terra-form-single-select`.
 
 ## 6.42.0 - (June 28, 2023)
 
