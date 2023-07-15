@@ -146,6 +146,7 @@ const ShowHide = (props) => {
       focusRef?.current.removeAttribute('tabindex');
       isModified.current.tabIndex = false;
       if (isModified.current.role) {
+        focusRef?.current.removeAttribute('role');
         isModified.current.role = false;
       }
     }
