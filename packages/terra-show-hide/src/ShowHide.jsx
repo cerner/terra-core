@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {
+  useContext, useState, useRef, useEffect,
+} from 'react';
 import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
 import { injectIntl } from 'react-intl';
@@ -85,25 +87,30 @@ const ShowHide = (props) => {
     ...customProps
   } = props;
 
-  const theme = React.useContext(ThemeContext);
-  const contentRef = React.useRef(null);
-  const [containerIsActive, setContainerIsActive] = React.useState(false);
-  const focusRefClassName = 'show-hide-ref-focusable';
+  const theme = useContext(ThemeContext);
+  const contentRef = useRef(null);
+  const [containerIsActive, setContainerIsActive] = useState(false);
+
+  // Keep track of modified attributes to remove on blur
+  const isModified = useRef({
+    tabIndex: false,
+    role: false,
+  });
 
   /**
    * Upon showing hidden content, set activeElement to focusRef element if provided, othervise set it to content container.
    */
-  React.useEffect(() => {
+  useEffect(() => {
     if (isOpen) {
       if (focusRef?.current) {
         if (checkIfAddTabindex(focusRef?.current)) {
           // not focusable element with no tabindex set, safe to temporary add tabindex that will later be removed on blur
           focusRef?.current.setAttribute('tabIndex', '-1');
-          focusRef?.current.setAttribute('role', 'group');
+          isModified.current.tabIndex = true;
           if (!focusRef?.current.hasAttribute('role')) {
             focusRef?.current.setAttribute('role', 'group');
+            isModified.current.role = true;
           }
-          focusRef?.current.classList.add(focusRefClassName); // needed for onBlur cleanup
         }
         focusRef?.current.focus();
       } else if (contentRef?.current) {
@@ -112,7 +119,7 @@ const ShowHide = (props) => {
     }
   }, [isOpen, focusRef, contentRef]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (containerIsActive && isOpen && contentRef?.current) {
       contentRef?.current?.focus();
     }
@@ -135,15 +142,16 @@ const ShowHide = (props) => {
   }
 
   const onBlur = (e) => {
-    if (e.target === focusRef?.current && focusRef?.current?.classList?.contains(focusRefClassName)) {
+    if (e.target === focusRef?.current && isModified.current.tabIndex) {
       focusRef?.current.removeAttribute('tabindex');
-      if (focusRef.current.getAttribute('role') === 'group') {
-        focusRef?.current.removeAttribute('role');
+      isModified.current.tabIndex = false;
+      if (isModified.current.role) {
+        isModified.current.role = false;
       }
-      focusRef?.current.classList.remove(focusRefClassName);
     }
-    // There should be no activeElement anymore, the nex time an activeElement shows up is when isOpen changes to true.
-    setContainerIsActive(false);
+    if (containerIsActive) {
+      setContainerIsActive(false);
+    }
   };
 
   return (
