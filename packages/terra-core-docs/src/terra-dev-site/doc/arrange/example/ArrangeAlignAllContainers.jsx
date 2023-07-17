@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
-import { alignExampleDivBlue, textWithBlueBorder } from '../common/examplesetup';
+import { textClinicalData, textHealthSolutionsData, textConsentFormData, homeButton, menuButton, chatButton, settingsButton, twitterButton, backtotopButton, } from '../common/examplesetup';
 import styles from './ArrangeExamples.module.scss';
 
 const cx = classNames.bind(styles);
@@ -11,9 +11,9 @@ const ArrangeAlignAllContainers = () => (
     <h3>Align - Default</h3>
     <Arrange
       className={cx('arrange')}
-      fitStart={alignExampleDivBlue}
-      fill={textWithBlueBorder}
-      fitEnd={alignExampleDivBlue}
+      fitStart={homeButton}
+      fill={textClinicalData}
+      fitEnd={menuButton}
     />
     <br />
     <hr />
@@ -21,9 +21,9 @@ const ArrangeAlignAllContainers = () => (
     <Arrange
       align="center"
       className={cx('arrange')}
-      fitStart={alignExampleDivBlue}
-      fill={textWithBlueBorder}
-      fitEnd={alignExampleDivBlue}
+      fitStart={settingsButton}
+      fill={textHealthSolutionsData}
+      fitEnd={chatButton}
     />
     <br />
     <hr />
@@ -31,9 +31,9 @@ const ArrangeAlignAllContainers = () => (
     <Arrange
       align="bottom"
       className={cx('arrange')}
-      fitStart={alignExampleDivBlue}
-      fill={textWithBlueBorder}
-      fitEnd={alignExampleDivBlue}
+      fitStart={twitterButton}
+      fill={textConsentFormData}
+      fitEnd={backtotopButton}
     />
   </div>
 );
