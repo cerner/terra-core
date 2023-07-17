@@ -81,7 +81,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
         }
       >
         <Item
-          aria-label="Terra.dropdownButton.expanded1st Option"
+          aria-label="Terra.dropdownButton.expanded, 1st Option"
           data-terra-dropdown-list-item={true}
           isActive={false}
           key=".0"
@@ -90,7 +90,7 @@ exports[`Dropdown List correctly applies the theme context className 1`] = `
           requestClose={[Function]}
         >
           <li
-            aria-label="Terra.dropdownButton.expanded1st Option"
+            aria-label="Terra.dropdownButton.expanded, 1st Option"
             className="item orion-fusion-theme"
             data-terra-dropdown-list-item={true}
             onClick={[Function]}

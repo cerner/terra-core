@@ -133,7 +133,7 @@ describe('Dropdown List', () => {
     wrapper.instance().listRef = listRefMock;
     const firstListItem = wrapper.find('#firstItem');
     const firstListItemAriaLabelValue = firstListItem.props()['aria-label'];
-    const expectedAriaLabelInitialValue = `${translationsFile['Terra.dropdownButton.expanded']}1st Option,(1 of 3)`;
+    const expectedAriaLabelInitialValue = `${translationsFile['Terra.dropdownButton.expanded']}, 1st Option,(1 of 3)`;
     // Simulate keydown event
     wrapper.instance().handleKeyDown(eventMock);
     const updatedFirstListItemAriaLabelValue = wrapper.find('#firstItem').props()['aria-label'];
@@ -159,7 +159,7 @@ describe('Dropdown List', () => {
     wrapper.instance().listRef = listRefMock;
     const firstListItem = wrapper.find('#firstItem');
     const firstListItemAriaLabelValue = firstListItem.props()['aria-label'];
-    const expectedAriaLabelInitialValueEDGE = `${translationsFile['Terra.dropdownButton.expanded']}1st Option`;
+    const expectedAriaLabelInitialValueEDGE = `${translationsFile['Terra.dropdownButton.expanded']}, 1st Option`;
     // Simulate keydown event
     wrapper.instance().handleKeyDown(eventMock);
     const updatedFirstListItemAriaLabelValue = wrapper.find('#firstItem').props()['aria-label'];

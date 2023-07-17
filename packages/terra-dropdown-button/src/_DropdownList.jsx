@@ -56,7 +56,7 @@ class DropdownList extends React.Component {
     this.searchString = '';
     this.pressed = false;
     this.listRef = null;
-    this.expanded = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.expanded' });
+    this.expanded = `${this.props.intl.formatMessage({ id: 'Terra.dropdownButton.expanded' })}, `;
   }
 
   componentDidMount() {
@@ -185,16 +185,12 @@ class DropdownList extends React.Component {
       const totalItems = this.props.children.length;
       const activeOption = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.activeOption' }, { currentItemLabel, currentIndex, totalItems });
       let ariaLabel = null;
-      if (SharedUtil.isMac()) {
-        if (currentIndex === 1 && totalItems) {
-          ariaLabel = `${this.expanded}${activeOption}`;
-        } else if (currentIndex !== 1 && totalItems) {
-          ariaLabel = `${activeOption}`;
-        } // In Edge with JAWS,removed aria-label for index to avoid announcing left parent and right parent (1 of 4).
-      } else if (currentIndex === 1 && totalItems) {
-        ariaLabel = `${this.expanded}${currentItemLabel}`;
-      } else if (currentIndex !== 1 && totalItems) {
-        ariaLabel = `${currentItemLabel}`;
+      if (totalItems) {
+        if (SharedUtil.isMac()) {
+          ariaLabel = currentIndex === 1 ? `${this.expanded}${activeOption}` : activeOption;
+        } else {
+          ariaLabel = currentIndex === 1 ? `${this.expanded}${currentItemLabel}` : currentItemLabel;
+        }
       }
 
       return React.cloneElement(child, {
