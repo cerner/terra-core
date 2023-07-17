@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Fixed issue terra arrange support resizing to 400% and viewport is resized to 320x256 px without loss of information or function.
+  * Fixed reflow issue when zoomed to 400% and the viewport is resized to 320x256 px.
 
 ## 3.51.0 - (February 15, 2023)
 
