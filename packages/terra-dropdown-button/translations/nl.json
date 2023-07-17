@@ -1,6 +1,6 @@
 {
   "Terra.dropdownButton.moreOptions": "Meer opties",
-  "Terra.dropdownButton.selected": "Geselecteerd.",
+  "Terra.dropdownButton.selected": "Geselecteerd",
   "Terra.dropdownButton.expanded": "Knop uitgevouwen",
   "Terra.dropdownButton.activeOption": "{currentItemLabel},({currentIndex} van {totalItems})"
 }
