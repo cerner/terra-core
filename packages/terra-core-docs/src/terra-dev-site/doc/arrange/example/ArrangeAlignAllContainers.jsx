@@ -1,7 +1,9 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
-import { textClinicalData, textHealthSolutionsData, textConsentFormData, homeButton, menuButton, chatButton, settingsButton, twitterButton, backtotopButton, } from '../common/examplesetup';
+import {
+  textClinicalData, textHealthSolutionsData, textConsentFormData, homeButton, menuButton, chatButton, settingsButton, twitterButton, backtotopButton,
+} from '../common/examplesetup';
 import styles from './ArrangeExamples.module.scss';
 
 const cx = classNames.bind(styles);

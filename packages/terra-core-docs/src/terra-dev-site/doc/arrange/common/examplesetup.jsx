@@ -6,53 +6,66 @@ import styles from './examplesetup.scss';
 const cx = classNames.bind(styles);
 
 const handleHealthSolutionsClick = () => {
-  alert('Health solutions button has been clicked')
+// eslint-disable-next-line no-alert
+  alert('Health solutions button has been clicked');
 };
 
 const handleHomeClick = () => {
-  alert('Home button has been clicked')
+// eslint-disable-next-line no-alert
+  alert('Home button has been clicked');
 };
 
 const handleMenuClick = () => {
-  alert('Menu button has been clicked')
+// eslint-disable-next-line no-alert
+  alert('Menu button has been clicked');
 };
 
 const handleSettingsClick = () => {
-  alert('Settings button has been clicked')
+// eslint-disable-next-line no-alert
+  alert('Settings button has been clicked');
 };
 
 const handleChatClick = () => {
-  alert('Chat button has been clicked')
+// eslint-disable-next-line no-alert
+  alert('Chat button has been clicked');
 };
 
 const handleTwitterClick = () => {
-  alert('Twitter button has been clicked')
+// eslint-disable-next-line no-alert
+  alert('Twitter button has been clicked');
 };
 
 const handleBacktotopClick = () => {
-  alert('Back to top button has been clicked')
+// eslint-disable-next-line no-alert
+  alert('Back to top button has been clicked');
 };
 
 const ipsum = 'This example provides content containers with a fit (start and/or end region) and fill (middle region). Arrange Props have one required prop which is fill to the content to display in the body of the fill.';
 const simpleText = <span>{ipsum}</span>;
 const textWithBlueBorder = <span className={cx('outlined-placeholder')}>{ipsum}</span>;
 const clinicalData = (
-  <span>Clinical data is a staple resource for most health and medical research. Clinical data is either collected during the course of ongoing patient care or as part of a formal clinical trial program. For more information visit <a href="#clinical-information">Clinical information</a></span>
+  <span>
+    Clinical data is a staple resource for most health and medical research. Clinical data is either collected during the course of ongoing patient care or as part of a formal clinical trial program. For more information visit
+    <a href="#clinical-information">Clinical information</a>
+  </span>
 );
 
 const healthSolutionsData = (
-  <span>Trusted clinical technology and evidence-based solutions that drive effective decision-making and outcomes across healthcare. Specialized in clinical effectiveness, research and safety. <button type="button" className={cx('space-around')} onClick={handleHealthSolutionsClick}>View all health solutions</button></span>
+  <span>
+    Trusted clinical technology and evidence-based solutions that drive effective decision-making and outcomes across healthcare. Specialized in clinical effectiveness, research and safety.
+    <button type="button" className={cx('space-around')} onClick={handleHealthSolutionsClick}>View all health solutions</button>
+  </span>
 );
 
 const consentFormData = (
   <>
     <span>A telemedicine consent form is used to confirm that a patient agrees to telemedicine services, which are medical services done remotely over the phone or computer.</span>
     <span className={cx('space-around', 'radio-buttons')}>
-      <label for="yes">
+      <label htmlFor="yes">
         <input type="radio" id="yes" name="inline-example" value="yes" />
         <span className={cx('label')}>Yes</span>
       </label>
-      <label for="no">
+      <label htmlFor="no">
         <input type="radio" id="no" name="inline-example" value="no" />
         <span className={cx('label')}>No</span>
       </label>
@@ -80,53 +93,65 @@ const alignExampleDivBlue = (
   <span className={cx('highlighted-placeholder')} />
 );
 
-const homeButton = (<Button
-  className={cx(['arrange-button'])}
-  isIconOnly
-  icon={<span className={cx(['header-icon', 'home'])} />}
-  aria-label="home"
-  onClick={handleHomeClick}
-/>);
+const homeButton = (
+  <Button
+    className={cx(['arrange-button'])}
+    isIconOnly
+    icon={<span className={cx(['header-icon', 'home'])} />}
+    aria-label="home"
+    onClick={handleHomeClick}
+  />
+);
 
-const menuButton = (<Button
-  className={cx(['arrange-button'])}
-  isIconOnly
-  icon={<span className={cx(['header-icon', 'menu'])} />}
-  aria-label="menu"
-  onClick={handleMenuClick}
-/>);
+const menuButton = (
+  <Button
+    className={cx(['arrange-button'])}
+    isIconOnly
+    icon={<span className={cx(['header-icon', 'menu'])} />}
+    aria-label="menu"
+    onClick={handleMenuClick}
+  />
+);
 
-const chatButton = (<Button
-  className={cx(['arrange-button'])}
-  isIconOnly
-  icon={<span className={cx(['header-icon', 'chat'])} />}
-  aria-label="chat"
-  onClick={handleChatClick}
-/>);
+const chatButton = (
+  <Button
+    className={cx(['arrange-button'])}
+    isIconOnly
+    icon={<span className={cx(['header-icon', 'chat'])} />}
+    aria-label="chat"
+    onClick={handleChatClick}
+  />
+);
 
-const settingsButton = (<Button
-  className={cx(['arrange-button'])}
-  isIconOnly
-  icon={<span className={cx(['header-icon', 'settings'])} />}
-  aria-label="settings"
-  onClick={handleSettingsClick}
-/>);
+const settingsButton = (
+  <Button
+    className={cx(['arrange-button'])}
+    isIconOnly
+    icon={<span className={cx(['header-icon', 'settings'])} />}
+    aria-label="settings"
+    onClick={handleSettingsClick}
+  />
+);
 
-const twitterButton = (<Button
-  className={cx(['arrange-button'])}
-  isIconOnly
-  icon={<span className={cx(['header-icon', 'twitter'])} />}
-  aria-label="twitter"
-  onClick={handleTwitterClick}
-/>);
+const twitterButton = (
+  <Button
+    className={cx(['arrange-button'])}
+    isIconOnly
+    icon={<span className={cx(['header-icon', 'twitter'])} />}
+    aria-label="twitter"
+    onClick={handleTwitterClick}
+  />
+);
 
-const backtotopButton = (<Button
-  className={cx(['arrange-button'])}
-  isIconOnly
-  icon={<span className={cx(['header-icon', 'backtotop'])} />}
-  aria-label="backtotop"
-  onClick={handleBacktotopClick}
-/>);
+const backtotopButton = (
+  <Button
+    className={cx(['arrange-button'])}
+    isIconOnly
+    icon={<span className={cx(['header-icon', 'backtotop'])} />}
+    aria-label="backtotop"
+    onClick={handleBacktotopClick}
+  />
+);
 
 export {
   alignExampleDiv,
