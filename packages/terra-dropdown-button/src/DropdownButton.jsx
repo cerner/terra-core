@@ -47,6 +47,9 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  inputAttrs: PropTypes.object,
+
 };
 
 const defaultProps = {
@@ -54,6 +57,7 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   variant: 'neutral',
+  inputAttrs: {},
 };
 
 class DropdownButton extends React.Component {
@@ -147,6 +151,7 @@ class DropdownButton extends React.Component {
       label,
       intl,
       variant,
+      inputAttrs,
       ...customProps
     } = this.props;
 
@@ -168,6 +173,8 @@ class DropdownButton extends React.Component {
       { 'ignore-react-onclickoutside': isOpen },
       theme.className,
     );
+
+    const buttonAriaLabel = (inputAttrs && inputAttrs['aria-label']) ? inputAttrs['aria-label'] : '';
 
     return (
       <DropdownButtonBase
@@ -193,7 +200,7 @@ class DropdownButton extends React.Component {
           aria-disabled={isDisabled}
           ref={this.setButtonNode}
           aria-expanded={isOpen}
-          aria-label={selectText ? `${selectText}, ${selectedLabel}` : ''}
+          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${label}, ${buttonAriaLabel}` : `${label}, ${buttonAriaLabel}`}
           onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>

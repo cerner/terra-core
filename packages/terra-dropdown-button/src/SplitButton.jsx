@@ -60,6 +60,9 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
+  // eslint-disable-next-line react/forbid-prop-types
+  inputAttrs: PropTypes.object,
+
 };
 
 const defaultProps = {
@@ -67,6 +70,7 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   variant: 'neutral',
+  inputAttrs: {},
 };
 
 class SplitButton extends React.Component {
@@ -191,6 +195,7 @@ class SplitButton extends React.Component {
       intl,
       requestClose,
       metaData,
+      inputAttrs,
       ...customProps
     } = this.props;
 
@@ -225,6 +230,8 @@ class SplitButton extends React.Component {
       { 'ignore-react-onclickoutside': isOpen },
       theme.className,
     );
+
+    const buttonAriaLabel = (inputAttrs && inputAttrs['aria-label']) ? inputAttrs['aria-label'] : '';
 
     return (
       <DropdownButtonBase
@@ -262,7 +269,7 @@ class SplitButton extends React.Component {
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"
-          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${caretLabel}` : caretLabel}
+          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${caretLabel}, ${buttonAriaLabel}` : `${caretLabel}, ${buttonAriaLabel}`}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           ref={this.setButtonNode}

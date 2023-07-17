@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated an example for `terra-dropdown-button`.
+
 ## 1.31.0 - (July 13, 2023)
 
 * Added
