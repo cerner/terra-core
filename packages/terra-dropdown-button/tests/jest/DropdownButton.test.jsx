@@ -98,7 +98,9 @@ describe('Dropdown Button', () => {
   it('should set the aria-label property from ./translations', () => {
     const wrapper = shallowWithIntl(
       <IntlProvider locale="en" messages={translationsFile}>
-        <DropdownButton label="Primary Option" id="dropDown" />
+        <DropdownButton label="Primary Option" id="dropDown">
+          <Item label="PDF" onSelect={() => {}} />
+        </DropdownButton>
       </IntlProvider>,
     ).dive().dive();
     wrapper.setState({ selectText: 'PDF' });

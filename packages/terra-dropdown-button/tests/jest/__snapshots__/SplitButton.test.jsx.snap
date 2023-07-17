@@ -87,7 +87,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             onSelect={[Function]}
           />
         }
-        openedViaKeyboard={false}
         refCallback={[Function]}
         requestClose={[Function]}
       >
@@ -114,7 +113,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             disabled={false}
             onBlur={[Function]}
             onClick={[Function]}
-            onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             type="button"
@@ -127,7 +125,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             buttonRef={[Function]}
             getSelectedOptionText={[Function]}
             isOpen={false}
-            openedViaKeyboard={false}
             refCallback={[Function]}
             requestClose={[Function]}
             targetRef={[Function]}
@@ -185,7 +182,6 @@ exports[`Dropdown Button should render a block split type 1`] = `
       onSelect={[Function]}
     />
   }
-  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -209,7 +205,6 @@ exports[`Dropdown Button should render a block split type 1`] = `
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     type="button"
@@ -235,7 +230,6 @@ exports[`Dropdown Button should render a compact split type 1`] = `
       onSelect={[Function]}
     />
   }
-  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -259,7 +253,6 @@ exports[`Dropdown Button should render a compact split type 1`] = `
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     type="button"
@@ -285,7 +278,6 @@ exports[`Dropdown Button should render a default split type 1`] = `
       onSelect={[Function]}
     />
   }
-  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -309,7 +301,6 @@ exports[`Dropdown Button should render a default split type 1`] = `
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     type="button"
@@ -336,7 +327,6 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
       onSelect={[Function]}
     />
   }
-  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -360,7 +350,6 @@ exports[`Dropdown Button should render a disabled split type 1`] = `
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     type="button"
@@ -386,7 +375,6 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
       onSelect={[Function]}
     />
   }
-  openedViaKeyboard={false}
   other-custom-attribute="purple"
   refCallback={[Function]}
   requestClose={[Function]}
@@ -412,7 +400,6 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     type="button"
@@ -448,7 +435,6 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
       />,
     ]
   }
-  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -472,7 +458,6 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     type="button"
@@ -498,7 +483,6 @@ exports[`Dropdown Button should render an open split type 1`] = `
       onSelect={[Function]}
     />
   }
-  openedViaKeyboard={false}
   refCallback={[Function]}
   requestClose={[Function]}
 >
@@ -522,7 +506,6 @@ exports[`Dropdown Button should render an open split type 1`] = `
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     type="button"

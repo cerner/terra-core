@@ -85,7 +85,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             onSelect={[Function]}
           />
         }
-        openedViaKeyboard={false}
         refCallback={[Function]}
         requestClose={[Function]}
       >
@@ -95,7 +94,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
           <button
             aria-disabled={false}
             aria-expanded={false}
-            aria-haspopup="menu"
             aria-label=""
             className="dropdown-button neutral orion-fusion-theme"
             disabled={false}
@@ -118,7 +116,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             buttonRef={[Function]}
             getSelectedOptionText={[Function]}
             isOpen={false}
-            openedViaKeyboard={false}
             refCallback={[Function]}
             requestClose={[Function]}
             targetRef={[Function]}

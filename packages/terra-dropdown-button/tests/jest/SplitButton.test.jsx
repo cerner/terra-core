@@ -90,7 +90,9 @@ describe('Dropdown Button', () => {
   it('should set the aria-label property from ./translations', () => {
     const wrapper = shallowWithIntl(
       <IntlProvider locale="en" messages={translationsFile}>
-        <SplitButton label="1st Option" id="splitDropDown" />
+        <SplitButton label="1st Option" id="splitDropDown">
+          <Item label="PDF" onSelect={() => {}} />
+        </SplitButton>
       </IntlProvider>,
     ).dive().dive();
     wrapper.setState({ selectText: 'PDF' });
