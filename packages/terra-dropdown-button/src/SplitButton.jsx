@@ -60,8 +60,6 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
-  // eslint-disable-next-line react/forbid-prop-types
-  inputAttrs: PropTypes.object,
 
 };
 
@@ -70,7 +68,6 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   variant: 'neutral',
-  inputAttrs: {},
 };
 
 class SplitButton extends React.Component {
@@ -195,7 +192,6 @@ class SplitButton extends React.Component {
       intl,
       requestClose,
       metaData,
-      inputAttrs,
       ...customProps
     } = this.props;
 
@@ -231,8 +227,11 @@ class SplitButton extends React.Component {
       theme.className,
     );
 
-    const buttonAriaLabel = (inputAttrs && inputAttrs['aria-label']) ? inputAttrs['aria-label'] : '';
-
+    let buttonAriaLabel;
+    if (customProps && customProps['aria-label']) {
+      buttonAriaLabel = customProps['aria-label'];
+      delete customProps['aria-label'];
+    }
     return (
       <DropdownButtonBase
         {...customProps}

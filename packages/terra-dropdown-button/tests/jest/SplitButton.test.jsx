@@ -88,18 +88,15 @@ describe('Dropdown Button', () => {
   });
 
   it('should set the aria-label property from ./translations', () => {
-    const inputAttrs = {
-      'aria-label': 'Button Aria Label',
-    };
     const wrapper = shallowWithIntl(
       <IntlProvider locale="en" messages={translationsFile}>
-        <SplitButton label="1st Option" inputAttrs={inputAttrs} id="splitDropDown">
+        <SplitButton label="1st Option" aria-label="Button Aria Label" id="splitDropDown">
           <Item label="PDF" onSelect={() => {}} />
         </SplitButton>
       </IntlProvider>,
     ).dive().dive();
     wrapper.setState({ selectText: 'PDF' });
     const splitButtonAriaLabelValue = wrapper.find('#splitDropDown > button + button').prop('aria-label');
-    expect(splitButtonAriaLabelValue).toEqual(`PDF, ${translationsFile['Terra.dropdownButton.selected']}, ${translationsFile['Terra.dropdownButton.moreOptions']}, ${inputAttrs['aria-label']}`);
+    expect(splitButtonAriaLabelValue).toEqual(`PDF, ${translationsFile['Terra.dropdownButton.selected']}, ${translationsFile['Terra.dropdownButton.moreOptions']}, Button Aria Label`);
   });
 });

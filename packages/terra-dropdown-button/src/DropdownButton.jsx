@@ -47,8 +47,6 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  inputAttrs: PropTypes.object,
 
 };
 
@@ -57,7 +55,6 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   variant: 'neutral',
-  inputAttrs: {},
 };
 
 class DropdownButton extends React.Component {
@@ -151,7 +148,6 @@ class DropdownButton extends React.Component {
       label,
       intl,
       variant,
-      inputAttrs,
       ...customProps
     } = this.props;
 
@@ -174,7 +170,11 @@ class DropdownButton extends React.Component {
       theme.className,
     );
 
-    const buttonAriaLabel = (inputAttrs && inputAttrs['aria-label']) ? inputAttrs['aria-label'] : '';
+    let buttonAriaLabel;
+    if (customProps && customProps['aria-label']) {
+      buttonAriaLabel = customProps['aria-label'];
+      delete customProps['aria-label'];
+    }
 
     return (
       <DropdownButtonBase
