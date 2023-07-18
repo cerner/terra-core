@@ -2,7 +2,7 @@
 
 ## Unreleased
 * Added
-  * Added support for `aria-invalid` through the `IsInvalid` prop to mark what field is invalid for assistive technology.
+  * Added support for `aria-invalid` through the `isInvalid` prop to mark what field is invalid for assistive technology.
 
 ## 5.24.0 - (April 27, 2023)
 
