@@ -101,21 +101,22 @@ const ShowHide = (props) => {
    * Upon showing hidden content, set activeElement to focusRef element if provided, othervise set it to content container.
    */
   useEffect(() => {
-    if (isOpen) {
-      if (focusRef?.current) {
-        if (checkIfAddTabindex(focusRef?.current)) {
-          // not focusable element with no tabindex set, safe to temporary add tabindex that will later be removed on blur
-          focusRef?.current.setAttribute('tabIndex', '-1');
-          isModified.current.tabIndex = true;
-          if (!focusRef?.current.hasAttribute('role')) {
-            focusRef?.current.setAttribute('role', 'group');
-            isModified.current.role = true;
-          }
+    if (!isOpen) {
+      return;
+    }
+    if (focusRef?.current) {
+      if (checkIfAddTabindex(focusRef?.current)) {
+        // not focusable element with no tabindex set, safe to temporary add tabindex that will later be removed on blur
+        focusRef?.current.setAttribute('tabIndex', '-1');
+        isModified.current.tabIndex = true;
+        if (!focusRef?.current.hasAttribute('role')) {
+          focusRef?.current.setAttribute('role', 'group');
+          isModified.current.role = true;
         }
-        focusRef?.current.focus();
-      } else if (contentRef?.current) {
-        setContainerIsActive(true);
       }
+      focusRef?.current.focus();
+    } else if (contentRef?.current) {
+      setContainerIsActive(true);
     }
   }, [isOpen, focusRef, contentRef]);
 
