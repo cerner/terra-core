@@ -2,6 +2,33 @@
 
 exports[`Dropdown Button Base correctly applies the theme context className 1`] = `
 <ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
   theme={
     Object {
       "className": "orion-fusion-theme",
@@ -19,7 +46,6 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
         onSelect={[Function]}
       />
     }
-    openedViaKeyboard={false}
     requestClose={[Function]}
   >
     <div
@@ -30,7 +56,6 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
       </div>
       <Dropdown
         isOpen={true}
-        openedViaKeyboard={false}
         requestClose={[Function]}
         targetRef={[Function]}
       >
@@ -79,16 +104,12 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                       role="menu"
                     >
                       <li
+                        class="item orion-fusion-theme"
                         data-terra-dropdown-list-item="true"
                         role="menuitem"
                         tabindex="0"
                       >
-                        <div
-                          class="item orion-fusion-theme"
-                          role="none"
-                        >
-                          1st option
-                        </div>
+                        1st option
                       </li>
                     </ul>
                   </div>
@@ -136,51 +157,79 @@ exports[`Dropdown Button Base correctly applies the theme context className 1`] 
                       focusTrapOptions={
                         Object {
                           "clickOutsideDeactivates": true,
-                          "initialFocus": undefined,
                           "returnFocusOnDeactivate": true,
                         }
                       }
                       paused={false}
                     >
-                      <DropdownList
+                      <InjectIntl(DropdownList)
                         requestClose={[Function]}
                       >
-                        <ul
-                          className="dropdown-list orion-fusion-theme"
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyUp={[Function]}
-                          role="menu"
-                          style={
+                        <DropdownList
+                          intl={
                             Object {
-                              "width": undefined,
+                              "defaultFormats": Object {},
+                              "defaultLocale": "en",
+                              "formatDate": [Function],
+                              "formatHTMLMessage": [Function],
+                              "formatMessage": [Function],
+                              "formatNumber": [Function],
+                              "formatPlural": [Function],
+                              "formatRelative": [Function],
+                              "formatTime": [Function],
+                              "formats": Object {},
+                              "formatters": Object {
+                                "getDateTimeFormat": [Function],
+                                "getMessageFormat": [Function],
+                                "getNumberFormat": [Function],
+                                "getPluralFormat": [Function],
+                                "getRelativeFormat": [Function],
+                              },
+                              "locale": "en",
+                              "messages": null,
+                              "now": [Function],
+                              "onError": [Function],
+                              "textComponent": "span",
+                              "timeZone": null,
                             }
                           }
+                          requestClose={[Function]}
                         >
-                          <Item
-                            data-terra-dropdown-list-item={true}
-                            isActive={false}
-                            key=".0"
-                            label="1st option"
-                            onSelect={[Function]}
-                            requestClose={[Function]}
+                          <ul
+                            className="dropdown-list orion-fusion-theme"
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyUp={[Function]}
+                            role="menu"
+                            style={
+                              Object {
+                                "width": undefined,
+                              }
+                            }
                           >
-                            <li
+                            <Item
+                              aria-label={null}
                               data-terra-dropdown-list-item={true}
-                              onClick={[Function]}
-                              role="menuitem"
-                              tabIndex="0"
+                              isActive={false}
+                              key=".0"
+                              label="1st option"
+                              onSelect={[Function]}
+                              requestClose={[Function]}
                             >
-                              <div
+                              <li
+                                aria-label={null}
                                 className="item orion-fusion-theme"
-                                role="none"
+                                data-terra-dropdown-list-item={true}
+                                onClick={[Function]}
+                                role="menuitem"
+                                tabIndex="0"
                               >
                                 1st option
-                              </div>
-                            </li>
-                          </Item>
-                        </ul>
-                      </DropdownList>
+                              </li>
+                            </Item>
+                          </ul>
+                        </DropdownList>
+                      </InjectIntl(DropdownList)>
                     </FocusTrap>
                   </div>
                 </HookshotContent>
@@ -203,7 +252,6 @@ exports[`Dropdown Button Base renders a block DropdownButtonBase 1`] = `
   </div>
   <Dropdown
     isOpen={false}
-    openedViaKeyboard={false}
     requestClose={[Function]}
     targetRef={[Function]}
   >
@@ -224,7 +272,6 @@ exports[`Dropdown Button Base renders a default DropdownButtonBase 1`] = `
   </div>
   <Dropdown
     isOpen={false}
-    openedViaKeyboard={false}
     requestClose={[Function]}
     targetRef={[Function]}
   >
@@ -245,7 +292,6 @@ exports[`Dropdown Button Base renders a disabled DropdownButtonBase 1`] = `
   </div>
   <Dropdown
     isOpen={false}
-    openedViaKeyboard={false}
     requestClose={[Function]}
     targetRef={[Function]}
   >
@@ -266,7 +312,6 @@ exports[`Dropdown Button Base renders an open DropdownButtonBase 1`] = `
   </div>
   <Dropdown
     isOpen={true}
-    openedViaKeyboard={false}
     requestClose={[Function]}
     targetRef={[Function]}
   >

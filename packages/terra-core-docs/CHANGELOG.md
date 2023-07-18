@@ -3,6 +3,11 @@
 ## Unreleased
 
 * Added
+  * Added documentation updates for `terra-form-input`.
+
+## 1.31.0 - (July 13, 2023)
+
+* Added
   * Added a test case for click event when setFocusOnContainer is disabled
   * Added email format instruction text for `terra-form-field`.
 
