@@ -77,6 +77,7 @@
     --terra-section-header-accordion-icon-padding-top: 0.38rem;
     --terra-section-header-accordion-icon-height: 0.83593rem;
     --terra-section-header-accordion-icon-width: 0.83593rem;
+    --terra-section-header-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     // accordion icon
     @include terra-inline-svg-var('--terra-section-header-accordion-icon-background', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#b2b5b6" d="M12,0l24,24L12,48V0z"/></svg>');

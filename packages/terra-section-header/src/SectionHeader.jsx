@@ -153,21 +153,21 @@ class SectionHeader extends React.Component {
     /* eslint-disable jsx-a11y/click-events-have-key-events */
     /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-    const elementAttributes = (onClick && accordionIcon) ? {
+    const buttonAttributes = (onClick && accordionIcon) ? {
       type: 'button', tabIndex: '-1', 'aria-expanded': isOpen, 'aria-label': headerText,
-    } : { tabIndex: '-1' };
-    const ArrangeWrapperTag = onClick && accordionIcon ? 'button' : 'span';
-    const elementClassNames = onClick && accordionIcon ? cx('arrange-wrapper toggle-button') : cx('arrange-wrapper');
+    } : undefined;
+    const ArrangeWrapper = onClick && accordionIcon ? 'button' : 'span';
+    const buttonClassName = onClick && accordionIcon ? cx('toggle-button') : undefined;
 
     return (
       <Element {...attributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
-        <ArrangeWrapperTag {...elementAttributes} className={elementClassNames}>
+        <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper', buttonClassName)} tabIndex="-1">
           <Arrange
             fitStart={onClick && accordionIcon}
             fill={<span aria-hidden={(onClick !== undefined)} className={cx('title', 'title-block')}>{headerText}</span>}
             className={cx('title-arrange')}
           />
-        </ArrangeWrapperTag>
+        </ArrangeWrapper>
       </Element>
     );
 

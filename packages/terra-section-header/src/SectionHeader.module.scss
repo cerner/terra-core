@@ -166,6 +166,11 @@
 .fit-block {
   .icon-wrapper {
     display: inline-flex;
-    font-size: 8px;
+  }
+}
+
+.fill-block {
+  .title-block {
+    font-family: var(--terra-section-header-font-family, 'Helvetica Neue', Helvetica, Arial, sans-serif);
   }
 }
