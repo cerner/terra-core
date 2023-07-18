@@ -10,7 +10,7 @@ const Example = () => {
         primaryOptionLabel="Reply"
         onSelect={() => setMessage('Reply clicked')}
         inputAttrs={{
-          'aria-label': 'default',
+          'aria-label': 'default split',
         }}
       >
         <Item label="Reply All" onSelect={() => setMessage('Reply All clicked')} />
