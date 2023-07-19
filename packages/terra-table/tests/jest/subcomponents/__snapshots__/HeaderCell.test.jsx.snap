@@ -12,6 +12,10 @@ exports[`HeaderCell should render a HeaderCell 1`] = `
       className="cell-content"
       key="content"
     />
+    <VisuallyHiddenText
+      aria-live="polite"
+      text=""
+    />
   </div>
 </div>
 `;
@@ -30,6 +34,10 @@ exports[`HeaderCell should render a HeaderCell with child content 1`] = `
     >
       test text
     </div>
+    <VisuallyHiddenText
+      aria-live="polite"
+      text=""
+    />
   </div>
 </div>
 `;
@@ -45,6 +53,10 @@ exports[`HeaderCell should render a HeaderCell with child content and remove inn
   >
     test text
   </div>
+  <VisuallyHiddenText
+    aria-live="polite"
+    text=""
+  />
 </div>
 `;
 
@@ -60,6 +72,10 @@ exports[`HeaderCell should render a HeaderCell with sortActive 1`] = `
     <div
       className="cell-content"
       key="content"
+    />
+    <VisuallyHiddenText
+      aria-live="polite"
+      text=""
     />
     <div
       aria-hidden="true"
@@ -82,6 +98,10 @@ exports[`HeaderCell should render a HeaderCell with sortDesc 1`] = `
       className="cell-content"
       key="content"
     />
+    <VisuallyHiddenText
+      aria-live="polite"
+      text=""
+    />
   </div>
 </div>
 `;
@@ -98,6 +118,10 @@ exports[`HeaderCell should render a HeaderCell with sortDesc and sortActive 1`] 
     <div
       className="cell-content"
       key="content"
+    />
+    <VisuallyHiddenText
+      aria-live="polite"
+      text=""
     />
     <div
       aria-hidden="true"
@@ -116,6 +140,10 @@ exports[`HeaderCell should render a HeaderCell with width inner container remove
   <div
     className="cell-content"
     key="content"
+  />
+  <VisuallyHiddenText
+    aria-live="polite"
+    text=""
   />
 </div>
 `;
@@ -138,6 +166,10 @@ exports[`HeaderCell should render a HeaderCell with width set 1`] = `
       className="cell-content"
       key="content"
     />
+    <VisuallyHiddenText
+      aria-live="polite"
+      text=""
+    />
   </div>
 </div>
 `;
@@ -153,6 +185,10 @@ exports[`HeaderCell should render with callback functions 1`] = `
     <div
       className="cell-content"
       key="content"
+    />
+    <VisuallyHiddenText
+      aria-live="polite"
+      text=""
     />
   </div>
 </div>
@@ -176,6 +212,10 @@ exports[`HeaderCell should render with callback functions 2`] = `
     <div
       className="cell-content"
       key="content"
+    />
+    <VisuallyHiddenText
+      aria-live="polite"
+      text=""
     />
     <div
       aria-hidden="true"

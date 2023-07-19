@@ -110,7 +110,9 @@ exports[`Table should render a Table with check style icon and row style toggle 
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
+      onKeyDown={[Function]}
       removeInner={false}
+      sortingLabel=""
     >
       content
     </HeaderCell>
@@ -174,7 +176,9 @@ exports[`Table should render a Table with check style toggle 1`] = `
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
+      onKeyDown={[Function]}
       removeInner={false}
+      sortingLabel=""
     >
       content
     </HeaderCell>
@@ -238,7 +242,9 @@ exports[`Table should render a Table with check style toggle and row style discl
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
+      onKeyDown={[Function]}
       removeInner={false}
+      sortingLabel=""
     >
       content
     </HeaderCell>
@@ -406,7 +412,9 @@ exports[`Table should render a Table with header 1`] = `
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
+      onKeyDown={[Function]}
       removeInner={false}
+      sortingLabel=""
     >
       content
     </HeaderCell>
@@ -433,7 +441,9 @@ exports[`Table should render a Table with header with chevrons 1`] = `
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
+      onKeyDown={[Function]}
       removeInner={false}
+      sortingLabel=""
     >
       content
     </HeaderCell>
@@ -495,7 +505,9 @@ exports[`Table should render a Table with inners remove despite padding 1`] = `
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
+      onKeyDown={[Function]}
       removeInner={true}
+      sortingLabel=""
     >
       content
     </HeaderCell>
@@ -631,7 +643,9 @@ exports[`Table should render a Table with row style toggle 1`] = `
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
+      onKeyDown={[Function]}
       removeInner={false}
+      sortingLabel=""
     >
       content
     </HeaderCell>
@@ -855,7 +869,9 @@ exports[`Table should render a Table with widths 1`] = `
       isSortActive={false}
       isSortDesc={false}
       key="cell-key"
+      onKeyDown={[Function]}
       removeInner={false}
+      sortingLabel=""
       width={
         Object {
           "static": Object {
