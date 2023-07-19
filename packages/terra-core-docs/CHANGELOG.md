@@ -5,6 +5,9 @@
 * Updated
   * Updated an example for `terra-dropdown-button`.
 
+* Added
+  * Added documentation updates for `terra-form-input`.
+
 ## 1.31.0 - (July 13, 2023)
 
 * Added
