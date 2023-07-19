@@ -60,6 +60,11 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
+  /**
+   * Sets the custom properties for button.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  buttonAttrs: PropTypes.object,
 };
 
 const defaultProps = {
@@ -67,6 +72,7 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   variant: 'neutral',
+  buttonAttrs: {},
 };
 
 class SplitButton extends React.Component {
@@ -191,6 +197,7 @@ class SplitButton extends React.Component {
       intl,
       requestClose,
       metaData,
+      buttonAttrs,
       ...customProps
     } = this.props;
 
@@ -226,11 +233,13 @@ class SplitButton extends React.Component {
       theme.className,
     );
 
-    let buttonAriaLabel;
-    if (customProps && customProps['aria-label']) {
-      buttonAriaLabel = customProps['aria-label'];
-      delete customProps['aria-label'];
+    let buttonAriaLabel = '';
+    const modifiedButtonAttrs = { ...buttonAttrs };
+    if (modifiedButtonAttrs && modifiedButtonAttrs['aria-label']) {
+      buttonAriaLabel = modifiedButtonAttrs['aria-label'];
+      delete modifiedButtonAttrs['aria-label'];
     }
+
     return (
       <DropdownButtonBase
         {...customProps}
@@ -257,6 +266,7 @@ class SplitButton extends React.Component {
           {primaryOptionLabel}
         </button>
         <button
+          {...modifiedButtonAttrs}
           type="button"
           onClick={this.handleDropdownButtonClick}
           onKeyDown={this.handleCaretKeyDown}
@@ -267,7 +277,7 @@ class SplitButton extends React.Component {
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"
-          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${caretLabel}, ${buttonAriaLabel ? `${buttonAriaLabel}` : ''}` : `${caretLabel}, ${buttonAriaLabel ? `${buttonAriaLabel}` : ''}`}
+          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${caretLabel} ${buttonAriaLabel ? `,${buttonAriaLabel}` : ''}` : `${caretLabel} ${buttonAriaLabel ? `,${buttonAriaLabel}` : ''}`}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           ref={this.setButtonNode}

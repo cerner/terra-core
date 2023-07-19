@@ -9,7 +9,9 @@ const Example = () => {
       <SplitButton
         primaryOptionLabel="Reply"
         onSelect={() => setMessage('Reply clicked')}
-        aria-label="default split"
+        buttonAttrs={{
+          'aria-label': 'default split',
+        }}
       >
         <Item label="Reply All" onSelect={() => setMessage('Reply All clicked')} />
         <Item label="Forward" onSelect={() => setMessage('Forward clicked')} />

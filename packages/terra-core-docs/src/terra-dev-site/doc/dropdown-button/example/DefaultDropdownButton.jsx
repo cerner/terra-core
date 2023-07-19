@@ -8,7 +8,9 @@ const Example = () => {
     <React.Fragment>
       <DropdownButton
         label="Export"
-        aria-label="default dropdown"
+        buttonAttrs={{
+          'aria-label': 'default dropdown',
+        }}
       >
         <Item label="Export as PDF" onSelect={() => setMessage('Export as PDF clicked')} />
         <Item label="Export as Plain Text" onSelect={() => setMessage('Export as Plain Text clicked')} />
