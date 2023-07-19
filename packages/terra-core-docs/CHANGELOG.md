@@ -5,6 +5,9 @@
 * Changed
   * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
+* Added
+  * Added documentation updates for `terra-form-input`.
+
 ## 1.31.0 - (July 13, 2023)
 
 * Added
