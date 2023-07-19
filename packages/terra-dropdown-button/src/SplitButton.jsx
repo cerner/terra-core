@@ -60,7 +60,6 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
-
 };
 
 const defaultProps = {
@@ -268,7 +267,7 @@ class SplitButton extends React.Component {
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"
-          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${caretLabel}, ${buttonAriaLabel}` : `${caretLabel}, ${buttonAriaLabel}`}
+          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${caretLabel}, ${buttonAriaLabel ? `${buttonAriaLabel}` : ''}` : `${caretLabel}, ${buttonAriaLabel ? `${buttonAriaLabel}` : ''}`}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           ref={this.setButtonNode}

@@ -47,7 +47,6 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
-
 };
 
 const defaultProps = {
@@ -200,7 +199,7 @@ class DropdownButton extends React.Component {
           aria-disabled={isDisabled}
           ref={this.setButtonNode}
           aria-expanded={isOpen}
-          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${label}, ${buttonAriaLabel}` : `${label}, ${buttonAriaLabel}`}
+          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${label}, ${buttonAriaLabel ? `${buttonAriaLabel}` : ''}` : `${label}${buttonAriaLabel ? `${buttonAriaLabel}` : ''}`}
           onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
