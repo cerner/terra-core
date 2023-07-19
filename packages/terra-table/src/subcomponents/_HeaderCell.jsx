@@ -78,7 +78,7 @@ const defaultProps = {
   removeInner: false,
   isSortDesc: false,
   isSortActive: false,
-  sortingLabel: ''
+  sortingLabel: '',
 };
 
 const HeaderCell = ({
@@ -133,7 +133,7 @@ const HeaderCell = ({
     <div className={cx('cell-content')} key="content">
       {children}
     </div>,
-    <VisuallyHiddenText text={sortingLabel} aria-live='polite'/>,
+    <VisuallyHiddenText text={sortingLabel} aria-live="polite" />,
     sortIndicator,
   ];
 

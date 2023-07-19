@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -324,45 +324,44 @@ const createSections = (tableData, headerIndex) => {
   return { sections, sectionIndex: rowIndex };
 };
 
-const createHeader = (tableData) => {
+const CreateHeader = (tableData) => {
   if (!tableData.headerData || !tableData.headerData.cells) {
     return { headerIndex: 0, header: undefined };
   }
 
-  const [ariaText,setAriaText] = React.useState('')
-  const data = tableData.headerData.cells
-  let sortBy = ''
-  let sortOrder = ''
-  let ariatext = ''
-  let allHeaders = data.map(item => item.children);
-  const [keyPressed,setKeyPressed] = React.useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [ariaText, setAriaText] = useState('');
+  const data = tableData.headerData.cells;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [keyPressed, setKeyPressed] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [sortBy, setSortBy] = useState('');
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [sortOrder, setSortOrder] = useState('');
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    const isSortAvailable = data.find(item => item.isSortActive !== undefined)
-    console.log(isSortAvailable)
-    if(isSortAvailable){
-      const item = data.find(item => item.isSortActive === true);
-      sortBy = item.children
-      sortOrder = item.isSortDesc ? 'descending' : 'ascending'
-      if(keyPressed){
-        setAriaText(`${allHeaders} is sorted by ${sortBy},${sortOrder}`)
-      }
-      else {
-        setAriaText('')
+    const isSortAvailable = data.find(item => item.isSortActive !== undefined);
+    if (isSortAvailable) {
+      const item = data.find(i => i.isSortActive === true);
+      setSortBy(item.children);
+      setSortOrder(item.isSortDesc ? 'descending' : 'ascending');
+      if (keyPressed) {
+        setAriaText(`Rows is sorted by ${sortBy},${sortOrder}`);
+      } else {
+        setAriaText('');
       }
     }
-  }, [data]);
-    
+  }, [data, keyPressed, sortBy, sortOrder]);
+
   const handleKeyDown = (event) => {
-    if (event.key === 'Tab') {
-      setAriaText('')
+    if (event.key === 'Tab' || (event.shiftKey && event.keyCode === 9)) {
+      setAriaText('');
     }
     if (event.key === ' ' || event.key === 'Enter') {
-      setKeyPressed(true)
+      setKeyPressed(true);
     }
-  }
-
-  
+  };
 
   return {
     headerIndex: 1,
@@ -397,7 +396,7 @@ const createHeader = (tableData) => {
 };
 
 const unpackTableData = (tableData) => {
-  const { headerIndex, header } = createHeader(tableData);
+  const { headerIndex, header } = CreateHeader(tableData);
   const { sectionIndex, sections } = createSections(tableData, headerIndex);
   return { rowCount: sectionIndex, header, sections };
 };
