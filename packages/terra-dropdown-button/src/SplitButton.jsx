@@ -239,6 +239,8 @@ class SplitButton extends React.Component {
       buttonAriaLabel = modifiedButtonAttrs['aria-label'];
       delete modifiedButtonAttrs['aria-label'];
     }
+    const customLabel = (selectText) ? `${selectText}, ${selectedLabel}, ${caretLabel}` : caretLabel;
+    buttonAriaLabel = `${customLabel}${buttonAriaLabel ? `, ${buttonAriaLabel}` : ''}`;
 
     return (
       <DropdownButtonBase
@@ -277,7 +279,7 @@ class SplitButton extends React.Component {
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"
-          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${caretLabel} ${buttonAriaLabel ? `,${buttonAriaLabel}` : ''}` : `${caretLabel} ${buttonAriaLabel ? `,${buttonAriaLabel}` : ''}`}
+          aria-label={buttonAriaLabel}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           ref={this.setButtonNode}
