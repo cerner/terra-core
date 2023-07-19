@@ -1,10 +1,10 @@
 # Changelog
 
 ## Unreleased
-   
+
 * Added
-   * Updated aria-label for dropdown button.
-   * Added focus styles and screenreader support to announce expand/collapse state and index for dropdown list items.
+  * Updated aria-label for dropdown button.
+  * Added focus styles and screenreader support to announce expand/collapse state and index for dropdown list items.
 
 ## 1.34.0 - (May 9, 2023)
 
