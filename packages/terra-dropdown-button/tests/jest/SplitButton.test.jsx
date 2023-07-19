@@ -100,6 +100,6 @@ describe('Dropdown Button', () => {
     ).dive().dive();
     wrapper.setState({ selectText: 'PDF' });
     const splitButtonAriaLabelValue = wrapper.find('#splitDropDown > button + button').prop('aria-label');
-    expect(splitButtonAriaLabelValue).toEqual(`PDF, ${translationsFile['Terra.dropdownButton.selected']}, ${translationsFile['Terra.dropdownButton.moreOptions']}, ${buttonAttrs['aria-label']}`);
+    expect(splitButtonAriaLabelValue).toEqual(`PDF, ${translationsFile['Terra.dropdownButton.selected']}, ${translationsFile['Terra.dropdownButton.moreOptions']} ,${buttonAttrs['aria-label']}`);
   });
 });
