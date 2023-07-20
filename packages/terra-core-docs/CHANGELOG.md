@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-* Changed
+* Updated
+  * Updated an example for `terra-dropdown-button`.
   * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
 * Added

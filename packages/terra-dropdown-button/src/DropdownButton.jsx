@@ -47,6 +47,11 @@ const propTypes = {
    * The intl object to be injected for translations.
    */
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+  /**
+   * Sets the custom properties for button.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  buttonAttrs: PropTypes.object,
 };
 
 const defaultProps = {
@@ -54,6 +59,7 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   variant: 'neutral',
+  buttonAttrs: {},
 };
 
 class DropdownButton extends React.Component {
@@ -147,6 +153,7 @@ class DropdownButton extends React.Component {
       label,
       intl,
       variant,
+      buttonAttrs,
       ...customProps
     } = this.props;
 
@@ -169,6 +176,15 @@ class DropdownButton extends React.Component {
       theme.className,
     );
 
+    let buttonAriaLabel = '';
+    const modifiedButtonAttrs = { ...buttonAttrs };
+    if (modifiedButtonAttrs && modifiedButtonAttrs['aria-label']) {
+      buttonAriaLabel = modifiedButtonAttrs['aria-label'];
+      delete modifiedButtonAttrs['aria-label'];
+    }
+    const customLabel = (selectText) ? `${selectText}, ${selectedLabel}, ${label}` : label;
+    buttonAriaLabel = `${customLabel}${buttonAriaLabel ? `, ${buttonAriaLabel}` : ''}`;
+
     return (
       <DropdownButtonBase
         {...customProps}
@@ -183,6 +199,7 @@ class DropdownButton extends React.Component {
         getSelectedOptionText={this.getSelectedOptionText}
       >
         <button
+          {...modifiedButtonAttrs}
           type="button"
           className={classnames}
           onClick={this.handleDropdownButtonClick}
@@ -193,7 +210,7 @@ class DropdownButton extends React.Component {
           aria-disabled={isDisabled}
           ref={this.setButtonNode}
           aria-expanded={isOpen}
-          aria-label={selectText ? `${selectText}, ${selectedLabel}` : ''}
+          aria-label={buttonAriaLabel}
           onBlur={this.handleBlur}
         >
           <span className={cx('dropdown-button-text')}>{label}</span>
