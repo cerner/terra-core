@@ -40,6 +40,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
     primaryOptionLabel="Primary Option"
   >
     <SplitButton
+      buttonAttrs={Object {}}
       intl={
         Object {
           "defaultFormats": Object {},

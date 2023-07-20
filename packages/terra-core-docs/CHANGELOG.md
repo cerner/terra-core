@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated an example for `terra-dropdown-button`.
+
 * Added
   * Added documentation updates for `terra-form-input`.
 
