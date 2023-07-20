@@ -21,7 +21,9 @@ class NoFocusRefShowHide extends React.Component {
   render() {
     return (
       <ShowHide preview={<p>{previewText}</p>} isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
+        <span className="text-divider" />
         <p>{fullText}</p>
+        <span className="text-divider" />
       </ShowHide>
     );
   }
