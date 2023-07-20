@@ -56,7 +56,7 @@ In order for the component to be accessible, the `focusRef` to the first hidden 
 </Notice>
 
 #### Accessibility Guidance.
-- For the child component being a single paragraph `<p>`, wrap the portion of the text that is about to be hidden, in `<span>` tag, and pass a `ref` to that element as `focusRef` prop.
+- For the hidden content being a single paragraph `<p>`, wrap the portion of the text that is about to be hidden, in `<span>` tag, and pass a `ref` to that element as `focusRef` prop.
 - For multiple children, pass a `ref` to the first child that is not included in preview portion as `focusRef` prop.
 
 ## Component Features
@@ -69,7 +69,7 @@ In order for the component to be accessible, the `focusRef` to the first hidden 
 * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
 
 ## Examples
-<DefaultShowHide title="Default ShowHide with one paragraph content" description="For a single paragraph content, wrap the hidden portion in a  <span>, then pass a ref to it as focusRef prop:" />
+<DefaultShowHide title="Default ShowHide with one paragraph content" description="For properly focusing on the beginning of the hidden text in a paragraph, split the text in following portions: previw portion for the text that should not be hidden, first sentence of the hidden portion of the text, and the rest of the paragraph text. Pass them as corresponding props to <Paragraph> component. NOTE: you will need to create a React ref in your component, to allow the <Paragraph> component forward ref for the first sentence to <ShowHide>." />
 <CustomButtonTextShowHide title="Custom Button Text ShowHide with multiple children" description="For multiple children, pass a ref to the first child, not included in preview portion, as a focusRef prop:" />
 <InitiallyOpenShowHide title="Initially Open ShowHide" />
 <ButtonAlignCenterShowHide title="Button Align Center ShowHide" />

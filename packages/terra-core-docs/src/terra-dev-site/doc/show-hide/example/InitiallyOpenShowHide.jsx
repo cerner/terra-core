@@ -1,8 +1,9 @@
 import React from 'react';
-import ShowHide from 'terra-show-hide';
+import ShowHide, { Paragraph } from 'terra-show-hide';
 
-const previewText = 'Cerner cardiovascular solutions are embedded within the EHR, allowing for a holistic patient record that includes: diagnostic activities, therapeutic interventions and follow-up regimens. Electrocardiogram (ECG) objects are digitized and accessed within the EHR providing physicians ';
-const text = 'in your cardiology department the ability to receive and present ECG data in mere seconds after it is acquired. This eliminates the necessity for a separate ECG information system.';
+const previewText = 'Cerner cardiovascular solutions are embedded within the EHR, allowing for a holistic patient record that includes: diagnostic activities, therapeutic interventions and follow-up regimens. Electrocardiogram (ECG) objects are digitized and accessed within the EHR providing physicians';
+const focusText = 'in your cardiology department the ability to receive and present ECG data in mere seconds after it is acquired.';
+const text = 'This eliminates the necessity for a separate ECG information system.';
 
 class InitiallyOpenShowHide extends React.Component {
   constructor(props) {
@@ -22,10 +23,7 @@ class InitiallyOpenShowHide extends React.Component {
   render() {
     return (
       <ShowHide focusRef={this.focusRef} preview={<p>{previewText}</p>} isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
-        <p>
-          { previewText }
-          <span ref={this.focusRef}>{ text }</span>
-        </p>
+        <Paragraph ref={this.focusRef} preview={previewText} firstSentence={focusText} text={text} />
       </ShowHide>
     );
   }

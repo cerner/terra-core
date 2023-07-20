@@ -4,7 +4,7 @@ import ShowHide from 'terra-show-hide';
 const sentences = [
   'Key Benefits of Cerner Cardiovascular Solutions',
   'Eliminates silos of information and the resulting inefficiencies with a unified EHR and cardiovascular system',
-  'Creates efficient diagnostic workflows, image management and analysis',
+  'Creates efficient diagnostic workflows, image management and analysis. Enhances clinical, financial and performance outcomes with comprehensive procedural documentation. Promotes cardiac disease management through health maintenance protocols.',
   'Enhances clinical, financial and performance outcomes with comprehensive procedural documentation',
   'Promotes cardiac disease management through health maintenance protocols',
 ];

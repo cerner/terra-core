@@ -1,0 +1,9 @@
+// Themes
+@import './clinical-lowlight-theme/ShowHide.module';
+@import './orion-fusion-theme/ShowHide.module';
+
+:local {
+  .text-divider {
+    visibility: hidden;
+  }
+}
