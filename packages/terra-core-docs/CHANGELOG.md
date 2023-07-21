@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added email validation for `terra-form-field`.
+
 * Updated
   * Updated an example for `terra-dropdown-button`.
 
