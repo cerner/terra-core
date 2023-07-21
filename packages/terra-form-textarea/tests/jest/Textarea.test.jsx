@@ -178,3 +178,38 @@ it('correctly applies the theme context className', () => {
   );
   expect(wrapper).toMatchSnapshot();
 });
+
+it('should render an invalid TextArea component', () => {
+  const textarea = <Textarea ariaLabel="label" isInvalid />;
+  const wrapper = render(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render a TextArea when all the possible props are passed into it', () => {
+  const textarea = (
+    <Textarea
+      name="description"
+      rows={5}
+      required
+      isInvalid
+    />
+  );
+
+  const wrapper = render(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should set the textarea to incomplete when isIncomplete, required and isInvalid is passed into the component', () => {
+  const textarea = <Textarea isIncomplete required isInvalid />;
+  const wrapper = render(textarea);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('correctly applies the theme context className when isInvalid', () => {
+  const wrapper = mount(
+    <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
+      <Textarea ariaLabel="label" isInvalid />
+    </ThemeContextProvider>,
+  );
+  expect(wrapper).toMatchSnapshot();
+});
