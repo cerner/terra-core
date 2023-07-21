@@ -5,6 +5,8 @@
 * Added
   * Added documentation updates for `terra-form-input`.
 
+* Changed
+  * Updated Toggle Button Examples. Now the Interactive elements within the example has dashed border around.
 ## 1.31.0 - (July 13, 2023)
 
 * Added
