@@ -15,6 +15,10 @@
   .outlined-placeholder {
     border: 2px solid #0079be;
     display: block;
+
+    a:focus {
+      outline: 2px dotted #000;
+    }
   }
 
   .placeholder {
@@ -29,9 +33,21 @@
   .space-around {
     display: flex;
     margin: 5px;
+
+    &:focus {
+      outline: 2px dotted #000;
+    }
   }
 
   .radio-buttons {
+
+    // stylelint-disable selector-no-qualifying-type
+    input[type='radio']:focus {
+      outline: 2px dotted #000;
+    }
+
+    // stylelint-enable selector-no-qualifying-type
+
     .label {
       margin-left: 5px;
 

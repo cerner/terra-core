@@ -45,7 +45,7 @@ const simpleText = <span>{ipsum}</span>;
 const textWithBlueBorder = <span className={cx('outlined-placeholder')}>{ipsum}</span>;
 const clinicalData = (
   <span>
-    Clinical data is a staple resource for most health and medical research. Clinical data is either collected during the course of ongoing patient care or as part of a formal clinical trial program. For more information visit
+    Clinical data is a staple resource for most health and medical research. Clinical data is either collected during the course of ongoing patient care or as part of a formal clinical trial program. For more information visit&nbsp;
     <a href="#clinical-information">Clinical information</a>
   </span>
 );
@@ -100,6 +100,7 @@ const homeButton = (
     icon={<span className={cx(['header-icon', 'home'])} />}
     aria-label="home"
     onClick={handleHomeClick}
+    text="Home button"
   />
 );
 
@@ -110,6 +111,7 @@ const menuButton = (
     icon={<span className={cx(['header-icon', 'menu'])} />}
     aria-label="menu"
     onClick={handleMenuClick}
+    text="Menu button"
   />
 );
 
@@ -118,8 +120,9 @@ const chatButton = (
     className={cx(['arrange-button'])}
     isIconOnly
     icon={<span className={cx(['header-icon', 'chat'])} />}
-    aria-label="chat"
+    aria-label="chat with us"
     onClick={handleChatClick}
+    text="Chat with us button"
   />
 );
 
@@ -130,6 +133,7 @@ const settingsButton = (
     icon={<span className={cx(['header-icon', 'settings'])} />}
     aria-label="settings"
     onClick={handleSettingsClick}
+    text="Settings button"
   />
 );
 
@@ -140,6 +144,7 @@ const twitterButton = (
     icon={<span className={cx(['header-icon', 'twitter'])} />}
     aria-label="twitter"
     onClick={handleTwitterClick}
+    text="Twitter button"
   />
 );
 
@@ -150,6 +155,7 @@ const backtotopButton = (
     icon={<span className={cx(['header-icon', 'backtotop'])} />}
     aria-label="backtotop"
     onClick={handleBacktotopClick}
+    text="Back to top button"
   />
 );
 
