@@ -6,5 +6,10 @@
     button {
       margin: 5px;
     }
+
+    :focus {
+      outline: 2px dashed #000;
+      outline-offset: 2px;
+    }
   }
 }

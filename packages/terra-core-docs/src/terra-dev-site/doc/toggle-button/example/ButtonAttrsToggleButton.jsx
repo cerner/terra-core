@@ -1,6 +1,10 @@
 import React from 'react';
 import Button from 'terra-button';
 import ToggleButton from 'terra-toggle-button';
+import classNames from 'classnames/bind';
+import styles from './OpenCloseEventToggleButton.module.scss';
+
+const cx = classNames.bind(styles);
 
 const ButtonAttrsToggleButton = () => (
   <ToggleButton
@@ -9,7 +13,7 @@ const ButtonAttrsToggleButton = () => (
       variant: Button.Opts.Variants.EMPHASIS,
     }}
   >
-    <div>
+    <div className={cx('toggle-button-content')}>
       <h2>Integrated Healthcare Solutions</h2>
       <p>
         Our healthcare system offers state-of-the-art integrated solutions that enhance patient care and improve outcomes. With our advanced electronic health records (EHR) platform and interoperability infrastructure, we aim to revolutionize the way healthcare information is shared and utilized.
