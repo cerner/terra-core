@@ -1,0 +1,14 @@
+{
+  "Terra.pills.label.delete": "Remove {pillLabelName}",
+  "Terra.pills.label.rollupPill": "{pillsNotVisibleCount} more...",
+  "Terra.pills.label.showLess": "Show Less",
+  "Terra.pills.hint.removable": "item is removable via Delete or Back Space key",
+  "Terra.pills.hint.selectable": "for additional information, button is selectable via Space Bar or Enter key",
+  "Terra.pills.hint.selectableAndRemovable": "item is removable via Delete or Back Space key, for additional information button is selectable via Space Bar or Enter key",
+  "Terra.pills.hint.wasRemoved": "{pillLabelName} Removed",
+  "Terra.pills.hint.rollupPill": "{pillsNotVisibleCount} items are hidden. Select to display {pillsNotVisibleCount} hidden items",
+  "Terra.pills.hint.showLess": "select to hide items",
+  "Terra.pills.hint.rollupNotVisible": "{pillsNotVisibleCount} items are not displayed",
+  "Terra.pills.hint.rollupVisible": "{pillsNotVisibleCount} hidden items are now displayed",
+  "Terra.pills.hint.pillList": "Contains {numberOfPills} items"
+}

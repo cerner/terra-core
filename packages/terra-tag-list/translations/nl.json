@@ -1,0 +1,14 @@
+{
+  "Terra.pills.label.delete": "{pillLabelName} verwijderen",
+  "Terra.pills.label.rollupPill": "nog {pillsNotVisibleCount}",
+  "Terra.pills.label.showLess": "Minder tonen",
+  "Terra.pills.hint.removable": "kan verwijderd worden via de toets Delete of de toets Backspace",
+  "Terra.pills.hint.selectable": "voor meer informatie kunt u de knop selecteren via de spatiebalk of de toets Enter",
+  "Terra.pills.hint.selectableAndRemovable": "kan verwijderd worden via de toets Delete of de toets Backspace, voor meer informatie kunt u de knop selecteren via de spatiebalk of de toets Enter",
+  "Terra.pills.hint.wasRemoved": "{pillLabelName} verwijderd",
+  "Terra.pills.hint.rollupPill": "{pillsNotVisibleCount} items zijn verborgen. Selecteer om {pillsNotVisibleCount} verborgen items weer te geven",
+  "Terra.pills.hint.showLess": "selecteer om items te verbergen",
+  "Terra.pills.hint.rollupNotVisible": "{pillsNotVisibleCount} items worden niet weergegeven",
+  "Terra.pills.hint.rollupVisible": "{pillsNotVisibleCount} verbogen items worden nu weergegeven",
+  "Terra.pills.hint.pillList": "Bevat {numberOfPills} items"
+}

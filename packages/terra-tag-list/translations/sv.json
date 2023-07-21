@@ -1,0 +1,14 @@
+{
+  "Terra.pills.label.delete": "Ta bort {pillLabelName}",
+  "Terra.pills.label.rollupPill": "{pillsNotVisibleCount} fler",
+  "Terra.pills.label.showLess": "Visa färre",
+  "Terra.pills.hint.removable": "objektet kan tas bort med Delete-tangenten eller Backstegstangenten",
+  "Terra.pills.hint.selectable": "för ytterligare information kan knappen väljas med Blankstegstangenten eller Retur-tangenten.",
+  "Terra.pills.hint.selectableAndRemovable": "objektet kan tas bort med Delete-tangenten eller Backstegstangenten, för ytterligare information kan knappen väljas med Blankstegstangenten eller Retur-tangenten",
+  "Terra.pills.hint.wasRemoved": "{pillLabelName} har tagits bort",
+  "Terra.pills.hint.rollupPill": "{pillsNotVisibleCount} objekt är dolda. Välj för att visa {pillsNotVisibleCount} dolda objekt",
+  "Terra.pills.hint.showLess": "välj för att dölja objekt",
+  "Terra.pills.hint.rollupNotVisible": "{pillsNotVisibleCount} objekt visas inte",
+  "Terra.pills.hint.rollupVisible": "{pillsNotVisibleCount} dolda objekt visas nu",
+  "Terra.pills.hint.pillList": "Innehåller {numberOfPills} objekt"
+}

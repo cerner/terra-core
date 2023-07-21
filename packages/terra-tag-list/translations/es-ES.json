@@ -1,0 +1,14 @@
+{
+  "Terra.pills.label.delete": "Quitar {pillLabelName}",
+  "Terra.pills.label.rollupPill": "{pillsNotVisibleCount} más...",
+  "Terra.pills.label.showLess": "Mostrar menos",
+  "Terra.pills.hint.removable": "El elemento se puede quitar mediante la tecla Supr o Retroceso.",
+  "Terra.pills.hint.selectable": "Para obtener más información, puede seleccionar el botón mediante la Barra espaciadora o la tecla Entrar.",
+  "Terra.pills.hint.selectableAndRemovable": "El elemento se puede quitar mediante la tecla Supr o Retroceso; para obtener más información, puede seleccionar el botón mediante la Barra espaciadora o la tecla Entrar.",
+  "Terra.pills.hint.wasRemoved": "Se quitó {pillLabelName}.",
+  "Terra.pills.hint.rollupPill": "{pillsNotVisibleCount} elementos están ocultos. Seleccionar para mostrar {pillsNotVisibleCount} elementos ocultos.",
+  "Terra.pills.hint.showLess": "Seleccionar para ocultar elementos",
+  "Terra.pills.hint.rollupNotVisible": "No se muestran {pillsNotVisibleCount} elementos.",
+  "Terra.pills.hint.rollupVisible": "Se muestran {pillsNotVisibleCount} elementos que estaban ocultos.",
+  "Terra.pills.hint.pillList": "Contiene {numberOfPills} elementos"
+}
