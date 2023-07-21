@@ -75,13 +75,6 @@ class Tag extends React.Component {
     }
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevState.focused !== this.state.focused) {
-  //     // Perform the effect when the specific state has changed
-  //     this.props.onFocusChange(this.state.focused, event);
-  //   }
-  // }
-
   render() {
     const {
       icon,
@@ -113,11 +106,6 @@ class Tag extends React.Component {
     const isClickable = href || onClick;
     const clickableComponent = href ? 'a' : 'button';
     const ComponentType = isClickable ? clickableComponent : 'span';
-
-    // useEffect(() => {
-    //   // console.log('isFocused: ', f);
-    //   onFocusChange(this.state.focused);
-    // }, [this.state.focused]);
 
     return (
       <ComponentType
