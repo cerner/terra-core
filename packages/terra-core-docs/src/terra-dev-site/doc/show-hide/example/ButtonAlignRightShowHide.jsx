@@ -2,8 +2,7 @@ import React from 'react';
 import ShowHide, { Paragraph } from 'terra-show-hide';
 
 const previewText = 'A connected care team starts with an integrated communication strategy. CareAware ConnectTM is a healthcare communication tool that leverages the use of intuitive technology to help associate the right care team members with the right patients and provides a way to effectively';
-const focusText = 'communicate and collaborate while on the go through a smart, mobile device.';
-const text = 'Integration with Cerner Millennium® enables care teams to streamline bedside workflows including medication administration, device association, and specimen collection.';
+const text = 'communicate and collaborate while on the go through a smart, mobile device. Integration with Cerner Millennium® enables care teams to streamline bedside workflows including medication administration, device association, and specimen collection.';
 
 class ButtonAlignRightShowHideTest extends React.Component {
   constructor(props) {
@@ -24,7 +23,7 @@ class ButtonAlignRightShowHideTest extends React.Component {
     return (
       <div>
         <ShowHide focusRef={this.focusRef} buttonAlign="end" preview={<p>{previewText}</p>} isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
-          <Paragraph ref={this.focusRef} preview={previewText} firstSentence={focusText} text={text} />
+          <p><Paragraph ref={this.focusRef} previewText={previewText} text={text} /></p>
         </ShowHide>
       </div>
     );

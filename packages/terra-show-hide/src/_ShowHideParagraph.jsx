@@ -1,34 +1,49 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
-import styles from './_ShowHideParagraph.module.scss';
+import styles from './ShowHide.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
 const paragraphPropTypes = {
-  preview: PropTypes.string.isRequired,
-  firstSentence: PropTypes.string.isRequired,
-  text: PropTypes.string,
+  previewText: PropTypes.string,
+  text: PropTypes.string.isRequired,
 };
 
 const addTrailingWhiteSpace = (str) => `${str.trim()} `;
 const addHeadingWhiteSpace = (str) => ` ${str.trim()}`;
 
+const truncate = (string) => {
+  if (!string) {
+    return null;
+  }
+  const text = string.trim();
+  const maxLength = 150;
+  if (text?.length <= maxLength) {
+    return [text];
+  }
+  const lastFullWordEndPosition = text.slice(0, maxLength).lastIndexOf(' ');
+  const first = text.slice(0, lastFullWordEndPosition)?.trim();
+  const second = text.slice(lastFullWordEndPosition)?.trim();
+  return [first, second];
+};
+
 const Paragraph = forwardRef((props, ref) => {
   const {
-    preview,
-    firstSentence,
+    previewText,
     text,
   } = props;
 
+  const truncatedText = truncate(text);
+
   return (
-    <p className={cx('paragraph')}>
-      { addTrailingWhiteSpace(preview) }
+    <>
+      { previewText ? addTrailingWhiteSpace(previewText) : null }
       <span className={cx('text-divider')} />
-      <span ref={ref}>{ firstSentence }</span>
+      <span ref={ref}>{ truncatedText[0] }</span>
       <span className={cx('text-divider')} />
-      { text ? <span>{ addHeadingWhiteSpace(text) }</span> : null}
-    </p>
+      { truncatedText[1] ? addHeadingWhiteSpace(truncatedText[1]) : null}
+    </>
   );
 });
 

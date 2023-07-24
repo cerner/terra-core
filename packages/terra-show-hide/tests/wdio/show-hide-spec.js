@@ -31,7 +31,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
 
       it('should focus on focusRef element', () => {
         $('button').click();
-        expect($('#focusRef').isFocused()).toBe(true);
+        Terra.validates.element('default expanded');
       });
 
       it('should move focus from expanded content to the button on tab', () => {
@@ -41,7 +41,7 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
 
       it('focus should not go back to focusRef element if it is normally a non-focusable element like <span>', () => {
         browser.keys(['Shift', 'Tab']);
-        expect($('#focusRef').isFocused()).toBe(false);
+        Terra.validates.element('default expanded no focus');
         browser.keys(['Shift']); // Modifier like Control, Shift, Alt and Command will stay pressed so you need to trigger them again to release them.
       });
 

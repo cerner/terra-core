@@ -44,20 +44,134 @@ The Show-Hide component must be composed inside the [Base][1] component with a l
 ## Usage
 
 ```jsx
-import ShowHide from 'terra-show-hide';
+import ShowHide, { Paragraph } from 'terra-show-hide';
 ```
+
+#### A single paragraph of text
+  - At the top level of your component declare a `ref`, pass it as `focusRef` props to `ShowHide` component. Pass a preview node as a prop to `ShowHide` component.
+  - A `Paragraph` component allows `ShowHide` component to set focus on the beginning of the hidden portion of the text upon opening. For that the text splitted in the preview and the rest of the text portions has to be passed as string props, and the `focusRef` should be forvarder to `Paragraph` component.
+
+  ```jsx
+  import React, { useRef } from 'react';
+  import ShowHide, { Paragraph } from 'terra-show-hide';
+
+  const MyComponent = () => {
+        
+    // At the top level of your component declare a ref.
+    const focusRef = useRef(null);
+
+    ...
+    // Split text in the preview and the rest of the text portions.
+    const previewText = 'Patients are requesting greater affordability and efficiency in healthcare.';
+    const text = 'With procedures performed in an ambulatory surgery center costing up to 60% less compared to a hospital outpatient department (1), the demand for these facilities is increasing.';
+
+    return (
+      // Pass a focusRef prop to the ShowHide component.
+      // Pass a preview node as a prop to ShowHide component 
+      <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } ... >
+        // Use <Paragraph /> component inside the <p /> tag.
+        // Forward focusRef to <Paragraph /> component.
+        // Pass preview and the rest of the text as string props. 
+        <p>
+          <Paragraph ref={ focusRef } previewText={ previewText } text={ text } />
+        </p>
+      </ShowHide>
+    );
+  }
+  ```
+
+#### Multiple children
+  - At the top level of your component declare a `ref`, pass it as `focusRef` props to `ShowHide` component. Pass a preview node as a prop to `ShowHide` component.
+  - A `Paragraph` component allows `ShowHide` component to set focus on the beginning of the hidden portion of the text upon opening. 
+  - Dublicate the preview nodes as `ShowHide` children.
+  - When the preview nodes end, add a `Paragraph` element as a child to the next node. 
+  - Forwarding `focusRef` to `Paragraph` component allows `ShowHide` component to set focus on the beginning of the text in that node upon opening.
+  - Pass the text as a prop to `Paragraph` component. Omit `previewText` prop.
+
+  ```jsx
+    import React, { useRef } from 'react';
+    import ShowHide, { Paragraph } from 'terra-show-hide';
+
+    const MyComponent = () => {
+
+      // At the top level of your component declare a ref.
+      const focusRef = useRef(null);
+
+      ...
+      // This example's content is a header and a list of 4 items.
+      const header = 'Key Benefits of Cerner Cardiovascular Solutions';
+      const list = [
+        'Eliminates silos of information and the resulting inefficiencies with a unified EHR and cardiovascular system',
+        'Enhances clinical, financial and performance outcomes with comprehensive procedural documentation',
+        'Creates efficient diagnostic workflows, image management and analysis',
+        'Promotes cardiac disease management through health maintenance protocols',
+      ];
+
+      // The header and the first two items of the list will be displayed in preview portion.
+      const preview = [
+        <h3>{header}</h3>,
+        <ul>
+          <li>{list[0]}</li>
+          <li>{list[1]}</li>
+        </ul>,
+      ];
+
+      return (
+        // Pass a focusRef prop to the ShowHide component
+        // Pass a preview node as a prop to ShowHide component 
+        <ShowHide focusRef={focusRef} preview={preview} ... >
+          // Dublicate the preview nodes as children here as well.
+          <h3>{header}</h3>
+          <ul>
+            <li>{list[0]}</li>
+            <li>{list[1]}</li>
+            // This is where the preview portion ends. Add Paragraph element and pass text as a prop, forward focusRef.
+            <li>
+              <Paragraph ref={focusRef} text={list[2]} />
+            </li>
+            <li>{list[3]}</li>
+          </ul>
+        </ShowHide>
+      );
+    }
+  ```
+
+#### First hidden child is an interactive elements (link, button, etc)
+  - At the top level of your component declare a `ref`.
+  - Forward `focusRef` to the interactive element directly. There is no need to use `Paragraph` in this case.
+
+  ```jsx
+    import React, { useRef } from 'react';
+    import ShowHide from 'terra-show-hide';
+
+    const MyComponent = () => {
+       
+      // At the top level of your component declare a ref.
+      const focusRef = useRef(null);
+
+        ...
+      // The hidden portion of ShowHide content starts with link. 
+      const previewText = 'Patients are requesting greater affordability and efficiency in healthcare.';
+      const href = 'https://www.cerner.com';
+
+      return (
+        // Pass a focusRef prop to the ShowHide component.
+        // Pass a preview text node as a prop to ShowHide component 
+        <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } ... >
+          // Forward focusRef to the link directly, there is no need to use <Paragraph /> component.
+          <a ref={focusRef} href={href} ... />
+        </ShowHide>
+      );
+    }
+  ```
 
 ## Accessibility
 
 <Notice variant="important" ariaLevel="3">
 
-In order for the component to be accessible, the `focusRef` to the first hidden child node have to be provided. That element will get focus once the full content revealed, that allows the assistive technologies to start reading the hidden content from the place where it was cut off.
+In order for the component to be accessible, it's important to follow the inplimentation guidance. Even though the focusRef prop is not required for backward compatibility, a failure to use it will result in lack of accessibility.
 
 </Notice>
-
-#### Accessibility Guidance.
-- For the hidden content being a single paragraph `<p>`, wrap the portion of the text that is about to be hidden, in `<span>` tag, and pass a `ref` to that element as `focusRef` prop.
-- For multiple children, pass a `ref` to the first child that is not included in preview portion as `focusRef` prop.
 
 ## Component Features
 
@@ -69,13 +183,13 @@ In order for the component to be accessible, the `focusRef` to the first hidden 
 * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
 
 ## Examples
-<DefaultShowHide title="Default ShowHide with one paragraph content" description="For properly focusing on the beginning of the hidden text in a paragraph, split the text in following portions: previw portion for the text that should not be hidden, first sentence of the hidden portion of the text, and the rest of the paragraph text. Pass them as corresponding props to <Paragraph> component. NOTE: you will need to create a React ref in your component, to allow the <Paragraph> component forward ref for the first sentence to <ShowHide>." />
-<CustomButtonTextShowHide title="Custom Button Text ShowHide with multiple children" description="For multiple children, pass a ref to the first child, not included in preview portion, as a focusRef prop:" />
+<DefaultShowHide title="Default ShowHide - a Paragraph of Text" />
+<CustomButtonTextShowHide title="Custom Button Text ShowHide - List of Items" />
 <InitiallyOpenShowHide title="Initially Open ShowHide" />
 <ButtonAlignCenterShowHide title="Button Align Center ShowHide" />
 <ButtonAlignRightShowHide title="Button Align Right ShowHide" />
 <NoPreviewShowHide title="No Preview ShowHide" />
-<NoFocusRefShowHide title="No focusRef ShowHide" description="Note: omitting focusRef is possible for backward compatibility. In this case the focus will be set to the content container. Hovewer, it is important to pass a focusRef in all future implementations." />
+<NoFocusRefShowHide title="No focusRef ShowHide" description="Note: omitting focusRef is possible for backward compatibility. In this case the focus will be set to the content container. Hovewer, it does not provide full accessibility." />
 
 ## Show Hide Props
 <ShowHidePropsTable />

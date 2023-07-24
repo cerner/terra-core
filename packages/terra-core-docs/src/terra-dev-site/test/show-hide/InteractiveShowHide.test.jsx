@@ -4,15 +4,15 @@ import ShowHide from 'terra-show-hide';
 const sentence = 'Lorem ipsum dolor sit amet consectetur adipiscing elit.';
 
 const preview = [
-  <p key="lorem1">{sentence}</p>,
-  <p key="lorem2">{sentence}</p>,
-  <p key="lorem3">{sentence}</p>,
+  <p>{sentence}</p>,
+  <p>{sentence}</p>,
+  <p>{sentence}</p>,
 ];
 
 const text = [
-  <p key="lorem6">{sentence}</p>,
-  <p key="lorem7">{sentence}</p>,
-  <p key="lorem8">{sentence}</p>,
+  <p>{sentence}</p>,
+  <p>{sentence}</p>,
+  <p>{sentence}</p>,
 ];
 
 class InteractiveShowHideTest extends React.Component {
@@ -48,8 +48,8 @@ class InteractiveShowHideTest extends React.Component {
         buttonText={customText}
       >
         {preview}
-        <p id="focusRef" ref={this.focusRef} key="lorem4">{sentence}</p>
-        <a id="link" key="lorem5" href="http">Link</a>
+        <p id="focusRef" ref={this.focusRef}>{sentence}</p>
+        <a id="link" href="http">Link</a>
         {text}
       </ShowHide>
     );

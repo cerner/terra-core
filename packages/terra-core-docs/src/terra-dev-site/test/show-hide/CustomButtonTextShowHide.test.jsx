@@ -1,18 +1,14 @@
 import React from 'react';
-import ShowHide from 'terra-show-hide';
+import ShowHide, { Paragraph } from 'terra-show-hide';
 
 const sentence = 'Lorem ipsum dolor sit amet consectetur adipiscing elit.';
 
 const preview = [
-  <p key="lorem1">{sentence}</p>,
-  <p key="lorem2">{sentence}</p>,
-  <p key="lorem3">{sentence}</p>,
-];
-
-const text = [
-  <p key="lorem5">{sentence}</p>,
-  <p key="lorem6">{sentence}</p>,
-  <p key="lorem7">{sentence}</p>,
+  <h3>{`${sentence}`}</h3>,
+  <ul>
+    <li>{`${sentence}`}</li>
+    <li>{`${sentence}`}</li>
+  </ul>,
 ];
 
 class CustomButtonTextShowHideTest extends React.Component {
@@ -34,9 +30,9 @@ class CustomButtonTextShowHideTest extends React.Component {
     let customText = '';
 
     if (this.state.isOpen) {
-      customText = `Hide ${text.length + 1} Sentences`;
+      customText = 'Hide 3 Sentences';
     } else {
-      customText = `Show ${text.length + 1} More Sentences`;
+      customText = 'Show 3 More Sentences';
     }
 
     return (
@@ -47,9 +43,14 @@ class CustomButtonTextShowHideTest extends React.Component {
         isOpen={this.state.isOpen}
         buttonText={customText}
       >
-        {preview}
-        <p ref={this.focusRef} key="lorem4">{sentence}</p>
-        {text}
+        <h3>{`${sentence}`}</h3>
+        <ul>
+          <li>{`${sentence}`}</li>
+          <li>{`${sentence}`}</li>
+          <li><Paragraph ref={this.focusRef} text={sentence} /></li>
+          <li>{`${sentence}`}</li>
+          <li>{`${sentence}`}</li>
+        </ul>
       </ShowHide>
     );
   }
