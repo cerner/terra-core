@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
+import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import ContentContainer from 'terra-content-container';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
@@ -107,6 +108,11 @@ const propTypes = {
    * The element id to associate to the descriptive text.
    */
   summaryId: PropTypes.string.isRequired,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 };
 
 const defaultProps = {
@@ -324,7 +330,7 @@ const createSections = (tableData, headerIndex) => {
   return { sections, sectionIndex: rowIndex };
 };
 
-const CreateHeader = (tableData) => {
+const CreateHeader = (tableData, intl) => {
   if (!tableData.headerData || !tableData.headerData.cells) {
     return { headerIndex: 0, header: undefined };
   }
@@ -347,16 +353,18 @@ const CreateHeader = (tableData) => {
       setSortBy(item.children);
       setSortOrder(item.isSortDesc ? 'descending' : 'ascending');
       if (keyPressed) {
-        setAriaText(`Rows is sorted by ${sortBy},${sortOrder}`);
+        // setAriaText(`Rows is sorted by ${sortBy},${sortOrder}`);
+        setAriaText(intl.formatMessage({ id: `Terra.table.sorting.${sortOrder}` }, { sortBy }));
       } else {
         setAriaText('');
       }
     }
-  }, [data, keyPressed, sortBy, sortOrder]);
+  }, [data, keyPressed, sortBy, sortOrder, intl]);
 
   const handleKeyDown = (event) => {
     if (event.key === 'Tab' || (event.shiftKey && event.keyCode === 9)) {
       setAriaText('');
+      setKeyPressed(false);
     }
     if (event.key === ' ' || event.key === 'Enter') {
       setKeyPressed(true);
@@ -395,8 +403,8 @@ const CreateHeader = (tableData) => {
   };
 };
 
-const unpackTableData = (tableData) => {
-  const { headerIndex, header } = CreateHeader(tableData);
+const unpackTableData = (tableData, intl) => {
+  const { headerIndex, header } = CreateHeader(tableData, intl);
   const { sectionIndex, sections } = createSections(tableData, headerIndex);
   return { rowCount: sectionIndex, header, sections };
 };
@@ -419,6 +427,7 @@ const Table = ({
   showSimpleFooter,
   summary,
   summaryId,
+  intl,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -447,8 +456,9 @@ const Table = ({
     hasChevrons,
     dividerStyle,
     numberOfColumns,
+    intl,
   };
-  const { rowCount, header, sections } = unpackTableData(tableData);
+  const { rowCount, header, sections } = unpackTableData(tableData, intl);
 
   const attrSpread = cellPaddingStyle ? { 'data-table-padding': cellPaddingStyle } : {};
 
@@ -501,4 +511,4 @@ const Table = ({
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
 
-export default Table;
+export default injectIntl(Table);
