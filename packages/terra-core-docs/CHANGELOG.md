@@ -27,7 +27,8 @@
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
-
+  * Updated `terra-form-textarea` example component and added an button to toggle valid/invalid status
+  
 * Added
   * Added documentation updates for `Single Select` in `terra-form-select`.
 

@@ -20,6 +20,7 @@ exports[`correctly applies the theme context className 1`] = `
     size="small"
   >
     <textarea
+      aria-invalid={false}
       aria-label="label"
       className="textarea orion-fusion-theme"
       disabled={false}
@@ -33,8 +34,43 @@ exports[`correctly applies the theme context className 1`] = `
 </ThemeContextProvider>
 `;
 
+exports[`correctly applies the theme context className when isInvalid 1`] = `
+<ThemeContextProvider
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <Textarea
+    ariaLabel="label"
+    disableResize={false}
+    disabled={false}
+    isAutoResizable={false}
+    isIncomplete={false}
+    isInvalid={true}
+    name={null}
+    required={false}
+    size="small"
+  >
+    <textarea
+      aria-invalid={true}
+      aria-label="label"
+      className="textarea form-error orion-fusion-theme"
+      disabled={false}
+      name={null}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={false}
+      rows={2}
+    />
+  </Textarea>
+</ThemeContextProvider>
+`;
+
 exports[`should favor ariaLabel prop over aria-label if both props passed to component 1`] = `
 <textarea
+  aria-invalid="false"
   aria-label="ariaLabel"
   class="textarea"
   rows="2"
@@ -43,6 +79,7 @@ exports[`should favor ariaLabel prop over aria-label if both props passed to com
 
 exports[`should honor aria-label passed to component 1`] = `
 <textarea
+  aria-invalid="false"
   aria-label="label"
   class="textarea"
   rows="2"
@@ -51,6 +88,7 @@ exports[`should honor aria-label passed to component 1`] = `
 
 exports[`should not set the textarea to resizable when viewed on browser with DocumentTouch 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea"
   rows="2"
 />
@@ -58,6 +96,7 @@ exports[`should not set the textarea to resizable when viewed on browser with Do
 
 exports[`should not set the textarea to resizable when viewed on browser with maxTouchPoints 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea"
   rows="2"
 />
@@ -65,6 +104,7 @@ exports[`should not set the textarea to resizable when viewed on browser with ma
 
 exports[`should not set the textarea to resizable when viewed on browser with msMaxTouchPoints 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea"
   rows="2"
 />
@@ -72,6 +112,7 @@ exports[`should not set the textarea to resizable when viewed on browser with ms
 
 exports[`should not set the textarea to resizable when viewed on browser with ontouchstart 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea"
   rows="2"
 />
@@ -79,6 +120,7 @@ exports[`should not set the textarea to resizable when viewed on browser with on
 
 exports[`should render a TextArea when all the possible props are passed into it 1`] = `
 <textarea
+  aria-invalid="false"
   aria-required="true"
   class="textarea"
   name="description"
@@ -87,8 +129,20 @@ exports[`should render a TextArea when all the possible props are passed into it
 />
 `;
 
+exports[`should render a TextArea when all the possible props are passed into it 2`] = `
+<textarea
+  aria-invalid="true"
+  aria-required="true"
+  class="textarea form-error"
+  name="description"
+  required=""
+  rows="5"
+/>
+`;
+
 exports[`should render a default TextArea component 1`] = `
 <textarea
+  aria-invalid="false"
   aria-label="label"
   class="textarea"
   rows="2"
@@ -97,12 +151,14 @@ exports[`should render a default TextArea component 1`] = `
 
 exports[`should render a full size textbox appropriately 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea full-size"
 />
 `;
 
 exports[`should render a large textbox appropriately 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea"
   rows="10"
 />
@@ -110,6 +166,7 @@ exports[`should render a large textbox appropriately 1`] = `
 
 exports[`should render a medium textbox appropriately 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea"
   rows="5"
 />
@@ -117,13 +174,24 @@ exports[`should render a medium textbox appropriately 1`] = `
 
 exports[`should render a small textbox appropriately 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea"
+  rows="2"
+/>
+`;
+
+exports[`should render an invalid TextArea component 1`] = `
+<textarea
+  aria-invalid="true"
+  aria-label="label"
+  class="textarea form-error"
   rows="2"
 />
 `;
 
 exports[`should render as controlled when just a default value is passed into the Textarea 1`] = `
 <textarea
+  aria-invalid="false"
   aria-label="label"
   class="textarea"
   rows="2"
@@ -134,6 +202,7 @@ exports[`should render as controlled when just a default value is passed into th
 
 exports[`should render as uncontrolled when just a default value is passed into the Textarea 1`] = `
 <textarea
+  aria-invalid="false"
   aria-label="label"
   class="textarea"
   rows="2"
@@ -144,6 +213,7 @@ exports[`should render as uncontrolled when just a default value is passed into 
 
 exports[`should set the onChange and onFocus functions appropriately when the textarea is autoResizable 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea resizable"
   rows="2"
 />
@@ -151,6 +221,7 @@ exports[`should set the onChange and onFocus functions appropriately when the te
 
 exports[`should set the rows attribute appropriate when it is passed into the textarea 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea"
   rows="7"
 />
@@ -158,6 +229,7 @@ exports[`should set the rows attribute appropriate when it is passed into the te
 
 exports[`should set the textarea as auto resizable when isAutoResizable is passed into the component 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea resizable"
   rows="2"
 />
@@ -165,6 +237,7 @@ exports[`should set the textarea as auto resizable when isAutoResizable is passe
 
 exports[`should set the textarea to disabled when passed into the component 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea"
   disabled=""
   rows="2"
@@ -173,6 +246,7 @@ exports[`should set the textarea to disabled when passed into the component 1`] 
 
 exports[`should set the textarea to incomplete when isIncomplete and required is passed into the component 1`] = `
 <textarea
+  aria-invalid="false"
   aria-required="true"
   class="textarea form-incomplete"
   required=""
@@ -180,8 +254,19 @@ exports[`should set the textarea to incomplete when isIncomplete and required is
 />
 `;
 
+exports[`should set the textarea to incomplete when isIncomplete, required and isInvalid is passed into the component 1`] = `
+<textarea
+  aria-invalid="true"
+  aria-required="true"
+  class="textarea form-error"
+  required=""
+  rows="2"
+/>
+`;
+
 exports[`should set the textarea to invalid when isInvalid is passed into the component 1`] = `
 <textarea
+  aria-invalid="true"
   class="textarea form-error"
   rows="2"
 />
@@ -189,6 +274,7 @@ exports[`should set the textarea to invalid when isInvalid is passed into the co
 
 exports[`should set the textarea to resizable when viewed on a large device 1`] = `
 <textarea
+  aria-invalid="false"
   class="textarea resizable"
   rows="2"
 />
