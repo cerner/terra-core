@@ -4,13 +4,13 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
 const sentences = [
   'Key Benefits of Cerner Cardiovascular Solutions.',
   'Eliminates silos of information and the resulting inefficiencies with a unified EHR and cardiovascular system.',
-  'Enhances clinical, financial and performance outcomes with comprehensive procedural documentation. Creates efficient diagnostic workflows, image management and analysis.',
+  'Creates efficient diagnostic workflows, image management and analysis. Enhances clinical, financial and performance outcomes with comprehensive procedural documentation.',
   'Promotes cardiac disease management through health maintenance protocols.',
 ];
 
 const preview = [
-  <h3>{sentences[0]}</h3>,
-  <ul><li key="sentence1">{sentences[1]}</li></ul>,
+  <h3 key="header">{sentences[0]}</h3>,
+  <ul key="list"><li>{sentences[1]}</li></ul>,
 ];
 
 class CustomButtonTextShowHide extends React.Component {
@@ -47,9 +47,9 @@ class CustomButtonTextShowHide extends React.Component {
       >
         <h3>{sentences[0]}</h3>
         <ul>
-          <li key="sentence1">{sentences[1]}</li>
-          <li key="sentence2"><Paragraph ref={this.focusRef} text={sentences[2]} /></li>
-          <li key="sentence3">{sentences[3]}</li>
+          <li>{sentences[1]}</li>
+          <li><Paragraph ref={this.focusRef} text={sentences[2]} /></li>
+          <li>{sentences[3]}</li>
         </ul>
       </ShowHide>
     );

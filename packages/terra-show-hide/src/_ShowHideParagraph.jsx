@@ -44,6 +44,7 @@ const Paragraph = forwardRef((props, ref) => {
       <span
         ref={ref}
         tabIndex={focusable ? '-1' : null}
+        role={focusable ? 'group' : null}
         onBlur={() => setFocusable(false)}
       >
         {truncatedText[0]}

@@ -104,10 +104,10 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
 
       // The header and the first two items of the list will be displayed in preview portion.
       const preview = [
-        <h3>{header}</h3>,
-        <ul>
-          <li key="item1">{list[0]}</li>
-          <li key="item2">{list[1]}</li>
+        <h3 key="header">{header}</h3>,
+        <ul key="list">
+          <li>{list[0]}</li>
+          <li>{list[1]}</li>
         </ul>,
       ];
 
@@ -115,12 +115,12 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
         <ShowHide focusRef={focusRef} preview={preview} isOpen={isOpen} onChange={toggleShowHide} >
           <h3>{header}</h3>
           <ul>
-            <li key="item1">{list[0]}</li>
-            <li key="item2">{list[1]}</li>
-            <li key="item3">
+            <li>{list[0]}</li>
+            <li>{list[1]}</li>
+            <li>
               <Paragraph ref={focusRef} text={list[2]} />
             </li>
-            <li key="item4">{list[3]}</li>
+            <li>{list[3]}</li>
           </ul>
         </ShowHide>
       );
