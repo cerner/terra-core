@@ -44,8 +44,10 @@ describe('Snapshots', () => {
   });
 
   it('renders a search field that displays as a block to fill its container', () => {
-    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isBlock />).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isBlock />).find('.search-field').dive();
+    console.log(searchField);
     searchField.instance().updateSearchText('Test');
+    
     expect(searchField.prop('className')).toContain('block');
     expect(searchField).toMatchSnapshot();
   });
