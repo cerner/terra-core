@@ -110,6 +110,12 @@ const ShowHide = (props) => {
     }
   }
 
+  const onBlur = () => {
+    if (containerIsActive) {
+      setContainerIsActive(false);
+    }
+  };
+
   return (
     <div {...customProps}>
       {!isOpen && preview}
@@ -119,7 +125,7 @@ const ShowHide = (props) => {
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={containerIsActive ? '-1' : null}
         role={containerIsActive ? 'group' : null}
-        onBlur={() => setContainerIsActive(false)}
+        onBlur={onBlur}
       >
         <Toggle isOpen={isOpen}>
           {children}

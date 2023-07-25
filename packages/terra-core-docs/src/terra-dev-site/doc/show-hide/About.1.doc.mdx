@@ -63,7 +63,7 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
     const [isOpen, setIsOpen] = useState(false);
     const toggleShowHide = () => setIsOpen(!isOpen);
 
-    // Split text in the preview and the rest of the text portions.
+    // Split text into preview text and the rest of the text you wish to be revealed when the 'show' action is taken.
     const previewText = 'Patients are requesting greater affordability and efficiency in healthcare.';
     const text = 'With procedures performed in an ambulatory surgery center costing up to 60% less compared to a hospital outpatient department (1), the demand for these facilities is increasing.';
 
@@ -80,7 +80,7 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
 #### Multiple children
   - At the top level of your component declare a `ref`, pass it as `focusRef` props to `ShowHide` component. Pass a preview node as a prop to `ShowHide` component.
   - A `Paragraph` component allows `ShowHide` component to set focus on the beginning of the hidden portion of the text upon opening. 
-  - Dublicate the preview nodes as `ShowHide` children.
+  - Duplicate the preview nodes as `ShowHide` children.
   - When the preview nodes end, add a `Paragraph` element as a child to the next node. 
   - Forwarding `focusRef` to `Paragraph` component allows `ShowHide` component to set focus on the beginning of the text in that node upon opening.
   - Pass the text as a prop to `Paragraph` component. Omit `previewText` prop.
@@ -156,7 +156,7 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
 
 <Notice variant="important" ariaLevel="3">
 
-In order for the component to be accessible, it's important to follow the inplimentation guidance. Even though the focusRef prop is not required for backward compatibility, a failure to use it will result in lack of accessibility.
+In order for the component to be accessible, it's important to follow the implimentation guidance. The focusRef prop is currently optional for backward compatibility, a failure to use it will result in lack of accessibility.
 
 </Notice>
 
