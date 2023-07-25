@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
 import ThemeContext from 'terra-theme-context';
 import { injectIntl } from 'react-intl';
-import styles from './subcomponents/Tag.module.scss';
+import styles from './TagList.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
@@ -116,7 +116,7 @@ const TagList = (props) => {
   };
   
   const handleTagListKeyDown = (event) => {
-    const tags = [...filterTagsRef.current.querySelectorAll('button')];
+    const tags = [...filterTagsRef.current.querySelectorAll('button, a')];
 
     switch (event.keyCode) {
       case KEY_RIGHT:

@@ -59,6 +59,10 @@ class Tag extends React.Component {
     // Apply focus styles for keyboard navigation
     if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
       this.setState({ focused: true });
+    }else if (event.nativeEvent.keyCode === KeyCode.KEY_RIGHT) {
+      this.setState({ focused: true });
+    }else if (event.nativeEvent.keyCode === KeyCode.KEY_LEFT) {
+      this.setState({ focused: true });
     }
 
     if (this.props.onKeyUp) {
@@ -106,6 +110,7 @@ class Tag extends React.Component {
         onClick={onClick}
         onFocus={onFocus}
         href={href}
+        data-terra-tag
       >
         {tagIcon}
         {text}
