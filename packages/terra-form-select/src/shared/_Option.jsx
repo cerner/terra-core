@@ -110,6 +110,7 @@ const Option = ({
    * aria-live section we have and will stutter when reading options.
    * Switching to role="radio" and role="checkbox" mitigates this behavior.
    */
+
   let label = display;
   // Allows VO to announce index of items
   if (SharedUtil.isMac() && index && totalOptions) {

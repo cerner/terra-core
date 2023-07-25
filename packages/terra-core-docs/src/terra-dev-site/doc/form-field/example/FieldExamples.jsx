@@ -7,6 +7,26 @@ const cx = classNames.bind(styles);
 
 const FieldExamples = () => {
   const [isInvalid, setIsInvalid] = useState(false);
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [emailInvalid, setEmailInvalid] = useState(false);
+
+  // Function for email validation
+  const emailValidation = (e) => {
+    e.preventDefault();
+    const regExEmail = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+    if (!regExEmail.test(email) && email !== '') {
+      setEmailInvalid(true);
+      setMessage('The e-mail address entered is invalid');
+    } else {
+      setEmailInvalid(false);
+      setMessage('');
+    }
+  };
+
+  const handleOnChange = (e) => {
+    setEmail(e.target.value);
+  };
 
   const toggleIsInvalid = () => {
     setIsInvalid(!isInvalid);
@@ -56,17 +76,19 @@ const FieldExamples = () => {
         <div className={cx('field-content')}>Control Placeholder</div>
       </Field>
 
-      <p> Accessibility Hooks Example Field Label </p>
-      <Field
-        label="E-mail Label"
-        htmlFor="input_id"
-        help="Please enter a valid e-mail address."
-        error="The e-mail address entered is invalid."
-        isInvalid={isInvalid}
-      >
-        <input id="input_id" aria-describedby="input_id-error input_id-help" />
-      </Field>
-
+      <form onSubmit={emailValidation}>
+        <p> Accessibility Hooks Example Field Label </p>
+        <Field
+          label="E-mail Label"
+          htmlFor="input_id"
+          help="Please enter a valid e-mail address (abc@example.com)."
+          error={message}
+          isInvalid={emailInvalid}
+        >
+          <input type="text" id="input_id" aria-describedby="input_id-error input_id-help" value={email} onChange={handleOnChange} />
+        </Field>
+        <button type="submit" disabled={!email}>Submit</button>
+      </form>
       <hr />
       <p>
         If a field is invalid, an error icon will be displayed.

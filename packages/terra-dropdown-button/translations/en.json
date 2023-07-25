@@ -1,4 +1,6 @@
 {
   "Terra.dropdownButton.moreOptions": "More Options",
-  "Terra.dropdownButton.selected": "Selected."
+  "Terra.dropdownButton.selected": "Selected",
+  "Terra.dropdownButton.expanded": "Expanded button",
+  "Terra.dropdownButton.activeOption": "{currentItemLabel},({currentIndex} of {totalItems})"
 }

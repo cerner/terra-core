@@ -7,6 +7,8 @@
   // Vertically aligns arrange content to the top by default
   .arrange {
     display: flex;
+    max-width: 100%;
+    overflow: auto;
   }
 
   // Makes sure fill expands to fill the remaining space of its parent container
@@ -23,10 +25,12 @@
 
   .center {
     align-self: center;
+    max-height: 100%;
   }
 
   .bottom {
     align-self: flex-end;
+    max-height: 100%;
   }
 
   .stretch {

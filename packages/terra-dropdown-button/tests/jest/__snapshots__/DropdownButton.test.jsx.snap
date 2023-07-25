@@ -39,6 +39,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
     label="Primary Option"
   >
     <DropdownButton
+      buttonAttrs={Object {}}
       intl={
         Object {
           "defaultFormats": Object {},
@@ -85,7 +86,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             onSelect={[Function]}
           />
         }
-        openedViaKeyboard={false}
         refCallback={[Function]}
         requestClose={[Function]}
       >
@@ -95,8 +95,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
           <button
             aria-disabled={false}
             aria-expanded={false}
-            aria-haspopup="menu"
-            aria-label=""
+            aria-label="Primary Option"
             className="dropdown-button neutral orion-fusion-theme"
             disabled={false}
             onBlur={[Function]}
@@ -118,7 +117,6 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
             buttonRef={[Function]}
             getSelectedOptionText={[Function]}
             isOpen={false}
-            openedViaKeyboard={false}
             refCallback={[Function]}
             requestClose={[Function]}
             targetRef={[Function]}
@@ -164,6 +162,7 @@ exports[`Dropdown Button correctly applies the theme context className 1`] = `
 
 exports[`Dropdown Button should render a block dropdown type 1`] = `
 <DropdownButton
+  buttonAttrs={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -206,6 +205,7 @@ exports[`Dropdown Button should render a block dropdown type 1`] = `
 
 exports[`Dropdown Button should render a compact dropdown type 1`] = `
 <DropdownButton
+  buttonAttrs={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -248,6 +248,7 @@ exports[`Dropdown Button should render a compact dropdown type 1`] = `
 
 exports[`Dropdown Button should render a default dropdown type 1`] = `
 <DropdownButton
+  buttonAttrs={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -290,6 +291,7 @@ exports[`Dropdown Button should render a default dropdown type 1`] = `
 
 exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 <DropdownButton
+  buttonAttrs={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -332,6 +334,7 @@ exports[`Dropdown Button should render a disabled dropdown type 1`] = `
 
 exports[`Dropdown Button should render a split type with custom attributes 1`] = `
 <DropdownButton
+  buttonAttrs={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -376,6 +379,7 @@ exports[`Dropdown Button should render a split type with custom attributes 1`] =
 
 exports[`Dropdown Button should render a split type with multiple children 1`] = `
 <DropdownButton
+  buttonAttrs={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -427,6 +431,7 @@ exports[`Dropdown Button should render a split type with multiple children 1`] =
 
 exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 <DropdownButton
+  buttonAttrs={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -469,6 +474,7 @@ exports[`Dropdown Button should render an emphasis dropdown type 1`] = `
 
 exports[`Dropdown Button should render an open dropdown 1`] = `
 <DropdownButton
+  buttonAttrs={Object {}}
   intl={
     Object {
       "defaultFormats": Object {},
