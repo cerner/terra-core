@@ -39,7 +39,7 @@ const Paragraph = forwardRef((props, ref) => {
 
   return (
     <>
-      {previewText ? <span>{addTrailingWhiteSpace(previewText)}</span> : null}
+      {previewText ? addTrailingWhiteSpace(previewText) : null}
       <span className={cx('text-divider')} />
       <span
         ref={ref}
@@ -50,7 +50,7 @@ const Paragraph = forwardRef((props, ref) => {
         {truncatedText[0]}
       </span>
       <span className={cx('text-divider')} />
-      {truncatedText[1] ? <span>{addHeadingWhiteSpace(truncatedText[1])}</span> : null}
+      {truncatedText[1] ? addHeadingWhiteSpace(truncatedText[1]) : null}
     </>
   );
 });
