@@ -5,14 +5,34 @@ import styles from './ShowHide.module.scss';
 
 const cx = classNamesBind.bind(styles);
 
-const paragraphPropTypes = {
-  previewText: PropTypes.string,
+const propTypes = {
+  /**
+   * The main portion of the text that will start with focused text
+   */
   text: PropTypes.string.isRequired,
+  /**
+   * The portion of the text that will be displayed before the focused text
+   */
+  previewText: PropTypes.string,
 };
 
+/**
+ * @param str - string value
+ * @returns a trimmed string with trailing white space added
+ */
 const addTrailingWhiteSpace = (str) => `${str.trim()} `;
+
+/**
+ * @param str - string value
+ * @returns a trimmed string with preceding whitespace added
+ */
 const addHeadingWhiteSpace = (str) => ` ${str.trim()}`;
 
+/**
+ * This method splits the string in two portions without splitting words. The first (focusable) portion's length should not exceed max length for assistive technologies in the text mode being able to use Arrow Up?Down correctly.
+ * @param string - the text
+ * @returns the array of strings, where the first value is short focusable string and the second value is the rest of the string (if such exists)
+ */
 const truncate = (string) => {
   if (!string) {
     return null;
@@ -28,6 +48,9 @@ const truncate = (string) => {
   return [first, second];
 };
 
+/**
+ * This component splits the text with dividing spans to allow the assistive technologies focus on the part of the text
+ */
 const Paragraph = forwardRef((props, ref) => {
   const {
     previewText,
@@ -55,5 +78,5 @@ const Paragraph = forwardRef((props, ref) => {
   );
 });
 
-Paragraph.propTypes = paragraphPropTypes;
+Paragraph.propTypes = propTypes;
 export default Paragraph;
