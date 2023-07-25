@@ -8,6 +8,7 @@ const cx = classNamesBind.bind(styles);
 const paragraphPropTypes = {
   previewText: PropTypes.string,
   text: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 const addTrailingWhiteSpace = (str) => `${str.trim()} `;
@@ -32,13 +33,14 @@ const Paragraph = forwardRef((props, ref) => {
   const {
     previewText,
     text,
+    className,
   } = props;
 
   const truncatedText = truncate(text);
   const [focusable, setFocusable] = useState(true);
 
   return (
-    <>
+    <p className={className ? cx([className]) : null}>
       {previewText ? <span>{addTrailingWhiteSpace(previewText)}</span> : null}
       <span className={cx('text-divider')} />
       <span
@@ -51,7 +53,7 @@ const Paragraph = forwardRef((props, ref) => {
       </span>
       <span className={cx('text-divider')} />
       {truncatedText[1] ? <span>{addHeadingWhiteSpace(truncatedText[1])}</span> : null}
-    </>
+    </p>
   );
 });
 
