@@ -3,6 +3,7 @@ import { Notice } from "@cerner/terra-docs";
 
 import DefaultShowHide from './example/DefaultShowHide?dev-site-example';
 import CustomButtonTextShowHide from './example/CustomButtonTextShowHide?dev-site-example';
+import LinkShowHide from './example/LinkShowHide?dev-site-example';
 import InitiallyOpenShowHide from './example/InitiallyOpenShowHide?dev-site-example';
 import ButtonAlignCenterShowHide from './example/ButtonAlignCenterShowHide?dev-site-example';
 import ButtonAlignRightShowHide from './example/ButtonAlignRightShowHide?dev-site-example';
@@ -53,18 +54,20 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
   - The text splitted in the preview and the rest of the text portions has to be passed as string props, and the `focusRef` should be forwarded to `Paragraph` component.
 
   ```jsx
-  import React, { useRef } from 'react';
+  import React, { useRef, useState } from 'react';
   import ShowHide, { Paragraph } from 'terra-show-hide';
 
   const MyComponent = () => {
     const focusRef = useRef(null);
-    ...
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleShowHide = () => setIsOpen(!isOpen);
+
     // Split text in the preview and the rest of the text portions.
     const previewText = 'Patients are requesting greater affordability and efficiency in healthcare.';
     const text = 'With procedures performed in an ambulatory surgery center costing up to 60% less compared to a hospital outpatient department (1), the demand for these facilities is increasing.';
 
     return (
-      <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } ... >
+      <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } isOpen={isOpen} onChange={toggleShowHide} >
         <p>
           <Paragraph ref={ focusRef } previewText={ previewText } text={ text } />
         </p>
@@ -82,12 +85,14 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
   - Pass the text as a prop to `Paragraph` component. Omit `previewText` prop.
 
   ```jsx
-    import React, { useRef } from 'react';
+    import React, { useState, useRef } from 'react';
     import ShowHide, { Paragraph } from 'terra-show-hide';
 
     const MyComponent = () => {
       const focusRef = useRef(null);
-      ...
+      const [isOpen, setIsOpen] = useState(false);
+      const toggleShowHide = () => setIsOpen(!isOpen);
+
       // This example's content is a header and a list of 4 items.
       const header = 'Key Benefits of Cerner Cardiovascular Solutions';
       const list = [
@@ -101,21 +106,21 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
       const preview = [
         <h3>{header}</h3>,
         <ul>
-          <li>{list[0]}</li>
-          <li>{list[1]}</li>
+          <li key="item1">{list[0]}</li>
+          <li key="item2">{list[1]}</li>
         </ul>,
       ];
 
       return (
-        <ShowHide focusRef={focusRef} preview={preview} ... >
+        <ShowHide focusRef={focusRef} preview={preview} isOpen={isOpen} onChange={toggleShowHide} >
           <h3>{header}</h3>
           <ul>
-            <li>{list[0]}</li>
-            <li>{list[1]}</li>
-            <li>
+            <li key="item1">{list[0]}</li>
+            <li key="item2">{list[1]}</li>
+            <li key="item3">
               <Paragraph ref={focusRef} text={list[2]} />
             </li>
-            <li>{list[3]}</li>
+            <li key="item4">{list[3]}</li>
           </ul>
         </ShowHide>
       );
@@ -127,18 +132,20 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
   - Forward `focusRef` to the interactive element directly. There is no need to use `Paragraph` in this case.
 
   ```jsx
-    import React, { useRef } from 'react';
+    import React, { useState, useRef } from 'react';
     import ShowHide from 'terra-show-hide';
 
     const MyComponent = () => {
       const focusRef = useRef(null);
-      ...
+      const [isOpen, setIsOpen] = useState(false);
+      const toggleShowHide = () => setIsOpen(!isOpen);
+
       const previewText = 'Patients are requesting greater affordability and efficiency in healthcare.';
-      const href = 'https://www.cerner.com';
 
       return (
-        <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } ... >
-          <a ref={focusRef} href={href} ... />
+        <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } isOpen={isOpen} onChange={toggleShowHide} >
+          <p>{ previewText }</p>
+          <a ref={this.focusRef} href="https://www.cerner.com/" alt="Oracle Cerner">Oracle Cerner</a>
         </ShowHide>
       );
     }
@@ -162,8 +169,9 @@ In order for the component to be accessible, it's important to follow the inplim
 * [LTR/RTL Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#ltr--rtl)
 
 ## Examples
-<DefaultShowHide title="Default ShowHide - a Paragraph of Text" />
-<CustomButtonTextShowHide title="Custom Button Text ShowHide - List of Items" />
+<DefaultShowHide title="Default ShowHide" />
+<CustomButtonTextShowHide title="Custom Button Text ShowHide" />
+<LinkShowHide title="ShowHide with a Link" />
 <InitiallyOpenShowHide title="Initially Open ShowHide" />
 <ButtonAlignCenterShowHide title="Button Align Center ShowHide" />
 <ButtonAlignRightShowHide title="Button Align Right ShowHide" />

@@ -10,7 +10,7 @@ const sentences = [
 
 const preview = [
   <h3>{sentences[0]}</h3>,
-  <ul><li>{sentences[1]}</li></ul>,
+  <ul><li key="sentence1">{sentences[1]}</li></ul>,
 ];
 
 class CustomButtonTextShowHide extends React.Component {
@@ -47,9 +47,9 @@ class CustomButtonTextShowHide extends React.Component {
       >
         <h3>{sentences[0]}</h3>
         <ul>
-          <li>{sentences[1]}</li>
-          <li><Paragraph ref={this.focusRef} text={sentences[2]} /></li>
-          <li>{sentences[3]}</li>
+          <li key="sentence1">{sentences[1]}</li>
+          <li key="sentence2"><Paragraph ref={this.focusRef} text={sentences[2]} /></li>
+          <li key="sentence3">{sentences[3]}</li>
         </ul>
       </ShowHide>
     );

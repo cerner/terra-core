@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import styles from './ShowHide.module.scss';
@@ -35,14 +35,21 @@ const Paragraph = forwardRef((props, ref) => {
   } = props;
 
   const truncatedText = truncate(text);
+  const [focusable, setFocusable] = useState(true);
 
   return (
     <>
-      { previewText ? addTrailingWhiteSpace(previewText) : null }
+      {previewText ? <span>{addTrailingWhiteSpace(previewText)}</span> : null}
       <span className={cx('text-divider')} />
-      <span ref={ref}>{ truncatedText[0] }</span>
+      <span
+        ref={ref}
+        tabIndex={focusable ? '-1' : null}
+        onBlur={() => setFocusable(false)}
+      >
+        {truncatedText[0]}
+      </span>
       <span className={cx('text-divider')} />
-      { truncatedText[1] ? addHeadingWhiteSpace(truncatedText[1]) : null}
+      {truncatedText[1] ? <span>{addHeadingWhiteSpace(truncatedText[1])}</span> : null}
     </>
   );
 });

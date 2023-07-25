@@ -57,24 +57,6 @@ const defaultProps = {
   focusRef: null,
 };
 
-/**
-  * Returns true if element is NOT normally interactive element like button and has no negative tabindex added by user.
-  * Considers following options:
-  *
-  * (1) Focusable BUTTON element would have:
-  * element.tabIndex:  0
-  * element.hasAttribute():  false
-  *
-  * (2) Not focusable SPAN element with no tabindex set would have:
-  * element.tabIndex:  -1
-  * element.hasAttribute():  false
-  *
-  * (3) Focusable SPAN element with tabindex set to -1 would have:
-  * element.tabIndex:  -1
-  * element.hasAttribute():  true
-  */
-const checkIfAddTabindex = (element) => element?.tabIndex === -1 && !element?.hasAttribute('tabindex');
-
 const ShowHide = (props) => {
   const {
     buttonAlign,
@@ -92,12 +74,6 @@ const ShowHide = (props) => {
   const contentRef = useRef(null);
   const [containerIsActive, setContainerIsActive] = useState(false);
 
-  // Keep track of modified attributes to remove on blur
-  const isModified = useRef({
-    tabIndex: false,
-    role: false,
-  });
-
   /**
    * Upon showing hidden content, set activeElement to focusRef element if provided, othervise set it to content container.
    */
@@ -106,15 +82,6 @@ const ShowHide = (props) => {
       return;
     }
     if (focusRef?.current) {
-      if (checkIfAddTabindex(focusRef?.current)) {
-        // not focusable element with no tabindex set, safe to temporary add tabindex that will later be removed on blur
-        focusRef?.current.setAttribute('tabIndex', '-1');
-        isModified.current.tabIndex = true;
-        if (!focusRef?.current.hasAttribute('role')) {
-          focusRef?.current.setAttribute('role', 'group');
-          isModified.current.role = true;
-        }
-      }
       focusRef?.current.focus();
     } else if (contentRef?.current) {
       setContainerIsActive(true);
@@ -143,20 +110,6 @@ const ShowHide = (props) => {
     }
   }
 
-  const onBlur = (e) => {
-    if (e.target === focusRef?.current && isModified.current.tabIndex) {
-      focusRef?.current.removeAttribute('tabindex');
-      isModified.current.tabIndex = false;
-      if (isModified.current.role) {
-        focusRef?.current.removeAttribute('role');
-        isModified.current.role = false;
-      }
-    }
-    if (containerIsActive) {
-      setContainerIsActive(false);
-    }
-  };
-
   return (
     <div {...customProps}>
       {!isOpen && preview}
@@ -166,7 +119,7 @@ const ShowHide = (props) => {
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={containerIsActive ? '-1' : null}
         role={containerIsActive ? 'group' : null}
-        onBlur={onBlur}
+        onBlur={() => setContainerIsActive(false)}
       >
         <Toggle isOpen={isOpen}>
           {children}
