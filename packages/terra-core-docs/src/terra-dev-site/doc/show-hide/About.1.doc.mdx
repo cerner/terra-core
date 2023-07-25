@@ -49,29 +49,22 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
 
 #### A single paragraph of text
   - At the top level of your component declare a `ref`, pass it as `focusRef` props to `ShowHide` component. Pass a preview node as a prop to `ShowHide` component.
-  - A `Paragraph` component allows `ShowHide` component to set focus on the beginning of the hidden portion of the text upon opening. For that the text splitted in the preview and the rest of the text portions has to be passed as string props, and the `focusRef` should be forvarder to `Paragraph` component.
+  - Use `Paragraph` component inside `<p>` tag. A `Paragraph` component allows `ShowHide` component to set focus on the beginning of the hidden portion of the text upon opening. 
+  - The text splitted in the preview and the rest of the text portions has to be passed as string props, and the `focusRef` should be forwarded to `Paragraph` component.
 
   ```jsx
   import React, { useRef } from 'react';
   import ShowHide, { Paragraph } from 'terra-show-hide';
 
   const MyComponent = () => {
-        
-    // At the top level of your component declare a ref.
     const focusRef = useRef(null);
-
     ...
     // Split text in the preview and the rest of the text portions.
     const previewText = 'Patients are requesting greater affordability and efficiency in healthcare.';
     const text = 'With procedures performed in an ambulatory surgery center costing up to 60% less compared to a hospital outpatient department (1), the demand for these facilities is increasing.';
 
     return (
-      // Pass a focusRef prop to the ShowHide component.
-      // Pass a preview node as a prop to ShowHide component 
       <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } ... >
-        // Use <Paragraph /> component inside the <p /> tag.
-        // Forward focusRef to <Paragraph /> component.
-        // Pass preview and the rest of the text as string props. 
         <p>
           <Paragraph ref={ focusRef } previewText={ previewText } text={ text } />
         </p>
@@ -93,10 +86,7 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
     import ShowHide, { Paragraph } from 'terra-show-hide';
 
     const MyComponent = () => {
-
-      // At the top level of your component declare a ref.
       const focusRef = useRef(null);
-
       ...
       // This example's content is a header and a list of 4 items.
       const header = 'Key Benefits of Cerner Cardiovascular Solutions';
@@ -117,15 +107,11 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
       ];
 
       return (
-        // Pass a focusRef prop to the ShowHide component
-        // Pass a preview node as a prop to ShowHide component 
         <ShowHide focusRef={focusRef} preview={preview} ... >
-          // Dublicate the preview nodes as children here as well.
           <h3>{header}</h3>
           <ul>
             <li>{list[0]}</li>
             <li>{list[1]}</li>
-            // This is where the preview portion ends. Add Paragraph element and pass text as a prop, forward focusRef.
             <li>
               <Paragraph ref={focusRef} text={list[2]} />
             </li>
@@ -136,7 +122,7 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
     }
   ```
 
-#### First hidden child is an interactive elements (link, button, etc)
+#### First hidden child is an interactive element (link, button, etc)
   - At the top level of your component declare a `ref`.
   - Forward `focusRef` to the interactive element directly. There is no need to use `Paragraph` in this case.
 
@@ -145,20 +131,13 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
     import ShowHide from 'terra-show-hide';
 
     const MyComponent = () => {
-       
-      // At the top level of your component declare a ref.
       const focusRef = useRef(null);
-
-        ...
-      // The hidden portion of ShowHide content starts with link. 
+      ...
       const previewText = 'Patients are requesting greater affordability and efficiency in healthcare.';
       const href = 'https://www.cerner.com';
 
       return (
-        // Pass a focusRef prop to the ShowHide component.
-        // Pass a preview text node as a prop to ShowHide component 
         <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } ... >
-          // Forward focusRef to the link directly, there is no need to use <Paragraph /> component.
           <a ref={focusRef} href={href} ... />
         </ShowHide>
       );
