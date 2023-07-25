@@ -1,7 +1,7 @@
 import React from 'react';
 import IconTag from 'terra-icon/lib/icon/IconTag';
 import Tag from 'terra-tag';
-import TagList from 'terra-tag/src/subcomponent/TagList';
+import TagList from 'terra-tag/src/TagList';
 
 const HrefTag = () => (
   <div>

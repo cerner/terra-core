@@ -6,14 +6,10 @@ import {
   KEY_RIGHT,
 } from 'keycode-js';
 import classNames from 'classnames';
-import classNamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
 import ThemeContext from 'terra-theme-context';
 import { injectIntl } from 'react-intl';
-import styles from './TagList.module.scss';
-
-const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
@@ -139,10 +135,6 @@ const TagList = (props) => {
   filterTagsProps.onBlur = handleTagListOnblur;
 
   const tagListClassNames = classNames(
-    cx([
-      'tags-group',
-      theme.className,
-    ]),
     customProps.className,
   );
 
