@@ -1,10 +1,16 @@
 import React from 'react';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
+import uniqueid from 'lodash.uniqueid';
+
+import {
+  VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT,
+} from 'keycode-js';
 import styles from './examplesetup.scss';
 
 const cx = classNames.bind(styles);
 
+const feildSetId = `terra-radio-group-${uniqueid()}`;
 const handleHealthSolutionsClick = () => {
 // eslint-disable-next-line no-alert
   alert('Health solutions button has been clicked');
@@ -40,6 +46,29 @@ const handleBacktotopClick = () => {
   alert('Back to top button has been clicked');
 };
 
+const handleKeyDown = (event) => {
+  const radioGroup = document.getElementById(feildSetId);
+  const radioItems = radioGroup.querySelectorAll('[type=radio]');
+  const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
+  if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
+    if (itemIndex === radioItems.length - 1) {
+      radioItems[0].focus();
+      radioItems[0].checked = true;
+    } else {
+      radioItems[itemIndex + 1].focus();
+      radioItems[itemIndex + 1].checked = true;
+    }
+  } else if (event.key === VALUE_UP || event.key === VALUE_LEFT) {
+    if (itemIndex === 0) {
+      radioItems[radioItems.length - 1].focus();
+      radioItems[radioItems.length - 1].checked = true;
+    } else {
+      radioItems[itemIndex - 1].focus();
+      radioItems[itemIndex - 1].checked = true;
+    }
+  }
+};
+
 const ipsum = 'This example provides content containers with a fit (start and/or end region) and fill (middle region). Arrange Props have one required prop which is fill to the content to display in the body of the fill.';
 const simpleText = <span>{ipsum}</span>;
 const textWithBlueBorder = <span className={cx('outlined-placeholder')}>{ipsum}</span>;
@@ -60,13 +89,13 @@ const healthSolutionsData = (
 const consentFormData = (
   <>
     <span>A telemedicine consent form is used to confirm that a patient agrees to telemedicine services, which are medical services done remotely over the phone or computer.</span>
-    <span className={cx('space-around', 'radio-buttons')}>
+    <span className={cx('space-around', 'radio-buttons')} id={feildSetId}>
       <label htmlFor="yes">
-        <input type="radio" id="yes" name="inline-example" value="yes" />
+        <input type="radio" id="yes" name="inline-example" value="yes" onKeyDown={handleKeyDown} />
         <span className={cx('label')}>Yes</span>
       </label>
       <label htmlFor="no">
-        <input type="radio" id="no" name="inline-example" value="no" />
+        <input type="radio" id="no" name="inline-example" value="no" onKeyDown={handleKeyDown} />
         <span className={cx('label')}>No</span>
       </label>
     </span>
