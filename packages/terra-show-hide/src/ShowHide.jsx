@@ -9,6 +9,7 @@ import ThemeContext from 'terra-theme-context';
 import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
 import Paragraph from './_ShowHideParagraph';
+import { v4 as uuidv4 } from 'uuid';
 
 const cx = classNames.bind(styles);
 
@@ -93,6 +94,10 @@ const ShowHide = (props) => {
       contentRef?.current?.focus();
     }
   }, [containerIsActive, isOpen]);
+
+  const id = uuidv4();
+  const contentId = `show-hide-content-${id}`;
+
   const buttonClassName = cx([
     'show-hide',
     'button',
@@ -120,6 +125,7 @@ const ShowHide = (props) => {
     <div {...customProps}>
       {!isOpen && preview}
       <div
+        id={contentId}
         className={cx(['show-hide', 'show-hide-content', theme.className])}
         ref={contentRef}
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
@@ -133,6 +139,7 @@ const ShowHide = (props) => {
       </div>
       <div className={cx('show-hide')}>
         <Button
+          aria-controls={contentId}
           aria-expanded={isOpen}
           text={buttonText || intlButtonText}
           onClick={onChange}

@@ -48,9 +48,9 @@ class CustomButtonTextShowHide extends React.Component {
         <h3>{sentences[0]}</h3>
         <ul>
           <li>{sentences[1]}</li>
+          <li><Paragraph ref={this.focusRef} text={sentences[2]} /></li>
+          <li>{sentences[3]}</li>
         </ul>
-        <span><Paragraph ref={this.focusRef} text={sentences[2]} /></span>
-        <p>{sentences[3]}</p>
       </ShowHide>
     );
   }
