@@ -119,7 +119,7 @@ class SectionHeader extends React.Component {
     ]);
 
     const accordionIcon = (
-      <span className={cx('accordion-icon-wrapper', 'icon-wrapper')}>
+      <span className={cx('accordion-icon-wrapper')}>
         <span className={iconClassNames} />
       </span>
     );
@@ -157,14 +157,13 @@ class SectionHeader extends React.Component {
       type: 'button', tabIndex: '-1', 'aria-expanded': isOpen, 'aria-label': headerText,
     } : undefined;
     const ArrangeWrapper = onClick && accordionIcon ? 'button' : 'span';
-    const buttonClassName = onClick && accordionIcon ? cx('toggle-button') : undefined;
 
     return (
       <Element {...attributes} className={sectionHeaderClassNames} aria-label={!onClick ? headerText : undefined}>
-        <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper', buttonClassName)} tabIndex="-1">
+        <ArrangeWrapper {...buttonAttributes} className={cx('arrange-wrapper')}>
           <Arrange
             fitStart={onClick && accordionIcon}
-            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title', 'title-block')}>{headerText}</span>}
+            fill={<span aria-hidden={(onClick !== undefined)} className={cx('title')}>{headerText}</span>}
             className={cx('title-arrange')}
           />
         </ArrangeWrapper>
