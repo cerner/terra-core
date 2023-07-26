@@ -84,7 +84,7 @@ const ShowHide = (props) => {
     if (focusRef?.current) {
       focusRef?.current.focus();
     } else if (contentRef?.current) {
-      setContainerIsActive(false);
+      setContainerIsActive(true);
     }
   }, [isOpen, focusRef, contentRef]);
 
