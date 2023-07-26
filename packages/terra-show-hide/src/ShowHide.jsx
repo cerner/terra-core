@@ -4,12 +4,12 @@ import React, {
 import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
 import { injectIntl } from 'react-intl';
+import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
 import Paragraph from './_ShowHideParagraph';
-import { v4 as uuidv4 } from 'uuid';
 
 const cx = classNames.bind(styles);
 

@@ -6,7 +6,7 @@ const sentences = [
   'Key Benefits of Cerner Cardiovascular Solutions',
   'Eliminates silos of information and the resulting inefficiencies with a unified EHR and cardiovascular system.',
   'Creates efficient diagnostic workflows, image management and analysis.',
-  'Enhances clinical, financial and performance outcomes with comprehensive procedural documentation. Enhances clinical, financial and performance outcomes with comprehensive procedural documentation.',
+  'Enhances clinical, financial and performance outcomes with comprehensive procedural documentation.',
   'Promotes cardiac disease management through health maintenance protocols.',
 ];
 
@@ -52,10 +52,10 @@ class CustomButtonTextShowHide extends React.Component {
       >
         <h3>{sentences[0]}</h3>
         <ul style={{ display: 'block' }}>
-          <li style={{ display: 'block' }}>{sentences[1]}</li>
-          <li style={{ display: 'block' }}>{sentences[2]}</li>
-          <li style={{ display: 'block' }}><Paragraph ref={this.focusRef} text={sentences[3]} /></li>
-          <li style={{ display: 'block' }}>{sentences[4]}</li>
+          <li style={{ display: 'block', listStyle: 'disc' }}>{sentences[1]}</li>
+          <li style={{ display: 'block', listStyle: 'disc' }}>{sentences[2]}</li>
+          <li style={{ display: 'block', listStyle: 'disc' }}><Paragraph ref={this.focusRef} text={sentences[3]} /></li>
+          <li style={{ display: 'block', listStyle: 'disc' }}>{sentences[4]}</li>
         </ul>
       </ShowHide>
     );
