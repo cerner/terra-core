@@ -14,7 +14,7 @@ const FieldExamples = () => {
   // Function for email validation
   const emailValidation = (e) => {
     e.preventDefault();
-    const regExEmail = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+    const regExEmail = /^[-a-z0-9#$%^&'`?{}_=+\/}{\'?]+(\.[-a-z0-9#$%^&'`?{}_=+\/}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.([a-z][a-z]{1,2}))?$/i;
     if (!regExEmail.test(email) && email !== '') {
       setEmailInvalid(true);
       setMessage('The e-mail address entered is invalid');
