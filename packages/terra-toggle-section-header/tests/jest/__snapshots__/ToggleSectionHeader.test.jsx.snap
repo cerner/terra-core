@@ -48,7 +48,7 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
     <button
       aria-expanded="false"
       aria-label="default title"
-      class="arrange-wrapper toggle-button"
+      class="arrange-wrapper"
       tabindex="-1"
       type="button"
     >
@@ -59,7 +59,7 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
           class="fit fit-block"
         >
           <span
-            class="accordion-icon-wrapper icon-wrapper"
+            class="accordion-icon-wrapper"
           >
             <span
               class="accordion-icon"
@@ -71,7 +71,7 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
         >
           <span
             aria-hidden="true"
-            class="title title-block"
+            class="title"
           >
             default title
           </span>
@@ -99,7 +99,7 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
     <button
       aria-expanded="false"
       aria-label="animated title"
-      class="arrange-wrapper toggle-button"
+      class="arrange-wrapper"
       tabindex="-1"
       type="button"
     >
@@ -110,7 +110,7 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
           class="fit fit-block"
         >
           <span
-            class="accordion-icon-wrapper icon-wrapper"
+            class="accordion-icon-wrapper"
           >
             <span
               class="accordion-icon"
@@ -122,7 +122,7 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
         >
           <span
             aria-hidden="true"
-            class="title title-block"
+            class="title"
           >
             animated title
           </span>
@@ -160,7 +160,7 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
     <button
       aria-expanded="true"
       aria-label="initially open title"
-      class="arrange-wrapper toggle-button"
+      class="arrange-wrapper"
       tabindex="-1"
       type="button"
     >
@@ -171,7 +171,7 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
           class="fit fit-block"
         >
           <span
-            class="accordion-icon-wrapper icon-wrapper"
+            class="accordion-icon-wrapper"
           >
             <span
               class="accordion-icon is-open"
@@ -183,7 +183,7 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
         >
           <span
             aria-hidden="true"
-            class="title title-block"
+            class="title"
           >
             initially open title
           </span>
@@ -232,7 +232,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
         <button
           aria-expanded={true}
           aria-label="opens on click title"
-          className="arrange-wrapper toggle-button"
+          className="arrange-wrapper"
           tabIndex="-1"
           type="button"
         >
@@ -241,14 +241,14 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
             fill={
               <span
                 aria-hidden={true}
-                className="title title-block"
+                className="title"
               >
                 opens on click title
               </span>
             }
             fitStart={
               <span
-                className="accordion-icon-wrapper icon-wrapper"
+                className="accordion-icon-wrapper"
               >
                 <span
                   className="accordion-icon is-open"
@@ -263,7 +263,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
                 className="fit fit-block"
               >
                 <span
-                  className="accordion-icon-wrapper icon-wrapper"
+                  className="accordion-icon-wrapper"
                 >
                   <span
                     className="accordion-icon is-open"
@@ -275,7 +275,7 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
               >
                 <span
                   aria-hidden={true}
-                  className="title title-block"
+                  className="title"
                 >
                   opens on click title
                 </span>
