@@ -2,9 +2,10 @@ import React from 'react';
 import ShowHide, { Paragraph } from 'terra-show-hide';
 
 const sentences = [
-  'Key Benefits of Cerner Cardiovascular Solutions.',
+  'Key Benefits of Cerner Cardiovascular Solutions',
   'Eliminates silos of information and the resulting inefficiencies with a unified EHR and cardiovascular system.',
-  'Creates efficient diagnostic workflows, image management and analysis. Enhances clinical, financial and performance outcomes with comprehensive procedural documentation.',
+  'Creates efficient diagnostic workflows, image management and analysis.',
+  'Enhances clinical, financial and performance outcomes with comprehensive procedural documentation.',
   'Promotes cardiac disease management through health maintenance protocols.',
 ];
 
@@ -48,8 +49,9 @@ class CustomButtonTextShowHide extends React.Component {
         <h3>{sentences[0]}</h3>
         <ul>
           <li>{sentences[1]}</li>
-          <li><Paragraph ref={this.focusRef} text={sentences[2]} /></li>
-          <li>{sentences[3]}</li>
+          <li>{sentences[2]}</li>
+          <li><Paragraph ref={this.focusRef} text={sentences[3]} /></li>
+          <li>{sentences[4]}</li>
         </ul>
       </ShowHide>
     );

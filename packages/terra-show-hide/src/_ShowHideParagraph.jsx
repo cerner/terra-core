@@ -61,7 +61,7 @@ const Paragraph = forwardRef((props, ref) => {
   const [focusable, setFocusable] = useState(true);
 
   return (
-    <span className={cx('focus-container')}>
+    <>
       {previewText ? addTrailingWhiteSpace(previewText) : null}
       <span className={cx('text-divider')} />
       <span
@@ -74,7 +74,7 @@ const Paragraph = forwardRef((props, ref) => {
       </span>
       <span className={cx('text-divider')} />
       {truncatedText[1] ? addHeadingWhiteSpace(truncatedText[1]) : null}
-    </span>
+    </>
   );
 });
 
