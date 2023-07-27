@@ -520,62 +520,72 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
 
 exports[`Snapshots renders a search field that displays as a block to fill its container 1`] = `
 <div
-  className="search-field block"
+  aria-label="Search region"
+  role="search"
 >
   <div
-    className="input-group"
+    aria-label="TestGroup"
+    role="group"
   >
-    <input
-      aria-disabled={false}
-      aria-label="Terra.searchField.search"
-      className="input"
-      disabled={false}
-      onChange={[Function]}
-      onInput={[Function]}
-      onKeyDown={[Function]}
-      placeholder=""
-      type="search"
-    />
-    <Button
-      className="clear"
-      data-terra-search-field-button="Clear"
-      icon={
-        <span
-          className="clear-icon"
+    <div
+      className="search-field block"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          aria-disabled={false}
+          aria-label="Terra.searchField.search"
+          className="input"
+          disabled={false}
+          onChange={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          type="search"
         />
-      }
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isIconOnly={true}
-      isReversed={false}
-      onClick={[Function]}
-      text="Terra.searchField.clear"
-      type="button"
-      variant="utility"
-    />
-  </div>
-  <Button
-    className="button"
-    data-terra-search-field-button="Search"
-    icon={
-      <IconSearch
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
+        <Button
+          className="clear"
+          data-terra-search-field-button="Clear"
+          icon={
+            <span
+              className="clear-icon"
+            />
+          }
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isIconOnly={true}
+          isReversed={false}
+          onClick={[Function]}
+          text="Terra.searchField.clear"
+          type="button"
+          variant="utility"
+        />
+      </div>
+      <Button
+        className="button"
+        data-terra-search-field-button="Search"
+        icon={
+          <IconSearch
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
+        isBlock={false}
+        isCompact={true}
+        isDisabled={false}
+        isIconOnly={true}
+        isReversed={false}
+        onClick={[Function]}
+        refCallback={[Function]}
+        text="Terra.searchField.submit-search"
+        type="button"
+        variant="neutral"
       />
-    }
-    isBlock={false}
-    isCompact={true}
-    isDisabled={false}
-    isIconOnly={true}
-    isReversed={false}
-    onClick={[Function]}
-    refCallback={[Function]}
-    text="Terra.searchField.submit-search"
-    type="button"
-    variant="neutral"
-  />
+    </div>
+  </div>
 </div>
 `;
 

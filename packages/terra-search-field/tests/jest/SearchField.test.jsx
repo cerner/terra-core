@@ -44,11 +44,11 @@ describe('Snapshots', () => {
   });
 
   it('renders a search field that displays as a block to fill its container', () => {
-    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isBlock />).find('.search-field').dive();
-    console.log(searchField);
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isBlock />).dive();
+    // console.log(searchField);
     searchField.instance().updateSearchText('Test');
     
-    expect(searchField.prop('className')).toContain('block');
+    expect(searchField.find('.search-field').prop('className')).toContain('block');
     expect(searchField).toMatchSnapshot();
   });
 
@@ -102,9 +102,8 @@ describe('Manual Search', () => {
     const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} />).dive();
     
     searchField.instance().updateSearchText('Te');
-    console.log(searchField)
     expect(onSearch).not.toBeCalled();
-    searchField.find('button').simulate('click');
+    searchField.find('.search-field').childAt(1).simulate('click');
     expect(onSearch).toBeCalledTimes(1);
     expect(onSearch).toBeCalledWith('Te');
   });
@@ -134,7 +133,7 @@ describe('Manual Search', () => {
     searchField.setState({ searchText: 'T' });
 
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(3).simulate('click');
+    searchField.find('.search-field').childAt(1).simulate('click');
     expect(onSearch).not.toBeCalled();
   });
 
@@ -144,7 +143,7 @@ describe('Manual Search', () => {
     searchField.setState({ searchText: 'Sear' });
 
     expect(onSearch).not.toBeCalled();
-    searchField.childAt(3).simulate('click');
+    searchField.find('.search-field').childAt(1).simulate('click');
     expect(onSearch).not.toBeCalled();
   });
 
@@ -152,7 +151,7 @@ describe('Manual Search', () => {
     const searchField = shallowWithIntl(<SearchField groupName="TestGroup" minimumSearchTextLength={5} />).dive();
     searchField.setState({ searchText: 'Searc' });
 
-    searchField.childAt(3).simulate('click'); // Verifies we do not attempt to call an undefined function.
+    searchField.find('.search-field').childAt(1).simulate('click'); // Verifies we do not attempt to call an undefined function.
   });
 });
 
@@ -184,7 +183,7 @@ describe('Auto Search', () => {
 
     expect(onSearch).not.toBeCalled();
 
-    searchField.childAt(3).simulate('click');
+    searchField.find('.search-field').childAt(1).simulate('click');
     expect(onSearch).toBeCalledWith('Te');
 
     jest.runAllTimers();
