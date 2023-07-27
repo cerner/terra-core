@@ -127,7 +127,6 @@ const homeButton = (
     className={cx(['arrange-button'])}
     isIconOnly
     icon={<span className={cx(['header-icon', 'home'])} />}
-    aria-label="home"
     onClick={handleHomeClick}
     text="Home button"
   />
@@ -138,7 +137,6 @@ const menuButton = (
     className={cx(['arrange-button'])}
     isIconOnly
     icon={<span className={cx(['header-icon', 'menu'])} />}
-    aria-label="menu"
     onClick={handleMenuClick}
     text="Menu button"
   />
@@ -149,7 +147,6 @@ const chatButton = (
     className={cx(['arrange-button'])}
     isIconOnly
     icon={<span className={cx(['header-icon', 'chat'])} />}
-    aria-label="chat with us"
     onClick={handleChatClick}
     text="Chat with us button"
   />
@@ -160,7 +157,6 @@ const settingsButton = (
     className={cx(['arrange-button'])}
     isIconOnly
     icon={<span className={cx(['header-icon', 'settings'])} />}
-    aria-label="settings"
     onClick={handleSettingsClick}
     text="Settings button"
   />
@@ -171,7 +167,6 @@ const twitterButton = (
     className={cx(['arrange-button'])}
     isIconOnly
     icon={<span className={cx(['header-icon', 'twitter'])} />}
-    aria-label="twitter"
     onClick={handleTwitterClick}
     text="Twitter button"
   />
@@ -182,7 +177,6 @@ const backtotopButton = (
     className={cx(['arrange-button'])}
     isIconOnly
     icon={<span className={cx(['header-icon', 'backtotop'])} />}
-    aria-label="backtotop"
     onClick={handleBacktotopClick}
     text="Back to top button"
   />
