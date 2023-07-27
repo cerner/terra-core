@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+*Fixed
+  *Fixed Terra- Button Group Accessiblity Issues.
 
 ## 3.65.0 - (August 8, 2023)
 

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
-import { KEY_RIGHT, KEY_LEFT } from 'keycode-js';
+import {
+  KEY_RIGHT, KEY_LEFT, KEY_UP, KEY_DOWN,
+} from 'keycode-js';
 import ButtonGroupButton from './ButtonGroupButton';
 import ButtonGroupUtils from './ButtonGroupUtils';
 import styles from './ButtonGroup.module.scss';
@@ -60,17 +62,26 @@ class ButtonGroup extends React.Component {
   handleKeyDown(event, idx) {
     const allBtns = this.btnGrpRef.querySelectorAll('[data-terra-button-group-button]');
     let key = idx;
-
-    if (event.keyCode === KEY_RIGHT && allBtns[key + 1]) {
-      key += 1;
-      while (allBtns[key] && allBtns[key].hasAttribute('disabled')) {
+    if ((event.keyCode === KEY_RIGHT || event.keyCode === KEY_DOWN)) {
+      if (idx === allBtns.length - 1) {
+        key = 0;
+      } else {
         key += 1;
+        if (allBtns[key].hasAttribute('disabled')) {
+          key += 1;
+          if (key === allBtns.length) {
+            key = 0;
+          }
+        }
       }
       if (allBtns[key]) allBtns[key].focus();
     }
-
-    if (event.keyCode === KEY_LEFT && allBtns[key - 1]) {
-      key -= 1;
+    if ((event.keyCode === KEY_LEFT || event.keyCode === KEY_UP)) {
+      if (idx === 0) {
+        key = allBtns.length - 1;
+      } else {
+        key -= 1;
+      }
       while (allBtns[key] && allBtns[key].hasAttribute('disabled')) {
         key -= 1;
       }
@@ -123,7 +134,7 @@ class ButtonGroup extends React.Component {
 
     const allButtons = children ? [] : undefined;
     // eslint-disable-next-line no-nested-ternary
-    const btnRole = onChange ? isMultiSelect ? 'checkbox' : 'radio' : 'button';
+    const btnRole = onChange ? isMultiSelect ? 'checkbox' : 'radio' : '';
 
     React.Children.forEach(children, (child, index) => {
       const isSelected = selectedKeys.indexOf(child.key) > -1;
