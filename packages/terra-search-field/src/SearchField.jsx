@@ -296,41 +296,44 @@ class SearchField extends React.Component {
       : undefined;
 
     return (
-      <div role="search" aria-label="Search region">
-        <div role="group" aria-label={groupName}>
-          {isLabelVisible && 
-          <div> 
-            <label className={cx('label')}> {groupName} </label>
-          </div>}
-          
-          <div {...customProps} className={searchFieldClassNames}>
-            <div className={cx('input-group')}>
-              <input
-                {...additionalInputAttributes}
-                className={inputClass}
-                type="search"
-                placeholder={placeholder}
-                onChange={this.handleTextChange}
-                disabled={isDisabled}
-                aria-label={inputText}
-                aria-disabled={isDisabled}
-                onKeyDown={this.handleKeyDown}
-                onInput={this.handleInput}
-                ref={this.setInputRef}
+      <div>
+        {isLabelVisible
+        && (
+          <div>
+            <label className={cx('label')}>{groupName}</label>
+          </div>
+        )}
+        <div role="search" aria-label="Search region">
+          <div role="group" aria-label={groupName}>
+            <div {...customProps} className={searchFieldClassNames}>
+              <div className={cx('input-group')}>
+                <input
+                  {...additionalInputAttributes}
+                  className={inputClass}
+                  type="search"
+                  placeholder={placeholder}
+                  onChange={this.handleTextChange}
+                  disabled={isDisabled}
+                  aria-label={inputText}
+                  aria-disabled={isDisabled}
+                  onKeyDown={this.handleKeyDown}
+                  onInput={this.handleInput}
+                  ref={this.setInputRef}
+                />
+                {clearButton}
+              </div>
+              <Button
+                data-terra-search-field-button="Search"
+                className={cx('button')}
+                text={buttonText}
+                onClick={this.handleSearch}
+                isDisabled={isDisabled}
+                icon={Icon}
+                isIconOnly
+                isCompact
+                refCallback={(ref) => { this.searchBtnRef.current = ref; }}
               />
-              {clearButton}
             </div>
-            <Button
-              data-terra-search-field-button="Search"
-              className={cx('button')}
-              text={buttonText}
-              onClick={this.handleSearch}
-              isDisabled={isDisabled}
-              icon={Icon}
-              isIconOnly
-              isCompact
-              refCallback={(ref) => { this.searchBtnRef.current = ref; }}
-            />
           </div>
         </div>
       </div>

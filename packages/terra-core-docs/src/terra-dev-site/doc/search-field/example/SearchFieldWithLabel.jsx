@@ -11,7 +11,7 @@ const SearchFieldWithLabel = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField groupName="Search Field Group name" isLabelVisible onSearch={setSearchText} onInvalidSearch={setSearchText}/>
+      <SearchField groupName="Search Field Group name" isLabelVisible onSearch={setSearchText} onInvalidSearch={setSearchText} />
     </div>
   );
 };
