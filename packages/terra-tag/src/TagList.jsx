@@ -1,5 +1,5 @@
 import React, {
-  useCallback, useLayoutEffect, useRef, useState
+  useCallback, useLayoutEffect, useRef, useState,
 } from 'react';
 import {
   KEY_LEFT,
@@ -8,7 +8,6 @@ import {
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
-import ThemeContext from 'terra-theme-context';
 import { injectIntl } from 'react-intl';
 
 const propTypes = {
@@ -24,7 +23,6 @@ const TagList = (props) => {
     ...customProps
   } = props;
 
-  const theme = React.useContext(ThemeContext);
   const [containerTabindex, setContainerTabindex] = useState('-1');
   const [updatedCount, setUpdatedCount] = useState(React.Children.count(children));
   const currentTag = useRef(); // ID of the tag that will receive focus
@@ -110,7 +108,7 @@ const TagList = (props) => {
       focusCurrentNode();
     }
   };
-  
+
   const handleTagListKeyDown = (event) => {
     const tags = [...filterTagsRef.current.querySelectorAll('button, a')];
 
@@ -141,7 +139,7 @@ const TagList = (props) => {
   const renderChildren = (items) => {
     const tags = React.Children.map(items, (tag) => {
       if (React.isValidElement(tag)) {
-        return React.cloneElement(tag);
+        return <li style={{ display: 'inline-block' }}>{React.cloneElement(tag)}</li>; /* eslint-disable-next-line react/forbid-dom-props */
       }
       return undefined;
     });

@@ -121,5 +121,8 @@
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.1.4"
+  },
+  "dependencies": {
+    "resize-observer-polyfill": "^1.5.1"
   }
 }
