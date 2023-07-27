@@ -10,8 +10,10 @@
 ## 3.84.0 - (August 1, 2023)
 
 * Changed
+  * Group Terra Search Field components together and add optional Label
+* Changed
   * Updated focus indicators to be a standard dashed line.
-
+  
 ## 3.83.0 - (June 14, 2023)
 
 * Fixed

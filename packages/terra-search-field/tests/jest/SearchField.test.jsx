@@ -7,12 +7,12 @@ import SearchField from '../../src/SearchField';
 
 describe('Snapshots', () => {
   it('renders a basic search field', () => {
-    const searchField = shallowWithIntl(<SearchField groupName="TestGroup"/>).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" />).dive();
     expect(searchField).toMatchSnapshot();
   });
 
   it('renders a search field with a label', () => {
-    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isLabelVisible/>).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isLabelVisible />).dive();
     expect(searchField.find('label').text()).toEqual('TestGroup');
     expect(searchField).toMatchSnapshot();
   });
@@ -45,9 +45,7 @@ describe('Snapshots', () => {
 
   it('renders a search field that displays as a block to fill its container', () => {
     const searchField = shallowWithIntl(<SearchField groupName="TestGroup" isBlock />).dive();
-    // console.log(searchField);
     searchField.instance().updateSearchText('Test');
-    
     expect(searchField.find('.search-field').prop('className')).toContain('block');
     expect(searchField).toMatchSnapshot();
   });
@@ -78,7 +76,7 @@ describe('Snapshots', () => {
   });
 
   it('clears form with clear method', () => {
-    const searchField = shallowWithIntl(<SearchField groupName="TestGroup"/>).dive();
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" />).dive();
     searchField.instance().updateSearchText('amp');
 
     expect(searchField.instance().searchText).toBe('amp');
@@ -89,7 +87,7 @@ describe('Snapshots', () => {
   it('correctly applies the theme context className', () => {
     const searchField = mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
-        <SearchField groupName="TestGroup"/>
+        <SearchField groupName="TestGroup" />
       </ThemeContextProvider>,
     );
     expect(searchField).toMatchSnapshot();
@@ -100,7 +98,6 @@ describe('Manual Search', () => {
   it('triggers search on button click', () => {
     const onSearch = jest.fn();
     const searchField = shallowWithIntl(<SearchField groupName="TestGroup" onSearch={onSearch} />).dive();
-    
     searchField.instance().updateSearchText('Te');
     expect(onSearch).not.toBeCalled();
     searchField.find('.search-field').childAt(1).simulate('click');
@@ -216,8 +213,7 @@ describe('Auto Search', () => {
   });
 
   it('uses standard timeout for search delay when not provided', () => {
-    const searchField = shallowWithIntl(<SearchField groupName="TestGroup"/>).dive();
-
+    const searchField = shallowWithIntl(<SearchField groupName="TestGroup" />).dive();
     searchField.find('.input').simulate('change', { target: {} });
     expect(setTimeout).toBeCalledWith(expect.anything(), 250);
   });

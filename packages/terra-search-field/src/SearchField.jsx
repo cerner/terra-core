@@ -298,9 +298,12 @@ class SearchField extends React.Component {
     return (
       <div role="search" aria-label="Search region">
         <div role="group" aria-label={groupName}>
-          {isLabelVisible && <div> <label className={cx('label')}>{groupName}</label></div>} 
+          {isLabelVisible && 
+          <div> 
+            <label className={cx('label')}> {groupName} </label>
+          </div>}
+          
           <div {...customProps} className={searchFieldClassNames}>
-            
             <div className={cx('input-group')}>
               <input
                 {...additionalInputAttributes}

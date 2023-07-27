@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Added
+  * Added Search field example with optional Label
+  * Updated Search Field Examples to use group name
+
 ## 1.34.0 - (August 8, 2023)
 
 * Updated
