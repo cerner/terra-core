@@ -87,6 +87,7 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
         </p>
         <div
           className="show-hide show-hide-content orion-fusion-theme"
+          id="show-hide-content-00000000-0000-0000-0000-000000000000"
           onBlur={[Function]}
           role={null}
           tabIndex={null}
@@ -105,12 +106,14 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
           className="show-hide"
         >
           <Button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="show-hide button start"
             onClick={[Function]}
             text="Terra.showhide.showmore"
           >
             <button
+              aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
               aria-expanded={false}
               className="button orion-fusion-theme show-hide button start"
               onBlur={[Function]}
@@ -228,6 +231,7 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -246,12 +250,14 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -380,6 +386,7 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -398,12 +405,14 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -520,6 +529,7 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -538,12 +548,14 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start TestClass"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start TestClass"
             onBlur={[Function]}
@@ -660,6 +672,7 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -678,12 +691,14 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -797,6 +812,7 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -815,12 +831,14 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button center"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button center"
             onBlur={[Function]}
@@ -933,6 +951,7 @@ exports[`ShowHide should render a default show-hide component 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -951,12 +970,14 @@ exports[`ShowHide should render a default show-hide component 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1056,6 +1077,7 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
     <div>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -1074,12 +1096,14 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1190,6 +1214,7 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
     <div>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role="group"
         tabIndex="-1"
@@ -1210,12 +1235,14 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={true}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.hide"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={true}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1331,6 +1358,7 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -1349,12 +1377,14 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Collapsed Text"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1467,6 +1497,7 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
     <div>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role="group"
         tabIndex="-1"
@@ -1487,12 +1518,14 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={true}
           className="show-hide button start"
           onClick={[Function]}
           text="Expanded Text"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={true}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1605,6 +1638,7 @@ exports[`ShowHide should set children prop correctly 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -1623,12 +1657,14 @@ exports[`ShowHide should set children prop correctly 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1739,6 +1775,7 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
     <div>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role="group"
         tabIndex="-1"
@@ -1759,12 +1796,14 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={true}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.hide"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={true}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1877,6 +1916,7 @@ exports[`ShowHide should set preview prop correctly 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -1895,12 +1935,14 @@ exports[`ShowHide should set preview prop correctly 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -2014,6 +2056,7 @@ exports[`ShowHide should set the button to align right 1`] = `
       </p>
       <div
         className="show-hide show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
         onBlur={[Function]}
         role={null}
         tabIndex={null}
@@ -2032,12 +2075,14 @@ exports[`ShowHide should set the button to align right 1`] = `
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button end"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button end"
             onBlur={[Function]}

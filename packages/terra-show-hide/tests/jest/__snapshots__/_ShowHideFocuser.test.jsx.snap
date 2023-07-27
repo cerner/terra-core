@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Paragraph should render divider spans and a span to focus to correctly 1`] = `
+exports[`Focuser should render divider spans and a span to focus to correctly 1`] = `
 <p>
   <span
     class="text-divider"
@@ -18,7 +18,25 @@ exports[`Paragraph should render divider spans and a span to focus to correctly 
 </p>
 `;
 
-exports[`Paragraph should render preview text correctly 1`] = `
+exports[`Focuser should render focusable text correctly 1`] = `
+<p>
+  <span
+    class="text-divider"
+  />
+  <span
+    role="group"
+    tabindex="-1"
+  >
+    In fact, the U.S. ambulatory surgery center market is expected to see a 6.9 % compound annual growth rate, reaching $33 billion by 2028. (2) Cerner
+  </span>
+  <span
+    class="text-divider"
+  />
+   understands the urgency to grow in the ambulatory surgery center market while continuing to deliver excellent care.
+</p>
+`;
+
+exports[`Focuser should render preview text correctly 1`] = `
 <p>
   Patients are requesting greater affordability and efficiency in healthcare. 
   <span
@@ -34,22 +52,5 @@ exports[`Paragraph should render preview text correctly 1`] = `
     class="text-divider"
   />
    understands the urgency to grow in the ambulatory surgery center market while continuing to deliver excellent care.
-</p>
-`;
-
-exports[`Paragraph should render short text correctly 1`] = `
-<p>
-  <span
-    class="text-divider"
-  />
-  <span
-    role="group"
-    tabindex="-1"
-  >
-    In fact, the U.S. ambulatory surgery center market is expected to see a 6.9 % compound annual growth rate.
-  </span>
-  <span
-    class="text-divider"
-  />
 </p>
 `;

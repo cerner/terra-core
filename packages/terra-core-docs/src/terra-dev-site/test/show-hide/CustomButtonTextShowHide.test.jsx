@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowHide, { Paragraph } from 'terra-show-hide';
+import ShowHide, { Focuser } from 'terra-show-hide';
 
 const sentence = 'Lorem ipsum dolor sit amet consectetur adipiscing elit.';
 
@@ -47,7 +47,7 @@ class CustomButtonTextShowHideTest extends React.Component {
         <ul>
           <li>{`${sentence}`}</li>
           <li>{`${sentence}`}</li>
-          <li><Paragraph ref={this.focusRef} text={sentence} /></li>
+          <li><Focuser ref={this.focusRef} focusableText={sentence} /></li>
           <li>{`${sentence}`}</li>
           <li>{`${sentence}`}</li>
         </ul>

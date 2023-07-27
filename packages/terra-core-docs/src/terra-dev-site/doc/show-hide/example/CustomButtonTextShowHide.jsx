@@ -1,21 +1,25 @@
-/* eslint-disable react/forbid-dom-props */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import ShowHide, { Paragraph } from 'terra-show-hide';
+import ShowHide, { Focuser } from 'terra-show-hide';
 
-const sentences = [
-  'Key Benefits of Cerner Cardiovascular Solutions',
-  'Eliminates silos of information and the resulting inefficiencies with a unified EHR and cardiovascular system.',
-  'Creates efficient diagnostic workflows, image management and analysis.',
-  'Enhances clinical, financial and performance outcomes with comprehensive procedural documentation.',
-  'Promotes cardiac disease management through health maintenance protocols.',
+const header = 'Bringing clarity to life sciences and healthcare decision-making ';
+const text = [
+  'When we accelerate the discovery, development and deployment of life-enhancing insights and therapies, clinicians and patients benefit. Connecting data and breaking down silos',
+  'across the healthcare innovation ecosystem must be our collective focus to help improve everyday health for all people. Several factors help bring clarity to life sciences, researchers and clinicians and',
+  'guide better care,',
+  'including:',
 ];
+const listItems = [
+  <li key="item1">Data-driven research solutions for commercial and real-world evidence collaborators and health providers</li>,
+  <li key="item2">Support to move from simply accumulating and analyzing data to linking and generating deeper insights </li>,
+  <li key="item3">Combined life sciences knowledge, healthcare innovation and collaborative research expertise</li>,
+  <li key="item4">Access to an expansive network of diverse research-ready health systems; as well as de-identified, real-world data from the EHR that also includes patient-reported outcomes</li>,
+];
+const conclusion = 'Through data and technology, we have the power to help life sciences, clinicians and researchers expand therapeutic areas of research and generate better evidence to solve healthcare challenges around the world. Together, we can accelerate groundbreaking research and trial opportunities that have the potential to transform everyday healthcare and improve people’s lives.';
 
 const preview = [
-  <h3 key="header">{sentences[0]}</h3>,
-  <ul key="list" style={{ display: 'block' }}>
-    <li style={{ display: 'block' }}>{sentences[1]}</li>
-    <li style={{ display: 'block' }}>{sentences[2]}</li>
-  </ul>,
+  <h3>{header}</h3>,
+  <p>{text[0]}</p>,
 ];
 
 class CustomButtonTextShowHide extends React.Component {
@@ -37,9 +41,9 @@ class CustomButtonTextShowHide extends React.Component {
     let customText = '';
 
     if (this.state.isOpen) {
-      customText = `Hide ${sentences.length - 3} Sentences`;
+      customText = 'Hide Composit Content';
     } else {
-      customText = `Show ${sentences.length - 3} More Sentences`;
+      customText = 'Show Composit Content';
     }
 
     return (
@@ -50,13 +54,16 @@ class CustomButtonTextShowHide extends React.Component {
         buttonText={customText}
         focusRef={this.focusRef}
       >
-        <h3>{sentences[0]}</h3>
-        <ul style={{ display: 'block' }}>
-          <li style={{ display: 'block', listStyle: 'disc' }}>{sentences[1]}</li>
-          <li style={{ display: 'block', listStyle: 'disc' }}>{sentences[2]}</li>
-          <li style={{ display: 'block', listStyle: 'disc' }}><Paragraph ref={this.focusRef} text={sentences[3]} /></li>
-          <li style={{ display: 'block', listStyle: 'disc' }}>{sentences[4]}</li>
-        </ul>
+        <h3>{header}</h3>
+        <p>
+          <Focuser ref={this.focusRef} prefix={text[0]} focusableText={text[1]} />
+          {' '}
+          <a href="#">{text[2]}</a>
+          {' '}
+          {text[3]}
+        </p>
+        <ul>{listItems}</ul>
+        <p>{conclusion}</p>
       </ShowHide>
     );
   }

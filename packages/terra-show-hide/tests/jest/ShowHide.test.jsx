@@ -5,6 +5,8 @@ import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import { mountWithIntl } from 'terra-enzyme-intl';
 import ShowHide from '../../src/ShowHide';
 
+jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
+
 describe('ShowHide', () => {
   // Snapshot Tests
   it('should render a default show-hide component', () => {

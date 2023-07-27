@@ -1,8 +1,8 @@
 import React from 'react';
 import ShowHide from 'terra-show-hide';
 
-const previewText = 'Patients are requesting greater affordability and efficiency in healthcare. With procedures performed in an ambulatory surgery center costing up to 60% less compared to a hospital outpatient department (1), the demand for these facilities is increasing.';
-const text = 'In fact, the U.S. ambulatory surgery center market is expected to see a 6.9 % compound annual growth rate, reaching $33 billion by 2028. (2) Cerner understands the urgency to grow in the ambulatory surgery center market while continuing to deliver excellent care. Healthcare IT products can help improve clinician efficiency and patient outcomes, as well as enhance communication and data exchange between ambulatory surgery center providers and patients.';
+const previewText = 'Although the process is complex and will vary greatly based on regional and economic factors, it’s clear that healthcare entities must start planning their transitions now.';
+const text = 'it expects all Medicare Parts A and B beneficiaries and most Medicaid beneficiaries to be in a value-based care relationship with accountability for quality and total cost of care by 2030.';
 
 class LinkShowHide extends React.Component {
   constructor(props) {
@@ -22,9 +22,13 @@ class LinkShowHide extends React.Component {
   render() {
     return (
       <ShowHide focusRef={this.focusRef} preview={<p>{previewText}</p>} isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
-        <p>{previewText}</p>
-        <a ref={this.focusRef} href="https://www.cerner.com/" alt="Oracle Cerner">Oracle Cerner</a>
-        <p>{text}</p>
+        <p>
+          {previewText}
+          {' '}
+          <a ref={this.focusRef} href="https://www.cerner.com/">CMS recently announced</a>
+          {' '}
+          {text}
+        </p>
       </ShowHide>
     );
   }

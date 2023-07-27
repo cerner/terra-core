@@ -9,7 +9,7 @@ import classNames from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
-import Paragraph from './_ShowHideParagraph';
+import Focuser from './_ShowHideFocuser';
 
 const cx = classNames.bind(styles);
 
@@ -154,4 +154,4 @@ ShowHide.propTypes = propTypes;
 ShowHide.defaultProps = defaultProps;
 
 export default injectIntl(ShowHide);
-export { Paragraph };
+export { Focuser };

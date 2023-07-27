@@ -9,10 +9,9 @@ import ButtonAlignCenterShowHide from './example/ButtonAlignCenterShowHide?dev-s
 import ButtonAlignRightShowHide from './example/ButtonAlignRightShowHide?dev-site-example';
 import NoPreviewShowHide from './example/NoPreviewShowHide?dev-site-example';
 import NoFocusRefShowHide from './example/NoFocusRefShowHide?dev-site-example';
-import MultipleChildrenShowHide from './example/MultipleChildrenShowHide?dev-site-example';
 
 import ShowHidePropsTable from 'terra-show-hide/src/ShowHide?dev-site-props-table';
-import ParagraphPropsTable from 'terra-show-hide/src/_ShowHideParagraph?dev-site-props-table';
+import FocuserPropsTable from 'terra-show-hide/src/_ShowHideFocuser?dev-site-props-table';
 
 <Badge />
 
@@ -47,31 +46,42 @@ The Show-Hide component must be composed inside the [Base][1] component with a l
 ## Usage
 
 ```jsx
-import ShowHide, { Paragraph } from 'terra-show-hide';
+import ShowHide, { Focuser } from 'terra-show-hide';
 ```
 
-#### A single paragraph of text
-  - At the top level of your component declare a `ref`, pass it as `focusRef` props to `ShowHide` component. Pass a preview node as a prop to `ShowHide` component.
-  - Use `Paragraph` component inside `<p>` tag. A `Paragraph` component allows `ShowHide` component to set focus on the beginning of the hidden portion of the text upon opening. 
-  - The text splitted in the preview and the rest of the text portions has to be passed as string props, and the `focusRef` should be forwarded to `Paragraph` component.
+## Accessibility
+
+<Notice variant="important" ariaLevel="3">
+
+  - The main goal of the `ShowHide` component is to provide a possibility to truncate long paragraphs of text. It provides some challenges in terms of making the hidden content accessible. Please, review the provided examples. It's important to follow the instructions to make the component accessible. 
+  - Even though the `focusRef` prop is currently optional for backward compatibility, a failure to use it will result in lack of accessibility. 
+  - Consider using the `ToggleButton` component in cases you can't follow the instructions.
+
+</Notice>
+
+#### Truncate a paragraph of text
+  - At the top level of your component declare a `ref`, pass it as `focusRef` props to `ShowHide` component. 
+  - Pass a preview node with the portion of the text as a prop to `ShowHide` component.
+  - Use `Focuser` component inside `<p>` tag. A `Focuser` component allows `ShowHide` component to set focus on the beginning of the focusable text upon opening. 
+  - The text splitted in the prefix and focusable text portions has to be passed as string props. The prefix prop should contain the portion of the text that was a part of the preview prop, passed to `ShowHide`.
+  - Forward `focusRef` to `Focuser` component.
 
   ```jsx
   import React, { useRef, useState } from 'react';
-  import ShowHide, { Paragraph } from 'terra-show-hide';
+  import ShowHide, { Focuser } from 'terra-show-hide';
 
   const MyComponent = () => {
     const focusRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const toggleShowHide = () => setIsOpen(!isOpen);
 
-    // Split text into preview text and the rest of the text you wish to be revealed when the 'show' action is taken.
-    const previewText = 'Patients are requesting greater affordability and efficiency in healthcare.';
-    const text = 'With procedures performed in an ambulatory surgery center costing up to 60% less compared to a hospital outpatient department (1), the demand for these facilities is increasing.';
+    const prefix = 'Patients are requesting greater affordability and efficiency in healthcare. With procedures performed in an ambulatory surgery center costing up to 60% less compared to a hospital outpatient department (1), the demand for these facilities is increasing.';
+    const focusableText = 'In fact, the U.S. ambulatory surgery center market is expected to see a 6.9 % compound annual growth rate, reaching $33 billion by 2028. (2) Cerner understands the urgency to grow in the ambulatory surgery center market while continuing to deliver excellent care. Healthcare IT products can help improve clinician efficiency and patient outcomes, as well as enhance communication and data exchange between ambulatory surgery center providers and patients. Read';
 
     return (
-      <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } isOpen={isOpen} onChange={toggleShowHide} >
+      <ShowHide focusRef={focusRef} preview={ <p>{prefix}</p> } isOpen={isOpen} onChange={toggleShowHide} >
         <p>
-          <Paragraph ref={ focusRef } previewText={ previewText } text={ text } />
+          <Focuser ref={this.focusRef} prefix={prefix} focusableText={focusableText} />
         </p>
       </ShowHide>
     );
@@ -79,50 +89,38 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
   ```
 
 #### Multiple children
-  - At the top level of your component declare a `ref`, pass it as `focusRef` props to `ShowHide` component. Pass a preview node as a prop to `ShowHide` component.
-  - A `Paragraph` component allows `ShowHide` component to set focus on the beginning of the hidden portion of the text upon opening. 
-  - Duplicate the preview nodes as `ShowHide` children.
-  - When the preview nodes end, add a `Paragraph` element as a child to the next node. 
-  - Forwarding `focusRef` to `Paragraph` component allows `ShowHide` component to set focus on the beginning of the text in that node upon opening.
-  - Pass the text as a prop to `Paragraph` component. Omit `previewText` prop.
+  Even though the main purpose of the `ShowHide` component is to truncate long paragraps of texts, the content of the `ShowHide` does not have to be one paragraph. It can include links, lists, and any king of HTML tags as long as the first line of the hidden text is passed as a string prop to `Focuser` component rather than an HTML element. Please note:
+  - Links can be placed inside the `p` tag that wrapps `Focuser` component both preceding and following it. The prop `prefix` can be omitted if content has been passes as an HTML element preceding `Focuser`.
+  - Everythin that precedes `Focuser` component must be also included into the `ShowHide` preview prop.
+  - Do not break lists placing `Focuser` inside `li`, unless you assign `display:block` to the list items in that list. It might break the assistive technologies reading order.
 
   ```jsx
     import React, { useState, useRef } from 'react';
-    import ShowHide, { Paragraph } from 'terra-show-hide';
+    import ShowHide, { Focuser } from 'terra-show-hide';
 
     const MyComponent = () => {
       const focusRef = useRef(null);
       const [isOpen, setIsOpen] = useState(false);
       const toggleShowHide = () => setIsOpen(!isOpen);
 
-      // This example's content is a header and a list of 4 items.
-      const header = 'Key Benefits of Cerner Cardiovascular Solutions';
-      const list = [
-        'Eliminates silos of information and the resulting inefficiencies with a unified EHR and cardiovascular system',
-        'Enhances clinical, financial and performance outcomes with comprehensive procedural documentation',
-        'Creates efficient diagnostic workflows, image management and analysis',
-        'Promotes cardiac disease management through health maintenance protocols',
-      ];
-
-      // The header and the first two items of the list will be displayed in preview portion.
+      const header = 'Bringing clarity to life sciences and healthcare decision-making ';
+      const prefix = 'When we accelerate the discovery, development and deployment of life-enhancing insights and therapies, clinicians and patients benefit.';
       const preview = [
-        <h3 key="header">{header}</h3>,
-        <ul key="list">
-          <li>{list[0]}</li>
-          <li>{list[1]}</li>
-        </ul>,
+        <h3>{header}</h3>,
+        <p>{prefix}</p>,
       ];
 
       return (
         <ShowHide focusRef={focusRef} preview={preview} isOpen={isOpen} onChange={toggleShowHide} >
           <h3>{header}</h3>
+          <p>
+            <Focuser ref={this.focusRef} prefix={prefix} focusableText="Several factors help bring clarity to life sciences, researchers and clinicians and " />
+            <a href="#">guide better care</a>
+          </p>
           <ul>
-            <li>{list[0]}</li>
-            <li>{list[1]}</li>
-            <li>
-              <Paragraph ref={focusRef} text={list[2]} />
-            </li>
-            <li>{list[3]}</li>
+            <li>Data-driven research solutions for commercial and real-world evidence collaborators and health providers</li>
+            <li>Support to move from simply accumulating and analyzing data to linking and generating deeper insights </li>
+            <li>Combined life sciences knowledge, healthcare innovation and collaborative research expertise</li>
           </ul>
         </ShowHide>
       );
@@ -131,7 +129,7 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
 
 #### First hidden child is an interactive element (link, button, etc)
   - At the top level of your component declare a `ref`.
-  - Forward `focusRef` to the interactive element directly. There is no need to use `Paragraph` in this case.
+  - In this case there is no need to use `Focuser`. Forward `focusRef` to the interactive element directly.
 
   ```jsx
     import React, { useState, useRef } from 'react';
@@ -142,24 +140,20 @@ import ShowHide, { Paragraph } from 'terra-show-hide';
       const [isOpen, setIsOpen] = useState(false);
       const toggleShowHide = () => setIsOpen(!isOpen);
 
-      const previewText = 'Patients are requesting greater affordability and efficiency in healthcare.';
+      const previewText = 'Although the process is complex and will vary greatly based on regional and economic factors, it’s clear that healthcare entities must start planning their transitions now.';
+      const text = 'it expects all Medicare Parts A and B beneficiaries and most Medicaid beneficiaries to be in a value-based care relationship with accountability for quality and total cost of care by 2030.';
 
       return (
-        <ShowHide focusRef={ focusRef } preview={ <p>{ previewText }</p> } isOpen={isOpen} onChange={toggleShowHide} >
-          <p>{ previewText }</p>
-          <a ref={this.focusRef} href="https://www.cerner.com/" alt="Oracle Cerner">Oracle Cerner</a>
+        <ShowHide focusRef={focusRef} preview={<p>{previewText}</p>} isOpen={isOpen} onChange={toggleShowHide} >
+          <p>
+            {previewText}
+            <a ref={this.focusRef} href="#">CMS recently announced</a>
+            {text}
+          </p>
         </ShowHide>
       );
     }
   ```
-
-## Accessibility
-
-<Notice variant="important" ariaLevel="3">
-
-In order for the component to be accessible, it's important to follow the implimentation guidance. The focusRef prop is currently optional for backward compatibility, a failure to use it will result in lack of accessibility.
-
-</Notice>
 
 ## Component Features
 
@@ -184,5 +178,5 @@ In order for the component to be accessible, it's important to follow the implim
 ## Show Hide Props
 <ShowHidePropsTable />
 
-## Paragraph Props
-<ParagraphPropsTable />
+## Focuser Props
+<FocuserPropsTable />

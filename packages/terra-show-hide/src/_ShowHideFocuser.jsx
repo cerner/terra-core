@@ -7,13 +7,13 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
-   * The main portion of the text that will start with focused text
+   * Text that precedes the focusable portion.
    */
-  text: PropTypes.string.isRequired,
+  prefix: PropTypes.string.isRequired,
   /**
-   * The portion of the text that will be displayed before the focused text
+   * The portion of the text that gets focus once the hidden portion is disclosed to be announced by assistive technologies
    */
-  previewText: PropTypes.string,
+  focusableText: PropTypes.string,
 };
 
 /**
@@ -51,18 +51,19 @@ const truncate = (string) => {
 /**
  * This component splits the text with dividing spans to allow the assistive technologies focus on the part of the text
  */
-const Paragraph = forwardRef((props, ref) => {
+const Focuser = forwardRef((props, ref) => {
   const {
-    previewText,
-    text,
+    prefix,
+    focusableText,
   } = props;
 
-  const truncatedText = truncate(text);
+  const truncatedText = truncate(focusableText);
   const [focusable, setFocusable] = useState(true);
 
   return (
     <>
-      {previewText ? addTrailingWhiteSpace(previewText) : null}
+      {prefix ? addTrailingWhiteSpace(prefix) : null}
+      {/* this divider starts a new 'line' for JAWS when reading line-by-line */}
       <span className={cx('text-divider')} />
       <span
         ref={ref}
@@ -72,11 +73,12 @@ const Paragraph = forwardRef((props, ref) => {
       >
         {truncatedText[0]}
       </span>
+      {/* this divider ends a line for JAWS when reading line-by-line */}
       <span className={cx('text-divider')} />
       {truncatedText[1] ? addHeadingWhiteSpace(truncatedText[1]) : null}
     </>
   );
 });
 
-Paragraph.propTypes = propTypes;
-export default Paragraph;
+Focuser.propTypes = propTypes;
+export default Focuser;

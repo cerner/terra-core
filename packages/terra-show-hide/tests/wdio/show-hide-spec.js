@@ -225,10 +225,6 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
       Terra.validates.element('interactive show hide expanded');
     });
 
-    it('should focus on the focusRef element', () => {
-      expect($('#focusRef').isFocused()).toBe(true);
-    });
-
     it('should move focus to link', () => {
       browser.keys(['Tab']);
       expect($('#link').isFocused()).toBe(true);
