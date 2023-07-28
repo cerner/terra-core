@@ -60,7 +60,7 @@ import ShowHide, { Focuser } from 'terra-show-hide';
 #### Truncate a paragraph of text
   - At the top level of your component declare a `ref`, pass it as `focusRef` props to `ShowHide` component. 
   - Pass a node with the preview portion of the text as a prop to `ShowHide` component.
-  - Use `Focuser` component inside `<p>` tag. A `Focuser` component allows `ShowHide` component to set focus on the beginning of the focusable text upon opening. 
+  - Use the `Focuser` component inside `<p>` tag. A `Focuser` component allows `ShowHide` component to set focus on the beginning of the focusable text upon opening. 
   - The text splitted in the prefix and focusable text portions has to be passed as string props. The prefix prop should contain the portion of the text that was a part of the preview prop, passed to `ShowHide`.
   - Forward `focusRef` to `Focuser` component.
 
