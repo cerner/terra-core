@@ -9,11 +9,11 @@ const propTypes = {
   /**
    * Text that precedes the focusable portion.
    */
-  prefix: PropTypes.string.isRequired,
+  focusableText: PropTypes.string.isRequired,
   /**
    * The portion of the text that gets focus once the hidden portion is disclosed to be announced by assistive technologies
    */
-  focusableText: PropTypes.string,
+  prefix: PropTypes.string,
 };
 
 /**

@@ -18,8 +18,8 @@ const listItems = [
 const conclusion = 'Through data and technology, we have the power to help life sciences, clinicians and researchers expand therapeutic areas of research and generate better evidence to solve healthcare challenges around the world. Together, we can accelerate groundbreaking research and trial opportunities that have the potential to transform everyday healthcare and improve people’s lives.';
 
 const preview = [
-  <h3>{header}</h3>,
-  <p>{text[0]}</p>,
+  <h3 key="header">{header}</h3>,
+  <p key="prefix">{text[0]}</p>,
 ];
 
 class CustomButtonTextShowHide extends React.Component {

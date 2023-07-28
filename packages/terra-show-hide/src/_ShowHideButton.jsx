@@ -126,7 +126,6 @@ class Button extends React.Component {
         onClick={onClick}
         onFocus={onFocus}
         ref={refCallback}
-        tabIndex="0"
       >
         <span className={cx('inner')}>
           <span className={cx('text')}>
