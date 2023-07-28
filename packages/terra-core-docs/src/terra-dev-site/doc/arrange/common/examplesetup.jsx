@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
 
 import {
-  VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT,
+  VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT, KEY_SPACE,
 } from 'keycode-js';
 import styles from './examplesetup.scss';
 
@@ -69,13 +69,20 @@ const handleKeyDown = (event) => {
   }
 };
 
+// Prevent scrolling when press space bar key on anchor tag
+const handlePreventScroll = (event) => {
+  if (event.keyCode === KEY_SPACE) {
+    event.preventDefault();
+  }
+};
+
 const ipsum = 'This example provides content containers with a fit (start and/or end region) and fill (middle region). Arrange Props have one required prop which is fill to the content to display in the body of the fill.';
 const simpleText = <span>{ipsum}</span>;
 const textWithBlueBorder = <span className={cx('outlined-placeholder')}>{ipsum}</span>;
 const clinicalData = (
   <span>
     Clinical data is a staple resource for most health and medical research. Clinical data is either collected during the course of ongoing patient care or as part of a formal clinical trial program. For more information visit&nbsp;
-    <a href="#clinical-information">Clinical information</a>
+    <a href="#clinical-information" onKeyDown={handlePreventScroll}>Clinical information</a>
   </span>
 );
 
