@@ -2,9 +2,9 @@ import React from 'react';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import uniqueid from 'lodash.uniqueid';
-
+// eslint-disable-next-line import/no-extraneous-dependencies
 import {
-  VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT, KEY_SPACE,
+  KEY_SPACE, VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT,
 } from 'keycode-js';
 import styles from './examplesetup.scss';
 
