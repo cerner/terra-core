@@ -92,7 +92,7 @@ import ShowHide, { Focuser } from 'terra-show-hide';
 Please note:
   - Links can be placed inside the `p` tag that wraps `Focuser` component both preceding and following it. The prop `prefix` can be omitted if content has been passed as an HTML element preceding `Focuser`.
   - Everythin that precedes `Focuser` component must be also included into the `ShowHide` preview prop.
-  - Do not break lists placing `Focuser` inside `li`, as it might break the assistive technologies reading order.
+  - Do not break lists placing `Focuser` inside `li`, as it might cause assistive technologies to read the content incorrectly.
 
   ```jsx
     import React, { useState, useRef } from 'react';
