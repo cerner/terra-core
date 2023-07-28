@@ -57,11 +57,11 @@ import ShowHide, { Focuser } from 'terra-show-hide';
 
 </Notice>
 
-#### Truncate a paragraph of text
+### Truncate a paragraph of text
   - At the top level of your component declare a `ref`, pass it as `focusRef` prop to `ShowHide` component. 
   - Pass a node with the preview portion of the text as a prop to `ShowHide` component.
   - Use the `Focuser` component inside `<p>` tag. A `Focuser` component allows `ShowHide` component to set focus on the beginning of the focusable text upon opening. 
-  - The text splitted in the prefix and focusable text portions has to be passed as string props. The prefix prop should contain the portion of the text that was a part of the preview prop, passed to `ShowHide`.
+  - The text split in the prefix and focusable text portions has to be passed as string props. The prefix prop should contain the portion of the text that was a part of the preview prop, passed to `ShowHide`.
   - Forward `focusRef` to `Focuser` component.
 
   ```jsx
@@ -86,12 +86,12 @@ import ShowHide, { Focuser } from 'terra-show-hide';
   }
   ```
 
-#### Multiple children
+### Multiple children
   Even though the main purpose of the `ShowHide` component is to truncate long paragraps of texts, the content of the `ShowHide` does not have to be one paragraph. It can include links, lists, and any kind of HTML tags as long as the first line of the hidden text is passed as a string prop to `Focuser` component rather than an HTML element.
   
 Please note:
   - Links can be placed inside the `p` tag that wraps `Focuser` component both preceding and following it. The prop `prefix` can be omitted if content has been passed as an HTML element preceding `Focuser`.
-  - Everythin that precedes `Focuser` component must be also included into the `ShowHide` preview prop.
+  - Everything that precedes `Focuser` component must be also included into the `ShowHide` preview prop.
   - Do not break lists placing `Focuser` inside `li`, as it might cause assistive technologies to read the content incorrectly.
 
   ```jsx
@@ -127,7 +127,7 @@ Please note:
     }
   ```
 
-#### First hidden child is an interactive element (link, button, etc)
+### First hidden child is an interactive element (link, button, etc)
   - At the top level of your component declare a `ref`.
   - In this case there is no need to use `Focuser`. Forward `focusRef` to the interactive element directly.
 
