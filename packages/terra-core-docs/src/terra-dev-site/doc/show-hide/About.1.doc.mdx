@@ -53,9 +53,7 @@ import ShowHide, { Focuser } from 'terra-show-hide';
 
 <Notice variant="important" ariaLevel="3">
 
-  - The main goal of the `ShowHide` component is to provide a possibility to truncate long paragraphs of text. It provides some challenges in terms of making the hidden content accessible. Please, review the provided examples. It's important to follow the instructions to make the component accessible. 
-  - Even though the `focusRef` prop is currently optional for backward compatibility, a failure to use it will result in lack of accessibility. 
-  - Consider using the `ToggleButton` component in cases you can't follow the instructions.
+  To make the Show/Hide component accessible, you must use the `focusRef` prop. This prop allows assistive technologies such as screen readers to put focus on the hidden text and announce it when it is disclosed. The `focusRef` is optional for backward compatibility but is required to comply with accessibility requirements.
 
 </Notice>
 
