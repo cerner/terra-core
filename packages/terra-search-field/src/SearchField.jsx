@@ -104,7 +104,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   disableAutoSearch: false,
-  groupName: "Search",
+  groupName: 'Search',
   isBlock: false,
   isDisabled: false,
   isLabelVisible: false,
@@ -297,13 +297,13 @@ class SearchField extends React.Component {
       : undefined;
 
     return (
-      <div style={{display: 'inline-flex'}}> 
+      <div className={cx('search-container')}>
         {isLabelVisible
         && (
-            <label className={cx('label')}>{groupName}</label>
+        <label className={cx('label')}>{groupName}</label>
         )}
-        <div role="search" aria-label="Search">
-          <div role="group" aria-label={groupName}>
+        <div className={cx('search-container')} role="search" aria-label="Search">
+          <div className={cx('search-container')} role="group" aria-label={groupName}>
             <div {...customProps} className={searchFieldClassNames}>
               <div className={cx('input-group')}>
                 <input

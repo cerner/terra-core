@@ -97,11 +97,15 @@
 
   .label {
     color: var(--terra-search-field-label-color, #1c1f21);
-    display: inline-block;
+    display: block;
     font-size: var(--terra-search-field-label-font-size, 1rem);
     font-weight: var(--terra-search-field-label-font-weight, bold);
     margin-bottom: var(--terra-search-field-label-margin-bottom, 0.357em);
     text-align: left;
+  }
+
+  .search-container {
+    display: inline;
   }
 
   .input {
