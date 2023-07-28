@@ -2,7 +2,7 @@ import React from 'react';
 import SearchField from 'terra-search-field';
 
 const SearchFieldDisabled = () => (
-  <SearchField groupName="Search Field Group name" isDisabled />
+  <SearchField isDisabled />
 );
 
 export default SearchFieldDisabled;

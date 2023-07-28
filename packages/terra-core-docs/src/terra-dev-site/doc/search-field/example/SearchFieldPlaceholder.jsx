@@ -11,7 +11,7 @@ const SearchFieldPlaceholder = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField groupName="Search Field Group name" onSearch={setSearchText} onInvalidSearch={setSearchText} placeholder="- Search Here -" />
+      <SearchField onSearch={setSearchText} onInvalidSearch={setSearchText} placeholder="- Search Here -" />
     </div>
   );
 };

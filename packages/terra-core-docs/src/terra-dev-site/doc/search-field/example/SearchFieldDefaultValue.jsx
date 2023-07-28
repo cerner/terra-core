@@ -11,7 +11,7 @@ const SearchFieldDefaultValue = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField defaultValue="Default" onSearch={setSearchText} onInvalidSearch={setSearchText} groupName="Search Field Group name" />
+      <SearchField defaultValue="Default" onSearch={setSearchText} onInvalidSearch={setSearchText} />
     </div>
   );
 };

@@ -35,12 +35,10 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
     }
   }
 >
-  <InjectIntl(SearchField)
-    groupName="TestGroup"
-  >
+  <InjectIntl(SearchField)>
     <SearchField
       disableAutoSearch={false}
-      groupName="TestGroup"
+      groupName="Search"
       intl={
         Object {
           "defaultFormats": Object {},
@@ -75,13 +73,19 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
       placeholder=""
       searchDelay={250}
     >
-      <div>
+      <div
+        style={
+          Object {
+            "display": "inline-flex",
+          }
+        }
+      >
         <div
-          aria-label="Search region"
+          aria-label="Search"
           role="search"
         >
           <div
-            aria-label="TestGroup"
+            aria-label="Search"
             role="group"
           >
             <div
@@ -193,7 +197,7 @@ exports[`Snapshots correctly applies the theme context className 1`] = `
 exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Input component 1`] = `
 <SearchField
   disableAutoSearch={false}
-  groupName="TestGroup"
+  groupName="Search"
   inputRefCallback={
     [MockFunction] {
       "calls": Array [
@@ -250,13 +254,19 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
   placeholder=""
   searchDelay={250}
 >
-  <div>
+  <div
+    style={
+      Object {
+        "display": "inline-flex",
+      }
+    }
+  >
     <div
-      aria-label="Search region"
+      aria-label="Search"
       role="search"
     >
       <div
-        aria-label="TestGroup"
+        aria-label="Search"
         role="group"
       >
         <div
@@ -364,13 +374,19 @@ exports[`Snapshots passes in inputRefCallback as the refCallback prop of the Inp
 `;
 
 exports[`Snapshots renders a basic search field 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
-      aria-label="TestGroup"
+      aria-label="Search"
       role="group"
     >
       <div
@@ -419,13 +435,19 @@ exports[`Snapshots renders a basic search field 1`] = `
 `;
 
 exports[`Snapshots renders a disabled search field with a value 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
-      aria-label="TestGroup"
+      aria-label="Search"
       role="group"
     >
       <div
@@ -474,13 +496,19 @@ exports[`Snapshots renders a disabled search field with a value 1`] = `
 `;
 
 exports[`Snapshots renders a search field such that custom styles are applied 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
-      aria-label="TestGroup"
+      aria-label="Search"
       role="group"
     >
       <div
@@ -529,13 +557,19 @@ exports[`Snapshots renders a search field such that custom styles are applied 1`
 `;
 
 exports[`Snapshots renders a search field that displays as a block to fill its container 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
-      aria-label="TestGroup"
+      aria-label="Search"
       role="group"
     >
       <div
@@ -602,13 +636,19 @@ exports[`Snapshots renders a search field that displays as a block to fill its c
 `;
 
 exports[`Snapshots renders a search field with a defaulted value 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
-      aria-label="TestGroup"
+      aria-label="Search"
       role="group"
     >
       <div
@@ -676,16 +716,20 @@ exports[`Snapshots renders a search field with a defaulted value 1`] = `
 `;
 
 exports[`Snapshots renders a search field with a label 1`] = `
-<div>
-  <div>
-    <label
-      className="label"
-    >
-      TestGroup
-    </label>
-  </div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
+  <label
+    className="label"
+  >
+    TestGroup
+  </label>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
@@ -738,13 +782,19 @@ exports[`Snapshots renders a search field with a label 1`] = `
 `;
 
 exports[`Snapshots renders a search field with a placeholder 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
-      aria-label="TestGroup"
+      aria-label="Search"
       role="group"
     >
       <div
@@ -793,13 +843,19 @@ exports[`Snapshots renders a search field with a placeholder 1`] = `
 `;
 
 exports[`Snapshots renders a search field with a value 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
-      aria-label="TestGroup"
+      aria-label="Search"
       role="group"
     >
       <div
@@ -867,13 +923,19 @@ exports[`Snapshots renders a search field with a value 1`] = `
 `;
 
 exports[`Snapshots renders a search field with an aria-label 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
-      aria-label="TestGroup"
+      aria-label="Search"
       role="group"
     >
       <div
@@ -922,13 +984,19 @@ exports[`Snapshots renders a search field with an aria-label 1`] = `
 `;
 
 exports[`Snapshots renders a search field with an aria-label using prop 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
   <div
-    aria-label="Search region"
+    aria-label="Search"
     role="search"
   >
     <div
-      aria-label="TestGroup"
+      aria-label="Search"
       role="group"
     >
       <div

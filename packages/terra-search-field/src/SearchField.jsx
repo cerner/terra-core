@@ -27,7 +27,7 @@ const propTypes = {
   /**
    * Group name value for search group elements. This value is also used as Label name.
    */
-  groupName: PropTypes.string.isRequired,
+  groupName: PropTypes.string,
 
   /**
    * Callback ref to pass into the inner input component.
@@ -57,7 +57,7 @@ const propTypes = {
   isDisabled: PropTypes.bool,
 
   /**
-   * Whether or not the label is visible. Use this props to include a label above the search field. The label will be same as groupName prop value defined.
+   * Whether or not the label is visible. Use this prop to include a label above the search field. The label will be same as groupName prop value.
    */
   isLabelVisible: PropTypes.bool,
   /**
@@ -104,6 +104,7 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   disableAutoSearch: false,
+  groupName: "Search",
   isBlock: false,
   isDisabled: false,
   isLabelVisible: false,
@@ -296,14 +297,12 @@ class SearchField extends React.Component {
       : undefined;
 
     return (
-      <div>
+      <div style={{display: 'inline-flex'}}> 
         {isLabelVisible
         && (
-          <div>
             <label className={cx('label')}>{groupName}</label>
-          </div>
         )}
-        <div role="search" aria-label="Search region">
+        <div role="search" aria-label="Search">
           <div role="group" aria-label={groupName}>
             <div {...customProps} className={searchFieldClassNames}>
               <div className={cx('input-group')}>

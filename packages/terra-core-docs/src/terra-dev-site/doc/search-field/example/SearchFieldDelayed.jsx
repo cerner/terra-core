@@ -11,7 +11,7 @@ const SearchFieldDelayed = () => {
   return (
     <div>
       <p>{message}</p>
-      <SearchField onSearch={setSearchText} onInvalidSearch={setSearchText} groupName="Search Field Group name" searchDelay={2000} />
+      <SearchField onSearch={setSearchText} onInvalidSearch={setSearchText} searchDelay={2000} />
     </div>
   );
 };

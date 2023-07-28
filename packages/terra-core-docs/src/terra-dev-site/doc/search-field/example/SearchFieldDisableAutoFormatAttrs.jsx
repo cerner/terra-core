@@ -12,7 +12,6 @@ const SearchFieldDisableAutoFormatAttrs = () => {
     <div>
       <p>{message}</p>
       <SearchField
-        groupName="Search Field Group name"
         inputAttributes={{
           autoCorrect: 'off',
           autoComplete: 'off',
