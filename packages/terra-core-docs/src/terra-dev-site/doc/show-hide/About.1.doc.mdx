@@ -92,7 +92,7 @@ import ShowHide, { Focuser } from 'terra-show-hide';
   Even though the main purpose of the `ShowHide` component is to truncate long paragraps of texts, the content of the `ShowHide` does not have to be one paragraph. It can include links, lists, and any king of HTML tags as long as the first line of the hidden text is passed as a string prop to `Focuser` component rather than an HTML element. Please note:
   - Links can be placed inside the `p` tag that wrapps `Focuser` component both preceding and following it. The prop `prefix` can be omitted if content has been passes as an HTML element preceding `Focuser`.
   - Everythin that precedes `Focuser` component must be also included into the `ShowHide` preview prop.
-  - Do not break lists placing `Focuser` inside `li`, unless you assign `display:block` to the list items in that list. It might break the assistive technologies reading order.
+  - Do not break lists placing `Focuser` inside `li`, as it might break the assistive technologies reading order.
 
   ```jsx
     import React, { useState, useRef } from 'react';
