@@ -36,7 +36,6 @@
     text-decoration: var(--terra-show-hide-v1-button-text-decoration, none);
     text-transform: none;
     touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
-    user-select: none; // Prevent text selection on buttons on mobile devices
     white-space: normal;
     // Remove the inner border and padding in Firefox.
     &::-moz-focus-inner {
@@ -103,5 +102,6 @@
   .icon-holder {
     align-self: center;
     flex: 0 0 auto;
+    user-select: none; // Prevent text selection on buttons on mobile devices
   }
 }
