@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
+import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
@@ -113,8 +114,8 @@ const Option = ({
 
   let itemLabel = display;
   if (index === 1 || isSelected) {
-    itemLabel = `${expandedStateText} ${display}`;
-    if (!isSelected && SharedUtil.isMac()) {
+    itemLabel = `${expandedStateText} ${display} `;
+    if (!isSelected && SharedUtil.isMac() && SharedUtil.isSafari()) {
       itemLabel += intl.formatMessage({ id: 'Terra.form.select.notselected' });
     }
   }
@@ -141,4 +142,4 @@ Option.propTypes = propTypes;
 Option.defaultProps = defaultProps;
 Option.isOption = true;
 
-export default Option;
+export default injectIntl(Option);
