@@ -15,6 +15,7 @@
   "Terra.form.select.dimmed": "Inaktiverad.",
   "Terra.form.select.expanded": "Visad kombinationsruta.",
   "Terra.form.select.collapsed": "Dold kombinationsruta.",
+  "Terra.form.select.notselected": "Ej valt",
   "Terra.form.select.listOfTotalOptions": "Lista med alternativ.",
   "Terra.form.select.defaultUsageGuidance": "Använd upp- och nedpilarna för att navigera mellan alternativen. Tryck på Enter för att väklja ett alternativ.",
   "Terra.form.select.mobileUsageGuidance": "Bläddra åt höger för att navigera till alternativen.",
