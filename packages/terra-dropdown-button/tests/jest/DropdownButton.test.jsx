@@ -96,13 +96,18 @@ describe('Dropdown Button', () => {
   });
 
   it('should set the aria-label property from ./translations', () => {
+    const buttonAttrs = {
+      'aria-label': 'Button Aria Label',
+    };
     const wrapper = shallowWithIntl(
       <IntlProvider locale="en" messages={translationsFile}>
-        <DropdownButton label="Primary Option" id="dropDown" />
+        <DropdownButton label="Primary Option" buttonAttrs={buttonAttrs} id="dropDown">
+          <Item label="PDF" onSelect={() => {}} />
+        </DropdownButton>
       </IntlProvider>,
     ).dive().dive();
     wrapper.setState({ selectText: 'PDF' });
     const dropdownButtonAriaLabelValue = wrapper.find('#dropDown button').prop('aria-label');
-    expect(dropdownButtonAriaLabelValue).toEqual(`PDF, ${translationsFile['Terra.dropdownButton.selected']}`);
+    expect(dropdownButtonAriaLabelValue).toEqual(`PDF, ${translationsFile['Terra.dropdownButton.selected']}, Primary Option, ${buttonAttrs['aria-label']}`);
   });
 });

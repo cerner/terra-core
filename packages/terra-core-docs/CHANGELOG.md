@@ -1,17 +1,37 @@
 # Changelog
 
 ## Unreleased
-* Added
-  * Added test example for controlled form native select component.
 
 * Added
+  * Added email validation for `terra-form-field`.
+
+* Updated
+  * Updated an example for `terra-dropdown-button`.
+
+* Added
+  * Added documentation updates for `terra-form-input`.
+
+## 1.31.0 - (July 13, 2023)
+
+* Added
+  * Added a test case for click event when setFocusOnContainer is disabled
+  * Added email format instruction text for `terra-form-field`.
+
+* Changed
+  * Minor formatting update in `terra-alert` & `terra-form-fieldset`.
+
+## 1.30.0 - (July 11, 2023)
+
+* Added
+  * Added test example for controlled form native select component.
   * Added more realistic examples for terra-toggle-button.
 
 ## 1.29.0 - (June 28, 2023)
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
-
+  * Updated `terra-form-textarea` example component and added an button to toggle valid/invalid status
+  
 * Added
   * Added documentation updates for `Single Select` in `terra-form-select`.
 

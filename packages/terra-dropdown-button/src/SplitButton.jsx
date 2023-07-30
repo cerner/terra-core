@@ -60,6 +60,11 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   metaData: PropTypes.object,
+  /**
+   * Sets the custom properties for button.
+   */
+  // eslint-disable-next-line react/forbid-prop-types
+  buttonAttrs: PropTypes.object,
 };
 
 const defaultProps = {
@@ -67,6 +72,7 @@ const defaultProps = {
   isCompact: false,
   isDisabled: false,
   variant: 'neutral',
+  buttonAttrs: {},
 };
 
 class SplitButton extends React.Component {
@@ -80,21 +86,19 @@ class SplitButton extends React.Component {
     this.handlePrimaryKeyUp = this.handlePrimaryKeyUp.bind(this);
     this.handleCaretKeyDown = this.handleCaretKeyDown.bind(this);
     this.handleCaretKeyUp = this.handleCaretKeyUp.bind(this);
-    this.setButtonNode = this.setButtonNode.bind(this);
     this.getButtonNode = this.getButtonNode.bind(this);
+    this.setButtonNode = this.setButtonNode.bind(this);
     this.setListNode = this.setListNode.bind(this);
     this.toggleDropDown = this.toggleDropDown.bind(this);
 
     this.state = {
-      isOpen: false, caretIsActive: false, primaryIsActive: false, openedViaKeyboard: false, selectText: '',
+      isOpen: false, caretIsActive: false, primaryIsActive: false, selectText: '',
     };
   }
 
   handleDropdownButtonClick(event) {
-    if (this.state.isOpen) {
-      this.setState({ openedViaKeyboard: false });
-    }
     this.toggleDropDown(event);
+    this.setState({ selectText: '' });
   }
 
   handlePrimaryButtonClick(event) {
@@ -108,7 +112,7 @@ class SplitButton extends React.Component {
 
   handleDropdownRequestClose(callback) {
     const onSelectCallback = typeof callback === 'function' ? callback : undefined;
-    this.setState({ isOpen: false, openedViaKeyboard: false, caretIsActive: false }, onSelectCallback);
+    this.setState({ isOpen: false, caretIsActive: false }, onSelectCallback);
   }
 
   /*
@@ -132,24 +136,13 @@ class SplitButton extends React.Component {
     }
     if (event.keyCode === KeyCode.KEY_SPACE || event.keyCode === KeyCode.KEY_RETURN) {
       // In FireFox active styles don't get applied onKeyDown
-      this.setState({ caretIsActive: true, openedViaKeyboard: true });
+      this.setState({ caretIsActive: true });
       /*
         Prevent the callback from being called repeatedly if the RETURN or SPACE key is held down.
         The keyDown event of native html button triggers Onclick() event on RETURN or SPACE key press.
         where holding RETURN key for longer time will call dropdownClick() event repeatedly which would cause
         the dropdown to open and close itself.
       */
-      event.preventDefault();
-    } else if (event.keyCode === KeyCode.KEY_DOWN && this.state.isOpen && !this.state.openedViaKeyboard) {
-      // set focus to first list element on down arrow key press only when dropdown is opened by mouse click.
-      const listOptions = this.dropdownList.querySelectorAll('[data-terra-dropdown-list-item]');
-      listOptions[0].focus();
-      // prevent handleFocus() callback of DropdownList.
-      event.preventDefault();
-    } else if (event.keyCode === KeyCode.KEY_UP && this.state.isOpen && !this.state.openedViaKeyboard) {
-      // set focus to last list element on up arrow key press only when dropdown is opened by mouse click
-      const listOptions = this.dropdownList.querySelectorAll('[data-terra-dropdown-list-item]');
-      listOptions[listOptions.length - 1].focus();
       event.preventDefault();
     } else if (event.keyCode === KeyCode.KEY_TAB) {
       this.handleDropdownRequestClose();
@@ -180,10 +173,6 @@ class SplitButton extends React.Component {
     this.setState({ selectText: selectedOptionText });
   }
 
-  handleFocus = () => {
-    this.setState({ selectText: '' });
-  };
-
   handleBlur = () => {
     this.setState({ selectText: '' });
   };
@@ -208,6 +197,7 @@ class SplitButton extends React.Component {
       intl,
       requestClose,
       metaData,
+      buttonAttrs,
       ...customProps
     } = this.props;
 
@@ -215,7 +205,6 @@ class SplitButton extends React.Component {
       isOpen,
       primaryIsActive,
       caretIsActive,
-      openedViaKeyboard,
       selectText,
     } = this.state;
 
@@ -244,6 +233,15 @@ class SplitButton extends React.Component {
       theme.className,
     );
 
+    let buttonAriaLabel = '';
+    const modifiedButtonAttrs = { ...buttonAttrs };
+    if (modifiedButtonAttrs && modifiedButtonAttrs['aria-label']) {
+      buttonAriaLabel = modifiedButtonAttrs['aria-label'];
+      delete modifiedButtonAttrs['aria-label'];
+    }
+    const customLabel = (selectText) ? `${selectText}, ${selectedLabel}, ${caretLabel}` : caretLabel;
+    buttonAriaLabel = `${customLabel}${buttonAriaLabel ? `, ${buttonAriaLabel}` : ''}`;
+
     return (
       <DropdownButtonBase
         {...customProps}
@@ -253,7 +251,6 @@ class SplitButton extends React.Component {
         isBlock={isBlock}
         isCompact={isCompact}
         isDisabled={isDisabled}
-        openedViaKeyboard={openedViaKeyboard}
         buttonRef={this.getButtonNode}
         refCallback={this.setListNode}
         getSelectedOptionText={this.getSelectedOptionText}
@@ -271,6 +268,7 @@ class SplitButton extends React.Component {
           {primaryOptionLabel}
         </button>
         <button
+          {...modifiedButtonAttrs}
           type="button"
           onClick={this.handleDropdownButtonClick}
           onKeyDown={this.handleCaretKeyDown}
@@ -281,7 +279,7 @@ class SplitButton extends React.Component {
           aria-disabled={isDisabled}
           aria-expanded={isOpen}
           aria-haspopup="menu"
-          aria-label={selectText ? `${selectText}, ${selectedLabel}, ${caretLabel}` : caretLabel}
+          aria-label={buttonAriaLabel}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           ref={this.setButtonNode}
