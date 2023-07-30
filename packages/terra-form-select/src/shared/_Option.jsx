@@ -66,6 +66,11 @@ const propTypes = {
    * The i18n value of the text "Expanded combobox".
    */
   expandedStateText: PropTypes.string,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
 };
 
 const defaultProps = {
@@ -78,6 +83,7 @@ const Option = ({
   display,
   value,
   variant,
+  intl,
   isActive,
   isSelected,
   isCheckable,
@@ -105,21 +111,11 @@ const Option = ({
 
   const role = 'option'; // Used for JAWs and VoiceOver on iOS
 
-  /**
-   * VoiceOver in Safari on desktop has issues with role="option" with the combination of the
-   * aria-live section we have and will stutter when reading options.
-   * Switching to role="radio" and role="checkbox" mitigates this behavior.
-   */
-  let label = display;
-  // Allows VO to announce index of items
-  if (SharedUtil.isMac() && index && totalOptions) {
-    label = `${display}`;
-  }
-  let itemLabel = label;
+  let itemLabel = display;
   if (index === 1 || isSelected) {
-    itemLabel = `${expandedStateText} ${label}`;
+    itemLabel = `${expandedStateText} ${display}`;
     if (!isSelected && SharedUtil.isMac()) {
-      itemLabel += ' Not Selected';
+      itemLabel += intl.formatMessage({ id: 'Terra.form.select.notselected' });
     }
   }
 

@@ -6,6 +6,9 @@
 
 ## Unreleased
 
+  * Fixed for broken cyclic navigation in `terra-form-single-select`.
+  * Fixed VoiceOver reading as radio button in `terra-form-single-select`.
+
 ## 6.46.0 - (August 25, 2023)
 
 * Added
