@@ -4,7 +4,7 @@ import ToggleButton from 'terra-toggle-button';
 const AnimatedToggleButton = () => (
   <ToggleButton isAnimated closedButtonText="Patient Profile">
     <p>
-      <strong>Medical History</strong>
+      <h2>Medical History</h2>
       <div>
         <ul>
           <li>Previous Surgeries: Appendectomy (2015)</li>
