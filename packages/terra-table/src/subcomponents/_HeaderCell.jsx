@@ -133,7 +133,7 @@ const HeaderCell = ({
     <div className={cx('cell-content')} key="content">
       {children}
     </div>,
-    <VisuallyHiddenText text={sortingLabel} aria-live="polite" />,
+    <VisuallyHiddenText text={sortingLabel} aria-live="assertive" />,
     sortIndicator,
   ];
 
