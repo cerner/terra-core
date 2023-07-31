@@ -7,6 +7,7 @@
 
 * Updated
   * Updated an example for `terra-dropdown-button`.
+  * Updated email field validation for `terra-form-field`.
 
 * Added
   * Added documentation updates for `terra-form-input`.
