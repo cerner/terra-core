@@ -116,6 +116,7 @@ exports[`correctly applies the theme context className 1`] = `
           size="small"
         >
           <textarea
+            aria-invalid={false}
             className="textarea orion-fusion-theme"
             disabled={false}
             id="test-input"

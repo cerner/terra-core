@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed reflow issue when zoomed to 400% and the viewport is resized to 320x256 px.
+
 ## 3.51.0 - (February 15, 2023)
 
 * Changed

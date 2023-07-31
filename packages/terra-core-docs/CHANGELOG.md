@@ -2,13 +2,19 @@
 
 ## Unreleased
 
+* Added
+  * Added email validation for `terra-form-field`.
+
 * Updated
   * Updated an example for `terra-dropdown-button`.
+  * Updated email field validation for `terra-form-field`.
   * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
 * Added
   * Added documentation updates for `terra-form-input`.
 
+* Changed
+  * Updated Toggle Button Examples to have a dashed border around interactive elements.
 ## 1.31.0 - (July 13, 2023)
 
 * Added
@@ -28,7 +34,8 @@
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
-
+  * Updated `terra-form-textarea` example component and added an button to toggle valid/invalid status
+  
 * Added
   * Added documentation updates for `Single Select` in `terra-form-select`.
 

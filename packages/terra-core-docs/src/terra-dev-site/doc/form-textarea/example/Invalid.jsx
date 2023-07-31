@@ -6,23 +6,32 @@ class InvalidExample extends Component {
     super(props);
     this.state = {
       area: '',
+      isInvalid: true,
     };
     this.handleAreaChange = this.handleAreaChange.bind(this);
+    this.handleSubmitButton = this.handleSubmitButton.bind(this);
   }
 
   handleAreaChange(event) {
     this.setState({ area: event.target.value });
   }
 
+  handleSubmitButton() {
+    this.setState(prevState => ({ isInvalid: !prevState.isInvalid }));
+  }
+
   render() {
     return (
-      <Textarea
-        value={this.state.area}
-        isInvalid={this.state.area === ''}
-        onChange={this.handleAreaChange}
-        size="small"
-        id="invalid"
-      />
+      <div>
+        <Textarea
+          value={this.state.area}
+          isInvalid={this.state.isInvalid}
+          onChange={this.handleAreaChange}
+          size="small"
+          id="invalid"
+        />
+        <button type="button" id="toggle-is-invalid" onClick={this.handleSubmitButton}>Toggle Error State</button>
+      </div>
     );
   }
 }
