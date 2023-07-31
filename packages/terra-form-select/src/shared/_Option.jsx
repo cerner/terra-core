@@ -110,13 +110,19 @@ const Option = ({
     customProps.className,
   );
 
-  const role = 'option'; // Used for JAWs and VoiceOver on iOS
+  let role = 'option'; // Used for JAWs and VoiceOver on iOS
 
   let itemLabel = display;
   if (index === 1 || isSelected) {
     itemLabel = `${expandedStateText} ${display} `;
-    if (!isSelected && SharedUtil.isMac() && SharedUtil.isSafari()) {
+    if (!isSelected && SharedUtil.isMac() && SharedUtil.isSafari() && variant !== 'tag' && variant !== 'multiple') {
       itemLabel += intl.formatMessage({ id: 'Terra.form.select.notselected' });
+    }
+  }
+
+  if (SharedUtil.isSafari() && !('ontouchstart' in window)) {
+    if (variant === 'tag' || variant === 'multiple') {
+      role = 'checkbox';
     }
   }
 

@@ -61,28 +61,23 @@ exports[`should render the selectId to the input field in ComboboxField componen
     key=".0"
     required={false}
   >
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Blue"
       value="blue"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Green"
       value="green"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Purple"
       value="purple"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Red"
       value="red"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Violet"
       value="violet"
     />
@@ -123,28 +118,23 @@ exports[`should render the selectId to the input field in MultiSelectField compo
     key=".0"
     required={false}
   >
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Blue"
       value="blue"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Green"
       value="green"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Purple"
       value="purple"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Red"
       value="red"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Violet"
       value="violet"
     />
@@ -213,28 +203,23 @@ exports[`should render the selectId to the input field in SearchSelectField comp
     key=".0"
     required={false}
   >
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Blue"
       value="blue"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Green"
       value="green"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Purple"
       value="purple"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Red"
       value="red"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Violet"
       value="violet"
     />
@@ -275,28 +260,23 @@ exports[`should render the selectId to the input field in TagSelectField compone
     key=".0"
     required={false}
   >
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Blue"
       value="blue"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Green"
       value="green"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Purple"
       value="purple"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Red"
       value="red"
     />
-    <Option
-      disabled={false}
+    <InjectIntl(Option)
       display="Violet"
       value="violet"
     />
