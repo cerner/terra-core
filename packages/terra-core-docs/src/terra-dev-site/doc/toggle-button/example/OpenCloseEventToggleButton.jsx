@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToggleButton from 'terra-toggle-button';
 import classNames from 'classnames/bind';
-import styles from './OpenCloseEventToggleButton.module.scss';
+import styles from './ToggleButtonCommon.module.scss';
 
 const cx = classNames.bind(styles);
 
