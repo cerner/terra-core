@@ -1,6 +1,7 @@
 import React, { forwardRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
+import { v4 as uuidv4 } from 'uuid';
 import styles from './ShowHide.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -60,12 +61,16 @@ const Focuser = forwardRef((props, ref) => {
   const truncatedText = truncate(focusableText);
   const [focusable, setFocusable] = useState(true);
 
+  const id = uuidv4();
+  const refId = `focus-ref-${id}`;
+
   return (
     <>
       {prefix ? addTrailingWhiteSpace(prefix) : null}
       {/* this divider starts a new 'line' for JAWS when reading line-by-line */}
       <span className={cx('text-divider')} />
       <span
+        id={refId}
         ref={ref}
         tabIndex={focusable ? '-1' : null}
         role={focusable ? 'group' : null}
