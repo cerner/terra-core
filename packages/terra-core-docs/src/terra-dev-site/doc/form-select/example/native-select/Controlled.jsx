@@ -23,8 +23,8 @@ const ControlledExample = () => {
         className={cx('form-select')}
       />
       
-      <button tabIndex="0" type="button" className={cx('controlled_button')} onClick={() => setValue()}>Clear</button>
-      <button tabIndex="0" type="button" className={cx('controlled_button')} onClick={() => setValue('mercedes')}>Set Mercedes</button>
+      <button type="button" className={cx('controlled_button')} onClick={() => setValue(undefined)}>Clear</button>
+      <button type="button" className={cx('controlled_button')} onClick={() => setValue('mercedes')}>Set Mercedes</button>
     </>
   );
 };
