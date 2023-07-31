@@ -1,0 +1,42 @@
+:local {
+  .orion-fusion-theme {
+    /* ---------------------------------------------------------------------- *
+     * Filter Pills: Doc Examples 
+     * ---------------------------------------------------------------------- */
+
+    // Terra Docs Example Reset Button
+    --terra-framework-docs-example-reset-button-margin-bottom: -2.95833rem;
+
+    // Applied Filters Toolbar Example
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-border: 1px solid #cbcacb;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-content-panel-background-color: #fff;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-content-panel-padding: 0;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-label-color: #1c1f21;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-label-font-size: 1rem;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-label-font-weight: 700;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-toolbar-padding-bottom: 0.08333rem;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-toolbar-padding-left: 0.66667rem;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-toolbar-padding-right: 0.33333rem;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-toolbar-padding-top: 0.08333rem;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-flex-item-start-margin-right: 0.5rem;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-flex-item-start-padding-top: 0.5rem;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-flex-item-end-margin-left: 0;
+    --terra-framework-docs-filter-pills-doc-example-applied-filters-flex-item-end-padding-top: 0.16667rem;
+
+    // Truncated Label Example
+    --terra-framework-docs-filter-pills-doc-example-truncated-label-container-background-color: rgba(189, 16, 224, 0.05);
+    --terra-framework-docs-filter-pills-doc-example-truncated-label-container-border: 2px dashed #bd10e0;
+    --terra-framework-docs-filter-pills-doc-example-truncated-label-container-min-height: 2.28571rem;
+    --terra-framework-docs-filter-pills-doc-example-truncated-label-container-padding: 0.71428rem 0.21428rem 0.71428rem 0.21428rem;
+    
+    // Search Terms Example (has Visible Label)
+    --terra-framework-docs-filter-pills-doc-example-search-terms-background-color: #ecf3ff;
+    --terra-framework-docs-filter-pills-doc-example-search-terms-min-height: 8.5rem;
+    --terra-framework-docs-filter-pills-doc-example-search-terms-padding: 0.71428rem 0.85714rem;
+    --terra-framework-docs-filter-pills-doc-example-search-terms-label-color: #2a4b77;
+    --terra-framework-docs-filter-pills-doc-example-search-terms-label-font-size: 1.07142rem;
+    --terra-framework-docs-filter-pills-doc-example-search-terms-label-font-weight: 700;
+    --terra-framework-docs-filter-pills-doc-example-search-terms-label-padding-bottom: 0.21428rem;
+    --terra-framework-docs-filter-pills-doc-example-search-terms-label-padding-left: 0.14285rem;
+  }
+}

@@ -63,6 +63,8 @@ class Tag extends React.Component {
       this.setState({ focused: true });
     } else if (event.nativeEvent.keyCode === KeyCode.KEY_LEFT) {
       this.setState({ focused: true });
+    } else if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
+      this.setState({ focused: true });
     }
 
     if (this.props.onKeyUp) {

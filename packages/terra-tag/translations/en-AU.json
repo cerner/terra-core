@@ -1,0 +1,14 @@
+{
+  "Terra.tags.label.delete": "Remove {tagLabelName}",
+  "Terra.tags.label.rollupTag": "{tagsNotVisibleCount} more...",
+  "Terra.tags.label.showLess": "Show Less",
+  "Terra.tags.hint.removable": "item is removable via Delete or Back Space key",
+  "Terra.tags.hint.selectable": "for additional information, button is selectable via Space Bar or Enter key",
+  "Terra.tags.hint.selectableAndRemovable": "item is removable via Delete or Back Space key, for additional information button is selectable via Space Bar or Enter key",
+  "Terra.tags.hint.wasRemoved": "{tagLabelName} Removed",
+  "Terra.tags.hint.rollupTag": "{tagsNotVisibleCount} items are hidden. Select to display {tagsNotVisibleCount} hidden items",
+  "Terra.tags.hint.showLess": "select to hide items",
+  "Terra.tags.hint.rollupNotVisible": "{tagsNotVisibleCount} items are not displayed",
+  "Terra.tags.hint.rollupVisible": "{tagsNotVisibleCount} hidden items are now displayed",
+  "Terra.tags.hint.tagList": "Contains {numberOfTags} items"
+}
