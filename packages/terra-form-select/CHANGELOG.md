@@ -3,8 +3,6 @@
 ## Unreleased
 * Added
   * Added aria-required property for not to display browser default tooltip.
-  * Added Styles for buttons.
-  
 ## 6.43.0 - (July 13, 2023)
 
 * Changed
