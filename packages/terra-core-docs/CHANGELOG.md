@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Updated `terra-native-select` example to fix slightly truncated button.
+
 * Changed
   * Updated Arrange component example to use `span` element instead of `div`.
 
