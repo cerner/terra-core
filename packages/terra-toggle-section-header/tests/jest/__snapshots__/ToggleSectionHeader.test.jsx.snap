@@ -45,29 +45,29 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
     class="section-header is-interactable"
     tabindex="0"
   >
-    <div
+    <button
       aria-expanded="false"
       aria-label="default title"
       class="arrange-wrapper"
-      role="button"
       tabindex="-1"
+      type="button"
     >
-      <div
+      <span
         class="arrange title-arrange"
       >
-        <div
-          class="fit"
+        <span
+          class="fit fit-block"
         >
-          <div
+          <span
             class="accordion-icon-wrapper"
           >
             <span
               class="accordion-icon"
             />
-          </div>
-        </div>
-        <div
-          class="fill"
+          </span>
+        </span>
+        <span
+          class="fill fill-block"
         >
           <span
             aria-hidden="true"
@@ -75,12 +75,12 @@ exports[`ToggleSectionHeader should render a default toggle section header 1`] =
           >
             default title
           </span>
-        </div>
-        <div
+        </span>
+        <span
           class="fit"
         />
-      </div>
-    </div>
+      </span>
+    </button>
   </h2>
   <div
     aria-hidden="true"
@@ -96,29 +96,29 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
     class="section-header is-interactable"
     tabindex="0"
   >
-    <div
+    <button
       aria-expanded="false"
       aria-label="animated title"
       class="arrange-wrapper"
-      role="button"
       tabindex="-1"
+      type="button"
     >
-      <div
+      <span
         class="arrange title-arrange"
       >
-        <div
-          class="fit"
+        <span
+          class="fit fit-block"
         >
-          <div
+          <span
             class="accordion-icon-wrapper"
           >
             <span
               class="accordion-icon"
             />
-          </div>
-        </div>
-        <div
-          class="fill"
+          </span>
+        </span>
+        <span
+          class="fill fill-block"
         >
           <span
             aria-hidden="true"
@@ -126,12 +126,12 @@ exports[`ToggleSectionHeader should render an animated toggle section header 1`]
           >
             animated title
           </span>
-        </div>
-        <div
+        </span>
+        <span
           class="fit"
         />
-      </div>
-    </div>
+      </span>
+    </button>
   </h2>
   <div
     aria-hidden="true"
@@ -157,29 +157,29 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
     class="section-header is-interactable"
     tabindex="0"
   >
-    <div
+    <button
       aria-expanded="true"
       aria-label="initially open title"
       class="arrange-wrapper"
-      role="button"
       tabindex="-1"
+      type="button"
     >
-      <div
+      <span
         class="arrange title-arrange"
       >
-        <div
-          class="fit"
+        <span
+          class="fit fit-block"
         >
-          <div
+          <span
             class="accordion-icon-wrapper"
           >
             <span
               class="accordion-icon is-open"
             />
-          </div>
-        </div>
-        <div
-          class="fill"
+          </span>
+        </span>
+        <span
+          class="fill fill-block"
         >
           <span
             aria-hidden="true"
@@ -187,12 +187,12 @@ exports[`ToggleSectionHeader should render an initially open toggle section head
           >
             initially open title
           </span>
-        </div>
-        <div
+        </span>
+        <span
           class="fit"
         />
-      </div>
-    </div>
+      </span>
+    </button>
   </h2>
   <div
     aria-hidden="false"
@@ -229,12 +229,12 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
         onKeyUp={[Function]}
         tabIndex="0"
       >
-        <div
+        <button
           aria-expanded={true}
           aria-label="opens on click title"
           className="arrange-wrapper"
-          role="button"
           tabIndex="-1"
+          type="button"
         >
           <Arrange
             className="title-arrange"
@@ -247,31 +247,31 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
               </span>
             }
             fitStart={
-              <div
+              <span
                 className="accordion-icon-wrapper"
               >
                 <span
                   className="accordion-icon is-open"
                 />
-              </div>
+              </span>
             }
           >
-            <div
+            <span
               className="arrange title-arrange"
             >
-              <div
-                className="fit"
+              <span
+                className="fit fit-block"
               >
-                <div
+                <span
                   className="accordion-icon-wrapper"
                 >
                   <span
                     className="accordion-icon is-open"
                   />
-                </div>
-              </div>
-              <div
-                className="fill"
+                </span>
+              </span>
+              <span
+                className="fill fill-block"
               >
                 <span
                   aria-hidden={true}
@@ -279,13 +279,13 @@ exports[`ToggleSectionHeader should render an open toggle section header when cl
                 >
                   opens on click title
                 </span>
-              </div>
-              <div
+              </span>
+              <span
                 className="fit"
               />
-            </div>
+            </span>
           </Arrange>
-        </div>
+        </button>
       </h2>
     </SectionHeader>
     <Toggle

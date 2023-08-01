@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated SectionHeader to use `span` & `button` elements instead of `div`.
+
 ## 2.60.0 - (April 5, 2023)
 
 * Changed
