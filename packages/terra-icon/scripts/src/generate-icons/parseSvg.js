@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies, compat/compat */
-import fs from 'fs';
 import path from 'path';
+import fs from 'fs';
 import { JSDOM } from 'jsdom';
 import Icon from './Icon';
 /* eslint-enable import/no-extraneous-dependencies */
