@@ -93,13 +93,13 @@ exports[`NativeSelect should render a NativeSelect aria described by 1`] = `
       <select
         aria-describedby="test-described-id"
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
@@ -205,13 +205,13 @@ exports[`NativeSelect should render a NativeSelect as disabled 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={true}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
@@ -317,13 +317,13 @@ exports[`NativeSelect should render a NativeSelect as invalid 1`] = `
       <select
         aria-invalid={true}
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
@@ -426,13 +426,13 @@ exports[`NativeSelect should render a NativeSelect in filter style 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
       />
     </div>
   </NativeSelect>
@@ -530,13 +530,13 @@ exports[`NativeSelect should render a NativeSelect isIncomplete 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
@@ -641,13 +641,13 @@ exports[`NativeSelect should render a NativeSelect required 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={true}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={true}
         value=""
       >
         <option
@@ -753,13 +753,13 @@ exports[`NativeSelect should render a NativeSelect required and isIncomplete 1`]
       </div>
       <select
         aria-label="test-label"
+        aria-required={true}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={true}
         value=""
       >
         <option
@@ -905,6 +905,7 @@ exports[`NativeSelect should render a NativeSelect with an id 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         id="test-id"
@@ -912,7 +913,6 @@ exports[`NativeSelect should render a NativeSelect with an id 1`] = `
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
@@ -1059,13 +1059,13 @@ exports[`NativeSelect should render a NativeSelect with disabled options 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
@@ -1197,13 +1197,13 @@ exports[`NativeSelect should render a NativeSelect with onChange 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
@@ -1366,13 +1366,13 @@ exports[`NativeSelect should render a NativeSelect with opt groups 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
@@ -1549,13 +1549,13 @@ exports[`NativeSelect should render a NativeSelect with options 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
@@ -1723,14 +1723,14 @@ exports[`NativeSelect should render a NativeSelect with options and defaultValue
         </div>
       </div>
       <select
-        aria-label="test-label"
+        aria-label="test-label, Terra.form.select.selected"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value="saab"
       >
         <option
@@ -1898,14 +1898,14 @@ exports[`NativeSelect should render a NativeSelect with options and value 1`] = 
         </div>
       </div>
       <select
-        aria-label="test-label"
+        aria-label="test-label, Terra.form.select.selected"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value="audi"
       >
         <option
@@ -2033,13 +2033,13 @@ exports[`NativeSelect should render a default NativeSelect 1`] = `
       </div>
       <select
         aria-label="test-label"
+        aria-required={false}
         className="select"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
-        required={false}
         value=""
       >
         <option
