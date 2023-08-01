@@ -106,9 +106,9 @@
   }
 
   .rollup-tag {
-    background-color: var(--terra-tags-rollup-tag-background-color, #fff);
-    border: var(--terra-tags-rollup-tag-border, 1px solid #868a8c);
-    border-radius: var(--terra-tags-rollup-tag-border-radius, 10rem);
+    background-color: var(--terra-tags-rollup-tag-background-color, rgba(28, 31, 33, 0.04));
+    border: var(--terra-tags-rollup-tag-border, 1px solid rgba(28, 31, 33, 0.1));
+    border-radius: var(--terra-tags-rollup-tag-border-radius, 3px);
     border-style: solid;
     border-width: var(--terra-tags-rollup-tag-border-width, 1px);
     box-shadow: var(--terra-tags-rollup-tag-box-shadow, 0 1px 2px 0 rgba(0, 0, 0, 0.2));
@@ -135,7 +135,8 @@
     white-space: nowrap;
 
     &[data-terra-rollup-tag-show-focus-styles='true']:focus {
-      border-color: var(--terra-tags-rollup-tag-focus-border-color, #868a8c);
+      background-color: var(--terra-tag-focus-background-color, #fff);
+      border-color: var(--terra-tag-focus-border-color, rgba(76, 178, 233, 0.5));
       border-width: var(--terra-tags-rollup-tag-focus-border-width, 1px);
       box-shadow: var(--terra-tags-rollup-tag-focus-box-shadow, none);
       outline: var(--terra-tags-rollup-tag-focus-outline, 2px dashed #000);
