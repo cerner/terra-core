@@ -120,6 +120,15 @@ Terra.describeViewports('Button Group', ['huge'], () => {
       browser.keys('ArrowLeft');
       Terra.validates.element('Button-1 focused');
     });
+
+    it('Navigates from first button to last button', () => {
+      browser.keys(['ArrowLeft']);
+      Terra.validates.element('Button-1 focused');
+    });
+    it('Navigates from last button to first button', () => {
+      browser.keys(['ArrowRight']);
+      Terra.validates.element('Button-4 focused');
+    });
   });
 
   describe('Button Focus', () => {
