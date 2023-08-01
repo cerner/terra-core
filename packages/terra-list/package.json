@@ -27,7 +27,7 @@
     "react-intl": ">=2.8.0 <6.0.0"
   },
   "dependencies": {
-    "@cerner/terra-docs": "^1.10.0",
+    "@cerner/terra-docs": "^1.9.0",
     "classnames": "^2.2.5",
     "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
