@@ -51,11 +51,11 @@ class CustomButtonTextShowHide extends React.Component {
         focusRef={this.focusRef}
       >
         <h3>{header}</h3>
-        <p key="text">{text}</p>
+        <p>{text}</p>
         <ul>
-          <li>{listItems[0]}</li>
-          <li><Focuser ref={this.focusRef} focusableText={listItems[1]} /></li>
-          <li>{listItems[2]}</li>
+          <li><p>{listItems[0]}</p></li>
+          <li><p><Focuser ref={this.focusRef} focusableText={listItems[1]} /></p></li>
+          <li><p>{listItems[2]}</p></li>
         </ul>
       </ShowHide>
     );
