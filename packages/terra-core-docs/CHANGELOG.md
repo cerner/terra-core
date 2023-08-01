@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.32.0 - (August 1, 2023)
+
 * Changed
   * Updated Arrange component example to use `span` element instead of `div`.
 
