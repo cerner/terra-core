@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Updated `terra-native-select` example to fix slightly truncated button.
+
 * Added
   * Added email validation for `terra-form-field`.
 
