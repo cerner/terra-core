@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Changes to underline href tags
+  
 ## 2.57.0 - (April 27, 2023)
 
 * Changed
