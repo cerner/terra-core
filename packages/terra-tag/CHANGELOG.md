@@ -2,14 +2,14 @@
 
 ## Unreleased
 
-* Added
-  * Changes to underline href tags
-  
+* Added  
+  * Adds underline for tags with `href`
+
 ## 2.58.0 - (August 1, 2023)
 
 * Changed
   * Minor dependency version bump
-
+  
 ## 2.57.0 - (April 27, 2023)
 
 * Changed
