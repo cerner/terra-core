@@ -1,65 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Arrange default should render a arrange component with given fit and fill 1`] = `
-<div
+<span
   className="arrange"
 >
-  <div
-    className="fit"
+  <span
+    className="fit fit-block"
   >
     <img
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg"
     />
-  </div>
-  <div
-    className="fill"
+  </span>
+  <span
+    className="fill fill-block"
   >
     <div>
       FIll text
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="fit"
   >
     <a
       href="http://www.example.com"
     />
-  </div>
-</div>
+  </span>
+</span>
 `;
 
 exports[`Arrange should have align prop undefined when align not pass 1`] = `
-<div
+<span
   className="arrange"
 >
-  <div
-    className="fit"
+  <span
+    className="fit fit-block"
   >
     <img
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg"
     />
-  </div>
-  <div
-    className="fill"
+  </span>
+  <span
+    className="fill fill-block"
   >
     <div>
       FIll text
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="fit"
   />
-</div>
+</span>
 `;
 
 exports[`Arrange should have all prop set correctly 1`] = `
-<div
+<span
   className="arrange"
 >
-  <div
-    className="fit center"
+  <span
+    className="fit center fit-block"
     style={
       Object {
         "maxWidth": "10px",
@@ -70,9 +70,9 @@ exports[`Arrange should have all prop set correctly 1`] = `
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg"
     />
-  </div>
-  <div
-    className="fill center"
+  </span>
+  <span
+    className="fill center fill-block"
     style={
       Object {
         "maxWidth": "20px",
@@ -82,8 +82,8 @@ exports[`Arrange should have all prop set correctly 1`] = `
     <div>
       FIll text
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="fit center"
     style={
       Object {
@@ -94,130 +94,130 @@ exports[`Arrange should have all prop set correctly 1`] = `
     <a
       href="http://www.example.com"
     />
-  </div>
-</div>
+  </span>
+</span>
 `;
 
 exports[`Arrange should render a arrange component with given className and id 1`] = `
-<div
+<span
   className="arrange testA testB testC"
   id="testkey"
 >
-  <div
-    className="fit"
+  <span
+    className="fit fit-block"
   >
     <img
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg"
     />
-  </div>
-  <div
-    className="fill"
+  </span>
+  <span
+    className="fill fill-block"
   >
     <div>
       FIll text
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="fit"
   />
-</div>
+</span>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to bottom 1`] = `
-<div
+<span
   className="arrange"
 >
-  <div
-    className="fit bottom"
+  <span
+    className="fit bottom fit-block"
   >
     <img
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg"
     />
-  </div>
-  <div
-    className="fill bottom"
+  </span>
+  <span
+    className="fill bottom fill-block"
   >
     <div>
       FIll text
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="fit bottom"
   />
-</div>
+</span>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to center 1`] = `
-<div
+<span
   className="arrange"
 >
-  <div
-    className="fit center"
+  <span
+    className="fit center fit-block"
   />
-  <div
-    className="fill center"
+  <span
+    className="fill center fill-block"
   >
     <div>
       FIll text
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="fit center"
   >
     <a
       href="http://www.example.com"
     />
-  </div>
-</div>
+  </span>
+</span>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to stretch 1`] = `
-<div
+<span
   className="arrange"
 >
-  <div
-    className="fit stretch"
+  <span
+    className="fit stretch fit-block"
   >
     <img
       alt="panda"
       src="http:///uploads/2016/09/telegraph-1.jpg"
     />
-  </div>
-  <div
-    className="fill stretch"
+  </span>
+  <span
+    className="fill stretch fill-block"
   >
     <div>
       FIll text
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="fit stretch"
   />
-</div>
+</span>
 `;
 
 exports[`Arrange when two fits and one fill is passed with align set should render a arrange component with fit and fill aligned to top 1`] = `
-<div
+<span
   className="arrange"
 >
-  <div
-    className="fit"
+  <span
+    className="fit fit-block"
   />
-  <div
-    className="fill"
+  <span
+    className="fill fill-block"
   >
     <div>
       FIll text
     </div>
-  </div>
-  <div
+  </span>
+  <span
     className="fit"
   >
     <a
       href="http://www.example.com"
     />
-  </div>
-</div>
+  </span>
+</span>
 `;
