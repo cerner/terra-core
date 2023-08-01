@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated Arrange to use `span` elements instead of `div`.
+
 * Fixed
   * Fixed reflow issue when zoomed to 400% and the viewport is resized to 320x256 px.
 
