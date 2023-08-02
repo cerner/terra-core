@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.35.0 - (August 1, 2023)
+
 * Added
   * Updated aria-label for dropdown button.
   * Added focus styles and screenreader support to announce expand/collapse state and index for dropdown list items.
