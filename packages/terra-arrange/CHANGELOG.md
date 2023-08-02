@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 3.52.0 - (August 1, 2023)
+
+* Changed
+  * Updated Arrange to use `span` elements instead of `div`.
+
 * Fixed
   * Fixed reflow issue when zoomed to 400% and the viewport is resized to 320x256 px.
 

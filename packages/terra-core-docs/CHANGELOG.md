@@ -2,7 +2,14 @@
 
 ## Unreleased
 
+## 1.32.0 - (August 1, 2023)
+
+* Changed
+  * Updated Arrange component example to use `span` element instead of `div`.
+
 * Added
+  * Added realistic examples for `terra-arrange`.
+  * Added realistic examples for `terra-toggle-section-header`.
   * Added email validation for `terra-form-field`.
 
 * Updated
