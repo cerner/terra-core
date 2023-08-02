@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.55.0 - (August 1, 2023)
+
 * Changed
   * Changed the order of imports in parseSvg and renderJsx files.
 
