@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import ShowHide, { Focuser } from 'terra-show-hide';
+import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 
 const header = 'Bringing clarity to life sciences and healthcare decision-making ';
 const text = [
@@ -56,7 +56,7 @@ class CustomButtonTextShowHide extends React.Component {
       >
         <h3>{header}</h3>
         <p>
-          <Focuser ref={this.focusRef} prefix={text[0]} focusableText={text[1]} />
+          <ShowHideFocuser ref={this.focusRef} prefix={text[0]} focusableText={text[1]} />
           {' '}
           <a href="#">{text[2]}</a>
           {' '}

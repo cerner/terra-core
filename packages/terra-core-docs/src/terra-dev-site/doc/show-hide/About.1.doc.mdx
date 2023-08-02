@@ -11,7 +11,7 @@ import NoPreviewShowHide from './example/NoPreviewShowHide?dev-site-example';
 import NoFocusRefShowHide from './example/NoFocusRefShowHide?dev-site-example';
 
 import ShowHidePropsTable from 'terra-show-hide/src/ShowHide?dev-site-props-table';
-import FocuserPropsTable from 'terra-show-hide/src/_ShowHideFocuser?dev-site-props-table';
+import ShowHideFocuserPropsTable from 'terra-show-hide/src/ShowHideFocuser?dev-site-props-table';
 
 <Badge />
 
@@ -46,7 +46,7 @@ The Show-Hide component must be composed inside the [Base][1] component with a l
 ## Usage
 
 ```jsx
-import ShowHide, { Focuser } from 'terra-show-hide';
+import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 ```
 
 ## Accessibility
@@ -59,20 +59,20 @@ import ShowHide, { Focuser } from 'terra-show-hide';
 
 <Notice variant="caution" ariaLevel="3">
 
-  Here should be a warning text.
+  This component is not recommended for ios-based mobile applications due to VoiceOver focus limitations with Show Hide. Consider using Terra Toggle Button for mobile applications. 
 
 </Notice>
 
 ### Truncate a paragraph of text
   - At the top level of your component declare a `ref`, pass it as `focusRef` prop to `ShowHide` component. 
   - Pass a node with the preview portion of the text as a prop to `ShowHide` component.
-  - Use the `Focuser` component inside `<p>` tag. A `Focuser` component allows `ShowHide` component to set focus on the beginning of the focusable text upon opening. 
+  - Use the `ShowHideFocuser` component inside `<p>` tag. A `ShowHideFocuser` component allows `ShowHide` component to set focus on the beginning of the focusable text upon opening. 
   - The text split in the prefix and focusable text portions has to be passed as string props. The prefix prop should contain the portion of the text that was a part of the preview prop, passed to `ShowHide`.
-  - Forward `focusRef` to `Focuser` component.
+  - Forward `focusRef` to `ShowHideFocuser` component.
 
   ```jsx
   import React, { useRef, useState } from 'react';
-  import ShowHide, { Focuser } from 'terra-show-hide';
+  import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 
   const MyComponent = () => {
     const focusRef = useRef(null);
@@ -85,7 +85,7 @@ import ShowHide, { Focuser } from 'terra-show-hide';
     return (
       <ShowHide focusRef={focusRef} preview={ <p>{prefix}</p> } isOpen={isOpen} onChange={toggleShowHide} >
         <p>
-          <Focuser ref={this.focusRef} prefix={prefix} focusableText={focusableText} />
+          <ShowHideFocuser ref={this.focusRef} prefix={prefix} focusableText={focusableText} />
         </p>
       </ShowHide>
     );
@@ -93,16 +93,16 @@ import ShowHide, { Focuser } from 'terra-show-hide';
   ```
 
 ### Multiple children
-  Even though the main purpose of the `ShowHide` component is to truncate long paragraps of texts, the content of the `ShowHide` does not have to be one paragraph. It can include links, lists, and any kind of HTML tags as long as the first line of the hidden text is passed as a string prop to `Focuser` component rather than an HTML element.
+  Even though the main purpose of the `ShowHide` component is to truncate long paragraps of texts, the content of the `ShowHide` does not have to be one paragraph. It can include links, lists, and any kind of HTML tags as long as the first line of the hidden text is passed as a string prop to `ShowHideFocuser` component rather than an HTML element.
   
 Please note:
-  - Links can be placed inside the `p` tag that wraps `Focuser` component both preceding and following it. The prop `prefix` can be omitted if content has been passed as an HTML element preceding `Focuser`.
-  - Everything that precedes `Focuser` component must be also included into the `ShowHide` preview prop.
-  - Do not break lists placing `Focuser` inside `li`, as it might cause assistive technologies to read the content incorrectly.
+  - Links can be placed inside the `p` tag that wraps `ShowHideFocuser` component both preceding and following it. The prop `prefix` can be omitted if content has been passed as an HTML element preceding `ShowHideFocuser`.
+  - Everything that precedes `ShowHideFocuser` component must be also included into the `ShowHide` preview prop.
+  - Do not break lists placing `ShowHideFocuser` inside `li`, as it might cause assistive technologies to read the content incorrectly.
 
   ```jsx
     import React, { useState, useRef } from 'react';
-    import ShowHide, { Focuser } from 'terra-show-hide';
+    import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 
     const MyComponent = () => {
       const focusRef = useRef(null);
@@ -120,7 +120,7 @@ Please note:
         <ShowHide focusRef={focusRef} preview={preview} isOpen={isOpen} onChange={toggleShowHide} >
           <h3>{header}</h3>
           <p>
-            <Focuser ref={this.focusRef} prefix={prefix} focusableText="Several factors help bring clarity to life sciences, researchers and clinicians and " />
+            <ShowHideFocuser ref={this.focusRef} prefix={prefix} focusableText="Several factors help bring clarity to life sciences, researchers and clinicians and " />
             <a href="#">guide better care</a>
           </p>
           <ul>
@@ -135,7 +135,7 @@ Please note:
 
 ### First hidden child is an interactive element (link, button, etc)
   - At the top level of your component declare a `ref`.
-  - In this case there is no need to use `Focuser`. Forward `focusRef` to the interactive element directly.
+  - In this case there is no need to use `ShowHideFocuser`. Forward `focusRef` to the interactive element directly.
 
   ```jsx
     import React, { useState, useRef } from 'react';
@@ -185,5 +185,5 @@ Please note:
 ## Show Hide Props
 <ShowHidePropsTable />
 
-## Focuser Props
-<FocuserPropsTable />
+## Show Hide Focuser Props
+<ShowHideFocuserPropsTable />

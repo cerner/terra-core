@@ -52,7 +52,7 @@ const truncate = (string) => {
 /**
  * This component splits the text with dividing spans to allow the assistive technologies focus on the part of the text
  */
-const Focuser = forwardRef((props, ref) => {
+const ShowHideFocuser = forwardRef((props, ref) => {
   const {
     prefix,
     focusableText,
@@ -85,5 +85,5 @@ const Focuser = forwardRef((props, ref) => {
   );
 });
 
-Focuser.propTypes = propTypes;
-export default Focuser;
+ShowHideFocuser.propTypes = propTypes;
+export default ShowHideFocuser;

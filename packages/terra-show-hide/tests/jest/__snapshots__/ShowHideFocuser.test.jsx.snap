@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Focuser should render divider spans and a span to focus to correctly 1`] = `
+exports[`ShowHideFocuser should render divider spans and a span to focus to correctly 1`] = `
 <p>
   <span
     class="text-divider"
   />
   <span
+    id="focus-ref-00000000-0000-0000-0000-000000000000"
     role="group"
     tabindex="-1"
   >
@@ -18,12 +19,13 @@ exports[`Focuser should render divider spans and a span to focus to correctly 1`
 </p>
 `;
 
-exports[`Focuser should render focusable text correctly 1`] = `
+exports[`ShowHideFocuser should render focusable text correctly 1`] = `
 <p>
   <span
     class="text-divider"
   />
   <span
+    id="focus-ref-00000000-0000-0000-0000-000000000000"
     role="group"
     tabindex="-1"
   >
@@ -36,13 +38,14 @@ exports[`Focuser should render focusable text correctly 1`] = `
 </p>
 `;
 
-exports[`Focuser should render preview text correctly 1`] = `
+exports[`ShowHideFocuser should render preview text correctly 1`] = `
 <p>
   Patients are requesting greater affordability and efficiency in healthcare. 
   <span
     class="text-divider"
   />
   <span
+    id="focus-ref-00000000-0000-0000-0000-000000000000"
     role="group"
     tabindex="-1"
   >

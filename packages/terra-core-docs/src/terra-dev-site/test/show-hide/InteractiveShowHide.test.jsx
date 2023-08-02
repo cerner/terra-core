@@ -1,5 +1,5 @@
 import React from 'react';
-import ShowHide, { Focuser } from 'terra-show-hide';
+import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 
 const sentence = 'Lorem ipsum dolor sit amet consectetur adipiscing elit.';
 
@@ -48,7 +48,7 @@ class InteractiveShowHideTest extends React.Component {
         buttonText={customText}
       >
         {preview}
-        <p><Focuser ref={this.focusRef} focusableText={sentence} /></p>
+        <p><ShowHideFocuser ref={this.focusRef} focusableText={sentence} /></p>
         <a id="link" href="http">Link</a>
         {text}
       </ShowHide>
