@@ -35,6 +35,7 @@
       background-size: var(--terra-form-select-native-focus-background-size, 0 0);
       border-color: var(--terra-form-select-native-focus-border-color, #4cb2e9);
       transition-duration: var(--terra-form-select-native-focus-transition-duration, 0);
+      outline: var(--terra-form-select-native-focus-keyboard-outline, 2px dashed #000);
 
       &:hover {
         border-color: var(--terra-form-select-native-focus-hover-border-color, #4cb2e9);
