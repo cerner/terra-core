@@ -5,6 +5,13 @@
 * Fixed
   * Updated `terra-native-select` example to fix slightly truncated button.
 
+## 1.33.0 - (August 2, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.32.0 - (August 1, 2023)
+
 * Changed
   * Updated Arrange component example to use `span` element instead of `div`.
 
@@ -22,6 +29,7 @@
 
 * Changed
   * Updated Toggle Button Examples to have a dashed border around interactive elements.
+
 ## 1.31.0 - (July 13, 2023)
 
 * Added
