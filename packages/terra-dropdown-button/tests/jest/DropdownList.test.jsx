@@ -25,6 +25,10 @@ const eventMock = {
   stopPropagation: jest.fn(),
 };
 
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
 describe('Dropdown List', () => {
   it('renders a default dropdown list', () => {
     const wrapper = shallowWithIntl(
