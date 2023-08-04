@@ -95,10 +95,7 @@ const ListSubsection = ({
     return result;
   };
 
-  const handleDragEnd = (result, provided) => {
-    if (onDragEnd) {
-      onDragEnd(result);
-    }
+  const handleDragEnd = (result) => {
     // dropped outside the list
     if (!result.destination) {
       return;
@@ -109,20 +106,23 @@ const ListSubsection = ({
       result.destination.index,
     );
     sectionItems = items;
+    if (onDragEnd) {
+      onDragEnd(result);
+    }
   };
 
   const handleDragStart = (start, provided) => {
+    provided.announce(`You have lifted an item in position ${start.source.index}`);
     if (onDragStart) {
       onDragStart(start);
     }
-    provided.announce(`You have lifted an item in position ${start.source.index}`);
   };
 
   const handleDragUpdate = (update, provided) => {
+    provided.announce(`You have moved the item from position ${update.source.index} to position ${update.destination.index}`);
     if (onDragUpdate) {
       onDragUpdate(update);
     }
-    provided.announce(`You have moved the item from position ${update.source.index} to position ${update.destination.index}`);
   };
 
   return (
