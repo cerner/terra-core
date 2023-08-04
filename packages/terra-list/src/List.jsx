@@ -5,6 +5,7 @@ import classNamesBind from 'classnames/bind';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import styles from './List.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -77,6 +78,18 @@ const propTypes = {
    * One of `'none'`, `'single-select'`, `'multi-select'`.
    */
   ariaSelectionStyle: PropTypes.oneOf(['none', 'single-select', 'multi-select']),
+  /**
+   * Function callback when the Item is Lifted.
+   */
+  onDragStart: PropTypes.func,
+  /**
+   * Function callback when the Item is dragged from one position to another.
+   */
+  onDragUpdate: PropTypes.func,
+  /**
+   * Function callback when the Item is dropped.
+   */
+  onDragEnd: PropTypes.func,
 };
 
 const defaultProps = {
@@ -98,9 +111,22 @@ const List = ({
   refCallback,
   role,
   ariaSelectionStyle,
+  onDragStart,
+  onDragUpdate,
+  onDragEnd,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
+  const [listItem, setlistItem] = React.useState([]);
+
+  React.useEffect(() => {
+    if (!(Array.isArray(children))) {
+      if (children) setlistItem([children]);
+    } else {
+      setlistItem(children);
+    }
+  }, [children]);
+
   const listClassNames = classNames(
     cx(
       'list',
@@ -150,20 +176,80 @@ const List = ({
     attrSpread['aria-label'] = intl.formatMessage({ id: 'Terra.list.multiSelect' });
   }
 
+  const reorderListItems = (list, startIndex, endIndex) => {
+    const result = Array.from(list);
+    const [removed] = result.splice(startIndex, 1);
+    result.splice(endIndex, 0, removed);
+    return result;
+  };
+
+  const handleDragEnd = (result) => {
+    if (onDragEnd) {
+      onDragEnd(result);
+    }
+    // dropped outside the list
+    if (!result.destination) {
+      return;
+    }
+    const items = reorderListItems(
+      listItem,
+      result.source.index,
+      result.destination.index,
+    );
+    setlistItem(items);
+  };
+
+  const handleDragStart = (start, provided) => {
+    if (onDragStart) {
+      onDragStart(start);
+    }
+    provided.announce(`You have lifted an item in position ${start.source.index}`);
+  };
+
+  const handleDragUpdate = (update, provided) => {
+    if (onDragUpdate) {
+      onDragUpdate(update);
+    }
+    provided.announce(`You have moved the item from position ${update.source.index} to position ${update.destination.index}`);
+  };
+
   return (
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
-    <ul
-      {...customProps}
-      {...attrSpread}
-      aria-describedby={ariaDescribedBy}
-      aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
-      aria-details={ariaDetails}
-      className={listClassNames}
-      ref={handleListRef}
-      onKeyDown={handleKeyDown}
-    >
-      {children}
-    </ul>
+    <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
+      <Droppable droppableId="ListItem">
+        {(provided) => (
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
+          <ul
+            {...provided.droppableProps}
+            {...customProps}
+            {...attrSpread}
+            aria-describedby={ariaDescribedBy}
+            aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
+            aria-details={ariaDetails}
+            className={listClassNames}
+            ref={(refobj) => {
+              provided.innerRef(refobj);
+              handleListRef(refobj);
+            }}
+            onKeyDown={handleKeyDown}
+          >
+            {listItem.map((item, index) => (
+              <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
+                {(provider) => (
+                  <div
+                    ref={provider.innerRef}
+                    {...provider.draggableProps}
+                    {...provider.dragHandleProps}
+                  >
+                    {item}
+                  </div>
+                )}
+              </Draggable>
+            ))}
+            {provided.placeholder}
+          </ul>
+        )}
+      </Droppable>
+    </DragDropContext>
   );
 };
 
