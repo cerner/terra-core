@@ -223,7 +223,7 @@ const NativeSelect = ({
     id,
     disabled,
     'aria-invalid': isInvalid || undefined,
-    'aria-required': required,
+    required,
     value: currentValue,
   };
 
