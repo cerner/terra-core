@@ -1,8 +1,11 @@
 # Changelog
 
 ## Unreleased
-* Added
-  * Added aria-required property to avoid displaying browser default tooltip.
+## 6.44.0 - (August 1, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.43.0 - (July 13, 2023)
 
 * Changed

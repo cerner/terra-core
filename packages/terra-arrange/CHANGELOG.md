@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.52.0 - (August 1, 2023)
+
 * Changed
   * Updated Arrange to use `span` elements instead of `div`.
 
