@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Changed
+  * Changed implementation from Class Component to Functional Component.
 ## 3.65.0 - (March 1, 2023)
 
 * Removed
