@@ -207,7 +207,7 @@ const Button = ({
 
   const handleFocus = (event) => {
     setFocused(true);
-    event.currentTarget.setFocused();
+    event.currentTarget.focus();
 
     if (onFocus) {
       onFocus(event);
