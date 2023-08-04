@@ -194,9 +194,9 @@ class MenuUtil {
    */
   static findNext(object, value) {
     const options = MenuUtil.flatten(object, true);
-    let index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
+    const index = options.findIndex(({ props }) => MenuUtil.isEqual(props.value, value));
     if (options.length - 1 === index) {
-      index = -1;
+      return options[0].props.value;
     }
     return index === -1 ? null : options[Math.min(index + 1, options.length - 1)].props.value;
   }
