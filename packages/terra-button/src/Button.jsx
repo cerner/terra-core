@@ -254,7 +254,7 @@ const Button = ({
 
   const iconClasses = cx([
     'icon',
-    { 'icon-first': isIconOnlyClass || isReversed },
+    { 'icon-first': !isIconOnlyClass && !isReversed },
   ]);
 
   const buttonText = !isIconOnlyClass ? <span className={buttonTextClasses}>{text}</span> : null;
