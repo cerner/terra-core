@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated `terra-tag` to include realistic examples.
+
 ## 1.33.0 - (August 2, 2023)
 
 * Changed
