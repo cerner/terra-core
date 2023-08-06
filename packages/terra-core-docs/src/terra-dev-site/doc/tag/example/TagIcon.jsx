@@ -1,11 +1,11 @@
 import React from 'react';
-import IconTag from 'terra-icon/lib/icon/IconTag';
+import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import Tag from 'terra-tag';
 
 const TagIcon = () => (
   <div>
     {/* eslint-disable no-alert */}
-    <Tag icon={<IconTag />} onClick={() => window.alert('Tag has been clicked!')} text="Icon &amp; Text OnClick Tag" />
+    <Tag icon={<IconPerson />} onClick={() => window.alert('Patient has been diagnosed with Bronchitis')} text="Bronchitis" />
     {/* eslint-enable no-alert */}
   </div>
 );
