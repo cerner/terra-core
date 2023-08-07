@@ -26,7 +26,7 @@ const ControlledExample = () => {
         value={value}
         className={cx('form-select')}
       />
-      <button type="button" className={cx('controlled-button')} onClick={() => clickHandler(undefined)}>Clear</button>
+      <button type="button" className={cx('controlled-button')} onClick={() => clickHandler()}>Clear</button>
       <button type="button" className={cx('controlled-button')} onClick={() => clickHandler('mercedes')}>Set Mercedes</button>
     </>
   );

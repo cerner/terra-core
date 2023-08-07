@@ -219,7 +219,7 @@ const NativeSelect = ({
   const selectedText = intl.formatMessage({ id: 'Terra.form.select.selected' });
   const selectAttrs = {
     'aria-describedby': ariaDescribedBy,
-    'aria-label': (uncontrolledValue || value !== undefined) ? `${ariaLabel} ${selectedText}` : ariaLabel,
+    'aria-label': (uncontrolledValue || value) ? `${ariaLabel}, ${selectedText}` : ariaLabel,
     id,
     disabled,
     'aria-invalid': isInvalid || undefined,
