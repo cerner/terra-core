@@ -27,6 +27,7 @@ exports[`correctly applies the theme context className 1`] = `
           className="native-input"
           disabled={false}
           name={null}
+          onKeyDown={[Function]}
           type="radio"
         />
         <span
@@ -58,6 +59,7 @@ exports[`should render a ChoiceField with a radio 1`] = `
       className="native-input healtheintent-application"
       disabled={false}
       name="children_present"
+      onKeyDown={[Function]}
       type="radio"
       value="children_present"
     />
@@ -90,6 +92,7 @@ exports[`should render a controlled radio 1`] = `
       disabled={false}
       name={null}
       onChange={[Function]}
+      onKeyDown={[Function]}
       type="radio"
     />
     <span
@@ -121,6 +124,7 @@ exports[`should render a disabled radio 1`] = `
       disabled={true}
       name={null}
       onChange={[Function]}
+      onKeyDown={[Function]}
       type="radio"
     />
     <span
@@ -150,6 +154,7 @@ exports[`should render a radio 1`] = `
       className="native-input"
       disabled={false}
       name={null}
+      onKeyDown={[Function]}
       type="radio"
     />
     <span
@@ -182,6 +187,7 @@ exports[`should render a radio with a hidden label 1`] = `
       disabled={false}
       name={null}
       onChange={[Function]}
+      onKeyDown={[Function]}
       type="radio"
     />
     <span
@@ -210,6 +216,7 @@ exports[`should render an uncontrolled radio 1`] = `
       defaultChecked={true}
       disabled={false}
       name={null}
+      onKeyDown={[Function]}
       type="radio"
     />
     <span

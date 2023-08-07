@@ -103,6 +103,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
         labelText="Default label"
         labelTextAttrs={Object {}}
         name={null}
+        onKeyDown={[Function]}
       >
         <div
           className="radio"
