@@ -7,12 +7,7 @@ import translationsFile from '../../translations/en.json';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import DropdownList from '../../src/_DropdownList';
 import { Item } from '../../src/DropdownButton';
-import SharedUtil from '../../../terra-form-select/src/shared/_SharedUtil';
-
-// Mock the SharedUtil module
-jest.mock('../../../terra-form-select/src/shared/_SharedUtil', () => ({
-  isMac: jest.fn(),
-}));
+import Util from '../../src/_DropdownListUtil';
 
 const listRefMock = {
   childNodes: [
@@ -29,6 +24,10 @@ const eventMock = {
   preventDefault: jest.fn(),
   stopPropagation: jest.fn(),
 };
+
+afterEach(() => {
+  jest.clearAllMocks();
+});
 
 describe('Dropdown List', () => {
   it('renders a default dropdown list', () => {
@@ -118,7 +117,7 @@ describe('Dropdown List', () => {
 
   it('should set the aria-label property to empty on keydown on Mac', () => {
     //  Sets the mock return value for isMac
-    SharedUtil.isMac.mockReturnValue(true);
+    jest.spyOn(Util, 'isMac').mockReturnValue(true);
 
     const wrapper = shallowWithIntl(
       <IntlProvider locale="en" messages={translationsFile}>
@@ -144,7 +143,7 @@ describe('Dropdown List', () => {
 
   it('should set the aria-label property to empty on keydown on non-mac', () => {
     //  Sets the mock return value for isMac
-    SharedUtil.isMac.mockReturnValue(false);
+    jest.spyOn(Util, 'isMac').mockReturnValue(false);
 
     const wrapper = shallowWithIntl(
       <IntlProvider locale="en" messages={translationsFile}>
