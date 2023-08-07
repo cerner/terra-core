@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -136,20 +136,9 @@ const Button = ({
   title,
   ...customProps
 }) => {
-  const theme = React.useContext(ThemeContext);
-  const [focused, setFocused] = useState(false);
-  const [active, setActive] = useState(false);
-
-  useEffect(() => {
-    setActive(false);
-    if (isDisabled) {
-      setFocused(false);
-    }
-  }, [isDisabled]);
+  const theme = useContext(ThemeContext);
 
   const handleOnBlur = (event) => {
-    setFocused(false);
-
     if (onBlur) {
       onBlur(event);
     }
@@ -170,9 +159,7 @@ const Button = ({
 
   const handleKeyDown = (event) => {
     // Add active state to FF browsers
-    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
-      setActive(true);
-
+    if (event.keyCode === KeyCode.KEY_SPACE) {
       // Follow href on space keydown when rendered as an anchor tag
       if (href) {
         event.preventDefault();
@@ -180,35 +167,18 @@ const Button = ({
       }
     }
 
-    // Add focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
-      setFocused(true);
-    }
     if (onKeyDown) {
       onKeyDown(event);
     }
   };
 
   const handleKeyUp = (event) => {
-    // Remove active state from FF broswers
-    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
-      setActive(false);
-    }
-
-    // Apply focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
-      setFocused(true);
-    }
-
     if (onKeyUp) {
       onKeyUp(event);
     }
   };
 
   const handleFocus = (event) => {
-    setFocused(true);
-    event.currentTarget.focus();
-
     if (onFocus) {
       onFocus(event);
     }
@@ -221,7 +191,7 @@ const Button = ({
 
     // See https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus#Notes
     // If you call HTMLElement.focus() from a mousedown event handler, you must call event.preventDefault() to keep the focus from leaving the HTMLElement.
-    // Otherwise, when you click on the button again, focus would leave the button and onBlur would get called causing the document.activeElement would no longer be the focused button.
+    // Otherwise, when you click on the button again, focus would leave the button and onBlur would get called causing the document.activeElement would no longer be the isFocused button.
     event.preventDefault();
   };
 
@@ -232,8 +202,6 @@ const Button = ({
       { 'is-disabled': isDisabled },
       { block: isBlock },
       { compact: isCompact },
-      { 'is-active': active && !isDisabled },
-      { 'is-focused': focused && !isDisabled },
       theme.className,
     ]),
     customProps.className,
@@ -270,7 +238,7 @@ const Button = ({
   let ariaLabel = customProps['aria-label'];
 
   if (isIconOnlyClass) {
-    ariaLabel = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : customProps['aria-label'] || text;
+    ariaLabel = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : ariaLabel || text;
     buttonTitle = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : title || text;
   }
 
@@ -306,7 +274,6 @@ const Button = ({
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
-Button.contextType = ThemeContext;
 
 Button.Opts = {};
 Button.Opts.Types = ButtonTypes;
