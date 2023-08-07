@@ -4,9 +4,9 @@ import React, {
 import Table from 'terra-table';
 import mockData from './mock-data/mock-sort';
 
-const columnKeys = ['column-0', 'column-1', 'column-2'];
+const columnKeys = ['column-0', 'column-1', 'column-2','column-3','column-4'];
 
-const createCell = cell => ({ key: cell.key, children: cell.title });
+const createCell = cell => ({ key: cell.key, children: cell.title, isRowHeader: cell.isRowHeader });
 
 const createCellsForRow = cells => cells.map(cell => createCell(cell));
 
@@ -66,9 +66,11 @@ const SortedTable = () => {
       cellPaddingStyle="standard"
       headerData={{
         cells: [
-          createHeaderCell(columnKeys[0], 'Breakfast'),
-          createHeaderCell(columnKeys[1], 'Animals'),
-          createHeaderCell(columnKeys[2], 'Flatware'),
+          createHeaderCell(columnKeys[0], 'Date'),
+          createHeaderCell(columnKeys[1], 'Name'),
+          createHeaderCell(columnKeys[2], 'Medicine'),
+          createHeaderCell(columnKeys[3], 'Quantity'),
+          createHeaderCell(columnKeys[4], 'Cost'),
         ],
       }}
       bodyData={[{

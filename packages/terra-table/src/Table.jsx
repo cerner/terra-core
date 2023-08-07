@@ -467,7 +467,7 @@ const Table = ({
       {...customProps}
       {...attrSpread}
       className={tableClasses}
-      role="grid"
+      role="table"
       aria-rowcount={numberOfRows || rowCount}
       aria-describedby={summaryId}
     >

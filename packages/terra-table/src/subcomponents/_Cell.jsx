@@ -39,11 +39,16 @@ const propTypes = {
    * Width of the cell. Should match header cell counter-part.
    */
   width: widthShape,
+  /**
+   * Enum value to make the cell row header otherwise it is a gridcell
+   */
+  isRowHeader: PropTypes.oneOf(['rowheader','gridcell'])
 };
 
 const defaultProps = {
   children: [],
   removeInner: false,
+  isRowHeader: 'gridcell'
 };
 
 const Cell = ({
@@ -51,6 +56,7 @@ const Cell = ({
   refCallback,
   removeInner,
   width,
+  isRowHeader,
   disclosureData,
   ...customProps
 }) => {
@@ -85,7 +91,7 @@ const Cell = ({
       style={styleFromWidth(width)} // eslint-disable-line react/forbid-dom-props
       className={customProps.className ? `${cellClassNames} ${customProps.className}` : cellClassNames}
       ref={refCallback}
-      role="gridcell"
+      role={isRowHeader}
       tabIndex={disclosureData ? '-1' : undefined}
     >
       {content}
