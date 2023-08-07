@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated all paginator examples for `terra-paginator` to use new props.
+
 ## 1.34.0 - (August 8, 2023)
 
 * Updated

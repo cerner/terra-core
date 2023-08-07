@@ -51,7 +51,7 @@ class PaginatorNoPagesExample extends React.Component {
               {this.state.currentPage}
             </h1>
 )}
-          footer={<Paginator onPageChange={this.changePages} />}
+          footer={<Paginator onPageChange={this.changePages} ariaLabel="paginator no pages pagination" />}
         >
           {this.state.content}
         </Dialog>
