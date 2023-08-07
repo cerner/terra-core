@@ -6,32 +6,32 @@ import Radio from '../../src/Radio';
 window.matchMedia = () => ({ matches: true });
 
 it('should render a radio', () => {
-  const checkBox = (<Radio labelText="Radio" />);
-  const wrapper = shallow(checkBox);
+  const radioButton = (<Radio labelText="Radio" />);
+  const wrapper = shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render an uncontrolled radio', () => {
-  const checkBox = (<Radio defaultChecked labelText="Radio" />);
-  const wrapper = shallow(checkBox);
+  const radioButton = (<Radio defaultChecked labelText="Radio" />);
+  const wrapper = shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a controlled radio', () => {
-  const checkBox = (<Radio checked onChange={() => {}} labelText="Radio" />);
-  const wrapper = shallow(checkBox);
+  const radioButton = (<Radio checked onChange={() => {}} labelText="Radio" />);
+  const wrapper = shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a disabled radio', () => {
-  const checkBox = (<Radio checked onChange={() => {}} labelText="Radio" disabled />);
-  const wrapper = shallow(checkBox);
+  const radioButton = (<Radio checked onChange={() => {}} labelText="Radio" disabled />);
+  const wrapper = shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 
 it('should render a radio with a hidden label', () => {
-  const checkBox = (<Radio checked onChange={() => {}} labelText="Radio" isLabelHidden />);
-  const wrapper = shallow(checkBox);
+  const radioButton = (<Radio checked onChange={() => {}} labelText="Radio" isLabelHidden />);
+  const wrapper = shallow(radioButton);
   expect(wrapper).toMatchSnapshot();
 });
 

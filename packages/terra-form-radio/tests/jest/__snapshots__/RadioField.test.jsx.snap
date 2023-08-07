@@ -94,7 +94,6 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
           Object {
             "aria-describedby": "terra-radio-field-description-uuid123  ",
             "data-custom-attr": "attr data",
-            "onKeyDown": [Function],
           }
         }
         isInline={false}
@@ -103,6 +102,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
         labelText="Default label"
         labelTextAttrs={Object {}}
         name={null}
+        onKeyDown={[Function]}
       >
         <div
           className="radio"

@@ -113,7 +113,7 @@ const RadioField = (props) => {
     legendAttrs.className,
   ]);
 
-  const fieldSetId = `terra-radio-group-${uniqueid()}`;
+  const fieldSetId = customProps.id || `terra-radio-group-${uniqueid()}`;
   const legendAriaDescriptionId = `terra-radio-field-description-${uniqueid()}`;
   const helpAriaDescriptionId = help ? `terra-radio-field-description-help-${uniqueid()}` : '';
   const errorAriaDescriptionId = error ? `terra-radio-field-description-error-${uniqueid()}` : '';
@@ -146,23 +146,25 @@ const RadioField = (props) => {
 
   const handleKeyDown = (event) => {
     const radioGroup = document.getElementById(fieldSetId);
-    const radioItems = radioGroup.querySelectorAll('[type=radio]');
-    const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
-    if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
-      if (itemIndex === radioItems.length - 1) {
-        radioItems[0].focus();
-        radioItems[0].checked = true;
-      } else {
-        radioItems[itemIndex + 1].focus();
-        radioItems[itemIndex + 1].checked = true;
-      }
-    } else if (event.key === VALUE_UP || event.key === VALUE_LEFT) {
-      if (itemIndex === 0) {
-        radioItems[radioItems.length - 1].focus();
-        radioItems[radioItems.length - 1].checked = true;
-      } else {
-        radioItems[itemIndex - 1].focus();
-        radioItems[itemIndex - 1].checked = true;
+    if (radioGroup) {
+      const radioItems = radioGroup.querySelectorAll('[type=radio]');
+      const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
+      if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
+        if (itemIndex === radioItems.length - 1) {
+          radioItems[0].focus();
+          radioItems[0].checked = true;
+        } else {
+          radioItems[itemIndex + 1].focus();
+          radioItems[itemIndex + 1].checked = true;
+        }
+      } else if (event.key === VALUE_UP || event.key === VALUE_LEFT) {
+        if (itemIndex === 0) {
+          radioItems[radioItems.length - 1].focus();
+          radioItems[radioItems.length - 1].checked = true;
+        } else {
+          radioItems[itemIndex - 1].focus();
+          radioItems[itemIndex - 1].checked = true;
+        }
       }
     }
   };
@@ -170,8 +172,9 @@ const RadioField = (props) => {
   const content = React.Children.map(children, (child) => {
     if (child && child.type.isRadio) {
       return React.cloneElement(child, {
+        onKeyDown: handleKeyDown,
         inputAttrs: {
-          ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds, onKeyDown: handleKeyDown,
+          ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds,
         },
       });
     }

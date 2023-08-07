@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed `onChange` not triggering issue on keyboard navigation.
+
 ## 4.39.0 - (August 11, 2023)
 
 * Changed

@@ -52,21 +52,26 @@ const propTypes = {
     */
   name: PropTypes.string,
   /**
-   * Function to trigger when focus is lost from the radio button.
-   */
+    * Function to trigger when focus is lost from the radio button.
+    */
   onBlur: PropTypes.func,
   /**
     * Function to trigger when user clicks on the radio button. Provide a function to create a controlled input.
     */
   onChange: PropTypes.func,
   /**
-   *  Function to trigger when user focuses on the radio button.
-   */
+    *  Function to trigger when user focuses on the radio button.
+    */
   onFocus: PropTypes.func,
   /**
     * The value of the input element.
     */
   value: PropTypes.string,
+  /**
+    * @private
+    * Function to trigger on key press on the radio button. Private functions created to be used by field component.
+    */
+  onKeyDown: PropTypes.func,
 };
 
 const defaultProps = {
@@ -82,6 +87,7 @@ const defaultProps = {
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
+  onKeyDown: undefined,
   value: undefined,
 };
 
@@ -99,6 +105,7 @@ const Radio = ({
   onBlur,
   onChange,
   onFocus,
+  onKeyDown,
   value,
   ...customProps
 }) => {
@@ -147,6 +154,13 @@ const Radio = ({
     'inner-ring',
   ]);
 
+  const wrapOnKeydown = (e) => {
+    if (onKeyDown) {
+      onKeyDown(e);
+      onChange(e);
+    }
+  };
+
   let labelTextContainer = null;
   if (isLabelHidden) {
     controlInputAttrs['aria-label'] = labelText;
@@ -165,6 +179,7 @@ const Radio = ({
           disabled={disabled}
           name={name}
           value={value}
+          onKeyDown={wrapOnKeydown}
           onChange={onChange}
           onFocus={onFocus}
           onBlur={onBlur}

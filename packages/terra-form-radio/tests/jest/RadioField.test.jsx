@@ -67,6 +67,26 @@ it('should render a help message', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+it('should invoke onchange on keydown event on radio button', () => {
+  const onChange = jest.fn();
+  const onKeyDown = jest.fn();
+  const radioField = (
+    <RadioField
+      id="RadioFieldOne"
+      legend="Help RadioField"
+      help="This will help up determine how many chairs to request"
+    >
+      <Radio id="firstRadio" onChange={onChange} onKeyDown={onKeyDown} labelText="Radio" />
+      <Radio id="secondRadio" onChange={onChange} onKeyDown={onKeyDown} labelText="Radio" />
+      <Radio id="ThirdRadio" onChange={onChange} onKeyDown={onKeyDown} labelText="Radio" />
+    </RadioField>
+  );
+  const wrapper = mountWithIntl(radioField);
+  // simulates keydown event for ArrowDown key
+  wrapper.find('input#firstRadio').simulate('keydown', { nativeEvent: { keyCode: 40 } });
+  expect(onChange).toHaveBeenCalled();
+});
+
 it('should render an optional part on the label', () => {
   const radioField = <RadioField legend="Optional RadioField" showOptional />;
   const wrapper = shallowWithIntl(radioField);
