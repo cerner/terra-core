@@ -9,7 +9,7 @@
 
 * Changed
   * Minor dependency version bump
-  
+
 ## 2.57.0 - (April 27, 2023)
 
 * Changed
