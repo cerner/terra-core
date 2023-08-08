@@ -85,6 +85,10 @@ const Cell = ({
     );
   }
 
+  if(isRowHeader === undefined) {
+    isRowHeader = "gridcell"
+  }
+
   return (
     <div
       {...customProps}

@@ -130,6 +130,7 @@ const createCell = (cell, sectionId, columnId, colWidth, discloseData) => (
     removeInner={cell.removeInner}
     width={colWidth}
     disclosureData={discloseData}
+    isRowHeader={cell.rowHeader}
   >
     {cell.children}
   </Cell>
