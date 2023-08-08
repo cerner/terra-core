@@ -1,7 +1,8 @@
 # Changelog
 
 ## Unreleased
-
+* Added
+  * Added drag and drop example for `terra-list`.
 ## 1.33.0 - (August 2, 2023)
 
 * Changed
