@@ -79,21 +79,17 @@ const ListSubsection = ({
   onDragEnd,
   ...customProps
 }) => {
-  let sectionItems = [];
-  let checkSelectableItem = false;
+  const [listItemNodes, setlistItemNodes] = React.useState([]);
 
-  if (!isCollapsible || !isCollapsed) {
-    if (!(Array.isArray(children))) {
-      sectionItems = (children) ? [children] : [];
-    } else {
-      sectionItems = children;
-    }
-    sectionItems.forEach((item) => {
-      if (item?.type?.name === 'ListItem') {
-        checkSelectableItem = item?.props?.isSelectable;
+  React.useEffect(() => {
+    if (!isCollapsible || !isCollapsed) {
+      if (!(Array.isArray(children))) {
+        if (children) setlistItemNodes([children]);
+      } else {
+        setlistItemNodes(children);
       }
-    });
-  }
+    }
+  }, [children, isCollapsible, isCollapsed]);
 
   const theme = React.useContext(ThemeContext);
   const listClassNames = classNames(
@@ -113,11 +109,11 @@ const ListSubsection = ({
       return;
     }
     const items = reorderListItems(
-      sectionItems,
+      listItemNodes,
       result.source.index,
       result.destination.index,
     );
-    sectionItems = items;
+    setlistItemNodes(items);
     if (onDragEnd) {
       onDragEnd(result);
     }
@@ -144,10 +140,10 @@ const ListSubsection = ({
   const renderSubSectionListItemsDom = () => (
     <>
       <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
-      {sectionItems && (
+      {listItemNodes && (
       <li className={cx('list-item')}>
         <ul className={listClassNames}>
-          {sectionItems}
+          {listItemNodes}
         </ul>
       </li>
       )}
@@ -162,7 +158,7 @@ const ListSubsection = ({
             <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
             <li className={cx('list-item')}>
               <ul className={listClassNames}>
-                {sectionItems.map((item, index) => (
+                {listItemNodes.map((item, index) => (
                   <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
                     {(provider) => (
                       cloneListItem(item, provider)
@@ -179,7 +175,7 @@ const ListSubsection = ({
   );
 
   return (
-    (isDraggable && checkSelectableItem) ? renderDraggableListDom() : renderSubSectionListItemsDom()
+    (isDraggable) ? renderDraggableListDom() : renderSubSectionListItemsDom()
   );
 };
 

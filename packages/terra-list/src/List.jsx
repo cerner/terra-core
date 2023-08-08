@@ -123,21 +123,13 @@ const List = ({
 }) => {
   const theme = React.useContext(ThemeContext);
   const [listItem, setlistItem] = React.useState([]);
-  const [checkSelectableItem, setcheckSelectableItem] = React.useState(false);
 
   React.useEffect(() => {
-    let childItems = children;
-    let allowDragNDrop = false;
     if (!(Array.isArray(children))) {
-      if (children) childItems = [children];
+      if (children) setlistItem([children]);
+    } else {
+      setlistItem(children);
     }
-    childItems.forEach((item) => {
-      if (item?.type?.name === 'ListItem') {
-        allowDragNDrop = item.props.isSelectable;
-      }
-    });
-    setcheckSelectableItem(allowDragNDrop);
-    setlistItem(childItems);
   }, [children]);
 
   const listClassNames = classNames(
@@ -280,7 +272,7 @@ const List = ({
   );
 
   return (
-    (isDraggable && checkSelectableItem) ? renderDraggableListDom() : renderListDom()
+    (isDraggable) ? renderDraggableListDom() : renderListDom()
   );
 };
 
