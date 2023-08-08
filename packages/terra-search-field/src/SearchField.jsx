@@ -263,6 +263,11 @@ class SearchField extends React.Component {
       customProps.className,
     );
 
+    const labelClassNames = cx([
+      'label',
+      theme.className,
+    ]);
+
     const inputText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
 
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
@@ -300,7 +305,7 @@ class SearchField extends React.Component {
       <div className={cx('search-container')}>
         {isLabelVisible
         && (
-        <label className={cx('label')}>{groupName}</label>
+        <label className={labelClassNames}>{groupName}</label>
         )}
         <div className={cx('search-container')} role="search" aria-label="Search">
           <div className={cx('search-container')} role="group" aria-label={groupName}>
