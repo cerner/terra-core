@@ -125,15 +125,13 @@ const ListSection = ({
     }
   };
 
-  const handleDragStart = (start, provided) => {
-    provided.announce(`You have lifted an item in position ${start.source.index}`);
+  const handleDragStart = (start) => {
     if (onDragStart) {
       onDragStart(start);
     }
   };
 
-  const handleDragUpdate = (update, provided) => {
-    provided.announce(`You have moved the item from position ${update.source.index} to position ${update.destination.index}`);
+  const handleDragUpdate = (update) => {
     if (onDragUpdate) {
       onDragUpdate(update);
     }
