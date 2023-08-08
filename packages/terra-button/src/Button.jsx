@@ -188,7 +188,7 @@ const Button = ({
 
     // See https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus#Notes
     // If you call HTMLElement.focus() from a mousedown event handler, you must call event.preventDefault() to keep the focus from leaving the HTMLElement.
-    // Otherwise, when you click on the button again, focus would leave the button and onBlur would get called causing the document.activeElement would no longer be the isFocused button.
+    // Otherwise, when you click on the button again, focus would leave the button and onBlur would get called causing the document.activeElement would no longer be the focused button.
     event.preventDefault();
   };
 
@@ -196,7 +196,6 @@ const Button = ({
     cx([
       'button',
       variant,
-      { 'is-disabled': isDisabled },
       { block: isBlock },
       { compact: isCompact },
       { 'is-active': isActive },
