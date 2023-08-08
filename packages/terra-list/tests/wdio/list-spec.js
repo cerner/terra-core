@@ -83,4 +83,16 @@ Terra.describeViewports('List', ['medium'], () => {
       Terra.validates.element('End Keypress');
     });
   });
+
+  describe('ListItem Drag and Drop', () => {
+    before(() => browser.url('raw/tests/cerner-terra-core-docs/list/draggable-list-item'));
+
+    it('displays list before drag and drop', () => {
+      Terra.validates.element('Before Drag and Drop', { selector: '#root' });
+    });
+    it('should perform drag and drop operation', () => {
+      browser.keys(['Tab', 'Space', 'ArrowDown', 'Space']);
+      Terra.validates.element('After Drag and Drop', { selector: '#root' });
+    });
+  });
 });

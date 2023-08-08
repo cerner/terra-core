@@ -1,0 +1,1413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render List with items 1`] = `
+<InjectIntl(List)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isDraggable={true}
+>
+  <List
+    ariaSelectionStyle="none"
+    dividerStyle="none"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isDraggable={true}
+    paddingStyle="none"
+    role="none"
+  >
+    <DragDropContext
+      onDragEnd={[Function]}
+      onDragStart={[Function]}
+      onDragUpdate={[Function]}
+    >
+      <ErrorBoundary>
+        <App
+          contextId="0"
+          dragHandleUsageInstructions="
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+"
+          onDragEnd={[Function]}
+          onDragStart={[Function]}
+          onDragUpdate={[Function]}
+          setCallbacks={[Function]}
+        >
+          <Provider
+            context={
+              Object {
+                "$$typeof": Symbol(react.context),
+                "Consumer": Object {
+                  "$$typeof": Symbol(react.context),
+                  "_calculateChangedBits": null,
+                  "_context": [Circular],
+                },
+                "Provider": Object {
+                  "$$typeof": Symbol(react.provider),
+                  "_context": [Circular],
+                },
+                "_calculateChangedBits": null,
+                "_currentRenderer": Object {},
+                "_currentRenderer2": null,
+                "_currentValue": null,
+                "_currentValue2": null,
+                "_threadCount": 0,
+              }
+            }
+            store={
+              Object {
+                "@@observable": [Function],
+                "dispatch": [Function],
+                "getState": [Function],
+                "replaceReducer": [Function],
+                "subscribe": [Function],
+              }
+            }
+          >
+            <Connect(Droppable)
+              direction="vertical"
+              droppableId="ListItem"
+              getContainerForClone={[Function]}
+              ignoreContainerClipping={false}
+              isCombineEnabled={false}
+              isDropDisabled={false}
+              mode="standard"
+              renderClone={null}
+              type="DEFAULT"
+            >
+              <Droppable
+                direction="vertical"
+                droppableId="ListItem"
+                getContainerForClone={[Function]}
+                ignoreContainerClipping={false}
+                isCombineEnabled={false}
+                isDropDisabled={false}
+                mode="standard"
+                placeholder={null}
+                renderClone={null}
+                shouldAnimatePlaceholder={false}
+                snapshot={
+                  Object {
+                    "draggingFromThisWith": null,
+                    "draggingOverWith": null,
+                    "isDraggingOver": false,
+                    "isUsingPlaceholder": false,
+                  }
+                }
+                type="DEFAULT"
+                updateViewportMaxScroll={[Function]}
+                useClone={null}
+              >
+                <ul
+                  className="list"
+                  data-rbd-droppable-context-id="0"
+                  data-rbd-droppable-id="ListItem"
+                  onKeyDown={[Function]}
+                  role="list"
+                >
+                  <PublicDraggable
+                    draggableId="1"
+                    index={0}
+                    isDragDisabled={false}
+                    key="1"
+                  >
+                    <PrivateDraggable
+                      canDragInteractiveElements={false}
+                      draggableId="1"
+                      index={0}
+                      isClone={false}
+                      isDragDisabled={false}
+                      isEnabled={true}
+                      shouldRespectForcePress={false}
+                    >
+                      <Connect(Draggable)
+                        canDragInteractiveElements={false}
+                        draggableId="1"
+                        index={0}
+                        isClone={false}
+                        isDragDisabled={false}
+                        isEnabled={true}
+                        shouldRespectForcePress={false}
+                      >
+                        <Draggable
+                          canDragInteractiveElements={false}
+                          draggableId="1"
+                          dropAnimationFinished={[Function]}
+                          index={0}
+                          isClone={false}
+                          isDragDisabled={false}
+                          isEnabled={true}
+                          mapped={
+                            Object {
+                              "combineTargetFor": null,
+                              "offset": Object {
+                                "x": 0,
+                                "y": 0,
+                              },
+                              "shouldAnimateDisplacement": true,
+                              "snapshot": Object {
+                                "combineTargetFor": null,
+                                "combineWith": null,
+                                "draggingOver": null,
+                                "dropAnimation": null,
+                                "isClone": false,
+                                "isDragging": false,
+                                "isDropAnimating": false,
+                                "mode": null,
+                              },
+                              "type": "SECONDARY",
+                            }
+                          }
+                          shouldRespectForcePress={false}
+                        >
+                          <ListItem
+                            aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                            data-rbd-drag-handle-context-id="0"
+                            data-rbd-drag-handle-draggable-id="1"
+                            data-rbd-draggable-context-id="0"
+                            data-rbd-draggable-id="1"
+                            draggable={false}
+                            hasChevron={false}
+                            isSelectable={true}
+                            isSelected={false}
+                            key="1"
+                            onDragStart={[Function]}
+                            onTransitionEnd={null}
+                            refCallback={[Function]}
+                            role="button"
+                            style={
+                              Object {
+                                "transform": null,
+                                "transition": null,
+                              }
+                            }
+                            tabIndex={0}
+                          >
+                            <li
+                              aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                              aria-selected={false}
+                              className="list-item is-selectable"
+                              data-item-show-focus="true"
+                              data-rbd-drag-handle-context-id="0"
+                              data-rbd-drag-handle-draggable-id="1"
+                              data-rbd-draggable-context-id="0"
+                              data-rbd-draggable-id="1"
+                              draggable={false}
+                              onBlur={[Function]}
+                              onDragStart={[Function]}
+                              onMouseDown={[Function]}
+                              onTransitionEnd={null}
+                              role="option"
+                              style={
+                                Object {
+                                  "transform": null,
+                                  "transition": null,
+                                }
+                              }
+                              tabIndex="0"
+                            >
+                              <div
+                                className="item-fill"
+                                key="item-fill"
+                              />
+                            </li>
+                          </ListItem>
+                        </Draggable>
+                      </Connect(Draggable)>
+                    </PrivateDraggable>
+                  </PublicDraggable>
+                  <PublicDraggable
+                    draggableId="2"
+                    index={1}
+                    isDragDisabled={false}
+                    key="2"
+                  >
+                    <PrivateDraggable
+                      canDragInteractiveElements={false}
+                      draggableId="2"
+                      index={1}
+                      isClone={false}
+                      isDragDisabled={false}
+                      isEnabled={true}
+                      shouldRespectForcePress={false}
+                    >
+                      <Connect(Draggable)
+                        canDragInteractiveElements={false}
+                        draggableId="2"
+                        index={1}
+                        isClone={false}
+                        isDragDisabled={false}
+                        isEnabled={true}
+                        shouldRespectForcePress={false}
+                      >
+                        <Draggable
+                          canDragInteractiveElements={false}
+                          draggableId="2"
+                          dropAnimationFinished={[Function]}
+                          index={1}
+                          isClone={false}
+                          isDragDisabled={false}
+                          isEnabled={true}
+                          mapped={
+                            Object {
+                              "combineTargetFor": null,
+                              "offset": Object {
+                                "x": 0,
+                                "y": 0,
+                              },
+                              "shouldAnimateDisplacement": true,
+                              "snapshot": Object {
+                                "combineTargetFor": null,
+                                "combineWith": null,
+                                "draggingOver": null,
+                                "dropAnimation": null,
+                                "isClone": false,
+                                "isDragging": false,
+                                "isDropAnimating": false,
+                                "mode": null,
+                              },
+                              "type": "SECONDARY",
+                            }
+                          }
+                          shouldRespectForcePress={false}
+                        >
+                          <ListItem
+                            aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                            data-rbd-drag-handle-context-id="0"
+                            data-rbd-drag-handle-draggable-id="2"
+                            data-rbd-draggable-context-id="0"
+                            data-rbd-draggable-id="2"
+                            draggable={false}
+                            hasChevron={false}
+                            isSelectable={true}
+                            isSelected={false}
+                            key="2"
+                            onDragStart={[Function]}
+                            onTransitionEnd={null}
+                            refCallback={[Function]}
+                            role="button"
+                            style={
+                              Object {
+                                "transform": null,
+                                "transition": null,
+                              }
+                            }
+                            tabIndex={0}
+                          >
+                            <li
+                              aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                              aria-selected={false}
+                              className="list-item is-selectable"
+                              data-item-show-focus="true"
+                              data-rbd-drag-handle-context-id="0"
+                              data-rbd-drag-handle-draggable-id="2"
+                              data-rbd-draggable-context-id="0"
+                              data-rbd-draggable-id="2"
+                              draggable={false}
+                              onBlur={[Function]}
+                              onDragStart={[Function]}
+                              onMouseDown={[Function]}
+                              onTransitionEnd={null}
+                              role="option"
+                              style={
+                                Object {
+                                  "transform": null,
+                                  "transition": null,
+                                }
+                              }
+                              tabIndex="0"
+                            >
+                              <div
+                                className="item-fill"
+                                key="item-fill"
+                              />
+                            </li>
+                          </ListItem>
+                        </Draggable>
+                      </Connect(Draggable)>
+                    </PrivateDraggable>
+                  </PublicDraggable>
+                  <AnimateInOut
+                    on={null}
+                    shouldAnimate={false}
+                  />
+                </ul>
+              </Droppable>
+            </Connect(Droppable)>
+          </Provider>
+        </App>
+      </ErrorBoundary>
+    </DragDropContext>
+  </List>
+</InjectIntl(List)>
+`;
+
+exports[`should render List without Draggable items 1`] = `
+<ul
+  className="list"
+  onKeyDown={[Function]}
+  role="list"
+>
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    key="123"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    key="124"
+  />
+  <ListItem
+    hasChevron={false}
+    isSelectable={true}
+    isSelected={false}
+    key="125"
+  />
+</ul>
+`;
+
+exports[`should render Section with items 1`] = `
+<ListSection
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isCollapsed={false}
+  isCollapsible={false}
+  isDraggable={true}
+  level={2}
+  title="test"
+>
+  <DragDropContext
+    onDragEnd={[Function]}
+    onDragStart={[Function]}
+    onDragUpdate={[Function]}
+  >
+    <ErrorBoundary>
+      <App
+        contextId="1"
+        dragHandleUsageInstructions="
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+"
+        onDragEnd={[Function]}
+        onDragStart={[Function]}
+        onDragUpdate={[Function]}
+        setCallbacks={[Function]}
+      >
+        <Provider
+          context={
+            Object {
+              "$$typeof": Symbol(react.context),
+              "Consumer": Object {
+                "$$typeof": Symbol(react.context),
+                "_calculateChangedBits": null,
+                "_context": [Circular],
+              },
+              "Provider": Object {
+                "$$typeof": Symbol(react.provider),
+                "_context": [Circular],
+              },
+              "_calculateChangedBits": null,
+              "_currentRenderer": Object {},
+              "_currentRenderer2": null,
+              "_currentValue": null,
+              "_currentValue2": null,
+              "_threadCount": 0,
+            }
+          }
+          store={
+            Object {
+              "@@observable": [Function],
+              "dispatch": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            }
+          }
+        >
+          <Connect(Droppable)
+            direction="vertical"
+            droppableId="listSection"
+            getContainerForClone={[Function]}
+            ignoreContainerClipping={false}
+            isCombineEnabled={false}
+            isDropDisabled={false}
+            mode="standard"
+            renderClone={null}
+            type="DEFAULT"
+          >
+            <Droppable
+              direction="vertical"
+              droppableId="listSection"
+              getContainerForClone={[Function]}
+              ignoreContainerClipping={false}
+              isCombineEnabled={false}
+              isDropDisabled={false}
+              mode="standard"
+              placeholder={null}
+              renderClone={null}
+              shouldAnimatePlaceholder={false}
+              snapshot={
+                Object {
+                  "draggingFromThisWith": null,
+                  "draggingOverWith": null,
+                  "isDraggingOver": false,
+                  "isUsingPlaceholder": false,
+                }
+              }
+              type="DEFAULT"
+              updateViewportMaxScroll={[Function]}
+              useClone={null}
+            >
+              <div>
+                <ListSectionHeader
+                  intl={
+                    Object {
+                      "defaultFormats": Object {},
+                      "defaultLocale": "en",
+                      "formatDate": [Function],
+                      "formatHTMLMessage": [Function],
+                      "formatMessage": [Function],
+                      "formatNumber": [Function],
+                      "formatPlural": [Function],
+                      "formatRelative": [Function],
+                      "formatTime": [Function],
+                      "formats": Object {},
+                      "formatters": Object {
+                        "getDateTimeFormat": [Function],
+                        "getMessageFormat": [Function],
+                        "getNumberFormat": [Function],
+                        "getPluralFormat": [Function],
+                        "getRelativeFormat": [Function],
+                      },
+                      "locale": "en",
+                      "messages": null,
+                      "now": [Function],
+                      "onError": [Function],
+                      "textComponent": "span",
+                      "timeZone": null,
+                    }
+                  }
+                  isCollapsed={false}
+                  isCollapsible={false}
+                  level={2}
+                  title="test"
+                >
+                  <li
+                    className="list-item"
+                    intl={
+                      Object {
+                        "defaultFormats": Object {},
+                        "defaultLocale": "en",
+                        "formatDate": [Function],
+                        "formatHTMLMessage": [Function],
+                        "formatMessage": [Function],
+                        "formatNumber": [Function],
+                        "formatPlural": [Function],
+                        "formatRelative": [Function],
+                        "formatTime": [Function],
+                        "formats": Object {},
+                        "formatters": Object {
+                          "getDateTimeFormat": [Function],
+                          "getMessageFormat": [Function],
+                          "getNumberFormat": [Function],
+                          "getPluralFormat": [Function],
+                          "getRelativeFormat": [Function],
+                        },
+                        "locale": "en",
+                        "messages": null,
+                        "now": [Function],
+                        "onError": [Function],
+                        "textComponent": "span",
+                        "timeZone": null,
+                      }
+                    }
+                  >
+                    <h2
+                      className="title"
+                    >
+                      <div
+                        className="section-header"
+                      >
+                        <div
+                          className="fill"
+                        >
+                          test
+                        </div>
+                      </div>
+                    </h2>
+                  </li>
+                </ListSectionHeader>
+                <li
+                  className="list-item"
+                >
+                  <ul
+                    className="list list-fill"
+                  >
+                    <PublicDraggable
+                      draggableId="123"
+                      index={0}
+                      isDragDisabled={false}
+                      key="123"
+                    >
+                      <PrivateDraggable
+                        canDragInteractiveElements={false}
+                        draggableId="123"
+                        index={0}
+                        isClone={false}
+                        isDragDisabled={false}
+                        isEnabled={true}
+                        shouldRespectForcePress={false}
+                      >
+                        <Connect(Draggable)
+                          canDragInteractiveElements={false}
+                          draggableId="123"
+                          index={0}
+                          isClone={false}
+                          isDragDisabled={false}
+                          isEnabled={true}
+                          shouldRespectForcePress={false}
+                        >
+                          <Draggable
+                            canDragInteractiveElements={false}
+                            draggableId="123"
+                            dropAnimationFinished={[Function]}
+                            index={0}
+                            isClone={false}
+                            isDragDisabled={false}
+                            isEnabled={true}
+                            mapped={
+                              Object {
+                                "combineTargetFor": null,
+                                "offset": Object {
+                                  "x": 0,
+                                  "y": 0,
+                                },
+                                "shouldAnimateDisplacement": true,
+                                "snapshot": Object {
+                                  "combineTargetFor": null,
+                                  "combineWith": null,
+                                  "draggingOver": null,
+                                  "dropAnimation": null,
+                                  "isClone": false,
+                                  "isDragging": false,
+                                  "isDropAnimating": false,
+                                  "mode": null,
+                                },
+                                "type": "SECONDARY",
+                              }
+                            }
+                            shouldRespectForcePress={false}
+                          >
+                            <ListItem
+                              aria-describedby="rbd-hidden-text-1-hidden-text-4"
+                              data-rbd-drag-handle-context-id="1"
+                              data-rbd-drag-handle-draggable-id="123"
+                              data-rbd-draggable-context-id="1"
+                              data-rbd-draggable-id="123"
+                              draggable={false}
+                              hasChevron={false}
+                              isSelectable={true}
+                              isSelected={false}
+                              key="123"
+                              onDragStart={[Function]}
+                              onTransitionEnd={null}
+                              refCallback={[Function]}
+                              role="button"
+                              style={
+                                Object {
+                                  "transform": null,
+                                  "transition": null,
+                                }
+                              }
+                              tabIndex={0}
+                            >
+                              <li
+                                aria-describedby="rbd-hidden-text-1-hidden-text-4"
+                                aria-selected={false}
+                                className="list-item is-selectable"
+                                data-item-show-focus="true"
+                                data-rbd-drag-handle-context-id="1"
+                                data-rbd-drag-handle-draggable-id="123"
+                                data-rbd-draggable-context-id="1"
+                                data-rbd-draggable-id="123"
+                                draggable={false}
+                                onBlur={[Function]}
+                                onDragStart={[Function]}
+                                onMouseDown={[Function]}
+                                onTransitionEnd={null}
+                                role="option"
+                                style={
+                                  Object {
+                                    "transform": null,
+                                    "transition": null,
+                                  }
+                                }
+                                tabIndex="0"
+                              >
+                                <div
+                                  className="item-fill"
+                                  key="item-fill"
+                                />
+                              </li>
+                            </ListItem>
+                          </Draggable>
+                        </Connect(Draggable)>
+                      </PrivateDraggable>
+                    </PublicDraggable>
+                    <PublicDraggable
+                      draggableId="124"
+                      index={1}
+                      isDragDisabled={false}
+                      key="124"
+                    >
+                      <PrivateDraggable
+                        canDragInteractiveElements={false}
+                        draggableId="124"
+                        index={1}
+                        isClone={false}
+                        isDragDisabled={false}
+                        isEnabled={true}
+                        shouldRespectForcePress={false}
+                      >
+                        <Connect(Draggable)
+                          canDragInteractiveElements={false}
+                          draggableId="124"
+                          index={1}
+                          isClone={false}
+                          isDragDisabled={false}
+                          isEnabled={true}
+                          shouldRespectForcePress={false}
+                        >
+                          <Draggable
+                            canDragInteractiveElements={false}
+                            draggableId="124"
+                            dropAnimationFinished={[Function]}
+                            index={1}
+                            isClone={false}
+                            isDragDisabled={false}
+                            isEnabled={true}
+                            mapped={
+                              Object {
+                                "combineTargetFor": null,
+                                "offset": Object {
+                                  "x": 0,
+                                  "y": 0,
+                                },
+                                "shouldAnimateDisplacement": true,
+                                "snapshot": Object {
+                                  "combineTargetFor": null,
+                                  "combineWith": null,
+                                  "draggingOver": null,
+                                  "dropAnimation": null,
+                                  "isClone": false,
+                                  "isDragging": false,
+                                  "isDropAnimating": false,
+                                  "mode": null,
+                                },
+                                "type": "SECONDARY",
+                              }
+                            }
+                            shouldRespectForcePress={false}
+                          >
+                            <ListItem
+                              aria-describedby="rbd-hidden-text-1-hidden-text-4"
+                              data-rbd-drag-handle-context-id="1"
+                              data-rbd-drag-handle-draggable-id="124"
+                              data-rbd-draggable-context-id="1"
+                              data-rbd-draggable-id="124"
+                              draggable={false}
+                              hasChevron={false}
+                              isSelectable={true}
+                              isSelected={false}
+                              key="124"
+                              onDragStart={[Function]}
+                              onTransitionEnd={null}
+                              refCallback={[Function]}
+                              role="button"
+                              style={
+                                Object {
+                                  "transform": null,
+                                  "transition": null,
+                                }
+                              }
+                              tabIndex={0}
+                            >
+                              <li
+                                aria-describedby="rbd-hidden-text-1-hidden-text-4"
+                                aria-selected={false}
+                                className="list-item is-selectable"
+                                data-item-show-focus="true"
+                                data-rbd-drag-handle-context-id="1"
+                                data-rbd-drag-handle-draggable-id="124"
+                                data-rbd-draggable-context-id="1"
+                                data-rbd-draggable-id="124"
+                                draggable={false}
+                                onBlur={[Function]}
+                                onDragStart={[Function]}
+                                onMouseDown={[Function]}
+                                onTransitionEnd={null}
+                                role="option"
+                                style={
+                                  Object {
+                                    "transform": null,
+                                    "transition": null,
+                                  }
+                                }
+                                tabIndex="0"
+                              >
+                                <div
+                                  className="item-fill"
+                                  key="item-fill"
+                                />
+                              </li>
+                            </ListItem>
+                          </Draggable>
+                        </Connect(Draggable)>
+                      </PrivateDraggable>
+                    </PublicDraggable>
+                  </ul>
+                </li>
+                <AnimateInOut
+                  on={null}
+                  shouldAnimate={false}
+                />
+              </div>
+            </Droppable>
+          </Connect(Droppable)>
+        </Provider>
+      </App>
+    </ErrorBoundary>
+  </DragDropContext>
+</ListSection>
+`;
+
+exports[`should render subsection with items 1`] = `
+<ListSubsection
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isCollapsed={false}
+  isCollapsible={false}
+  isDraggable={true}
+  level={2}
+  title="subsection"
+>
+  <DragDropContext
+    onDragEnd={[Function]}
+    onDragStart={[Function]}
+    onDragUpdate={[Function]}
+  >
+    <ErrorBoundary>
+      <App
+        contextId="2"
+        dragHandleUsageInstructions="
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+"
+        onDragEnd={[Function]}
+        onDragStart={[Function]}
+        onDragUpdate={[Function]}
+        setCallbacks={[Function]}
+      >
+        <Provider
+          context={
+            Object {
+              "$$typeof": Symbol(react.context),
+              "Consumer": Object {
+                "$$typeof": Symbol(react.context),
+                "_calculateChangedBits": null,
+                "_context": [Circular],
+              },
+              "Provider": Object {
+                "$$typeof": Symbol(react.provider),
+                "_context": [Circular],
+              },
+              "_calculateChangedBits": null,
+              "_currentRenderer": Object {},
+              "_currentRenderer2": null,
+              "_currentValue": null,
+              "_currentValue2": null,
+              "_threadCount": 0,
+            }
+          }
+          store={
+            Object {
+              "@@observable": [Function],
+              "dispatch": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            }
+          }
+        >
+          <Connect(Droppable)
+            direction="vertical"
+            droppableId="listSubSection"
+            getContainerForClone={[Function]}
+            ignoreContainerClipping={false}
+            isCombineEnabled={false}
+            isDropDisabled={false}
+            mode="standard"
+            renderClone={null}
+            type="DEFAULT"
+          >
+            <Droppable
+              direction="vertical"
+              droppableId="listSubSection"
+              getContainerForClone={[Function]}
+              ignoreContainerClipping={false}
+              isCombineEnabled={false}
+              isDropDisabled={false}
+              mode="standard"
+              placeholder={null}
+              renderClone={null}
+              shouldAnimatePlaceholder={false}
+              snapshot={
+                Object {
+                  "draggingFromThisWith": null,
+                  "draggingOverWith": null,
+                  "isDraggingOver": false,
+                  "isUsingPlaceholder": false,
+                }
+              }
+              type="DEFAULT"
+              updateViewportMaxScroll={[Function]}
+              useClone={null}
+            >
+              <div>
+                <ListSubsectionHeader
+                  intl={
+                    Object {
+                      "defaultFormats": Object {},
+                      "defaultLocale": "en",
+                      "formatDate": [Function],
+                      "formatHTMLMessage": [Function],
+                      "formatMessage": [Function],
+                      "formatNumber": [Function],
+                      "formatPlural": [Function],
+                      "formatRelative": [Function],
+                      "formatTime": [Function],
+                      "formats": Object {},
+                      "formatters": Object {
+                        "getDateTimeFormat": [Function],
+                        "getMessageFormat": [Function],
+                        "getNumberFormat": [Function],
+                        "getPluralFormat": [Function],
+                        "getRelativeFormat": [Function],
+                      },
+                      "locale": "en",
+                      "messages": null,
+                      "now": [Function],
+                      "onError": [Function],
+                      "textComponent": "span",
+                      "timeZone": null,
+                    }
+                  }
+                  isCollapsed={false}
+                  isCollapsible={false}
+                  level={2}
+                  title="subsection"
+                >
+                  <li
+                    className="list-item"
+                    intl={
+                      Object {
+                        "defaultFormats": Object {},
+                        "defaultLocale": "en",
+                        "formatDate": [Function],
+                        "formatHTMLMessage": [Function],
+                        "formatMessage": [Function],
+                        "formatNumber": [Function],
+                        "formatPlural": [Function],
+                        "formatRelative": [Function],
+                        "formatTime": [Function],
+                        "formats": Object {},
+                        "formatters": Object {
+                          "getDateTimeFormat": [Function],
+                          "getMessageFormat": [Function],
+                          "getNumberFormat": [Function],
+                          "getPluralFormat": [Function],
+                          "getRelativeFormat": [Function],
+                        },
+                        "locale": "en",
+                        "messages": null,
+                        "now": [Function],
+                        "onError": [Function],
+                        "textComponent": "span",
+                        "timeZone": null,
+                      }
+                    }
+                  >
+                    <h2
+                      className="title"
+                    >
+                      <div
+                        className="subsection-header"
+                      >
+                        <div
+                          className="fill"
+                        >
+                          subsection
+                        </div>
+                      </div>
+                    </h2>
+                  </li>
+                </ListSubsectionHeader>
+                <li
+                  className="list-item"
+                >
+                  <ul
+                    className="list list-fill"
+                  >
+                    <PublicDraggable
+                      draggableId="13"
+                      index={0}
+                      isDragDisabled={false}
+                      key="13"
+                    >
+                      <PrivateDraggable
+                        canDragInteractiveElements={false}
+                        draggableId="13"
+                        index={0}
+                        isClone={false}
+                        isDragDisabled={false}
+                        isEnabled={true}
+                        shouldRespectForcePress={false}
+                      >
+                        <Connect(Draggable)
+                          canDragInteractiveElements={false}
+                          draggableId="13"
+                          index={0}
+                          isClone={false}
+                          isDragDisabled={false}
+                          isEnabled={true}
+                          shouldRespectForcePress={false}
+                        >
+                          <Draggable
+                            canDragInteractiveElements={false}
+                            draggableId="13"
+                            dropAnimationFinished={[Function]}
+                            index={0}
+                            isClone={false}
+                            isDragDisabled={false}
+                            isEnabled={true}
+                            mapped={
+                              Object {
+                                "combineTargetFor": null,
+                                "offset": Object {
+                                  "x": 0,
+                                  "y": 0,
+                                },
+                                "shouldAnimateDisplacement": true,
+                                "snapshot": Object {
+                                  "combineTargetFor": null,
+                                  "combineWith": null,
+                                  "draggingOver": null,
+                                  "dropAnimation": null,
+                                  "isClone": false,
+                                  "isDragging": false,
+                                  "isDropAnimating": false,
+                                  "mode": null,
+                                },
+                                "type": "SECONDARY",
+                              }
+                            }
+                            shouldRespectForcePress={false}
+                          >
+                            <ListItem
+                              aria-describedby="rbd-hidden-text-2-hidden-text-8"
+                              data-rbd-drag-handle-context-id="2"
+                              data-rbd-drag-handle-draggable-id="13"
+                              data-rbd-draggable-context-id="2"
+                              data-rbd-draggable-id="13"
+                              draggable={false}
+                              hasChevron={false}
+                              isSelectable={true}
+                              isSelected={false}
+                              key="13"
+                              onDragStart={[Function]}
+                              onTransitionEnd={null}
+                              refCallback={[Function]}
+                              role="button"
+                              style={
+                                Object {
+                                  "transform": null,
+                                  "transition": null,
+                                }
+                              }
+                              tabIndex={0}
+                            >
+                              <li
+                                aria-describedby="rbd-hidden-text-2-hidden-text-8"
+                                aria-selected={false}
+                                className="list-item is-selectable"
+                                data-item-show-focus="true"
+                                data-rbd-drag-handle-context-id="2"
+                                data-rbd-drag-handle-draggable-id="13"
+                                data-rbd-draggable-context-id="2"
+                                data-rbd-draggable-id="13"
+                                draggable={false}
+                                onBlur={[Function]}
+                                onDragStart={[Function]}
+                                onMouseDown={[Function]}
+                                onTransitionEnd={null}
+                                role="option"
+                                style={
+                                  Object {
+                                    "transform": null,
+                                    "transition": null,
+                                  }
+                                }
+                                tabIndex="0"
+                              >
+                                <div
+                                  className="item-fill"
+                                  key="item-fill"
+                                />
+                              </li>
+                            </ListItem>
+                          </Draggable>
+                        </Connect(Draggable)>
+                      </PrivateDraggable>
+                    </PublicDraggable>
+                    <PublicDraggable
+                      draggableId="14"
+                      index={1}
+                      isDragDisabled={false}
+                      key="14"
+                    >
+                      <PrivateDraggable
+                        canDragInteractiveElements={false}
+                        draggableId="14"
+                        index={1}
+                        isClone={false}
+                        isDragDisabled={false}
+                        isEnabled={true}
+                        shouldRespectForcePress={false}
+                      >
+                        <Connect(Draggable)
+                          canDragInteractiveElements={false}
+                          draggableId="14"
+                          index={1}
+                          isClone={false}
+                          isDragDisabled={false}
+                          isEnabled={true}
+                          shouldRespectForcePress={false}
+                        >
+                          <Draggable
+                            canDragInteractiveElements={false}
+                            draggableId="14"
+                            dropAnimationFinished={[Function]}
+                            index={1}
+                            isClone={false}
+                            isDragDisabled={false}
+                            isEnabled={true}
+                            mapped={
+                              Object {
+                                "combineTargetFor": null,
+                                "offset": Object {
+                                  "x": 0,
+                                  "y": 0,
+                                },
+                                "shouldAnimateDisplacement": true,
+                                "snapshot": Object {
+                                  "combineTargetFor": null,
+                                  "combineWith": null,
+                                  "draggingOver": null,
+                                  "dropAnimation": null,
+                                  "isClone": false,
+                                  "isDragging": false,
+                                  "isDropAnimating": false,
+                                  "mode": null,
+                                },
+                                "type": "SECONDARY",
+                              }
+                            }
+                            shouldRespectForcePress={false}
+                          >
+                            <ListItem
+                              aria-describedby="rbd-hidden-text-2-hidden-text-8"
+                              data-rbd-drag-handle-context-id="2"
+                              data-rbd-drag-handle-draggable-id="14"
+                              data-rbd-draggable-context-id="2"
+                              data-rbd-draggable-id="14"
+                              draggable={false}
+                              hasChevron={false}
+                              isSelectable={true}
+                              isSelected={false}
+                              key="14"
+                              onDragStart={[Function]}
+                              onTransitionEnd={null}
+                              refCallback={[Function]}
+                              role="button"
+                              style={
+                                Object {
+                                  "transform": null,
+                                  "transition": null,
+                                }
+                              }
+                              tabIndex={0}
+                            >
+                              <li
+                                aria-describedby="rbd-hidden-text-2-hidden-text-8"
+                                aria-selected={false}
+                                className="list-item is-selectable"
+                                data-item-show-focus="true"
+                                data-rbd-drag-handle-context-id="2"
+                                data-rbd-drag-handle-draggable-id="14"
+                                data-rbd-draggable-context-id="2"
+                                data-rbd-draggable-id="14"
+                                draggable={false}
+                                onBlur={[Function]}
+                                onDragStart={[Function]}
+                                onMouseDown={[Function]}
+                                onTransitionEnd={null}
+                                role="option"
+                                style={
+                                  Object {
+                                    "transform": null,
+                                    "transition": null,
+                                  }
+                                }
+                                tabIndex="0"
+                              >
+                                <div
+                                  className="item-fill"
+                                  key="item-fill"
+                                />
+                              </li>
+                            </ListItem>
+                          </Draggable>
+                        </Connect(Draggable)>
+                      </PrivateDraggable>
+                    </PublicDraggable>
+                    <PublicDraggable
+                      draggableId="15"
+                      index={2}
+                      isDragDisabled={false}
+                      key="15"
+                    >
+                      <PrivateDraggable
+                        canDragInteractiveElements={false}
+                        draggableId="15"
+                        index={2}
+                        isClone={false}
+                        isDragDisabled={false}
+                        isEnabled={true}
+                        shouldRespectForcePress={false}
+                      >
+                        <Connect(Draggable)
+                          canDragInteractiveElements={false}
+                          draggableId="15"
+                          index={2}
+                          isClone={false}
+                          isDragDisabled={false}
+                          isEnabled={true}
+                          shouldRespectForcePress={false}
+                        >
+                          <Draggable
+                            canDragInteractiveElements={false}
+                            draggableId="15"
+                            dropAnimationFinished={[Function]}
+                            index={2}
+                            isClone={false}
+                            isDragDisabled={false}
+                            isEnabled={true}
+                            mapped={
+                              Object {
+                                "combineTargetFor": null,
+                                "offset": Object {
+                                  "x": 0,
+                                  "y": 0,
+                                },
+                                "shouldAnimateDisplacement": true,
+                                "snapshot": Object {
+                                  "combineTargetFor": null,
+                                  "combineWith": null,
+                                  "draggingOver": null,
+                                  "dropAnimation": null,
+                                  "isClone": false,
+                                  "isDragging": false,
+                                  "isDropAnimating": false,
+                                  "mode": null,
+                                },
+                                "type": "SECONDARY",
+                              }
+                            }
+                            shouldRespectForcePress={false}
+                          >
+                            <ListItem
+                              aria-describedby="rbd-hidden-text-2-hidden-text-8"
+                              data-rbd-drag-handle-context-id="2"
+                              data-rbd-drag-handle-draggable-id="15"
+                              data-rbd-draggable-context-id="2"
+                              data-rbd-draggable-id="15"
+                              draggable={false}
+                              hasChevron={false}
+                              isSelectable={true}
+                              isSelected={false}
+                              key="15"
+                              onDragStart={[Function]}
+                              onTransitionEnd={null}
+                              refCallback={[Function]}
+                              role="button"
+                              style={
+                                Object {
+                                  "transform": null,
+                                  "transition": null,
+                                }
+                              }
+                              tabIndex={0}
+                            >
+                              <li
+                                aria-describedby="rbd-hidden-text-2-hidden-text-8"
+                                aria-selected={false}
+                                className="list-item is-selectable"
+                                data-item-show-focus="true"
+                                data-rbd-drag-handle-context-id="2"
+                                data-rbd-drag-handle-draggable-id="15"
+                                data-rbd-draggable-context-id="2"
+                                data-rbd-draggable-id="15"
+                                draggable={false}
+                                onBlur={[Function]}
+                                onDragStart={[Function]}
+                                onMouseDown={[Function]}
+                                onTransitionEnd={null}
+                                role="option"
+                                style={
+                                  Object {
+                                    "transform": null,
+                                    "transition": null,
+                                  }
+                                }
+                                tabIndex="0"
+                              >
+                                <div
+                                  className="item-fill"
+                                  key="item-fill"
+                                />
+                              </li>
+                            </ListItem>
+                          </Draggable>
+                        </Connect(Draggable)>
+                      </PrivateDraggable>
+                    </PublicDraggable>
+                  </ul>
+                </li>
+                <AnimateInOut
+                  on={null}
+                  shouldAnimate={false}
+                />
+              </div>
+            </Droppable>
+          </Connect(Droppable)>
+        </Provider>
+      </App>
+    </ErrorBoundary>
+  </DragDropContext>
+</ListSubsection>
+`;

@@ -45,6 +45,10 @@ const propTypes = {
    */
   title: PropTypes.string.isRequired,
   /**
+   * Whether or not the list item is draggable. List Item is draggable only when it is selectable.
+   */
+  isDraggable: PropTypes.bool,
+  /**
    * Function callback when the Item is Lifted.
    */
   onDragStart: PropTypes.func,
@@ -69,18 +73,26 @@ const ListSubsection = ({
   children,
   isCollapsed,
   isCollapsible,
+  isDraggable,
   onDragStart,
   onDragUpdate,
   onDragEnd,
   ...customProps
 }) => {
   let sectionItems = [];
+  let checkSelectableItem = false;
+
   if (!isCollapsible || !isCollapsed) {
     if (!(Array.isArray(children))) {
       sectionItems = (children) ? [children] : [];
     } else {
       sectionItems = children;
     }
+    sectionItems.forEach((item) => {
+      if (item?.type?.name === 'ListItem') {
+        checkSelectableItem = item?.props?.isSelectable;
+      }
+    });
   }
 
   const theme = React.useContext(ThemeContext);
@@ -125,34 +137,51 @@ const ListSubsection = ({
     }
   };
 
-  return (
+  const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
+    ...provider.draggableProps,
+    ...provider.dragHandleProps,
+    refCallback: provider.innerRef,
+  });
+
+  const renderSubSectionListItemsDom = () => (
+    <>
+      <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
+      {sectionItems && (
+      <li className={cx('list-item')}>
+        <ul className={listClassNames}>
+          {sectionItems}
+        </ul>
+      </li>
+      )}
+    </>
+  );
+
+  const renderDraggableListDom = () => (
     <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
       <Droppable droppableId="listSubSection">
         {(provided) => (
           <div ref={provided.innerRef}>
             <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
-            {sectionItems.map((item, index) => (
-              <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
-                {(provider) => (
-                  <div
-                    ref={provider.innerRef}
-                    {...provider.draggableProps}
-                    {...provider.dragHandleProps}
-                  >
-                    <li className={cx('list-item')}>
-                      <ul className={listClassNames}>
-                        {item}
-                      </ul>
-                    </li>
-                  </div>
-                )}
-              </Draggable>
-            ))}
+            <li className={cx('list-item')}>
+              <ul className={listClassNames}>
+                {sectionItems.map((item, index) => (
+                  <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
+                    {(provider) => (
+                      cloneListItem(item, provider)
+                    )}
+                  </Draggable>
+                ))}
+              </ul>
+            </li>
             {provided.placeholder}
           </div>
         )}
       </Droppable>
     </DragDropContext>
+  );
+
+  return (
+    (isDraggable && checkSelectableItem) ? renderDraggableListDom() : renderSubSectionListItemsDom()
   );
 };
 

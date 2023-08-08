@@ -79,6 +79,10 @@ const propTypes = {
    */
   ariaSelectionStyle: PropTypes.oneOf(['none', 'single-select', 'multi-select']),
   /**
+   * Whether or not the list item is draggable. List Item is draggable only when it is selectable.
+   */
+  isDraggable: PropTypes.bool,
+  /**
    * Function callback when the Item is Lifted.
    */
   onDragStart: PropTypes.func,
@@ -111,6 +115,7 @@ const List = ({
   refCallback,
   role,
   ariaSelectionStyle,
+  isDraggable,
   onDragStart,
   onDragUpdate,
   onDragEnd,
@@ -118,13 +123,21 @@ const List = ({
 }) => {
   const theme = React.useContext(ThemeContext);
   const [listItem, setlistItem] = React.useState([]);
+  const [checkSelectableItem, setcheckSelectableItem] = React.useState(false);
 
   React.useEffect(() => {
+    let childItems = children;
+    let allowDragNDrop = false;
     if (!(Array.isArray(children))) {
-      if (children) setlistItem([children]);
-    } else {
-      setlistItem(children);
+      if (children) childItems = [children];
     }
+    childItems.forEach((item) => {
+      if (item?.type?.name === 'ListItem') {
+        allowDragNDrop = item.props.isSelectable;
+      }
+    });
+    setcheckSelectableItem(allowDragNDrop);
+    setlistItem(childItems);
   }, [children]);
 
   const listClassNames = classNames(
@@ -213,11 +226,33 @@ const List = ({
     }
   };
 
-  return (
+  const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
+    ...provider.draggableProps,
+    ...provider.dragHandleProps,
+    refCallback: provider.innerRef,
+  });
+
+  const renderListDom = () => (
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
+    <ul
+      {...customProps}
+      {...attrSpread}
+      aria-describedby={ariaDescribedBy}
+      aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
+      aria-details={ariaDetails}
+      className={listClassNames}
+      ref={handleListRef}
+      onKeyDown={handleKeyDown}
+    >
+      {children}
+    </ul>
+  );
+
+  const renderDraggableListDom = () => (
     <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
       <Droppable droppableId="ListItem">
         {(provided) => (
-        // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
           <ul
             {...provided.droppableProps}
             {...customProps}
@@ -235,13 +270,7 @@ const List = ({
             {listItem.map((item, index) => (
               <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
                 {(provider) => (
-                  <div
-                    ref={provider.innerRef}
-                    {...provider.draggableProps}
-                    {...provider.dragHandleProps}
-                  >
-                    {item}
-                  </div>
+                  cloneListItem(item, provider)
                 )}
               </Draggable>
             ))}
@@ -250,6 +279,10 @@ const List = ({
         )}
       </Droppable>
     </DragDropContext>
+  );
+
+  return (
+    (isDraggable && checkSelectableItem) ? renderDraggableListDom() : renderListDom()
   );
 };
 

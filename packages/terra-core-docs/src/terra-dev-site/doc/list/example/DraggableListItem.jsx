@@ -7,7 +7,7 @@ import styles from './ListDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const ListDraggableExample = () => (
-  <List role="listbox" aria-label="example-label">
+  <List role="listbox" aria-label="example-label" isDraggable>
     <Item
       key="1"
       isSelectable
