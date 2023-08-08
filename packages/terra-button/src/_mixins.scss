@@ -31,9 +31,9 @@
 
   &:active,
   &.is-active {
-    color: map-get($color-map, active-color);
     background-color: map-get($color-map, active-and-focus-background-color);
     border-color: map-get($color-map, active-and-focus-border-color);
     box-shadow: map-get($color-map, active-and-focus-box-shadow);
+    color: map-get($color-map, active-color);
   }
 }
