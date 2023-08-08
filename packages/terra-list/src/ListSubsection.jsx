@@ -79,7 +79,7 @@ const ListSubsection = ({
   onDragEnd,
   ...customProps
 }) => {
-  const [listItemNodes, setlistItemNodes] = React.useState([]);
+  const [listItemNodes, setlistItemNodes] = React.useState(children);
 
   React.useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
@@ -88,6 +88,8 @@ const ListSubsection = ({
       } else {
         setlistItemNodes(children);
       }
+    } else {
+      setlistItemNodes([]);
     }
   }, [children, isCollapsible, isCollapsed]);
 

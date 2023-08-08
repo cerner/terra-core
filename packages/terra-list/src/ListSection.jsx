@@ -82,7 +82,7 @@ const ListSection = ({
   onDragEnd,
   ...customProps
 }) => {
-  const [listItemNodes, setlistItemNodes] = React.useState([]);
+  const [listItemNodes, setlistItemNodes] = React.useState(children);
 
   React.useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
@@ -91,6 +91,8 @@ const ListSection = ({
       } else {
         setlistItemNodes(children);
       }
+    } else {
+      setlistItemNodes([]);
     }
   }, [children, isCollapsible, isCollapsed]);
 
