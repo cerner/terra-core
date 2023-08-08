@@ -9,7 +9,8 @@
 
 * Changed
   * Updated default search delay to 2500ms.
-  * Update Search field examples to be more functionality focused. 
+  * Update Search field examples to be more functionality focused.
+  * Updated `terra-form-radio-field` example to display selected value.
 
 ## 1.36.0 - (August 11, 2023)
 
