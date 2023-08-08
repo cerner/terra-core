@@ -94,6 +94,7 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
           Object {
             "aria-describedby": "terra-radio-field-description-uuid123  ",
             "data-custom-attr": "attr data",
+            "onKeyDown": undefined,
           }
         }
         isInline={false}
@@ -102,7 +103,6 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
         labelText="Default label"
         labelTextAttrs={Object {}}
         name={null}
-        onKeyDown={[Function]}
       >
         <div
           className="radio"
@@ -116,7 +116,6 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
               data-custom-attr="attr data"
               disabled={false}
               name={null}
-              onKeyDown={[Function]}
               type="radio"
             />
             <span
@@ -370,6 +369,154 @@ exports[`should hide the required indicator when requested 1`] = `
 />
 `;
 
+exports[`should not render onkeydown event on radio button for non-safari browser 1`] = `
+<InjectIntl(RadioField)
+  help="This will help up determine how many chairs to request"
+  id="RadioFieldOne"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  legend="Help RadioField"
+>
+  <RadioField
+    error={null}
+    help="This will help up determine how many chairs to request"
+    hideRequired={false}
+    id="RadioFieldOne"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isInline={false}
+    isInvalid={false}
+    isLegendHidden={false}
+    legend="Help RadioField"
+    legendAttrs={Object {}}
+    required={false}
+    showOptional={false}
+  >
+    <fieldset
+      className="radio-field"
+      id="RadioFieldOne"
+      required={false}
+    >
+      <legend
+        className="legend-group"
+        id="terra-radio-field-description-uuid123"
+      >
+        <div
+          className="legend"
+        >
+          Help RadioField
+          <span
+            className="error-icon-hidden"
+          />
+        </div>
+      </legend>
+      <Radio
+        disabled={false}
+        id="firstRadio"
+        inputAttrs={
+          Object {
+            "aria-describedby": "terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123",
+            "onKeyDown": undefined,
+          }
+        }
+        isInline={false}
+        isLabelHidden={false}
+        key=".0"
+        labelText="Radio"
+        labelTextAttrs={Object {}}
+        name={null}
+      >
+        <div
+          className="radio"
+        >
+          <label
+            className="label"
+            htmlFor="firstRadio"
+          >
+            <input
+              aria-describedby="terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123"
+              className="native-input"
+              disabled={false}
+              id="firstRadio"
+              name={null}
+              type="radio"
+            />
+            <span
+              className="outer-ring"
+            >
+              <span
+                className="inner-ring"
+              />
+            </span>
+            <span
+              className="label-text"
+            >
+              Radio
+            </span>
+          </label>
+        </div>
+      </Radio>
+      <div
+        className="help-text"
+        id="terra-radio-field-description-help-uuid123"
+      >
+        This will help up determine how many chairs to request
+      </div>
+    </fieldset>
+  </RadioField>
+</InjectIntl(RadioField)>
+`;
+
 exports[`should render a default radio field 1`] = `
 <RadioField
   error={null}
@@ -578,6 +725,155 @@ exports[`should render an optional part on the label 1`] = `
   required={false}
   showOptional={true}
 />
+`;
+
+exports[`should render onkeydown event on radio button for safari browser 1`] = `
+<InjectIntl(RadioField)
+  help="This will help up determine how many chairs to request"
+  id="RadioFieldOne"
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  legend="Help RadioField"
+>
+  <RadioField
+    error={null}
+    help="This will help up determine how many chairs to request"
+    hideRequired={false}
+    id="RadioFieldOne"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isInline={false}
+    isInvalid={false}
+    isLegendHidden={false}
+    legend="Help RadioField"
+    legendAttrs={Object {}}
+    required={false}
+    showOptional={false}
+  >
+    <fieldset
+      className="radio-field"
+      id="RadioFieldOne"
+      required={false}
+    >
+      <div
+        className="legend-group"
+        id="terra-radio-field-description-uuid123"
+      >
+        <div
+          className="legend"
+        >
+          Help RadioField
+          <span
+            className="error-icon-hidden"
+          />
+        </div>
+      </div>
+      <Radio
+        disabled={false}
+        id="firstRadio"
+        inputAttrs={
+          Object {
+            "aria-describedby": "terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123",
+            "onKeyDown": [Function],
+          }
+        }
+        isInline={false}
+        isLabelHidden={false}
+        key=".0"
+        labelText="Radio"
+        labelTextAttrs={Object {}}
+        name={null}
+      >
+        <div
+          className="radio"
+        >
+          <label
+            className="label"
+            htmlFor="firstRadio"
+          >
+            <input
+              aria-describedby="terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123"
+              className="native-input"
+              disabled={false}
+              id="firstRadio"
+              name={null}
+              onKeyDown={[Function]}
+              type="radio"
+            />
+            <span
+              className="outer-ring"
+            >
+              <span
+                className="inner-ring"
+              />
+            </span>
+            <span
+              className="label-text"
+            >
+              Radio
+            </span>
+          </label>
+        </div>
+      </Radio>
+      <div
+        className="help-text"
+        id="terra-radio-field-description-help-uuid123"
+      >
+        This will help up determine how many chairs to request
+      </div>
+    </fieldset>
+  </RadioField>
+</InjectIntl(RadioField)>
 `;
 
 exports[`should render radio field with div element for Safari browser or Edg browser 1`] = `

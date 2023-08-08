@@ -10,9 +10,13 @@ window.matchMedia = () => ({ matches: true });
 jest.mock('lodash.uniqueid');
 
 let userAgentGetter;
-beforeAll(() => {
+beforeEach(() => {
   userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
   uniqueid.mockReturnValue('uuid123');
+});
+
+afterEach(() => {
+  jest.restoreAllMocks();
 });
 
 it('should render a default radio field', () => {
@@ -67,25 +71,36 @@ it('should render a help message', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-// it('should invoke onchange on keydown event on radio button', () => {
-//   const onChange = jest.fn();
-//   const onKeyDown = jest.fn();
-//   const radioField = (
-//     <RadioField
-//       id="RadioFieldOne"
-//       legend="Help RadioField"
-//       help="This will help up determine how many chairs to request"
-//     >
-//       <Radio id="firstRadio" onChange={onChange} onKeyDown={onKeyDown} labelText="Radio" />
-//       <Radio id="secondRadio" onChange={onChange} onKeyDown={onKeyDown} labelText="Radio" />
-//       <Radio id="ThirdRadio" onChange={onChange} onKeyDown={onKeyDown} labelText="Radio" />
-//     </RadioField>
-//   );
-//   const wrapper = mountWithIntl(radioField);
-//   // simulates keydown event for ArrowDown key
-//   wrapper.find('input#firstRadio').simulate('keydown', { nativeEvent: { keyCode: 40 } });
-//   expect(onChange).toHaveBeenCalled();
-// });
+it('should render onkeydown event on radio button for safari browser', () => {
+  userAgentGetter.mockReturnValue('Safari');
+  const radioField = (
+    <RadioField
+      id="RadioFieldOne"
+      legend="Help RadioField"
+      help="This will help up determine how many chairs to request"
+    >
+      <Radio id="firstRadio" labelText="Radio" />
+    </RadioField>
+  );
+  const wrapper = mountWithIntl(radioField);
+  expect(wrapper.find('input').prop('onKeyDown')).toBeDefined();
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should not render onkeydown event on radio button for non-safari browser', () => {
+  const radioField = (
+    <RadioField
+      id="RadioFieldOne"
+      legend="Help RadioField"
+      help="This will help up determine how many chairs to request"
+    >
+      <Radio id="firstRadio" labelText="Radio" />
+    </RadioField>
+  );
+  const wrapper = mountWithIntl(radioField);
+  expect(wrapper.find('input').prop('onKeyDown')).toBeUndefined();
+  expect(wrapper).toMatchSnapshot();
+});
 
 it('should render an optional part on the label', () => {
   const radioField = <RadioField legend="Optional RadioField" showOptional />;
