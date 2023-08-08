@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.66.0 - (August 8, 2023)
+
 * Changed
   * Reduced package size by excluding unneeded files when publishing.
 
