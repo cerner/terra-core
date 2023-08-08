@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.36.0 - (August 8, 2023)
+
+* Added
+  * Added isMac helper in `_DropdownListUtil.js` file.
+
 ## 1.35.0 - (August 1, 2023)
 
 * Added
