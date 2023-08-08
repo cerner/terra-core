@@ -87,6 +87,9 @@ class ButtonGroup extends React.Component {
       }
       if (allBtns[key]) allBtns[key].focus();
     }
+    if (event.keyCode === KEY_UP || event.keyCode === KEY_DOWN) {
+      event.preventDefault();
+    }
   }
 
   wrapKeyDown(item, idx) {
@@ -139,7 +142,7 @@ class ButtonGroup extends React.Component {
     React.Children.forEach(children, (child, index) => {
       const isSelected = selectedKeys.indexOf(child.key) > -1;
       const cloneChild = React.cloneElement(child, {
-        [btnRole !== '' && 'role']: btnRole,
+        role: (btnRole || undefined),
         onClick: this.wrapOnClick(child),
         onKeyDown: this.wrapKeyDown(child, index),
         className: cx([{ 'is-selected': isSelected && !child.props.isDisabled }, child.props.className]),

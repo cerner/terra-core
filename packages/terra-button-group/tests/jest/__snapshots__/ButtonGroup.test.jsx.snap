@@ -20,7 +20,6 @@ exports[`correctly applies the theme context className 1`] = `
       <ButtonGroupButton
         aria-pressed={false}
         className=""
-        false=""
         isDisabled={false}
         key="1"
         onClick={[Function]}
@@ -31,7 +30,6 @@ exports[`correctly applies the theme context className 1`] = `
           aria-pressed={false}
           className="button-group-button orion-fusion-theme"
           data-terra-button-group-button={true}
-          false=""
           isBlock={false}
           isCompact={false}
           isDisabled={false}
@@ -52,7 +50,6 @@ exports[`correctly applies the theme context className 1`] = `
             className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
             data-terra-button-group-button={true}
             disabled={false}
-            false=""
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -76,7 +73,6 @@ exports[`correctly applies the theme context className 1`] = `
       <ButtonGroupButton
         aria-pressed={false}
         className=""
-        false=""
         isDisabled={false}
         key="2"
         onClick={[Function]}
@@ -87,7 +83,6 @@ exports[`correctly applies the theme context className 1`] = `
           aria-pressed={false}
           className="button-group-button orion-fusion-theme"
           data-terra-button-group-button={true}
-          false=""
           isBlock={false}
           isCompact={false}
           isDisabled={false}
@@ -108,7 +103,6 @@ exports[`correctly applies the theme context className 1`] = `
             className="button neutral orion-fusion-theme button-group-button orion-fusion-theme"
             data-terra-button-group-button={true}
             disabled={false}
-            false=""
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -198,7 +192,6 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
   <ButtonGroupButton
     aria-pressed={true}
     className="is-selected"
-    false=""
     isDisabled={false}
     key="1"
     onClick={[Function]}
@@ -208,7 +201,6 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="2"
     onClick={[Function]}
@@ -217,7 +209,6 @@ exports[`should only render enabled buttons as toggle buttons 1`] = `
   />
   <ButtonGroupButton
     className=""
-    false=""
     isDisabled={true}
     key="dis"
     onClick={[Function]}
@@ -235,7 +226,6 @@ exports[`should render a block button group with children 1`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="1"
     onClick={[Function]}
@@ -245,7 +235,6 @@ exports[`should render a block button group with children 1`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="2"
     onClick={[Function]}
@@ -255,7 +244,6 @@ exports[`should render a block button group with children 1`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="3"
     onClick={[Function]}
@@ -273,7 +261,6 @@ exports[`should render a button group with children 1`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="1"
     onClick={[Function]}
@@ -291,7 +278,6 @@ exports[`should render a button group with children selected 1`] = `
   <ButtonGroupButton
     aria-pressed={true}
     className="is-selected"
-    false=""
     isDisabled={false}
     key="1"
     onClick={[Function]}
@@ -301,7 +287,6 @@ exports[`should render a button group with children selected 1`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="2"
     onClick={[Function]}
@@ -326,7 +311,6 @@ exports[`should select a button 1`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="1"
     onClick={[Function]}
@@ -336,7 +320,6 @@ exports[`should select a button 1`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="2"
     onClick={[Function]}
@@ -354,7 +337,6 @@ exports[`should select a button 2`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="1"
     onClick={[Function]}
@@ -364,7 +346,6 @@ exports[`should select a button 2`] = `
   <ButtonGroupButton
     aria-pressed={false}
     className=""
-    false=""
     isDisabled={false}
     key="2"
     onClick={[Function]}
