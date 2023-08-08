@@ -8,7 +8,6 @@
   color: map-get($color-map, color);
   font-weight: map-get($color-map, font-weight);
 
-  // Doesn't use &:focus so focus styles don't appear when clicked
   &:focus {
     background-color: map-get($color-map, focus-background-color);
     border-color: map-get($color-map, focus-border-color);
@@ -23,21 +22,17 @@
     }
   }
 
-  &:active {
-    background-color: map-get($color-map, active-background-color);
-    border-color: map-get($color-map, active-border-color);
-    color: map-get($color-map, active-color);
-  }
-
-  &:disabled,
-  &.is-disabled {
+  &:disabled {
     background-color: map-get($color-map, disabled-background-color);
     border-color: map-get($color-map, disabled-border-color);
     box-shadow: map-get($color-map, disabled-box-shadow);
     color: map-get($color-map, disabled-color);
   }
 
-  &:active:focus {
+  &:active
+  ,&.is-active
+  {
+    color: map-get($color-map, active-color);
     background-color: map-get($color-map, active-and-focus-background-color);
     border-color: map-get($color-map, active-and-focus-border-color);
     box-shadow: map-get($color-map, active-and-focus-box-shadow);

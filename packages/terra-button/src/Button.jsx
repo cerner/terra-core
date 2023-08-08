@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -138,11 +138,9 @@ const Button = ({
 }) => {
   const theme = useContext(ThemeContext);
 
-  const handleOnBlur = (event) => {
-    if (onBlur) {
-      onBlur(event);
-    }
-  };
+  // We need to manually control active state for FF compatibility due to it not respecting
+  // the active class when invoking preventDefault() on onMouseDown
+  const [isActive, setIsActive] = useState(false);
 
   const handleClick = (event) => {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
@@ -158,8 +156,10 @@ const Button = ({
   };
 
   const handleKeyDown = (event) => {
-    // Add active state to FF browsers
     if (event.keyCode === KeyCode.KEY_SPACE) {
+      // See comment about FF compatibility
+      setIsActive(true);
+
       // Follow href on space keydown when rendered as an anchor tag
       if (href) {
         event.preventDefault();
@@ -173,14 +173,11 @@ const Button = ({
   };
 
   const handleKeyUp = (event) => {
+    // See comment about FF compatibility
+    setIsActive(false);
+
     if (onKeyUp) {
       onKeyUp(event);
-    }
-  };
-
-  const handleFocus = (event) => {
-    if (onFocus) {
-      onFocus(event);
     }
   };
 
@@ -202,6 +199,7 @@ const Button = ({
       { 'is-disabled': isDisabled },
       { block: isBlock },
       { compact: isCompact },
+      { 'is-active': isActive },
       theme.className,
     ]),
     customProps.className,
@@ -214,6 +212,7 @@ const Button = ({
     { 'text-and-icon': icon && !isIconOnlyClass },
     { 'icon-only': isIconOnlyClass },
     { 'text-only': !icon },
+    { 'is-active': isActive },
   ]);
 
   const buttonTextClasses = cx([
@@ -256,11 +255,11 @@ const Button = ({
       aria-label={ariaLabel}
       onKeyDown={handleKeyDown}
       onKeyUp={handleKeyUp}
-      onBlur={handleOnBlur}
+      onBlur={onBlur}
       title={buttonTitle}
       onClick={handleClick}
       onMouseDown={handleMouseDown}
-      onFocus={handleFocus}
+      onFocus={onFocus}
       href={href}
       ref={refCallback}
     >
