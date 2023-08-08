@@ -511,9 +511,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
             aria-disabled={false}
             className="button neutral button"
             disabled={false}
-            onBlur={[Function]}
             onClick={[Function]}
-            onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             onMouseDown={[Function]}
@@ -546,9 +544,7 @@ exports[`should render a status view with custom glyph, title, message, and two 
             aria-disabled={false}
             className="button neutral button"
             disabled={false}
-            onBlur={[Function]}
             onClick={[Function]}
-            onFocus={[Function]}
             onKeyDown={[Function]}
             onKeyUp={[Function]}
             onMouseDown={[Function]}
