@@ -26,6 +26,40 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
   });
 
+  describe('With Label', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-with-label'));
+
+    it('should display empty Search Field with label', () => {
+      Terra.validates.element('default empty with label');
+    });
+
+    it('should enter a search term', () => {
+      $('input').setValue('Lorem');
+    });
+
+    it('should display Search Field with label and search text', () => {
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
+      Terra.validates.element('default search with label and search text');
+    });
+  });
+
+  describe('With Label and Custom Groupname', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-with-label-and-custom-groupname'));
+
+    it('should display empty Search Field label as groupname', () => {
+      Terra.validates.element('default empty with label as groupname');
+    });
+
+    it('should enter a search term', () => {
+      $('input').setValue('Lorem');
+    });
+
+    it('should display Search Field label as groupname with text', () => {
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
+      Terra.validates.element('default search with label as groupname and search text');
+    });
+  });
+
   describe('Block', () => {
     before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-block'));
 
