@@ -20,6 +20,7 @@ export default class extends React.Component {
   }
 
   handleOnChange(e) {
+    console.log(e.currentTarget.value);
     this.setState({ selectedAnswer: e.currentTarget.value });
   }
 
@@ -59,6 +60,8 @@ export default class extends React.Component {
             <Radio id="saturday" name="weekday" labelText="Saturday" onChange={this.handleOnChange} value="saturday" />
           </RadioField>
         </div>
+        <span>Selected day: </span>
+        <span>{this.state.selectedAnswer}</span>
         <hr />
         <button className={cx('radio-button-wrapper')} type="button" aria-label="Toggle Invalid Status" onClick={this.handleOnClick}>Toggle Invalid Status</button>
       </div>

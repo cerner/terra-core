@@ -144,6 +144,11 @@ const RadioField = (props) => {
     </LegendGroup>
   );
 
+  /*
+   * Note: Cyclic Navigation of Radio button is not supported in Safari browser hence adding keydown event handler to support cyclic navigation.
+   * this handler will set focus back to first radio button when we press down or right arrow key on last radio button without changing it's state.
+   * changing state programmatically breaks onChange event of radio button. more info: https://github.com/cerner/terra-core/pull/3868#issuecomment-1669387392
+   */
   const handleKeyDown = (event) => {
     const radioGroup = document.getElementById(fieldSetId);
     if (radioGroup) {
@@ -152,18 +157,10 @@ const RadioField = (props) => {
       if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
         if (itemIndex === radioItems.length - 1) {
           radioItems[0].focus();
-          radioItems[0].checked = true;
-        } else {
-          radioItems[itemIndex + 1].focus();
-          radioItems[itemIndex + 1].checked = true;
         }
       } else if (event.key === VALUE_UP || event.key === VALUE_LEFT) {
         if (itemIndex === 0) {
           radioItems[radioItems.length - 1].focus();
-          radioItems[radioItems.length - 1].checked = true;
-        } else {
-          radioItems[itemIndex - 1].focus();
-          radioItems[itemIndex - 1].checked = true;
         }
       }
     }
@@ -172,9 +169,8 @@ const RadioField = (props) => {
   const content = React.Children.map(children, (child) => {
     if (child && child.type.isRadio) {
       return React.cloneElement(child, {
-        onKeyDown: handleKeyDown,
         inputAttrs: {
-          ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds,
+          ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds, onKeyDown: (isSafari) ? handleKeyDown : undefined,
         },
       });
     }
