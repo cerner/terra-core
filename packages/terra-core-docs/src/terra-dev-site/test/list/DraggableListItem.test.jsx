@@ -2,7 +2,7 @@ import React from 'react';
 import List, { Item } from 'terra-list/lib/index';
 
 const DraggableListItemTest = () => (
-  <List dividerStyle="standard" isDraggable>
+  <List role="listbox" aria-label="test-label" dividerStyle="standard" isDraggable>
     <Item
       key="selected"
       isSelected
