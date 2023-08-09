@@ -215,7 +215,7 @@ describe('Auto Search', () => {
   it('uses standard timeout for search delay when not provided', () => {
     const searchField = shallowWithIntl(<SearchField />).dive();
     searchField.find('.input').simulate('change', { target: {} });
-    expect(setTimeout).toBeCalledWith(expect.anything(), 250);
+    expect(setTimeout).toBeCalledWith(expect.anything(), 2500);
   });
 
   it('uses custom timeout for search delay when provided', () => {
@@ -225,7 +225,7 @@ describe('Auto Search', () => {
     searchField.find('.input').simulate('change', { target: {} });
 
     for (let i = 0; i < 3; i += 1) {
-      jest.advanceTimersByTime(250);
+      jest.advanceTimersByTime(2500);
       expect(onSearch).not.toBeCalled();
     }
 

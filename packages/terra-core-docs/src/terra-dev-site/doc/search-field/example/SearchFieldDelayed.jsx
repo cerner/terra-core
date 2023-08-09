@@ -5,7 +5,7 @@ const SearchFieldDelayed = () => {
   const [setSearchText] = useState('');
 
   return (
-      <SearchField onSearch={setSearchText} onInvalidSearch={setSearchText} searchDelay={2000} />
+    <SearchField onSearch={setSearchText} onInvalidSearch={setSearchText} searchDelay={2000} />
   );
 };
 

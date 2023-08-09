@@ -110,7 +110,7 @@ const defaultProps = {
   isLabelVisible: false,
   minimumSearchTextLength: 2,
   placeholder: '',
-  searchDelay: 250,
+  searchDelay: 2500,
   value: undefined,
   inputAttributes: undefined,
 };
