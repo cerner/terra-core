@@ -41,9 +41,9 @@ class CustomButtonTextShowHide extends React.Component {
     let customText = '';
 
     if (this.state.isOpen) {
-      customText = 'Hide Composit Content';
+      customText = 'Hide Composite Content';
     } else {
-      customText = 'Show Composit Content';
+      customText = 'Show Composite Content';
     }
 
     return (

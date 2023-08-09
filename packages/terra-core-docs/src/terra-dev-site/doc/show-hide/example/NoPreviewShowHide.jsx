@@ -1,7 +1,7 @@
 import React from 'react';
 import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 
-const focusableText = 'CareAware is Cerners comprehensive enterprise-wide solution for device connectivity. CareAware® is a suite of solutions that enable any area of a hospital to create an environment where all devices are integrated and confocusableTextually aware to ensure the right data is presented in the right format at the right time.';
+const focusableText = 'CareAware is Cerners comprehensive enterprise-wide solution for device connectivity. CareAware® is a suite of solutions that enable any area of a hospital to create an environment where all devices are integrated and contextually aware to ensure the right data is presented in the right format at the right time.';
 
 class NoPreviewShowHide extends React.Component {
   constructor(props) {
