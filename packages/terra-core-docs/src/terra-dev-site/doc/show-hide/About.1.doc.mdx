@@ -130,9 +130,10 @@ Please note:
       return (
         <ShowHide focusRef={focusRef} preview={preview} isOpen={isOpen} onChange={toggleShowHide} >
           <h3>{header}</h3>
+          // This paragraph contains a link in hidden content. Explore a working example below under Examples, Custom Button Text ShowHide.
           <p>
             <ShowHideFocuser ref={this.focusRef} prefix={prefix} focusableText="Several factors help bring clarity to life sciences, researchers and clinicians and " />
-            <a href="#">guide better care</a>
+            <a href="#">guide better care</a>, including:
           </p>
           <ul>
             <li>Data-driven research solutions for commercial and real-world evidence collaborators and health providers</li>
