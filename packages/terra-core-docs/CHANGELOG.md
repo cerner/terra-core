@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Added
+  * Added accessibility guidance for `terra-arrange`.
+  * Added an event to prevent page scroll on hyperlink for `terra-toggle-section-header`.
+
 ## 1.33.0 - (August 2, 2023)
 
 * Changed
