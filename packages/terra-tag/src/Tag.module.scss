@@ -67,6 +67,7 @@
         border-color: var(--terra-tag-hover-border-color, rgba(28, 31, 33, 0.1));
         box-shadow: var(--terra-tag-hover-box-shadow);
         color: var(--terra-tag-hover-color, #001f67);
+        text-decoration: var(--terra-tag-hover-text-decoration, underline);
       }
     }
   }
