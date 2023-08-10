@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated imports from src to lib.
+
 ## 1.33.0 - (August 2, 2023)
 
 * Changed
