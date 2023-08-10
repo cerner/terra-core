@@ -191,8 +191,6 @@ const Button = ({
       }
     }
 
-    // Add focus styles for keyboard navigation
-
     if (onKeyDown) {
       onKeyDown(event);
     }
