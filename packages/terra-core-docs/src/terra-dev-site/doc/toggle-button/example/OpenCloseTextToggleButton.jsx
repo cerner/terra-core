@@ -3,8 +3,8 @@ import ToggleButton from 'terra-toggle-button';
 
 const OpenCloseTextToggleButton = () => (
   <ToggleButton
-    closedButtonText="Close Toggle Button Text"
-    openedButtonText="Opened Toggle Button Text"
+    closedButtonText="Close Toggle Text"
+    openedButtonText="Opened Toggle Text"
     isAnimated
   >
     <div>

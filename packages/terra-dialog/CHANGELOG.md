@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 2.73.0 - (August 8, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.72.0 - (August 1, 2023)
 
 * Changed
