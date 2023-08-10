@@ -116,24 +116,24 @@ const defaultProps = {
 };
 
 const Button = ({
+  href,
   icon,
   isBlock,
   isCompact,
   isDisabled,
   isIconOnly,
   isReversed,
-  text,
-  type,
-  variant,
-  href,
-  onClick,
-  onMouseDown,
   onBlur,
+  onClick,
   onFocus,
   onKeyDown,
   onKeyUp,
+  onMouseDown,
   refCallback,
+  text,
   title,
+  type,
+  variant,
   ...customProps
 }) => {
   const theme = useContext(ThemeContext);
@@ -141,7 +141,7 @@ const Button = ({
   // We need to manually control active state for FF compatibility
   const [isActive, setIsActive] = useState(false);
 
-  // We manually default focus behaviors for keyboard events.
+  // We manually control focus behaviors for keyboard events.
   const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
@@ -279,22 +279,22 @@ const Button = ({
   return (
     <ComponentType
       {...customProps}
-      role={href ? 'button' : customProps.role}
-      className={buttonClasses}
-      type={type}
-      disabled={isDisabled}
-      tabIndex={isDisabled ? '-1' : customProps.tabIndex}
       aria-disabled={isDisabled}
       aria-label={ariaLabel}
+      className={buttonClasses}
+      disabled={isDisabled}
+      href={href}
+      onBlur={handleOnBlur}
+      onClick={handleClick}
+      onFocus={handleFocus}
       onKeyDown={handleKeyDown}
       onKeyUp={handleKeyUp}
-      onBlur={handleOnBlur}
-      title={buttonTitle}
-      onClick={handleClick}
       onMouseDown={handleMouseDown}
-      onFocus={handleFocus}
-      href={href}
       ref={refCallback}
+      role={href ? 'button' : customProps.role}
+      tabIndex={isDisabled ? '-1' : customProps.tabIndex}
+      title={buttonTitle}
+      type={type}
     >
       <span className={buttonLabelClasses}>
         {isReversed ? buttonText : buttonIcon}
