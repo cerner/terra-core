@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -138,9 +138,26 @@ const Button = ({
 }) => {
   const theme = useContext(ThemeContext);
 
-  // We need to manually control active state for FF compatibility due to it not respecting
-  // the active class when invoking preventDefault() on onMouseDown
+  // We need to manually control active state for FF compatibility
   const [isActive, setIsActive] = useState(false);
+
+  // We manually default focus behaviors for keyboard events.
+  const [isFocused, setIsFocused] = useState(false);
+
+  useEffect(() => {
+    // Disabling button does not trigger onBlur, we need to manually unfocus
+    if (isDisabled) {
+      setIsFocused(false);
+    }
+  }, [isDisabled]);
+
+  const handleOnBlur = (event) => {
+    setIsFocused(false);
+
+    if (onBlur) {
+      onBlur(event);
+    }
+  };
 
   const handleClick = (event) => {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
@@ -148,6 +165,7 @@ const Button = ({
     // This will put focus on the button when clicked if it is not currently the active element.
     if (document.activeElement !== event.currentTarget) {
       event.currentTarget.focus();
+      setIsFocused(false);
     }
 
     if (onClick) {
@@ -156,16 +174,24 @@ const Button = ({
   };
 
   const handleKeyDown = (event) => {
+    // Add active state to FF browsers
+    if (event.keyCode === KeyCode.KEY_RETURN) {
+      setIsFocused(true);
+    }
+
     if (event.keyCode === KeyCode.KEY_SPACE) {
-      // See comment about FF compatibility
       setIsActive(true);
+      setIsFocused(true);
 
       // Follow href on space keydown when rendered as an anchor tag
       if (href) {
+        // Prevent window scrolling
         event.preventDefault();
         window.location.href = href;
       }
     }
+
+    // Add focus styles for keyboard navigation
 
     if (onKeyDown) {
       onKeyDown(event);
@@ -173,8 +199,10 @@ const Button = ({
   };
 
   const handleKeyUp = (event) => {
-    // See comment about FF compatibility
-    setIsActive(false);
+    // Remove active state from FF broswers
+    if (event.keyCode === KeyCode.KEY_SPACE) {
+      setIsActive(false);
+    }
 
     if (onKeyUp) {
       onKeyUp(event);
@@ -192,13 +220,22 @@ const Button = ({
     event.preventDefault();
   };
 
+  const handleFocus = (event) => {
+    setIsFocused(true);
+    if (onFocus) {
+      onFocus(event);
+    }
+  };
+
   const buttonClasses = classNames(
     cx([
       'button',
       variant,
+      { 'is-disabled': isDisabled },
       { block: isBlock },
       { compact: isCompact },
-      { 'is-active': isActive },
+      { 'is-active': isActive && !isDisabled },
+      { 'is-focused': isFocused && !isDisabled },
       theme.className,
     ]),
     customProps.className,
@@ -211,7 +248,6 @@ const Button = ({
     { 'text-and-icon': icon && !isIconOnlyClass },
     { 'icon-only': isIconOnlyClass },
     { 'text-only': !icon },
-    { 'is-active': isActive },
   ]);
 
   const buttonTextClasses = cx([
@@ -254,11 +290,11 @@ const Button = ({
       aria-label={ariaLabel}
       onKeyDown={handleKeyDown}
       onKeyUp={handleKeyUp}
-      onBlur={onBlur}
+      onBlur={handleOnBlur}
       title={buttonTitle}
       onClick={handleClick}
       onMouseDown={handleMouseDown}
-      onFocus={onFocus}
+      onFocus={handleFocus}
       href={href}
       ref={refCallback}
     >
