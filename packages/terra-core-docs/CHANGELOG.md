@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Updated imports from src to lib.
+  * Updated imports from `src` to `lib`.
   * Updated `terra-toggle-button` example and user documentation.
 
 ## 1.34.0 - (August 8, 2023)
