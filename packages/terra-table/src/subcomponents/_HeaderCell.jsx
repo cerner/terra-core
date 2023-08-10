@@ -157,7 +157,6 @@ const HeaderCell = ({
       className={customProps.className ? `${headerCellClasses} ${customProps.className}` : headerCellClasses}
       ref={refCallback}
       role="columnheader"
-      aria-describedby='Press enter or space to sort'
     >
       {content}
       <VisuallyHiddenText text={sortingLabel} aria-live="assertive" />

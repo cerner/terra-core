@@ -345,16 +345,17 @@ const CreateHeader = (tableData, intl) => {
   const [sortBy, setSortBy] = useState('');
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [sortOrder, setSortOrder] = useState('');
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [isSortAvailable, setIsSortAvailable] = useState(false);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    const isSortAvailable = data.find(item => item.isSortActive !== undefined);
+    setIsSortAvailable(data.find(item => item.isSortActive !== undefined));
     if (isSortAvailable) {
       const item = data.find(i => i.isSortActive === true);
       setSortBy(item.children);
       setSortOrder(item.isSortDesc ? 'descending' : 'ascending');
       if (keyPressed) {
-        // setAriaText(`Rows is sorted by ${sortBy},${sortOrder}`);
         setAriaText(intl.formatMessage({ id: `Terra.table.sorting.${sortOrder}` }, { sortBy }));
       } else {
         setAriaText('');
@@ -371,6 +372,8 @@ const CreateHeader = (tableData, intl) => {
       setKeyPressed(true);
     }
   };
+
+
 
   return {
     headerIndex: 1,
@@ -394,8 +397,10 @@ const CreateHeader = (tableData, intl) => {
             onKeyDown={handleKeyDown}
             sortingLabel={ariaText}
             width={tableData.columnWidths ? tableData.columnWidths[colIndex] : undefined}
+            aria-describedby = {isSortAvailable?"ariaDescription":""}
           >
             {cellData.children}
+            <VisuallyHiddenText id="ariaDescription" text="Press enter or space key to sort"/>
           </HeaderCell>
         ))}
         {createHeaderChevronCell(tableData.rowStyle, tableData.hasChevrons)}

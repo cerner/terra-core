@@ -91,7 +91,7 @@ In this example a simple object sort parses the data, followed by a check for re
 ```
 Next we fill in the static methods for the example table rows.
 ```diff
-+ const columns = ['column-0', 'column-1', 'column-2'];
++ const columns = ['column-0', 'column-1', 'column-2', 'column-3', 'column-4'];
 
 + const createCell = cell => ({ key: cell.key, children: cell.title });
 
@@ -99,7 +99,7 @@ Next we fill in the static methods for the example table rows.
 
 + const createRow = rowData => ({ key: rowData.key, cells: createCellsForRow(rowData.cells) });
 ```
-Then we can implement a method to loop through our data and create the table rows with our methods and call it from our render method. 
+Then we can implement a method to loop through our data and create the table rows with our methods and call it from our render method.
 ```diff
 + const createRows = (data) => {
 +   const sortedData = sortData(data, sortColumn);
@@ -110,13 +110,15 @@ Then we can implement a method to loop through our data and create the table row
 +   <Table
 +     summaryId="example-sorted-table"
 +     summary="This table shows an implementation of sorted table."
-+     numberOfColumns={3}
++     numberOfColumns={5}
 +     cellPaddingStyle="standard"
 +     headerData={{
 +       cells: [
-+         createHeaderCell(columnKeys[0], 'Breakfast'),
-+         createHeaderCell(columnKeys[1], 'Animals'),
-+         createHeaderCell(columnKeys[2], 'Flatware'),
++         createHeaderCell(columnKeys[0], 'Date'),
++         createHeaderCell(columnKeys[1], 'Name'),
++         createHeaderCell(columnKeys[2], 'Medicine'),
++         createHeaderCell(columnKeys[3], 'Quantity'),
++         createHeaderCell(columnKeys[4], 'Cost'),
 +       ],
 +     }}
 +     bodyData={[{
