@@ -256,13 +256,13 @@ class SearchField extends React.Component {
 
     const searchContainerClassNames = cx([
       'search-container',
-      theme.className
+      theme.className,
     ]);
-    
+
     const searchFieldClassNames = classNames(
       cx(
         'search-field',
-        { block: isBlock }
+        { block: isBlock },
       ),
       customProps.className,
     );
@@ -304,7 +304,7 @@ class SearchField extends React.Component {
       <div className={searchContainerClassNames}>
         {isLabelVisible
         && (
-        <label className={cx('label')} >{groupName}</label>
+        <label className={cx('label')}>{groupName}</label>
         )}
         <div className={cx('search-role-container')} role="search" aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })}>
           <div role="group" aria-label={groupNameValue} {...customProps} className={searchFieldClassNames}>
