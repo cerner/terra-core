@@ -190,6 +190,8 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with long enough text', () => {
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
       expect($('input[type="search"]').isFocused()).toBeTruthy();
       // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       Terra.validates.element('minimum length with long enough text', { mismatchTolerance: 0.1 });
@@ -208,6 +210,8 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with long enough text', () => {
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
       expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('callback with long enough text');
     });
@@ -218,6 +222,8 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with too short text', () => {
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
       expect($('input[type="search"]').isFocused()).toBeTruthy();
       // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       Terra.validates.element('callback with too short text', { mismatchTolerance: 0.1 });
@@ -236,6 +242,8 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with typed text', () => {
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
       expect($('input[type="search"]').isFocused()).toBeTruthy();
       // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
       Terra.validates.element('setting value typed', { mismatchTolerance: 0.1 });
@@ -249,6 +257,8 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field after cut operation', () => {
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
       expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('setting value cut');
     });
@@ -259,6 +269,8 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field after paste operation', () => {
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
       expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('setting value paste');
     });
@@ -266,7 +278,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     it('should not trigger search when programmatically setting value', () => {
       $('#search-field-set-text-button').click();
       $('#searchfield').click();
-      browser.pause(2000);
+      browser.pause(2500);
 
       expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('setting value programmatically');
