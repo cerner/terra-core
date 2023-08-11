@@ -61,8 +61,9 @@ const ShowHideFocuser = forwardRef((props, ref) => {
   const truncatedText = truncate(focusableText);
   const [focusable, setFocusable] = useState(true);
 
-  const id = uuidv4();
-  const refId = `focus-ref-${id}`;
+  // The unique id was added to the focusable span to fix JAWS and VoiceOver confusion in reading order when reading text line-by-line with Down Arrow with multiple ShowHide component open on the same page
+  const uniqueId = uuidv4();
+  const refId = `focus-ref-${uniqueId}`;
 
   const onBlur = () => setFocusable(false);
 
