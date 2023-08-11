@@ -5,6 +5,11 @@
 * Changed
   * Reverted `3.66` changes.
 
+## 3.67.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.66.0 - (August 8, 2023)
 
 * Changed
