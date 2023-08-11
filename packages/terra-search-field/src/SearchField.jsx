@@ -254,19 +254,18 @@ class SearchField extends React.Component {
 
     const theme = this.context;
 
+    const searchContainerClassNames = cx([
+      'search-container',
+      theme.className
+    ]);
+    
     const searchFieldClassNames = classNames(
       cx(
         'search-field',
-        { block: isBlock },
-        theme.className,
+        { block: isBlock }
       ),
       customProps.className,
     );
-
-    const labelClassNames = cx([
-      'label',
-      theme.className,
-    ]);
 
     const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
     const groupNameValue = groupName === 'Search' ? intl.formatMessage({ id: 'Terra.searchField.search' }) : groupName;
@@ -302,10 +301,10 @@ class SearchField extends React.Component {
       : undefined;
 
     return (
-      <div className={cx('search-container')}>
+      <div className={searchContainerClassNames}>
         {isLabelVisible
         && (
-        <label className={labelClassNames}>{groupName}</label>
+        <label className={cx('label')} >{groupName}</label>
         )}
         <div className={cx('search-role-container')} role="search" aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })}>
           <div role="group" aria-label={groupNameValue} {...customProps} className={searchFieldClassNames}>
