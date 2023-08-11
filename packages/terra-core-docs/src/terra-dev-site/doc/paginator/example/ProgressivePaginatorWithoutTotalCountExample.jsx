@@ -33,7 +33,7 @@ const InfiniteProgressivePaginatorExample = () => {
             {currentPage}
           </h1>
           )}
-        footer={<ProgressivePaginator onPageChange={changePages} />}
+        footer={<ProgressivePaginator onPageChange={changePages} ariaLabel="progressive paginator no total count pagination" />}
       >
         {content}
       </Dialog>

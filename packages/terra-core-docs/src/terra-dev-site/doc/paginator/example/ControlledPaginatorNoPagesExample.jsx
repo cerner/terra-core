@@ -33,7 +33,7 @@ const ControlledPaginatorExample = () => {
             {currentPage}
           </h1>
         )}
-        footer={<ControlledPaginator onPageChange={changePages} selectedPage={currentPage} />}
+        footer={<ControlledPaginator onPageChange={changePages} selectedPage={currentPage} ariaLabel="controlled paginator no pages pagination" />}
       >
         <div>
           <Button text="Set Page to 9" onClick={() => { setCurrentPage(9); }} />

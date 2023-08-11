@@ -6,6 +6,13 @@
   * Added Search field examples for optional Label with default and custom labels.
 
 * Changed
+  * Updated default search delay to 2500ms.
+  * Update Search field examples to be more functionality focused. 
+
+## 1.35.0 - (August 11, 2023)
+
+* Changed
+  * Updated all paginator examples for `terra-paginator` to use new props.
   * Updated imports from `src` to `lib`.
   * Updated `terra-toggle-button` example and user documentation.
 
