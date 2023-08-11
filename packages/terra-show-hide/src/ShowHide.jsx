@@ -54,7 +54,7 @@ const propTypes = {
 const defaultProps = {
   buttonAlign: 'start',
   isOpen: false,
-  preview: undefined,
+  preview: null,
   focusRef: null,
 };
 

@@ -16,7 +16,10 @@ import ShowHideFocuserPropsTable from 'terra-show-hide/lib/ShowHideFocuser?dev-s
 
 # Terra Show Hide
 
-Show Hide Component - is a disclosure widget that enables content to be either collapsed (hidden) or expanded (visible). It has two elements: a disclosure [button][1] and a section of content whose visibility is controlled by the button. When the controlled content is hidden, the button is often styled as a typical push button with a down-pointing caret to hint that activating the button will display additional content. When the content is visible, the content displays above the button and the caret points up.
+  Show Hide Component is a disclosure widget that enables content to be either collapsed (hidden) or expanded (visible).
+  It has two elements: a disclosure [button][1] and a section of content whose visibility is controlled by the button.
+  When the controlled content is hidden, the button is often styled as a typical push button with a down-pointing caret to hint that activating the button will display additional content.
+  When the content is visible, the content displays above the button and the caret points up.
 
 Another Terra component, [Toggle Button][2], is available and preferred to Show/Hide when possible because it better adheres to accessibility best practices for disclosure components. It differs from Show Hide by displaying the content below the button when it is activated. 
 
@@ -57,13 +60,15 @@ import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 
 <Notice variant="important" ariaLevel="3">
 
-  To make the Show/Hide component accessible, you must use the `focusRef` prop. This prop allows assistive technologies such as screen readers to move user focus backward to hidden text and announce it when it is disclosed. For backward compatibility, the `focusRef` prop is optional, but is required to meet accessibility requirements.
+  To make the ShowHide component accessible, the `focusRef` prop must be used.
+  This prop allows assistive technologies such as screen readers to move user focus backward to hidden text and announce it when it is disclosed.
+  For backward compatibility, the `focusRef` prop is optional, but is required to meet accessibility requirements.
 
 </Notice>
 
 <Notice variant="caution" ariaLevel="3">
 
-  This component is not recommended for use in Safari due to VoiceOver focus limitations with Show Hide. Consider using Terra Toggle Button instead.
+  This component is not recommended for use in Safari due to VoiceOver focus limitations with ShowHide. Consider using Terra Toggle Button instead.
 
 </Notice>
 
@@ -72,8 +77,9 @@ import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
   - Enter key activates the disclosure control and toggles the visibility of the disclosure content.
   - Space key activates the disclosure control and toggles the visibility of the disclosure content. 
 
-### Truncate a paragraph of text
+### Truncating a paragraph of text
 
+  To truncate a paragraph of text:
   - At the top level of your component declare a `ref`, pass it as `focusRef` prop to `ShowHide` component.
   - Pass a node with the preview portion of the text as a prop to `ShowHide` component.
   - Use the `ShowHideFocuser` component inside `<p>` tag. A `ShowHideFocuser` component allows `ShowHide` component to set focus on the beginning of the focusable text upon opening.
@@ -90,7 +96,7 @@ import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
     const toggleShowHide = () => setIsOpen(!isOpen);
 
     const prefix = 'Patients are requesting greater affordability and efficiency in healthcare. With procedures performed in an ambulatory surgery center costing up to 60% less compared to a hospital outpatient department (1), the demand for these facilities is increasing.';
-    const focusableText = 'In fact, the U.S. ambulatory surgery center market is expected to see a 6.9 % compound annual growth rate, reaching $33 billion by 2028. (2) Cerner understands the urgency to grow in the ambulatory surgery center market while continuing to deliver excellent care. Healthcare IT products can help improve clinician efficiency and patient outcomes, as well as enhance communication and data exchange between ambulatory surgery center providers and patients. Read';
+    const focusableText = 'In fact, the U.S. ambulatory surgery center market is expected to see a 6.9 % compound annual growth rate, reaching $33 billion by 2028. (2) Cerner understands the urgency to grow in the ambulatory surgery center market while continuing to deliver excellent care. Healthcare IT products can help improve clinician efficiency and patient outcomes, as well as enhance communication and data exchange between ambulatory surgery center providers and patients.';
 
     return (
       <ShowHide focusRef={focusRef} preview={ <p>{prefix}</p> } isOpen={isOpen} onChange={toggleShowHide} >
@@ -103,12 +109,13 @@ import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
   ```
 
 ### Multiple children
-  Even though the main purpose of the `ShowHide` component is to truncate long paragraps of texts, the content of the `ShowHide` does not have to be one paragraph. It can include links, lists, and any kind of HTML tags as long as the first line of the hidden text is passed as a string prop to `ShowHideFocuser` component rather than an HTML element.
+  Even though the main purpose of the `ShowHide` component is to truncate long paragraphs of texts, the content of the `ShowHide` does not have to be one paragraph.
+  It can include links, lists, and any kind of HTML tags as long as the first line of the hidden text is passed as a string prop to `ShowHideFocuser` component rather than an HTML element.
   
 Please note:
-  - Links can be placed inside the `p` tag that wraps `ShowHideFocuser` component both preceding and following it. The prop `prefix` can be omitted if content has been passed as an HTML element preceding `ShowHideFocuser`.
-  - Everything that precedes `ShowHideFocuser` component must be also included into the `ShowHide` preview prop.
-  - Do not break lists placing `ShowHideFocuser` inside `li`, as it might cause assistive technologies to read the content incorrectly.
+  - Links can be placed inside the `p` tag that wraps `ShowHideFocuser` both preceding and following it. The prop `prefix` can be omitted if content has been passed as an HTML element preceding `ShowHideFocuser`.
+  - Everything that precedes `ShowHideFocuser` must also be included into the `ShowHide` preview prop.
+  - Do not break lists by placing `ShowHideFocuser` inside `<li>` elements as this may cause assistive technologies to read the content incorrectly.
 
   ```jsx
     import React, { useState, useRef } from 'react';
@@ -145,6 +152,7 @@ Please note:
   ```
 
 ### First hidden child is an interactive element (link, button, etc)
+  If the first hidden child is an interactive element:
   - At the top level of your component declare a `ref`.
   - In this case there is no need to use `ShowHideFocuser`. Forward `focusRef` to the interactive element directly.
 
