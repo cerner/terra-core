@@ -90,6 +90,8 @@ Terra.describeViewports('List', ['medium'], () => {
     it('should perform drag and drop operation', () => {
       browser.keys(['Tab', 'Space', 'ArrowDown', 'Space']);
       Terra.validates.element('After Drag and Drop', { selector: '#root' });
+    });
+    it('should focus on next list item after drag and drop operation', () => {
       browser.keys('Tab');
       Terra.validates.element('After Drop Focus Next Item', { selector: '#root' });
     });

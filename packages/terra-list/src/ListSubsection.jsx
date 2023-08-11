@@ -49,14 +49,6 @@ const propTypes = {
    */
   isDraggable: PropTypes.bool,
   /**
-   * Function callback when the Item is Lifted.
-   */
-  onDragStart: PropTypes.func,
-  /**
-   * Function callback when the Item is dragged from one position to another.
-   */
-  onDragUpdate: PropTypes.func,
-  /**
    * Function callback when the Item is dropped.
    */
   onDragEnd: PropTypes.func,
@@ -121,22 +113,11 @@ const ListSubsection = ({
     }
   };
 
-  const handleDragStart = (start) => {
-    if (onDragStart) {
-      onDragStart(start);
-    }
-  };
-
-  const handleDragUpdate = (update) => {
-    if (onDragUpdate) {
-      onDragUpdate(update);
-    }
-  };
-
   const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
+    isDraggable: (ListItem?.type?.name === 'ListItem' && ListItem?.props?.isSelectable),
+    refCallback: provider.innerRef,
     ...provider.draggableProps,
     ...provider.dragHandleProps,
-    refCallback: provider.innerRef,
   });
 
   const renderSubSectionListItemsDom = () => (
@@ -153,7 +134,7 @@ const ListSubsection = ({
   );
 
   const renderDraggableListDom = () => (
-    <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
+    <DragDropContext onDragEnd={handleDragEnd}>
       <Droppable droppableId="listSubSection">
         {(provided) => (
           <div ref={provided.innerRef}>
