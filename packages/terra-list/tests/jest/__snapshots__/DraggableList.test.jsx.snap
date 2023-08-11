@@ -67,8 +67,6 @@ exports[`should render List with items 1`] = `
   >
     <DragDropContext
       onDragEnd={[Function]}
-      onDragStart={[Function]}
-      onDragUpdate={[Function]}
     >
       <ErrorBoundary>
         <App
@@ -79,8 +77,6 @@ exports[`should render List with items 1`] = `
   Some screen readers may require you to be in focus mode or to use your pass through key
 "
           onDragEnd={[Function]}
-          onDragStart={[Function]}
-          onDragUpdate={[Function]}
           setCallbacks={[Function]}
         >
           <Provider
@@ -218,6 +214,7 @@ exports[`should render List with items 1`] = `
                             data-rbd-draggable-id="1"
                             draggable={false}
                             hasChevron={false}
+                            isDraggable={true}
                             isSelectable={true}
                             isSelected={false}
                             key="1"
@@ -243,6 +240,7 @@ exports[`should render List with items 1`] = `
                               data-rbd-draggable-context-id="0"
                               data-rbd-draggable-id="1"
                               draggable={false}
+                              isDraggable={true}
                               onBlur={[Function]}
                               onDragStart={[Function]}
                               onMouseDown={[Function]}
@@ -257,9 +255,81 @@ exports[`should render List with items 1`] = `
                               tabIndex="0"
                             >
                               <div
-                                className="item-fill"
+                                className="item-fill icon-knurling"
                                 key="item-fill"
-                              />
+                              >
+                                <span>
+                                  <IconKnurling
+                                    viewBox="0 0 48 48"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <IconBase
+                                      focusable="false"
+                                      height="1em"
+                                      isBidi={false}
+                                      isSpin={false}
+                                      viewBox="0 0 48 48"
+                                      width="1em"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <svg
+                                        className="tui-Icon icon"
+                                        focusable="false"
+                                        height="1em"
+                                        role="presentation"
+                                        viewBox="0 0 48 48"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <g
+                                          data-name="48"
+                                        >
+                                          <circle
+                                            cx="15"
+                                            cy="4.632"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="15"
+                                            cy="17.443"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="15"
+                                            cy="30.254"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="15"
+                                            cy="43.066"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="33"
+                                            cy="4.632"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="33"
+                                            cy="17.544"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="33"
+                                            cy="30.456"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="33"
+                                            cy="43.368"
+                                            r="3.5"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </IconBase>
+                                  </IconKnurling>
+                                </span>
+                              </div>
                             </li>
                           </ListItem>
                         </Draggable>
@@ -329,6 +399,7 @@ exports[`should render List with items 1`] = `
                             data-rbd-draggable-id="2"
                             draggable={false}
                             hasChevron={false}
+                            isDraggable={true}
                             isSelectable={true}
                             isSelected={false}
                             key="2"
@@ -354,6 +425,7 @@ exports[`should render List with items 1`] = `
                               data-rbd-draggable-context-id="0"
                               data-rbd-draggable-id="2"
                               draggable={false}
+                              isDraggable={true}
                               onBlur={[Function]}
                               onDragStart={[Function]}
                               onMouseDown={[Function]}
@@ -368,9 +440,81 @@ exports[`should render List with items 1`] = `
                               tabIndex="0"
                             >
                               <div
-                                className="item-fill"
+                                className="item-fill icon-knurling"
                                 key="item-fill"
-                              />
+                              >
+                                <span>
+                                  <IconKnurling
+                                    viewBox="0 0 48 48"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <IconBase
+                                      focusable="false"
+                                      height="1em"
+                                      isBidi={false}
+                                      isSpin={false}
+                                      viewBox="0 0 48 48"
+                                      width="1em"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <svg
+                                        className="tui-Icon icon"
+                                        focusable="false"
+                                        height="1em"
+                                        role="presentation"
+                                        viewBox="0 0 48 48"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <g
+                                          data-name="48"
+                                        >
+                                          <circle
+                                            cx="15"
+                                            cy="4.632"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="15"
+                                            cy="17.443"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="15"
+                                            cy="30.254"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="15"
+                                            cy="43.066"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="33"
+                                            cy="4.632"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="33"
+                                            cy="17.544"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="33"
+                                            cy="30.456"
+                                            r="3.5"
+                                          />
+                                          <circle
+                                            cx="33"
+                                            cy="43.368"
+                                            r="3.5"
+                                          />
+                                        </g>
+                                      </svg>
+                                    </IconBase>
+                                  </IconKnurling>
+                                </span>
+                              </div>
                             </li>
                           </ListItem>
                         </Draggable>
@@ -456,8 +600,6 @@ exports[`should render Section with items 1`] = `
 >
   <DragDropContext
     onDragEnd={[Function]}
-    onDragStart={[Function]}
-    onDragUpdate={[Function]}
   >
     <ErrorBoundary>
       <App
@@ -468,8 +610,6 @@ exports[`should render Section with items 1`] = `
   Some screen readers may require you to be in focus mode or to use your pass through key
 "
         onDragEnd={[Function]}
-        onDragStart={[Function]}
-        onDragUpdate={[Function]}
         setCallbacks={[Function]}
       >
         <Provider
@@ -685,6 +825,7 @@ exports[`should render Section with items 1`] = `
                               data-rbd-draggable-id="123"
                               draggable={false}
                               hasChevron={false}
+                              isDraggable={true}
                               isSelectable={true}
                               isSelected={false}
                               key="123"
@@ -710,6 +851,7 @@ exports[`should render Section with items 1`] = `
                                 data-rbd-draggable-context-id="1"
                                 data-rbd-draggable-id="123"
                                 draggable={false}
+                                isDraggable={true}
                                 onBlur={[Function]}
                                 onDragStart={[Function]}
                                 onMouseDown={[Function]}
@@ -724,9 +866,81 @@ exports[`should render Section with items 1`] = `
                                 tabIndex="0"
                               >
                                 <div
-                                  className="item-fill"
+                                  className="item-fill icon-knurling"
                                   key="item-fill"
-                                />
+                                >
+                                  <span>
+                                    <IconKnurling
+                                      viewBox="0 0 48 48"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <IconBase
+                                        focusable="false"
+                                        height="1em"
+                                        isBidi={false}
+                                        isSpin={false}
+                                        viewBox="0 0 48 48"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <svg
+                                          className="tui-Icon icon"
+                                          focusable="false"
+                                          height="1em"
+                                          role="presentation"
+                                          viewBox="0 0 48 48"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <g
+                                            data-name="48"
+                                          >
+                                            <circle
+                                              cx="15"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="17.443"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="30.254"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="43.066"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="17.544"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="30.456"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="43.368"
+                                              r="3.5"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </IconBase>
+                                    </IconKnurling>
+                                  </span>
+                                </div>
                               </li>
                             </ListItem>
                           </Draggable>
@@ -796,6 +1010,7 @@ exports[`should render Section with items 1`] = `
                               data-rbd-draggable-id="124"
                               draggable={false}
                               hasChevron={false}
+                              isDraggable={true}
                               isSelectable={true}
                               isSelected={false}
                               key="124"
@@ -821,6 +1036,7 @@ exports[`should render Section with items 1`] = `
                                 data-rbd-draggable-context-id="1"
                                 data-rbd-draggable-id="124"
                                 draggable={false}
+                                isDraggable={true}
                                 onBlur={[Function]}
                                 onDragStart={[Function]}
                                 onMouseDown={[Function]}
@@ -835,9 +1051,81 @@ exports[`should render Section with items 1`] = `
                                 tabIndex="0"
                               >
                                 <div
-                                  className="item-fill"
+                                  className="item-fill icon-knurling"
                                   key="item-fill"
-                                />
+                                >
+                                  <span>
+                                    <IconKnurling
+                                      viewBox="0 0 48 48"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <IconBase
+                                        focusable="false"
+                                        height="1em"
+                                        isBidi={false}
+                                        isSpin={false}
+                                        viewBox="0 0 48 48"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <svg
+                                          className="tui-Icon icon"
+                                          focusable="false"
+                                          height="1em"
+                                          role="presentation"
+                                          viewBox="0 0 48 48"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <g
+                                            data-name="48"
+                                          >
+                                            <circle
+                                              cx="15"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="17.443"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="30.254"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="43.066"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="17.544"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="30.456"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="43.368"
+                                              r="3.5"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </IconBase>
+                                    </IconKnurling>
+                                  </span>
+                                </div>
                               </li>
                             </ListItem>
                           </Draggable>
@@ -897,8 +1185,6 @@ exports[`should render subsection with items 1`] = `
 >
   <DragDropContext
     onDragEnd={[Function]}
-    onDragStart={[Function]}
-    onDragUpdate={[Function]}
   >
     <ErrorBoundary>
       <App
@@ -909,8 +1195,6 @@ exports[`should render subsection with items 1`] = `
   Some screen readers may require you to be in focus mode or to use your pass through key
 "
         onDragEnd={[Function]}
-        onDragStart={[Function]}
-        onDragUpdate={[Function]}
         setCallbacks={[Function]}
       >
         <Provider
@@ -1126,6 +1410,7 @@ exports[`should render subsection with items 1`] = `
                               data-rbd-draggable-id="13"
                               draggable={false}
                               hasChevron={false}
+                              isDraggable={true}
                               isSelectable={true}
                               isSelected={false}
                               key="13"
@@ -1151,6 +1436,7 @@ exports[`should render subsection with items 1`] = `
                                 data-rbd-draggable-context-id="2"
                                 data-rbd-draggable-id="13"
                                 draggable={false}
+                                isDraggable={true}
                                 onBlur={[Function]}
                                 onDragStart={[Function]}
                                 onMouseDown={[Function]}
@@ -1165,9 +1451,81 @@ exports[`should render subsection with items 1`] = `
                                 tabIndex="0"
                               >
                                 <div
-                                  className="item-fill"
+                                  className="item-fill icon-knurling"
                                   key="item-fill"
-                                />
+                                >
+                                  <span>
+                                    <IconKnurling
+                                      viewBox="0 0 48 48"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <IconBase
+                                        focusable="false"
+                                        height="1em"
+                                        isBidi={false}
+                                        isSpin={false}
+                                        viewBox="0 0 48 48"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <svg
+                                          className="tui-Icon icon"
+                                          focusable="false"
+                                          height="1em"
+                                          role="presentation"
+                                          viewBox="0 0 48 48"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <g
+                                            data-name="48"
+                                          >
+                                            <circle
+                                              cx="15"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="17.443"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="30.254"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="43.066"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="17.544"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="30.456"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="43.368"
+                                              r="3.5"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </IconBase>
+                                    </IconKnurling>
+                                  </span>
+                                </div>
                               </li>
                             </ListItem>
                           </Draggable>
@@ -1237,6 +1595,7 @@ exports[`should render subsection with items 1`] = `
                               data-rbd-draggable-id="14"
                               draggable={false}
                               hasChevron={false}
+                              isDraggable={true}
                               isSelectable={true}
                               isSelected={false}
                               key="14"
@@ -1262,6 +1621,7 @@ exports[`should render subsection with items 1`] = `
                                 data-rbd-draggable-context-id="2"
                                 data-rbd-draggable-id="14"
                                 draggable={false}
+                                isDraggable={true}
                                 onBlur={[Function]}
                                 onDragStart={[Function]}
                                 onMouseDown={[Function]}
@@ -1276,9 +1636,81 @@ exports[`should render subsection with items 1`] = `
                                 tabIndex="0"
                               >
                                 <div
-                                  className="item-fill"
+                                  className="item-fill icon-knurling"
                                   key="item-fill"
-                                />
+                                >
+                                  <span>
+                                    <IconKnurling
+                                      viewBox="0 0 48 48"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <IconBase
+                                        focusable="false"
+                                        height="1em"
+                                        isBidi={false}
+                                        isSpin={false}
+                                        viewBox="0 0 48 48"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <svg
+                                          className="tui-Icon icon"
+                                          focusable="false"
+                                          height="1em"
+                                          role="presentation"
+                                          viewBox="0 0 48 48"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <g
+                                            data-name="48"
+                                          >
+                                            <circle
+                                              cx="15"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="17.443"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="30.254"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="43.066"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="17.544"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="30.456"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="43.368"
+                                              r="3.5"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </IconBase>
+                                    </IconKnurling>
+                                  </span>
+                                </div>
                               </li>
                             </ListItem>
                           </Draggable>
@@ -1348,6 +1780,7 @@ exports[`should render subsection with items 1`] = `
                               data-rbd-draggable-id="15"
                               draggable={false}
                               hasChevron={false}
+                              isDraggable={true}
                               isSelectable={true}
                               isSelected={false}
                               key="15"
@@ -1373,6 +1806,7 @@ exports[`should render subsection with items 1`] = `
                                 data-rbd-draggable-context-id="2"
                                 data-rbd-draggable-id="15"
                                 draggable={false}
+                                isDraggable={true}
                                 onBlur={[Function]}
                                 onDragStart={[Function]}
                                 onMouseDown={[Function]}
@@ -1387,9 +1821,81 @@ exports[`should render subsection with items 1`] = `
                                 tabIndex="0"
                               >
                                 <div
-                                  className="item-fill"
+                                  className="item-fill icon-knurling"
                                   key="item-fill"
-                                />
+                                >
+                                  <span>
+                                    <IconKnurling
+                                      viewBox="0 0 48 48"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <IconBase
+                                        focusable="false"
+                                        height="1em"
+                                        isBidi={false}
+                                        isSpin={false}
+                                        viewBox="0 0 48 48"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <svg
+                                          className="tui-Icon icon"
+                                          focusable="false"
+                                          height="1em"
+                                          role="presentation"
+                                          viewBox="0 0 48 48"
+                                          width="1em"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <g
+                                            data-name="48"
+                                          >
+                                            <circle
+                                              cx="15"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="17.443"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="30.254"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="15"
+                                              cy="43.066"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="4.632"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="17.544"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="30.456"
+                                              r="3.5"
+                                            />
+                                            <circle
+                                              cx="33"
+                                              cy="43.368"
+                                              r="3.5"
+                                            />
+                                          </g>
+                                        </svg>
+                                      </IconBase>
+                                    </IconKnurling>
+                                  </span>
+                                </div>
                               </li>
                             </ListItem>
                           </Draggable>
