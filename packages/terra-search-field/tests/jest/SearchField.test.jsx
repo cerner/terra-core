@@ -223,11 +223,12 @@ describe('Auto Search', () => {
     const searchField = shallowWithIntl(<SearchField searchDelay={1000} onSearch={onSearch} />).dive();
 
     searchField.find('.input').simulate('change', { target: {} });
-
-    for (let i = 0; i < 3; i += 1) {
-      jest.advanceTimersByTime(2500);
-      expect(onSearch).not.toBeCalled();
-    }
+    jest.advanceTimersByTime(2500);
+    expect(onSearch).not.toBeCalled();
+    jest.advanceTimersByTime(2500);
+    expect(onSearch).not.toBeCalled();
+    jest.advanceTimersByTime(2500);
+    expect(onSearch).not.toBeCalled();
 
     jest.advanceTimersByTime(1000);
     // 1000ms has been passed by jest by now
