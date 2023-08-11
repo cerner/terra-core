@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added optional props `ariaLabelledBy` and `ariaLabel` to provide ARIA contexts for the paginator.
+
 ## 2.82.0 - (February 15, 2023)
 
 * Changed

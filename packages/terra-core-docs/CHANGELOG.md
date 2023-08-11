@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Changed
+  * Updated all paginator examples for `terra-paginator` to use new props.
   * Updated imports from `src` to `lib`.
   * Updated `terra-toggle-button` example and user documentation.
 
