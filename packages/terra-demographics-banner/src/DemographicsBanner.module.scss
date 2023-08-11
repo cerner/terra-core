@@ -86,21 +86,13 @@
     width: 100%;
   }
 
-  .test-wrapper {
-    display: flex;
-    width: 100%;
-    margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
-  }
-
-  .test-wrapper-inner {
-    flex-basis: 100%;
-  }
-
   .content {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
     flex-wrap: wrap;
+    flex-basis: auto;
+    margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
   }
 
   .application-content {
