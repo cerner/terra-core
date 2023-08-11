@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[13321],{13321:function(e,t,u){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var a=l(u(67294)),r=l(u(7812));function l(e){return e&&e.__esModule?e:{default:e}}t.default=function(){return a.default.createElement(r.default,{text:"Default",className:"defaultSectionHeader"})}}}]);
