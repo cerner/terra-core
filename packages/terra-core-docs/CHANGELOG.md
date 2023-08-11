@@ -3,7 +3,11 @@
 ## Unreleased
 
 * Added
-  * Added Search field example with optional custom Label.
+  * Added Search field examples for optional Label with default and custom labels.
+
+* Changed
+  * Updated imports from `src` to `lib`.
+  * Updated `terra-toggle-button` example and user documentation.
 
 ## 1.34.0 - (August 8, 2023)
 
