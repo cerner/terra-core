@@ -83,7 +83,7 @@ const propTypes = {
    */
   isDraggable: PropTypes.bool,
   /**
-   * Function callback when the Item is dropped.
+   * Function callback when the Item is dropped. Callback contains the DropResult of result object and provided object, e.g. onDragEnd(result, provided).
    */
   onDragEnd: PropTypes.func,
 };
@@ -108,8 +108,6 @@ const List = ({
   role,
   ariaSelectionStyle,
   isDraggable,
-  onDragStart,
-  onDragUpdate,
   onDragEnd,
   ...customProps
 }) => {
@@ -180,7 +178,7 @@ const List = ({
     return result;
   };
 
-  const handleDragEnd = (result) => {
+  const handleDragEnd = (result, provided) => {
     // dropped outside the list
     if (!result.destination) {
       return;
@@ -192,7 +190,7 @@ const List = ({
     );
     setlistItem(items);
     if (onDragEnd) {
-      onDragEnd(result);
+      onDragEnd(result, provided);
     }
   };
 
