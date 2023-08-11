@@ -4,7 +4,7 @@
 
 
 *Fixed
-  *Fixed Terra- Button Group Accessiblity Issues.
+  *Fixed visual focus When using SR and added Cyclic Behavior for terra button group.
 
 ## 3.65.0 - (August 8, 2023)
 

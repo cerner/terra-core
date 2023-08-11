@@ -137,12 +137,12 @@ class ButtonGroup extends React.Component {
 
     const allButtons = children ? [] : undefined;
     // eslint-disable-next-line no-nested-ternary
-    const btnRole = onChange ? isMultiSelect ? 'checkbox' : 'radio' : '';
+    const btnRole = onChange ? (isMultiSelect ? 'checkbox' : 'radio') : '';
 
     React.Children.forEach(children, (child, index) => {
       const isSelected = selectedKeys.indexOf(child.key) > -1;
       const cloneChild = React.cloneElement(child, {
-        role: (btnRole || undefined),
+        role: btnRole || undefined,
         onClick: this.wrapOnClick(child),
         onKeyDown: this.wrapKeyDown(child, index),
         className: cx([{ 'is-selected': isSelected && !child.props.isDisabled }, child.props.className]),
