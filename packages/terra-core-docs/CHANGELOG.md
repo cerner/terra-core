@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Updated
+  * Updated `terra-scroll` to add realistic examples.
 
 * Changed
   * Updated imports from `src` to `lib`.
