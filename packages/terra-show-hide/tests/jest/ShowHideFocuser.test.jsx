@@ -12,8 +12,8 @@ describe('ShowHideFocuser', () => {
     return <p><ShowHideFocuser ref={ref} prefix={prefix} focusableText={focusableText} /></p>;
   };
 
-  afterEach(() => {
-    jest.restoreAllMocks();
+  afterAll(() => {
+    jest.resetAllMocks();
   });
 
   // Snapshot Tests

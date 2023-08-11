@@ -36,7 +36,7 @@
     "terra-mixins": "^1.40.0",
     "terra-theme-context": "^1.0.0",
     "terra-toggle": "^3.56.0",
-    "uuid": "7.0.3"
+    "uuid": "3.4.0"
   },
   "scripts": {
     "compile": "babel --root-mode upward src --out-dir lib --copy-files",
