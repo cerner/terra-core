@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 4.74.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.73.0 - (August 8, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.72.0 - (August 2, 2023)
+
   * Changed
     *  Locked `uuid` dependency to `3.4.0`.
 

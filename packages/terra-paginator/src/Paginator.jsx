@@ -33,6 +33,14 @@ const propTypes = {
     */
   itemCountPerPage: PropTypes.number,
   /**
+   * Allows user to set the heading id of the page.
+   */
+  ariaLabelledBy: PropTypes.string,
+  /**
+   * Allows user to set the custom paginator label.
+   */
+  ariaLabel: PropTypes.string,
+  /**
    * @private
    * The intl object to be injected for translations.
    */
@@ -125,14 +133,17 @@ class Paginator extends React.Component {
       intl,
       totalCount,
       itemCountPerPage,
+      ariaLabelledBy,
+      ariaLabel,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
+    const paginatorAriaLabel = ariaLabel || 'pagination';
 
-    const fullView = (
-      <div className={cx('paginator', !totalCount && 'pageless', theme.className)}>
+    const fullViewChildren = (
+      <>
         {
           totalCount && (
           <PaginatorButton
@@ -184,8 +195,20 @@ class Paginator extends React.Component {
           </PaginatorButton>
           )
         }
-      </div>
+      </>
     );
+
+    const fullView = ariaLabelledBy
+      ? (
+        <nav className={cx('paginator', !totalCount && 'pageless', theme.className)} aria-labelledby={ariaLabelledBy}>
+          {fullViewChildren}
+        </nav>
+      )
+      : (
+        <nav className={cx('paginator', !totalCount && 'pageless', theme.className)} aria-label={paginatorAriaLabel}>
+          {fullViewChildren}
+        </nav>
+      );
 
     return fullView;
   }
@@ -196,14 +219,17 @@ class Paginator extends React.Component {
       intl,
       totalCount,
       itemCountPerPage,
+      ariaLabelledBy,
+      ariaLabel,
     } = this.props;
     const totalPages = (this.props.totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
+    const paginatorAriaLabel = ariaLabel || 'pagination';
 
-    const reducedView = (
-      <div className={cx('paginator', !totalCount && 'pageless', theme.className)} role="navigation" aria-label="pagination">
+    const reducedViewChildren = (
+      <>
         {
           totalCount && (
           <PaginatorButton
@@ -255,8 +281,20 @@ class Paginator extends React.Component {
           </PaginatorButton>
           )
         }
-      </div>
+      </>
     );
+
+    const reducedView = ariaLabelledBy
+      ? (
+        <nav className={cx('paginator', !totalCount && 'pageless', theme.className)} aria-labelledby={ariaLabelledBy}>
+          {reducedViewChildren}
+        </nav>
+      )
+      : (
+        <nav className={cx('paginator', !totalCount && 'pageless', theme.className)} aria-label={paginatorAriaLabel}>
+          {reducedViewChildren}
+        </nav>
+      );
 
     return reducedView;
   }

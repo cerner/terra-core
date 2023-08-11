@@ -2,6 +2,23 @@
 
 ## Unreleased
 
+## 1.35.0 - (August 11, 2023)
+
+* Changed
+  * Updated all paginator examples for `terra-paginator` to use new props.
+  * Updated imports from `src` to `lib`.
+  * Updated `terra-toggle-button` example and user documentation.
+
+## 1.34.0 - (August 8, 2023)
+
+* Updated
+  * Updated `terra-tag` to include realistic examples.
+
+## 1.33.0 - (August 2, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 1.32.0 - (August 1, 2023)
 
 * Changed
