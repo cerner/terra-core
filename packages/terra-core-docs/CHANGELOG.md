@@ -4,6 +4,10 @@
 * Added
   * Added drag and drop example for `terra-list`.
 
+* Changed
+  * Updated imports from `src` to `lib`.
+  * Updated `terra-toggle-button` example and user documentation.
+
 ## 1.34.0 - (August 8, 2023)
 
 * Updated
