@@ -82,7 +82,7 @@
   .identifier-row {
     display: flex;
     flex: 0 0 auto;
-    // order: 3; // Places row after person-name and application-content visually as the third flex item (this element must be rendered immediately following person-name element for assistive technology support).
+    order: 3; // Places row after person-name and application-content visually as the third flex item (this element must be rendered immediately following person-name element for assistive technology support).
     width: 100%;
   }
 
@@ -90,7 +90,7 @@
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
   }
 
