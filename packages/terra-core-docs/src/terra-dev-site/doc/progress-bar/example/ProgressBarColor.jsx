@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressBar from 'terra-progress-bar';
 import classNames from 'classnames/bind';
-import styles from 'terra-progress-bar/src/colors.module.scss';
+import styles from 'terra-progress-bar/lib/colors.module.scss';
 
 const cx = classNames.bind(styles);
 
