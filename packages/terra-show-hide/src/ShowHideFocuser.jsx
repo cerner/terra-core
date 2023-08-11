@@ -8,26 +8,26 @@ const cx = classNamesBind.bind(styles);
 
 const propTypes = {
   /**
-   * Text that precedes the focusable portion.
+   * The portion of the text that gets focus once the hidden portion is disclosed to be announced by assistive technologies
    */
   focusableText: PropTypes.string.isRequired,
   /**
-   * The portion of the text that gets focus once the hidden portion is disclosed to be announced by assistive technologies
+   * Text that precedes the focusable portion.
    */
   prefix: PropTypes.string,
 };
 
 /**
- * @param str - string value
+ * @param string - string value
  * @returns a trimmed string with trailing white space added
  */
-const addTrailingWhiteSpace = (str) => `${str.trim()} `;
+const addTrailingWhiteSpace = (string) => `${string.trim()} `;
 
 /**
- * @param str - string value
+ * @param string - string value
  * @returns a trimmed string with preceding whitespace added
  */
-const addHeadingWhiteSpace = (str) => ` ${str.trim()}`;
+const addHeadingWhiteSpace = (string) => ` ${string.trim()}`;
 
 /**
  * This method splits the string in two portions without splitting words. The first (focusable) portion's length should not exceed max length for assistive technologies in the text mode being able to use Arrow Up?Down correctly.
@@ -64,6 +64,8 @@ const ShowHideFocuser = forwardRef((props, ref) => {
   const id = uuidv4();
   const refId = `focus-ref-${id}`;
 
+  const onBlur = () => setFocusable(false);
+
   return (
     <>
       {prefix ? addTrailingWhiteSpace(prefix) : null}
@@ -74,7 +76,7 @@ const ShowHideFocuser = forwardRef((props, ref) => {
         ref={ref}
         tabIndex={focusable ? '-1' : null}
         role={focusable ? 'group' : null}
-        onBlur={() => setFocusable(false)}
+        onBlur={onBlur}
       >
         {truncatedText[0]}
       </span>
