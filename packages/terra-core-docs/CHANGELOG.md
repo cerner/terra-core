@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.35.0 - (August 11, 2023)
+
 * Changed
   * Updated all paginator examples for `terra-paginator` to use new props.
   * Updated imports from `src` to `lib`.
