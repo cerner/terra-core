@@ -1073,6 +1073,7 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
     }
     isOpen={false}
     onChange={[Function]}
+    preview={null}
   >
     <div>
       <div
