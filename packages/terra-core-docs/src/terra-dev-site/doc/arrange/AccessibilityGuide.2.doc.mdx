@@ -3,14 +3,14 @@
 
 ## Why the accessibility of Arrange is important ?
 
-> Arrange is a component which is used for performing the layout alignment in the position of top/bottom/right/left. Though the CSS alignment does not affect the accessibility, the reading order of the content need to be maintained same as the visual order. If the content is aligned with any position property to make it look in different place which will create a complexity for the screen reader user to get the correct reading order.   
+> Terra Arrange is a component used for setting the content layout alignment to be top/bottom/right/left. CSS alignment does not affect the accessibility, however it is crucial to ensure that the screen reader reads the content in the same manner as to how the content is visually present. If the content is aligned with any position property to make it look in different place which will create a complexity for the screen reader user to get the correct reading order.   
 >
 > Making the DOM order same as visual order will help the assistive technology users to get the correct reading order. 
 >
-> Arrange may also have the interactive elements which needs to be keyboard focusable and acted upon keyboard Enter/Space key. 
+> Arrange may also have interactive elements which need to be keyboard focusable and interactable using the `Enter` or `Space` keys.  
 >
 >&nbsp;&nbsp;
-- **Blind screen reader users** do not necessarily interact with the page in a linear fashion and can use our component out of context. Hence, we need to provide descriptive label for each interactive element. 
+- **Screen reader users** do not necessarily interact with the page in a linear fashion and can use Arrange out of context. Hence, a descriptive label is necessary for each interactive element.
 - **People using speech input software** require unique labels for the interactive elements to effectively understand them.  
 - **Keyboard only users** navigate the page using only a keyboard. Actionable elements must be keyboard accessible for keyboard only users to interact with it. Additionally, a visible keyboard focus indicator is needed to see where they are currently on the page.  
 
