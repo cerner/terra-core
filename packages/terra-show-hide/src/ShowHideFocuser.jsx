@@ -40,7 +40,7 @@ const truncate = (string) => {
   }
   const text = string.trim();
   const maxLength = 155;
-  if (text?.length < maxLength) {
+  if (text.length < maxLength) {
     return [text];
   }
   const lastFullWordEndPosition = text.slice(0, maxLength).lastIndexOf(' ');
