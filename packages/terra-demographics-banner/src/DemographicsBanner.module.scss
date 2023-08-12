@@ -42,25 +42,22 @@
   }
 
   .person-name {
-    flex: 2;
+    flex: 2 1 auto;
     font-size: 1.143rem;
     line-height: 1;
     margin: 0;
     padding-bottom: 0.2rem;
-    flex-basis: auto;
   }
 
   .identifiers {
     flex: 1;
     margin-right: auto;
-    flex-basis: auto;
   }
 
   .person-details {
     flex: 1;
     margin-bottom: 0;
     margin-top: var(--terra-demographics-banner-person-details-margin-top);
-    flex-basis: auto;
   }
 
   .preferred-first-name {
@@ -98,11 +95,10 @@
   }
 
   .application-content {
-    flex: 1;
+    flex: 1 1 auto;
     margin-right: auto;
     margin-top: var(--terra-demographics-banner-application-content-margin-top);
     padding-bottom: 0.2rem;
-    flex-basis: auto;
   }
 
   .large-demographics-banner {
