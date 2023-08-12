@@ -48,18 +48,19 @@
     margin: 0;
     padding-bottom: 0.2rem;
     flex-basis: auto;
-    align-self: end;
   }
 
   .identifiers {
     flex: 1;
     margin-right: auto;
+    flex-basis: auto;
   }
 
   .person-details {
     flex: 1;
     margin-bottom: 0;
     margin-top: var(--terra-demographics-banner-person-details-margin-top);
+    flex-basis: auto;
   }
 
   .preferred-first-name {
