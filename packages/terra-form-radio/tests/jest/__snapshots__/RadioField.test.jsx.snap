@@ -94,7 +94,6 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
           Object {
             "aria-describedby": "terra-radio-field-description-uuid123  ",
             "data-custom-attr": "attr data",
-            "onKeyDown": undefined,
           }
         }
         isInline={false}
@@ -103,7 +102,6 @@ exports[`correctly applies "inputAttrs" property to the Radio component 1`] = `
         labelText="Default label"
         labelTextAttrs={Object {}}
         name={null}
-        onKeyDown={[Function]}
       >
         <div
           className="radio"
@@ -370,7 +368,7 @@ exports[`should hide the required indicator when requested 1`] = `
 />
 `;
 
-exports[`should not render onkeydown event on radio button for non-safari browser 1`] = `
+exports[`should not render onkeydown and onclick event on radio button for non-safari browser 1`] = `
 <InjectIntl(RadioField)
   help="This will help up determine how many chairs to request"
   id="RadioFieldOne"
@@ -467,7 +465,6 @@ exports[`should not render onkeydown event on radio button for non-safari browse
         inputAttrs={
           Object {
             "aria-describedby": "terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123",
-            "onKeyDown": undefined,
           }
         }
         isInline={false}
@@ -728,7 +725,7 @@ exports[`should render an optional part on the label 1`] = `
 />
 `;
 
-exports[`should render onkeydown event on radio button for safari browser 1`] = `
+exports[`should render onkeydown and onclick event on radio button for safari browser 1`] = `
 <InjectIntl(RadioField)
   help="This will help up determine how many chairs to request"
   id="RadioFieldOne"
@@ -825,6 +822,7 @@ exports[`should render onkeydown event on radio button for safari browser 1`] = 
         inputAttrs={
           Object {
             "aria-describedby": "terra-radio-field-description-uuid123  terra-radio-field-description-help-uuid123",
+            "onClick": [Function],
             "onKeyDown": [Function],
           }
         }
@@ -848,6 +846,7 @@ exports[`should render onkeydown event on radio button for safari browser 1`] = 
               disabled={false}
               id="firstRadio"
               name={null}
+              onClick={[Function]}
               onKeyDown={[Function]}
               type="radio"
             />

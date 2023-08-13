@@ -146,31 +146,32 @@ const RadioField = (props) => {
 
   /*
    * Note: Cyclic Navigation of Radio button is not supported in Safari browser hence adding keydown event handler to support cyclic navigation.
-   * this handler will set focus back to first radio button when we press down or right arrow key on last radio button without changing it's state.
-   * changing state programmatically breaks onChange event of radio button. more info: https://github.com/cerner/terra-core/pull/3868#issuecomment-1669387392
+   * this handler will use native mouse event to set focus back to first radio button when we press down or right arrow key on last radio button and vise versa.
    */
   const handleKeyDown = (event) => {
     const radioGroup = document.getElementById(fieldSetId);
     if (radioGroup) {
       const radioItems = radioGroup.querySelectorAll('[type=radio]');
       const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
+      const onClick = new MouseEvent('click', { bubbles: true, cancelable: false });
       if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
         if (itemIndex === radioItems.length - 1) {
-          radioItems[0].focus();
+          radioItems[0].dispatchEvent(onClick);
         }
       } else if (event.key === VALUE_UP || event.key === VALUE_LEFT) {
         if (itemIndex === 0) {
-          radioItems[radioItems.length - 1].focus();
+          radioItems[radioItems.length - 1].dispatchEvent(onClick);
         }
       }
     }
   };
 
   const content = React.Children.map(children, (child) => {
+    const eventHandlersForSafari = (isSafari) ? { onKeyDown: handleKeyDown, onClick: (event) => { event.currentTarget.focus(); } } : undefined;
     if (child && child.type.isRadio) {
       return React.cloneElement(child, {
         inputAttrs: {
-          ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds, onKeyDown: (isSafari) ? handleKeyDown : undefined,
+          ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds, ...eventHandlersForSafari,
         },
       });
     }

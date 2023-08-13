@@ -2,7 +2,8 @@ import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 import uniqueid from 'lodash.uniqueid';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
-import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
+import { shallowWithIntl, mountWithIntl, renderWithIntl } from 'terra-enzyme-intl';
+import { wrap } from 'regenerator-runtime';
 import RadioField from '../../src/RadioField';
 import Radio from '../../src/Radio';
 
@@ -71,7 +72,7 @@ it('should render a help message', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should render onkeydown event on radio button for safari browser', () => {
+it('should render onkeydown and onclick event on radio button for safari browser', () => {
   userAgentGetter.mockReturnValue('Safari');
   const radioField = (
     <RadioField
@@ -84,10 +85,11 @@ it('should render onkeydown event on radio button for safari browser', () => {
   );
   const wrapper = mountWithIntl(radioField);
   expect(wrapper.find('input').prop('onKeyDown')).toBeDefined();
+  expect(wrapper.find('input').prop('onClick')).toBeDefined();
   expect(wrapper).toMatchSnapshot();
 });
 
-it('should not render onkeydown event on radio button for non-safari browser', () => {
+it('should not render onkeydown and onclick event on radio button for non-safari browser', () => {
   const radioField = (
     <RadioField
       id="RadioFieldOne"
@@ -99,6 +101,7 @@ it('should not render onkeydown event on radio button for non-safari browser', (
   );
   const wrapper = mountWithIntl(radioField);
   expect(wrapper.find('input').prop('onKeyDown')).toBeUndefined();
+  expect(wrapper.find('input').prop('onClick')).toBeUndefined();
   expect(wrapper).toMatchSnapshot();
 });
 

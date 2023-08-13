@@ -20,7 +20,6 @@ export default class extends React.Component {
   }
 
   handleOnChange(e) {
-    console.log(e.currentTarget.value);
     this.setState({ selectedAnswer: e.currentTarget.value });
   }
 
