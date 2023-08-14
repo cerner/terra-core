@@ -123,22 +123,22 @@ Terra.describeViewports('Button Group', ['huge'], () => {
 
     it('Navigates from first button to last button using left arrow', () => {
       browser.keys('ArrowLeft');
-      Terra.validates.element('Last button focused');
+      expect($('#button4').isFocused()).toBeTruthy();
     });
 
     it('Navigates from last button to first button using right arrow', () => {
       browser.keys('ArrowRight');
-      Terra.validates.element('First button focused');
+      expect($('#button1').isFocused()).toBeTruthy();
     });
 
     it('Navigates from first button to last button using up arrow', () => {
       browser.keys('ArrowUp');
-      Terra.validates.element('Last button focused');
+      expect($('#button4').isFocused()).toBeTruthy();
     });
 
     it('Navigates from last button to first button using down arrow', () => {
       browser.keys('ArrowDown');
-      Terra.validates.element('First button focused');
+      expect($('#button1').isFocused()).toBeTruthy();
     });
   });
 
