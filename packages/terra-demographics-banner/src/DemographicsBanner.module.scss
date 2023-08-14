@@ -50,7 +50,7 @@
     background-color: red;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      flex-basis: auto;
+      min-width: 362px;
     }
   }
 
@@ -110,7 +110,7 @@
     background-color: aqua;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      flex-basis: auto;
+      min-width: 181px;
     }
   }
 
