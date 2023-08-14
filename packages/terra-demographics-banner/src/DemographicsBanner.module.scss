@@ -47,11 +47,14 @@
     line-height: 1;
     margin: 0;
     padding-bottom: 0.2rem;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      flex-basis: auto;
+    }
   }
 
   .identifiers {
-    flex-grow: 1;
-    flex-basis: 0;
+    flex: 1;
     margin-right: auto;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -60,14 +63,9 @@
   }
 
   .person-details {
-    flex-grow: 1;
-    flex-basis: 0;
+    flex: 1;
     margin-bottom: 0;
     margin-top: var(--terra-demographics-banner-person-details-margin-top);
-
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      flex-basis: auto;
-    }
   }
 
   .preferred-first-name {
@@ -109,6 +107,10 @@
     margin-right: auto;
     margin-top: var(--terra-demographics-banner-application-content-margin-top);
     padding-bottom: 0.2rem;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      flex-basis: auto;
+    }
   }
 
   .large-demographics-banner {
