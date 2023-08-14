@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SearchField from 'terra-search-field';
 
-const SearchFieldDelayed = () => {
-  const [setSearchText] = useState('');
-
-  return (
-    <SearchField onSearch={setSearchText} onInvalidSearch={setSearchText} searchDelay={2000} />
-  );
-};
+const SearchFieldDelayed = () => (
+  <SearchField searchDelay={3000} />
+);
 
 export default SearchFieldDelayed;

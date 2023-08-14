@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SearchField from 'terra-search-field';
 
-const SearchFieldDefaultValue = () => {
-  const [setSearchText] = useState('');
-
-  return (
-    <SearchField defaultValue="Default" onSearch={setSearchText} onInvalidSearch={setSearchText} />
-  );
-};
+const SearchFieldDefaultValue = () => (
+  <SearchField defaultValue="Default" />
+);
 
 export default SearchFieldDefaultValue;

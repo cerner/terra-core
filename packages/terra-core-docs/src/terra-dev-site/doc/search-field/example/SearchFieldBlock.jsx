@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SearchField from 'terra-search-field';
 
-const SearchFieldBlock = () => {
-  const [setSearchText] = useState('');
-
-  return (
-    <SearchField isBlock onSearch={setSearchText} onInvalidSearch={setSearchText} />
-  );
-};
+const SearchFieldBlock = () => (
+  <SearchField isBlock />
+);
 
 export default SearchFieldBlock;
