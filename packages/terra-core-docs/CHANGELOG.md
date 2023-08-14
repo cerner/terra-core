@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `terra-button-group` tests.
+
 ## 1.34.0 - (August 8, 2023)
 
 * Updated
