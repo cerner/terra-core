@@ -306,7 +306,7 @@ class SearchField extends React.Component {
         && (
         <label className={cx('label')}>{groupName}</label>
         )}
-        <div className={cx('search-role-container')} role="search" aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })}>
+        <div role="search" className={cx('search-role-container')} aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })}>
           <div role="group" aria-label={groupNameValue} {...customProps} className={searchFieldClassNames}>
             <div className={cx('input-group')}>
               <input

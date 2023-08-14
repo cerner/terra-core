@@ -5,7 +5,7 @@ const SearchFieldWithLabel = () => {
   const [setSearchText] = useState('');
 
   return (
-    <SearchField groupName="Search Field" isLabelVisible onSearch={setSearchText} onInvalidSearch={setSearchText} />
+    <SearchField groupName="Find Person" isLabelVisible onSearch={setSearchText} onInvalidSearch={setSearchText} />
   );
 };
 
