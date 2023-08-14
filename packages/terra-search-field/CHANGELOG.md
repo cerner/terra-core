@@ -9,6 +9,11 @@
 * Changed
   * Updated default search delay time to 2500ms
 
+## 3.87.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.86.0 - (August 11, 2023)
 
 * Changed

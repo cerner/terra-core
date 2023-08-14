@@ -56,7 +56,11 @@
       color: var(--terra-tag-focus-color, #0059a8);
       text-decoration: var(--terra-tag-focus-text-decoration);
     }
-    
+
+    &.has-underline {
+      text-decoration: underline;
+    }
+
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (hover: hover) and (pointer: fine) {
       &:hover {
         background-color: var(--terra-tag-hover-background-color, rgba(28, 31, 33, 0.04));

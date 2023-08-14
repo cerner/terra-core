@@ -1,19 +1,30 @@
 import { Badge } from 'terra-show-hide/package.json?dev-site-package';
+import { Notice } from "@cerner/terra-docs";
 
 import DefaultShowHide from './example/DefaultShowHide?dev-site-example';
 import CustomButtonTextShowHide from './example/CustomButtonTextShowHide?dev-site-example';
+import LinkShowHide from './example/LinkShowHide?dev-site-example';
 import InitiallyOpenShowHide from './example/InitiallyOpenShowHide?dev-site-example';
 import ButtonAlignCenterShowHide from './example/ButtonAlignCenterShowHide?dev-site-example';
 import ButtonAlignRightShowHide from './example/ButtonAlignRightShowHide?dev-site-example';
 import NoPreviewShowHide from './example/NoPreviewShowHide?dev-site-example';
-
+import NoFocusRefShowHide from './example/NoFocusRefShowHide?dev-site-example';
 import ShowHidePropsTable from 'terra-show-hide/lib/ShowHide?dev-site-props-table';
+import ShowHideFocuserPropsTable from 'terra-show-hide/lib/ShowHideFocuser?dev-site-props-table';
 
 <Badge />
 
 # Terra Show Hide
 
-Show Hide Component that will show a preview of content and then expand it with a Show More button.
+  Show Hide Component is a disclosure widget that enables content to be either collapsed (hidden) or expanded (visible).
+  It has two elements: a disclosure [button][1] and a section of content whose visibility is controlled by the button.
+  When the controlled content is hidden, the button is often styled as a typical push button with a down-pointing caret to hint that activating the button will display additional content.
+  When the content is visible, the content displays above the button and the caret points up.
+
+Another Terra component, [Toggle Button][2], is available and preferred to Show/Hide when possible because it better adheres to accessibility best practices for disclosure components. It differs from Show Hide by displaying the content below the button when it is activated. 
+
+[1]: https://www.w3.org/WAI/ARIA/apg/patterns/button/
+[2]: https://engineering.cerner.com/terra-core/components/cerner-terra-core-docs/toggle-button/about
 
 ## Getting Started
 
@@ -42,8 +53,132 @@ The Show-Hide component must be composed inside the [Base][1] component with a l
 ## Usage
 
 ```jsx
-import ShowHide from 'terra-show-hide';
+import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 ```
+
+## Accessibility
+
+<Notice variant="important" ariaLevel="3">
+
+  To make the ShowHide component accessible, the `focusRef` prop must be used.
+  This prop allows assistive technologies such as screen readers to move user focus backward to hidden text and announce it when it is disclosed.
+  For backward compatibility, the `focusRef` prop is optional, but is required to meet accessibility requirements.
+
+</Notice>
+
+<Notice variant="caution" ariaLevel="3">
+
+  This component is not recommended for use in Safari due to VoiceOver focus limitations with ShowHide. Consider using Terra Toggle Button instead.
+
+</Notice>
+
+###  Keyboard Interactions 
+  When the disclosure control has focus:
+  - Enter key activates the disclosure control and toggles the visibility of the disclosure content.
+  - Space key activates the disclosure control and toggles the visibility of the disclosure content. 
+
+### Truncating a paragraph of text
+
+  To truncate a paragraph of text:
+  - At the top level of your component declare a `ref`, pass it as `focusRef` prop to `ShowHide` component.
+  - Pass a node with the preview portion of the text as a prop to `ShowHide` component.
+  - Use the `ShowHideFocuser` component inside `<p>` tag. A `ShowHideFocuser` component allows `ShowHide` component to set focus on the beginning of the focusable text upon opening.
+  - The text split in the prefix and focusable text portions must be passed as string props. The prefix prop should contain the portion of the text that was a part of the preview prop, passed to `ShowHide`.
+  - Forward `focusRef` to `ShowHideFocuser` component.
+
+  ```jsx
+  import React, { useRef, useState } from 'react';
+  import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
+
+  const MyComponent = () => {
+    const focusRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleShowHide = () => setIsOpen(!isOpen);
+
+    const prefix = 'Patients are requesting greater affordability and efficiency in healthcare. With procedures performed in an ambulatory surgery center costing up to 60% less compared to a hospital outpatient department (1), the demand for these facilities is increasing.';
+    const focusableText = 'In fact, the U.S. ambulatory surgery center market is expected to see a 6.9 % compound annual growth rate, reaching $33 billion by 2028. (2) Cerner understands the urgency to grow in the ambulatory surgery center market while continuing to deliver excellent care. Healthcare IT products can help improve clinician efficiency and patient outcomes, as well as enhance communication and data exchange between ambulatory surgery center providers and patients.';
+
+    return (
+      <ShowHide focusRef={focusRef} preview={ <p>{prefix}</p> } isOpen={isOpen} onChange={toggleShowHide} >
+        <p>
+          <ShowHideFocuser ref={this.focusRef} prefix={prefix} focusableText={focusableText} />
+        </p>
+      </ShowHide>
+    );
+  }
+  ```
+
+### Multiple children
+  Even though the main purpose of the `ShowHide` component is to truncate long paragraphs of texts, the content of the `ShowHide` does not have to be one paragraph.
+  It can include links, lists, and any kind of HTML tags as long as the first line of the hidden text is passed as a string prop to `ShowHideFocuser` component rather than an HTML element.
+  
+Please note:
+  - Links can be placed inside the `p` tag that wraps `ShowHideFocuser` both preceding and following it. The prop `prefix` can be omitted if content has been passed as an HTML element preceding `ShowHideFocuser`.
+  - Everything that precedes `ShowHideFocuser` must also be included into the `ShowHide` preview prop.
+  - Do not break lists by placing `ShowHideFocuser` inside `<li>` elements as this may cause assistive technologies to read the content incorrectly.
+
+  ```jsx
+    import React, { useState, useRef } from 'react';
+    import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
+
+    const MyComponent = () => {
+      const focusRef = useRef(null);
+      const [isOpen, setIsOpen] = useState(false);
+      const toggleShowHide = () => setIsOpen(!isOpen);
+
+      const header = 'Bringing clarity to life sciences and healthcare decision-making ';
+      const prefix = 'When we accelerate the discovery, development and deployment of life-enhancing insights and therapies, clinicians and patients benefit.';
+      const preview = [
+        <h3>{header}</h3>,
+        <p>{prefix}</p>,
+      ];
+
+      return (
+        <ShowHide focusRef={focusRef} preview={preview} isOpen={isOpen} onChange={toggleShowHide} >
+          <h3>{header}</h3>
+          // This paragraph contains a link in hidden content. Explore a working example below under Examples, Custom Button Text ShowHide.
+          <p>
+            <ShowHideFocuser ref={this.focusRef} prefix={prefix} focusableText="Several factors help bring clarity to life sciences, researchers and clinicians and " />
+            <a href="#">guide better care</a>, including:
+          </p>
+          <ul>
+            <li>Data-driven research solutions for commercial and real-world evidence collaborators and health providers</li>
+            <li>Support to move from simply accumulating and analyzing data to linking and generating deeper insights </li>
+            <li>Combined life sciences knowledge, healthcare innovation and collaborative research expertise</li>
+          </ul>
+        </ShowHide>
+      );
+    }
+  ```
+
+### First hidden child is an interactive element (link, button, etc)
+  If the first hidden child is an interactive element:
+  - At the top level of your component declare a `ref`.
+  - In this case there is no need to use `ShowHideFocuser`. Forward `focusRef` to the interactive element directly.
+
+  ```jsx
+    import React, { useState, useRef } from 'react';
+    import ShowHide from 'terra-show-hide';
+
+    const MyComponent = () => {
+      const focusRef = useRef(null);
+      const [isOpen, setIsOpen] = useState(false);
+      const toggleShowHide = () => setIsOpen(!isOpen);
+
+      const previewText = 'Although the process is complex and will vary greatly based on regional and economic factors, it’s clear that healthcare entities must start planning their transitions now.';
+      const text = 'it expects all Medicare Parts A and B beneficiaries and most Medicaid beneficiaries to be in a value-based care relationship with accountability for quality and total cost of care by 2030.';
+
+      return (
+        <ShowHide focusRef={focusRef} preview={<p>{previewText}</p>} isOpen={isOpen} onChange={toggleShowHide} >
+          <p>
+            {previewText}
+            <a ref={this.focusRef} href="#">CMS recently announced</a>
+            {text}
+          </p>
+        </ShowHide>
+      );
+    }
+  ```
 
 ## Component Features
 
@@ -57,10 +192,17 @@ import ShowHide from 'terra-show-hide';
 ## Examples
 <DefaultShowHide title="Default ShowHide" />
 <CustomButtonTextShowHide title="Custom Button Text ShowHide" />
+<LinkShowHide title="ShowHide with a Link" />
+<MultipleChildrenShowHide title="ShowHide with Multiple Children" />
+<ListShowHide title="ShowHide with a List Content" />
 <InitiallyOpenShowHide title="Initially Open ShowHide" />
 <ButtonAlignCenterShowHide title="Button Align Center ShowHide" />
 <ButtonAlignRightShowHide title="Button Align Right ShowHide" />
 <NoPreviewShowHide title="No Preview ShowHide" />
+<NoFocusRefShowHide title="No focusRef ShowHide (see Accessibility note for information about the focusRef prop)" />
 
 ## Show Hide Props
 <ShowHidePropsTable />
+
+## Show Hide Focuser Props
+<ShowHideFocuserPropsTable />
