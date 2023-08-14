@@ -65,12 +65,18 @@ class ButtonGroup extends React.Component {
     if ((event.keyCode === KEY_RIGHT || event.keyCode === KEY_DOWN)) {
       if (idx === allBtns.length - 1) {
         key = 0;
+        if (allBtns[key].hasAttribute('disabled')) {
+          key += 1;
+        }
       } else {
         key += 1;
         if (allBtns[key].hasAttribute('disabled')) {
           key += 1;
           if (key === allBtns.length) {
             key = 0;
+            if (allBtns[key].hasAttribute('disabled')) {
+              key += 1;
+            }
           }
         }
       }
@@ -79,8 +85,21 @@ class ButtonGroup extends React.Component {
     if ((event.keyCode === KEY_LEFT || event.keyCode === KEY_UP)) {
       if (idx === 0) {
         key = allBtns.length - 1;
+        if (allBtns[key].hasAttribute('disabled')) {
+          key -= 1;
+        }
       } else {
         key -= 1;
+        if (allBtns[key].hasAttribute('disabled')) {
+          if (key === 0) {
+            key = allBtns.length - 1;
+            if (allBtns[key].hasAttribute('disabled')) {
+              key -= 1;
+            }
+          } else {
+            key -= 1;
+          }
+        }
       }
       while (allBtns[key] && allBtns[key].hasAttribute('disabled')) {
         key -= 1;
