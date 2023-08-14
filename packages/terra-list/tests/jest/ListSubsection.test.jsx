@@ -1,5 +1,7 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 
 import { Item, Subsection } from '../../src/index';
 
@@ -11,37 +13,37 @@ it('should render with items', () => {
   const item4 = <Item key="126" />;
   const item5 = <Item key="127" />;
   const items = [item1, item2, item3, item4, item5];
-  const shallowComponent = shallow(<Subsection title="test">{items}</Subsection>);
+  const shallowComponent = shallowWithIntl(<Subsection title="test">{items}</Subsection>).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with no items', () => {
-  const shallowComponent = shallow(<Subsection title="test" />);
+  const shallowComponent = shallowWithIntl(<Subsection title="test" />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with level', () => {
-  const shallowComponent = shallow(<Subsection title="test" level={3} />);
+  const shallowComponent = shallowWithIntl(<Subsection title="test" level={3} />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsed', () => {
-  const shallowComponent = shallow(<Subsection title="test" isCollapsed />);
+  const shallowComponent = shallowWithIntl(<Subsection title="test" isCollapsed />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with isCollapsible', () => {
-  const shallowComponent = shallow(<Subsection title="test" isCollapsible />);
+  const shallowComponent = shallowWithIntl(<Subsection title="test" isCollapsible />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('should render with callback functions', () => {
-  const shallowComponent = shallow(<Subsection title="test" refCallback={jest.fn()} onSelect={jest.fn()} />);
+  const shallowComponent = shallowWithIntl(<Subsection title="test" refCallback={jest.fn()} onSelect={jest.fn()} />).dive();
   expect(shallowComponent).toMatchSnapshot();
 });
 
 it('correctly applies the theme context className', () => {
-  const wrapper = mount(
+  const wrapper = mountWithIntl(
     <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
       <Subsection title="test" />
     </ThemeContextProvider>,

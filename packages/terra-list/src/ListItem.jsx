@@ -7,7 +7,6 @@ import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import IconKnurling from 'terra-icon/lib/icon/IconKnurling';
 import { injectIntl } from 'react-intl';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
-import { v4 as uuidv4 } from 'uuid';
 import ListUtils from './ListUtils';
 import styles from './List.module.scss';
 
@@ -104,7 +103,7 @@ const ListItem = ({
   const attrSpread = {};
 
   const onFocusResponse = intl.formatMessage({ id: 'Terra.list.focus' });
-  const responseId = `terra-hidden-tab-pane-response=${uuidv4()}`;
+  const responseId = `terra-hidden-tab-pane-response=${Math.random()}`;
 
   if (isSelectable) {
     attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);

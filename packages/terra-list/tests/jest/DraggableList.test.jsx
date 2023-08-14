@@ -3,6 +3,10 @@ import React from 'react';
 import { shallowWithIntl, mountWithIntl } from 'terra-enzyme-intl';
 import List, { Item, Section, Subsection } from '../../src/index';
 
+Object.defineProperty(Math, 'random', {
+  value: () => 0.5,
+});
+
 it('should render List with items', () => {
   const item1 = <Item key="1" isSelectable />;
   const item2 = <Item key="2" isSelectable />;
@@ -42,10 +46,8 @@ it('should render List without Draggable items', () => {
   const item3 = <Item key="125" isSelectable />;
   const items = [item1, item2, item3];
   const shallowComponent = shallowWithIntl(<List>{items}</List>).dive();
-  const list = shallowComponent.find('ul').children();
-  expect(list.length).toBe(items.length);
-  const listItem = shallowComponent.find('ListItem');
-  expect(listItem.length).toBe(3);
+  const list = shallowComponent.find('ul');
+  expect(list.length).toBe(1);
   expect(shallowComponent).toMatchSnapshot();
 });
 

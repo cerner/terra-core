@@ -117,34 +117,19 @@ exports[`should render with ariaDescribedBy 1`] = `
   <InjectIntl(List)
     ariaDescribedBy="list-help"
   >
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="123"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="124"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="125"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="126"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="127"
     />
   </InjectIntl(List)>
@@ -189,34 +174,19 @@ exports[`should render with ariaDescribedBy 2`] = `
   <InjectIntl(List)
     ariaDescribedBy="list-help"
   >
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="123"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="124"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="125"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="126"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="127"
     />
   </InjectIntl(List)>
@@ -230,34 +200,19 @@ exports[`should render with ariaDescription 1`] = `
   onKeyDown={[Function]}
   role="list"
 >
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="123"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="124"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="125"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="126"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="127"
   />
 </ul>
@@ -298,34 +253,19 @@ exports[`should render with ariaDescription 2`] = `
   paddingStyle="none"
   role="none"
 >
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="123"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="124"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="125"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="126"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="127"
   />
 </List>
@@ -369,34 +309,19 @@ exports[`should render with ariaDetails 1`] = `
   <InjectIntl(List)
     ariaDetails="list-details"
   >
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="123"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="124"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="125"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="126"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="127"
     />
   </InjectIntl(List)>
@@ -441,34 +366,19 @@ exports[`should render with ariaDetails 2`] = `
   <InjectIntl(List)
     ariaDetails="list-details"
   >
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="123"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="124"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="125"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="126"
     />
-    <ListItem
-      hasChevron={false}
-      isSelectable={false}
-      isSelected={false}
+    <InjectIntl(ListItem)
       key="127"
     />
   </InjectIntl(List)>
@@ -481,34 +391,19 @@ exports[`should render with bottom only divided items 1`] = `
   onKeyDown={[Function]}
   role="list"
 >
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="123"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="124"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="125"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="126"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="127"
   />
 </ul>
@@ -520,34 +415,19 @@ exports[`should render with items 1`] = `
   onKeyDown={[Function]}
   role="list"
 >
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="123"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="124"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="125"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="126"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="127"
   />
 </ul>
@@ -561,34 +441,19 @@ exports[`should render with mutli select aria attributes with ariaSelectionStyle
   onKeyDown={[Function]}
   role="listbox"
 >
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="123"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="124"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="125"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="126"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="127"
   />
 </ul>
@@ -609,34 +474,19 @@ exports[`should render with single select aria attributes with ariaSelectionStyl
   onKeyDown={[Function]}
   role="listbox"
 >
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="123"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="124"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="125"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="126"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="127"
   />
 </ul>
@@ -648,34 +498,19 @@ exports[`should render with standard divided items 1`] = `
   onKeyDown={[Function]}
   role="list"
 >
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="123"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="124"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="125"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="126"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="127"
   />
 </ul>
@@ -687,34 +522,19 @@ exports[`should render with standard padded items 1`] = `
   onKeyDown={[Function]}
   role="list"
 >
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="123"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="124"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="125"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="126"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="127"
   />
 </ul>
@@ -726,34 +546,19 @@ exports[`should render with thin padded items 1`] = `
   onKeyDown={[Function]}
   role="list"
 >
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="123"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="124"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="125"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="126"
   />
-  <ListItem
-    hasChevron={false}
-    isSelectable={false}
-    isSelected={false}
+  <InjectIntl(ListItem)
     key="127"
   />
 </ul>
