@@ -47,6 +47,7 @@
     line-height: 1;
     margin: 0;
     padding-bottom: 0.2rem;
+    background-color: red;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       flex-basis: auto;
@@ -56,16 +57,14 @@
   .identifiers {
     flex: 1;
     margin-right: auto;
-
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      flex-basis: auto;
-    }
+    background-color: yellow;
   }
 
   .person-details {
     flex: 1;
     margin-bottom: 0;
     margin-top: var(--terra-demographics-banner-person-details-margin-top);
+    background-color: purple;
   }
 
   .preferred-first-name {
@@ -92,6 +91,7 @@
     flex: 0 0 auto;
     order: 3; // Places row after person-name and application-content visually as the third flex item (this element must be rendered immediately following person-name element for assistive technology support).
     width: 100%;
+    background-color: green;
   }
 
   .content {
@@ -107,6 +107,7 @@
     margin-right: auto;
     margin-top: var(--terra-demographics-banner-application-content-margin-top);
     padding-bottom: 0.2rem;
+    background-color: aqua;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       flex-basis: auto;
