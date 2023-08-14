@@ -50,7 +50,8 @@
   }
 
   .identifiers {
-    flex: 1;
+    flex-grow: 1;
+    flex-basis: 0;
     margin-right: auto;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -59,7 +60,8 @@
   }
 
   .person-details {
-    flex: 1;
+    flex-grow: 1;
+    flex-basis: 0;
     margin-bottom: 0;
     margin-top: var(--terra-demographics-banner-person-details-margin-top);
 
