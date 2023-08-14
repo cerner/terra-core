@@ -59,7 +59,7 @@
   .person-details {
     flex: 1;
     margin-bottom: 0;
-    margin-top: var(--terra-demographics-banner-person-details-margin-top);
+    margin-top: 0;
     background-color: purple;
   }
 
@@ -116,9 +116,9 @@
       margin-top: 0;
       text-align: right;
 
-      // @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      //   min-width: 164px;
-      // }
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        min-width: 164px;
+      }
     }
 
     .person-name {
