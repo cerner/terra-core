@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+* Added
+  * Added Search field examples for optional Label with default and custom labels.
+
+* Changed
+  * Updated default search delay to 2500ms.
+  * Update Search field examples to be more functionality focused. 
+
 ## 1.36.0 - (August 11, 2023)
 
 * Changed
