@@ -48,10 +48,6 @@
     margin: 0;
     padding-bottom: 0.2rem;
     background-color: red;
-
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      min-width: 362px;
-    }
   }
 
   .identifiers {
@@ -108,10 +104,6 @@
     margin-top: var(--terra-demographics-banner-application-content-margin-top);
     padding-bottom: 0.2rem;
     background-color: aqua;
-
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      min-width: 181px;
-    }
   }
 
   .large-demographics-banner {
@@ -123,10 +115,18 @@
     .application-content {
       margin-top: 0;
       text-align: right;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        min-width: 164px;
+      }
     }
 
     .person-name {
       font-size: var(--terra-demographics-banner-large-person-name-font-size, 1.286rem);
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        min-width: 328px;
+      }
     }
 
     .identifiers {
