@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -76,9 +76,9 @@ const ListSubsection = ({
   intl,
   ...customProps
 }) => {
-  const [listItemNodes, setlistItemNodes] = React.useState(children);
+  const [listItemNodes, setlistItemNodes] = useState(children);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
       if (!(Array.isArray(children))) {
         if (children) setlistItemNodes([children]);
@@ -90,7 +90,7 @@ const ListSubsection = ({
     }
   }, [children, isCollapsible, isCollapsed]);
 
-  const theme = React.useContext(ThemeContext);
+  const theme = useContext(ThemeContext);
   const listClassNames = classNames(
     cx('list', 'list-fill', theme.className),
   );
@@ -105,7 +105,7 @@ const ListSubsection = ({
   const handleDragEnd = (result, provided) => {
     // dropped outside the list
     if (!result.destination) {
-      provided.announce(intl.formatMessage({ id: 'Terra.list.cancelDrag' }, { startPosition: result.source.index }));
+      provided.announce(intl.formatMessage({ id: 'Terra.list.cancelDrag' }, { startPosition: (result.source.index + 1) }));
       return;
     }
     const items = reorderListItems(
@@ -114,19 +114,19 @@ const ListSubsection = ({
       result.destination.index,
     );
     setlistItemNodes(items);
-    provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: result.source.index, endPosition: result.destination.index }));
+    provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: (result.source.index + 1), endPosition: (result.destination.index + 1) }));
     if (onDragEnd) {
       onDragEnd(result, provided);
     }
   };
 
   const handleDragStart = (start, provided) => {
-    provided.announce(intl.formatMessage({ id: 'Terra.list.lift' }, { startPosition: start.source.index }));
+    provided.announce(intl.formatMessage({ id: 'Terra.list.lift' }, { startPosition: (start.source.index + 1) }));
   };
 
   const handleDragUpdate = (update, provided) => {
     if (update.destination) {
-      provided.announce(intl.formatMessage({ id: 'Terra.list.drag' }, { startPosition: update.source.index, endPosition: update.destination.index }));
+      provided.announce(intl.formatMessage({ id: 'Terra.list.drag' }, { startPosition: (update.source.index + 1), endPosition: (update.destination.index + 1) }));
     }
   };
 
