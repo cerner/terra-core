@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { injectIntl } from 'react-intl';
 import SubsectionHeader from './ListSubsectionHeader';
 import styles from './List.module.scss';
 
@@ -52,6 +53,11 @@ const propTypes = {
    * Function callback when the Item is dropped. Callback contains the DropResult of result object and provided object, e.g. onDragEnd(result, provided).
    */
   onDragEnd: PropTypes.func,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
 };
 
 const defaultProps = {
@@ -67,6 +73,7 @@ const ListSubsection = ({
   isCollapsible,
   isDraggable,
   onDragEnd,
+  intl,
   ...customProps
 }) => {
   const [listItemNodes, setlistItemNodes] = React.useState(children);
@@ -98,6 +105,7 @@ const ListSubsection = ({
   const handleDragEnd = (result, provided) => {
     // dropped outside the list
     if (!result.destination) {
+      provided.announce(intl.formatMessage({ id: 'Terra.list.cancelDrag' }, { startPosition: result.source.index }));
       return;
     }
     const items = reorderListItems(
@@ -106,8 +114,19 @@ const ListSubsection = ({
       result.destination.index,
     );
     setlistItemNodes(items);
+    provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: result.source.index, endPosition: result.destination.index }));
     if (onDragEnd) {
       onDragEnd(result, provided);
+    }
+  };
+
+  const handleDragStart = (start, provided) => {
+    provided.announce(intl.formatMessage({ id: 'Terra.list.lift' }, { startPosition: start.source.index }));
+  };
+
+  const handleDragUpdate = (update, provided) => {
+    if (update.destination) {
+      provided.announce(intl.formatMessage({ id: 'Terra.list.drag' }, { startPosition: update.source.index, endPosition: update.destination.index }));
     }
   };
 
@@ -132,7 +151,7 @@ const ListSubsection = ({
   );
 
   const renderDraggableListDom = () => (
-    <DragDropContext onDragEnd={handleDragEnd}>
+    <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
       <Droppable droppableId="listSubSection">
         {(provided) => (
           <div ref={provided.innerRef}>
@@ -163,4 +182,4 @@ const ListSubsection = ({
 ListSubsection.propTypes = propTypes;
 ListSubsection.defaultProps = defaultProps;
 
-export default ListSubsection;
+export default injectIntl(ListSubsection);

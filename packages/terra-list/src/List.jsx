@@ -181,6 +181,7 @@ const List = ({
   const handleDragEnd = (result, provided) => {
     // dropped outside the list
     if (!result.destination) {
+      provided.announce(intl.formatMessage({ id: 'Terra.list.cancelDrag' }, { startPosition: result.source.index }));
       return;
     }
     const items = reorderListItems(
@@ -189,8 +190,19 @@ const List = ({
       result.destination.index,
     );
     setlistItem(items);
+    provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: result.source.index, endPosition: result.destination.index }));
     if (onDragEnd) {
       onDragEnd(result, provided);
+    }
+  };
+
+  const handleDragStart = (start, provided) => {
+    provided.announce(intl.formatMessage({ id: 'Terra.list.lift' }, { startPosition: start.source.index }));
+  };
+
+  const handleDragUpdate = (update, provided) => {
+    if (update.destination) {
+      provided.announce(intl.formatMessage({ id: 'Terra.list.drag' }, { startPosition: update.source.index, endPosition: update.destination.index }));
     }
   };
 
@@ -218,7 +230,7 @@ const List = ({
   );
 
   const renderDraggableListDom = () => (
-    <DragDropContext onDragEnd={handleDragEnd}>
+    <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
       <Droppable droppableId="ListItem">
         {(provided) => (
           // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props

@@ -1,4 +1,9 @@
 {
   "Terra.list.singleSelect": "Lista de selección individual: para seleccionar o deseleccionar elementos, pulse Entrar o la barra espaciadora",
-  "Terra.list.multiSelect": "Lista de selección múltiple: para seleccionar o deseleccionar elementos, pulse Entrar o la barra espaciadora"
+  "Terra.list.multiSelect": "Lista de selección múltiple: para seleccionar o deseleccionar elementos, pulse Entrar o la barra espaciadora",
+  "Terra.list.lift": "Ha seleccionado un elemento en la posición {startPosition}. Use las teclas de flecha para arrastrar el elemento a una nueva posición. Presione la barra espaciadora para colocar el elemento o presione la tecla Esc para cancelar.",
+  "Terra.list.drag": "Ha movido el elemento de la posición {startPosition} a la posición {endPosition}",
+  "Terra.list.cancelDrag": "Se canceló el movimiento. El elemento ha vuelto a su posición inicial {startPosition}",
+  "Terra.list.drop": "Ha soltado el elemento. Ha movido el elemento de la posición {startPosition} a {endPosition}",
+  "Terra.list.focus": "Presione la barra espaciadora para empezar a arrastrar. Se pueden usar las teclas de flecha para mover el elemento al arrastrar y la tecla Esc para cancelar. Asegúrese de que su lector de pantalla esté en el modo de enfoque o el modo formularios"
 }

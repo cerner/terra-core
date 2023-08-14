@@ -5,6 +5,9 @@ import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import IconKnurling from 'terra-icon/lib/icon/IconKnurling';
+import { injectIntl } from 'react-intl';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+import { v4 as uuidv4 } from 'uuid';
 import ListUtils from './ListUtils';
 import styles from './List.module.scss';
 
@@ -57,6 +60,11 @@ const propTypes = {
    * @private Callback function not intended for use with this API, but if set pass it through to the element regardless.
    */
   onMouseDown: PropTypes.func,
+  /**
+   * @private
+   * The intl object to be injected for translations.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }),
 };
 
 const defaultProps = {
@@ -78,6 +86,7 @@ const ListItem = ({
   onMouseDown,
   onSelect,
   refCallback,
+  intl,
   ...customProps
 }) => {
   const theme = React.useContext(ThemeContext);
@@ -93,6 +102,10 @@ const ListItem = ({
   );
   const { isDraggable } = customProps;
   const attrSpread = {};
+
+  const onFocusResponse = intl.formatMessage({ id: 'Terra.list.focus' });
+  const responseId = `terra-hidden-tab-pane-response=${uuidv4()}`;
+
   if (isSelectable) {
     attrSpread.onClick = ListUtils.wrappedOnClickForItem(onClick, onSelect, metaData);
     attrSpread.onKeyDown = ListUtils.wrappedOnKeyDownForItem(onKeyDown, onSelect, metaData);
@@ -103,7 +116,9 @@ const ListItem = ({
     attrSpread.onBlur = ListUtils.wrappedEventCallback(onBlur, event => event.currentTarget.setAttribute('data-item-show-focus', 'true'));
     attrSpread.onMouseDown = ListUtils.wrappedEventCallback(onMouseDown, event => event.currentTarget.setAttribute('data-item-show-focus', 'false'));
   }
-
+  if (isDraggable) {
+    attrSpread['aria-describedby'] = responseId;
+  }
   const addingIconclassName = cx([
     'item-fill',
     (isDraggable) && 'icon-knurling',
@@ -111,6 +126,7 @@ const ListItem = ({
 
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
+      <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />
       <div className={addingIconclassName} key="item-fill">
         {children}
         {(isDraggable) && <span><IconKnurling /></span>}
@@ -123,4 +139,4 @@ const ListItem = ({
 ListItem.propTypes = propTypes;
 ListItem.defaultProps = defaultProps;
 
-export default ListItem;
+export default injectIntl(ListItem);
