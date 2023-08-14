@@ -59,8 +59,12 @@
   .person-details {
     flex: 1;
     margin-bottom: 0;
-    margin-top: 0;
+    margin-top: var(--terra-demographics-banner-person-details-margin-top);
     background-color: purple;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      margin-top: 0;
+    }
   }
 
   .preferred-first-name {
@@ -96,6 +100,10 @@
     flex-grow: 1;
     flex-wrap: wrap;
     margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      overflow: hidden;
+    }
   }
 
   .application-content {
