@@ -53,7 +53,7 @@
   .identifiers {
     flex: 1;
     margin-right: auto;
-    background-color: yellow;
+    background-color: orange;
   }
 
   .person-details {
@@ -103,7 +103,7 @@
     margin-right: auto;
     margin-top: var(--terra-demographics-banner-application-content-margin-top);
     padding-bottom: 0.2rem;
-    background-color: aqua;
+    background-color: teal;
   }
 
   .large-demographics-banner {
@@ -132,6 +132,7 @@
     .identifiers {
       margin-bottom: 0;
       margin-top: 0;
+      padding: 0;
       text-align: right;
     }
   }
