@@ -207,7 +207,7 @@ const List = ({
   };
 
   const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
-    isDraggable: (ListItem?.type?.name === 'ListItem' && ListItem?.props?.isSelectable),
+    isDraggable: ListItem?.props?.isSelectable,
     refCallback: provider.innerRef,
     ...provider.draggableProps,
     ...provider.dragHandleProps,

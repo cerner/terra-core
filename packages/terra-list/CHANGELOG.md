@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-* Changed
+* Added
   * Added Drag and Drop support for list items.
 
 ## 4.59.0 - (August 1, 2023)
