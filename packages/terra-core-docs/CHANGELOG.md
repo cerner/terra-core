@@ -37,6 +37,7 @@
 * Updated
   * Updated an example for `terra-dropdown-button`.
   * Updated email field validation for `terra-form-field`.
+  * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
 * Added
   * Added documentation updates for `terra-form-input`.
