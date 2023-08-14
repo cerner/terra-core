@@ -33,7 +33,7 @@ const ControlledInfiniteProgressivePaginatorExample = () => {
             {currentPage}
           </h1>
         )}
-        footer={<ControlledProgressivePaginator onPageChange={changePages} selectedPage={currentPage} />}
+        footer={<ControlledProgressivePaginator onPageChange={changePages} selectedPage={currentPage} ariaLabel="controlled progressive paginator no total count pagination" />}
       >
         <div>
           <Button text="Set Page to 9" onClick={() => { setCurrentPage(9); }} />
