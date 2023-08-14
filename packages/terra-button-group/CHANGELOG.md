@@ -8,6 +8,16 @@
  * Added
    * Added cyclic behavior when navigating through buttons with a keyboard.
 
+## 3.67.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.66.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 3.65.0 - (August 8, 2023)
 
 * Changed
