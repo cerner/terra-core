@@ -126,10 +126,14 @@ const ListItem = ({
 
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
-      <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />
       <div className={addingIconclassName} key="item-fill">
         {children}
-        {(isDraggable) && <span><IconKnurling /></span>}
+        {(isDraggable) && (
+          <React.Fragment>
+            <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />
+            <IconKnurling />
+          </React.Fragment>
+        )}
       </div>
       {hasChevron && <div className={cx('item-end')} key="item-end"><span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span></div>}
     </li>
