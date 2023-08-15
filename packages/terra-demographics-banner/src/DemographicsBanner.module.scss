@@ -95,8 +95,9 @@
   }
 
   .content-wrapper {
-    margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
+    align-self: center;
     flex-grow: 1;
+    margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
   }
 
   .content {
@@ -106,7 +107,6 @@
     width: 100%;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      align-self: center;
       align-content: center;
     }
   }
