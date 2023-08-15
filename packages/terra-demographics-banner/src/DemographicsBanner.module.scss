@@ -94,12 +94,16 @@
     background-color: green;
   }
 
+  .content-wrapper {
+    margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
+    flex-grow: 1;
+  }
+
   .content {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
     flex-wrap: wrap;
-    margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
+    width: 100%;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       align-content: center;
