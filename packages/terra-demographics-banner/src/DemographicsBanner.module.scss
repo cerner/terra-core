@@ -125,7 +125,7 @@
       text-align: right;
 
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        min-width: 164px;
+        flex-basis: auto;
       }
     }
 
@@ -133,7 +133,7 @@
       font-size: var(--terra-demographics-banner-large-person-name-font-size, 1.286rem);
 
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        min-width: 328px;
+        flex-basis: auto;
       }
     }
 
