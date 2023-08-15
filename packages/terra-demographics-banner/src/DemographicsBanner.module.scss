@@ -94,25 +94,16 @@
     background-color: green;
   }
 
-  .content-wrapper {
-    flex-grow: 1;
-    margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
-
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      align-self: center;
-    }
-  }
-
   .content {
     flex-grow: 1;
     margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       align-self: center;
+      width: 100%;
     }
   }
 
@@ -133,18 +124,10 @@
     .application-content {
       margin-top: 0;
       text-align: right;
-
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        flex-basis: 33.33%;
-      }
     }
 
     .person-name {
       font-size: var(--terra-demographics-banner-large-person-name-font-size, 1.286rem);
-
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        flex-basis: 66.66%;
-      }
     }
 
     .identifiers {
