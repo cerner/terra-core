@@ -104,10 +104,16 @@
   }
 
   .content {
+    flex-grow: 1;
+    margin: var(--terra-demographics-banner-content-margin, auto 0.714em);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      align-self: center;
+    }
   }
 
   .application-content {
