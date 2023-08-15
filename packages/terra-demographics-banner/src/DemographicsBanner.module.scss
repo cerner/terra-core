@@ -124,10 +124,18 @@
     .application-content {
       margin-top: 0;
       text-align: right;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        flex-basis: 33.33%;
+      }
     }
 
     .person-name {
       font-size: var(--terra-demographics-banner-large-person-name-font-size, 1.286rem);
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        flex-basis: 66.66%;
+      }
     }
 
     .identifiers {
