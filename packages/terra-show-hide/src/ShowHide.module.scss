@@ -1,6 +1,14 @@
+// Themes
+@import './clinical-lowlight-theme/ShowHide.module';
+@import './orion-fusion-theme/ShowHide.module';
+
 :local {
   .show-hide {
     display: flex;
+
+    .text-divider {
+      visibility: hidden;
+    }
   }
 
   .start {
@@ -13,5 +21,13 @@
 
   .end {
     margin-left: auto;
+  }
+
+  .show-hide-content {
+    &:focus,
+    :focus {
+      outline: var(--terra-show-hide-focus-outline, 1px dashed);
+      outline-offset: var(--terra-show-hide-focus-outline-offset, 1px);
+    }
   }
 }

@@ -25,6 +25,11 @@ const propTypes = {
   disableAutoSearch: PropTypes.bool,
 
   /**
+   * Group name value for search group elements. This value is also used as Label name.
+   */
+  groupName: PropTypes.string,
+
+  /**
    * Callback ref to pass into the inner input component.
    */
   inputRefCallback: PropTypes.func,
@@ -51,6 +56,10 @@ const propTypes = {
    */
   isDisabled: PropTypes.bool,
 
+  /**
+   * Whether or not the label is visible. Use this prop to include a label above the search field. The label will be same as groupName prop value.
+   */
+  isLabelVisible: PropTypes.bool,
   /**
    * The minimum number of characters to perform a search.
    */
@@ -95,11 +104,13 @@ const propTypes = {
 const defaultProps = {
   defaultValue: undefined,
   disableAutoSearch: false,
+  groupName: 'Search',
   isBlock: false,
   isDisabled: false,
+  isLabelVisible: false,
   minimumSearchTextLength: 2,
   placeholder: '',
-  searchDelay: 250,
+  searchDelay: 2500,
   value: undefined,
   inputAttributes: undefined,
 };
@@ -223,11 +234,13 @@ class SearchField extends React.Component {
     const {
       defaultValue,
       disableAutoSearch,
+      groupName,
       inputRefCallback,
       inputAttributes,
       intl,
       isBlock,
       isDisabled,
+      isLabelVisible,
       minimumSearchTextLength,
       onChange,
       onInput,
@@ -241,17 +254,21 @@ class SearchField extends React.Component {
 
     const theme = this.context;
 
+    const searchContainerClassNames = cx([
+      'search-container',
+      theme.className,
+    ]);
+
     const searchFieldClassNames = classNames(
       cx(
         'search-field',
         { block: isBlock },
-        theme.className,
       ),
       customProps.className,
     );
 
-    const inputText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
-
+    const inputAriaLabelText = inputAttributes && Object.prototype.hasOwnProperty.call(inputAttributes, 'aria-label') ? inputAttributes['aria-label'] : intl.formatMessage({ id: 'Terra.searchField.search' });
+    const groupNameValue = groupName === 'Search' ? intl.formatMessage({ id: 'Terra.searchField.search' }) : groupName;
     const buttonText = intl.formatMessage({ id: 'Terra.searchField.submit-search' });
     const clearText = intl.formatMessage({ id: 'Terra.searchField.clear' });
     const additionalInputAttributes = { ...inputAttributes };
@@ -284,34 +301,42 @@ class SearchField extends React.Component {
       : undefined;
 
     return (
-      <div {...customProps} className={searchFieldClassNames}>
-        <div className={cx('input-group')}>
-          <input
-            {...additionalInputAttributes}
-            className={inputClass}
-            type="search"
-            placeholder={placeholder}
-            onChange={this.handleTextChange}
-            disabled={isDisabled}
-            aria-label={inputText}
-            aria-disabled={isDisabled}
-            onKeyDown={this.handleKeyDown}
-            onInput={this.handleInput}
-            ref={this.setInputRef}
-          />
-          {clearButton}
+      <div className={searchContainerClassNames}>
+        {isLabelVisible
+        && (
+        <label className={cx('label')}>{groupName}</label>
+        )}
+        <div role="search" className={cx('search-role-container')} aria-label={intl.formatMessage({ id: 'Terra.searchField.search' })}>
+          <div role="group" aria-label={groupNameValue} {...customProps} className={searchFieldClassNames}>
+            <div className={cx('input-group')}>
+              <input
+                {...additionalInputAttributes}
+                className={inputClass}
+                type="search"
+                placeholder={placeholder}
+                onChange={this.handleTextChange}
+                disabled={isDisabled}
+                aria-label={inputAriaLabelText}
+                aria-disabled={isDisabled}
+                onKeyDown={this.handleKeyDown}
+                onInput={this.handleInput}
+                ref={this.setInputRef}
+              />
+              {clearButton}
+            </div>
+            <Button
+              data-terra-search-field-button="Search"
+              className={cx('button')}
+              text={buttonText}
+              onClick={this.handleSearch}
+              isDisabled={isDisabled}
+              icon={Icon}
+              isIconOnly
+              isCompact
+              refCallback={(ref) => { this.searchBtnRef.current = ref; }}
+            />
+          </div>
         </div>
-        <Button
-          data-terra-search-field-button="Search"
-          className={cx('button')}
-          text={buttonText}
-          onClick={this.handleSearch}
-          isDisabled={isDisabled}
-          icon={Icon}
-          isIconOnly
-          isCompact
-          refCallback={(ref) => { this.searchBtnRef.current = ref; }}
-        />
       </div>
     );
   }
