@@ -6,6 +6,7 @@
   * Added Search field examples for optional Label with default and custom labels.
 
 * Changed
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.51.0.
   * Updated default search delay to 2500ms.
   * Update Search field examples to be more functionality focused. 
 
