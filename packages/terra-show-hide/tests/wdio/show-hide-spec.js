@@ -29,7 +29,26 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
         Terra.validates.element('focus default');
       });
 
+      it('should focus on focusRef element', () => {
+        $('button').click();
+        Terra.validates.element('default expanded');
+      });
+
+      it('should move focus from expanded content to the button on tab', () => {
+        browser.keys(['Tab']);
+        expect($('button').isFocused()).toBe(true);
+      });
+
+      it('focus should not go back to focusRef element if it is normally a non-focusable element like <span>', () => {
+        browser.keys(['Shift', 'Tab']);
+        Terra.validates.element('default expanded no focus');
+        browser.keys(['Shift']); // Modifier like Control, Shift, Alt and Command will stay pressed so you need to trigger them again to release them.
+      });
+
       it('removes focus', () => {
+        browser.keys(['Tab']); // focuses to button
+        expect($('button').isFocused()).toBe(true);
+        $('button').click(); // collaps the content
         browser.keys(['Tab']);
         expect($('button').isFocused()).toBe(false);
       });
@@ -152,6 +171,26 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
     });
   });
 
+  describe('No focusRef', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/show-hide/no-focus-ref-show-hide'));
+
+    it('should display collapsed Show Hide', () => {
+      Terra.validates.element('no focus ref show hide');
+    });
+
+    it('should expand to full text', () => {
+      $('button').click();
+    });
+
+    it('should display expanded Show Hide', () => {
+      Terra.validates.element('no focus ref show hide expanded');
+    });
+
+    it('should focus on content container once expanded', () => {
+      expect($('[class*="show-hide-content"]').isFocused()).toBe(true);
+    });
+  });
+
   describe('Long button text', () => {
     before(() => {
       browser.url('/raw/tests/cerner-terra-core-docs/show-hide/long-button-text-show-hide');
@@ -168,6 +207,46 @@ Terra.describeViewports('Show Hide', ['medium'], () => {
 
     it('should display expanded Show Hide', () => {
       Terra.validates.element('long button text expanded');
+    });
+  });
+
+  describe('Interactive ShowHide', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/show-hide/interactive-show-hide'));
+
+    it('should display collapsed Show Hide', () => {
+      Terra.validates.element('interactive show hide');
+    });
+
+    it('should expand to full text', () => {
+      $('button').click();
+    });
+
+    it('should display expanded Show Hide', () => {
+      Terra.validates.element('interactive show hide expanded');
+    });
+
+    it('should move focus to link', () => {
+      browser.keys(['Tab']);
+      expect($('#link').isFocused()).toBe(true);
+    });
+
+    it('should move focus from expanded content', () => {
+      browser.keys(['Tab']);
+      expect($('button').isFocused()).toBe(true);
+    });
+
+    it('should focus on the button', () => {
+      Terra.validates.element('interactive show hide focused button');
+    });
+
+    it('focus should go back to content to interactive element', () => {
+      browser.keys(['Shift', 'Tab']);
+      expect($('#link').isFocused()).toBe(true);
+      browser.keys(['Shift']); // Modifier like Control, Shift, Alt and Command will stay pressed so you need to trigger them again to release them.
+    });
+
+    it('should display focus on interactive element', () => {
+      Terra.validates.element('interactive show hide focused link');
     });
   });
 });
