@@ -7,13 +7,13 @@ const SvgIcon = (customProps) => {
 
   return (
     <IconBase {...attributes}>
-      <path d="M12 0l24 24-24 24V0z" ></path>
+      <path d="m12 0 24 24-24 24V0z" ></path>
     </IconBase>
   );
 };
 
 SvgIcon.displayName = "IconCaretRight";
-SvgIcon.defaultProps = {"className":"","viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg","isBidi":true};
+SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
 /* eslint-enable */
