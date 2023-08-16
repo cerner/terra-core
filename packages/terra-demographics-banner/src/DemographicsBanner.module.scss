@@ -57,12 +57,7 @@
   .person-details {
     flex: 1;
     margin-bottom: 0;
-    margin-top: var(--terra-demographics-banner-person-details-margin-top);
-
-    // IE 11
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      margin-top: 0;
-    }
+    margin-top: var(--terra-demographics-banner-person-details-margin-top, 0);
   }
 
   .preferred-first-name {
