@@ -4,6 +4,11 @@
 
 * Added
   * Added drag and drop example for `terra-list`.
+  * Added Search field examples for optional Label with default and custom labels.
+
+* Changed
+  * Updated default search delay to 2500ms.
+  * Update Search field examples to be more functionality focused.
 
 ## 1.36.0 - (August 11, 2023)
 
@@ -40,6 +45,7 @@
 * Updated
   * Updated an example for `terra-dropdown-button`.
   * Updated email field validation for `terra-form-field`.
+  * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
 * Added
   * Added documentation updates for `terra-form-input`.

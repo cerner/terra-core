@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+* Added
+  * Add optional `groupName` prop to group Search Field components.
+  * Add optional `isLabelVisible` prop to add Label to Search Field.
+
+* Changed
+  * Updated default search delay time to 2500ms
+
 ## 3.87.0 - (August 11, 2023)
 
 * Changed
@@ -19,7 +26,6 @@
 
 ## 3.84.0 - (August 1, 2023)
 
-* Changed
   * Updated focus indicators to be a standard dashed line.
 
 ## 3.83.0 - (June 14, 2023)

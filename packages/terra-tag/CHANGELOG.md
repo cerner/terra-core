@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added  
+  * Adds underline for tags with `href`
+
 ## 2.58.0 - (August 1, 2023)
 
 * Changed
