@@ -181,6 +181,7 @@ const List = ({
   };
 
   const handleDragEnd = (result, provided) => {
+    const listItems = listNode && listNode.querySelectorAll('[data-item-show-focus]');
     // dropped outside the list
     if (!result.destination) {
       provided.announce(intl.formatMessage({ id: 'Terra.list.cancelDrag' }, { startPosition: (result.source.index + 1) }));
@@ -192,6 +193,9 @@ const List = ({
       result.destination.index,
     );
     setlistItem(items);
+    if (listItems && listItems[result.source.index]) {
+      listItems[result.source.index].focus();
+    }
     provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: (result.source.index + 1), endPosition: (result.destination.index + 1) }));
     if (onDragEnd) {
       onDragEnd(result, provided);

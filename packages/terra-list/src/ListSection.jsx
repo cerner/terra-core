@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, {
+  useRef, useContext, useState, useEffect,
+} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -97,6 +99,11 @@ const ListSection = ({
   const listClassNames = classNames(
     cx('list', 'list-fill', theme.className),
   );
+  let listNode = useRef();
+
+  const handleListRef = (node) => {
+    listNode = node;
+  };
 
   const reorderListItems = (list, startIndex, endIndex) => {
     const result = Array.from(list);
@@ -117,6 +124,9 @@ const ListSection = ({
       result.destination.index,
     );
     setlistItemNodes(items);
+    if (listNode) {
+      listNode.focus();
+    }
     provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: (result.source.index + 1), endPosition: (result.destination.index + 1) }));
     if (onDragEnd) {
       onDragEnd(result, provided);
@@ -125,7 +135,10 @@ const ListSection = ({
 
   const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
     isDraggable: ListItem?.props?.isSelectable,
-    refCallback: provider.innerRef,
+    refCallback: (refobj) => {
+      provider.innerRef(refobj);
+      handleListRef(refobj);
+    },
     ...provider.draggableProps,
     ...provider.dragHandleProps,
   });
