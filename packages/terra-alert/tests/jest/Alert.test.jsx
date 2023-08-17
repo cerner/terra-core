@@ -29,10 +29,10 @@ describe('Alert with no props', () => {
     const wrapper = shallowWithIntl(<Alert />).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
-    const alertContentDiv = wrapper.find('div.body');
+    const alertFocusDiv = wrapper.find('div.focusContainer');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
     expect(alertDiv.prop('role')).toEqual('alert');
-    expect(alertContentDiv.prop('tabIndex')).toEqual('-1');
+    expect(alertFocusDiv.prop('tabIndex')).toEqual('-1');
     expect(wrapper.find(IconAlert).length).toEqual(1);
     expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
     expect(wrapper).toMatchSnapshot();
