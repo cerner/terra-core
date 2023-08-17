@@ -14,8 +14,7 @@ export default () => (
           Entering patient details is a crucial process in healthcare facilities that involves capturing and documenting relevant information about
           individuals seeking medical care. Patient details need to be regularly updated to ensure accuracy and relevancy. This may involve periodic
           verification of personal information, updating medical history, and making necessary changes to insurance or contact details. Hospitals may
-          request patients to review and confirm their information during subsequent visits or at designated intervals. Accurate and comprehensive patient
-          details play a vital role in providing effective healthcare.
+          request patients to review and confirm their information during subsequent visits or at designated intervals.
         </p>
       </Scroll>
     </div>

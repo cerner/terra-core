@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 export default () => (
   <div>
     <p>Overflow-X Container</p>
-    <div className={cx('overflow-wrapper')}>
+    <div className={cx('overflow-y-wrapper')}>
       <Scroll tabIndex="0">
         <p className={cx('paragraph-x-wrapper')}>
           Entering patient details is a crucial process in healthcare facilities that involves capturing and documenting relevant information about
