@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Removed
+  * Removed custom styles of `terra-arrange` examples to make whole content visible.
+
 * Added
   * Added Search field examples for optional Label with default and custom labels.
 
