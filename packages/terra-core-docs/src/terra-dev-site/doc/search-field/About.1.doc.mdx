@@ -1,6 +1,8 @@
 import { Badge } from 'terra-search-field/package.json?dev-site-package';
 
 import SearchFieldBasic from './example/SearchFieldBasic?dev-site-example';
+import SearchFieldWithDefaultLabel from './example/SearchFieldWithDefaultLabel?dev-site-example';
+import SearchFieldWithCustomLabel from './example/SearchFieldWithCustomLabel?dev-site-example';
 import SearchFieldPlaceholder from './example/SearchFieldPlaceholder?dev-site-example';
 import SearchFieldMinimumLength from './example/SearchFieldMinimumLength?dev-site-example';
 import SearchFieldDelayed from './example/SearchFieldDelayed?dev-site-example';
@@ -19,7 +21,7 @@ import SearchFieldPropsTable from 'terra-search-field/lib/SearchField?dev-site-p
 
 # Terra Search Field
 
-A search component with a field that automatically performs a search callback after user input.
+A search component with a field that automatically performs a search callback after user input. This component has an input field with a clear button to clear entered text and a search button. 
 
 ## Getting Started
 
@@ -58,6 +60,8 @@ import SearchField from 'terra-search-field';
 
 ## Examples
 <SearchFieldBasic />
+<SearchFieldWithDefaultLabel />
+<SearchFieldWithCustomLabel />
 <SearchFieldPlaceholder />
 <SearchFieldMinimumLength />
 <SearchFieldDelayed />

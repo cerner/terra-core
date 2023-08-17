@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {
+  useContext, useState, useRef, useEffect,
+} from 'react';
 import PropTypes from 'prop-types';
 import Toggle from 'terra-toggle';
 import { injectIntl } from 'react-intl';
+import { v4 as uuidv4 } from 'uuid';
 import classNames from 'classnames/bind';
+import ThemeContext from 'terra-theme-context';
 import styles from './ShowHide.module.scss';
 import Button from './_ShowHideButton';
 
@@ -35,6 +39,12 @@ const propTypes = {
    */
   isOpen: PropTypes.bool,
   /**
+   * Ref to the first hidden child element that will receive focus when the full content is revealed. This allows assistive technologies to start reading the hidden content from where it left off.
+   */
+  focusRef: PropTypes.shape({
+    current: PropTypes.instanceOf(Element),
+  }),
+  /**
    * Elements(s) that will be visible to the user when component is collapsed
    */
   preview: PropTypes.node,
@@ -43,7 +53,8 @@ const propTypes = {
 const defaultProps = {
   buttonAlign: 'start',
   isOpen: false,
-  preview: undefined,
+  preview: null,
+  focusRef: null,
 };
 
 const ShowHide = (props) => {
@@ -55,8 +66,36 @@ const ShowHide = (props) => {
     preview,
     intl,
     isOpen,
+    focusRef,
     ...customProps
   } = props;
+
+  const theme = useContext(ThemeContext);
+  const contentRef = useRef(null);
+  const [containerIsActive, setContainerIsActive] = useState(false);
+
+  /**
+   * Upon showing hidden content, set activeElement to focusRef element if provided, othervise set it to content container.
+   */
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+    if (focusRef?.current) {
+      focusRef?.current.focus();
+    } else if (contentRef?.current) {
+      setContainerIsActive(true);
+    }
+  }, [isOpen, focusRef, contentRef]);
+
+  useEffect(() => {
+    if (containerIsActive && isOpen && contentRef?.current) {
+      contentRef?.current?.focus();
+    }
+  }, [containerIsActive, isOpen]);
+
+  const id = uuidv4();
+  const contentId = `show-hide-content-${id}`;
 
   const buttonClassName = cx([
     'show-hide',
@@ -75,14 +114,31 @@ const ShowHide = (props) => {
     }
   }
 
+  const onBlur = () => {
+    if (containerIsActive) {
+      setContainerIsActive(false);
+    }
+  };
+
   return (
     <div {...customProps}>
       {!isOpen && preview}
-      <Toggle isOpen={isOpen}>
-        {children}
-      </Toggle>
+      <div
+        id={contentId}
+        className={cx(['show-hide', 'show-hide-content', theme.className])}
+        ref={contentRef}
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+        tabIndex={containerIsActive ? '-1' : null}
+        role={containerIsActive ? 'group' : null}
+        onBlur={onBlur}
+      >
+        <Toggle isOpen={isOpen}>
+          {children}
+        </Toggle>
+      </div>
       <div className={cx('show-hide')}>
         <Button
+          aria-controls={contentId}
           aria-expanded={isOpen}
           text={buttonText || intlButtonText}
           onClick={onChange}

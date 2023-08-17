@@ -62,7 +62,7 @@ exports[`Tag should render an interactive tag 1`] = `
 
 exports[`Tag should render as an anchor when provided an href 1`] = `
 <a
-  className="tag is-interactive"
+  className="tag is-interactive has-underline"
   href="MockHref"
   onBlur={[Function]}
   onKeyUp={[Function]}

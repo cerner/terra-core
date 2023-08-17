@@ -4,8 +4,22 @@
 
 * Updated
   * Updated `terra-scroll` to add realistic examples.
+* Added
+  * Added Search field examples for optional Label with default and custom labels.
 
 * Changed
+  * Updated default search delay to 2500ms.
+  * Update Search field examples to be more functionality focused. 
+
+## 1.36.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.35.0 - (August 11, 2023)
+
+* Changed
+  * Updated all paginator examples for `terra-paginator` to use new props.
   * Updated imports from `src` to `lib`.
   * Updated `terra-toggle-button` example and user documentation.
 
@@ -32,6 +46,7 @@
 * Updated
   * Updated an example for `terra-dropdown-button`.
   * Updated email field validation for `terra-form-field`.
+  * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
 * Added
   * Added documentation updates for `terra-form-input`.
