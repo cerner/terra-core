@@ -160,7 +160,7 @@ const Alert = ({
     { 'body-narrow': isNarrow && (onDismiss || action) },
   );
 
-  const focusContainerClassName = cx('focusContainer');
+  const focusContainerClassName = cx('focus-container');
 
   const alertId = uuidv4();
   const alertTitleId = `alert-title-${alertId}`;

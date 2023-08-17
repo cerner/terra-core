@@ -34,7 +34,6 @@
   }
 
   .body {
-    position: relative;
     align-items: flex-start;
     display: flex;
     flex: 1 1 auto;
@@ -44,6 +43,7 @@
     margin-right: var(--terra-alert-body-margin-right, 0.7143rem);
     margin-top: var(--terra-alert-body-margin-top, 0.7143rem);
     padding-top: 0;
+    position: relative;
   }
 
   .body-narrow {
@@ -55,16 +55,16 @@
     margin-right: var(--terra-alert-std-margin-right, 0.6667rem);
   }
 
-  .focusContainer {
-    position: absolute;
+  .focus-container {
+    bottom: 0;
     display: block;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
-  .focusContainer:focus-visible {
+  .focus-container:focus-visible {
     box-shadow: var(--terra-alert-focus-keyboard-box-shadow, none);
     outline: var(--terra-alert-focus-keyboard-outline, 2px dashed #000);
     outline-offset: var(--terra-alert-focus-keyboard-outline-offset, 1px);
