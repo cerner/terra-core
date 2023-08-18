@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `terra-alert` focus on the notification banners content when notification is an alert and includes an action element to improve screen reader experience.
+
 ## 4.75.0 - (August 11, 2023)
 
 * Changed
