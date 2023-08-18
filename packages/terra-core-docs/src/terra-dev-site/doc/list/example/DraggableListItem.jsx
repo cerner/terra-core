@@ -11,7 +11,7 @@ const ListDraggableExample = () => (
     <p id="list-help">
       Select a patient from the list to view patient details.
     </p>
-    <List role="listbox" ariaDescribedBy="list-help" aria-label="list of draggable items" isDraggable>
+    <List role="listbox" ariaDescribedBy="list-help" aria-label="list of patient" isDraggable>
       <Item
         key="1"
         isSelectable
