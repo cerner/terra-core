@@ -7,33 +7,38 @@ import styles from './ListDocCommon.module.scss';
 const cx = classNames.bind(styles);
 
 const ListDraggableExample = () => (
-  <List role="listbox" aria-label="example-label" isDraggable>
-    <Item
-      key="1"
-      isSelectable
-      isSelected
-    >
-      <Placeholder title="List Item 1" className={cx('placeholder')} />
-    </Item>
-    <Item
-      key="2"
-      isSelectable
-    >
-      <Placeholder title="List Item 2" className={cx('placeholder')} />
-    </Item>
-    <Item
-      key="3"
-      isSelectable
-    >
-      <Placeholder title="List Item 3" className={cx('placeholder')} />
-    </Item>
-    <Item
-      key="4"
-      isSelectable
-    >
-      <Placeholder title="List Item 4" className={cx('placeholder')} />
-    </Item>
-  </List>
+  <>
+    <p id="list-help">
+      Select a patient from the list to view patient details.
+    </p>
+    <List role="listbox" ariaDescribedBy="list-help" aria-label="list of draggable items" isDraggable>
+      <Item
+        key="1"
+        isSelectable
+        isSelected
+      >
+        <Placeholder title="John Smith" className={cx('placeholder')} />
+      </Item>
+      <Item
+        key="2"
+        isSelectable
+      >
+        <Placeholder title="Mary Jones" className={cx('placeholder')} />
+      </Item>
+      <Item
+        key="3"
+        isSelectable
+      >
+        <Placeholder title="Sam Brown" className={cx('placeholder')} />
+      </Item>
+      <Item
+        key="4"
+        isSelectable
+      >
+        <Placeholder title="John David" className={cx('placeholder')} />
+      </Item>
+    </List>
+  </>
 );
 
 export default ListDraggableExample;
