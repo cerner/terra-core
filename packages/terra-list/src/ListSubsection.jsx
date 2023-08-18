@@ -79,13 +79,14 @@ const ListSubsection = ({
   ...customProps
 }) => {
   const [listItemNodes, setlistItemNodes] = useState(children);
+  let listNode = useRef();
 
   useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
-      if (!(Array.isArray(children))) {
-        if (children) setlistItemNodes([children]);
-      } else {
+      if (Array.isArray(children)) {
         setlistItemNodes(children);
+      } else if (children) {
+        setlistItemNodes([children]);
       }
     } else {
       setlistItemNodes([]);
@@ -96,7 +97,6 @@ const ListSubsection = ({
   const listClassNames = classNames(
     cx('list', 'list-fill', theme.className),
   );
-  let listNode = useRef();
 
   const handleListRef = (node) => {
     listNode = node;

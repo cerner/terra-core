@@ -117,10 +117,10 @@ const List = ({
   const [listItem, setlistItem] = useState([]);
 
   useEffect(() => {
-    if (!(Array.isArray(children))) {
-      if (children) setlistItem([children]);
-    } else {
+    if (Array.isArray(children)) {
       setlistItem(children);
+    } else if (children) {
+      setlistItem([children]);
     }
   }, [children]);
 
