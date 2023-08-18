@@ -91,7 +91,7 @@ This image shows a photograph of the Matterhorn, but has no additional surroundi
 ```diff
    import React from 'react';
    import Image from 'terra-image';
-   import matterhornImage from '../src/folder/Matterhorn_150x150.jpg';
+   import matterhornImage from '../lib/folder/Matterhorn_150x150.jpg';
 
 +  const matterhornAlternativeText = 'North-east face of the Matterhorn 
 +     mountain peak and surrounding landscape covered in snow against a 
@@ -123,7 +123,7 @@ Additional guidance and examples can be read in [WebAIM's Alternative Text](http
 ```diff
    import React from 'react';
    import Image from 'terra-image';
-   import matterhornImage from '../src/folder/Matterhorn_150x150.jpg';
+   import matterhornImage from '../lib/folder/Matterhorn_150x150.jpg';
 
 +  const matterhornBriefAlternativeText = 'Matterhorn mountain peak';
 
@@ -185,7 +185,7 @@ The decorative image does not require adding alternative text, and the appropria
    import React from 'react';
    import classNamesBind from 'classnames/bind';
    import Image from 'terra-image';
-   import matterhornImage from '../src/folder/Matterhorn_960x640.jpg';
+   import matterhornImage from '../lib/folder/Matterhorn_960x640.jpg';
    import styles from './BackgroundImageStyles.module.scss';
 
    const cx = classNamesBind.bind(styles);

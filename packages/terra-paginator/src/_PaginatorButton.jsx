@@ -111,6 +111,7 @@ function PaginatorButton(props) {
       onMouseDown={handleMouseDown}
       tabIndex={tabIndex}
       type="button"
+      role="link"
     >
       {children}
     </button>

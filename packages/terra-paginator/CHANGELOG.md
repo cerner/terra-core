@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 2.83.0 - (August 11, 2023)
+
+* Added
+  * Added optional props `ariaLabelledBy` and `ariaLabel` to provide ARIA contexts for the paginator.
+
+* Changed
+  * Updated Paginator button role to be link for screen reader usage.
+
 ## 2.82.0 - (February 15, 2023)
 
 * Changed

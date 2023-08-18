@@ -37,6 +37,7 @@ exports[`Paginator should render a default paginator button 1`] = `
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     onMouseDown={[Function]}
+    role="link"
     type="button"
   />
 </PaginatorButton>
@@ -49,6 +50,7 @@ exports[`Paginator should render a passed in child 1`] = `
   onKeyDown={[Function]}
   onKeyUp={[Function]}
   onMouseDown={[Function]}
+  role="link"
   type="button"
 >
   <span>
