@@ -37,11 +37,10 @@ class ProgressivePaginatorExample extends React.Component {
         <Dialog
           header={(
             <h1 id="progressive_paginator_header_id">
-              Page
-              {this.state.currentPage}
+              Progressive Paginator Example
             </h1>
 )}
-          footer={<ProgressivePaginator onPageChange={this.changePages} selectedPage={1} totalCount={totalCount} itemCountPerPage={10} ariaLabelledBy="progressive_paginator_header_id" />}
+          footer={<ProgressivePaginator onPageChange={this.changePages} selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} ariaLabelledBy="progressive_paginator_header_id" />}
         >
           {this.state.content}
         </Dialog>

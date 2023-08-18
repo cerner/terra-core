@@ -8,6 +8,7 @@ import Paginator from '../../src/Paginator';
 describe('Paginator', () => {
   const defaultRender = <Paginator onPageChange={e => typeof e} selectedPage={1} totalCount={2234} itemCountPerPage={20} />;
   const noPagesRender = <Paginator onPageChange={e => typeof e} />;
+  const renderWithSelectedPage = <Paginator onPageChange={e => typeof e} selectedPage={2} totalCount={2234} itemCountPerPage={20} />;
   const renderWithHeadingId = <Paginator onPageChange={e => typeof e} selectedPage={1} totalCount={2234} itemCountPerPage={20} ariaLabelledBy="paginator_header_id" />;
   const renderWithAriaLabel = <Paginator onPageChange={e => typeof e} selectedPage={1} totalCount={2234} itemCountPerPage={20} ariaLabel="paginator_label" />;
 
@@ -46,6 +47,15 @@ describe('Paginator', () => {
         {noPagesRender}
       </ThemeContextProvider>,
     );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a default paginator with visually hidden text', () => {
+    const wrapper = shallowWithIntl(renderWithSelectedPage).dive();
+    wrapper.setState({ breakpoint: 'tiny' });
+    wrapper.update();
+    wrapper.find('PaginatorButton').first().simulate('click', { nativeEvent: { keyCode: null } });
+    expect(wrapper.find('VisuallyHiddenText').first().prop('text')).toEqual('Terra.paginator.pageSelectedWithCount');
     expect(wrapper).toMatchSnapshot();
   });
 
