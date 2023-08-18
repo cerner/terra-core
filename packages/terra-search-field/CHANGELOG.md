@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.88.0 - (August 18, 2023)
+
 * Added
   * Add optional `groupName` prop to group Search Field components.
   * Add optional `isLabelVisible` prop to add Label to Search Field.
