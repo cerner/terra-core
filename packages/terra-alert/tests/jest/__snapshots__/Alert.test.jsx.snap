@@ -25,7 +25,7 @@ exports[`Alert of type advisory with text content should render an Alert compone
         This is an advisory alert.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -66,7 +66,7 @@ exports[`Alert of type alert with text content should render an Alert component 
         This is a test
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -107,7 +107,7 @@ exports[`Alert of type custom with custom title and text content should render a
         This is a custom alert.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -148,7 +148,7 @@ exports[`Alert of type error with text content should render an Alert component 
         This is an error.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -229,7 +229,7 @@ exports[`Alert of type info with text content should render an Alert component o
         This is an information alert.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -270,7 +270,7 @@ exports[`Alert of type success with an action button text content should render 
         This is a success alert.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -326,7 +326,7 @@ exports[`Alert of type success with text content should render an Alert componen
         This is a success alert.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -367,7 +367,7 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
         This is an unsatisfied alert.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -408,7 +408,7 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
         This is an unverified alert.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -449,7 +449,7 @@ exports[`Alert of type warning with text content should render an Alert componen
         This is an warning.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -580,7 +580,7 @@ exports[`Alert with no props should render a default component 1`] = `
             </strong>
           </div>
           <div
-            className="focusContainer"
+            className="focus-container"
             tabIndex="-1"
           />
         </div>
@@ -622,7 +622,7 @@ exports[`Alert with no props should render a default notification banner with de
         </strong>
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -662,7 +662,7 @@ exports[`Alert with props should render an alert with provided role 1`] = `
         </strong>
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -794,7 +794,7 @@ exports[`Alert with props should render disableAlertActionFocus when provided 1`
             </strong>
           </div>
           <div
-            className="focusContainer"
+            className="focus-container"
             tabIndex="-1"
           />
         </div>
@@ -837,7 +837,7 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
         This is a custom alert.
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -905,7 +905,7 @@ exports[`Dismissible Alert that includes actions section should render an alert 
         This is a test
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>
@@ -959,7 +959,7 @@ exports[`correctly applies the theme context className 1`] = `
         </strong>
       </div>
       <div
-        className="focusContainer"
+        className="focus-container"
         tabIndex="-1"
       />
     </div>

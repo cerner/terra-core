@@ -29,7 +29,7 @@ describe('Alert with no props', () => {
     const wrapper = shallowWithIntl(<Alert />).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
-    const alertFocusDiv = wrapper.find('div.focusContainer');
+    const alertFocusDiv = wrapper.find('div.focus-container');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
     expect(alertDiv.prop('role')).toEqual('alert');
     expect(alertFocusDiv.prop('tabIndex')).toEqual('-1');
