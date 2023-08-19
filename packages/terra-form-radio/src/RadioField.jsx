@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
@@ -10,6 +10,7 @@ import VisualyHiddenText from 'terra-visually-hidden-text';
 import {
   VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT,
 } from 'keycode-js';
+import { findFirstFocasableItem, findLastFocasableItem, firsLastFocusableItem } from './_RadioUtil';
 import styles from './RadioField.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -154,13 +155,16 @@ const RadioField = (props) => {
       const radioItems = radioGroup.querySelectorAll('[type=radio]');
       const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
       const onClick = new MouseEvent('click', { bubbles: true, cancelable: false });
+      const firstItemIndex = findFirstFocasableItem(radioItems);
+      const lastItemIndex = findLastFocasableItem(radioItems);
+
       if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
-        if (itemIndex === radioItems.length - 1) {
-          radioItems[0].dispatchEvent(onClick);
+        if (itemIndex === lastItemIndex) {
+          radioItems[firstItemIndex].dispatchEvent(onClick);
         }
       } else if (event.key === VALUE_UP || event.key === VALUE_LEFT) {
-        if (itemIndex === 0) {
-          radioItems[radioItems.length - 1].dispatchEvent(onClick);
+        if (itemIndex === firstItemIndex) {
+          radioItems[lastItemIndex].dispatchEvent(onClick);
         }
       }
     }
