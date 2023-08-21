@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.62.0 - (August 18, 2023)
+
 * Added
   * Added `focusRef` prop to shift focus to the hidden content when it is revealed for screen-reader users.
 

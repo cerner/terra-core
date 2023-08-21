@@ -11,7 +11,6 @@ exports[`Alert of type advisory with text content should render an Alert compone
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <div
         className="section"
@@ -25,6 +24,10 @@ exports[`Alert of type advisory with text content should render an Alert compone
         </strong>
         This is an advisory alert.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -41,7 +44,6 @@ exports[`Alert of type alert with text content should render an Alert component 
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -63,6 +65,10 @@ exports[`Alert of type alert with text content should render an Alert component 
         </strong>
         This is a test
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -79,7 +85,6 @@ exports[`Alert of type custom with custom title and text content should render a
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -101,6 +106,10 @@ exports[`Alert of type custom with custom title and text content should render a
         </strong>
         This is a custom alert.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -117,7 +126,6 @@ exports[`Alert of type error with text content should render an Alert component 
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -139,6 +147,10 @@ exports[`Alert of type error with text content should render an Alert component 
         </strong>
         This is an error.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -195,7 +207,6 @@ exports[`Alert of type info with text content should render an Alert component o
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -217,6 +228,10 @@ exports[`Alert of type info with text content should render an Alert component o
         </strong>
         This is an information alert.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -233,7 +248,6 @@ exports[`Alert of type success with an action button text content should render 
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -255,6 +269,10 @@ exports[`Alert of type success with an action button text content should render 
         </strong>
         This is a success alert.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
     <div
       className="actions"
@@ -286,7 +304,6 @@ exports[`Alert of type success with text content should render an Alert componen
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -308,6 +325,10 @@ exports[`Alert of type success with text content should render an Alert componen
         </strong>
         This is a success alert.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -324,7 +345,6 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon unsatisfied-icon"
@@ -346,6 +366,10 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
         </strong>
         This is an unsatisfied alert.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -362,7 +386,6 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon unverified-icon"
@@ -384,6 +407,10 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
         </strong>
         This is an unverified alert.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -400,7 +427,6 @@ exports[`Alert of type warning with text content should render an Alert componen
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -422,6 +448,10 @@ exports[`Alert of type warning with text content should render an Alert componen
         </strong>
         This is an warning.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -499,7 +529,6 @@ exports[`Alert with no props should render a default component 1`] = `
       >
         <div
           className="body body-std"
-          tabIndex="-1"
         >
           <span
             className="icon"
@@ -550,6 +579,10 @@ exports[`Alert with no props should render a default component 1`] = `
               Terra.alert.alert
             </strong>
           </div>
+          <div
+            className="focus-container"
+            tabIndex="-1"
+          />
         </div>
       </div>
     </ResponsiveElement>
@@ -568,7 +601,6 @@ exports[`Alert with no props should render a default notification banner with de
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -589,6 +621,10 @@ exports[`Alert with no props should render a default notification banner with de
           Terra.alert.alert
         </strong>
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -605,7 +641,6 @@ exports[`Alert with props should render an alert with provided role 1`] = `
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -626,6 +661,10 @@ exports[`Alert with props should render an alert with provided role 1`] = `
           Terra.alert.alert
         </strong>
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </ResponsiveElement>
@@ -704,7 +743,6 @@ exports[`Alert with props should render disableAlertActionFocus when provided 1`
       >
         <div
           className="body body-std"
-          tabIndex="-1"
         >
           <span
             className="icon"
@@ -755,6 +793,10 @@ exports[`Alert with props should render disableAlertActionFocus when provided 1`
               Terra.alert.alert
             </strong>
           </div>
+          <div
+            className="focus-container"
+            tabIndex="-1"
+          />
         </div>
       </div>
     </ResponsiveElement>
@@ -773,7 +815,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -795,6 +836,10 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
         </strong>
         This is a custom alert.
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
     <div
       className="actions actions-custom"
@@ -838,7 +883,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -860,6 +904,10 @@ exports[`Dismissible Alert that includes actions section should render an alert 
         </strong>
         This is a test
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
     <div
       className="actions"
@@ -890,7 +938,6 @@ exports[`correctly applies the theme context className 1`] = `
   >
     <div
       className="body body-std"
-      tabIndex="-1"
     >
       <span
         className="icon"
@@ -911,6 +958,10 @@ exports[`correctly applies the theme context className 1`] = `
           Terra.alert.success
         </strong>
       </div>
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
     </div>
   </div>
 </Fragment>
