@@ -86,6 +86,7 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
 
     it('close show hide', () => {
       $('button.button').click();
+      Terra.validates.element('closed show hide');
     });
 
     it('wraps naturally at high magnification', () => {
