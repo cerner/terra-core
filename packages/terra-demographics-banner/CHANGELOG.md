@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.63.1 - (August 18, 2023)
+
 * Fixed
   * Fixed bug where banner items were not presented properly in IE 11 (introduced with v3.62.0).
 
