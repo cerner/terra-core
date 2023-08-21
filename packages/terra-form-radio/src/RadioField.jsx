@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
@@ -10,7 +10,7 @@ import VisualyHiddenText from 'terra-visually-hidden-text';
 import {
   VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT,
 } from 'keycode-js';
-import { findFirstFocasableItem, findLastFocasableItem, firsLastFocusableItem } from './_RadioUtil';
+import { findFirstFocasableItem, findLastFocasableItem } from './_RadioUtil';
 import styles from './RadioField.module.scss';
 
 const cx = classNamesBind.bind(styles);
