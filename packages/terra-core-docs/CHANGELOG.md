@@ -4,6 +4,9 @@
 
 * Updated
   * Updated `terra-scroll` to add realistic examples.
+
+## 1.37.0 - (August 18, 2023)
+
 * Added
   * Added Search field examples for optional Label with default and custom labels.
 
