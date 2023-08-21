@@ -149,7 +149,7 @@ const RadioField = (props) => {
    * Note: Cyclic Navigation of Radio button is not supported in Safari browser hence adding keydown event handler to support cyclic navigation.
    * this handler will use native mouse event to set focus back to first radio button when we press down or right arrow key on last radio button and vise versa.
    */
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event, radio) => {
     const radioGroup = document.getElementById(fieldSetId);
     if (radioGroup) {
       const radioItems = radioGroup.querySelectorAll('[type=radio]');
@@ -168,11 +168,25 @@ const RadioField = (props) => {
         }
       }
     }
+    if (radio && radio.props.onKeyDown) {
+      radio.props.onKeyDown();
+    }
+  };
+
+  /*
+   * Focus gets lost when radio button's are selected via mouse in Safari browser.
+   * This set focus back on the radio button on mouse click
+   */
+  const handleClick = (event, radio) => {
+    event.currentTarget.focus();
+    if (radio && radio.props.onClick) {
+      radio.props.onClick();
+    }
   };
 
   const content = React.Children.map(children, (child) => {
-    const eventHandlersForSafari = (isSafari) ? { onKeyDown: handleKeyDown, onClick: (event) => { event.currentTarget.focus(); } } : undefined;
     if (child && child.type.isRadio) {
+      const eventHandlersForSafari = (isSafari) ? { onKeyDown: (event) => handleKeyDown(event, child), onClick: (event) => handleClick(event, child) } : undefined;
       return React.cloneElement(child, {
         inputAttrs: {
           ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds, ...eventHandlersForSafari,
