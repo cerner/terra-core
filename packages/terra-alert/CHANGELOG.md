@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed `terra-alert` focus blocking content from being click-able.
+
 ## 4.76.0 - (August 18, 2023)
 
 * Changed

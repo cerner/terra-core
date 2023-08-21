@@ -72,6 +72,12 @@ Terra.describeViewports('Alert', ['tiny', 'large'], () => {
   });
 
   describe('Alert Long Text', () => {
+    it('focuses on show more button', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/alert/long-text-alert');
+      browser.keys(['Tab']);
+      Terra.validates.element('show more button focused');
+    });
+
     it('wraps naturally at high magnification', () => {
       browser.setWindowRect(0, 0, 100, 800);
       browser.url('/raw/tests/cerner-terra-core-docs/alert/long-text-alert');
