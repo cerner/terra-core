@@ -2,8 +2,17 @@
 
 ## Unreleased
 
+* Removed
+  * Removed custom styles of `terra-arrange` examples to make whole content visible.
+
 * Added
   * Added drag and drop example for `terra-list`.
+  * Added accessibility guidance for `terra-arrange`.
+  * Added an event to prevent page scroll on hyperlink for `terra-toggle-section-header`.
+
+## 1.37.0 - (August 18, 2023)
+
+* Added
   * Added Search field examples for optional Label with default and custom labels.
 
 * Changed
