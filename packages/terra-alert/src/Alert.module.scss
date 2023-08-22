@@ -33,6 +33,16 @@
     margin-top: var(--terra-alert-icon-margin-top);
   }
 
+  .content-container {
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+  }
+
   .body {
     align-items: flex-start;
     display: flex;
@@ -62,6 +72,7 @@
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 0;
   }
 
   .focus-container:focus-visible {

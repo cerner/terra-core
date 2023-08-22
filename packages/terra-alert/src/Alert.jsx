@@ -161,6 +161,7 @@ const Alert = ({
   );
 
   const focusContainerClassName = cx('focus-container');
+  const contentContainerClassName = cx('content-container');
 
   const alertId = uuidv4();
   const alertTitleId = `alert-title-${alertId}`;
@@ -230,9 +231,11 @@ const Alert = ({
         className={alertClassNames}
       >
         <div className={bodyClassNameForParent}>
-          {getAlertIcon(type, customIcon)}
-          {alertMessageContent}
           <div className={focusContainerClassName} ref={alertBodyRef} tabIndex="-1" />
+          <div className={contentContainerClassName}>
+            {getAlertIcon(type, customIcon)}
+            {alertMessageContent}
+          </div>
         </div>
         {actionsSection}
       </div>
