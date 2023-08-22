@@ -210,6 +210,9 @@ import IconTrendingUp from 'terra-icon/lib/icon/IconTrendingUp';
 import IconTrendingDown from 'terra-icon/lib/icon/IconTrendingDown';
 import IconNoResults from 'terra-icon/lib/icon/IconNoResults';
 import IconNavStackUp from 'terra-icon/lib/icon/IconNavStackUp';
+import IconMultipleResultsNormal from 'terra-icon/lib/icon/IconMultipleResultsNormal';
+import IconMultipleResultsNotNormal from 'terra-icon/lib/icon/IconMultipleResultsNotNormal';
+import IconMultipleResultsCritical from 'terra-icon/lib/icon/IconMultipleResultsCritical';
 import IconCircleSymbol from 'terra-icon/lib/icon/IconCircleSymbol';
 import IconCircleSymbolLight from 'terra-icon/lib/icon/IconCircleSymbolLight';
 import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
@@ -2129,6 +2132,33 @@ const IconAll = () => (
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
           <code>
             import IconNavStackUp from 'terra-icon/lib/icon/IconNavStackUp';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMultipleResultsNormal height='2em' width='2em' /></td>
+        <td style={cellStyle}>multipleResultsNormal</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMultipleResultsNormal from 'terra-icon/lib/icon/IconMultipleResultsNormal';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMultipleResultsNotNormal height='2em' width='2em' /></td>
+        <td style={cellStyle}>multipleResultsNotNormal</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMultipleResultsNotNormal from 'terra-icon/lib/icon/IconMultipleResultsNotNormal';
+          </code>
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td style={cellStyle}><IconMultipleResultsCritical height='2em' width='2em' /></td>
+        <td style={cellStyle}>multipleResultsCritical</td>
+        <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
+          <code>
+            import IconMultipleResultsCritical from 'terra-icon/lib/icon/IconMultipleResultsCritical';
           </code>
         </td>
       </tr>
