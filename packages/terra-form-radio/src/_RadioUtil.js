@@ -8,7 +8,7 @@ const isConsideredMobileDevice = () => window.matchMedia('(max-width: 1024px)').
       || navigator.msMaxTouchPoints > 0
     );
 
-const findLastFocasableItem = (radioBtns) => {
+const findLastFocusableItem = (radioBtns) => {
   let itemIndex = radioBtns.length - 1;
 
   while (radioBtns[itemIndex] && radioBtns[itemIndex].hasAttribute('disabled') && itemIndex > -1) {
@@ -18,7 +18,7 @@ const findLastFocasableItem = (radioBtns) => {
   return (itemIndex) || undefined;
 };
 
-const findFirstFocasableItem = (radioBtns) => {
+const findFirstFocusableItem = (radioBtns) => {
   let itemIndex = 0;
 
   while (radioBtns[itemIndex] && radioBtns[itemIndex].hasAttribute('disabled') && itemIndex < radioBtns.length) {
@@ -30,6 +30,6 @@ const findFirstFocasableItem = (radioBtns) => {
 
 export {
   isConsideredMobileDevice,
-  findLastFocasableItem,
-  findFirstFocasableItem,
+  findLastFocusableItem,
+  findFirstFocusableItem,
 };

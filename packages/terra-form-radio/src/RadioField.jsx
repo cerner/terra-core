@@ -10,7 +10,7 @@ import VisualyHiddenText from 'terra-visually-hidden-text';
 import {
   VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT,
 } from 'keycode-js';
-import { findFirstFocasableItem, findLastFocasableItem } from './_RadioUtil';
+import { findFirstFocusableItem, findLastFocusableItem } from './_RadioUtil';
 import styles from './RadioField.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -155,14 +155,14 @@ const RadioField = (props) => {
       const radioItems = radioGroup.querySelectorAll('[type=radio]');
       const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
       const onClick = new MouseEvent('click', { bubbles: true, cancelable: false });
-      const firstItemIndex = findFirstFocasableItem(radioItems);
-      const lastItemIndex = findLastFocasableItem(radioItems);
+      const firstItemIndex = findFirstFocusableItem(radioItems);
+      const lastItemIndex = findLastFocusableItem(radioItems);
 
-      if (event.key === VALUE_DOWN || event.key === VALUE_RIGHT) {
+      if (event.nativeEvent.key === VALUE_DOWN || event.nativeEvent.key === VALUE_RIGHT) {
         if (itemIndex === lastItemIndex) {
           radioItems[firstItemIndex].dispatchEvent(onClick);
         }
-      } else if (event.key === VALUE_UP || event.key === VALUE_LEFT) {
+      } else if (event.nativeEvent.key === VALUE_UP || event.nativeEvent.key === VALUE_LEFT) {
         if (itemIndex === firstItemIndex) {
           radioItems[lastItemIndex].dispatchEvent(onClick);
         }
@@ -178,7 +178,7 @@ const RadioField = (props) => {
    * This set focus back on the radio button on mouse click
    */
   const handleClick = (event, radio) => {
-    event.currentTarget.focus();
+    event?.currentTarget?.focus();
     if (radio && radio.props.onClick) {
       radio.props.onClick();
     }
