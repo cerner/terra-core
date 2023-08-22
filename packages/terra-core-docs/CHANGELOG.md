@@ -4,7 +4,7 @@
 
 * Updated
   * Updated `terra-scroll` to add realistic examples.
-  
+
 * Removed
   * Removed custom styles of `terra-arrange` examples to make whole content visible.
 
