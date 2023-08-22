@@ -5,7 +5,14 @@
 * Fixed
   * Updated `terra-native-select` example to fix slightly truncated button.
 
+* Removed
+  * Removed custom styles of `terra-arrange` examples to make whole content visible.
+
+## 1.37.0 - (August 18, 2023)
+
 * Added
+  * Added accessibility guidance for `terra-arrange`.
+  * Added an event to prevent page scroll on hyperlink for `terra-toggle-section-header`.
   * Added Search field examples for optional Label with default and custom labels.
 
 * Changed
