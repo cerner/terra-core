@@ -88,7 +88,8 @@ class ButtonGroupButton extends React.Component {
   handleKeyUp(event) {
     // Apply focus styles for keyboard navigation.
     // The onFocus event doesn't get triggered in some browsers, hence, the focus state needs to be managed here.
-    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB || event.nativeEvent.keyCode === KeyCode.KEY_LEFT || event.nativeEvent.keyCode === KeyCode.KEY_RIGHT) {
+    const validKeys = new Set([KeyCode.KEY_TAB, KeyCode.KEY_LEFT, KeyCode.KEY_RIGHT, KeyCode.KEY_UP, KeyCode.KEY_DOWN]);
+    if (validKeys.has(event.keyCode)) {
       this.setState({ focused: true });
       this.shouldShowFocus = true;
     }
