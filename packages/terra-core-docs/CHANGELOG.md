@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `terra-button-group` tests.
+  
 * Removed
   * Removed custom styles of `terra-arrange` examples to make whole content visible.
 
