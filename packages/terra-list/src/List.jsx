@@ -85,7 +85,9 @@ const propTypes = {
    */
   isDraggable: PropTypes.bool,
   /**
-   * Function callback when the Item is dropped. Callback contains the DropResult of result object and provided object, e.g. onDragEnd(result, provided).
+   * Function callback when the Item is dropped. Parameters:
+   * @param {Object} result result
+   * @param {Object} provided provided
    */
   onDragEnd: PropTypes.func,
 };

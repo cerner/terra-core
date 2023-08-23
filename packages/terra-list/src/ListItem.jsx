@@ -122,11 +122,7 @@ const ListItem = ({
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
       <div className={cx('item-fill')} key="item-fill">
         {children}
-        {(isDraggable) && (
-          <React.Fragment>
-            <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />
-          </React.Fragment>
-        )}
+        {(isDraggable) && <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />}
       </div>
       {hasChevron && <div className={cx('item-end')} key="item-end"><span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span></div>}
     </li>
