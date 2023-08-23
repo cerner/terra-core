@@ -1,4 +1,9 @@
 {
   "Terra.list.singleSelect": "Liste de sélection unique. Pour sélectionner ou désélectionner des éléments, appuyez sur Entrée ou sur la barre d'espace.",
-  "Terra.list.multiSelect": "Liste de sélections multiples. Pour sélectionner ou désélectionner des éléments, appuyez sur Entrée ou sur la barre d'espace."
+  "Terra.list.multiSelect": "Liste de sélections multiples. Pour sélectionner ou désélectionner des éléments, appuyez sur Entrée ou sur la barre d'espace.",
+  "Terra.list.lift": "Vous avez soulevé un élément en position {startPosition}. Utilisez les touches fléchées pour faire glisser l'élément vers une nouvelle position. Appuyez sur la barre d'espace pour déposer l'élément ou sur la touche Échappement pour annuler.",
+  "Terra.list.drag": "Vous avez déplacé l'élément de la position {startPosition} à {endPosition}.",
+  "Terra.list.cancelDrag": "Déplacement annulé. L'élément est revenu à sa position initiale {startPosition}.",
+  "Terra.list.drop": "Vous avez déposé l'élément. Vous avez déplacé l'élément de la position {startPosition} à {endPosition}.",
+  "Terra.list.focus": "Appuyez sur la barre d'espace pour faire glisser. Lorsque vous faites glisser un élément, vous pouvez utiliser les touches fléchées pour le déplacer et la touche Échappement pour annuler. Assurez-vous que votre lecteur d'écran est en mode Focus ou en mode Formulaires."
 }

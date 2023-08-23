@@ -1,4 +1,9 @@
 {
   "Terra.list.singleSelect": "Lijst met enkelvoudige selectie. Druk op Enter of de spatiebalk om items te selecteren of deselecteren",
-  "Terra.list.multiSelect": "Lijst met meervoudige selectie. Druk op Enter of de spatiebalk om items te selecteren of deselecteren"
+  "Terra.list.multiSelect": "Lijst met meervoudige selectie. Druk op Enter of de spatiebalk om items te selecteren of deselecteren",
+  "Terra.list.lift": "U heeft een item op positie {startPosition} geselecteerd voor verplaatsing. Gebruik de pijltoetsen om het item naar een nieuwe positie te slepen. Druk op de spatiebalk om het item neer te zetten of op Escape om te annuleren.",
+  "Terra.list.drag": "U heeft het item van positie {startPosition} naar positie {endPosition} verplaatst",
+  "Terra.list.cancelDrag": "Verplaatsing geannuleerd. Het item is teruggezet naar startpositie {startPosition}.",
+  "Terra.list.drop": "U heeft het item neergezet. U heeft het item van positie {startPosition} naar {endPosition} verplaatst.",
+  "Terra.list.focus": "Druk op de spatiebalk om een sleepactie te starten. U kunt tijdens het slepen de pijltoetsen gebruiken om het item te verplaatsen. Druk op Escape om te annuleren. Zorg dat de schermlezer in de focus- of formulierenmodus is."
 }
