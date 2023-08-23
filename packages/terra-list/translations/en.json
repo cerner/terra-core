@@ -1,4 +1,9 @@
 {
   "Terra.list.singleSelect": "Single select list, to select or deselect items, press enter or spacebar",
-  "Terra.list.multiSelect": "Multi select list, to select or deselect items, press enter or spacebar"
+  "Terra.list.multiSelect": "Multi select list, to select or deselect items, press enter or spacebar",
+  "Terra.list.lift": "You have lifted a item in position {startPosition}. Use the arrow keys to drag the item to a new position. Press SPACE to place the item or ESCAPE to cancel.",
+  "Terra.list.drag": "You have moved the item from position {startPosition} to position {endPosition}",
+  "Terra.list.cancelDrag": "Movement cancelled. The item has returned to its starting position of {startPosition}",
+  "Terra.list.drop": "You have dropped the item. You have moved the item from position {startPosition} to {endPosition}",
+  "Terra.list.focus": "Press SPACE to start a drag. When dragging you can use the arrow keys to move the item around and escape to cancel. Ensure your screen reader is in focus mode or forms mode"
 }
