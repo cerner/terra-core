@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.68.0 - (August 23, 2023)
+
 * Fixed
   * Fixed visual focus when using screenreaders.
   
