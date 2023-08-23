@@ -188,6 +188,9 @@ import IconMissedCall from './icon/IconMissedCall';
 import IconModerate from './icon/IconModerate';
 import IconModerateLowLight from './icon/IconModerateLowLight';
 import IconModified from './icon/IconModified';
+import IconMultipleResultsNormal from './icon/IconMultipleResultsNormal';
+import IconMultipleResultsNotNormal from './icon/IconMultipleResultsNotNormal';
+import IconMultipleResultsCritical from './icon/IconMultipleResultsCritical';
 import IconNavStackUp from './icon/IconNavStackUp';
 import IconNext from './icon/IconNext';
 import IconNoResults from './icon/IconNoResults';
@@ -511,6 +514,9 @@ const Icons = {
   IconModerate,
   IconModerateLowLight,
   IconModified,
+  IconMultipleResultsNormal,
+  IconMultipleResultsNotNormal,
+  IconMultipleResultsCritical,
   IconNavStackUp,
   IconNext,
   IconNoRisk,

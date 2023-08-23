@@ -8,6 +8,28 @@ const isConsideredMobileDevice = () => window.matchMedia('(max-width: 1024px)').
       || navigator.msMaxTouchPoints > 0
     );
 
-export default {
+const findLastFocusableItem = (radioBtns) => {
+  let itemIndex = radioBtns.length - 1;
+
+  while (radioBtns[itemIndex] && radioBtns[itemIndex].hasAttribute('disabled') && itemIndex > -1) {
+    itemIndex -= 1;
+  }
+
+  return (itemIndex) || undefined;
+};
+
+const findFirstFocusableItem = (radioBtns) => {
+  let itemIndex = 0;
+
+  while (radioBtns[itemIndex] && radioBtns[itemIndex].hasAttribute('disabled') && itemIndex < radioBtns.length) {
+    itemIndex += 1;
+  }
+
+  return (itemIndex < radioBtns.length) ? itemIndex : undefined;
+};
+
+export {
   isConsideredMobileDevice,
+  findLastFocusableItem,
+  findFirstFocusableItem,
 };

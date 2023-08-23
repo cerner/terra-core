@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './Radio.module.scss';
-import RadioUtil from './_RadioUtil';
+import { isConsideredMobileDevice } from './_RadioUtil';
 
 const cx = classNamesBind.bind(styles);
 
@@ -52,16 +52,16 @@ const propTypes = {
     */
   name: PropTypes.string,
   /**
-   * Function to trigger when focus is lost from the radio button.
-   */
+    * Function to trigger when focus is lost from the radio button.
+    */
   onBlur: PropTypes.func,
   /**
     * Function to trigger when user clicks on the radio button. Provide a function to create a controlled input.
     */
   onChange: PropTypes.func,
   /**
-   *  Function to trigger when user focuses on the radio button.
-   */
+    *  Function to trigger when user focuses on the radio button.
+    */
   onFocus: PropTypes.func,
   /**
     * The value of the input element.
@@ -125,7 +125,7 @@ const Radio = ({
     'label',
     { 'is-disabled': disabled },
     { 'is-hidden': isLabelHidden },
-    { 'is-mobile': RadioUtil.isConsideredMobileDevice() },
+    { 'is-mobile': isConsideredMobileDevice() },
     labelTextAttrs.className,
   ]);
 
@@ -140,7 +140,7 @@ const Radio = ({
 
   const outerRingClasses = cx([
     'outer-ring',
-    { 'is-mobile': RadioUtil.isConsideredMobileDevice() },
+    { 'is-mobile': isConsideredMobileDevice() },
   ]);
 
   const innerRingClasses = cx([

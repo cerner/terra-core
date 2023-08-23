@@ -21,7 +21,7 @@ const SvgIcon = (customProps) => {
 
   return (
     <IconBase {...attributes} className={iconClassNames} >
-      <path d="M39.5 16L24 0 8.5 16H21v32h6V16z" ></path>
+      <path d="M39.5 16 24 0 8.5 16H21v32h6V16z" ></path>
     </IconBase>
   );
 };
