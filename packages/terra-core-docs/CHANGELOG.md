@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.38.0 - (August 23, 2023)
+
 * Removed
   * Removed custom styles of `terra-arrange` examples to make whole content visible.
 
