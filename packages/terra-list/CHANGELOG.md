@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.60.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 * Added
   * Added drag and drop support for list items.
 
