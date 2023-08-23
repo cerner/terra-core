@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+* Changed
+  * Updated `terra-button-group` tests.
+  * Updated `terra-form-radio-field` example to display selected value.
+  
 * Removed
   * Removed custom styles of `terra-arrange` examples to make whole content visible.
 
