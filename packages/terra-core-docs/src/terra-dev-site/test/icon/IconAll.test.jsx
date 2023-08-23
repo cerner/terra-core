@@ -197,6 +197,9 @@ const IconAll = () => (
     <Icon.IconModerate className={cx(['icon'])} />
     <Icon.IconModerateLowLight className={cx(['icon'])} />
     <Icon.IconModified className={cx(['icon'])} />
+    <Icon.IconMultipleResultsNormal className={cx(['icon'])} />
+    <Icon.IconMultipleResultsNotNormal className={cx(['icon'])} />
+    <Icon.IconMultipleResultsCritical className={cx(['icon'])} />
     <Icon.IconNavStackUp className={cx(['icon'])} />
     <Icon.IconNext className={cx(['icon'])} />
     <Icon.IconNoRisk className={cx(['icon'])} />
