@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.53.0 - (August 23, 2023)
+
 * Removed
   * Removed custom styles for `terra-arrange` to avoid issues on other components.
 

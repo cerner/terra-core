@@ -1,10 +1,13 @@
-import React, { useRef } from 'react';
+import React, {
+  useRef, useContext, useState, useEffect,
+} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import styles from './List.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -77,6 +80,16 @@ const propTypes = {
    * One of `'none'`, `'single-select'`, `'multi-select'`.
    */
   ariaSelectionStyle: PropTypes.oneOf(['none', 'single-select', 'multi-select']),
+  /**
+   * Whether or not the list item is draggable. List Item is draggable only when it is selectable.
+   */
+  isDraggable: PropTypes.bool,
+  /**
+   * Function callback when the Item is dropped. Parameters:
+   * @param {Object} result result
+   * @param {Object} provided provided
+   */
+  onDragEnd: PropTypes.func,
 };
 
 const defaultProps = {
@@ -98,9 +111,21 @@ const List = ({
   refCallback,
   role,
   ariaSelectionStyle,
+  isDraggable,
+  onDragEnd,
   ...customProps
 }) => {
-  const theme = React.useContext(ThemeContext);
+  const theme = useContext(ThemeContext);
+  const [listItem, setlistItem] = useState([]);
+
+  useEffect(() => {
+    if (Array.isArray(children)) {
+      setlistItem(children);
+    } else if (children) {
+      setlistItem([children]);
+    }
+  }, [children]);
+
   const listClassNames = classNames(
     cx(
       'list',
@@ -150,7 +175,53 @@ const List = ({
     attrSpread['aria-label'] = intl.formatMessage({ id: 'Terra.list.multiSelect' });
   }
 
-  return (
+  const reorderListItems = (list, startIndex, endIndex) => {
+    const result = Array.from(list);
+    const [removed] = result.splice(startIndex, 1);
+    result.splice(endIndex, 0, removed);
+    return result;
+  };
+
+  const handleDragEnd = (result, provided) => {
+    const listItems = listNode && listNode.querySelectorAll('[data-item-show-focus]');
+    // dropped outside the list
+    if (!result.destination) {
+      provided.announce(intl.formatMessage({ id: 'Terra.list.cancelDrag' }, { startPosition: (result.source.index + 1) }));
+      return;
+    }
+    const items = reorderListItems(
+      listItem,
+      result.source.index,
+      result.destination.index,
+    );
+    setlistItem(items);
+    if (listItems && listItems[result.source.index]) {
+      listItems[result.source.index].focus();
+    }
+    provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: (result.source.index + 1), endPosition: (result.destination.index + 1) }));
+    if (onDragEnd) {
+      onDragEnd(result, provided);
+    }
+  };
+
+  const handleDragStart = (start, provided) => {
+    provided.announce(intl.formatMessage({ id: 'Terra.list.lift' }, { startPosition: (start.source.index + 1) }));
+  };
+
+  const handleDragUpdate = (update, provided) => {
+    if (update.destination) {
+      provided.announce(intl.formatMessage({ id: 'Terra.list.drag' }, { startPosition: (update.source.index + 1), endPosition: (update.destination.index + 1) }));
+    }
+  };
+
+  const cloneListItem = (ListItem, provider) => React.cloneElement(ListItem, {
+    isDraggable: ListItem?.props?.isSelectable,
+    refCallback: provider.innerRef,
+    ...provider.draggableProps,
+    ...provider.dragHandleProps,
+  });
+
+  const renderListDom = () => (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
     <ul
       {...customProps}
@@ -164,6 +235,43 @@ const List = ({
     >
       {children}
     </ul>
+  );
+
+  const renderDraggableListDom = () => (
+    <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
+      <Droppable droppableId="ListItem">
+        {(provided) => (
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
+          <ul
+            {...provided.droppableProps}
+            {...customProps}
+            {...attrSpread}
+            aria-describedby={ariaDescribedBy}
+            aria-description={ariaDescription} // eslint-disable-line jsx-a11y/aria-props
+            aria-details={ariaDetails}
+            className={listClassNames}
+            ref={(refobj) => {
+              provided.innerRef(refobj);
+              handleListRef(refobj);
+            }}
+            onKeyDown={handleKeyDown}
+          >
+            {listItem.map((item, index) => (
+              <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
+                {(provider) => (
+                  cloneListItem(item, provider)
+                )}
+              </Draggable>
+            ))}
+            {provided.placeholder}
+          </ul>
+        )}
+      </Droppable>
+    </DragDropContext>
+  );
+
+  return (
+    (isDraggable) ? renderDraggableListDom() : renderListDom()
   );
 };
 

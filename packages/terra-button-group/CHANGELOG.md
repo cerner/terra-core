@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 3.68.0 - (August 23, 2023)
+
+* Fixed
+  * Fixed visual focus when using screenreaders.
+  
+ * Added
+   * Added cyclic behavior when navigating through buttons with a keyboard.
+
 ## 3.67.0 - (August 11, 2023)
 
 * Changed

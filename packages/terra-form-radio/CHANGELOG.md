@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 4.40.0 - (August 23, 2023)
+
+* Fixed
+  * Fixed issue of `onChange` not triggered on first and last item of radio field while keyboard navigation.
+
 ## 4.39.0 - (August 11, 2023)
 
 * Changed

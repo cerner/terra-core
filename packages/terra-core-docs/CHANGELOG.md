@@ -5,20 +5,29 @@
 * Updated
   * Updated `terra-scroll` to add realistic examples.
 
+## 1.38.0 - (August 23, 2023)
+
 * Removed
   * Removed custom styles of `terra-arrange` examples to make whole content visible.
+
+* Added
+  * Added drag and drop example for `terra-list`.
+  * Added accessibility guidance for `terra-arrange`.
+  * Added an event to prevent page scroll on hyperlink for `terra-toggle-section-header`.
+
+* Changed
+  * Updated `terra-button-group` tests.
+  * Updated `terra-form-radio-field` example to display selected value.
 
 ## 1.37.0 - (August 18, 2023)
 
 * Added
-  * Added accessibility guidance for `terra-arrange`.
-  * Added an event to prevent page scroll on hyperlink for `terra-toggle-section-header`.
   * Added Search field examples for optional Label with default and custom labels.
 
 * Changed
   * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.51.0.
   * Updated default search delay to 2500ms.
-  * Update Search field examples to be more functionality focused. 
+  * Update Search field examples to be more functionality focused.
 
 ## 1.36.0 - (August 11, 2023)
 
