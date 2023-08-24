@@ -1,7 +1,6 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import ShowHideFocuser from '../../src/ShowHideFocuser';
-
-jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
 
 describe('ShowHideFocuser', () => {
   const mockPrefix = 'Patients are requesting greater affordability and efficiency in healthcare.';
@@ -12,8 +11,14 @@ describe('ShowHideFocuser', () => {
     return <p><ShowHideFocuser ref={ref} prefix={prefix} focusableText={focusableText} /></p>;
   };
 
-  afterAll(() => {
-    jest.resetAllMocks();
+  let mockSpyUuid;
+
+  beforeEach(() => {
+    mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockImplementation(() => '00000000-0000-0000-0000-000000000000');
+  });
+
+  afterEach(() => {
+    mockSpyUuid.mockRestore();
   });
 
   // Snapshot Tests
