@@ -5,6 +5,11 @@
 * Added
   * Added aria-label to make screenreader to announce the selected option.
 
+## 6.45.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 6.44.0 - (August 1, 2023)
 
 * Changed

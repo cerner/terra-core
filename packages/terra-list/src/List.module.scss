@@ -107,7 +107,7 @@
       background-color: var(--terra-list-item-hover-active-background-color, lighten(#ebf6fd, 2%));
     }
 
-    &[data-item-show-focus='true']:focus {
+    &[data-item-show-focus]:focus {
       background-color: var(--terra-list-item-focus-background-color, lighten(#ebf6fd, 2%));
       box-shadow: var(--terra-list-item-focus-box-shadow, inset 0 0 0 1px #26a2e5, inset 0 0 0 4px rgba(76, 178, 233, 0.2));
       z-index: 1;

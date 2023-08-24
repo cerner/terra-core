@@ -1,4 +1,9 @@
 {
   "Terra.list.singleSelect": "Seleção de um item na lista, para marcar ou desmarcar, pressione Enter ou a barra de espaço.",
-  "Terra.list.multiSelect": "Seleção de vários itens na lista, para marcar ou desmarcar, pressione Enter ou barra de espaço."
+  "Terra.list.multiSelect": "Seleção de vários itens na lista, para marcar ou desmarcar, pressione Enter ou barra de espaço.",
+  "Terra.list.lift": "Você subiu um item na posição {startPosition}. Use as teclas de seta para arrastar o item para uma nova posição. Pressione a barra de espaço para posicionar o item ou Esc para cancelar.",
+  "Terra.list.drag": "Você moveu o item da posição {startPosition} para a posição {endPosition}",
+  "Terra.list.cancelDrag": "Movimento cancelado. O item retornou para sua posição inicial de {startPosition}",
+  "Terra.list.drop": "Você desceu o item. Você moveu o item da posição {startPosition} para a posição {endPosition}",
+  "Terra.list.focus": "Pressione a barra de espaço para arrastar. Ao fazer a seleção, você pode usar as teclas de seta para mover o item ou Esc para cancelar a seleção. Certifique-se de que seu leitor de tela esteja no modo foco ou formas"
 }
