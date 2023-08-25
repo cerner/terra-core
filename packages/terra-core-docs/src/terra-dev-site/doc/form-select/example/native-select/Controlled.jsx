@@ -8,6 +8,10 @@ const cx = classNames.bind(styles);
 const ControlledExample = () => {
   const [value, setValue] = useState('volvo');
 
+  const clickHandler = (selectedValue) => {
+    setValue(selectedValue);
+  };
+
   return (
     <>
       <NativeSelect
@@ -22,8 +26,8 @@ const ControlledExample = () => {
         value={value}
         className={cx('form-select')}
       />
-      <button type="button" onClick={() => setValue()}>Clear</button>
-      <button type="button" onClick={() => setValue('mercedes')}>Set Mercedes</button>
+      <button type="button" className={cx('controlled-button')} onClick={() => clickHandler()}>Clear</button>
+      <button type="button" className={cx('controlled-button')} onClick={() => clickHandler('mercedes')}>Set Mercedes</button>
     </>
   );
 };
