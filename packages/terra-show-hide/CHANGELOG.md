@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Added
-  * Added testing documentation with examples how to mock uuid with `jest.spyOn`.
+  * Minor dependency version bump
 
 ## 2.63.0 - (August 23, 2023)
 

@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Testing documentation updated to use `jest.spyOn` instead of `jest.mock`.
+  * Minor dependency version bump
 
 ## 2.74.0 - (August 23, 2023)
 

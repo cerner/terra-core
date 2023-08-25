@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Testing section docs updated to use `jest.spyOn` instead of `jest.mock`.
+
 ## 1.38.0 - (August 23, 2023)
 
 * Removed
