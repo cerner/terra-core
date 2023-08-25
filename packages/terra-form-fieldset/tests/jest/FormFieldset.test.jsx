@@ -1,10 +1,18 @@
 /* eslint-disable react/jsx-boolean-value */
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 import Fieldset from '../../src/Fieldset';
 
-jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
+let mockSpyUuid;
+beforeAll(() => {
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockImplementation(() => '00000000-0000-0000-0000-000000000000');
+});
+
+afterAll(() => {
+  mockSpyUuid.mockRestore();
+});
 
 it('should render a default component', () => {
   const field = (<Fieldset />);

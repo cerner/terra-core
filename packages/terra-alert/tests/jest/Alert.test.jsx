@@ -10,9 +10,17 @@ import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
 import Button from 'terra-button';
+import { v4 as uuidv4 } from 'uuid';
 import Alert from '../../src/Alert';
 
-jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
+let mockSpyUuid;
+beforeAll(() => {
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockImplementation(() => '00000000-0000-0000-0000-000000000000');
+});
+
+afterAll(() => {
+  mockSpyUuid.mockRestore();
+});
 
 describe('Alert with no props', () => {
   it('should render a default component', () => {
