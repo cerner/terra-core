@@ -5,6 +5,12 @@
 * Updated
   * Updated `terra-scroll` to add realistic examples.
 
+* Fixed
+  * Updated `terra-native-select` example to fix slightly truncated button.
+
+* Changed
+  * Updated `terra-button-group` tests.
+
 ## 1.38.0 - (August 23, 2023)
 
 * Removed
@@ -71,6 +77,7 @@
 
 * Changed
   * Updated Toggle Button Examples to have a dashed border around interactive elements.
+
 ## 1.31.0 - (July 13, 2023)
 
 * Added

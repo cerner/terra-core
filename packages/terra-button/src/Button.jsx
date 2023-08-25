@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
@@ -115,197 +115,225 @@ const defaultProps = {
   variant: ButtonVariants.NEUTRAL,
 };
 
-const Button = ({
-  href,
-  icon,
-  isBlock,
-  isCompact,
-  isDisabled,
-  isIconOnly,
-  isReversed,
-  onBlur,
-  onClick,
-  onFocus,
-  onKeyDown,
-  onKeyUp,
-  onMouseDown,
-  refCallback,
-  text,
-  title,
-  type,
-  variant,
-  ...customProps
-}) => {
-  const theme = useContext(ThemeContext);
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { active: false, focused: false };
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleOnBlur = this.handleOnBlur.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.handleClick = this.handleClick.bind(this);
 
-  // We need to manually control active state for FF compatibility
-  const [isActive, setIsActive] = useState(false);
+    this.shouldShowFocus = true;
+  }
 
-  // We manually control focus behaviors for keyboard events.
-  const [isFocused, setIsFocused] = useState(false);
-
-  useEffect(() => {
-    // Disabling button does not trigger onBlur, we need to manually unfocus
-    if (isDisabled) {
-      setIsFocused(false);
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (prevState.focused && nextProps.isDisabled) {
+      return { focused: false };
     }
-  }, [isDisabled]);
+    return null;
+  }
 
-  const handleOnBlur = (event) => {
-    setIsFocused(false);
+  handleOnBlur(event) {
+    this.setState({ focused: false });
 
-    if (onBlur) {
-      onBlur(event);
+    if (this.props.onBlur) {
+      this.props.onBlur(event);
     }
-  };
+  }
 
-  const handleClick = (event) => {
+  handleClick(event) {
     // See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Button#Clicking_and_focus
     // Button on Firefox, Safari and IE running on OS X does not receive focus when clicked.
     // This will put focus on the button when clicked if it is not currently the active element.
     if (document.activeElement !== event.currentTarget) {
+      this.shouldShowFocus = false;
       event.currentTarget.focus();
-      setIsFocused(false);
+      this.shouldShowFocus = true;
     }
 
-    if (onClick) {
-      onClick(event);
+    if (this.props.onClick) {
+      this.props.onClick(event);
     }
-  };
+  }
 
-  const handleKeyDown = (event) => {
+  handleKeyDown(event) {
     // Add active state to FF browsers
-    if (event.keyCode === KeyCode.KEY_RETURN) {
-      setIsFocused(true);
-    }
-
-    if (event.keyCode === KeyCode.KEY_SPACE) {
-      setIsActive(true);
-      setIsFocused(true);
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
+      this.setState({ active: true });
 
       // Follow href on space keydown when rendered as an anchor tag
-      if (href) {
+      if (this.props.href) {
         // Prevent window scrolling
         event.preventDefault();
-        window.location.href = href;
+        window.location.href = this.props.href;
       }
     }
 
-    if (onKeyDown) {
-      onKeyDown(event);
+    // Add focus styles for keyboard navigation
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE || event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
+      this.setState({ focused: true });
     }
-  };
 
-  const handleKeyUp = (event) => {
+    if (this.props.onKeyDown) {
+      this.props.onKeyDown(event);
+    }
+  }
+
+  handleKeyUp(event) {
     // Remove active state from FF broswers
-    if (event.keyCode === KeyCode.KEY_SPACE) {
-      setIsActive(false);
+    if (event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
+      this.setState({ active: false });
     }
 
-    if (onKeyUp) {
-      onKeyUp(event);
+    // Apply focus styles for keyboard navigation
+    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
+      this.setState({ focused: true });
     }
-  };
 
-  const handleMouseDown = (event) => {
-    if (onMouseDown) {
-      onMouseDown(event);
+    if (this.props.onKeyUp) {
+      this.props.onKeyUp(event);
+    }
+  }
+
+  handleFocus(event) {
+    if (this.shouldShowFocus) {
+      this.setState({ focused: true });
+    }
+
+    if (this.props.onFocus) {
+      this.props.onFocus(event);
+    }
+  }
+
+  handleMouseDown(event) {
+    if (this.props.onMouseDown) {
+      this.props.onMouseDown(event);
     }
 
     // See https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus#Notes
     // If you call HTMLElement.focus() from a mousedown event handler, you must call event.preventDefault() to keep the focus from leaving the HTMLElement.
     // Otherwise, when you click on the button again, focus would leave the button and onBlur would get called causing the document.activeElement would no longer be the focused button.
     event.preventDefault();
-  };
+  }
 
-  const handleFocus = (event) => {
-    setIsFocused(true);
-    if (onFocus) {
-      onFocus(event);
-    }
-  };
-
-  const buttonClasses = classNames(
-    cx([
-      'button',
+  render() {
+    const {
+      icon,
+      isBlock,
+      isCompact,
+      isDisabled,
+      isIconOnly,
+      isReversed,
+      text,
+      type,
       variant,
-      { 'is-disabled': isDisabled },
-      { block: isBlock },
-      { compact: isCompact },
-      { 'is-active': isActive && !isDisabled },
-      { 'is-focused': isFocused && !isDisabled },
-      theme.className,
-    ]),
-    customProps.className,
-  );
+      href,
+      onClick,
+      onMouseDown,
+      onBlur,
+      onFocus,
+      onKeyDown,
+      onKeyUp,
+      refCallback,
+      title,
+      ...customProps
+    } = this.props;
 
-  const isIconOnlyClass = isIconOnly || variant === ButtonVariants.UTILITY;
+    const theme = this.context;
 
-  const buttonLabelClasses = cx([
-    'button-label',
-    { 'text-and-icon': icon && !isIconOnlyClass },
-    { 'icon-only': isIconOnlyClass },
-    { 'text-only': !icon },
-  ]);
+    const buttonClasses = classNames(
+      cx([
+        'button',
+        variant,
+        { 'is-disabled': isDisabled },
+        { block: isBlock },
+        { compact: isCompact },
+        { 'is-active': this.state.active && !isDisabled },
+        { 'is-focused': this.state.focused && !isDisabled },
+        theme.className,
+      ]),
+      customProps.className,
+    );
 
-  const buttonTextClasses = cx([
-    { 'text-first': icon && isReversed },
-  ]);
+    const buttonLabelClasses = cx([
+      'button-label',
+      { 'text-and-icon': icon && !isIconOnly && variant !== 'utility' },
+      { 'icon-only': isIconOnly || variant === 'utility' },
+      { 'text-only': !icon },
+    ]);
 
-  const iconClasses = cx([
-    'icon',
-    { 'icon-first': !isIconOnlyClass && !isReversed },
-  ]);
+    const buttonTextClasses = cx([
+      { 'text-first': icon && isReversed },
+    ]);
 
-  const buttonText = !isIconOnlyClass ? <span className={buttonTextClasses}>{text}</span> : null;
+    const iconClasses = cx([
+      'icon',
+      { 'icon-first': (!isIconOnly && variant !== 'utility') && !isReversed },
+    ]);
 
-  let buttonIcon = null;
-  if (icon) {
-    const iconSvgClasses = icon.props.className ? `${icon.props.className} ${cx('icon-svg')}` : cx('icon-svg');
-    const cloneIcon = React.cloneElement(icon, { className: iconSvgClasses });
-    buttonIcon = <span className={iconClasses}>{cloneIcon}</span>;
-  }
+    const buttonText = !isIconOnly && variant !== 'utility' ? <span className={buttonTextClasses}>{text}</span> : null;
 
-  let buttonTitle = title;
-  let ariaLabel = customProps['aria-label'];
+    let buttonIcon = null;
+    if (icon) {
+      const iconSvgClasses = icon.props.className ? `${icon.props.className} ${cx('icon-svg')}` : cx('icon-svg');
+      const cloneIcon = React.cloneElement(icon, { className: iconSvgClasses });
+      buttonIcon = <span className={iconClasses}>{cloneIcon}</span>;
+    }
 
-  if (isIconOnlyClass) {
-    ariaLabel = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : ariaLabel || text;
-    buttonTitle = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : title || text;
-  }
+    let buttonTitle = title;
+    if (isIconOnly || variant === 'utility') {
+      buttonTitle = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : title || text;
+    }
 
-  const ComponentType = href ? 'a' : 'button';
-
-  return (
-    <ComponentType
-      {...customProps}
-      aria-disabled={isDisabled}
-      aria-label={ariaLabel}
-      className={buttonClasses}
-      disabled={isDisabled}
-      href={href}
-      onBlur={handleOnBlur}
-      onClick={handleClick}
-      onFocus={handleFocus}
-      onKeyDown={handleKeyDown}
-      onKeyUp={handleKeyUp}
-      onMouseDown={handleMouseDown}
-      ref={refCallback}
-      role={href ? 'button' : customProps.role}
-      tabIndex={isDisabled ? '-1' : customProps.tabIndex}
-      title={buttonTitle}
-      type={type}
-    >
+    const buttonLabel = (
       <span className={buttonLabelClasses}>
         {isReversed ? buttonText : buttonIcon}
         {isReversed ? buttonIcon : buttonText}
       </span>
-    </ComponentType>
-  );
-};
+    );
+
+    let ariaLabel = customProps['aria-label'];
+    if (isIconOnly || variant === 'utility') {
+      ariaLabel = (icon && icon.props.a11yLabel) ? icon.props.a11yLabel : ariaLabel || text;
+    }
+
+    let ComponentType = 'button';
+    if (href) {
+      ComponentType = 'a';
+      customProps.role = 'button';
+    }
+
+    return (
+      <ComponentType
+        {...customProps}
+        className={buttonClasses}
+        type={type}
+        disabled={isDisabled}
+        tabIndex={isDisabled ? '-1' : customProps.tabIndex}
+        aria-disabled={isDisabled}
+        aria-label={ariaLabel}
+        onKeyDown={this.handleKeyDown}
+        onKeyUp={this.handleKeyUp}
+        onBlur={this.handleOnBlur}
+        title={buttonTitle}
+        onClick={this.handleClick}
+        onMouseDown={this.handleMouseDown}
+        onFocus={this.handleFocus}
+        href={href}
+        ref={refCallback}
+      >
+        {buttonLabel}
+      </ComponentType>
+    );
+  }
+}
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
+Button.contextType = ThemeContext;
 
 Button.Opts = {};
 Button.Opts.Types = ButtonTypes;
