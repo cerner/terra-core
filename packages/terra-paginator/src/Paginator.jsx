@@ -258,57 +258,71 @@ class Paginator extends React.Component {
 
     const reducedViewChildren = (
       <>
-        {
-          totalCount && (
-          <PaginatorButton
-            ariaDisabled={selectedPage === 1}
-            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
-            className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
-            disabled={selectedPage === 1}
-            onClick={this.handlePageChange(1)}
-            onKeyDown={this.handlePageChange(1)}
-          >
-            {intl.formatMessage({ id: 'Terra.paginator.first' })}
-          </PaginatorButton>
-          )
-        }
-        <PaginatorButton
-          ariaDisabled={selectedPage === 1}
-          ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
-          className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
-          disabled={selectedPage === 1}
-          onClick={this.handlePageChange(previousPageIndex)}
-          onKeyDown={this.handlePageChange(previousPageIndex)}
-        >
-          <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.previous' })} />
-          <span className={cx('icon')} />
-        </PaginatorButton>
-        {totalCount && intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })}
-        <PaginatorButton
-          ariaDisabled={selectedPage === totalPages}
-          ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
-          className={cx(['nav-link', 'right-controls', 'next', 'icon-only', selectedPage === totalPages && 'is-disabled'])}
-          disabled={selectedPage === totalPages}
-          onClick={this.handlePageChange(nextPageIndex)}
-          onKeyDown={this.handlePageChange(nextPageIndex)}
-        >
-          <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.next' })} />
-          <span className={cx('icon')} />
-        </PaginatorButton>
-        {
-          totalCount && (
-          <PaginatorButton
-            ariaDisabled={selectedPage === totalPages}
-            ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
-            className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
-            disabled={selectedPage === totalPages}
-            onClick={this.handlePageChange(totalPages)}
-            onKeyDown={this.handlePageChange(totalPages)}
-          >
-            {intl.formatMessage({ id: 'Terra.paginator.last' })}
-          </PaginatorButton>
-          )
-        }
+        <div>
+          {
+            totalCount && intl.formatMessage({ id: 'Terra.paginator.pageIndex' }, { pageNumber: selectedPage })
+          }
+        </div>
+        <ul className={cx('list')}>
+          {
+            totalCount && (
+              <li>
+                <PaginatorButton
+                  ariaDisabled={selectedPage === 1}
+                  ariaLabel={intl.formatMessage({ id: 'Terra.paginator.first' })}
+                  className={cx(['nav-link', 'left-controls', selectedPage === 1 && 'is-disabled'])}
+                  disabled={selectedPage === 1}
+                  onClick={this.handlePageChange(1)}
+                  onKeyDown={this.handlePageChange(1)}
+                >
+                  {intl.formatMessage({ id: 'Terra.paginator.first' })}
+                </PaginatorButton>
+              </li>
+            )
+          }
+          <li>
+            <PaginatorButton
+              ariaDisabled={selectedPage === 1}
+              ariaLabel={intl.formatMessage({ id: 'Terra.paginator.previous' })}
+              className={cx(['nav-link', 'left-controls', 'previous', 'icon-only', selectedPage === 1 && 'is-disabled'])}
+              disabled={selectedPage === 1}
+              onClick={this.handlePageChange(previousPageIndex)}
+              onKeyDown={this.handlePageChange(previousPageIndex)}
+            >
+              <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.previous' })} />
+              <span className={cx('icon')} />
+            </PaginatorButton>
+          </li>
+          <li>
+            <PaginatorButton
+              ariaDisabled={selectedPage === totalPages}
+              ariaLabel={intl.formatMessage({ id: 'Terra.paginator.next' })}
+              className={cx(['nav-link', 'right-controls', 'next', 'icon-only', selectedPage === totalPages && 'is-disabled'])}
+              disabled={selectedPage === totalPages}
+              onClick={this.handlePageChange(nextPageIndex)}
+              onKeyDown={this.handlePageChange(nextPageIndex)}
+            >
+              <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.paginator.next' })} />
+              <span className={cx('icon')} />
+            </PaginatorButton>
+          </li>
+          {
+            totalCount && (
+              <li>
+                <PaginatorButton
+                  ariaDisabled={selectedPage === totalPages}
+                  ariaLabel={intl.formatMessage({ id: 'Terra.paginator.last' })}
+                  className={cx(['nav-link', 'right-controls', selectedPage === totalPages && 'is-disabled'])}
+                  disabled={selectedPage === totalPages}
+                  onClick={this.handlePageChange(totalPages)}
+                  onKeyDown={this.handlePageChange(totalPages)}
+                >
+                  {intl.formatMessage({ id: 'Terra.paginator.last' })}
+                </PaginatorButton>
+              </li>
+            )
+          }
+        </ul>
       </>
     );
 
@@ -318,7 +332,7 @@ class Paginator extends React.Component {
 
     const reducedView = (
       <nav
-        className={cx('paginator', !totalCount && 'pageless', theme.className)}
+        className={cx('paginator', theme.className)}
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
       >
