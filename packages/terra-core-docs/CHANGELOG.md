@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.39.0 - (August 25, 2023)
+
 * Fixed
   * Updated `terra-native-select` example to fix slightly truncated button.
 

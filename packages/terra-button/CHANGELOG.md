@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.68.1 - (August 25, 2023)
+
 * Fixed
   * Reverted change from functional component to class component to fix an issue with passing refs into the component.
 
