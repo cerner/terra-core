@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added visually hidden text with meaningful contexts to help screen reader users understand when they navigate the pagination.
+
 ## 2.84.0 - (August 18, 2023)
 
 * Changed
@@ -11,7 +14,6 @@
 
 * Added
   * Added optional props `ariaLabelledBy` and `ariaLabel` to provide ARIA contexts for the paginator.
-  * Added a visually hidden text with meaningful contexts to help screen reader users understand when they navigate the pagination.
 
 * Changed
   * Updated Paginator button role to be link for screen reader usage.
