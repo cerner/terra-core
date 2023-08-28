@@ -1,14 +1,22 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added drag and drop example for `terra-list`.
+
+* Updated
+  * Updated `terra-scroll` to add realistic examples.
+  *  Updated all paginator examples to use meaningful titles.
+  *  Updated testing recommendations to use `jest.spyOn` instead of `jest.mock`.
+ 
+## 1.39.0 - (August 25, 2023)
 
 * Fixed
   * Updated `terra-native-select` example to fix slightly truncated button.
 
 * Changed
   * Updated `terra-button-group` tests.
-  * Updated all paginator examples to use meaningful titles.
-  
+
 ## 1.38.0 - (August 23, 2023)
 
 * Removed
