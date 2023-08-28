@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated `terra-scroll` to add realistic examples.
+ 
 ## 1.39.0 - (August 25, 2023)
 
 * Fixed
@@ -9,7 +12,7 @@
 
 * Changed
   * Updated `terra-button-group` tests.
-  
+
 ## 1.38.0 - (August 23, 2023)
 
 * Removed
