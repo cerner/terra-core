@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added drag and drop example for `terra-list`.
 
 * Updated
   * Updated `terra-scroll` to add realistic examples.
