@@ -14,6 +14,7 @@
 
 * Changed
   * Updated `terra-button-group` tests.
+  * Updated testing recommendations to use `jest.spyOn` instead of `jest.mock`.
 
 ## 1.38.0 - (August 23, 2023)
 
