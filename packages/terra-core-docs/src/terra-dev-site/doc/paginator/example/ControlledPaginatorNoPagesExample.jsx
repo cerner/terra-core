@@ -29,8 +29,7 @@ const ControlledPaginatorExample = () => {
       <Dialog
         header={(
           <h1>
-            Page
-            {currentPage}
+            Controlled Paginator No Pages Example
           </h1>
         )}
         footer={<ControlledPaginator onPageChange={changePages} selectedPage={currentPage} ariaLabel="controlled paginator no pages pagination" />}

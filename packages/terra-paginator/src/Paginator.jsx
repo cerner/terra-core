@@ -57,6 +57,7 @@ class Paginator extends React.Component {
       selectedPage: selectedPage && totalCount ? selectedPage : undefined,
       pageSequence: selectedPage && totalCount ? pageSet(selectedPage, calculatePages(totalCount, itemCountPerPage)) : undefined,
       showReducedPaginator: false,
+      selectedPageMessage: '',
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
@@ -66,6 +67,12 @@ class Paginator extends React.Component {
   }
 
   handlePageChange(index) {
+    const {
+      intl,
+      itemCountPerPage,
+      totalCount,
+    } = this.props;
+
     return (event) => {
       if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         event.preventDefault();
@@ -77,10 +84,18 @@ class Paginator extends React.Component {
         return false;
       }
 
+      let message;
+      if (totalCount && itemCountPerPage) {
+        message = intl.formatMessage({ id: 'Terra.paginator.pageSelectedWithCount' }, { pageNumber: index, pageNumberTotal: calculatePages(totalCount, itemCountPerPage) });
+      } else {
+        message = intl.formatMessage({ id: 'Terra.paginator.pageSelected' }, { pageNumber: index });
+      }
+
       this.props.onPageChange(index);
       this.setState({
         selectedPage: index,
         pageSequence: pageSet(index, calculatePages(this.props.totalCount, this.props.itemCountPerPage)),
+        selectedPageMessage: message,
       });
 
       return false;
@@ -208,17 +223,20 @@ class Paginator extends React.Component {
       </ul>
     );
 
-    const fullView = ariaLabelledBy
-      ? (
-        <nav className={cx('paginator', !totalCount && 'pageless', theme.className)} aria-labelledby={ariaLabelledBy}>
-          {fullViewChildren}
-        </nav>
-      )
-      : (
-        <nav className={cx('paginator', !totalCount && 'pageless', theme.className)} aria-label={paginatorAriaLabel}>
-          {fullViewChildren}
-        </nav>
-      );
+    const navigationMessage = (
+      <VisuallyHiddenText aria-live="polite" aria-relevant="all" text={this.state.selectedPageMessage} />
+    );
+
+    const fullView = (
+      <nav
+        className={cx('paginator', !totalCount && 'pageless', theme.className)}
+        aria-labelledby={ariaLabelledBy}
+        aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
+      >
+        {navigationMessage}
+        {fullViewChildren}
+      </nav>
+    );
 
     return fullView;
   }
@@ -294,17 +312,20 @@ class Paginator extends React.Component {
       </>
     );
 
-    const reducedView = ariaLabelledBy
-      ? (
-        <nav className={cx('paginator', !totalCount && 'pageless', theme.className)} aria-labelledby={ariaLabelledBy}>
-          {reducedViewChildren}
-        </nav>
-      )
-      : (
-        <nav className={cx('paginator', !totalCount && 'pageless', theme.className)} aria-label={paginatorAriaLabel}>
-          {reducedViewChildren}
-        </nav>
-      );
+    const navigationMessage = (
+      <VisuallyHiddenText aria-live="polite" aria-relevant="all" text={this.state.selectedPageMessage} />
+    );
+
+    const reducedView = (
+      <nav
+        className={cx('paginator', !totalCount && 'pageless', theme.className)}
+        aria-labelledby={ariaLabelledBy}
+        aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
+      >
+        {navigationMessage}
+        {reducedViewChildren}
+      </nav>
+    );
 
     return reducedView;
   }

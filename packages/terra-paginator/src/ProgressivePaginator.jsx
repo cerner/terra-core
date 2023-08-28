@@ -58,6 +58,7 @@ class ProgressivePaginator extends React.Component {
     this.state = {
       selectedPage: selectedPage || 1,
       showReducedPaginator: false,
+      selectedPageMessage: '',
     };
 
     this.handlePageChange = this.handlePageChange.bind(this);
@@ -67,13 +68,30 @@ class ProgressivePaginator extends React.Component {
   }
 
   handlePageChange(index) {
+    const {
+      intl,
+      itemCountPerPage,
+      totalCount,
+    } = this.props;
+
     return (event) => {
       if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN || event.nativeEvent.keyCode === KeyCode.KEY_SPACE) {
         event.preventDefault();
       }
 
       this.props.onPageChange(index);
-      this.setState({ selectedPage: index });
+
+      let message;
+      if (totalCount && itemCountPerPage) {
+        message = intl.formatMessage({ id: 'Terra.paginator.pageSelectedWithCount' }, { pageNumber: index, pageNumberTotal: calculatePages(totalCount, itemCountPerPage) });
+      } else {
+        message = intl.formatMessage({ id: 'Terra.paginator.pageSelected' }, { pageNumber: index });
+      }
+
+      this.setState({
+        selectedPage: index,
+        selectedPageMessage: message,
+      });
     };
   }
 
@@ -172,17 +190,20 @@ class ProgressivePaginator extends React.Component {
       </>
     );
 
-    const fullView = ariaLabelledBy
-      ? (
-        <nav className={cx('paginator', 'progressive', theme.className)} aria-labelledby={ariaLabelledBy}>
-          {fullViewChildren}
-        </nav>
-      )
-      : (
-        <nav className={cx('paginator', 'progressive', theme.className)} aria-label={paginatorAriaLabel}>
-          {fullViewChildren}
-        </nav>
-      );
+    const navigationMessage = (
+      <VisuallyHiddenText aria-live="polite" aria-relevant="all" text={this.state.selectedPageMessage} />
+    );
+
+    const fullView = (
+      <nav
+        className={cx('paginator', 'progressive', theme.className)}
+        aria-labelledby={ariaLabelledBy}
+        aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
+      >
+        {navigationMessage}
+        {fullViewChildren}
+      </nav>
+    );
 
     return fullView;
   }
@@ -269,17 +290,20 @@ class ProgressivePaginator extends React.Component {
       </>
     );
 
-    const reducedView = ariaLabelledBy
-      ? (
-        <nav className={cx('paginator', theme.className)} aria-labelledby={ariaLabelledBy}>
-          {reducedViewChildren}
-        </nav>
-      )
-      : (
-        <nav className={cx('paginator', theme.className)} aria-label={paginatorAriaLabel}>
-          {reducedViewChildren}
-        </nav>
-      );
+    const navigationMessage = (
+      <VisuallyHiddenText aria-live="polite" aria-relevant="all" text={this.state.selectedPageMessage} />
+    );
+
+    const reducedView = (
+      <nav
+        className={cx('paginator', theme.className)}
+        aria-labelledby={ariaLabelledBy}
+        aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
+      >
+        {navigationMessage}
+        {reducedViewChildren}
+      </nav>
+    );
 
     return reducedView;
   }

@@ -40,8 +40,7 @@ class PaginatorExample extends React.Component {
         <Dialog
           header={(
             <h1 id="controlled_paginator_header_id">
-              Page
-              {this.state.currentPage}
+              Controlled Paginator Example
             </h1>
 )}
           footer={<ControlledPaginator onPageChange={this.changePages} selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} ariaLabelledBy="controlled_paginator_header_id" />}

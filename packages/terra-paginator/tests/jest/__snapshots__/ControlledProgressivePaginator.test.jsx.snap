@@ -82,6 +82,17 @@ exports[`Paginator correctly applies the theme context className 1`] = `
           aria-label="pagination"
           className="paginator orion-fusion-theme"
         >
+          <VisuallyHiddenText
+            aria-live="polite"
+            aria-relevant="all"
+            text=""
+          >
+            <span
+              aria-live="polite"
+              aria-relevant="all"
+              className="visually-hidden-text"
+            />
+          </VisuallyHiddenText>
           <div>
             <PaginatorButton
               ariaDisabled={true}
@@ -223,6 +234,11 @@ exports[`Paginator should render a Controlled ProgressivePaginator - Large 1`] =
     aria-label="pagination"
     className="paginator progressive"
   >
+    <VisuallyHiddenText
+      aria-live="polite"
+      aria-relevant="all"
+      text=""
+    />
     <div>
       Terra.paginator.pageCount
     </div>
@@ -297,6 +313,11 @@ exports[`Paginator should render a Controlled ProgressivePaginator - Tiny 1`] = 
     aria-label="pagination"
     className="paginator progressive"
   >
+    <VisuallyHiddenText
+      aria-live="polite"
+      aria-relevant="all"
+      text=""
+    />
     <div>
       Terra.paginator.pageCount
     </div>
@@ -371,6 +392,11 @@ exports[`Paginator should render a Controlled ProgressivePaginator with aria lab
     aria-label="paginator_label"
     className="paginator progressive"
   >
+    <VisuallyHiddenText
+      aria-live="polite"
+      aria-relevant="all"
+      text=""
+    />
     <div>
       Terra.paginator.pageCount
     </div>
@@ -445,6 +471,11 @@ exports[`Paginator should render a Controlled ProgressivePaginator with heading 
     aria-labelledby="paginator_header_id"
     className="paginator progressive"
   >
+    <VisuallyHiddenText
+      aria-live="polite"
+      aria-relevant="all"
+      text=""
+    />
     <div>
       Terra.paginator.pageCount
     </div>
@@ -469,6 +500,85 @@ exports[`Paginator should render a Controlled ProgressivePaginator with heading 
           ariaLabel="Terra.paginator.previous"
           className="nav-link previous is-disabled"
           disabled={true}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          <span
+            className="icon"
+          />
+          Terra.paginator.previous
+        </PaginatorButton>
+      </li>
+      <li>
+        <PaginatorButton
+          ariaDisabled={false}
+          ariaLabel="Terra.paginator.next"
+          className="nav-link next"
+          disabled={false}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Terra.paginator.next
+          <span
+            className="icon"
+          />
+        </PaginatorButton>
+      </li>
+      <li>
+        <PaginatorButton
+          ariaDisabled={false}
+          ariaLabel="Terra.paginator.last"
+          className="nav-link"
+          disabled={false}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Terra.paginator.last
+        </PaginatorButton>
+      </li>
+    </ul>
+  </nav>
+</ResponsiveElement>
+`;
+
+exports[`Paginator should render a Controlled ProgressivePaginator with visually hidden text 1`] = `
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
+>
+  <nav
+    aria-label="pagination"
+    className="paginator progressive"
+  >
+    <VisuallyHiddenText
+      aria-live="polite"
+      aria-relevant="all"
+      text="Terra.paginator.pageSelectedWithCount"
+    />
+    <div>
+      Terra.paginator.pageCount
+    </div>
+    <ul
+      className="progressive-list"
+    >
+      <li>
+        <PaginatorButton
+          ariaDisabled={false}
+          ariaLabel="Terra.paginator.first"
+          className="nav-link"
+          disabled={false}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Terra.paginator.first
+        </PaginatorButton>
+      </li>
+      <li>
+        <PaginatorButton
+          ariaDisabled={false}
+          ariaLabel="Terra.paginator.previous"
+          className="nav-link previous"
+          disabled={false}
           onClick={[Function]}
           onKeyDown={[Function]}
         >
