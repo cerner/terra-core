@@ -5,8 +5,13 @@
     width: 400px;
   }
 
+  .overflow-y-wrapper {
+    border: 1px dashed rgb(0, 0, 0);
+    height: auto;
+    width: 400px;
+  }
+
   .paragraph-x-wrapper {
-    height: 160px;
     padding-left: 10px;
     padding-right: 10px;
     width: 1350px;
@@ -16,5 +21,10 @@
     padding-left: 10px;
     padding-right: 10px;
     width: 375px;
+  }
+
+  .container-x-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
