@@ -4,6 +4,7 @@
 
 * Added
   * Added visually hidden text with meaningful contexts to help screen reader users understand when they navigate the pagination.
+  * Added optional `fusionAnchor` prop to support MPage Fusion pagination footer anchor style.
 
 * Changed
   * Updated all Paginator reduced views to align with the default views styling.

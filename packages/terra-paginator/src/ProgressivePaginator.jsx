@@ -47,6 +47,14 @@ const propTypes = {
    * Allows user to set custom page label. _(usage note: User must pass translated text)_.
    */
   pageLabel: PropTypes.string,
+  /**
+   * Apply Fusion anchor style or not.
+   */
+  fusionAnchor: PropTypes.bool,
+};
+
+const defaultProps = {
+  fusionAnchor: false,
 };
 
 class ProgressivePaginator extends React.Component {
@@ -111,6 +119,7 @@ class ProgressivePaginator extends React.Component {
       ariaLabelledBy,
       ariaLabel,
       pageLabel,
+      fusionAnchor,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
@@ -197,7 +206,7 @@ class ProgressivePaginator extends React.Component {
 
     const fullView = (
       <nav
-        className={cx('paginator', 'progressive', theme.className)}
+        className={cx('paginator', 'progressive', fusionAnchor && 'fusion-anchor', theme.className)}
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
       >
@@ -218,6 +227,7 @@ class ProgressivePaginator extends React.Component {
       ariaLabelledBy,
       ariaLabel,
       pageLabel,
+      fusionAnchor,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
@@ -304,7 +314,7 @@ class ProgressivePaginator extends React.Component {
 
     const reducedView = (
       <nav
-        className={cx('paginator', 'progressive', theme.className)}
+        className={cx('paginator', 'progressive', fusionAnchor && 'fusion-anchor', theme.className)}
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
       >
@@ -328,6 +338,7 @@ class ProgressivePaginator extends React.Component {
 }
 
 ProgressivePaginator.propTypes = propTypes;
+ProgressivePaginator.defaultProps = defaultProps;
 ProgressivePaginator.contextType = ThemeContext;
 
 export default injectIntl(ProgressivePaginator);

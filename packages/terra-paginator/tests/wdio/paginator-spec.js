@@ -19,6 +19,13 @@ Terra.describeViewports('Paginator', ['tiny', 'medium', 'large'], () => {
       Terra.validates.element('progressive paginator');
     });
   });
+
+  describe('ProgressivePaginator with Fusion Anchor style', () => {
+    it('should render progressive paginator in Fusion anchor style', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/paginator/progressive-paginator-with-fusion-anchor-style');
+      Terra.validates.element('progressive paginator fusion anchor style');
+    });
+  });
 });
 
 Terra.describeViewports('Controlled Paginator', ['large'], () => {

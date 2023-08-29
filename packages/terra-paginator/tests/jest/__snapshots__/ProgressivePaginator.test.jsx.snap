@@ -1,5 +1,240 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ProgressivePaginator correctly applies the fusion theme context className with anchor style 1`] = `
+<ThemeContextProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  theme={
+    Object {
+      "className": "orion-fusion-theme",
+    }
+  }
+>
+  <InjectIntl(ProgressivePaginator)
+    fusionAnchor={true}
+    itemCountPerPage={20}
+    onPageChange={[Function]}
+    selectedPage={1}
+    totalCount={2234}
+  >
+    <ProgressivePaginator
+      fusionAnchor={true}
+      intl={
+        Object {
+          "defaultFormats": Object {},
+          "defaultLocale": "en",
+          "formatDate": [Function],
+          "formatHTMLMessage": [Function],
+          "formatMessage": [Function],
+          "formatNumber": [Function],
+          "formatPlural": [Function],
+          "formatRelative": [Function],
+          "formatTime": [Function],
+          "formats": Object {},
+          "formatters": Object {
+            "getDateTimeFormat": [Function],
+            "getMessageFormat": [Function],
+            "getNumberFormat": [Function],
+            "getPluralFormat": [Function],
+            "getRelativeFormat": [Function],
+          },
+          "locale": "en",
+          "messages": null,
+          "now": [Function],
+          "onError": [Function],
+          "textComponent": "span",
+          "timeZone": null,
+        }
+      }
+      itemCountPerPage={20}
+      onPageChange={[Function]}
+      selectedPage={1}
+      totalCount={2234}
+    >
+      <ResponsiveElement
+        onChange={[Function]}
+        responsiveTo="parent"
+      >
+        <nav
+          aria-label="pagination"
+          className="paginator progressive fusion-anchor orion-fusion-theme"
+        >
+          <VisuallyHiddenText
+            aria-live="polite"
+            aria-relevant="all"
+            text=""
+          >
+            <span
+              aria-live="polite"
+              aria-relevant="all"
+              className="visually-hidden-text"
+            />
+          </VisuallyHiddenText>
+          <div>
+            Terra.paginator.pageCount
+          </div>
+          <ul
+            className="progressive-list"
+          >
+            <li>
+              <PaginatorButton
+                ariaDisabled={true}
+                ariaLabel="Terra.paginator.first"
+                className="nav-link is-disabled"
+                disabled={true}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                <button
+                  aria-disabled={true}
+                  aria-label="Terra.paginator.first"
+                  className="nav-link is-disabled"
+                  disabled={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  role="link"
+                  type="button"
+                >
+                  Terra.paginator.first
+                </button>
+              </PaginatorButton>
+            </li>
+            <li>
+              <PaginatorButton
+                ariaDisabled={true}
+                ariaLabel="Terra.paginator.previous"
+                className="nav-link previous icon-only is-disabled"
+                disabled={true}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                <button
+                  aria-disabled={true}
+                  aria-label="Terra.paginator.previous"
+                  className="nav-link previous icon-only is-disabled"
+                  disabled={true}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  role="link"
+                  type="button"
+                >
+                  <VisuallyHiddenText
+                    text="Terra.paginator.previous"
+                  >
+                    <span
+                      className="visually-hidden-text"
+                    >
+                      Terra.paginator.previous
+                    </span>
+                  </VisuallyHiddenText>
+                  <span
+                    className="icon"
+                  />
+                </button>
+              </PaginatorButton>
+            </li>
+            <li>
+              <PaginatorButton
+                ariaDisabled={false}
+                ariaLabel="Terra.paginator.next"
+                className="nav-link next icon-only"
+                disabled={false}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                <button
+                  aria-disabled={false}
+                  aria-label="Terra.paginator.next"
+                  className="nav-link next icon-only"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  role="link"
+                  type="button"
+                >
+                  <VisuallyHiddenText
+                    text="Terra.paginator.next"
+                  >
+                    <span
+                      className="visually-hidden-text"
+                    >
+                      Terra.paginator.next
+                    </span>
+                  </VisuallyHiddenText>
+                  <span
+                    className="icon"
+                  />
+                </button>
+              </PaginatorButton>
+            </li>
+            <li>
+              <PaginatorButton
+                ariaDisabled={false}
+                ariaLabel="Terra.paginator.last"
+                className="nav-link"
+                disabled={false}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                <button
+                  aria-disabled={false}
+                  aria-label="Terra.paginator.last"
+                  className="nav-link"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  role="link"
+                  type="button"
+                >
+                  Terra.paginator.last
+                </button>
+              </PaginatorButton>
+            </li>
+          </ul>
+        </nav>
+      </ResponsiveElement>
+    </ProgressivePaginator>
+  </InjectIntl(ProgressivePaginator)>
+</ThemeContextProvider>
+`;
+
 exports[`ProgressivePaginator correctly applies the theme context className 1`] = `
 <ThemeContextProvider
   intl={
@@ -42,6 +277,7 @@ exports[`ProgressivePaginator correctly applies the theme context className 1`] 
     totalCount={2234}
   >
     <ProgressivePaginator
+      fusionAnchor={false}
       intl={
         Object {
           "defaultFormats": Object {},

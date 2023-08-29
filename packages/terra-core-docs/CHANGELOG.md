@@ -5,6 +5,7 @@
 * Added
   * Added drag and drop example for `terra-list`.
   * Added instruction note for `terra-form-radio` label hidden example
+  * Added Progressive Paginator with Fusion Anchor style example for `terra-paginator`.
 
 * Updated
   *  Updated `terra-scroll` to add realistic examples.

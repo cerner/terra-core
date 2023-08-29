@@ -209,4 +209,11 @@
     margin-block-start: 0;
     padding-inline-start: 0;
   }
+
+  .fusion-anchor {
+    background-color: var(--terra-paginator-fusion-anchor-background-color, #f4f4f4);
+    border-top: 1px solid #9b9fa1;
+    padding-bottom: var(--terra-paginator-fusion-anchor-padding-bottom, 0.5rem);
+    padding-top: var(--terra-paginator-fusion-anchor-padding-top, 0.5rem);
+  }
 }
