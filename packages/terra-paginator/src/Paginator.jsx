@@ -158,11 +158,12 @@ class Paginator extends React.Component {
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
     const paginatorAriaLabel = ariaLabel || 'pagination';
+    const renderFirstandLastButton = totalCount > 0;
 
     const fullViewChildren = (
       <ul className={cx('list')}>
         {
-          totalCount && (
+          renderFirstandLastButton && (
             <li>
               <PaginatorButton
                 ariaDisabled={selectedPage === 1}
@@ -205,7 +206,7 @@ class Paginator extends React.Component {
           </PaginatorButton>
         </li>
         {
-          totalCount && (
+          renderFirstandLastButton && (
             <li>
               <PaginatorButton
                 ariaDisabled={selectedPage === totalPages}
@@ -255,6 +256,7 @@ class Paginator extends React.Component {
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
     const paginatorAriaLabel = ariaLabel || 'pagination';
+    const renderFirstandLastButton = totalCount > 0;
 
     const reducedViewChildren = (
       <>
@@ -265,7 +267,7 @@ class Paginator extends React.Component {
         </div>
         <ul className={cx('list')}>
           {
-            totalCount && (
+            renderFirstandLastButton && (
               <li>
                 <PaginatorButton
                   ariaDisabled={selectedPage === 1}
@@ -307,7 +309,7 @@ class Paginator extends React.Component {
             </PaginatorButton>
           </li>
           {
-            totalCount && (
+            renderFirstandLastButton && (
               <li>
                 <PaginatorButton
                   ariaDisabled={selectedPage === totalPages}

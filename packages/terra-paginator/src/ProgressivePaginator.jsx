@@ -117,6 +117,7 @@ class ProgressivePaginator extends React.Component {
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
     const paginatorAriaLabel = ariaLabel || 'pagination';
+    const renderFirstandLastButton = totalCount > 0;
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
 
@@ -129,7 +130,7 @@ class ProgressivePaginator extends React.Component {
         </div>
         <ul className={cx('progressive-list')}>
           {
-            totalCount && (
+            renderFirstandLastButton && (
               <li>
                 <PaginatorButton
                   ariaDisabled={selectedPage === 1}
@@ -171,7 +172,7 @@ class ProgressivePaginator extends React.Component {
             </PaginatorButton>
           </li>
           {
-            (totalCount) && (
+            renderFirstandLastButton && (
               <li>
                 <PaginatorButton
                   ariaDisabled={selectedPage === totalPages}
@@ -223,6 +224,7 @@ class ProgressivePaginator extends React.Component {
     const previousPageIndex = selectedPage === 1 ? 1 : selectedPage - 1;
     const nextPageIndex = selectedPage === totalPages ? totalPages : selectedPage + 1;
     const paginatorAriaLabel = ariaLabel || 'pagination';
+    const renderFirstandLastButton = totalCount > 0;
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
 
@@ -235,7 +237,7 @@ class ProgressivePaginator extends React.Component {
         </div>
         <ul className={cx('progressive-list')}>
           {
-            (totalCount) && (
+            renderFirstandLastButton && (
               <li>
                 <PaginatorButton
                   ariaDisabled={selectedPage === 1}
@@ -277,7 +279,7 @@ class ProgressivePaginator extends React.Component {
             </PaginatorButton>
           </li>
           {
-            (totalCount) && (
+            renderFirstandLastButton && (
               <li>
                 <PaginatorButton
                   ariaDisabled={selectedPage === totalPages}
