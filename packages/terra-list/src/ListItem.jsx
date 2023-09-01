@@ -6,6 +6,7 @@ import ThemeContext from 'terra-theme-context';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import { injectIntl } from 'react-intl';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
+import IconKnurling from 'terra-icon/lib/icon/IconKnurling';
 import ListUtils from './ListUtils';
 import styles from './List.module.scss';
 
@@ -118,11 +119,21 @@ const ListItem = ({
     attrSpread['aria-describedby'] = responseId;
   }
 
+  const iconclassName = cx([
+    'item-fill',
+    (isDraggable) && 'icon-knurling',
+  ]);
+
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
-      <div className={cx('item-fill')} key="item-fill">
+      <div className={iconclassName} key="item-fill">
         {children}
-        {(isDraggable) && <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />}
+        {(isDraggable) && (
+          <React.Fragment>
+            <IconKnurling />
+            <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />
+          </React.Fragment>
+        )}
       </div>
       {hasChevron && <div className={cx('item-end')} key="item-end"><span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span></div>}
     </li>
