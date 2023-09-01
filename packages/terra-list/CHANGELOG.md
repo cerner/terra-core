@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added drag and drop icon for draggable list items.
 
 ## 4.60.0 - (August 23, 2023)
 
