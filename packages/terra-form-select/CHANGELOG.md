@@ -1,5 +1,9 @@
 # Changelog
 
+* Fixed
+  * Fixed focus issue of Invalid example `form-single-select`.
+  * Fixed safari browser minimised issue in `form-single-select` .
+
 ## Unreleased
 
 ## 6.46.0 - (August 25, 2023)

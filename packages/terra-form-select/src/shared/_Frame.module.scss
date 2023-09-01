@@ -95,8 +95,8 @@
 
     &.is-invalid.is-focused {
       background-size: var(--terra-form-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-form-single-select-invalid-focus-border-color, 0 0 0 1px #4cb2e9);
-      box-shadow: var(--terra-form-single-select-invalid-focus-box-shadow, 0 0 0 1px #4cb2e9);
+      border-color: var(--terra-form-select-single-select-invalid-focus-border-color, #4cb2e9);
+      box-shadow: var(--terra-form-select-single-select-invalid-focus-box-shadow, 0 0 0 2px rgba(76, 178, 233, 0.25));
     }
 
     &.is-invalid:hover {
