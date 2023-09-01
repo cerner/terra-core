@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a subcomponent TagList.
+
 ## 2.57.0 - (April 27, 2023)
 
 * Changed

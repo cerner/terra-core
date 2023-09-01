@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added about page for `TagList`.
+
 * Updated
   * Updated an example for `terra-dropdown-button`.
 
