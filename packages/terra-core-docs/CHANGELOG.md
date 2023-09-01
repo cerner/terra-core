@@ -1,15 +1,91 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added drag and drop example for `terra-list`.
+
+* Updated
+  * Updated `terra-scroll` to add realistic examples.
+  *  Updated all paginator examples to use meaningful titles.
+  *  Updated testing recommendations to use `jest.spyOn` instead of `jest.mock`.
+ 
+## 1.39.0 - (August 25, 2023)
+
+* Fixed
+  * Updated `terra-native-select` example to fix slightly truncated button.
+
+* Changed
+  * Updated `terra-button-group` tests.
+
+## 1.38.0 - (August 23, 2023)
+
+* Removed
+  * Removed custom styles of `terra-arrange` examples to make whole content visible.
+
+* Added
+  * Added drag and drop example for `terra-list`.
+  * Added accessibility guidance for `terra-arrange`.
+  * Added an event to prevent page scroll on hyperlink for `terra-toggle-section-header`.
+
+* Changed
+  * Updated `terra-button-group` tests.
+  * Updated `terra-form-radio-field` example to display selected value.
+
+## 1.37.0 - (August 18, 2023)
+
+* Added
+  * Added Search field examples for optional Label with default and custom labels.
+
+* Changed
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.51.0.
+  * Updated default search delay to 2500ms.
+  * Updated Search field examples to be more functionality focused.
+
+## 1.36.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.35.0 - (August 11, 2023)
+
+* Changed
+  * Updated all paginator examples for `terra-paginator` to use new props.
+  * Updated imports from `src` to `lib`.
+  * Updated `terra-toggle-button` example and user documentation.
+
+## 1.34.0 - (August 8, 2023)
+
+* Updated
+  * Updated `terra-tag` to include realistic examples.
+
+## 1.33.0 - (August 2, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.32.0 - (August 1, 2023)
+
+* Changed
+  * Updated Arrange component example to use `span` element instead of `div`.
+
+* Added
+  * Added realistic examples for `terra-arrange`.
+  * Added realistic examples for `terra-toggle-section-header`.
+  * Added email validation for `terra-form-field`.
 
 * Added
   * Added about page for `TagList`.
 
 * Updated
   * Updated an example for `terra-dropdown-button`.
+  * Updated email field validation for `terra-form-field`.
+  * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
 
 * Added
   * Added documentation updates for `terra-form-input`.
+
+* Changed
+  * Updated Toggle Button Examples to have a dashed border around interactive elements.
 
 ## 1.31.0 - (July 13, 2023)
 
@@ -30,7 +106,8 @@
 
 * Changed
   * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
-
+  * Updated `terra-form-textarea` example component and added an button to toggle valid/invalid status
+  
 * Added
   * Added documentation updates for `Single Select` in `terra-form-select`.
 

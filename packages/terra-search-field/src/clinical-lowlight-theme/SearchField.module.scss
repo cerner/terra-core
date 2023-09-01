@@ -11,7 +11,6 @@
     --terra-search-field-input-margin-top: 0;
     --terra-search-field-input-padding-right: 2.28571rem;
     --terra-search-field-clear-active-background-color: #0c0d0e;
-    --terra-search-field-button-focus-border-color: #004c76;
     --terra-search-field-clear-icon-height: 1.14286rem;
     --terra-search-field-clear-icon-margin-top: -0.214285rem;
     --terra-search-field-clear-icon-width: 1.14286rem;
@@ -24,7 +23,6 @@
     --terra-search-field-button-margin-left: -1px;
     --terra-search-field-button-margin-right: 0;
     --terra-search-field-button-margin-top: 0;
-    --terra-search-field-button-focus-box-shadow: #004c76;
 
     --terra-search-field-input-background-color: #222a2e;
     --terra-search-field-input-border: 1px solid #181b1d;
@@ -51,12 +49,20 @@
     --terra-search-field-input-placeholder-disabled-font-style: italic;
 
     --terra-search-field-input-focus-background-color: #222a2e;
-    --terra-search-field-input-focus-border: 1px solid #004c76;
-    --terra-search-field-input-focus-box-shadow: 0 0 1px 3px #004c76, 0 0 7px 4px #004c76;
+    --terra-search-field-input-focus-border: 1px solid #181b1d;
     --terra-search-field-input-focus-color: #b2b5b6;
 
     --terra-search-field-input-focus-ltr-box-shadow: none;
     --terra-search-field-input-focus-rtl-box-shadow: none;
+
+    // focus - keyboard
+    --terra-search-field-focus-keyboard-outline: 2px dashed #b2b5b6;
+    --terra-search-field-focus-keyboard-outline-offset: 1px;
+
+    --terra-search-field-label-color: #b2b5b6;
+    --terra-search-field-label-font-size: 1rem;
+    --terra-search-field-label-font-weight: bold;
+    --terra-search-field-label-margin-bottom: 0.357em;
 
     @include terra-inline-svg-var('--terra-search-field-clear-icon-background-image', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#b2b5b6" d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24S37.3 0 24 0zm13.9 33.8l-2.1 2.1-1.2 1.2-1 .9-9.6-9.7-9.6 9.7-2.2-2.1-1.1-1.1-1-1 9.7-9.8-9.7-9.8 1-1 1.1-1.1 2.2-2.1 9.6 9.7 9.6-9.7 1 .9 1.2 1.2 2.1 2.1-9.7 9.8 9.7 9.8z"/></svg>');
   }

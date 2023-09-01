@@ -10,9 +10,17 @@ import IconInformation from 'terra-icon/lib/icon/IconInformation';
 import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import IconWarning from 'terra-icon/lib/icon/IconWarning';
 import Button from 'terra-button';
+import { v4 as uuidv4 } from 'uuid';
 import Alert from '../../src/Alert';
 
-jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
+let mockSpyUuid;
+beforeAll(() => {
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
+});
+
+afterAll(() => {
+  mockSpyUuid.mockRestore();
+});
 
 describe('Alert with no props', () => {
   it('should render a default component', () => {
@@ -29,10 +37,10 @@ describe('Alert with no props', () => {
     const wrapper = shallowWithIntl(<Alert />).dive();
 
     const alertDiv = wrapper.find('div.alert-base');
-    const alertContentDiv = wrapper.find('div.body');
+    const alertFocusDiv = wrapper.find('div.focus-container');
     expect(alertDiv.prop('className')).toEqual('alert-base alert wide');
     expect(alertDiv.prop('role')).toEqual('alert');
-    expect(alertContentDiv.prop('tabIndex')).toEqual('-1');
+    expect(alertFocusDiv.prop('tabIndex')).toEqual('-1');
     expect(wrapper.find(IconAlert).length).toEqual(1);
     expect(wrapper.find('.title').text()).toEqual('Terra.alert.alert');
     expect(wrapper).toMatchSnapshot();

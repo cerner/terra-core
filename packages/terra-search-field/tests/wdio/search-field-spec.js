@@ -21,7 +21,42 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with scrolled text', () => {
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('default scrolled text', { mismatchTolerance: 0.1 });
+    });
+  });
+
+  describe('With Label', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-with-label'));
+
+    it('should display empty Search Field with label', () => {
+      Terra.validates.element('default empty with label');
+    });
+
+    it('should enter a search term', () => {
+      $('input').setValue('Lorem');
+    });
+
+    it('should display Search Field with label and search text', () => {
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
+      Terra.validates.element('default search with label and search text');
+    });
+  });
+
+  describe('With Label and Custom Groupname', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/search-field-with-label-and-custom-groupname'));
+
+    it('should display empty Search Field label as groupname', () => {
+      Terra.validates.element('default empty with label as groupname');
+    });
+
+    it('should enter a search term', () => {
+      $('input').setValue('Lorem');
+    });
+
+    it('should display Search Field label as groupname with text', () => {
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
+      Terra.validates.element('default search with label as groupname and search text');
     });
   });
 
@@ -37,6 +72,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with text', () => {
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('block with text');
     });
   });
@@ -69,6 +105,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with text', () => {
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('placeholder with text');
     });
   });
@@ -90,6 +127,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     it('should clear the value', () => {
       $('#searchfield [data-terra-search-field-button="Clear"]').click();
 
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('default value clear');
     });
 
@@ -98,6 +136,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with overwritten text', () => {
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('default value with overwritten text');
     });
   });
@@ -119,6 +158,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with unchanged text', () => {
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('value unchanged text');
     });
   });
@@ -131,7 +171,8 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with too short text', () => {
-      Terra.validates.element('minimum length too short text');
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
+      Terra.validates.element('minimum length too short text', { mismatchTolerance: 0.1 });
     });
 
     it('should not search with the button', () => {
@@ -149,7 +190,11 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with long enough text', () => {
-      Terra.validates.element('minimum length with long enough text');
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
+      Terra.validates.element('minimum length with long enough text', { mismatchTolerance: 0.1 });
     });
   });
 
@@ -165,6 +210,9 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with long enough text', () => {
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('callback with long enough text');
     });
 
@@ -174,7 +222,11 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with too short text', () => {
-      Terra.validates.element('callback with too short text');
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
+      Terra.validates.element('callback with too short text', { mismatchTolerance: 0.1 });
     });
   });
 
@@ -190,7 +242,11 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field with typed text', () => {
-      Terra.validates.element('setting value typed');
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
+      Terra.validates.element('setting value typed', { mismatchTolerance: 0.1 });
     });
 
     it('should trigger search when cutting', () => {
@@ -201,6 +257,9 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field after cut operation', () => {
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('setting value cut');
     });
 
@@ -210,20 +269,25 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     });
 
     it('should display Search Field after paste operation', () => {
+      // wait for the default search delay time for callback text to update
+      browser.pause(2500);
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('setting value paste');
     });
 
     it('should not trigger search when programmatically setting value', () => {
       $('#search-field-set-text-button').click();
       $('#searchfield').click();
-      browser.pause(2000);
+      browser.pause(2500);
 
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('setting value programmatically');
     });
 
     it('should search with value on search button press', () => {
       $('#searchfield > [data-terra-search-field-button="Search"]').click();
 
+      expect($('button[data-terra-search-field-button="Search"]').isFocused()).toBeTruthy();
       Terra.validates.element('setting value search');
     });
   });
@@ -234,12 +298,14 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     it('should enter a letter', () => {
       $('input').setValue('L');
 
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('on change updated once');
     });
 
     it('should enter another letter', () => {
       $('input').addValue('o');
 
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('on change updated twice');
     });
   });
@@ -251,6 +317,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       $('input').click();
       browser.keys('Enter');
 
+      expect($('button[data-terra-search-field-button="Search"]').isFocused()).toBeTruthy();
       Terra.validates.element('search with enter default');
     });
   });
@@ -261,12 +328,15 @@ Terra.describeViewports('Search Field', ['medium'], () => {
     it('should enter a search term', () => {
       $('input').setValue('Lore');
 
-      Terra.validates.element('auto search disabled text before search');
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
+      Terra.validates.element('auto search disabled text before search', { mismatchTolerance: 0.1 });
     });
 
     it('should search with the button', () => {
       browser.keys('Enter');
 
+      expect($('button[data-terra-search-field-button="Search"]').isFocused()).toBeTruthy();
       Terra.validates.element('auto search disabled searched text');
     });
 
@@ -274,6 +344,7 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       $('input').addValue(' is spelled correctly');
       browser.keys('Enter');
 
+      expect($('button[data-terra-search-field-button="Search"]').isFocused()).toBeTruthy();
       Terra.validates.element('auto search disabled extended search');
     });
   });
@@ -289,7 +360,22 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       $('#search-field-focus-button').waitForDisplayed();
       $('#search-field-focus-button').click();
 
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
       Terra.validates.element('focus with focus');
+    });
+  });
+
+  describe('Clear Button in Focus', () => {
+    before(() => browser.url('/raw/tests/cerner-terra-core-docs/search-field/minimum-length-search-field'));
+
+    it('should enter a search term', () => {
+      $('input').setValue('Lore');
+      browser.keys(['Tab']);
+    });
+
+    it('should focus clear button', () => {
+      expect($('button[data-terra-search-field-button="Clear"]').isFocused()).toBeTruthy();
+      Terra.validates.element('clear button focused');
     });
   });
 
@@ -304,7 +390,9 @@ Terra.describeViewports('Search Field', ['medium'], () => {
       setTimeout(() => { input.addValue('L'); }, 250);
       setTimeout(() => { input.addValue('L'); }, 250);
 
-      Terra.validates.element('empty search text');
+      expect($('input[type="search"]').isFocused()).toBeTruthy();
+      // mismatchTolerance set to 0.1 to account for subtle variances in the dotted line
+      Terra.validates.element('empty search text', { mismatchTolerance: 0.1 });
     });
   });
 });

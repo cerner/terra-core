@@ -6,7 +6,6 @@ import * as KeyCode from 'keycode-js';
 import { injectIntl } from 'react-intl';
 import Util from './_DropdownListUtil';
 import styles from './_DropdownList.module.scss';
-import SharedUtil from '../../terra-form-select/src/shared/_SharedUtil';
 
 const cx = classNamesBind.bind(styles);
 
@@ -186,7 +185,7 @@ class DropdownList extends React.Component {
       const activeOption = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.activeOption' }, { currentItemLabel, currentIndex, totalItems });
       let ariaLabel = null;
       if (totalItems) {
-        if (SharedUtil.isMac()) {
+        if (Util.isMac()) {
           ariaLabel = currentIndex === 1 ? `${this.expanded}${activeOption}` : activeOption;
         } else {
           ariaLabel = currentIndex === 1 ? `${this.expanded}${currentItemLabel}` : currentItemLabel;

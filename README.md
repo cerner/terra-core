@@ -162,7 +162,7 @@ Please review [Terra\'s Internationalization documentation](https://engineering.
   Contributing
 </h2>
 
-Please read through our [contributing guidelines](CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
+Please read through our [contributing guidelines](./CONTRIBUTING.md). Included are directions for issue reporting and pull requests.
 
 <h2 id="local-development">
   Local Development
@@ -208,6 +208,10 @@ npm run test
         "wdio-lowlight": "terra wdio --disableSeleniumService=true --themes clinical-lowlight-theme"
         }
        ```
+    - If any of the compose files were to be changed, you must refresh the docker container by deleting the corresponding existing docker images, then running the following command:
+      ```sh
+        docker compose -f <changed compose file name>.yml up
+      ```
 7. To terminate a dev container:
     - Use command line or Rancher/Docker Desktop OR
     - Using Visual Studio Code

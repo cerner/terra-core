@@ -10,9 +10,13 @@ window.matchMedia = () => ({ matches: true });
 jest.mock('lodash.uniqueid');
 
 let userAgentGetter;
-beforeAll(() => {
+beforeEach(() => {
   userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
   uniqueid.mockReturnValue('uuid123');
+});
+
+afterEach(() => {
+  jest.restoreAllMocks();
 });
 
 it('should render a default radio field', () => {
@@ -64,6 +68,39 @@ it('should render a help message', () => {
     />
   );
   const wrapper = shallowWithIntl(radioField);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should render onkeydown and onclick event on radio button for safari browser', () => {
+  userAgentGetter.mockReturnValue('Safari');
+  const radioField = (
+    <RadioField
+      id="RadioFieldOne"
+      legend="Help RadioField"
+      help="This will help up determine how many chairs to request"
+    >
+      <Radio id="firstRadio" labelText="Radio" />
+    </RadioField>
+  );
+  const wrapper = mountWithIntl(radioField);
+  expect(wrapper.find('input').prop('onKeyDown')).toBeDefined();
+  expect(wrapper.find('input').prop('onClick')).toBeDefined();
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('should not render onkeydown and onclick event on radio button for non-safari browser', () => {
+  const radioField = (
+    <RadioField
+      id="RadioFieldOne"
+      legend="Help RadioField"
+      help="This will help up determine how many chairs to request"
+    >
+      <Radio id="firstRadio" labelText="Radio" />
+    </RadioField>
+  );
+  const wrapper = mountWithIntl(radioField);
+  expect(wrapper.find('input').prop('onKeyDown')).toBeUndefined();
+  expect(wrapper.find('input').prop('onClick')).toBeUndefined();
   expect(wrapper).toMatchSnapshot();
 });
 

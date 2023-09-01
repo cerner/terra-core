@@ -7,7 +7,7 @@ const SvgIcon = (customProps) => {
 
   return (
     <IconBase {...attributes}>
-      <path d="M24 4l24 40H0L24 4z" ></path>
+      <path d="m24 4 24 40H0L24 4z" ></path>
     </IconBase>
   );
 };

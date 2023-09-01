@@ -91,6 +91,7 @@ class Tag extends React.Component {
         'tag',
         { 'is-focused': this.state.focused },
         { 'is-interactive': href || onClick },
+        { 'has-underline': href },
         theme.className,
       ),
       customProps.className,

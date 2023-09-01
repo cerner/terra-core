@@ -5,6 +5,21 @@
 * Added
   * Added a subcomponent TagList.
 
+## 2.60.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.59.0 - (August 18, 2023)
+
+* Added  
+  * Adds underline for tags with `href`
+
+## 2.58.0 - (August 1, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 2.57.0 - (April 27, 2023)
 
 * Changed

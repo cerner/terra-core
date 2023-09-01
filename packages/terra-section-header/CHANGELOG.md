@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 2.62.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.61.0 - (August 1, 2023)
+
+* Changed
+  * Updated SectionHeader to use `span` & `button` elements instead of `div`.
+
 ## 2.60.0 - (April 5, 2023)
 
 * Changed

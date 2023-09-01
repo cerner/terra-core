@@ -160,6 +160,9 @@ const Alert = ({
     { 'body-narrow': isNarrow && (onDismiss || action) },
   );
 
+  const focusContainerClassName = cx('focus-container');
+  const contentContainerClassName = cx('content-container');
+
   const alertId = uuidv4();
   const alertTitleId = `alert-title-${alertId}`;
   const alertMessageId = `alert-message-${alertId}`;
@@ -227,9 +230,12 @@ const Alert = ({
         {...customProps}
         className={alertClassNames}
       >
-        <div className={bodyClassNameForParent} ref={alertBodyRef} tabIndex="-1">
-          {getAlertIcon(type, customIcon)}
-          {alertMessageContent}
+        <div className={bodyClassNameForParent}>
+          <div className={focusContainerClassName} ref={alertBodyRef} tabIndex="-1" />
+          <div className={contentContainerClassName}>
+            {getAlertIcon(type, customIcon)}
+            {alertMessageContent}
+          </div>
         </div>
         {actionsSection}
       </div>

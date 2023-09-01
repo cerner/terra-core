@@ -21,7 +21,7 @@ const SvgIcon = (customProps) => {
 
   return (
     <IconBase {...attributes} className={iconClassNames} >
-      <circle cx="24" cy="24" r="24" fill="#0092e0" ></circle><path d="M21.5 32.7h5V38h-5v-5.3zm0-22.7h5v17.3h-5V10z" fill="#fff" ></path>
+      <circle cx="24" cy="24" r="24" fill="#0092e0" ></circle><path fill="#fff" d="M21.5 32.7h5V38h-5v-5.3zm0-22.7h5v17.3h-5V10z" ></path>
     </IconBase>
   );
 };
