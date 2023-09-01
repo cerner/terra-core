@@ -245,6 +245,7 @@ class Frame extends React.Component {
       event.preventDefault();
       this.openDropdown();
     } else if (keyCode === KeyCode.KEY_ESCAPE || (this.state.isOpen && keyCode === KeyCode.KEY_TAB)) {
+      event.preventDefault();
       this.select.focus();
       this.closeDropdown();
     }

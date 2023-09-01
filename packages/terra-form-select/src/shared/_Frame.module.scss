@@ -95,7 +95,8 @@
 
     &.is-invalid.is-focused {
       background-size: var(--terra-form-select-invalid-focus-background-size, 0 0);
-      border-color: var(--terra-form-select-invalid-focus-border-color, #e50000);
+      border-color: var(--terra-form-single-select-invalid-focus-border-color, 0 0 0 1px #4cb2e9);
+      box-shadow: var(--terra-form-single-select-invalid-focus-box-shadow, 0 0 0 1px #4cb2e9);
     }
 
     &.is-invalid:hover {
