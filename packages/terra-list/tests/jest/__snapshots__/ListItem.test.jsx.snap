@@ -143,10 +143,8 @@ exports[`should render with hasChevron 1`] = `
       className="chevron"
     >
       <IconChevronRight
-        className=""
         data-name="Layer 1"
         height="1em"
-        isBidi={true}
         viewBox="0 0 48 48"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
