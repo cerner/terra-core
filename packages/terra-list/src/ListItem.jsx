@@ -121,7 +121,7 @@ const ListItem = ({
 
   const iconclassName = cx([
     'item-fill',
-    (isDraggable) && 'icon-knurling',
+    { 'icon-knurling': isDraggable },
   ]);
 
   return (
