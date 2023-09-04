@@ -325,7 +325,7 @@ const TagList = (props) => {
     const tags = React.Children.map(items, (tag) => {
       if (React.isValidElement(tag)) {
         return React.cloneElement(tag, {
-          role: 'listitem', onRemove: handleOnRemove, onSelect: handleOnTagSelect
+          role: 'listitem', onRemove: handleOnRemove, onSelect: handleOnTagSelect,
         });
       }
       return undefined;
