@@ -5,7 +5,7 @@
 :local {
   // Terra Docs Example Reset Button
   .terra-docs-example-reset-button {
-    margin-bottom: var(--terra-framework-docs-example-reset-button-margin-bottom, -2.42857rem);
+    margin-bottom: var(--terra-core-docs-example-reset-button-margin-bottom, -2.42857rem);
     margin-top: 1.42857rem;
     position: relative;
 
@@ -18,30 +18,30 @@
 
   // Applied Filters Toolbar Example
   .terra-filter-tags-doc-example-applied-filters {
-    border: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-border, 1px solid #d3d4d5);
+    border: var(--terra-core-docs-filter-tags-doc-example-applied-filters-border, 1px solid #d3d4d5);
     margin: 0;
     padding: 0;
 
     .applied-filters-content-panel {
-      background-color: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-content-panel-background-color, #f4f4f4);
+      background-color: var(--terra-core-docs-filter-tags-doc-example-applied-filters-content-panel-background-color, #f4f4f4);
       margin: 0;
-      padding: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-content-panel-padding, 0);
+      padding: var(--terra-core-docs-filter-tags-doc-example-applied-filters-content-panel-padding, 0);
     }
 
     .applied-filters-label {
-      color: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-label-color, #4d5153);
+      color: var(--terra-core-docs-filter-tags-doc-example-applied-filters-label-color, #4d5153);
       display: inline-block;
-      font-size: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-label-font-size, 0.92857rem);
-      font-weight: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-label-font-weight, 400);
+      font-size: var(--terra-core-docs-filter-tags-doc-example-applied-filters-label-font-size, 0.92857rem);
+      font-weight: var(--terra-core-docs-filter-tags-doc-example-applied-filters-label-font-weight, 400);
       vertical-align: top;
     }
   }
   
   .terra-filter-tags-doc-example-applied-filters-toolbar {
-    padding-bottom: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-toolbar-padding-bottom, 0.42857rem);
-    padding-left: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-toolbar-padding-left, 0.71429rem);
-    padding-right: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-toolbar-padding-right, 0.35714rem);
-    padding-top: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-toolbar-padding-top, 0.42857rem);
+    padding-bottom: var(--terra-core-docs-filter-tags-doc-example-applied-filters-toolbar-padding-bottom, 0.42857rem);
+    padding-left: var(--terra-core-docs-filter-tags-doc-example-applied-filters-toolbar-padding-left, 0.71429rem);
+    padding-right: var(--terra-core-docs-filter-tags-doc-example-applied-filters-toolbar-padding-right, 0.35714rem);
+    padding-top: var(--terra-core-docs-filter-tags-doc-example-applied-filters-toolbar-padding-top, 0.42857rem);
 
     > [class*='Toolbar-module__item___'] {
       display: block;
@@ -67,8 +67,8 @@
 
     .toolbar-flex-item-start {
       flex: 0 0 auto;
-      margin-right: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-flex-item-start-margin-right, 0.57143rem);
-      padding-top: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-flex-item-start-padding-top, 0.5rem);
+      margin-right: var(--terra-core-docs-filter-tags-doc-example-applied-filters-flex-item-start-margin-right, 0.57143rem);
+      padding-top: var(--terra-core-docs-filter-tags-doc-example-applied-filters-flex-item-start-padding-top, 0.5rem);
       vertical-align: top;
     }
 
@@ -80,8 +80,8 @@
 
     .toolbar-flex-item-end {
       flex: 0 0 auto;
-      margin-left: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-flex-item-end-margin-left, 0);
-      padding-top: var(--terra-framework-docs-filter-tags-doc-example-applied-filters-flex-item-end-padding-top, 0.10714rem);
+      margin-left: var(--terra-core-docs-filter-tags-doc-example-applied-filters-flex-item-end-margin-left, 0);
+      padding-top: var(--terra-core-docs-filter-tags-doc-example-applied-filters-flex-item-end-padding-top, 0.10714rem);
       vertical-align: top;
     }
   }
@@ -90,31 +90,31 @@
 
   // Truncated Label Example
   .terra-filter-tags-doc-example-truncated-label-container {
-    background-color: var(--terra-framework-docs-filter-tags-doc-example-truncated-label-container-background-color, #f4f4f4);
-    border: var(--terra-framework-docs-filter-tags-doc-example-truncated-label-container-border, 2px dashed #d1d1d1);
+    background-color: var(--terra-core-docs-filter-tags-doc-example-truncated-label-container-background-color, #f4f4f4);
+    border: var(--terra-core-docs-filter-tags-doc-example-truncated-label-container-border, 2px dashed #d1d1d1);
     border-bottom: 0 none;
     border-top: 0 none;
     box-sizing: content-box;
     max-width: 20rem;
-    min-height: var(--terra-framework-docs-filter-tags-doc-example-truncated-label-container-min-height, 2.28571rem);
-    padding: var(--terra-framework-docs-filter-tags-doc-example-truncated-label-container-padding, 0.71428rem 0.21428rem 0.71428rem 0.21428rem);
+    min-height: var(--terra-core-docs-filter-tags-doc-example-truncated-label-container-min-height, 2.28571rem);
+    padding: var(--terra-core-docs-filter-tags-doc-example-truncated-label-container-padding, 0.71428rem 0.21428rem 0.71428rem 0.21428rem);
     width: 100%;
   }
 
   // Search Terms Example (has Visible Label)
   .terra-filter-tags-doc-example-search-terms {
-    background-color: var(--terra-framework-docs-filter-tags-doc-example-search-terms-background-color, #ecf3ff);
+    background-color: var(--terra-core-docs-filter-tags-doc-example-search-terms-background-color, #ecf3ff);
     box-sizing: border-box;
-    min-height: var(--terra-framework-docs-filter-tags-doc-example-search-terms-min-height, 7.5rem);
-    padding: var(--terra-framework-docs-filter-tags-doc-example-search-terms-padding, 0.71428rem 0.85714rem);
+    min-height: var(--terra-core-docs-filter-tags-doc-example-search-terms-min-height, 7.5rem);
+    padding: var(--terra-core-docs-filter-tags-doc-example-search-terms-padding, 0.71428rem 0.85714rem);
 
     .search-terms-label {
-      color: var(--terra-framework-docs-filter-tags-doc-example-search-terms-label-color, #1a2f4b);
+      color: var(--terra-core-docs-filter-tags-doc-example-search-terms-label-color, #1a2f4b);
       display: block;
-      font-size: var(--terra-framework-docs-filter-tags-doc-example-search-terms-label-font-size, 1.07142rem);
-      font-weight: var(--terra-framework-docs-filter-tags-doc-example-search-terms-label-font-weight, 500);
-      padding-bottom: var(--terra-framework-docs-filter-tags-doc-example-search-terms-label-padding-bottom, 0.21428rem);
-      padding-left: var(--terra-framework-docs-filter-tags-doc-example-search-terms-label-padding-left, 0.14285rem);
+      font-size: var(--terra-core-docs-filter-tags-doc-example-search-terms-label-font-size, 1.07142rem);
+      font-weight: var(--terra-core-docs-filter-tags-doc-example-search-terms-label-font-weight, 500);
+      padding-bottom: var(--terra-core-docs-filter-tags-doc-example-search-terms-label-padding-bottom, 0.21428rem);
+      padding-left: var(--terra-core-docs-filter-tags-doc-example-search-terms-label-padding-left, 0.14285rem);
     }
   }
 } 
