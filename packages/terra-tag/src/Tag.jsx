@@ -114,6 +114,7 @@ class Tag extends React.Component {
         onFocus={onFocus}
         href={href}
         data-terra-tag
+        role="listitem"
       >
         {tagIcon}
         {text}

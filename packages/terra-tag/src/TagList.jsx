@@ -13,11 +13,11 @@ import PropTypes from 'prop-types';
 import ResizeObserver from 'resize-observer-polyfill';
 import ThemeContext from 'terra-theme-context';
 import { injectIntl } from 'react-intl';
+import { v4 as uuidv4 } from 'uuid';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import TagsUtils from './TagsUtils';
 import RollUpTag from './RollupTag';
 import styles from './Tag.module.scss';
-import { v4 as uuidv4 } from 'uuid';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 const cx = classNamesBind.bind(styles);
 

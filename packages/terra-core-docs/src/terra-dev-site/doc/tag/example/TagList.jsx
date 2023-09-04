@@ -1,5 +1,5 @@
 /* eslint-disable no-alert */
-import React, { useState } from 'react';
+import React from 'react';
 import IconBookmark from 'terra-icon/lib/icon/IconTile';
 import IconTag from 'terra-icon/lib/icon/IconTag';
 import Tag from 'terra-tag';
@@ -24,7 +24,7 @@ const TagListExample = () => {
           <div className={cx('toolbar-flex-container')}>
             <div className={cx('toolbar-flex-item-start')} />
             <div className={cx('toolbar-flex-item-fill')}>
-              <TagList isCollapsible aria-label='TagList Example'>
+              <TagList isCollapsible aria-label="TagList Example">
                 <Tag icon={icon} text="Icon Tag 1" onClick={() => window.alert('Tag has been clicked!')} id="iconTag1" />
                 <Tag icon={icon} text={text} id="longTextIcon" onClick={() => window.alert('Tag has been clicked!')} />
                 <Tag id="default1" text="Default Tag 1" onClick={() => window.alert('Tag has been clicked!')} />
@@ -47,7 +47,7 @@ const TagListExample = () => {
         </Toolbar>
       </div>
     </>
-  )
+  );
 };
 
 export default TagListExample;
