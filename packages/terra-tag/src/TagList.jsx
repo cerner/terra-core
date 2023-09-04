@@ -86,6 +86,7 @@ const TagList = (props) => {
   const focusNode = useRef(0);
   const isRollUpRemoved = useRef(false);
   const containerHint = useRef(ariaLabel);
+  const removedLabel = useRef();
 
   // Identifies the number of tags that needs to be hidden/rolled up
   const generateRollUp = useCallback(() => {
@@ -268,10 +269,6 @@ const TagList = (props) => {
       setIsTagRemoved(true);
     }
     focusTagsContainer();
-
-    if (onRemove) {
-      onRemove(id, metaData);
-    }
   };
 
   // set the focus to current tag if the tag is clicked with mouse
@@ -292,7 +289,7 @@ const TagList = (props) => {
         focusNode.current = tags.length;
       }
     } else {
-      setShowRollupTagInteraction(false);
+      setShowRollupTagInteraction(true);
     }
     setIsCollapsed(!isCollapsed);
   };
@@ -328,7 +325,7 @@ const TagList = (props) => {
     const tags = React.Children.map(items, (tag) => {
       if (React.isValidElement(tag)) {
         return React.cloneElement(tag, {
-          onRemove: handleOnRemove, onSelect: handleOnTagSelect,
+          role: 'listitem', onRemove: handleOnRemove, onSelect: handleOnTagSelect
         });
       }
       return undefined;
