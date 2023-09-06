@@ -34,6 +34,10 @@ const propTypes = {
    */
   onKeyUp: PropTypes.func,
   /**
+   * Callback function triggered when tag is clicked with mouse.
+   */
+  onTagClick: PropTypes.func,
+  /**
    * Sets the tag text.
    */
   text: PropTypes.string.isRequired,
@@ -45,6 +49,7 @@ class Tag extends React.Component {
     this.state = { focused: false };
     this.handleKeyUp = this.handleKeyUp.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleOnBlur(event) {
@@ -72,6 +77,18 @@ class Tag extends React.Component {
     }
   }
 
+  handleClick(event) {
+    if (this.props.onTagClick) {
+      this.props.onTagClick(event.target.id);
+    }
+    if (this.props.onClick) {
+      this.props.onClick();
+    }
+    setTimeout(() => {
+      this.setState({ focused: true });
+    }, 100);
+  }
+
   render() {
     const {
       icon,
@@ -81,6 +98,7 @@ class Tag extends React.Component {
       onBlur,
       onFocus,
       onKeyUp,
+      onTagClick,
       ...customProps
     } = this.props;
 
@@ -110,10 +128,11 @@ class Tag extends React.Component {
         className={tagClasses}
         onKeyUp={this.handleKeyUp}
         onBlur={this.handleOnBlur}
-        onClick={onClick}
+        onClick={this.handleClick}
         onFocus={onFocus}
         href={href}
         data-terra-tag
+        role="listitem"
       >
         {tagIcon}
         {text}

@@ -78,15 +78,11 @@ const TagList = (props) => {
   const [updatedCount, setUpdatedCount] = useState(React.Children.count(children));
   const [rollUpCount, setRollUpCount] = useState(React.Children.count(children));
   const [isCollapsed, setIsCollapsed] = useState(isCollapsible);
-  const [tagRemoved, setIsTagRemoved] = useState(false);
-
-  const [showRollupTagInteraction, setShowRollupTagInteraction] = useState(false);
   const currentTag = useRef(); // ID of the tag that will receive focus
   const filterTagsRef = useRef();
   const focusNode = useRef(0);
   const isRollUpRemoved = useRef(false);
   const containerHint = useRef(ariaLabel);
-  const removedLabel = useRef();
 
   // Identifies the number of tags that needs to be hidden/rolled up
   const generateRollUp = useCallback(() => {
@@ -113,12 +109,6 @@ const TagList = (props) => {
     if (currentNode) {
       currentNode.focus();
     }
-  };
-
-  // sets focus to the tag container if there are Zero tags/all tag are deleted.
-  const focusTagsContainer = () => {
-    setContainerTabindex('0');
-    filterTagsRef.current.focus();
   };
 
   // resets all tag nodes tabindex to -1, except for the one tag that receives focus.
@@ -220,7 +210,6 @@ const TagList = (props) => {
   const handleTagListKeyDown = (event) => {
     const tags = [...filterTagsRef.current.querySelectorAll('[data-terra-tag]')];
     const rollUpTag = filterTagsRef.current.querySelector('[data-terra-rollup-tag]');
-    setShowRollupTagInteraction(false);
 
     switch (event.keyCode) {
       case KEY_RIGHT:
@@ -252,44 +241,26 @@ const TagList = (props) => {
     }
   };
 
-  const handleOnRemove = (id, metaData, event) => {
-    const tags = [...filterTagsRef.current.querySelectorAll('[data-terra-tag]')];
-    const targetId = event.target.parentElement.getAttribute('id');
-    const currentIndex = tags.findIndex((element) => element.id === targetId);
-    if (event.type === 'click') {
-      if (tags.length > 1) {
-        setTabIndex('-1');
-        if (currentIndex === 0) {
-          focusNode.current = 0;
-        } else {
-          focusNode.current = currentIndex - 1;
-        }
-        setTabIndex('0');
-      }
-      setIsTagRemoved(true);
-    }
-    focusTagsContainer();
-  };
-
   // set the focus to current tag if the tag is clicked with mouse
-  const handleOnTagSelect = (tagRef) => {
-    if (tagRef.current && tagRef.current.children.length > 0) {
-      removedLabel.current = tagRef.current.children[0].innerText;
-    }
+  const handleOnTagSelect = (tagID) => {
+    const tags = [...filterTagsRef.current.querySelectorAll('[data-terra-tag]')];
+    setTabIndex('-1');
+    focusNode.current = tags.findIndex((tag) => tag.id === tagID);
+    currentTag.current = tagID;
+    setTabIndex('0');
+    focusCurrentNode();
   };
 
   const handleOnSelectRollUp = (event) => {
     const tags = [...filterTagsRef.current.querySelectorAll('[data-terra-tag]')];
     if (isCollapsible && isCollapsed) {
-      if (event.type === 'keydown') {
+      if (event.type === 'keydown' || event.type === 'click') {
         isRollUpRemoved.current = true;
         focusNode.current = tags.length;
       } else {
         setTabIndex('-1');
         focusNode.current = tags.length;
       }
-    } else {
-      setShowRollupTagInteraction(true);
     }
     setIsCollapsed(!isCollapsed);
   };
@@ -309,23 +280,17 @@ const TagList = (props) => {
   );
 
   const tagGroupInteractionHintID = `terra-tags-group-interaction-hint-${uuidv4()}`;
-  let removedTagInteractionHint = '';
   const tagGroupAriaDescribedBy = ariaDescribedBy ? `${ariaDescribedBy} ${tagGroupInteractionHintID}` : tagGroupInteractionHintID;
   let tagGroupInteractionHint = intl.formatMessage({ id: 'Terra.tags.hint.tagList' }, { numberOfTags: React.Children.count(children) });
   if (isCollapsible && (rollUpCount > 0) && isCollapsed) {
     tagGroupInteractionHint += `, ${intl.formatMessage({ id: 'Terra.tags.hint.rollupNotVisible' }, { tagsNotVisibleCount: rollUpCount })}`;
-  } else if (isCollapsible && !isCollapsed && showRollupTagInteraction) {
-    removedTagInteractionHint = intl.formatMessage({ id: 'Terra.tags.hint.rollupVisible' });
-  }
-  if (tagRemoved) {
-    removedTagInteractionHint = intl.formatMessage({ id: 'Terra.tags.hint.wasRemoved' }, { tagLabelName: removedLabel.current });
   }
 
   const renderChildren = (items) => {
     const tags = React.Children.map(items, (tag) => {
       if (React.isValidElement(tag)) {
         return React.cloneElement(tag, {
-          role: 'listitem', onRemove: handleOnRemove, onSelect: handleOnTagSelect,
+          role: 'listitem', onSelect: handleOnTagSelect, onTagClick: handleOnTagSelect,
         });
       }
       return undefined;
@@ -340,7 +305,7 @@ const TagList = (props) => {
       {...customProps}
       {...filterTagsProps}
       aria-live="assertive"
-      aria-label={!ariaLabelledBy ? `${removedTagInteractionHint} ${containerHint.current}` : undefined}
+      aria-label={!ariaLabelledBy ? `${containerHint.current}` : undefined}
       aria-labelledby={ariaLabelledBy}
       aria-describedby={tagGroupAriaDescribedBy}
       className={tagListClassNames}
