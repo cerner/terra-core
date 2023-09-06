@@ -15,7 +15,9 @@ exports[`Tag correctly applies the theme context className 1`] = `
       className="tag orion-fusion-theme"
       data-terra-tag={true}
       onBlur={[Function]}
+      onClick={[Function]}
       onKeyUp={[Function]}
+      role="listitem"
     >
       Normal
     </span>
@@ -28,7 +30,9 @@ exports[`Tag should render a tag 1`] = `
   className="tag"
   data-terra-tag={true}
   onBlur={[Function]}
+  onClick={[Function]}
   onKeyUp={[Function]}
+  role="listitem"
 >
   Normal
 </span>
@@ -39,7 +43,9 @@ exports[`Tag should render an icon and text 1`] = `
   className="tag"
   data-terra-tag={true}
   onBlur={[Function]}
+  onClick={[Function]}
   onKeyUp={[Function]}
+  role="listitem"
 >
   <span
     className="icon"
@@ -59,6 +65,7 @@ exports[`Tag should render an interactive tag 1`] = `
   onBlur={[Function]}
   onClick={[Function]}
   onKeyUp={[Function]}
+  role="listitem"
 >
   text
 </button>
@@ -70,7 +77,9 @@ exports[`Tag should render as an anchor when provided an href 1`] = `
   data-terra-tag={true}
   href="MockHref"
   onBlur={[Function]}
+  onClick={[Function]}
   onKeyUp={[Function]}
+  role="listitem"
 >
   href
 </a>
@@ -83,6 +92,7 @@ exports[`Tag should render as an button tag when href is not provided 1`] = `
   onBlur={[Function]}
   onClick={[Function]}
   onKeyUp={[Function]}
+  role="listitem"
 >
   text
 </button>
