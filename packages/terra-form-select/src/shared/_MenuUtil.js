@@ -198,7 +198,7 @@ class MenuUtil {
     if (options.length - 1 === index) {
       return options[0].props.value;
     }
-    return index === -1 ? null : options[Math.min(index + 1, options.length - 1)].props.value;
+    return index === -1 ? null : options[index + 1].props.value;
   }
 
   /**
@@ -225,7 +225,7 @@ class MenuUtil {
     if (index === 0) {
       index = options.length;
     }
-    return index === -1 ? null : options[Math.max(index - 1, 0)].props.value;
+    return index === -1 ? null : options[index - 1].props.value;
   }
 
   /**
