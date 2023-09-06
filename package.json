@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
   },
+  "workspaces": [
+    "./packages/*"
+  ],
   "keywords": [
     "Cerner",
     "Terra",
@@ -39,15 +42,14 @@
     }
   },
   "scripts": {
-    "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
     "clean": "npm run clean:lib && npm run clean:root",
     "clean:install": "npm run clean && time npm install",
     "clean:lib": "rm -rf packages/**/lib",
-    "clean:root": "$(lerna clean --yes || true) && echo 'removing ./node_modules' && rm -rf node_modules && echo 'removed ./node_modules'",
+    "clean:root": "rm -rf packages/*/node_modules && echo 'removing ./node_modules' && rm -rf node_modules && echo 'removed ./node_modules'",
     "clean:obsolete-snapshots": "npm test -- -u",
     "create-props-markdown": "node scripts/props-table-gen/generatePropsTables.js",
     "compile": "npm run clean:lib && npm run compile:build",
-    "compile:build": "lerna run compile --parallel",
+    "compile:build": "npm run compile --ws --yes --if-present",
     "compile:prod": "rm -rf ./build; webpack --mode=production",
     "compile:lowlight": "rm -rf ./build; THEME=clinical-lowlight-theme webpack --mode=production",
     "compile:fusion": "rm -rf ./build; THEME=orion-fusion-theme webpack --mode=production",
@@ -65,7 +67,7 @@
     "lint:package-json": "terra package-json-lint",
     "lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
     "prepare-for-release": "terra prepare-for-release",
-    "postinstall": "npm run bootstrap:hoist && npm run compile",
+    "postinstall": "npm run compile",
     "start": "webpack serve",
     "start:prod": "webpack serve --env disableHotReloading --mode=production",
     "start-static": "npm run compile:prod && terra express-server --site ./build",
@@ -107,7 +109,6 @@
     "glob": "^7.1.2",
     "jest": "^26.6.3",
     "ky": "^0.12.0",
-    "lerna": "^6.4.1",
     "postcss": "8.3.11",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
