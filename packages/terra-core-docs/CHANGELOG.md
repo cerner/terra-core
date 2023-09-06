@@ -1,11 +1,13 @@
 # Changelog
 
 ## Unreleased
+
 * Added
   * Added drag and drop example for `terra-list`.
+  * Added instruction note for `terra-form-radio` label hidden example
 
 * Updated
-  * Updated `terra-scroll` to add realistic examples.
+  *  Updated `terra-scroll` to add realistic examples.
   *  Updated all paginator examples to use meaningful titles.
   *  Updated testing recommendations to use `jest.spyOn` instead of `jest.mock`.
  
