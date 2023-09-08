@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Alert from 'terra-alert';
 import Button from 'terra-button';
-import ShowHide from 'terra-show-hide';
+import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 import classNames from 'classnames/bind';
 
 import styles from './LongTextExample.module.scss';
@@ -9,9 +9,11 @@ import styles from './LongTextExample.module.scss';
 const cx = classNames.bind(styles);
 
 const LongTextAlert = () => {
+  const focusRef = useRef(null);
   const [isOpen, setIsOpen] = useState(true);
   const [isTextOpen, setIsTextOpen] = useState(false);
   const previewText = 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.';
+  const paragraph = 'Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.';
 
   return (
     <>
@@ -19,12 +21,13 @@ const LongTextAlert = () => {
         {isOpen && (
           <Alert
             type="info"
-            title="Gettysburg Address:"
+            title="Gettysburg Address2:"
             onDismiss={() => {
               setIsOpen(false);
             }}
           >
             <ShowHide
+              focusRef={focusRef}
               preview={previewText}
               isOpen={isTextOpen}
               onChange={() => {
@@ -34,12 +37,7 @@ const LongTextAlert = () => {
             >
               <p>{previewText}</p>
               <p>
-                Now we are engaged in a great civil war, testing whether that
-                nation, or any nation so conceived and so dedicated, can long
-                endure. We are met on a great battle-field of that war. We have
-                come to dedicate a portion of that field, as a final resting place
-                for those who here gave their lives that that nation might live.
-                It is altogether fitting and proper that we should do this.
+                <ShowHideFocuser ref={focusRef} focusableText={paragraph} />
               </p>
               <p>
                 But, in a larger sense, we can not dedicate -- we can not
