@@ -10,6 +10,7 @@
   *  Updated `terra-scroll` to add realistic examples.
   *  Updated all paginator examples to use meaningful titles.
   *  Updated testing recommendations to use `jest.spyOn` instead of `jest.mock`.
+  *  Updated `terra-alert` long text example for accessible `terra-show-hide`.
  
 ## 1.39.0 - (August 25, 2023)
 
