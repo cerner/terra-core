@@ -136,7 +136,7 @@ const ShowHide = (props) => {
           {children}
         </Toggle>
       </div>
-      <div className={cx('show-hide')}>
+      <div className={cx('show-hide-button')}>
         <Button
           aria-controls={contentId}
           aria-expanded={isOpen}

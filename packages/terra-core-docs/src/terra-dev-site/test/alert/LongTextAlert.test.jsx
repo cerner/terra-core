@@ -21,7 +21,7 @@ const LongTextAlert = () => {
         {isOpen && (
           <Alert
             type="info"
-            title="Gettysburg Address2:"
+            title="Gettysburg Address:"
             onDismiss={() => {
               setIsOpen(false);
             }}
