@@ -305,7 +305,7 @@ const TagList = (props) => {
       {...customProps}
       {...filterTagsProps}
       aria-live="assertive"
-      aria-label={!ariaLabelledBy ? `${containerHint.current}` : undefined}
+      aria-label={ariaLabelledBy ? `${containerHint.current}` : undefined}
       aria-labelledby={ariaLabelledBy}
       aria-describedby={tagGroupAriaDescribedBy}
       className={tagListClassNames}
