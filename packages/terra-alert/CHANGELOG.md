@@ -2,9 +2,6 @@
 
 ## Unreleased
 
-* Changed
-  * Updated wdio screenshots due to examples changes.
-
 ## 4.78.0 - (August 25, 2023)
 
 * Changed
