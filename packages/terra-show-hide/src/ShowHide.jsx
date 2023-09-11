@@ -125,7 +125,7 @@ const ShowHide = (props) => {
       {!isOpen && preview}
       <div
         id={contentId}
-        className={cx(['show-hide', 'show-hide-content', theme.className])}
+        className={cx(['show-hide-content', theme.className])}
         ref={contentRef}
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={containerIsActive ? '-1' : null}
@@ -136,7 +136,7 @@ const ShowHide = (props) => {
           {children}
         </Toggle>
       </div>
-      <div className={cx('show-hide-button')}>
+      <div className={cx('show-hide')}>
         <Button
           aria-controls={contentId}
           aria-expanded={isOpen}
