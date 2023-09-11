@@ -4,6 +4,8 @@
   "Terra.paginator.first": "Primeira",
   "Terra.paginator.last": "Última",
   "Terra.paginator.pageIndex": "Página {pageNumber}",
+  "Terra.paginator.pageSelected": "Página {pageNumber} selecionada",
+  "Terra.paginator.pageSelectedWithCount": "Página {pageNumber} de {pageNumberTotal} selecionada",
   "Terra.paginator.pageCount": "Página {pageNumber} de {pageNumberTotal}",
   "Terra.paginator.pageIndexWithLabel": "{pageLabel} {pageNumber}",
   "Terra.paginator.pageCountWithLabel": "{pageLabel} {pageNumber} de {pageNumberTotal}"
