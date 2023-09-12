@@ -193,7 +193,7 @@ class Menu extends React.Component {
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: MenuUtil.findNext(children, active) }, this.scrollIntoView);
       this.updateCurrentActiveScreenReader();
-    } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) && active !== null) {
+    } else if ((keyCode === KeyCode.KEY_RETURN) && active !== null) {
       event.preventDefault();
 
       this.setState({ closedViaKeyEvent: true });
