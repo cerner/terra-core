@@ -2376,6 +2376,8 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/raw/tests/cerner-terra-core-docs/form-select/invalid-default');
 
       Terra.validates.element('invalid default');
+      browser.keys('Tab');
+      Terra.validates.element('invalid default focused');
     });
   });
 
