@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added visually hidden commas between alert content.
+
 ## 4.80.0 - (September 21, 2023)
 
 * Changed

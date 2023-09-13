@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import {
   IconAlert,
   IconError,
@@ -188,10 +189,14 @@ const Alert = ({
       'actions-custom': type === AlertTypes.CUSTOM,
     });
     actionsSection = (
-      <div className={actionsClassName}>
-        {action}
-        {dismissButton}
-      </div>
+      <>
+        <VisuallyHiddenText text="," />
+        <div className={actionsClassName}>
+          {action}
+          {action && dismissButton && <VisuallyHiddenText text="," />}
+          {dismissButton}
+        </div>
+      </>
     );
   }
 
@@ -205,6 +210,7 @@ const Alert = ({
           {title || defaultTitle}
         </strong>
       )}
+      {children && <VisuallyHiddenText text="," />}
       {children}
     </div>
   );

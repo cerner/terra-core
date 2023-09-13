@@ -29,6 +29,9 @@ exports[`Alert of type advisory with text content should render an Alert compone
           >
             Terra.alert.advisory
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is an advisory alert.
         </div>
       </div>
@@ -74,6 +77,9 @@ exports[`Alert of type alert with text content should render an Alert component 
           >
             Terra.alert.alert
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is a test
         </div>
       </div>
@@ -119,6 +125,9 @@ exports[`Alert of type custom with custom title and text content should render a
           >
             Help!
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is a custom alert.
         </div>
       </div>
@@ -164,6 +173,9 @@ exports[`Alert of type error with text content should render an Alert component 
           >
             Terra.alert.error
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is an error.
         </div>
       </div>
@@ -249,6 +261,9 @@ exports[`Alert of type info with text content should render an Alert component o
           >
             Terra.alert.info
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is an information alert.
         </div>
       </div>
@@ -294,10 +309,16 @@ exports[`Alert of type success with an action button text content should render 
           >
             Terra.alert.success
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is a success alert.
         </div>
       </div>
     </div>
+    <VisuallyHiddenText
+      text=","
+    />
     <div
       className="actions"
     >
@@ -354,6 +375,9 @@ exports[`Alert of type success with text content should render an Alert componen
           >
             Terra.alert.success
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is a success alert.
         </div>
       </div>
@@ -399,6 +423,9 @@ exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
           >
             Terra.alert.unsatisfied
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is an unsatisfied alert.
         </div>
       </div>
@@ -444,6 +471,9 @@ exports[`Alert of type unverified should render an unverified Alert 1`] = `
           >
             Terra.alert.unverified
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is an unverified alert.
         </div>
       </div>
@@ -489,6 +519,9 @@ exports[`Alert of type warning with text content should render an Alert componen
           >
             Terra.alert.warning
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is an warning.
         </div>
       </div>
@@ -897,10 +930,16 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
           >
             Help!
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is a custom alert.
         </div>
       </div>
     </div>
+    <VisuallyHiddenText
+      text=","
+    />
     <div
       className="actions actions-custom"
     >
@@ -914,6 +953,9 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
         text="Action"
         type="button"
         variant="emphasis"
+      />
+      <VisuallyHiddenText
+        text=","
       />
       <Button
         aria-describedby="alert-title-00000000-0000-0000-0000-000000000000"
@@ -969,10 +1011,16 @@ exports[`Dismissible Alert that includes actions section should render an alert 
           >
             Terra.alert.alert
           </strong>
+          <VisuallyHiddenText
+            text=","
+          />
           This is a test
         </div>
       </div>
     </div>
+    <VisuallyHiddenText
+      text=","
+    />
     <div
       className="actions"
     >
