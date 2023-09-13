@@ -35,6 +35,9 @@ const propTypes = {
     */
   isInline: PropTypes.bool,
   /**
+    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+    * Radio button should always have visible label to meet WCAG 3.3.2 success criterion.
+    * When set to true, ensure meaningful Text is provided for `labelText` prop.
     * Whether the label is hidden.
     */
   isLabelHidden: PropTypes.bool,

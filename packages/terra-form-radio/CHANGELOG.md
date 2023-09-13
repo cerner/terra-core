@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Updated prop description for `isLabelHidden` prop.
+
 ## 4.41.0 - (August 25, 2023)
 
 * Changed
