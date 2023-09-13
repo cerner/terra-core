@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies, compat/compat */
-import path from 'path';
 import fs from 'fs';
+import path from 'path';
 import template from 'lodash/template';
 import ReactIcon from './ReactIcon';
 import iconData from '../../../src/icon-data.json';
