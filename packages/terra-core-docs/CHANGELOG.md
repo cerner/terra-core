@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  *  Updated doc site for `terra-form-single-select` and `terra-form-single-select-field`.
+  
 * Added
   * Added drag and drop example for `terra-list`.
   * Added instruction note for `terra-form-radio` label hidden example
