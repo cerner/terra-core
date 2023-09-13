@@ -134,6 +134,7 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
 
       it('should display closed dropdown', () => {
+        browser.keys('Enter');
         Terra.validates.element('closed dropdown after enter', { selector: '#root' });
       });
     });
