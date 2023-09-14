@@ -18,6 +18,7 @@ import VisuallyHiddenText from 'terra-visually-hidden-text';
 import TagsUtils from './TagsUtils';
 import RollUpTag from './RollupTag';
 import styles from './Tag.module.scss';
+import SharedUtil from './_SharedUtil';
 
 const cx = classNamesBind.bind(styles);
 
@@ -107,7 +108,15 @@ const TagList = (props) => {
   const focusCurrentNode = () => {
     const currentNode = currentTag.current ? filterTagsRef.current.querySelector(`#${currentTag.current}`) : null;
     if (currentNode) {
-      currentNode.focus();
+      if (SharedUtil.isSafari()) {
+        // Safari Browser
+        setTimeout(() => {
+          currentNode.focus();
+        }, 100);
+      } else {
+        // Other Browsers
+        currentNode.focus();
+      }
     }
   };
 
@@ -290,7 +299,7 @@ const TagList = (props) => {
     const tags = React.Children.map(items, (tag) => {
       if (React.isValidElement(tag)) {
         return React.cloneElement(tag, {
-          role: 'listitem', onSelect: handleOnTagSelect, onTagClick: handleOnTagSelect,
+          onSelect: handleOnTagSelect, onTagClick: handleOnTagSelect,
         });
       }
       return undefined;
@@ -305,12 +314,12 @@ const TagList = (props) => {
       {...customProps}
       {...filterTagsProps}
       aria-live="assertive"
-      aria-label={ariaLabelledBy ? `${containerHint.current}` : undefined}
+      aria-label={!ariaLabelledBy ? `${containerHint.current}` : undefined}
       aria-labelledby={ariaLabelledBy}
       aria-describedby={tagGroupAriaDescribedBy}
       className={tagListClassNames}
       ref={filterTagsRef}
-      role="list"
+      role="group"
       tabIndex={containerTabindex}
     >
       <VisuallyHiddenText
