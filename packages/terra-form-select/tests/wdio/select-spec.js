@@ -327,6 +327,28 @@ Terra.describeViewports('Select', ['tiny'], () => {
       });
     });
 
+    describe('default should select an option by pressing space', () => {
+      it('default should open the dropdown by clicking the toggle', () => {
+        $('[data-terra-select]').click();
+      });
+
+      it('should display open dropdown', () => {
+        Terra.validates.element('[enter]open-dropdown', { selector: '#root' });
+      });
+
+      it('default should select the first option by pressing space', () => {
+        browser.keys('Space');
+      });
+
+      it('select should be focused', () => {
+        expect($('[data-terra-select-combobox]')).toBeFocused();
+      });
+
+      it('should display select with selected option', () => {
+        Terra.validates.element('selected option after pressing space', { selector: '#root' });
+      });
+    });
+
     describe('default should open dropdown by click after initial selection', () => {
       it('default should open the dropdown by clicking the select', () => {
         $('[data-terra-select]').click();
