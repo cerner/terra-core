@@ -7,14 +7,14 @@ const cx = classNames.bind(styles);
 const totalCount = 450;
 
 const buildPage = () => {
-  const fullContent = [<p>This example is specifically used to display the progressive paginator within MPage Fusion Anchor style. The whole example is not wrapped up by the Terra Dialog component like other paginator examples to avoid nested styling.</p>];
+  const fullContent = [<p>This example is specifically used to display the progressive paginator within Anchor style. The whole example is not wrapped up by the Terra Dialog component like other paginator examples to avoid nested styling.</p>];
 
   return (
     fullContent
   );
 };
 
-class ProgressivePaginatorWithFusionAnchorStyleExample extends React.Component {
+class ProgressivePaginatorWithAnchorStyleExample extends React.Component {
   constructor(props) {
     super(props);
 
@@ -37,10 +37,10 @@ class ProgressivePaginatorWithFusionAnchorStyleExample extends React.Component {
           Progressive Paginator in MPage Fusion Anchor style Example
         </h1>
         {this.state.content}
-        <ProgressivePaginator onPageChange={this.changePages} fusionAnchor selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} ariaLabelledBy="progressive_paginator_fusion_anchor_header_id" />
+        <ProgressivePaginator onPageChange={this.changePages} anchorStyle selectedPage={this.state.currentPage} totalCount={totalCount} itemCountPerPage={10} ariaLabelledBy="progressive_paginator_fusion_anchor_header_id" />
       </div>
     );
   }
 }
 
-export default ProgressivePaginatorWithFusionAnchorStyleExample;
+export default ProgressivePaginatorWithAnchorStyleExample;

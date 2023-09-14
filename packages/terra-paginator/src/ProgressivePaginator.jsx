@@ -48,13 +48,13 @@ const propTypes = {
    */
   pageLabel: PropTypes.string,
   /**
-   * Apply Fusion anchor style or not.
+   * Applies anchor style or not. This is used to render the paginator in grap background with a top borderline.
    */
-  fusionAnchor: PropTypes.bool,
+  anchorStyle: PropTypes.bool,
 };
 
 const defaultProps = {
-  fusionAnchor: false,
+  anchorStyle: false,
 };
 
 class ProgressivePaginator extends React.Component {
@@ -119,7 +119,7 @@ class ProgressivePaginator extends React.Component {
       ariaLabelledBy,
       ariaLabel,
       pageLabel,
-      fusionAnchor,
+      anchorStyle,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
@@ -206,7 +206,7 @@ class ProgressivePaginator extends React.Component {
 
     const fullView = (
       <nav
-        className={cx('paginator', 'progressive', fusionAnchor && 'fusion-anchor', theme.className)}
+        className={cx('paginator', 'progressive', anchorStyle && 'fusion-anchor', theme.className)}
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
       >
@@ -227,7 +227,7 @@ class ProgressivePaginator extends React.Component {
       ariaLabelledBy,
       ariaLabel,
       pageLabel,
-      fusionAnchor,
+      anchorStyle,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
@@ -314,7 +314,7 @@ class ProgressivePaginator extends React.Component {
 
     const reducedView = (
       <nav
-        className={cx('paginator', 'progressive', fusionAnchor && 'fusion-anchor', theme.className)}
+        className={cx('paginator', 'progressive', anchorStyle && 'fusion-anchor', theme.className)}
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
       >

@@ -7,7 +7,7 @@ import ProgressivePaginator from '../../src/ProgressivePaginator';
 
 describe('ProgressivePaginator', () => {
   const defaultRender = <ProgressivePaginator onPageChange={e => typeof e} selectedPage={1} totalCount={2234} itemCountPerPage={20} />;
-  const fusionAnchorRender = <ProgressivePaginator onPageChange={e => typeof e} fusionAnchor selectedPage={1} totalCount={2234} itemCountPerPage={20} />;
+  const anchorStyleRender = <ProgressivePaginator onPageChange={e => typeof e} anchorStyle selectedPage={1} totalCount={2234} itemCountPerPage={20} />;
   const renderWithSelectedPage = <ProgressivePaginator onPageChange={e => typeof e} selectedPage={2} totalCount={2234} itemCountPerPage={20} />;
   const renderWithHeadingId = <ProgressivePaginator onPageChange={e => typeof e} selectedPage={1} totalCount={2234} itemCountPerPage={20} ariaLabelledBy="paginator_header_id" />;
   const renderWithAriaLabel = <ProgressivePaginator onPageChange={e => typeof e} selectedPage={1} totalCount={2234} itemCountPerPage={20} ariaLabel="paginator_label" />;
@@ -39,7 +39,7 @@ describe('ProgressivePaginator', () => {
   it('correctly applies the fusion theme context className with anchor style', () => {
     const wrapper = mountWithIntl(
       <ThemeContextProvider theme={{ className: 'orion-fusion-theme' }}>
-        {fusionAnchorRender}
+        {anchorStyleRender}
       </ThemeContextProvider>,
     );
     expect(wrapper).toMatchSnapshot();
