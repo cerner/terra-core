@@ -206,7 +206,7 @@ class ProgressivePaginator extends React.Component {
 
     const fullView = (
       <nav
-        className={cx('paginator', 'progressive', anchorStyle && 'fusion-anchor', theme.className)}
+        className={cx('paginator', 'progressive', anchorStyle && 'anchor-style', theme.className)}
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
       >
@@ -314,7 +314,7 @@ class ProgressivePaginator extends React.Component {
 
     const reducedView = (
       <nav
-        className={cx('paginator', 'progressive', anchorStyle && 'fusion-anchor', theme.className)}
+        className={cx('paginator', 'progressive', anchorStyle && 'anchor-style', theme.className)}
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabelledBy ? undefined : paginatorAriaLabel}
       >
