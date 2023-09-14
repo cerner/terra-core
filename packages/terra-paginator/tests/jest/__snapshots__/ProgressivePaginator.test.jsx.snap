@@ -82,7 +82,7 @@ exports[`ProgressivePaginator correctly applies the fusion theme context classNa
       >
         <nav
           aria-label="pagination"
-          className="paginator progressive fusion-anchor orion-fusion-theme"
+          className="paginator progressive anchor-style orion-fusion-theme"
         >
           <VisuallyHiddenText
             aria-live="polite"
