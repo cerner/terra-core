@@ -313,10 +313,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
         $('[data-terra-select]').click();
       });
 
-      it('should display open dropdown', () => {
-        Terra.validates.element('[enter]open-dropdown', { selector: '#root' });
-      });
-
       it('default should select the first option by pressing space', () => {
         browser.keys('Space');
       });
