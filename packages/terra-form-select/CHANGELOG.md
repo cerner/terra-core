@@ -1,8 +1,9 @@
 # Changelog
 
 ## Unreleased
+
 * Fixed
-   * Fixed selection not working with space key in `form-single-select`.
+  * Fixed selection not working with space key in `form-single-select`.
   * Fixed enter key not expanding the combo box in `form-single-select` .
 
 ## 6.46.0 - (August 25, 2023)

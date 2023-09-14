@@ -120,25 +120,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
       after(() => $('#root').click());
     });
 
-    describe('default should not open dropdown by enter key press', () => {
-      it('should tab focus to the select', () => {
-        browser.keys('Tab');
-      });
-
-      it('default should not open the dropdown by enter key press', () => {
-        browser.keys('Enter');
-      });
-
-      it('default select should be focused', () => {
-        expect($('[data-terra-select-combobox]')).toBeFocused();
-      });
-
-      it('should display closed dropdown', () => {
-        browser.keys('Enter');
-        Terra.validates.element('closed dropdown after enter', { selector: '#root' });
-      });
-    });
-
     describe('default should close when clicking off of the select', () => {
       it('default should open the dropdown by clicking the select', () => {
         $('[data-terra-select]').click();
