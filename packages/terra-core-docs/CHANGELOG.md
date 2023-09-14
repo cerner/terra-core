@@ -5,6 +5,11 @@
 * Updated
   * Updated `terra-alert` documentation for custom titles.
 
+* Added
+  * Added example for `terra-badge` with `terra-html-table`
+* Changed
+  * Updated exisiting examples upto a11y standards
+
 ## 1.44.1 - (October 11, 2023)
 
 * Fixed
