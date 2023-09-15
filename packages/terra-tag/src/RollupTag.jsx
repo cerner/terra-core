@@ -1,5 +1,5 @@
 import React, {
-  useRef,
+useRef,
 } from 'react';
 import {
   KEY_SPACE, KEY_RETURN,
@@ -71,7 +71,7 @@ const RollUpTag = (props) => {
   const visuallyHiddenContentId = `terra-rollup-tag-${uuidv4()}`;
   return (
     <div
-      role="listitem"
+      role="button"
       className={cx('tag-list-item')}
     >
       <button

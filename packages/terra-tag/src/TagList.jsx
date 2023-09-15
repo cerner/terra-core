@@ -288,6 +288,9 @@ const TagList = (props) => {
     customProps.className,
   );
 
+  const navigationHint = intl.formatMessage({ id: 'Terra.tags.tagList.navigation.hint' })
+  tagGroupInteractionHint = `${tagGroupInteractionHint} ${navigationHint}`
+
   const tagGroupInteractionHintID = `terra-tags-group-interaction-hint-${uuidv4()}`;
   const tagGroupAriaDescribedBy = ariaDescribedBy ? `${ariaDescribedBy} ${tagGroupInteractionHintID}` : tagGroupInteractionHintID;
   let tagGroupInteractionHint = intl.formatMessage({ id: 'Terra.tags.hint.tagList' }, { numberOfTags: React.Children.count(children) });

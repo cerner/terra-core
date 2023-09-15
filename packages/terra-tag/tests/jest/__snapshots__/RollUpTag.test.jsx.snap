@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
+<InjectIntl(RollUpTag)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isCollapsed={true}
+  rollupCount={4}
+>
+  <RollUpTag
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isCollapsed={true}
+    rollupCount={4}
+  >
+    <div
+      className="tag-list-item"
+      role="button"
+    >
+      <button
+        aria-describedby="terra-rollup-tag-38b5a23c-0ac2-4589-8196-2adc5673235d"
+        className="rollup-tag"
+        data-terra-rollup-tag={true}
+        data-terra-rollup-tag-show-focus-styles={true}
+        id="terra-rollup-tag-cd0cdd55-92e6-447f-94b1-97cf3c3225cd"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="rollup-tag-label"
+        >
+          Terra.tags.label.rollupTag
+        </span>
+      </button>
+      <VisuallyHiddenText
+        aria-hidden="true"
+        id="terra-rollup-tag-38b5a23c-0ac2-4589-8196-2adc5673235d"
+        text="Terra.tags.hint.rollupTag"
+      >
+        <span
+          aria-hidden="true"
+          className="visually-hidden-text"
+          id="terra-rollup-tag-38b5a23c-0ac2-4589-8196-2adc5673235d"
+        >
+          Terra.tags.hint.rollupTag
+        </span>
+      </VisuallyHiddenText>
+    </div>
+  </RollUpTag>
+</InjectIntl(RollUpTag)>
+`;
+
+exports[`Rollup Tag should render rollup tag with the label "show less" when isCollapsed is false 1`] = `
+<InjectIntl(RollUpTag)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isCollapsed={false}
+  rollupCount={3}
+>
+  <RollUpTag
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isCollapsed={false}
+    rollupCount={3}
+  >
+    <div
+      className="tag-list-item"
+      role="button"
+    >
+      <button
+        aria-describedby="terra-rollup-tag-debc6549-f99e-4fb0-b6ed-f18b56990812"
+        className="rollup-tag"
+        data-terra-rollup-tag={true}
+        data-terra-rollup-tag-show-focus-styles={true}
+        id="terra-rollup-tag-abd026a1-f094-46da-aa46-d5e0fd4c2764"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="rollup-tag-label"
+        >
+          Terra.tags.label.showLess
+        </span>
+      </button>
+      <VisuallyHiddenText
+        aria-hidden="true"
+        id="terra-rollup-tag-debc6549-f99e-4fb0-b6ed-f18b56990812"
+        text="Terra.tags.hint.showLess"
+      >
+        <span
+          aria-hidden="true"
+          className="visually-hidden-text"
+          id="terra-rollup-tag-debc6549-f99e-4fb0-b6ed-f18b56990812"
+        >
+          Terra.tags.hint.showLess
+        </span>
+      </VisuallyHiddenText>
+    </div>
+  </RollUpTag>
+</InjectIntl(RollUpTag)>
+`;
+
+exports[`Rollup Tag should render rollup tag with the label "show less" when isCollapsed is true and rollupCount is 0 1`] = `
+<InjectIntl(RollUpTag)
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isCollapsed={true}
+  rollupCount={0}
+>
+  <RollUpTag
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isCollapsed={true}
+    rollupCount={0}
+  >
+    <div
+      className="tag-list-item"
+      role="button"
+    >
+      <button
+        aria-describedby="terra-rollup-tag-3a8f64c9-141e-405e-8fc5-11defd062c5b"
+        className="rollup-tag"
+        data-terra-rollup-tag={true}
+        data-terra-rollup-tag-show-focus-styles={true}
+        id="terra-rollup-tag-8d71d23f-69ff-49d3-88fb-5df3630ba6d0"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="rollup-tag-label"
+        >
+          Terra.tags.label.showLess
+        </span>
+      </button>
+      <VisuallyHiddenText
+        aria-hidden="true"
+        id="terra-rollup-tag-3a8f64c9-141e-405e-8fc5-11defd062c5b"
+        text="Terra.tags.hint.rollupTag"
+      >
+        <span
+          aria-hidden="true"
+          className="visually-hidden-text"
+          id="terra-rollup-tag-3a8f64c9-141e-405e-8fc5-11defd062c5b"
+        >
+          Terra.tags.hint.rollupTag
+        </span>
+      </VisuallyHiddenText>
+    </div>
+  </RollUpTag>
+</InjectIntl(RollUpTag)>
+`;

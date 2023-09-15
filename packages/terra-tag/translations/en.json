@@ -10,5 +10,6 @@
   "Terra.tags.hint.showLess": "select to hide items",
   "Terra.tags.hint.rollupNotVisible": "{tagsNotVisibleCount} items are not displayed",
   "Terra.tags.hint.rollupVisible": "{tagsNotVisibleCount} hidden items are now displayed",
-  "Terra.tags.hint.tagList": "Contains {numberOfTags} items"
+  "Terra.tags.hint.tagList": "Contains {numberOfTags} items.",
+  "Terra.tags.tagList.navigation.hint": "To navigate press the arrow keys"
 }

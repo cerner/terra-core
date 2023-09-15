@@ -21,8 +21,8 @@ const TagListSmall = () => {
             <div className={cx('toolbar-flex-item-start')} />
             <div className={cx('toolbar-flex-item-fill')}>
               <TagList isCollapsible ariaLabel="Tag List Example with small list">
-                <Tag href="https://www.google.com/search?q=Asthma" text="Asthma" id="asthma" />
-                <Tag icon={<IconPerson />} href="https://www.google.com/search?q=Bronchitis" text="Bronchitis" id="Bronchitis" />
+                <Tag href="https://www.google.com/search?q=Asthma" text="Asthma" id="asthmaLink" />
+                <Tag icon={<IconPerson />} href="https://www.google.com/search?q=Bronchitis" text="Bronchitis" id="BronchitisLink" />
               </TagList>
             </div>
           </div>
