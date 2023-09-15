@@ -115,9 +115,10 @@ const Option = ({
   let itemLabel = display;
   if (index === 1 || isSelected) {
     itemLabel = `${expandedStateText} ${display} `;
-    if (!isSelected && SharedUtil.isMac() && SharedUtil.isSafari() && variant !== 'tag' && variant !== 'multiple') {
-      itemLabel = intl.formatMessage({ id: 'Terra.form.select.notselected' }, { text: itemLabel });
-    }
+  }
+
+  if (!isSelected && SharedUtil.isMac() && SharedUtil.isSafari() && variant !== 'tag' && variant !== 'multiple') {
+    itemLabel = intl.formatMessage({ id: 'Terra.form.select.notselected' }, { text: itemLabel });
   }
 
   if (SharedUtil.isSafari() && !('ontouchstart' in window)) {
