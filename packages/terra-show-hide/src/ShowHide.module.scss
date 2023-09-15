@@ -4,11 +4,7 @@
 
 :local {
   .show-hide {
-    display: flex;
-
-    .text-divider {
-      visibility: hidden;
-    }
+    display: flex; 
   }
 
   .start {
@@ -24,6 +20,10 @@
   }
 
   .show-hide-content {
+    .text-divider {
+      visibility: hidden;
+    }
+    
     &:focus,
     :focus {
       outline: var(--terra-show-hide-focus-outline, 1px dashed);
