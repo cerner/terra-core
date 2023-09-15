@@ -1,9 +1,5 @@
-import React, {
-useRef,
-} from 'react';
-import {
-  KEY_SPACE, KEY_RETURN,
-} from 'keycode-js';
+import React, { useRef } from 'react';
+import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import { injectIntl } from 'react-intl';
 import classNamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
