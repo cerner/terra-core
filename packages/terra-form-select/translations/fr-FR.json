@@ -15,6 +15,7 @@
   "Terra.form.select.dimmed": "Grisé.",
   "Terra.form.select.expanded": "Zone combinée développée",
   "Terra.form.select.collapsed": "Zone combinée réduite",
+  "Terra.form.select.notselected": "{text} Non sélectionné",
   "Terra.form.select.listOfTotalOptions": "Liste de options.",
   "Terra.form.select.defaultUsageGuidance": "Utilisez les touches fléchées haut et bas pour parcourir les options. Appuyez sur Entrée pour sélectionner une option.",
   "Terra.form.select.mobileUsageGuidance": "Balayez vers la droite pour naviguer vers les options.",
