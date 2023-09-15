@@ -172,21 +172,21 @@ const Alert = ({
 
   const dismissButtonAriaDescribedBy = (title || defaultTitle) ? alertTitleId : alertMessageId;
 
-  const dismissButtonAriaDescription = () => {
-    if (title && defaultTitle) {
-      return `${defaultTitle} ${title}`;
-    }
+  // const dismissButtonAriaDescription = () => {
+  //   if (title && defaultTitle) {
+  //     return `${defaultTitle} ${title}`;
+  //   }
 
-    return undefined;
-  };
+  //   return undefined;
+  // };
 
   let dismissButton;
   if (onDismiss) {
-    const ariaDescription = dismissButtonAriaDescription();
+    // const ariaDescription = dismissButtonAriaDescription();
     dismissButton = (
       <Button
-        aria-describedby={ariaDescription ? undefined : dismissButtonAriaDescribedBy}
-        aria-description={ariaDescription}
+        aria-describedby={dismissButtonAriaDescribedBy}
+        // aria-description={ariaDescription}
         text={intl.formatMessage({ id: 'Terra.alert.dismiss' })}
         onClick={onDismiss}
       />
@@ -217,6 +217,7 @@ const Alert = ({
     <div id={alertMessageId} className={alertSectionClassName}>
       {(title || defaultTitle) && (
         <strong id={alertTitleId} className={cx('title')}>
+          {title && <VisuallyHiddenText text={`${defaultTitle},`} />}
           {title || defaultTitle}
         </strong>
       )}

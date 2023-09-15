@@ -117,6 +117,9 @@ exports[`Alert of type custom with custom title and text content should render a
             className="title"
             id="alert-title-00000000-0000-0000-0000-000000000000"
           >
+            <VisuallyHiddenText
+              text=","
+            />
             Help!
           </strong>
           This is a custom alert.
@@ -895,6 +898,9 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             className="title"
             id="alert-title-00000000-0000-0000-0000-000000000000"
           >
+            <VisuallyHiddenText
+              text=","
+            />
             Help!
           </strong>
           This is a custom alert.

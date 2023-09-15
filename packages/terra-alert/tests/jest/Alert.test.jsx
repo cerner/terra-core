@@ -192,7 +192,7 @@ describe('Alert of type custom with custom title and text content', () => {
     expect(alertDiv.prop('className')).toEqual('alert-base custom wide terra-alert-custom-orange-color');
     expect(alertDiv.prop('role')).toEqual('status');
     expect(wrapper.find(IconHelp).length).toEqual(1);
-    expect(wrapper.find('.title').text()).toEqual('Help!');
+    expect(wrapper.find('.title').text()).toEqual('<VisuallyHiddenText />Help!');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -236,7 +236,7 @@ describe('Dismissable Alert of type custom with action button, custom title and 
     expect(alertDiv.prop('className')).toEqual('alert-base custom wide terra-alert-custom-orange-color');
     expect(alertDiv.prop('role')).toEqual('status');
     expect(wrapper.find(IconHelp).length).toEqual(1);
-    expect(wrapper.find('.title').text()).toEqual('Help!');
+    expect(wrapper.find('.title').text()).toEqual('<VisuallyHiddenText />Help!');
     const buttons = wrapper.find(Button);
     expect(buttons.length).toEqual(2);
     // action button
@@ -350,7 +350,7 @@ describe('Dismissible Alert', () => {
 
     it('should use the default title', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('children')).toEqual('Terra.alert.success');
+      expect(alertTitle.prop('children')).toEqual(['', 'Terra.alert.success']);
     });
 
     it('should set the alert message ID', () => {
