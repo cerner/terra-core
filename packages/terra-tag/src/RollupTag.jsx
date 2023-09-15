@@ -67,7 +67,7 @@ const RollUpTag = (props) => {
   const visuallyHiddenContentId = `terra-rollup-tag-${uuidv4()}`;
   return (
     <div
-      role="button"
+      role="listitem"
       className={cx('tag-list-item')}
     >
       <button
