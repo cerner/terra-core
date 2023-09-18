@@ -1,3 +1,3 @@
-import NewTable from './new-table';
+import Table from './Table';
 
-export default NewTable;
+export default Table;

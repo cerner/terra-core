@@ -9,8 +9,8 @@ import IconDown from 'terra-icon/lib/icon/IconDown';
 import IconError from 'terra-icon/lib/icon/IconError';
 
 import ColumnResizeHandle from './ColumnResizeHandle';
-import { SortIndicators } from './proptypes/columnShape';
-import ColumnContext from './utils/ColumnContext';
+import { SortIndicators } from '../proptypes/columnShape';
+import ColumnContext from '../utils/ColumnContext';
 import styles from './ColumnHeaderCell.module.scss';
 
 const cx = classNames.bind(styles);

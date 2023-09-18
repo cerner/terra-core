@@ -5,7 +5,7 @@ import classNames from 'classnames/bind';
 import styles from './Row.module.scss';
 import Cell from './Cell';
 import cellShape from '../proptypes/cellShape';
-import { columnShape } from './proptypes/columnShape';
+import { columnShape } from '../proptypes/columnShape';
 
 const cx = classNames.bind(styles);
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { columnShape } from './proptypes/columnShape';
+import { columnShape } from '../proptypes/columnShape';
 import ColumnHeaderCell from './ColumnHeaderCell';
 
 const propTypes = {

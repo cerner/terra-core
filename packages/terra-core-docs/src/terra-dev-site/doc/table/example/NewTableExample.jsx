@@ -1,10 +1,10 @@
 import React from 'react';
-import { NewTable } from 'terra-table';
+import Table from 'terra-table';
 
 const NewTableExample = () => (
   <React.Fragment>
     <div>hello world this is an example</div>
-    <NewTable />
+    <Table />
 
   </React.Fragment>
 );

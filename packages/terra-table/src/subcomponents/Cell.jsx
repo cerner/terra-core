@@ -7,7 +7,7 @@ import classNames from 'classnames/bind';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import ThemeContext from 'terra-theme-context';
 import styles from './Cell.module.scss';
-import ColumnContext from './utils/ColumnContext';
+import ColumnContext from '../utils/ColumnContext';
 
 const cx = classNames.bind(styles);
 
