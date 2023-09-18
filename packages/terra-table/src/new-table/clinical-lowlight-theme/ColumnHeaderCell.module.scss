@@ -1,21 +1,21 @@
 :local {
   .clinical-lowlight-theme {
     // Column Headers
-    --terra-data-grid-column-header-text-color: #b2b5b6;
-    --terra-data-grid-column-header-background-color: #151719;
-    --terra-data-grid-column-header-border-bottom: 1px solid #181b1d;
-    --terra-data-grid-column-header-border-right: 1px solid #181b1d;
-    --terra-data-grid-column-header-border-top: 1px solid #181b1d;
+    --column-header-text-color: #b2b5b6;
+    --column-header-background-color: #151719;
+    --column-header-border-bottom: 1px solid #181b1d;
+    --column-header-border-right: 1px solid #181b1d;
+    --column-header-border-top: 1px solid #181b1d;
 
     // Pinned Columns
-    --terra-data-grid-pinned-columns-header-border: 1px solid #181b1d;
-    --terra-data-grid-pinned-columns-header-box-shadow: 1px 0 #181b1d;
+    --pinned-columns-header-border: 1px solid #181b1d;
+    --pinned-columns-header-box-shadow: 1px 0 #181b1d;
 
     // Pinned Columns divider
-    --terra-data-grid-pinned-columns-divider-background-color: #181b1d;
-    --terra-data-grid-pinned-columns-divider-box-shadow: 4px -1px 6px #181b1d;
+    --pinned-columns-divider-background-color: #181b1d;
+    --pinned-columns-divider-box-shadow: 4px -1px 6px #181b1d;
 
     // Hover
-    --terra-data-grid-header-hover-background-color: #0c0f10;
+    --header-hover-background-color: #0c0f10;
   }
 }

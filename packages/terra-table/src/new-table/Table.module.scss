@@ -3,13 +3,13 @@
 @import './clinical-lowlight-theme/DataGrid.module';
 
 :local {
-  .data-grid-container {
+  .table-container {
     height: 100%;
     overflow: auto;
     width: 100%;
   }
 
-  .data-grid {
+  .table {
     // Style for the grid itself
     border-collapse: separate;
     border-spacing: 0;
@@ -18,8 +18,8 @@
     width: 1px;
 
     :focus {
-      outline: var(--terra-data-grid-cell-focus-outline, 3px dashed #000);
-      outline-offset: var(--terra-data-grid-cell-focus-outline-offset, -2px);
+      outline: var(--cell-focus-outline, 3px dashed #000);
+      outline-offset: var(--cell-focus-outline-offset, -2px);
     }
   }
 }

@@ -1,31 +1,31 @@
 // Themes
-@import '../orion-fusion-theme/Cell.module';
-@import '../clinical-lowlight-theme/Cell.module';
+@import './orion-fusion-theme/Cell.module';
+@import './clinical-lowlight-theme/Cell.module';
 
 :local {
   .cell {
-    border-bottom: var(--terra-data-grid-cell-border-bottom, 1px solid #dedfe0);
-    border-right: var(--terra-data-grid-cell-border-right, 1px solid #dedfe0);
+    border-bottom: var(--cell-border-bottom, 1px solid #dedfe0);
+    border-right: var(--cell-border-right, 1px solid #dedfe0);
     font-weight: normal;
-    padding: var(--terra-data-grid-cell-content-padding, 7px);
+    padding: var(--cell-content-padding, 7px);
     position: relative;
 
     &:first-child {
-      border-left: var(--terra-data-grid-cell-border-left, 1px solid #dedfe0);
+      border-left: var(--cell-border-left, 1px solid #dedfe0);
     }
   }
 
   .selected {
-    background-color: var(--terra-data-grid-cell-selected-background-color, #cbe7fa);
+    background-color: var(--cell-selected-background-color, #cbe7fa);
   }
 
   // Create gradient background for masked cells
   .masked {
-    background: var(--terra-data-grid-mask-background, repeating-linear-gradient(-45deg, #dedfe0, #dedfe0 3px, transparent 3px, transparent 6px));
+    background: var(--mask-background, repeating-linear-gradient(-45deg, #dedfe0, #dedfe0 3px, transparent 3px, transparent 6px));
   }
 
   .masked.highlighted {
-    background: var(--terra-data-grid-highlight-mask-background, repeating-linear-gradient(-45deg, #cfd2d3, #cfd2d3 3px, #cbe7fa 3px, #cbe7fa 6px));
+    background: var(--highlight-mask-background, repeating-linear-gradient(-45deg, #cfd2d3, #cfd2d3 3px, #cbe7fa 3px, #cbe7fa 6px));
   }
 
   .cell-content {
@@ -51,12 +51,12 @@
 
   // Hover state for selectable elements
   tr:nth-child(odd) .selectable:hover {
-    background-color: var(--terra-data-grid-odd-row-hover-background-color, #e0f2fb);
+    background-color: var(--odd-row-hover-background-color, #e0f2fb);
     cursor: pointer;
   }
 
   tr:nth-child(even) .selectable:hover {
-    background-color: var(--terra-data-grid-even-row-hover-background-color, #d3e5ee);
+    background-color: var(--even-row-hover-background-color, #d3e5ee);
     cursor: pointer;
   }
 }

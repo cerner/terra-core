@@ -1,7 +1,7 @@
 /* stylelint-disable terra/custom-property-namespace */
 // Themes
-@import '../orion-fusion-theme/ColumnResizeHandle.module';
-@import '../clinical-lowlight-theme/ColumnResizeHandle.module';
+@import './orion-fusion-theme/ColumnResizeHandle.module';
+@import './clinical-lowlight-theme/ColumnResizeHandle.module';
 
 :local {
   .resize-handle {
@@ -15,12 +15,12 @@
     z-index: 1;
 
     &:focus {
-      border-color: var(--terra-data-grid-resize-handle-focus-border-color, rgba(34, 42, 46, 1)) !important;
+      border-color: var(--resize-handle-focus-border-color, rgba(34, 42, 46, 1)) !important;
       outline: 0 !important;
     }
 
     &:hover {
-      border-color: var(--terra-data-grid-resize-handle-hover-border-color, rgba(34, 42, 46, 0.6));
+      border-color: var(--resize-handle-hover-border-color, rgba(34, 42, 46, 0.6));
     }
   }
 }

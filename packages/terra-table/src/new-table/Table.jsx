@@ -517,14 +517,14 @@ function Table(props) {
   // -------------------------------------
 
   return (
-    <div ref={gridContainerRef} className={cx('data-grid-container')}>
+    <div ref={gridContainerRef} className={cx('table-container')}>
       <table
         ref={gridRef}
         id={id}
         role="grid"
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabel}
-        className={cx('data-grid', theme.className)}
+        className={cx('table', theme.className)}
         onKeyDown={handleKeyDown}
         onFocus={onFocus}
         onMouseDown={onMouseDown}

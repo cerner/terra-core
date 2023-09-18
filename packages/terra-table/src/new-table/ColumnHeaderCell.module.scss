@@ -1,33 +1,33 @@
 // Themes
-@import '../orion-fusion-theme/ColumnHeaderCell.module';
-@import '../clinical-lowlight-theme/ColumnHeaderCell.module';
+@import './orion-fusion-theme/ColumnHeaderCell.module';
+@import './clinical-lowlight-theme/ColumnHeaderCell.module';
 
 :local {
   .column-header {
-    background-color: var(--terra-data-grid-column-header-background-color, #dedfe0);
-    border-bottom: var(--terra-data-grid-column-header-border-bottom, 1px solid #000);
-    border-right: var(--terra-data-grid-column-header-border-right, 1px solid #000);
-    border-top: var(--terra-data-grid-column-header-border-top, 1px solid #000);
-    color: var(--terra-data-grid-column-header-text-color);
+    background-color: var(--column-header-background-color, #dedfe0);
+    border-bottom: var(--column-header-border-bottom, 1px solid #000);
+    border-right: var(--column-header-border-right, 1px solid #000);
+    border-top: var(--column-header-border-top, 1px solid #000);
+    color: var(--column-header-text-color);
     position: sticky;
     top: 0;
     z-index: 1;
 
     &:first-child {
-      border-left: var(--terra-data-grid-column-header-border-left, 1px solid #000);
+      border-left: var(--column-header-border-left, 1px solid #000);
     }
 
     .header-container {
       align-items: center;
       display: flex;
       height: 100%;
-      padding: var(--terra-data-grid-header-cell-padding, 5px);
+      padding: var(--header-cell-padding, 5px);
       width: 100%;
     }
 
     // Add right margin for error icon
     .error-icon {
-      margin-right: var(--terra-data-grid-error-icon-margin-right, 5px);
+      margin-right: var(--error-icon-margin-right, 5px);
     }
 
     // Style column header text
@@ -46,7 +46,7 @@
 
   // Hover state for selectable elements
   .selectable:hover {
-    background-color: var(--terra-data-grid-header-hover-background-color, #daecf6);
+    background-color: var(--header-hover-background-color, #daecf6);
     cursor: pointer;
   }
 
@@ -56,8 +56,8 @@
   }
 
   .pinned-columns-divider {
-    background-color: var(--terra-data-grid-pinned-columns-divider-background-color, #808080);
-    box-shadow: var(--terra-data-grid-pinned-columns-divider-box-shadow, 4px -1px 6px #808080);
+    background-color: var(--pinned-columns-divider-background-color, #808080);
+    box-shadow: var(--pinned-columns-divider-box-shadow, 4px -1px 6px #808080);
     position: absolute;
     top: 0;
     width: 2px;

@@ -1,11 +1,11 @@
 :local {
   .orion-fusion-theme {
-    --terra-data-grid-cell-border-bottom: 1px solid #c8cacb;
-    --terra-data-grid-cell-border-left: 1px solid #c8cacb;
-    --terra-data-grid-cell-border-right: 1px solid #c8cacb;
-    --terra-data-grid-cell-selected-background-color: #cbe7fa;
-    --terra-data-grid-odd-row-hover-background-color: #e0f2fb;
-    --terra-data-grid-even-row-hover-background-color: #d6e8f2;
-    --terra-data-grid-pinned-columns-cell-border: 1px solid #c8cacb;
+    --cell-border-bottom: 1px solid #c8cacb;
+    --cell-border-left: 1px solid #c8cacb;
+    --cell-border-right: 1px solid #c8cacb;
+    --cell-selected-background-color: #cbe7fa;
+    --odd-row-hover-background-color: #e0f2fb;
+    --even-row-hover-background-color: #d6e8f2;
+    --pinned-columns-cell-border: 1px solid #c8cacb;
   }
 }

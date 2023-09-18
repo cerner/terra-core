@@ -1,13 +1,13 @@
 :local {
   .clinical-lowlight-theme {
-    --terra-data-grid-cell-border-bottom: 1px solid #181b1d;
-    --terra-data-grid-cell-border-left: 1px solid #181b1d;
-    --terra-data-grid-cell-border-right: 1px solid #181b1d;
-    --terra-data-grid-cell-selected-background-color: #1e3a49;
-    --terra-data-grid-mask-background: repeating-linear-gradient(-45deg, #434647, #434647 3px, transparent 3px, transparent 6px);
-    --terra-data-grid-highlight-mask-background: repeating-linear-gradient(-45deg, #434647, #434647 3px, transparent 3px, transparent 6px);
-    --terra-data-grid-odd-row-hover-background-color: #25282a;
-    --terra-data-grid-even-row-hover-background-color: #1d2225;
-    --terra-data-grid-pinned-columns-cell-border: 1px solid #181b1d;
+    --cell-border-bottom: 1px solid #181b1d;
+    --cell-border-left: 1px solid #181b1d;
+    --cell-border-right: 1px solid #181b1d;
+    --cell-selected-background-color: #1e3a49;
+    --mask-background: repeating-linear-gradient(-45deg, #434647, #434647 3px, transparent 3px, transparent 6px);
+    --highlight-mask-background: repeating-linear-gradient(-45deg, #434647, #434647 3px, transparent 3px, transparent 6px);
+    --odd-row-hover-background-color: #25282a;
+    --even-row-hover-background-color: #1d2225;
+    --pinned-columns-cell-border: 1px solid #181b1d;
   }
 }
