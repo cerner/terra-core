@@ -189,12 +189,10 @@ const Alert = ({
       'actions-custom': type === AlertTypes.CUSTOM,
     });
     actionsSection = (
-      <>
-        <div className={actionsClassName}>
-          {action}
-          {dismissButton}
-        </div>
-      </>
+      <div className={actionsClassName}>
+        {action}
+        {dismissButton}
+      </div>
     );
   }
 
@@ -205,7 +203,7 @@ const Alert = ({
     <div id={alertMessageId} className={alertSectionClassName}>
       {(title || defaultTitle) && (
         <strong id={alertTitleId} className={cx('title')}>
-          {title && <VisuallyHiddenText text={`${defaultTitle},`} />}
+          {title && defaultTitle && <VisuallyHiddenText text={`${defaultTitle},`} />}
           {title || defaultTitle}
         </strong>
       )}

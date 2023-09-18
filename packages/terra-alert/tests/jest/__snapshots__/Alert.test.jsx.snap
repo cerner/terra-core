@@ -117,9 +117,6 @@ exports[`Alert of type custom with custom title and text content should render a
             className="title"
             id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <VisuallyHiddenText
-              text=","
-            />
             Help!
           </strong>
           This is a custom alert.
@@ -725,6 +722,53 @@ exports[`Alert with props should render an alert with provided role 1`] = `
 </ResponsiveElement>
 `;
 
+exports[`Alert with props should render an alert with provided title 1`] = `
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
+>
+  <div
+    className="alert-base alert wide"
+    role="alert"
+  >
+    <div
+      className="body body-std"
+    >
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
+      >
+        <span
+          className="icon"
+        >
+          <IconAlert
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
+          >
+            <VisuallyHiddenText
+              text="Terra.alert.alert,"
+            />
+            Custom Title
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</ResponsiveElement>
+`;
+
 exports[`Alert with props should render disableAlertActionFocus when provided 1`] = `
 <InjectIntl(Alert)
   disableAlertActionFocus={true}
@@ -863,7 +907,7 @@ exports[`Alert with props should render disableAlertActionFocus when provided 1`
 </InjectIntl(Alert)>
 `;
 
-exports[`Dismissable Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
+exports[`Dismissible Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
 <ResponsiveElement
   onChange={[Function]}
   responsiveTo="parent"
@@ -898,9 +942,6 @@ exports[`Dismissable Alert of type custom with action button, custom title and t
             className="title"
             id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <VisuallyHiddenText
-              text=","
-            />
             Help!
           </strong>
           This is a custom alert.
