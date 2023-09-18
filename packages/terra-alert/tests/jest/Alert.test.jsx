@@ -71,8 +71,15 @@ describe('Alert with props', () => {
 
   it('should render an alert with provided title', () => {
     const wrapper = shallowWithIntl(<Alert title="Custom Title" />).dive();
+    const alertTitle = wrapper.find('.title');
 
-    expect(wrapper.find('.title').text()).toEqual('<VisuallyHiddenText />Custom Title');
+    expect(alertTitle.prop('children')).toEqual(
+      [
+        <VisuallyHiddenText text="Terra.alert.alert," />,
+        'Custom Title',
+      ],
+    );
+    expect(alertTitle.text()).toEqual('<VisuallyHiddenText />Custom Title');
     expect(wrapper).toMatchSnapshot();
   });
 });
