@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import ThemeContext from 'terra-theme-context';
 import classNames from 'classnames/bind';
 import styles from './Row.module.scss';
-import RowSelectionCell from './RowSelectionCell';
 import Cell from './Cell';
 import cellShape from '../proptypes/cellShape';
 import { columnShape } from './proptypes/columnShape';
@@ -116,18 +115,6 @@ function Row(props) {
     );
   };
 
-  const rowSelectionCell = hasRowSelection ? (
-    <RowSelectionCell
-      rowId={id}
-      columnId={displayedColumns[0].id}
-      rowIndex={rowIndex}
-      columnIndex={0}
-      isSelected={isSelected}
-      ariaLabel={ariaLabel}
-      onCellSelect={onCellSelect}
-    />
-  ) : null;
-
   return (
     <tr
       className={cx('row', {
@@ -139,7 +126,6 @@ function Row(props) {
       onMouseEnter={hasRowSelection ? () => { setHovered(true); } : null}
       onMouseLeave={hasRowSelection ? () => { setHovered(false); } : null}
     >
-      {rowSelectionCell}
       {cells.map((cellData, cellColumnIndex) => (
         getCellData(rowIndex, cellColumnIndex + columnIndexOffSet, cellData, id)
       ))}

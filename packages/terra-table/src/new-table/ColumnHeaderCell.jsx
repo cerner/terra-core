@@ -1,7 +1,6 @@
 import React, { useContext, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
-import * as KeyCode from 'keycode-js';
 import classNames from 'classnames/bind';
 
 import ThemeContext from 'terra-theme-context';
@@ -49,11 +48,6 @@ const propTypes = {
   maximumWidth: PropTypes.number,
 
   /**
-   * Boolean value indicating whether or not the column header is selectable.
-  */
-  isSelectable: PropTypes.bool,
-
-  /**
    * Boolean value indicating whether or not the column header is resizable.
    */
   isResizable: PropTypes.bool,
@@ -84,13 +78,6 @@ const propTypes = {
   columnIndex: PropTypes.number,
 
   /**
-   * Function that is called when a selectable header cell is selected. Parameters:
-   * @param {string} rowId rowId
-   * @param {string} columnId columnId
-   */
-  onColumnSelect: PropTypes.func,
-
-  /**
    * Function that is called when the mouse down event is triggered on the column resize handle.
    */
   onResizeMouseDown: PropTypes.func,
@@ -104,7 +91,6 @@ const propTypes = {
 
 const defaultProps = {
   hasError: false,
-  isSelectable: true,
   isResizable: true,
 };
 
@@ -114,14 +100,12 @@ const ColumnHeaderCell = (props) => {
     displayName,
     sortIndicator,
     hasError,
-    isSelectable,
     isResizable,
     tableHeight,
     width,
     minimumWidth,
     maximumWidth,
     headerHeight,
-    onColumnSelect,
     intl,
     rowIndex,
     columnIndex,
@@ -140,26 +124,6 @@ const ColumnHeaderCell = (props) => {
       onResizeMouseDown(event, columnIndex, columnHeaderCell.current.offsetWidth);
     }
   }, [columnIndex, onResizeMouseDown]);
-
-  // Handle column header selection via the mouse click.
-  const handleMouseDown = (event) => {
-    onColumnSelect(id, { row: rowIndex, col: columnIndex });
-    event.stopPropagation();
-  };
-
-  // Handle column header selection via the space bar.
-  const handleKeyDown = (event) => {
-    const key = event.keyCode;
-    switch (key) {
-      case KeyCode.KEY_SPACE:
-      case KeyCode.KEY_RETURN:
-        onColumnSelect(id, { row: rowIndex, col: columnIndex });
-        event.stopPropagation();
-        event.preventDefault(); // prevent the default scrolling
-        break;
-      default:
-    }
-  };
 
   let sortIndicatorIcon;
   const errorIcon = hasError && <IconError a11yLabel={intl.formatMessage({ id: 'Terra.dataGrid.columnError' })} className={cx('error-icon')} />;
@@ -191,14 +155,13 @@ const ColumnHeaderCell = (props) => {
     <th
       ref={(columnHeaderCellRef)}
       key={id}
-      className={cx('column-header', theme.className, { selectable: isSelectable, pinned: columnIndex < columnContext.pinnedColumnOffsets.length })}
+      className={cx('column-header', theme.className, { pinned: columnIndex < columnContext.pinnedColumnOffsets.length })}
       tabIndex={-1}
       role="columnheader"
       scope="col"
       aria-sort={sortIndicator}
-      onMouseDown={(isSelectable && onColumnSelect) ? handleMouseDown : undefined}
-      onKeyDown={(isSelectable && onColumnSelect) ? handleKeyDown : undefined}
-      style={{ width: `${width}px`, height: headerHeight, left: cellLeftEdge }} // eslint-disable-line react/forbid-dom-props
+      // eslint-disable-next-line react/forbid-dom-props
+      style={{ width: `${width}px`, height: headerHeight, left: cellLeftEdge }}
     >
       <div className={cx('header-container')} role={displayName && 'button'}>
         {errorIcon}

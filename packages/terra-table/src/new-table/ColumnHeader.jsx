@@ -21,12 +21,6 @@ const propTypes = {
   tableHeight: PropTypes.number,
 
   /**
-   * Function that is called when a selectable header cell is selected. Parameters:
-   * @param {string} columnId columnId
-   */
-  onColumnSelect: PropTypes.func,
-
-  /**
    * Function that is called when the mouse down event is triggered on the column resize handle.
    */
   onResizeMouseDown: PropTypes.func,
@@ -37,7 +31,6 @@ const ColumnHeader = (props) => {
     columns,
     headerHeight,
     tableHeight,
-    onColumnSelect,
     onResizeMouseDown,
   } = props;
 
@@ -58,7 +51,6 @@ const ColumnHeader = (props) => {
       tableHeight={tableHeight}
       hasError={column.hasError}
       sortIndicator={column.sortIndicator}
-      onColumnSelect={onColumnSelect}
       onResizeMouseDown={onResizeMouseDown}
     />
   );
