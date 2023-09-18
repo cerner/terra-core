@@ -1,0 +1,27 @@
+/* stylelint-disable terra/custom-property-namespace */
+// Themes
+@import '../orion-fusion-theme/ColumnResizeHandle.module';
+@import '../clinical-lowlight-theme/ColumnResizeHandle.module';
+
+:local {
+  .resize-handle {
+    border-right: 2px solid transparent;
+    cursor: col-resize;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    z-index: 1;
+
+    &:focus {
+      border-color: var(--terra-data-grid-resize-handle-focus-border-color, rgba(34, 42, 46, 1)) !important;
+      outline: 0 !important;
+    }
+
+    &:hover {
+      border-color: var(--terra-data-grid-resize-handle-hover-border-color, rgba(34, 42, 46, 0.6));
+    }
+  }
+}
+/* stylelint-enable terra/custom-property-namespace */
