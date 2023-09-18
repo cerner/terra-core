@@ -1,0 +1,95 @@
+import { Badge } from 'terra-paginator/package.json?dev-site-package';
+import { Notice } from "@cerner/terra-docs";
+import ControlledPaginatorExample from './example/ControlledPaginatorExample?dev-site-example';
+import ControlledPaginatorNoPagesExample from './example/ControlledPaginatorNoPagesExample?dev-site-example';
+import ProgressivePaginatorExample from './example/ProgressivePaginatorExample?dev-site-example';
+import ProgressivePaginatorWithoutTotalCountExample from './example/ProgressivePaginatorWithoutTotalCountExample?dev-site-example';
+
+<Badge />
+
+# Accessibility Guide for Terra Paginator
+
+## Why is this important?
+
+Terra Paginator could be used for data sets of known and unknown size. It is a simple and effective way to make large amounts of content more manageable and user-friendly. 
+
+## Accessibility Considerations
+
+#### General notes
+- All paginator variants were able to be accessed via TAB and acted upon via keyboard. Consuming teams must ensure that all interactable elements can receive focus, be interacted with, and able to be acted upon.
+- Paginator's Name and Role are needed to ensure users understand the content and context. Paginator should have an aria-label that accurately describes its purpose.
+- Paginator is a control full of links that should have some context to what they control. Paginator needs to provide contexts for screen reader users to understand what they are controling. Consuming teams must ensure that any meaningful context that is provided visually is also programmatically determined.
+
+----
+
+### Code Considerations
+
+#### Add ARIA contexts to the paginator
+
+The paginator needs to provide contexts for screen reader users to understand what they are controling. Adding the aria-label to the container should provide the necessary context.
+In order to provide an accessible name for the whole container, two optional props will be added to let the consumer team pass the meaningful context for the accessibility usage.
+
+<Notice variant="important" ariaLevel="5">
+
+It is recommended to set the optional `ariaLabelledBy` [prop](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/paginator/about#paginator-props) when page header id exists. This will semantically relate the paginator and header as a related group.
+</Notice>
+
+ariaLabelledBy could be set with the header id(when it exists) and will be used with the aria-describedby to provide additional context for the paginator.
+
+##### Code Example:
+
+This example shows how to set up the optional `ariaLabelledBy` prop in order to relate the paginator with the header:
+
+<ControlledPaginatorExample />
+
+ariaLabel could be set with a custom aria label that the consumer team would like to associate with the paginator, and will be used with the aria-label.
+
+##### Code Example:
+
+This example shows how to set up the optional `ariaLabel` prop in order to provide a meaningful context for the paginator:
+
+<ControlledPaginatorNoPagesExample />
+
+#### Meaningful ARIA contexts after page nagivation
+
+From the accessibility perspective, some meaningful contexts are very helpful after the user click on the paginator buttons because screen reader users would understand when they navigate the paginator.
+
+In order to provide meaningful contexts, a visually hidden text is constructed and associated with the paginator container.
+This visually hidden string will be read out by the screen reader when the user navigates the paginator with paginator links. This visually hidden string would be empty so nothing would be read out in the initial status.
+
+Depending on the optional `totalCount` prop set or not, the constructed visually hidden text varies:
+
+##### Code Example:
+
+This example shows when the optional `totalCount` prop is set, the paginator would read out a string like "Page {pageNumber} selected. Page {pageNumber} of {pageNumberTotal}":
+
+<ProgressivePaginatorExample />
+
+##### Code Example:
+
+This example shows when the optional `totalCount` prop is not set, the paginator would read out a string like "Page {pageNumber} selected":
+
+<ProgressivePaginatorWithoutTotalCountExample />
+
+
+## Support Compliance
+
+Terra is committed to ensuring its components provide maximum possible accessibility. However, simply using Terra components will not automatically make a product accessible.
+
+Final responsibility lies with the consumers of Terra components &mdash; ensuring proper usage, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance &mdash; to make a product fully accessible.
+
+### WCAG Resources
+
+#### Success Criteria
+
+- [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content) - All non-text content that is presented to the user has a text alternative that serves the equivalent purpose.
+- [**1.3.1 Info and Relationships**](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships) - Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. (Level A)
+- [**3.2.4 Consistent Identification**](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification) - Components that have the same functionality within a set of Web pages are identified consistently.
+- [**4.1.2 Name, Role, Value**](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value) - For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.
+
+### Partial Support & Requiring Further Enhancement
+
+- None identified
+- [Report a problem with this component on **GitHub**](https://github.com/cerner/terra-core/issues/new/choose)
+
+_For more information about Accessibility Support with Terra — go to [Component Standards: Accessibility (A11y)](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#accessibility-a11y)._
