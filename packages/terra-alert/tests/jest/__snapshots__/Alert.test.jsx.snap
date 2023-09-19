@@ -173,43 +173,53 @@ exports[`Alert of type error with text content should render an Alert component 
 `;
 
 exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
-<Alert
-  customColorClass="custom-default-color"
-  disableAlertActionFocus={false}
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  title="Gettysburg Address"
-  type="info"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <span>
-    Four score and seven years ago . . .
-  </span>
-</Alert>
+  <div
+    className="alert-base info wide"
+    role="status"
+  >
+    <div
+      className="body body-std"
+    >
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
+      >
+        <span
+          className="icon"
+        >
+          <IconInformation
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
+          >
+            <VisuallyHiddenText
+              text="Terra.alert.info,"
+            />
+            Gettysburg Address
+          </strong>
+          <span>
+            Four score and seven years ago . . .
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type info with text content should render an Alert component of type info 1`] = `

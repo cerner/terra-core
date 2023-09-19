@@ -218,11 +218,20 @@ describe('Alert of type custom with custom title and text content', () => {
 
 describe('Alert of type info with custom title and HTML content', () => {
   it('should render an Alert component of type info with custom title and HTML content', () => {
-    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>);
+    const wrapper = shallowWithIntl(<Alert type={Alert.Opts.Types.INFO} title="Gettysburg Address"><span>Four score and seven years ago . . .</span></Alert>).dive();
 
-    expect(wrapper.prop('title')).toEqual('Gettysburg Address');
-    expect(wrapper.prop('type')).toEqual('info');
-    expect(wrapper.find('span').text()).toEqual('Four score and seven years ago . . .');
+    const alertDiv = wrapper.find('div.alert-base');
+    expect(alertDiv.prop('className')).toEqual('alert-base info wide');
+    expect(alertDiv.prop('role')).toEqual('status');
+    expect(wrapper.find(IconInformation).length).toEqual(1);
+    expect(wrapper.find('.title').prop('children')).toEqual(
+      [
+        <VisuallyHiddenText text="Terra.alert.info," />,
+        'Gettysburg Address',
+      ],
+    );
+    expect(wrapper.find('.title').text()).toEqual('<VisuallyHiddenText />Gettysburg Address');
+    expect(wrapper.find('.section').find('span').text()).toEqual('Four score and seven years ago . . .');
     expect(wrapper).toMatchSnapshot();
   });
 });
