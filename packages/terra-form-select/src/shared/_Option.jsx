@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
 
@@ -137,10 +138,10 @@ const Option = ({
       aria-disabled={disabled}
       tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
       data-terra-select-option
-      aria-label={itemLabel}
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
       <span className={cx('display')}>{display}</span>
+      <VisuallyHiddenText text={itemLabel} />
     </li>
   );
 };
