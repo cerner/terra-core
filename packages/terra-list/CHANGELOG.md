@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Fixed
+  * Fixed DnD issue for `terra-list` inside `terra-slide-panel`.
 
 ## 4.60.0 - (August 23, 2023)
 
