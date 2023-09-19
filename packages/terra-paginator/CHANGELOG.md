@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.85.0 - (September 19, 2023)
+
 * Added
   * Added visually hidden text with meaningful contexts to help screen reader users understand when they navigate the pagination.
 

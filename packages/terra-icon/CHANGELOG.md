@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.57.0 - (September 19, 2023)
+
 * Added
   * Added named exports. Icons can now be imported as `import { iconName } from 'terra-icon';`.
  
