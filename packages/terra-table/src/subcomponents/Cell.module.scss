@@ -15,10 +15,6 @@
     }
   }
 
-  .selected {
-    background-color: var(--cell-selected-background-color, #cbe7fa);
-  }
-
   // Create gradient background for masked cells
   .masked {
     background: var(--mask-background, repeating-linear-gradient(-45deg, #dedfe0, #dedfe0 3px, transparent 3px, transparent 6px));
@@ -43,20 +39,5 @@
   .pinned {
     position: sticky;
     z-index: 1;
-  }
-
-  .pinned:not(.selected) {
-    background-color: inherit;
-  }
-
-  // Hover state for selectable elements
-  tr:nth-child(odd) .selectable:hover {
-    background-color: var(--odd-row-hover-background-color, #e0f2fb);
-    cursor: pointer;
-  }
-
-  tr:nth-child(even) .selectable:hover {
-    background-color: var(--even-row-hover-background-color, #d3e5ee);
-    cursor: pointer;
   }
 }

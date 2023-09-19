@@ -123,7 +123,10 @@ function Table(props) {
     maximumWidth: column.maximumWidth || defaultColumnMaximumWidth,
   });
 
-  const displayedColumns = pinnedColumns.concat(overflowColumns);
+  const displayedColumns = [
+    ...pinnedColumns,
+    ...overflowColumns,
+  ];
   const [dataGridColumns, setDataGridColumns] = useState(displayedColumns.map((column) => initializeColumn(column)));
 
   // Manage column resize
@@ -275,7 +278,6 @@ function Table(props) {
                 key={row.id}
                 height={rowHeight}
                 id={row.id}
-                isSelected={row.isSelected}
                 cells={row.cells}
                 ariaLabel={row.ariaLabel}
                 displayedColumns={displayedColumns}

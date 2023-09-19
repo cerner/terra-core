@@ -43,16 +43,6 @@ const propTypes = {
   isMasked: PropTypes.bool,
 
   /**
-   * Boolean value indicating whether or not the column header is selectable.
-   */
-  isSelectable: PropTypes.bool,
-
-  /**
-   * Boolean indicating whether the Cell is currently selected.
-   */
-  isSelected: PropTypes.bool,
-
-  /**
    * String that labels the cell for accessibility.
    */
   ariaLabel: PropTypes.string,
@@ -76,8 +66,6 @@ const propTypes = {
 
 const defaultProps = {
   isRowHeader: false,
-  isSelected: false,
-  isSelectable: true,
   isMasked: false,
 };
 
@@ -90,8 +78,6 @@ function Cell(props) {
     ariaLabel,
     isMasked,
     isRowHeader,
-    isSelectable,
-    isSelected,
     children,
     height,
     intl,
@@ -122,8 +108,6 @@ function Cell(props) {
   const className = cx('cell', {
     masked: isMasked,
     pinned: columnIndex < columnContext.pinnedColumnOffsets.length,
-    selectable: isSelectable && !isMasked,
-    selected: isSelected && !isMasked,
     blank: !children,
   }, theme.className);
 
@@ -133,7 +117,6 @@ function Cell(props) {
   return (
     <CellTag
       ref={cellRef}
-      aria-selected={isSelected}
       aria-label={ariaLabel}
       tabIndex={-1}
       className={className}

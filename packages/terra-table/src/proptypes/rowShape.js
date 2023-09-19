@@ -12,10 +12,6 @@ const rowShape = PropTypes.shape({
    */
   cells: PropTypes.arrayOf(cellShape),
   /**
-   * A boolean indicating whether or not the row should render as selected.
-   */
-  isSelected: PropTypes.bool,
-  /**
    * A string identifier used to describe the row contents. This value will be used to construct additional labels
    * for internal controls (e.g. row selection cells).
    */

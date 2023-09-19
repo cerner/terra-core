@@ -44,12 +44,6 @@
     }
   }
 
-  // Hover state for selectable elements
-  .selectable:hover {
-    background-color: var(--header-hover-background-color, #daecf6);
-    cursor: pointer;
-  }
-
   .pinned {
     position: sticky;
     z-index: 2 !important;

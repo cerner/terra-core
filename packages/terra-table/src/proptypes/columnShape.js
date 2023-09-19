@@ -23,10 +23,6 @@ const columnShape = PropTypes.shape({
    */
   isResizable: PropTypes.bool,
   /**
-   * Boolean value indicating whether or not the column header is selectable.
-   */
-  isSelectable: PropTypes.bool,
-  /**
    * Number that specifies the minimum column width in pixels.
    */
   minimumWidth: PropTypes.number,

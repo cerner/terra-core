@@ -4,11 +4,6 @@
 
 :local {
   .row {
-    &.selectable:hover {
-      background-color: var(--row-hover-background-color, #e2f2fc);
-      cursor: pointer;
-    }
-
     &:nth-child(even) {
       background-color: var(--row-striped-even-background-color, #f0f0f0);
     }
@@ -16,27 +11,7 @@
     &:nth-child(odd) {
       background-color: var(--row-striped-odd-background-color, #fff);
     }
-
-    &.selected {
-      background-color: var(--row-selected-background-color, #cbe7fa);
-      border-right: 1px solid #0092e0;
-
-      // Add bottom border to cells in a selected row
-      td,
-      th {
-        border-bottom: var(--row-highlight-border-bottom, 1px solid #0092e0);
-      }
-    }
   }
 
-  // Add top border for first selected row or when not adjacent to a selected row
-  /* stylelint-disable selector-max-compound-selectors */
-  .row.selected:first-child,
-  .row:not(.selected) + .row.selected {
-    td,
-    th {
-      border-top: var(--row-highlight-border-top, 1px solid #0092e0);
-    }
-  }
   /* stylelint-enable selector-max-compound-selectors */
 }
