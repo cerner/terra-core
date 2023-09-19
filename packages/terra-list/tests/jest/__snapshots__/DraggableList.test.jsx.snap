@@ -122,7 +122,7 @@ exports[`should render List with items 1`] = `
               isCombineEnabled={false}
               isDropDisabled={false}
               mode="standard"
-              renderClone={null}
+              renderClone={[Function]}
               type="DEFAULT"
             >
               <Droppable
@@ -134,7 +134,7 @@ exports[`should render List with items 1`] = `
                 isDropDisabled={false}
                 mode="standard"
                 placeholder={null}
-                renderClone={null}
+                renderClone={[Function]}
                 shouldAnimatePlaceholder={false}
                 snapshot={
                   Object {
@@ -666,7 +666,7 @@ exports[`should render Section with items 1`] = `
               isCombineEnabled={false}
               isDropDisabled={false}
               mode="standard"
-              renderClone={null}
+              renderClone={[Function]}
               type="DEFAULT"
             >
               <Droppable
@@ -678,7 +678,7 @@ exports[`should render Section with items 1`] = `
                 isDropDisabled={false}
                 mode="standard"
                 placeholder={null}
-                renderClone={null}
+                renderClone={[Function]}
                 shouldAnimatePlaceholder={false}
                 snapshot={
                   Object {
@@ -1215,7 +1215,7 @@ exports[`should render subsection with items 1`] = `
               isCombineEnabled={false}
               isDropDisabled={false}
               mode="standard"
-              renderClone={null}
+              renderClone={[Function]}
               type="DEFAULT"
             >
               <Droppable
@@ -1227,7 +1227,7 @@ exports[`should render subsection with items 1`] = `
                 isDropDisabled={false}
                 mode="standard"
                 placeholder={null}
-                renderClone={null}
+                renderClone={[Function]}
                 shouldAnimatePlaceholder={false}
                 snapshot={
                   Object {
