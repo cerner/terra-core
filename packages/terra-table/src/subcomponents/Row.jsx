@@ -11,12 +11,12 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * An identifier to uniquely identify the row within the grid.
+   * An identifier to uniquely identify the row within the table.
    */
   id: PropTypes.string.isRequired,
 
   /**
-   * The row's position in the Grid. This is zero based.
+   * The row's position in the table. This is zero based.
    */
   rowIndex: PropTypes.number,
 

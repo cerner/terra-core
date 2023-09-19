@@ -20,34 +20,34 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-     * String that identifies the element (or elements) that labels the grid.
+     * String that identifies the element (or elements) that labels the table.
      */
   ariaLabelledBy: PropTypes.string,
 
   /**
-     * String that labels the grid for accessibility. If ariaLabelledBy is specified, ariaLabel will not be used.
+     * String that labels the table for accessibility. If ariaLabelledBy is specified, ariaLabel will not be used.
      */
   ariaLabel: PropTypes.string,
 
   /**
-     * String that will be used to identify the Grid. If multiple grids are on the same page, each grid should have
+     * String that will be used to identify the table. If multiple tables are on the same page, each table should have
      * a unique id.
      */
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
 
   /**
-     * Data for content in the body of the Grid. Rows will be rendered in the order given.
+     * Data for content in the body of the table. Rows will be rendered in the order given.
      */
   rows: PropTypes.arrayOf(rowShape),
 
   /**
-     * Data for pinned columns. Pinned columns are the stickied leftmost columns of the grid.
+     * Data for pinned columns. Pinned columns are the stickied leftmost columns of the table.
      * Columns will be presented in the order given.
      */
   pinnedColumns: PropTypes.arrayOf(columnShape),
 
   /**
-     * Data for overflow columns. Overflow columns are rendered in the Data Grid's horizontal overflow.
+     * Data for overflow columns. Overflow columns are rendered in the table's horizontal overflow.
      * Columns will be presented in the order given.
      */
   overflowColumns: PropTypes.arrayOf(columnShape),
@@ -63,12 +63,12 @@ const propTypes = {
   columnHeaderHeight: PropTypes.string,
 
   /**
-     * String that specifies the height for the rows in the grid. Any valid CSS value is accepted.
+     * String that specifies the height for the rows in the table. Any valid CSS value is accepted.
      */
   rowHeight: PropTypes.string,
 
   /**
-     * Number indicating the index of the column that represents row header. Index is 0 based and cannot exceed one less than the number of columns in the grid.
+     * Number indicating the index of the column that represents row header. Index is 0 based and cannot exceed one less than the number of columns in the table.
      */
   rowHeaderIndex: validateRowHeaderIndex,
 
@@ -108,12 +108,7 @@ function Table(props) {
     rowHeaderIndex,
   } = props;
 
-  if (pinnedColumns.length === 0) {
-    // eslint-disable-next-line no-console
-    console.warn(ERRORS.PINNED_COLUMNS_UNDEFINED);
-  }
-
-  const [pinnedColumnOffsets, setPinnedColumnOffsets] = useState([0]);
+  const [pinnedColumnOffsets, setPinnedColumnOffsets] = useState([]);
 
   // Initialize column width properties
   const initializeColumn = (column) => ({
@@ -127,7 +122,7 @@ function Table(props) {
     ...pinnedColumns,
     ...overflowColumns,
   ];
-  const [dataGridColumns, setDataGridColumns] = useState(displayedColumns.map((column) => initializeColumn(column)));
+  const [renderedColumns, setRenderedColumns] = useState(displayedColumns.map((column) => initializeColumn(column)));
 
   // Manage column resize
   const [tableHeight, setTableHeight] = useState(0);
@@ -142,7 +137,6 @@ function Table(props) {
 
   // Define ColumnContext Provider value object
   const columnContextValue = useMemo(() => ({ pinnedColumnOffsets, setCellAriaLiveMessage }), [pinnedColumnOffsets]);
-
   const theme = useContext(ThemeContext);
 
   // -------------------------------------
@@ -172,7 +166,7 @@ function Table(props) {
 
   // useEffect for row displayed columns
   useEffect(() => {
-    setDataGridColumns(displayedColumns.map((column) => initializeColumn(column)));
+    setRenderedColumns(displayedColumns.map((column) => initializeColumn(column)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pinnedColumns, overflowColumns]);
 
@@ -184,26 +178,21 @@ function Table(props) {
 
     // if grid has selectable rows but no pinned columns, then set the offset of the first column to 0
     if (pinnedColumns.length === 0) {
-      lastPinnedColumnIndex = 0;
-      offsetArray.push(cumulativeOffset);
-      setPinnedColumnOffsets(offsetArray);
-      return;
-    }
-
-    if (pinnedColumns.length > 0) {
+      setPinnedColumnOffsets([]);
+    } else {
       offsetArray.push(cumulativeOffset);
 
       lastPinnedColumnIndex = pinnedColumns.length - 1;
 
       // eslint-disable-next-line array-callback-return
-      dataGridColumns.slice(0, lastPinnedColumnIndex).map((pinnedColumn) => {
+      renderedColumns.slice(0, lastPinnedColumnIndex).map((pinnedColumn) => {
         cumulativeOffset += pinnedColumn.width;
         offsetArray.push(cumulativeOffset);
       });
+      setPinnedColumnOffsets(offsetArray);
     }
-    setPinnedColumnOffsets(offsetArray);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dataGridColumns]);
+  }, [renderedColumns]);
 
   // -------------------------------------
 
@@ -227,13 +216,13 @@ function Table(props) {
 
     // Ensure the new column width falls within the range of the minimum and maximum values
     const diffX = event.pageX - activeColumnPageX.current;
-    const { minimumWidth, maximumWidth } = dataGridColumns[activeIndex];
+    const { minimumWidth, maximumWidth } = renderedColumns[activeIndex];
     const newColumnWidth = Math.min(Math.max(activeColumnWidth.current + diffX, minimumWidth), maximumWidth);
 
     // Update the width for the column in the state variable
-    const newGridColumns = [...dataGridColumns];
+    const newGridColumns = [...renderedColumns];
     newGridColumns[activeIndex].width = newColumnWidth;
-    setDataGridColumns(newGridColumns);
+    setRenderedColumns(newGridColumns);
 
     // Update the column and table width
     grid.current.style.width = `${tableWidth + (newColumnWidth - activeColumnWidth.current)}px`;
@@ -242,7 +231,7 @@ function Table(props) {
   const onMouseUp = () => {
     // Notify consumers of the new column width
     if (onColumnResize) {
-      onColumnResize(dataGridColumns[activeIndex].id, dataGridColumns[activeIndex].width);
+      onColumnResize(renderedColumns[activeIndex].id, renderedColumns[activeIndex].width);
     }
 
     // Remove active index
@@ -266,7 +255,7 @@ function Table(props) {
           value={columnContextValue}
         >
           <ColumnHeader
-            columns={dataGridColumns}
+            columns={renderedColumns}
             headerHeight={columnHeaderHeight}
             tableHeight={tableHeight}
             onResizeMouseDown={onResizeMouseDown}

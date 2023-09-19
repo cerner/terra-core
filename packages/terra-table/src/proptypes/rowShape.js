@@ -3,7 +3,7 @@ import cellShape from './cellShape';
 
 const rowShape = PropTypes.shape({
   /**
-   * An identifier to uniquely identify the row within the grid.
+   * An identifier to uniquely identify the row within the table.
    */
   id: PropTypes.string.isRequired,
 

@@ -31,7 +31,7 @@ const columnShape = PropTypes.shape({
    */
   maximumWidth: PropTypes.number,
   /**
-   * A number (in px) specifying the width of the column. If not provided, the DataGrid's default column width will be used.
+   * A number (in px) specifying the width of the column. If not provided, the Table's default column width will be used.
    */
   width: PropTypes.number,
   /* A string indicating which sorting indicator should be rendered. If not provided, no sorting indicator will be rendered.

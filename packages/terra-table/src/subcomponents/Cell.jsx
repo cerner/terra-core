@@ -12,7 +12,7 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * The cell's column position in the grid. This is zero based.
+   * The cell's column position in the table. This is zero based.
    */
   columnIndex: PropTypes.number,
 

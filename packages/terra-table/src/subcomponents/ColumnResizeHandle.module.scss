@@ -14,6 +14,11 @@
     width: 24px;
     z-index: 1;
 
+    &:focus {
+      border-color: var(--resize-handle-focus-border-color, rgba(34, 42, 46, 1)) !important;
+      outline: 0 !important;
+    }
+
     &:hover {
       border-color: var(--resize-handle-hover-border-color, rgba(34, 42, 46, 0.6));
     }

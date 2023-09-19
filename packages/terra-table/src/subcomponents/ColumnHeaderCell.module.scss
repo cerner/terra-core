@@ -1,3 +1,4 @@
+/* stylelint-disable terra/custom-property-namespace */
 // Themes
 @import '../orion-fusion-theme/ColumnHeaderCell.module';
 @import '../clinical-lowlight-theme/ColumnHeaderCell.module';
@@ -57,3 +58,4 @@
     width: 2px;
   }
 }
+/* stylelint-enable terra/custom-property-namespace */

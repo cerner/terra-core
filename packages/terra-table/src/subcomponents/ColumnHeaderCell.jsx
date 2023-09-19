@@ -58,7 +58,7 @@ const propTypes = {
   tableHeight: PropTypes.number,
 
   /**
-   * String that specifies the default width for columns in the grid. Any valid CSS width value is accepted.
+   * String that specifies the default width for columns in the table. Any valid CSS width value is accepted.
    */
   width: PropTypes.number.isRequired,
 
@@ -68,12 +68,12 @@ const propTypes = {
   headerHeight: PropTypes.string.isRequired,
 
   /**
-   * The cell's row position in the grid. This is zero based.
+   * The cell's row position in the table. This is zero based.
    */
   rowIndex: PropTypes.number,
 
   /**
-   * The cell's column position in the grid. This is zero based.
+   * The cell's column position in the table. This is zero based.
    */
   columnIndex: PropTypes.number,
 

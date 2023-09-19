@@ -1,6 +1,8 @@
+/* stylelint-disable terra/custom-property-namespace */
 // Themes
 @import '../orion-fusion-theme/Row.module';
 @import '../clinical-lowlight-theme/Row.module';
+
 
 :local {
   .row {
@@ -12,6 +14,5 @@
       background-color: var(--row-striped-odd-background-color, #fff);
     }
   }
-
-  /* stylelint-enable selector-max-compound-selectors */
 }
+/* stylelint-enable terra/custom-property-namespace */

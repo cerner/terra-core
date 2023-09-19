@@ -51,9 +51,10 @@ const tableData = {
   ],
 };
 
-const NewTableExample = () => (
+const DefaultTable = () => (
   <React.Fragment>
     <Table
+      id="my-table-id"
       overflowColumns={tableData.cols}
       rows={tableData.rows}
     />
@@ -61,4 +62,4 @@ const NewTableExample = () => (
   </React.Fragment>
 );
 
-export default NewTableExample;
+export default DefaultTable;

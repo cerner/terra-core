@@ -16,7 +16,7 @@ const propTypes = {
   headerHeight: PropTypes.string.isRequired,
 
   /**
-   * Number that specifies the height of the data grid in pixels.
+   * Number that specifies the height of the table in pixels.
    */
   tableHeight: PropTypes.number,
 
