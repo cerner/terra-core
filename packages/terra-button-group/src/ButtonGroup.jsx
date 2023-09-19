@@ -80,9 +80,14 @@ class ButtonGroup extends React.Component {
           }
         }
       }
-      if (allBtns[key]) allBtns[key].focus();
+      if (allBtns[key]) {
+        allBtns[key].focus();
+        if (!this.props.isMultiSelect) {
+          allBtns[key].click();
+        }
+      }
     }
-    if ((event.keyCode === KEY_LEFT || event.keyCode === KEY_UP)) {
+    if (event.keyCode === KEY_LEFT || event.keyCode === KEY_UP) {
       if (idx === 0) {
         key = allBtns.length - 1;
         if (allBtns[key].hasAttribute('disabled')) {
@@ -104,7 +109,12 @@ class ButtonGroup extends React.Component {
       while (allBtns[key] && allBtns[key].hasAttribute('disabled')) {
         key -= 1;
       }
-      if (allBtns[key]) allBtns[key].focus();
+      if (allBtns[key]) {
+        allBtns[key].focus();
+        if (!this.props.isMultiSelect) {
+          allBtns[key].click();
+        }
+      }
     }
     if (event.keyCode === KEY_UP || event.keyCode === KEY_DOWN) {
       event.preventDefault();
