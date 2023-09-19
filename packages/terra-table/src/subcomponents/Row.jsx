@@ -31,12 +31,6 @@ const propTypes = {
   cells: PropTypes.arrayOf(cellShape),
 
   /**
-   * A string identifier used to describe the row contents. This value will be used to construct additional labels
-   * for internal controls (e.g. row selection cells).
-   */
-  ariaLabel: PropTypes.string,
-
-  /**
    * All columns currently displayed.
    */
   displayedColumns: PropTypes.arrayOf(columnShape),
@@ -57,32 +51,11 @@ function Row(props) {
     height,
     id,
     cells,
-    ariaLabel,
     displayedColumns,
     rowHeaderIndex,
   } = props;
 
   const theme = useContext(ThemeContext);
-
-  const getCellData = (cellRowIndex, cellColumnIndex, cellData, rowId) => {
-    const columnId = displayedColumns[cellColumnIndex].id;
-    const isRowHeader = cellColumnIndex === rowHeaderIndex;
-
-    return (
-      <Cell
-        rowId={rowId}
-        columnId={columnId}
-        rowIndex={cellRowIndex}
-        columnIndex={cellColumnIndex}
-        key={`${rowId}_${columnId}`}
-        isMasked={cellData.isMasked}
-        isRowHeader={isRowHeader}
-        height={height}
-      >
-        {cellData.content}
-      </Cell>
-    );
-  };
 
   return (
     <tr
@@ -92,7 +65,18 @@ function Row(props) {
       style={{ height }}
     >
       {cells.map((cellData, cellColumnIndex) => (
-        getCellData(rowIndex, cellColumnIndex, cellData, id)
+        <Cell
+          rowId={id}
+          columnId={displayedColumns[cellColumnIndex].id}
+          rowIndex={rowIndex}
+          columnIndex={cellColumnIndex}
+          key={`${id}_${displayedColumns[cellColumnIndex].id}`}
+          isMasked={cellData.isMasked}
+          isRowHeader={cellColumnIndex === rowHeaderIndex}
+          height={height}
+        >
+          {cellData.content}
+        </Cell>
       ))}
     </tr>
   );

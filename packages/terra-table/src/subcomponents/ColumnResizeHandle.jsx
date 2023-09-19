@@ -71,11 +71,7 @@ const ColumnResizeHandle = (props) => {
     resizeHandle.current = node;
   }, []);
 
-  // Mouse down event listener to give focus to resize handler and notify the provider
   const onMouseDown = (event) => {
-    // Set focus to resize handle DOM element
-    resizeHandle.current.focus();
-
     // Execute callback function to notify consumer of mouse down event
     onResizeMouseDown(event);
 
@@ -98,7 +94,7 @@ const ColumnResizeHandle = (props) => {
       aria-valuenow={columnWidth}
       aria-valuemax={maximumWidth}
       aria-label={columnText}
-      aria-valuetext={intl.formatMessage({ id: 'Terra.dataGrid.resizeHandleValueText' }, { columnWidth })}
+      aria-valuetext={intl.formatMessage({ id: 'Terra.table.resizeHandleValueText' }, { columnWidth })}
       style={{ height: `${height}px` }}
       onMouseDown={onMouseDown}
       onFocus={() => setActive(true)}

@@ -34,30 +34,27 @@ const ColumnHeader = (props) => {
     onResizeMouseDown,
   } = props;
 
-  // Create ColumnHeaderCell component for each column
-  const buildColumn = (column, columnIndex) => (
-    <ColumnHeaderCell
-      key={column.id}
-      id={column.id}
-      rowIndex={0}
-      columnIndex={columnIndex}
-      displayName={column.displayName}
-      width={column.width}
-      minimumWidth={column.minimumWidth}
-      maximumWidth={column.maximumWidth}
-      headerHeight={headerHeight}
-      isResizable={column.isResizable}
-      tableHeight={tableHeight}
-      hasError={column.hasError}
-      sortIndicator={column.sortIndicator}
-      onResizeMouseDown={onResizeMouseDown}
-    />
-  );
-
   return (
     <thead>
       <tr className="column-header-row" height={headerHeight}>
-        {columns.map((column, columnIndex) => (buildColumn(column, columnIndex)))}
+        {columns.map((column, columnIndex) => (
+          <ColumnHeaderCell
+            key={column.id}
+            id={column.id}
+            rowIndex={0}
+            columnIndex={columnIndex}
+            displayName={column.displayName}
+            width={column.width}
+            minimumWidth={column.minimumWidth}
+            maximumWidth={column.maximumWidth}
+            headerHeight={headerHeight}
+            isResizable={column.isResizable}
+            tableHeight={tableHeight}
+            hasError={column.hasError}
+            sortIndicator={column.sortIndicator}
+            onResizeMouseDown={onResizeMouseDown}
+          />
+        ))}
       </tr>
     </thead>
   );

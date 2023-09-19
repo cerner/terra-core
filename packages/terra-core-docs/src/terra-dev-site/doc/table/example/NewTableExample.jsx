@@ -13,7 +13,7 @@ const tableData = {
     { id: 'Column-7', displayName: 'Patient Age' },
     { id: 'Column-8', displayName: 'Medication History' },
     { id: 'Column-9', displayName: 'My Relationship' },
-    { id: 'Column-10', displayName: 'Not Selectable', isSelectable: false },
+    { id: 'Column-10', displayName: 'Not Selectable' },
   ],
   rows: [
     {
@@ -29,7 +29,7 @@ const tableData = {
         { isMasked: true },
         { isMasked: true },
         { content: 'Admitting Physician' },
-        { content: '', isSelectable: false },
+        { content: '' },
       ],
     },
     {
@@ -45,7 +45,7 @@ const tableData = {
         { content: '' },
         { isMasked: true },
         { content: 'Admitting Physician' },
-        { content: '', isSelectable: false },
+        { content: '' },
       ],
     },
   ],

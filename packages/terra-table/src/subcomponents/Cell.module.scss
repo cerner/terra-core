@@ -20,10 +20,6 @@
     background: var(--mask-background, repeating-linear-gradient(-45deg, #dedfe0, #dedfe0 3px, transparent 3px, transparent 6px));
   }
 
-  .masked.highlighted {
-    background: var(--highlight-mask-background, repeating-linear-gradient(-45deg, #cfd2d3, #cfd2d3 3px, #cbe7fa 3px, #cbe7fa 6px));
-  }
-
   .cell-content {
     overflow: hidden;
     overflow-wrap: break-word;

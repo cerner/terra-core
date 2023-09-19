@@ -126,7 +126,7 @@ const ColumnHeaderCell = (props) => {
   }, [columnIndex, onResizeMouseDown]);
 
   let sortIndicatorIcon;
-  const errorIcon = hasError && <IconError a11yLabel={intl.formatMessage({ id: 'Terra.dataGrid.columnError' })} className={cx('error-icon')} />;
+  const errorIcon = hasError && <IconError a11yLabel={intl.formatMessage({ id: 'Terra.table.columnError' })} className={cx('error-icon')} />;
 
   // Add the sort indicator based on the sort direction
   if (sortIndicator === SortIndicators.ASCENDING) {

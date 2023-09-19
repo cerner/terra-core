@@ -89,6 +89,10 @@ const defaultProps = {
   overflowColumns: [],
 };
 
+// Default column size constraints
+const defaultColumnMinimumWidth = 60;
+const defaultColumnMaximumWidth = 300;
+
 function Table(props) {
   const {
     id,
@@ -108,10 +112,6 @@ function Table(props) {
     // eslint-disable-next-line no-console
     console.warn(ERRORS.PINNED_COLUMNS_UNDEFINED);
   }
-
-  // Default column size constraints
-  const defaultColumnMinimumWidth = 60;
-  const defaultColumnMaximumWidth = 300;
 
   const [pinnedColumnOffsets, setPinnedColumnOffsets] = useState([0]);
 

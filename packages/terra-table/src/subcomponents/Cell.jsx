@@ -4,7 +4,6 @@ import React, {
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
 import ThemeContext from 'terra-theme-context';
 import styles from './Cell.module.scss';
 import ColumnContext from '../utils/ColumnContext';
@@ -12,21 +11,6 @@ import ColumnContext from '../utils/ColumnContext';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  /**
-   * String identifier of the row in which the Cell will be rendered.
-   */
-  rowId: PropTypes.string.isRequired,
-
-  /**
-   * String identifier of the column in which the Cell will be rendered.
-   */
-  columnId: PropTypes.string.isRequired,
-
-  /**
-   * The cell's row position in the grid. This is zero based.
-   */
-  rowIndex: PropTypes.number,
-
   /**
    * The cell's column position in the grid. This is zero based.
    */
@@ -71,11 +55,8 @@ const defaultProps = {
 
 function Cell(props) {
   const {
-    rowId,
-    columnId,
-    rowIndex,
-    columnIndex,
     ariaLabel,
+    columnIndex,
     isMasked,
     isRowHeader,
     children,
@@ -92,13 +73,13 @@ function Cell(props) {
   if (isMasked) {
     cellContent = (
       <span className={cx('no-data-cell', theme.className)}>
-        {intl.formatMessage({ id: 'Terra.dataGrid.maskedCell' })}
+        {intl.formatMessage({ id: 'Terra.table.maskedCell' })}
       </span>
     );
   } else if (!children) {
     cellContent = (
       <span className={cx('no-data-cell', theme.className)}>
-        {intl.formatMessage({ id: 'Terra.dataGrid.blank' })}
+        {intl.formatMessage({ id: 'Terra.table.blank' })}
       </span>
     );
   } else {
@@ -111,7 +92,8 @@ function Cell(props) {
     blank: !children,
   }, theme.className);
 
-  const cellLeftEdge = (columnIndex < columnContext.pinnedColumnOffsets.length) ? columnContext.pinnedColumnOffsets[columnIndex] : null;
+  const cellLeftEdge = columnIndex < columnContext.pinnedColumnOffsets.length
+    ? columnContext.pinnedColumnOffsets[columnIndex] : null;
 
   const CellTag = isRowHeader ? 'th' : 'td';
   return (
@@ -126,7 +108,6 @@ function Cell(props) {
     >
       {/* eslint-disable-next-line react/forbid-dom-props */}
       <div className={cx('cell-content', theme.className)} style={{ height }}>{cellContent}</div>
-      <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.dataGrid.cell-interactable' })} />
     </CellTag>
   );
 }
