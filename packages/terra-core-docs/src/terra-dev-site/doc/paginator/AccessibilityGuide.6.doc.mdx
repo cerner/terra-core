@@ -31,7 +31,7 @@ In order to provide an accessible name for the whole container, two optional pro
 
 <Notice variant="important" ariaLevel="5">
 
-It is recommended to set the optional `ariaLabelledBy` [prop](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/paginator/about#paginator-props) when page header id exists. This will semantically relate the paginator and header as a related group.
+`ariaLabelledBy` and `ariaLabel` [props](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/paginator/about#paginator-props) could not be used at the same time. The best practice would be to use the `ariaLabelledBy` that refers to the id of heading that exists on the page. This will semantically relate the paginator and header as a related group.
 </Notice>
 
 ariaLabelledBy could be set with the header id(when it exists) and will be used with the aria-describedby to provide additional context for the paginator.
