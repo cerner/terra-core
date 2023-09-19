@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
+import { v4 as uuidv4 } from 'uuid';
 
 import ResponsiveElement from 'terra-responsive-element';
-
 import Button from 'terra-button';
-
 import {
   IconAlert,
   IconError,
@@ -17,15 +16,11 @@ import {
   IconInformation,
   IconSuccess,
 } from 'terra-icon';
-
 import ThemeContext from 'terra-theme-context';
-
-import { v4 as uuidv4 } from 'uuid';
 
 import styles from './Alert.module.scss';
 
 const cx = classNamesBind.bind(styles);
-
 const AlertTypes = {
   ALERT: 'alert',
   ERROR: 'error',
