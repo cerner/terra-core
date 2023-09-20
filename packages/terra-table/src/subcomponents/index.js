@@ -1,3 +1,11 @@
-import Table from './Table';
+import Cell from './Cell';
+import ColumnHeader from './ColumnHeader';
+import ColumnResizeHandle from './ColumnResizeHandle';
+import Row from './Row';
 
-export default Table;
+export {
+  Cell,
+  ColumnHeader,
+  ColumnResizeHandle,
+  Row,
+};

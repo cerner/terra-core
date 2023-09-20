@@ -68,11 +68,6 @@ const propTypes = {
   headerHeight: PropTypes.string.isRequired,
 
   /**
-   * The cell's row position in the table. This is zero based.
-   */
-  rowIndex: PropTypes.number,
-
-  /**
    * The cell's column position in the table. This is zero based.
    */
   columnIndex: PropTypes.number,
