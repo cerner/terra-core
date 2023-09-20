@@ -1,5 +1,5 @@
 import React from 'react';
-import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
+import { IconPrinter } from 'terra-icon';
 import Button from 'terra-button';
 import Card from 'terra-card';
 import classNames from 'classnames/bind';

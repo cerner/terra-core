@@ -1,22 +1,22 @@
 import { Notice } from "@cerner/terra-docs";
 import { Badge } from 'terra-image/package.json?dev-site-package';
-import Whitespace from '../../common/layout-helpers/Whitespace';
+
+import { 
+  IconAnnouncement,
+  IconAudio,
+  IconFeaturedOff as EmptyDecorativeStar,
+  IconFeaturedOff as EmptyStar, 
+  IconFeaturedOutlineYellow as FilledDecorativeStar, 
+  IconFeaturedOutlineYellow as FilledStar,
+} from 'terra-icon';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 
 import A11yMeaningfulReadOnly from './example/A11yMeaningfulReadOnly';
 import A11yGroupInteractive from './example/A11yGroupInteractive';
 import A11yDecorative from './example/A11yDecorative';
 import A11yGroupReadOnly from './example/A11yGroupReadOnly';
 import A11yMeaningfulInteractive from './example/A11yMeaningfulInteractive';
-
-import IconAudio from 'terra-icon/lib/icon/IconAudio';
-import IconAnnouncement from "terra-icon/lib/icon/IconAnnouncement";
-
-import FilledStar from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
-import EmptyStar from 'terra-icon/lib/icon/IconFeaturedOff';
-
-import FilledDecorativeStar from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
-import EmptyDecorativeStar from 'terra-icon/lib/icon/IconFeaturedOff';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
+import Whitespace from '../../common/layout-helpers/Whitespace';
 
 <Badge />
 
@@ -100,9 +100,7 @@ The screen reader user will hear something like: <samp> Image: Announcement. Fac
 </div>
 <div aria-label="Example code">
 
-    import IconMediaPlay from 'terra-icon/lib/icon/IconMediaPlay';
-    import IconMediaFastForward from 'terra-icon/lib/icon/IconMediaFastForward';
-    import IconMediaRewind from 'terra-icon/lib/icon/IconMediaRewind';
+    import { IconMediaPlay, IconMediaFastForward, IconMediaRewind } from 'terra-icon';
 
     <div role="group" aria-labelledby="controlsLabel">
         <span id="controlsLabel">Playback controls</span><br/>
@@ -129,9 +127,11 @@ Some icons only make sense in the context of a group of icons. For example, in a
     <A11yGroupReadOnly />
 </div>
 <div aria-label="Example code">
-    import DecorativeStar from "terra-icon/lib/icon/IconFeaturedOutlineYellow";
-    import DecorativeEmptyStar from "terra-icon/lib/icon/IconFeaturedOutline";
-    import Star from "terra-icon/lib/icon/IconFeaturedOutlineYellow";
+    import { 
+      IconFeaturedOutline as DecorativeEmptyStar,
+      IconFeaturedOutlineYellow as DecorativeStar,
+      IconFeaturedOutlineYellow as Star,
+    }  from "terra-icon';
 
     Rating:&nbsp;
     <Star a11yLabel="Four out of five stars" />

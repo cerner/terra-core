@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Toolbar from 'terra-toolbar';
 import Button from 'terra-button';
-import IconEdit from 'terra-icon/lib/icon/IconEdit';
-import IconAdd from 'terra-icon/lib/icon/IconAdd';
-import IconAttachment from 'terra-icon/lib/icon/IconAttachment';
+import { 
+  IconAdd,
+  IconAttachment,
+  IconEdit,
+} from 'terra-icon';
 import { Placeholder } from '@cerner/terra-docs';
 
 export default () => {
