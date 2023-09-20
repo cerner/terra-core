@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkterra_core=self.webpackChunkterra_core||[]).push([[797],{82255:function(e,r,t){Object.defineProperty(r,"__esModule",{value:!0}),r.default=void 0;var a,u=(a=t(67294))&&a.__esModule?a:{default:a},f=t(36994);var l=function(){return u.default.createElement(f.Tag,{id:"href",text:"Href Tag",href:"www.google.com"})};r.default=l}}]);
