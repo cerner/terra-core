@@ -1,336 +1,661 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import Icon from 'terra-icon/lib/IconExports';
+import {
+  IconAbnormal,
+  IconAbnormalLowLight,
+  IconAdd,
+  IconAddPerson,
+  IconAlert,
+  IconAlertLowLight,
+  IconAllergy,
+  IconAnalytics,
+  IconAnnouncement,
+  IconArchive,
+  IconAttachment,
+  IconAudio,
+  IconAutoText,
+  IconAvailable,
+  IconAway,
+  IconBedAssigned,
+  IconBedAssignedLowLight,
+  IconBedRequested,
+  IconBluetooth,
+  IconBluetoothSlash,
+  IconBookmark,
+  IconBriefcase,
+  IconBrokenImage,
+  IconBrokenLinkUnlink,
+  IconBusy,
+  IconCalculator,
+  IconCalendar,
+  IconCamera,
+  IconCancel,
+  IconCaretDown,
+  IconCaretLeft,
+  IconCaretRight,
+  IconCaretUp,
+  IconCatalogueNumber,
+  IconCaution,
+  IconChecklist,
+  IconCheckmark,
+  IconChevron,
+  IconChevronDown,
+  IconChevronLeft,
+  IconChevronRight,
+  IconChevronUp,
+  IconCircleLinesSymbol,
+  IconCircleSymbol,
+  IconCircleSymbolLight,
+  IconClear,
+  IconClipboard,
+  IconClock,
+  IconClose,
+  IconCollapseRow,
+  IconComment,
+  IconCommit,
+  IconComplete,
+  IconCompose,
+  IconConfidential,
+  IconConsultInstructionsForUse,
+  IconCritical,
+  IconCriticalInverse,
+  IconCriticalInverseLowLight,
+  IconCriticalLowLight,
+  IconDateOfManufacture,
+  IconDevice,
+  IconDeviceAlert,
+  IconDeviceAlertLowLight,
+  IconDeviceCheck,
+  IconDeviceCheckLowLight,
+  IconDiamond,
+  IconDiamondLowLight,
+  IconDiamondSymbol,
+  IconDiamondSymbolLight,
+  IconDischargeComingDue,
+  IconDischargeComingDueLowLight,
+  IconDischargeComplete,
+  IconDischargeCompleteLowLight,
+  IconDischargeOverDue,
+  IconDischargeOverDueLowLight,
+  IconDoNotDisturb,
+  IconDocumentPlus,
+  IconDocuments,
+  IconDoorOpen,
+  IconDoubleChevronLeft,
+  IconDoubleChevronRight,
+  IconDown,
+  IconDownload,
+  IconDrugDrug,
+  IconDrugDrugLowLight,
+  IconDue,
+  IconDueSoon,
+  IconDueSoonLowLight,
+  IconEcRep,
+  IconEdit,
+  IconEllipses,
+  IconEnvelope,
+  IconEnvelopeFill,
+  IconError,
+  IconErrorDark,
+  IconErrorLowLight,
+  IconExclamation,
+  IconExpandLess,
+  IconExpandMore,
+  IconExpandRow,
+  IconExtensions,
+  IconExternalLink,
+  IconFeatured,
+  IconFeaturedOff,
+  IconFeaturedOutline,
+  IconFeaturedOutlineYellow,
+  IconFirst,
+  IconFitHeight,
+  IconFitScale,
+  IconFitWidth,
+  IconFlag,
+  IconFlipHorizontal,
+  IconFlipVertical,
+  IconFlowsheet,
+  IconFolder,
+  IconForward,
+  IconFunnel,
+  IconGapChecking,
+  IconGlasses,
+  IconGroup,
+  IconHalfRating,
+  IconHazardLow,
+  IconHelp,
+  IconHelpInverse,
+  IconHelpInverseLowLight,
+  IconHelpLowLight,
+  IconHelpStatic,
+  IconHelpThemeable,
+  IconHide,
+  IconHigh,
+  IconHighInverse,
+  IconHighInverseLowLight,
+  IconHighLowLight,
+  IconHighPriority,
+  IconHold,
+  IconHospital,
+  IconHouse,
+  IconIPass,
+  IconImage,
+  IconImplant,
+  IconIncomingCall,
+  IconIncomplete,
+  IconIncompleteInverse,
+  IconIncompleteInverseLowLight,
+  IconInformation,
+  IconInformationInverse,
+  IconInformationInverseLowLight,
+  IconInformationLowLight,
+  IconInformationStatic,
+  IconInformationThemeable,
+  IconItalicI,
+  IconKeyboard,
+  IconKnurling,
+  IconLast,
+  IconLeft,
+  IconLeftPane,
+  IconLightbulb,
+  IconLink,
+  IconList,
+  IconLocationPin,
+  IconLookback,
+  IconLow,
+  IconLowLowLight,
+  IconLowRisk,
+  IconLowRiskLowLight,
+  IconManufacturer,
+  IconMax,
+  IconMaximize,
+  IconMediaFastForward,
+  IconMediaPause,
+  IconMediaPlay,
+  IconMediaRecord,
+  IconMediaRewind,
+  IconMediaStop,
+  IconMedicationTablet,
+  IconMedicationTabletHalf,
+  IconMedicationTabletHalfOutline,
+  IconMedicationTabletOutline,
+  IconMenu,
+  IconMerge,
+  IconMicrophone,
+  IconMicrophoneDisabled,
+  IconMin,
+  IconMinimize,
+  IconMinus,
+  IconMissedCall,
+  IconModerate,
+  IconModerateLowLight,
+  IconModified,
+  IconMultipleResultsCritical,
+  IconMultipleResultsNormal,
+  IconMultipleResultsNotNormal,
+  IconNavStackUp,
+  IconNext,
+  IconNoResults,
+  IconNoRisk,
+  IconNoRiskLowLight,
+  IconNoSignal,
+  IconNotMet,
+  IconNotification,
+  IconNotificationDisabled,
+  IconNotificationOff,
+  IconOutOfNetwork,
+  IconOutgoingCall,
+  IconOverDue,
+  IconOverDueLowLight,
+  IconPadlock,
+  IconPager,
+  IconPanelLeft,
+  IconPanelRight,
+  IconPaperFolded,
+  IconPaperPencil,
+  IconPartiallyMet,
+  IconPatientSearch,
+  IconPending,
+  IconPerson,
+  IconPersonConnection,
+  IconPersonDoor,
+  IconPersonHospital,
+  IconPersonnelPerson,
+  IconPharmacyReject,
+  IconPharmacyRejectLowLight,
+  IconPharmacyReview,
+  IconPharmacyVerification,
+  IconPhone,
+  IconPhoneDown,
+  IconPill,
+  IconPinDiagonal,
+  IconPinDown,
+  IconPlusSymbol,
+  IconPlusSymbolLight,
+  IconPrevious,
+  IconPrinter,
+  IconProjects,
+  IconProtocol,
+  IconProvider,
+  IconQuestion,
+  IconQuestionOutline,
+  IconRectangleSymbol,
+  IconRectangleSymbolLight,
+  IconRecurringEvent,
+  IconRedo,
+  IconRefresh,
+  IconRefusedSlot,
+  IconReload,
+  IconReply,
+  IconReplyAll,
+  IconRequired,
+  IconRight,
+  IconRollup,
+  IconRotateLeft,
+  IconRotateRight,
+  IconSave,
+  IconScheduled,
+  IconScheduledLowLight,
+  IconScratchPad,
+  IconSearch,
+  IconSecondaryProvider,
+  IconSend,
+  IconSeparate,
+  IconSettings,
+  IconSharedSchedules,
+  IconSimulation,
+  IconSortAscending,
+  IconSortDescending,
+  IconSpinner,
+  IconSquareSymbol,
+  IconSquareSymbolLight,
+  IconStartPresenting,
+  IconStatusPositive,
+  IconStatusPositiveLowLight,
+  IconStatusPositiveWhite,
+  IconStatusPositiveWhiteLowLight,
+  IconStopPresenting,
+  IconSuccess,
+  IconSuccessInverse,
+  IconSuccessInverseLowLight,
+  IconSuccessLowLight,
+  IconSwap,
+  IconTable,
+  IconTag,
+  IconTeardropSymbol,
+  IconTeardropSymbolLight,
+  IconTeardropUpSymbol,
+  IconTeardropUpSymbolLight,
+  IconThinDiamondSymbol,
+  IconThinDiamondSymbolLight,
+  IconTile,
+  IconTrash,
+  IconTreemap,
+  IconTrendingDown,
+  IconTrendingUp,
+  IconTriangleDownSymbol,
+  IconTriangleDownSymbolLight,
+  IconTriangleSymbol,
+  IconTriangleSymbolLight,
+  IconTrophy,
+  IconUnavailable,
+  IconUndo,
+  IconUnexpected,
+  IconUnexpectedLowLight,
+  IconUnknown,
+  IconUnlock,
+  IconUnread,
+  IconUnspecified,
+  IconUp,
+  IconUpload,
+  IconUsers,
+  IconVideoCamera,
+  IconVideoCameraDisabled,
+  IconVisualization,
+  IconVolumeSetDecrease,
+  IconVolumeSetDefault,
+  IconVolumeSetIncrease,
+  IconVolumeSetMute,
+  IconWarning,
+  IconWarningLowLight,
+  IconWaveform,
+  IconWifi,
+  IconWifiSlash,
+  IconXSymbol,
+  IconZoomIn,
+  IconZoomOut,
+} from 'terra-icon';
 import styles from './IconAll.module.scss';
 
 const cx = classNames.bind(styles);
 
 const IconAll = () => (
   <div>
-    <Icon.IconAbnormal className={cx(['icon'])} />
-    <Icon.IconAbnormalLowLight className={cx(['icon'])} />
-    <Icon.IconAdd className={cx(['icon'])} />
-    <Icon.IconAddPerson className={cx(['icon'])} />
-    <Icon.IconAlert className={cx(['icon'])} />
-    <Icon.IconAlertLowLight className={cx(['icon'])} />
-    <Icon.IconAllergy className={cx(['icon'])} />
-    <Icon.IconAnalytics className={cx(['icon'])} />
-    <Icon.IconAnnouncement className={cx(['icon'])} />
-    <Icon.IconArchive className={cx(['icon'])} />
-    <Icon.IconAttachment className={cx(['icon'])} />
-    <Icon.IconAudio className={cx(['icon'])} />
-    <Icon.IconAutoText className={cx(['icon'])} />
-    <Icon.IconAvailable className={cx(['icon'])} />
-    <Icon.IconAway className={cx(['icon'])} />
-    <Icon.IconBedAssigned className={cx(['icon'])} />
-    <Icon.IconBedAssignedLowLight className={cx(['icon'])} />
-    <Icon.IconBedRequested className={cx(['icon'])} />
-    <Icon.IconBluetooth className={cx(['icon'])} />
-    <Icon.IconBluetoothSlash className={cx(['icon'])} />
-    <Icon.IconBookmark className={cx(['icon'])} />
-    <Icon.IconBriefcase className={cx(['icon'])} />
-    <Icon.IconBrokenImage className={cx(['icon'])} />
-    <Icon.IconBrokenLinkUnlink className={cx(['icon'])} />
-    <Icon.IconBusy className={cx(['icon'])} />
-    <Icon.IconCalculator className={cx(['icon'])} />
-    <Icon.IconCalendar className={cx(['icon'])} />
-    <Icon.IconCamera className={cx(['icon'])} />
-    <Icon.IconCancel className={cx(['icon'])} />
-    <Icon.IconCaretDown className={cx(['icon'])} />
-    <Icon.IconCaretLeft className={cx(['icon'])} />
-    <Icon.IconCaretRight className={cx(['icon'])} />
-    <Icon.IconCaretUp className={cx(['icon'])} />
-    <Icon.IconCatalogueNumber className={cx(['icon'])} />
-    <Icon.IconCaution className={cx(['icon'])} />
-    <Icon.IconChecklist className={cx(['icon'])} />
-    <Icon.IconCheckmark className={cx(['icon'])} />
-    <Icon.IconChevron className={cx(['icon'])} />
-    <Icon.IconChevronDown className={cx(['icon'])} />
-    <Icon.IconChevronLeft className={cx(['icon'])} />
-    <Icon.IconChevronRight className={cx(['icon'])} />
-    <Icon.IconChevronUp className={cx(['icon'])} />
-    <Icon.IconCircleLinesSymbol className={cx(['icon'])} />
-    <Icon.IconCircleSymbol className={cx(['icon'])} />
-    <Icon.IconCircleSymbolLight className={cx(['icon'])} />
-    <Icon.IconClear className={cx(['icon'])} />
-    <Icon.IconClipboard className={cx(['icon'])} />
-    <Icon.IconClock className={cx(['icon'])} />
-    <Icon.IconClose className={cx(['icon'])} />
-    <Icon.IconCollapseRow className={cx(['icon'])} />
-    <Icon.IconComment className={cx(['icon'])} />
-    <Icon.IconCommit className={cx(['icon'])} />
-    <Icon.IconComplete className={cx(['icon'])} />
-    <Icon.IconCompose className={cx(['icon'])} />
-    <Icon.IconConfidential className={cx(['icon'])} />
-    <Icon.IconConsultInstructionsForUse className={cx(['icon'])} />
-    <Icon.IconCritical className={cx(['icon'])} />
-    <Icon.IconCriticalInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconCriticalInverseLowLight className={cx(['icon'])} />
-    <Icon.IconCriticalLowLight className={cx(['icon'])} />
-    <Icon.IconDateOfManufacture className={cx(['icon'])} />
-    <Icon.IconDevice className={cx(['icon'])} />
-    <Icon.IconDeviceAlert className={cx(['icon'])} />
-    <Icon.IconDeviceAlertLowLight className={cx(['icon'])} />
-    <Icon.IconDeviceCheck className={cx(['icon'])} />
-    <Icon.IconDeviceCheckLowLight className={cx(['icon'])} />
-    <Icon.IconDiamond className={cx(['icon'])} />
-    <Icon.IconDiamondLowLight className={cx(['icon'])} />
-    <Icon.IconDiamondSymbol className={cx(['icon'])} />
-    <Icon.IconDiamondSymbolLight className={cx(['icon'])} />
-    <Icon.IconDischargeComingDue className={cx(['icon'])} />
-    <Icon.IconDischargeComingDueLowLight className={cx(['icon'])} />
-    <Icon.IconDischargeComplete className={cx(['icon'])} />
-    <Icon.IconDischargeCompleteLowLight className={cx(['icon'])} />
-    <Icon.IconDischargeOverDue className={cx(['icon'])} />
-    <Icon.IconDischargeOverDueLowLight className={cx(['icon'])} />
-    <Icon.IconDocumentPlus className={cx(['icon'])} />
-    <Icon.IconDocuments className={cx(['icon'])} />
-    <Icon.IconDoNotDisturb className={cx(['icon'])} />
-    <Icon.IconDoorOpen className={cx(['icon'])} />
-    <Icon.IconDoubleChevronLeft className={cx(['icon'])} />
-    <Icon.IconDoubleChevronRight className={cx(['icon'])} />
-    <Icon.IconDown className={cx(['icon'])} />
-    <Icon.IconDownload className={cx(['icon'])} />
-    <Icon.IconDrugDrug className={cx(['icon'])} />
-    <Icon.IconDrugDrugLowLight className={cx(['icon'])} />
-    <Icon.IconDue className={cx(['icon'])} />
-    <Icon.IconDueSoon className={cx(['icon'])} />
-    <Icon.IconDueSoonLowLight className={cx(['icon'])} />
-    <Icon.IconEcRep className={cx(['icon'])} />
-    <Icon.IconEdit className={cx(['icon'])} />
-    <Icon.IconEllipses className={cx(['icon'])} />
-    <Icon.IconEnvelope className={cx(['icon'])} />
-    <Icon.IconEnvelopeFill className={cx(['icon'])} />
-    <Icon.IconError className={cx(['icon'])} />
-    <Icon.IconErrorDark className={cx(['icon'])} />
-    <Icon.IconErrorLowLight className={cx(['icon'])} />
-    <Icon.IconExclamation className={cx(['icon'])} />
-    <Icon.IconExpandLess className={cx(['icon'])} />
-    <Icon.IconExpandMore className={cx(['icon'])} />
-    <Icon.IconExpandRow className={cx(['icon'])} />
-    <Icon.IconExtensions className={cx(['icon'])} />
-    <Icon.IconExternalLink className={cx(['icon'])} />
-    <Icon.IconFeatured className={cx(['icon'])} />
-    <Icon.IconFeaturedOff className={cx(['icon'])} />
-    <Icon.IconFeaturedOutline className={cx(['icon'])} />
-    <Icon.IconFeaturedOutlineYellow className={cx(['icon'])} />
-    <Icon.IconFirst className={cx(['icon'])} />
-    <Icon.IconFitHeight className={cx(['icon'])} />
-    <Icon.IconFitScale className={cx(['icon'])} />
-    <Icon.IconFitWidth className={cx(['icon'])} />
-    <Icon.IconFlag className={cx(['icon'])} />
-    <Icon.IconFlipHorizontal className={cx(['icon'])} />
-    <Icon.IconFlipVertical className={cx(['icon'])} />
-    <Icon.IconFlowsheet className={cx(['icon'])} />
-    <Icon.IconFolder className={cx(['icon'])} />
-    <Icon.IconForward className={cx(['icon'])} />
-    <Icon.IconFunnel className={cx(['icon'])} />
-    <Icon.IconGapChecking className={cx(['icon'])} />
-    <Icon.IconGlasses className={cx(['icon'])} />
-    <Icon.IconGroup className={cx(['icon'])} />
-    <Icon.IconHalfRating className={cx(['icon'])} />
-    <Icon.IconHazardLow className={cx(['icon'])} />
-    <Icon.IconHelp className={cx(['icon'])} />
-    <Icon.IconHelpInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconHelpInverseLowLight className={cx(['icon'])} />
-    <Icon.IconHelpLowLight className={cx(['icon'])} />
-    <Icon.IconHelpStatic className={cx(['icon'])} />
-    <Icon.IconHelpThemeable className={cx(['icon'])} />
-    <Icon.IconHide className={cx(['icon'])} />
-    <Icon.IconHigh className={cx(['icon'])} />
-    <Icon.IconHighInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconHighInverseLowLight className={cx(['icon'])} />
-    <Icon.IconHighLowLight className={cx(['icon'])} />
-    <Icon.IconHighPriority className={cx(['icon'])} />
-    <Icon.IconHold className={cx(['icon'])} />
-    <Icon.IconHospital className={cx(['icon'])} />
-    <Icon.IconHouse className={cx(['icon'])} />
-    <Icon.IconImage className={cx(['icon'])} />
-    <Icon.IconImplant className={cx(['icon'])} />
-    <Icon.IconIncomingCall className={cx(['icon'])} />
-    <Icon.IconIncomplete className={cx(['icon'])} />
-    <Icon.IconIncompleteInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconIncompleteInverseLowLight className={cx(['icon'])} />
-    <Icon.IconInformation className={cx(['icon'])} />
-    <Icon.IconInformationInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconInformationInverseLowLight className={cx(['icon'])} />
-    <Icon.IconInformationLowLight className={cx(['icon'])} />
-    <Icon.IconInformationStatic className={cx(['icon'])} />
-    <Icon.IconInformationThemeable className={cx(['icon'])} />
-    <Icon.IconIPass className={cx(['icon'])} />
-    <Icon.IconItalicI className={cx(['icon'])} />
-    <Icon.IconKeyboard className={cx(['icon'])} />
-    <Icon.IconKnurling className={cx(['icon'])} />
-    <Icon.IconLast className={cx(['icon'])} />
-    <Icon.IconLeft className={cx(['icon'])} />
-    <Icon.IconLeftPane className={cx(['icon'])} />
-    <Icon.IconLightbulb className={cx(['icon'])} />
-    <Icon.IconLink className={cx(['icon'])} />
-    <Icon.IconList className={cx(['icon'])} />
-    <Icon.IconLocationPin className={cx(['icon'])} />
-    <Icon.IconLookback className={cx(['icon'])} />
-    <Icon.IconLow className={cx(['icon'])} />
-    <Icon.IconLowLowLight className={cx(['icon'])} />
-    <Icon.IconLowRisk className={cx(['icon'])} />
-    <Icon.IconLowRiskLowLight className={cx(['icon'])} />
-    <Icon.IconManufacturer className={cx(['icon'])} />
-    <Icon.IconMax className={cx(['icon'])} />
-    <Icon.IconMaximize className={cx(['icon'])} />
-    <Icon.IconMediaFastForward className={cx(['icon'])} />
-    <Icon.IconMediaPause className={cx(['icon'])} />
-    <Icon.IconMediaPlay className={cx(['icon'])} />
-    <Icon.IconMediaRecord className={cx(['icon'])} />
-    <Icon.IconMediaRewind className={cx(['icon'])} />
-    <Icon.IconMediaStop className={cx(['icon'])} />
-    <Icon.IconMedicationTablet className={cx(['icon'])} />
-    <Icon.IconMedicationTabletOutline className={cx(['icon'])} />
-    <Icon.IconMedicationTabletHalf className={cx(['icon'])} />
-    <Icon.IconMedicationTabletHalfOutline className={cx(['icon'])} />
-    <Icon.IconMenu className={cx(['icon'])} />
-    <Icon.IconMerge className={cx(['icon'])} />
-    <Icon.IconMicrophone className={cx(['icon'])} />
-    <Icon.IconMicrophoneDisabled className={cx(['icon'])} />
-    <Icon.IconMin className={cx(['icon'])} />
-    <Icon.IconMinimize className={cx(['icon'])} />
-    <Icon.IconMinus className={cx(['icon'])} />
-    <Icon.IconMissedCall className={cx(['icon'])} />
-    <Icon.IconModerate className={cx(['icon'])} />
-    <Icon.IconModerateLowLight className={cx(['icon'])} />
-    <Icon.IconModified className={cx(['icon'])} />
-    <Icon.IconMultipleResultsNormal className={cx(['icon'])} />
-    <Icon.IconMultipleResultsNotNormal className={cx(['icon'])} />
-    <Icon.IconMultipleResultsCritical className={cx(['icon'])} />
-    <Icon.IconNavStackUp className={cx(['icon'])} />
-    <Icon.IconNext className={cx(['icon'])} />
-    <Icon.IconNoRisk className={cx(['icon'])} />
-    <Icon.IconNoResults className={cx(['icon'])} />
-    <Icon.IconNoRiskLowLight className={cx(['icon'])} />
-    <Icon.IconNoSignal className={cx(['icon'])} />
-    <Icon.IconNotification className={cx(['icon'])} />
-    <Icon.IconNotificationDisabled className={cx(['icon'])} />
-    <Icon.IconNotificationOff className={cx(['icon'])} />
-    <Icon.IconNotMet className={cx(['icon'])} />
-    <Icon.IconOutgoingCall className={cx(['icon'])} />
-    <Icon.IconOutOfNetwork className={cx(['icon'])} />
-    <Icon.IconOverDue className={cx(['icon'])} />
-    <Icon.IconOverDueLowLight className={cx(['icon'])} />
-    <Icon.IconPadlock className={cx(['icon'])} />
-    <Icon.IconPager className={cx(['icon'])} />
-    <Icon.IconPanelLeft className={cx(['icon'])} />
-    <Icon.IconPanelRight className={cx(['icon'])} />
-    <Icon.IconPaperFolded className={cx(['icon'])} />
-    <Icon.IconPaperPencil className={cx(['icon'])} />
-    <Icon.IconPartiallyMet className={cx(['icon'])} />
-    <Icon.IconPatientSearch className={cx(['icon'])} />
-    <Icon.IconPending className={cx(['icon'])} />
-    <Icon.IconPerson className={cx(['icon'])} />
-    <Icon.IconPersonConnection className={cx(['icon'])} />
-    <Icon.IconPersonDoor className={cx(['icon'])} />
-    <Icon.IconPersonHospital className={cx(['icon'])} />
-    <Icon.IconPersonnelPerson className={cx(['icon'])} />
-    <Icon.IconPharmacyReject className={cx(['icon'])} />
-    <Icon.IconPharmacyRejectLowLight className={cx(['icon'])} />
-    <Icon.IconPharmacyReview className={cx(['icon'])} />
-    <Icon.IconPharmacyVerification className={cx(['icon'])} />
-    <Icon.IconPhone className={cx(['icon'])} />
-    <Icon.IconPhoneDown className={cx(['icon'])} />
-    <Icon.IconPill className={cx(['icon'])} />
-    <Icon.IconPinDiagonal className={cx(['icon'])} />
-    <Icon.IconPinDown className={cx(['icon'])} />
-    <Icon.IconPlusSymbol className={cx(['icon'])} />
-    <Icon.IconPlusSymbolLight className={cx(['icon'])} />
-    <Icon.IconPrevious className={cx(['icon'])} />
-    <Icon.IconPrinter className={cx(['icon'])} />
-    <Icon.IconProjects className={cx(['icon'])} />
-    <Icon.IconProtocol className={cx(['icon'])} />
-    <Icon.IconProvider className={cx(['icon'])} />
-    <Icon.IconQuestion className={cx(['icon'])} />
-    <Icon.IconQuestionOutline className={cx(['icon'])} />
-    <Icon.IconRectangleSymbol className={cx(['icon'])} />
-    <Icon.IconRectangleSymbolLight className={cx(['icon'])} />
-    <Icon.IconRecurringEvent className={cx(['icon'])} />
-    <Icon.IconRedo className={cx(['icon'])} />
-    <Icon.IconRefresh className={cx(['icon'])} />
-    <Icon.IconRefusedSlot className={cx(['icon'])} />
-    <Icon.IconReload className={cx(['icon'])} />
-    <Icon.IconReply className={cx(['icon'])} />
-    <Icon.IconReplyAll className={cx(['icon'])} />
-    <Icon.IconRequired className={cx(['icon'])} />
-    <Icon.IconRight className={cx(['icon'])} />
-    <Icon.IconRollup className={cx(['icon'])} />
-    <Icon.IconRotateLeft className={cx(['icon'])} />
-    <Icon.IconRotateRight className={cx(['icon'])} />
-    <Icon.IconSave className={cx(['icon'])} />
-    <Icon.IconScheduled className={cx(['icon'])} />
-    <Icon.IconScheduledLowLight className={cx(['icon'])} />
-    <Icon.IconScratchPad className={cx(['icon'])} />
-    <Icon.IconSearch className={cx(['icon'])} />
-    <Icon.IconSecondaryProvider className={cx(['icon'])} />
-    <Icon.IconSend className={cx(['icon'])} />
-    <Icon.IconSeparate className={cx(['icon'])} />
-    <Icon.IconSettings className={cx(['icon'])} />
-    <Icon.IconSharedSchedules className={cx(['icon'])} />
-    <Icon.IconSimulation className={cx(['icon'])} />
-    <Icon.IconSortAscending className={cx(['icon'])} />
-    <Icon.IconSortDescending className={cx(['icon'])} />
-    <Icon.IconSpinner className={cx(['icon'])} isSpin={false} />
-    <Icon.IconSquareSymbol className={cx(['icon'])} />
-    <Icon.IconSquareSymbolLight className={cx(['icon'])} />
-    <Icon.IconStatusPositive className={cx(['icon'])} />
-    <Icon.IconStatusPositiveWhite className={cx(['icon'])} />
-    <Icon.IconStatusPositiveLowLight className={cx(['icon'])} />
-    <Icon.IconStatusPositiveWhiteLowLight className={cx(['icon'])} />
-    <Icon.IconStartPresenting className={cx(['icon'])} />
-    <Icon.IconStopPresenting className={cx(['icon'])} />
-    <Icon.IconSuccess className={cx(['icon'])} />
-    <Icon.IconSuccessInverse className={cx(['icon', 'icon-inverse'])} />
-    <Icon.IconSuccessInverseLowLight className={cx(['icon'])} />
-    <Icon.IconSuccessLowLight className={cx(['icon'])} />
-    <Icon.IconSwap className={cx(['icon'])} />
-    <Icon.IconTable className={cx(['icon'])} />
-    <Icon.IconTag className={cx(['icon'])} />
-    <Icon.IconTeardropSymbol className={cx(['icon'])} />
-    <Icon.IconTeardropSymbolLight className={cx(['icon'])} />
-    <Icon.IconTeardropUpSymbol className={cx(['icon'])} />
-    <Icon.IconTeardropUpSymbolLight className={cx(['icon'])} />
-    <Icon.IconThinDiamondSymbol className={cx(['icon'])} />
-    <Icon.IconThinDiamondSymbolLight className={cx(['icon'])} />
-    <Icon.IconTile className={cx(['icon'])} />
-    <Icon.IconTrash className={cx(['icon'])} />
-    <Icon.IconTreemap className={cx(['icon'])} />
-    <Icon.IconTrendingDown className={cx(['icon'])} />
-    <Icon.IconTrendingUp className={cx(['icon'])} />
-    <Icon.IconTriangleDownSymbol className={cx(['icon'])} />
-    <Icon.IconTriangleDownSymbolLight className={cx(['icon'])} />
-    <Icon.IconTriangleSymbol className={cx(['icon'])} />
-    <Icon.IconTriangleSymbolLight className={cx(['icon'])} />
-    <Icon.IconTrophy className={cx(['icon'])} />
-    <Icon.IconUnavailable className={cx(['icon'])} />
-    <Icon.IconUndo className={cx(['icon'])} />
-    <Icon.IconUnexpected className={cx(['icon'])} />
-    <Icon.IconUnexpectedLowLight className={cx(['icon'])} />
-    <Icon.IconUnknown className={cx(['icon'])} />
-    <Icon.IconUnlock className={cx(['icon'])} />
-    <Icon.IconUnread className={cx(['icon'])} />
-    <Icon.IconUnspecified className={cx(['icon'])} />
-    <Icon.IconUp className={cx(['icon'])} />
-    <Icon.IconUpload className={cx(['icon'])} />
-    <Icon.IconUsers className={cx(['icon'])} />
-    <Icon.IconVideoCamera className={cx(['icon'])} />
-    <Icon.IconVideoCameraDisabled className={cx(['icon'])} />
-    <Icon.IconVisualization className={cx(['icon'])} />
-    <Icon.IconVolumeSetDefault className={cx(['icon'])} />
-    <Icon.IconVolumeSetMute className={cx(['icon'])} />
-    <Icon.IconVolumeSetIncrease className={cx(['icon'])} />
-    <Icon.IconVolumeSetDecrease className={cx(['icon'])} />
-    <Icon.IconWarning className={cx(['icon'])} />
-    <Icon.IconWarningLowLight className={cx(['icon'])} />
-    <Icon.IconWaveform className={cx(['icon'])} />
-    <Icon.IconWifi className={cx(['icon'])} />
-    <Icon.IconWifiSlash className={cx(['icon'])} />
-    <Icon.IconXSymbol className={cx(['icon'])} />
-    <Icon.IconZoomIn className={cx(['icon'])} />
-    <Icon.IconZoomOut className={cx(['icon'])} />
+    <IconAbnormal className={cx(['icon'])} />
+    <IconAbnormalLowLight className={cx(['icon'])} />
+    <IconAdd className={cx(['icon'])} />
+    <IconAddPerson className={cx(['icon'])} />
+    <IconAlert className={cx(['icon'])} />
+    <IconAlertLowLight className={cx(['icon'])} />
+    <IconAllergy className={cx(['icon'])} />
+    <IconAnalytics className={cx(['icon'])} />
+    <IconAnnouncement className={cx(['icon'])} />
+    <IconArchive className={cx(['icon'])} />
+    <IconAttachment className={cx(['icon'])} />
+    <IconAudio className={cx(['icon'])} />
+    <IconAutoText className={cx(['icon'])} />
+    <IconAvailable className={cx(['icon'])} />
+    <IconAway className={cx(['icon'])} />
+    <IconBedAssigned className={cx(['icon'])} />
+    <IconBedAssignedLowLight className={cx(['icon'])} />
+    <IconBedRequested className={cx(['icon'])} />
+    <IconBluetooth className={cx(['icon'])} />
+    <IconBluetoothSlash className={cx(['icon'])} />
+    <IconBookmark className={cx(['icon'])} />
+    <IconBriefcase className={cx(['icon'])} />
+    <IconBrokenImage className={cx(['icon'])} />
+    <IconBrokenLinkUnlink className={cx(['icon'])} />
+    <IconBusy className={cx(['icon'])} />
+    <IconCalculator className={cx(['icon'])} />
+    <IconCalendar className={cx(['icon'])} />
+    <IconCamera className={cx(['icon'])} />
+    <IconCancel className={cx(['icon'])} />
+    <IconCaretDown className={cx(['icon'])} />
+    <IconCaretLeft className={cx(['icon'])} />
+    <IconCaretRight className={cx(['icon'])} />
+    <IconCaretUp className={cx(['icon'])} />
+    <IconCatalogueNumber className={cx(['icon'])} />
+    <IconCaution className={cx(['icon'])} />
+    <IconChecklist className={cx(['icon'])} />
+    <IconCheckmark className={cx(['icon'])} />
+    <IconChevron className={cx(['icon'])} />
+    <IconChevronDown className={cx(['icon'])} />
+    <IconChevronLeft className={cx(['icon'])} />
+    <IconChevronRight className={cx(['icon'])} />
+    <IconChevronUp className={cx(['icon'])} />
+    <IconCircleLinesSymbol className={cx(['icon'])} />
+    <IconCircleSymbol className={cx(['icon'])} />
+    <IconCircleSymbolLight className={cx(['icon'])} />
+    <IconClear className={cx(['icon'])} />
+    <IconClipboard className={cx(['icon'])} />
+    <IconClock className={cx(['icon'])} />
+    <IconClose className={cx(['icon'])} />
+    <IconCollapseRow className={cx(['icon'])} />
+    <IconComment className={cx(['icon'])} />
+    <IconCommit className={cx(['icon'])} />
+    <IconComplete className={cx(['icon'])} />
+    <IconCompose className={cx(['icon'])} />
+    <IconConfidential className={cx(['icon'])} />
+    <IconConsultInstructionsForUse className={cx(['icon'])} />
+    <IconCritical className={cx(['icon'])} />
+    <IconCriticalInverse className={cx(['icon', 'icon-inverse'])} />
+    <IconCriticalInverseLowLight className={cx(['icon'])} />
+    <IconCriticalLowLight className={cx(['icon'])} />
+    <IconDateOfManufacture className={cx(['icon'])} />
+    <IconDevice className={cx(['icon'])} />
+    <IconDeviceAlert className={cx(['icon'])} />
+    <IconDeviceAlertLowLight className={cx(['icon'])} />
+    <IconDeviceCheck className={cx(['icon'])} />
+    <IconDeviceCheckLowLight className={cx(['icon'])} />
+    <IconDiamond className={cx(['icon'])} />
+    <IconDiamondLowLight className={cx(['icon'])} />
+    <IconDiamondSymbol className={cx(['icon'])} />
+    <IconDiamondSymbolLight className={cx(['icon'])} />
+    <IconDischargeComingDue className={cx(['icon'])} />
+    <IconDischargeComingDueLowLight className={cx(['icon'])} />
+    <IconDischargeComplete className={cx(['icon'])} />
+    <IconDischargeCompleteLowLight className={cx(['icon'])} />
+    <IconDischargeOverDue className={cx(['icon'])} />
+    <IconDischargeOverDueLowLight className={cx(['icon'])} />
+    <IconDocumentPlus className={cx(['icon'])} />
+    <IconDocuments className={cx(['icon'])} />
+    <IconDoNotDisturb className={cx(['icon'])} />
+    <IconDoorOpen className={cx(['icon'])} />
+    <IconDoubleChevronLeft className={cx(['icon'])} />
+    <IconDoubleChevronRight className={cx(['icon'])} />
+    <IconDown className={cx(['icon'])} />
+    <IconDownload className={cx(['icon'])} />
+    <IconDrugDrug className={cx(['icon'])} />
+    <IconDrugDrugLowLight className={cx(['icon'])} />
+    <IconDue className={cx(['icon'])} />
+    <IconDueSoon className={cx(['icon'])} />
+    <IconDueSoonLowLight className={cx(['icon'])} />
+    <IconEcRep className={cx(['icon'])} />
+    <IconEdit className={cx(['icon'])} />
+    <IconEllipses className={cx(['icon'])} />
+    <IconEnvelope className={cx(['icon'])} />
+    <IconEnvelopeFill className={cx(['icon'])} />
+    <IconError className={cx(['icon'])} />
+    <IconErrorDark className={cx(['icon'])} />
+    <IconErrorLowLight className={cx(['icon'])} />
+    <IconExclamation className={cx(['icon'])} />
+    <IconExpandLess className={cx(['icon'])} />
+    <IconExpandMore className={cx(['icon'])} />
+    <IconExpandRow className={cx(['icon'])} />
+    <IconExtensions className={cx(['icon'])} />
+    <IconExternalLink className={cx(['icon'])} />
+    <IconFeatured className={cx(['icon'])} />
+    <IconFeaturedOff className={cx(['icon'])} />
+    <IconFeaturedOutline className={cx(['icon'])} />
+    <IconFeaturedOutlineYellow className={cx(['icon'])} />
+    <IconFirst className={cx(['icon'])} />
+    <IconFitHeight className={cx(['icon'])} />
+    <IconFitScale className={cx(['icon'])} />
+    <IconFitWidth className={cx(['icon'])} />
+    <IconFlag className={cx(['icon'])} />
+    <IconFlipHorizontal className={cx(['icon'])} />
+    <IconFlipVertical className={cx(['icon'])} />
+    <IconFlowsheet className={cx(['icon'])} />
+    <IconFolder className={cx(['icon'])} />
+    <IconForward className={cx(['icon'])} />
+    <IconFunnel className={cx(['icon'])} />
+    <IconGapChecking className={cx(['icon'])} />
+    <IconGlasses className={cx(['icon'])} />
+    <IconGroup className={cx(['icon'])} />
+    <IconHalfRating className={cx(['icon'])} />
+    <IconHazardLow className={cx(['icon'])} />
+    <IconHelp className={cx(['icon'])} />
+    <IconHelpInverse className={cx(['icon', 'icon-inverse'])} />
+    <IconHelpInverseLowLight className={cx(['icon'])} />
+    <IconHelpLowLight className={cx(['icon'])} />
+    <IconHelpStatic className={cx(['icon'])} />
+    <IconHelpThemeable className={cx(['icon'])} />
+    <IconHide className={cx(['icon'])} />
+    <IconHigh className={cx(['icon'])} />
+    <IconHighInverse className={cx(['icon', 'icon-inverse'])} />
+    <IconHighInverseLowLight className={cx(['icon'])} />
+    <IconHighLowLight className={cx(['icon'])} />
+    <IconHighPriority className={cx(['icon'])} />
+    <IconHold className={cx(['icon'])} />
+    <IconHospital className={cx(['icon'])} />
+    <IconHouse className={cx(['icon'])} />
+    <IconImage className={cx(['icon'])} />
+    <IconImplant className={cx(['icon'])} />
+    <IconIncomingCall className={cx(['icon'])} />
+    <IconIncomplete className={cx(['icon'])} />
+    <IconIncompleteInverse className={cx(['icon', 'icon-inverse'])} />
+    <IconIncompleteInverseLowLight className={cx(['icon'])} />
+    <IconInformation className={cx(['icon'])} />
+    <IconInformationInverse className={cx(['icon', 'icon-inverse'])} />
+    <IconInformationInverseLowLight className={cx(['icon'])} />
+    <IconInformationLowLight className={cx(['icon'])} />
+    <IconInformationStatic className={cx(['icon'])} />
+    <IconInformationThemeable className={cx(['icon'])} />
+    <IconIPass className={cx(['icon'])} />
+    <IconItalicI className={cx(['icon'])} />
+    <IconKeyboard className={cx(['icon'])} />
+    <IconKnurling className={cx(['icon'])} />
+    <IconLast className={cx(['icon'])} />
+    <IconLeft className={cx(['icon'])} />
+    <IconLeftPane className={cx(['icon'])} />
+    <IconLightbulb className={cx(['icon'])} />
+    <IconLink className={cx(['icon'])} />
+    <IconList className={cx(['icon'])} />
+    <IconLocationPin className={cx(['icon'])} />
+    <IconLookback className={cx(['icon'])} />
+    <IconLow className={cx(['icon'])} />
+    <IconLowLowLight className={cx(['icon'])} />
+    <IconLowRisk className={cx(['icon'])} />
+    <IconLowRiskLowLight className={cx(['icon'])} />
+    <IconManufacturer className={cx(['icon'])} />
+    <IconMax className={cx(['icon'])} />
+    <IconMaximize className={cx(['icon'])} />
+    <IconMediaFastForward className={cx(['icon'])} />
+    <IconMediaPause className={cx(['icon'])} />
+    <IconMediaPlay className={cx(['icon'])} />
+    <IconMediaRecord className={cx(['icon'])} />
+    <IconMediaRewind className={cx(['icon'])} />
+    <IconMediaStop className={cx(['icon'])} />
+    <IconMedicationTablet className={cx(['icon'])} />
+    <IconMedicationTabletOutline className={cx(['icon'])} />
+    <IconMedicationTabletHalf className={cx(['icon'])} />
+    <IconMedicationTabletHalfOutline className={cx(['icon'])} />
+    <IconMenu className={cx(['icon'])} />
+    <IconMerge className={cx(['icon'])} />
+    <IconMicrophone className={cx(['icon'])} />
+    <IconMicrophoneDisabled className={cx(['icon'])} />
+    <IconMin className={cx(['icon'])} />
+    <IconMinimize className={cx(['icon'])} />
+    <IconMinus className={cx(['icon'])} />
+    <IconMissedCall className={cx(['icon'])} />
+    <IconModerate className={cx(['icon'])} />
+    <IconModerateLowLight className={cx(['icon'])} />
+    <IconModified className={cx(['icon'])} />
+    <IconMultipleResultsNormal className={cx(['icon'])} />
+    <IconMultipleResultsNotNormal className={cx(['icon'])} />
+    <IconMultipleResultsCritical className={cx(['icon'])} />
+    <IconNavStackUp className={cx(['icon'])} />
+    <IconNext className={cx(['icon'])} />
+    <IconNoRisk className={cx(['icon'])} />
+    <IconNoResults className={cx(['icon'])} />
+    <IconNoRiskLowLight className={cx(['icon'])} />
+    <IconNoSignal className={cx(['icon'])} />
+    <IconNotification className={cx(['icon'])} />
+    <IconNotificationDisabled className={cx(['icon'])} />
+    <IconNotificationOff className={cx(['icon'])} />
+    <IconNotMet className={cx(['icon'])} />
+    <IconOutgoingCall className={cx(['icon'])} />
+    <IconOutOfNetwork className={cx(['icon'])} />
+    <IconOverDue className={cx(['icon'])} />
+    <IconOverDueLowLight className={cx(['icon'])} />
+    <IconPadlock className={cx(['icon'])} />
+    <IconPager className={cx(['icon'])} />
+    <IconPanelLeft className={cx(['icon'])} />
+    <IconPanelRight className={cx(['icon'])} />
+    <IconPaperFolded className={cx(['icon'])} />
+    <IconPaperPencil className={cx(['icon'])} />
+    <IconPartiallyMet className={cx(['icon'])} />
+    <IconPatientSearch className={cx(['icon'])} />
+    <IconPending className={cx(['icon'])} />
+    <IconPerson className={cx(['icon'])} />
+    <IconPersonConnection className={cx(['icon'])} />
+    <IconPersonDoor className={cx(['icon'])} />
+    <IconPersonHospital className={cx(['icon'])} />
+    <IconPersonnelPerson className={cx(['icon'])} />
+    <IconPharmacyReject className={cx(['icon'])} />
+    <IconPharmacyRejectLowLight className={cx(['icon'])} />
+    <IconPharmacyReview className={cx(['icon'])} />
+    <IconPharmacyVerification className={cx(['icon'])} />
+    <IconPhone className={cx(['icon'])} />
+    <IconPhoneDown className={cx(['icon'])} />
+    <IconPill className={cx(['icon'])} />
+    <IconPinDiagonal className={cx(['icon'])} />
+    <IconPinDown className={cx(['icon'])} />
+    <IconPlusSymbol className={cx(['icon'])} />
+    <IconPlusSymbolLight className={cx(['icon'])} />
+    <IconPrevious className={cx(['icon'])} />
+    <IconPrinter className={cx(['icon'])} />
+    <IconProjects className={cx(['icon'])} />
+    <IconProtocol className={cx(['icon'])} />
+    <IconProvider className={cx(['icon'])} />
+    <IconQuestion className={cx(['icon'])} />
+    <IconQuestionOutline className={cx(['icon'])} />
+    <IconRectangleSymbol className={cx(['icon'])} />
+    <IconRectangleSymbolLight className={cx(['icon'])} />
+    <IconRecurringEvent className={cx(['icon'])} />
+    <IconRedo className={cx(['icon'])} />
+    <IconRefresh className={cx(['icon'])} />
+    <IconRefusedSlot className={cx(['icon'])} />
+    <IconReload className={cx(['icon'])} />
+    <IconReply className={cx(['icon'])} />
+    <IconReplyAll className={cx(['icon'])} />
+    <IconRequired className={cx(['icon'])} />
+    <IconRight className={cx(['icon'])} />
+    <IconRollup className={cx(['icon'])} />
+    <IconRotateLeft className={cx(['icon'])} />
+    <IconRotateRight className={cx(['icon'])} />
+    <IconSave className={cx(['icon'])} />
+    <IconScheduled className={cx(['icon'])} />
+    <IconScheduledLowLight className={cx(['icon'])} />
+    <IconScratchPad className={cx(['icon'])} />
+    <IconSearch className={cx(['icon'])} />
+    <IconSecondaryProvider className={cx(['icon'])} />
+    <IconSend className={cx(['icon'])} />
+    <IconSeparate className={cx(['icon'])} />
+    <IconSettings className={cx(['icon'])} />
+    <IconSharedSchedules className={cx(['icon'])} />
+    <IconSimulation className={cx(['icon'])} />
+    <IconSortAscending className={cx(['icon'])} />
+    <IconSortDescending className={cx(['icon'])} />
+    <IconSpinner className={cx(['icon'])} isSpin={false} />
+    <IconSquareSymbol className={cx(['icon'])} />
+    <IconSquareSymbolLight className={cx(['icon'])} />
+    <IconStatusPositive className={cx(['icon'])} />
+    <IconStatusPositiveWhite className={cx(['icon'])} />
+    <IconStatusPositiveLowLight className={cx(['icon'])} />
+    <IconStatusPositiveWhiteLowLight className={cx(['icon'])} />
+    <IconStartPresenting className={cx(['icon'])} />
+    <IconStopPresenting className={cx(['icon'])} />
+    <IconSuccess className={cx(['icon'])} />
+    <IconSuccessInverse className={cx(['icon', 'icon-inverse'])} />
+    <IconSuccessInverseLowLight className={cx(['icon'])} />
+    <IconSuccessLowLight className={cx(['icon'])} />
+    <IconSwap className={cx(['icon'])} />
+    <IconTable className={cx(['icon'])} />
+    <IconTag className={cx(['icon'])} />
+    <IconTeardropSymbol className={cx(['icon'])} />
+    <IconTeardropSymbolLight className={cx(['icon'])} />
+    <IconTeardropUpSymbol className={cx(['icon'])} />
+    <IconTeardropUpSymbolLight className={cx(['icon'])} />
+    <IconThinDiamondSymbol className={cx(['icon'])} />
+    <IconThinDiamondSymbolLight className={cx(['icon'])} />
+    <IconTile className={cx(['icon'])} />
+    <IconTrash className={cx(['icon'])} />
+    <IconTreemap className={cx(['icon'])} />
+    <IconTrendingDown className={cx(['icon'])} />
+    <IconTrendingUp className={cx(['icon'])} />
+    <IconTriangleDownSymbol className={cx(['icon'])} />
+    <IconTriangleDownSymbolLight className={cx(['icon'])} />
+    <IconTriangleSymbol className={cx(['icon'])} />
+    <IconTriangleSymbolLight className={cx(['icon'])} />
+    <IconTrophy className={cx(['icon'])} />
+    <IconUnavailable className={cx(['icon'])} />
+    <IconUndo className={cx(['icon'])} />
+    <IconUnexpected className={cx(['icon'])} />
+    <IconUnexpectedLowLight className={cx(['icon'])} />
+    <IconUnknown className={cx(['icon'])} />
+    <IconUnlock className={cx(['icon'])} />
+    <IconUnread className={cx(['icon'])} />
+    <IconUnspecified className={cx(['icon'])} />
+    <IconUp className={cx(['icon'])} />
+    <IconUpload className={cx(['icon'])} />
+    <IconUsers className={cx(['icon'])} />
+    <IconVideoCamera className={cx(['icon'])} />
+    <IconVideoCameraDisabled className={cx(['icon'])} />
+    <IconVisualization className={cx(['icon'])} />
+    <IconVolumeSetDefault className={cx(['icon'])} />
+    <IconVolumeSetMute className={cx(['icon'])} />
+    <IconVolumeSetIncrease className={cx(['icon'])} />
+    <IconVolumeSetDecrease className={cx(['icon'])} />
+    <IconWarning className={cx(['icon'])} />
+    <IconWarningLowLight className={cx(['icon'])} />
+    <IconWaveform className={cx(['icon'])} />
+    <IconWifi className={cx(['icon'])} />
+    <IconWifiSlash className={cx(['icon'])} />
+    <IconXSymbol className={cx(['icon'])} />
+    <IconZoomIn className={cx(['icon'])} />
+    <IconZoomOut className={cx(['icon'])} />
   </div>
 );
 
