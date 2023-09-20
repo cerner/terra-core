@@ -307,8 +307,12 @@ exports[`should render List with items 1`] = `
                                 tabIndex="0"
                               >
                                 <div
-                                  className="item-fill icon-knurling"
+                                  className="item-fill"
                                   key="item-fill"
+                                />
+                                <div
+                                  className="item-end"
+                                  key="knurling-icon"
                                 >
                                   <IconKnurling
                                     viewBox="0 0 48 48"
@@ -552,8 +556,12 @@ exports[`should render List with items 1`] = `
                                 tabIndex="0"
                               >
                                 <div
-                                  className="item-fill icon-knurling"
+                                  className="item-fill"
                                   key="item-fill"
+                                />
+                                <div
+                                  className="item-end"
+                                  key="knurling-icon"
                                 >
                                   <IconKnurling
                                     viewBox="0 0 48 48"
@@ -1013,8 +1021,12 @@ exports[`should render Section with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill icon-knurling"
+                                      className="item-fill"
                                       key="item-fill"
+                                    />
+                                    <div
+                                      className="item-end"
+                                      key="knurling-icon"
                                     >
                                       <IconKnurling
                                         viewBox="0 0 48 48"
@@ -1258,8 +1270,12 @@ exports[`should render Section with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill icon-knurling"
+                                      className="item-fill"
                                       key="item-fill"
+                                    />
+                                    <div
+                                      className="item-end"
+                                      key="knurling-icon"
                                     >
                                       <IconKnurling
                                         viewBox="0 0 48 48"
@@ -1700,8 +1716,12 @@ exports[`should render subsection with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill icon-knurling"
+                                      className="item-fill"
                                       key="item-fill"
+                                    />
+                                    <div
+                                      className="item-end"
+                                      key="knurling-icon"
                                     >
                                       <IconKnurling
                                         viewBox="0 0 48 48"
@@ -1945,8 +1965,12 @@ exports[`should render subsection with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill icon-knurling"
+                                      className="item-fill"
                                       key="item-fill"
+                                    />
+                                    <div
+                                      className="item-end"
+                                      key="knurling-icon"
                                     >
                                       <IconKnurling
                                         viewBox="0 0 48 48"
@@ -2190,8 +2214,12 @@ exports[`should render subsection with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill icon-knurling"
+                                      className="item-fill"
                                       key="item-fill"
+                                    />
+                                    <div
+                                      className="item-end"
+                                      key="knurling-icon"
                                     >
                                       <IconKnurling
                                         viewBox="0 0 48 48"
