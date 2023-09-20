@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
-import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import { injectIntl } from 'react-intl';
+import { KEY_SPACE, KEY_RETURN } from 'keycode-js';
+import { v4 as uuidv4 } from 'uuid';
 import classNamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import ThemeContext from 'terra-theme-context';
-import { v4 as uuidv4 } from 'uuid';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import styles from './Tag.module.scss';
 
@@ -67,7 +67,6 @@ const RollUpTag = (props) => {
   const visuallyHiddenContentId = `terra-rollup-tag-${uuidv4()}`;
   return (
     <div
-      role="listitem"
       className={cx('tag-list-item')}
     >
       <button

@@ -4,6 +4,7 @@
 
 * Added
   * Added a subcomponent TagList.
+  * Prop `onTagClick` in TagList, triggered when tag is clicked with mouse.
 
 ## 2.60.0 - (August 23, 2023)
 

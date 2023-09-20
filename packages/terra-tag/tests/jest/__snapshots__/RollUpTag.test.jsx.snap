@@ -65,7 +65,6 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
   >
     <div
       className="tag-list-item"
-      role="listitem"
     >
       <button
         aria-describedby="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
@@ -169,7 +168,6 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
   >
     <div
       className="tag-list-item"
-      role="listitem"
     >
       <button
         aria-describedby="terra-rollup-tag-00000000-0000-0000-0000-000000000000"
@@ -273,7 +271,6 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
   >
     <div
       className="tag-list-item"
-      role="listitem"
     >
       <button
         aria-describedby="terra-rollup-tag-00000000-0000-0000-0000-000000000000"

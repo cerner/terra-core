@@ -2,8 +2,7 @@
 import React from 'react';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import IconBookmark from 'terra-icon/lib/icon/IconTile';
-import Tag from 'terra-tag';
-import TagList from 'terra-tag/src/TagList';
+import { Tag, TagList } from 'terra-tag';
 import ThemeContext from 'terra-theme-context';
 import classNamesBind from 'classnames/bind';
 import Toolbar from 'terra-toolbar';
@@ -13,7 +12,7 @@ const cx = classNamesBind.bind(styles);
 
 const text = 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ';
 
-const TagListCollapsed = () => {
+const TagListCollapsedTags = () => {
   const theme = React.useContext(ThemeContext);
 
   return (
@@ -45,4 +44,4 @@ const TagListCollapsed = () => {
   );
 };
 
-export default TagListCollapsed;
+export default TagListCollapsedTags;
