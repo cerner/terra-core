@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+
 * Fixed
   * Fixed DnD issue for `terra-list` inside `terra-slide-panel`.
 
