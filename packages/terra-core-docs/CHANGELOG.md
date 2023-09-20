@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * `terra-icon` documentation corrections. 
+
 ## 1.40.0 - (September 19, 2023)
 
 * Updated
