@@ -119,22 +119,17 @@ const ListItem = ({
     attrSpread['aria-describedby'] = responseId;
   }
 
-  const iconclassName = cx([
-    'item-fill',
-    { 'icon-knurling': isDraggable },
-  ]);
-
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
-      <div className={iconclassName} key="item-fill">
+      <div className={cx('item-fill')} key="item-fill">
         {children}
-        {(isDraggable) && (
-          <React.Fragment>
-            <IconKnurling />
-            <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />
-          </React.Fragment>
-        )}
       </div>
+      {(isDraggable) && (
+        <div className={cx('item-end')} key="knurling-icon">
+          <IconKnurling />
+          <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />
+        </div>
+      )}
       {hasChevron && <div className={cx('item-end')} key="item-end"><span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span></div>}
     </li>
   );
