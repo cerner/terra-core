@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.40.0 - (September 19, 2023)
+
 * Updated
   *  Updated doc site for `terra-form-single-select` and `terra-form-single-select-field`.
   
@@ -10,10 +12,11 @@
   * Added instruction note for `terra-form-radio` label hidden example
 
 * Updated
-  *  Updated `terra-scroll` to add realistic examples.
-  *  Updated all paginator examples to use meaningful titles.
-  *  Updated testing recommendations to use `jest.spyOn` instead of `jest.mock`.
-  *  Updated `terra-alert` long text example for accessible `terra-show-hide`.
+  * Updated `terra-icon` imports in documentation.
+  * Updated `terra-scroll` to add realistic examples.
+  * Updated all paginator examples to use meaningful titles.
+  * Updated testing recommendations to use `jest.spyOn` instead of `jest.mock`.
+  * Updated `terra-alert` long text example for accessible `terra-show-hide`.
  
 ## 1.39.0 - (August 25, 2023)
 

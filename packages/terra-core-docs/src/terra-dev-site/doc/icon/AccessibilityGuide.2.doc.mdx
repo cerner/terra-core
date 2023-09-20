@@ -80,7 +80,7 @@ You should pick an `a11yLabel` that conveys the same information that a user vie
 </div>
 <div aria-label="Example code">
 
-    import IconAnnouncement from 'terra-icon/lib/icon/IconAnnouncement';
+    import { IconAnnouncement } from 'terra-icon';
 
     // Set the a11yLabel to convey the meaning of the icon.
     <IconAnnouncement a11yLabel="Announcement" />
@@ -152,8 +152,10 @@ The screen reader user will hear something like: <samp>Rating. Four out of five 
 </div>
 <div aria-label="Example code">
 
-    import Star from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
-    import EmptyStar from 'terra-icon/lib/icon/IconFeaturedOutline';
+    import { 
+        IconFeaturedOutlineYellow as Star,
+        IconFeaturedOutline as EmptyStar,
+    } from 'terra-icon';
     import VisuallyHiddenText from 'terra-visually-hidden-text';
 
     Rating:&nbsp;
@@ -188,7 +190,7 @@ Decorative icons provide no additional information or context. Use decorative ic
 </div>
 <div aria-label="Example code">
 
-    import IconAnnouncement from "terra-icon/lib/icon/IconAnnouncement";
+    import { IconAnnouncement } from "terra-icon";
 
     <IconAnnouncement />
     &nbsp;
