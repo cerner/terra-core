@@ -11,57 +11,56 @@ import ProgressivePaginatorWithoutTotalCountExample from './example/ProgressiveP
 
 ## Why is this important?
 
-Terra Paginator could be used for data sets of known and unknown size. It is a simple and effective way to make large amounts of content more manageable and user-friendly. 
+Terra Paginator is a simple and effective way to make large amounts of content more manageable and user-friendly. However, it can be problematic to some users if not enough context is provided to convey what content the paginator controls. Therefore, it is critical to always include a visual heading above the paginator content and ensure the `ariaLabelledBy` prop is linked to the ID of the heading.
 
 ## Accessibility Considerations
 
 #### General notes
-- All paginator variants were able to be accessed via TAB and acted upon via keyboard. Consuming teams must ensure that all interactable elements can receive focus, be interacted with, and able to be acted upon.
-- Paginator's Name and Role are needed to ensure users understand the content and context. Paginator should have an aria-label that accurately describes its purpose.
-- Paginator is a control full of links that should have some context to what they control. Paginator needs to provide contexts for screen reader users to understand what they are controling. Consuming teams must ensure that any meaningful context that is provided visually is also programmatically determined.
+- Consuming teams must ensure that all actionable elements can receive focus, be interacted with, and able to be acted upon using only the keyboard.
+- Users rely on headings to define the content they are interacting with. Ensuring a heading is above the Paginator will support all sighted users to understand the purpose of the Paginator.
+- Screen reader users may require more context to understand the purpose of the Paginator. Consuming teams must ensure that a meaningful label is provided by using either the `ariaLabelledBy`(preferred) or `ariaLabel` prop.
 
 ----
 
 ### Code Considerations
 
-#### Add ARIA contexts to the paginator
+#### Add a meaningful accessible name to the paginator
 
-The paginator needs to provide contexts for screen reader users to understand what they are controling. Adding the aria-label to the container should provide the necessary context.
-In order to provide an accessible name for the whole container, two optional props will be added to let the consumer team pass the meaningful context for the accessibility usage.
+The paginator needs to provide context for screen reader users to understand what they are controling. Adding a proper label to the container should provide the necessary context. In order to provide an accessible name for the whole container, two optional props are available for the consumer team to pass a meaningful accessible label for the paginator.
 
 <Notice variant="important" ariaLevel="5">
 
-`ariaLabelledBy` and `ariaLabel` [props](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/paginator/about#paginator-props) could not be used at the same time. The best practice would be to use the `ariaLabelledBy` that refers to the id of heading that exists on the page. This will semantically relate the paginator and header as a related group.
+The `ariaLabelledBy` and `ariaLabel` [props](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/paginator/about#paginator-props) must not be used at the same time - only use one of the labeling props. The best practice would be to use only the `ariaLabelledBy` prop that refers to the id of heading that exists on the page. This will semantically relate the paginator and header as a related group.
 </Notice>
 
-ariaLabelledBy could be set with the header id(when it exists) and will be used with the aria-describedby to provide additional context for the paginator.
+When a visible text header exists on the page, the `ariaLabelledBy` can be set with using the header id and will be used with the aria-describedby to provide additional context to assistive technology users.
 
 ##### Code Example:
 
-This example shows how to set up the optional `ariaLabelledBy` prop in order to relate the paginator with the header:
+This example shows how to set up the [optional], but preferred, `ariaLabelledBy` prop to programmatically associate a visible heading on the page with the paginator to create an accessible paginator name:
 
 <ControlledPaginatorExample />
 
-ariaLabel could be set with a custom aria label that the consumer team would like to associate with the paginator, and will be used with the aria-label.
+The `ariaLabel` prop can be used to create a non-visible, but programmatically available accessible name for the paginator and will be used with the aria-describedby to provide additional context to assistive technology users.
 
 ##### Code Example:
 
-This example shows how to set up the optional `ariaLabel` prop in order to provide a meaningful context for the paginator:
+This example shows how to set up the optional `ariaLabel` prop in order to provide meaningful context for the paginator:
 
 <ControlledPaginatorNoPagesExample />
 
-#### Meaningful ARIA contexts after page nagivation
+#### Provide additional context to assistive technology users after page nagivation
 
-From the accessibility perspective, some meaningful contexts are very helpful after the user click on the paginator buttons because screen reader users would understand when they navigate the paginator.
+From the accessibility perspective, some additional context is required for users to understand what is happening and where they are when interacting with the paginator.
 
-In order to provide meaningful contexts, a visually hidden text is constructed and associated with the paginator container.
-This visually hidden string will be read out by the screen reader when the user navigates the paginator with paginator links. This visually hidden string would be empty so nothing would be read out in the initial status.
+In order to provide the additional context, a visually hidden text string is constructed and associated with the paginator container.
+This visually hidden string will be read out by the screen reader when the user navigates using the paginator links. The visually hidden string is empty so nothing is read out in the initial status.
 
 Depending on the optional `totalCount` prop set or not, the constructed visually hidden text varies:
 
 ##### Code Example:
 
-This example shows when the optional `totalCount` prop is set, the paginator would read out a string like "Page {pageNumber} selected. Page {pageNumber} of {pageNumberTotal}":
+Using the `totalCount` prop is best practice and should be used if at all possible. This example shows when the optional `totalCount` prop is set, the paginator would read out a string like "Page {pageNumber} selected. Page {pageNumber} of {pageNumberTotal}":
 
 <ProgressivePaginatorExample />
 
