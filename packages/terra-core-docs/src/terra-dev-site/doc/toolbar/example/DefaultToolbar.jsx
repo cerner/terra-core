@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Toolbar from 'terra-toolbar';
 import Button from 'terra-button';
-import { 
+import {
   IconAdd,
   IconAttachment,
   IconEdit,
