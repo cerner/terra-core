@@ -107,7 +107,6 @@ const ColumnHeaderCell = (props) => {
     maximumWidth,
     headerHeight,
     intl,
-    rowIndex,
     columnIndex,
     onResizeMouseDown,
   } = props;

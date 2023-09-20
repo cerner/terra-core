@@ -14,7 +14,6 @@ import { columnShape } from './proptypes/columnShape';
 import ColumnContext from './utils/ColumnContext';
 import validateRowHeaderIndex from './proptypes/validators';
 import styles from './Table.module.scss';
-import ERRORS from './utils/constants';
 
 const cx = classNames.bind(styles);
 
