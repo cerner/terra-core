@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * Fixed DnD issue for `terra-list` inside `terra-slide-panel`.
+  * Fixed position loss issue while dragging list item for `terra-list` inside `terra-slide-panel`.
 
 ## 4.61.0 - (September 19, 2023)
 
