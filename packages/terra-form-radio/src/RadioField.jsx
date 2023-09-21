@@ -6,6 +6,11 @@ import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import uniqueid from 'lodash.uniqueid';
 import VisualyHiddenText from 'terra-visually-hidden-text';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import {
+  VALUE_UP, VALUE_DOWN, VALUE_RIGHT, VALUE_LEFT,
+} from 'keycode-js';
+import { findFirstFocusableItem, findLastFocusableItem } from './_RadioUtil';
 import styles from './RadioField.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -109,13 +114,18 @@ const RadioField = (props) => {
     legendAttrs.className,
   ]);
 
+  const fieldSetId = customProps.id || `terra-radio-group-${uniqueid()}`;
   const legendAriaDescriptionId = `terra-radio-field-description-${uniqueid()}`;
   const helpAriaDescriptionId = help ? `terra-radio-field-description-help-${uniqueid()}` : '';
   const errorAriaDescriptionId = error ? `terra-radio-field-description-error-${uniqueid()}` : '';
   const ariaDescriptionIds = `${legendAriaDescriptionId} ${errorAriaDescriptionId} ${helpAriaDescriptionId}`;
 
+  const isSafari = navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1;
+  const isEdge = navigator.userAgent.indexOf('Edg') !== -1;
+  const LegendGroup = (isSafari || isEdge) ? 'div' : 'legend';
+
   const legendGroup = (
-    <legend id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
+    <LegendGroup id={legendAriaDescriptionId} className={cx(['legend-group', { 'legend-group-hidden': isLegendHidden }])}>
       <div {...legendAttrs} className={legendClassNames}>
         {isInvalid && <span className={cx('error-icon')} />}
         {required && (isInvalid || !hideRequired) && (
@@ -132,13 +142,55 @@ const RadioField = (props) => {
           )}
         {!isInvalid && <span className={cx('error-icon-hidden')} />}
       </div>
-    </legend>
+    </LegendGroup>
   );
+
+  /*
+   * Note: Cyclic Navigation of Radio button is not supported in Safari browser hence adding keydown event handler to support cyclic navigation.
+   * this handler will use native mouse event to set focus back to first radio button when we press down or right arrow key on last radio button and vise versa.
+   */
+  const handleKeyDown = (event, radio) => {
+    const radioGroup = document.getElementById(fieldSetId);
+    if (radioGroup) {
+      const radioItems = radioGroup.querySelectorAll('[type=radio]');
+      const itemIndex = Array.from(radioItems).indexOf(event.currentTarget);
+      const onClick = new MouseEvent('click', { bubbles: true, cancelable: false });
+      const firstItemIndex = findFirstFocusableItem(radioItems);
+      const lastItemIndex = findLastFocusableItem(radioItems);
+
+      if (event.nativeEvent.key === VALUE_DOWN || event.nativeEvent.key === VALUE_RIGHT) {
+        if (itemIndex === lastItemIndex) {
+          radioItems[firstItemIndex].dispatchEvent(onClick);
+        }
+      } else if (event.nativeEvent.key === VALUE_UP || event.nativeEvent.key === VALUE_LEFT) {
+        if (itemIndex === firstItemIndex) {
+          radioItems[lastItemIndex].dispatchEvent(onClick);
+        }
+      }
+    }
+    if (radio && radio.props.onKeyDown) {
+      radio.props.onKeyDown();
+    }
+  };
+
+  /*
+   * Focus gets lost when radio button's are selected via mouse in Safari browser.
+   * This set focus back on the radio button on mouse click
+   */
+  const handleClick = (event, radio) => {
+    event?.currentTarget?.focus();
+    if (radio && radio.props.onClick) {
+      radio.props.onClick();
+    }
+  };
 
   const content = React.Children.map(children, (child) => {
     if (child && child.type.isRadio) {
+      const eventHandlersForSafari = (isSafari) ? { onKeyDown: (event) => handleKeyDown(event, child), onClick: (event) => handleClick(event, child) } : undefined;
       return React.cloneElement(child, {
-        inputAttrs: { ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds },
+        inputAttrs: {
+          ...child.props.inputAttrs, 'aria-describedby': ariaDescriptionIds, ...eventHandlersForSafari,
+        },
       });
     }
 
@@ -146,7 +198,7 @@ const RadioField = (props) => {
   });
 
   return (
-    <fieldset {...customProps} required={required} className={radioFieldClasses}>
+    <fieldset id={fieldSetId} {...customProps} required={required} className={radioFieldClasses}>
       {legendGroup}
       {content}
       {isInvalid && error && <div id={errorAriaDescriptionId} className={cx('error-text')}>{error}</div>}

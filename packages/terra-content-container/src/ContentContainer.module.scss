@@ -1,9 +1,12 @@
+@import './orion-fusion-theme/ContentContainer.module';
+@import './clinical-lowlight-theme/ContentContainer.module';
+
 /* stylelint-disable selector-max-compound-selectors */
 :local {
   .content-container-static {
     display: flex;
     flex-direction: column;
-    
+
     // reset scroll styles to standard div defaults to handle stack/block style layout.
     // IE10 does not properly support 'initial', so we need to be explicit.
     > .main > .normalizer {
@@ -13,7 +16,7 @@
       width: auto;
     }
   }
-  
+
   .content-container-fill {
     display: flex;
     flex-direction: column;
@@ -38,5 +41,21 @@
       }
     }
   }
+
+  .content-container-focused-padding {
+    padding-left: 0.7142857143rem;
+    padding-right: 0.7142857143rem;
+  }
+
+  .dark:focus {
+    outline: 2px dashed var(--terra-content-container-dark-focus-outline, #c8cacb);
+    outline-offset: -2px;
+  }
+
+  .light:focus {
+    outline: 2px dashed var(--terra-content-container-light-focus-outline, #000);
+    outline-offset: -2px;
+  }
+
 }
 /* stylelint-enable */

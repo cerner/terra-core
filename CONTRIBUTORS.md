@@ -90,6 +90,12 @@ Cerner Corporation
 - Manjuraghavendra Sathrasala [@manjusr]
 - Saurabh Khare [@saurabhkhare86]
 - Chetan Sharma [@cschetan77]
+- Razvan Luca [@razvanluca]
+- Andrew Tran [@trandrew1023]
+- Steven Mason [@smason0]
+- Alla Doroshkevych [@adoroshk]
+- Quan Le [@leducquan]
+- Yixuan Chen [@chenyixuan625]
 
 Community
 
@@ -207,3 +213,9 @@ Community
 [@manjusr]: https://github.com/manjusr
 [@saurabhkhare86]: https://github.com/SaurabhKhare86
 [@vohaha]: https://github.com/vohaha
+[@razvanluca]: https://github.com/razvanluca
+[@trandrew1023]: https://github.com/trandrew1023
+[@smason0]: https://github.com/smason0
+[@adoroshk]: https://github.com/adoroshk
+[@leducquan]: https://github.com/leducquan
+[@chenyixuan625]: https://github.com/chenyixuan625

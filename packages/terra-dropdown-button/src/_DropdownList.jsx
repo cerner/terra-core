@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import * as KeyCode from 'keycode-js';
+import { injectIntl } from 'react-intl';
 import Util from './_DropdownListUtil';
 import styles from './_DropdownList.module.scss';
 
@@ -26,6 +27,16 @@ const propTypes = {
    * Ref callback for the dropdown list DOM element.
    */
   refCallback: PropTypes.func,
+  /**
+   * Callback for the dropdown list selected option.
+   */
+  getSelectedOptionText: PropTypes.func,
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
+
 };
 
 class DropdownList extends React.Component {
@@ -44,12 +55,21 @@ class DropdownList extends React.Component {
     this.searchString = '';
     this.pressed = false;
     this.listRef = null;
+    this.expanded = `${this.props.intl.formatMessage({ id: 'Terra.dropdownButton.expanded' })}, `;
+  }
+
+  componentDidMount() {
+    // Set focus to first focusable menu item, prevents focus from being set on button while navigating through dropdown items using keyboard in safari with Voice Over.
+    const items = this.listRef && this.listRef.querySelectorAll('[data-terra-dropdown-list-item]');
+    if (items && items.length) {
+      items[0].focus();
+    }
   }
 
   handleKeyDown(event) {
     const { keyCode } = event;
     const { focused } = this.state;
-    const index = Util.findIndexByValue(this, event.target.innerText);
+    const index = Util.findIndexByValue(this, event.target.textContent);
     if (keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) {
       /*
         Prevent the callback from being called repeatedly if key is held down.
@@ -60,10 +80,12 @@ class DropdownList extends React.Component {
       if (!this.pressed) {
         this.pressed = true;
         this.setState({ active: focused });
+        this.props.getSelectedOptionText(event.target.innerText);
       }
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_DOWN) {
       if (!this.pressed) {
+        this.expanded = '';
         if (index === Util.getChildArray(this).length - 1) {
           this.changeFocusState(0);
         } else {
@@ -73,6 +95,7 @@ class DropdownList extends React.Component {
       event.preventDefault();
     } else if (keyCode === KeyCode.KEY_UP) {
       if (!this.pressed) {
+        this.expanded = '';
         if (index === 0) {
           this.changeFocusState(Util.getChildArray(this).length - 1);
         } else {
@@ -155,11 +178,27 @@ class DropdownList extends React.Component {
    * @return {Array<React.ReactNode>} the array of children
    */
   cloneChildren() {
-    return React.Children.map(this.props.children, (child, index) => React.cloneElement(child, {
-      isActive: index === this.state.active,
-      requestClose: this.props.requestClose,
-      'data-terra-dropdown-list-item': true,
-    }));
+    return React.Children.map(this.props.children, (child, index) => {
+      const currentItemLabel = this.props.children[index]?.props.label;
+      const currentIndex = index + 1;
+      const totalItems = this.props.children.length;
+      const activeOption = this.props.intl.formatMessage({ id: 'Terra.dropdownButton.activeOption' }, { currentItemLabel, currentIndex, totalItems });
+      let ariaLabel = null;
+      if (totalItems) {
+        if (Util.isMac()) {
+          ariaLabel = currentIndex === 1 ? `${this.expanded}${activeOption}` : activeOption;
+        } else {
+          ariaLabel = currentIndex === 1 ? `${this.expanded}${currentItemLabel}` : currentItemLabel;
+        }
+      }
+
+      return React.cloneElement(child, {
+        isActive: index === this.state.active,
+        requestClose: this.props.requestClose,
+        'data-terra-dropdown-list-item': true,
+        'aria-label': ariaLabel,
+      });
+    });
   }
 
   /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
@@ -196,4 +235,4 @@ class DropdownList extends React.Component {
 DropdownList.propTypes = propTypes;
 DropdownList.contextType = ThemeContext;
 
-export default DropdownList;
+export default injectIntl(DropdownList);

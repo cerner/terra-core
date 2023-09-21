@@ -5,13 +5,17 @@ import ArrangeAlignFill from './example/ArrangeAlignFill?dev-site-example';
 import ArrangeAlignFitEnd from './example/ArrangeAlignFitEnd?dev-site-example';
 import ArrangeAlignFitStart from './example/ArrangeAlignFitStart?dev-site-example';
 
-import ArrangePropsTable from 'terra-arrange/src/Arrange?dev-site-props-table';
+import ArrangePropsTable from 'terra-arrange/lib/Arrange?dev-site-props-table';
 
 <Badge />
 
 # Terra Arrange
 
 The arrange component provides content containers with a fit (start and/or end region) and fill (middle region).
+
+* Terra arrange supports altering multiple CSS attributes without loss of function or information.
+* Terra arrange supports resizing to 400%.
+* Terra arrange supports reflow when the viewport is resized to 320x256 px without loss of information or function.
 
 ## Getting Started
 
@@ -37,6 +41,9 @@ This component requires the following peer dependencies be installed in your app
 ```jsx
 import Arrange from 'terra-arrange';
 ```
+
+## Accessibility
+For further guidance, please view the full [Accessibility Guide](./accessibility-guide).
 
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)

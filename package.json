@@ -4,12 +4,16 @@
   "version": "0.1.0",
   "description": "terra-core",
   "engines": {
-    "node": "^10.0.0 || ^12.0.0 || ^14.0.0"
+    "node": "10 || 12 || 14",
+    "npm": "9"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-core.git"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "keywords": [
     "Cerner",
     "Terra",
@@ -38,7 +42,6 @@
     }
   },
   "scripts": {
-    "bootstrap:hoist": "lerna bootstrap --hoist --nohoist=one-cerner-style-icons",
     "clean": "npm run clean:lib && npm run clean:root",
     "clean:install": "npm run clean && time npm install",
     "clean:lib": "rm -rf packages/**/lib",
@@ -46,7 +49,7 @@
     "clean:obsolete-snapshots": "npm test -- -u",
     "create-props-markdown": "node scripts/props-table-gen/generatePropsTables.js",
     "compile": "npm run clean:lib && npm run compile:build",
-    "compile:build": "lerna run compile --parallel",
+    "compile:build": "lerna run compile",
     "compile:prod": "rm -rf ./build; webpack --mode=production",
     "compile:lowlight": "rm -rf ./build; THEME=clinical-lowlight-theme webpack --mode=production",
     "compile:fusion": "rm -rf ./build; THEME=orion-fusion-theme webpack --mode=production",
@@ -59,12 +62,12 @@
     "jest:coverage": "jest --coverage",
     "link-parent-bin": "link-parent-bin",
     "lint": "npm run lint:js && npm run lint:scss && npm run lint:package-json",
-    "lint:js": "eslint --ext .js,.jsx .",
-    "lint:js-fix": "eslint --ext .js,.jsx . --fix",
+    "lint:js": "eslint --ext .js,.jsx . --max-warnings 0",
+    "lint:js:fix": "eslint --ext .js,.jsx . --fix",
     "lint:package-json": "terra package-json-lint",
     "lint:scss": "stylelint 'packages/**/src/**/*.scss' --syntax scss",
     "prepare-for-release": "terra prepare-for-release",
-    "postinstall": "npm run bootstrap:hoist && npm run compile",
+    "postinstall": "npm run compile",
     "start": "webpack serve",
     "start:prod": "webpack serve --env disableHotReloading --mode=production",
     "start-static": "npm run compile:prod && terra express-server --site ./build",
@@ -92,8 +95,8 @@
     "@cerner/stylelint-config-terra": "^4.0.0",
     "@cerner/terra-aggregate-translations": "^2.0.1",
     "@cerner/terra-cli": "^1.6.0",
-    "@cerner/terra-dev-site": "^7.0.0",
-    "@cerner/terra-functional-testing": "^3.0.0",
+    "@cerner/terra-dev-site": "^7.9.0",
+    "@cerner/terra-functional-testing": "^4.0.0",
     "@cerner/terra-open-source-scripts": "^1.0.1",
     "@cerner/webpack-config-terra": "^3.0.0",
     "core-js": "^3.1.3",

@@ -2,6 +2,29 @@
 
 ## Unreleased
 
+## 4.61.0 - (September 19, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.60.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+* Added
+  * Added drag and drop support for list items.
+
+## 4.59.0 - (August 1, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.58.0 - (June 14, 2023)
+
+* Fixed
+  * Fixed build issue `aria-description is not supported by the role list`.
+
 ## 4.57.0 - (April 27, 2023)
 
 * Changed

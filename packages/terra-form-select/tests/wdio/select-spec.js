@@ -120,24 +120,6 @@ Terra.describeViewports('Select', ['tiny'], () => {
       after(() => $('#root').click());
     });
 
-    describe('default should not open dropdown by enter key press', () => {
-      it('should tab focus to the select', () => {
-        browser.keys('Tab');
-      });
-
-      it('default should not open the dropdown by enter key press', () => {
-        browser.keys('Enter');
-      });
-
-      it('default select should be focused', () => {
-        expect($('[data-terra-select-combobox]')).toBeFocused();
-      });
-
-      it('should display closed dropdown', () => {
-        Terra.validates.element('closed dropdown after enter', { selector: '#root' });
-      });
-    });
-
     describe('default should close when clicking off of the select', () => {
       it('default should open the dropdown by clicking the select', () => {
         $('[data-terra-select]').click();
@@ -323,6 +305,24 @@ Terra.describeViewports('Select', ['tiny'], () => {
 
       it('should display select with selected option', () => {
         Terra.validates.element('selected option after pressing enter', { selector: '#root' });
+      });
+    });
+
+    describe('default should select an option by pressing space', () => {
+      it('default should open the dropdown by clicking the toggle', () => {
+        $('[data-terra-select]').click();
+      });
+
+      it('default should select the first option by pressing space', () => {
+        browser.keys('Space');
+      });
+
+      it('select should be focused', () => {
+        expect($('[data-terra-select-combobox]')).toBeFocused();
+      });
+
+      it('should display select with selected option', () => {
+        Terra.validates.element('selected option after pressing space', { selector: '#root' });
       });
     });
 
@@ -2376,6 +2376,8 @@ Terra.describeViewports('Select', ['tiny'], () => {
       browser.url('/raw/tests/cerner-terra-core-docs/form-select/invalid-default');
 
       Terra.validates.element('invalid default');
+      browser.keys('Tab');
+      Terra.validates.element('invalid default focused');
     });
   });
 

@@ -1,0 +1,26 @@
+:local {
+  .toggle-div-style {
+    margin-top: 20px;
+    text-align: center;
+
+    button {
+      margin: 5px;
+    }
+
+    :focus {
+      outline: 2px dashed #000;
+      outline-offset: 2px;
+    }
+  }
+
+  .times-wrapper {
+    display: inline-block;
+  }
+
+  .toggle-button-content {
+    a:focus {
+      outline: 2px dashed #000;
+      outline-offset: 2px;
+    }
+  }
+}

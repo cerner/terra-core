@@ -2,6 +2,41 @@
 
 ## Unreleased
 
+## 4.42.0 - (September 19, 2023)
+
+* Changed
+  * Updated prop description for `isLabelHidden` prop.
+
+## 4.41.0 - (August 25, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.40.0 - (August 23, 2023)
+
+* Fixed
+  * Fixed issue of `onChange` not triggered on first and last item of radio field while keyboard navigation.
+
+## 4.39.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.38.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.37.0 - (August 8, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.36.0 - (June 14, 2023)
+
+* Fixed
+  * Fixed issue with VO announcing group and legend multiple times.
+
 ## 4.35.0 - (April 7, 2023)
 
 * Fixed

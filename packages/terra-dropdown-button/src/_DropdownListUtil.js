@@ -81,6 +81,12 @@ class DropdownListUtil {
     const previous = Math.max(index - 1, 0);
     return Math.min(previous, options.length - 1);
   }
+
+  /**
+   * Util to determine if the user agent indicates that it is macOS
+   * @return {boolean}
+   */
+   static isMac = () => navigator.userAgent.indexOf('Mac') !== -1 && navigator.userAgent.indexOf('Win') === -1;
 }
 
 export default DropdownListUtil;

@@ -2,6 +2,33 @@
 
 ## Unreleased
 
+## 3.63.1 - (August 18, 2023)
+
+* Fixed
+  * Fixed bug where banner items were not presented properly in IE 11 (introduced with v3.62.0).
+
+## 3.63.0 - (June 28, 2023)
+
+* Fixed
+  * Fixed improper HTML structure and resolved console warnings.
+
+* Added
+  * Added missing translations.
+
+## 3.62.0 - (June 14, 2023)
+
+* Changed
+  * Updated large banner to allow screen readers to follow the meaningful sequence of content, now consistent with the small banner.
+
+## 3.61.0 - (May 9, 2023)
+
+* Added
+  * Added optional `personNameHeadingLevel` prop to set the person name header level with default of 2.
+  * Added optional `identifiersLongForm` prop to add well defined descriptions for shortened/abbreviated identifiers.
+
+* Changed
+  * Improved representation of patient nickname for screen readers by appending parentheses through a template string instead of CSS.
+
 ## 3.60.0 - (February 15, 2023)
 
 * Changed

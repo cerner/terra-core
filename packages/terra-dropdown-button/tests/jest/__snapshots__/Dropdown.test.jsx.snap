@@ -52,20 +52,19 @@ exports[`Dropdown renders a default dropdown 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }
       paused={false}
     >
-      <DropdownList
+      <InjectIntl(DropdownList)
         requestClose={[Function]}
       >
         <Item
           label="1st Option"
           onSelect={[Function]}
         />
-      </DropdownList>
+      </InjectIntl(DropdownList)>
     </FocusTrap>
   </OnClickOutside(HookshotContent)>
 </Hookshot>
@@ -123,20 +122,19 @@ exports[`Dropdown renders a dropdown with a bounding ref 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }
       paused={false}
     >
-      <DropdownList
+      <InjectIntl(DropdownList)
         requestClose={[Function]}
       >
         <Item
           label="1st Option"
           onSelect={[Function]}
         />
-      </DropdownList>
+      </InjectIntl(DropdownList)>
     </FocusTrap>
   </OnClickOutside(HookshotContent)>
 </Hookshot>
@@ -194,13 +192,12 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }
       paused={false}
     >
-      <DropdownList
+      <InjectIntl(DropdownList)
         requestClose={[Function]}
         width="470px"
       >
@@ -208,7 +205,7 @@ exports[`Dropdown renders a dropdown with a set width 1`] = `
           label="1st Option"
           onSelect={[Function]}
         />
-      </DropdownList>
+      </InjectIntl(DropdownList)>
     </FocusTrap>
   </OnClickOutside(HookshotContent)>
 </Hookshot>
@@ -266,13 +263,12 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }
       paused={false}
     >
-      <DropdownList
+      <InjectIntl(DropdownList)
         requestClose={[Function]}
       >
         <Item
@@ -287,7 +283,7 @@ exports[`Dropdown renders a dropdown with multiple children 1`] = `
           label="3rd Option"
           onSelect={[Function]}
         />
-      </DropdownList>
+      </InjectIntl(DropdownList)>
     </FocusTrap>
   </OnClickOutside(HookshotContent)>
 </Hookshot>
@@ -345,20 +341,19 @@ exports[`Dropdown renders an open dropdown 1`] = `
       focusTrapOptions={
         Object {
           "clickOutsideDeactivates": true,
-          "initialFocus": undefined,
           "returnFocusOnDeactivate": true,
         }
       }
       paused={false}
     >
-      <DropdownList
+      <InjectIntl(DropdownList)
         requestClose={[Function]}
       >
         <Item
           label="1st Option"
           onSelect={[Function]}
         />
-      </DropdownList>
+      </InjectIntl(DropdownList)>
     </FocusTrap>
   </OnClickOutside(HookshotContent)>
 </Hookshot>

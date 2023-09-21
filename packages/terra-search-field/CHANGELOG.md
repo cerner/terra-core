@@ -2,6 +2,54 @@
 
 ## Unreleased
 
+## 3.91.0 - (September 19, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.90.0 - (August 25, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.89.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.88.0 - (August 18, 2023)
+
+* Added
+  * Add optional `groupName` prop to group Search Field components.
+  * Add optional `isLabelVisible` prop to add Label to Search Field.
+
+* Changed
+  * Updated default search delay time to 2500ms
+
+## 3.87.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.86.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.85.0 - (August 8, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.84.0 - (August 1, 2023)
+
+  * Updated focus indicators to be a standard dashed line.
+
+## 3.83.0 - (June 14, 2023)
+
+* Fixed
+  * Fixed bug where search was being called twice when pressing Enter key.
+
 ## 3.82.0 - (April 27, 2023)
 
 * Changed

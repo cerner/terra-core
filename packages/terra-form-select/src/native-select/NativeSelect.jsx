@@ -1,6 +1,7 @@
 import React, {
   useState,
   useRef,
+  useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -119,9 +120,7 @@ const createPlaceholder = (isFilterStyle, intl) => {
   }
 
   return (
-    <option
-      value={defaultPlaceholderValue}
-    >
+    <option value={defaultPlaceholderValue}>
       {intl.formatMessage({ id: 'Terra.form.select.defaultDisplay' })}
     </option>
   );
@@ -169,9 +168,16 @@ const NativeSelect = ({
   ...customProps
 }) => {
   const [uncontrolledValue, setUncontrolledValue] = useState(!isValuePresent(value) ? defaultValue || getFirstValue(options, isFilterStyle) : undefined);
-  const refIsControlled = useRef(isValuePresent(value));
   const refSelect = useRef();
   const theme = React.useContext(ThemeContext);
+  const refIsControlled = isValuePresent(value);
+
+  useEffect(() => {
+    // setting the uncontrolledValue to empty string whenever the value prop changes
+    if (value) {
+      setUncontrolledValue('');
+    }
+  }, [value]);
 
   // The native select's presentation is masked to allow for better customization of the inputs display.
   // In order to facilitate this, the mouseDown, blur, and focus events need to be mapped mapped to the mask.
@@ -196,7 +202,7 @@ const NativeSelect = ({
     }
   };
   const handleOnChange = event => {
-    if (!refIsControlled.current) {
+    if (!refIsControlled) {
       setUncontrolledValue(event.currentTarget.value);
     }
     if (onChange) {
@@ -204,16 +210,29 @@ const NativeSelect = ({
     }
   };
 
-  let currentValue = refIsControlled.current ? value : uncontrolledValue;
+  let currentValue = refIsControlled ? value : uncontrolledValue;
   let currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
   if (!currentDisplay) {
     currentValue = getFirstValue(options, isFilterStyle);
     currentDisplay = getDisplay(currentValue, options, isFilterStyle, intl);
   }
+  const groupHeading = options.filter(groupValue => (groupValue.options)).find(element => element.options.find(childElement => childElement.value === currentValue));
 
+  const selectedText = intl.formatMessage({ id: 'Terra.form.select.selected' });
+
+  let displayText;
+  if (currentValue) {
+    if (groupHeading) {
+      displayText = intl.formatMessage({ id: 'Terra.form.select.optGroup' }, { text: `${groupHeading.display}, ${ariaLabel}, ${selectedText}` });
+    } else {
+      displayText = `${ariaLabel}, ${selectedText}`;
+    }
+  } else {
+    displayText = ariaLabel;
+  }
   const selectAttrs = {
     'aria-describedby': ariaDescribedBy,
-    'aria-label': ariaLabel,
+    'aria-label': displayText,
     id,
     disabled,
     'aria-invalid': isInvalid || undefined,

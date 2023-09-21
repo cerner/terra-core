@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+## 3.53.0 - (August 23, 2023)
+
+* Removed
+  * Removed custom styles for `terra-arrange` to avoid issues on other components.
+
+## 3.52.0 - (August 1, 2023)
+
+* Changed
+  * Updated Arrange to use `span` elements instead of `div`.
+
+* Fixed
+  * Fixed reflow issue when zoomed to 400% and the viewport is resized to 320x256 px.
+
 ## 3.51.0 - (February 15, 2023)
 
 * Changed

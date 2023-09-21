@@ -1,8 +1,12 @@
 import React from 'react';
-import Star from 'terra-icon/lib/icon/IconFeaturedOutlineYellow';
-import EmptyStar from 'terra-icon/lib/icon/IconFeaturedOutline';
-import VisuallyHiddenText from 'terra-visually-hidden-text';
+
 import Card from 'terra-card';
+import {
+  IconFeaturedOutlineYellow as Star,
+  IconFeaturedOutline as EmptyStar,
+} from 'terra-icon';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+
 import { width, height } from './common';
 
 const A11yGroupInteractive = () => (

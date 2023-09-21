@@ -1,4 +1,5 @@
 import { Badge } from 'terra-form-input/package.json?dev-site-package';
+import { Notice } from '@cerner/terra-docs';
 
 import BlankExample from './common/BlankExample?dev-site-example';
 import NumberInputExample from './common/NumberInputExample?dev-site-example';
@@ -16,7 +17,7 @@ import UncontrolledDefaultIncompleteExample from './example/uncontrolled/Default
 import UncontrolledInvalidWithIncompleteExample from './example/uncontrolled/InvalidWithIncompleteExample?dev-site-example';
 import UncontrolledDisabledInvalidExample from './example/uncontrolled/DisabledInvalidExample?dev-site-example';
 
-import FormInputPropsTable from 'terra-form-input/src/Input?dev-site-props-table';
+import FormInputPropsTable from 'terra-form-input/lib/Input?dev-site-props-table';
 
 <Badge />
 
@@ -25,6 +26,18 @@ import FormInputPropsTable from 'terra-form-input/src/Input?dev-site-props-table
 Generic input which represents an HTML input element directly.
 
 **Note:** To follow [UX Best Practices](https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research), this component does not allow `placeholder`.
+
+<Notice variant="caution" ariaLevel="3">
+
+**Accessibility Bug:** Due to a bug in Chromium-based browsers (Chrome, Microsoft Edge, etc.), VoiceOver will read `<input type="number" />` incorrectly when incrementing or decrementing the value with keyboard shortcuts. Terra Form Input utilizes `<input type="number" />` when the `type` prop is set to "number" and will also have this screenreader issue. A recommended solution would be to instead use Terra Form Input with the `type` prop set to "text" and the added props of `inputmode` with a value of "numeric" and `pattern` with a regex expression that matches numeric values. For example:
+
+ ```html
+<Input type="text" inputmode="numeric" pattern="\d*" />
+```
+
+However, this will not have the built-in validity checks or keyboard commands that Terra Form Input with `type` prop equal to "number" provides. Consumers are responsible for adding this functionality.
+
+</Notice>
 
 ## Getting Started
 

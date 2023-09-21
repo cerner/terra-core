@@ -53,17 +53,13 @@ const Item = ({
       }}
       tabIndex="0"
       role="menuitem"
+      className={cx(
+        'item',
+        { active: isActive },
+        theme.className,
+      )}
     >
-      <div
-        role="none"
-        className={cx(
-          'item',
-          { active: isActive },
-          theme.className,
-        )}
-      >
-        {label}
-      </div>
+      {label}
     </li>
   );
 };

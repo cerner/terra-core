@@ -12,48 +12,57 @@ exports[`correctly applies the theme context className 1`] = `
     <section
       className="demographics-banner orion-fusion-theme"
     >
-      <h1
+      <h2
         className="person-name"
       >
         <span />
-      </h1>
-      <div
+      </h2>
+      <dl
         className="person-details"
       >
         <DemographicsBannerValue
           key="age"
         >
-          <span
+          <div
             className="value"
           >
-            <span
+            <dt
+              className="value-term"
+            />
+            <dd
               className="value-text"
             />
-          </span>
+          </div>
         </DemographicsBannerValue>
         <DemographicsBannerValue
           key="gender"
         >
-          <span
+          <div
             className="value"
           >
-            <span
+            <dt
+              className="value-term"
+            />
+            <dd
               className="value-text"
             />
-          </span>
+          </div>
         </DemographicsBannerValue>
         <DemographicsBannerValue
           key="dob"
         >
-          <span
+          <div
             className="value"
           >
-            <span
+            <dt
+              className="value-term"
+            />
+            <dd
               className="value-text"
             />
-          </span>
+          </div>
         </DemographicsBannerValue>
-      </div>
+      </dl>
       <div
         className="application-content"
       />
@@ -77,7 +86,7 @@ exports[`renders small banner that contains all valid information 1`] = `
   }
   className="demographics-banner"
 >
-  <h1
+  <h2
     className="person-name"
   >
     <span>
@@ -85,11 +94,11 @@ exports[`renders small banner that contains all valid information 1`] = `
       <span
         className="preferred-first-name"
       >
-        John
+        (John)
       </span>
     </span>
-  </h1>
-  <div
+  </h2>
+  <dl
     className="person-details"
   >
     <DemographicsBannerValue
@@ -115,7 +124,7 @@ exports[`renders small banner that contains all valid information 1`] = `
       label="REA"
       value="3JSDA"
     />
-  </div>
+  </dl>
   <div
     className="application-content"
   >
@@ -125,5 +134,40 @@ exports[`renders small banner that contains all valid information 1`] = `
       5%
     </span>
   </div>
+</section>
+`;
+
+exports[`renders the provided person name header level 1`] = `
+<section
+  className="demographics-banner"
+>
+  <h3
+    className="person-name"
+  >
+    <span>
+      Johnathon Doe
+      <span
+        className="preferred-first-name"
+      >
+        (John)
+      </span>
+    </span>
+  </h3>
+  <dl
+    className="person-details"
+  >
+    <DemographicsBannerValue
+      key="age"
+    />
+    <DemographicsBannerValue
+      key="gender"
+    />
+    <DemographicsBannerValue
+      key="dob"
+    />
+  </dl>
+  <div
+    className="application-content"
+  />
 </section>
 `;

@@ -1,496 +1,181 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert of type advisory with text content should render an Alert component of type advisory 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  type="advisory"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    type="advisory"
+  <div
+    className="alert-base advisory wide"
+    role="status"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base advisory narrow"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
         <div
-          className="body body-std"
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
         >
-          <div
-            className="section"
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <strong
-              className="title"
-            >
-              Terra.alert.advisory
-            </strong>
-            This is an advisory alert.
-          </div>
+            Terra.alert.advisory
+          </strong>
+          This is an advisory alert.
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type alert with text content should render an Alert component of type alert 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  type="alert"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    type="alert"
+  <div
+    className="alert-base alert wide"
+    role="alert"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base alert narrow"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <div
-          className="body body-std"
+        <span
+          className="icon"
         >
-          <span
-            className="icon"
+          <IconAlert
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <IconAlert
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="IconAlert"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon IconAlert"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
-                    fill="#E50000"
-                  />
-                  <path
-                    d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconAlert>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.alert
-            </strong>
-            This is a test
-          </div>
+            Terra.alert.alert
+          </strong>
+          This is a test
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type custom with custom title and text content should render an Alert component of type custom 1`] = `
-<InjectIntl(Alert)
-  customColorClass="terra-alert-custom-orange-color"
-  customIcon={
-    <IconHelp
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  }
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  title="Help!"
-  type="custom"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    customColorClass="terra-alert-custom-orange-color"
-    customIcon={
-      <IconHelp
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    }
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    title="Help!"
-    type="custom"
+  <div
+    className="alert-base custom wide terra-alert-custom-orange-color"
+    role="status"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base custom narrow terra-alert-custom-orange-color"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <div
-          className="body body-std"
+        <span
+          className="icon"
         >
-          <span
-            className="icon"
+          <IconHelp
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section section-custom"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <IconHelp
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="IconHelp"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon IconHelp"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z"
-                    fill="#007CC3"
-                  />
-                  <path
-                    d="M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconHelp>
-          </span>
-          <div
-            className="section section-custom"
-          >
-            <strong
-              className="title"
-            >
-              Help!
-            </strong>
-            This is a custom alert.
-          </div>
+            Help!
+          </strong>
+          This is a custom alert.
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type error with text content should render an Alert component of type error 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  type="error"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    type="error"
+  <div
+    className="alert-base error wide"
+    role="status"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base error narrow"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <div
-          className="body body-std"
+        <span
+          className="icon"
         >
-          <span
-            className="icon"
+          <IconError
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <IconError
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="IconError"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon IconError"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
-                    fill="#E50000"
-                  />
-                  <path
-                    d="M7 21.5h34v5H7v-5z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconError>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.error
-            </strong>
-            This is an error.
-          </div>
+            Terra.alert.error
+          </strong>
+          This is an error.
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type info with custom title and HTML content should render an Alert component of type info with custom title and HTML content 1`] = `
-<InjectIntl(Alert)
+<Alert
+  customColorClass="custom-default-color"
+  disableAlertActionFocus={false}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -521,924 +206,295 @@ exports[`Alert of type info with custom title and HTML content should render an 
   title="Gettysburg Address"
   type="info"
 >
-  <Alert
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    title="Gettysburg Address"
-    type="info"
-  >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
-    >
-      <div
-        className="alert-base info narrow"
-        role="alert"
-      >
-        <div
-          className="body body-std"
-        >
-          <span
-            className="icon"
-          >
-            <IconInformation
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="IconInformation"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon IconInformation"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
-                    fill="#007CC3"
-                  />
-                  <path
-                    d="M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconInformation>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Gettysburg Address
-            </strong>
-            <span>
-              Four score and seven years ago . . .
-            </span>
-          </div>
-        </div>
-      </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+  <span>
+    Four score and seven years ago . . .
+  </span>
+</Alert>
 `;
 
 exports[`Alert of type info with text content should render an Alert component of type info 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  type="info"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    type="info"
+  <div
+    className="alert-base info wide"
+    role="status"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base info narrow"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <div
-          className="body body-std"
+        <span
+          className="icon"
         >
-          <span
-            className="icon"
+          <IconInformation
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <IconInformation
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="IconInformation"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon IconInformation"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
-                    fill="#007CC3"
-                  />
-                  <path
-                    d="M24.1 32.7c.7-1.8 6.3-11 2.4-13.5-2.2-1.4-5.2-.5-7.6 1.2l-.2 1.6c1.4-.5 2.8-.5 3.2.7 1 2.9-2.5 8-3.5 10.7-2.6 7.2 3.7 8.1 8.1 5.1l.2-1.7c-2.3.6-4-.3-2.6-4.1zM26.5 8c1.9 0 3.5 1.6 3.5 3.5S28.4 15 26.5 15 23 13.4 23 11.5 24.6 8 26.5 8z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconInformation>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.info
-            </strong>
-            This is an information alert.
-          </div>
+            Terra.alert.info
+          </strong>
+          This is an information alert.
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type success with an action button text content should render an Alert component of type success with an action button 1`] = `
-<InjectIntl(Alert)
-  action={
-    <Button
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isIconOnly={false}
-      isReversed={false}
-      onClick={[Function]}
-      text="Action"
-      type="button"
-      variant="emphasis"
-    />
-  }
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  type="success"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    action={
+  <div
+    className="alert-base success wide"
+    role="status"
+  >
+    <div
+      className="body body-std"
+    >
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
+      >
+        <span
+          className="icon"
+        >
+          <IconSuccess
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
+          >
+            Terra.alert.success
+          </strong>
+          This is a success alert.
+        </div>
+      </div>
+    </div>
+    <div
+      className="actions"
+    >
       <Button
         isBlock={false}
         isCompact={false}
         isDisabled={false}
         isIconOnly={false}
         isReversed={false}
-        onClick={[Function]}
+        onClick={[MockFunction]}
         text="Action"
         type="button"
         variant="emphasis"
       />
-    }
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    type="success"
-  >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
-    >
-      <div
-        className="alert-base success narrow"
-        role="alert"
-      >
-        <div
-          className="body body-narrow"
-        >
-          <span
-            className="icon"
-          >
-            <IconSuccess
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="IconSuccess"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon IconSuccess"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
-                    fill="#78C346"
-                  />
-                  <path
-                    d="M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconSuccess>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.success
-            </strong>
-            This is a success alert.
-          </div>
-        </div>
-        <div
-          className="actions"
-        >
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
-            onClick={[Function]}
-            text="Action"
-            type="button"
-            variant="emphasis"
-          >
-            <button
-              aria-disabled={false}
-              className="button emphasis"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              type="button"
-            >
-              <span
-                className="button-label text-only"
-              >
-                <span
-                  className=""
-                >
-                  Action
-                </span>
-              </span>
-            </button>
-          </Button>
-        </div>
-      </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type success with text content should render an Alert component of type success 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  type="success"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    type="success"
+  <div
+    className="alert-base success wide"
+    role="status"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base success narrow"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <div
-          className="body body-std"
+        <span
+          className="icon"
         >
-          <span
-            className="icon"
+          <IconSuccess
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <IconSuccess
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="IconSuccess"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon IconSuccess"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
-                    fill="#78C346"
-                  />
-                  <path
-                    d="M20 36.4L6.7 23.1l3.6-3.6 9.7 9.9 17.7-17.9 3.6 3.6L20 36.4z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconSuccess>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.success
-            </strong>
-            This is a success alert.
-          </div>
+            Terra.alert.success
+          </strong>
+          This is a success alert.
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type unsatisfied should render an unsatisfied Alert 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  type="unsatisfied"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    type="unsatisfied"
+  <div
+    className="alert-base unsatisfied wide"
+    role="status"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base unsatisfied narrow"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <div
-          className="body body-std"
+        <span
+          className="icon unsatisfied-icon"
         >
-          <span
-            className="icon unsatisfied-icon"
+          <IconGapChecking
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <IconGapChecking
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M46 15.1l-2.7-5.5-16.5 9.6V0h-5.5v19.2L4.8 9.6l-2.7 5.5L17.8 24 2 32.9l2.7 5.5 16.5-9.6V48h5.5V28.8l16.5 9.6 2.7-5.5L30.2 24 46 15.1z"
-                  />
-                </svg>
-              </IconBase>
-            </IconGapChecking>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.unsatisfied
-            </strong>
-            This is an unsatisfied alert.
-          </div>
+            Terra.alert.unsatisfied
+          </strong>
+          This is an unsatisfied alert.
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type unverified should render an unverified Alert 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  type="unverified"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    type="unverified"
+  <div
+    className="alert-base unverified wide"
+    role="status"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base unverified narrow"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <div
-          className="body body-std"
+        <span
+          className="icon unverified-icon"
         >
-          <span
-            className="icon unverified-icon"
+          <IconDiamondSymbol
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <IconDiamondSymbol
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 0l24 24-24 24L0 24 24 0z"
-                  />
-                </svg>
-              </IconBase>
-            </IconDiamondSymbol>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.unverified
-            </strong>
-            This is an unverified alert.
-          </div>
+            Terra.alert.unverified
+          </strong>
+          This is an unverified alert.
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert of type warning with text content should render an Alert component of type warning 1`] = `
-<InjectIntl(Alert)
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  type="warning"
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    customColorClass="custom-default-color"
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    type="warning"
+  <div
+    className="alert-base warning wide"
+    role="status"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base warning narrow"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <div
-          className="body body-std"
+        <span
+          className="icon"
         >
-          <span
-            className="icon"
+          <IconWarning
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <IconWarning
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="IconWarning"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon IconWarning"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
-                    fill="#FFC20A"
-                  />
-                  <path
-                    d="M47.7 43.3L25 3.7c-.3-.5-.6-.7-1-.7s-.7.2-1 .7L.2 43.3c-.5 1-.1 1.7 1 1.7h45.5c1.1 0 1.6-.8 1-1.7zm-45.9.2L24 5l22.2 38.5H1.8zm19.7-6.8h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
-                    fill="#1C1F21"
-                  />
-                </svg>
-              </IconBase>
-            </IconWarning>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
-            >
-              Terra.alert.warning
-            </strong>
-            This is an warning.
-          </div>
+            Terra.alert.warning
+          </strong>
+          This is an warning.
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
 exports[`Alert with no props should render a default component 1`] = `
@@ -1473,6 +529,7 @@ exports[`Alert with no props should render a default component 1`] = `
 >
   <Alert
     customColorClass="custom-default-color"
+    disableAlertActionFocus={false}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1513,52 +570,62 @@ exports[`Alert with no props should render a default component 1`] = `
         <div
           className="body body-std"
         >
-          <span
-            className="icon"
+          <div
+            className="focus-container"
+            tabIndex="-1"
+          />
+          <div
+            className="content-container"
           >
-            <IconAlert
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="icon"
             >
-              <IconBase
-                className="IconAlert"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
+              <IconAlert
                 viewBox="0 0 48 48"
-                width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="tui-Icon icon IconAlert"
+                <IconBase
+                  className="IconAlert"
                   focusable="false"
                   height="1em"
-                  role="presentation"
+                  isBidi={false}
+                  isSpin={false}
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
-                    fill="#E50000"
-                  />
-                  <path
-                    d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconAlert>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
+                  <svg
+                    className="tui-Icon icon IconAlert"
+                    focusable="false"
+                    height="1em"
+                    role="presentation"
+                    viewBox="0 0 48 48"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+                      fill="#E50000"
+                    />
+                    <path
+                      d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+                      fill="#FFF"
+                    />
+                  </svg>
+                </IconBase>
+              </IconAlert>
+            </span>
+            <div
+              className="section"
+              id="alert-message-00000000-0000-0000-0000-000000000000"
             >
-              Terra.alert.alert
-            </strong>
+              <strong
+                className="title"
+                id="alert-title-00000000-0000-0000-0000-000000000000"
+              >
+                Terra.alert.alert
+              </strong>
+            </div>
           </div>
         </div>
       </div>
@@ -1567,251 +634,97 @@ exports[`Alert with no props should render a default component 1`] = `
 </InjectIntl(Alert)>
 `;
 
-exports[`Dismissable Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
-<InjectIntl(Alert)
-  action={
-    <Button
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isIconOnly={false}
-      isReversed={false}
-      onClick={[Function]}
-      text="Action"
-      type="button"
-      variant="emphasis"
-    />
-  }
-  customColorClass="terra-alert-custom-orange-color"
-  customIcon={
-    <IconHelp
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-    />
-  }
-  intl={
-    Object {
-      "defaultFormats": Object {},
-      "defaultLocale": "en",
-      "formatDate": [Function],
-      "formatHTMLMessage": [Function],
-      "formatMessage": [Function],
-      "formatNumber": [Function],
-      "formatPlural": [Function],
-      "formatRelative": [Function],
-      "formatTime": [Function],
-      "formats": Object {},
-      "formatters": Object {
-        "getDateTimeFormat": [Function],
-        "getMessageFormat": [Function],
-        "getNumberFormat": [Function],
-        "getPluralFormat": [Function],
-        "getRelativeFormat": [Function],
-      },
-      "locale": "en",
-      "messages": null,
-      "now": [Function],
-      "onError": [Function],
-      "textComponent": "span",
-      "timeZone": null,
-    }
-  }
-  onDismiss={[Function]}
-  title="Help!"
-  type="custom"
+exports[`Alert with no props should render a default notification banner with default props 1`] = `
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
 >
-  <Alert
-    action={
-      <Button
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isIconOnly={false}
-        isReversed={false}
-        onClick={[Function]}
-        text="Action"
-        type="button"
-        variant="emphasis"
-      />
-    }
-    customColorClass="terra-alert-custom-orange-color"
-    customIcon={
-      <IconHelp
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    }
-    intl={
-      Object {
-        "defaultFormats": Object {},
-        "defaultLocale": "en",
-        "formatDate": [Function],
-        "formatHTMLMessage": [Function],
-        "formatMessage": [Function],
-        "formatNumber": [Function],
-        "formatPlural": [Function],
-        "formatRelative": [Function],
-        "formatTime": [Function],
-        "formats": Object {},
-        "formatters": Object {
-          "getDateTimeFormat": [Function],
-          "getMessageFormat": [Function],
-          "getNumberFormat": [Function],
-          "getPluralFormat": [Function],
-          "getRelativeFormat": [Function],
-        },
-        "locale": "en",
-        "messages": null,
-        "now": [Function],
-        "onError": [Function],
-        "textComponent": "span",
-        "timeZone": null,
-      }
-    }
-    onDismiss={[Function]}
-    title="Help!"
-    type="custom"
+  <div
+    className="alert-base alert wide"
+    role="alert"
   >
-    <ResponsiveElement
-      onChange={[Function]}
-      responsiveTo="parent"
+    <div
+      className="body body-std"
     >
       <div
-        className="alert-base custom narrow terra-alert-custom-orange-color"
-        role="alert"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <div
-          className="body body-narrow"
+        <span
+          className="icon"
         >
-          <span
-            className="icon"
-          >
-            <IconHelp
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <IconBase
-                className="IconHelp"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
-                viewBox="0 0 48 48"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  className="tui-Icon icon IconHelp"
-                  focusable="false"
-                  height="1em"
-                  role="presentation"
-                  viewBox="0 0 48 48"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 0C10.7 0 0 10.7 0 24s10.7 24 24 24 24-10.7 24-24C48 10.8 37.3 0 24.1 0H24z"
-                    fill="#007CC3"
-                  />
-                  <path
-                    d="M26 36h-4v-4h4v4zm4.6-12.8c-.6.7-1.4 1.4-2.2 1.9-1.2.8-2.4 1-2.4 1.8V28h-4v-.8c0-1.8.9-3.5 2.4-4.5.6-.3 1.1-.6 1.6-.9 1.6-.8 2.2-2.7 1.4-4.3-.6-1.1-1.7-1.7-2.9-1.7H24c-1.6 0-3 1.3-3.2 2.9v.3h-4c-.1-3.1 2.1-5.9 5.1-6.6.9-.3 1.9-.4 2.8-.4h.2c3.8-.2 7 2.8 7.2 6.6.1 1.7-.5 3.3-1.5 4.6z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconHelp>
-          </span>
-          <div
-            className="section section-custom"
-          >
-            <strong
-              className="title"
-            >
-              Help!
-            </strong>
-            This is a custom alert.
-          </div>
-        </div>
+          <IconAlert
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
         <div
-          className="actions actions-custom"
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
         >
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
-            onClick={[Function]}
-            text="Action"
-            type="button"
-            variant="emphasis"
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
           >
-            <button
-              aria-disabled={false}
-              className="button emphasis"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              type="button"
-            >
-              <span
-                className="button-label text-only"
-              >
-                <span
-                  className=""
-                >
-                  Action
-                </span>
-              </span>
-            </button>
-          </Button>
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
-            onClick={[Function]}
-            text="Terra.alert.dismiss"
-            type="button"
-            variant="neutral"
-          >
-            <button
-              aria-disabled={false}
-              className="button neutral"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              type="button"
-            >
-              <span
-                className="button-label text-only"
-              >
-                <span
-                  className=""
-                >
-                  Terra.alert.dismiss
-                </span>
-              </span>
-            </button>
-          </Button>
+            Terra.alert.alert
+          </strong>
         </div>
       </div>
-    </ResponsiveElement>
-  </Alert>
-</InjectIntl(Alert)>
+    </div>
+  </div>
+</ResponsiveElement>
 `;
 
-exports[`Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
+exports[`Alert with props should render an alert with provided role 1`] = `
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
+>
+  <div
+    className="alert-base alert wide"
+    role="status"
+  >
+    <div
+      className="body body-std"
+    >
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
+      >
+        <span
+          className="icon"
+        >
+          <IconAlert
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
+          >
+            Terra.alert.alert
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</ResponsiveElement>
+`;
+
+exports[`Alert with props should render disableAlertActionFocus when provided 1`] = `
 <InjectIntl(Alert)
+  disableAlertActionFocus={true}
   intl={
     Object {
       "defaultFormats": Object {},
@@ -1839,10 +752,10 @@ exports[`Dismissible Alert that includes actions section should render an alert 
       "timeZone": null,
     }
   }
-  onDismiss={[Function]}
 >
   <Alert
     customColorClass="custom-default-color"
+    disableAlertActionFocus={true}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1870,7 +783,6 @@ exports[`Dismissible Alert that includes actions section should render an alert 
         "timeZone": null,
       }
     }
-    onDismiss={[Function]}
     type="alert"
   >
     <ResponsiveElement
@@ -1882,94 +794,65 @@ exports[`Dismissible Alert that includes actions section should render an alert 
         role="alert"
       >
         <div
-          className="body body-narrow"
+          className="body body-std"
         >
-          <span
-            className="icon"
+          <div
+            className="focus-container"
+            tabIndex="-1"
+          />
+          <div
+            className="content-container"
           >
-            <IconAlert
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="icon"
             >
-              <IconBase
-                className="IconAlert"
-                focusable="false"
-                height="1em"
-                isBidi={false}
-                isSpin={false}
+              <IconAlert
                 viewBox="0 0 48 48"
-                width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className="tui-Icon icon IconAlert"
+                <IconBase
+                  className="IconAlert"
                   focusable="false"
                   height="1em"
-                  role="presentation"
+                  isBidi={false}
+                  isSpin={false}
                   viewBox="0 0 48 48"
                   width="1em"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
-                    fill="#E50000"
-                  />
-                  <path
-                    d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
-                    fill="#FFF"
-                  />
-                </svg>
-              </IconBase>
-            </IconAlert>
-          </span>
-          <div
-            className="section"
-          >
-            <strong
-              className="title"
+                  <svg
+                    className="tui-Icon icon IconAlert"
+                    focusable="false"
+                    height="1em"
+                    role="presentation"
+                    viewBox="0 0 48 48"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.2 45c-1.1 0-1.6-.8-1-1.7L23 3.7c.5-1 1.4-1 2 0l22.8 39.6c.5 1 .1 1.7-1 1.7H1.2z"
+                      fill="#E50000"
+                    />
+                    <path
+                      d="M21.5 36.7h5V42h-5v-5.3zm0-22.7h5v17.3h-5V14z"
+                      fill="#FFF"
+                    />
+                  </svg>
+                </IconBase>
+              </IconAlert>
+            </span>
+            <div
+              className="section"
+              id="alert-message-00000000-0000-0000-0000-000000000000"
             >
-              Terra.alert.alert
-            </strong>
-            This is a test
-          </div>
-        </div>
-        <div
-          className="actions"
-        >
-          <Button
-            isBlock={false}
-            isCompact={false}
-            isDisabled={false}
-            isIconOnly={false}
-            isReversed={false}
-            onClick={[Function]}
-            text="Terra.alert.dismiss"
-            type="button"
-            variant="neutral"
-          >
-            <button
-              aria-disabled={false}
-              className="button neutral"
-              disabled={false}
-              onBlur={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onKeyUp={[Function]}
-              onMouseDown={[Function]}
-              type="button"
-            >
-              <span
-                className="button-label text-only"
+              <strong
+                className="title"
+                id="alert-title-00000000-0000-0000-0000-000000000000"
               >
-                <span
-                  className=""
-                >
-                  Terra.alert.dismiss
-                </span>
-              </span>
-            </button>
-          </Button>
+                Terra.alert.alert
+              </strong>
+            </div>
+          </div>
         </div>
       </div>
     </ResponsiveElement>
@@ -1977,32 +860,175 @@ exports[`Dismissible Alert that includes actions section should render an alert 
 </InjectIntl(Alert)>
 `;
 
-exports[`correctly applies the theme context className 1`] = `
-<Fragment>
-  <div />
+exports[`Dismissable Alert of type custom with action button, custom title and text content should render an Alert component of type custom with an action button 1`] = `
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
+>
   <div
-    className="alert-base success wide orion-fusion-theme"
+    className="alert-base custom wide terra-alert-custom-orange-color"
+    role="status"
+  >
+    <div
+      className="body body-std"
+    >
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
+      >
+        <span
+          className="icon"
+        >
+          <IconHelp
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section section-custom"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
+          >
+            Help!
+          </strong>
+          This is a custom alert.
+        </div>
+      </div>
+    </div>
+    <div
+      className="actions actions-custom"
+    >
+      <Button
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={false}
+        isReversed={false}
+        onClick={[MockFunction]}
+        text="Action"
+        type="button"
+        variant="emphasis"
+      />
+      <Button
+        aria-describedby="alert-title-00000000-0000-0000-0000-000000000000"
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={false}
+        isReversed={false}
+        onClick={[MockFunction]}
+        text="Terra.alert.dismiss"
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  </div>
+</ResponsiveElement>
+`;
+
+exports[`Dismissible Alert that includes actions section should render an alert component with a dismiss button 1`] = `
+<ResponsiveElement
+  onChange={[Function]}
+  responsiveTo="parent"
+>
+  <div
+    className="alert-base alert wide"
     role="alert"
   >
     <div
       className="body body-std"
     >
-      <span
-        className="icon"
-      >
-        <IconSuccess
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </span>
       <div
-        className="section"
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
       >
-        <strong
-          className="title"
+        <span
+          className="icon"
         >
-          Terra.alert.success
-        </strong>
+          <IconAlert
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
+          >
+            Terra.alert.alert
+          </strong>
+          This is a test
+        </div>
+      </div>
+    </div>
+    <div
+      className="actions"
+    >
+      <Button
+        aria-describedby="alert-title-00000000-0000-0000-0000-000000000000"
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isIconOnly={false}
+        isReversed={false}
+        onClick={[MockFunction]}
+        text="Terra.alert.dismiss"
+        type="button"
+        variant="neutral"
+      />
+    </div>
+  </div>
+</ResponsiveElement>
+`;
+
+exports[`correctly applies the theme context className 1`] = `
+<Fragment>
+  <div />
+  <div
+    className="alert-base success wide orion-fusion-theme"
+    role="status"
+  >
+    <div
+      className="body body-std"
+    >
+      <div
+        className="focus-container"
+        tabIndex="-1"
+      />
+      <div
+        className="content-container"
+      >
+        <span
+          className="icon"
+        >
+          <IconSuccess
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </span>
+        <div
+          className="section"
+          id="alert-message-00000000-0000-0000-0000-000000000000"
+        >
+          <strong
+            className="title"
+            id="alert-title-00000000-0000-0000-0000-000000000000"
+          >
+            Terra.alert.success
+          </strong>
+        </div>
       </div>
     </div>
   </div>

@@ -3,9 +3,7 @@ import React from 'react';
 // IconAdd by default, isBidi: false, isSpin: false
 // IconSpinner by default, isBidi: false, isSpin: true
 // IconComment by default, isBidi: true, isSpin: false
-import IconAdd from '../../src/icon/IconAdd';
-import IconSpinner from '../../src/icon/IconSpinner';
-import IconComment from '../../src/icon/IconComment';
+import { IconAdd, IconSpinner, IconComment } from '../../src';
 
 describe('Icon', () => {
   describe('IconAdd', () => {
@@ -155,17 +153,6 @@ describe('Icon', () => {
       });
     });
 
-    describe('isSpin prop', () => {
-      it('should have default isSpin={true}', () => {
-        const wrapper = shallow(<IconSpinner />);
-        expect(wrapper.prop('isSpin')).toEqual(true);
-      });
-      it('should have isSpin={false} with override', () => {
-        const wrapper = shallow(<IconSpinner isSpin={false} />);
-        expect(wrapper.prop('isSpin')).toEqual(false);
-      });
-    });
-
     describe('a11yLabel prop', () => {
       it('should have default a11yLabel={undefined}', () => {
         const wrapper = shallow(<IconSpinner />);
@@ -226,17 +213,6 @@ describe('Icon', () => {
       it('should have focusable={true}', () => {
         const wrapper = shallow(<IconComment focusable="true" />);
         expect(wrapper.prop('focusable')).toEqual('true');
-      });
-    });
-
-    describe('isBidi prop', () => {
-      it('should have default isBidi={true}', () => {
-        const wrapper = shallow(<IconComment />);
-        expect(wrapper.prop('isBidi')).toEqual(true);
-      });
-      it('should have isBidi={false} with override', () => {
-        const wrapper = shallow(<IconComment isBidi={false} />);
-        expect(wrapper.prop('isBidi')).toEqual(false);
       });
     });
 

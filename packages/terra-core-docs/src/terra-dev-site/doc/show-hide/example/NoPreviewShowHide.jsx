@@ -1,7 +1,7 @@
 import React from 'react';
-import ShowHide from 'terra-show-hide';
+import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
 
-const fullText = 'CareAware is Cerners comprehensive enterprise-wide solution for device connectivity. CareAware® is a suite of solutions that enable any area of a hospital to create an environment where all devices are integrated and contextually aware to ensure the right data is presented in the right format at the right time.';
+const focusableText = 'CareAware is Cerners comprehensive enterprise-wide solution for device connectivity. CareAware® is a suite of solutions that enable any area of a hospital to create an environment where all devices are integrated and contextually aware to ensure the right data is presented in the right format at the right time.';
 
 class NoPreviewShowHide extends React.Component {
   constructor(props) {
@@ -9,6 +9,7 @@ class NoPreviewShowHide extends React.Component {
 
     this.state = { isOpen: false };
     this.toggleShowHide = this.toggleShowHide.bind(this);
+    this.focusRef = React.createRef();
   }
 
   toggleShowHide() {
@@ -19,8 +20,8 @@ class NoPreviewShowHide extends React.Component {
 
   render() {
     return (
-      <ShowHide isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
-        <p>{fullText}</p>
+      <ShowHide focusRef={this.focusRef} isOpen={this.state.isOpen} onChange={this.toggleShowHide}>
+        <p><ShowHideFocuser ref={this.focusRef} focusableText={focusableText} /></p>
       </ShowHide>
     );
   }

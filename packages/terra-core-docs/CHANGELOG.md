@@ -2,18 +2,170 @@
 
 ## Unreleased
 
+## 1.40.0 - (September 19, 2023)
+
+* Updated
+  *  Updated doc site for `terra-form-single-select` and `terra-form-single-select-field`.
+  
+* Added
+  * Added drag and drop example for `terra-list`.
+  * Added instruction note for `terra-form-radio` label hidden example
+
+* Updated
+  * Updated `terra-icon` imports in documentation.
+  * Updated `terra-scroll` to add realistic examples.
+  * Updated all paginator examples to use meaningful titles.
+  * Updated testing recommendations to use `jest.spyOn` instead of `jest.mock`.
+  * Updated `terra-alert` long text example for accessible `terra-show-hide`.
+ 
+## 1.39.0 - (August 25, 2023)
+
+* Fixed
+  * Updated `terra-native-select` example to fix slightly truncated button.
+
+* Changed
+  * Updated `terra-button-group` tests.
+
+## 1.38.0 - (August 23, 2023)
+
+* Removed
+  * Removed custom styles of `terra-arrange` examples to make whole content visible.
+
+* Added
+  * Added drag and drop example for `terra-list`.
+  * Added accessibility guidance for `terra-arrange`.
+  * Added an event to prevent page scroll on hyperlink for `terra-toggle-section-header`.
+
+* Changed
+  * Updated `terra-button-group` tests.
+  * Updated `terra-form-radio-field` example to display selected value.
+
+## 1.37.0 - (August 18, 2023)
+
+* Added
+  * Added Search field examples for optional Label with default and custom labels.
+
+* Changed
+  * Updated `iconAll` test to accommodate new icons added from OCS icon library v1.51.0.
+  * Updated default search delay to 2500ms.
+  * Updated Search field examples to be more functionality focused.
+
+## 1.36.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.35.0 - (August 11, 2023)
+
+* Changed
+  * Updated all paginator examples for `terra-paginator` to use new props.
+  * Updated imports from `src` to `lib`.
+  * Updated `terra-toggle-button` example and user documentation.
+
+## 1.34.0 - (August 8, 2023)
+
+* Updated
+  * Updated `terra-tag` to include realistic examples.
+
+## 1.33.0 - (August 2, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 1.32.0 - (August 1, 2023)
+
+* Changed
+  * Updated Arrange component example to use `span` element instead of `div`.
+
+* Added
+  * Added realistic examples for `terra-arrange`.
+  * Added realistic examples for `terra-toggle-section-header`.
+  * Added email validation for `terra-form-field`.
+
+* Updated
+  * Updated an example for `terra-dropdown-button`.
+  * Updated email field validation for `terra-form-field`.
+  * Updated `terra-show-hide` examples for new focusRef prop, description for the new prop usage.
+
+* Added
+  * Added documentation updates for `terra-form-input`.
+
+* Changed
+  * Updated Toggle Button Examples to have a dashed border around interactive elements.
+
+## 1.31.0 - (July 13, 2023)
+
+* Added
+  * Added a test case for click event when setFocusOnContainer is disabled
+  * Added email format instruction text for `terra-form-field`.
+
+* Changed
+  * Minor formatting update in `terra-alert` & `terra-form-fieldset`.
+
+## 1.30.0 - (July 11, 2023)
+
+* Added
+  * Added test example for controlled form native select component.
+  * Added more realistic examples for terra-toggle-button.
+
+## 1.29.0 - (June 28, 2023)
+
+* Changed
+  * Updated `terra-status-view - Change Variant` example component to use the apply button to change the selected variant.
+  * Updated `terra-form-textarea` example component and added an button to toggle valid/invalid status
+  
+* Added
+  * Added documentation updates for `Single Select` in `terra-form-select`.
+
+## 1.28.0 - (June 14, 2023)
+
+* Added
+  * Added terra-scroll A11y tests.
+  * Added an example in terra-content-container without interactive elements.
+  * Added examples for terra-content-container with dark colors.
+* Changed
+  * Updated `terra-status-view - Change Variant` example component to use the `terra-form-select` component instead of HTML native `<select>`.
+  * Updated example for `terra-visually-hidden-text` for better demonstration of correct usage.
+  * Updated "alert" wording to "notification banner" to avoid confusion with the alert notification type.
+  * Updated examples for testing `alert` notification focus shift.
+  * Updated `Custom Icon + message + buttons example` for `terra-status-view`.
+  * Corrected typo in `terra-demographics-banner` example doc.
+  * Updated documentation for a11y guidance on `alert` notification type, live regions, and titles.
+
+* Added
+  * Added testing sections to `terra-alert` and `terra-form-fieldset` documentation.
+
+## 1.27.0 - (May 9, 2023)
+
+* Removed
+  * Removed debugger text from status view first paragraph after the title.
+
+* Changed
+  * Updated demographics banner examples to include `identifiersLongForm` prop.
+  * Changed terra-alert examples to include aria-live attribute.
+
+* Added
+  * Added an example for terra-form-select native select field without placeholder.
+  * Add terra-alert accessibility guide.
+  * Added examples for fullscreen and container-related overlays with custom content and loading overlays with custom message.
+
 ## 1.26.0 - (April 27, 2023)
 
 * Added
-
   * Added dynamic example for terra-status-view.
-
-  * Added the UX recommendation for terra-content-container
+  * Added the UX recommendation for terra-content-container.
 
 * Changed
   * Updated icon documentation to incorporate `one-cerner-style-icons` v1.5.0.
   * Updated non-meaningful content with meaningful content for `action-header`, `arrange`, `content-container`, `divider`, `checkbox`, `radio`, `paginator`, `scroll`, `section-header`, `show-hide`, `toggle`, `toggle-button` and `toggle-section-header`
+  * Updated terra-toggle component focusable attribute value from boolean to string to fix some console log warnings.
 
+
+* Added
+  * Added examples for `terra-text` to demonstrate valid date and time formats.
+
+* Added
+  * Added examples for `terra-text` to demonstrate valid date and time formats.
 
 * Added
   * Updated Usage Guide to include information on decorative, supportive and meaningful text attributes.
@@ -23,7 +175,6 @@
 * Fixed
   * Fixed `terra-ui` build failures happening due to usage of relative paths on mdx file.
   * Fixed `terra-button` A11y guide example to match the description.
-
 
 ## 1.24.0 - (April 5, 2023)
 

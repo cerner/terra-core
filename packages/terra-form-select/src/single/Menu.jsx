@@ -161,16 +161,9 @@ class Menu extends React.Component {
     this.clearSearch();
     this.clearScrollTimeout();
     if (this.state.closedViaKeyEvent) {
-      this.props.select.focus();
-      if (SharedUtil.isSafari()) {
-        /**
-         * Shifting focus back to the select specifically
-         * when VoiceOver is on will sometimes trigger VO to shift focus
-         * randomly to the root of document or the skip to main link
-         * instead of the select and then break VoiceOver usage when navigating the
-         * select options on subsequent opening of select
-         * Refocusing on select seems to seems to mitigate this VO bug.
-         */
+      if (!SharedUtil.isSafari()) {
+        this.props.select.focus();
+      } else {
         setTimeout(() => {
           this.props.select.focus();
         }, 300);
@@ -200,7 +193,7 @@ class Menu extends React.Component {
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: MenuUtil.findNext(children, active) }, this.scrollIntoView);
       this.updateCurrentActiveScreenReader();
-    } else if (keyCode === KeyCode.KEY_RETURN && active !== null) {
+    } else if ((keyCode === KeyCode.KEY_RETURN || keyCode === KeyCode.KEY_SPACE) && active !== null) {
       event.preventDefault();
 
       this.setState({ closedViaKeyEvent: true });
@@ -260,7 +253,13 @@ class Menu extends React.Component {
     }
 
     if (select) {
-      select.focus();
+      if (!SharedUtil.isSafari()) {
+        select.focus();
+      } else {
+        setTimeout(() => {
+          select.focus();
+        }, 300);
+      }
     }
   }
 

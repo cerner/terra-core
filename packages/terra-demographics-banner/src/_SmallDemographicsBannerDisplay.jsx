@@ -22,16 +22,21 @@ export default (props) => {
     gestationalAgeFullText,
     gestationalAgeLabel,
     identifiers,
+    identifiersLongForm,
     personName,
+    personNameHeadingLevel,
     photo,
     postMenstrualAge,
     postMenstrualAgeFullText,
     postMenstrualAgeLabel,
     preferredFirstName,
+    ageTitle,
+    genderTitle,
     ...customProps
   } = props;
 
   const theme = React.useContext(ThemeContext);
+  const PersonNameElement = `h${personNameHeadingLevel || 2}`;
 
   const mainClasses = classNames(
     cx(
@@ -46,16 +51,16 @@ export default (props) => {
 
   return (
     <section className={mainClasses} {...customProps}>
-      <h1 className={cx('person-name')}>
+      <PersonNameElement className={cx('person-name')}>
         <span>
           { personName }
-          { preferredFirstName && <span className={cx('preferred-first-name')}>{ preferredFirstName }</span> }
+          { preferredFirstName && <span className={cx('preferred-first-name')}>{ `(${preferredFirstName})` }</span> }
         </span>
-      </h1>
-      <div className={cx('person-details')}>
+      </PersonNameElement>
+      <dl className={cx('person-details')}>
         {DemographicsBannerUtils.personDetails(props)}
         {DemographicsBannerUtils.applicationIdentifiers(props)}
-      </div>
+      </dl>
       <div className={cx('application-content')}>
         {applicationContent}
       </div>

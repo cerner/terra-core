@@ -1,7 +1,9 @@
 {
-  "Terra.demographicsBanner.dateOfBirth": "Fecha de nacimiento",
+  "Terra.demographicsBanner.age": "Edad",
+  "Terra.demographicsBanner.dateOfBirth": "Fec. Nac.",
   "Terra.demographicsBanner.dateOfBirthFullText": "Fecha de nacimiento",
-  "Terra.demographicsBanner.deceased": "Fallecido/a",
+  "Terra.demographicsBanner.deceased": "Fallecido:",
+  "Terra.demographicsBanner.gender": "Género",
   "Terra.demographicsBanner.gestationalAge": "EG",
   "Terra.demographicsBanner.gestationalAgeFullText": "Edad gestacional",
   "Terra.demographicsBanner.noDataProvided": "--",

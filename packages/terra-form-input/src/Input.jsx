@@ -165,9 +165,12 @@ class Input extends React.Component {
       attributes.defaultValue = defaultValue;
     }
 
-    if (attributes.placeholder) {
+    // showMpageFusionPlaceholder` prop is added for fusion pass through passivity and should be removed after Fusion Phase2 release.
+    if (attributes.placeholder && !attributes.showMpageFusionPlaceholder) {
       attributes.placeholder = null;
     }
+
+    delete (attributes.showMpageFusionPlaceholder);
 
     return (
       <input

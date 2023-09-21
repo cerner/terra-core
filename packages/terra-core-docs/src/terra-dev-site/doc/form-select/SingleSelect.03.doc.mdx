@@ -9,15 +9,25 @@ import IncompleteExample from './example/single/Incomplete?dev-site-example';
 import MaxHeightExample from './example/single/MaxHeight?dev-site-example';
 import OptGroupExample from './example/single/OptGroup?dev-site-example';
 
-import SingleSelectPropsTable from 'terra-form-select/src/SingleSelect?dev-site-props-table';
-import OptionPropsTable from 'terra-form-select/src/shared/_Option?dev-site-props-table';
-import OptGroupPropsTable from 'terra-form-select/src/shared/_OptGroup?dev-site-props-table';
+import SingleSelectPropsTable from 'terra-form-select/lib/SingleSelect?dev-site-props-table';
+import OptionPropsTable from 'terra-form-select/lib/shared/_Option?dev-site-props-table';
+import OptGroupPropsTable from 'terra-form-select/lib/shared/_OptGroup?dev-site-props-table';
 
 <Badge />
 
 # Terra Form Single Select
 
 The Single Select component allows selecting a single option from a dropdown of selectable options.
+
+Consumers are encouraged to use the `SingleSelectField` component over the `SingleSelect` component wherever possible, as the latter does not provide the labels necessary to support accessibility.
+
+To create an accessible `SingleSelect` component:
+1. Ensure that `SelectField` can receive keyboard focus.
+2. Ensure that `SelectField` programmatically associates all related content (such as visible label, helper text & error messaging) to the field.
+3. Ensure any visible `SelectLabel` matches any artificially applied programmatic label.
+4. Error messaging should provide error suggestions when the system can programmatically understand what is wrong.
+
+To close the combobox while using JAWS with VPC **ON** mode, user have to press escape key twice. The first escape key press loses the VPC focus and the second escape key press closes the single select as it has control focus.
 
 ## Getting Started
 

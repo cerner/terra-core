@@ -5,24 +5,30 @@ import Alert from 'terra-alert';
 const AlertDismissible = () => {
   const [isOpen, setIsOpen] = useState(true);
 
-  if (!isOpen) {
-    return (
-      <>
-        <div id="dismissed">Alert was dismissed</div>
-        <Button
-          text="Trigger Alert"
-          onClick={() => {
-            setIsOpen(true);
-          }}
-        />
-      </>
-    );
-  }
-
   return (
-    <Alert id="dismissibleAlert" type="success" onDismiss={() => setIsOpen(false)}>
-      This is a dismissable Alert.
-    </Alert>
+    <>
+      {isOpen ? (
+        <div aria-live="polite">
+          <Alert
+            id="dismissibleAlert"
+            type="success"
+            onDismiss={() => setIsOpen(false)}
+          >
+            This is a dismissable Alert.
+          </Alert>
+        </div>
+      ) : (
+        <div id="dismissed">Alert was dismissed</div>
+      )}
+      <br />
+      <Button
+        isDisabled={isOpen}
+        text="Trigger Alert"
+        onClick={() => {
+          setIsOpen(true);
+        }}
+      />
+    </>
   );
 };
 

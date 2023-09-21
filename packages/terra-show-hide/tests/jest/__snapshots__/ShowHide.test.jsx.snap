@@ -45,6 +45,7 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
   >
     <ShowHide
       buttonAlign="start"
+      focusRef={null}
       intl={
         Object {
           "defaultFormats": Object {},
@@ -84,25 +85,35 @@ exports[`ShowHide correctly applies the theme context className 1`] = `
         <p>
           Test
         </p>
-        <Toggle
-          isAnimated={false}
-          isOpen={false}
+        <div
+          className="show-hide-content orion-fusion-theme"
+          id="show-hide-content-00000000-0000-0000-0000-000000000000"
+          onBlur={[Function]}
+          role={null}
+          tabIndex={null}
         >
-          <div
-            aria-hidden={true}
-            className="toggle"
-          />
-        </Toggle>
+          <Toggle
+            isAnimated={false}
+            isOpen={false}
+          >
+            <div
+              aria-hidden={true}
+              className="toggle"
+            />
+          </Toggle>
+        </div>
         <div
           className="show-hide"
         >
           <Button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="show-hide button start"
             onClick={[Function]}
             text="Terra.showhide.showmore"
           >
             <button
+              aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
               aria-expanded={false}
               className="button orion-fusion-theme show-hide button start"
               onBlur={[Function]}
@@ -176,6 +187,7 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
   <ShowHide
     buttonAlign="start"
     data-terra-text-mock="MockData"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -217,25 +229,35 @@ exports[`ShowHide should append data passed in with attributes 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -311,6 +333,7 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
 >
   <ShowHide
     buttonAlign="start"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -361,25 +384,35 @@ exports[`ShowHide should append styles passed in with attributes 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -452,6 +485,7 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
   <ShowHide
     buttonAlign="start"
     className="TestClass"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -493,25 +527,35 @@ exports[`ShowHide should merge classes passed in with attributes 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start TestClass"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start TestClass"
             onBlur={[Function]}
@@ -583,6 +627,7 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
 >
   <ShowHide
     buttonAlign="start"
+    focusRef={null}
     id="TestId"
     intl={
       Object {
@@ -625,25 +670,35 @@ exports[`ShowHide should merge ids passed in with attributes 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -715,6 +770,7 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
 >
   <ShowHide
     buttonAlign="center"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -754,25 +810,35 @@ exports[`ShowHide should render a center-aligned button show-hide component 1`] 
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button center"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button center"
             onBlur={[Function]}
@@ -843,6 +909,7 @@ exports[`ShowHide should render a default show-hide component 1`] = `
 >
   <ShowHide
     buttonAlign="start"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -882,25 +949,35 @@ exports[`ShowHide should render a default show-hide component 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -966,6 +1043,7 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
 >
   <ShowHide
     buttonAlign="start"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -995,27 +1073,38 @@ exports[`ShowHide should render a no preview show-hide component 1`] = `
     }
     isOpen={false}
     onChange={[Function]}
+    preview={null}
   >
     <div>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1087,6 +1176,7 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
 >
   <ShowHide
     buttonAlign="start"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1123,27 +1213,37 @@ exports[`ShowHide should render an initially open show-hide component 1`] = `
     }
   >
     <div>
-      <Toggle
-        isAnimated={false}
-        isOpen={true}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={false}
-          className="toggle"
+        <Toggle
+          isAnimated={false}
+          isOpen={true}
         >
-          Full Text
-        </div>
-      </Toggle>
+          <div
+            aria-hidden={false}
+            className="toggle"
+          >
+            Full Text
+          </div>
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={true}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.hide"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={true}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1217,6 +1317,7 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
   <ShowHide
     buttonAlign="start"
     buttonText="Collapsed Text"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1256,25 +1357,35 @@ exports[`ShowHide should set buttonText prop correctly when it is collapsed 1`] 
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Collapsed Text"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1348,6 +1459,7 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
   <ShowHide
     buttonAlign="start"
     buttonText="Expanded Text"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1384,27 +1496,37 @@ exports[`ShowHide should set buttonText prop correctly when it is expanded 1`] =
     }
   >
     <div>
-      <Toggle
-        isAnimated={false}
-        isOpen={true}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={false}
-          className="toggle"
+        <Toggle
+          isAnimated={false}
+          isOpen={true}
         >
-          Full Text
-        </div>
-      </Toggle>
+          <div
+            aria-hidden={false}
+            className="toggle"
+          >
+            Full Text
+          </div>
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={true}
           className="show-hide button start"
           onClick={[Function]}
           text="Expanded Text"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={true}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1475,6 +1597,7 @@ exports[`ShowHide should set children prop correctly 1`] = `
 >
   <ShowHide
     buttonAlign="start"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1514,25 +1637,35 @@ exports[`ShowHide should set children prop correctly 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1604,6 +1737,7 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
 >
   <ShowHide
     buttonAlign="start"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1640,27 +1774,37 @@ exports[`ShowHide should set isOpen prop correctly 1`] = `
     }
   >
     <div>
-      <Toggle
-        isAnimated={false}
-        isOpen={true}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role="group"
+        tabIndex="-1"
       >
-        <div
-          aria-hidden={false}
-          className="toggle"
+        <Toggle
+          isAnimated={false}
+          isOpen={true}
         >
-          Full Text
-        </div>
-      </Toggle>
+          <div
+            aria-hidden={false}
+            className="toggle"
+          >
+            Full Text
+          </div>
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={true}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.hide"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={true}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1731,6 +1875,7 @@ exports[`ShowHide should set preview prop correctly 1`] = `
 >
   <ShowHide
     buttonAlign="start"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1770,25 +1915,35 @@ exports[`ShowHide should set preview prop correctly 1`] = `
       <p>
         Preview Text
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button start"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button start"
             onBlur={[Function]}
@@ -1860,6 +2015,7 @@ exports[`ShowHide should set the button to align right 1`] = `
 >
   <ShowHide
     buttonAlign="end"
+    focusRef={null}
     intl={
       Object {
         "defaultFormats": Object {},
@@ -1899,25 +2055,35 @@ exports[`ShowHide should set the button to align right 1`] = `
       <p>
         Test
       </p>
-      <Toggle
-        isAnimated={false}
-        isOpen={false}
+      <div
+        className="show-hide-content"
+        id="show-hide-content-00000000-0000-0000-0000-000000000000"
+        onBlur={[Function]}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          aria-hidden={true}
-          className="toggle"
-        />
-      </Toggle>
+        <Toggle
+          isAnimated={false}
+          isOpen={false}
+        >
+          <div
+            aria-hidden={true}
+            className="toggle"
+          />
+        </Toggle>
+      </div>
       <div
         className="show-hide"
       >
         <Button
+          aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
           aria-expanded={false}
           className="show-hide button end"
           onClick={[Function]}
           text="Terra.showhide.showmore"
         >
           <button
+            aria-controls="show-hide-content-00000000-0000-0000-0000-000000000000"
             aria-expanded={false}
             className="button show-hide button end"
             onBlur={[Function]}

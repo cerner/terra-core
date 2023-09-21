@@ -15,6 +15,7 @@ const DemographicsBannerSmallContainer = () => (
       deceasedDate="March 12, 2017"
       gender="Male"
       identifiers={{ MRN: 12343, REA: '3JSDA' }}
+      identifiersLongForm={{ MRN: 'Medical Record Number' }}
       photo={<Image alt="My Cat" src={demographicsImage} />}
       personName="Johnathon Doe"
     />

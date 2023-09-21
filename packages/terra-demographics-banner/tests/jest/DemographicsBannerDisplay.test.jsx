@@ -71,7 +71,7 @@ it('renders gestational date with a default label when the label is not provided
   expect(banner).toMatchSnapshot();
 });
 
-it('renders post menstrural date with a default label when the label is not provided', () => {
+it('renders post menstrual date with a default label when the label is not provided', () => {
   const banner = shallow(<DemographicsBannerDisplay postMenstrualAge="April 5, 2016" />);
   expect(banner).toMatchSnapshot();
 });

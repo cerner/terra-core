@@ -1,46 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'terra-button';
 import Alert from 'terra-alert';
 
-class AlertActionButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      actionButtonClickCount: 0,
-      showAlert: false,
-    };
-    this.actionFunc = this.actionFunc.bind(this);
-    this.popAlert = this.popAlert.bind(this);
-  }
+const AlertAlert = () => {
+  const [actionButtonClickCount, setActionButtonClickCount] = useState(0);
+  const [isOpen, setIsOpen] = useState(true);
 
-  actionFunc() {
-    this.setState(prevState => ({ actionButtonClickCount: prevState.actionButtonClickCount + 1 }));
-    this.setState({ showAlert: false });
-  }
+  const handleActionClick = () => {
+    setActionButtonClickCount((prevCount) => prevCount + 1);
+  };
 
-  popAlert() {
-    this.setState(prevState => ({ showAlert: !prevState.showAlert }));
-  }
+  const alert = (
+    <Alert
+      id="actionAlert"
+      action={<Button text="Action" onClick={handleActionClick} />}
+    >
+      This is a critical alert notification. It is configured with a custom Action button.
+    </Alert>
+  );
 
-  render() {
-    this.alert = (
-      <Alert id="actionAlert" type="warning" action={<Button text="Action" onClick={this.actionFunc} />}>
-        This is a warning. It is configured with a custom Action button. Action button has been
-        clicked
-        {' '}
-        <span id="actionButtonClickCount">{this.state.actionButtonClickCount}</span>
-        {' '}
-        times.
+  return (
+    <div>
+      {/* eslint-disable-next-line no-console */}
+      <Button text="Dummy Button" onClick={() => console.log('Click')} />
+      <br />
+      <br />
+      <Alert
+        id="successAlert"
+        type="success"
+        action={<Button text="Action" onClick={handleActionClick} />}
+        onDismiss={() => console.log('Dismiss')} // eslint-disable-line no-console
+      >
+        Test
       </Alert>
-    );
-    return (
-      <div>
-        <p> This Test has been added to test the functionality on JAWS and Voice Over </p>
-        <Button text="Trigger Alert" onClick={this.popAlert} />
-        {this.state.showAlert && this.alert }
-      </div>
-    );
-  }
-}
+      {isOpen && alert}
+      <br />
+      <Button text="Dummy Button" />
+      <p>{`Action button has been clicked ${actionButtonClickCount} times.`}</p>
+      <Button
+        text="Trigger Alert"
+        onClick={() => setIsOpen((prevState) => !prevState)}
+      />
+    </div>
+  );
+};
 
-export default AlertActionButton;
+export default AlertAlert;

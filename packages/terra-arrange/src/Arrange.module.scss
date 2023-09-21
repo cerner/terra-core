@@ -23,10 +23,12 @@
 
   .center {
     align-self: center;
+    max-height: 100%;
   }
 
   .bottom {
     align-self: flex-end;
+    max-height: 100%;
   }
 
   .stretch {

@@ -21,6 +21,20 @@ it('renders large banner that contains all valid information', () => {
     postMenstrualAgeLabel="PMA"
   />);
 
+  expect(banner.find('h2').exists()).toBe(true);
+  expect(banner.find('dl').at(0).exists()).toBe(true);
+  expect(banner.find('dl').at(1).exists()).toBe(true);
+  expect(banner).toMatchSnapshot();
+});
+
+it('renders the provided person name header level', () => {
+  const banner = shallow(<LargeDemographicsBannerDisplay
+    personName="Johnathon Doe"
+    personNameHeadingLevel={3}
+    preferredFirstName="John"
+  />);
+
+  expect(banner.find('h3').exists()).toBe(true);
   expect(banner).toMatchSnapshot();
 });
 

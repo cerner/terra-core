@@ -2,6 +2,26 @@
 
 ## Unreleased
 
+## 3.68.1 - (August 25, 2023)
+
+* Fixed
+  * Reverted change from functional component to class component to fix an issue with passing refs into the component.
+
+## 3.68.0 - (August 11, 2023)
+
+* Changed
+  * Reverted `3.66` changes.
+
+## 3.67.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 3.66.0 - (August 8, 2023)
+
+* Changed
+  * Reduced package size by excluding unneeded files when publishing.
+
 ## 3.65.0 - (March 1, 2023)
 
 * Removed

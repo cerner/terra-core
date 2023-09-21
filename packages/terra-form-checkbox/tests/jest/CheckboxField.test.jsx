@@ -8,10 +8,63 @@ import Checkbox from '../../src/Checkbox';
 
 window.matchMedia = () => ({ matches: true });
 
+let userAgentGetter;
+beforeEach(() => {
+  userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
+});
+
 it('should render a default checkbox field', () => {
   const checkBox = (<CheckboxField legend="Default CheckboxField" />);
   const wrapper = shallowWithIntl(checkBox);
   expect(wrapper).toMatchSnapshot();
+});
+
+it('should render checkbox field with div element for Safari browser or Edg browser', () => {
+  userAgentGetter.mockReturnValue('Safari Edg');
+  const wrapper = shallowWithIntl(<CheckboxField legend="Custom Message CheckboxField" />);
+  expect(wrapper.dive()).toMatchInlineSnapshot(`
+    <fieldset
+      className="checkbox-field"
+    >
+      <div
+        className="legend-group"
+        id="terra-checkbox-field-description-1"
+      >
+        <div
+          className="legend"
+        >
+          Custom Message CheckboxField
+          <span
+            className="error-icon-hidden"
+          />
+        </div>
+      </div>
+    </fieldset>
+  `);
+});
+
+it('should render checkbox field with legend element for Chrome browser', () => {
+  userAgentGetter.mockReturnValue('Chrome');
+  const wrapper = shallowWithIntl(<CheckboxField legend="Custom Message CheckboxField" />);
+  expect(wrapper.dive()).toMatchInlineSnapshot(`
+    <fieldset
+      className="checkbox-field"
+    >
+      <legend
+        className="legend-group"
+        id="terra-checkbox-field-description-2"
+      >
+        <div
+          className="legend"
+        >
+          Custom Message CheckboxField
+          <span
+            className="error-icon-hidden"
+          />
+        </div>
+      </legend>
+    </fieldset>
+  `);
 });
 
 it('should render a default checkbox field even if it has an undefined child', () => {

@@ -195,4 +195,18 @@
   .next.icon-only .icon {
     margin: 0;
   }
+
+  .list {
+    display: contents;
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  .progressive-list {
+    display: flex;
+    list-style-type: none;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+  }
 }

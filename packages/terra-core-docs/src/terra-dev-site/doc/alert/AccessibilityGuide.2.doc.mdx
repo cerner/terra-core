@@ -1,0 +1,118 @@
+import { Notice } from "@cerner/terra-docs";
+import { Badge } from 'terra-image/package.json?dev-site-package';
+import Whitespace from '../../common/layout-helpers/Whitespace';
+import AlertActionFocusDemo from './example/AlertActionFocusDemo';
+import CustomExample from './example/CustomExample?dev-site-example';
+import CustomExampleNoTitle from './example/CustomExampleNoTitle?dev-site-example';
+
+import Hyperlink from 'terra-hyperlink';
+
+<Badge />
+
+# Accessibility Guide for Terra Alert
+
+<Notice variant="important" ariaLevel="2">
+
+Using notifications improperly may prevent some of your users from understanding your UI.
+
+</Notice>
+
+<Whitespace />
+
+## Why is this important?
+
+Terra's Alert component is a notification banner with varying criticalities that communicates cautions, errors, information, and other general information to the user in context of their workflow. As such, special consideration must be made to inform screen reader users of their presence on the page, just as sighted users' attention would be drawn to them in the visual UI.
+
+## Accessibility Considerations
+
+### Code Considerations
+
+#### Consistency
+
+The use of each variant of this component should be consistent in order to provide the best user experience.
+
+#### Notification Criticality
+
+The user only expects to be interrupted for notifications (alerts) that are of high criticality. This behavior is referred to as "assertive".
+
+Less critical notifications should wait until the screen reader has finished reading the current item before notification content is read to the user. This behavior is referred to as "polite".
+
+By default, Terra Alert will set the role to `"alert"` (or assertive) for the `alert` notification type and `"status"` (or polite) for all other notification types.
+Terra Alert has an optional `role` prop but should be used carefully when the default does not meet accessibility or usability expectations.
+
+| Role | Purpose |
+| --- | --- |
+| Alert | See <Hyperlink href="https://w3c.github.io/aria/#alert" variant="external">WAI-ARIA Alert Role</Hyperlink>[<sup>[1]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region with important, and usually time-sensitive, information." |
+| Status | See <Hyperlink href="https://w3c.github.io/aria/#status" variant="external">WAI-ARIA Status Role</Hyperlink>[<sup>[1]</sup>](/components/cerner-terra-core-docs/alert/accessibility-guide#linked-references) - "A type of live region whose content is advisory information for the user but is not important enough to justify an alert, often but not necessarily presented as a status bar." |
+
+#### Alert Notification Type
+
+<Notice variant="ux-recommendation" ariaLevel="6">
+
+It may be more appropriate to use a modal or component with `alertdialog` if presenting the user with an alert and required action to address the alert.
+
+</Notice>
+
+- The `"alert"` role/notification type will cause keyboard navigation focus to shift to the notification banner body.
+        This helps users quickly take action when it is critical but can optionally be disabled via the `disableAlertActionFocus` prop.
+- Notifications with `"alert"` role/notification type do not need to explicitly be in an aria-live region.
+        It is recommended to separate them from less critical notification banners to prevent assistive technologies from confusing them.
+- By default, Terra Alert uses the `"alert"` notification type.
+
+Demo of Terra Alert with an action element.
+
+<AlertActionFocusDemo />
+
+#### Assistive technologies
+
+In combination with the notification criticality, screen reader users should understand the importance of the notification when presented.
+
+* The `"alert"` role will interrupt the user and announce the high critical notification immediately.
+* The `"status"` role will not interrupt the user and present politely.
+
+#### Live regions
+
+- For less critical notifications (non-alerts), the notification banner should be in an `aria-live="polite"` region.
+    - For screen readers to pick up and announce a newly rendered notification, the notification banner must be within an aria-live region.
+    To enable assistive technologies the ability to inform the user of a less critical notification in a polite (non-interruptive) way, ensure the notification banner is
+    within an element where aria-live="polite".
+- Avoid mixing alert notifications and less critical notifications in the same region.
+    - The `"alert"` notification type/role implicitly has aria-live value of `assertive` and will interrupt without being in a region where aria-live was previously set.
+    It is recommended to separate critical alert notifications from less critical notification banners to prevent any confusion.
+
+<div aria-label="Example code">
+
+    import Alert from 'terra-alert';
+
+    <>
+        // This less critical notification should be in polite aria-live region so screen reader users are notified.
+        <div aria-live="polite">
+            {isOpen && (
+                <Alert type="success">
+                    This notification is a less critical and should be polite.
+                </Alert>
+            )}
+        </div>
+
+        // Alert notifications are implicitly assertive, no aria-live needed
+        // It is recommended to keep these separate from polite aria-live regions.
+        <div>
+            {isOpen && (
+                <Alert type="alert">
+                    This notification is a critical alert that is interruptive.
+                </Alert>
+            )}
+        </div>
+    </>
+
+</div>
+
+#### Custom Titles
+
+- Custom notification banners should have a title provided to the `title` prop in order to be accessible.
+
+<CustomExampleNoTitle title="Bad: Avoid notifications with no titles" />
+<CustomExample title="Good: Titles help users understand notifications" />
+
+## Linked References:
+1. ["Accessible Rich Internet Applications (WAI-ARIA) 1.3"](https://w3c.github.io/aria/). World Wide Web Consortium. Last updated 01 May 2023. Retrieved 2 May 2023.

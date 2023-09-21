@@ -1,11 +1,11 @@
 import React from 'react';
-import IconTag from 'terra-icon/lib/icon/IconTag';
+import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import Tag from 'terra-tag';
 
 const TagFallbacks = () => (
   <div>
-    <Tag text="No OnClick/HREF Tag" />
-    <Tag icon={<IconTag />} text="Icon &amp; Text - No OnClick/HREF Tag" />
+    <Tag text="AF-Atrial Fibrillation" />
+    <Tag icon={<IconPerson />} text="Bronchitis" />
   </div>
 );
 

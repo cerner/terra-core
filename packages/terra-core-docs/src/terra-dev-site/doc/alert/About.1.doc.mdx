@@ -1,4 +1,5 @@
 import { Badge } from 'terra-alert/package.json?dev-site-package';
+import { Notice } from "@cerner/terra-docs";
 
 import AlertExample from './example/AlertExample?dev-site-example';
 import ErrorExample from './example/ErrorExample?dev-site-example';
@@ -14,15 +15,15 @@ import ActionExample from './example/ActionExample?dev-site-example';
 import DismissibleExample from './example/DismissibleExample?dev-site-example';
 import ActionAndDismissibleExample from './example/ActionAndDismissibleExample?dev-site-example';
 
-import AlertPropsTable from 'terra-alert/src/Alert?dev-site-props-table';
+import AlertPropsTable from 'terra-alert/lib/Alert?dev-site-props-table';
 
 <Badge />
 
-# Terra Alert
+# Terra Alert (Notification Banner)
 
 The Terra Alert component is a notification banner that can be rendered in your application when there is information that you want to bring to the user's attention.
 
-The Alert component supports a number of built-in notification types that render with pre-defined colors and icons that help the user understand the severity and meaning of the notification. The supported alert types and recommended uses are:
+The Alert component supports a number of built-in notification types that render with pre-defined colors and icons that help the user understand the severity and meaning of the notification. The supported notification types and recommended uses are:
 
 - `alert` - displays a critical notification for current emergencies or situations of high severity that need to be addressed promptly
 - `error` - recommended to provide feedback of a negative system status such as failures, inabilities, or limitations
@@ -33,7 +34,7 @@ The Alert component supports a number of built-in notification types that render
 - `information` - recommended to provide general awareness and information that can possibly lead to an action for something that has no associated severity.
 - `success` - recommended to provide feedback of a successful system status
 
-A custom notification type is also supported that allows your application to customize an alert that may not fit into the pre-defined types.
+A custom notification type is also supported that allows your application to customize a notification that may not fit into the pre-defined types.
 
 ## Getting Started
 
@@ -65,6 +66,48 @@ The Alert component must be composed inside the [Base][1] component with a local
 import Alert from 'terra-alert';
 ```
 
+## Accessibility
+
+For further guidance, please view the full [Accessibility Guide](./accessibility-guide).
+
+<Notice variant="important" ariaLevel="3">
+
+- The `alert` notification type will seize keyboard focus by default when an action element is present. This behavior should only be used when absolutely necessary to interrupt the user's workflow.
+- Custom notification banners should always have a title provided to the `title` prop.
+
+</Notice>
+
+#### Accessibility Guidance: Live regions
+- For less critical notifications (non-alerts), the notification banner should be in an `aria-live="polite"` region. See example code below.
+- Avoid mixing critical alert notifications and less critical notifications in the same region.
+
+<div aria-label="Example code">
+
+    import Alert from 'terra-alert';
+
+    <>
+        // This less critical notification should be in polite aria-live region so screen reader users are notified.
+        <div aria-live="polite">
+            {isOpen && (
+                <Alert type="success">
+                    This notification is a less critical and should be polite.
+                </Alert>
+            )}
+        </div>
+
+        // Alert notifications are implicitly assertive, no aria-live needed
+        // It is recommended to keep these separate from polite aria-live regions.
+        <div>
+            {isOpen && (
+                <Alert type="alert">
+                    This notification is a critical alert that is interruptive.
+                </Alert>
+            )}
+        </div>
+    </>
+
+</div>
+
 ## Component Features
 * [Cross-Browser Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#cross-browser-support)
 * [Responsive Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#responsive-support)
@@ -73,19 +116,42 @@ import Alert from 'terra-alert';
 * [Localization Support](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#internationalization-i18n)
 
 ## Examples
-<AlertExample title="Default Alert" />
-<ErrorExample title="Error Alert" />
-<WarningExample title="Warning Alert" />
-<UnsatisfiedExample title="Unsatisfied Alert" />
-<UnverifiedExample title="Unverified Alert" />
-<AdvisoryExample title="Advisory Alert" />
-<InfoExample title="Information Alert" />
-<SuccessExample title="Success Alert" />
-<CustomExample title="Custom Alert" />
-<LongTextExample title="Long Text Alert" />
-<ActionExample title="Alert with Action" />
-<DismissibleExample title="Dismissible Alert" />
-<ActionAndDismissibleExample title="Dismissible Alert with Actions" />
+<AlertExample title="Alert Notification Banner" />
+<ErrorExample title="Error Notification Banner" />
+<WarningExample title="Warning Notification Banner" />
+<UnsatisfiedExample title="Unsatisfied Notification Banner" />
+<UnverifiedExample title="Unverified Notification Banner" />
+<AdvisoryExample title="Advisory Notification Banner" />
+<InfoExample title="Information Notification Banner" />
+<SuccessExample title="Success Notification Banner" />
+<CustomExample title="Custom Notification Banner" />
+<LongTextExample title="Long Text Notification Banner" />
+<ActionExample title="Notification Banner with Action" />
+<DismissibleExample title="Dismissible Notification Banner" />
+<ActionAndDismissibleExample title="Dismissible Notification Banner with Actions" />
 
 ## Alert Props
 <AlertPropsTable />
+
+## Testing
+
+Terra Alert uses `uuid` which changes the component's description id dynamically. To mock the return value with the Jest testing library, `jest.spyOn` can be used.
+
+If Enzyme `shallow` is being used for the tests then the mock may not be required depending on the depth of the returned wrapper. However, if `mount` is used then `uuid` should be mocked as shown below:
+
+```js
+import { v4 as uuidv4 } from 'uuid';
+
+let mockSpyUuid;
+
+// using a variable may result in failures. For best results, mock return value.
+beforeAll(() => {
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
+});
+
+// restore the mock
+afterAll(() => {
+  mockSpyUuid.mockRestore();
+});
+
+```

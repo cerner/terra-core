@@ -256,3 +256,25 @@ exports[`InputField should render a valid InputField with props 1`] = `
   />
 </Field>
 `;
+
+exports[`InputField should render placeholder when showMpageFusionPlaceholder is passed 1`] = `
+<input
+  className="form-input"
+  disabled={false}
+  id="test-input"
+  name={null}
+  placeholder="Enter The Text"
+  required={false}
+/>
+`;
+
+exports[`InputField should render placeholder with null when showMpageFusionPlaceholder is not passed 1`] = `
+<input
+  className="form-input"
+  disabled={false}
+  id="test-input"
+  name={null}
+  placeholder={null}
+  required={false}
+/>
+`;

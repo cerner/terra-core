@@ -2,6 +2,52 @@
 
 ## Unreleased
 
+## 6.46.1 - (September 19, 2023)
+
+* Fixed
+  * Fixed focus issue of Invalid example `form-single-select`.
+  * Fixed safari browser minimised issue in `form-single-select`.
+  * Fixed selection not working with space key in `form-single-select`.
+  * Fixed enter key not expanding the combo box in `form-single-select` .
+
+## 6.46.0 - (August 25, 2023)
+
+* Added
+  * Added aria-label to make screenreader to announce the selected option.
+
+## 6.45.0 - (August 23, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.44.0 - (August 1, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 6.43.0 - (July 13, 2023)
+
+* Changed
+  * Minor dependency version bump.
+
+## 6.42.1 - (July 11, 2023)
+
+* Fixed
+  * Fixed `Native Select` to allow updating the value prop in subsequent renders.
+  * Fixed VoiceOver reading the index twice in `terra-form-single-select`.
+
+## 6.42.0 - (June 28, 2023)
+
+* Changed
+  * Minor dependency version bump
+  * Removed aria-checked to make screen readers announce Selected in `terra-form-select`.
+  * Updated focus to shift back on `select` upon key press or mouse click event on `terra-form-single-select` in Safari browser.
+
+## 6.41.0 - (May 9, 2023)
+
+* Added
+  * Added `isFilterStyle` prop to native-select-field.
+
 ## 6.40.0 - (April 27, 2023)
 
 * Added

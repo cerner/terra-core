@@ -56,9 +56,19 @@ const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   identifiers: PropTypes.object,
   /**
+   * Additional key value full titles for abbreviated/shortened identifiers of a person's demographic information
+   */
+  identifiersLongForm: PropTypes.objectOf(PropTypes.string),
+  /**
    * Full Name of the person
    */
   personName: PropTypes.string,
+  /**
+   * Sets the heading level of the person's name. One of `1`, `2`, `3`, `4`, `5`, `6`.
+   * This helps screen readers announce appropriate heading levels.
+   * Changing `personNameHeadingLevel` will not visually change the style of the content.
+   */
+  personNameHeadingLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   /**
    * Photo to display in the banner
    */
@@ -68,17 +78,25 @@ const propTypes = {
    */
   postMenstrualAge: PropTypes.string,
   /**
-   * Label to display for the PostMenstrualAgeLabel
+   * Label to display for the Post Menstrual Age
    */
   postMenstrualAgeLabel: PropTypes.string,
   /**
-  * Text Description of the Post Menstrural Age label that is read by screen readers
+   * Text Description of the Post Menstrual Age label that is read by screen readers
    */
   postMenstrualAgeFullText: PropTypes.string,
   /**
    * The persons preferred first name if they have one.
    */
   preferredFirstName: PropTypes.string,
+  /**
+   * Title for Age that is read by screen readers
+   */
+  ageTitle: PropTypes.string,
+  /**
+   * Title for Gender that is read by screen readers
+   */
+  genderTitle: PropTypes.string,
 };
 
 const defaultProps = {
@@ -94,12 +112,16 @@ const defaultProps = {
   gestationalAgeLabel: 'GA',
   gestationalAgeFullText: 'Gestational Age',
   identifiers: {},
+  identifiersLongForm: {},
   personName: '--',
+  personNameHeadingLevel: 2,
   photo: null,
   postMenstrualAge: null,
   postMenstrualAgeLabel: 'PMA',
   postMenstrualAgeFullText: 'Post Menstrual Age',
   preferredFirstName: null,
+  ageTitle: 'Age',
+  genderTitle: 'Gender',
 };
 
 const DemographicsBannerDisplay = props => (

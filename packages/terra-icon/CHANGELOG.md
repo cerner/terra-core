@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## 3.57.0 - (September 19, 2023)
+
+* Added
+  * Added named exports. Icons can now be imported as `import { iconName } from 'terra-icon';`.
+ 
+## 3.56.0 - (August 23, 2023)
+
+* Changed
+  * Updated to `one-cerner-style-icons` v1.51.0
+
+## 3.55.0 - (August 1, 2023)
+
+* Changed
+  * Changed the order of imports in parseSvg and renderJsx files.
+
 ## 3.54.0 - (April 27, 2023)
 
 * Changed

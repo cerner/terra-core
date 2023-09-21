@@ -2,6 +2,72 @@
 
 ## Unreleased
 
+## 4.79.0 - (September 19, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.78.0 - (August 25, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.77.0 - (August 23, 2023)
+
+* Fixed
+  * Fixed `terra-alert` focus blocking content from being click-able.
+
+## 4.76.0 - (August 18, 2023)
+
+* Changed
+  * Updated `terra-alert` focus on the notification banners content when notification is an alert and includes an action element to improve screen reader experience.
+
+## 4.75.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.74.0 - (August 11, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.73.0 - (August 8, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.72.0 - (August 2, 2023)
+
+  * Changed
+    *  Locked `uuid` dependency to `3.4.0`.
+
+## 4.71.0 - (August 1, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.70.0 - (July 13, 2023)
+
+  * Changed
+    *  Locked `uuid` dependency to `7.0.3`.
+
+## 4.69.0 - (June 14, 2023)
+
+* Added
+  * Added focus shift to the rendered notification banners content when notification is an alert and includes an action element.
+
+* Changed
+  * Locked `uuid` dependency to `8.2.0` to maintain IE compatibility.
+  * Updated the Dutch translation for `Terra.alert.success`.
+
+## 4.68.0 - (May 9, 2023)
+
+* Changed
+  * Added screen reader support to programmatically associate an alert's text to its dismiss button.
+  * Added text-wrapping at high magnification and narrow screen widths.
+  * Changed Alert role attribute with default of "status" for all types except critical alert type and added new optional `role` prop.
+
 ## 4.67.0 - (April 27, 2023)
 
 * Changed

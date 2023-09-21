@@ -1,16 +1,24 @@
 /* eslint-disable react/jsx-boolean-value */
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 import Fieldset from '../../src/Fieldset';
+
+let mockSpyUuid;
+beforeAll(() => {
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
+});
+
+afterAll(() => {
+  mockSpyUuid.mockRestore();
+});
 
 it('should render a default component', () => {
   const field = (<Fieldset />);
   const wrapper = shallow(field);
   expect(wrapper).toMatchSnapshot();
 });
-
-jest.mock('uuid/v4', () => () => '00000000-0000-0000-0000-000000000000');
 
 it('should render a Fieldset when all the possible props are passed into it', () => {
   const input = (
@@ -26,6 +34,16 @@ it('should render a Fieldset when all the possible props are passed into it', ()
   );
 
   const wrapper = shallow(input);
+
+  const legendTag = wrapper.find('.healtheintent-legend');
+  expect(legendTag.prop('id')).toEqual('terra-fieldset-legend-00000000-0000-0000-0000-000000000000');
+
+  const smallTag = wrapper.find('.help-text');
+  expect(smallTag.prop('id')).toEqual('terra-fieldset-help-00000000-0000-0000-0000-000000000000');
+
+  const inputTag = wrapper.find('.fieldset-children > input');
+  expect(inputTag.prop('aria-labelledby')).toEqual('terra-fieldset-legend-00000000-0000-0000-0000-000000000000 terra-fieldset-help-00000000-0000-0000-0000-000000000000');
+
   expect(wrapper).toMatchSnapshot();
 });
 
