@@ -244,7 +244,7 @@ class Button extends React.Component {
 
     const theme = this.context;
     const isMac = () => navigator.userAgent.indexOf('Mac') !== -1 && navigator.userAgent.indexOf('Win') === -1;
-    const buttonLabelCx = isMac ? 'button-label-mac' : 'button-label-win';
+    const buttonLabelCx = isMac() ? 'button-label-mac' : 'button-label-win';
 
     const buttonClasses = classNames(
       cx([
