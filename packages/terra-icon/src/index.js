@@ -652,4 +652,4 @@ export {
   IconXSymbolLight,
   IconZoomIn,
   IconZoomOut,
-}
+};

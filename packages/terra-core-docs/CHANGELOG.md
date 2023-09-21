@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Changed
-  * Updated icon example. 
+  * Updated icon example to specify `IconCeMarking` is private. 
 
 ## 1.40.0 - (September 19, 2023)
 
