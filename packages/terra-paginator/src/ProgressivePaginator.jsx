@@ -47,7 +47,7 @@ const propTypes = {
   intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
   /**
    * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
-   * Allows user to set custom page label. _(usage note: User must pass translated text)_. It should not contain page number and total count details, which will lead to conflicts with build-in accessibility ARIA contexts. 
+   * Allows user to set custom page label. _(usage note: User must pass translated text)_. It should not contain page number and total count details, which will lead to conflicts with build-in accessibility ARIA contexts.
    */
   pageLabel: PropTypes.string,
 };
