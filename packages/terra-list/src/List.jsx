@@ -147,14 +147,23 @@ const List = ({
   };
   const handleKeyDown = event => {
     const listItems = listNode.querySelectorAll('[data-item-show-focus]');
+    const currentIndex = Array.from(listItems).indexOf(event.target);
+    const lastIndex = listItems.length - 1;
+
     if (event.nativeEvent.keyCode === KeyCode.KEY_END) {
       event.preventDefault();
       listItems[listItems.length - 1].focus();
-    }
-
-    if (event.nativeEvent.keyCode === KeyCode.KEY_HOME) {
+    } else if (event.nativeEvent.keyCode === KeyCode.KEY_HOME) {
       event.preventDefault();
       listItems[0].focus();
+    } else if (event.nativeEvent.keyCode === KeyCode.KEY_UP) {
+      event.preventDefault();
+      const previousIndex = currentIndex > 0 ? currentIndex - 1 : lastIndex;
+      listItems[previousIndex].focus();
+    } else if (event.nativeEvent.keyCode === KeyCode.KEY_DOWN) {
+      event.preventDefault();
+      const nextIndex = currentIndex < lastIndex ? currentIndex + 1 : 0;
+      listItems[nextIndex].focus();
     }
   };
 
