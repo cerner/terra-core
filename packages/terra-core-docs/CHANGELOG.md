@@ -2,7 +2,10 @@
 
 ## Unreleased
 
-## 1.40.0 - (September 19, 2023)
+* Added
+  * Added cyclic navigation to support keyboard usage with arrow keys.
+ 
+ ## 1.40.0 - (September 19, 2023)
 
 * Updated
   *  Updated doc site for `terra-form-single-select` and `terra-form-single-select-field`.

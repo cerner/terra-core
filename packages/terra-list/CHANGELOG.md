@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+ * Added cyclic navigation to support keyboard usage with arrow keys.
 
 ## 4.61.0 - (September 19, 2023)
 
