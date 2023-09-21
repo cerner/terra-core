@@ -48,6 +48,11 @@ const propTypes = {
   maximumWidth: PropTypes.number,
 
   /**
+   * Boolean value indicating whether or not the column header is selectable.
+  */
+  isSelectable: PropTypes.bool,
+
+  /**
    * Boolean value indicating whether or not the column header is resizable.
    */
   isResizable: PropTypes.bool,
@@ -68,9 +73,21 @@ const propTypes = {
   headerHeight: PropTypes.string.isRequired,
 
   /**
+   * The cell's row position in the grid. This is zero based.
+   */
+  rowIndex: PropTypes.number,
+
+  /**
    * The cell's column position in the table. This is zero based.
    */
   columnIndex: PropTypes.number,
+
+  /**
+   * Function that is called when a selectable header cell is selected. Parameters:
+   * @param {string} rowId rowId
+   * @param {string} columnId columnId
+   */
+  onColumnSelect: PropTypes.func,
 
   /**
    * Function that is called when the mouse down event is triggered on the column resize handle.
@@ -87,6 +104,7 @@ const propTypes = {
 const defaultProps = {
   hasError: false,
   isResizable: true,
+  isSelectable: false,
 };
 
 const ColumnHeaderCell = (props) => {
@@ -96,6 +114,7 @@ const ColumnHeaderCell = (props) => {
     sortIndicator,
     hasError,
     isResizable,
+    isSelectable,
     tableHeight,
     width,
     minimumWidth,
@@ -103,7 +122,9 @@ const ColumnHeaderCell = (props) => {
     headerHeight,
     intl,
     columnIndex,
+    onColumnSelect,
     onResizeMouseDown,
+    rowIndex,
   } = props;
 
   const columnContext = useContext(ColumnContext);
@@ -118,6 +139,12 @@ const ColumnHeaderCell = (props) => {
       onResizeMouseDown(event, columnIndex, columnHeaderCell.current.offsetWidth);
     }
   }, [columnIndex, onResizeMouseDown]);
+
+  // Handle column header selection via the mouse click.
+  const handleMouseDown = (event) => {
+    onColumnSelect(id, { row: rowIndex, col: columnIndex });
+    event.stopPropagation();
+  };
 
   let sortIndicatorIcon;
   const errorIcon = hasError && <IconError a11yLabel={intl.formatMessage({ id: 'Terra.table.columnError' })} className={cx('error-icon')} />;
@@ -149,11 +176,12 @@ const ColumnHeaderCell = (props) => {
     <th
       ref={(columnHeaderCellRef)}
       key={id}
-      className={cx('column-header', theme.className, { pinned: columnIndex < columnContext.pinnedColumnOffsets.length })}
+      className={cx('column-header', theme.className, { selectable: isSelectable, pinned: columnIndex < columnContext.pinnedColumnOffsets.length })}
       tabIndex={-1}
       role="columnheader"
       scope="col"
       aria-sort={sortIndicator}
+      onMouseDown={isSelectable && onColumnSelect ? handleMouseDown : undefined}
       // eslint-disable-next-line react/forbid-dom-props
       style={{ width: `${width}px`, height: headerHeight, left: cellLeftEdge }}
     >
@@ -170,6 +198,7 @@ const ColumnHeaderCell = (props) => {
         height={tableHeight}
         minimumWidth={minimumWidth}
         maximumWidth={maximumWidth}
+        onMouseDown={isSelectable && onColumnSelect ? handleMouseDown : undefined}
         onResizeMouseDown={onResizeHandleMouseDown}
       />
       )}

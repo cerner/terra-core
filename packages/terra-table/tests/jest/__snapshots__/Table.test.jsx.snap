@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Table verifies that the grid created is consistent with the rows and overflowColumns props 1`] = `
+exports[`Table verifies that the table created is consistent with the rows and overflowColumns props 1`] = `
 <div
   className="table-container"
 >
@@ -44,6 +44,7 @@ exports[`Table verifies that the grid created is consistent with the rows and ov
           ]
         }
         headerHeight="2.5rem"
+        onColumnSelect={[Function]}
         onResizeMouseDown={[Function]}
         tableHeight={0}
       />
@@ -250,6 +251,7 @@ exports[`Table verifies the rows are created with the right props 1`] = `
           ]
         }
         headerHeight="2.5rem"
+        onColumnSelect={[Function]}
         onResizeMouseDown={[Function]}
         tableHeight={0}
       />

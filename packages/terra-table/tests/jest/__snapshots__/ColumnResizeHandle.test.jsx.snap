@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnResizeHandle renders a default column resize handle 1`] = `
+<InjectIntl(ColumnResizeHandle)
+  columnText="Vitals"
+  columnWidth={200}
+  height={500}
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": null,
+      "now": [Function],
+      "onError": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  maximumWidth={300}
+  minimumWidth={60}
+  onResizeMouseDown={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "preventDefault": [Function],
+            "stopPropagation": [Function],
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <ColumnResizeHandle
+    columnText="Vitals"
+    columnWidth={200}
+    height={500}
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    maximumWidth={300}
+    minimumWidth={60}
+    onResizeMouseDown={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "preventDefault": [Function],
+              "stopPropagation": [Function],
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+  >
+    <div
+      aria-hidden={true}
+      aria-label="Vitals"
+      aria-valuemax={300}
+      aria-valuemin={60}
+      aria-valuenow={200}
+      aria-valuetext="Terra.table.resizeHandleValueText"
+      className="resize-handle"
+      draggable={true}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="slider"
+      style={
+        Object {
+          "height": "500px",
+        }
+      }
+      tabIndex={-1}
+    />
+  </ColumnResizeHandle>
+</InjectIntl(ColumnResizeHandle)>
+`;

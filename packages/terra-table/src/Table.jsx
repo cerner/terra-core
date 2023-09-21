@@ -77,6 +77,12 @@ const propTypes = {
      * @param {string} requestedWidth requestedWidth
      */
   onColumnResize: PropTypes.func,
+
+  /**
+   * Callback function that is called when a selectable column is selected. Parameters:
+   *  @param {string} columnId columnId
+   */
+  onColumnSelect: PropTypes.func,
 };
 
 const defaultProps = {
@@ -101,6 +107,7 @@ function Table(props) {
     pinnedColumns,
     overflowColumns,
     onColumnResize,
+    onColumnSelect,
     defaultColumnWidth,
     columnHeaderHeight,
     rowHeight,
@@ -198,6 +205,12 @@ function Table(props) {
   // -------------------------------------
   // event handlers
 
+  const handleColumnSelect = useCallback((columnId) => {
+    if (onColumnSelect) {
+      onColumnSelect(columnId);
+    }
+  }, [onColumnSelect]);
+
   const onResizeMouseDown = useCallback((event, index, resizeColumnWidth) => {
     // Store current table and column values for resize calculations
     tableWidth.current = grid.current.offsetWidth;
@@ -258,6 +271,7 @@ function Table(props) {
             headerHeight={columnHeaderHeight}
             tableHeight={tableHeight}
             onResizeMouseDown={onResizeMouseDown}
+            onColumnSelect={handleColumnSelect}
           />
           <tbody>
             {rows.map((row, index) => (

@@ -4,6 +4,7 @@ import { mountWithIntl, shallowWithIntl } from 'terra-enzyme-intl';
 import Table from '../../src/Table';
 import ColumnHeader from '../../src/subcomponents/ColumnHeader';
 import Row from '../../src/subcomponents/Row';
+import ERRORS from '../../src/utils/constants';
 
 // Source data for tests
 const tableData = {
@@ -50,7 +51,7 @@ const tableData = {
 };
 
 describe('Table', () => {
-  it('verifies that the grid created is consistent with the rows and overflowColumns props', () => {
+  it('verifies that the table created is consistent with the rows and overflowColumns props', () => {
     const wrapper = shallowWithIntl(
       <Table
         id="test-terra-table"
@@ -94,9 +95,7 @@ describe('Table', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
-});
 
-describe('with pinned columns', () => {
   it('sets pinnedColumns as pinned', () => {
     const pinnedColumns = tableData.cols.slice(0, 2);
 
@@ -112,5 +111,55 @@ describe('with pinned columns', () => {
     const pinnedColumnHeaderCells = wrapper.find('.pinned');
 
     expect(pinnedColumnHeaderCells).toHaveLength(pinnedColumns.length * (tableData.rows.length + 1));
+  });
+});
+
+describe('Error handling - prop types', () => {
+  beforeAll(() => {
+    jest.spyOn(console, 'error').mockImplementation();
+    jest.spyOn(console, 'warn').mockImplementation();
+  });
+
+  afterAll(() => {
+    console.error.mockRestore(); // eslint-disable-line no-console
+    console.warn.mockRestore(); // eslint-disable-line no-console
+  });
+
+  it('throws an error if rowHeaderIndex is not an integer', () => {
+    shallowWithIntl(
+      <Table
+        id="test-terra-data-grid"
+        rows={tableData.rows}
+        rowHeaderIndex="2"
+      />,
+    ).dive();
+
+    expect(console.error).toHaveBeenCalledWith(expect.stringContaining(ERRORS.ROW_HEADER_INDEX_NOT_AN_INTEGER)); // eslint-disable-line no-console
+  });
+
+  it('throws an error if rowHeaderIndex is not a positive integer', () => {
+    shallowWithIntl(
+      <Table
+        id="test-terra-data-grid"
+        rows={tableData.rows}
+        rowHeaderIndex={-1}
+      />,
+    ).dive();
+
+    expect(console.error).toHaveBeenCalledWith(expect.stringContaining(ERRORS.ROW_HEADER_INDEX_LESS_THAN_ZERO)); // eslint-disable-line no-console
+  });
+
+  it('throws an error if rowHeaderIndex is greater than the length of pinned columns', () => {
+    shallowWithIntl(
+      <Table
+        id="test-terra-data-grid"
+        pinnedColumns={tableData.cols.slice(0, 2)}
+        overflowColumns={tableData.cols.slice(2)}
+        rowHeaderIndex={2}
+        rows={tableData.rows}
+      />,
+    ).dive();
+
+    expect(console.error).toHaveBeenCalledWith(expect.stringContaining(ERRORS.ROW_HEADER_INDEX_EXCEEDS_PINNED)); // eslint-disable-line no-console
   });
 });

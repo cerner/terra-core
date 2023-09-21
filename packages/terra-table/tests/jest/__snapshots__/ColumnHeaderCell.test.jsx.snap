@@ -1,0 +1,495 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnHeaderCell renders a column header cell with ascending sort 1`] = `
+<th
+  aria-sort="ascending"
+  className="column-header selectable"
+  key="Column-0"
+  role="columnheader"
+  scope="col"
+  style={
+    Object {
+      "height": "150px",
+      "left": null,
+      "width": "100px",
+    }
+  }
+  tabIndex={-1}
+>
+  <div
+    className="header-container"
+    role="button"
+  >
+    <span>
+       Vitals
+    </span>
+    <IconUp
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <InjectIntl(ColumnResizeHandle)
+    columnIndex={0}
+    columnText=" Vitals"
+    columnWidth={100}
+    onResizeMouseDown={[Function]}
+  />
+</th>
+`;
+
+exports[`ColumnHeaderCell renders a column header cell with ascending sort and error 1`] = `
+<th
+  aria-sort="ascending"
+  className="column-header"
+  key="Column-0"
+  role="columnheader"
+  scope="col"
+  style={
+    Object {
+      "height": "150px",
+      "left": null,
+      "width": "100px",
+    }
+  }
+  tabIndex={-1}
+>
+  <div
+    className="header-container"
+    role="button"
+  >
+    <IconError
+      a11yLabel="Terra.table.columnError"
+      className="error-icon"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+    <span>
+       Vitals
+    </span>
+    <IconUp
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <InjectIntl(ColumnResizeHandle)
+    columnIndex={0}
+    columnText=" Vitals"
+    columnWidth={100}
+    onResizeMouseDown={[Function]}
+  />
+</th>
+`;
+
+exports[`ColumnHeaderCell renders a column header cell with descending sort 1`] = `
+<th
+  aria-sort="descending"
+  className="column-header selectable"
+  key="Column-0"
+  role="columnheader"
+  scope="col"
+  style={
+    Object {
+      "height": "150px",
+      "left": null,
+      "width": "100px",
+    }
+  }
+  tabIndex={-1}
+>
+  <div
+    className="header-container"
+    role="button"
+  >
+    <span>
+       Vitals
+    </span>
+    <IconDown
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <InjectIntl(ColumnResizeHandle)
+    columnIndex={0}
+    columnText=" Vitals"
+    columnWidth={100}
+    onResizeMouseDown={[Function]}
+  />
+</th>
+`;
+
+exports[`ColumnHeaderCell renders a column header cell with error 1`] = `
+<th
+  className="column-header"
+  key="Column-0"
+  role="columnheader"
+  scope="col"
+  style={
+    Object {
+      "height": "150px",
+      "left": null,
+      "width": "100px",
+    }
+  }
+  tabIndex={-1}
+>
+  <div
+    className="header-container"
+    role="button"
+  >
+    <IconError
+      a11yLabel="Terra.table.columnError"
+      className="error-icon"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+    <span>
+       Vitals
+    </span>
+  </div>
+  <InjectIntl(ColumnResizeHandle)
+    columnIndex={0}
+    columnText=" Vitals"
+    columnWidth={100}
+    onResizeMouseDown={[Function]}
+  />
+</th>
+`;
+
+exports[`ColumnHeaderCell renders a column header cell with onColumnSelect callback 1`] = `
+<th
+  aria-sort="ascending"
+  className="column-header selectable"
+  key="Column-0"
+  onMouseDown={[Function]}
+  role="columnheader"
+  scope="col"
+  style={
+    Object {
+      "height": "150px",
+      "left": null,
+      "width": "100px",
+    }
+  }
+  tabIndex={-1}
+>
+  <div
+    className="header-container"
+    role="button"
+  >
+    <IconError
+      a11yLabel="Terra.table.columnError"
+      className="error-icon"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+    <span>
+       Vitals
+    </span>
+    <IconUp
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <InjectIntl(ColumnResizeHandle)
+    columnIndex={0}
+    columnText=" Vitals"
+    columnWidth={100}
+    onMouseDown={[Function]}
+    onResizeMouseDown={[Function]}
+  />
+</th>
+`;
+
+exports[`ColumnHeaderCell renders a column header cell with onColumnSelect callback but not selectable 1`] = `
+<th
+  aria-sort="ascending"
+  className="column-header"
+  key="Column-0"
+  role="columnheader"
+  scope="col"
+  style={
+    Object {
+      "height": "150px",
+      "left": null,
+      "width": "100px",
+    }
+  }
+  tabIndex={-1}
+>
+  <div
+    className="header-container"
+    role="button"
+  >
+    <IconError
+      a11yLabel="Terra.table.columnError"
+      className="error-icon"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+    <span>
+       Vitals
+    </span>
+    <IconUp
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  </div>
+  <InjectIntl(ColumnResizeHandle)
+    columnIndex={0}
+    columnText=" Vitals"
+    columnWidth={100}
+    onResizeMouseDown={[Function]}
+  />
+</th>
+`;
+
+exports[`ColumnHeaderCell renders a default column header cell 1`] = `
+<th
+  className="column-header"
+  key="Column-0"
+  role="columnheader"
+  scope="col"
+  style={
+    Object {
+      "height": "150px",
+      "left": null,
+      "width": "100px",
+    }
+  }
+  tabIndex={-1}
+>
+  <div
+    className="header-container"
+    role="button"
+  >
+    <span>
+       Vitals
+    </span>
+  </div>
+  <InjectIntl(ColumnResizeHandle)
+    columnIndex={0}
+    columnText=" Vitals"
+    columnWidth={100}
+    onResizeMouseDown={[Function]}
+  />
+</th>
+`;
+
+exports[`ColumnHeaderCell renders a pinned column header cell 1`] = `
+<InjectIntl(ColumnHeaderCell)
+  columnIndex={0}
+  displayName=" Vitals"
+  hasError={true}
+  headerHeight="150px"
+  id="Column-0"
+  sortIndicator="ascending"
+  width={100}
+>
+  <ColumnHeaderCell
+    columnIndex={0}
+    displayName=" Vitals"
+    hasError={true}
+    headerHeight="150px"
+    id="Column-0"
+    intl={
+      Object {
+        "defaultFormats": Object {},
+        "defaultLocale": "en",
+        "formatDate": [Function],
+        "formatHTMLMessage": [Function],
+        "formatMessage": [Function],
+        "formatNumber": [Function],
+        "formatPlural": [Function],
+        "formatRelative": [Function],
+        "formatTime": [Function],
+        "formats": Object {},
+        "formatters": Object {
+          "getDateTimeFormat": [Function],
+          "getMessageFormat": [Function],
+          "getNumberFormat": [Function],
+          "getPluralFormat": [Function],
+          "getRelativeFormat": [Function],
+        },
+        "locale": "en",
+        "messages": null,
+        "now": [Function],
+        "onError": [Function],
+        "textComponent": "span",
+        "timeZone": null,
+      }
+    }
+    isResizable={true}
+    isSelectable={false}
+    sortIndicator="ascending"
+    width={100}
+  >
+    <th
+      aria-sort="ascending"
+      className="column-header pinned"
+      key="Column-0"
+      role="columnheader"
+      scope="col"
+      style={
+        Object {
+          "height": "150px",
+          "left": 0,
+          "width": "100px",
+        }
+      }
+      tabIndex={-1}
+    >
+      <div
+        className="header-container"
+        role="button"
+      >
+        <IconError
+          a11yLabel="Terra.table.columnError"
+          className="error-icon"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            a11yLabel="Terra.table.columnError"
+            className="IconError error-icon"
+            focusable="false"
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              className="tui-Icon icon IconError error-icon"
+              focusable="false"
+              height="1em"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Terra.table.columnError
+              </title>
+              <path
+                d="M24 0c13.3 0 24 10.7 24 24S37.3 48 24 48 0 37.3 0 24C0 10.8 10.7 0 23.9 0h.1z"
+                fill="#E50000"
+              />
+              <path
+                d="M7 21.5h34v5H7v-5z"
+                fill="#FFF"
+              />
+            </svg>
+          </IconBase>
+        </IconError>
+        <span>
+           Vitals
+        </span>
+        <IconUp
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <IconBase
+            data-name="Layer 1"
+            focusable="false"
+            height="1em"
+            isBidi={false}
+            isSpin={false}
+            viewBox="0 0 48 48"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              className="tui-Icon icon"
+              data-name="Layer 1"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              viewBox="0 0 48 48"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 0 .1 23.5l3.8 3.8L21 10.6V48h6V10.6l17.1 16.7 3.8-3.8z"
+              />
+            </svg>
+          </IconBase>
+        </IconUp>
+      </div>
+      <InjectIntl(ColumnResizeHandle)
+        columnIndex={0}
+        columnText=" Vitals"
+        columnWidth={100}
+        onResizeMouseDown={[Function]}
+      >
+        <ColumnResizeHandle
+          columnIndex={0}
+          columnText=" Vitals"
+          columnWidth={100}
+          intl={
+            Object {
+              "defaultFormats": Object {},
+              "defaultLocale": "en",
+              "formatDate": [Function],
+              "formatHTMLMessage": [Function],
+              "formatMessage": [Function],
+              "formatNumber": [Function],
+              "formatPlural": [Function],
+              "formatRelative": [Function],
+              "formatTime": [Function],
+              "formats": Object {},
+              "formatters": Object {
+                "getDateTimeFormat": [Function],
+                "getMessageFormat": [Function],
+                "getNumberFormat": [Function],
+                "getPluralFormat": [Function],
+                "getRelativeFormat": [Function],
+              },
+              "locale": "en",
+              "messages": null,
+              "now": [Function],
+              "onError": [Function],
+              "textComponent": "span",
+              "timeZone": null,
+            }
+          }
+          onResizeMouseDown={[Function]}
+        >
+          <div
+            aria-hidden={true}
+            aria-label=" Vitals"
+            aria-valuenow={100}
+            aria-valuetext="Terra.table.resizeHandleValueText"
+            className="resize-handle"
+            draggable={true}
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            role="slider"
+            style={
+              Object {
+                "height": "undefinedpx",
+              }
+            }
+            tabIndex={-1}
+          />
+        </ColumnResizeHandle>
+      </InjectIntl(ColumnResizeHandle)>
+      <div
+        className="pinned-columns-divider"
+        style={
+          Object {
+            "height": undefined,
+            "left": 99,
+          }
+        }
+      />
+    </th>
+  </ColumnHeaderCell>
+</InjectIntl(ColumnHeaderCell)>
+`;
