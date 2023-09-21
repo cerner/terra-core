@@ -74,9 +74,9 @@ import IconDischargeComplete from './icon/IconDischargeComplete';
 import IconDischargeCompleteLowLight from './icon/IconDischargeCompleteLowLight';
 import IconDischargeOverDue from './icon/IconDischargeOverDue';
 import IconDischargeOverDueLowLight from './icon/IconDischargeOverDueLowLight';
+import IconDoNotDisturb from './icon/IconDoNotDisturb';
 import IconDocumentPlus from './icon/IconDocumentPlus';
 import IconDocuments from './icon/IconDocuments';
-import IconDoNotDisturb from './icon/IconDoNotDisturb';
 import IconDoorOpen from './icon/IconDoorOpen';
 import IconDoubleChevronLeft from './icon/IconDoubleChevronLeft';
 import IconDoubleChevronRight from './icon/IconDoubleChevronRight';
@@ -136,6 +136,7 @@ import IconHighPriority from './icon/IconHighPriority';
 import IconHold from './icon/IconHold';
 import IconHospital from './icon/IconHospital';
 import IconHouse from './icon/IconHouse';
+import IconIPass from './icon/IconIPass';
 import IconImage from './icon/IconImage';
 import IconImplant from './icon/IconImplant';
 import IconIncomingCall from './icon/IconIncomingCall';
@@ -148,7 +149,6 @@ import IconInformationInverseLowLight from './icon/IconInformationInverseLowLigh
 import IconInformationLowLight from './icon/IconInformationLowLight';
 import IconInformationStatic from './icon/IconInformationStatic';
 import IconInformationThemeable from './icon/IconInformationThemeable';
-import IconIPass from './icon/IconIPass';
 import IconItalicI from './icon/IconItalicI';
 import IconKeyboard from './icon/IconKeyboard';
 import IconKnurling from './icon/IconKnurling';
@@ -174,9 +174,9 @@ import IconMediaRecord from './icon/IconMediaRecord';
 import IconMediaRewind from './icon/IconMediaRewind';
 import IconMediaStop from './icon/IconMediaStop';
 import IconMedicationTablet from './icon/IconMedicationTablet';
-import IconMedicationTabletOutline from './icon/IconMedicationTabletOutline';
 import IconMedicationTabletHalf from './icon/IconMedicationTabletHalf';
 import IconMedicationTabletHalfOutline from './icon/IconMedicationTabletHalfOutline';
+import IconMedicationTabletOutline from './icon/IconMedicationTabletOutline';
 import IconMenu from './icon/IconMenu';
 import IconMerge from './icon/IconMerge';
 import IconMicrophone from './icon/IconMicrophone';
@@ -188,21 +188,21 @@ import IconMissedCall from './icon/IconMissedCall';
 import IconModerate from './icon/IconModerate';
 import IconModerateLowLight from './icon/IconModerateLowLight';
 import IconModified from './icon/IconModified';
+import IconMultipleResultsCritical from './icon/IconMultipleResultsCritical';
 import IconMultipleResultsNormal from './icon/IconMultipleResultsNormal';
 import IconMultipleResultsNotNormal from './icon/IconMultipleResultsNotNormal';
-import IconMultipleResultsCritical from './icon/IconMultipleResultsCritical';
 import IconNavStackUp from './icon/IconNavStackUp';
 import IconNext from './icon/IconNext';
 import IconNoResults from './icon/IconNoResults';
 import IconNoRisk from './icon/IconNoRisk';
 import IconNoRiskLowLight from './icon/IconNoRiskLowLight';
 import IconNoSignal from './icon/IconNoSignal';
+import IconNotMet from './icon/IconNotMet';
 import IconNotification from './icon/IconNotification';
 import IconNotificationDisabled from './icon/IconNotificationDisabled';
 import IconNotificationOff from './icon/IconNotificationOff';
-import IconNotMet from './icon/IconNotMet';
-import IconOutgoingCall from './icon/IconOutgoingCall';
 import IconOutOfNetwork from './icon/IconOutOfNetwork';
+import IconOutgoingCall from './icon/IconOutgoingCall';
 import IconOverDue from './icon/IconOverDue';
 import IconOverDueLowLight from './icon/IconOverDueLowLight';
 import IconPadlock from './icon/IconPadlock';
@@ -213,6 +213,7 @@ import IconPaperFolded from './icon/IconPaperFolded';
 import IconPaperPencil from './icon/IconPaperPencil';
 import IconPartiallyMet from './icon/IconPartiallyMet';
 import IconPatientSearch from './icon/IconPatientSearch';
+import IconPause from './icon/IconPause';
 import IconPending from './icon/IconPending';
 import IconPerson from './icon/IconPerson';
 import IconPersonConnection from './icon/IconPersonConnection';
@@ -267,11 +268,11 @@ import IconSortDescending from './icon/IconSortDescending';
 import IconSpinner from './icon/IconSpinner';
 import IconSquareSymbol from './icon/IconSquareSymbol';
 import IconSquareSymbolLight from './icon/IconSquareSymbolLight';
-import IconStatusPositive from './icon/IconStatusPositive';
-import IconStatusPositiveWhite from './icon/IconStatusPositiveWhite';
-import IconStatusPositiveLowLight from './icon/IconStatusPositiveLowLight';
-import IconStatusPositiveWhiteLowLight from './icon/IconStatusPositiveWhiteLowLight';
 import IconStartPresenting from './icon/IconStartPresenting';
+import IconStatusPositive from './icon/IconStatusPositive';
+import IconStatusPositiveLowLight from './icon/IconStatusPositiveLowLight';
+import IconStatusPositiveWhite from './icon/IconStatusPositiveWhite';
+import IconStatusPositiveWhiteLowLight from './icon/IconStatusPositiveWhiteLowLight';
 import IconStopPresenting from './icon/IconStopPresenting';
 import IconSuccess from './icon/IconSuccess';
 import IconSuccessInverse from './icon/IconSuccessInverse';
@@ -310,16 +311,17 @@ import IconUsers from './icon/IconUsers';
 import IconVideoCamera from './icon/IconVideoCamera';
 import IconVideoCameraDisabled from './icon/IconVideoCameraDisabled';
 import IconVisualization from './icon/IconVisualization';
-import IconVolumeSetDefault from './icon/IconVolumeSetDefault';
-import IconVolumeSetMute from './icon/IconVolumeSetMute';
-import IconVolumeSetIncrease from './icon/IconVolumeSetIncrease';
 import IconVolumeSetDecrease from './icon/IconVolumeSetDecrease';
+import IconVolumeSetDefault from './icon/IconVolumeSetDefault';
+import IconVolumeSetIncrease from './icon/IconVolumeSetIncrease';
+import IconVolumeSetMute from './icon/IconVolumeSetMute';
 import IconWarning from './icon/IconWarning';
 import IconWarningLowLight from './icon/IconWarningLowLight';
 import IconWaveform from './icon/IconWaveform';
 import IconWifi from './icon/IconWifi';
 import IconWifiSlash from './icon/IconWifiSlash';
 import IconXSymbol from './icon/IconXSymbol';
+import IconXSymbolLight from './icon/IconXSymbolLight';
 import IconZoomIn from './icon/IconZoomIn';
 import IconZoomOut from './icon/IconZoomOut';
 
@@ -539,6 +541,7 @@ export {
   IconPaperPencil,
   IconPartiallyMet,
   IconPatientSearch,
+  IconPause,
   IconPending,
   IconPerson,
   IconPersonConnection,
@@ -646,6 +649,7 @@ export {
   IconWifi,
   IconWifiSlash,
   IconXSymbol,
+  IconXSymbolLight,
   IconZoomIn,
   IconZoomOut,
-};
+}
