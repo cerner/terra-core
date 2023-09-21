@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a test case for `terra-list` to support drag and drop in `terra-slide-panel`.
+
 ## 1.40.0 - (September 19, 2023)
 
 * Updated
