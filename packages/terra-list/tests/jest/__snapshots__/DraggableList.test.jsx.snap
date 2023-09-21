@@ -307,11 +307,6 @@ exports[`should render List with items 1`] = `
                                 tabIndex="0"
                               >
                                 <div
-                                  className="item-fill"
-                                  key="item-fill"
-                                />
-                                <div
-                                  className="item-end"
                                   key="knurling-icon"
                                 >
                                   <IconKnurling
@@ -397,6 +392,10 @@ exports[`should render List with items 1`] = `
                                     </span>
                                   </VisuallyHiddenText>
                                 </div>
+                                <div
+                                  className="item-fill"
+                                  key="item-fill"
+                                />
                               </li>
                             </ListItem>
                           </InjectIntl(ListItem)>
@@ -556,11 +555,6 @@ exports[`should render List with items 1`] = `
                                 tabIndex="0"
                               >
                                 <div
-                                  className="item-fill"
-                                  key="item-fill"
-                                />
-                                <div
-                                  className="item-end"
                                   key="knurling-icon"
                                 >
                                   <IconKnurling
@@ -646,6 +640,10 @@ exports[`should render List with items 1`] = `
                                     </span>
                                   </VisuallyHiddenText>
                                 </div>
+                                <div
+                                  className="item-fill"
+                                  key="item-fill"
+                                />
                               </li>
                             </ListItem>
                           </InjectIntl(ListItem)>
@@ -1021,11 +1019,6 @@ exports[`should render Section with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill"
-                                      key="item-fill"
-                                    />
-                                    <div
-                                      className="item-end"
                                       key="knurling-icon"
                                     >
                                       <IconKnurling
@@ -1111,6 +1104,10 @@ exports[`should render Section with items 1`] = `
                                         </span>
                                       </VisuallyHiddenText>
                                     </div>
+                                    <div
+                                      className="item-fill"
+                                      key="item-fill"
+                                    />
                                   </li>
                                 </ListItem>
                               </InjectIntl(ListItem)>
@@ -1270,11 +1267,6 @@ exports[`should render Section with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill"
-                                      key="item-fill"
-                                    />
-                                    <div
-                                      className="item-end"
                                       key="knurling-icon"
                                     >
                                       <IconKnurling
@@ -1360,6 +1352,10 @@ exports[`should render Section with items 1`] = `
                                         </span>
                                       </VisuallyHiddenText>
                                     </div>
+                                    <div
+                                      className="item-fill"
+                                      key="item-fill"
+                                    />
                                   </li>
                                 </ListItem>
                               </InjectIntl(ListItem)>
@@ -1716,11 +1712,6 @@ exports[`should render subsection with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill"
-                                      key="item-fill"
-                                    />
-                                    <div
-                                      className="item-end"
                                       key="knurling-icon"
                                     >
                                       <IconKnurling
@@ -1806,6 +1797,10 @@ exports[`should render subsection with items 1`] = `
                                         </span>
                                       </VisuallyHiddenText>
                                     </div>
+                                    <div
+                                      className="item-fill"
+                                      key="item-fill"
+                                    />
                                   </li>
                                 </ListItem>
                               </InjectIntl(ListItem)>
@@ -1965,11 +1960,6 @@ exports[`should render subsection with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill"
-                                      key="item-fill"
-                                    />
-                                    <div
-                                      className="item-end"
                                       key="knurling-icon"
                                     >
                                       <IconKnurling
@@ -2055,6 +2045,10 @@ exports[`should render subsection with items 1`] = `
                                         </span>
                                       </VisuallyHiddenText>
                                     </div>
+                                    <div
+                                      className="item-fill"
+                                      key="item-fill"
+                                    />
                                   </li>
                                 </ListItem>
                               </InjectIntl(ListItem)>
@@ -2214,11 +2208,6 @@ exports[`should render subsection with items 1`] = `
                                     tabIndex="0"
                                   >
                                     <div
-                                      className="item-fill"
-                                      key="item-fill"
-                                    />
-                                    <div
-                                      className="item-end"
                                       key="knurling-icon"
                                     >
                                       <IconKnurling
@@ -2304,6 +2293,10 @@ exports[`should render subsection with items 1`] = `
                                         </span>
                                       </VisuallyHiddenText>
                                     </div>
+                                    <div
+                                      className="item-fill"
+                                      key="item-fill"
+                                    />
                                   </li>
                                 </ListItem>
                               </InjectIntl(ListItem)>
