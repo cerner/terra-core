@@ -1,5 +1,5 @@
 import React from 'react';
-import IconPerson from 'terra-icon/lib/icon/IconPerson';
+import { IconPerson } from 'terra-icon';
 import Tag from 'terra-tag';
 
 const HrefTag = () => (
