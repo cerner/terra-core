@@ -79,14 +79,14 @@ You should pick an `a11yLabel` that conveys the same information that a user vie
     <A11yMeaningfulReadOnly />
 </div>
 <div aria-label="Example code">
-```js
+
     import { IconAnnouncement } from 'terra-icon';
 
     // Set the a11yLabel to convey the meaning of the icon.
     <IconAnnouncement a11yLabel="Announcement" />
     &nbsp;
     Facilities will be closed tomorrow.
-```
+
 </div>
 
 The announcement icon <span role="presentation">(<IconAnnouncement/>)</span> in this example is informative, because it means _the following text is an announcement_. However, that meaning is only conveyed if the user can see the icon. Setting the icon's `a11yLabel="Announcement"` conveys the same information to a screen reader user.
@@ -99,6 +99,7 @@ The screen reader user will hear something like: <samp> Image: Announcement. Fac
     <A11yMeaningfulInteractive/>
 </div>
 <div aria-label="Example code">
+
     import { IconMediaPlay, IconMediaFastForward, IconMediaRewind } from 'terra-icon';
 
     <div role="group" aria-labelledby="controlsLabel">
@@ -124,7 +125,8 @@ Some icons only make sense in the context of a group of icons. For example, in a
 <div aria-label="Example demo">
     <A11yGroupReadOnly />
 </div>
-<div aria-label="Example code123">
+<div aria-label="Example code">
+
     import { IconFeaturedOutline, IconFeaturedOutlineYellow } from 'terra-icon';
 
     // Rating:&nbsp;
@@ -144,6 +146,7 @@ The screen reader user will hear something like: <samp>Rating. Four out of five 
     <A11yGroupInteractive/>
 </div>
 <div aria-label="Example code">
+
     import { IconFeaturedOutline, IconFeaturedOutlineYellow } from 'terra-icon';
     import VisuallyHiddenText from 'terra-visually-hidden-text';
 
@@ -177,13 +180,13 @@ Decorative icons provide no additional information or context. Use decorative ic
     <A11yDecorative />
 </div>
 <div aria-label="Example code">
-```js
+
     import { IconAnnouncement } from 'terra-icon';
 
     <IconAnnouncement />
     &nbsp;
     Announcement: Facilities will be closed tomorrow.
-```
+
 </div>
 
 This example is similar to the Announcement example above, but it uses a decorative icon instead of a meaningful one. The decorative icon is ignored by the screen reader. The screen reader user will hear something like: <samp> Announcement: Facilities will be closed tomorrow.</samp>

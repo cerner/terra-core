@@ -4,6 +4,7 @@
 
 * Fixed
   * `terra-icon` import corrections in documentation and examples.
+  * Fixed formatting `terra-icon` accessibility guide.
   
 * Changed
   * Updated icon example to specify `IconCeMarking` is private. 
