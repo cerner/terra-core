@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * `terra-icon` documentation corrections. 
+  * `terra-icon` import corrections in documentation and examples. 
 
 ## 1.40.0 - (September 19, 2023)
 
