@@ -31,14 +31,14 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
             </span>
           }
         >
-          <span
+          <div
             className="arrange title-arrange"
           >
-            <span
-              className="fit fit-block"
+            <div
+              className="fit"
             />
-            <span
-              className="fill fill-block"
+            <div
+              className="fill"
             >
               <span
                 aria-hidden={false}
@@ -46,11 +46,11 @@ exports[`SectionHeader correctly applies the theme context className 1`] = `
               >
                 foo
               </span>
-            </span>
-            <span
+            </div>
+            <div
               className="fit"
             />
-          </span>
+          </div>
         </Arrange>
       </span>
     </h2>
@@ -93,11 +93,11 @@ exports[`SectionHeader should render with an accordion icon in the open position
     tabindex="-1"
     type="button"
   >
-    <span
+    <div
       class="arrange title-arrange"
     >
-      <span
-        class="fit fit-block"
+      <div
+        class="fit"
       >
         <span
           class="accordion-icon-wrapper"
@@ -106,9 +106,9 @@ exports[`SectionHeader should render with an accordion icon in the open position
             class="accordion-icon is-open"
           />
         </span>
-      </span>
-      <span
-        class="fill fill-block"
+      </div>
+      <div
+        class="fill"
       >
         <span
           aria-hidden="true"
@@ -116,11 +116,11 @@ exports[`SectionHeader should render with an accordion icon in the open position
         >
           foo
         </span>
-      </span>
-      <span
+      </div>
+      <div
         class="fit"
       />
-    </span>
+    </div>
   </button>
 </h2>
 `;
@@ -137,11 +137,11 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
     tabindex="-1"
     type="button"
   >
-    <span
+    <div
       class="arrange title-arrange"
     >
-      <span
-        class="fit fit-block"
+      <div
+        class="fit"
       >
         <span
           class="accordion-icon-wrapper"
@@ -150,9 +150,9 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
             class="accordion-icon"
           />
         </span>
-      </span>
-      <span
-        class="fill fill-block"
+      </div>
+      <div
+        class="fill"
       >
         <span
           aria-hidden="true"
@@ -160,11 +160,11 @@ exports[`SectionHeader should render with an accordion icon when an 'onClick()' 
         >
           foo
         </span>
-      </span>
-      <span
+      </div>
+      <div
         class="fit"
       />
-    </span>
+    </div>
   </button>
 </h2>
 `;
@@ -177,14 +177,14 @@ exports[`SectionHeader should render without an accordion icon when no 'onClick(
   <span
     class="arrange-wrapper"
   >
-    <span
+    <div
       class="arrange title-arrange"
     >
-      <span
-        class="fit fit-block"
+      <div
+        class="fit"
       />
-      <span
-        class="fill fill-block"
+      <div
+        class="fill"
       >
         <span
           aria-hidden="false"
@@ -192,11 +192,11 @@ exports[`SectionHeader should render without an accordion icon when no 'onClick(
         >
           foo
         </span>
-      </span>
-      <span
+      </div>
+      <div
         class="fit"
       />
-    </span>
+    </div>
   </span>
 </h2>
 `;
