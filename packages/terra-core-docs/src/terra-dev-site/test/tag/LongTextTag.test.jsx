@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
 import React from 'react';
-import { IconBookmark } from 'terra-icon';
+import { IconTile as IconBookmark } from 'terra-icon';
 import classNames from 'classnames/bind';
 import Tag from 'terra-tag';
 import styles from './LongTextTagTest.module.scss';
