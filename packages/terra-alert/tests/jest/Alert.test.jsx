@@ -14,10 +14,9 @@ import VisuallyHiddenText from 'terra-visually-hidden-text';
 import { v4 as uuidv4 } from 'uuid';
 import Alert from '../../src/Alert';
 
-const mockUuid = '00000000-0000-0000-0000-000000000000';
 let mockSpyUuid;
 beforeAll(() => {
-  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue(mockUuid);
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
 });
 
 afterAll(() => {
@@ -95,7 +94,7 @@ describe('Dismissible Alert that includes actions section', () => {
     expect(dismissButton.prop('text')).toEqual('Terra.alert.dismiss');
     expect(dismissButton.prop('onClick')).toEqual(mockOnDismiss);
     expect(dismissButton.prop('variant')).toEqual('neutral');
-    expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUuid}`);
+    expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     expect(wrapper).toMatchSnapshot();
   });
 });
@@ -296,7 +295,7 @@ describe('Notifications titles', () => {
     });
     it('should set the notification message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUuid}`);
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
     it('should have no title', () => {
@@ -306,7 +305,7 @@ describe('Notifications titles', () => {
 
     it('should set the dismiss button aria-describedby to the notification description', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-message-${mockUuid}`);
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
   });
 
@@ -326,12 +325,12 @@ describe('Notifications titles', () => {
 
     it('should set the alert message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUuid}`);
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the alert title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUuid}`);
+      expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the alert title', () => {
@@ -342,7 +341,7 @@ describe('Notifications titles', () => {
 
     it('should set the dismiss button aria-describedby to the alert title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUuid}`);
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
   });
 
@@ -360,12 +359,12 @@ describe('Notifications titles', () => {
 
     it('should set the notification message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUuid}`);
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the notification title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUuid}`);
+      expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
     it('should use the default title', () => {
@@ -376,7 +375,7 @@ describe('Notifications titles', () => {
 
     it('should set the dismiss button aria-describedby to the notification title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUuid}`);
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
   });
 
@@ -401,17 +400,17 @@ describe('Notifications titles', () => {
 
     it('should set the notification message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUuid}`);
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the notification title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUuid}`);
+      expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the dismiss button aria-describedby to the notification title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUuid}`);
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
   });
 
@@ -441,17 +440,17 @@ describe('Notifications titles', () => {
 
     it('should set the notification message ID', () => {
       const alertContent = wrapper.find('.section');
-      expect(alertContent.prop('id')).toEqual(`alert-message-${mockUuid}`);
+      expect(alertContent.prop('id')).toEqual('alert-message-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the notification title ID', () => {
       const alertTitle = wrapper.find('.title');
-      expect(alertTitle.prop('id')).toEqual(`alert-title-${mockUuid}`);
+      expect(alertTitle.prop('id')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
 
     it('should set the dismiss button aria-describedby to the notification title', () => {
       const dismissButton = wrapper.find('Button');
-      expect(dismissButton.prop('aria-describedby')).toEqual(`alert-title-${mockUuid}`);
+      expect(dismissButton.prop('aria-describedby')).toEqual('alert-title-00000000-0000-0000-0000-000000000000');
     });
   });
 });
