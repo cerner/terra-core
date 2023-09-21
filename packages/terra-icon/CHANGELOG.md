@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.57.1 - (September 21, 2023)
+
 * Fixed
   * Fixed missing exports for `IconPause` and `IconXSymbolLight`.
 

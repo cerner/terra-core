@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 3.69.1 - (September 21, 2023)
+
 * Fixed
   * Arrow keys selection for Single Select examples.
 
