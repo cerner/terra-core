@@ -92,6 +92,7 @@
     "terra-toggle-button": "^3.75.0",
     "terra-toggle-section-header": "^2.68.0",
     "terra-toolbar": "^1.37.0",
-    "terra-visually-hidden-text": "^2.36.0"
+    "terra-visually-hidden-text": "^2.36.0",
+    "terra-slide-panel": "^3.46.0"
   }
 }
