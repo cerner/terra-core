@@ -170,8 +170,10 @@ class ButtonGroup extends React.Component {
 
     React.Children.forEach(children, (child, index) => {
       const isSelected = selectedKeys.indexOf(child.key) > -1;
+      const tabAttr = (this.props.onChange && !isMultiSelect) ? { tabIndex: (isSelected) ? '0' : '-1' } : null;
       const cloneChild = React.cloneElement(child, {
         role: btnRole || undefined,
+        ...tabAttr,
         onClick: this.wrapOnClick(child),
         onKeyDown: this.wrapKeyDown(child, index),
         className: cx([{ 'is-selected': isSelected && !child.props.isDisabled }, child.props.className]),
