@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Arrow keys selection for Single Select examples.
+
 ## 3.69.0 - (August 25, 2023)
 
 * Changed

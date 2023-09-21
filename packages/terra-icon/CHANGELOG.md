@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Fixed
+  * Fixed missing exports for `IconPause` and `IconXSymbolLight`.
+
 ## 3.57.0 - (September 19, 2023)
 
 * Added
@@ -292,8 +295,7 @@
 ## 3.14.0 - (July 16, 2019)
 
 * Added
-
-  * Added new icon `IconCeMarking`
+  * Added new private icon `IconCeMarking`
   * Added new icon `IconEcRep`
   * Added new icon `IconEnvelopeFill`
   * Added new icon `IconFeaturedOutlineYellow`
