@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated test example to validate `hidePageCount` prop.
+
 ## 1.40.0 - (September 19, 2023)
 
 * Updated
