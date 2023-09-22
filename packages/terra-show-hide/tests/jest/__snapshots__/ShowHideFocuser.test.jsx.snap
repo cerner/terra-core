@@ -6,7 +6,7 @@ exports[`ShowHideFocuser should render divider spans and a span to focus to corr
     class="text-divider"
   />
   <span
-    id="focus-ref-a5e0945a-697c-4a22-b977-04fd66635c17"
+    id="focus-ref-00000000-0000-0000-0000-000000000000"
     role="group"
     tabindex="-1"
   >
@@ -25,7 +25,7 @@ exports[`ShowHideFocuser should render focusable text correctly 1`] = `
     class="text-divider"
   />
   <span
-    id="focus-ref-6bbd2efb-c07e-4531-820a-6355e5bf929b"
+    id="focus-ref-00000000-0000-0000-0000-000000000000"
     role="group"
     tabindex="-1"
   >
@@ -45,7 +45,7 @@ exports[`ShowHideFocuser should render preview text correctly 1`] = `
     class="text-divider"
   />
   <span
-    id="focus-ref-0c227055-e13c-4082-b1f9-4bc8af71bfd7"
+    id="focus-ref-00000000-0000-0000-0000-000000000000"
     role="group"
     tabindex="-1"
   >
