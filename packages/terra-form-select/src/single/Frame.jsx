@@ -374,16 +374,15 @@ class Frame extends React.Component {
   ariaLabel() {
     const { ariaLabel, disabled, intl } = this.props;
 
-    const defaultAriaLabel = intl.formatMessage({ id: 'Terra.form.select.ariaLabel' });
     const dimmed = intl.formatMessage({ id: 'Terra.form.select.dimmed' });
 
     // VO on iOS doesn't do a good job of announcing disabled stated. Here we append the phrase that
     // VO associates with disabled form controls.
     if ('ontouchstart' in window && disabled) {
-      return ariaLabel === undefined ? `${defaultAriaLabel} ${dimmed}` : `${ariaLabel} ${dimmed}`;
+      return ariaLabel === undefined ? '' : `${ariaLabel} ${dimmed}`;
     }
 
-    return ariaLabel === undefined ? defaultAriaLabel : ariaLabel;
+    return ariaLabel === undefined ? '' : ariaLabel;
   }
 
   /**
@@ -406,7 +405,7 @@ class Frame extends React.Component {
    */
   role() {
     const { disabled } = this.props;
-    const role = SharedUtil.isSafari() ? 'group' : 'button';
+    const role = SharedUtil.isSafari() ? 'group' : 'combobox';
 
     return disabled ? undefined : role;
   }
@@ -485,7 +484,6 @@ class Frame extends React.Component {
       customProps.className,
     );
 
-    const labelId = `terra-select-screen-reader-label-${uniqueid()}`;
     const displayId = `terra-select-screen-reader-display-${uniqueid()}`;
     const placeholderId = `terra-select-screen-reader-placeholder-${uniqueid()}`;
     const descriptionId = `terra-select-screen-reader-description-${uniqueid()}`;
@@ -529,10 +527,10 @@ class Frame extends React.Component {
       >
         <div className={cx('visually-hidden-component')} hidden>
           {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
-          <span id={labelId}>{this.ariaLabel()}</span>
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
-        <div className={cx('display')} aria-label={this.ariaLabel()}>
+        {/* Added aria label to avoid announcing empty group by voice over in safari browser */}
+        <div className={cx('display')} aria-label={SharedUtil.isSafari() ? intl.formatMessage({ id: 'Terra.form.select.optGroup' }) : ''}>
           {this.getDisplay(displayId, placeholderId)}
         </div>
         {this.renderToggleButton()}

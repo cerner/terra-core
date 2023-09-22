@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
 import { injectIntl } from 'react-intl';
 import ThemeContext from 'terra-theme-context';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import SharedUtil from './_SharedUtil';
 import styles from './_Option.module.scss';
