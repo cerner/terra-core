@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 3.57.1 - (September 21, 2023)
+
+* Fixed
+  * Fixed missing exports for `IconPause` and `IconXSymbolLight`.
+
+## 3.57.0 - (September 19, 2023)
+
+* Added
+  * Added named exports. Icons can now be imported as `import { iconName } from 'terra-icon';`.
+ 
 ## 3.56.0 - (August 23, 2023)
 
 * Changed
@@ -287,8 +297,7 @@
 ## 3.14.0 - (July 16, 2019)
 
 * Added
-
-  * Added new icon `IconCeMarking`
+  * Added new private icon `IconCeMarking`
   * Added new icon `IconEcRep`
   * Added new icon `IconEnvelopeFill`
   * Added new icon `IconFeaturedOutlineYellow`
