@@ -530,9 +530,18 @@ class Frame extends React.Component {
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         {/* Added aria label to avoid announcing empty group by voice over in safari browser */}
-        <div className={cx('display')} aria-label={SharedUtil.isSafari() ? intl.formatMessage({ id: 'Terra.form.select.optGroup' }) : ''}>
-          {this.getDisplay(displayId, placeholderId)}
-        </div>
+        {
+          SharedUtil.isSafari()
+            ? (
+              <div className={cx('display')} aria-label={intl.formatMessage({ id: 'Terra.form.select.optGroup' })}>
+                {this.getDisplay(displayId, placeholderId)}
+              </div>
+            ) : (
+              <div className={cx('display')}>
+                {this.getDisplay(displayId, placeholderId)}
+              </div>
+            )
+        }
         {this.renderToggleButton()}
         <span
           aria-live={SharedUtil.isSafari() ? 'polite' : 'off'}
