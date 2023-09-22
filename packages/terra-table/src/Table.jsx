@@ -90,6 +90,7 @@ const defaultProps = {
   defaultColumnWidth: 200,
   columnHeaderHeight: '2.5rem',
   rowHeight: '2.5rem',
+  rows: [],
   pinnedColumns: [],
   overflowColumns: [],
 };
