@@ -34,25 +34,27 @@ Terra.describeViewports('Button Group', ['huge'], () => {
 
   describe('Single-Select', () => {
     before(() => browser.url('/#/raw/tests/cerner-terra-core-docs/button-group/button-group-single-select'));
-    it('should select the first button', () => {
-      browser.keys('Tab');
-      browser.keys('Space');
-      expect($('#selected-key').getText()).toEqual('1');
-
-      Terra.validates.element('single select button1-selected');
-    });
-
     it('should select the second button', () => {
       browser.keys('Tab');
+      browser.keys('ArrowRight');
       browser.keys('Space');
       expect($('#selected-key').getText()).toEqual('2');
 
       Terra.validates.element('single select button2-selected');
     });
 
+    it('should select the first button', () => {
+      browser.keys('ArrowLeft');
+      browser.keys('Space');
+      expect($('#selected-key').getText()).toEqual('1');
+
+      Terra.validates.element('single select button1-selected');
+    });
+
     it('should select the fourth button', () => {
-      browser.keys('Tab');
-      browser.keys('Tab');
+      browser.keys('ArrowRight');
+      browser.keys('ArrowRight');
+      browser.keys('ArrowRight');
       browser.keys('Space');
       expect($('#selected-key').getText()).toEqual('4');
 

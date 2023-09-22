@@ -5,11 +5,17 @@
 * Added
   * Added a test case for `terra-list` to support drag and drop in `terra-slide-panel`.
 
+## 1.41.0 - (September 21, 2023)
+
+* Fixed
+  * `terra-icon` import corrections in documentation and examples.
+  * Fixed formatting `terra-icon` accessibility guide.
+  
+* Changed
+  * Updated icon example to specify `IconCeMarking` is private. 
+
 ## 1.40.0 - (September 19, 2023)
 
-* Updated
-  *  Updated doc site for `terra-form-single-select` and `terra-form-single-select-field`.
-  
 * Added
   * Added drag and drop example for `terra-list`.
   * Added instruction note for `terra-form-radio` label hidden example
@@ -20,6 +26,8 @@
   * Updated all paginator examples to use meaningful titles.
   * Updated testing recommendations to use `jest.spyOn` instead of `jest.mock`.
   * Updated `terra-alert` long text example for accessible `terra-show-hide`.
+  * Updated doc site for `terra-form-single-select` and `terra-form-single-select-field`.
+
  
 ## 1.39.0 - (August 25, 2023)
 

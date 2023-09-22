@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Toggle from 'terra-toggle';
-import IconInformation from 'terra-icon/lib/icon/IconInformation';
+import { IconInformation } from 'terra-icon';
 import { KEY_TAB, KEY_SPACE, KEY_RETURN } from 'keycode-js';
 import './ToggleExample.module.scss';
 import Table from 'terra-table';

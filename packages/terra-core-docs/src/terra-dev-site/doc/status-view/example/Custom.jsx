@@ -1,5 +1,5 @@
 import React from 'react';
-import IconDueSoon from 'terra-icon/lib/icon/IconDueSoon';
+import { IconDueSoon } from 'terra-icon';
 import StatusView from 'terra-status-view';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 
