@@ -105,6 +105,7 @@ class Menu extends React.Component {
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.scrollIntoView = this.scrollIntoView.bind(this);
+    this.expandedText = props.intl.formatMessage({ id: 'Terra.form.select.expanded' });
   }
 
   /**
@@ -184,11 +185,13 @@ class Menu extends React.Component {
     const selectedTxt = intl.formatMessage({ id: 'Terra.form.select.selected' });
 
     if (keyCode === KeyCode.KEY_UP) {
+      this.expandedText = '';
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: MenuUtil.findPrevious(children, active) }, this.scrollIntoView);
       this.updateCurrentActiveScreenReader();
     } else if (keyCode === KeyCode.KEY_DOWN) {
+      this.expandedText = '';
       this.clearScrollTimeout();
       this.scrollTimeout = setTimeout(this.clearScrollTimeout, 500);
       this.setState({ active: MenuUtil.findNext(children, active) }, this.scrollIntoView);
@@ -394,7 +397,7 @@ class Menu extends React.Component {
           variant: 'default',
           totalOptions: object.length,
           index: object.indexOf(option) + 1,
-          expandedStateText: this.props.intl.formatMessage({ id: 'Terra.form.select.expanded' }),
+          expandedStateText: this.expandedText,
           ofText: this.props.intl.formatMessage({ id: 'Terra.form.select.of' }),
           onMouseDown: () => { this.downOption = option; },
           onMouseUp: event => this.handleOptionClick(event, option),
