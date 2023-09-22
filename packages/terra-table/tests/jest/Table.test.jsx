@@ -128,7 +128,7 @@ describe('Error handling - prop types', () => {
   it('throws an error if rowHeaderIndex is not an integer', () => {
     shallowWithIntl(
       <Table
-        id="test-terra-data-grid"
+        id="test-terra-table"
         rows={tableData.rows}
         rowHeaderIndex="2"
       />,
@@ -140,7 +140,7 @@ describe('Error handling - prop types', () => {
   it('throws an error if rowHeaderIndex is not a positive integer', () => {
     shallowWithIntl(
       <Table
-        id="test-terra-data-grid"
+        id="test-terra-table"
         rows={tableData.rows}
         rowHeaderIndex={-1}
       />,
@@ -152,7 +152,7 @@ describe('Error handling - prop types', () => {
   it('throws an error if rowHeaderIndex is greater than the length of pinned columns', () => {
     shallowWithIntl(
       <Table
-        id="test-terra-data-grid"
+        id="test-terra-table"
         pinnedColumns={tableData.cols.slice(0, 2)}
         overflowColumns={tableData.cols.slice(2)}
         rowHeaderIndex={2}

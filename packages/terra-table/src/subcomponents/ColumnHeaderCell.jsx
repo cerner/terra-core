@@ -73,7 +73,7 @@ const propTypes = {
   headerHeight: PropTypes.string.isRequired,
 
   /**
-   * The cell's row position in the grid. This is zero based.
+   * The cell's row position in the table. This is zero based.
    */
   rowIndex: PropTypes.number,
 

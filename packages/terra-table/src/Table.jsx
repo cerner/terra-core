@@ -137,8 +137,8 @@ function Table(props) {
   const activeColumnWidth = useRef(200);
   const tableWidth = useRef(0);
 
-  const grid = useRef();
-  const gridContainerRef = useRef();
+  const table = useRef();
+  const tableContainerRef = useRef();
   const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
 
   // Define ColumnContext Provider value object
@@ -151,16 +151,16 @@ function Table(props) {
   // -------------------------------------
   // callback Hooks
 
-  const gridRef = useCallback((node) => {
+  const tableRef = useCallback((node) => {
     if (!node) {
       return;
     }
 
-    grid.current = node;
+    table.current = node;
 
     const resizeObserver = new ResizeObserver(() => {
       // Update table height state variable
-      setTableHeight(grid.current.offsetHeight - 1);
+      setTableHeight(table.current.offsetHeight - 1);
     });
 
     // Register resize observer to detect size changes
@@ -182,7 +182,6 @@ function Table(props) {
     let cumulativeOffset = 0;
     let lastPinnedColumnIndex;
 
-    // if grid has selectable rows but no pinned columns, then set the offset of the first column to 0
     if (pinnedColumns.length === 0) {
       setPinnedColumnOffsets([]);
     } else {
@@ -213,7 +212,7 @@ function Table(props) {
 
   const onResizeMouseDown = useCallback((event, index, resizeColumnWidth) => {
     // Store current table and column values for resize calculations
-    tableWidth.current = grid.current.offsetWidth;
+    tableWidth.current = table.current.offsetWidth;
     activeColumnPageX.current = event.pageX;
     activeColumnWidth.current = resizeColumnWidth;
 
@@ -232,12 +231,12 @@ function Table(props) {
     const newColumnWidth = Math.min(Math.max(activeColumnWidth.current + diffX, minimumWidth), maximumWidth);
 
     // Update the width for the column in the state variable
-    const newGridColumns = [...renderedColumns];
-    newGridColumns[activeIndex].width = newColumnWidth;
-    setRenderedColumns(newGridColumns);
+    const newColumns = [...renderedColumns];
+    newColumns[activeIndex].width = newColumnWidth;
+    setRenderedColumns(newColumns);
 
     // Update the column and table width
-    grid.current.style.width = `${tableWidth + (newColumnWidth - activeColumnWidth.current)}px`;
+    table.current.style.width = `${tableWidth + (newColumnWidth - activeColumnWidth.current)}px`;
   };
 
   const onMouseUp = () => {
@@ -253,9 +252,9 @@ function Table(props) {
   // -------------------------------------
 
   return (
-    <div ref={gridContainerRef} className={cx('table-container')}>
+    <div ref={tableContainerRef} className={cx('table-container')}>
       <table
-        ref={gridRef}
+        ref={tableRef}
         id={id}
         role="table"
         aria-labelledby={ariaLabelledBy}
@@ -298,4 +297,3 @@ Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
 
 export default injectIntl(Table);
-
