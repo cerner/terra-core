@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+ * Fixed it announces the expansion state Upon revisiting.
 
 ## 6.46.0 - (August 25, 2023)
 
