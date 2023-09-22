@@ -4,6 +4,11 @@
 * Added
   * Added drag and drop icon for draggable list items.
 
+## 4.62.0 - (September 21, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.61.0 - (September 19, 2023)
 
 * Changed

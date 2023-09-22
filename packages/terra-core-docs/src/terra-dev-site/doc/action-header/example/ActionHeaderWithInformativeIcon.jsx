@@ -3,7 +3,7 @@ import Button from 'terra-button';
 import ActionHeader from 'terra-action-header';
 import ContentContainer from 'terra-content-container';
 import Card from 'terra-card';
-import IconPrinter from 'terra-icon/lib/icon/IconPrinter';
+import { IconPrinter } from 'terra-icon';
 
 const ActionHeaderWithInformativeIcon = () => {
   const text = ['Current Patient: Alex',
