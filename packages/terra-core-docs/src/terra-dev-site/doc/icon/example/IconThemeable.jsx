@@ -30,7 +30,6 @@ IconCaretRight,
 IconCaretUp, 
 IconCatalogueNumber, 
 IconCaution, 
-IconCeMarking, 
 IconChecklist, 
 IconCheckmark, 
 IconChevron, 
@@ -245,6 +244,9 @@ IconXSymbolLight,
 IconZoomIn, 
 IconZoomOut, 
 } from 'terra-icon';
+
+// IconCeMarking is a private icon for internal use
+import IconCeMarking from 'terra-icon/lib/icon/IconCeMarking';
 
 const cellStyle = { padding: '0.5rem' };
 const IconAll = () => (
@@ -2421,9 +2423,6 @@ const IconAll = () => (
         <td style={cellStyle}><IconCeMarking height='2em' width='2em' /></td>
         <td style={cellStyle}>ceMarking</td>
         <td style={{ fontWeight: 'bold', padding: '0.5rem' }}>
-          <code>
-            import { IconCeMarking } from 'terra-icon';
-          </code>
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
