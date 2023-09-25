@@ -3,7 +3,7 @@ import Button from 'terra-button';
 import ActionHeader from 'terra-action-header';
 import ContentContainer from 'terra-content-container';
 import Card from 'terra-card';
-import DecoIconPrinter from 'terra-icon/lib/icon/IconPrinter';
+import { IconPrinter as DecoIconPrinter } from 'terra-icon';
 
 const ActionHeaderWithDecorativeIcon = () => {
   const text = ['Current Patient: Alex',

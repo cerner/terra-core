@@ -1,8 +1,9 @@
 import React from 'react';
-import IconSquare from 'terra-icon/lib/icon/IconSquareSymbol';
 import classNames from 'classnames/bind';
-import buttonStyles from 'terra-button/lib/Button.module.scss';
+
 import Button from 'terra-button';
+import { IconSquareSymbol as IconSquare } from 'terra-icon';
+import buttonStyles from 'terra-button/lib/Button.module.scss';
 import styles from './ButtonTestCommon.module.scss';
 
 const cx = classNames.bind(styles);
