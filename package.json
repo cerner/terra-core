@@ -77,7 +77,7 @@
     "wdio-default": "terra wdio",
     "wdio-lowlight": "terra wdio --themes clinical-lowlight-theme",
     "wdio-fusion": "terra wdio --themes orion-fusion-theme",
-    "wdio": "terra wdio --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme --spec packages/terra-button/tests/wdio/button-spec.js --browsers chrome --gridUrl grid314.test.devcernerpowerchart.com",
+    "wdio": "terra wdio --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme",
     "wdio:docker": "terra wdio --disableSeleniumService=true --themes terra-default-theme clinical-lowlight-theme orion-fusion-theme"
   },
   "devDependencies": {
