@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a11y changes to terra-badge
+
 ## 3.57.0 - (February 15, 2023)
 
 * Changed
