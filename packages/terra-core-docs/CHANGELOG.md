@@ -4,6 +4,10 @@
 
 * Updated
   * Updated test example to validate `hidePageCount` prop.
+  * Updated test drag and drop example for `terra-list`.
+
+* Added
+  * Added a test case for `terra-list` to support drag and drop in `terra-slide-panel`.
 
 ## 1.41.0 - (September 21, 2023)
 

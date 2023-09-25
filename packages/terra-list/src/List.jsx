@@ -117,6 +117,7 @@ const List = ({
 }) => {
   const theme = useContext(ThemeContext);
   const [listItem, setlistItem] = useState([]);
+  let listNode = useRef();
 
   useEffect(() => {
     if (Array.isArray(children)) {
@@ -137,7 +138,6 @@ const List = ({
     ),
     customProps.className,
   );
-  let listNode = useRef();
 
   const handleListRef = (node) => {
     if (refCallback) {
@@ -239,7 +239,12 @@ const List = ({
 
   const renderDraggableListDom = () => (
     <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
-      <Droppable droppableId="ListItem">
+      <Droppable
+        droppableId="ListItem"
+        renderClone={(provided, snapshot, rubric) => (
+          cloneListItem(listItem[rubric.source.index], provided)
+        )}
+      >
         {(provided) => (
           // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/role-supports-aria-props
           <ul
