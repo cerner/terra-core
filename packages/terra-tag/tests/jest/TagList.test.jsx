@@ -1,8 +1,7 @@
 import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { shallowWithIntl } from 'terra-enzyme-intl';
-/* eslint-disable import/no-extraneous-dependencies */
-import { TagList } from 'terra-tag';
+import TagList from '../../src/TagList';
 
 describe('TagList Component', () => {
   it('should render tagList with 2 items"', () => {

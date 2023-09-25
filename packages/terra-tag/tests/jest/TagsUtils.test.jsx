@@ -1,5 +1,4 @@
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import { TagsUtils } from 'terra-tag';
+import TagsUtils from '../../src/TagsUtils';
 
 describe('TagsUtils', () => {
   describe('getRollUpIndex', () => {
