@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import ResponsiveElement from 'terra-responsive-element';
 import Button from 'terra-button';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
 import {
   IconAlert,
   IconError,
@@ -202,6 +203,7 @@ const Alert = ({
     <div id={alertMessageId} className={alertSectionClassName}>
       {(title || defaultTitle) && (
         <strong id={alertTitleId} className={cx('title')}>
+          {title && defaultTitle && <VisuallyHiddenText text={`${defaultTitle},`} />}
           {title || defaultTitle}
         </strong>
       )}

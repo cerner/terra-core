@@ -82,7 +82,7 @@ const ListSection = ({
   ...customProps
 }) => {
   const [listItemNodes, setlistItemNodes] = useState(children);
-  let listNode = useRef();
+  let listSectionItemNode = useRef();
 
   useEffect(() => {
     if (!isCollapsible || !isCollapsed) {
@@ -101,8 +101,8 @@ const ListSection = ({
     cx('list', 'list-fill', theme.className),
   );
 
-  const handleListRef = (node) => {
-    listNode = node;
+  const handleListItemsRef = (nodes) => {
+    listSectionItemNode = nodes;
   };
 
   const reorderListItems = (list, startIndex, endIndex) => {
@@ -124,8 +124,11 @@ const ListSection = ({
       result.destination.index,
     );
     setlistItemNodes(items);
-    if (listNode) {
-      listNode.focus();
+    if (listSectionItemNode) {
+      const listitems = listSectionItemNode.querySelectorAll('[data-item-show-focus]');
+      if (listitems && listitems[result.source.index]) {
+        listitems[result.source.index].focus();
+      }
     }
     provided.announce(intl.formatMessage({ id: 'Terra.list.drop' }, { startPosition: (result.source.index + 1), endPosition: (result.destination.index + 1) }));
     if (onDragEnd) {
@@ -137,7 +140,6 @@ const ListSection = ({
     isDraggable: ListItem?.props?.isSelectable,
     refCallback: (refobj) => {
       provider.innerRef(refobj);
-      handleListRef(refobj);
     },
     ...provider.draggableProps,
     ...provider.dragHandleProps,
@@ -168,12 +170,20 @@ const ListSection = ({
 
   const renderDraggableListDom = () => (
     <DragDropContext onDragEnd={handleDragEnd} onDragStart={handleDragStart} onDragUpdate={handleDragUpdate}>
-      <Droppable droppableId="listSection">
+      <Droppable
+        droppableId="listSection"
+        renderClone={(provided, snapshot, rubric) => (
+          cloneListItem(listItemNodes[rubric.source.index], provided)
+        )}
+      >
         {(provided) => (
           <div ref={provided.innerRef}>
             <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
             <li className={cx('list-item')}>
-              <ul className={listClassNames}>
+              <ul
+                ref={(refobj) => handleListItemsRef(refobj)}
+                className={listClassNames}
+              >
                 {listItemNodes.map((item, index) => (
                   <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
                     {(provider) => (
