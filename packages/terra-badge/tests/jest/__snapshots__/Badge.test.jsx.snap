@@ -12,7 +12,6 @@ exports[`Badge with additional props correctly applies the theme context classNa
     className="badge small default orion-fusion-theme"
   >
     <span
-      aria-hidden="true"
       className="text"
     >
       Test value
@@ -29,7 +28,6 @@ exports[`should render a badge component in the order, icon and text with medium
     alt="Test icon"
   />
   <span
-    aria-hidden="true"
     className="text"
   >
     Test value
@@ -41,8 +39,10 @@ exports[`should render a badge component in the order, text and icon with info i
 <span
   className="badge has-icon is-reversed small info"
 >
+  <VisuallyHiddenText
+    text="info"
+  />
   <span
-    aria-hidden="true"
     className="text"
   >
     Test value
@@ -70,6 +70,9 @@ exports[`should render a badge component with icon and warning intent 1`] = `
   <img
     alt="Test icon"
   />
+  <VisuallyHiddenText
+    text="warning"
+  />
 </span>
 `;
 
@@ -78,7 +81,6 @@ exports[`should render a badge component with text and large size 1`] = `
   className="badge large default"
 >
   <span
-    aria-hidden="true"
     className="text"
   >
     Large
@@ -90,8 +92,10 @@ exports[`should render a badge component with text and secondary intent 1`] = `
 <span
   className="badge small secondary"
 >
+  <VisuallyHiddenText
+    text="secondary"
+  />
   <span
-    aria-hidden="true"
     className="text"
   >
     Secondary
@@ -103,15 +107,14 @@ exports[`should render a badge component with visually hidden text 1`] = `
 <span
   className="badge small default"
 >
-  <VisuallyHiddenText
-    text="Risk Score 3"
-  />
   <span
-    aria-hidden="true"
     className="text"
   >
     3
   </span>
+  <VisuallyHiddenText
+    text="Risk Score 3"
+  />
 </span>
 `;
 

@@ -9,7 +9,7 @@ import Table, {
   Row,
 } from 'terra-html-table';
 
-const Icon = <IconHelpInverse/>
+const Icon = <IconHelpInverse />;
 
 const BadgeInTable = () => (
   <div>
@@ -32,7 +32,7 @@ const BadgeInTable = () => (
           <Cell key="ADDRESS">321 Drive Street</Cell>
           <Cell key="BADGE">
             <Badge intent="negative" size="large" text="Inactive" />
-            <Badge intent="info" icon={Icon} text="Verification Pending" visuallyHiddenText="Please check back in 2-4 business days"/>
+            <Badge intent="info" icon={Icon} text="Verification Pending" visuallyHiddenText="Please check back in 2-4 business days" />
           </Cell>
         </Row>
         <Row key="PERSON_2">
@@ -40,7 +40,7 @@ const BadgeInTable = () => (
           <Cell key="ADDRESS">213 Scuba Drive</Cell>
           <Cell key="BADGE">
             <Badge intent="primary" size="large" text="Active" />
-            <Badge intent="warning" text="Order Pending"/>
+            <Badge intent="warning" text="Order Pending" />
           </Cell>
         </Row>
       </Body>

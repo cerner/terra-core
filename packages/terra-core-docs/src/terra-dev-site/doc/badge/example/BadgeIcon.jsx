@@ -11,6 +11,8 @@ const BadgeIcon = () => (
     <Badge icon={Icon} text="icon" isReversed />
     {' '}
     <Badge icon={Icon} />
+    {' '}
+    <Badge icon={Icon} visuallyHiddenText="Save" />
   </div>
 );
 
