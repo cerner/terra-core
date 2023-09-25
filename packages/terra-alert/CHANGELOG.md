@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added visually hidden default title for screen readers to read with custom titles.
+
 ## 4.80.0 - (September 21, 2023)
 
 * Changed
