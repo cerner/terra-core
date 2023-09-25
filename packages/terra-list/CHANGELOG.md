@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+* Added
+  * Added drag and drop icon for draggable list items.
 
 * Fixed
   * Fixed position loss issue while dragging list item for `terra-list` inside `terra-slide-panel`.

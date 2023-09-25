@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Updated
+  * Updated test drag and drop example for `terra-list`.
+
 * Added
   * Added a test case for `terra-list` to support drag and drop in `terra-slide-panel`.
 
