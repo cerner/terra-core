@@ -96,15 +96,22 @@ function Cell(props) {
     ? columnContext.pinnedColumnOffsets[columnIndex] : null;
 
   const CellTag = isRowHeader ? 'th' : 'td';
+
+  const handleMouseDown = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   return (
     <CellTag
       ref={cellRef}
       aria-label={ariaLabel}
-      tabIndex={-1}
       className={className}
+      onMouseDown={handleMouseDown}
       {...(isRowHeader && { scope: 'row', role: 'rowheader' })}
       // eslint-disable-next-line react/forbid-component-props
       style={{ left: cellLeftEdge }}
+      tabIndex={-1}
     >
       {/* eslint-disable-next-line react/forbid-dom-props */}
       <div className={cx('cell-content', theme.className)} style={{ height }}>{cellContent}</div>

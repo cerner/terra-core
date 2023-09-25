@@ -142,8 +142,11 @@ const ColumnHeaderCell = (props) => {
 
   // Handle column header selection via the mouse click.
   const handleMouseDown = (event) => {
-    onColumnSelect(id, { row: rowIndex, col: columnIndex });
-    event.stopPropagation();
+    event.preventDefault();
+    if (isSelectable && onColumnSelect) {
+      onColumnSelect(id, { row: rowIndex, col: columnIndex });
+      event.stopPropagation();
+    }
   };
 
   let sortIndicatorIcon;
@@ -181,7 +184,7 @@ const ColumnHeaderCell = (props) => {
       role="columnheader"
       scope="col"
       aria-sort={sortIndicator}
-      onMouseDown={isSelectable && onColumnSelect ? handleMouseDown : undefined}
+      onMouseDown={handleMouseDown}
       // eslint-disable-next-line react/forbid-dom-props
       style={{ width: `${width}px`, height: headerHeight, left: cellLeftEdge }}
     >

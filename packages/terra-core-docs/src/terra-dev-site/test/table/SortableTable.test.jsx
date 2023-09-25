@@ -47,7 +47,7 @@ const SortableTable = () => {
   return (
     <React.Fragment>
       <Table
-        id="my-table-id"
+        id="sortable-table"
         overflowColumns={tableColumns}
         rows={tableRows}
         onColumnSelect={handleColumnSelect}

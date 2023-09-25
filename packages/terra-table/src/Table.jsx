@@ -190,8 +190,7 @@ function Table(props) {
 
       lastPinnedColumnIndex = pinnedColumns.length - 1;
 
-      // eslint-disable-next-line array-callback-return
-      renderedColumns.slice(0, lastPinnedColumnIndex).map((pinnedColumn) => {
+      renderedColumns.slice(0, lastPinnedColumnIndex).forEach((pinnedColumn) => {
         cumulativeOffset += pinnedColumn.width;
         offsetArray.push(cumulativeOffset);
       });

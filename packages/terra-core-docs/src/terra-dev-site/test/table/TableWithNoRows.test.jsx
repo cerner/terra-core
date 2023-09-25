@@ -14,7 +14,7 @@ const TableWithNoRows = () => {
 
   return (
     <Table
-      id="default-terra-table"
+      id="table-with-no-rows"
       overflowColumns={cols}
       rowHeaderIndex={0}
       columnHeaderHeight="50px"

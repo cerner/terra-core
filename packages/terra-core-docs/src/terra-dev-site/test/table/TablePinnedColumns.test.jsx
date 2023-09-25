@@ -1,68 +1,13 @@
 import React from 'react';
 import Table from 'terra-table';
+import tableData from './mockPinnedColumnsTableData.json';
 
-const tableData = {
-  cols: [
-    { id: 'Column-0', displayName: 'Vitals' },
-    { id: 'Column-1', displayName: 'March 16' },
-    { id: 'Column-2', displayName: 'March 17' },
-    { id: 'Column-3', displayName: 'March 18' },
-  ],
-  rows: [
-    {
-      id: '1',
-      cells: [
-        { content: 'Heart Rate Monitored (bpm)' },
-        { content: '68' },
-        { content: '66' },
-        { content: '67' },
-      ],
-    },
-    {
-      height: '150px',
-      id: '2',
-      cells: [
-        { content: 'Temperature Oral (degC)' },
-        { content: '36.7', isMasked: true },
-        { content: '36.9', isMasked: true },
-        { content: '37', isMasked: true },
-      ],
-    },
-    {
-      id: '3',
-      cells: [
-        { content: 'Cardiac Index (L/min/m2)' },
-        { content: '2.25' },
-        { content: '2.28' },
-        { content: '2.8' },
-      ],
-    },
-    {
-      id: '4',
-      cells: [
-        { content: 'ICP (mmHg)', isMasked: true },
-        { content: '11' },
-        { content: '11' },
-        { content: '12' },
-      ],
-    },
-    {
-      id: '5',
-      cells: [
-        { content: 'CPP (mmHg)' },
-        { content: '63' },
-        { content: '47' },
-        { content: '48' },
-      ],
-    },
-  ],
-};
 const TablePinnedColumns = () => {
   const { cols, rows } = tableData;
 
   return (
     <Table
-      id="default-terra-table"
+      id="table-pinned-columns"
       pinnedColumns={cols.slice(0, 3)}
       overflowColumns={cols.slice(3)}
       rows={rows}
