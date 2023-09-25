@@ -6,6 +6,7 @@ import ThemeContext from 'terra-theme-context';
 import ChevronRight from 'terra-icon/lib/icon/IconChevronRight';
 import { injectIntl } from 'react-intl';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
+import IconKnurling from 'terra-icon/lib/icon/IconKnurling';
 import ListUtils from './ListUtils';
 import styles from './List.module.scss';
 
@@ -120,9 +121,14 @@ const ListItem = ({
 
   return (
     <li {...customProps} {...attrSpread} className={listItemClassNames} ref={refCallback}>
+      {(isDraggable) && (
+        <div key="knurling-icon">
+          <IconKnurling />
+          <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />
+        </div>
+      )}
       <div className={cx('item-fill')} key="item-fill">
         {children}
-        {(isDraggable) && <VisuallyHiddenText aria-hidden id={responseId} text={onFocusResponse} />}
       </div>
       {hasChevron && <div className={cx('item-end')} key="item-end"><span className={cx('chevron')}><ChevronRight height="1em" width="1em" /></span></div>}
     </li>
