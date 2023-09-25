@@ -62,13 +62,8 @@ class Tag extends React.Component {
 
   handleKeyUp(event) {
     // Apply focus styles for keyboard navigation
-    if (event.nativeEvent.keyCode === KeyCode.KEY_TAB) {
-      this.setState({ focused: true });
-    } else if (event.nativeEvent.keyCode === KeyCode.KEY_RIGHT) {
-      this.setState({ focused: true });
-    } else if (event.nativeEvent.keyCode === KeyCode.KEY_LEFT) {
-      this.setState({ focused: true });
-    } else if (event.nativeEvent.keyCode === KeyCode.KEY_RETURN) {
+    const eventKeyCode = new Set([KeyCode.KEY_TAB, KeyCode.KEY_LEFT, KeyCode.KEY_RIGHT, KeyCode.KEY_RETURN]);
+    if (eventKeyCode.has(event.nativeEvent.keyCode)) {
       this.setState({ focused: true });
     }
 

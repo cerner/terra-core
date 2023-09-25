@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import classNames from 'classnames/bind';
-import { Tag } from 'terra-tag';
+import Tag from 'terra-tag';
 import styles from './TagTestCommon.module.scss';
 
 const cx = classNames.bind(styles);

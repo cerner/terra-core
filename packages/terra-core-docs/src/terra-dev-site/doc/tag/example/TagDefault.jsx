@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag } from 'terra-tag';
+import Tag from 'terra-tag';
 
 const TagDefault = () => (
   <div>
