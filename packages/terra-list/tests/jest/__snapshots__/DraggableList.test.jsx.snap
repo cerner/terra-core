@@ -867,7 +867,6 @@ exports[`should render Section with items 1`] = `
                     <ul
                       className="list list-fill"
                       onKeyDown={[Function]}
-                      role="listbox"
                     >
                       <PublicDraggable
                         draggableId="123"
@@ -1562,7 +1561,6 @@ exports[`should render subsection with items 1`] = `
                     <ul
                       className="list list-fill"
                       onKeyDown={[Function]}
-                      role="listbox"
                     >
                       <PublicDraggable
                         draggableId="13"

@@ -177,11 +177,12 @@ const ListSubsection = ({
   });
 
   const renderSubSectionListItemsDom = () => (
+    /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     <>
       <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {listItemNodes && (
       <li className={cx('list-item')}>
-        <ul role="listbox" className={listClassNames} ref={(refobj) => handleListItemsRef(refobj)} onKeyDown={handleKeyDown}>
+        <ul className={listClassNames} ref={(refobj) => handleListItemsRef(refobj)} onKeyDown={handleKeyDown}>
           {listItemNodes}
         </ul>
       </li>
@@ -198,11 +199,11 @@ const ListSubsection = ({
         )}
       >
         {(provided) => (
+          /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
           <div ref={provided.innerRef}>
             <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
             <li className={cx('list-item')}>
               <ul
-                role="listbox"
                 className={listClassNames}
                 onKeyDown={handleKeyDown}
                 ref={(refobj) => handleListItemsRef(refobj)}

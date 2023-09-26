@@ -170,12 +170,12 @@ const ListSection = ({
   });
 
   const renderSectionListItemsDom = () => (
+    /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     <>
       <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {listItemNodes && (
         <li className={cx('list-item')}>
           <ul
-            role="listbox"
             onKeyDown={handleKeyDown}
             className={listClassNames}
             ref={(refobj) => handleListItemsRef(refobj)}
@@ -206,11 +206,11 @@ const ListSection = ({
         )}
       >
         {(provided) => (
+          /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
           <div ref={provided.innerRef}>
             <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
             <li className={cx('list-item')}>
               <ul
-                role="listbox"
                 ref={(refobj) => handleListItemsRef(refobj)}
                 className={listClassNames}
                 onKeyDown={handleKeyDown}
