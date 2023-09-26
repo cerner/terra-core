@@ -1,8 +1,9 @@
 # Changelog
 
 ## Unreleased
+
 * Added
-  * Added cyclic navigation to support keyboard usage with arrow keys.
+  * Added arrow key navigation support for list items.
   * Added drag and drop icon for draggable list items.
 
 * Fixed

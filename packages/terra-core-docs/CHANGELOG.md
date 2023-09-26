@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-* Added
-  * Added cyclic navigation to support keyboard usage with arrow keys.
+* Changed
+  * Updated terra-list examples to demonstrate arrow key navigation within list and list sections.
  
  ## 1.40.0 - (September 19, 2023)
 * Updated

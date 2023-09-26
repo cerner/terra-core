@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, {
   useRef, useContext, useState, useEffect,
 } from 'react';
@@ -182,7 +181,7 @@ const ListSubsection = ({
       <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {listItemNodes && (
       <li className={cx('list-item')}>
-        <ul className={listClassNames} ref={(refobj) => handleListItemsRef(refobj)} onKeyDown={handleKeyDown}>
+        <ul role="listbox" className={listClassNames} ref={(refobj) => handleListItemsRef(refobj)} onKeyDown={handleKeyDown}>
           {listItemNodes}
         </ul>
       </li>
@@ -203,6 +202,7 @@ const ListSubsection = ({
             <SubsectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
             <li className={cx('list-item')}>
               <ul
+                role="listbox"
                 className={listClassNames}
                 onKeyDown={handleKeyDown}
                 ref={(refobj) => handleListItemsRef(refobj)}
