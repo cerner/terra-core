@@ -7,13 +7,13 @@ const ListSectionDividerTest = () => (
       key="static-section"
       title="Static Section"
     >
-      <Item key="123" isSelectable>
+      <Item key="123">
         <p>test static 1</p>
       </Item>
-      <Item key="124" isSelectable>
+      <Item key="124">
         <p>test static 2</p>
       </Item>
-      <Item key="125" isSelectable>
+      <Item key="125">
         <p>test static 3</p>
       </Item>
     </Section>
@@ -22,10 +22,10 @@ const ListSectionDividerTest = () => (
       isCollapsible
       title="Collapsible Section"
     >
-      <Item key="223" isSelectable>
+      <Item key="223">
         <p>test collapsible 1</p>
       </Item>
-      <Item key="224" isSelectable>
+      <Item key="224">
         <p>test collapsible 2</p>
       </Item>
     </Section>
@@ -35,7 +35,7 @@ const ListSectionDividerTest = () => (
       isCollapsible
       title="Collapsed Section"
     >
-      <Item key="323" isSelectable>
+      <Item key="323">
         <p>test collapsed</p>
       </Item>
     </Section>
