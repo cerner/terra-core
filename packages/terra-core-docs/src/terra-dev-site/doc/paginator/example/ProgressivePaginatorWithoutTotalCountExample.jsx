@@ -29,11 +29,10 @@ const InfiniteProgressivePaginatorExample = () => {
       <Dialog
         header={(
           <h1>
-            Page
-            {currentPage}
+            Progressive Paginator Without Total Count Example
           </h1>
           )}
-        footer={<ProgressivePaginator onPageChange={changePages} ariaLabel="progressive paginator no total count pagination" />}
+        footer={<ProgressivePaginator onPageChange={changePages} selectedPage={currentPage} ariaLabel="progressive paginator no total count pagination" />}
       >
         {content}
       </Dialog>

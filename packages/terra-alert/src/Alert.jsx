@@ -1,24 +1,27 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import ResponsiveElement from 'terra-responsive-element';
-import Button from 'terra-button';
 import { injectIntl } from 'react-intl';
-import IconAlert from 'terra-icon/lib/icon/IconAlert';
-import IconError from 'terra-icon/lib/icon/IconError';
-import IconWarning from 'terra-icon/lib/icon/IconWarning';
-import IconGapChecking from 'terra-icon/lib/icon/IconGapChecking';
-import IconDiamondSymbol from 'terra-icon/lib/icon/IconDiamondSymbol';
-import IconInformation from 'terra-icon/lib/icon/IconInformation';
-import IconSuccess from 'terra-icon/lib/icon/IconSuccess';
 import classNames from 'classnames';
 import classNamesBind from 'classnames/bind';
-import ThemeContext from 'terra-theme-context';
 import { v4 as uuidv4 } from 'uuid';
+
+import ResponsiveElement from 'terra-responsive-element';
+import Button from 'terra-button';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+import {
+  IconAlert,
+  IconError,
+  IconWarning,
+  IconGapChecking,
+  IconDiamondSymbol,
+  IconInformation,
+  IconSuccess,
+} from 'terra-icon';
+import ThemeContext from 'terra-theme-context';
 
 import styles from './Alert.module.scss';
 
 const cx = classNamesBind.bind(styles);
-
 const AlertTypes = {
   ALERT: 'alert',
   ERROR: 'error',
@@ -200,6 +203,7 @@ const Alert = ({
     <div id={alertMessageId} className={alertSectionClassName}>
       {(title || defaultTitle) && (
         <strong id={alertTitleId} className={cx('title')}>
+          {title && defaultTitle && <VisuallyHiddenText text={`${defaultTitle},`} />}
           {title || defaultTitle}
         </strong>
       )}

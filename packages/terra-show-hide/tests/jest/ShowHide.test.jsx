@@ -1,13 +1,21 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl } from 'terra-enzyme-intl';
 import ShowHide from '../../src/ShowHide';
 
-jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
-
 describe('ShowHide', () => {
+  let mockSpyUuid;
+  beforeAll(() => {
+    mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
+  });
+
+  afterAll(() => {
+    mockSpyUuid.mockRestore();
+  });
+
   // Snapshot Tests
   it('should render a default show-hide component', () => {
     const showHide = mountWithIntl(<ShowHide preview={<p>Test</p>} onChange={e => typeof e}>Full Text</ShowHide>);

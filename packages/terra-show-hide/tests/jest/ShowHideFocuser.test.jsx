@@ -1,9 +1,17 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import ShowHideFocuser from '../../src/ShowHideFocuser';
 
-jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
-
 describe('ShowHideFocuser', () => {
+  let mockSpyUuid;
+  beforeAll(() => {
+    mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
+  });
+
+  afterAll(() => {
+    mockSpyUuid.mockRestore();
+  });
+
   const mockPrefix = 'Patients are requesting greater affordability and efficiency in healthcare.';
   const mockFocusableText = 'In fact, the U.S. ambulatory surgery center market is expected to see a 6.9 % compound annual growth rate, reaching $33 billion by 2028. (2) Cerner understands the urgency to grow in the ambulatory surgery center market while continuing to deliver excellent care.';
   // eslint-disable-next-line react/prop-types
@@ -11,10 +19,6 @@ describe('ShowHideFocuser', () => {
     const ref = React.useRef(null);
     return <p><ShowHideFocuser ref={ref} prefix={prefix} focusableText={focusableText} /></p>;
   };
-
-  afterAll(() => {
-    jest.resetAllMocks();
-  });
 
   // Snapshot Tests
   it('should render divider spans and a span to focus to correctly', () => {

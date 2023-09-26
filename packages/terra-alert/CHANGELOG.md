@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+* Added
+  * Added visually hidden default title for screen readers to read with custom titles.
+
+## 4.80.0 - (September 21, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 4.79.0 - (September 19, 2023)
+
+* Changed
+  * Minor dependency version bump
+
 ## 4.78.0 - (August 25, 2023)
 
 * Changed

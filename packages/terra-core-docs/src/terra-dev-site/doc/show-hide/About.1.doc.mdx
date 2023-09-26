@@ -101,7 +101,7 @@ import ShowHide, { ShowHideFocuser } from 'terra-show-hide';
     return (
       <ShowHide focusRef={focusRef} preview={ <p>{prefix}</p> } isOpen={isOpen} onChange={toggleShowHide} >
         <p>
-          <ShowHideFocuser ref={this.focusRef} prefix={prefix} focusableText={focusableText} />
+          <ShowHideFocuser ref={focusRef} prefix={prefix} focusableText={focusableText} />
         </p>
       </ShowHide>
     );
@@ -138,7 +138,7 @@ Please note:
           <h3>{header}</h3>
           // This paragraph contains a link in hidden content. Explore a working example below under Examples, Custom Button Text ShowHide.
           <p>
-            <ShowHideFocuser ref={this.focusRef} prefix={prefix} focusableText="Several factors help bring clarity to life sciences, researchers and clinicians and " />
+            <ShowHideFocuser ref={focusRef} prefix={prefix} focusableText={"Several factors help bring clarity to life sciences, researchers and clinicians and "} />
             <a href="#">guide better care</a>, including:
           </p>
           <ul>
@@ -172,7 +172,7 @@ Please note:
         <ShowHide focusRef={focusRef} preview={<p>{previewText}</p>} isOpen={isOpen} onChange={toggleShowHide} >
           <p>
             {previewText}
-            <a ref={this.focusRef} href="#">CMS recently announced</a>
+            <a ref={focusRef} href="#">CMS recently announced</a>
             {text}
           </p>
         </ShowHide>
@@ -206,3 +206,26 @@ Please note:
 
 ## Show Hide Focuser Props
 <ShowHideFocuserPropsTable />
+
+## Testing
+
+Terra Show Hide uses `uuid` which changes the component's description id dynamically. To mock the return value with the Jest testing library, `jest.spyOn` can be used.
+
+If Enzyme `shallow` is being used for the tests then the mock may not be required depending on the depth of the returned wrapper. However, if `mount` is used then `uuid` should be mocked as shown below:
+
+```js
+import { v4 as uuidv4 } from 'uuid';
+
+let mockSpyUuid;
+
+// using a variable may result in failures. For best results, mock return value.
+beforeAll(() => {
+  mockSpyUuid = jest.spyOn(uuidv4, 'v4').mockReturnValue('00000000-0000-0000-0000-000000000000');
+});
+
+// restore the mock
+afterAll(() => {
+  mockSpyUuid.mockRestore();
+});
+
+```

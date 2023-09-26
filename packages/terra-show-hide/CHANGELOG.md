@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 2.65.0 - (September 21, 2023)
+
+* Changed
+  * Minor dependency version bump
+
+## 2.64.0 - (September 19, 2023)
+
+* Changed
+  * Updated `show-hide` in order for it to be usable inside the `terra-alert` component.
+
 ## 2.63.0 - (August 23, 2023)
 
 * Changed
