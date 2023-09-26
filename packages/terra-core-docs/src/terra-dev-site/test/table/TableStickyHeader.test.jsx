@@ -8,7 +8,7 @@ const TableStickyHeader = () => {
 
   return (
     // eslint-disable-next-line react/forbid-dom-props, jsx-a11y/no-noninteractive-tabindex
-    <div style={{ height: '250px', overflow: 'scroll' }} tabIndex={0}>
+    <div style={{ height: '250px', overflow: 'scroll' }} tabIndex={0} className="table-container">
       <Table
         id="table-sticky-header"
         overflowColumns={cols}

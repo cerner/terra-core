@@ -82,7 +82,7 @@ const ColumnResizeHandle = (props) => {
       ref={resizeHandle}
       draggable
       role="slider"
-      tabIndex={0}
+      tabIndex={-1}
       aria-hidden={!isActive}
       aria-valuemin={minimumWidth}
       aria-valuenow={columnWidth}

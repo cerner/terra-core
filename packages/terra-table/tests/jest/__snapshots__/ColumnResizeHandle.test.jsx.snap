@@ -123,7 +123,7 @@ exports[`ColumnResizeHandle renders a default column resize handle 1`] = `
           "height": "500px",
         }
       }
-      tabIndex={0}
+      tabIndex={-1}
     />
   </ColumnResizeHandle>
 </InjectIntl(ColumnResizeHandle)>

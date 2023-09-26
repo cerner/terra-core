@@ -7,7 +7,7 @@ const TablePinnedColumns = () => {
 
   return (
     // eslint-disable-next-line react/forbid-dom-props, jsx-a11y/no-noninteractive-tabindex
-    <div style={{ overflow: 'auto' }} tabIndex={0}>
+    <div style={{ overflow: 'auto' }} tabIndex={0} className="table-container">
       <Table
         id="table-pinned-columns"
         pinnedColumns={cols.slice(0, 3)}
