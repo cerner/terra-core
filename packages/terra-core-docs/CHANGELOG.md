@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.42.0 - (September 26, 2023)
+
 * Updated
   * Updated test drag and drop example for `terra-list`.
 

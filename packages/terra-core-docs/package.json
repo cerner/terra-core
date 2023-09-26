@@ -1,6 +1,6 @@
 {
   "name": "@cerner/terra-core-docs",
-  "version": "1.41.0",
+  "version": "1.42.0",
   "description": "Contains documentation for packages in the terra-core monorepo",
   "main": "index.js",
   "publishConfig": {
@@ -39,7 +39,7 @@
     "moment": "^2.29.4",
     "terra-action-footer": "^2.65.0",
     "terra-action-header": "^2.83.0",
-    "terra-alert": "^4.80.0",
+    "terra-alert": "^4.81.0",
     "terra-arrange": "^3.53.0",
     "terra-avatar": "^3.17.0",
     "terra-badge": "^3.57.0",
@@ -69,7 +69,7 @@
     "terra-i18n": "^4.40.0",
     "terra-icon": "^3.57.1",
     "terra-image": "^3.38.0",
-    "terra-list": "^4.62.0",
+    "terra-list": "^4.63.0",
     "terra-overlay": "^3.78.0",
     "terra-paginator": "^2.85.0",
     "terra-profile-image": "^3.43.0",
@@ -80,6 +80,7 @@
     "terra-section-header": "^2.62.0",
     "terra-show-hide": "^2.65.0",
     "terra-signature": "^2.39.0",
+    "terra-slide-panel": "^3.46.0",
     "terra-spacer": "^3.61.0",
     "terra-status": "^4.59.0",
     "terra-status-view": "^4.64.0",
@@ -92,7 +93,6 @@
     "terra-toggle-button": "^3.76.0",
     "terra-toggle-section-header": "^2.69.0",
     "terra-toolbar": "^1.37.0",
-    "terra-visually-hidden-text": "^2.36.0",
-    "terra-slide-panel": "^3.46.0"
+    "terra-visually-hidden-text": "^2.36.0"
   }
 }
