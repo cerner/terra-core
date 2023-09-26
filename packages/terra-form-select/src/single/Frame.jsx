@@ -525,23 +525,18 @@ class Frame extends React.Component {
         tabIndex={disabled ? '-1' : '0'} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
         ref={(select) => { this.select = select; }}
       >
+        {/* Added this label and input to avoid accessibility violations after changing the role from button to combobox */}
+        <label hidden>
+          <input type="text" />
+        </label>
         <div className={cx('visually-hidden-component')} hidden>
           {/* Hidden attribute used to prevent VoiceOver on desktop from announcing this content twice */}
           <span id={descriptionId}>{this.renderDescriptionText()}</span>
         </div>
         {/* Added aria label to avoid announcing empty group by voice over in safari browser */}
-        {
-          SharedUtil.isSafari()
-            ? (
-              <div className={cx('display')} aria-label={intl.formatMessage({ id: 'Terra.form.select.optGroup' })}>
-                {this.getDisplay(displayId, placeholderId)}
-              </div>
-            ) : (
-              <div className={cx('display')}>
-                {this.getDisplay(displayId, placeholderId)}
-              </div>
-            )
-        }
+        <div className={cx('display')} aria-label={SharedUtil.isSafari() ? intl.formatMessage({ id: 'Terra.form.select.optGroup' }) : ''}>
+          {this.getDisplay(displayId, placeholderId)}
+        </div>
         {this.renderToggleButton()}
         <span
           aria-live={SharedUtil.isSafari() ? 'polite' : 'off'}
