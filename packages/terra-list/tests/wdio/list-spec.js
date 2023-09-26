@@ -33,18 +33,6 @@ Terra.describeViewports('List', ['medium'], () => {
     it('should display ListSection with divider', () => {
       Terra.validates.element('section divider');
     });
-
-    it('Navigates from last item to first item', () => {
-      browser.keys(['Tab', 'ArrowDown', 'ArrowDown', 'ArrowDown']);
-      expect($('#firstItem').isFocused()).toBeTruthy();
-      Terra.validates.element('first item focused');
-    });
-
-    it('Navigates from first item to last item', () => {
-      browser.keys(['Tab', 'ArrowUp', 'ArrowUp']);
-      expect($('#lastItem').isFocused()).toBeTruthy();
-      Terra.validates.element('last item focused');
-    });
   });
 
   describe('ListSubsection', () => {

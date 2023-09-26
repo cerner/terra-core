@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, {
   useRef, useContext, useState, useEffect,
 } from 'react';
@@ -7,6 +8,7 @@ import classNamesBind from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { injectIntl } from 'react-intl';
+import * as KeyCode from 'keycode-js';
 import SectionHeader from './ListSectionHeader';
 import styles from './List.module.scss';
 
@@ -105,6 +107,29 @@ const ListSection = ({
     listSectionItemNode = nodes;
   };
 
+  const handleKeyDown = event => {
+    const listItems = listSectionItemNode.querySelectorAll('[data-item-show-focus]');
+    const currentIndex = Array.from(listItems).indexOf(event.target);
+    const lastIndex = listItems.length - 1;
+
+    if (event.nativeEvent.keyCode === KeyCode.KEY_END) {
+      event.preventDefault();
+      listItems[listItems.length - 1].focus();
+    } else if (event.nativeEvent.keyCode === KeyCode.KEY_HOME) {
+      event.preventDefault();
+      listItems[0].focus();
+    } else if (event.nativeEvent.keyCode === KeyCode.KEY_UP) {
+      event.preventDefault();
+      const previousIndex = currentIndex > 0 ? currentIndex - 1 : lastIndex;
+      listItems[previousIndex].focus();
+    } else if (event.nativeEvent.keyCode === KeyCode.KEY_DOWN) {
+      event.preventDefault();
+      const nextIndex = currentIndex < lastIndex ? currentIndex + 1 : 0;
+      listItems[nextIndex].focus();
+    }
+    event.stopPropagation();
+  };
+
   const reorderListItems = (list, startIndex, endIndex) => {
     const result = Array.from(list);
     const [removed] = result.splice(startIndex, 1);
@@ -150,7 +175,11 @@ const ListSection = ({
       <SectionHeader {...customProps} isCollapsible={isCollapsible} isCollapsed={isCollapsed} />
       {listItemNodes && (
         <li className={cx('list-item')}>
-          <ul className={listClassNames}>
+          <ul
+            onKeyDown={handleKeyDown}
+            className={listClassNames}
+            ref={(refobj) => handleListItemsRef(refobj)}
+          >
             {listItemNodes}
           </ul>
         </li>
@@ -183,6 +212,7 @@ const ListSection = ({
               <ul
                 ref={(refobj) => handleListItemsRef(refobj)}
                 className={listClassNames}
+                onKeyDown={handleKeyDown}
               >
                 {listItemNodes.map((item, index) => (
                   <Draggable isDragDisabled={!(item?.props?.isSelectable)} key={item.key} draggableId={item.key} index={index}>
