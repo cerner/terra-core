@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
- * Fixed it announces the expansion state Upon revisiting.
+  * Fixed screenreaders announcing the expansion state upon revisit.
 
 ## 6.46.0 - (August 25, 2023)
 
