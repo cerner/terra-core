@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Changed
+  * Re-implementing Terra Table in preparation of being consumed by DataGrid package.
+
 ## 4.36.0 - (August 1, 2023)
 
 * Changed

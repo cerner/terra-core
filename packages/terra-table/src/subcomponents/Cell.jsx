@@ -1,5 +1,5 @@
 import React, {
-  useContext, useRef,
+  useContext,
 } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
@@ -64,7 +64,6 @@ function Cell(props) {
     intl,
   } = props;
 
-  const cellRef = useRef();
   const theme = useContext(ThemeContext);
   const columnContext = useContext(ColumnContext);
 
@@ -97,21 +96,13 @@ function Cell(props) {
 
   const CellTag = isRowHeader ? 'th' : 'td';
 
-  const handleMouseDown = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-  };
-
   return (
     <CellTag
-      ref={cellRef}
       aria-label={ariaLabel}
       className={className}
-      onMouseDown={handleMouseDown}
       {...(isRowHeader && { scope: 'row', role: 'rowheader' })}
       // eslint-disable-next-line react/forbid-component-props
       style={{ left: cellLeftEdge }}
-      tabIndex={-1}
     >
       {/* eslint-disable-next-line react/forbid-dom-props */}
       <div className={cx('cell-content', theme.className)} style={{ height }}>{cellContent}</div>

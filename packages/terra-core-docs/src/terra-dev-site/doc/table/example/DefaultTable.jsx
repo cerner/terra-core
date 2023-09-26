@@ -52,14 +52,14 @@ const tableData = {
 };
 
 const DefaultTable = () => (
-  <React.Fragment>
+  // eslint-disable-next-line react/forbid-dom-props, jsx-a11y/no-noninteractive-tabindex
+  <div style={{ overflow: 'scroll' }} tabIndex={0}>
     <Table
       id="my-table-id"
       overflowColumns={tableData.cols}
       rows={tableData.rows}
     />
-
-  </React.Fragment>
+  </div>
 );
 
 export default DefaultTable;

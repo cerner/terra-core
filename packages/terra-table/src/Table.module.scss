@@ -1,12 +1,5 @@
 :local {
-  .table-container {
-    height: 100%;
-    overflow: auto;
-    width: 100%;
-  }
-
   .table {
-    // Style for the table itself
     border-collapse: separate;
     border-spacing: 0;
     table-layout: fixed;

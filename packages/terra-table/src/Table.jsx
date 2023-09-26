@@ -139,7 +139,6 @@ function Table(props) {
   const tableWidth = useRef(0);
 
   const table = useRef();
-  const tableContainerRef = useRef();
   const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
 
   // Define ColumnContext Provider value object
@@ -152,13 +151,12 @@ function Table(props) {
   // -------------------------------------
   // callback Hooks
 
-  const tableRef = useCallback((node) => {
+  const tableResizeRef = useCallback((node) => {
     if (!node) {
       return;
     }
 
     table.current = node;
-
     const resizeObserver = new ResizeObserver(() => {
       // Update table height state variable
       setTableHeight(table.current.offsetHeight - 1);
@@ -180,22 +178,18 @@ function Table(props) {
   // useEffect to calculate pinned column offsets
   useEffect(() => {
     const offsetArray = [];
-    let cumulativeOffset = 0;
-    let lastPinnedColumnIndex;
+    if (pinnedColumns.length > 1) {
+      let cumulativeOffset = 0;
 
-    if (pinnedColumns.length === 0) {
-      setPinnedColumnOffsets([]);
-    } else {
       offsetArray.push(cumulativeOffset);
-
-      lastPinnedColumnIndex = pinnedColumns.length - 1;
+      const lastPinnedColumnIndex = pinnedColumns.length - 1;
 
       renderedColumns.slice(0, lastPinnedColumnIndex).forEach((pinnedColumn) => {
         cumulativeOffset += pinnedColumn.width;
         offsetArray.push(cumulativeOffset);
       });
-      setPinnedColumnOffsets(offsetArray);
     }
+    setPinnedColumnOffsets(offsetArray);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [renderedColumns]);
 
@@ -240,7 +234,6 @@ function Table(props) {
   };
 
   const onMouseUp = () => {
-    // Notify consumers of the new column width
     if (onColumnResize) {
       onColumnResize(renderedColumns[activeIndex].id, renderedColumns[activeIndex].width);
     }
@@ -252,11 +245,10 @@ function Table(props) {
   // -------------------------------------
 
   return (
-    <div ref={tableContainerRef} className={cx('table-container')}>
+    <div>
       <table
-        ref={tableRef}
+        ref={tableResizeRef}
         id={id}
-        role="table"
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabel}
         className={cx('table', theme.className)}

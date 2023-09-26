@@ -14,11 +14,11 @@ exports[`ColumnHeaderCell renders a column header cell with ascending sort 1`] =
       "width": "100px",
     }
   }
-  tabIndex={-1}
 >
   <div
     className="header-container"
     role="button"
+    tabIndex={0}
   >
     <span>
        Vitals
@@ -52,7 +52,6 @@ exports[`ColumnHeaderCell renders a column header cell with ascending sort and e
       "width": "100px",
     }
   }
-  tabIndex={-1}
 >
   <div
     className="header-container"
@@ -96,11 +95,11 @@ exports[`ColumnHeaderCell renders a column header cell with descending sort 1`] 
       "width": "100px",
     }
   }
-  tabIndex={-1}
 >
   <div
     className="header-container"
     role="button"
+    tabIndex={0}
   >
     <span>
        Vitals
@@ -133,7 +132,6 @@ exports[`ColumnHeaderCell renders a column header cell with error 1`] = `
       "width": "100px",
     }
   }
-  tabIndex={-1}
 >
   <div
     className="header-container"
@@ -163,6 +161,7 @@ exports[`ColumnHeaderCell renders a column header cell with onColumnSelect callb
   aria-sort="ascending"
   className="column-header selectable"
   key="Column-0"
+  onKeyDown={[Function]}
   onMouseDown={[Function]}
   role="columnheader"
   scope="col"
@@ -173,11 +172,11 @@ exports[`ColumnHeaderCell renders a column header cell with onColumnSelect callb
       "width": "100px",
     }
   }
-  tabIndex={-1}
 >
   <div
     className="header-container"
     role="button"
+    tabIndex={0}
   >
     <IconError
       a11yLabel="Terra.table.columnError"
@@ -198,7 +197,6 @@ exports[`ColumnHeaderCell renders a column header cell with onColumnSelect callb
     columnIndex={0}
     columnText=" Vitals"
     columnWidth={100}
-    onMouseDown={[Function]}
     onResizeMouseDown={[Function]}
   />
 </th>
@@ -218,7 +216,6 @@ exports[`ColumnHeaderCell renders a column header cell with onColumnSelect callb
       "width": "100px",
     }
   }
-  tabIndex={-1}
 >
   <div
     className="header-container"
@@ -261,7 +258,6 @@ exports[`ColumnHeaderCell renders a default column header cell 1`] = `
       "width": "100px",
     }
   }
-  tabIndex={-1}
 >
   <div
     className="header-container"
@@ -341,7 +337,6 @@ exports[`ColumnHeaderCell renders a pinned column header cell 1`] = `
           "width": "100px",
         }
       }
-      tabIndex={-1}
     >
       <div
         className="header-container"
@@ -476,7 +471,7 @@ exports[`ColumnHeaderCell renders a pinned column header cell 1`] = `
                 "height": "undefinedpx",
               }
             }
-            tabIndex={-1}
+            tabIndex={0}
           />
         </ColumnResizeHandle>
       </InjectIntl(ColumnResizeHandle)>

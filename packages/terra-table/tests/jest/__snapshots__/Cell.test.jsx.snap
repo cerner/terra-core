@@ -55,7 +55,6 @@ exports[`Cell renders a pinned cell 1`] = `
           "left": 0,
         }
       }
-      tabIndex={-1}
     >
       <div
         className="cell-content"
@@ -81,7 +80,6 @@ exports[`Cell verifies that a cell has the correct styles and no content when is
       "left": null,
     }
   }
-  tabIndex={-1}
 >
   <div
     className="cell-content"
@@ -108,7 +106,6 @@ exports[`Cell verifies that only a regular cell(<td>) is created when isRowHeade
       "left": null,
     }
   }
-  tabIndex={-1}
 >
   <div
     className="cell-content"
@@ -133,7 +130,6 @@ exports[`Cell verifies that only a row header cell (<th>) is created when isRowH
       "left": null,
     }
   }
-  tabIndex={-1}
 >
   <div
     className="cell-content"
@@ -156,7 +152,6 @@ exports[`Cell verifies that the cell rendered is marked blank when the cell cont
       "left": null,
     }
   }
-  tabIndex={-1}
 >
   <div
     className="cell-content"

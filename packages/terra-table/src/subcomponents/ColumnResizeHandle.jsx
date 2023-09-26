@@ -1,5 +1,5 @@
 import React, {
-  useContext, useRef, useCallback, useState,
+  useContext, useRef, useState,
 } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
@@ -61,15 +61,9 @@ const ColumnResizeHandle = (props) => {
   // State variable to control screen reader visibility
   const [isActive, setActive] = useState(false);
 
-  // Retrieve current theme from context
   const theme = useContext(ThemeContext);
   // Ref variable for native resize handle element
   const resizeHandle = useRef();
-
-  // Ref callback to obtain the native resize handle element
-  const resizeHandleRef = useCallback((node) => {
-    resizeHandle.current = node;
-  }, []);
 
   const onMouseDown = (event) => {
     // Execute callback function to notify consumer of mouse down event
@@ -85,10 +79,10 @@ const ColumnResizeHandle = (props) => {
     /* eslint-disable react/forbid-dom-props */
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/interactive-supports-focus
     <div
-      ref={resizeHandleRef}
+      ref={resizeHandle}
       draggable
       role="slider"
-      tabIndex={-1}
+      tabIndex={0}
       aria-hidden={!isActive}
       aria-valuemin={minimumWidth}
       aria-valuenow={columnWidth}

@@ -1,6 +1,7 @@
 import React, { useContext, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
+import * as KeyCode from 'keycode-js';
 import classNames from 'classnames/bind';
 
 import ThemeContext from 'terra-theme-context';
@@ -128,11 +129,8 @@ const ColumnHeaderCell = (props) => {
   } = props;
 
   const columnContext = useContext(ColumnContext);
+  const theme = useContext(ThemeContext);
   const columnHeaderCell = useRef();
-
-  const columnHeaderCellRef = useCallback((node) => {
-    columnHeaderCell.current = node;
-  }, []);
 
   const onResizeHandleMouseDown = useCallback((event) => {
     if (onResizeMouseDown) {
@@ -142,25 +140,31 @@ const ColumnHeaderCell = (props) => {
 
   // Handle column header selection via the mouse click.
   const handleMouseDown = (event) => {
-    event.preventDefault();
-    if (isSelectable && onColumnSelect) {
-      onColumnSelect(id, { row: rowIndex, col: columnIndex });
-      event.stopPropagation();
+    onColumnSelect(id, { row: rowIndex, col: columnIndex });
+    event.stopPropagation();
+  };
+
+  const handleKeyDown = (event) => {
+    const key = event.keyCode;
+    switch (key) {
+      case KeyCode.KEY_SPACE:
+      case KeyCode.KEY_RETURN:
+        onColumnSelect(id, { row: rowIndex, col: columnIndex });
+        event.stopPropagation();
+        event.preventDefault(); // prevent the default scrolling
+        break;
+      default:
     }
   };
 
-  let sortIndicatorIcon;
   const errorIcon = hasError && <IconError a11yLabel={intl.formatMessage({ id: 'Terra.table.columnError' })} className={cx('error-icon')} />;
 
-  // Add the sort indicator based on the sort direction
+  let sortIndicatorIcon;
   if (sortIndicator === SortIndicators.ASCENDING) {
     sortIndicatorIcon = <IconUp />;
   } else if (sortIndicator === SortIndicators.DESCENDING) {
     sortIndicatorIcon = <IconDown />;
   }
-
-  // Retrieve current theme from context
-  const theme = useContext(ThemeContext);
 
   const cellLeftEdge = (columnIndex < columnContext.pinnedColumnOffsets.length) ? columnContext.pinnedColumnOffsets[columnIndex] : null;
   const dividerLeftEdge = width - 1;
@@ -177,18 +181,19 @@ const ColumnHeaderCell = (props) => {
   return (
   /* eslint-disable react/forbid-dom-props */
     <th
-      ref={(columnHeaderCellRef)}
+      ref={columnHeaderCell}
       key={id}
       className={cx('column-header', theme.className, { selectable: isSelectable, pinned: columnIndex < columnContext.pinnedColumnOffsets.length })}
-      tabIndex={-1}
       role="columnheader"
       scope="col"
       aria-sort={sortIndicator}
-      onMouseDown={handleMouseDown}
+      onMouseDown={(isSelectable && onColumnSelect) ? handleMouseDown : undefined}
+      onKeyDown={isSelectable && onColumnSelect ? handleKeyDown : undefined}
       // eslint-disable-next-line react/forbid-dom-props
       style={{ width: `${width}px`, height: headerHeight, left: cellLeftEdge }}
     >
-      <div className={cx('header-container')} role={displayName && 'button'}>
+      {/* eslint-disable jsx-a11y/no-noninteractive-tabindex */}
+      <div className={cx('header-container')} role={displayName && 'button'} tabIndex={isSelectable ? 0 : undefined}>
         {errorIcon}
         <span>{displayName}</span>
         {sortIndicatorIcon}
@@ -201,7 +206,6 @@ const ColumnHeaderCell = (props) => {
         height={tableHeight}
         minimumWidth={minimumWidth}
         maximumWidth={maximumWidth}
-        onMouseDown={isSelectable && onColumnSelect ? handleMouseDown : undefined}
         onResizeMouseDown={onResizeHandleMouseDown}
       />
       )}
