@@ -6,6 +6,15 @@ Terra.describeViewports('Table', ['medium', 'large'], () => {
     });
   });
 
+  describe('No Interaction Table', () => {
+    it('Validates the default table is not interactable', () => {
+      browser.url('/raw/tests/cerner-terra-core-docs/table/no-interaction-table');
+      browser.keys(['Tab']);
+      $('#focused-button').isFocused();
+      Terra.validates.element('no-interaction-table', '#no-interaction-test-container');
+    });
+  });
+
   describe('Empty Table', () => {
     beforeEach(() => {
       browser.url('/raw/tests/cerner-terra-core-docs/table/table-with-no-rows');
@@ -16,7 +25,7 @@ Terra.describeViewports('Table', ['medium', 'large'], () => {
     });
   });
 
-  describe('with pinned columns', () => {
+  describe('Pinned Columns Table', () => {
     const pinnedColumnsSelector = '#table-pinned-columns';
     beforeEach(() => {
       browser.url('/raw/tests/cerner-terra-core-docs/table/table-pinned-columns');
@@ -33,7 +42,7 @@ Terra.describeViewports('Table', ['medium', 'large'], () => {
     });
   });
 
-  describe('with sticky column header', () => {
+  describe('Sticky Header Table', () => {
     const stickyHeaderSelector = '#table-sticky-header';
 
     beforeEach(() => {
@@ -45,7 +54,7 @@ Terra.describeViewports('Table', ['medium', 'large'], () => {
     });
 
     it('verifies that the table column header is fixed when scrolling', () => {
-      const testScript = 'document.querySelector(\'div[class*="table-container"\').scrollBy(0, 100)';
+      const testScript = 'document.querySelector(\'div[class*="table-container"\').scrollBy(0, 15)';
       browser.execute(testScript);
       browser.pause(250);
       Terra.validates.element('sticky-header-scrolled', { selector: stickyHeaderSelector });
@@ -58,9 +67,14 @@ Terra.describeViewports('Table', ['medium', 'large'], () => {
       browser.url('/raw/tests/cerner-terra-core-docs/table/sortable-table');
     });
 
-    it('Validates the table is sortable', () => {
-      $(`${sortableTableSelector} th`).click();
-      Terra.validates.element('sortable-table', { selector: sortableTableSelector });
+    it('Validates the selectable column header is focusable', () => {
+      browser.keys(['Tab']);
+      Terra.validates.element('sortable-table-focused-header', { selector: sortableTableSelector });
+    });
+
+    it('Validates the selectable column header is sortable with keyboard', () => {
+      browser.keys(['Tab', 'Space']);
+      Terra.validates.element('sortable-table-keyboard', { selector: sortableTableSelector });
     });
   });
 });
