@@ -73,7 +73,6 @@ exports[`Option correctly applies the theme context className 1`] = `
     >
       <li
         aria-disabled={false}
-        aria-label="display"
         className="option is-default orion-fusion-theme"
         data-terra-select-option={true}
         disabled={false}
@@ -85,6 +84,15 @@ exports[`Option correctly applies the theme context className 1`] = `
         >
           display
         </span>
+        <VisuallyHiddenText
+          text="display"
+        >
+          <span
+            className="visually-hidden-text"
+          >
+            display
+          </span>
+        </VisuallyHiddenText>
       </li>
     </Option>
   </InjectIntl(Option)>

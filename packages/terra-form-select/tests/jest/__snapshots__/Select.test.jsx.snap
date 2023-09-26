@@ -2,40 +2,42 @@
 
 exports[`Select correctly applies the theme context className for default variant 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-24"
+  aria-describedby="terra-select-screen-reader-description-19"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Terra.form.select.defaultDisplay, Terra.form.select.ariaLabel"
+  aria-label="Terra.form.select.defaultDisplay, "
   class="select default orion-fusion-theme"
   data-terra-select="true"
   data-terra-select-combobox="true"
-  role="button"
+  role="combobox"
   tabindex="0"
 >
+  <label
+    hidden=""
+  >
+    <input
+      type="text"
+    />
+  </label>
   <div
     class="visually-hidden-component"
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-21"
-    >
-      Terra.form.select.ariaLabel
-    </span>
-    <span
-      id="terra-select-screen-reader-description-24"
+      id="terra-select-screen-reader-description-19"
     >
       Terra.form.select.collapsed Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
     </span>
   </div>
   <div
-    aria-label="Terra.form.select.ariaLabel"
+    aria-label=""
     class="display"
   >
     <div
       aria-hidden="true"
       class="placeholder"
-      id="terra-select-screen-reader-placeholder-23"
+      id="terra-select-screen-reader-placeholder-18"
     >
       Terra.form.select.defaultDisplay
     </div>
@@ -621,40 +623,42 @@ exports[`Select should render a search variant with a placeholder 1`] = `
 
 exports[`Select should render a select with an optgroup and an option 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-14"
+  aria-describedby="terra-select-screen-reader-description-11"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Terra.form.select.defaultDisplay, Terra.form.select.ariaLabel"
+  aria-label="Terra.form.select.defaultDisplay, "
   class="select default"
   data-terra-select="true"
   data-terra-select-combobox="true"
-  role="button"
+  role="combobox"
   tabindex="0"
 >
+  <label
+    hidden=""
+  >
+    <input
+      type="text"
+    />
+  </label>
   <div
     class="visually-hidden-component"
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-11"
-    >
-      Terra.form.select.ariaLabel
-    </span>
-    <span
-      id="terra-select-screen-reader-description-14"
+      id="terra-select-screen-reader-description-11"
     >
       Terra.form.select.collapsed Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
     </span>
   </div>
   <div
-    aria-label="Terra.form.select.ariaLabel"
+    aria-label=""
     class="display"
   >
     <div
       aria-hidden="true"
       class="placeholder"
-      id="terra-select-screen-reader-placeholder-13"
+      id="terra-select-screen-reader-placeholder-10"
     >
       Terra.form.select.defaultDisplay
     </div>
@@ -676,40 +680,42 @@ exports[`Select should render a select with an optgroup and an option 1`] = `
 
 exports[`Select should render a select with an optgroup and multiple options 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-19"
+  aria-describedby="terra-select-screen-reader-description-15"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Terra.form.select.defaultDisplay, Terra.form.select.ariaLabel"
+  aria-label="Terra.form.select.defaultDisplay, "
   class="select default"
   data-terra-select="true"
   data-terra-select-combobox="true"
-  role="button"
+  role="combobox"
   tabindex="0"
 >
+  <label
+    hidden=""
+  >
+    <input
+      type="text"
+    />
+  </label>
   <div
     class="visually-hidden-component"
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-16"
-    >
-      Terra.form.select.ariaLabel
-    </span>
-    <span
-      id="terra-select-screen-reader-description-19"
+      id="terra-select-screen-reader-description-15"
     >
       Terra.form.select.collapsed Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
     </span>
   </div>
   <div
-    aria-label="Terra.form.select.ariaLabel"
+    aria-label=""
     class="display"
   >
     <div
       aria-hidden="true"
       class="placeholder"
-      id="terra-select-screen-reader-placeholder-18"
+      id="terra-select-screen-reader-placeholder-14"
     >
       Terra.form.select.defaultDisplay
     </div>
@@ -731,40 +737,42 @@ exports[`Select should render a select with an optgroup and multiple options 1`]
 
 exports[`Select should render a select with an option 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-4"
+  aria-describedby="terra-select-screen-reader-description-3"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Terra.form.select.defaultDisplay, Terra.form.select.ariaLabel"
+  aria-label="Terra.form.select.defaultDisplay, "
   class="select default"
   data-terra-select="true"
   data-terra-select-combobox="true"
-  role="button"
+  role="combobox"
   tabindex="0"
 >
+  <label
+    hidden=""
+  >
+    <input
+      type="text"
+    />
+  </label>
   <div
     class="visually-hidden-component"
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-1"
-    >
-      Terra.form.select.ariaLabel
-    </span>
-    <span
-      id="terra-select-screen-reader-description-4"
+      id="terra-select-screen-reader-description-3"
     >
       Terra.form.select.collapsed Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
     </span>
   </div>
   <div
-    aria-label="Terra.form.select.ariaLabel"
+    aria-label=""
     class="display"
   >
     <div
       aria-hidden="true"
       class="placeholder"
-      id="terra-select-screen-reader-placeholder-3"
+      id="terra-select-screen-reader-placeholder-2"
     >
       Terra.form.select.defaultDisplay
     </div>
@@ -786,40 +794,42 @@ exports[`Select should render a select with an option 1`] = `
 
 exports[`Select should render a select with multiple options 1`] = `
 <div
-  aria-describedby="terra-select-screen-reader-description-9"
+  aria-describedby="terra-select-screen-reader-description-7"
   aria-disabled="false"
   aria-expanded="false"
   aria-haspopup="true"
-  aria-label="Terra.form.select.defaultDisplay, Terra.form.select.ariaLabel"
+  aria-label="Terra.form.select.defaultDisplay, "
   class="select default"
   data-terra-select="true"
   data-terra-select-combobox="true"
-  role="button"
+  role="combobox"
   tabindex="0"
 >
+  <label
+    hidden=""
+  >
+    <input
+      type="text"
+    />
+  </label>
   <div
     class="visually-hidden-component"
     hidden=""
   >
     <span
-      id="terra-select-screen-reader-label-6"
-    >
-      Terra.form.select.ariaLabel
-    </span>
-    <span
-      id="terra-select-screen-reader-description-9"
+      id="terra-select-screen-reader-description-7"
     >
       Terra.form.select.collapsed Terra.form.select.listOfTotalOptions Terra.form.select.defaultUsageGuidance
     </span>
   </div>
   <div
-    aria-label="Terra.form.select.ariaLabel"
+    aria-label=""
     class="display"
   >
     <div
       aria-hidden="true"
       class="placeholder"
-      id="terra-select-screen-reader-placeholder-8"
+      id="terra-select-screen-reader-placeholder-6"
     >
       Terra.form.select.defaultDisplay
     </div>
