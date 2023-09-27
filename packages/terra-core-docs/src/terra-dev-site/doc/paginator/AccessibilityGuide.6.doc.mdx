@@ -1,0 +1,94 @@
+import { Badge } from 'terra-paginator/package.json?dev-site-package';
+import { Notice } from "@cerner/terra-docs";
+import ControlledPaginatorExample from './example/ControlledPaginatorExample?dev-site-example';
+import ControlledPaginatorNoPagesExample from './example/ControlledPaginatorNoPagesExample?dev-site-example';
+import ProgressivePaginatorExample from './example/ProgressivePaginatorExample?dev-site-example';
+import ProgressivePaginatorWithoutTotalCountExample from './example/ProgressivePaginatorWithoutTotalCountExample?dev-site-example';
+
+<Badge />
+
+# Accessibility Guide for Terra Paginator
+
+## Why is this important?
+
+Terra Paginator is a simple and effective way to make large amounts of content more manageable and user-friendly. However, it can be problematic to some users if not enough context is provided to convey what content the paginator controls. Therefore, it is critical to always include a visual heading above the paginator content and ensure the `ariaLabelledBy` prop is linked to the ID of the heading.
+
+## Accessibility Considerations
+
+#### General notes
+- All actionable elements must be able to receive focus and be interacted with using a keyboard.
+- Users rely on headings to define the content they are interacting with. Ensuring a heading is above the Paginator will support all sighted users to understand the purpose of the Paginator.
+- Screen reader users may require more context to understand the purpose of the Paginator. A meaningful label should be provided by using either the `ariaLabelledBy`(preferred) or `ariaLabel` prop.
+
+----
+
+### Code Considerations
+
+#### Add a meaningful accessible name to the paginator
+
+The paginator needs to provide context for screen reader users to understand what they are controling. Adding a proper label to the container should provide the necessary context. In order to provide an accessible name for the whole container, two optional props are available for the consumer team to pass a meaningful accessible label for the paginator.
+
+<Notice variant="important" ariaLevel="5">
+
+The `ariaLabelledBy` and `ariaLabel` [props](https://engineering.cerner.com/terra-ui/components/cerner-terra-core-docs/paginator/about#paginator-props) must not be used at the same time - only use one of the labeling props. The best practice would be to use only the `ariaLabelledBy` prop that refers to the id of heading that exists on the page. This will semantically relate the paginator and header as a related group.
+</Notice>
+
+When a visible text header exists on the page, the `ariaLabelledBy` can be set with using the header id and will be used with the aria-describedby to provide additional context to assistive technology users.
+
+##### Code Example:
+
+This example shows how to set up the recommended `ariaLabelledBy` prop to programmatically associate a visible heading on the page with the paginator to create an accessible paginator name:
+
+<ControlledPaginatorExample />
+
+The `ariaLabel` prop can be used to create a non-visible, but programmatically available accessible name for the paginator and will be used with the aria-describedby to provide additional context to assistive technology users.
+
+##### Code Example:
+
+This example shows how to set up the optional `ariaLabel` prop in order to provide meaningful context for the paginator:
+
+<ControlledPaginatorNoPagesExample />
+
+#### Provide additional context to assistive technology users after page nagivation
+
+From an accessibility perspective, some additional context is required for users to understand what is happening and where they are when interacting with the paginator.
+
+In order to provide the additional context, a visually hidden text string is constructed and associated with the paginator container.
+This visually hidden string will be read out by a screen reader when the user navigates using the paginator links. The visually hidden string is empty so nothing is read out in the initial status.
+
+Depending on the optional `totalCount` prop set or not, the constructed visually hidden text varies:
+
+##### Code Example:
+
+Using the `totalCount` prop is best practice and should be used if whenever possible. This example shows when the optional `totalCount` prop is set, the paginator would read out a string like "Page {pageNumber} selected. Page {pageNumber} of {pageNumberTotal}":
+
+<ProgressivePaginatorExample />
+
+##### Code Example:
+
+This example shows when the optional `totalCount` prop is not set, the paginator would read out a string like "Page {pageNumber} selected":
+
+<ProgressivePaginatorWithoutTotalCountExample />
+
+
+## Support Compliance
+
+Terra is committed to ensuring its components provide maximum possible accessibility. However, simply using Terra components will not automatically make a product accessible.
+
+Final responsibility lies with the consumers of Terra components &mdash; ensuring proper usage, engineers following correct implementation patterns, and authors crafting content that follows best practice guidance &mdash; to make a product fully accessible.
+
+### WCAG Resources
+
+#### Success Criteria
+
+- [**1.1.1 Non-text Content**](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content) - All non-text content that is presented to the user has a text alternative that serves the equivalent purpose.
+- [**1.3.1 Info and Relationships**](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships) - Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. (Level A)
+- [**3.2.4 Consistent Identification**](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification) - Components that have the same functionality within a set of Web pages are identified consistently.
+- [**4.1.2 Name, Role, Value**](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value) - For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.
+
+### Partial Support & Requiring Further Enhancement
+
+- None identified
+- [Report a problem with this component on **GitHub**](https://github.com/cerner/terra-core/issues/new/choose)
+
+_For more information about Accessibility Support with Terra — go to [Component Standards: Accessibility (A11y)](https://engineering.cerner.com/terra-ui/about/terra-ui/component-standards#accessibility-a11y)._

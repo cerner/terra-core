@@ -12,6 +12,7 @@
 
 * Changed
   * Updated all Paginator reduced views to align with the default views styling.
+  * Updated the description of `ariaLabelledBy` and `ariaLabel` props.
 
 ## 2.84.0 - (August 18, 2023)
 
