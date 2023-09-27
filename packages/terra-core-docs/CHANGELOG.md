@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Updated
+  * Updated terra-list examples to demonstrate arrow key navigation within list and list sections.
 ## 1.42.0 - (September 26, 2023)
 
 * Updated

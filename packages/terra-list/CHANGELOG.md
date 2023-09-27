@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+* Added
+  * Added arrow key navigation support for list items.
 ## 4.63.0 - (September 26, 2023)
 
 * Added

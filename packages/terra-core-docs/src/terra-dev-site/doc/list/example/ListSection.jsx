@@ -12,13 +12,13 @@ const ListSectionExample = () => (
       key="static-section"
       title="Static Section"
     >
-      <Item key="123">
+      <Item key="123" isSelectable>
         <Placeholder title="Item 0-0" className={cx('placeholder')} />
       </Item>
-      <Item key="124">
+      <Item key="124" isSelectable>
         <Placeholder title="Item 0-1" className={cx('placeholder')} />
       </Item>
-      <Item key="125">
+      <Item key="125" isSelectable>
         <Placeholder title="Item 0-2" className={cx('placeholder')} />
       </Item>
     </Section>
@@ -27,13 +27,13 @@ const ListSectionExample = () => (
       isCollapsible
       title="Collapsible Section"
     >
-      <Item key="223">
+      <Item key="223" isSelectable>
         <Placeholder title="Item 1-0" className={cx('placeholder')} />
       </Item>
-      <Item key="224">
+      <Item key="224" isSelectable>
         <Placeholder title="Item 1-1" className={cx('placeholder')} />
       </Item>
-      <Item key="225">
+      <Item key="225" isSelectable>
         <Placeholder title="Item 1-2" className={cx('placeholder')} />
       </Item>
     </Section>
@@ -43,13 +43,13 @@ const ListSectionExample = () => (
       isCollapsible
       title="Collapsed Section"
     >
-      <Item key="323">
+      <Item key="323" isSelectable>
         <Placeholder title="Item 2-0" className={cx('placeholder')} />
       </Item>
-      <Item key="324">
+      <Item key="324" isSelectable>
         <Placeholder title="Item 2-1" className={cx('placeholder')} />
       </Item>
-      <Item key="325">
+      <Item key="325" isSelectable>
         <Placeholder title="Item 2-2" className={cx('placeholder')} />
       </Item>
     </Section>

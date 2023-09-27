@@ -100,6 +100,7 @@ exports[`correctly applies the theme context className 1`] = `
       >
         <ul
           className="list list-fill orion-fusion-theme"
+          onKeyDown={[Function]}
         />
       </li>
     </ListSubsection>
@@ -122,6 +123,7 @@ exports[`should render with callback functions 1`] = `
   >
     <ul
       className="list list-fill"
+      onKeyDown={[Function]}
     />
   </li>
 </Fragment>
@@ -140,6 +142,7 @@ exports[`should render with isCollapsed 1`] = `
   >
     <ul
       className="list list-fill"
+      onKeyDown={[Function]}
     />
   </li>
 </Fragment>
@@ -158,6 +161,7 @@ exports[`should render with isCollapsible 1`] = `
   >
     <ul
       className="list list-fill"
+      onKeyDown={[Function]}
     />
   </li>
 </Fragment>
@@ -176,6 +180,7 @@ exports[`should render with items 1`] = `
   >
     <ul
       className="list list-fill"
+      onKeyDown={[Function]}
     >
       <InjectIntl(ListItem)
         key="123"
@@ -210,6 +215,7 @@ exports[`should render with level 1`] = `
   >
     <ul
       className="list list-fill"
+      onKeyDown={[Function]}
     />
   </li>
 </Fragment>
@@ -228,6 +234,7 @@ exports[`should render with no items 1`] = `
   >
     <ul
       className="list list-fill"
+      onKeyDown={[Function]}
     />
   </li>
 </Fragment>
