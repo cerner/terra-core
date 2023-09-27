@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+* Added
+  * Added a visual error note for invalid example in `terra-form-single-select`.
+
 ## 1.41.0 - (September 21, 2023)
 
 * Fixed
