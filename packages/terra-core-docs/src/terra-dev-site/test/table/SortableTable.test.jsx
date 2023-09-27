@@ -18,8 +18,8 @@ const SortableTable = () => {
       const newCol = { ...col };
       if (columnId === col.id) {
         newCol.sortIndicator = col.sortIndicator === 'ascending' ? 'descending' : 'ascending';
-      } else if (newCol.sortIndicator) {
-        newCol.sortIndicator = 'ascending';
+      } else {
+        newCol.sortIndicator = undefined;
       }
       return newCol;
     });

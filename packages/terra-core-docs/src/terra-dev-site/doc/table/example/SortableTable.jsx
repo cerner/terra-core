@@ -7,9 +7,9 @@ const tableData = {
       id: 'Column-0', displayName: 'Patient', sortIndicator: 'ascending', isSelectable: true,
     },
     {
-      id: 'Column-1', displayName: 'Location', sortIndicator: 'ascending', isSelectable: true,
+      id: 'Column-1', displayName: 'Location', isSelectable: true,
     },
-    { id: 'Column-2', displayName: 'Illness Severity' },
+    { id: 'Column-2', displayName: 'Illness Severity', isSelectable: true },
     { id: 'Column-3', displayName: 'Visit' },
     { id: 'Column-4', displayName: 'Allergy' },
     { id: 'Column-5', displayName: 'Primary Contact' },
@@ -63,8 +63,8 @@ const SortableTable = () => {
       const newCol = { ...col };
       if (columnId === col.id) {
         newCol.sortIndicator = col.sortIndicator === 'ascending' ? 'descending' : 'ascending';
-      } else if (newCol.sortIndicator) {
-        newCol.sortIndicator = 'ascending';
+      } else {
+        newCol.sortIndicator = undefined;
       }
       return newCol;
     });
