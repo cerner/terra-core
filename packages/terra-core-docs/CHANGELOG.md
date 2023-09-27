@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.42.0 - (September 26, 2023)
+
 * Updated
   * Updated terra-list examples to demonstrate arrow key navigation within list and list sections.
   * Updated test drag and drop example for `terra-list`.
