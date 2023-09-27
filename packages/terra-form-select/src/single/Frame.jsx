@@ -524,6 +524,7 @@ class Frame extends React.Component {
         onMouseDown={this.handleMouseDown}
         tabIndex={disabled ? '-1' : '0'} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
         ref={(select) => { this.select = select; }}
+        aria-invalid={isInvalid}
       >
         {/* Added this label and input to avoid accessibility violations after changing the role from button to combobox */}
         <label hidden>
