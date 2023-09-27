@@ -111,20 +111,29 @@ const ListSection = ({
     const currentIndex = Array.from(listItems).indexOf(event.target);
     const lastIndex = listItems.length - 1;
 
-    if (event.nativeEvent.keyCode === KeyCode.KEY_END) {
-      event.preventDefault();
-      listItems[listItems.length - 1].focus();
-    } else if (event.nativeEvent.keyCode === KeyCode.KEY_HOME) {
-      event.preventDefault();
-      listItems[0].focus();
-    } else if (event.nativeEvent.keyCode === KeyCode.KEY_UP) {
-      event.preventDefault();
-      const previousIndex = currentIndex > 0 ? currentIndex - 1 : lastIndex;
-      listItems[previousIndex].focus();
-    } else if (event.nativeEvent.keyCode === KeyCode.KEY_DOWN) {
-      event.preventDefault();
-      const nextIndex = currentIndex < lastIndex ? currentIndex + 1 : 0;
-      listItems[nextIndex].focus();
+    switch (event.nativeEvent.keyCode) {
+      case KeyCode.KEY_END:
+        event.preventDefault();
+        listItems[listItems.length - 1].focus();
+        break;
+      case KeyCode.KEY_HOME:
+        event.preventDefault();
+        listItems[0].focus();
+        break;
+      case KeyCode.KEY_UP: {
+        event.preventDefault();
+        const previousIndex = currentIndex > 0 ? currentIndex - 1 : lastIndex;
+        listItems[previousIndex].focus();
+        break;
+      }
+      case KeyCode.KEY_DOWN: {
+        event.preventDefault();
+        const nextIndex = currentIndex < lastIndex ? currentIndex + 1 : 0;
+        listItems[nextIndex].focus();
+        break;
+      }
+      default:
+        break;
     }
     event.stopPropagation();
   };
