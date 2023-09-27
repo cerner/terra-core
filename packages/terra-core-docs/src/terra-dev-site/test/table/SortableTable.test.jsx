@@ -8,7 +8,6 @@ sortableTableData.cols[0].isSelectable = true;
 sortableTableData.cols[0].sortIndicator = 'ascending';
 
 sortableTableData.cols[1].isSelectable = true;
-sortableTableData.cols[1].sortIndicator = 'ascending';
 
 const SortableTable = () => {
   const [tableColumns, setTableColumns] = useState(sortableTableData.cols);
