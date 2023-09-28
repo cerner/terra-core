@@ -5,6 +5,9 @@
 * Added
   * Added a visual error note for invalid example in `terra-form-single-select`.
 
+* Updated
+  * Updated terra-list examples to demonstrate arrow key navigation within list and list sections.
+
 ## 1.42.0 - (September 26, 2023)
 
 * Updated
@@ -26,7 +29,8 @@
 
 * Added
   * Added drag and drop example for `terra-list`.
-  * Added instruction note for `terra-form-radio` label hidden example
+  * Added instruction note for `terra-form-radio` label hidden example.
+  * Added accessibility guidance for `terra-paginator`.
 
 * Updated
   * Updated `terra-icon` imports in documentation.
