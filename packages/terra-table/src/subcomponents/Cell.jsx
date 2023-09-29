@@ -1,17 +1,39 @@
 import React, {
   useContext,
+  useEffect,
+  useRef,
+  useState,
 } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
+import FocusTrap from 'focus-trap-react';
+import * as KeyCode from 'keycode-js';
 import ThemeContext from 'terra-theme-context';
+import VisuallyHiddenText from 'terra-visually-hidden-text';
+
 import styles from './Cell.module.scss';
 import ColumnContext from '../utils/ColumnContext';
-import TableContext from '../utils/TableContext';
+import GridContext from '../utils/GridContext';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * String identifier of the row in which the Cell will be rendered.
+   */
+  rowId: PropTypes.string.isRequired,
+
+  /**
+   * String identifier of the column in which the Cell will be rendered.
+   */
+  columnId: PropTypes.string.isRequired,
+
+  /**
+   * The cell's row position in the table. This is zero based.
+   */
+  rowIndex: PropTypes.number,
+
   /**
    * The cell's column position in the table. This is zero based.
    */
@@ -28,6 +50,16 @@ const propTypes = {
   isMasked: PropTypes.bool,
 
   /**
+   * Boolean value indicating whether or not the column header is selectable.
+   */
+  isSelectable: PropTypes.bool,
+
+  /**
+   * Boolean indicating whether the Cell is currently selected.
+   */
+  isSelected: PropTypes.bool,
+
+  /**
    * String that labels the cell for accessibility.
    */
   ariaLabel: PropTypes.string,
@@ -36,6 +68,16 @@ const propTypes = {
    * Boolean indicating that the cell is a row header.
    */
   isRowHeader: PropTypes.bool,
+
+  /**
+   * Boolean indicating that the cell has been highlighted.
+   */
+  isHighlighted: PropTypes.bool,
+
+  /**
+   * Callback function that will be called when this cell is selected.
+   */
+  onCellSelect: PropTypes.func,
 
   /**
    * String that specifies the height of the cell. Any valid CSS value is accepted.
@@ -51,23 +93,95 @@ const propTypes = {
 
 const defaultProps = {
   isRowHeader: false,
+  isSelected: false,
+  isSelectable: false,
   isMasked: false,
 };
 
 function Cell(props) {
   const {
-    ariaLabel,
+    rowId,
+    columnId,
+    rowIndex,
     columnIndex,
+    ariaLabel,
     isMasked,
     isRowHeader,
+    isSelectable,
+    isSelected,
+    isHighlighted,
     children,
+    onCellSelect,
     height,
     intl,
   } = props;
 
+  const cellRef = useRef();
   const theme = useContext(ThemeContext);
-  const tableContext = useContext(TableContext);
+  const gridContext = useContext(GridContext);
   const columnContext = useContext(ColumnContext);
+
+  const [isInteractable, setInteractable] = useState(false);
+  const [isFocusTrapEnabled, setFocusTrapEnabled] = useState(false);
+
+  const hasFocusableElements = () => {
+    const focusableElementSelector = "a[href]:not([tabindex='-1']), area[href]:not([tabindex='-1']), input:not([disabled]):not([tabindex='-1']), "
+      + "select:not([disabled]):not([tabindex='-1']), textarea:not([disabled]):not([tabindex='-1']), button:not([disabled]):not([tabindex='-1']), "
+      + "iframe:not([tabindex='-1']), [tabindex]:not([tabindex='-1']), [contentEditable=true]:not([tabindex='-1'])";
+
+    const focusableElements = [...cellRef.current.querySelectorAll(`${focusableElementSelector}`)].filter(el => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden'));
+
+    return focusableElements.length > 0;
+  };
+
+  /**
+   * Handles the onDeactivate callback for FocusTrap component
+   */
+  const deactivateFocusTrap = () => {
+    setFocusTrapEnabled(false);
+    columnContext.setCellAriaLiveMessage(intl.formatMessage({ id: 'Terra.table.resume-navigation' }));
+  };
+
+  const onMouseDown = ((event) => {
+    if (onCellSelect) {
+      onCellSelect({
+        rowId, columnId, rowIndex, columnIndex, isShiftPressed: event.shiftKey, isCellSelectable: (!isMasked && isSelectable),
+      });
+    }
+  });
+
+  const handleKeyDown = (event) => {
+    const key = event.keyCode;
+    switch (key) {
+      case KeyCode.KEY_RETURN:
+        // Lock focus into component
+        if (hasFocusableElements()) {
+          setFocusTrapEnabled(true);
+          columnContext.setCellAriaLiveMessage(intl.formatMessage({ id: 'Terra.table.cell-focus-trapped' }));
+          event.stopPropagation();
+          event.preventDefault();
+        }
+        break;
+      case KeyCode.KEY_SPACE:
+        if (isFocusTrapEnabled) {
+          deactivateFocusTrap();
+          event.stopPropagation();
+          return;
+        }
+        if (onCellSelect) {
+          onCellSelect({
+            rowId, columnId, rowIndex, columnIndex, isShiftPressed: event.shiftKey, isCellSelectable: (!isMasked && isSelectable),
+          });
+        }
+        event.preventDefault(); // prevent the default scrolling
+        break;
+      default:
+    }
+  };
+
+  useEffect(() => {
+    setInteractable(hasFocusableElements());
+  }, []);
 
   // Create cell content for masked and blank cells
   let cellContent;
@@ -90,6 +204,9 @@ function Cell(props) {
   const className = cx('cell', {
     masked: isMasked,
     pinned: columnIndex < columnContext.pinnedColumnOffsets.length,
+    selectable: isSelectable && !isMasked,
+    selected: isSelected && !isMasked,
+    highlighted: isHighlighted,
     blank: !children,
   }, theme.className);
 
@@ -100,15 +217,26 @@ function Cell(props) {
 
   return (
     <CellTag
+      ref={cellRef}
       aria-label={ariaLabel}
       className={className}
-      tabIndex={tableContext.role === 'grid' ? -1 : undefined}
+      tabIndex={gridContext.role === 'grid' ? -1 : undefined}
       {...(isRowHeader && { scope: 'row', role: 'rowheader' })}
+      onMouseDown={onMouseDown}
+      onKeyDown={handleKeyDown}
       // eslint-disable-next-line react/forbid-component-props
       style={{ left: cellLeftEdge }}
     >
-      {/* eslint-disable-next-line react/forbid-dom-props */}
-      <div className={cx('cell-content', theme.className)} style={{ height }}>{cellContent}</div>
+      <FocusTrap
+        active={isFocusTrapEnabled}
+        focusTrapOptions={{
+          returnFocusOnDeactivate: true, clickOutsideDeactivates: true, escapeDeactivates: false, onDeactivate: deactivateFocusTrap,
+        }}
+      >
+        {/* eslint-disable-next-line react/forbid-dom-props */}
+        <div className={cx('cell-content', theme.className)} style={{ height }}>{cellContent}</div>
+      </FocusTrap>
+      {isInteractable && <VisuallyHiddenText text={intl.formatMessage({ id: 'Terra.table.cell-interactable' })} />}
     </CellTag>
   );
 }

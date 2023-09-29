@@ -13,6 +13,7 @@ import ColumnResizeHandle from './ColumnResizeHandle';
 import { SortIndicators } from '../proptypes/columnShape';
 import ColumnContext from '../utils/ColumnContext';
 import styles from './ColumnHeaderCell.module.scss';
+import GridContext from '../utils/GridContext';
 
 const cx = classNames.bind(styles);
 
@@ -130,6 +131,7 @@ const ColumnHeaderCell = (props) => {
 
   const columnContext = useContext(ColumnContext);
   const theme = useContext(ThemeContext);
+  const gridContext = useContext(GridContext);
   const columnHeaderCell = useRef();
 
   const onResizeHandleMouseDown = useCallback((event) => {
@@ -186,6 +188,7 @@ const ColumnHeaderCell = (props) => {
       className={cx('column-header', theme.className, { selectable: isSelectable, pinned: columnIndex < columnContext.pinnedColumnOffsets.length })}
       role="columnheader"
       scope="col"
+      tabIndex={gridContext.role === 'grid' ? -1 : undefined}
       aria-sort={sortIndicator}
       onMouseDown={(isSelectable && onColumnSelect) ? handleMouseDown : undefined}
       onKeyDown={isSelectable && onColumnSelect ? handleKeyDown : undefined}

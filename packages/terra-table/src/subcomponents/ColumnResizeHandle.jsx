@@ -6,6 +6,7 @@ import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './ColumnResizeHandle.module.scss';
+import GridContext from '../utils/GridContext';
 
 const cx = classNames.bind(styles);
 
@@ -62,6 +63,8 @@ const ColumnResizeHandle = (props) => {
   const [isActive, setActive] = useState(false);
 
   const theme = useContext(ThemeContext);
+  const gridContext = useContext(GridContext);
+
   // Ref variable for native resize handle element
   const resizeHandle = useRef();
 
@@ -82,7 +85,7 @@ const ColumnResizeHandle = (props) => {
       ref={resizeHandle}
       draggable
       role="slider"
-      tabIndex={-1}
+      tabIndex={gridContext.role === 'table' ? 0 : -1}
       aria-hidden={!isActive}
       aria-valuemin={minimumWidth}
       aria-valuenow={columnWidth}
