@@ -114,13 +114,14 @@ const Option = ({
 
   let role = 'option'; // Used for JAWs and VoiceOver on iOS
 
-  let itemLabel = display;
+  let itemLabel;
+  let notSelectedText;
   if (index === 1 || isSelected) {
-    itemLabel = `${expandedStateText} ${display} `;
+    itemLabel = `${expandedStateText}`;
   }
 
   if (!isSelected && SharedUtil.isMac() && SharedUtil.isSafari() && variant !== 'tag' && variant !== 'multiple') {
-    itemLabel = intl.formatMessage({ id: 'Terra.form.select.notselected' }, { text: itemLabel });
+    notSelectedText = intl.formatMessage({ id: 'Terra.form.select.notselected' }, { text: notSelectedText });
   }
 
   if (SharedUtil.isSafari() && !('ontouchstart' in window)) {
@@ -141,8 +142,9 @@ const Option = ({
       data-terra-select-option
     >
       {(isCheckable || isAddOption) && <span className={cx('icon')} />}
-      <span className={cx('display')}>{display}</span>
       <VisuallyHiddenText text={itemLabel} />
+      <span className={cx('display')}>{display}</span>
+      <VisuallyHiddenText text={notSelectedText} />
     </li>
   );
 };

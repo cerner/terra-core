@@ -10,8 +10,8 @@
 ## 6.46.1 - (September 19, 2023)
 
 * Fixed
-  * Fixed for broken cyclic navigation in `terra-form-single-select`.
-  * Fixed VoiceOver reading as radio button in `terra-form-single-select`.
+  * Fixed bug where cyclic navigation in `terra-form-single-select` was not working.
+  * Fixed bug where VoiceOver was reading `terra-form-single-select` as a radio button .
   * Fixed focus issue of Invalid example `form-single-select`.
   * Fixed safari browser minimised issue in `form-single-select`.
   * Fixed selection not working with space key in `form-single-select`.
