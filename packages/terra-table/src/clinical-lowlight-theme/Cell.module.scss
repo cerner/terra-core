@@ -1,9 +1,9 @@
 :local {
   .clinical-lowlight-theme {
-    --cell-border-bottom: 1px solid #181b1d;
-    --cell-border-left: 1px solid #181b1d;
-    --cell-border-right: 1px solid #181b1d;
-    --mask-background: repeating-linear-gradient(-45deg, #434647, #434647 3px, transparent 3px, transparent 6px);
-    --pinned-columns-cell-border: 1px solid #181b1d;
+    --terra-table-cell-border-bottom: 1px solid #181b1d;
+    --terra-table-cell-border-left: 1px solid #181b1d;
+    --terra-table-cell-border-right: 1px solid #181b1d;
+    --terra-table-mask-background: repeating-linear-gradient(-45deg, #434647, #434647 3px, transparent 3px, transparent 6px);
+    --terra-table-pinned-columns-cell-border: 1px solid #181b1d;
   }
 }

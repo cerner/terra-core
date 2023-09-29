@@ -1,34 +1,33 @@
-/* stylelint-disable terra/custom-property-namespace */
 // Themes
 @import '../orion-fusion-theme/ColumnHeaderCell.module';
 @import '../clinical-lowlight-theme/ColumnHeaderCell.module';
 
 :local {
   .column-header {
-    background-color: var(--column-header-background-color, #dedfe0);
-    border-bottom: var(--column-header-border-bottom, 1px solid #000);
-    border-right: var(--column-header-border-right, 1px solid #000);
-    border-top: var(--column-header-border-top, 1px solid #000);
-    color: var(--column-header-text-color);
+    background-color: var(--terra-table-column-header-background-color, #dedfe0);
+    border-bottom: var(--terra-table-column-header-border-bottom, 1px solid #000);
+    border-right: var(--terra-table-column-header-border-right, 1px solid #000);
+    border-top: var(--terra-table-column-header-border-top, 1px solid #000);
+    color: var(--terra-table-column-header-text-color);
     position: sticky;
     top: 0;
     z-index: 1;
 
     &:first-child {
-      border-left: var(--column-header-border-left, 1px solid #000);
+      border-left: var(--terra-table-column-header-border-left, 1px solid #000);
     }
 
     .header-container {
       align-items: center;
       display: flex;
       height: 100%;
-      padding: var(--header-cell-padding, 5px);
+      padding: var(--terra-table-header-cell-padding, 5px);
       width: 100%;
     }
 
     // Add right margin for error icon
     .error-icon {
-      margin-right: var(--error-icon-margin-right, 5px);
+      margin-right: var(--terra-table-error-icon-margin-right, 5px);
     }
 
     // Style column header text
@@ -47,7 +46,7 @@
 
   // Hover state for selectable elements
   .selectable:hover {
-    background-color: var(--header-hover-background-color, #daecf6);
+    background-color: var(--terra-table-header-hover-background-color, #daecf6);
     cursor: pointer;
   }
 
@@ -57,11 +56,10 @@
   }
 
   .pinned-columns-divider {
-    background-color: var(--pinned-columns-divider-background-color, #808080);
-    box-shadow: var(--pinned-columns-divider-box-shadow, 4px -1px 6px #808080);
+    background-color: var(--terra-table-pinned-columns-divider-background-color, #808080);
+    box-shadow: var(--terra-table-pinned-columns-divider-box-shadow, 4px -1px 6px #808080);
     position: absolute;
     top: 0;
     width: 2px;
   }
 }
-/* stylelint-enable terra/custom-property-namespace */

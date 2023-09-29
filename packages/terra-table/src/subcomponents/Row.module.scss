@@ -1,4 +1,3 @@
-/* stylelint-disable terra/custom-property-namespace */
 // Themes
 @import '../orion-fusion-theme/Row.module';
 @import '../clinical-lowlight-theme/Row.module';
@@ -7,12 +6,11 @@
 :local {
   .row {
     &:nth-child(even) {
-      background-color: var(--row-striped-even-background-color, #f0f0f0);
+      background-color: var(--terra-table-row-striped-even-background-color, #f0f0f0);
     }
 
     &:nth-child(odd) {
-      background-color: var(--row-striped-odd-background-color, #fff);
+      background-color: var(--terra-table-row-striped-odd-background-color, #fff);
     }
   }
 }
-/* stylelint-enable terra/custom-property-namespace */
