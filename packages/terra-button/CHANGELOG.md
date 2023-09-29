@@ -3,7 +3,7 @@
 ## Unreleased
 
 * Fixed
-  * VoiceOver in Safari was highlighting the Terra Button in a frame bigger than the button size, when the button was included to a modal dialog.
+  * Fixed bug where VoiceOver in Safari highlighting Terra Button within a modal dialog with a frame bigger than the button size.
 
 ## 3.68.1 - (August 25, 2023)
 
