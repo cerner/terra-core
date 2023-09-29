@@ -167,19 +167,24 @@ exports[`Menu correctly applies the theme context className 1`] = `
               role="option"
               tabIndex="0"
             >
+              <VisuallyHiddenText
+                text="Terra.form.select.expanded"
+              >
+                <span
+                  className="visually-hidden-text"
+                >
+                  Terra.form.select.expanded
+                </span>
+              </VisuallyHiddenText>
               <span
                 className="display"
               >
                 display
               </span>
-              <VisuallyHiddenText
-                text="Terra.form.select.expanded display "
-              >
+              <VisuallyHiddenText>
                 <span
                   className="visually-hidden-text"
-                >
-                  Terra.form.select.expanded display 
-                </span>
+                />
               </VisuallyHiddenText>
             </li>
           </Option>
