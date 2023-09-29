@@ -29,6 +29,7 @@
   "dependencies": {
     "@cerner/terra-docs": "^1.9.0",
     "classnames": "^2.2.5",
+    "focus-trap-react": "^6.0.0",
     "keycode-js": "^3.1.0",
     "prop-types": "^15.5.8",
     "resize-observer-polyfill": "^1.4.1",
