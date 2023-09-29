@@ -7,6 +7,7 @@ import classNames from 'classnames/bind';
 import ThemeContext from 'terra-theme-context';
 import styles from './Cell.module.scss';
 import ColumnContext from '../utils/ColumnContext';
+import TableContext from '../utils/TableContext';
 
 const cx = classNames.bind(styles);
 
@@ -65,6 +66,7 @@ function Cell(props) {
   } = props;
 
   const theme = useContext(ThemeContext);
+  const tableContext = useContext(TableContext);
   const columnContext = useContext(ColumnContext);
 
   // Create cell content for masked and blank cells
@@ -100,6 +102,7 @@ function Cell(props) {
     <CellTag
       aria-label={ariaLabel}
       className={className}
+      tabIndex={tableContext.role === 'grid' ? -1 : undefined}
       {...(isRowHeader && { scope: 'row', role: 'rowheader' })}
       // eslint-disable-next-line react/forbid-component-props
       style={{ left: cellLeftEdge }}

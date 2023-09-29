@@ -14,6 +14,7 @@ import { columnShape } from './proptypes/columnShape';
 import ColumnContext from './utils/ColumnContext';
 import validateRowHeaderIndex from './proptypes/validators';
 import styles from './Table.module.scss';
+import TableContext from './utils/TableContext';
 
 const cx = classNames.bind(styles);
 
@@ -83,6 +84,11 @@ const propTypes = {
    *  @param {string} columnId columnId
    */
   onColumnSelect: PropTypes.func,
+
+  /**
+   * Property to make the table's container scrollable
+   */
+  isScrollable: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -93,6 +99,7 @@ const defaultProps = {
   rows: [],
   pinnedColumns: [],
   overflowColumns: [],
+  isScrollable: true,
 };
 
 // Default column size constraints
@@ -113,6 +120,7 @@ function Table(props) {
     columnHeaderHeight,
     rowHeight,
     rowHeaderIndex,
+    isScrollable,
   } = props;
 
   const [pinnedColumnOffsets, setPinnedColumnOffsets] = useState([]);
@@ -140,6 +148,8 @@ function Table(props) {
 
   const table = useRef();
   const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
+
+  const tableContext = useContext(TableContext);
 
   // Define ColumnContext Provider value object
   const columnContextValue = useMemo(() => ({ pinnedColumnOffsets, setCellAriaLiveMessage }), [pinnedColumnOffsets]);
@@ -245,10 +255,12 @@ function Table(props) {
   // -------------------------------------
 
   return (
-    <div>
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+    <div className={cx('table-container', { scrollable: isScrollable })} tabIndex={isScrollable ? 0 : undefined}>
       <table
         ref={tableResizeRef}
         id={id}
+        role={tableContext.role}
         aria-labelledby={ariaLabelledBy}
         aria-label={ariaLabel}
         className={cx('table', theme.className)}
@@ -288,4 +300,4 @@ function Table(props) {
 Table.propTypes = propTypes;
 Table.defaultProps = defaultProps;
 
-export default injectIntl(Table);
+export default injectIntl(React.memo(Table));

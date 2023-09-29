@@ -52,15 +52,12 @@ const tableData = {
 };
 
 const PinnedColumnsTable = () => (
-  // eslint-disable-next-line react/forbid-dom-props, jsx-a11y/no-noninteractive-tabindex
-  <div style={{ overflow: 'scroll' }} tabIndex={0}>
     <Table
       id="my-table-id"
       pinnedColumns={tableData.cols.slice(0, 2)}
       overflowColumns={tableData.cols.slice(2)}
       rows={tableData.rows}
     />
-  </div>
 );
 
 export default PinnedColumnsTable;

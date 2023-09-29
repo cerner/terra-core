@@ -44,14 +44,12 @@ const SortableTable = () => {
   };
 
   return (
-    <React.Fragment>
       <Table
         id="sortable-table"
         overflowColumns={tableColumns}
         rows={tableRows}
         onColumnSelect={handleColumnSelect}
       />
-    </React.Fragment>
   );
 };
 

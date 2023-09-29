@@ -1,4 +1,14 @@
 :local {
+  .table-container {
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  .scrollable {      
+    overflow: auto;
+  }
+
   .table {
     border-collapse: separate;
     border-spacing: 0;
