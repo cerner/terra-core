@@ -2,8 +2,13 @@
 
 ## Unreleased
 
+* Added
+  * Added progressive paginator examples for custom page label and page count.
+
 * Updated
+  * Updated test example to validate `hidePageCount` prop.
   * Updated terra-list examples to demonstrate arrow key navigation within list and list sections.
+
 ## 1.42.0 - (September 26, 2023)
 
 * Updated

@@ -50,6 +50,12 @@ const propTypes = {
    * Allows user to set custom page label. _(usage note: User must pass translated text)_. It should not contain page number and total count details, which will lead to conflicts with built-in accessibility ARIA contexts.
    */
   pageLabel: PropTypes.string,
+  /**
+   * ![IMPORTANT](https://badgen.net/badge/UX/Accessibility/blue)
+   * When specified allows user to set custom page count. User should provide custom page count as part `pageLabel` for best accessibility practices.
+   * _(usage note: when `pageLabel` is not provided page count will not be hidden and default page count is displayed for best accessibility practices)_.
+   */
+  hidePageCount: PropTypes.bool,
 };
 
 class ProgressivePaginator extends React.Component {
@@ -114,6 +120,7 @@ class ProgressivePaginator extends React.Component {
       ariaLabelledBy,
       ariaLabel,
       pageLabel,
+      hidePageCount,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
@@ -123,14 +130,11 @@ class ProgressivePaginator extends React.Component {
     const renderFirstandLastButton = totalCount > 0;
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
+    const pageDetails = (hidePageCount && pageLabel) ? <div>{pageLabel}</div> : <div>{intl.formatMessage({ id: messageId }, messageAttributes)}</div>;
 
     const fullViewChildren = (
       <>
-        <div>
-          {
-            intl.formatMessage({ id: messageId }, messageAttributes)
-          }
-        </div>
+        {pageDetails}
         <ul className={cx('progressive-list')}>
           {
             renderFirstandLastButton && (
@@ -221,6 +225,7 @@ class ProgressivePaginator extends React.Component {
       ariaLabelledBy,
       ariaLabel,
       pageLabel,
+      hidePageCount,
     } = this.props;
     const totalPages = (totalCount) ? calculatePages(totalCount, itemCountPerPage) : 0;
     const { selectedPage } = this.state;
@@ -230,14 +235,11 @@ class ProgressivePaginator extends React.Component {
     const renderFirstandLastButton = totalCount > 0;
 
     const { messageId, messageAttributes } = getPageLabel(pageLabel, selectedPage, totalPages);
+    const pageDetails = (hidePageCount && pageLabel) ? <div>{pageLabel}</div> : <div>{intl.formatMessage({ id: messageId }, messageAttributes)}</div>;
 
     const reducedViewChildren = (
       <>
-        <div>
-          {
-            intl.formatMessage({ id: messageId }, messageAttributes)
-          }
-        </div>
+        {pageDetails}
         <ul className={cx('progressive-list')}>
           {
             renderFirstandLastButton && (
