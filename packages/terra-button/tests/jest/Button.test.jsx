@@ -1,8 +1,17 @@
 import React from 'react';
 import ThemeContextProvider from 'terra-theme-context/lib/ThemeContextProvider';
-import { clear, mockUserAgent } from 'jest-useragent-mock';
 
 import Button from '../../src/Button';
+
+let userAgentGetter;
+
+beforeAll(() => {
+  userAgentGetter = jest.spyOn(window.navigator, 'userAgent', 'get');
+});
+
+afterAll(() => {
+  userAgentGetter.mockRestore();
+});
 
 // Snapshot Tests
 it('should render a neutral button', () => {
@@ -127,17 +136,15 @@ it('should have the class block when block is enabled', () => {
 });
 
 it('should have class button-label-mac when on MacOS', () => {
-  mockUserAgent('Mac');
+  userAgentGetter.mockReturnValueOnce('Mac');
   const button = shallow(<Button text="text" />);
   expect(button.childAt(0).prop('className')).toContain('button-label-mac');
-  clear();
 });
 
 it('should have class button-label-win when on WindowsOS', () => {
-  mockUserAgent('Win');
+  userAgentGetter.mockReturnValueOnce('Win');
   const button = shallow(<Button text="text" />);
   expect(button.childAt(0).prop('className')).toContain('button-label-win');
-  clear();
 });
 
 it('should be disabled when set', () => {
