@@ -52,12 +52,12 @@ const tableData = {
 };
 
 const PinnedColumnsTable = () => (
-    <Table
-      id="my-table-id"
-      pinnedColumns={tableData.cols.slice(0, 2)}
-      overflowColumns={tableData.cols.slice(2)}
-      rows={tableData.rows}
-    />
+  <Table
+    id="my-table-id"
+    pinnedColumns={tableData.cols.slice(0, 2)}
+    overflowColumns={tableData.cols.slice(2)}
+    rows={tableData.rows}
+  />
 );
 
 export default PinnedColumnsTable;

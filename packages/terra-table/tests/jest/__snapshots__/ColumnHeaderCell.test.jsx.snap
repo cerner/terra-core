@@ -471,7 +471,7 @@ exports[`ColumnHeaderCell renders a pinned column header cell 1`] = `
                 "height": "undefinedpx",
               }
             }
-            tabIndex={-1}
+            tabIndex={0}
           />
         </ColumnResizeHandle>
       </InjectIntl(ColumnResizeHandle)>

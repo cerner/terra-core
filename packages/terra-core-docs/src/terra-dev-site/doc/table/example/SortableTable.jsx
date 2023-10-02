@@ -90,12 +90,12 @@ const SortableTable = () => {
   };
 
   return (
-      <Table
-        id="my-table-id"
-        overflowColumns={tableColumns}
-        rows={tableRows}
-        onColumnSelect={handleColumnSelect}
-      />
+    <Table
+      id="my-table-id"
+      overflowColumns={tableColumns}
+      rows={tableRows}
+      onColumnSelect={handleColumnSelect}
+    />
   );
 };
 

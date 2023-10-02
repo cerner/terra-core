@@ -52,11 +52,11 @@ const tableData = {
 };
 
 const DefaultTable = () => (
-    <Table
-      id="my-table-id"
-      overflowColumns={tableData.cols}
-      rows={tableData.rows}
-    />
+  <Table
+    id="my-table-id"
+    overflowColumns={tableData.cols}
+    rows={tableData.rows}
+  />
 );
 
 export default DefaultTable;

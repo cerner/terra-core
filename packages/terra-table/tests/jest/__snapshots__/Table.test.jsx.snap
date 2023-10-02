@@ -1,10 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table verifies that the table created is consistent with the rows and overflowColumns props 1`] = `
-<div>
+<div
+  className="table-container"
+>
   <table
     className="table"
     id="test-terra-table"
+    role="table"
   >
     <ContextProvider
       value={
@@ -189,6 +192,7 @@ exports[`Table verifies that the table created is consistent with the rows and o
           }
           height="2.5rem"
           id="4"
+          isSelected={true}
           key="4"
           rowHeaderIndex={0}
           rowIndex={4}
@@ -205,10 +209,13 @@ exports[`Table verifies that the table created is consistent with the rows and o
 `;
 
 exports[`Table verifies the rows are created with the right props 1`] = `
-<div>
+<div
+  className="table-container"
+>
   <table
     className="table"
     id="test-terra-table"
+    role="table"
   >
     <ContextProvider
       value={
@@ -393,6 +400,7 @@ exports[`Table verifies the rows are created with the right props 1`] = `
           }
           height="2.5rem"
           id="4"
+          isSelected={true}
           key="4"
           rowHeaderIndex={0}
           rowIndex={4}

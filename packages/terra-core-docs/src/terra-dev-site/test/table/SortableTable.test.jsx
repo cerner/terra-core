@@ -44,12 +44,12 @@ const SortableTable = () => {
   };
 
   return (
-      <Table
-        id="sortable-table"
-        overflowColumns={tableColumns}
-        rows={tableRows}
-        onColumnSelect={handleColumnSelect}
-      />
+    <Table
+      id="sortable-table"
+      overflowColumns={tableColumns}
+      rows={tableRows}
+      onColumnSelect={handleColumnSelect}
+    />
   );
 };
 
