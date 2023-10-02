@@ -84,12 +84,12 @@ exports[`Paginator correctly applies the theme context className 1`] = `
         >
           <VisuallyHiddenText
             aria-live="polite"
-            aria-relevant="all"
+            aria-relevant="additions text"
             text=""
           >
             <span
               aria-live="polite"
-              aria-relevant="all"
+              aria-relevant="additions text"
               className="visually-hidden-text"
             />
           </VisuallyHiddenText>
@@ -236,7 +236,7 @@ exports[`Paginator should render a Controlled Paginator - Large 1`] = `
   >
     <VisuallyHiddenText
       aria-live="polite"
-      aria-relevant="all"
+      aria-relevant="additions text"
       text=""
     />
     <ul
@@ -442,7 +442,7 @@ exports[`Paginator should render a Controlled Paginator - Tiny 1`] = `
   >
     <VisuallyHiddenText
       aria-live="polite"
-      aria-relevant="all"
+      aria-relevant="additions text"
       text=""
     />
     <ul
@@ -648,7 +648,7 @@ exports[`Paginator should render a Controlled Paginator with aria label set - Ti
   >
     <VisuallyHiddenText
       aria-live="polite"
-      aria-relevant="all"
+      aria-relevant="additions text"
       text=""
     />
     <ul
@@ -854,7 +854,7 @@ exports[`Paginator should render a Controlled Paginator with heading id set - Ti
   >
     <VisuallyHiddenText
       aria-live="polite"
-      aria-relevant="all"
+      aria-relevant="additions text"
       text=""
     />
     <ul
@@ -1060,7 +1060,7 @@ exports[`Paginator should render a Controlled Paginator with visually hidden tex
   >
     <VisuallyHiddenText
       aria-live="polite"
-      aria-relevant="all"
+      aria-relevant="additions text"
       text="Terra.paginator.pageSelectedWithCount"
     />
     <ul

@@ -199,7 +199,7 @@ class ProgressivePaginator extends React.Component {
     );
 
     const navigationMessage = (
-      <VisuallyHiddenText aria-live="polite" aria-relevant="all" text={this.state.selectedPageMessage} />
+      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={this.state.selectedPageMessage} />
     );
 
     const fullView = (
@@ -304,7 +304,7 @@ class ProgressivePaginator extends React.Component {
     );
 
     const navigationMessage = (
-      <VisuallyHiddenText aria-live="polite" aria-relevant="all" text={this.state.selectedPageMessage} />
+      <VisuallyHiddenText aria-live="polite" aria-relevant="additions text" text={this.state.selectedPageMessage} />
     );
 
     const reducedView = (
