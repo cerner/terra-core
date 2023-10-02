@@ -1,14 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import ThemeContext from 'terra-theme-context';
 import classNames from 'classnames/bind';
 
-import styles from './Row.module.scss';
 import Cell from './Cell';
-import RowSelectionCell from './RowSelectionCell';
 import cellShape from '../proptypes/cellShape';
 import { columnShape } from '../proptypes/columnShape';
 import GridContext from '../utils/GridContext';
+import styles from './Row.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -39,18 +38,6 @@ const propTypes = {
   isSelected: PropTypes.bool,
 
   /**
-   * A string identifier used to describe the row contents. This value will be used to construct additional labels
-   * for internal controls (e.g. row selection cells).
-   */
-  ariaLabel: PropTypes.string,
-
-  /**
-   * Boolean indicating whether or not the DataGrid allows a row to be selected. If true, an additional
-   * column containing a checkbox is rendered to indicate when when the row is selected.
-   */
-  hasRowSelection: PropTypes.bool,
-
-  /**
    * All columns currently displayed.
    */
   displayedColumns: PropTypes.arrayOf(columnShape),
@@ -69,7 +56,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  hasRowSelection: false,
   rowHeaderIndex: 0,
   isSelected: false,
 };
@@ -78,11 +64,9 @@ function Row(props) {
   const {
     rowIndex,
     height,
-    hasRowSelection,
     id,
     isSelected,
     cells,
-    ariaLabel,
     displayedColumns,
     rowHeaderIndex,
     onCellSelect,
@@ -91,30 +75,12 @@ function Row(props) {
   const theme = useContext(ThemeContext);
   const gridContext = useContext(GridContext);
 
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <tr
-      className={cx('row', {
-        selected: isSelected,
-        selectable: hasRowSelection,
-      }, theme.className)}
-      onMouseEnter={hasRowSelection ? () => { setIsHovered(true); } : null}
-      onMouseLeave={hasRowSelection ? () => { setIsHovered(false); } : null}
+      className={cx('row', theme.className)}
       // eslint-disable-next-line react/forbid-dom-props
       style={{ height }}
     >
-      {hasRowSelection && (
-        <RowSelectionCell
-          rowId={id}
-          columnId={displayedColumns[0].id}
-          rowIndex={rowIndex}
-          columnIndex={0}
-          isSelected={isSelected}
-          ariaLabel={ariaLabel}
-          onCellSelect={onCellSelect}
-        />
-      )}
       {cells.map((cellData, cellColumnIndex) => (
         <Cell
           rowId={id}
@@ -125,9 +91,9 @@ function Row(props) {
           isMasked={cellData.isMasked}
           isRowHeader={cellColumnIndex === rowHeaderIndex}
           height={height}
-          isHighlighted={isHovered || isSelected}
+          isHighlighted={isSelected}
           onCellSelect={onCellSelect}
-          isSelectable={gridContext.role === 'grid'}
+          isSelectable={cellData.isSelectable || gridContext.role === 'grid'}
         >
           {cellData.content}
         </Cell>

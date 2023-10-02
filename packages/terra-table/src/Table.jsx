@@ -4,7 +4,6 @@ import React, {
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import classNames from 'classnames/bind';
-import * as KeyCode from 'keycode-js';
 import ResizeObserver from 'resize-observer-polyfill';
 import ThemeContext from 'terra-theme-context';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
@@ -14,7 +13,6 @@ import Row from './subcomponents/Row';
 import rowShape from './proptypes/rowShape';
 import { columnShape } from './proptypes/columnShape';
 import ColumnContext from './utils/ColumnContext';
-import ROW_SELECTION_COLUMN from './utils/rowSelection';
 import styles from './Table.module.scss';
 import GridContext from './utils/GridContext';
 import validateRowHeaderIndex from './proptypes/validators';
@@ -99,25 +97,6 @@ const propTypes = {
    *  @param {string} columnId columnId
    */
   onColumnSelect: PropTypes.func,
-
-  /**
-   * Callback function that is called when all selected cells need to be unselected. Parameters: none.
-   */
-  onClearSelection: PropTypes.func,
-
-  /**
-   * Callback function that is called when a range selection occurs. Parameters:
-   * @param {number} rowIndex RowIndex of the cell from which the range selection was triggered.
-   * @param {number} columnIndex ColumnIndex of the cell from which the range selection was triggered.
-   * @param {number} direction Direction keycode representing the direction of the selection.
-   */
-  onRangeSelection: PropTypes.func,
-
-  /**
-   * Boolean indicating whether or not the table should allow entire rows to be selectable. An additional column will be
-   * rendered to allow for row selection to occur.
-   */
-  hasSelectableRows: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -145,13 +124,9 @@ function Table(props) {
     onColumnResize,
     defaultColumnWidth,
     columnHeaderHeight,
-    isScrollable,
     rowHeight,
     onColumnSelect,
     onCellSelect,
-    onClearSelection,
-    onRangeSelection,
-    hasSelectableRows,
     rowHeaderIndex,
   } = props;
 
@@ -166,7 +141,6 @@ function Table(props) {
   });
 
   const displayedColumns = [
-    ...(hasSelectableRows ? [ROW_SELECTION_COLUMN] : []),
     ...pinnedColumns,
     ...overflowColumns,
   ];
@@ -175,17 +149,13 @@ function Table(props) {
   // Manage column resize
   const [tableHeight, setTableHeight] = useState(0);
   const [activeIndex, setActiveIndex] = useState(null);
-  const [focusedRow, setFocusedRow] = useState(0);
-  const [focusedCol, setFocusedCol] = useState(0);
+  const [isContainerFocusable, setIsContainerFocusable] = useState(false);
 
   const activeColumnPageX = useRef(0);
   const activeColumnWidth = useRef(200);
   const tableWidth = useRef(0);
-
   const table = useRef();
   const tableContainerRef = useRef();
-  const hasReceivedFocus = useRef(false);
-  const handleFocus = useRef(true);
 
   const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
 
@@ -197,59 +167,6 @@ function Table(props) {
 
   // -------------------------------------
   // functions
-
-  const isRowSelectionCell = (columnIndex) => (
-    hasSelectableRows && columnIndex < displayedColumns.length && displayedColumns[columnIndex].id === ROW_SELECTION_COLUMN.id
-  );
-
-  const setFocusedRowCol = (newRowIndex, newColIndex, makeActiveElement) => {
-    setCellAriaLiveMessage(null);
-    setFocusedRow(newRowIndex);
-    setFocusedCol(newColIndex);
-    let focusedCell = table.current.rows[newRowIndex].cells[newColIndex];
-    if (isRowSelectionCell(newColIndex) && focusedCell.getElementsByTagName('input').length > 0) {
-      [focusedCell] = focusedCell.getElementsByTagName('input');
-    }
-
-    if (makeActiveElement) {
-      focusedCell.focus();
-    }
-  };
-
-  const handleMoveCellFocus = (fromCell, toCell) => {
-    // Obtain coordinate rectangles for table container, column header, and new cell selection
-    const tableContainerRect = tableContainerRef.current.getBoundingClientRect();
-    const columnHeaderRect = table.current.rows[0].cells[toCell.col].getBoundingClientRect();
-    const nextCellRect = table.current.rows[toCell.row].cells[toCell.col].getBoundingClientRect();
-
-    // Calculate horizontal scroll offset for right boundary
-    if (nextCellRect.right > tableContainerRect.right) {
-      tableContainerRef.current.scrollBy(nextCellRect.right - tableContainerRect.right, 0);
-    } else {
-      // Calculate horizontal scroll offset for left boundary
-      let scrollOffsetX = 0;
-      if (pinnedColumnOffsets.length > 0) {
-        if (toCell.col > pinnedColumnOffsets.length - 1) {
-          const lastPinnedColumnRect = table.current.rows[toCell.row].cells[pinnedColumnOffsets.length - 1].getBoundingClientRect();
-          scrollOffsetX = nextCellRect.left - lastPinnedColumnRect.right;
-        }
-      } else {
-        scrollOffsetX = nextCellRect.left - tableContainerRect.left;
-      }
-
-      if (scrollOffsetX < 0) {
-        tableContainerRef.current.scrollBy(scrollOffsetX, 0);
-      }
-    }
-
-    // Calculate vertical scroll offset
-    const scrollOffsetY = nextCellRect.top - columnHeaderRect.bottom;
-    if (scrollOffsetY < 0) {
-      tableContainerRef.current.scrollBy(0, scrollOffsetY);
-    }
-
-    setFocusedRowCol(toCell.row, toCell.col, true);
-  };
 
   // -------------------------------------
   // callback Hooks
@@ -269,16 +186,17 @@ function Table(props) {
     resizeObserver.observe(node);
   }, []);
 
-  const handleCellSelection = useCallback((selectionDetails) => {
-    setFocusedRow(selectionDetails.rowIndex);
-    setFocusedCol(selectionDetails.columnIndex);
-    if (onCellSelect) {
-      onCellSelect(selectionDetails);
-    }
-  }, [onCellSelect]);
-
   // -------------------------------------
   // useEffect Hooks
+
+  // set the tabindex of the container when scrollable.
+  useEffect(() => {
+    const containerRect = tableContainerRef.current.getBoundingClientRect();
+    const tableRect = table.current.getBoundingClientRect();
+    if (tableRect.height > containerRect.height || tableRect.width > containerRect.width) {
+      setIsContainerFocusable(true);
+    }
+  }, [tableContainerRef, table]);
 
   // useEffect for row displayed columns
   useEffect(() => {
@@ -300,29 +218,10 @@ function Table(props) {
         offsetArray.push(cumulativeOffset);
       });
     }
+
     setPinnedColumnOffsets(offsetArray);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [renderedColumns]);
-
-  // useEffect for row selection
-  useEffect(() => {
-    // When row selection mode is turned on or off a row selection column is added or removed.
-    // Therefore, shift the focused cell to the left or right.
-    let newFocusCell = { row: focusedRow, col: focusedCol };
-
-    if (!hasSelectableRows && focusedCol === 0) {
-      // When row selection is turned off, if a cell in the row selection had focus, then
-      // refocus on the first cell in that row.
-      newFocusCell = { row: focusedRow, col: 0 };
-    } else if (hasReceivedFocus.current) {
-      newFocusCell = { row: focusedRow, col: (focusedCol + (hasSelectableRows ? 1 : -1)) };
-    }
-
-    setFocusedRowCol(newFocusCell.row, newFocusCell.col, false);
-
-    setRenderedColumns(displayedColumns.map((column) => initializeColumn(column)));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hasSelectableRows]);
 
   // -------------------------------------
 
@@ -372,145 +271,14 @@ function Table(props) {
     setActiveIndex(null);
   };
 
-  const onMouseDown = () => {
-    // Prevent focus event updates when triggered by mouse
-    handleFocus.current = false;
-  };
-
-  const onFocus = (event) => {
-    if (!event.currentTarget.contains(event.relatedTarget)) {
-      // Not triggered when swapping focus between children
-      if (handleFocus.current) {
-        setFocusedRowCol(focusedRow, focusedCol, true);
-      }
-
-      hasReceivedFocus.current = true;
-    }
-
-    handleFocus.current = true;
-  };
-
-  /**
-   * Move focus to next focusable element outside the table
-   */
-  const moveFocusFromTable = (moveForward) => {
-    // add all elements we want to include in our selection
-    const focusableElementSelector = 'a[href]:not([tabindex=\'-1\']), area[href]:not([tabindex=\'-1\']), input:not([disabled]):not([tabindex=\'-1\']), '
-      + "select:not([disabled]):not([tabindex='-1']), textarea:not([disabled]):not([tabindex='-1']), button:not([disabled]):not([tabindex='-1']), "
-      + "iframe:not([tabindex='-1']), [tabindex]:not([tabindex='-1']), [contentEditable=true]:not([tabindex='-1'])";
-
-    const focusableElements = [...document.body.querySelectorAll(`${focusableElementSelector}`)].filter(
-      element => !element.hasAttribute('disabled')
-        && !element.getAttribute('aria-hidden')
-        && (element.id === id || !table.current.contains(element)),
-    );
-
-    // Identify index of the active element in the DOM excluding table children
-    const index = focusableElements.indexOf(table.current);
-    if (index > -1) {
-      // Move focus outside table
-      const indexOffset = moveForward ? 1 : -1;
-      const newFocusElement = focusableElements[index + indexOffset];
-      if (newFocusElement) {
-        newFocusElement.focus();
-      }
-    }
-  };
-
-  const handleKeyDown = (event) => {
-    const cellCoordinates = { row: focusedRow, col: focusedCol };
-    let nextRow = cellCoordinates.row;
-    let nextCol = cellCoordinates.col;
-    const key = event.keyCode;
-    switch (key) {
-      case KeyCode.KEY_UP:
-        nextRow -= 1;
-        break;
-      case KeyCode.KEY_DOWN:
-        nextRow += 1;
-        break;
-      case KeyCode.KEY_LEFT:
-        if (event.metaKey) {
-          // Mac: Ctrl + Cmd + Left
-          // Win: Ctrl + Home
-          nextCol = 0;
-
-          if (event.ctrlKey) {
-            // Mac: Ctrl + Cmd + Left
-            // Windows: Ctrl + Home
-            nextRow = 1; // Assumption is that the first row is the column Heading.
-          }
-        } else {
-          // Left key
-          nextCol -= 1;
-        }
-        break;
-      case KeyCode.KEY_RIGHT:
-        if (event.metaKey) {
-          // Mac: Cmd + Right
-          // Win: End
-          nextCol = displayedColumns.length - 1;
-
-          if (event.ctrlKey) {
-            // Mac: Ctrl + Cmd + Right
-            // Windows: Ctrl + End
-            nextRow = rows.length;
-          }
-        } else {
-          // Right key
-          nextCol += 1;
-        }
-        break;
-      case KeyCode.KEY_HOME:
-        nextCol = 0;
-        if (event.ctrlKey) {
-          nextRow = 1; // Assumption is that the first row is the column Heading.
-        }
-        break;
-      case KeyCode.KEY_END:
-        nextCol = displayedColumns.length - 1; // Col are zero based.
-        if (event.ctrlKey) {
-          // Though rows are zero based, the header is the first row so the rowsLength will
-          // always be one more than then actual number of data rows.
-          nextRow = rows.length;
-        }
-        break;
-      case KeyCode.KEY_ESCAPE:
-        if (onClearSelection) {
-          onClearSelection();
-        }
-        event.preventDefault();
-        return;
-      case KeyCode.KEY_TAB:
-        moveFocusFromTable(!event.shiftKey);
-        event.preventDefault();
-        return;
-      default:
-        return;
-    }
-
-    if (onRangeSelection && event.shiftKey && (event.keyCode === KeyCode.KEY_UP || event.keyCode === KeyCode.KEY_DOWN)) {
-      onRangeSelection(cellCoordinates.row, cellCoordinates.col, event.keyCode);
-    }
-
-    if (nextRow > rows.length || nextCol >= displayedColumns.length) {
-      event.preventDefault(); // prevent the page from moving with the arrow keys.
-      return;
-    }
-    if (nextCol < 0 || nextRow < 0) {
-      event.preventDefault(); // prevent the page from moving with the arrow keys.
-      return;
-    }
-    handleMoveCellFocus(cellCoordinates, { row: nextRow, col: nextCol });
-    event.preventDefault(); // prevent the page from moving with the arrow keys.
-  };
-
   // -------------------------------------
 
   return (
     <div
-      className={cx('table-container', { scrollable: isScrollable })}
+      className={cx('table-container')}
       ref={tableContainerRef}
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      tabIndex={isContainerFocusable ? 0 : undefined}
     >
       <table
         ref={tableResizeRef}
@@ -520,9 +288,6 @@ function Table(props) {
         aria-label={ariaLabel}
         className={cx('table', theme.className)}
         tabIndex={gridContext.role === 'grid' ? 0 : undefined}
-        onKeyDown={gridContext.role === 'grid' ? handleKeyDown : undefined}
-        onMouseDown={gridContext.role === 'grid' ? onMouseDown : undefined}
-        onFocus={gridContext.role === 'grid' ? onFocus : undefined}
         {...(activeIndex != null && { onMouseUp, onMouseMove, onMouseLeave: onMouseUp })}
       >
         <ColumnContext.Provider
@@ -546,7 +311,8 @@ function Table(props) {
                 ariaLabel={row.ariaLabel}
                 displayedColumns={displayedColumns}
                 rowHeaderIndex={rowHeaderIndex}
-                onCellSelect={handleCellSelection}
+                onCellSelect={onCellSelect}
+                isSelected={row.isSelected}
               />
             ))}
           </tbody>
