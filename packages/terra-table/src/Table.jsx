@@ -189,7 +189,7 @@ function Table(props) {
   // -------------------------------------
   // useEffect Hooks
 
-  // set the tabindex of the container when scrollable.
+  // Make the table container focusable when scrollable.
   useEffect(() => {
     const containerRect = tableContainerRef.current.getBoundingClientRect();
     const tableRect = table.current.getBoundingClientRect();

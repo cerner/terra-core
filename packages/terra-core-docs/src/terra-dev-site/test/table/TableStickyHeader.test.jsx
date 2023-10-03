@@ -8,7 +8,7 @@ const TableStickyHeader = () => {
 
   return (
   // eslint-disable-next-line react/forbid-dom-props
-    <div style={{ height: '250px' }}>
+    <div style={{ height: '200px' }}>
       <Table
         id="table-sticky-header"
         overflowColumns={cols}
