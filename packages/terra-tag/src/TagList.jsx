@@ -11,7 +11,6 @@ import VisuallyHiddenText from 'terra-visually-hidden-text';
 import ThemeContext from 'terra-theme-context';
 import TagsUtils from './_TagsUtils';
 import RollUpTag from './_RollupTag';
-import SharedUtil from './_SharedUtil';
 import styles from './Tag.module.scss';
 
 const cx = classNamesBind.bind(styles);
@@ -102,15 +101,7 @@ const TagList = (props) => {
   const focusCurrentNode = () => {
     const currentNode = currentTag.current ? filterTagsRef.current.querySelector(`#${currentTag.current}`) : null;
     if (currentNode) {
-      if (SharedUtil.isSafari()) {
-        // Safari Browser
-        setTimeout(() => {
-          currentNode.focus();
-        }, 100);
-      } else {
-        // Other Browsers
-        currentNode.focus();
-      }
+      currentNode.focus();
     }
   };
 
