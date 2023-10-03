@@ -456,14 +456,11 @@ exports[`ColumnHeaderCell renders a pinned column header cell 1`] = `
           onResizeMouseDown={[Function]}
         >
           <div
-            aria-hidden={true}
             aria-label=" Vitals"
             aria-valuenow={100}
             aria-valuetext="Terra.table.resizeHandleValueText"
             className="resize-handle"
             draggable={true}
-            onBlur={[Function]}
-            onFocus={[Function]}
             onMouseDown={[Function]}
             role="slider"
             style={

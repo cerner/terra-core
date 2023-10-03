@@ -1,5 +1,5 @@
 import React, {
-  useContext, useRef, useState,
+  useContext, useRef, useCallback,
 } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
@@ -59,14 +59,15 @@ const ColumnResizeHandle = (props) => {
     intl,
   } = props;
 
-  // State variable to control screen reader visibility
-  const [isActive, setActive] = useState(false);
-
   const theme = useContext(ThemeContext);
   const gridContext = useContext(GridContext);
 
   // Ref variable for native resize handle element
   const resizeHandle = useRef();
+
+  const resizeHandleRef = useCallback((node) => {
+    resizeHandle.current = node;
+  }, []);
 
   const onMouseDown = (event) => {
     // Execute callback function to notify consumer of mouse down event
@@ -82,11 +83,10 @@ const ColumnResizeHandle = (props) => {
     /* eslint-disable react/forbid-dom-props */
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/interactive-supports-focus
     <div
-      ref={resizeHandle}
+      ref={resizeHandleRef}
       draggable
       role="slider"
-      tabIndex={-1}
-      aria-hidden={!isActive}
+      tabIndex={gridContext.role === 'grid' ? -1 : 0}
       aria-valuemin={minimumWidth}
       aria-valuenow={columnWidth}
       aria-valuemax={maximumWidth}
@@ -94,8 +94,6 @@ const ColumnResizeHandle = (props) => {
       aria-valuetext={intl.formatMessage({ id: 'Terra.table.resizeHandleValueText' }, { columnWidth })}
       style={{ height: `${height}px` }}
       onMouseDown={onMouseDown}
-      onFocus={() => setActive(true)}
-      onBlur={() => setActive(false)}
       className={cx('resize-handle', theme.className)}
     />
   );

@@ -106,7 +106,6 @@ exports[`ColumnResizeHandle renders a default column resize handle 1`] = `
     }
   >
     <div
-      aria-hidden={true}
       aria-label="Vitals"
       aria-valuemax={300}
       aria-valuemin={60}
@@ -114,8 +113,6 @@ exports[`ColumnResizeHandle renders a default column resize handle 1`] = `
       aria-valuetext="Terra.table.resizeHandleValueText"
       className="resize-handle"
       draggable={true}
-      onBlur={[Function]}
-      onFocus={[Function]}
       onMouseDown={[Function]}
       role="slider"
       style={
