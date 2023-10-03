@@ -97,6 +97,12 @@ const propTypes = {
    *  @param {string} columnId columnId
    */
   onColumnSelect: PropTypes.func,
+
+  /**
+   * @private
+   * The intl object containing translations. This is retrieved from the context automatically by injectIntl.
+   */
+  intl: PropTypes.shape({ formatMessage: PropTypes.func }).isRequired,
 };
 
 const defaultProps = {
@@ -128,6 +134,7 @@ function Table(props) {
     onColumnSelect,
     onCellSelect,
     rowHeaderIndex,
+    intl,
   } = props;
 
   const [pinnedColumnOffsets, setPinnedColumnOffsets] = useState([]);
@@ -156,6 +163,7 @@ function Table(props) {
   const tableWidth = useRef(0);
   const table = useRef();
   const tableContainerRef = useRef();
+  const sortedColumn = useRef();
 
   const [cellAriaLiveMessage, setCellAriaLiveMessage] = useState(null);
 
@@ -220,6 +228,24 @@ function Table(props) {
     }
 
     setPinnedColumnOffsets(offsetArray);
+
+    const currentSortedColumn = renderedColumns.find((column) => !!column.sortIndicator);
+    if (sortedColumn.current) {
+      const previousSortedColumn = { ...sortedColumn.current };
+
+      if (previousSortedColumn.id !== currentSortedColumn.id
+      || previousSortedColumn.sortIndicator !== currentSortedColumn.sortIndicator) {
+        setCellAriaLiveMessage(intl.formatMessage(
+          { id: 'Terra.table.sort-direction-changed' },
+          {
+            column: currentSortedColumn.displayName,
+            sortDirection: currentSortedColumn.sortIndicator,
+          },
+        ));
+      }
+    }
+
+    sortedColumn.current = currentSortedColumn;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [renderedColumns]);
 
