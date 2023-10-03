@@ -42,7 +42,7 @@ exports[`correctly applies the theme context className 1`] = `
         type="button"
       >
         <span
-          className="button-label text-only"
+          className="button-label-win text-only"
         >
           <span
             className=""

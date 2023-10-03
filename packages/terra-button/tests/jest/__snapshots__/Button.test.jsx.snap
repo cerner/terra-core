@@ -31,7 +31,7 @@ exports[`correctly applies the theme context className 1`] = `
       type="button"
     >
       <span
-        className="button-label text-only"
+        className="button-label-win text-only"
       >
         <span
           className=""
@@ -61,7 +61,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
             type="button"
           >
             <span
-              class="button-label text-only"
+              class="button-label-win text-only"
             >
               <span
                 class=""
@@ -97,7 +97,7 @@ exports[`should pass in refCallback as the ref prop of the input element 1`] = `
     type="button"
   >
     <span
-      className="button-label text-only"
+      className="button-label-win text-only"
     >
       <span
         className=""
@@ -129,7 +129,7 @@ exports[`should render a Button with merged attributes 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -155,7 +155,7 @@ exports[`should render a button with a title 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -181,7 +181,7 @@ exports[`should render a button with accessible label 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -206,7 +206,7 @@ exports[`should render a button with type equal to button 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -231,7 +231,7 @@ exports[`should render a button with type equal to reset 1`] = `
   type="reset"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -256,7 +256,7 @@ exports[`should render a button with type equal to submit 1`] = `
   type="submit"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -281,7 +281,7 @@ exports[`should render a de-emphasis button 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -306,7 +306,7 @@ exports[`should render a emphasis button 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -331,7 +331,7 @@ exports[`should render a ghost button 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -356,7 +356,7 @@ exports[`should render a neutral button 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -383,7 +383,7 @@ exports[`should render a utility button 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
+    className="button-label-win icon-only text-only"
   />
 </button>
 `;
@@ -404,7 +404,7 @@ exports[`should render a utility button with a custom accessible label 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
+    className="button-label-win icon-only text-only"
   />
 </button>
 `;
@@ -425,7 +425,7 @@ exports[`should render a utility button with a custom title 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
+    className="button-label-win icon-only text-only"
   />
 </button>
 `;
@@ -446,7 +446,7 @@ exports[`should render a utility button with text as a fallback accessible label
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
+    className="button-label-win icon-only text-only"
   />
 </button>
 `;
@@ -467,7 +467,7 @@ exports[`should render a utility button with text as a fallback title 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
+    className="button-label-win icon-only text-only"
   />
 </button>
 `;
@@ -486,7 +486,7 @@ exports[`should render an action button 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -511,7 +511,7 @@ exports[`should render an icon and a text 1`] = `
   type="button"
 >
   <span
-    className="button-label text-and-icon"
+    className="button-label-win text-and-icon"
   >
     <span
       className="icon icon-first"
@@ -546,7 +546,7 @@ exports[`should render an icon only button with a custom accessible label 1`] = 
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
+    className="button-label-win icon-only text-only"
   />
 </button>
 `;
@@ -567,7 +567,7 @@ exports[`should render an icon only button with a custom title 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
+    className="button-label-win icon-only text-only"
   />
 </button>
 `;
@@ -588,7 +588,7 @@ exports[`should render an icon only button with text as a fallback accessible la
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
+    className="button-label-win icon-only text-only"
   />
 </button>
 `;
@@ -609,7 +609,7 @@ exports[`should render an icon only button with text as a fallback title 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only text-only"
+    className="button-label-win icon-only text-only"
   />
 </button>
 `;
@@ -630,7 +630,7 @@ exports[`should render an informative icon button 1`] = `
   type="button"
 >
   <span
-    className="button-label icon-only"
+    className="button-label-win icon-only"
   >
     <span
       className="icon"
@@ -660,7 +660,7 @@ exports[`should render as an anchor when provided an href 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -686,7 +686,7 @@ exports[`should render as disabled when set 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
@@ -711,7 +711,7 @@ exports[`should render text then an icon when reversed 1`] = `
   type="button"
 >
   <span
-    className="button-label text-and-icon"
+    className="button-label-win text-and-icon"
   >
     <span
       className="text-first"
@@ -745,7 +745,7 @@ exports[`should render with tabIndex when set 1`] = `
   type="button"
 >
   <span
-    className="button-label text-only"
+    className="button-label-win text-only"
   >
     <span
       className=""
