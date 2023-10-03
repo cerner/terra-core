@@ -1,4 +1,4 @@
-import TagsUtils from '../../src/TagsUtils';
+import TagsUtils from '../../src/_TagsUtils';
 
 describe('TagsUtils', () => {
   describe('getRollUpIndex', () => {
