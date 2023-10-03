@@ -76,7 +76,6 @@ exports[`Rollup Tag should render rollup tag with the label "4 more" 1`] = `
         onClick={[Function]}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
-        tabIndex="0"
         type="button"
       >
         <span
@@ -179,7 +178,6 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         onClick={[Function]}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
-        tabIndex="0"
         type="button"
       >
         <span
@@ -282,7 +280,6 @@ exports[`Rollup Tag should render rollup tag with the label "show less" when isC
         onClick={[Function]}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
-        tabIndex="0"
         type="button"
       >
         <span
