@@ -2,7 +2,7 @@ import React from 'react';
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import { mountWithIntl } from 'terra-enzyme-intl';
 import { v4 as uuidv4 } from 'uuid';
-import RollupTag from '../../src/RollupTag';
+import RollupTag from '../../src/_RollupTag';
 
 describe('Rollup Tag', () => {
   let mockSpyUuid;

@@ -9,8 +9,8 @@ import ResizeObserver from 'resize-observer-polyfill';
 import { v4 as uuidv4 } from 'uuid';
 import VisuallyHiddenText from 'terra-visually-hidden-text';
 import ThemeContext from 'terra-theme-context';
-import TagsUtils from './TagsUtils';
-import RollUpTag from './RollupTag';
+import TagsUtils from './_TagsUtils';
+import RollUpTag from './_RollupTag';
 import SharedUtil from './_SharedUtil';
 import styles from './Tag.module.scss';
 
