@@ -40,7 +40,6 @@ const RollUpTag = (props) => {
   const handleOnSelectRollUp = (event) => {
     rollUpTagRef.current.setAttribute('data-terra-rollup-tag-show-focus-styles', 'true');
     event.preventDefault();
-    event.stopPropagation();
     if (onSelectRollUp) onSelectRollUp(event);
   };
 
@@ -48,7 +47,6 @@ const RollUpTag = (props) => {
     rollUpTagRef.current.setAttribute('data-terra-rollup-tag-show-focus-styles', 'true');
     if (event.keyCode === KEY_RETURN || event.keyCode === KEY_SPACE) {
       event.preventDefault();
-      event.stopPropagation();
       if (onSelectRollUp) onSelectRollUp(event);
     }
   };
