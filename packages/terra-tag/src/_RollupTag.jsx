@@ -77,7 +77,6 @@ const RollUpTag = (props) => {
         onMouseDown={handleRollUpTagMouseDown}
         onBlur={handleOnBlur}
         ref={rollUpTagRef}
-        tabIndex="0"
         type="button"
         aria-describedby={visuallyHiddenContentId}
         data-terra-rollup-tag-show-focus-styles
