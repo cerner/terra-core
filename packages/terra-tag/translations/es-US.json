@@ -1,6 +1,6 @@
 {
   "Terra.tags.label.delete": "Quitar {tagLabelName}",
-  "Terra.tags.label.rollupTag": "{tagsNotVisibleCount} más...",
+  "Terra.tags.label.rollupTag": "{tagsNotVisibleCount} más",
   "Terra.tags.label.showLess": "Mostrar menos",
   "Terra.tags.hint.removable": "El elemento se puede quitar mediante la tecla Supr o Retroceso.",
   "Terra.tags.hint.selectable": "Para obtener más información, puede seleccionar el botón mediante la Barra espaciadora o la tecla Entrar.",
