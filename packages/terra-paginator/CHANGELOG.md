@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 2.86.0 - (October 3, 2023)
+
 * Added
   * Added `hidePageCount` prop to hide page count provided by paginator.
 
