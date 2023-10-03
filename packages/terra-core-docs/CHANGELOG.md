@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 1.43.0 - (October 3, 2023)
+
 * Added
   * Added progressive paginator examples for custom page label and page count.
 
